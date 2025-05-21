@@ -10,32 +10,32 @@ void __fastcall SetUserBirthDayRequest__beginRequest(
   __int64 v12; // x1
   Il2CppObject *Instance; // x0
   __int64 v14; // x1
-  int64_t Time_39521860; // x0
+  int64_t Time_40367404; // x0
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x1
   System_DateTime_o dateTime; // [xsp+8h] [xbp-48h] BYREF
   System_DateTime_o v19; // 0:x0.8
   System_DateTime_o v20; // 0:x0.8
 
-  if ( (byte_4A4FFAB & 1) == 0 )
+  if ( (byte_4B465E0 & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, normalName);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v11);
-    sub_1B863B8(&StringLiteral_16952/*"birthDay"*/, v12);
-    byte_4A4FFAB = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, normalName);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v11);
+    sub_1BDB878(&StringLiteral_17176/*"birthDay"*/, v12);
+    byte_4B465E0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !Instance )
-    sub_1B86614(0LL, v14);
-  NetworkManager__SetSignup_39512564((NetworkManager_o *)Instance, normalName, genderType, month, day, 0LL);
+    sub_1BDBAD4(0LL, v14);
+  NetworkManager__SetSignup_40358280((NetworkManager_o *)Instance, normalName, genderType, month, day, 0LL);
   v19.fields._dateData = (uint64_t)&dateTime;
   dateTime.fields._dateData = 0LL;
-  System_DateTime___ctor_63035160(v19, 2000, month, day, 0, 0, 0, 1, 0LL);
+  System_DateTime___ctor_63962988(v19, 2000, month, day, 0, 0, 0, 1, 0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   v20.fields._dateData = dateTime.fields._dateData;
-  Time_39521860 = NetworkManager__getTime_39521860(v20, 0LL);
-  RequestBase__addField_42287768((RequestBase_o *)this, (System_String_o *)StringLiteral_16952/*"birthDay"*/, Time_39521860, v16);
+  Time_40367404 = NetworkManager__getTime_40367404(v20, 0LL);
+  RequestBase__addField_43153704((RequestBase_o *)this, (System_String_o *)StringLiteral_17176/*"birthDay"*/, Time_40367404, v16);
   RequestBase__beginRequest((RequestBase_o *)this, v17);
 }
 
@@ -45,16 +45,16 @@ System_String_o *__fastcall SetUserBirthDayRequest__getURL(SetUserBirthDayReques
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A4FFAA & 1) == 0 )
+  if ( (byte_4B465DF & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_22466/*"profile/editBirth"*/, v2);
-    byte_4A4FFAA = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_22809/*"profile/editBirth"*/, v2);
+    byte_4B465DF = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_22466/*"profile/editBirth"*/, 0LL);
+  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_22809/*"profile/editBirth"*/, 0LL);
 }
 
 
@@ -88,15 +88,15 @@ void __fastcall SetUserBirthDayRequest__requestCompleted(
   System_DateTime_o v27; // 0:x0.8
   System_DateTime_o v28; // 0:x0.8
 
-  if ( (byte_4A4FFAC & 1) == 0 )
+  if ( (byte_4B465E1 & 1) == 0 )
   {
-    sub_1B863B8(&System_DateTime_TypeInfo, responseList);
-    sub_1B863B8(&JsonManager_TypeInfo, v5);
-    sub_1B863B8(&NetworkManager_TypeInfo, v6);
-    sub_1B863B8(&ResponseCommandKind_TypeInfo, v7);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v8);
-    sub_1B863B8(&StringLiteral_21893/*"ng"*/, v9);
-    byte_4A4FFAC = 1;
+    sub_1BDB878(&System_DateTime_TypeInfo, responseList);
+    sub_1BDB878(&JsonManager_TypeInfo, v5);
+    sub_1BDB878(&NetworkManager_TypeInfo, v6);
+    sub_1BDB878(&ResponseCommandKind_TypeInfo, v7);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v8);
+    sub_1BDB878(&StringLiteral_22233/*"ng"*/, v9);
+    byte_4B465E1 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -110,8 +110,8 @@ void __fastcall SetUserBirthDayRequest__requestCompleted(
     mAndroidApiKey = (int64_t)SelfUserGame->fields.mAndroidApiKey;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    dateData = NetworkManager__getDateTime_39522640(mAndroidApiKey, 0LL).fields._dateData;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    dateData = NetworkManager__getDateTime_40274316(mAndroidApiKey, 0LL).fields._dateData;
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
     m_CancellationTokenSource = (System_String_o *)v15->fields.m_CancellationTokenSource;
     mAuGameServerPublicKey_high = HIDWORD(v15->fields.mAuGameServerPublicKey);
     v20 = (NetworkManager_o *)Instance;
@@ -122,17 +122,17 @@ void __fastcall SetUserBirthDayRequest__requestCompleted(
     v28.fields._dateData = (uint64_t)&dateData;
     SelfUserGame = (NetworkManager_o *)System_DateTime__get_Day(v28, 0LL);
     if ( !v20
-      || (NetworkManager__SetSignup_39512564(
+      || (NetworkManager__SetSignup_40358280(
             v20,
             m_CancellationTokenSource,
             mAuGameServerPublicKey_high,
             Month,
             (int32_t)SelfUserGame,
             0LL),
-          (SelfUserGame = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL) )
+          (SelfUserGame = (NetworkManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL) )
     {
 LABEL_21:
-      sub_1B86614(SelfUserGame, v14);
+      sub_1BDBAD4(SelfUserGame, v14);
     }
     NetworkManager__WriteSignup(SelfUserGame, 0LL);
     success = (Il2CppObject *)v12->fields.success;
@@ -152,7 +152,7 @@ LABEL_21:
     if ( v25 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v25->fields.m_target)(
         v25->fields.original_method_info,
-        StringLiteral_21893/*"ng"*/,
+        StringLiteral_22233/*"ng"*/,
         *(_QWORD *)&v25->fields.extra_arg);
   }
 }

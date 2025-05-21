@@ -7,9 +7,9 @@ void __fastcall GOExtensions___ctor(GOExtensions_o *this, const MethodInfo *meth
 Il2CppObject *__fastcall GOExtensions__AddComponentWithData_object_(
         UnityEngine_GameObject_o *gameObject,
         WellFired_Data_DataBaseEntry_o *data,
-        const MethodInfo_2FC0380 *method)
+        const MethodInfo_3087AB0 *method)
 {
-  const MethodInfo_2FC0380_RGCTXs *rgctx_data; // x8
+  const MethodInfo_3087AB0_RGCTXs *rgctx_data; // x8
   Il2CppType *_0_T; // x22
   System_Type_o *TypeFromHandle; // x0
   __int64 v9; // x1
@@ -22,17 +22,17 @@ Il2CppObject *__fastcall GOExtensions__AddComponentWithData_object_(
   WellFired_Data_DataComponent_o *v16; // x0
   Il2CppObject *v17; // x22
   UnityEngine_GameObject_o *v19; // x0
-  const MethodInfo_2FC048C *v20; // x1
+  const MethodInfo_3087BBC *v20; // x1
   System_RuntimeTypeHandle_o v21; // 0:w0.4
 
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1B863B8(&System_Type_TypeInfo, data);
+    sub_1BDB878(&System_Type_TypeInfo, data);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1BD6AA4();
+      sub_1C2BF64();
       rgctx_data = method->rgctx_data;
     }
   }
@@ -46,19 +46,19 @@ Il2CppObject *__fastcall GOExtensions__AddComponentWithData_object_(
   v10 = UnityEngine_GameObject__AddComponent(gameObject, TypeFromHandle, 0LL);
   _1_T = method->rgctx_data->_1_T;
   if ( (BYTE5(_1_T->vtable[0].methodPtr) & 1) == 0 )
-    _1_T = (Il2CppClass *)sub_1BD6A48(v11);
-  TypeFromHandle = (System_Type_o *)sub_1B864F4(v10, _1_T);
+    _1_T = (Il2CppClass *)sub_1C2BF08(v11);
+  TypeFromHandle = (System_Type_o *)sub_1BDB9B4(v10, _1_T);
   v14 = TypeFromHandle;
   v15 = method->rgctx_data->_1_T;
   if ( (BYTE5(v15->vtable[0].methodPtr) & 1) == 0 )
   {
-    TypeFromHandle = (System_Type_o *)sub_1BD6A48(v13);
+    TypeFromHandle = (System_Type_o *)sub_1C2BF08(v13);
     v15 = (Il2CppClass *)TypeFromHandle;
   }
   if ( !v14 )
 LABEL_14:
-    sub_1B86614(TypeFromHandle, v9);
-  v16 = (WellFired_Data_DataComponent_o *)sub_1B864F4(v14, v15);
+    sub_1BDBAD4(TypeFromHandle, v9);
+  v16 = (WellFired_Data_DataComponent_o *)sub_1BDB9B4(v14, v15);
   if ( v16 )
   {
     v17 = (Il2CppObject *)v16;
@@ -67,7 +67,7 @@ LABEL_14:
   }
   else
   {
-    sub_1B868D4(v14);
+    sub_1BDBD94(v14);
     return GOExtensions__AddDisabledComponent_object_(v19, v20);
   }
 }
@@ -76,9 +76,9 @@ LABEL_14:
 Il2CppObject *__fastcall GOExtensions__AddDisabledComponentWithData_object_(
         UnityEngine_GameObject_o *gameObject,
         WellFired_Data_DataBaseEntry_o *data,
-        const MethodInfo_2FC058C *method)
+        const MethodInfo_3087CBC *method)
 {
-  const MethodInfo_2FC058C_RGCTXs *rgctx_data; // x8
+  const MethodInfo_3087CBC_RGCTXs *rgctx_data; // x8
   Il2CppType *_0_T; // x22
   System_Type_o *TypeFromHandle; // x0
   __int64 v9; // x1
@@ -90,17 +90,17 @@ Il2CppObject *__fastcall GOExtensions__AddDisabledComponentWithData_object_(
   Il2CppClass *v15; // x20
   WellFired_Data_DataComponent_o *v16; // x0
   UnityEngine_Behaviour_o *v17; // x22
-  const MethodInfo_2FC06A8 *v19; // x0
+  const MethodInfo_3087DD8 *v19; // x0
   System_RuntimeTypeHandle_o v20; // 0:w0.4
 
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1B863B8(&System_Type_TypeInfo, data);
+    sub_1BDB878(&System_Type_TypeInfo, data);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1BD6AA4();
+      sub_1C2BF64();
       rgctx_data = method->rgctx_data;
     }
   }
@@ -114,19 +114,19 @@ Il2CppObject *__fastcall GOExtensions__AddDisabledComponentWithData_object_(
   v10 = UnityEngine_GameObject__AddComponent(gameObject, TypeFromHandle, 0LL);
   _1_T = method->rgctx_data->_1_T;
   if ( (BYTE5(_1_T->vtable[0].methodPtr) & 1) == 0 )
-    _1_T = (Il2CppClass *)sub_1BD6A48(v11);
-  TypeFromHandle = (System_Type_o *)sub_1B864F4(v10, _1_T);
+    _1_T = (Il2CppClass *)sub_1C2BF08(v11);
+  TypeFromHandle = (System_Type_o *)sub_1BDB9B4(v10, _1_T);
   v14 = TypeFromHandle;
   v15 = method->rgctx_data->_1_T;
   if ( (BYTE5(v15->vtable[0].methodPtr) & 1) == 0 )
   {
-    TypeFromHandle = (System_Type_o *)sub_1BD6A48(v13);
+    TypeFromHandle = (System_Type_o *)sub_1C2BF08(v13);
     v15 = (Il2CppClass *)TypeFromHandle;
   }
   if ( !v14 )
 LABEL_14:
-    sub_1B86614(TypeFromHandle, v9);
-  v16 = (WellFired_Data_DataComponent_o *)sub_1B864F4(v14, v15);
+    sub_1BDBAD4(TypeFromHandle, v9);
+  v16 = (WellFired_Data_DataComponent_o *)sub_1BDB9B4(v14, v15);
   if ( v16 )
   {
     v17 = (UnityEngine_Behaviour_o *)v16;
@@ -136,7 +136,7 @@ LABEL_14:
   }
   else
   {
-    sub_1B868D4(v14);
+    sub_1BDBD94(v14);
     return GOExtensions__Construct_object_(v19);
   }
 }
@@ -144,9 +144,9 @@ LABEL_14:
 
 Il2CppObject *__fastcall GOExtensions__AddDisabledComponent_object_(
         UnityEngine_GameObject_o *gameObject,
-        const MethodInfo_2FC048C *method)
+        const MethodInfo_3087BBC *method)
 {
-  const MethodInfo_2FC048C_RGCTXs *rgctx_data; // x8
+  const MethodInfo_3087BBC_RGCTXs *rgctx_data; // x8
   Il2CppType *_0_T; // x21
   System_Type_o *TypeFromHandle; // x0
   __int64 v7; // x1
@@ -160,17 +160,17 @@ Il2CppObject *__fastcall GOExtensions__AddDisabledComponent_object_(
   Il2CppObject *v15; // x21
   UnityEngine_GameObject_o *v17; // x0
   WellFired_Data_DataBaseEntry_o *v18; // x1
-  const MethodInfo_2FC058C *v19; // x2
+  const MethodInfo_3087CBC *v19; // x2
   System_RuntimeTypeHandle_o v20; // 0:w0.4
 
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1B863B8(&System_Type_TypeInfo, method);
+    sub_1BDB878(&System_Type_TypeInfo, method);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1BD6AA4();
+      sub_1C2BF64();
       rgctx_data = method->rgctx_data;
     }
   }
@@ -184,19 +184,19 @@ Il2CppObject *__fastcall GOExtensions__AddDisabledComponent_object_(
   v8 = UnityEngine_GameObject__AddComponent(gameObject, TypeFromHandle, 0LL);
   _1_T = method->rgctx_data->_1_T;
   if ( (BYTE5(_1_T->vtable[0].methodPtr) & 1) == 0 )
-    _1_T = (Il2CppClass *)sub_1BD6A48(v9);
-  TypeFromHandle = (System_Type_o *)sub_1B864F4(v8, _1_T);
+    _1_T = (Il2CppClass *)sub_1C2BF08(v9);
+  TypeFromHandle = (System_Type_o *)sub_1BDB9B4(v8, _1_T);
   v12 = TypeFromHandle;
   v13 = method->rgctx_data->_1_T;
   if ( (BYTE5(v13->vtable[0].methodPtr) & 1) == 0 )
   {
-    TypeFromHandle = (System_Type_o *)sub_1BD6A48(v11);
+    TypeFromHandle = (System_Type_o *)sub_1C2BF08(v11);
     v13 = (Il2CppClass *)TypeFromHandle;
   }
   if ( !v12 )
 LABEL_14:
-    sub_1B86614(TypeFromHandle, v7);
-  v14 = (UnityEngine_Behaviour_o *)sub_1B864F4(v12, v13);
+    sub_1BDBAD4(TypeFromHandle, v7);
+  v14 = (UnityEngine_Behaviour_o *)sub_1BDB9B4(v12, v13);
   if ( v14 )
   {
     v15 = (Il2CppObject *)v14;
@@ -205,7 +205,7 @@ LABEL_14:
   }
   else
   {
-    sub_1B868D4(v12);
+    sub_1BDBD94(v12);
     return GOExtensions__AddDisabledComponentWithData_object_(v17, v18, v19);
   }
 }
@@ -213,7 +213,7 @@ LABEL_14:
 
 Il2CppObject *__fastcall GOExtensions__ConstructFromResourcePersistant_object_(
         System_String_o *name,
-        const MethodInfo_2FC0A40 *method)
+        const MethodInfo_3088170 *method)
 {
   __int64 v4; // x1
   __int64 v5; // x1
@@ -238,12 +238,12 @@ Il2CppObject *__fastcall GOExtensions__ConstructFromResourcePersistant_object_(
 
   if ( !method->rgctx_data )
   {
-    sub_1B863B8(&UnityEngine_GameObject_TypeInfo, method);
-    sub_1B863B8(&Method_UnityEngine_Object_Instantiate_GameObject___, v4);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B863B8(&System_Type_TypeInfo, v6);
+    sub_1BDB878(&UnityEngine_GameObject_TypeInfo, method);
+    sub_1BDB878(&Method_UnityEngine_Object_Instantiate_GameObject___, v4);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BDB878(&System_Type_TypeInfo, v6);
     if ( !method->rgctx_data )
-      sub_1BD6AA4();
+      sub_1C2BF64();
   }
   v7 = UnityEngine_Resources__Load(name, 0LL);
   v8 = (UnityEngine_GameObject_c **)v7;
@@ -266,9 +266,9 @@ LABEL_6:
 LABEL_11:
   v10 = UnityEngine_Object__Instantiate_object_(
           v9,
-          (const MethodInfo_2FF5DC4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          (const MethodInfo_30BDAA4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !v10 )
-    sub_1B86614(0LL, v11);
+    sub_1BDBAD4(0LL, v11);
   v12 = (UnityEngine_GameObject_o *)v10;
   gameObject = (UnityEngine_Object_o *)UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)v10, 0LL);
   UnityEngine_Object__DontDestroyOnLoad(gameObject, 0LL);
@@ -280,17 +280,17 @@ LABEL_11:
   Component = UnityEngine_GameObject__GetComponent(v12, TypeFromHandle, 0LL);
   _1_T = method->rgctx_data->_1_T;
   if ( (BYTE5(_1_T->vtable[0].methodPtr) & 1) == 0 )
-    _1_T = (Il2CppClass *)sub_1BD6A48(v17);
-  v19 = sub_1B864F4(Component, _1_T);
+    _1_T = (Il2CppClass *)sub_1C2BF08(v17);
+  v19 = sub_1BDB9B4(Component, _1_T);
   v21 = method->rgctx_data->_1_T;
   if ( (BYTE5(v21->vtable[0].methodPtr) & 1) == 0 )
-    v21 = (Il2CppClass *)sub_1BD6A48(v20);
+    v21 = (Il2CppClass *)sub_1C2BF08(v20);
   if ( v19 )
   {
-    result = (Il2CppObject *)sub_1B864F4(v19, v21);
+    result = (Il2CppObject *)sub_1BDB9B4(v19, v21);
     if ( result )
       return result;
-    sub_1B868D4(v19);
+    sub_1BDBD94(v19);
   }
   return 0LL;
 }
@@ -298,7 +298,7 @@ LABEL_11:
 
 Il2CppObject *__fastcall GOExtensions__ConstructFromResource_object_(
         System_String_o *name,
-        const MethodInfo_2FC08C0 *method)
+        const MethodInfo_3087FF0 *method)
 {
   __int64 v4; // x1
   __int64 v5; // x1
@@ -321,12 +321,12 @@ Il2CppObject *__fastcall GOExtensions__ConstructFromResource_object_(
 
   if ( !method->rgctx_data )
   {
-    sub_1B863B8(&UnityEngine_GameObject_TypeInfo, method);
-    sub_1B863B8(&Method_UnityEngine_Object_Instantiate_GameObject___, v4);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B863B8(&System_Type_TypeInfo, v6);
+    sub_1BDB878(&UnityEngine_GameObject_TypeInfo, method);
+    sub_1BDB878(&Method_UnityEngine_Object_Instantiate_GameObject___, v4);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BDB878(&System_Type_TypeInfo, v6);
     if ( !method->rgctx_data )
-      sub_1BD6AA4();
+      sub_1C2BF64();
   }
   v7 = UnityEngine_Resources__Load(name, 0LL);
   v8 = (UnityEngine_GameObject_c **)v7;
@@ -349,37 +349,37 @@ LABEL_6:
 LABEL_11:
   v10 = UnityEngine_Object__Instantiate_object_(
           v9,
-          (const MethodInfo_2FF5DC4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          (const MethodInfo_30BDAA4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   _0_T = method->rgctx_data->_0_T;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
   v21.fields.value = (int)_0_T;
   TypeFromHandle = System_Type__GetTypeFromHandle(v21, 0LL);
   if ( !v10 )
-    sub_1B86614(TypeFromHandle, v13);
+    sub_1BDBAD4(TypeFromHandle, v13);
   Component = UnityEngine_GameObject__GetComponent((UnityEngine_GameObject_o *)v10, TypeFromHandle, 0LL);
   _1_T = method->rgctx_data->_1_T;
   if ( (BYTE5(_1_T->vtable[0].methodPtr) & 1) == 0 )
-    _1_T = (Il2CppClass *)sub_1BD6A48(v15);
-  v17 = sub_1B864F4(Component, _1_T);
+    _1_T = (Il2CppClass *)sub_1C2BF08(v15);
+  v17 = sub_1BDB9B4(Component, _1_T);
   v19 = method->rgctx_data->_1_T;
   if ( (BYTE5(v19->vtable[0].methodPtr) & 1) == 0 )
-    v19 = (Il2CppClass *)sub_1BD6A48(v18);
+    v19 = (Il2CppClass *)sub_1C2BF08(v18);
   if ( v17 )
   {
-    result = (Il2CppObject *)sub_1B864F4(v17, v19);
+    result = (Il2CppObject *)sub_1BDB9B4(v17, v19);
     if ( result )
       return result;
-    sub_1B868D4(v17);
+    sub_1BDBD94(v17);
   }
   return 0LL;
 }
 
 
-Il2CppObject *__fastcall GOExtensions__ConstructPersistant_object_(const MethodInfo_2FC0BCC *method)
+Il2CppObject *__fastcall GOExtensions__ConstructPersistant_object_(const MethodInfo_30882FC *method)
 {
   __int64 v1; // x1
-  const MethodInfo_2FC06A8 **rgctx_data; // x8
+  const MethodInfo_3087DD8 **rgctx_data; // x8
   __int64 v4; // x1
   Il2CppObject *v5; // x0
   __int64 v6; // x1
@@ -396,21 +396,21 @@ Il2CppObject *__fastcall GOExtensions__ConstructPersistant_object_(const MethodI
   Il2CppObject *result; // x0
   System_RuntimeTypeHandle_o v18; // 0:w0.4
 
-  rgctx_data = (const MethodInfo_2FC06A8 **)method->rgctx_data;
+  rgctx_data = (const MethodInfo_3087DD8 **)method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v1);
-    sub_1B863B8(&System_Type_TypeInfo, v4);
-    rgctx_data = (const MethodInfo_2FC06A8 **)method->rgctx_data;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v1);
+    sub_1BDB878(&System_Type_TypeInfo, v4);
+    rgctx_data = (const MethodInfo_3087DD8 **)method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1BD6AA4();
-      rgctx_data = (const MethodInfo_2FC06A8 **)method->rgctx_data;
+      sub_1C2BF64();
+      rgctx_data = (const MethodInfo_3087DD8 **)method->rgctx_data;
     }
   }
   v5 = GOExtensions__Construct_object_(*rgctx_data);
   if ( !v5 )
-    sub_1B86614(0LL, v6);
+    sub_1BDBAD4(0LL, v6);
   v7 = (UnityEngine_Component_o *)v5;
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v5, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -424,26 +424,26 @@ Il2CppObject *__fastcall GOExtensions__ConstructPersistant_object_(const MethodI
   Component = UnityEngine_Component__GetComponent(v7, TypeFromHandle, 0LL);
   _1_T = method->rgctx_data->_1_T;
   if ( (BYTE5(_1_T->vtable[0].methodPtr) & 1) == 0 )
-    _1_T = (Il2CppClass *)sub_1BD6A48(v12);
-  v14 = sub_1B864F4(Component, _1_T);
+    _1_T = (Il2CppClass *)sub_1C2BF08(v12);
+  v14 = sub_1BDB9B4(Component, _1_T);
   v16 = method->rgctx_data->_1_T;
   if ( (BYTE5(v16->vtable[0].methodPtr) & 1) == 0 )
-    v16 = (Il2CppClass *)sub_1BD6A48(v15);
+    v16 = (Il2CppClass *)sub_1C2BF08(v15);
   if ( v14 )
   {
-    result = (Il2CppObject *)sub_1B864F4(v14, v16);
+    result = (Il2CppObject *)sub_1BDB9B4(v14, v16);
     if ( result )
       return result;
-    sub_1B868D4(v14);
+    sub_1BDBD94(v14);
   }
   return 0LL;
 }
 
 
-Il2CppObject *__fastcall GOExtensions__Construct_object_(const MethodInfo_2FC06A8 *method)
+Il2CppObject *__fastcall GOExtensions__Construct_object_(const MethodInfo_3087DD8 *method)
 {
   __int64 v1; // x1
-  const MethodInfo_2FC06A8_RGCTXs *rgctx_data; // x8
+  const MethodInfo_3087DD8_RGCTXs *rgctx_data; // x8
   __int64 v4; // x1
   Il2CppType *_0_T; // x20
   __int64 TypeFromHandle; // x0
@@ -468,12 +468,12 @@ Il2CppObject *__fastcall GOExtensions__Construct_object_(const MethodInfo_2FC06A
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1B863B8(&UnityEngine_GameObject_TypeInfo, v1);
-    sub_1B863B8(&System_Type_TypeInfo, v4);
+    sub_1BDB878(&UnityEngine_GameObject_TypeInfo, v1);
+    sub_1BDB878(&System_Type_TypeInfo, v4);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1BD6AA4();
+      sub_1C2BF64();
       rgctx_data = method->rgctx_data;
     }
   }
@@ -487,30 +487,30 @@ Il2CppObject *__fastcall GOExtensions__Construct_object_(const MethodInfo_2FC06A
   v8 = (System_String_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)TypeFromHandle + 360LL))(
                             TypeFromHandle,
                             *(_QWORD *)(*(_QWORD *)TypeFromHandle + 368LL));
-  v9 = (UnityEngine_GameObject_o *)sub_1B86604(UnityEngine_GameObject_TypeInfo);
+  v9 = (UnityEngine_GameObject_o *)sub_1BDBAC4(UnityEngine_GameObject_TypeInfo);
   UnityEngine_GameObject___ctor(v9, v8, 0LL);
   if ( !v9 )
     goto LABEL_23;
   TypeFromHandle = (__int64)UnityEngine_GameObject__get_transform(v9, 0LL);
   v10 = (UnityEngine_Transform_o *)TypeFromHandle;
-  if ( !byte_4A487E1 )
+  if ( !byte_4B3E911 )
   {
-    TypeFromHandle = sub_1B863B8(&UnityEngine_Vector3_TypeInfo, v7);
-    byte_4A487E1 = 1;
+    TypeFromHandle = sub_1BDB878(&UnityEngine_Vector3_TypeInfo, v7);
+    byte_4B3E911 = 1;
   }
   if ( !v10 )
     goto LABEL_23;
   UnityEngine_Transform__set_position(v10, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
   TypeFromHandle = (__int64)UnityEngine_GameObject__get_transform(v9, 0LL);
   v11 = (UnityEngine_Transform_o *)TypeFromHandle;
-  if ( !byte_4A487E7 )
+  if ( !byte_4B3E917 )
   {
-    TypeFromHandle = sub_1B863B8(&UnityEngine_Quaternion_TypeInfo, v7);
-    byte_4A487E7 = 1;
+    TypeFromHandle = sub_1BDB878(&UnityEngine_Quaternion_TypeInfo, v7);
+    byte_4B3E917 = 1;
   }
   if ( !v11 )
 LABEL_23:
-    sub_1B86614(TypeFromHandle, v7);
+    sub_1BDBAD4(TypeFromHandle, v7);
   UnityEngine_Transform__set_rotation(v11, UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion, 0LL);
   v12 = method->rgctx_data->_0_T;
   v13 = System_Type__GetTypeFromHandle((System_RuntimeTypeHandle_o)v12, 0LL);
@@ -520,17 +520,17 @@ LABEL_23:
   Component = UnityEngine_GameObject__GetComponent(v9, v15, 0LL);
   _1_T = method->rgctx_data->_1_T;
   if ( (BYTE5(_1_T->vtable[0].methodPtr) & 1) == 0 )
-    _1_T = (Il2CppClass *)sub_1BD6A48(v17);
-  v19 = sub_1B864F4(Component, _1_T);
+    _1_T = (Il2CppClass *)sub_1C2BF08(v17);
+  v19 = sub_1BDB9B4(Component, _1_T);
   v21 = method->rgctx_data->_1_T;
   if ( (BYTE5(v21->vtable[0].methodPtr) & 1) == 0 )
-    v21 = (Il2CppClass *)sub_1BD6A48(v20);
+    v21 = (Il2CppClass *)sub_1C2BF08(v20);
   if ( v19 )
   {
-    result = (Il2CppObject *)sub_1B864F4(v19, v21);
+    result = (Il2CppObject *)sub_1BDB9B4(v19, v21);
     if ( result )
       return result;
-    sub_1B868D4(v19);
+    sub_1BDBD94(v19);
   }
   return 0LL;
 }

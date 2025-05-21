@@ -12,24 +12,24 @@ void __fastcall OutlineEffectUtility__CreateMaterial(
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4A49DC7 & 1) == 0 )
+  if ( (byte_4B40358 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Material_TypeInfo, shader);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v7);
-    byte_4A49DC7 = 1;
+    sub_1BDB878(&UnityEngine_Material_TypeInfo, shader);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v7);
+    byte_4B40358 = 1;
   }
   v8 = (UnityEngine_Object_o *)*material;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(v8, 0LL, 0LL) )
   {
-    v9 = (UnityEngine_Material_o *)sub_1B86604(UnityEngine_Material_TypeInfo);
+    v9 = (UnityEngine_Material_o *)sub_1BDBAC4(UnityEngine_Material_TypeInfo);
     UnityEngine_Material___ctor(v9, shader, 0LL);
     if ( !v9 )
-      sub_1B86614(v10, v11);
+      sub_1BDBAD4(v10, v11);
     UnityEngine_Object__set_name((UnityEngine_Object_o *)v9, materialName, 0LL);
     *material = v9;
-    sub_1B8635C((CGThumbnailListItem_o *)material, (int32_t)v9, v12, v13);
+    sub_1BDB81C((CGThumbnailListItem_o *)material, (int32_t)v9, v12, v13);
   }
 }
 
@@ -47,23 +47,23 @@ bool __fastcall OutlineEffectUtility__CreateShader(
   UnityEngine_Object_o *v10; // x20
   bool v11; // w20
 
-  if ( (byte_4A49DC8 & 1) == 0 )
+  if ( (byte_4B40359 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, shaderName);
-    sub_1B863B8(&StringLiteral_245/*" from Shader.Find"*/, v5);
-    sub_1B863B8(&StringLiteral_19155/*"failed to get "*/, v6);
-    byte_4A49DC8 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, shaderName);
+    sub_1BDB878(&StringLiteral_245/*" from Shader.Find"*/, v5);
+    sub_1BDB878(&StringLiteral_19398/*"failed to get "*/, v6);
+    byte_4B40359 = 1;
   }
   v7 = UnityEngine_Shader__Find(shaderName, 0LL);
   *shaderAsset = v7;
-  sub_1B8635C((CGThumbnailListItem_o *)shaderAsset, (int32_t)v7, v8, v9);
+  sub_1BDB81C((CGThumbnailListItem_o *)shaderAsset, (int32_t)v7, v8, v9);
   v10 = (UnityEngine_Object_o *)*shaderAsset;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v11 = UnityEngine_Object__op_Equality(v10, 0LL, 0LL);
   if ( v11 )
-    System_String__Concat_61683424(
-      (System_String_o *)StringLiteral_19155/*"failed to get "*/,
+    System_String__Concat_62610508(
+      (System_String_o *)StringLiteral_19398/*"failed to get "*/,
       shaderName,
       (System_String_o *)StringLiteral_245/*" from Shader.Find"*/,
       0LL);
@@ -84,7 +84,7 @@ void __fastcall OutlineEffectUtility__DestroyCommandBuffer(
   {
     UnityEngine_Rendering_CommandBuffer__Dispose(v3, 0LL);
     *outlineCmd = 0LL;
-    sub_1B8635C((CGThumbnailListItem_o *)outlineCmd, 0, v4, v5);
+    sub_1BDB81C((CGThumbnailListItem_o *)outlineCmd, 0, v4, v5);
   }
 }
 
@@ -99,11 +99,11 @@ void __fastcall OutlineEffectUtility__DestroyMaterial(UnityEngine_Material_o **m
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4A49DCA & 1) == 0 )
+  if ( (byte_4B4035B & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Application_TypeInfo, method);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A49DCA = 1;
+    sub_1BDB878(&UnityEngine_Application_TypeInfo, method);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B4035B = 1;
   }
   v4 = (UnityEngine_Object_o *)*mat;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -118,11 +118,11 @@ void __fastcall OutlineEffectUtility__DestroyMaterial(UnityEngine_Material_o **m
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( v7 )
-      UnityEngine_Object__Destroy_69356292(v6, 0LL);
+      UnityEngine_Object__Destroy_70284200(v6, 0LL);
     else
-      UnityEngine_Object__DestroyImmediate_69356480(v6, 0LL);
+      UnityEngine_Object__DestroyImmediate_70284388(v6, 0LL);
     *mat = 0LL;
-    sub_1B8635C((CGThumbnailListItem_o *)mat, 0, v8, v9);
+    sub_1BDB81C((CGThumbnailListItem_o *)mat, 0, v8, v9);
   }
 }
 
@@ -139,11 +139,11 @@ void __fastcall OutlineEffectUtility__DestroyRenderTexture(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4A49DCB & 1) == 0 )
+  if ( (byte_4B4035C & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Application_TypeInfo, method);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A49DCB = 1;
+    sub_1BDB878(&UnityEngine_Application_TypeInfo, method);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B4035C = 1;
   }
   v4 = (UnityEngine_Object_o *)*renderTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -158,11 +158,11 @@ void __fastcall OutlineEffectUtility__DestroyRenderTexture(
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( v7 )
-      UnityEngine_Object__Destroy_69356292(v6, 0LL);
+      UnityEngine_Object__Destroy_70284200(v6, 0LL);
     else
-      UnityEngine_Object__DestroyImmediate_69356480(v6, 0LL);
+      UnityEngine_Object__DestroyImmediate_70284388(v6, 0LL);
     *renderTexture = 0LL;
-    sub_1B8635C((CGThumbnailListItem_o *)renderTexture, 0, v8, v9);
+    sub_1BDB81C((CGThumbnailListItem_o *)renderTexture, 0, v8, v9);
   }
 }
 
@@ -181,14 +181,14 @@ UnityEngine_Camera_o *__fastcall OutlineEffectUtility__GetCamera(
   __int64 v11; // x1
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4A49DD0 & 1) == 0 )
+  if ( (byte_4B40361 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_Camera___, battlePath);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B863B8(&StringLiteral_43/*"\n"*/, v6);
-    sub_1B863B8(&StringLiteral_6930/*"GameObject.Find return null"*/, v7);
-    sub_1B863B8(&StringLiteral_19156/*"failed to get Camera component"*/, v8);
-    byte_4A49DD0 = 1;
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_Camera___, battlePath);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BDB878(&StringLiteral_43/*"\n"*/, v6);
+    sub_1BDB878(&StringLiteral_7041/*"GameObject.Find return null"*/, v7);
+    sub_1BDB878(&StringLiteral_19399/*"failed to get Camera component"*/, v8);
+    byte_4B40361 = 1;
   }
   v9 = (UnityEngine_Object_o *)UnityEngine_GameObject__Find(editorPath, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -202,8 +202,8 @@ UnityEngine_Camera_o *__fastcall OutlineEffectUtility__GetCamera(
   v10 = UnityEngine_Object__op_Equality(v9, 0LL, 0LL);
   if ( v10 )
   {
-    System_String__Concat_61683424(
-      (System_String_o *)StringLiteral_6930/*"GameObject.Find return null"*/,
+    System_String__Concat_62610508(
+      (System_String_o *)StringLiteral_7041/*"GameObject.Find return null"*/,
       (System_String_o *)StringLiteral_43/*"\n"*/,
       battlePath,
       0LL);
@@ -213,10 +213,10 @@ UnityEngine_Camera_o *__fastcall OutlineEffectUtility__GetCamera(
   {
 LABEL_10:
     if ( !v9 )
-      sub_1B86614(v10, v11);
+      sub_1BDBAD4(v10, v11);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v9,
-                         (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_Camera___);
+                         (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_Camera___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -235,10 +235,10 @@ UnityEngine_Texture_o *__fastcall OutlineEffectUtility__GetMainTexture(
   UnityEngine_Material_array *sharedMaterials; // x0
 
   v2 = (UnityEngine_Renderer_o *)smr;
-  if ( (byte_4A49DCF & 1) == 0 )
+  if ( (byte_4B40360 & 1) == 0 )
   {
-    smr = (UnityEngine_SkinnedMeshRenderer_o *)sub_1B863B8(&StringLiteral_17506/*"cant get material from SkinnedMeshRenderer.sharedMaterials. Either the sharedMaterials is null or have 0 length"*/, method);
-    byte_4A49DCF = 1;
+    smr = (UnityEngine_SkinnedMeshRenderer_o *)sub_1BDB878(&StringLiteral_17743/*"cant get material from SkinnedMeshRenderer.sharedMaterials. Either the sharedMaterials is null or have 0 length"*/, method);
+    byte_4B40360 = 1;
   }
   if ( !v2 )
     goto LABEL_9;
@@ -249,7 +249,7 @@ UnityEngine_Texture_o *__fastcall OutlineEffectUtility__GetMainTexture(
     if ( smr )
       return UnityEngine_Material__get_mainTexture((UnityEngine_Material_o *)smr, 0LL);
 LABEL_9:
-    sub_1B86614(smr, method);
+    sub_1BDBAD4(smr, method);
   }
   return 0LL;
 }
@@ -297,10 +297,10 @@ UnityEngine_Vector2_o __fastcall OutlineEffectUtility__GetScaledUVOffset(const M
   }
   else
   {
-    if ( !byte_4A486DA )
+    if ( !byte_4B3E80A )
     {
-      sub_1B863B8(&UnityEngine_Vector2_TypeInfo, v2);
-      byte_4A486DA = 1;
+      sub_1BDB878(&UnityEngine_Vector2_TypeInfo, v2);
+      byte_4B3E80A = 1;
     }
     static_fields = UnityEngine_Vector2_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -323,24 +323,24 @@ void __fastcall OutlineEffectUtility__InsertOutlineMaterialToSharedMaterialsAtLa
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 sharedMaterials; // x0
-  __int64 v10; // x8
-  System_Object_array *v11; // x21
-  unsigned int v12; // w25
-  __int64 v13; // x22
-  UnityEngine_Material_o **v14; // x22
-  UnityEngine_Object_o *v15; // x23
-  UnityEngine_Object_o *v16; // t1
+  __int64 v10; // x2
+  __int64 v11; // x8
+  System_Object_array *v12; // x21
+  unsigned int v13; // w25
+  __int64 v14; // x22
+  UnityEngine_Material_o **v15; // x22
+  UnityEngine_Object_o *v16; // x23
+  UnityEngine_Object_o *v17; // t1
   int max_length; // w8
-  System_Collections_Generic_List_object__o *v18; // x22
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  System_Collections_Generic_List_object__o *v19; // x22
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v22; // x9
+  _QWORD *v23; // x9
   __int64 size; // x10
-  Il2CppClass **v24; // x0
-  UnityEngine_Object_o *v25; // x23
-  UnityEngine_Material_o *v26; // x24
-  int32_t v27; // w2
+  Il2CppClass **v25; // x0
+  UnityEngine_Object_o *v26; // x23
+  UnityEngine_Material_o *v27; // x24
   const MethodInfo *v28; // x3
   UnityEngine_Renderer_o *v29; // x0
   System_Object_array *v30; // x1
@@ -349,35 +349,35 @@ void __fastcall OutlineEffectUtility__InsertOutlineMaterialToSharedMaterialsAtLa
   __int64 v33; // x0
 
   v4 = (UnityEngine_Renderer_o *)smr;
-  if ( (byte_4A49DCD & 1) == 0 )
+  if ( (byte_4B4035E & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Collections_Generic_List_Material__Add__, targetMaterial);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Material__ToArray__, v5);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Material___ctor___76038656, v6);
-    sub_1B863B8(&System_Collections_Generic_List_Material__TypeInfo, v7);
-    smr = (UnityEngine_SkinnedMeshRenderer_o *)sub_1B863B8(&UnityEngine_Object_TypeInfo, v8);
-    byte_4A49DCD = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_List_Material__Add__, targetMaterial);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Material__ToArray__, v5);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Material___ctor___77026920, v6);
+    sub_1BDB878(&System_Collections_Generic_List_Material__TypeInfo, v7);
+    smr = (UnityEngine_SkinnedMeshRenderer_o *)sub_1BDB878(&UnityEngine_Object_TypeInfo, v8);
+    byte_4B4035E = 1;
   }
   if ( !v4 )
     goto LABEL_38;
   sharedMaterials = (__int64)UnityEngine_Renderer__get_sharedMaterials(v4, 0LL);
   if ( !sharedMaterials )
     return;
-  v10 = *(_QWORD *)(sharedMaterials + 24);
-  v11 = (System_Object_array *)sharedMaterials;
-  if ( !v10 )
+  v11 = *(_QWORD *)(sharedMaterials + 24);
+  v12 = (System_Object_array *)sharedMaterials;
+  if ( !v11 )
     return;
-  if ( !(_DWORD)v10 )
+  if ( !(_DWORD)v11 )
     goto LABEL_39;
-  v12 = v10 - 1;
-  v13 = sharedMaterials + 8LL * ((int)v10 - 1);
-  v16 = *(UnityEngine_Object_o **)(v13 + 32);
-  v14 = (UnityEngine_Material_o **)(v13 + 32);
-  v15 = v16;
+  v13 = v11 - 1;
+  v14 = sharedMaterials + 8LL * ((int)v11 - 1);
+  v17 = *(UnityEngine_Object_o **)(v14 + 32);
+  v15 = (UnityEngine_Material_o **)(v14 + 32);
+  v16 = v17;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   smr = (UnityEngine_SkinnedMeshRenderer_o *)UnityEngine_Object__op_Equality(
-                                               v15,
+                                               v16,
                                                (UnityEngine_Object_o *)targetMaterial,
                                                0LL);
   if ( ((unsigned __int8)smr & 1) == 0 )
@@ -385,34 +385,34 @@ void __fastcall OutlineEffectUtility__InsertOutlineMaterialToSharedMaterialsAtLa
     if ( !targetMaterial )
       goto LABEL_38;
     sharedMaterials = (__int64)UnityEngine_Material__get_shader(targetMaterial, 0LL);
-    max_length = v11->max_length;
+    max_length = v12->max_length;
     if ( max_length < 2 )
       goto LABEL_13;
-    if ( v12 < max_length )
+    if ( v13 < max_length )
     {
-      v25 = (UnityEngine_Object_o *)sharedMaterials;
-      v26 = *v14;
+      v26 = (UnityEngine_Object_o *)sharedMaterials;
+      v27 = *v15;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      sharedMaterials = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v26, 0LL, 0LL);
+      sharedMaterials = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v27, 0LL, 0LL);
       if ( (sharedMaterials & 1) != 0 )
       {
 LABEL_21:
-        if ( v12 < v11->max_length )
+        if ( v13 < v12->max_length )
         {
-          OutlineEffectUtility__DestroyMaterial(v14, (const MethodInfo *)targetMaterial);
-          sharedMaterials = sub_1B864F4(targetMaterial, v11->obj.klass->_1.element_class);
+          OutlineEffectUtility__DestroyMaterial(v15, (const MethodInfo *)targetMaterial);
+          sharedMaterials = sub_1BDB9B4(targetMaterial, v12->obj.klass->_1.element_class);
           if ( !sharedMaterials )
           {
-            v33 = sub_1B86638();
-            sub_1B864E0(v33, 0LL);
+            v33 = sub_1BDBAF8();
+            sub_1BDB9A0(v33, 0LL);
           }
-          if ( v12 < v11->max_length )
+          if ( v13 < v12->max_length )
           {
-            *v14 = targetMaterial;
-            sub_1B8635C((CGThumbnailListItem_o *)v14, (int32_t)targetMaterial, v27, v28);
+            *v15 = targetMaterial;
+            sub_1BDB81C((CGThumbnailListItem_o *)v15, (int32_t)targetMaterial, v10, v28);
             v29 = v4;
-            v30 = v11;
+            v30 = v12;
 LABEL_27:
             UnityEngine_Renderer__set_sharedMaterials(v29, (UnityEngine_Material_array *)v30, 0LL);
             return;
@@ -420,9 +420,9 @@ LABEL_27:
         }
         goto LABEL_39;
       }
-      if ( v12 < v11->max_length )
+      if ( v13 < v12->max_length )
       {
-        v31 = *v14;
+        v31 = *v15;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         sharedMaterials = UnityEngine_Object__op_Inequality(
@@ -432,52 +432,52 @@ LABEL_27:
         if ( (sharedMaterials & 1) == 0 )
         {
 LABEL_13:
-          v18 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_Material__TypeInfo);
-          System_Collections_Generic_List_object____ctor_56607308(
-            v18,
-            (System_Collections_Generic_IEnumerable_T__o *)v11,
-            (const MethodInfo_35FC24C *)Method_System_Collections_Generic_List_Material___ctor___76038656);
-          if ( v18 )
+          v19 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_Material__TypeInfo);
+          System_Collections_Generic_List_object____ctor_57497272(
+            v19,
+            (System_Collections_Generic_IEnumerable_T__o *)v12,
+            (const MethodInfo_36D56B8 *)Method_System_Collections_Generic_List_Material___ctor___77026920);
+          if ( v19 )
           {
-            items = v18->fields._items;
-            v22 = Method_System_Collections_Generic_List_Material__Add__;
-            ++v18->fields._version;
+            items = v19->fields._items;
+            v23 = Method_System_Collections_Generic_List_Material__Add__;
+            ++v19->fields._version;
             if ( items )
             {
-              size = v18->fields._size;
+              size = v19->fields._size;
               if ( (unsigned int)size >= items->max_length )
               {
                 System_Collections_Generic_List_object___AddWithResize(
-                  v18,
+                  v19,
                   (Il2CppObject *)targetMaterial,
-                  *(const MethodInfo_35FC958 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+                  *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
               }
               else
               {
-                v24 = &items->obj.klass + size;
-                v18->fields._size = size + 1;
-                v24[4] = (Il2CppClass *)targetMaterial;
-                sub_1B8635C((CGThumbnailListItem_o *)(v24 + 4), (int32_t)targetMaterial, v19, v20);
+                v25 = &items->obj.klass + size;
+                v19->fields._size = size + 1;
+                v25[4] = (Il2CppClass *)targetMaterial;
+                sub_1BDB81C((CGThumbnailListItem_o *)(v25 + 4), (int32_t)targetMaterial, v20, v21);
               }
               v30 = System_Collections_Generic_List_object___ToArray(
-                      v18,
-                      (const MethodInfo_35FE4B0 *)Method_System_Collections_Generic_List_Material__ToArray__);
+                      v19,
+                      (const MethodInfo_36D791C *)Method_System_Collections_Generic_List_Material__ToArray__);
               v29 = v4;
               goto LABEL_27;
             }
           }
 LABEL_38:
-          sub_1B86614(smr, targetMaterial);
+          sub_1BDBAD4(smr, targetMaterial);
         }
-        if ( v12 < v11->max_length )
+        if ( v13 < v12->max_length )
         {
-          smr = (UnityEngine_SkinnedMeshRenderer_o *)*v14;
-          if ( !*v14 )
+          smr = (UnityEngine_SkinnedMeshRenderer_o *)*v15;
+          if ( !*v15 )
             goto LABEL_38;
           shader = (UnityEngine_Object_o *)UnityEngine_Material__get_shader((UnityEngine_Material_o *)smr, 0LL);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          sharedMaterials = UnityEngine_Object__op_Equality(shader, v25, 0LL);
+          sharedMaterials = UnityEngine_Object__op_Equality(shader, v26, 0LL);
           if ( (sharedMaterials & 1) == 0 )
             goto LABEL_13;
           goto LABEL_21;
@@ -485,7 +485,7 @@ LABEL_38:
       }
     }
 LABEL_39:
-    sub_1B8661C(sharedMaterials, targetMaterial);
+    sub_1BDBADC(sharedMaterials, targetMaterial, v10);
   }
 }
 
@@ -501,20 +501,20 @@ void __fastcall OutlineEffectUtility__InstantiateCommandBuffer(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4A49DC9 & 1) == 0 )
+  if ( (byte_4B4035A & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Rendering_CommandBuffer_TypeInfo, name);
-    byte_4A49DC9 = 1;
+    sub_1BDB878(&UnityEngine_Rendering_CommandBuffer_TypeInfo, name);
+    byte_4B4035A = 1;
   }
   if ( *cb )
     UnityEngine_Rendering_CommandBuffer__Dispose(*cb, 0LL);
-  v5 = (UnityEngine_Rendering_CommandBuffer_o *)sub_1B86604(UnityEngine_Rendering_CommandBuffer_TypeInfo);
+  v5 = (UnityEngine_Rendering_CommandBuffer_o *)sub_1BDBAC4(UnityEngine_Rendering_CommandBuffer_TypeInfo);
   UnityEngine_Rendering_CommandBuffer___ctor(v5, 0LL);
   if ( !v5 )
-    sub_1B86614(v6, v7);
+    sub_1BDBAD4(v6, v7);
   UnityEngine_Rendering_CommandBuffer__set_name(v5, name, 0LL);
   *cb = v5;
-  sub_1B8635C((CGThumbnailListItem_o *)cb, (int32_t)v5, v8, v9);
+  sub_1BDB81C((CGThumbnailListItem_o *)cb, (int32_t)v5, v8, v9);
 }
 
 
@@ -538,12 +538,12 @@ void __fastcall OutlineEffectUtility__InstantiateRenderTexture(
   __int64 v18; // x1
   UnityEngine_Object_o *v19; // x0
 
-  if ( (byte_4A49DCE & 1) == 0 )
+  if ( (byte_4B4035F & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Application_TypeInfo, *(_QWORD *)&rtWidth);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v9);
-    sub_1B863B8(&UnityEngine_RenderTexture_TypeInfo, v10);
-    byte_4A49DCE = 1;
+    sub_1BDB878(&UnityEngine_Application_TypeInfo, *(_QWORD *)&rtWidth);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v9);
+    sub_1BDB878(&UnityEngine_RenderTexture_TypeInfo, v10);
+    byte_4B4035F = 1;
   }
   v11 = (UnityEngine_Object_o *)*rt;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -558,17 +558,17 @@ void __fastcall OutlineEffectUtility__InstantiateRenderTexture(
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( v14 )
-      UnityEngine_Object__Destroy_69356292(v13, 0LL);
+      UnityEngine_Object__Destroy_70284200(v13, 0LL);
     else
-      UnityEngine_Object__DestroyImmediate_69356480(v13, 0LL);
+      UnityEngine_Object__DestroyImmediate_70284388(v13, 0LL);
   }
-  v15 = (UnityEngine_RenderTexture_o *)sub_1B86604(UnityEngine_RenderTexture_TypeInfo);
-  UnityEngine_RenderTexture___ctor_69263120(v15, rtWidth, rtHeight, 0, 0LL);
+  v15 = (UnityEngine_RenderTexture_o *)sub_1BDBAC4(UnityEngine_RenderTexture_TypeInfo);
+  UnityEngine_RenderTexture___ctor_70191008(v15, rtWidth, rtHeight, 0, 0LL);
   *rt = v15;
-  sub_1B8635C((CGThumbnailListItem_o *)rt, (int32_t)v15, v16, v17);
+  sub_1BDB81C((CGThumbnailListItem_o *)rt, (int32_t)v15, v16, v17);
   v19 = (UnityEngine_Object_o *)*rt;
   if ( !*rt || (UnityEngine_Object__set_name(v19, rtName, 0LL), (v19 = (UnityEngine_Object_o *)*rt) == 0LL) )
-    sub_1B86614(v19, v18);
+    sub_1BDBAD4(v19, v18);
   UnityEngine_RenderTexture__Create((UnityEngine_RenderTexture_o *)v19, 0LL);
 }
 
@@ -592,16 +592,16 @@ void __fastcall OutlineEffectUtility__RemoveNullMaterials(
   System_Object_array *v14; // x1
 
   v2 = (UnityEngine_Renderer_o *)smr;
-  if ( (byte_4A49DCC & 1) == 0 )
+  if ( (byte_4B4035D & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Collections_Generic_List_Material__RemoveAt__, method);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Material__ToArray__, v3);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Material___ctor___76038656, v4);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Material__get_Count__, v5);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Material__get_Item__, v6);
-    sub_1B863B8(&System_Collections_Generic_List_Material__TypeInfo, v7);
-    smr = (UnityEngine_SkinnedMeshRenderer_o *)sub_1B863B8(&UnityEngine_Object_TypeInfo, v8);
-    byte_4A49DCC = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_List_Material__RemoveAt__, method);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Material__ToArray__, v3);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Material___ctor___77026920, v4);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Material__get_Count__, v5);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Material__get_Item__, v6);
+    sub_1BDB878(&System_Collections_Generic_List_Material__TypeInfo, v7);
+    smr = (UnityEngine_SkinnedMeshRenderer_o *)sub_1BDB878(&UnityEngine_Object_TypeInfo, v8);
+    byte_4B4035D = 1;
   }
   if ( !v2 )
     goto LABEL_17;
@@ -611,14 +611,14 @@ void __fastcall OutlineEffectUtility__RemoveNullMaterials(
   v10 = (System_Collections_Generic_IEnumerable_T__o *)sharedMaterials;
   if ( !*(_QWORD *)&sharedMaterials->max_length )
     return;
-  v11 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_Material__TypeInfo);
-  System_Collections_Generic_List_object____ctor_56607308(
+  v11 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_Material__TypeInfo);
+  System_Collections_Generic_List_object____ctor_57497272(
     v11,
     v10,
-    (const MethodInfo_35FC24C *)Method_System_Collections_Generic_List_Material___ctor___76038656);
+    (const MethodInfo_36D56B8 *)Method_System_Collections_Generic_List_Material___ctor___77026920);
   if ( !v11 )
 LABEL_17:
-    sub_1B86614(smr, method);
+    sub_1BDBAD4(smr, method);
   if ( v11->fields._size >= 1 )
   {
     v12 = 0;
@@ -629,7 +629,7 @@ LABEL_17:
         Item = System_Collections_Generic_List_object___get_Item(
                  v11,
                  v12,
-                 (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_Material__get_Item__);
+                 (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_Material__get_Item__);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Item, 0LL, 0LL) )
@@ -637,7 +637,7 @@ LABEL_17:
         System_Collections_Generic_List_object___RemoveAt(
           v11,
           v12,
-          (const MethodInfo_35FE12C *)Method_System_Collections_Generic_List_Material__RemoveAt__);
+          (const MethodInfo_36D7598 *)Method_System_Collections_Generic_List_Material__RemoveAt__);
         v12 = 0;
         if ( v11->fields._size <= 0 )
           goto LABEL_15;
@@ -649,7 +649,7 @@ LABEL_17:
 LABEL_15:
   v14 = System_Collections_Generic_List_object___ToArray(
           v11,
-          (const MethodInfo_35FE4B0 *)Method_System_Collections_Generic_List_Material__ToArray__);
+          (const MethodInfo_36D791C *)Method_System_Collections_Generic_List_Material__ToArray__);
   UnityEngine_Renderer__set_sharedMaterials(v2, (UnityEngine_Material_array *)v14, 0LL);
 }
 
@@ -673,15 +673,15 @@ void __fastcall OutlineEffectUtility__RemoveOutlineMaterialFromSharedMaterials(
   System_Object_array *v15; // x1
 
   v4 = (UnityEngine_Renderer_o *)smr;
-  if ( (byte_4A49DD1 & 1) == 0 )
+  if ( (byte_4B40362 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Collections_Generic_List_Material__RemoveAt__, instantiatedMaterialReference);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Material__ToArray__, v5);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Material___ctor___76038656, v6);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Material__get_Item__, v7);
-    sub_1B863B8(&System_Collections_Generic_List_Material__TypeInfo, v8);
-    smr = (UnityEngine_SkinnedMeshRenderer_o *)sub_1B863B8(&UnityEngine_Object_TypeInfo, v9);
-    byte_4A49DD1 = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_List_Material__RemoveAt__, instantiatedMaterialReference);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Material__ToArray__, v5);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Material___ctor___77026920, v6);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Material__get_Item__, v7);
+    sub_1BDB878(&System_Collections_Generic_List_Material__TypeInfo, v8);
+    smr = (UnityEngine_SkinnedMeshRenderer_o *)sub_1BDB878(&UnityEngine_Object_TypeInfo, v9);
+    byte_4B40362 = 1;
   }
   if ( !v4 )
     goto LABEL_12;
@@ -691,19 +691,19 @@ void __fastcall OutlineEffectUtility__RemoveOutlineMaterialFromSharedMaterials(
   v11 = sharedMaterials;
   if ( !*(_QWORD *)&sharedMaterials->max_length )
     return;
-  v12 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_Material__TypeInfo);
-  System_Collections_Generic_List_object____ctor_56607308(
+  v12 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_Material__TypeInfo);
+  System_Collections_Generic_List_object____ctor_57497272(
     v12,
     (System_Collections_Generic_IEnumerable_T__o *)v11,
-    (const MethodInfo_35FC24C *)Method_System_Collections_Generic_List_Material___ctor___76038656);
+    (const MethodInfo_36D56B8 *)Method_System_Collections_Generic_List_Material___ctor___77026920);
   if ( !v12 )
 LABEL_12:
-    sub_1B86614(smr, instantiatedMaterialReference);
+    sub_1BDBAD4(smr, instantiatedMaterialReference);
   v13 = v11->max_length - 1;
   Item = System_Collections_Generic_List_object___get_Item(
            v12,
            v13,
-           (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_Material__get_Item__);
+           (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_Material__get_Item__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(
@@ -714,10 +714,10 @@ LABEL_12:
     System_Collections_Generic_List_object___RemoveAt(
       v12,
       v13,
-      (const MethodInfo_35FE12C *)Method_System_Collections_Generic_List_Material__RemoveAt__);
+      (const MethodInfo_36D7598 *)Method_System_Collections_Generic_List_Material__RemoveAt__);
     v15 = System_Collections_Generic_List_object___ToArray(
             v12,
-            (const MethodInfo_35FE4B0 *)Method_System_Collections_Generic_List_Material__ToArray__);
+            (const MethodInfo_36D791C *)Method_System_Collections_Generic_List_Material__ToArray__);
     UnityEngine_Renderer__set_sharedMaterials(v4, (UnityEngine_Material_array *)v15, 0LL);
   }
 }

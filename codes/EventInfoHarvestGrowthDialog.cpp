@@ -1,9 +1,9 @@
 void __fastcall EventInfoHarvestGrowthDialog___ctor(EventInfoHarvestGrowthDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4FAAB & 1) == 0 )
+  if ( (byte_4B46052 & 1) == 0 )
   {
-    sub_1B863B8(&BaseDialog_TypeInfo, method);
-    byte_4A4FAAB = 1;
+    sub_1BDB878(&BaseDialog_TypeInfo, method);
+    byte_4B46052 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -18,18 +18,18 @@ void __fastcall EventInfoHarvestGrowthDialog__Init(EventInfoHarvestGrowthDialog_
   __int64 v5; // x1
   UILabel_o *titleLabel; // x0
   UILabel_o *closeLabel; // x20
-  int32_t v8; // w2
+  __int64 v8; // x2
   const MethodInfo *v9; // x3
   struct UnityEngine_GameObject_array *dispObjList; // x20
   int max_length; // w8
   unsigned int v12; // w21
 
-  if ( (byte_4A4FAA8 & 1) == 0 )
+  if ( (byte_4B4604F & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_3676/*"COMMON_CONFIRM_CLOSE"*/, v3);
-    sub_1B863B8(&StringLiteral_1/*""*/, v4);
-    byte_4A4FAA8 = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_3717/*"COMMON_CONFIRM_CLOSE"*/, v3);
+    sub_1BDB878(&StringLiteral_1/*""*/, v4);
+    byte_4B4604F = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   titleLabel = this->fields.titleLabel;
@@ -40,7 +40,7 @@ void __fastcall EventInfoHarvestGrowthDialog__Init(EventInfoHarvestGrowthDialog_
   closeLabel = this->fields.closeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3717/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
     goto LABEL_14;
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0LL);
@@ -54,7 +54,7 @@ void __fastcall EventInfoHarvestGrowthDialog__Init(EventInfoHarvestGrowthDialog_
     while ( 1 )
     {
       if ( v12 >= max_length )
-        sub_1B8661C(titleLabel, v5);
+        sub_1BDBADC(titleLabel, v5, v8);
       titleLabel = (UILabel_o *)dispObjList->m_Items[v12];
       if ( !titleLabel )
         break;
@@ -64,11 +64,11 @@ void __fastcall EventInfoHarvestGrowthDialog__Init(EventInfoHarvestGrowthDialog_
         goto LABEL_13;
     }
 LABEL_14:
-    sub_1B86614(titleLabel, v5);
+    sub_1BDBAD4(titleLabel, v5);
   }
 LABEL_13:
   this->fields.closeAction = 0LL;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.closeAction, 0, v8, v9);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.closeAction, 0, v8, v9);
 }
 
 
@@ -82,21 +82,21 @@ void __fastcall EventInfoHarvestGrowthDialog__OnClickCloseButton(
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4A4FAAA & 1) == 0 )
+  if ( (byte_4B46051 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Method_EventInfoHarvestGrowthDialog_OnClickCloseButton__, v3);
-    sub_1B863B8(&Method_EventInfoHarvestGrowthDialog__OnClickCloseButton_b__22_0__, v4);
-    byte_4A4FAAA = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&Method_EventInfoHarvestGrowthDialog_OnClickCloseButton__, v3);
+    sub_1BDB878(&Method_EventInfoHarvestGrowthDialog__OnClickCloseButton_b__22_0__, v4);
+    byte_4B46051 = 1;
   }
   if ( !this->fields.isClose )
   {
     v5 = Method_EventInfoHarvestGrowthDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_EventInfoHarvestGrowthDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B863D0(Method_EventInfoHarvestGrowthDialog_OnClickCloseButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BDB890(Method_EventInfoHarvestGrowthDialog_OnClickCloseButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0, 0LL);
-    v7 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
     System_Action___ctor(
       v7,
       (Il2CppObject *)this,
@@ -180,7 +180,7 @@ void __fastcall EventInfoHarvestGrowthDialog__Open(
   _QWORD *v69; // x9
   __int64 size; // x10
   Il2CppClass **v71; // x0
-  int32_t v72; // w2
+  __int64 v72; // x2
   const MethodInfo *v73; // x3
   int v74; // w19
   unsigned int v75; // w8
@@ -227,56 +227,56 @@ void __fastcall EventInfoHarvestGrowthDialog__Open(
   System_Collections_Generic_List_Enumerator_object__o v117; // [xsp+38h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v118; // [xsp+50h] [xbp-80h] BYREF
 
-  if ( (byte_4A4FAA9 & 1) == 0 )
+  if ( (byte_4B46050 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Array_Empty_object___, harvestGrowthInfo);
-    sub_1B863B8(&Method_DataManager_GetMasterData_GiftMaster___, v6);
-    sub_1B863B8(&Method_DataManager_GetMasterData_QuestMaster___, v7);
-    sub_1B863B8(&Method_DataManager_GetMasterData_QuestPhaseMaster___, v8);
-    sub_1B863B8(&Method_DataManager_GetMasterData_SpotMaster___, v9);
-    sub_1B863B8(&Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__, v10);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_GiftEntity__Dispose__, v11);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_GiftEntity__MoveNext__, v12);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_GiftEntity__get_Current__, v13);
-    sub_1B863B8(&EventInfoHarvestGrowthDialog_GiftInfo_TypeInfo, v14);
-    sub_1B863B8(&int_TypeInfo, v15);
-    sub_1B863B8(&Method_System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo__Add__, v16);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GiftEntity__Find__, v17);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GiftEntity__GetEnumerator__, v18);
-    sub_1B863B8(&Method_System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo___ctor__, v19);
-    sub_1B863B8(&Method_System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo__get_Count__, v20);
-    sub_1B863B8(&Method_System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo__get_Item__, v21);
-    sub_1B863B8(&System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo__TypeInfo, v22);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v23);
-    sub_1B863B8(&System_Predicate_GiftEntity__TypeInfo, v24);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v25);
-    sub_1B863B8(&System_Text_StringBuilder_TypeInfo, v26);
-    sub_1B863B8(&Method_EventInfoHarvestGrowthDialog___c__DisplayClass21_0__Open_b__0__, v27);
-    sub_1B863B8(&EventInfoHarvestGrowthDialog___c__DisplayClass21_0_TypeInfo, v28);
-    sub_1B863B8(&StringLiteral_5563/*"EVENT_HARVEST_GROWTH_ITEM_NEW"*/, v29);
-    sub_1B863B8(&StringLiteral_20084/*"img_common_frame01"*/, v30);
-    sub_1B863B8(&StringLiteral_19671/*"harvestGrowthTitle"*/, v31);
-    sub_1B863B8(&StringLiteral_5562/*"EVENT_HARVEST_GROWTH_ITEM_GRADEUP"*/, v32);
-    sub_1B863B8(&StringLiteral_5560/*"EVENT_HARVEST_GROWTH_ITEM_ADD_FORMAT"*/, v33);
-    sub_1B863B8(&StringLiteral_5564/*"EVENT_HARVEST_GROWTH_MESSAGE"*/, v34);
-    sub_1B863B8(&StringLiteral_1/*""*/, v35);
-    sub_1B863B8(&StringLiteral_5561/*"EVENT_HARVEST_GROWTH_ITEM_FORMAT"*/, v36);
-    byte_4A4FAA9 = 1;
+    sub_1BDB878(&Method_System_Array_Empty_object___, harvestGrowthInfo);
+    sub_1BDB878(&Method_DataManager_GetMasterData_GiftMaster___, v6);
+    sub_1BDB878(&Method_DataManager_GetMasterData_QuestMaster___, v7);
+    sub_1BDB878(&Method_DataManager_GetMasterData_QuestPhaseMaster___, v8);
+    sub_1BDB878(&Method_DataManager_GetMasterData_SpotMaster___, v9);
+    sub_1BDB878(&Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__, v10);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_GiftEntity__Dispose__, v11);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_GiftEntity__MoveNext__, v12);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_GiftEntity__get_Current__, v13);
+    sub_1BDB878(&EventInfoHarvestGrowthDialog_GiftInfo_TypeInfo, v14);
+    sub_1BDB878(&int_TypeInfo, v15);
+    sub_1BDB878(&Method_System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo__Add__, v16);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GiftEntity__Find__, v17);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GiftEntity__GetEnumerator__, v18);
+    sub_1BDB878(&Method_System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo___ctor__, v19);
+    sub_1BDB878(&Method_System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo__get_Count__, v20);
+    sub_1BDB878(&Method_System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo__get_Item__, v21);
+    sub_1BDB878(&System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo__TypeInfo, v22);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v23);
+    sub_1BDB878(&System_Predicate_GiftEntity__TypeInfo, v24);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v25);
+    sub_1BDB878(&System_Text_StringBuilder_TypeInfo, v26);
+    sub_1BDB878(&Method_EventInfoHarvestGrowthDialog___c__DisplayClass21_0__Open_b__0__, v27);
+    sub_1BDB878(&EventInfoHarvestGrowthDialog___c__DisplayClass21_0_TypeInfo, v28);
+    sub_1BDB878(&StringLiteral_5640/*"EVENT_HARVEST_GROWTH_ITEM_NEW"*/, v29);
+    sub_1BDB878(&StringLiteral_20379/*"img_common_frame01"*/, v30);
+    sub_1BDB878(&StringLiteral_19951/*"harvestGrowthTitle"*/, v31);
+    sub_1BDB878(&StringLiteral_5639/*"EVENT_HARVEST_GROWTH_ITEM_GRADEUP"*/, v32);
+    sub_1BDB878(&StringLiteral_5637/*"EVENT_HARVEST_GROWTH_ITEM_ADD_FORMAT"*/, v33);
+    sub_1BDB878(&StringLiteral_5641/*"EVENT_HARVEST_GROWTH_MESSAGE"*/, v34);
+    sub_1BDB878(&StringLiteral_1/*""*/, v35);
+    sub_1BDB878(&StringLiteral_5638/*"EVENT_HARVEST_GROWTH_ITEM_FORMAT"*/, v36);
+    byte_4B46050 = 1;
   }
   memset(&v118, 0, sizeof(v118));
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_97;
   v39 = (DataManager_o *)Instance;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_QuestMaster___);
+                        (const MethodInfo_303395C *)Method_DataManager_GetMasterData_QuestMaster___);
   v41 = DataManager__GetMasterData_object_(
           v39,
-          (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_GiftMaster___);
+          (const MethodInfo_303395C *)Method_DataManager_GetMasterData_GiftMaster___);
   Instance = DataManager__GetMasterData_object_(
                v39,
-               (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+               (const MethodInfo_303395C *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
   if ( !harvestGrowthInfo )
     goto LABEL_97;
   if ( !Instance )
@@ -290,7 +290,7 @@ void __fastcall EventInfoHarvestGrowthDialog__Open(
     goto LABEL_97;
   Instance = QuestPhaseEntity__getScriptStr(
                (QuestPhaseEntity_o *)Instance,
-               (System_String_o *)StringLiteral_19671/*"harvestGrowthTitle"*/,
+               (System_String_o *)StringLiteral_19951/*"harvestGrowthTitle"*/,
                0LL,
                0LL);
   if ( !MasterData_object )
@@ -317,63 +317,63 @@ void __fastcall EventInfoHarvestGrowthDialog__Open(
   v45 = GiftMaster__GetListById((GiftMaster_o *)v41, *((_DWORD *)Instance + 13), 0LL);
   Instance = DataManager__GetMasterData_object_(
                v39,
-               (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_SpotMaster___);
+               (const MethodInfo_303395C *)Method_DataManager_GetMasterData_SpotMaster___);
   if ( !Instance )
     goto LABEL_97;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              v43[12],
-             (const MethodInfo_3214280 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
-  v46 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo__TypeInfo);
+             (const MethodInfo_32E1E3C *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
+  v46 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v46,
-    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo___ctor__);
+    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo___ctor__);
   if ( !v45 )
     goto LABEL_97;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v117,
     (System_Collections_Generic_List_object__o *)v45,
-    (const MethodInfo_35FD450 *)Method_System_Collections_Generic_List_GiftEntity__GetEnumerator__);
+    (const MethodInfo_36D68BC *)Method_System_Collections_Generic_List_GiftEntity__GetEnumerator__);
   v47 = 0LL;
   v48 = 0LL;
   v118 = v117;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v118,
-            (const MethodInfo_3398634 *)Method_System_Collections_Generic_List_Enumerator_GiftEntity__MoveNext__) )
+            (const MethodInfo_346A2A4 *)Method_System_Collections_Generic_List_Enumerator_GiftEntity__MoveNext__) )
   {
-    v49 = sub_1B86604(EventInfoHarvestGrowthDialog___c__DisplayClass21_0_TypeInfo);
+    v49 = sub_1BDBAC4(EventInfoHarvestGrowthDialog___c__DisplayClass21_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v49, 0LL);
     if ( !v49 )
-      sub_1B86614(v50, v51);
+      sub_1BDBAD4(v50, v51);
     current = (int32_t)v118.fields._current;
     *(_QWORD *)(v49 + 16) = v118.fields._current;
     v55 = v49 + 16;
-    sub_1B8635C((CGThumbnailListItem_o *)(v49 + 16), current, v52, v53);
-    v56 = sub_1B86604(EventInfoHarvestGrowthDialog_GiftInfo_TypeInfo);
+    sub_1BDB81C((CGThumbnailListItem_o *)(v49 + 16), current, v52, v53);
+    v56 = sub_1BDBAC4(EventInfoHarvestGrowthDialog_GiftInfo_TypeInfo);
     System_Object___ctor((Il2CppObject *)v56, 0LL);
     v58 = *(_QWORD *)(v49 + 16);
     if ( !v58 )
-      sub_1B86614(0LL, v57);
+      sub_1BDBAD4(0LL, v57);
     if ( !v56 )
-      sub_1B86614(v58, v57);
+      sub_1BDBAD4(v58, v57);
     *(_QWORD *)(v56 + 16) = *(_QWORD *)(v58 + 20);
     IconImageId = GiftEntity__getIconImageId((GiftEntity_o *)v58, 0LL);
     *(_DWORD *)(v56 + 24) = IconImageId;
     if ( !*(_QWORD *)v55 )
-      sub_1B86614(IconImageId, v60);
+      sub_1BDBAD4(IconImageId, v60);
     *(_DWORD *)(v56 + 28) = *(_DWORD *)(*(_QWORD *)v55 + 28LL);
-    v61 = (System_Predicate_object__o *)sub_1B86604(System_Predicate_GiftEntity__TypeInfo);
+    v61 = (System_Predicate_object__o *)sub_1BDBAC4(System_Predicate_GiftEntity__TypeInfo);
     System_Predicate_object____ctor(
       v61,
       (Il2CppObject *)v49,
       Method_EventInfoHarvestGrowthDialog___c__DisplayClass21_0__Open_b__0__,
       0LL);
     if ( !ListById )
-      sub_1B86614(v62, v63);
+      sub_1BDBAD4(v62, v63);
     v64 = System_Collections_Generic_List_object___Find(
             (System_Collections_Generic_List_object__o *)ListById,
             (System_Predicate_T__o *)v61,
-            (const MethodInfo_35FCFC0 *)Method_System_Collections_Generic_List_GiftEntity__Find__);
+            (const MethodInfo_36D642C *)Method_System_Collections_Generic_List_GiftEntity__Find__);
     if ( !v64 )
       v47 = v56;
     if ( v64 )
@@ -381,10 +381,10 @@ void __fastcall EventInfoHarvestGrowthDialog__Open(
     if ( v64 )
     {
       if ( !*(_QWORD *)v55 )
-        sub_1B86614(v64, v65);
+        sub_1BDBAD4(v64, v65);
       if ( !v48 )
 LABEL_104:
-        sub_1B86614(v64, v65);
+        sub_1BDBAD4(v64, v65);
       *(_DWORD *)(v48 + 32) = *(_DWORD *)(*(_QWORD *)v55 + 28LL) - HIDWORD(v64[1].monitor);
     }
     else
@@ -398,34 +398,34 @@ LABEL_104:
         *(_BYTE *)(v56 + 37) = 1;
     }
     if ( !v46 )
-      sub_1B86614(v64, v65);
+      sub_1BDBAD4(v64, v65);
     items = v46->fields._items;
     v69 = Method_System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo__Add__;
     ++v46->fields._version;
     if ( !items )
-      sub_1B86614(v64, v65);
+      sub_1BDBAD4(v64, v65);
     size = v46->fields._size;
     if ( (unsigned int)size >= items->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v46,
         (Il2CppObject *)v56,
-        *(const MethodInfo_35FC958 **)(*(_QWORD *)(v69[4] + 192LL) + 112LL));
+        *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v69[4] + 192LL) + 112LL));
     }
     else
     {
       v71 = &items->obj.klass + size;
       v46->fields._size = size + 1;
       v71[4] = (Il2CppClass *)v56;
-      sub_1B8635C((CGThumbnailListItem_o *)(v71 + 4), v56, v66, v67);
+      sub_1BDB81C((CGThumbnailListItem_o *)(v71 + 4), v56, v66, v67);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v118,
-    (const MethodInfo_3398630 *)Method_System_Collections_Generic_List_Enumerator_GiftEntity__Dispose__);
+    (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_GiftEntity__Dispose__);
   if ( !v46 )
 LABEL_97:
-    sub_1B86614(Instance, v38);
+    sub_1BDBAD4(Instance, v38);
   v74 = v46->fields._size;
   if ( v74 <= 0 )
   {
@@ -468,7 +468,7 @@ LABEL_45:
       v83 = *p_countLabelList01;
       v116->fields.messageLabel = v81;
       v112 = v82;
-      sub_1B8635C((CGThumbnailListItem_o *)&v116->fields.messageLabel, (int32_t)v81, v72, v73);
+      sub_1BDB81C((CGThumbnailListItem_o *)&v116->fields.messageLabel, (int32_t)v81, v72, v73);
       if ( !v80 )
         goto LABEL_97;
       v84 = 0;
@@ -486,12 +486,12 @@ LABEL_45:
     Instance = System_Collections_Generic_List_object___get_Item(
                  v46,
                  v84,
-                 (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo__get_Item__);
+                 (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_EventInfoHarvestGrowthDialog_GiftInfo__get_Item__);
     if ( !v83 )
       goto LABEL_97;
     if ( (unsigned int)v86 >= v83->max_length )
 LABEL_98:
-      sub_1B8661C(Instance, v38);
+      sub_1BDBADC(Instance, v38, v72);
     v88 = Instance;
     if ( !Instance || !v87 )
       goto LABEL_97;
@@ -500,16 +500,16 @@ LABEL_98:
       v90 = -1;
     else
       v90 = *((_DWORD *)Instance + 7);
-    ItemIconComponent__SetGift_39099496(v87, *((_DWORD *)Instance + 4), *((_DWORD *)Instance + 5), v90, 0, 0LL);
-    v91 = (System_String_o **)&StringLiteral_20084/*"img_common_frame01"*/;
+    ItemIconComponent__SetGift_39935088(v87, *((_DWORD *)Instance + 4), *((_DWORD *)Instance + 5), v90, 0, 0LL);
+    v91 = (System_String_o **)&StringLiteral_20379/*"img_common_frame01"*/;
     if ( v88[4] != 1 )
       v91 = (System_String_o **)&StringLiteral_1/*""*/;
     ItemIconComponent__setFrameSprite(v87, v88[4] == 1, *v91, 0LL);
-    v92 = (System_Text_StringBuilder_o *)sub_1B86604(System_Text_StringBuilder_TypeInfo);
+    v92 = (System_Text_StringBuilder_o *)sub_1BDBAC4(System_Text_StringBuilder_TypeInfo);
     System_Text_StringBuilder___ctor(v92, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v93 = LocalizationManager__Get((System_String_o *)StringLiteral_5561/*"EVENT_HARVEST_GROWTH_ITEM_FORMAT"*/, 0LL);
+    v93 = LocalizationManager__Get((System_String_o *)StringLiteral_5638/*"EVENT_HARVEST_GROWTH_ITEM_FORMAT"*/, 0LL);
     LODWORD(v117.fields._list) = v88[7];
     Instance = (void *)j_il2cpp_value_box_0(int_TypeInfo, &v117, v94, v95, v96);
     if ( !v92 )
@@ -521,32 +521,32 @@ LABEL_98:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v97 = &StringLiteral_5562/*"EVENT_HARVEST_GROWTH_ITEM_GRADEUP"*/;
+      v97 = &StringLiteral_5639/*"EVENT_HARVEST_GROWTH_ITEM_GRADEUP"*/;
 LABEL_74:
       v98 = LocalizationManager__Get((System_String_o *)*v97, 0LL);
       v100 = Method_System_Array_Empty_object___;
       v101 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
       if ( !v101 )
       {
-        sub_1BD6AA4(Method_System_Array_Empty_object___);
+        sub_1C2BF64(Method_System_Array_Empty_object___);
         v101 = v100[7];
       }
       v102 = *(_QWORD *)(v101 + 16);
       if ( (*(_BYTE *)(v102 + 309) & 1) == 0 )
-        v102 = sub_1BD6A48(inited);
+        v102 = sub_1C2BF08(inited);
       if ( !*(_DWORD *)(v102 + 224) )
         inited = j_il2cpp_runtime_class_init_0(v102);
       v103 = *(_QWORD *)(v100[7] + 16LL);
       if ( (*(_BYTE *)(v103 + 309) & 1) == 0 )
-        v103 = sub_1BD6A48(inited);
-      System_Text_StringBuilder__AppendFormat_61736900(v92, v98, **(System_Object_array ***)(v103 + 184), 0LL);
+        v103 = sub_1C2BF08(inited);
+      System_Text_StringBuilder__AppendFormat_62663984(v92, v98, **(System_Object_array ***)(v103 + 184), 0LL);
       goto LABEL_83;
     }
     if ( *((_BYTE *)v88 + 37) )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v97 = &StringLiteral_5563/*"EVENT_HARVEST_GROWTH_ITEM_NEW"*/;
+      v97 = &StringLiteral_5640/*"EVENT_HARVEST_GROWTH_ITEM_NEW"*/;
       goto LABEL_74;
     }
     v89 = v85;
@@ -554,7 +554,7 @@ LABEL_74:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v104 = LocalizationManager__Get((System_String_o *)StringLiteral_5560/*"EVENT_HARVEST_GROWTH_ITEM_ADD_FORMAT"*/, 0LL);
+      v104 = LocalizationManager__Get((System_String_o *)StringLiteral_5637/*"EVENT_HARVEST_GROWTH_ITEM_ADD_FORMAT"*/, 0LL);
       LODWORD(v117.fields._list) = v88[8];
       v108 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v117, v105, v106, v107);
       System_Text_StringBuilder__AppendFormat(v92, v104, v108, 0LL);
@@ -584,7 +584,7 @@ LABEL_83:
   messageLabel = v116->fields.messageLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5564/*"EVENT_HARVEST_GROWTH_MESSAGE"*/, 0LL);
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_5641/*"EVENT_HARVEST_GROWTH_MESSAGE"*/, 0LL);
   if ( !Entity )
     goto LABEL_97;
   Instance = System_String__Format((System_String_o *)Instance, (Il2CppObject *)Entity[2].klass, 0LL);
@@ -592,7 +592,7 @@ LABEL_83:
     goto LABEL_97;
   UILabel__set_text(messageLabel, (System_String_o *)Instance, 0LL);
   v116->fields.closeAction = closeAction;
-  sub_1B8635C((CGThumbnailListItem_o *)&v116->fields.closeAction, (int32_t)closeAction, v110, v111);
+  sub_1BDB81C((CGThumbnailListItem_o *)&v116->fields.closeAction, (int32_t)closeAction, v110, v111);
 }
 
 
@@ -631,6 +631,6 @@ bool __fastcall EventInfoHarvestGrowthDialog___c__DisplayClass21_0___Open_b__0(
   struct GiftEntity_o *giftEntity; // x8
 
   if ( !entity || (giftEntity = this->fields.giftEntity) == 0LL )
-    sub_1B86614(this, entity);
+    sub_1BDBAD4(this, entity);
   return entity->fields.type == giftEntity->fields.type && entity->fields.objectId == giftEntity->fields.objectId;
 }

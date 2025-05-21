@@ -10,15 +10,15 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitServant__CreateF
         CharaGraphSortManageUnitServant_o *this,
         const MethodInfo *method)
 {
-  Il2CppObject *v2; // x19
+  ServantCharaGraphFilterLogic_o *v2; // x19
 
-  if ( (byte_4A4D84A & 1) == 0 )
+  if ( (byte_4B43DF6 & 1) == 0 )
   {
-    sub_1B863B8(&ServantCharaGraphFilterLogic_TypeInfo, method);
-    byte_4A4D84A = 1;
+    sub_1BDB878(&ServantCharaGraphFilterLogic_TypeInfo, method);
+    byte_4B43DF6 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(ServantCharaGraphFilterLogic_TypeInfo);
-  System_Object___ctor(v2, 0LL);
+  v2 = (ServantCharaGraphFilterLogic_o *)sub_1BDBAC4(ServantCharaGraphFilterLogic_TypeInfo);
+  ServantCharaGraphFilterLogic___ctor(v2, 0LL);
   return (CharaGraphFilterLogicBase_o *)v2;
 }
 
@@ -27,16 +27,17 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitServant__CreateSor
         CharaGraphSortManageUnitServant_o *this,
         const MethodInfo *method)
 {
-  ServantCharaGraphSortLogic_o *v2; // x19
+  CharaGraphSortLogicBase_o *v2; // x19
+  const MethodInfo *v3; // x1
 
-  if ( (byte_4A4D849 & 1) == 0 )
+  if ( (byte_4B43DF5 & 1) == 0 )
   {
-    sub_1B863B8(&ServantCharaGraphSortLogic_TypeInfo, method);
-    byte_4A4D849 = 1;
+    sub_1BDB878(&ServantCharaGraphSortLogic_TypeInfo, method);
+    byte_4B43DF5 = 1;
   }
-  v2 = (ServantCharaGraphSortLogic_o *)sub_1B86604(ServantCharaGraphSortLogic_TypeInfo);
-  ServantCharaGraphSortLogic___ctor(v2, 0LL);
-  return (CharaGraphSortLogicBase_o *)v2;
+  v2 = (CharaGraphSortLogicBase_o *)sub_1BDBAC4(ServantCharaGraphSortLogic_TypeInfo);
+  CharaGraphSortLogicBase___ctor(v2, v3);
+  return v2;
 }
 
 
@@ -76,10 +77,10 @@ System_String_o *__fastcall CharaGraphSortManageUnitServant__get_SortSaveKeySuff
         CharaGraphSortManageUnitServant_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A4D848 & 1) == 0 )
+  if ( (byte_4B43DF4 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_1191/*"1"*/, method);
-    byte_4A4D848 = 1;
+    sub_1BDB878(&StringLiteral_1194/*"1"*/, method);
+    byte_4B43DF4 = 1;
   }
-  return (System_String_o *)StringLiteral_1191/*"1"*/;
+  return (System_String_o *)StringLiteral_1194/*"1"*/;
 }

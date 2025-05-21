@@ -1,9 +1,9 @@
 void __fastcall EquipGraphListMenu___ctor(EquipGraphListMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4DAF2 & 1) == 0 )
+  if ( (byte_4B4405C & 1) == 0 )
   {
-    sub_1B863B8(&BaseMenu_TypeInfo, method);
-    byte_4A4DAF2 = 1;
+    sub_1BDB878(&BaseMenu_TypeInfo, method);
+    byte_4B4405C = 1;
   }
   if ( !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
@@ -35,11 +35,11 @@ void __fastcall EquipGraphListMenu__Callback(
     {
       servantEquipListViewManager = this->fields.servantEquipListViewManager;
       if ( !servantEquipListViewManager )
-        sub_1B86614(0LL, result);
+        sub_1BDBAD4(0LL, result);
       Item = EquipGraphListViewManager__GetItem(servantEquipListViewManager, n, *(const MethodInfo **)&n);
     }
     p_callbackFunc->klass = 0LL;
-    sub_1B8635C(p_callbackFunc, 0, n, method);
+    sub_1BDB81C(p_callbackFunc, 0, n, method);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, EquipGraphListViewItem_o *, _QWORD))callbackFunc->fields.m_target)(
       callbackFunc->fields.original_method_info,
       (unsigned int)result,
@@ -53,11 +53,11 @@ void __fastcall EquipGraphListMenu__Close(EquipGraphListMenu_o *this, const Meth
 {
   const MethodInfo *v2; // x2
 
-  EquipGraphListMenu__Close_39314208(this, 0LL, v2);
+  EquipGraphListMenu__Close_40111188(this, 0LL, v2);
 }
 
 
-void __fastcall EquipGraphListMenu__Close_39314208(
+void __fastcall EquipGraphListMenu__Close_40111188(
         EquipGraphListMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -68,18 +68,18 @@ void __fastcall EquipGraphListMenu__Close_39314208(
   const MethodInfo *v8; // x3
   System_Action_o *v9; // x20
 
-  if ( (byte_4A4DAE4 & 1) == 0 )
+  if ( (byte_4B4404E & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, callback);
-    sub_1B863B8(&Method_EquipGraphListMenu_EndClose__, v6);
-    byte_4A4DAE4 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, callback);
+    sub_1BDB878(&Method_EquipGraphListMenu_EndClose__, v6);
+    byte_4B4404E = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
   modeKind = this->fields.modeKind;
   this->fields.state = 4;
   EquipGraphListMenu__SetTabKind(this, modeKind, 0, v8);
-  v9 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  v9 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
   System_Action___ctor(v9, (Il2CppObject *)this, Method_EquipGraphListMenu_EndClose__, 0LL);
   BaseMenu__Close((BaseMenu_o *)this, v9, 0LL);
 }
@@ -95,127 +95,192 @@ void __fastcall EquipGraphListMenu__Decide(EquipGraphListMenu_o *this, const Met
   __int64 v8; // x1
   __int64 v9; // x1
   __int64 v10; // x1
-  _QWORD *v11; // x0
-  System_Reflection_MethodBase_o *v12; // x0
-  __int64 selectNum; // x1
-  const MethodInfo *v14; // x2
-  ListViewManager_o *servantEquipListViewManager; // x0
-  struct System_Collections_Generic_List_UIDragDropListViewSurface__o *dropList; // x21
-  EventServantEntity_o *v17; // x20
+  __int64 v11; // x1
+  __int64 v12; // x1
+  __int64 v13; // x1
+  __int64 v14; // x1
+  __int64 v15; // x1
+  __int64 v16; // x20
+  EquipGraphListViewManager_o *servantEquipListViewManager; // x0
+  __int64 v18; // x1
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  _QWORD *v21; // x0
+  System_Reflection_MethodBase_o *v22; // x0
+  const MethodInfo *v23; // x2
+  const MethodInfo *v24; // x3
+  int32_t selectNum; // w1
+  struct EquipGraphServantItem_o *servantItemInfo; // x23
+  EquipGraphListViewItem_o *Item; // x1
+  __int64 v28; // x21
+  EventServantEntity_o *v29; // x22
   bool IsNoPeriod; // w0
-  System_String_o *v19; // x21
+  System_String_o *v31; // x20
   Il2CppObject *EndTimeStr; // x0
-  System_String_o *v21; // x20
+  System_String_o *v33; // x20
   Il2CppObject *Instance; // x21
-  System_String_o *v23; // x22
-  System_Action_o *v24; // x23
-  EquipGraphListMenu_RequestCallbackFunc_o *v25; // x20
-  const MethodInfo *v26; // x3
-  const MethodInfo *v27; // x2
+  System_String_o *v35; // x22
+  System_Action_o *v36; // x23
+  int32_t v37; // w22
+  __int64 v38; // x8
+  __int128 v39; // q1
+  CommonUI_o *v40; // x19
+  int64_t v41; // x21
+  System_Action_bool__int__o *v42; // x23
+  EquipGraphListMenu_RequestCallbackFunc_o *v43; // x20
+  const MethodInfo *v44; // x3
+  const MethodInfo *v45; // x2
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v46; // [xsp+40h] [xbp-70h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v47; // [xsp+60h] [xbp-50h]
 
-  if ( (byte_4A4DAE6 & 1) == 0 )
+  if ( (byte_4B44050 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Method_EquipGraphListMenu_Decide__, v3);
-    sub_1B863B8(&Method_EquipGraphListMenu_EndCloseEventServantWarning__, v4);
-    sub_1B863B8(&Method_EquipGraphListMenu_EndRequestClickDecide__, v5);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v6);
-    sub_1B863B8(&EquipGraphListMenu_RequestCallbackFunc_TypeInfo, v7);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_1B863B8(&StringLiteral_5447/*"EQUIP_GRAPH_EVENT_SERVANT_WARNING_MESSAGE"*/, v9);
-    sub_1B863B8(&StringLiteral_5448/*"EQUIP_GRAPH_EVENT_SERVANT_WARNING_TITLE"*/, v10);
-    byte_4A4DAE6 = 1;
+    sub_1BDB878(&System_Action_bool__int__TypeInfo, method);
+    sub_1BDB878(&System_Action_TypeInfo, v3);
+    sub_1BDB878(&Method_EquipGraphListMenu_Decide__, v4);
+    sub_1BDB878(&Method_EquipGraphListMenu_EndCloseEventServantWarning__, v5);
+    sub_1BDB878(&Method_EquipGraphListMenu_EndRequestClickDecide__, v6);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v7);
+    sub_1BDB878(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v8);
+    sub_1BDB878(&EquipGraphListMenu_RequestCallbackFunc_TypeInfo, v9);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
+    sub_1BDB878(&Method_EquipGraphListMenu___c__DisplayClass38_0__Decide_b__0__, v11);
+    sub_1BDB878(&EquipGraphListMenu___c__DisplayClass38_0_TypeInfo, v12);
+    sub_1BDB878(&StringLiteral_5517/*"EQUIP_GRAPH_EVENT_SERVANT_WARNING_MESSAGE"*/, v13);
+    sub_1BDB878(&StringLiteral_5518/*"EQUIP_GRAPH_EVENT_SERVANT_WARNING_TITLE"*/, v14);
+    sub_1BDB878(&StringLiteral_7005/*"GRAND_FRIENDSHIP_EQUIP_SKILL_ID"*/, v15);
+    byte_4B44050 = 1;
   }
-  v11 = Method_EquipGraphListMenu_Decide__;
+  v16 = sub_1BDBAC4(EquipGraphListMenu___c__DisplayClass38_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v16, 0LL);
+  if ( !v16 )
+    goto LABEL_36;
+  *(_QWORD *)(v16 + 24) = this;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v16 + 24), (int32_t)this, v19, v20);
+  v21 = Method_EquipGraphListMenu_Decide__;
   if ( (*((_BYTE *)Method_EquipGraphListMenu_Decide__ + 83) & 2) != 0 )
-    v11 = (_QWORD *)sub_1B863D0(Method_EquipGraphListMenu_Decide__);
-  v12 = (System_Reflection_MethodBase_o *)sub_1B8639C(v11, v11[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v12, 8, 0, 0LL);
-  servantEquipListViewManager = (ListViewManager_o *)this->fields.servantEquipListViewManager;
+    v21 = (_QWORD *)sub_1BDB890(Method_EquipGraphListMenu_Decide__);
+  v22 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v21, v21[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v22, 8, 0, 0LL);
+  servantEquipListViewManager = this->fields.servantEquipListViewManager;
   this->fields.state = 3;
   if ( !servantEquipListViewManager )
-    goto LABEL_23;
-  selectNum = (unsigned int)this->fields.selectNum;
-  if ( (selectNum & 0x80000000) != 0
-    || (dropList = servantEquipListViewManager[1].fields.dropList,
-        (servantEquipListViewManager = (ListViewManager_o *)EquipGraphListViewManager__GetItem(
-                                                              (EquipGraphListViewManager_o *)servantEquipListViewManager,
-                                                              selectNum,
-                                                              v14)) == 0LL) )
+    goto LABEL_36;
+  selectNum = this->fields.selectNum;
+  servantItemInfo = servantEquipListViewManager->fields.servantItemInfo;
+  if ( (selectNum & 0x80000000) != 0 )
+    Item = 0LL;
+  else
+    Item = EquipGraphListViewManager__GetItem(servantEquipListViewManager, selectNum, v23);
+  *(_QWORD *)(v16 + 16) = Item;
+  v28 = v16 + 16;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v16 + 16), (int32_t)Item, (int32_t)v23, v24);
+  if ( !*(_QWORD *)(v16 + 16) )
   {
     if ( !this->fields.isSelectedSvt )
     {
-      servantEquipListViewManager = (ListViewManager_o *)this->fields.servantEquipListViewManager;
+      servantEquipListViewManager = this->fields.servantEquipListViewManager;
       if ( !servantEquipListViewManager )
-        goto LABEL_23;
-      ListViewManager__SetScrollBarValue(servantEquipListViewManager, 0LL);
+        goto LABEL_36;
+      ListViewManager__SetScrollBarValue((ListViewManager_o *)servantEquipListViewManager, 0LL);
     }
+LABEL_35:
+    v43 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1BDBAC4(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
+    EquipGraphListMenu_RequestCallbackFunc___ctor(
+      v43,
+      (Il2CppObject *)this,
+      Method_EquipGraphListMenu_EndRequestClickDecide__,
+      v44);
+    EquipGraphListMenu__StatusRequest(this, v43, v45);
+    return;
   }
-  else
+  if ( !servantItemInfo )
+    goto LABEL_36;
+  servantEquipListViewManager = (EquipGraphListViewManager_o *)servantItemInfo->fields.userServantEntity;
+  if ( !servantEquipListViewManager )
+    goto LABEL_36;
+  servantEquipListViewManager = (EquipGraphListViewManager_o *)UserServantEntity__getEventServant(
+                                                                 (UserServantEntity_o *)servantEquipListViewManager,
+                                                                 0LL);
+  if ( !servantItemInfo->fields.userServantEntity )
+    goto LABEL_36;
+  v29 = (EventServantEntity_o *)servantEquipListViewManager;
+  if ( UserServantEntity__IsEventJoin(servantItemInfo->fields.userServantEntity, 0LL) )
   {
-    if ( !dropList )
-      goto LABEL_23;
-    servantEquipListViewManager = *(ListViewManager_o **)&dropList->fields._size;
+    servantEquipListViewManager = (EquipGraphListViewManager_o *)servantItemInfo->fields.userServantEntity;
     if ( !servantEquipListViewManager )
-      goto LABEL_23;
-    servantEquipListViewManager = (ListViewManager_o *)UserServantEntity__getEventServant(
-                                                         (UserServantEntity_o *)servantEquipListViewManager,
-                                                         0LL);
-    if ( !*(_QWORD *)&dropList->fields._size )
-      goto LABEL_23;
-    v17 = (EventServantEntity_o *)servantEquipListViewManager;
-    if ( UserServantEntity__IsEventJoin(*(UserServantEntity_o **)&dropList->fields._size, 0LL) )
+      goto LABEL_36;
+    IsNoPeriod = UserServantEntity__IsNoPeriod((UserServantEntity_o *)servantEquipListViewManager, 0LL);
+    if ( v29 )
     {
-      servantEquipListViewManager = *(ListViewManager_o **)&dropList->fields._size;
-      if ( !servantEquipListViewManager )
-        goto LABEL_23;
-      IsNoPeriod = UserServantEntity__IsNoPeriod((UserServantEntity_o *)servantEquipListViewManager, 0LL);
-      if ( v17 )
+      if ( !IsNoPeriod )
       {
-        if ( !IsNoPeriod )
+        if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+        v31 = LocalizationManager__Get((System_String_o *)StringLiteral_5517/*"EQUIP_GRAPH_EVENT_SERVANT_WARNING_MESSAGE"*/, 0LL);
+        EndTimeStr = (Il2CppObject *)EventServantEntity__getEndTimeStr(v29, 0LL);
+        v33 = System_String__Format(v31, EndTimeStr, 0LL);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v35 = LocalizationManager__Get((System_String_o *)StringLiteral_5518/*"EQUIP_GRAPH_EVENT_SERVANT_WARNING_TITLE"*/, 0LL);
+        v36 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+        System_Action___ctor(v36, (Il2CppObject *)this, Method_EquipGraphListMenu_EndCloseEventServantWarning__, 0LL);
+        if ( Instance )
         {
-          if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v19 = LocalizationManager__Get((System_String_o *)StringLiteral_5447/*"EQUIP_GRAPH_EVENT_SERVANT_WARNING_MESSAGE"*/, 0LL);
-          EndTimeStr = (Il2CppObject *)EventServantEntity__getEndTimeStr(v17, 0LL);
-          v21 = System_String__Format(v19, EndTimeStr, 0LL);
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-          v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5448/*"EQUIP_GRAPH_EVENT_SERVANT_WARNING_TITLE"*/, 0LL);
-          v24 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
-          System_Action___ctor(v24, (Il2CppObject *)this, Method_EquipGraphListMenu_EndCloseEventServantWarning__, 0LL);
-          if ( Instance )
-          {
-            CommonUI__OpenNotificationDialog(
-              (CommonUI_o *)Instance,
-              v23,
-              v21,
-              v24,
-              -1,
-              0,
-              0,
-              0,
-              1,
-              0,
-              0,
-              0,
-              0LL,
-              0.0,
-              0LL);
-            return;
-          }
-LABEL_23:
-          sub_1B86614(servantEquipListViewManager, selectNum);
+          CommonUI__OpenNotificationDialog(
+            (CommonUI_o *)Instance,
+            v35,
+            v33,
+            v36,
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0LL,
+            0.0,
+            0,
+            0LL);
+          return;
         }
+LABEL_36:
+        sub_1BDBAD4(servantEquipListViewManager, v18);
       }
     }
   }
-  v25 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1B86604(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
-  EquipGraphListMenu_RequestCallbackFunc___ctor(
-    v25,
-    (Il2CppObject *)this,
-    Method_EquipGraphListMenu_EndRequestClickDecide__,
-    v26);
-  EquipGraphListMenu__StatusRequest(this, v25, v27);
+  servantEquipListViewManager = (EquipGraphListViewManager_o *)ConstantMaster__getValue(
+                                                                 (System_String_o *)StringLiteral_7005/*"GRAND_FRIENDSHIP_EQUIP_SKILL_ID"*/,
+                                                                 0LL);
+  if ( !*(_QWORD *)v28 )
+    goto LABEL_36;
+  v37 = (int)servantEquipListViewManager;
+  if ( (int)servantEquipListViewManager < 1 || *(_DWORD *)(*(_QWORD *)v28 + 204LL) != 1 )
+    goto LABEL_35;
+  servantEquipListViewManager = (EquipGraphListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  if ( !*(_QWORD *)v28 )
+    goto LABEL_36;
+  v38 = *(_QWORD *)(*(_QWORD *)v28 + 112LL);
+  if ( !v38 )
+    goto LABEL_36;
+  v39 = *(_OWORD *)(v38 + 32);
+  v40 = (CommonUI_o *)servantEquipListViewManager;
+  *(_OWORD *)&v47.fields.currentCryptoKey = *(_OWORD *)(v38 + 16);
+  *(_OWORD *)&v47.fields.fakeValue = v39;
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+  v46 = v47;
+  v41 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48231240(&v46, 0LL);
+  v42 = (System_Action_bool__int__o *)sub_1BDBAC4(System_Action_bool__int__TypeInfo);
+  System_Action_bool__int____ctor(
+    v42,
+    (Il2CppObject *)v16,
+    Method_EquipGraphListMenu___c__DisplayClass38_0__Decide_b__0__,
+    0LL);
+  if ( !v40 )
+    goto LABEL_36;
+  CommonUI__OpenGrandBondEquipSkillSelectDialog(v40, v41, v37, v42, 0LL);
 }
 
 
@@ -236,9 +301,9 @@ void __fastcall EquipGraphListMenu__EndClickTabChoice(
       || (EquipGraphListViewManager__ModifyList(servantEquipListViewManager, 0, method),
           (servantEquipListViewManager = this->fields.servantEquipListViewManager) == 0LL) )
     {
-      sub_1B86614(servantEquipListViewManager, isRequest);
+      sub_1BDBAD4(servantEquipListViewManager, isRequest);
     }
-    EquipGraphListViewManager__SetMode_39314676(servantEquipListViewManager, 3, v6);
+    EquipGraphListViewManager__SetMode_40111656(servantEquipListViewManager, 3, v6);
   }
   EquipGraphListMenu__SetTabKind(this, 2, 0, v3);
 }
@@ -261,9 +326,9 @@ void __fastcall EquipGraphListMenu__EndClickTabLock(
       || (EquipGraphListViewManager__ModifyList(servantEquipListViewManager, 0, method),
           (servantEquipListViewManager = this->fields.servantEquipListViewManager) == 0LL) )
     {
-      sub_1B86614(servantEquipListViewManager, isRequest);
+      sub_1BDBAD4(servantEquipListViewManager, isRequest);
     }
-    EquipGraphListViewManager__SetMode_39314676(servantEquipListViewManager, 3, v6);
+    EquipGraphListViewManager__SetMode_40111656(servantEquipListViewManager, 3, v6);
   }
   EquipGraphListMenu__SetTabKind(this, 1, 0, v3);
 }
@@ -286,9 +351,9 @@ void __fastcall EquipGraphListMenu__EndClickTabStatus(
       || (EquipGraphListViewManager__ModifyList(servantEquipListViewManager, 0, method),
           (servantEquipListViewManager = this->fields.servantEquipListViewManager) == 0LL) )
     {
-      sub_1B86614(servantEquipListViewManager, isRequest);
+      sub_1BDBAD4(servantEquipListViewManager, isRequest);
     }
-    EquipGraphListViewManager__SetMode_39314676(servantEquipListViewManager, 3, v6);
+    EquipGraphListViewManager__SetMode_40111656(servantEquipListViewManager, 3, v6);
   }
   EquipGraphListMenu__SetTabKind(this, 0, 0, v3);
 }
@@ -309,7 +374,7 @@ void __fastcall EquipGraphListMenu__EndClose(EquipGraphListMenu_o *this, const M
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B8635C(p_closeCallbackFunc, 0, v3, v4);
+    sub_1BDB81C(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -324,13 +389,13 @@ void __fastcall EquipGraphListMenu__EndCloseEventServantWarning(EquipGraphListMe
   const MethodInfo *v5; // x3
   const MethodInfo *v6; // x2
 
-  if ( (byte_4A4DAE7 & 1) == 0 )
+  if ( (byte_4B44051 & 1) == 0 )
   {
-    sub_1B863B8(&Method_EquipGraphListMenu_EndRequestClickDecide__, method);
-    sub_1B863B8(&EquipGraphListMenu_RequestCallbackFunc_TypeInfo, v3);
-    byte_4A4DAE7 = 1;
+    sub_1BDB878(&Method_EquipGraphListMenu_EndRequestClickDecide__, method);
+    sub_1BDB878(&EquipGraphListMenu_RequestCallbackFunc_TypeInfo, v3);
+    byte_4B44051 = 1;
   }
-  v4 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1B86604(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
+  v4 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1BDBAC4(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
   EquipGraphListMenu_RequestCallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
@@ -358,25 +423,25 @@ void __fastcall EquipGraphListMenu__EndCloseShowServantEquip(EquipGraphListMenu_
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x2
 
-  if ( (byte_4A4DAF0 & 1) == 0 )
+  if ( (byte_4B4405A & 1) == 0 )
   {
-    sub_1B863B8(&EquipGraphListViewManager_CallbackFunc_TypeInfo, method);
-    sub_1B863B8(&Method_EquipGraphListMenu_OnSelectServantEquip__, v3);
-    byte_4A4DAF0 = 1;
+    sub_1BDB878(&EquipGraphListViewManager_CallbackFunc_TypeInfo, method);
+    sub_1BDB878(&Method_EquipGraphListMenu_OnSelectServantEquip__, v3);
+    byte_4B4405A = 1;
   }
   this->fields.state = 2;
   servantEquipListViewManager = this->fields.servantEquipListViewManager;
-  v5 = (EquipGraphListViewManager_CallbackFunc_o *)sub_1B86604(EquipGraphListViewManager_CallbackFunc_TypeInfo);
+  v5 = (EquipGraphListViewManager_CallbackFunc_o *)sub_1BDBAC4(EquipGraphListViewManager_CallbackFunc_TypeInfo);
   EquipGraphListViewManager_CallbackFunc___ctor(
     v5,
     (Il2CppObject *)this,
     (intptr_t)Method_EquipGraphListMenu_OnSelectServantEquip__,
     v6);
   if ( !servantEquipListViewManager )
-    sub_1B86614(v7, v8);
+    sub_1BDBAD4(v7, v8);
   servantEquipListViewManager->fields.callbackFunc = v5;
-  sub_1B8635C((CGThumbnailListItem_o *)&servantEquipListViewManager->fields.callbackFunc, (int32_t)v5, v9, v10);
-  EquipGraphListViewManager__SetMode_39314676(servantEquipListViewManager, 2, v11);
+  sub_1BDB81C((CGThumbnailListItem_o *)&servantEquipListViewManager->fields.callbackFunc, (int32_t)v5, v9, v10);
+  EquipGraphListViewManager__SetMode_40111656(servantEquipListViewManager, 2, v11);
 }
 
 
@@ -388,32 +453,33 @@ void __fastcall EquipGraphListMenu__EndOpen(EquipGraphListMenu_o *this, const Me
   Il2CppObject *Instance; // x20
   TutorialFlag_ImageId_array *v7; // x0
   TutorialFlag_ImageId_array *v8; // x1
+  __int64 v9; // x2
   il2cpp_array_size_t max_length; // w8
   int32_t modeKind; // w1
 
-  if ( (byte_4A4DAE3 & 1) == 0 )
+  if ( (byte_4B4404D & 1) == 0 )
   {
-    sub_1B863B8(&TutorialFlag_ImageId___TypeInfo, method);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1B863B8(&TutorialFlag_TypeInfo, v4);
-    byte_4A4DAE3 = 1;
+    sub_1BDB878(&TutorialFlag_ImageId___TypeInfo, method);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_1BDB878(&TutorialFlag_TypeInfo, v4);
+    byte_4B4404D = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( !TutorialFlag__Get_38640612(110, 0LL) )
+  if ( !TutorialFlag__Get_39449392(110, 0LL) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v7 = (TutorialFlag_ImageId_array *)sub_1B86460(TutorialFlag_ImageId___TypeInfo, 2LL);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v7 = (TutorialFlag_ImageId_array *)sub_1BDB920(TutorialFlag_ImageId___TypeInfo, 2LL);
     if ( !v7 )
       goto LABEL_13;
     max_length = v7->max_length;
     v8 = v7;
     if ( !max_length || (v7->m_Items[1] = 4, max_length == 1) )
-      sub_1B8661C(v7, v7);
+      sub_1BDBADC(v7, v7, v9);
     v7->m_Items[2] = 5;
     if ( !Instance )
 LABEL_13:
-      sub_1B86614(v7, v8);
+      sub_1BDBAD4(v7, v8);
     CommonUI__OpenTutorialImageDialog((CommonUI_o *)Instance, v7, 110, 0LL, 0LL, 0LL, 0LL);
   }
   modeKind = this->fields.modeKind;
@@ -439,9 +505,9 @@ void __fastcall EquipGraphListMenu__EndRequestClickCancel(
       || (EquipGraphListViewManager__ModifyList(servantEquipListViewManager, 0, method),
           (servantEquipListViewManager = this->fields.servantEquipListViewManager) == 0LL) )
     {
-      sub_1B86614(servantEquipListViewManager, isRequest);
+      sub_1BDBAD4(servantEquipListViewManager, isRequest);
     }
-    EquipGraphListViewManager__SetMode_39314676(servantEquipListViewManager, 3, v6);
+    EquipGraphListViewManager__SetMode_40111656(servantEquipListViewManager, 3, v6);
   }
   EquipGraphListMenu__Callback(this, 0, -1, v3);
 }
@@ -464,9 +530,9 @@ void __fastcall EquipGraphListMenu__EndRequestClickDecide(
       || (EquipGraphListViewManager__ModifyList(servantEquipListViewManager, 0, method),
           (servantEquipListViewManager = this->fields.servantEquipListViewManager) == 0LL) )
     {
-      sub_1B86614(servantEquipListViewManager, isRequest);
+      sub_1BDBAD4(servantEquipListViewManager, isRequest);
     }
-    EquipGraphListViewManager__SetMode_39314676(servantEquipListViewManager, 3, v6);
+    EquipGraphListViewManager__SetMode_40111656(servantEquipListViewManager, 3, v6);
   }
   EquipGraphListMenu__Callback(this, 1, this->fields.selectNum, v3);
 }
@@ -484,25 +550,25 @@ void __fastcall EquipGraphListMenu__EndSelectEquip(EquipGraphListMenu_o *this, c
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x2
 
-  if ( (byte_4A4DAEE & 1) == 0 )
+  if ( (byte_4B44058 & 1) == 0 )
   {
-    sub_1B863B8(&EquipGraphListViewManager_CallbackFunc_TypeInfo, method);
-    sub_1B863B8(&Method_EquipGraphListMenu_OnSelectServantEquip__, v3);
-    byte_4A4DAEE = 1;
+    sub_1BDB878(&EquipGraphListViewManager_CallbackFunc_TypeInfo, method);
+    sub_1BDB878(&Method_EquipGraphListMenu_OnSelectServantEquip__, v3);
+    byte_4B44058 = 1;
   }
   this->fields.state = 2;
   servantEquipListViewManager = this->fields.servantEquipListViewManager;
-  v5 = (EquipGraphListViewManager_CallbackFunc_o *)sub_1B86604(EquipGraphListViewManager_CallbackFunc_TypeInfo);
+  v5 = (EquipGraphListViewManager_CallbackFunc_o *)sub_1BDBAC4(EquipGraphListViewManager_CallbackFunc_TypeInfo);
   EquipGraphListViewManager_CallbackFunc___ctor(
     v5,
     (Il2CppObject *)this,
     (intptr_t)Method_EquipGraphListMenu_OnSelectServantEquip__,
     v6);
   if ( !servantEquipListViewManager )
-    sub_1B86614(v7, v8);
+    sub_1BDBAD4(v7, v8);
   servantEquipListViewManager->fields.callbackFunc = v5;
-  sub_1B8635C((CGThumbnailListItem_o *)&servantEquipListViewManager->fields.callbackFunc, (int32_t)v5, v9, v10);
-  EquipGraphListViewManager__SetMode_39314676(servantEquipListViewManager, 2, v11);
+  sub_1BDB81C((CGThumbnailListItem_o *)&servantEquipListViewManager->fields.callbackFunc, (int32_t)v5, v9, v10);
+  EquipGraphListViewManager__SetMode_40111656(servantEquipListViewManager, 2, v11);
 }
 
 
@@ -519,12 +585,12 @@ void __fastcall EquipGraphListMenu__EndShowServantEquip(
   Il2CppObject *Instance; // x20
   System_Action_o *v10; // x21
 
-  if ( (byte_4A4DAEF & 1) == 0 )
+  if ( (byte_4B44059 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, isDecide);
-    sub_1B863B8(&Method_EquipGraphListMenu_EndCloseShowServantEquip__, v5);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    byte_4A4DAEF = 1;
+    sub_1BDB878(&System_Action_TypeInfo, isDecide);
+    sub_1BDB878(&Method_EquipGraphListMenu_EndCloseShowServantEquip__, v5);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    byte_4B44059 = 1;
   }
   if ( isDecide )
   {
@@ -534,12 +600,12 @@ void __fastcall EquipGraphListMenu__EndShowServantEquip(
           (servantEquipListViewManager = this->fields.servantEquipListViewManager) == 0LL) )
     {
 LABEL_9:
-      sub_1B86614(servantEquipListViewManager, isDecide);
+      sub_1BDBAD4(servantEquipListViewManager, isDecide);
     }
-    EquipGraphListViewManager__SetMode_39314676(servantEquipListViewManager, 3, v8);
+    EquipGraphListViewManager__SetMode_40111656(servantEquipListViewManager, 3, v8);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v10 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v10 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_EquipGraphListMenu_EndCloseShowServantEquip__, 0LL);
   if ( !Instance )
     goto LABEL_9;
@@ -563,7 +629,7 @@ void __fastcall EquipGraphListMenu__EndStatusSync(
   if ( requedstCallback )
   {
     p_requedstCallback->klass = 0LL;
-    sub_1B8635C(p_requedstCallback, 0, (int32_t)method, v3);
+    sub_1BDB81C(p_requedstCallback, 0, (int32_t)method, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       1LL,
@@ -584,7 +650,7 @@ void __fastcall EquipGraphListMenu__Init(EquipGraphListMenu_o *this, const Metho
 
   servantEquipListViewManager = this->fields.servantEquipListViewManager;
   if ( !servantEquipListViewManager )
-    sub_1B86614(0LL, method);
+    sub_1BDBAD4(0LL, method);
   EquipGraphListViewManager__DestroyList(servantEquipListViewManager, method);
   this->fields.modeKind = 0;
   this->fields.state = 0;
@@ -604,12 +670,12 @@ void __fastcall EquipGraphListMenu__OnClickCancel(EquipGraphListMenu_o *this, co
   const MethodInfo *v9; // x3
   const MethodInfo *v10; // x2
 
-  if ( (byte_4A4DAE8 & 1) == 0 )
+  if ( (byte_4B44052 & 1) == 0 )
   {
-    sub_1B863B8(&Method_EquipGraphListMenu_EndRequestClickCancel__, method);
-    sub_1B863B8(&Method_EquipGraphListMenu_OnClickCancel__, v3);
-    sub_1B863B8(&EquipGraphListMenu_RequestCallbackFunc_TypeInfo, v4);
-    byte_4A4DAE8 = 1;
+    sub_1BDB878(&Method_EquipGraphListMenu_EndRequestClickCancel__, method);
+    sub_1BDB878(&Method_EquipGraphListMenu_OnClickCancel__, v3);
+    sub_1BDB878(&EquipGraphListMenu_RequestCallbackFunc_TypeInfo, v4);
+    byte_4B44052 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -617,16 +683,16 @@ void __fastcall EquipGraphListMenu__OnClickCancel(EquipGraphListMenu_o *this, co
     {
       servantEquipListViewManager = (ListViewManager_o *)this->fields.servantEquipListViewManager;
       if ( !servantEquipListViewManager )
-        sub_1B86614(0LL, method);
+        sub_1BDBAD4(0LL, method);
       ListViewManager__SetScrollBarValue(servantEquipListViewManager, 0LL);
     }
     this->fields.state = 3;
     v6 = Method_EquipGraphListMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_EquipGraphListMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1B863D0(Method_EquipGraphListMenu_OnClickCancel__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1B8639C(v6, v6[4]);
+      v6 = (_QWORD *)sub_1BDB890(Method_EquipGraphListMenu_OnClickCancel__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0, 0LL);
-    v8 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1B86604(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
+    v8 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1BDBAC4(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
     EquipGraphListMenu_RequestCallbackFunc___ctor(
       v8,
       (Il2CppObject *)this,
@@ -648,7 +714,7 @@ void __fastcall EquipGraphListMenu__OnClickDecide(EquipGraphListMenu_o *this, co
   {
     servantEquipListViewManager = this->fields.servantEquipListViewManager;
     if ( !servantEquipListViewManager )
-      sub_1B86614(0LL, method);
+      sub_1BDBAD4(0LL, method);
     SelectItem = EquipGraphListViewManager__GetSelectItem(servantEquipListViewManager, method);
     if ( SelectItem )
       index = SelectItem->fields.index;
@@ -668,17 +734,17 @@ void __fastcall EquipGraphListMenu__OnClickScaleChange(EquipGraphListMenu_o *thi
   EquipGraphListViewManager_o *servantEquipListViewManager; // x0
   UISprite_o *scaleChangeTabSprite; // x19
 
-  if ( (byte_4A4DAF1 & 1) == 0 )
+  if ( (byte_4B4405B & 1) == 0 )
   {
-    sub_1B863B8(&Method_EquipGraphListMenu_OnClickScaleChange__, method);
-    byte_4A4DAF1 = 1;
+    sub_1BDB878(&Method_EquipGraphListMenu_OnClickScaleChange__, method);
+    byte_4B4405B = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_EquipGraphListMenu_OnClickScaleChange__;
     if ( (*((_BYTE *)Method_EquipGraphListMenu_OnClickScaleChange__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B863D0(Method_EquipGraphListMenu_OnClickScaleChange__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BDB890(Method_EquipGraphListMenu_OnClickScaleChange__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     servantEquipListViewManager = this->fields.servantEquipListViewManager;
     if ( !servantEquipListViewManager
@@ -690,7 +756,7 @@ void __fastcall EquipGraphListMenu__OnClickScaleChange(EquipGraphListMenu_o *thi
                                                                          v5),
           !scaleChangeTabSprite) )
     {
-      sub_1B86614(servantEquipListViewManager, v5);
+      sub_1BDBAD4(servantEquipListViewManager, v5);
     }
     UISprite__set_spriteName(scaleChangeTabSprite, (System_String_o *)servantEquipListViewManager, 0LL);
   }
@@ -712,26 +778,26 @@ void __fastcall EquipGraphListMenu__OnClickTabChoice(EquipGraphListMenu_o *this,
   const MethodInfo *v13; // x3
   const MethodInfo *v14; // x2
 
-  if ( (byte_4A4DAEB & 1) == 0 )
+  if ( (byte_4B44055 & 1) == 0 )
   {
-    sub_1B863B8(&Method_EquipGraphListMenu_EndClickTabChoice__, method);
-    sub_1B863B8(&Method_EquipGraphListMenu_OnClickTabChoice__, v3);
-    sub_1B863B8(&EquipGraphListMenu_RequestCallbackFunc_TypeInfo, v4);
-    byte_4A4DAEB = 1;
+    sub_1BDB878(&Method_EquipGraphListMenu_EndClickTabChoice__, method);
+    sub_1BDB878(&Method_EquipGraphListMenu_OnClickTabChoice__, v3);
+    sub_1BDB878(&EquipGraphListMenu_RequestCallbackFunc_TypeInfo, v4);
+    byte_4B44055 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_EquipGraphListMenu_OnClickTabChoice__;
     if ( (*((_BYTE *)Method_EquipGraphListMenu_OnClickTabChoice__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B863D0(Method_EquipGraphListMenu_OnClickTabChoice__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BDB890(Method_EquipGraphListMenu_OnClickTabChoice__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
     modeKind = this->fields.modeKind;
     if ( modeKind )
     {
       if ( modeKind == 2 )
       {
-        v9 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1B86604(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
+        v9 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1BDBAC4(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
         EquipGraphListMenu_RequestCallbackFunc___ctor(
           v9,
           (Il2CppObject *)this,
@@ -740,7 +806,7 @@ void __fastcall EquipGraphListMenu__OnClickTabChoice(EquipGraphListMenu_o *this,
         EquipGraphListMenu__StatusRequest(this, v9, v11);
         return;
       }
-      v12 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1B86604(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
+      v12 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1BDBAC4(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
       EquipGraphListMenu_RequestCallbackFunc___ctor(
         v12,
         (Il2CppObject *)this,
@@ -768,26 +834,26 @@ void __fastcall EquipGraphListMenu__OnClickTabLock(EquipGraphListMenu_o *this, c
   const MethodInfo *v13; // x3
   const MethodInfo *v14; // x2
 
-  if ( (byte_4A4DAEA & 1) == 0 )
+  if ( (byte_4B44054 & 1) == 0 )
   {
-    sub_1B863B8(&Method_EquipGraphListMenu_EndClickTabLock__, method);
-    sub_1B863B8(&Method_EquipGraphListMenu_OnClickTabLock__, v3);
-    sub_1B863B8(&EquipGraphListMenu_RequestCallbackFunc_TypeInfo, v4);
-    byte_4A4DAEA = 1;
+    sub_1BDB878(&Method_EquipGraphListMenu_EndClickTabLock__, method);
+    sub_1BDB878(&Method_EquipGraphListMenu_OnClickTabLock__, v3);
+    sub_1BDB878(&EquipGraphListMenu_RequestCallbackFunc_TypeInfo, v4);
+    byte_4B44054 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_EquipGraphListMenu_OnClickTabLock__;
     if ( (*((_BYTE *)Method_EquipGraphListMenu_OnClickTabLock__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B863D0(Method_EquipGraphListMenu_OnClickTabLock__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BDB890(Method_EquipGraphListMenu_OnClickTabLock__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
     modeKind = this->fields.modeKind;
     if ( modeKind )
     {
       if ( modeKind == 1 )
       {
-        v9 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1B86604(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
+        v9 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1BDBAC4(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
         EquipGraphListMenu_RequestCallbackFunc___ctor(
           v9,
           (Il2CppObject *)this,
@@ -796,7 +862,7 @@ void __fastcall EquipGraphListMenu__OnClickTabLock(EquipGraphListMenu_o *this, c
         EquipGraphListMenu__StatusRequest(this, v9, v11);
         return;
       }
-      v12 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1B86604(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
+      v12 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1BDBAC4(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
       EquipGraphListMenu_RequestCallbackFunc___ctor(
         v12,
         (Il2CppObject *)this,
@@ -819,21 +885,21 @@ void __fastcall EquipGraphListMenu__OnClickTabStatus(EquipGraphListMenu_o *this,
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x2
 
-  if ( (byte_4A4DAE9 & 1) == 0 )
+  if ( (byte_4B44053 & 1) == 0 )
   {
-    sub_1B863B8(&Method_EquipGraphListMenu_EndClickTabStatus__, method);
-    sub_1B863B8(&Method_EquipGraphListMenu_OnClickTabStatus__, v3);
-    sub_1B863B8(&EquipGraphListMenu_RequestCallbackFunc_TypeInfo, v4);
-    byte_4A4DAE9 = 1;
+    sub_1BDB878(&Method_EquipGraphListMenu_EndClickTabStatus__, method);
+    sub_1BDB878(&Method_EquipGraphListMenu_OnClickTabStatus__, v3);
+    sub_1BDB878(&EquipGraphListMenu_RequestCallbackFunc_TypeInfo, v4);
+    byte_4B44053 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_EquipGraphListMenu_OnClickTabStatus__;
     if ( (*((_BYTE *)Method_EquipGraphListMenu_OnClickTabStatus__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B863D0(Method_EquipGraphListMenu_OnClickTabStatus__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BDB890(Method_EquipGraphListMenu_OnClickTabStatus__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
-    v7 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1B86604(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
+    v7 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1BDBAC4(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
     EquipGraphListMenu_RequestCallbackFunc___ctor(
       v7,
       (Il2CppObject *)this,
@@ -873,30 +939,32 @@ void __fastcall EquipGraphListMenu__OnSelectServantEquip(
   const MethodInfo *v26; // x3
   _QWORD *v27; // x0
   System_Reflection_MethodBase_o *v28; // x0
-  Il2CppObject *Instance; // x21
-  bool v30; // w22
-  _QWORD *v31; // x0
-  System_Reflection_MethodBase_o *v32; // x0
-  _QWORD *v33; // x0
-  System_Reflection_MethodBase_o *v34; // x0
-  EquipGraphListViewManager_CallbackFunc_c *v35; // x0
-  struct EquipGraphListViewManager_CallbackFunc_o *v36; // x21
-  int32_t v37; // w2
-  const MethodInfo *v38; // x3
-  const MethodInfo *v39; // x2
-  UserServantEntity_o *userSvtEntity; // x20
-  ServantStatusDialog_EndDelegate_o *v41; // x23
+  Il2CppObject *Instance; // x0
+  UserServantEntity_o *userSvtEntity; // x21
+  CommonUI_o *v31; // x22
+  const MethodInfo *v32; // x1
+  bool v33; // w20
+  _QWORD *v34; // x0
+  System_Reflection_MethodBase_o *v35; // x0
+  _QWORD *v36; // x0
+  System_Reflection_MethodBase_o *v37; // x0
+  EquipGraphListViewManager_CallbackFunc_c *v38; // x0
+  struct EquipGraphListViewManager_CallbackFunc_o *v39; // x21
+  int32_t v40; // w2
+  const MethodInfo *v41; // x3
+  const MethodInfo *v42; // x2
+  ServantStatusDialog_EndDelegate_o *v43; // x23
 
-  if ( (byte_4A4DAED & 1) == 0 )
+  if ( (byte_4B44057 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, *(_QWORD *)&kind);
-    sub_1B863B8(&EquipGraphListViewManager_CallbackFunc_TypeInfo, v7);
-    sub_1B863B8(&ServantStatusDialog_EndDelegate_TypeInfo, v8);
-    sub_1B863B8(&Method_EquipGraphListMenu_EndSelectEquip__, v9);
-    sub_1B863B8(&Method_EquipGraphListMenu_EndShowServantEquip__, v10);
-    sub_1B863B8(&Method_EquipGraphListMenu_OnSelectServantEquip__, v11);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
-    byte_4A4DAED = 1;
+    sub_1BDB878(&System_Action_TypeInfo, *(_QWORD *)&kind);
+    sub_1BDB878(&EquipGraphListViewManager_CallbackFunc_TypeInfo, v7);
+    sub_1BDB878(&ServantStatusDialog_EndDelegate_TypeInfo, v8);
+    sub_1BDB878(&Method_EquipGraphListMenu_EndSelectEquip__, v9);
+    sub_1BDB878(&Method_EquipGraphListMenu_EndShowServantEquip__, v10);
+    sub_1BDB878(&Method_EquipGraphListMenu_OnSelectServantEquip__, v11);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
+    byte_4B44057 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -921,30 +989,31 @@ void __fastcall EquipGraphListMenu__OnSelectServantEquip(
           return;
         this->fields.state = 2;
         v16 = this->fields.servantEquipListViewManager;
-        v17 = (EquipGraphListViewManager_CallbackFunc_o *)sub_1B86604(EquipGraphListViewManager_CallbackFunc_TypeInfo);
+        v17 = (EquipGraphListViewManager_CallbackFunc_o *)sub_1BDBAC4(EquipGraphListViewManager_CallbackFunc_TypeInfo);
         v19 = (int)Method_EquipGraphListMenu_OnSelectServantEquip__;
         goto LABEL_40;
       }
       v27 = Method_EquipGraphListMenu_OnSelectServantEquip__;
       if ( (*((_BYTE *)Method_EquipGraphListMenu_OnSelectServantEquip__ + 83) & 2) != 0 )
-        v27 = (_QWORD *)sub_1B863D0(Method_EquipGraphListMenu_OnSelectServantEquip__);
-      v28 = (System_Reflection_MethodBase_o *)sub_1B8639C(v27, v27[4]);
+        v27 = (_QWORD *)sub_1BDB890(Method_EquipGraphListMenu_OnSelectServantEquip__);
+      v28 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v27, v27[4]);
       if ( Item )
       {
         OverwriteAssetSoundName__PlaySystemSe(v28, 0, 0, 0LL);
         this->fields.state = 5;
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-        v30 = (Item->fields.wearerMember & 0x80000000) == 0 || Item->fields.isBase;
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         userSvtEntity = Item->fields.userSvtEntity;
-        v41 = (ServantStatusDialog_EndDelegate_o *)sub_1B86604(ServantStatusDialog_EndDelegate_TypeInfo);
+        v31 = (CommonUI_o *)Instance;
+        v33 = EquipGraphListViewItem__get_IsUse(Item, v32) || Item->fields.isBase;
+        v43 = (ServantStatusDialog_EndDelegate_o *)sub_1BDBAC4(ServantStatusDialog_EndDelegate_TypeInfo);
         ServantStatusDialog_EndDelegate___ctor(
-          v41,
+          v43,
           (Il2CppObject *)this,
           Method_EquipGraphListMenu_EndShowServantEquip__,
           0LL);
-        if ( Instance )
+        if ( v31 )
         {
-          CommonUI__OpenServantEquipStatusDialog_30498376((CommonUI_o *)Instance, 0, userSvtEntity, v30, v41, 0LL, 0LL);
+          CommonUI__OpenServantEquipStatusDialog_30848764(v31, 0, userSvtEntity, v33, v43, 0LL, 0LL);
           return;
         }
         goto LABEL_45;
@@ -952,7 +1021,7 @@ void __fastcall EquipGraphListMenu__OnSelectServantEquip(
       OverwriteAssetSoundName__PlaySystemSe(v28, 2, 0, 0LL);
       this->fields.state = 2;
       v16 = this->fields.servantEquipListViewManager;
-      v35 = EquipGraphListViewManager_CallbackFunc_TypeInfo;
+      v38 = EquipGraphListViewManager_CallbackFunc_TypeInfo;
     }
     else
     {
@@ -966,8 +1035,8 @@ void __fastcall EquipGraphListMenu__OnSelectServantEquip(
         {
           v24 = Method_EquipGraphListMenu_OnSelectServantEquip__;
           if ( (*((_BYTE *)Method_EquipGraphListMenu_OnSelectServantEquip__ + 83) & 2) != 0 )
-            v24 = (_QWORD *)sub_1B863D0(Method_EquipGraphListMenu_OnSelectServantEquip__);
-          v25 = (System_Reflection_MethodBase_o *)sub_1B8639C(v24, v24[4]);
+            v24 = (_QWORD *)sub_1BDB890(Method_EquipGraphListMenu_OnSelectServantEquip__);
+          v25 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v24, v24[4]);
           OverwriteAssetSoundName__PlaySystemSe(v25, 1, 0, 0LL);
           this->fields.state = 3;
           EquipGraphListMenu__Callback(this, 0, -1, v26);
@@ -977,11 +1046,11 @@ void __fastcall EquipGraphListMenu__OnSelectServantEquip(
       v20 = this->fields.modeKind;
       if ( v20 == 2 )
       {
-        v31 = Method_EquipGraphListMenu_OnSelectServantEquip__;
+        v34 = Method_EquipGraphListMenu_OnSelectServantEquip__;
         if ( (*((_BYTE *)Method_EquipGraphListMenu_OnSelectServantEquip__ + 83) & 2) != 0 )
-          v31 = (_QWORD *)sub_1B863D0(Method_EquipGraphListMenu_OnSelectServantEquip__);
-        v32 = (System_Reflection_MethodBase_o *)sub_1B8639C(v31, v31[4]);
-        OverwriteAssetSoundName__PlaySystemSe(v32, 0, 0, 0LL);
+          v34 = (_QWORD *)sub_1BDB890(Method_EquipGraphListMenu_OnSelectServantEquip__);
+        v35 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v34, v34[4]);
+        OverwriteAssetSoundName__PlaySystemSe(v35, 0, 0, 0LL);
         if ( !Item )
           goto LABEL_45;
         Item->fields.isSwapChoice ^= 1u;
@@ -993,7 +1062,7 @@ void __fastcall EquipGraphListMenu__OnSelectServantEquip(
           if ( v20 )
             return;
           v21 = this->fields.servantEquipListViewManager;
-          v22 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+          v22 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
           System_Action___ctor(v22, (Il2CppObject *)this, Method_EquipGraphListMenu_EndSelectEquip__, 0LL);
           if ( v21 )
           {
@@ -1001,31 +1070,31 @@ void __fastcall EquipGraphListMenu__OnSelectServantEquip(
             return;
           }
 LABEL_45:
-          sub_1B86614(servantEquipListViewManager, *(_QWORD *)&kind);
+          sub_1BDBAD4(servantEquipListViewManager, *(_QWORD *)&kind);
         }
-        v33 = Method_EquipGraphListMenu_OnSelectServantEquip__;
+        v36 = Method_EquipGraphListMenu_OnSelectServantEquip__;
         if ( (*((_BYTE *)Method_EquipGraphListMenu_OnSelectServantEquip__ + 83) & 2) != 0 )
-          v33 = (_QWORD *)sub_1B863D0(Method_EquipGraphListMenu_OnSelectServantEquip__);
-        v34 = (System_Reflection_MethodBase_o *)sub_1B8639C(v33, v33[4]);
-        OverwriteAssetSoundName__PlaySystemSe(v34, 11, 0, 0LL);
+          v36 = (_QWORD *)sub_1BDB890(Method_EquipGraphListMenu_OnSelectServantEquip__);
+        v37 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v36, v36[4]);
+        OverwriteAssetSoundName__PlaySystemSe(v37, 11, 0, 0LL);
         if ( !Item )
           goto LABEL_45;
         Item->fields.isSwapLock ^= 1u;
       }
       this->fields.state = 2;
       v16 = this->fields.servantEquipListViewManager;
-      v35 = EquipGraphListViewManager_CallbackFunc_TypeInfo;
+      v38 = EquipGraphListViewManager_CallbackFunc_TypeInfo;
     }
-    v17 = (EquipGraphListViewManager_CallbackFunc_o *)sub_1B86604(v35);
+    v17 = (EquipGraphListViewManager_CallbackFunc_o *)sub_1BDBAC4(v38);
     v19 = (int)Method_EquipGraphListMenu_OnSelectServantEquip__;
 LABEL_40:
-    v36 = v17;
+    v39 = v17;
     EquipGraphListViewManager_CallbackFunc___ctor(v17, (Il2CppObject *)this, v19, v18);
     if ( v16 )
     {
-      v16->fields.callbackFunc = v36;
-      sub_1B8635C((CGThumbnailListItem_o *)&v16->fields.callbackFunc, (int32_t)v36, v37, v38);
-      EquipGraphListViewManager__SetMode_39314676(v16, 2, v39);
+      v16->fields.callbackFunc = v39;
+      sub_1BDB81C((CGThumbnailListItem_o *)&v16->fields.callbackFunc, (int32_t)v39, v40, v41);
+      EquipGraphListViewManager__SetMode_40111656(v16, 2, v42);
       return;
     }
     goto LABEL_45;
@@ -1041,101 +1110,112 @@ void __fastcall EquipGraphListMenu__Open(
         int32_t member,
         EventUpValSetupInfo_o *setupInfo,
         EquipGraphListMenu_CallbackFunc_o *callback,
+        int32_t type,
         const MethodInfo *method)
 {
-  EquipGraphListMenu_o *v12; // x19
-  __int64 v13; // x1
+  EquipGraphListMenu_o *v14; // x19
+  __int64 v15; // x1
   int32_t state; // w8
   int32_t modeKind; // w1
-  const MethodInfo *v16; // x3
-  int32_t v17; // w2
   const MethodInfo *v18; // x3
-  const MethodInfo *v19; // x3
-  __int64 v20; // x1
-  const MethodInfo *v21; // x5
+  __int64 v19; // x2
+  const MethodInfo *v20; // x3
+  const MethodInfo *v21; // x3
+  int v22; // w8
+  int32_t v23; // w4
+  __int64 v24; // x1
+  const MethodInfo *v25; // x6
   EquipGraphListViewManager_o *servantEquipListViewManager; // x0
   UISprite_o *scaleChangeTabSprite; // x20
-  System_Action_o *v24; // x20
+  System_Action_o *v28; // x20
 
-  v12 = this;
-  if ( (byte_4A4DAE1 & 1) == 0 )
+  v14 = this;
+  if ( (byte_4B4404B & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, baseDeckItemList);
-    this = (EquipGraphListMenu_o *)sub_1B863B8(&Method_EquipGraphListMenu_EndOpen__, v13);
-    byte_4A4DAE1 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, baseDeckItemList);
+    this = (EquipGraphListMenu_o *)sub_1BDB878(&Method_EquipGraphListMenu_EndOpen__, v15);
+    byte_4B4404B = 1;
   }
-  state = v12->fields.state;
+  state = v14->fields.state;
   if ( (unsigned int)(state - 2) >= 2 )
   {
     if ( !state )
     {
       if ( !partyItem )
-        goto LABEL_17;
+        goto LABEL_26;
       this = (EquipGraphListMenu_o *)PartyListViewItem__GetMember(partyItem, member, 0LL);
       if ( !this )
-        goto LABEL_17;
-      v12->fields.isSelectedSvt = PartyOrganizationListViewItem__get_EquipUserSvtId(
-                                    (PartyOrganizationListViewItem_o *)this,
-                                    0LL) > 0;
-      v12->fields.callbackFunc = callback;
-      sub_1B8635C((CGThumbnailListItem_o *)&v12->fields.callbackFunc, (int32_t)callback, v17, v18);
-      this = (EquipGraphListMenu_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v12, 0LL);
+        goto LABEL_26;
+      this = (EquipGraphListMenu_o *)PartyOrganizationListViewItem__GetEquipList(
+                                       (PartyOrganizationListViewItem_o *)this,
+                                       0LL);
       if ( !this )
-        goto LABEL_17;
+        goto LABEL_26;
+      if ( LODWORD(this->fields.m_CancellationTokenSource) <= type )
+        sub_1BDBADC(this, baseDeckItemList, v19);
+      v14->fields.isSelectedSvt = *((_QWORD *)&this->fields.basePanelList + type) > 0LL;
+      v14->fields.callbackFunc = callback;
+      sub_1BDB81C((CGThumbnailListItem_o *)&v14->fields.callbackFunc, (int32_t)callback, v19, v20);
+      this = (EquipGraphListMenu_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v14, 0LL);
+      if ( !this )
+        goto LABEL_26;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-      EquipGraphListMenu__SetTabKind(v12, v12->fields.modeKind, 1, v19);
-      this = (EquipGraphListMenu_o *)v12->fields.titleInfo;
+      EquipGraphListMenu__SetTabKind(v14, v14->fields.modeKind, 1, v21);
+      this = (EquipGraphListMenu_o *)v14->fields.titleInfo;
       if ( !this )
-        goto LABEL_17;
-      TitleInfoControl__setTitleInfo((TitleInfoControl_o *)this, 0LL, 1, 0LL, 23, 0LL);
-      this = (EquipGraphListMenu_o *)v12->fields.titleInfo;
+        goto LABEL_26;
+      v22 = type == 1 ? 24 : 23;
+      v23 = type == 2 ? 25 : v22;
+      TitleInfoControl__setTitleInfo((TitleInfoControl_o *)this, 0LL, 1, 0LL, v23, 0LL);
+      this = (EquipGraphListMenu_o *)v14->fields.titleInfo;
       if ( !this )
-        goto LABEL_17;
-      TitleInfoControl__setBackBtnSprite_38089748((TitleInfoControl_o *)this, 1, 0, 0, 0LL);
-      servantEquipListViewManager = v12->fields.servantEquipListViewManager;
+        goto LABEL_26;
+      TitleInfoControl__setBackBtnSprite_38890076((TitleInfoControl_o *)this, 1, 0, 0, 0LL);
+      servantEquipListViewManager = v14->fields.servantEquipListViewManager;
       if ( !servantEquipListViewManager )
-        sub_1B86614(0LL, v20);
+        sub_1BDBAD4(0LL, v24);
       EquipGraphListViewManager__CreateList(
         servantEquipListViewManager,
         baseDeckItemList,
         partyItem,
         member,
         setupInfo,
-        v21);
-      this = (EquipGraphListMenu_o *)v12->fields.servantEquipListViewManager;
+        type,
+        v25);
+      this = (EquipGraphListMenu_o *)v14->fields.servantEquipListViewManager;
       if ( !this
-        || (scaleChangeTabSprite = v12->fields.scaleChangeTabSprite,
+        || (scaleChangeTabSprite = v14->fields.scaleChangeTabSprite,
             this = (EquipGraphListMenu_o *)EquipGraphListViewManager__GetScaleButtonSpriteName(
                                              (EquipGraphListViewManager_o *)this,
                                              (const MethodInfo *)baseDeckItemList),
             !scaleChangeTabSprite) )
       {
-LABEL_17:
-        sub_1B86614(this, baseDeckItemList);
+LABEL_26:
+        sub_1BDBAD4(this, baseDeckItemList);
       }
       UISprite__set_spriteName(scaleChangeTabSprite, (System_String_o *)this, 0LL);
-      v12->fields.state = 1;
-      v24 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
-      System_Action___ctor(v24, (Il2CppObject *)v12, Method_EquipGraphListMenu_EndOpen__, 0LL);
-      BaseMenu__Open((BaseMenu_o *)v12, v24, 0LL);
+      v14->fields.state = 1;
+      v28 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+      System_Action___ctor(v28, (Il2CppObject *)v14, Method_EquipGraphListMenu_EndOpen__, 0LL);
+      BaseMenu__Open((BaseMenu_o *)v14, v28, 0LL);
     }
   }
   else
   {
-    v12->fields.callbackFunc = callback;
-    sub_1B8635C(
-      (CGThumbnailListItem_o *)&v12->fields.callbackFunc,
+    v14->fields.callbackFunc = callback;
+    sub_1BDB81C(
+      (CGThumbnailListItem_o *)&v14->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)partyItem,
       *(const MethodInfo **)&member);
-    modeKind = v12->fields.modeKind;
-    v12->fields.state = 2;
-    EquipGraphListMenu__SetTabKind(v12, modeKind, 0, v16);
+    modeKind = v14->fields.modeKind;
+    v14->fields.state = 2;
+    EquipGraphListMenu__SetTabKind(v14, modeKind, 0, v18);
   }
 }
 
 
-void __fastcall EquipGraphListMenu__Open_39311612(
+void __fastcall EquipGraphListMenu__Open_40108508(
         EquipGraphListMenu_o *this,
         WarBoardPartyListViewItem_o *partyItem,
         int32_t member,
@@ -1158,11 +1238,11 @@ void __fastcall EquipGraphListMenu__Open_39311612(
   System_Action_o *v22; // x20
 
   v10 = this;
-  if ( (byte_4A4DAE2 & 1) == 0 )
+  if ( (byte_4B4404C & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, partyItem);
-    this = (EquipGraphListMenu_o *)sub_1B863B8(&Method_EquipGraphListMenu_EndOpen__, v11);
-    byte_4A4DAE2 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, partyItem);
+    this = (EquipGraphListMenu_o *)sub_1BDB878(&Method_EquipGraphListMenu_EndOpen__, v11);
+    byte_4B4404C = 1;
   }
   state = v10->fields.state;
   if ( (unsigned int)(state - 2) >= 2 )
@@ -1178,7 +1258,7 @@ void __fastcall EquipGraphListMenu__Open_39311612(
                                     (PartyOrganizationListViewItem_o *)this,
                                     0LL) > 0;
       v10->fields.callbackFunc = callback;
-      sub_1B8635C((CGThumbnailListItem_o *)&v10->fields.callbackFunc, (int32_t)callback, v15, v16);
+      sub_1BDB81C((CGThumbnailListItem_o *)&v10->fields.callbackFunc, (int32_t)callback, v15, v16);
       this = (EquipGraphListMenu_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v10, 0LL);
       if ( !this )
         goto LABEL_17;
@@ -1191,11 +1271,11 @@ void __fastcall EquipGraphListMenu__Open_39311612(
       this = (EquipGraphListMenu_o *)v10->fields.titleInfo;
       if ( !this )
         goto LABEL_17;
-      TitleInfoControl__setBackBtnSprite_38089748((TitleInfoControl_o *)this, 1, 0, 0, 0LL);
+      TitleInfoControl__setBackBtnSprite_38890076((TitleInfoControl_o *)this, 1, 0, 0, 0LL);
       servantEquipListViewManager = v10->fields.servantEquipListViewManager;
       if ( !servantEquipListViewManager )
-        sub_1B86614(0LL, v18);
-      EquipGraphListViewManager__CreateList_39312532(servantEquipListViewManager, partyItem, member, setupInfo, v19);
+        sub_1BDBAD4(0LL, v18);
+      EquipGraphListViewManager__CreateList_40109428(servantEquipListViewManager, partyItem, member, setupInfo, v19);
       this = (EquipGraphListMenu_o *)v10->fields.servantEquipListViewManager;
       if ( !this
         || (scaleChangeTabSprite = v10->fields.scaleChangeTabSprite,
@@ -1205,11 +1285,11 @@ void __fastcall EquipGraphListMenu__Open_39311612(
             !scaleChangeTabSprite) )
       {
 LABEL_17:
-        sub_1B86614(this, partyItem);
+        sub_1BDBAD4(this, partyItem);
       }
       UISprite__set_spriteName(scaleChangeTabSprite, (System_String_o *)this, 0LL);
       v10->fields.state = 1;
-      v22 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+      v22 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
       System_Action___ctor(v22, (Il2CppObject *)v10, Method_EquipGraphListMenu_EndOpen__, 0LL);
       BaseMenu__Open((BaseMenu_o *)v10, v22, 0LL);
     }
@@ -1217,7 +1297,7 @@ LABEL_17:
   else
   {
     v10->fields.callbackFunc = callback;
-    sub_1B8635C(
+    sub_1BDB81C(
       (CGThumbnailListItem_o *)&v10->fields.callbackFunc,
       (int32_t)callback,
       member,
@@ -1271,21 +1351,21 @@ void __fastcall EquipGraphListMenu__SetTabKind(
   int32_t v38; // w1
 
   v6 = this;
-  if ( (byte_4A4DAE5 & 1) == 0 )
+  if ( (byte_4B4404F & 1) == 0 )
   {
-    sub_1B863B8(&EquipGraphListViewManager_CallbackFunc_TypeInfo, *(_QWORD *)&modeKind);
-    sub_1B863B8(&Method_EquipGraphListMenu_OnSelectServantEquip__, v7);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v8);
-    sub_1B863B8(&StringLiteral_11419/*"SERVANT_EQUIP_OPERATION_EXPLANATION_CHOICE"*/, v9);
-    sub_1B863B8(&StringLiteral_17413/*"button_allchoice_reg"*/, v10);
-    sub_1B863B8(&StringLiteral_17416/*"button_alllock_unreg"*/, v11);
-    sub_1B863B8(&StringLiteral_11421/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/, v12);
-    sub_1B863B8(&StringLiteral_11420/*"SERVANT_EQUIP_OPERATION_EXPLANATION_LOCK"*/, v13);
-    sub_1B863B8(&StringLiteral_17429/*"button_select_reg"*/, v14);
-    sub_1B863B8(&StringLiteral_17430/*"button_select_unreg"*/, v15);
-    sub_1B863B8(&StringLiteral_17415/*"button_alllock_reg"*/, v16);
-    this = (EquipGraphListMenu_o *)sub_1B863B8(&StringLiteral_17414/*"button_allchoice_unreg"*/, v17);
-    byte_4A4DAE5 = 1;
+    sub_1BDB878(&EquipGraphListViewManager_CallbackFunc_TypeInfo, *(_QWORD *)&modeKind);
+    sub_1BDB878(&Method_EquipGraphListMenu_OnSelectServantEquip__, v7);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v8);
+    sub_1BDB878(&StringLiteral_11593/*"SERVANT_EQUIP_OPERATION_EXPLANATION_CHOICE"*/, v9);
+    sub_1BDB878(&StringLiteral_17650/*"button_allchoice_reg"*/, v10);
+    sub_1BDB878(&StringLiteral_17653/*"button_alllock_unreg"*/, v11);
+    sub_1BDB878(&StringLiteral_11595/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/, v12);
+    sub_1BDB878(&StringLiteral_11594/*"SERVANT_EQUIP_OPERATION_EXPLANATION_LOCK"*/, v13);
+    sub_1BDB878(&StringLiteral_17666/*"button_select_reg"*/, v14);
+    sub_1BDB878(&StringLiteral_17667/*"button_select_unreg"*/, v15);
+    sub_1BDB878(&StringLiteral_17652/*"button_alllock_reg"*/, v16);
+    this = (EquipGraphListMenu_o *)sub_1BDB878(&StringLiteral_17651/*"button_allchoice_unreg"*/, v17);
+    byte_4B4404F = 1;
   }
   v18 = !v6->fields.isInitTab || isInit;
   if ( v18 || v6->fields.modeKind != modeKind )
@@ -1305,9 +1385,9 @@ void __fastcall EquipGraphListMenu__SetTabKind(
     this = (EquipGraphListMenu_o *)v6->fields.statusTabSprite;
     if ( !this )
       goto LABEL_46;
-    v19 = &StringLiteral_17429/*"button_select_reg"*/;
+    v19 = &StringLiteral_17666/*"button_select_reg"*/;
     if ( modeKind )
-      v19 = &StringLiteral_17430/*"button_select_unreg"*/;
+      v19 = &StringLiteral_17667/*"button_select_unreg"*/;
     UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v19, 0LL);
     this = (EquipGraphListMenu_o *)v6->fields.statusTabButton;
     if ( !this )
@@ -1338,9 +1418,9 @@ void __fastcall EquipGraphListMenu__SetTabKind(
     this = (EquipGraphListMenu_o *)v6->fields.lockTabSprite;
     if ( !this )
       goto LABEL_46;
-    v24 = &StringLiteral_17415/*"button_alllock_reg"*/;
+    v24 = &StringLiteral_17652/*"button_alllock_reg"*/;
     if ( modeKind != 1 )
-      v24 = &StringLiteral_17416/*"button_alllock_unreg"*/;
+      v24 = &StringLiteral_17653/*"button_alllock_unreg"*/;
     UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v24, 0LL);
     this = (EquipGraphListMenu_o *)v6->fields.lockTabButton;
     if ( !this )
@@ -1369,9 +1449,9 @@ void __fastcall EquipGraphListMenu__SetTabKind(
     this = (EquipGraphListMenu_o *)v6->fields.choiceTabSprite;
     if ( !this )
       goto LABEL_46;
-    v27 = &StringLiteral_17413/*"button_allchoice_reg"*/;
+    v27 = &StringLiteral_17650/*"button_allchoice_reg"*/;
     if ( modeKind != 2 )
-      v27 = &StringLiteral_17414/*"button_allchoice_unreg"*/;
+      v27 = &StringLiteral_17651/*"button_allchoice_unreg"*/;
     UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v27, 0LL);
     this = (EquipGraphListMenu_o *)v6->fields.choiceTabButton;
     if ( !this )
@@ -1391,14 +1471,14 @@ void __fastcall EquipGraphListMenu__SetTabKind(
       explanationLabel = v6->fields.explanationLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v31 = &StringLiteral_11419/*"SERVANT_EQUIP_OPERATION_EXPLANATION_CHOICE"*/;
+      v31 = &StringLiteral_11593/*"SERVANT_EQUIP_OPERATION_EXPLANATION_CHOICE"*/;
     }
     else if ( modeKind == 1 )
     {
       explanationLabel = v6->fields.explanationLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v31 = &StringLiteral_11420/*"SERVANT_EQUIP_OPERATION_EXPLANATION_LOCK"*/;
+      v31 = &StringLiteral_11594/*"SERVANT_EQUIP_OPERATION_EXPLANATION_LOCK"*/;
     }
     else
     {
@@ -1407,7 +1487,7 @@ void __fastcall EquipGraphListMenu__SetTabKind(
       explanationLabel = v6->fields.explanationLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v31 = &StringLiteral_11421/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/;
+      v31 = &StringLiteral_11595/*"SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS"*/;
     }
     this = (EquipGraphListMenu_o *)LocalizationManager__Get((System_String_o *)*v31, 0LL);
     if ( !explanationLabel )
@@ -1427,9 +1507,9 @@ LABEL_40:
       goto LABEL_45;
     }
 LABEL_46:
-    sub_1B86614(this, *(_QWORD *)&modeKind);
+    sub_1BDBAD4(this, *(_QWORD *)&modeKind);
   }
-  v34 = (EquipGraphListViewManager_CallbackFunc_o *)sub_1B86604(EquipGraphListViewManager_CallbackFunc_TypeInfo);
+  v34 = (EquipGraphListViewManager_CallbackFunc_o *)sub_1BDBAC4(EquipGraphListViewManager_CallbackFunc_TypeInfo);
   EquipGraphListViewManager_CallbackFunc___ctor(
     v34,
     (Il2CppObject *)v6,
@@ -1438,10 +1518,10 @@ LABEL_46:
   if ( !servantEquipListViewManager )
     goto LABEL_46;
   servantEquipListViewManager->fields.callbackFunc = v34;
-  sub_1B8635C((CGThumbnailListItem_o *)&servantEquipListViewManager->fields.callbackFunc, (int32_t)v34, v36, v37);
+  sub_1BDB81C((CGThumbnailListItem_o *)&servantEquipListViewManager->fields.callbackFunc, (int32_t)v34, v36, v37);
   v38 = 2;
 LABEL_45:
-  EquipGraphListViewManager__SetMode_39314676(servantEquipListViewManager, v38, (const MethodInfo *)isInit);
+  EquipGraphListViewManager__SetMode_40111656(servantEquipListViewManager, v38, (const MethodInfo *)isInit);
 }
 
 
@@ -1471,13 +1551,13 @@ void __fastcall EquipGraphListMenu__StatusRequest(
   System_Int64_array *unlockList; // [xsp+10h] [xbp-30h] BYREF
   System_Int64_array *lockList; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4A4DAEC & 1) == 0 )
+  if ( (byte_4B44056 & 1) == 0 )
   {
-    sub_1B863B8(&Method_EquipGraphListMenu_EndStatusSync__, callback);
-    sub_1B863B8(&Method_NetworkManager_getRequest_CardStatusSyncRequest___, v6);
-    sub_1B863B8(&NetworkManager_TypeInfo, v7);
-    sub_1B863B8(&NetworkManager_ResultCallbackFunc_TypeInfo, v8);
-    byte_4A4DAEC = 1;
+    sub_1BDB878(&Method_EquipGraphListMenu_EndStatusSync__, callback);
+    sub_1BDB878(&Method_NetworkManager_getRequest_CardStatusSyncRequest___, v6);
+    sub_1BDB878(&NetworkManager_TypeInfo, v7);
+    sub_1BDB878(&NetworkManager_ResultCallbackFunc_TypeInfo, v8);
+    byte_4B44056 = 1;
   }
   unlockList = 0LL;
   lockList = 0LL;
@@ -1492,8 +1572,8 @@ void __fastcall EquipGraphListMenu__StatusRequest(
     if ( EquipGraphListViewManager__GetSwapChoiceList(servantEquipListViewManager, &choiceList, &v21, v3) )
     {
       this->fields.requedstCallback = callback;
-      sub_1B8635C((CGThumbnailListItem_o *)&this->fields.requedstCallback, (int32_t)callback, v18, v19);
-      v20 = (NetworkManager_ResultCallbackFunc_o *)sub_1B86604(NetworkManager_ResultCallbackFunc_TypeInfo);
+      sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.requedstCallback, (int32_t)callback, v18, v19);
+      v20 = (NetworkManager_ResultCallbackFunc_o *)sub_1BDBAC4(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v20,
         (Il2CppObject *)this,
@@ -1503,7 +1583,7 @@ void __fastcall EquipGraphListMenu__StatusRequest(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       servantEquipListViewManager = (EquipGraphListViewManager_o *)NetworkManager__getRequest_object_(
                                                                      v20,
-                                                                     (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+                                                                     (const MethodInfo_30BC7D4 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
       if ( servantEquipListViewManager )
       {
         v15 = v21;
@@ -1513,7 +1593,7 @@ void __fastcall EquipGraphListMenu__StatusRequest(
         goto LABEL_17;
       }
 LABEL_21:
-      sub_1B86614(servantEquipListViewManager, callback);
+      sub_1BDBAD4(servantEquipListViewManager, callback);
     }
   }
   else if ( modeKind == 1 )
@@ -1524,8 +1604,8 @@ LABEL_21:
     if ( EquipGraphListViewManager__GetSwapLockList(servantEquipListViewManager, &lockList, &unlockList, v3) )
     {
       this->fields.requedstCallback = callback;
-      sub_1B8635C((CGThumbnailListItem_o *)&this->fields.requedstCallback, (int32_t)callback, v11, v12);
-      v13 = (NetworkManager_ResultCallbackFunc_o *)sub_1B86604(NetworkManager_ResultCallbackFunc_TypeInfo);
+      sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.requedstCallback, (int32_t)callback, v11, v12);
+      v13 = (NetworkManager_ResultCallbackFunc_o *)sub_1BDBAC4(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v13,
         (Il2CppObject *)this,
@@ -1535,7 +1615,7 @@ LABEL_21:
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       servantEquipListViewManager = (EquipGraphListViewManager_o *)NetworkManager__getRequest_object_(
                                                                      v13,
-                                                                     (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+                                                                     (const MethodInfo_30BC7D4 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
       if ( servantEquipListViewManager )
       {
         v15 = unlockList;
@@ -1579,10 +1659,10 @@ void __fastcall EquipGraphListMenu__add_callbackFunc(
   EquipGraphListMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A4DADF & 1) == 0 )
+  if ( (byte_4B44049 & 1) == 0 )
   {
-    sub_1B863B8(&EquipGraphListMenu_CallbackFunc_TypeInfo, value);
-    byte_4A4DADF = 1;
+    sub_1BDB878(&EquipGraphListMenu_CallbackFunc_TypeInfo, value);
+    byte_4B44049 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1595,13 +1675,13 @@ void __fastcall EquipGraphListMenu__add_callbackFunc(
       if ( (EquipGraphListMenu_CallbackFunc_c *)v8->klass != EquipGraphListMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BC0674(p_callbackFunc, v8, v6);
+    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B868D4(v8);
+  sub_1BDBD94(v8);
   EquipGraphListMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -1620,10 +1700,10 @@ void __fastcall EquipGraphListMenu__remove_callbackFunc(
   EquipGraphListMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4A4DAE0 & 1) == 0 )
+  if ( (byte_4B4404A & 1) == 0 )
   {
-    sub_1B863B8(&EquipGraphListMenu_CallbackFunc_TypeInfo, value);
-    byte_4A4DAE0 = 1;
+    sub_1BDB878(&EquipGraphListMenu_CallbackFunc_TypeInfo, value);
+    byte_4B4404A = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1636,13 +1716,13 @@ void __fastcall EquipGraphListMenu__remove_callbackFunc(
       if ( (EquipGraphListMenu_CallbackFunc_c *)v8->klass != EquipGraphListMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BC0674(p_callbackFunc, v8, v6);
+    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B868D4(v8);
+  sub_1BDBD94(v8);
   EquipGraphListMenu__GetModeKind(v11, v12);
 }
 
@@ -1665,15 +1745,15 @@ void __fastcall EquipGraphListMenu_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B86478(v6) & 1) == 0 )
+  if ( (sub_1BDB938(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B864E0(v10, 0LL);
+      v10 = sub_1BDBAF0(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BDB9A0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -1685,9 +1765,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19D2D10;
+  this->fields.m_target = (Il2CppObject *)sub_1A25388;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19D2CB8;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A25330;
 }
 
 
@@ -1704,15 +1784,15 @@ System_IAsyncResult_o *__fastcall EquipGraphListMenu_CallbackFunc__BeginInvoke(
   int32_t v12; // [xsp+2Ch] [xbp-34h] BYREF
 
   v12 = result;
-  if ( (byte_4A4DAF3 & 1) == 0 )
+  if ( (byte_4B4405D & 1) == 0 )
   {
-    sub_1B863B8(&EquipGraphListMenu_ResultKind_TypeInfo, *(_QWORD *)&result);
-    byte_4A4DAF3 = 1;
+    sub_1BDB878(&EquipGraphListMenu_ResultKind_TypeInfo, *(_QWORD *)&result);
+    byte_4B4405D = 1;
   }
   v11[2] = 0LL;
   v11[0] = j_il2cpp_value_box_0(EquipGraphListMenu_ResultKind_TypeInfo, &v12, item, callback, object);
   v11[1] = (__int64)item;
-  return (System_IAsyncResult_o *)sub_1B8636C(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_1BDB82C(this, v11, callback, object);
 }
 
 
@@ -1721,7 +1801,7 @@ void __fastcall EquipGraphListMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B86370(result, 0LL, method);
+  sub_1BDB830(result, 0LL, method);
 }
 
 
@@ -1757,15 +1837,15 @@ void __fastcall EquipGraphListMenu_RequestCallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B86478(v6) & 1) == 0 )
+  if ( (sub_1BDB938(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B864E0(v10, 0LL);
+      v10 = sub_1BDBAF0(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BDB9A0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -1777,9 +1857,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19D2D6C;
+  this->fields.m_target = (Il2CppObject *)sub_1A253E4;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19D2D24;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A2539C;
 }
 
 
@@ -1795,14 +1875,14 @@ System_IAsyncResult_o *__fastcall EquipGraphListMenu_RequestCallbackFunc__BeginI
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isRequest;
-  if ( (byte_4A4DAF4 & 1) == 0 )
+  if ( (byte_4B4405E & 1) == 0 )
   {
-    sub_1B863B8(&bool_TypeInfo, isRequest);
-    byte_4A4DAF4 = 1;
+    sub_1BDB878(&bool_TypeInfo, isRequest);
+    byte_4B4405E = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B8636C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BDB82C(this, v9, callback, object);
 }
 
 
@@ -1811,7 +1891,7 @@ void __fastcall EquipGraphListMenu_RequestCallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B86370(result, 0LL, method);
+  sub_1BDB830(result, 0LL, method);
 }
 
 
@@ -1834,15 +1914,15 @@ void __fastcall EquipGraphListMenu___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4A4DAF5 & 1) == 0 )
+  if ( (byte_4B4405F & 1) == 0 )
   {
-    sub_1B863B8(&EquipGraphListMenu___c_TypeInfo, v1);
-    byte_4A4DAF5 = 1;
+    sub_1BDB878(&EquipGraphListMenu___c_TypeInfo, v1);
+    byte_4B4405F = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(EquipGraphListMenu___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BDBAC4(EquipGraphListMenu___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EquipGraphListMenu___c_TypeInfo->static_fields->__9 = (struct EquipGraphListMenu___c_o *)v2;
-  sub_1B8635C((CGThumbnailListItem_o *)EquipGraphListMenu___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BDB81C((CGThumbnailListItem_o *)EquipGraphListMenu___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -1861,14 +1941,14 @@ void __fastcall EquipGraphListMenu___c___Open_b__28_0(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4A4DAF6 & 1) == 0 )
+  if ( (byte_4B44060 & 1) == 0 )
   {
-    sub_1B863B8(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, isDecide);
-    byte_4A4DAF6 = 1;
+    sub_1BDB878(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, isDecide);
+    byte_4B44060 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
   if ( !Instance )
-    sub_1B86614(0LL, v4);
+    sub_1BDBAD4(0LL, v4);
   ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, 0LL);
 }
 
@@ -1882,13 +1962,97 @@ void __fastcall EquipGraphListMenu___c___Open_b__29_0(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4A4DAF7 & 1) == 0 )
+  if ( (byte_4B44061 & 1) == 0 )
   {
-    sub_1B863B8(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, isDecide);
-    byte_4A4DAF7 = 1;
+    sub_1BDB878(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__, isDecide);
+    byte_4B44061 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
   if ( !Instance )
-    sub_1B86614(0LL, v4);
+    sub_1BDBAD4(0LL, v4);
   ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, 0LL);
+}
+
+
+void __fastcall EquipGraphListMenu___c__DisplayClass38_0___ctor(
+        EquipGraphListMenu___c__DisplayClass38_0_o *this,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+void __fastcall EquipGraphListMenu___c__DisplayClass38_0___Decide_b__0(
+        EquipGraphListMenu___c__DisplayClass38_0_o *this,
+        bool isDecide,
+        int32_t equipBondSkillChange,
+        const MethodInfo *method)
+{
+  EquipGraphListMenu___c__DisplayClass38_0_o *v6; // x20
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  struct EquipGraphListViewItem_o *equipItem; // x8
+  Il2CppObject *_4__this; // x19
+  EquipGraphListMenu_RequestCallbackFunc_o *v12; // x20
+  const MethodInfo *v13; // x3
+  const MethodInfo *v14; // x2
+  struct EquipGraphListMenu_o *v15; // x20
+  struct EquipGraphListViewManager_o *servantEquipListViewManager; // x19
+  EquipGraphListViewManager_CallbackFunc_o *v17; // x21
+  const MethodInfo *v18; // x3
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  const MethodInfo *v21; // x2
+
+  v6 = this;
+  if ( (byte_4B44062 & 1) == 0 )
+  {
+    sub_1BDB878(&EquipGraphListViewManager_CallbackFunc_TypeInfo, isDecide);
+    sub_1BDB878(&Method_EquipGraphListMenu_EndRequestClickDecide__, v7);
+    sub_1BDB878(&Method_EquipGraphListMenu_OnSelectServantEquip__, v8);
+    this = (EquipGraphListMenu___c__DisplayClass38_0_o *)sub_1BDB878(
+                                                           &EquipGraphListMenu_RequestCallbackFunc_TypeInfo,
+                                                           v9);
+    byte_4B44062 = 1;
+  }
+  if ( isDecide )
+  {
+    equipItem = v6->fields.equipItem;
+    if ( equipItem )
+    {
+      equipItem->fields._EquipFriendShipSkillChange_k__BackingField = equipBondSkillChange;
+      _4__this = (Il2CppObject *)v6->fields.__4__this;
+      v12 = (EquipGraphListMenu_RequestCallbackFunc_o *)sub_1BDBAC4(EquipGraphListMenu_RequestCallbackFunc_TypeInfo);
+      EquipGraphListMenu_RequestCallbackFunc___ctor(
+        v12,
+        _4__this,
+        Method_EquipGraphListMenu_EndRequestClickDecide__,
+        v13);
+      if ( _4__this )
+      {
+        EquipGraphListMenu__StatusRequest((EquipGraphListMenu_o *)_4__this, v12, v14);
+        return;
+      }
+    }
+LABEL_10:
+    sub_1BDBAD4(this, isDecide);
+  }
+  v15 = v6->fields.__4__this;
+  if ( !v15 )
+    goto LABEL_10;
+  v15->fields.state = 2;
+  servantEquipListViewManager = v15->fields.servantEquipListViewManager;
+  v17 = (EquipGraphListViewManager_CallbackFunc_o *)sub_1BDBAC4(EquipGraphListViewManager_CallbackFunc_TypeInfo);
+  EquipGraphListViewManager_CallbackFunc___ctor(
+    v17,
+    (Il2CppObject *)v15,
+    (intptr_t)Method_EquipGraphListMenu_OnSelectServantEquip__,
+    v18);
+  if ( !servantEquipListViewManager )
+    goto LABEL_10;
+  servantEquipListViewManager->fields.callbackFunc = v17;
+  sub_1BDB81C((CGThumbnailListItem_o *)&servantEquipListViewManager->fields.callbackFunc, (int32_t)v17, v19, v20);
+  EquipGraphListViewManager__SetMode_40111656(servantEquipListViewManager, 2, v21);
 }

@@ -1,5 +1,5 @@
 void __fastcall WarBoardMapCameraComponent___ctor(WarBoardMapCameraComponent_o *this, const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.cameraAutoMoveSec = xmmword_BC31F0;
+  *(_OWORD *)&this->fields.cameraAutoMoveSec = xmmword_BEB270;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }

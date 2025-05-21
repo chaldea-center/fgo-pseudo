@@ -31,11 +31,11 @@ void __fastcall EventRewardSaveData__DeleteContinueData(const MethodInfo *method
   __int64 v29; // x1
   DataManager_o *Instance; // x0
   __int64 v31; // x1
+  __int64 v32; // x2
+  __int64 v33; // x3
   struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x8
-  DataManager_o *v33; // x23
-  unsigned __int64 v34; // x25
-  System_String_o *v35; // x0
-  System_String_o *v36; // x0
+  DataManager_o *v35; // x23
+  unsigned __int64 v36; // x25
   System_String_o *v37; // x0
   System_String_o *v38; // x0
   System_String_o *v39; // x0
@@ -44,134 +44,128 @@ void __fastcall EventRewardSaveData__DeleteContinueData(const MethodInfo *method
   System_String_o *v42; // x0
   System_String_o *v43; // x0
   System_String_o *v44; // x0
-  struct System_Threading_CancellationTokenSource_o *v45; // x8
-  DataManager_o *v46; // x20
-  int v47; // w19
-  int v48; // w26
-  __int64 v49; // x29
-  System_Object_array *v50; // x21
-  __int64 v51; // x2
-  __int64 v52; // x3
-  __int64 v53; // x4
-  int32_t v54; // w2
-  const MethodInfo *v55; // x3
+  System_String_o *v45; // x0
+  System_String_o *v46; // x0
+  struct System_Threading_CancellationTokenSource_o *v47; // x8
+  DataManager_o *v48; // x20
+  int v49; // w19
+  int v50; // w26
+  __int64 v51; // x29
+  System_Object_array *v52; // x21
+  __int64 v53; // x2
+  __int64 v54; // x3
+  __int64 v55; // x4
   Il2CppObject *v56; // x22
   __int64 v57; // x2
   __int64 v58; // x3
   __int64 v59; // x4
-  int32_t v60; // w2
-  const MethodInfo *v61; // x3
-  Il2CppObject *v62; // x22
-  __int64 v63; // x2
-  __int64 v64; // x3
-  __int64 v65; // x4
-  int32_t v66; // w2
-  const MethodInfo *v67; // x3
+  Il2CppObject *v60; // x22
+  __int64 v61; // x2
+  __int64 v62; // x3
+  __int64 v63; // x4
+  Il2CppObject *v64; // x22
+  __int64 v65; // x2
+  __int64 v66; // x3
+  __int64 v67; // x4
   Il2CppObject *v68; // x22
-  __int64 v69; // x2
-  __int64 v70; // x3
-  __int64 v71; // x4
-  int32_t v72; // w2
-  const MethodInfo *v73; // x3
-  Il2CppObject *v74; // x22
-  System_String_o *v75; // x0
+  System_String_o *v69; // x0
+  System_String_o *v70; // x0
+  System_String_o *v71; // x0
+  System_Collections_Generic_List_EventBulletinBoardEntity__o *AvailableEntityList; // x0
+  System_Collections_Generic_List_object__o *v73; // x20
+  int32_t v74; // w21
+  System_String_o *v75; // x22
   System_String_o *v76; // x0
   System_String_o *v77; // x0
-  System_Collections_Generic_List_EventBulletinBoardEntity__o *AvailableEntityList; // x0
-  System_Collections_Generic_List_object__o *v79; // x20
-  int32_t v80; // w21
-  System_String_o *v81; // x22
+  System_String_o *v78; // x0
+  System_String_o *v79; // x0
+  System_String_o *v80; // x0
+  System_String_o *v81; // x0
   System_String_o *v82; // x0
   System_String_o *v83; // x0
-  System_String_o *v84; // x0
-  System_String_o *v85; // x0
-  System_String_o *v86; // x0
-  System_String_o *v87; // x0
-  System_String_o *v88; // x0
-  System_String_o *v89; // x0
-  __int64 v90; // x0
-  __int128 v91; // [xsp+0h] [xbp-80h] BYREF
-  int v92; // [xsp+10h] [xbp-70h] BYREF
-  int v93; // [xsp+14h] [xbp-6Ch] BYREF
-  int32_t v94; // [xsp+18h] [xbp-68h] BYREF
+  __int64 v84; // x0
+  __int128 v85; // [xsp+0h] [xbp-80h] BYREF
+  int v86; // [xsp+10h] [xbp-70h] BYREF
+  int v87; // [xsp+14h] [xbp-6Ch] BYREF
+  int32_t v88; // [xsp+18h] [xbp-68h] BYREF
   int32_t eventId; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_4A527A2 & 1) == 0 )
+  if ( (byte_4B3F079 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_EventMaster___, v1);
-    sub_1B863B8(&Method_DataManager_GetMasterData_EventVoicePlayMaster___, v2);
-    sub_1B863B8(&Method_DataManager_GetMaster_EventBulletinBoardMaster___, v3);
-    sub_1B863B8(&DataManager_TypeInfo, v4);
-    sub_1B863B8(&int_TypeInfo, v5);
-    sub_1B863B8(&Method_System_Collections_Generic_List_EventBulletinBoardEntity__get_Count__, v6);
-    sub_1B863B8(&Method_System_Collections_Generic_List_EventBulletinBoardEntity__get_Item__, v7);
-    sub_1B863B8(&object___TypeInfo, v8);
-    sub_1B863B8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    sub_1B863B8(&StringLiteral_6161/*"EventMission_"*/, v11);
-    sub_1B863B8(&StringLiteral_6186/*"EventTowerState_"*/, v12);
-    sub_1B863B8(&StringLiteral_12628/*"ShopItemFilter"*/, v13);
-    sub_1B863B8(&StringLiteral_8079/*"KeyBoxGachaPlayedVoice"*/, v14);
-    sub_1B863B8(&StringLiteral_3274/*"BulletinBoardMessageState"*/, v15);
-    sub_1B863B8(&StringLiteral_11049/*"RecoveryIdx"*/, v16);
-    sub_1B863B8(&StringLiteral_9035/*"MstMission"*/, v17);
-    sub_1B863B8(&StringLiteral_4693/*"CooltimeNotification"*/, v18);
-    sub_1B863B8(&StringLiteral_9036/*"MstMissionIndex"*/, v19);
-    sub_1B863B8(&StringLiteral_6314/*"ExtraMission"*/, v20);
-    sub_1B863B8(&StringLiteral_10579/*"PriorityIndex_"*/, v21);
-    sub_1B863B8(&StringLiteral_6574/*"FatigueNotiffication"*/, v22);
-    sub_1B863B8(&StringLiteral_8354/*"LotteryShopSkipState"*/, v23);
-    sub_1B863B8(&StringLiteral_8280/*"LimitedMission"*/, v24);
-    sub_1B863B8(&StringLiteral_11211/*"RewardType_"*/, v25);
-    sub_1B863B8(&StringLiteral_6209/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v26);
-    sub_1B863B8(&StringLiteral_6284/*"ExpeditionNotification"*/, v27);
-    sub_1B863B8(&StringLiteral_7161/*"HeelPortraitDetailDialogState"*/, v28);
-    sub_1B863B8(&StringLiteral_8973/*"MissionId_"*/, v29);
-    byte_4A527A2 = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_EventMaster___, v1);
+    sub_1BDB878(&Method_DataManager_GetMasterData_EventVoicePlayMaster___, v2);
+    sub_1BDB878(&Method_DataManager_GetMaster_EventBulletinBoardMaster___, v3);
+    sub_1BDB878(&DataManager_TypeInfo, v4);
+    sub_1BDB878(&int_TypeInfo, v5);
+    sub_1BDB878(&Method_System_Collections_Generic_List_EventBulletinBoardEntity__get_Count__, v6);
+    sub_1BDB878(&Method_System_Collections_Generic_List_EventBulletinBoardEntity__get_Item__, v7);
+    sub_1BDB878(&object___TypeInfo, v8);
+    sub_1BDB878(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
+    sub_1BDB878(&StringLiteral_6240/*"EventMission_"*/, v11);
+    sub_1BDB878(&StringLiteral_6265/*"EventTowerState_"*/, v12);
+    sub_1BDB878(&StringLiteral_12819/*"ShopItemFilter"*/, v13);
+    sub_1BDB878(&StringLiteral_8220/*"KeyBoxGachaPlayedVoice"*/, v14);
+    sub_1BDB878(&StringLiteral_3290/*"BulletinBoardMessageState"*/, v15);
+    sub_1BDB878(&StringLiteral_11212/*"RecoveryIdx"*/, v16);
+    sub_1BDB878(&StringLiteral_9180/*"MstMission"*/, v17);
+    sub_1BDB878(&StringLiteral_4762/*"CooltimeNotification"*/, v18);
+    sub_1BDB878(&StringLiteral_9181/*"MstMissionIndex"*/, v19);
+    sub_1BDB878(&StringLiteral_6393/*"ExtraMission"*/, v20);
+    sub_1BDB878(&StringLiteral_10735/*"PriorityIndex_"*/, v21);
+    sub_1BDB878(&StringLiteral_6654/*"FatigueNotiffication"*/, v22);
+    sub_1BDB878(&StringLiteral_8497/*"LotteryShopSkipState"*/, v23);
+    sub_1BDB878(&StringLiteral_8423/*"LimitedMission"*/, v24);
+    sub_1BDB878(&StringLiteral_11377/*"RewardType_"*/, v25);
+    sub_1BDB878(&StringLiteral_6288/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v26);
+    sub_1BDB878(&StringLiteral_6363/*"ExpeditionNotification"*/, v27);
+    sub_1BDB878(&StringLiteral_7294/*"HeelPortraitDetailDialogState"*/, v28);
+    sub_1BDB878(&StringLiteral_9118/*"MissionId_"*/, v29);
+    byte_4B3F079 = 1;
   }
   eventId = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_44;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_EventMaster___);
+                                (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_44;
   Instance = (DataManager_o *)EventMaster__getEventIdList((EventMaster_o *)Instance, 0LL);
   if ( !Instance )
     goto LABEL_44;
   m_CancellationTokenSource = Instance->fields.m_CancellationTokenSource;
-  v33 = Instance;
+  v35 = Instance;
   if ( (int)m_CancellationTokenSource >= 1 )
   {
-    v34 = 0LL;
+    v36 = 0LL;
     while ( 1 )
     {
-      if ( v34 >= (unsigned int)m_CancellationTokenSource )
+      if ( v36 >= (unsigned int)m_CancellationTokenSource )
         goto LABEL_43;
-      eventId = *((_DWORD *)&v33->fields._DispLog + v34);
-      v35 = System_Int32__ToString((int32_t)&eventId, 0LL);
-      v36 = System_String__Concat_61645176((System_String_o *)StringLiteral_10579/*"PriorityIndex_"*/, v35, 0LL);
-      UnityEngine_PlayerPrefs__DeleteKey(v36, 0LL);
+      eventId = *((_DWORD *)&v35->fields._DispLog + v36);
       v37 = System_Int32__ToString((int32_t)&eventId, 0LL);
-      v38 = System_String__Concat_61645176((System_String_o *)StringLiteral_8973/*"MissionId_"*/, v37, 0LL);
+      v38 = System_String__Concat_62572260((System_String_o *)StringLiteral_10735/*"PriorityIndex_"*/, v37, 0LL);
       UnityEngine_PlayerPrefs__DeleteKey(v38, 0LL);
       v39 = System_Int32__ToString((int32_t)&eventId, 0LL);
-      v40 = System_String__Concat_61645176((System_String_o *)StringLiteral_6161/*"EventMission_"*/, v39, 0LL);
+      v40 = System_String__Concat_62572260((System_String_o *)StringLiteral_9118/*"MissionId_"*/, v39, 0LL);
       UnityEngine_PlayerPrefs__DeleteKey(v40, 0LL);
       v41 = System_Int32__ToString((int32_t)&eventId, 0LL);
-      v42 = System_String__Concat_61645176((System_String_o *)StringLiteral_11211/*"RewardType_"*/, v41, 0LL);
+      v42 = System_String__Concat_62572260((System_String_o *)StringLiteral_6240/*"EventMission_"*/, v41, 0LL);
       UnityEngine_PlayerPrefs__DeleteKey(v42, 0LL);
       v43 = System_Int32__ToString((int32_t)&eventId, 0LL);
-      v44 = System_String__Concat_61645176((System_String_o *)StringLiteral_6186/*"EventTowerState_"*/, v43, 0LL);
+      v44 = System_String__Concat_62572260((System_String_o *)StringLiteral_11377/*"RewardType_"*/, v43, 0LL);
       UnityEngine_PlayerPrefs__DeleteKey(v44, 0LL);
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      v45 = System_Int32__ToString((int32_t)&eventId, 0LL);
+      v46 = System_String__Concat_62572260((System_String_o *)StringLiteral_6265/*"EventTowerState_"*/, v45, 0LL);
+      UnityEngine_PlayerPrefs__DeleteKey(v46, 0LL);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_44;
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_EventVoicePlayMaster___);
+                                    (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventVoicePlayMaster___);
       if ( !Instance )
         goto LABEL_44;
       Instance = (DataManager_o *)EventVoicePlayMaster__GetTargetEventIdEntityList(
@@ -180,22 +174,22 @@ void __fastcall EventRewardSaveData__DeleteContinueData(const MethodInfo *method
                                     0LL);
       if ( Instance )
       {
-        v45 = Instance->fields.m_CancellationTokenSource;
-        v46 = Instance;
-        if ( v45 )
+        v47 = Instance->fields.m_CancellationTokenSource;
+        v48 = Instance;
+        if ( v47 )
         {
-          v47 = (_DWORD)v45 - 1;
-          if ( (int)v45 >= 1 )
+          v49 = (_DWORD)v47 - 1;
+          if ( (int)v47 >= 1 )
             break;
         }
       }
 LABEL_33:
-      v76 = System_Int32__ToString((int32_t)&eventId, 0LL);
-      v77 = System_String__Concat_61645176((System_String_o *)StringLiteral_11049/*"RecoveryIdx"*/, v76, 0LL);
-      UnityEngine_PlayerPrefs__DeleteKey(v77, 0LL);
+      v70 = System_Int32__ToString((int32_t)&eventId, 0LL);
+      v71 = System_String__Concat_62572260((System_String_o *)StringLiteral_11212/*"RecoveryIdx"*/, v70, 0LL);
+      UnityEngine_PlayerPrefs__DeleteKey(v71, 0LL);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_EventBulletinBoardMaster___);
+      Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_EventBulletinBoardMaster___);
       if ( !Instance )
         goto LABEL_44;
       AvailableEntityList = EventBulletinBoardMaster__GetAvailableEntityList(
@@ -204,133 +198,133 @@ LABEL_33:
                               0LL);
       if ( AvailableEntityList )
       {
-        v79 = (System_Collections_Generic_List_object__o *)AvailableEntityList;
+        v73 = (System_Collections_Generic_List_object__o *)AvailableEntityList;
         if ( AvailableEntityList->fields._size >= 1 )
         {
-          v80 = 0;
+          v74 = 0;
           do
           {
-            v81 = System_Int32__ToString((int32_t)&eventId, 0LL);
+            v75 = System_Int32__ToString((int32_t)&eventId, 0LL);
             Instance = (DataManager_o *)System_Collections_Generic_List_object___get_Item(
-                                          v79,
-                                          v80,
-                                          (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_EventBulletinBoardEntity__get_Item__);
+                                          v73,
+                                          v74,
+                                          (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_EventBulletinBoardEntity__get_Item__);
             if ( !Instance )
               goto LABEL_44;
-            v82 = System_Int32__ToString((int)Instance + 16, 0LL);
-            v83 = System_String__Concat_61683424((System_String_o *)StringLiteral_3274/*"BulletinBoardMessageState"*/, v81, v82, 0LL);
-            UnityEngine_PlayerPrefs__DeleteKey(v83, 0LL);
+            v76 = System_Int32__ToString((int)Instance + 16, 0LL);
+            v77 = System_String__Concat_62610508((System_String_o *)StringLiteral_3290/*"BulletinBoardMessageState"*/, v75, v76, 0LL);
+            UnityEngine_PlayerPrefs__DeleteKey(v77, 0LL);
           }
-          while ( ++v80 < v79->fields._size );
+          while ( ++v74 < v73->fields._size );
         }
       }
-      v84 = System_Int32__ToString((int32_t)&eventId, 0LL);
-      v85 = System_String__Concat_61645176((System_String_o *)StringLiteral_3274/*"BulletinBoardMessageState"*/, v84, 0LL);
-      UnityEngine_PlayerPrefs__DeleteKey(v85, 0LL);
-      v86 = System_Int32__ToString((int32_t)&eventId, 0LL);
-      v87 = System_String__Concat_61645176((System_String_o *)StringLiteral_7161/*"HeelPortraitDetailDialogState"*/, v86, 0LL);
-      UnityEngine_PlayerPrefs__DeleteKey(v87, 0LL);
-      v88 = System_Int32__ToString((int32_t)&eventId, 0LL);
-      v89 = System_String__Concat_61645176((System_String_o *)StringLiteral_8079/*"KeyBoxGachaPlayedVoice"*/, v88, 0LL);
-      UnityEngine_PlayerPrefs__DeleteKey(v89, 0LL);
-      LODWORD(m_CancellationTokenSource) = v33->fields.m_CancellationTokenSource;
-      if ( (__int64)++v34 >= (int)m_CancellationTokenSource )
+      v78 = System_Int32__ToString((int32_t)&eventId, 0LL);
+      v79 = System_String__Concat_62572260((System_String_o *)StringLiteral_3290/*"BulletinBoardMessageState"*/, v78, 0LL);
+      UnityEngine_PlayerPrefs__DeleteKey(v79, 0LL);
+      v80 = System_Int32__ToString((int32_t)&eventId, 0LL);
+      v81 = System_String__Concat_62572260((System_String_o *)StringLiteral_7294/*"HeelPortraitDetailDialogState"*/, v80, 0LL);
+      UnityEngine_PlayerPrefs__DeleteKey(v81, 0LL);
+      v82 = System_Int32__ToString((int32_t)&eventId, 0LL);
+      v83 = System_String__Concat_62572260((System_String_o *)StringLiteral_8220/*"KeyBoxGachaPlayedVoice"*/, v82, 0LL);
+      UnityEngine_PlayerPrefs__DeleteKey(v83, 0LL);
+      LODWORD(m_CancellationTokenSource) = v35->fields.m_CancellationTokenSource;
+      if ( (__int64)++v36 >= (int)m_CancellationTokenSource )
         goto LABEL_42;
     }
-    if ( !(_DWORD)v45 )
+    if ( !(_DWORD)v47 )
 LABEL_43:
-      sub_1B8661C(Instance, v31);
-    v48 = 0;
+      sub_1BDBADC(Instance, v31, v32, v33);
+    v50 = 0;
     while ( 1 )
     {
-      v49 = *((_QWORD *)&v46->fields._DispLog + v48);
-      v50 = (System_Object_array *)sub_1B86460(object___TypeInfo, 4LL);
-      v94 = eventId;
-      Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v94, v51, v52, v53);
-      if ( !v50 )
+      v51 = *((_QWORD *)&v48->fields._DispLog + v50);
+      v52 = (System_Object_array *)sub_1BDB920(object___TypeInfo, 4LL);
+      v88 = eventId;
+      Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v88, v53, v54, v55);
+      if ( !v52 )
         break;
       v56 = (Il2CppObject *)Instance;
       if ( Instance )
       {
-        Instance = (DataManager_o *)sub_1B864F4(Instance, v50->obj.klass->_1.element_class);
+        Instance = (DataManager_o *)sub_1BDB9B4(Instance, v52->obj.klass->_1.element_class);
         if ( !Instance )
           goto LABEL_45;
       }
-      if ( !v50->max_length )
+      if ( !v52->max_length )
         goto LABEL_43;
-      v50->m_Items[0] = v56;
-      sub_1B8635C((CGThumbnailListItem_o *)v50->m_Items, (int32_t)v56, v54, v55);
-      if ( !v49 )
+      v52->m_Items[0] = v56;
+      Instance = (DataManager_o *)sub_1BDB81C(v52->m_Items);
+      if ( !v51 )
         break;
-      v93 = *(_DWORD *)(v49 + 20);
-      Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v93, v57, v58, v59);
-      v62 = (Il2CppObject *)Instance;
+      v87 = *(_DWORD *)(v51 + 20);
+      Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v87, v57, v58, v59);
+      v60 = (Il2CppObject *)Instance;
       if ( Instance )
       {
-        Instance = (DataManager_o *)sub_1B864F4(Instance, v50->obj.klass->_1.element_class);
+        Instance = (DataManager_o *)sub_1BDB9B4(Instance, v52->obj.klass->_1.element_class);
         if ( !Instance )
           goto LABEL_45;
       }
-      if ( v50->max_length <= 1 )
+      if ( v52->max_length <= 1 )
         goto LABEL_43;
-      v50->m_Items[1] = v62;
-      sub_1B8635C((CGThumbnailListItem_o *)&v50->m_Items[1], (int32_t)v62, v60, v61);
-      v92 = *(_DWORD *)(v49 + 24);
-      Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v92, v63, v64, v65);
+      v52->m_Items[1] = v60;
+      sub_1BDB81C(&v52->m_Items[1]);
+      v86 = *(_DWORD *)(v51 + 24);
+      Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v86, v61, v62, v63);
+      v64 = (Il2CppObject *)Instance;
+      if ( Instance )
+      {
+        Instance = (DataManager_o *)sub_1BDB9B4(Instance, v52->obj.klass->_1.element_class);
+        if ( !Instance )
+          goto LABEL_45;
+      }
+      if ( v52->max_length <= 2 )
+        goto LABEL_43;
+      v52->m_Items[2] = v64;
+      sub_1BDB81C(&v52->m_Items[2]);
+      v85 = *(_OWORD *)(v51 + 28);
+      Instance = (DataManager_o *)j_il2cpp_value_box_0(
+                                    CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
+                                    &v85,
+                                    v65,
+                                    v66,
+                                    v67);
       v68 = (Il2CppObject *)Instance;
       if ( Instance )
       {
-        Instance = (DataManager_o *)sub_1B864F4(Instance, v50->obj.klass->_1.element_class);
-        if ( !Instance )
-          goto LABEL_45;
-      }
-      if ( v50->max_length <= 2 )
-        goto LABEL_43;
-      v50->m_Items[2] = v68;
-      sub_1B8635C((CGThumbnailListItem_o *)&v50->m_Items[2], (int32_t)v68, v66, v67);
-      v91 = *(_OWORD *)(v49 + 28);
-      Instance = (DataManager_o *)j_il2cpp_value_box_0(
-                                    CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
-                                    &v91,
-                                    v69,
-                                    v70,
-                                    v71);
-      v74 = (Il2CppObject *)Instance;
-      if ( Instance )
-      {
-        Instance = (DataManager_o *)sub_1B864F4(Instance, v50->obj.klass->_1.element_class);
+        Instance = (DataManager_o *)sub_1BDB9B4(Instance, v52->obj.klass->_1.element_class);
         if ( !Instance )
         {
 LABEL_45:
-          v90 = sub_1B86638(Instance);
-          sub_1B864E0(v90, 0LL);
+          v84 = sub_1BDBAF8();
+          sub_1BDB9A0(v84, 0LL);
         }
       }
-      if ( v50->max_length <= 3 )
+      if ( v52->max_length <= 3 )
         goto LABEL_43;
-      v50->m_Items[3] = v74;
-      sub_1B8635C((CGThumbnailListItem_o *)&v50->m_Items[3], (int32_t)v74, v72, v73);
-      v75 = System_String__Format_61686604((System_String_o *)StringLiteral_6209/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v50, 0LL);
-      UnityEngine_PlayerPrefs__DeleteKey(v75, 0LL);
-      if ( v47 == v48 )
+      v52->m_Items[3] = v68;
+      sub_1BDB81C(&v52->m_Items[3]);
+      v69 = System_String__Format_62613688((System_String_o *)StringLiteral_6288/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v52, 0LL);
+      UnityEngine_PlayerPrefs__DeleteKey(v69, 0LL);
+      if ( v49 == v50 )
         goto LABEL_33;
-      if ( (unsigned int)++v48 >= LODWORD(v46->fields.m_CancellationTokenSource) )
+      if ( (unsigned int)++v50 >= LODWORD(v48->fields.m_CancellationTokenSource) )
         goto LABEL_43;
     }
 LABEL_44:
-    sub_1B86614(Instance, v31);
+    sub_1BDBAD4(Instance, v31);
   }
 LABEL_42:
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_9035/*"MstMission"*/, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_6314/*"ExtraMission"*/, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_8280/*"LimitedMission"*/, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_9036/*"MstMissionIndex"*/, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_6574/*"FatigueNotiffication"*/, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_4693/*"CooltimeNotification"*/, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_6284/*"ExpeditionNotification"*/, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11049/*"RecoveryIdx"*/, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_8354/*"LotteryShopSkipState"*/, 0LL);
-  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_12628/*"ShopItemFilter"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_9180/*"MstMission"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_6393/*"ExtraMission"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_8423/*"LimitedMission"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_9181/*"MstMissionIndex"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_6654/*"FatigueNotiffication"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_4762/*"CooltimeNotification"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_6363/*"ExpeditionNotification"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_11212/*"RecoveryIdx"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_8497/*"LotteryShopSkipState"*/, 0LL);
+  UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_12819/*"ShopItemFilter"*/, 0LL);
 }
 
 
@@ -345,70 +339,64 @@ void __fastcall EventRewardSaveData__DeletePlayCount(const MethodInfo *method)
   __int64 v7; // x1
   DataManager_o *Instance; // x0
   __int64 v9; // x1
-  DataManager_o *v10; // x27
-  unsigned int v11; // w25
-  __int64 v12; // x19
-  struct System_Threading_CancellationTokenSource_o *v13; // x8
-  DataManager_o *v14; // x20
-  int v15; // w26
-  int v16; // w24
-  __int64 v17; // x19
-  __int64 v18; // x2
-  __int64 v19; // x3
-  __int64 v20; // x4
-  System_Object_array *v21; // x21
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
+  __int64 v10; // x2
+  __int64 v11; // x3
+  DataManager_o *v12; // x27
+  unsigned int v13; // w25
+  __int64 v14; // x19
+  struct System_Threading_CancellationTokenSource_o *v15; // x8
+  DataManager_o *v16; // x20
+  int v17; // w26
+  int v18; // w24
+  __int64 v19; // x19
+  __int64 v20; // x2
+  __int64 v21; // x3
+  __int64 v22; // x4
+  System_Object_array *v23; // x21
   Il2CppObject *v24; // x22
   __int64 v25; // x2
   __int64 v26; // x3
   __int64 v27; // x4
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
-  Il2CppObject *v30; // x22
-  __int64 v31; // x2
-  __int64 v32; // x3
-  __int64 v33; // x4
-  int32_t v34; // w2
-  const MethodInfo *v35; // x3
+  Il2CppObject *v28; // x22
+  __int64 v29; // x2
+  __int64 v30; // x3
+  __int64 v31; // x4
+  Il2CppObject *v32; // x22
+  __int64 v33; // x2
+  __int64 v34; // x3
+  __int64 v35; // x4
   Il2CppObject *v36; // x22
-  __int64 v37; // x2
-  __int64 v38; // x3
-  __int64 v39; // x4
-  int32_t v40; // w2
-  const MethodInfo *v41; // x3
-  Il2CppObject *v42; // x22
-  System_String_o *v43; // x0
-  __int64 v44; // x0
+  System_String_o *v37; // x0
+  __int64 v38; // x0
   struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // [xsp+8h] [xbp-88h]
-  __int128 v46; // [xsp+10h] [xbp-80h] BYREF
-  int v47; // [xsp+24h] [xbp-6Ch] BYREF
-  int v48; // [xsp+28h] [xbp-68h] BYREF
-  int v49; // [xsp+2Ch] [xbp-64h] BYREF
+  __int128 v40; // [xsp+10h] [xbp-80h] BYREF
+  int v41; // [xsp+24h] [xbp-6Ch] BYREF
+  int v42; // [xsp+28h] [xbp-68h] BYREF
+  int v43; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_4A527D2 & 1) == 0 )
+  if ( (byte_4B3F0A9 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_EventMaster___, v1);
-    sub_1B863B8(&Method_DataManager_GetMasterData_EventVoicePlayMaster___, v2);
-    sub_1B863B8(&int_TypeInfo, v3);
-    sub_1B863B8(&object___TypeInfo, v4);
-    sub_1B863B8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1B863B8(&StringLiteral_6209/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v7);
-    byte_4A527D2 = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_EventMaster___, v1);
+    sub_1BDB878(&Method_DataManager_GetMasterData_EventVoicePlayMaster___, v2);
+    sub_1BDB878(&int_TypeInfo, v3);
+    sub_1BDB878(&object___TypeInfo, v4);
+    sub_1BDB878(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1BDB878(&StringLiteral_6288/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v7);
+    byte_4B3F0A9 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_39;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_EventMaster___);
+                                (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_39;
   Instance = (DataManager_o *)EventMaster__GetEnableExistEventRewardEntityList((EventMaster_o *)Instance, 0LL);
   if ( Instance )
   {
-    v10 = Instance;
+    v12 = Instance;
     m_CancellationTokenSource = Instance->fields.m_CancellationTokenSource;
     if ( m_CancellationTokenSource )
     {
@@ -416,124 +404,124 @@ void __fastcall EventRewardSaveData__DeletePlayCount(const MethodInfo *method)
       {
         if ( !(_DWORD)m_CancellationTokenSource )
           goto LABEL_37;
-        v11 = 0;
+        v13 = 0;
         while ( 1 )
         {
-          v12 = *((_QWORD *)&v10->fields._DispLog + (int)v11);
-          Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          v14 = *((_QWORD *)&v12->fields._DispLog + (int)v13);
+          Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !Instance )
             goto LABEL_39;
           Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                         Instance,
-                                        (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_EventVoicePlayMaster___);
-          if ( !v12 || !Instance )
+                                        (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventVoicePlayMaster___);
+          if ( !v14 || !Instance )
             goto LABEL_39;
           Instance = (DataManager_o *)EventVoicePlayMaster__GetTargetEventIdEntityList(
                                         (EventVoicePlayMaster_o *)Instance,
-                                        *(_DWORD *)(v12 + 16),
+                                        *(_DWORD *)(v14 + 16),
                                         0LL);
           if ( Instance )
           {
-            v13 = Instance->fields.m_CancellationTokenSource;
-            v14 = Instance;
-            if ( v13 )
+            v15 = Instance->fields.m_CancellationTokenSource;
+            v16 = Instance;
+            if ( v15 )
             {
-              v15 = (_DWORD)v13 - 1;
-              if ( (int)v13 >= 1 )
+              v17 = (_DWORD)v15 - 1;
+              if ( (int)v15 >= 1 )
                 break;
             }
           }
 LABEL_35:
-          if ( ++v11 == (_DWORD)m_CancellationTokenSource )
+          if ( ++v13 == (_DWORD)m_CancellationTokenSource )
             return;
-          if ( v11 >= LODWORD(v10->fields.m_CancellationTokenSource) )
+          if ( v13 >= LODWORD(v12->fields.m_CancellationTokenSource) )
             goto LABEL_37;
         }
-        if ( !(_DWORD)v13 )
+        if ( !(_DWORD)v15 )
 LABEL_37:
-          sub_1B8661C(Instance, v9);
-        v16 = 0;
+          sub_1BDBADC(Instance, v9, v10, v11);
+        v18 = 0;
         while ( 1 )
         {
-          v17 = *((_QWORD *)&v14->fields._DispLog + v16);
-          Instance = (DataManager_o *)sub_1B86460(object___TypeInfo, 4LL);
-          if ( !v17 )
+          v19 = *((_QWORD *)&v16->fields._DispLog + v18);
+          Instance = (DataManager_o *)sub_1BDB920(object___TypeInfo, 4LL);
+          if ( !v19 )
             break;
-          v21 = (System_Object_array *)Instance;
-          v49 = *(_DWORD *)(v17 + 16);
-          Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v49, v18, v19, v20);
-          if ( !v21 )
+          v23 = (System_Object_array *)Instance;
+          v43 = *(_DWORD *)(v19 + 16);
+          Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v43, v20, v21, v22);
+          if ( !v23 )
             break;
           v24 = (Il2CppObject *)Instance;
           if ( Instance )
           {
-            Instance = (DataManager_o *)sub_1B864F4(Instance, v21->obj.klass->_1.element_class);
+            Instance = (DataManager_o *)sub_1BDB9B4(Instance, v23->obj.klass->_1.element_class);
             if ( !Instance )
               goto LABEL_40;
           }
-          if ( !v21->max_length )
+          if ( !v23->max_length )
             goto LABEL_37;
-          v21->m_Items[0] = v24;
-          sub_1B8635C((CGThumbnailListItem_o *)v21->m_Items, (int32_t)v24, v22, v23);
-          v48 = *(_DWORD *)(v17 + 20);
-          Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v48, v25, v26, v27);
-          v30 = (Il2CppObject *)Instance;
+          v23->m_Items[0] = v24;
+          sub_1BDB81C(v23->m_Items);
+          v42 = *(_DWORD *)(v19 + 20);
+          Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v42, v25, v26, v27);
+          v28 = (Il2CppObject *)Instance;
           if ( Instance )
           {
-            Instance = (DataManager_o *)sub_1B864F4(Instance, v21->obj.klass->_1.element_class);
+            Instance = (DataManager_o *)sub_1BDB9B4(Instance, v23->obj.klass->_1.element_class);
             if ( !Instance )
               goto LABEL_40;
           }
-          if ( v21->max_length <= 1 )
+          if ( v23->max_length <= 1 )
             goto LABEL_37;
-          v21->m_Items[1] = v30;
-          sub_1B8635C((CGThumbnailListItem_o *)&v21->m_Items[1], (int32_t)v30, v28, v29);
-          v47 = *(_DWORD *)(v17 + 24);
-          Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v47, v31, v32, v33);
+          v23->m_Items[1] = v28;
+          sub_1BDB81C(&v23->m_Items[1]);
+          v41 = *(_DWORD *)(v19 + 24);
+          Instance = (DataManager_o *)j_il2cpp_value_box_0(int_TypeInfo, &v41, v29, v30, v31);
+          v32 = (Il2CppObject *)Instance;
+          if ( Instance )
+          {
+            Instance = (DataManager_o *)sub_1BDB9B4(Instance, v23->obj.klass->_1.element_class);
+            if ( !Instance )
+              goto LABEL_40;
+          }
+          if ( v23->max_length <= 2 )
+            goto LABEL_37;
+          v23->m_Items[2] = v32;
+          sub_1BDB81C(&v23->m_Items[2]);
+          v40 = *(_OWORD *)(v19 + 28);
+          Instance = (DataManager_o *)j_il2cpp_value_box_0(
+                                        CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
+                                        &v40,
+                                        v33,
+                                        v34,
+                                        v35);
           v36 = (Il2CppObject *)Instance;
           if ( Instance )
           {
-            Instance = (DataManager_o *)sub_1B864F4(Instance, v21->obj.klass->_1.element_class);
-            if ( !Instance )
-              goto LABEL_40;
-          }
-          if ( v21->max_length <= 2 )
-            goto LABEL_37;
-          v21->m_Items[2] = v36;
-          sub_1B8635C((CGThumbnailListItem_o *)&v21->m_Items[2], (int32_t)v36, v34, v35);
-          v46 = *(_OWORD *)(v17 + 28);
-          Instance = (DataManager_o *)j_il2cpp_value_box_0(
-                                        CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
-                                        &v46,
-                                        v37,
-                                        v38,
-                                        v39);
-          v42 = (Il2CppObject *)Instance;
-          if ( Instance )
-          {
-            Instance = (DataManager_o *)sub_1B864F4(Instance, v21->obj.klass->_1.element_class);
+            Instance = (DataManager_o *)sub_1BDB9B4(Instance, v23->obj.klass->_1.element_class);
             if ( !Instance )
             {
 LABEL_40:
-              v44 = sub_1B86638(Instance);
-              sub_1B864E0(v44, 0LL);
+              v38 = sub_1BDBAF8();
+              sub_1BDB9A0(v38, 0LL);
             }
           }
-          if ( v21->max_length > 3 )
+          if ( v23->max_length > 3 )
           {
-            v21->m_Items[3] = v42;
-            sub_1B8635C((CGThumbnailListItem_o *)&v21->m_Items[3], (int32_t)v42, v40, v41);
-            v43 = System_String__Format_61686604((System_String_o *)StringLiteral_6209/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v21, 0LL);
-            UnityEngine_PlayerPrefs__DeleteKey(v43, 0LL);
-            if ( v15 == v16 )
+            v23->m_Items[3] = v36;
+            sub_1BDB81C(&v23->m_Items[3]);
+            v37 = System_String__Format_62613688((System_String_o *)StringLiteral_6288/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v23, 0LL);
+            UnityEngine_PlayerPrefs__DeleteKey(v37, 0LL);
+            if ( v17 == v18 )
               goto LABEL_35;
-            if ( (unsigned int)++v16 < LODWORD(v14->fields.m_CancellationTokenSource) )
+            if ( (unsigned int)++v18 < LODWORD(v16->fields.m_CancellationTokenSource) )
               continue;
           }
           goto LABEL_37;
         }
 LABEL_39:
-        sub_1B86614(Instance, v9);
+        sub_1BDBAD4(Instance, v9);
       }
     }
   }
@@ -547,16 +535,16 @@ void __fastcall EventRewardSaveData__DeleteRecoveryIdx(int32_t eventId, const Me
   int32_t v5; // [xsp+Ch] [xbp-24h] BYREF
 
   v5 = eventId;
-  if ( (byte_4A527C2 & 1) == 0 )
+  if ( (byte_4B3F099 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_11049/*"RecoveryIdx"*/, method);
-    byte_4A527C2 = 1;
+    sub_1BDB878(&StringLiteral_11212/*"RecoveryIdx"*/, method);
+    byte_4B3F099 = 1;
   }
-  v3 = (System_String_o *)StringLiteral_11049/*"RecoveryIdx"*/;
+  v3 = (System_String_o *)StringLiteral_11212/*"RecoveryIdx"*/;
   if ( eventId )
   {
     v4 = System_Int32__ToString((int32_t)&v5, 0LL);
-    v3 = System_String__Concat_61645176(v3, v4, 0LL);
+    v3 = System_String__Concat_62572260(v3, v4, 0LL);
   }
   UnityEngine_PlayerPrefs__DeleteKey(v3, 0LL);
 }
@@ -569,14 +557,14 @@ System_String_o *__fastcall EventRewardSaveData__GetBoxGachaPlayedVoice(int32_t 
   int32_t v5; // [xsp+Ch] [xbp-14h] BYREF
 
   v5 = eventId;
-  if ( (byte_4A527D0 & 1) == 0 )
+  if ( (byte_4B3F0A7 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_8079/*"KeyBoxGachaPlayedVoice"*/, method);
-    byte_4A527D0 = 1;
+    sub_1BDB878(&StringLiteral_8220/*"KeyBoxGachaPlayedVoice"*/, method);
+    byte_4B3F0A7 = 1;
   }
   v2 = System_Int32__ToString((int32_t)&v5, 0LL);
-  v3 = System_String__Concat_61645176((System_String_o *)StringLiteral_8079/*"KeyBoxGachaPlayedVoice"*/, v2, 0LL);
-  return UnityEngine_PlayerPrefs__GetString_69314580(v3, 0LL);
+  v3 = System_String__Concat_62572260((System_String_o *)StringLiteral_8220/*"KeyBoxGachaPlayedVoice"*/, v2, 0LL);
+  return UnityEngine_PlayerPrefs__GetString_70242896(v3, 0LL);
 }
 
 
@@ -587,13 +575,13 @@ int32_t __fastcall EventRewardSaveData__GetBulletInBoardLastMessageId(int32_t ev
   int32_t v5; // [xsp+Ch] [xbp-14h] BYREF
 
   v5 = eventId;
-  if ( (byte_4A527C5 & 1) == 0 )
+  if ( (byte_4B3F09C & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_3274/*"BulletinBoardMessageState"*/, method);
-    byte_4A527C5 = 1;
+    sub_1BDB878(&StringLiteral_3290/*"BulletinBoardMessageState"*/, method);
+    byte_4B3F09C = 1;
   }
   v2 = System_Int32__ToString((int32_t)&v5, 0LL);
-  v3 = System_String__Concat_61645176((System_String_o *)StringLiteral_3274/*"BulletinBoardMessageState"*/, v2, 0LL);
+  v3 = System_String__Concat_62572260((System_String_o *)StringLiteral_3290/*"BulletinBoardMessageState"*/, v2, 0LL);
   return UnityEngine_PlayerPrefs__GetInt(v3, 0, 0LL);
 }
 
@@ -612,14 +600,14 @@ bool __fastcall EventRewardSaveData__GetBulletInBoardMessageState(
 
   v7 = id;
   v8 = eventId;
-  if ( (byte_4A527C3 & 1) == 0 )
+  if ( (byte_4B3F09A & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_3274/*"BulletinBoardMessageState"*/, *(_QWORD *)&id);
-    byte_4A527C3 = 1;
+    sub_1BDB878(&StringLiteral_3290/*"BulletinBoardMessageState"*/, *(_QWORD *)&id);
+    byte_4B3F09A = 1;
   }
   v3 = System_Int32__ToString((int32_t)&v8, 0LL);
   v4 = System_Int32__ToString((int32_t)&v7, 0LL);
-  v5 = System_String__Concat_61683424((System_String_o *)StringLiteral_3274/*"BulletinBoardMessageState"*/, v3, v4, 0LL);
+  v5 = System_String__Concat_62610508((System_String_o *)StringLiteral_3290/*"BulletinBoardMessageState"*/, v3, v4, 0LL);
   return UnityEngine_PlayerPrefs__GetInt(v5, 0, 0LL) != 0;
 }
 
@@ -628,12 +616,12 @@ bool __fastcall EventRewardSaveData__GetCooltimeNotification(const MethodInfo *m
 {
   __int64 v1; // x1
 
-  if ( (byte_4A527BD & 1) == 0 )
+  if ( (byte_4B3F094 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_4693/*"CooltimeNotification"*/, v1);
-    byte_4A527BD = 1;
+    sub_1BDB878(&StringLiteral_4762/*"CooltimeNotification"*/, v1);
+    byte_4B3F094 = 1;
   }
-  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_4693/*"CooltimeNotification"*/, 0, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_4762/*"CooltimeNotification"*/, 0, 0LL) != 0;
 }
 
 
@@ -641,12 +629,12 @@ bool __fastcall EventRewardSaveData__GetCraftNotification(const MethodInfo *meth
 {
   __int64 v1; // x1
 
-  if ( (byte_4A527CE & 1) == 0 )
+  if ( (byte_4B3F0A5 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_4804/*"CraftNotification"*/, v1);
-    byte_4A527CE = 1;
+    sub_1BDB878(&StringLiteral_4873/*"CraftNotification"*/, v1);
+    byte_4B3F0A5 = 1;
   }
-  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_4804/*"CraftNotification"*/, 0, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_4873/*"CraftNotification"*/, 0, 0LL) != 0;
 }
 
 
@@ -654,12 +642,12 @@ bool __fastcall EventRewardSaveData__GetExpeditionNotification(const MethodInfo 
 {
   __int64 v1; // x1
 
-  if ( (byte_4A527B9 & 1) == 0 )
+  if ( (byte_4B3F090 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_6284/*"ExpeditionNotification"*/, v1);
-    byte_4A527B9 = 1;
+    sub_1BDB878(&StringLiteral_6363/*"ExpeditionNotification"*/, v1);
+    byte_4B3F090 = 1;
   }
-  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_6284/*"ExpeditionNotification"*/, 0, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_6363/*"ExpeditionNotification"*/, 0, 0LL) != 0;
 }
 
 
@@ -667,12 +655,12 @@ bool __fastcall EventRewardSaveData__GetFatigueNotification(const MethodInfo *me
 {
   __int64 v1; // x1
 
-  if ( (byte_4A527BB & 1) == 0 )
+  if ( (byte_4B3F092 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_6574/*"FatigueNotiffication"*/, v1);
-    byte_4A527BB = 1;
+    sub_1BDB878(&StringLiteral_6654/*"FatigueNotiffication"*/, v1);
+    byte_4B3F092 = 1;
   }
-  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_6574/*"FatigueNotiffication"*/, 0, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_6654/*"FatigueNotiffication"*/, 0, 0LL) != 0;
 }
 
 
@@ -685,14 +673,14 @@ System_String_o *__fastcall EventRewardSaveData__GetHeelPortraitDetailDialogStat
   int32_t v5; // [xsp+Ch] [xbp-14h] BYREF
 
   v5 = eventId;
-  if ( (byte_4A527CA & 1) == 0 )
+  if ( (byte_4B3F0A1 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_7161/*"HeelPortraitDetailDialogState"*/, method);
-    byte_4A527CA = 1;
+    sub_1BDB878(&StringLiteral_7294/*"HeelPortraitDetailDialogState"*/, method);
+    byte_4B3F0A1 = 1;
   }
   v2 = System_Int32__ToString((int32_t)&v5, 0LL);
-  v3 = System_String__Concat_61645176((System_String_o *)StringLiteral_7161/*"HeelPortraitDetailDialogState"*/, v2, 0LL);
-  return UnityEngine_PlayerPrefs__GetString_69314580(v3, 0LL);
+  v3 = System_String__Concat_62572260((System_String_o *)StringLiteral_7294/*"HeelPortraitDetailDialogState"*/, v2, 0LL);
+  return UnityEngine_PlayerPrefs__GetString_70242896(v3, 0LL);
 }
 
 
@@ -710,18 +698,18 @@ System_String_o *__fastcall EventRewardSaveData__GetItemFilterKeyName(
 
   v7 = slot;
   v8 = eventId;
-  if ( (byte_4A527C9 & 1) == 0 )
+  if ( (byte_4B3F0A0 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_15886/*"_"*/, *(_QWORD *)&slot);
-    sub_1B863B8(&StringLiteral_12629/*"ShopItemFilter_"*/, v3);
-    byte_4A527C9 = 1;
+    sub_1BDB878(&StringLiteral_16088/*"_"*/, *(_QWORD *)&slot);
+    sub_1BDB878(&StringLiteral_12820/*"ShopItemFilter_"*/, v3);
+    byte_4B3F0A0 = 1;
   }
   v4 = System_Int32__ToString((int32_t)&v8, 0LL);
   v5 = System_Int32__ToString((int32_t)&v7, 0LL);
-  return System_String__Concat_61685428(
-           (System_String_o *)StringLiteral_12629/*"ShopItemFilter_"*/,
+  return System_String__Concat_62612512(
+           (System_String_o *)StringLiteral_12820/*"ShopItemFilter_"*/,
            v4,
-           (System_String_o *)StringLiteral_15886/*"_"*/,
+           (System_String_o *)StringLiteral_16088/*"_"*/,
            v5,
            0LL);
 }
@@ -731,12 +719,12 @@ bool __fastcall EventRewardSaveData__GetLotteryShopSkipState(const MethodInfo *m
 {
   __int64 v1; // x1
 
-  if ( (byte_4A527C7 & 1) == 0 )
+  if ( (byte_4B3F09E & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_8354/*"LotteryShopSkipState"*/, v1);
-    byte_4A527C7 = 1;
+    sub_1BDB878(&StringLiteral_8497/*"LotteryShopSkipState"*/, v1);
+    byte_4B3F09E = 1;
   }
-  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_8354/*"LotteryShopSkipState"*/, 1, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_8497/*"LotteryShopSkipState"*/, 1, 0LL) != 0;
 }
 
 
@@ -748,13 +736,13 @@ System_String_o *__fastcall EventRewardSaveData__GetSpotCooltimeNotificationKey(
   int32_t v4; // [xsp+Ch] [xbp-14h] BYREF
 
   v4 = eventId;
-  if ( (byte_4A527BF & 1) == 0 )
+  if ( (byte_4B3F096 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_12779/*"SpotCooltimeNotification_"*/, method);
-    byte_4A527BF = 1;
+    sub_1BDB878(&StringLiteral_12970/*"SpotCooltimeNotification_"*/, method);
+    byte_4B3F096 = 1;
   }
   v2 = System_Int32__ToString((int32_t)&v4, 0LL);
-  return System_String__Concat_61645176((System_String_o *)StringLiteral_12779/*"SpotCooltimeNotification_"*/, v2, 0LL);
+  return System_String__Concat_62572260((System_String_o *)StringLiteral_12970/*"SpotCooltimeNotification_"*/, v2, 0LL);
 }
 
 
@@ -762,12 +750,12 @@ bool __fastcall EventRewardSaveData__GetTradeNotification(const MethodInfo *meth
 {
   __int64 v1; // x1
 
-  if ( (byte_4A527CC & 1) == 0 )
+  if ( (byte_4B3F0A3 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_14339/*"TradeNotification"*/, v1);
-    byte_4A527CC = 1;
+    sub_1BDB878(&StringLiteral_14537/*"TradeNotification"*/, v1);
+    byte_4B3F0A3 = 1;
   }
-  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_14339/*"TradeNotification"*/, 0, 0LL) != 0;
+  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_14537/*"TradeNotification"*/, 0, 0LL) != 0;
 }
 
 
@@ -790,16 +778,16 @@ void __fastcall EventRewardSaveData__LoadCompleteMissionData(const MethodInfo *m
   __int64 v2; // x1
   int32_t Int; // w19
 
-  if ( (byte_4A527A8 & 1) == 0 )
+  if ( (byte_4B3F07F & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_4601/*"CompleteMission"*/, v1);
-    byte_4A527A8 = 1;
+    sub_1BDB878(&StringLiteral_4667/*"CompleteMission"*/, v1);
+    byte_4B3F07F = 1;
   }
-  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_4601/*"CompleteMission"*/, 0, 0LL);
-  if ( !byte_4A4D10C )
+  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_4667/*"CompleteMission"*/, 0, 0LL);
+  if ( !byte_4B3F0DB )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v2);
-    byte_4A4D10C = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v2);
+    byte_4B3F0DB = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_CompleteMissionFilterId_k__BackingField = Int;
 }
@@ -811,16 +799,16 @@ void __fastcall EventRewardSaveData__LoadDailyMissionData(const MethodInfo *meth
   __int64 v2; // x1
   int32_t Int; // w19
 
-  if ( (byte_4A527AA & 1) == 0 )
+  if ( (byte_4B3F081 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_5009/*"DailyMission"*/, v1);
-    byte_4A527AA = 1;
+    sub_1BDB878(&StringLiteral_5078/*"DailyMission"*/, v1);
+    byte_4B3F081 = 1;
   }
-  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_5009/*"DailyMission"*/, 0, 0LL);
-  if ( !byte_4A51855 )
+  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_5078/*"DailyMission"*/, 0, 0LL);
+  if ( !byte_4B3F0DD )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v2);
-    byte_4A51855 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v2);
+    byte_4B3F0DD = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_DailyFilterId_k__BackingField = Int;
 }
@@ -831,32 +819,32 @@ void __fastcall EventRewardSaveData__LoadEventData(int32_t eventId, const Method
   System_String_o *v2; // x0
   System_String_o *v3; // x19
   __int64 v4; // x1
-  int32_t Int_69314012; // w19
+  int32_t Int_70242328; // w19
   int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = eventId;
-  if ( (byte_4A527A1 & 1) == 0 )
+  if ( (byte_4B3F078 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_10579/*"PriorityIndex_"*/, method);
-    byte_4A527A1 = 1;
+    sub_1BDB878(&StringLiteral_10735/*"PriorityIndex_"*/, method);
+    byte_4B3F078 = 1;
   }
-  if ( !byte_4A49075 )
+  if ( !byte_4B3F0D6 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A49075 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F0D6 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_PriorityIndex_k__BackingField = 0;
   v2 = System_Int32__ToString((int32_t)&v6, 0LL);
-  v3 = System_String__Concat_61645176((System_String_o *)StringLiteral_10579/*"PriorityIndex_"*/, v2, 0LL);
+  v3 = System_String__Concat_62572260((System_String_o *)StringLiteral_10735/*"PriorityIndex_"*/, v2, 0LL);
   if ( UnityEngine_PlayerPrefs__HasKey(v3, 0LL) )
   {
-    Int_69314012 = UnityEngine_PlayerPrefs__GetInt_69314012(v3, 0LL);
-    if ( !byte_4A49075 )
+    Int_70242328 = UnityEngine_PlayerPrefs__GetInt_70242328(v3, 0LL);
+    if ( !byte_4B3F0D6 )
     {
-      sub_1B863B8(&EventRewardSaveData_TypeInfo, v4);
-      byte_4A49075 = 1;
+      sub_1BDB878(&EventRewardSaveData_TypeInfo, v4);
+      byte_4B3F0D6 = 1;
     }
-    EventRewardSaveData_TypeInfo->static_fields->_PriorityIndex_k__BackingField = Int_69314012;
+    EventRewardSaveData_TypeInfo->static_fields->_PriorityIndex_k__BackingField = Int_70242328;
   }
 }
 
@@ -866,32 +854,32 @@ void __fastcall EventRewardSaveData__LoadEventTowerState(int32_t eventId, const 
   System_String_o *v2; // x0
   System_String_o *v3; // x19
   __int64 v4; // x1
-  int32_t Int_69314012; // w19
+  int32_t Int_70242328; // w19
   int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = eventId;
-  if ( (byte_4A527B5 & 1) == 0 )
+  if ( (byte_4B3F08C & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_6186/*"EventTowerState_"*/, method);
-    byte_4A527B5 = 1;
+    sub_1BDB878(&StringLiteral_6265/*"EventTowerState_"*/, method);
+    byte_4B3F08C = 1;
   }
-  if ( !byte_4A4CF55 )
+  if ( !byte_4B3F0E7 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A4CF55 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F0E7 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_EventTowerState_k__BackingField = 0;
   v2 = System_Int32__ToString((int32_t)&v6, 0LL);
-  v3 = System_String__Concat_61645176((System_String_o *)StringLiteral_6186/*"EventTowerState_"*/, v2, 0LL);
+  v3 = System_String__Concat_62572260((System_String_o *)StringLiteral_6265/*"EventTowerState_"*/, v2, 0LL);
   if ( UnityEngine_PlayerPrefs__HasKey(v3, 0LL) )
   {
-    Int_69314012 = UnityEngine_PlayerPrefs__GetInt_69314012(v3, 0LL);
-    if ( !byte_4A4CF55 )
+    Int_70242328 = UnityEngine_PlayerPrefs__GetInt_70242328(v3, 0LL);
+    if ( !byte_4B3F0E7 )
     {
-      sub_1B863B8(&EventRewardSaveData_TypeInfo, v4);
-      byte_4A4CF55 = 1;
+      sub_1BDB878(&EventRewardSaveData_TypeInfo, v4);
+      byte_4B3F0E7 = 1;
     }
-    EventRewardSaveData_TypeInfo->static_fields->_EventTowerState_k__BackingField = Int_69314012;
+    EventRewardSaveData_TypeInfo->static_fields->_EventTowerState_k__BackingField = Int_70242328;
   }
 }
 
@@ -912,109 +900,103 @@ void __fastcall EventRewardSaveData__LoadEventVoicePlayCount(
   __int64 v14; // x4
   __int64 v15; // x0
   __int64 v16; // x1
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  __int64 v17; // x2
+  __int64 v18; // x3
   Il2CppObject *v19; // x23
   __int64 v20; // x2
   __int64 v21; // x3
   __int64 v22; // x4
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  Il2CppObject *v25; // x22
-  __int64 v26; // x2
-  __int64 v27; // x3
-  __int64 v28; // x4
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
-  Il2CppObject *v31; // x21
-  __int64 v32; // x2
-  __int64 v33; // x3
-  __int64 v34; // x4
-  int32_t v35; // w2
-  const MethodInfo *v36; // x3
-  Il2CppObject *v37; // x20
-  System_String_o *v38; // x0
-  __int64 v39; // x1
+  Il2CppObject *v23; // x22
+  __int64 v24; // x2
+  __int64 v25; // x3
+  __int64 v26; // x4
+  Il2CppObject *v27; // x21
+  __int64 v28; // x2
+  __int64 v29; // x3
+  __int64 v30; // x4
+  Il2CppObject *v31; // x20
+  System_String_o *v32; // x0
+  __int64 v33; // x1
   int32_t Int; // w19
-  __int64 v41; // x0
-  int32_t v42; // [xsp+0h] [xbp-50h] BYREF
-  int32_t v43; // [xsp+4h] [xbp-4Ch] BYREF
-  int32_t v44; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v45; // [xsp+Ch] [xbp-44h] BYREF
+  __int64 v35; // x0
+  int32_t v36; // [xsp+0h] [xbp-50h] BYREF
+  int32_t v37; // [xsp+4h] [xbp-4Ch] BYREF
+  int32_t v38; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v39; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4A527B7 & 1) == 0 )
+  if ( (byte_4B3F08E & 1) == 0 )
   {
-    sub_1B863B8(&int_TypeInfo, *(_QWORD *)&slot);
-    sub_1B863B8(&object___TypeInfo, v9);
-    sub_1B863B8(&StringLiteral_6209/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v10);
-    byte_4A527B7 = 1;
+    sub_1BDB878(&int_TypeInfo, *(_QWORD *)&slot);
+    sub_1BDB878(&object___TypeInfo, v9);
+    sub_1BDB878(&StringLiteral_6288/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v10);
+    byte_4B3F08E = 1;
   }
-  v11 = (System_Object_array *)sub_1B86460(object___TypeInfo, 4LL);
-  v45 = eventId;
-  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v45, v12, v13, v14);
+  v11 = (System_Object_array *)sub_1BDB920(object___TypeInfo, 4LL);
+  v39 = eventId;
+  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v39, v12, v13, v14);
   if ( !v11 )
-    sub_1B86614(v15, v16);
+    sub_1BDBAD4(v15, v16);
   v19 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1B864F4(v15, v11->obj.klass->_1.element_class);
+    v15 = sub_1BDB9B4(v15, v11->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_20;
   }
   if ( !v11->max_length )
     goto LABEL_19;
   v11->m_Items[0] = v19;
-  sub_1B8635C((CGThumbnailListItem_o *)v11->m_Items, (int32_t)v19, v17, v18);
-  v44 = slot;
-  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v44, v20, v21, v22);
-  v25 = (Il2CppObject *)v15;
+  sub_1BDB81C(v11->m_Items);
+  v38 = slot;
+  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v38, v20, v21, v22);
+  v23 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1B864F4(v15, v11->obj.klass->_1.element_class);
+    v15 = sub_1BDB9B4(v15, v11->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_20;
   }
   if ( v11->max_length <= 1 )
     goto LABEL_19;
-  v11->m_Items[1] = v25;
-  sub_1B8635C((CGThumbnailListItem_o *)&v11->m_Items[1], (int32_t)v25, v23, v24);
-  v43 = idx;
-  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v43, v26, v27, v28);
-  v31 = (Il2CppObject *)v15;
+  v11->m_Items[1] = v23;
+  sub_1BDB81C(&v11->m_Items[1]);
+  v37 = idx;
+  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v37, v24, v25, v26);
+  v27 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1B864F4(v15, v11->obj.klass->_1.element_class);
+    v15 = sub_1BDB9B4(v15, v11->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_20;
   }
   if ( v11->max_length <= 2 )
     goto LABEL_19;
-  v11->m_Items[2] = v31;
-  sub_1B8635C((CGThumbnailListItem_o *)&v11->m_Items[2], (int32_t)v31, v29, v30);
-  v42 = svtId;
-  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v42, v32, v33, v34);
-  v37 = (Il2CppObject *)v15;
+  v11->m_Items[2] = v27;
+  sub_1BDB81C(&v11->m_Items[2]);
+  v36 = svtId;
+  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v36, v28, v29, v30);
+  v31 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1B864F4(v15, v11->obj.klass->_1.element_class);
+    v15 = sub_1BDB9B4(v15, v11->obj.klass->_1.element_class);
     if ( !v15 )
     {
 LABEL_20:
-      v41 = sub_1B86638(v15);
-      sub_1B864E0(v41, 0LL);
+      v35 = sub_1BDBAF8();
+      sub_1BDB9A0(v35, 0LL);
     }
   }
   if ( v11->max_length <= 3 )
 LABEL_19:
-    sub_1B8661C(v15, v16);
-  v11->m_Items[3] = v37;
-  sub_1B8635C((CGThumbnailListItem_o *)&v11->m_Items[3], (int32_t)v37, v35, v36);
-  v38 = System_String__Format_61686604((System_String_o *)StringLiteral_6209/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v11, 0LL);
-  Int = UnityEngine_PlayerPrefs__GetInt(v38, 0, 0LL);
-  if ( !byte_4A52800 )
+    sub_1BDBADC(v15, v16, v17, v18);
+  v11->m_Items[3] = v31;
+  sub_1BDB81C(&v11->m_Items[3]);
+  v32 = System_String__Format_62613688((System_String_o *)StringLiteral_6288/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v11, 0LL);
+  Int = UnityEngine_PlayerPrefs__GetInt(v32, 0, 0LL);
+  if ( !byte_4B3F0E9 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v39);
-    byte_4A52800 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v33);
+    byte_4B3F0E9 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_EventVoicePlayCount_k__BackingField = Int;
 }
@@ -1026,16 +1008,16 @@ void __fastcall EventRewardSaveData__LoadExtraMissionData(const MethodInfo *meth
   __int64 v2; // x1
   int32_t Int; // w19
 
-  if ( (byte_4A527AE & 1) == 0 )
+  if ( (byte_4B3F085 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_6314/*"ExtraMission"*/, v1);
-    byte_4A527AE = 1;
+    sub_1BDB878(&StringLiteral_6393/*"ExtraMission"*/, v1);
+    byte_4B3F085 = 1;
   }
-  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_6314/*"ExtraMission"*/, 0, 0LL);
-  if ( !byte_4A51857 )
+  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_6393/*"ExtraMission"*/, 0, 0LL);
+  if ( !byte_4B3F0E1 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v2);
-    byte_4A51857 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v2);
+    byte_4B3F0E1 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_ExtraMissionFilterId_k__BackingField = Int;
 }
@@ -1046,24 +1028,24 @@ void __fastcall EventRewardSaveData__LoadItemFilter(int32_t eventId, int32_t slo
 {
   System_String_o *ItemFilterKeyName; // x19
   __int64 v6; // x1
-  int32_t Int_69314012; // w19
+  int32_t Int_70242328; // w19
 
-  if ( !byte_4A4A7C8 )
+  if ( !byte_4B3F0ED )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, *(_QWORD *)&slot);
-    byte_4A4A7C8 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, *(_QWORD *)&slot);
+    byte_4B3F0ED = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_ItemFilterId_k__BackingField = 0;
   ItemFilterKeyName = EventRewardSaveData__GetItemFilterKeyName(eventId, slot, method);
   if ( UnityEngine_PlayerPrefs__HasKey(ItemFilterKeyName, 0LL) )
   {
-    Int_69314012 = UnityEngine_PlayerPrefs__GetInt_69314012(ItemFilterKeyName, 0LL);
-    if ( !byte_4A4A7C8 )
+    Int_70242328 = UnityEngine_PlayerPrefs__GetInt_70242328(ItemFilterKeyName, 0LL);
+    if ( !byte_4B3F0ED )
     {
-      sub_1B863B8(&EventRewardSaveData_TypeInfo, v6);
-      byte_4A4A7C8 = 1;
+      sub_1BDB878(&EventRewardSaveData_TypeInfo, v6);
+      byte_4B3F0ED = 1;
     }
-    EventRewardSaveData_TypeInfo->static_fields->_ItemFilterId_k__BackingField = Int_69314012;
+    EventRewardSaveData_TypeInfo->static_fields->_ItemFilterId_k__BackingField = Int_70242328;
   }
 }
 
@@ -1074,16 +1056,16 @@ void __fastcall EventRewardSaveData__LoadLimitedMissionData(const MethodInfo *me
   __int64 v2; // x1
   int32_t Int; // w19
 
-  if ( (byte_4A527B0 & 1) == 0 )
+  if ( (byte_4B3F087 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_8280/*"LimitedMission"*/, v1);
-    byte_4A527B0 = 1;
+    sub_1BDB878(&StringLiteral_8423/*"LimitedMission"*/, v1);
+    byte_4B3F087 = 1;
   }
-  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_8280/*"LimitedMission"*/, 0, 0LL);
-  if ( !byte_4A51858 )
+  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_8423/*"LimitedMission"*/, 0, 0LL);
+  if ( !byte_4B3F0E3 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v2);
-    byte_4A51858 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v2);
+    byte_4B3F0E3 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_LimitedMissionFilterId_k__BackingField = Int;
 }
@@ -1096,7 +1078,7 @@ void __fastcall EventRewardSaveData__LoadMissionData(int32_t eventId, bool loadF
   System_String_o *v5; // x0
   System_String_o *v6; // x20
   __int64 v7; // x1
-  int32_t Int_69314012; // w20
+  int32_t Int_70242328; // w20
   System_String_o *v9; // x0
   System_String_o *v10; // x19
   __int64 v11; // x1
@@ -1104,47 +1086,47 @@ void __fastcall EventRewardSaveData__LoadMissionData(int32_t eventId, bool loadF
   int32_t v13; // [xsp+Ch] [xbp-24h] BYREF
 
   v13 = eventId;
-  if ( (byte_4A527A4 & 1) == 0 )
+  if ( (byte_4B3F07B & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_6161/*"EventMission_"*/, loadFilter);
-    sub_1B863B8(&StringLiteral_8973/*"MissionId_"*/, v4);
-    byte_4A527A4 = 1;
+    sub_1BDB878(&StringLiteral_6240/*"EventMission_"*/, loadFilter);
+    sub_1BDB878(&StringLiteral_9118/*"MissionId_"*/, v4);
+    byte_4B3F07B = 1;
   }
-  if ( !byte_4A4B11A )
+  if ( !byte_4B3F0D4 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, loadFilter);
-    byte_4A4B11A = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, loadFilter);
+    byte_4B3F0D4 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_MissionId_k__BackingField = 0;
   v5 = System_Int32__ToString((int32_t)&v13, 0LL);
-  v6 = System_String__Concat_61645176((System_String_o *)StringLiteral_8973/*"MissionId_"*/, v5, 0LL);
+  v6 = System_String__Concat_62572260((System_String_o *)StringLiteral_9118/*"MissionId_"*/, v5, 0LL);
   if ( UnityEngine_PlayerPrefs__HasKey(v6, 0LL) )
   {
-    Int_69314012 = UnityEngine_PlayerPrefs__GetInt_69314012(v6, 0LL);
-    if ( !byte_4A4B11A )
+    Int_70242328 = UnityEngine_PlayerPrefs__GetInt_70242328(v6, 0LL);
+    if ( !byte_4B3F0D4 )
     {
-      sub_1B863B8(&EventRewardSaveData_TypeInfo, v7);
-      byte_4A4B11A = 1;
+      sub_1BDB878(&EventRewardSaveData_TypeInfo, v7);
+      byte_4B3F0D4 = 1;
     }
-    EventRewardSaveData_TypeInfo->static_fields->_MissionId_k__BackingField = Int_69314012;
+    EventRewardSaveData_TypeInfo->static_fields->_MissionId_k__BackingField = Int_70242328;
   }
   if ( loadFilter )
   {
-    if ( !byte_4A4B119 )
+    if ( !byte_4B3F0D5 )
     {
-      sub_1B863B8(&EventRewardSaveData_TypeInfo, v7);
-      byte_4A4B119 = 1;
+      sub_1BDB878(&EventRewardSaveData_TypeInfo, v7);
+      byte_4B3F0D5 = 1;
     }
     EventRewardSaveData_TypeInfo->static_fields->_FilterId_k__BackingField = 0;
     v9 = System_Int32__ToString((int32_t)&v13, 0LL);
-    v10 = System_String__Concat_61645176((System_String_o *)StringLiteral_6161/*"EventMission_"*/, v9, 0LL);
+    v10 = System_String__Concat_62572260((System_String_o *)StringLiteral_6240/*"EventMission_"*/, v9, 0LL);
     if ( UnityEngine_PlayerPrefs__HasKey(v10, 0LL) )
     {
-      v12 = UnityEngine_PlayerPrefs__GetInt_69314012(v10, 0LL);
-      if ( !byte_4A4B119 )
+      v12 = UnityEngine_PlayerPrefs__GetInt_70242328(v10, 0LL);
+      if ( !byte_4B3F0D5 )
       {
-        sub_1B863B8(&EventRewardSaveData_TypeInfo, v11);
-        byte_4A4B119 = 1;
+        sub_1BDB878(&EventRewardSaveData_TypeInfo, v11);
+        byte_4B3F0D5 = 1;
       }
       EventRewardSaveData_TypeInfo->static_fields->_FilterId_k__BackingField = v12;
     }
@@ -1158,16 +1140,16 @@ void __fastcall EventRewardSaveData__LoadMstMissionIndex(const MethodInfo *metho
   __int64 v2; // x1
   int32_t Int; // w19
 
-  if ( (byte_4A527B3 & 1) == 0 )
+  if ( (byte_4B3F08A & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_9036/*"MstMissionIndex"*/, v1);
-    byte_4A527B3 = 1;
+    sub_1BDB878(&StringLiteral_9181/*"MstMissionIndex"*/, v1);
+    byte_4B3F08A = 1;
   }
-  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_9036/*"MstMissionIndex"*/, 0, 0LL);
-  if ( !byte_4A50FC3 )
+  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_9181/*"MstMissionIndex"*/, 0, 0LL);
+  if ( !byte_4B3F0E5 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v2);
-    byte_4A50FC3 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v2);
+    byte_4B3F0E5 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_MstMissionIndex_k__BackingField = Int;
 }
@@ -1178,36 +1160,36 @@ void __fastcall EventRewardSaveData__LoadRecoveryIdx(int32_t eventId, const Meth
   System_String_o *v3; // x19
   System_String_o *v4; // x0
   __int64 v5; // x1
-  int32_t Int_69314012; // w19
+  int32_t Int_70242328; // w19
   int32_t v7; // [xsp+Ch] [xbp-24h] BYREF
 
   v7 = eventId;
-  if ( (byte_4A527C0 & 1) == 0 )
+  if ( (byte_4B3F097 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_11049/*"RecoveryIdx"*/, method);
-    byte_4A527C0 = 1;
+    sub_1BDB878(&StringLiteral_11212/*"RecoveryIdx"*/, method);
+    byte_4B3F097 = 1;
   }
-  v3 = (System_String_o *)StringLiteral_11049/*"RecoveryIdx"*/;
+  v3 = (System_String_o *)StringLiteral_11212/*"RecoveryIdx"*/;
   if ( eventId )
   {
     v4 = System_Int32__ToString((int32_t)&v7, 0LL);
-    v3 = System_String__Concat_61645176(v3, v4, 0LL);
+    v3 = System_String__Concat_62572260(v3, v4, 0LL);
   }
-  if ( !byte_4A52801 )
+  if ( !byte_4B3F0EB )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A52801 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F0EB = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_EventRecoveryIdx_k__BackingField = 1;
   if ( UnityEngine_PlayerPrefs__HasKey(v3, 0LL) )
   {
-    Int_69314012 = UnityEngine_PlayerPrefs__GetInt_69314012(v3, 0LL);
-    if ( !byte_4A52801 )
+    Int_70242328 = UnityEngine_PlayerPrefs__GetInt_70242328(v3, 0LL);
+    if ( !byte_4B3F0EB )
     {
-      sub_1B863B8(&EventRewardSaveData_TypeInfo, v5);
-      byte_4A52801 = 1;
+      sub_1BDB878(&EventRewardSaveData_TypeInfo, v5);
+      byte_4B3F0EB = 1;
     }
-    EventRewardSaveData_TypeInfo->static_fields->_EventRecoveryIdx_k__BackingField = Int_69314012;
+    EventRewardSaveData_TypeInfo->static_fields->_EventRecoveryIdx_k__BackingField = Int_70242328;
   }
 }
 
@@ -1217,32 +1199,32 @@ void __fastcall EventRewardSaveData__LoadRewardTypeData(int32_t eventId, const M
   System_String_o *v2; // x0
   System_String_o *v3; // x19
   __int64 v4; // x1
-  int32_t Int_69314012; // w19
+  int32_t Int_70242328; // w19
   int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = eventId;
-  if ( (byte_4A527A6 & 1) == 0 )
+  if ( (byte_4B3F07D & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_11211/*"RewardType_"*/, method);
-    byte_4A527A6 = 1;
+    sub_1BDB878(&StringLiteral_11377/*"RewardType_"*/, method);
+    byte_4B3F07D = 1;
   }
-  if ( !byte_4A527FE )
+  if ( !byte_4B3F0D9 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A527FE = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F0D9 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_DefIdx_k__BackingField = -1;
   v2 = System_Int32__ToString((int32_t)&v6, 0LL);
-  v3 = System_String__Concat_61645176((System_String_o *)StringLiteral_11211/*"RewardType_"*/, v2, 0LL);
+  v3 = System_String__Concat_62572260((System_String_o *)StringLiteral_11377/*"RewardType_"*/, v2, 0LL);
   if ( UnityEngine_PlayerPrefs__HasKey(v3, 0LL) )
   {
-    Int_69314012 = UnityEngine_PlayerPrefs__GetInt_69314012(v3, 0LL);
-    if ( !byte_4A527FE )
+    Int_70242328 = UnityEngine_PlayerPrefs__GetInt_70242328(v3, 0LL);
+    if ( !byte_4B3F0D9 )
     {
-      sub_1B863B8(&EventRewardSaveData_TypeInfo, v4);
-      byte_4A527FE = 1;
+      sub_1BDB878(&EventRewardSaveData_TypeInfo, v4);
+      byte_4B3F0D9 = 1;
     }
-    EventRewardSaveData_TypeInfo->static_fields->_DefIdx_k__BackingField = Int_69314012;
+    EventRewardSaveData_TypeInfo->static_fields->_DefIdx_k__BackingField = Int_70242328;
   }
 }
 
@@ -1253,16 +1235,16 @@ void __fastcall EventRewardSaveData__LoadWeeklyMissionData(const MethodInfo *met
   __int64 v2; // x1
   int32_t Int; // w19
 
-  if ( (byte_4A527AC & 1) == 0 )
+  if ( (byte_4B3F083 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_9035/*"MstMission"*/, v1);
-    byte_4A527AC = 1;
+    sub_1BDB878(&StringLiteral_9180/*"MstMission"*/, v1);
+    byte_4B3F083 = 1;
   }
-  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_9035/*"MstMission"*/, 0, 0LL);
-  if ( !byte_4A51856 )
+  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_9180/*"MstMission"*/, 0, 0LL);
+  if ( !byte_4B3F0DF )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v2);
-    byte_4A51856 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v2);
+    byte_4B3F0DF = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_WeeklyFilterId_k__BackingField = Int;
 }
@@ -1287,48 +1269,48 @@ void __fastcall EventRewardSaveData__SaveAllMissionData(const MethodInfo *method
   __int64 v6; // x1
   __int64 v7; // x1
 
-  if ( (byte_4A527B2 & 1) == 0 )
+  if ( (byte_4B3F089 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_5009/*"DailyMission"*/, v1);
-    sub_1B863B8(&StringLiteral_9035/*"MstMission"*/, v2);
-    sub_1B863B8(&StringLiteral_6314/*"ExtraMission"*/, v3);
-    sub_1B863B8(&StringLiteral_8280/*"LimitedMission"*/, v4);
-    byte_4A527B2 = 1;
+    sub_1BDB878(&StringLiteral_5078/*"DailyMission"*/, v1);
+    sub_1BDB878(&StringLiteral_9180/*"MstMission"*/, v2);
+    sub_1BDB878(&StringLiteral_6393/*"ExtraMission"*/, v3);
+    sub_1BDB878(&StringLiteral_8423/*"LimitedMission"*/, v4);
+    byte_4B3F089 = 1;
   }
-  if ( !byte_4A51851 )
+  if ( !byte_4B3F0DE )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A51851 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F0DE = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_5009/*"DailyMission"*/,
+    (System_String_o *)StringLiteral_5078/*"DailyMission"*/,
     EventRewardSaveData_TypeInfo->static_fields->_DailyFilterId_k__BackingField,
     0LL);
-  if ( !byte_4A51852 )
+  if ( !byte_4B3F0E0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v5);
-    byte_4A51852 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v5);
+    byte_4B3F0E0 = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_9035/*"MstMission"*/,
+    (System_String_o *)StringLiteral_9180/*"MstMission"*/,
     EventRewardSaveData_TypeInfo->static_fields->_WeeklyFilterId_k__BackingField,
     0LL);
-  if ( !byte_4A51853 )
+  if ( !byte_4B3F0E2 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v6);
-    byte_4A51853 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v6);
+    byte_4B3F0E2 = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_6314/*"ExtraMission"*/,
+    (System_String_o *)StringLiteral_6393/*"ExtraMission"*/,
     EventRewardSaveData_TypeInfo->static_fields->_ExtraMissionFilterId_k__BackingField,
     0LL);
-  if ( !byte_4A51854 )
+  if ( !byte_4B3F0E4 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v7);
-    byte_4A51854 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v7);
+    byte_4B3F0E4 = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_8280/*"LimitedMission"*/,
+    (System_String_o *)StringLiteral_8423/*"LimitedMission"*/,
     EventRewardSaveData_TypeInfo->static_fields->_LimitedMissionFilterId_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -1339,18 +1321,18 @@ void __fastcall EventRewardSaveData__SaveCompleteMissionData(const MethodInfo *m
 {
   __int64 v1; // x1
 
-  if ( (byte_4A527A9 & 1) == 0 )
+  if ( (byte_4B3F080 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_4601/*"CompleteMission"*/, v1);
-    byte_4A527A9 = 1;
+    sub_1BDB878(&StringLiteral_4667/*"CompleteMission"*/, v1);
+    byte_4B3F080 = 1;
   }
-  if ( !byte_4A4D10B )
+  if ( !byte_4B3F0DC )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A4D10B = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F0DC = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_4601/*"CompleteMission"*/,
+    (System_String_o *)StringLiteral_4667/*"CompleteMission"*/,
     EventRewardSaveData_TypeInfo->static_fields->_CompleteMissionFilterId_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -1369,26 +1351,26 @@ void __fastcall EventRewardSaveData__SaveCurrentEventData(int32_t eventId, const
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
   v9 = eventId;
-  if ( (byte_4A527A3 & 1) == 0 )
+  if ( (byte_4B3F07A & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_8216/*"LastViewEventId_"*/, method);
-    sub_1B863B8(&StringLiteral_10579/*"PriorityIndex_"*/, v2);
-    byte_4A527A3 = 1;
+    sub_1BDB878(&StringLiteral_8359/*"LastViewEventId_"*/, method);
+    sub_1BDB878(&StringLiteral_10735/*"PriorityIndex_"*/, v2);
+    byte_4B3F07A = 1;
   }
   v3 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v5 = System_String__Concat_61645176((System_String_o *)StringLiteral_8216/*"LastViewEventId_"*/, v3, 0LL);
-  if ( !byte_4A527FD )
+  v5 = System_String__Concat_62572260((System_String_o *)StringLiteral_8359/*"LastViewEventId_"*/, v3, 0LL);
+  if ( !byte_4B3F0D7 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v4);
-    byte_4A527FD = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v4);
+    byte_4B3F0D7 = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(v5, EventRewardSaveData_TypeInfo->static_fields->_EventId_k__BackingField, 0LL);
   v6 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v8 = System_String__Concat_61645176((System_String_o *)StringLiteral_10579/*"PriorityIndex_"*/, v6, 0LL);
-  if ( !byte_4A49074 )
+  v8 = System_String__Concat_62572260((System_String_o *)StringLiteral_10735/*"PriorityIndex_"*/, v6, 0LL);
+  if ( !byte_4B3F0D8 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v7);
-    byte_4A49074 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v7);
+    byte_4B3F0D8 = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(v8, EventRewardSaveData_TypeInfo->static_fields->_PriorityIndex_k__BackingField, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -1399,18 +1381,18 @@ void __fastcall EventRewardSaveData__SaveDailyMissionData(const MethodInfo *meth
 {
   __int64 v1; // x1
 
-  if ( (byte_4A527AB & 1) == 0 )
+  if ( (byte_4B3F082 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_5009/*"DailyMission"*/, v1);
-    byte_4A527AB = 1;
+    sub_1BDB878(&StringLiteral_5078/*"DailyMission"*/, v1);
+    byte_4B3F082 = 1;
   }
-  if ( !byte_4A51851 )
+  if ( !byte_4B3F0DE )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A51851 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F0DE = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_5009/*"DailyMission"*/,
+    (System_String_o *)StringLiteral_5078/*"DailyMission"*/,
     EventRewardSaveData_TypeInfo->static_fields->_DailyFilterId_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -1425,17 +1407,17 @@ void __fastcall EventRewardSaveData__SaveEventTowerState(int32_t eventId, const 
   int32_t v5; // [xsp+Ch] [xbp-14h] BYREF
 
   v5 = eventId;
-  if ( (byte_4A527B6 & 1) == 0 )
+  if ( (byte_4B3F08D & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_6186/*"EventTowerState_"*/, method);
-    byte_4A527B6 = 1;
+    sub_1BDB878(&StringLiteral_6265/*"EventTowerState_"*/, method);
+    byte_4B3F08D = 1;
   }
   v2 = System_Int32__ToString((int32_t)&v5, 0LL);
-  v4 = System_String__Concat_61645176((System_String_o *)StringLiteral_6186/*"EventTowerState_"*/, v2, 0LL);
-  if ( !byte_4A4CF54 )
+  v4 = System_String__Concat_62572260((System_String_o *)StringLiteral_6265/*"EventTowerState_"*/, v2, 0LL);
+  if ( !byte_4B3F0E8 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v3);
-    byte_4A4CF54 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v3);
+    byte_4B3F0E8 = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(
     v4,
@@ -1461,133 +1443,127 @@ void __fastcall EventRewardSaveData__SaveEventVoicePlayCount(
   __int64 v14; // x4
   __int64 v15; // x0
   __int64 v16; // x1
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  __int64 v17; // x2
+  __int64 v18; // x3
   Il2CppObject *v19; // x23
   __int64 v20; // x2
   __int64 v21; // x3
   __int64 v22; // x4
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  Il2CppObject *v25; // x22
-  __int64 v26; // x2
-  __int64 v27; // x3
-  __int64 v28; // x4
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
-  Il2CppObject *v31; // x21
-  __int64 v32; // x2
-  __int64 v33; // x3
-  __int64 v34; // x4
-  int32_t v35; // w2
-  const MethodInfo *v36; // x3
-  Il2CppObject *v37; // x19
-  __int64 v38; // x1
-  System_String_o *v39; // x19
+  Il2CppObject *v23; // x22
+  __int64 v24; // x2
+  __int64 v25; // x3
+  __int64 v26; // x4
+  Il2CppObject *v27; // x21
+  __int64 v28; // x2
+  __int64 v29; // x3
+  __int64 v30; // x4
+  Il2CppObject *v31; // x19
+  __int64 v32; // x1
+  System_String_o *v33; // x19
   struct EventRewardSaveData_StaticFields *static_fields; // x8
   int EventVoicePlayCount_k__BackingField; // w21
-  __int64 v42; // x1
-  int v43; // w9
-  __int64 v44; // x0
-  int32_t v45; // [xsp+0h] [xbp-50h] BYREF
-  int32_t v46; // [xsp+4h] [xbp-4Ch] BYREF
-  int32_t v47; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v48; // [xsp+Ch] [xbp-44h] BYREF
+  __int64 v36; // x1
+  int v37; // w9
+  __int64 v38; // x0
+  int32_t v39; // [xsp+0h] [xbp-50h] BYREF
+  int32_t v40; // [xsp+4h] [xbp-4Ch] BYREF
+  int32_t v41; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v42; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4A527B8 & 1) == 0 )
+  if ( (byte_4B3F08F & 1) == 0 )
   {
-    sub_1B863B8(&int_TypeInfo, *(_QWORD *)&slot);
-    sub_1B863B8(&object___TypeInfo, v9);
-    sub_1B863B8(&StringLiteral_6209/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v10);
-    byte_4A527B8 = 1;
+    sub_1BDB878(&int_TypeInfo, *(_QWORD *)&slot);
+    sub_1BDB878(&object___TypeInfo, v9);
+    sub_1BDB878(&StringLiteral_6288/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v10);
+    byte_4B3F08F = 1;
   }
   EventRewardSaveData__LoadEventVoicePlayCount(eventId, slot, idx, svtId, method);
-  v11 = (System_Object_array *)sub_1B86460(object___TypeInfo, 4LL);
-  v48 = eventId;
-  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v48, v12, v13, v14);
+  v11 = (System_Object_array *)sub_1BDB920(object___TypeInfo, 4LL);
+  v42 = eventId;
+  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v42, v12, v13, v14);
   if ( !v11 )
-    sub_1B86614(v15, v16);
+    sub_1BDBAD4(v15, v16);
   v19 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1B864F4(v15, v11->obj.klass->_1.element_class);
+    v15 = sub_1BDB9B4(v15, v11->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_24;
   }
   if ( !v11->max_length )
     goto LABEL_23;
   v11->m_Items[0] = v19;
-  sub_1B8635C((CGThumbnailListItem_o *)v11->m_Items, (int32_t)v19, v17, v18);
-  v47 = slot;
-  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v47, v20, v21, v22);
-  v25 = (Il2CppObject *)v15;
+  sub_1BDB81C(v11->m_Items);
+  v41 = slot;
+  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v41, v20, v21, v22);
+  v23 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1B864F4(v15, v11->obj.klass->_1.element_class);
+    v15 = sub_1BDB9B4(v15, v11->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_24;
   }
   if ( v11->max_length <= 1 )
     goto LABEL_23;
-  v11->m_Items[1] = v25;
-  sub_1B8635C((CGThumbnailListItem_o *)&v11->m_Items[1], (int32_t)v25, v23, v24);
-  v46 = idx;
-  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v46, v26, v27, v28);
-  v31 = (Il2CppObject *)v15;
+  v11->m_Items[1] = v23;
+  sub_1BDB81C(&v11->m_Items[1]);
+  v40 = idx;
+  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v40, v24, v25, v26);
+  v27 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1B864F4(v15, v11->obj.klass->_1.element_class);
+    v15 = sub_1BDB9B4(v15, v11->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_24;
   }
   if ( v11->max_length <= 2 )
     goto LABEL_23;
-  v11->m_Items[2] = v31;
-  sub_1B8635C((CGThumbnailListItem_o *)&v11->m_Items[2], (int32_t)v31, v29, v30);
-  v45 = svtId;
-  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v45, v32, v33, v34);
-  v37 = (Il2CppObject *)v15;
+  v11->m_Items[2] = v27;
+  sub_1BDB81C(&v11->m_Items[2]);
+  v39 = svtId;
+  v15 = j_il2cpp_value_box_0(int_TypeInfo, &v39, v28, v29, v30);
+  v31 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1B864F4(v15, v11->obj.klass->_1.element_class);
+    v15 = sub_1BDB9B4(v15, v11->obj.klass->_1.element_class);
     if ( !v15 )
     {
 LABEL_24:
-      v44 = sub_1B86638(v15);
-      sub_1B864E0(v44, 0LL);
+      v38 = sub_1BDBAF8();
+      sub_1BDB9A0(v38, 0LL);
     }
   }
   if ( v11->max_length <= 3 )
 LABEL_23:
-    sub_1B8661C(v15, v16);
-  v11->m_Items[3] = v37;
-  sub_1B8635C((CGThumbnailListItem_o *)&v11->m_Items[3], (int32_t)v37, v35, v36);
-  v39 = System_String__Format_61686604((System_String_o *)StringLiteral_6209/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v11, 0LL);
-  if ( !byte_4A4BAE4 )
+    sub_1BDBADC(v15, v16, v17, v18);
+  v11->m_Items[3] = v31;
+  sub_1BDB81C(&v11->m_Items[3]);
+  v33 = System_String__Format_62613688((System_String_o *)StringLiteral_6288/*"EventVoicePlayCount_{0}_{1}_{2}_{3}"*/, v11, 0LL);
+  if ( !byte_4B3F0EA )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v38);
-    byte_4A4BAE4 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v32);
+    byte_4B3F0EA = 1;
   }
   static_fields = EventRewardSaveData_TypeInfo->static_fields;
   EventVoicePlayCount_k__BackingField = static_fields->_EventVoicePlayCount_k__BackingField + 1;
-  if ( byte_4A52800 )
+  if ( byte_4B3F0E9 )
   {
     static_fields->_EventVoicePlayCount_k__BackingField = EventVoicePlayCount_k__BackingField;
   }
   else
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v38);
-    byte_4A52800 = 1;
-    v43 = (unsigned __int8)byte_4A4BAE4;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v32);
+    byte_4B3F0E9 = 1;
+    v37 = (unsigned __int8)byte_4B3F0EA;
     EventRewardSaveData_TypeInfo->static_fields->_EventVoicePlayCount_k__BackingField = EventVoicePlayCount_k__BackingField;
-    if ( !v43 )
+    if ( !v37 )
     {
-      sub_1B863B8(&EventRewardSaveData_TypeInfo, v42);
-      byte_4A4BAE4 = 1;
+      sub_1BDB878(&EventRewardSaveData_TypeInfo, v36);
+      byte_4B3F0EA = 1;
       EventVoicePlayCount_k__BackingField = EventRewardSaveData_TypeInfo->static_fields->_EventVoicePlayCount_k__BackingField;
     }
   }
-  UnityEngine_PlayerPrefs__SetInt(v39, EventVoicePlayCount_k__BackingField, 0LL);
+  UnityEngine_PlayerPrefs__SetInt(v33, EventVoicePlayCount_k__BackingField, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
 
@@ -1596,18 +1572,18 @@ void __fastcall EventRewardSaveData__SaveExtraMissionData(const MethodInfo *meth
 {
   __int64 v1; // x1
 
-  if ( (byte_4A527AF & 1) == 0 )
+  if ( (byte_4B3F086 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_6314/*"ExtraMission"*/, v1);
-    byte_4A527AF = 1;
+    sub_1BDB878(&StringLiteral_6393/*"ExtraMission"*/, v1);
+    byte_4B3F086 = 1;
   }
-  if ( !byte_4A51853 )
+  if ( !byte_4B3F0E2 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A51853 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F0E2 = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_6314/*"ExtraMission"*/,
+    (System_String_o *)StringLiteral_6393/*"ExtraMission"*/,
     EventRewardSaveData_TypeInfo->static_fields->_ExtraMissionFilterId_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -1620,10 +1596,10 @@ void __fastcall EventRewardSaveData__SaveItemFilter(int32_t eventId, int32_t slo
   System_String_o *ItemFilterKeyName; // x19
 
   ItemFilterKeyName = EventRewardSaveData__GetItemFilterKeyName(eventId, slot, method);
-  if ( !byte_4A4A7C5 )
+  if ( !byte_4B3F0EE )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v3);
-    byte_4A4A7C5 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v3);
+    byte_4B3F0EE = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(
     ItemFilterKeyName,
@@ -1637,18 +1613,18 @@ void __fastcall EventRewardSaveData__SaveLimitedMissionData(const MethodInfo *me
 {
   __int64 v1; // x1
 
-  if ( (byte_4A527B1 & 1) == 0 )
+  if ( (byte_4B3F088 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_8280/*"LimitedMission"*/, v1);
-    byte_4A527B1 = 1;
+    sub_1BDB878(&StringLiteral_8423/*"LimitedMission"*/, v1);
+    byte_4B3F088 = 1;
   }
-  if ( !byte_4A51854 )
+  if ( !byte_4B3F0E4 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A51854 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F0E4 = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_8280/*"LimitedMission"*/,
+    (System_String_o *)StringLiteral_8423/*"LimitedMission"*/,
     EventRewardSaveData_TypeInfo->static_fields->_LimitedMissionFilterId_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -1667,26 +1643,26 @@ void __fastcall EventRewardSaveData__SaveMissionData(int32_t eventId, const Meth
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
   v9 = eventId;
-  if ( (byte_4A527A5 & 1) == 0 )
+  if ( (byte_4B3F07C & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_6161/*"EventMission_"*/, method);
-    sub_1B863B8(&StringLiteral_8973/*"MissionId_"*/, v2);
-    byte_4A527A5 = 1;
+    sub_1BDB878(&StringLiteral_6240/*"EventMission_"*/, method);
+    sub_1BDB878(&StringLiteral_9118/*"MissionId_"*/, v2);
+    byte_4B3F07C = 1;
   }
   v3 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v5 = System_String__Concat_61645176((System_String_o *)StringLiteral_8973/*"MissionId_"*/, v3, 0LL);
-  if ( !byte_4A527FC )
+  v5 = System_String__Concat_62572260((System_String_o *)StringLiteral_9118/*"MissionId_"*/, v3, 0LL);
+  if ( !byte_4B3F0D3 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v4);
-    byte_4A527FC = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v4);
+    byte_4B3F0D3 = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(v5, EventRewardSaveData_TypeInfo->static_fields->_MissionId_k__BackingField, 0LL);
   v6 = System_Int32__ToString((int32_t)&v9, 0LL);
-  v8 = System_String__Concat_61645176((System_String_o *)StringLiteral_6161/*"EventMission_"*/, v6, 0LL);
-  if ( !byte_4A527FB )
+  v8 = System_String__Concat_62572260((System_String_o *)StringLiteral_6240/*"EventMission_"*/, v6, 0LL);
+  if ( !byte_4B3F0D2 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v7);
-    byte_4A527FB = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v7);
+    byte_4B3F0D2 = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(v8, EventRewardSaveData_TypeInfo->static_fields->_FilterId_k__BackingField, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -1697,18 +1673,18 @@ void __fastcall EventRewardSaveData__SaveMstMissionIndex(const MethodInfo *metho
 {
   __int64 v1; // x1
 
-  if ( (byte_4A527B4 & 1) == 0 )
+  if ( (byte_4B3F08B & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_9036/*"MstMissionIndex"*/, v1);
-    byte_4A527B4 = 1;
+    sub_1BDB878(&StringLiteral_9181/*"MstMissionIndex"*/, v1);
+    byte_4B3F08B = 1;
   }
-  if ( !byte_4A50FC2 )
+  if ( !byte_4B3F0E6 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A50FC2 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F0E6 = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_9036/*"MstMissionIndex"*/,
+    (System_String_o *)StringLiteral_9181/*"MstMissionIndex"*/,
     EventRewardSaveData_TypeInfo->static_fields->_MstMissionIndex_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -1723,17 +1699,17 @@ void __fastcall EventRewardSaveData__SaveRewardTypeData(int32_t eventId, const M
   int32_t v5; // [xsp+Ch] [xbp-14h] BYREF
 
   v5 = eventId;
-  if ( (byte_4A527A7 & 1) == 0 )
+  if ( (byte_4B3F07E & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_11211/*"RewardType_"*/, method);
-    byte_4A527A7 = 1;
+    sub_1BDB878(&StringLiteral_11377/*"RewardType_"*/, method);
+    byte_4B3F07E = 1;
   }
   v2 = System_Int32__ToString((int32_t)&v5, 0LL);
-  v4 = System_String__Concat_61645176((System_String_o *)StringLiteral_11211/*"RewardType_"*/, v2, 0LL);
-  if ( !byte_4A527FF )
+  v4 = System_String__Concat_62572260((System_String_o *)StringLiteral_11377/*"RewardType_"*/, v2, 0LL);
+  if ( !byte_4B3F0DA )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v3);
-    byte_4A527FF = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v3);
+    byte_4B3F0DA = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(v4, EventRewardSaveData_TypeInfo->static_fields->_DefIdx_k__BackingField, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -1744,18 +1720,18 @@ void __fastcall EventRewardSaveData__SaveWeeklyMissionData(const MethodInfo *met
 {
   __int64 v1; // x1
 
-  if ( (byte_4A527AD & 1) == 0 )
+  if ( (byte_4B3F084 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_9035/*"MstMission"*/, v1);
-    byte_4A527AD = 1;
+    sub_1BDB878(&StringLiteral_9180/*"MstMission"*/, v1);
+    byte_4B3F084 = 1;
   }
-  if ( !byte_4A51852 )
+  if ( !byte_4B3F0E0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A51852 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F0E0 = 1;
   }
   UnityEngine_PlayerPrefs__SetInt(
-    (System_String_o *)StringLiteral_9035/*"MstMission"*/,
+    (System_String_o *)StringLiteral_9180/*"MstMission"*/,
     EventRewardSaveData_TypeInfo->static_fields->_WeeklyFilterId_k__BackingField,
     0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
@@ -1772,13 +1748,13 @@ void __fastcall EventRewardSaveData__SetBoxGachaPlayedVoice(
   int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = eventId;
-  if ( (byte_4A527D1 & 1) == 0 )
+  if ( (byte_4B3F0A8 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_8079/*"KeyBoxGachaPlayedVoice"*/, saveData);
-    byte_4A527D1 = 1;
+    sub_1BDB878(&StringLiteral_8220/*"KeyBoxGachaPlayedVoice"*/, saveData);
+    byte_4B3F0A8 = 1;
   }
   v4 = System_Int32__ToString((int32_t)&v6, 0LL);
-  v5 = System_String__Concat_61645176((System_String_o *)StringLiteral_8079/*"KeyBoxGachaPlayedVoice"*/, v4, 0LL);
+  v5 = System_String__Concat_62572260((System_String_o *)StringLiteral_8220/*"KeyBoxGachaPlayedVoice"*/, v4, 0LL);
   UnityEngine_PlayerPrefs__SetString(v5, saveData, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
@@ -1795,13 +1771,13 @@ void __fastcall EventRewardSaveData__SetBulletInBoardLastMessageId(
   int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = eventId;
-  if ( (byte_4A527C6 & 1) == 0 )
+  if ( (byte_4B3F09D & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_3274/*"BulletinBoardMessageState"*/, *(_QWORD *)&messageId);
-    byte_4A527C6 = 1;
+    sub_1BDB878(&StringLiteral_3290/*"BulletinBoardMessageState"*/, *(_QWORD *)&messageId);
+    byte_4B3F09D = 1;
   }
   v4 = System_Int32__ToString((int32_t)&v6, 0LL);
-  v5 = System_String__Concat_61645176((System_String_o *)StringLiteral_3274/*"BulletinBoardMessageState"*/, v4, 0LL);
+  v5 = System_String__Concat_62572260((System_String_o *)StringLiteral_3290/*"BulletinBoardMessageState"*/, v4, 0LL);
   UnityEngine_PlayerPrefs__SetInt(v5, messageId, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
@@ -1822,14 +1798,14 @@ void __fastcall EventRewardSaveData__SetBulletInBoardMessageState(
 
   v8 = id;
   v9 = eventId;
-  if ( (byte_4A527C4 & 1) == 0 )
+  if ( (byte_4B3F09B & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_3274/*"BulletinBoardMessageState"*/, *(_QWORD *)&id);
-    byte_4A527C4 = 1;
+    sub_1BDB878(&StringLiteral_3290/*"BulletinBoardMessageState"*/, *(_QWORD *)&id);
+    byte_4B3F09B = 1;
   }
   v5 = System_Int32__ToString((int32_t)&v9, 0LL);
   v6 = System_Int32__ToString((int32_t)&v8, 0LL);
-  v7 = System_String__Concat_61683424((System_String_o *)StringLiteral_3274/*"BulletinBoardMessageState"*/, v5, v6, 0LL);
+  v7 = System_String__Concat_62610508((System_String_o *)StringLiteral_3290/*"BulletinBoardMessageState"*/, v5, v6, 0LL);
   UnityEngine_PlayerPrefs__SetInt(v7, isShow, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
@@ -1841,14 +1817,14 @@ void __fastcall EventRewardSaveData__SetCooltimeNotification(bool setValue, cons
   bool v2; // w19
 
   v2 = setValue;
-  if ( (byte_4A527BE & 1) == 0 )
+  if ( (byte_4B3F095 & 1) == 0 )
   {
-    *(_QWORD *)&setValue = sub_1B863B8(&StringLiteral_4693/*"CooltimeNotification"*/, method);
-    byte_4A527BE = 1;
+    *(_QWORD *)&setValue = sub_1BDB878(&StringLiteral_4762/*"CooltimeNotification"*/, method);
+    byte_4B3F095 = 1;
   }
   if ( EventRewardSaveData__GetCooltimeNotification((const MethodInfo *)setValue) != v2 )
   {
-    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_4693/*"CooltimeNotification"*/, v2, 0LL);
+    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_4762/*"CooltimeNotification"*/, v2, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -1860,14 +1836,14 @@ void __fastcall EventRewardSaveData__SetCraftNotification(bool setValue, const M
   bool v2; // w19
 
   v2 = setValue;
-  if ( (byte_4A527CF & 1) == 0 )
+  if ( (byte_4B3F0A6 & 1) == 0 )
   {
-    *(_QWORD *)&setValue = sub_1B863B8(&StringLiteral_4804/*"CraftNotification"*/, method);
-    byte_4A527CF = 1;
+    *(_QWORD *)&setValue = sub_1BDB878(&StringLiteral_4873/*"CraftNotification"*/, method);
+    byte_4B3F0A6 = 1;
   }
   if ( EventRewardSaveData__GetCraftNotification((const MethodInfo *)setValue) != v2 )
   {
-    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_4804/*"CraftNotification"*/, v2, 0LL);
+    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_4873/*"CraftNotification"*/, v2, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -1879,14 +1855,14 @@ void __fastcall EventRewardSaveData__SetExpeditionNotification(bool setValue, co
   bool v2; // w19
 
   v2 = setValue;
-  if ( (byte_4A527BA & 1) == 0 )
+  if ( (byte_4B3F091 & 1) == 0 )
   {
-    *(_QWORD *)&setValue = sub_1B863B8(&StringLiteral_6284/*"ExpeditionNotification"*/, method);
-    byte_4A527BA = 1;
+    *(_QWORD *)&setValue = sub_1BDB878(&StringLiteral_6363/*"ExpeditionNotification"*/, method);
+    byte_4B3F091 = 1;
   }
   if ( EventRewardSaveData__GetExpeditionNotification((const MethodInfo *)setValue) != v2 )
   {
-    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_6284/*"ExpeditionNotification"*/, v2, 0LL);
+    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_6363/*"ExpeditionNotification"*/, v2, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -1898,14 +1874,14 @@ void __fastcall EventRewardSaveData__SetFatigueNotiffication(bool setValue, cons
   bool v2; // w19
 
   v2 = setValue;
-  if ( (byte_4A527BC & 1) == 0 )
+  if ( (byte_4B3F093 & 1) == 0 )
   {
-    *(_QWORD *)&setValue = sub_1B863B8(&StringLiteral_6574/*"FatigueNotiffication"*/, method);
-    byte_4A527BC = 1;
+    *(_QWORD *)&setValue = sub_1BDB878(&StringLiteral_6654/*"FatigueNotiffication"*/, method);
+    byte_4B3F093 = 1;
   }
   if ( EventRewardSaveData__GetFatigueNotification((const MethodInfo *)setValue) != v2 )
   {
-    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_6574/*"FatigueNotiffication"*/, v2, 0LL);
+    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_6654/*"FatigueNotiffication"*/, v2, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -1921,13 +1897,13 @@ void __fastcall EventRewardSaveData__SetHeelPortraitDetailDialogState(
   int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = eventId;
-  if ( (byte_4A527CB & 1) == 0 )
+  if ( (byte_4B3F0A2 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_7161/*"HeelPortraitDetailDialogState"*/, saveData);
-    byte_4A527CB = 1;
+    sub_1BDB878(&StringLiteral_7294/*"HeelPortraitDetailDialogState"*/, saveData);
+    byte_4B3F0A2 = 1;
   }
   v4 = System_Int32__ToString((int32_t)&v6, 0LL);
-  v5 = System_String__Concat_61645176((System_String_o *)StringLiteral_7161/*"HeelPortraitDetailDialogState"*/, v4, 0LL);
+  v5 = System_String__Concat_62572260((System_String_o *)StringLiteral_7294/*"HeelPortraitDetailDialogState"*/, v4, 0LL);
   UnityEngine_PlayerPrefs__SetString(v5, saveData, 0LL);
   UnityEngine_PlayerPrefs__Save(0LL);
 }
@@ -1939,14 +1915,14 @@ void __fastcall EventRewardSaveData__SetLotteryShopSkipState(bool setValue, cons
   bool v2; // w19
 
   v2 = setValue;
-  if ( (byte_4A527C8 & 1) == 0 )
+  if ( (byte_4B3F09F & 1) == 0 )
   {
-    *(_QWORD *)&setValue = sub_1B863B8(&StringLiteral_8354/*"LotteryShopSkipState"*/, method);
-    byte_4A527C8 = 1;
+    *(_QWORD *)&setValue = sub_1BDB878(&StringLiteral_8497/*"LotteryShopSkipState"*/, method);
+    byte_4B3F09F = 1;
   }
   if ( EventRewardSaveData__GetLotteryShopSkipState((const MethodInfo *)setValue) != v2 )
   {
-    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_8354/*"LotteryShopSkipState"*/, v2, 0LL);
+    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_8497/*"LotteryShopSkipState"*/, v2, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -1962,27 +1938,27 @@ void __fastcall EventRewardSaveData__SetRecoveryIdx(int32_t eventId, int32_t idx
 
   v7 = eventId;
   EventRecoveryIdx_k__BackingField = idx;
-  if ( (byte_4A527C1 & 1) == 0 )
+  if ( (byte_4B3F098 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_11049/*"RecoveryIdx"*/, *(_QWORD *)&idx);
-    byte_4A527C1 = 1;
+    sub_1BDB878(&StringLiteral_11212/*"RecoveryIdx"*/, *(_QWORD *)&idx);
+    byte_4B3F098 = 1;
   }
-  v5 = (System_String_o *)StringLiteral_11049/*"RecoveryIdx"*/;
+  v5 = (System_String_o *)StringLiteral_11212/*"RecoveryIdx"*/;
   if ( eventId )
   {
     v6 = System_Int32__ToString((int32_t)&v7, 0LL);
-    v5 = System_String__Concat_61645176(v5, v6, 0LL);
+    v5 = System_String__Concat_62572260(v5, v6, 0LL);
   }
-  if ( !byte_4A52801 )
+  if ( !byte_4B3F0EB )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, *(_QWORD *)&idx);
-    byte_4A52801 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, *(_QWORD *)&idx);
+    byte_4B3F0EB = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_EventRecoveryIdx_k__BackingField = EventRecoveryIdx_k__BackingField;
-  if ( !byte_4A4921B )
+  if ( !byte_4B3F0EC )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, *(_QWORD *)&idx);
-    byte_4A4921B = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, *(_QWORD *)&idx);
+    byte_4B3F0EC = 1;
     EventRecoveryIdx_k__BackingField = EventRewardSaveData_TypeInfo->static_fields->_EventRecoveryIdx_k__BackingField;
   }
   UnityEngine_PlayerPrefs__SetInt(v5, EventRecoveryIdx_k__BackingField, 0LL);
@@ -2015,14 +1991,14 @@ void __fastcall EventRewardSaveData__SetTradeNotification(bool setValue, const M
   bool v2; // w19
 
   v2 = setValue;
-  if ( (byte_4A527CD & 1) == 0 )
+  if ( (byte_4B3F0A4 & 1) == 0 )
   {
-    *(_QWORD *)&setValue = sub_1B863B8(&StringLiteral_14339/*"TradeNotification"*/, method);
-    byte_4A527CD = 1;
+    *(_QWORD *)&setValue = sub_1BDB878(&StringLiteral_14537/*"TradeNotification"*/, method);
+    byte_4B3F0A4 = 1;
   }
   if ( EventRewardSaveData__GetTradeNotification((const MethodInfo *)setValue) != v2 )
   {
-    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_14339/*"TradeNotification"*/, v2, 0LL);
+    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_14537/*"TradeNotification"*/, v2, 0LL);
     UnityEngine_PlayerPrefs__Save(0LL);
   }
 }
@@ -2032,10 +2008,10 @@ int32_t __fastcall EventRewardSaveData__get_CompleteMissionFilterId(const Method
 {
   __int64 v1; // x1
 
-  if ( (byte_4A52789 & 1) == 0 )
+  if ( (byte_4B3F060 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A52789 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F060 = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_CompleteMissionFilterId_k__BackingField;
 }
@@ -2045,10 +2021,10 @@ int32_t __fastcall EventRewardSaveData__get_DailyFilterId(const MethodInfo *meth
 {
   __int64 v1; // x1
 
-  if ( (byte_4A5278B & 1) == 0 )
+  if ( (byte_4B3F062 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A5278B = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F062 = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_DailyFilterId_k__BackingField;
 }
@@ -2058,10 +2034,10 @@ int32_t __fastcall EventRewardSaveData__get_DefIdx(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4A52787 & 1) == 0 )
+  if ( (byte_4B3F05E & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A52787 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F05E = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_DefIdx_k__BackingField;
 }
@@ -2071,10 +2047,10 @@ int32_t __fastcall EventRewardSaveData__get_EventId(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4A52793 & 1) == 0 )
+  if ( (byte_4B3F06A & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A52793 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F06A = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_EventId_k__BackingField;
 }
@@ -2084,10 +2060,10 @@ int32_t __fastcall EventRewardSaveData__get_EventRecoveryIdx(const MethodInfo *m
 {
   __int64 v1; // x1
 
-  if ( (byte_4A5279B & 1) == 0 )
+  if ( (byte_4B3F072 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A5279B = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F072 = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_EventRecoveryIdx_k__BackingField;
 }
@@ -2097,10 +2073,10 @@ int32_t __fastcall EventRewardSaveData__get_EventTowerState(const MethodInfo *me
 {
   __int64 v1; // x1
 
-  if ( (byte_4A52797 & 1) == 0 )
+  if ( (byte_4B3F06E & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A52797 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F06E = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_EventTowerState_k__BackingField;
 }
@@ -2110,10 +2086,10 @@ int32_t __fastcall EventRewardSaveData__get_EventVoicePlayCount(const MethodInfo
 {
   __int64 v1; // x1
 
-  if ( (byte_4A52799 & 1) == 0 )
+  if ( (byte_4B3F070 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A52799 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F070 = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_EventVoicePlayCount_k__BackingField;
 }
@@ -2123,10 +2099,10 @@ int32_t __fastcall EventRewardSaveData__get_ExtraMissionFilterId(const MethodInf
 {
   __int64 v1; // x1
 
-  if ( (byte_4A5278F & 1) == 0 )
+  if ( (byte_4B3F066 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A5278F = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F066 = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_ExtraMissionFilterId_k__BackingField;
 }
@@ -2136,10 +2112,10 @@ int32_t __fastcall EventRewardSaveData__get_FilterId(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4A52785 & 1) == 0 )
+  if ( (byte_4B3F05C & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A52785 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F05C = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_FilterId_k__BackingField;
 }
@@ -2149,10 +2125,10 @@ System_String_o *__fastcall EventRewardSaveData__get_HeelPortraitDetailDialogSta
 {
   __int64 v1; // x1
 
-  if ( (byte_4A5279F & 1) == 0 )
+  if ( (byte_4B3F076 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A5279F = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F076 = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_HeelPortraitDetailDialogState_k__BackingField;
 }
@@ -2162,10 +2138,10 @@ int32_t __fastcall EventRewardSaveData__get_ItemFilterId(const MethodInfo *metho
 {
   __int64 v1; // x1
 
-  if ( (byte_4A5279D & 1) == 0 )
+  if ( (byte_4B3F074 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A5279D = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F074 = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_ItemFilterId_k__BackingField;
 }
@@ -2175,10 +2151,10 @@ int32_t __fastcall EventRewardSaveData__get_LimitedMissionFilterId(const MethodI
 {
   __int64 v1; // x1
 
-  if ( (byte_4A52791 & 1) == 0 )
+  if ( (byte_4B3F068 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A52791 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F068 = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_LimitedMissionFilterId_k__BackingField;
 }
@@ -2188,10 +2164,10 @@ int32_t __fastcall EventRewardSaveData__get_MissionId(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4A52783 & 1) == 0 )
+  if ( (byte_4B3F05A & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A52783 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F05A = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_MissionId_k__BackingField;
 }
@@ -2201,10 +2177,10 @@ int32_t __fastcall EventRewardSaveData__get_MstMissionIndex(const MethodInfo *me
 {
   __int64 v1; // x1
 
-  if ( (byte_4A52795 & 1) == 0 )
+  if ( (byte_4B3F06C & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A52795 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F06C = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_MstMissionIndex_k__BackingField;
 }
@@ -2214,10 +2190,10 @@ int32_t __fastcall EventRewardSaveData__get_PriorityIndex(const MethodInfo *meth
 {
   __int64 v1; // x1
 
-  if ( (byte_4A52781 & 1) == 0 )
+  if ( (byte_4B3F058 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A52781 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F058 = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_PriorityIndex_k__BackingField;
 }
@@ -2227,10 +2203,10 @@ int32_t __fastcall EventRewardSaveData__get_WeeklyFilterId(const MethodInfo *met
 {
   __int64 v1; // x1
 
-  if ( (byte_4A5278D & 1) == 0 )
+  if ( (byte_4B3F064 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, v1);
-    byte_4A5278D = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, v1);
+    byte_4B3F064 = 1;
   }
   return EventRewardSaveData_TypeInfo->static_fields->_WeeklyFilterId_k__BackingField;
 }
@@ -2238,10 +2214,10 @@ int32_t __fastcall EventRewardSaveData__get_WeeklyFilterId(const MethodInfo *met
 
 void __fastcall EventRewardSaveData__set_CompleteMissionFilterId(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A5278A & 1) == 0 )
+  if ( (byte_4B3F061 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A5278A = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F061 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_CompleteMissionFilterId_k__BackingField = value;
 }
@@ -2249,10 +2225,10 @@ void __fastcall EventRewardSaveData__set_CompleteMissionFilterId(int32_t value, 
 
 void __fastcall EventRewardSaveData__set_DailyFilterId(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A5278C & 1) == 0 )
+  if ( (byte_4B3F063 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A5278C = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F063 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_DailyFilterId_k__BackingField = value;
 }
@@ -2260,10 +2236,10 @@ void __fastcall EventRewardSaveData__set_DailyFilterId(int32_t value, const Meth
 
 void __fastcall EventRewardSaveData__set_DefIdx(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A52788 & 1) == 0 )
+  if ( (byte_4B3F05F & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A52788 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F05F = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_DefIdx_k__BackingField = value;
 }
@@ -2271,10 +2247,10 @@ void __fastcall EventRewardSaveData__set_DefIdx(int32_t value, const MethodInfo 
 
 void __fastcall EventRewardSaveData__set_EventId(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A52794 & 1) == 0 )
+  if ( (byte_4B3F06B & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A52794 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F06B = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_EventId_k__BackingField = value;
 }
@@ -2282,10 +2258,10 @@ void __fastcall EventRewardSaveData__set_EventId(int32_t value, const MethodInfo
 
 void __fastcall EventRewardSaveData__set_EventRecoveryIdx(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A5279C & 1) == 0 )
+  if ( (byte_4B3F073 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A5279C = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F073 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_EventRecoveryIdx_k__BackingField = value;
 }
@@ -2293,10 +2269,10 @@ void __fastcall EventRewardSaveData__set_EventRecoveryIdx(int32_t value, const M
 
 void __fastcall EventRewardSaveData__set_EventTowerState(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A52798 & 1) == 0 )
+  if ( (byte_4B3F06F & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A52798 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F06F = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_EventTowerState_k__BackingField = value;
 }
@@ -2304,10 +2280,10 @@ void __fastcall EventRewardSaveData__set_EventTowerState(int32_t value, const Me
 
 void __fastcall EventRewardSaveData__set_EventVoicePlayCount(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A5279A & 1) == 0 )
+  if ( (byte_4B3F071 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A5279A = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F071 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_EventVoicePlayCount_k__BackingField = value;
 }
@@ -2315,10 +2291,10 @@ void __fastcall EventRewardSaveData__set_EventVoicePlayCount(int32_t value, cons
 
 void __fastcall EventRewardSaveData__set_ExtraMissionFilterId(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A52790 & 1) == 0 )
+  if ( (byte_4B3F067 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A52790 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F067 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_ExtraMissionFilterId_k__BackingField = value;
 }
@@ -2326,10 +2302,10 @@ void __fastcall EventRewardSaveData__set_ExtraMissionFilterId(int32_t value, con
 
 void __fastcall EventRewardSaveData__set_FilterId(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A52786 & 1) == 0 )
+  if ( (byte_4B3F05D & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A52786 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F05D = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_FilterId_k__BackingField = value;
 }
@@ -2339,31 +2315,25 @@ void __fastcall EventRewardSaveData__set_HeelPortraitDetailDialogState(
         System_String_o *value,
         const MethodInfo *method)
 {
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
   struct EventRewardSaveData_StaticFields *static_fields; // x0
 
-  if ( (byte_4A527A0 & 1) == 0 )
+  if ( (byte_4B3F077 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A527A0 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F077 = 1;
   }
   static_fields = EventRewardSaveData_TypeInfo->static_fields;
   static_fields->_HeelPortraitDetailDialogState_k__BackingField = value;
-  sub_1B8635C(
-    (CGThumbnailListItem_o *)&static_fields->_HeelPortraitDetailDialogState_k__BackingField,
-    (int32_t)value,
-    v2,
-    v3);
+  sub_1BDB81C(&static_fields->_HeelPortraitDetailDialogState_k__BackingField);
 }
 
 
 void __fastcall EventRewardSaveData__set_ItemFilterId(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A5279E & 1) == 0 )
+  if ( (byte_4B3F075 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A5279E = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F075 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_ItemFilterId_k__BackingField = value;
 }
@@ -2371,10 +2341,10 @@ void __fastcall EventRewardSaveData__set_ItemFilterId(int32_t value, const Metho
 
 void __fastcall EventRewardSaveData__set_LimitedMissionFilterId(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A52792 & 1) == 0 )
+  if ( (byte_4B3F069 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A52792 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F069 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_LimitedMissionFilterId_k__BackingField = value;
 }
@@ -2382,10 +2352,10 @@ void __fastcall EventRewardSaveData__set_LimitedMissionFilterId(int32_t value, c
 
 void __fastcall EventRewardSaveData__set_MissionId(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A52784 & 1) == 0 )
+  if ( (byte_4B3F05B & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A52784 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F05B = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_MissionId_k__BackingField = value;
 }
@@ -2393,10 +2363,10 @@ void __fastcall EventRewardSaveData__set_MissionId(int32_t value, const MethodIn
 
 void __fastcall EventRewardSaveData__set_MstMissionIndex(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A52796 & 1) == 0 )
+  if ( (byte_4B3F06D & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A52796 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F06D = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_MstMissionIndex_k__BackingField = value;
 }
@@ -2404,10 +2374,10 @@ void __fastcall EventRewardSaveData__set_MstMissionIndex(int32_t value, const Me
 
 void __fastcall EventRewardSaveData__set_PriorityIndex(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A52782 & 1) == 0 )
+  if ( (byte_4B3F059 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A52782 = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F059 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_PriorityIndex_k__BackingField = value;
 }
@@ -2415,10 +2385,10 @@ void __fastcall EventRewardSaveData__set_PriorityIndex(int32_t value, const Meth
 
 void __fastcall EventRewardSaveData__set_WeeklyFilterId(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4A5278E & 1) == 0 )
+  if ( (byte_4B3F065 & 1) == 0 )
   {
-    sub_1B863B8(&EventRewardSaveData_TypeInfo, method);
-    byte_4A5278E = 1;
+    sub_1BDB878(&EventRewardSaveData_TypeInfo, method);
+    byte_4B3F065 = 1;
   }
   EventRewardSaveData_TypeInfo->static_fields->_WeeklyFilterId_k__BackingField = value;
 }

@@ -10,13 +10,13 @@ void __fastcall CancelPurchaseByBankRequest__beginRequest(
         int32_t shopId,
         const MethodInfo *method)
 {
-  if ( (byte_4A4FE42 & 1) == 0 )
+  if ( (byte_4B46471 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_16811/*"bankShopId"*/, *(_QWORD *)&shopId);
-    byte_4A4FE42 = 1;
+    sub_1BDB878(&StringLiteral_17035/*"bankShopId"*/, *(_QWORD *)&shopId);
+    byte_4B46471 = 1;
   }
   this->fields.cancelShopId = shopId;
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16811/*"bankShopId"*/, shopId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17035/*"bankShopId"*/, shopId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -28,16 +28,16 @@ System_String_o *__fastcall CancelPurchaseByBankRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A4FE41 & 1) == 0 )
+  if ( (byte_4B46470 & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_23114/*"shop/cancelPurchaseByBank"*/, v2);
-    byte_4A4FE41 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_23465/*"shop/cancelPurchaseByBank"*/, v2);
+    byte_4B46470 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_23114/*"shop/cancelPurchaseByBank"*/, 0LL);
+  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_23465/*"shop/cancelPurchaseByBank"*/, 0LL);
 }
 
 
@@ -55,18 +55,18 @@ void __fastcall CancelPurchaseByBankRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v12; // x1
 
-  if ( (byte_4A4FE43 & 1) == 0 )
+  if ( (byte_4B46472 & 1) == 0 )
   {
-    sub_1B863B8(&JsonManager_TypeInfo, responseList);
-    sub_1B863B8(&PurchaseBehaviour_TypeInfo, v5);
-    sub_1B863B8(&ResponseCommandKind_TypeInfo, v6);
-    sub_1B863B8(&StringLiteral_21893/*"ng"*/, v7);
-    byte_4A4FE43 = 1;
+    sub_1BDB878(&JsonManager_TypeInfo, responseList);
+    sub_1BDB878(&PurchaseBehaviour_TypeInfo, v5);
+    sub_1BDB878(&ResponseCommandKind_TypeInfo, v6);
+    sub_1BDB878(&StringLiteral_22233/*"ng"*/, v7);
+    byte_4B46472 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v8 = ResponseCommandKind__SearchData(132, responseList, 0LL);
-  if ( v8 && (v9 = v8, ResponseData__checkError_42282948(v8, 0LL)) && v9->fields.success )
+  if ( v8 && (v9 = v8, ResponseData__checkError_43151432(v8, 0LL)) && v9->fields.success )
   {
     cancelShopId = this->fields.cancelShopId;
     if ( !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
@@ -79,7 +79,7 @@ void __fastcall CancelPurchaseByBankRequest__requestCompleted(
   }
   else
   {
-    v12 = (System_String_o *)StringLiteral_21893/*"ng"*/;
+    v12 = (System_String_o *)StringLiteral_22233/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v12, 0LL);
 }

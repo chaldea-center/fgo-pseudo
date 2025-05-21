@@ -14,19 +14,19 @@ void __fastcall CommandAssistLvUpListViewItem___ctor(
   CommandAssistLvUpListViewItem_o *v17; // x26
 
   v17 = this;
-  ListViewItem___ctor_41775716((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42734232((ListViewItem_o *)this, index, 0LL);
   v17->fields._EventId_k__BackingField = eventId;
   v17->fields._AssistId_k__BackingField = assistId;
   v17->fields._IconImageId_k__BackingField = iconImageId;
   v17->fields._Name_k__BackingField = name;
-  sub_1B8635C(&v17->fields._Name_k__BackingField);
+  sub_1BDB81C(&v17->fields._Name_k__BackingField);
   v17->fields._Detail_k__BackingField = detail;
-  sub_1B8635C(&v17->fields._Detail_k__BackingField);
+  sub_1BDB81C(&v17->fields._Detail_k__BackingField);
   v17->fields._BeforeName_k__BackingField = beforeName;
-  sub_1B8635C(&v17->fields._BeforeName_k__BackingField);
+  sub_1BDB81C(&v17->fields._BeforeName_k__BackingField);
   v17->fields._BeforeDetail_k__BackingField = beforeDetail;
   v17 = (CommandAssistLvUpListViewItem_o *)((char *)v17 + 152);
-  sub_1B8635C(v17);
+  sub_1BDB81C(v17);
   LOBYTE(v17->monitor) = isLast;
 }
 
@@ -110,7 +110,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_BeforeDetail(
         const MethodInfo *method)
 {
   this->fields._BeforeDetail_k__BackingField = value;
-  sub_1B8635C(&this->fields._BeforeDetail_k__BackingField);
+  sub_1BDB81C(&this->fields._BeforeDetail_k__BackingField);
 }
 
 
@@ -120,7 +120,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_BeforeName(
         const MethodInfo *method)
 {
   this->fields._BeforeName_k__BackingField = value;
-  sub_1B8635C(&this->fields._BeforeName_k__BackingField);
+  sub_1BDB81C(&this->fields._BeforeName_k__BackingField);
 }
 
 
@@ -130,7 +130,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_Detail(
         const MethodInfo *method)
 {
   this->fields._Detail_k__BackingField = value;
-  sub_1B8635C(&this->fields._Detail_k__BackingField);
+  sub_1BDB81C(&this->fields._Detail_k__BackingField);
 }
 
 
@@ -167,5 +167,5 @@ void __fastcall CommandAssistLvUpListViewItem__set_Name(
         const MethodInfo *method)
 {
   this->fields._Name_k__BackingField = value;
-  sub_1B8635C(&this->fields._Name_k__BackingField);
+  sub_1BDB81C(&this->fields._Name_k__BackingField);
 }

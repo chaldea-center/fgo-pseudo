@@ -130,6 +130,14 @@ UISprite_o *__fastcall CharaGraphListViewItemDraw__get_PushSprite(
 }
 
 
+UnityEngine_GameObject_o *__fastcall CharaGraphListViewItemDraw__get_SelectObject(
+        CharaGraphListViewItemDraw_o *this,
+        const MethodInfo *method)
+{
+  return this->fields.selectObject;
+}
+
+
 ServantFaceIconComponent_o *__fastcall CharaGraphListViewItemDraw__get_ServantFaceIcon(
         CharaGraphListViewItemDraw_o *this,
         const MethodInfo *method)

@@ -2,23 +2,23 @@ void __fastcall BattleWarBoardEventLimitTurn___ctor(BattleWarBoardEventLimitTurn
 {
   struct System_Int32_array *v3; // x0
   __int64 v4; // x1
-  int32_t v5; // w2
+  __int64 v5; // x2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4A50C94 & 1) == 0 )
+  if ( (byte_4B472E2 & 1) == 0 )
   {
-    sub_1B863B8(&int___TypeInfo, method);
-    byte_4A50C94 = 1;
+    sub_1BDB878(&int___TypeInfo, method);
+    byte_4B472E2 = 1;
   }
   *(_QWORD *)&this->fields.defLimitAct = 0x200000001LL;
-  v3 = (struct System_Int32_array *)sub_1B86460(int___TypeInfo, 1LL);
+  v3 = (struct System_Int32_array *)sub_1BDB920(int___TypeInfo, 1LL);
   if ( !v3 )
-    sub_1B86614(0LL, v4);
+    sub_1BDBAD4(0LL, v4);
   if ( !v3->max_length )
-    sub_1B8661C(v3, v3);
+    sub_1BDBADC(v3, v3, v5);
   v3->m_Items[1] = 3;
   this->fields.defTurnEffect = v3;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.defTurnEffect, (int32_t)v3, v5, v6);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.defTurnEffect, (int32_t)v3, v5, v6);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -69,7 +69,7 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
         {
           TurnEffect = StageEntity__getTurnEffect(stage, (int32_t)battleEvent, 0LL);
           Data_k__BackingField->fields.turnEffect = TurnEffect;
-          sub_1B8635C((CGThumbnailListItem_o *)&Data_k__BackingField->fields.turnEffect, (int32_t)TurnEffect, v13, v14);
+          sub_1BDB81C((CGThumbnailListItem_o *)&Data_k__BackingField->fields.turnEffect, (int32_t)TurnEffect, v13, v14);
           v15 = Data_k__BackingField->fields.turnEffect;
           if ( v15 )
           {
@@ -81,14 +81,14 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
                       this->fields.defTurnEffect,
                       0LL);
               Data_k__BackingField->fields.turnEffect = v16;
-              sub_1B8635C((CGThumbnailListItem_o *)&Data_k__BackingField->fields.turnEffect, (int32_t)v16, v17, v18);
+              sub_1BDB81C((CGThumbnailListItem_o *)&Data_k__BackingField->fields.turnEffect, (int32_t)v16, v17, v18);
             }
             return;
           }
         }
       }
 LABEL_16:
-      sub_1B86614(this, battleEvent);
+      sub_1BDBAD4(this, battleEvent);
     }
   }
 }

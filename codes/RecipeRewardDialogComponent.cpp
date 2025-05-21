@@ -5,25 +5,25 @@ void __fastcall RecipeRewardDialogComponent___ctor(RecipeRewardDialogComponent_o
   __int64 v5; // x1
   System_Collections_Generic_List_object__o *v6; // x21
 
-  if ( (byte_4A48ED7 & 1) == 0 )
+  if ( (byte_4B3F212 & 1) == 0 )
   {
-    sub_1B863B8(&BaseDialog_TypeInfo, method);
-    sub_1B863B8(&UnityEngine_Color___TypeInfo, v3);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GameObject___ctor__, v4);
-    sub_1B863B8(&System_Collections_Generic_List_GameObject__TypeInfo, v5);
-    byte_4A48ED7 = 1;
+    sub_1BDB878(&BaseDialog_TypeInfo, method);
+    sub_1BDB878(&UnityEngine_Color___TypeInfo, v3);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GameObject___ctor__, v4);
+    sub_1BDB878(&System_Collections_Generic_List_GameObject__TypeInfo, v5);
+    byte_4B3F212 = 1;
   }
   this->fields.iconScale = 0.85;
-  this->fields.viewChangeButtonLabelEffectColors = (struct UnityEngine_Color_array *)sub_1B86460(
+  this->fields.viewChangeButtonLabelEffectColors = (struct UnityEngine_Color_array *)sub_1BDB920(
                                                                                        UnityEngine_Color___TypeInfo,
                                                                                        2LL);
-  sub_1B8635C(&this->fields.viewChangeButtonLabelEffectColors);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_GameObject__TypeInfo);
+  sub_1BDB81C(&this->fields.viewChangeButtonLabelEffectColors);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.teaEffectObjList = (struct System_Collections_Generic_List_GameObject__o *)v6;
-  sub_1B8635C(&this->fields.teaEffectObjList);
+  sub_1BDB81C(&this->fields.teaEffectObjList);
   this->fields.maxItemDrawNum = 12;
   *(_QWORD *)&this->fields.scrollWait = 0x3D8F5C293EB33333LL;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -51,13 +51,13 @@ void __fastcall RecipeRewardDialogComponent__ClickSkip(RecipeRewardDialogCompone
   Il2CppObject *v9; // x21
   struct RecipeRewardDialogComponent___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4A48ED2 & 1) == 0 )
+  if ( (byte_4B3F20D & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_GameObject__TypeInfo, method);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GameObject__ForEach__, v3);
-    sub_1B863B8(&Method_RecipeRewardDialogComponent___c__ClickSkip_b__46_0__, v4);
-    sub_1B863B8(&RecipeRewardDialogComponent___c_TypeInfo, v5);
-    byte_4A48ED2 = 1;
+    sub_1BDB878(&System_Action_GameObject__TypeInfo, method);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GameObject__ForEach__, v3);
+    sub_1BDB878(&Method_RecipeRewardDialogComponent___c__ClickSkip_b__46_0__, v4);
+    sub_1BDB878(&RecipeRewardDialogComponent___c_TypeInfo, v5);
+    byte_4B3F20D = 1;
   }
   if ( !this->fields.isSkip && this->fields.canSkip )
   {
@@ -78,18 +78,18 @@ void __fastcall RecipeRewardDialogComponent__ClickSkip(RecipeRewardDialogCompone
         v7 = RecipeRewardDialogComponent___c_TypeInfo;
       }
       v9 = (Il2CppObject *)v7->static_fields->__9;
-      _9__46_0 = (System_Action_object__o *)sub_1B86604(System_Action_GameObject__TypeInfo);
+      _9__46_0 = (System_Action_object__o *)sub_1BDBAC4(System_Action_GameObject__TypeInfo);
       System_Action_object____ctor(_9__46_0, v9, Method_RecipeRewardDialogComponent___c__ClickSkip_b__46_0__, 0LL);
       static_fields = RecipeRewardDialogComponent___c_TypeInfo->static_fields;
       static_fields->__9__46_0 = (struct System_Action_GameObject__o *)_9__46_0;
-      v7 = (RecipeRewardDialogComponent___c_c *)sub_1B8635C(&static_fields->__9__46_0);
+      v7 = (RecipeRewardDialogComponent___c_c *)sub_1BDB81C(&static_fields->__9__46_0);
     }
     if ( !teaEffectObjList )
-      sub_1B86614(v7, method);
+      sub_1BDBAD4(v7, method);
     System_Collections_Generic_List_object___ForEach(
       (System_Collections_Generic_List_object__o *)teaEffectObjList,
       (System_Action_T__o *)_9__46_0,
-      (const MethodInfo_35FD398 *)Method_System_Collections_Generic_List_GameObject__ForEach__);
+      (const MethodInfo_36D6804 *)Method_System_Collections_Generic_List_GameObject__ForEach__);
   }
 }
 
@@ -98,21 +98,21 @@ void __fastcall RecipeRewardDialogComponent__EndClose(RecipeRewardDialogComponen
 {
   struct System_Action_o *closeCallbackFunc; // x20
 
-  if ( (byte_4A48ED4 & 1) == 0 )
+  if ( (byte_4B3F20F & 1) == 0 )
   {
-    sub_1B863B8(&Method_ActionExtensions_Call_bool___, method);
-    byte_4A48ED4 = 1;
+    sub_1BDB878(&Method_ActionExtensions_Call_bool___, method);
+    byte_4B3F20F = 1;
   }
   RecipeRewardDialogComponent__Init(this, method);
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.eventRootMaskSetActiveAction,
     0,
-    (const MethodInfo_2EBFAF4 *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_2F82EDC *)Method_ActionExtensions_Call_bool___);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     this->fields.closeCallbackFunc = 0LL;
-    sub_1B8635C(&this->fields.closeCallbackFunc);
+    sub_1BDB81C(&this->fields.closeCallbackFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))closeCallbackFunc->fields.m_target)(
       closeCallbackFunc->fields.original_method_info,
       *(_QWORD *)&closeCallbackFunc->fields.extra_arg);
@@ -128,7 +128,7 @@ void __fastcall RecipeRewardDialogComponent__Init(RecipeRewardDialogComponent_o 
   this->fields.state = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B86614(0LL, v4);
+    sub_1BDBAD4(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -154,18 +154,18 @@ void __fastcall RecipeRewardDialogComponent__OnClickCloseButton(
   System_Action_o *v16; // x20
   System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A48ED3 & 1) == 0 )
+  if ( (byte_4B3F20E & 1) == 0 )
   {
-    sub_1B863B8(&Method_ActionExtensions_Call_bool___, method);
-    sub_1B863B8(&System_Action_TypeInfo, v3);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v4);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v5);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v6);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B863B8(&Method_RecipeRewardDialogComponent_EndClose__, v9);
-    sub_1B863B8(&Method_RecipeRewardDialogComponent_OnClickCloseButton__, v10);
-    byte_4A48ED3 = 1;
+    sub_1BDB878(&Method_ActionExtensions_Call_bool___, method);
+    sub_1BDB878(&System_Action_TypeInfo, v3);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v4);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v5);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v6);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v8);
+    sub_1BDB878(&Method_RecipeRewardDialogComponent_EndClose__, v9);
+    sub_1BDB878(&Method_RecipeRewardDialogComponent_OnClickCloseButton__, v10);
+    byte_4B3F20E = 1;
   }
   memset(&v17, 0, sizeof(v17));
   if ( this->fields.state == 2 )
@@ -174,22 +174,22 @@ void __fastcall RecipeRewardDialogComponent__OnClickCloseButton(
     ActionExtensions__Call_bool_(
       (System_Action_T__o *)this->fields.eventRootMaskSetActiveAction,
       1,
-      (const MethodInfo_2EBFAF4 *)Method_ActionExtensions_Call_bool___);
+      (const MethodInfo_2F82EDC *)Method_ActionExtensions_Call_bool___);
     v11 = Method_RecipeRewardDialogComponent_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_RecipeRewardDialogComponent_OnClickCloseButton__ + 83) & 2) != 0 )
-      v11 = (_QWORD *)sub_1B863D0(Method_RecipeRewardDialogComponent_OnClickCloseButton__);
-    v12 = (System_Reflection_MethodBase_o *)sub_1B8639C(v11, v11[4]);
+      v11 = (_QWORD *)sub_1BDB890(Method_RecipeRewardDialogComponent_OnClickCloseButton__);
+    v12 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v11, v11[4]);
     OverwriteAssetSoundName__PlaySystemSe(v12, 0, 0, 0LL);
     resultItemObjList = this->fields.resultItemObjList;
     if ( !resultItemObjList )
-      sub_1B86614(0LL, v13);
+      sub_1BDBAD4(0LL, v13);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v17,
       (System_Collections_Generic_List_object__o *)resultItemObjList,
-      (const MethodInfo_35FD450 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+      (const MethodInfo_36D68BC *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v17,
-              (const MethodInfo_3398634 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+              (const MethodInfo_346A2A4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
     {
       current = v17.fields._current;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -198,13 +198,13 @@ void __fastcall RecipeRewardDialogComponent__OnClickCloseButton(
       {
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_69356292((UnityEngine_Object_o *)current, 0LL);
+        UnityEngine_Object__Destroy_70284200((UnityEngine_Object_o *)current, 0LL);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v17,
-      (const MethodInfo_3398630 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    v16 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+      (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    v16 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
     System_Action___ctor(v16, (Il2CppObject *)this, Method_RecipeRewardDialogComponent_EndClose__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v16, 0LL);
   }
@@ -230,45 +230,46 @@ void __fastcall RecipeRewardDialogComponent__OnClickSwitchShowMode(
   System_String_o **v15; // x8
   UISprite_o *v16; // x20
   System_String_o *normalSprite; // x21
+  __int64 v18; // x2
   struct UnityEngine_Color_array *viewChangeButtonLabelEffectColors; // x9
   unsigned int max_length; // w8
   float *p_g; // x8
   float *p_b; // x10
   float *p_a; // x11
   float *p_r; // x9
-  int32_t v24; // w20
-  UnityEngine_Color_o v25; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int32_t v25; // w20
+  UnityEngine_Color_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A48ED5 & 1) == 0 )
+  if ( (byte_4B3F210 & 1) == 0 )
   {
-    sub_1B863B8(&AtlasManager_TypeInfo, method);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UISprite___, v3);
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___, v4);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GameObject__get_Item__, v6);
-    sub_1B863B8(&Method_RecipeRewardDialogComponent_OnClickSwitchShowMode__, v7);
-    sub_1B863B8(&StringLiteral_23904/*"treasurechest_btn"*/, v8);
-    sub_1B863B8(&StringLiteral_23906/*"treasurechest_btn_on"*/, v9);
-    byte_4A48ED5 = 1;
+    sub_1BDB878(&AtlasManager_TypeInfo, method);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_UISprite___, v3);
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___, v4);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GameObject__get_Item__, v6);
+    sub_1BDB878(&Method_RecipeRewardDialogComponent_OnClickSwitchShowMode__, v7);
+    sub_1BDB878(&StringLiteral_24255/*"treasurechest_btn"*/, v8);
+    sub_1BDB878(&StringLiteral_24257/*"treasurechest_btn_on"*/, v9);
+    byte_4B3F210 = 1;
   }
   v10 = Method_RecipeRewardDialogComponent_OnClickSwitchShowMode__;
   if ( (*((_BYTE *)Method_RecipeRewardDialogComponent_OnClickSwitchShowMode__ + 83) & 2) != 0 )
-    v10 = (_QWORD *)sub_1B863D0(Method_RecipeRewardDialogComponent_OnClickSwitchShowMode__);
-  v11 = (System_Reflection_MethodBase_o *)sub_1B8639C(v10, v10[4]);
+    v10 = (_QWORD *)sub_1BDB890(Method_RecipeRewardDialogComponent_OnClickSwitchShowMode__);
+  v11 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v10, v10[4]);
   OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0, 0LL);
   isShowPossessionNum = this->fields.isShowPossessionNum;
   viewChangeButton = this->fields.viewChangeButton;
   this->fields.isShowPossessionNum = !isShowPossessionNum;
   if ( !viewChangeButton )
     goto LABEL_26;
-  v15 = isShowPossessionNum ? (System_String_o **)&StringLiteral_23904/*"treasurechest_btn"*/ : (System_String_o **)&StringLiteral_23906/*"treasurechest_btn_on"*/;
+  v15 = isShowPossessionNum ? (System_String_o **)&StringLiteral_24255/*"treasurechest_btn"*/ : (System_String_o **)&StringLiteral_24257/*"treasurechest_btn_on"*/;
   UIButton__set_normalSprite(viewChangeButton, *v15, 0LL);
   viewChangeButton = this->fields.viewChangeButton;
   if ( !viewChangeButton )
     goto LABEL_26;
   viewChangeButton = (UIButton_o *)UnityEngine_Component__GetComponent_object_(
                                      (UnityEngine_Component_o *)viewChangeButton,
-                                     (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                     (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !this->fields.viewChangeButton )
     goto LABEL_26;
   v16 = (UISprite_o *)viewChangeButton;
@@ -279,7 +280,7 @@ void __fastcall RecipeRewardDialogComponent__OnClickSwitchShowMode(
   viewChangeButtonLabelEffectColors = this->fields.viewChangeButtonLabelEffectColors;
   if ( !viewChangeButtonLabelEffectColors )
 LABEL_26:
-    sub_1B86614(viewChangeButton, v12);
+    sub_1BDBAD4(viewChangeButton, v12);
   viewChangeButton = (UIButton_o *)this->fields.viewChangeButtonLabel;
   max_length = viewChangeButtonLabelEffectColors->max_length;
   if ( !this->fields.isShowPossessionNum )
@@ -295,7 +296,7 @@ LABEL_26:
       goto LABEL_20;
     }
 LABEL_28:
-    sub_1B8661C(viewChangeButton, v12);
+    sub_1BDBADC(viewChangeButton, v12, v18);
   }
   if ( max_length <= 1 )
     goto LABEL_28;
@@ -306,26 +307,26 @@ LABEL_28:
   if ( !viewChangeButton )
     goto LABEL_26;
 LABEL_20:
-  v25.fields.a = *p_r;
-  v25.fields.b = *p_a;
-  v25.fields.g = *p_b;
-  v25.fields.r = *p_g;
-  UILabel__set_effectColor((UILabel_o *)viewChangeButton, v25, 0LL);
+  v26.fields.a = *p_r;
+  v26.fields.b = *p_a;
+  v26.fields.g = *p_b;
+  v26.fields.r = *p_g;
+  UILabel__set_effectColor((UILabel_o *)viewChangeButton, v26, 0LL);
   viewChangeButton = (UIButton_o *)this->fields.resultItemObjList;
   if ( !viewChangeButton )
     goto LABEL_26;
-  v24 = 0;
-  while ( v24 < SLODWORD(viewChangeButton->fields.m_CancellationTokenSource) )
+  v25 = 0;
+  while ( v25 < SLODWORD(viewChangeButton->fields.m_CancellationTokenSource) )
   {
     viewChangeButton = (UIButton_o *)System_Collections_Generic_List_object___get_Item(
                                        (System_Collections_Generic_List_object__o *)viewChangeButton,
-                                       v24,
-                                       (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                       v25,
+                                       (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( viewChangeButton )
     {
       viewChangeButton = (UIButton_o *)UnityEngine_GameObject__GetComponent_object_(
                                          (UnityEngine_GameObject_o *)viewChangeButton,
-                                         (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                                         (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
       if ( viewChangeButton )
       {
         ItemIconComponent__ShowPossession(
@@ -333,7 +334,7 @@ LABEL_20:
           this->fields.isShowPossessionNum,
           0LL);
         viewChangeButton = (UIButton_o *)this->fields.resultItemObjList;
-        ++v24;
+        ++v25;
         if ( viewChangeButton )
           continue;
       }
@@ -395,110 +396,111 @@ void __fastcall RecipeRewardDialogComponent__Open(
   UILabel_o *titleLabel; // x26
   UISprite_o *totalEventPointIcon; // x26
   int32_t eventPointItemId; // w27
+  __int64 v56; // x2
   struct UnityEngine_Color_array *viewChangeButtonLabelEffectColors; // x8
   UILabel_o *viewChangeButtonLabel; // x26
   UILabel_o *getTitleLabel; // x26
   UILabel_o *getNumLabel; // x26
-  System_String_o *v60; // x27
-  __int64 v61; // x2
-  __int64 v62; // x3
-  __int64 v63; // x4
-  Il2CppObject *v64; // x0
-  System_String_o *v65; // x0
+  System_String_o *v61; // x27
+  __int64 v62; // x2
+  __int64 v63; // x3
+  __int64 v64; // x4
+  Il2CppObject *v65; // x0
+  System_String_o *v66; // x0
   int64_t EventPointNoGroup; // x0
   UILabel_o *totalTitleLabel; // x25
-  __int64 v68; // x26
+  __int64 v69; // x26
   UILabel_o *totalNumLabel; // x25
-  System_String_o *v70; // x27
-  __int64 v71; // x2
-  __int64 v72; // x3
-  __int64 v73; // x4
-  Il2CppObject *v74; // x0
-  System_Collections_Generic_List_object__o *v75; // x25
+  System_String_o *v71; // x27
+  __int64 v72; // x2
+  __int64 v73; // x3
+  __int64 v74; // x4
+  Il2CppObject *v75; // x0
+  System_Collections_Generic_List_object__o *v76; // x25
   void **p_klass; // x26
-  GiftEntity_o *v77; // x25
-  __int64 v78; // x8
-  _QWORD *v79; // x9
-  __int64 v80; // x10
-  __int64 v81; // x8
-  System_Action_int__o *v82; // x25
+  GiftEntity_o *v78; // x25
+  __int64 v79; // x8
+  _QWORD *v80; // x9
+  __int64 v81; // x10
+  __int64 v82; // x8
+  System_Action_int__o *v83; // x25
   Il2CppClass *klass; // x8
-  __int64 *v84; // x24
-  UILabel_o *v85; // x22
-  System_Collections_Generic_List_GiftEntity__o *v86; // x21
-  System_Action_o *v87; // x22
-  const MethodInfo *v88; // x4
-  __int64 v90; // [xsp+10h] [xbp-70h] BYREF
-  int v91; // [xsp+1Ch] [xbp-64h] BYREF
+  __int64 *v85; // x24
+  UILabel_o *v86; // x22
+  System_Collections_Generic_List_GiftEntity__o *v87; // x21
+  System_Action_o *v88; // x22
+  const MethodInfo *v89; // x4
+  __int64 v91; // [xsp+10h] [xbp-70h] BYREF
+  int v92; // [xsp+1Ch] [xbp-64h] BYREF
 
-  if ( (byte_4A48ECE & 1) == 0 )
+  if ( (byte_4B3F209 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_int__TypeInfo, giftIds);
-    sub_1B863B8(&System_Action_TypeInfo, v14);
-    sub_1B863B8(&AtlasManager_TypeInfo, v15);
-    sub_1B863B8(&Method_BasicHelper_ForEach_int___, v16);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UIScrollBar___, v17);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UISprite___, v18);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponentsInChildren_UILabel____76107088, v19);
-    sub_1B863B8(&GiftEntity_TypeInfo, v20);
-    sub_1B863B8(&int_TypeInfo, v21);
-    sub_1B863B8(&long_TypeInfo, v22);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GiftEntity__Add__, v23);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GameObject__Clear__, v24);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GiftEntity___ctor__, v25);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GameObject___ctor__, v26);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v27);
-    sub_1B863B8(&System_Collections_Generic_List_GameObject__TypeInfo, v28);
-    sub_1B863B8(&System_Collections_Generic_List_GiftEntity__TypeInfo, v29);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v30);
-    sub_1B863B8(&Method_RecipeRewardDialogComponent___c__DisplayClass42_0__Open_b__0__, v31);
-    sub_1B863B8(&Method_RecipeRewardDialogComponent___c__DisplayClass42_0__Open_b__1__, v32);
-    sub_1B863B8(&RecipeRewardDialogComponent___c__DisplayClass42_0_TypeInfo, v33);
-    sub_1B863B8(&StringLiteral_13315/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/, v34);
-    sub_1B863B8(&StringLiteral_10827/*"RECIPE_EVENT_ITEM_GET_DIALOG_TITLE"*/, v35);
-    sub_1B863B8(&StringLiteral_10831/*"RECIPE_EVENT_TOTAL_POINT_NUM"*/, v36);
-    sub_1B863B8(&StringLiteral_809/*"+"*/, v37);
-    sub_1B863B8(&StringLiteral_10825/*"RECIPE_EVENT_GET_POINT_NUM"*/, v38);
-    sub_1B863B8(&StringLiteral_23904/*"treasurechest_btn"*/, v39);
-    sub_1B863B8(&StringLiteral_13314/*"TUTORIAL_IMAGE_DIALOG_CLOSE"*/, v40);
-    sub_1B863B8(&StringLiteral_2841/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, v41);
-    sub_1B863B8(&StringLiteral_23910/*"treasurechest_img_bg_reward"*/, v42);
-    sub_1B863B8(&StringLiteral_10832/*"RECIPE_REWARD_DIALOG_VIEW_CHANGE"*/, v43);
-    byte_4A48ECE = 1;
+    sub_1BDB878(&System_Action_int__TypeInfo, giftIds);
+    sub_1BDB878(&System_Action_TypeInfo, v14);
+    sub_1BDB878(&AtlasManager_TypeInfo, v15);
+    sub_1BDB878(&Method_BasicHelper_ForEach_int___, v16);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_UIScrollBar___, v17);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_UISprite___, v18);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponentsInChildren_UILabel____77096344, v19);
+    sub_1BDB878(&GiftEntity_TypeInfo, v20);
+    sub_1BDB878(&int_TypeInfo, v21);
+    sub_1BDB878(&long_TypeInfo, v22);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GiftEntity__Add__, v23);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GameObject__Clear__, v24);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GiftEntity___ctor__, v25);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GameObject___ctor__, v26);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v27);
+    sub_1BDB878(&System_Collections_Generic_List_GameObject__TypeInfo, v28);
+    sub_1BDB878(&System_Collections_Generic_List_GiftEntity__TypeInfo, v29);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v30);
+    sub_1BDB878(&Method_RecipeRewardDialogComponent___c__DisplayClass42_0__Open_b__0__, v31);
+    sub_1BDB878(&Method_RecipeRewardDialogComponent___c__DisplayClass42_0__Open_b__1__, v32);
+    sub_1BDB878(&RecipeRewardDialogComponent___c__DisplayClass42_0_TypeInfo, v33);
+    sub_1BDB878(&StringLiteral_13512/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/, v34);
+    sub_1BDB878(&StringLiteral_10987/*"RECIPE_EVENT_ITEM_GET_DIALOG_TITLE"*/, v35);
+    sub_1BDB878(&StringLiteral_10991/*"RECIPE_EVENT_TOTAL_POINT_NUM"*/, v36);
+    sub_1BDB878(&StringLiteral_812/*"+"*/, v37);
+    sub_1BDB878(&StringLiteral_10985/*"RECIPE_EVENT_GET_POINT_NUM"*/, v38);
+    sub_1BDB878(&StringLiteral_24255/*"treasurechest_btn"*/, v39);
+    sub_1BDB878(&StringLiteral_13511/*"TUTORIAL_IMAGE_DIALOG_CLOSE"*/, v40);
+    sub_1BDB878(&StringLiteral_2853/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, v41);
+    sub_1BDB878(&StringLiteral_24261/*"treasurechest_img_bg_reward"*/, v42);
+    sub_1BDB878(&StringLiteral_10992/*"RECIPE_REWARD_DIALOG_VIEW_CHANGE"*/, v43);
+    byte_4B3F209 = 1;
   }
-  v44 = (Il2CppObject *)sub_1B86604(RecipeRewardDialogComponent___c__DisplayClass42_0_TypeInfo);
+  v44 = (Il2CppObject *)sub_1BDBAC4(RecipeRewardDialogComponent___c__DisplayClass42_0_TypeInfo);
   System_Object___ctor(v44, 0LL);
   if ( !v44 )
     goto LABEL_53;
   v44[1].monitor = this;
-  sub_1B8635C(&v44[1].monitor);
+  sub_1BDB81C(&v44[1].monitor);
   viewChangeButton = (int *)this->fields.viewChangeButton;
   this->fields.state = 1;
   if ( !viewChangeButton )
     goto LABEL_53;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)viewChangeButton,
-                       (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                       (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI((UISprite_o *)Component_object, (System_String_o *)StringLiteral_23904/*"treasurechest_btn"*/, 0LL);
+  AtlasManager__SetEventUI((UISprite_o *)Component_object, (System_String_o *)StringLiteral_24255/*"treasurechest_btn"*/, 0LL);
   this->fields.getEffect = getEffect;
-  sub_1B8635C(&this->fields.getEffect);
+  sub_1BDB81C(&this->fields.getEffect);
   this->fields.isShowPossessionNum = 0;
   this->fields.playCnt = 0;
   *(_WORD *)&this->fields.isSkip = 0;
-  v48 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_GameObject__TypeInfo);
+  v48 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v48,
-    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.resultItemObjList = (struct System_Collections_Generic_List_GameObject__o *)v48;
-  sub_1B8635C(&this->fields.resultItemObjList);
-  v49 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_GameObject__TypeInfo);
+  sub_1BDB81C(&this->fields.resultItemObjList);
+  v49 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v49,
-    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.resultIconHideObjList = (struct System_Collections_Generic_List_GameObject__o *)v49;
-  sub_1B8635C(&this->fields.resultIconHideObjList);
+  sub_1BDB81C(&this->fields.resultIconHideObjList);
   teaEffectObjList = this->fields.teaEffectObjList;
   if ( teaEffectObjList )
   {
@@ -526,7 +528,7 @@ void __fastcall RecipeRewardDialogComponent__Open(
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  viewChangeButton = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_10827/*"RECIPE_EVENT_ITEM_GET_DIALOG_TITLE"*/, 0LL);
+  viewChangeButton = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_10987/*"RECIPE_EVENT_ITEM_GET_DIALOG_TITLE"*/, 0LL);
   if ( !eventRecipeEntity )
     goto LABEL_53;
   viewChangeButton = (int *)System_String__Format(
@@ -542,12 +544,12 @@ void __fastcall RecipeRewardDialogComponent__Open(
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetItem(totalEventPointIcon, eventPointItemId, 0LL);
   AtlasManager__SetItem(this->fields.getEventPointIcon, eventRecipeEntity->fields.eventPointItemId, 0LL);
-  AtlasManager__SetEventUI(this->fields.totalEventPointBg, (System_String_o *)StringLiteral_23910/*"treasurechest_img_bg_reward"*/, 0LL);
-  AtlasManager__SetEventUI(this->fields.getEventPointBg, (System_String_o *)StringLiteral_23910/*"treasurechest_img_bg_reward"*/, 0LL);
+  AtlasManager__SetEventUI(this->fields.totalEventPointBg, (System_String_o *)StringLiteral_24261/*"treasurechest_img_bg_reward"*/, 0LL);
+  AtlasManager__SetEventUI(this->fields.getEventPointBg, (System_String_o *)StringLiteral_24261/*"treasurechest_img_bg_reward"*/, 0LL);
   viewChangeButton = (int *)this->fields.viewChangeButton;
   if ( !viewChangeButton )
     goto LABEL_53;
-  UIButton__set_normalSprite((UIButton_o *)viewChangeButton, (System_String_o *)StringLiteral_23904/*"treasurechest_btn"*/, 0LL);
+  UIButton__set_normalSprite((UIButton_o *)viewChangeButton, (System_String_o *)StringLiteral_24255/*"treasurechest_btn"*/, 0LL);
   viewChangeButtonLabelEffectColors = this->fields.viewChangeButtonLabelEffectColors;
   if ( !viewChangeButtonLabelEffectColors )
     goto LABEL_53;
@@ -561,21 +563,21 @@ void __fastcall RecipeRewardDialogComponent__Open(
     *(UnityEngine_Color_o *)&viewChangeButtonLabelEffectColors->m_Items[0].fields.g,
     0LL);
   viewChangeButtonLabel = this->fields.viewChangeButtonLabel;
-  viewChangeButton = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_10832/*"RECIPE_REWARD_DIALOG_VIEW_CHANGE"*/, 0LL);
+  viewChangeButton = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_10992/*"RECIPE_REWARD_DIALOG_VIEW_CHANGE"*/, 0LL);
   if ( !viewChangeButtonLabel )
     goto LABEL_53;
   UILabel__set_text(viewChangeButtonLabel, (System_String_o *)viewChangeButton, 0LL);
   getTitleLabel = this->fields.getTitleLabel;
-  viewChangeButton = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_10825/*"RECIPE_EVENT_GET_POINT_NUM"*/, 0LL);
+  viewChangeButton = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_10985/*"RECIPE_EVENT_GET_POINT_NUM"*/, 0LL);
   if ( !getTitleLabel )
     goto LABEL_53;
   UILabel__set_text(getTitleLabel, (System_String_o *)viewChangeButton, 0LL);
   getNumLabel = this->fields.getNumLabel;
-  v60 = LocalizationManager__Get((System_String_o *)StringLiteral_2841/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
-  v91 = this->fields.maxPlayCnt * eventRecipeEntity->fields.eventPointNum;
-  v64 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v91, v61, v62, v63);
-  v65 = System_String__Format(v60, v64, 0LL);
-  viewChangeButton = (int *)System_String__Concat_61645176((System_String_o *)StringLiteral_809/*"+"*/, v65, 0LL);
+  v61 = LocalizationManager__Get((System_String_o *)StringLiteral_2853/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
+  v92 = this->fields.maxPlayCnt * eventRecipeEntity->fields.eventPointNum;
+  v65 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v92, v62, v63, v64);
+  v66 = System_String__Format(v61, v65, 0LL);
+  viewChangeButton = (int *)System_String__Concat_62572260((System_String_o *)StringLiteral_812/*"+"*/, v66, 0LL);
   if ( !getNumLabel )
     goto LABEL_53;
   UILabel__set_text(getNumLabel, (System_String_o *)viewChangeButton, 0LL);
@@ -583,62 +585,62 @@ void __fastcall RecipeRewardDialogComponent__Open(
     goto LABEL_53;
   EventPointNoGroup = UserEventPointMaster__GetEventPointNoGroup(eventRecipeGiftEntity->fields.eventId, 0LL);
   totalTitleLabel = this->fields.totalTitleLabel;
-  v68 = EventPointNoGroup;
-  viewChangeButton = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_10831/*"RECIPE_EVENT_TOTAL_POINT_NUM"*/, 0LL);
+  v69 = EventPointNoGroup;
+  viewChangeButton = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_10991/*"RECIPE_EVENT_TOTAL_POINT_NUM"*/, 0LL);
   if ( !totalTitleLabel )
     goto LABEL_53;
   UILabel__set_text(totalTitleLabel, (System_String_o *)viewChangeButton, 0LL);
   totalNumLabel = this->fields.totalNumLabel;
-  v70 = LocalizationManager__Get((System_String_o *)StringLiteral_2841/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
-  v90 = v68;
-  v74 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v90, v71, v72, v73);
-  viewChangeButton = (int *)System_String__Format(v70, v74, 0LL);
+  v71 = LocalizationManager__Get((System_String_o *)StringLiteral_2853/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0LL);
+  v91 = v69;
+  v75 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v91, v72, v73, v74);
+  viewChangeButton = (int *)System_String__Format(v71, v75, 0LL);
   if ( !totalNumLabel )
     goto LABEL_53;
   UILabel__set_text(totalNumLabel, (System_String_o *)viewChangeButton, 0LL);
-  v75 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_GiftEntity__TypeInfo);
+  v76 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_GiftEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v75,
-    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
-  v44[1].klass = (Il2CppClass *)v75;
+    v76,
+    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
+  v44[1].klass = (Il2CppClass *)v76;
   p_klass = (void **)&v44[1].klass;
-  sub_1B8635C(&v44[1]);
-  v77 = (GiftEntity_o *)sub_1B86604(GiftEntity_TypeInfo);
-  GiftEntity___ctor(v77, 0LL);
-  if ( !v77 )
+  sub_1BDB81C(&v44[1]);
+  v78 = (GiftEntity_o *)sub_1BDBAC4(GiftEntity_TypeInfo);
+  GiftEntity___ctor(v78, 0LL);
+  if ( !v78 )
     goto LABEL_53;
-  v77->fields.type = 2;
-  v77->fields.objectId = eventRecipeEntity->fields.eventPointItemId;
-  v77->fields.num = eventRecipeEntity->fields.eventPointNum * giftIds->max_length;
+  v78->fields.type = 2;
+  v78->fields.objectId = eventRecipeEntity->fields.eventPointItemId;
+  v78->fields.num = eventRecipeEntity->fields.eventPointNum * giftIds->max_length;
   viewChangeButton = (int *)*p_klass;
   if ( !*p_klass )
     goto LABEL_53;
-  v78 = *((_QWORD *)viewChangeButton + 2);
-  v79 = Method_System_Collections_Generic_List_GiftEntity__Add__;
+  v79 = *((_QWORD *)viewChangeButton + 2);
+  v80 = Method_System_Collections_Generic_List_GiftEntity__Add__;
   ++viewChangeButton[7];
-  if ( !v78 )
+  if ( !v79 )
     goto LABEL_53;
-  v80 = viewChangeButton[6];
-  if ( (unsigned int)v80 >= *(_DWORD *)(v78 + 24) )
+  v81 = viewChangeButton[6];
+  if ( (unsigned int)v81 >= *(_DWORD *)(v79 + 24) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)viewChangeButton,
-      (Il2CppObject *)v77,
-      *(const MethodInfo_35FC958 **)(*(_QWORD *)(v79[4] + 192LL) + 112LL));
+      (Il2CppObject *)v78,
+      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v80[4] + 192LL) + 112LL));
   }
   else
   {
-    v81 = v78 + 8 * v80;
-    viewChangeButton[6] = v80 + 1;
-    *(_QWORD *)(v81 + 32) = v77;
-    sub_1B8635C(v81 + 32);
+    v82 = v79 + 8 * v81;
+    viewChangeButton[6] = v81 + 1;
+    *(_QWORD *)(v82 + 32) = v78;
+    sub_1BDB81C(v82 + 32);
   }
-  v82 = (System_Action_int__o *)sub_1B86604(System_Action_int__TypeInfo);
-  System_Action_int____ctor(v82, v44, Method_RecipeRewardDialogComponent___c__DisplayClass42_0__Open_b__0__, 0LL);
+  v83 = (System_Action_int__o *)sub_1BDBAC4(System_Action_int__TypeInfo);
+  System_Action_int____ctor(v83, v44, Method_RecipeRewardDialogComponent___c__DisplayClass42_0__Open_b__0__, 0LL);
   BasicHelper__ForEach_int_(
     (System_Collections_Generic_IEnumerable_T__o *)giftIds,
-    (System_Action_T__o *)v82,
-    (const MethodInfo_2F59698 *)Method_BasicHelper_ForEach_int___);
+    (System_Action_T__o *)v83,
+    (const MethodInfo_301EDEC *)Method_BasicHelper_ForEach_int___);
   klass = v44[1].klass;
   if ( !klass )
     goto LABEL_53;
@@ -648,7 +650,7 @@ void __fastcall RecipeRewardDialogComponent__Open(
     goto LABEL_53;
   viewChangeButton = (int *)UnityEngine_Component__GetComponent_object_(
                               (UnityEngine_Component_o *)viewChangeButton,
-                              (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UIScrollBar___);
+                              (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_UIScrollBar___);
   if ( !viewChangeButton )
     goto LABEL_53;
   UIProgressBar__set_value((UIProgressBar_o *)viewChangeButton, 0.0, 0LL);
@@ -662,40 +664,40 @@ void __fastcall RecipeRewardDialogComponent__Open(
     (UnityEngine_GameObject_o *)viewChangeButton,
     this->fields.maxPlayCnt > this->fields.maxItemDrawNum,
     0LL);
-  v84 = &StringLiteral_13314/*"TUTORIAL_IMAGE_DIALOG_CLOSE"*/;
+  v85 = &StringLiteral_13511/*"TUTORIAL_IMAGE_DIALOG_CLOSE"*/;
   if ( pointRewards && pointRewards->max_length )
-    v84 = &StringLiteral_13315/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/;
+    v85 = &StringLiteral_13512/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/;
   viewChangeButton = (int *)this->fields.closeButton;
   if ( !viewChangeButton
     || (viewChangeButton = (int *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)viewChangeButton, 0LL)) == 0LL
     || (viewChangeButton = (int *)UnityEngine_Component__GetComponentsInChildren_object_(
                                     (UnityEngine_Component_o *)viewChangeButton,
                                     1,
-                                    (const MethodInfo_2F651AC *)Method_UnityEngine_Component_GetComponentsInChildren_UILabel____76107088)) == 0LL )
+                                    (const MethodInfo_302AE50 *)Method_UnityEngine_Component_GetComponentsInChildren_UILabel____77096344)) == 0LL )
   {
 LABEL_53:
-    sub_1B86614(viewChangeButton, v46);
+    sub_1BDBAD4(viewChangeButton, v46);
   }
   if ( !viewChangeButton[6] )
 LABEL_54:
-    sub_1B8661C(viewChangeButton, v46);
-  v85 = (UILabel_o *)*((_QWORD *)viewChangeButton + 4);
+    sub_1BDBADC(viewChangeButton, v46, v56);
+  v86 = (UILabel_o *)*((_QWORD *)viewChangeButton + 4);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  viewChangeButton = (int *)LocalizationManager__Get((System_String_o *)*v84, 0LL);
-  if ( !v85 )
+  viewChangeButton = (int *)LocalizationManager__Get((System_String_o *)*v85, 0LL);
+  if ( !v86 )
     goto LABEL_53;
-  UILabel__set_text(v85, (System_String_o *)viewChangeButton, 0LL);
+  UILabel__set_text(v86, (System_String_o *)viewChangeButton, 0LL);
   this->fields.closeCallbackFunc = closeCallback;
-  sub_1B8635C(&this->fields.closeCallbackFunc);
+  sub_1BDB81C(&this->fields.closeCallbackFunc);
   viewChangeButton = (int *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !viewChangeButton )
     goto LABEL_53;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)viewChangeButton, 1, 0LL);
-  v86 = (System_Collections_Generic_List_GiftEntity__o *)v44[1].klass;
-  v87 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
-  System_Action___ctor(v87, v44, Method_RecipeRewardDialogComponent___c__DisplayClass42_0__Open_b__1__, 0LL);
-  RecipeRewardDialogComponent__SetResultData(this, v86, eventRecipeEntity, v87, v88);
+  v87 = (System_Collections_Generic_List_GiftEntity__o *)v44[1].klass;
+  v88 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  System_Action___ctor(v88, v44, Method_RecipeRewardDialogComponent___c__DisplayClass42_0__Open_b__1__, 0LL);
+  RecipeRewardDialogComponent__SetResultData(this, v87, eventRecipeEntity, v88, v89);
 }
 
 
@@ -716,25 +718,25 @@ void __fastcall RecipeRewardDialogComponent__SetResultData(
   __int64 v16; // x1
   System_Action_object__o *v17; // x22
 
-  if ( (byte_4A48ECF & 1) == 0 )
+  if ( (byte_4B3F20A & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_GiftEntity__TypeInfo, giftList);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UIGrid___, v9);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UIScrollView___, v10);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GiftEntity__ForEach__, v11);
-    sub_1B863B8(&Method_RecipeRewardDialogComponent___c__DisplayClass43_0__SetResultData_b__0__, v12);
-    sub_1B863B8(&RecipeRewardDialogComponent___c__DisplayClass43_0_TypeInfo, v13);
-    byte_4A48ECF = 1;
+    sub_1BDB878(&System_Action_GiftEntity__TypeInfo, giftList);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_UIGrid___, v9);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_UIScrollView___, v10);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GiftEntity__ForEach__, v11);
+    sub_1BDB878(&Method_RecipeRewardDialogComponent___c__DisplayClass43_0__SetResultData_b__0__, v12);
+    sub_1BDB878(&RecipeRewardDialogComponent___c__DisplayClass43_0_TypeInfo, v13);
+    byte_4B3F20A = 1;
   }
-  v14 = (Il2CppObject *)sub_1B86604(RecipeRewardDialogComponent___c__DisplayClass43_0_TypeInfo);
+  v14 = (Il2CppObject *)sub_1BDBAC4(RecipeRewardDialogComponent___c__DisplayClass43_0_TypeInfo);
   System_Object___ctor(v14, 0LL);
   if ( !v14 )
     goto LABEL_12;
   v14[1].klass = (Il2CppClass *)this;
-  sub_1B8635C(&v14[1]);
+  sub_1BDB81C(&v14[1]);
   v14[1].monitor = eventRecipeEntity;
-  sub_1B8635C(&v14[1].monitor);
-  v17 = (System_Action_object__o *)sub_1B86604(System_Action_GiftEntity__TypeInfo);
+  sub_1BDB81C(&v14[1].monitor);
+  v17 = (System_Action_object__o *)sub_1BDBAC4(System_Action_GiftEntity__TypeInfo);
   System_Action_object____ctor(
     v17,
     v14,
@@ -745,27 +747,27 @@ void __fastcall RecipeRewardDialogComponent__SetResultData(
   System_Collections_Generic_List_object___ForEach(
     (System_Collections_Generic_List_object__o *)giftList,
     (System_Action_T__o *)v17,
-    (const MethodInfo_35FD398 *)Method_System_Collections_Generic_List_GiftEntity__ForEach__);
+    (const MethodInfo_36D6804 *)Method_System_Collections_Generic_List_GiftEntity__ForEach__);
   scrollView = (UnityEngine_Component_o *)this->fields.scrollView;
   if ( !scrollView
     || (scrollView = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                   scrollView,
-                                                  (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UIScrollView___)) == 0LL
+                                                  (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_UIScrollView___)) == 0LL
     || (UIScrollView__ResetPosition((UIScrollView_o *)scrollView, 0LL),
         (scrollView = (UnityEngine_Component_o *)this->fields.listRoot) == 0LL)
     || (scrollView = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                   scrollView,
-                                                  (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0LL
+                                                  (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0LL
     || (((void (__fastcall *)(UnityEngine_Component_o *, Il2CppClass *))scrollView->klass[1]._1.castClass)(
           scrollView,
           scrollView->klass[1]._1.declaringType),
         (scrollView = (UnityEngine_Component_o *)this->fields.iconListRoot) == 0LL)
     || (scrollView = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                   scrollView,
-                                                  (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0LL )
+                                                  (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0LL )
   {
 LABEL_12:
-    sub_1B86614(scrollView, v16);
+    sub_1BDBAD4(scrollView, v16);
   }
   ((void (__fastcall *)(UnityEngine_Component_o *, Il2CppClass *))scrollView->klass[1]._1.castClass)(
     scrollView,
@@ -780,16 +782,16 @@ System_Collections_IEnumerator_o *__fastcall RecipeRewardDialogComponent__StartD
 {
   __int64 v3; // x20
 
-  if ( (byte_4A48ED0 & 1) == 0 )
+  if ( (byte_4B3F20B & 1) == 0 )
   {
-    sub_1B863B8(&RecipeRewardDialogComponent__StartDisp_d__44_TypeInfo, method);
-    byte_4A48ED0 = 1;
+    sub_1BDB878(&RecipeRewardDialogComponent__StartDisp_d__44_TypeInfo, method);
+    byte_4B3F20B = 1;
   }
-  v3 = sub_1B86604(RecipeRewardDialogComponent__StartDisp_d__44_TypeInfo);
+  v3 = sub_1BDBAC4(RecipeRewardDialogComponent__StartDisp_d__44_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B8635C(v3 + 32);
+  sub_1BDB81C(v3 + 32);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -801,18 +803,18 @@ System_Collections_IEnumerator_o *__fastcall RecipeRewardDialogComponent__StartR
 {
   __int64 v5; // x21
 
-  if ( (byte_4A48ED1 & 1) == 0 )
+  if ( (byte_4B3F20C & 1) == 0 )
   {
-    sub_1B863B8(&RecipeRewardDialogComponent__StartRewardAction_d__45_TypeInfo, rewardAction);
-    byte_4A48ED1 = 1;
+    sub_1BDB878(&RecipeRewardDialogComponent__StartRewardAction_d__45_TypeInfo, rewardAction);
+    byte_4B3F20C = 1;
   }
-  v5 = sub_1B86604(RecipeRewardDialogComponent__StartRewardAction_d__45_TypeInfo);
+  v5 = sub_1BDBAC4(RecipeRewardDialogComponent__StartRewardAction_d__45_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1B8635C(v5 + 32);
+  sub_1BDB81C(v5 + 32);
   *(_QWORD *)(v5 + 40) = rewardAction;
-  sub_1B8635C(v5 + 40);
+  sub_1BDB81C(v5 + 40);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -825,10 +827,10 @@ UnityEngine_GameObject_o *__fastcall RecipeRewardDialogComponent__get_closeBtnOb
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4A48ED6 & 1) == 0 )
+  if ( (byte_4B3F211 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
-    byte_4A48ED6 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3F211 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -837,7 +839,7 @@ UnityEngine_GameObject_o *__fastcall RecipeRewardDialogComponent__get_closeBtnOb
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1B86614(0LL, v4);
+    sub_1BDBAD4(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -863,14 +865,14 @@ void __fastcall RecipeRewardDialogComponent_GetEffect___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8635C(&this->fields.method);
+  sub_1BDB81C(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B86478(v6) & 1) != 0 )
+  if ( (sub_1BDB938(v6) & 1) != 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = (Il2CppObject *)sub_19CA7A0;
+      v9 = (Il2CppObject *)sub_1A1CAA4;
 LABEL_16:
       this->fields.m_target = v9;
       goto LABEL_17;
@@ -882,41 +884,41 @@ LABEL_16:
     {
       if ( LOBYTE(this[1].fields.method_ptr) )
       {
-        v11 = sub_1B86470(v6);
-        v12 = sub_1B8692C(v6);
+        v11 = sub_1BDB930(v6);
+        v12 = sub_1BDBDEC(v6);
         if ( (v11 & 1) != 0 )
         {
           if ( (v12 & 1) != 0 )
-            v9 = (Il2CppObject *)sub_19CA89C;
+            v9 = (Il2CppObject *)sub_1A1CBA0;
           else
-            v9 = (Il2CppObject *)sub_19CA860;
+            v9 = (Il2CppObject *)sub_1A1CB64;
         }
         else if ( (v12 & 1) != 0 )
         {
-          v9 = (Il2CppObject *)sub_19CA7DC;
+          v9 = (Il2CppObject *)sub_1A1CAE0;
         }
         else
         {
-          v9 = (Il2CppObject *)sub_19CA7B0;
+          v9 = (Il2CppObject *)sub_1A1CAB4;
         }
       }
       else
       {
-        v9 = (Il2CppObject *)sub_19CA780;
+        v9 = (Il2CppObject *)sub_1A1CA84;
       }
       goto LABEL_16;
     }
     if ( !object )
     {
-      v13 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B864E0(v13, 0LL);
+      v13 = sub_1BDBAF0(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BDB9A0(v13, 0LL);
     }
   }
   v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
   this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
   this->fields.original_method_info = v10;
 LABEL_17:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19CA730;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A1CA34;
 }
 
 
@@ -930,7 +932,7 @@ System_IAsyncResult_o *__fastcall RecipeRewardDialogComponent_GetEffect__BeginIn
   UnityEngine_Transform_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = parenTransform;
-  return (System_IAsyncResult_o *)sub_1B8636C(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1BDB82C(this, &v6, callback, object);
 }
 
 
@@ -939,7 +941,7 @@ UnityEngine_GameObject_o *__fastcall RecipeRewardDialogComponent_GetEffect__EndI
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  return (UnityEngine_GameObject_o *)sub_1B86370(result, 0LL, method);
+  return (UnityEngine_GameObject_o *)sub_1BDB830(result, 0LL, method);
 }
 
 
@@ -1026,25 +1028,25 @@ bool __fastcall RecipeRewardDialogComponent__StartDisp_d__44__MoveNext(
   System_Collections_Generic_List_Enumerator_object__o v48; // [xsp+8h] [xbp-68h] BYREF
 
   v2 = this;
-  if ( (byte_4A48EDE & 1) == 0 )
+  if ( (byte_4B3F219 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UIGrid___, method);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UIScrollBar___, v3);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v4);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v5);
-    sub_1B863B8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v6);
-    sub_1B863B8(&Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__Add__, v7);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v8);
-    sub_1B863B8(&Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction___ctor__, v9);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GameObject__get_Count__, v10);
-    sub_1B863B8(&Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__get_Count__, v11);
-    sub_1B863B8(&Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__get_Item__, v12);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GameObject__get_Item__, v13);
-    sub_1B863B8(&System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__TypeInfo, v14);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v15);
-    sub_1B863B8(&RecipeRewardDialogComponent_RewardAction_TypeInfo, v16);
-    this = (RecipeRewardDialogComponent__StartDisp_d__44_o *)sub_1B863B8(&UnityEngine_WaitForSeconds_TypeInfo, v17);
-    byte_4A48EDE = 1;
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_UIGrid___, method);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_UIScrollBar___, v3);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v4);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v5);
+    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v6);
+    sub_1BDB878(&Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__Add__, v7);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v8);
+    sub_1BDB878(&Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction___ctor__, v9);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GameObject__get_Count__, v10);
+    sub_1BDB878(&Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__get_Count__, v11);
+    sub_1BDB878(&Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__get_Item__, v12);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GameObject__get_Item__, v13);
+    sub_1BDB878(&System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__TypeInfo, v14);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v15);
+    sub_1BDB878(&RecipeRewardDialogComponent_RewardAction_TypeInfo, v16);
+    this = (RecipeRewardDialogComponent__StartDisp_d__44_o *)sub_1BDB878(&UnityEngine_WaitForSeconds_TypeInfo, v17);
+    byte_4B3F219 = 1;
   }
   memset(&v48, 0, sizeof(v48));
   _4__this = v2->fields.__4__this;
@@ -1052,10 +1054,10 @@ bool __fastcall RecipeRewardDialogComponent__StartDisp_d__44__MoveNext(
   {
     case 0:
       v2->fields.__1__state = -1;
-      v19 = (UnityEngine_WaitForSeconds_o *)sub_1B86604(UnityEngine_WaitForSeconds_TypeInfo);
+      v19 = (UnityEngine_WaitForSeconds_o *)sub_1BDBAC4(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v19, 0.3, 0LL);
       v2->fields.__2__current = (Il2CppObject *)v19;
-      sub_1B8635C(&v2->fields.__2__current);
+      sub_1BDB81C(&v2->fields.__2__current);
       result = 1;
       v2->fields.__1__state = 1;
       return result;
@@ -1077,7 +1079,7 @@ bool __fastcall RecipeRewardDialogComponent__StartDisp_d__44__MoveNext(
         goto LABEL_59;
       this = (RecipeRewardDialogComponent__StartDisp_d__44_o *)UnityEngine_Component__GetComponent_object_(
                                                                  (UnityEngine_Component_o *)this,
-                                                                 (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+                                                                 (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_UIGrid___);
       if ( !this )
         goto LABEL_59;
       listRewardAction_5__2_high = HIDWORD(this->fields._listRewardAction_5__2);
@@ -1090,7 +1092,7 @@ bool __fastcall RecipeRewardDialogComponent__StartDisp_d__44__MoveNext(
         goto LABEL_59;
       this = (RecipeRewardDialogComponent__StartDisp_d__44_o *)UnityEngine_Component__GetComponent_object_(
                                                                  (UnityEngine_Component_o *)this,
-                                                                 (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UIScrollBar___);
+                                                                 (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_UIScrollBar___);
       if ( !this )
         goto LABEL_59;
       v24 = (UIProgressBar_o *)this;
@@ -1098,7 +1100,7 @@ bool __fastcall RecipeRewardDialogComponent__StartDisp_d__44__MoveNext(
       UIProgressBar__set_value(v24, (float)(1.0 / (float)((float)((float)v23 * 0.5) + -1.0)) + value, 0LL);
       v2->fields.__2__current = 0LL;
       p__2__current = &v2->fields.__2__current;
-      sub_1B8635C(p__2__current);
+      sub_1BDB81C(p__2__current);
       v27 = 4;
       goto LABEL_76;
     case 4:
@@ -1110,15 +1112,15 @@ bool __fastcall RecipeRewardDialogComponent__StartDisp_d__44__MoveNext(
   while ( 1 )
   {
     v2->fields._listRewardAction_5__2 = 0LL;
-    sub_1B8635C(&v2->fields._listRewardAction_5__2);
+    sub_1BDB81C(&v2->fields._listRewardAction_5__2);
 LABEL_19:
-    v28 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__TypeInfo);
+    v28 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v28,
-      (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction___ctor__);
+      (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction___ctor__);
     v2->fields._listRewardAction_5__2 = (struct System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__o *)v28;
     p_listRewardAction_5__2 = (RecipeRewardDialogComponent__StartDisp_d__44_o **)&v2->fields._listRewardAction_5__2;
-    this = (RecipeRewardDialogComponent__StartDisp_d__44_o *)sub_1B8635C(&v2->fields._listRewardAction_5__2);
+    this = (RecipeRewardDialogComponent__StartDisp_d__44_o *)sub_1BDB81C(&v2->fields._listRewardAction_5__2);
     if ( !_4__this )
       goto LABEL_59;
     if ( _4__this->fields.maxItemDrawNum >= 1 )
@@ -1128,7 +1130,7 @@ LABEL_19:
       {
         if ( v30 + _4__this->fields.playCnt >= _4__this->fields.maxPlayCnt )
           break;
-        v31 = sub_1B86604(RecipeRewardDialogComponent_RewardAction_TypeInfo);
+        v31 = sub_1BDBAC4(RecipeRewardDialogComponent_RewardAction_TypeInfo);
         System_Object___ctor((Il2CppObject *)v31, 0LL);
         if ( !v31 )
           goto LABEL_59;
@@ -1148,14 +1150,14 @@ LABEL_19:
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)this,
             (Il2CppObject *)v31,
-            *(const MethodInfo_35FC958 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+            *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
         }
         else
         {
           v35 = v32 + 8 * _2__current_low;
           LODWORD(this->fields.__2__current) = _2__current_low + 1;
           *(_QWORD *)(v35 + 32) = v31;
-          sub_1B8635C(v35 + 32);
+          sub_1BDB81C(v35 + 32);
         }
         ++v30;
       }
@@ -1174,26 +1176,26 @@ LABEL_19:
         this = (RecipeRewardDialogComponent__StartDisp_d__44_o *)System_Collections_Generic_List_object___get_Item(
                                                                    (System_Collections_Generic_List_object__o *)this,
                                                                    v37,
-                                                                   (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__get_Item__);
+                                                                   (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__get_Item__);
         if ( !*p_listRewardAction_5__2 )
           goto LABEL_59;
         v38 = this;
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)*p_listRewardAction_5__2,
                  v37,
-                 (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__get_Item__);
+                 (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__get_Item__);
         started = RecipeRewardDialogComponent__StartRewardAction(
                     _4__this,
                     (RecipeRewardDialogComponent_RewardAction_o *)Item,
                     v40);
-        this = (RecipeRewardDialogComponent__StartDisp_d__44_o *)UnityEngine_MonoBehaviour__StartCoroutine_69341456(
+        this = (RecipeRewardDialogComponent__StartDisp_d__44_o *)UnityEngine_MonoBehaviour__StartCoroutine_70269772(
                                                                    (UnityEngine_MonoBehaviour_o *)_4__this,
                                                                    started,
                                                                    0LL);
         if ( !v38 )
           goto LABEL_59;
         v38->fields.__4__this = (struct RecipeRewardDialogComponent_o *)this;
-        sub_1B8635C(&v38->fields.__4__this);
+        sub_1BDB81C(&v38->fields.__4__this);
         this = *p_listRewardAction_5__2;
         if ( !*p_listRewardAction_5__2 )
           goto LABEL_59;
@@ -1204,7 +1206,7 @@ LABEL_37:
     this = (RecipeRewardDialogComponent__StartDisp_d__44_o *)System_Collections_Generic_List_object___get_Item(
                                                                (System_Collections_Generic_List_object__o *)this,
                                                                LODWORD(this->fields.__2__current) - 1,
-                                                               (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__get_Item__);
+                                                               (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__get_Item__);
     if ( !this )
       goto LABEL_59;
     if ( LOBYTE(this->fields.__2__current) )
@@ -1229,10 +1231,10 @@ LABEL_43:
           this = (RecipeRewardDialogComponent__StartDisp_d__44_o *)System_Collections_Generic_List_object___get_Item(
                                                                      (System_Collections_Generic_List_object__o *)this,
                                                                      v43,
-                                                                     (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__get_Item__);
+                                                                     (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_RecipeRewardDialogComponent_RewardAction__get_Item__);
           if ( this )
           {
-            UnityEngine_MonoBehaviour__StopCoroutine_69342076(
+            UnityEngine_MonoBehaviour__StopCoroutine_70270392(
               (UnityEngine_MonoBehaviour_o *)_4__this,
               (UnityEngine_Coroutine_o *)this->fields.__4__this,
               0LL);
@@ -1252,7 +1254,7 @@ LABEL_43:
             this = (RecipeRewardDialogComponent__StartDisp_d__44_o *)System_Collections_Generic_List_object___get_Item(
                                                                        (System_Collections_Generic_List_object__o *)this,
                                                                        v44,
-                                                                       (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                       (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
             if ( this )
             {
               UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
@@ -1269,7 +1271,7 @@ LABEL_43:
           {
             this = (RecipeRewardDialogComponent__StartDisp_d__44_o *)UnityEngine_Component__GetComponent_object_(
                                                                        (UnityEngine_Component_o *)this,
-                                                                       (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UIScrollBar___);
+                                                                       (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_UIScrollBar___);
             if ( this )
             {
               UIProgressBar__set_value((UIProgressBar_o *)this, 1.0, 0LL);
@@ -1284,10 +1286,10 @@ LABEL_63:
                   System_Collections_Generic_List_object___GetEnumerator(
                     (System_Collections_Generic_List_Enumerator_T__o *)&v48,
                     (System_Collections_Generic_List_object__o *)this,
-                    (const MethodInfo_35FD450 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+                    (const MethodInfo_36D68BC *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
                   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                             &v48,
-                            (const MethodInfo_3398634 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+                            (const MethodInfo_346A2A4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
                   {
                     current = v48.fields._current;
                     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1296,12 +1298,12 @@ LABEL_63:
                     {
                       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                      UnityEngine_Object__Destroy_69356292((UnityEngine_Object_o *)current, 0LL);
+                      UnityEngine_Object__Destroy_70284200((UnityEngine_Object_o *)current, 0LL);
                     }
                   }
                   System_Collections_Generic_List_Enumerator_object___Dispose(
                     &v48,
-                    (const MethodInfo_3398630 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+                    (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
                   return 0;
                 }
               }
@@ -1310,7 +1312,7 @@ LABEL_63:
         }
       }
 LABEL_59:
-      sub_1B86614(this, method);
+      sub_1BDBAD4(this, method);
     }
     playCnt = _4__this->fields.playCnt;
     if ( playCnt >= _4__this->fields.maxPlayCnt )
@@ -1318,18 +1320,18 @@ LABEL_59:
     if ( playCnt != 1 && !(playCnt % _4__this->fields.maxItemDrawNum) )
     {
       scrollWait = _4__this->fields.scrollWait;
-      v47 = (UnityEngine_WaitForSeconds_o *)sub_1B86604(UnityEngine_WaitForSeconds_TypeInfo);
+      v47 = (UnityEngine_WaitForSeconds_o *)sub_1BDBAC4(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v47, scrollWait, 0LL);
       v2->fields.__2__current = (Il2CppObject *)v47;
       p__2__current = &v2->fields.__2__current;
-      sub_1B8635C(p__2__current);
+      sub_1BDB81C(p__2__current);
       v27 = 3;
       goto LABEL_76;
     }
   }
   v2->fields.__2__current = 0LL;
   p__2__current = &v2->fields.__2__current;
-  sub_1B8635C(p__2__current);
+  sub_1BDB81C(p__2__current);
   v27 = 2;
 LABEL_76:
   *((_DWORD *)p__2__current - 2) = v27;
@@ -1353,11 +1355,11 @@ void __fastcall __noreturn RecipeRewardDialogComponent__StartDisp_d__44__System_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B863CC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B86604(v2);
+  v2 = sub_1BDB88C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BDBAC4(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B863CC(&Method_RecipeRewardDialogComponent__StartDisp_d__44_System_Collections_IEnumerator_Reset__);
-  sub_1B864E0(v3, v4);
+  v4 = sub_1BDB88C(&Method_RecipeRewardDialogComponent__StartDisp_d__44_System_Collections_IEnumerator_Reset__);
+  sub_1BDB9A0(v3, v4);
 }
 
 
@@ -1422,14 +1424,14 @@ bool __fastcall RecipeRewardDialogComponent__StartRewardAction_d__45__MoveNext(
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4A48EDF & 1) == 0 )
+  if ( (byte_4B3F21A & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Collections_Generic_List_GameObject__Add__, method);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GameObject__get_Item__, v3);
-    this = (RecipeRewardDialogComponent__StartRewardAction_d__45_o *)sub_1B863B8(
+    sub_1BDB878(&Method_System_Collections_Generic_List_GameObject__Add__, method);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GameObject__get_Item__, v3);
+    this = (RecipeRewardDialogComponent__StartRewardAction_d__45_o *)sub_1BDB878(
                                                                        &UnityEngine_WaitForSeconds_TypeInfo,
                                                                        v4);
-    byte_4A48EDF = 1;
+    byte_4B3F21A = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -1450,7 +1452,7 @@ bool __fastcall RecipeRewardDialogComponent__StartRewardAction_d__45__MoveNext(
       this = (RecipeRewardDialogComponent__StartRewardAction_d__45_o *)System_Collections_Generic_List_object___get_Item(
                                                                          (System_Collections_Generic_List_object__o *)this,
                                                                          rewardAction->fields.playCnt,
-                                                                         (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                         (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !this )
         goto LABEL_40;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
@@ -1464,7 +1466,7 @@ bool __fastcall RecipeRewardDialogComponent__StartRewardAction_d__45__MoveNext(
         this = (RecipeRewardDialogComponent__StartRewardAction_d__45_o *)System_Collections_Generic_List_object___get_Item(
                                                                            (System_Collections_Generic_List_object__o *)this,
                                                                            v8->fields.playCnt,
-                                                                           (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                           (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
         if ( this )
         {
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
@@ -1479,7 +1481,7 @@ bool __fastcall RecipeRewardDialogComponent__StartRewardAction_d__45__MoveNext(
       }
     }
 LABEL_40:
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   }
   if ( _1__state == 1 )
   {
@@ -1501,11 +1503,11 @@ LABEL_40:
   if ( _1__state < v12->fields.index )
   {
     itemDispWaitTime = _4__this->fields.itemDispWaitTime;
-    v14 = (UnityEngine_WaitForSeconds_o *)sub_1B86604(UnityEngine_WaitForSeconds_TypeInfo);
+    v14 = (UnityEngine_WaitForSeconds_o *)sub_1BDBAC4(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v14, itemDispWaitTime, 0LL);
     v2->fields.__2__current = (Il2CppObject *)v14;
     p__2__current = &v2->fields.__2__current;
-    sub_1B8635C(p__2__current);
+    sub_1BDB81C(p__2__current);
     result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
     return result;
@@ -1517,7 +1519,7 @@ LABEL_40:
   Item = System_Collections_Generic_List_object___get_Item(
            (System_Collections_Generic_List_object__o *)this,
            v12->fields.playCnt,
-           (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+           (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
   this = (RecipeRewardDialogComponent__StartRewardAction_d__45_o *)GameObjectExtensions__GetParent(
                                                                      (UnityEngine_GameObject_o *)Item,
                                                                      0LL);
@@ -1548,7 +1550,7 @@ LABEL_40:
   this = (RecipeRewardDialogComponent__StartRewardAction_d__45_o *)System_Collections_Generic_List_object___get_Item(
                                                                      (System_Collections_Generic_List_object__o *)this,
                                                                      v19->fields.playCnt,
-                                                                     (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                     (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
   if ( !this )
     goto LABEL_40;
   this = (RecipeRewardDialogComponent__StartRewardAction_d__45_o *)UnityEngine_GameObject__get_transform(
@@ -1583,21 +1585,21 @@ LABEL_40:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)v18,
-      *(const MethodInfo_35FC958 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
   }
   else
   {
     v27 = v24 + 8 * _2__current_low;
     LODWORD(this->fields.__2__current) = _2__current_low + 1;
     *(_QWORD *)(v27 + 32) = v18;
-    sub_1B8635C(v27 + 32);
+    sub_1BDB81C(v27 + 32);
   }
   v28 = _4__this->fields.itemDispWaitTime;
-  v29 = (UnityEngine_WaitForSeconds_o *)sub_1B86604(UnityEngine_WaitForSeconds_TypeInfo);
+  v29 = (UnityEngine_WaitForSeconds_o *)sub_1BDBAC4(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v29, v28, 0LL);
   v2->fields.__2__current = (Il2CppObject *)v29;
   v30 = &v2->fields.__2__current;
-  sub_1B8635C(v30);
+  sub_1BDB81C(v30);
   *((_DWORD *)v30 - 2) = 2;
   return 1;
 }
@@ -1619,11 +1621,11 @@ void __fastcall __noreturn RecipeRewardDialogComponent__StartRewardAction_d__45_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B863CC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B86604(v2);
+  v2 = sub_1BDB88C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BDBAC4(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B863CC(&Method_RecipeRewardDialogComponent__StartRewardAction_d__45_System_Collections_IEnumerator_Reset__);
-  sub_1B864E0(v3, v4);
+  v4 = sub_1BDB88C(&Method_RecipeRewardDialogComponent__StartRewardAction_d__45_System_Collections_IEnumerator_Reset__);
+  sub_1BDB9A0(v3, v4);
 }
 
 
@@ -1648,15 +1650,15 @@ void __fastcall RecipeRewardDialogComponent___c___cctor(const MethodInfo *method
   __int64 v1; // x1
   Il2CppObject *v2; // x19
 
-  if ( (byte_4A48ED8 & 1) == 0 )
+  if ( (byte_4B3F213 & 1) == 0 )
   {
-    sub_1B863B8(&RecipeRewardDialogComponent___c_TypeInfo, v1);
-    byte_4A48ED8 = 1;
+    sub_1BDB878(&RecipeRewardDialogComponent___c_TypeInfo, v1);
+    byte_4B3F213 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(RecipeRewardDialogComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BDBAC4(RecipeRewardDialogComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   RecipeRewardDialogComponent___c_TypeInfo->static_fields->__9 = (struct RecipeRewardDialogComponent___c_o *)v2;
-  sub_1B8635C(RecipeRewardDialogComponent___c_TypeInfo->static_fields);
+  sub_1BDB81C(RecipeRewardDialogComponent___c_TypeInfo->static_fields);
 }
 
 
@@ -1673,14 +1675,14 @@ void __fastcall RecipeRewardDialogComponent___c___ClickSkip_b__46_0(
         UnityEngine_GameObject_o *x,
         const MethodInfo *method)
 {
-  if ( (byte_4A48ED9 & 1) == 0 )
+  if ( (byte_4B3F214 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, x);
-    byte_4A48ED9 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, x);
+    byte_4B3F214 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_69356292((UnityEngine_Object_o *)x, 0LL);
+  UnityEngine_Object__Destroy_70284200((UnityEngine_Object_o *)x, 0LL);
 }
 
 
@@ -1704,27 +1706,27 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass42_0___Open_b__0(
   GiftEntity_array *Instance; // x0
   __int64 v9; // x1
 
-  if ( (byte_4A48EDA & 1) == 0 )
+  if ( (byte_4B3F215 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_GiftMaster___, *(_QWORD *)&id);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GiftEntity__AddRange__, v5);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4A48EDA = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_GiftMaster___, *(_QWORD *)&id);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GiftEntity__AddRange__, v5);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4B3F215 = 1;
   }
   giftList = this->fields.giftList;
-  Instance = (GiftEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (GiftEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (GiftEntity_array *)DataManager__GetMasterData_object_(
                                          (DataManager_o *)Instance,
-                                         (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL
+                                         (const MethodInfo_303395C *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL
     || (Instance = GiftMaster__GetGiftListById((GiftMaster_o *)Instance, id, 0LL), !giftList) )
   {
-    sub_1B86614(Instance, v9);
+    sub_1BDBAD4(Instance, v9);
   }
   System_Collections_Generic_List_object___AddRange(
     (System_Collections_Generic_List_object__o *)giftList,
     (System_Collections_Generic_IEnumerable_T__o *)Instance,
-    (const MethodInfo_35FCB64 *)Method_System_Collections_Generic_List_GiftEntity__AddRange__);
+    (const MethodInfo_36D5FD0 *)Method_System_Collections_Generic_List_GiftEntity__AddRange__);
 }
 
 
@@ -1738,25 +1740,25 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass42_0___Open_b__1(
   System_Action_o *klass; // x22
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4A48EDB & 1) == 0 )
+  if ( (byte_4B3F216 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    this = (RecipeRewardDialogComponent___c__DisplayClass42_0_o *)sub_1B863B8(
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    this = (RecipeRewardDialogComponent___c__DisplayClass42_0_o *)sub_1BDB878(
                                                                     &Method_RecipeRewardDialogComponent___c__DisplayClass42_0__Open_b__2__,
                                                                     v3);
-    byte_4A48EDB = 1;
+    byte_4B3F216 = 1;
   }
   monitor = (BaseDialog_o *)v2[1].monitor;
   if ( !monitor )
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   HIDWORD(monitor[3].fields.basePanelList) = 2;
   klass = (System_Action_o *)v2[2].klass;
   if ( !klass )
   {
-    klass = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+    klass = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
     System_Action___ctor(klass, v2, Method_RecipeRewardDialogComponent___c__DisplayClass42_0__Open_b__2__, 0LL);
     v2[2].klass = (Il2CppClass *)klass;
-    sub_1B8635C(&v2[2]);
+    sub_1BDB81C(&v2[2]);
   }
   BaseDialog__Open(monitor, klass, 0, 0LL);
 }
@@ -1768,15 +1770,15 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass42_0___Open_b__2(
 {
   UnityEngine_MonoBehaviour_o *_4__this; // x0
 
-  if ( (byte_4A48EDC & 1) == 0 )
+  if ( (byte_4B3F217 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_12830/*"StartDisp"*/, method);
-    byte_4A48EDC = 1;
+    sub_1BDB878(&StringLiteral_13022/*"StartDisp"*/, method);
+    byte_4B3F217 = 1;
   }
   _4__this = (UnityEngine_MonoBehaviour_o *)this->fields.__4__this;
   if ( !_4__this )
-    sub_1B86614(0LL, method);
-  UnityEngine_MonoBehaviour__StartCoroutine(_4__this, (System_String_o *)StringLiteral_12830/*"StartDisp"*/, 0LL);
+    sub_1BDBAD4(0LL, method);
+  UnityEngine_MonoBehaviour__StartCoroutine(_4__this, (System_String_o *)StringLiteral_13022/*"StartDisp"*/, 0LL);
 }
 
 
@@ -1840,17 +1842,17 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass43_0___SetResultDat
   UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4A48EDD & 1) == 0 )
+  if ( (byte_4B3F218 & 1) == 0 )
   {
-    sub_1B863B8(&AtlasManager_TypeInfo, gift);
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___, v5);
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v6);
-    sub_1B863B8(&int_TypeInfo, v7);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GameObject__Add__, v8);
-    sub_1B863B8(&Method_UnityEngine_Object_Instantiate_GameObject___, v9);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v10);
-    this = (RecipeRewardDialogComponent___c__DisplayClass43_0_o *)sub_1B863B8(&StringLiteral_19987/*"icon_{0}"*/, v11);
-    byte_4A48EDD = 1;
+    sub_1BDB878(&AtlasManager_TypeInfo, gift);
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___, v5);
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_UISprite___, v6);
+    sub_1BDB878(&int_TypeInfo, v7);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GameObject__Add__, v8);
+    sub_1BDB878(&Method_UnityEngine_Object_Instantiate_GameObject___, v9);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v10);
+    this = (RecipeRewardDialogComponent___c__DisplayClass43_0_o *)sub_1BDB878(&StringLiteral_20269/*"icon_{0}"*/, v11);
+    byte_4B3F218 = 1;
   }
   _4__this = v4->fields.__4__this;
   if ( !_4__this )
@@ -1860,7 +1862,7 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass43_0___SetResultDat
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (RecipeRewardDialogComponent___c__DisplayClass43_0_o *)UnityEngine_Object__Instantiate_object_(
                                                                   prefabResultItem,
-                                                                  (const MethodInfo_2FF5DC4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                                  (const MethodInfo_30BDAA4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !this )
     goto LABEL_45;
   v14 = this;
@@ -1875,10 +1877,10 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass43_0___SetResultDat
                                                                   (UnityEngine_GameObject_o *)v14,
                                                                   0LL);
   v16 = this;
-  if ( !byte_4A487E1 )
+  if ( !byte_4B3E911 )
   {
-    this = (RecipeRewardDialogComponent___c__DisplayClass43_0_o *)sub_1B863B8(&UnityEngine_Vector3_TypeInfo, gift);
-    byte_4A487E1 = 1;
+    this = (RecipeRewardDialogComponent___c__DisplayClass43_0_o *)sub_1BDB878(&UnityEngine_Vector3_TypeInfo, gift);
+    byte_4B3E911 = 1;
   }
   if ( !v16 )
     goto LABEL_45;
@@ -1900,14 +1902,14 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass43_0___SetResultDat
   UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v48, 0LL);
   this = (RecipeRewardDialogComponent___c__DisplayClass43_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                   (UnityEngine_GameObject_o *)v14,
-                                                                  (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                                                                  (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
   if ( !gift )
     goto LABEL_45;
   v18 = (ItemIconComponent_o *)this;
   if ( !this )
     goto LABEL_45;
   v19 = gift->fields.num <= 1 ? -1 : gift->fields.num;
-  ItemIconComponent__SetGift_39099496(
+  ItemIconComponent__SetGift_39935088(
     (ItemIconComponent_o *)this,
     gift->fields.type,
     gift->fields.objectId,
@@ -1932,14 +1934,14 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass43_0___SetResultDat
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)v14,
-      *(const MethodInfo_35FC958 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
   }
   else
   {
     v24 = &v21->klass + eventRecipeEntity_low;
     LODWORD(this->fields.eventRecipeEntity) = eventRecipeEntity_low + 1;
     v24[4] = (RecipeRewardDialogComponent_c *)v14;
-    this = (RecipeRewardDialogComponent___c__DisplayClass43_0_o *)sub_1B8635C(v24 + 4);
+    this = (RecipeRewardDialogComponent___c__DisplayClass43_0_o *)sub_1BDB81C(v24 + 4);
   }
   v25 = v4->fields.__4__this;
   if ( !v25 )
@@ -1949,7 +1951,7 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass43_0___SetResultDat
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (RecipeRewardDialogComponent___c__DisplayClass43_0_o *)UnityEngine_Object__Instantiate_object_(
                                                                   prefabTeaItem,
-                                                                  (const MethodInfo_2FF5DC4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                                  (const MethodInfo_30BDAA4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !this )
     goto LABEL_45;
   v27 = this;
@@ -1986,7 +1988,7 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass43_0___SetResultDat
   UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v49, 0LL);
   this = (RecipeRewardDialogComponent___c__DisplayClass43_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                   (UnityEngine_GameObject_o *)v27,
-                                                                  (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                                                  (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   eventRecipeEntity = v4->fields.eventRecipeEntity;
   if ( !eventRecipeEntity )
     goto LABEL_45;
@@ -1994,10 +1996,10 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass43_0___SetResultDat
   eventId = eventRecipeEntity->fields.eventId;
   iconId = eventRecipeEntity->fields.iconId;
   v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconId, v34, v35, v36);
-  v41 = System_String__Format((System_String_o *)StringLiteral_19987/*"icon_{0}"*/, v40, 0LL);
+  v41 = System_String__Format((System_String_o *)StringLiteral_20269/*"icon_{0}"*/, v40, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_38815864(eventId, v38, v41, 0LL);
+  AtlasManager__SetEventUI_39626228(eventId, v38, v41, 0LL);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v27, 1, 0LL);
   v42 = v4->fields.__4__this;
   if ( !v42
@@ -2008,7 +2010,7 @@ void __fastcall RecipeRewardDialogComponent___c__DisplayClass43_0___SetResultDat
         !v43) )
   {
 LABEL_45:
-    sub_1B86614(this, gift);
+    sub_1BDBAD4(this, gift);
   }
   v45 = SLODWORD(this->fields.eventRecipeEntity);
   if ( (unsigned int)v45 >= LODWORD(v43->fields.m_CancellationTokenSource) )
@@ -2016,13 +2018,13 @@ LABEL_45:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)v27,
-      *(const MethodInfo_35FC958 **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
+      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
   }
   else
   {
     v46 = &v43->klass + v45;
     LODWORD(this->fields.eventRecipeEntity) = v45 + 1;
     v46[4] = (RecipeRewardDialogComponent_c *)v27;
-    sub_1B8635C(v46 + 4);
+    sub_1BDB81C(v46 + 4);
   }
 }

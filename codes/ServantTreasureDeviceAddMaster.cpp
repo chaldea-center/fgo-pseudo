@@ -6,25 +6,25 @@ void __fastcall ServantTreasureDeviceAddMaster___ctor(ServantTreasureDeviceAddMa
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4A4EE9A & 1) == 0 )
+  if ( (byte_4B45499 & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_DataMasterBase_ServantTreasureDeviceAddMaster__ServantTreasureDeviceAddEntity__string___ctor__,
       method);
-    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity_____ctor__, v3);
-    sub_1B863B8(&System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____TypeInfo, v4);
-    byte_4A4EE9A = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity_____ctor__, v3);
+    sub_1BDB878(&System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____TypeInfo, v4);
+    byte_4B45499 = 1;
   }
-  v5 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B86604(System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BDBAC4(System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v5,
-    (const MethodInfo_326CD90 *)Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity_____ctor__);
+    (const MethodInfo_333A94C *)Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity_____ctor__);
   this->fields.listCache = (struct System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____o *)v5;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.listCache, (int32_t)v5, v6, v7);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.listCache, (int32_t)v5, v6, v7);
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     369,
-    (const MethodInfo_3216A14 *)Method_DataMasterBase_ServantTreasureDeviceAddMaster__ServantTreasureDeviceAddEntity__string___ctor__);
+    (const MethodInfo_32E45D0 *)Method_DataMasterBase_ServantTreasureDeviceAddMaster__ServantTreasureDeviceAddEntity__string___ctor__);
 }
 
 
@@ -34,23 +34,23 @@ void __fastcall ServantTreasureDeviceAddMaster__Clear(ServantTreasureDeviceAddMa
   __int64 v4; // x1
   struct System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____o *listCache; // x0
 
-  if ( (byte_4A4EE95 & 1) == 0 )
+  if ( (byte_4B45494 & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_DataMasterBase_ServantTreasureDeviceAddMaster__ServantTreasureDeviceAddEntity__string__Clear__,
       method);
-    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____Clear__, v3);
-    byte_4A4EE95 = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____Clear__, v3);
+    byte_4B45494 = 1;
   }
   DataMasterBase_object__object__object___Clear(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-    (const MethodInfo_32176F0 *)Method_DataMasterBase_ServantTreasureDeviceAddMaster__ServantTreasureDeviceAddEntity__string__Clear__);
+    (const MethodInfo_32E52AC *)Method_DataMasterBase_ServantTreasureDeviceAddMaster__ServantTreasureDeviceAddEntity__string__Clear__);
   listCache = this->fields.listCache;
   if ( !listCache )
-    sub_1B86614(0LL, v4);
+    sub_1BDBAD4(0LL, v4);
   System_Collections_Generic_Dictionary_int__object___Clear(
     (System_Collections_Generic_Dictionary_int__object__o *)listCache,
-    (const MethodInfo_326D8EC *)Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____Clear__);
+    (const MethodInfo_333B4A8 *)Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____Clear__);
 }
 
 
@@ -66,17 +66,18 @@ ServantTreasureDeviceAddEntity_o *__fastcall ServantTreasureDeviceAddMaster__Get
 {
   ServantTreasureDeviceAddEntity_array *EntityListFromSvtId; // x0
   const MethodInfo *v14; // x1
+  __int64 v15; // x2
   int max_length; // w8
-  ServantTreasureDeviceAddEntity_array *v16; // x23
+  ServantTreasureDeviceAddEntity_array *v17; // x23
   __int64 i; // x25
-  ServantTreasureDeviceAddEntity_o *v18; // x24
+  ServantTreasureDeviceAddEntity_o *v19; // x24
   int32_t commonReleaseId; // w0
   int32_t condLimitCount; // w8
 
-  if ( (byte_4A4EE98 & 1) == 0 )
+  if ( (byte_4B45497 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Linq_Enumerable_Contains_int___, *(_QWORD *)&svtId);
-    byte_4A4EE98 = 1;
+    sub_1BDB878(&Method_System_Linq_Enumerable_Contains_int___, *(_QWORD *)&svtId);
+    byte_4B45497 = 1;
   }
   EntityListFromSvtId = ServantTreasureDeviceAddMaster__GetEntityListFromSvtId(
                           this,
@@ -85,48 +86,48 @@ ServantTreasureDeviceAddEntity_o *__fastcall ServantTreasureDeviceAddMaster__Get
   if ( EntityListFromSvtId )
   {
     max_length = EntityListFromSvtId->max_length;
-    v16 = EntityListFromSvtId;
+    v17 = EntityListFromSvtId;
     if ( max_length >= 1 )
     {
       for ( i = 0LL; (int)i < max_length; ++i )
       {
         if ( (unsigned int)i >= max_length )
-          sub_1B8661C(EntityListFromSvtId, v14);
-        v18 = v16->m_Items[i];
-        if ( !v18 )
-          sub_1B86614(EntityListFromSvtId, v14);
+          sub_1BDBADC(EntityListFromSvtId, v14, v15);
+        v19 = v17->m_Items[i];
+        if ( !v19 )
+          sub_1BDBAD4(EntityListFromSvtId, v14);
         if ( treasureDeviceId < 1 )
         {
-          commonReleaseId = v18->fields.commonReleaseId;
+          commonReleaseId = v19->fields.commonReleaseId;
           if ( !commonReleaseId
             || (EntityListFromSvtId = (ServantTreasureDeviceAddEntity_array *)CommonReleaseExtension__IsOpenConsiderEquippedWithTargetCostume(
                                                                                 commonReleaseId,
-                                                                                v18->fields.svtId,
+                                                                                v19->fields.svtId,
                                                                                 dispLimitCount,
                                                                                 0LL),
                 ((unsigned __int8)EntityListFromSvtId & 1) != 0) )
           {
             EntityListFromSvtId = (ServantTreasureDeviceAddEntity_array *)ServantTreasureDeviceAddEntity__GetCondIgnoreSealedLimitCount(
-                                                                            v18,
+                                                                            v19,
                                                                             v14);
-            condLimitCount = v18->fields.condLimitCount;
+            condLimitCount = v19->fields.condLimitCount;
             if ( (_DWORD)EntityListFromSvtId == 1 && condLimitCount <= originalLimitCount
               || condLimitCount <= limitCount )
             {
-              return v18;
+              return v19;
             }
           }
         }
-        else if ( v18->fields.condLimitCount <= limitCount )
+        else if ( v19->fields.condLimitCount <= limitCount )
         {
           EntityListFromSvtId = (ServantTreasureDeviceAddEntity_array *)System_Linq_Enumerable__Contains_int_(
-                                                                          (System_Collections_Generic_IEnumerable_TSource__o *)v18->fields.treasureDeviceIds,
+                                                                          (System_Collections_Generic_IEnumerable_TSource__o *)v19->fields.treasureDeviceIds,
                                                                           treasureDeviceId,
-                                                                          (const MethodInfo_2F884F0 *)Method_System_Linq_Enumerable_Contains_int___);
+                                                                          (const MethodInfo_304CA50 *)Method_System_Linq_Enumerable_Contains_int___);
           if ( ((unsigned __int8)EntityListFromSvtId & 1) != 0 )
-            return v18;
+            return v19;
         }
-        max_length = v16->max_length;
+        max_length = v17->max_length;
       }
     }
   }
@@ -147,16 +148,17 @@ ServantTreasureDeviceAddEntity_o *__fastcall ServantTreasureDeviceAddMaster__Get
   ServantTreasureDeviceAddEntity_array *v11; // x21
   Il2CppObject *Instance; // x0
   __int64 v13; // x1
-  __int64 v14; // x8
-  CommonReleaseMaster_o *v15; // x22
-  __int64 v16; // x24
-  ServantTreasureDeviceAddEntity_o *v17; // x23
+  __int64 v14; // x2
+  __int64 v15; // x8
+  CommonReleaseMaster_o *v16; // x22
+  __int64 v17; // x24
+  ServantTreasureDeviceAddEntity_o *v18; // x23
 
-  if ( (byte_4A4EE99 & 1) == 0 )
+  if ( (byte_4B45498 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_CommonReleaseMaster___, *(_QWORD *)&svtId);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4A4EE99 = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_CommonReleaseMaster___, *(_QWORD *)&svtId);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4B45498 = 1;
   }
   EntityListFromSvtId = ServantTreasureDeviceAddMaster__GetEntityListFromSvtId(
                           this,
@@ -165,42 +167,42 @@ ServantTreasureDeviceAddEntity_o *__fastcall ServantTreasureDeviceAddMaster__Get
   if ( EntityListFromSvtId )
   {
     v11 = EntityListFromSvtId;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_16;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    v14 = *(_QWORD *)&v11->max_length;
-    if ( (int)v14 >= 1 )
+                 (const MethodInfo_303395C *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    v15 = *(_QWORD *)&v11->max_length;
+    if ( (int)v15 >= 1 )
     {
-      v15 = (CommonReleaseMaster_o *)Instance;
-      v16 = 0LL;
+      v16 = (CommonReleaseMaster_o *)Instance;
+      v17 = 0LL;
       while ( 1 )
       {
-        if ( (unsigned int)v16 >= (unsigned int)v14 )
-          sub_1B8661C(Instance, v13);
-        v17 = v11->m_Items[v16];
-        if ( !v17 )
+        if ( (unsigned int)v17 >= (unsigned int)v15 )
+          sub_1BDBADC(Instance, v13, v14);
+        v18 = v11->m_Items[v17];
+        if ( !v18 )
           break;
-        if ( v17->fields.condLimitCount <= limitCount )
+        if ( v18->fields.condLimitCount <= limitCount )
         {
-          if ( !v15 )
+          if ( !v16 )
             break;
           Instance = (Il2CppObject *)CommonReleaseMaster__IsQuestContain(
-                                       v15,
+                                       v16,
                                        beforeClearQuestId,
-                                       v17->fields.commonReleaseId,
+                                       v18->fields.commonReleaseId,
                                        0LL);
           if ( ((unsigned __int8)Instance & 1) == 0 )
-            return v17;
-          v14 = *(_QWORD *)&v11->max_length;
+            return v18;
+          v15 = *(_QWORD *)&v11->max_length;
         }
-        if ( (int)++v16 >= (int)v14 )
+        if ( (int)++v17 >= (int)v15 )
           return 0LL;
       }
 LABEL_16:
-      sub_1B86614(Instance, v13);
+      sub_1BDBAD4(Instance, v13);
     }
   }
   return 0LL;
@@ -217,18 +219,18 @@ ServantTreasureDeviceAddEntity_o *__fastcall ServantTreasureDeviceAddMaster__Get
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A4EE9B & 1) == 0 )
+  if ( (byte_4B4549A & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_DataMasterBase_ServantTreasureDeviceAddMaster__ServantTreasureDeviceAddEntity__string__GetEntity__,
       *(_QWORD *)&svtId);
-    byte_4A4EE9B = 1;
+    byte_4B4549A = 1;
   }
   PK = (Il2CppObject *)ServantTreasureDeviceAddEntity__CreatePK(svtId, num, priority, *(const MethodInfo **)&priority);
   return (ServantTreasureDeviceAddEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                PK,
-                                               (const MethodInfo_3218D38 *)Method_DataMasterBase_ServantTreasureDeviceAddMaster__ServantTreasureDeviceAddEntity__string__GetEntity__);
+                                               (const MethodInfo_32E68F4 *)Method_DataMasterBase_ServantTreasureDeviceAddMaster__ServantTreasureDeviceAddEntity__string__GetEntity__);
 }
 
 
@@ -241,22 +243,22 @@ ServantTreasureDeviceAddEntity_array *__fastcall ServantTreasureDeviceAddMaster_
   struct System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____o *listCache; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A4EE97 & 1) == 0 )
+  if ( (byte_4B45496 & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____TryGetValue__,
       *(_QWORD *)&svtId);
-    byte_4A4EE97 = 1;
+    byte_4B45496 = 1;
   }
   value = 0LL;
   listCache = this->fields.listCache;
   if ( !listCache )
-    sub_1B86614(0LL, *(_QWORD *)&svtId);
+    sub_1BDBAD4(0LL, *(_QWORD *)&svtId);
   System_Collections_Generic_Dictionary_int__object___TryGetValue(
     (System_Collections_Generic_Dictionary_int__object__o *)listCache,
     svtId,
     &value,
-    (const MethodInfo_326EEF0 *)Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____TryGetValue__);
+    (const MethodInfo_333CAAC *)Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____TryGetValue__);
   return (ServantTreasureDeviceAddEntity_array *)value;
 }
 
@@ -272,19 +274,19 @@ bool __fastcall ServantTreasureDeviceAddMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A4EE9C & 1) == 0 )
+  if ( (byte_4B4549B & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_DataMasterBase_ServantTreasureDeviceAddMaster__ServantTreasureDeviceAddEntity__string__TryGetEntity__,
       entity);
-    byte_4A4EE9C = 1;
+    byte_4B4549B = 1;
   }
   PK = (Il2CppObject *)ServantTreasureDeviceAddEntity__CreatePK(svtId, num, priority, *(const MethodInfo **)&num);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3218D84 *)Method_DataMasterBase_ServantTreasureDeviceAddMaster__ServantTreasureDeviceAddEntity__string__TryGetEntity__);
+           (const MethodInfo_32E6940 *)Method_DataMasterBase_ServantTreasureDeviceAddMaster__ServantTreasureDeviceAddEntity__string__TryGetEntity__);
 }
 
 
@@ -368,54 +370,54 @@ bool __fastcall ServantTreasureDeviceAddMaster__preProcess(
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v77; // [xsp+30h] [xbp-90h] BYREF
   Il2CppObject *value; // [xsp+58h] [xbp-68h] BYREF
 
-  if ( (byte_4A4EE96 & 1) == 0 )
+  if ( (byte_4B45495 & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_ObjectModel_Collection_ServantTreasureDeviceAddEntity__GetEnumerator__,
       method);
-    sub_1B863B8(&System_Comparison_ServantTreasureDeviceAddEntity__TypeInfo, v3);
-    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____Clear__, v4);
-    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___Clear__, v5);
-    sub_1B863B8(
+    sub_1BDB878(&System_Comparison_ServantTreasureDeviceAddEntity__TypeInfo, v3);
+    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____Clear__, v4);
+    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___Clear__, v5);
+    sub_1BDB878(
       &Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___GetEnumerator__,
       v6);
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___TryGetValue__,
       v7);
-    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity____ctor__, v8);
-    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____set_Item__, v9);
-    sub_1B863B8(
+    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity____ctor__, v8);
+    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____set_Item__, v9);
+    sub_1BDB878(
       &Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___set_Item__,
       v10);
-    sub_1B863B8(&System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___TypeInfo, v11);
-    sub_1B863B8(
+    sub_1BDB878(&System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___TypeInfo, v11);
+    sub_1BDB878(
       &Method_System_Collections_Generic_Dictionary_Enumerator_int__List_ServantTreasureDeviceAddEntity___Dispose__,
       v12);
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_Dictionary_Enumerator_int__List_ServantTreasureDeviceAddEntity___MoveNext__,
       v13);
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_Dictionary_Enumerator_int__List_ServantTreasureDeviceAddEntity___get_Current__,
       v14);
-    sub_1B863B8(&System_IDisposable_TypeInfo, v15);
-    sub_1B863B8(&System_Collections_Generic_IEnumerator_ServantTreasureDeviceAddEntity__TypeInfo, v16);
-    sub_1B863B8(&System_Collections_IEnumerator_TypeInfo, v17);
-    sub_1B863B8(
+    sub_1BDB878(&System_IDisposable_TypeInfo, v15);
+    sub_1BDB878(&System_Collections_Generic_IEnumerator_ServantTreasureDeviceAddEntity__TypeInfo, v16);
+    sub_1BDB878(&System_Collections_IEnumerator_TypeInfo, v17);
+    sub_1BDB878(
       &Method_System_Collections_Generic_KeyValuePair_int__List_ServantTreasureDeviceAddEntity___get_Key__,
       v18);
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_KeyValuePair_int__List_ServantTreasureDeviceAddEntity___get_Value__,
       v19);
-    sub_1B863B8(&Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity__Add__, v20);
-    sub_1B863B8(&Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity__Clear__, v21);
-    sub_1B863B8(&Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity__Sort__, v22);
-    sub_1B863B8(&Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity__ToArray__, v23);
-    sub_1B863B8(&Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity___ctor__, v24);
-    sub_1B863B8(&System_Collections_Generic_List_ServantTreasureDeviceAddEntity__TypeInfo, v25);
-    sub_1B863B8(&ServantTreasureDeviceAddEntity_TypeInfo, v26);
-    sub_1B863B8(&Method_ServantTreasureDeviceAddMaster___c__preProcess_b__2_0__, v27);
-    sub_1B863B8(&ServantTreasureDeviceAddMaster___c_TypeInfo, v28);
-    byte_4A4EE96 = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity__Add__, v20);
+    sub_1BDB878(&Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity__Clear__, v21);
+    sub_1BDB878(&Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity__Sort__, v22);
+    sub_1BDB878(&Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity__ToArray__, v23);
+    sub_1BDB878(&Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity___ctor__, v24);
+    sub_1BDB878(&System_Collections_Generic_List_ServantTreasureDeviceAddEntity__TypeInfo, v25);
+    sub_1BDB878(&ServantTreasureDeviceAddEntity_TypeInfo, v26);
+    sub_1BDB878(&Method_ServantTreasureDeviceAddMaster___c__preProcess_b__2_0__, v27);
+    sub_1BDB878(&ServantTreasureDeviceAddMaster___c_TypeInfo, v28);
+    byte_4B45495 = 1;
   }
   value = 0LL;
   memset(&v77, 0, sizeof(v77));
@@ -424,20 +426,20 @@ bool __fastcall ServantTreasureDeviceAddMaster__preProcess(
     goto LABEL_57;
   System_Collections_Generic_Dictionary_int__object___Clear(
     listCache,
-    (const MethodInfo_326D8EC *)Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____Clear__);
-  v30 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1B86604(System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___TypeInfo);
+    (const MethodInfo_333B4A8 *)Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____Clear__);
+  v30 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BDBAC4(System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v30,
-    (const MethodInfo_326CD90 *)Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity____ctor__);
+    (const MethodInfo_333A94C *)Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity____ctor__);
   listCache = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.list;
   if ( !listCache )
     goto LABEL_57;
   v75 = this;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)listCache,
-                 (const MethodInfo_31B0EE0 *)Method_System_Collections_ObjectModel_Collection_ServantTreasureDeviceAddEntity__GetEnumerator__);
+                 (const MethodInfo_327DBFC *)Method_System_Collections_ObjectModel_Collection_ServantTreasureDeviceAddEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B86614(0LL, v31);
+    sub_1BDBAD4(0LL, v31);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -457,7 +459,7 @@ bool __fastcall ServantTreasureDeviceAddMaster__preProcess(
     else
     {
 LABEL_10:
-      p_method = sub_1BD6B4C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C2C00C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -480,7 +482,7 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v40 = sub_1BD6B4C(
+      v40 = sub_1C2C00C(
               Enumerator,
               System_Collections_Generic_IEnumerator_ServantTreasureDeviceAddEntity__TypeInfo,
               0LL);
@@ -490,33 +492,33 @@ LABEL_17:
                        *(_QWORD *)(v40 + 8));
     v43 = v41;
     if ( !v41 )
-      sub_1B86614(0LL, v42);
+      sub_1BDBAD4(0LL, v42);
     methodPtr_low = LOBYTE(ServantTreasureDeviceAddEntity_TypeInfo->vtable._0_Equals.methodPtr);
     if ( *(unsigned __int8 *)(*(_QWORD *)v41 + 304LL) < (unsigned int)methodPtr_low
       || *(ServantTreasureDeviceAddEntity_c **)(*(_QWORD *)(*(_QWORD *)v41 + 200LL) + 8 * methodPtr_low - 8) != ServantTreasureDeviceAddEntity_TypeInfo )
     {
-      sub_1B868D4(v41);
+      sub_1BDBD94(v41);
 LABEL_51:
-      sub_1B86614(v49, v45);
+      sub_1BDBAD4(v49, v45);
     }
     if ( !v30 )
-      sub_1B86614(v41, ServantTreasureDeviceAddEntity_TypeInfo);
+      sub_1BDBAD4(v41, ServantTreasureDeviceAddEntity_TypeInfo);
     if ( !System_Collections_Generic_Dictionary_int__object___TryGetValue(
             v30,
             v41[4],
             &value,
-            (const MethodInfo_326EEF0 *)Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___TryGetValue__) )
+            (const MethodInfo_333CAAC *)Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___TryGetValue__) )
     {
-      v48 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_ServantTreasureDeviceAddEntity__TypeInfo);
+      v48 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_ServantTreasureDeviceAddEntity__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v48,
-        (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity___ctor__);
+        (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity___ctor__);
       value = (Il2CppObject *)v48;
       System_Collections_Generic_Dictionary_int__object___set_Item(
         v30,
         v43[4],
         (Il2CppObject *)v48,
-        (const MethodInfo_326D750 *)Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___set_Item__);
+        (const MethodInfo_333B30C *)Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___set_Item__);
     }
     v49 = (System_Collections_Generic_List_object__o *)value;
     if ( !value )
@@ -525,21 +527,21 @@ LABEL_51:
     v51 = Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity__Add__;
     ++HIDWORD(value[1].monitor);
     if ( !v50 )
-      sub_1B86614(v49, v45);
+      sub_1BDBAD4(v49, v45);
     size = v49->fields._size;
     if ( (unsigned int)size >= LODWORD(v50->_1.namespaze) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v49,
         (Il2CppObject *)v43,
-        *(const MethodInfo_35FC958 **)(*(_QWORD *)(v51[4] + 192LL) + 112LL));
+        *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v51[4] + 192LL) + 112LL));
     }
     else
     {
       v53 = &v50->_1.image + size;
       v49->fields._size = size + 1;
       v53[4] = v43;
-      sub_1B8635C((CGThumbnailListItem_o *)(v53 + 4), (int32_t)v43, v46, v47);
+      sub_1BDB81C((CGThumbnailListItem_o *)(v53 + 4), (int32_t)v43, v46, v47);
     }
   }
   v54 = v75;
@@ -560,24 +562,24 @@ LABEL_51:
   else
   {
 LABEL_34:
-    v58 = sub_1BD6B4C(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v58 = sub_1C2C00C(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   listCache = (System_Collections_Generic_Dictionary_int__object__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v58)(
                                                                         Enumerator,
                                                                         *(_QWORD *)(v58 + 8));
   if ( !v30 )
 LABEL_57:
-    sub_1B86614(listCache, method);
+    sub_1BDBAD4(listCache, method);
   System_Collections_Generic_Dictionary_int__object___GetEnumerator(
     &v76,
     v30,
-    (const MethodInfo_326DB9C *)Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___GetEnumerator__);
+    (const MethodInfo_333B758 *)Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___GetEnumerator__);
   v77 = v76;
   while ( 1 )
   {
     v59 = System_Collections_Generic_Dictionary_Enumerator_int__object___MoveNext(
             &v77,
-            (const MethodInfo_33BBE28 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_ServantTreasureDeviceAddEntity___MoveNext__);
+            (const MethodInfo_348DA98 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_ServantTreasureDeviceAddEntity___MoveNext__);
     if ( !v59 )
       break;
     v61 = ServantTreasureDeviceAddMaster___c_TypeInfo;
@@ -597,7 +599,7 @@ LABEL_57:
         v61 = ServantTreasureDeviceAddMaster___c_TypeInfo;
       }
       v65 = (Il2CppObject *)v61->static_fields->__9;
-      _9__2_0 = (System_Comparison_T__o *)sub_1B86604(System_Comparison_ServantTreasureDeviceAddEntity__TypeInfo);
+      _9__2_0 = (System_Comparison_T__o *)sub_1BDBAC4(System_Comparison_ServantTreasureDeviceAddEntity__TypeInfo);
       System_Comparison_object____ctor(
         _9__2_0,
         v65,
@@ -605,26 +607,26 @@ LABEL_57:
         0LL);
       static_fields = ServantTreasureDeviceAddMaster___c_TypeInfo->static_fields;
       static_fields->__9__2_0 = (struct System_Comparison_ServantTreasureDeviceAddEntity__o *)_9__2_0;
-      sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v67, v68);
+      sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v67, v68);
       v54 = v75;
     }
     if ( !v63 )
-      sub_1B86614(v59, v60);
-    System_Collections_Generic_List_object___Sort_56615964(
+      sub_1BDBAD4(v59, v60);
+    System_Collections_Generic_List_object___Sort_57505928(
       (System_Collections_Generic_List_object__o *)v63,
       _9__2_0,
-      (const MethodInfo_35FE41C *)Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity__Sort__);
+      (const MethodInfo_36D7888 *)Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity__Sort__);
     v69 = (System_Collections_Generic_Dictionary_int__object__o *)v54->fields.listCache;
     v70 = System_Collections_Generic_List_object___ToArray(
             (System_Collections_Generic_List_object__o *)v63,
-            (const MethodInfo_35FE4B0 *)Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity__ToArray__);
+            (const MethodInfo_36D791C *)Method_System_Collections_Generic_List_ServantTreasureDeviceAddEntity__ToArray__);
     if ( !v69 )
-      sub_1B86614(v70, v71);
+      sub_1BDBAD4(v70, v71);
     System_Collections_Generic_Dictionary_int__object___set_Item(
       v69,
       key,
       &v70->obj,
-      (const MethodInfo_326D750 *)Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____set_Item__);
+      (const MethodInfo_333B30C *)Method_System_Collections_Generic_Dictionary_int__ServantTreasureDeviceAddEntity____set_Item__);
     monitor = (int32_t)v63[1].monitor;
     v73 = HIDWORD(v63[1].monitor) + 1;
     LODWORD(v63[1].monitor) = 0;
@@ -634,10 +636,10 @@ LABEL_57:
   }
   System_Collections_Generic_Dictionary_Enumerator_int__object___Dispose(
     &v77,
-    (const MethodInfo_33BBF4C *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_ServantTreasureDeviceAddEntity___Dispose__);
+    (const MethodInfo_348DBBC *)Method_System_Collections_Generic_Dictionary_Enumerator_int__List_ServantTreasureDeviceAddEntity___Dispose__);
   System_Collections_Generic_Dictionary_int__object___Clear(
     v30,
-    (const MethodInfo_326D8EC *)Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___Clear__);
+    (const MethodInfo_333B4A8 *)Method_System_Collections_Generic_Dictionary_int__List_ServantTreasureDeviceAddEntity___Clear__);
   return 1;
 }
 
@@ -649,15 +651,15 @@ void __fastcall ServantTreasureDeviceAddMaster___c___cctor(const MethodInfo *met
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4A4EE9D & 1) == 0 )
+  if ( (byte_4B4549C & 1) == 0 )
   {
-    sub_1B863B8(&ServantTreasureDeviceAddMaster___c_TypeInfo, v1);
-    byte_4A4EE9D = 1;
+    sub_1BDB878(&ServantTreasureDeviceAddMaster___c_TypeInfo, v1);
+    byte_4B4549C = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(ServantTreasureDeviceAddMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BDBAC4(ServantTreasureDeviceAddMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   ServantTreasureDeviceAddMaster___c_TypeInfo->static_fields->__9 = (struct ServantTreasureDeviceAddMaster___c_o *)v2;
-  sub_1B8635C((CGThumbnailListItem_o *)ServantTreasureDeviceAddMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BDB81C((CGThumbnailListItem_o *)ServantTreasureDeviceAddMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -676,6 +678,6 @@ int32_t __fastcall ServantTreasureDeviceAddMaster___c___preProcess_b__2_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1B86614(this, a);
+    sub_1BDBAD4(this, a);
   return b->fields.priority - a->fields.priority;
 }

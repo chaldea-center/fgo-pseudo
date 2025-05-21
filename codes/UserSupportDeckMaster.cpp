@@ -1,14 +1,14 @@
 void __fastcall UserSupportDeckMaster___ctor(UserSupportDeckMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4F49D & 1) == 0 )
+  if ( (byte_4B45AB5 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string___ctor__, method);
-    byte_4A4F49D = 1;
+    sub_1BDB878(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string___ctor__, method);
+    byte_4B45AB5 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     188,
-    (const MethodInfo_3216A14 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string___ctor__);
+    (const MethodInfo_32E45D0 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserSupportDeckEntity_o *__fastcall UserSupportDeckMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A4F49B & 1) == 0 )
+  if ( (byte_4B45AB3 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__GetEntity__, userId);
-    byte_4A4F49B = 1;
+    sub_1BDB878(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__GetEntity__, userId);
+    byte_4B45AB3 = 1;
   }
   PK = (Il2CppObject *)UserSupportDeckEntity__CreatePK(userId, supportDeckId, *(const MethodInfo **)&supportDeckId);
   return (UserSupportDeckEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_3218D38 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__GetEntity__);
+                                      (const MethodInfo_32E68F4 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__GetEntity__);
 }
 
 
@@ -43,17 +43,17 @@ bool __fastcall UserSupportDeckMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A4F49C & 1) == 0 )
+  if ( (byte_4B45AB4 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__TryGetEntity__, entity);
-    byte_4A4F49C = 1;
+    sub_1BDB878(&Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__TryGetEntity__, entity);
+    byte_4B45AB4 = 1;
   }
   PK = (Il2CppObject *)UserSupportDeckEntity__CreatePK(userId, supportDeckId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3218D84 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__TryGetEntity__);
+           (const MethodInfo_32E6940 *)Method_DataMasterBase_UserSupportDeckMaster__UserSupportDeckEntity__string__TryGetEntity__);
 }
 
 
@@ -71,20 +71,20 @@ System_String_o *__fastcall UserSupportDeckMaster__getDeckName(
   __int64 v10; // x1
   UserSupportDeckEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4A4F49E & 1) == 0 )
+  if ( (byte_4B45AB6 & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, *(_QWORD *)&deckId);
-    sub_1B863B8(&StringLiteral_1/*""*/, v6);
-    byte_4A4F49E = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, *(_QWORD *)&deckId);
+    sub_1BDB878(&StringLiteral_1/*""*/, v6);
+    byte_4B45AB6 = 1;
   }
   entity = 0LL;
   v7 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4A48C25 )
+  if ( !byte_4B3ED56 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, *(_QWORD *)&deckId);
-    byte_4A48C25 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, *(_QWORD *)&deckId);
+    byte_4B3ED56 = 1;
   }
   v8 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -96,7 +96,7 @@ System_String_o *__fastcall UserSupportDeckMaster__getDeckName(
   if ( v9 )
   {
     if ( !entity )
-      sub_1B86614(v9, v10);
+      sub_1BDBAD4(v9, v10);
     return entity->fields.name;
   }
   return v7;

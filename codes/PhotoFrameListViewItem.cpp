@@ -21,11 +21,11 @@ void __fastcall PhotoFrameListViewItem___ctor(
   this->fields._Id_k__BackingField = id;
   this->fields._Priority_k__BackingField = priority;
   this->fields._SpriteName_k__BackingField = spriteName;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, (int32_t)spriteName, v17, v18);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, (int32_t)spriteName, v17, v18);
   this->fields._Name_k__BackingField = name;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)name, v19, v20);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)name, v19, v20);
   this->fields._Atlas_k__BackingField = atlas;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Atlas_k__BackingField, (int32_t)atlas, v21, v22);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Atlas_k__BackingField, (int32_t)atlas, v21, v22);
   this->fields._IsSelected_k__BackingField = this->fields._Id_k__BackingField == selectedId;
 }
 
@@ -85,7 +85,7 @@ void __fastcall PhotoFrameListViewItem__set_Atlas(
   const MethodInfo *v3; // x3
 
   this->fields._Atlas_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Atlas_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Atlas_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -112,7 +112,7 @@ void __fastcall PhotoFrameListViewItem__set_Name(
   const MethodInfo *v3; // x3
 
   this->fields._Name_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -133,5 +133,5 @@ void __fastcall PhotoFrameListViewItem__set_SpriteName(
   const MethodInfo *v3; // x3
 
   this->fields._SpriteName_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

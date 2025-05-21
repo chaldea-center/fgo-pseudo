@@ -17,7 +17,7 @@ void __fastcall ScriptBranchMenu__Callback(ScriptBranchMenu_o *this, bool result
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1B8635C(p_callbackFunc, 0, (int32_t)method, v3);
+    sub_1BDB81C(p_callbackFunc, 0, (int32_t)method, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       result,
@@ -36,7 +36,7 @@ void __fastcall ScriptBranchMenu__Close(ScriptBranchMenu_o *this, const MethodIn
     || (UnityEngine_GameObject__SetActive(serverSettingRootObject, 0, 0LL),
         (serverSettingRootObject = (UnityEngine_GameObject_o *)this->fields.listViewManager) == 0LL) )
   {
-    sub_1B86614(serverSettingRootObject, method);
+    sub_1BDBAD4(serverSettingRootObject, method);
   }
   ListViewManager__DestroyList((ListViewManager_o *)serverSettingRootObject, 0LL);
 }
@@ -52,23 +52,23 @@ void __fastcall ScriptBranchMenu__CreateList(ScriptBranchMenu_o *this, int32_t s
   System_Action_o *v9; // x22
   const MethodInfo *v10; // x3
 
-  if ( (byte_4A4BB15 & 1) == 0 )
+  if ( (byte_4B420CA & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, *(_QWORD *)&sorttype);
-    sub_1B863B8(&Method_ScriptBranchMenu_OnClickItem__, v6);
-    byte_4A4BB15 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, *(_QWORD *)&sorttype);
+    sub_1BDB878(&Method_ScriptBranchMenu_OnClickItem__, v6);
+    byte_4B420CA = 1;
   }
   listViewManager = this->fields.listViewManager;
   if ( !listViewManager
     || (ScriptBranchListViewManager__CreateList(listViewManager, this->fields.listObject, sorttype == 0, v3),
         v8 = this->fields.listViewManager,
-        v9 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo),
+        v9 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo),
         System_Action___ctor(v9, (Il2CppObject *)this, Method_ScriptBranchMenu_OnClickItem__, 0LL),
         !v8)
     || (ScriptBranchListViewManager__SetMode(v8, 1, v9, v10),
         (listViewManager = (ScriptBranchListViewManager_o *)this->fields.sortType1DispSprite) == 0LL) )
   {
-    sub_1B86614(listViewManager, *(_QWORD *)&sorttype);
+    sub_1BDBAD4(listViewManager, *(_QWORD *)&sorttype);
   }
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)listViewManager, sorttype == 0, 0LL);
   this->fields.sortType = sorttype;
@@ -122,7 +122,7 @@ void __fastcall ScriptBranchMenu__OnClickItem(ScriptBranchMenu_o *this, const Me
         return;
       }
 LABEL_7:
-      sub_1B86614(listViewManager, method);
+      sub_1BDBAD4(listViewManager, method);
     }
   }
 }
@@ -152,15 +152,15 @@ void __fastcall ScriptBranchMenu__Open(
   if ( !this->fields.state )
   {
     this->fields.listObject = list;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.listObject, (int32_t)list, (int32_t)callback, method);
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.listObject, (int32_t)list, (int32_t)callback, method);
     this->fields.callbackFunc = callback;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v6, v7);
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v6, v7);
     listViewManager = (ListViewManager_o *)this->fields.listViewManager;
     if ( !listViewManager
       || (ListViewManager__set_IsInput(listViewManager, 0, 0LL),
           (listViewManager = (ListViewManager_o *)this->fields.serverSettingRootObject) == 0LL) )
     {
-      sub_1B86614(listViewManager, v8);
+      sub_1BDBAD4(listViewManager, v8);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)listViewManager, 1, 0LL);
     ScriptBranchMenu__CreateList(this, this->fields.sortType, v10);
@@ -184,10 +184,10 @@ void __fastcall ScriptBranchMenu__add_callbackFunc(
   ScriptBranchMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A4BB13 & 1) == 0 )
+  if ( (byte_4B420C8 & 1) == 0 )
   {
-    sub_1B863B8(&ScriptBranchMenu_CallbackFunc_TypeInfo, value);
-    byte_4A4BB13 = 1;
+    sub_1BDB878(&ScriptBranchMenu_CallbackFunc_TypeInfo, value);
+    byte_4B420C8 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -200,13 +200,13 @@ void __fastcall ScriptBranchMenu__add_callbackFunc(
       if ( (ScriptBranchMenu_CallbackFunc_c *)v8->klass != ScriptBranchMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BC0674(p_callbackFunc, v8, v6);
+    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B868D4(v8);
+  sub_1BDBD94(v8);
   ScriptBranchMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -226,10 +226,10 @@ void __fastcall ScriptBranchMenu__remove_callbackFunc(
   int32_t v12; // w1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A4BB14 & 1) == 0 )
+  if ( (byte_4B420C9 & 1) == 0 )
   {
-    sub_1B863B8(&ScriptBranchMenu_CallbackFunc_TypeInfo, value);
-    byte_4A4BB14 = 1;
+    sub_1BDB878(&ScriptBranchMenu_CallbackFunc_TypeInfo, value);
+    byte_4B420C9 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -242,13 +242,13 @@ void __fastcall ScriptBranchMenu__remove_callbackFunc(
       if ( (ScriptBranchMenu_CallbackFunc_c *)v8->klass != ScriptBranchMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BC0674(p_callbackFunc, v8, v6);
+    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B868D4(v8);
+  sub_1BDBD94(v8);
   ScriptBranchMenu__CreateList(v11, v12, v13);
 }
 
@@ -271,15 +271,15 @@ void __fastcall ScriptBranchMenu_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B86478(v6) & 1) == 0 )
+  if ( (sub_1BDB938(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B864E0(v10, 0LL);
+      v10 = sub_1BDBAF0(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BDB9A0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -291,9 +291,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19CFC8C;
+  this->fields.m_target = (Il2CppObject *)sub_1A22304;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19CFC44;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A222BC;
 }
 
 
@@ -309,14 +309,14 @@ System_IAsyncResult_o *__fastcall ScriptBranchMenu_CallbackFunc__BeginInvoke(
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4A4BB16 & 1) == 0 )
+  if ( (byte_4B420CB & 1) == 0 )
   {
-    sub_1B863B8(&bool_TypeInfo, result);
-    byte_4A4BB16 = 1;
+    sub_1BDB878(&bool_TypeInfo, result);
+    byte_4B420CB = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B8636C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BDB82C(this, v9, callback, object);
 }
 
 
@@ -325,7 +325,7 @@ void __fastcall ScriptBranchMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B86370(result, 0LL, method);
+  sub_1BDB830(result, 0LL, method);
 }
 
 

@@ -1,14 +1,14 @@
 void __fastcall SkillIndividualityMaster___ctor(SkillIndividualityMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4EFC5 & 1) == 0 )
+  if ( (byte_4B455C3 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int___ctor__, method);
-    byte_4A4EFC5 = 1;
+    sub_1BDB878(&Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int___ctor__, method);
+    byte_4B455C3 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     450,
-    (const MethodInfo_3211F5C *)Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int___ctor__);
+    (const MethodInfo_32DFB18 *)Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int___ctor__);
 }
 
 
@@ -27,25 +27,25 @@ System_Int32_array *__fastcall SkillIndividualityMaster__GetIndividuality(int32_
   __int64 v13; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A4EFC4 & 1) == 0 )
+  if ( (byte_4B455C2 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Array_Empty_int___, method);
-    sub_1B863B8(&Method_DataManager_GetMaster_SkillIndividualityMaster___, v3);
-    sub_1B863B8(&DataManager_TypeInfo, v4);
-    sub_1B863B8(&Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int__TryGetEntity__, v5);
-    byte_4A4EFC4 = 1;
+    sub_1BDB878(&Method_System_Array_Empty_int___, method);
+    sub_1BDB878(&Method_DataManager_GetMaster_SkillIndividualityMaster___, v3);
+    sub_1BDB878(&DataManager_TypeInfo, v4);
+    sub_1BDB878(&Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int__TryGetEntity__, v5);
+    byte_4B455C2 = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_SkillIndividualityMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_SkillIndividualityMaster___);
   if ( !Master_object )
     goto LABEL_19;
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     &entity,
                                     skillId,
-                                    (const MethodInfo_32142CC *)Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int__TryGetEntity__);
+                                    (const MethodInfo_32E1E88 *)Method_DataMasterBase_SkillIndividualityMaster__SkillIndividualityEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
     if ( entity )
@@ -54,23 +54,23 @@ System_Int32_array *__fastcall SkillIndividualityMaster__GetIndividuality(int32_
       return *p_monitor;
     }
 LABEL_19:
-    sub_1B86614(Master_object, v7);
+    sub_1BDBAD4(Master_object, v7);
   }
   v10 = Method_System_Array_Empty_int___;
   v11 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
   if ( !v11 )
   {
-    sub_1BD6AA4(Method_System_Array_Empty_int___);
+    sub_1C2BF64(Method_System_Array_Empty_int___);
     v11 = v10[7];
   }
   v12 = *(_QWORD *)(v11 + 16);
   if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-    v12 = sub_1BD6A48(inited);
+    v12 = sub_1C2BF08(inited);
   if ( !*(_DWORD *)(v12 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v12);
   v13 = *(_QWORD *)(v10[7] + 16LL);
   if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-    v13 = sub_1BD6A48(inited);
+    v13 = sub_1C2BF08(inited);
   p_monitor = *(System_Int32_array ***)(v13 + 184);
   return *p_monitor;
 }

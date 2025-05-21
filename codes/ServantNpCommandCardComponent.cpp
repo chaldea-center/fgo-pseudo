@@ -1,6 +1,6 @@
 void __fastcall ServantNpCommandCardComponent___ctor(ServantNpCommandCardComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
 
@@ -10,7 +10,7 @@ void __fastcall ServantNpCommandCardComponent__Clear(ServantNpCommandCardCompone
 
   cardSprite = (UnityEngine_Behaviour_o *)this->fields.cardSprite;
   if ( !cardSprite )
-    sub_1B86614(0LL, method);
+    sub_1BDBAD4(0LL, method);
   UnityEngine_Behaviour__set_enabled(cardSprite, 0, 0LL);
 }
 
@@ -24,10 +24,10 @@ void __fastcall ServantNpCommandCardComponent__Set(
   UISprite_o *cardSprite; // x19
 
   v3 = tdInfo;
-  if ( (byte_4A4D9E7 & 1) == 0 )
+  if ( (byte_4B43FA8 & 1) == 0 )
   {
-    sub_1B863B8(&BattleCommand_TypeInfo, tdInfo);
-    byte_4A4D9E7 = 1;
+    sub_1BDB878(&BattleCommand_TypeInfo, tdInfo);
+    byte_4B43FA8 = 1;
   }
   if ( v3 )
     LODWORD(v3) = v3->fields.cardId;

@@ -1,28 +1,22 @@
 void __fastcall ServantFilterButtonControl___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  __int64 v4; // x1
-  __int64 v5; // x1
-  int32_t v6; // w1
+  __int64 v2; // x1
+  __int64 v3; // x1
   struct ServantFilterButtonControl_StaticFields *static_fields; // x0
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
 
-  if ( (byte_4A497DF & 1) == 0 )
+  if ( (byte_4B3F8F4 & 1) == 0 )
   {
-    sub_1B863B8(&ServantFilterButtonControl_TypeInfo, v1);
-    sub_1B863B8(&StringLiteral_17229/*"btn_bg_04"*/, v4);
-    sub_1B863B8(&StringLiteral_17228/*"btn_bg_03"*/, v5);
-    byte_4A497DF = 1;
+    sub_1BDB878(&ServantFilterButtonControl_TypeInfo, v1);
+    sub_1BDB878(&StringLiteral_17456/*"btn_bg_04"*/, v2);
+    sub_1BDB878(&StringLiteral_17455/*"btn_bg_03"*/, v3);
+    byte_4B3F8F4 = 1;
   }
-  ServantFilterButtonControl_TypeInfo->static_fields->SPRITE_NAME_ENABLE = (struct System_String_o *)StringLiteral_17228/*"btn_bg_03"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)ServantFilterButtonControl_TypeInfo->static_fields, StringLiteral_17228/*"btn_bg_03"*/, v2, v3);
-  v6 = StringLiteral_17229/*"btn_bg_04"*/;
+  ServantFilterButtonControl_TypeInfo->static_fields->SPRITE_NAME_ENABLE = (struct System_String_o *)StringLiteral_17455/*"btn_bg_03"*/;
+  sub_1BDB81C(ServantFilterButtonControl_TypeInfo->static_fields);
   static_fields = ServantFilterButtonControl_TypeInfo->static_fields;
-  static_fields->SPRITE_NAME_DISABLE = (struct System_String_o *)StringLiteral_17229/*"btn_bg_04"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)&static_fields->SPRITE_NAME_DISABLE, v6, v8, v9);
+  static_fields->SPRITE_NAME_DISABLE = (struct System_String_o *)StringLiteral_17456/*"btn_bg_04"*/;
+  sub_1BDB81C(&static_fields->SPRITE_NAME_DISABLE);
 }
 
 
@@ -49,17 +43,11 @@ void __fastcall ServantFilterButtonControl__Init(
 {
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v14; // x1
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
   ListViewSort_o **p_targetSort; // x25
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
   UILabel_o *buttonText; // x23
-  const MethodInfo *v21; // x3
-  const MethodInfo *v22; // x1
-  const MethodInfo *v23; // x1
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
+  const MethodInfo *v17; // x3
+  const MethodInfo *v18; // x1
+  const MethodInfo *v19; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
@@ -69,13 +57,13 @@ void __fastcall ServantFilterButtonControl__Init(
   if ( isDisplay )
   {
     *p_targetSort = targetSort;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.targetSort, (int32_t)targetSort, v15, v16);
+    sub_1BDB81C(&this->fields.targetSort);
     if ( !*p_targetSort )
     {
 LABEL_6:
       this->fields.onClickFilterEvent = onClickFilter;
-      sub_1B8635C((CGThumbnailListItem_o *)&this->fields.onClickFilterEvent, (int32_t)onClickFilter, v18, v19);
-      ServantFilterButtonControl__RefreshButtonSelectState(this, v23);
+      sub_1BDB81C(&this->fields.onClickFilterEvent);
+      ServantFilterButtonControl__RefreshButtonSelectState(this, v19);
       return;
     }
     buttonText = this->fields.buttonText;
@@ -86,17 +74,17 @@ LABEL_6:
     if ( buttonText )
     {
       UILabel__set_text(buttonText, (System_String_o *)gameObject, 0LL);
-      ServantFilterButtonControl__OverwriteButtonText(this, isSummon, isClassOthers, v21);
-      ServantFilterButtonControl__SetCondensedScaleButtons(this, v22);
+      ServantFilterButtonControl__OverwriteButtonText(this, isSummon, isClassOthers, v17);
+      ServantFilterButtonControl__SetCondensedScaleButtons(this, v18);
       goto LABEL_6;
     }
 LABEL_8:
-    sub_1B86614(gameObject, v14);
+    sub_1BDBAD4(gameObject, v14);
   }
   this->fields.targetSort = 0LL;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.targetSort, 0, v15, v16);
+  sub_1BDB81C(&this->fields.targetSort);
   this->fields.onClickFilterEvent = 0LL;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.onClickFilterEvent, 0, v24, v25);
+  sub_1BDB81C(&this->fields.onClickFilterEvent);
 }
 
 
@@ -130,13 +118,13 @@ void __fastcall ServantFilterButtonControl__OverwriteButtonText(
   UILabel_o *v14; // x21
   UILabel_o *v15; // x19
 
-  if ( (byte_4A497DC & 1) == 0 )
+  if ( (byte_4B3F8F1 & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, isSummon);
-    sub_1B863B8(&StringLiteral_11587/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_FIND"*/, v7);
-    sub_1B863B8(&StringLiteral_11576/*"SERVANT_SORT_FILTER_KIND_CLASS_33_OTHERS"*/, v8);
-    sub_1B863B8(&StringLiteral_11588/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_GET"*/, v9);
-    byte_4A497DC = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, isSummon);
+    sub_1BDB878(&StringLiteral_11761/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_FIND"*/, v7);
+    sub_1BDB878(&StringLiteral_11750/*"SERVANT_SORT_FILTER_KIND_CLASS_33_OTHERS"*/, v8);
+    sub_1BDB878(&StringLiteral_11762/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_GET"*/, v9);
+    byte_4B3F8F1 = 1;
   }
   if ( isSummon )
   {
@@ -146,7 +134,7 @@ void __fastcall ServantFilterButtonControl__OverwriteButtonText(
       buttonText = this->fields.buttonText;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11587/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_FIND"*/, 0LL);
+      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11761/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_FIND"*/, 0LL);
       if ( !buttonText )
         goto LABEL_21;
       UILabel__set_text(buttonText, v12, 0LL);
@@ -157,7 +145,7 @@ void __fastcall ServantFilterButtonControl__OverwriteButtonText(
       v14 = this->fields.buttonText;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11588/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_GET"*/, 0LL);
+      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11762/*"SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_GET"*/, 0LL);
       if ( !v14 )
         goto LABEL_21;
       UILabel__set_text(v14, v12, 0LL);
@@ -168,14 +156,14 @@ void __fastcall ServantFilterButtonControl__OverwriteButtonText(
     v15 = this->fields.buttonText;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11576/*"SERVANT_SORT_FILTER_KIND_CLASS_33_OTHERS"*/, 0LL);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_11750/*"SERVANT_SORT_FILTER_KIND_CLASS_33_OTHERS"*/, 0LL);
     if ( v15 )
     {
       UILabel__set_text(v15, v12, 0LL);
       return;
     }
 LABEL_21:
-    sub_1B86614(v12, v13);
+    sub_1BDBAD4(v12, v13);
   }
 }
 
@@ -192,10 +180,10 @@ void __fastcall ServantFilterButtonControl__RefreshButtonSelectState(
   UISprite_o *v8; // x8
   System_String_o **p_SPRITE_NAME_ENABLE; // x9
 
-  if ( (byte_4A497DD & 1) == 0 )
+  if ( (byte_4B3F8F2 & 1) == 0 )
   {
-    sub_1B863B8(&ServantFilterButtonControl_TypeInfo, method);
-    byte_4A497DD = 1;
+    sub_1BDB878(&ServantFilterButtonControl_TypeInfo, method);
+    byte_4B3F8F2 = 1;
   }
   targetSort = this->fields.targetSort;
   buttonSprite = this->fields.buttonSprite;
@@ -221,7 +209,7 @@ void __fastcall ServantFilterButtonControl__RefreshButtonSelectState(
   else
     v8 = v5;
   if ( !v8 )
-    sub_1B86614(v7, method);
+    sub_1BDBAD4(v7, method);
   p_SPRITE_NAME_ENABLE = &v7->static_fields->SPRITE_NAME_ENABLE;
   if ( !v6 )
     ++p_SPRITE_NAME_ENABLE;
@@ -238,7 +226,7 @@ void __fastcall ServantFilterButtonControl__SetButtonEnable(
 
   button = (UnityEngine_Behaviour_o *)this->fields.button;
   if ( !button )
-    sub_1B86614(0LL, isEnable);
+    sub_1BDBAD4(0LL, isEnable);
   UnityEngine_Behaviour__set_enabled(button, isEnable, 0LL);
 }
 
@@ -257,10 +245,10 @@ void __fastcall ServantFilterButtonControl__SetButtonMask(
   float v10; // s1
   unsigned __int128 v11; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_4A497DE & 1) == 0 )
+  if ( (byte_4B3F8F3 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_407/*"#303030"*/, isActive);
-    byte_4A497DE = 1;
+    sub_1BDB878(&StringLiteral_407/*"#303030"*/, isActive);
+    byte_4B3F8F3 = 1;
   }
   v11 = 0uLL;
   button = (UnityEngine_Behaviour_o *)this->fields.button;
@@ -280,13 +268,13 @@ void __fastcall ServantFilterButtonControl__SetButtonMask(
       goto LABEL_11;
     }
 LABEL_12:
-    sub_1B86614(button, isActive);
+    sub_1BDBAD4(button, isActive);
   }
   if ( !UnityEngine_ColorUtility__TryParseHtmlString(
           (System_String_o *)StringLiteral_407/*"#303030"*/,
           (UnityEngine_Color_o *)&v11,
           0LL) )
-    v11 = xmmword_BC2680;
+    v11 = xmmword_BEA6C0;
   button = (UnityEngine_Behaviour_o *)this->fields.buttonSprite;
   if ( !button )
     goto LABEL_12;
@@ -310,12 +298,12 @@ void __fastcall ServantFilterButtonControl__SetCondensedScaleButtons(
   System_Collections_Generic_IEnumerable_TSource__o *v7; // x0
   int32_t filterKind; // w8
 
-  if ( (byte_4A497DB & 1) == 0 )
+  if ( (byte_4B3F8F0 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Linq_Enumerable_Contains_ListViewSort_FilterKind___, method);
-    sub_1B863B8(&FilterKindList_TypeInfo, v3);
-    sub_1B863B8(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__, v4);
-    byte_4A497DB = 1;
+    sub_1BDB878(&Method_System_Linq_Enumerable_Contains_ListViewSort_FilterKind___, method);
+    sub_1BDB878(&FilterKindList_TypeInfo, v3);
+    sub_1BDB878(&Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__, v4);
+    byte_4B3F8F0 = 1;
   }
   if ( this->fields.filterKind == 56 )
   {
@@ -333,14 +321,14 @@ void __fastcall ServantFilterButtonControl__SetCondensedScaleButtons(
   buttonText = (UILabel_o *)v6->static_fields->ClassFilterKindList;
   if ( !buttonText )
 LABEL_17:
-    sub_1B86614(buttonText, method);
+    sub_1BDBAD4(buttonText, method);
   v7 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Collections_Generic_List_Int32Enum___ToArray(
                                                               (System_Collections_Generic_List_T__o *)buttonText,
-                                                              (const MethodInfo_35E3C18 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
+                                                              (const MethodInfo_36BD084 *)Method_System_Collections_Generic_List_ListViewSort_FilterKind__ToArray__);
   if ( System_Linq_Enumerable__Contains_Int32Enum_(
          v7,
          this->fields.filterKind,
-         (const MethodInfo_2F885EC *)Method_System_Linq_Enumerable_Contains_ListViewSort_FilterKind___)
+         (const MethodInfo_304CB4C *)Method_System_Linq_Enumerable_Contains_ListViewSort_FilterKind___)
     || (filterKind = this->fields.filterKind, filterKind == 28) )
   {
     buttonText = this->fields.buttonText;
@@ -409,15 +397,15 @@ void __fastcall ServantFilterButtonControl_OnClickFilterButton___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1BDB81C(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B86478(v6) & 1) == 0 )
+  if ( (sub_1BDB938(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B864E0(v10, 0LL);
+      v10 = sub_1BDBAF0(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BDB9A0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -429,9 +417,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19CB810;
+  this->fields.m_target = (Il2CppObject *)sub_1A1D4A8;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19CB7C8;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A1D460;
 }
 
 
@@ -447,14 +435,14 @@ System_IAsyncResult_o *__fastcall ServantFilterButtonControl_OnClickFilterButton
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = filterKind;
-  if ( (byte_4A497E0 & 1) == 0 )
+  if ( (byte_4B3F8F5 & 1) == 0 )
   {
-    sub_1B863B8(&ListViewSort_FilterKind_TypeInfo, *(_QWORD *)&filterKind);
-    byte_4A497E0 = 1;
+    sub_1BDB878(&ListViewSort_FilterKind_TypeInfo, *(_QWORD *)&filterKind);
+    byte_4B3F8F5 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(ListViewSort_FilterKind_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B8636C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BDB82C(this, v9, callback, object);
 }
 
 
@@ -463,7 +451,7 @@ void __fastcall ServantFilterButtonControl_OnClickFilterButton__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B86370(result, 0LL, method);
+  sub_1BDB830(result, 0LL, method);
 }
 
 

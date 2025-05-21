@@ -2,10 +2,10 @@ void __fastcall ServantEquipEffectFilterItem___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4A497C8 & 1) == 0 )
+  if ( (byte_4B3F8DD & 1) == 0 )
   {
-    sub_1B863B8(&ServantEquipEffectFilterItem_TypeInfo, v1);
-    byte_4A497C8 = 1;
+    sub_1BDB878(&ServantEquipEffectFilterItem_TypeInfo, v1);
+    byte_4B3F8DD = 1;
   }
   ServantEquipEffectFilterItem_TypeInfo->static_fields->LABEL_MAX_WIDTH = 160;
 }
@@ -13,11 +13,24 @@ void __fastcall ServantEquipEffectFilterItem___cctor(const MethodInfo *method)
 
 void __fastcall ServantEquipEffectFilterItem___ctor(ServantEquipEffectFilterItem_o *this, const MethodInfo *method)
 {
+  this->fields.labelBlackCoverColor.fields.rgba = -11711155;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
+int32_t __fastcall ServantEquipEffectFilterItem__GetFuncCategoryId(
+        ServantEquipEffectFilterItem_o *this,
+        const MethodInfo *method)
+{
+  struct FunctionCategoryEntity_o *entity; // x8
+
+  entity = this->fields.entity;
+  if ( !entity )
+    sub_1BDBAD4(this, method);
+  return entity->fields.id;
+}
+
+
 void __fastcall ServantEquipEffectFilterItem__Init(
         ServantEquipEffectFilterItem_o *this,
         FunctionCategoryEntity_o *entity,
@@ -30,23 +43,15 @@ void __fastcall ServantEquipEffectFilterItem__Init(
   __int64 v12; // x1
   struct FunctionCategoryEntity_o *v13; // x8
   UILabel_o *v14; // x23
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  const MethodInfo *v19; // x1
+  const MethodInfo *v15; // x1
 
-  if ( (byte_4A497C7 & 1) == 0 )
+  if ( (byte_4B3F8DC & 1) == 0 )
   {
-    sub_1B863B8(&ServantEquipEffectFilterItem_TypeInfo, entity);
-    byte_4A497C7 = 1;
+    sub_1BDB878(&ServantEquipEffectFilterItem_TypeInfo, entity);
+    byte_4B3F8DC = 1;
   }
   this->fields.entity = entity;
-  sub_1B8635C(
-    (CGThumbnailListItem_o *)&this->fields.entity,
-    (int32_t)entity,
-    (int32_t)sort,
-    (const MethodInfo *)isSelected);
+  titleLabel = (UILabel_o *)sub_1BDB81C(&this->fields.entity);
   v13 = this->fields.entity;
   if ( !v13 )
     goto LABEL_9;
@@ -60,14 +65,14 @@ void __fastcall ServantEquipEffectFilterItem__Init(
     j_il2cpp_runtime_class_init_0(ServantEquipEffectFilterItem_TypeInfo);
   if ( !v14 )
 LABEL_9:
-    sub_1B86614(titleLabel, v12);
+    sub_1BDBAD4(titleLabel, v12);
   UILabel__SetCondensedScale(v14, ServantEquipEffectFilterItem_TypeInfo->static_fields->LABEL_MAX_WIDTH, 0, 0LL);
   this->fields.isSelected = isSelected;
   this->fields.sort = sort;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.sort, (int32_t)sort, v15, v16);
+  sub_1BDB81C(&this->fields.sort);
   this->fields.onClickEvent = onClickEvent;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.onClickEvent, (int32_t)onClickEvent, v17, v18);
-  ServantEquipEffectFilterItem__SetCheckMark(this, v19);
+  sub_1BDB81C(&this->fields.onClickEvent);
+  ServantEquipEffectFilterItem__SetCheckMark(this, v15);
 }
 
 
@@ -112,7 +117,7 @@ void __fastcall ServantEquipEffectFilterItem__SetCheckMark(
   if ( !checkMarkSprite
     || (checkMarkSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(checkMarkSprite, 0LL)) == 0LL )
   {
-    sub_1B86614(checkMarkSprite, method);
+    sub_1BDBAD4(checkMarkSprite, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)checkMarkSprite, this->fields.isSelected, 0LL);
 }
@@ -127,8 +132,41 @@ void __fastcall ServantEquipEffectFilterItem__SetEnableFilterButton(
 
   button = this->fields.button;
   if ( !button )
-    sub_1B86614(0LL, isEnable);
+    sub_1BDBAD4(0LL, isEnable);
   UICommonButton__SetButtonEnableWithCollider(button, isEnable, 0LL);
+}
+
+
+void __fastcall ServantEquipEffectFilterItem__SetMask(ServantEquipEffectFilterItem_o *this, const MethodInfo *method)
+{
+  UIWidget_o *titleLabel; // x0
+  unsigned int rgba; // w8
+  UnityEngine_Color_o v5; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+
+  titleLabel = (UIWidget_o *)this->fields.titleLabel;
+  if ( !titleLabel )
+    goto LABEL_6;
+  rgba = this->fields.labelBlackCoverColor.fields.rgba;
+  v5.fields.a = (float)HIBYTE(rgba) / 255.0;
+  v5.fields.b = (float)BYTE2(rgba) / 255.0;
+  v5.fields.g = (float)BYTE1(rgba) / 255.0;
+  v5.fields.r = (float)(unsigned __int8)rgba / 255.0;
+  UIWidget__set_color(titleLabel, v5, 0LL);
+  titleLabel = (UIWidget_o *)this->fields.buttonSprite;
+  if ( !titleLabel
+    || (v6.fields.r = 0.0,
+        v6.fields.g = 0.0,
+        v6.fields.b = 0.0,
+        v6.fields.a = 1.0,
+        UIWidget__set_color(titleLabel, v6, 0LL),
+        (titleLabel = (UIWidget_o *)this->fields.buttonMask) == 0LL)
+    || (titleLabel = (UIWidget_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleLabel, 0LL)) == 0LL )
+  {
+LABEL_6:
+    sub_1BDBAD4(titleLabel, method);
+  }
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 1, 0LL);
 }
 
 
@@ -146,6 +184,6 @@ void __fastcall ServantEquipEffectFilterItem__SetSelectState(
   ServantEquipEffectFilterItem__SetCheckMark(this, (const MethodInfo *)isSelected);
   entity = this->fields.entity;
   if ( !entity || (sort = this->fields.sort) == 0LL )
-    sub_1B86614(sort, v5);
-  ListViewSort__SetSvtEquipEffectFilter_41836424(sort, entity->fields.id, this->fields.isSelected, 0LL);
+    sub_1BDBAD4(sort, v5);
+  ListViewSort__SetSvtEquipEffectFilter_42795424(sort, entity->fields.id, this->fields.isSelected, 0LL);
 }

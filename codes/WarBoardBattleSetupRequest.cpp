@@ -22,10 +22,10 @@ void __fastcall WarBoardBattleSetupRequest__backgroundErrorRetry(
         WarBoardBattleSetupRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A50005 & 1) == 0 )
+  if ( (byte_4B4663A & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    byte_4A50005 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    byte_4B4663A = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -89,26 +89,26 @@ void __fastcall WarBoardBattleSetupRequest__beginRequest(
   const MethodInfo *v54; // x3
   const MethodInfo *v55; // x1
 
-  if ( (byte_4A50006 & 1) == 0 )
+  if ( (byte_4B4663B & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Linq_Enumerable_Select_long__string___, *(_QWORD *)&stageId);
-    sub_1B863B8(&Method_System_Linq_Enumerable_ToArray_string___, v12);
-    sub_1B863B8(&System_Func_long__string__TypeInfo, v13);
-    sub_1B863B8(&Method_WarBoardBattleSetupRequest___c__beginRequest_b__6_0__, v14);
-    sub_1B863B8(&Method_WarBoardBattleSetupRequest___c__beginRequest_b__6_1__, v15);
-    sub_1B863B8(&WarBoardBattleSetupRequest___c_TypeInfo, v16);
-    sub_1B863B8(&StringLiteral_23328/*"stageId"*/, v17);
-    sub_1B863B8(&StringLiteral_18317/*"defenseUserSvtIds"*/, v18);
-    sub_1B863B8(&StringLiteral_16911/*"befSquareIndex"*/, v19);
-    sub_1B863B8(&StringLiteral_16714/*"attackUserSvtIds"*/, v20);
-    sub_1B863B8(&StringLiteral_16473/*"aftSquareIndex"*/, v21);
-    sub_1B863B8(&StringLiteral_817/*","*/, v22);
-    sub_1B863B8(&StringLiteral_15792/*"[{0}]"*/, v23);
-    byte_4A50006 = 1;
+    sub_1BDB878(&Method_System_Linq_Enumerable_Select_long__string___, *(_QWORD *)&stageId);
+    sub_1BDB878(&Method_System_Linq_Enumerable_ToArray_string___, v12);
+    sub_1BDB878(&System_Func_long__string__TypeInfo, v13);
+    sub_1BDB878(&Method_WarBoardBattleSetupRequest___c__beginRequest_b__6_0__, v14);
+    sub_1BDB878(&Method_WarBoardBattleSetupRequest___c__beginRequest_b__6_1__, v15);
+    sub_1BDB878(&WarBoardBattleSetupRequest___c_TypeInfo, v16);
+    sub_1BDB878(&StringLiteral_23679/*"stageId"*/, v17);
+    sub_1BDB878(&StringLiteral_18555/*"defenseUserSvtIds"*/, v18);
+    sub_1BDB878(&StringLiteral_17135/*"befSquareIndex"*/, v19);
+    sub_1BDB878(&StringLiteral_16938/*"attackUserSvtIds"*/, v20);
+    sub_1BDB878(&StringLiteral_16696/*"aftSquareIndex"*/, v21);
+    sub_1BDB878(&StringLiteral_820/*","*/, v22);
+    sub_1BDB878(&StringLiteral_15994/*"[{0}]"*/, v23);
+    byte_4B4663B = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_23328/*"stageId"*/,
+    (System_String_o *)StringLiteral_23679/*"stageId"*/,
     stageId,
     (const MethodInfo *)defenseUserSvtIds);
   v24 = WarBoardBattleSetupRequest___c_TypeInfo;
@@ -117,9 +117,9 @@ void __fastcall WarBoardBattleSetupRequest__beginRequest(
     j_il2cpp_runtime_class_init_0(WarBoardBattleSetupRequest___c_TypeInfo);
     v24 = WarBoardBattleSetupRequest___c_TypeInfo;
   }
-  v25 = (System_String_o *)StringLiteral_15792/*"[{0}]"*/;
-  v26 = (System_String_o *)StringLiteral_16714/*"attackUserSvtIds"*/;
-  v27 = (System_String_o *)StringLiteral_817/*","*/;
+  v25 = (System_String_o *)StringLiteral_15994/*"[{0}]"*/;
+  v26 = (System_String_o *)StringLiteral_16938/*"attackUserSvtIds"*/;
+  v27 = (System_String_o *)StringLiteral_820/*","*/;
   _9__6_0 = (System_Func_T__TResult__o *)v24->static_fields->__9__6_0;
   if ( !_9__6_0 )
   {
@@ -129,34 +129,34 @@ void __fastcall WarBoardBattleSetupRequest__beginRequest(
       v24 = WarBoardBattleSetupRequest___c_TypeInfo;
     }
     v29 = (Il2CppObject *)v24->static_fields->__9;
-    _9__6_0 = (System_Func_T__TResult__o *)sub_1B86604(System_Func_long__string__TypeInfo);
+    _9__6_0 = (System_Func_T__TResult__o *)sub_1BDBAC4(System_Func_long__string__TypeInfo);
     System_Func_long__object____ctor(_9__6_0, v29, Method_WarBoardBattleSetupRequest___c__beginRequest_b__6_0__, 0LL);
     static_fields = WarBoardBattleSetupRequest___c_TypeInfo->static_fields;
     static_fields->__9__6_0 = (struct System_Func_long__string__o *)_9__6_0;
-    sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v31, v32);
+    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v31, v32);
   }
   v33 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_long__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)attackUserSvtIds,
                                                                (System_Func_TSource__TResult__o *)_9__6_0,
-                                                               (const MethodInfo_2F9FD58 *)Method_System_Linq_Enumerable_Select_long__string___);
+                                                               (const MethodInfo_3066F68 *)Method_System_Linq_Enumerable_Select_long__string___);
   v34 = (System_String_array *)System_Linq_Enumerable__ToArray_object_(
                                  v33,
-                                 (const MethodInfo_2FA98D8 *)Method_System_Linq_Enumerable_ToArray_string___);
+                                 (const MethodInfo_30707A8 *)Method_System_Linq_Enumerable_ToArray_string___);
   v35 = (Il2CppObject *)System_String__Join(v27, v34, 0LL);
   v36 = System_String__Format(v25, v35, 0LL);
   if ( !this )
     goto LABEL_18;
-  RequestBase__addField_42282000((RequestBase_o *)this, v26, v36, v38);
+  RequestBase__addField_43151112((RequestBase_o *)this, v26, v36, v38);
   v39 = WarBoardBattleSetupRequest___c_TypeInfo;
   if ( !WarBoardBattleSetupRequest___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardBattleSetupRequest___c_TypeInfo);
     v39 = WarBoardBattleSetupRequest___c_TypeInfo;
   }
-  v40 = (System_String_o *)StringLiteral_817/*","*/;
+  v40 = (System_String_o *)StringLiteral_820/*","*/;
   _9__6_1 = (System_Func_T__TResult__o *)v39->static_fields->__9__6_1;
-  v42 = (System_String_o *)StringLiteral_18317/*"defenseUserSvtIds"*/;
-  v43 = (System_String_o *)StringLiteral_15792/*"[{0}]"*/;
+  v42 = (System_String_o *)StringLiteral_18555/*"defenseUserSvtIds"*/;
+  v43 = (System_String_o *)StringLiteral_15994/*"[{0}]"*/;
   if ( !_9__6_1 )
   {
     if ( !v39->_2.cctor_finished )
@@ -165,27 +165,27 @@ void __fastcall WarBoardBattleSetupRequest__beginRequest(
       v39 = WarBoardBattleSetupRequest___c_TypeInfo;
     }
     v44 = (Il2CppObject *)v39->static_fields->__9;
-    _9__6_1 = (System_Func_T__TResult__o *)sub_1B86604(System_Func_long__string__TypeInfo);
+    _9__6_1 = (System_Func_T__TResult__o *)sub_1BDBAC4(System_Func_long__string__TypeInfo);
     System_Func_long__object____ctor(_9__6_1, v44, Method_WarBoardBattleSetupRequest___c__beginRequest_b__6_1__, 0LL);
     v45 = WarBoardBattleSetupRequest___c_TypeInfo->static_fields;
     v45->__9__6_1 = (struct System_Func_long__string__o *)_9__6_1;
-    sub_1B8635C((CGThumbnailListItem_o *)&v45->__9__6_1, (int32_t)_9__6_1, v46, v47);
+    sub_1BDB81C((CGThumbnailListItem_o *)&v45->__9__6_1, (int32_t)_9__6_1, v46, v47);
   }
   v48 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_long__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)defenseUserSvtIds,
                                                                (System_Func_TSource__TResult__o *)_9__6_1,
-                                                               (const MethodInfo_2F9FD58 *)Method_System_Linq_Enumerable_Select_long__string___);
+                                                               (const MethodInfo_3066F68 *)Method_System_Linq_Enumerable_Select_long__string___);
   v49 = (System_String_array *)System_Linq_Enumerable__ToArray_object_(
                                  v48,
-                                 (const MethodInfo_2FA98D8 *)Method_System_Linq_Enumerable_ToArray_string___);
+                                 (const MethodInfo_30707A8 *)Method_System_Linq_Enumerable_ToArray_string___);
   v50 = (Il2CppObject *)System_String__Join(v40, v49, 0LL);
   v51 = System_String__Format(v43, v50, 0LL);
-  RequestBase__addField_42282000((RequestBase_o *)this, v42, v51, v52);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16911/*"befSquareIndex"*/, befSquareIndex, v53);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16473/*"aftSquareIndex"*/, aftSquareIndex, v54);
+  RequestBase__addField_43151112((RequestBase_o *)this, v42, v51, v52);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17135/*"befSquareIndex"*/, befSquareIndex, v53);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16696/*"aftSquareIndex"*/, aftSquareIndex, v54);
   if ( !warBoardData )
 LABEL_18:
-    sub_1B86614(v36, v37);
+    sub_1BDBAD4(v36, v37);
   WarBoardData__SetRequest(warBoardData, (RequestBase_o *)this, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, v55);
 }
@@ -198,16 +198,16 @@ System_String_o *__fastcall WarBoardBattleSetupRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A50004 & 1) == 0 )
+  if ( (byte_4B46639 & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_24450/*"warBoard/battleSetup"*/, v2);
-    byte_4A50004 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_24806/*"warBoard/battleSetup"*/, v2);
+    byte_4B46639 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_24450/*"warBoard/battleSetup"*/, 0LL);
+  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_24806/*"warBoard/battleSetup"*/, 0LL);
 }
 
 
@@ -226,15 +226,15 @@ void __fastcall WarBoardBattleSetupRequest___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4A50007 & 1) == 0 )
+  if ( (byte_4B4663C & 1) == 0 )
   {
-    sub_1B863B8(&WarBoardBattleSetupRequest___c_TypeInfo, v1);
-    byte_4A50007 = 1;
+    sub_1BDB878(&WarBoardBattleSetupRequest___c_TypeInfo, v1);
+    byte_4B4663C = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(WarBoardBattleSetupRequest___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BDBAC4(WarBoardBattleSetupRequest___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   WarBoardBattleSetupRequest___c_TypeInfo->static_fields->__9 = (struct WarBoardBattleSetupRequest___c_o *)v2;
-  sub_1B8635C((CGThumbnailListItem_o *)WarBoardBattleSetupRequest___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BDB81C((CGThumbnailListItem_o *)WarBoardBattleSetupRequest___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 

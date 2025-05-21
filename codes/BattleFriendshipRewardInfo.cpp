@@ -12,19 +12,19 @@ GiftEntity_o *__fastcall BattleFriendshipRewardInfo__getGiftEntity(
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4A50D29 & 1) == 0 )
+  if ( (byte_4B47377 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_GiftMaster___, method);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4A50D29 = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_GiftMaster___, method);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4B47377 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
+                     (const MethodInfo_303395C *)Method_DataManager_GetMasterData_GiftMaster___)) == 0LL )
   {
-    sub_1B86614(Instance, v5);
+    sub_1BDBAD4(Instance, v5);
   }
   return GiftMaster__GetEntity(
            (GiftMaster_o *)Instance,
@@ -43,33 +43,34 @@ bool __fastcall BattleFriendshipRewardInfo__isShow(BattleFriendshipRewardInfo_o 
   Il2CppObject *Instance; // x0
   Il2CppObject *v7; // x1
   Il2CppObject *MasterData_object; // x20
+  __int64 v9; // x2
 
-  if ( (byte_4A50D2A & 1) == 0 )
+  if ( (byte_4B47378 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_UserServantMaster___, method);
-    sub_1B863B8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__, v3);
-    sub_1B863B8(&long___TypeInfo, v4);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4A50D2A = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_UserServantMaster___, method);
+    sub_1BDB878(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__, v3);
+    sub_1BDB878(&long___TypeInfo, v4);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4B47378 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserServantMaster___);
-  Instance = (Il2CppObject *)sub_1B86460(long___TypeInfo, 1LL);
+                        (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserServantMaster___);
+  Instance = (Il2CppObject *)sub_1BDB920(long___TypeInfo, 1LL);
   if ( !Instance )
     goto LABEL_8;
   v7 = Instance;
   if ( !LODWORD(Instance[1].monitor) )
-    sub_1B8661C(Instance, Instance);
+    sub_1BDBADC(Instance, Instance, v9);
   Instance[2].klass = (Il2CppClass *)this->fields.userSvtId;
   if ( !MasterData_object )
 LABEL_8:
-    sub_1B86614(Instance, v7);
+    sub_1BDBAD4(Instance, v7);
   return DataMasterBase_object__object__long___isEntityExistsFromId(
            (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
            (System_Int64_array *)Instance,
-           (const MethodInfo_3215DB8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__);
+           (const MethodInfo_32E3974 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__isEntityExistsFromId__);
 }

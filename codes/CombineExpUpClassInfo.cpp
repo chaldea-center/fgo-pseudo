@@ -3,14 +3,14 @@ void __fastcall CombineExpUpClassInfo___cctor(const MethodInfo *method)
   __int64 v1; // x1
   struct CombineExpUpClassInfo_StaticFields *static_fields; // x8
 
-  if ( (byte_4A52315 & 1) == 0 )
+  if ( (byte_4B489FA & 1) == 0 )
   {
-    sub_1B863B8(&CombineExpUpClassInfo_TypeInfo, v1);
-    byte_4A52315 = 1;
+    sub_1BDB878(&CombineExpUpClassInfo_TypeInfo, v1);
+    byte_4B489FA = 1;
   }
   static_fields = CombineExpUpClassInfo_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->NUM4_CELL_WIDTH = 0x1F00000027LL;
-  *(_OWORD *)&static_fields->NUM4_SCALE = xmmword_BC3550;
+  *(_OWORD *)&static_fields->NUM4_SCALE = xmmword_BEB5F0;
 }
 
 
@@ -65,10 +65,10 @@ void __fastcall CombineExpUpClassInfo__Set(
   int32_t v44; // [xsp+5Ch] [xbp-44h] BYREF
 
   v12 = this;
-  if ( (byte_4A52314 & 1) == 0 )
+  if ( (byte_4B489F9 & 1) == 0 )
   {
-    this = (CombineExpUpClassInfo_o *)sub_1B863B8(&CombineExpUpClassInfo_TypeInfo, *(_QWORD *)&classId);
-    byte_4A52314 = 1;
+    this = (CombineExpUpClassInfo_o *)sub_1BDB878(&CombineExpUpClassInfo_TypeInfo, *(_QWORD *)&classId);
+    byte_4B489F9 = 1;
   }
   v44 = 0;
   v12->fields.dispMinRarity = minRarity;
@@ -92,7 +92,7 @@ void __fastcall CombineExpUpClassInfo__Set(
       this = (CombineExpUpClassInfo_o *)*((_QWORD *)&expUpIconList->obj.klass + v13);
       if ( !this )
         goto LABEL_88;
-      ServantFaceIconComponent__Set_39178220(
+      ServantFaceIconComponent__Set_40019528(
         (ServantFaceIconComponent_o *)this,
         svtIdList->m_Items[v16 + 1],
         0,
@@ -109,6 +109,7 @@ void __fastcall CombineExpUpClassInfo__Set(
         0,
         0,
         0LL,
+        0,
         0LL);
       if ( !numList )
         goto LABEL_88;
@@ -186,7 +187,7 @@ LABEL_35:
     }
     v26 = 8LL;
 LABEL_34:
-    GameObjectExtensions__SetLocalScale_34384400(
+    GameObjectExtensions__SetLocalScale_35213112(
       v25,
       *(float *)((char *)&v24->static_fields->NUM4_CELL_WIDTH + v26),
       0LL);
@@ -196,7 +197,7 @@ LABEL_36:
   this = (CombineExpUpClassInfo_o *)v12->fields.classIconInfo;
   if ( !this )
     goto LABEL_88;
-  ServantClassIconComponent__SetImage((ServantClassIconComponent_o *)this, classId, 2, 0, 0LL);
+  ServantClassIconComponent__SetImage((ServantClassIconComponent_o *)this, classId, 2, 0, 0, 0, 0LL);
   v29 = v12->fields.dispMax;
   if ( v29 == 3 )
   {
@@ -261,7 +262,7 @@ LABEL_36:
                     if ( this )
                     {
                       v40 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-                      GameObjectExtensions__SetLocalScale_34384400(
+                      GameObjectExtensions__SetLocalScale_35213112(
                         v40,
                         CombineExpUpClassInfo_TypeInfo->static_fields->NUM4_SCALE,
                         0LL);
@@ -324,7 +325,7 @@ LABEL_36:
       }
     }
 LABEL_89:
-    sub_1B8661C(this, *(_QWORD *)&classId);
+    sub_1BDBADC(this, *(_QWORD *)&classId, svtIdList);
   }
   if ( v29 != 4 )
     goto LABEL_86;
@@ -347,7 +348,7 @@ LABEL_89:
         (v32 = v12->fields.expUpIconList) == 0LL) )
   {
 LABEL_88:
-    sub_1B86614(this, *(_QWORD *)&classId);
+    sub_1BDBAD4(this, *(_QWORD *)&classId);
   }
   if ( v32->max_length <= 4 )
     goto LABEL_89;
@@ -382,7 +383,7 @@ LABEL_86:
 }
 
 
-void __fastcall CombineExpUpClassInfo__Set_46530676(
+void __fastcall CombineExpUpClassInfo__Set_47505772(
         CombineExpUpClassInfo_o *this,
         System_Int32_array *numList,
         const MethodInfo *method)
@@ -413,7 +414,7 @@ void __fastcall CombineExpUpClassInfo__Set_46530676(
           break;
         if ( (unsigned int)(v5 - 4) >= numLabelList->max_length )
 LABEL_15:
-          sub_1B8661C(this, numList);
+          sub_1BDBADC(this, numList, method);
         v8 = (UILabel_o *)*((_QWORD *)&numLabelList->obj.klass + v5);
         this = (CombineExpUpClassInfo_o *)System_Int32__ToString((int32_t)&v10, 0LL);
         if ( !v8 )
@@ -435,6 +436,6 @@ LABEL_15:
           return;
       }
     }
-    sub_1B86614(this, numList);
+    sub_1BDBAD4(this, numList);
   }
 }

@@ -34,10 +34,10 @@ float __fastcall ClassBoardDialogSkillDetailPartsComponent__SetDetail(
   int32_t v18; // w1
   System_String_o *ClassBoardSkillIconName; // x20
 
-  if ( (byte_4A51BE7 & 1) == 0 )
+  if ( (byte_4B4828B & 1) == 0 )
   {
-    sub_1B863B8(&ClassBoardUtility_TypeInfo, name);
-    byte_4A51BE7 = 1;
+    sub_1BDB878(&ClassBoardUtility_TypeInfo, name);
+    byte_4B4828B = 1;
   }
   effectNameLabel = this->fields.effectNameLabel;
   if ( !effectNameLabel )
@@ -68,10 +68,10 @@ float __fastcall ClassBoardDialogSkillDetailPartsComponent__SetDetail(
   if ( !ClassBoardUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
   ClassBoardSkillIconName = ClassBoardUtility__GetClassBoardSkillIconName(iconId, skillType, 0LL);
-  effectNameLabel = (UILabel_o *)ClassBoardGlobalObject__get_IconAtlasManagerUnit((const MethodInfo *)ClassBoardSkillIconName);
+  effectNameLabel = (UILabel_o *)ClassBoardGlobalObject__get_IconAtlasManagerUnit(0LL);
   if ( !effectNameLabel )
 LABEL_17:
-    sub_1B86614(effectNameLabel, name);
+    sub_1BDBAD4(effectNameLabel, name);
   AtlasManagerUnit__SetUI((AtlasManagerUnit_o *)effectNameLabel, this->fields.effectIcon, ClassBoardSkillIconName, 0LL);
   return v17;
 }

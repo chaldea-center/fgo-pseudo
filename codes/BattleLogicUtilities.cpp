@@ -6,7 +6,7 @@ void __fastcall BattleLogicUtilities___ctor(BattleLogicUtilities_o *this, const 
 
 UnityEngine_Vector3_array *__fastcall BattleLogicUtilities__getShuffle_Vector3_(
         UnityEngine_Vector3_array *list,
-        const MethodInfo_2F5EAE0 *method)
+        const MethodInfo_302454C *method)
 {
   System_Random_o *v4; // x19
   Il2CppObject *v5; // x0
@@ -19,26 +19,27 @@ UnityEngine_Vector3_array *__fastcall BattleLogicUtilities__getShuffle_Vector3_(
   __int64 v12; // x22
   __int64 v13; // x0
   __int64 v14; // x1
+  __int64 v15; // x2
   unsigned int max_length; // w10
-  char *v16; // x8
   char *v17; // x8
-  __int64 v18; // t1
-  __int64 v19; // d1
-  int v20; // s0
-  char *v21; // x11
+  char *v18; // x8
+  __int64 v19; // t1
+  __int64 v20; // d1
+  int v21; // s0
   char *v22; // x11
-  __int64 v23; // t1
-  int v24; // s3
-  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *v26; // x0
-  const MethodInfo_2F5EC3C *v27; // x1
+  char *v23; // x11
+  __int64 v24; // t1
+  int v25; // s3
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *v27; // x0
+  const MethodInfo_30246A8 *v28; // x1
 
   if ( !method->rgctx_data )
   {
-    sub_1B863B8(&System_Random_TypeInfo, method);
+    sub_1BDB878(&System_Random_TypeInfo, method);
     if ( !method->rgctx_data )
-      sub_1BD6AA4(method);
+      sub_1C2BF64(method);
   }
-  v4 = (System_Random_o *)sub_1B86604(System_Random_TypeInfo);
+  v4 = (System_Random_o *)sub_1BDBAC4(System_Random_TypeInfo);
   System_Random___ctor(v4, 0LL);
   if ( !list )
     goto LABEL_18;
@@ -47,12 +48,12 @@ UnityEngine_Vector3_array *__fastcall BattleLogicUtilities__getShuffle_Vector3_(
   _0_T = method->rgctx_data->_0_T__;
   if ( (BYTE5(_0_T->vtable[0].methodPtr) & 1) == 0 )
   {
-    v5 = (Il2CppObject *)sub_1BD6A48(v7);
+    v5 = (Il2CppObject *)sub_1C2BF08(v7);
     _0_T = (Il2CppClass *)v5;
   }
   if ( !v8 )
     goto LABEL_18;
-  v5 = (Il2CppObject *)sub_1B864F4(v8, _0_T);
+  v5 = (Il2CppObject *)sub_1BDB9B4(v8, _0_T);
   if ( v5 )
   {
     monitor = v5[1].monitor;
@@ -71,45 +72,45 @@ UnityEngine_Vector3_array *__fastcall BattleLogicUtilities__getShuffle_Vector3_(
         max_length = v11->max_length;
         if ( (unsigned int)v13 >= max_length )
           goto LABEL_17;
-        v16 = (char *)v11 + 12 * (int)v13;
-        v18 = *((_QWORD *)v16 + 4);
-        v17 = v16 + 32;
-        v19 = v18;
+        v17 = (char *)v11 + 12 * (int)v13;
+        v19 = *((_QWORD *)v17 + 4);
+        v18 = v17 + 32;
+        v20 = v19;
         LODWORD(monitor) = (_DWORD)monitor - 1;
-        v20 = *((_DWORD *)v17 + 2);
+        v21 = *((_DWORD *)v18 + 2);
         if ( (unsigned int)monitor >= max_length
-          || (v21 = (char *)v11 + 12 * (unsigned int)monitor,
-              v23 = *((_QWORD *)v21 + 4),
-              v22 = v21 + 32,
-              v24 = *((_DWORD *)v22 + 2),
-              *(_QWORD *)v17 = v23,
-              *((_DWORD *)v17 + 2) = v24,
+          || (v22 = (char *)v11 + 12 * (unsigned int)monitor,
+              v24 = *((_QWORD *)v22 + 4),
+              v23 = v22 + 32,
+              v25 = *((_DWORD *)v23 + 2),
+              *(_QWORD *)v18 = v24,
+              *((_DWORD *)v18 + 2) = v25,
               (unsigned int)monitor >= v11->max_length) )
         {
 LABEL_17:
-          sub_1B8661C(v13, v14);
+          sub_1BDBADC(v13, v14, v15);
         }
         --v12;
-        *(_QWORD *)v22 = v19;
-        *((_DWORD *)v22 + 2) = v20;
+        *(_QWORD *)v23 = v20;
+        *((_DWORD *)v23 + 2) = v21;
       }
       while ( v12 > 2 );
       return v11;
     }
 LABEL_18:
-    sub_1B86614(v5, v6);
+    sub_1BDBAD4(v5, v6);
   }
-  sub_1B868D4(v8);
-  return (UnityEngine_Vector3_array *)BattleLogicUtilities__getShuffle___Il2CppFullySharedGenericType_(v26, v27);
+  sub_1BDBD94(v8);
+  return (UnityEngine_Vector3_array *)BattleLogicUtilities__getShuffle___Il2CppFullySharedGenericType_(v27, v28);
 }
 
 
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *__fastcall BattleLogicUtilities__getShuffle___Il2CppFullySharedGenericType_(
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *list,
-        const MethodInfo_2F5EC3C *method)
+        const MethodInfo_30246A8 *method)
 {
   unsigned __int64 StatusReg; // x19
-  const MethodInfo_2F5EC3C_RGCTXs *rgctx_data; // x8
+  const MethodInfo_30246A8_RGCTXs *rgctx_data; // x8
   __int64 native_size; // x20
   char *v7; // x22
   Il2CppObject *v8; // x0
@@ -123,42 +124,43 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *__fastcall BattleLog
   char *v16; // x23
   _BYTE *_1_T; // x0
   __int64 v18; // x1
+  __int64 v19; // x2
   unsigned int max_length; // w19
-  char *v20; // x22
-  __int64 v21; // x21
+  char *v21; // x22
+  __int64 v22; // x21
   __int64 thread_static_fields_size; // x24
-  long double v23; // q0
-  void *v24; // x23
-  unsigned int v25; // w21
-  long double v26; // q0
-  _QWORD v28[2]; // [xsp+0h] [xbp-40h] BYREF
-  char *v29; // [xsp+10h] [xbp-30h]
-  char *v30; // [xsp+18h] [xbp-28h]
-  System_Random_o *v31; // [xsp+20h] [xbp-20h]
-  __int64 v32; // [xsp+28h] [xbp-18h]
-  void *v33; // [xsp+30h] [xbp-10h]
-  __int64 v34; // [xsp+38h] [xbp-8h]
+  long double v24; // q0
+  void *v25; // x23
+  unsigned int v26; // w21
+  long double v27; // q0
+  _QWORD v29[2]; // [xsp+0h] [xbp-40h] BYREF
+  char *v30; // [xsp+10h] [xbp-30h]
+  char *v31; // [xsp+18h] [xbp-28h]
+  System_Random_o *v32; // [xsp+20h] [xbp-20h]
+  __int64 v33; // [xsp+28h] [xbp-18h]
+  void *v34; // [xsp+30h] [xbp-10h]
+  __int64 v35; // [xsp+38h] [xbp-8h]
 
   StatusReg = _ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2));
-  v34 = *(_QWORD *)(StatusReg + 40);
+  v35 = *(_QWORD *)(StatusReg + 40);
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1B863B8(&System_Random_TypeInfo, method);
+    sub_1BDB878(&System_Random_TypeInfo, method);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1BD6AA4(method);
+      sub_1C2BF64(method);
       rgctx_data = method->rgctx_data;
     }
   }
   native_size = (unsigned int)rgctx_data->_1_T->_2.native_size;
-  v30 = (char *)v28 - ((native_size + 15) & 0x1FFFFFFF0LL);
-  v7 = v30;
-  v33 = v30;
-  memset(v30, 0, native_size);
-  v31 = (System_Random_o *)sub_1B86604(System_Random_TypeInfo);
-  System_Random___ctor(v31, 0LL);
+  v31 = (char *)v29 - ((native_size + 15) & 0x1FFFFFFF0LL);
+  v7 = v31;
+  v34 = v31;
+  memset(v31, 0, native_size);
+  v32 = (System_Random_o *)sub_1BDBAC4(System_Random_TypeInfo);
+  System_Random___ctor(v32, 0LL);
   if ( !list )
     goto LABEL_25;
   v8 = System_Array__Clone((System_Array_o *)list, 0LL);
@@ -166,82 +168,82 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *__fastcall BattleLog
   _0_T = method->rgctx_data->_0_T__;
   if ( (BYTE5(_0_T->vtable[0].methodPtr) & 1) == 0 )
   {
-    v8 = (Il2CppObject *)sub_1BD6A48(v10);
+    v8 = (Il2CppObject *)sub_1C2BF08(v10);
     _0_T = (Il2CppClass *)v8;
   }
-  v28[1] = StatusReg;
+  v29[1] = StatusReg;
   if ( !v11 )
     goto LABEL_25;
-  v8 = (Il2CppObject *)sub_1B864F4(v11, _0_T);
+  v8 = (Il2CppObject *)sub_1BDB9B4(v11, _0_T);
   if ( !v8 )
-    sub_1B868D4(v11);
+    sub_1BDBD94(v11);
   monitor = v8[1].monitor;
   v14 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *)v8;
   if ( (int)monitor >= 2 )
   {
-    if ( v31 )
+    if ( v32 )
     {
       v15 = (unsigned int)v8[1].monitor + 1LL;
-      v29 = (char *)v28 - ((native_size + 15) & 0x1FFFFFFF0LL);
+      v30 = (char *)v29 - ((native_size + 15) & 0x1FFFFFFF0LL);
       do
       {
-        v32 = v15;
+        v33 = v15;
         v16 = v7;
-        _1_T = (_BYTE *)((__int64 (__fastcall *)(System_Random_o *, _QWORD, Il2CppMethodPointer))v31->klass->vtable._7_Next.method)(
-                          v31,
+        _1_T = (_BYTE *)((__int64 (__fastcall *)(System_Random_o *, _QWORD, Il2CppMethodPointer))v32->klass->vtable._7_Next.method)(
+                          v32,
                           (unsigned int)monitor,
-                          v31->klass->vtable._8_NextDouble.methodPtr);
+                          v32->klass->vtable._8_NextDouble.methodPtr);
         max_length = v14->max_length;
         if ( (unsigned int)_1_T >= max_length )
           goto LABEL_24;
-        v20 = v30;
-        v21 = (int)_1_T;
+        v21 = v31;
+        v22 = (int)_1_T;
         thread_static_fields_size = v14->obj.klass->_2.thread_static_fields_size;
         LODWORD(monitor) = (_DWORD)monitor - 1;
-        memcpy(v30, (char *)v14->m_Items + thread_static_fields_size * (int)_1_T, native_size);
-        _1_T = memcpy(v33, v20, native_size);
+        memcpy(v31, (char *)v14->m_Items + thread_static_fields_size * (int)_1_T, native_size);
+        _1_T = memcpy(v34, v21, native_size);
         if ( (unsigned int)monitor >= max_length )
           goto LABEL_24;
         v7 = v16;
         _1_T = memcpy(v16, (char *)v14->m_Items + thread_static_fields_size * (unsigned int)monitor, native_size);
-        if ( (unsigned int)v21 >= v14->max_length )
+        if ( (unsigned int)v22 >= v14->max_length )
           goto LABEL_24;
-        memcpy((char *)v14->m_Items + v14->obj.klass->_2.thread_static_fields_size * v21, v16, native_size);
+        memcpy((char *)v14->m_Items + v14->obj.klass->_2.thread_static_fields_size * v22, v16, native_size);
         _1_T = method->rgctx_data->_1_T;
         if ( (_1_T[309] & 1) == 0 )
-          _1_T = (_BYTE *)sub_1BD6A48(v23);
-        v24 = v29;
-        if ( (unsigned int)v21 >= v14->max_length )
+          _1_T = (_BYTE *)sub_1C2BF08(v24);
+        v25 = v30;
+        if ( (unsigned int)v22 >= v14->max_length )
           goto LABEL_24;
-        sub_1B86360(_1_T, (char *)v14->m_Items + v14->obj.klass->_2.thread_static_fields_size * v21, v7);
-        _1_T = memcpy(v24, v33, native_size);
-        v25 = v14->max_length;
-        if ( (unsigned int)monitor >= v25 )
+        sub_1BDB820(_1_T, (char *)v14->m_Items + v14->obj.klass->_2.thread_static_fields_size * v22, v7);
+        _1_T = memcpy(v25, v34, native_size);
+        v26 = v14->max_length;
+        if ( (unsigned int)monitor >= v26 )
           goto LABEL_24;
         memcpy(
           (char *)v14->m_Items + v14->obj.klass->_2.thread_static_fields_size * (unsigned __int64)(unsigned int)monitor,
-          v24,
+          v25,
           native_size);
         _1_T = method->rgctx_data->_1_T;
         if ( (_1_T[309] & 1) == 0 )
         {
-          _1_T = (_BYTE *)sub_1BD6A48(v26);
-          v25 = v14->max_length;
+          _1_T = (_BYTE *)sub_1C2BF08(v27);
+          v26 = v14->max_length;
         }
-        if ( (unsigned int)monitor >= v25 )
+        if ( (unsigned int)monitor >= v26 )
 LABEL_24:
-          sub_1B8661C(_1_T, v18);
-        sub_1B86360(
+          sub_1BDBADC(_1_T, v18, v19);
+        sub_1BDB820(
           _1_T,
           (char *)v14->m_Items + v14->obj.klass->_2.thread_static_fields_size * (unsigned __int64)(unsigned int)monitor,
-          v24);
-        v15 = v32 - 1;
+          v25);
+        v15 = v33 - 1;
       }
-      while ( v32 - 1 > 2 );
+      while ( v33 - 1 > 2 );
       return v14;
     }
 LABEL_25:
-    sub_1B86614(v8, v9);
+    sub_1BDBAD4(v8, v9);
   }
   return v14;
 }

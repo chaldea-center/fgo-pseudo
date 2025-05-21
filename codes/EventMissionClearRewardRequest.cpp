@@ -14,32 +14,32 @@ void __fastcall EventMissionClearRewardRequest__beginRequest(
   __int64 v6; // x1
   const MethodInfo *v7; // x2
 
-  if ( (byte_4A4FEC7 & 1) == 0 )
+  if ( (byte_4B464F6 & 1) == 0 )
   {
-    sub_1B863B8(&int___TypeInfo, *(_QWORD *)&missionId);
-    byte_4A4FEC7 = 1;
+    sub_1BDB878(&int___TypeInfo, *(_QWORD *)&missionId);
+    byte_4B464F6 = 1;
   }
-  v5 = (System_Int32_array *)sub_1B86460(int___TypeInfo, 1LL);
+  v5 = (System_Int32_array *)sub_1BDB920(int___TypeInfo, 1LL);
   if ( !v5 )
-    sub_1B86614(0LL, v6);
+    sub_1BDBAD4(0LL, v6);
   if ( !v5->max_length )
-    sub_1B8661C(v5, v5);
+    sub_1BDBADC(v5, v5, v7);
   v5->m_Items[1] = missionId;
-  EventMissionClearRewardRequest__beginRequest_42254228(this, v5, v7);
+  EventMissionClearRewardRequest__beginRequest_43138128(this, v5, v7);
 }
 
 
-void __fastcall EventMissionClearRewardRequest__beginRequest_42254228(
+void __fastcall EventMissionClearRewardRequest__beginRequest_43138128(
         EventMissionClearRewardRequest_o *this,
         System_Int32_array *missionIds,
         const MethodInfo *method)
 {
-  if ( (byte_4A4FEC8 & 1) == 0 )
+  if ( (byte_4B464F7 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_21289/*"missionIds"*/, missionIds);
-    byte_4A4FEC8 = 1;
+    sub_1BDB878(&StringLiteral_21627/*"missionIds"*/, missionIds);
+    byte_4B464F7 = 1;
   }
-  RequestBase__addField_42288224((RequestBase_o *)this, (System_String_o *)StringLiteral_21289/*"missionIds"*/, &missionIds->obj, 0LL);
+  RequestBase__addField_43155368((RequestBase_o *)this, (System_String_o *)StringLiteral_21627/*"missionIds"*/, &missionIds->obj, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -51,16 +51,16 @@ System_String_o *__fastcall EventMissionClearRewardRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A4FEC6 & 1) == 0 )
+  if ( (byte_4B464F5 & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_18913/*"eventMission/receive"*/, v2);
-    byte_4A4FEC6 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_19157/*"eventMission/receive"*/, v2);
+    byte_4B464F5 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_18913/*"eventMission/receive"*/, 0LL);
+  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_19157/*"eventMission/receive"*/, 0LL);
 }
 
 
@@ -76,18 +76,18 @@ void __fastcall EventMissionClearRewardRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_4A4FEC9 & 1) == 0 )
+  if ( (byte_4B464F8 & 1) == 0 )
   {
-    sub_1B863B8(&JsonManager_TypeInfo, responseList);
-    sub_1B863B8(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B863B8(&StringLiteral_21893/*"ng"*/, v6);
-    byte_4A4FEC9 = 1;
+    sub_1BDB878(&JsonManager_TypeInfo, responseList);
+    sub_1BDB878(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BDB878(&StringLiteral_22233/*"ng"*/, v6);
+    byte_4B464F8 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(50, responseList, 0LL);
   if ( v7
-    && (v8 = v7, ResponseData__checkError_42282948(v7, 0LL))
+    && (v8 = v7, ResponseData__checkError_43151432(v7, 0LL))
     && (success = (Il2CppObject *)v8->fields.success) != 0LL )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -96,7 +96,7 @@ void __fastcall EventMissionClearRewardRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_21893/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_22233/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

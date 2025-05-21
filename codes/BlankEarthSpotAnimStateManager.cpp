@@ -17,82 +17,88 @@ BlankEarthSpotAnimStateManager_SpotStateData_o *__fastcall BlankEarthSpotAnimSta
   __int64 v9; // x19
   __int64 v10; // x0
   __int64 v11; // x1
-  __int64 v12; // x0
-  __int64 v13; // x1
-  intptr_t v14; // w21
+  __int64 v12; // x2
+  __int64 v13; // x0
+  __int64 v14; // x1
+  __int64 v15; // x2
+  intptr_t v16; // w21
   System_Type_o *TypeFromHandle; // x0
-  __int64 v16; // x1
-  System_Type_o *v17; // x21
-  System_String_o *v18; // x22
-  Il2CppObject *v19; // x0
-  __int64 v20; // x1
-  __int64 v21; // x2
-  __int64 v22; // x3
-  _DWORD *v23; // x0
-  __int64 v24; // x1
-  __int64 v25; // x0
-  __int64 v26; // x1
-  __int64 v27; // x0
-  __int64 v28; // x1
-  System_RuntimeTypeHandle_o v30; // 0:w0.4
+  __int64 v18; // x1
+  __int64 v19; // x2
+  System_Type_o *v20; // x21
+  System_String_o *v21; // x22
+  Il2CppObject *v22; // x0
+  __int64 v23; // x1
+  __int64 v24; // x2
+  __int64 v25; // x3
+  _DWORD *v26; // x0
+  __int64 v27; // x1
+  __int64 v28; // x2
+  __int64 v29; // x0
+  __int64 v30; // x1
+  __int64 v31; // x2
+  __int64 v32; // x0
+  __int64 v33; // x1
+  __int64 v34; // x2
+  System_RuntimeTypeHandle_o v36; // 0:w0.4
 
-  if ( (byte_4A4DF87 & 1) == 0 )
+  if ( (byte_4B44541 & 1) == 0 )
   {
-    sub_1B863B8(&System_Enum_TypeInfo, dataString);
-    sub_1B863B8(&CondType_Kind_var, v4);
-    sub_1B863B8(&CondType_Kind_TypeInfo, v5);
-    sub_1B863B8(&BlankEarthSpotAnimStateManager_SpotStateData_TypeInfo, v6);
-    this = (BlankEarthSpotAnimStateManager_o *)sub_1B863B8(&System_Type_TypeInfo, v7);
-    byte_4A4DF87 = 1;
+    sub_1BDB878(&System_Enum_TypeInfo, dataString);
+    sub_1BDB878(&CondType_Kind_var, v4);
+    sub_1BDB878(&CondType_Kind_TypeInfo, v5);
+    sub_1BDB878(&BlankEarthSpotAnimStateManager_SpotStateData_TypeInfo, v6);
+    this = (BlankEarthSpotAnimStateManager_o *)sub_1BDB878(&System_Type_TypeInfo, v7);
+    byte_4B44541 = 1;
   }
   if ( !dataString )
-    sub_1B86614(this, dataString);
+    sub_1BDBAD4(this, dataString);
   v8 = System_String__Split(dataString, 0x2Cu, 0, 0LL);
-  v9 = sub_1B86604(BlankEarthSpotAnimStateManager_SpotStateData_TypeInfo);
+  v9 = sub_1BDBAC4(BlankEarthSpotAnimStateManager_SpotStateData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v8 )
-    sub_1B86614(v10, v11);
+    sub_1BDBAD4(v10, v11);
   if ( !v8->max_length )
-    sub_1B8661C(v10, v11);
-  v12 = System_Int32__Parse(v8->m_Items[0], 0LL);
+    sub_1BDBADC(v10, v11, v12);
+  v13 = System_Int32__Parse(v8->m_Items[0], 0LL);
   if ( !v9 )
-    sub_1B86614(v12, v13);
-  *(_DWORD *)(v9 + 16) = v12;
+    sub_1BDBAD4(v13, v14);
+  *(_DWORD *)(v9 + 16) = v13;
   if ( v8->max_length <= 1 )
-    sub_1B8661C(v12, v13);
+    sub_1BDBADC(v13, v14, v15);
   *(_DWORD *)(v9 + 20) = System_Int32__Parse(v8->m_Items[1], 0LL);
-  v14 = (int)CondType_Kind_var;
+  v16 = (int)CondType_Kind_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v30.fields.value = v14;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v30, 0LL);
+  v36.fields.value = v16;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v36, 0LL);
   if ( v8->max_length <= 2 )
-    sub_1B8661C(TypeFromHandle, v16);
-  v17 = TypeFromHandle;
-  v18 = v8->m_Items[2];
+    sub_1BDBADC(TypeFromHandle, v18, v19);
+  v20 = TypeFromHandle;
+  v21 = v8->m_Items[2];
   if ( !System_Enum_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
-  v19 = System_Enum__Parse(v17, v18, 0LL);
-  if ( !v19 )
-    sub_1B86614(0LL, v20);
-  if ( v19->klass->_1.element_class != CondType_Kind_TypeInfo->_1.element_class )
+  v22 = System_Enum__Parse(v20, v21, 0LL);
+  if ( !v22 )
+    sub_1BDBAD4(0LL, v23);
+  if ( v22->klass->_1.element_class != CondType_Kind_TypeInfo->_1.element_class )
   {
-    sub_1B868D4(v19);
+    sub_1BDBD94(v22);
 LABEL_27:
-    sub_1B8661C(v23, v24);
+    sub_1BDBADC(v26, v27, v28);
   }
-  v23 = (_DWORD *)j_il2cpp_object_unbox_0(v19, CondType_Kind_TypeInfo, v21, v22);
-  *(_DWORD *)(v9 + 24) = *v23;
+  v26 = (_DWORD *)j_il2cpp_object_unbox_0(v22, CondType_Kind_TypeInfo, v24, v25);
+  *(_DWORD *)(v9 + 24) = *v26;
   if ( v8->max_length <= 3 )
     goto LABEL_27;
-  v25 = System_Int32__Parse(v8->m_Items[3], 0LL);
-  *(_DWORD *)(v9 + 28) = v25;
+  v29 = System_Int32__Parse(v8->m_Items[3], 0LL);
+  *(_DWORD *)(v9 + 28) = v29;
   if ( v8->max_length <= 4 )
-    sub_1B8661C(v25, v26);
-  v27 = System_Int32__Parse(v8->m_Items[4], 0LL);
-  *(_DWORD *)(v9 + 32) = v27;
+    sub_1BDBADC(v29, v30, v31);
+  v32 = System_Int32__Parse(v8->m_Items[4], 0LL);
+  *(_DWORD *)(v9 + 32) = v32;
   if ( v8->max_length <= 5 )
-    sub_1B8661C(v27, v28);
+    sub_1BDBADC(v32, v33, v34);
   *(_DWORD *)(v9 + 36) = System_Int32__Parse(v8->m_Items[5], 0LL);
   return (BlankEarthSpotAnimStateManager_SpotStateData_o *)v9;
 }
@@ -117,36 +123,36 @@ int32_t __fastcall BlankEarthSpotAnimStateManager__GetCurrentAnimIndex(
   System_Func_object__bool__o *v18; // x21
   Il2CppObject *v19; // x0
 
-  if ( (byte_4A4DF88 & 1) == 0 )
+  if ( (byte_4B44542 & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Linq_Enumerable_FirstOrDefault_BlankEarthSpotAnimStateManager_SpotStateData___,
       *(_QWORD *)&spotId);
-    sub_1B863B8(&System_Func_BlankEarthSpotAnimStateManager_SpotStateData__bool__TypeInfo, v11);
-    sub_1B863B8(&Method_BlankEarthSpotAnimStateManager___c__DisplayClass10_0__GetCurrentAnimIndex_b__0__, v12);
-    sub_1B863B8(&BlankEarthSpotAnimStateManager___c__DisplayClass10_0_TypeInfo, v13);
-    byte_4A4DF88 = 1;
+    sub_1BDB878(&System_Func_BlankEarthSpotAnimStateManager_SpotStateData__bool__TypeInfo, v11);
+    sub_1BDB878(&Method_BlankEarthSpotAnimStateManager___c__DisplayClass10_0__GetCurrentAnimIndex_b__0__, v12);
+    sub_1BDB878(&BlankEarthSpotAnimStateManager___c__DisplayClass10_0_TypeInfo, v13);
+    byte_4B44542 = 1;
   }
-  v14 = sub_1B86604(BlankEarthSpotAnimStateManager___c__DisplayClass10_0_TypeInfo);
+  v14 = sub_1BDBAC4(BlankEarthSpotAnimStateManager___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v14, 0LL);
   if ( !v14 )
-    sub_1B86614(v15, v16);
+    sub_1BDBAD4(v15, v16);
   *(_DWORD *)(v14 + 16) = spotId;
   *(_DWORD *)(v14 + 20) = beforeClearQuestId;
   *(_BYTE *)(v14 + 24) = isCheckResetFlag;
   SortedSpotStateDataArray = (System_Collections_Generic_IEnumerable_TSource__o *)BlankEarthSpotAnimStateManager__get_SortedSpotStateDataArray(
                                                                                     this,
                                                                                     v16);
-  v18 = (System_Func_object__bool__o *)sub_1B86604(System_Func_BlankEarthSpotAnimStateManager_SpotStateData__bool__TypeInfo);
+  v18 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_BlankEarthSpotAnimStateManager_SpotStateData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v18,
     (Il2CppObject *)v14,
     Method_BlankEarthSpotAnimStateManager___c__DisplayClass10_0__GetCurrentAnimIndex_b__0__,
     0LL);
-  v19 = System_Linq_Enumerable__FirstOrDefault_object__49893388(
+  v19 = System_Linq_Enumerable__FirstOrDefault_object__50698552(
           SortedSpotStateDataArray,
           (System_Func_TSource__bool__o *)v18,
-          (const MethodInfo_2F9500C *)Method_System_Linq_Enumerable_FirstOrDefault_BlankEarthSpotAnimStateManager_SpotStateData___);
+          (const MethodInfo_3059938 *)Method_System_Linq_Enumerable_FirstOrDefault_BlankEarthSpotAnimStateManager_SpotStateData___);
   if ( v19 )
     return HIDWORD(v19[2].klass);
   return defaultValue;
@@ -180,47 +186,47 @@ BlankEarthSpotAnimStateManager_SpotStateData_array *__fastcall BlankEarthSpotAni
   System_Collections_Generic_IEnumerable_T__o *v23; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A4DF86 & 1) == 0 )
+  if ( (byte_4B44540 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Array_Empty_BlankEarthSpotAnimStateManager_SpotStateData___, method);
-    sub_1B863B8(&Method_BasicHelper_ExcludeNull_BlankEarthSpotAnimStateManager_SpotStateData___, v4);
-    sub_1B863B8(&Method_BlankEarthSpotAnimStateManager_ConvertStrToSpotStateData__, v5);
-    sub_1B863B8(&Method_DataManager_GetMaster_ConstantStrMaster___, v6);
-    sub_1B863B8(&DataManager_TypeInfo, v7);
-    sub_1B863B8(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__, v8);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Select_string__BlankEarthSpotAnimStateManager_SpotStateData___, v9);
-    sub_1B863B8(&Method_System_Linq_Enumerable_ToArray_BlankEarthSpotAnimStateManager_SpotStateData___, v10);
-    sub_1B863B8(&System_Func_string__BlankEarthSpotAnimStateManager_SpotStateData__TypeInfo, v11);
-    sub_1B863B8(&StringLiteral_2955/*"BLANK_EARTH_SPOT_ANIM_STATE"*/, v12);
-    byte_4A4DF86 = 1;
+    sub_1BDB878(&Method_System_Array_Empty_BlankEarthSpotAnimStateManager_SpotStateData___, method);
+    sub_1BDB878(&Method_BasicHelper_ExcludeNull_BlankEarthSpotAnimStateManager_SpotStateData___, v4);
+    sub_1BDB878(&Method_BlankEarthSpotAnimStateManager_ConvertStrToSpotStateData__, v5);
+    sub_1BDB878(&Method_DataManager_GetMaster_ConstantStrMaster___, v6);
+    sub_1BDB878(&DataManager_TypeInfo, v7);
+    sub_1BDB878(&Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__, v8);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Select_string__BlankEarthSpotAnimStateManager_SpotStateData___, v9);
+    sub_1BDB878(&Method_System_Linq_Enumerable_ToArray_BlankEarthSpotAnimStateManager_SpotStateData___, v10);
+    sub_1BDB878(&System_Func_string__BlankEarthSpotAnimStateManager_SpotStateData__TypeInfo, v11);
+    sub_1BDB878(&StringLiteral_2968/*"BLANK_EARTH_SPOT_ANIM_STATE"*/, v12);
+    byte_4B44540 = 1;
   }
   v13 = Method_System_Array_Empty_BlankEarthSpotAnimStateManager_SpotStateData___;
   entity = 0LL;
   v14 = *((_QWORD *)Method_System_Array_Empty_BlankEarthSpotAnimStateManager_SpotStateData___ + 7);
   if ( !v14 )
   {
-    sub_1BD6AA4(Method_System_Array_Empty_BlankEarthSpotAnimStateManager_SpotStateData___);
+    sub_1C2BF64(Method_System_Array_Empty_BlankEarthSpotAnimStateManager_SpotStateData___);
     v14 = v13[7];
   }
   v15 = *(_QWORD *)(v14 + 16);
   if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
-    v15 = sub_1BD6A48(inited);
+    v15 = sub_1C2BF08(inited);
   if ( !*(_DWORD *)(v15 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v15);
   v16 = *(_QWORD *)(v13[7] + 16LL);
   if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
-    v16 = sub_1BD6A48(inited);
+    v16 = sub_1C2BF08(inited);
   v17 = **(BlankEarthSpotAnimStateManager_SpotStateData_array ***)(v16 + 184);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_ConstantStrMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ConstantStrMaster___);
   if ( !Master_object )
     goto LABEL_21;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__object___TryGetEntity(
                                                                   Master_object,
                                                                   &entity,
-                                                                  (Il2CppObject *)StringLiteral_2955/*"BLANK_EARTH_SPOT_ANIM_STATE"*/,
-                                                                  (const MethodInfo_3218D84 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
+                                                                  (Il2CppObject *)StringLiteral_2968/*"BLANK_EARTH_SPOT_ANIM_STATE"*/,
+                                                                  (const MethodInfo_32E6940 *)Method_DataMasterBase_ConstantStrMaster__ConstantStrEntity__string__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
     if ( !entity )
@@ -240,7 +246,7 @@ BlankEarthSpotAnimStateManager_SpotStateData_array *__fastcall BlankEarthSpotAni
                                                                        0x2Fu,
                                                                        0,
                                                                        0LL);
-          v21 = (System_Func_object__object__o *)sub_1B86604(System_Func_string__BlankEarthSpotAnimStateManager_SpotStateData__TypeInfo);
+          v21 = (System_Func_object__object__o *)sub_1BDBAC4(System_Func_string__BlankEarthSpotAnimStateManager_SpotStateData__TypeInfo);
           System_Func_object__object____ctor(
             v21,
             (Il2CppObject *)this,
@@ -249,17 +255,17 @@ BlankEarthSpotAnimStateManager_SpotStateData_array *__fastcall BlankEarthSpotAni
           v22 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Select_object__object_(
                                                                  v20,
                                                                  (System_Func_TSource__TResult__o *)v21,
-                                                                 (const MethodInfo_2FA1274 *)Method_System_Linq_Enumerable_Select_string__BlankEarthSpotAnimStateManager_SpotStateData___);
+                                                                 (const MethodInfo_3068484 *)Method_System_Linq_Enumerable_Select_string__BlankEarthSpotAnimStateManager_SpotStateData___);
           v23 = BasicHelper__ExcludeNull_object_(
                   v22,
-                  (const MethodInfo_2F58608 *)Method_BasicHelper_ExcludeNull_BlankEarthSpotAnimStateManager_SpotStateData___);
+                  (const MethodInfo_301D750 *)Method_BasicHelper_ExcludeNull_BlankEarthSpotAnimStateManager_SpotStateData___);
           return (BlankEarthSpotAnimStateManager_SpotStateData_array *)System_Linq_Enumerable__ToArray_object_(
                                                                          (System_Collections_Generic_IEnumerable_TSource__o *)v23,
-                                                                         (const MethodInfo_2FA98D8 *)Method_System_Linq_Enumerable_ToArray_BlankEarthSpotAnimStateManager_SpotStateData___);
+                                                                         (const MethodInfo_30707A8 *)Method_System_Linq_Enumerable_ToArray_BlankEarthSpotAnimStateManager_SpotStateData___);
         }
       }
 LABEL_21:
-      sub_1B86614(Master_object, v19);
+      sub_1BDBAD4(Master_object, v19);
     }
   }
   return v17;
@@ -287,14 +293,14 @@ BlankEarthSpotAnimStateManager_SpotStateData_array *__fastcall BlankEarthSpotAni
   int32_t v17; // w2
   const MethodInfo *v18; // x3
 
-  if ( (byte_4A4DF85 & 1) == 0 )
+  if ( (byte_4B4453F & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Linq_Enumerable_OrderBy_BlankEarthSpotAnimStateManager_SpotStateData__int___, method);
-    sub_1B863B8(&Method_System_Linq_Enumerable_ToArray_BlankEarthSpotAnimStateManager_SpotStateData___, v3);
-    sub_1B863B8(&System_Func_BlankEarthSpotAnimStateManager_SpotStateData__int__TypeInfo, v4);
-    sub_1B863B8(&Method_BlankEarthSpotAnimStateManager___c__get_SortedSpotStateDataArray_b__6_0__, v5);
-    sub_1B863B8(&BlankEarthSpotAnimStateManager___c_TypeInfo, v6);
-    byte_4A4DF85 = 1;
+    sub_1BDB878(&Method_System_Linq_Enumerable_OrderBy_BlankEarthSpotAnimStateManager_SpotStateData__int___, method);
+    sub_1BDB878(&Method_System_Linq_Enumerable_ToArray_BlankEarthSpotAnimStateManager_SpotStateData___, v3);
+    sub_1BDB878(&System_Func_BlankEarthSpotAnimStateManager_SpotStateData__int__TypeInfo, v4);
+    sub_1BDB878(&Method_BlankEarthSpotAnimStateManager___c__get_SortedSpotStateDataArray_b__6_0__, v5);
+    sub_1BDB878(&BlankEarthSpotAnimStateManager___c_TypeInfo, v6);
+    byte_4B4453F = 1;
   }
   p_sortedSpotStateDataArray = (CGThumbnailListItem_o *)&this->fields.sortedSpotStateDataArray;
   sortedSpotStateDataArray = this->fields.sortedSpotStateDataArray;
@@ -318,7 +324,7 @@ BlankEarthSpotAnimStateManager_SpotStateData_array *__fastcall BlankEarthSpotAni
         v10 = BlankEarthSpotAnimStateManager___c_TypeInfo;
       }
       v12 = (Il2CppObject *)v10->static_fields->__9;
-      _9__6_0 = (System_Func_object__int__o *)sub_1B86604(System_Func_BlankEarthSpotAnimStateManager_SpotStateData__int__TypeInfo);
+      _9__6_0 = (System_Func_object__int__o *)sub_1BDBAC4(System_Func_BlankEarthSpotAnimStateManager_SpotStateData__int__TypeInfo);
       System_Func_object__int____ctor(
         _9__6_0,
         v12,
@@ -326,17 +332,17 @@ BlankEarthSpotAnimStateManager_SpotStateData_array *__fastcall BlankEarthSpotAni
         0LL);
       static_fields = BlankEarthSpotAnimStateManager___c_TypeInfo->static_fields;
       static_fields->__9__6_0 = (struct System_Func_BlankEarthSpotAnimStateManager_SpotStateData__int__o *)_9__6_0;
-      sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v14, v15);
+      sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v14, v15);
     }
     v16 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
                                                                  SpotStateDataArray,
                                                                  (System_Func_TSource__TKey__o *)_9__6_0,
-                                                                 (const MethodInfo_2F9AB50 *)Method_System_Linq_Enumerable_OrderBy_BlankEarthSpotAnimStateManager_SpotStateData__int___);
+                                                                 (const MethodInfo_305F578 *)Method_System_Linq_Enumerable_OrderBy_BlankEarthSpotAnimStateManager_SpotStateData__int___);
     sortedSpotStateDataArray = (BlankEarthSpotAnimStateManager_SpotStateData_array *)System_Linq_Enumerable__ToArray_object_(
                                                                                        v16,
-                                                                                       (const MethodInfo_2FA98D8 *)Method_System_Linq_Enumerable_ToArray_BlankEarthSpotAnimStateManager_SpotStateData___);
+                                                                                       (const MethodInfo_30707A8 *)Method_System_Linq_Enumerable_ToArray_BlankEarthSpotAnimStateManager_SpotStateData___);
     p_sortedSpotStateDataArray->klass = (CGThumbnailListItem_c *)sortedSpotStateDataArray;
-    sub_1B8635C(p_sortedSpotStateDataArray, (int32_t)sortedSpotStateDataArray, v17, v18);
+    sub_1BDB81C(p_sortedSpotStateDataArray, (int32_t)sortedSpotStateDataArray, v17, v18);
   }
   return sortedSpotStateDataArray;
 }
@@ -357,7 +363,7 @@ BlankEarthSpotAnimStateManager_SpotStateData_array *__fastcall BlankEarthSpotAni
   {
     spotStateDataArray = BlankEarthSpotAnimStateManager__GetSpotStateDataArray(this, method);
     this->fields.spotStateDataArray = spotStateDataArray;
-    sub_1B8635C((CGThumbnailListItem_o *)p_fields, (int32_t)spotStateDataArray, v5, v6);
+    sub_1BDB81C((CGThumbnailListItem_o *)p_fields, (int32_t)spotStateDataArray, v5, v6);
   }
   return spotStateDataArray;
 }
@@ -382,10 +388,10 @@ bool __fastcall BlankEarthSpotAnimStateManager_SpotStateData__IsOpen(
   int32_t condTargetType; // w23
   int64_t condTargetNum; // x21
 
-  if ( (byte_4A4DF89 & 1) == 0 )
+  if ( (byte_4B44543 & 1) == 0 )
   {
-    sub_1B863B8(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
-    byte_4A4DF89 = 1;
+    sub_1BDB878(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
+    byte_4B44543 = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;
@@ -409,15 +415,15 @@ void __fastcall BlankEarthSpotAnimStateManager___c___cctor(const MethodInfo *met
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4A4DF8A & 1) == 0 )
+  if ( (byte_4B44544 & 1) == 0 )
   {
-    sub_1B863B8(&BlankEarthSpotAnimStateManager___c_TypeInfo, v1);
-    byte_4A4DF8A = 1;
+    sub_1BDB878(&BlankEarthSpotAnimStateManager___c_TypeInfo, v1);
+    byte_4B44544 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(BlankEarthSpotAnimStateManager___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BDBAC4(BlankEarthSpotAnimStateManager___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BlankEarthSpotAnimStateManager___c_TypeInfo->static_fields->__9 = (struct BlankEarthSpotAnimStateManager___c_o *)v2;
-  sub_1B8635C((CGThumbnailListItem_o *)BlankEarthSpotAnimStateManager___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BDB81C((CGThumbnailListItem_o *)BlankEarthSpotAnimStateManager___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -435,7 +441,7 @@ int32_t __fastcall BlankEarthSpotAnimStateManager___c___get_SortedSpotStateDataA
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   return -x->fields.Priority;
 }
 
@@ -456,7 +462,7 @@ bool __fastcall BlankEarthSpotAnimStateManager___c__DisplayClass10_0___GetCurren
   const MethodInfo *v3; // x3
 
   if ( !x )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   return x->fields.SpotId == this->fields.spotId
       && BlankEarthSpotAnimStateManager_SpotStateData__IsOpen(
            x,

@@ -1,9 +1,9 @@
 void __fastcall UserGameActRecoverConfirmMenu___ctor(UserGameActRecoverConfirmMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4D1F5 & 1) == 0 )
+  if ( (byte_4B43775 & 1) == 0 )
   {
-    sub_1B863B8(&BaseDialog_TypeInfo, method);
-    byte_4A4D1F5 = 1;
+    sub_1BDB878(&BaseDialog_TypeInfo, method);
+    byte_4B43775 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -27,7 +27,7 @@ void __fastcall UserGameActRecoverConfirmMenu__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1B8635C(p_callbackFunc, 0, (int32_t)method, v3);
+    sub_1BDB81C(p_callbackFunc, 0, (int32_t)method, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       result,
@@ -40,11 +40,11 @@ void __fastcall UserGameActRecoverConfirmMenu__Close(UserGameActRecoverConfirmMe
 {
   const MethodInfo *v2; // x2
 
-  UserGameActRecoverConfirmMenu__Close_38384176(this, 0LL, v2);
+  UserGameActRecoverConfirmMenu__Close_39189260(this, 0LL, v2);
 }
 
 
-void __fastcall UserGameActRecoverConfirmMenu__Close_38384176(
+void __fastcall UserGameActRecoverConfirmMenu__Close_39189260(
         UserGameActRecoverConfirmMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -53,16 +53,16 @@ void __fastcall UserGameActRecoverConfirmMenu__Close_38384176(
   __int64 v6; // x1
   System_Action_o *v7; // x20
 
-  if ( (byte_4A4D1F1 & 1) == 0 )
+  if ( (byte_4B43771 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, callback);
-    sub_1B863B8(&Method_UserGameActRecoverConfirmMenu_EndClose__, v6);
-    byte_4A4D1F1 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, callback);
+    sub_1BDB878(&Method_UserGameActRecoverConfirmMenu_EndClose__, v6);
+    byte_4B43771 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
   this->fields.state = 4;
-  v7 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_UserGameActRecoverConfirmMenu_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -85,7 +85,7 @@ void __fastcall UserGameActRecoverConfirmMenu__EndClose(
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0LL;
-    sub_1B8635C(p_closeCallbackFunc, 0, v3, v4);
+    sub_1BDB81C(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
       v6->fields.original_method_info,
       *(_QWORD *)&v6->fields.extra_arg);
@@ -103,10 +103,10 @@ void __fastcall UserGameActRecoverConfirmMenu__Init(UserGameActRecoverConfirmMen
 {
   UILabel_o *stoneTitleLabel; // x0
 
-  if ( (byte_4A4D1EF & 1) == 0 )
+  if ( (byte_4B4376F & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_1/*""*/, method);
-    byte_4A4D1EF = 1;
+    sub_1BDB878(&StringLiteral_1/*""*/, method);
+    byte_4B4376F = 1;
   }
   stoneTitleLabel = this->fields.stoneTitleLabel;
   if ( !stoneTitleLabel )
@@ -134,7 +134,7 @@ void __fastcall UserGameActRecoverConfirmMenu__Init(UserGameActRecoverConfirmMen
         (stoneTitleLabel = this->fields.closeLabel) == 0LL) )
   {
 LABEL_12:
-    sub_1B86614(stoneTitleLabel, method);
+    sub_1BDBAD4(stoneTitleLabel, method);
   }
   UILabel__set_text(stoneTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   this->fields.state = 0;
@@ -150,18 +150,18 @@ void __fastcall UserGameActRecoverConfirmMenu__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A4D1F3 & 1) == 0 )
+  if ( (byte_4B43773 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UserGameActRecoverConfirmMenu_OnClickCancel__, method);
-    byte_4A4D1F3 = 1;
+    sub_1BDB878(&Method_UserGameActRecoverConfirmMenu_OnClickCancel__, method);
+    byte_4B43773 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_UserGameActRecoverConfirmMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_UserGameActRecoverConfirmMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B863D0(Method_UserGameActRecoverConfirmMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BDB890(Method_UserGameActRecoverConfirmMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     UserGameActRecoverConfirmMenu__Callback(this, 0, v5);
   }
@@ -176,18 +176,18 @@ void __fastcall UserGameActRecoverConfirmMenu__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A4D1F4 & 1) == 0 )
+  if ( (byte_4B43774 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UserGameActRecoverConfirmMenu_OnClickClose__, method);
-    byte_4A4D1F4 = 1;
+    sub_1BDB878(&Method_UserGameActRecoverConfirmMenu_OnClickClose__, method);
+    byte_4B43774 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_UserGameActRecoverConfirmMenu_OnClickClose__;
     if ( (*((_BYTE *)Method_UserGameActRecoverConfirmMenu_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B863D0(Method_UserGameActRecoverConfirmMenu_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BDB890(Method_UserGameActRecoverConfirmMenu_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     UserGameActRecoverConfirmMenu__Callback(this, 0, v5);
   }
@@ -202,18 +202,18 @@ void __fastcall UserGameActRecoverConfirmMenu__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4A4D1F2 & 1) == 0 )
+  if ( (byte_4B43772 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UserGameActRecoverConfirmMenu_OnClickDecide__, method);
-    byte_4A4D1F2 = 1;
+    sub_1BDB878(&Method_UserGameActRecoverConfirmMenu_OnClickDecide__, method);
+    byte_4B43772 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_UserGameActRecoverConfirmMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_UserGameActRecoverConfirmMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B863D0(Method_UserGameActRecoverConfirmMenu_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BDB890(Method_UserGameActRecoverConfirmMenu_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
     UserGameActRecoverConfirmMenu__Callback(this, 1, v5);
   }
@@ -304,39 +304,39 @@ void __fastcall UserGameActRecoverConfirmMenu__Open(
   int32_t Act; // [xsp+18h] [xbp-48h] BYREF
   int32_t stone; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4A4D1F0 & 1) == 0 )
+  if ( (byte_4B43770 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, *(_QWORD *)&kind);
-    sub_1B863B8(&BalanceConfig_TypeInfo, v9);
-    sub_1B863B8(&int_TypeInfo, v10);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v11);
-    sub_1B863B8(&Method_UserGameActRecoverConfirmMenu_EndOpen__, v12);
-    sub_1B863B8(&StringLiteral_14631/*"USER_GAME_ACT_RECOVER_STONE"*/, v13);
-    sub_1B863B8(&StringLiteral_14627/*"USER_GAME_ACT_RECOVER_MESSAGE_INFO_NONE"*/, v14);
-    sub_1B863B8(&StringLiteral_14621/*"USER_GAME_ACT_RECOVER_CANCEL"*/, v15);
-    sub_1B863B8(&StringLiteral_14630/*"USER_GAME_ACT_RECOVER_REQUEST_STONE_MESSAGE"*/, v16);
-    sub_1B863B8(&StringLiteral_14622/*"USER_GAME_ACT_RECOVER_CLOSE"*/, v17);
-    sub_1B863B8(&StringLiteral_14623/*"USER_GAME_ACT_RECOVER_DECIDE"*/, v18);
-    sub_1B863B8(&StringLiteral_14626/*"USER_GAME_ACT_RECOVER_MESSAGE_END"*/, v19);
-    sub_1B863B8(&StringLiteral_14625/*"USER_GAME_ACT_RECOVER_INFO_BEFORE_AFTER"*/, v20);
-    sub_1B863B8(&StringLiteral_12176/*"STONE_TAKE"*/, v21);
-    sub_1B863B8(&StringLiteral_14629/*"USER_GAME_ACT_RECOVER_MESSAGE_START"*/, v22);
-    sub_1B863B8(&StringLiteral_12177/*"STONE_UNIT"*/, v23);
-    sub_1B863B8(&StringLiteral_1/*""*/, v24);
-    sub_1B863B8(&StringLiteral_14624/*"USER_GAME_ACT_RECOVER_INFO"*/, v25);
-    sub_1B863B8(&StringLiteral_14628/*"USER_GAME_ACT_RECOVER_MESSAGE_MAX_ACT"*/, v26);
-    byte_4A4D1F0 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, *(_QWORD *)&kind);
+    sub_1BDB878(&BalanceConfig_TypeInfo, v9);
+    sub_1BDB878(&int_TypeInfo, v10);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v11);
+    sub_1BDB878(&Method_UserGameActRecoverConfirmMenu_EndOpen__, v12);
+    sub_1BDB878(&StringLiteral_14829/*"USER_GAME_ACT_RECOVER_STONE"*/, v13);
+    sub_1BDB878(&StringLiteral_14825/*"USER_GAME_ACT_RECOVER_MESSAGE_INFO_NONE"*/, v14);
+    sub_1BDB878(&StringLiteral_14819/*"USER_GAME_ACT_RECOVER_CANCEL"*/, v15);
+    sub_1BDB878(&StringLiteral_14828/*"USER_GAME_ACT_RECOVER_REQUEST_STONE_MESSAGE"*/, v16);
+    sub_1BDB878(&StringLiteral_14820/*"USER_GAME_ACT_RECOVER_CLOSE"*/, v17);
+    sub_1BDB878(&StringLiteral_14821/*"USER_GAME_ACT_RECOVER_DECIDE"*/, v18);
+    sub_1BDB878(&StringLiteral_14824/*"USER_GAME_ACT_RECOVER_MESSAGE_END"*/, v19);
+    sub_1BDB878(&StringLiteral_14823/*"USER_GAME_ACT_RECOVER_INFO_BEFORE_AFTER"*/, v20);
+    sub_1BDB878(&StringLiteral_12362/*"STONE_TAKE"*/, v21);
+    sub_1BDB878(&StringLiteral_14827/*"USER_GAME_ACT_RECOVER_MESSAGE_START"*/, v22);
+    sub_1BDB878(&StringLiteral_12363/*"STONE_UNIT"*/, v23);
+    sub_1BDB878(&StringLiteral_1/*""*/, v24);
+    sub_1BDB878(&StringLiteral_14822/*"USER_GAME_ACT_RECOVER_INFO"*/, v25);
+    sub_1BDB878(&StringLiteral_14826/*"USER_GAME_ACT_RECOVER_MESSAGE_MAX_ACT"*/, v26);
+    byte_4B43770 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.stoneShopEntity = stoneShopEntity;
-    sub_1B8635C(
+    sub_1BDB81C(
       (CGThumbnailListItem_o *)&this->fields.stoneShopEntity,
       (int32_t)stoneShopEntity,
       (int32_t)stoneShopEntity,
       (const MethodInfo *)callback);
     this->fields.callbackFunc = callback;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v27, v28);
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v27, v28);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject )
       goto LABEL_72;
@@ -344,16 +344,16 @@ void __fastcall UserGameActRecoverConfirmMenu__Open(
     SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
     this->fields.userGameEntity = SelfUserGame;
     p_userGameEntity = &this->fields.userGameEntity;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.userGameEntity, (int32_t)SelfUserGame, v33, v34);
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.userGameEntity, (int32_t)SelfUserGame, v33, v34);
     stoneTitleLabel = this->fields.stoneTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12176/*"STONE_TAKE"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12362/*"STONE_TAKE"*/, 0LL);
     if ( !stoneTitleLabel )
       goto LABEL_72;
     UILabel__set_text(stoneTitleLabel, (System_String_o *)gameObject, 0LL);
     stoneDataLabel = this->fields.stoneDataLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12177/*"STONE_UNIT"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12363/*"STONE_UNIT"*/, 0LL);
     userGameEntity = this->fields.userGameEntity;
     if ( !userGameEntity )
       goto LABEL_72;
@@ -364,7 +364,7 @@ void __fastcall UserGameActRecoverConfirmMenu__Open(
     if ( !stoneDataLabel )
       goto LABEL_72;
     UILabel__set_text(stoneDataLabel, (System_String_o *)gameObject, 0LL);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14624/*"USER_GAME_ACT_RECOVER_INFO"*/, 0LL);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14822/*"USER_GAME_ACT_RECOVER_INFO"*/, 0LL);
     if ( !*p_userGameEntity )
       goto LABEL_72;
     v43 = (System_String_o *)gameObject;
@@ -375,13 +375,13 @@ void __fastcall UserGameActRecoverConfirmMenu__Open(
     v50 = (Il2CppObject *)gameObject;
     actMax = (*p_userGameEntity)->fields.actMax;
     v51 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &actMax, v47, v48, v49);
-    v52 = (Il2CppObject *)System_String__Format_61686468(v43, v50, v51, 0LL);
+    v52 = (Il2CppObject *)System_String__Format_62613552(v43, v50, v51, 0LL);
     if ( (unsigned int)kind < 2 )
     {
       messageLabel = this->fields.messageLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14629/*"USER_GAME_ACT_RECOVER_MESSAGE_START"*/, 0LL);
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14827/*"USER_GAME_ACT_RECOVER_MESSAGE_START"*/, 0LL);
       if ( !messageLabel )
         goto LABEL_72;
       UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0LL);
@@ -422,7 +422,7 @@ void __fastcall UserGameActRecoverConfirmMenu__Open(
       closeLabel = this->fields.closeLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14622/*"USER_GAME_ACT_RECOVER_CLOSE"*/, 0LL);
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14820/*"USER_GAME_ACT_RECOVER_CLOSE"*/, 0LL);
       if ( !closeLabel )
         goto LABEL_72;
       UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0LL);
@@ -451,7 +451,7 @@ void __fastcall UserGameActRecoverConfirmMenu__Open(
             (gameObject = (UnityEngine_GameObject_o *)this->fields.cancelButton) == 0LL) )
       {
 LABEL_72:
-        sub_1B86614(gameObject, v30);
+        sub_1BDBAD4(gameObject, v30);
       }
       v54 = 0;
     }
@@ -471,16 +471,16 @@ LABEL_41:
           decideLabel = this->fields.decideLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14623/*"USER_GAME_ACT_RECOVER_DECIDE"*/, 0LL);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14821/*"USER_GAME_ACT_RECOVER_DECIDE"*/, 0LL);
           if ( !decideLabel )
             goto LABEL_72;
           UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0LL);
           cancelLabel = this->fields.cancelLabel;
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14621/*"USER_GAME_ACT_RECOVER_CANCEL"*/, 0LL);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14819/*"USER_GAME_ACT_RECOVER_CANCEL"*/, 0LL);
           if ( !cancelLabel )
             goto LABEL_72;
           UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0LL);
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14624/*"USER_GAME_ACT_RECOVER_INFO"*/, 0LL);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14822/*"USER_GAME_ACT_RECOVER_INFO"*/, 0LL);
           if ( !*p_userGameEntity )
             goto LABEL_72;
           v61 = (System_String_o *)gameObject;
@@ -492,25 +492,25 @@ LABEL_41:
           v66 = (Il2CppObject *)gameObject;
           Act = v65->fields.actMax;
           v67 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Act, v62, v63, v64);
-          v68 = (Il2CppObject *)System_String__Format_61686468(v61, v66, v67, 0LL);
-          v69 = LocalizationManager__Get((System_String_o *)StringLiteral_14625/*"USER_GAME_ACT_RECOVER_INFO_BEFORE_AFTER"*/, 0LL);
-          v52 = (Il2CppObject *)System_String__Format_61686468(v69, v52, v68, 0LL);
+          v68 = (Il2CppObject *)System_String__Format_62613552(v61, v66, v67, 0LL);
+          v69 = LocalizationManager__Get((System_String_o *)StringLiteral_14823/*"USER_GAME_ACT_RECOVER_INFO_BEFORE_AFTER"*/, 0LL);
+          v52 = (Il2CppObject *)System_String__Format_62613552(v69, v52, v68, 0LL);
           goto LABEL_69;
         case 1:
           warningLabel = this->fields.warningLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14630/*"USER_GAME_ACT_RECOVER_REQUEST_STONE_MESSAGE"*/, 0LL);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14828/*"USER_GAME_ACT_RECOVER_REQUEST_STONE_MESSAGE"*/, 0LL);
           if ( !warningLabel )
             goto LABEL_72;
           UILabel__set_text(warningLabel, (System_String_o *)gameObject, 0LL);
           v71 = this->fields.decideLabel;
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14631/*"USER_GAME_ACT_RECOVER_STONE"*/, 0LL);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14829/*"USER_GAME_ACT_RECOVER_STONE"*/, 0LL);
           if ( !v71 )
             goto LABEL_72;
           UILabel__set_text(v71, (System_String_o *)gameObject, 0LL);
           v72 = this->fields.cancelLabel;
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14621/*"USER_GAME_ACT_RECOVER_CANCEL"*/, 0LL);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_14819/*"USER_GAME_ACT_RECOVER_CANCEL"*/, 0LL);
           if ( !v72 )
             goto LABEL_72;
           goto LABEL_68;
@@ -518,19 +518,19 @@ LABEL_41:
           v72 = this->fields.messageLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v73 = &StringLiteral_14626/*"USER_GAME_ACT_RECOVER_MESSAGE_END"*/;
+          v73 = &StringLiteral_14824/*"USER_GAME_ACT_RECOVER_MESSAGE_END"*/;
           goto LABEL_65;
         case 3:
           v72 = this->fields.messageLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v73 = &StringLiteral_14628/*"USER_GAME_ACT_RECOVER_MESSAGE_MAX_ACT"*/;
+          v73 = &StringLiteral_14826/*"USER_GAME_ACT_RECOVER_MESSAGE_MAX_ACT"*/;
           goto LABEL_65;
         case 4:
           v72 = this->fields.messageLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v73 = &StringLiteral_14627/*"USER_GAME_ACT_RECOVER_MESSAGE_INFO_NONE"*/;
+          v73 = &StringLiteral_14825/*"USER_GAME_ACT_RECOVER_MESSAGE_INFO_NONE"*/;
 LABEL_65:
           v77 = LocalizationManager__Get((System_String_o *)*v73, 0LL);
           v78 = BalanceConfig_TypeInfo;
@@ -552,7 +552,7 @@ LABEL_69:
             goto LABEL_72;
           UILabel__set_text((UILabel_o *)gameObject, (System_String_o *)v52, 0LL);
           this->fields.state = 1;
-          v80 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+          v80 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
           System_Action___ctor(v80, (Il2CppObject *)this, Method_UserGameActRecoverConfirmMenu_EndOpen__, 0LL);
           BaseDialog__Open((BaseDialog_o *)this, v80, 0, 0LL);
           break;
@@ -581,10 +581,10 @@ void __fastcall UserGameActRecoverConfirmMenu__add_callbackFunc(
   UserGameActRecoverConfirmMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A4D1ED & 1) == 0 )
+  if ( (byte_4B4376D & 1) == 0 )
   {
-    sub_1B863B8(&UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo, value);
-    byte_4A4D1ED = 1;
+    sub_1BDB878(&UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo, value);
+    byte_4B4376D = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -597,13 +597,13 @@ void __fastcall UserGameActRecoverConfirmMenu__add_callbackFunc(
       if ( (UserGameActRecoverConfirmMenu_CallbackFunc_c *)v8->klass != UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BC0674(p_callbackFunc, v8, v6);
+    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B868D4(v8);
+  sub_1BDBD94(v8);
   UserGameActRecoverConfirmMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -622,10 +622,10 @@ void __fastcall UserGameActRecoverConfirmMenu__remove_callbackFunc(
   UserGameActRecoverConfirmMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4A4D1EE & 1) == 0 )
+  if ( (byte_4B4376E & 1) == 0 )
   {
-    sub_1B863B8(&UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo, value);
-    byte_4A4D1EE = 1;
+    sub_1BDB878(&UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo, value);
+    byte_4B4376E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -638,13 +638,13 @@ void __fastcall UserGameActRecoverConfirmMenu__remove_callbackFunc(
       if ( (UserGameActRecoverConfirmMenu_CallbackFunc_c *)v8->klass != UserGameActRecoverConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BC0674(p_callbackFunc, v8, v6);
+    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B868D4(v8);
+  sub_1BDBD94(v8);
   UserGameActRecoverConfirmMenu__Init(v11, v12);
 }
 
@@ -667,15 +667,15 @@ void __fastcall UserGameActRecoverConfirmMenu_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B86478(v6) & 1) == 0 )
+  if ( (sub_1BDB938(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B864E0(v10, 0LL);
+      v10 = sub_1BDBAF0(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BDB9A0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -687,9 +687,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19D1DB8;
+  this->fields.m_target = (Il2CppObject *)sub_1A24430;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19D1D70;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A243E8;
 }
 
 
@@ -705,14 +705,14 @@ System_IAsyncResult_o *__fastcall UserGameActRecoverConfirmMenu_CallbackFunc__Be
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4A4D1F6 & 1) == 0 )
+  if ( (byte_4B43776 & 1) == 0 )
   {
-    sub_1B863B8(&bool_TypeInfo, result);
-    byte_4A4D1F6 = 1;
+    sub_1BDB878(&bool_TypeInfo, result);
+    byte_4B43776 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B8636C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BDB82C(this, v9, callback, object);
 }
 
 
@@ -721,7 +721,7 @@ void __fastcall UserGameActRecoverConfirmMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B86370(result, 0LL, method);
+  sub_1BDB830(result, 0LL, method);
 }
 
 

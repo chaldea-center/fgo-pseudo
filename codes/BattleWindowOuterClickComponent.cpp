@@ -15,10 +15,10 @@ void __fastcall BattleWindowOuterClickComponent__OnClick(
   BattleWindowComponent_o *v5; // x0
   struct BattleWindowOuterClickComponent_OuterClickCall_o *clickCallBack; // x8
 
-  if ( (byte_4A51996 & 1) == 0 )
+  if ( (byte_4B48006 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
-    byte_4A51996 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    byte_4B48006 = 1;
   }
   targetWindow = (UnityEngine_Object_o *)this->fields.targetWindow;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -27,7 +27,7 @@ void __fastcall BattleWindowOuterClickComponent__OnClick(
     goto LABEL_8;
   v5 = this->fields.targetWindow;
   if ( !v5 )
-    sub_1B86614(0LL, v4);
+    sub_1BDBAD4(0LL, v4);
   if ( !BattleWindowComponent__isOpening(v5, 0LL) )
   {
 LABEL_8:
@@ -48,7 +48,7 @@ void __fastcall BattleWindowOuterClickComponent__SetTargetWindow(
   const MethodInfo *v3; // x3
 
   this->fields.targetWindow = window;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.targetWindow, (int32_t)window, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.targetWindow, (int32_t)window, (int32_t)method, v3);
 }
 
 
@@ -60,7 +60,7 @@ void __fastcall BattleWindowOuterClickComponent__setClickCallBack(
   const MethodInfo *v3; // x3
 
   this->fields.clickCallBack = call;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.clickCallBack, (int32_t)call, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.clickCallBack, (int32_t)call, (int32_t)method, v3);
 }
 
 
@@ -82,15 +82,15 @@ void __fastcall BattleWindowOuterClickComponent_OuterClickCall___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B86478(v6) & 1) == 0 )
+  if ( (sub_1BDB938(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B864E0(v10, 0LL);
+      v10 = sub_1BDBAF0(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BDB9A0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -102,9 +102,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19D6A44;
+  this->fields.m_target = (Il2CppObject *)sub_1A290BC;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)&loc_19D6A04;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)&loc_1A2907C;
 }
 
 
@@ -117,7 +117,7 @@ System_IAsyncResult_o *__fastcall BattleWindowOuterClickComponent_OuterClickCall
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_1B8636C(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1BDB82C(this, &v5, callback, object);
 }
 
 
@@ -126,7 +126,7 @@ void __fastcall BattleWindowOuterClickComponent_OuterClickCall__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B86370(result, 0LL, method);
+  sub_1BDB830(result, 0LL, method);
 }
 
 

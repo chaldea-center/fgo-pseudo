@@ -12,7 +12,7 @@ void __fastcall ClassBoardResourceContents__SetBoardUIAtlas(
   const MethodInfo *v3; // x3
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)boardUiAtlasManagerUnit,
     (int32_t)method,
@@ -36,13 +36,13 @@ void __fastcall ClassBoardResourceContents__SetContents(
   const MethodInfo *v15; // x3
 
   this->fields._Square_k__BackingField = square;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields, (int32_t)square, (int32_t)line, (const MethodInfo *)lockAsset);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)square, (int32_t)line, (const MethodInfo *)lockAsset);
   this->fields._Line_k__BackingField = line;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Line_k__BackingField, (int32_t)line, v10, v11);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Line_k__BackingField, (int32_t)line, v10, v11);
   this->fields._Lock_k__BackingField = lockAsset;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Lock_k__BackingField, (int32_t)lockAsset, v12, v13);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Lock_k__BackingField, (int32_t)lockAsset, v12, v13);
   this->fields._Blank_k__BackingField = blank;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Blank_k__BackingField, (int32_t)blank, v14, v15);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Blank_k__BackingField, (int32_t)blank, v14, v15);
 }
 
 
@@ -54,7 +54,7 @@ void __fastcall ClassBoardResourceContents__SetContentsBgModel(
   const MethodInfo *v3; // x3
 
   this->fields._BgModel_k__BackingField = bgModel;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._BgModel_k__BackingField, (int32_t)bgModel, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._BgModel_k__BackingField, (int32_t)bgModel, (int32_t)method, v3);
 }
 
 
@@ -66,7 +66,7 @@ void __fastcall ClassBoardResourceContents__SetContentsBoardSelectView(
   const MethodInfo *v3; // x3
 
   this->fields._BoardSelectViewPrefab_k__BackingField = boardSelectViewPrefab;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (int32_t)boardSelectViewPrefab,
     (int32_t)method,
@@ -93,35 +93,51 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
   const MethodInfo *v19; // x3
 
   this->fields._DisableOpenDialog_k__BackingField = classBoardDisableOpenDialog;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
     (int32_t)classBoardDisableOpenDialog,
     (int32_t)classBoardSquareOpenConfirmDialog,
     (const MethodInfo *)classBoardLockOpenConfirmDialog);
   this->fields._SquareOpenConfirmDialog_k__BackingField = classBoardSquareOpenConfirmDialog;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (int32_t)classBoardSquareOpenConfirmDialog,
     v12,
     v13);
   this->fields._LockOpenConfirmDialog_k__BackingField = classBoardLockOpenConfirmDialog;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (int32_t)classBoardLockOpenConfirmDialog,
     v14,
     v15);
   this->fields._LockReleaseConditionDialog_k__BackingField = classBoardLockReleaseConditionDialog;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (int32_t)classBoardLockReleaseConditionDialog,
     v16,
     v17);
   this->fields._SquareDetailDialog_k__BackingField = classBoardSquareDetailDialog;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (int32_t)classBoardSquareDetailDialog,
     v18,
     v19);
+}
+
+
+void __fastcall ClassBoardResourceContents__SetContentsFigure(
+        ClassBoardResourceContents_o *this,
+        ClassBoardFigureController_o *figureController,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._FigureController_k__BackingField = figureController;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._FigureController_k__BackingField,
+    (int32_t)figureController,
+    (int32_t)method,
+    v3);
 }
 
 
@@ -133,9 +149,81 @@ void __fastcall ClassBoardResourceContents__SetContentsForwardIconAnimObject(
   const MethodInfo *v3; // x3
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = prefab;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (int32_t)prefab,
+    (int32_t)method,
+    v3);
+}
+
+
+void __fastcall ClassBoardResourceContents__SetContentsFullReleaseEffect(
+        ClassBoardResourceContents_o *this,
+        ClassBoardFullReleaseEffectComponent_o *fullReleaseEffectComponent,
+        ClassBoardFullReleaseEffectComponent_o *grandFullReleaseEffectComponent,
+        const MethodInfo *method)
+{
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+
+  this->fields._FullReleaseEffectComponent_k__BackingField = fullReleaseEffectComponent;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._FullReleaseEffectComponent_k__BackingField,
+    (int32_t)fullReleaseEffectComponent,
+    (int32_t)grandFullReleaseEffectComponent,
+    method);
+  this->fields._GrandFullReleaseEffectComponent_k__BackingField = grandFullReleaseEffectComponent;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._GrandFullReleaseEffectComponent_k__BackingField,
+    (int32_t)grandFullReleaseEffectComponent,
+    v6,
+    v7);
+}
+
+
+void __fastcall ClassBoardResourceContents__SetContentsGrandBgModel(
+        ClassBoardResourceContents_o *this,
+        ClassBoardBackground_o *grandBgModel,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._GrandBgModel_k__BackingField = grandBgModel;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._GrandBgModel_k__BackingField,
+    (int32_t)grandBgModel,
+    (int32_t)method,
+    v3);
+}
+
+
+void __fastcall ClassBoardResourceContents__SetContentsGrandBoardDialog(
+        ClassBoardResourceContents_o *this,
+        ClassBoardQuestOpenConfirmDialog_o *classBoardQuestOpenConfirmDialog,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField = classBoardQuestOpenConfirmDialog;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField,
+    (int32_t)classBoardQuestOpenConfirmDialog,
+    (int32_t)method,
+    v3);
+}
+
+
+void __fastcall ClassBoardResourceContents__SetContentsGrandGraph(
+        ClassBoardResourceContents_o *this,
+        AtlasManagerUnit_o *grandGraphAtlasManagerUnit,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._GrandGraphAtlasManagerUnit_k__BackingField = grandGraphAtlasManagerUnit;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._GrandGraphAtlasManagerUnit_k__BackingField,
+    (int32_t)grandGraphAtlasManagerUnit,
     (int32_t)method,
     v3);
 }
@@ -157,29 +245,59 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
   const MethodInfo *v15; // x3
 
   this->fields._BoardUiController_k__BackingField = uiController;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._BoardUiController_k__BackingField,
     (int32_t)uiController,
     (int32_t)boardUiAtlasManagerUnit,
     (const MethodInfo *)iconAtlasManagerUnit);
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)boardUiAtlasManagerUnit,
     v10,
     v11);
   this->fields._IconAtlasManagerUnit_k__BackingField = iconAtlasManagerUnit;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (int32_t)iconAtlasManagerUnit,
     v12,
     v13);
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = classUiAtlasManagerUnit;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (int32_t)classUiAtlasManagerUnit,
     v14,
     v15);
+}
+
+
+void __fastcall ClassBoardResourceContents__SetGrandContents(
+        ClassBoardResourceContents_o *this,
+        ClassBoardSquare_o *square,
+        ClassBoardLine_o *line,
+        ClassBoardLock_o *lockAsset,
+        ClassBoardBlank_o *blank,
+        const MethodInfo *method)
+{
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+
+  this->fields._GrandSquare_k__BackingField = square;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._GrandSquare_k__BackingField,
+    (int32_t)square,
+    (int32_t)line,
+    (const MethodInfo *)lockAsset);
+  this->fields._GrandLine_k__BackingField = line;
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._GrandLine_k__BackingField, (int32_t)line, v10, v11);
+  this->fields._GrandLock_k__BackingField = lockAsset;
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._GrandLock_k__BackingField, (int32_t)lockAsset, v12, v13);
+  this->fields._GrandBlank_k__BackingField = blank;
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._GrandBlank_k__BackingField, (int32_t)blank, v14, v15);
 }
 
 
@@ -223,6 +341,14 @@ ClassBoardUIController_o *__fastcall ClassBoardResourceContents__get_BoardUiCont
 }
 
 
+ClassBoardQuestOpenConfirmDialog_o *__fastcall ClassBoardResourceContents__get_ClassBoardQuestOpenConfirmDialog(
+        ClassBoardResourceContents_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField;
+}
+
+
 AtlasManagerUnit_o *__fastcall ClassBoardResourceContents__get_ClassUiAtlasManagerUnit(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
@@ -239,11 +365,83 @@ ClassBoardDisableOpenDialog_o *__fastcall ClassBoardResourceContents__get_Disabl
 }
 
 
+ClassBoardFigureController_o *__fastcall ClassBoardResourceContents__get_FigureController(
+        ClassBoardResourceContents_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._FigureController_k__BackingField;
+}
+
+
 UnityEngine_GameObject_o *__fastcall ClassBoardResourceContents__get_ForwardIconAnimObjectPrefab(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
   return this->fields._ForwardIconAnimObjectPrefab_k__BackingField;
+}
+
+
+ClassBoardFullReleaseEffectComponent_o *__fastcall ClassBoardResourceContents__get_FullReleaseEffectComponent(
+        ClassBoardResourceContents_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._FullReleaseEffectComponent_k__BackingField;
+}
+
+
+ClassBoardBackground_o *__fastcall ClassBoardResourceContents__get_GrandBgModel(
+        ClassBoardResourceContents_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._GrandBgModel_k__BackingField;
+}
+
+
+ClassBoardBlank_o *__fastcall ClassBoardResourceContents__get_GrandBlank(
+        ClassBoardResourceContents_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._GrandBlank_k__BackingField;
+}
+
+
+ClassBoardFullReleaseEffectComponent_o *__fastcall ClassBoardResourceContents__get_GrandFullReleaseEffectComponent(
+        ClassBoardResourceContents_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._GrandFullReleaseEffectComponent_k__BackingField;
+}
+
+
+AtlasManagerUnit_o *__fastcall ClassBoardResourceContents__get_GrandGraphAtlasManagerUnit(
+        ClassBoardResourceContents_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._GrandGraphAtlasManagerUnit_k__BackingField;
+}
+
+
+ClassBoardLine_o *__fastcall ClassBoardResourceContents__get_GrandLine(
+        ClassBoardResourceContents_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._GrandLine_k__BackingField;
+}
+
+
+ClassBoardLock_o *__fastcall ClassBoardResourceContents__get_GrandLock(
+        ClassBoardResourceContents_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._GrandLock_k__BackingField;
+}
+
+
+ClassBoardSquare_o *__fastcall ClassBoardResourceContents__get_GrandSquare(
+        ClassBoardResourceContents_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._GrandSquare_k__BackingField;
 }
 
 
@@ -319,7 +517,7 @@ void __fastcall ClassBoardResourceContents__set_BgModel(
   const MethodInfo *v3; // x3
 
   this->fields._BgModel_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._BgModel_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._BgModel_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -331,7 +529,7 @@ void __fastcall ClassBoardResourceContents__set_Blank(
   const MethodInfo *v3; // x3
 
   this->fields._Blank_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Blank_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Blank_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -343,7 +541,7 @@ void __fastcall ClassBoardResourceContents__set_BoardSelectViewPrefab(
   const MethodInfo *v3; // x3
 
   this->fields._BoardSelectViewPrefab_k__BackingField = value;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -359,7 +557,7 @@ void __fastcall ClassBoardResourceContents__set_BoardUiAtlasManagerUnit(
   const MethodInfo *v3; // x3
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = value;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -375,8 +573,24 @@ void __fastcall ClassBoardResourceContents__set_BoardUiController(
   const MethodInfo *v3; // x3
 
   this->fields._BoardUiController_k__BackingField = value;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._BoardUiController_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
+}
+
+
+void __fastcall ClassBoardResourceContents__set_ClassBoardQuestOpenConfirmDialog(
+        ClassBoardResourceContents_o *this,
+        ClassBoardQuestOpenConfirmDialog_o *value,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField = value;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
     v3);
@@ -391,7 +605,7 @@ void __fastcall ClassBoardResourceContents__set_ClassUiAtlasManagerUnit(
   const MethodInfo *v3; // x3
 
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = value;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -407,8 +621,24 @@ void __fastcall ClassBoardResourceContents__set_DisableOpenDialog(
   const MethodInfo *v3; // x3
 
   this->fields._DisableOpenDialog_k__BackingField = value;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
+}
+
+
+void __fastcall ClassBoardResourceContents__set_FigureController(
+        ClassBoardResourceContents_o *this,
+        ClassBoardFigureController_o *value,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._FigureController_k__BackingField = value;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._FigureController_k__BackingField,
     (int32_t)value,
     (int32_t)method,
     v3);
@@ -423,11 +653,119 @@ void __fastcall ClassBoardResourceContents__set_ForwardIconAnimObjectPrefab(
   const MethodInfo *v3; // x3
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = value;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
     v3);
+}
+
+
+void __fastcall ClassBoardResourceContents__set_FullReleaseEffectComponent(
+        ClassBoardResourceContents_o *this,
+        ClassBoardFullReleaseEffectComponent_o *value,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._FullReleaseEffectComponent_k__BackingField = value;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._FullReleaseEffectComponent_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
+}
+
+
+void __fastcall ClassBoardResourceContents__set_GrandBgModel(
+        ClassBoardResourceContents_o *this,
+        ClassBoardBackground_o *value,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._GrandBgModel_k__BackingField = value;
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._GrandBgModel_k__BackingField, (int32_t)value, (int32_t)method, v3);
+}
+
+
+void __fastcall ClassBoardResourceContents__set_GrandBlank(
+        ClassBoardResourceContents_o *this,
+        ClassBoardBlank_o *value,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._GrandBlank_k__BackingField = value;
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._GrandBlank_k__BackingField, (int32_t)value, (int32_t)method, v3);
+}
+
+
+void __fastcall ClassBoardResourceContents__set_GrandFullReleaseEffectComponent(
+        ClassBoardResourceContents_o *this,
+        ClassBoardFullReleaseEffectComponent_o *value,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._GrandFullReleaseEffectComponent_k__BackingField = value;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._GrandFullReleaseEffectComponent_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
+}
+
+
+void __fastcall ClassBoardResourceContents__set_GrandGraphAtlasManagerUnit(
+        ClassBoardResourceContents_o *this,
+        AtlasManagerUnit_o *value,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._GrandGraphAtlasManagerUnit_k__BackingField = value;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._GrandGraphAtlasManagerUnit_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
+}
+
+
+void __fastcall ClassBoardResourceContents__set_GrandLine(
+        ClassBoardResourceContents_o *this,
+        ClassBoardLine_o *value,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._GrandLine_k__BackingField = value;
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._GrandLine_k__BackingField, (int32_t)value, (int32_t)method, v3);
+}
+
+
+void __fastcall ClassBoardResourceContents__set_GrandLock(
+        ClassBoardResourceContents_o *this,
+        ClassBoardLock_o *value,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._GrandLock_k__BackingField = value;
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._GrandLock_k__BackingField, (int32_t)value, (int32_t)method, v3);
+}
+
+
+void __fastcall ClassBoardResourceContents__set_GrandSquare(
+        ClassBoardResourceContents_o *this,
+        ClassBoardSquare_o *value,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._GrandSquare_k__BackingField = value;
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._GrandSquare_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -439,7 +777,7 @@ void __fastcall ClassBoardResourceContents__set_IconAtlasManagerUnit(
   const MethodInfo *v3; // x3
 
   this->fields._IconAtlasManagerUnit_k__BackingField = value;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -455,7 +793,7 @@ void __fastcall ClassBoardResourceContents__set_Line(
   const MethodInfo *v3; // x3
 
   this->fields._Line_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Line_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Line_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -467,7 +805,7 @@ void __fastcall ClassBoardResourceContents__set_Lock(
   const MethodInfo *v3; // x3
 
   this->fields._Lock_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Lock_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Lock_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -479,7 +817,7 @@ void __fastcall ClassBoardResourceContents__set_LockOpenConfirmDialog(
   const MethodInfo *v3; // x3
 
   this->fields._LockOpenConfirmDialog_k__BackingField = value;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -495,7 +833,7 @@ void __fastcall ClassBoardResourceContents__set_LockReleaseConditionDialog(
   const MethodInfo *v3; // x3
 
   this->fields._LockReleaseConditionDialog_k__BackingField = value;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -511,7 +849,7 @@ void __fastcall ClassBoardResourceContents__set_Square(
   const MethodInfo *v3; // x3
 
   this->fields._Square_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -523,7 +861,7 @@ void __fastcall ClassBoardResourceContents__set_SquareDetailDialog(
   const MethodInfo *v3; // x3
 
   this->fields._SquareDetailDialog_k__BackingField = value;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -539,7 +877,7 @@ void __fastcall ClassBoardResourceContents__set_SquareOpenConfirmDialog(
   const MethodInfo *v3; // x3
 
   this->fields._SquareOpenConfirmDialog_k__BackingField = value;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,

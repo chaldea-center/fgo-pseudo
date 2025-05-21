@@ -2,10 +2,10 @@ void __fastcall EventHeelPortraitListViewObject___ctor(
         EventHeelPortraitListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A52879 & 1) == 0 )
+  if ( (byte_4B3F166 & 1) == 0 )
   {
-    sub_1B863B8(&ListViewObject_TypeInfo, method);
-    byte_4A52879 = 1;
+    sub_1BDB878(&ListViewObject_TypeInfo, method);
+    byte_4B3F166 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,24 +19,20 @@ void __fastcall EventHeelPortraitListViewObject__Awake(
 {
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
-  Il2CppObject *Component_object; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
 
-  if ( (byte_4A52875 & 1) == 0 )
+  if ( (byte_4B3F162 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_EventHeelPortraitListViewItemDraw___, method);
-    byte_4A52875 = 1;
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_EventHeelPortraitListViewItemDraw___, method);
+    byte_4B3F162 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1B86614(0LL, v3);
-  Component_object = UnityEngine_GameObject__GetComponent_object_(
-                       dispObject,
-                       (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_EventHeelPortraitListViewItemDraw___);
-  this->fields.itemDraw = (struct EventHeelPortraitListViewItemDraw_o *)Component_object;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+    sub_1BDBAD4(0LL, v3);
+  this->fields.itemDraw = (struct EventHeelPortraitListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                                          dispObject,
+                                                                          (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_EventHeelPortraitListViewItemDraw___);
+  sub_1BDB81C(&this->fields.itemDraw);
 }
 
 
@@ -49,10 +45,10 @@ void __fastcall EventHeelPortraitListViewObject__ClearNewImgSprite(
   __int64 v5; // x1
   struct EventHeelPortraitListViewItemDraw_o *v6; // x8
 
-  if ( (byte_4A52878 & 1) == 0 )
+  if ( (byte_4B3F165 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
-    byte_4A52878 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3F165 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -62,7 +58,7 @@ void __fastcall EventHeelPortraitListViewObject__ClearNewImgSprite(
   {
     v6 = this->fields.itemDraw;
     if ( !v6 || (newImgSprite = v6->fields.newImgSprite) == 0LL )
-      sub_1B86614(newImgSprite, v5);
+      sub_1BDBAD4(newImgSprite, v5);
     ShiningIconComponent__Clear(newImgSprite, 0LL);
   }
 }
@@ -75,10 +71,10 @@ EventHeelPortraitListViewItem_o *__fastcall EventHeelPortraitListViewObject__Get
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4A52877 & 1) == 0 )
+  if ( (byte_4B3F164 & 1) == 0 )
   {
-    sub_1B863B8(&EventHeelPortraitListViewItem_TypeInfo, method);
-    byte_4A52877 = 1;
+    sub_1BDB878(&EventHeelPortraitListViewItem_TypeInfo, method);
+    byte_4B3F164 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -103,23 +99,23 @@ void __fastcall EventHeelPortraitListViewObject__SetItem(
   EventHeelPortraitListViewItemDraw_o *itemDraw; // x0
   __int64 methodPtr_low; // x9
 
-  if ( (byte_4A52876 & 1) == 0 )
+  if ( (byte_4B3F163 & 1) == 0 )
   {
-    sub_1B863B8(&EventHeelPortraitListViewItem_TypeInfo, item);
-    byte_4A52876 = 1;
+    sub_1BDB878(&EventHeelPortraitListViewItem_TypeInfo, item);
+    byte_4B3F163 = 1;
   }
-  ListViewObject__SetItem_41806456((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_42764972((ListViewObject_o *)this, item, seed, 0LL);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_1B86614(itemDraw, v7);
+    sub_1BDBAD4(itemDraw, v7);
   if ( item )
   {
     methodPtr_low = LOBYTE(EventHeelPortraitListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
     if ( LOBYTE(item->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (EventHeelPortraitListViewItem_c *)item->klass->_2.typeHierarchy[methodPtr_low - 1] != EventHeelPortraitListViewItem_TypeInfo )
     {
-      sub_1B868D4(item);
+      itemDraw = (EventHeelPortraitListViewItemDraw_o *)sub_1BDBD94(item);
       goto LABEL_9;
     }
   }

@@ -2,8 +2,8 @@ void __fastcall FriendshipExceedFriendshipGauge___ctor(
         FriendshipExceedFriendshipGauge_o *this,
         const MethodInfo *method)
 {
-  this->fields.DISABLE_COLOR = (struct UnityEngine_Color_o)xmmword_BC2BA0;
-  this->fields.EXCEEDED_COLOR = (struct UnityEngine_Color_o)xmmword_BC3670;
+  this->fields.DISABLE_COLOR = (struct UnityEngine_Color_o)xmmword_BEABE0;
+  this->fields.EXCEEDED_COLOR = (struct UnityEngine_Color_o)xmmword_BEB710;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -19,26 +19,26 @@ UIFont_o *__fastcall FriendshipExceedFriendshipGauge__GetFont(
   _BOOL8 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4A52019 & 1) == 0 )
+  if ( (byte_4B487BC & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_UIFont___, path);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B863B8(&Method_UnityEngine_Resources_Load_GameObject___, v5);
-    byte_4A52019 = 1;
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_UIFont___, path);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v4);
+    sub_1BDB878(&Method_UnityEngine_Resources_Load_GameObject___, v5);
+    byte_4B487BC = 1;
   }
   object = UnityEngine_Resources__Load_object_(
              path,
-             (const MethodInfo_30059F0 *)Method_UnityEngine_Resources_Load_GameObject___);
+             (const MethodInfo_30CD6D0 *)Method_UnityEngine_Resources_Load_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)object, 0LL, 0LL);
   if ( !v7 )
     return 0LL;
   if ( !object )
-    sub_1B86614(v7, v8);
+    sub_1BDBAD4(v7, v8);
   return (UIFont_o *)UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)object,
-                       (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_UIFont___);
+                       (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_UIFont___);
 }
 
 
@@ -49,18 +49,18 @@ void __fastcall FriendshipExceedFriendshipGauge__InitUISpriteAtlas(
   __int64 v3; // x1
   UISprite_o *exceededIconUISprite; // x20
 
-  if ( (byte_4A52018 & 1) == 0 )
+  if ( (byte_4B487BB & 1) == 0 )
   {
-    sub_1B863B8(&AtlasManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_20062/*"img_bondsgage_11"*/, v3);
-    byte_4A52018 = 1;
+    sub_1BDB878(&AtlasManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_20356/*"img_bondsgage_11"*/, v3);
+    byte_4B487BB = 1;
   }
   if ( !this->fields.isInitUISpriteAtlas )
   {
     exceededIconUISprite = this->fields.exceededIconUISprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetBondAtlasImage(exceededIconUISprite, (System_String_o *)StringLiteral_20062/*"img_bondsgage_11"*/, 0LL);
+    AtlasManager__SetBondAtlasImage(exceededIconUISprite, (System_String_o *)StringLiteral_20356/*"img_bondsgage_11"*/, 0LL);
     this->fields.isInitUISpriteAtlas = 1;
   }
 }
@@ -85,10 +85,10 @@ void __fastcall FriendshipExceedFriendshipGauge__Set(
   int v19; // w2
   int v20; // w3
 
-  if ( (byte_4A52016 & 1) == 0 )
+  if ( (byte_4B487B9 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_UIGrid___, *(_QWORD *)&level);
-    byte_4A52016 = 1;
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_UIGrid___, *(_QWORD *)&level);
+    byte_4B487B9 = 1;
   }
   FriendshipExceedFriendshipGauge__InitUISpriteAtlas(this, *(const MethodInfo **)&level);
   FriendshipExceedFriendshipGauge__SetLabel(this, level, max, type, isSpecialEffect, v13);
@@ -121,10 +121,10 @@ void __fastcall FriendshipExceedFriendshipGauge__Set(
   if ( !normalRoot
     || (normalRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    normalRoot,
-                                                   (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_UIGrid___)) == 0LL )
+                                                   (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_UIGrid___)) == 0LL )
   {
 LABEL_12:
-    sub_1B86614(normalRoot, v14);
+    sub_1BDBAD4(normalRoot, v14);
   }
   ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *))normalRoot->klass[1]._1.castClass)(
     normalRoot,
@@ -132,6 +132,7 @@ LABEL_12:
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void __fastcall FriendshipExceedFriendshipGauge__SetGaugeList(
         FriendshipExceedFriendshipGauge_o *this,
         UISlider_array *sliderList,
@@ -149,7 +150,7 @@ void __fastcall FriendshipExceedFriendshipGauge__SetGaugeList(
 
   if ( !sliderList )
 LABEL_15:
-    sub_1B86614(this, sliderList);
+    sub_1BDBAD4(this, sliderList);
   max_length = sliderList->max_length;
   if ( max_length >= 1 )
   {
@@ -157,7 +158,7 @@ LABEL_15:
     while ( 1 )
     {
       if ( v11 >= (unsigned int)max_length )
-        sub_1B8661C(this, sliderList);
+        sub_1BDBADC(this, sliderList, *(_QWORD *)&level);
       v12 = &sliderList->obj.klass + v11;
       v13 = (UIProgressBar_o *)v12[4];
       if ( !v13 )
@@ -222,17 +223,17 @@ void __fastcall FriendshipExceedFriendshipGauge__SetLabel(
   v8 = this;
   v23 = max;
   v24 = level;
-  if ( (byte_4A52017 & 1) == 0 )
+  if ( (byte_4B487BA & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&level);
-    this = (FriendshipExceedFriendshipGauge_o *)sub_1B863B8(&StringLiteral_6734/*"Fonts/FGO-NumberFont-02"*/, v9);
-    byte_4A52017 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, *(_QWORD *)&level);
+    this = (FriendshipExceedFriendshipGauge_o *)sub_1BDB878(&StringLiteral_6814/*"Fonts/FGO-NumberFont-02"*/, v9);
+    byte_4B487BA = 1;
   }
   if ( isSpecialEffect )
   {
     Font = FriendshipExceedFriendshipGauge__GetFont(
              this,
-             (System_String_o *)StringLiteral_6734/*"Fonts/FGO-NumberFont-02"*/,
+             (System_String_o *)StringLiteral_6814/*"Fonts/FGO-NumberFont-02"*/,
              *(const MethodInfo **)&max);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -293,7 +294,7 @@ void __fastcall FriendshipExceedFriendshipGauge__SetLabel(
       goto LABEL_24;
     }
 LABEL_26:
-    sub_1B86614(levelLabel, v11);
+    sub_1BDBAD4(levelLabel, v11);
   }
   levelLabel = (UILabel_o *)v8->fields.levelLabel;
   if ( !levelLabel )

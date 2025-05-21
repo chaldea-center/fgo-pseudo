@@ -36,22 +36,22 @@ ExecutingTdInfo_o *__fastcall ExecutingTdInfo__Create(
   Il2CppObject *entity; // [xsp+8h] [xbp-58h] BYREF
   int32_t item1[2]; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4A511CF & 1) == 0 )
+  if ( (byte_4B4782C & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMaster_TreasureDeviceSequenceWeightMaster___, *(_QWORD *)&dispLimitCount);
-    sub_1B863B8(&Method_DataManager_GetMaster_TreasureDvcMaster___, v13);
-    sub_1B863B8(&DataManager_TypeInfo, v14);
-    sub_1B863B8(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__TryGetEntity__, v15);
-    sub_1B863B8(&ExecutingTdInfo_TypeInfo, v16);
-    sub_1B863B8(&Method_System_TupleExtensions_Deconstruct_int__int___, v17);
-    byte_4A511CF = 1;
+    sub_1BDB878(&Method_DataManager_GetMaster_TreasureDeviceSequenceWeightMaster___, *(_QWORD *)&dispLimitCount);
+    sub_1BDB878(&Method_DataManager_GetMaster_TreasureDvcMaster___, v13);
+    sub_1BDB878(&DataManager_TypeInfo, v14);
+    sub_1BDB878(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__TryGetEntity__, v15);
+    sub_1BDB878(&ExecutingTdInfo_TypeInfo, v16);
+    sub_1BDB878(&Method_System_TupleExtensions_Deconstruct_int__int___, v17);
+    byte_4B4782C = 1;
   }
   *(_QWORD *)item1 = 0LL;
   entity = 0LL;
   item2 = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_TreasureDeviceSequenceWeightMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_TreasureDeviceSequenceWeightMaster___);
   if ( !Master_object )
     goto LABEL_21;
   EntityByDescendingPriority = TreasureDeviceSequenceWeightMaster__GetEntityByDescendingPriority(
@@ -71,7 +71,7 @@ ExecutingTdInfo_o *__fastcall ExecutingTdInfo__Create(
       SeqIdAndGroupSeqId,
       item1,
       &item2,
-      (const MethodInfo_3020E24 *)Method_System_TupleExtensions_Deconstruct_int__int___);
+      (const MethodInfo_30E8DA0 *)Method_System_TupleExtensions_Deconstruct_int__int___);
     v22 = item2;
     item1[1] = item2;
     if ( item1[0] > 0 )
@@ -82,14 +82,14 @@ ExecutingTdInfo_o *__fastcall ExecutingTdInfo__Create(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_TreasureDvcMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_TreasureDvcMaster___);
   if ( !Master_object )
     goto LABEL_21;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           tdId,
-          (const MethodInfo_32142CC *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__TryGetEntity__) )
+          (const MethodInfo_32E1E88 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__TryGetEntity__) )
   {
     v22 = 0;
     goto LABEL_20;
@@ -100,7 +100,7 @@ ExecutingTdInfo_o *__fastcall ExecutingTdInfo__Create(
     || (Master_object = (Il2CppObject *)TreasureDvcEntity__IsRandomTD((TreasureDvcEntity_o *)entity, 0LL), !entity) )
   {
 LABEL_21:
-    sub_1B86614(Master_object, v19);
+    sub_1BDBAD4(Master_object, v19);
   }
   if ( ((unsigned __int8)Master_object & 1) != 0 )
     RandomSeqIdEachLimit = TreasureDvcEntity__GetRandomSeqIdEachLimit(
@@ -114,7 +114,7 @@ LABEL_21:
   v22 = item1[1];
   tdId = RandomSeqIdEachLimit;
 LABEL_20:
-  v24 = sub_1B86604(ExecutingTdInfo_TypeInfo);
+  v24 = sub_1BDBAC4(ExecutingTdInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v24, 0LL);
   *(_DWORD *)(v24 + 16) = tdId;
   *(_DWORD *)(v24 + 20) = v22;
@@ -127,12 +127,12 @@ ExecutingTdInfo_o *__fastcall ExecutingTdInfo__GetDefault(const MethodInfo *meth
   __int64 v1; // x1
   Il2CppObject *v2; // x19
 
-  if ( (byte_4A511CE & 1) == 0 )
+  if ( (byte_4B4782B & 1) == 0 )
   {
-    sub_1B863B8(&ExecutingTdInfo_TypeInfo, v1);
-    byte_4A511CE = 1;
+    sub_1BDB878(&ExecutingTdInfo_TypeInfo, v1);
+    byte_4B4782B = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(ExecutingTdInfo_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BDBAC4(ExecutingTdInfo_TypeInfo);
   System_Object___ctor(v2, 0LL);
   v2[1].klass = 0LL;
   return (ExecutingTdInfo_o *)v2;

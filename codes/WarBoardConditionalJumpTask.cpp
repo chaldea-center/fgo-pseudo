@@ -14,11 +14,11 @@ void __fastcall WarBoardConditionalJumpTask___ctor(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)conditionCheck);
   this->fields.conditionCheck = conditionCheck;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.conditionCheck, (int32_t)conditionCheck, v9, v10);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.conditionCheck, (int32_t)conditionCheck, v9, v10);
   this->fields.trueCase = trueCase;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.trueCase, (int32_t)trueCase, v11, v12);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.trueCase, (int32_t)trueCase, v11, v12);
   this->fields.falseCase = falseCase;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.falseCase, (int32_t)falseCase, v13, v14);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.falseCase, (int32_t)falseCase, v13, v14);
 }
 
 
@@ -30,16 +30,16 @@ System_Collections_IEnumerator_o *__fastcall WarBoardConditionalJumpTask__Execut
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4A4C18B & 1) == 0 )
+  if ( (byte_4B427B4 & 1) == 0 )
   {
-    sub_1B863B8(&WarBoardConditionalJumpTask__Execute_d__6_TypeInfo, method);
-    byte_4A4C18B = 1;
+    sub_1BDB878(&WarBoardConditionalJumpTask__Execute_d__6_TypeInfo, method);
+    byte_4B427B4 = 1;
   }
-  v3 = sub_1B86604(WarBoardConditionalJumpTask__Execute_d__6_TypeInfo);
+  v3 = sub_1BDBAC4(WarBoardConditionalJumpTask__Execute_d__6_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1B8635C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1BDB81C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -84,7 +84,7 @@ void __fastcall WarBoardConditionalJumpTask__OnStart(WarBoardConditionalJumpTask
                                               *(_QWORD *)&StartCallback->fields.extra_arg);
   conditionCheck = v3->fields.conditionCheck;
   if ( !conditionCheck )
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   v5 = ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))conditionCheck->fields.m_target)(
          conditionCheck->fields.original_method_info,
          *(_QWORD *)&conditionCheck->fields.extra_arg);
@@ -94,7 +94,7 @@ void __fastcall WarBoardConditionalJumpTask__OnStart(WarBoardConditionalJumpTask
   v9 = *(struct WarBoardTaskBase_o **)((char *)&v3->klass + v8);
   v3->fields.runningTask = v9;
   p_runningTask = (CGThumbnailListItem_o *)&v3->fields.runningTask;
-  sub_1B8635C(p_runningTask, (int32_t)v9, v6, v7);
+  sub_1BDB81C(p_runningTask, (int32_t)v9, v6, v7);
   if ( p_runningTask->klass )
     (*((void (__fastcall **)(CGThumbnailListItem_c *, _QWORD))p_runningTask->klass->_1.image + 49))(
       p_runningTask->klass,
@@ -139,7 +139,7 @@ bool __fastcall WarBoardConditionalJumpTask__Execute_d__6__MoveNext(
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1B86614(this, method);
+      sub_1BDBAD4(this, method);
     runningTask = _4__this->fields.runningTask;
     if ( runningTask )
     {
@@ -148,7 +148,7 @@ bool __fastcall WarBoardConditionalJumpTask__Execute_d__6__MoveNext(
                              runningTask->klass->vtable._5_OnStart.methodPtr);
       this->fields.__2__current = v6;
       p__2__current = &this->fields.__2__current;
-      sub_1B8635C((CGThumbnailListItem_o *)p__2__current, (int32_t)v6, v8, v9);
+      sub_1BDB81C((CGThumbnailListItem_o *)p__2__current, (int32_t)v6, v8, v9);
       LOBYTE(runningTask) = 1;
       *((_DWORD *)p__2__current - 2) = 1;
     }
@@ -173,11 +173,11 @@ void __fastcall __noreturn WarBoardConditionalJumpTask__Execute_d__6__System_Col
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B863CC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B86604(v2);
+  v2 = sub_1BDB88C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BDBAC4(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B863CC(&Method_WarBoardConditionalJumpTask__Execute_d__6_System_Collections_IEnumerator_Reset__);
-  sub_1B864E0(v3, v4);
+  v4 = sub_1BDB88C(&Method_WarBoardConditionalJumpTask__Execute_d__6_System_Collections_IEnumerator_Reset__);
+  sub_1BDB9A0(v3, v4);
 }
 
 

@@ -33,7 +33,7 @@ System_Int32_array *__fastcall OpponentFullTargetAggregator__GetCandidate(
     if ( battleData_k__BackingField )
       return BattleData__getPlayerServantIDList(v4->fields._battleData_k__BackingField, 1, 0LL, 0LL);
 LABEL_9:
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   }
   this = (OpponentFullTargetAggregator_o *)TargetAggregator__get_IsOpponentTargetOnly(v3, method);
   if ( !battleData_k__BackingField )

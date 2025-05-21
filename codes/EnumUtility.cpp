@@ -2,7 +2,7 @@
 int32_t __fastcall EnumUtility__CastToEnum_Int32Enum_(
         System_String_o *rawValue,
         int32_t defaultValue,
-        const MethodInfo_2F77060 *method)
+        const MethodInfo_303AD74 *method)
 {
   int32_t v4; // w21
   __int64 v6; // x1
@@ -14,7 +14,7 @@ int32_t __fastcall EnumUtility__CastToEnum_Int32Enum_(
   __int64 v12; // x2
   __int64 v13; // x3
   long double v14; // q0
-  const MethodInfo_2F77060_RGCTXs *rgctx_data; // x8
+  const MethodInfo_303AD74_RGCTXs *rgctx_data; // x8
   Il2CppObject *v16; // x19
   _QWORD *p_image; // x1
   long double v19; // q0
@@ -24,10 +24,10 @@ int32_t __fastcall EnumUtility__CastToEnum_Int32Enum_(
   v4 = defaultValue;
   if ( !method->rgctx_data )
   {
-    sub_1B863B8(&System_Enum_TypeInfo, *(_QWORD *)&defaultValue);
-    sub_1B863B8(&System_Type_TypeInfo, v6);
+    sub_1BDB878(&System_Enum_TypeInfo, *(_QWORD *)&defaultValue);
+    sub_1BDB878(&System_Type_TypeInfo, v6);
     if ( !method->rgctx_data )
-      sub_1BD6AA4();
+      sub_1C2BF64();
   }
   if ( System_String__IsNullOrEmpty(rawValue, 0LL) )
     return v4;
@@ -53,14 +53,14 @@ int32_t __fastcall EnumUtility__CastToEnum_Int32Enum_(
   p_image = &rgctx_data->_0_TEnum->_1.image;
   if ( (BYTE5(rgctx_data->_0_TEnum->vtable[0].methodPtr) & 1) == 0 )
   {
-    v11 = (Il2CppObject *)sub_1BD6A48(v14);
+    v11 = (Il2CppObject *)sub_1C2BF08(v14);
     p_image = &v11->klass;
   }
   if ( !v16 )
-    sub_1B86614(v11, p_image);
+    sub_1BDBAD4(v11, p_image);
   if ( v16->klass->_1.element_class == (Il2CppClass *)p_image[8] )
     return *(_DWORD *)j_il2cpp_object_unbox_0(v16, p_image, v12, v13);
-  v19 = sub_1B868D4(v16);
+  v19 = sub_1BDBD94(v16);
   return EnumUtility__CastToEnum___Il2CppFullySharedGenericStructType_(v19);
 }
 
@@ -104,13 +104,13 @@ void *__fastcall EnumUtility__CastToEnum___Il2CppFullySharedGenericStructType_(
   v7 = *(__int64 **)(a4 + 56);
   if ( !v7 )
   {
-    sub_1B863B8(&System_Enum_TypeInfo, a2);
-    sub_1B863B8(&int_TypeInfo, v8);
-    sub_1B863B8(&System_Type_TypeInfo, v9);
+    sub_1BDB878(&System_Enum_TypeInfo, a2);
+    sub_1BDB878(&int_TypeInfo, v8);
+    sub_1BDB878(&System_Type_TypeInfo, v9);
     v7 = *(__int64 **)(a4 + 56);
     if ( !v7 )
     {
-      sub_1BD6AA4();
+      sub_1C2BF64();
       v7 = *(__int64 **)(a4 + 56);
     }
   }
@@ -133,19 +133,19 @@ void *__fastcall EnumUtility__CastToEnum___Il2CppFullySharedGenericStructType_(
     v18 = System_Type__GetTypeFromHandle(v34, 0LL);
     if ( !System_Enum_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
-    v19 = System_Enum__ToObject_63385672(v18, a1, 0LL);
+    v19 = System_Enum__ToObject_64313500(v18, a1, 0LL);
     v23 = *(_QWORD *)(a4 + 56);
     v24 = v19;
     v25 = *(Il2CppObject **)(v23 + 8);
     if ( (BYTE5(v25[19].klass) & 1) == 0 )
     {
-      v19 = (Il2CppObject *)sub_1BD6A48(v22);
+      v19 = (Il2CppObject *)sub_1C2BF08(v22);
       v25 = v19;
     }
     if ( !v24 )
-      sub_1B86614(v19, v25);
+      sub_1BDBAD4(v19, v25);
     if ( v24->klass->_1.element_class != v25[4].klass )
-      sub_1B868D4(v24);
+      sub_1BDBD94(v24);
     v26 = (char *)j_il2cpp_object_unbox_0(v24, v25, v20, v21);
     v27 = v30;
   }
@@ -159,7 +159,7 @@ void *__fastcall EnumUtility__CastToEnum___Il2CppFullySharedGenericStructType_(
 }
 
 
-void *__fastcall EnumUtility__CastToEnum___Il2CppFullySharedGenericStructType__49771468(
+void *__fastcall EnumUtility__CastToEnum___Il2CppFullySharedGenericStructType__50573536(
         System_String_o *a1,
         const void *a2,
         void *a3,
@@ -189,12 +189,12 @@ void *__fastcall EnumUtility__CastToEnum___Il2CppFullySharedGenericStructType__4
   v7 = *(_QWORD *)(a4 + 56);
   if ( !v7 )
   {
-    sub_1B863B8(&System_Enum_TypeInfo, a2);
-    sub_1B863B8(&System_Type_TypeInfo, v9);
+    sub_1BDB878(&System_Enum_TypeInfo, a2);
+    sub_1BDB878(&System_Type_TypeInfo, v9);
     v7 = *(_QWORD *)(a4 + 56);
     if ( !v7 )
     {
-      sub_1BD6AA4();
+      sub_1C2BF64();
       v7 = *(_QWORD *)(a4 + 56);
     }
   }
@@ -230,13 +230,13 @@ LABEL_19:
     v21 = *v19;
     if ( (BYTE5((*v19)[19].klass) & 1) == 0 )
     {
-      v15 = (Il2CppObject *)sub_1BD6A48(v18);
+      v15 = (Il2CppObject *)sub_1C2BF08(v18);
       v21 = v15;
     }
     if ( !v20 )
-      sub_1B86614(v15, v21);
+      sub_1BDBAD4(v15, v21);
     if ( v20->klass->_1.element_class != v21[4].klass )
-      sub_1B868D4(v20);
+      sub_1BDBD94(v20);
     v22 = (char *)j_il2cpp_object_unbox_0(v20, v21, v16, v17);
     v23 = a3;
   }

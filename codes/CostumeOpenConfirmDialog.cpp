@@ -1,9 +1,9 @@
 void __fastcall CostumeOpenConfirmDialog___ctor(CostumeOpenConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4AE62 & 1) == 0 )
+  if ( (byte_4B41411 & 1) == 0 )
   {
-    sub_1B863B8(&BaseDialog_TypeInfo, method);
-    byte_4A4AE62 = 1;
+    sub_1BDB878(&BaseDialog_TypeInfo, method);
+    byte_4B41411 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -19,12 +19,12 @@ void __fastcall CostumeOpenConfirmDialog__Init(CostumeOpenConfirmDialog_o *this,
   UILabel_o *titleLabel; // x0
   UILabel_o *closeLabel; // x19
 
-  if ( (byte_4A4AE5F & 1) == 0 )
+  if ( (byte_4B4140E & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_3676/*"COMMON_CONFIRM_CLOSE"*/, v3);
-    sub_1B863B8(&StringLiteral_1/*""*/, v4);
-    byte_4A4AE5F = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_3717/*"COMMON_CONFIRM_CLOSE"*/, v3);
+    sub_1BDB878(&StringLiteral_1/*""*/, v4);
+    byte_4B4140E = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   titleLabel = this->fields.titleLabel;
@@ -42,10 +42,10 @@ void __fastcall CostumeOpenConfirmDialog__Init(CostumeOpenConfirmDialog_o *this,
   closeLabel = this->fields.closeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3717/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !closeLabel )
 LABEL_10:
-    sub_1B86614(titleLabel, v5);
+    sub_1BDBAD4(titleLabel, v5);
   UILabel__set_text(closeLabel, (System_String_o *)titleLabel, 0LL);
 }
 
@@ -60,19 +60,19 @@ void __fastcall CostumeOpenConfirmDialog__OnClickCloseButton(
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4A4AE61 & 1) == 0 )
+  if ( (byte_4B41410 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Method_CostumeOpenConfirmDialog_OnClickCloseButton__, v3);
-    sub_1B863B8(&Method_CostumeOpenConfirmDialog__OnClickCloseButton_b__15_0__, v4);
-    byte_4A4AE61 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&Method_CostumeOpenConfirmDialog_OnClickCloseButton__, v3);
+    sub_1BDB878(&Method_CostumeOpenConfirmDialog__OnClickCloseButton_b__15_0__, v4);
+    byte_4B41410 = 1;
   }
   v5 = Method_CostumeOpenConfirmDialog_OnClickCloseButton__;
   if ( (*((_BYTE *)Method_CostumeOpenConfirmDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1B863D0(Method_CostumeOpenConfirmDialog_OnClickCloseButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
+    v5 = (_QWORD *)sub_1BDB890(Method_CostumeOpenConfirmDialog_OnClickCloseButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
-  v7 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_CostumeOpenConfirmDialog__OnClickCloseButton_b__15_0__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -88,7 +88,7 @@ void __fastcall CostumeOpenConfirmDialog__Open(
 
   BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, 0LL);
   this->fields.closeAction = closeAction;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.closeAction, (int32_t)closeAction, v5, v6);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.closeAction, (int32_t)closeAction, v5, v6);
 }
 
 
@@ -131,33 +131,32 @@ void __fastcall CostumeOpenConfirmDialog__Setup(
   __int64 v38; // x3
   __int64 v39; // x4
   Il2CppObject *v40; // x0
-  int32_t v41; // w2
+  __int64 v41; // x2
   const MethodInfo *v42; // x3
-  int32_t v43; // w2
-  const MethodInfo *v44; // x3
-  int32_t v45; // w1
+  const MethodInfo *v43; // x3
+  int32_t v44; // w1
   System_String_o *IfExists; // x0
-  __int64 v47; // x8
-  UILabel_o *v48; // x23
-  __int64 v49; // x8
-  ServantFaceIconComponent_o *v50; // x21
-  int32_t v51; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v52; // [xsp+Ch] [xbp-44h] BYREF
+  __int64 v46; // x8
+  UILabel_o *v47; // x23
+  __int64 v48; // x8
+  ServantFaceIconComponent_o *v49; // x21
+  int32_t v50; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v51; // [xsp+Ch] [xbp-44h] BYREF
+  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A4AE60 & 1) == 0 )
+  if ( (byte_4B4140F & 1) == 0 )
   {
-    sub_1B863B8(&BalanceConfig_TypeInfo, userSvtColEntity);
-    sub_1B863B8(&int_TypeInfo, v9);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v10);
-    sub_1B863B8(&string___TypeInfo, v11);
-    sub_1B863B8(&StringLiteral_3830/*"COSTUME_OPEN_MSG"*/, v12);
-    sub_1B863B8(&StringLiteral_3833/*"COSTUME_OPEN_WARNING_{0}_{1}"*/, v13);
-    sub_1B863B8(&StringLiteral_3832/*"COSTUME_OPEN_WARNING"*/, v14);
-    sub_1B863B8(&StringLiteral_1/*""*/, v15);
-    sub_1B863B8(&StringLiteral_3831/*"COSTUME_OPEN_TITLE"*/, v16);
-    byte_4A4AE60 = 1;
+    sub_1BDB878(&BalanceConfig_TypeInfo, userSvtColEntity);
+    sub_1BDB878(&int_TypeInfo, v9);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v10);
+    sub_1BDB878(&string___TypeInfo, v11);
+    sub_1BDB878(&StringLiteral_3879/*"COSTUME_OPEN_MSG"*/, v12);
+    sub_1BDB878(&StringLiteral_3882/*"COSTUME_OPEN_WARNING_{0}_{1}"*/, v13);
+    sub_1BDB878(&StringLiteral_3881/*"COSTUME_OPEN_WARNING"*/, v14);
+    sub_1BDB878(&StringLiteral_1/*""*/, v15);
+    sub_1BDB878(&StringLiteral_3880/*"COSTUME_OPEN_TITLE"*/, v16);
+    byte_4B4140F = 1;
   }
   CostumeOpenConfirmDialog__Init(this, (const MethodInfo *)userSvtColEntity);
   if ( !svtCostumeEntity )
@@ -191,7 +190,7 @@ void __fastcall CostumeOpenConfirmDialog__Setup(
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  description = LocalizationManager__Get((System_String_o *)StringLiteral_3831/*"COSTUME_OPEN_TITLE"*/, 0LL);
+  description = LocalizationManager__Get((System_String_o *)StringLiteral_3880/*"COSTUME_OPEN_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_43;
   UILabel__set_text(titleLabel, description, 0LL);
@@ -201,8 +200,8 @@ void __fastcall CostumeOpenConfirmDialog__Setup(
   v26 = *(UILabel_o **)((char *)&this->klass + v25);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3830/*"COSTUME_OPEN_MSG"*/, 0LL);
-  description = System_String__Format_61686468(
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3879/*"COSTUME_OPEN_MSG"*/, 0LL);
+  description = System_String__Format_62613552(
                   v27,
                   (Il2CppObject *)svtName,
                   (Il2CppObject *)svtCostumeEntity->fields.name,
@@ -223,18 +222,18 @@ void __fastcall CostumeOpenConfirmDialog__Setup(
                                            (UnityEngine_Component_o *)description,
                                            0LL);
         v28 = (UnityEngine_Transform_o *)description;
-        if ( !byte_4A487E9 )
+        if ( !byte_4B3E919 )
         {
-          description = (System_String_o *)sub_1B863B8(&UnityEngine_Vector3_TypeInfo, v18);
-          byte_4A487E9 = 1;
+          description = (System_String_o *)sub_1BDB878(&UnityEngine_Vector3_TypeInfo, v18);
+          byte_4B3E919 = 1;
         }
         if ( v28 )
         {
           v29 = UnityEngine_Vector3_TypeInfo->static_fields;
-          v53.fields.z = v29->upVector.fields.z * 130.0;
-          v53.fields.y = v29->upVector.fields.y * 130.0;
-          v53.fields.x = v29->upVector.fields.x * 130.0;
-          UnityEngine_Transform__set_localPosition(v28, v53, 0LL);
+          v52.fields.z = v29->upVector.fields.z * 130.0;
+          v52.fields.y = v29->upVector.fields.y * 130.0;
+          v52.fields.x = v29->upVector.fields.x * 130.0;
+          UnityEngine_Transform__set_localPosition(v28, v52, 0LL);
           description = (System_String_o *)this->fields.svtFaceIcon;
           if ( description )
           {
@@ -242,18 +241,18 @@ void __fastcall CostumeOpenConfirmDialog__Setup(
                                                (UnityEngine_Component_o *)description,
                                                0LL);
             v30 = (UnityEngine_Transform_o *)description;
-            if ( !byte_4A487E9 )
+            if ( !byte_4B3E919 )
             {
-              description = (System_String_o *)sub_1B863B8(&UnityEngine_Vector3_TypeInfo, v18);
-              byte_4A487E9 = 1;
+              description = (System_String_o *)sub_1BDB878(&UnityEngine_Vector3_TypeInfo, v18);
+              byte_4B3E919 = 1;
             }
             if ( v30 )
             {
               v31 = UnityEngine_Vector3_TypeInfo->static_fields;
-              v54.fields.z = v31->upVector.fields.z * -54.0;
-              v54.fields.y = v31->upVector.fields.y * -54.0;
-              v54.fields.x = v31->upVector.fields.x * -54.0;
-              UnityEngine_Transform__set_localPosition(v30, v54, 0LL);
+              v53.fields.z = v31->upVector.fields.z * -54.0;
+              v53.fields.y = v31->upVector.fields.y * -54.0;
+              v53.fields.x = v31->upVector.fields.x * -54.0;
+              UnityEngine_Transform__set_localPosition(v30, v53, 0LL);
               goto LABEL_39;
             }
           }
@@ -261,47 +260,47 @@ void __fastcall CostumeOpenConfirmDialog__Setup(
       }
     }
 LABEL_43:
-    sub_1B86614(description, v18);
+    sub_1BDBAD4(description, v18);
   }
-  v32 = sub_1B86460(string___TypeInfo, 2LL);
-  v52 = svtCostumeEntity->fields.svtId;
-  v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52, v33, v34, v35);
-  v51 = svtCostumeEntity->fields.id;
-  v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v51, v37, v38, v39);
-  description = System_String__Format_61686468((System_String_o *)StringLiteral_3833/*"COSTUME_OPEN_WARNING_{0}_{1}"*/, v36, v40, 0LL);
+  v32 = sub_1BDB920(string___TypeInfo, 2LL);
+  v51 = svtCostumeEntity->fields.svtId;
+  v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v51, v33, v34, v35);
+  v50 = svtCostumeEntity->fields.id;
+  v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50, v37, v38, v39);
+  description = System_String__Format_62613552((System_String_o *)StringLiteral_3882/*"COSTUME_OPEN_WARNING_{0}_{1}"*/, v36, v40, 0LL);
   if ( !v32 )
     goto LABEL_43;
   if ( !*(_DWORD *)(v32 + 24)
     || (*(_QWORD *)(v32 + 32) = description,
-        sub_1B8635C((CGThumbnailListItem_o *)(v32 + 32), (int32_t)description, v41, v42),
+        sub_1BDB81C((CGThumbnailListItem_o *)(v32 + 32), (int32_t)description, v41, v42),
         *(_DWORD *)(v32 + 24) <= 1u) )
   {
-    sub_1B8661C(description, v18);
+    sub_1BDBADC(description, v18, v41);
   }
-  v45 = StringLiteral_3832/*"COSTUME_OPEN_WARNING"*/;
-  *(_QWORD *)(v32 + 40) = StringLiteral_3832/*"COSTUME_OPEN_WARNING"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v32 + 40), v45, v43, v44);
+  v44 = StringLiteral_3881/*"COSTUME_OPEN_WARNING"*/;
+  *(_QWORD *)(v32 + 40) = StringLiteral_3881/*"COSTUME_OPEN_WARNING"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v32 + 40), v44, v41, v43);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   IfExists = LocalizationManager__GetIfExists((System_String_array *)v32, 0LL);
-  v47 = 120LL;
+  v46 = 120LL;
   if ( v23 )
-    v47 = 160LL;
-  v48 = *(UILabel_o **)((char *)&this->klass + v47);
+    v46 = 160LL;
+  v47 = *(UILabel_o **)((char *)&this->klass + v46);
   description = System_String__Format(IfExists, (Il2CppObject *)svtCostumeEntity->fields.name, 0LL);
-  if ( !v48 )
+  if ( !v47 )
     goto LABEL_43;
-  UILabel__set_text(v48, description, 0LL);
+  UILabel__set_text(v47, description, 0LL);
 LABEL_39:
-  v49 = 136LL;
+  v48 = 136LL;
   if ( v23 )
-    v49 = 168LL;
-  v50 = *(ServantFaceIconComponent_o **)((char *)&this->klass + v49);
-  if ( !v50 )
+    v48 = 168LL;
+  v49 = *(ServantFaceIconComponent_o **)((char *)&this->klass + v48);
+  if ( !v49 )
     goto LABEL_43;
-  ServantFaceIconComponent__Set_39181136(v50, userSvtColEntity, svtCostumeEntity, 0LL, 0LL, 0, 0LL);
-  ServantFaceIconComponent__SetDispRaritySprite(v50, 0, 0LL);
-  ServantFaceIconComponent__SetDispLimitCountIcon(v50, 0, 0LL);
+  ServantFaceIconComponent__Set_40021668(v49, userSvtColEntity, svtCostumeEntity, 0LL, 0LL, 0, 0LL);
+  ServantFaceIconComponent__SetDispRaritySprite(v49, 0, 0LL);
+  ServantFaceIconComponent__SetDispLimitCountIcon(v49, 0, 0LL);
 }
 
 

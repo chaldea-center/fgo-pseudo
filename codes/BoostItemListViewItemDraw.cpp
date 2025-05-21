@@ -2,10 +2,10 @@ void __fastcall BoostItemListViewItemDraw___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4A49DF3 & 1) == 0 )
+  if ( (byte_4B40384 & 1) == 0 )
   {
-    sub_1B863B8(&BoostItemListViewItemDraw_TypeInfo, v1);
-    byte_4A49DF3 = 1;
+    sub_1BDB878(&BoostItemListViewItemDraw_TypeInfo, v1);
+    byte_4B40384 = 1;
   }
   BoostItemListViewItemDraw_TypeInfo->static_fields->DETAIL_FONT_SIZE = 18;
 }
@@ -48,22 +48,22 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
   System_String_o *v26; // x0
   UIWidget_o *v27; // x20
   struct UILabel_o *v28; // x8
-  float x; // s0
-  float y; // s1
-  float mScale; // s2
+  float v29; // s0
+  float v30; // s1
+  float v31; // s2
   float v32; // s3
   int v33; // [xsp+Ch] [xbp-34h] BYREF
 
   v5 = item;
   v6 = this;
-  if ( (byte_4A49DF2 & 1) == 0 )
+  if ( (byte_4B40383 & 1) == 0 )
   {
-    sub_1B863B8(&BalanceConfig_TypeInfo, item);
-    sub_1B863B8(&BoostItemListViewItemDraw_TypeInfo, v7);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v8);
-    sub_1B863B8(&StringLiteral_3916/*"CURRENT_NUM_TXT"*/, v9);
-    this = (BoostItemListViewItemDraw_o *)sub_1B863B8(&StringLiteral_19954/*"icon_race_"*/, v10);
-    byte_4A49DF2 = 1;
+    sub_1BDB878(&BalanceConfig_TypeInfo, item);
+    sub_1BDB878(&BoostItemListViewItemDraw_TypeInfo, v7);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v8);
+    sub_1BDB878(&StringLiteral_3965/*"CURRENT_NUM_TXT"*/, v9);
+    this = (BoostItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_20236/*"icon_race_"*/, v10);
+    byte_4B40383 = 1;
   }
   if ( mode )
   {
@@ -78,7 +78,7 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
     this = (BoostItemListViewItemDraw_o *)v6->fields.itemIconInfo;
     if ( !this )
       goto LABEL_34;
-    ItemIconComponent__SetItemImage_39097164(
+    ItemIconComponent__SetItemImage_39932756(
       (ItemIconComponent_o *)this,
       itemEntity[10],
       itemEntity[11],
@@ -89,7 +89,7 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
     infoLabel = v6->fields.infoLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    this = (BoostItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3916/*"CURRENT_NUM_TXT"*/, 0LL);
+    this = (BoostItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3965/*"CURRENT_NUM_TXT"*/, 0LL);
     if ( !infoLabel )
       goto LABEL_34;
     UILabel__set_text(infoLabel, (System_String_o *)this, 0LL);
@@ -99,10 +99,10 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
       goto LABEL_34;
     UILabel__set_text(numLabel, (System_String_o *)this, 0LL);
     nameLabel = v6->fields.nameLabel;
-    if ( (byte_4A49DEE & 1) == 0 )
+    if ( (byte_4B4037F & 1) == 0 )
     {
-      this = (BoostItemListViewItemDraw_o *)sub_1B863B8(&StringLiteral_18829/*"error"*/, item);
-      byte_4A49DEE = 1;
+      this = (BoostItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_19073/*"error"*/, item);
+      byte_4B4037F = 1;
     }
     if ( !nameLabel )
       goto LABEL_34;
@@ -110,7 +110,7 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
     if ( v18 )
       p_name = &v18->fields.name;
     else
-      p_name = (System_String_o **)&StringLiteral_18829/*"error"*/;
+      p_name = (System_String_o **)&StringLiteral_19073/*"error"*/;
     UILabel__set_text(nameLabel, *p_name, 0LL);
     detailLabel = v6->fields.detailLabel;
     SkillText = BoostItemListViewItem__get_SkillText(v5, v21);
@@ -134,15 +134,15 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
     if ( magnification >= 2 )
     {
       v26 = System_Int32__ToString((int32_t)&v33, 0LL);
-      this = (BoostItemListViewItemDraw_o *)System_String__Concat_61645176(
-                                              (System_String_o *)StringLiteral_19954/*"icon_race_"*/,
+      this = (BoostItemListViewItemDraw_o *)System_String__Concat_62572260(
+                                              (System_String_o *)StringLiteral_20236/*"icon_race_"*/,
                                               v26,
                                               0LL);
       item = (BoostItemListViewItem_o *)this;
     }
     if ( !magnificationSprite )
 LABEL_34:
-      sub_1B86614(this, item);
+      sub_1BDBAD4(this, item);
     UISprite__set_spriteName(magnificationSprite, (System_String_o *)item, 0LL);
     v27 = (UIWidget_o *)v6->fields.magnificationSprite;
     if ( isCanNotSelect )
@@ -154,23 +154,23 @@ LABEL_34:
         this = (BoostItemListViewItemDraw_o *)BalanceConfig_TypeInfo;
       }
       v28 = this[1].fields.infoLabel;
-      x = v28->fields.mCalculatedSize.fields.x;
-      y = v28->fields.mCalculatedSize.fields.y;
-      mScale = v28->fields.mScale;
-      v32 = *(float *)&v28->fields.mPrintedSize;
+      v29 = *((float *)&v28->fields.mLastHeight + 1);
+      v30 = *(float *)&v28[1].klass;
+      v31 = *((float *)&v28[1].klass + 1);
+      v32 = *(float *)&v28[1].monitor;
       if ( !v27 )
         goto LABEL_34;
     }
     else
     {
       v32 = 1.0;
-      mScale = 1.0;
-      y = 1.0;
-      x = 1.0;
+      v31 = 1.0;
+      v30 = 1.0;
+      v29 = 1.0;
       if ( !v27 )
         goto LABEL_34;
     }
-    UIWidget__set_color(v27, *(UnityEngine_Color_o *)&x, 0LL);
+    UIWidget__set_color(v27, *(UnityEngine_Color_o *)&v29, 0LL);
     this = (BoostItemListViewItemDraw_o *)v6->fields.magnificationSprite;
     if ( !this )
       goto LABEL_34;

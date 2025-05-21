@@ -4,15 +4,15 @@ void __fastcall EventInfoQPPointCounter___ctor(EventInfoQPPointCounter_o *this, 
   const MethodInfo *v3; // x3
   int32_t v5; // w1
 
-  if ( (byte_4A4FB07 & 1) == 0 )
+  if ( (byte_4B460AE & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_22532/*"qp_counter_overlay"*/, method);
-    byte_4A4FB07 = 1;
+    sub_1BDB878(&StringLiteral_22875/*"qp_counter_overlay"*/, method);
+    byte_4B460AE = 1;
   }
   *(_QWORD *)&this->fields.DigitDefaultScale = 0x3F6666663F800000LL;
-  v5 = StringLiteral_22532/*"qp_counter_overlay"*/;
-  this->fields.OverlaySpName = (struct System_String_o *)StringLiteral_22532/*"qp_counter_overlay"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.OverlaySpName, v5, v2, v3);
+  v5 = StringLiteral_22875/*"qp_counter_overlay"*/;
+  this->fields.OverlaySpName = (struct System_String_o *)StringLiteral_22875/*"qp_counter_overlay"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.OverlaySpName, v5, v2, v3);
   EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0LL);
 }
 
@@ -24,10 +24,10 @@ int32_t __fastcall EventInfoQPPointCounter__GetDigit(
 {
   double v4; // d0
 
-  if ( (byte_4A4FB03 & 1) == 0 )
+  if ( (byte_4B460AA & 1) == 0 )
   {
-    sub_1B863B8(&System_Math_TypeInfo, num);
-    byte_4A4FB03 = 1;
+    sub_1BDB878(&System_Math_TypeInfo, num);
+    byte_4B460AA = 1;
   }
   if ( !num )
     return 0;
@@ -50,10 +50,10 @@ int64_t __fastcall EventInfoQPPointCounter__GetDigitNumber(
   double v6; // d0
   signed __int64 v7; // x8
 
-  if ( (byte_4A4FB04 & 1) == 0 )
+  if ( (byte_4B460AB & 1) == 0 )
   {
-    sub_1B863B8(&System_Math_TypeInfo, number);
-    byte_4A4FB04 = 1;
+    sub_1BDB878(&System_Math_TypeInfo, number);
+    byte_4B460AB = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -71,19 +71,19 @@ int64_t __fastcall EventInfoQPPointCounter__GetLimitPoint(EventInfoQPPointCounte
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4A4FB06 & 1) == 0 )
+  if ( (byte_4B460AD & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_EventPointUpperMaster___, method);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4A4FB06 = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_EventPointUpperMaster___, method);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4B460AD = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_EventPointUpperMaster___)) == 0LL )
+                     (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventPointUpperMaster___)) == 0LL )
   {
-    sub_1B86614(Instance, v5);
+    sub_1BDBAD4(Instance, v5);
   }
   return EventPointUpperMaster__getPointUpper((EventPointUpperMaster_o *)Instance, this->fields.eventId, 0, 0LL);
 }
@@ -120,36 +120,37 @@ int64_t __fastcall EventInfoQPPointCounter__GetNextPoint(EventInfoQPPointCounter
   int64_t v29; // x20
   int32_t v30; // w23
   Il2CppObject *Value; // x21
-  int v32; // w8
-  void *v33; // x21
-  unsigned int v34; // w23
-  _DWORD *v35; // x25
-  int32_t v36; // w22
+  __int64 v32; // x2
+  int v33; // w8
+  void *v34; // x21
+  unsigned int v35; // w23
+  _DWORD *v36; // x25
   int32_t v37; // w22
+  int32_t v38; // w22
 
-  if ( (byte_4A4FB05 & 1) == 0 )
+  if ( (byte_4B460AC & 1) == 0 )
   {
-    sub_1B863B8(&CondType_TypeInfo, method);
-    sub_1B863B8(&Method_DataManager_GetMasterData_EventMissionConditionMaster___, v3);
-    sub_1B863B8(&Method_System_Linq_Enumerable_OrderByDescending_EventMissionConditionEntity__long___, v4);
-    sub_1B863B8(&Method_System_Linq_Enumerable_ToList_EventMissionConditionEntity___, v5);
-    sub_1B863B8(&System_Func_EventMissionConditionEntity__long__TypeInfo, v6);
-    sub_1B863B8(&Method_JsonManager_DeserializeArray_EventInfoQPPointCounter_NextDisplayData___, v7);
-    sub_1B863B8(&JsonManager_TypeInfo, v8);
-    sub_1B863B8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Count__, v9);
-    sub_1B863B8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__, v10);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
-    sub_1B863B8(&Method_EventInfoQPPointCounter___c__GetNextPoint_b__24_0__, v12);
-    sub_1B863B8(&EventInfoQPPointCounter___c_TypeInfo, v13);
-    sub_1B863B8(&StringLiteral_10654/*"QPEVENT_NEXT_DISPLAY_DATA"*/, v14);
-    byte_4A4FB05 = 1;
+    sub_1BDB878(&CondType_TypeInfo, method);
+    sub_1BDB878(&Method_DataManager_GetMasterData_EventMissionConditionMaster___, v3);
+    sub_1BDB878(&Method_System_Linq_Enumerable_OrderByDescending_EventMissionConditionEntity__long___, v4);
+    sub_1BDB878(&Method_System_Linq_Enumerable_ToList_EventMissionConditionEntity___, v5);
+    sub_1BDB878(&System_Func_EventMissionConditionEntity__long__TypeInfo, v6);
+    sub_1BDB878(&Method_JsonManager_DeserializeArray_EventInfoQPPointCounter_NextDisplayData___, v7);
+    sub_1BDB878(&JsonManager_TypeInfo, v8);
+    sub_1BDB878(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Count__, v9);
+    sub_1BDB878(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__, v10);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v11);
+    sub_1BDB878(&Method_EventInfoQPPointCounter___c__GetNextPoint_b__24_0__, v12);
+    sub_1BDB878(&EventInfoQPPointCounter___c_TypeInfo, v13);
+    sub_1BDB878(&StringLiteral_10810/*"QPEVENT_NEXT_DISPLAY_DATA"*/, v14);
+    byte_4B460AC = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_40;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___);
+                        (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventMissionConditionMaster___);
   if ( MasterData_object )
   {
     EntityFromTargetIdAndCondType = EventMissionConditionMaster__GetEntityFromTargetIdAndCondType(
@@ -173,19 +174,19 @@ int64_t __fastcall EventInfoQPPointCounter__GetNextPoint(EventInfoQPPointCounter
         v19 = EventInfoQPPointCounter___c_TypeInfo;
       }
       v22 = (Il2CppObject *)v19->static_fields->__9;
-      _9__24_0 = (System_Func_T__TResult__o *)sub_1B86604(System_Func_EventMissionConditionEntity__long__TypeInfo);
+      _9__24_0 = (System_Func_T__TResult__o *)sub_1BDBAC4(System_Func_EventMissionConditionEntity__long__TypeInfo);
       System_Func_object__long____ctor(_9__24_0, v22, Method_EventInfoQPPointCounter___c__GetNextPoint_b__24_0__, 0LL);
       static_fields = EventInfoQPPointCounter___c_TypeInfo->static_fields;
       static_fields->__9__24_0 = (struct System_Func_EventMissionConditionEntity__long__o *)_9__24_0;
-      sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__24_0, (int32_t)_9__24_0, v24, v25);
+      sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__24_0, (int32_t)_9__24_0, v24, v25);
     }
     v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__long_(
                                                                  v20,
                                                                  (System_Func_TSource__TKey__o *)_9__24_0,
-                                                                 (const MethodInfo_2F9B1C4 *)Method_System_Linq_Enumerable_OrderByDescending_EventMissionConditionEntity__long___);
+                                                                 (const MethodInfo_305FBEC *)Method_System_Linq_Enumerable_OrderByDescending_EventMissionConditionEntity__long___);
     Instance = System_Linq_Enumerable__ToList_object_(
                  v26,
-                 (const MethodInfo_2FADBE0 *)Method_System_Linq_Enumerable_ToList_EventMissionConditionEntity___);
+                 (const MethodInfo_307503C *)Method_System_Linq_Enumerable_ToList_EventMissionConditionEntity___);
     if ( !Instance )
       goto LABEL_40;
     v27 = (System_Collections_Generic_List_object__o *)Instance;
@@ -198,7 +199,7 @@ int64_t __fastcall EventInfoQPPointCounter__GetNextPoint(EventInfoQPPointCounter
         Instance = System_Collections_Generic_List_object___get_Item(
                      v27,
                      v28,
-                     (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__);
+                     (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__);
         if ( !Instance )
           break;
         v30 = *((_DWORD *)Instance + 4);
@@ -209,7 +210,7 @@ int64_t __fastcall EventInfoQPPointCounter__GetNextPoint(EventInfoQPPointCounter
           Instance = System_Collections_Generic_List_object___get_Item(
                        v27,
                        v28,
-                       (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__);
+                       (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__);
           if ( !Instance )
             break;
           v29 = *((_QWORD *)Instance + 7);
@@ -219,51 +220,51 @@ int64_t __fastcall EventInfoQPPointCounter__GetNextPoint(EventInfoQPPointCounter
         goto LABEL_22;
       }
 LABEL_40:
-      sub_1B86614(Instance, v16);
+      sub_1BDBAD4(Instance, v16);
     }
   }
   v29 = 0LL;
 LABEL_22:
-  Value = (Il2CppObject *)ConstantStrMaster__getValue((System_String_o *)StringLiteral_10654/*"QPEVENT_NEXT_DISPLAY_DATA"*/, 0LL);
+  Value = (Il2CppObject *)ConstantStrMaster__getValue((System_String_o *)StringLiteral_10810/*"QPEVENT_NEXT_DISPLAY_DATA"*/, 0LL);
   if ( !System_String__IsNullOrEmpty((System_String_o *)Value, 0LL) )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     Instance = JsonManager__DeserializeArray_object_(
                  Value,
-                 (const MethodInfo_2FD883C *)Method_JsonManager_DeserializeArray_EventInfoQPPointCounter_NextDisplayData___);
+                 (const MethodInfo_30A04A4 *)Method_JsonManager_DeserializeArray_EventInfoQPPointCounter_NextDisplayData___);
     if ( !Instance )
       goto LABEL_40;
-    v32 = *((_DWORD *)Instance + 6);
-    v33 = Instance;
-    if ( v32 >= 1 )
+    v33 = *((_DWORD *)Instance + 6);
+    v34 = Instance;
+    if ( v33 >= 1 )
     {
-      v34 = 0;
+      v35 = 0;
       while ( 1 )
       {
-        if ( v34 >= v32 )
-          sub_1B8661C(Instance, v16);
-        v35 = (_DWORD *)*((_QWORD *)v33 + (int)v34 + 4);
-        if ( !v35 )
+        if ( v35 >= v33 )
+          sub_1BDBADC(Instance, v16, v32);
+        v36 = (_DWORD *)*((_QWORD *)v34 + (int)v35 + 4);
+        if ( !v36 )
           break;
-        if ( v35[4] == this->fields.eventId )
+        if ( v36[4] == this->fields.eventId )
         {
-          v36 = v35[5];
+          v37 = v36[5];
           if ( !CondType_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-          Instance = (void *)CondType__IsMissionAchive(v36, 0LL);
+          Instance = (void *)CondType__IsMissionAchive(v37, 0LL);
           if ( ((unsigned __int8)Instance & 1) != 0 )
           {
-            v37 = v35[6];
+            v38 = v36[6];
             if ( !CondType_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-            Instance = (void *)CondType__IsQuestClear_38542260(v37, -1, 0, 0LL);
+            Instance = (void *)CondType__IsQuestClear_39349364(v38, -1, 0, 0LL);
             if ( ((unsigned __int8)Instance & 1) == 0 )
               v29 = 0LL;
           }
         }
-        v32 = *((_DWORD *)v33 + 6);
-        if ( (int)++v34 >= v32 )
+        v33 = *((_DWORD *)v34 + 6);
+        if ( (int)++v35 >= v33 )
           return v29;
       }
       goto LABEL_40;
@@ -286,13 +287,13 @@ void __fastcall EventInfoQPPointCounter__SetEventId(
   const MethodInfo *v9; // x1
 
   v5 = this;
-  if ( (byte_4A4FB00 & 1) == 0 )
+  if ( (byte_4B460A7 & 1) == 0 )
   {
-    this = (EventInfoQPPointCounter_o *)sub_1B863B8(&int_TypeInfo, val);
-    byte_4A4FB00 = 1;
+    this = (EventInfoQPPointCounter_o *)sub_1BDB878(&int_TypeInfo, val);
+    byte_4B460A7 = 1;
   }
   if ( !val )
-    sub_1B86614(this, val);
+    sub_1BDBAD4(this, val);
   if ( val->klass->_1.element_class == int_TypeInfo->_1.element_class )
   {
     v6 = *(_DWORD *)j_il2cpp_object_unbox_0(val, int_TypeInfo, method, v3);
@@ -302,7 +303,7 @@ void __fastcall EventInfoQPPointCounter__SetEventId(
   }
   else
   {
-    sub_1B868D4(val);
+    sub_1BDBD94(val);
     EventInfoQPPointCounter__GetNextPoint(v8, v9);
   }
 }
@@ -323,41 +324,42 @@ void __fastcall EventInfoQPPointCounter__SetPointNumSprite(
   __int64 v11; // x1
   UnityEngine_Transform_o *transform; // x0
   __int64 v13; // x1
-  unsigned __int64 v14; // x27
-  int v15; // w28
+  __int64 v14; // x2
+  unsigned __int64 v15; // x27
+  int v16; // w28
   UISprite_o **m_Items; // x20
-  UnityEngine_Object_o *v17; // x23
-  const MethodInfo *v18; // x3
-  UISprite_o *v19; // x23
-  System_String_o *v20; // x0
-  System_String_o *v21; // x24
+  UnityEngine_Object_o *v18; // x23
+  const MethodInfo *v19; // x3
+  UISprite_o *v20; // x23
+  System_String_o *v21; // x0
+  System_String_o *v22; // x24
   System_Collections_Generic_IEnumerable_TSource__o *CommaSp; // x0
-  __int64 v23; // x20
-  struct UISprite_array *v24; // x8
-  unsigned __int64 v25; // x28
-  UnityEngine_Object_o *v26; // x21
-  struct UISprite_array *v27; // x8
-  UISprite_o *v28; // x21
-  struct UISprite_array *v29; // x8
-  __int64 v30; // x8
+  __int64 v24; // x20
+  struct UISprite_array *v25; // x8
+  unsigned __int64 v26; // x28
+  UnityEngine_Object_o *v27; // x21
+  struct UISprite_array *v28; // x8
+  UISprite_o *v29; // x21
+  struct UISprite_array *v30; // x8
+  __int64 v31; // x8
   UnityEngine_Object_o *TotalCounterParent; // x21
-  bool v32; // w0
+  bool v33; // w0
   float Digit10Scale; // s0
-  float v34; // s1
-  int v35; // s2
+  float v35; // s1
+  int v36; // s2
   int32_t Digit; // [xsp+0h] [xbp-70h]
   int64_t DigitNumber; // [xsp+8h] [xbp-68h] BYREF
 
   v6 = this;
-  if ( (byte_4A4FB02 & 1) == 0 )
+  if ( (byte_4B460A9 & 1) == 0 )
   {
-    sub_1B863B8(&AtlasManager_TypeInfo, number);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Count_UISprite___, v7);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B863B8(&StringLiteral_22531/*"qp_counter_comma"*/, v9);
-    sub_1B863B8(&StringLiteral_22527/*"qp_counter_"*/, v10);
-    this = (EventInfoQPPointCounter_o *)sub_1B863B8(&StringLiteral_1/*""*/, v11);
-    byte_4A4FB02 = 1;
+    sub_1BDB878(&AtlasManager_TypeInfo, number);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Count_UISprite___, v7);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v8);
+    sub_1BDB878(&StringLiteral_22874/*"qp_counter_comma"*/, v9);
+    sub_1BDB878(&StringLiteral_22870/*"qp_counter_"*/, v10);
+    this = (EventInfoQPPointCounter_o *)sub_1BDB878(&StringLiteral_1/*""*/, v11);
+    byte_4B460A9 = 1;
   }
   DigitNumber = 0LL;
   if ( sprites )
@@ -365,38 +367,38 @@ void __fastcall EventInfoQPPointCounter__SetPointNumSprite(
     Digit = EventInfoQPPointCounter__GetDigit(this, number, (const MethodInfo *)sprites);
     transform = (UnityEngine_Transform_o *)System_Linq_Enumerable__Count_object_(
                                              (System_Collections_Generic_IEnumerable_TSource__o *)sprites,
-                                             (const MethodInfo_2F8B4FC *)Method_System_Linq_Enumerable_Count_UISprite___);
+                                             (const MethodInfo_304FE28 *)Method_System_Linq_Enumerable_Count_UISprite___);
     if ( (int)transform >= 1 )
     {
-      v14 = 0LL;
-      v15 = 0;
+      v15 = 0LL;
+      v16 = 0;
       m_Items = sprites->m_Items;
-      while ( v14 < sprites->max_length )
+      while ( v15 < sprites->max_length )
       {
-        v17 = (UnityEngine_Object_o *)m_Items[v14];
+        v18 = (UnityEngine_Object_o *)m_Items[v15];
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Equality(v17, 0LL, 0LL);
+        transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Equality(v18, 0LL, 0LL);
         if ( ((unsigned __int8)transform & 1) == 0 )
         {
-          if ( v14 >= sprites->max_length )
+          if ( v15 >= sprites->max_length )
             break;
-          v19 = m_Items[v14];
-          if ( (__int64)v14 <= Digit )
+          v20 = m_Items[v15];
+          if ( (__int64)v15 <= Digit )
           {
             DigitNumber = EventInfoQPPointCounter__GetDigitNumber(
                             (EventInfoQPPointCounter_o *)transform,
                             number,
-                            v15,
-                            v18);
-            v20 = System_Int64__ToString((int64_t)&DigitNumber, 0LL);
-            v21 = System_String__Concat_61645176((System_String_o *)StringLiteral_22527/*"qp_counter_"*/, v20, 0LL);
+                            v16,
+                            v19);
+            v21 = System_Int64__ToString((int64_t)&DigitNumber, 0LL);
+            v22 = System_String__Concat_62572260((System_String_o *)StringLiteral_22870/*"qp_counter_"*/, v21, 0LL);
             if ( !AtlasManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-            transform = (UnityEngine_Transform_o *)AtlasManager__SetEventUI(v19, v21, 0LL);
-            if ( v14 >= sprites->max_length )
+            transform = (UnityEngine_Transform_o *)AtlasManager__SetEventUI(v20, v22, 0LL);
+            if ( v15 >= sprites->max_length )
               break;
-            transform = (UnityEngine_Transform_o *)m_Items[v14];
+            transform = (UnityEngine_Transform_o *)m_Items[v15];
             if ( !transform )
               goto LABEL_55;
             ((void (__fastcall *)(UnityEngine_Transform_o *, Il2CppClass *))transform->klass[2]._1.castClass)(
@@ -405,21 +407,21 @@ void __fastcall EventInfoQPPointCounter__SetPointNumSprite(
           }
           else
           {
-            if ( !v19 )
+            if ( !v20 )
               goto LABEL_55;
-            UISprite__set_spriteName(m_Items[v14], (System_String_o *)StringLiteral_1/*""*/, 0LL);
+            UISprite__set_spriteName(m_Items[v15], (System_String_o *)StringLiteral_1/*""*/, 0LL);
           }
-          ++v15;
+          ++v16;
         }
-        ++v14;
+        ++v15;
         transform = (UnityEngine_Transform_o *)System_Linq_Enumerable__Count_object_(
                                                  (System_Collections_Generic_IEnumerable_TSource__o *)sprites,
-                                                 (const MethodInfo_2F8B4FC *)Method_System_Linq_Enumerable_Count_UISprite___);
-        if ( (__int64)v14 >= (int)transform )
+                                                 (const MethodInfo_304FE28 *)Method_System_Linq_Enumerable_Count_UISprite___);
+        if ( (__int64)v15 >= (int)transform )
           goto LABEL_21;
       }
 LABEL_54:
-      sub_1B8661C(transform, v13);
+      sub_1BDBADC(transform, v13, v14);
     }
 LABEL_21:
     CommaSp = (System_Collections_Generic_IEnumerable_TSource__o *)v6->fields.CommaSp;
@@ -427,50 +429,50 @@ LABEL_21:
     {
       transform = (UnityEngine_Transform_o *)System_Linq_Enumerable__Count_object_(
                                                CommaSp,
-                                               (const MethodInfo_2F8B4FC *)Method_System_Linq_Enumerable_Count_UISprite___);
+                                               (const MethodInfo_304FE28 *)Method_System_Linq_Enumerable_Count_UISprite___);
       if ( (int)transform >= 1 )
       {
-        v23 = 4LL;
+        v24 = 4LL;
         while ( 1 )
         {
-          v24 = v6->fields.CommaSp;
-          if ( !v24 )
+          v25 = v6->fields.CommaSp;
+          if ( !v25 )
             break;
-          v25 = v23 - 4;
-          if ( v23 - 4 >= (unsigned __int64)v24->max_length )
+          v26 = v24 - 4;
+          if ( v24 - 4 >= (unsigned __int64)v25->max_length )
             goto LABEL_54;
-          v26 = (UnityEngine_Object_o *)*((_QWORD *)&v24->obj.klass + v23);
+          v27 = (UnityEngine_Object_o *)*((_QWORD *)&v25->obj.klass + v24);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Equality(v26, 0LL, 0LL);
+          transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Equality(v27, 0LL, 0LL);
           if ( ((unsigned __int8)transform & 1) == 0 )
           {
-            v27 = v6->fields.CommaSp;
-            if ( !v27 )
+            v28 = v6->fields.CommaSp;
+            if ( !v28 )
               break;
-            if ( v25 >= v27->max_length )
+            if ( v26 >= v28->max_length )
               goto LABEL_54;
-            v28 = (UISprite_o *)*((_QWORD *)&v27->obj.klass + v23);
-            if ( (__int64)v25 >= Digit / 3 )
+            v29 = (UISprite_o *)*((_QWORD *)&v28->obj.klass + v24);
+            if ( (__int64)v26 >= Digit / 3 )
             {
-              if ( !v28 )
+              if ( !v29 )
                 break;
-              UISprite__set_spriteName(*((UISprite_o **)&v27->obj.klass + v23), (System_String_o *)StringLiteral_1/*""*/, 0LL);
+              UISprite__set_spriteName(*((UISprite_o **)&v28->obj.klass + v24), (System_String_o *)StringLiteral_1/*""*/, 0LL);
             }
             else
             {
               if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
               transform = (UnityEngine_Transform_o *)AtlasManager__SetEventUI(
-                                                       v28,
-                                                       (System_String_o *)StringLiteral_22531/*"qp_counter_comma"*/,
+                                                       v29,
+                                                       (System_String_o *)StringLiteral_22874/*"qp_counter_comma"*/,
                                                        0LL);
-              v29 = v6->fields.CommaSp;
-              if ( !v29 )
+              v30 = v6->fields.CommaSp;
+              if ( !v30 )
                 break;
-              if ( v25 >= v29->max_length )
+              if ( v26 >= v30->max_length )
                 goto LABEL_54;
-              transform = (UnityEngine_Transform_o *)*((_QWORD *)&v29->obj.klass + v23);
+              transform = (UnityEngine_Transform_o *)*((_QWORD *)&v30->obj.klass + v24);
               if ( !transform )
                 break;
               ((void (__fastcall *)(UnityEngine_Transform_o *, Il2CppClass *))transform->klass[2]._1.castClass)(
@@ -480,24 +482,24 @@ LABEL_21:
           }
           transform = (UnityEngine_Transform_o *)System_Linq_Enumerable__Count_object_(
                                                    (System_Collections_Generic_IEnumerable_TSource__o *)v6->fields.CommaSp,
-                                                   (const MethodInfo_2F8B4FC *)Method_System_Linq_Enumerable_Count_UISprite___);
-          v30 = v23 - 3;
-          ++v23;
-          if ( v30 >= (int)transform )
+                                                   (const MethodInfo_304FE28 *)Method_System_Linq_Enumerable_Count_UISprite___);
+          v31 = v24 - 3;
+          ++v24;
+          if ( v31 >= (int)transform )
             goto LABEL_41;
         }
 LABEL_55:
-        sub_1B86614(transform, v13);
+        sub_1BDBAD4(transform, v13);
       }
     }
 LABEL_41:
     TotalCounterParent = (UnityEngine_Object_o *)v6->fields.TotalCounterParent;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v32 = UnityEngine_Object__op_Inequality(TotalCounterParent, 0LL, 0LL);
+    v33 = UnityEngine_Object__op_Inequality(TotalCounterParent, 0LL, 0LL);
     if ( Digit + 1 >= 10 )
     {
-      if ( !v32 )
+      if ( !v33 )
         return;
       transform = (UnityEngine_Transform_o *)v6->fields.TotalCounterParent;
       if ( !transform )
@@ -509,7 +511,7 @@ LABEL_41:
     }
     else
     {
-      if ( !v32 )
+      if ( !v33 )
         return;
       transform = (UnityEngine_Transform_o *)v6->fields.TotalCounterParent;
       if ( !transform )
@@ -519,8 +521,8 @@ LABEL_41:
         goto LABEL_55;
       Digit10Scale = v6->fields.DigitDefaultScale;
     }
-    v34 = 1.0;
-    v35 = 0;
+    v35 = 1.0;
+    v36 = 0;
     UnityEngine_Transform__set_localScale(transform, *(UnityEngine_Vector3_o *)&Digit10Scale, 0LL);
   }
 }
@@ -554,14 +556,14 @@ void __fastcall EventInfoQPPointCounter__Start(EventInfoQPPointCounter_o *this, 
   UISprite_o *v17; // x20
   System_String_o *OverlaySpName; // x21
 
-  if ( (byte_4A4FAFF & 1) == 0 )
+  if ( (byte_4B460A6 & 1) == 0 )
   {
-    sub_1B863B8(&AtlasManager_TypeInfo, method);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v3);
-    sub_1B863B8(&StringLiteral_22529/*"qp_counter_bg_main"*/, v4);
-    sub_1B863B8(&StringLiteral_22530/*"qp_counter_bg_next"*/, v5);
-    sub_1B863B8(&StringLiteral_22528/*"qp_counter_bg_limit"*/, v6);
-    byte_4A4FAFF = 1;
+    sub_1BDB878(&AtlasManager_TypeInfo, method);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
+    sub_1BDB878(&StringLiteral_22872/*"qp_counter_bg_main"*/, v4);
+    sub_1BDB878(&StringLiteral_22873/*"qp_counter_bg_next"*/, v5);
+    sub_1BDB878(&StringLiteral_22871/*"qp_counter_bg_limit"*/, v6);
+    byte_4B460A6 = 1;
   }
   PointCounterSp = (UnityEngine_Object_o *)this->fields.PointCounterSp;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -571,7 +573,7 @@ void __fastcall EventInfoQPPointCounter__Start(EventInfoQPPointCounter_o *this, 
     v8 = this->fields.PointCounterSp;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI(v8, (System_String_o *)StringLiteral_22529/*"qp_counter_bg_main"*/, 0LL);
+    AtlasManager__SetEventUI(v8, (System_String_o *)StringLiteral_22872/*"qp_counter_bg_main"*/, 0LL);
     v10 = this->fields.PointCounterSp;
     if ( !v10 )
       goto LABEL_32;
@@ -587,7 +589,7 @@ void __fastcall EventInfoQPPointCounter__Start(EventInfoQPPointCounter_o *this, 
     v12 = this->fields.NextCounterSp;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI(v12, (System_String_o *)StringLiteral_22530/*"qp_counter_bg_next"*/, 0LL);
+    AtlasManager__SetEventUI(v12, (System_String_o *)StringLiteral_22873/*"qp_counter_bg_next"*/, 0LL);
     v10 = this->fields.NextCounterSp;
     if ( !v10 )
       goto LABEL_32;
@@ -603,7 +605,7 @@ void __fastcall EventInfoQPPointCounter__Start(EventInfoQPPointCounter_o *this, 
     v14 = this->fields.LimitCounterSp;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI(v14, (System_String_o *)StringLiteral_22528/*"qp_counter_bg_limit"*/, 0LL);
+    AtlasManager__SetEventUI(v14, (System_String_o *)StringLiteral_22871/*"qp_counter_bg_limit"*/, 0LL);
     v10 = this->fields.LimitCounterSp;
     if ( !v10 )
       goto LABEL_32;
@@ -630,7 +632,7 @@ void __fastcall EventInfoQPPointCounter__Start(EventInfoQPPointCounter_o *this, 
       goto LABEL_31;
     }
 LABEL_32:
-    sub_1B86614(v10, v9);
+    sub_1BDBAD4(v10, v9);
   }
 LABEL_31:
   EventInfoQPPointCounter__UpdateDisp(this, v16);
@@ -668,14 +670,14 @@ void __fastcall EventInfoQPPointCounter__UpdateDisp(EventInfoQPPointCounter_o *t
   const MethodInfo *v29; // x3
   int64_t v30; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A4FB01 & 1) == 0 )
+  if ( (byte_4B460A8 & 1) == 0 )
   {
-    sub_1B863B8(&long_TypeInfo, method);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v3);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v4);
-    sub_1B863B8(&StringLiteral_5611/*"EVENT_QPPOINT_NEXT_FORMAT"*/, v5);
-    sub_1B863B8(&StringLiteral_5610/*"EVENT_QPPOINT_LIMIT_FORMAT"*/, v6);
-    byte_4A4FB01 = 1;
+    sub_1BDB878(&long_TypeInfo, method);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v3);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v4);
+    sub_1BDB878(&StringLiteral_5688/*"EVENT_QPPOINT_NEXT_FORMAT"*/, v5);
+    sub_1BDB878(&StringLiteral_5687/*"EVENT_QPPOINT_LIMIT_FORMAT"*/, v6);
+    byte_4B460A8 = 1;
   }
   NextPoint = EventInfoQPPointCounter__GetNextPoint(this, method);
   LimitPoint = EventInfoQPPointCounter__GetLimitPoint(this, v8);
@@ -688,7 +690,7 @@ void __fastcall EventInfoQPPointCounter__UpdateDisp(EventInfoQPPointCounter_o *t
     v12 = this->fields.NextCounterLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5611/*"EVENT_QPPOINT_NEXT_FORMAT"*/, 0LL);
+    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5688/*"EVENT_QPPOINT_NEXT_FORMAT"*/, 0LL);
     v30 = NextPoint;
     v17 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v30, v14, v15, v16);
     v18 = System_String__Format(v13, v17, 0LL);
@@ -704,7 +706,7 @@ void __fastcall EventInfoQPPointCounter__UpdateDisp(EventInfoQPPointCounter_o *t
     v21 = this->fields.LimitCounterLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5610/*"EVENT_QPPOINT_LIMIT_FORMAT"*/, 0LL);
+    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5687/*"EVENT_QPPOINT_LIMIT_FORMAT"*/, 0LL);
     v30 = v11;
     v26 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v30, v23, v24, v25);
     v18 = System_String__Format(v22, v26, 0LL);
@@ -734,7 +736,7 @@ void __fastcall EventInfoQPPointCounter__UpdateDisp(EventInfoQPPointCounter_o *t
       goto LABEL_27;
     }
 LABEL_28:
-    sub_1B86614(v18, v19);
+    sub_1BDBAD4(v18, v19);
   }
 LABEL_27:
   EventInfoQPPointCounter__SetPointNumSprite(this, this->fields.totalPoint, this->fields.TotalPointNumberSp, v29);
@@ -756,15 +758,15 @@ void __fastcall EventInfoQPPointCounter___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4A4FB08 & 1) == 0 )
+  if ( (byte_4B460AF & 1) == 0 )
   {
-    sub_1B863B8(&EventInfoQPPointCounter___c_TypeInfo, v1);
-    byte_4A4FB08 = 1;
+    sub_1BDB878(&EventInfoQPPointCounter___c_TypeInfo, v1);
+    byte_4B460AF = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(EventInfoQPPointCounter___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BDBAC4(EventInfoQPPointCounter___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventInfoQPPointCounter___c_TypeInfo->static_fields->__9 = (struct EventInfoQPPointCounter___c_o *)v2;
-  sub_1B8635C((CGThumbnailListItem_o *)EventInfoQPPointCounter___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BDB81C((CGThumbnailListItem_o *)EventInfoQPPointCounter___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -780,6 +782,6 @@ int64_t __fastcall EventInfoQPPointCounter___c___GetNextPoint_b__24_0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   return entity->fields.targetNum;
 }

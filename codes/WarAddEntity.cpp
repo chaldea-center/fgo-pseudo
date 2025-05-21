@@ -15,37 +15,37 @@ void __fastcall WarAddEntity___cctor(const MethodInfo *method)
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4A4F50D & 1) == 0 )
+  if ( (byte_4B45B27 & 1) == 0 )
   {
-    sub_1B863B8(&WarAddEntity_TypeInfo, v1);
-    sub_1B863B8(&StringLiteral_16930/*"bgChangeEffectTime"*/, v4);
-    sub_1B863B8(&StringLiteral_16931/*"bgChangeEffectType"*/, v5);
-    sub_1B863B8(&StringLiteral_18917/*"eventTowerId"*/, v6);
-    byte_4A4F50D = 1;
+    sub_1BDB878(&WarAddEntity_TypeInfo, v1);
+    sub_1BDB878(&StringLiteral_17154/*"bgChangeEffectTime"*/, v4);
+    sub_1BDB878(&StringLiteral_17155/*"bgChangeEffectType"*/, v5);
+    sub_1BDB878(&StringLiteral_19161/*"eventTowerId"*/, v6);
+    byte_4B45B27 = 1;
   }
-  WarAddEntity_TypeInfo->static_fields->BG_CHANGE_TYPE_KEY = (struct System_String_o *)StringLiteral_16931/*"bgChangeEffectType"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)WarAddEntity_TypeInfo->static_fields, StringLiteral_16931/*"bgChangeEffectType"*/, v2, v3);
-  v7 = StringLiteral_16930/*"bgChangeEffectTime"*/;
+  WarAddEntity_TypeInfo->static_fields->BG_CHANGE_TYPE_KEY = (struct System_String_o *)StringLiteral_17155/*"bgChangeEffectType"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)WarAddEntity_TypeInfo->static_fields, StringLiteral_17155/*"bgChangeEffectType"*/, v2, v3);
+  v7 = StringLiteral_17154/*"bgChangeEffectTime"*/;
   static_fields = WarAddEntity_TypeInfo->static_fields;
-  static_fields->BG_CHANGE_TIME_KEY = (struct System_String_o *)StringLiteral_16930/*"bgChangeEffectTime"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)&static_fields->BG_CHANGE_TIME_KEY, v7, v9, v10);
-  v11 = StringLiteral_18917/*"eventTowerId"*/;
+  static_fields->BG_CHANGE_TIME_KEY = (struct System_String_o *)StringLiteral_17154/*"bgChangeEffectTime"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->BG_CHANGE_TIME_KEY, v7, v9, v10);
+  v11 = StringLiteral_19161/*"eventTowerId"*/;
   v12 = WarAddEntity_TypeInfo->static_fields;
-  v12->EVENT_TOWER_ID = (struct System_String_o *)StringLiteral_18917/*"eventTowerId"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)&v12->EVENT_TOWER_ID, v11, v13, v14);
+  v12->EVENT_TOWER_ID = (struct System_String_o *)StringLiteral_19161/*"eventTowerId"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)&v12->EVENT_TOWER_ID, v11, v13, v14);
 }
 
 
 void __fastcall WarAddEntity___ctor(WarAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4F50C & 1) == 0 )
+  if ( (byte_4B45B26 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A4F50C = 1;
+    sub_1BDB878(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B45B26 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32DF9D0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -56,16 +56,16 @@ System_String_o *__fastcall WarAddEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4A4F509 & 1) == 0 )
+  if ( (byte_4B45B23 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
-    byte_4A4F509 = 1;
+    sub_1BDB878(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
+    byte_4B45B23 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            warId,
            type,
            priority,
-           (const MethodInfo_2F6C2D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_3031F74 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -76,10 +76,10 @@ System_String_o *__fastcall WarAddEntity__CreatePrimaryKey(WarAddEntity_o *this,
   int32_t warId; // w21
   int32_t priority; // w19
 
-  if ( (byte_4A4F508 & 1) == 0 )
+  if ( (byte_4B45B22 & 1) == 0 )
   {
-    sub_1B863B8(&WarAddEntity_TypeInfo, method);
-    byte_4A4F508 = 1;
+    sub_1BDB878(&WarAddEntity_TypeInfo, method);
+    byte_4B45B22 = 1;
   }
   warId = this->fields.warId;
   type = this->fields.type;
@@ -102,11 +102,11 @@ bool __fastcall WarAddEntity__HasBGChange(WarAddEntity_o *this, const MethodInfo
   struct System_Collections_Generic_Dictionary_string__object__o *script; // x19
   WarAddEntity_c *v5; // x0
 
-  if ( (byte_4A4F50A & 1) == 0 )
+  if ( (byte_4B45B24 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
-    sub_1B863B8(&WarAddEntity_TypeInfo, v3);
-    byte_4A4F50A = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, method);
+    sub_1BDB878(&WarAddEntity_TypeInfo, v3);
+    byte_4B45B24 = 1;
   }
   script = this->fields.script;
   if ( !script )
@@ -120,7 +120,7 @@ bool __fastcall WarAddEntity__HasBGChange(WarAddEntity_o *this, const MethodInfo
   return System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)v5->static_fields->BG_CHANGE_TYPE_KEY,
-           (const MethodInfo_32CE8D4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+           (const MethodInfo_33A0424 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
 }
 
 
@@ -140,11 +140,11 @@ int32_t __fastcall WarAddEntity__getScript(
   const MethodInfo *v14; // x1
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A4F50B & 1) == 0 )
+  if ( (byte_4B45B25 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
-    sub_1B863B8(&long_TypeInfo, v7);
-    byte_4A4F50B = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    sub_1BDB878(&long_TypeInfo, v7);
+    byte_4B45B25 = 1;
   }
   value = 0LL;
   script = this->fields.script;
@@ -153,15 +153,15 @@ int32_t __fastcall WarAddEntity__getScript(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
           &value,
-          (const MethodInfo_32CFEEC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_33A1A3C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
   {
     return defVal;
   }
   if ( !value )
-    sub_1B86614(0LL, v9);
+    sub_1BDBAD4(0LL, v9);
   if ( value->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(value, long_TypeInfo, v10, v11);
-  sub_1B868D4(value);
+  sub_1BDBD94(value);
   WarAddEntity___ctor(v13, v14);
   return result;
 }

@@ -2,12 +2,12 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog___ctor(
         ExchangeSvtCoinSliderAlertDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A49541 & 1) == 0 )
+  if ( (byte_4B3FABA & 1) == 0 )
   {
-    sub_1B863B8(&BaseDialog_TypeInfo, method);
-    byte_4A49541 = 1;
+    sub_1BDB878(&BaseDialog_TypeInfo, method);
+    byte_4B3FABA = 1;
   }
-  this->fields.DisableColor = (struct UnityEngine_Color_o)xmmword_BC30E0;
+  this->fields.DisableColor = (struct UnityEngine_Color_o)xmmword_BEB150;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -28,11 +28,11 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__Close(
 {
   const MethodInfo *v2; // x2
 
-  ExchangeSvtCoinSliderAlertDialog__Close_31436232(this, 0LL, v2);
+  ExchangeSvtCoinSliderAlertDialog__Close_32222376(this, 0LL, v2);
 }
 
 
-void __fastcall ExchangeSvtCoinSliderAlertDialog__Close_31436232(
+void __fastcall ExchangeSvtCoinSliderAlertDialog__Close_32222376(
         ExchangeSvtCoinSliderAlertDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -40,16 +40,16 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__Close_31436232(
   __int64 v5; // x1
   System_Action_o *v6; // x20
 
-  if ( (byte_4A4953D & 1) == 0 )
+  if ( (byte_4B3FAB6 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, callback);
-    sub_1B863B8(&Method_ExchangeSvtCoinSliderAlertDialog_EndClose__, v5);
-    byte_4A4953D = 1;
+    sub_1BDB878(&System_Action_TypeInfo, callback);
+    sub_1BDB878(&Method_ExchangeSvtCoinSliderAlertDialog_EndClose__, v5);
+    byte_4B3FAB6 = 1;
   }
   this->fields.onClose = callback;
-  sub_1B8635C(&this->fields.onClose);
+  sub_1BDB81C(&this->fields.onClose);
   this->fields.state = 2;
-  v6 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_ExchangeSvtCoinSliderAlertDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v6, 0LL);
 }
@@ -70,7 +70,7 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__EndClose(
   if ( onClose )
   {
     *p_onClose = 0LL;
-    sub_1B8635C(p_onClose);
+    sub_1BDB81C(p_onClose);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v4->fields.m_target)(
       v4->fields.original_method_info,
       *(_QWORD *)&v4->fields.extra_arg);
@@ -83,9 +83,9 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__Init(
         const MethodInfo *method)
 {
   this->fields.onDecide = 0LL;
-  sub_1B8635C(&this->fields.onDecide);
+  sub_1BDB81C(&this->fields.onDecide);
   this->fields.onCancel = 0LL;
-  sub_1B8635C(&this->fields.onCancel);
+  sub_1BDB81C(&this->fields.onCancel);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -102,24 +102,24 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__OnClickCancel(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4A4953F & 1) == 0 )
+  if ( (byte_4B3FAB8 & 1) == 0 )
   {
-    sub_1B863B8(&Method_ExchangeSvtCoinSliderAlertDialog_OnClickCancel__, method);
-    byte_4A4953F = 1;
+    sub_1BDB878(&Method_ExchangeSvtCoinSliderAlertDialog_OnClickCancel__, method);
+    byte_4B3FAB8 = 1;
   }
   if ( this->fields.state == 1 )
   {
     v3 = Method_ExchangeSvtCoinSliderAlertDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ExchangeSvtCoinSliderAlertDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B863D0(Method_ExchangeSvtCoinSliderAlertDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BDB890(Method_ExchangeSvtCoinSliderAlertDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
-    ExchangeSvtCoinSliderAlertDialog__Close_31436232(this, 0LL, v5);
+    ExchangeSvtCoinSliderAlertDialog__Close_32222376(this, 0LL, v5);
     onCancel = this->fields.onCancel;
     this->fields.onCancel = 0LL;
-    v7 = sub_1B8635C(&this->fields.onCancel);
+    v7 = sub_1BDB81C(&this->fields.onCancel);
     if ( !onCancel )
-      sub_1B86614(v7, v8);
+      sub_1BDBAD4(v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))onCancel->fields.m_target)(
       onCancel->fields.original_method_info,
       *(_QWORD *)&onCancel->fields.extra_arg);
@@ -138,10 +138,10 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__OnClickDecide(
   const MethodInfo *v7; // x2
   struct System_Action_o *onDecide; // x21
 
-  if ( (byte_4A4953E & 1) == 0 )
+  if ( (byte_4B3FAB7 & 1) == 0 )
   {
-    sub_1B863B8(&Method_ExchangeSvtCoinSliderAlertDialog_OnClickDecide__, method);
-    byte_4A4953E = 1;
+    sub_1BDB878(&Method_ExchangeSvtCoinSliderAlertDialog_OnClickDecide__, method);
+    byte_4B3FAB7 = 1;
   }
   if ( this->fields.state == 1 && this->fields.onDecide )
   {
@@ -151,21 +151,21 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__OnClickDecide(
     value = UIProgressBar__get_value(checkSlider, 0LL);
     v5 = Method_ExchangeSvtCoinSliderAlertDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ExchangeSvtCoinSliderAlertDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B863D0(Method_ExchangeSvtCoinSliderAlertDialog_OnClickDecide__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BDB890(Method_ExchangeSvtCoinSliderAlertDialog_OnClickDecide__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v5, v5[4]);
     if ( value < 1.0 )
     {
       OverwriteAssetSoundName__PlaySystemSe(v6, 2, 0, 0LL);
       return;
     }
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
-    ExchangeSvtCoinSliderAlertDialog__Close_31436232(this, 0LL, v7);
+    ExchangeSvtCoinSliderAlertDialog__Close_32222376(this, 0LL, v7);
     onDecide = this->fields.onDecide;
     this->fields.onDecide = 0LL;
-    checkSlider = (UIProgressBar_o *)sub_1B8635C(&this->fields.onDecide);
+    checkSlider = (UIProgressBar_o *)sub_1BDB81C(&this->fields.onDecide);
     if ( !onDecide )
 LABEL_13:
-      sub_1B86614(checkSlider, method);
+      sub_1BDBAD4(checkSlider, method);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))onDecide->fields.m_target)(
       onDecide->fields.original_method_info,
       *(_QWORD *)&onDecide->fields.extra_arg);
@@ -179,13 +179,13 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__OnEnable(
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4A49540 & 1) == 0 )
+  if ( (byte_4B3FAB9 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_15422/*"Window/Objects/Buttons/CancelButton"*/, method);
-    byte_4A49540 = 1;
+    sub_1BDB878(&StringLiteral_15624/*"Window/Objects/Buttons/CancelButton"*/, method);
+    byte_4B3FAB9 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_42896176(transform, (System_String_o *)StringLiteral_15422/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_43873512(transform, (System_String_o *)StringLiteral_15624/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
 }
 
 
@@ -205,7 +205,7 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__OnSliderDragFinished(
     || (value = UIProgressBar__get_value(checkSlider, 0LL),
         (checkSlider = (UIProgressBar_o *)this->fields.checkSlider) == 0LL) )
   {
-    sub_1B86614(checkSlider, method);
+    sub_1BDBAD4(checkSlider, method);
   }
   v5 = value < 0.9;
   if ( value >= 0.9 )
@@ -276,65 +276,65 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__Open(
   int32_t v58; // [xsp+8h] [xbp-48h] BYREF
   int32_t v59; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4A4953B & 1) == 0 )
+  if ( (byte_4B3FAB4 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMaster_UserItemMaster___, *(_QWORD *)&buyCount);
-    sub_1B863B8(&DataManager_TypeInfo, v13);
-    sub_1B863B8(&Method_ExchangeSvtCoinSliderAlertDialog_OnSliderDragFinished__, v14);
-    sub_1B863B8(&int_TypeInfo, v15);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v16);
-    sub_1B863B8(&NetworkManager_TypeInfo, v17);
-    sub_1B863B8(&UIProgressBar_OnDragFinished_TypeInfo, v18);
-    sub_1B863B8(&StringLiteral_5716/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_DETAIL_1"*/, v19);
-    sub_1B863B8(&StringLiteral_5720/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_TITLE"*/, v20);
-    sub_1B863B8(&StringLiteral_5715/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_DECIDE_BUTTON"*/, v21);
-    sub_1B863B8(&StringLiteral_5719/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_NEED_COUNT_TEXT"*/, v22);
-    sub_1B863B8(&StringLiteral_5713/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_BUY_COUNT_NAME"*/, v23);
-    sub_1B863B8(&StringLiteral_5714/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_BUY_COUNT_TEXT"*/, v24);
-    sub_1B863B8(&StringLiteral_3675/*"COMMON_CONFIRM_CANCEL"*/, v25);
-    sub_1B863B8(&StringLiteral_5717/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_DETAIL_2"*/, v26);
-    sub_1B863B8(&StringLiteral_5718/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_NEED_COUNT_NAME"*/, v27);
-    byte_4A4953B = 1;
+    sub_1BDB878(&Method_DataManager_GetMaster_UserItemMaster___, *(_QWORD *)&buyCount);
+    sub_1BDB878(&DataManager_TypeInfo, v13);
+    sub_1BDB878(&Method_ExchangeSvtCoinSliderAlertDialog_OnSliderDragFinished__, v14);
+    sub_1BDB878(&int_TypeInfo, v15);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v16);
+    sub_1BDB878(&NetworkManager_TypeInfo, v17);
+    sub_1BDB878(&UIProgressBar_OnDragFinished_TypeInfo, v18);
+    sub_1BDB878(&StringLiteral_5793/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_DETAIL_1"*/, v19);
+    sub_1BDB878(&StringLiteral_5797/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_TITLE"*/, v20);
+    sub_1BDB878(&StringLiteral_5792/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_DECIDE_BUTTON"*/, v21);
+    sub_1BDB878(&StringLiteral_5796/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_NEED_COUNT_TEXT"*/, v22);
+    sub_1BDB878(&StringLiteral_5790/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_BUY_COUNT_NAME"*/, v23);
+    sub_1BDB878(&StringLiteral_5791/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_BUY_COUNT_TEXT"*/, v24);
+    sub_1BDB878(&StringLiteral_3716/*"COMMON_CONFIRM_CANCEL"*/, v25);
+    sub_1BDB878(&StringLiteral_5794/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_DETAIL_2"*/, v26);
+    sub_1BDB878(&StringLiteral_5795/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_NEED_COUNT_NAME"*/, v27);
+    byte_4B3FAB4 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.onDecide = onDecideFunc;
-    sub_1B8635C(&this->fields.onDecide);
+    sub_1BDB81C(&this->fields.onDecide);
     this->fields.onCancel = onCancelFunc;
-    sub_1B8635C(&this->fields.onCancel);
+    sub_1BDB81C(&this->fields.onCancel);
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_5720/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_TITLE"*/, 0LL);
+    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_5797/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_31;
     UILabel__set_text(titleLabel, checkSlider, 0LL);
     decideButtonLabel = this->fields.decideButtonLabel;
-    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_5715/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_DECIDE_BUTTON"*/, 0LL);
+    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_5792/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_DECIDE_BUTTON"*/, 0LL);
     if ( !decideButtonLabel )
       goto LABEL_31;
     UILabel__set_text(decideButtonLabel, checkSlider, 0LL);
     cancelButtonLabel = this->fields.cancelButtonLabel;
-    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_3675/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_3716/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
     if ( !cancelButtonLabel )
       goto LABEL_31;
     UILabel__set_text(cancelButtonLabel, checkSlider, 0LL);
     detailLabel_1 = this->fields.detailLabel_1;
-    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_5716/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_DETAIL_1"*/, 0LL);
+    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_5793/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_DETAIL_1"*/, 0LL);
     if ( !detailLabel_1 )
       goto LABEL_31;
     UILabel__set_text(detailLabel_1, checkSlider, 0LL);
     detailLabel_2 = this->fields.detailLabel_2;
-    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_5717/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_DETAIL_2"*/, 0LL);
+    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_5794/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_DETAIL_2"*/, 0LL);
     if ( !detailLabel_2 )
       goto LABEL_31;
     UILabel__set_text(detailLabel_2, checkSlider, 0LL);
     needCountNameLabel = this->fields.needCountNameLabel;
-    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_5718/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_NEED_COUNT_NAME"*/, 0LL);
+    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_5795/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_NEED_COUNT_NAME"*/, 0LL);
     if ( !needCountNameLabel )
       goto LABEL_31;
     UILabel__set_text(needCountNameLabel, checkSlider, 0LL);
-    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_5719/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_NEED_COUNT_TEXT"*/, 0LL);
+    v36 = LocalizationManager__Get((System_String_o *)StringLiteral_5796/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_NEED_COUNT_TEXT"*/, 0LL);
     needCountLabel = this->fields.needCountLabel;
     v38 = v36;
     v59 = needCount;
@@ -344,11 +344,11 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__Open(
       goto LABEL_31;
     UILabel__set_text(needCountLabel, checkSlider, 0LL);
     buyCountNameLabel = this->fields.buyCountNameLabel;
-    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_5713/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_BUY_COUNT_NAME"*/, 0LL);
+    checkSlider = LocalizationManager__Get((System_String_o *)StringLiteral_5790/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_BUY_COUNT_NAME"*/, 0LL);
     if ( !buyCountNameLabel )
       goto LABEL_31;
     UILabel__set_text(buyCountNameLabel, checkSlider, 0LL);
-    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_5714/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_BUY_COUNT_TEXT"*/, 0LL);
+    v44 = LocalizationManager__Get((System_String_o *)StringLiteral_5791/*"EXCHANGE_SVT_COIN_SLIDER_ALERT_DIALOG_BUY_COUNT_TEXT"*/, 0LL);
     buyCountLabel = this->fields.buyCountLabel;
     v58 = buyCount;
     v49 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v58, v46, v47, v48);
@@ -361,7 +361,7 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__Open(
       goto LABEL_31;
     UIProgressBar__set_value((UIProgressBar_o *)checkSlider, 0.0, 0LL);
     v50 = this->fields.checkSlider;
-    v51 = (UIProgressBar_OnDragFinished_o *)sub_1B86604(UIProgressBar_OnDragFinished_TypeInfo);
+    v51 = (UIProgressBar_OnDragFinished_o *)sub_1BDBAC4(UIProgressBar_OnDragFinished_TypeInfo);
     UIProgressBar_OnDragFinished___ctor(
       v51,
       (Il2CppObject *)this,
@@ -370,17 +370,17 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__Open(
     if ( !v50 )
       goto LABEL_31;
     v50->fields.onDragFinished = v51;
-    sub_1B8635C(&v50->fields.onDragFinished);
+    sub_1BDB81C(&v50->fields.onDragFinished);
     ExchangeSvtCoinSliderAlertDialog__SetSlider(this, 0, v52);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_UserItemMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_UserItemMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4A48C25 )
+    if ( !byte_4B3ED56 )
     {
-      sub_1B863B8(&NetworkManager_TypeInfo, v30);
-      byte_4A48C25 = 1;
+      sub_1BDB878(&NetworkManager_TypeInfo, v30);
+      byte_4B3ED56 = 1;
     }
     checkSlider = (System_String_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -404,7 +404,7 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__Open(
       || !itemIcon )
     {
 LABEL_31:
-      sub_1B86614(checkSlider, v30);
+      sub_1BDBAD4(checkSlider, v30);
     }
     ItemIconComponent__SetItem(itemIcon, (int32_t)checkSlider, v57->fields.num, 0, 0LL);
     this->fields.state = 1;
@@ -428,18 +428,18 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__SetSlider(
   float r; // s0
   __int64 v12; // x1
 
-  if ( (byte_4A4953C & 1) == 0 )
+  if ( (byte_4B3FAB5 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_20279/*"img_slider_thumb_locked"*/, sliderOn);
-    sub_1B863B8(&StringLiteral_20278/*"img_slider_thumb"*/, v5);
-    byte_4A4953C = 1;
+    sub_1BDB878(&StringLiteral_20590/*"img_slider_thumb_locked"*/, sliderOn);
+    sub_1BDB878(&StringLiteral_20589/*"img_slider_thumb"*/, v5);
+    byte_4B3FAB5 = 1;
   }
   sliderSprite = this->fields.sliderSprite;
   if ( !sliderSprite )
     goto LABEL_15;
-  v7 = (System_String_o **)&StringLiteral_20278/*"img_slider_thumb"*/;
+  v7 = (System_String_o **)&StringLiteral_20589/*"img_slider_thumb"*/;
   if ( !sliderOn )
-    v7 = (System_String_o **)&StringLiteral_20279/*"img_slider_thumb_locked"*/;
+    v7 = (System_String_o **)&StringLiteral_20590/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName(sliderSprite, *v7, 0LL);
   sliderSprite = (UISprite_o *)this->fields.decideButton;
   a = 1.0;
@@ -465,7 +465,7 @@ void __fastcall ExchangeSvtCoinSliderAlertDialog__SetSlider(
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0LL) )
   {
 LABEL_15:
-    sub_1B86614(sliderSprite, sliderOn);
+    sub_1BDBAD4(sliderSprite, sliderOn);
   }
   ((void (__fastcall *)(UISprite_o *, bool, Il2CppMethodPointer))sliderSprite->klass->vtable._5_get_isAnchoredVertically.method)(
     sliderSprite,

@@ -11,25 +11,99 @@ void __fastcall CharaGraphSortOwnerAllKind___ctor(CharaGraphSortOwnerAllKind_o *
   Il2CppObject *v11; // x20
   int32_t v12; // w2
   const MethodInfo *v13; // x3
+  const MethodInfo *v14; // x1
 
-  if ( (byte_4A4D858 & 1) == 0 )
+  if ( (byte_4B43E05 & 1) == 0 )
   {
-    sub_1B863B8(&CharaGraphSortManageUnitCommandCode_TypeInfo, method);
-    sub_1B863B8(&CharaGraphSortManageUnitServantEquip_TypeInfo, v3);
-    sub_1B863B8(&CharaGraphSortManageUnitServant_TypeInfo, v4);
-    byte_4A4D858 = 1;
+    sub_1BDB878(&CharaGraphSortManageUnitCommandCode_TypeInfo, method);
+    sub_1BDB878(&CharaGraphSortManageUnitServantEquip_TypeInfo, v3);
+    sub_1BDB878(&CharaGraphSortManageUnitServant_TypeInfo, v4);
+    byte_4B43E05 = 1;
   }
-  System_Object___ctor((Il2CppObject *)this, 0LL);
-  v5 = (Il2CppObject *)sub_1B86604(CharaGraphSortManageUnitServant_TypeInfo);
+  v5 = (Il2CppObject *)sub_1BDBAC4(CharaGraphSortManageUnitServant_TypeInfo);
   System_Object___ctor(v5, 0LL);
   this->fields._ServantSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v5;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields, (int32_t)v5, v6, v7);
-  v8 = (Il2CppObject *)sub_1B86604(CharaGraphSortManageUnitServantEquip_TypeInfo);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._ServantSortManageUnit_k__BackingField, (int32_t)v5, v6, v7);
+  v8 = (Il2CppObject *)sub_1BDBAC4(CharaGraphSortManageUnitServantEquip_TypeInfo);
   System_Object___ctor(v8, 0LL);
   this->fields._ServantEquipSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v8;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField, (int32_t)v8, v9, v10);
-  v11 = (Il2CppObject *)sub_1B86604(CharaGraphSortManageUnitCommandCode_TypeInfo);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField, (int32_t)v8, v9, v10);
+  v11 = (Il2CppObject *)sub_1BDBAC4(CharaGraphSortManageUnitCommandCode_TypeInfo);
   System_Object___ctor(v11, 0LL);
   this->fields._CommandCodeSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v11;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._CommandCodeSortManageUnit_k__BackingField, (int32_t)v11, v12, v13);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._CommandCodeSortManageUnit_k__BackingField, (int32_t)v11, v12, v13);
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+  CharaGraphSortOwnerBase__SetSortSaveKeyPrefix((CharaGraphSortOwnerBase_o *)this, v14);
+}
+
+
+CharaGraphSortManageUnitBase_o *__fastcall CharaGraphSortOwnerAllKind__get_CommandCodeSortManageUnit(
+        CharaGraphSortOwnerAllKind_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._CommandCodeSortManageUnit_k__BackingField;
+}
+
+
+CharaGraphSortManageUnitBase_o *__fastcall CharaGraphSortOwnerAllKind__get_ServantEquipSortManageUnit(
+        CharaGraphSortOwnerAllKind_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._ServantEquipSortManageUnit_k__BackingField;
+}
+
+
+CharaGraphSortManageUnitBase_o *__fastcall CharaGraphSortOwnerAllKind__get_ServantSortManageUnit(
+        CharaGraphSortOwnerAllKind_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._ServantSortManageUnit_k__BackingField;
+}
+
+
+void __fastcall CharaGraphSortOwnerAllKind__set_CommandCodeSortManageUnit(
+        CharaGraphSortOwnerAllKind_o *this,
+        CharaGraphSortManageUnitBase_o *value,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._CommandCodeSortManageUnit_k__BackingField = value;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._CommandCodeSortManageUnit_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
+}
+
+
+void __fastcall CharaGraphSortOwnerAllKind__set_ServantEquipSortManageUnit(
+        CharaGraphSortOwnerAllKind_o *this,
+        CharaGraphSortManageUnitBase_o *value,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._ServantEquipSortManageUnit_k__BackingField = value;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._ServantEquipSortManageUnit_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
+}
+
+
+void __fastcall CharaGraphSortOwnerAllKind__set_ServantSortManageUnit(
+        CharaGraphSortOwnerAllKind_o *this,
+        CharaGraphSortManageUnitBase_o *value,
+        const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  this->fields._ServantSortManageUnit_k__BackingField = value;
+  sub_1BDB81C(
+    (CGThumbnailListItem_o *)&this->fields._ServantSortManageUnit_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3);
 }

@@ -5,7 +5,7 @@ void __fastcall BattleCallBack___ctor(BattleCallBack_o *this, System_Action_o *c
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.callBack = callBack;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields, (int32_t)callBack, v5, v6);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)callBack, v5, v6);
 }
 
 
@@ -15,7 +15,7 @@ void __fastcall BattleCallBack__call(BattleCallBack_o *this, const MethodInfo *m
 
   callBack = this->fields.callBack;
   if ( !callBack )
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callBack->fields.m_target)(
     callBack->fields.original_method_info,
     *(_QWORD *)&callBack->fields.extra_arg);

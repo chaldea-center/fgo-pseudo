@@ -43,14 +43,14 @@ void __fastcall SummonBannerIconComponent__SetInfo(
   int32_t v20; // w2
   const MethodInfo *v21; // x3
 
-  if ( (byte_4A4AA47 & 1) == 0 )
+  if ( (byte_4B40F66 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, *(_QWORD *)&moveIndex);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v13);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v14);
-    sub_1B863B8(&StringLiteral_1/*""*/, v15);
-    sub_1B863B8(&StringLiteral_12232/*"SUMMON_LIST_DIALOG_SUMMONED_TEXT"*/, v16);
-    byte_4A4AA47 = 1;
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, *(_QWORD *)&moveIndex);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v13);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v14);
+    sub_1BDB878(&StringLiteral_1/*""*/, v15);
+    sub_1BDB878(&StringLiteral_12418/*"SUMMON_LIST_DIALOG_SUMMONED_TEXT"*/, v16);
+    byte_4B40F66 = 1;
   }
   this->fields.moveIndex = moveIndex;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -62,7 +62,7 @@ void __fastcall SummonBannerIconComponent__SetInfo(
       goto LABEL_21;
     Component_object = (UIAtlas_o *)UnityEngine_GameObject__GetComponent_object_(
                                       bannerIconAtlas,
-                                      (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                                      (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
     if ( !this->fields.bannerSprite )
       goto LABEL_21;
     UISprite__set_atlas(this->fields.bannerSprite, Component_object, 0LL);
@@ -80,14 +80,14 @@ void __fastcall SummonBannerIconComponent__SetInfo(
     summonedLabel = this->fields.summonedLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Component_object = (UIAtlas_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12232/*"SUMMON_LIST_DIALOG_SUMMONED_TEXT"*/, 0LL);
+    Component_object = (UIAtlas_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12418/*"SUMMON_LIST_DIALOG_SUMMONED_TEXT"*/, 0LL);
     if ( summonedLabel )
     {
       UILabel__set_text(summonedLabel, (System_String_o *)Component_object, 0LL);
       goto LABEL_16;
     }
 LABEL_21:
-    sub_1B86614(Component_object, v18);
+    sub_1BDBAD4(Component_object, v18);
   }
 LABEL_16:
   Component_object = (UIAtlas_o *)this->fields.summonedLabel;
@@ -109,5 +109,5 @@ LABEL_16:
     goto LABEL_21;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, isSummoned, 0LL);
   this->fields.onClickAction = onClickAction;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.onClickAction, (int32_t)onClickAction, v20, v21);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.onClickAction, (int32_t)onClickAction, v20, v21);
 }

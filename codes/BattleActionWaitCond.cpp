@@ -83,7 +83,7 @@ void __fastcall BattleActionWaitCond_UntilChangeModelLoadComplete___ctor(
   v4->fields.changeModelList = inChangeModelList;
   v4 = (BattleActionWaitCond_UntilChangeModelLoadComplete_o *)((char *)v4 + 24);
   LODWORD(v4[-1].fields.changeModelList) = 1092616192;
-  sub_1B8635C((CGThumbnailListItem_o *)v4, (int32_t)inChangeModelList, v5, v6);
+  sub_1BDB81C((CGThumbnailListItem_o *)v4, (int32_t)inChangeModelList, v5, v6);
 }
 
 
@@ -91,10 +91,10 @@ bool __fastcall BattleActionWaitCond_UntilChangeModelLoadComplete__IsWaitCond(
         BattleActionWaitCond_UntilChangeModelLoadComplete_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A5093A & 1) == 0 )
+  if ( (byte_4B46F82 & 1) == 0 )
   {
-    sub_1B863B8(&ServantAssetLoadManager_TypeInfo, method);
-    byte_4A5093A = 1;
+    sub_1BDB878(&ServantAssetLoadManager_TypeInfo, method);
+    byte_4B46F82 = 1;
   }
   if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
@@ -126,53 +126,53 @@ void __fastcall BattleActionWaitCond_UntilChangeModelLoadComplete__ProcBeforeWai
   System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4A5093B & 1) == 0 )
+  if ( (byte_4B46F83 & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__Dispose__,
       perf);
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__MoveNext__,
       v5);
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__get_Current__,
       v6);
-    sub_1B863B8(&Method_System_Collections_Generic_List_BattleActionData_ChangeModelActionData__GetEnumerator__, v7);
-    sub_1B863B8(&ServantAssetArgs_TypeInfo, v8);
-    sub_1B863B8(&ServantAssetLoadManager_TypeInfo, v9);
-    byte_4A5093B = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_List_BattleActionData_ChangeModelActionData__GetEnumerator__, v7);
+    sub_1BDB878(&ServantAssetArgs_TypeInfo, v8);
+    sub_1BDB878(&ServantAssetLoadManager_TypeInfo, v9);
+    byte_4B46F83 = 1;
   }
   memset(&v22, 0, sizeof(v22));
   IsNullOrEmpty = (struct System_Collections_Generic_List_BattleActionData_ChangeModelActionData__o *)BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.changeModelList, 0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
   {
     if ( !perf || (IsNullOrEmpty = this->fields.changeModelList) == 0LL )
-      sub_1B86614(IsNullOrEmpty, v11);
+      sub_1BDBAD4(IsNullOrEmpty, v11);
     data = perf->fields.data;
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v21,
       (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
-      (const MethodInfo_35FD450 *)Method_System_Collections_Generic_List_BattleActionData_ChangeModelActionData__GetEnumerator__);
+      (const MethodInfo_36D68BC *)Method_System_Collections_Generic_List_BattleActionData_ChangeModelActionData__GetEnumerator__);
     v22 = v21;
     while ( 1 )
     {
       v13 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v22,
-              (const MethodInfo_3398634 *)Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__MoveNext__);
+              (const MethodInfo_346A2A4 *)Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__MoveNext__);
       if ( !v13 )
         break;
       current = v22.fields._current;
       if ( !v22.fields._current )
-        sub_1B86614(v13, v14);
+        sub_1BDBAD4(v13, v14);
       if ( !data )
-        sub_1B86614(v13, v14);
+        sub_1BDBAD4(v13, v14);
       ServantData = BattleData__getServantData(data, HIDWORD(v22.fields._current[1].monitor), 0LL);
       v17 = ServantData;
       if ( ServantData )
       {
         ChangeModelData_k__BackingField = ServantData->fields._ChangeModelData_k__BackingField;
         BattleServantData__SetChangeModelData(ServantData, (ChangeModelData_o *)current[2].klass, 0LL);
-        v19 = (ServantAssetArgs_o *)sub_1B86604(ServantAssetArgs_TypeInfo);
+        v19 = (ServantAssetArgs_o *)sub_1BDBAC4(ServantAssetArgs_TypeInfo);
         ServantAssetArgs___ctor(v19, v17, 0LL);
         isForceAppearance = v17->fields.isForceAppearance;
         if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
@@ -183,7 +183,7 @@ void __fastcall BattleActionWaitCond_UntilChangeModelLoadComplete__ProcBeforeWai
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v22,
-      (const MethodInfo_3398630 *)Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__Dispose__);
+      (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_BattleActionData_ChangeModelActionData__Dispose__);
   }
 }
 
@@ -202,7 +202,7 @@ void __fastcall BattleActionWaitCond_UntilSideEffectInvisible___ctor(
   v4->fields.perf = perf;
   v4 = (BattleActionWaitCond_UntilSideEffectInvisible_o *)((char *)v4 + 24);
   LODWORD(v4[-1].fields.perf) = 1067450368;
-  sub_1B8635C((CGThumbnailListItem_o *)v4, (int32_t)perf, v5, v6);
+  sub_1BDB81C((CGThumbnailListItem_o *)v4, (int32_t)perf, v5, v6);
 }
 
 
@@ -214,6 +214,6 @@ bool __fastcall BattleActionWaitCond_UntilSideEffectInvisible__IsWaitCond(
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   return perf->fields._WaitDispEffectCount_k__BackingField > 0;
 }

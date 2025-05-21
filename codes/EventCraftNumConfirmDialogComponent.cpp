@@ -7,17 +7,17 @@ void __fastcall EventCraftNumConfirmDialogComponent___ctor(
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4A525A5 & 1) == 0 )
+  if ( (byte_4B48C8A & 1) == 0 )
   {
-    sub_1B863B8(&BaseDialog_TypeInfo, method);
-    sub_1B863B8(&EventCraftNumConfirmDialogComponent_ExChangeOriginUiInfo___TypeInfo, v3);
-    byte_4A525A5 = 1;
+    sub_1BDB878(&BaseDialog_TypeInfo, method);
+    sub_1BDB878(&EventCraftNumConfirmDialogComponent_ExChangeOriginUiInfo___TypeInfo, v3);
+    byte_4B48C8A = 1;
   }
-  v4 = (struct EventCraftNumConfirmDialogComponent_ExChangeOriginUiInfo_array *)sub_1B86460(
+  v4 = (struct EventCraftNumConfirmDialogComponent_ExChangeOriginUiInfo_array *)sub_1BDB920(
                                                                                   EventCraftNumConfirmDialogComponent_ExChangeOriginUiInfo___TypeInfo,
                                                                                   2LL);
   this->fields.exChangeOriginItemUi = v4;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.exChangeOriginItemUi, (int32_t)v4, v5, v6);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.exChangeOriginItemUi, (int32_t)v4, v5, v6);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -31,14 +31,14 @@ void __fastcall EventCraftNumConfirmDialogComponent__Close(
   __int64 v3; // x1
   System_Action_o *v4; // x20
 
-  if ( (byte_4A525A1 & 1) == 0 )
+  if ( (byte_4B48C86 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Method_EventCraftNumConfirmDialogComponent_Init__, v3);
-    byte_4A525A1 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&Method_EventCraftNumConfirmDialogComponent_Init__, v3);
+    byte_4B48C86 = 1;
   }
   this->fields.state = 4;
-  v4 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_EventCraftNumConfirmDialogComponent_Init__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v4, 0LL);
 }
@@ -66,26 +66,26 @@ int32_t __fastcall EventCraftNumConfirmDialogComponent__GetItemSliderMax(
 
   v3 = craftMax;
   v4 = this;
-  if ( (byte_4A5259C & 1) == 0 )
+  if ( (byte_4B48C81 & 1) == 0 )
   {
-    this = (EventCraftNumConfirmDialogComponent_o *)sub_1B863B8(&NetworkManager_TypeInfo, *(_QWORD *)&craftMax);
-    byte_4A5259C = 1;
+    this = (EventCraftNumConfirmDialogComponent_o *)sub_1BDB878(&NetworkManager_TypeInfo, *(_QWORD *)&craftMax);
+    byte_4B48C81 = 1;
   }
   entity = 0LL;
   consumeItemList = v4->fields.consumeItemList;
   if ( !consumeItemList )
 LABEL_30:
-    sub_1B86614(this, *(_QWORD *)&craftMax);
+    sub_1BDBAD4(this, *(_QWORD *)&craftMax);
   v6 = 0LL;
   while ( (int)v6 < (signed int)consumeItemList->max_length )
   {
     userItemMaster = v4->fields.userItemMaster;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4A48C25 )
+    if ( !byte_4B3ED56 )
     {
-      sub_1B863B8(&NetworkManager_TypeInfo, *(_QWORD *)&craftMax);
-      byte_4A48C25 = 1;
+      sub_1BDB878(&NetworkManager_TypeInfo, *(_QWORD *)&craftMax);
+      byte_4B3ED56 = 1;
     }
     this = (EventCraftNumConfirmDialogComponent_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -137,7 +137,7 @@ LABEL_30:
         goto LABEL_30;
       if ( (unsigned int)v6 >= v14->max_length )
 LABEL_32:
-        sub_1B8661C(this, *(_QWORD *)&craftMax);
+        sub_1BDBADC(this, *(_QWORD *)&craftMax, method);
       v14->m_Items[v6 + 4] = 1;
       consumeItemList = v4->fields.consumeItemList;
       v3 = 0;
@@ -160,7 +160,7 @@ void __fastcall EventCraftNumConfirmDialogComponent__Init(
   EventCraftListViewManager__CheckIsSerializeFieldNotNull((Il2CppObject *)this, 0LL);
   this->fields.state = 0;
   this->fields.tradeGoodsEntity = 0LL;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.tradeGoodsEntity, 0, v3, v4);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.tradeGoodsEntity, 0, v3, v4);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
 
@@ -217,7 +217,7 @@ void __fastcall EventCraftNumConfirmDialogComponent__InitItemSlider(
         }
       }
 LABEL_18:
-      sub_1B86614(itemSlider, method);
+      sub_1BDBAD4(itemSlider, method);
     }
     itemSlider = (UnityEngine_Component_o *)this->fields.itemSlider;
     if ( !itemSlider )
@@ -250,22 +250,22 @@ void __fastcall EventCraftNumConfirmDialogComponent__OnClickCancel(
   UISliderWithButton_o *itemSlider; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4A525A0 & 1) == 0 )
+  if ( (byte_4B48C85 & 1) == 0 )
   {
-    sub_1B863B8(&Method_EventCraftNumConfirmDialogComponent_OnClickCancel__, method);
-    byte_4A525A0 = 1;
+    sub_1BDB878(&Method_EventCraftNumConfirmDialogComponent_OnClickCancel__, method);
+    byte_4B48C85 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_EventCraftNumConfirmDialogComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_EventCraftNumConfirmDialogComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B863D0(Method_EventCraftNumConfirmDialogComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BDB890(Method_EventCraftNumConfirmDialogComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     itemSlider = this->fields.itemSlider;
     if ( !itemSlider )
-      sub_1B86614(0LL, v5);
+      sub_1BDBAD4(0LL, v5);
     UISliderWithButton__grayMode(itemSlider, 0LL);
     EventCraftNumConfirmDialogComponent__Close(this, v7);
   }
@@ -282,36 +282,37 @@ void __fastcall EventCraftNumConfirmDialogComponent__OnClickDecide(
   System_Reflection_MethodBase_o *v6; // x0
   __int64 v7; // x0
   __int64 v8; // x1
-  unsigned int v9; // w8
+  __int64 v9; // x2
+  unsigned int v10; // w8
   struct EventTradeGoodsEntity_o *tradeGoodsEntity; // x9
 
-  if ( (byte_4A5259F & 1) == 0 )
+  if ( (byte_4B48C84 & 1) == 0 )
   {
-    sub_1B863B8(&Method_ActionExtensions_Call_int____int__bool___, method);
-    sub_1B863B8(&Method_EventCraftNumConfirmDialogComponent_OnClickDecide__, v3);
-    sub_1B863B8(&int___TypeInfo, v4);
-    byte_4A5259F = 1;
+    sub_1BDB878(&Method_ActionExtensions_Call_int____int__bool___, method);
+    sub_1BDB878(&Method_EventCraftNumConfirmDialogComponent_OnClickDecide__, v3);
+    sub_1BDB878(&int___TypeInfo, v4);
+    byte_4B48C84 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v5 = Method_EventCraftNumConfirmDialogComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_EventCraftNumConfirmDialogComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B863D0(Method_EventCraftNumConfirmDialogComponent_OnClickDecide__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BDB890(Method_EventCraftNumConfirmDialogComponent_OnClickDecide__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0, 0LL);
-    v7 = sub_1B86460(int___TypeInfo, 2LL);
+    v7 = sub_1BDB920(int___TypeInfo, 2LL);
     if ( v7 )
     {
-      v9 = *(_DWORD *)(v7 + 24);
+      v10 = *(_DWORD *)(v7 + 24);
       v8 = v7;
-      if ( !v9 )
+      if ( !v10 )
         goto LABEL_13;
       *(_DWORD *)(v7 + 32) = this->fields.storeIdx;
       tradeGoodsEntity = this->fields.tradeGoodsEntity;
       if ( tradeGoodsEntity )
       {
-        if ( v9 > 1 )
+        if ( v10 > 1 )
         {
           *(_DWORD *)(v7 + 36) = tradeGoodsEntity->fields.id;
           ActionExtensions__Call_object__int__bool_(
@@ -319,14 +320,14 @@ void __fastcall EventCraftNumConfirmDialogComponent__OnClickDecide(
             (Il2CppObject *)v7,
             this->fields.makeCount,
             this->fields.isButtonOn,
-            (const MethodInfo_2EC0238 *)Method_ActionExtensions_Call_int____int__bool___);
+            (const MethodInfo_2F83620 *)Method_ActionExtensions_Call_int____int__bool___);
           return;
         }
 LABEL_13:
-        sub_1B8661C(v7, v7);
+        sub_1BDBADC(v7, v7, v9);
       }
     }
-    sub_1B86614(v7, v8);
+    sub_1BDBAD4(v7, v8);
   }
 }
 
@@ -365,19 +366,19 @@ void __fastcall EventCraftNumConfirmDialogComponent__OnClickSupportToolButton(
   __int64 *v30; // x8
   const MethodInfo *v31; // x1
 
-  if ( (byte_4A5259E & 1) == 0 )
+  if ( (byte_4B48C83 & 1) == 0 )
   {
-    sub_1B863B8(&BalanceConfig_TypeInfo, method);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___, v3);
-    sub_1B863B8(&Method_EventCraftNumConfirmDialogComponent_OnClickSupportToolButton__, v4);
-    sub_1B863B8(&System_Func_EventCraftPickupInfo__long__TypeInfo, v5);
-    sub_1B863B8(&System_Math_TypeInfo, v6);
-    sub_1B863B8(&NetworkManager_TypeInfo, v7);
-    sub_1B863B8(&Method_EventCraftNumConfirmDialogComponent___c__OnClickSupportToolButton_b__56_0__, v8);
-    sub_1B863B8(&EventCraftNumConfirmDialogComponent___c_TypeInfo, v9);
-    sub_1B863B8(&StringLiteral_17257/*"btn_boostitem_off"*/, v10);
-    sub_1B863B8(&StringLiteral_17258/*"btn_boostitem_on"*/, v11);
-    byte_4A5259E = 1;
+    sub_1BDB878(&BalanceConfig_TypeInfo, method);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___, v3);
+    sub_1BDB878(&Method_EventCraftNumConfirmDialogComponent_OnClickSupportToolButton__, v4);
+    sub_1BDB878(&System_Func_EventCraftPickupInfo__long__TypeInfo, v5);
+    sub_1BDB878(&System_Math_TypeInfo, v6);
+    sub_1BDB878(&NetworkManager_TypeInfo, v7);
+    sub_1BDB878(&Method_EventCraftNumConfirmDialogComponent___c__OnClickSupportToolButton_b__56_0__, v8);
+    sub_1BDB878(&EventCraftNumConfirmDialogComponent___c_TypeInfo, v9);
+    sub_1BDB878(&StringLiteral_17484/*"btn_boostitem_off"*/, v10);
+    sub_1BDB878(&StringLiteral_17485/*"btn_boostitem_on"*/, v11);
+    byte_4B48C83 = 1;
   }
   v12 = 0LL;
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.craftPickupInfoList, 0LL) )
@@ -398,7 +399,7 @@ void __fastcall EventCraftNumConfirmDialogComponent__OnClickSupportToolButton(
         v14 = EventCraftNumConfirmDialogComponent___c_TypeInfo;
       }
       v16 = (Il2CppObject *)v14->static_fields->__9;
-      _9__56_0 = (System_Func_T__TResult__o *)sub_1B86604(System_Func_EventCraftPickupInfo__long__TypeInfo);
+      _9__56_0 = (System_Func_T__TResult__o *)sub_1BDBAC4(System_Func_EventCraftPickupInfo__long__TypeInfo);
       System_Func_object__long____ctor(
         _9__56_0,
         v16,
@@ -406,20 +407,20 @@ void __fastcall EventCraftNumConfirmDialogComponent__OnClickSupportToolButton(
         0LL);
       static_fields = EventCraftNumConfirmDialogComponent___c_TypeInfo->static_fields;
       static_fields->__9__56_0 = (struct System_Func_EventCraftPickupInfo__long__o *)_9__56_0;
-      sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__56_0, (int32_t)_9__56_0, v18, v19);
+      sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__56_0, (int32_t)_9__56_0, v18, v19);
     }
     v20 = System_Linq_Enumerable__Select_object__long_(
             (System_Collections_Generic_IEnumerable_TSource__o *)craftPickupInfoList,
             (System_Func_TSource__TResult__o *)_9__56_0,
-            (const MethodInfo_2FA0F80 *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
-    v12 = System_Linq_Enumerable__Max_64650932((System_Collections_Generic_IEnumerable_long__o *)v20, 0LL);
+            (const MethodInfo_3068190 *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
+    v12 = System_Linq_Enumerable__Max_65578760((System_Collections_Generic_IEnumerable_long__o *)v20, 0LL);
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v22 = System_Math__Max_63172764(v12 - Time, 0LL, 0LL);
+  v22 = System_Math__Max_64100592(v12 - Time, 0LL, 0LL);
   if ( this->fields.isButtonOn )
   {
     isButtonOn = 1;
@@ -427,16 +428,16 @@ LABEL_21:
     this->fields.isButtonOn = !isButtonOn;
     v26 = Method_EventCraftNumConfirmDialogComponent_OnClickSupportToolButton__;
     if ( (*((_BYTE *)Method_EventCraftNumConfirmDialogComponent_OnClickSupportToolButton__ + 83) & 2) != 0 )
-      v26 = (_QWORD *)sub_1B863D0(Method_EventCraftNumConfirmDialogComponent_OnClickSupportToolButton__);
-    v27 = (System_Reflection_MethodBase_o *)sub_1B8639C(v26, v26[4]);
+      v26 = (_QWORD *)sub_1BDB890(Method_EventCraftNumConfirmDialogComponent_OnClickSupportToolButton__);
+    v27 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v26, v26[4]);
     OverwriteAssetSoundName__PlaySystemSe(v27, isButtonOn, 0, 0LL);
     useSupportToolBtnSp = this->fields.useSupportToolBtnSp;
     if ( !useSupportToolBtnSp )
-      sub_1B86614(0LL, v28);
+      sub_1BDBAD4(0LL, v28);
     if ( this->fields.isButtonOn )
-      v30 = &StringLiteral_17258/*"btn_boostitem_on"*/;
+      v30 = &StringLiteral_17485/*"btn_boostitem_on"*/;
     else
-      v30 = &StringLiteral_17257/*"btn_boostitem_off"*/;
+      v30 = &StringLiteral_17484/*"btn_boostitem_off"*/;
     UISprite__set_spriteName(useSupportToolBtnSp, (System_String_o *)*v30, 0LL);
     EventCraftNumConfirmDialogComponent__UpdateDraw(this, v31);
     return;
@@ -575,36 +576,36 @@ void __fastcall EventCraftNumConfirmDialogComponent__Open(
 
   v9 = supportToolItem;
   v12 = this;
-  if ( (byte_4A52599 & 1) == 0 )
+  if ( (byte_4B48C7E & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, item);
-    sub_1B863B8(&AtlasManager_TypeInfo, v13);
-    sub_1B863B8(&bool___TypeInfo, v14);
-    sub_1B863B8(&Method_DataManager_GetMaster_CommonConsumeMaster___, v15);
-    sub_1B863B8(&Method_DataManager_GetMaster_GiftMaster___, v16);
-    sub_1B863B8(&Method_DataManager_GetMaster_ItemMaster___, v17);
-    sub_1B863B8(&Method_DataManager_GetMaster_UserItemMaster___, v18);
-    sub_1B863B8(&DataManager_TypeInfo, v19);
-    sub_1B863B8(&Method_EventCraftNumConfirmDialogComponent__Open_b__50_0__, v20);
-    sub_1B863B8(&EventCraftTimeCalculation_TypeInfo, v21);
-    sub_1B863B8(&int_TypeInfo, v22);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v23);
-    sub_1B863B8(&System_Math_TypeInfo, v24);
-    sub_1B863B8(&NetworkManager_TypeInfo, v25);
-    sub_1B863B8(&StringLiteral_17257/*"btn_boostitem_off"*/, v26);
-    sub_1B863B8(&StringLiteral_3876/*"CRAFT_EVENT_CONFIRM_DIALOG_USE_SUPPORT_TOOL"*/, v27);
-    sub_1B863B8(&StringLiteral_3874/*"CRAFT_EVENT_CONFIRM_DIALOG_SUPPORT_TOOL_POSSESSION_HEADER"*/, v28);
-    sub_1B863B8(&StringLiteral_3886/*"CRAFT_EVENT_REPLENISHMENT_CONFIRM_DIALOG_TITLE"*/, v29);
-    sub_1B863B8(&StringLiteral_3872/*"CRAFT_EVENT_CONFIRM_DIALOG_SUPPORT_TOOL_MASK"*/, v30);
-    sub_1B863B8(&StringLiteral_3870/*"CRAFT_EVENT_CONFIRM_DIALOG_DESCRIPTION"*/, v31);
-    sub_1B863B8(&StringLiteral_3675/*"COMMON_CONFIRM_CANCEL"*/, v32);
-    sub_1B863B8(&StringLiteral_3891/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_LEFT_TIME_HEADER"*/, v33);
-    sub_1B863B8(&StringLiteral_3869/*"CRAFT_EVENT_CONFIRM_DIALOG_DECIDE"*/, v34);
-    sub_1B863B8(&StringLiteral_3873/*"CRAFT_EVENT_CONFIRM_DIALOG_SUPPORT_TOOL_POSSESSION"*/, v35);
-    sub_1B863B8(&StringLiteral_3884/*"CRAFT_EVENT_REPLENISHMENT_CONFIRM_DIALOG_DECIDE"*/, v36);
-    sub_1B863B8(&StringLiteral_3875/*"CRAFT_EVENT_CONFIRM_DIALOG_TITLE"*/, v37);
-    this = (EventCraftNumConfirmDialogComponent_o *)sub_1B863B8(&StringLiteral_3885/*"CRAFT_EVENT_REPLENISHMENT_CONFIRM_DIALOG_DESCRIPTION"*/, v38);
-    byte_4A52599 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, item);
+    sub_1BDB878(&AtlasManager_TypeInfo, v13);
+    sub_1BDB878(&bool___TypeInfo, v14);
+    sub_1BDB878(&Method_DataManager_GetMaster_CommonConsumeMaster___, v15);
+    sub_1BDB878(&Method_DataManager_GetMaster_GiftMaster___, v16);
+    sub_1BDB878(&Method_DataManager_GetMaster_ItemMaster___, v17);
+    sub_1BDB878(&Method_DataManager_GetMaster_UserItemMaster___, v18);
+    sub_1BDB878(&DataManager_TypeInfo, v19);
+    sub_1BDB878(&Method_EventCraftNumConfirmDialogComponent__Open_b__50_0__, v20);
+    sub_1BDB878(&EventCraftTimeCalculation_TypeInfo, v21);
+    sub_1BDB878(&int_TypeInfo, v22);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v23);
+    sub_1BDB878(&System_Math_TypeInfo, v24);
+    sub_1BDB878(&NetworkManager_TypeInfo, v25);
+    sub_1BDB878(&StringLiteral_17484/*"btn_boostitem_off"*/, v26);
+    sub_1BDB878(&StringLiteral_3925/*"CRAFT_EVENT_CONFIRM_DIALOG_USE_SUPPORT_TOOL"*/, v27);
+    sub_1BDB878(&StringLiteral_3923/*"CRAFT_EVENT_CONFIRM_DIALOG_SUPPORT_TOOL_POSSESSION_HEADER"*/, v28);
+    sub_1BDB878(&StringLiteral_3935/*"CRAFT_EVENT_REPLENISHMENT_CONFIRM_DIALOG_TITLE"*/, v29);
+    sub_1BDB878(&StringLiteral_3921/*"CRAFT_EVENT_CONFIRM_DIALOG_SUPPORT_TOOL_MASK"*/, v30);
+    sub_1BDB878(&StringLiteral_3919/*"CRAFT_EVENT_CONFIRM_DIALOG_DESCRIPTION"*/, v31);
+    sub_1BDB878(&StringLiteral_3716/*"COMMON_CONFIRM_CANCEL"*/, v32);
+    sub_1BDB878(&StringLiteral_3940/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_LEFT_TIME_HEADER"*/, v33);
+    sub_1BDB878(&StringLiteral_3918/*"CRAFT_EVENT_CONFIRM_DIALOG_DECIDE"*/, v34);
+    sub_1BDB878(&StringLiteral_3922/*"CRAFT_EVENT_CONFIRM_DIALOG_SUPPORT_TOOL_POSSESSION"*/, v35);
+    sub_1BDB878(&StringLiteral_3933/*"CRAFT_EVENT_REPLENISHMENT_CONFIRM_DIALOG_DECIDE"*/, v36);
+    sub_1BDB878(&StringLiteral_3924/*"CRAFT_EVENT_CONFIRM_DIALOG_TITLE"*/, v37);
+    this = (EventCraftNumConfirmDialogComponent_o *)sub_1BDB878(&StringLiteral_3934/*"CRAFT_EVENT_REPLENISHMENT_CONFIRM_DIALOG_DESCRIPTION"*/, v38);
+    byte_4B48C7E = 1;
   }
   entity = 0LL;
   if ( !v12->fields.state )
@@ -614,13 +615,13 @@ void __fastcall EventCraftNumConfirmDialogComponent__Open(
     TradeGoodsEntity_k__BackingField = item->fields._TradeGoodsEntity_k__BackingField;
     p_tradeGoodsEntity = &v12->fields.tradeGoodsEntity;
     v12->fields.tradeGoodsEntity = TradeGoodsEntity_k__BackingField;
-    sub_1B8635C(
+    sub_1BDB81C(
       (CGThumbnailListItem_o *)&v12->fields.tradeGoodsEntity,
       (int32_t)TradeGoodsEntity_k__BackingField,
       storeIndex,
       (const MethodInfo *)supportToolItem);
     v12->fields.onDecide = decideAction;
-    sub_1B8635C((CGThumbnailListItem_o *)&v12->fields.onDecide, (int32_t)decideAction, v41, v42);
+    sub_1BDB81C((CGThumbnailListItem_o *)&v12->fields.onDecide, (int32_t)decideAction, v41, v42);
     userItemMaster = v12->fields.userItemMaster;
     v12->fields.storeIdx = storeIndex;
     if ( !userItemMaster )
@@ -628,17 +629,17 @@ void __fastcall EventCraftNumConfirmDialogComponent__Open(
       p_userItemMaster = &v12->fields.userItemMaster;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_UserItemMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_UserItemMaster___);
       *p_userItemMaster = (UserItemMaster_o *)Master_object;
-      sub_1B8635C((CGThumbnailListItem_o *)&v12->fields.userItemMaster, (int32_t)Master_object, v46, v47);
+      sub_1BDB81C((CGThumbnailListItem_o *)&v12->fields.userItemMaster, (int32_t)Master_object, v46, v47);
       userItemMaster = *p_userItemMaster;
     }
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4A48C25 )
+    if ( !byte_4B3ED56 )
     {
-      sub_1B863B8(&NetworkManager_TypeInfo, item);
-      byte_4A48C25 = 1;
+      sub_1BDB878(&NetworkManager_TypeInfo, item);
+      byte_4B3ED56 = 1;
     }
     this = (EventCraftNumConfirmDialogComponent_o *)NetworkManager_TypeInfo;
     if ( NetworkManager_TypeInfo->_2.cctor_finished )
@@ -679,7 +680,7 @@ LABEL_19:
           v52 = 0LL;
         }
         v12->fields.supportTool = v52;
-        sub_1B8635C((CGThumbnailListItem_o *)&v12->fields.supportTool, (int32_t)v52, v49, v50);
+        sub_1BDB81C((CGThumbnailListItem_o *)&v12->fields.supportTool, (int32_t)v52, v49, v50);
         supportTool = v12->fields.supportTool;
         if ( supportTool )
           LODWORD(supportTool) = ItemEntity__GetTradePickupTime(supportTool, 0LL);
@@ -691,10 +692,10 @@ LABEL_19:
           TradeInfo_k__BackingField = 0LL;
         p_eventTradeInfo = &v12->fields.eventTradeInfo;
         v12->fields.eventTradeInfo = TradeInfo_k__BackingField;
-        sub_1B8635C((CGThumbnailListItem_o *)&v12->fields.eventTradeInfo, (int32_t)TradeInfo_k__BackingField, v53, v54);
+        sub_1BDB81C((CGThumbnailListItem_o *)&v12->fields.eventTradeInfo, (int32_t)TradeInfo_k__BackingField, v53, v54);
         PickupInfoList_k__BackingField = item->fields._PickupInfoList_k__BackingField;
         v12->fields.craftPickupInfoList = PickupInfoList_k__BackingField;
-        sub_1B8635C(
+        sub_1BDB81C(
           (CGThumbnailListItem_o *)&v12->fields.craftPickupInfoList,
           (int32_t)PickupInfoList_k__BackingField,
           v59,
@@ -703,25 +704,25 @@ LABEL_19:
         {
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          v61 = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_ItemMaster___);
+          v61 = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ItemMaster___);
           v12->fields.itemMaster = (struct ItemMaster_o *)v61;
-          sub_1B8635C((CGThumbnailListItem_o *)&v12->fields.itemMaster, (int32_t)v61, v62, v63);
+          sub_1BDB81C((CGThumbnailListItem_o *)&v12->fields.itemMaster, (int32_t)v61, v62, v63);
         }
         if ( !v12->fields.giftMaster )
         {
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          v64 = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_GiftMaster___);
+          v64 = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_GiftMaster___);
           v12->fields.giftMaster = (struct GiftMaster_o *)v64;
-          sub_1B8635C((CGThumbnailListItem_o *)&v12->fields.giftMaster, (int32_t)v64, v65, v66);
+          sub_1BDB81C((CGThumbnailListItem_o *)&v12->fields.giftMaster, (int32_t)v64, v65, v66);
         }
         titleLabel = v12->fields.titleLabel;
         isReplenishment = v12->fields.isReplenishment;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v69 = (System_String_o **)&StringLiteral_3875/*"CRAFT_EVENT_CONFIRM_DIALOG_TITLE"*/;
+        v69 = (System_String_o **)&StringLiteral_3924/*"CRAFT_EVENT_CONFIRM_DIALOG_TITLE"*/;
         if ( isReplenishment )
-          v69 = (System_String_o **)&StringLiteral_3886/*"CRAFT_EVENT_REPLENISHMENT_CONFIRM_DIALOG_TITLE"*/;
+          v69 = (System_String_o **)&StringLiteral_3935/*"CRAFT_EVENT_REPLENISHMENT_CONFIRM_DIALOG_TITLE"*/;
         this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__Get(*v69, 0LL);
         if ( titleLabel )
         {
@@ -730,9 +731,9 @@ LABEL_19:
           v71 = v12->fields.isReplenishment;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v72 = (System_String_o **)&StringLiteral_3870/*"CRAFT_EVENT_CONFIRM_DIALOG_DESCRIPTION"*/;
+          v72 = (System_String_o **)&StringLiteral_3919/*"CRAFT_EVENT_CONFIRM_DIALOG_DESCRIPTION"*/;
           if ( v71 )
-            v72 = (System_String_o **)&StringLiteral_3885/*"CRAFT_EVENT_REPLENISHMENT_CONFIRM_DIALOG_DESCRIPTION"*/;
+            v72 = (System_String_o **)&StringLiteral_3934/*"CRAFT_EVENT_REPLENISHMENT_CONFIRM_DIALOG_DESCRIPTION"*/;
           this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__Get(*v72, 0LL);
           if ( detailLabel )
           {
@@ -741,7 +742,7 @@ LABEL_19:
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3675/*"COMMON_CONFIRM_CANCEL"*/,
+                                                              (System_String_o *)StringLiteral_3716/*"COMMON_CONFIRM_CANCEL"*/,
                                                               0LL);
             if ( cancelButtonLb )
             {
@@ -750,9 +751,9 @@ LABEL_19:
               v75 = v12->fields.isReplenishment;
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              v76 = (System_String_o **)&StringLiteral_3869/*"CRAFT_EVENT_CONFIRM_DIALOG_DECIDE"*/;
+              v76 = (System_String_o **)&StringLiteral_3918/*"CRAFT_EVENT_CONFIRM_DIALOG_DECIDE"*/;
               if ( v75 )
-                v76 = (System_String_o **)&StringLiteral_3884/*"CRAFT_EVENT_REPLENISHMENT_CONFIRM_DIALOG_DECIDE"*/;
+                v76 = (System_String_o **)&StringLiteral_3933/*"CRAFT_EVENT_REPLENISHMENT_CONFIRM_DIALOG_DECIDE"*/;
               this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__Get(*v76, 0LL);
               if ( decideButtonLb )
               {
@@ -761,25 +762,25 @@ LABEL_19:
                 v12->fields.isButtonOn = 0;
                 if ( this )
                 {
-                  UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)StringLiteral_17257/*"btn_boostitem_off"*/, 0LL);
+                  UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)StringLiteral_17484/*"btn_boostitem_off"*/, 0LL);
                   useSupportToolLb = v12->fields.useSupportToolLb;
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                    (System_String_o *)StringLiteral_3876/*"CRAFT_EVENT_CONFIRM_DIALOG_USE_SUPPORT_TOOL"*/,
+                                                                    (System_String_o *)StringLiteral_3925/*"CRAFT_EVENT_CONFIRM_DIALOG_USE_SUPPORT_TOOL"*/,
                                                                     0LL);
                   if ( useSupportToolLb )
                   {
                     UILabel__set_text(useSupportToolLb, (System_String_o *)this, 0LL);
                     supportToolMaskLb = v12->fields.supportToolMaskLb;
                     this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                      (System_String_o *)StringLiteral_3872/*"CRAFT_EVENT_CONFIRM_DIALOG_SUPPORT_TOOL_MASK"*/,
+                                                                      (System_String_o *)StringLiteral_3921/*"CRAFT_EVENT_CONFIRM_DIALOG_SUPPORT_TOOL_MASK"*/,
                                                                       0LL);
                     if ( supportToolMaskLb )
                     {
                       UILabel__set_text(supportToolMaskLb, (System_String_o *)this, 0LL);
                       supportToolPossessionLb = v12->fields.supportToolPossessionLb;
-                      v80 = LocalizationManager__Get((System_String_o *)StringLiteral_3873/*"CRAFT_EVENT_CONFIRM_DIALOG_SUPPORT_TOOL_POSSESSION"*/, 0LL);
+                      v80 = LocalizationManager__Get((System_String_o *)StringLiteral_3922/*"CRAFT_EVENT_CONFIRM_DIALOG_SUPPORT_TOOL_POSSESSION"*/, 0LL);
                       v116 = num;
                       v84 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v116, v81, v82, v83);
                       this = (EventCraftNumConfirmDialogComponent_o *)System_String__Format(v80, v84, 0LL);
@@ -788,14 +789,14 @@ LABEL_19:
                         UILabel__set_text(supportToolPossessionLb, (System_String_o *)this, 0LL);
                         supportToolPossessionLbHeader = v12->fields.supportToolPossessionLbHeader;
                         this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                          (System_String_o *)StringLiteral_3874/*"CRAFT_EVENT_CONFIRM_DIALOG_SUPPORT_TOOL_POSSESSION_HEADER"*/,
+                                                                          (System_String_o *)StringLiteral_3923/*"CRAFT_EVENT_CONFIRM_DIALOG_SUPPORT_TOOL_POSSESSION_HEADER"*/,
                                                                           0LL);
                         if ( supportToolPossessionLbHeader )
                         {
                           UILabel__set_text(supportToolPossessionLbHeader, (System_String_o *)this, 0LL);
                           supportToolLeftTimeHeaderLb = v12->fields.supportToolLeftTimeHeaderLb;
                           this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                            (System_String_o *)StringLiteral_3891/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_LEFT_TIME_HEADER"*/,
+                                                                            (System_String_o *)StringLiteral_3940/*"CRAFT_EVENT_SUPPORT_TOOL_DIALOG_LEFT_TIME_HEADER"*/,
                                                                             0LL);
                           if ( supportToolLeftTimeHeaderLb )
                           {
@@ -808,7 +809,7 @@ LABEL_19:
                             AtlasManager__SetItem(supportToolItemSp, (int32_t)v9, 0LL);
                             if ( !DataManager_TypeInfo->_2.cctor_finished )
                               j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                            this = (EventCraftNumConfirmDialogComponent_o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+                            this = (EventCraftNumConfirmDialogComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
                             if ( *p_tradeGoodsEntity )
                             {
                               if ( this )
@@ -818,7 +819,7 @@ LABEL_19:
                                                      (*p_tradeGoodsEntity)->fields.commonConsumeId,
                                                      0LL);
                                 v12->fields.consumeItemList = SortedEntityList;
-                                sub_1B8635C(
+                                sub_1BDB81C(
                                   (CGThumbnailListItem_o *)&v12->fields.consumeItemList,
                                   (int32_t)SortedEntityList,
                                   v89,
@@ -826,9 +827,9 @@ LABEL_19:
                                 consumeItemList = v12->fields.consumeItemList;
                                 if ( consumeItemList )
                                 {
-                                  v92 = sub_1B86460(bool___TypeInfo, consumeItemList->max_length);
+                                  v92 = sub_1BDB920(bool___TypeInfo, consumeItemList->max_length);
                                   v12->fields.isShortage = (struct System_Boolean_array *)v92;
-                                  sub_1B8635C((CGThumbnailListItem_o *)&v12->fields.isShortage, v92, v93, v94);
+                                  sub_1BDB81C((CGThumbnailListItem_o *)&v12->fields.isShortage, v92, v93, v94);
                                   if ( !v12->fields.isReplenishment || (v96 = *p_eventTradeInfo) == 0LL )
                                   {
                                     v105 = 0;
@@ -844,7 +845,7 @@ LABEL_82:
                                                       v109);
                                     if ( !System_Math_TypeInfo->_2.cctor_finished )
                                       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-                                    v111 = System_Math__Min_63173080(v108, ItemSliderMax, 0LL);
+                                    v111 = System_Math__Min_64100908(v108, ItemSliderMax, 0LL);
                                     v12->fields.max = v111;
                                     v12->fields.makeCount = v111;
                                     v12->fields.saveMakeCount = 0;
@@ -852,7 +853,7 @@ LABEL_82:
                                     EventCraftNumConfirmDialogComponent__SetExchangeBase(v12, v113);
                                     EventCraftNumConfirmDialogComponent__SetTimeLabel(v12, v114);
                                     v12->fields.state = 1;
-                                    v115 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+                                    v115 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
                                     System_Action___ctor(
                                       v115,
                                       (Il2CppObject *)v12,
@@ -875,7 +876,7 @@ LABEL_82:
                                     craftPickupInfoList = v12->fields.craftPickupInfoList;
                                     if ( !EventCraftTimeCalculation_TypeInfo->_2.cctor_finished )
                                       j_il2cpp_runtime_class_init_0(EventCraftTimeCalculation_TypeInfo);
-                                    v105 = EventCraftTimeCalculation__GetCompleteNum_46890968(
+                                    v105 = EventCraftTimeCalculation__GetCompleteNum_47867404(
                                              v98,
                                              startedAt,
                                              (int64_t)v102,
@@ -901,7 +902,7 @@ LABEL_82:
           }
         }
 LABEL_88:
-        sub_1B86614(this, item);
+        sub_1BDBAD4(this, item);
       }
     }
     id = 0;
@@ -927,58 +928,59 @@ void __fastcall EventCraftNumConfirmDialogComponent__SetExchangeBase(
   struct CommonConsumeEntity_array *consumeItemList; // x8
   il2cpp_array_size_t max_length; // w22
   UILabel_o *exchangeOriginLb; // x20
+  __int64 v12; // x2
   struct EventCraftNumConfirmDialogComponent_ExChangeOriginUiInfo_array *exChangeOriginItemUi; // x8
-  unsigned int v13; // w9
+  unsigned int v14; // w9
   EventCraftNumConfirmDialogComponent_ExChangeOriginUiInfo_o **m_Items; // x8
-  EventCraftNumConfirmDialogComponent_ExChangeOriginUiInfo_o *v15; // x25
+  EventCraftNumConfirmDialogComponent_ExChangeOriginUiInfo_o *v16; // x25
   struct UISprite_array *exchangeOriginItemIcon; // x9
-  struct CommonConsumeEntity_array *v17; // x8
-  int v18; // w10
-  __int64 v19; // x9
+  struct CommonConsumeEntity_array *v18; // x8
+  int v19; // w10
+  __int64 v20; // x9
   struct UILabel_array *exchangeOriginCountLb; // x10
-  unsigned int v21; // w26
-  struct UISprite_array *v22; // x10
-  CommonConsumeEntity_o *v23; // x8
-  UISprite_o *v24; // x20
+  unsigned int v22; // w26
+  struct UISprite_array *v23; // x10
+  CommonConsumeEntity_o *v24; // x8
+  UISprite_o *v25; // x20
   int32_t objectId; // w21
-  struct CommonConsumeEntity_array *v26; // x8
-  CommonConsumeEntity_o *v27; // x8
+  struct CommonConsumeEntity_array *v27; // x8
+  CommonConsumeEntity_o *v28; // x8
   int32_t num; // w21
   int32_t makeCount; // w20
-  int32_t v30; // w20
-  struct CommonConsumeEntity_array *v31; // x8
-  Il2CppObject *v32; // x20
+  int32_t v31; // w20
+  struct CommonConsumeEntity_array *v32; // x8
+  Il2CppObject *v33; // x20
   int32_t HasNum; // w0
-  struct UILabel_array *v34; // x8
-  Il2CppObject *v35; // x21
-  UILabel_o *v36; // x22
-  System_String_o *v37; // x0
-  struct UILabel_array *v38; // x8
+  struct UILabel_array *v35; // x8
+  Il2CppObject *v36; // x21
+  UILabel_o *v37; // x22
+  System_String_o *v38; // x0
+  struct UILabel_array *v39; // x8
   struct System_Boolean_array *isShortage; // x9
-  float v40; // s1
-  float v41; // s0
-  float v42; // s3
-  float v43; // s2
+  float v41; // s1
+  float v42; // s0
+  float v43; // s3
+  float v44; // s2
   UILabel_o *exchangeDestinationLb; // x20
   struct EventTradeGoodsEntity_o *tradeGoodsEntity; // x8
   GiftEntity_array *GiftListById; // x20
-  GiftEntity_o *v47; // x8
+  GiftEntity_o *v48; // x8
   UISprite_o *exchangeDestinationItemIcon; // x20
   int32_t monitor; // w21
-  il2cpp_array_size_t v50; // [xsp+4h] [xbp-7Ch]
+  il2cpp_array_size_t v51; // [xsp+4h] [xbp-7Ch]
   Il2CppObject *entity; // [xsp+8h] [xbp-78h] BYREF
 
   v2 = this;
-  if ( (byte_4A5259D & 1) == 0 )
+  if ( (byte_4B48C82 & 1) == 0 )
   {
-    sub_1B863B8(&AtlasManager_TypeInfo, method);
-    sub_1B863B8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v3);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v4);
-    sub_1B863B8(&System_Math_TypeInfo, v5);
-    sub_1B863B8(&StringLiteral_13247/*"TRADE_EVENT_CONFIRM_DIALOG_ORIGIN_LABEL"*/, v6);
-    sub_1B863B8(&StringLiteral_13246/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, v7);
-    this = (EventCraftNumConfirmDialogComponent_o *)sub_1B863B8(&StringLiteral_3871/*"CRAFT_EVENT_CONFIRM_DIALOG_DESTINATION_LABEL"*/, v8);
-    byte_4A5259D = 1;
+    sub_1BDB878(&AtlasManager_TypeInfo, method);
+    sub_1BDB878(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v3);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v4);
+    sub_1BDB878(&System_Math_TypeInfo, v5);
+    sub_1BDB878(&StringLiteral_13441/*"TRADE_EVENT_CONFIRM_DIALOG_ORIGIN_LABEL"*/, v6);
+    sub_1BDB878(&StringLiteral_13440/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, v7);
+    this = (EventCraftNumConfirmDialogComponent_o *)sub_1BDB878(&StringLiteral_3920/*"CRAFT_EVENT_CONFIRM_DIALOG_DESTINATION_LABEL"*/, v8);
+    byte_4B48C82 = 1;
   }
   entity = 0LL;
   consumeItemList = v2->fields.consumeItemList;
@@ -988,144 +990,144 @@ void __fastcall EventCraftNumConfirmDialogComponent__SetExchangeBase(
   exchangeOriginLb = v2->fields.exchangeOriginLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13247/*"TRADE_EVENT_CONFIRM_DIALOG_ORIGIN_LABEL"*/, 0LL);
+  this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13441/*"TRADE_EVENT_CONFIRM_DIALOG_ORIGIN_LABEL"*/, 0LL);
   if ( !exchangeOriginLb )
     goto LABEL_69;
   UILabel__set_text(exchangeOriginLb, (System_String_o *)this, 0LL);
   exChangeOriginItemUi = v2->fields.exChangeOriginItemUi;
   if ( !exChangeOriginItemUi )
     goto LABEL_69;
-  v13 = exChangeOriginItemUi->max_length;
+  v14 = exChangeOriginItemUi->max_length;
   if ( max_length == 2 )
   {
-    if ( !v13 )
+    if ( !v14 )
       goto LABEL_70;
     m_Items = exChangeOriginItemUi->m_Items;
   }
   else
   {
-    if ( v13 <= 1 )
+    if ( v14 <= 1 )
       goto LABEL_70;
     m_Items = &exChangeOriginItemUi->m_Items[1];
   }
-  v15 = *m_Items;
+  v16 = *m_Items;
   if ( !*m_Items )
     goto LABEL_69;
-  exchangeOriginItemIcon = v15->fields.exchangeOriginItemIcon;
+  exchangeOriginItemIcon = v16->fields.exchangeOriginItemIcon;
   if ( !exchangeOriginItemIcon )
     goto LABEL_69;
-  v17 = v2->fields.consumeItemList;
-  v50 = max_length;
-  if ( !v17 )
+  v18 = v2->fields.consumeItemList;
+  v51 = max_length;
+  if ( !v18 )
     goto LABEL_69;
-  v18 = exchangeOriginItemIcon->max_length;
-  v19 = *(_QWORD *)&v17->max_length;
-  if ( v18 >= (int)v19 )
+  v19 = exchangeOriginItemIcon->max_length;
+  v20 = *(_QWORD *)&v18->max_length;
+  if ( v19 >= (int)v20 )
   {
-    exchangeOriginCountLb = v15->fields.exchangeOriginCountLb;
+    exchangeOriginCountLb = v16->fields.exchangeOriginCountLb;
     if ( !exchangeOriginCountLb )
       goto LABEL_69;
-    if ( (signed int)exchangeOriginCountLb->max_length >= (int)v19 )
+    if ( (signed int)exchangeOriginCountLb->max_length >= (int)v20 )
     {
-      if ( (int)v19 >= 1 )
+      if ( (int)v20 >= 1 )
       {
-        v21 = 0;
+        v22 = 0;
         while ( 1 )
         {
-          v22 = v15->fields.exchangeOriginItemIcon;
-          if ( !v22 )
-            break;
-          if ( v21 >= v22->max_length || v21 >= (unsigned int)v19 )
-            goto LABEL_70;
-          v23 = v17->m_Items[v21];
+          v23 = v16->fields.exchangeOriginItemIcon;
           if ( !v23 )
             break;
-          v24 = v22->m_Items[v21];
-          objectId = v23->fields.objectId;
+          if ( v22 >= v23->max_length || v22 >= (unsigned int)v20 )
+            goto LABEL_70;
+          v24 = v18->m_Items[v22];
+          if ( !v24 )
+            break;
+          v25 = v23->m_Items[v22];
+          objectId = v24->fields.objectId;
           if ( !AtlasManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-          this = (EventCraftNumConfirmDialogComponent_o *)AtlasManager__SetItem(v24, objectId, 0LL);
-          v26 = v2->fields.consumeItemList;
-          if ( !v26 )
-            break;
-          if ( v21 >= v26->max_length )
-            goto LABEL_70;
-          v27 = v26->m_Items[v21];
+          this = (EventCraftNumConfirmDialogComponent_o *)AtlasManager__SetItem(v25, objectId, 0LL);
+          v27 = v2->fields.consumeItemList;
           if ( !v27 )
             break;
-          num = v27->fields.num;
+          if ( v22 >= v27->max_length )
+            goto LABEL_70;
+          v28 = v27->m_Items[v22];
+          if ( !v28 )
+            break;
+          num = v28->fields.num;
           makeCount = v2->fields.makeCount;
           if ( !System_Math_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-          v30 = System_Math__Max_63172752(makeCount, 1, 0LL);
+          v31 = System_Math__Max_64100580(makeCount, 1, 0LL);
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__GetNumberFormat(v30 * num, 0LL);
-          v31 = v2->fields.consumeItemList;
-          if ( !v31 )
+          this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__GetNumberFormat(v31 * num, 0LL);
+          v32 = v2->fields.consumeItemList;
+          if ( !v32 )
             break;
-          if ( v21 >= v31->max_length )
+          if ( v22 >= v32->max_length )
             goto LABEL_70;
-          v32 = (Il2CppObject *)this;
-          this = (EventCraftNumConfirmDialogComponent_o *)v31->m_Items[v21];
+          v33 = (Il2CppObject *)this;
+          this = (EventCraftNumConfirmDialogComponent_o *)v32->m_Items[v22];
           if ( !this )
             break;
           HasNum = CommonConsumeEntity__GetUserHasNum((CommonConsumeEntity_o *)this, 0LL);
           this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__GetNumberFormat(HasNum, 0LL);
-          v34 = v15->fields.exchangeOriginCountLb;
-          if ( !v34 )
+          v35 = v16->fields.exchangeOriginCountLb;
+          if ( !v35 )
             break;
-          if ( v21 >= v34->max_length )
+          if ( v22 >= v35->max_length )
             goto LABEL_70;
-          v35 = (Il2CppObject *)this;
-          v36 = v34->m_Items[v21];
-          v37 = LocalizationManager__Get((System_String_o *)StringLiteral_13246/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0LL);
-          this = (EventCraftNumConfirmDialogComponent_o *)System_String__Format_61686468(v37, v32, v35, 0LL);
-          if ( !v36 )
+          v36 = (Il2CppObject *)this;
+          v37 = v35->m_Items[v22];
+          v38 = LocalizationManager__Get((System_String_o *)StringLiteral_13440/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0LL);
+          this = (EventCraftNumConfirmDialogComponent_o *)System_String__Format_62613552(v38, v33, v36, 0LL);
+          if ( !v37 )
             break;
-          UILabel__set_text(v36, (System_String_o *)this, 0LL);
-          v38 = v15->fields.exchangeOriginCountLb;
-          if ( !v38 )
+          UILabel__set_text(v37, (System_String_o *)this, 0LL);
+          v39 = v16->fields.exchangeOriginCountLb;
+          if ( !v39 )
             break;
-          if ( v21 >= v38->max_length )
+          if ( v22 >= v39->max_length )
             goto LABEL_70;
           isShortage = v2->fields.isShortage;
           if ( !isShortage )
             break;
-          if ( v21 >= isShortage->max_length )
+          if ( v22 >= isShortage->max_length )
             goto LABEL_70;
-          this = (EventCraftNumConfirmDialogComponent_o *)v38->m_Items[v21];
-          v40 = isShortage->m_Items[v21 + 4] ? 0.0 : 1.0;
+          this = (EventCraftNumConfirmDialogComponent_o *)v39->m_Items[v22];
+          v41 = isShortage->m_Items[v22 + 4] ? 0.0 : 1.0;
           if ( !this )
             break;
-          v41 = 1.0;
           v42 = 1.0;
-          v43 = v40;
-          UIWidget__set_color((UIWidget_o *)this, *(UnityEngine_Color_o *)(&v40 - 1), 0LL);
-          v17 = v2->fields.consumeItemList;
-          if ( !v17 )
+          v43 = 1.0;
+          v44 = v41;
+          UIWidget__set_color((UIWidget_o *)this, *(UnityEngine_Color_o *)(&v41 - 1), 0LL);
+          v18 = v2->fields.consumeItemList;
+          if ( !v18 )
             break;
-          LODWORD(v19) = v17->max_length;
-          if ( (int)++v21 >= (int)v19 )
+          LODWORD(v20) = v18->max_length;
+          if ( (int)++v22 >= (int)v20 )
             goto LABEL_50;
         }
 LABEL_69:
-        sub_1B86614(this, method);
+        sub_1BDBAD4(this, method);
       }
 LABEL_50:
       this = (EventCraftNumConfirmDialogComponent_o *)v2->fields.exchangeOriginItemUiParent2;
       if ( !this )
         goto LABEL_69;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v50 == 2, 0LL);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v51 == 2, 0LL);
       this = (EventCraftNumConfirmDialogComponent_o *)v2->fields.exchangeOriginItemUiParent3;
       if ( !this )
         goto LABEL_69;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v50 != 2, 0LL);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v51 != 2, 0LL);
       exchangeDestinationLb = v2->fields.exchangeDestinationLb;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_3871/*"CRAFT_EVENT_CONFIRM_DIALOG_DESTINATION_LABEL"*/,
+                                                        (System_String_o *)StringLiteral_3920/*"CRAFT_EVENT_CONFIRM_DIALOG_DESTINATION_LABEL"*/,
                                                         0LL);
       if ( !exchangeDestinationLb )
         goto LABEL_69;
@@ -1146,8 +1148,8 @@ LABEL_50:
         goto LABEL_69;
       if ( GiftListById->max_length )
       {
-        v47 = GiftListById->m_Items[0];
-        if ( !v47 )
+        v48 = GiftListById->m_Items[0];
+        if ( !v48 )
           goto LABEL_69;
         this = (EventCraftNumConfirmDialogComponent_o *)v2->fields.itemMaster;
         if ( !this )
@@ -1155,8 +1157,8 @@ LABEL_50:
         this = (EventCraftNumConfirmDialogComponent_o *)DataMasterBase_object__object__int___TryGetEntity(
                                                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                           &entity,
-                                                          v47->fields.objectId,
-                                                          (const MethodInfo_32142CC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                                                          v48->fields.objectId,
+                                                          (const MethodInfo_32E1E88 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           if ( !entity )
@@ -1172,7 +1174,7 @@ LABEL_67:
         return;
       }
 LABEL_70:
-      sub_1B8661C(this, method);
+      sub_1BDBADC(this, method, v12);
     }
   }
 }
@@ -1201,21 +1203,21 @@ void __fastcall EventCraftNumConfirmDialogComponent__SetRewardCount(
   int32_t v19; // w0
   UILabel_o *exchangeDestinationItemCountLb; // x8
 
-  if ( (byte_4A525A3 & 1) == 0 )
+  if ( (byte_4B48C88 & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, method);
-    sub_1B863B8(&System_Math_TypeInfo, v3);
-    sub_1B863B8(&StringLiteral_8664/*"MULTIPLE_INFO"*/, v4);
-    sub_1B863B8(&StringLiteral_13265/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_INFO"*/, v5);
-    byte_4A525A3 = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, method);
+    sub_1BDB878(&System_Math_TypeInfo, v3);
+    sub_1BDB878(&StringLiteral_8809/*"MULTIPLE_INFO"*/, v4);
+    sub_1BDB878(&StringLiteral_13459/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_INFO"*/, v5);
+    byte_4B48C88 = 1;
   }
   isReplenishment = this->fields.isReplenishment;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_8664/*"MULTIPLE_INFO"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_8809/*"MULTIPLE_INFO"*/, 0LL);
   if ( isReplenishment )
   {
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_13265/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_INFO"*/, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_13459/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_INFO"*/, 0LL);
     eventTradeInfo = this->fields.eventTradeInfo;
     if ( !eventTradeInfo )
       goto LABEL_15;
@@ -1225,23 +1227,23 @@ void __fastcall EventCraftNumConfirmDialogComponent__SetRewardCount(
     v14 = (Il2CppObject *)NumberFormat;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v15 = System_Math__Max_63172752(makeCount, 1, 0LL);
+    v15 = System_Math__Max_64100580(makeCount, 1, 0LL);
     v16 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v15, 0LL);
-    v17 = (Il2CppObject *)System_String__Format_61686468(v11, v14, v16, 0LL);
+    v17 = (Il2CppObject *)System_String__Format_62613552(v11, v14, v16, 0LL);
   }
   else
   {
     v18 = this->fields.makeCount;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v19 = System_Math__Max_63172752(v18, 1, 0LL);
+    v19 = System_Math__Max_64100580(v18, 1, 0LL);
     v17 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v19, 0LL);
   }
   v8 = System_String__Format(v7, v17, 0LL);
   exchangeDestinationItemCountLb = this->fields.exchangeDestinationItemCountLb;
   if ( !exchangeDestinationItemCountLb )
 LABEL_15:
-    sub_1B86614(v8, v9);
+    sub_1BDBAD4(v8, v9);
   UILabel__set_text(exchangeDestinationItemCountLb, v8, 0LL);
 }
 
@@ -1326,22 +1328,22 @@ void __fastcall EventCraftNumConfirmDialogComponent__SetTimeLabel(
   System_String_o *v74; // x0
 
   v3 = this;
-  if ( (byte_4A5259A & 1) == 0 )
+  if ( (byte_4B48C7F & 1) == 0 )
   {
-    sub_1B863B8(&BalanceConfig_TypeInfo, method);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___, v4);
-    sub_1B863B8(&EventCraftTimeCalculation_TypeInfo, v5);
-    sub_1B863B8(&System_Func_EventCraftPickupInfo__long__TypeInfo, v6);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v7);
-    sub_1B863B8(&System_Math_TypeInfo, v8);
-    sub_1B863B8(&NetworkManager_TypeInfo, v9);
-    sub_1B863B8(&Method_EventCraftNumConfirmDialogComponent___c__SetTimeLabel_b__51_0__, v10);
-    sub_1B863B8(&EventCraftNumConfirmDialogComponent___c_TypeInfo, v11);
-    sub_1B863B8(&StringLiteral_3868/*"CRAFT_EVENT_COMPLETION_TIME_LABEL"*/, v12);
-    sub_1B863B8(&StringLiteral_13236/*"TRADE_EVENT_ADD_TIME_LABEL"*/, v13);
-    sub_1B863B8(&StringLiteral_24762/*"{0,2}:{1:D2}:{2:D2}"*/, v14);
-    this = (EventCraftNumConfirmDialogComponent_o *)sub_1B863B8(&StringLiteral_13171/*"TIME_FORMAT_1"*/, v15);
-    byte_4A5259A = 1;
+    sub_1BDB878(&BalanceConfig_TypeInfo, method);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___, v4);
+    sub_1BDB878(&EventCraftTimeCalculation_TypeInfo, v5);
+    sub_1BDB878(&System_Func_EventCraftPickupInfo__long__TypeInfo, v6);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v7);
+    sub_1BDB878(&System_Math_TypeInfo, v8);
+    sub_1BDB878(&NetworkManager_TypeInfo, v9);
+    sub_1BDB878(&Method_EventCraftNumConfirmDialogComponent___c__SetTimeLabel_b__51_0__, v10);
+    sub_1BDB878(&EventCraftNumConfirmDialogComponent___c_TypeInfo, v11);
+    sub_1BDB878(&StringLiteral_3917/*"CRAFT_EVENT_COMPLETION_TIME_LABEL"*/, v12);
+    sub_1BDB878(&StringLiteral_13430/*"TRADE_EVENT_ADD_TIME_LABEL"*/, v13);
+    sub_1BDB878(&StringLiteral_25119/*"{0,2}:{1:D2}:{2:D2}"*/, v14);
+    this = (EventCraftNumConfirmDialogComponent_o *)sub_1BDB878(&StringLiteral_13365/*"TIME_FORMAT_1"*/, v15);
+    byte_4B48C7F = 1;
   }
   if ( v3->fields.isReplenishment )
   {
@@ -1381,7 +1383,7 @@ void __fastcall EventCraftNumConfirmDialogComponent__SetTimeLabel(
         Time = NetworkManager__getTime(0LL);
         if ( !System_Math_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        v37 = System_Math__Max_63172764((int64_t)v34, Time, 0LL);
+        v37 = System_Math__Max_64100592((int64_t)v34, Time, 0LL);
         if ( !EventCraftTimeCalculation_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(EventCraftTimeCalculation_TypeInfo);
         CraftFinishTime = EventCraftTimeCalculation__GetCraftFinishTime(v31, v32, v30, makeCount, v37, v36);
@@ -1389,22 +1391,22 @@ void __fastcall EventCraftNumConfirmDialogComponent__SetTimeLabel(
         v40 = CraftFinishTime;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3868/*"CRAFT_EVENT_COMPLETION_TIME_LABEL"*/, 0LL);
+        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3917/*"CRAFT_EVENT_COMPLETION_TIME_LABEL"*/, 0LL);
         v42 = NetworkManager__getTime(0LL);
-        v43 = System_Math__Max_63172764((int64_t)&v34[-v42], 0LL, 0LL);
+        v43 = System_Math__Max_64100592((int64_t)&v34[-v42], 0LL, 0LL);
         RestTimeInFormat = LocalizationManager__GetRestTimeInFormat(
                              v43 + v40,
                              0LL,
-                             (System_String_o *)StringLiteral_24762/*"{0,2}:{1:D2}:{2:D2}"*/,
+                             (System_String_o *)StringLiteral_25119/*"{0,2}:{1:D2}:{2:D2}"*/,
                              0LL);
-        v45 = LocalizationManager__Get((System_String_o *)StringLiteral_13236/*"TRADE_EVENT_ADD_TIME_LABEL"*/, 0LL);
+        v45 = LocalizationManager__Get((System_String_o *)StringLiteral_13430/*"TRADE_EVENT_ADD_TIME_LABEL"*/, 0LL);
         v46 = (Il2CppObject *)LocalizationManager__GetRestTimeInFormat(
                                 v40,
                                 0LL,
-                                (System_String_o *)StringLiteral_24762/*"{0,2}:{1:D2}:{2:D2}"*/,
+                                (System_String_o *)StringLiteral_25119/*"{0,2}:{1:D2}:{2:D2}"*/,
                                 0LL);
         v47 = System_String__Format(v45, v46, 0LL);
-        v48 = (Il2CppObject *)System_String__Concat_61645176(RestTimeInFormat, v47, 0LL);
+        v48 = (Il2CppObject *)System_String__Concat_62572260(RestTimeInFormat, v47, 0LL);
         this = (EventCraftNumConfirmDialogComponent_o *)System_String__Format(v41, v48, 0LL);
         if ( craftCompletionTimeLabel )
         {
@@ -1415,12 +1417,12 @@ void __fastcall EventCraftNumConfirmDialogComponent__SetTimeLabel(
       }
     }
 LABEL_69:
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   }
   v17 = v3->fields.craftCompletionTimeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3868/*"CRAFT_EVENT_COMPLETION_TIME_LABEL"*/, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3917/*"CRAFT_EVENT_COMPLETION_TIME_LABEL"*/, 0LL);
   v20 = v3->fields.tradeGoodsEntity;
   v21 = v3->fields.craftPickupInfoList;
   v22 = v18;
@@ -1434,7 +1436,7 @@ LABEL_69:
   v52 = EventCraftTimeCalculation__GetCraftFinishTime(v20, v21, v23, v51, -1LL, v19);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v53 = (Il2CppObject *)LocalizationManager__GetRestTimeInFormat(v52, 0LL, (System_String_o *)StringLiteral_24762/*"{0,2}:{1:D2}:{2:D2}"*/, 0LL);
+  v53 = (Il2CppObject *)LocalizationManager__GetRestTimeInFormat(v52, 0LL, (System_String_o *)StringLiteral_25119/*"{0,2}:{1:D2}:{2:D2}"*/, 0LL);
   this = (EventCraftNumConfirmDialogComponent_o *)System_String__Format(v22, v53, 0LL);
   if ( !v17 )
     goto LABEL_69;
@@ -1461,7 +1463,7 @@ LABEL_35:
         v56 = EventCraftNumConfirmDialogComponent___c_TypeInfo;
       }
       v58 = (Il2CppObject *)v56->static_fields->__9;
-      _9__51_0 = (System_Func_T__TResult__o *)sub_1B86604(System_Func_EventCraftPickupInfo__long__TypeInfo);
+      _9__51_0 = (System_Func_T__TResult__o *)sub_1BDBAC4(System_Func_EventCraftPickupInfo__long__TypeInfo);
       System_Func_object__long____ctor(
         _9__51_0,
         v58,
@@ -1469,20 +1471,20 @@ LABEL_35:
         0LL);
       static_fields = EventCraftNumConfirmDialogComponent___c_TypeInfo->static_fields;
       static_fields->__9__51_0 = (struct System_Func_EventCraftPickupInfo__long__o *)_9__51_0;
-      sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__51_0, (int32_t)_9__51_0, v60, v61);
+      sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__51_0, (int32_t)_9__51_0, v60, v61);
     }
     v62 = System_Linq_Enumerable__Select_object__long_(
             v55,
             (System_Func_TSource__TResult__o *)_9__51_0,
-            (const MethodInfo_2FA0F80 *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
-    v54 = System_Linq_Enumerable__Max_64650932((System_Collections_Generic_IEnumerable_long__o *)v62, 0LL);
+            (const MethodInfo_3068190 *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
+    v54 = System_Linq_Enumerable__Max_65578760((System_Collections_Generic_IEnumerable_long__o *)v62, 0LL);
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   v63 = NetworkManager__getTime(0LL);
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v64 = System_Math__Max_63172764(v54 - v63, 0LL, 0LL);
+  v64 = System_Math__Max_64100592(v54 - v63, 0LL, 0LL);
   v65 = BalanceConfig_TypeInfo;
   v66 = v64;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -1525,7 +1527,7 @@ LABEL_35:
   supportToolLeftTimeLb = v3->fields.supportToolLeftTimeLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_13171/*"TIME_FORMAT_1"*/, 0LL);
+  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_13365/*"TIME_FORMAT_1"*/, 0LL);
   this = (EventCraftNumConfirmDialogComponent_o *)LocalizationManager__GetRestTimeInFormat(v72 + v66, 0LL, v74, 0LL);
   if ( !supportToolLeftTimeLb )
     goto LABEL_69;
@@ -1540,34 +1542,35 @@ void __fastcall EventCraftNumConfirmDialogComponent__SliderValueChange(
   __int64 v3; // x1
   __int64 v4; // x1
   UISliderWithButton_o *itemSlider; // x0
+  __int64 v6; // x2
   struct CommonConsumeEntity_array *consumeItemList; // x8
   struct EventCraftNumConfirmDialogComponent_ExChangeOriginUiInfo_array *exChangeOriginItemUi; // x10
-  __int64 v8; // x9
+  __int64 v9; // x9
   unsigned int max_length; // w11
   EventCraftNumConfirmDialogComponent_ExChangeOriginUiInfo_o **m_Items; // x10
-  EventCraftNumConfirmDialogComponent_ExChangeOriginUiInfo_o *v11; // x23
+  EventCraftNumConfirmDialogComponent_ExChangeOriginUiInfo_o *v12; // x23
   struct UILabel_array *exchangeOriginCountLb; // x10
-  signed int v13; // w10
-  __int64 v14; // x27
-  CommonConsumeEntity_o *v15; // x8
+  signed int v14; // w10
+  __int64 v15; // x27
+  CommonConsumeEntity_o *v16; // x8
   int32_t num; // w21
   int32_t makeCount; // w20
-  int32_t v18; // w20
-  struct CommonConsumeEntity_array *v19; // x8
-  Il2CppObject *v20; // x20
+  int32_t v19; // w20
+  struct CommonConsumeEntity_array *v20; // x8
+  Il2CppObject *v21; // x20
   int32_t HasNum; // w0
-  struct UILabel_array *v22; // x8
-  Il2CppObject *v23; // x21
-  UILabel_o *v24; // x22
-  System_String_o *v25; // x0
-  const MethodInfo *v26; // x1
+  struct UILabel_array *v23; // x8
+  Il2CppObject *v24; // x21
+  UILabel_o *v25; // x22
+  System_String_o *v26; // x0
+  const MethodInfo *v27; // x1
 
-  if ( (byte_4A525A2 & 1) == 0 )
+  if ( (byte_4B48C87 & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, method);
-    sub_1B863B8(&System_Math_TypeInfo, v3);
-    sub_1B863B8(&StringLiteral_13246/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, v4);
-    byte_4A525A2 = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, method);
+    sub_1BDB878(&System_Math_TypeInfo, v3);
+    sub_1BDB878(&StringLiteral_13440/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, v4);
+    byte_4B48C87 = 1;
   }
   itemSlider = this->fields.itemSlider;
   if ( !itemSlider )
@@ -1580,9 +1583,9 @@ void __fastcall EventCraftNumConfirmDialogComponent__SliderValueChange(
   exChangeOriginItemUi = this->fields.exChangeOriginItemUi;
   if ( !exChangeOriginItemUi )
     goto LABEL_31;
-  v8 = *(_QWORD *)&consumeItemList->max_length;
+  v9 = *(_QWORD *)&consumeItemList->max_length;
   max_length = exChangeOriginItemUi->max_length;
-  if ( (_DWORD)v8 == 2 )
+  if ( (_DWORD)v9 == 2 )
   {
     if ( !max_length )
       goto LABEL_32;
@@ -1594,66 +1597,66 @@ void __fastcall EventCraftNumConfirmDialogComponent__SliderValueChange(
       goto LABEL_32;
     m_Items = &exChangeOriginItemUi->m_Items[1];
   }
-  v11 = *m_Items;
-  if ( !*m_Items || (exchangeOriginCountLb = v11->fields.exchangeOriginCountLb) == 0LL )
+  v12 = *m_Items;
+  if ( !*m_Items || (exchangeOriginCountLb = v12->fields.exchangeOriginCountLb) == 0LL )
 LABEL_31:
-    sub_1B86614(itemSlider, method);
-  if ( (signed int)exchangeOriginCountLb->max_length >= (int)v8 )
+    sub_1BDBAD4(itemSlider, method);
+  if ( (signed int)exchangeOriginCountLb->max_length >= (int)v9 )
   {
-    if ( (int)v8 >= 1 )
+    if ( (int)v9 >= 1 )
     {
-      v13 = 0;
-      while ( v13 < (unsigned int)v8 )
+      v14 = 0;
+      while ( v14 < (unsigned int)v9 )
       {
-        v14 = v13;
-        v15 = consumeItemList->m_Items[v13];
-        if ( !v15 )
+        v15 = v14;
+        v16 = consumeItemList->m_Items[v14];
+        if ( !v16 )
           goto LABEL_31;
-        num = v15->fields.num;
+        num = v16->fields.num;
         makeCount = this->fields.makeCount;
         if ( !System_Math_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        v18 = System_Math__Max_63172752(makeCount, 1, 0LL);
+        v19 = System_Math__Max_64100580(makeCount, 1, 0LL);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        itemSlider = (UISliderWithButton_o *)LocalizationManager__GetNumberFormat(v18 * num, 0LL);
-        v19 = this->fields.consumeItemList;
-        if ( !v19 )
+        itemSlider = (UISliderWithButton_o *)LocalizationManager__GetNumberFormat(v19 * num, 0LL);
+        v20 = this->fields.consumeItemList;
+        if ( !v20 )
           goto LABEL_31;
-        if ( (unsigned int)v14 >= v19->max_length )
+        if ( (unsigned int)v15 >= v20->max_length )
           break;
-        v20 = (Il2CppObject *)itemSlider;
-        itemSlider = (UISliderWithButton_o *)v19->m_Items[v14];
+        v21 = (Il2CppObject *)itemSlider;
+        itemSlider = (UISliderWithButton_o *)v20->m_Items[v15];
         if ( !itemSlider )
           goto LABEL_31;
         HasNum = CommonConsumeEntity__GetUserHasNum((CommonConsumeEntity_o *)itemSlider, 0LL);
         itemSlider = (UISliderWithButton_o *)LocalizationManager__GetNumberFormat(HasNum, 0LL);
-        v22 = v11->fields.exchangeOriginCountLb;
-        if ( !v22 )
+        v23 = v12->fields.exchangeOriginCountLb;
+        if ( !v23 )
           goto LABEL_31;
-        if ( (unsigned int)v14 >= v22->max_length )
+        if ( (unsigned int)v15 >= v23->max_length )
           break;
-        v23 = (Il2CppObject *)itemSlider;
-        v24 = v22->m_Items[v14];
-        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_13246/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0LL);
-        itemSlider = (UISliderWithButton_o *)System_String__Format_61686468(v25, v20, v23, 0LL);
-        if ( !v24 )
+        v24 = (Il2CppObject *)itemSlider;
+        v25 = v23->m_Items[v15];
+        v26 = LocalizationManager__Get((System_String_o *)StringLiteral_13440/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0LL);
+        itemSlider = (UISliderWithButton_o *)System_String__Format_62613552(v26, v21, v24, 0LL);
+        if ( !v25 )
           goto LABEL_31;
-        UILabel__set_text(v24, (System_String_o *)itemSlider, 0LL);
+        UILabel__set_text(v25, (System_String_o *)itemSlider, 0LL);
         consumeItemList = this->fields.consumeItemList;
         if ( !consumeItemList )
           goto LABEL_31;
-        LODWORD(v8) = consumeItemList->max_length;
-        v13 = v14 + 1;
-        if ( (int)v14 + 1 >= (int)v8 )
+        LODWORD(v9) = consumeItemList->max_length;
+        v14 = v15 + 1;
+        if ( (int)v15 + 1 >= (int)v9 )
           goto LABEL_30;
       }
 LABEL_32:
-      sub_1B8661C(itemSlider, method);
+      sub_1BDBADC(itemSlider, method, v6);
     }
 LABEL_30:
     EventCraftNumConfirmDialogComponent__SetRewardCount(this, method);
-    EventCraftNumConfirmDialogComponent__SetTimeLabel(this, v26);
+    EventCraftNumConfirmDialogComponent__SetTimeLabel(this, v27);
   }
 }
 
@@ -1665,10 +1668,10 @@ void __fastcall EventCraftNumConfirmDialogComponent__Update(
   const MethodInfo *v3; // x1
   float time; // s8
 
-  if ( (byte_4A52598 & 1) == 0 )
+  if ( (byte_4B48C7D & 1) == 0 )
   {
-    sub_1B863B8(&System_Math_TypeInfo, method);
-    byte_4A52598 = 1;
+    sub_1BDB878(&System_Math_TypeInfo, method);
+    byte_4B48C7D = 1;
   }
   if ( (float)(UnityEngine_Time__get_time(0LL) - this->fields.updatedTime) >= 1.0 )
   {
@@ -1706,11 +1709,11 @@ void __fastcall EventCraftNumConfirmDialogComponent__UpdateDraw(
   int32_t v21; // w8
   const MethodInfo *v22; // x1
 
-  if ( (byte_4A5259B & 1) == 0 )
+  if ( (byte_4B48C80 & 1) == 0 )
   {
-    sub_1B863B8(&EventCraftTimeCalculation_TypeInfo, method);
-    sub_1B863B8(&System_Math_TypeInfo, v4);
-    byte_4A5259B = 1;
+    sub_1BDB878(&EventCraftTimeCalculation_TypeInfo, method);
+    sub_1BDB878(&System_Math_TypeInfo, v4);
+    byte_4B48C80 = 1;
   }
   craftPickupInfoList = this->fields.craftPickupInfoList;
   if ( this->fields.isButtonOn )
@@ -1728,7 +1731,7 @@ void __fastcall EventCraftNumConfirmDialogComponent__UpdateDraw(
   ItemSliderMax = EventCraftNumConfirmDialogComponent__GetItemSliderMax(this, CraftMaxNum - (_DWORD)eventTradeInfo, v9);
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v13 = System_Math__Min_63173080(v11, ItemSliderMax, 0LL);
+  v13 = System_Math__Min_64100908(v11, ItemSliderMax, 0LL);
   max = this->fields.max;
   if ( max != v13 )
   {
@@ -1831,7 +1834,7 @@ LABEL_36:
         }
       }
     }
-    sub_1B86614(itemSlider, v17);
+    sub_1BDBAD4(itemSlider, v17);
   }
 LABEL_37:
   EventCraftNumConfirmDialogComponent__SetTimeLabel(this, v14);
@@ -1854,10 +1857,10 @@ UnityEngine_GameObject_o *__fastcall EventCraftNumConfirmDialogComponent__get_cl
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4A525A4 & 1) == 0 )
+  if ( (byte_4B48C89 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
-    byte_4A525A4 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    byte_4B48C89 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1866,7 +1869,7 @@ UnityEngine_GameObject_o *__fastcall EventCraftNumConfirmDialogComponent__get_cl
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_1B86614(0LL, v4);
+    sub_1BDBAD4(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
@@ -1886,15 +1889,15 @@ void __fastcall EventCraftNumConfirmDialogComponent___c___cctor(const MethodInfo
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4A525A6 & 1) == 0 )
+  if ( (byte_4B48C8B & 1) == 0 )
   {
-    sub_1B863B8(&EventCraftNumConfirmDialogComponent___c_TypeInfo, v1);
-    byte_4A525A6 = 1;
+    sub_1BDB878(&EventCraftNumConfirmDialogComponent___c_TypeInfo, v1);
+    byte_4B48C8B = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(EventCraftNumConfirmDialogComponent___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BDBAC4(EventCraftNumConfirmDialogComponent___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventCraftNumConfirmDialogComponent___c_TypeInfo->static_fields->__9 = (struct EventCraftNumConfirmDialogComponent___c_o *)v2;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)EventCraftNumConfirmDialogComponent___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -1916,7 +1919,7 @@ int64_t __fastcall EventCraftNumConfirmDialogComponent___c___OnClickSupportToolB
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   return x->fields.endedAt;
 }
 
@@ -1927,6 +1930,6 @@ int64_t __fastcall EventCraftNumConfirmDialogComponent___c___SetTimeLabel_b__51_
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   return x->fields.endedAt;
 }

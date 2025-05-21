@@ -2,17 +2,17 @@ void __fastcall GachaPickupCollateralGroupMaster___ctor(
         GachaPickupCollateralGroupMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A4E754 & 1) == 0 )
+  if ( (byte_4B44D2E & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_DataMasterBase_GachaPickupCollateralGroupMaster__GachaPickupCollateralGroupEntity__string___ctor__,
       method);
-    byte_4A4E754 = 1;
+    byte_4B44D2E = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     510,
-    (const MethodInfo_3216A14 *)Method_DataMasterBase_GachaPickupCollateralGroupMaster__GachaPickupCollateralGroupEntity__string___ctor__);
+    (const MethodInfo_32E45D0 *)Method_DataMasterBase_GachaPickupCollateralGroupMaster__GachaPickupCollateralGroupEntity__string___ctor__);
 }
 
 
@@ -25,18 +25,18 @@ GachaPickupCollateralGroupEntity_o *__fastcall GachaPickupCollateralGroupMaster_
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A4E755 & 1) == 0 )
+  if ( (byte_4B44D2F & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_DataMasterBase_GachaPickupCollateralGroupMaster__GachaPickupCollateralGroupEntity__string__GetEntity__,
       *(_QWORD *)&id);
-    byte_4A4E755 = 1;
+    byte_4B44D2F = 1;
   }
   PK = (Il2CppObject *)GachaPickupCollateralGroupEntity__CreatePK(id, gachaId, 0LL);
   return (GachaPickupCollateralGroupEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                  PK,
-                                                 (const MethodInfo_3218D38 *)Method_DataMasterBase_GachaPickupCollateralGroupMaster__GachaPickupCollateralGroupEntity__string__GetEntity__);
+                                                 (const MethodInfo_32E68F4 *)Method_DataMasterBase_GachaPickupCollateralGroupMaster__GachaPickupCollateralGroupEntity__string__GetEntity__);
 }
 
 
@@ -49,19 +49,19 @@ bool __fastcall GachaPickupCollateralGroupMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A4E756 & 1) == 0 )
+  if ( (byte_4B44D30 & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_DataMasterBase_GachaPickupCollateralGroupMaster__GachaPickupCollateralGroupEntity__string__TryGetEntity__,
       entity);
-    byte_4A4E756 = 1;
+    byte_4B44D30 = 1;
   }
   PK = (Il2CppObject *)GachaPickupCollateralGroupEntity__CreatePK(id, gachaId, 0LL);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3218D84 *)Method_DataMasterBase_GachaPickupCollateralGroupMaster__GachaPickupCollateralGroupEntity__string__TryGetEntity__);
+           (const MethodInfo_32E6940 *)Method_DataMasterBase_GachaPickupCollateralGroupMaster__GachaPickupCollateralGroupEntity__string__TryGetEntity__);
 }
 
 
@@ -95,26 +95,26 @@ bool __fastcall GachaPickupCollateralGroupMaster__TryGetEntityFromGachaId(
   int32_t *v28; // x10
   __int64 v29; // x0
 
-  if ( (byte_4A4E753 & 1) == 0 )
+  if ( (byte_4B44D2D & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_ObjectModel_Collection_GachaPickupCollateralGroupEntity__GetEnumerator__,
       gachaPickupCollateralGroupEntity);
-    sub_1B863B8(&System_IDisposable_TypeInfo, v7);
-    sub_1B863B8(&System_Collections_Generic_IEnumerator_GachaPickupCollateralGroupEntity__TypeInfo, v8);
-    sub_1B863B8(&System_Collections_IEnumerator_TypeInfo, v9);
-    byte_4A4E753 = 1;
+    sub_1BDB878(&System_IDisposable_TypeInfo, v7);
+    sub_1BDB878(&System_Collections_Generic_IEnumerator_GachaPickupCollateralGroupEntity__TypeInfo, v8);
+    sub_1BDB878(&System_Collections_IEnumerator_TypeInfo, v9);
+    byte_4B44D2D = 1;
   }
   *gachaPickupCollateralGroupEntity = 0LL;
-  sub_1B8635C((CGThumbnailListItem_o *)gachaPickupCollateralGroupEntity, 0, gachaId, method);
+  sub_1BDB81C((CGThumbnailListItem_o *)gachaPickupCollateralGroupEntity, 0, gachaId, method);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1B86614(0LL, v10);
+    sub_1BDBAD4(0LL, v10);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_31B0EE0 *)Method_System_Collections_ObjectModel_Collection_GachaPickupCollateralGroupEntity__GetEnumerator__);
+                 (const MethodInfo_327DBFC *)Method_System_Collections_ObjectModel_Collection_GachaPickupCollateralGroupEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B86614(0LL, v12);
+    sub_1BDBAD4(0LL, v12);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -134,7 +134,7 @@ bool __fastcall GachaPickupCollateralGroupMaster__TryGetEntityFromGachaId(
     else
     {
 LABEL_9:
-      p_method = sub_1BD6B4C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C2C00C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -157,7 +157,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v21 = sub_1BD6B4C(
+      v21 = sub_1C2C00C(
               Enumerator,
               System_Collections_Generic_IEnumerator_GachaPickupCollateralGroupEntity__TypeInfo,
               0LL);
@@ -168,7 +168,7 @@ LABEL_16:
     if ( v22 && v22->fields.gachaId == gachaId )
     {
       *gachaPickupCollateralGroupEntity = v22;
-      sub_1B8635C((CGThumbnailListItem_o *)gachaPickupCollateralGroupEntity, (int32_t)v22, v23, v24);
+      sub_1BDB81C((CGThumbnailListItem_o *)gachaPickupCollateralGroupEntity, (int32_t)v22, v23, v24);
       v25 = 1;
       goto LABEL_22;
     }
@@ -192,7 +192,7 @@ LABEL_22:
   else
   {
 LABEL_26:
-    v29 = sub_1BD6B4C(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v29 = sub_1C2C00C(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v29)(Enumerator, *(_QWORD *)(v29 + 8));
   return v25;

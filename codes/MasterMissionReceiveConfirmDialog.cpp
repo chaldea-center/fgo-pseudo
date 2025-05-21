@@ -2,10 +2,10 @@ void __fastcall MasterMissionReceiveConfirmDialog___ctor(
         MasterMissionReceiveConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A517A8 & 1) == 0 )
+  if ( (byte_4B47D38 & 1) == 0 )
   {
-    sub_1B863B8(&BaseDialog_TypeInfo, method);
-    byte_4A517A8 = 1;
+    sub_1BDB878(&BaseDialog_TypeInfo, method);
+    byte_4B47D38 = 1;
   }
   this->fields.state = 2;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -31,15 +31,15 @@ void __fastcall MasterMissionReceiveConfirmDialog__Init(
   UILabel_o *cancelLabel; // x20
   UILabel_o *decideLabel; // x20
 
-  if ( (byte_4A517A4 & 1) == 0 )
+  if ( (byte_4B47D34 & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_8406/*"MASTER_MISSION_RECEIVE_CONFIRM_CANCEL"*/, v3);
-    sub_1B863B8(&StringLiteral_8409/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_SUB_MSG"*/, v4);
-    sub_1B863B8(&StringLiteral_8408/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_MSG"*/, v5);
-    sub_1B863B8(&StringLiteral_8407/*"MASTER_MISSION_RECEIVE_CONFIRM_DECIDE"*/, v6);
-    sub_1B863B8(&StringLiteral_8410/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_TITLE"*/, v7);
-    byte_4A517A4 = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_8550/*"MASTER_MISSION_RECEIVE_CONFIRM_CANCEL"*/, v3);
+    sub_1BDB878(&StringLiteral_8553/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_SUB_MSG"*/, v4);
+    sub_1BDB878(&StringLiteral_8552/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_MSG"*/, v5);
+    sub_1BDB878(&StringLiteral_8551/*"MASTER_MISSION_RECEIVE_CONFIRM_DECIDE"*/, v6);
+    sub_1BDB878(&StringLiteral_8554/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_TITLE"*/, v7);
+    byte_4B47D34 = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   receiveConfirmListViewManager = this->fields.receiveConfirmListViewManager;
@@ -50,38 +50,38 @@ void __fastcall MasterMissionReceiveConfirmDialog__Init(
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   receiveConfirmListViewManager = (MasterMissionReceiveConfirmListViewManager_o *)LocalizationManager__Get(
-                                                                                    (System_String_o *)StringLiteral_8410/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_TITLE"*/,
+                                                                                    (System_String_o *)StringLiteral_8554/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_TITLE"*/,
                                                                                     0LL);
   if ( !titleLabel )
     goto LABEL_12;
   UILabel__set_text(titleLabel, (System_String_o *)receiveConfirmListViewManager, 0LL);
   subTitleLabel = this->fields.subTitleLabel;
   receiveConfirmListViewManager = (MasterMissionReceiveConfirmListViewManager_o *)LocalizationManager__Get(
-                                                                                    (System_String_o *)StringLiteral_8408/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_MSG"*/,
+                                                                                    (System_String_o *)StringLiteral_8552/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_MSG"*/,
                                                                                     0LL);
   if ( !subTitleLabel )
     goto LABEL_12;
   UILabel__set_text(subTitleLabel, (System_String_o *)receiveConfirmListViewManager, 0LL);
   subTitleSmallLabel = this->fields.subTitleSmallLabel;
   receiveConfirmListViewManager = (MasterMissionReceiveConfirmListViewManager_o *)LocalizationManager__Get(
-                                                                                    (System_String_o *)StringLiteral_8409/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_SUB_MSG"*/,
+                                                                                    (System_String_o *)StringLiteral_8553/*"MASTER_MISSION_RECEIVE_CONFIRM_DLG_SUB_MSG"*/,
                                                                                     0LL);
   if ( !subTitleSmallLabel
     || (UILabel__set_text(subTitleSmallLabel, (System_String_o *)receiveConfirmListViewManager, 0LL),
         cancelLabel = this->fields.cancelLabel,
         receiveConfirmListViewManager = (MasterMissionReceiveConfirmListViewManager_o *)LocalizationManager__Get(
-                                                                                          (System_String_o *)StringLiteral_8406/*"MASTER_MISSION_RECEIVE_CONFIRM_CANCEL"*/,
+                                                                                          (System_String_o *)StringLiteral_8550/*"MASTER_MISSION_RECEIVE_CONFIRM_CANCEL"*/,
                                                                                           0LL),
         !cancelLabel)
     || (UILabel__set_text(cancelLabel, (System_String_o *)receiveConfirmListViewManager, 0LL),
         decideLabel = this->fields.decideLabel,
         receiveConfirmListViewManager = (MasterMissionReceiveConfirmListViewManager_o *)LocalizationManager__Get(
-                                                                                          (System_String_o *)StringLiteral_8407/*"MASTER_MISSION_RECEIVE_CONFIRM_DECIDE"*/,
+                                                                                          (System_String_o *)StringLiteral_8551/*"MASTER_MISSION_RECEIVE_CONFIRM_DECIDE"*/,
                                                                                           0LL),
         !decideLabel) )
   {
 LABEL_12:
-    sub_1B86614(receiveConfirmListViewManager, v8);
+    sub_1BDBAD4(receiveConfirmListViewManager, v8);
   }
   UILabel__set_text(decideLabel, (System_String_o *)receiveConfirmListViewManager, 0LL);
   this->fields.state = 2;
@@ -98,22 +98,22 @@ void __fastcall MasterMissionReceiveConfirmDialog__OnClickCancelButton(
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4A517A5 & 1) == 0 )
+  if ( (byte_4B47D35 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Method_MasterMissionReceiveConfirmDialog_OnClickCancelButton__, v3);
-    sub_1B863B8(&Method_MasterMissionReceiveConfirmDialog__OnClickCancelButton_b__12_0__, v4);
-    byte_4A517A5 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&Method_MasterMissionReceiveConfirmDialog_OnClickCancelButton__, v3);
+    sub_1BDB878(&Method_MasterMissionReceiveConfirmDialog__OnClickCancelButton_b__12_0__, v4);
+    byte_4B47D35 = 1;
   }
   if ( !this->fields.state )
   {
     v5 = Method_MasterMissionReceiveConfirmDialog_OnClickCancelButton__;
     if ( (*((_BYTE *)Method_MasterMissionReceiveConfirmDialog_OnClickCancelButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B863D0(Method_MasterMissionReceiveConfirmDialog_OnClickCancelButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BDB890(Method_MasterMissionReceiveConfirmDialog_OnClickCancelButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0, 0LL);
     this->fields.state = 2;
-    v7 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
     System_Action___ctor(
       v7,
       (Il2CppObject *)this,
@@ -134,22 +134,22 @@ void __fastcall MasterMissionReceiveConfirmDialog__OnClickDecideButton(
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4A517A6 & 1) == 0 )
+  if ( (byte_4B47D36 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Method_MasterMissionReceiveConfirmDialog_OnClickDecideButton__, v3);
-    sub_1B863B8(&Method_MasterMissionReceiveConfirmDialog__OnClickDecideButton_b__13_0__, v4);
-    byte_4A517A6 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&Method_MasterMissionReceiveConfirmDialog_OnClickDecideButton__, v3);
+    sub_1BDB878(&Method_MasterMissionReceiveConfirmDialog__OnClickDecideButton_b__13_0__, v4);
+    byte_4B47D36 = 1;
   }
   if ( !this->fields.state )
   {
     v5 = Method_MasterMissionReceiveConfirmDialog_OnClickDecideButton__;
     if ( (*((_BYTE *)Method_MasterMissionReceiveConfirmDialog_OnClickDecideButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B863D0(Method_MasterMissionReceiveConfirmDialog_OnClickDecideButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BDB890(Method_MasterMissionReceiveConfirmDialog_OnClickDecideButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0, 0LL);
     this->fields.state = 2;
-    v7 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
     System_Action___ctor(
       v7,
       (Il2CppObject *)this,
@@ -182,11 +182,11 @@ void __fastcall MasterMissionReceiveConfirmDialog__Open(
   BaseDialog__Open((BaseDialog_o *)v6, 0LL, 0, 0LL);
   v6->fields.clickFunc = callback;
   v6 = (MasterMissionReceiveConfirmDialog_o *)((char *)v6 + 152);
-  sub_1B8635C((CGThumbnailListItem_o *)v6, (int32_t)callback, v7, v8);
+  sub_1BDB81C((CGThumbnailListItem_o *)v6, (int32_t)callback, v7, v8);
   v11 = *(MasterMissionReceiveConfirmListViewManager_o **)&v6[-1].fields.state;
   LODWORD(v6->monitor) = 0;
   if ( !v11 )
-    sub_1B86614(0LL, v9);
+    sub_1BDBAD4(0LL, v9);
   MasterMissionReceiveConfirmListViewManager__CreateList(v11, receiveItems, v10);
 }
 
@@ -231,12 +231,12 @@ System_String_o *__fastcall MasterMissionReceiveConfirmDialog__get_closeBtnPath(
         MasterMissionReceiveConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A517A7 & 1) == 0 )
+  if ( (byte_4B47D37 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_15414/*"Window/CancelButton"*/, method);
-    byte_4A517A7 = 1;
+    sub_1BDB878(&StringLiteral_15616/*"Window/CancelButton"*/, method);
+    byte_4B47D37 = 1;
   }
-  return (System_String_o *)StringLiteral_15414/*"Window/CancelButton"*/;
+  return (System_String_o *)StringLiteral_15616/*"Window/CancelButton"*/;
 }
 
 
@@ -258,15 +258,15 @@ void __fastcall MasterMissionReceiveConfirmDialog_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B86478(v6) & 1) == 0 )
+  if ( (sub_1BDB938(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B864E0(v10, 0LL);
+      v10 = sub_1BDBAF0(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BDB9A0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -278,9 +278,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19D6218;
+  this->fields.m_target = (Il2CppObject *)sub_1A28870;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19D61D0;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A28828;
 }
 
 
@@ -296,14 +296,14 @@ System_IAsyncResult_o *__fastcall MasterMissionReceiveConfirmDialog_ClickDelegat
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4A517A9 & 1) == 0 )
+  if ( (byte_4B47D39 & 1) == 0 )
   {
-    sub_1B863B8(&bool_TypeInfo, isDecide);
-    byte_4A517A9 = 1;
+    sub_1BDB878(&bool_TypeInfo, isDecide);
+    byte_4B47D39 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B8636C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BDB82C(this, v9, callback, object);
 }
 
 
@@ -312,7 +312,7 @@ void __fastcall MasterMissionReceiveConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B86370(result, 0LL, method);
+  sub_1BDB830(result, 0LL, method);
 }
 
 

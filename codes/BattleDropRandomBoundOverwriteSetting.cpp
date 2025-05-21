@@ -30,58 +30,58 @@ void __fastcall BattleDropRandomBoundOverwriteSetting___ctor(
   int32_t v28; // w2
   const MethodInfo *v29; // x3
 
-  if ( (byte_4A50C42 & 1) == 0 )
+  if ( (byte_4B47290 & 1) == 0 )
   {
-    sub_1B863B8(&BattleDropRandomBound_RangeFloat_TypeInfo, method);
-    sub_1B863B8(&BattleDropRandomBound_RangeInt_TypeInfo, v3);
-    byte_4A50C42 = 1;
+    sub_1BDB878(&BattleDropRandomBound_RangeFloat_TypeInfo, method);
+    sub_1BDB878(&BattleDropRandomBound_RangeInt_TypeInfo, v3);
+    byte_4B47290 = 1;
   }
   LODWORD(this->fields.moveSpeedXRange) = 1036831949;
-  v4 = sub_1B86604(BattleDropRandomBound_RangeFloat_TypeInfo);
+  v4 = sub_1BDBAC4(BattleDropRandomBound_RangeFloat_TypeInfo);
   BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v4, v5);
   if ( !v4 )
     goto LABEL_10;
   *(_QWORD *)(v4 + 16) = 0x3DCCCCCDBDCCCCCDLL;
   this->fields.moveSpeedYRange = (struct BattleDropRandomBound_RangeFloat_o *)v4;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.moveSpeedYRange, v4, v8, v9);
-  v10 = sub_1B86604(BattleDropRandomBound_RangeFloat_TypeInfo);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.moveSpeedYRange, v4, v8, v9);
+  v10 = sub_1BDBAC4(BattleDropRandomBound_RangeFloat_TypeInfo);
   BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v10, v11);
   if ( !v10 )
     goto LABEL_10;
   *(int32x2_t *)(v10 + 16) = vdup_n_s32(0x3F266666u);
   this->fields.delayStartTimeRange = (struct BattleDropRandomBound_RangeFloat_o *)v10;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.delayStartTimeRange, v10, v12, v13);
-  v14 = sub_1B86604(BattleDropRandomBound_RangeFloat_TypeInfo);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.delayStartTimeRange, v10, v12, v13);
+  v14 = sub_1BDBAC4(BattleDropRandomBound_RangeFloat_TypeInfo);
   BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v14, v15);
   if ( !v14 )
     goto LABEL_10;
   *(_QWORD *)(v14 + 16) = 0x3ECCCCCD3DCCCCCDLL;
   this->fields.boundCountRange = (struct BattleDropRandomBound_RangeInt_o *)v14;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.boundCountRange, v14, v16, v17);
-  v18 = sub_1B86604(BattleDropRandomBound_RangeInt_TypeInfo);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.boundCountRange, v14, v16, v17);
+  v18 = sub_1BDBAC4(BattleDropRandomBound_RangeInt_TypeInfo);
   BattleDropRandomBound_RangeInt___ctor((BattleDropRandomBound_RangeInt_o *)v18, v19);
   if ( !v18 )
     goto LABEL_10;
   *(_QWORD *)(v18 + 16) = 0x200000001LL;
   *(_QWORD *)&this->fields.boundSpeedYRate = v18;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.boundSpeedYRate, v18, v20, v21);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.boundSpeedYRate, v18, v20, v21);
   LODWORD(this->fields.initScatterPosBaseRectXRange) = 1056964608;
-  v22 = sub_1B86604(BattleDropRandomBound_RangeFloat_TypeInfo);
+  v22 = sub_1BDBAC4(BattleDropRandomBound_RangeFloat_TypeInfo);
   BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v22, v23);
   if ( !v22
     || (*(_QWORD *)(v22 + 16) = 0x3DCCCCCDBDCCCCCDLL,
         this->fields.initScatterPosBaseRectYRange = (struct BattleDropRandomBound_RangeFloat_o *)v22,
-        sub_1B8635C((CGThumbnailListItem_o *)&this->fields.initScatterPosBaseRectYRange, v22, v24, v25),
-        v26 = sub_1B86604(BattleDropRandomBound_RangeFloat_TypeInfo),
+        sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.initScatterPosBaseRectYRange, v22, v24, v25),
+        v26 = sub_1BDBAC4(BattleDropRandomBound_RangeFloat_TypeInfo),
         BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v26, v27),
         !v26) )
   {
 LABEL_10:
-    sub_1B86614(v6, v7);
+    sub_1BDBAD4(v6, v7);
   }
   *(_QWORD *)(v26 + 16) = 0x3DCCCCCDBDCCCCCDLL;
   *(_QWORD *)&this->fields.initScatterPosBaseRectAngle = v26;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.initScatterPosBaseRectAngle, v26, v28, v29);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.initScatterPosBaseRectAngle, v26, v28, v29);
   UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0LL);
 }
 

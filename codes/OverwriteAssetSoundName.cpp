@@ -17,14 +17,16 @@ int32_t __fastcall OverwriteAssetSoundName__FindCommonKindName(
   UnityEngine_Object_o *table; // x21
   const MethodInfo *v9; // x1
   System_String_o *UniqueKey; // x20
+  const MethodInfo *v11; // x5
+  struct OverwriteAssetSoundNameTable_o *v12; // x8
   OverwriteAssetSoundNameTable_SoundCommonAssetData_o *data; // [xsp+8h] [xbp-28h] BYREF
 
   v3 = kind;
-  if ( (byte_4A4DDA7 & 1) == 0 )
+  if ( (byte_4B4436F & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&kind);
-    sub_1B863B8(&SoundManager_TypeInfo, v5);
-    byte_4A4DDA7 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, *(_QWORD *)&kind);
+    sub_1BDB878(&SoundManager_TypeInfo, v5);
+    byte_4B4436F = 1;
   }
   data = 0LL;
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
@@ -43,20 +45,22 @@ int32_t __fastcall OverwriteAssetSoundName__FindCommonKindName(
     OverwriteAssetSoundName = SoundManager__get_OverwriteAssetSoundName(0LL);
     if ( !OverwriteAssetSoundName )
       goto LABEL_17;
-    OverwriteAssetSoundName = (OverwriteAssetSoundName_o *)OverwriteAssetSoundName->fields.table;
-    if ( !OverwriteAssetSoundName )
+    v12 = OverwriteAssetSoundName->fields.table;
+    if ( !v12 )
       goto LABEL_17;
-    OverwriteAssetSoundName = (OverwriteAssetSoundName_o *)OverwriteAssetSoundNameTable__TryGetPlayCommonData(
+    OverwriteAssetSoundName = (OverwriteAssetSoundName_o *)OverwriteAssetSoundNameTable__TryGetCommonData(
                                                              (OverwriteAssetSoundNameTable_o *)OverwriteAssetSoundName,
+                                                             &v12->fields.kvpPlayCommonTable,
+                                                             v12->fields.playCommonTable,
                                                              UniqueKey,
                                                              &data,
-                                                             0LL);
+                                                             v11);
     if ( ((unsigned __int8)OverwriteAssetSoundName & 1) != 0 )
     {
       if ( data )
         return data->fields.CommonSeKind;
 LABEL_17:
-      sub_1B86614(OverwriteAssetSoundName, v7);
+      sub_1BDBAD4(OverwriteAssetSoundName, v7);
     }
   }
   return v3;
@@ -76,14 +80,15 @@ int32_t __fastcall OverwriteAssetSoundName__FindKindName(
   UnityEngine_Object_o *table; // x21
   const MethodInfo *v9; // x1
   System_String_o *UniqueKey; // x20
+  const MethodInfo *v11; // x5
   OverwriteAssetSoundNameTable_SoundSystemAssetData_o *data; // [xsp+8h] [xbp-28h] BYREF
 
   v3 = kind;
-  if ( (byte_4A4DDA6 & 1) == 0 )
+  if ( (byte_4B4436E & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&kind);
-    sub_1B863B8(&SoundManager_TypeInfo, v5);
-    byte_4A4DDA6 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, *(_QWORD *)&kind);
+    sub_1BDB878(&SoundManager_TypeInfo, v5);
+    byte_4B4436E = 1;
   }
   data = 0LL;
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
@@ -105,17 +110,19 @@ int32_t __fastcall OverwriteAssetSoundName__FindKindName(
     OverwriteAssetSoundName = (OverwriteAssetSoundName_o *)OverwriteAssetSoundName->fields.table;
     if ( !OverwriteAssetSoundName )
       goto LABEL_17;
-    OverwriteAssetSoundName = (OverwriteAssetSoundName_o *)OverwriteAssetSoundNameTable__TryGetPlaySystemData(
+    OverwriteAssetSoundName = (OverwriteAssetSoundName_o *)OverwriteAssetSoundNameTable__TryGetSystemData(
                                                              (OverwriteAssetSoundNameTable_o *)OverwriteAssetSoundName,
+                                                             (System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundSystemAssetData__o **)&OverwriteAssetSoundName[2].monitor,
+                                                             (OverwriteAssetSoundNameTable_SoundSystemAssetData_array *)OverwriteAssetSoundName[1].monitor,
                                                              UniqueKey,
                                                              &data,
-                                                             0LL);
+                                                             v11);
     if ( ((unsigned __int8)OverwriteAssetSoundName & 1) != 0 )
     {
       if ( data )
         return data->fields.SeKind;
 LABEL_17:
-      sub_1B86614(OverwriteAssetSoundName, v7);
+      sub_1BDBAD4(OverwriteAssetSoundName, v7);
     }
   }
   return v3;
@@ -135,14 +142,17 @@ System_String_o *__fastcall OverwriteAssetSoundName__FindSoundName(
   UnityEngine_Object_o *table; // x22
   const MethodInfo *v11; // x1
   System_String_o *UniqueKey; // x21
+  const MethodInfo *v13; // x5
+  OverwriteAssetSoundNameTable_SoundAssetData_array *klass; // x2
+  System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__o **p_isLoading; // x1
   OverwriteAssetSoundNameTable_SoundAssetData_o *data; // [xsp+8h] [xbp-38h] BYREF
 
   v5 = name;
-  if ( (byte_4A4DDA5 & 1) == 0 )
+  if ( (byte_4B4436D & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, name);
-    sub_1B863B8(&SoundManager_TypeInfo, v7);
-    byte_4A4DDA5 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, name);
+    sub_1BDB878(&SoundManager_TypeInfo, v7);
+    byte_4B4436D = 1;
   }
   data = 0LL;
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
@@ -159,45 +169,41 @@ System_String_o *__fastcall OverwriteAssetSoundName__FindSoundName(
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     OverwriteAssetSoundName = SoundManager__get_OverwriteAssetSoundName(0LL);
-    if ( OverwriteAssetSoundName )
+    if ( !OverwriteAssetSoundName )
+      goto LABEL_22;
+    OverwriteAssetSoundName = (OverwriteAssetSoundName_o *)OverwriteAssetSoundName->fields.table;
+    if ( !OverwriteAssetSoundName )
+      goto LABEL_22;
+    if ( isPlay )
     {
-      OverwriteAssetSoundName = (OverwriteAssetSoundName_o *)OverwriteAssetSoundName->fields.table;
-      if ( OverwriteAssetSoundName )
+      klass = *(OverwriteAssetSoundNameTable_SoundAssetData_array **)&OverwriteAssetSoundName->fields.isLoading;
+      p_isLoading = (System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__o **)&OverwriteAssetSoundName[1].fields.isLoading;
+    }
+    else
+    {
+      klass = (OverwriteAssetSoundNameTable_SoundAssetData_array *)OverwriteAssetSoundName[1].klass;
+      p_isLoading = (System_Collections_Generic_Dictionary_string__OverwriteAssetSoundNameTable_SoundAssetData__o **)&OverwriteAssetSoundName[2];
+    }
+    OverwriteAssetSoundName = (OverwriteAssetSoundName_o *)OverwriteAssetSoundNameTable__TryGetData(
+                                                             (OverwriteAssetSoundNameTable_o *)OverwriteAssetSoundName,
+                                                             p_isLoading,
+                                                             klass,
+                                                             UniqueKey,
+                                                             &data,
+                                                             v13);
+    if ( ((unsigned __int8)OverwriteAssetSoundName & 1) != 0 )
+    {
+      if ( !data )
+        goto LABEL_22;
+      OverwriteAssetSoundName = (OverwriteAssetSoundName_o *)System_String__IsNullOrEmpty(data->fields.SoundName, 0LL);
+      if ( ((unsigned __int8)OverwriteAssetSoundName & 1) == 0 )
       {
-        if ( isPlay )
-        {
-          OverwriteAssetSoundName = (OverwriteAssetSoundName_o *)OverwriteAssetSoundNameTable__TryGetPlayData(
-                                                                   (OverwriteAssetSoundNameTable_o *)OverwriteAssetSoundName,
-                                                                   UniqueKey,
-                                                                   &data,
-                                                                   0LL);
-          if ( ((unsigned __int8)OverwriteAssetSoundName & 1) == 0 )
-            return v5;
-        }
-        else
-        {
-          OverwriteAssetSoundName = (OverwriteAssetSoundName_o *)OverwriteAssetSoundNameTable__TryGetStopData(
-                                                                   (OverwriteAssetSoundNameTable_o *)OverwriteAssetSoundName,
-                                                                   UniqueKey,
-                                                                   &data,
-                                                                   0LL);
-          if ( ((unsigned __int8)OverwriteAssetSoundName & 1) == 0 )
-            return v5;
-        }
         if ( data )
-        {
-          OverwriteAssetSoundName = (OverwriteAssetSoundName_o *)System_String__IsNullOrEmpty(
-                                                                   data->fields.SoundName,
-                                                                   0LL);
-          if ( ((unsigned __int8)OverwriteAssetSoundName & 1) != 0 )
-            return v5;
-          if ( data )
-            return data->fields.SoundName;
-        }
+          return data->fields.SoundName;
+LABEL_22:
+        sub_1BDBAD4(OverwriteAssetSoundName, v9);
       }
     }
-LABEL_22:
-    sub_1B86614(OverwriteAssetSoundName, v9);
   }
   return v5;
 }
@@ -218,12 +224,12 @@ System_String_o *__fastcall OverwriteAssetSoundName__GetUniqueKey(
   System_String_o *v11; // x0
 
   v2 = callMethod;
-  if ( (byte_4A4DDA8 & 1) == 0 )
+  if ( (byte_4B44370 & 1) == 0 )
   {
-    sub_1B863B8(&System_Type_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_991/*"."*/, v3);
-    callMethod = (System_Reflection_MethodBase_o *)sub_1B863B8(&StringLiteral_14899/*"Unknown."*/, v4);
-    byte_4A4DDA8 = 1;
+    sub_1BDB878(&System_Type_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_994/*"."*/, v3);
+    callMethod = (System_Reflection_MethodBase_o *)sub_1BDB878(&StringLiteral_15097/*"Unknown."*/, v4);
+    byte_4B44370 = 1;
   }
   if ( !v2 )
     goto LABEL_10;
@@ -247,15 +253,15 @@ System_String_o *__fastcall OverwriteAssetSoundName__GetUniqueKey(
       v9 = (System_String_o *)((__int64 (__fastcall *)(System_Reflection_MethodBase_o *, Il2CppMethodPointer))v2->klass->vtable._8_unknown.method)(
                                 v2,
                                 v2->klass->vtable._9_unknown.methodPtr);
-      return System_String__Concat_61683424(v8, (System_String_o *)StringLiteral_991/*"."*/, v9, 0LL);
+      return System_String__Concat_62610508(v8, (System_String_o *)StringLiteral_994/*"."*/, v9, 0LL);
     }
 LABEL_10:
-    sub_1B86614(callMethod, method);
+    sub_1BDBAD4(callMethod, method);
   }
   v11 = (System_String_o *)((__int64 (__fastcall *)(System_Reflection_MethodBase_o *, Il2CppMethodPointer))klass->vtable._8_unknown.method)(
                              v2,
                              klass->vtable._9_unknown.methodPtr);
-  return System_String__Concat_61645176((System_String_o *)StringLiteral_14899/*"Unknown."*/, v11, 0LL);
+  return System_String__Concat_62572260((System_String_o *)StringLiteral_15097/*"Unknown."*/, v11, 0LL);
 }
 
 
@@ -266,16 +272,16 @@ void __fastcall OverwriteAssetSoundName__Initialize(OverwriteAssetSoundName_o *t
   __int64 v5; // x1
   AssetLoader_LoadEndDataHandler_o *v6; // x20
 
-  if ( (byte_4A4DD99 & 1) == 0 )
+  if ( (byte_4B44361 & 1) == 0 )
   {
-    sub_1B863B8(&AssetManager_TypeInfo, method);
-    sub_1B863B8(&AssetLoader_LoadEndDataHandler_TypeInfo, v3);
-    sub_1B863B8(&Method_OverwriteAssetSoundName__Initialize_b__4_0__, v4);
-    sub_1B863B8(&StringLiteral_13093/*"System/OverwriteAssetSoundNameTable"*/, v5);
-    byte_4A4DD99 = 1;
+    sub_1BDB878(&AssetManager_TypeInfo, method);
+    sub_1BDB878(&AssetLoader_LoadEndDataHandler_TypeInfo, v3);
+    sub_1BDB878(&Method_OverwriteAssetSoundName__Initialize_b__4_0__, v4);
+    sub_1BDB878(&StringLiteral_13285/*"System/OverwriteAssetSoundNameTable"*/, v5);
+    byte_4B44361 = 1;
   }
   this->fields.isLoading = 1;
-  v6 = (AssetLoader_LoadEndDataHandler_o *)sub_1B86604(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v6 = (AssetLoader_LoadEndDataHandler_o *)sub_1BDBAC4(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v6,
     (Il2CppObject *)this,
@@ -283,7 +289,7 @@ void __fastcall OverwriteAssetSoundName__Initialize(OverwriteAssetSoundName_o *t
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13093/*"System/OverwriteAssetSoundNameTable"*/, v6, 1, 0LL);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_13285/*"System/OverwriteAssetSoundNameTable"*/, v6, 1, 0LL);
 }
 
 
@@ -294,22 +300,23 @@ void __fastcall OverwriteAssetSoundName__PlayCommonSe(
         bool ignorePreDelay,
         const MethodInfo *method)
 {
+  const MethodInfo *v7; // x2
   int32_t CommonKindName; // w20
 
-  if ( (byte_4A4DDA3 & 1) == 0 )
+  if ( (byte_4B4436B & 1) == 0 )
   {
-    sub_1B863B8(&SeManager_TypeInfo, *(_QWORD *)&kind);
-    byte_4A4DDA3 = 1;
+    sub_1BDB878(&SeManager_TypeInfo, *(_QWORD *)&kind);
+    byte_4B4436B = 1;
   }
   CommonKindName = OverwriteAssetSoundName__FindCommonKindName(callMethod, kind, (const MethodInfo *)ignorePreDelay);
   if ( !SeManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-  SeManager__PlayCommonSe(CommonKindName, ignorePreDelay, 0LL);
+  SeManager__PlayCommonSe(CommonKindName, ignorePreDelay, v7);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall OverwriteAssetSoundName__PlayCommonSe_39576204(
+void __fastcall OverwriteAssetSoundName__PlayCommonSe_40424992(
         System_Reflection_MethodBase_o *callMethod,
         int32_t kind,
         float delayTime,
@@ -317,17 +324,18 @@ void __fastcall OverwriteAssetSoundName__PlayCommonSe_39576204(
         bool ignorePreDelay,
         const MethodInfo *method)
 {
+  const MethodInfo *v11; // x3
   int32_t CommonKindName; // w21
 
-  if ( (byte_4A4DDA4 & 1) == 0 )
+  if ( (byte_4B4436C & 1) == 0 )
   {
-    sub_1B863B8(&SeManager_TypeInfo, *(_QWORD *)&kind);
-    byte_4A4DDA4 = 1;
+    sub_1BDB878(&SeManager_TypeInfo, *(_QWORD *)&kind);
+    byte_4B4436C = 1;
   }
   CommonKindName = OverwriteAssetSoundName__FindCommonKindName(callMethod, kind, *(const MethodInfo **)&waitFrameCount);
   if ( !SeManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-  SeManager__PlayCommonSe_39643352(CommonKindName, delayTime, waitFrameCount, ignorePreDelay, 0LL);
+  SeManager__PlayCommonSe_40425148(CommonKindName, delayTime, waitFrameCount, ignorePreDelay, v11);
 }
 
 
@@ -338,23 +346,24 @@ SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySe(
         const MethodInfo *method)
 {
   System_String_o *SoundName; // x0
-  SeManager_c *v8; // x8
-  System_String_o *v9; // x20
+  const MethodInfo *v8; // x4
+  SeManager_c *v9; // x8
+  System_String_o *v10; // x20
 
-  if ( (byte_4A4DD9A & 1) == 0 )
+  if ( (byte_4B44362 & 1) == 0 )
   {
-    sub_1B863B8(&SeManager_TypeInfo, name);
-    byte_4A4DD9A = 1;
+    sub_1BDB878(&SeManager_TypeInfo, name);
+    byte_4B44362 = 1;
   }
   SoundName = OverwriteAssetSoundName__FindSoundName(callMethod, name, 1, method);
-  v8 = SeManager_TypeInfo;
-  v9 = SoundName;
+  v9 = SeManager_TypeInfo;
+  v10 = SoundName;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-    v8 = SeManager_TypeInfo;
+    v9 = SeManager_TypeInfo;
   }
-  return SeManager__PlaySe(v9, v8->static_fields->DEFAULT_VOLUME, 0.0, 0LL, 0, ignorePreDelay, 0LL);
+  return SeManager__PlaySe(v10, v9->static_fields->DEFAULT_VOLUME, 0.0, 0LL, 0, ignorePreDelay, v8);
 }
 
 
@@ -365,28 +374,29 @@ SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySeContinue(
         const MethodInfo *method)
 {
   System_String_o *SoundName; // x0
-  SeManager_c *v8; // x8
-  System_String_o *v9; // x20
+  const MethodInfo *v8; // x4
+  SeManager_c *v9; // x8
+  System_String_o *v10; // x20
 
-  if ( (byte_4A4DD9B & 1) == 0 )
+  if ( (byte_4B44363 & 1) == 0 )
   {
-    sub_1B863B8(&SeManager_TypeInfo, name);
-    byte_4A4DD9B = 1;
+    sub_1BDB878(&SeManager_TypeInfo, name);
+    byte_4B44363 = 1;
   }
   SoundName = OverwriteAssetSoundName__FindSoundName(callMethod, name, 1, method);
-  v8 = SeManager_TypeInfo;
-  v9 = SoundName;
+  v9 = SeManager_TypeInfo;
+  v10 = SoundName;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-    v8 = SeManager_TypeInfo;
+    v9 = SeManager_TypeInfo;
   }
-  return SeManager__PlaySe(v9, v8->static_fields->DEFAULT_VOLUME, 0.0, 0LL, 1, ignorePreDelay, 0LL);
+  return SeManager__PlaySe(v10, v9->static_fields->DEFAULT_VOLUME, 0.0, 0LL, 1, ignorePreDelay, v8);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySeContinue_39574564(
+SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySeContinue_40422352(
         System_Reflection_MethodBase_o *callMethod,
         System_String_o *assetName,
         System_String_o *objectName,
@@ -394,31 +404,32 @@ SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySeContinue_39574564(
         const MethodInfo *method)
 {
   System_String_o *SoundName; // x0
-  SeManager_c *v10; // x8
-  System_String_o *v11; // x21
+  const MethodInfo *v10; // x5
+  SeManager_c *v11; // x8
+  System_String_o *v12; // x21
 
-  if ( (byte_4A4DD9C & 1) == 0 )
+  if ( (byte_4B44364 & 1) == 0 )
   {
-    sub_1B863B8(&SeManager_TypeInfo, assetName);
-    byte_4A4DD9C = 1;
+    sub_1BDB878(&SeManager_TypeInfo, assetName);
+    byte_4B44364 = 1;
   }
   SoundName = OverwriteAssetSoundName__FindSoundName(callMethod, assetName, 1, (const MethodInfo *)ignorePreDelay);
-  v10 = SeManager_TypeInfo;
-  v11 = SoundName;
+  v11 = SeManager_TypeInfo;
+  v12 = SoundName;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-    v10 = SeManager_TypeInfo;
+    v11 = SeManager_TypeInfo;
   }
-  return SeManager__PlaySe_39646176(
-           v11,
+  return SeManager__PlaySe_40422520(
+           v12,
            objectName,
-           v10->static_fields->DEFAULT_VOLUME,
+           v11->static_fields->DEFAULT_VOLUME,
            0.0,
            0LL,
            1,
            ignorePreDelay,
-           0LL);
+           v10);
 }
 
 
@@ -430,21 +441,22 @@ SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySeLoop(
         bool ignorePreDelay,
         const MethodInfo *method)
 {
+  const MethodInfo *v11; // x2
   System_String_o *SoundName; // x20
 
-  if ( (byte_4A4DDA0 & 1) == 0 )
+  if ( (byte_4B44368 & 1) == 0 )
   {
-    sub_1B863B8(&SeManager_TypeInfo, name);
-    byte_4A4DDA0 = 1;
+    sub_1BDB878(&SeManager_TypeInfo, name);
+    byte_4B44368 = 1;
   }
   SoundName = OverwriteAssetSoundName__FindSoundName(callMethod, name, 1, method);
   if ( !SeManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-  return SeManager__PlaySeLoop(SoundName, volume, fadeInTime, ignorePreDelay, 0LL);
+  return SeManager__PlaySeLoop(SoundName, volume, fadeInTime, ignorePreDelay, v11);
 }
 
 
-SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySe_39574736(
+SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySe_40422788(
         System_Reflection_MethodBase_o *callMethod,
         System_String_o *name,
         float volume,
@@ -452,22 +464,23 @@ SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySe_39574736(
         bool ignorePreDelay,
         const MethodInfo *method)
 {
+  const MethodInfo *v11; // x4
   System_String_o *SoundName; // x20
 
-  if ( (byte_4A4DD9D & 1) == 0 )
+  if ( (byte_4B44365 & 1) == 0 )
   {
-    sub_1B863B8(&SeManager_TypeInfo, name);
-    byte_4A4DD9D = 1;
+    sub_1BDB878(&SeManager_TypeInfo, name);
+    byte_4B44365 = 1;
   }
   SoundName = OverwriteAssetSoundName__FindSoundName(callMethod, name, 1, method);
   if ( !SeManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-  return SeManager__PlaySe(SoundName, volume, fadeinTime, 0LL, 0, ignorePreDelay, 0LL);
+  return SeManager__PlaySe(SoundName, volume, fadeinTime, 0LL, 0, ignorePreDelay, v11);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySe_39574900(
+SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySe_40422948(
         System_Reflection_MethodBase_o *callMethod,
         System_String_o *name,
         float volume,
@@ -475,21 +488,22 @@ SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySe_39574900(
         bool ignorePreDelay,
         const MethodInfo *method)
 {
+  const MethodInfo *v11; // x4
   System_String_o *SoundName; // x21
 
-  if ( (byte_4A4DD9E & 1) == 0 )
+  if ( (byte_4B44366 & 1) == 0 )
   {
-    sub_1B863B8(&SeManager_TypeInfo, name);
-    byte_4A4DD9E = 1;
+    sub_1BDB878(&SeManager_TypeInfo, name);
+    byte_4B44366 = 1;
   }
   SoundName = OverwriteAssetSoundName__FindSoundName(callMethod, name, 1, (const MethodInfo *)ignorePreDelay);
   if ( !SeManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-  return SeManager__PlaySe(SoundName, volume, 0.0, callbackFunc, 0, ignorePreDelay, 0LL);
+  return SeManager__PlaySe(SoundName, volume, 0.0, callbackFunc, 0, ignorePreDelay, v11);
 }
 
 
-SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySe_39575072(
+SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySe_40423116(
         System_Reflection_MethodBase_o *callMethod,
         System_String_o *assetName,
         System_String_o *objectName,
@@ -498,17 +512,18 @@ SePlayer_o *__fastcall OverwriteAssetSoundName__PlaySe_39575072(
         bool ignorePreDelay,
         const MethodInfo *method)
 {
+  const MethodInfo *v13; // x5
   System_String_o *SoundName; // x22
 
-  if ( (byte_4A4DD9F & 1) == 0 )
+  if ( (byte_4B44367 & 1) == 0 )
   {
-    sub_1B863B8(&SeManager_TypeInfo, assetName);
-    byte_4A4DD9F = 1;
+    sub_1BDB878(&SeManager_TypeInfo, assetName);
+    byte_4B44367 = 1;
   }
   SoundName = OverwriteAssetSoundName__FindSoundName(callMethod, assetName, 1, (const MethodInfo *)callbackFunc);
   if ( !SeManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-  return SeManager__PlaySe_39646176(SoundName, objectName, volume, 0.0, callbackFunc, 0, ignorePreDelay, 0LL);
+  return SeManager__PlaySe_40422520(SoundName, objectName, volume, 0.0, callbackFunc, 0, ignorePreDelay, v13);
 }
 
 
@@ -519,17 +534,18 @@ void __fastcall OverwriteAssetSoundName__PlaySystemSe(
         bool ignorePreDelay,
         const MethodInfo *method)
 {
+  const MethodInfo *v7; // x2
   int32_t KindName; // w20
 
-  if ( (byte_4A4DDA2 & 1) == 0 )
+  if ( (byte_4B4436A & 1) == 0 )
   {
-    sub_1B863B8(&SeManager_TypeInfo, *(_QWORD *)&kind);
-    byte_4A4DDA2 = 1;
+    sub_1BDB878(&SeManager_TypeInfo, *(_QWORD *)&kind);
+    byte_4B4436A = 1;
   }
   KindName = OverwriteAssetSoundName__FindKindName(callMethod, kind, (const MethodInfo *)ignorePreDelay);
   if ( !SeManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-  SeManager__PlaySystemSe(KindName, ignorePreDelay, 0LL);
+  SeManager__PlaySystemSe(KindName, ignorePreDelay, v7);
 }
 
 
@@ -540,17 +556,18 @@ void __fastcall OverwriteAssetSoundName__StopSe(
         const MethodInfo *method)
 {
   const MethodInfo *v4; // x3
+  const MethodInfo *v8; // x1
   System_String_o *SoundName; // x19
 
-  if ( (byte_4A4DDA1 & 1) == 0 )
+  if ( (byte_4B44369 & 1) == 0 )
   {
-    sub_1B863B8(&SeManager_TypeInfo, name);
-    byte_4A4DDA1 = 1;
+    sub_1BDB878(&SeManager_TypeInfo, name);
+    byte_4B44369 = 1;
   }
   SoundName = OverwriteAssetSoundName__FindSoundName(callMethod, name, 0, v4);
   if ( !SeManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-  SeManager__StopSe_39648504(SoundName, fadeoutTime, 0LL);
+  SeManager__StopSe_40423812(SoundName, fadeoutTime, v8);
 }
 
 
@@ -563,18 +580,18 @@ void __fastcall OverwriteAssetSoundName___Initialize_b__4_0(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4A4DDA9 & 1) == 0 )
+  if ( (byte_4B44371 & 1) == 0 )
   {
-    sub_1B863B8(&Method_AssetData_GetObject_OverwriteAssetSoundNameTable___, assetData);
-    byte_4A4DDA9 = 1;
+    sub_1BDB878(&Method_AssetData_GetObject_OverwriteAssetSoundNameTable___, assetData);
+    byte_4B44371 = 1;
   }
   if ( assetData )
   {
     Object_object = AssetData__GetObject_object_(
                       assetData,
-                      (const MethodInfo_2F4FCFC *)Method_AssetData_GetObject_OverwriteAssetSoundNameTable___);
+                      (const MethodInfo_3014DA8 *)Method_AssetData_GetObject_OverwriteAssetSoundNameTable___);
     this->fields.table = (struct OverwriteAssetSoundNameTable_o *)Object_object;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields, (int32_t)Object_object, v6, v7);
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)Object_object, v6, v7);
   }
   this->fields.isLoading = 0;
 }

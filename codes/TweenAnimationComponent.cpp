@@ -30,7 +30,7 @@ void __fastcall TweenAnimationComponent__OnFinishAnimation(TweenAnimationCompone
   p_onFinishAnimation = (CGThumbnailListItem_o *)&this->fields.onFinishAnimation;
   ActionExtensions__Call(this->fields.onFinishAnimation, 0LL);
   p_onFinishAnimation->klass = 0LL;
-  sub_1B8635C(p_onFinishAnimation, 0, v3, v4);
+  sub_1BDB81C(p_onFinishAnimation, 0, v3, v4);
 }
 
 
@@ -55,11 +55,11 @@ void __fastcall TweenAnimationComponent__Setup(
   int32_t v19; // w2
   const MethodInfo *v20; // x3
 
-  if ( (byte_4A4D1EA & 1) == 0 )
+  if ( (byte_4B4376A & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType);
-    sub_1B863B8(&StringLiteral_9756/*"OnFinishAnimation"*/, v9);
-    byte_4A4D1EA = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, *(_QWORD *)&animationType);
+    sub_1BDB878(&StringLiteral_9906/*"OnFinishAnimation"*/, v9);
+    byte_4B4376A = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -81,16 +81,16 @@ LABEL_8:
         tweener->fields.method = *p_closeEaseType;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
         tweener->fields.eventReceiver = gameObject;
-        sub_1B8635C((CGThumbnailListItem_o *)&tweener->fields.eventReceiver, (int32_t)gameObject, v14, v15);
-        v16 = StringLiteral_9756/*"OnFinishAnimation"*/;
-        tweener->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9756/*"OnFinishAnimation"*/;
-        sub_1B8635C((CGThumbnailListItem_o *)&tweener->fields.callWhenFinished, v16, v17, v18);
+        sub_1BDB81C((CGThumbnailListItem_o *)&tweener->fields.eventReceiver, (int32_t)gameObject, v14, v15);
+        v16 = StringLiteral_9906/*"OnFinishAnimation"*/;
+        tweener->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9906/*"OnFinishAnimation"*/;
+        sub_1BDB81C((CGThumbnailListItem_o *)&tweener->fields.callWhenFinished, v16, v17, v18);
         this->fields.onFinishAnimation = onFinish;
-        sub_1B8635C((CGThumbnailListItem_o *)&this->fields.onFinishAnimation, (int32_t)onFinish, v19, v20);
+        sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.onFinishAnimation, (int32_t)onFinish, v19, v20);
         return;
       }
     }
-    sub_1B86614(v10, v11);
+    sub_1BDBAD4(v10, v11);
   }
 }
 
@@ -107,10 +107,10 @@ UnityEngine_GameObject_o *__fastcall TweenAnimationComponent__get_Target(
 {
   UnityEngine_Object_o *target; // x20
 
-  if ( (byte_4A4D1E9 & 1) == 0 )
+  if ( (byte_4B43769 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
-    byte_4A4D1E9 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    byte_4B43769 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

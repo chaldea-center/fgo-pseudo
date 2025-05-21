@@ -1,6 +1,7 @@
 void __fastcall SwitchUIWidgetComponent___ctor(SwitchUIWidgetComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  this->fields._Alpha_k__BackingField = 1.0;
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
 
@@ -10,8 +11,9 @@ void __fastcall SwitchUIWidgetComponent__Clear(SwitchUIWidgetComponent_o *this, 
   const MethodInfo *v3; // x3
   const MethodInfo *v5; // x1
 
+  this->fields.isEnableSingle = 0;
   this->fields.componentList = 0LL;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.componentList, 0, v2, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.componentList, 0, v2, v3);
   SwitchUIWidgetComponent__ClearParam(this, v5);
 }
 
@@ -23,7 +25,7 @@ void __fastcall SwitchUIWidgetComponent__ClearParam(SwitchUIWidgetComponent_o *t
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B86614(0LL, v3);
+    sub_1BDBAD4(0LL, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
 }
 
@@ -46,10 +48,10 @@ bool __fastcall SwitchUIWidgetComponent__ParameterChange(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B86614(0LL, v6);
+    sub_1BDBAD4(0LL, v6);
   activeSelf = UnityEngine_GameObject__get_activeSelf(gameObject, 0LL);
   if ( activeSelf )
-    SwitchUIWidgetComponent__Set_39218088(this, count, v7);
+    SwitchUIWidgetComponent__Set_40061100(this, count, v7);
   return activeSelf;
 }
 
@@ -57,38 +59,44 @@ bool __fastcall SwitchUIWidgetComponent__ParameterChange(
 void __fastcall SwitchUIWidgetComponent__Set(
         SwitchUIWidgetComponent_o *this,
         UIWidget_array *componentList,
+        bool isEnableSingleFade,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  CGThumbnailListItem_o *p_componentList; // x0
+  bool v6; // w21
   SwitchParameterDisplayManager_o *Instance; // x0
   __int64 v8; // x1
   const MethodInfo *v9; // x2
   const MethodInfo *v10; // x1
 
-  if ( (byte_4A4DA1D & 1) == 0 )
+  v6 = isEnableSingleFade;
+  if ( (byte_4B43FDF & 1) == 0 )
   {
-    sub_1B863B8(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__, componentList);
-    byte_4A4DA1D = 1;
+    sub_1BDB878(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__, componentList);
+    byte_4B43FDF = 1;
   }
-  p_componentList = (CGThumbnailListItem_o *)&this->fields.componentList;
+  this->fields.isEnableSingle = v6;
   if ( componentList )
   {
-    p_componentList->klass = (CGThumbnailListItem_c *)componentList;
-    sub_1B8635C(p_componentList, (int32_t)componentList, (int32_t)method, v3);
-    Instance = (SwitchParameterDisplayManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    this->fields.componentList = componentList;
+    sub_1BDB81C(
+      (CGThumbnailListItem_o *)&this->fields.componentList,
+      (int32_t)componentList,
+      isEnableSingleFade,
+      method);
+    Instance = (SwitchParameterDisplayManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
     if ( !Instance
       || (SwitchParameterDisplayManager__AddComponent(Instance, (SwitchParameterDisplayComponent_o *)this, 0LL),
-          (Instance = (SwitchParameterDisplayManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__)) == 0LL) )
+          (Instance = (SwitchParameterDisplayManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__)) == 0LL) )
     {
-      sub_1B86614(Instance, v8);
+      sub_1BDBAD4(Instance, v8);
     }
-    SwitchUIWidgetComponent__Set_39218088(this, Instance->fields.count, v9);
+    SwitchUIWidgetComponent__Set_40061100(this, Instance->fields.count, v9);
   }
   else
   {
+    this->fields.isEnableSingle = 0;
     this->fields.componentList = 0LL;
-    sub_1B8635C(p_componentList, 0, (int32_t)method, v3);
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.componentList, 0, isEnableSingleFade, method);
     SwitchUIWidgetComponent__ClearParam(this, v10);
   }
 }
@@ -100,15 +108,31 @@ void __fastcall SwitchUIWidgetComponent__SetAlpha(
         float alpha,
         const MethodInfo *method)
 {
-  struct UIWidget_o *component; // x0
+  long double v3; // q8
+  UnityEngine_Object_o *component; // x20
+  __int64 v6; // x1
+  struct UIWidget_o *v7; // x0
 
-  component = this->fields.component;
-  if ( !component )
-    sub_1B86614(0LL, method);
-  ((void (__fastcall *)(struct UIWidget_o *, Il2CppMethodPointer, long double))component->klass->vtable._8_set_alpha.method)(
-    component,
-    component->klass->vtable._9_CalculateFinalAlpha.methodPtr,
-    *(long double *)&alpha);
+  v3 = *(long double *)&alpha;
+  if ( (byte_4B43FE1 & 1) == 0 )
+  {
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    byte_4B43FE1 = 1;
+  }
+  this->fields._Alpha_k__BackingField = *(float *)&v3;
+  component = (UnityEngine_Object_o *)this->fields.component;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !UnityEngine_Object__op_Equality(component, 0LL, 0LL) )
+  {
+    v7 = this->fields.component;
+    if ( !v7 )
+      sub_1BDBAD4(0LL, v6);
+    ((void (__fastcall *)(struct UIWidget_o *, Il2CppMethodPointer, long double))v7->klass->vtable._8_set_alpha.method)(
+      v7,
+      v7->klass->vtable._9_CalculateFinalAlpha.methodPtr,
+      v3);
+  }
 }
 
 
@@ -128,95 +152,88 @@ void __fastcall SwitchUIWidgetComponent__SetParam(
   if ( !componentList )
     goto LABEL_5;
   if ( componentList->max_length <= num )
-    sub_1B8661C(this, *(_QWORD *)&num);
+    sub_1BDBADC(this, *(_QWORD *)&num, method);
   v4 = componentList->m_Items[num];
   v5 = this;
   this = (SwitchUIWidgetComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !this )
 LABEL_5:
-    sub_1B86614(this, *(_QWORD *)&num);
+    sub_1BDBAD4(this, *(_QWORD *)&num);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
   v5->fields.component = v4;
-  sub_1B8635C((CGThumbnailListItem_o *)&v5->fields.component, (int32_t)v4, v6, v7);
+  sub_1BDB81C((CGThumbnailListItem_o *)&v5->fields.component, (int32_t)v4, v6, v7);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall SwitchUIWidgetComponent__Set_39218088(
+void __fastcall SwitchUIWidgetComponent__Set_40061100(
         SwitchUIWidgetComponent_o *this,
         int32_t count,
         const MethodInfo *method)
 {
   struct UIWidget_array *componentList; // x8
   __int64 v6; // x8
-  __int64 v7; // x1
-  float *component; // x0
-  int v9; // w20
-  struct UIWidget_o *v10; // x8
+  int v7; // w20
+  float *Instance; // x0
+  const MethodInfo *v9; // x1
+  __int64 v10; // x2
   struct UIWidget_array *v11; // x8
-  unsigned __int64 v12; // x21
-  unsigned __int64 max_length; // x9
+  __int64 v12; // x9
+  unsigned __int64 v13; // x21
+  const MethodInfo *v14; // x1
 
-  if ( (byte_4A4DA1E & 1) == 0 )
+  if ( (byte_4B43FE0 & 1) == 0 )
   {
-    sub_1B863B8(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__, *(_QWORD *)&count);
-    byte_4A4DA1E = 1;
+    sub_1BDB878(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__, *(_QWORD *)&count);
+    byte_4B43FE0 = 1;
   }
   componentList = this->fields.componentList;
   if ( componentList && (v6 = *(_QWORD *)&componentList->max_length) != 0 )
   {
-    if ( (_DWORD)v6 == 1 )
+    if ( (_DWORD)v6 == 1 && !this->fields.isEnableSingle )
     {
       SwitchUIWidgetComponent__SetParam(this, 0, method);
-      component = (float *)this->fields.component;
-      if ( component )
-      {
-        (*(void (__fastcall **)(float *, _QWORD, float))(*(_QWORD *)component + 440LL))(
-          component,
-          *(_QWORD *)(*(_QWORD *)component + 448LL),
-          1.0);
-        return;
-      }
-LABEL_19:
-      sub_1B86614(component, v7);
+      SwitchUIWidgetComponent__SetAlpha(this, 1.0, v14);
     }
-    v9 = count % (int)v6;
-    SwitchUIWidgetComponent__SetParam(this, v9, method);
-    component = (float *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
-    if ( !component )
-      goto LABEL_19;
-    v10 = this->fields.component;
-    if ( !v10 )
-      goto LABEL_19;
-    component = (float *)((__int64 (__fastcall *)(struct UIWidget_o *, Il2CppMethodPointer, float))v10->klass->vtable._8_set_alpha.method)(
-                           this->fields.component,
-                           v10->klass->vtable._9_CalculateFinalAlpha.methodPtr,
-                           component[13]);
-    v11 = this->fields.componentList;
-    if ( !v11 )
-      goto LABEL_19;
-    v12 = 0LL;
-    while ( 1 )
+    else
     {
-      max_length = v11->max_length;
-      if ( (__int64)v12 >= (int)max_length )
-        break;
-      if ( v9 != v12 )
-      {
-        if ( v12 >= max_length )
-          sub_1B8661C(component, v7);
-        component = (float *)v11->m_Items[v12];
-        if ( !component )
-          goto LABEL_19;
-        component = (float *)(*(__int64 (__fastcall **)(float *, _QWORD, float))(*(_QWORD *)component + 440LL))(
-                               component,
-                               *(_QWORD *)(*(_QWORD *)component + 448LL),
-                               0.0);
-        v11 = this->fields.componentList;
-      }
-      ++v12;
+      v7 = count % (int)v6;
+      SwitchUIWidgetComponent__SetParam(this, v7, method);
+      Instance = (float *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+      if ( !Instance )
+        goto LABEL_19;
+      SwitchUIWidgetComponent__SetAlpha(this, Instance[13], v9);
+      v11 = this->fields.componentList;
       if ( !v11 )
         goto LABEL_19;
+      v12 = *(_QWORD *)&v11->max_length;
+      if ( (int)v12 >= 2 )
+      {
+        v13 = 0LL;
+        while ( 1 )
+        {
+          if ( v7 != v13 )
+          {
+            if ( v13 >= (unsigned int)v12 )
+              sub_1BDBADC(Instance, v9, v10);
+            Instance = (float *)v11->m_Items[v13];
+            if ( !Instance )
+              break;
+            Instance = (float *)(*(__int64 (__fastcall **)(float *, _QWORD, float))(*(_QWORD *)Instance + 440LL))(
+                                  Instance,
+                                  *(_QWORD *)(*(_QWORD *)Instance + 448LL),
+                                  0.0);
+            v11 = this->fields.componentList;
+            if ( !v11 )
+              break;
+          }
+          LODWORD(v12) = v11->max_length;
+          if ( (__int64)++v13 >= (int)v12 )
+            return;
+        }
+LABEL_19:
+        sub_1BDBAD4(Instance, v9);
+      }
     }
   }
   else
@@ -226,25 +243,30 @@ LABEL_19:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool __fastcall SwitchUIWidgetComponent__UpdateAlpha(
         SwitchUIWidgetComponent_o *this,
         float alpha,
         const MethodInfo *method)
 {
   struct UIWidget_array *componentList; // x8
-  struct UIWidget_o *component; // x0
 
   componentList = this->fields.componentList;
-  if ( componentList && (int)componentList->max_length >= 2 )
-  {
-    component = this->fields.component;
-    if ( !component )
-      sub_1B86614(0LL, method);
-    ((void (__fastcall *)(struct UIWidget_o *, Il2CppMethodPointer, long double))component->klass->vtable._8_set_alpha.method)(
-      component,
-      component->klass->vtable._9_CalculateFinalAlpha.methodPtr,
-      *(long double *)&alpha);
-  }
+  if ( componentList && ((int)componentList->max_length > 1 || this->fields.isEnableSingle) )
+    SwitchUIWidgetComponent__SetAlpha(this, alpha, method);
   return 1;
+}
+
+
+float __fastcall SwitchUIWidgetComponent__get_Alpha(SwitchUIWidgetComponent_o *this, const MethodInfo *method)
+{
+  return this->fields._Alpha_k__BackingField;
+}
+
+
+void __fastcall SwitchUIWidgetComponent__set_Alpha(
+        SwitchUIWidgetComponent_o *this,
+        float value,
+        const MethodInfo *method)
+{
+  this->fields._Alpha_k__BackingField = value;
 }

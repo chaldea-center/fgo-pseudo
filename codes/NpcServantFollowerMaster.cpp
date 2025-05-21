@@ -1,14 +1,14 @@
 void __fastcall NpcServantFollowerMaster___ctor(NpcServantFollowerMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4E8EF & 1) == 0 )
+  if ( (byte_4B44EDE & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__, method);
-    byte_4A4E8EF = 1;
+    sub_1BDB878(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__, method);
+    byte_4B44EDE = 1;
   }
   DataMasterBase_object__object__long____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     100,
-    (const MethodInfo_32144B8 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
+    (const MethodInfo_32E2074 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
 }
 
 
@@ -28,55 +28,55 @@ bool __fastcall NpcServantFollowerMaster__TryGetEntityByQuestIdAndSvtId(
   Il2CppObject *v14; // x1
   const MethodInfo *v15; // x3
   NpcFollowerEntity_array *EntityArray; // x21
+  __int64 v17; // x2
   int max_length; // w8
-  bool v18; // w23
-  DataMasterBase_TMaster__TEntity__PKType__o *v19; // x22
-  int v20; // w24
-  NpcFollowerEntity_o *v21; // x8
-  int32_t v22; // w2
+  bool v19; // w23
+  DataMasterBase_TMaster__TEntity__PKType__o *v20; // x22
+  int v21; // w24
+  NpcFollowerEntity_o *v22; // x8
   const MethodInfo *v23; // x3
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A4E8F0 & 1) == 0 )
+  if ( (byte_4B44EDF & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMaster_NpcFollowerMaster___, npcServantFollowerEntity);
-    sub_1B863B8(&Method_DataManager_GetMaster_NpcServantFollowerMaster___, v10);
-    sub_1B863B8(&DataManager_TypeInfo, v11);
-    sub_1B863B8(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__, v12);
-    byte_4A4E8F0 = 1;
+    sub_1BDB878(&Method_DataManager_GetMaster_NpcFollowerMaster___, npcServantFollowerEntity);
+    sub_1BDB878(&Method_DataManager_GetMaster_NpcServantFollowerMaster___, v10);
+    sub_1BDB878(&DataManager_TypeInfo, v11);
+    sub_1BDB878(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__, v12);
+    byte_4B44EDF = 1;
   }
   entity = 0LL;
   *npcServantFollowerEntity = 0LL;
-  sub_1B8635C((CGThumbnailListItem_o *)npcServantFollowerEntity, 0, questId, *(const MethodInfo **)&questPhase);
+  sub_1BDB81C((CGThumbnailListItem_o *)npcServantFollowerEntity, 0, questId, *(const MethodInfo **)&questPhase);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_NpcFollowerMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_NpcFollowerMaster___);
   if ( !Master_object
     || (EntityArray = NpcFollowerMaster__GetEntityArray((NpcFollowerMaster_o *)Master_object, questId, questPhase, v15),
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_NpcServantFollowerMaster___),
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_NpcServantFollowerMaster___),
         !EntityArray) )
   {
 LABEL_19:
-    sub_1B86614(Master_object, v14);
+    sub_1BDBAD4(Master_object, v14);
   }
   max_length = EntityArray->max_length;
-  v18 = max_length > 0;
+  v19 = max_length > 0;
   if ( max_length >= 1 )
   {
-    v19 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
-    v20 = 0;
+    v20 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
+    v21 = 0;
     while ( 1 )
     {
-      if ( v20 >= (unsigned int)max_length )
-        sub_1B8661C(Master_object, v14);
-      v21 = EntityArray->m_Items[v20];
-      if ( !v21 || !v19 )
+      if ( v21 >= (unsigned int)max_length )
+        sub_1BDBADC(Master_object, v14, v17);
+      v22 = EntityArray->m_Items[v21];
+      if ( !v22 || !v20 )
         goto LABEL_19;
       Master_object = (Il2CppObject *)DataMasterBase_object__object__long___TryGetEntity(
-                                        v19,
+                                        v20,
                                         &entity,
-                                        v21->fields.leaderSvtId,
-                                        (const MethodInfo_3216828 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
+                                        v22->fields.leaderSvtId,
+                                        (const MethodInfo_32E43E4 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
         v14 = entity;
@@ -86,12 +86,12 @@ LABEL_19:
           break;
       }
       max_length = EntityArray->max_length;
-      v18 = ++v20 < max_length;
-      if ( v20 >= max_length )
-        return v18;
+      v19 = ++v21 < max_length;
+      if ( v21 >= max_length )
+        return v19;
     }
     *npcServantFollowerEntity = (NpcServantFollowerEntity_o *)entity;
-    sub_1B8635C((CGThumbnailListItem_o *)npcServantFollowerEntity, (int32_t)v14, v22, v23);
+    sub_1BDB81C((CGThumbnailListItem_o *)npcServantFollowerEntity, (int32_t)v14, v17, v23);
   }
-  return v18;
+  return v19;
 }

@@ -1,13 +1,13 @@
 void __fastcall OpeningMovieEntity___ctor(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4E8F8 & 1) == 0 )
+  if ( (byte_4B44EE9 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A4E8F8 = 1;
+    sub_1BDB878(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B44EE9 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_3211D9C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32DF958 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,12 +19,12 @@ int32_t __fastcall OpeningMovieEntity__CreatePrimaryKey(OpeningMovieEntity_o *th
 
 int32_t __fastcall OpeningMovieEntity__GetGroupId(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4E8F4 & 1) == 0 )
+  if ( (byte_4B44EE3 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_19645/*"groupId"*/, method);
-    byte_4A4E8F4 = 1;
+    sub_1BDB878(&StringLiteral_19925/*"groupId"*/, method);
+    byte_4B44EE3 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19645/*"groupId"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19925/*"groupId"*/, 0, 0LL);
 }
 
 
@@ -55,20 +55,20 @@ System_String_o *__fastcall OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEnt
   System_TimeSpan_o v26; // 0:x0.8
   System_TimeSpan_o v27; // 0:x0.8
 
-  if ( (byte_4A4E8F5 & 1) == 0 )
+  if ( (byte_4B44EE4 & 1) == 0 )
   {
-    sub_1B863B8(&int_TypeInfo, method);
-    sub_1B863B8(&System_TimeSpan_TypeInfo, v3);
-    sub_1B863B8(&StringLiteral_24948/*"{0}分{1}秒"*/, v4);
-    sub_1B863B8(&StringLiteral_24950/*"{0}秒"*/, v5);
-    byte_4A4E8F5 = 1;
+    sub_1BDB878(&int_TypeInfo, method);
+    sub_1BDB878(&System_TimeSpan_TypeInfo, v3);
+    sub_1BDB878(&StringLiteral_25306/*"{0}分{1}秒"*/, v4);
+    sub_1BDB878(&StringLiteral_25308/*"{0}秒"*/, v5);
+    byte_4B44EE4 = 1;
   }
   v23 = 0LL;
   moviePlayTime = this->fields.moviePlayTime;
   if ( !System_TimeSpan_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo);
   v24.fields._ticks = (int64_t)&v23;
-  System_TimeSpan___ctor_63261472(v24, 0, 0, moviePlayTime, 0LL);
+  System_TimeSpan___ctor_64189300(v24, 0, 0, moviePlayTime, 0LL);
   v25.fields._ticks = (int64_t)&v23;
   Minutes = System_TimeSpan__get_Minutes(v25, 0LL);
   if ( !System_TimeSpan_TypeInfo->_2.cctor_finished )
@@ -78,7 +78,7 @@ System_String_o *__fastcall OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEnt
   {
     Seconds = System_TimeSpan__get_Seconds(v26, 0LL);
     v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Seconds, v17, v18, v19);
-    return System_String__Format((System_String_o *)StringLiteral_24950/*"{0}秒"*/, v20, 0LL);
+    return System_String__Format((System_String_o *)StringLiteral_25308/*"{0}秒"*/, v20, 0LL);
   }
   else
   {
@@ -87,19 +87,30 @@ System_String_o *__fastcall OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEnt
     v27.fields._ticks = (int64_t)&v23;
     v21 = System_TimeSpan__get_Seconds(v27, 0LL);
     v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21, v12, v13, v14);
-    return System_String__Format_61686468((System_String_o *)StringLiteral_24948/*"{0}分{1}秒"*/, v11, v15, 0LL);
+    return System_String__Format_62613552((System_String_o *)StringLiteral_25306/*"{0}分{1}秒"*/, v11, v15, 0LL);
   }
 }
 
 
 int32_t __fastcall OpeningMovieEntity__GetTargetTiming(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4E8F6 & 1) == 0 )
+  if ( (byte_4B44EE5 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_23792/*"timing"*/, method);
-    byte_4A4E8F6 = 1;
+    sub_1BDB878(&StringLiteral_24143/*"timing"*/, method);
+    byte_4B44EE5 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23792/*"timing"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24143/*"timing"*/, 0, 0LL);
+}
+
+
+int32_t __fastcall OpeningMovieEntity__GetTargetWarId(OpeningMovieEntity_o *this, const MethodInfo *method)
+{
+  if ( (byte_4B44EE8 & 1) == 0 )
+  {
+    sub_1BDB878(&StringLiteral_24829/*"warId"*/, method);
+    byte_4B44EE8 = 1;
+  }
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24829/*"warId"*/, 0, 0LL);
 }
 
 
@@ -107,12 +118,12 @@ System_String_o *__fastcall OpeningMovieEntity__GetTransitionParam(
         OpeningMovieEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A4E8F7 & 1) == 0 )
+  if ( (byte_4B44EE6 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_16477/*"afterTransitionParam"*/, method);
-    byte_4A4E8F7 = 1;
+    sub_1BDB878(&StringLiteral_16700/*"afterTransitionParam"*/, method);
+    byte_4B44EE6 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_16477/*"afterTransitionParam"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_16700/*"afterTransitionParam"*/, 0LL, 0LL);
 }
 
 
@@ -139,12 +150,12 @@ bool __fastcall OpeningMovieEntity__IsEnable(
   bool IsOpen; // w0
 
   Time = nowTime;
-  if ( (byte_4A4E8F1 & 1) == 0 )
+  if ( (byte_4B44EE0 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_CommonReleaseMaster___, nowTime);
-    sub_1B863B8(&NetworkManager_TypeInfo, v7);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_4A4E8F1 = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_CommonReleaseMaster___, nowTime);
+    sub_1BDB878(&NetworkManager_TypeInfo, v7);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4B44EE0 = 1;
   }
   if ( !Time )
   {
@@ -162,13 +173,13 @@ bool __fastcall OpeningMovieEntity__IsEnable(
       return Time >= this->fields.startedAt;
     goto LABEL_19;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
+                     (const MethodInfo_303395C *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL )
   {
-    sub_1B86614(Instance, v12);
+    sub_1BDBAD4(Instance, v12);
   }
   IsOpen = CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, v10, 0LL, 0, 0LL);
   if ( isMaterial )
@@ -180,7 +191,7 @@ bool __fastcall OpeningMovieEntity__IsEnable(
   if ( IsOpen )
   {
 LABEL_19:
-    if ( OpeningMovieEntity__IsEventPeriod(this, Time, (const MethodInfo *)isMaterial) )
+    if ( OpeningMovieEntity__IsValidPeriod(this, Time, (const MethodInfo *)isMaterial) )
       return 1;
   }
   return 0;
@@ -200,26 +211,14 @@ bool __fastcall OpeningMovieEntity__IsEnableTiming(
 }
 
 
-bool __fastcall OpeningMovieEntity__IsEventPeriod(
-        OpeningMovieEntity_o *this,
-        int64_t nowTime,
-        const MethodInfo *method)
+bool __fastcall OpeningMovieEntity__IsGrand(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  int64_t Time; // x20
-
-  Time = nowTime;
-  if ( (byte_4A4E8F2 & 1) == 0 )
+  if ( (byte_4B44EE7 & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, nowTime);
-    byte_4A4E8F2 = 1;
+    sub_1BDB878(&StringLiteral_20933/*"isGrand"*/, method);
+    byte_4B44EE7 = 1;
   }
-  if ( !Time )
-  {
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    Time = NetworkManager__getTime(0LL);
-  }
-  return this->fields.startedAt <= Time && Time < this->fields.endedAt;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20933/*"isGrand"*/, 0, 0LL) > 0;
 }
 
 
@@ -230,18 +229,18 @@ bool __fastcall OpeningMovieEntity__IsRegisterMaterial(OpeningMovieEntity_o *thi
   __int64 v5; // x1
   CommonReleaseEntity_o *v6; // x8
 
-  if ( (byte_4A4E8F3 & 1) == 0 )
+  if ( (byte_4B44EE2 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4A4E8F3 = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
+    byte_4B44EE2 = 1;
   }
-  Instance = (CommonReleaseEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (CommonReleaseEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = (CommonReleaseEntity_array *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)Instance,
-                                            (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                            (const MethodInfo_303395C *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
   if ( !Instance )
     goto LABEL_10;
   Instance = CommonReleaseMaster__getList((CommonReleaseMaster_o *)Instance, this->fields.materialCommonReleaseId, 0LL);
@@ -253,7 +252,30 @@ bool __fastcall OpeningMovieEntity__IsRegisterMaterial(OpeningMovieEntity_o *thi
     if ( v6 )
       return v6->fields.condType != 92;
 LABEL_10:
-    sub_1B86614(Instance, v5);
+    sub_1BDBAD4(Instance, v5);
   }
   return 1;
+}
+
+
+bool __fastcall OpeningMovieEntity__IsValidPeriod(
+        OpeningMovieEntity_o *this,
+        int64_t nowTime,
+        const MethodInfo *method)
+{
+  int64_t Time; // x20
+
+  Time = nowTime;
+  if ( (byte_4B44EE1 & 1) == 0 )
+  {
+    sub_1BDB878(&NetworkManager_TypeInfo, nowTime);
+    byte_4B44EE1 = 1;
+  }
+  if ( !Time )
+  {
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    Time = NetworkManager__getTime(0LL);
+  }
+  return this->fields.startedAt <= Time && Time < this->fields.endedAt;
 }

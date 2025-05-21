@@ -15,16 +15,16 @@ void __fastcall BattleInterruptionRequest__beginRequest(
   __int64 v9; // x1
   __int64 v10; // x1
 
-  if ( (byte_4A4FDFF & 1) == 0 )
+  if ( (byte_4B4642E & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_22357/*"phase"*/, *(_QWORD *)&questId);
-    sub_1B863B8(&StringLiteral_22539/*"questId"*/, v9);
-    sub_1B863B8(&StringLiteral_22746/*"restartWave"*/, v10);
-    byte_4A4FDFF = 1;
+    sub_1BDB878(&StringLiteral_22699/*"phase"*/, *(_QWORD *)&questId);
+    sub_1BDB878(&StringLiteral_22882/*"questId"*/, v9);
+    sub_1BDB878(&StringLiteral_23093/*"restartWave"*/, v10);
+    byte_4B4642E = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22539/*"questId"*/, questId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22357/*"phase"*/, phase, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22746/*"restartWave"*/, restartWave, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22882/*"questId"*/, questId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22699/*"phase"*/, phase, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23093/*"restartWave"*/, restartWave, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -36,16 +36,16 @@ System_String_o *__fastcall BattleInterruptionRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A4FDFE & 1) == 0 )
+  if ( (byte_4B4642D & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_16846/*"battle/interruption"*/, v2);
-    byte_4A4FDFE = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_17070/*"battle/interruption"*/, v2);
+    byte_4B4642D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_16846/*"battle/interruption"*/, 0LL);
+  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_17070/*"battle/interruption"*/, 0LL);
 }
 
 
@@ -59,19 +59,19 @@ void __fastcall BattleInterruptionRequest__requestCompleted(
   ResponseData_o *v7; // x0
   __int64 *v8; // x8
 
-  if ( (byte_4A4FE00 & 1) == 0 )
+  if ( (byte_4B4642F & 1) == 0 )
   {
-    sub_1B863B8(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B863B8(&StringLiteral_22061/*"ok"*/, v5);
-    sub_1B863B8(&StringLiteral_21893/*"ng"*/, v6);
-    byte_4A4FE00 = 1;
+    sub_1BDB878(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1BDB878(&StringLiteral_22401/*"ok"*/, v5);
+    sub_1BDB878(&StringLiteral_22233/*"ng"*/, v6);
+    byte_4B4642F = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(128, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_42282948(v7, 0LL) )
-    v8 = &StringLiteral_22061/*"ok"*/;
+  if ( v7 && ResponseData__checkError_43151432(v7, 0LL) )
+    v8 = &StringLiteral_22401/*"ok"*/;
   else
-    v8 = &StringLiteral_21893/*"ng"*/;
+    v8 = &StringLiteral_22233/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
 }

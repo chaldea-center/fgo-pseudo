@@ -13,28 +13,29 @@ WarBoardUserTreasureData_o *__fastcall WarBoardUserTreasureData__FromJson(
   Il2CppObject *v5; // x19
   WarBoardUserTreasureData_o *result; // x0
   __int64 v7; // x1
+  __int64 v8; // x2
   WarBoardUserTreasureData_c *klass; // x8
 
-  if ( (byte_4A4C0DB & 1) == 0 )
+  if ( (byte_4B4263B & 1) == 0 )
   {
-    sub_1B863B8(&Method_JsonManager_DeserializeArray_WarBoardUserTreasureData___, method);
-    sub_1B863B8(&JsonManager_TypeInfo, v3);
-    sub_1B863B8(&StringLiteral_15792/*"[{0}]"*/, v4);
-    byte_4A4C0DB = 1;
+    sub_1BDB878(&Method_JsonManager_DeserializeArray_WarBoardUserTreasureData___, method);
+    sub_1BDB878(&JsonManager_TypeInfo, v3);
+    sub_1BDB878(&StringLiteral_15994/*"[{0}]"*/, v4);
+    byte_4B4263B = 1;
   }
-  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_15792/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
+  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_15994/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   result = (WarBoardUserTreasureData_o *)JsonManager__DeserializeArray_object_(
                                            v5,
-                                           (const MethodInfo_2FD883C *)Method_JsonManager_DeserializeArray_WarBoardUserTreasureData___);
+                                           (const MethodInfo_30A04A4 *)Method_JsonManager_DeserializeArray_WarBoardUserTreasureData___);
   if ( result )
   {
     klass = result[1].klass;
     if ( klass )
     {
       if ( !(_DWORD)klass )
-        sub_1B8661C(result, v7);
+        sub_1BDBADC(result, v7, v8);
       return (WarBoardUserTreasureData_o *)result[1].monitor;
     }
     else
@@ -50,10 +51,10 @@ System_String_o *__fastcall WarBoardUserTreasureData__ToJson(
         WarBoardUserTreasureData_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A4C0DA & 1) == 0 )
+  if ( (byte_4B4263A & 1) == 0 )
   {
-    sub_1B863B8(&JsonManager_TypeInfo, method);
-    byte_4A4C0DA = 1;
+    sub_1BDB878(&JsonManager_TypeInfo, method);
+    byte_4B4263A = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);

@@ -17,12 +17,13 @@ System_Double_array *__fastcall PlayerFieldStatus__getAiParam(
   BattleFieldStatus_o *v10; // x19
   int32_t v11; // w0
   int v12; // w19
+  __int64 v13; // x2
 
   v10 = (BattleFieldStatus_o *)this;
-  if ( (byte_4A519CB & 1) == 0 )
+  if ( (byte_4B4803B & 1) == 0 )
   {
-    this = (PlayerFieldStatus_o *)sub_1B863B8(&double___TypeInfo, bData);
-    byte_4A519CB = 1;
+    this = (PlayerFieldStatus_o *)sub_1BDB878(&double___TypeInfo, bData);
+    byte_4B4803B = 1;
   }
   if ( param == 20 )
   {
@@ -36,15 +37,15 @@ System_Double_array *__fastcall PlayerFieldStatus__getAiParam(
       return v10->fields.wkZeroParam;
     if ( !bData )
 LABEL_13:
-      sub_1B86614(this, bData);
+      sub_1BDBAD4(this, bData);
     v11 = BattleFieldStatus__CommonAliveCount(v10, bData->fields.player_datalist, 0LL);
   }
   v12 = v11;
-  this = (PlayerFieldStatus_o *)sub_1B86460(double___TypeInfo, 1LL);
+  this = (PlayerFieldStatus_o *)sub_1BDB920(double___TypeInfo, 1LL);
   if ( !this )
     goto LABEL_13;
   if ( !LODWORD(this[1].klass) )
-    sub_1B8661C(this, bData);
+    sub_1BDBADC(this, bData, v13);
   *(double *)&this[1].monitor = (double)v12;
   return (System_Double_array *)this;
 }

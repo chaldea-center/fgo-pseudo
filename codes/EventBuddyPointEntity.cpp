@@ -1,13 +1,13 @@
 void __fastcall EventBuddyPointEntity___ctor(EventBuddyPointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4E378 & 1) == 0 )
+  if ( (byte_4B4494E & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A4E378 = 1;
+    sub_1BDB878(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B4494E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32DF9D0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall EventBuddyPointEntity__CreatePK(
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_4A4E376 & 1) == 0 )
+  if ( (byte_4B4494C & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&questId);
-    byte_4A4E376 = 1;
+    sub_1BDB878(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&questId);
+    byte_4B4494C = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            questId,
            questPhase,
-           (const MethodInfo_2F6C2D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_3031F74 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -49,26 +49,27 @@ int32_t __fastcall EventBuddyPointEntity__GetPosPoint(
 {
   _DWORD *v5; // x0
   __int64 v6; // x1
-  unsigned int v7; // w8
+  __int64 v7; // x2
+  unsigned int v8; // w8
 
-  if ( (byte_4A4E377 & 1) == 0 )
+  if ( (byte_4B4494D & 1) == 0 )
   {
-    sub_1B863B8(&int___TypeInfo, *(_QWORD *)&posIdx);
-    byte_4A4E377 = 1;
+    sub_1BDB878(&int___TypeInfo, *(_QWORD *)&posIdx);
+    byte_4B4494D = 1;
   }
-  v5 = (_DWORD *)sub_1B86460(int___TypeInfo, 6LL);
+  v5 = (_DWORD *)sub_1BDB920(int___TypeInfo, 6LL);
   if ( !v5 )
-    sub_1B86614(0LL, v6);
-  v7 = v5[6];
-  if ( !v7
-    || (v5[8] = this->fields.pointPos1, v7 == 1)
-    || (v5[9] = this->fields.pointPos2, v7 <= 2)
-    || (v5[10] = this->fields.pointPos3, v7 == 3)
-    || (v5[11] = this->fields.pointPos4, v7 <= 4)
-    || (v5[12] = this->fields.pointPos5, v7 == 5)
-    || (v5[13] = this->fields.pointPos6, v7 <= posIdx) )
+    sub_1BDBAD4(0LL, v6);
+  v8 = v5[6];
+  if ( !v8
+    || (v5[8] = this->fields.pointPos1, v8 == 1)
+    || (v5[9] = this->fields.pointPos2, v8 <= 2)
+    || (v5[10] = this->fields.pointPos3, v8 == 3)
+    || (v5[11] = this->fields.pointPos4, v8 <= 4)
+    || (v5[12] = this->fields.pointPos5, v8 == 5)
+    || (v5[13] = this->fields.pointPos6, v8 <= posIdx) )
   {
-    sub_1B8661C(v5, v6);
+    sub_1BDBADC(v5, v6, v7);
   }
   return v5[posIdx + 8];
 }

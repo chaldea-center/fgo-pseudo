@@ -14,7 +14,7 @@ void __fastcall SelectBonus___ctor(
 }
 
 
-void __fastcall SelectBonus___ctor_33752844(SelectBonus_o *this, const MethodInfo *method)
+void __fastcall SelectBonus___ctor_34496736(SelectBonus_o *this, const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }

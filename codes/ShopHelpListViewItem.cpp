@@ -7,9 +7,9 @@ void __fastcall ShopHelpListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  ListViewItem___ctor_41775716((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42734232((ListViewItem_o *)this, index, 0LL);
   this->fields.info = info;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.info, (int32_t)info, v6, v7);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.info, (int32_t)info, v6, v7);
 }
 
 
@@ -19,7 +19,7 @@ System_String_o *__fastcall ShopHelpListViewItem__get_ImageName(ShopHelpListView
 
   info = this->fields.info;
   if ( !info )
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   return info->fields._ImageName_k__BackingField;
 }
 
@@ -37,14 +37,14 @@ System_String_o *__fastcall ShopHelpListViewItem__get_InfoText(ShopHelpListViewI
   System_String_o *TextCode_k__BackingField; // x19
 
   v2 = this;
-  if ( (byte_4A4A803 & 1) == 0 )
+  if ( (byte_4B40DD1 & 1) == 0 )
   {
-    this = (ShopHelpListViewItem_o *)sub_1B863B8(&LocalizationManager_TypeInfo, method);
-    byte_4A4A803 = 1;
+    this = (ShopHelpListViewItem_o *)sub_1BDB878(&LocalizationManager_TypeInfo, method);
+    byte_4B40DD1 = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   TextCode_k__BackingField = info->fields._TextCode_k__BackingField;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -58,7 +58,7 @@ bool __fastcall ShopHelpListViewItem__get_IsStone(ShopHelpListViewItem_o *this, 
 
   info = this->fields.info;
   if ( !info )
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   return info->fields._Kind_k__BackingField == 6;
 }
 
@@ -69,6 +69,6 @@ int32_t __fastcall ShopHelpListViewItem__get_LineCount(ShopHelpListViewItem_o *t
 
   info = this->fields.info;
   if ( !info )
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   return info->fields._Line_k__BackingField;
 }

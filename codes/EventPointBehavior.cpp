@@ -12,5 +12,5 @@ void __fastcall EventPointBehavior___ctor(EventPointBehavior_o *this, const Meth
   *(_QWORD *)&v2[-1].fields._Type_k__BackingField = 0LL;
   v2[-1].fields.viewObject = 0LL;
   LODWORD(v2[-1].fields._ThumbnailSpritePath_k__BackingField) = 0;
-  sub_1B8635C(v2, 0, v3, v4);
+  sub_1BDB81C(v2, 0, v3, v4);
 }

@@ -11,17 +11,17 @@ void __fastcall BattleChrControl__OnAnimEvent(
 {
   UnityEngine_GameObject_o *targetObject; // x0
 
-  if ( (byte_4A4D892 & 1) == 0 )
+  if ( (byte_4B43E3C & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_9681/*"OnAnimEvent"*/, ev);
-    byte_4A4D892 = 1;
+    sub_1BDB878(&StringLiteral_9831/*"OnAnimEvent"*/, ev);
+    byte_4B43E3C = 1;
   }
   targetObject = this->fields.targetObject;
   if ( !targetObject )
-    sub_1B86614(0LL, ev);
-  UnityEngine_GameObject__SendMessage_69337672(
+    sub_1BDBAD4(0LL, ev);
+  UnityEngine_GameObject__SendMessage_70265988(
     targetObject,
-    (System_String_o *)StringLiteral_9681/*"OnAnimEvent"*/,
+    (System_String_o *)StringLiteral_9831/*"OnAnimEvent"*/,
     (Il2CppObject *)ev,
     0LL);
 }
@@ -35,5 +35,5 @@ void __fastcall BattleChrControl__setTarget(
   const MethodInfo *v3; // x3
 
   this->fields.targetObject = obj;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.targetObject, (int32_t)obj, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.targetObject, (int32_t)obj, (int32_t)method, v3);
 }

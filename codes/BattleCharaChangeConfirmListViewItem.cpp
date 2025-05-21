@@ -15,9 +15,9 @@ void __fastcall BattleCharaChangeConfirmListViewItem___ctor(
   this->fields._SvtId_k__BackingField = svtId;
   this->fields._LimitCount_k__BackingField = limitCount;
   this->fields._NowData_k__BackingField = nowData;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._NowData_k__BackingField, (int32_t)nowData, v11, v12);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._NowData_k__BackingField, (int32_t)nowData, v11, v12);
   this->fields._NextData_k__BackingField = nextData;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._NextData_k__BackingField, (int32_t)nextData, v13, v14);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._NextData_k__BackingField, (int32_t)nextData, v13, v14);
 }
 
 
@@ -74,13 +74,13 @@ void __fastcall BattleCharaChangeConfirmListViewItem_DispLimitCountData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._DispLimitCount_k__BackingField = dispLimitCount;
   this->fields._TreasureDeviceInfo_k__BackingField = tdInfo;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._TreasureDeviceInfo_k__BackingField, (int32_t)tdInfo, v13, v14);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._TreasureDeviceInfo_k__BackingField, (int32_t)tdInfo, v13, v14);
   this->fields._SkillInfoArray_k__BackingField = skillInfoArray;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._SkillInfoArray_k__BackingField, (int32_t)skillInfoArray, v15, v16);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._SkillInfoArray_k__BackingField, (int32_t)skillInfoArray, v15, v16);
   this->fields._Status_k__BackingField = status;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Status_k__BackingField, (int32_t)status, v17, v18);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Status_k__BackingField, (int32_t)status, v17, v18);
   this->fields._ClassPassiveSkillArray_k__BackingField = classSkillArray;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)&this->fields._ClassPassiveSkillArray_k__BackingField,
     (int32_t)classSkillArray,
     v19,

@@ -12,17 +12,18 @@ BuffList_ACTION_array *__fastcall CreateTreasureDeviceBeforeSkillTask__get_Targe
 {
   BuffList_ACTION_array *result; // x0
   __int64 v3; // x1
+  __int64 v4; // x2
 
-  if ( (byte_4A5124C & 1) == 0 )
+  if ( (byte_4B478A9 & 1) == 0 )
   {
-    sub_1B863B8(&BuffList_ACTION___TypeInfo, method);
-    byte_4A5124C = 1;
+    sub_1BDB878(&BuffList_ACTION___TypeInfo, method);
+    byte_4B478A9 = 1;
   }
-  result = (BuffList_ACTION_array *)sub_1B86460(BuffList_ACTION___TypeInfo, 1LL);
+  result = (BuffList_ACTION_array *)sub_1BDB920(BuffList_ACTION___TypeInfo, 1LL);
   if ( !result )
-    sub_1B86614(0LL, v3);
+    sub_1BDBAD4(0LL, v3);
   if ( !result->max_length )
-    sub_1B8661C(result, v3);
+    sub_1BDBADC(result, v3, v4);
   result->m_Items[1] = 141;
   return result;
 }

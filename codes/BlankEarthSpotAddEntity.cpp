@@ -1,13 +1,13 @@
 void __fastcall BlankEarthSpotAddEntity___ctor(BlankEarthSpotAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4E151 & 1) == 0 )
+  if ( (byte_4B44717 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A4E151 = 1;
+    sub_1BDB878(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B44717 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32DF9D0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall BlankEarthSpotAddEntity__CreatePK(
         int32_t overwriteType,
         const MethodInfo *method)
 {
-  if ( (byte_4A4E150 & 1) == 0 )
+  if ( (byte_4B44716 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
-    byte_4A4E150 = 1;
+    sub_1BDB878(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
+    byte_4B44716 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            blankEarthSpotId,
            priority,
            overwriteType,
-           (const MethodInfo_2F6C2D0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_3031F74 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -62,10 +62,10 @@ bool __fastcall BlankEarthSpotAddEntity__IsOpen(
   int32_t condType; // w23
   int64_t condNum; // x21
 
-  if ( (byte_4A4E14F & 1) == 0 )
+  if ( (byte_4B44715 & 1) == 0 )
   {
-    sub_1B863B8(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
-    byte_4A4E14F = 1;
+    sub_1BDB878(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
+    byte_4B44715 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

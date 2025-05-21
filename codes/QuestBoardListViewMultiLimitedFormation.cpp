@@ -36,15 +36,15 @@ void __fastcall QuestBoardListViewMultiLimitedFormation__Init(
   const MethodInfo *v30; // x3
   const MethodInfo *v31; // x1
 
-  if ( (byte_4A4B29C & 1) == 0 )
+  if ( (byte_4B417E4 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Linq_Enumerable_OrderBy_QuestPhaseDetailEntity_BoardInfo__int___, label);
-    sub_1B863B8(&Method_System_Linq_Enumerable_ToArray_QuestPhaseDetailEntity_BoardInfo___, v11);
-    sub_1B863B8(&System_Func_QuestPhaseDetailEntity_BoardInfo__int__TypeInfo, v12);
-    sub_1B863B8(&QuestBoardListViewMultiLimitedFormation_TypeInfo, v13);
-    sub_1B863B8(&Method_QuestBoardListViewMultiLimitedFormation___c__Init_b__9_0__, v14);
-    sub_1B863B8(&QuestBoardListViewMultiLimitedFormation___c_TypeInfo, v15);
-    byte_4A4B29C = 1;
+    sub_1BDB878(&Method_System_Linq_Enumerable_OrderBy_QuestPhaseDetailEntity_BoardInfo__int___, label);
+    sub_1BDB878(&Method_System_Linq_Enumerable_ToArray_QuestPhaseDetailEntity_BoardInfo___, v11);
+    sub_1BDB878(&System_Func_QuestPhaseDetailEntity_BoardInfo__int__TypeInfo, v12);
+    sub_1BDB878(&QuestBoardListViewMultiLimitedFormation_TypeInfo, v13);
+    sub_1BDB878(&Method_QuestBoardListViewMultiLimitedFormation___c__Init_b__9_0__, v14);
+    sub_1BDB878(&QuestBoardListViewMultiLimitedFormation___c_TypeInfo, v15);
+    byte_4B417E4 = 1;
   }
   v16 = QuestBoardListViewMultiLimitedFormation___c_TypeInfo;
   if ( !QuestBoardListViewMultiLimitedFormation___c_TypeInfo->_2.cctor_finished )
@@ -61,7 +61,7 @@ void __fastcall QuestBoardListViewMultiLimitedFormation__Init(
       v16 = QuestBoardListViewMultiLimitedFormation___c_TypeInfo;
     }
     v18 = (Il2CppObject *)v16->static_fields->__9;
-    _9__9_0 = (System_Func_object__int__o *)sub_1B86604(System_Func_QuestPhaseDetailEntity_BoardInfo__int__TypeInfo);
+    _9__9_0 = (System_Func_object__int__o *)sub_1BDBAC4(System_Func_QuestPhaseDetailEntity_BoardInfo__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__9_0,
       v18,
@@ -69,23 +69,23 @@ void __fastcall QuestBoardListViewMultiLimitedFormation__Init(
       0LL);
     static_fields = QuestBoardListViewMultiLimitedFormation___c_TypeInfo->static_fields;
     static_fields->__9__9_0 = (struct System_Func_QuestPhaseDetailEntity_BoardInfo__int__o *)_9__9_0;
-    sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v20, v21);
+    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v20, v21);
   }
   v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)list,
                                                                (System_Func_TSource__TKey__o *)_9__9_0,
-                                                               (const MethodInfo_2F9AB50 *)Method_System_Linq_Enumerable_OrderBy_QuestPhaseDetailEntity_BoardInfo__int___);
+                                                               (const MethodInfo_305F578 *)Method_System_Linq_Enumerable_OrderBy_QuestPhaseDetailEntity_BoardInfo__int___);
   v23 = System_Linq_Enumerable__ToArray_object_(
           v22,
-          (const MethodInfo_2FA98D8 *)Method_System_Linq_Enumerable_ToArray_QuestPhaseDetailEntity_BoardInfo___);
+          (const MethodInfo_30707A8 *)Method_System_Linq_Enumerable_ToArray_QuestPhaseDetailEntity_BoardInfo___);
   if ( !this )
-    sub_1B86614(v23, v24);
+    sub_1BDBAD4(v23, v24);
   this->fields.InfoList = (struct QuestPhaseDetailEntity_BoardInfo_array *)v23;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.InfoList, (int32_t)v23, v25, v26);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.InfoList, (int32_t)v23, v25, v26);
   this->fields.Label = label;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.Label, (int32_t)label, v27, v28);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.Label, (int32_t)label, v27, v28);
   this->fields.Sprite = sprite;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.Sprite, (int32_t)sprite, v29, v30);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.Sprite, (int32_t)sprite, v29, v30);
   this->fields.CurrentIndex = 0;
   *(_WORD *)&this->fields.Forward = 0;
   this->fields.MaxWidth = maxWidth;
@@ -98,64 +98,65 @@ void __fastcall QuestBoardListViewMultiLimitedFormation__SetNext(
         QuestBoardListViewMultiLimitedFormation_o *this,
         const MethodInfo *method)
 {
-  QuestBoardListViewMultiLimitedFormation_o *v2; // x19
+  __int64 v2; // x2
+  QuestBoardListViewMultiLimitedFormation_o *v3; // x19
   struct QuestPhaseDetailEntity_BoardInfo_array *InfoList; // x8
   __int64 CurrentIndex; // x9
-  QuestPhaseDetailEntity_BoardInfo_o *v5; // x8
-  struct QuestPhaseDetailEntity_BoardInfo_array *v6; // x8
-  __int64 v7; // x9
-  QuestPhaseDetailEntity_BoardInfo_o *v8; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v9; // x0
-  int32_t v10; // w21
+  QuestPhaseDetailEntity_BoardInfo_o *v6; // x8
+  struct QuestPhaseDetailEntity_BoardInfo_array *v7; // x8
+  __int64 v8; // x9
+  QuestPhaseDetailEntity_BoardInfo_o *v9; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
+  int32_t v11; // w21
 
-  v2 = this;
-  if ( (byte_4A4B29D & 1) == 0 )
+  v3 = this;
+  if ( (byte_4B417E5 & 1) == 0 )
   {
-    this = (QuestBoardListViewMultiLimitedFormation_o *)sub_1B863B8(
+    this = (QuestBoardListViewMultiLimitedFormation_o *)sub_1BDB878(
                                                           &Method_System_Linq_Enumerable_Count_QuestPhaseDetailEntity_BoardInfo___,
                                                           method);
-    byte_4A4B29D = 1;
+    byte_4B417E5 = 1;
   }
-  InfoList = v2->fields.InfoList;
+  InfoList = v3->fields.InfoList;
   if ( !InfoList )
     goto LABEL_14;
-  CurrentIndex = v2->fields.CurrentIndex;
+  CurrentIndex = v3->fields.CurrentIndex;
   if ( (unsigned int)CurrentIndex >= InfoList->max_length )
     goto LABEL_15;
-  v5 = InfoList->m_Items[CurrentIndex];
-  if ( !v5
-    || (this = (QuestBoardListViewMultiLimitedFormation_o *)v5->fields.text) == 0LL
+  v6 = InfoList->m_Items[CurrentIndex];
+  if ( !v6
+    || (this = (QuestBoardListViewMultiLimitedFormation_o *)v6->fields.text) == 0LL
     || (this = (QuestBoardListViewMultiLimitedFormation_o *)QuestPhaseDetailEntity_BoardInfo_TextInfo__SetText(
                                                               (QuestPhaseDetailEntity_BoardInfo_TextInfo_o *)this,
-                                                              v2->fields.Label,
-                                                              v2->fields.MaxWidth,
+                                                              v3->fields.Label,
+                                                              v3->fields.MaxWidth,
                                                               0LL),
-        (v6 = v2->fields.InfoList) == 0LL) )
+        (v7 = v3->fields.InfoList) == 0LL) )
   {
 LABEL_14:
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   }
-  v7 = v2->fields.CurrentIndex;
-  if ( (unsigned int)v7 >= v6->max_length )
+  v8 = v3->fields.CurrentIndex;
+  if ( (unsigned int)v8 >= v7->max_length )
 LABEL_15:
-    sub_1B8661C(this, method);
-  v8 = v6->m_Items[v7];
-  if ( !v8 )
+    sub_1BDBADC(this, method, v2);
+  v9 = v7->m_Items[v8];
+  if ( !v9 )
     goto LABEL_14;
-  this = (QuestBoardListViewMultiLimitedFormation_o *)v8->fields.image;
+  this = (QuestBoardListViewMultiLimitedFormation_o *)v9->fields.image;
   if ( !this )
     goto LABEL_14;
   QuestPhaseDetailEntity_BoardInfo_ImageInfo__SetImage(
     (QuestPhaseDetailEntity_BoardInfo_ImageInfo_o *)this,
-    v2->fields.Sprite,
+    v3->fields.Sprite,
     0LL);
-  v9 = (System_Collections_Generic_IEnumerable_TSource__o *)v2->fields.InfoList;
-  v10 = v2->fields.CurrentIndex + 1;
-  v2->fields.CurrentIndex = v10;
-  if ( v10 >= System_Linq_Enumerable__Count_object_(
-                v9,
-                (const MethodInfo_2F8B4FC *)Method_System_Linq_Enumerable_Count_QuestPhaseDetailEntity_BoardInfo___) )
-    v2->fields.CurrentIndex = 0;
+  v10 = (System_Collections_Generic_IEnumerable_TSource__o *)v3->fields.InfoList;
+  v11 = v3->fields.CurrentIndex + 1;
+  v3->fields.CurrentIndex = v11;
+  if ( v11 >= System_Linq_Enumerable__Count_object_(
+                v10,
+                (const MethodInfo_304FE28 *)Method_System_Linq_Enumerable_Count_QuestPhaseDetailEntity_BoardInfo___) )
+    v3->fields.CurrentIndex = 0;
 }
 
 
@@ -171,10 +172,10 @@ void __fastcall QuestBoardListViewMultiLimitedFormation__Update(
   int OldForward; // w8
   int v9; // w9
 
-  if ( (byte_4A4B29B & 1) == 0 )
+  if ( (byte_4B417E3 & 1) == 0 )
   {
-    sub_1B863B8(&QuestBoardListViewMultiLimitedFormation_TypeInfo, method);
-    byte_4A4B29B = 1;
+    sub_1BDB878(&QuestBoardListViewMultiLimitedFormation_TypeInfo, method);
+    byte_4B417E3 = 1;
   }
   v3 = (float)(UnityEngine_Time__get_unscaledTime(0LL)
              - QuestBoardListViewMultiLimitedFormation_TypeInfo->static_fields->InitTime)
@@ -190,10 +191,10 @@ void __fastcall QuestBoardListViewMultiLimitedFormation__Update(
   }
   this->fields.OldForward = this->fields.Forward;
   v7 = fmodf(v3, 2.0);
-  if ( !byte_4A487E0 )
+  if ( !byte_4B3E910 )
   {
-    sub_1B863B8(&System_Math_TypeInfo, v6);
-    byte_4A487E0 = 1;
+    sub_1BDB878(&System_Math_TypeInfo, v6);
+    byte_4B3E910 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -216,15 +217,15 @@ void __fastcall QuestBoardListViewMultiLimitedFormation___c___cctor(const Method
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4A4B29E & 1) == 0 )
+  if ( (byte_4B417E6 & 1) == 0 )
   {
-    sub_1B863B8(&QuestBoardListViewMultiLimitedFormation___c_TypeInfo, v1);
-    byte_4A4B29E = 1;
+    sub_1BDB878(&QuestBoardListViewMultiLimitedFormation___c_TypeInfo, v1);
+    byte_4B417E6 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(QuestBoardListViewMultiLimitedFormation___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BDBAC4(QuestBoardListViewMultiLimitedFormation___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   QuestBoardListViewMultiLimitedFormation___c_TypeInfo->static_fields->__9 = (struct QuestBoardListViewMultiLimitedFormation___c_o *)v2;
-  sub_1B8635C(
+  sub_1BDB81C(
     (CGThumbnailListItem_o *)QuestBoardListViewMultiLimitedFormation___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -246,6 +247,6 @@ int32_t __fastcall QuestBoardListViewMultiLimitedFormation___c___Init_b__9_0(
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   return info->fields.priority;
 }

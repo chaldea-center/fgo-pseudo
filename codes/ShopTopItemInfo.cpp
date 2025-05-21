@@ -17,10 +17,10 @@ void __fastcall ShopTopItemInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v12->fields._Kind_k__BackingField = kind;
   v12->fields._TextCode_k__BackingField = textCode;
-  sub_1B8635C((CGThumbnailListItem_o *)&v12->fields._TextCode_k__BackingField, (int32_t)textCode, v13, v14);
+  sub_1BDB81C((CGThumbnailListItem_o *)&v12->fields._TextCode_k__BackingField, (int32_t)textCode, v13, v14);
   v12->fields._ImageName_k__BackingField = imageName;
   v12 = (ShopTopItemInfo_o *)((char *)v12 + 32);
-  sub_1B8635C((CGThumbnailListItem_o *)v12, (int32_t)imageName, v15, v16);
+  sub_1BDB81C((CGThumbnailListItem_o *)v12, (int32_t)imageName, v15, v16);
   LODWORD(v12->monitor) = state;
   HIDWORD(v12->monitor) = shopType;
 }
@@ -64,7 +64,7 @@ void __fastcall ShopTopItemInfo__set_ImageName(
   const MethodInfo *v3; // x3
 
   this->fields._ImageName_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._ImageName_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._ImageName_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -94,5 +94,5 @@ void __fastcall ShopTopItemInfo__set_TextCode(
   const MethodInfo *v3; // x3
 
   this->fields._TextCode_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._TextCode_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._TextCode_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

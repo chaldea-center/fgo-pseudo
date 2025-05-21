@@ -16,52 +16,51 @@ CreateSkillTaskFromBuffAction_array *__fastcall BattleAddSkillTaskBeforeTreasure
   Il2CppObject *v5; // x20
   __int64 v6; // x0
   __int64 v7; // x1
-  int32_t v8; // w2
+  __int64 v8; // x2
   const MethodInfo *v9; // x3
   Il2CppObject *v10; // x20
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  __int64 v14; // x0
+  const MethodInfo *v11; // x3
+  __int64 v13; // x0
 
-  if ( (byte_4A51241 & 1) == 0 )
+  if ( (byte_4B4789E & 1) == 0 )
   {
-    sub_1B863B8(&CreateComboStartSkillTask_TypeInfo, method);
-    sub_1B863B8(&CreateSkillTaskFromBuffAction___TypeInfo, v2);
-    sub_1B863B8(&CreateTreasureDeviceBeforeSkillTask_TypeInfo, v3);
-    byte_4A51241 = 1;
+    sub_1BDB878(&CreateComboStartSkillTask_TypeInfo, method);
+    sub_1BDB878(&CreateSkillTaskFromBuffAction___TypeInfo, v2);
+    sub_1BDB878(&CreateTreasureDeviceBeforeSkillTask_TypeInfo, v3);
+    byte_4B4789E = 1;
   }
-  v4 = (CreateSkillTaskFromBuffAction_array *)sub_1B86460(CreateSkillTaskFromBuffAction___TypeInfo, 2LL);
-  v5 = (Il2CppObject *)sub_1B86604(CreateComboStartSkillTask_TypeInfo);
+  v4 = (CreateSkillTaskFromBuffAction_array *)sub_1BDB920(CreateSkillTaskFromBuffAction___TypeInfo, 2LL);
+  v5 = (Il2CppObject *)sub_1BDBAC4(CreateComboStartSkillTask_TypeInfo);
   System_Object___ctor(v5, 0LL);
   if ( !v4 )
-    sub_1B86614(v6, v7);
+    sub_1BDBAD4(v6, v7);
   if ( v5 )
   {
-    v6 = sub_1B864F4(v5, v4->obj.klass->_1.element_class);
+    v6 = sub_1BDB9B4(v5, v4->obj.klass->_1.element_class);
     if ( !v6 )
       goto LABEL_12;
   }
   if ( !v4->max_length )
     goto LABEL_11;
   v4->m_Items[0] = (CreateSkillTaskFromBuffAction_o *)v5;
-  sub_1B8635C((CGThumbnailListItem_o *)v4->m_Items, (int32_t)v5, v8, v9);
-  v10 = (Il2CppObject *)sub_1B86604(CreateTreasureDeviceBeforeSkillTask_TypeInfo);
+  sub_1BDB81C((CGThumbnailListItem_o *)v4->m_Items, (int32_t)v5, v8, v9);
+  v10 = (Il2CppObject *)sub_1BDBAC4(CreateTreasureDeviceBeforeSkillTask_TypeInfo);
   System_Object___ctor(v10, 0LL);
   if ( v10 )
   {
-    v6 = sub_1B864F4(v10, v4->obj.klass->_1.element_class);
+    v6 = sub_1BDB9B4(v10, v4->obj.klass->_1.element_class);
     if ( !v6 )
     {
 LABEL_12:
-      v14 = sub_1B86638(v6);
-      sub_1B864E0(v14, 0LL);
+      v13 = sub_1BDBAF8(v6);
+      sub_1BDB9A0(v13, 0LL);
     }
   }
   if ( v4->max_length <= 1 )
 LABEL_11:
-    sub_1B8661C(v6, v7);
+    sub_1BDBADC(v6, v7, v8);
   v4->m_Items[1] = (CreateSkillTaskFromBuffAction_o *)v10;
-  sub_1B8635C((CGThumbnailListItem_o *)&v4->m_Items[1], (int32_t)v10, v11, v12);
+  sub_1BDB81C((CGThumbnailListItem_o *)&v4->m_Items[1], (int32_t)v10, v8, v11);
   return v4;
 }
 

@@ -3,10 +3,10 @@ void __fastcall UserPresentHistoryDialog___cctor(const MethodInfo *method)
   __int64 v1; // x1
   struct UserPresentHistoryDialog_StaticFields *static_fields; // x8
 
-  if ( (byte_4A4D28F & 1) == 0 )
+  if ( (byte_4B4380F & 1) == 0 )
   {
-    sub_1B863B8(&UserPresentHistoryDialog_TypeInfo, v1);
-    byte_4A4D28F = 1;
+    sub_1BDB878(&UserPresentHistoryDialog_TypeInfo, v1);
+    byte_4B4380F = 1;
   }
   static_fields = UserPresentHistoryDialog_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->MESSAGE_HISTORY_POS_Y = 5LL;
@@ -22,7 +22,7 @@ void __fastcall UserPresentHistoryDialog__Init(UserPresentHistoryDialog_o *this,
   TextLabelScrollDialog__Init((TextLabelScrollDialog_o *)this, method);
   userPresentHistoryListViewManager = (ListViewManager_o *)this->fields.userPresentHistoryListViewManager;
   if ( !userPresentHistoryListViewManager )
-    sub_1B86614(0LL, v3);
+    sub_1BDBAD4(0LL, v3);
   ListViewManager__DestroyList(userPresentHistoryListViewManager, 0LL);
 }
 
@@ -35,23 +35,23 @@ void __fastcall UserPresentHistoryDialog__OnClickClose(UserPresentHistoryDialog_
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4A4D28E & 1) == 0 )
+  if ( (byte_4B4380E & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Method_UserPresentHistoryDialog_OnClickClose__, v3);
-    sub_1B863B8(&Method_UserPresentHistoryDialog__OnClickClose_b__11_0__, v4);
-    byte_4A4D28E = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&Method_UserPresentHistoryDialog_OnClickClose__, v3);
+    sub_1BDB878(&Method_UserPresentHistoryDialog__OnClickClose_b__11_0__, v4);
+    byte_4B4380E = 1;
   }
   if ( !this->fields.state )
   {
     v5 = Method_UserPresentHistoryDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_UserPresentHistoryDialog_OnClickClose__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1B863D0(Method_UserPresentHistoryDialog_OnClickClose__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1B8639C(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BDB890(Method_UserPresentHistoryDialog_OnClickClose__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
   }
   this->fields.state = 2;
-  v7 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_UserPresentHistoryDialog__OnClickClose_b__11_0__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -81,16 +81,16 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
   int32_t v22; // w2
   const MethodInfo *v23; // x3
 
-  if ( (byte_4A4D28D & 1) == 0 )
+  if ( (byte_4B4380D & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, method);
-    sub_1B863B8(&UserPresentHistoryDialog_TypeInfo, v3);
-    sub_1B863B8(&StringLiteral_10300/*"PRESENT_HISTORY_NO_HISTORY_MESSAGE"*/, v4);
-    sub_1B863B8(&StringLiteral_10298/*"PRESENT_HISTORY_DIALOG_SUBTITLE"*/, v5);
-    sub_1B863B8(&StringLiteral_10299/*"PRESENT_HISTORY_DIALOG_TITLE"*/, v6);
-    sub_1B863B8(&StringLiteral_3676/*"COMMON_CONFIRM_CLOSE"*/, v7);
-    sub_1B863B8(&StringLiteral_1/*""*/, v8);
-    byte_4A4D28D = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, method);
+    sub_1BDB878(&UserPresentHistoryDialog_TypeInfo, v3);
+    sub_1BDB878(&StringLiteral_10450/*"PRESENT_HISTORY_NO_HISTORY_MESSAGE"*/, v4);
+    sub_1BDB878(&StringLiteral_10448/*"PRESENT_HISTORY_DIALOG_SUBTITLE"*/, v5);
+    sub_1BDB878(&StringLiteral_10449/*"PRESENT_HISTORY_DIALOG_TITLE"*/, v6);
+    sub_1BDB878(&StringLiteral_3717/*"COMMON_CONFIRM_CLOSE"*/, v7);
+    sub_1BDB878(&StringLiteral_1/*""*/, v8);
+    byte_4B4380D = 1;
   }
   ((void (__fastcall *)(UserPresentHistoryDialog_o *, void *))this->klass->vtable._7_Init.method)(
     this,
@@ -112,7 +112,7 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)LocalizationManager__Get(
-                                                                               (System_String_o *)StringLiteral_10298/*"PRESENT_HISTORY_DIALOG_SUBTITLE"*/,
+                                                                               (System_String_o *)StringLiteral_10448/*"PRESENT_HISTORY_DIALOG_SUBTITLE"*/,
                                                                                0LL);
   if ( !subTitle )
     goto LABEL_28;
@@ -131,7 +131,7 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
   UILabel__set_text((UILabel_o *)userPresentHistoryListViewManager, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   titleLabel = this->fields.titleLabel;
   userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)LocalizationManager__Get(
-                                                                               (System_String_o *)StringLiteral_10299/*"PRESENT_HISTORY_DIALOG_TITLE"*/,
+                                                                               (System_String_o *)StringLiteral_10449/*"PRESENT_HISTORY_DIALOG_TITLE"*/,
                                                                                0LL);
   if ( !titleLabel )
     goto LABEL_28;
@@ -154,7 +154,7 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)LocalizationManager__Get(
-                                                                                     (System_String_o *)StringLiteral_10300/*"PRESENT_HISTORY_NO_HISTORY_MESSAGE"*/,
+                                                                                     (System_String_o *)StringLiteral_10450/*"PRESENT_HISTORY_NO_HISTORY_MESSAGE"*/,
                                                                                      0LL);
         if ( messageLabel )
         {
@@ -164,7 +164,7 @@ void __fastcall UserPresentHistoryDialog__Open(UserPresentHistoryDialog_o *this,
       }
     }
 LABEL_28:
-    sub_1B86614(userPresentHistoryListViewManager, v9);
+    sub_1BDBAD4(userPresentHistoryListViewManager, v9);
   }
 LABEL_20:
   userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)this->fields.scrollView;
@@ -185,19 +185,19 @@ LABEL_20:
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)LocalizationManager__Get(
-                                                                               (System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CLOSE"*/,
+                                                                               (System_String_o *)StringLiteral_3717/*"COMMON_CONFIRM_CLOSE"*/,
                                                                                0LL);
   if ( !closeLabel )
     goto LABEL_28;
   UILabel__set_text(closeLabel, (System_String_o *)userPresentHistoryListViewManager, 0LL);
   this->fields.closeAction = 0LL;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.closeAction, 0, v20, v21);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.closeAction, 0, v20, v21);
   userPresentHistoryListViewManager = (UserPresentHistoryListViewManager_o *)this->fields.decideButton;
   if ( !userPresentHistoryListViewManager )
     goto LABEL_28;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)userPresentHistoryListViewManager, 0, 0LL);
   this->fields.decideAction = 0LL;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.decideAction, 0, v22, v23);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.decideAction, 0, v22, v23);
 }
 
 

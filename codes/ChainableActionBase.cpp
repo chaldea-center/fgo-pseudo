@@ -9,10 +9,10 @@ void __fastcall ChainableActionBase___ctor(ChainableActionBase_o *this, const Me
   v2 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v2->fields.endCallback = 0LL;
-  sub_1B8635C((CGThumbnailListItem_o *)&v2->fields, 0, v3, v4);
+  sub_1BDB81C((CGThumbnailListItem_o *)&v2->fields, 0, v3, v4);
   v2->fields.nextAction = 0LL;
   v2 = (ChainableActionBase_o *)((char *)v2 + 24);
-  sub_1B8635C((CGThumbnailListItem_o *)v2, 0, v5, v6);
+  sub_1BDB81C((CGThumbnailListItem_o *)v2, 0, v5, v6);
   LOBYTE(v2->monitor) = 0;
 }
 
@@ -65,15 +65,15 @@ ChainableActionBase_o *__fastcall ChainableActionBase__Final(
   System_Action_c *v11; // x1
 
   v4 = this;
-  if ( (byte_4A52D5A & 1) == 0 )
+  if ( (byte_4B49252 & 1) == 0 )
   {
-    this = (ChainableActionBase_o *)sub_1B863B8(&System_Action_TypeInfo, endCallbacks);
-    byte_4A52D5A = 1;
+    this = (ChainableActionBase_o *)sub_1BDB878(&System_Action_TypeInfo, endCallbacks);
+    byte_4B49252 = 1;
   }
   if ( !v4->fields._IsExecuted_k__BackingField )
   {
     if ( !endCallbacks )
-      sub_1B86614(this, endCallbacks);
+      sub_1BDBAD4(this, endCallbacks);
     v5 = *(_QWORD *)&endCallbacks->max_length;
     if ( (int)v5 >= 1 )
     {
@@ -90,16 +90,16 @@ ChainableActionBase_o *__fastcall ChainableActionBase__Final(
           if ( (System_Action_c *)v8->klass != System_Action_TypeInfo
             || (*p_fields = v8, (System_Action_c *)v8->klass != v11) )
           {
-            sub_1B868D4(v8);
+            sub_1BDBD94(v8);
 LABEL_16:
-            sub_1B8661C(this, endCallbacks);
+            sub_1BDBADC(this, endCallbacks, method);
           }
         }
         else
         {
           *p_fields = 0LL;
         }
-        sub_1B8635C((CGThumbnailListItem_o *)&v4->fields, (int32_t)v8, v9, v10);
+        sub_1BDB81C((CGThumbnailListItem_o *)&v4->fields, (int32_t)v8, v9, v10);
         LODWORD(v5) = endCallbacks->max_length;
         ++v6;
       }
@@ -118,7 +118,7 @@ void __fastcall ChainableActionBase__SetNextAction(
   const MethodInfo *v3; // x3
 
   this->fields.nextAction = nextAction;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.nextAction, (int32_t)nextAction, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.nextAction, (int32_t)nextAction, (int32_t)method, v3);
 }
 
 

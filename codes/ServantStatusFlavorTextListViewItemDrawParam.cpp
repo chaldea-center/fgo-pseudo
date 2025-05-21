@@ -2,10 +2,10 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam___cctor(const Metho
 {
   __int64 v1; // x1
 
-  if ( (byte_4A4B18C & 1) == 0 )
+  if ( (byte_4B412F7 & 1) == 0 )
   {
-    sub_1B863B8(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo, v1);
-    byte_4A4B18C = 1;
+    sub_1BDB878(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo, v1);
+    byte_4B412F7 = 1;
   }
   *ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->static_fields = (struct ServantStatusFlavorTextListViewItemDrawParam_StaticFields)0xFFFFFF8F0000009ALL;
 }
@@ -31,7 +31,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__Awake(
 
   baseSprite = this->fields.baseSprite;
   if ( !baseSprite )
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   titleRoot = this->fields.titleRoot;
   this->fields.baseSpriteHeightBase = baseSprite->fields.mHeight;
   LocalPositionY = GameObjectExtensions__GetLocalPositionY(titleRoot, 0LL);
@@ -68,21 +68,21 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetCondTitle(
   float v16; // s8
   UILabel_o *v17; // x19
 
-  if ( (byte_4A4B18B & 1) == 0 )
+  if ( (byte_4B412F6 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_UISprite___, title);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B863B8(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo, v6);
-    sub_1B863B8(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v7);
-    sub_1B863B8(&StringLiteral_1/*""*/, v8);
-    byte_4A4B18B = 1;
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_UISprite___, title);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BDB878(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo, v6);
+    sub_1BDB878(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v7);
+    sub_1BDB878(&StringLiteral_1/*""*/, v8);
+    byte_4B412F6 = 1;
   }
   titleServantBase = this->fields.titleServantBase;
   if ( !titleServantBase )
     goto LABEL_45;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        titleServantBase,
-                       (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                       (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( System_String__IsNullOrEmpty(title, 0LL) )
   {
     titleServantBase = (UnityEngine_GameObject_o *)this->fields.titleName;
@@ -105,7 +105,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetCondTitle(
         return;
       }
 LABEL_45:
-      sub_1B86614(titleServantBase, title);
+      sub_1BDBAD4(titleServantBase, title);
     }
   }
   else
@@ -251,9 +251,9 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetItem(
         transformNameSprite = (UnityEngine_Component_o *)this->fields.transformNameLabel;
         if ( transformNameSprite )
         {
-          v12 = 544LL;
+          v12 = 592LL;
           if ( item->fields._IsTransformed_k__BackingField )
-            v12 = 552LL;
+            v12 = 600LL;
           UILabel__set_text((UILabel_o *)transformNameSprite, *(System_String_o **)((char *)&item->klass + v12), 0LL);
           GameObjectExtensions__SetLocalPositionY(
             this->fields.mainContentsRoot,
@@ -294,7 +294,7 @@ LABEL_15:
         }
       }
     }
-    sub_1B86614(transformNameSprite, item);
+    sub_1BDBAD4(transformNameSprite, item);
   }
 }
 
@@ -327,7 +327,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetParameterGauge(
     || (ServantStatusParameterGauge__Set(powerGauge, 4, luck, 0LL), (powerGauge = this->fields.npGauge) == 0LL) )
   {
 LABEL_8:
-    sub_1B86614(powerGauge, *(_QWORD *)&power);
+    sub_1BDBAD4(powerGauge, *(_QWORD *)&power);
   }
   ServantStatusParameterGauge__Set(powerGauge, 5, np, 0LL);
 }
@@ -374,19 +374,19 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__UpdateParameter(
   ServantLimitAddEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
   v4 = (ServantStatusFlavorTextListViewItemDrawParam_o **)this;
-  if ( (byte_4A4B18A & 1) == 0 )
+  if ( (byte_4B412F5 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_ServantLimitMaster___, item);
-    sub_1B863B8(&Method_DataManager_GetMaster_ServantLimitAddMaster___, v5);
-    sub_1B863B8(&DataManager_TypeInfo, v6);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_1B863B8(&string_TypeInfo, v8);
-    this = (ServantStatusFlavorTextListViewItemDrawParam_o *)sub_1B863B8(&StringLiteral_1/*""*/, v9);
-    byte_4A4B18A = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_ServantLimitMaster___, item);
+    sub_1BDB878(&Method_DataManager_GetMaster_ServantLimitAddMaster___, v5);
+    sub_1BDB878(&DataManager_TypeInfo, v6);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1BDB878(&string_TypeInfo, v8);
+    this = (ServantStatusFlavorTextListViewItemDrawParam_o *)sub_1BDB878(&StringLiteral_1/*""*/, v9);
+    byte_4B412F5 = 1;
   }
   entity = 0LL;
   if ( !item )
-    goto LABEL_48;
+    goto LABEL_51;
   if ( item->fields._IsTransformed_k__BackingField )
   {
     this = (ServantStatusFlavorTextListViewItemDrawParam_o *)((__int64 (__fastcall *)(ServantStatusFlavorTextListViewItemDrawParam_o **, struct System_String_o *, struct ServantStatusParameterGauge_o *))(*v4)[2].fields.defenseGauge)(
@@ -395,10 +395,10 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__UpdateParameter(
                                                                (*v4)[2].fields.agilityGauge);
     transformedServantLimitEntity = item->fields.transformedServantLimitEntity;
     if ( !transformedServantLimitEntity )
-      goto LABEL_48;
+      goto LABEL_51;
     this = v4[6];
     if ( !this )
-      goto LABEL_48;
+      goto LABEL_51;
     ServantStatusParameterGauge__Set(
       (ServantStatusParameterGauge_o *)this,
       0,
@@ -406,44 +406,44 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__UpdateParameter(
       0LL);
     v11 = item->fields.transformedServantLimitEntity;
     if ( !v11 )
-      goto LABEL_48;
+      goto LABEL_51;
     this = v4[7];
     if ( !this )
-      goto LABEL_48;
+      goto LABEL_51;
     ServantStatusParameterGauge__Set((ServantStatusParameterGauge_o *)this, 1, v11->fields.defense, 0LL);
     v12 = item->fields.transformedServantLimitEntity;
     if ( !v12 )
-      goto LABEL_48;
+      goto LABEL_51;
     this = v4[8];
     if ( !this )
-      goto LABEL_48;
+      goto LABEL_51;
     ServantStatusParameterGauge__Set((ServantStatusParameterGauge_o *)this, 2, v12->fields.agility, 0LL);
     v13 = item->fields.transformedServantLimitEntity;
     if ( !v13 )
-      goto LABEL_48;
+      goto LABEL_51;
     this = v4[9];
     if ( !this )
-      goto LABEL_48;
+      goto LABEL_51;
     ServantStatusParameterGauge__Set((ServantStatusParameterGauge_o *)this, 3, v13->fields.magic, 0LL);
     v14 = item->fields.transformedServantLimitEntity;
     if ( !v14 )
-      goto LABEL_48;
+      goto LABEL_51;
     this = v4[10];
     if ( !this )
-      goto LABEL_48;
+      goto LABEL_51;
     ServantStatusParameterGauge__Set((ServantStatusParameterGauge_o *)this, 4, v14->fields.luck, 0LL);
     v15 = item->fields.transformedServantLimitEntity;
     if ( !v15 )
-      goto LABEL_48;
-    goto LABEL_44;
+      goto LABEL_51;
+    goto LABEL_47;
   }
   paramLimitCount = item->fields.paramLimitCount;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
   this = (ServantStatusFlavorTextListViewItemDrawParam_o *)ServantStatusListViewItem__get_SvtId(item, v18);
   if ( !Master_object )
-    goto LABEL_48;
+    goto LABEL_51;
   if ( ServantLimitAddMaster__TryGetEntity(
          (ServantLimitAddMaster_o *)Master_object,
          &entity,
@@ -452,119 +452,129 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__UpdateParameter(
          0LL) )
   {
     this = (ServantStatusFlavorTextListViewItemDrawParam_o *)entity;
-    if ( entity )
+    if ( !entity )
+      goto LABEL_51;
+    CondTitle = ServantLimitAddEntity__GetCondTitle(entity, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+    ((void (__fastcall *)(ServantStatusFlavorTextListViewItemDrawParam_o **, System_String_o *, struct ServantStatusParameterGauge_o *))(*v4)[2].fields.defenseGauge)(
+      v4,
+      CondTitle,
+      (*v4)[2].fields.agilityGauge);
+    this = (ServantStatusFlavorTextListViewItemDrawParam_o *)entity;
+    if ( !entity )
+      goto LABEL_51;
+    OverwriteServantParameter = ServantLimitAddEntity__GetOverwriteServantParameter(entity, 0LL);
+    if ( OverwriteServantParameter && (int)OverwriteServantParameter->max_length >= 6 )
     {
-      CondTitle = ServantLimitAddEntity__GetCondTitle(entity, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-      ((void (__fastcall *)(ServantStatusFlavorTextListViewItemDrawParam_o **, System_String_o *, struct ServantStatusParameterGauge_o *))(*v4)[2].fields.defenseGauge)(
-        v4,
-        CondTitle,
-        (*v4)[2].fields.agilityGauge);
+      defenseGauge = OverwriteServantParameter->m_Items[1];
+      defenseGauge_high = OverwriteServantParameter->m_Items[2];
+      agilityGauge = OverwriteServantParameter->m_Items[3];
+      agilityGauge_high = OverwriteServantParameter->m_Items[4];
+      magicGauge = OverwriteServantParameter->m_Items[5];
+      magicGauge_high = OverwriteServantParameter->m_Items[6];
+      goto LABEL_50;
+    }
+    this = (ServantStatusFlavorTextListViewItemDrawParam_o *)entity;
+    if ( !entity )
+      goto LABEL_51;
+    this = (ServantStatusFlavorTextListViewItemDrawParam_o *)ServantLimitAddEntity__HasServantParameterLimitCountKey(
+                                                               entity,
+                                                               0LL);
+    if ( ((unsigned __int8)this & 1) != 0 )
+    {
       this = (ServantStatusFlavorTextListViewItemDrawParam_o *)entity;
       if ( entity )
       {
-        OverwriteServantParameter = ServantLimitAddEntity__GetOverwriteServantParameter(entity, 0LL);
-        if ( OverwriteServantParameter && (int)OverwriteServantParameter->max_length >= 6 )
+        v22 = paramLimitCount >= 11 ? 0 : paramLimitCount;
+        ServantParameterLimitCount = ServantLimitAddEntity__GetServantParameterLimitCount(entity, v22, 0LL);
+        this = (ServantStatusFlavorTextListViewItemDrawParam_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        if ( this )
         {
-          defenseGauge = OverwriteServantParameter->m_Items[1];
-          defenseGauge_high = OverwriteServantParameter->m_Items[2];
-          agilityGauge = OverwriteServantParameter->m_Items[3];
-          agilityGauge_high = OverwriteServantParameter->m_Items[4];
-          magicGauge = OverwriteServantParameter->m_Items[5];
-          magicGauge_high = OverwriteServantParameter->m_Items[6];
-          goto LABEL_47;
-        }
-        this = (ServantStatusFlavorTextListViewItemDrawParam_o *)entity;
-        if ( entity )
-        {
-          v22 = paramLimitCount >= 11 ? 0 : paramLimitCount;
-          ServantParameterLimitCount = ServantLimitAddEntity__GetServantParameterLimitCount(entity, v22, 0LL);
-          this = (ServantStatusFlavorTextListViewItemDrawParam_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-          if ( this )
+          MasterData_object = DataManager__GetMasterData_object_(
+                                (DataManager_o *)this,
+                                (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+          this = (ServantStatusFlavorTextListViewItemDrawParam_o *)ServantStatusListViewItem__get_SvtId(item, v25);
+          if ( MasterData_object )
           {
-            MasterData_object = DataManager__GetMasterData_object_(
-                                  (DataManager_o *)this,
-                                  (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
-            this = (ServantStatusFlavorTextListViewItemDrawParam_o *)ServantStatusListViewItem__get_SvtId(item, v25);
-            if ( MasterData_object )
+            this = (ServantStatusFlavorTextListViewItemDrawParam_o *)ServantLimitMaster__GetEntity(
+                                                                       (ServantLimitMaster_o *)MasterData_object,
+                                                                       (int32_t)this,
+                                                                       ServantParameterLimitCount,
+                                                                       0LL);
+            if ( this )
             {
-              this = (ServantStatusFlavorTextListViewItemDrawParam_o *)ServantLimitMaster__GetEntity(
-                                                                         (ServantLimitMaster_o *)MasterData_object,
-                                                                         (int32_t)this,
-                                                                         ServantParameterLimitCount,
-                                                                         0LL);
-              if ( this )
-              {
-                defenseGauge = (int32_t)this->fields.defenseGauge;
-                defenseGauge_high = HIDWORD(this->fields.defenseGauge);
-                agilityGauge = (int32_t)this->fields.agilityGauge;
-                agilityGauge_high = HIDWORD(this->fields.agilityGauge);
-                magicGauge = (int32_t)this->fields.magicGauge;
-                magicGauge_high = HIDWORD(this->fields.magicGauge);
-LABEL_47:
-                ServantStatusFlavorTextListViewItemDrawParam__SetParameterGauge(
-                  (ServantStatusFlavorTextListViewItemDrawParam_o *)v4,
-                  defenseGauge,
-                  defenseGauge_high,
-                  agilityGauge,
-                  agilityGauge_high,
-                  magicGauge,
-                  magicGauge_high,
-                  v21);
-                return;
-              }
+              defenseGauge = (int32_t)this->fields.defenseGauge;
+              defenseGauge_high = HIDWORD(this->fields.defenseGauge);
+              agilityGauge = (int32_t)this->fields.agilityGauge;
+              agilityGauge_high = HIDWORD(this->fields.agilityGauge);
+              magicGauge = (int32_t)this->fields.magicGauge;
+              magicGauge_high = HIDWORD(this->fields.magicGauge);
+LABEL_50:
+              ServantStatusFlavorTextListViewItemDrawParam__SetParameterGauge(
+                (ServantStatusFlavorTextListViewItemDrawParam_o *)v4,
+                defenseGauge,
+                defenseGauge_high,
+                agilityGauge,
+                agilityGauge_high,
+                magicGauge,
+                magicGauge_high,
+                v21);
+              return;
             }
           }
         }
       }
+LABEL_51:
+      sub_1BDBAD4(this, item);
     }
-LABEL_48:
-    sub_1B86614(this, item);
   }
-  this = (ServantStatusFlavorTextListViewItemDrawParam_o *)((__int64 (__fastcall *)(ServantStatusFlavorTextListViewItemDrawParam_o **, struct System_String_o *, struct ServantStatusParameterGauge_o *))(*v4)[2].fields.defenseGauge)(
-                                                             v4,
-                                                             string_TypeInfo->static_fields->Empty,
-                                                             (*v4)[2].fields.agilityGauge);
+  else
+  {
+    this = (ServantStatusFlavorTextListViewItemDrawParam_o *)((__int64 (__fastcall *)(ServantStatusFlavorTextListViewItemDrawParam_o **, struct System_String_o *, struct ServantStatusParameterGauge_o *))(*v4)[2].fields.defenseGauge)(
+                                                               v4,
+                                                               string_TypeInfo->static_fields->Empty,
+                                                               (*v4)[2].fields.agilityGauge);
+  }
   svtLimitEntity = item->fields.svtLimitEntity;
   if ( !svtLimitEntity )
-    goto LABEL_48;
+    goto LABEL_51;
   this = v4[6];
   if ( !this )
-    goto LABEL_48;
+    goto LABEL_51;
   ServantStatusParameterGauge__Set((ServantStatusParameterGauge_o *)this, 0, svtLimitEntity->fields.power, 0LL);
   v33 = item->fields.svtLimitEntity;
   if ( !v33 )
-    goto LABEL_48;
+    goto LABEL_51;
   this = v4[7];
   if ( !this )
-    goto LABEL_48;
+    goto LABEL_51;
   ServantStatusParameterGauge__Set((ServantStatusParameterGauge_o *)this, 1, v33->fields.defense, 0LL);
   v34 = item->fields.svtLimitEntity;
   if ( !v34 )
-    goto LABEL_48;
+    goto LABEL_51;
   this = v4[8];
   if ( !this )
-    goto LABEL_48;
+    goto LABEL_51;
   ServantStatusParameterGauge__Set((ServantStatusParameterGauge_o *)this, 2, v34->fields.agility, 0LL);
   v35 = item->fields.svtLimitEntity;
   if ( !v35 )
-    goto LABEL_48;
+    goto LABEL_51;
   this = v4[9];
   if ( !this )
-    goto LABEL_48;
+    goto LABEL_51;
   ServantStatusParameterGauge__Set((ServantStatusParameterGauge_o *)this, 3, v35->fields.magic, 0LL);
   v36 = item->fields.svtLimitEntity;
   if ( !v36 )
-    goto LABEL_48;
+    goto LABEL_51;
   this = v4[10];
   if ( !this )
-    goto LABEL_48;
+    goto LABEL_51;
   ServantStatusParameterGauge__Set((ServantStatusParameterGauge_o *)this, 4, v36->fields.luck, 0LL);
   v15 = item->fields.svtLimitEntity;
   if ( !v15 )
-    goto LABEL_48;
-LABEL_44:
+    goto LABEL_51;
+LABEL_47:
   this = v4[11];
   if ( !this )
-    goto LABEL_48;
+    goto LABEL_51;
   ServantStatusParameterGauge__Set((ServantStatusParameterGauge_o *)this, 5, v15->fields.treasureDevice, 0LL);
 }

@@ -14,26 +14,26 @@ void __fastcall ClassBoardItemModel___ctor(
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4A51CB5 & 1) == 0 )
+  if ( (byte_4B48393 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMaster_ItemMaster___, *(_QWORD *)&itemId);
-    sub_1B863B8(&DataManager_TypeInfo, v7);
-    sub_1B863B8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v8);
-    byte_4A51CB5 = 1;
+    sub_1BDB878(&Method_DataManager_GetMaster_ItemMaster___, *(_QWORD *)&itemId);
+    sub_1BDB878(&DataManager_TypeInfo, v7);
+    sub_1BDB878(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v8);
+    byte_4B48393 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Master_object )
-    sub_1B86614(0LL, v10);
+    sub_1BDBAD4(0LL, v10);
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              itemId,
-             (const MethodInfo_3214280 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_32E1E3C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   this->fields.entity = (struct ItemEntity_o *)Entity;
   p_fields = &this->fields;
-  sub_1B8635C((CGThumbnailListItem_o *)p_fields, (int32_t)Entity, v13, v14);
+  sub_1BDB81C((CGThumbnailListItem_o *)p_fields, (int32_t)Entity, v13, v14);
   p_fields->_Num_k__BackingField = num;
 }
 
@@ -50,7 +50,7 @@ int32_t __fastcall ClassBoardItemModel__get_Id(ClassBoardItemModel_o *this, cons
 
   entity = this->fields.entity;
   if ( !entity )
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   return entity->fields.id;
 }
 
@@ -61,16 +61,16 @@ int32_t __fastcall ClassBoardItemModel__get_Num(ClassBoardItemModel_o *this, con
 }
 
 
-int32_t __fastcall ClassBoardItemModel__get_UserNum(ClassBoardItemModel_o *this, const MethodInfo *method)
+int64_t __fastcall ClassBoardItemModel__get_UserNum(ClassBoardItemModel_o *this, const MethodInfo *method)
 {
   struct ItemEntity_o *entity; // x8
-  UserOwnItemInfo_o *UserOwnInfoByItemId; // x0
+  int64_t result; // x0
 
   entity = this->fields.entity;
   if ( !entity )
-    sub_1B86614(this, method);
-  UserOwnInfoByItemId = UserOwnItemDetail__GetUserOwnInfoByItemId(entity->fields.id, 0LL);
-  if ( UserOwnInfoByItemId )
-    LODWORD(UserOwnInfoByItemId) = UserOwnInfoByItemId->fields._Num_k__BackingField;
-  return (int)UserOwnInfoByItemId;
+    sub_1BDBAD4(this, method);
+  result = (int64_t)UserOwnItemDetail__GetUserOwnInfoByItemId(entity->fields.id, 0LL);
+  if ( result )
+    return *(_QWORD *)(result + 16);
+  return result;
 }

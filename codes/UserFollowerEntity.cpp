@@ -1,13 +1,13 @@
 void __fastcall UserFollowerEntity___ctor(UserFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4F299 & 1) == 0 )
+  if ( (byte_4B4589B & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_long___ctor__, method);
-    byte_4A4F299 = 1;
+    sub_1BDB878(&Method_DataEntityBase_long___ctor__, method);
+    byte_4B4589B = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_3211DE4 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_32DF9A0 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -17,6 +17,7 @@ int64_t __fastcall UserFollowerEntity__CreatePrimaryKey(UserFollowerEntity_o *th
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 FollowerInfo_o *__fastcall UserFollowerEntity__getFollowerInfo(
         UserFollowerEntity_o *this,
         int64_t followerId,
@@ -39,10 +40,10 @@ FollowerInfo_o *__fastcall UserFollowerEntity__getFollowerInfo(
   while ( 1 )
   {
     if ( (unsigned int)v6 >= max_length )
-      sub_1B8661C(this, followerId);
+      sub_1BDBADC(this, followerId, *(_QWORD *)&followerType);
     this = (UserFollowerEntity_o *)m_Items[v6];
     if ( !this )
-      sub_1B86614(0LL, followerId);
+      sub_1BDBAD4(0LL, followerId);
     if ( this->fields.followerInfo == (struct FollowerInfo_array *)followerId
       && (followerType == -1 || HIDWORD(this->fields.expireAt) == followerType) )
     {
@@ -57,10 +58,10 @@ FollowerInfo_o *__fastcall UserFollowerEntity__getFollowerInfo(
 
 bool __fastcall UserFollowerEntity__isEnableData(UserFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4F298 & 1) == 0 )
+  if ( (byte_4B4589A & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    byte_4A4F298 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    byte_4B4589A = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

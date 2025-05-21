@@ -19,11 +19,11 @@ BgmPlayArgs_o *__fastcall SubBgmPlayer__ExportPlayArgs(SubBgmPlayer_o *this, con
   System_Nullable_float__o p_volume; // 0:x0.8
   System_Nullable_float__o v14; // 0:x2.8
 
-  if ( (byte_4A4DB61 & 1) == 0 )
+  if ( (byte_4B4411C & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Nullable_float___ctor__, method);
-    sub_1B863B8(&SubBgmPlayArgs_TypeInfo, v3);
-    byte_4A4DB61 = 1;
+    sub_1BDB878(&Method_System_Nullable_float___ctor__, method);
+    sub_1BDB878(&SubBgmPlayArgs_TypeInfo, v3);
+    byte_4B4411C = 1;
   }
   bgmName = this->fields.bgmName;
   if ( !bgmName )
@@ -31,9 +31,9 @@ BgmPlayArgs_o *__fastcall SubBgmPlayer__ExportPlayArgs(SubBgmPlayer_o *this, con
   bgmVolume = this->fields.bgmVolume;
   p_volume = (System_Nullable_float__o)&volume;
   volume = 0LL;
-  System_Nullable_float____ctor(p_volume, bgmVolume, (const MethodInfo_371E63C *)Method_System_Nullable_float___ctor__);
+  System_Nullable_float____ctor(p_volume, bgmVolume, (const MethodInfo_37F7AEC *)Method_System_Nullable_float___ctor__);
   PlayTime = BgmPlayerBase__get_PlayTime((BgmPlayerBase_o *)this, v6);
-  v8 = (BgmPlayArgs_o *)sub_1B86604(SubBgmPlayArgs_TypeInfo);
+  v8 = (BgmPlayArgs_o *)sub_1BDBAC4(SubBgmPlayArgs_TypeInfo);
   v14 = volume;
   v9 = v8;
   BgmPlayArgs___ctor(v8, bgmName, v14, 0.0, PlayTime, v10);

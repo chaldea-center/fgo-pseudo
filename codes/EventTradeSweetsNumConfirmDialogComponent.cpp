@@ -2,10 +2,10 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent___ctor(
         EventTradeSweetsNumConfirmDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A49264 & 1) == 0 )
+  if ( (byte_4B3F59B & 1) == 0 )
   {
-    sub_1B863B8(&BaseDialog_TypeInfo, method);
-    byte_4A49264 = 1;
+    sub_1BDB878(&BaseDialog_TypeInfo, method);
+    byte_4B3F59B = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -26,10 +26,10 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__CallOnDecide(
   if ( onDecide )
   {
     this->fields.onDecide = 0LL;
-    v4 = sub_1B8635C(&this->fields.onDecide);
+    v4 = sub_1BDB81C(&this->fields.onDecide);
     tradeGoodsEntity = this->fields.tradeGoodsEntity;
     if ( !tradeGoodsEntity )
-      sub_1B86614(v4, v5);
+      sub_1BDBAD4(v4, v5);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD, _QWORD, _QWORD))onDecide->fields.m_target)(
       onDecide->fields.original_method_info,
       (unsigned int)this->fields.storeIdx,
@@ -47,14 +47,14 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Close(
   __int64 v3; // x1
   System_Action_o *v4; // x20
 
-  if ( (byte_4A49260 & 1) == 0 )
+  if ( (byte_4B3F597 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Method_EventTradeSweetsNumConfirmDialogComponent__Close_b__48_0__, v3);
-    byte_4A49260 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&Method_EventTradeSweetsNumConfirmDialogComponent__Close_b__48_0__, v3);
+    byte_4B3F597 = 1;
   }
   this->fields.state = 4;
-  v4 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_EventTradeSweetsNumConfirmDialogComponent__Close_b__48_0__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v4, 0LL);
 }
@@ -76,45 +76,46 @@ int32_t __fastcall EventTradeSweetsNumConfirmDialogComponent__GetItemSliderMax(
   __int64 v4; // x1
   UserItemMaster_o *Master_object; // x0
   __int64 v6; // x1
+  __int64 v7; // x2
   struct CommonConsumeEntity_array *exchangeOriginItemList; // x8
   int max; // w22
-  UserItemMaster_o *v9; // x20
-  __int64 v10; // x23
-  struct CommonConsumeEntity_array *v11; // x8
-  CommonConsumeEntity_o *v12; // x8
-  CommonConsumeEntity_o *v13; // x10
+  UserItemMaster_o *v10; // x20
+  __int64 v11; // x23
+  struct CommonConsumeEntity_array *v12; // x8
+  CommonConsumeEntity_o *v13; // x8
+  CommonConsumeEntity_o *v14; // x10
   int32_t num; // w9
-  int32_t v15; // w10
+  int32_t v16; // w10
   struct System_Boolean_array *isShortage; // x11
-  struct System_Boolean_array *v17; // x8
+  struct System_Boolean_array *v18; // x8
   UserItemEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A4925C & 1) == 0 )
+  if ( (byte_4B3F593 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMaster_UserItemMaster___, method);
-    sub_1B863B8(&DataManager_TypeInfo, v3);
-    sub_1B863B8(&NetworkManager_TypeInfo, v4);
-    byte_4A4925C = 1;
+    sub_1BDB878(&Method_DataManager_GetMaster_UserItemMaster___, method);
+    sub_1BDB878(&DataManager_TypeInfo, v3);
+    sub_1BDB878(&NetworkManager_TypeInfo, v4);
+    byte_4B3F593 = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = (UserItemMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_UserItemMaster___);
   exchangeOriginItemList = this->fields.exchangeOriginItemList;
   if ( !exchangeOriginItemList )
 LABEL_32:
-    sub_1B86614(Master_object, v6);
+    sub_1BDBAD4(Master_object, v6);
   max = this->fields.max;
-  v9 = Master_object;
-  v10 = 0LL;
-  while ( (int)v10 < (signed int)exchangeOriginItemList->max_length )
+  v10 = Master_object;
+  v11 = 0LL;
+  while ( (int)v11 < (signed int)exchangeOriginItemList->max_length )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4A48C25 )
+    if ( !byte_4B3ED56 )
     {
-      sub_1B863B8(&NetworkManager_TypeInfo, v6);
-      byte_4A48C25 = 1;
+      sub_1BDB878(&NetworkManager_TypeInfo, v6);
+      byte_4B3ED56 = 1;
     }
     Master_object = (UserItemMaster_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -122,19 +123,19 @@ LABEL_32:
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       Master_object = (UserItemMaster_o *)NetworkManager_TypeInfo;
     }
-    v11 = this->fields.exchangeOriginItemList;
-    if ( !v11 )
+    v12 = this->fields.exchangeOriginItemList;
+    if ( !v12 )
       goto LABEL_32;
-    if ( (unsigned int)v10 >= v11->max_length )
+    if ( (unsigned int)v11 >= v12->max_length )
       goto LABEL_34;
-    v12 = v11->m_Items[v10];
-    if ( !v12 || !v9 )
+    v13 = v12->m_Items[v11];
+    if ( !v13 || !v10 )
       goto LABEL_32;
     Master_object = (UserItemMaster_o *)UserItemMaster__TryGetEntity(
-                                          v9,
+                                          v10,
                                           &entity,
                                           (int64_t)Master_object[2].fields.list[1].monitor,
-                                          v12->fields.objectId,
+                                          v13->fields.objectId,
                                           0LL);
     if ( ((unsigned __int8)Master_object & 1) != 0 )
     {
@@ -143,35 +144,35 @@ LABEL_32:
       exchangeOriginItemList = this->fields.exchangeOriginItemList;
       if ( !exchangeOriginItemList )
         goto LABEL_32;
-      if ( (unsigned int)v10 >= exchangeOriginItemList->max_length )
+      if ( (unsigned int)v11 >= exchangeOriginItemList->max_length )
         goto LABEL_34;
-      v13 = exchangeOriginItemList->m_Items[v10];
-      if ( !v13 )
+      v14 = exchangeOriginItemList->m_Items[v11];
+      if ( !v14 )
         goto LABEL_32;
       num = entity->fields.num;
-      v15 = v13->fields.num;
+      v16 = v14->fields.num;
       isShortage = this->fields.isShortage;
-      if ( max >= num / v15 )
-        max = num / v15;
+      if ( max >= num / v16 )
+        max = num / v16;
       if ( !isShortage )
         goto LABEL_32;
-      if ( (unsigned int)v10 >= isShortage->max_length )
+      if ( (unsigned int)v11 >= isShortage->max_length )
         goto LABEL_34;
-      isShortage->m_Items[v10 + 4] = v15 > num;
+      isShortage->m_Items[v11 + 4] = v16 > num;
     }
     else
     {
-      v17 = this->fields.isShortage;
-      if ( !v17 )
+      v18 = this->fields.isShortage;
+      if ( !v18 )
         goto LABEL_32;
-      if ( (unsigned int)v10 >= v17->max_length )
+      if ( (unsigned int)v11 >= v18->max_length )
 LABEL_34:
-        sub_1B8661C(Master_object, v6);
-      v17->m_Items[v10 + 4] = 1;
+        sub_1BDBADC(Master_object, v6, v7);
+      v18->m_Items[v11 + 4] = 1;
       exchangeOriginItemList = this->fields.exchangeOriginItemList;
       max = 0;
     }
-    ++v10;
+    ++v11;
     if ( !exchangeOriginItemList )
       goto LABEL_32;
   }
@@ -190,12 +191,12 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Init(
   EventTradeListViewItemManager__CheckIsSerializeFieldNotNull((Il2CppObject *)this, 0LL);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1B86614(0LL, v6);
+    sub_1BDBAD4(0LL, v6);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.state = 0;
   this->fields.eventId = eventId;
   this->fields.tradeGoodsEntity = 0LL;
-  sub_1B8635C(&this->fields.tradeGoodsEntity);
+  sub_1BDB81C(&this->fields.tradeGoodsEntity);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
 
@@ -253,7 +254,7 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__InitItemSlider(
       goto LABEL_14;
     }
 LABEL_15:
-    sub_1B86614(itemSlider, method);
+    sub_1BDBAD4(itemSlider, method);
   }
   UISliderWithButton__grayMode((UISliderWithButton_o *)itemSlider, 0LL);
   itemSlider = (UnityEngine_Component_o *)this->fields.itemSlider;
@@ -288,22 +289,22 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__OnClickCancel(
   UISliderWithButton_o *itemSlider; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4A4925F & 1) == 0 )
+  if ( (byte_4B3F596 & 1) == 0 )
   {
-    sub_1B863B8(&Method_EventTradeSweetsNumConfirmDialogComponent_OnClickCancel__, method);
-    byte_4A4925F = 1;
+    sub_1BDB878(&Method_EventTradeSweetsNumConfirmDialogComponent_OnClickCancel__, method);
+    byte_4B3F596 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_EventTradeSweetsNumConfirmDialogComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_EventTradeSweetsNumConfirmDialogComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B863D0(Method_EventTradeSweetsNumConfirmDialogComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BDB890(Method_EventTradeSweetsNumConfirmDialogComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     itemSlider = this->fields.itemSlider;
     if ( !itemSlider )
-      sub_1B86614(0LL, v5);
+      sub_1BDBAD4(0LL, v5);
     UISliderWithButton__grayMode(itemSlider, 0LL);
     EventTradeSweetsNumConfirmDialogComponent__Close(this, v7);
   }
@@ -318,18 +319,18 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4A4925E & 1) == 0 )
+  if ( (byte_4B3F595 & 1) == 0 )
   {
-    sub_1B863B8(&Method_EventTradeSweetsNumConfirmDialogComponent_OnClickDecide__, method);
-    byte_4A4925E = 1;
+    sub_1BDB878(&Method_EventTradeSweetsNumConfirmDialogComponent_OnClickDecide__, method);
+    byte_4B3F595 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_EventTradeSweetsNumConfirmDialogComponent_OnClickDecide__;
     if ( (*((_BYTE *)Method_EventTradeSweetsNumConfirmDialogComponent_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1B863D0(Method_EventTradeSweetsNumConfirmDialogComponent_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BDB890(Method_EventTradeSweetsNumConfirmDialogComponent_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
     EventTradeSweetsNumConfirmDialogComponent__CallOnDecide(this, v5);
   }
@@ -406,28 +407,28 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Open(
   int32_t goodsIconId; // [xsp+Ch] [xbp-54h] BYREF
 
   v10 = this;
-  if ( (byte_4A49259 & 1) == 0 )
+  if ( (byte_4B3F590 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, item);
-    sub_1B863B8(&AtlasManager_TypeInfo, v11);
-    sub_1B863B8(&bool___TypeInfo, v12);
-    sub_1B863B8(&Method_DataManager_GetMaster_CommonConsumeMaster___, v13);
-    sub_1B863B8(&DataManager_TypeInfo, v14);
-    sub_1B863B8(&Method_EventTradeSweetsNumConfirmDialogComponent_EndOpen__, v15);
-    sub_1B863B8(&EventTradeTimeCalculation_TypeInfo, v16);
-    sub_1B863B8(&int_TypeInfo, v17);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v18);
-    sub_1B863B8(&System_Math_TypeInfo, v19);
-    sub_1B863B8(&NetworkManager_TypeInfo, v20);
-    sub_1B863B8(&StringLiteral_13248/*"TRADE_EVENT_CONFIRM_DIALOG_TITLE"*/, v21);
-    sub_1B863B8(&StringLiteral_19987/*"icon_{0}"*/, v22);
-    sub_1B863B8(&StringLiteral_13245/*"TRADE_EVENT_CONFIRM_DIALOG_EXECUTE"*/, v23);
-    sub_1B863B8(&StringLiteral_8664/*"MULTIPLE_INFO"*/, v24);
-    sub_1B863B8(&StringLiteral_13264/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_DESCRIPTION"*/, v25);
-    sub_1B863B8(&StringLiteral_3675/*"COMMON_CONFIRM_CANCEL"*/, v26);
-    sub_1B863B8(&StringLiteral_13266/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_TITLE"*/, v27);
-    this = (EventTradeSweetsNumConfirmDialogComponent_o *)sub_1B863B8(&StringLiteral_13243/*"TRADE_EVENT_CONFIRM_DIALOG_DESCRIPTION"*/, v28);
-    byte_4A49259 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, item);
+    sub_1BDB878(&AtlasManager_TypeInfo, v11);
+    sub_1BDB878(&bool___TypeInfo, v12);
+    sub_1BDB878(&Method_DataManager_GetMaster_CommonConsumeMaster___, v13);
+    sub_1BDB878(&DataManager_TypeInfo, v14);
+    sub_1BDB878(&Method_EventTradeSweetsNumConfirmDialogComponent_EndOpen__, v15);
+    sub_1BDB878(&EventTradeTimeCalculation_TypeInfo, v16);
+    sub_1BDB878(&int_TypeInfo, v17);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v18);
+    sub_1BDB878(&System_Math_TypeInfo, v19);
+    sub_1BDB878(&NetworkManager_TypeInfo, v20);
+    sub_1BDB878(&StringLiteral_13442/*"TRADE_EVENT_CONFIRM_DIALOG_TITLE"*/, v21);
+    sub_1BDB878(&StringLiteral_20269/*"icon_{0}"*/, v22);
+    sub_1BDB878(&StringLiteral_13439/*"TRADE_EVENT_CONFIRM_DIALOG_EXECUTE"*/, v23);
+    sub_1BDB878(&StringLiteral_8809/*"MULTIPLE_INFO"*/, v24);
+    sub_1BDB878(&StringLiteral_13458/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_DESCRIPTION"*/, v25);
+    sub_1BDB878(&StringLiteral_3716/*"COMMON_CONFIRM_CANCEL"*/, v26);
+    sub_1BDB878(&StringLiteral_13460/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_TITLE"*/, v27);
+    this = (EventTradeSweetsNumConfirmDialogComponent_o *)sub_1BDB878(&StringLiteral_13437/*"TRADE_EVENT_CONFIRM_DIALOG_DESCRIPTION"*/, v28);
+    byte_4B3F590 = 1;
   }
   if ( !v10->fields.state )
   {
@@ -435,15 +436,15 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Open(
     {
       p_tradeGoodsEntity = &v10->fields.tradeGoodsEntity;
       v10->fields.tradeGoodsEntity = item->fields._TradeGoodsEntity_k__BackingField;
-      sub_1B8635C(&v10->fields.tradeGoodsEntity);
+      sub_1BDB81C(&v10->fields.tradeGoodsEntity);
       v10->fields.onDecide = onDecide;
-      sub_1B8635C(&v10->fields.onDecide);
+      sub_1BDB81C(&v10->fields.onDecide);
       v10->fields.storeIdx = storeIdx;
       v10->fields.isReplenishment = isReplenishment;
       v30 = isReplenishment ? item->fields._TradeInfo_k__BackingField : 0LL;
       p_eventTradeInfo = &v10->fields.eventTradeInfo;
       v10->fields.eventTradeInfo = v30;
-      sub_1B8635C(&v10->fields.eventTradeInfo);
+      sub_1BDB81C(&v10->fields.eventTradeInfo);
       this = (EventTradeSweetsNumConfirmDialogComponent_o *)UnityEngine_Component__get_gameObject(
                                                               (UnityEngine_Component_o *)v10,
                                                               0LL);
@@ -453,9 +454,9 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Open(
         titleLabel = v10->fields.titleLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v33 = (System_String_o **)&StringLiteral_13266/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_TITLE"*/;
+        v33 = (System_String_o **)&StringLiteral_13460/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_TITLE"*/;
         if ( !isReplenishment )
-          v33 = (System_String_o **)&StringLiteral_13248/*"TRADE_EVENT_CONFIRM_DIALOG_TITLE"*/;
+          v33 = (System_String_o **)&StringLiteral_13442/*"TRADE_EVENT_CONFIRM_DIALOG_TITLE"*/;
         this = (EventTradeSweetsNumConfirmDialogComponent_o *)LocalizationManager__Get(*v33, 0LL);
         if ( titleLabel )
         {
@@ -463,9 +464,9 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Open(
           detailLabel = v10->fields.detailLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v35 = (System_String_o **)&StringLiteral_13264/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_DESCRIPTION"*/;
+          v35 = (System_String_o **)&StringLiteral_13458/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_DESCRIPTION"*/;
           if ( !isReplenishment )
-            v35 = (System_String_o **)&StringLiteral_13243/*"TRADE_EVENT_CONFIRM_DIALOG_DESCRIPTION"*/;
+            v35 = (System_String_o **)&StringLiteral_13437/*"TRADE_EVENT_CONFIRM_DIALOG_DESCRIPTION"*/;
           this = (EventTradeSweetsNumConfirmDialogComponent_o *)LocalizationManager__Get(*v35, 0LL);
           if ( detailLabel )
           {
@@ -474,14 +475,14 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Open(
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             this = (EventTradeSweetsNumConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                    (System_String_o *)StringLiteral_3675/*"COMMON_CONFIRM_CANCEL"*/,
+                                                                    (System_String_o *)StringLiteral_3716/*"COMMON_CONFIRM_CANCEL"*/,
                                                                     0LL);
             if ( cancelButtonLb )
             {
               UILabel__set_text(cancelButtonLb, (System_String_o *)this, 0LL);
               decideButtonLb = v10->fields.decideButtonLb;
               this = (EventTradeSweetsNumConfirmDialogComponent_o *)LocalizationManager__Get(
-                                                                      (System_String_o *)StringLiteral_13245/*"TRADE_EVENT_CONFIRM_DIALOG_EXECUTE"*/,
+                                                                      (System_String_o *)StringLiteral_13439/*"TRADE_EVENT_CONFIRM_DIALOG_EXECUTE"*/,
                                                                       0LL);
               if ( decideButtonLb )
               {
@@ -495,7 +496,7 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Open(
                     UILabel__set_text((UILabel_o *)this, tradeGoodsEntity->fields.name, 0LL);
                     if ( !DataManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                    this = (EventTradeSweetsNumConfirmDialogComponent_o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+                    this = (EventTradeSweetsNumConfirmDialogComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
                     if ( *p_tradeGoodsEntity )
                     {
                       if ( this )
@@ -504,14 +505,14 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Open(
                                                                (CommonConsumeMaster_o *)this,
                                                                (*p_tradeGoodsEntity)->fields.commonConsumeId,
                                                                0LL);
-                        this = (EventTradeSweetsNumConfirmDialogComponent_o *)sub_1B8635C(&v10->fields.exchangeOriginItemList);
+                        this = (EventTradeSweetsNumConfirmDialogComponent_o *)sub_1BDB81C(&v10->fields.exchangeOriginItemList);
                         exchangeOriginItemList = v10->fields.exchangeOriginItemList;
                         if ( exchangeOriginItemList )
                         {
-                          v10->fields.isShortage = (struct System_Boolean_array *)sub_1B86460(
+                          v10->fields.isShortage = (struct System_Boolean_array *)sub_1BDB920(
                                                                                     bool___TypeInfo,
                                                                                     exchangeOriginItemList->max_length);
-                          this = (EventTradeSweetsNumConfirmDialogComponent_o *)sub_1B8635C(&v10->fields.isShortage);
+                          this = (EventTradeSweetsNumConfirmDialogComponent_o *)sub_1BDB81C(&v10->fields.isShortage);
                           if ( isReplenishment )
                           {
                             v40 = *p_eventTradeInfo;
@@ -530,7 +531,7 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Open(
                             v47 = v45->fields.tradeNum;
                             if ( !EventTradeTimeCalculation_TypeInfo->_2.cctor_finished )
                               j_il2cpp_runtime_class_init_0(EventTradeTimeCalculation_TypeInfo);
-                            v48 = EventTradeTimeCalculation__GetCompleteNum_31134488(
+                            v48 = EventTradeTimeCalculation__GetCompleteNum_31670780(
                                     v42,
                                     startedAt,
                                     (int64_t)v46,
@@ -551,7 +552,7 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Open(
                           ItemSliderMax = EventTradeSweetsNumConfirmDialogComponent__GetItemSliderMax(v10, v51);
                           if ( !System_Math_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-                          v53 = System_Math__Min_63173080(v50, ItemSliderMax, 0LL);
+                          v53 = System_Math__Min_64100908(v50, ItemSliderMax, 0LL);
                           v10->fields.max = v53;
                           v10->fields.makeCount = v53;
                           EventTradeSweetsNumConfirmDialogComponent__InitItemSlider(v10, v54);
@@ -562,14 +563,14 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Open(
                             eventItemIcon = v10->fields.eventItemIcon;
                             goodsIconId = TradeGoodsEntity_k__BackingField->fields.goodsIconId;
                             v61 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &goodsIconId, v55, v56, v57);
-                            v62 = System_String__Format((System_String_o *)StringLiteral_19987/*"icon_{0}"*/, v61, 0LL);
+                            v62 = System_String__Format((System_String_o *)StringLiteral_20269/*"icon_{0}"*/, v61, 0LL);
                             if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                               j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                            AtlasManager__SetEventUI_38815864(eventId, eventItemIcon, v62, 0LL);
+                            AtlasManager__SetEventUI_39626228(eventId, eventItemIcon, v62, 0LL);
                             eventItemMakeNum = v10->fields.eventItemMakeNum;
                             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                            v64 = LocalizationManager__Get((System_String_o *)StringLiteral_8664/*"MULTIPLE_INFO"*/, 0LL);
+                            v64 = LocalizationManager__Get((System_String_o *)StringLiteral_8809/*"MULTIPLE_INFO"*/, 0LL);
                             v65 = (Il2CppObject *)System_Int32__ToString((int)v10 + 320, 0LL);
                             this = (EventTradeSweetsNumConfirmDialogComponent_o *)System_String__Format(v64, v65, 0LL);
                             if ( eventItemMakeNum )
@@ -578,7 +579,7 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Open(
                               EventTradeSweetsNumConfirmDialogComponent__SetExchangeBase(v10, v66);
                               EventTradeSweetsNumConfirmDialogComponent__SetTimeLabel(v10, v67);
                               v10->fields.state = 1;
-                              v68 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+                              v68 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
                               System_Action___ctor(
                                 v68,
                                 (Il2CppObject *)v10,
@@ -600,7 +601,7 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__Open(
       }
     }
 LABEL_51:
-    sub_1B86614(this, item);
+    sub_1BDBAD4(this, item);
   }
 }
 
@@ -630,113 +631,114 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__SetExchangeBase(
   UILabel_o *exchangeOriginLb; // x20
   CommonConsumeEntity_o *NumberFormat; // x0
   __int64 v14; // x1
+  __int64 v15; // x2
   struct CommonConsumeEntity_array *exchangeOriginItemList; // x8
-  __int64 v16; // x9
-  int v17; // w25
+  __int64 v17; // x9
+  int v18; // w25
   struct UISprite_array *exchangeOriginItemIcon; // x10
-  CommonConsumeEntity_o *v19; // x8
-  UISprite_o *v20; // x20
+  CommonConsumeEntity_o *v20; // x8
+  UISprite_o *v21; // x20
   int32_t objectId; // w21
-  struct CommonConsumeEntity_array *v22; // x8
-  CommonConsumeEntity_o *v23; // x8
+  struct CommonConsumeEntity_array *v23; // x8
+  CommonConsumeEntity_o *v24; // x8
   int32_t num; // w20
   int32_t makeCount; // w21
-  struct CommonConsumeEntity_array *v26; // x8
-  Il2CppObject *v27; // x20
+  struct CommonConsumeEntity_array *v27; // x8
+  Il2CppObject *v28; // x20
   int32_t HasNum; // w0
   struct UILabel_array *exchangeOriginCounts; // x8
-  Il2CppObject *v30; // x21
-  UILabel_o *v31; // x22
-  System_String_o *v32; // x0
-  struct UILabel_array *v33; // x8
+  Il2CppObject *v31; // x21
+  UILabel_o *v32; // x22
+  System_String_o *v33; // x0
+  struct UILabel_array *v34; // x8
   struct System_Boolean_array *isShortage; // x9
-  float v35; // s1
-  float v36; // s0
-  float v37; // s3
-  float v38; // s2
-  unsigned int v39; // w25
+  float v36; // s1
+  float v37; // s0
+  float v38; // s3
+  float v39; // s2
+  unsigned int v40; // w25
   struct UISprite_array *exchangeOriginItemIcon2; // x10
-  CommonConsumeEntity_o *v41; // x8
-  UISprite_o *v42; // x20
-  int32_t v43; // w21
-  struct CommonConsumeEntity_array *v44; // x8
-  CommonConsumeEntity_o *v45; // x8
-  int32_t v46; // w20
-  int32_t v47; // w21
-  struct CommonConsumeEntity_array *v48; // x8
-  Il2CppObject *v49; // x20
-  int32_t v50; // w0
+  CommonConsumeEntity_o *v42; // x8
+  UISprite_o *v43; // x20
+  int32_t v44; // w21
+  struct CommonConsumeEntity_array *v45; // x8
+  CommonConsumeEntity_o *v46; // x8
+  int32_t v47; // w20
+  int32_t v48; // w21
+  struct CommonConsumeEntity_array *v49; // x8
+  Il2CppObject *v50; // x20
+  int32_t v51; // w0
   struct UILabel_array *exchangeOriginCounts2; // x8
-  Il2CppObject *v52; // x21
-  UILabel_o *v53; // x22
-  System_String_o *v54; // x0
-  struct UILabel_array *v55; // x8
-  struct System_Boolean_array *v56; // x9
-  float v57; // s1
-  float v58; // s0
-  float v59; // s3
-  float v60; // s2
+  Il2CppObject *v53; // x21
+  UILabel_o *v54; // x22
+  System_String_o *v55; // x0
+  struct UILabel_array *v56; // x8
+  struct System_Boolean_array *v57; // x9
+  float v58; // s1
+  float v59; // s0
+  float v60; // s3
+  float v61; // s2
   UILabel_o *exchangeDestinationLb; // x20
   struct EventTradeGoodsEntity_o *tradeGoodsEntity; // x8
   GiftEntity_array *GiftListById; // x20
-  GiftEntity_o *v64; // x8
+  GiftEntity_o *v65; // x8
   UISprite_o *exchangeDestinationItemIcon; // x20
   int32_t klass; // w21
-  struct EventTradeGoodsEntity_o *v67; // x8
-  const MethodInfo *v68; // x1
+  struct EventTradeGoodsEntity_o *v68; // x8
+  const MethodInfo *v69; // x1
 
-  if ( (byte_4A4925D & 1) == 0 )
+  if ( (byte_4B3F594 & 1) == 0 )
   {
-    sub_1B863B8(&AtlasManager_TypeInfo, method);
-    sub_1B863B8(&Method_DataManager_GetMasterData_ItemMaster___, v3);
-    sub_1B863B8(&Method_DataManager_GetMaster_GiftMaster___, v4);
-    sub_1B863B8(&DataManager_TypeInfo, v5);
-    sub_1B863B8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v6);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v7);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_1B863B8(&StringLiteral_13247/*"TRADE_EVENT_CONFIRM_DIALOG_ORIGIN_LABEL"*/, v9);
-    sub_1B863B8(&StringLiteral_13246/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, v10);
-    sub_1B863B8(&StringLiteral_13244/*"TRADE_EVENT_CONFIRM_DIALOG_DESTINATION_LABEL"*/, v11);
-    byte_4A4925D = 1;
+    sub_1BDB878(&AtlasManager_TypeInfo, method);
+    sub_1BDB878(&Method_DataManager_GetMasterData_ItemMaster___, v3);
+    sub_1BDB878(&Method_DataManager_GetMaster_GiftMaster___, v4);
+    sub_1BDB878(&DataManager_TypeInfo, v5);
+    sub_1BDB878(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v6);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v7);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    sub_1BDB878(&StringLiteral_13441/*"TRADE_EVENT_CONFIRM_DIALOG_ORIGIN_LABEL"*/, v9);
+    sub_1BDB878(&StringLiteral_13440/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, v10);
+    sub_1BDB878(&StringLiteral_13438/*"TRADE_EVENT_CONFIRM_DIALOG_DESTINATION_LABEL"*/, v11);
+    byte_4B3F594 = 1;
   }
   exchangeOriginLb = this->fields.exchangeOriginLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13247/*"TRADE_EVENT_CONFIRM_DIALOG_ORIGIN_LABEL"*/, 0LL);
+  NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13441/*"TRADE_EVENT_CONFIRM_DIALOG_ORIGIN_LABEL"*/, 0LL);
   if ( !exchangeOriginLb )
     goto LABEL_93;
   UILabel__set_text(exchangeOriginLb, (System_String_o *)NumberFormat, 0LL);
   exchangeOriginItemList = this->fields.exchangeOriginItemList;
   if ( !exchangeOriginItemList )
     goto LABEL_93;
-  v16 = *(_QWORD *)&exchangeOriginItemList->max_length;
-  if ( (_DWORD)v16 == 3 )
+  v17 = *(_QWORD *)&exchangeOriginItemList->max_length;
+  if ( (_DWORD)v17 == 3 )
   {
-    v17 = 0;
+    v18 = 0;
     do
     {
       exchangeOriginItemIcon = this->fields.exchangeOriginItemIcon;
       if ( !exchangeOriginItemIcon )
         goto LABEL_93;
-      if ( v17 >= exchangeOriginItemIcon->max_length || v17 >= (unsigned int)v16 )
+      if ( v18 >= exchangeOriginItemIcon->max_length || v18 >= (unsigned int)v17 )
         goto LABEL_94;
-      v19 = exchangeOriginItemList->m_Items[v17];
-      if ( !v19 )
+      v20 = exchangeOriginItemList->m_Items[v18];
+      if ( !v20 )
         goto LABEL_93;
-      v20 = exchangeOriginItemIcon->m_Items[v17];
-      objectId = v19->fields.objectId;
+      v21 = exchangeOriginItemIcon->m_Items[v18];
+      objectId = v20->fields.objectId;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      NumberFormat = (CommonConsumeEntity_o *)AtlasManager__SetItem(v20, objectId, 0LL);
-      v22 = this->fields.exchangeOriginItemList;
-      if ( !v22 )
-        goto LABEL_93;
-      if ( v17 >= v22->max_length )
-        goto LABEL_94;
-      v23 = v22->m_Items[v17];
+      NumberFormat = (CommonConsumeEntity_o *)AtlasManager__SetItem(v21, objectId, 0LL);
+      v23 = this->fields.exchangeOriginItemList;
       if ( !v23 )
         goto LABEL_93;
-      num = v23->fields.num;
+      if ( v18 >= v23->max_length )
+        goto LABEL_94;
+      v24 = v23->m_Items[v18];
+      if ( !v24 )
+        goto LABEL_93;
+      num = v24->fields.num;
       if ( this->fields.makeCount <= 1 )
         makeCount = 1;
       else
@@ -744,13 +746,13 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__SetExchangeBase(
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(makeCount * num, 0LL);
-      v26 = this->fields.exchangeOriginItemList;
-      if ( !v26 )
+      v27 = this->fields.exchangeOriginItemList;
+      if ( !v27 )
         goto LABEL_93;
-      if ( v17 >= v26->max_length )
+      if ( v18 >= v27->max_length )
         goto LABEL_94;
-      v27 = (Il2CppObject *)NumberFormat;
-      NumberFormat = v26->m_Items[v17];
+      v28 = (Il2CppObject *)NumberFormat;
+      NumberFormat = v27->m_Items[v18];
       if ( !NumberFormat )
         goto LABEL_93;
       HasNum = CommonConsumeEntity__GetUserHasNum(NumberFormat, 0LL);
@@ -758,40 +760,40 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__SetExchangeBase(
       exchangeOriginCounts = this->fields.exchangeOriginCounts;
       if ( !exchangeOriginCounts )
         goto LABEL_93;
-      if ( v17 >= exchangeOriginCounts->max_length )
+      if ( v18 >= exchangeOriginCounts->max_length )
         goto LABEL_94;
-      v30 = (Il2CppObject *)NumberFormat;
-      v31 = exchangeOriginCounts->m_Items[v17];
-      v32 = LocalizationManager__Get((System_String_o *)StringLiteral_13246/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0LL);
-      NumberFormat = (CommonConsumeEntity_o *)System_String__Format_61686468(v32, v27, v30, 0LL);
-      if ( !v31 )
+      v31 = (Il2CppObject *)NumberFormat;
+      v32 = exchangeOriginCounts->m_Items[v18];
+      v33 = LocalizationManager__Get((System_String_o *)StringLiteral_13440/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0LL);
+      NumberFormat = (CommonConsumeEntity_o *)System_String__Format_62613552(v33, v28, v31, 0LL);
+      if ( !v32 )
         goto LABEL_93;
-      UILabel__set_text(v31, (System_String_o *)NumberFormat, 0LL);
-      v33 = this->fields.exchangeOriginCounts;
-      if ( !v33 )
+      UILabel__set_text(v32, (System_String_o *)NumberFormat, 0LL);
+      v34 = this->fields.exchangeOriginCounts;
+      if ( !v34 )
         goto LABEL_93;
-      if ( v17 >= v33->max_length )
+      if ( v18 >= v34->max_length )
         goto LABEL_94;
       isShortage = this->fields.isShortage;
       if ( !isShortage )
         goto LABEL_93;
-      if ( v17 >= isShortage->max_length )
+      if ( v18 >= isShortage->max_length )
         goto LABEL_94;
-      NumberFormat = (CommonConsumeEntity_o *)v33->m_Items[v17];
-      v35 = isShortage->m_Items[v17 + 4] ? 0.0 : 1.0;
+      NumberFormat = (CommonConsumeEntity_o *)v34->m_Items[v18];
+      v36 = isShortage->m_Items[v18 + 4] ? 0.0 : 1.0;
       if ( !NumberFormat )
         goto LABEL_93;
-      v36 = 1.0;
       v37 = 1.0;
-      v38 = v35;
-      UIWidget__set_color((UIWidget_o *)NumberFormat, *(UnityEngine_Color_o *)(&v35 - 1), 0LL);
+      v38 = 1.0;
+      v39 = v36;
+      UIWidget__set_color((UIWidget_o *)NumberFormat, *(UnityEngine_Color_o *)(&v36 - 1), 0LL);
       exchangeOriginItemList = this->fields.exchangeOriginItemList;
       if ( !exchangeOriginItemList )
         goto LABEL_93;
-      LODWORD(v16) = exchangeOriginItemList->max_length;
-      ++v17;
+      LODWORD(v17) = exchangeOriginItemList->max_length;
+      ++v18;
     }
-    while ( v17 < (int)v16 );
+    while ( v18 < (int)v17 );
     NumberFormat = (CommonConsumeEntity_o *)this->fields.exchangeOriginDisplayObject;
     if ( !NumberFormat )
       goto LABEL_93;
@@ -802,90 +804,90 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__SetExchangeBase(
   }
   else
   {
-    if ( (int)v16 >= 1 )
+    if ( (int)v17 >= 1 )
     {
-      v39 = 0;
+      v40 = 0;
       while ( 1 )
       {
         exchangeOriginItemIcon2 = this->fields.exchangeOriginItemIcon2;
         if ( !exchangeOriginItemIcon2 )
           break;
-        if ( v39 >= exchangeOriginItemIcon2->max_length || v39 >= (unsigned int)v16 )
+        if ( v40 >= exchangeOriginItemIcon2->max_length || v40 >= (unsigned int)v17 )
           goto LABEL_94;
-        v41 = exchangeOriginItemList->m_Items[v39];
-        if ( !v41 )
+        v42 = exchangeOriginItemList->m_Items[v40];
+        if ( !v42 )
           break;
-        v42 = exchangeOriginItemIcon2->m_Items[v39];
-        v43 = v41->fields.objectId;
+        v43 = exchangeOriginItemIcon2->m_Items[v40];
+        v44 = v42->fields.objectId;
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        NumberFormat = (CommonConsumeEntity_o *)AtlasManager__SetItem(v42, v43, 0LL);
-        v44 = this->fields.exchangeOriginItemList;
-        if ( !v44 )
-          break;
-        if ( v39 >= v44->max_length )
-          goto LABEL_94;
-        v45 = v44->m_Items[v39];
+        NumberFormat = (CommonConsumeEntity_o *)AtlasManager__SetItem(v43, v44, 0LL);
+        v45 = this->fields.exchangeOriginItemList;
         if ( !v45 )
           break;
-        v46 = v45->fields.num;
+        if ( v40 >= v45->max_length )
+          goto LABEL_94;
+        v46 = v45->m_Items[v40];
+        if ( !v46 )
+          break;
+        v47 = v46->fields.num;
         if ( this->fields.makeCount <= 1 )
-          v47 = 1;
+          v48 = 1;
         else
-          v47 = this->fields.makeCount;
+          v48 = this->fields.makeCount;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(v47 * v46, 0LL);
-        v48 = this->fields.exchangeOriginItemList;
-        if ( !v48 )
+        NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(v48 * v47, 0LL);
+        v49 = this->fields.exchangeOriginItemList;
+        if ( !v49 )
           break;
-        if ( v39 >= v48->max_length )
+        if ( v40 >= v49->max_length )
           goto LABEL_94;
-        v49 = (Il2CppObject *)NumberFormat;
-        NumberFormat = v48->m_Items[v39];
+        v50 = (Il2CppObject *)NumberFormat;
+        NumberFormat = v49->m_Items[v40];
         if ( !NumberFormat )
           break;
-        v50 = CommonConsumeEntity__GetUserHasNum(NumberFormat, 0LL);
-        NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(v50, 0LL);
+        v51 = CommonConsumeEntity__GetUserHasNum(NumberFormat, 0LL);
+        NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(v51, 0LL);
         exchangeOriginCounts2 = this->fields.exchangeOriginCounts2;
         if ( !exchangeOriginCounts2 )
           break;
-        if ( v39 >= exchangeOriginCounts2->max_length )
+        if ( v40 >= exchangeOriginCounts2->max_length )
           goto LABEL_94;
-        v52 = (Il2CppObject *)NumberFormat;
-        v53 = exchangeOriginCounts2->m_Items[v39];
-        v54 = LocalizationManager__Get((System_String_o *)StringLiteral_13246/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0LL);
-        NumberFormat = (CommonConsumeEntity_o *)System_String__Format_61686468(v54, v49, v52, 0LL);
-        if ( !v53 )
+        v53 = (Il2CppObject *)NumberFormat;
+        v54 = exchangeOriginCounts2->m_Items[v40];
+        v55 = LocalizationManager__Get((System_String_o *)StringLiteral_13440/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0LL);
+        NumberFormat = (CommonConsumeEntity_o *)System_String__Format_62613552(v55, v50, v53, 0LL);
+        if ( !v54 )
           break;
-        UILabel__set_text(v53, (System_String_o *)NumberFormat, 0LL);
-        v55 = this->fields.exchangeOriginCounts2;
-        if ( !v55 )
-          break;
-        if ( v39 >= v55->max_length )
-          goto LABEL_94;
-        v56 = this->fields.isShortage;
+        UILabel__set_text(v54, (System_String_o *)NumberFormat, 0LL);
+        v56 = this->fields.exchangeOriginCounts2;
         if ( !v56 )
           break;
-        if ( v39 >= v56->max_length )
+        if ( v40 >= v56->max_length )
           goto LABEL_94;
-        NumberFormat = (CommonConsumeEntity_o *)v55->m_Items[v39];
-        v57 = v56->m_Items[v39 + 4] ? 0.0 : 1.0;
+        v57 = this->fields.isShortage;
+        if ( !v57 )
+          break;
+        if ( v40 >= v57->max_length )
+          goto LABEL_94;
+        NumberFormat = (CommonConsumeEntity_o *)v56->m_Items[v40];
+        v58 = v57->m_Items[v40 + 4] ? 0.0 : 1.0;
         if ( !NumberFormat )
           break;
-        v58 = 1.0;
         v59 = 1.0;
-        v60 = v57;
-        UIWidget__set_color((UIWidget_o *)NumberFormat, *(UnityEngine_Color_o *)(&v57 - 1), 0LL);
+        v60 = 1.0;
+        v61 = v58;
+        UIWidget__set_color((UIWidget_o *)NumberFormat, *(UnityEngine_Color_o *)(&v58 - 1), 0LL);
         exchangeOriginItemList = this->fields.exchangeOriginItemList;
         if ( !exchangeOriginItemList )
           break;
-        LODWORD(v16) = exchangeOriginItemList->max_length;
-        if ( (int)++v39 >= (int)v16 )
+        LODWORD(v17) = exchangeOriginItemList->max_length;
+        if ( (int)++v40 >= (int)v17 )
           goto LABEL_74;
       }
 LABEL_93:
-      sub_1B86614(NumberFormat, v14);
+      sub_1BDBAD4(NumberFormat, v14);
     }
 LABEL_74:
     NumberFormat = (CommonConsumeEntity_o *)this->fields.exchangeOriginDisplayObject2;
@@ -900,39 +902,39 @@ LABEL_74:
   exchangeDestinationLb = this->fields.exchangeDestinationLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13244/*"TRADE_EVENT_CONFIRM_DIALOG_DESTINATION_LABEL"*/, 0LL);
+  NumberFormat = (CommonConsumeEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13438/*"TRADE_EVENT_CONFIRM_DIALOG_DESTINATION_LABEL"*/, 0LL);
   if ( !exchangeDestinationLb )
     goto LABEL_93;
   UILabel__set_text(exchangeDestinationLb, (System_String_o *)NumberFormat, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  NumberFormat = (CommonConsumeEntity_o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_GiftMaster___);
+  NumberFormat = (CommonConsumeEntity_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_GiftMaster___);
   tradeGoodsEntity = this->fields.tradeGoodsEntity;
   if ( !tradeGoodsEntity )
     goto LABEL_93;
   if ( !NumberFormat )
     goto LABEL_93;
   GiftListById = GiftMaster__GetGiftListById((GiftMaster_o *)NumberFormat, tradeGoodsEntity->fields.giftId, 0LL);
-  NumberFormat = (CommonConsumeEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  NumberFormat = (CommonConsumeEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !NumberFormat )
     goto LABEL_93;
   NumberFormat = (CommonConsumeEntity_o *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)NumberFormat,
-                                            (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                            (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !GiftListById )
     goto LABEL_93;
   if ( !GiftListById->max_length )
 LABEL_94:
-    sub_1B8661C(NumberFormat, v14);
-  v64 = GiftListById->m_Items[0];
-  if ( !v64 )
+    sub_1BDBADC(NumberFormat, v14, v15);
+  v65 = GiftListById->m_Items[0];
+  if ( !v65 )
     goto LABEL_93;
   if ( !NumberFormat )
     goto LABEL_93;
   NumberFormat = (CommonConsumeEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)NumberFormat,
-                                            v64->fields.objectId,
-                                            (const MethodInfo_3214280 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                            v65->fields.objectId,
+                                            (const MethodInfo_32E1E3C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   if ( !NumberFormat )
     goto LABEL_93;
   exchangeDestinationItemIcon = this->fields.exchangeDestinationItemIcon;
@@ -940,11 +942,11 @@ LABEL_94:
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   NumberFormat = (CommonConsumeEntity_o *)AtlasManager__SetItem(exchangeDestinationItemIcon, klass, 0LL);
-  v67 = this->fields.tradeGoodsEntity;
-  if ( !v67 )
+  v68 = this->fields.tradeGoodsEntity;
+  if ( !v68 )
     goto LABEL_93;
-  AtlasManager__SetItem(this->fields.exchangeDestinationPointIcon, v67->fields.eventPointItemId, 0LL);
-  EventTradeSweetsNumConfirmDialogComponent__SetRewardCount(this, v68);
+  AtlasManager__SetItem(this->fields.exchangeDestinationPointIcon, v68->fields.eventPointItemId, 0LL);
+  EventTradeSweetsNumConfirmDialogComponent__SetRewardCount(this, v69);
 }
 
 
@@ -982,20 +984,20 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__SetRewardCount(
   int32_t v30; // w8
   System_String_o *v31; // x21
 
-  if ( (byte_4A49263 & 1) == 0 )
+  if ( (byte_4B3F59A & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_8664/*"MULTIPLE_INFO"*/, v3);
-    sub_1B863B8(&StringLiteral_13265/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_INFO"*/, v4);
-    byte_4A49263 = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_8809/*"MULTIPLE_INFO"*/, v3);
+    sub_1BDB878(&StringLiteral_13459/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_INFO"*/, v4);
+    byte_4B3F59A = 1;
   }
   isReplenishment = this->fields.isReplenishment;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8664/*"MULTIPLE_INFO"*/, 0LL);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8809/*"MULTIPLE_INFO"*/, 0LL);
   if ( isReplenishment )
   {
-    exchangeDestinationPointCount = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13265/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_INFO"*/, 0LL);
+    exchangeDestinationPointCount = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13459/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_INFO"*/, 0LL);
     eventTradeInfo = this->fields.eventTradeInfo;
     if ( eventTradeInfo )
     {
@@ -1003,10 +1005,10 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__SetRewardCount(
       NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(eventTradeInfo->fields.tradeNum, 0LL);
       v12 = this->fields.makeCount <= 1 ? 1 : this->fields.makeCount;
       v13 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v12, 0LL);
-      v14 = (Il2CppObject *)System_String__Format_61686468(v10, NumberFormat, v13, 0LL);
+      v14 = (Il2CppObject *)System_String__Format_62613552(v10, NumberFormat, v13, 0LL);
       v15 = System_String__Format(v6, v14, 0LL);
-      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_8664/*"MULTIPLE_INFO"*/, 0LL);
-      exchangeDestinationPointCount = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13265/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_INFO"*/, 0LL);
+      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_8809/*"MULTIPLE_INFO"*/, 0LL);
+      exchangeDestinationPointCount = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13459/*"TRADE_EVENT_REPLENISHMENT_CONFIRM_DIALOG_INFO"*/, 0LL);
       tradeGoodsEntity = this->fields.tradeGoodsEntity;
       if ( tradeGoodsEntity )
       {
@@ -1026,14 +1028,14 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__SetRewardCount(
             if ( makeCount <= 1 )
               makeCount = 1;
             v24 = (Il2CppObject *)LocalizationManager__GetNumberFormat(makeCount * eventPointNum, 0LL);
-            v25 = (Il2CppObject *)System_String__Format_61686468(v19, v23, v24, 0LL);
+            v25 = (Il2CppObject *)System_String__Format_62613552(v19, v23, v24, 0LL);
             goto LABEL_23;
           }
         }
       }
     }
 LABEL_26:
-    sub_1B86614(exchangeDestinationPointCount, v8);
+    sub_1BDBAD4(exchangeDestinationPointCount, v8);
   }
   if ( this->fields.makeCount <= 1 )
     v26 = 1;
@@ -1041,7 +1043,7 @@ LABEL_26:
     v26 = this->fields.makeCount;
   v27 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v26, 0LL);
   v15 = System_String__Format(v6, v27, 0LL);
-  exchangeDestinationPointCount = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8664/*"MULTIPLE_INFO"*/, 0LL);
+  exchangeDestinationPointCount = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8809/*"MULTIPLE_INFO"*/, 0LL);
   v28 = this->fields.tradeGoodsEntity;
   if ( !v28 )
     goto LABEL_26;
@@ -1106,23 +1108,23 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__SetTimeLabel(
   Il2CppObject *RestTimeInFormat; // x0
 
   v3 = this;
-  if ( (byte_4A4925A & 1) == 0 )
+  if ( (byte_4B3F591 & 1) == 0 )
   {
-    sub_1B863B8(&EventTradeTimeCalculation_TypeInfo, method);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v4);
-    sub_1B863B8(&System_Math_TypeInfo, v5);
-    sub_1B863B8(&NetworkManager_TypeInfo, v6);
-    sub_1B863B8(&StringLiteral_13236/*"TRADE_EVENT_ADD_TIME_LABEL"*/, v7);
-    sub_1B863B8(&StringLiteral_13242/*"TRADE_EVENT_COMPLETION_TIME_LABEL"*/, v8);
-    this = (EventTradeSweetsNumConfirmDialogComponent_o *)sub_1B863B8(&StringLiteral_24762/*"{0,2}:{1:D2}:{2:D2}"*/, v9);
-    byte_4A4925A = 1;
+    sub_1BDB878(&EventTradeTimeCalculation_TypeInfo, method);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v4);
+    sub_1BDB878(&System_Math_TypeInfo, v5);
+    sub_1BDB878(&NetworkManager_TypeInfo, v6);
+    sub_1BDB878(&StringLiteral_13430/*"TRADE_EVENT_ADD_TIME_LABEL"*/, v7);
+    sub_1BDB878(&StringLiteral_13436/*"TRADE_EVENT_COMPLETION_TIME_LABEL"*/, v8);
+    this = (EventTradeSweetsNumConfirmDialogComponent_o *)sub_1BDB878(&StringLiteral_25119/*"{0,2}:{1:D2}:{2:D2}"*/, v9);
+    byte_4B3F591 = 1;
   }
   if ( !v3->fields.isReplenishment )
   {
     tradeCompletionTimeLabel = v3->fields.tradeCompletionTimeLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_13242/*"TRADE_EVENT_COMPLETION_TIME_LABEL"*/, 0LL);
+    v31 = LocalizationManager__Get((System_String_o *)StringLiteral_13436/*"TRADE_EVENT_COMPLETION_TIME_LABEL"*/, 0LL);
     tradeGoodsEntity = v3->fields.tradeGoodsEntity;
     makeCount = v3->fields.makeCount;
     v35 = v31;
@@ -1132,7 +1134,7 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__SetTimeLabel(
     RestTimeInFormat = (Il2CppObject *)LocalizationManager__GetRestTimeInFormat(
                                          TradeFinishTime,
                                          0LL,
-                                         (System_String_o *)StringLiteral_24762/*"{0,2}:{1:D2}:{2:D2}"*/,
+                                         (System_String_o *)StringLiteral_25119/*"{0,2}:{1:D2}:{2:D2}"*/,
                                          0LL);
     this = (EventTradeSweetsNumConfirmDialogComponent_o *)System_String__Format(v35, RestTimeInFormat, 0LL);
     if ( tradeCompletionTimeLabel )
@@ -1142,7 +1144,7 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__SetTimeLabel(
       goto LABEL_22;
     }
 LABEL_23:
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   }
   eventTradeInfo = v3->fields.eventTradeInfo;
   if ( !eventTradeInfo )
@@ -1170,18 +1172,18 @@ LABEL_23:
   v19 = v17;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_13242/*"TRADE_EVENT_COMPLETION_TIME_LABEL"*/, 0LL);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_13436/*"TRADE_EVENT_COMPLETION_TIME_LABEL"*/, 0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v22 = System_Math__Max_63172764((int64_t)&v16[-Time], 0LL, 0LL);
-  v23 = LocalizationManager__GetRestTimeInFormat(v22 + v19, 0LL, (System_String_o *)StringLiteral_24762/*"{0,2}:{1:D2}:{2:D2}"*/, 0LL);
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_13236/*"TRADE_EVENT_ADD_TIME_LABEL"*/, 0LL);
-  v25 = (Il2CppObject *)LocalizationManager__GetRestTimeInFormat(v19, 0LL, (System_String_o *)StringLiteral_24762/*"{0,2}:{1:D2}:{2:D2}"*/, 0LL);
+  v22 = System_Math__Max_64100592((int64_t)&v16[-Time], 0LL, 0LL);
+  v23 = LocalizationManager__GetRestTimeInFormat(v22 + v19, 0LL, (System_String_o *)StringLiteral_25119/*"{0,2}:{1:D2}:{2:D2}"*/, 0LL);
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_13430/*"TRADE_EVENT_ADD_TIME_LABEL"*/, 0LL);
+  v25 = (Il2CppObject *)LocalizationManager__GetRestTimeInFormat(v19, 0LL, (System_String_o *)StringLiteral_25119/*"{0,2}:{1:D2}:{2:D2}"*/, 0LL);
   v26 = System_String__Format(v24, v25, 0LL);
-  v27 = (Il2CppObject *)System_String__Concat_61645176(v23, v26, 0LL);
+  v27 = (Il2CppObject *)System_String__Concat_62572260(v23, v26, 0LL);
   this = (EventTradeSweetsNumConfirmDialogComponent_o *)System_String__Format(v20, v27, 0LL);
   if ( !v18 )
     goto LABEL_23;
@@ -1198,39 +1200,40 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__SliderValueChange(
 {
   __int64 v3; // x1
   CommonConsumeEntity_o *itemSlider; // x0
+  __int64 v5; // x2
   struct CommonConsumeEntity_array *exchangeOriginItemList; // x8
-  __int64 v6; // x9
-  signed int v7; // w10
-  __int64 v8; // x25
-  CommonConsumeEntity_o *v9; // x8
+  __int64 v7; // x9
+  signed int v8; // w10
+  __int64 v9; // x25
+  CommonConsumeEntity_o *v10; // x8
   int32_t num; // w20
-  int v11; // w21
-  struct CommonConsumeEntity_array *v12; // x8
-  Il2CppObject *v13; // x20
+  int v12; // w21
+  struct CommonConsumeEntity_array *v13; // x8
+  Il2CppObject *v14; // x20
   int32_t HasNum; // w0
   struct UILabel_array *exchangeOriginCounts; // x8
-  Il2CppObject *v16; // x21
-  UILabel_o *v17; // x22
-  System_String_o *v18; // x0
-  signed int v19; // w10
-  __int64 v20; // x25
-  CommonConsumeEntity_o *v21; // x8
-  int32_t v22; // w20
+  Il2CppObject *v17; // x21
+  UILabel_o *v18; // x22
+  System_String_o *v19; // x0
+  signed int v20; // w10
+  __int64 v21; // x25
+  CommonConsumeEntity_o *v22; // x8
+  int32_t v23; // w20
   int32_t makeCount; // w21
-  struct CommonConsumeEntity_array *v24; // x8
-  Il2CppObject *v25; // x20
-  int32_t v26; // w0
+  struct CommonConsumeEntity_array *v25; // x8
+  Il2CppObject *v26; // x20
+  int32_t v27; // w0
   struct UILabel_array *exchangeOriginCounts2; // x8
-  Il2CppObject *v28; // x21
-  UILabel_o *v29; // x22
-  System_String_o *v30; // x0
-  const MethodInfo *v31; // x1
+  Il2CppObject *v29; // x21
+  UILabel_o *v30; // x22
+  System_String_o *v31; // x0
+  const MethodInfo *v32; // x1
 
-  if ( (byte_4A49262 & 1) == 0 )
+  if ( (byte_4B3F599 & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_13246/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, v3);
-    byte_4A49262 = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_13440/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, v3);
+    byte_4B3F599 = 1;
   }
   itemSlider = (CommonConsumeEntity_o *)this->fields.itemSlider;
   if ( !itemSlider
@@ -1242,30 +1245,30 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__SliderValueChange(
         !exchangeOriginItemList) )
   {
 LABEL_41:
-    sub_1B86614(itemSlider, method);
+    sub_1BDBAD4(itemSlider, method);
   }
-  v6 = *(_QWORD *)&exchangeOriginItemList->max_length;
-  if ( (_DWORD)v6 == 3 )
+  v7 = *(_QWORD *)&exchangeOriginItemList->max_length;
+  if ( (_DWORD)v7 == 3 )
   {
-    v7 = 0;
-    while ( v7 < (unsigned int)v6 )
+    v8 = 0;
+    while ( v8 < (unsigned int)v7 )
     {
-      v8 = v7;
-      v9 = exchangeOriginItemList->m_Items[v7];
-      if ( !v9 )
+      v9 = v8;
+      v10 = exchangeOriginItemList->m_Items[v8];
+      if ( !v10 )
         goto LABEL_41;
-      num = v9->fields.num;
-      v11 = this->fields.makeCount <= 1 ? 1 : this->fields.makeCount;
+      num = v10->fields.num;
+      v12 = this->fields.makeCount <= 1 ? 1 : this->fields.makeCount;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      itemSlider = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(v11 * num, 0LL);
-      v12 = this->fields.exchangeOriginItemList;
-      if ( !v12 )
+      itemSlider = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(v12 * num, 0LL);
+      v13 = this->fields.exchangeOriginItemList;
+      if ( !v13 )
         goto LABEL_41;
-      if ( (unsigned int)v8 >= v12->max_length )
+      if ( (unsigned int)v9 >= v13->max_length )
         goto LABEL_42;
-      v13 = (Il2CppObject *)itemSlider;
-      itemSlider = v12->m_Items[v8];
+      v14 = (Il2CppObject *)itemSlider;
+      itemSlider = v13->m_Items[v9];
       if ( !itemSlider )
         goto LABEL_41;
       HasNum = CommonConsumeEntity__GetUserHasNum(itemSlider, 0LL);
@@ -1273,79 +1276,79 @@ LABEL_41:
       exchangeOriginCounts = this->fields.exchangeOriginCounts;
       if ( !exchangeOriginCounts )
         goto LABEL_41;
-      if ( (unsigned int)v8 >= exchangeOriginCounts->max_length )
+      if ( (unsigned int)v9 >= exchangeOriginCounts->max_length )
         goto LABEL_42;
-      v16 = (Il2CppObject *)itemSlider;
-      v17 = exchangeOriginCounts->m_Items[v8];
-      v18 = LocalizationManager__Get((System_String_o *)StringLiteral_13246/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0LL);
-      itemSlider = (CommonConsumeEntity_o *)System_String__Format_61686468(v18, v13, v16, 0LL);
-      if ( !v17 )
+      v17 = (Il2CppObject *)itemSlider;
+      v18 = exchangeOriginCounts->m_Items[v9];
+      v19 = LocalizationManager__Get((System_String_o *)StringLiteral_13440/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0LL);
+      itemSlider = (CommonConsumeEntity_o *)System_String__Format_62613552(v19, v14, v17, 0LL);
+      if ( !v18 )
         goto LABEL_41;
-      UILabel__set_text(v17, (System_String_o *)itemSlider, 0LL);
+      UILabel__set_text(v18, (System_String_o *)itemSlider, 0LL);
       exchangeOriginItemList = this->fields.exchangeOriginItemList;
       if ( !exchangeOriginItemList )
         goto LABEL_41;
-      LODWORD(v6) = exchangeOriginItemList->max_length;
-      v7 = v8 + 1;
-      if ( (int)v8 + 1 >= (int)v6 )
+      LODWORD(v7) = exchangeOriginItemList->max_length;
+      v8 = v9 + 1;
+      if ( (int)v9 + 1 >= (int)v7 )
         goto LABEL_40;
     }
     goto LABEL_42;
   }
-  if ( (int)v6 >= 1 )
+  if ( (int)v7 >= 1 )
   {
-    v19 = 0;
-    while ( v19 < (unsigned int)v6 )
+    v20 = 0;
+    while ( v20 < (unsigned int)v7 )
     {
-      v20 = v19;
-      v21 = exchangeOriginItemList->m_Items[v19];
-      if ( !v21 )
+      v21 = v20;
+      v22 = exchangeOriginItemList->m_Items[v20];
+      if ( !v22 )
         goto LABEL_41;
-      v22 = v21->fields.num;
+      v23 = v22->fields.num;
       if ( this->fields.makeCount <= 1 )
         makeCount = 1;
       else
         makeCount = this->fields.makeCount;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      itemSlider = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(makeCount * v22, 0LL);
-      v24 = this->fields.exchangeOriginItemList;
-      if ( !v24 )
+      itemSlider = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(makeCount * v23, 0LL);
+      v25 = this->fields.exchangeOriginItemList;
+      if ( !v25 )
         goto LABEL_41;
-      if ( (unsigned int)v20 >= v24->max_length )
+      if ( (unsigned int)v21 >= v25->max_length )
         break;
-      v25 = (Il2CppObject *)itemSlider;
-      itemSlider = v24->m_Items[v20];
+      v26 = (Il2CppObject *)itemSlider;
+      itemSlider = v25->m_Items[v21];
       if ( !itemSlider )
         goto LABEL_41;
-      v26 = CommonConsumeEntity__GetUserHasNum(itemSlider, 0LL);
-      itemSlider = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(v26, 0LL);
+      v27 = CommonConsumeEntity__GetUserHasNum(itemSlider, 0LL);
+      itemSlider = (CommonConsumeEntity_o *)LocalizationManager__GetNumberFormat(v27, 0LL);
       exchangeOriginCounts2 = this->fields.exchangeOriginCounts2;
       if ( !exchangeOriginCounts2 )
         goto LABEL_41;
-      if ( (unsigned int)v20 >= exchangeOriginCounts2->max_length )
+      if ( (unsigned int)v21 >= exchangeOriginCounts2->max_length )
         break;
-      v28 = (Il2CppObject *)itemSlider;
-      v29 = exchangeOriginCounts2->m_Items[v20];
-      v30 = LocalizationManager__Get((System_String_o *)StringLiteral_13246/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0LL);
-      itemSlider = (CommonConsumeEntity_o *)System_String__Format_61686468(v30, v25, v28, 0LL);
-      if ( !v29 )
+      v29 = (Il2CppObject *)itemSlider;
+      v30 = exchangeOriginCounts2->m_Items[v21];
+      v31 = LocalizationManager__Get((System_String_o *)StringLiteral_13440/*"TRADE_EVENT_CONFIRM_DIALOG_KIND"*/, 0LL);
+      itemSlider = (CommonConsumeEntity_o *)System_String__Format_62613552(v31, v26, v29, 0LL);
+      if ( !v30 )
         goto LABEL_41;
-      UILabel__set_text(v29, (System_String_o *)itemSlider, 0LL);
+      UILabel__set_text(v30, (System_String_o *)itemSlider, 0LL);
       exchangeOriginItemList = this->fields.exchangeOriginItemList;
       if ( !exchangeOriginItemList )
         goto LABEL_41;
-      LODWORD(v6) = exchangeOriginItemList->max_length;
-      v19 = v20 + 1;
-      if ( (int)v20 + 1 >= (int)v6 )
+      LODWORD(v7) = exchangeOriginItemList->max_length;
+      v20 = v21 + 1;
+      if ( (int)v21 + 1 >= (int)v7 )
         goto LABEL_40;
     }
 LABEL_42:
-    sub_1B8661C(itemSlider, method);
+    sub_1BDBADC(itemSlider, method, v5);
   }
 LABEL_40:
   EventTradeSweetsNumConfirmDialogComponent__SetRewardCount(this, method);
-  EventTradeSweetsNumConfirmDialogComponent__SetTimeLabel(this, v31);
+  EventTradeSweetsNumConfirmDialogComponent__SetTimeLabel(this, v32);
 }
 
 
@@ -1391,20 +1394,20 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__UpdateDraw(
   int32_t max; // w20
   const MethodInfo *v30; // x1
 
-  if ( (byte_4A4925B & 1) == 0 )
+  if ( (byte_4B3F592 & 1) == 0 )
   {
-    sub_1B863B8(&EventTradeTimeCalculation_TypeInfo, method);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v3);
-    sub_1B863B8(&System_Math_TypeInfo, v4);
-    sub_1B863B8(&NetworkManager_TypeInfo, v5);
-    sub_1B863B8(&StringLiteral_8664/*"MULTIPLE_INFO"*/, v6);
-    byte_4A4925B = 1;
+    sub_1BDB878(&EventTradeTimeCalculation_TypeInfo, method);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v3);
+    sub_1BDB878(&System_Math_TypeInfo, v4);
+    sub_1BDB878(&NetworkManager_TypeInfo, v5);
+    sub_1BDB878(&StringLiteral_8809/*"MULTIPLE_INFO"*/, v6);
+    byte_4B3F592 = 1;
   }
   EventTradeSweetsNumConfirmDialogComponent__SetTimeLabel(this, method);
   eventItemMakeNum = this->fields.eventItemMakeNum;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8664/*"MULTIPLE_INFO"*/, 0LL);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_8809/*"MULTIPLE_INFO"*/, 0LL);
   v9 = (Il2CppObject *)System_Int32__ToString((int)this + 320, 0LL);
   Time = (int64_t)System_String__Format(v8, v9, 0LL);
   if ( !eventItemMakeNum )
@@ -1428,7 +1431,7 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__UpdateDraw(
     v19 = v17->fields.tradeNum;
     if ( !EventTradeTimeCalculation_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventTradeTimeCalculation_TypeInfo);
-    v20 = EventTradeTimeCalculation__GetCompleteNum_31134488(tradeGoodsEntity, startedAt, v18, v19, 0, v16) - tradeNum;
+    v20 = EventTradeTimeCalculation__GetCompleteNum_31670780(tradeGoodsEntity, startedAt, v18, v19, 0, v16) - tradeNum;
   }
   else
   {
@@ -1441,7 +1444,7 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__UpdateDraw(
   ItemSliderMax = EventTradeSweetsNumConfirmDialogComponent__GetItemSliderMax(this, v23);
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v25 = System_Math__Min_63173080(TradeMaxNum + v20, ItemSliderMax, 0LL);
+  v25 = System_Math__Min_64100908(TradeMaxNum + v20, ItemSliderMax, 0LL);
   if ( this->fields.max != v25 )
   {
     this->fields.max = v25;
@@ -1449,7 +1452,7 @@ void __fastcall EventTradeSweetsNumConfirmDialogComponent__UpdateDraw(
     makeCount = this->fields.makeCount;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    Time = System_Math__Min_63173080(v26, makeCount, 0LL);
+    Time = System_Math__Min_64100908(v26, makeCount, 0LL);
     itemSlider = this->fields.itemSlider;
     this->fields.makeCount = Time;
     if ( itemSlider )
@@ -1502,7 +1505,7 @@ LABEL_34:
       }
     }
 LABEL_35:
-    sub_1B86614(Time, v11);
+    sub_1BDBAD4(Time, v11);
   }
 }
 
@@ -1525,10 +1528,10 @@ UnityEngine_GameObject_o *__fastcall EventTradeSweetsNumConfirmDialogComponent__
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4A49261 & 1) == 0 )
+  if ( (byte_4B3F598 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
-    byte_4A49261 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3F598 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1537,6 +1540,6 @@ UnityEngine_GameObject_o *__fastcall EventTradeSweetsNumConfirmDialogComponent__
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_1B86614(0LL, v4);
+    sub_1BDBAD4(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }

@@ -2,15 +2,15 @@ void __fastcall EquipSkillInfoComponent___ctor(EquipSkillInfoComponent_o *this, 
 {
   IconLabelInfo_o *v3; // x20
 
-  if ( (byte_4A4945C & 1) == 0 )
+  if ( (byte_4B3F9D4 & 1) == 0 )
   {
-    sub_1B863B8(&IconLabelInfo_TypeInfo, method);
-    byte_4A4945C = 1;
+    sub_1BDB878(&IconLabelInfo_TypeInfo, method);
+    byte_4B3F9D4 = 1;
   }
-  v3 = (IconLabelInfo_o *)sub_1B86604(IconLabelInfo_TypeInfo);
+  v3 = (IconLabelInfo_o *)sub_1BDBAC4(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v3, 0LL);
   this->fields.iconLabelInfo = v3;
-  sub_1B8635C(&this->fields.iconLabelInfo);
+  sub_1BDB81C(&this->fields.iconLabelInfo);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -21,15 +21,15 @@ void __fastcall EquipSkillInfoComponent__OnClickSkill(EquipSkillInfoComponent_o 
   System_Reflection_MethodBase_o *v4; // x0
   struct EquipSkillInfoComponent_ClickDelegate_o *clickCallbackFunc; // x8
 
-  if ( (byte_4A4945B & 1) == 0 )
+  if ( (byte_4B3F9D3 & 1) == 0 )
   {
-    sub_1B863B8(&Method_EquipSkillInfoComponent_OnClickSkill__, method);
-    byte_4A4945B = 1;
+    sub_1BDB878(&Method_EquipSkillInfoComponent_OnClickSkill__, method);
+    byte_4B3F9D3 = 1;
   }
   v3 = Method_EquipSkillInfoComponent_OnClickSkill__;
   if ( (*((_BYTE *)Method_EquipSkillInfoComponent_OnClickSkill__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1B863D0(Method_EquipSkillInfoComponent_OnClickSkill__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1B8639C(v3, v3[4]);
+    v3 = (_QWORD *)sub_1BDB890(Method_EquipSkillInfoComponent_OnClickSkill__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
   clickCallbackFunc = this->fields.clickCallbackFunc;
   if ( clickCallbackFunc )
@@ -84,50 +84,50 @@ void __fastcall EquipSkillInfoComponent__setEquipSkillInfo(
   int32_t v43; // [xsp+8h] [xbp-58h] BYREF
   int v44; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4A4945A & 1) == 0 )
+  if ( (byte_4B3F9D2 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_SkillMaster___, *(_QWORD *)&idx);
-    sub_1B863B8(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v14);
-    sub_1B863B8(&int_TypeInfo, v15);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v16);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v17);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v18);
-    sub_1B863B8(&StringLiteral_8397/*"MASTER_EQSKILL_LV_INFO"*/, v19);
-    sub_1B863B8(&StringLiteral_20273/*"img_skill_0"*/, v20);
-    byte_4A4945A = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_SkillMaster___, *(_QWORD *)&idx);
+    sub_1BDB878(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v14);
+    sub_1BDB878(&int_TypeInfo, v15);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v16);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v17);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v18);
+    sub_1BDB878(&StringLiteral_8541/*"MASTER_EQSKILL_LV_INFO"*/, v19);
+    sub_1BDB878(&StringLiteral_20584/*"img_skill_0"*/, v20);
+    byte_4B3F9D2 = 1;
   }
   this->fields.clickCallbackFunc = callback;
-  sub_1B8635C(&this->fields.clickCallbackFunc);
+  sub_1BDB81C(&this->fields.clickCallbackFunc);
   v23 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v23 + 309) & 1) == 0 )
-    v23 = sub_1BD6A48(v22);
+    v23 = sub_1C2BF08(v22);
   v24 = *(_QWORD *)(*(_QWORD *)(v23 + 192) + 16LL);
   if ( (*(_BYTE *)(v24 + 309) & 1) == 0 )
-    v24 = sub_1BD6A48(v22);
+    v24 = sub_1C2BF08(v22);
   MasterData_object = **(DataManager_o ***)(v24 + 184);
   if ( !MasterData_object )
     goto LABEL_24;
   MasterData_object = (DataManager_o *)DataManager__GetMasterData_object_(
                                          MasterData_object,
-                                         (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_SkillMaster___);
+                                         (const MethodInfo_303395C *)Method_DataManager_GetMasterData_SkillMaster___);
   if ( !MasterData_object )
     goto LABEL_24;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              skillId,
-             (const MethodInfo_3214280 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_32E1E3C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   skillIndxImg = this->fields.skillIndxImg;
   v28 = (SkillEntity_o *)Entity;
   v44 = idx + 1;
   v29 = System_Int32__ToString((int32_t)&v44, 0LL);
-  MasterData_object = (DataManager_o *)System_String__Concat_61645176((System_String_o *)StringLiteral_20273/*"img_skill_0"*/, v29, 0LL);
+  MasterData_object = (DataManager_o *)System_String__Concat_62572260((System_String_o *)StringLiteral_20584/*"img_skill_0"*/, v29, 0LL);
   if ( !skillIndxImg )
     goto LABEL_24;
   UISprite__set_spriteName(skillIndxImg, (System_String_o *)MasterData_object, 0LL);
   MasterData_object = (DataManager_o *)this->fields.skillIconInfo;
   if ( !MasterData_object )
     goto LABEL_24;
-  SkillIconComponent__Set_39193508((SkillIconComponent_o *)MasterData_object, skillId, skillLv, 0LL);
+  SkillIconComponent__Set_40036740((SkillIconComponent_o *)MasterData_object, skillId, skillLv, 0LL);
   if ( !v28 )
     goto LABEL_24;
   skillNameLb = this->fields.skillNameLb;
@@ -138,12 +138,12 @@ void __fastcall EquipSkillInfoComponent__setEquipSkillInfo(
   skillLvLabel = this->fields.skillLvLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_8397/*"MASTER_EQSKILL_LV_INFO"*/, 0LL);
+  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_8541/*"MASTER_EQSKILL_LV_INFO"*/, 0LL);
   v43 = skillLv;
   v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v43, v33, v34, v35);
   maxLv = v28->fields.maxLv;
   v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &maxLv, v37, v38, v39);
-  MasterData_object = (DataManager_o *)System_String__Format_61686468(v32, v36, v40, 0LL);
+  MasterData_object = (DataManager_o *)System_String__Format_62613552(v32, v36, v40, 0LL);
   if ( !skillLvLabel )
     goto LABEL_24;
   UILabel__set_text(skillLvLabel, (System_String_o *)MasterData_object, 0LL);
@@ -164,7 +164,7 @@ void __fastcall EquipSkillInfoComponent__setEquipSkillInfo(
       return;
     }
 LABEL_24:
-    sub_1B86614(MasterData_object, v21);
+    sub_1BDBAD4(MasterData_object, v21);
   }
 }
 
@@ -187,15 +187,15 @@ void __fastcall EquipSkillInfoComponent_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8635C(&this->fields.method);
+  sub_1BDB81C(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B86478(v6) & 1) == 0 )
+  if ( (sub_1BDB938(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B864E0(v10, 0LL);
+      v10 = sub_1BDBAF0(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BDB9A0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -207,9 +207,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19CAF4C;
+  this->fields.m_target = (Il2CppObject *)sub_1A1D754;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19CAEF4;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A1D6FC;
 }
 
 
@@ -231,15 +231,15 @@ System_IAsyncResult_o *__fastcall EquipSkillInfoComponent_ClickDelegate__BeginIn
 
   v14 = skillLv;
   v15 = skillId;
-  if ( (byte_4A4945D & 1) == 0 )
+  if ( (byte_4B3F9D5 & 1) == 0 )
   {
-    sub_1B863B8(&int_TypeInfo, *(_QWORD *)&skillId);
-    byte_4A4945D = 1;
+    sub_1BDB878(&int_TypeInfo, *(_QWORD *)&skillId);
+    byte_4B3F9D5 = 1;
   }
   v13[2] = 0LL;
   v13[0] = j_il2cpp_value_box_0(int_TypeInfo, &v15, *(_QWORD *)&skillLv, callback, object);
   v13[1] = j_il2cpp_value_box_0(int_TypeInfo, &v14, v9, v10, v11);
-  return (System_IAsyncResult_o *)sub_1B8636C(this, v13, callback, object);
+  return (System_IAsyncResult_o *)sub_1BDB82C(this, v13, callback, object);
 }
 
 
@@ -248,7 +248,7 @@ void __fastcall EquipSkillInfoComponent_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B86370(result, 0LL, method);
+  sub_1BDB830(result, 0LL, method);
 }
 
 

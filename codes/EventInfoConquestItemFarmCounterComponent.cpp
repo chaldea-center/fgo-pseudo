@@ -17,9 +17,9 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__PlayAnim(
   {
     klass = this->klass;
     this->fields.addProductNum = 0;
-    ((void (__fastcall *)(EventInfoConquestItemFarmCounterComponent_o *, _QWORD, _QWORD, _QWORD, Il2CppMethodPointer))klass->vtable._5_SetLabel.method)(
+    ((void (__fastcall *)(EventInfoConquestItemFarmCounterComponent_o *, int64_t, _QWORD, _QWORD, Il2CppMethodPointer))klass->vtable._5_SetLabel.method)(
       this,
-      (unsigned int)this->fields.itemNum,
+      this->fields.itemNum,
       (unsigned int)this->fields.productNum,
       0LL,
       klass->vtable._6_PlayAnim.methodPtr);
@@ -27,10 +27,9 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__PlayAnim(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void __fastcall EventInfoConquestItemFarmCounterComponent__SetLabel(
         EventInfoConquestItemFarmCounterComponent_o *this,
-        int32_t itemNum,
+        int64_t itemNum,
         int32_t productNum,
         int32_t addNum,
         const MethodInfo *method)
@@ -38,55 +37,57 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__SetLabel(
   __int64 v9; // x1
   __int64 v10; // x1
   __int64 v11; // x1
+  __int64 v12; // x1
   UILabel_o *itemNumLabel; // x23
-  System_String_o *v13; // x24
-  __int64 v14; // x2
-  __int64 v15; // x3
-  __int64 v16; // x4
-  Il2CppObject *v17; // x0
-  System_String_o *v18; // x0
-  __int64 v19; // x1
+  System_String_o *v14; // x24
+  __int64 v15; // x2
+  __int64 v16; // x3
+  __int64 v17; // x4
+  Il2CppObject *v18; // x0
+  System_String_o *v19; // x0
+  __int64 v20; // x1
   UILabel_o *productNumLabel; // x22
-  System_String_o *v21; // x23
-  __int64 v22; // x2
-  __int64 v23; // x3
-  __int64 v24; // x4
-  Il2CppObject *v25; // x0
-  int v26; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v27; // [xsp+Ch] [xbp-44h] BYREF
+  System_String_o *v22; // x23
+  __int64 v23; // x2
+  __int64 v24; // x3
+  __int64 v25; // x4
+  Il2CppObject *v26; // x0
+  int v27; // [xsp+4h] [xbp-4Ch] BYREF
+  int64_t v28; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A4EB0E & 1) == 0 )
+  if ( (byte_4B4511A & 1) == 0 )
   {
-    sub_1B863B8(&int_TypeInfo, *(_QWORD *)&itemNum);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v9);
-    sub_1B863B8(&StringLiteral_5517/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, v10);
-    sub_1B863B8(&StringLiteral_5518/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, v11);
-    byte_4A4EB0E = 1;
+    sub_1BDB878(&int_TypeInfo, itemNum);
+    sub_1BDB878(&long_TypeInfo, v9);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v10);
+    sub_1BDB878(&StringLiteral_5594/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, v11);
+    sub_1BDB878(&StringLiteral_5595/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, v12);
+    byte_4B4511A = 1;
   }
   itemNumLabel = this->fields.itemNumLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5517/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, 0LL);
-  v27 = itemNum;
-  v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27, v14, v15, v16);
-  v18 = System_String__Format(v13, v17, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5594/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, 0LL);
+  v28 = itemNum;
+  v18 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v28, v15, v16, v17);
+  v19 = System_String__Format(v14, v18, 0LL);
   if ( !itemNumLabel )
     goto LABEL_10;
-  UILabel__set_text(itemNumLabel, v18, 0LL);
+  UILabel__set_text(itemNumLabel, v19, 0LL);
   productNumLabel = this->fields.productNumLabel;
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5518/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0LL);
-  v26 = productNum - addNum;
-  v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, v22, v23, v24);
-  v18 = System_String__Format(v21, v25, 0LL);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5595/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0LL);
+  v27 = productNum - addNum;
+  v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27, v23, v24, v25);
+  v19 = System_String__Format(v22, v26, 0LL);
   if ( !productNumLabel
-    || (UILabel__set_text(productNumLabel, v18, 0LL), (v18 = (System_String_o *)this->fields.itemNumLabel) == 0LL)
-    || (UILabel__SetCondensedScale((UILabel_o *)v18, this->fields.numLabelMaxWidth, 0, 0LL),
-        (v18 = (System_String_o *)this->fields.productNumLabel) == 0LL) )
+    || (UILabel__set_text(productNumLabel, v19, 0LL), (v19 = (System_String_o *)this->fields.itemNumLabel) == 0LL)
+    || (UILabel__SetCondensedScale((UILabel_o *)v19, this->fields.numLabelMaxWidth, 0, 0LL),
+        (v19 = (System_String_o *)this->fields.productNumLabel) == 0LL) )
   {
 LABEL_10:
-    sub_1B86614(v18, v19);
+    sub_1BDBAD4(v19, v20);
   }
-  UILabel__SetCondensedScale((UILabel_o *)v18, this->fields.numLabelMaxWidth, 0, 0LL);
+  UILabel__SetCondensedScale((UILabel_o *)v19, this->fields.numLabelMaxWidth, 0, 0LL);
 }
 
 
@@ -104,13 +105,13 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__Start(
   UnityEngine_Object_o *productNumTitleLabel; // x20
   UILabel_o *v11; // x20
 
-  if ( (byte_4A4EB0D & 1) == 0 )
+  if ( (byte_4B45119 & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, method);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v3);
-    sub_1B863B8(&StringLiteral_5517/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, v4);
-    sub_1B863B8(&StringLiteral_5518/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, v5);
-    byte_4A4EB0D = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, method);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
+    sub_1BDB878(&StringLiteral_5594/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, v4);
+    sub_1BDB878(&StringLiteral_5595/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, v5);
+    byte_4B45119 = 1;
   }
   itemNumTitleLabel = (UnityEngine_Object_o *)this->fields.itemNumTitleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -120,7 +121,7 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__Start(
     v7 = this->fields.itemNumTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5517/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5594/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, 0LL);
     if ( !v7 )
       goto LABEL_20;
     UILabel__set_text(v7, v8, 0LL);
@@ -137,7 +138,7 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__Start(
     v11 = this->fields.productNumTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5518/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5595/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0LL);
     if ( v11 )
     {
       UILabel__set_text(v11, v8, 0LL);
@@ -149,12 +150,12 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__Start(
       }
     }
 LABEL_20:
-    sub_1B86614(v8, v9);
+    sub_1BDBAD4(v8, v9);
   }
 LABEL_19:
-  ((void (__fastcall *)(EventInfoConquestItemFarmCounterComponent_o *, _QWORD, _QWORD, _QWORD, Il2CppMethodPointer))this->klass->vtable._5_SetLabel.method)(
+  ((void (__fastcall *)(EventInfoConquestItemFarmCounterComponent_o *, int64_t, _QWORD, _QWORD, Il2CppMethodPointer))this->klass->vtable._5_SetLabel.method)(
     this,
-    (unsigned int)this->fields.itemNum,
+    this->fields.itemNum,
     (unsigned int)this->fields.productNum,
     (unsigned int)this->fields.addProductNum,
     this->klass->vtable._6_PlayAnim.methodPtr);
@@ -169,9 +170,9 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__anim(
 
   klass = this->klass;
   this->fields.addProductNum = 0;
-  ((void (__fastcall *)(EventInfoConquestItemFarmCounterComponent_o *, _QWORD, _QWORD, _QWORD, Il2CppMethodPointer))klass->vtable._5_SetLabel.method)(
+  ((void (__fastcall *)(EventInfoConquestItemFarmCounterComponent_o *, int64_t, _QWORD, _QWORD, Il2CppMethodPointer))klass->vtable._5_SetLabel.method)(
     this,
-    (unsigned int)this->fields.itemNum,
+    this->fields.itemNum,
     (unsigned int)this->fields.productNum,
     0LL,
     klass->vtable._6_PlayAnim.methodPtr);

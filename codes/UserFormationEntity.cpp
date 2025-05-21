@@ -1,13 +1,13 @@
 void __fastcall UserFormationEntity___ctor(UserFormationEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4F2A0 & 1) == 0 )
+  if ( (byte_4B458A2 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_long___ctor__, method);
-    byte_4A4F2A0 = 1;
+    sub_1BDB878(&Method_DataEntityBase_long___ctor__, method);
+    byte_4B458A2 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_3211DE4 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_32DF9A0 *)Method_DataEntityBase_long___ctor__);
 }
 
 

@@ -1,13 +1,13 @@
 void __fastcall RaceResultEffectComponent___ctor(RaceResultEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4F9EE & 1) == 0 )
+  if ( (byte_4B46018 & 1) == 0 )
   {
-    sub_1B863B8(&CommonEffectComponent_TypeInfo, method);
-    byte_4A4F9EE = 1;
+    sub_1BDB878(&CommonEffectComponent_TypeInfo, method);
+    byte_4B46018 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
-  CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0LL);
+  CommonEffectComponent___ctor((CommonEffectComponent_o *)this, method);
 }
 
 
@@ -28,66 +28,67 @@ void __fastcall RaceResultEffectComponent__SetParam(
   Il2CppObject **p_param; // x19
   System_Object_array *Components_object; // x0
   __int64 v8; // x1
-  __int64 v9; // x21
-  int v10; // w8
-  unsigned int v11; // w22
+  __int64 v9; // x2
+  __int64 v10; // x21
+  int v11; // w8
+  unsigned int v12; // w22
   int max_length; // w8
-  System_Object_array *v13; // x20
-  __int64 v14; // x24
+  System_Object_array *v14; // x20
+  __int64 v15; // x24
 
-  if ( (byte_4A4F9ED & 1) == 0 )
+  if ( (byte_4B46017 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___, param);
-    byte_4A4F9ED = 1;
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___, param);
+    byte_4B46017 = 1;
   }
   this->fields.param = param;
   p_param = &this->fields.param;
-  sub_1B8635C((CGThumbnailListItem_o *)p_param, (int32_t)param, (int32_t)method, v3);
-  v9 = (__int64)*(p_param - 1);
-  if ( !v9 )
+  sub_1BDB81C((CGThumbnailListItem_o *)p_param, (int32_t)param, (int32_t)method, v3);
+  v10 = (__int64)*(p_param - 1);
+  if ( !v10 )
 LABEL_17:
-    sub_1B86614(Components_object, v8);
-  v10 = *(_DWORD *)(v9 + 24);
-  if ( v10 >= 1 )
+    sub_1BDBAD4(Components_object, v8);
+  v11 = *(_DWORD *)(v10 + 24);
+  if ( v11 >= 1 )
   {
-    v11 = 0;
+    v12 = 0;
     while ( 1 )
     {
-      if ( v11 >= v10 )
+      if ( v12 >= v11 )
         goto LABEL_16;
-      Components_object = *(System_Object_array **)(v9 + 8LL * (int)v11 + 32);
+      Components_object = *(System_Object_array **)(v10 + 8LL * (int)v12 + 32);
       if ( !Components_object )
         goto LABEL_17;
       Components_object = UnityEngine_GameObject__GetComponents_object_(
                             (UnityEngine_GameObject_o *)Components_object,
-                            (const MethodInfo_2FC174C *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+                            (const MethodInfo_3088E7C *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
       if ( Components_object )
       {
         max_length = Components_object->max_length;
-        v13 = Components_object;
+        v14 = Components_object;
         if ( max_length >= 1 )
           break;
       }
 LABEL_14:
-      v10 = *(_DWORD *)(v9 + 24);
-      if ( (int)++v11 >= v10 )
+      v11 = *(_DWORD *)(v10 + 24);
+      if ( (int)++v12 >= v11 )
         return;
     }
-    v14 = 0LL;
-    while ( (unsigned int)v14 < max_length )
+    v15 = 0LL;
+    while ( (unsigned int)v15 < max_length )
     {
-      Components_object = (System_Object_array *)v13->m_Items[v14];
+      Components_object = (System_Object_array *)v14->m_Items[v15];
       if ( !Components_object )
         goto LABEL_17;
       Components_object = (System_Object_array *)((__int64 (__fastcall *)(System_Object_array *, Il2CppObject *, Il2CppMethodPointer))Components_object->obj.klass->vtable[4].method)(
                                                    Components_object,
                                                    *p_param,
                                                    Components_object->obj.klass->vtable[5].methodPtr);
-      max_length = v13->max_length;
-      if ( (int)++v14 >= max_length )
+      max_length = v14->max_length;
+      if ( (int)++v15 >= max_length )
         goto LABEL_14;
     }
 LABEL_16:
-    sub_1B8661C(Components_object, v8);
+    sub_1BDBADC(Components_object, v8, v9);
   }
 }

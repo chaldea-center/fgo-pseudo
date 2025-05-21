@@ -11,33 +11,38 @@ void __fastcall EventDeckSetupRequest__beginRequest(
         int32_t questId,
         int32_t phase,
         int32_t restartWave,
+        GrandSvtInfo_array *grandSvtInfos,
         const MethodInfo *method)
 {
-  RequestBase_o *v12; // x19
-  __int64 v13; // x1
+  RequestBase_o *v13; // x19
   __int64 v14; // x1
   __int64 v15; // x1
   __int64 v16; // x1
   __int64 v17; // x1
   __int64 v18; // x1
   __int64 v19; // x1
-  Il2CppObject *deckInfo; // x25
-  MiniMessagePack_MiniMessagePacker_o *v21; // x21
-  System_Byte_array *v22; // x20
-  System_String_o *v23; // x0
+  __int64 v20; // x1
+  __int64 v21; // x1
+  Il2CppObject *deckInfo; // x26
+  MiniMessagePack_MiniMessagePacker_o *v23; // x22
+  System_Byte_array *v24; // x21
+  System_String_o *v25; // x0
+  System_Byte_array *v26; // x0
+  System_String_o *v27; // x0
 
-  v12 = (RequestBase_o *)this;
-  if ( (byte_4A4FEB8 & 1) == 0 )
+  v13 = (RequestBase_o *)this;
+  if ( (byte_4B464E7 & 1) == 0 )
   {
-    sub_1B863B8(&System_Convert_TypeInfo, userEventDeck);
-    sub_1B863B8(&JsonManager_TypeInfo, v13);
-    sub_1B863B8(&MiniMessagePack_MiniMessagePacker_TypeInfo, v14);
-    sub_1B863B8(&StringLiteral_18908/*"eventId"*/, v15);
-    sub_1B863B8(&StringLiteral_22357/*"phase"*/, v16);
-    sub_1B863B8(&StringLiteral_18295/*"deckInfo"*/, v17);
-    sub_1B863B8(&StringLiteral_22539/*"questId"*/, v18);
-    this = (EventDeckSetupRequest_o *)sub_1B863B8(&StringLiteral_22746/*"restartWave"*/, v19);
-    byte_4A4FEB8 = 1;
+    sub_1BDB878(&System_Convert_TypeInfo, userEventDeck);
+    sub_1BDB878(&JsonManager_TypeInfo, v14);
+    sub_1BDB878(&MiniMessagePack_MiniMessagePacker_TypeInfo, v15);
+    sub_1BDB878(&StringLiteral_19152/*"eventId"*/, v16);
+    sub_1BDB878(&StringLiteral_22699/*"phase"*/, v17);
+    sub_1BDB878(&StringLiteral_18533/*"deckInfo"*/, v18);
+    sub_1BDB878(&StringLiteral_19903/*"grandSvtInfo"*/, v19);
+    sub_1BDB878(&StringLiteral_22882/*"questId"*/, v20);
+    this = (EventDeckSetupRequest_o *)sub_1BDB878(&StringLiteral_23093/*"restartWave"*/, v21);
+    byte_4B464E7 = 1;
   }
   if ( !userEventDeck )
     goto LABEL_10;
@@ -45,30 +50,33 @@ void __fastcall EventDeckSetupRequest__beginRequest(
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   JsonManager__toJson(deckInfo, 0, 0, 0LL);
-  RequestBase__addField(v12, (System_String_o *)StringLiteral_22746/*"restartWave"*/, restartWave, 0LL);
-  RequestBase__addField(v12, (System_String_o *)StringLiteral_18908/*"eventId"*/, eventId, 0LL);
-  RequestBase__addField(v12, (System_String_o *)StringLiteral_22539/*"questId"*/, questId, 0LL);
-  RequestBase__addField(v12, (System_String_o *)StringLiteral_22357/*"phase"*/, phase, 0LL);
-  v21 = (MiniMessagePack_MiniMessagePacker_o *)sub_1B86604(MiniMessagePack_MiniMessagePacker_TypeInfo);
-  MiniMessagePack_MiniMessagePacker___ctor(v21, 0LL);
-  if ( !v21 )
+  RequestBase__addField(v13, (System_String_o *)StringLiteral_23093/*"restartWave"*/, restartWave, 0LL);
+  RequestBase__addField(v13, (System_String_o *)StringLiteral_19152/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField(v13, (System_String_o *)StringLiteral_22882/*"questId"*/, questId, 0LL);
+  RequestBase__addField(v13, (System_String_o *)StringLiteral_22699/*"phase"*/, phase, 0LL);
+  v23 = (MiniMessagePack_MiniMessagePacker_o *)sub_1BDBAC4(MiniMessagePack_MiniMessagePacker_TypeInfo);
+  MiniMessagePack_MiniMessagePacker___ctor(v23, 0LL);
+  if ( !v23 )
 LABEL_10:
-    sub_1B86614(this, userEventDeck);
-  v22 = MiniMessagePack_MiniMessagePacker__PackClass(v21, (Il2CppObject *)userEventDeck->fields.deckInfo, 0LL);
+    sub_1BDBAD4(this, userEventDeck);
+  v24 = MiniMessagePack_MiniMessagePacker__PackClass(v23, (Il2CppObject *)userEventDeck->fields.deckInfo, 0LL);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v23 = System_Convert__ToBase64String(v22, 0LL);
-  RequestBase__addField_42282000(v12, (System_String_o *)StringLiteral_18295/*"deckInfo"*/, v23, 0LL);
-  RequestBase__beginRequest(v12, 0LL);
+  v25 = System_Convert__ToBase64String(v24, 0LL);
+  RequestBase__addField_43151112(v13, (System_String_o *)StringLiteral_18533/*"deckInfo"*/, v25, 0LL);
+  v26 = MiniMessagePack_MiniMessagePacker__PackClass(v23, &grandSvtInfos->obj, 0LL);
+  v27 = System_Convert__ToBase64String(v26, 0LL);
+  RequestBase__addField_43151112(v13, (System_String_o *)StringLiteral_19903/*"grandSvtInfo"*/, v27, 0LL);
+  RequestBase__beginRequest(v13, 0LL);
 }
 
 
 System_String_o *__fastcall EventDeckSetupRequest__getMockData(EventDeckSetupRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4FEB7 & 1) == 0 )
+  if ( (byte_4B464E6 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_1/*""*/, method);
-    byte_4A4FEB7 = 1;
+    sub_1BDB878(&StringLiteral_1/*""*/, method);
+    byte_4B464E6 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -79,16 +87,16 @@ System_String_o *__fastcall EventDeckSetupRequest__getURL(EventDeckSetupRequest_
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A4FEB6 & 1) == 0 )
+  if ( (byte_4B464E5 & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_18905/*"eventDeck/setup"*/, v2);
-    byte_4A4FEB6 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_19149/*"eventDeck/setup"*/, v2);
+    byte_4B464E5 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_18905/*"eventDeck/setup"*/, 0LL);
+  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_19149/*"eventDeck/setup"*/, 0LL);
 }
 
 
@@ -102,19 +110,19 @@ void __fastcall EventDeckSetupRequest__requestCompleted(
   ResponseData_o *v7; // x0
   __int64 *v8; // x8
 
-  if ( (byte_4A4FEB9 & 1) == 0 )
+  if ( (byte_4B464E8 & 1) == 0 )
   {
-    sub_1B863B8(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B863B8(&StringLiteral_22061/*"ok"*/, v5);
-    sub_1B863B8(&StringLiteral_21893/*"ng"*/, v6);
-    byte_4A4FEB9 = 1;
+    sub_1BDB878(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1BDB878(&StringLiteral_22401/*"ok"*/, v5);
+    sub_1BDB878(&StringLiteral_22233/*"ng"*/, v6);
+    byte_4B464E8 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(74, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_42282948(v7, 0LL) )
-    v8 = &StringLiteral_22061/*"ok"*/;
+  if ( v7 && ResponseData__checkError_43151432(v7, 0LL) )
+    v8 = &StringLiteral_22401/*"ok"*/;
   else
-    v8 = &StringLiteral_21893/*"ng"*/;
+    v8 = &StringLiteral_22233/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
 }

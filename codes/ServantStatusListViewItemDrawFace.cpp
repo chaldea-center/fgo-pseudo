@@ -15,22 +15,23 @@ void __fastcall ServantStatusListViewItemDrawFace__Awake(
   struct UISprite_array *charaLevelSpriteList; // x8
   ServantStatusListViewItemDrawFace_o *v3; // x19
   int32_t facePitch; // w20
-  float v5; // s1
-  struct UISprite_array *v6; // x8
-  float v7; // s8
-  float v8; // s1
+  __int64 v5; // x2
+  float v6; // s1
+  struct UISprite_array *v7; // x8
+  float v8; // s8
+  float v9; // s1
   struct UISprite_o *baseSprite; // x9
   int max_length; // w8
   int32_t mHeight; // w11
-  bool v12; // cc
-  int v13; // w8
-  float v14; // s0
-  float v15; // s1
-  float v16; // s2
-  int v17; // w8
-  float v18; // s8
+  bool v13; // cc
+  int v14; // w8
+  float v15; // s0
+  float v16; // s1
+  float v17; // s2
+  int v18; // w8
+  float v19; // s8
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
   charaLevelSpriteList = this->fields.charaLevelSpriteList;
   if ( !charaLevelSpriteList )
@@ -46,29 +47,29 @@ void __fastcall ServantStatusListViewItemDrawFace__Awake(
                                                     0LL);
     if ( !this )
       goto LABEL_28;
-    *(UnityEngine_Vector3_o *)(&v5 - 1) = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
-    v6 = v3->fields.charaLevelSpriteList;
-    if ( !v6 )
+    *(UnityEngine_Vector3_o *)(&v6 - 1) = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
+    v7 = v3->fields.charaLevelSpriteList;
+    if ( !v7 )
       goto LABEL_28;
-    if ( v6->max_length <= 4 )
-      sub_1B8661C(this, method);
-    if ( (this = (ServantStatusListViewItemDrawFace_o *)v6->m_Items[4]) == 0LL
-      || (v7 = v5,
+    if ( v7->max_length <= 4 )
+      sub_1BDBADC(this, method, v5);
+    if ( (this = (ServantStatusListViewItemDrawFace_o *)v7->m_Items[4]) == 0LL
+      || (v8 = v6,
           (this = (ServantStatusListViewItemDrawFace_o *)UnityEngine_Component__get_transform(
                                                            (UnityEngine_Component_o *)this,
                                                            0LL)) == 0LL)
-      || ((*(UnityEngine_Vector3_o *)(&v8 - 1) = UnityEngine_Transform__get_localPosition(
+      || ((*(UnityEngine_Vector3_o *)(&v9 - 1) = UnityEngine_Transform__get_localPosition(
                                                    (UnityEngine_Transform_o *)this,
                                                    0LL),
            charaLevelSpriteList = v3->fields.charaLevelSpriteList,
-           (float)(v7 - v8) != INFINITY)
-        ? (facePitch = (int)(float)(v7 - v8))
+           (float)(v8 - v9) != INFINITY)
+        ? (facePitch = (int)(float)(v8 - v9))
         : (facePitch = 0x80000000),
           v3->fields.facePitch = facePitch,
           !charaLevelSpriteList) )
     {
 LABEL_28:
-      sub_1B86614(this, method);
+      sub_1BDBAD4(this, method);
     }
   }
   else
@@ -80,13 +81,13 @@ LABEL_28:
     goto LABEL_28;
   max_length = charaLevelSpriteList->max_length;
   mHeight = baseSprite->fields.mHeight;
-  v12 = max_length < 12;
+  v13 = max_length < 12;
   this = (ServantStatusListViewItemDrawFace_o *)v3->fields.titleSprite;
-  v13 = 1 - max_length / 4;
-  if ( v12 )
-    v13 = -1;
+  v14 = 1 - max_length / 4;
+  if ( v13 )
+    v14 = -1;
   v3->fields.baseSize.fields.x = (float)baseSprite->fields.mWidth;
-  v3->fields.baseSize.fields.y = (float)(mHeight + v13 * facePitch);
+  v3->fields.baseSize.fields.y = (float)(mHeight + v14 * facePitch);
   v3->fields.baseSize.fields.z = 0.0;
   if ( !this )
     goto LABEL_28;
@@ -95,13 +96,13 @@ LABEL_28:
                                                   0LL);
   if ( !this )
     goto LABEL_28;
-  *(UnityEngine_Vector3_o *)&v14 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
+  *(UnityEngine_Vector3_o *)&v15 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
   this = (ServantStatusListViewItemDrawFace_o *)v3->fields.faceBase;
-  v17 = facePitch >= 0 ? facePitch : facePitch + 1;
-  v18 = (float)(v17 >> 1);
-  v3->fields.titleBasePosition.fields.x = v14;
-  v3->fields.titleBasePosition.fields.y = v15 - v18;
-  v3->fields.titleBasePosition.fields.z = v16;
+  v18 = facePitch >= 0 ? facePitch : facePitch + 1;
+  v19 = (float)(v18 >> 1);
+  v3->fields.titleBasePosition.fields.x = v15;
+  v3->fields.titleBasePosition.fields.y = v16 - v19;
+  v3->fields.titleBasePosition.fields.z = v17;
   if ( !this )
     goto LABEL_28;
   this = (ServantStatusListViewItemDrawFace_o *)UnityEngine_GameObject__get_transform(
@@ -112,7 +113,7 @@ LABEL_28:
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
   this = (ServantStatusListViewItemDrawFace_o *)v3->fields.explanationLabel;
   v3->fields.faceBasePosition.fields.x = localPosition.fields.x;
-  v3->fields.faceBasePosition.fields.y = localPosition.fields.y - v18;
+  v3->fields.faceBasePosition.fields.y = localPosition.fields.y - v19;
   v3->fields.faceBasePosition.fields.z = localPosition.fields.z;
   if ( !this )
     goto LABEL_28;
@@ -121,10 +122,10 @@ LABEL_28:
                                                   0LL);
   if ( !this )
     goto LABEL_28;
-  v20 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
-  v3->fields.explanationBasePosition.fields.x = v20.fields.x;
-  v3->fields.explanationBasePosition.fields.y = v20.fields.y + v18;
-  v3->fields.explanationBasePosition.fields.z = v20.fields.z;
+  v21 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
+  v3->fields.explanationBasePosition.fields.x = v21.fields.x;
+  v3->fields.explanationBasePosition.fields.y = v21.fields.y + v19;
+  v3->fields.explanationBasePosition.fields.z = v21.fields.z;
 }
 
 
@@ -176,20 +177,20 @@ void __fastcall ServantStatusListViewItemDrawFace__SetCostumeIcon(
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
-  if ( (byte_4A4BCCA & 1) == 0 )
+  if ( (byte_4B41C24 & 1) == 0 )
   {
-    sub_1B863B8(&AtlasManager_TypeInfo, *(_QWORD *)&index);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B863B8(&StringLiteral_23557/*"svt_costume_icon_"*/, v8);
-    this = (ServantStatusListViewItemDrawFace_o *)sub_1B863B8(&StringLiteral_1/*""*/, v9);
-    byte_4A4BCCA = 1;
+    sub_1BDB878(&AtlasManager_TypeInfo, *(_QWORD *)&index);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v7);
+    sub_1BDB878(&StringLiteral_23908/*"svt_costume_icon_"*/, v8);
+    this = (ServantStatusListViewItemDrawFace_o *)sub_1BDB878(&StringLiteral_1/*""*/, v9);
+    byte_4B41C24 = 1;
   }
   faceSpriteCostumeIconList = v6->fields.faceSpriteCostumeIconList;
   if ( !faceSpriteCostumeIconList )
     goto LABEL_39;
   if ( faceSpriteCostumeIconList->max_length <= index )
 LABEL_40:
-    sub_1B8661C(this, *(_QWORD *)&index);
+    sub_1BDBADC(this, *(_QWORD *)&index, svtCostumeEntity);
   v11 = (UnityEngine_Object_o *)faceSpriteCostumeIconList->m_Items[index];
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -227,7 +228,7 @@ LABEL_40:
           goto LABEL_40;
         v17 = v16->m_Items[index];
         v18 = System_Int32__ToString(v14, 0LL);
-        v19 = System_String__Concat_61645176((System_String_o *)StringLiteral_23557/*"svt_costume_icon_"*/, v18, 0LL);
+        v19 = System_String__Concat_62572260((System_String_o *)StringLiteral_23908/*"svt_costume_icon_"*/, v18, 0LL);
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
         this = (ServantStatusListViewItemDrawFace_o *)AtlasManager__SetEventSprite(v17, v19, 0LL);
@@ -289,7 +290,7 @@ LABEL_40:
                       return;
                     }
 LABEL_39:
-                    sub_1B86614(this, *(_QWORD *)&index);
+                    sub_1BDBAD4(this, *(_QWORD *)&index);
                   }
                 }
               }
@@ -369,72 +370,73 @@ void __fastcall ServantStatusListViewItemDrawFace__SetItem(
   float v64; // s8
   float v65; // s10
   float v66; // s9
-  const MethodInfo_3839680 **v67; // x29
+  const MethodInfo_3916288 **v67; // x29
   unsigned __int64 v68; // x24
   int32_t *v69; // x23
   const MethodInfo *v70; // x3
-  struct UISprite_array *v71; // x8
-  char v72; // w25
-  UISprite_o *v73; // x26
-  UISprite_o *v74; // x0
+  __int64 v71; // x2
+  struct UISprite_array *v72; // x8
+  char v73; // w25
+  UISprite_o *v74; // x26
+  UISprite_o *v75; // x0
   struct UISprite_array *faceFrameSpriteList; // x8
-  bool v76; // w1
-  int v77; // w8
-  int32_t v78; // w25
+  bool v77; // w1
+  int v78; // w8
+  int32_t v79; // w25
   int32_t SvtId; // w26
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v80; // kr00_16
-  Il2CppObject *v81; // x25
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v81; // kr00_16
+  Il2CppObject *v82; // x25
   struct UISprite_array *faceSpriteList; // x8
-  UISprite_o *v83; // x26
-  int32_t v84; // w25
-  int32_t v85; // w27
-  int32_t v86; // w2
-  const MethodInfo *v87; // x3
-  struct UISprite_array *v88; // x8
-  UISprite_o *v89; // x25
-  struct UISprite_array *v90; // x8
+  UISprite_o *v84; // x26
+  int32_t v85; // w25
+  int32_t v86; // w27
+  int32_t v87; // w2
+  const MethodInfo *v88; // x3
+  struct UISprite_array *v89; // x8
+  UISprite_o *v90; // x25
   struct UISprite_array *v91; // x8
-  int32_t v92; // w21
-  struct UISprite_array *v93; // x8
+  struct UISprite_array *v92; // x8
+  int32_t v93; // w21
+  struct UISprite_array *v94; // x8
   signed int max_length; // w26
-  Il2CppObject *v95; // x23
-  const MethodInfo_3839680 **v96; // x22
-  int32_t *v97; // x29
-  struct UISprite_array *v98; // x8
-  UISprite_o *v99; // x24
-  int32_t v100; // w23
-  int32_t v101; // w25
-  ServantCostumeEntity_o *v102; // x0
-  const MethodInfo *v103; // x3
-  struct UISprite_array *v104; // x8
-  const MethodInfo *v105; // x2
+  Il2CppObject *v96; // x23
+  const MethodInfo_3916288 **v97; // x22
+  int32_t *v98; // x29
+  struct UISprite_array *v99; // x8
+  UISprite_o *v100; // x24
+  int32_t v101; // w23
+  int32_t v102; // w25
+  ServantCostumeEntity_o *v103; // x0
+  const MethodInfo *v104; // x3
+  struct UISprite_array *v105; // x8
+  const MethodInfo *v106; // x2
   ServantLimitSpoilerProtectionMaster_o *MasterData_object; // [xsp+8h] [xbp-98h]
-  ServantCostumeMaster_o *v107; // [xsp+10h] [xbp-90h]
+  ServantCostumeMaster_o *v108; // [xsp+10h] [xbp-90h]
   ServantCostumeEntity_o *entity; // [xsp+18h] [xbp-88h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v109; // 0:x0.16
-  UnityEngine_Vector3_o v110; // 0:s0.4,4:s1.4,8:s2.4
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v110; // 0:x0.16
   UnityEngine_Vector3_o v111; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v112; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v113; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v114; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A4BCC9 & 1) == 0 )
+  if ( (byte_4B41C23 & 1) == 0 )
   {
-    sub_1B863B8(&AtlasManager_TypeInfo, item);
-    sub_1B863B8(&Method_DataManager_GetMasterData_ServantCostumeMaster___, v7);
-    sub_1B863B8(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v8);
-    sub_1B863B8(&Method_DataManager_GetMasterData_ServantLimitSpoilerProtectionMaster___, v9);
-    sub_1B863B8(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v10);
-    sub_1B863B8(&DataManager_TypeInfo, v11);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v12);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v13);
-    sub_1B863B8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
-    sub_1B863B8(&OptionManager_TypeInfo, v15);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_1B863B8(&StringLiteral_11713/*"SERVANT_STATUS_EXPLANATION_FACE"*/, v17);
-    sub_1B863B8(&StringLiteral_11715/*"SERVANT_STATUS_EXPLANATION_FACE3"*/, v18);
-    sub_1B863B8(&StringLiteral_11714/*"SERVANT_STATUS_EXPLANATION_FACE2"*/, v19);
-    sub_1B863B8(&StringLiteral_11716/*"SERVANT_STATUS_EXPLANATION_FACE_LIMIT_COUNT_SEALED_MSG"*/, v20);
-    byte_4A4BCC9 = 1;
+    sub_1BDB878(&AtlasManager_TypeInfo, item);
+    sub_1BDB878(&Method_DataManager_GetMasterData_ServantCostumeMaster___, v7);
+    sub_1BDB878(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v8);
+    sub_1BDB878(&Method_DataManager_GetMasterData_ServantLimitSpoilerProtectionMaster___, v9);
+    sub_1BDB878(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v10);
+    sub_1BDB878(&DataManager_TypeInfo, v11);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v12);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v13);
+    sub_1BDB878(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
+    sub_1BDB878(&OptionManager_TypeInfo, v15);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    sub_1BDB878(&StringLiteral_11887/*"SERVANT_STATUS_EXPLANATION_FACE"*/, v17);
+    sub_1BDB878(&StringLiteral_11889/*"SERVANT_STATUS_EXPLANATION_FACE3"*/, v18);
+    sub_1BDB878(&StringLiteral_11888/*"SERVANT_STATUS_EXPLANATION_FACE2"*/, v19);
+    sub_1BDB878(&StringLiteral_11890/*"SERVANT_STATUS_EXPLANATION_FACE_LIMIT_COUNT_SEALED_MSG"*/, v20);
+    byte_4B41C23 = 1;
   }
   entity = 0LL;
   this->fields.dispMode = mode;
@@ -442,13 +444,13 @@ void __fastcall ServantStatusListViewItemDrawFace__SetItem(
     return;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   if ( item->fields.userSvtEntity )
   {
     explanationLabel = this->fields.explanationLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    ServantStatusExplanationText = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11713/*"SERVANT_STATUS_EXPLANATION_FACE"*/, 0LL);
+    ServantStatusExplanationText = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11887/*"SERVANT_STATUS_EXPLANATION_FACE"*/, 0LL);
     if ( !explanationLabel )
       goto LABEL_142;
     UILabel__set_text(explanationLabel, (System_String_o *)ServantStatusExplanationText, 0LL);
@@ -463,7 +465,7 @@ void __fastcall ServantStatusListViewItemDrawFace__SetItem(
     v28 = this->fields.explanationLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    ServantStatusExplanationText = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11714/*"SERVANT_STATUS_EXPLANATION_FACE2"*/, 0LL);
+    ServantStatusExplanationText = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11888/*"SERVANT_STATUS_EXPLANATION_FACE2"*/, 0LL);
     if ( !v28 )
       goto LABEL_142;
     UILabel__set_text(v28, (System_String_o *)ServantStatusExplanationText, 0LL);
@@ -479,7 +481,7 @@ void __fastcall ServantStatusListViewItemDrawFace__SetItem(
     v31 = this->fields.explanationLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    ServantStatusExplanationText = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11715/*"SERVANT_STATUS_EXPLANATION_FACE3"*/, 0LL);
+    ServantStatusExplanationText = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11889/*"SERVANT_STATUS_EXPLANATION_FACE3"*/, 0LL);
     if ( !v31 )
       goto LABEL_142;
     UILabel__set_text(v31, (System_String_o *)ServantStatusExplanationText, 0LL);
@@ -493,10 +495,10 @@ void __fastcall ServantStatusListViewItemDrawFace__SetItem(
   }
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v109.fields.currentCryptoKey = v27;
-  *(_QWORD *)&v109.fields.fakeValue = v26;
-  ServantStatusExplanationText = (UISprite_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_47434244(
-                                                 v109,
+  *(_QWORD *)&v110.fields.currentCryptoKey = v27;
+  *(_QWORD *)&v110.fields.fakeValue = v26;
+  ServantStatusExplanationText = (UISprite_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48227716(
+                                                 v110,
                                                  0LL);
   if ( !(_DWORD)ServantStatusExplanationText )
     goto LABEL_32;
@@ -511,7 +513,7 @@ void __fastcall ServantStatusListViewItemDrawFace__SetItem(
   {
     ServantStatusExplanationText = (UISprite_o *)ServantLimitImageMaster__GetServantStatusExplanationText(
                                                    (ServantLimitImageMaster_o *)Master_object,
-                                                   (System_String_o *)StringLiteral_11716/*"SERVANT_STATUS_EXPLANATION_FACE_LIMIT_COUNT_SEALED_MSG"*/,
+                                                   (System_String_o *)StringLiteral_11890/*"SERVANT_STATUS_EXPLANATION_FACE_LIMIT_COUNT_SEALED_MSG"*/,
                                                    v33,
                                                    0LL);
     servantLeaderInfo = this->fields.explanationLabel;
@@ -526,7 +528,7 @@ void __fastcall ServantStatusListViewItemDrawFace__SetItem(
                                                     0,
                                                     0LL);
     v37 = System_String__Format(v35, LimitCountSealedServantName, 0LL);
-    v38 = System_String__Concat_61645176(mText, v37, 0LL);
+    v38 = System_String__Concat_62572260(mText, v37, 0LL);
     UILabel__set_text(servantLeaderInfo, v38, 0LL);
     LODWORD(servantLeaderInfo) = 1;
   }
@@ -571,10 +573,10 @@ LABEL_33:
     ServantStatusExplanationText = (UISprite_o *)this->fields.baseCollider;
     if ( !ServantStatusExplanationText )
       goto LABEL_142;
-    v110.fields.x = x;
-    v110.fields.y = v52;
-    v110.fields.z = z;
-    UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)ServantStatusExplanationText, v110, 0LL);
+    v111.fields.x = x;
+    v111.fields.y = v52;
+    v111.fields.z = z;
+    UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)ServantStatusExplanationText, v111, 0LL);
   }
   ServantStatusExplanationText = this->fields.baseSprite;
   if ( !ServantStatusExplanationText )
@@ -599,10 +601,10 @@ LABEL_33:
   if ( !ServantStatusExplanationText )
     goto LABEL_142;
   v59 = (float)(v55 >> 1);
-  v111.fields.y = v57 + v59;
-  v111.fields.x = v56;
-  v111.fields.z = v58;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)ServantStatusExplanationText, v111, 0LL);
+  v112.fields.y = v57 + v59;
+  v112.fields.x = v56;
+  v112.fields.z = v58;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)ServantStatusExplanationText, v112, 0LL);
   ServantStatusExplanationText = (UISprite_o *)this->fields.faceBase;
   if ( !ServantStatusExplanationText )
     goto LABEL_142;
@@ -614,11 +616,11 @@ LABEL_33:
                                                  0LL);
   if ( !ServantStatusExplanationText )
     goto LABEL_142;
-  v112.fields.y = v61 + v59;
-  v112.fields.x = v60;
-  v112.fields.z = v62;
+  v113.fields.y = v61 + v59;
+  v113.fields.x = v60;
+  v113.fields.z = v62;
   v63 = v41;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)ServantStatusExplanationText, v112, 0LL);
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)ServantStatusExplanationText, v113, 0LL);
   ServantStatusExplanationText = (UISprite_o *)this->fields.explanationLabel;
   v64 = (_DWORD)servantLeaderInfo
       ? (float)(this->fields.explanationBasePosition.fields.y - v59) + 16.0
@@ -632,26 +634,26 @@ LABEL_33:
                                                  0LL);
   if ( !ServantStatusExplanationText )
     goto LABEL_142;
-  v113.fields.x = v65;
-  v113.fields.y = v64;
-  v113.fields.z = v66;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)ServantStatusExplanationText, v113, 0LL);
-  v67 = (const MethodInfo_3839680 **)&Method_SingletonMonoBehaviour_DataManager__get_Instance__;
-  ServantStatusExplanationText = (UISprite_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v114.fields.x = v65;
+  v114.fields.y = v64;
+  v114.fields.z = v66;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)ServantStatusExplanationText, v114, 0LL);
+  v67 = (const MethodInfo_3916288 **)&Method_SingletonMonoBehaviour_DataManager__get_Instance__;
+  ServantStatusExplanationText = (UISprite_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !ServantStatusExplanationText
     || (MasterData_object = (ServantLimitSpoilerProtectionMaster_o *)DataManager__GetMasterData_object_(
                                                                        (DataManager_o *)ServantStatusExplanationText,
-                                                                       (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ServantLimitSpoilerProtectionMaster___),
-        (ServantStatusExplanationText = (UISprite_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL) )
+                                                                       (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ServantLimitSpoilerProtectionMaster___),
+        (ServantStatusExplanationText = (UISprite_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL) )
   {
 LABEL_142:
-    sub_1B86614(ServantStatusExplanationText, v24);
+    sub_1BDBAD4(ServantStatusExplanationText, v24);
   }
   v68 = 0LL;
   v69 = &iconSelectList->m_Items[1];
-  v107 = (ServantCostumeMaster_o *)DataManager__GetMasterData_object_(
+  v108 = (ServantCostumeMaster_o *)DataManager__GetMasterData_object_(
                                      (DataManager_o *)ServantStatusExplanationText,
-                                     (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
+                                     (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
   do
   {
     ServantStatusListViewItemDrawFace__SetCostumeIcon(this, v68, 0LL, v70);
@@ -674,40 +676,40 @@ LABEL_148:
         goto LABEL_98;
       if ( v68 >= iconSelectList->max_length )
         goto LABEL_145;
-      v77 = v69[v68];
-      if ( v77 >= 11 )
-        v78 = v69[v68];
+      v78 = v69[v68];
+      if ( v78 >= 11 )
+        v79 = v69[v68];
       else
-        v78 = v77 + 1;
+        v79 = v78 + 1;
       SvtId = ServantStatusListViewItem__get_SvtId(item, 0LL);
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-      v80 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(SvtId, 0LL);
-      v24 = *(_QWORD *)&v80.fields.fakeValue;
+      v81 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(SvtId, 0LL);
+      v24 = *(_QWORD *)&v81.fields.fakeValue;
       ServantStatusExplanationText = (UISprite_o *)MasterData_object;
       if ( !MasterData_object )
         goto LABEL_142;
       ServantStatusExplanationText = (UISprite_o *)ServantLimitSpoilerProtectionMaster__IsSpoilerLimitCount(
                                                      MasterData_object,
-                                                     v80,
-                                                     v78,
+                                                     v81,
+                                                     v79,
                                                      0LL);
       if ( ((unsigned __int8)ServantStatusExplanationText & 1) != 0 )
       {
 LABEL_98:
-        ServantStatusExplanationText = (UISprite_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        ServantStatusExplanationText = (UISprite_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !ServantStatusExplanationText )
           goto LABEL_142;
-        v81 = DataManager__GetMasterData_object_(
+        v82 = DataManager__GetMasterData_object_(
                 (DataManager_o *)ServantStatusExplanationText,
-                (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
         ServantStatusExplanationText = (UISprite_o *)ServantStatusListViewItem__get_SvtId(item, 0LL);
         if ( v68 >= iconSelectList->max_length )
           goto LABEL_145;
-        if ( !v81 )
+        if ( !v82 )
           goto LABEL_142;
         ServantStatusExplanationText = (UISprite_o *)ServantLimitImageMaster__GetServantImageLimitSealAfter(
-                                                       (ServantLimitImageMaster_o *)v81,
+                                                       (ServantLimitImageMaster_o *)v82,
                                                        (int32_t)ServantStatusExplanationText,
                                                        v69[v68],
                                                        0LL);
@@ -716,51 +718,51 @@ LABEL_98:
           goto LABEL_142;
         if ( v68 >= faceSpriteList->max_length )
           goto LABEL_145;
-        v83 = faceSpriteList->m_Items[v68];
-        v84 = (int)ServantStatusExplanationText;
-        v85 = ServantStatusListViewItem__get_SvtId(item, 0LL);
+        v84 = faceSpriteList->m_Items[v68];
+        v85 = (int)ServantStatusExplanationText;
+        v86 = ServantStatusListViewItem__get_SvtId(item, 0LL);
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-        AtlasManager__SetFaceImage(v83, v85, v84, 1, 0LL, 0LL);
+        AtlasManager__SetFaceImage(v84, v86, v85, 1, 0LL, 0LL);
         ServantStatusExplanationText = (UISprite_o *)ServantStatusListViewItem__get_SvtId(item, 0LL);
         if ( v68 >= iconSelectList->max_length )
 LABEL_145:
-          sub_1B8661C(ServantStatusExplanationText, v24);
-        v86 = (int)ServantStatusExplanationText;
-        ServantStatusExplanationText = (UISprite_o *)v107;
-        if ( !v107 )
+          sub_1BDBADC(ServantStatusExplanationText, v24, v71);
+        v87 = (int)ServantStatusExplanationText;
+        ServantStatusExplanationText = (UISprite_o *)v108;
+        if ( !v108 )
           goto LABEL_142;
-        ServantCostumeMaster__TryGetEntity(v107, &entity, v86, v69[v68], 0LL);
-        ServantStatusListViewItemDrawFace__SetCostumeIcon(this, v68, entity, v87);
+        ServantCostumeMaster__TryGetEntity(v108, &entity, v87, v69[v68], 0LL);
+        ServantStatusListViewItemDrawFace__SetCostumeIcon(this, v68, entity, v88);
         goto LABEL_114;
       }
-      v88 = this->fields.faceSpriteList;
-      if ( !v88 )
+      v89 = this->fields.faceSpriteList;
+      if ( !v89 )
         goto LABEL_142;
-      if ( v68 >= v88->max_length )
+      if ( v68 >= v89->max_length )
         goto LABEL_145;
-      v89 = v88->m_Items[v68];
+      v90 = v89->m_Items[v68];
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      v74 = v89;
+      v75 = v90;
     }
     else
     {
 LABEL_74:
       ServantStatusExplanationText = (UISprite_o *)ServantStatusListViewItem__get_IsMine(item, 0LL);
-      v71 = this->fields.faceSpriteList;
-      if ( !v71 )
+      v72 = this->fields.faceSpriteList;
+      if ( !v72 )
         goto LABEL_142;
-      if ( v68 >= v71->max_length )
+      if ( v68 >= v72->max_length )
         goto LABEL_145;
-      v72 = (char)ServantStatusExplanationText;
-      v73 = v71->m_Items[v68];
+      v73 = (char)ServantStatusExplanationText;
+      v74 = v72->m_Items[v68];
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      v74 = v73;
-      if ( (v72 & 1) != 0 )
+      v75 = v74;
+      if ( (v73 & 1) != 0 )
       {
-        ServantStatusExplanationText = (UISprite_o *)AtlasManager__SetNoMountFace(v73, 0LL);
+        ServantStatusExplanationText = (UISprite_o *)AtlasManager__SetNoMountFace(v74, 0LL);
         faceFrameSpriteList = this->fields.faceFrameSpriteList;
         if ( !faceFrameSpriteList )
           goto LABEL_142;
@@ -769,49 +771,49 @@ LABEL_74:
         ServantStatusExplanationText = faceFrameSpriteList->m_Items[v68];
         if ( !ServantStatusExplanationText )
           goto LABEL_142;
-        v76 = 0;
+        v77 = 0;
         goto LABEL_118;
       }
     }
-    ServantStatusExplanationText = (UISprite_o *)AtlasManager__SetNotOpenFace(v74, 0LL);
+    ServantStatusExplanationText = (UISprite_o *)AtlasManager__SetNotOpenFace(v75, 0LL);
 LABEL_114:
-    v90 = this->fields.faceFrameSpriteList;
-    if ( !v90 )
+    v91 = this->fields.faceFrameSpriteList;
+    if ( !v91 )
       goto LABEL_142;
-    if ( v68 >= v90->max_length )
+    if ( v68 >= v91->max_length )
       goto LABEL_145;
-    ServantStatusExplanationText = v90->m_Items[v68];
+    ServantStatusExplanationText = v91->m_Items[v68];
     if ( !ServantStatusExplanationText )
       goto LABEL_142;
-    v76 = 1;
+    v77 = 1;
 LABEL_118:
-    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)ServantStatusExplanationText, v76, 0LL);
+    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)ServantStatusExplanationText, v77, 0LL);
     ++v68;
   }
   while ( v68 != 4 );
-  v91 = this->fields.faceSpriteList;
-  if ( !v91 )
+  v92 = this->fields.faceSpriteList;
+  if ( !v92 )
     goto LABEL_142;
-  v92 = 4;
-  while ( v92 < (signed int)v91->max_length )
+  v93 = 4;
+  while ( v93 < (signed int)v92->max_length )
   {
-    ServantStatusListViewItemDrawFace__SetCostumeIcon(this, v92, 0LL, v70);
-    v93 = this->fields.faceSpriteList;
-    if ( !v93 )
+    ServantStatusListViewItemDrawFace__SetCostumeIcon(this, v93, 0LL, v70);
+    v94 = this->fields.faceSpriteList;
+    if ( !v94 )
       goto LABEL_142;
-    if ( v92 >= v93->max_length )
+    if ( v93 >= v94->max_length )
       goto LABEL_145;
-    ServantStatusExplanationText = v93->m_Items[v92];
+    ServantStatusExplanationText = v94->m_Items[v93];
     if ( !ServantStatusExplanationText )
       goto LABEL_142;
     max_length = iconSelectList->max_length;
-    if ( v92 >= max_length )
+    if ( v93 >= max_length )
     {
       UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)ServantStatusExplanationText, 0, 0LL);
-      v104 = this->fields.faceFrameSpriteList;
-      if ( !v104 )
+      v105 = this->fields.faceFrameSpriteList;
+      if ( !v105 )
         goto LABEL_142;
-      if ( v92 >= v104->max_length )
+      if ( v93 >= v105->max_length )
         goto LABEL_145;
     }
     else
@@ -820,61 +822,61 @@ LABEL_118:
       ServantStatusExplanationText = (UISprite_o *)SingletonMonoBehaviour_object___get_Instance(*v67);
       if ( !ServantStatusExplanationText )
         goto LABEL_142;
-      v95 = DataManager__GetMasterData_object_(
+      v96 = DataManager__GetMasterData_object_(
               (DataManager_o *)ServantStatusExplanationText,
-              (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+              (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
       ServantStatusExplanationText = (UISprite_o *)ServantStatusListViewItem__get_SvtId(item, 0LL);
-      if ( v92 >= iconSelectList->max_length )
+      if ( v93 >= iconSelectList->max_length )
         goto LABEL_145;
-      if ( !v95 )
+      if ( !v96 )
         goto LABEL_142;
-      v96 = v67;
-      v97 = &iconSelectList->m_Items[v92 + 1];
+      v97 = v67;
+      v98 = &iconSelectList->m_Items[v93 + 1];
       ServantStatusExplanationText = (UISprite_o *)ServantLimitImageMaster__GetServantImageLimitSealAfter(
-                                                     (ServantLimitImageMaster_o *)v95,
+                                                     (ServantLimitImageMaster_o *)v96,
                                                      (int32_t)ServantStatusExplanationText,
-                                                     *v97,
+                                                     *v98,
                                                      0LL);
-      v98 = this->fields.faceSpriteList;
-      if ( !v98 )
+      v99 = this->fields.faceSpriteList;
+      if ( !v99 )
         goto LABEL_142;
-      if ( v92 >= v98->max_length )
+      if ( v93 >= v99->max_length )
         goto LABEL_145;
-      v99 = v98->m_Items[v92];
-      v100 = (int)ServantStatusExplanationText;
-      v101 = ServantStatusListViewItem__get_SvtId(item, 0LL);
+      v100 = v99->m_Items[v93];
+      v101 = (int)ServantStatusExplanationText;
+      v102 = ServantStatusListViewItem__get_SvtId(item, 0LL);
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetFaceImage(v99, v101, v100, 1, 0LL, 0LL);
+      AtlasManager__SetFaceImage(v100, v102, v101, 1, 0LL, 0LL);
       ServantStatusExplanationText = (UISprite_o *)ServantStatusListViewItem__get_SvtId(item, 0LL);
-      if ( v92 >= iconSelectList->max_length )
+      if ( v93 >= iconSelectList->max_length )
         goto LABEL_145;
       v24 = (unsigned int)ServantStatusExplanationText;
-      ServantStatusExplanationText = (UISprite_o *)v107;
-      if ( !v107 )
+      ServantStatusExplanationText = (UISprite_o *)v108;
+      if ( !v108 )
         goto LABEL_142;
-      v102 = ServantCostumeMaster__GetEntity(v107, v24, *v97, 0LL);
-      ServantStatusListViewItemDrawFace__SetCostumeIcon(this, v92, v102, v103);
-      v104 = this->fields.faceFrameSpriteList;
-      if ( !v104 )
+      v103 = ServantCostumeMaster__GetEntity(v108, v24, *v98, 0LL);
+      ServantStatusListViewItemDrawFace__SetCostumeIcon(this, v93, v103, v104);
+      v105 = this->fields.faceFrameSpriteList;
+      if ( !v105 )
         goto LABEL_142;
-      if ( v92 >= v104->max_length )
+      if ( v93 >= v105->max_length )
         goto LABEL_145;
-      v67 = v96;
+      v67 = v97;
     }
-    ServantStatusExplanationText = v104->m_Items[v92];
+    ServantStatusExplanationText = v105->m_Items[v93];
     if ( ServantStatusExplanationText )
     {
-      UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)ServantStatusExplanationText, v92 < max_length, 0LL);
-      v91 = this->fields.faceSpriteList;
-      ++v92;
-      if ( v91 )
+      UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)ServantStatusExplanationText, v93 < max_length, 0LL);
+      v92 = this->fields.faceSpriteList;
+      ++v93;
+      if ( v92 )
         continue;
     }
     goto LABEL_142;
   }
   ServantStatusListViewItemDrawFace__SetupButton(this, item, 1, v70);
-  ServantStatusListViewItemDrawFace__SetupMask(this, item, v105);
+  ServantStatusListViewItemDrawFace__SetupMask(this, item, v106);
 }
 
 
@@ -913,84 +915,85 @@ void __fastcall ServantStatusListViewItemDrawFace__SetupButton(
   float g; // s13
   float b; // s14
   float a; // s15
-  ServantLimitImageMaster_o *v34; // x25
-  int v35; // w8
-  _BOOL4 v36; // w19
+  __int64 v34; // x2
+  ServantLimitImageMaster_o *v35; // x25
+  int v36; // w8
+  _BOOL4 v37; // w19
   struct UIRangeLabel_array *charaLevelTitleRangeLabelList; // x10
-  UIRangeLabel_o *v38; // x26
-  int v39; // w28
-  System_String_o *v40; // x27
-  float v41; // s3
-  float v42; // s2
-  float v43; // s1
-  float v44; // s0
-  System_String_o *v45; // x0
+  UIRangeLabel_o *v39; // x26
+  int v40; // w28
+  System_String_o *v41; // x27
+  float v42; // s3
+  float v43; // s2
+  float v44; // s1
+  float v45; // s0
   System_String_o *v46; // x0
+  System_String_o *v47; // x0
   struct UISprite_array *charaLevelSpriteList; // x8
-  __int64 *v48; // x8
+  __int64 *v49; // x8
   struct UICommonButton_array *faceButtonList; // x8
   struct UICommonButton_array *charaLevelButtonList; // x8
-  char v51; // w26
-  struct UICommonButton_array *v52; // x8
+  char v52; // w26
+  struct UICommonButton_array *v53; // x8
   struct UILabel_array *limitCountSealLabel; // x8
-  UnityEngine_Object_o *v54; // x26
+  UnityEngine_Object_o *v55; // x26
   struct UnityEngine_GameObject_array *limitCountSealObjList; // x8
-  UnityEngine_Object_o *v56; // x27
+  UnityEngine_Object_o *v57; // x27
   bool IsServantLimitCountSeal; // w28
-  System_String_o *v58; // x1
-  bool v59; // nf
-  struct UICommonButton_array *v60; // x8
-  int v61; // w22
+  System_String_o *v59; // x1
+  bool v60; // nf
+  struct UICommonButton_array *v61; // x8
+  int v62; // w22
   int max_length; // w27
-  _BOOL4 v63; // w24
-  struct UIRangeLabel_array *v64; // x9
-  UIRangeLabel_o *v65; // x25
-  int v66; // w19
+  _BOOL4 v64; // w24
+  struct UIRangeLabel_array *v65; // x9
+  UIRangeLabel_o *v66; // x25
+  int v67; // w19
   ServantCostumeEntity_o *Entity; // x0
-  System_String_o *v68; // x26
-  float v69; // s3
-  float v70; // s2
-  float v71; // s1
-  float v72; // s0
-  struct UISprite_array *v73; // x8
-  __int64 *v74; // x8
-  struct UICommonButton_array *v75; // x8
-  bool v76; // w19
-  struct UICommonButton_array *v77; // x8
-  char v78; // w25
-  bool v79; // w19
-  struct UICommonButton_array *v80; // x8
+  System_String_o *v69; // x26
+  float v70; // s3
+  float v71; // s2
+  float v72; // s1
+  float v73; // s0
+  struct UISprite_array *v74; // x8
+  __int64 *v75; // x8
+  struct UICommonButton_array *v76; // x8
+  bool v77; // w19
+  struct UICommonButton_array *v78; // x8
+  char v79; // w25
+  bool v80; // w19
   struct UICommonButton_array *v81; // x8
-  ServantCostumeMaster_o *v82; // [xsp+8h] [xbp-B8h]
-  int32_t v83; // [xsp+14h] [xbp-ACh]
-  unsigned int v85; // [xsp+1Ch] [xbp-A4h] BYREF
-  UnityEngine_Color_o v86; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  struct UICommonButton_array *v82; // x8
+  ServantCostumeMaster_o *v83; // [xsp+8h] [xbp-B8h]
+  int32_t v84; // [xsp+14h] [xbp-ACh]
+  unsigned int v86; // [xsp+1Ch] [xbp-A4h] BYREF
+  UnityEngine_Color_o v87; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A4BCCB & 1) == 0 )
+  if ( (byte_4B41C25 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_ServantCostumeMaster___, item);
-    sub_1B863B8(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v6);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v7);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1B863B8(&StringLiteral_8123/*"LIMIT_COUNT_SELECT_SEALED"*/, v10);
-    sub_1B863B8(&StringLiteral_11734/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v11);
-    sub_1B863B8(&StringLiteral_17237/*"btn_bg_20"*/, v12);
-    sub_1B863B8(&StringLiteral_11735/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/, v13);
-    sub_1B863B8(&StringLiteral_1/*""*/, v14);
-    sub_1B863B8(&StringLiteral_17238/*"btn_bg_21"*/, v15);
-    byte_4A4BCCB = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_ServantCostumeMaster___, item);
+    sub_1BDB878(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v6);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v7);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v8);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1BDB878(&StringLiteral_8264/*"LIMIT_COUNT_SELECT_SEALED"*/, v10);
+    sub_1BDB878(&StringLiteral_11908/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v11);
+    sub_1BDB878(&StringLiteral_17464/*"btn_bg_20"*/, v12);
+    sub_1BDB878(&StringLiteral_11909/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/, v13);
+    sub_1BDB878(&StringLiteral_1/*""*/, v14);
+    sub_1BDB878(&StringLiteral_17465/*"btn_bg_21"*/, v15);
+    byte_4B41C25 = 1;
   }
-  v85 = 0;
-  Instance = (UICommonButton_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v86 = 0;
+  Instance = (UICommonButton_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_146;
   Instance = (UICommonButton_o *)DataManager__GetMasterData_object_(
                                    (DataManager_o *)Instance,
-                                   (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
+                                   (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
   if ( !item )
     goto LABEL_146;
-  v82 = (ServantCostumeMaster_o *)Instance;
+  v83 = (ServantCostumeMaster_o *)Instance;
   if ( item->fields.isConvertOverwriteImage )
   {
     v18 = 0;
@@ -1006,13 +1009,13 @@ void __fastcall ServantStatusListViewItemDrawFace__SetupButton(
   ConvertOverwriteIconLimitCount = ServantStatusListViewItem__get_ConvertOverwriteIconLimitCount(item, 0LL);
   maxIconLimitCount = item->fields.maxIconLimitCount;
   iconSelectList = item->fields.iconSelectList;
-  v83 = ConvertOverwriteIconLimitCount;
+  v84 = ConvertOverwriteIconLimitCount;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4A49076 )
+  if ( !byte_4B3F3AF )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, v20);
-    byte_4A49076 = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, v20);
+    byte_4B3F3AF = 1;
   }
   v23 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1025,11 +1028,11 @@ void __fastcall ServantStatusListViewItemDrawFace__SetupButton(
   v26 = static_fields[21];
   v27 = static_fields[22];
   v28 = static_fields[23];
-  if ( !byte_4A49077 )
+  if ( !byte_4B3F3B0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, v20);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v20);
     v23 = LocalizationManager_TypeInfo;
-    byte_4A49077 = 1;
+    byte_4B3F3B0 = 1;
   }
   if ( !v23->_2.cctor_finished )
   {
@@ -1041,181 +1044,181 @@ void __fastcall ServantStatusListViewItemDrawFace__SetupButton(
   g = v29->selectEffectColor.fields.g;
   b = v29->selectEffectColor.fields.b;
   a = v29->selectEffectColor.fields.a;
-  Instance = (UICommonButton_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (UICommonButton_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
 LABEL_146:
-    sub_1B86614(Instance, v17);
+    sub_1BDBAD4(Instance, v17);
   Instance = (UICommonButton_o *)DataManager__GetMasterData_object_(
                                    (DataManager_o *)Instance,
-                                   (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-  v34 = (ServantLimitImageMaster_o *)Instance;
-  v35 = 0;
-  v85 = 0;
+                                   (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+  v35 = (ServantLimitImageMaster_o *)Instance;
+  v36 = 0;
+  v86 = 0;
   do
   {
-    if ( v35 <= maxIconLimitCount )
+    if ( v36 <= maxIconLimitCount )
     {
       if ( !iconSelectList )
         goto LABEL_146;
-      if ( v35 >= iconSelectList->max_length )
+      if ( v36 >= iconSelectList->max_length )
         goto LABEL_148;
-      v36 = iconSelectList->m_Items[v35 + 1] == v83;
+      v37 = iconSelectList->m_Items[v36 + 1] == v84;
     }
     else
     {
-      v36 = 0;
+      v37 = 0;
     }
     charaLevelTitleRangeLabelList = this->fields.charaLevelTitleRangeLabelList;
     if ( !charaLevelTitleRangeLabelList )
       goto LABEL_146;
-    if ( v35 >= charaLevelTitleRangeLabelList->max_length )
+    if ( v36 >= charaLevelTitleRangeLabelList->max_length )
       goto LABEL_148;
-    v38 = charaLevelTitleRangeLabelList->m_Items[v35];
-    v39 = v18 && v35 <= maxIconLimitCount;
-    if ( v35 > maxIconLimitCount
+    v39 = charaLevelTitleRangeLabelList->m_Items[v36];
+    v40 = v18 && v36 <= maxIconLimitCount;
+    if ( v36 > maxIconLimitCount
       && (Instance = (UICommonButton_o *)ServantStatusListViewItem__get_IsMine(item, 0LL),
           ((unsigned __int8)Instance & 1) != 0) )
     {
-      if ( !v38 )
+      if ( !v39 )
         goto LABEL_146;
-      v86.fields.r = v25;
-      v86.fields.g = v26;
-      v86.fields.b = v27;
-      v86.fields.a = v28;
-      UIRangeLabel__set_effectColor(v38, v86, 0LL);
+      v87.fields.r = v25;
+      v87.fields.g = v26;
+      v87.fields.b = v27;
+      v87.fields.a = v28;
+      UIRangeLabel__set_effectColor(v39, v87, 0LL);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v40 = (System_String_o *)StringLiteral_11735/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/;
+      v41 = (System_String_o *)StringLiteral_11909/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE"*/;
     }
     else
     {
-      v41 = v28;
-      v42 = v27;
-      v43 = v26;
-      v44 = v25;
-      if ( (v36 & v39) != 0 )
+      v42 = v28;
+      v43 = v27;
+      v44 = v26;
+      v45 = v25;
+      if ( (v37 & v40) != 0 )
       {
-        v41 = a;
-        v42 = b;
-        v43 = g;
-        v44 = r;
+        v42 = a;
+        v43 = b;
+        v44 = g;
+        v45 = r;
       }
-      if ( !v38 )
+      if ( !v39 )
         goto LABEL_146;
-      UIRangeLabel__set_effectColor(v38, *(UnityEngine_Color_o *)&v44, 0LL);
-      v45 = System_Int32__ToString((int32_t)&v85, 0LL);
-      v40 = System_String__Concat_61645176((System_String_o *)StringLiteral_11734/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v45, 0LL);
+      UIRangeLabel__set_effectColor(v39, *(UnityEngine_Color_o *)&v45, 0LL);
+      v46 = System_Int32__ToString((int32_t)&v86, 0LL);
+      v41 = System_String__Concat_62572260((System_String_o *)StringLiteral_11908/*"SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_"*/, v46, 0LL);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     }
-    v46 = LocalizationManager__Get(v40, 0LL);
-    UIRangeLabel__Set(v38, v46, 0LL, 1, 0, 0LL);
+    v47 = LocalizationManager__Get(v41, 0LL);
+    UIRangeLabel__Set(v39, v47, 0LL, 1, 0, 0, 0LL);
     charaLevelSpriteList = this->fields.charaLevelSpriteList;
     if ( !charaLevelSpriteList )
       goto LABEL_146;
-    if ( v85 >= charaLevelSpriteList->max_length )
+    if ( v86 >= charaLevelSpriteList->max_length )
 LABEL_148:
-      sub_1B8661C(Instance, v17);
-    Instance = (UICommonButton_o *)charaLevelSpriteList->m_Items[v85];
+      sub_1BDBADC(Instance, v17, v34);
+    Instance = (UICommonButton_o *)charaLevelSpriteList->m_Items[v86];
     if ( !Instance )
       goto LABEL_146;
-    v48 = &StringLiteral_17237/*"btn_bg_20"*/;
-    if ( v36 )
-      v48 = &StringLiteral_17238/*"btn_bg_21"*/;
-    UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v48, 0LL);
+    v49 = &StringLiteral_17464/*"btn_bg_20"*/;
+    if ( v37 )
+      v49 = &StringLiteral_17465/*"btn_bg_21"*/;
+    UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v49, 0LL);
     faceButtonList = this->fields.faceButtonList;
     if ( !faceButtonList )
       goto LABEL_146;
-    if ( v85 >= faceButtonList->max_length )
+    if ( v86 >= faceButtonList->max_length )
       goto LABEL_148;
-    Instance = faceButtonList->m_Items[v85];
-    if ( (v36 & v39) != 0 )
+    Instance = faceButtonList->m_Items[v86];
+    if ( (v37 & v40) != 0 )
     {
       if ( !Instance )
         goto LABEL_146;
-      UICommonButton__SetColliderEnable(Instance, 0, v39 == 0 || isInit, 0LL);
+      UICommonButton__SetColliderEnable(Instance, 0, v40 == 0 || isInit, 0LL);
       charaLevelButtonList = this->fields.charaLevelButtonList;
       if ( !charaLevelButtonList )
         goto LABEL_146;
-      if ( v85 >= charaLevelButtonList->max_length )
+      if ( v86 >= charaLevelButtonList->max_length )
         goto LABEL_148;
-      Instance = charaLevelButtonList->m_Items[v85];
+      Instance = charaLevelButtonList->m_Items[v86];
       if ( !Instance )
         goto LABEL_146;
-      UICommonButton__SetColliderEnable(Instance, 0, v39 == 0 || isInit, 0LL);
+      UICommonButton__SetColliderEnable(Instance, 0, v40 == 0 || isInit, 0LL);
     }
     else
     {
       if ( !Instance )
         goto LABEL_146;
-      v51 = v39 & ~v36;
-      UICommonButton__SetButtonEnable(Instance, v51, v39 == 0 || isInit, 0LL);
-      v52 = this->fields.charaLevelButtonList;
-      if ( !v52 )
+      v52 = v40 & ~v37;
+      UICommonButton__SetButtonEnable(Instance, v52, v40 == 0 || isInit, 0LL);
+      v53 = this->fields.charaLevelButtonList;
+      if ( !v53 )
         goto LABEL_146;
-      if ( v85 >= v52->max_length )
+      if ( v86 >= v53->max_length )
         goto LABEL_148;
-      Instance = v52->m_Items[v85];
+      Instance = v53->m_Items[v86];
       if ( !Instance )
         goto LABEL_146;
-      UICommonButton__SetButtonEnable(Instance, v51, v39 == 0 || isInit, 0LL);
+      UICommonButton__SetButtonEnable(Instance, v52, v40 == 0 || isInit, 0LL);
     }
     limitCountSealLabel = this->fields.limitCountSealLabel;
     if ( limitCountSealLabel )
     {
-      if ( v85 >= limitCountSealLabel->max_length )
+      if ( v86 >= limitCountSealLabel->max_length )
         goto LABEL_148;
-      v54 = (UnityEngine_Object_o *)limitCountSealLabel->m_Items[v85];
+      v55 = (UnityEngine_Object_o *)limitCountSealLabel->m_Items[v86];
     }
     else
     {
-      v54 = 0LL;
+      v55 = 0LL;
     }
     limitCountSealObjList = this->fields.limitCountSealObjList;
     if ( limitCountSealObjList )
     {
-      if ( v85 >= limitCountSealObjList->max_length )
+      if ( v86 >= limitCountSealObjList->max_length )
         goto LABEL_148;
-      v56 = (UnityEngine_Object_o *)limitCountSealObjList->m_Items[v85];
+      v57 = (UnityEngine_Object_o *)limitCountSealObjList->m_Items[v86];
     }
     else
     {
-      v56 = 0LL;
+      v57 = 0LL;
     }
     Instance = (UICommonButton_o *)ServantStatusListViewItem__get_SvtId(item, 0LL);
     if ( !iconSelectList )
       goto LABEL_146;
-    if ( v85 >= iconSelectList->max_length )
+    if ( v86 >= iconSelectList->max_length )
       goto LABEL_148;
-    if ( !v34 )
+    if ( !v35 )
       goto LABEL_146;
     IsServantLimitCountSeal = ServantLimitImageMaster__IsServantLimitCountSeal(
-                                v34,
+                                v35,
                                 (int32_t)Instance,
-                                iconSelectList->m_Items[v85 + 1] + 1,
+                                iconSelectList->m_Items[v86 + 1] + 1,
                                 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    Instance = (UICommonButton_o *)UnityEngine_Object__op_Inequality(v56, 0LL, 0LL);
+    Instance = (UICommonButton_o *)UnityEngine_Object__op_Inequality(v57, 0LL, 0LL);
     if ( IsServantLimitCountSeal )
     {
       if ( ((unsigned __int8)Instance & 1) != 0 )
       {
-        if ( !v56 )
+        if ( !v57 )
           goto LABEL_146;
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v56, 1, 0LL);
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v57, 1, 0LL);
       }
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      Instance = (UICommonButton_o *)UnityEngine_Object__op_Inequality(v54, 0LL, 0LL);
+      Instance = (UICommonButton_o *)UnityEngine_Object__op_Inequality(v55, 0LL, 0LL);
       if ( ((unsigned __int8)Instance & 1) != 0 )
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        Instance = (UICommonButton_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8123/*"LIMIT_COUNT_SELECT_SEALED"*/, 0LL);
-        if ( !v54 )
+        Instance = (UICommonButton_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8264/*"LIMIT_COUNT_SELECT_SEALED"*/, 0LL);
+        if ( !v55 )
           goto LABEL_146;
-        v58 = (System_String_o *)Instance;
+        v59 = (System_String_o *)Instance;
         goto LABEL_90;
       }
     }
@@ -1223,79 +1226,79 @@ LABEL_148:
     {
       if ( ((unsigned __int8)Instance & 1) != 0 )
       {
-        if ( !v56 )
+        if ( !v57 )
           goto LABEL_146;
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v56, 0, 0LL);
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v57, 0, 0LL);
       }
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      Instance = (UICommonButton_o *)UnityEngine_Object__op_Inequality(v54, 0LL, 0LL);
+      Instance = (UICommonButton_o *)UnityEngine_Object__op_Inequality(v55, 0LL, 0LL);
       if ( ((unsigned __int8)Instance & 1) != 0 )
       {
-        if ( !v54 )
+        if ( !v55 )
           goto LABEL_146;
-        v58 = (System_String_o *)StringLiteral_1/*""*/;
+        v59 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_90:
-        UILabel__set_text((UILabel_o *)v54, v58, 0LL);
+        UILabel__set_text((UILabel_o *)v55, v59, 0LL);
       }
     }
-    v59 = (int)(v85 - 3) < 0;
-    v35 = ++v85;
+    v60 = (int)(v86 - 3) < 0;
+    v36 = ++v86;
   }
-  while ( v59 != __OFSUB__(v85, 4) );
-  v60 = this->fields.charaLevelButtonList;
-  if ( !v60 )
+  while ( v60 != __OFSUB__(v86, 4) );
+  v61 = this->fields.charaLevelButtonList;
+  if ( !v61 )
     goto LABEL_146;
-  v61 = 4;
-  while ( v61 < (signed int)v60->max_length )
+  v62 = 4;
+  while ( v62 < (signed int)v61->max_length )
   {
     max_length = iconSelectList->max_length;
-    if ( v61 >= max_length )
+    if ( v62 >= max_length )
     {
-      v63 = 0;
+      v64 = 0;
     }
     else
     {
-      if ( v61 >= (unsigned int)max_length )
+      if ( v62 >= (unsigned int)max_length )
         goto LABEL_148;
-      v63 = iconSelectList->m_Items[v61 + 1] == v83;
+      v64 = iconSelectList->m_Items[v62 + 1] == v84;
     }
-    v64 = this->fields.charaLevelTitleRangeLabelList;
-    if ( !v64 )
+    v65 = this->fields.charaLevelTitleRangeLabelList;
+    if ( !v65 )
       goto LABEL_146;
-    if ( v61 >= v64->max_length )
+    if ( v62 >= v65->max_length )
       goto LABEL_148;
-    v65 = v64->m_Items[v61];
-    v66 = v18 && v61 < max_length;
-    if ( v61 >= max_length )
+    v66 = v65->m_Items[v62];
+    v67 = v18 && v62 < max_length;
+    if ( v62 >= max_length )
     {
-      if ( !v65 )
+      if ( !v66 )
         goto LABEL_146;
-      UIRangeLabel__Clear(v64->m_Items[v61], 0LL);
+      UIRangeLabel__Clear(v65->m_Items[v62], 0LL);
     }
     else
     {
       Instance = (UICommonButton_o *)ServantStatusListViewItem__get_SvtId(item, 0LL);
-      if ( v61 >= iconSelectList->max_length )
+      if ( v62 >= iconSelectList->max_length )
         goto LABEL_148;
       v17 = (unsigned int)Instance;
-      Instance = (UICommonButton_o *)v82;
-      if ( !v82 )
+      Instance = (UICommonButton_o *)v83;
+      if ( !v83 )
         goto LABEL_146;
-      Entity = ServantCostumeMaster__GetEntity(v82, v17, iconSelectList->m_Items[v61 + 1], 0LL);
+      Entity = ServantCostumeMaster__GetEntity(v83, v17, iconSelectList->m_Items[v62 + 1], 0LL);
       if ( Entity )
       {
         Instance = (UICommonButton_o *)ServantCostumeEntity__getShortName(Entity, 0LL);
-        v68 = (System_String_o *)Instance;
+        v69 = (System_String_o *)Instance;
       }
       else
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        if ( !byte_4A49A43 )
+        if ( !byte_4B3FEFD )
         {
-          sub_1B863B8(&LocalizationManager_TypeInfo, v17);
-          byte_4A49A43 = 1;
+          sub_1BDB878(&LocalizationManager_TypeInfo, v17);
+          byte_4B3FEFD = 1;
         }
         Instance = (UICommonButton_o *)LocalizationManager_TypeInfo;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1303,59 +1306,59 @@ LABEL_90:
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
           Instance = (UICommonButton_o *)LocalizationManager_TypeInfo;
         }
-        v68 = *(System_String_o **)(*(_QWORD *)&Instance[1].fields.specifyHoverColor.fields.b + 32LL);
+        v69 = *(System_String_o **)(*(_QWORD *)&Instance[1].fields.specifyHoverColor.fields.b + 32LL);
       }
-      v69 = v28;
-      v70 = v27;
-      v71 = v26;
-      v72 = v25;
-      if ( (v63 & v66) != 0 )
+      v70 = v28;
+      v71 = v27;
+      v72 = v26;
+      v73 = v25;
+      if ( (v64 & v67) != 0 )
       {
-        v69 = a;
-        v70 = b;
-        v71 = g;
-        v72 = r;
+        v70 = a;
+        v71 = b;
+        v72 = g;
+        v73 = r;
       }
-      if ( !v65 )
+      if ( !v66 )
         goto LABEL_146;
-      UIRangeLabel__set_effectColor(v65, *(UnityEngine_Color_o *)&v72, 0LL);
-      UIRangeLabel__Set(v65, v68, 0LL, 1, 0, 0LL);
+      UIRangeLabel__set_effectColor(v66, *(UnityEngine_Color_o *)&v73, 0LL);
+      UIRangeLabel__Set(v66, v69, 0LL, 1, 0, 0, 0LL);
     }
-    v73 = this->fields.charaLevelSpriteList;
-    if ( !v73 )
+    v74 = this->fields.charaLevelSpriteList;
+    if ( !v74 )
       goto LABEL_146;
-    if ( v61 >= v73->max_length )
+    if ( v62 >= v74->max_length )
       goto LABEL_148;
-    Instance = (UICommonButton_o *)v73->m_Items[v61];
+    Instance = (UICommonButton_o *)v74->m_Items[v62];
     if ( !Instance )
       goto LABEL_146;
-    v74 = &StringLiteral_17237/*"btn_bg_20"*/;
-    if ( v63 )
-      v74 = &StringLiteral_17238/*"btn_bg_21"*/;
-    UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v74, 0LL);
-    v75 = this->fields.faceButtonList;
-    if ( !v75 )
+    v75 = &StringLiteral_17464/*"btn_bg_20"*/;
+    if ( v64 )
+      v75 = &StringLiteral_17465/*"btn_bg_21"*/;
+    UISprite__set_spriteName((UISprite_o *)Instance, (System_String_o *)*v75, 0LL);
+    v76 = this->fields.faceButtonList;
+    if ( !v76 )
       goto LABEL_146;
-    if ( v61 >= v75->max_length )
+    if ( v62 >= v76->max_length )
       goto LABEL_148;
-    Instance = v75->m_Items[v61];
-    if ( (v63 & v66) != 0 )
+    Instance = v76->m_Items[v62];
+    if ( (v64 & v67) != 0 )
     {
       if ( !Instance )
         goto LABEL_146;
-      v76 = v66 == 0 || isInit;
-      UICommonButton__SetColliderEnable(Instance, 0, v76, 0LL);
-      v77 = this->fields.charaLevelButtonList;
-      if ( !v77 )
+      v77 = v67 == 0 || isInit;
+      UICommonButton__SetColliderEnable(Instance, 0, v77, 0LL);
+      v78 = this->fields.charaLevelButtonList;
+      if ( !v78 )
         goto LABEL_146;
-      if ( v61 >= v77->max_length )
+      if ( v62 >= v78->max_length )
         goto LABEL_148;
-      Instance = v77->m_Items[v61];
+      Instance = v78->m_Items[v62];
       if ( !Instance )
         goto LABEL_146;
-      UICommonButton__SetColliderEnable(Instance, 0, v76, 0LL);
+      UICommonButton__SetColliderEnable(Instance, 0, v77, 0LL);
     }
-    else if ( v61 >= max_length )
+    else if ( v62 >= max_length )
     {
       if ( !Instance )
         goto LABEL_146;
@@ -1363,12 +1366,12 @@ LABEL_90:
       if ( !Instance )
         goto LABEL_146;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0LL);
-      v81 = this->fields.charaLevelButtonList;
-      if ( !v81 )
+      v82 = this->fields.charaLevelButtonList;
+      if ( !v82 )
         goto LABEL_146;
-      if ( v61 >= v81->max_length )
+      if ( v62 >= v82->max_length )
         goto LABEL_148;
-      Instance = v81->m_Items[v61];
+      Instance = v82->m_Items[v62];
       if ( !Instance )
         goto LABEL_146;
       Instance = (UICommonButton_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
@@ -1380,22 +1383,22 @@ LABEL_90:
     {
       if ( !Instance )
         goto LABEL_146;
-      v78 = v66 & ~v63;
-      v79 = v66 == 0 || isInit;
-      UICommonButton__SetButtonEnable(Instance, v78, v79, 0LL);
-      v80 = this->fields.charaLevelButtonList;
-      if ( !v80 )
+      v79 = v67 & ~v64;
+      v80 = v67 == 0 || isInit;
+      UICommonButton__SetButtonEnable(Instance, v79, v80, 0LL);
+      v81 = this->fields.charaLevelButtonList;
+      if ( !v81 )
         goto LABEL_146;
-      if ( v61 >= v80->max_length )
+      if ( v62 >= v81->max_length )
         goto LABEL_148;
-      Instance = v80->m_Items[v61];
+      Instance = v81->m_Items[v62];
       if ( !Instance )
         goto LABEL_146;
-      UICommonButton__SetButtonEnable(Instance, v78, v79, 0LL);
+      UICommonButton__SetButtonEnable(Instance, v79, v80, 0LL);
     }
-    v60 = this->fields.charaLevelButtonList;
-    ++v61;
-    if ( !v60 )
+    v61 = this->fields.charaLevelButtonList;
+    ++v62;
+    if ( !v61 )
       goto LABEL_146;
   }
 }
@@ -1415,16 +1418,16 @@ void __fastcall ServantStatusListViewItemDrawFace__SetupMask(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4A4BCCC & 1) == 0 )
+  if ( (byte_4B41C26 & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, item);
-    sub_1B863B8(&string_TypeInfo, v5);
-    this = (ServantStatusListViewItemDrawFace_o *)sub_1B863B8(&StringLiteral_11757/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_FACE"*/, v6);
-    byte_4A4BCCC = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, item);
+    sub_1BDB878(&string_TypeInfo, v5);
+    this = (ServantStatusListViewItemDrawFace_o *)sub_1BDB878(&StringLiteral_11931/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_FACE"*/, v6);
+    byte_4B41C26 = 1;
   }
   if ( !item )
 LABEL_24:
-    sub_1B86614(this, item);
+    sub_1BDBAD4(this, item);
   if ( !item->fields.userSvtEntity )
   {
     this = (ServantStatusListViewItemDrawFace_o *)v4->fields.maskBase;
@@ -1471,7 +1474,7 @@ LABEL_18:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Empty = LocalizationManager__Get((System_String_o *)StringLiteral_11757/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_FACE"*/, 0LL);
+    Empty = LocalizationManager__Get((System_String_o *)StringLiteral_11931/*"SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_FACE"*/, 0LL);
   }
   else
   {

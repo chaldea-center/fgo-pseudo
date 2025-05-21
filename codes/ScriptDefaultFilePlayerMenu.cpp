@@ -20,7 +20,7 @@ void __fastcall ScriptDefaultFilePlayerMenu__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1B8635C(p_callbackFunc, 0, (int32_t)method, v3);
+    sub_1BDB81C(p_callbackFunc, 0, (int32_t)method, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       result,
@@ -38,7 +38,7 @@ void __fastcall ScriptDefaultFilePlayerMenu__Close(ScriptDefaultFilePlayerMenu_o
   serverSettingRootObject = this->fields.serverSettingRootObject;
   this->fields.state = 0;
   if ( !serverSettingRootObject )
-    sub_1B86614(0LL, v3);
+    sub_1BDBAD4(0LL, v3);
   UnityEngine_GameObject__SetActive(serverSettingRootObject, 0, 0LL);
 }
 
@@ -77,7 +77,7 @@ void __fastcall ScriptDefaultFilePlayerMenu__EndInput(ScriptDefaultFilePlayerMen
           (jumpLineObjectInput = (UILineInput_o *)this->fields.serverCancelButton) == 0LL) )
     {
 LABEL_11:
-      sub_1B86614(jumpLineObjectInput, method);
+      sub_1BDBAD4(jumpLineObjectInput, method);
     }
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)jumpLineObjectInput, 0, 0LL);
     UnityEngine_Input__set_imeCompositionMode(0, 0LL);
@@ -102,7 +102,7 @@ int32_t __fastcall ScriptDefaultFilePlayerMenu__GetJumpLine(
 
   jumpLineObjectInput = this->fields.jumpLineObjectInput;
   if ( !jumpLineObjectInput )
-    sub_1B86614(0LL, method);
+    sub_1BDBAD4(0LL, method);
   Text = UILineInput__GetText(jumpLineObjectInput, 0LL);
   if ( System_String__IsNullOrEmpty(Text, 0LL) )
     return -1;
@@ -119,7 +119,7 @@ System_String_o *__fastcall ScriptDefaultFilePlayerMenu__GetJumpLineString(
 
   jumpLineObjectInput = this->fields.jumpLineObjectInput;
   if ( !jumpLineObjectInput )
-    sub_1B86614(0LL, method);
+    sub_1BDBAD4(0LL, method);
   return UILineInput__GetText(jumpLineObjectInput, 0LL);
 }
 
@@ -171,16 +171,16 @@ void __fastcall ScriptDefaultFilePlayerMenu__OnClickDecide(
   ScriptConnectData_o v27; // [xsp+30h] [xbp-70h] BYREF
 
   v2 = this;
-  if ( (byte_4A4BB47 & 1) == 0 )
+  if ( (byte_4B420FC & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Gender_TypeInfo, v3);
-    sub_1B863B8(&Method_ScriptDefaultFilePlayerMenu_EndPlayScript__, v4);
-    sub_1B863B8(&ScriptManager_TypeInfo, v5);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v6);
-    sub_1B863B8(&StringLiteral_5176/*"DefaultScript.txt"*/, v7);
-    this = (ScriptDefaultFilePlayerMenu_o *)sub_1B863B8(&StringLiteral_3294/*"C:/Avalon/Temporary/ScriptData"*/, v8);
-    byte_4A4BB47 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&Gender_TypeInfo, v3);
+    sub_1BDB878(&Method_ScriptDefaultFilePlayerMenu_EndPlayScript__, v4);
+    sub_1BDB878(&ScriptManager_TypeInfo, v5);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v6);
+    sub_1BDB878(&StringLiteral_5245/*"DefaultScript.txt"*/, v7);
+    this = (ScriptDefaultFilePlayerMenu_o *)sub_1BDB878(&StringLiteral_3310/*"C:/Avalon/Temporary/ScriptData"*/, v8);
+    byte_4B420FC = 1;
   }
   if ( v2->fields.state == 1 )
   {
@@ -197,7 +197,7 @@ void __fastcall ScriptDefaultFilePlayerMenu__OnClickDecide(
       {
         v14 = startModeInput->fields.mSelectedItem;
         v2->fields.selectStartModeName = v14;
-        sub_1B8635C((CGThumbnailListItem_o *)&v2->fields.selectStartModeName, (int32_t)v14, v11, v12);
+        sub_1BDB81C((CGThumbnailListItem_o *)&v2->fields.selectStartModeName, (int32_t)v14, v11, v12);
         this = (ScriptDefaultFilePlayerMenu_o *)v2->fields.hiddenTruthSprite;
         if ( this )
         {
@@ -217,23 +217,23 @@ void __fastcall ScriptDefaultFilePlayerMenu__OnClickDecide(
                  enabled,
                  0LL) )
           {
-            this = (ScriptDefaultFilePlayerMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+            this = (ScriptDefaultFilePlayerMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
             if ( !this )
               goto LABEL_17;
             ScriptManager__WriteSetting((ScriptManager_o *)this, 0LL);
           }
           v2->fields.state = 5;
           debugTestRootComponent = v2->fields.debugTestRootComponent;
-          v21 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+          v21 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
           System_Action___ctor(v21, (Il2CppObject *)v2, Method_ScriptDefaultFilePlayerMenu_EndPlayScript__, 0LL);
-          v22 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+          v22 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
           System_Action___ctor(v22, (Il2CppObject *)v2, Method_ScriptDefaultFilePlayerMenu_EndPlayScript__, 0LL);
           JumpLine = ScriptDefaultFilePlayerMenu__GetJumpLine(v2, v23);
           memset(&v27, 0, sizeof(v27));
           ScriptConnectData___ctor(
             &v27,
-            (System_String_o *)StringLiteral_3294/*"C:/Avalon/Temporary/ScriptData"*/,
-            (System_String_o *)StringLiteral_5176/*"DefaultScript.txt"*/,
+            (System_String_o *)StringLiteral_3310/*"C:/Avalon/Temporary/ScriptData"*/,
+            (System_String_o *)StringLiteral_5245/*"DefaultScript.txt"*/,
             v21,
             v22,
             JumpLine,
@@ -249,7 +249,7 @@ void __fastcall ScriptDefaultFilePlayerMenu__OnClickDecide(
       }
     }
 LABEL_17:
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   }
 }
 
@@ -263,10 +263,10 @@ void __fastcall ScriptDefaultFilePlayerMenu__OnClickForceCheckOn(
   bool enabled; // w19
   ScriptManager_c *v6; // x0
 
-  if ( (byte_4A4BB45 & 1) == 0 )
+  if ( (byte_4B420FA & 1) == 0 )
   {
-    sub_1B863B8(&ScriptManager_TypeInfo, method);
-    byte_4A4BB45 = 1;
+    sub_1BDB878(&ScriptManager_TypeInfo, method);
+    byte_4B420FA = 1;
   }
   forceCheckOnSprite = this->fields.forceCheckOnSprite;
   if ( !forceCheckOnSprite
@@ -280,15 +280,15 @@ void __fastcall ScriptDefaultFilePlayerMenu__OnClickForceCheckOn(
           0LL),
         (forceCheckOnSprite = this->fields.forceCheckOnSprite) == 0LL) )
   {
-    sub_1B86614(forceCheckOnSprite, method);
+    sub_1BDBAD4(forceCheckOnSprite, method);
   }
   enabled = UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)forceCheckOnSprite, 0LL);
   if ( !ScriptManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-  if ( !byte_4A4BBDA )
+  if ( !byte_4B4218F )
   {
-    sub_1B863B8(&ScriptManager_TypeInfo, v4);
-    byte_4A4BBDA = 1;
+    sub_1BDB878(&ScriptManager_TypeInfo, v4);
+    byte_4B4218F = 1;
   }
   v6 = ScriptManager_TypeInfo;
   if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -313,7 +313,7 @@ void __fastcall ScriptDefaultFilePlayerMenu__OnClickHiddenTruth(
                                                    0LL),
         !this->fields.hiddenTruthSprite) )
   {
-    sub_1B86614(hiddenTruthSprite, method);
+    sub_1BDBAD4(hiddenTruthSprite, method);
   }
   UnityEngine_Behaviour__set_enabled(
     (UnityEngine_Behaviour_o *)this->fields.hiddenTruthSprite,
@@ -352,16 +352,16 @@ void __fastcall ScriptDefaultFilePlayerMenu__OnClickView(ScriptDefaultFilePlayer
   ScriptConnectData_o v27; // [xsp+30h] [xbp-70h] BYREF
 
   v2 = this;
-  if ( (byte_4A4BB46 & 1) == 0 )
+  if ( (byte_4B420FB & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Gender_TypeInfo, v3);
-    sub_1B863B8(&Method_ScriptDefaultFilePlayerMenu_EndPlayScript__, v4);
-    sub_1B863B8(&ScriptManager_TypeInfo, v5);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v6);
-    sub_1B863B8(&StringLiteral_5176/*"DefaultScript.txt"*/, v7);
-    this = (ScriptDefaultFilePlayerMenu_o *)sub_1B863B8(&StringLiteral_3294/*"C:/Avalon/Temporary/ScriptData"*/, v8);
-    byte_4A4BB46 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&Gender_TypeInfo, v3);
+    sub_1BDB878(&Method_ScriptDefaultFilePlayerMenu_EndPlayScript__, v4);
+    sub_1BDB878(&ScriptManager_TypeInfo, v5);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v6);
+    sub_1BDB878(&StringLiteral_5245/*"DefaultScript.txt"*/, v7);
+    this = (ScriptDefaultFilePlayerMenu_o *)sub_1BDB878(&StringLiteral_3310/*"C:/Avalon/Temporary/ScriptData"*/, v8);
+    byte_4B420FB = 1;
   }
   if ( v2->fields.state == 1 )
   {
@@ -378,7 +378,7 @@ void __fastcall ScriptDefaultFilePlayerMenu__OnClickView(ScriptDefaultFilePlayer
       {
         v14 = startModeInput->fields.mSelectedItem;
         v2->fields.selectStartModeName = v14;
-        sub_1B8635C((CGThumbnailListItem_o *)&v2->fields.selectStartModeName, (int32_t)v14, v11, v12);
+        sub_1BDB81C((CGThumbnailListItem_o *)&v2->fields.selectStartModeName, (int32_t)v14, v11, v12);
         this = (ScriptDefaultFilePlayerMenu_o *)v2->fields.hiddenTruthSprite;
         if ( this )
         {
@@ -398,23 +398,23 @@ void __fastcall ScriptDefaultFilePlayerMenu__OnClickView(ScriptDefaultFilePlayer
                  enabled,
                  0LL) )
           {
-            this = (ScriptDefaultFilePlayerMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+            this = (ScriptDefaultFilePlayerMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
             if ( !this )
               goto LABEL_17;
             ScriptManager__WriteSetting((ScriptManager_o *)this, 0LL);
           }
           v2->fields.state = 5;
           debugTestRootComponent = v2->fields.debugTestRootComponent;
-          v21 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+          v21 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
           System_Action___ctor(v21, (Il2CppObject *)v2, Method_ScriptDefaultFilePlayerMenu_EndPlayScript__, 0LL);
-          v22 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+          v22 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
           System_Action___ctor(v22, (Il2CppObject *)v2, Method_ScriptDefaultFilePlayerMenu_EndPlayScript__, 0LL);
           JumpLine = ScriptDefaultFilePlayerMenu__GetJumpLine(v2, v23);
           memset(&v27, 0, sizeof(v27));
           ScriptConnectData___ctor(
             &v27,
-            (System_String_o *)StringLiteral_3294/*"C:/Avalon/Temporary/ScriptData"*/,
-            (System_String_o *)StringLiteral_5176/*"DefaultScript.txt"*/,
+            (System_String_o *)StringLiteral_3310/*"C:/Avalon/Temporary/ScriptData"*/,
+            (System_String_o *)StringLiteral_5245/*"DefaultScript.txt"*/,
             v21,
             v22,
             JumpLine,
@@ -430,7 +430,7 @@ void __fastcall ScriptDefaultFilePlayerMenu__OnClickView(ScriptDefaultFilePlayer
       }
     }
 LABEL_17:
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   }
 }
 
@@ -467,27 +467,27 @@ void __fastcall ScriptDefaultFilePlayerMenu__Open(
   System_Enum_o v29; // [xsp+8h] [xbp-48h] BYREF
   int32_t selectGenderIndex; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_4A4BB44 & 1) == 0 )
+  if ( (byte_4B420F9 & 1) == 0 )
   {
-    sub_1B863B8(&ScriptManager_TypeInfo, callback);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v6);
-    sub_1B863B8(&Gender_Type_TypeInfo, v7);
-    byte_4A4BB44 = 1;
+    sub_1BDB878(&ScriptManager_TypeInfo, callback);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v6);
+    sub_1BDB878(&Gender_Type_TypeInfo, v7);
+    byte_4B420F9 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
-    Instance = (ScriptManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
+    Instance = (ScriptManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
     if ( !Instance )
       goto LABEL_45;
     ScriptManager__ReadSetting(Instance, 0LL);
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-    if ( !byte_4A4BAE0 )
+    if ( !byte_4B42096 )
     {
-      sub_1B863B8(&ScriptManager_TypeInfo, v10);
-      byte_4A4BAE0 = 1;
+      sub_1BDB878(&ScriptManager_TypeInfo, v10);
+      byte_4B42096 = 1;
     }
     v13 = ScriptManager_TypeInfo;
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -497,15 +497,15 @@ void __fastcall ScriptDefaultFilePlayerMenu__Open(
     }
     scriptPlayerPathSettingAddress = v13->static_fields->scriptPlayerPathSettingAddress;
     this->fields.selectPlayerFilePath = scriptPlayerPathSettingAddress;
-    sub_1B8635C(
+    sub_1BDB81C(
       (CGThumbnailListItem_o *)&this->fields.selectPlayerFilePath,
       (int32_t)scriptPlayerPathSettingAddress,
       v11,
       v12);
-    if ( !byte_4A4BAE1 )
+    if ( !byte_4B42097 )
     {
-      sub_1B863B8(&ScriptManager_TypeInfo, v15);
-      byte_4A4BAE1 = 1;
+      sub_1BDB878(&ScriptManager_TypeInfo, v15);
+      byte_4B42097 = 1;
     }
     v18 = ScriptManager_TypeInfo;
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -515,15 +515,15 @@ void __fastcall ScriptDefaultFilePlayerMenu__Open(
     }
     scriptPlayerObjectSettingAddress = v18->static_fields->scriptPlayerObjectSettingAddress;
     this->fields.selectObjectPath = scriptPlayerObjectSettingAddress;
-    sub_1B8635C(
+    sub_1BDB81C(
       (CGThumbnailListItem_o *)&this->fields.selectObjectPath,
       (int32_t)scriptPlayerObjectSettingAddress,
       v16,
       v17);
-    if ( !byte_4A4BAE2 )
+    if ( !byte_4B42098 )
     {
-      sub_1B863B8(&ScriptManager_TypeInfo, v20);
-      byte_4A4BAE2 = 1;
+      sub_1BDB878(&ScriptManager_TypeInfo, v20);
+      byte_4B42098 = 1;
     }
     v23 = ScriptManager_TypeInfo;
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -532,11 +532,11 @@ void __fastcall ScriptDefaultFilePlayerMenu__Open(
       v23 = ScriptManager_TypeInfo;
     }
     this->fields.selectGenderIndex = v23->static_fields->scriptGenderSettingIndex;
-    if ( !byte_4A4BADF )
+    if ( !byte_4B42095 )
     {
-      sub_1B863B8(&ScriptManager_TypeInfo, v20);
+      sub_1BDB878(&ScriptManager_TypeInfo, v20);
       v23 = ScriptManager_TypeInfo;
-      byte_4A4BADF = 1;
+      byte_4B42095 = 1;
     }
     if ( !v23->_2.cctor_finished )
     {
@@ -545,15 +545,15 @@ void __fastcall ScriptDefaultFilePlayerMenu__Open(
     }
     scriptStartModeSettingName = v23->static_fields->scriptStartModeSettingName;
     this->fields.selectStartModeName = scriptStartModeSettingName;
-    sub_1B8635C(
+    sub_1BDB81C(
       (CGThumbnailListItem_o *)&this->fields.selectStartModeName,
       (int32_t)scriptStartModeSettingName,
       v21,
       v22);
-    if ( !byte_4A4BBD8 )
+    if ( !byte_4B4218D )
     {
-      sub_1B863B8(&ScriptManager_TypeInfo, v9);
-      byte_4A4BBD8 = 1;
+      sub_1BDB878(&ScriptManager_TypeInfo, v9);
+      byte_4B4218D = 1;
     }
     v25 = ScriptManager_TypeInfo;
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -621,10 +621,10 @@ void __fastcall ScriptDefaultFilePlayerMenu__Open(
       1LL,
       Instance->klass[1]._1.byval_arg.data);
     forceCheckOnSprite = (UnityEngine_Behaviour_o *)this->fields.forceCheckOnSprite;
-    if ( !byte_4A4BBD9 )
+    if ( !byte_4B4218E )
     {
-      sub_1B863B8(&ScriptManager_TypeInfo, v9);
-      byte_4A4BBD9 = 1;
+      sub_1BDB878(&ScriptManager_TypeInfo, v9);
+      byte_4B4218E = 1;
     }
     Instance = (ScriptManager_o *)ScriptManager_TypeInfo;
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -634,7 +634,7 @@ void __fastcall ScriptDefaultFilePlayerMenu__Open(
     }
     if ( !forceCheckOnSprite )
 LABEL_45:
-      sub_1B86614(Instance, v9);
+      sub_1BDBAD4(Instance, v9);
     UnityEngine_Behaviour__set_enabled(
       forceCheckOnSprite,
       BYTE1(Instance->fields.equipViewSeed[3].fields.m_CancellationTokenSource),
@@ -659,10 +659,10 @@ void __fastcall ScriptDefaultFilePlayerMenu__add_callbackFunc(
   ScriptDefaultFilePlayerMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A4BB42 & 1) == 0 )
+  if ( (byte_4B420F7 & 1) == 0 )
   {
-    sub_1B863B8(&ScriptDefaultFilePlayerMenu_CallbackFunc_TypeInfo, value);
-    byte_4A4BB42 = 1;
+    sub_1BDB878(&ScriptDefaultFilePlayerMenu_CallbackFunc_TypeInfo, value);
+    byte_4B420F7 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -675,13 +675,13 @@ void __fastcall ScriptDefaultFilePlayerMenu__add_callbackFunc(
       if ( (ScriptDefaultFilePlayerMenu_CallbackFunc_c *)v8->klass != ScriptDefaultFilePlayerMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BC0674(p_callbackFunc, v8, v6);
+    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B868D4(v8);
+  sub_1BDBD94(v8);
   ScriptDefaultFilePlayerMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -701,10 +701,10 @@ void __fastcall ScriptDefaultFilePlayerMenu__remove_callbackFunc(
   ScriptDefaultFilePlayerMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A4BB43 & 1) == 0 )
+  if ( (byte_4B420F8 & 1) == 0 )
   {
-    sub_1B863B8(&ScriptDefaultFilePlayerMenu_CallbackFunc_TypeInfo, value);
-    byte_4A4BB43 = 1;
+    sub_1BDB878(&ScriptDefaultFilePlayerMenu_CallbackFunc_TypeInfo, value);
+    byte_4B420F8 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -717,13 +717,13 @@ void __fastcall ScriptDefaultFilePlayerMenu__remove_callbackFunc(
       if ( (ScriptDefaultFilePlayerMenu_CallbackFunc_c *)v8->klass != ScriptDefaultFilePlayerMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BC0674(p_callbackFunc, v8, v6);
+    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B868D4(v8);
+  sub_1BDBD94(v8);
   ScriptDefaultFilePlayerMenu__Open(v11, v12, v13);
 }
 
@@ -746,15 +746,15 @@ void __fastcall ScriptDefaultFilePlayerMenu_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1B86478(v6) & 1) == 0 )
+  if ( (sub_1BDB938(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1B86630(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1B864E0(v10, 0LL);
+      v10 = sub_1BDBAF0(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BDB9A0(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -766,9 +766,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_19D0008;
+  this->fields.m_target = (Il2CppObject *)sub_1A22680;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_19CFFC0;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A22638;
 }
 
 
@@ -784,14 +784,14 @@ System_IAsyncResult_o *__fastcall ScriptDefaultFilePlayerMenu_CallbackFunc__Begi
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4A4BB48 & 1) == 0 )
+  if ( (byte_4B420FD & 1) == 0 )
   {
-    sub_1B863B8(&bool_TypeInfo, result);
-    byte_4A4BB48 = 1;
+    sub_1BDB878(&bool_TypeInfo, result);
+    byte_4B420FD = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1B8636C(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BDB82C(this, v9, callback, object);
 }
 
 
@@ -800,7 +800,7 @@ void __fastcall ScriptDefaultFilePlayerMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1B86370(result, 0LL, method);
+  sub_1BDB830(result, 0LL, method);
 }
 
 

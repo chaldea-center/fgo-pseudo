@@ -13,14 +13,14 @@ void __fastcall EventResetDiggingRequest__beginRequest(
 {
   __int64 v7; // x1
 
-  if ( (byte_4A4FED8 & 1) == 0 )
+  if ( (byte_4B46507 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_18908/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1B863B8(&StringLiteral_16653/*"areaNum"*/, v7);
-    byte_4A4FED8 = 1;
+    sub_1BDB878(&StringLiteral_19152/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_1BDB878(&StringLiteral_16877/*"areaNum"*/, v7);
+    byte_4B46507 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18908/*"eventId"*/, eventId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16653/*"areaNum"*/, areaNum, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19152/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16877/*"areaNum"*/, areaNum, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -32,16 +32,16 @@ System_String_o *__fastcall EventResetDiggingRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A4FED7 & 1) == 0 )
+  if ( (byte_4B46506 & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_18898/*"event/resetDigging"*/, v2);
-    byte_4A4FED7 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_19142/*"event/resetDigging"*/, v2);
+    byte_4B46506 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_18898/*"event/resetDigging"*/, 0LL);
+  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_19142/*"event/resetDigging"*/, 0LL);
 }
 
 
@@ -57,11 +57,11 @@ void __fastcall EventResetDiggingRequest__requestCompleted(
   System_String_o *v9; // x1
   Il2CppObject *success; // x20
 
-  if ( (byte_4A4FED9 & 1) == 0 )
+  if ( (byte_4B46508 & 1) == 0 )
   {
-    sub_1B863B8(&JsonManager_TypeInfo, responseList);
-    sub_1B863B8(&ResponseCommandKind_TypeInfo, v5);
-    byte_4A4FED9 = 1;
+    sub_1BDB878(&JsonManager_TypeInfo, responseList);
+    sub_1BDB878(&ResponseCommandKind_TypeInfo, v5);
+    byte_4B46508 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -69,7 +69,7 @@ void __fastcall EventResetDiggingRequest__requestCompleted(
   if ( v6 )
   {
     v7 = v6;
-    v8 = ResponseData__checkError_42282948(v6, 0LL);
+    v8 = ResponseData__checkError_43151432(v6, 0LL);
     v9 = 0LL;
     if ( v8 )
     {

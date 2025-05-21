@@ -47,11 +47,11 @@ System_Nullable_Color__o *__fastcall ColorHelper__ParseColorCode(
   UnityEngine_Color_o v8; // [xsp+0h] [xbp-30h] BYREF
   UnityEngine_Color_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A4FDB8 & 1) == 0 )
+  if ( (byte_4B463E7 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Nullable_Color___ctor__, method);
-    sub_1B863B8(&StringLiteral_370/*"#"*/, v5);
-    byte_4A4FDB8 = 1;
+    sub_1BDB878(&Method_System_Nullable_Color___ctor__, method);
+    sub_1BDB878(&StringLiteral_370/*"#"*/, v5);
+    byte_4B463E7 = 1;
   }
   *(_QWORD *)&v8.fields.r = 0LL;
   *(_QWORD *)&v8.fields.b = 0LL;
@@ -59,9 +59,9 @@ System_Nullable_Color__o *__fastcall ColorHelper__ParseColorCode(
   if ( ((unsigned __int8)result & 1) != 0 )
     goto LABEL_9;
   if ( !colorCode )
-    sub_1B86614(result, v7);
+    sub_1BDBAD4(result, v7);
   if ( !System_String__StartsWith(colorCode, (System_String_o *)StringLiteral_370/*"#"*/, 0LL) )
-    colorCode = System_String__Concat_61645176((System_String_o *)StringLiteral_370/*"#"*/, colorCode, 0LL);
+    colorCode = System_String__Concat_62572260((System_String_o *)StringLiteral_370/*"#"*/, colorCode, 0LL);
   result = (System_Nullable_Color__o *)UnityEngine_ColorUtility__TryParseHtmlString(colorCode, &v8, 0LL);
   if ( ((unsigned __int8)result & 1) == 0 )
   {
@@ -76,7 +76,7 @@ LABEL_9:
     *(_QWORD *)&retstr->fields.hasValue = 0LL;
     *(_QWORD *)&retstr->fields.value.fields.g = 0LL;
     retstr->fields.value.fields.a = 0.0;
-    System_Nullable_Color____ctor(retstr, v9, (const MethodInfo_3719954 *)Method_System_Nullable_Color___ctor__);
+    System_Nullable_Color____ctor(retstr, v9, (const MethodInfo_37F2E04 *)Method_System_Nullable_Color___ctor__);
   }
   return result;
 }
@@ -88,18 +88,18 @@ float __fastcall ColorHelper___GetClamped_g__Clamp_0_0(float value, const Method
   __int64 v4; // x1
   float result; // s0
 
-  if ( (byte_4A4FDB9 & 1) == 0 )
+  if ( (byte_4B463E8 & 1) == 0 )
   {
-    sub_1B863B8(&System_Math_TypeInfo, v2);
-    byte_4A4FDB9 = 1;
+    sub_1BDB878(&System_Math_TypeInfo, v2);
+    byte_4B463E8 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  if ( !byte_4A4FF4D )
+  if ( !byte_4B46529 )
   {
-    sub_1B863B8(&Method_System_Math_ThrowMinMaxException_float___, v2);
-    sub_1B863B8(&System_Math_TypeInfo, v4);
-    byte_4A4FF4D = 1;
+    sub_1BDB878(&Method_System_Math_ThrowMinMaxException_float___, v2);
+    sub_1BDB878(&System_Math_TypeInfo, v4);
+    byte_4B46529 = 1;
   }
   result = 0.0;
   if ( value >= 0.0 )

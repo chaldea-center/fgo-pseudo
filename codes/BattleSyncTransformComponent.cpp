@@ -4,15 +4,15 @@ void __fastcall BattleSyncTransformComponent___ctor(BattleSyncTransformComponent
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4A51972 & 1) == 0 )
+  if ( (byte_4B47FE2 & 1) == 0 )
   {
-    sub_1B863B8(&BattleSyncTransformComponent_SyncData_TypeInfo, method);
-    byte_4A51972 = 1;
+    sub_1BDB878(&BattleSyncTransformComponent_SyncData_TypeInfo, method);
+    byte_4B47FE2 = 1;
   }
-  v3 = (Il2CppObject *)sub_1B86604(BattleSyncTransformComponent_SyncData_TypeInfo);
+  v3 = (Il2CppObject *)sub_1BDBAC4(BattleSyncTransformComponent_SyncData_TypeInfo);
   System_Object___ctor(v3, 0LL);
   this->fields.syncData = (struct BattleSyncTransformComponent_SyncData_o *)v3;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.syncData, (int32_t)v3, v4, v5);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.syncData, (int32_t)v3, v4, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -38,10 +38,10 @@ void __fastcall BattleSyncTransformComponent__InitSyncPos(
   z = posDiff.fields.z;
   y = posDiff.fields.y;
   x = posDiff.fields.x;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.targetObj, 0, v3, v4);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.targetObj, 0, v3, v4);
   v11 = (float *)*(p_targetObj - 1);
   if ( !v11 )
-    sub_1B86614(v9, v10);
+    sub_1BDBAD4(v9, v10);
   v11[5] = x;
   v11[6] = y;
   v11[7] = z;
@@ -72,17 +72,17 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
   struct BattleSyncTransformComponent_SyncData_o *syncData; // x1
 
   this->fields.targetObj = target;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)syncSetting, method);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)syncSetting, method);
   if ( !syncSetting )
-    sub_1B86614(v6, v7);
+    sub_1BDBAD4(v6, v7);
   syncData = syncSetting->fields.syncData;
   this->fields.syncData = syncData;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.syncData, (int32_t)syncData, v8, v9);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.syncData, (int32_t)syncData, v8, v9);
   return this;
 }
 
 
-BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarget_45432124(
+BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarget_46343148(
         BattleSyncTransformComponent_o *this,
         UnityEngine_Transform_o *target,
         BattleSyncTransformComponent_SyncData_o *syncSettingData,
@@ -92,9 +92,9 @@ BattleSyncTransformComponent_o *__fastcall BattleSyncTransformComponent__SetTarg
   const MethodInfo *v7; // x3
 
   this->fields.targetObj = target;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)syncSettingData, method);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)syncSettingData, method);
   this->fields.syncData = syncSettingData;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.syncData, (int32_t)syncSettingData, v6, v7);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.syncData, (int32_t)syncSettingData, v6, v7);
   return this;
 }
 
@@ -123,10 +123,10 @@ void __fastcall BattleSyncTransformComponent__SyncTarget(
   UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4A51971 & 1) == 0 )
+  if ( (byte_4B47FE1 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
-    byte_4A51971 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    byte_4B47FE1 = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -187,7 +187,7 @@ LABEL_23:
         }
       }
     }
-    sub_1B86614(transform, v5);
+    sub_1BDBAD4(transform, v5);
   }
 }
 
@@ -200,7 +200,7 @@ void __fastcall BattleSyncTransformComponent__UpdateTarget(
   const MethodInfo *v3; // x3
 
   this->fields.targetObj = target;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)target, (int32_t)method, v3);
 }
 
 
@@ -212,7 +212,7 @@ bool __fastcall BattleSyncTransformComponent__get_IsNotExecSync(
 
   syncData = this->fields.syncData;
   if ( !syncData )
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   return syncData->fields.syncType == 0;
 }
 

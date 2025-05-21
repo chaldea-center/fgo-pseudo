@@ -13,14 +13,14 @@ void __fastcall BattleSetupScenarioRequest__beginRequest(
 {
   __int64 v7; // x1
 
-  if ( (byte_4A4FE1C & 1) == 0 )
+  if ( (byte_4B4644B & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_22541/*"questPhase"*/, *(_QWORD *)&questId);
-    sub_1B863B8(&StringLiteral_22539/*"questId"*/, v7);
-    byte_4A4FE1C = 1;
+    sub_1BDB878(&StringLiteral_22886/*"questPhase"*/, *(_QWORD *)&questId);
+    sub_1BDB878(&StringLiteral_22882/*"questId"*/, v7);
+    byte_4B4644B = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22539/*"questId"*/, questId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22541/*"questPhase"*/, questPhase, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22882/*"questId"*/, questId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22886/*"questPhase"*/, questPhase, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -32,16 +32,16 @@ System_String_o *__fastcall BattleSetupScenarioRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A4FE1B & 1) == 0 )
+  if ( (byte_4B4644A & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_16853/*"battle/setupScenario"*/, v2);
-    byte_4A4FE1B = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_17077/*"battle/setupScenario"*/, v2);
+    byte_4B4644A = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_16853/*"battle/setupScenario"*/, 0LL);
+  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_17077/*"battle/setupScenario"*/, 0LL);
 }
 
 
@@ -55,23 +55,23 @@ void __fastcall BattleSetupScenarioRequest__requestCompleted(
   __int64 *v6; // x8
 
   v4 = (RequestBase_o *)this;
-  if ( (byte_4A4FE1D & 1) == 0 )
+  if ( (byte_4B4644C & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_22061/*"ok"*/, responseList);
-    this = (BattleSetupScenarioRequest_o *)sub_1B863B8(&StringLiteral_21893/*"ng"*/, v5);
-    byte_4A4FE1D = 1;
+    sub_1BDB878(&StringLiteral_22401/*"ok"*/, responseList);
+    this = (BattleSetupScenarioRequest_o *)sub_1BDB878(&StringLiteral_22233/*"ng"*/, v5);
+    byte_4B4644C = 1;
   }
   if ( !responseList )
     goto LABEL_10;
   if ( !responseList->max_length )
-    sub_1B8661C(this, responseList);
+    sub_1BDBADC(this, responseList, method);
   this = (BattleSetupScenarioRequest_o *)responseList->m_Items[0];
   if ( !this )
 LABEL_10:
-    sub_1B86614(this, responseList);
-  if ( ResponseData__checkError_42282948((ResponseData_o *)this, 0LL) )
-    v6 = &StringLiteral_22061/*"ok"*/;
+    sub_1BDBAD4(this, responseList);
+  if ( ResponseData__checkError_43151432((ResponseData_o *)this, 0LL) )
+    v6 = &StringLiteral_22401/*"ok"*/;
   else
-    v6 = &StringLiteral_21893/*"ng"*/;
+    v6 = &StringLiteral_22233/*"ng"*/;
   RequestBase__completed(v4, (System_String_o *)*v6, 0LL);
 }

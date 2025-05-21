@@ -1,14 +1,14 @@
 void __fastcall MapUpdateScheduleMaster___ctor(MapUpdateScheduleMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4E86B & 1) == 0 )
+  if ( (byte_4B44E5A & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string___ctor__, method);
-    byte_4A4E86B = 1;
+    sub_1BDB878(&Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string___ctor__, method);
+    byte_4B44E5A = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     496,
-    (const MethodInfo_3216A14 *)Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string___ctor__);
+    (const MethodInfo_32E45D0 *)Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string___ctor__);
 }
 
 
@@ -24,30 +24,30 @@ bool __fastcall MapUpdateScheduleMaster__Any(MapUpdateScheduleMaster_o *this, in
   struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x19
   System_Func_object__bool__o *v12; // x20
 
-  if ( (byte_4A4E869 & 1) == 0 )
+  if ( (byte_4B44E58 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Linq_Enumerable_Any_MapUpdateScheduleEntity___, *(_QWORD *)&warId);
-    sub_1B863B8(&System_Func_MapUpdateScheduleEntity__bool__TypeInfo, v5);
-    sub_1B863B8(&Method_MapUpdateScheduleMaster___c__DisplayClass0_0__Any_b__0__, v6);
-    sub_1B863B8(&MapUpdateScheduleMaster___c__DisplayClass0_0_TypeInfo, v7);
-    byte_4A4E869 = 1;
+    sub_1BDB878(&Method_System_Linq_Enumerable_Any_MapUpdateScheduleEntity___, *(_QWORD *)&warId);
+    sub_1BDB878(&System_Func_MapUpdateScheduleEntity__bool__TypeInfo, v5);
+    sub_1BDB878(&Method_MapUpdateScheduleMaster___c__DisplayClass0_0__Any_b__0__, v6);
+    sub_1BDB878(&MapUpdateScheduleMaster___c__DisplayClass0_0_TypeInfo, v7);
+    byte_4B44E58 = 1;
   }
-  v8 = sub_1B86604(MapUpdateScheduleMaster___c__DisplayClass0_0_TypeInfo);
+  v8 = sub_1BDBAC4(MapUpdateScheduleMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1B86614(v9, v10);
+    sub_1BDBAD4(v9, v10);
   *(_DWORD *)(v8 + 16) = warId;
   list = this->fields.list;
-  v12 = (System_Func_object__bool__o *)sub_1B86604(System_Func_MapUpdateScheduleEntity__bool__TypeInfo);
+  v12 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_MapUpdateScheduleEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v12,
     (Il2CppObject *)v8,
     Method_MapUpdateScheduleMaster___c__DisplayClass0_0__Any_b__0__,
     0LL);
-  return System_Linq_Enumerable__Any_object__49797040(
+  return System_Linq_Enumerable__Any_object__50599108(
            (System_Collections_Generic_IEnumerable_TSource__o *)list,
            (System_Func_TSource__bool__o *)v12,
-           (const MethodInfo_2F7D7B0 *)Method_System_Linq_Enumerable_Any_MapUpdateScheduleEntity___);
+           (const MethodInfo_30414C4 *)Method_System_Linq_Enumerable_Any_MapUpdateScheduleEntity___);
 }
 
 
@@ -60,18 +60,18 @@ MapUpdateScheduleEntity_o *__fastcall MapUpdateScheduleMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A4E86C & 1) == 0 )
+  if ( (byte_4B44E5B & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__GetEntity__,
       *(_QWORD *)&warId);
-    byte_4A4E86C = 1;
+    byte_4B44E5B = 1;
   }
   PK = (Il2CppObject *)MapUpdateScheduleEntity__CreatePK(warId, mapUpdatedAt, 0LL);
   return (MapUpdateScheduleEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_3218D38 *)Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__GetEntity__);
+                                        (const MethodInfo_32E68F4 *)Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__GetEntity__);
 }
 
 
@@ -108,27 +108,27 @@ bool __fastcall MapUpdateScheduleMaster__IsNeedMapUpdate(
   int32_t *v30; // x10
   __int64 v31; // x0
 
-  if ( (byte_4A4E86A & 1) == 0 )
+  if ( (byte_4B44E59 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Collections_ObjectModel_Collection_MapUpdateScheduleEntity__GetEnumerator__, warInfo);
-    sub_1B863B8(&System_IDisposable_TypeInfo, v5);
-    sub_1B863B8(&System_Collections_Generic_IEnumerator_MapUpdateScheduleEntity__TypeInfo, v6);
-    sub_1B863B8(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1B863B8(&NetworkManager_TypeInfo, v8);
-    byte_4A4E86A = 1;
+    sub_1BDB878(&Method_System_Collections_ObjectModel_Collection_MapUpdateScheduleEntity__GetEnumerator__, warInfo);
+    sub_1BDB878(&System_IDisposable_TypeInfo, v5);
+    sub_1BDB878(&System_Collections_Generic_IEnumerator_MapUpdateScheduleEntity__TypeInfo, v6);
+    sub_1BDB878(&System_Collections_IEnumerator_TypeInfo, v7);
+    sub_1BDB878(&NetworkManager_TypeInfo, v8);
+    byte_4B44E59 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = (System_Collections_ObjectModel_Collection_T__o *)NetworkManager__getTime(0LL);
   if ( !warInfo || (v11 = Time, (Time = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list) == 0LL) )
-    sub_1B86614(Time, v10);
+    sub_1BDBAD4(Time, v10);
   warId = warInfo->fields.warId;
   createdDateTime = warInfo->fields.createdDateTime;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  Time,
-                 (const MethodInfo_31B0EE0 *)Method_System_Collections_ObjectModel_Collection_MapUpdateScheduleEntity__GetEnumerator__);
+                 (const MethodInfo_327DBFC *)Method_System_Collections_ObjectModel_Collection_MapUpdateScheduleEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B86614(0LL, v14);
+    sub_1BDBAD4(0LL, v14);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -148,7 +148,7 @@ bool __fastcall MapUpdateScheduleMaster__IsNeedMapUpdate(
     else
     {
 LABEL_12:
-      p_method = sub_1BD6B4C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C2C00C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     v20 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -172,13 +172,13 @@ LABEL_12:
     else
     {
 LABEL_19:
-      v24 = sub_1BD6B4C(Enumerator, System_Collections_Generic_IEnumerator_MapUpdateScheduleEntity__TypeInfo, 0LL);
+      v24 = sub_1C2C00C(Enumerator, System_Collections_Generic_IEnumerator_MapUpdateScheduleEntity__TypeInfo, 0LL);
     }
     v25 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(
             Enumerator,
             *(_QWORD *)(v24 + 8));
     if ( !v25 )
-      sub_1B86614(0LL, v26);
+      sub_1BDBAD4(0LL, v26);
     if ( *(_DWORD *)(v25 + 16) == warId )
     {
       v27 = *(_QWORD *)(v25 + 24);
@@ -205,7 +205,7 @@ LABEL_27:
   else
   {
 LABEL_31:
-    v31 = sub_1BD6B4C(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v31 = sub_1C2C00C(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v31)(Enumerator, *(_QWORD *)(v31 + 8));
   return v20 & 1;
@@ -221,17 +221,17 @@ bool __fastcall MapUpdateScheduleMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A4E86D & 1) == 0 )
+  if ( (byte_4B44E5C & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__TryGetEntity__, entity);
-    byte_4A4E86D = 1;
+    sub_1BDB878(&Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__TryGetEntity__, entity);
+    byte_4B44E5C = 1;
   }
   PK = (Il2CppObject *)MapUpdateScheduleEntity__CreatePK(warId, mapUpdatedAt, 0LL);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3218D84 *)Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__TryGetEntity__);
+           (const MethodInfo_32E6940 *)Method_DataMasterBase_MapUpdateScheduleMaster__MapUpdateScheduleEntity__string__TryGetEntity__);
 }
 
 
@@ -249,6 +249,6 @@ bool __fastcall MapUpdateScheduleMaster___c__DisplayClass0_0___Any_b__0(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   return n->fields.warId == this->fields.warId;
 }

@@ -4,22 +4,21 @@ void __fastcall ScriptPosition___cctor(const MethodInfo *method)
   __int64 v2; // x1
   __int64 v3; // x0
   __int64 v4; // x1
-  int32_t v5; // w2
+  __int64 v5; // x2
   const MethodInfo *v6; // x3
   unsigned int v7; // w8
   struct UnityEngine_Vector2_array *v8; // x1
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  unsigned int v11; // w8
+  const MethodInfo *v9; // x3
+  unsigned int v10; // w8
   struct ScriptPosition_StaticFields *static_fields; // x0
 
-  if ( (byte_4A502B5 & 1) == 0 )
+  if ( (byte_4B468EA & 1) == 0 )
   {
-    sub_1B863B8(&ScriptPosition_TypeInfo, v1);
-    sub_1B863B8(&UnityEngine_Vector2___TypeInfo, v2);
-    byte_4A502B5 = 1;
+    sub_1BDB878(&ScriptPosition_TypeInfo, v1);
+    sub_1BDB878(&UnityEngine_Vector2___TypeInfo, v2);
+    byte_4B468EA = 1;
   }
-  v3 = sub_1B86460(UnityEngine_Vector2___TypeInfo, 7LL);
+  v3 = sub_1BDB920(UnityEngine_Vector2___TypeInfo, 7LL);
   if ( !v3 )
     goto LABEL_17;
   v7 = *(_DWORD *)(v3 + 24);
@@ -33,29 +32,29 @@ void __fastcall ScriptPosition___cctor(const MethodInfo *method)
     || (*(_QWORD *)(v3 + 72) = 1138425856LL, v7 <= 6) )
   {
 LABEL_16:
-    sub_1B8661C(v3, v8);
+    sub_1BDBADC(v3, v8, v5);
   }
   *(_QWORD *)(v3 + 80) = 1140850688LL;
   ScriptPosition_TypeInfo->static_fields->positionList = (struct UnityEngine_Vector2_array *)v3;
-  sub_1B8635C((CGThumbnailListItem_o *)ScriptPosition_TypeInfo->static_fields, v3, v5, v6);
-  v3 = sub_1B86460(UnityEngine_Vector2___TypeInfo, 3LL);
+  sub_1BDB81C((CGThumbnailListItem_o *)ScriptPosition_TypeInfo->static_fields, v3, v5, v6);
+  v3 = sub_1BDB920(UnityEngine_Vector2___TypeInfo, 3LL);
   if ( !v3 )
 LABEL_17:
-    sub_1B86614(v3, v4);
-  v11 = *(_DWORD *)(v3 + 24);
+    sub_1BDBAD4(v3, v4);
+  v10 = *(_DWORD *)(v3 + 24);
   v8 = (struct UnityEngine_Vector2_array *)v3;
-  if ( !v11 )
+  if ( !v10 )
     goto LABEL_16;
   *(_QWORD *)(v3 + 32) = 0LL;
-  if ( v11 == 1 )
+  if ( v10 == 1 )
     goto LABEL_16;
   *(_QWORD *)(v3 + 40) = 0LL;
-  if ( v11 <= 2 )
+  if ( v10 <= 2 )
     goto LABEL_16;
   *(_QWORD *)(v3 + 48) = 0LL;
   static_fields = ScriptPosition_TypeInfo->static_fields;
   static_fields->charaOffsetList = v8;
-  sub_1B8635C((CGThumbnailListItem_o *)&static_fields->charaOffsetList, (int32_t)v8, v9, v10);
+  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->charaOffsetList, (int32_t)v8, v5, v9);
 }
 
 
@@ -67,57 +66,58 @@ void __fastcall ScriptPosition___ctor(ScriptPosition_o *this, const MethodInfo *
 
 UnityEngine_Vector3_o __fastcall ScriptPosition__GetCharaOffset(int32_t index, const MethodInfo *method)
 {
-  ScriptPosition_c *v3; // x0
+  __int64 v2; // x2
+  ScriptPosition_c *v4; // x0
   struct UnityEngine_Vector2_array *charaOffsetList; // x8
-  struct UnityEngine_Vector2_array *v5; // x8
-  float *v6; // x8
-  float v7; // s0
-  float v8; // s1
-  float v9; // s2
+  struct UnityEngine_Vector2_array *v6; // x8
+  float *v7; // x8
+  float v8; // s0
+  float v9; // s1
+  float v10; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A502B4 & 1) == 0 )
+  if ( (byte_4B468E9 & 1) == 0 )
   {
-    sub_1B863B8(&ScriptPosition_TypeInfo, method);
-    byte_4A502B4 = 1;
+    sub_1BDB878(&ScriptPosition_TypeInfo, method);
+    byte_4B468E9 = 1;
   }
-  v3 = ScriptPosition_TypeInfo;
+  v4 = ScriptPosition_TypeInfo;
   if ( (index & 0x80000000) != 0 )
     goto LABEL_8;
   if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
-    v3 = ScriptPosition_TypeInfo;
+    v4 = ScriptPosition_TypeInfo;
   }
-  charaOffsetList = v3->static_fields->charaOffsetList;
+  charaOffsetList = v4->static_fields->charaOffsetList;
   if ( !charaOffsetList )
 LABEL_14:
-    sub_1B86614(v3, method);
+    sub_1BDBAD4(v4, method);
   if ( (signed int)charaOffsetList->max_length <= index )
 LABEL_8:
     index = 0;
-  if ( !v3->_2.cctor_finished )
+  if ( !v4->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v3);
-    v3 = ScriptPosition_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v4);
+    v4 = ScriptPosition_TypeInfo;
   }
-  v5 = v3->static_fields->charaOffsetList;
-  if ( !v5 )
+  v6 = v4->static_fields->charaOffsetList;
+  if ( !v6 )
     goto LABEL_14;
-  if ( index >= v5->max_length )
-    sub_1B8661C(v3, method);
-  v6 = (float *)(&v5->obj.klass + (unsigned int)index);
-  v7 = v6[8];
-  v8 = v6[9];
-  v9 = 0.0;
-  result.fields.z = v9;
-  result.fields.y = v8;
-  result.fields.x = v7;
+  if ( index >= v6->max_length )
+    sub_1BDBADC(v4, method, v2);
+  v7 = (float *)(&v6->obj.klass + (unsigned int)index);
+  v8 = v7[8];
+  v9 = v7[9];
+  v10 = 0.0;
+  result.fields.z = v10;
+  result.fields.y = v9;
+  result.fields.x = v8;
   return result;
 }
 
 
-UnityEngine_Vector3_o __fastcall ScriptPosition__GetCharaOffset_42812092(float x, float y, const MethodInfo *method)
+UnityEngine_Vector3_o __fastcall ScriptPosition__GetCharaOffset_43697836(float x, float y, const MethodInfo *method)
 {
   float v3; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
@@ -132,57 +132,58 @@ UnityEngine_Vector3_o __fastcall ScriptPosition__GetCharaOffset_42812092(float x
 
 UnityEngine_Vector3_o __fastcall ScriptPosition__GetPosition(int32_t index, const MethodInfo *method)
 {
-  ScriptPosition_c *v3; // x0
+  __int64 v2; // x2
+  ScriptPosition_c *v4; // x0
   struct UnityEngine_Vector2_array *positionList; // x8
-  struct UnityEngine_Vector2_array *v5; // x8
-  float *v6; // x8
-  float v7; // s0
-  float v8; // s1
-  float v9; // s2
+  struct UnityEngine_Vector2_array *v6; // x8
+  float *v7; // x8
+  float v8; // s0
+  float v9; // s1
+  float v10; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A502B3 & 1) == 0 )
+  if ( (byte_4B468E8 & 1) == 0 )
   {
-    sub_1B863B8(&ScriptPosition_TypeInfo, method);
-    byte_4A502B3 = 1;
+    sub_1BDB878(&ScriptPosition_TypeInfo, method);
+    byte_4B468E8 = 1;
   }
-  v3 = ScriptPosition_TypeInfo;
+  v4 = ScriptPosition_TypeInfo;
   if ( (index & 0x80000000) != 0 )
     goto LABEL_8;
   if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
-    v3 = ScriptPosition_TypeInfo;
+    v4 = ScriptPosition_TypeInfo;
   }
-  positionList = v3->static_fields->positionList;
+  positionList = v4->static_fields->positionList;
   if ( !positionList )
 LABEL_14:
-    sub_1B86614(v3, method);
+    sub_1BDBAD4(v4, method);
   if ( (signed int)positionList->max_length <= index )
 LABEL_8:
     index = 0;
-  if ( !v3->_2.cctor_finished )
+  if ( !v4->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v3);
-    v3 = ScriptPosition_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v4);
+    v4 = ScriptPosition_TypeInfo;
   }
-  v5 = v3->static_fields->positionList;
-  if ( !v5 )
+  v6 = v4->static_fields->positionList;
+  if ( !v6 )
     goto LABEL_14;
-  if ( index >= v5->max_length )
-    sub_1B8661C(v3, method);
-  v6 = (float *)(&v5->obj.klass + (unsigned int)index);
-  v7 = v6[8];
-  v8 = v6[9];
-  v9 = 0.0;
-  result.fields.z = v9;
-  result.fields.y = v8;
-  result.fields.x = v7;
+  if ( index >= v6->max_length )
+    sub_1BDBADC(v4, method, v2);
+  v7 = (float *)(&v6->obj.klass + (unsigned int)index);
+  v8 = v7[8];
+  v9 = v7[9];
+  v10 = 0.0;
+  result.fields.z = v10;
+  result.fields.y = v9;
+  result.fields.x = v8;
   return result;
 }
 
 
-UnityEngine_Vector3_o __fastcall ScriptPosition__GetPosition_42811904(float x, float y, const MethodInfo *method)
+UnityEngine_Vector3_o __fastcall ScriptPosition__GetPosition_43697648(float x, float y, const MethodInfo *method)
 {
   float v3; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4

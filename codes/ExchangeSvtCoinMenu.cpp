@@ -1,9 +1,9 @@
 void __fastcall ExchangeSvtCoinMenu___ctor(ExchangeSvtCoinMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4952C & 1) == 0 )
+  if ( (byte_4B3FAA5 & 1) == 0 )
   {
-    sub_1B863B8(&BaseMenu_TypeInfo, method);
-    byte_4A4952C = 1;
+    sub_1BDB878(&BaseMenu_TypeInfo, method);
+    byte_4B3FAA5 = 1;
   }
   this->fields.buyCount = 1;
   if ( !BaseMenu_TypeInfo->_2.cctor_finished )
@@ -26,24 +26,24 @@ void __fastcall ExchangeSvtCoinMenu__CloseFolder(ExchangeSvtCoinMenu_o *this, co
   ShopBuyItemListViewManager_o *buyItemListViewManager; // x20
   System_Action_o *v7; // x21
 
-  if ( (byte_4A4951B & 1) == 0 )
+  if ( (byte_4B3FA94 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu__CloseFolder_b__33_0__, v3);
-    byte_4A4951B = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu__CloseFolder_b__33_0__, v3);
+    byte_4B3FA94 = 1;
   }
   filterButton = this->fields.filterButton;
   if ( !filterButton
     || (UnityEngine_GameObject__SetActive(filterButton, 0, 0LL),
         ExchangeSvtCoinMenu__CreateFolderList(this, v5),
         buyItemListViewManager = this->fields.buyItemListViewManager,
-        v7 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo),
+        v7 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo),
         System_Action___ctor(v7, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu__CloseFolder_b__33_0__, 0LL),
         !buyItemListViewManager) )
   {
-    sub_1B86614(filterButton, method);
+    sub_1BDBAD4(filterButton, method);
   }
-  ShopBuyItemListViewManager__SetMode_33475804(buyItemListViewManager, 4, v7, 0.1, 0LL);
+  ShopBuyItemListViewManager__SetMode_34294268(buyItemListViewManager, 4, v7, 0.1, 0LL);
 }
 
 
@@ -62,18 +62,18 @@ void __fastcall ExchangeSvtCoinMenu__CloseSelectMenu(
     selectMenu = this->fields.selectMenu;
     if ( !selectMenu )
       goto LABEL_10;
-    ShopBuyItemConfirmMenu__Close_33438872(selectMenu, callback, 0LL);
+    ShopBuyItemConfirmMenu__Close_34256476(selectMenu, callback, 0LL);
   }
   selectMenu = (ShopBuyItemConfirmMenu_o *)this->fields.bulkSelectMenu;
   if ( !selectMenu )
 LABEL_10:
-    sub_1B86614(selectMenu, callback);
+    sub_1BDBAD4(selectMenu, callback);
   if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)selectMenu, 0LL) )
   {
     selectMenu = (ShopBuyItemConfirmMenu_o *)this->fields.bulkSelectMenu;
     if ( selectMenu )
     {
-      ShopBuyBulkItemConfirmMenu__Close_43297140((ShopBuyBulkItemConfirmMenu_o *)selectMenu, callback, 0LL);
+      ShopBuyBulkItemConfirmMenu__Close_44185744((ShopBuyBulkItemConfirmMenu_o *)selectMenu, callback, 0LL);
       goto LABEL_9;
     }
     goto LABEL_10;
@@ -94,40 +94,41 @@ void __fastcall ExchangeSvtCoinMenu__CreateFolderList(ExchangeSvtCoinMenu_o *thi
   Il2CppObject *Master_object; // x20
   const MethodInfo *v10; // x1
   const MethodInfo *v11; // x1
+  __int64 v12; // x2
   UIProgressBar_o *EntityDefinitely; // x0
   UnityEngine_Transform_c *klass; // x25
   const char *namespaze; // x8
-  int v15; // w24
-  unsigned __int64 v16; // x26
+  int v16; // w24
+  unsigned __int64 v17; // x26
   struct ExchangeSvtCoinFolderControl_array *svtCoinFolderList; // x8
   int max_length; // w9
-  int32_t v19; // w22
-  UnityEngine_Object_o *v20; // x23
-  struct ExchangeSvtCoinFolderControl_array *v21; // x8
-  ExchangeSvtCoinFolderControl_o *v22; // x22
-  System_Action_int__o *v23; // x23
-  const MethodInfo *v24; // x3
-  struct ExchangeSvtCoinFolderControl_array *v25; // x21
-  __int64 v26; // x8
-  unsigned __int64 v27; // x22
-  UnityEngine_Object_o *v28; // x20
+  int32_t v20; // w22
+  UnityEngine_Object_o *v21; // x23
+  struct ExchangeSvtCoinFolderControl_array *v22; // x8
+  ExchangeSvtCoinFolderControl_o *v23; // x22
+  System_Action_int__o *v24; // x23
+  const MethodInfo *v25; // x3
+  struct ExchangeSvtCoinFolderControl_array *v26; // x21
+  __int64 v27; // x8
+  unsigned __int64 v28; // x22
+  UnityEngine_Object_o *v29; // x20
 
-  if ( (byte_4A4952B & 1) == 0 )
+  if ( (byte_4B3FAA4 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_int__TypeInfo, method);
-    sub_1B863B8(&BalanceConfig_TypeInfo, v3);
-    sub_1B863B8(&Method_DataManager_GetMaster_UserItemMaster___, v4);
-    sub_1B863B8(&DataManager_TypeInfo, v5);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_OnClickFolder__, v6);
-    sub_1B863B8(&NetworkManager_TypeInfo, v7);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v8);
-    byte_4A4952B = 1;
+    sub_1BDB878(&System_Action_int__TypeInfo, method);
+    sub_1BDB878(&BalanceConfig_TypeInfo, v3);
+    sub_1BDB878(&Method_DataManager_GetMaster_UserItemMaster___, v4);
+    sub_1BDB878(&DataManager_TypeInfo, v5);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_OnClickFolder__, v6);
+    sub_1BDB878(&NetworkManager_TypeInfo, v7);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v8);
+    byte_4B3FAA4 = 1;
   }
   if ( this->fields.svtCoinFolderList )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_UserItemMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_UserItemMaster___);
     ExchangeSvtCoinMenu__InitFolderList(this, v10);
     EntityDefinitely = (UIProgressBar_o *)BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -135,37 +136,37 @@ void __fastcall ExchangeSvtCoinMenu__CreateFolderList(ExchangeSvtCoinMenu_o *thi
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       EntityDefinitely = (UIProgressBar_o *)BalanceConfig_TypeInfo;
     }
-    klass = EntityDefinitely[1].fields.mTrans[19].klass;
+    klass = EntityDefinitely[1].fields.mTrans[20].klass;
     if ( !klass )
       goto LABEL_48;
     namespaze = klass->_1.namespaze;
     if ( (int)namespaze >= 1 )
     {
-      v15 = 0;
-      v16 = 0LL;
-      while ( v16 < (unsigned int)namespaze )
+      v16 = 0;
+      v17 = 0LL;
+      while ( v17 < (unsigned int)namespaze )
       {
         svtCoinFolderList = this->fields.svtCoinFolderList;
         if ( !svtCoinFolderList )
           goto LABEL_48;
         max_length = svtCoinFolderList->max_length;
-        if ( v15 < max_length )
+        if ( v16 < max_length )
         {
-          if ( v15 >= (unsigned int)max_length )
+          if ( v16 >= (unsigned int)max_length )
             break;
-          v19 = *((_DWORD *)&klass->_1.byval_arg.data + v16);
-          v20 = (UnityEngine_Object_o *)svtCoinFolderList->m_Items[v15];
+          v20 = *((_DWORD *)&klass->_1.byval_arg.data + v17);
+          v21 = (UnityEngine_Object_o *)svtCoinFolderList->m_Items[v16];
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          EntityDefinitely = (UIProgressBar_o *)UnityEngine_Object__op_Inequality(v20, 0LL, 0LL);
+          EntityDefinitely = (UIProgressBar_o *)UnityEngine_Object__op_Inequality(v21, 0LL, 0LL);
           if ( ((unsigned __int8)EntityDefinitely & 1) != 0 )
           {
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            if ( !byte_4A48C25 )
+            if ( !byte_4B3ED56 )
             {
-              sub_1B863B8(&NetworkManager_TypeInfo, v11);
-              byte_4A48C25 = 1;
+              sub_1BDB878(&NetworkManager_TypeInfo, v11);
+              byte_4B3ED56 = 1;
             }
             EntityDefinitely = (UIProgressBar_o *)NetworkManager_TypeInfo;
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -178,71 +179,71 @@ void __fastcall ExchangeSvtCoinMenu__CreateFolderList(ExchangeSvtCoinMenu_o *thi
             EntityDefinitely = (UIProgressBar_o *)UserItemMaster__GetEntityDefinitely(
                                                     (UserItemMaster_o *)Master_object,
                                                     *(_QWORD *)&EntityDefinitely[1].fields.mTrans[2].fields.m_CachedPtr,
-                                                    v19,
+                                                    v20,
                                                     0LL);
             if ( !EntityDefinitely )
               goto LABEL_48;
             if ( SHIDWORD(EntityDefinitely->fields.m_CancellationTokenSource) >= 1 )
             {
-              v21 = this->fields.svtCoinFolderList;
-              if ( !v21 )
+              v22 = this->fields.svtCoinFolderList;
+              if ( !v22 )
                 goto LABEL_48;
-              if ( v15 >= v21->max_length )
+              if ( v16 >= v22->max_length )
                 break;
-              v22 = v21->m_Items[v15];
-              v23 = (System_Action_int__o *)sub_1B86604(System_Action_int__TypeInfo);
+              v23 = v22->m_Items[v16];
+              v24 = (System_Action_int__o *)sub_1BDBAC4(System_Action_int__TypeInfo);
               System_Action_int____ctor(
-                v23,
+                v24,
                 (Il2CppObject *)this,
                 (intptr_t)Method_ExchangeSvtCoinMenu_OnClickFolder__,
                 0LL);
-              if ( !v22 )
+              if ( !v23 )
                 goto LABEL_48;
-              ExchangeSvtCoinFolderControl__SetFolder(v22, v16 + 1, v23, v24);
-              ++v15;
+              ExchangeSvtCoinFolderControl__SetFolder(v23, v17 + 1, v24, v25);
+              ++v16;
             }
           }
         }
         LODWORD(namespaze) = klass->_1.namespaze;
-        if ( (__int64)++v16 >= (int)namespaze )
+        if ( (__int64)++v17 >= (int)namespaze )
           goto LABEL_35;
       }
 LABEL_47:
-      sub_1B8661C(EntityDefinitely, v11);
+      sub_1BDBADC(EntityDefinitely, v11, v12);
     }
-    v15 = 0;
+    v16 = 0;
 LABEL_35:
-    v25 = this->fields.svtCoinFolderList;
-    if ( !v25 )
+    v26 = this->fields.svtCoinFolderList;
+    if ( !v26 )
       goto LABEL_48;
-    v26 = *(_QWORD *)&v25->max_length;
-    if ( (int)v26 >= 1 )
+    v27 = *(_QWORD *)&v26->max_length;
+    if ( (int)v27 >= 1 )
     {
-      v27 = 0LL;
-      while ( v27 < (unsigned int)v26 )
+      v28 = 0LL;
+      while ( v28 < (unsigned int)v27 )
       {
-        v28 = (UnityEngine_Object_o *)v25->m_Items[v27];
+        v29 = (UnityEngine_Object_o *)v26->m_Items[v28];
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        EntityDefinitely = (UIProgressBar_o *)UnityEngine_Object__op_Inequality(v28, 0LL, 0LL);
+        EntityDefinitely = (UIProgressBar_o *)UnityEngine_Object__op_Inequality(v29, 0LL, 0LL);
         if ( ((unsigned __int8)EntityDefinitely & 1) != 0 )
         {
-          if ( !v28 )
+          if ( !v29 )
             goto LABEL_48;
-          ExchangeSvtCoinFolderControl__SetActive((ExchangeSvtCoinFolderControl_o *)v28, v11);
+          ExchangeSvtCoinFolderControl__SetActive((ExchangeSvtCoinFolderControl_o *)v29, v11);
         }
-        LODWORD(v26) = v25->max_length;
-        if ( (__int64)++v27 >= (int)v26 )
+        LODWORD(v27) = v26->max_length;
+        if ( (__int64)++v28 >= (int)v27 )
           goto LABEL_45;
       }
       goto LABEL_47;
     }
 LABEL_45:
-    GameObjectExtensions__SetLocalPositionY(this->fields.dummyFolderObject, (float)v15 * -120.0, 0LL);
+    GameObjectExtensions__SetLocalPositionY(this->fields.dummyFolderObject, (float)v16 * -120.0, 0LL);
     EntityDefinitely = (UIProgressBar_o *)this->fields.svtCoinFolderListScrollBar;
     if ( !EntityDefinitely )
 LABEL_48:
-      sub_1B86614(EntityDefinitely, v11);
+      sub_1BDBAD4(EntityDefinitely, v11);
     UIProgressBar__set_value(EntityDefinitely, 0.0, 0LL);
   }
 }
@@ -255,12 +256,12 @@ void __fastcall ExchangeSvtCoinMenu__EndRequestShop(
 {
   const MethodInfo *v5; // x1
 
-  if ( (byte_4A49529 & 1) == 0 )
+  if ( (byte_4B3FAA2 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_21893/*"ng"*/, result);
-    byte_4A49529 = 1;
+    sub_1BDB878(&StringLiteral_22233/*"ng"*/, result);
+    byte_4B3FAA2 = 1;
   }
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_21893/*"ng"*/, 0LL) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_22233/*"ng"*/, 0LL) )
     ExchangeSvtCoinMenu__RefreshInfo(this, v5);
   else
     ExchangeSvtCoinMenu__OpenRequestResultDialog(this, v5);
@@ -283,12 +284,12 @@ bool __fastcall ExchangeSvtCoinMenu__GetIsBulk(
   int64_t userIdNumber; // x21
   int m_CancellationTokenSource_high; // w20
 
-  if ( (byte_4A49525 & 1) == 0 )
+  if ( (byte_4B3FA9E & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMaster_UserItemMaster___, item);
-    sub_1B863B8(&DataManager_TypeInfo, v4);
-    this = (ExchangeSvtCoinMenu_o *)sub_1B863B8(&NetworkManager_TypeInfo, v5);
-    byte_4A49525 = 1;
+    sub_1BDB878(&Method_DataManager_GetMaster_UserItemMaster___, item);
+    sub_1BDB878(&DataManager_TypeInfo, v4);
+    this = (ExchangeSvtCoinMenu_o *)sub_1BDB878(&NetworkManager_TypeInfo, v5);
+    byte_4B3FA9E = 1;
   }
   if ( !item )
     goto LABEL_22;
@@ -307,13 +308,13 @@ bool __fastcall ExchangeSvtCoinMenu__GetIsBulk(
     v8 = 1;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4A48C25 )
+  if ( !byte_4B3ED56 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, v10);
-    byte_4A48C25 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, v10);
+    byte_4B3ED56 = 1;
   }
   v12 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -331,19 +332,20 @@ bool __fastcall ExchangeSvtCoinMenu__GetIsBulk(
                                           0LL)) == 0LL )
   {
 LABEL_22:
-    sub_1B86614(this, item);
+    sub_1BDBAD4(this, item);
   }
   m_CancellationTokenSource_high = HIDWORD(this->fields.m_CancellationTokenSource);
   return (v8 & (m_CancellationTokenSource_high >= 2 * ShopEntity__GetPrice(Shop_k__BackingField, 0LL))) != 0;
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 int32_t __fastcall ExchangeSvtCoinMenu__GetNeedCount(
         ExchangeSvtCoinMenu_o *this,
         int32_t itemId,
         const MethodInfo *method)
 {
-  return ExchangeSvtCoinNeedCountCalculator__Calculate(itemId, 0LL);
+  return ExchangeSvtCoinNeedCountCalculator__Calculate(itemId, *(const MethodInfo **)&itemId);
 }
 
 
@@ -362,10 +364,10 @@ void __fastcall ExchangeSvtCoinMenu__Init(ExchangeSvtCoinMenu_o *this, const Met
     goto LABEL_9;
   UIProgressBar__set_value(svtCoinFolderListScrollBar, 0.0, 0LL);
   svtCoinFolderContainer = this->fields.svtCoinFolderContainer;
-  if ( !byte_4A487E1 )
+  if ( !byte_4B3E911 )
   {
-    sub_1B863B8(&UnityEngine_Vector3_TypeInfo, v6);
-    byte_4A487E1 = 1;
+    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, v6);
+    byte_4B3E911 = 1;
   }
   GameObjectExtensions__SetLocalPosition(
     svtCoinFolderContainer,
@@ -382,7 +384,7 @@ void __fastcall ExchangeSvtCoinMenu__Init(ExchangeSvtCoinMenu_o *this, const Met
         (svtCoinFolderListScrollBar = (UIProgressBar_o *)this->fields.filterButton) == 0LL) )
   {
 LABEL_9:
-    sub_1B86614(svtCoinFolderListScrollBar, v4);
+    sub_1BDBAD4(svtCoinFolderListScrollBar, v4);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtCoinFolderListScrollBar, 0, 0LL);
   ExchangeSvtCoinMenu__InitFolderList(this, v8);
@@ -392,43 +394,44 @@ LABEL_9:
 
 void __fastcall ExchangeSvtCoinMenu__InitFolderList(ExchangeSvtCoinMenu_o *this, const MethodInfo *method)
 {
-  ExchangeSvtCoinMenu_o *v2; // x19
+  __int64 v2; // x2
+  ExchangeSvtCoinMenu_o *v3; // x19
   struct ExchangeSvtCoinFolderControl_array *svtCoinFolderList; // x20
-  __int64 v4; // x8
-  unsigned __int64 v5; // x21
-  UnityEngine_Object_o *v6; // x19
+  __int64 v5; // x8
+  unsigned __int64 v6; // x21
+  UnityEngine_Object_o *v7; // x19
 
-  v2 = this;
-  if ( (byte_4A4952A & 1) == 0 )
+  v3 = this;
+  if ( (byte_4B3FAA3 & 1) == 0 )
   {
-    this = (ExchangeSvtCoinMenu_o *)sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
-    byte_4A4952A = 1;
+    this = (ExchangeSvtCoinMenu_o *)sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    byte_4B3FAA3 = 1;
   }
-  svtCoinFolderList = v2->fields.svtCoinFolderList;
+  svtCoinFolderList = v3->fields.svtCoinFolderList;
   if ( svtCoinFolderList )
   {
-    v4 = *(_QWORD *)&svtCoinFolderList->max_length;
-    if ( (int)v4 >= 1 )
+    v5 = *(_QWORD *)&svtCoinFolderList->max_length;
+    if ( (int)v5 >= 1 )
     {
-      v5 = 0LL;
+      v6 = 0LL;
       do
       {
-        if ( v5 >= (unsigned int)v4 )
-          sub_1B8661C(this, method);
-        v6 = (UnityEngine_Object_o *)svtCoinFolderList->m_Items[v5];
+        if ( v6 >= (unsigned int)v5 )
+          sub_1BDBADC(this, method, v2);
+        v7 = (UnityEngine_Object_o *)svtCoinFolderList->m_Items[v6];
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        this = (ExchangeSvtCoinMenu_o *)UnityEngine_Object__op_Inequality(v6, 0LL, 0LL);
+        this = (ExchangeSvtCoinMenu_o *)UnityEngine_Object__op_Inequality(v7, 0LL, 0LL);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
-          if ( !v6 )
-            sub_1B86614(this, method);
-          ExchangeSvtCoinFolderControl__InitFolder((ExchangeSvtCoinFolderControl_o *)v6, method);
+          if ( !v7 )
+            sub_1BDBAD4(this, method);
+          ExchangeSvtCoinFolderControl__InitFolder((ExchangeSvtCoinFolderControl_o *)v7, method);
         }
-        LODWORD(v4) = svtCoinFolderList->max_length;
-        ++v5;
+        LODWORD(v5) = svtCoinFolderList->max_length;
+        ++v6;
       }
-      while ( (__int64)v5 < (int)v4 );
+      while ( (__int64)v6 < (int)v5 );
     }
   }
 }
@@ -447,11 +450,11 @@ System_String_o *__fastcall ExchangeSvtCoinMenu__MakeResultDialogMessage(
   Il2CppObject *NumberFormat; // x19
   System_String_o *v12; // x0
 
-  if ( (byte_4A49526 & 1) == 0 )
+  if ( (byte_4B3FA9F & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, item);
-    this = (ExchangeSvtCoinMenu_o *)sub_1B863B8(&StringLiteral_5712/*"EXCHANGE_SVT_COIN_RESULT_DIALOG_MSG"*/, v8);
-    byte_4A49526 = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, item);
+    this = (ExchangeSvtCoinMenu_o *)sub_1BDB878(&StringLiteral_5789/*"EXCHANGE_SVT_COIN_RESULT_DIALOG_MSG"*/, v8);
+    byte_4B3FA9F = 1;
   }
   if ( !item )
     goto LABEL_8;
@@ -461,11 +464,11 @@ System_String_o *__fastcall ExchangeSvtCoinMenu__MakeResultDialogMessage(
   this = (ExchangeSvtCoinMenu_o *)LocalizationManager__ReplaceCommonTag(BulkNameText, 0, 0LL);
   if ( !entity )
 LABEL_8:
-    sub_1B86614(this, item);
+    sub_1BDBAD4(this, item);
   v10 = (Il2CppObject *)this;
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(entity->fields.setNum * num, 0LL);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5712/*"EXCHANGE_SVT_COIN_RESULT_DIALOG_MSG"*/, 0LL);
-  return System_String__Format_61686468(v12, v10, NumberFormat, 0LL);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_5789/*"EXCHANGE_SVT_COIN_RESULT_DIALOG_MSG"*/, 0LL);
+  return System_String__Format_62613552(v12, v10, NumberFormat, 0LL);
 }
 
 
@@ -481,12 +484,12 @@ void __fastcall ExchangeSvtCoinMenu__OnAlertDecide(ExchangeSvtCoinMenu_o *this, 
   System_Action_o *v10; // x24
   const MethodInfo *v11; // x5
 
-  if ( (byte_4A49521 & 1) == 0 )
+  if ( (byte_4B3FA9A & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_OnConfirmCancel__, v3);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_OnConfirmDecide__, v4);
-    byte_4A49521 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_OnConfirmCancel__, v3);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_OnConfirmDecide__, v4);
+    byte_4B3FA9A = 1;
   }
   buyItemListViewManager = this->fields.buyItemListViewManager;
   if ( !buyItemListViewManager )
@@ -499,14 +502,14 @@ void __fastcall ExchangeSvtCoinMenu__OnAlertDecide(ExchangeSvtCoinMenu_o *this, 
     || (v6 = (ShopEntity_o *)*((_QWORD *)buyItemListViewManager + 14),
         confirmDialog = this->fields.confirmDialog,
         buyCount = this->fields.buyCount,
-        v9 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo),
+        v9 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo),
         System_Action___ctor(v9, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnConfirmDecide__, 0LL),
-        v10 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo),
+        v10 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo),
         System_Action___ctor(v10, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnConfirmCancel__, 0LL),
         !confirmDialog) )
   {
 LABEL_7:
-    sub_1B86614(buyItemListViewManager, method);
+    sub_1BDBAD4(buyItemListViewManager, method);
   }
   ExchangeSvtCoinConfirmDialog__Open(confirmDialog, buyCount, v6, v9, v10, v11);
 }
@@ -525,17 +528,17 @@ void __fastcall ExchangeSvtCoinMenu__OnClickFolder(
   __int64 v9; // x1
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4A49519 & 1) == 0 )
+  if ( (byte_4B3FA92 & 1) == 0 )
   {
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_OnClickFolder__, *(_QWORD *)&svtCoinType);
-    sub_1B863B8(&StringLiteral_12966/*"SvtCoinType"*/, v5);
-    sub_1B863B8(&StringLiteral_3457/*"CLICK_EXCHANGE_SVT_COIN_LIST"*/, v6);
-    byte_4A49519 = 1;
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_OnClickFolder__, *(_QWORD *)&svtCoinType);
+    sub_1BDB878(&StringLiteral_13158/*"SvtCoinType"*/, v5);
+    sub_1BDB878(&StringLiteral_3490/*"CLICK_EXCHANGE_SVT_COIN_LIST"*/, v6);
+    byte_4B3FA92 = 1;
   }
   v7 = Method_ExchangeSvtCoinMenu_OnClickFolder__;
   if ( (*((_BYTE *)Method_ExchangeSvtCoinMenu_OnClickFolder__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1B863D0(Method_ExchangeSvtCoinMenu_OnClickFolder__);
-  v8 = (System_Reflection_MethodBase_o *)sub_1B8639C(v7, v7[4]);
+    v7 = (_QWORD *)sub_1BDB890(Method_ExchangeSvtCoinMenu_OnClickFolder__);
+  v8 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v7, v7[4]);
   OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0LL);
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm
@@ -543,13 +546,13 @@ void __fastcall ExchangeSvtCoinMenu__OnClickFolder(
     || (myRoomFsm = (PlayMakerFSM_o *)myRoomFsm[1].fields.m_CancellationTokenSource) == 0LL
     || (myRoomFsm = (PlayMakerFSM_o *)HutongGames_PlayMaker_FsmVariables__GetFsmInt(
                                         (HutongGames_PlayMaker_FsmVariables_o *)myRoomFsm,
-                                        (System_String_o *)StringLiteral_12966/*"SvtCoinType"*/,
+                                        (System_String_o *)StringLiteral_13158/*"SvtCoinType"*/,
                                         0LL)) == 0LL
     || (LODWORD(myRoomFsm->fields.addEventHandlers) = svtCoinType, (myRoomFsm = this->fields.myRoomFsm) == 0LL) )
   {
-    sub_1B86614(myRoomFsm, v9);
+    sub_1BDBAD4(myRoomFsm, v9);
   }
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3457/*"CLICK_EXCHANGE_SVT_COIN_LIST"*/, 0LL);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3490/*"CLICK_EXCHANGE_SVT_COIN_LIST"*/, 0LL);
 }
 
 
@@ -563,16 +566,16 @@ void __fastcall ExchangeSvtCoinMenu__OnConfirmCancel(ExchangeSvtCoinMenu_o *this
   ShopBuyItemConfirmMenu_o *selectMenu; // x20
   System_Action_int__o *v9; // x21
 
-  if ( (byte_4A49522 & 1) == 0 )
+  if ( (byte_4B3FA9B & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_int__TypeInfo, method);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_OnPreConfirm__, v3);
-    byte_4A49522 = 1;
+    sub_1BDB878(&System_Action_int__TypeInfo, method);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_OnPreConfirm__, v3);
+    byte_4B3FA9B = 1;
   }
   if ( this->fields.isBulkSelect )
   {
     bulkSelectMenu = this->fields.bulkSelectMenu;
-    v5 = (System_Action_int__o *)sub_1B86604(System_Action_int__TypeInfo);
+    v5 = (System_Action_int__o *)sub_1BDBAC4(System_Action_int__TypeInfo);
     System_Action_int____ctor(v5, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnPreConfirm__, 0LL);
     if ( bulkSelectMenu )
     {
@@ -580,10 +583,10 @@ void __fastcall ExchangeSvtCoinMenu__OnConfirmCancel(ExchangeSvtCoinMenu_o *this
       return;
     }
 LABEL_8:
-    sub_1B86614(v6, v7);
+    sub_1BDBAD4(v6, v7);
   }
   selectMenu = this->fields.selectMenu;
-  v9 = (System_Action_int__o *)sub_1B86604(System_Action_int__TypeInfo);
+  v9 = (System_Action_int__o *)sub_1BDBAC4(System_Action_int__TypeInfo);
   System_Action_int____ctor(v9, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnPreConfirm__, 0LL);
   if ( !selectMenu )
     goto LABEL_8;
@@ -614,20 +617,21 @@ void __fastcall ExchangeSvtCoinMenu__OnPreConfirm(ExchangeSvtCoinMenu_o *this, i
   ShopEntity_o *v12; // x22
   System_Action_o *v13; // x24
   System_Action_o *v14; // x25
-  const MethodInfo *v15; // x1
+  const MethodInfo *v15; // x6
+  const MethodInfo *v16; // x1
   ExchangeSvtCoinConfirmDialog_o *confirmDialog; // x22
-  ShopEntity_o *v17; // x21
-  System_Action_o *v18; // x23
-  System_Action_o *v19; // x24
-  const MethodInfo *v20; // x5
+  ShopEntity_o *v18; // x21
+  System_Action_o *v19; // x23
+  System_Action_o *v20; // x24
+  const MethodInfo *v21; // x5
 
-  if ( (byte_4A49520 & 1) == 0 )
+  if ( (byte_4B3FA99 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, *(_QWORD *)&cnt);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_OnAlertDecide__, v5);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_OnConfirmCancel__, v6);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_OnConfirmDecide__, v7);
-    byte_4A49520 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, *(_QWORD *)&cnt);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_OnAlertDecide__, v5);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_OnConfirmCancel__, v6);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_OnConfirmDecide__, v7);
+    byte_4B3FA99 = 1;
   }
   this->fields.buyCount = cnt;
   if ( cnt )
@@ -647,35 +651,35 @@ void __fastcall ExchangeSvtCoinMenu__OnPreConfirm(ExchangeSvtCoinMenu_o *this, i
       {
         sliderAlertDialog = this->fields.sliderAlertDialog;
         v12 = (ShopEntity_o *)*((_QWORD *)buyItemListViewManager + 14);
-        v13 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+        v13 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
         System_Action___ctor(v13, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnAlertDecide__, 0LL);
-        v14 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+        v14 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
         System_Action___ctor(v14, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnConfirmCancel__, 0LL);
         if ( sliderAlertDialog )
         {
-          ExchangeSvtCoinSliderAlertDialog__Open(sliderAlertDialog, buyCount, needCount, v12, v13, v14, 0LL);
+          ExchangeSvtCoinSliderAlertDialog__Open(sliderAlertDialog, buyCount, needCount, v12, v13, v14, v15);
           return;
         }
       }
 LABEL_13:
-      sub_1B86614(buyItemListViewManager, *(_QWORD *)&cnt);
+      sub_1BDBAD4(buyItemListViewManager, *(_QWORD *)&cnt);
     }
     if ( !buyItemListViewManager )
       goto LABEL_13;
     confirmDialog = this->fields.confirmDialog;
-    v17 = (ShopEntity_o *)*((_QWORD *)buyItemListViewManager + 14);
-    v18 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
-    System_Action___ctor(v18, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnConfirmDecide__, 0LL);
-    v19 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
-    System_Action___ctor(v19, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnConfirmCancel__, 0LL);
+    v18 = (ShopEntity_o *)*((_QWORD *)buyItemListViewManager + 14);
+    v19 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+    System_Action___ctor(v19, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnConfirmDecide__, 0LL);
+    v20 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+    System_Action___ctor(v20, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnConfirmCancel__, 0LL);
     if ( !confirmDialog )
       goto LABEL_13;
-    ExchangeSvtCoinConfirmDialog__Open(confirmDialog, buyCount, v17, v18, v19, v20);
+    ExchangeSvtCoinConfirmDialog__Open(confirmDialog, buyCount, v18, v19, v20, v21);
   }
   else
   {
     ExchangeSvtCoinMenu__CloseSelectMenu(this, 0LL, method);
-    ExchangeSvtCoinMenu__RefreshInfo(this, v15);
+    ExchangeSvtCoinMenu__RefreshInfo(this, v16);
   }
 }
 
@@ -694,30 +698,31 @@ void __fastcall ExchangeSvtCoinMenu__OnResultDecide(ExchangeSvtCoinMenu_o *this,
   __int64 v12; // x1
   RequestResultDialog_o *requestResultDialog; // x0
   const MethodInfo *v14; // x1
+  __int64 v15; // x2
   Il2CppObject *Master_object; // x21
   unsigned __int64 i; // x23
-  __int64 v17; // x8
-  BalanceConfig_c *v18; // x8
-  int64_t v19; // x22
+  struct UnityEngine_Material_o *mMaterial; // x8
+  BalanceConfig_c *v19; // x8
+  int64_t v20; // x22
   struct System_Int32_array *ExchangeSvtCoinItemIds; // x8
-  System_String_o *v21; // x20
+  System_String_o *v22; // x20
   Il2CppObject *Instance; // x22
   System_String_o *Empty; // x21
-  System_Action_o *v24; // x23
+  System_Action_o *v25; // x23
 
-  if ( (byte_4A49523 & 1) == 0 )
+  if ( (byte_4B3FA9C & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, isOk);
-    sub_1B863B8(&BalanceConfig_TypeInfo, v4);
-    sub_1B863B8(&Method_DataManager_GetMaster_UserItemMaster___, v5);
-    sub_1B863B8(&DataManager_TypeInfo, v6);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu__OnResultDecide_b__42_0__, v7);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v8);
-    sub_1B863B8(&NetworkManager_TypeInfo, v9);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
-    sub_1B863B8(&string_TypeInfo, v11);
-    sub_1B863B8(&StringLiteral_5692/*"EXCHANGE_SVT_COIN_COMPLETE_DIALOG_MSG"*/, v12);
-    byte_4A49523 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, isOk);
+    sub_1BDB878(&BalanceConfig_TypeInfo, v4);
+    sub_1BDB878(&Method_DataManager_GetMaster_UserItemMaster___, v5);
+    sub_1BDB878(&DataManager_TypeInfo, v6);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu__OnResultDecide_b__42_0__, v7);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v8);
+    sub_1BDB878(&NetworkManager_TypeInfo, v9);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
+    sub_1BDB878(&string_TypeInfo, v11);
+    sub_1BDB878(&StringLiteral_5769/*"EXCHANGE_SVT_COIN_COMPLETE_DIALOG_MSG"*/, v12);
+    byte_4B3FA9C = 1;
   }
   requestResultDialog = this->fields.requestResultDialog;
   if ( !requestResultDialog )
@@ -726,7 +731,7 @@ void __fastcall ExchangeSvtCoinMenu__OnResultDecide(ExchangeSvtCoinMenu_o *this,
   ExchangeSvtCoinMenu__RefreshInfo(this, v14);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_UserItemMaster___);
   for ( i = 0LL; ; ++i )
   {
     requestResultDialog = (RequestResultDialog_o *)BalanceConfig_TypeInfo;
@@ -735,17 +740,17 @@ void __fastcall ExchangeSvtCoinMenu__OnResultDecide(ExchangeSvtCoinMenu_o *this,
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       requestResultDialog = (RequestResultDialog_o *)BalanceConfig_TypeInfo;
     }
-    v17 = *(_QWORD *)&requestResultDialog->fields.numMessage2Label->fields.mEffectColor.fields.b;
-    if ( !v17 )
+    mMaterial = requestResultDialog->fields.numMessage2Label->fields.mMaterial;
+    if ( !mMaterial )
       goto LABEL_29;
-    if ( (__int64)i >= *(int *)(v17 + 24) )
+    if ( (__int64)i >= SLODWORD(mMaterial[1].klass) )
       break;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4A48C25 )
+    if ( !byte_4B3ED56 )
     {
-      sub_1B863B8(&NetworkManager_TypeInfo, isOk);
-      byte_4A48C25 = 1;
+      sub_1BDB878(&NetworkManager_TypeInfo, isOk);
+      byte_4B3ED56 = 1;
     }
     requestResultDialog = (RequestResultDialog_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -753,23 +758,23 @@ void __fastcall ExchangeSvtCoinMenu__OnResultDecide(ExchangeSvtCoinMenu_o *this,
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       requestResultDialog = (RequestResultDialog_o *)NetworkManager_TypeInfo;
     }
-    v18 = BalanceConfig_TypeInfo;
-    v19 = *(_QWORD *)&requestResultDialog->fields.numMessage2Label->fields.updateAnchors;
+    v19 = BalanceConfig_TypeInfo;
+    v20 = *(_QWORD *)&requestResultDialog->fields.numMessage2Label->fields.updateAnchors;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v18 = BalanceConfig_TypeInfo;
+      v19 = BalanceConfig_TypeInfo;
     }
-    ExchangeSvtCoinItemIds = v18->static_fields->ExchangeSvtCoinItemIds;
+    ExchangeSvtCoinItemIds = v19->static_fields->ExchangeSvtCoinItemIds;
     if ( !ExchangeSvtCoinItemIds )
       goto LABEL_29;
     if ( i >= ExchangeSvtCoinItemIds->max_length )
-      sub_1B8661C(requestResultDialog, isOk);
+      sub_1BDBADC(requestResultDialog, isOk, v15);
     if ( !Master_object )
       goto LABEL_29;
     requestResultDialog = (RequestResultDialog_o *)UserItemMaster__GetEntityDefinitely(
                                                      (UserItemMaster_o *)Master_object,
-                                                     v19,
+                                                     v20,
                                                      ExchangeSvtCoinItemIds->m_Items[i + 1],
                                                      0LL);
     if ( !requestResultDialog )
@@ -779,15 +784,15 @@ void __fastcall ExchangeSvtCoinMenu__OnResultDecide(ExchangeSvtCoinMenu_o *this,
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5692/*"EXCHANGE_SVT_COIN_COMPLETE_DIALOG_MSG"*/, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5769/*"EXCHANGE_SVT_COIN_COMPLETE_DIALOG_MSG"*/, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   Empty = string_TypeInfo->static_fields->Empty;
-  v24 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
-  System_Action___ctor(v24, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu__OnResultDecide_b__42_0__, 0LL);
+  v25 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  System_Action___ctor(v25, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu__OnResultDecide_b__42_0__, 0LL);
   if ( !Instance )
 LABEL_29:
-    sub_1B86614(requestResultDialog, isOk);
-  CommonUI__OpenNotificationDialog((CommonUI_o *)Instance, Empty, v21, v24, -1, 0, 0, 0, 0, 0, 0, 0, 0LL, -2.0, 0LL);
+    sub_1BDBAD4(requestResultDialog, isOk);
+  CommonUI__OpenNotificationDialog((CommonUI_o *)Instance, Empty, v22, v25, -1, 0, 0, 0, 0, 0, 0, 0, 0LL, -2.0, 0, 0LL);
 }
 
 
@@ -802,36 +807,36 @@ void __fastcall ExchangeSvtCoinMenu__OnSelectBuyItem(
   __int64 v7; // x1
   __int64 v8; // x1
   __int64 v9; // x1
-  ExchangeSvtCoinMenu___c__DisplayClass36_0_o *v10; // x20
+  __int64 v10; // x20
   Il2CppObject *Request_object; // x0
   __int64 v12; // x1
   _QWORD *v13; // x0
   System_Reflection_MethodBase_o *v14; // x0
   NetworkManager_ResultCallbackFunc_o *v15; // x19
 
-  if ( (byte_4A4951E & 1) == 0 )
+  if ( (byte_4B3FA97 & 1) == 0 )
   {
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_OnSelectBuyItem__, *(_QWORD *)&selectItemNum);
-    sub_1B863B8(&Method_NetworkManager_getRequest_UserPresentListRequest___, v5);
-    sub_1B863B8(&NetworkManager_TypeInfo, v6);
-    sub_1B863B8(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu___c__DisplayClass36_0__OnSelectBuyItem_b__0__, v8);
-    sub_1B863B8(&ExchangeSvtCoinMenu___c__DisplayClass36_0_TypeInfo, v9);
-    byte_4A4951E = 1;
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_OnSelectBuyItem__, *(_QWORD *)&selectItemNum);
+    sub_1BDB878(&Method_NetworkManager_getRequest_UserPresentListRequest___, v5);
+    sub_1BDB878(&NetworkManager_TypeInfo, v6);
+    sub_1BDB878(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu___c__DisplayClass36_0__OnSelectBuyItem_b__0__, v8);
+    sub_1BDB878(&ExchangeSvtCoinMenu___c__DisplayClass36_0_TypeInfo, v9);
+    byte_4B3FA97 = 1;
   }
-  v10 = (ExchangeSvtCoinMenu___c__DisplayClass36_0_o *)sub_1B86604(ExchangeSvtCoinMenu___c__DisplayClass36_0_TypeInfo);
-  ExchangeSvtCoinMenu___c__DisplayClass36_0___ctor(v10, 0LL);
+  v10 = sub_1BDBAC4(ExchangeSvtCoinMenu___c__DisplayClass36_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
     goto LABEL_10;
-  v10->fields.__4__this = this;
-  sub_1B8635C(&v10->fields);
-  v10->fields.selectItemNum = selectItemNum;
+  *(_QWORD *)(v10 + 16) = this;
+  sub_1BDB81C(v10 + 16);
+  *(_DWORD *)(v10 + 24) = selectItemNum;
   v13 = Method_ExchangeSvtCoinMenu_OnSelectBuyItem__;
   if ( (*((_BYTE *)Method_ExchangeSvtCoinMenu_OnSelectBuyItem__ + 83) & 2) != 0 )
-    v13 = (_QWORD *)sub_1B863D0(Method_ExchangeSvtCoinMenu_OnSelectBuyItem__);
-  v14 = (System_Reflection_MethodBase_o *)sub_1B8639C(v13, v13[4]);
+    v13 = (_QWORD *)sub_1BDB890(Method_ExchangeSvtCoinMenu_OnSelectBuyItem__);
+  v14 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v13, v13[4]);
   OverwriteAssetSoundName__PlaySystemSe(v14, 0, 0, 0LL);
-  v15 = (NetworkManager_ResultCallbackFunc_o *)sub_1B86604(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v15 = (NetworkManager_ResultCallbackFunc_o *)sub_1BDBAC4(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v15,
     (Il2CppObject *)v10,
@@ -841,10 +846,10 @@ void __fastcall ExchangeSvtCoinMenu__OnSelectBuyItem(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v15,
-                     (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_UserPresentListRequest___);
+                     (const MethodInfo_30BC7D4 *)Method_NetworkManager_getRequest_UserPresentListRequest___);
   if ( !Request_object )
 LABEL_10:
-    sub_1B86614(Request_object, v12);
+    sub_1BDBAD4(Request_object, v12);
   RequestBase__beginRequest((RequestBase_o *)Request_object, 0LL);
 }
 
@@ -868,16 +873,16 @@ void __fastcall ExchangeSvtCoinMenu__Open(ExchangeSvtCoinMenu_o *this, const Met
   UnityEngine_Object_o *baseWindow; // x20
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4A49518 & 1) == 0 )
+  if ( (byte_4B3FA91 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu__Open_b__30_0__, v3);
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, v4);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v5);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v6);
-    sub_1B863B8(&StringLiteral_5696/*"EXCHANGE_SVT_COIN_CURRENCY_TITLE_SR"*/, v7);
-    sub_1B863B8(&StringLiteral_5697/*"EXCHANGE_SVT_COIN_CURRENCY_TITLE_SSR"*/, v8);
-    byte_4A49518 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu__Open_b__30_0__, v3);
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___, v4);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v5);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v6);
+    sub_1BDB878(&StringLiteral_5773/*"EXCHANGE_SVT_COIN_CURRENCY_TITLE_SR"*/, v7);
+    sub_1BDB878(&StringLiteral_5774/*"EXCHANGE_SVT_COIN_CURRENCY_TITLE_SSR"*/, v8);
+    byte_4B3FA91 = 1;
   }
   filterButton = this->fields.filterButton;
   if ( !filterButton )
@@ -904,19 +909,19 @@ void __fastcall ExchangeSvtCoinMenu__Open(ExchangeSvtCoinMenu_o *this, const Met
       v14 = this->fields.currencyTitleLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      filterButton = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5697/*"EXCHANGE_SVT_COIN_CURRENCY_TITLE_SSR"*/, 0LL);
+      filterButton = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5774/*"EXCHANGE_SVT_COIN_CURRENCY_TITLE_SSR"*/, 0LL);
       if ( !v14 )
         goto LABEL_27;
       UILabel__set_text(v14, (System_String_o *)filterButton, 0LL);
       v15 = this->fields.currencyTitleLabel2;
-      filterButton = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5696/*"EXCHANGE_SVT_COIN_CURRENCY_TITLE_SR"*/, 0LL);
+      filterButton = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5773/*"EXCHANGE_SVT_COIN_CURRENCY_TITLE_SR"*/, 0LL);
       if ( !v15 )
         goto LABEL_27;
       UILabel__set_text(v15, (System_String_o *)filterButton, 0LL);
     }
   }
   ExchangeSvtCoinMenu__SetCurrencyInfo(this, v12);
-  v16 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
   System_Action___ctor(v16, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu__Open_b__30_0__, 0LL);
   BaseMenu__Open((BaseMenu_o *)this, v16, 0LL);
   baseWindow = (UnityEngine_Object_o *)this->fields.baseWindow;
@@ -929,7 +934,7 @@ void __fastcall ExchangeSvtCoinMenu__Open(ExchangeSvtCoinMenu_o *this, const Met
       goto LABEL_27;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          filterButton,
-                         (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+                         (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     filterButton = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -945,7 +950,7 @@ void __fastcall ExchangeSvtCoinMenu__Open(ExchangeSvtCoinMenu_o *this, const Met
         return;
       }
 LABEL_27:
-      sub_1B86614(filterButton, method);
+      sub_1BDBAD4(filterButton, method);
     }
   }
 }
@@ -962,11 +967,11 @@ void __fastcall ExchangeSvtCoinMenu__OpenFolder(
   ShopBuyItemListViewManager_o *v7; // x20
   System_Action_o *v8; // x21
 
-  if ( (byte_4A4951A & 1) == 0 )
+  if ( (byte_4B3FA93 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, *(_QWORD *)&svtCoinType);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu__OpenFolder_b__32_0__, v5);
-    byte_4A4951A = 1;
+    sub_1BDB878(&System_Action_TypeInfo, *(_QWORD *)&svtCoinType);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu__OpenFolder_b__32_0__, v5);
+    byte_4B3FA93 = 1;
   }
   buyItemListViewManager = (UnityEngine_Component_o *)this->fields.buyItemListViewManager;
   if ( !buyItemListViewManager )
@@ -982,16 +987,16 @@ void __fastcall ExchangeSvtCoinMenu__OpenFolder(
           svtCoinType,
           0LL),
         (buyItemListViewManager = (UnityEngine_Component_o *)this->fields.buyItemListViewManager) == 0LL)
-    || (ShopBuyItemListViewManager__FocusTopItem((ShopBuyItemListViewManager_o *)buyItemListViewManager, 0LL),
+    || (ShopBuyItemListViewManager__FocusTopItem((ShopBuyItemListViewManager_o *)buyItemListViewManager, 0, 0LL),
         v7 = this->fields.buyItemListViewManager,
-        v8 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo),
+        v8 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo),
         System_Action___ctor(v8, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu__OpenFolder_b__32_0__, 0LL),
         !v7) )
   {
 LABEL_9:
-    sub_1B86614(buyItemListViewManager, *(_QWORD *)&svtCoinType);
+    sub_1BDBAD4(buyItemListViewManager, *(_QWORD *)&svtCoinType);
   }
-  ShopBuyItemListViewManager__SetMode_33475804(v7, 1, v8, 0.1, 0LL);
+  ShopBuyItemListViewManager__SetMode_34294268(v7, 1, v8, 0.1, 0LL);
 }
 
 
@@ -1012,14 +1017,14 @@ void __fastcall ExchangeSvtCoinMenu__OpenRequestResultDialog(ExchangeSvtCoinMenu
   RequestResultDialog_o *requestResultDialog; // x23
   System_Action_bool__o *v16; // x24
 
-  if ( (byte_4A49527 & 1) == 0 )
+  if ( (byte_4B3FAA0 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_bool__TypeInfo, method);
-    sub_1B863B8(&Method_DataManager_GetMaster_ItemMaster___, v3);
-    sub_1B863B8(&DataManager_TypeInfo, v4);
-    sub_1B863B8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v5);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_OnResultDecide__, v6);
-    byte_4A49527 = 1;
+    sub_1BDB878(&System_Action_bool__TypeInfo, method);
+    sub_1BDB878(&Method_DataManager_GetMaster_ItemMaster___, v3);
+    sub_1BDB878(&DataManager_TypeInfo, v4);
+    sub_1BDB878(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v5);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_OnResultDecide__, v6);
+    byte_4B3FAA0 = 1;
   }
   buyItemListViewManager = this->fields.buyItemListViewManager;
   if ( !buyItemListViewManager )
@@ -1039,7 +1044,7 @@ void __fastcall ExchangeSvtCoinMenu__OpenRequestResultDialog(ExchangeSvtCoinMenu
                           v8);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  buyItemListViewManager = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_ItemMaster___);
+  buyItemListViewManager = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !v9 )
     goto LABEL_13;
   v11 = (DataMasterBase_TMaster__TEntity__PKType__o *)buyItemListViewManager;
@@ -1049,7 +1054,7 @@ void __fastcall ExchangeSvtCoinMenu__OpenRequestResultDialog(ExchangeSvtCoinMenu
   Entity = DataMasterBase_object__object__int___GetEntity(
              v11,
              (int32_t)buyItemListViewManager,
-             (const MethodInfo_3214280 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_32E1E3C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   RequestResultDialogItemMessageNormal = ShopRequestResultDialogMessageMaker__GetRequestResultDialogItemMessageNormal(
                                            v9,
                                            (ItemEntity_o *)Entity,
@@ -1066,12 +1071,12 @@ void __fastcall ExchangeSvtCoinMenu__OpenRequestResultDialog(ExchangeSvtCoinMenu
                                     0LL)) == 0LL)
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)buyItemListViewManager, 1, 0LL),
         requestResultDialog = this->fields.requestResultDialog,
-        v16 = (System_Action_bool__o *)sub_1B86604(System_Action_bool__TypeInfo),
+        v16 = (System_Action_bool__o *)sub_1BDBAC4(System_Action_bool__TypeInfo),
         System_Action_bool____ctor(v16, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnResultDecide__, 0LL),
         !requestResultDialog) )
   {
 LABEL_13:
-    sub_1B86614(buyItemListViewManager, method);
+    sub_1BDBAD4(buyItemListViewManager, method);
   }
   RequestResultDialog__Open(
     requestResultDialog,
@@ -1098,37 +1103,38 @@ void __fastcall ExchangeSvtCoinMenu__OpenSelectMenu(
   ShopBuyItemListViewManager_o *buyItemListViewManager; // x0
   ShopBuyItemListViewItem_o *v12; // x20
   int32_t TargetId; // w0
-  int v14; // w0
-  __int64 v15; // x2
-  __int64 v16; // x3
-  __int64 v17; // x4
-  Il2CppObject *v18; // x0
-  System_String_o *v19; // x8
-  Il2CppObject *v20; // x21
-  System_String_o *v21; // x0
-  ExchangeSvtCoinMenu_o *v22; // x21
-  const MethodInfo *v23; // x2
+  const MethodInfo *v14; // x1
+  int v15; // w0
+  __int64 v16; // x2
+  __int64 v17; // x3
+  __int64 v18; // x4
+  Il2CppObject *v19; // x0
+  System_String_o *v20; // x8
+  Il2CppObject *v21; // x21
+  System_String_o *v22; // x0
+  ExchangeSvtCoinMenu_o *v23; // x21
+  const MethodInfo *v24; // x2
   bool IsBulk; // w0
   ShopBuyBulkItemConfirmMenu_o *bulkSelectMenu; // x21
   ShopEntity_o *Shop_k__BackingField; // x22
-  System_Action_int__o *v27; // x23
+  System_Action_int__o *v28; // x23
   ShopBuyItemConfirmMenu_o *selectMenu; // x21
-  ShopEntity_o *v29; // x22
+  ShopEntity_o *v30; // x22
   int32_t ShopKind_k__BackingField; // w20
-  System_Action_int__o *v31; // x23
-  int v32; // [xsp+8h] [xbp-38h] BYREF
-  int v33; // [xsp+Ch] [xbp-34h] BYREF
+  System_Action_int__o *v32; // x23
+  int v33; // [xsp+8h] [xbp-38h] BYREF
+  int v34; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A4951F & 1) == 0 )
+  if ( (byte_4B3FA98 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_int__TypeInfo, *(_QWORD *)&selectItemNum);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_OnPreConfirm__, v5);
-    sub_1B863B8(&int_TypeInfo, v6);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v7);
-    sub_1B863B8(&StringLiteral_24817/*"{0}"*/, v8);
-    sub_1B863B8(&StringLiteral_15704/*"[FFFF00]{0}"*/, v9);
-    sub_1B863B8(&StringLiteral_5711/*"EXCHANGE_SVT_COIN_NOTICE_TEXT"*/, v10);
-    byte_4A4951F = 1;
+    sub_1BDB878(&System_Action_int__TypeInfo, *(_QWORD *)&selectItemNum);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_OnPreConfirm__, v5);
+    sub_1BDB878(&int_TypeInfo, v6);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v7);
+    sub_1BDB878(&StringLiteral_25175/*"{0}"*/, v8);
+    sub_1BDB878(&StringLiteral_15906/*"[FFFF00]{0}"*/, v9);
+    sub_1BDB878(&StringLiteral_5788/*"EXCHANGE_SVT_COIN_NOTICE_TEXT"*/, v10);
+    byte_4B3FA98 = 1;
   }
   buyItemListViewManager = this->fields.buyItemListViewManager;
   if ( !buyItemListViewManager )
@@ -1145,58 +1151,58 @@ void __fastcall ExchangeSvtCoinMenu__OpenSelectMenu(
   if ( !buyItemListViewManager )
     goto LABEL_19;
   TargetId = ShopEntity__get_TargetId((ShopEntity_o *)buyItemListViewManager, 0LL);
-  v14 = ExchangeSvtCoinNeedCountCalculator__Calculate(TargetId, 0LL);
-  this->fields.needCount = v14;
-  if ( v14 <= 0 )
+  v15 = ExchangeSvtCoinNeedCountCalculator__Calculate(TargetId, v14);
+  this->fields.needCount = v15;
+  if ( v15 <= 0 )
   {
-    v33 = v14;
-    v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33, v15, v16, v17);
-    v19 = (System_String_o *)StringLiteral_15704/*"[FFFF00]{0}"*/;
+    v34 = v15;
+    v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34, v16, v17, v18);
+    v20 = (System_String_o *)StringLiteral_15906/*"[FFFF00]{0}"*/;
   }
   else
   {
-    v32 = v14;
-    v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32, v15, v16, v17);
-    v19 = (System_String_o *)StringLiteral_24817/*"{0}"*/;
+    v33 = v15;
+    v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33, v16, v17, v18);
+    v20 = (System_String_o *)StringLiteral_25175/*"{0}"*/;
   }
-  v20 = (Il2CppObject *)System_String__Format(v19, v18, 0LL);
+  v21 = (Il2CppObject *)System_String__Format(v20, v19, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_5711/*"EXCHANGE_SVT_COIN_NOTICE_TEXT"*/, 0LL);
-  v22 = (ExchangeSvtCoinMenu_o *)System_String__Format(v21, v20, 0LL);
-  IsBulk = ExchangeSvtCoinMenu__GetIsBulk(v22, v12, v23);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5788/*"EXCHANGE_SVT_COIN_NOTICE_TEXT"*/, 0LL);
+  v23 = (ExchangeSvtCoinMenu_o *)System_String__Format(v22, v21, 0LL);
+  IsBulk = ExchangeSvtCoinMenu__GetIsBulk(v23, v12, v24);
   this->fields.isBulkSelect = IsBulk;
   if ( IsBulk )
   {
     buyItemListViewManager = (ShopBuyItemListViewManager_o *)this->fields.bulkSelectMenuNoticeLabel;
     if ( buyItemListViewManager )
     {
-      UILabel__set_text((UILabel_o *)buyItemListViewManager, (System_String_o *)v22, 0LL);
+      UILabel__set_text((UILabel_o *)buyItemListViewManager, (System_String_o *)v23, 0LL);
       bulkSelectMenu = this->fields.bulkSelectMenu;
       Shop_k__BackingField = v12->fields._Shop_k__BackingField;
-      v27 = (System_Action_int__o *)sub_1B86604(System_Action_int__TypeInfo);
-      System_Action_int____ctor(v27, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnPreConfirm__, 0LL);
+      v28 = (System_Action_int__o *)sub_1BDBAC4(System_Action_int__TypeInfo);
+      System_Action_int____ctor(v28, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnPreConfirm__, 0LL);
       if ( bulkSelectMenu )
       {
-        ShopBuyBulkItemConfirmMenu__Open(bulkSelectMenu, Shop_k__BackingField, v12, v27, 0, 0LL);
+        ShopBuyBulkItemConfirmMenu__Open(bulkSelectMenu, Shop_k__BackingField, v12, v28, 0, 0LL);
         return;
       }
     }
 LABEL_19:
-    sub_1B86614(buyItemListViewManager, *(_QWORD *)&selectItemNum);
+    sub_1BDBAD4(buyItemListViewManager, *(_QWORD *)&selectItemNum);
   }
   buyItemListViewManager = (ShopBuyItemListViewManager_o *)this->fields.selectMenuNoticeLabel;
   if ( !buyItemListViewManager )
     goto LABEL_19;
-  UILabel__set_text((UILabel_o *)buyItemListViewManager, (System_String_o *)v22, 0LL);
+  UILabel__set_text((UILabel_o *)buyItemListViewManager, (System_String_o *)v23, 0LL);
   selectMenu = this->fields.selectMenu;
-  v29 = v12->fields._Shop_k__BackingField;
+  v30 = v12->fields._Shop_k__BackingField;
   ShopKind_k__BackingField = v12->fields._ShopKind_k__BackingField;
-  v31 = (System_Action_int__o *)sub_1B86604(System_Action_int__TypeInfo);
-  System_Action_int____ctor(v31, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnPreConfirm__, 0LL);
+  v32 = (System_Action_int__o *)sub_1BDBAC4(System_Action_int__TypeInfo);
+  System_Action_int____ctor(v32, (Il2CppObject *)this, Method_ExchangeSvtCoinMenu_OnPreConfirm__, 0LL);
   if ( !selectMenu )
     goto LABEL_19;
-  ShopBuyItemConfirmMenu__Open(selectMenu, v29, ShopKind_k__BackingField, v31, 0, 0, 0LL, 0, 0LL);
+  ShopBuyItemConfirmMenu__Open(selectMenu, v30, ShopKind_k__BackingField, v32, 0, 0, 0LL, 0, 0LL);
 }
 
 
@@ -1208,11 +1214,11 @@ void __fastcall ExchangeSvtCoinMenu__RefreshInfo(ExchangeSvtCoinMenu_o *this, co
   System_Action_int__o *v6; // x21
   const MethodInfo *v7; // x1
 
-  if ( (byte_4A4951D & 1) == 0 )
+  if ( (byte_4B3FA96 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_int__TypeInfo, method);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_OnSelectBuyItem__, v3);
-    byte_4A4951D = 1;
+    sub_1BDB878(&System_Action_int__TypeInfo, method);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_OnSelectBuyItem__, v3);
+    byte_4B3FA96 = 1;
   }
   buyItemListViewManager = this->fields.buyItemListViewManager;
   if ( !buyItemListViewManager
@@ -1225,13 +1231,13 @@ void __fastcall ExchangeSvtCoinMenu__RefreshInfo(ExchangeSvtCoinMenu_o *this, co
           *((ShopEntity_o **)buyItemListViewManager + 14),
           0LL),
         (buyItemListViewManager = this->fields.buyItemListViewManager) == 0LL)
-    || (ShopBuyItemListViewManager__SetMode_33474532((ShopBuyItemListViewManager_o *)buyItemListViewManager, 5, 0LL),
+    || (ShopBuyItemListViewManager__SetMode_34293368((ShopBuyItemListViewManager_o *)buyItemListViewManager, 5, 0LL),
         v5 = this->fields.buyItemListViewManager,
-        v6 = (System_Action_int__o *)sub_1B86604(System_Action_int__TypeInfo),
+        v6 = (System_Action_int__o *)sub_1BDBAC4(System_Action_int__TypeInfo),
         System_Action_int____ctor(v6, (Il2CppObject *)this, (intptr_t)Method_ExchangeSvtCoinMenu_OnSelectBuyItem__, 0LL),
         !v5) )
   {
-    sub_1B86614(buyItemListViewManager, method);
+    sub_1BDBAD4(buyItemListViewManager, method);
   }
   ShopBuyItemListViewManager__SetMode(v5, 2, v6, 0LL);
   ExchangeSvtCoinMenu__SetCurrencyInfo(this, v7);
@@ -1250,13 +1256,13 @@ void __fastcall ExchangeSvtCoinMenu__RequestShop(ExchangeSvtCoinMenu_o *this, co
   NetworkManager_ResultCallbackFunc_o *v10; // x21
   struct ShopEntity_o *Shop_k__BackingField; // x8
 
-  if ( (byte_4A49528 & 1) == 0 )
+  if ( (byte_4B3FAA1 & 1) == 0 )
   {
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_EndRequestShop__, method);
-    sub_1B863B8(&Method_NetworkManager_getRequest_PurchaseRequest___, v3);
-    sub_1B863B8(&NetworkManager_TypeInfo, v4);
-    sub_1B863B8(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
-    byte_4A49528 = 1;
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_EndRequestShop__, method);
+    sub_1BDB878(&Method_NetworkManager_getRequest_PurchaseRequest___, v3);
+    sub_1BDB878(&NetworkManager_TypeInfo, v4);
+    sub_1BDB878(&NetworkManager_ResultCallbackFunc_TypeInfo, v5);
+    byte_4B3FAA1 = 1;
   }
   buyItemListViewManager = this->fields.buyItemListViewManager;
   if ( !buyItemListViewManager )
@@ -1267,7 +1273,7 @@ void __fastcall ExchangeSvtCoinMenu__RequestShop(ExchangeSvtCoinMenu_o *this, co
     v9 = Item;
     if ( Item->fields._Shop_k__BackingField )
     {
-      v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1B86604(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1BDBAC4(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v10,
         (Il2CppObject *)this,
@@ -1277,7 +1283,7 @@ void __fastcall ExchangeSvtCoinMenu__RequestShop(ExchangeSvtCoinMenu_o *this, co
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       buyItemListViewManager = (ShopBuyItemListViewManager_o *)NetworkManager__getRequest_object_(
                                                                  v10,
-                                                                 (const MethodInfo_2FF4AF4 *)Method_NetworkManager_getRequest_PurchaseRequest___);
+                                                                 (const MethodInfo_30BC7D4 *)Method_NetworkManager_getRequest_PurchaseRequest___);
       Shop_k__BackingField = v9->fields._Shop_k__BackingField;
       if ( Shop_k__BackingField && buyItemListViewManager )
       {
@@ -1291,7 +1297,7 @@ void __fastcall ExchangeSvtCoinMenu__RequestShop(ExchangeSvtCoinMenu_o *this, co
         return;
       }
 LABEL_12:
-      sub_1B86614(buyItemListViewManager, method);
+      sub_1BDBAD4(buyItemListViewManager, method);
     }
   }
   ExchangeSvtCoinMenu__RefreshInfo(this, v8);
@@ -1309,38 +1315,39 @@ void __fastcall ExchangeSvtCoinMenu__SetCurrencyInfo(ExchangeSvtCoinMenu_o *this
   __int64 v9; // x1
   Il2CppObject *Master_object; // x21
   __int64 v11; // x1
-  Il2CppObject *v12; // x22
+  __int64 v12; // x2
+  Il2CppObject *v13; // x22
   il2cpp_array_size_t i; // w28
   void *EntityDefinitely; // x0
   struct System_Int32_array *ExchangeSvtCoinItemIds; // x8
   struct ExchangeSvtCoinMenu_CurrencyInfo_array *currencyInfoList; // x9
   il2cpp_array_size_t max_length; // w10
-  struct ExchangeSvtCoinMenu_CurrencyInfo_array *v18; // x9
-  int32_t v19; // w23
-  ExchangeSvtCoinMenu_CurrencyInfo_o *v20; // x29
+  struct ExchangeSvtCoinMenu_CurrencyInfo_array *v19; // x9
+  int32_t v20; // w23
+  ExchangeSvtCoinMenu_CurrencyInfo_o *v21; // x29
   UISprite_o *currencySprite; // x24
   int32_t monitor; // w25
   UILabel_o *currencyLabel; // x23
-  int32_t v24; // w24
+  int32_t v25; // w24
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4A49524 & 1) == 0 )
+  if ( (byte_4B3FA9D & 1) == 0 )
   {
-    sub_1B863B8(&AtlasManager_TypeInfo, method);
-    sub_1B863B8(&BalanceConfig_TypeInfo, v3);
-    sub_1B863B8(&Method_DataManager_GetMaster_ItemMaster___, v4);
-    sub_1B863B8(&Method_DataManager_GetMaster_UserItemMaster___, v5);
-    sub_1B863B8(&DataManager_TypeInfo, v6);
-    sub_1B863B8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v7);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v8);
-    sub_1B863B8(&NetworkManager_TypeInfo, v9);
-    byte_4A49524 = 1;
+    sub_1BDB878(&AtlasManager_TypeInfo, method);
+    sub_1BDB878(&BalanceConfig_TypeInfo, v3);
+    sub_1BDB878(&Method_DataManager_GetMaster_ItemMaster___, v4);
+    sub_1BDB878(&Method_DataManager_GetMaster_UserItemMaster___, v5);
+    sub_1BDB878(&DataManager_TypeInfo, v6);
+    sub_1BDB878(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v7);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v8);
+    sub_1BDB878(&NetworkManager_TypeInfo, v9);
+    byte_4B3FA9D = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_ItemMaster___);
-  v12 = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ItemMaster___);
+  v13 = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_UserItemMaster___);
   for ( i = 0; ; ++i )
   {
     EntityDefinitely = BalanceConfig_TypeInfo;
@@ -1349,10 +1356,10 @@ void __fastcall ExchangeSvtCoinMenu__SetCurrencyInfo(ExchangeSvtCoinMenu_o *this
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       EntityDefinitely = BalanceConfig_TypeInfo;
     }
-    ExchangeSvtCoinItemIds = *(struct System_Int32_array **)(*((_QWORD *)EntityDefinitely + 23) + 456LL);
+    ExchangeSvtCoinItemIds = *(struct System_Int32_array **)(*((_QWORD *)EntityDefinitely + 23) + 480LL);
     if ( !ExchangeSvtCoinItemIds )
 LABEL_39:
-      sub_1B86614(EntityDefinitely, v11);
+      sub_1BDBAD4(EntityDefinitely, v11);
     if ( (signed int)i >= (signed int)ExchangeSvtCoinItemIds->max_length )
       break;
     currencyInfoList = this->fields.currencyInfoList;
@@ -1374,36 +1381,36 @@ LABEL_39:
     }
     if ( i >= ExchangeSvtCoinItemIds->max_length )
       goto LABEL_40;
-    v18 = this->fields.currencyInfoList;
-    if ( !v18 )
+    v19 = this->fields.currencyInfoList;
+    if ( !v19 )
       goto LABEL_39;
-    if ( i >= v18->max_length )
+    if ( i >= v19->max_length )
 LABEL_40:
-      sub_1B8661C(EntityDefinitely, v11);
+      sub_1BDBADC(EntityDefinitely, v11, v12);
     if ( !Master_object )
       goto LABEL_39;
-    v19 = ExchangeSvtCoinItemIds->m_Items[i + 1];
-    v20 = v18->m_Items[i];
+    v20 = ExchangeSvtCoinItemIds->m_Items[i + 1];
+    v21 = v19->m_Items[i];
     EntityDefinitely = (void *)DataMasterBase_object__object__int___TryGetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                  &entity,
-                                 v19,
-                                 (const MethodInfo_32142CC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                                 v20,
+                                 (const MethodInfo_32E1E88 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
     if ( ((unsigned __int8)EntityDefinitely & 1) != 0 )
     {
-      if ( !v20 || !entity )
+      if ( !v21 || !entity )
         goto LABEL_39;
-      currencySprite = v20->fields.currencySprite;
+      currencySprite = v21->fields.currencySprite;
       monitor = (int32_t)entity[2].monitor;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       AtlasManager__SetItem(currencySprite, monitor, 0LL);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4A48C25 )
+      if ( !byte_4B3ED56 )
       {
-        sub_1B863B8(&NetworkManager_TypeInfo, v11);
-        byte_4A48C25 = 1;
+        sub_1BDB878(&NetworkManager_TypeInfo, v11);
+        byte_4B3ED56 = 1;
       }
       EntityDefinitely = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1411,20 +1418,20 @@ LABEL_40:
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         EntityDefinitely = NetworkManager_TypeInfo;
       }
-      if ( !v12 )
+      if ( !v13 )
         goto LABEL_39;
       EntityDefinitely = UserItemMaster__GetEntityDefinitely(
-                           (UserItemMaster_o *)v12,
+                           (UserItemMaster_o *)v13,
                            *(_QWORD *)(*((_QWORD *)EntityDefinitely + 23) + 64LL),
-                           v19,
+                           v20,
                            0LL);
       if ( !EntityDefinitely )
         goto LABEL_39;
-      currencyLabel = v20->fields.currencyLabel;
-      v24 = *((_DWORD *)EntityDefinitely + 7);
+      currencyLabel = v21->fields.currencyLabel;
+      v25 = *((_DWORD *)EntityDefinitely + 7);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      EntityDefinitely = LocalizationManager__GetNumberFormat(v24, 0LL);
+      EntityDefinitely = LocalizationManager__GetNumberFormat(v25, 0LL);
       if ( !currencyLabel )
         goto LABEL_39;
       UILabel__set_text(currencyLabel, (System_String_o *)EntityDefinitely, 0LL);
@@ -1443,10 +1450,10 @@ void __fastcall ExchangeSvtCoinMenu__SetDispCurrencyInfo(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4A4951C & 1) == 0 )
+  if ( (byte_4B3FA95 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, isDisp);
-    byte_4A4951C = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, isDisp);
+    byte_4B3FA95 = 1;
   }
   currencyInfoPanel = (UnityEngine_Object_o *)this->fields.currencyInfoPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1455,7 +1462,7 @@ void __fastcall ExchangeSvtCoinMenu__SetDispCurrencyInfo(
   {
     v7 = this->fields.currencyInfoPanel;
     if ( !v7 )
-      sub_1B86614(0LL, v6);
+      sub_1BDBAD4(0LL, v6);
     UnityEngine_GameObject__SetActive(v7, isDisp, 0LL);
   }
 }
@@ -1465,10 +1472,10 @@ void __fastcall ExchangeSvtCoinMenu___CloseFolder_b__33_0(ExchangeSvtCoinMenu_o 
 {
   UnityEngine_Component_o *buyItemListViewManager; // x0
 
-  if ( (byte_4A4952E & 1) == 0 )
+  if ( (byte_4B3FAA7 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_6903/*"GO_NEXT"*/, method);
-    byte_4A4952E = 1;
+    sub_1BDB878(&StringLiteral_6989/*"GO_NEXT"*/, method);
+    byte_4B3FAA7 = 1;
   }
   buyItemListViewManager = (UnityEngine_Component_o *)this->fields.buyItemListViewManager;
   if ( !buyItemListViewManager
@@ -1480,9 +1487,9 @@ void __fastcall ExchangeSvtCoinMenu___CloseFolder_b__33_0(ExchangeSvtCoinMenu_o 
     || (ListViewManager__DestroyList((ListViewManager_o *)buyItemListViewManager, 0LL),
         (buyItemListViewManager = (UnityEngine_Component_o *)this->fields.myRoomFsm) == 0LL) )
   {
-    sub_1B86614(buyItemListViewManager, method);
+    sub_1BDBAD4(buyItemListViewManager, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)buyItemListViewManager, (System_String_o *)StringLiteral_6903/*"GO_NEXT"*/, 0LL);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)buyItemListViewManager, (System_String_o *)StringLiteral_6989/*"GO_NEXT"*/, 0LL);
 }
 
 
@@ -1492,16 +1499,16 @@ void __fastcall ExchangeSvtCoinMenu___OnResultDecide_b__42_0(ExchangeSvtCoinMenu
   __int64 v4; // x1
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4A4952F & 1) == 0 )
+  if ( (byte_4B3FAA8 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_4953/*"DESTROY_EXCHANGE_SVT_COIN"*/, method);
-    byte_4A4952F = 1;
+    sub_1BDB878(&StringLiteral_5022/*"DESTROY_EXCHANGE_SVT_COIN"*/, method);
+    byte_4B3FAA8 = 1;
   }
   ExchangeSvtCoinMenu__SetDispCurrencyInfo(this, 0, v2);
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1B86614(0LL, v4);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_4953/*"DESTROY_EXCHANGE_SVT_COIN"*/, 0LL);
+    sub_1BDBAD4(0LL, v4);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_5022/*"DESTROY_EXCHANGE_SVT_COIN"*/, 0LL);
 }
 
 
@@ -1513,12 +1520,12 @@ void __fastcall ExchangeSvtCoinMenu___OpenFolder_b__32_0(ExchangeSvtCoinMenu_o *
   ShopBuyItemListViewManager_o *buyItemListViewManager; // x20
   System_Action_int__o *v7; // x21
 
-  if ( (byte_4A4952D & 1) == 0 )
+  if ( (byte_4B3FAA6 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_int__TypeInfo, method);
-    sub_1B863B8(&Method_ExchangeSvtCoinMenu_OnSelectBuyItem__, v3);
-    sub_1B863B8(&StringLiteral_12966/*"SvtCoinType"*/, v4);
-    byte_4A4952D = 1;
+    sub_1BDB878(&System_Action_int__TypeInfo, method);
+    sub_1BDB878(&Method_ExchangeSvtCoinMenu_OnSelectBuyItem__, v3);
+    sub_1BDB878(&StringLiteral_13158/*"SvtCoinType"*/, v4);
+    byte_4B3FAA6 = 1;
   }
   myRoomCtrl = this->fields.myRoomCtrl;
   if ( !myRoomCtrl )
@@ -1529,7 +1536,7 @@ void __fastcall ExchangeSvtCoinMenu___OpenFolder_b__32_0(ExchangeSvtCoinMenu_o *
     goto LABEL_11;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)myRoomCtrl, 1, 0LL);
   buyItemListViewManager = this->fields.buyItemListViewManager;
-  v7 = (System_Action_int__o *)sub_1B86604(System_Action_int__TypeInfo);
+  v7 = (System_Action_int__o *)sub_1BDBAC4(System_Action_int__TypeInfo);
   System_Action_int____ctor(v7, (Il2CppObject *)this, (intptr_t)Method_ExchangeSvtCoinMenu_OnSelectBuyItem__, 0LL);
   if ( !buyItemListViewManager
     || (ShopBuyItemListViewManager__SetMode(buyItemListViewManager, 2, v7, 0LL),
@@ -1538,11 +1545,11 @@ void __fastcall ExchangeSvtCoinMenu___OpenFolder_b__32_0(ExchangeSvtCoinMenu_o *
     || (myRoomCtrl = (MyRoomControl_o *)myRoomCtrl->fields.optionComp) == 0LL
     || (myRoomCtrl = (MyRoomControl_o *)HutongGames_PlayMaker_FsmVariables__GetFsmInt(
                                           (HutongGames_PlayMaker_FsmVariables_o *)myRoomCtrl,
-                                          (System_String_o *)StringLiteral_12966/*"SvtCoinType"*/,
+                                          (System_String_o *)StringLiteral_13158/*"SvtCoinType"*/,
                                           0LL)) == 0LL )
   {
 LABEL_11:
-    sub_1B86614(myRoomCtrl, method);
+    sub_1BDBAD4(myRoomCtrl, method);
   }
   LODWORD(myRoomCtrl->fields.myRoomListCtr) = 0;
 }
@@ -1554,7 +1561,7 @@ void __fastcall ExchangeSvtCoinMenu___Open_b__30_0(ExchangeSvtCoinMenu_o *this, 
 
   myRoomCtrl = this->fields.myRoomCtrl;
   if ( !myRoomCtrl )
-    sub_1B86614(0LL, method);
+    sub_1BDBAD4(0LL, method);
   MyRoomControl__SetBackButtonIgnore(myRoomCtrl, 0, 0LL);
 }
 
@@ -1569,7 +1576,7 @@ bool __fastcall ExchangeSvtCoinMenu__get_IsActiveSvtCoinList(ExchangeSvtCoinMenu
                                                               buyItemListViewManager,
                                                               0LL)) == 0LL )
   {
-    sub_1B86614(buyItemListViewManager, method);
+    sub_1BDBAD4(buyItemListViewManager, method);
   }
   return UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)buyItemListViewManager, 0LL);
 }
@@ -1596,10 +1603,7 @@ void __fastcall ExchangeSvtCoinMenu___c__DisplayClass36_0___OnSelectBuyItem_b__0
         System_String_o *_,
         const MethodInfo *method)
 {
-  ExchangeSvtCoinMenu_o *_4__this; // x0
-
-  _4__this = this->fields.__4__this;
-  if ( !_4__this )
-    sub_1B86614(0LL, _);
-  ExchangeSvtCoinMenu__OpenSelectMenu(_4__this, this->fields.selectItemNum, 0LL);
+  if ( !this->fields.__4__this )
+    sub_1BDBAD4(this, _);
+  ExchangeSvtCoinMenu__OpenSelectMenu(this->fields.__4__this, this->fields.selectItemNum, method);
 }

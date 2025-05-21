@@ -1,14 +1,14 @@
 void __fastcall UserNpcSvtRecordMaster___ctor(UserNpcSvtRecordMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4F306 & 1) == 0 )
+  if ( (byte_4B45908 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__, method);
-    byte_4A4F306 = 1;
+    sub_1BDB878(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__, method);
+    byte_4B45908 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     417,
-    (const MethodInfo_3216A14 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
+    (const MethodInfo_32E45D0 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserNpcSvtRecordEntity_o *__fastcall UserNpcSvtRecordMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A4F307 & 1) == 0 )
+  if ( (byte_4B45909 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__, userId);
-    byte_4A4F307 = 1;
+    sub_1BDB878(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__, userId);
+    byte_4B45909 = 1;
   }
   PK = (Il2CppObject *)UserNpcSvtRecordEntity__CreatePK(userId, svtId, *(const MethodInfo **)&svtId);
   return (UserNpcSvtRecordEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_3218D38 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
+                                       (const MethodInfo_32E68F4 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__GetEntity__);
 }
 
 
@@ -46,18 +46,18 @@ System_Int32_array *__fastcall UserNpcSvtRecordMaster__GetTdPlayed(
   __int64 v8; // x1
   UserNpcSvtRecordEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A4F309 & 1) == 0 )
+  if ( (byte_4B4590B & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, *(_QWORD *)&svtId);
-    byte_4A4F309 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, *(_QWORD *)&svtId);
+    byte_4B4590B = 1;
   }
   entity = 0LL;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4A48C25 )
+  if ( !byte_4B3ED56 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, *(_QWORD *)&svtId);
-    byte_4A48C25 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, *(_QWORD *)&svtId);
+    byte_4B3ED56 = 1;
   }
   v6 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -69,7 +69,7 @@ System_Int32_array *__fastcall UserNpcSvtRecordMaster__GetTdPlayed(
   if ( !v7 )
     return 0LL;
   if ( !entity )
-    sub_1B86614(v7, v8);
+    sub_1BDBAD4(v7, v8);
   return entity->fields.tdPlayed;
 }
 
@@ -83,15 +83,15 @@ bool __fastcall UserNpcSvtRecordMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A4F308 & 1) == 0 )
+  if ( (byte_4B4590A & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__, entity);
-    byte_4A4F308 = 1;
+    sub_1BDB878(&Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__, entity);
+    byte_4B4590A = 1;
   }
   PK = (Il2CppObject *)UserNpcSvtRecordEntity__CreatePK(userId, svtId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3218D84 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
+           (const MethodInfo_32E6940 *)Method_DataMasterBase_UserNpcSvtRecordMaster__UserNpcSvtRecordEntity__string__TryGetEntity__);
 }

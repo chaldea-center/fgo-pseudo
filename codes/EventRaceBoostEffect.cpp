@@ -10,19 +10,19 @@ void __fastcall EventRaceBoostEffect___cctor(const MethodInfo *method)
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4A4AFC4 & 1) == 0 )
+  if ( (byte_4B41572 & 1) == 0 )
   {
-    sub_1B863B8(&EventRaceBoostEffect_TypeInfo, v1);
-    sub_1B863B8(&StringLiteral_22598/*"race_boost_effect_{0}"*/, v4);
-    sub_1B863B8(&StringLiteral_6168/*"EventRaceBoostEffect_{0}"*/, v5);
-    byte_4A4AFC4 = 1;
+    sub_1BDB878(&EventRaceBoostEffect_TypeInfo, v1);
+    sub_1BDB878(&StringLiteral_22944/*"race_boost_effect_{0}"*/, v4);
+    sub_1BDB878(&StringLiteral_6247/*"EventRaceBoostEffect_{0}"*/, v5);
+    byte_4B41572 = 1;
   }
-  EventRaceBoostEffect_TypeInfo->static_fields->SP_NAME = (struct System_String_o *)StringLiteral_22598/*"race_boost_effect_{0}"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)EventRaceBoostEffect_TypeInfo->static_fields, StringLiteral_22598/*"race_boost_effect_{0}"*/, v2, v3);
-  v6 = StringLiteral_6168/*"EventRaceBoostEffect_{0}"*/;
+  EventRaceBoostEffect_TypeInfo->static_fields->SP_NAME = (struct System_String_o *)StringLiteral_22944/*"race_boost_effect_{0}"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)EventRaceBoostEffect_TypeInfo->static_fields, StringLiteral_22944/*"race_boost_effect_{0}"*/, v2, v3);
+  v6 = StringLiteral_6247/*"EventRaceBoostEffect_{0}"*/;
   static_fields = EventRaceBoostEffect_TypeInfo->static_fields;
-  static_fields->ANIM_NAME = (struct System_String_o *)StringLiteral_6168/*"EventRaceBoostEffect_{0}"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)&static_fields->ANIM_NAME, v6, v8, v9);
+  static_fields->ANIM_NAME = (struct System_String_o *)StringLiteral_6247/*"EventRaceBoostEffect_{0}"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->ANIM_NAME, v6, v8, v9);
 }
 
 
@@ -44,12 +44,13 @@ int32_t __fastcall EventRaceBoostEffect__GetSvtId(
         System_String_o *voiceStr,
         const MethodInfo *method)
 {
+  __int64 v3; // x2
   int32_t result; // [xsp+Ch] [xbp-4h] BYREF
 
   if ( !voiceStr || (this = (EventRaceBoostEffect_o *)System_String__Split(voiceStr, 0x5Fu, 0, 0LL), result = 0, !this) )
-    sub_1B86614(this, voiceStr);
+    sub_1BDBAD4(this, voiceStr);
   if ( !LODWORD(this->fields.m_CancellationTokenSource) )
-    sub_1B8661C(this, voiceStr);
+    sub_1BDBADC(this, voiceStr, v3);
   if ( System_Int32__TryParse((System_String_o *)this->fields.effectSp, &result, 0LL) )
     return result;
   else
@@ -62,23 +63,24 @@ System_String_o *__fastcall EventRaceBoostEffect__GetVoiceId(
         System_String_o *voiceStr,
         const MethodInfo *method)
 {
+  __int64 v4; // x2
   int m_CancellationTokenSource; // w8
 
-  if ( (byte_4A4AFC2 & 1) == 0 )
+  if ( (byte_4B41570 & 1) == 0 )
   {
-    this = (EventRaceBoostEffect_o *)sub_1B863B8(&StringLiteral_15886/*"_"*/, voiceStr);
-    byte_4A4AFC2 = 1;
+    this = (EventRaceBoostEffect_o *)sub_1BDB878(&StringLiteral_16088/*"_"*/, voiceStr);
+    byte_4B41570 = 1;
   }
   if ( !voiceStr || (this = (EventRaceBoostEffect_o *)System_String__Split(voiceStr, 0x5Fu, 0, 0LL)) == 0LL )
-    sub_1B86614(this, voiceStr);
+    sub_1BDBAD4(this, voiceStr);
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
   if ( m_CancellationTokenSource < 2 )
     return 0LL;
   if ( m_CancellationTokenSource == 2 )
-    sub_1B8661C(this, voiceStr);
-  return System_String__Concat_61683424(
+    sub_1BDBADC(this, voiceStr, v4);
+  return System_String__Concat_62610508(
            (System_String_o *)this->fields.boostItemSp,
-           (System_String_o *)StringLiteral_15886/*"_"*/,
+           (System_String_o *)StringLiteral_16088/*"_"*/,
            (System_String_o *)this->fields.boostCntLb,
            0LL);
 }
@@ -90,14 +92,14 @@ void __fastcall EventRaceBoostEffect__OnDestroy(EventRaceBoostEffect_o *this, co
   Il2CppObject *Instance; // x0
   int32_t randvoiceSvt; // w8
   SoundManager_o *v6; // x19
-  System_String_o *VoiceAssetName_40875676; // x0
+  System_String_o *VoiceAssetName_41738660; // x0
   __int64 v8; // x1
 
-  if ( (byte_4A4AFC3 & 1) == 0 )
+  if ( (byte_4B41571 & 1) == 0 )
   {
-    sub_1B863B8(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, method);
-    sub_1B863B8(&SoundManager_TypeInfo, v3);
-    byte_4A4AFC3 = 1;
+    sub_1BDB878(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, method);
+    sub_1BDB878(&SoundManager_TypeInfo, v3);
+    byte_4B41571 = 1;
   }
   this->fields.destroyedBeforeVoiceStop = 1;
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
@@ -105,13 +107,13 @@ void __fastcall EventRaceBoostEffect__OnDestroy(EventRaceBoostEffect_o *this, co
   SoundManager__stopVoiceAll(0.0, 0LL);
   if ( this->fields.randvoiceSvt >= 1 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
     randvoiceSvt = this->fields.randvoiceSvt;
     v6 = (SoundManager_o *)Instance;
-    VoiceAssetName_40875676 = ServantVoiceEntity__getVoiceAssetName_40875676(randvoiceSvt, 0LL);
+    VoiceAssetName_41738660 = ServantVoiceEntity__getVoiceAssetName_41738660(randvoiceSvt, 0LL);
     if ( !v6 )
-      sub_1B86614(VoiceAssetName_40875676, v8);
-    SoundManager__ReleaseAudioAssetStorage(v6, VoiceAssetName_40875676, 0LL);
+      sub_1BDBAD4(VoiceAssetName_41738660, v8);
+    SoundManager__ReleaseAudioAssetStorage(v6, VoiceAssetName_41738660, 0LL);
   }
 }
 
@@ -152,38 +154,38 @@ void __fastcall EventRaceBoostEffect__SetUpAndPlay(
   Il2CppObject *Instance; // x0
   int32_t randvoiceSvt; // w8
   SoundManager_o *v40; // x19
-  System_String_o *VoiceAssetName_40875676; // x21
+  System_String_o *VoiceAssetName_41738660; // x21
   System_Action_o *v42; // x22
 
-  if ( (byte_4A4AFBE & 1) == 0 )
+  if ( (byte_4B4156C & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, boostEnt);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v15);
-    sub_1B863B8(&Method_EventRaceBoostEffect___c__DisplayClass13_0__SetUpAndPlay_b__0__, v16);
-    sub_1B863B8(&EventRaceBoostEffect___c__DisplayClass13_0_TypeInfo, v17);
-    byte_4A4AFBE = 1;
+    sub_1BDB878(&System_Action_TypeInfo, boostEnt);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v15);
+    sub_1BDB878(&Method_EventRaceBoostEffect___c__DisplayClass13_0__SetUpAndPlay_b__0__, v16);
+    sub_1BDB878(&EventRaceBoostEffect___c__DisplayClass13_0_TypeInfo, v17);
+    byte_4B4156C = 1;
   }
-  v18 = sub_1B86604(EventRaceBoostEffect___c__DisplayClass13_0_TypeInfo);
+  v18 = sub_1BDBAC4(EventRaceBoostEffect___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v18, 0LL);
   if ( !v18 )
     goto LABEL_12;
   *(_QWORD *)(v18 + 16) = this;
-  sub_1B8635C((CGThumbnailListItem_o *)(v18 + 16), (int32_t)this, v21, v22);
+  sub_1BDB81C((CGThumbnailListItem_o *)(v18 + 16), (int32_t)this, v21, v22);
   *(_QWORD *)(v18 + 24) = boostEnt;
   v23 = (QuestRacePointEntity_o **)(v18 + 24);
-  sub_1B8635C((CGThumbnailListItem_o *)(v18 + 24), (int32_t)boostEnt, v24, v25);
+  sub_1BDB81C((CGThumbnailListItem_o *)(v18 + 24), (int32_t)boostEnt, v24, v25);
   *(_QWORD *)(v18 + 48) = callback;
   *(_DWORD *)(v18 + 32) = boostGrade;
   *(_DWORD *)(v18 + 36) = boostPoint;
   *(_DWORD *)(v18 + 40) = itemImgId;
-  sub_1B8635C((CGThumbnailListItem_o *)(v18 + 48), (int32_t)callback, v26, v27);
+  sub_1BDB81C((CGThumbnailListItem_o *)(v18 + 48), (int32_t)callback, v26, v27);
   if ( !playVoice )
   {
 LABEL_9:
     this->fields.destroyedBeforeVoiceStop = 0;
     this->fields.randvoiceSvt = 0;
     this->fields.randvoiceId = 0LL;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.randvoiceId, 0, (int32_t)v28, v29);
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.randvoiceId, 0, (int32_t)v28, v29);
     EventRaceBoostEffect__setupLocal(
       this,
       *(QuestRacePointEntity_o **)(v18 + 24),
@@ -208,14 +210,14 @@ LABEL_9:
   this->fields.randvoiceSvt = (int)SvtId;
   VoiceId = EventRaceBoostEffect__GetVoiceId(SvtId, RandVoice, v33);
   this->fields.randvoiceId = VoiceId;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.randvoiceId, (int32_t)VoiceId, v35, v36);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.randvoiceId, (int32_t)VoiceId, v35, v36);
   if ( this->fields.randvoiceSvt < 1 || System_String__IsNullOrEmpty(this->fields.randvoiceId, 0LL) )
     goto LABEL_9;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   randvoiceSvt = this->fields.randvoiceSvt;
   v40 = (SoundManager_o *)Instance;
-  VoiceAssetName_40875676 = ServantVoiceEntity__getVoiceAssetName_40875676(randvoiceSvt, 0LL);
-  v42 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  VoiceAssetName_41738660 = ServantVoiceEntity__getVoiceAssetName_41738660(randvoiceSvt, 0LL);
+  v42 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
   System_Action___ctor(
     v42,
     (Il2CppObject *)v18,
@@ -223,8 +225,8 @@ LABEL_9:
     0LL);
   if ( !v40 )
 LABEL_12:
-    sub_1B86614(v19, v20);
-  SoundManager__LoadAudioAssetStorage(v40, VoiceAssetName_40875676, v42, 1, 0LL);
+    sub_1BDBAD4(v19, v20);
+  SoundManager__LoadAudioAssetStorage(v40, VoiceAssetName_41738660, v42, 1, 0LL);
 }
 
 
@@ -243,14 +245,14 @@ void __fastcall EventRaceBoostEffect__afterSE(EventRaceBoostEffect_o *this, cons
   float DEFAULT_VOLUME; // s8
   System_Action_o *v14; // x22
 
-  if ( (byte_4A4AFC0 & 1) == 0 )
+  if ( (byte_4B4156E & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&Method_EventRaceBoostEffect_afterVoice__, v3);
-    sub_1B863B8(&SeManager_TypeInfo, v4);
-    sub_1B863B8(&SoundManager_TypeInfo, v5);
-    sub_1B863B8(&StringLiteral_4409/*"ChrVoice_"*/, v6);
-    byte_4A4AFC0 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&Method_EventRaceBoostEffect_afterVoice__, v3);
+    sub_1BDB878(&SeManager_TypeInfo, v4);
+    sub_1BDB878(&SoundManager_TypeInfo, v5);
+    sub_1BDB878(&StringLiteral_4463/*"ChrVoice_"*/, v6);
+    byte_4B4156E = 1;
   }
   if ( !this->fields.destroyedBeforeVoiceStop )
   {
@@ -263,7 +265,7 @@ void __fastcall EventRaceBoostEffect__afterSE(EventRaceBoostEffect_o *this, cons
     else
     {
       v8 = System_Int32__ToString((int)this + 68, 0LL);
-      v9 = System_String__Concat_61645176((System_String_o *)StringLiteral_4409/*"ChrVoice_"*/, v8, 0LL);
+      v9 = System_String__Concat_62572260((System_String_o *)StringLiteral_4463/*"ChrVoice_"*/, v8, 0LL);
       randvoiceId = this->fields.randvoiceId;
       v11 = v9;
       v12 = SeManager_TypeInfo;
@@ -273,11 +275,11 @@ void __fastcall EventRaceBoostEffect__afterSE(EventRaceBoostEffect_o *this, cons
         v12 = SeManager_TypeInfo;
       }
       DEFAULT_VOLUME = v12->static_fields->DEFAULT_VOLUME;
-      v14 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+      v14 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
       System_Action___ctor(v14, (Il2CppObject *)this, Method_EventRaceBoostEffect_afterVoice__, 0LL);
       if ( !SoundManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-      SoundManager__playVoice_39673076(v11, randvoiceId, DEFAULT_VOLUME, v14, 0, 0LL);
+      SoundManager__playVoice_40520012(v11, randvoiceId, DEFAULT_VOLUME, v14, 0, 0LL);
     }
   }
 }
@@ -287,17 +289,17 @@ void __fastcall EventRaceBoostEffect__afterVoice(EventRaceBoostEffect_o *this, c
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4A4AFC1 & 1) == 0 )
+  if ( (byte_4B4156F & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
-    byte_4A4AFC1 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    byte_4B4156F = 1;
   }
   if ( !this->fields.destroyedBeforeVoiceStop )
   {
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_69356292(gameObject, 0LL);
+    UnityEngine_Object__Destroy_70284200(gameObject, 0LL);
   }
 }
 
@@ -345,72 +347,73 @@ void __fastcall EventRaceBoostEffect__setupLocal(
   __int64 v33; // x4
   Il2CppObject *v34; // x0
   System_String_o *v35; // x24
+  __int64 v36; // x2
   struct UISprite_array *effectSp; // x8
-  UIAtlas_o *v37; // x25
-  __int64 v38; // x28
+  UIAtlas_o *v38; // x25
+  __int64 v39; // x28
   int max_length; // w9
-  il2cpp_array_size_t v40; // w22
-  struct UISprite_array *v41; // x8
+  il2cpp_array_size_t v41; // w22
+  struct UISprite_array *v42; // x8
   UnityEngine_Object_o *boostItemSp; // x24
-  UISprite_o *v43; // x24
-  bool v44; // w23
+  UISprite_o *v44; // x24
+  bool v45; // w23
   UnityEngine_Object_o *boostCntLb; // x23
-  __int64 v46; // x2
-  __int64 v47; // x3
-  __int64 v48; // x4
-  UILabel_o *v49; // x23
-  System_String_o *v50; // x24
-  __int64 v51; // x2
-  __int64 v52; // x3
-  __int64 v53; // x4
-  Il2CppObject *v54; // x0
-  EventRaceBoostEffect_c *v55; // x0
+  __int64 v47; // x2
+  __int64 v48; // x3
+  __int64 v49; // x4
+  UILabel_o *v50; // x23
+  System_String_o *v51; // x24
+  __int64 v52; // x2
+  __int64 v53; // x3
+  __int64 v54; // x4
+  Il2CppObject *v55; // x0
+  EventRaceBoostEffect_c *v56; // x0
   System_String_o *ANIM_NAME; // x22
-  Il2CppObject *v57; // x0
-  System_String_o *v58; // x21
-  Il2CppObject *ComponentInChildren_object__49695012; // x23
-  Il2CppObject *v60; // x22
-  UISprite_c *v61; // x8
-  UIAtlas_o *v62; // x21
-  __int64 v63; // x9
+  Il2CppObject *v58; // x0
+  System_String_o *v59; // x21
+  Il2CppObject *ComponentInChildren_object__50504592; // x23
+  Il2CppObject *v61; // x22
+  UISprite_c *v62; // x8
+  UIAtlas_o *v63; // x21
+  __int64 v64; // x9
   SimpleAnimation_State_c **p_offset; // x10
-  __int64 v65; // x0
+  __int64 v66; // x0
   float length; // s0
   System_String_o *Se; // x20
-  const MethodInfo *v68; // x1
-  _QWORD *v69; // x0
-  System_Reflection_MethodBase_o *v70; // x21
-  System_Action_o *v71; // x22
-  int32_t v72; // [xsp+4h] [xbp-6Ch] BYREF
-  int32_t v73; // [xsp+8h] [xbp-68h] BYREF
+  const MethodInfo *v69; // x1
+  _QWORD *v70; // x0
+  System_Reflection_MethodBase_o *v71; // x21
+  System_Action_o *v72; // x22
+  int32_t v73; // [xsp+4h] [xbp-6Ch] BYREF
+  int32_t v74; // [xsp+8h] [xbp-68h] BYREF
   int32_t BoostTypeColor; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4A4AFBF & 1) == 0 )
+  if ( (byte_4B4156D & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, boostEnt);
-    sub_1B863B8(&AtlasManager_TypeInfo, v13);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, v14);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, v15);
-    sub_1B863B8(&Method_EventRaceBoostEffect__setupLocal_b__14_0__, v16);
-    sub_1B863B8(&Method_EventRaceBoostEffect_setupLocal__, v17);
-    sub_1B863B8(&EventRaceBoostEffect_TypeInfo, v18);
-    sub_1B863B8(&int_TypeInfo, v19);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v20);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v21);
-    sub_1B863B8(&SimpleAnimation_State_TypeInfo, v22);
-    sub_1B863B8(&TerminalSceneComponent_TypeInfo, v23);
-    sub_1B863B8(&StringLiteral_5612/*"EVENT_RACE_BOOST_COUNT"*/, v24);
-    sub_1B863B8(&StringLiteral_22088/*"onEndAnim"*/, v25);
-    byte_4A4AFBF = 1;
+    sub_1BDB878(&System_Action_TypeInfo, boostEnt);
+    sub_1BDB878(&AtlasManager_TypeInfo, v13);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, v14);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, v15);
+    sub_1BDB878(&Method_EventRaceBoostEffect__setupLocal_b__14_0__, v16);
+    sub_1BDB878(&Method_EventRaceBoostEffect_setupLocal__, v17);
+    sub_1BDB878(&EventRaceBoostEffect_TypeInfo, v18);
+    sub_1BDB878(&int_TypeInfo, v19);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v20);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v21);
+    sub_1BDB878(&SimpleAnimation_State_TypeInfo, v22);
+    sub_1BDB878(&TerminalSceneComponent_TypeInfo, v23);
+    sub_1BDB878(&StringLiteral_5689/*"EVENT_RACE_BOOST_COUNT"*/, v24);
+    sub_1BDB878(&StringLiteral_22428/*"onEndAnim"*/, v25);
+    byte_4B4156D = 1;
   }
   if ( this->fields.effectSp )
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4A48DB8 )
+    if ( !byte_4B3EEEF )
     {
-      sub_1B863B8(&TerminalSceneComponent_TypeInfo, boostEnt);
-      byte_4A48DB8 = 1;
+      sub_1BDB878(&TerminalSceneComponent_TypeInfo, boostEnt);
+      byte_4B3EEEF = 1;
     }
     UIAtlasBySpriteName = (UIAtlas_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -426,7 +429,7 @@ void __fastcall EventRaceBoostEffect__setupLocal(
       {
         v29 = *(System_Collections_Generic_List_UIAtlas__o **)(v28 + 304);
         this->fields.callBack = callback;
-        sub_1B8635C(
+        sub_1BDB81C(
           (CGThumbnailListItem_o *)&this->fields.callBack,
           (int32_t)callback,
           boostGrade,
@@ -444,32 +447,32 @@ void __fastcall EventRaceBoostEffect__setupLocal(
           effectSp = this->fields.effectSp;
           if ( effectSp )
           {
-            v37 = UIAtlasBySpriteName;
-            v38 = 4LL;
+            v38 = UIAtlasBySpriteName;
+            v39 = 4LL;
             while ( 1 )
             {
               max_length = effectSp->max_length;
-              v40 = v38 - 4;
-              if ( (int)v38 - 4 >= max_length )
+              v41 = v39 - 4;
+              if ( (int)v39 - 4 >= max_length )
                 break;
-              if ( v40 >= max_length )
+              if ( v41 >= max_length )
                 goto LABEL_73;
-              UIAtlasBySpriteName = (UIAtlas_o *)*((_QWORD *)&effectSp->obj.klass + v38);
+              UIAtlasBySpriteName = (UIAtlas_o *)*((_QWORD *)&effectSp->obj.klass + v39);
               if ( UIAtlasBySpriteName )
               {
-                UISprite__set_atlas((UISprite_o *)UIAtlasBySpriteName, v37, 0LL);
-                v41 = this->fields.effectSp;
-                if ( v41 )
+                UISprite__set_atlas((UISprite_o *)UIAtlasBySpriteName, v38, 0LL);
+                v42 = this->fields.effectSp;
+                if ( v42 )
                 {
-                  if ( v40 >= v41->max_length )
+                  if ( v41 >= v42->max_length )
 LABEL_73:
-                    sub_1B8661C(UIAtlasBySpriteName, boostEnt);
-                  UIAtlasBySpriteName = (UIAtlas_o *)*((_QWORD *)&v41->obj.klass + v38);
+                    sub_1BDBADC(UIAtlasBySpriteName, boostEnt, v36);
+                  UIAtlasBySpriteName = (UIAtlas_o *)*((_QWORD *)&v42->obj.klass + v39);
                   if ( UIAtlasBySpriteName )
                   {
                     UISprite__set_spriteName((UISprite_o *)UIAtlasBySpriteName, v35, 0LL);
                     effectSp = this->fields.effectSp;
-                    ++v38;
+                    ++v39;
                     if ( effectSp )
                       continue;
                   }
@@ -484,14 +487,14 @@ LABEL_73:
             {
               if ( itemImgId < 1 )
               {
-                v44 = 0;
+                v45 = 0;
               }
               else
               {
-                v43 = this->fields.boostItemSp;
+                v44 = this->fields.boostItemSp;
                 if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                v44 = AtlasManager__SetItem(v43, itemImgId, 0LL);
+                v45 = AtlasManager__SetItem(v44, itemImgId, 0LL);
               }
               UIAtlasBySpriteName = (UIAtlas_o *)this->fields.boostItemSp;
               if ( !UIAtlasBySpriteName )
@@ -501,88 +504,88 @@ LABEL_73:
                                                    0LL);
               if ( !UIAtlasBySpriteName )
                 goto LABEL_72;
-              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)UIAtlasBySpriteName, v44, 0LL);
+              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)UIAtlasBySpriteName, v45, 0LL);
             }
             boostCntLb = (UnityEngine_Object_o *)this->fields.boostCntLb;
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             if ( UnityEngine_Object__op_Inequality(boostCntLb, 0LL, 0LL) )
             {
-              v49 = this->fields.boostCntLb;
+              v50 = this->fields.boostCntLb;
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              v50 = LocalizationManager__Get((System_String_o *)StringLiteral_5612/*"EVENT_RACE_BOOST_COUNT"*/, 0LL);
-              v73 = boostPoint;
-              v54 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v73, v51, v52, v53);
-              UIAtlasBySpriteName = (UIAtlas_o *)System_String__Format(v50, v54, 0LL);
-              if ( !v49 )
+              v51 = LocalizationManager__Get((System_String_o *)StringLiteral_5689/*"EVENT_RACE_BOOST_COUNT"*/, 0LL);
+              v74 = boostPoint;
+              v55 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v74, v52, v53, v54);
+              UIAtlasBySpriteName = (UIAtlas_o *)System_String__Format(v51, v55, 0LL);
+              if ( !v50 )
                 goto LABEL_72;
-              UILabel__set_text(v49, (System_String_o *)UIAtlasBySpriteName, 0LL);
+              UILabel__set_text(v50, (System_String_o *)UIAtlasBySpriteName, 0LL);
             }
-            v55 = EventRaceBoostEffect_TypeInfo;
+            v56 = EventRaceBoostEffect_TypeInfo;
             if ( !EventRaceBoostEffect_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(EventRaceBoostEffect_TypeInfo);
-              v55 = EventRaceBoostEffect_TypeInfo;
+              v56 = EventRaceBoostEffect_TypeInfo;
             }
-            ANIM_NAME = v55->static_fields->ANIM_NAME;
-            v72 = boostGrade;
-            v57 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v72, v46, v47, v48);
-            v58 = System_String__Format(ANIM_NAME, v57, 0LL);
+            ANIM_NAME = v56->static_fields->ANIM_NAME;
+            v73 = boostGrade;
+            v58 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v73, v47, v48, v49);
+            v59 = System_String__Format(ANIM_NAME, v58, 0LL);
             UIAtlasBySpriteName = (UIAtlas_o *)UnityEngine_Component__get_transform(
                                                  (UnityEngine_Component_o *)this,
                                                  0LL);
             if ( UIAtlasBySpriteName )
             {
-              ComponentInChildren_object__49695012 = UnityEngine_Component__GetComponentInChildren_object__49695012(
+              ComponentInChildren_object__50504592 = UnityEngine_Component__GetComponentInChildren_object__50504592(
                                                        (UnityEngine_Component_o *)UIAtlasBySpriteName,
-                                                       (const MethodInfo_2F64924 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+                                                       (const MethodInfo_302A390 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
               UIAtlasBySpriteName = (UIAtlas_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)this,
                                                    0LL);
               if ( UIAtlasBySpriteName )
               {
-                v60 = UnityEngine_Component__GetComponentInChildren_object__49695012(
+                v61 = UnityEngine_Component__GetComponentInChildren_object__50504592(
                         (UnityEngine_Component_o *)UIAtlasBySpriteName,
-                        (const MethodInfo_2F64924 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+                        (const MethodInfo_302A390 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
                 if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                 UIAtlasBySpriteName = (UIAtlas_o *)UnityEngine_Object__op_Inequality(
-                                                     (UnityEngine_Object_o *)ComponentInChildren_object__49695012,
+                                                     (UnityEngine_Object_o *)ComponentInChildren_object__50504592,
                                                      0LL,
                                                      0LL);
                 if ( ((unsigned __int8)UIAtlasBySpriteName & 1) != 0 )
                 {
-                  if ( ComponentInChildren_object__49695012 )
+                  if ( ComponentInChildren_object__50504592 )
                   {
-                    SimpleAnimation__Play_64595412((SimpleAnimation_o *)ComponentInChildren_object__49695012, v58, 0LL);
+                    SimpleAnimation__Play_65523240((SimpleAnimation_o *)ComponentInChildren_object__50504592, v59, 0LL);
                     UIAtlasBySpriteName = (UIAtlas_o *)SimpleAnimation__get_Item(
-                                                         (SimpleAnimation_o *)ComponentInChildren_object__49695012,
-                                                         v58,
+                                                         (SimpleAnimation_o *)ComponentInChildren_object__50504592,
+                                                         v59,
                                                          0LL);
                     if ( UIAtlasBySpriteName )
                     {
-                      v61 = (UISprite_c *)UIAtlasBySpriteName->klass;
-                      v62 = UIAtlasBySpriteName;
-                      v63 = *(unsigned __int16 *)(&UIAtlasBySpriteName->klass->_2.bitflags2 + 3);
+                      v62 = (UISprite_c *)UIAtlasBySpriteName->klass;
+                      v63 = UIAtlasBySpriteName;
+                      v64 = *(unsigned __int16 *)(&UIAtlasBySpriteName->klass->_2.bitflags2 + 3);
                       if ( *(_WORD *)(&UIAtlasBySpriteName->klass->_2.bitflags2 + 3) )
                       {
-                        p_offset = (SimpleAnimation_State_c **)&v61->_1.interfaceOffsets->offset;
+                        p_offset = (SimpleAnimation_State_c **)&v62->_1.interfaceOffsets->offset;
                         while ( *(p_offset - 1) != SimpleAnimation_State_TypeInfo )
                         {
-                          --v63;
+                          --v64;
                           p_offset += 2;
-                          if ( !v63 )
+                          if ( !v64 )
                             goto LABEL_56;
                         }
-                        v65 = (__int64)(&v61->vtable._13_GetSides.method + 2 * *(_DWORD *)p_offset);
+                        v66 = (__int64)(&v62->vtable._13_GetSides.method + 2 * *(_DWORD *)p_offset);
                       }
                       else
                       {
 LABEL_56:
-                        v65 = sub_1BD6B4C(UIAtlasBySpriteName, SimpleAnimation_State_TypeInfo, 13LL);
+                        v66 = sub_1C2C00C(UIAtlasBySpriteName, SimpleAnimation_State_TypeInfo, 13LL);
                       }
-                      length = (*(float (__fastcall **)(UIAtlas_o *, _QWORD))v65)(v62, *(_QWORD *)(v65 + 8));
+                      length = (*(float (__fastcall **)(UIAtlas_o *, _QWORD))v66)(v63, *(_QWORD *)(v66 + 8));
                       goto LABEL_65;
                     }
                   }
@@ -592,17 +595,17 @@ LABEL_56:
                   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                   UIAtlasBySpriteName = (UIAtlas_o *)UnityEngine_Object__op_Inequality(
-                                                       (UnityEngine_Object_o *)v60,
+                                                       (UnityEngine_Object_o *)v61,
                                                        0LL,
                                                        0LL);
                   if ( ((unsigned __int8)UIAtlasBySpriteName & 1) == 0 )
                     goto LABEL_66;
-                  if ( v60 )
+                  if ( v61 )
                   {
-                    UnityEngine_Animation__Play_69099832((UnityEngine_Animation_o *)v60, v58, 0LL);
+                    UnityEngine_Animation__Play_70027660((UnityEngine_Animation_o *)v61, v59, 0LL);
                     UIAtlasBySpriteName = (UIAtlas_o *)UnityEngine_Animation__get_Item(
-                                                         (UnityEngine_Animation_o *)v60,
-                                                         v58,
+                                                         (UnityEngine_Animation_o *)v61,
+                                                         v59,
                                                          0LL);
                     if ( UIAtlasBySpriteName )
                     {
@@ -612,28 +615,28 @@ LABEL_56:
 LABEL_65:
                       UnityEngine_MonoBehaviour__Invoke(
                         (UnityEngine_MonoBehaviour_o *)this,
-                        (System_String_o *)StringLiteral_22088/*"onEndAnim"*/,
+                        (System_String_o *)StringLiteral_22428/*"onEndAnim"*/,
                         length,
                         0LL);
 LABEL_66:
                       Se = QuestRacePointEntity__GetSe(boostEnt, 0LL);
                       if ( System_String__IsNullOrEmpty(Se, 0LL) )
                       {
-                        EventRaceBoostEffect__afterSE(this, v68);
+                        EventRaceBoostEffect__afterSE(this, v69);
                       }
                       else
                       {
-                        v69 = Method_EventRaceBoostEffect_setupLocal__;
+                        v70 = Method_EventRaceBoostEffect_setupLocal__;
                         if ( (*((_BYTE *)Method_EventRaceBoostEffect_setupLocal__ + 83) & 2) != 0 )
-                          v69 = (_QWORD *)sub_1B863D0(Method_EventRaceBoostEffect_setupLocal__);
-                        v70 = (System_Reflection_MethodBase_o *)sub_1B8639C(v69, v69[4]);
-                        v71 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+                          v70 = (_QWORD *)sub_1BDB890(Method_EventRaceBoostEffect_setupLocal__);
+                        v71 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v70, v70[4]);
+                        v72 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
                         System_Action___ctor(
-                          v71,
+                          v72,
                           (Il2CppObject *)this,
                           Method_EventRaceBoostEffect__setupLocal_b__14_0__,
                           0LL);
-                        OverwriteAssetSoundName__PlaySe_39574900(v70, Se, 1.0, v71, 0, 0LL);
+                        OverwriteAssetSoundName__PlaySe_40422948(v71, Se, 1.0, v72, 0, 0LL);
                       }
                       return;
                     }
@@ -646,7 +649,7 @@ LABEL_66:
       }
     }
 LABEL_72:
-    sub_1B86614(UIAtlasBySpriteName, boostEnt);
+    sub_1BDBAD4(UIAtlasBySpriteName, boostEnt);
   }
 }
 
@@ -666,7 +669,7 @@ void __fastcall EventRaceBoostEffect___c__DisplayClass13_0___SetUpAndPlay_b__0(
   const MethodInfo *v2; // x6
 
   if ( !this->fields.__4__this )
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   EventRaceBoostEffect__setupLocal(
     this->fields.__4__this,
     this->fields.boostEnt,

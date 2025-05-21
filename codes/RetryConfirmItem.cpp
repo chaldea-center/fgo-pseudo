@@ -66,7 +66,7 @@ void __fastcall RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this,
         }
       }
 LABEL_15:
-      sub_1B86614(useAmount, method);
+      sub_1BDBAD4(useAmount, method);
     }
   }
 }
@@ -115,7 +115,7 @@ void __fastcall RetryConfirmItem__CenteringWholeLabelHorizontal(RetryConfirmItem
         (this = (RetryConfirmItem_o *)v4->fields.possessionAmount) == 0LL) )
   {
 LABEL_15:
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   }
   v12 = LocalPositionX;
   if ( useAmount + mWidth >= v9 + v8 )
@@ -142,17 +142,17 @@ System_Collections_IEnumerator_o *__fastcall RetryConfirmItem__SetCondensedScale
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4A51B0A & 1) == 0 )
+  if ( (byte_4B4817B & 1) == 0 )
   {
-    sub_1B863B8(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo, isDispUseItemUI);
-    byte_4A51B0A = 1;
+    sub_1BDB878(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo, isDispUseItemUI);
+    byte_4B4817B = 1;
   }
   v5 = isDispUseItemUI;
-  v6 = sub_1B86604(RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
+  v6 = sub_1BDBAC4(RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0LL);
   *(_DWORD *)(v6 + 16) = 0;
   *(_QWORD *)(v6 + 32) = this;
-  sub_1B8635C((CGThumbnailListItem_o *)(v6 + 32), (int32_t)this, v7, v8);
+  sub_1BDB81C((CGThumbnailListItem_o *)(v6 + 32), (int32_t)this, v7, v8);
   *(_BYTE *)(v6 + 40) = v5;
   return (System_Collections_IEnumerator_o *)v6;
 }
@@ -211,14 +211,14 @@ bool __fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__MoveNe
         UILabel__set_overflowMethod((UILabel_o *)this, 2, 0LL);
         v4->fields.__2__current = 0LL;
         p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1B8635C(p__2__current, 0, v6, v7);
+        sub_1BDB81C(p__2__current, 0, v6, v7);
         result = 1;
         LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
         return result;
       }
     }
 LABEL_14:
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   }
   return 0;
 }
@@ -240,11 +240,11 @@ void __fastcall __noreturn RetryConfirmItem__SetCondensedScalePossessionAmount_d
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1B863CC(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1B86604(v2);
+  v2 = sub_1BDB88C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BDBAC4(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1B863CC(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_System_Collections_IEnumerator_Reset__);
-  sub_1B864E0(v3, v4);
+  v4 = sub_1BDB88C(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_System_Collections_IEnumerator_Reset__);
+  sub_1BDB9A0(v3, v4);
 }
 
 

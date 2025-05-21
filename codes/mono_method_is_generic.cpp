@@ -1,5 +1,5 @@
 // attributes: thunk
 void mono_method_is_generic()
 {
-  JUMPOUT(0x1BA1B48LL);
+  JUMPOUT(0x1BF7008LL);
 }

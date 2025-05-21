@@ -1,13 +1,13 @@
 void __fastcall UserAccessaryEntity___ctor(UserAccessaryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4F151 & 1) == 0 )
+  if ( (byte_4B4574E & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A4F151 = 1;
+    sub_1BDB878(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B4574E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32DF9D0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall UserAccessaryEntity__CreatePK(
         int32_t accessaryId,
         const MethodInfo *method)
 {
-  if ( (byte_4A4F150 & 1) == 0 )
+  if ( (byte_4B4574D & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&accessaryId);
-    byte_4A4F150 = 1;
+    sub_1BDB878(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&accessaryId);
+    byte_4B4574D = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            accessaryId,
-           (const MethodInfo_2F6BF48 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3031BEC *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

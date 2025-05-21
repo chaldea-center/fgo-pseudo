@@ -13,22 +13,22 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice___cctor(c
   const MethodInfo *v11; // x3
   struct BattleCharaChangeConfirmListViewItemDrawTreasureDevice_StaticFields *v12; // x8
 
-  if ( (byte_4A4A163 & 1) == 0 )
+  if ( (byte_4B402C8 & 1) == 0 )
   {
-    sub_1B863B8(&BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo, v1);
-    sub_1B863B8(&StringLiteral_20416/*"img_windowbg_saintquartz_2"*/, v4);
-    sub_1B863B8(&StringLiteral_20034/*"img_arrow_change"*/, v5);
-    byte_4A4A163 = 1;
+    sub_1BDB878(&BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo, v1);
+    sub_1BDB878(&StringLiteral_20739/*"img_windowbg_saintquartz_2"*/, v4);
+    sub_1BDB878(&StringLiteral_20317/*"img_arrow_change"*/, v5);
+    byte_4B402C8 = 1;
   }
   static_fields = BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo->static_fields;
   static_fields->TitleCellHeight = 0;
-  v7 = StringLiteral_20034/*"img_arrow_change"*/;
-  static_fields->ArrowChangeSpriteName = (struct System_String_o *)StringLiteral_20034/*"img_arrow_change"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)&static_fields->ArrowChangeSpriteName, v7, v2, v3);
-  v8 = StringLiteral_20416/*"img_windowbg_saintquartz_2"*/;
+  v7 = StringLiteral_20317/*"img_arrow_change"*/;
+  static_fields->ArrowChangeSpriteName = (struct System_String_o *)StringLiteral_20317/*"img_arrow_change"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->ArrowChangeSpriteName, v7, v2, v3);
+  v8 = StringLiteral_20739/*"img_windowbg_saintquartz_2"*/;
   v9 = BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo->static_fields;
-  v9->BgChangeSpriteName = (struct System_String_o *)StringLiteral_20416/*"img_windowbg_saintquartz_2"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)&v9->BgChangeSpriteName, v8, v10, v11);
+  v9->BgChangeSpriteName = (struct System_String_o *)StringLiteral_20739/*"img_windowbg_saintquartz_2"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)&v9->BgChangeSpriteName, v8, v10, v11);
   v12 = BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo->static_fields;
   *(_QWORD *)&v12->MultiGridPosOffsetX = 0xC0E0000041100000LL;
   v12->ArrowOffsetPosY = 1.0;
@@ -78,7 +78,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__Awake(
     || (nowTitleLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(nowTitleLabel, 0LL)) == 0LL )
   {
 LABEL_10:
-    sub_1B86614(nowTitleLabel, method);
+    sub_1BDBAD4(nowTitleLabel, method);
   }
   this->fields.cachedNextGridPos = UnityEngine_Transform__get_localPosition(
                                      (UnityEngine_Transform_o *)nowTitleLabel,
@@ -112,14 +112,14 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__Init(
   UISprite_o *nowChangeArrowSprite; // x20
   System_String_o *ArrowChangeSpriteName; // x21
 
-  if ( (byte_4A4A15E & 1) == 0 )
+  if ( (byte_4B402C3 & 1) == 0 )
   {
-    sub_1B863B8(&AtlasManager_TypeInfo, *(_QWORD *)&kind);
-    sub_1B863B8(&BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo, v5);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v6);
-    sub_1B863B8(&StringLiteral_11695/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, v7);
-    sub_1B863B8(&StringLiteral_1/*""*/, v8);
-    byte_4A4A15E = 1;
+    sub_1BDB878(&AtlasManager_TypeInfo, *(_QWORD *)&kind);
+    sub_1BDB878(&BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo, v5);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v6);
+    sub_1BDB878(&StringLiteral_11869/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, v7);
+    sub_1BDB878(&StringLiteral_1/*""*/, v8);
+    byte_4B402C3 = 1;
   }
   BattleCharaChangeConfirmListViewItemDraw__Init((BattleCharaChangeConfirmListViewItemDraw_o *)this, kind, method);
   nowGrid = (UnityEngine_Behaviour_o *)this->fields.nowGrid;
@@ -133,7 +133,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__Init(
   nowTitleLabel = this->fields.nowTitleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  nowGrid = (UnityEngine_Behaviour_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11695/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, 0LL);
+  nowGrid = (UnityEngine_Behaviour_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11869/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, 0LL);
   if ( !nowTitleLabel )
     goto LABEL_26;
   UILabel__set_text(nowTitleLabel, (System_String_o *)nowGrid, 0LL);
@@ -149,7 +149,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__Init(
     goto LABEL_26;
   UILabel__set_text((UILabel_o *)nowGrid, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   nextTitleLabel = this->fields.nextTitleLabel;
-  nowGrid = (UnityEngine_Behaviour_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11695/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, 0LL);
+  nowGrid = (UnityEngine_Behaviour_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11869/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE"*/, 0LL);
   if ( !nextTitleLabel )
     goto LABEL_26;
   UILabel__set_text(nextTitleLabel, (System_String_o *)nowGrid, 0LL);
@@ -199,7 +199,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__Init(
         (nowGrid = (UnityEngine_Behaviour_o *)this->fields.nextAddNameLabel) == 0LL) )
   {
 LABEL_26:
-    sub_1B86614(nowGrid, v9);
+    sub_1BDBAD4(nowGrid, v9);
   }
   UILabel__set_text((UILabel_o *)nowGrid, (System_String_o *)StringLiteral_1/*""*/, 0LL);
   AtlasManager__SetDownloadCommonSprite(
@@ -225,13 +225,13 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__ModifyCo
 
   nextNameLabel = this->fields.nextNameLabel;
   if ( !nextNameLabel
-    || (v6 = System_String__Concat_61645176(color, nextNameLabel->fields.mText, 0LL),
+    || (v6 = System_String__Concat_62572260(color, nextNameLabel->fields.mText, 0LL),
         UILabel__set_text(nextNameLabel, v6, 0LL),
         (nextAddNameLabel = this->fields.nextAddNameLabel) == 0LL) )
   {
-    sub_1B86614(this, color);
+    sub_1BDBAD4(this, color);
   }
-  v8 = System_String__Concat_61645176(color, nextAddNameLabel->fields.mText, 0LL);
+  v8 = System_String__Concat_62572260(color, nextAddNameLabel->fields.mText, 0LL);
   UILabel__set_text(nextAddNameLabel, v8, 0LL);
 }
 
@@ -256,10 +256,10 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__RePositi
   UnityEngine_Component_o *v16; // x0
   UnityEngine_Vector3_o cachedNowTitlePos; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A4A162 & 1) == 0 )
+  if ( (byte_4B402C7 & 1) == 0 )
   {
-    sub_1B863B8(&BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo, method);
-    byte_4A4A162 = 1;
+    sub_1BDB878(&BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo, method);
+    byte_4B402C7 = 1;
   }
   nowAddNameLabel = (UnityEngine_Component_o *)this->fields.nowAddNameLabel;
   if ( !nowAddNameLabel
@@ -273,7 +273,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__RePositi
                                                         (UnityEngine_Component_o *)this->fields.nextAddNameLabel,
                                                         0LL)) == 0LL) )
   {
-    sub_1B86614(nowAddNameLabel, method);
+    sub_1BDBAD4(nowAddNameLabel, method);
   }
   activeSelf = UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)nowAddNameLabel, 0LL);
   if ( ((v4 | activeSelf) & 1) != 0 )
@@ -370,10 +370,10 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__ReSize(
   int32_t mHeight; // w9
   int32_t v13; // w1
 
-  if ( (byte_4A4A161 & 1) == 0 )
+  if ( (byte_4B402C6 & 1) == 0 )
   {
-    sub_1B863B8(&BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo, method);
-    byte_4A4A161 = 1;
+    sub_1BDB878(&BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo, method);
+    byte_4B402C6 = 1;
   }
   nowFrameSprite = this->fields.nowFrameSprite;
   nowGrid = this->fields.nowGrid;
@@ -395,7 +395,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__ReSize(
     v8);
   v10 = (UIWidget_o *)this->fields.nowFrameSprite;
   if ( !v10 || (nextFrameSprite = this->fields.nextFrameSprite) == 0LL )
-    sub_1B86614(v10, v9);
+    sub_1BDBAD4(v10, v9);
   mHeight = v10->fields.mHeight;
   v13 = nextFrameSprite->fields.mHeight;
   if ( mHeight <= v13 )
@@ -436,10 +436,10 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__SetItem(
   const MethodInfo *v21; // x2
 
   v6 = this;
-  if ( (byte_4A4A15F & 1) == 0 )
+  if ( (byte_4B402C4 & 1) == 0 )
   {
-    this = (BattleCharaChangeConfirmListViewItemDrawTreasureDevice_o *)sub_1B863B8(&ImageLimitCount_TypeInfo, item);
-    byte_4A4A15F = 1;
+    this = (BattleCharaChangeConfirmListViewItemDrawTreasureDevice_o *)sub_1BDB878(&ImageLimitCount_TypeInfo, item);
+    byte_4B402C4 = 1;
   }
   v6->fields.dispMode = mode;
   if ( item && mode )
@@ -467,7 +467,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__SetItem(
       || (v15 = item->fields._NextData_k__BackingField) == 0LL )
     {
 LABEL_15:
-      sub_1B86614(this, item);
+      sub_1BDBAD4(this, item);
     }
     TreasureDeviceInfo_k__BackingField = v14->fields._TreasureDeviceInfo_k__BackingField;
     v17 = v15->fields._TreasureDeviceInfo_k__BackingField;
@@ -536,46 +536,47 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__SetUI(
   __int64 v32; // x21
   ServantLimitAddMaster_o *v33; // x28
   System_Collections_Generic_List_object__o *v34; // x26
-  unsigned __int64 v35; // x23
-  int32_t v36; // w19
-  TreasureDvcEntity_o *v37; // x0
-  TreasureDvcEntity_o *v38; // x29
-  System_String_o *v39; // x0
-  System_String_o *v40; // x3
-  int32_t v41; // w2
-  const MethodInfo *v42; // x3
+  __int64 v35; // x2
+  unsigned __int64 v36; // x23
+  int32_t v37; // w19
+  TreasureDvcEntity_o *v38; // x0
+  TreasureDvcEntity_o *v39; // x29
+  System_String_o *v40; // x0
+  System_String_o *v41; // x3
+  int32_t v42; // w2
+  const MethodInfo *v43; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v44; // x9
+  _QWORD *v45; // x9
   __int64 size; // x10
-  ServantLimitAddMaster_o *v46; // x1
-  Il2CppClass **v47; // x0
+  ServantLimitAddMaster_o *v47; // x1
+  Il2CppClass **v48; // x0
   System_String_o *OverwriteTDName; // x0
-  Il2CppObject *v49; // x1
-  UILabel_o *v50; // x0
+  Il2CppObject *v50; // x1
+  UILabel_o *v51; // x0
   Il2CppObject *Item; // x0
-  Il2CppObject *v52; // x0
   Il2CppObject *v53; // x0
+  Il2CppObject *v54; // x0
 
-  if ( (byte_4A4A160 & 1) == 0 )
+  if ( (byte_4B402C5 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMaster_ServantLimitAddMaster___, *(_QWORD *)&svtId);
-    sub_1B863B8(&Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___, v12);
-    sub_1B863B8(&Method_DataManager_GetMaster_TreasureDvcMaster___, v13);
-    sub_1B863B8(&DataManager_TypeInfo, v14);
-    sub_1B863B8(&Method_System_Collections_Generic_List_string__Add__, v15);
-    sub_1B863B8(&Method_System_Collections_Generic_List_string___ctor__, v16);
-    sub_1B863B8(&Method_System_Collections_Generic_List_string__get_Item__, v17);
-    sub_1B863B8(&System_Collections_Generic_List_string__TypeInfo, v18);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v19);
-    sub_1B863B8(&StringLiteral_9176/*"NO_ENTRY_NAME"*/, v20);
-    sub_1B863B8(&StringLiteral_9207/*"NP_NAME"*/, v21);
-    byte_4A4A160 = 1;
+    sub_1BDB878(&Method_DataManager_GetMaster_ServantLimitAddMaster___, *(_QWORD *)&svtId);
+    sub_1BDB878(&Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___, v12);
+    sub_1BDB878(&Method_DataManager_GetMaster_TreasureDvcMaster___, v13);
+    sub_1BDB878(&DataManager_TypeInfo, v14);
+    sub_1BDB878(&Method_System_Collections_Generic_List_string__Add__, v15);
+    sub_1BDB878(&Method_System_Collections_Generic_List_string___ctor__, v16);
+    sub_1BDB878(&Method_System_Collections_Generic_List_string__get_Item__, v17);
+    sub_1BDB878(&System_Collections_Generic_List_string__TypeInfo, v18);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v19);
+    sub_1BDB878(&StringLiteral_9321/*"NO_ENTRY_NAME"*/, v20);
+    sub_1BDB878(&StringLiteral_9354/*"NP_NAME"*/, v21);
+    byte_4B402C5 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_TreasureDvcMaster___);
-  v23 = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___);
-  gameObject = (ServantLimitAddMaster_o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_TreasureDvcMaster___);
+  v23 = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ServantTreasureDeviceAddMaster___);
+  gameObject = (ServantLimitAddMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
   v26 = nameLabel;
   if ( !nameLabel )
     goto LABEL_57;
@@ -604,12 +605,12 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice__SetUI(
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    OverwriteTDName = LocalizationManager__Get((System_String_o *)StringLiteral_9176/*"NO_ENTRY_NAME"*/, 0LL);
+    OverwriteTDName = LocalizationManager__Get((System_String_o *)StringLiteral_9321/*"NO_ENTRY_NAME"*/, 0LL);
 LABEL_48:
-    v49 = (Il2CppObject *)OverwriteTDName;
-    v50 = v26;
+    v50 = (Il2CppObject *)OverwriteTDName;
+    v51 = v26;
 LABEL_49:
-    UILabel__set_text(v50, (System_String_o *)v49, 0LL);
+    UILabel__set_text(v51, (System_String_o *)v50, 0LL);
     return;
   }
   if ( !v23 )
@@ -638,48 +639,48 @@ LABEL_49:
     goto LABEL_57;
   v32 = *(_QWORD *)&treasureDeviceIds->max_length;
   v33 = gameObject;
-  v34 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_string__TypeInfo);
+  v34 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v34,
-    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_string___ctor__);
   if ( (int)v32 >= 1 )
   {
     if ( v33 )
     {
-      v35 = 0LL;
+      v36 = 0LL;
       while ( 1 )
       {
-        if ( v35 >= LODWORD(v33->fields._MasterName_k__BackingField) )
+        if ( v36 >= LODWORD(v33->fields._MasterName_k__BackingField) )
 LABEL_58:
-          sub_1B8661C(gameObject, v25);
-        if ( !*(&v33->fields.revision + v35) )
+          sub_1BDBADC(gameObject, v25, v35);
+        if ( !*(&v33->fields.revision + v36) )
           goto LABEL_37;
-        if ( v35 >= treasureDeviceIds->max_length )
+        if ( v36 >= treasureDeviceIds->max_length )
           goto LABEL_58;
         if ( !Master_object )
           break;
-        v36 = dispLimitCount;
-        v37 = TreasureDvcMaster__GetEntityCheckServantOverwrite(
+        v37 = dispLimitCount;
+        v38 = TreasureDvcMaster__GetEntityCheckServantOverwrite(
                 (TreasureDvcMaster_o *)Master_object,
                 svtId,
-                treasureDeviceIds->m_Items[v35 + 1],
+                treasureDeviceIds->m_Items[v36 + 1],
                 0LL);
-        v38 = v37;
+        v39 = v38;
         if ( LocalizationManager_TypeInfo->_2.cctor_finished )
         {
-          if ( !v37 )
+          if ( !v38 )
             goto LABEL_26;
         }
         else
         {
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          if ( !v38 )
+          if ( !v39 )
           {
 LABEL_26:
-            if ( !byte_4A49A43 )
+            if ( !byte_4B3FEFD )
             {
-              sub_1B863B8(&LocalizationManager_TypeInfo, v25);
-              byte_4A49A43 = 1;
+              sub_1BDB878(&LocalizationManager_TypeInfo, v25);
+              byte_4B3FEFD = 1;
             }
             gameObject = (ServantLimitAddMaster_o *)LocalizationManager_TypeInfo;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -687,48 +688,48 @@ LABEL_26:
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               gameObject = (ServantLimitAddMaster_o *)LocalizationManager_TypeInfo;
             }
-            v40 = (System_String_o *)*((_QWORD *)gameObject[2].monitor + 4);
+            v41 = (System_String_o *)*((_QWORD *)gameObject[2].monitor + 4);
             goto LABEL_31;
           }
         }
-        v39 = LocalizationManager__Get((System_String_o *)StringLiteral_9207/*"NP_NAME"*/, 0LL);
-        gameObject = (ServantLimitAddMaster_o *)System_String__Format(v39, (Il2CppObject *)v38->fields.name, 0LL);
-        v40 = (System_String_o *)gameObject;
+        v40 = LocalizationManager__Get((System_String_o *)StringLiteral_9354/*"NP_NAME"*/, 0LL);
+        gameObject = (ServantLimitAddMaster_o *)System_String__Format(v40, (Il2CppObject *)v39->fields.name, 0LL);
+        v41 = (System_String_o *)gameObject;
 LABEL_31:
-        dispLimitCount = v36;
+        dispLimitCount = v37;
         if ( !v27 )
           break;
-        gameObject = (ServantLimitAddMaster_o *)ServantLimitAddMaster__GetOverwriteTDName(v27, svtId, v36, v40, 0, 0LL);
+        gameObject = (ServantLimitAddMaster_o *)ServantLimitAddMaster__GetOverwriteTDName(v27, svtId, v37, v41, 0, 0LL);
         if ( !v34 )
           break;
         items = v34->fields._items;
-        v44 = Method_System_Collections_Generic_List_string__Add__;
+        v45 = Method_System_Collections_Generic_List_string__Add__;
         ++v34->fields._version;
         if ( !items )
           break;
         size = v34->fields._size;
-        v46 = gameObject;
+        v47 = gameObject;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v34,
             (Il2CppObject *)gameObject,
-            *(const MethodInfo_35FC958 **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
+            *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
         }
         else
         {
-          v47 = &items->obj.klass + size;
+          v48 = &items->obj.klass + size;
           v34->fields._size = size + 1;
-          v47[4] = (Il2CppClass *)v46;
-          sub_1B8635C((CGThumbnailListItem_o *)(v47 + 4), (int32_t)v46, v41, v42);
+          v48[4] = (Il2CppClass *)v47;
+          sub_1BDB81C((CGThumbnailListItem_o *)(v48 + 4), (int32_t)v47, v42, v43);
         }
 LABEL_37:
-        if ( (unsigned int)v32 == ++v35 )
+        if ( (unsigned int)v32 == ++v36 )
           goto LABEL_38;
       }
     }
 LABEL_57:
-    sub_1B86614(gameObject, v25);
+    sub_1BDBAD4(gameObject, v25);
   }
 LABEL_38:
   gameObject = (ServantLimitAddMaster_o *)BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v34, 0LL);
@@ -759,7 +760,7 @@ LABEL_46:
   Item = System_Collections_Generic_List_object___get_Item(
            v34,
            0,
-           (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_string__get_Item__);
+           (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_string__get_Item__);
   if ( !System_String__IsNullOrEmpty((System_String_o *)Item, 0LL) )
   {
     gameObject = (ServantLimitAddMaster_o *)UnityEngine_Component__get_gameObject(
@@ -768,17 +769,17 @@ LABEL_46:
     if ( !gameObject )
       goto LABEL_57;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
-    v52 = System_Collections_Generic_List_object___get_Item(
+    v53 = System_Collections_Generic_List_object___get_Item(
             v34,
             0,
-            (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_string__get_Item__);
-    UILabel__set_text(nameLabel, (System_String_o *)v52, 0LL);
+            (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_string__get_Item__);
+    UILabel__set_text(nameLabel, (System_String_o *)v53, 0LL);
   }
-  v53 = System_Collections_Generic_List_object___get_Item(
+  v54 = System_Collections_Generic_List_object___get_Item(
           v34,
           1,
-          (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_string__get_Item__);
-  if ( !System_String__IsNullOrEmpty((System_String_o *)v53, 0LL) )
+          (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_string__get_Item__);
+  if ( !System_String__IsNullOrEmpty((System_String_o *)v54, 0LL) )
   {
     gameObject = (ServantLimitAddMaster_o *)UnityEngine_Component__get_gameObject(
                                               (UnityEngine_Component_o *)addNameLabel,
@@ -786,11 +787,11 @@ LABEL_46:
     if ( !gameObject )
       goto LABEL_57;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
-    v49 = System_Collections_Generic_List_object___get_Item(
+    v50 = System_Collections_Generic_List_object___get_Item(
             v34,
             1,
-            (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_string__get_Item__);
-    v50 = addNameLabel;
+            (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_string__get_Item__);
+    v51 = addNameLabel;
     goto LABEL_49;
   }
 }
@@ -813,11 +814,11 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice___ReSize_
   int v15; // w10
 
   v8 = (UIWidget_o *)frame;
-  if ( (byte_4A4A164 & 1) == 0 )
+  if ( (byte_4B402C9 & 1) == 0 )
   {
-    sub_1B863B8(&BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo, grid);
-    frame = (UISprite_o *)sub_1B863B8(&System_Convert_TypeInfo, v9);
-    byte_4A4A164 = 1;
+    sub_1BDB878(&BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo, grid);
+    frame = (UISprite_o *)sub_1BDB878(&System_Convert_TypeInfo, v9);
+    byte_4B402C9 = 1;
   }
   if ( !grid )
     goto LABEL_17;
@@ -830,7 +831,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice___ReSize_
   activeSelf = UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)frame, 0LL);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  frame = (UISprite_o *)System_Convert__ToInt32_62685532(activeSelf, 0LL);
+  frame = (UISprite_o *)System_Convert__ToInt32_63613360(activeSelf, 0LL);
   if ( !addNameLabel )
     goto LABEL_17;
   v12 = (int)frame;
@@ -838,13 +839,13 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawTreasureDevice___ReSize_
   if ( !frame )
     goto LABEL_17;
   v13 = UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)frame, 0LL);
-  frame = (UISprite_o *)System_Convert__ToInt32_62685532(v13, 0LL);
+  frame = (UISprite_o *)System_Convert__ToInt32_63613360(v13, 0LL);
   v14 = (int)frame;
   if ( !BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleCharaChangeConfirmListViewItemDrawTreasureDevice_TypeInfo);
   if ( !v8 )
 LABEL_17:
-    sub_1B86614(frame, grid);
+    sub_1BDBAD4(frame, grid);
   if ( cellHeight == INFINITY )
     v15 = 0x80000000;
   else

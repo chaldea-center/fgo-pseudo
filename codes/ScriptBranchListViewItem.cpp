@@ -26,21 +26,21 @@ void __fastcall ScriptBranchListViewItem___ctor(
   int32_t v29; // w0
 
   v20 = this;
-  ListViewItem___ctor_41775716((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42734232((ListViewItem_o *)this, index, 0LL);
   v20->fields.title = title;
-  sub_1B8635C((CGThumbnailListItem_o *)&v20->fields.title, (int32_t)title, v21, v22);
+  sub_1BDB81C((CGThumbnailListItem_o *)&v20->fields.title, (int32_t)title, v21, v22);
   v20->fields.tag = tag;
-  sub_1B8635C((CGThumbnailListItem_o *)&v20->fields.tag, (int32_t)tag, v23, v24);
+  sub_1BDB81C((CGThumbnailListItem_o *)&v20->fields.tag, (int32_t)tag, v23, v24);
   v20->fields.questId = questId;
   v20->fields.questPhase = questFlag;
   v20->fields.svtId = svtId;
   v20->fields.routeIds = routeId;
-  sub_1B8635C((CGThumbnailListItem_o *)&v20->fields.routeIds, (int32_t)routeId, v25, v26);
+  sub_1BDB81C((CGThumbnailListItem_o *)&v20->fields.routeIds, (int32_t)routeId, v25, v26);
   v20->fields.debugComment = debugComment;
   v20 = (ScriptBranchListViewItem_o *)((char *)v20 + 144);
   v20->fields.sortIndex = count;
   v20->fields.loopIndex = checkType;
-  sub_1B8635C((CGThumbnailListItem_o *)v20, (int32_t)debugComment, v27, v28);
+  sub_1BDB81C((CGThumbnailListItem_o *)v20, (int32_t)debugComment, v27, v28);
   v29 = System_Int32__Parse(strLine, 0LL);
   v20[-1].fields.branchType = 1;
   LODWORD(v20->monitor) = v29;
@@ -56,17 +56,17 @@ void __fastcall ScriptBranchListViewItem__AddLineStr(ScriptBranchListViewItem_o 
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4A4BAFD & 1) == 0 )
+  if ( (byte_4B420B2 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_152/*" - "*/, method);
-    byte_4A4BAFD = 1;
+    sub_1BDB878(&StringLiteral_152/*" - "*/, method);
+    byte_4B420B2 = 1;
   }
   ++this->fields.lineCount;
   tag = this->fields.tag;
   v4 = System_Int32__ToString((int)this + 136, 0LL);
-  v5 = System_String__Concat_61683424(tag, (System_String_o *)StringLiteral_152/*" - "*/, v4, 0LL);
+  v5 = System_String__Concat_62610508(tag, (System_String_o *)StringLiteral_152/*" - "*/, v4, 0LL);
   this->fields.title = v5;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.title, (int32_t)v5, v6, v7);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.title, (int32_t)v5, v6, v7);
 }
 
 
@@ -92,7 +92,7 @@ System_Collections_Generic_List_UserQuestRouteEntity__o *__fastcall ScriptBranch
   int32_t v20; // w2
   const MethodInfo *v21; // x3
   UserQuestRouteEntity_o *v22; // x25
-  int32_t v23; // w2
+  __int64 v23; // x2
   const MethodInfo *v24; // x3
   struct System_Int32_array *routeIds; // x8
   __int64 v26; // x9
@@ -102,24 +102,24 @@ System_Collections_Generic_List_UserQuestRouteEntity__o *__fastcall ScriptBranch
   Il2CppClass **v30; // x0
   int32_t v31; // w8
 
-  if ( (byte_4A4BAFA & 1) == 0 )
+  if ( (byte_4B420AF & 1) == 0 )
   {
-    sub_1B863B8(&Method_BasicHelper_Any_UserQuestRouteEntity___, list);
-    sub_1B863B8(&System_Func_UserQuestRouteEntity__bool__TypeInfo, v7);
-    sub_1B863B8(&Method_System_Collections_Generic_List_UserQuestRouteEntity__Add__, v8);
-    sub_1B863B8(&NetworkManager_TypeInfo, v9);
-    sub_1B863B8(&Method_ScriptBranchListViewItem___c__DisplayClass20_0__AddUserQuestRoute_b__0__, v10);
-    sub_1B863B8(&ScriptBranchListViewItem___c__DisplayClass20_0_TypeInfo, v11);
-    sub_1B863B8(&UserQuestRouteEntity_TypeInfo, v12);
-    byte_4A4BAFA = 1;
+    sub_1BDB878(&Method_BasicHelper_Any_UserQuestRouteEntity___, list);
+    sub_1BDB878(&System_Func_UserQuestRouteEntity__bool__TypeInfo, v7);
+    sub_1BDB878(&Method_System_Collections_Generic_List_UserQuestRouteEntity__Add__, v8);
+    sub_1BDB878(&NetworkManager_TypeInfo, v9);
+    sub_1BDB878(&Method_ScriptBranchListViewItem___c__DisplayClass20_0__AddUserQuestRoute_b__0__, v10);
+    sub_1BDB878(&ScriptBranchListViewItem___c__DisplayClass20_0_TypeInfo, v11);
+    sub_1BDB878(&UserQuestRouteEntity_TypeInfo, v12);
+    byte_4B420AF = 1;
   }
-  v13 = sub_1B86604(ScriptBranchListViewItem___c__DisplayClass20_0_TypeInfo);
+  v13 = sub_1BDBAC4(ScriptBranchListViewItem___c__DisplayClass20_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0LL);
   if ( !v13 )
 LABEL_25:
-    sub_1B86614(v14, v15);
+    sub_1BDBAD4(v14, v15);
   *(_QWORD *)(v13 + 16) = this;
-  sub_1B8635C((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v16, v17);
+  sub_1BDB81C((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v16, v17);
   *(_DWORD *)(v13 + 24) = 0;
   if ( cnt >= 1 )
   {
@@ -129,28 +129,28 @@ LABEL_25:
       v19 = *v18;
       if ( !*v18 )
       {
-        v19 = (System_Func_object__bool__o *)sub_1B86604(System_Func_UserQuestRouteEntity__bool__TypeInfo);
+        v19 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_UserQuestRouteEntity__bool__TypeInfo);
         System_Func_object__bool____ctor(
           v19,
           (Il2CppObject *)v13,
           Method_ScriptBranchListViewItem___c__DisplayClass20_0__AddUserQuestRoute_b__0__,
           0LL);
         *(_QWORD *)(v13 + 32) = v19;
-        sub_1B8635C((CGThumbnailListItem_o *)(v13 + 32), (int32_t)v19, v20, v21);
+        sub_1BDB81C((CGThumbnailListItem_o *)(v13 + 32), (int32_t)v19, v20, v21);
       }
       if ( !BasicHelper__Any_object_(
               (System_Collections_Generic_List_T__o *)list,
               (System_Func_T__bool__o *)v19,
-              (const MethodInfo_2F57CB4 *)Method_BasicHelper_Any_UserQuestRouteEntity___) )
+              (const MethodInfo_301CDFC *)Method_BasicHelper_Any_UserQuestRouteEntity___) )
       {
-        v22 = (UserQuestRouteEntity_o *)sub_1B86604(UserQuestRouteEntity_TypeInfo);
+        v22 = (UserQuestRouteEntity_o *)sub_1BDBAC4(UserQuestRouteEntity_TypeInfo);
         UserQuestRouteEntity___ctor(v22, 0LL);
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        if ( !byte_4A48C25 )
+        if ( !byte_4B3ED56 )
         {
-          sub_1B863B8(&NetworkManager_TypeInfo, v15);
-          byte_4A48C25 = 1;
+          sub_1BDB878(&NetworkManager_TypeInfo, v15);
+          byte_4B3ED56 = 1;
         }
         v14 = NetworkManager_TypeInfo;
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -167,7 +167,7 @@ LABEL_25:
           goto LABEL_25;
         v26 = *(int *)(v13 + 24);
         if ( (unsigned int)v26 >= routeIds->max_length )
-          sub_1B8661C(v14, v15);
+          sub_1BDBADC(v14, v15, v23);
         v22->fields.routeId = routeIds->m_Items[v26 + 1];
         if ( !list )
           goto LABEL_25;
@@ -182,14 +182,14 @@ LABEL_25:
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)list,
             (Il2CppObject *)v22,
-            *(const MethodInfo_35FC958 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+            *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
         }
         else
         {
           v30 = &items->obj.klass + size;
           list->fields._size = size + 1;
           v30[4] = (Il2CppClass *)v22;
-          sub_1B8635C((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v22, v23, v24);
+          sub_1BDB81C((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v22, v23, v24);
         }
       }
       v31 = *(_DWORD *)(v13 + 24) + 1;
@@ -231,7 +231,7 @@ void __fastcall ScriptBranchListViewItem__ChangeFlag(
   Il2CppObject *MasterData_object; // x21
   UserQuestEntity_o *v27; // x22
   __int64 v28; // x23
-  int32_t v29; // w2
+  __int64 v29; // x2
   const MethodInfo *v30; // x3
   System_String_o *v31; // x0
   __int64 v32; // x1
@@ -262,39 +262,38 @@ void __fastcall ScriptBranchListViewItem__ChangeFlag(
   UserServantCollectionEntity_o *v57; // x20
   int32_t svtId; // w19
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v59; // kr00_16
-  int32_t v60; // w2
-  const MethodInfo *v61; // x3
-  UserServantCollectionEntity_o *v62; // x20
-  System_Object_array *v63; // x19
-  JsonManager_c *v64; // x0
+  const MethodInfo *v60; // x3
+  UserServantCollectionEntity_o *v61; // x20
+  System_Object_array *v62; // x19
+  JsonManager_c *v63; // x0
   int32_t checkType; // w8
   int count; // w2
-  System_String_o *v67; // x0
-  __int64 v68; // x0
+  System_String_o *v66; // x0
+  __int64 v67; // x0
   UserServantCollectionEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4A4BAF8 & 1) == 0 )
+  if ( (byte_4B420AD & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_UserQuestMaster___, flag);
-    sub_1B863B8(&Method_DataManager_GetMasterData_UserQuestRouteMaster___, v5);
-    sub_1B863B8(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v6);
-    sub_1B863B8(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__getEntityList__, v7);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Select_UserQuestRouteEntity__UserQuestRouteEntity___, v8);
-    sub_1B863B8(&Method_System_Linq_Enumerable_ToList_UserQuestRouteEntity___, v9);
-    sub_1B863B8(&System_Func_UserQuestRouteEntity__UserQuestRouteEntity__TypeInfo, v10);
-    sub_1B863B8(&JsonManager_TypeInfo, v11);
-    sub_1B863B8(&Method_System_Collections_Generic_List_UserQuestRouteEntity__ToArray__, v12);
-    sub_1B863B8(&NetworkManager_TypeInfo, v13);
-    sub_1B863B8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
-    sub_1B863B8(&ScriptManager_TypeInfo, v15);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    sub_1B863B8(&Method_ScriptBranchListViewItem___c__ChangeFlag_b__18_0__, v17);
-    sub_1B863B8(&ScriptBranchListViewItem___c_TypeInfo, v18);
-    sub_1B863B8(&UserQuestEntity___TypeInfo, v19);
-    sub_1B863B8(&UserQuestEntity_TypeInfo, v20);
-    sub_1B863B8(&UserServantCollectionEntity___TypeInfo, v21);
-    sub_1B863B8(&UserServantCollectionEntity_TypeInfo, v22);
-    byte_4A4BAF8 = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_UserQuestMaster___, flag);
+    sub_1BDB878(&Method_DataManager_GetMasterData_UserQuestRouteMaster___, v5);
+    sub_1BDB878(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v6);
+    sub_1BDB878(&Method_DataMasterBase_UserQuestRouteMaster__UserQuestRouteEntity__string__getEntityList__, v7);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Select_UserQuestRouteEntity__UserQuestRouteEntity___, v8);
+    sub_1BDB878(&Method_System_Linq_Enumerable_ToList_UserQuestRouteEntity___, v9);
+    sub_1BDB878(&System_Func_UserQuestRouteEntity__UserQuestRouteEntity__TypeInfo, v10);
+    sub_1BDB878(&JsonManager_TypeInfo, v11);
+    sub_1BDB878(&Method_System_Collections_Generic_List_UserQuestRouteEntity__ToArray__, v12);
+    sub_1BDB878(&NetworkManager_TypeInfo, v13);
+    sub_1BDB878(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v14);
+    sub_1BDB878(&ScriptManager_TypeInfo, v15);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    sub_1BDB878(&Method_ScriptBranchListViewItem___c__ChangeFlag_b__18_0__, v17);
+    sub_1BDB878(&ScriptBranchListViewItem___c_TypeInfo, v18);
+    sub_1BDB878(&UserQuestEntity___TypeInfo, v19);
+    sub_1BDB878(&UserQuestEntity_TypeInfo, v20);
+    sub_1BDB878(&UserServantCollectionEntity___TypeInfo, v21);
+    sub_1BDB878(&UserServantCollectionEntity_TypeInfo, v22);
+    byte_4B420AD = 1;
   }
   entity = 0LL;
   branchType = this->fields.branchType;
@@ -307,10 +306,10 @@ void __fastcall ScriptBranchListViewItem__ChangeFlag(
         v51 = 2;
       if ( !ScriptManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-      if ( !byte_4A4BADD )
+      if ( !byte_4B42093 )
       {
-        sub_1B863B8(&ScriptManager_TypeInfo, flag);
-        byte_4A4BADD = 1;
+        sub_1BDB878(&ScriptManager_TypeInfo, flag);
+        byte_4B42093 = 1;
       }
       v52 = ScriptManager_TypeInfo;
       if ( !ScriptManager_TypeInfo->_2.cctor_finished )
@@ -319,11 +318,11 @@ void __fastcall ScriptBranchListViewItem__ChangeFlag(
         v52 = ScriptManager_TypeInfo;
       }
       scriptServerSettingAddress = v52->static_fields->scriptServerSettingAddress;
-      if ( !byte_4A4BADE )
+      if ( !byte_4B42094 )
       {
-        sub_1B863B8(&ScriptManager_TypeInfo, flag);
+        sub_1BDB878(&ScriptManager_TypeInfo, flag);
         v52 = ScriptManager_TypeInfo;
-        byte_4A4BADE = 1;
+        byte_4B42094 = 1;
       }
       if ( !v52->_2.cctor_finished )
       {
@@ -331,11 +330,11 @@ void __fastcall ScriptBranchListViewItem__ChangeFlag(
         v52 = ScriptManager_TypeInfo;
       }
       scriptObjectSettingAddress = v52->static_fields->scriptObjectSettingAddress;
-      if ( !byte_4A4BADF )
+      if ( !byte_4B42095 )
       {
-        sub_1B863B8(&ScriptManager_TypeInfo, flag);
+        sub_1BDB878(&ScriptManager_TypeInfo, flag);
         v52 = ScriptManager_TypeInfo;
-        byte_4A4BADF = 1;
+        byte_4B42095 = 1;
       }
       if ( !v52->_2.cctor_finished )
       {
@@ -343,11 +342,11 @@ void __fastcall ScriptBranchListViewItem__ChangeFlag(
         v52 = ScriptManager_TypeInfo;
       }
       scriptStartModeSettingName = v52->static_fields->scriptStartModeSettingName;
-      if ( !byte_4A4BBD8 )
+      if ( !byte_4B4218D )
       {
-        sub_1B863B8(&ScriptManager_TypeInfo, flag);
+        sub_1BDB878(&ScriptManager_TypeInfo, flag);
         v52 = ScriptManager_TypeInfo;
-        byte_4A4BBD8 = 1;
+        byte_4B4218D = 1;
       }
       if ( !v52->_2.cctor_finished )
       {
@@ -372,18 +371,18 @@ void __fastcall ScriptBranchListViewItem__ChangeFlag(
     case 2:
     case 3:
     case 11:
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_132;
       MasterData_object = DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+                            (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserQuestMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4A48C25 )
+      if ( !byte_4B3ED56 )
       {
-        sub_1B863B8(&NetworkManager_TypeInfo, v25);
-        byte_4A48C25 = 1;
+        sub_1BDB878(&NetworkManager_TypeInfo, v25);
+        byte_4B3ED56 = 1;
       }
       Instance = (__int64)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -400,14 +399,14 @@ void __fastcall ScriptBranchListViewItem__ChangeFlag(
                             0LL);
       if ( Instance )
         goto LABEL_30;
-      v27 = (UserQuestEntity_o *)sub_1B86604(UserQuestEntity_TypeInfo);
+      v27 = (UserQuestEntity_o *)sub_1BDBAC4(UserQuestEntity_TypeInfo);
       UserQuestEntity___ctor(v27, 0LL);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4A48C25 )
+      if ( !byte_4B3ED56 )
       {
-        sub_1B863B8(&NetworkManager_TypeInfo, v25);
-        byte_4A48C25 = 1;
+        sub_1BDB878(&NetworkManager_TypeInfo, v25);
+        byte_4B3ED56 = 1;
       }
       Instance = (__int64)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -419,17 +418,17 @@ void __fastcall ScriptBranchListViewItem__ChangeFlag(
         goto LABEL_132;
       v27->fields.userId = *(_QWORD *)(*(_QWORD *)(Instance + 184) + 64LL);
       v27->fields.questId = this->fields.questId;
-      Instance = sub_1B86460(UserQuestEntity___TypeInfo, 1LL);
+      Instance = sub_1BDB920(UserQuestEntity___TypeInfo, 1LL);
       if ( !Instance )
         goto LABEL_132;
       v28 = Instance;
-      Instance = sub_1B864F4(v27, *(_QWORD *)(*(_QWORD *)Instance + 64LL));
+      Instance = sub_1BDB9B4(v27, *(_QWORD *)(*(_QWORD *)Instance + 64LL));
       if ( !Instance )
         goto LABEL_134;
       if ( !*(_DWORD *)(v28 + 24) )
         goto LABEL_133;
       *(_QWORD *)(v28 + 32) = v27;
-      sub_1B8635C((CGThumbnailListItem_o *)(v28 + 32), (int32_t)v27, v29, v30);
+      sub_1BDB81C((CGThumbnailListItem_o *)(v28 + 32), (int32_t)v27, v29, v30);
       if ( !JsonManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
       v31 = JsonManager__toJson((Il2CppObject *)v28, 0, 0, 0LL);
@@ -437,10 +436,10 @@ void __fastcall ScriptBranchListViewItem__ChangeFlag(
         MasterData_object,
         v31,
         MasterData_object->klass->vtable[10].methodPtr);
-      if ( !byte_4A48C25 )
+      if ( !byte_4B3ED56 )
       {
-        sub_1B863B8(&NetworkManager_TypeInfo, v32);
-        byte_4A48C25 = 1;
+        sub_1BDB878(&NetworkManager_TypeInfo, v32);
+        byte_4B3ED56 = 1;
       }
       v33 = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -470,7 +469,7 @@ LABEL_113:
           return;
         }
 LABEL_132:
-        sub_1B86614(Instance, v25);
+        sub_1BDBAD4(Instance, v25);
       }
       if ( questPhase < 1 )
       {
@@ -492,18 +491,18 @@ LABEL_132:
       return;
     case 5:
     case 6:
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_132;
       v36 = DataManager__GetMasterData_object_(
               (DataManager_o *)Instance,
-              (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+              (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4A48C25 )
+      if ( !byte_4B3ED56 )
       {
-        sub_1B863B8(&NetworkManager_TypeInfo, v25);
-        byte_4A48C25 = 1;
+        sub_1BDB878(&NetworkManager_TypeInfo, v25);
+        byte_4B3ED56 = 1;
       }
       Instance = (__int64)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -531,15 +530,15 @@ LABEL_132:
       }
       if ( !flag )
         return;
-      v56 = (UserServantCollectionEntity_o *)sub_1B86604(UserServantCollectionEntity_TypeInfo);
+      v56 = (UserServantCollectionEntity_o *)sub_1BDBAC4(UserServantCollectionEntity_TypeInfo);
       UserServantCollectionEntity___ctor(v56, 0LL);
       entity = v56;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4A48C25 )
+      if ( !byte_4B3ED56 )
       {
-        sub_1B863B8(&NetworkManager_TypeInfo, v25);
-        byte_4A48C25 = 1;
+        sub_1BDB878(&NetworkManager_TypeInfo, v25);
+        byte_4B3ED56 = 1;
       }
       Instance = (__int64)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -563,38 +562,38 @@ LABEL_132:
       if ( !entity )
         goto LABEL_132;
       entity->fields.status = 2;
-      Instance = sub_1B86460(UserServantCollectionEntity___TypeInfo, 1LL);
+      Instance = sub_1BDB920(UserServantCollectionEntity___TypeInfo, 1LL);
       if ( !Instance )
         goto LABEL_132;
-      v62 = entity;
-      v63 = (System_Object_array *)Instance;
+      v61 = entity;
+      v62 = (System_Object_array *)Instance;
       if ( entity )
       {
-        Instance = sub_1B864F4(entity, *(_QWORD *)(*(_QWORD *)Instance + 64LL));
+        Instance = sub_1BDB9B4(entity, *(_QWORD *)(*(_QWORD *)Instance + 64LL));
         if ( !Instance )
         {
 LABEL_134:
-          v68 = sub_1B86638();
-          sub_1B864E0(v68, 0LL);
+          v67 = sub_1BDBAF8();
+          sub_1BDB9A0(v67, 0LL);
         }
       }
-      if ( !v63->max_length )
+      if ( !v62->max_length )
 LABEL_133:
-        sub_1B8661C(Instance, v25);
-      v63->m_Items[0] = (Il2CppObject *)v62;
-      sub_1B8635C((CGThumbnailListItem_o *)v63->m_Items, (int32_t)v62, v60, v61);
-      v64 = JsonManager_TypeInfo;
+        sub_1BDBADC(Instance, v25, v29);
+      v62->m_Items[0] = (Il2CppObject *)v61;
+      sub_1BDB81C((CGThumbnailListItem_o *)v62->m_Items, (int32_t)v61, v29, v60);
+      v63 = JsonManager_TypeInfo;
       if ( !JsonManager_TypeInfo->_2.cctor_finished )
         goto LABEL_129;
       goto LABEL_130;
     case 7:
     case 8:
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_132;
       Instance = (__int64)DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserQuestRouteMaster___);
+                            (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserQuestRouteMaster___);
       if ( !Instance )
         goto LABEL_132;
       v36 = (Il2CppObject *)Instance;
@@ -614,7 +613,7 @@ LABEL_133:
           v38 = ScriptBranchListViewItem___c_TypeInfo;
         }
         v40 = (Il2CppObject *)v38->static_fields->__9;
-        _9__18_0 = (System_Func_object__object__o *)sub_1B86604(System_Func_UserQuestRouteEntity__UserQuestRouteEntity__TypeInfo);
+        _9__18_0 = (System_Func_object__object__o *)sub_1BDBAC4(System_Func_UserQuestRouteEntity__UserQuestRouteEntity__TypeInfo);
         System_Func_object__object____ctor(
           _9__18_0,
           v40,
@@ -622,15 +621,15 @@ LABEL_133:
           0LL);
         static_fields = ScriptBranchListViewItem___c_TypeInfo->static_fields;
         static_fields->__9__18_0 = (struct System_Func_UserQuestRouteEntity__UserQuestRouteEntity__o *)_9__18_0;
-        sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__18_0, (int32_t)_9__18_0, v42, v43);
+        sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__18_0, (int32_t)_9__18_0, v42, v43);
       }
       v44 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                    v37,
                                                                    (System_Func_TSource__TResult__o *)_9__18_0,
-                                                                   (const MethodInfo_2FA1274 *)Method_System_Linq_Enumerable_Select_UserQuestRouteEntity__UserQuestRouteEntity___);
+                                                                   (const MethodInfo_3068484 *)Method_System_Linq_Enumerable_Select_UserQuestRouteEntity__UserQuestRouteEntity___);
       v45 = (System_Collections_Generic_List_UserQuestRouteEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                          v44,
-                                                                         (const MethodInfo_2FADBE0 *)Method_System_Linq_Enumerable_ToList_UserQuestRouteEntity___);
+                                                                         (const MethodInfo_307503C *)Method_System_Linq_Enumerable_ToList_UserQuestRouteEntity___);
       v48 = this->fields.branchType;
       v49 = v45;
       v50 = (v48 != 7 || !flag) && (v48 != 8 || flag);
@@ -676,20 +675,20 @@ LABEL_126:
                    v36->klass->vtable[7].methodPtr);
       if ( !v49 )
         goto LABEL_132;
-      v63 = System_Collections_Generic_List_object___ToArray(
+      v62 = System_Collections_Generic_List_object___ToArray(
               (System_Collections_Generic_List_object__o *)v49,
-              (const MethodInfo_35FE4B0 *)Method_System_Collections_Generic_List_UserQuestRouteEntity__ToArray__);
+              (const MethodInfo_36D791C *)Method_System_Collections_Generic_List_UserQuestRouteEntity__ToArray__);
       if ( !JsonManager_TypeInfo->_2.cctor_finished )
       {
-        v64 = JsonManager_TypeInfo;
+        v63 = JsonManager_TypeInfo;
 LABEL_129:
-        j_il2cpp_runtime_class_init_0(v64);
+        j_il2cpp_runtime_class_init_0(v63);
       }
 LABEL_130:
-      v67 = JsonManager__toJson(&v63->obj, 0, 0, 0LL);
+      v66 = JsonManager__toJson(&v62->obj, 0, 0, 0LL);
       ((void (__fastcall *)(Il2CppObject *, System_String_o *, Il2CppMethodPointer))v36->klass->vtable[9].method)(
         v36,
-        v67,
+        v66,
         v36->klass->vtable[10].methodPtr);
       return;
     default:
@@ -733,18 +732,19 @@ System_Collections_Generic_List_UserQuestRouteEntity__o *__fastcall ScriptBranch
   const MethodInfo *v13; // x3
   __int64 v14; // x0
   __int64 v15; // x1
-  System_Predicate_object__o *v16; // x22
-  Il2CppObject *v17; // x0
+  __int64 v16; // x2
+  System_Predicate_object__o *v17; // x22
+  Il2CppObject *v18; // x0
 
   v4 = this;
-  if ( (byte_4A4BAF9 & 1) == 0 )
+  if ( (byte_4B420AE & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Collections_Generic_List_UserQuestRouteEntity__Find__, list);
-    sub_1B863B8(&Method_System_Collections_Generic_List_UserQuestRouteEntity__Remove__, v5);
-    sub_1B863B8(&System_Predicate_UserQuestRouteEntity__TypeInfo, v6);
-    sub_1B863B8(&Method_ScriptBranchListViewItem___c__DisplayClass19_0__RemoveUserQuestRoute_b__0__, v7);
-    this = (ScriptBranchListViewItem_o *)sub_1B863B8(&ScriptBranchListViewItem___c__DisplayClass19_0_TypeInfo, v8);
-    byte_4A4BAF9 = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_List_UserQuestRouteEntity__Find__, list);
+    sub_1BDB878(&Method_System_Collections_Generic_List_UserQuestRouteEntity__Remove__, v5);
+    sub_1BDB878(&System_Predicate_UserQuestRouteEntity__TypeInfo, v6);
+    sub_1BDB878(&Method_ScriptBranchListViewItem___c__DisplayClass19_0__RemoveUserQuestRoute_b__0__, v7);
+    this = (ScriptBranchListViewItem_o *)sub_1BDB878(&ScriptBranchListViewItem___c__DisplayClass19_0_TypeInfo, v8);
+    byte_4B420AE = 1;
   }
   routeIds = v4->fields.routeIds;
   if ( !routeIds )
@@ -754,37 +754,37 @@ System_Collections_Generic_List_UserQuestRouteEntity__o *__fastcall ScriptBranch
     v10 = 0LL;
     while ( 1 )
     {
-      v11 = sub_1B86604(ScriptBranchListViewItem___c__DisplayClass19_0_TypeInfo);
+      v11 = sub_1BDBAC4(ScriptBranchListViewItem___c__DisplayClass19_0_TypeInfo);
       System_Object___ctor((Il2CppObject *)v11, 0LL);
       if ( !v11 )
         break;
       *(_QWORD *)(v11 + 24) = v4;
-      sub_1B8635C((CGThumbnailListItem_o *)(v11 + 24), (int32_t)v4, v12, v13);
+      sub_1BDB81C((CGThumbnailListItem_o *)(v11 + 24), (int32_t)v4, v12, v13);
       if ( v10 >= routeIds->max_length )
-        sub_1B8661C(v14, v15);
+        sub_1BDBADC(v14, v15, v16);
       *(_DWORD *)(v11 + 16) = routeIds->m_Items[v10 + 1];
-      v16 = (System_Predicate_object__o *)sub_1B86604(System_Predicate_UserQuestRouteEntity__TypeInfo);
+      v17 = (System_Predicate_object__o *)sub_1BDBAC4(System_Predicate_UserQuestRouteEntity__TypeInfo);
       System_Predicate_object____ctor(
-        v16,
+        v17,
         (Il2CppObject *)v11,
         Method_ScriptBranchListViewItem___c__DisplayClass19_0__RemoveUserQuestRoute_b__0__,
         0LL);
       if ( !list )
         break;
-      v17 = System_Collections_Generic_List_object___Find(
+      v18 = System_Collections_Generic_List_object___Find(
               (System_Collections_Generic_List_object__o *)list,
-              (System_Predicate_T__o *)v16,
-              (const MethodInfo_35FCFC0 *)Method_System_Collections_Generic_List_UserQuestRouteEntity__Find__);
-      if ( v17 )
+              (System_Predicate_T__o *)v17,
+              (const MethodInfo_36D642C *)Method_System_Collections_Generic_List_UserQuestRouteEntity__Find__);
+      if ( v18 )
         System_Collections_Generic_List_object___Remove(
           (System_Collections_Generic_List_object__o *)list,
-          v17,
-          (const MethodInfo_35FDE80 *)Method_System_Collections_Generic_List_UserQuestRouteEntity__Remove__);
+          v18,
+          (const MethodInfo_36D72EC *)Method_System_Collections_Generic_List_UserQuestRouteEntity__Remove__);
       if ( (__int64)++v10 >= (int)routeIds->max_length )
         return list;
     }
 LABEL_13:
-    sub_1B86614(this, list);
+    sub_1BDBAD4(this, list);
   }
   return list;
 }
@@ -823,60 +823,55 @@ System_String_o *__fastcall ScriptBranchListViewItem__get_CommentText(
   Il2CppObject *v29; // x0
   System_String_o *v30; // x0
   __int64 v31; // x1
+  __int64 v32; // x2
   struct System_Int32_array *routeIds; // x8
-  System_String_o *v33; // x0
-  int32_t v34; // w2
+  System_String_o *v34; // x0
   const MethodInfo *v35; // x3
   System_String_o *v36; // x20
   int32_t v37; // w1
   struct System_Int32_array *v38; // x8
-  int32_t v39; // w2
+  const MethodInfo *v39; // x3
   const MethodInfo *v40; // x3
-  int32_t v41; // w2
+  int32_t v41; // w1
   const MethodInfo *v42; // x3
-  int32_t v43; // w1
-  int32_t v44; // w2
+  const MethodInfo *v43; // x3
+  int32_t v44; // w1
   const MethodInfo *v45; // x3
-  int32_t v46; // w2
-  const MethodInfo *v47; // x3
-  int32_t v48; // w1
-  int32_t v49; // w2
-  const MethodInfo *v50; // x3
   int32_t questId; // [xsp+8h] [xbp-28h] BYREF
   int32_t questPhase; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A4BAFB & 1) == 0 )
+  if ( (byte_4B420B0 & 1) == 0 )
   {
-    sub_1B863B8(&int_TypeInfo, method);
-    sub_1B863B8(&string___TypeInfo, v6);
-    sub_1B863B8(&string_TypeInfo, v7);
-    sub_1B863B8(&StringLiteral_20619/*"isNotMaterial"*/, v8);
-    sub_1B863B8(&StringLiteral_8784/*"Master : Female"*/, v9);
-    sub_1B863B8(&StringLiteral_819/*", "*/, v10);
-    sub_1B863B8(&StringLiteral_6703/*"Flag   : back"*/, v11);
-    sub_1B863B8(&StringLiteral_9446/*"Number : {0}, releaseId : {1}"*/, v12);
-    sub_1B863B8(&StringLiteral_6702/*"Flag   : "*/, v13);
-    sub_1B863B8(&StringLiteral_8785/*"Master : Male"*/, v14);
-    sub_1B863B8(&StringLiteral_20634/*"isRevival"*/, v15);
-    sub_1B863B8(&StringLiteral_851/*", questId:"*/, v16);
-    sub_1B863B8(&StringLiteral_12511/*"ServantId : "*/, v17);
-    sub_1B863B8(&StringLiteral_20616/*"isMaterial"*/, v18);
-    byte_4A4BAFB = 1;
+    sub_1BDB878(&int_TypeInfo, method);
+    sub_1BDB878(&string___TypeInfo, v6);
+    sub_1BDB878(&string_TypeInfo, v7);
+    sub_1BDB878(&StringLiteral_20945/*"isNotMaterial"*/, v8);
+    sub_1BDB878(&StringLiteral_8929/*"Master : Female"*/, v9);
+    sub_1BDB878(&StringLiteral_822/*", "*/, v10);
+    sub_1BDB878(&StringLiteral_6783/*"Flag   : back"*/, v11);
+    sub_1BDB878(&StringLiteral_9595/*"Number : {0}, releaseId : {1}"*/, v12);
+    sub_1BDB878(&StringLiteral_6782/*"Flag   : "*/, v13);
+    sub_1BDB878(&StringLiteral_8930/*"Master : Male"*/, v14);
+    sub_1BDB878(&StringLiteral_20960/*"isRevival"*/, v15);
+    sub_1BDB878(&StringLiteral_854/*", questId:"*/, v16);
+    sub_1BDB878(&StringLiteral_12699/*"ServantId : "*/, v17);
+    sub_1BDB878(&StringLiteral_20942/*"isMaterial"*/, v18);
+    byte_4B420B0 = 1;
   }
   Empty = string_TypeInfo->static_fields->Empty;
   switch ( this->fields.branchType )
   {
     case 0xFFFFFFFF:
       if ( ScriptBranchListViewItem__get_IsFlagOn(this, method) )
-        v24 = &StringLiteral_8785/*"Master : Male"*/;
+        v24 = &StringLiteral_8930/*"Master : Male"*/;
       else
-        v24 = &StringLiteral_8784/*"Master : Female"*/;
+        v24 = &StringLiteral_8929/*"Master : Female"*/;
       goto LABEL_28;
     case 0:
-      v24 = &StringLiteral_20616/*"isMaterial"*/;
+      v24 = &StringLiteral_20942/*"isMaterial"*/;
       goto LABEL_28;
     case 1:
-      v24 = &StringLiteral_20619/*"isNotMaterial"*/;
+      v24 = &StringLiteral_20945/*"isNotMaterial"*/;
       goto LABEL_28;
     case 2:
     case 3:
@@ -884,21 +879,21 @@ System_String_o *__fastcall ScriptBranchListViewItem__get_CommentText(
       v21 = (_DWORD)this + 132;
       goto LABEL_15;
     case 4:
-      v24 = &StringLiteral_20634/*"isRevival"*/;
+      v24 = &StringLiteral_20960/*"isRevival"*/;
 LABEL_28:
       Empty = (System_String_o *)*v24;
       goto LABEL_29;
     case 5:
     case 6:
       v22 = System_Int32__ToString((int)this + 156, 0LL);
-      v23 = System_String__Concat_61645176((System_String_o *)StringLiteral_12511/*"ServantId : "*/, v22, 0LL);
+      v23 = System_String__Concat_62572260((System_String_o *)StringLiteral_12699/*"ServantId : "*/, v22, 0LL);
       break;
     case 9:
       questPhase = this->fields.questPhase;
       v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &questPhase, v2, v3, v4);
       questId = this->fields.questId;
       v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &questId, v26, v27, v28);
-      v23 = System_String__Format_61686468((System_String_o *)StringLiteral_9446/*"Number : {0}, releaseId : {1}"*/, v25, v29, 0LL);
+      v23 = System_String__Format_62613552((System_String_o *)StringLiteral_9595/*"Number : {0}, releaseId : {1}"*/, v25, v29, 0LL);
       break;
     case 0xA:
       v30 = System_Int32__ToString((int)this + 128, 0LL);
@@ -910,57 +905,57 @@ LABEL_28:
       v20 = v30;
       v21 = (_DWORD)routeIds + 32;
 LABEL_15:
-      v33 = System_Int32__ToString(v21, 0LL);
-      v23 = System_String__Concat_61685428(
-              (System_String_o *)StringLiteral_6702/*"Flag   : "*/,
+      v34 = System_Int32__ToString(v21, 0LL);
+      v23 = System_String__Concat_62612512(
+              (System_String_o *)StringLiteral_6782/*"Flag   : "*/,
               v20,
-              (System_String_o *)StringLiteral_819/*", "*/,
-              v33,
+              (System_String_o *)StringLiteral_822/*", "*/,
+              v34,
               0LL);
       break;
     case 0xB:
-      v30 = (System_String_o *)sub_1B86460(string___TypeInfo, 6LL);
+      v30 = (System_String_o *)sub_1BDB920(string___TypeInfo, 6LL);
       if ( !v30 )
         goto LABEL_35;
       v36 = v30;
       if ( !LODWORD(v30[1].klass) )
         goto LABEL_34;
-      v37 = StringLiteral_6703/*"Flag   : back"*/;
-      v30[1].monitor = (void *)StringLiteral_6703/*"Flag   : back"*/;
-      sub_1B8635C((CGThumbnailListItem_o *)&v30[1].monitor, v37, v34, v35);
+      v37 = StringLiteral_6783/*"Flag   : back"*/;
+      v30[1].monitor = (void *)StringLiteral_6783/*"Flag   : back"*/;
+      sub_1BDB81C((CGThumbnailListItem_o *)&v30[1].monitor, v37, v32, v35);
       v38 = this->fields.routeIds;
       if ( !v38 )
 LABEL_35:
-        sub_1B86614(v30, v31);
+        sub_1BDBAD4(v30, v31);
       if ( !v38->max_length )
         goto LABEL_34;
       v30 = System_Int32__ToString((int)v38 + 32, 0LL);
       if ( LODWORD(v36[1].klass) <= 1 )
         goto LABEL_34;
       v36[1].fields = (System_String_Fields)v30;
-      sub_1B8635C((CGThumbnailListItem_o *)&v36[1].fields, (int32_t)v30, v39, v40);
+      sub_1BDB81C((CGThumbnailListItem_o *)&v36[1].fields, (int32_t)v30, v32, v39);
       if ( LODWORD(v36[1].klass) <= 2 )
         goto LABEL_34;
-      v43 = StringLiteral_851/*", questId:"*/;
-      v36[2].klass = (System_String_c *)StringLiteral_851/*", questId:"*/;
-      sub_1B8635C((CGThumbnailListItem_o *)&v36[2], v43, v41, v42);
+      v41 = StringLiteral_854/*", questId:"*/;
+      v36[2].klass = (System_String_c *)StringLiteral_854/*", questId:"*/;
+      sub_1BDB81C((CGThumbnailListItem_o *)&v36[2], v41, v32, v40);
       v30 = System_Int32__ToString((int)this + 128, 0LL);
       if ( LODWORD(v36[1].klass) <= 3
         || (v36[2].monitor = v30,
-            sub_1B8635C((CGThumbnailListItem_o *)&v36[2].monitor, (int32_t)v30, v44, v45),
+            sub_1BDB81C((CGThumbnailListItem_o *)&v36[2].monitor, (int32_t)v30, v32, v42),
             LODWORD(v36[1].klass) <= 4)
-        || (v48 = StringLiteral_819/*", "*/,
-            v36[2].fields = (System_String_Fields)StringLiteral_819/*", "*/,
-            sub_1B8635C((CGThumbnailListItem_o *)&v36[2].fields, v48, v46, v47),
+        || (v44 = StringLiteral_822/*", "*/,
+            v36[2].fields = (System_String_Fields)StringLiteral_822/*", "*/,
+            sub_1BDB81C((CGThumbnailListItem_o *)&v36[2].fields, v44, v32, v43),
             v30 = System_Int32__ToString((int)this + 132, 0LL),
             LODWORD(v36[1].klass) <= 5) )
       {
 LABEL_34:
-        sub_1B8661C(v30, v31);
+        sub_1BDBADC(v30, v31, v32);
       }
       v36[3].klass = (System_String_c *)v30;
-      sub_1B8635C((CGThumbnailListItem_o *)&v36[3], (int32_t)v30, v49, v50);
-      v23 = System_String__Concat_61685692((System_String_array *)v36, 0LL);
+      sub_1BDB81C((CGThumbnailListItem_o *)&v36[3], (int32_t)v30, v32, v45);
+      v23 = System_String__Concat_62612776((System_String_array *)v36, 0LL);
       break;
     default:
       goto LABEL_29;
@@ -970,8 +965,8 @@ LABEL_29:
   if ( !System_String__IsNullOrEmpty(this->fields.debugComment, 0LL) )
   {
     if ( !System_String__IsNullOrEmpty(Empty, 0LL) )
-      Empty = System_String__Concat_61645176(Empty, (System_String_o *)StringLiteral_819/*", "*/, 0LL);
-    return System_String__Concat_61645176(Empty, this->fields.debugComment, 0LL);
+      Empty = System_String__Concat_62572260(Empty, (System_String_o *)StringLiteral_822/*", "*/, 0LL);
+    return System_String__Concat_62572260(Empty, this->fields.debugComment, 0LL);
   }
   return Empty;
 }
@@ -1006,24 +1001,25 @@ bool __fastcall ScriptBranchListViewItem__get_IsFlagOn(ScriptBranchListViewItem_
   int32_t svtId; // w19
   __int64 v13; // x0
   __int64 v14; // x1
-  System_Collections_Generic_IList_int__o *v15; // x20
+  __int64 v15; // x2
+  System_Collections_Generic_IList_int__o *v16; // x20
   System_Collections_Generic_IList_int__o *routeIds; // x22
   int32_t checkType; // w19
   int32_t count; // w21
-  ScriptManager_c *v19; // x0
+  ScriptManager_c *v20; // x0
   bool IsCollection; // w0
-  System_Collections_Generic_IList_int__o *v21; // x20
-  System_Collections_Generic_IList_int__o *v22; // x22
-  int32_t v23; // w19
-  int32_t v24; // w21
+  System_Collections_Generic_IList_int__o *v22; // x20
+  System_Collections_Generic_IList_int__o *v23; // x22
+  int32_t v24; // w19
+  int32_t v25; // w21
 
-  if ( (byte_4A4BAFC & 1) == 0 )
+  if ( (byte_4B420B1 & 1) == 0 )
   {
-    sub_1B863B8(&CondType_TypeInfo, method);
-    sub_1B863B8(&int___TypeInfo, v3);
-    sub_1B863B8(&NetworkManager_TypeInfo, v4);
-    sub_1B863B8(&ScriptManager_TypeInfo, v5);
-    byte_4A4BAFC = 1;
+    sub_1BDB878(&CondType_TypeInfo, method);
+    sub_1BDB878(&int___TypeInfo, v3);
+    sub_1BDB878(&NetworkManager_TypeInfo, v4);
+    sub_1BDB878(&ScriptManager_TypeInfo, v5);
+    byte_4B420B1 = 1;
   }
   v6 = 0;
   switch ( this->fields.branchType )
@@ -1031,18 +1027,18 @@ bool __fastcall ScriptBranchListViewItem__get_IsFlagOn(ScriptBranchListViewItem_
     case 0xFFFFFFFF:
       if ( !ScriptManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-      if ( !byte_4A4BAE2 )
+      if ( !byte_4B42098 )
       {
-        sub_1B863B8(&ScriptManager_TypeInfo, method);
-        byte_4A4BAE2 = 1;
+        sub_1BDB878(&ScriptManager_TypeInfo, method);
+        byte_4B42098 = 1;
       }
-      v19 = ScriptManager_TypeInfo;
+      v20 = ScriptManager_TypeInfo;
       if ( !ScriptManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-        v19 = ScriptManager_TypeInfo;
+        v20 = ScriptManager_TypeInfo;
       }
-      return v19->static_fields->scriptGenderSettingIndex == 1;
+      return v20->static_fields->scriptGenderSettingIndex == 1;
     case 0:
       if ( !ScriptManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
@@ -1057,10 +1053,10 @@ bool __fastcall ScriptBranchListViewItem__get_IsFlagOn(ScriptBranchListViewItem_
     case 0xB:
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4A48C25 )
+      if ( !byte_4B3ED56 )
       {
-        sub_1B863B8(&NetworkManager_TypeInfo, method);
-        byte_4A48C25 = 1;
+        sub_1BDB878(&NetworkManager_TypeInfo, method);
+        byte_4B3ED56 = 1;
       }
       v7 = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1085,10 +1081,10 @@ bool __fastcall ScriptBranchListViewItem__get_IsFlagOn(ScriptBranchListViewItem_
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
       return CondType__IsOpen(8, svtId, 0LL, 0, 0LL, 0LL);
     case 7:
-      v13 = sub_1B86460(int___TypeInfo, 1LL);
+      v13 = sub_1BDB920(int___TypeInfo, 1LL);
       if ( !v13 )
         goto LABEL_44;
-      v15 = (System_Collections_Generic_IList_int__o *)v13;
+      v16 = (System_Collections_Generic_IList_int__o *)v13;
       if ( !*(_DWORD *)(v13 + 24) )
         goto LABEL_45;
       *(_DWORD *)(v13 + 32) = this->fields.questId;
@@ -1097,23 +1093,23 @@ bool __fastcall ScriptBranchListViewItem__get_IsFlagOn(ScriptBranchListViewItem_
       checkType = this->fields.checkType;
       if ( !CondType_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-      return CondType__IsRouteSelect_38606264(v15, routeIds, count, checkType, 0LL);
+      return CondType__IsRouteSelect_39414216(v16, routeIds, count, checkType, 0LL);
     case 8:
-      v13 = sub_1B86460(int___TypeInfo, 1LL);
+      v13 = sub_1BDB920(int___TypeInfo, 1LL);
       if ( !v13 )
 LABEL_44:
-        sub_1B86614(v13, v14);
-      v21 = (System_Collections_Generic_IList_int__o *)v13;
+        sub_1BDBAD4(v13, v14);
+      v22 = (System_Collections_Generic_IList_int__o *)v13;
       if ( !*(_DWORD *)(v13 + 24) )
 LABEL_45:
-        sub_1B8661C(v13, v14);
+        sub_1BDBADC(v13, v14, v15);
       *(_DWORD *)(v13 + 32) = this->fields.questId;
-      v22 = (System_Collections_Generic_IList_int__o *)this->fields.routeIds;
-      v24 = this->fields.count;
-      v23 = this->fields.checkType;
+      v23 = (System_Collections_Generic_IList_int__o *)this->fields.routeIds;
+      v25 = this->fields.count;
+      v24 = this->fields.checkType;
       if ( !CondType_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-      IsCollection = CondType__IsRouteSelect_38606264(v21, v22, v24, v23, 0LL);
+      IsCollection = CondType__IsRouteSelect_39414216(v22, v23, v25, v24, 0LL);
       return !IsCollection;
     default:
       return v6;
@@ -1148,15 +1144,15 @@ void __fastcall ScriptBranchListViewItem___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4A4BAFE & 1) == 0 )
+  if ( (byte_4B420B3 & 1) == 0 )
   {
-    sub_1B863B8(&ScriptBranchListViewItem___c_TypeInfo, v1);
-    byte_4A4BAFE = 1;
+    sub_1BDB878(&ScriptBranchListViewItem___c_TypeInfo, v1);
+    byte_4B420B3 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(ScriptBranchListViewItem___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BDBAC4(ScriptBranchListViewItem___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   ScriptBranchListViewItem___c_TypeInfo->static_fields->__9 = (struct ScriptBranchListViewItem___c_o *)v2;
-  sub_1B8635C((CGThumbnailListItem_o *)ScriptBranchListViewItem___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BDB81C((CGThumbnailListItem_o *)ScriptBranchListViewItem___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -1193,20 +1189,20 @@ bool __fastcall ScriptBranchListViewItem___c__DisplayClass19_0___RemoveUserQuest
   struct ScriptBranchListViewItem_o *_4__this; // x8
 
   v4 = this;
-  if ( (byte_4A4BAFF & 1) == 0 )
+  if ( (byte_4B420B4 & 1) == 0 )
   {
-    this = (ScriptBranchListViewItem___c__DisplayClass19_0_o *)sub_1B863B8(&NetworkManager_TypeInfo, c);
-    byte_4A4BAFF = 1;
+    this = (ScriptBranchListViewItem___c__DisplayClass19_0_o *)sub_1BDB878(&NetworkManager_TypeInfo, c);
+    byte_4B420B4 = 1;
   }
   if ( !c )
     goto LABEL_15;
   userId = c->fields.userId;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4A48C25 )
+  if ( !byte_4B3ED56 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, c);
-    byte_4A48C25 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, c);
+    byte_4B3ED56 = 1;
   }
   this = (ScriptBranchListViewItem___c__DisplayClass19_0_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1219,7 +1215,7 @@ bool __fastcall ScriptBranchListViewItem___c__DisplayClass19_0___RemoveUserQuest
   _4__this = v4->fields.__4__this;
   if ( !_4__this )
 LABEL_15:
-    sub_1B86614(this, c);
+    sub_1BDBAD4(this, c);
   if ( c->fields.questId == _4__this->fields.questId )
     return c->fields.routeId == v4->fields.routeId;
   return 0;
@@ -1246,20 +1242,20 @@ bool __fastcall ScriptBranchListViewItem___c__DisplayClass20_0___AddUserQuestRou
   __int64 i; // x9
 
   v4 = this;
-  if ( (byte_4A4BB00 & 1) == 0 )
+  if ( (byte_4B420B5 & 1) == 0 )
   {
-    this = (ScriptBranchListViewItem___c__DisplayClass20_0_o *)sub_1B863B8(&NetworkManager_TypeInfo, c);
-    byte_4A4BB00 = 1;
+    this = (ScriptBranchListViewItem___c__DisplayClass20_0_o *)sub_1BDB878(&NetworkManager_TypeInfo, c);
+    byte_4B420B5 = 1;
   }
   if ( !c )
     goto LABEL_17;
   userId = c->fields.userId;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4A48C25 )
+  if ( !byte_4B3ED56 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, c);
-    byte_4A48C25 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, c);
+    byte_4B3ED56 = 1;
   }
   this = (ScriptBranchListViewItem___c__DisplayClass20_0_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1277,9 +1273,9 @@ bool __fastcall ScriptBranchListViewItem___c__DisplayClass20_0___AddUserQuestRou
   routeIds = _4__this->fields.routeIds;
   if ( !routeIds )
 LABEL_17:
-    sub_1B86614(this, c);
+    sub_1BDBAD4(this, c);
   i = v4->fields.i;
   if ( (unsigned int)i >= routeIds->max_length )
-    sub_1B8661C(this, c);
+    sub_1BDBADC(this, c, method);
   return c->fields.routeId == routeIds->m_Items[i + 1];
 }

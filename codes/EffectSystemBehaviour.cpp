@@ -14,24 +14,25 @@ void __fastcall EffectSystemBehaviour__Awake(EffectSystemBehaviour_o *this, cons
   void *gameObject; // x0
   __int64 v9; // x1
   Il2CppObject *v10; // x20
-  int v11; // w8
-  void *v12; // x19
-  __int64 v13; // x23
-  UnityEngine_Component_o *v14; // x20
-  Il2CppObject *v15; // x21
+  __int64 v11; // x2
+  int v12; // w8
+  void *v13; // x19
+  __int64 v14; // x23
+  UnityEngine_Component_o *v15; // x20
+  Il2CppObject *v16; // x21
 
-  if ( (byte_4A4D2E1 & 1) == 0 )
+  if ( (byte_4B43861 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_ParticleSystem___, method);
-    sub_1B863B8(&Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___, v3);
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___, v4);
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem___, v5);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v6);
-    byte_4A4D2E1 = 1;
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_ParticleSystem___, method);
+    sub_1BDB878(&Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___, v3);
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___, v4);
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem___, v5);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v6);
+    byte_4B43861 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
+                       (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_ParticleSystem___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -41,7 +42,7 @@ void __fastcall EffectSystemBehaviour__Awake(EffectSystemBehaviour_o *this, cons
       goto LABEL_26;
     v10 = UnityEngine_GameObject__GetComponent_object_(
             (UnityEngine_GameObject_o *)gameObject,
-            (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
+            (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v10, 0LL, 0LL) )
@@ -51,50 +52,50 @@ void __fastcall EffectSystemBehaviour__Awake(EffectSystemBehaviour_o *this, cons
         goto LABEL_26;
       UnityEngine_GameObject__AddComponent_object_(
         (UnityEngine_GameObject_o *)gameObject,
-        (const MethodInfo_2FC0D08 *)Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
+        (const MethodInfo_3088438 *)Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
     }
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
 LABEL_26:
-    sub_1B86614(gameObject, v9);
-  gameObject = UnityEngine_GameObject__GetComponentsInChildren_object__50076180(
+    sub_1BDBAD4(gameObject, v9);
+  gameObject = UnityEngine_GameObject__GetComponentsInChildren_object__50893124(
                  (UnityEngine_GameObject_o *)gameObject,
-                 (const MethodInfo_2FC1A14 *)Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem___);
+                 (const MethodInfo_3089144 *)Method_UnityEngine_GameObject_GetComponentsInChildren_ParticleSystem___);
   if ( gameObject )
   {
-    v11 = *((_DWORD *)gameObject + 6);
-    v12 = gameObject;
-    if ( v11 >= 1 )
+    v12 = *((_DWORD *)gameObject + 6);
+    v13 = gameObject;
+    if ( v12 >= 1 )
     {
-      v13 = 0LL;
+      v14 = 0LL;
       while ( 1 )
       {
-        if ( (unsigned int)v13 >= v11 )
-          sub_1B8661C(gameObject, v9);
-        v14 = (UnityEngine_Component_o *)*((_QWORD *)v12 + v13 + 4);
-        if ( !v14 )
+        if ( (unsigned int)v14 >= v12 )
+          sub_1BDBADC(gameObject, v9, v11);
+        v15 = (UnityEngine_Component_o *)*((_QWORD *)v13 + v14 + 4);
+        if ( !v15 )
           goto LABEL_26;
-        gameObject = UnityEngine_Component__get_gameObject(*((UnityEngine_Component_o **)v12 + v13 + 4), 0LL);
+        gameObject = UnityEngine_Component__get_gameObject(*((UnityEngine_Component_o **)v13 + v14 + 4), 0LL);
         if ( !gameObject )
           goto LABEL_26;
-        v15 = UnityEngine_GameObject__GetComponent_object_(
+        v16 = UnityEngine_GameObject__GetComponent_object_(
                 (UnityEngine_GameObject_o *)gameObject,
-                (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
+                (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_EffectRenderBehaviour___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        gameObject = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v15, 0LL, 0LL);
+        gameObject = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v16, 0LL, 0LL);
         if ( ((unsigned __int8)gameObject & 1) != 0 )
         {
-          gameObject = UnityEngine_Component__get_gameObject(v14, 0LL);
+          gameObject = UnityEngine_Component__get_gameObject(v15, 0LL);
           if ( !gameObject )
             goto LABEL_26;
           gameObject = UnityEngine_GameObject__AddComponent_object_(
                          (UnityEngine_GameObject_o *)gameObject,
-                         (const MethodInfo_2FC0D08 *)Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
+                         (const MethodInfo_3088438 *)Method_UnityEngine_GameObject_AddComponent_EffectRenderBehaviour___);
         }
-        v11 = *((_DWORD *)v12 + 6);
-        if ( (int)++v13 >= v11 )
+        v12 = *((_DWORD *)v13 + 6);
+        if ( (int)++v14 >= v12 )
           return;
       }
     }

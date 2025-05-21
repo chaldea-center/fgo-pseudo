@@ -1,4 +1,4 @@
 __int64 DllCanUnloadNow()
 {
-  return (unsigned __int8)byte_4A5F8B8;
+  return (unsigned __int8)byte_4B55E48;
 }

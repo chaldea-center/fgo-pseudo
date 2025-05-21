@@ -27,7 +27,7 @@ void __fastcall CGThumbnailListItem___ctor(
   LODWORD(v16[-1].fields._ThumbnailSpritePath_k__BackingField) = cgType;
   BYTE4(v16[-1].fields._ThumbnailSpritePath_k__BackingField) = haveDifferenceCg;
   BYTE5(v16[-1].fields._ThumbnailSpritePath_k__BackingField) = isOpened;
-  sub_1B8635C(v16, (int32_t)thumbnailPath, v17, v18, v19, v20, v21, v22, method);
+  sub_1BDB81C(v16, (int32_t)thumbnailPath, v17, v18, v19, v20, v21, v22, method);
 }
 
 
@@ -46,7 +46,7 @@ bool __fastcall CGThumbnailListItem__SetSortValue(
     return 0;
   this->fields.sortValue1 = this->fields._Priority_k__BackingField;
   if ( !sort )
-    sub_1B86614(v5, v6);
+    sub_1BDBAD4(v5, v6);
   Filter = ListViewSort__GetFilter(sort, 101, 0LL);
   v8 = ListViewSort__GetFilter(sort, 100, 0LL);
   if ( Filter == v8 || Filter && this->fields._Type_k__BackingField == 1 )
@@ -126,7 +126,7 @@ void __fastcall CGThumbnailListItem__set_ThumbnailSpritePath(
         const MethodInfo *method)
 {
   this->fields._ThumbnailSpritePath_k__BackingField = value;
-  sub_1B8635C(&this->fields._ThumbnailSpritePath_k__BackingField);
+  sub_1BDB81C(&this->fields._ThumbnailSpritePath_k__BackingField);
 }
 
 

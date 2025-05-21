@@ -8,20 +8,20 @@ void __fastcall RoadmapBoardListViewItem___ctor(
         System_String_o *spriteName,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_41775716((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42734232((ListViewItem_o *)this, index, 0LL);
   this->fields._TabGroup_k__BackingField = tabGroup;
   this->fields._GroupIndex_k__BackingField = groupIndex;
   this->fields._BoardId_k__BackingField = boardId;
   this->fields._Atlas_k__BackingField = atlas;
-  sub_1B8635C(&this->fields._Atlas_k__BackingField);
+  sub_1BDB81C(&this->fields._Atlas_k__BackingField);
   this->fields._SpriteName_k__BackingField = spriteName;
-  sub_1B8635C(&this->fields._SpriteName_k__BackingField);
+  sub_1BDB81C(&this->fields._SpriteName_k__BackingField);
   this->fields._BoardPrefab_k__BackingField = 0LL;
-  sub_1B8635C(&this->fields._BoardPrefab_k__BackingField);
+  sub_1BDB81C(&this->fields._BoardPrefab_k__BackingField);
 }
 
 
-void __fastcall RoadmapBoardListViewItem___ctor_30646320(
+void __fastcall RoadmapBoardListViewItem___ctor_31002412(
         RoadmapBoardListViewItem_o *this,
         int32_t index,
         int32_t tabGroup,
@@ -30,14 +30,14 @@ void __fastcall RoadmapBoardListViewItem___ctor_30646320(
         UnityEngine_GameObject_o *boardPrefab,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_41775716((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42734232((ListViewItem_o *)this, index, 0LL);
   this->fields._TabGroup_k__BackingField = tabGroup;
   this->fields._GroupIndex_k__BackingField = groupIndex;
   this->fields._BoardId_k__BackingField = boardId;
   this->fields._BoardPrefab_k__BackingField = boardPrefab;
-  sub_1B8635C(&this->fields._BoardPrefab_k__BackingField);
+  sub_1BDB81C(&this->fields._BoardPrefab_k__BackingField);
   this->fields._Atlas_k__BackingField = 0LL;
-  sub_1B8635C(&this->fields._Atlas_k__BackingField);
+  sub_1BDB81C(&this->fields._Atlas_k__BackingField);
 }
 
 
@@ -87,7 +87,7 @@ void __fastcall RoadmapBoardListViewItem__set_Atlas(
         const MethodInfo *method)
 {
   this->fields._Atlas_k__BackingField = value;
-  sub_1B8635C(&this->fields._Atlas_k__BackingField);
+  sub_1BDB81C(&this->fields._Atlas_k__BackingField);
 }
 
 
@@ -106,7 +106,7 @@ void __fastcall RoadmapBoardListViewItem__set_BoardPrefab(
         const MethodInfo *method)
 {
   this->fields._BoardPrefab_k__BackingField = value;
-  sub_1B8635C(&this->fields._BoardPrefab_k__BackingField);
+  sub_1BDB81C(&this->fields._BoardPrefab_k__BackingField);
 }
 
 
@@ -125,7 +125,7 @@ void __fastcall RoadmapBoardListViewItem__set_SpriteName(
         const MethodInfo *method)
 {
   this->fields._SpriteName_k__BackingField = value;
-  sub_1B8635C(&this->fields._SpriteName_k__BackingField);
+  sub_1BDB81C(&this->fields._SpriteName_k__BackingField);
 }
 
 

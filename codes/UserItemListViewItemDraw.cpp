@@ -7,20 +7,20 @@ void __fastcall UserItemListViewItemDraw___ctor(UserItemListViewItemDraw_o *this
   const MethodInfo *v7; // x3
   System_RuntimeFieldHandle_o v8; // 0:w1.4
 
-  if ( (byte_4A496AA & 1) == 0 )
+  if ( (byte_4B3FC2A & 1) == 0 )
   {
-    sub_1B863B8(&float___TypeInfo, method);
-    sub_1B863B8(
+    sub_1BDB878(&float___TypeInfo, method);
+    sub_1BDB878(
       &Field__PrivateImplementationDetails__422B3C7B2DE8568542AA18DEE65F4FCAC64982394C5ABCF41D2B33D3EBFE51FD,
       v3);
-    byte_4A496AA = 1;
+    byte_4B3FC2A = 1;
   }
-  v4 = (System_Array_o *)sub_1B86460(float___TypeInfo, 5LL);
+  v4 = (System_Array_o *)sub_1BDB920(float___TypeInfo, 5LL);
   v8.fields.value = Field__PrivateImplementationDetails__422B3C7B2DE8568542AA18DEE65F4FCAC64982394C5ABCF41D2B33D3EBFE51FD;
   v5 = (struct System_Single_array *)v4;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_62345492(v4, v8, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63272576(v4, v8, 0LL);
   this->fields.enableTimePos = v5;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.enableTimePos, (int32_t)v5, v6, v7);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.enableTimePos, (int32_t)v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -42,38 +42,39 @@ void __fastcall UserItemListViewItemDraw__SetEnableTime(UserItemListViewItemDraw
   System_String_o *gameObject; // x0
   __int64 v16; // x1
   UILabel_o *enableTimeLabel; // x22
-  struct UILabel_o *v18; // x8
+  __int64 v18; // x2
+  struct UILabel_o *v19; // x8
   struct System_String_o *mText; // x9
   struct System_Single_array *enableTimePos; // x8
   __int64 stringLength; // x9
-  int64_t v22; // x20
+  int64_t v23; // x20
   UserItemListViewItemDraw_o *Time; // x0
-  const MethodInfo *v24; // x3
+  const MethodInfo *v25; // x3
 
-  if ( (byte_4A496A9 & 1) == 0 )
+  if ( (byte_4B3FC29 & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, method);
-    sub_1B863B8(&NetworkManager_TypeInfo, v3);
-    sub_1B863B8(&StringLiteral_13217/*"TIME_REST_USER_ITEM"*/, v4);
-    sub_1B863B8(&StringLiteral_13173/*"TIME_OVER_USER_ITEM"*/, v5);
-    sub_1B863B8(&StringLiteral_13174/*"TIME_OVER_WORD"*/, v6);
-    sub_1B863B8(&StringLiteral_13180/*"TIME_REST2_TIMEOVER"*/, v7);
-    byte_4A496A9 = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, method);
+    sub_1BDB878(&NetworkManager_TypeInfo, v3);
+    sub_1BDB878(&StringLiteral_13411/*"TIME_REST_USER_ITEM"*/, v4);
+    sub_1BDB878(&StringLiteral_13367/*"TIME_OVER_USER_ITEM"*/, v5);
+    sub_1BDB878(&StringLiteral_13368/*"TIME_OVER_WORD"*/, v6);
+    sub_1BDB878(&StringLiteral_13374/*"TIME_REST2_TIMEOVER"*/, v7);
+    byte_4B3FC29 = 1;
   }
   dispEndTime = this->fields.dispEndTime;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   RestTime2 = LocalizationManager__GetRestTime2(dispEndTime, -1LL, 0LL);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_13180/*"TIME_REST2_TIMEOVER"*/, 0LL);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_13374/*"TIME_REST2_TIMEOVER"*/, 0LL);
   v11 = System_String__op_Equality(RestTime2, v10, 0LL);
   stringLabel = this->fields.stringLabel;
   v13 = v11;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( v13 )
-    v14 = (System_String_o **)&StringLiteral_13173/*"TIME_OVER_USER_ITEM"*/;
+    v14 = (System_String_o **)&StringLiteral_13367/*"TIME_OVER_USER_ITEM"*/;
   else
-    v14 = (System_String_o **)&StringLiteral_13217/*"TIME_REST_USER_ITEM"*/;
+    v14 = (System_String_o **)&StringLiteral_13411/*"TIME_REST_USER_ITEM"*/;
   gameObject = LocalizationManager__Get(*v14, 0LL);
   if ( !stringLabel )
     goto LABEL_24;
@@ -83,7 +84,7 @@ void __fastcall UserItemListViewItemDraw__SetEnableTime(UserItemListViewItemDraw
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_13174/*"TIME_OVER_WORD"*/, 0LL);
+    gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_13368/*"TIME_OVER_WORD"*/, 0LL);
     RestTime2 = gameObject;
   }
   if ( !enableTimeLabel
@@ -92,25 +93,25 @@ void __fastcall UserItemListViewItemDraw__SetEnableTime(UserItemListViewItemDraw
     || (gameObject = (System_String_o *)UnityEngine_Component__get_gameObject(
                                           (UnityEngine_Component_o *)gameObject,
                                           0LL),
-        (v18 = this->fields.enableTimeLabel) == 0LL)
-    || (mText = v18->fields.mText) == 0LL
+        (v19 = this->fields.enableTimeLabel) == 0LL)
+    || (mText = v19->fields.mText) == 0LL
     || (enableTimePos = this->fields.enableTimePos) == 0LL )
   {
 LABEL_24:
-    sub_1B86614(gameObject, v16);
+    sub_1BDBAD4(gameObject, v16);
   }
   stringLength = mText->fields._stringLength;
   if ( (unsigned int)stringLength >= enableTimePos->max_length )
-    sub_1B8661C(gameObject, v16);
+    sub_1BDBADC(gameObject, v16, v18);
   GameObjectExtensions__SetLocalPositionX(
     (UnityEngine_GameObject_o *)gameObject,
     enableTimePos->m_Items[stringLength + 1],
     0LL);
-  v22 = this->fields.dispEndTime;
+  v23 = this->fields.dispEndTime;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = (UserItemListViewItemDraw_o *)NetworkManager__getTime(0LL);
-  UserItemListViewItemDraw__SetRemainTimeColor(Time, v22 - (_QWORD)Time, this->fields.enableTimeLabel, v24);
+  UserItemListViewItemDraw__SetRemainTimeColor(Time, v23 - (_QWORD)Time, this->fields.enableTimeLabel, v25);
 }
 
 
@@ -130,13 +131,13 @@ void __fastcall UserItemListViewItemDraw__SetInput(
   int64_t v14; // x21
   const MethodInfo *v15; // x1
 
-  if ( (byte_4A496A8 & 1) == 0 )
+  if ( (byte_4B3FC28 & 1) == 0 )
   {
-    sub_1B863B8(&BalanceConfig_TypeInfo, item);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B863B8(&StringLiteral_12572/*"SetEnableTime"*/, v9);
-    byte_4A496A8 = 1;
+    sub_1BDB878(&BalanceConfig_TypeInfo, item);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v8);
+    sub_1BDB878(&StringLiteral_12760/*"SetEnableTime"*/, v9);
+    byte_4B3FC28 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -148,7 +149,7 @@ void __fastcall UserItemListViewItemDraw__SetInput(
       goto LABEL_25;
     Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     Component_object,
-                                                    (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                    (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_Collider___);
     if ( !Component_object )
       goto LABEL_25;
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL);
@@ -173,13 +174,13 @@ void __fastcall UserItemListViewItemDraw__SetInput(
     itemLostTime = this->fields.dispEndTime;
   }
   if ( !this->fields.enableTimeLabel
-    || (v14 = *(int *)(*(_QWORD *)&Component_object[7].fields.m_CachedPtr + 504LL),
+    || (v14 = *(int *)(*(_QWORD *)&Component_object[7].fields.m_CachedPtr + 528LL),
         (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
                                                          (UnityEngine_Component_o *)this->fields.enableTimeLabel,
                                                          0LL)) == 0LL) )
   {
 LABEL_25:
-    sub_1B86614(Component_object, v11);
+    sub_1BDBAD4(Component_object, v11);
   }
   if ( itemLostTime < v14 )
   {
@@ -192,13 +193,13 @@ LABEL_25:
       {
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, 1, 0LL);
         UserItemListViewItemDraw__SetEnableTime(this, v15);
-        if ( !UnityEngine_MonoBehaviour__IsInvoking_69340900(
+        if ( !UnityEngine_MonoBehaviour__IsInvoking_70269216(
                 (UnityEngine_MonoBehaviour_o *)this,
-                (System_String_o *)StringLiteral_12572/*"SetEnableTime"*/,
+                (System_String_o *)StringLiteral_12760/*"SetEnableTime"*/,
                 0LL) )
           UnityEngine_MonoBehaviour__InvokeRepeating(
             (UnityEngine_MonoBehaviour_o *)this,
-            (System_String_o *)StringLiteral_12572/*"SetEnableTime"*/,
+            (System_String_o *)StringLiteral_12760/*"SetEnableTime"*/,
             1.0,
             1.0,
             0LL);
@@ -215,14 +216,14 @@ LABEL_25:
   if ( !Component_object )
     goto LABEL_25;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, 0, 0LL);
-  if ( UnityEngine_MonoBehaviour__IsInvoking_69340900(
+  if ( UnityEngine_MonoBehaviour__IsInvoking_70269216(
          (UnityEngine_MonoBehaviour_o *)this,
-         (System_String_o *)StringLiteral_12572/*"SetEnableTime"*/,
+         (System_String_o *)StringLiteral_12760/*"SetEnableTime"*/,
          0LL) )
   {
-    UnityEngine_MonoBehaviour__CancelInvoke_69340764(
+    UnityEngine_MonoBehaviour__CancelInvoke_70269080(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_12572/*"SetEnableTime"*/,
+      (System_String_o *)StringLiteral_12760/*"SetEnableTime"*/,
       0LL);
   }
 }
@@ -265,29 +266,29 @@ void __fastcall UserItemListViewItemDraw__SetItem(
   __int64 v35; // x4
   Il2CppObject *v36; // x0
   int64_t itemLostTime; // x20
-  int64_t klass_low; // x21
+  int64_t kernelEvent_low; // x21
   const MethodInfo *v39; // x1
   Il2CppObject *Component_object; // x19
   int32_t MaxNum; // [xsp+8h] [xbp-48h] BYREF
   int32_t v42; // [xsp+Ch] [xbp-44h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4A496A7 & 1) == 0 )
+  if ( (byte_4B3FC27 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_int__TypeInfo, item);
-    sub_1B863B8(&BalanceConfig_TypeInfo, v7);
-    sub_1B863B8(&Method_DataManager_GetMaster_ItemMaster___, v8);
-    sub_1B863B8(&DataManager_TypeInfo, v9);
-    sub_1B863B8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v10);
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, v11);
-    sub_1B863B8(&int_TypeInfo, v12);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v13);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v14);
-    sub_1B863B8(&Method_UserItemListViewItemDraw__SetItem_b__10_0__, v15);
-    sub_1B863B8(&StringLiteral_14584/*"UNIT_INFO_LIMITED"*/, v16);
-    sub_1B863B8(&StringLiteral_12572/*"SetEnableTime"*/, v17);
-    sub_1B863B8(&StringLiteral_14585/*"UNIT_INFO_LIMITED_MAX"*/, v18);
-    byte_4A496A7 = 1;
+    sub_1BDB878(&System_Action_int__TypeInfo, item);
+    sub_1BDB878(&BalanceConfig_TypeInfo, v7);
+    sub_1BDB878(&Method_DataManager_GetMaster_ItemMaster___, v8);
+    sub_1BDB878(&DataManager_TypeInfo, v9);
+    sub_1BDB878(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v10);
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, v11);
+    sub_1BDB878(&int_TypeInfo, v12);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v13);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v14);
+    sub_1BDB878(&Method_UserItemListViewItemDraw__SetItem_b__10_0__, v15);
+    sub_1BDB878(&StringLiteral_14782/*"UNIT_INFO_LIMITED"*/, v16);
+    sub_1BDB878(&StringLiteral_12760/*"SetEnableTime"*/, v17);
+    sub_1BDB878(&StringLiteral_14783/*"UNIT_INFO_LIMITED_MAX"*/, v18);
+    byte_4B3FC27 = 1;
   }
   entity = 0LL;
   if ( item && mode )
@@ -311,20 +312,20 @@ void __fastcall UserItemListViewItemDraw__SetItem(
     if ( item->fields.itemType == 2 )
     {
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-      v23 = (System_Action_int__o *)sub_1B86604(System_Action_int__TypeInfo);
+      v23 = (System_Action_int__o *)sub_1BDBAC4(System_Action_int__TypeInfo);
       System_Action_int____ctor(v23, (Il2CppObject *)this, Method_UserItemListViewItemDraw__SetItem_b__10_0__, 0LL);
       StoneCountRefreshComponent__AttachToGameObject(gameObject, v23, 1, 0LL);
     }
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    itemIconInfo = (ItemIconComponent_o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_ItemMaster___);
+    itemIconInfo = (ItemIconComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ItemMaster___);
     if ( !itemIconInfo )
       goto LABEL_46;
     if ( DataMasterBase_object__object__int___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)itemIconInfo,
            &entity,
            item->fields.itemId,
-           (const MethodInfo_32142CC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+           (const MethodInfo_32E1E88 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
     {
       itemIconInfo = (ItemIconComponent_o *)entity;
       if ( !entity )
@@ -337,9 +338,9 @@ void __fastcall UserItemListViewItemDraw__SetItem(
         v24 = this->fields.numTextLabel;
         v25 = item->fields.itemNum;
         if ( v25 >= ItemEntity__GetMaxNum((ItemEntity_o *)entity, 0LL) )
-          v26 = (System_String_o **)&StringLiteral_14585/*"UNIT_INFO_LIMITED_MAX"*/;
+          v26 = (System_String_o **)&StringLiteral_14783/*"UNIT_INFO_LIMITED_MAX"*/;
         else
-          v26 = (System_String_o **)&StringLiteral_14584/*"UNIT_INFO_LIMITED"*/;
+          v26 = (System_String_o **)&StringLiteral_14782/*"UNIT_INFO_LIMITED"*/;
         v27 = *v26;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -351,7 +352,7 @@ void __fastcall UserItemListViewItemDraw__SetItem(
         v32 = (Il2CppObject *)itemIconInfo;
         MaxNum = ItemEntity__GetMaxNum((ItemEntity_o *)entity, 0LL);
         v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &MaxNum, v33, v34, v35);
-        itemIconInfo = (ItemIconComponent_o *)System_String__Format_61686468(v28, v32, v36, 0LL);
+        itemIconInfo = (ItemIconComponent_o *)System_String__Format_62613552(v28, v32, v36, 0LL);
         if ( !v24 )
           goto LABEL_46;
         UILabel__set_text(v24, (System_String_o *)itemIconInfo, 0LL);
@@ -368,13 +369,13 @@ void __fastcall UserItemListViewItemDraw__SetItem(
     }
     if ( !this->fields.enableTimeLabel )
       goto LABEL_46;
-    klass_low = SLODWORD(itemIconInfo[1].fields.backSprite[1].klass);
+    kernelEvent_low = SLODWORD(itemIconInfo[1].fields.m_CancellationTokenSource[8].fields._kernelEvent);
     itemIconInfo = (ItemIconComponent_o *)UnityEngine_Component__get_gameObject(
                                             (UnityEngine_Component_o *)this->fields.enableTimeLabel,
                                             0LL);
     if ( !itemIconInfo )
       goto LABEL_46;
-    if ( itemLostTime <= klass_low )
+    if ( itemLostTime <= kernelEvent_low )
     {
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)itemIconInfo, 1, 0LL);
       itemIconInfo = (ItemIconComponent_o *)this->fields.stringLabel;
@@ -389,7 +390,7 @@ void __fastcall UserItemListViewItemDraw__SetItem(
       UserItemListViewItemDraw__SetEnableTime(this, v39);
       UnityEngine_MonoBehaviour__InvokeRepeating(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_12572/*"SetEnableTime"*/,
+        (System_String_o *)StringLiteral_12760/*"SetEnableTime"*/,
         1.0,
         1.0,
         0LL);
@@ -417,7 +418,7 @@ void __fastcall UserItemListViewItemDraw__SetItem(
       goto LABEL_46;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)itemIconInfo,
-                         (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                         (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     itemIconInfo = (ItemIconComponent_o *)UnityEngine_Object__op_Inequality(
@@ -432,7 +433,7 @@ void __fastcall UserItemListViewItemDraw__SetItem(
         return;
       }
 LABEL_46:
-      sub_1B86614(itemIconInfo, item);
+      sub_1BDBAD4(itemIconInfo, item);
     }
   }
 }
@@ -448,7 +449,7 @@ void __fastcall UserItemListViewItemDraw__SetRemainTimeColor(
   UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( !label )
-    sub_1B86614(this, remainTime);
+    sub_1BDBAD4(this, remainTime);
   v6.fields.r = 255.0;
   v6.fields.b = 0.0;
   v6.fields.g = 255.0;
@@ -477,16 +478,16 @@ void __fastcall UserItemListViewItemDraw___SetItem_b__10_0(
   System_String_o *UnitInfo; // x0
   __int64 v7; // x1
 
-  if ( (byte_4A496AB & 1) == 0 )
+  if ( (byte_4B3FC2B & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, *(_QWORD *)&stoneCount);
-    byte_4A496AB = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, *(_QWORD *)&stoneCount);
+    byte_4B3FC2B = 1;
   }
   numTextLabel = this->fields.numTextLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   UnitInfo = LocalizationManager__GetUnitInfo(stoneCount, 0LL);
   if ( !numTextLabel )
-    sub_1B86614(UnitInfo, v7);
+    sub_1BDBAD4(UnitInfo, v7);
   UILabel__set_text(numTextLabel, UnitInfo, 0LL);
 }

@@ -12,24 +12,24 @@ void __fastcall DeckEditNameRequest__beginRequest(
 {
   __int64 v7; // x1
 
-  if ( (byte_4A4FEAD & 1) == 0 )
+  if ( (byte_4B464DC & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_18294/*"deckId"*/, deckId);
-    sub_1B863B8(&StringLiteral_18296/*"deckName"*/, v7);
-    byte_4A4FEAD = 1;
+    sub_1BDB878(&StringLiteral_18532/*"deckId"*/, deckId);
+    sub_1BDB878(&StringLiteral_18534/*"deckName"*/, v7);
+    byte_4B464DC = 1;
   }
-  RequestBase__addField_42287768((RequestBase_o *)this, (System_String_o *)StringLiteral_18294/*"deckId"*/, deckId, 0LL);
-  RequestBase__addField_42282000((RequestBase_o *)this, (System_String_o *)StringLiteral_18296/*"deckName"*/, deckName, 0LL);
+  RequestBase__addField_43153704((RequestBase_o *)this, (System_String_o *)StringLiteral_18532/*"deckId"*/, deckId, 0LL);
+  RequestBase__addField_43151112((RequestBase_o *)this, (System_String_o *)StringLiteral_18534/*"deckName"*/, deckName, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
 System_String_o *__fastcall DeckEditNameRequest__getMockData(DeckEditNameRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4FEAC & 1) == 0 )
+  if ( (byte_4B464DB & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_1/*""*/, method);
-    byte_4A4FEAC = 1;
+    sub_1BDB878(&StringLiteral_1/*""*/, method);
+    byte_4B464DB = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -40,16 +40,16 @@ System_String_o *__fastcall DeckEditNameRequest__getURL(DeckEditNameRequest_o *t
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A4FEAB & 1) == 0 )
+  if ( (byte_4B464DA & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_18292/*"deck/editName"*/, v2);
-    byte_4A4FEAB = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_18530/*"deck/editName"*/, v2);
+    byte_4B464DA = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_18292/*"deck/editName"*/, 0LL);
+  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_18530/*"deck/editName"*/, 0LL);
 }
 
 
@@ -63,19 +63,19 @@ void __fastcall DeckEditNameRequest__requestCompleted(
   ResponseData_o *v7; // x0
   __int64 *v8; // x8
 
-  if ( (byte_4A4FEAE & 1) == 0 )
+  if ( (byte_4B464DD & 1) == 0 )
   {
-    sub_1B863B8(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1B863B8(&StringLiteral_22061/*"ok"*/, v5);
-    sub_1B863B8(&StringLiteral_21893/*"ng"*/, v6);
-    byte_4A4FEAE = 1;
+    sub_1BDB878(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1BDB878(&StringLiteral_22401/*"ok"*/, v5);
+    sub_1BDB878(&StringLiteral_22233/*"ng"*/, v6);
+    byte_4B464DD = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(53, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_42282948(v7, 0LL) )
-    v8 = &StringLiteral_22061/*"ok"*/;
+  if ( v7 && ResponseData__checkError_43151432(v7, 0LL) )
+    v8 = &StringLiteral_22401/*"ok"*/;
   else
-    v8 = &StringLiteral_21893/*"ng"*/;
+    v8 = &StringLiteral_22233/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
 }

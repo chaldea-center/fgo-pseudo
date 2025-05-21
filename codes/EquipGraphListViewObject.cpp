@@ -1,9 +1,9 @@
 void __fastcall EquipGraphListViewObject___ctor(EquipGraphListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4DB37 & 1) == 0 )
+  if ( (byte_4B440AE & 1) == 0 )
   {
-    sub_1B863B8(&ListViewObject_TypeInfo, method);
-    byte_4A4DB37 = 1;
+    sub_1BDB878(&ListViewObject_TypeInfo, method);
+    byte_4B440AE = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,20 +19,20 @@ void __fastcall EquipGraphListViewObject__Awake(EquipGraphListViewObject_o *this
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4A4DB2E & 1) == 0 )
+  if ( (byte_4B440A5 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewItemDraw___, method);
-    byte_4A4DB2E = 1;
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewItemDraw___, method);
+    byte_4B440A5 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1B86614(0LL, v3);
+    sub_1BDBAD4(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewItemDraw___);
+                       (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewItemDraw___);
   this->fields.itemDraw = (struct EquipGraphListViewItemDraw_o *)Component_object;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -43,23 +43,23 @@ UnityEngine_GameObject_o *__fastcall EquipGraphListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *DragObject; // x0
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x19
-  const MethodInfo *v6; // x2
+  const MethodInfo *v6; // x3
 
-  if ( (byte_4A4DB32 & 1) == 0 )
+  if ( (byte_4B440A9 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewObject___, method);
-    byte_4A4DB32 = 1;
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewObject___, method);
+    byte_4B440A9 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_EquipGraphListViewObject___)) == 0LL) )
   {
-    sub_1B86614(DragObject, v4);
+    sub_1BDBAD4(DragObject, v4);
   }
-  EquipGraphListViewObject__Init_39346856((EquipGraphListViewObject_o *)DragObject, 2, v6);
+  EquipGraphListViewObject__Init_40145504((EquipGraphListViewObject_o *)DragObject, 2, 0, v6);
   return v5;
 }
 
@@ -71,10 +71,10 @@ EquipGraphListViewItem_o *__fastcall EquipGraphListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4A4DB30 & 1) == 0 )
+  if ( (byte_4B440A7 & 1) == 0 )
   {
-    sub_1B863B8(&EquipGraphListViewItem_TypeInfo, method);
-    byte_4A4DB30 = 1;
+    sub_1BDB878(&EquipGraphListViewItem_TypeInfo, method);
+    byte_4B440A7 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -95,32 +95,32 @@ void __fastcall EquipGraphListViewObject__Init(
         System_Action_o *callbackFunc,
         float delay,
         UnityEngine_Vector3_o position,
+        bool afterEndSelectConfirm,
         const MethodInfo *method)
 {
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x10
-  unsigned int v11; // w22
-  int32_t dispMode; // w23
-  int32_t state; // w24
+  unsigned int v13; // w23
+  int32_t dispMode; // w24
+  int32_t state; // w25
   UnityEngine_Transform_o *transform; // x0
-  __int64 v15; // x1
-  CGThumbnailListItem_o *p_callbackFunc; // x21
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  const MethodInfo *v19; // x1
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  int32_t v22; // w8
-  CGThumbnailListItem_c *klass; // x19
+  __int64 v17; // x1
+  struct System_Action_o **p_callbackFunc; // x22
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  const MethodInfo *v21; // x2
+  const MethodInfo *v22; // x3
+  int32_t v23; // w8
+  struct System_Action_o *v24; // x19
 
-  if ( (byte_4A4DB33 & 1) == 0 )
+  if ( (byte_4B440AA & 1) == 0 )
   {
-    sub_1B863B8(&EquipGraphListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A4DB33 = 1;
+    sub_1BDB878(&EquipGraphListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B440AA = 1;
   }
   if ( initMode == 4 )
   {
-    EquipGraphListViewObject__SetupDisp(this, *(const MethodInfo **)&initMode);
+    EquipGraphListViewObject__SetupDisp(this, afterEndSelectConfirm, (const MethodInfo *)callbackFunc);
   }
   else
   {
@@ -130,48 +130,48 @@ void __fastcall EquipGraphListViewObject__Init(
           LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
     {
       if ( (EquipGraphListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] == EquipGraphListViewItem_TypeInfo )
-        v11 = initMode;
+        v13 = initMode;
       else
-        v11 = 0;
+        v13 = 0;
     }
     else
     {
-      v11 = 0;
+      v13 = 0;
     }
     dispMode = this->fields.dispMode;
     state = this->fields.state;
-    ListViewObject__SetVisible((ListViewObject_o *)this, v11 != 0, 0LL);
+    ListViewObject__SetVisible((ListViewObject_o *)this, v13 != 0, 0LL);
     ((void (__fastcall *)(EquipGraphListViewObject_o *, bool, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
       this,
-      v11 == 3,
+      v13 == 3,
       this->klass->vtable._10_Invalidation.methodPtr);
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
     if ( !transform
       || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
     {
-      sub_1B86614(transform, v15);
+      sub_1BDBAD4(transform, v17);
     }
     UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
     this->fields.callbackFunc = callbackFunc;
-    p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
-    if ( v11 <= 3 )
+    p_callbackFunc = &this->fields.callbackFunc;
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v19, v20);
+    if ( v13 <= 3 )
     {
-      v22 = dword_BC22D0[v11];
-      this->fields.dispMode = v11;
-      this->fields.state = v22;
+      v23 = dword_BEA300[v13];
+      this->fields.dispMode = v13;
+      this->fields.state = v23;
     }
     if ( !state || dispMode != this->fields.dispMode )
-      EquipGraphListViewObject__SetupDisp(this, v19);
-    klass = p_callbackFunc->klass;
-    if ( p_callbackFunc->klass )
+      EquipGraphListViewObject__SetupDisp(this, afterEndSelectConfirm, v21);
+    v24 = *p_callbackFunc;
+    if ( *p_callbackFunc )
     {
-      p_callbackFunc->klass = 0LL;
-      sub_1B8635C(p_callbackFunc, 0, v20, v21);
-      ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
-        klass->_1.element_class,
-        *(_QWORD *)&klass->_1.byval_arg.bits);
+      *p_callbackFunc = 0LL;
+      sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, (int32_t)v21, v22);
+      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v24->fields.m_target)(
+        v24->fields.original_method_info,
+        *(_QWORD *)&v24->fields.extra_arg);
     }
   }
 }
@@ -184,59 +184,62 @@ void __fastcall EquipGraphListViewObject__InitItem(EquipGraphListViewObject_o *t
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall EquipGraphListViewObject__Init_39346856(
+void __fastcall EquipGraphListViewObject__Init_40145504(
         EquipGraphListViewObject_o *this,
         int32_t initMode,
+        bool afterEndSelectConfirm,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  float v4; // s0
-  int v5; // s1
+  const MethodInfo *v4; // x4
+  float v5; // s0
+  int v6; // s1
 
-  if ( !byte_4A487E1 )
+  if ( !byte_4B3E911 )
   {
-    sub_1B863B8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A487E1 = 1;
+    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B3E911 = 1;
   }
-  EquipGraphListViewObject__Init(this, initMode, 0LL, v4, *(UnityEngine_Vector3_o *)&v5, v3);
+  EquipGraphListViewObject__Init(this, initMode, 0LL, v5, *(UnityEngine_Vector3_o *)&v6, afterEndSelectConfirm, v4);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall EquipGraphListViewObject__Init_39348008(
+void __fastcall EquipGraphListViewObject__Init_40146672(
         EquipGraphListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         float delay,
         const MethodInfo *method)
 {
-  int v5; // s1
+  const MethodInfo *v5; // x4
+  int v6; // s1
 
-  if ( !byte_4A487E1 )
+  if ( !byte_4B3E911 )
   {
-    sub_1B863B8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A487E1 = 1;
+    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B3E911 = 1;
   }
-  EquipGraphListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
+  EquipGraphListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v6, 0, v5);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall EquipGraphListViewObject__Init_39348092(
+void __fastcall EquipGraphListViewObject__Init_40146760(
         EquipGraphListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         const MethodInfo *method)
 {
-  float v4; // s0
-  int v5; // s1
+  const MethodInfo *v4; // x4
+  float v5; // s0
+  int v6; // s1
 
-  if ( !byte_4A487E1 )
+  if ( !byte_4B3E911 )
   {
-    sub_1B863B8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A487E1 = 1;
+    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B3E911 = 1;
   }
-  EquipGraphListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
+  EquipGraphListViewObject__Init(this, initMode, callbackFunc, v5, *(UnityEngine_Vector3_o *)&v6, 0, v4);
 }
 
 
@@ -249,12 +252,12 @@ void __fastcall EquipGraphListViewObject__OnClickSelect(EquipGraphListViewObject
   __int64 methodPtr_low; // x10
 
   v2 = this;
-  if ( (byte_4A4DB35 & 1) == 0 )
+  if ( (byte_4B440AC & 1) == 0 )
   {
-    sub_1B863B8(&EquipGraphListViewItem_TypeInfo, method);
-    sub_1B863B8(&Method_EquipGraphListViewObject_OnClickSelect__, v3);
-    this = (EquipGraphListViewObject_o *)sub_1B863B8(&StringLiteral_9717/*"OnClickSelectListView"*/, v4);
-    byte_4A4DB35 = 1;
+    sub_1BDB878(&EquipGraphListViewItem_TypeInfo, method);
+    sub_1BDB878(&Method_EquipGraphListViewObject_OnClickSelect__, v3);
+    this = (EquipGraphListViewObject_o *)sub_1BDB878(&StringLiteral_9867/*"OnClickSelectListView"*/, v4);
+    byte_4B440AC = 1;
   }
   linkItem = v2->fields.linkItem;
   if ( linkItem )
@@ -266,11 +269,11 @@ void __fastcall EquipGraphListViewObject__OnClickSelect(EquipGraphListViewObject
       || (ListViewManager__ClearScrollBarValue((ListViewManager_o *)this, 1, 0LL),
           (this = (EquipGraphListViewObject_o *)v2->fields.manager) == 0LL) )
     {
-      sub_1B86614(this, method);
+      sub_1BDBAD4(this, method);
     }
     UnityEngine_Component__SendMessage(
       (UnityEngine_Component_o *)this,
-      (System_String_o *)StringLiteral_9717/*"OnClickSelectListView"*/,
+      (System_String_o *)StringLiteral_9867/*"OnClickSelectListView"*/,
       (Il2CppObject *)v2,
       0LL);
   }
@@ -287,11 +290,11 @@ void __fastcall EquipGraphListViewObject__OnDestroy(EquipGraphListViewObject_o *
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4A4DB2F & 1) == 0 )
+  if ( (byte_4B440A6 & 1) == 0 )
   {
-    sub_1B863B8(&NGUITools_TypeInfo, method);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A4DB2F = 1;
+    sub_1BDB878(&NGUITools_TypeInfo, method);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B440A6 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -305,7 +308,7 @@ void __fastcall EquipGraphListViewObject__OnDestroy(EquipGraphListViewObject_o *
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1B8635C(p_dragObject, 0, v8, v9);
+    sub_1BDB81C(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -314,17 +317,17 @@ void __fastcall EquipGraphListViewObject__OnLongPush(EquipGraphListViewObject_o 
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4A4DB36 & 1) == 0 )
+  if ( (byte_4B440AD & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_9777/*"OnLongPushListView"*/, method);
-    byte_4A4DB36 = 1;
+    sub_1BDB878(&StringLiteral_9927/*"OnLongPushListView"*/, method);
+    byte_4B440AD = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1B86614(0LL, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9777/*"OnLongPushListView"*/, (Il2CppObject *)this, 0LL);
+      sub_1BDBAD4(0LL, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9927/*"OnLongPushListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -343,11 +346,11 @@ void __fastcall EquipGraphListViewObject__SetInput(
   struct ListViewItem_o *v10; // x1
   EquipGraphListViewItemDraw_o *v11; // x0
 
-  if ( (byte_4A4DB31 & 1) == 0 )
+  if ( (byte_4B440A8 & 1) == 0 )
   {
-    sub_1B863B8(&EquipGraphListViewItem_TypeInfo, isInput);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A4DB31 = 1;
+    sub_1BDB878(&EquipGraphListViewItem_TypeInfo, isInput);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
+    byte_4B440A8 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -371,7 +374,7 @@ void __fastcall EquipGraphListViewObject__SetInput(
     }
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_1B86614(0LL, v10);
+      sub_1BDBAD4(0LL, v10);
     EquipGraphListViewItemDraw__SetInput(v11, (EquipGraphListViewItem_o *)v10, isInput, v7);
   }
 }
@@ -383,12 +386,12 @@ void __fastcall EquipGraphListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_41806456((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_42764972((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall EquipGraphListViewObject__SetItem_39356068(
+void __fastcall EquipGraphListViewObject__SetItem_40155536(
         EquipGraphListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -398,22 +401,26 @@ void __fastcall EquipGraphListViewObject__SetItem_39356068(
 }
 
 
-void __fastcall EquipGraphListViewObject__SetupDisp(EquipGraphListViewObject_o *this, const MethodInfo *method)
+// local variable allocation has failed, the output may be wrong!
+void __fastcall EquipGraphListViewObject__SetupDisp(
+        EquipGraphListViewObject_o *this,
+        bool afterEndSelectConfirm,
+        const MethodInfo *method)
 {
-  __int64 v3; // x1
-  struct ListViewItem_o *linkItem; // x20
+  __int64 v5; // x1
+  struct ListViewItem_o *linkItem; // x21
   __int64 methodPtr_low; // x10
-  bool v6; // w1
-  UnityEngine_Object_o *itemDraw; // x21
-  __int64 v8; // x1
-  const MethodInfo *v9; // x3
-  EquipGraphListViewItemDraw_o *v10; // x0
+  bool v8; // w1
+  UnityEngine_Object_o *itemDraw; // x22
+  __int64 v10; // x1
+  const MethodInfo *v11; // x4
+  EquipGraphListViewItemDraw_o *v12; // x0
 
-  if ( (byte_4A4DB34 & 1) == 0 )
+  if ( (byte_4B440AB & 1) == 0 )
   {
-    sub_1B863B8(&EquipGraphListViewItem_TypeInfo, method);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A4DB34 = 1;
+    sub_1BDB878(&EquipGraphListViewItem_TypeInfo, afterEndSelectConfirm);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
+    byte_4B440AB = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -424,21 +431,26 @@ void __fastcall EquipGraphListViewObject__SetupDisp(EquipGraphListViewObject_o *
   {
     linkItem = 0LL;
 LABEL_7:
-    v6 = 0;
+    v8 = 0;
     goto LABEL_8;
   }
-  v6 = this->fields.dispMode != 0;
+  v8 = this->fields.dispMode != 0;
 LABEL_8:
-  ListViewObject__SetVisible((ListViewObject_o *)this, v6, 0LL);
+  ListViewObject__SetVisible((ListViewObject_o *)this, v8, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v10 = this->fields.itemDraw;
-    if ( !v10 )
-      sub_1B86614(0LL, v8);
-    EquipGraphListViewItemDraw__SetItem(v10, (EquipGraphListViewItem_o *)linkItem, this->fields.dispMode, v9);
+    v12 = this->fields.itemDraw;
+    if ( !v12 )
+      sub_1BDBAD4(0LL, v10);
+    EquipGraphListViewItemDraw__SetItem(
+      v12,
+      (EquipGraphListViewItem_o *)linkItem,
+      this->fields.dispMode,
+      afterEndSelectConfirm,
+      v11);
   }
 }
 
@@ -458,10 +470,10 @@ void __fastcall EquipGraphListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4A4DB2C & 1) == 0 )
+  if ( (byte_4B440A3 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, value);
-    byte_4A4DB2C = 1;
+    sub_1BDB878(&System_Action_TypeInfo, value);
+    byte_4B440A3 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -474,13 +486,13 @@ void __fastcall EquipGraphListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1BC0674(p_callbackFunc, v8, v6);
+    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B868D4(v8);
+  sub_1BDBD94(v8);
   EquipGraphListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -499,10 +511,10 @@ void __fastcall EquipGraphListViewObject__remove_callbackFunc(
   EquipGraphListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4A4DB2D & 1) == 0 )
+  if ( (byte_4B440A4 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, value);
-    byte_4A4DB2D = 1;
+    sub_1BDB878(&System_Action_TypeInfo, value);
+    byte_4B440A4 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -515,12 +527,12 @@ void __fastcall EquipGraphListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1BC0674(p_callbackFunc, v8, v6);
+    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1B868D4(v8);
+  sub_1BDBD94(v8);
   EquipGraphListViewObject__Awake(v11, v12);
 }

@@ -4,15 +4,57 @@ void __fastcall PartyListViewItemDraw___ctor(PartyListViewItemDraw_o *this, cons
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4A49F05 & 1) == 0 )
+  if ( (byte_4B404BB & 1) == 0 )
   {
-    sub_1B863B8(&PartyOrganizationListViewItemDraw___TypeInfo, method);
-    byte_4A49F05 = 1;
+    sub_1BDB878(&PartyOrganizationListViewItemDraw___TypeInfo, method);
+    byte_4B404BB = 1;
   }
-  v3 = (struct PartyOrganizationListViewItemDraw_array *)sub_1B86460(PartyOrganizationListViewItemDraw___TypeInfo, 6LL);
+  v3 = (struct PartyOrganizationListViewItemDraw_array *)sub_1BDB920(PartyOrganizationListViewItemDraw___TypeInfo, 6LL);
   this->fields.itemDrawList = v3;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.itemDrawList, (int32_t)v3, v4, v5);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.itemDrawList, (int32_t)v3, v4, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+void __fastcall PartyListViewItemDraw__SetActiveGrandEffect(
+        PartyListViewItemDraw_o *this,
+        bool flag,
+        const MethodInfo *method)
+{
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x21
+  __int64 v9; // x0
+  __int64 v10; // x1
+  System_Collections_Generic_IEnumerable_T__o *itemDrawList; // x19
+  System_Action_object__o *v12; // x20
+
+  if ( (byte_4B404BA & 1) == 0 )
+  {
+    sub_1BDB878(&System_Action_PartyOrganizationListViewItemDraw__TypeInfo, flag);
+    sub_1BDB878(&Method_BasicHelper_ForEach_PartyOrganizationListViewItemDraw___, v5);
+    sub_1BDB878(&Method_PartyListViewItemDraw___c__DisplayClass12_0__SetActiveGrandEffect_b__0__, v6);
+    sub_1BDB878(&PartyListViewItemDraw___c__DisplayClass12_0_TypeInfo, v7);
+    byte_4B404BA = 1;
+  }
+  v8 = sub_1BDBAC4(PartyListViewItemDraw___c__DisplayClass12_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v8, 0LL);
+  if ( !v8 )
+    sub_1BDBAD4(v9, v10);
+  *(_BYTE *)(v8 + 16) = flag;
+  itemDrawList = (System_Collections_Generic_IEnumerable_T__o *)this->fields.itemDrawList;
+  v12 = (System_Action_object__o *)sub_1BDBAC4(System_Action_PartyOrganizationListViewItemDraw__TypeInfo);
+  System_Action_object____ctor(
+    v12,
+    (Il2CppObject *)v8,
+    Method_PartyListViewItemDraw___c__DisplayClass12_0__SetActiveGrandEffect_b__0__,
+    0LL);
+  BasicHelper__ForEach_object_(
+    itemDrawList,
+    (System_Action_T__o *)v12,
+    (const MethodInfo_301FA1C *)Method_BasicHelper_ForEach_PartyOrganizationListViewItemDraw___);
 }
 
 
@@ -26,18 +68,18 @@ void __fastcall PartyListViewItemDraw__SetInput(
   __int64 v8; // x1
   UnityEngine_Object_o *baseButton; // x22
   __int64 v10; // x1
-  const MethodInfo *v11; // x2
+  __int64 v11; // x2
   UnityEngine_Component_o *Component_object; // x0
   int32_t i; // w22
   struct PartyOrganizationListViewItemDraw_array *itemDrawList; // x8
   PartyOrganizationListViewItemDraw_o *v15; // x23
 
-  if ( (byte_4A49F04 & 1) == 0 )
+  if ( (byte_4B404B9 & 1) == 0 )
   {
-    sub_1B863B8(&BalanceConfig_TypeInfo, item);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v8);
-    byte_4A49F04 = 1;
+    sub_1BDB878(&BalanceConfig_TypeInfo, item);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v8);
+    byte_4B404B9 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -48,12 +90,12 @@ void __fastcall PartyListViewItemDraw__SetInput(
     if ( !Component_object
       || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                           Component_object,
-                                                          (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                          (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
       || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL),
           (Component_object = (UnityEngine_Component_o *)this->fields.baseButton) == 0LL) )
     {
 LABEL_20:
-      sub_1B86614(Component_object, v10);
+      sub_1BDBAD4(Component_object, v10);
     }
     ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))Component_object->klass[1]._1.implementedInterfaces)(
       Component_object,
@@ -71,15 +113,15 @@ LABEL_20:
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
         Component_object = (UnityEngine_Component_o *)BalanceConfig_TypeInfo;
       }
-      if ( i >= *(_DWORD *)(*(_QWORD *)&Component_object[7].fields.m_CachedPtr + 156LL) )
+      if ( i >= *(_DWORD *)(*(_QWORD *)&Component_object[7].fields.m_CachedPtr + 172LL) )
         break;
       itemDrawList = this->fields.itemDrawList;
       if ( !itemDrawList )
         goto LABEL_20;
       if ( i >= itemDrawList->max_length )
-        sub_1B8661C(Component_object, v10);
+        sub_1BDBADC(Component_object, v10, v11);
       v15 = itemDrawList->m_Items[i];
-      Component_object = (UnityEngine_Component_o *)PartyListViewItem__GetMember(item, i, v11);
+      Component_object = (UnityEngine_Component_o *)PartyListViewItem__GetMember(item, i, 0LL);
       if ( !v15 )
         goto LABEL_20;
       PartyOrganizationListViewItemDraw__SetInput(
@@ -105,79 +147,77 @@ void __fastcall PartyListViewItemDraw__SetItem(
   __int64 v11; // x1
   __int64 v12; // x1
   __int64 v13; // x1
-  void *questRestrictionInfo; // x0
   UISprite_o *baseSprite; // x22
-  System_String_o **v16; // x8
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  const MethodInfo *v19; // x2
+  void *IsSupportOnly; // x0
+  __int64 v16; // x1
+  System_String_o **v17; // x8
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
+  __int64 v20; // x2
   int32_t i; // w21
   struct PartyOrganizationListViewItemDraw_array *itemDrawList; // x8
-  PartyOrganizationListViewItemDraw_o *v22; // x22
+  PartyOrganizationListViewItemDraw_o *v23; // x22
   int32_t j; // w22
-  struct PartyOrganizationListViewItemDraw_array *v24; // x8
-  PartyOrganizationListViewItemDraw_o *v25; // x23
-  int v26; // w20
+  struct PartyOrganizationListViewItemDraw_array *v25; // x8
+  PartyOrganizationListViewItemDraw_o *v26; // x23
+  int v27; // w20
   UISprite_o *startingMemberFriendshipUpSprite; // x20
   UILabel_o *startingMemberFriendshipUpLabel; // x20
   UILabel_o *startingMemberFriendshipUpLabelOver; // x19
 
-  if ( (byte_4A49F03 & 1) == 0 )
+  if ( (byte_4B404B8 & 1) == 0 )
   {
-    sub_1B863B8(&AtlasManager_TypeInfo, item);
-    sub_1B863B8(&BalanceConfig_TypeInfo, v7);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v8);
-    sub_1B863B8(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v9);
-    sub_1B863B8(&StringLiteral_19460/*"func_group_icon_1009_starting"*/, v10);
-    sub_1B863B8(&StringLiteral_12097/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, v11);
-    sub_1B863B8(&StringLiteral_19366/*"formation_support_bg"*/, v12);
-    sub_1B863B8(&StringLiteral_19363/*"formation_member_bg"*/, v13);
-    byte_4A49F03 = 1;
+    sub_1BDB878(&AtlasManager_TypeInfo, item);
+    sub_1BDB878(&BalanceConfig_TypeInfo, v7);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v8);
+    sub_1BDB878(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v9);
+    sub_1BDB878(&StringLiteral_19728/*"func_group_icon_1009_starting"*/, v10);
+    sub_1BDB878(&StringLiteral_12277/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, v11);
+    sub_1BDB878(&StringLiteral_19630/*"formation_support_bg"*/, v12);
+    sub_1BDB878(&StringLiteral_19627/*"formation_member_bg"*/, v13);
+    byte_4B404B8 = 1;
   }
   if ( item && mode )
   {
-    questRestrictionInfo = item->fields.questRestrictionInfo;
     baseSprite = this->fields.baseSprite;
-    if ( questRestrictionInfo )
-      questRestrictionInfo = (void *)QuestRestrictionInfo__IsSupportOnly(
-                                       (QuestRestrictionInfo_o *)questRestrictionInfo,
-                                       0LL);
+    IsSupportOnly = (void *)PartyListViewItem__IsSupportOnly(item, 0LL);
     if ( !baseSprite )
-      goto LABEL_51;
-    v16 = (System_String_o **)&StringLiteral_19366/*"formation_support_bg"*/;
-    if ( ((unsigned __int8)questRestrictionInfo & 1) == 0 )
-      v16 = (System_String_o **)&StringLiteral_19363/*"formation_member_bg"*/;
-    UISprite__set_spriteName(baseSprite, *v16, 0LL);
-    questRestrictionInfo = SingletonTemplate_object___get_Instance((const MethodInfo_3839AA0 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    if ( !questRestrictionInfo )
-      goto LABEL_51;
-    *((_QWORD *)questRestrictionInfo + 11) = item;
-    sub_1B8635C((CGThumbnailListItem_o *)((char *)questRestrictionInfo + 88), (int32_t)item, v17, v18);
+      goto LABEL_49;
+    v17 = (System_String_o **)&StringLiteral_19630/*"formation_support_bg"*/;
+    if ( ((unsigned __int8)IsSupportOnly & 1) == 0 )
+      v17 = (System_String_o **)&StringLiteral_19627/*"formation_member_bg"*/;
+    UISprite__set_spriteName(baseSprite, *v17, 0LL);
+    IsSupportOnly = SingletonTemplate_object___get_Instance((const MethodInfo_39166A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    if ( !IsSupportOnly )
+      goto LABEL_49;
+    *((_QWORD *)IsSupportOnly + 12) = item;
+    sub_1BDB81C((CGThumbnailListItem_o *)((char *)IsSupportOnly + 96), (int32_t)item, v18, v19);
     if ( mode == 4 )
     {
       for ( i = 0; ; ++i )
       {
-        questRestrictionInfo = BalanceConfig_TypeInfo;
+        IsSupportOnly = BalanceConfig_TypeInfo;
         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-          questRestrictionInfo = BalanceConfig_TypeInfo;
+          IsSupportOnly = BalanceConfig_TypeInfo;
         }
-        if ( i >= *(_DWORD *)(*((_QWORD *)questRestrictionInfo + 23) + 156LL) )
+        if ( i >= *(_DWORD *)(*((_QWORD *)IsSupportOnly + 23) + 172LL) )
           break;
         itemDrawList = this->fields.itemDrawList;
         if ( !itemDrawList )
-          goto LABEL_51;
+          goto LABEL_49;
         if ( i >= itemDrawList->max_length )
-          goto LABEL_52;
-        v22 = itemDrawList->m_Items[i];
-        questRestrictionInfo = PartyListViewItem__GetMember(item, i, v19);
-        if ( !v22 )
-          goto LABEL_51;
+          goto LABEL_50;
+        v23 = itemDrawList->m_Items[i];
+        IsSupportOnly = PartyListViewItem__GetMember(item, i, 0LL);
+        if ( !v23 )
+          goto LABEL_49;
         PartyOrganizationListViewItemDraw__SetItem(
-          v22,
-          (PartyOrganizationListViewItem_o *)questRestrictionInfo,
+          v23,
+          (PartyOrganizationListViewItem_o *)IsSupportOnly,
           2 * (i != 1),
+          1,
           0LL);
       }
     }
@@ -185,86 +225,78 @@ void __fastcall PartyListViewItemDraw__SetItem(
     {
       for ( j = 0; ; ++j )
       {
-        questRestrictionInfo = BalanceConfig_TypeInfo;
+        IsSupportOnly = BalanceConfig_TypeInfo;
         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-          questRestrictionInfo = BalanceConfig_TypeInfo;
+          IsSupportOnly = BalanceConfig_TypeInfo;
         }
-        if ( j >= *(_DWORD *)(*((_QWORD *)questRestrictionInfo + 23) + 156LL) )
+        if ( j >= *(_DWORD *)(*((_QWORD *)IsSupportOnly + 23) + 172LL) )
           break;
-        v24 = this->fields.itemDrawList;
-        if ( !v24 )
-          goto LABEL_51;
-        if ( j >= v24->max_length )
-LABEL_52:
-          sub_1B8661C(questRestrictionInfo, item);
-        v25 = v24->m_Items[j];
-        questRestrictionInfo = PartyListViewItem__GetMember(item, j, v19);
+        v25 = this->fields.itemDrawList;
         if ( !v25 )
-          goto LABEL_51;
-        PartyOrganizationListViewItemDraw__SetItem(
-          v25,
-          (PartyOrganizationListViewItem_o *)questRestrictionInfo,
-          mode,
-          0LL);
+          goto LABEL_49;
+        if ( j >= v25->max_length )
+LABEL_50:
+          sub_1BDBADC(IsSupportOnly, v16, v20);
+        v26 = v25->m_Items[j];
+        IsSupportOnly = PartyListViewItem__GetMember(item, j, 0LL);
+        if ( !v26 )
+          goto LABEL_49;
+        PartyOrganizationListViewItemDraw__SetItem(v26, (PartyOrganizationListViewItem_o *)IsSupportOnly, mode, 1, 0LL);
       }
     }
-    questRestrictionInfo = this->fields.warningBase;
-    if ( !questRestrictionInfo )
-      goto LABEL_51;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)questRestrictionInfo, 0, 0LL);
-    questRestrictionInfo = BalanceConfig_TypeInfo;
+    IsSupportOnly = this->fields.warningBase;
+    if ( !IsSupportOnly )
+      goto LABEL_49;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsSupportOnly, 0, 0LL);
+    IsSupportOnly = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      questRestrictionInfo = BalanceConfig_TypeInfo;
+      IsSupportOnly = BalanceConfig_TypeInfo;
     }
     if ( !this->fields.startingMemberFriendshipUpSprite )
-      goto LABEL_51;
-    v26 = *(_DWORD *)(*((_QWORD *)questRestrictionInfo + 23) + 1096LL);
-    questRestrictionInfo = UnityEngine_Component__get_gameObject(
-                             (UnityEngine_Component_o *)this->fields.startingMemberFriendshipUpSprite,
-                             0LL);
-    if ( !questRestrictionInfo )
-      goto LABEL_51;
-    if ( v26 >= 1 )
+      goto LABEL_49;
+    v27 = *(_DWORD *)(*((_QWORD *)IsSupportOnly + 23) + 1136LL);
+    IsSupportOnly = UnityEngine_Component__get_gameObject(
+                      (UnityEngine_Component_o *)this->fields.startingMemberFriendshipUpSprite,
+                      0LL);
+    if ( !IsSupportOnly )
+      goto LABEL_49;
+    if ( v27 >= 1 )
     {
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)questRestrictionInfo, 1, 0LL);
-      questRestrictionInfo = this->fields.startingMemberFriendshipUpLabel;
-      if ( questRestrictionInfo )
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsSupportOnly, 1, 0LL);
+      IsSupportOnly = this->fields.startingMemberFriendshipUpLabel;
+      if ( IsSupportOnly )
       {
-        questRestrictionInfo = UnityEngine_Component__get_gameObject(
-                                 (UnityEngine_Component_o *)questRestrictionInfo,
-                                 0LL);
-        if ( questRestrictionInfo )
+        IsSupportOnly = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)IsSupportOnly, 0LL);
+        if ( IsSupportOnly )
         {
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)questRestrictionInfo, 1, 0LL);
-          questRestrictionInfo = this->fields.startingMemberFriendshipUpLabelOver;
-          if ( questRestrictionInfo )
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsSupportOnly, 1, 0LL);
+          IsSupportOnly = this->fields.startingMemberFriendshipUpLabelOver;
+          if ( IsSupportOnly )
           {
-            questRestrictionInfo = UnityEngine_Component__get_gameObject(
-                                     (UnityEngine_Component_o *)questRestrictionInfo,
-                                     0LL);
-            if ( questRestrictionInfo )
+            IsSupportOnly = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)IsSupportOnly, 0LL);
+            if ( IsSupportOnly )
             {
-              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)questRestrictionInfo, 1, 0LL);
+              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsSupportOnly, 1, 0LL);
               startingMemberFriendshipUpSprite = this->fields.startingMemberFriendshipUpSprite;
               if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-              AtlasManager__SetEventUI(startingMemberFriendshipUpSprite, (System_String_o *)StringLiteral_19460/*"func_group_icon_1009_starting"*/, 0LL);
+              AtlasManager__SetEventUI(startingMemberFriendshipUpSprite, (System_String_o *)StringLiteral_19728/*"func_group_icon_1009_starting"*/, 0LL);
               startingMemberFriendshipUpLabel = this->fields.startingMemberFriendshipUpLabel;
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              questRestrictionInfo = LocalizationManager__Get((System_String_o *)StringLiteral_12097/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0LL);
+              IsSupportOnly = LocalizationManager__Get((System_String_o *)StringLiteral_12277/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0LL);
               if ( startingMemberFriendshipUpLabel )
               {
-                UILabel__set_text(startingMemberFriendshipUpLabel, (System_String_o *)questRestrictionInfo, 0LL);
+                UILabel__set_text(startingMemberFriendshipUpLabel, (System_String_o *)IsSupportOnly, 0LL);
                 startingMemberFriendshipUpLabelOver = this->fields.startingMemberFriendshipUpLabelOver;
-                questRestrictionInfo = LocalizationManager__Get((System_String_o *)StringLiteral_12097/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0LL);
+                IsSupportOnly = LocalizationManager__Get((System_String_o *)StringLiteral_12277/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0LL);
                 if ( startingMemberFriendshipUpLabelOver )
                 {
-                  UILabel__set_text(startingMemberFriendshipUpLabelOver, (System_String_o *)questRestrictionInfo, 0LL);
+                  UILabel__set_text(startingMemberFriendshipUpLabelOver, (System_String_o *)IsSupportOnly, 0LL);
                   return;
                 }
               }
@@ -272,23 +304,42 @@ LABEL_52:
           }
         }
       }
-LABEL_51:
-      sub_1B86614(questRestrictionInfo, item);
+LABEL_49:
+      sub_1BDBAD4(IsSupportOnly, v16);
     }
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)questRestrictionInfo, 0, 0LL);
-    questRestrictionInfo = this->fields.startingMemberFriendshipUpLabel;
-    if ( !questRestrictionInfo )
-      goto LABEL_51;
-    questRestrictionInfo = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)questRestrictionInfo, 0LL);
-    if ( !questRestrictionInfo )
-      goto LABEL_51;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)questRestrictionInfo, 0, 0LL);
-    questRestrictionInfo = this->fields.startingMemberFriendshipUpLabelOver;
-    if ( !questRestrictionInfo )
-      goto LABEL_51;
-    questRestrictionInfo = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)questRestrictionInfo, 0LL);
-    if ( !questRestrictionInfo )
-      goto LABEL_51;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)questRestrictionInfo, 0, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsSupportOnly, 0, 0LL);
+    IsSupportOnly = this->fields.startingMemberFriendshipUpLabel;
+    if ( !IsSupportOnly )
+      goto LABEL_49;
+    IsSupportOnly = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)IsSupportOnly, 0LL);
+    if ( !IsSupportOnly )
+      goto LABEL_49;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsSupportOnly, 0, 0LL);
+    IsSupportOnly = this->fields.startingMemberFriendshipUpLabelOver;
+    if ( !IsSupportOnly )
+      goto LABEL_49;
+    IsSupportOnly = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)IsSupportOnly, 0LL);
+    if ( !IsSupportOnly )
+      goto LABEL_49;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsSupportOnly, 0, 0LL);
   }
+}
+
+
+void __fastcall PartyListViewItemDraw___c__DisplayClass12_0___ctor(
+        PartyListViewItemDraw___c__DisplayClass12_0_o *this,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+}
+
+
+void __fastcall PartyListViewItemDraw___c__DisplayClass12_0___SetActiveGrandEffect_b__0(
+        PartyListViewItemDraw___c__DisplayClass12_0_o *this,
+        PartyOrganizationListViewItemDraw_o *item,
+        const MethodInfo *method)
+{
+  if ( !item )
+    sub_1BDBAD4(this, 0LL);
+  PartyOrganizationListViewItemDraw__SetActiveGrandEffect(item, this->fields.flag, 0LL);
 }

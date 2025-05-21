@@ -47,410 +47,368 @@ void __fastcall AccountExtensions___cctor(const MethodInfo *method)
   __int64 v45; // x1
   __int64 v46; // x0
   __int64 v47; // x1
-  int32_t v48; // w2
+  __int64 v48; // x2
   const MethodInfo *v49; // x3
   __int64 v50; // x19
   int32_t v51; // w1
-  int32_t v52; // w2
-  const MethodInfo *v53; // x3
-  int32_t v54; // w1
-  int32_t v55; // w2
+  const MethodInfo *v52; // x3
+  int32_t v53; // w1
+  const MethodInfo *v54; // x3
+  int32_t v55; // w1
   const MethodInfo *v56; // x3
   int32_t v57; // w1
-  int32_t v58; // w2
-  const MethodInfo *v59; // x3
-  int32_t v60; // w1
-  int32_t v61; // w2
+  const MethodInfo *v58; // x3
+  int32_t v59; // w1
+  const MethodInfo *v60; // x3
+  int32_t v61; // w1
   const MethodInfo *v62; // x3
   int32_t v63; // w1
-  int32_t v64; // w2
-  const MethodInfo *v65; // x3
-  int32_t v66; // w1
-  int32_t v67; // w2
+  const MethodInfo *v64; // x3
+  int32_t v65; // w1
+  const MethodInfo *v66; // x3
+  int32_t v67; // w1
   const MethodInfo *v68; // x3
   int32_t v69; // w1
-  int32_t v70; // w2
-  const MethodInfo *v71; // x3
-  int32_t v72; // w1
-  int32_t v73; // w2
+  const MethodInfo *v70; // x3
+  int32_t v71; // w1
+  const MethodInfo *v72; // x3
+  int32_t v73; // w1
   const MethodInfo *v74; // x3
   int32_t v75; // w1
-  int32_t v76; // w2
-  const MethodInfo *v77; // x3
-  int32_t v78; // w1
-  int32_t v79; // w2
+  const MethodInfo *v76; // x3
+  int32_t v77; // w1
+  const MethodInfo *v78; // x3
+  int32_t v79; // w1
   const MethodInfo *v80; // x3
   int32_t v81; // w1
-  int32_t v82; // w2
-  const MethodInfo *v83; // x3
-  int32_t v84; // w1
-  int32_t v85; // w2
+  const MethodInfo *v82; // x3
+  int32_t v83; // w1
+  const MethodInfo *v84; // x3
+  int32_t v85; // w1
   const MethodInfo *v86; // x3
   int32_t v87; // w1
-  int32_t v88; // w2
-  const MethodInfo *v89; // x3
-  int32_t v90; // w1
-  int32_t v91; // w2
+  const MethodInfo *v88; // x3
+  int32_t v89; // w1
+  const MethodInfo *v90; // x3
+  int32_t v91; // w1
   const MethodInfo *v92; // x3
   int32_t v93; // w1
-  int32_t v94; // w2
-  const MethodInfo *v95; // x3
-  int32_t v96; // w1
-  int32_t v97; // w2
+  const MethodInfo *v94; // x3
+  int32_t v95; // w1
+  const MethodInfo *v96; // x3
+  int32_t v97; // w1
   const MethodInfo *v98; // x3
   int32_t v99; // w1
-  int32_t v100; // w2
-  const MethodInfo *v101; // x3
-  int32_t v102; // w1
-  int32_t v103; // w2
+  const MethodInfo *v100; // x3
+  int32_t v101; // w1
+  const MethodInfo *v102; // x3
+  int32_t v103; // w1
   const MethodInfo *v104; // x3
   int32_t v105; // w1
-  int32_t v106; // w2
-  const MethodInfo *v107; // x3
-  int32_t v108; // w1
-  int32_t v109; // w2
+  const MethodInfo *v106; // x3
+  int32_t v107; // w1
+  const MethodInfo *v108; // x3
+  int32_t v109; // w1
   const MethodInfo *v110; // x3
   int32_t v111; // w1
-  int32_t v112; // w2
-  const MethodInfo *v113; // x3
-  int32_t v114; // w1
-  int32_t v115; // w2
+  const MethodInfo *v112; // x3
+  int32_t v113; // w1
+  const MethodInfo *v114; // x3
+  int32_t v115; // w1
   const MethodInfo *v116; // x3
   int32_t v117; // w1
-  int32_t v118; // w2
-  const MethodInfo *v119; // x3
-  int32_t v120; // w1
-  int32_t v121; // w2
+  const MethodInfo *v118; // x3
+  int32_t v119; // w1
+  const MethodInfo *v120; // x3
+  int32_t v121; // w1
   const MethodInfo *v122; // x3
   int32_t v123; // w1
-  int32_t v124; // w2
-  const MethodInfo *v125; // x3
-  int32_t v126; // w1
-  int32_t v127; // w2
+  const MethodInfo *v124; // x3
+  int32_t v125; // w1
+  const MethodInfo *v126; // x3
+  int32_t v127; // w1
   const MethodInfo *v128; // x3
   int32_t v129; // w1
-  int32_t v130; // w2
-  const MethodInfo *v131; // x3
-  int32_t v132; // w1
-  int32_t v133; // w2
+  const MethodInfo *v130; // x3
+  int32_t v131; // w1
+  const MethodInfo *v132; // x3
+  int32_t v133; // w1
   const MethodInfo *v134; // x3
   int32_t v135; // w1
   int32_t v136; // w2
   const MethodInfo *v137; // x3
-  int32_t v138; // w1
-  int32_t v139; // w2
-  const MethodInfo *v140; // x3
-  int32_t v141; // w1
-  int32_t v142; // w2
-  const MethodInfo *v143; // x3
-  int32_t v144; // w1
-  int32_t v145; // w2
-  const MethodInfo *v146; // x3
-  int32_t v147; // w1
-  int32_t v148; // w2
-  const MethodInfo *v149; // x3
-  int32_t v150; // w1
-  int32_t v151; // w2
-  const MethodInfo *v152; // x3
-  int32_t v153; // w1
-  int32_t v154; // w2
-  const MethodInfo *v155; // x3
-  int32_t v156; // w1
-  int32_t v157; // w2
-  const MethodInfo *v158; // x3
-  int32_t v159; // w1
-  int32_t v160; // w2
-  const MethodInfo *v161; // x3
-  int32_t v162; // w1
-  int32_t v163; // w2
-  const MethodInfo *v164; // x3
-  int32_t v165; // w1
-  int32_t v166; // w2
-  const MethodInfo *v167; // x3
-  int32_t v168; // w1
-  int32_t v169; // w2
-  const MethodInfo *v170; // x3
-  int32_t v171; // w1
-  int32_t v172; // w2
-  const MethodInfo *v173; // x3
-  int32_t v174; // w1
-  int32_t v175; // w2
-  const MethodInfo *v176; // x3
-  int32_t v177; // w1
-  int32_t v178; // w2
-  const MethodInfo *v179; // x3
 
-  if ( (byte_4A4C354 & 1) == 0 )
+  if ( (byte_4B4297D & 1) == 0 )
   {
-    sub_1B863B8(&AccountExtensions_TypeInfo, v1);
-    sub_1B863B8(&string___TypeInfo, v2);
-    sub_1B863B8(&StringLiteral_8814/*"Maverick"*/, v3);
-    sub_1B863B8(&StringLiteral_13596/*"The Evacuator"*/, v4);
-    sub_1B863B8(&StringLiteral_21825/*"n3o"*/, v5);
-    sub_1B863B8(&StringLiteral_10473/*"Plank"*/, v6);
-    sub_1B863B8(&StringLiteral_11013/*"Read End Connection"*/, v7);
-    sub_1B863B8(&StringLiteral_8776/*"Mark"*/, v8);
-    sub_1B863B8(&StringLiteral_10439/*"Penis Man"*/, v9);
-    sub_1B863B8(&StringLiteral_2693/*"BARRY"*/, v10);
-    sub_1B863B8(&StringLiteral_15439/*"Wizard"*/, v11);
-    sub_1B863B8(&StringLiteral_12957/*"Sundown"*/, v12);
-    sub_1B863B8(&StringLiteral_10395/*"Parmesian"*/, v13);
-    sub_1B863B8(&StringLiteral_2103/*"AXIX"*/, v14);
-    sub_1B863B8(&StringLiteral_14716/*"Unconventional"*/, v15);
-    sub_1B863B8(&StringLiteral_8815/*"Max"*/, v16);
-    sub_1B863B8(&StringLiteral_8870/*"Merlin"*/, v17);
-    sub_1B863B8(&StringLiteral_15573/*"Z - Ray"*/, v18);
-    sub_1B863B8(&StringLiteral_3209/*"Blind"*/, v19);
-    sub_1B863B8(&StringLiteral_8069/*"Kenneth"*/, v20);
-    sub_1B863B8(&StringLiteral_7810/*"Ironside"*/, v21);
-    sub_1B863B8(&StringLiteral_15131/*"Vitamin C"*/, v22);
-    sub_1B863B8(&StringLiteral_10438/*"Penetrator"*/, v23);
-    sub_1B863B8(&StringLiteral_15399/*"White Mice"*/, v24);
-    sub_1B863B8(&StringLiteral_15576/*"Zoolander"*/, v25);
-    sub_1B863B8(&StringLiteral_13573/*"The Bin Man"*/, v26);
-    sub_1B863B8(&StringLiteral_12686/*"Slider"*/, v27);
-    sub_1B863B8(&StringLiteral_8030/*"Jester"*/, v28);
-    sub_1B863B8(&StringLiteral_2206/*"Alpro"*/, v29);
-    sub_1B863B8(&StringLiteral_5859/*"Egg-man"*/, v30);
-    sub_1B863B8(&StringLiteral_12775/*"Spitfire"*/, v31);
-    sub_1B863B8(&StringLiteral_11061/*"Redtail"*/, v32);
-    sub_1B863B8(&StringLiteral_10354/*"Palette"*/, v33);
-    sub_1B863B8(&StringLiteral_13101/*"T-Bag"*/, v34);
-    sub_1B863B8(&StringLiteral_7378/*"Ice Man"*/, v35);
-    sub_1B863B8(&StringLiteral_9255/*"Neo1988"*/, v36);
-    sub_1B863B8(&StringLiteral_7007/*"Giant Lump"*/, v37);
-    sub_1B863B8(&StringLiteral_13649/*"The Sperminator"*/, v38);
-    sub_1B863B8(&StringLiteral_5868/*"Ejaculatory"*/, v39);
-    sub_1B863B8(&StringLiteral_12484/*"Sergio Georgini"*/, v40);
-    sub_1B863B8(&StringLiteral_6121/*"Eva"*/, v41);
-    sub_1B863B8(&StringLiteral_5456/*"ETC"*/, v42);
-    sub_1B863B8(&StringLiteral_11028/*"RearEnd"*/, v43);
-    sub_1B863B8(&StringLiteral_7483/*"Infiltrator"*/, v44);
-    sub_1B863B8(&StringLiteral_4493/*"Coaster"*/, v45);
-    byte_4A4C354 = 1;
+    sub_1BDB878(&AccountExtensions_TypeInfo, v1);
+    sub_1BDB878(&string___TypeInfo, v2);
+    sub_1BDB878(&StringLiteral_8959/*"Maverick"*/, v3);
+    sub_1BDB878(&StringLiteral_13794/*"The Evacuator"*/, v4);
+    sub_1BDB878(&StringLiteral_22165/*"n3o"*/, v5);
+    sub_1BDB878(&StringLiteral_10629/*"Plank"*/, v6);
+    sub_1BDB878(&StringLiteral_11176/*"Read End Connection"*/, v7);
+    sub_1BDB878(&StringLiteral_8921/*"Mark"*/, v8);
+    sub_1BDB878(&StringLiteral_10595/*"Penis Man"*/, v9);
+    sub_1BDB878(&StringLiteral_2705/*"BARRY"*/, v10);
+    sub_1BDB878(&StringLiteral_15641/*"Wizard"*/, v11);
+    sub_1BDB878(&StringLiteral_13149/*"Sundown"*/, v12);
+    sub_1BDB878(&StringLiteral_10551/*"Parmesian"*/, v13);
+    sub_1BDB878(&StringLiteral_2115/*"AXIX"*/, v14);
+    sub_1BDB878(&StringLiteral_14914/*"Unconventional"*/, v15);
+    sub_1BDB878(&StringLiteral_8960/*"Max"*/, v16);
+    sub_1BDB878(&StringLiteral_9015/*"Merlin"*/, v17);
+    sub_1BDB878(&StringLiteral_15775/*"Z - Ray"*/, v18);
+    sub_1BDB878(&StringLiteral_3224/*"Blind"*/, v19);
+    sub_1BDB878(&StringLiteral_8210/*"Kenneth"*/, v20);
+    sub_1BDB878(&StringLiteral_7950/*"Ironside"*/, v21);
+    sub_1BDB878(&StringLiteral_15331/*"Vitamin C"*/, v22);
+    sub_1BDB878(&StringLiteral_10594/*"Penetrator"*/, v23);
+    sub_1BDB878(&StringLiteral_15599/*"White Mice"*/, v24);
+    sub_1BDB878(&StringLiteral_15778/*"Zoolander"*/, v25);
+    sub_1BDB878(&StringLiteral_13771/*"The Bin Man"*/, v26);
+    sub_1BDB878(&StringLiteral_12877/*"Slider"*/, v27);
+    sub_1BDB878(&StringLiteral_8171/*"Jester"*/, v28);
+    sub_1BDB878(&StringLiteral_2218/*"Alpro"*/, v29);
+    sub_1BDB878(&StringLiteral_5938/*"Egg-man"*/, v30);
+    sub_1BDB878(&StringLiteral_12966/*"Spitfire"*/, v31);
+    sub_1BDB878(&StringLiteral_11223/*"Redtail"*/, v32);
+    sub_1BDB878(&StringLiteral_10510/*"Palette"*/, v33);
+    sub_1BDB878(&StringLiteral_13293/*"T-Bag"*/, v34);
+    sub_1BDB878(&StringLiteral_7517/*"Ice Man"*/, v35);
+    sub_1BDB878(&StringLiteral_9403/*"Neo1988"*/, v36);
+    sub_1BDB878(&StringLiteral_7118/*"Giant Lump"*/, v37);
+    sub_1BDB878(&StringLiteral_13847/*"The Sperminator"*/, v38);
+    sub_1BDB878(&StringLiteral_5947/*"Ejaculatory"*/, v39);
+    sub_1BDB878(&StringLiteral_12672/*"Sergio Georgini"*/, v40);
+    sub_1BDB878(&StringLiteral_6200/*"Eva"*/, v41);
+    sub_1BDB878(&StringLiteral_5533/*"ETC"*/, v42);
+    sub_1BDB878(&StringLiteral_11191/*"RearEnd"*/, v43);
+    sub_1BDB878(&StringLiteral_7622/*"Infiltrator"*/, v44);
+    sub_1BDB878(&StringLiteral_4559/*"Coaster"*/, v45);
+    byte_4B4297D = 1;
   }
-  v46 = sub_1B86460(string___TypeInfo, 43LL);
+  v46 = sub_1BDB920(string___TypeInfo, 43LL);
   if ( !v46 )
-    sub_1B86614(0LL, v47);
+    sub_1BDBAD4(0LL, v47);
   v50 = v46;
   if ( !*(_DWORD *)(v46 + 24) )
     goto LABEL_48;
-  v51 = StringLiteral_10438/*"Penetrator"*/;
-  *(_QWORD *)(v46 + 32) = StringLiteral_10438/*"Penetrator"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v46 + 32), v51, v48, v49);
+  v51 = StringLiteral_10594/*"Penetrator"*/;
+  *(_QWORD *)(v46 + 32) = StringLiteral_10594/*"Penetrator"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v46 + 32), v51, v48, v49);
   if ( *(_DWORD *)(v50 + 24) <= 1u )
     goto LABEL_48;
-  v54 = StringLiteral_8069/*"Kenneth"*/;
-  *(_QWORD *)(v50 + 40) = StringLiteral_8069/*"Kenneth"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 40), v54, v52, v53);
+  v53 = StringLiteral_8210/*"Kenneth"*/;
+  *(_QWORD *)(v50 + 40) = StringLiteral_8210/*"Kenneth"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 40), v53, v48, v52);
   if ( *(_DWORD *)(v50 + 24) <= 2u )
     goto LABEL_48;
-  v57 = StringLiteral_10354/*"Palette"*/;
-  *(_QWORD *)(v50 + 48) = StringLiteral_10354/*"Palette"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 48), v57, v55, v56);
+  v55 = StringLiteral_10510/*"Palette"*/;
+  *(_QWORD *)(v50 + 48) = StringLiteral_10510/*"Palette"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 48), v55, v48, v54);
   if ( *(_DWORD *)(v50 + 24) <= 3u )
     goto LABEL_48;
-  v60 = StringLiteral_8776/*"Mark"*/;
-  *(_QWORD *)(v50 + 56) = StringLiteral_8776/*"Mark"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 56), v60, v58, v59);
+  v57 = StringLiteral_8921/*"Mark"*/;
+  *(_QWORD *)(v50 + 56) = StringLiteral_8921/*"Mark"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 56), v57, v48, v56);
   if ( *(_DWORD *)(v50 + 24) <= 4u )
     goto LABEL_48;
-  v63 = StringLiteral_10395/*"Parmesian"*/;
-  *(_QWORD *)(v50 + 64) = StringLiteral_10395/*"Parmesian"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 64), v63, v61, v62);
+  v59 = StringLiteral_10551/*"Parmesian"*/;
+  *(_QWORD *)(v50 + 64) = StringLiteral_10551/*"Parmesian"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 64), v59, v48, v58);
   if ( *(_DWORD *)(v50 + 24) <= 5u )
     goto LABEL_48;
-  v66 = StringLiteral_12775/*"Spitfire"*/;
-  *(_QWORD *)(v50 + 72) = StringLiteral_12775/*"Spitfire"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 72), v66, v64, v65);
+  v61 = StringLiteral_12966/*"Spitfire"*/;
+  *(_QWORD *)(v50 + 72) = StringLiteral_12966/*"Spitfire"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 72), v61, v48, v60);
   if ( *(_DWORD *)(v50 + 24) <= 6u )
     goto LABEL_48;
-  v69 = StringLiteral_6121/*"Eva"*/;
-  *(_QWORD *)(v50 + 80) = StringLiteral_6121/*"Eva"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 80), v69, v67, v68);
+  v63 = StringLiteral_6200/*"Eva"*/;
+  *(_QWORD *)(v50 + 80) = StringLiteral_6200/*"Eva"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 80), v63, v48, v62);
   if ( *(_DWORD *)(v50 + 24) <= 7u )
     goto LABEL_48;
-  v72 = StringLiteral_2206/*"Alpro"*/;
-  *(_QWORD *)(v50 + 88) = StringLiteral_2206/*"Alpro"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 88), v72, v70, v71);
+  v65 = StringLiteral_2218/*"Alpro"*/;
+  *(_QWORD *)(v50 + 88) = StringLiteral_2218/*"Alpro"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 88), v65, v48, v64);
   if ( *(_DWORD *)(v50 + 24) <= 8u )
     goto LABEL_48;
-  v75 = StringLiteral_11061/*"Redtail"*/;
-  *(_QWORD *)(v50 + 96) = StringLiteral_11061/*"Redtail"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 96), v75, v73, v74);
+  v67 = StringLiteral_11223/*"Redtail"*/;
+  *(_QWORD *)(v50 + 96) = StringLiteral_11223/*"Redtail"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 96), v67, v48, v66);
   if ( *(_DWORD *)(v50 + 24) <= 9u )
     goto LABEL_48;
-  v78 = StringLiteral_7483/*"Infiltrator"*/;
-  *(_QWORD *)(v50 + 104) = StringLiteral_7483/*"Infiltrator"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 104), v78, v76, v77);
+  v69 = StringLiteral_7622/*"Infiltrator"*/;
+  *(_QWORD *)(v50 + 104) = StringLiteral_7622/*"Infiltrator"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 104), v69, v48, v68);
   if ( *(_DWORD *)(v50 + 24) <= 0xAu )
     goto LABEL_48;
-  v81 = StringLiteral_11028/*"RearEnd"*/;
-  *(_QWORD *)(v50 + 112) = StringLiteral_11028/*"RearEnd"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 112), v81, v79, v80);
+  v71 = StringLiteral_11191/*"RearEnd"*/;
+  *(_QWORD *)(v50 + 112) = StringLiteral_11191/*"RearEnd"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 112), v71, v48, v70);
   if ( *(_DWORD *)(v50 + 24) <= 0xBu )
     goto LABEL_48;
-  v84 = StringLiteral_15399/*"White Mice"*/;
-  *(_QWORD *)(v50 + 120) = StringLiteral_15399/*"White Mice"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 120), v84, v82, v83);
+  v73 = StringLiteral_15599/*"White Mice"*/;
+  *(_QWORD *)(v50 + 120) = StringLiteral_15599/*"White Mice"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 120), v73, v48, v72);
   if ( *(_DWORD *)(v50 + 24) <= 0xCu )
     goto LABEL_48;
-  v87 = StringLiteral_14716/*"Unconventional"*/;
-  *(_QWORD *)(v50 + 128) = StringLiteral_14716/*"Unconventional"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 128), v87, v85, v86);
+  v75 = StringLiteral_14914/*"Unconventional"*/;
+  *(_QWORD *)(v50 + 128) = StringLiteral_14914/*"Unconventional"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 128), v75, v48, v74);
   if ( *(_DWORD *)(v50 + 24) <= 0xDu )
     goto LABEL_48;
-  v90 = StringLiteral_10439/*"Penis Man"*/;
-  *(_QWORD *)(v50 + 136) = StringLiteral_10439/*"Penis Man"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 136), v90, v88, v89);
+  v77 = StringLiteral_10595/*"Penis Man"*/;
+  *(_QWORD *)(v50 + 136) = StringLiteral_10595/*"Penis Man"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 136), v77, v48, v76);
   if ( *(_DWORD *)(v50 + 24) <= 0xEu )
     goto LABEL_48;
-  v93 = StringLiteral_13573/*"The Bin Man"*/;
-  *(_QWORD *)(v50 + 144) = StringLiteral_13573/*"The Bin Man"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 144), v93, v91, v92);
+  v79 = StringLiteral_13771/*"The Bin Man"*/;
+  *(_QWORD *)(v50 + 144) = StringLiteral_13771/*"The Bin Man"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 144), v79, v48, v78);
   if ( *(_DWORD *)(v50 + 24) <= 0xFu )
     goto LABEL_48;
-  v96 = StringLiteral_13596/*"The Evacuator"*/;
-  *(_QWORD *)(v50 + 152) = StringLiteral_13596/*"The Evacuator"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 152), v96, v94, v95);
+  v81 = StringLiteral_13794/*"The Evacuator"*/;
+  *(_QWORD *)(v50 + 152) = StringLiteral_13794/*"The Evacuator"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 152), v81, v48, v80);
   if ( *(_DWORD *)(v50 + 24) <= 0x10u )
     goto LABEL_48;
-  v99 = StringLiteral_7007/*"Giant Lump"*/;
-  *(_QWORD *)(v50 + 160) = StringLiteral_7007/*"Giant Lump"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 160), v99, v97, v98);
+  v83 = StringLiteral_7118/*"Giant Lump"*/;
+  *(_QWORD *)(v50 + 160) = StringLiteral_7118/*"Giant Lump"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 160), v83, v48, v82);
   if ( *(_DWORD *)(v50 + 24) <= 0x11u )
     goto LABEL_48;
-  v102 = StringLiteral_5868/*"Ejaculatory"*/;
-  *(_QWORD *)(v50 + 168) = StringLiteral_5868/*"Ejaculatory"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 168), v102, v100, v101);
+  v85 = StringLiteral_5947/*"Ejaculatory"*/;
+  *(_QWORD *)(v50 + 168) = StringLiteral_5947/*"Ejaculatory"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 168), v85, v48, v84);
   if ( *(_DWORD *)(v50 + 24) <= 0x12u )
     goto LABEL_48;
-  v105 = StringLiteral_13649/*"The Sperminator"*/;
-  *(_QWORD *)(v50 + 176) = StringLiteral_13649/*"The Sperminator"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 176), v105, v103, v104);
+  v87 = StringLiteral_13847/*"The Sperminator"*/;
+  *(_QWORD *)(v50 + 176) = StringLiteral_13847/*"The Sperminator"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 176), v87, v48, v86);
   if ( *(_DWORD *)(v50 + 24) <= 0x13u )
     goto LABEL_48;
-  v108 = StringLiteral_8030/*"Jester"*/;
-  *(_QWORD *)(v50 + 184) = StringLiteral_8030/*"Jester"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 184), v108, v106, v107);
+  v89 = StringLiteral_8171/*"Jester"*/;
+  *(_QWORD *)(v50 + 184) = StringLiteral_8171/*"Jester"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 184), v89, v48, v88);
   if ( *(_DWORD *)(v50 + 24) <= 0x14u )
     goto LABEL_48;
-  v111 = StringLiteral_8814/*"Maverick"*/;
-  *(_QWORD *)(v50 + 192) = StringLiteral_8814/*"Maverick"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 192), v111, v109, v110);
+  v91 = StringLiteral_8959/*"Maverick"*/;
+  *(_QWORD *)(v50 + 192) = StringLiteral_8959/*"Maverick"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 192), v91, v48, v90);
   if ( *(_DWORD *)(v50 + 24) <= 0x15u )
     goto LABEL_48;
-  v114 = StringLiteral_7378/*"Ice Man"*/;
-  *(_QWORD *)(v50 + 200) = StringLiteral_7378/*"Ice Man"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 200), v114, v112, v113);
+  v93 = StringLiteral_7517/*"Ice Man"*/;
+  *(_QWORD *)(v50 + 200) = StringLiteral_7517/*"Ice Man"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 200), v93, v48, v92);
   if ( *(_DWORD *)(v50 + 24) <= 0x16u )
     goto LABEL_48;
-  v117 = (int)StringLiteral_12686/*"Slider"*/;
-  *(_QWORD *)(v50 + 208) = StringLiteral_12686/*"Slider"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 208), v117, v115, v116);
+  v95 = (int)StringLiteral_12877/*"Slider"*/;
+  *(_QWORD *)(v50 + 208) = StringLiteral_12877/*"Slider"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 208), v95, v48, v94);
   if ( *(_DWORD *)(v50 + 24) <= 0x17u )
     goto LABEL_48;
-  v120 = StringLiteral_7810/*"Ironside"*/;
-  *(_QWORD *)(v50 + 216) = StringLiteral_7810/*"Ironside"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 216), v120, v118, v119);
+  v97 = StringLiteral_7950/*"Ironside"*/;
+  *(_QWORD *)(v50 + 216) = StringLiteral_7950/*"Ironside"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 216), v97, v48, v96);
   if ( *(_DWORD *)(v50 + 24) <= 0x18u )
     goto LABEL_48;
-  v123 = StringLiteral_13101/*"T-Bag"*/;
-  *(_QWORD *)(v50 + 224) = StringLiteral_13101/*"T-Bag"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 224), v123, v121, v122);
+  v99 = StringLiteral_13293/*"T-Bag"*/;
+  *(_QWORD *)(v50 + 224) = StringLiteral_13293/*"T-Bag"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 224), v99, v48, v98);
   if ( *(_DWORD *)(v50 + 24) <= 0x19u )
     goto LABEL_48;
-  v126 = StringLiteral_12957/*"Sundown"*/;
-  *(_QWORD *)(v50 + 232) = StringLiteral_12957/*"Sundown"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 232), v126, v124, v125);
+  v101 = StringLiteral_13149/*"Sundown"*/;
+  *(_QWORD *)(v50 + 232) = StringLiteral_13149/*"Sundown"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 232), v101, v48, v100);
   if ( *(_DWORD *)(v50 + 24) <= 0x1Au )
     goto LABEL_48;
-  v129 = StringLiteral_8815/*"Max"*/;
-  *(_QWORD *)(v50 + 240) = StringLiteral_8815/*"Max"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 240), v129, v127, v128);
+  v103 = StringLiteral_8960/*"Max"*/;
+  *(_QWORD *)(v50 + 240) = StringLiteral_8960/*"Max"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 240), v103, v48, v102);
   if ( *(_DWORD *)(v50 + 24) <= 0x1Bu )
     goto LABEL_48;
-  v132 = StringLiteral_15439/*"Wizard"*/;
-  *(_QWORD *)(v50 + 248) = StringLiteral_15439/*"Wizard"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 248), v132, v130, v131);
+  v105 = StringLiteral_15641/*"Wizard"*/;
+  *(_QWORD *)(v50 + 248) = StringLiteral_15641/*"Wizard"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 248), v105, v48, v104);
   if ( *(_DWORD *)(v50 + 24) <= 0x1Cu )
     goto LABEL_48;
-  v135 = StringLiteral_8870/*"Merlin"*/;
-  *(_QWORD *)(v50 + 256) = StringLiteral_8870/*"Merlin"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 256), v135, v133, v134);
+  v107 = StringLiteral_9015/*"Merlin"*/;
+  *(_QWORD *)(v50 + 256) = StringLiteral_9015/*"Merlin"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 256), v107, v48, v106);
   if ( *(_DWORD *)(v50 + 24) <= 0x1Du )
     goto LABEL_48;
-  v138 = StringLiteral_2693/*"BARRY"*/;
-  *(_QWORD *)(v50 + 264) = StringLiteral_2693/*"BARRY"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 264), v138, v136, v137);
+  v109 = StringLiteral_2705/*"BARRY"*/;
+  *(_QWORD *)(v50 + 264) = StringLiteral_2705/*"BARRY"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 264), v109, v48, v108);
   if ( *(_DWORD *)(v50 + 24) <= 0x1Eu )
     goto LABEL_48;
-  v141 = StringLiteral_15131/*"Vitamin C"*/;
-  *(_QWORD *)(v50 + 272) = StringLiteral_15131/*"Vitamin C"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 272), v141, v139, v140);
+  v111 = StringLiteral_15331/*"Vitamin C"*/;
+  *(_QWORD *)(v50 + 272) = StringLiteral_15331/*"Vitamin C"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 272), v111, v48, v110);
   if ( *(_DWORD *)(v50 + 24) <= 0x1Fu )
     goto LABEL_48;
-  v144 = StringLiteral_15576/*"Zoolander"*/;
-  *(_QWORD *)(v50 + 280) = StringLiteral_15576/*"Zoolander"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 280), v144, v142, v143);
+  v113 = StringLiteral_15778/*"Zoolander"*/;
+  *(_QWORD *)(v50 + 280) = StringLiteral_15778/*"Zoolander"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 280), v113, v48, v112);
   if ( *(_DWORD *)(v50 + 24) <= 0x20u )
     goto LABEL_48;
-  v147 = StringLiteral_4493/*"Coaster"*/;
-  *(_QWORD *)(v50 + 288) = StringLiteral_4493/*"Coaster"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 288), v147, v145, v146);
+  v115 = StringLiteral_4559/*"Coaster"*/;
+  *(_QWORD *)(v50 + 288) = StringLiteral_4559/*"Coaster"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 288), v115, v48, v114);
   if ( *(_DWORD *)(v50 + 24) <= 0x21u )
     goto LABEL_48;
-  v150 = StringLiteral_10473/*"Plank"*/;
-  *(_QWORD *)(v50 + 296) = StringLiteral_10473/*"Plank"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 296), v150, v148, v149);
+  v117 = StringLiteral_10629/*"Plank"*/;
+  *(_QWORD *)(v50 + 296) = StringLiteral_10629/*"Plank"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 296), v117, v48, v116);
   if ( *(_DWORD *)(v50 + 24) <= 0x22u )
     goto LABEL_48;
-  v153 = StringLiteral_9255/*"Neo1988"*/;
-  *(_QWORD *)(v50 + 304) = StringLiteral_9255/*"Neo1988"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 304), v153, v151, v152);
+  v119 = StringLiteral_9403/*"Neo1988"*/;
+  *(_QWORD *)(v50 + 304) = StringLiteral_9403/*"Neo1988"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 304), v119, v48, v118);
   if ( *(_DWORD *)(v50 + 24) <= 0x23u )
     goto LABEL_48;
-  v156 = StringLiteral_21825/*"n3o"*/;
-  *(_QWORD *)(v50 + 312) = StringLiteral_21825/*"n3o"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 312), v156, v154, v155);
+  v121 = StringLiteral_22165/*"n3o"*/;
+  *(_QWORD *)(v50 + 312) = StringLiteral_22165/*"n3o"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 312), v121, v48, v120);
   if ( *(_DWORD *)(v50 + 24) <= 0x24u )
     goto LABEL_48;
-  v159 = StringLiteral_5456/*"ETC"*/;
-  *(_QWORD *)(v50 + 320) = StringLiteral_5456/*"ETC"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 320), v159, v157, v158);
+  v123 = StringLiteral_5533/*"ETC"*/;
+  *(_QWORD *)(v50 + 320) = StringLiteral_5533/*"ETC"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 320), v123, v48, v122);
   if ( *(_DWORD *)(v50 + 24) <= 0x25u )
     goto LABEL_48;
-  v162 = StringLiteral_11013/*"Read End Connection"*/;
-  *(_QWORD *)(v50 + 328) = StringLiteral_11013/*"Read End Connection"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 328), v162, v160, v161);
+  v125 = StringLiteral_11176/*"Read End Connection"*/;
+  *(_QWORD *)(v50 + 328) = StringLiteral_11176/*"Read End Connection"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 328), v125, v48, v124);
   if ( *(_DWORD *)(v50 + 24) <= 0x26u )
     goto LABEL_48;
-  v165 = StringLiteral_3209/*"Blind"*/;
-  *(_QWORD *)(v50 + 336) = StringLiteral_3209/*"Blind"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 336), v165, v163, v164);
+  v127 = StringLiteral_3224/*"Blind"*/;
+  *(_QWORD *)(v50 + 336) = StringLiteral_3224/*"Blind"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 336), v127, v48, v126);
   if ( *(_DWORD *)(v50 + 24) <= 0x27u )
     goto LABEL_48;
-  v168 = StringLiteral_15573/*"Z - Ray"*/;
-  *(_QWORD *)(v50 + 344) = StringLiteral_15573/*"Z - Ray"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 344), v168, v166, v167);
+  v129 = StringLiteral_15775/*"Z - Ray"*/;
+  *(_QWORD *)(v50 + 344) = StringLiteral_15775/*"Z - Ray"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 344), v129, v48, v128);
   if ( *(_DWORD *)(v50 + 24) <= 0x28u
-    || (v171 = StringLiteral_5859/*"Egg-man"*/,
-        *(_QWORD *)(v50 + 352) = StringLiteral_5859/*"Egg-man"*/,
-        sub_1B8635C((CGThumbnailListItem_o *)(v50 + 352), v171, v169, v170),
+    || (v131 = StringLiteral_5938/*"Egg-man"*/,
+        *(_QWORD *)(v50 + 352) = StringLiteral_5938/*"Egg-man"*/,
+        sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 352), v131, v48, v130),
         *(_DWORD *)(v50 + 24) <= 0x29u)
-    || (v174 = StringLiteral_2103/*"AXIX"*/,
-        *(_QWORD *)(v50 + 360) = StringLiteral_2103/*"AXIX"*/,
-        sub_1B8635C((CGThumbnailListItem_o *)(v50 + 360), v174, v172, v173),
+    || (v133 = StringLiteral_2115/*"AXIX"*/,
+        *(_QWORD *)(v50 + 360) = StringLiteral_2115/*"AXIX"*/,
+        sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 360), v133, v48, v132),
         *(_DWORD *)(v50 + 24) <= 0x2Au) )
   {
 LABEL_48:
-    sub_1B8661C(v46, v47);
+    sub_1BDBADC(v46, v47, v48);
   }
-  v177 = StringLiteral_12484/*"Sergio Georgini"*/;
-  *(_QWORD *)(v50 + 368) = StringLiteral_12484/*"Sergio Georgini"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v50 + 368), v177, v175, v176);
+  v135 = StringLiteral_12672/*"Sergio Georgini"*/;
+  *(_QWORD *)(v50 + 368) = StringLiteral_12672/*"Sergio Georgini"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 368), v135, v48, v134);
   AccountExtensions_TypeInfo->static_fields->names = (struct System_String_array *)v50;
-  sub_1B8635C((CGThumbnailListItem_o *)AccountExtensions_TypeInfo->static_fields, v50, v178, v179);
+  sub_1BDB81C((CGThumbnailListItem_o *)AccountExtensions_TypeInfo->static_fields, v50, v136, v137);
 }
 
 
@@ -461,11 +419,12 @@ System_String_o *__fastcall AccountExtensions__GetRandomName(const MethodInfo *m
   struct System_String_array *names; // x19
   __int64 v4; // x0
   __int64 v5; // x1
+  __int64 v6; // x2
 
-  if ( (byte_4A4C353 & 1) == 0 )
+  if ( (byte_4B4297C & 1) == 0 )
   {
-    sub_1B863B8(&AccountExtensions_TypeInfo, v1);
-    byte_4A4C353 = 1;
+    sub_1BDB878(&AccountExtensions_TypeInfo, v1);
+    byte_4B4297C = 1;
   }
   v2 = AccountExtensions_TypeInfo;
   if ( !AccountExtensions_TypeInfo->_2.cctor_finished )
@@ -475,10 +434,10 @@ System_String_o *__fastcall AccountExtensions__GetRandomName(const MethodInfo *m
   }
   names = v2->static_fields->names;
   if ( !names )
-    sub_1B86614(v2, v1);
-  v4 = UnityEngine_Random__Range_69316044(0, names->max_length - 1, 0LL);
+    sub_1BDBAD4(v2, v1);
+  v4 = UnityEngine_Random__Range_70244360(0, names->max_length - 1, 0LL);
   if ( (unsigned int)v4 >= names->max_length )
-    sub_1B8661C(v4, v5);
+    sub_1BDBADC(v4, v5, v6);
   return names->m_Items[(int)v4];
 }
 
@@ -490,17 +449,17 @@ bool __fastcall AccountExtensions__IsValidEmailAddress(System_String_o *email, c
   __int64 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4A4C352 & 1) == 0 )
+  if ( (byte_4B4297B & 1) == 0 )
   {
-    sub_1B863B8(&System_Text_RegularExpressions_Regex_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_15864/*"^(?!\\.)(\"([^\"\\r\\\\]|\\\\[\"\\r\\\\])*\"|([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\\.)\\.)*)(?<!\\.)@[a-z0-9][\\w\\.-]*[a-z0-9]\\.[a-z][a-z\\.]*[a-z]$"*/, v3);
-    byte_4A4C352 = 1;
+    sub_1BDB878(&System_Text_RegularExpressions_Regex_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_16066/*"^(?!\\.)(\"([^\"\\r\\\\]|\\\\[\"\\r\\\\])*\"|([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\\.)\\.)*)(?<!\\.)@[a-z0-9][\\w\\.-]*[a-z0-9]\\.[a-z][a-z\\.]*[a-z]$"*/, v3);
+    byte_4B4297B = 1;
   }
   if ( System_String__IsNullOrEmpty(email, 0LL) )
     return 0;
-  v5 = (System_Text_RegularExpressions_Regex_o *)sub_1B86604(System_Text_RegularExpressions_Regex_TypeInfo);
-  System_Text_RegularExpressions_Regex___ctor_68184692(v5, (System_String_o *)StringLiteral_15864/*"^(?!\\.)(\"([^\"\\r\\\\]|\\\\[\"\\r\\\\])*\"|([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\\.)\\.)*)(?<!\\.)@[a-z0-9][\\w\\.-]*[a-z0-9]\\.[a-z][a-z\\.]*[a-z]$"*/, 1, 0LL);
+  v5 = (System_Text_RegularExpressions_Regex_o *)sub_1BDBAC4(System_Text_RegularExpressions_Regex_TypeInfo);
+  System_Text_RegularExpressions_Regex___ctor_69112520(v5, (System_String_o *)StringLiteral_16066/*"^(?!\\.)(\"([^\"\\r\\\\]|\\\\[\"\\r\\\\])*\"|([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\\.)\\.)*)(?<!\\.)@[a-z0-9][\\w\\.-]*[a-z0-9]\\.[a-z][a-z\\.]*[a-z]$"*/, 1, 0LL);
   if ( !v5 )
-    sub_1B86614(v6, v7);
-  return System_Text_RegularExpressions_Regex__IsMatch_68179800(v5, email, 0LL);
+    sub_1BDBAD4(v6, v7);
+  return System_Text_RegularExpressions_Regex__IsMatch_69107628(v5, email, 0LL);
 }

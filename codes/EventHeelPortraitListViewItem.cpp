@@ -7,14 +7,12 @@ void __fastcall EventHeelPortraitListViewItem___ctor(
         const MethodInfo *method)
 {
   EventHeelPortraitListViewItem_o *v9; // x22
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
 
   v9 = this;
-  ListViewItem___ctor_41775716((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42734232((ListViewItem_o *)this, index, 0LL);
   v9->fields._Entity_k__BackingField = heelPortraitEntity;
   v9 = (EventHeelPortraitListViewItem_o *)((char *)v9 + 112);
-  sub_1B8635C((CGThumbnailListItem_o *)v9, (int32_t)heelPortraitEntity, v10, v11);
+  sub_1BDB81C(v9);
   LOBYTE(v9->monitor) = isHavePortrait;
   BYTE1(v9->monitor) = isDispDetailDialog;
 }
@@ -58,10 +56,8 @@ void __fastcall EventHeelPortraitListViewItem__set_Entity(
         HeelPortraitEntity_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-
   this->fields._Entity_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Entity_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C(&this->fields._Entity_k__BackingField);
 }
 
 

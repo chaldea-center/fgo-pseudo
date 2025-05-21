@@ -15,24 +15,24 @@ void __fastcall QuestUseItemInfo___cctor(const MethodInfo *method)
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4A4A32B & 1) == 0 )
+  if ( (byte_4B40814 & 1) == 0 )
   {
-    sub_1B863B8(&QuestUseItemInfo_TypeInfo, v1);
-    sub_1B863B8(&StringLiteral_6808/*"FriendshipUpItemUseState"*/, v4);
-    sub_1B863B8(&StringLiteral_24926/*"{0}_icon"*/, v5);
-    sub_1B863B8(&StringLiteral_6806/*"FriendshipUpItemEventUseState"*/, v6);
-    byte_4A4A32B = 1;
+    sub_1BDB878(&QuestUseItemInfo_TypeInfo, v1);
+    sub_1BDB878(&StringLiteral_6890/*"FriendshipUpItemUseState"*/, v4);
+    sub_1BDB878(&StringLiteral_25284/*"{0}_icon"*/, v5);
+    sub_1BDB878(&StringLiteral_6888/*"FriendshipUpItemEventUseState"*/, v6);
+    byte_4B40814 = 1;
   }
-  QuestUseItemInfo_TypeInfo->static_fields->SAVE_KEY_FRIENDSHIP_ITEM_USE_STATE = (struct System_String_o *)StringLiteral_6808/*"FriendshipUpItemUseState"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)QuestUseItemInfo_TypeInfo->static_fields, StringLiteral_6808/*"FriendshipUpItemUseState"*/, v2, v3);
-  v7 = StringLiteral_6806/*"FriendshipUpItemEventUseState"*/;
+  QuestUseItemInfo_TypeInfo->static_fields->SAVE_KEY_FRIENDSHIP_ITEM_USE_STATE = (struct System_String_o *)StringLiteral_6890/*"FriendshipUpItemUseState"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)QuestUseItemInfo_TypeInfo->static_fields, StringLiteral_6890/*"FriendshipUpItemUseState"*/, v2, v3);
+  v7 = StringLiteral_6888/*"FriendshipUpItemEventUseState"*/;
   static_fields = QuestUseItemInfo_TypeInfo->static_fields;
-  static_fields->SAVE_KEY_FRIENDSHIP_EVENT_ITEM_USE_STATE = (struct System_String_o *)StringLiteral_6806/*"FriendshipUpItemEventUseState"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)&static_fields->SAVE_KEY_FRIENDSHIP_EVENT_ITEM_USE_STATE, v7, v9, v10);
-  v11 = StringLiteral_24926/*"{0}_icon"*/;
+  static_fields->SAVE_KEY_FRIENDSHIP_EVENT_ITEM_USE_STATE = (struct System_String_o *)StringLiteral_6888/*"FriendshipUpItemEventUseState"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->SAVE_KEY_FRIENDSHIP_EVENT_ITEM_USE_STATE, v7, v9, v10);
+  v11 = StringLiteral_25284/*"{0}_icon"*/;
   v12 = QuestUseItemInfo_TypeInfo->static_fields;
-  v12->ITEM_ICON_SUFFIX = (struct System_String_o *)StringLiteral_24926/*"{0}_icon"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)&v12->ITEM_ICON_SUFFIX, v11, v13, v14);
+  v12->ITEM_ICON_SUFFIX = (struct System_String_o *)StringLiteral_25284/*"{0}_icon"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)&v12->ITEM_ICON_SUFFIX, v11, v13, v14);
 }
 
 
@@ -79,18 +79,18 @@ void __fastcall QuestUseItemInfo___ctor(
   System_String_o *nameText; // [xsp+18h] [xbp-48h] BYREF
   int64_t outEndedAt; // [xsp+28h] [xbp-38h] BYREF
 
-  if ( (byte_4A4A326 & 1) == 0 )
+  if ( (byte_4B4080F & 1) == 0 )
   {
-    sub_1B863B8(&BalanceConfig_TypeInfo, itemEntity);
-    sub_1B863B8(&Method_DataManager_GetMaster_GiftMaster___, v9);
-    sub_1B863B8(&DataManager_TypeInfo, v10);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v11);
-    sub_1B863B8(&Method_System_Collections_Generic_List_GiftEntity__get_Item__, v12);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v13);
-    sub_1B863B8(&float_TypeInfo, v14);
-    sub_1B863B8(&StringLiteral_10101/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_SELECT_DIALOG_VALUE"*/, v15);
-    sub_1B863B8(&StringLiteral_10754/*"QUEST_USE_ITEM_SELECT_DIALOG_REWARD_ADD_ITEM_EXPLANATION"*/, v16);
-    byte_4A4A326 = 1;
+    sub_1BDB878(&BalanceConfig_TypeInfo, itemEntity);
+    sub_1BDB878(&Method_DataManager_GetMaster_GiftMaster___, v9);
+    sub_1BDB878(&DataManager_TypeInfo, v10);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GiftEntity__get_Count__, v11);
+    sub_1BDB878(&Method_System_Collections_Generic_List_GiftEntity__get_Item__, v12);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v13);
+    sub_1BDB878(&float_TypeInfo, v14);
+    sub_1BDB878(&StringLiteral_10251/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_SELECT_DIALOG_VALUE"*/, v15);
+    sub_1BDB878(&StringLiteral_10911/*"QUEST_USE_ITEM_SELECT_DIALOG_REWARD_ADD_ITEM_EXPLANATION"*/, v16);
+    byte_4B4080F = 1;
   }
   outEndedAt = 0LL;
   countText = 0LL;
@@ -111,7 +111,7 @@ void __fastcall QuestUseItemInfo___ctor(
       goto LABEL_20;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10101/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_SELECT_DIALOG_VALUE"*/, 0LL);
+    v30 = LocalizationManager__Get((System_String_o *)StringLiteral_10251/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_SELECT_DIALOG_VALUE"*/, 0LL);
     v39 = (float)this->fields._Value_k__BackingField / 1000.0;
     v34 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v39, v31, v32, v33);
     v35 = System_String__Format(v30, v34, 0LL);
@@ -121,19 +121,19 @@ void __fastcall QuestUseItemInfo___ctor(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  IsNullOrEmpty = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_GiftMaster___);
+  IsNullOrEmpty = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_GiftMaster___);
   if ( !IsNullOrEmpty
     || (IsNullOrEmpty = GiftMaster__GetListById((GiftMaster_o *)IsNullOrEmpty, eventCampaignEntity->fields.value, 0LL)) == 0LL )
   {
 LABEL_28:
-    sub_1B86614(IsNullOrEmpty, v18);
+    sub_1BDBAD4(IsNullOrEmpty, v18);
   }
   if ( *((int *)IsNullOrEmpty + 6) >= 1 )
   {
     IsNullOrEmpty = System_Collections_Generic_List_object___get_Item(
                       (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
                       0,
-                      (const MethodInfo_35FC688 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
+                      (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_GiftEntity__get_Item__);
     if ( !IsNullOrEmpty )
       goto LABEL_28;
     v20 = (GiftEntity_o *)IsNullOrEmpty;
@@ -147,12 +147,12 @@ LABEL_28:
       GiftEntity__GetInfo(v20, &nameText, &countText, 0LL);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v24 = LocalizationManager__Get((System_String_o *)StringLiteral_10754/*"QUEST_USE_ITEM_SELECT_DIALOG_REWARD_ADD_ITEM_EXPLANATION"*/, 0LL);
+      v24 = LocalizationManager__Get((System_String_o *)StringLiteral_10911/*"QUEST_USE_ITEM_SELECT_DIALOG_REWARD_ADD_ITEM_EXPLANATION"*/, 0LL);
       v25 = System_String__Format(v24, (Il2CppObject *)nameText, 0LL);
       v28 = (int)v25;
       p_Explanation_k__BackingField->klass = (CGThumbnailListItem_c *)v25;
 LABEL_19:
-      sub_1B8635C(p_Explanation_k__BackingField, v28, v26, v27);
+      sub_1BDB81C(p_Explanation_k__BackingField, v28, v26, v27);
     }
   }
 LABEL_20:
@@ -182,7 +182,7 @@ LABEL_20:
 }
 
 
-void __fastcall QuestUseItemInfo___ctor_32995556(
+void __fastcall QuestUseItemInfo___ctor_33711224(
         QuestUseItemInfo_o *this,
         int32_t campaignType,
         ItemEntity_o *itemEntity,
@@ -215,7 +215,7 @@ bool __fastcall QuestUseItemInfo__CheckSameItem(
     if ( entity )
       return ItemEntity__GetQuestUseItemGroupId(entity, 0LL) == this->fields._GroupId_k__BackingField;
 LABEL_9:
-    sub_1B86614(this, campaignType);
+    sub_1BDBAD4(this, campaignType);
   }
   return 0;
 }
@@ -229,10 +229,10 @@ bool __fastcall QuestUseItemInfo__GetUseFlag(QuestUseItemInfo_o *this, const Met
 
 bool __fastcall QuestUseItemInfo__IsEventPeriod(QuestUseItemInfo_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4A328 & 1) == 0 )
+  if ( (byte_4B40811 & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    byte_4A4A328 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    byte_4B40811 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -249,23 +249,23 @@ bool __fastcall QuestUseItemInfo__IsObtained(QuestUseItemInfo_o *this, const Met
   NetworkManager_c *v7; // x0
   UserItemEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A4A32A & 1) == 0 )
+  if ( (byte_4B40813 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMaster_UserItemMaster___, method);
-    sub_1B863B8(&DataManager_TypeInfo, v3);
-    sub_1B863B8(&NetworkManager_TypeInfo, v4);
-    byte_4A4A32A = 1;
+    sub_1BDB878(&Method_DataManager_GetMaster_UserItemMaster___, method);
+    sub_1BDB878(&DataManager_TypeInfo, v3);
+    sub_1BDB878(&NetworkManager_TypeInfo, v4);
+    byte_4B40813 = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4A48C25 )
+  if ( !byte_4B3ED56 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, v5);
-    byte_4A48C25 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, v5);
+    byte_4B3ED56 = 1;
   }
   v7 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -274,7 +274,7 @@ bool __fastcall QuestUseItemInfo__IsObtained(QuestUseItemInfo_o *this, const Met
     v7 = NetworkManager_TypeInfo;
   }
   if ( !Master_object )
-    sub_1B86614(v7, v5);
+    sub_1BDBAD4(v7, v5);
   return UserItemMaster__TryGetEntity(
            (UserItemMaster_o *)Master_object,
            &entity,
@@ -306,33 +306,33 @@ void __fastcall QuestUseItemInfo__OpenExpiredDialog(
   QuestUseItemInfo_o *v19; // x0
   const MethodInfo *v20; // x1
 
-  if ( (byte_4A4A329 & 1) == 0 )
+  if ( (byte_4B40812 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, action);
-    sub_1B863B8(&Method_CommonUI_CloseNotificationDialog__, v5);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v6);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1B863B8(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v8);
-    sub_1B863B8(&StringLiteral_10093/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, v9);
-    sub_1B863B8(&StringLiteral_1/*""*/, v10);
-    byte_4A4A329 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, action);
+    sub_1BDB878(&Method_CommonUI_CloseNotificationDialog__, v5);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v6);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    sub_1BDB878(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v8);
+    sub_1BDB878(&StringLiteral_10243/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, v9);
+    sub_1BDB878(&StringLiteral_1/*""*/, v10);
+    byte_4B40812 = 1;
   }
   this->fields._UseFlag_k__BackingField = 0;
-  Instance = (PartyOrganizationUtility_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3839AA0 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  Instance = (PartyOrganizationUtility_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39166A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   PartyOrganizationUtility__SaveQuestUseItemUseState(Instance, 0LL);
-  v13 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v14 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  v13 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v14 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
   System_Action___ctor(v14, v13, Method_CommonUI_CloseNotificationDialog__, 0LL);
   v15 = System_Delegate__Combine((System_Delegate_o *)v14, (System_Delegate_o *)action, 0LL);
   v16 = (System_Action_o *)v15;
   if ( !v15 || (System_Action_c *)v15->klass == System_Action_TypeInfo )
   {
-    v17 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v17 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_10093/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, 0LL);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_10243/*"PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED"*/, 0LL);
     Instance = (PartyOrganizationUtility_o *)System_String__Format(
                                                v18,
                                                (Il2CppObject *)this->fields._Name_k__BackingField,
@@ -354,13 +354,14 @@ void __fastcall QuestUseItemInfo__OpenExpiredDialog(
         0,
         0LL,
         0.0,
+        0,
         0LL);
       return;
     }
 LABEL_10:
-    sub_1B86614(Instance, v12);
+    sub_1BDBAD4(Instance, v12);
   }
-  v19 = (QuestUseItemInfo_o *)sub_1B868D4(v15);
+  v19 = (QuestUseItemInfo_o *)sub_1BDBD94(v15);
   QuestUseItemInfo__IsObtained(v19, v20);
 }
 
@@ -397,15 +398,15 @@ void __fastcall QuestUseItemInfo__SetItemEntity(
   Il2CppObject *entity; // [xsp+18h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_4A4A327 & 1) == 0 )
+  if ( (byte_4B40810 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMaster_QuestUseItemGroupMaster___, itemEntity);
-    sub_1B863B8(&Method_DataManager_GetMaster_QuestUseItemPickupMaster___, v5);
-    sub_1B863B8(&DataManager_TypeInfo, v6);
-    sub_1B863B8(&Method_DataMasterBase_QuestUseItemGroupMaster__QuestUseItemGroupEntity__int__TryGetEntity__, v7);
-    sub_1B863B8(&int_TypeInfo, v8);
-    this = (QuestUseItemInfo_o *)sub_1B863B8(&QuestUseItemInfo_TypeInfo, v9);
-    byte_4A4A327 = 1;
+    sub_1BDB878(&Method_DataManager_GetMaster_QuestUseItemGroupMaster___, itemEntity);
+    sub_1BDB878(&Method_DataManager_GetMaster_QuestUseItemPickupMaster___, v5);
+    sub_1BDB878(&DataManager_TypeInfo, v6);
+    sub_1BDB878(&Method_DataMasterBase_QuestUseItemGroupMaster__QuestUseItemGroupEntity__int__TryGetEntity__, v7);
+    sub_1BDB878(&int_TypeInfo, v8);
+    this = (QuestUseItemInfo_o *)sub_1BDB878(&QuestUseItemInfo_TypeInfo, v9);
+    byte_4B40810 = 1;
   }
   entity = 0LL;
   if ( !itemEntity )
@@ -419,15 +420,15 @@ void __fastcall QuestUseItemInfo__SetItemEntity(
     goto LABEL_11;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (QuestUseItemInfo_o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_QuestUseItemGroupMaster___);
+  this = (QuestUseItemInfo_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_QuestUseItemGroupMaster___);
   if ( !this )
 LABEL_17:
-    sub_1B86614(this, itemEntity);
+    sub_1BDBAD4(this, itemEntity);
   this = (QuestUseItemInfo_o *)DataMasterBase_object__object__int___TryGetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  &entity,
                                  v4->fields._GroupId_k__BackingField,
-                                 (const MethodInfo_32142CC *)Method_DataMasterBase_QuestUseItemGroupMaster__QuestUseItemGroupEntity__int__TryGetEntity__);
+                                 (const MethodInfo_32E1E88 *)Method_DataMasterBase_QuestUseItemGroupMaster__QuestUseItemGroupEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
     if ( !entity )
@@ -437,7 +438,7 @@ LABEL_17:
 LABEL_11:
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (QuestUseItemInfo_o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_QuestUseItemPickupMaster___);
+  this = (QuestUseItemInfo_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_QuestUseItemPickupMaster___);
   if ( !this )
     goto LABEL_17;
   v4->fields._Priority_k__BackingField = QuestUseItemPickupMaster__TryGetPriority(
@@ -448,10 +449,10 @@ LABEL_11:
                                            0LL);
   name = itemEntity->fields.name;
   v4->fields._Name_k__BackingField = name;
-  sub_1B8635C((CGThumbnailListItem_o *)&v4->fields._Name_k__BackingField, (int32_t)name, v12, v13);
+  sub_1BDB81C((CGThumbnailListItem_o *)&v4->fields._Name_k__BackingField, (int32_t)name, v12, v13);
   EffectExplanation = ItemEntity__GetEffectExplanation(itemEntity, 0LL);
   v4->fields._Explanation_k__BackingField = EffectExplanation;
-  sub_1B8635C((CGThumbnailListItem_o *)&v4->fields._Explanation_k__BackingField, (int32_t)EffectExplanation, v15, v16);
+  sub_1BDB81C((CGThumbnailListItem_o *)&v4->fields._Explanation_k__BackingField, (int32_t)EffectExplanation, v15, v16);
   v20 = QuestUseItemInfo_TypeInfo;
   if ( !QuestUseItemInfo_TypeInfo->_2.cctor_finished )
   {
@@ -464,7 +465,7 @@ LABEL_11:
   v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27, v17, v18, v19);
   v24 = System_String__Format(ITEM_ICON_SUFFIX, v23, 0LL);
   v4->fields._SpriteName_k__BackingField = v24;
-  sub_1B8635C((CGThumbnailListItem_o *)&v4->fields._SpriteName_k__BackingField, (int32_t)v24, v25, v26);
+  sub_1BDB81C((CGThumbnailListItem_o *)&v4->fields._SpriteName_k__BackingField, (int32_t)v24, v25, v26);
 }
 
 
@@ -608,7 +609,7 @@ void __fastcall QuestUseItemInfo__set_Explanation(
   const MethodInfo *v3; // x3
 
   this->fields._Explanation_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Explanation_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Explanation_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -644,7 +645,7 @@ void __fastcall QuestUseItemInfo__set_Name(QuestUseItemInfo_o *this, System_Stri
   const MethodInfo *v3; // x3
 
   this->fields._Name_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -677,7 +678,7 @@ void __fastcall QuestUseItemInfo__set_SpriteName(
   const MethodInfo *v3; // x3
 
   this->fields._SpriteName_k__BackingField = value;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

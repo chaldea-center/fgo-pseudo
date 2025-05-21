@@ -20,29 +20,29 @@ void __fastcall RoadmapButtonPrefab___cctor(const MethodInfo *method)
   int32_t v18; // w2
   const MethodInfo *v19; // x3
 
-  if ( (byte_4A4B3A6 & 1) == 0 )
+  if ( (byte_4B418E7 & 1) == 0 )
   {
-    sub_1B863B8(&RoadmapButtonPrefab_TypeInfo, v1);
-    sub_1B863B8(&StringLiteral_11218/*"RoadMap"*/, v4);
-    sub_1B863B8(&StringLiteral_5325/*"DownloadRoadMapUIAtlas1"*/, v5);
-    sub_1B863B8(&StringLiteral_8213/*"LastRoadmapBoardIds"*/, v6);
-    sub_1B863B8(&StringLiteral_17286/*"btn_next_reward"*/, v7);
-    byte_4A4B3A6 = 1;
+    sub_1BDB878(&RoadmapButtonPrefab_TypeInfo, v1);
+    sub_1BDB878(&StringLiteral_11385/*"RoadMap"*/, v4);
+    sub_1BDB878(&StringLiteral_5395/*"DownloadRoadMapUIAtlas1"*/, v5);
+    sub_1BDB878(&StringLiteral_8356/*"LastRoadmapBoardIds"*/, v6);
+    sub_1BDB878(&StringLiteral_17518/*"btn_next_reward"*/, v7);
+    byte_4B418E7 = 1;
   }
-  RoadmapButtonPrefab_TypeInfo->static_fields->ASSET_DATA_PATH_ROADMAP = (struct System_String_o *)StringLiteral_11218/*"RoadMap"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)RoadmapButtonPrefab_TypeInfo->static_fields, StringLiteral_11218/*"RoadMap"*/, v2, v3);
-  v8 = StringLiteral_5325/*"DownloadRoadMapUIAtlas1"*/;
+  RoadmapButtonPrefab_TypeInfo->static_fields->ASSET_DATA_PATH_ROADMAP = (struct System_String_o *)StringLiteral_11385/*"RoadMap"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)RoadmapButtonPrefab_TypeInfo->static_fields, StringLiteral_11385/*"RoadMap"*/, v2, v3);
+  v8 = StringLiteral_5395/*"DownloadRoadMapUIAtlas1"*/;
   static_fields = RoadmapButtonPrefab_TypeInfo->static_fields;
-  static_fields->ROADMAP_BUTTON_ATLAS_NAME = (struct System_String_o *)StringLiteral_5325/*"DownloadRoadMapUIAtlas1"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)&static_fields->ROADMAP_BUTTON_ATLAS_NAME, v8, v10, v11);
-  v12 = StringLiteral_17286/*"btn_next_reward"*/;
+  static_fields->ROADMAP_BUTTON_ATLAS_NAME = (struct System_String_o *)StringLiteral_5395/*"DownloadRoadMapUIAtlas1"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->ROADMAP_BUTTON_ATLAS_NAME, v8, v10, v11);
+  v12 = StringLiteral_17518/*"btn_next_reward"*/;
   v13 = RoadmapButtonPrefab_TypeInfo->static_fields;
-  v13->ROADMAP_BUTTON_SPRITE_NAME = (struct System_String_o *)StringLiteral_17286/*"btn_next_reward"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)&v13->ROADMAP_BUTTON_SPRITE_NAME, v12, v14, v15);
-  v16 = StringLiteral_8213/*"LastRoadmapBoardIds"*/;
+  v13->ROADMAP_BUTTON_SPRITE_NAME = (struct System_String_o *)StringLiteral_17518/*"btn_next_reward"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)&v13->ROADMAP_BUTTON_SPRITE_NAME, v12, v14, v15);
+  v16 = StringLiteral_8356/*"LastRoadmapBoardIds"*/;
   v17 = RoadmapButtonPrefab_TypeInfo->static_fields;
-  v17->LAST_ROADMAP_BOARD_IDS_KEY = (struct System_String_o *)StringLiteral_8213/*"LastRoadmapBoardIds"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)&v17->LAST_ROADMAP_BOARD_IDS_KEY, v16, v18, v19);
+  v17->LAST_ROADMAP_BOARD_IDS_KEY = (struct System_String_o *)StringLiteral_8356/*"LastRoadmapBoardIds"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)&v17->LAST_ROADMAP_BOARD_IDS_KEY, v16, v18, v19);
 }
 
 
@@ -153,34 +153,34 @@ bool __fastcall RoadmapButtonPrefab__CheckReleasedOrAddedNewRoadmap(
   int *v91; // x10
   __int64 v92; // x0
 
-  if ( (byte_4A4B3A4 & 1) == 0 )
+  if ( (byte_4B418E5 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMaster_RoadmapMaster___, method);
-    sub_1B863B8(&DataManager_TypeInfo, v3);
-    sub_1B863B8(&Method_System_Linq_Enumerable_OrderBy_int__int___, v4);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Select_RoadmapEntity__int___, v5);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Select_string__int___, v6);
-    sub_1B863B8(&Method_System_Linq_Enumerable_ToList_int___, v7);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Zip_int__int__ValueTuple_int__int____, v8);
-    sub_1B863B8(&System_Func_RoadmapEntity__int__TypeInfo, v9);
-    sub_1B863B8(&System_Func_int__int__TypeInfo, v10);
-    sub_1B863B8(&System_Func_string__int__TypeInfo, v11);
-    sub_1B863B8(&System_Func_int__int__ValueTuple_int__int___TypeInfo, v12);
-    sub_1B863B8(&System_IDisposable_TypeInfo, v13);
-    sub_1B863B8(&System_Collections_Generic_IEnumerable_ValueTuple_int__int___TypeInfo, v14);
-    sub_1B863B8(&System_Collections_Generic_IEnumerator_ValueTuple_int__int___TypeInfo, v15);
-    sub_1B863B8(&System_Collections_IEnumerator_TypeInfo, v16);
-    sub_1B863B8(&Method_System_Collections_Generic_List_int__get_Count__, v17);
-    sub_1B863B8(&RoadmapButtonPrefab_TypeInfo, v18);
-    sub_1B863B8(&Method_RoadmapButtonPrefab___c__CheckReleasedOrAddedNewRoadmap_b__14_0__, v19);
-    sub_1B863B8(&Method_RoadmapButtonPrefab___c__CheckReleasedOrAddedNewRoadmap_b__14_1__, v20);
-    sub_1B863B8(&Method_RoadmapButtonPrefab___c__CheckReleasedOrAddedNewRoadmap_b__14_2__, v21);
-    sub_1B863B8(&Method_RoadmapButtonPrefab___c__CheckReleasedOrAddedNewRoadmap_b__14_3__, v22);
-    sub_1B863B8(&Method_RoadmapButtonPrefab___c__CheckReleasedOrAddedNewRoadmap_b__14_4__, v23);
-    sub_1B863B8(&RoadmapButtonPrefab___c_TypeInfo, v24);
-    sub_1B863B8(&StringLiteral_953/*"-1"*/, v25);
-    sub_1B863B8(&StringLiteral_817/*","*/, v26);
-    byte_4A4B3A4 = 1;
+    sub_1BDB878(&Method_DataManager_GetMaster_RoadmapMaster___, method);
+    sub_1BDB878(&DataManager_TypeInfo, v3);
+    sub_1BDB878(&Method_System_Linq_Enumerable_OrderBy_int__int___, v4);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Select_RoadmapEntity__int___, v5);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Select_string__int___, v6);
+    sub_1BDB878(&Method_System_Linq_Enumerable_ToList_int___, v7);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Zip_int__int__ValueTuple_int__int____, v8);
+    sub_1BDB878(&System_Func_RoadmapEntity__int__TypeInfo, v9);
+    sub_1BDB878(&System_Func_int__int__TypeInfo, v10);
+    sub_1BDB878(&System_Func_string__int__TypeInfo, v11);
+    sub_1BDB878(&System_Func_int__int__ValueTuple_int__int___TypeInfo, v12);
+    sub_1BDB878(&System_IDisposable_TypeInfo, v13);
+    sub_1BDB878(&System_Collections_Generic_IEnumerable_ValueTuple_int__int___TypeInfo, v14);
+    sub_1BDB878(&System_Collections_Generic_IEnumerator_ValueTuple_int__int___TypeInfo, v15);
+    sub_1BDB878(&System_Collections_IEnumerator_TypeInfo, v16);
+    sub_1BDB878(&Method_System_Collections_Generic_List_int__get_Count__, v17);
+    sub_1BDB878(&RoadmapButtonPrefab_TypeInfo, v18);
+    sub_1BDB878(&Method_RoadmapButtonPrefab___c__CheckReleasedOrAddedNewRoadmap_b__14_0__, v19);
+    sub_1BDB878(&Method_RoadmapButtonPrefab___c__CheckReleasedOrAddedNewRoadmap_b__14_1__, v20);
+    sub_1BDB878(&Method_RoadmapButtonPrefab___c__CheckReleasedOrAddedNewRoadmap_b__14_2__, v21);
+    sub_1BDB878(&Method_RoadmapButtonPrefab___c__CheckReleasedOrAddedNewRoadmap_b__14_3__, v22);
+    sub_1BDB878(&Method_RoadmapButtonPrefab___c__CheckReleasedOrAddedNewRoadmap_b__14_4__, v23);
+    sub_1BDB878(&RoadmapButtonPrefab___c_TypeInfo, v24);
+    sub_1BDB878(&StringLiteral_956/*"-1"*/, v25);
+    sub_1BDB878(&StringLiteral_820/*","*/, v26);
+    byte_4B418E5 = 1;
   }
   v27 = RoadmapButtonPrefab_TypeInfo;
   if ( !RoadmapButtonPrefab_TypeInfo->_2.cctor_finished )
@@ -190,11 +190,11 @@ bool __fastcall RoadmapButtonPrefab__CheckReleasedOrAddedNewRoadmap(
   }
   String = UnityEngine_PlayerPrefs__GetString(
              v27->static_fields->LAST_ROADMAP_BOARD_IDS_KEY,
-             (System_String_o *)StringLiteral_953/*"-1"*/,
+             (System_String_o *)StringLiteral_956/*"-1"*/,
              0LL);
   if ( !String )
     goto LABEL_75;
-  v30 = System_String__Split_61697188(String, (System_String_o *)StringLiteral_817/*","*/, 0, 0LL);
+  v30 = System_String__Split_62624272(String, (System_String_o *)StringLiteral_820/*","*/, 0, 0LL);
   v31 = RoadmapButtonPrefab___c_TypeInfo;
   v32 = (System_Collections_Generic_IEnumerable_TSource__o *)v30;
   if ( !RoadmapButtonPrefab___c_TypeInfo->_2.cctor_finished )
@@ -211,7 +211,7 @@ bool __fastcall RoadmapButtonPrefab__CheckReleasedOrAddedNewRoadmap(
       v31 = RoadmapButtonPrefab___c_TypeInfo;
     }
     v34 = (Il2CppObject *)v31->static_fields->__9;
-    _9__14_0 = (System_Func_object__int__o *)sub_1B86604(System_Func_string__int__TypeInfo);
+    _9__14_0 = (System_Func_object__int__o *)sub_1BDBAC4(System_Func_string__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__14_0,
       v34,
@@ -219,12 +219,12 @@ bool __fastcall RoadmapButtonPrefab__CheckReleasedOrAddedNewRoadmap(
       0LL);
     static_fields = RoadmapButtonPrefab___c_TypeInfo->static_fields;
     static_fields->__9__14_0 = (struct System_Func_string__int__o *)_9__14_0;
-    sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v36, v37);
+    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v36, v37);
   }
   v38 = System_Linq_Enumerable__Select_object__int_(
           v32,
           (System_Func_TSource__TResult__o *)_9__14_0,
-          (const MethodInfo_2FA0998 *)Method_System_Linq_Enumerable_Select_string__int___);
+          (const MethodInfo_3067BA8 *)Method_System_Linq_Enumerable_Select_string__int___);
   v39 = RoadmapButtonPrefab___c_TypeInfo;
   v40 = (System_Collections_Generic_IEnumerable_TSource__o *)v38;
   if ( !RoadmapButtonPrefab___c_TypeInfo->_2.cctor_finished )
@@ -241,7 +241,7 @@ bool __fastcall RoadmapButtonPrefab__CheckReleasedOrAddedNewRoadmap(
       v39 = RoadmapButtonPrefab___c_TypeInfo;
     }
     v42 = (Il2CppObject *)v39->static_fields->__9;
-    _9__14_1 = (System_Func_int__int__o *)sub_1B86604(System_Func_int__int__TypeInfo);
+    _9__14_1 = (System_Func_int__int__o *)sub_1BDBAC4(System_Func_int__int__TypeInfo);
     System_Func_int__int____ctor(
       _9__14_1,
       v42,
@@ -249,18 +249,18 @@ bool __fastcall RoadmapButtonPrefab__CheckReleasedOrAddedNewRoadmap(
       0LL);
     v43 = RoadmapButtonPrefab___c_TypeInfo->static_fields;
     v43->__9__14_1 = _9__14_1;
-    sub_1B8635C((CGThumbnailListItem_o *)&v43->__9__14_1, (int32_t)_9__14_1, v44, v45);
+    sub_1BDB81C((CGThumbnailListItem_o *)&v43->__9__14_1, (int32_t)_9__14_1, v44, v45);
   }
   v46 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_int__int_(
                                                                v40,
                                                                (System_Func_TSource__TKey__o *)_9__14_1,
-                                                               (const MethodInfo_2F9A934 *)Method_System_Linq_Enumerable_OrderBy_int__int___);
+                                                               (const MethodInfo_305F35C *)Method_System_Linq_Enumerable_OrderBy_int__int___);
   v47 = System_Linq_Enumerable__ToList_int_(
           v46,
-          (const MethodInfo_2FAD974 *)Method_System_Linq_Enumerable_ToList_int___);
+          (const MethodInfo_3074DD0 *)Method_System_Linq_Enumerable_ToList_int___);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  String = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_RoadmapMaster___);
+  String = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_RoadmapMaster___);
   if ( !String )
     goto LABEL_75;
   SortedDispBoardEntityList = RoadmapMaster__GetSortedDispBoardEntityList(
@@ -284,7 +284,7 @@ bool __fastcall RoadmapButtonPrefab__CheckReleasedOrAddedNewRoadmap(
       v49 = RoadmapButtonPrefab___c_TypeInfo;
     }
     v52 = (Il2CppObject *)v49->static_fields->__9;
-    _9__14_2 = (System_Func_object__int__o *)sub_1B86604(System_Func_RoadmapEntity__int__TypeInfo);
+    _9__14_2 = (System_Func_object__int__o *)sub_1BDBAC4(System_Func_RoadmapEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__14_2,
       v52,
@@ -292,12 +292,12 @@ bool __fastcall RoadmapButtonPrefab__CheckReleasedOrAddedNewRoadmap(
       0LL);
     v53 = RoadmapButtonPrefab___c_TypeInfo->static_fields;
     v53->__9__14_2 = (struct System_Func_RoadmapEntity__int__o *)_9__14_2;
-    sub_1B8635C((CGThumbnailListItem_o *)&v53->__9__14_2, (int32_t)_9__14_2, v54, v55);
+    sub_1BDB81C((CGThumbnailListItem_o *)&v53->__9__14_2, (int32_t)_9__14_2, v54, v55);
   }
   v56 = System_Linq_Enumerable__Select_object__int_(
           v50,
           (System_Func_TSource__TResult__o *)_9__14_2,
-          (const MethodInfo_2FA0998 *)Method_System_Linq_Enumerable_Select_RoadmapEntity__int___);
+          (const MethodInfo_3067BA8 *)Method_System_Linq_Enumerable_Select_RoadmapEntity__int___);
   v57 = RoadmapButtonPrefab___c_TypeInfo;
   v58 = (System_Collections_Generic_IEnumerable_TSource__o *)v56;
   if ( !RoadmapButtonPrefab___c_TypeInfo->_2.cctor_finished )
@@ -314,7 +314,7 @@ bool __fastcall RoadmapButtonPrefab__CheckReleasedOrAddedNewRoadmap(
       v57 = RoadmapButtonPrefab___c_TypeInfo;
     }
     v60 = (Il2CppObject *)v57->static_fields->__9;
-    _9__14_3 = (System_Func_int__int__o *)sub_1B86604(System_Func_int__int__TypeInfo);
+    _9__14_3 = (System_Func_int__int__o *)sub_1BDBAC4(System_Func_int__int__TypeInfo);
     System_Func_int__int____ctor(
       _9__14_3,
       v60,
@@ -322,15 +322,15 @@ bool __fastcall RoadmapButtonPrefab__CheckReleasedOrAddedNewRoadmap(
       0LL);
     v61 = RoadmapButtonPrefab___c_TypeInfo->static_fields;
     v61->__9__14_3 = _9__14_3;
-    sub_1B8635C((CGThumbnailListItem_o *)&v61->__9__14_3, (int32_t)_9__14_3, v62, v63);
+    sub_1BDB81C((CGThumbnailListItem_o *)&v61->__9__14_3, (int32_t)_9__14_3, v62, v63);
   }
   v64 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_int__int_(
                                                                v58,
                                                                (System_Func_TSource__TKey__o *)_9__14_3,
-                                                               (const MethodInfo_2F9A934 *)Method_System_Linq_Enumerable_OrderBy_int__int___);
+                                                               (const MethodInfo_305F35C *)Method_System_Linq_Enumerable_OrderBy_int__int___);
   String = (System_String_o *)System_Linq_Enumerable__ToList_int_(
                                 v64,
-                                (const MethodInfo_2FAD974 *)Method_System_Linq_Enumerable_ToList_int___);
+                                (const MethodInfo_3074DD0 *)Method_System_Linq_Enumerable_ToList_int___);
   if ( !v47 )
     goto LABEL_75;
   v65 = (System_Collections_Generic_IEnumerable_TSecond__o *)String;
@@ -356,7 +356,7 @@ bool __fastcall RoadmapButtonPrefab__CheckReleasedOrAddedNewRoadmap(
       v67 = RoadmapButtonPrefab___c_TypeInfo;
     }
     v69 = (Il2CppObject *)v67->static_fields->__9;
-    _9__14_4 = (System_Func_int__int__ValueTuple_int__int___o *)sub_1B86604(System_Func_int__int__ValueTuple_int__int___TypeInfo);
+    _9__14_4 = (System_Func_int__int__ValueTuple_int__int___o *)sub_1BDBAC4(System_Func_int__int__ValueTuple_int__int___TypeInfo);
     System_Func_int__int__ValueTuple_int__int_____ctor(
       _9__14_4,
       v69,
@@ -364,16 +364,16 @@ bool __fastcall RoadmapButtonPrefab__CheckReleasedOrAddedNewRoadmap(
       0LL);
     v70 = RoadmapButtonPrefab___c_TypeInfo->static_fields;
     v70->__9__14_4 = _9__14_4;
-    sub_1B8635C((CGThumbnailListItem_o *)&v70->__9__14_4, (int32_t)_9__14_4, v71, v72);
+    sub_1BDB81C((CGThumbnailListItem_o *)&v70->__9__14_4, (int32_t)_9__14_4, v71, v72);
   }
   String = (System_String_o *)System_Linq_Enumerable__Zip_int__int__ValueTuple_int__int__(
                                 (System_Collections_Generic_IEnumerable_TFirst__o *)v47,
                                 v65,
                                 (System_Func_TFirst__TSecond__TResult__o *)_9__14_4,
-                                (const MethodInfo_2FB0B54 *)Method_System_Linq_Enumerable_Zip_int__int__ValueTuple_int__int____);
+                                (const MethodInfo_3078284 *)Method_System_Linq_Enumerable_Zip_int__int__ValueTuple_int__int____);
   if ( !String )
 LABEL_75:
-    sub_1B86614(String, v29);
+    sub_1BDBAD4(String, v29);
   klass = String->klass;
   v74 = String;
   v75 = *(unsigned __int16 *)(&String->klass->_2.bitflags2 + 3);
@@ -392,11 +392,11 @@ LABEL_75:
   else
   {
 LABEL_48:
-    v77 = sub_1BD6B4C(String, System_Collections_Generic_IEnumerable_ValueTuple_int__int___TypeInfo, 0LL);
+    v77 = sub_1C2C00C(String, System_Collections_Generic_IEnumerable_ValueTuple_int__int___TypeInfo, 0LL);
   }
   v79 = (*(__int64 (__fastcall **)(System_String_o *, _QWORD))v77)(v74, *(_QWORD *)(v77 + 8));
   if ( !v79 )
-    sub_1B86614(0LL, v78);
+    sub_1BDBAD4(0LL, v78);
   while ( 1 )
   {
     v80 = *(_QWORD *)v79;
@@ -416,7 +416,7 @@ LABEL_48:
     else
     {
 LABEL_55:
-      v83 = sub_1BD6B4C(v79, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v83 = sub_1C2C00C(v79, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     v66 = (*(__int64 (__fastcall **)(__int64, _QWORD))v83)(v79, *(_QWORD *)(v83 + 8));
     if ( (v66 & 1) == 0 )
@@ -438,7 +438,7 @@ LABEL_55:
     else
     {
 LABEL_62:
-      v87 = sub_1BD6B4C(v79, System_Collections_Generic_IEnumerator_ValueTuple_int__int___TypeInfo, 0LL);
+      v87 = sub_1C2C00C(v79, System_Collections_Generic_IEnumerator_ValueTuple_int__int___TypeInfo, 0LL);
     }
     v88 = (*(__int64 (__fastcall **)(__int64, _QWORD))v87)(v79, *(_QWORD *)(v87 + 8));
     if ( (_DWORD)v88 != HIDWORD(v88) )
@@ -463,7 +463,7 @@ LABEL_67:
   else
   {
 LABEL_71:
-    v92 = sub_1BD6B4C(v79, System_IDisposable_TypeInfo, 0LL);
+    v92 = sub_1C2C00C(v79, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v92)(v79, *(_QWORD *)(v92 + 8));
   return v66 & 1;
@@ -539,31 +539,31 @@ void __fastcall RoadmapButtonPrefab__Initialize(
   ShiningIconComponent_o *v66; // x0
   bool v67; // w1
 
-  if ( (byte_4A4B3A3 & 1) == 0 )
+  if ( (byte_4B418E4 & 1) == 0 )
   {
-    sub_1B863B8(&Method_AssetData_GetObjectList_GameObject___, roadmapAssetData);
-    sub_1B863B8(&EventDelegate_Callback_TypeInfo, v6);
-    sub_1B863B8(&Method_DataManager_GetMaster_RoadmapMaster___, v7);
-    sub_1B863B8(&DataManager_TypeInfo, v8);
-    sub_1B863B8(&Method_System_Linq_Enumerable_All_RoadmapEntity___, v9);
-    sub_1B863B8(&Method_System_Linq_Enumerable_FirstOrDefault_UIAtlas___, v10);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Select_GameObject__UIAtlas___, v11);
-    sub_1B863B8(&Method_System_Linq_Enumerable_ToList_UIAtlas___, v12);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Where_GameObject___, v13);
-    sub_1B863B8(&EventDelegate_TypeInfo, v14);
-    sub_1B863B8(&System_Func_UIAtlas__bool__TypeInfo, v15);
-    sub_1B863B8(&System_Func_GameObject__UIAtlas__TypeInfo, v16);
-    sub_1B863B8(&System_Func_GameObject__bool__TypeInfo, v17);
-    sub_1B863B8(&System_Func_RoadmapEntity__bool__TypeInfo, v18);
-    sub_1B863B8(&Method_System_Collections_Generic_List_RoadmapEntity__get_Count__, v19);
-    sub_1B863B8(&Method_RoadmapButtonPrefab_OnClickRoadmapButton__, v20);
-    sub_1B863B8(&RoadmapButtonPrefab_TypeInfo, v21);
-    sub_1B863B8(&Method_RoadmapMaster_IsDispAchieved__, v22);
-    sub_1B863B8(&Method_RoadmapButtonPrefab___c__Initialize_b__13_0__, v23);
-    sub_1B863B8(&Method_RoadmapButtonPrefab___c__Initialize_b__13_1__, v24);
-    sub_1B863B8(&Method_RoadmapButtonPrefab___c__Initialize_b__13_2__, v25);
-    sub_1B863B8(&RoadmapButtonPrefab___c_TypeInfo, v26);
-    byte_4A4B3A3 = 1;
+    sub_1BDB878(&Method_AssetData_GetObjectList_GameObject___, roadmapAssetData);
+    sub_1BDB878(&EventDelegate_Callback_TypeInfo, v6);
+    sub_1BDB878(&Method_DataManager_GetMaster_RoadmapMaster___, v7);
+    sub_1BDB878(&DataManager_TypeInfo, v8);
+    sub_1BDB878(&Method_System_Linq_Enumerable_All_RoadmapEntity___, v9);
+    sub_1BDB878(&Method_System_Linq_Enumerable_FirstOrDefault_UIAtlas___, v10);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Select_GameObject__UIAtlas___, v11);
+    sub_1BDB878(&Method_System_Linq_Enumerable_ToList_UIAtlas___, v12);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Where_GameObject___, v13);
+    sub_1BDB878(&EventDelegate_TypeInfo, v14);
+    sub_1BDB878(&System_Func_UIAtlas__bool__TypeInfo, v15);
+    sub_1BDB878(&System_Func_GameObject__UIAtlas__TypeInfo, v16);
+    sub_1BDB878(&System_Func_GameObject__bool__TypeInfo, v17);
+    sub_1BDB878(&System_Func_RoadmapEntity__bool__TypeInfo, v18);
+    sub_1BDB878(&Method_System_Collections_Generic_List_RoadmapEntity__get_Count__, v19);
+    sub_1BDB878(&Method_RoadmapButtonPrefab_OnClickRoadmapButton__, v20);
+    sub_1BDB878(&RoadmapButtonPrefab_TypeInfo, v21);
+    sub_1BDB878(&Method_RoadmapMaster_IsDispAchieved__, v22);
+    sub_1BDB878(&Method_RoadmapButtonPrefab___c__Initialize_b__13_0__, v23);
+    sub_1BDB878(&Method_RoadmapButtonPrefab___c__Initialize_b__13_1__, v24);
+    sub_1BDB878(&Method_RoadmapButtonPrefab___c__Initialize_b__13_2__, v25);
+    sub_1BDB878(&RoadmapButtonPrefab___c_TypeInfo, v26);
+    byte_4B418E4 = 1;
   }
   this->fields._IsInitialized_k__BackingField = 0;
   if ( !roadmapAssetData )
@@ -574,10 +574,10 @@ void __fastcall RoadmapButtonPrefab__Initialize(
     goto LABEL_39;
   }
   this->fields.roadmapAssetData = roadmapAssetData;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.roadmapAssetData, (int32_t)roadmapAssetData, (int32_t)method, v3);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.roadmapAssetData, (int32_t)roadmapAssetData, (int32_t)method, v3);
   ObjectList_object = AssetData__GetObjectList_object_(
                         roadmapAssetData,
-                        (const MethodInfo_2F4FFBC *)Method_AssetData_GetObjectList_GameObject___);
+                        (const MethodInfo_3015068 *)Method_AssetData_GetObjectList_GameObject___);
   v28 = RoadmapButtonPrefab___c_TypeInfo;
   v29 = (System_Collections_Generic_IEnumerable_TSource__o *)ObjectList_object;
   if ( !RoadmapButtonPrefab___c_TypeInfo->_2.cctor_finished )
@@ -594,16 +594,16 @@ void __fastcall RoadmapButtonPrefab__Initialize(
       v28 = RoadmapButtonPrefab___c_TypeInfo;
     }
     v31 = (Il2CppObject *)v28->static_fields->__9;
-    _9__13_0 = (System_Func_object__bool__o *)sub_1B86604(System_Func_GameObject__bool__TypeInfo);
+    _9__13_0 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_GameObject__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__13_0, v31, Method_RoadmapButtonPrefab___c__Initialize_b__13_0__, 0LL);
     static_fields = RoadmapButtonPrefab___c_TypeInfo->static_fields;
     static_fields->__9__13_0 = (struct System_Func_GameObject__bool__o *)_9__13_0;
-    sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v33, v34);
+    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v33, v34);
   }
   v35 = System_Linq_Enumerable__Where_object_(
           v29,
           (System_Func_TSource__bool__o *)_9__13_0,
-          (const MethodInfo_2FAFD10 *)Method_System_Linq_Enumerable_Where_GameObject___);
+          (const MethodInfo_3077440 *)Method_System_Linq_Enumerable_Where_GameObject___);
   v36 = RoadmapButtonPrefab___c_TypeInfo;
   v37 = v35;
   if ( !RoadmapButtonPrefab___c_TypeInfo->_2.cctor_finished )
@@ -620,24 +620,24 @@ void __fastcall RoadmapButtonPrefab__Initialize(
       v36 = RoadmapButtonPrefab___c_TypeInfo;
     }
     v39 = (Il2CppObject *)v36->static_fields->__9;
-    _9__13_1 = (System_Func_object__object__o *)sub_1B86604(System_Func_GameObject__UIAtlas__TypeInfo);
+    _9__13_1 = (System_Func_object__object__o *)sub_1BDBAC4(System_Func_GameObject__UIAtlas__TypeInfo);
     System_Func_object__object____ctor(_9__13_1, v39, Method_RoadmapButtonPrefab___c__Initialize_b__13_1__, 0LL);
     v40 = RoadmapButtonPrefab___c_TypeInfo->static_fields;
     v40->__9__13_1 = (struct System_Func_GameObject__UIAtlas__o *)_9__13_1;
-    sub_1B8635C((CGThumbnailListItem_o *)&v40->__9__13_1, (int32_t)_9__13_1, v41, v42);
+    sub_1BDB81C((CGThumbnailListItem_o *)&v40->__9__13_1, (int32_t)_9__13_1, v41, v42);
   }
   v43 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                v37,
                                                                (System_Func_TSource__TResult__o *)_9__13_1,
-                                                               (const MethodInfo_2FA1274 *)Method_System_Linq_Enumerable_Select_GameObject__UIAtlas___);
+                                                               (const MethodInfo_3068484 *)Method_System_Linq_Enumerable_Select_GameObject__UIAtlas___);
   v44 = (struct System_Collections_Generic_List_UIAtlas__o *)System_Linq_Enumerable__ToList_object_(
                                                                v43,
-                                                               (const MethodInfo_2FADBE0 *)Method_System_Linq_Enumerable_ToList_UIAtlas___);
+                                                               (const MethodInfo_307503C *)Method_System_Linq_Enumerable_ToList_UIAtlas___);
   this->fields.roadmapAtlasList = v44;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.roadmapAtlasList, (int32_t)v44, v45, v46);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.roadmapAtlasList, (int32_t)v44, v45, v46);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  gameObject = DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_RoadmapMaster___);
+  gameObject = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_RoadmapMaster___);
   if ( !gameObject )
     goto LABEL_43;
   v49 = (Il2CppObject *)gameObject;
@@ -677,16 +677,16 @@ LABEL_39:
       v52 = RoadmapButtonPrefab___c_TypeInfo;
     }
     v56 = (Il2CppObject *)v52->static_fields->__9;
-    _9__13_2 = (System_Func_object__bool__o *)sub_1B86604(System_Func_UIAtlas__bool__TypeInfo);
+    _9__13_2 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_UIAtlas__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__13_2, v56, Method_RoadmapButtonPrefab___c__Initialize_b__13_2__, 0LL);
     v57 = RoadmapButtonPrefab___c_TypeInfo->static_fields;
     v57->__9__13_2 = (struct System_Func_UIAtlas__bool__o *)_9__13_2;
-    sub_1B8635C((CGThumbnailListItem_o *)&v57->__9__13_2, (int32_t)_9__13_2, v58, v59);
+    sub_1BDB81C((CGThumbnailListItem_o *)&v57->__9__13_2, (int32_t)_9__13_2, v58, v59);
   }
-  gameObject = System_Linq_Enumerable__FirstOrDefault_object__49893388(
+  gameObject = System_Linq_Enumerable__FirstOrDefault_object__50698552(
                  (System_Collections_Generic_IEnumerable_TSource__o *)roadmapAtlasList,
                  (System_Func_TSource__bool__o *)_9__13_2,
-                 (const MethodInfo_2F9500C *)Method_System_Linq_Enumerable_FirstOrDefault_UIAtlas___);
+                 (const MethodInfo_3059938 *)Method_System_Linq_Enumerable_FirstOrDefault_UIAtlas___);
   if ( !sprite )
     goto LABEL_43;
   UISprite__set_atlas(sprite, (UIAtlas_o *)gameObject, 0LL);
@@ -701,7 +701,7 @@ LABEL_39:
   if ( !button )
     goto LABEL_43;
   onClick = button->fields.onClick;
-  v63 = (EventDelegate_Callback_o *)sub_1B86604(EventDelegate_Callback_TypeInfo);
+  v63 = (EventDelegate_Callback_o *)sub_1BDBAC4(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(
     v63,
     (Il2CppObject *)this,
@@ -710,12 +710,12 @@ LABEL_39:
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
   EventDelegate__Add(onClick, v63, 0LL);
-  v64 = (System_Func_object__bool__o *)sub_1B86604(System_Func_RoadmapEntity__bool__TypeInfo);
+  v64 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_RoadmapEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(v64, v49, Method_RoadmapMaster_IsDispAchieved__, 0LL);
   gameObject = (void *)System_Linq_Enumerable__All_object_(
                          v51,
                          (System_Func_TSource__bool__o *)v64,
-                         (const MethodInfo_2F7A214 *)Method_System_Linq_Enumerable_All_RoadmapEntity___);
+                         (const MethodInfo_303DF28 *)Method_System_Linq_Enumerable_All_RoadmapEntity___);
   newNotification = this->fields.newNotification;
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
@@ -727,14 +727,14 @@ LABEL_39:
       goto LABEL_42;
     }
 LABEL_43:
-    sub_1B86614(gameObject, v48);
+    sub_1BDBAD4(gameObject, v48);
   }
   if ( !newNotification )
     goto LABEL_43;
   v66 = this->fields.newNotification;
   v67 = 0;
 LABEL_42:
-  ShiningIconComponent__Set_39191784(v66, v67, 0LL);
+  ShiningIconComponent__Set_40035468(v66, v67, 0LL);
   this->fields._IsInitialized_k__BackingField = 1;
 }
 
@@ -762,7 +762,7 @@ void __fastcall RoadmapButtonPrefab__ModifyRoadmapButton(
             button->klass->vtable._15_OnClick.methodPtr),
           (button = this->fields.button) == 0LL) )
     {
-      sub_1B86614(button, isEnabled);
+      sub_1BDBAD4(button, isEnabled);
     }
     ((void (__fastcall *)(struct UIButton_o *, bool, Il2CppMethodPointer))button->klass->vtable._5_set_isEnabled.method)(
       button,
@@ -793,16 +793,16 @@ void __fastcall RoadmapButtonPrefab__OnClickRoadmapButton(RoadmapButtonPrefab_o 
   CommonUI_o *v19; // x22
   System_Action_o *v20; // x23
 
-  if ( (byte_4A4B3A5 & 1) == 0 )
+  if ( (byte_4B418E6 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, method);
-    sub_1B863B8(&AssetManager_TypeInfo, v3);
-    sub_1B863B8(&Method_RoadmapButtonPrefab_OnClickRoadmapButton__, v4);
-    sub_1B863B8(&Method_RoadmapButtonPrefab__OnClickRoadmapButton_b__16_0__, v5);
-    sub_1B863B8(&RoadmapButtonPrefab_TypeInfo, v6);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1B863B8(&TerminalSceneComponent_TypeInfo, v8);
-    byte_4A4B3A5 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, method);
+    sub_1BDB878(&AssetManager_TypeInfo, v3);
+    sub_1BDB878(&Method_RoadmapButtonPrefab_OnClickRoadmapButton__, v4);
+    sub_1BDB878(&Method_RoadmapButtonPrefab__OnClickRoadmapButton_b__16_0__, v5);
+    sub_1BDB878(&RoadmapButtonPrefab_TypeInfo, v6);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    sub_1BDB878(&TerminalSceneComponent_TypeInfo, v8);
+    byte_4B418E6 = 1;
   }
   v9 = RoadmapButtonPrefab_TypeInfo;
   if ( !RoadmapButtonPrefab_TypeInfo->_2.cctor_finished )
@@ -817,10 +817,10 @@ void __fastcall RoadmapButtonPrefab__OnClickRoadmapButton(RoadmapButtonPrefab_o 
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4A48DB8 )
+    if ( !byte_4B3EEEF )
     {
-      sub_1B863B8(&TerminalSceneComponent_TypeInfo, v11);
-      byte_4A48DB8 = 1;
+      sub_1BDB878(&TerminalSceneComponent_TypeInfo, v11);
+      byte_4B3EEEF = 1;
     }
     v12 = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -837,18 +837,18 @@ void __fastcall RoadmapButtonPrefab__OnClickRoadmapButton(RoadmapButtonPrefab_o 
     TitleInfoControl__SetTouchEnable(v12, 0, 0LL);
     v14 = Method_RoadmapButtonPrefab_OnClickRoadmapButton__;
     if ( (*((_BYTE *)Method_RoadmapButtonPrefab_OnClickRoadmapButton__ + 83) & 2) != 0 )
-      v14 = (_QWORD *)sub_1B863D0(Method_RoadmapButtonPrefab_OnClickRoadmapButton__);
-    v15 = (System_Reflection_MethodBase_o *)sub_1B8639C(v14, v14[4]);
+      v14 = (_QWORD *)sub_1BDB890(Method_RoadmapButtonPrefab_OnClickRoadmapButton__);
+    v15 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v14, v14[4]);
     OverwriteAssetSoundName__PlaySystemSe(v15, 0, 0, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     roadmapAtlasList = this->fields.roadmapAtlasList;
     roadmapAssetData = this->fields.roadmapAssetData;
     v19 = (CommonUI_o *)Instance;
-    v20 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+    v20 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
     System_Action___ctor(v20, (Il2CppObject *)this, Method_RoadmapButtonPrefab__OnClickRoadmapButton_b__16_0__, 0LL);
     if ( !v19 )
 LABEL_22:
-      sub_1B86614(v12, v11);
+      sub_1BDBAD4(v12, v11);
     CommonUI__OpenRoadmapDialog(v19, roadmapAssetData, roadmapAtlasList, v20, 0LL);
   }
 }
@@ -888,21 +888,21 @@ void __fastcall RoadmapButtonPrefab___OnClickRoadmapButton_b__16_0(
   System_String_o *v30; // x0
   System_Threading_CancellationTokenSource_c *klass; // x8
 
-  if ( (byte_4A4B3A7 & 1) == 0 )
+  if ( (byte_4B418E8 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMaster_RoadmapMaster___, method);
-    sub_1B863B8(&DataManager_TypeInfo, v3);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Select_RoadmapEntity__int___, v4);
-    sub_1B863B8(&Method_System_Linq_Enumerable_ToArray_int___, v5);
-    sub_1B863B8(&System_Func_RoadmapEntity__int__TypeInfo, v6);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v7);
-    sub_1B863B8(&RoadmapButtonPrefab_TypeInfo, v8);
-    sub_1B863B8(&Method_System_String_Join_int___, v9);
-    sub_1B863B8(&TerminalSceneComponent_TypeInfo, v10);
-    sub_1B863B8(&Method_RoadmapButtonPrefab___c__OnClickRoadmapButton_b__16_1__, v11);
-    sub_1B863B8(&RoadmapButtonPrefab___c_TypeInfo, v12);
-    sub_1B863B8(&StringLiteral_817/*","*/, v13);
-    byte_4A4B3A7 = 1;
+    sub_1BDB878(&Method_DataManager_GetMaster_RoadmapMaster___, method);
+    sub_1BDB878(&DataManager_TypeInfo, v3);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Select_RoadmapEntity__int___, v4);
+    sub_1BDB878(&Method_System_Linq_Enumerable_ToArray_int___, v5);
+    sub_1BDB878(&System_Func_RoadmapEntity__int__TypeInfo, v6);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v7);
+    sub_1BDB878(&RoadmapButtonPrefab_TypeInfo, v8);
+    sub_1BDB878(&Method_System_String_Join_int___, v9);
+    sub_1BDB878(&TerminalSceneComponent_TypeInfo, v10);
+    sub_1BDB878(&Method_RoadmapButtonPrefab___c__OnClickRoadmapButton_b__16_1__, v11);
+    sub_1BDB878(&RoadmapButtonPrefab___c_TypeInfo, v12);
+    sub_1BDB878(&StringLiteral_820/*","*/, v13);
+    byte_4B418E8 = 1;
   }
   newNotification = (UnityEngine_Object_o *)this->fields.newNotification;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -912,11 +912,11 @@ void __fastcall RoadmapButtonPrefab___OnClickRoadmapButton_b__16_0(
     Master_object = this->fields.newNotification;
     if ( !Master_object )
       goto LABEL_28;
-    ShiningIconComponent__Set_39191784(Master_object, 0, 0LL);
+    ShiningIconComponent__Set_40035468(Master_object, 0, 0LL);
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ShiningIconComponent_o *)DataManager__GetMaster_object_((const MethodInfo_2F6DC64 *)Method_DataManager_GetMaster_RoadmapMaster___);
+  Master_object = (ShiningIconComponent_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_RoadmapMaster___);
   if ( !Master_object )
     goto LABEL_28;
   SortedDispBoardEntityList = RoadmapMaster__GetSortedDispBoardEntityList(
@@ -940,19 +940,19 @@ void __fastcall RoadmapButtonPrefab___OnClickRoadmapButton_b__16_0(
       v18 = RoadmapButtonPrefab___c_TypeInfo;
     }
     v21 = (Il2CppObject *)v18->static_fields->__9;
-    _9__16_1 = (System_Func_object__int__o *)sub_1B86604(System_Func_RoadmapEntity__int__TypeInfo);
+    _9__16_1 = (System_Func_object__int__o *)sub_1BDBAC4(System_Func_RoadmapEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__16_1, v21, Method_RoadmapButtonPrefab___c__OnClickRoadmapButton_b__16_1__, 0LL);
     static_fields = RoadmapButtonPrefab___c_TypeInfo->static_fields;
     static_fields->__9__16_1 = (struct System_Func_RoadmapEntity__int__o *)_9__16_1;
-    sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__16_1, (int32_t)_9__16_1, v23, v24);
+    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__16_1, (int32_t)_9__16_1, v23, v24);
   }
   v25 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                v19,
                                                                (System_Func_TSource__TResult__o *)_9__16_1,
-                                                               (const MethodInfo_2FA0998 *)Method_System_Linq_Enumerable_Select_RoadmapEntity__int___);
+                                                               (const MethodInfo_3067BA8 *)Method_System_Linq_Enumerable_Select_RoadmapEntity__int___);
   v26 = System_Linq_Enumerable__ToArray_int_(
           v25,
-          (const MethodInfo_2FA9740 *)Method_System_Linq_Enumerable_ToArray_int___);
+          (const MethodInfo_3070610 *)Method_System_Linq_Enumerable_ToArray_int___);
   v27 = RoadmapButtonPrefab_TypeInfo;
   v28 = (System_Collections_Generic_IEnumerable_T__o *)v26;
   if ( !RoadmapButtonPrefab_TypeInfo->_2.cctor_finished )
@@ -962,16 +962,16 @@ void __fastcall RoadmapButtonPrefab___OnClickRoadmapButton_b__16_0(
   }
   LAST_ROADMAP_BOARD_IDS_KEY = v27->static_fields->LAST_ROADMAP_BOARD_IDS_KEY;
   v30 = System_String__Join_int_(
-          (System_String_o *)StringLiteral_817/*","*/,
+          (System_String_o *)StringLiteral_820/*","*/,
           v28,
-          (const MethodInfo_3013FB8 *)Method_System_String_Join_int___);
+          (const MethodInfo_30DC2A4 *)Method_System_String_Join_int___);
   UnityEngine_PlayerPrefs__SetString(LAST_ROADMAP_BOARD_IDS_KEY, v30, 0LL);
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4A48DB8 )
+  if ( !byte_4B3EEEF )
   {
-    sub_1B863B8(&TerminalSceneComponent_TypeInfo, v15);
-    byte_4A48DB8 = 1;
+    sub_1BDB878(&TerminalSceneComponent_TypeInfo, v15);
+    byte_4B3EEEF = 1;
   }
   Master_object = (ShiningIconComponent_o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -982,7 +982,7 @@ void __fastcall RoadmapButtonPrefab___OnClickRoadmapButton_b__16_0(
   klass = Master_object[4].fields.m_CancellationTokenSource->klass;
   if ( !klass || (Master_object = *(ShiningIconComponent_o **)&klass->_2.instance_size) == 0LL )
 LABEL_28:
-    sub_1B86614(Master_object, v15);
+    sub_1BDBAD4(Master_object, v15);
   TitleInfoControl__SetTouchEnable((TitleInfoControl_o *)Master_object, 1, 0LL);
 }
 
@@ -1009,15 +1009,15 @@ void __fastcall RoadmapButtonPrefab___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4A4B3A8 & 1) == 0 )
+  if ( (byte_4B418E9 & 1) == 0 )
   {
-    sub_1B863B8(&RoadmapButtonPrefab___c_TypeInfo, v1);
-    byte_4A4B3A8 = 1;
+    sub_1BDB878(&RoadmapButtonPrefab___c_TypeInfo, v1);
+    byte_4B418E9 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(RoadmapButtonPrefab___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BDBAC4(RoadmapButtonPrefab___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   RoadmapButtonPrefab___c_TypeInfo->static_fields->__9 = (struct RoadmapButtonPrefab___c_o *)v2;
-  sub_1B8635C((CGThumbnailListItem_o *)RoadmapButtonPrefab___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BDB81C((CGThumbnailListItem_o *)RoadmapButtonPrefab___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -1051,7 +1051,7 @@ int32_t __fastcall RoadmapButtonPrefab___c___CheckReleasedOrAddedNewRoadmap_b__1
         const MethodInfo *method)
 {
   if ( !roadmap )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   return roadmap->fields.boardImageId;
 }
 
@@ -1075,10 +1075,10 @@ System_ValueTuple_int__int__o __fastcall RoadmapButtonPrefab___c___CheckReleased
   System_ValueTuple_int__int__o v7; // [xsp+8h] [xbp-28h] BYREF
   System_ValueTuple_int__int__o v8; // 0:x0.8
 
-  if ( (byte_4A4B3AC & 1) == 0 )
+  if ( (byte_4B418ED & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_ValueTuple_int__int___ctor__, *(_QWORD *)&lastId);
-    byte_4A4B3AC = 1;
+    sub_1BDB878(&Method_System_ValueTuple_int__int___ctor__, *(_QWORD *)&lastId);
+    byte_4B418ED = 1;
   }
   v8 = (System_ValueTuple_int__int__o)&v7;
   v7 = 0LL;
@@ -1086,7 +1086,7 @@ System_ValueTuple_int__int__o __fastcall RoadmapButtonPrefab___c___CheckReleased
     v8,
     lastId,
     currentId,
-    (const MethodInfo_394272C *)Method_System_ValueTuple_int__int___ctor__);
+    (const MethodInfo_3A22918 *)Method_System_ValueTuple_int__int___ctor__);
   return v7;
 }
 
@@ -1099,17 +1099,17 @@ bool __fastcall RoadmapButtonPrefab___c___Initialize_b__13_0(
   __int64 v4; // x1
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4A4B3A9 & 1) == 0 )
+  if ( (byte_4B418EA & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, assetObject);
-    this = (RoadmapButtonPrefab___c_o *)sub_1B863B8(&UnityEngine_Object_TypeInfo, v4);
-    byte_4A4B3A9 = 1;
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, assetObject);
+    this = (RoadmapButtonPrefab___c_o *)sub_1BDB878(&UnityEngine_Object_TypeInfo, v4);
+    byte_4B418EA = 1;
   }
   if ( !assetObject )
-    sub_1B86614(this, assetObject);
+    sub_1BDBAD4(this, assetObject);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        assetObject,
-                       (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                       (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   return UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -1121,16 +1121,16 @@ UIAtlas_o *__fastcall RoadmapButtonPrefab___c___Initialize_b__13_1(
         UnityEngine_GameObject_o *assetObject,
         const MethodInfo *method)
 {
-  if ( (byte_4A4B3AA & 1) == 0 )
+  if ( (byte_4B418EB & 1) == 0 )
   {
-    this = (RoadmapButtonPrefab___c_o *)sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, assetObject);
-    byte_4A4B3AA = 1;
+    this = (RoadmapButtonPrefab___c_o *)sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, assetObject);
+    byte_4B418EB = 1;
   }
   if ( !assetObject )
-    sub_1B86614(this, assetObject);
+    sub_1BDBAD4(this, assetObject);
   return (UIAtlas_o *)UnityEngine_GameObject__GetComponent_object_(
                         assetObject,
-                        (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                        (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
 }
 
 
@@ -1143,13 +1143,13 @@ bool __fastcall RoadmapButtonPrefab___c___Initialize_b__13_2(
   RoadmapButtonPrefab_c *v5; // x8
   System_String_o *v6; // x19
 
-  if ( (byte_4A4B3AB & 1) == 0 )
+  if ( (byte_4B418EC & 1) == 0 )
   {
-    this = (RoadmapButtonPrefab___c_o *)sub_1B863B8(&RoadmapButtonPrefab_TypeInfo, atlas);
-    byte_4A4B3AB = 1;
+    this = (RoadmapButtonPrefab___c_o *)sub_1BDB878(&RoadmapButtonPrefab_TypeInfo, atlas);
+    byte_4B418EC = 1;
   }
   if ( !atlas )
-    sub_1B86614(this, atlas);
+    sub_1BDBAD4(this, atlas);
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)atlas, 0LL);
   v5 = RoadmapButtonPrefab_TypeInfo;
   v6 = name;
@@ -1168,6 +1168,6 @@ int32_t __fastcall RoadmapButtonPrefab___c___OnClickRoadmapButton_b__16_1(
         const MethodInfo *method)
 {
   if ( !roadmap )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   return roadmap->fields.boardImageId;
 }

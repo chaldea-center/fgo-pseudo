@@ -2,14 +2,14 @@ void __fastcall SvtAppendPassiveSkillUnlockEntity___ctor(
         SvtAppendPassiveSkillUnlockEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A4F0A7 & 1) == 0 )
+  if ( (byte_4B456A4 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A4F0A7 = 1;
+    sub_1BDB878(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B456A4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32DF9D0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,15 +19,15 @@ System_String_o *__fastcall SvtAppendPassiveSkillUnlockEntity__CreatePK(
         int32_t num,
         const MethodInfo *method)
 {
-  if ( (byte_4A4F0A6 & 1) == 0 )
+  if ( (byte_4B456A3 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&num);
-    byte_4A4F0A6 = 1;
+    sub_1BDB878(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&num);
+    byte_4B456A3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            num,
-           (const MethodInfo_2F6BE40 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3031AE4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

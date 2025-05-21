@@ -21,17 +21,17 @@ BattleServantData_o *__fastcall RestockServantLogic__ChoiceRestockServant(
   const MethodInfo *v5; // x2
 
   if ( !battleData )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   RestockableSubServantArray = BattleData__GetRestockableSubServantArray(
                                  battleData,
                                  this->fields._IsEnemy_k__BackingField,
                                  this->fields._FieldMemberIndex_k__BackingField,
                                  0LL);
-  return RestockServantLogic__ChoiceRestockServant_44753748(this, RestockableSubServantArray, v5);
+  return RestockServantLogic__ChoiceRestockServant_45654960(this, RestockableSubServantArray, v5);
 }
 
 
-BattleServantData_o *__fastcall RestockServantLogic__ChoiceRestockServant_44753748(
+BattleServantData_o *__fastcall RestockServantLogic__ChoiceRestockServant_45654960(
         RestockServantLogic_o *this,
         BattleServantData_array *subMemberArray,
         const MethodInfo *method)
@@ -41,14 +41,15 @@ BattleServantData_o *__fastcall RestockServantLogic__ChoiceRestockServant_447537
   __int64 v6; // x1
   int32_t SubMemberIndex_k__BackingField; // w20
   Il2CppObject *object; // x2
+  __int64 v10; // x2
 
   v4 = this;
-  if ( (byte_4A51372 & 1) == 0 )
+  if ( (byte_4B479D1 & 1) == 0 )
   {
-    sub_1B863B8(&Method_BasicHelper_IndexValue_BattleServantData___, subMemberArray);
-    sub_1B863B8(&Method_BattleRandom_getShuffle_BattleServantData___, v5);
-    this = (RestockServantLogic_o *)sub_1B863B8(&Method_System_Linq_Enumerable_Last_BattleServantData___, v6);
-    byte_4A51372 = 1;
+    sub_1BDB878(&Method_BasicHelper_IndexValue_BattleServantData___, subMemberArray);
+    sub_1BDB878(&Method_BattleRandom_getShuffle_BattleServantData___, v5);
+    this = (RestockServantLogic_o *)sub_1BDB878(&Method_System_Linq_Enumerable_Last_BattleServantData___, v6);
+    byte_4B479D1 = 1;
   }
   if ( !subMemberArray )
     goto LABEL_11;
@@ -59,21 +60,21 @@ BattleServantData_o *__fastcall RestockServantLogic__ChoiceRestockServant_447537
   {
     object = System_Linq_Enumerable__Last_object_(
                (System_Collections_Generic_IEnumerable_TSource__o *)subMemberArray,
-               (const MethodInfo_2F963A8 *)Method_System_Linq_Enumerable_Last_BattleServantData___);
+               (const MethodInfo_305AD64 *)Method_System_Linq_Enumerable_Last_BattleServantData___);
     return (BattleServantData_o *)BasicHelper__IndexValue_object_(
                                     (System_Object_array *)subMemberArray,
                                     SubMemberIndex_k__BackingField,
                                     object,
-                                    (const MethodInfo_2F5C590 *)Method_BasicHelper_IndexValue_BattleServantData___);
+                                    (const MethodInfo_3021FFC *)Method_BasicHelper_IndexValue_BattleServantData___);
   }
   this = (RestockServantLogic_o *)BattleRandom__getShuffle_object_(
                                     (System_Object_array *)subMemberArray,
-                                    (const MethodInfo_2F5F028 *)Method_BattleRandom_getShuffle_BattleServantData___);
+                                    (const MethodInfo_3024A94 *)Method_BattleRandom_getShuffle_BattleServantData___);
   if ( !this )
 LABEL_11:
-    sub_1B86614(this, subMemberArray);
+    sub_1BDBAD4(this, subMemberArray);
   if ( !*(_DWORD *)&this->fields._IsEnemy_k__BackingField )
-    sub_1B8661C(this, subMemberArray);
+    sub_1BDBADC(this, subMemberArray, v10);
   return (BattleServantData_o *)this[1].klass;
 }
 
@@ -106,24 +107,24 @@ void __fastcall RestockServantLogic__DeactiveRestockLogic(
   int32_t v25; // w2
   const MethodInfo *v26; // x3
 
-  if ( (byte_4A51374 & 1) == 0 )
+  if ( (byte_4B479D3 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_RestockServantLogic__TypeInfo, isEnemy);
-    sub_1B863B8(&Method_BasicHelper_ForEach_RestockServantLogic___, v7);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Where_RestockServantLogic___, v8);
-    sub_1B863B8(&System_Func_RestockServantLogic__bool__TypeInfo, v9);
-    sub_1B863B8(&Method_RestockServantLogic___c__DeactiveRestockLogic_b__21_1__, v10);
-    sub_1B863B8(&Method_RestockServantLogic___c__DisplayClass21_0__DeactiveRestockLogic_b__0__, v11);
-    sub_1B863B8(&RestockServantLogic___c__DisplayClass21_0_TypeInfo, v12);
-    sub_1B863B8(&RestockServantLogic___c_TypeInfo, v13);
-    byte_4A51374 = 1;
+    sub_1BDB878(&System_Action_RestockServantLogic__TypeInfo, isEnemy);
+    sub_1BDB878(&Method_BasicHelper_ForEach_RestockServantLogic___, v7);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Where_RestockServantLogic___, v8);
+    sub_1BDB878(&System_Func_RestockServantLogic__bool__TypeInfo, v9);
+    sub_1BDB878(&Method_RestockServantLogic___c__DeactiveRestockLogic_b__21_1__, v10);
+    sub_1BDB878(&Method_RestockServantLogic___c__DisplayClass21_0__DeactiveRestockLogic_b__0__, v11);
+    sub_1BDB878(&RestockServantLogic___c__DisplayClass21_0_TypeInfo, v12);
+    sub_1BDB878(&RestockServantLogic___c_TypeInfo, v13);
+    byte_4B479D3 = 1;
   }
-  v14 = sub_1B86604(RestockServantLogic___c__DisplayClass21_0_TypeInfo);
+  v14 = sub_1BDBAC4(RestockServantLogic___c__DisplayClass21_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v14, 0LL);
   if ( !v14 || (*(_DWORD *)(v14 + 16) = fieldMemberIndex, *(_BYTE *)(v14 + 20) = isEnemy, !battleData) )
-    sub_1B86614(v15, v16);
+    sub_1BDBAD4(v15, v16);
   RestockServantLogicList = BattleData__GetRestockServantLogicList(battleData, 0LL);
-  v18 = (System_Func_object__bool__o *)sub_1B86604(System_Func_RestockServantLogic__bool__TypeInfo);
+  v18 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_RestockServantLogic__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v18,
     (Il2CppObject *)v14,
@@ -132,7 +133,7 @@ void __fastcall RestockServantLogic__DeactiveRestockLogic(
   v19 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)RestockServantLogicList,
           (System_Func_TSource__bool__o *)v18,
-          (const MethodInfo_2FAFD10 *)Method_System_Linq_Enumerable_Where_RestockServantLogic___);
+          (const MethodInfo_3077440 *)Method_System_Linq_Enumerable_Where_RestockServantLogic___);
   v20 = RestockServantLogic___c_TypeInfo;
   v21 = (System_Collections_Generic_IEnumerable_T__o *)v19;
   if ( !RestockServantLogic___c_TypeInfo->_2.cctor_finished )
@@ -149,16 +150,16 @@ void __fastcall RestockServantLogic__DeactiveRestockLogic(
       v20 = RestockServantLogic___c_TypeInfo;
     }
     v23 = (Il2CppObject *)v20->static_fields->__9;
-    _9__21_1 = (System_Action_object__o *)sub_1B86604(System_Action_RestockServantLogic__TypeInfo);
+    _9__21_1 = (System_Action_object__o *)sub_1BDBAC4(System_Action_RestockServantLogic__TypeInfo);
     System_Action_object____ctor(_9__21_1, v23, Method_RestockServantLogic___c__DeactiveRestockLogic_b__21_1__, 0LL);
     static_fields = RestockServantLogic___c_TypeInfo->static_fields;
     static_fields->__9__21_1 = (struct System_Action_RestockServantLogic__o *)_9__21_1;
-    sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__21_1, (int32_t)_9__21_1, v25, v26);
+    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__21_1, (int32_t)_9__21_1, v25, v26);
   }
   BasicHelper__ForEach_object_(
     v21,
     (System_Action_T__o *)_9__21_1,
-    (const MethodInfo_2F59FB0 *)Method_BasicHelper_ForEach_RestockServantLogic___);
+    (const MethodInfo_301FA1C *)Method_BasicHelper_ForEach_RestockServantLogic___);
 }
 
 
@@ -183,23 +184,23 @@ BattleServantData_o *__fastcall RestockServantLogic__GetImmediateRestockServant(
   int v18; // w22
   char v19; // w20
 
-  if ( (byte_4A51373 & 1) == 0 )
+  if ( (byte_4B479D2 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Collections_Generic_List_RestockServantLogic__Find__, isEnemy);
-    sub_1B863B8(&System_Predicate_RestockServantLogic__TypeInfo, v7);
-    sub_1B863B8(&RestockServantLogic_TypeInfo, v8);
-    sub_1B863B8(&Method_RestockServantLogic___c__DisplayClass20_0__GetImmediateRestockServant_b__0__, v9);
-    sub_1B863B8(&RestockServantLogic___c__DisplayClass20_0_TypeInfo, v10);
-    byte_4A51373 = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_List_RestockServantLogic__Find__, isEnemy);
+    sub_1BDB878(&System_Predicate_RestockServantLogic__TypeInfo, v7);
+    sub_1BDB878(&RestockServantLogic_TypeInfo, v8);
+    sub_1BDB878(&Method_RestockServantLogic___c__DisplayClass20_0__GetImmediateRestockServant_b__0__, v9);
+    sub_1BDB878(&RestockServantLogic___c__DisplayClass20_0_TypeInfo, v10);
+    byte_4B479D2 = 1;
   }
-  v11 = sub_1B86604(RestockServantLogic___c__DisplayClass20_0_TypeInfo);
+  v11 = sub_1BDBAC4(RestockServantLogic___c__DisplayClass20_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11
     || (*(_DWORD *)(v11 + 16) = fieldMemberIndex, *(_BYTE *)(v11 + 20) = isEnemy, !battleData)
     || (RestockServantLogicList = (System_Collections_Generic_List_object__o *)BattleData__GetRestockServantLogicList(
                                                                                  battleData,
                                                                                  0LL),
-        v15 = (System_Predicate_object__o *)sub_1B86604(System_Predicate_RestockServantLogic__TypeInfo),
+        v15 = (System_Predicate_object__o *)sub_1BDBAC4(System_Predicate_RestockServantLogic__TypeInfo),
         System_Predicate_object____ctor(
           v15,
           (Il2CppObject *)v11,
@@ -207,12 +208,12 @@ BattleServantData_o *__fastcall RestockServantLogic__GetImmediateRestockServant(
           0LL),
         !RestockServantLogicList) )
   {
-    sub_1B86614(v12, v13);
+    sub_1BDBAD4(v12, v13);
   }
   v16 = System_Collections_Generic_List_object___Find(
           RestockServantLogicList,
           (System_Predicate_T__o *)v15,
-          (const MethodInfo_35FCFC0 *)Method_System_Collections_Generic_List_RestockServantLogic__Find__);
+          (const MethodInfo_36D642C *)Method_System_Collections_Generic_List_RestockServantLogic__Find__);
   if ( v16 )
   {
     v17 = (__int64)v16;
@@ -221,7 +222,7 @@ BattleServantData_o *__fastcall RestockServantLogic__GetImmediateRestockServant(
   {
     v18 = *(_DWORD *)(v11 + 16);
     v19 = *(_BYTE *)(v11 + 20);
-    v17 = sub_1B86604(RestockServantLogic_TypeInfo);
+    v17 = sub_1BDBAC4(RestockServantLogic_TypeInfo);
     System_Object___ctor((Il2CppObject *)v17, 0LL);
     *(_BYTE *)(v17 + 24) = v19;
     *(_DWORD *)(v17 + 16) = 0;
@@ -253,112 +254,113 @@ System_Int32_array *__fastcall RestockServantLogic__GetRandomEntryOrderDecidedAr
   __int64 v15; // x1
   int32_t v16; // w2
   const MethodInfo *v17; // x3
-  __int64 v18; // x8
-  __int64 v19; // x9
-  System_Collections_Generic_IEnumerable_int__o *v21; // x19
-  System_Func_int__bool__o *v22; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v23; // x0
-  System_Int32_array *v24; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v25; // x20
-  System_Int32_array *v26; // x19
-  RestockServantLogic___c_c *v27; // x8
+  __int64 v18; // x2
+  __int64 v19; // x8
+  __int64 v20; // x9
+  System_Collections_Generic_IEnumerable_int__o *v22; // x19
+  System_Func_int__bool__o *v23; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v24; // x0
+  System_Int32_array *v25; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v26; // x20
+  System_Int32_array *v27; // x19
+  RestockServantLogic___c_c *v28; // x8
   System_Func_int__bool__o *_9__22_1; // x21
-  Il2CppObject *v29; // x22
+  Il2CppObject *v30; // x22
   struct RestockServantLogic___c_StaticFields *static_fields; // x0
-  int32_t v31; // w2
-  const MethodInfo *v32; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v33; // x20
+  int32_t v32; // w2
+  const MethodInfo *v33; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v34; // x20
   System_Collections_Generic_IEnumerable_TSource__o *Shuffle_int; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v35; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v36; // x0
 
-  if ( (byte_4A51375 & 1) == 0 )
+  if ( (byte_4B479D4 & 1) == 0 )
   {
-    sub_1B863B8(&Method_BattleRandom_getShuffle_int___, battleData);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Concat_int___, v5);
-    sub_1B863B8(&Method_System_Linq_Enumerable_ToArray_int___, v6);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Where_int___, v7);
-    sub_1B863B8(&System_Func_int__bool__TypeInfo, v8);
-    sub_1B863B8(&Method_RestockServantLogic___c__GetRandomEntryOrderDecidedArray_b__22_1__, v9);
-    sub_1B863B8(&Method_RestockServantLogic___c__DisplayClass22_0__GetRandomEntryOrderDecidedArray_b__0__, v10);
-    sub_1B863B8(&RestockServantLogic___c__DisplayClass22_0_TypeInfo, v11);
-    sub_1B863B8(&RestockServantLogic___c_TypeInfo, v12);
-    byte_4A51375 = 1;
+    sub_1BDB878(&Method_BattleRandom_getShuffle_int___, battleData);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Concat_int___, v5);
+    sub_1BDB878(&Method_System_Linq_Enumerable_ToArray_int___, v6);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Where_int___, v7);
+    sub_1BDB878(&System_Func_int__bool__TypeInfo, v8);
+    sub_1BDB878(&Method_RestockServantLogic___c__GetRandomEntryOrderDecidedArray_b__22_1__, v9);
+    sub_1BDB878(&Method_RestockServantLogic___c__DisplayClass22_0__GetRandomEntryOrderDecidedArray_b__0__, v10);
+    sub_1BDB878(&RestockServantLogic___c__DisplayClass22_0_TypeInfo, v11);
+    sub_1BDB878(&RestockServantLogic___c_TypeInfo, v12);
+    byte_4B479D4 = 1;
   }
-  v13 = sub_1B86604(RestockServantLogic___c__DisplayClass22_0_TypeInfo);
+  v13 = sub_1BDBAC4(RestockServantLogic___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0LL);
   if ( !v13 )
     goto LABEL_17;
   *(_QWORD *)(v13 + 16) = baseArray;
-  sub_1B8635C((CGThumbnailListItem_o *)(v13 + 16), (int32_t)baseArray, v16, v17);
+  sub_1BDB81C((CGThumbnailListItem_o *)(v13 + 16), (int32_t)baseArray, v16, v17);
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty(*(System_Collections_ICollection_o **)(v13 + 16), 0LL);
-  v18 = *(_QWORD *)(v13 + 16);
+  v19 = *(_QWORD *)(v13 + 16);
   if ( IsNullOrEmpty )
     return *(System_Int32_array **)(v13 + 16);
-  if ( !v18 )
+  if ( !v19 )
     goto LABEL_17;
-  v19 = *(_QWORD *)(v18 + 24);
-  if ( !(_DWORD)v19 )
-    sub_1B8661C(IsNullOrEmpty, v15);
-  if ( (*(_DWORD *)(v18 + (((v19 << 32) - 0x100000000LL) >> 30) + 32) & 0x80000000) == 0 )
+  v20 = *(_QWORD *)(v19 + 24);
+  if ( !(_DWORD)v20 )
+    sub_1BDBADC(IsNullOrEmpty, v15, v18);
+  if ( (*(_DWORD *)(v19 + (((v20 << 32) - 0x100000000LL) >> 30) + 32) & 0x80000000) == 0 )
     return *(System_Int32_array **)(v13 + 16);
   if ( !battleData )
 LABEL_17:
-    sub_1B86614(IsNullOrEmpty, v15);
-  v21 = System_Linq_Enumerable__Range(0, battleData->fields._EnemyFieldPosCount_k__BackingField, 0LL);
-  v22 = (System_Func_int__bool__o *)sub_1B86604(System_Func_int__bool__TypeInfo);
+    sub_1BDBAD4(IsNullOrEmpty, v15);
+  v22 = System_Linq_Enumerable__Range(0, battleData->fields._EnemyFieldPosCount_k__BackingField, 0LL);
+  v23 = (System_Func_int__bool__o *)sub_1BDBAC4(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
-    v22,
+    v23,
     (Il2CppObject *)v13,
     Method_RestockServantLogic___c__DisplayClass22_0__GetRandomEntryOrderDecidedArray_b__0__,
     0LL);
-  v23 = System_Linq_Enumerable__Where_int_(
-          (System_Collections_Generic_IEnumerable_TSource__o *)v21,
-          (System_Func_TSource__bool__o *)v22,
-          (const MethodInfo_2FAFA3C *)Method_System_Linq_Enumerable_Where_int___);
-  v24 = System_Linq_Enumerable__ToArray_int_(
-          v23,
-          (const MethodInfo_2FA9740 *)Method_System_Linq_Enumerable_ToArray_int___);
-  v25 = *(System_Collections_Generic_IEnumerable_TSource__o **)(v13 + 16);
-  v26 = v24;
-  v27 = RestockServantLogic___c_TypeInfo;
+  v24 = System_Linq_Enumerable__Where_int_(
+          (System_Collections_Generic_IEnumerable_TSource__o *)v22,
+          (System_Func_TSource__bool__o *)v23,
+          (const MethodInfo_307716C *)Method_System_Linq_Enumerable_Where_int___);
+  v25 = System_Linq_Enumerable__ToArray_int_(
+          v24,
+          (const MethodInfo_3070610 *)Method_System_Linq_Enumerable_ToArray_int___);
+  v26 = *(System_Collections_Generic_IEnumerable_TSource__o **)(v13 + 16);
+  v27 = v25;
+  v28 = RestockServantLogic___c_TypeInfo;
   if ( !RestockServantLogic___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(RestockServantLogic___c_TypeInfo);
-    v27 = RestockServantLogic___c_TypeInfo;
+    v28 = RestockServantLogic___c_TypeInfo;
   }
-  _9__22_1 = v27->static_fields->__9__22_1;
+  _9__22_1 = v28->static_fields->__9__22_1;
   if ( !_9__22_1 )
   {
-    if ( !v27->_2.cctor_finished )
+    if ( !v28->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v27);
-      v27 = RestockServantLogic___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v28);
+      v28 = RestockServantLogic___c_TypeInfo;
     }
-    v29 = (Il2CppObject *)v27->static_fields->__9;
-    _9__22_1 = (System_Func_int__bool__o *)sub_1B86604(System_Func_int__bool__TypeInfo);
+    v30 = (Il2CppObject *)v28->static_fields->__9;
+    _9__22_1 = (System_Func_int__bool__o *)sub_1BDBAC4(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(
       _9__22_1,
-      v29,
+      v30,
       Method_RestockServantLogic___c__GetRandomEntryOrderDecidedArray_b__22_1__,
       0LL);
     static_fields = RestockServantLogic___c_TypeInfo->static_fields;
     static_fields->__9__22_1 = _9__22_1;
-    sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__22_1, (int32_t)_9__22_1, v31, v32);
+    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__22_1, (int32_t)_9__22_1, v32, v33);
   }
-  v33 = System_Linq_Enumerable__Where_int_(
-          v25,
+  v34 = System_Linq_Enumerable__Where_int_(
+          v26,
           (System_Func_TSource__bool__o *)_9__22_1,
-          (const MethodInfo_2FAFA3C *)Method_System_Linq_Enumerable_Where_int___);
+          (const MethodInfo_307716C *)Method_System_Linq_Enumerable_Where_int___);
   Shuffle_int = (System_Collections_Generic_IEnumerable_TSource__o *)BattleRandom__getShuffle_int_(
-                                                                       v26,
-                                                                       (const MethodInfo_2F5EF40 *)Method_BattleRandom_getShuffle_int___);
-  v35 = System_Linq_Enumerable__Concat_int_(
-          v33,
+                                                                       v27,
+                                                                       (const MethodInfo_30249AC *)Method_BattleRandom_getShuffle_int___);
+  v36 = System_Linq_Enumerable__Concat_int_(
+          v34,
           Shuffle_int,
-          (const MethodInfo_2F87F60 *)Method_System_Linq_Enumerable_Concat_int___);
+          (const MethodInfo_304C3C8 *)Method_System_Linq_Enumerable_Concat_int___);
   return System_Linq_Enumerable__ToArray_int_(
-           v35,
-           (const MethodInfo_2FA9740 *)Method_System_Linq_Enumerable_ToArray_int___);
+           v36,
+           (const MethodInfo_3070610 *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -429,15 +431,15 @@ void __fastcall RestockServantLogic___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4A51376 & 1) == 0 )
+  if ( (byte_4B479D5 & 1) == 0 )
   {
-    sub_1B863B8(&RestockServantLogic___c_TypeInfo, v1);
-    byte_4A51376 = 1;
+    sub_1BDB878(&RestockServantLogic___c_TypeInfo, v1);
+    byte_4B479D5 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(RestockServantLogic___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BDBAC4(RestockServantLogic___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   RestockServantLogic___c_TypeInfo->static_fields->__9 = (struct RestockServantLogic___c_o *)v2;
-  sub_1B8635C((CGThumbnailListItem_o *)RestockServantLogic___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BDB81C((CGThumbnailListItem_o *)RestockServantLogic___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -453,7 +455,7 @@ void __fastcall RestockServantLogic___c___DeactiveRestockLogic_b__21_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   x->fields._IsActive_k__BackingField = 0;
 }
 
@@ -481,7 +483,7 @@ bool __fastcall RestockServantLogic___c__DisplayClass20_0___GetImmediateRestockS
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   return x->fields._FieldMemberIndex_k__BackingField == this->fields.fieldMemberIndex
       && this->fields.isEnemy == x->fields._IsEnemy_k__BackingField;
 }
@@ -501,7 +503,7 @@ bool __fastcall RestockServantLogic___c__DisplayClass21_0___DeactiveRestockLogic
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   return x->fields._FieldMemberIndex_k__BackingField == this->fields.fieldMemberIndex
       && this->fields.isEnemy == x->fields._IsEnemy_k__BackingField;
 }
@@ -521,13 +523,13 @@ bool __fastcall RestockServantLogic___c__DisplayClass22_0___GetRandomEntryOrderD
         int32_t i,
         const MethodInfo *method)
 {
-  if ( (byte_4A51377 & 1) == 0 )
+  if ( (byte_4B479D6 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Linq_Enumerable_Contains_int___, *(_QWORD *)&i);
-    byte_4A51377 = 1;
+    sub_1BDB878(&Method_System_Linq_Enumerable_Contains_int___, *(_QWORD *)&i);
+    byte_4B479D6 = 1;
   }
   return !System_Linq_Enumerable__Contains_int_(
             (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.baseArray,
             i,
-            (const MethodInfo_2F884F0 *)Method_System_Linq_Enumerable_Contains_int___);
+            (const MethodInfo_304CA50 *)Method_System_Linq_Enumerable_Contains_int___);
 }

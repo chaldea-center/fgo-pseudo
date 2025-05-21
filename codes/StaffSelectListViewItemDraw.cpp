@@ -40,15 +40,15 @@ void __fastcall StaffSelectListViewItemDraw__SetDisp(
 
   v3 = item;
   v4 = this;
-  if ( (byte_4A49C92 & 1) == 0 )
+  if ( (byte_4B4014C & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, item);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1B863B8(&string_TypeInfo, v6);
-    sub_1B863B8(&StringLiteral_17237/*"btn_bg_20"*/, v7);
-    sub_1B863B8(&StringLiteral_12089/*"STAFF_NO_SELECT_WARNING"*/, v8);
-    this = (StaffSelectListViewItemDraw_o *)sub_1B863B8(&StringLiteral_17238/*"btn_bg_21"*/, v9);
-    byte_4A49C92 = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, item);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BDB878(&string_TypeInfo, v6);
+    sub_1BDB878(&StringLiteral_17464/*"btn_bg_20"*/, v7);
+    sub_1BDB878(&StringLiteral_12269/*"STAFF_NO_SELECT_WARNING"*/, v8);
+    this = (StaffSelectListViewItemDraw_o *)sub_1BDB878(&StringLiteral_17465/*"btn_bg_21"*/, v9);
+    byte_4B4014C = 1;
   }
   if ( !v3 )
     goto LABEL_49;
@@ -58,7 +58,7 @@ void __fastcall StaffSelectListViewItemDraw__SetDisp(
   this = (StaffSelectListViewItemDraw_o *)v4->fields.nameLabel;
   if ( !this )
     goto LABEL_49;
-  UIRangeLabel__Set((UIRangeLabel_o *)this, StaffPhotoEntity_k__BackingField->fields.staffName, 0LL, 1, 0, 0LL);
+  UIRangeLabel__Set((UIRangeLabel_o *)this, StaffPhotoEntity_k__BackingField->fields.staffName, 0LL, 1, 0, 0, 0LL);
   nameLabel = v4->fields.nameLabel;
   IsSelected_k__BackingField = v3->fields._IsSelected_k__BackingField;
   if ( LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -71,10 +71,10 @@ void __fastcall StaffSelectListViewItemDraw__SetDisp(
   if ( !IsSelected_k__BackingField )
   {
 LABEL_15:
-    if ( !byte_4A49076 )
+    if ( !byte_4B3F3AF )
     {
-      sub_1B863B8(&LocalizationManager_TypeInfo, item);
-      byte_4A49076 = 1;
+      sub_1BDB878(&LocalizationManager_TypeInfo, item);
+      byte_4B3F3AF = 1;
     }
     this = (StaffSelectListViewItemDraw_o *)LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -90,13 +90,13 @@ LABEL_15:
     if ( nameLabel )
       goto LABEL_20;
 LABEL_49:
-    sub_1B86614(this, item);
+    sub_1BDBAD4(this, item);
   }
 LABEL_8:
-  if ( !byte_4A49077 )
+  if ( !byte_4B3F3B0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, item);
-    byte_4A49077 = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, item);
+    byte_4B3F3B0 = 1;
   }
   this = (StaffSelectListViewItemDraw_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -131,9 +131,9 @@ LABEL_20:
   if ( !this )
     goto LABEL_49;
   if ( v3->fields._IsSelected_k__BackingField )
-    v23 = &StringLiteral_17238/*"btn_bg_21"*/;
+    v23 = &StringLiteral_17465/*"btn_bg_21"*/;
   else
-    v23 = &StringLiteral_17237/*"btn_bg_20"*/;
+    v23 = &StringLiteral_17464/*"btn_bg_20"*/;
   UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v23, 0LL);
   PhotoCampaignAtlas_k__BackingField = (UnityEngine_Object_o *)v3->fields._PhotoCampaignAtlas_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -171,7 +171,7 @@ LABEL_20:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    this = (StaffSelectListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12089/*"STAFF_NO_SELECT_WARNING"*/, 0LL);
+    this = (StaffSelectListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12269/*"STAFF_NO_SELECT_WARNING"*/, 0LL);
     item = (StaffSelectListViewItem_o *)this;
     if ( !v27 )
       goto LABEL_49;
@@ -217,11 +217,11 @@ void __fastcall StaffSelectListViewItemDraw__SetInput(
   const MethodInfo *v10; // x2
   UnityEngine_Component_o *Component_object; // x0
 
-  if ( (byte_4A49C91 & 1) == 0 )
+  if ( (byte_4B4014B & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v7);
-    byte_4A49C91 = 1;
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_Collider___, item);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v7);
+    byte_4B4014B = 1;
   }
   if ( item )
   {
@@ -234,11 +234,11 @@ void __fastcall StaffSelectListViewItemDraw__SetInput(
       if ( !Component_object
         || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                             Component_object,
-                                                            (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                            (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
         || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL),
             (Component_object = (UnityEngine_Component_o *)this->fields.baseButton) == 0LL) )
       {
-        sub_1B86614(Component_object, v9);
+        sub_1BDBAD4(Component_object, v9);
       }
       ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))Component_object->klass[1]._1.implementedInterfaces)(
         Component_object,

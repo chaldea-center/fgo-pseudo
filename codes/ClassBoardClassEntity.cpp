@@ -1,13 +1,13 @@
 void __fastcall ClassBoardClassEntity___ctor(ClassBoardClassEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4E20C & 1) == 0 )
+  if ( (byte_4B447DC & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4A4E20C = 1;
+    sub_1BDB878(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B447DC = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3211E14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32DF9D0 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall ClassBoardClassEntity__CreatePK(
         int32_t classId,
         const MethodInfo *method)
 {
-  if ( (byte_4A4E20B & 1) == 0 )
+  if ( (byte_4B447DB & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&classId);
-    byte_4A4E20B = 1;
+    sub_1BDB878(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&classId);
+    byte_4B447DB = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            classBoardBaseId,
            classId,
-           (const MethodInfo_2F6BE40 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3031AE4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -39,16 +39,25 @@ System_String_o *__fastcall ClassBoardClassEntity__CreatePrimaryKey(
 }
 
 
+bool __fastcall ClassBoardClassEntity__HasFlag(
+        ClassBoardClassEntity_o *this,
+        int64_t flagType,
+        const MethodInfo *method)
+{
+  return (this->fields.flag & (unsigned __int64)flagType) != 0;
+}
+
+
 bool __fastcall ClassBoardClassEntity__IsOpen(ClassBoardClassEntity_o *this, const MethodInfo *method)
 {
   int32_t condTargetId; // w20
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4A4E20A & 1) == 0 )
+  if ( (byte_4B447DA & 1) == 0 )
   {
-    sub_1B863B8(&CondType_TypeInfo, method);
-    byte_4A4E20A = 1;
+    sub_1BDB878(&CondType_TypeInfo, method);
+    byte_4B447DA = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

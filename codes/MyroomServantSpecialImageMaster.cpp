@@ -2,17 +2,17 @@ void __fastcall MyroomServantSpecialImageMaster___ctor(
         MyroomServantSpecialImageMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A4E8AE & 1) == 0 )
+  if ( (byte_4B44E9D & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_DataMasterBase_MyroomServantSpecialImageMaster__MyroomServantSpecialImageEntity__string___ctor__,
       method);
-    byte_4A4E8AE = 1;
+    byte_4B44E9D = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     527,
-    (const MethodInfo_3216A14 *)Method_DataMasterBase_MyroomServantSpecialImageMaster__MyroomServantSpecialImageEntity__string___ctor__);
+    (const MethodInfo_32E45D0 *)Method_DataMasterBase_MyroomServantSpecialImageMaster__MyroomServantSpecialImageEntity__string___ctor__);
 }
 
 
@@ -68,36 +68,36 @@ MyroomServantSpecialImageEntity_array *__fastcall MyroomServantSpecialImageMaste
   const MethodInfo *v49; // x3
   System_Collections_Generic_IEnumerable_TSource__o *v50; // x0
 
-  if ( (byte_4A4E8AD & 1) == 0 )
+  if ( (byte_4B44E9C & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_ObjectModel_Collection_MyroomServantSpecialImageEntity__GetEnumerator__,
       *(_QWORD *)&svtId);
-    sub_1B863B8(&Method_System_Linq_Enumerable_OrderBy_MyroomServantSpecialImageEntity__int___, v7);
-    sub_1B863B8(&Method_System_Linq_Enumerable_ToArray_MyroomServantSpecialImageEntity___, v8);
-    sub_1B863B8(&System_Func_MyroomServantSpecialImageEntity__int__TypeInfo, v9);
-    sub_1B863B8(&System_IDisposable_TypeInfo, v10);
-    sub_1B863B8(&System_Collections_Generic_IEnumerator_MyroomServantSpecialImageEntity__TypeInfo, v11);
-    sub_1B863B8(&System_Collections_IEnumerator_TypeInfo, v12);
-    sub_1B863B8(&Method_System_Collections_Generic_List_MyroomServantSpecialImageEntity__Add__, v13);
-    sub_1B863B8(&Method_System_Collections_Generic_List_MyroomServantSpecialImageEntity___ctor__, v14);
-    sub_1B863B8(&System_Collections_Generic_List_MyroomServantSpecialImageEntity__TypeInfo, v15);
-    sub_1B863B8(&Method_MyroomServantSpecialImageMaster___c__GetEntitiesByBaseLimitCount_b__0_0__, v16);
-    sub_1B863B8(&MyroomServantSpecialImageMaster___c_TypeInfo, v17);
-    byte_4A4E8AD = 1;
+    sub_1BDB878(&Method_System_Linq_Enumerable_OrderBy_MyroomServantSpecialImageEntity__int___, v7);
+    sub_1BDB878(&Method_System_Linq_Enumerable_ToArray_MyroomServantSpecialImageEntity___, v8);
+    sub_1BDB878(&System_Func_MyroomServantSpecialImageEntity__int__TypeInfo, v9);
+    sub_1BDB878(&System_IDisposable_TypeInfo, v10);
+    sub_1BDB878(&System_Collections_Generic_IEnumerator_MyroomServantSpecialImageEntity__TypeInfo, v11);
+    sub_1BDB878(&System_Collections_IEnumerator_TypeInfo, v12);
+    sub_1BDB878(&Method_System_Collections_Generic_List_MyroomServantSpecialImageEntity__Add__, v13);
+    sub_1BDB878(&Method_System_Collections_Generic_List_MyroomServantSpecialImageEntity___ctor__, v14);
+    sub_1BDB878(&System_Collections_Generic_List_MyroomServantSpecialImageEntity__TypeInfo, v15);
+    sub_1BDB878(&Method_MyroomServantSpecialImageMaster___c__GetEntitiesByBaseLimitCount_b__0_0__, v16);
+    sub_1BDB878(&MyroomServantSpecialImageMaster___c_TypeInfo, v17);
+    byte_4B44E9C = 1;
   }
-  v18 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_MyroomServantSpecialImageEntity__TypeInfo);
+  v18 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_MyroomServantSpecialImageEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v18,
-    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_MyroomServantSpecialImageEntity___ctor__);
+    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_MyroomServantSpecialImageEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1B86614(0LL, v19);
+    sub_1BDBAD4(0LL, v19);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_31B0EE0 *)Method_System_Collections_ObjectModel_Collection_MyroomServantSpecialImageEntity__GetEnumerator__);
+                 (const MethodInfo_327DBFC *)Method_System_Collections_ObjectModel_Collection_MyroomServantSpecialImageEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1B86614(0LL, v21);
+    sub_1BDBAD4(0LL, v21);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -117,7 +117,7 @@ MyroomServantSpecialImageEntity_array *__fastcall MyroomServantSpecialImageMaste
     else
     {
 LABEL_9:
-      p_method = sub_1BD6B4C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C2C00C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -140,7 +140,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v30 = sub_1BD6B4C(
+      v30 = sub_1C2C00C(
               Enumerator,
               System_Collections_Generic_IEnumerator_MyroomServantSpecialImageEntity__TypeInfo,
               0LL);
@@ -150,30 +150,30 @@ LABEL_16:
             *(_QWORD *)(v30 + 8));
     v35 = v31;
     if ( !v31 )
-      sub_1B86614(0LL, v32);
+      sub_1BDBAD4(0LL, v32);
     if ( *(_DWORD *)(v31 + 16) == svtId && *(_DWORD *)(v31 + 24) == baseLimitCount )
     {
       if ( !v18 )
-        sub_1B86614(v31, v32);
+        sub_1BDBAD4(v31, v32);
       items = v18->fields._items;
       v37 = Method_System_Collections_Generic_List_MyroomServantSpecialImageEntity__Add__;
       ++v18->fields._version;
       if ( !items )
-        sub_1B86614(v31, v32);
+        sub_1BDBAD4(v31, v32);
       size = v18->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v18,
           (Il2CppObject *)v31,
-          *(const MethodInfo_35FC958 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+          *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
       }
       else
       {
         v39 = &items->obj.klass + size;
         v18->fields._size = size + 1;
         v39[4] = (Il2CppClass *)v35;
-        sub_1B8635C((CGThumbnailListItem_o *)(v39 + 4), v35, v33, v34);
+        sub_1BDB81C((CGThumbnailListItem_o *)(v39 + 4), v35, v33, v34);
       }
     }
   }
@@ -194,7 +194,7 @@ LABEL_16:
   else
   {
 LABEL_30:
-    v43 = sub_1BD6B4C(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v43 = sub_1C2C00C(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v43)(Enumerator, *(_QWORD *)(v43 + 8));
   v44 = MyroomServantSpecialImageMaster___c_TypeInfo;
@@ -212,7 +212,7 @@ LABEL_30:
       v44 = MyroomServantSpecialImageMaster___c_TypeInfo;
     }
     v46 = (Il2CppObject *)v44->static_fields->__9;
-    _9__0_0 = (System_Func_object__int__o *)sub_1B86604(System_Func_MyroomServantSpecialImageEntity__int__TypeInfo);
+    _9__0_0 = (System_Func_object__int__o *)sub_1BDBAC4(System_Func_MyroomServantSpecialImageEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__0_0,
       v46,
@@ -220,15 +220,15 @@ LABEL_30:
       0LL);
     static_fields = MyroomServantSpecialImageMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = (struct System_Func_MyroomServantSpecialImageEntity__int__o *)_9__0_0;
-    sub_1B8635C((CGThumbnailListItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v48, v49);
+    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v48, v49);
   }
   v50 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v18,
                                                                (System_Func_TSource__TKey__o *)_9__0_0,
-                                                               (const MethodInfo_2F9AB50 *)Method_System_Linq_Enumerable_OrderBy_MyroomServantSpecialImageEntity__int___);
+                                                               (const MethodInfo_305F578 *)Method_System_Linq_Enumerable_OrderBy_MyroomServantSpecialImageEntity__int___);
   return (MyroomServantSpecialImageEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                                     v50,
-                                                    (const MethodInfo_2FA98D8 *)Method_System_Linq_Enumerable_ToArray_MyroomServantSpecialImageEntity___);
+                                                    (const MethodInfo_30707A8 *)Method_System_Linq_Enumerable_ToArray_MyroomServantSpecialImageEntity___);
 }
 
 
@@ -241,18 +241,18 @@ MyroomServantSpecialImageEntity_o *__fastcall MyroomServantSpecialImageMaster__G
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4A4E8AF & 1) == 0 )
+  if ( (byte_4B44E9E & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_DataMasterBase_MyroomServantSpecialImageMaster__MyroomServantSpecialImageEntity__string__GetEntity__,
       *(_QWORD *)&svtId);
-    byte_4A4E8AF = 1;
+    byte_4B44E9E = 1;
   }
   PK = (Il2CppObject *)MyroomServantSpecialImageEntity__CreatePK(svtId, num, 0LL);
   return (MyroomServantSpecialImageEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                 PK,
-                                                (const MethodInfo_3218D38 *)Method_DataMasterBase_MyroomServantSpecialImageMaster__MyroomServantSpecialImageEntity__string__GetEntity__);
+                                                (const MethodInfo_32E68F4 *)Method_DataMasterBase_MyroomServantSpecialImageMaster__MyroomServantSpecialImageEntity__string__GetEntity__);
 }
 
 
@@ -265,19 +265,19 @@ bool __fastcall MyroomServantSpecialImageMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4A4E8B0 & 1) == 0 )
+  if ( (byte_4B44E9F & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_DataMasterBase_MyroomServantSpecialImageMaster__MyroomServantSpecialImageEntity__string__TryGetEntity__,
       entity);
-    byte_4A4E8B0 = 1;
+    byte_4B44E9F = 1;
   }
   PK = (Il2CppObject *)MyroomServantSpecialImageEntity__CreatePK(svtId, num, 0LL);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_3218D84 *)Method_DataMasterBase_MyroomServantSpecialImageMaster__MyroomServantSpecialImageEntity__string__TryGetEntity__);
+           (const MethodInfo_32E6940 *)Method_DataMasterBase_MyroomServantSpecialImageMaster__MyroomServantSpecialImageEntity__string__TryGetEntity__);
 }
 
 
@@ -288,15 +288,15 @@ void __fastcall MyroomServantSpecialImageMaster___c___cctor(const MethodInfo *me
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4A4E8B1 & 1) == 0 )
+  if ( (byte_4B44EA0 & 1) == 0 )
   {
-    sub_1B863B8(&MyroomServantSpecialImageMaster___c_TypeInfo, v1);
-    byte_4A4E8B1 = 1;
+    sub_1BDB878(&MyroomServantSpecialImageMaster___c_TypeInfo, v1);
+    byte_4B44EA0 = 1;
   }
-  v2 = (Il2CppObject *)sub_1B86604(MyroomServantSpecialImageMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BDBAC4(MyroomServantSpecialImageMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   MyroomServantSpecialImageMaster___c_TypeInfo->static_fields->__9 = (struct MyroomServantSpecialImageMaster___c_o *)v2;
-  sub_1B8635C((CGThumbnailListItem_o *)MyroomServantSpecialImageMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BDB81C((CGThumbnailListItem_o *)MyroomServantSpecialImageMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -314,6 +314,6 @@ int32_t __fastcall MyroomServantSpecialImageMaster___c___GetEntitiesByBaseLimitC
         const MethodInfo *method)
 {
   if ( !a )
-    sub_1B86614(this, 0LL);
+    sub_1BDBAD4(this, 0LL);
   return a->fields.num;
 }

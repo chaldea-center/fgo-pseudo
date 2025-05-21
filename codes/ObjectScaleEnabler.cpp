@@ -64,39 +64,40 @@ void __fastcall ObjectScaleEnabler__OnUpdate(ObjectScaleEnabler_o *this, const M
   int *v57; // x10
   __int64 v58; // x0
   Il2CppObject *Component_object; // x20
+  __int64 v60; // x2
   int monitor; // w8
-  Il2CppObject *v61; // x20
-  unsigned int v62; // w21
-  System_Object_array *ComponentsInChildren_object__49697072; // x21
-  Il2CppObject *v64; // x20
-  __int64 v65; // x8
-  __int64 v66; // x20
-  void *v67; // x8
-  __int64 v68; // x21
-  Il2CppObject *v69; // x20
-  int v70; // w8
-  Il2CppObject *v71; // x20
-  unsigned int v72; // w21
-  System_Object_array *v73; // x21
-  Il2CppObject *v74; // x20
-  __int64 v75; // x8
-  __int64 v76; // x20
-  void *v77; // x8
-  __int64 v78; // x21
+  Il2CppObject *v62; // x20
+  unsigned int v63; // w21
+  System_Object_array *ComponentsInChildren_object__50507220; // x21
+  Il2CppObject *v65; // x20
+  __int64 v66; // x8
+  __int64 v67; // x20
+  void *v68; // x8
+  __int64 v69; // x21
+  Il2CppObject *v70; // x20
+  int v71; // w8
+  Il2CppObject *v72; // x20
+  unsigned int v73; // w21
+  System_Object_array *v74; // x21
+  Il2CppObject *v75; // x20
+  __int64 v76; // x8
+  __int64 v77; // x20
+  void *v78; // x8
+  __int64 v79; // x21
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v80; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v81; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A4D984 & 1) == 0 )
+  if ( (byte_4B43F39 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_CommonEffectComponent___, method);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponentsInChildren_Animation___, v3);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___, v4);
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___, v5);
-    sub_1B863B8(&System_IDisposable_TypeInfo, v6);
-    sub_1B863B8(&System_Collections_IEnumerator_TypeInfo, v7);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v8);
-    sub_1B863B8(&UnityEngine_Transform_TypeInfo, v9);
-    byte_4A4D984 = 1;
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_CommonEffectComponent___, method);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponentsInChildren_Animation___, v3);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___, v4);
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___, v5);
+    sub_1BDB878(&System_IDisposable_TypeInfo, v6);
+    sub_1BDB878(&System_Collections_IEnumerator_TypeInfo, v7);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v8);
+    sub_1BDB878(&UnityEngine_Transform_TypeInfo, v9);
+    byte_4B43F39 = 1;
   }
   visibleCheckTarget = (UnityEngine_Object_o *)this->fields.visibleCheckTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -116,7 +117,7 @@ void __fastcall ObjectScaleEnabler__OnUpdate(ObjectScaleEnabler_o *this, const M
           goto LABEL_137;
         Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)transform, 0LL);
         if ( !Enumerator )
-          sub_1B86614(0LL, v13);
+          sub_1BDBAD4(0LL, v13);
         while ( 1 )
         {
           klass = Enumerator->klass;
@@ -136,7 +137,7 @@ void __fastcall ObjectScaleEnabler__OnUpdate(ObjectScaleEnabler_o *this, const M
           else
           {
 LABEL_16:
-            p_method = sub_1BD6B4C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+            p_method = sub_1C2C00C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
           }
           if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
                   Enumerator,
@@ -159,7 +160,7 @@ LABEL_16:
           else
           {
 LABEL_23:
-            v22 = sub_1BD6B4C(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
+            v22 = sub_1C2C00C(Enumerator, System_Collections_IEnumerator_TypeInfo, 1LL);
           }
           v23 = (*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v22)(
                   Enumerator,
@@ -171,9 +172,9 @@ LABEL_23:
             if ( *(unsigned __int8 *)(*(_QWORD *)v23 + 304LL) < (unsigned int)methodPtr_low
               || *(UnityEngine_Transform_c **)(*(_QWORD *)(*(_QWORD *)v23 + 200LL) + 8 * methodPtr_low - 8) != UnityEngine_Transform_TypeInfo )
             {
-              sub_1B868D4(v23);
+              sub_1BDBD94(v23);
 LABEL_137:
-              sub_1B86614(transform, v12);
+              sub_1BDBAD4(transform, v12);
             }
           }
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -185,11 +186,11 @@ LABEL_137:
               goto LABEL_140;
             gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v24, 0LL);
             if ( !gameObject )
-              sub_1B86614(0LL, v29);
+              sub_1BDBAD4(0LL, v29);
             UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
           }
         }
-        v47 = sub_1B864F4(Enumerator, System_IDisposable_TypeInfo);
+        v47 = sub_1BDB9B4(Enumerator, System_IDisposable_TypeInfo);
         if ( v47 )
         {
           v48 = *(_QWORD *)v47;
@@ -210,7 +211,7 @@ LABEL_137:
           else
           {
 LABEL_66:
-            v52 = sub_1BD6B4C(v47, System_IDisposable_TypeInfo, 0LL);
+            v52 = sub_1C2C00C(v47, System_IDisposable_TypeInfo, 0LL);
           }
           (*(void (__fastcall **)(__int64, _QWORD))v52)(v49, *(_QWORD *)(v52 + 8));
         }
@@ -218,7 +219,7 @@ LABEL_66:
       }
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)this,
-                           (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_CommonEffectComponent___);
+                           (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_CommonEffectComponent___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       transform = (Il2CppObject *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -233,37 +234,37 @@ LABEL_66:
           Component_object->klass->vtable[9].methodPtr);
         goto LABEL_81;
       }
-      transform = (Il2CppObject *)UnityEngine_Component__GetComponentsInChildren_object__49697072(
+      transform = (Il2CppObject *)UnityEngine_Component__GetComponentsInChildren_object__50507220(
                                     (UnityEngine_Component_o *)this,
-                                    (const MethodInfo_2F65130 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+                                    (const MethodInfo_302ADD4 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
       if ( !transform )
         goto LABEL_137;
       monitor = (int)transform[1].monitor;
-      v61 = transform;
+      v62 = transform;
       if ( monitor < 1 )
       {
 LABEL_88:
-        ComponentsInChildren_object__49697072 = UnityEngine_Component__GetComponentsInChildren_object__49697072(
+        ComponentsInChildren_object__50507220 = UnityEngine_Component__GetComponentsInChildren_object__50507220(
                                                   (UnityEngine_Component_o *)this,
-                                                  (const MethodInfo_2F65130 *)Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
-        transform = (Il2CppObject *)UnityEngine_Component__GetComponentsInChildren_object__49697072(
+                                                  (const MethodInfo_302ADD4 *)Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
+        transform = (Il2CppObject *)UnityEngine_Component__GetComponentsInChildren_object__50507220(
                                       (UnityEngine_Component_o *)this,
-                                      (const MethodInfo_2F65130 *)Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
-        v64 = transform;
-        if ( ComponentsInChildren_object__49697072
-          && (v65 = *(_QWORD *)&ComponentsInChildren_object__49697072->max_length) != 0 )
+                                      (const MethodInfo_302ADD4 *)Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
+        v65 = transform;
+        if ( ComponentsInChildren_object__50507220
+          && (v66 = *(_QWORD *)&ComponentsInChildren_object__50507220->max_length) != 0 )
         {
-          if ( (int)v65 >= 1 )
+          if ( (int)v66 >= 1 )
           {
-            v66 = 0LL;
-            while ( (unsigned int)v66 < (unsigned int)v65 )
+            v67 = 0LL;
+            while ( (unsigned int)v67 < (unsigned int)v66 )
             {
-              transform = ComponentsInChildren_object__49697072->m_Items[v66];
+              transform = ComponentsInChildren_object__50507220->m_Items[v67];
               if ( !transform )
                 goto LABEL_137;
               SimpleAnimation__Stop((SimpleAnimation_o *)transform, 0LL);
-              LODWORD(v65) = ComponentsInChildren_object__49697072->max_length;
-              if ( (int)++v66 >= (int)v65 )
+              LODWORD(v66) = ComponentsInChildren_object__50507220->max_length;
+              if ( (int)++v67 >= (int)v66 )
                 goto LABEL_81;
             }
             goto LABEL_138;
@@ -271,20 +272,20 @@ LABEL_88:
         }
         else if ( transform )
         {
-          v67 = transform[1].monitor;
-          if ( v67 )
+          v68 = transform[1].monitor;
+          if ( v68 )
           {
-            if ( (int)v67 >= 1 )
+            if ( (int)v68 >= 1 )
             {
-              v68 = 0LL;
-              while ( (unsigned int)v68 < (unsigned int)v67 )
+              v69 = 0LL;
+              while ( (unsigned int)v69 < (unsigned int)v68 )
               {
-                transform = (Il2CppObject *)*((_QWORD *)&v64[2].klass + v68);
+                transform = (Il2CppObject *)*((_QWORD *)&v65[2].klass + v69);
                 if ( !transform )
                   goto LABEL_137;
                 UnityEngine_Animation__Stop((UnityEngine_Animation_o *)transform, 0LL);
-                LODWORD(v67) = v64[1].monitor;
-                if ( (int)++v68 >= (int)v67 )
+                LODWORD(v68) = v65[1].monitor;
+                if ( (int)++v69 >= (int)v68 )
                   goto LABEL_81;
               }
               goto LABEL_138;
@@ -295,22 +296,22 @@ LABEL_81:
         this->fields.isChildVisible = 0;
         return;
       }
-      v62 = 0;
-      while ( v62 < monitor )
+      v63 = 0;
+      while ( v63 < monitor )
       {
-        transform = (Il2CppObject *)*((_QWORD *)&v61[2].klass + (int)v62);
+        transform = (Il2CppObject *)*((_QWORD *)&v62[2].klass + (int)v63);
         if ( !transform )
           goto LABEL_137;
-        UnityEngine_ParticleSystem__Stop_69639052((UnityEngine_ParticleSystem_o *)transform, 0LL);
-        monitor = (int)v61[1].monitor;
-        if ( (int)++v62 >= monitor )
+        UnityEngine_ParticleSystem__Stop_70568664((UnityEngine_ParticleSystem_o *)transform, 0LL);
+        monitor = (int)v62[1].monitor;
+        if ( (int)++v63 >= monitor )
           goto LABEL_88;
       }
 LABEL_138:
-      sub_1B8661C(transform, v12);
+      sub_1BDBADC(transform, v12, v60);
     }
-    v80 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)visibleCheckTarget, 0LL);
-    if ( v80.fields.z >= 1.0 && !this->fields.isChildVisible )
+    v81 = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)visibleCheckTarget, 0LL);
+    if ( v81.fields.z >= 1.0 && !this->fields.isChildVisible )
     {
       if ( this->fields.suddenDeath )
       {
@@ -319,7 +320,7 @@ LABEL_138:
           goto LABEL_137;
         v31 = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)transform, 0LL);
         if ( !v31 )
-          sub_1B86614(0LL, v30);
+          sub_1BDBAD4(0LL, v30);
         while ( 1 )
         {
           v32 = v31->klass;
@@ -339,7 +340,7 @@ LABEL_138:
           else
           {
 LABEL_43:
-            v35 = sub_1BD6B4C(v31, System_Collections_IEnumerator_TypeInfo, 0LL);
+            v35 = sub_1C2C00C(v31, System_Collections_IEnumerator_TypeInfo, 0LL);
           }
           if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v35)(v31, *(_QWORD *)(v35 + 8)) & 1) == 0 )
             break;
@@ -360,7 +361,7 @@ LABEL_43:
           else
           {
 LABEL_50:
-            v39 = sub_1BD6B4C(v31, System_Collections_IEnumerator_TypeInfo, 1LL);
+            v39 = sub_1C2C00C(v31, System_Collections_IEnumerator_TypeInfo, 1LL);
           }
           v40 = (*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v39)(v31, *(_QWORD *)(v39 + 8));
           v41 = (UnityEngine_Object_o *)v40;
@@ -370,9 +371,9 @@ LABEL_50:
             if ( *(unsigned __int8 *)(*(_QWORD *)v40 + 304LL) < (unsigned int)v42
               || *(UnityEngine_Transform_c **)(*(_QWORD *)(*(_QWORD *)v40 + 200LL) + 8 * v42 - 8) != UnityEngine_Transform_TypeInfo )
             {
-              sub_1B868D4(v40);
+              sub_1BDBD94(v40);
 LABEL_140:
-              sub_1B86614(v26, v27);
+              sub_1BDBAD4(v26, v27);
             }
           }
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -381,14 +382,14 @@ LABEL_140:
           if ( !v43 )
           {
             if ( !v41 )
-              sub_1B86614(v43, v44);
+              sub_1BDBAD4(v43, v44);
             v45 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v41, 0LL);
             if ( !v45 )
-              sub_1B86614(0LL, v46);
+              sub_1BDBAD4(0LL, v46);
             UnityEngine_GameObject__SetActive(v45, 1, 0LL);
           }
         }
-        v53 = sub_1B864F4(v31, System_IDisposable_TypeInfo);
+        v53 = sub_1BDB9B4(v31, System_IDisposable_TypeInfo);
         if ( v53 )
         {
           v54 = *(_QWORD *)v53;
@@ -409,70 +410,70 @@ LABEL_140:
           else
           {
 LABEL_72:
-            v58 = sub_1BD6B4C(v53, System_IDisposable_TypeInfo, 0LL);
+            v58 = sub_1C2C00C(v53, System_IDisposable_TypeInfo, 0LL);
           }
           (*(void (__fastcall **)(__int64, _QWORD))v58)(v55, *(_QWORD *)(v58 + 8));
         }
       }
       else
       {
-        v69 = UnityEngine_Component__GetComponent_object_(
+        v70 = UnityEngine_Component__GetComponent_object_(
                 (UnityEngine_Component_o *)this,
-                (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_CommonEffectComponent___);
+                (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_CommonEffectComponent___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        transform = (Il2CppObject *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v69, 0LL, 0LL);
+        transform = (Il2CppObject *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v70, 0LL, 0LL);
         if ( ((unsigned __int8)transform & 1) != 0 )
         {
-          if ( !v69 )
+          if ( !v70 )
             goto LABEL_137;
-          CommonEffectComponent__ForceStart((CommonEffectComponent_o *)v69, 0LL);
+          CommonEffectComponent__ForceStart((CommonEffectComponent_o *)v70, 0LL);
         }
         else
         {
-          transform = (Il2CppObject *)UnityEngine_Component__GetComponentsInChildren_object__49697072(
+          transform = (Il2CppObject *)UnityEngine_Component__GetComponentsInChildren_object__50507220(
                                         (UnityEngine_Component_o *)this,
-                                        (const MethodInfo_2F65130 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+                                        (const MethodInfo_302ADD4 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
           if ( !transform )
             goto LABEL_137;
-          v70 = (int)transform[1].monitor;
-          v71 = transform;
-          if ( v70 >= 1 )
+          v71 = (int)transform[1].monitor;
+          v72 = transform;
+          if ( v71 >= 1 )
           {
-            v72 = 0;
-            while ( v72 < v70 )
+            v73 = 0;
+            while ( v73 < v71 )
             {
-              transform = (Il2CppObject *)*((_QWORD *)&v71[2].klass + (int)v72);
+              transform = (Il2CppObject *)*((_QWORD *)&v72[2].klass + (int)v73);
               if ( !transform )
                 goto LABEL_137;
-              UnityEngine_ParticleSystem__Play_69638700((UnityEngine_ParticleSystem_o *)transform, 0LL);
-              v70 = (int)v71[1].monitor;
-              if ( (int)++v72 >= v70 )
+              UnityEngine_ParticleSystem__Play_70568312((UnityEngine_ParticleSystem_o *)transform, 0LL);
+              v71 = (int)v72[1].monitor;
+              if ( (int)++v73 >= v71 )
                 goto LABEL_120;
             }
             goto LABEL_138;
           }
 LABEL_120:
-          v73 = UnityEngine_Component__GetComponentsInChildren_object__49697072(
+          v74 = UnityEngine_Component__GetComponentsInChildren_object__50507220(
                   (UnityEngine_Component_o *)this,
-                  (const MethodInfo_2F65130 *)Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
-          transform = (Il2CppObject *)UnityEngine_Component__GetComponentsInChildren_object__49697072(
+                  (const MethodInfo_302ADD4 *)Method_UnityEngine_Component_GetComponentsInChildren_SimpleAnimation___);
+          transform = (Il2CppObject *)UnityEngine_Component__GetComponentsInChildren_object__50507220(
                                         (UnityEngine_Component_o *)this,
-                                        (const MethodInfo_2F65130 *)Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
-          v74 = transform;
-          if ( v73 && (v75 = *(_QWORD *)&v73->max_length) != 0 )
+                                        (const MethodInfo_302ADD4 *)Method_UnityEngine_Component_GetComponentsInChildren_Animation___);
+          v75 = transform;
+          if ( v74 && (v76 = *(_QWORD *)&v74->max_length) != 0 )
           {
-            if ( (int)v75 >= 1 )
+            if ( (int)v76 >= 1 )
             {
-              v76 = 0LL;
-              while ( (unsigned int)v76 < (unsigned int)v75 )
+              v77 = 0LL;
+              while ( (unsigned int)v77 < (unsigned int)v76 )
               {
-                transform = v73->m_Items[v76];
+                transform = v74->m_Items[v77];
                 if ( !transform )
                   goto LABEL_137;
                 transform = (Il2CppObject *)SimpleAnimation__Play((SimpleAnimation_o *)transform, 0LL);
-                LODWORD(v75) = v73->max_length;
-                if ( (int)++v76 >= (int)v75 )
+                LODWORD(v76) = v74->max_length;
+                if ( (int)++v77 >= (int)v76 )
                   goto LABEL_112;
               }
               goto LABEL_138;
@@ -480,20 +481,20 @@ LABEL_120:
           }
           else if ( transform )
           {
-            v77 = transform[1].monitor;
-            if ( v77 )
+            v78 = transform[1].monitor;
+            if ( v78 )
             {
-              if ( (int)v77 >= 1 )
+              if ( (int)v78 >= 1 )
               {
-                v78 = 0LL;
-                while ( (unsigned int)v78 < (unsigned int)v77 )
+                v79 = 0LL;
+                while ( (unsigned int)v79 < (unsigned int)v78 )
                 {
-                  transform = (Il2CppObject *)*((_QWORD *)&v74[2].klass + v78);
+                  transform = (Il2CppObject *)*((_QWORD *)&v75[2].klass + v79);
                   if ( !transform )
                     goto LABEL_137;
                   transform = (Il2CppObject *)UnityEngine_Animation__Play((UnityEngine_Animation_o *)transform, 0LL);
-                  LODWORD(v77) = v74[1].monitor;
-                  if ( (int)++v78 >= (int)v77 )
+                  LODWORD(v78) = v75[1].monitor;
+                  if ( (int)++v79 >= (int)v78 )
                     goto LABEL_112;
                 }
                 goto LABEL_138;

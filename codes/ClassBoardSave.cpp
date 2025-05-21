@@ -16,31 +16,31 @@ void __fastcall ClassBoardSave__CheckOpenedMissionClearDialog(const MethodInfo *
   struct System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__o *cachePlayCondOpenEffectList; // x8
   int32_t size; // w2
   int v16; // w9
-  Il2CppObject *String_69314580; // x19
+  Il2CppObject *String_70242896; // x19
   System_Object_array *v18; // x0
 
-  if ( (byte_4A51C81 & 1) == 0 )
+  if ( (byte_4B48356 & 1) == 0 )
   {
-    sub_1B863B8(&ClassBoardSave_TypeInfo, v1);
-    sub_1B863B8(&Method_JsonManager_DeserializeArray_ClassBoardSave_ClassBoardSaveData___, v2);
-    sub_1B863B8(&JsonManager_TypeInfo, v3);
-    sub_1B863B8(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__AddRange__, v4);
-    sub_1B863B8(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__Clear__, v5);
-    sub_1B863B8(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData___ctor__, v6);
-    sub_1B863B8(&System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__TypeInfo, v7);
-    sub_1B863B8(&StringLiteral_3422/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v8);
-    byte_4A51C81 = 1;
+    sub_1BDB878(&ClassBoardSave_TypeInfo, v1);
+    sub_1BDB878(&Method_JsonManager_DeserializeArray_ClassBoardSave_ClassBoardSaveData___, v2);
+    sub_1BDB878(&JsonManager_TypeInfo, v3);
+    sub_1BDB878(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__AddRange__, v4);
+    sub_1BDB878(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__Clear__, v5);
+    sub_1BDB878(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData___ctor__, v6);
+    sub_1BDB878(&System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__TypeInfo, v7);
+    sub_1BDB878(&StringLiteral_3450/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v8);
+    byte_4B48356 = 1;
   }
   if ( !ClassBoardSave_TypeInfo->static_fields->cachePlayCondOpenEffectList )
   {
-    v9 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__TypeInfo);
+    v9 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v9,
-      (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData___ctor__);
+      (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData___ctor__);
     ClassBoardSave_TypeInfo->static_fields->cachePlayCondOpenEffectList = (struct System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__o *)v9;
-    sub_1B8635C((CGThumbnailListItem_o *)ClassBoardSave_TypeInfo->static_fields, (int32_t)v9, v10, v11);
+    sub_1BDB81C((CGThumbnailListItem_o *)ClassBoardSave_TypeInfo->static_fields, (int32_t)v9, v10, v11);
     HasKey = (struct System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__o *)UnityEngine_PlayerPrefs__HasKey(
-                                                                                              (System_String_o *)StringLiteral_3422/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/,
+                                                                                              (System_String_o *)StringLiteral_3450/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/,
                                                                                               0LL);
     if ( ((unsigned __int8)HasKey & 1) != 0 )
     {
@@ -53,14 +53,14 @@ void __fastcall ClassBoardSave__CheckOpenedMissionClearDialog(const MethodInfo *
       cachePlayCondOpenEffectList->fields._version = v16;
       if ( size >= 1 )
         System_Array__Clear((System_Array_o *)cachePlayCondOpenEffectList->fields._items, 0, size, 0LL);
-      String_69314580 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_69314580(
-                                          (System_String_o *)StringLiteral_3422/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/,
+      String_70242896 = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString_70242896(
+                                          (System_String_o *)StringLiteral_3450/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/,
                                           0LL);
       if ( !JsonManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
       v18 = JsonManager__DeserializeArray_object_(
-              String_69314580,
-              (const MethodInfo_2FD883C *)Method_JsonManager_DeserializeArray_ClassBoardSave_ClassBoardSaveData___);
+              String_70242896,
+              (const MethodInfo_30A04A4 *)Method_JsonManager_DeserializeArray_ClassBoardSave_ClassBoardSaveData___);
       if ( v18 )
       {
         v13 = (System_Collections_Generic_IEnumerable_T__o *)v18;
@@ -70,14 +70,75 @@ void __fastcall ClassBoardSave__CheckOpenedMissionClearDialog(const MethodInfo *
           System_Collections_Generic_List_object___AddRange(
             (System_Collections_Generic_List_object__o *)HasKey,
             v13,
-            (const MethodInfo_35FCB64 *)Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__AddRange__);
+            (const MethodInfo_36D5FD0 *)Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__AddRange__);
           return;
         }
 LABEL_14:
-        sub_1B86614(HasKey, v13);
+        sub_1BDBAD4(HasKey, v13);
       }
     }
   }
+}
+
+
+void __fastcall ClassBoardSave__DeleteOpenedMissionClearDialogByBaseId(int32_t baseId, const MethodInfo *method)
+{
+  __int64 v3; // x1
+  __int64 v4; // x1
+  __int64 v5; // x1
+  __int64 v6; // x1
+  __int64 v7; // x1
+  __int64 v8; // x1
+  __int64 v9; // x1
+  __int64 v10; // x20
+  System_Collections_Generic_List_object__o *v11; // x0
+  __int64 v12; // x1
+  System_Collections_Generic_List_object__o *cachePlayCondOpenEffectList; // x19
+  System_Predicate_object__o *v14; // x21
+  System_Object_array *v15; // x19
+  System_String_o *v16; // x0
+
+  if ( (byte_4B48354 & 1) == 0 )
+  {
+    sub_1BDB878(&ClassBoardSave_TypeInfo, method);
+    sub_1BDB878(&JsonManager_TypeInfo, v3);
+    sub_1BDB878(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__RemoveAll__, v4);
+    sub_1BDB878(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__ToArray__, v5);
+    sub_1BDB878(&System_Predicate_ClassBoardSave_ClassBoardSaveData__TypeInfo, v6);
+    sub_1BDB878(&Method_ClassBoardSave___c__DisplayClass6_0__DeleteOpenedMissionClearDialogByBaseId_b__0__, v7);
+    sub_1BDB878(&ClassBoardSave___c__DisplayClass6_0_TypeInfo, v8);
+    sub_1BDB878(&StringLiteral_3450/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v9);
+    byte_4B48354 = 1;
+  }
+  v10 = sub_1BDBAC4(ClassBoardSave___c__DisplayClass6_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v10, 0LL);
+  if ( !v10 )
+    goto LABEL_10;
+  *(_DWORD *)(v10 + 16) = baseId;
+  cachePlayCondOpenEffectList = (System_Collections_Generic_List_object__o *)ClassBoardSave_TypeInfo->static_fields->cachePlayCondOpenEffectList;
+  if ( !cachePlayCondOpenEffectList )
+    return;
+  v14 = (System_Predicate_object__o *)sub_1BDBAC4(System_Predicate_ClassBoardSave_ClassBoardSaveData__TypeInfo);
+  System_Predicate_object____ctor(
+    v14,
+    (Il2CppObject *)v10,
+    Method_ClassBoardSave___c__DisplayClass6_0__DeleteOpenedMissionClearDialogByBaseId_b__0__,
+    0LL);
+  System_Collections_Generic_List_object___RemoveAll(
+    cachePlayCondOpenEffectList,
+    (System_Predicate_T__o *)v14,
+    (const MethodInfo_36D7420 *)Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__RemoveAll__);
+  v11 = (System_Collections_Generic_List_object__o *)ClassBoardSave_TypeInfo->static_fields->cachePlayCondOpenEffectList;
+  if ( !v11 )
+LABEL_10:
+    sub_1BDBAD4(v11, v12);
+  v15 = System_Collections_Generic_List_object___ToArray(
+          v11,
+          (const MethodInfo_36D791C *)Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__ToArray__);
+  if ( !JsonManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
+  v16 = JsonManager__toJson(&v15->obj, 0, 0, 0LL);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_3450/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v16, 0LL);
 }
 
 
@@ -98,13 +159,13 @@ ClassBoardSave_ClassBoardSaveData_o *__fastcall ClassBoardSave__GetSquareSaveKey
   int32_t *v13; // x10
   __int64 v14; // x0
 
-  if ( (byte_4A51C80 & 1) == 0 )
+  if ( (byte_4B48355 & 1) == 0 )
   {
-    sub_1B863B8(&ClassBoardSave_ClassBoardSaveData_TypeInfo, method);
-    sub_1B863B8(&IClassBoardSquareModel_TypeInfo, v3);
-    byte_4A51C80 = 1;
+    sub_1BDB878(&ClassBoardSave_ClassBoardSaveData_TypeInfo, method);
+    sub_1BDB878(&IClassBoardSquareModel_TypeInfo, v3);
+    byte_4B48355 = 1;
   }
-  v4 = sub_1B86604(ClassBoardSave_ClassBoardSaveData_TypeInfo);
+  v4 = sub_1BDBAC4(ClassBoardSave_ClassBoardSaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0LL);
   if ( !squareModel )
     goto LABEL_18;
@@ -125,12 +186,12 @@ ClassBoardSave_ClassBoardSaveData_o *__fastcall ClassBoardSave__GetSquareSaveKey
   else
   {
 LABEL_8:
-    p_method = sub_1BD6B4C(squareModel, IClassBoardSquareModel_TypeInfo, 1LL);
+    p_method = sub_1C2C00C(squareModel, IClassBoardSquareModel_TypeInfo, 1LL);
   }
   v5 = (*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))p_method)(squareModel, *(_QWORD *)(p_method + 8));
   if ( !v4 )
 LABEL_18:
-    sub_1B86614(v5, v6);
+    sub_1BDBAD4(v5, v6);
   *(_DWORD *)(v4 + 16) = v5;
   v11 = squareModel->klass;
   v12 = *(unsigned __int16 *)(&squareModel->klass->_2.bitflags2 + 3);
@@ -149,7 +210,7 @@ LABEL_18:
   else
   {
 LABEL_15:
-    v14 = sub_1BD6B4C(squareModel, IClassBoardSquareModel_TypeInfo, 0LL);
+    v14 = sub_1C2C00C(squareModel, IClassBoardSquareModel_TypeInfo, 0LL);
   }
   *(_DWORD *)(v4 + 20) = (*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v14)(
                            squareModel,
@@ -175,34 +236,34 @@ bool __fastcall ClassBoardSave__IsPlayCondOpenEffect(IClassBoardLockModel_o *loc
   System_Collections_Generic_List_T__o *cachePlayCondOpenEffectList; // x19
   System_Func_object__bool__o *v16; // x21
 
-  if ( (byte_4A51C7E & 1) == 0 )
+  if ( (byte_4B48352 & 1) == 0 )
   {
-    sub_1B863B8(&Method_BasicHelper_Any_ClassBoardSave_ClassBoardSaveData___, method);
-    sub_1B863B8(&ClassBoardSave_TypeInfo, v3);
-    sub_1B863B8(&System_Func_ClassBoardSave_ClassBoardSaveData__bool__TypeInfo, v4);
-    sub_1B863B8(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__get_Count__, v5);
-    sub_1B863B8(&Method_ClassBoardSave___c__DisplayClass4_0__IsPlayCondOpenEffect_b__0__, v6);
-    sub_1B863B8(&ClassBoardSave___c__DisplayClass4_0_TypeInfo, v7);
-    sub_1B863B8(&StringLiteral_3422/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v8);
-    byte_4A51C7E = 1;
+    sub_1BDB878(&Method_BasicHelper_Any_ClassBoardSave_ClassBoardSaveData___, method);
+    sub_1BDB878(&ClassBoardSave_TypeInfo, v3);
+    sub_1BDB878(&System_Func_ClassBoardSave_ClassBoardSaveData__bool__TypeInfo, v4);
+    sub_1BDB878(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__get_Count__, v5);
+    sub_1BDB878(&Method_ClassBoardSave___c__DisplayClass4_0__IsPlayCondOpenEffect_b__0__, v6);
+    sub_1BDB878(&ClassBoardSave___c__DisplayClass4_0_TypeInfo, v7);
+    sub_1BDB878(&StringLiteral_3450/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v8);
+    byte_4B48352 = 1;
   }
-  v9 = sub_1B86604(ClassBoardSave___c__DisplayClass4_0_TypeInfo);
+  v9 = sub_1BDBAC4(ClassBoardSave___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
     goto LABEL_9;
   *(_QWORD *)(v9 + 16) = lockModel;
-  sub_1B8635C((CGThumbnailListItem_o *)(v9 + 16), (int32_t)lockModel, v12, v13);
-  HasKey = UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_3422/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, 0LL);
+  sub_1BDB81C((CGThumbnailListItem_o *)(v9 + 16), (int32_t)lockModel, v12, v13);
+  HasKey = UnityEngine_PlayerPrefs__HasKey((System_String_o *)StringLiteral_3450/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, 0LL);
   if ( !HasKey )
     return 0;
   ClassBoardSave__CheckOpenedMissionClearDialog((const MethodInfo *)HasKey);
   cachePlayCondOpenEffectList = (System_Collections_Generic_List_T__o *)ClassBoardSave_TypeInfo->static_fields->cachePlayCondOpenEffectList;
   if ( !cachePlayCondOpenEffectList )
 LABEL_9:
-    sub_1B86614(v10, v11);
+    sub_1BDBAD4(v10, v11);
   if ( cachePlayCondOpenEffectList->fields._size >= 1 )
   {
-    v16 = (System_Func_object__bool__o *)sub_1B86604(System_Func_ClassBoardSave_ClassBoardSaveData__bool__TypeInfo);
+    v16 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_ClassBoardSave_ClassBoardSaveData__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v16,
       (Il2CppObject *)v9,
@@ -211,7 +272,7 @@ LABEL_9:
     return BasicHelper__Any_object_(
              cachePlayCondOpenEffectList,
              (System_Func_T__bool__o *)v16,
-             (const MethodInfo_2F57CB4 *)Method_BasicHelper_Any_ClassBoardSave_ClassBoardSaveData___);
+             (const MethodInfo_301CDFC *)Method_BasicHelper_Any_ClassBoardSave_ClassBoardSaveData___);
   }
   return 0;
 }
@@ -242,19 +303,19 @@ void __fastcall ClassBoardSave__SaveOpenedMissionClearDialog(
   System_Object_array *v21; // x19
   System_String_o *v22; // x0
 
-  if ( (byte_4A51C7F & 1) == 0 )
+  if ( (byte_4B48353 & 1) == 0 )
   {
-    sub_1B863B8(&Method_ClassBoardSave_GetSquareSaveKey__, method);
-    sub_1B863B8(&ClassBoardSave_TypeInfo, v3);
-    sub_1B863B8(&Method_System_Linq_Enumerable_Select_IClassBoardLockModel__ClassBoardSave_ClassBoardSaveData___, v4);
-    sub_1B863B8(&Method_System_Linq_Enumerable_ToList_ClassBoardSave_ClassBoardSaveData___, v5);
-    sub_1B863B8(&System_Func_IClassBoardLockModel__ClassBoardSave_ClassBoardSaveData__TypeInfo, v6);
-    sub_1B863B8(&System_Collections_Generic_IReadOnlyCollection_IClassBoardLockModel__TypeInfo, v7);
-    sub_1B863B8(&JsonManager_TypeInfo, v8);
-    sub_1B863B8(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__AddRange__, v9);
-    sub_1B863B8(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__ToArray__, v10);
-    sub_1B863B8(&StringLiteral_3422/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v11);
-    byte_4A51C7F = 1;
+    sub_1BDB878(&Method_ClassBoardSave_GetSquareSaveKey__, method);
+    sub_1BDB878(&ClassBoardSave_TypeInfo, v3);
+    sub_1BDB878(&Method_System_Linq_Enumerable_Select_IClassBoardLockModel__ClassBoardSave_ClassBoardSaveData___, v4);
+    sub_1BDB878(&Method_System_Linq_Enumerable_ToList_ClassBoardSave_ClassBoardSaveData___, v5);
+    sub_1BDB878(&System_Func_IClassBoardLockModel__ClassBoardSave_ClassBoardSaveData__TypeInfo, v6);
+    sub_1BDB878(&System_Collections_Generic_IReadOnlyCollection_IClassBoardLockModel__TypeInfo, v7);
+    sub_1BDB878(&JsonManager_TypeInfo, v8);
+    sub_1BDB878(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__AddRange__, v9);
+    sub_1BDB878(&Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__ToArray__, v10);
+    sub_1BDB878(&StringLiteral_3450/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v11);
+    byte_4B48353 = 1;
   }
   if ( locks )
   {
@@ -275,39 +336,39 @@ void __fastcall ClassBoardSave__SaveOpenedMissionClearDialog(
     else
     {
 LABEL_8:
-      p_method = sub_1BD6B4C(locks, System_Collections_Generic_IReadOnlyCollection_IClassBoardLockModel__TypeInfo, 0LL);
+      p_method = sub_1C2C00C(locks, System_Collections_Generic_IReadOnlyCollection_IClassBoardLockModel__TypeInfo, 0LL);
     }
     if ( (*(int (__fastcall **)(System_Collections_Generic_IReadOnlyCollection_IClassBoardLockModel__o *, _QWORD))p_method)(
            locks,
            *(_QWORD *)(p_method + 8)) >= 1 )
     {
-      v16 = (System_Func_object__object__o *)sub_1B86604(System_Func_IClassBoardLockModel__ClassBoardSave_ClassBoardSaveData__TypeInfo);
+      v16 = (System_Func_object__object__o *)sub_1BDBAC4(System_Func_IClassBoardLockModel__ClassBoardSave_ClassBoardSaveData__TypeInfo);
       System_Func_object__object____ctor(v16, 0LL, Method_ClassBoardSave_GetSquareSaveKey__, 0LL);
       v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                    (System_Collections_Generic_IEnumerable_TSource__o *)locks,
                                                                    (System_Func_TSource__TResult__o *)v16,
-                                                                   (const MethodInfo_2FA1274 *)Method_System_Linq_Enumerable_Select_IClassBoardLockModel__ClassBoardSave_ClassBoardSaveData___);
+                                                                   (const MethodInfo_3068484 *)Method_System_Linq_Enumerable_Select_IClassBoardLockModel__ClassBoardSave_ClassBoardSaveData___);
       v18 = System_Linq_Enumerable__ToList_object_(
               v17,
-              (const MethodInfo_2FADBE0 *)Method_System_Linq_Enumerable_ToList_ClassBoardSave_ClassBoardSaveData___);
+              (const MethodInfo_307503C *)Method_System_Linq_Enumerable_ToList_ClassBoardSave_ClassBoardSaveData___);
       ClassBoardSave__CheckOpenedMissionClearDialog((const MethodInfo *)v18);
       cachePlayCondOpenEffectList = (System_Collections_Generic_List_object__o *)ClassBoardSave_TypeInfo->static_fields->cachePlayCondOpenEffectList;
       if ( !cachePlayCondOpenEffectList
         || (System_Collections_Generic_List_object___AddRange(
               cachePlayCondOpenEffectList,
               (System_Collections_Generic_IEnumerable_T__o *)v18,
-              (const MethodInfo_35FCB64 *)Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__AddRange__),
+              (const MethodInfo_36D5FD0 *)Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__AddRange__),
             (cachePlayCondOpenEffectList = (System_Collections_Generic_List_object__o *)ClassBoardSave_TypeInfo->static_fields->cachePlayCondOpenEffectList) == 0LL) )
       {
-        sub_1B86614(cachePlayCondOpenEffectList, v19);
+        sub_1BDBAD4(cachePlayCondOpenEffectList, v19);
       }
       v21 = System_Collections_Generic_List_object___ToArray(
               cachePlayCondOpenEffectList,
-              (const MethodInfo_35FE4B0 *)Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__ToArray__);
+              (const MethodInfo_36D791C *)Method_System_Collections_Generic_List_ClassBoardSave_ClassBoardSaveData__ToArray__);
       if ( !JsonManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
       v22 = JsonManager__toJson(&v21->obj, 0, 0, 0LL);
-      UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_3422/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v22, 0LL);
+      UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_3450/*"CLASS_BOARD_OPEND_MISSION_CLEAR_KEY"*/, v22, 0LL);
     }
   }
 }
@@ -333,17 +394,17 @@ bool __fastcall ClassBoardSave_ClassBoardSaveData__Equals(
   ClassBoardSave_ClassBoardSaveData_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4A51C82 & 1) == 0 )
+  if ( (byte_4B48357 & 1) == 0 )
   {
-    sub_1B863B8(&ClassBoardSave_ClassBoardSaveData_TypeInfo, obj);
-    byte_4A51C82 = 1;
+    sub_1BDB878(&ClassBoardSave_ClassBoardSaveData_TypeInfo, obj);
+    byte_4B48357 = 1;
   }
   if ( !obj )
     return 0;
   Type = System_Object__GetType((Il2CppObject *)this, 0LL);
   v6 = System_Object__GetType(obj, 0LL);
   if ( !Type )
-    sub_1B86614(v6, v7);
+    sub_1BDBAD4(v6, v7);
   if ( (((__int64 (__fastcall *)(System_Type_o *, System_Type_o *, Il2CppMethodPointer))Type->klass->vtable._127_Equals.method)(
           Type,
           v6,
@@ -357,7 +418,7 @@ bool __fastcall ClassBoardSave_ClassBoardSaveData__Equals(
       return this->fields.SquareId == HIDWORD(obj[1].klass);
     return 0;
   }
-  sub_1B868D4(obj);
+  sub_1BDBD94(obj);
   return ClassBoardSave_ClassBoardSaveData__GetHashCode(v10, v11);
 }
 
@@ -376,7 +437,7 @@ bool __fastcall ClassBoardSave_ClassBoardSaveData__op_Equality(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1B86614(a, b);
+    sub_1BDBAD4(a, b);
   return a->fields.BaseId == b->fields.BaseId && a->fields.SquareId == b->fields.SquareId;
 }
 
@@ -410,4 +471,23 @@ bool __fastcall ClassBoardSave___c__DisplayClass4_0___IsPlayCondOpenEffect_b__0(
                     (IClassBoardSquareModel_o *)this->fields.lockModel,
                     (const MethodInfo *)x);
   return ClassBoardSave_ClassBoardSaveData__op_Equality(x, SquareSaveKey, v5);
+}
+
+
+void __fastcall ClassBoardSave___c__DisplayClass6_0___ctor(
+        ClassBoardSave___c__DisplayClass6_0_o *this,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0LL);
+}
+
+
+bool __fastcall ClassBoardSave___c__DisplayClass6_0___DeleteOpenedMissionClearDialogByBaseId_b__0(
+        ClassBoardSave___c__DisplayClass6_0_o *this,
+        ClassBoardSave_ClassBoardSaveData_o *x,
+        const MethodInfo *method)
+{
+  if ( !x )
+    sub_1BDBAD4(this, 0LL);
+  return x->fields.BaseId == this->fields.baseId;
 }

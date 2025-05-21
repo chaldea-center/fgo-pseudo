@@ -2,10 +2,10 @@ void __fastcall PartyOrganizationListViewDropObject___cctor(const MethodInfo *me
 {
   __int64 v1; // x1
 
-  if ( (byte_4A4A00B & 1) == 0 )
+  if ( (byte_4B405C2 & 1) == 0 )
   {
-    sub_1B863B8(&PartyOrganizationListViewDropObject_TypeInfo, v1);
-    byte_4A4A00B = 1;
+    sub_1BDB878(&PartyOrganizationListViewDropObject_TypeInfo, v1);
+    byte_4B405C2 = 1;
   }
   LODWORD(PartyOrganizationListViewDropObject_TypeInfo->static_fields->ACTION_TIME) = (struct PartyOrganizationListViewDropObject_StaticFields)1045220557;
 }
@@ -28,19 +28,19 @@ void __fastcall PartyOrganizationListViewDropObject__Awake(
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4A49FF2 & 1) == 0 )
+  if ( (byte_4B405A9 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewItemDraw___, method);
-    byte_4A49FF2 = 1;
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewItemDraw___, method);
+    byte_4B405A9 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1B86614(0LL, method);
+    sub_1BDBAD4(0LL, method);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewItemDraw___);
+                       (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewItemDraw___);
   this->fields.itemDraw = (struct PartyOrganizationListViewItemDraw_o *)Component_object;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
 }
 
@@ -55,21 +55,21 @@ bool __fastcall PartyOrganizationListViewDropObject__ClearItem(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
   UnityEngine_Object_o *itemDraw; // x20
-  __int64 v9; // x1
+  const MethodInfo *v9; // x1
   PartyOrganizationListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4A49FF6 & 1) == 0 )
+  if ( (byte_4B405AD & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
-    byte_4A49FF6 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    byte_4B405AD = 1;
   }
   isBusy = this->fields.isBusy;
   if ( !this->fields.isBusy )
   {
     this->fields.linkItem = 0LL;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.linkItem, 0, v2, v3);
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.linkItem, 0, v2, v3);
     this->fields.callbackFunc = 0LL;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v6, v7);
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v6, v7);
     this->fields.state = 0;
     itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -78,8 +78,8 @@ bool __fastcall PartyOrganizationListViewDropObject__ClearItem(
     {
       v10 = this->fields.itemDraw;
       if ( !v10 )
-        sub_1B86614(0LL, v9);
-      PartyOrganizationListViewItemDraw__ClearItem(v10, 0LL);
+        sub_1BDBAD4(0LL, v9);
+      PartyOrganizationListViewItemDraw__ClearItem(v10, v9);
     }
   }
   return !isBusy;
@@ -97,22 +97,22 @@ UnityEngine_GameObject_o *__fastcall PartyOrganizationListViewDropObject__Create
   PartyOrganizationListViewDropObject_o *v7; // x21
   const MethodInfo *v8; // x2
 
-  if ( (byte_4A49FFB & 1) == 0 )
+  if ( (byte_4B405B2 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewDropObject___, method);
-    byte_4A49FFB = 1;
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewDropObject___, method);
+    byte_4B405B2 = 1;
   }
   DragObject = ListViewDropObject__CreateDragObject((ListViewDropObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewDropObject___)) == 0LL) )
+                                                    (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewDropObject___)) == 0LL) )
   {
-    sub_1B86614(DragObject, v4);
+    sub_1BDBAD4(DragObject, v4);
   }
   v7 = (PartyOrganizationListViewDropObject_o *)DragObject;
-  PartyOrganizationListViewDropObject__Init_32576424((PartyOrganizationListViewDropObject_o *)DragObject, 2, v6);
+  PartyOrganizationListViewDropObject__Init_33354328((PartyOrganizationListViewDropObject_o *)DragObject, 2, v6);
   if ( this->fields.isEquipPress )
     PartyOrganizationListViewDropObject__SetDispEquipOnly(v7, 1, v8);
   return v5;
@@ -120,7 +120,7 @@ UnityEngine_GameObject_o *__fastcall PartyOrganizationListViewDropObject__Create
 
 
 // local variable allocation has failed, the output may be wrong!
-UnityEngine_GameObject_o *__fastcall PartyOrganizationListViewDropObject__CreateDragObject_32576640(
+UnityEngine_GameObject_o *__fastcall PartyOrganizationListViewDropObject__CreateDragObject_33354540(
         PartyOrganizationListViewDropObject_o *this,
         int32_t addDepth,
         const MethodInfo *method)
@@ -129,17 +129,18 @@ UnityEngine_GameObject_o *__fastcall PartyOrganizationListViewDropObject__Create
   UnityEngine_GameObject_o *DragObject; // x0
   __int64 v7; // x1
   UnityEngine_GameObject_o *v8; // x20
-  PartyOrganizationListViewDropObject_o *v9; // x21
+  const MethodInfo *v9; // x2
+  UnityEngine_GameObject_o *v10; // x21
   UnityEngine_Object_o *monitor; // x22
-  const MethodInfo *v11; // x2
+  const MethodInfo *v12; // x2
 
-  if ( (byte_4A49FFC & 1) == 0 )
+  if ( (byte_4B405B3 & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewDropObject___,
       *(_QWORD *)&addDepth);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A49FFC = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
+    byte_4B405B3 = 1;
   }
   DragObject = ListViewDropObject__CreateDragObject((ListViewDropObject_o *)this, 0LL);
   if ( !DragObject )
@@ -147,26 +148,25 @@ UnityEngine_GameObject_o *__fastcall PartyOrganizationListViewDropObject__Create
   v8 = DragObject;
   DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              DragObject,
-                                             (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewDropObject___);
+                                             (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewDropObject___);
   if ( !DragObject )
     goto LABEL_11;
-  v9 = (PartyOrganizationListViewDropObject_o *)DragObject;
-  monitor = (UnityEngine_Object_o *)DragObject[6].monitor;
+  v10 = DragObject;
+  PartyOrganizationListViewDropObject__Init_33354328((PartyOrganizationListViewDropObject_o *)DragObject, 2, v9);
+  monitor = (UnityEngine_Object_o *)v10[6].monitor;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(monitor, 0LL, 0LL) )
   {
-    DragObject = (UnityEngine_GameObject_o *)v9->fields.itemDraw;
+    DragObject = (UnityEngine_GameObject_o *)v10[6].monitor;
     if ( DragObject )
     {
-      PartyOrganizationListViewItemDraw__AddDepth((PartyOrganizationListViewItemDraw_o *)DragObject, addDepth, 0LL);
-      goto LABEL_10;
+      PartyOrganizationListViewItemDraw__AddDepth((PartyOrganizationListViewItemDraw_o *)DragObject, addDepth, v12);
+      return v8;
     }
 LABEL_11:
-    sub_1B86614(DragObject, v7);
+    sub_1BDBAD4(DragObject, v7);
   }
-LABEL_10:
-  PartyOrganizationListViewDropObject__Init_32576424(v9, 2, v11);
   return v8;
 }
 
@@ -183,11 +183,11 @@ void __fastcall PartyOrganizationListViewDropObject__DragDelete(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4A4A003 & 1) == 0 )
+  if ( (byte_4B405BA & 1) == 0 )
   {
-    sub_1B863B8(&NGUITools_TypeInfo, method);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A4A003 = 1;
+    sub_1BDB878(&NGUITools_TypeInfo, method);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B405BA = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -201,7 +201,7 @@ void __fastcall PartyOrganizationListViewDropObject__DragDelete(
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1B8635C(p_dragObject, 0, v8, v9);
+    sub_1BDB81C(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -224,7 +224,7 @@ void __fastcall PartyOrganizationListViewDropObject__DragMoveStart(
   UnityEngine_Object_o *dragObject; // x22
   const MethodInfo *v15; // x1
   const MethodInfo *v16; // x2
-  struct UnityEngine_GameObject_o *DragObject_32576640; // x0
+  struct UnityEngine_GameObject_o *DragObject_33354540; // x0
   int32_t v18; // w2
   const MethodInfo *v19; // x3
   char *Component_object; // x0
@@ -253,14 +253,14 @@ void __fastcall PartyOrganizationListViewDropObject__DragMoveStart(
   z = position.fields.z;
   y = position.fields.y;
   x = position.fields.x;
-  if ( (byte_4A4A002 & 1) == 0 )
+  if ( (byte_4B405B9 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UIWidget___, isEquipSwap);
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewDropObject___, v9);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v10);
-    sub_1B863B8(&PartyOrganizationListViewDropObject_TypeInfo, v11);
-    sub_1B863B8(&StringLiteral_9024/*"MoveEnd"*/, v12);
-    byte_4A4A002 = 1;
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_UIWidget___, isEquipSwap);
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewDropObject___, v9);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v10);
+    sub_1BDB878(&PartyOrganizationListViewDropObject_TypeInfo, v11);
+    sub_1BDB878(&StringLiteral_9169/*"MoveEnd"*/, v12);
+    byte_4B405B9 = 1;
   }
   p_dragObject = &this->fields.dragObject;
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
@@ -273,15 +273,15 @@ void __fastcall PartyOrganizationListViewDropObject__DragMoveStart(
     {
       this->fields.dispMode = 2;
       PartyOrganizationListViewDropObject__SetupDisp(this, v15);
-      DragObject_32576640 = PartyOrganizationListViewDropObject__CreateDragObject_32576640(this, -100, v16);
-      this->fields.dragObject = DragObject_32576640;
-      sub_1B8635C((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)DragObject_32576640, v18, v19);
+      DragObject_33354540 = PartyOrganizationListViewDropObject__CreateDragObject_33354540(this, -100, v16);
+      this->fields.dragObject = DragObject_33354540;
+      sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)DragObject_33354540, v18, v19);
       Component_object = (char *)this->fields.dragObject;
       if ( !Component_object )
         goto LABEL_20;
       Component_object = (char *)UnityEngine_GameObject__GetComponent_object_(
                                    (UnityEngine_GameObject_o *)Component_object,
-                                   (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewDropObject___);
+                                   (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewDropObject___);
       if ( !Component_object )
         goto LABEL_20;
       PartyOrganizationListViewDropObject__SetDispEquipOnly(
@@ -293,7 +293,7 @@ void __fastcall PartyOrganizationListViewDropObject__DragMoveStart(
     {
       Component_object = (char *)UnityEngine_Component__GetComponent_object_(
                                    (UnityEngine_Component_o *)this,
-                                   (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                                   (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_UIWidget___);
       if ( !Component_object )
         goto LABEL_20;
       (*(void (__fastcall **)(char *, _QWORD, float))(*(_QWORD *)Component_object + 440LL))(
@@ -302,9 +302,9 @@ void __fastcall PartyOrganizationListViewDropObject__DragMoveStart(
         0.0);
       this->fields.dispMode = 2;
       PartyOrganizationListViewDropObject__SetupDisp(this, v22);
-      v24 = PartyOrganizationListViewDropObject__CreateDragObject_32576640(this, -100, v23);
+      v24 = PartyOrganizationListViewDropObject__CreateDragObject_33354540(this, -100, v23);
       this->fields.dragObject = v24;
-      sub_1B8635C((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v24, v25, v26);
+      sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v24, v25, v26);
     }
   }
   v27 = *p_dragObject;
@@ -342,15 +342,15 @@ void __fastcall PartyOrganizationListViewDropObject__DragMoveStart(
   Component_object = (char *)TweenPosition__Begin(v27, v29, *(UnityEngine_Vector3_o *)&v41.fields.y, 0LL);
   if ( !Component_object )
 LABEL_20:
-    sub_1B86614(Component_object, v15);
+    sub_1BDBAD4(Component_object, v15);
   v33 = Component_object;
   *((_DWORD *)Component_object + 8) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   *((_QWORD *)v33 + 10) = gameObject;
-  sub_1B8635C((CGThumbnailListItem_o *)(v33 + 80), (int32_t)gameObject, v35, v36);
-  v37 = StringLiteral_9024/*"MoveEnd"*/;
-  *((_QWORD *)v33 + 11) = StringLiteral_9024/*"MoveEnd"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)(v33 + 88), v37, v38, v39);
+  sub_1BDB81C((CGThumbnailListItem_o *)(v33 + 80), (int32_t)gameObject, v35, v36);
+  v37 = StringLiteral_9169/*"MoveEnd"*/;
+  *((_QWORD *)v33 + 11) = StringLiteral_9169/*"MoveEnd"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)(v33 + 88), v37, v38, v39);
 }
 
 
@@ -361,10 +361,10 @@ PartyOrganizationListViewItem_o *__fastcall PartyOrganizationListViewDropObject_
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4A49FF4 & 1) == 0 )
+  if ( (byte_4B405AB & 1) == 0 )
   {
-    sub_1B863B8(&PartyOrganizationListViewItem_TypeInfo, method);
-    byte_4A49FF4 = 1;
+    sub_1BDB878(&PartyOrganizationListViewItem_TypeInfo, method);
+    byte_4B405AB = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -413,10 +413,10 @@ void __fastcall PartyOrganizationListViewDropObject__Init(
   z = position.fields.z;
   y = position.fields.y;
   x = position.fields.x;
-  if ( (byte_4A49FFD & 1) == 0 )
+  if ( (byte_4B405B4 & 1) == 0 )
   {
-    sub_1B863B8(&PartyOrganizationListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A49FFD = 1;
+    sub_1BDB878(&PartyOrganizationListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B405B4 = 1;
   }
   if ( initMode == 10 )
   {
@@ -450,12 +450,12 @@ void __fastcall PartyOrganizationListViewDropObject__Init(
       || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
           (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
     {
-      sub_1B86614(transform, v21);
+      sub_1BDBAD4(transform, v21);
     }
     UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
     this->fields.callbackFunc = callbackFunc;
     p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v23, v24);
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v23, v24);
     v28 = 1;
     switch ( v17 )
     {
@@ -511,7 +511,7 @@ LABEL_27:
         if ( p_callbackFunc->klass )
         {
           p_callbackFunc->klass = 0LL;
-          sub_1B8635C(p_callbackFunc, 0, (int32_t)v26, v27);
+          sub_1BDB81C(p_callbackFunc, 0, (int32_t)v26, v27);
           ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
             klass->_1.element_class,
             *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -523,17 +523,17 @@ LABEL_27:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall PartyOrganizationListViewDropObject__Init_32576424(
+void __fastcall PartyOrganizationListViewDropObject__Init_33354328(
         PartyOrganizationListViewDropObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x4
 
-  if ( !byte_4A487E1 )
+  if ( !byte_4B3E911 )
   {
-    sub_1B863B8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A487E1 = 1;
+    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B3E911 = 1;
   }
   PartyOrganizationListViewDropObject__Init(
     this,
@@ -547,7 +547,7 @@ void __fastcall PartyOrganizationListViewDropObject__Init_32576424(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall PartyOrganizationListViewDropObject__Init_32578816(
+void __fastcall PartyOrganizationListViewDropObject__Init_33356884(
         PartyOrganizationListViewDropObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -556,10 +556,10 @@ void __fastcall PartyOrganizationListViewDropObject__Init_32578816(
 {
   const MethodInfo *v5; // x4
 
-  if ( !byte_4A487E1 )
+  if ( !byte_4B3E911 )
   {
-    sub_1B863B8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A487E1 = 1;
+    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B3E911 = 1;
   }
   PartyOrganizationListViewDropObject__Init(
     this,
@@ -573,7 +573,7 @@ void __fastcall PartyOrganizationListViewDropObject__Init_32578816(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall PartyOrganizationListViewDropObject__Init_32578944(
+void __fastcall PartyOrganizationListViewDropObject__Init_33357012(
         PartyOrganizationListViewDropObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -581,10 +581,10 @@ void __fastcall PartyOrganizationListViewDropObject__Init_32578944(
 {
   const MethodInfo *v4; // x4
 
-  if ( !byte_4A487E1 )
+  if ( !byte_4B3E911 )
   {
-    sub_1B863B8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4A487E1 = 1;
+    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B3E911 = 1;
   }
   PartyOrganizationListViewDropObject__Init(
     this,
@@ -617,10 +617,10 @@ void __fastcall PartyOrganizationListViewDropObject__IntoMove(
   const MethodInfo *v17; // x3
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4A4A000 & 1) == 0 )
+  if ( (byte_4B405B7 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_7594/*"IntoMove2"*/, method);
-    byte_4A4A000 = 1;
+    sub_1BDB878(&StringLiteral_7734/*"IntoMove2"*/, method);
+    byte_4B405B7 = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -647,16 +647,16 @@ void __fastcall PartyOrganizationListViewDropObject__IntoMove(
                                                     0LL)) == 0LL) )
   {
 LABEL_9:
-    sub_1B86614(dragObject, method);
+    sub_1BDBAD4(dragObject, method);
   }
   v11 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v11[3].monitor = gameObject;
-  sub_1B8635C((CGThumbnailListItem_o *)&v11[3].monitor, (int32_t)gameObject, v13, v14);
-  v15 = StringLiteral_7594/*"IntoMove2"*/;
-  *(_QWORD *)&v11[3].fields.m_CachedPtr = StringLiteral_7594/*"IntoMove2"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)&v11[3].fields, v15, v16, v17);
+  sub_1BDB81C((CGThumbnailListItem_o *)&v11[3].monitor, (int32_t)gameObject, v13, v14);
+  v15 = StringLiteral_7734/*"IntoMove2"*/;
+  *(_QWORD *)&v11[3].fields.m_CachedPtr = StringLiteral_7734/*"IntoMove2"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)&v11[3].fields, v15, v16, v17);
 }
 
 
@@ -671,10 +671,10 @@ void __fastcall PartyOrganizationListViewDropObject__IntoMove2(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x1
 
-  if ( (byte_4A4A001 & 1) == 0 )
+  if ( (byte_4B405B8 & 1) == 0 )
   {
-    sub_1B863B8(&NGUITools_TypeInfo, method);
-    byte_4A4A001 = 1;
+    sub_1BDB878(&NGUITools_TypeInfo, method);
+    byte_4B405B8 = 1;
   }
   PartyOrganizationListViewDropObject__SetVisible(this, 1, v2);
   this->fields.dispMode = 2;
@@ -684,7 +684,7 @@ void __fastcall PartyOrganizationListViewDropObject__IntoMove2(
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0LL);
   this->fields.dragObject = 0LL;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v6, v7);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v6, v7);
   PartyOrganizationListViewDropObject__MoveEnd(this, v8);
 }
 
@@ -705,10 +705,10 @@ void __fastcall PartyOrganizationListViewDropObject__IntoStart(
   UnityEngine_Transform_o *transform; // x20
   int v13; // s0
 
-  if ( (byte_4A49FFF & 1) == 0 )
+  if ( (byte_4B405B6 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_7593/*"IntoMove"*/, method);
-    byte_4A49FFF = 1;
+    sub_1BDB878(&StringLiteral_7733/*"IntoMove"*/, method);
+    byte_4B405B6 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -718,14 +718,14 @@ void __fastcall PartyOrganizationListViewDropObject__IntoStart(
                                             this,
                                             this->klass->vtable._9_SetInput.methodPtr);
   this->fields.dragObject = v7;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v7, v8, v9);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v7, v8, v9);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0LL),
         (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0LL)) == 0LL)
-    || (*(UnityEngine_Vector3_o *)&v13 = UnityEngine_Transform__TransformPoint_69383112(
+    || (*(UnityEngine_Vector3_o *)&v13 = UnityEngine_Transform__TransformPoint_70311200(
                                            (UnityEngine_Transform_o *)dragObject,
                                            -3000.0,
                                            0.0,
@@ -733,12 +733,12 @@ void __fastcall PartyOrganizationListViewDropObject__IntoStart(
                                            0LL),
         !transform) )
   {
-    sub_1B86614(dragObject, v10);
+    sub_1BDBAD4(dragObject, v10);
   }
   UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v13, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_7593/*"IntoMove"*/,
+    (System_String_o *)StringLiteral_7733/*"IntoMove"*/,
     delay,
     0LL);
 }
@@ -755,11 +755,11 @@ bool __fastcall PartyOrganizationListViewDropObject__IsCanDrag(
   PartyOrganizationListViewItem_o *v7; // x20
   __int64 v8; // x10
 
-  if ( (byte_4A49FFA & 1) == 0 )
+  if ( (byte_4B405B1 & 1) == 0 )
   {
-    sub_1B863B8(&PartyOrganizationListViewItem_TypeInfo, method);
-    sub_1B863B8(&PartyOrganizationListViewManager_TypeInfo, v3);
-    byte_4A49FFA = 1;
+    sub_1BDB878(&PartyOrganizationListViewItem_TypeInfo, method);
+    sub_1BDB878(&PartyOrganizationListViewManager_TypeInfo, v3);
+    byte_4B405B1 = 1;
   }
   linkItem = this->fields.linkItem;
   manager = this->fields.manager;
@@ -773,7 +773,7 @@ bool __fastcall PartyOrganizationListViewDropObject__IsCanDrag(
       v7 = 0LL;
     if ( !manager )
 LABEL_22:
-      sub_1B86614(manager, method);
+      sub_1BDBAD4(manager, method);
   }
   else
   {
@@ -835,7 +835,7 @@ void __fastcall PartyOrganizationListViewDropObject__MoveEnd(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1B8635C(p_callbackFunc, 0, v2, v3);
+    sub_1BDB81C(p_callbackFunc, 0, v2, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       *(_QWORD *)&v5->fields.extra_arg);
@@ -849,17 +849,17 @@ void __fastcall PartyOrganizationListViewDropObject__OnClickItemEquip(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4A4A006 & 1) == 0 )
+  if ( (byte_4B405BD & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_9694/*"OnClickListDropEquip"*/, method);
-    byte_4A4A006 = 1;
+    sub_1BDB878(&StringLiteral_9844/*"OnClickListDropEquip"*/, method);
+    byte_4B405BD = 1;
   }
   if ( this->fields.state == 3 && this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1B86614(0LL, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9694/*"OnClickListDropEquip"*/, (Il2CppObject *)this, 0LL);
+      sub_1BDBAD4(0LL, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9844/*"OnClickListDropEquip"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -870,17 +870,17 @@ void __fastcall PartyOrganizationListViewDropObject__OnClickListDrop(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4A4A004 & 1) == 0 )
+  if ( (byte_4B405BB & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_9696/*"OnClickListDropServant"*/, method);
-    byte_4A4A004 = 1;
+    sub_1BDB878(&StringLiteral_9846/*"OnClickListDropServant"*/, method);
+    byte_4B405BB = 1;
   }
   if ( this->fields.state == 3 && this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1B86614(0LL, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9696/*"OnClickListDropServant"*/, (Il2CppObject *)this, 0LL);
+      sub_1BDBAD4(0LL, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9846/*"OnClickListDropServant"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -897,11 +897,11 @@ void __fastcall PartyOrganizationListViewDropObject__OnDestroy(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4A49FF3 & 1) == 0 )
+  if ( (byte_4B405AA & 1) == 0 )
   {
-    sub_1B863B8(&NGUITools_TypeInfo, method);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v3);
-    byte_4A49FF3 = 1;
+    sub_1BDB878(&NGUITools_TypeInfo, method);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B405AA = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -915,7 +915,7 @@ void __fastcall PartyOrganizationListViewDropObject__OnDestroy(
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1B8635C(p_dragObject, 0, v8, v9);
+    sub_1BDB81C(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -926,17 +926,17 @@ void __fastcall PartyOrganizationListViewDropObject__OnLongPressItem(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4A4A005 & 1) == 0 )
+  if ( (byte_4B405BC & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_9697/*"OnClickListDropServantDetail"*/, method);
-    byte_4A4A005 = 1;
+    sub_1BDB878(&StringLiteral_9847/*"OnClickListDropServantDetail"*/, method);
+    byte_4B405BC = 1;
   }
   if ( this->fields.state == 3 && this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1B86614(0LL, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9697/*"OnClickListDropServantDetail"*/, (Il2CppObject *)this, 0LL);
+      sub_1BDBAD4(0LL, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9847/*"OnClickListDropServantDetail"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -947,17 +947,17 @@ void __fastcall PartyOrganizationListViewDropObject__OnLongPressItemEquip(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4A4A007 & 1) == 0 )
+  if ( (byte_4B405BE & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_9695/*"OnClickListDropEquipDetail"*/, method);
-    byte_4A4A007 = 1;
+    sub_1BDB878(&StringLiteral_9845/*"OnClickListDropEquipDetail"*/, method);
+    byte_4B405BE = 1;
   }
   if ( this->fields.state == 3 && this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1B86614(0LL, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9695/*"OnClickListDropEquipDetail"*/, (Il2CppObject *)this, 0LL);
+      sub_1BDBAD4(0LL, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9845/*"OnClickListDropEquipDetail"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -983,10 +983,10 @@ void __fastcall PartyOrganizationListViewDropObject__OnPressItemEquip(
   __int64 methodPtr_low; // x11
 
   v2 = this;
-  if ( (byte_4A4A008 & 1) == 0 )
+  if ( (byte_4B405BF & 1) == 0 )
   {
-    this = (PartyOrganizationListViewDropObject_o *)sub_1B863B8(&PartyOrganizationListViewItem_TypeInfo, method);
-    byte_4A4A008 = 1;
+    this = (PartyOrganizationListViewDropObject_o *)sub_1BDB878(&PartyOrganizationListViewItem_TypeInfo, method);
+    byte_4B405BF = 1;
   }
   if ( v2->fields.state == 3 )
   {
@@ -997,10 +997,10 @@ void __fastcall PartyOrganizationListViewDropObject__OnPressItemEquip(
       if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
         || (PartyOrganizationListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] != PartyOrganizationListViewItem_TypeInfo )
       {
-        sub_1B86614(this, method);
+        sub_1BDBAD4(this, method);
       }
-      v2->fields.isEquipPress = !LOBYTE(linkItem[2].monitor)
-                             && !BYTE2(linkItem[2].monitor)
+      v2->fields.isEquipPress = !LOBYTE(linkItem[2].fields.selectNum)
+                             && !BYTE2(linkItem[2].fields.selectNum)
                              && !LOBYTE(linkItem[1].fields.selectNum);
     }
   }
@@ -1016,20 +1016,20 @@ void __fastcall PartyOrganizationListViewDropObject__ReleaseItem(
   int32_t v5; // w2
   const MethodInfo *v6; // x3
   UnityEngine_Object_o *itemDraw; // x20
-  __int64 v8; // x1
+  const MethodInfo *v8; // x1
   PartyOrganizationListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4A49FF5 & 1) == 0 )
+  if ( (byte_4B405AC & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
-    byte_4A49FF5 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    byte_4B405AC = 1;
   }
   if ( this->fields.linkItem )
   {
     this->fields.linkItem = 0LL;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.linkItem, 0, v2, v3);
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.linkItem, 0, v2, v3);
     this->fields.callbackFunc = 0LL;
-    sub_1B8635C((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v5, v6);
+    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v5, v6);
     this->fields.state = 0;
     itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1038,10 +1038,23 @@ void __fastcall PartyOrganizationListViewDropObject__ReleaseItem(
     {
       v9 = this->fields.itemDraw;
       if ( !v9 )
-        sub_1B86614(0LL, v8);
-      PartyOrganizationListViewItemDraw__ClearItem(v9, 0LL);
+        sub_1BDBAD4(0LL, v8);
+      PartyOrganizationListViewItemDraw__ClearItem(v9, v8);
     }
   }
+}
+
+
+void __fastcall PartyOrganizationListViewDropObject__SetActiveGrandEffect(
+        PartyOrganizationListViewDropObject_o *this,
+        bool isActive,
+        const MethodInfo *method)
+{
+  PartyOrganizationListViewItemDraw_o *itemDraw; // x0
+
+  itemDraw = this->fields.itemDraw;
+  if ( itemDraw )
+    PartyOrganizationListViewItemDraw__SetActiveGrandEffect(itemDraw, isActive, method);
 }
 
 
@@ -1053,22 +1066,23 @@ void __fastcall PartyOrganizationListViewDropObject__SetDispEquipOnly(
 {
   UnityEngine_GameObject_o *dispObject; // x0
   const MethodInfo *v6; // x2
+  const MethodInfo *v7; // x2
 
-  if ( (byte_4A4A00A & 1) == 0 )
+  if ( (byte_4B405C1 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewItemDraw___, flg);
-    byte_4A4A00A = 1;
+    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewItemDraw___, flg);
+    byte_4B405C1 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (dispObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dispObject,
-                                                   (const MethodInfo_2FC0DF0 *)Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewItemDraw___)) == 0LL )
+                                                   (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_PartyOrganizationListViewItemDraw___)) == 0LL )
   {
-    sub_1B86614(dispObject, flg);
+    sub_1BDBAD4(dispObject, flg);
   }
-  PartyOrganizationListViewItemDraw__SetDispEquipOnly((PartyOrganizationListViewItemDraw_o *)dispObject, flg, 0LL);
-  PartyOrganizationListViewDropObject__SetEquipDisp(this, 1, v6);
+  PartyOrganizationListViewItemDraw__SetDispEquipOnly((PartyOrganizationListViewItemDraw_o *)dispObject, flg, v6);
+  PartyOrganizationListViewDropObject__SetEquipDisp(this, 1, v7);
 }
 
 
@@ -1081,8 +1095,8 @@ void __fastcall PartyOrganizationListViewDropObject__SetDispSwapGuide(
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1B86614(0LL, isDisp);
-  PartyOrganizationListViewItemDraw__SetDispSwapGuide(itemDraw, isDisp, 0LL);
+    sub_1BDBAD4(0LL, isDisp);
+  PartyOrganizationListViewItemDraw__SetDispSwapGuide(itemDraw, isDisp, method);
 }
 
 
@@ -1098,11 +1112,11 @@ void __fastcall PartyOrganizationListViewDropObject__SetEquipDisp(
   __int64 v8; // x1
   UnityEngine_Component_o *Component_object; // x0
 
-  if ( (byte_4A4A009 & 1) == 0 )
+  if ( (byte_4B405C0 & 1) == 0 )
   {
-    sub_1B863B8(&Method_UnityEngine_Component_GetComponent_UICommonButton___, flg);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v5);
-    byte_4A4A009 = 1;
+    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_UICommonButton___, flg);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
+    byte_4B405C0 = 1;
   }
   equipUIDragDrop = (UnityEngine_Object_o *)this->fields.equipUIDragDrop;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1118,7 +1132,7 @@ void __fastcall PartyOrganizationListViewDropObject__SetEquipDisp(
       if ( !Component_object
         || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                             Component_object,
-                                                            (const MethodInfo_2F646C0 *)Method_UnityEngine_Component_GetComponent_UICommonButton___)) == 0LL
+                                                            (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_UICommonButton___)) == 0LL
         || (((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))Component_object->klass[1]._1.implementedInterfaces)(
               Component_object,
               0LL,
@@ -1126,7 +1140,7 @@ void __fastcall PartyOrganizationListViewDropObject__SetEquipDisp(
               Component_object->klass[1]._1.interfaceOffsets),
             (Component_object = (UnityEngine_Component_o *)this->fields.equipDispBase) == 0LL) )
       {
-        sub_1B86614(Component_object, v8);
+        sub_1BDBAD4(Component_object, v8);
       }
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, flg, 0LL);
     }
@@ -1144,10 +1158,10 @@ void __fastcall PartyOrganizationListViewDropObject__SetInput(
   __int64 v6; // x1
   UIDragDropListViewItem_o *v7; // x0
 
-  if ( (byte_4A49FF9 & 1) == 0 )
+  if ( (byte_4B405B0 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, isInput);
-    byte_4A49FF9 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, isInput);
+    byte_4B405B0 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   equipUIDragDrop = (UnityEngine_Object_o *)this->fields.equipUIDragDrop;
@@ -1157,7 +1171,7 @@ void __fastcall PartyOrganizationListViewDropObject__SetInput(
   {
     v7 = this->fields.equipUIDragDrop;
     if ( !v7 )
-      sub_1B86614(0LL, v6);
+      sub_1BDBAD4(0LL, v6);
     UIDragDropListViewItem__SetEnable(v7, isInput, 0LL);
   }
 }
@@ -1173,10 +1187,10 @@ void __fastcall PartyOrganizationListViewDropObject__SetItem(
   __int64 v8; // x1
   struct UIDragDropListViewItem_o *v9; // x0
 
-  if ( (byte_4A49FF7 & 1) == 0 )
+  if ( (byte_4B405AE & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, item);
-    byte_4A49FF7 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, item);
+    byte_4B405AE = 1;
   }
   this->fields.state = 0;
   equipUIDragDrop = (UnityEngine_Object_o *)this->fields.equipUIDragDrop;
@@ -1186,12 +1200,12 @@ void __fastcall PartyOrganizationListViewDropObject__SetItem(
   {
     v9 = this->fields.equipUIDragDrop;
     if ( !v9 )
-      sub_1B86614(0LL, v8);
+      sub_1BDBAD4(0LL, v8);
     ((void (__fastcall *)(struct UIDragDropListViewItem_o *, Il2CppMethodPointer))v9->klass->vtable._5_SetBaseTransform.method)(
       v9,
       v9->klass->vtable._6_OnDragDropStart.methodPtr);
   }
-  ListViewDropObject__SetItem_41774392((ListViewDropObject_o *)this, item, seed, 0LL);
+  ListViewDropObject__SetItem_42732908((ListViewDropObject_o *)this, item, seed, 0LL);
 }
 
 
@@ -1205,10 +1219,10 @@ void __fastcall PartyOrganizationListViewDropObject__SetVisible(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4A49FF8 & 1) == 0 )
+  if ( (byte_4B405AF & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, isVisible);
-    byte_4A49FF8 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, isVisible);
+    byte_4B405AF = 1;
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, isVisible, 0LL);
   equipDispBase = (UnityEngine_Object_o *)this->fields.equipDispBase;
@@ -1218,7 +1232,7 @@ void __fastcall PartyOrganizationListViewDropObject__SetVisible(
   {
     v7 = this->fields.equipDispBase;
     if ( !v7 )
-      sub_1B86614(0LL, v6);
+      sub_1BDBAD4(0LL, v6);
     UnityEngine_GameObject__SetActive(v7, isVisible, 0LL);
   }
 }
@@ -1235,13 +1249,14 @@ void __fastcall PartyOrganizationListViewDropObject__SetupDisp(
   bool v7; // w1
   UnityEngine_Object_o *itemDraw; // x21
   __int64 v9; // x1
-  PartyOrganizationListViewItemDraw_o *v10; // x0
+  const MethodInfo *v10; // x4
+  PartyOrganizationListViewItemDraw_o *v11; // x0
 
-  if ( (byte_4A49FFE & 1) == 0 )
+  if ( (byte_4B405B5 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
-    sub_1B863B8(&PartyOrganizationListViewItem_TypeInfo, v4);
-    byte_4A49FFE = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    sub_1BDB878(&PartyOrganizationListViewItem_TypeInfo, v4);
+    byte_4B405B5 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -1263,13 +1278,14 @@ LABEL_8:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v10 = this->fields.itemDraw;
-    if ( !v10 )
-      sub_1B86614(0LL, v9);
+    v11 = this->fields.itemDraw;
+    if ( !v11 )
+      sub_1BDBAD4(0LL, v9);
     PartyOrganizationListViewItemDraw__SetItem(
-      v10,
+      v11,
       (PartyOrganizationListViewItem_o *)linkItem,
       this->fields.dispMode,
-      0LL);
+      0,
+      v10);
   }
 }

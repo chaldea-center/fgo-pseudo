@@ -22,10 +22,10 @@ void __fastcall WarBoardMasterAttackRequest__backgroundErrorRetry(
         WarBoardMasterAttackRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4A50018 & 1) == 0 )
+  if ( (byte_4B4664D & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    byte_4A50018 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    byte_4B4664D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -68,34 +68,34 @@ void __fastcall WarBoardMasterAttackRequest__beginRequest(
   __int64 v37; // x1
   const MethodInfo *v38; // x1
 
-  if ( (byte_4A50017 & 1) == 0 )
+  if ( (byte_4B4664C & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_23328/*"stageId"*/, *(_QWORD *)&stageId);
-    sub_1B863B8(&StringLiteral_23693/*"targetGroupId"*/, v20);
-    sub_1B863B8(&StringLiteral_23696/*"targetPieceIndex"*/, v21);
-    sub_1B863B8(&StringLiteral_16911/*"befSquareIndex"*/, v22);
-    sub_1B863B8(&StringLiteral_23692/*"targetForceId"*/, v23);
-    sub_1B863B8(&StringLiteral_22376/*"pieceIndex"*/, v24);
-    sub_1B863B8(&StringLiteral_19645/*"groupId"*/, v25);
-    sub_1B863B8(&StringLiteral_19319/*"forceId"*/, v26);
-    sub_1B863B8(&StringLiteral_16473/*"aftSquareIndex"*/, v27);
-    byte_4A50017 = 1;
+    sub_1BDB878(&StringLiteral_23679/*"stageId"*/, *(_QWORD *)&stageId);
+    sub_1BDB878(&StringLiteral_24044/*"targetGroupId"*/, v20);
+    sub_1BDB878(&StringLiteral_24047/*"targetPieceIndex"*/, v21);
+    sub_1BDB878(&StringLiteral_17135/*"befSquareIndex"*/, v22);
+    sub_1BDB878(&StringLiteral_24043/*"targetForceId"*/, v23);
+    sub_1BDB878(&StringLiteral_22718/*"pieceIndex"*/, v24);
+    sub_1BDB878(&StringLiteral_19925/*"groupId"*/, v25);
+    sub_1BDB878(&StringLiteral_19564/*"forceId"*/, v26);
+    sub_1BDB878(&StringLiteral_16696/*"aftSquareIndex"*/, v27);
+    byte_4B4664C = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_23328/*"stageId"*/,
+    (System_String_o *)StringLiteral_23679/*"stageId"*/,
     stageId,
     *(const MethodInfo **)&groupId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19319/*"forceId"*/, forceId, v28);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19645/*"groupId"*/, groupId, v29);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22376/*"pieceIndex"*/, pieceIndex, v30);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23692/*"targetForceId"*/, targetForceId, v31);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23693/*"targetGroupId"*/, targetGroupId, v32);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23696/*"targetPieceIndex"*/, targetPieceIndex, v33);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16911/*"befSquareIndex"*/, befSquareIndex, v34);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16473/*"aftSquareIndex"*/, aftSquareIndex, v35);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19564/*"forceId"*/, forceId, v28);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19925/*"groupId"*/, groupId, v29);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22718/*"pieceIndex"*/, pieceIndex, v30);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24043/*"targetForceId"*/, targetForceId, v31);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24044/*"targetGroupId"*/, targetGroupId, v32);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24047/*"targetPieceIndex"*/, targetPieceIndex, v33);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17135/*"befSquareIndex"*/, befSquareIndex, v34);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16696/*"aftSquareIndex"*/, aftSquareIndex, v35);
   if ( !warBoardData )
-    sub_1B86614(v36, v37);
+    sub_1BDBAD4(v36, v37);
   WarBoardData__SetRequest(warBoardData, (RequestBase_o *)this, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, v38);
 }
@@ -108,16 +108,16 @@ System_String_o *__fastcall WarBoardMasterAttackRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A50016 & 1) == 0 )
+  if ( (byte_4B4664B & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_24455/*"warBoard/masterAttack"*/, v2);
-    byte_4A50016 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_24811/*"warBoard/masterAttack"*/, v2);
+    byte_4B4664B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_24455/*"warBoard/masterAttack"*/, 0LL);
+  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_24811/*"warBoard/masterAttack"*/, 0LL);
 }
 
 
@@ -150,15 +150,15 @@ void __fastcall WarBoardMasterAttackRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v19; // x8
 
-  if ( (byte_4A50019 & 1) == 0 )
+  if ( (byte_4B4664E & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
-    sub_1B863B8(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
-    sub_1B863B8(&JsonManager_TypeInfo, v6);
-    sub_1B863B8(&ResponseCommandKind_TypeInfo, v7);
-    sub_1B863B8(&StringLiteral_21893/*"ng"*/, v8);
-    sub_1B863B8(&StringLiteral_24464/*"warBoardData"*/, v9);
-    byte_4A50019 = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
+    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
+    sub_1BDB878(&JsonManager_TypeInfo, v6);
+    sub_1BDB878(&ResponseCommandKind_TypeInfo, v7);
+    sub_1BDB878(&StringLiteral_22233/*"ng"*/, v8);
+    sub_1BDB878(&StringLiteral_24820/*"warBoardData"*/, v9);
+    byte_4B4664E = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -169,14 +169,14 @@ void __fastcall WarBoardMasterAttackRequest__requestCompleted(
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_24464/*"warBoardData"*/,
-             (const MethodInfo_32CE660 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_24820/*"warBoardData"*/,
+             (const MethodInfo_33A01B0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     v16 = RequestBase__UnpackToMessagePack((RequestBase_o *)Item, Item, v15);
     System_Collections_Generic_Dictionary_object__object___set_Item(
       success,
-      (Il2CppObject *)StringLiteral_24464/*"warBoardData"*/,
+      (Il2CppObject *)StringLiteral_24820/*"warBoardData"*/,
       v16,
-      (const MethodInfo_32CE6CC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+      (const MethodInfo_33A021C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v17 = JsonManager__toJson((Il2CppObject *)success, 0, 0, 0LL);
@@ -193,7 +193,7 @@ void __fastcall WarBoardMasterAttackRequest__requestCompleted(
     if ( v19 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v19->fields.m_target)(
         v19->fields.original_method_info,
-        StringLiteral_21893/*"ng"*/,
+        StringLiteral_22233/*"ng"*/,
         *(_QWORD *)&v19->fields.extra_arg);
   }
 }

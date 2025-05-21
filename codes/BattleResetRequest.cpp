@@ -7,12 +7,12 @@ void __fastcall BattleResetRequest___ctor(BattleResetRequest_o *this, const Meth
 // local variable allocation has failed, the output may be wrong!
 void __fastcall BattleResetRequest__beginRequest(BattleResetRequest_o *this, int32_t questId, const MethodInfo *method)
 {
-  if ( (byte_4A4FE02 & 1) == 0 )
+  if ( (byte_4B46431 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_22539/*"questId"*/, *(_QWORD *)&questId);
-    byte_4A4FE02 = 1;
+    sub_1BDB878(&StringLiteral_22882/*"questId"*/, *(_QWORD *)&questId);
+    byte_4B46431 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22539/*"questId"*/, questId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22882/*"questId"*/, questId, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -22,16 +22,16 @@ System_String_o *__fastcall BattleResetRequest__getURL(BattleResetRequest_o *thi
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4A4FE01 & 1) == 0 )
+  if ( (byte_4B46430 & 1) == 0 )
   {
-    sub_1B863B8(&NetworkManager_TypeInfo, method);
-    sub_1B863B8(&StringLiteral_16847/*"battle/reset"*/, v2);
-    byte_4A4FE01 = 1;
+    sub_1BDB878(&NetworkManager_TypeInfo, method);
+    sub_1BDB878(&StringLiteral_17071/*"battle/reset"*/, v2);
+    byte_4B46430 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_61645176(BaseUrl, (System_String_o *)StringLiteral_16847/*"battle/reset"*/, 0LL);
+  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_17071/*"battle/reset"*/, 0LL);
 }
 
 
@@ -47,17 +47,17 @@ void __fastcall BattleResetRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_4A4FE03 & 1) == 0 )
+  if ( (byte_4B46432 & 1) == 0 )
   {
-    sub_1B863B8(&JsonManager_TypeInfo, responseList);
-    sub_1B863B8(&ResponseCommandKind_TypeInfo, v5);
-    sub_1B863B8(&StringLiteral_21893/*"ng"*/, v6);
-    byte_4A4FE03 = 1;
+    sub_1BDB878(&JsonManager_TypeInfo, responseList);
+    sub_1BDB878(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BDB878(&StringLiteral_22233/*"ng"*/, v6);
+    byte_4B46432 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(113, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_42282948(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_43151432(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -66,7 +66,7 @@ void __fastcall BattleResetRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_21893/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_22233/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

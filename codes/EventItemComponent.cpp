@@ -5,14 +5,14 @@ void __fastcall EventItemComponent___cctor(const MethodInfo *method)
   const MethodInfo *v3; // x3
   __int64 v4; // x1
 
-  if ( (byte_4A4D8E9 & 1) == 0 )
+  if ( (byte_4B43E95 & 1) == 0 )
   {
-    sub_1B863B8(&EventItemComponent_TypeInfo, v1);
-    sub_1B863B8(&StringLiteral_20270/*"img_shopbg04"*/, v4);
-    byte_4A4D8E9 = 1;
+    sub_1BDB878(&EventItemComponent_TypeInfo, v1);
+    sub_1BDB878(&StringLiteral_20581/*"img_shopbg04"*/, v4);
+    byte_4B43E95 = 1;
   }
-  EventItemComponent_TypeInfo->static_fields->BASE_SPRITE_DEFAULT_NAME = (struct System_String_o *)StringLiteral_20270/*"img_shopbg04"*/;
-  sub_1B8635C((CGThumbnailListItem_o *)EventItemComponent_TypeInfo->static_fields, StringLiteral_20270/*"img_shopbg04"*/, v2, v3);
+  EventItemComponent_TypeInfo->static_fields->BASE_SPRITE_DEFAULT_NAME = (struct System_String_o *)StringLiteral_20581/*"img_shopbg04"*/;
+  sub_1BDB81C((CGThumbnailListItem_o *)EventItemComponent_TypeInfo->static_fields, StringLiteral_20581/*"img_shopbg04"*/, v2, v3);
 }
 
 
@@ -35,13 +35,13 @@ void __fastcall EventItemComponent__Awake(EventItemComponent_o *this, const Meth
   UISprite_o *v11; // x20
   UISprite_o *v12; // x20
 
-  if ( (byte_4A4D8DE & 1) == 0 )
+  if ( (byte_4B43E8A & 1) == 0 )
   {
-    sub_1B863B8(&EventItemComponent_TypeInfo, method);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v3);
-    sub_1B863B8(&Method_UnityEngine_Resources_Load_UIAtlas___, v4);
-    sub_1B863B8(&StringLiteral_12623/*"Shop/Atlas/ShopAtlas"*/, v5);
-    byte_4A4D8DE = 1;
+    sub_1BDB878(&EventItemComponent_TypeInfo, method);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
+    sub_1BDB878(&Method_UnityEngine_Resources_Load_UIAtlas___, v4);
+    sub_1BDB878(&StringLiteral_12812/*"Shop/Atlas/ShopAtlas"*/, v5);
+    byte_4B43E8A = 1;
   }
   baseSp = (UnityEngine_Object_o *)this->fields.baseSp;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -59,8 +59,8 @@ void __fastcall EventItemComponent__Awake(EventItemComponent_o *this, const Meth
     {
       v11 = this->fields.baseSp;
       object = (UIAtlas_o *)UnityEngine_Resources__Load_object_(
-                              (System_String_o *)StringLiteral_12623/*"Shop/Atlas/ShopAtlas"*/,
-                              (const MethodInfo_30059F0 *)Method_UnityEngine_Resources_Load_UIAtlas___);
+                              (System_String_o *)StringLiteral_12812/*"Shop/Atlas/ShopAtlas"*/,
+                              (const MethodInfo_30CD6D0 *)Method_UnityEngine_Resources_Load_UIAtlas___);
       if ( v11 )
       {
         UISprite__set_atlas(v11, object, 0LL);
@@ -82,7 +82,7 @@ void __fastcall EventItemComponent__Awake(EventItemComponent_o *this, const Meth
         }
       }
 LABEL_17:
-      sub_1B86614(object, v8);
+      sub_1BDBAD4(object, v8);
     }
   }
 }
@@ -92,10 +92,10 @@ void __fastcall EventItemComponent__Clear(EventItemComponent_o *this, const Meth
 {
   UnityEngine_GameObject_o *baseObject; // x0
 
-  if ( (byte_4A4D8E0 & 1) == 0 )
+  if ( (byte_4B43E8C & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_1/*""*/, method);
-    byte_4A4D8E0 = 1;
+    sub_1BDB878(&StringLiteral_1/*""*/, method);
+    byte_4B43E8C = 1;
   }
   baseObject = this->fields.baseObject;
   if ( !baseObject
@@ -106,7 +106,7 @@ void __fastcall EventItemComponent__Clear(EventItemComponent_o *this, const Meth
     || (UILabel__set_text((UILabel_o *)baseObject, (System_String_o *)StringLiteral_1/*""*/, 0LL),
         (baseObject = (UnityEngine_GameObject_o *)this->fields.textLabel) == 0LL) )
   {
-    sub_1B86614(baseObject, method);
+    sub_1BDBAD4(baseObject, method);
   }
   UILabel__set_text((UILabel_o *)baseObject, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
@@ -118,10 +118,10 @@ void __fastcall EventItemComponent__OnDestroy(EventItemComponent_o *this, const 
   __int64 v4; // x1
   UISprite_o *v5; // x0
 
-  if ( (byte_4A4D8DF & 1) == 0 )
+  if ( (byte_4B43E8B & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, method);
-    byte_4A4D8DF = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
+    byte_4B43E8B = 1;
   }
   baseSp = (UnityEngine_Object_o *)this->fields.baseSp;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -130,7 +130,7 @@ void __fastcall EventItemComponent__OnDestroy(EventItemComponent_o *this, const 
   {
     v5 = this->fields.baseSp;
     if ( !v5 )
-      sub_1B86614(0LL, v4);
+      sub_1BDBAD4(0LL, v4);
     UISprite__set_atlas(v5, 0LL, 0LL);
   }
 }
@@ -146,29 +146,31 @@ void __fastcall EventItemComponent__Set(EventItemComponent_o *this, int32_t item
   __int64 v9; // x1
   char *baseObject; // x0
   ItemMaster_o *v11; // x21
-  int32_t *p_QpMax; // x20
-  int32_t v13; // w22
+  int64_t *p_QpMax; // x20
+  int64_t v13; // x22
   BalanceConfig_c *v14; // x0
   struct BalanceConfig_StaticFields *static_fields; // x8
-  UserGameEntity_o *v16; // x21
-  int32_t FriendPoint; // w22
-  BalanceConfig_c *v18; // x8
-  int32_t FriendPointMax; // w20
+  int64_t v16; // x20
+  UserGameEntity_o *v17; // x20
+  int32_t FriendPoint; // w21
+  BalanceConfig_c *v19; // x8
+  int32_t FriendPointMax; // w0
   Il2CppObject *MasterData_object; // x21
-  int32_t v21; // w22
-  BalanceConfig_c *v22; // x0
-  struct BalanceConfig_StaticFields *v23; // x8
+  int32_t *p_UserEventItemMax; // x20
+  int32_t v23; // w22
+  BalanceConfig_c *v24; // x0
+  struct BalanceConfig_StaticFields *v25; // x8
   UILabel_o *dataLabel; // x19
 
-  if ( (byte_4A4D8E1 & 1) == 0 )
+  if ( (byte_4B43E8D & 1) == 0 )
   {
-    sub_1B863B8(&BalanceConfig_TypeInfo, *(_QWORD *)&itemId);
-    sub_1B863B8(&Method_DataManager_GetMasterData_ItemMaster___, v5);
-    sub_1B863B8(&Method_DataManager_GetMasterData_UserItemMaster___, v6);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v7);
-    sub_1B863B8(&NetworkManager_TypeInfo, v8);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    byte_4A4D8E1 = 1;
+    sub_1BDB878(&BalanceConfig_TypeInfo, *(_QWORD *)&itemId);
+    sub_1BDB878(&Method_DataManager_GetMasterData_ItemMaster___, v5);
+    sub_1BDB878(&Method_DataManager_GetMasterData_UserItemMaster___, v6);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v7);
+    sub_1BDB878(&NetworkManager_TypeInfo, v8);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    byte_4B43E8D = 1;
   }
   this->fields.dataItemId = itemId;
   if ( itemId < 1 )
@@ -178,56 +180,56 @@ void __fastcall EventItemComponent__Set(EventItemComponent_o *this, int32_t item
   }
   baseObject = (char *)this->fields.baseObject;
   if ( !baseObject )
-    goto LABEL_53;
+    goto LABEL_55;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)baseObject, 1, 0LL);
   baseObject = (char *)this->fields.baseSp;
   if ( !baseObject )
-    goto LABEL_53;
+    goto LABEL_55;
   baseObject = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseObject, 0LL);
   if ( !baseObject )
-    goto LABEL_53;
+    goto LABEL_55;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)baseObject, 1, 0LL);
   baseObject = (char *)this->fields.itemIcon;
   if ( !baseObject )
-    goto LABEL_53;
+    goto LABEL_55;
   baseObject = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseObject, 0LL);
   if ( !baseObject )
-    goto LABEL_53;
+    goto LABEL_55;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)baseObject, 1, 0LL);
   baseObject = (char *)this->fields.dataLabel;
   if ( !baseObject )
-    goto LABEL_53;
+    goto LABEL_55;
   baseObject = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseObject, 0LL);
   if ( !baseObject )
-    goto LABEL_53;
+    goto LABEL_55;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)baseObject, 1, 0LL);
   baseObject = (char *)this->fields.textLabel;
   if ( !baseObject )
-    goto LABEL_53;
+    goto LABEL_55;
   baseObject = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseObject, 0LL);
   if ( !baseObject )
-    goto LABEL_53;
+    goto LABEL_55;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)baseObject, 0, 0LL);
   baseObject = (char *)this->fields.itemIcon;
   if ( !baseObject )
-    goto LABEL_53;
+    goto LABEL_55;
   ItemIconComponent__SetItem((ItemIconComponent_o *)baseObject, itemId, -1, 1, 0LL);
-  baseObject = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  baseObject = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !baseObject )
-    goto LABEL_53;
+    goto LABEL_55;
   baseObject = (char *)DataManager__GetMasterData_object_(
                          (DataManager_o *)baseObject,
-                         (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ItemMaster___);
+                         (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !baseObject )
-    goto LABEL_53;
+    goto LABEL_55;
   v11 = (ItemMaster_o *)baseObject;
   if ( ItemMaster__isQP((ItemMaster_o *)baseObject, itemId, 0LL) )
   {
     baseObject = (char *)UserGameMaster__getSelfUserGame(0LL);
     if ( !baseObject )
-      goto LABEL_53;
-    p_QpMax = (int32_t *)(baseObject + 96);
-    v13 = *((_DWORD *)baseObject + 24);
+      goto LABEL_55;
+    p_QpMax = (int64_t *)(baseObject + 96);
+    v13 = *((_QWORD *)baseObject + 12);
     v14 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
@@ -244,22 +246,23 @@ void __fastcall EventItemComponent__Set(EventItemComponent_o *this, int32_t item
       }
       p_QpMax = &static_fields->QpMax;
     }
-    goto LABEL_46;
+    v16 = *p_QpMax;
+    goto LABEL_51;
   }
   if ( !ItemMaster__isFriendPoint(v11, itemId, 0LL) )
   {
-    baseObject = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    baseObject = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( baseObject )
     {
       MasterData_object = DataManager__GetMasterData_object_(
                             (DataManager_o *)baseObject,
-                            (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                            (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserItemMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4A48C25 )
+      if ( !byte_4B3ED56 )
       {
-        sub_1B863B8(&NetworkManager_TypeInfo, *(_QWORD *)&itemId);
-        byte_4A48C25 = 1;
+        sub_1BDB878(&NetworkManager_TypeInfo, *(_QWORD *)&itemId);
+        byte_4B3ED56 = 1;
       }
       baseObject = (char *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -276,64 +279,64 @@ void __fastcall EventItemComponent__Set(EventItemComponent_o *this, int32_t item
                                0LL);
         if ( baseObject )
         {
-          p_QpMax = (int32_t *)(baseObject + 28);
-          v21 = *((_DWORD *)baseObject + 7);
-          v22 = BalanceConfig_TypeInfo;
+          p_UserEventItemMax = (int32_t *)(baseObject + 28);
+          v23 = *((_DWORD *)baseObject + 7);
+          v24 = BalanceConfig_TypeInfo;
           if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-            v22 = BalanceConfig_TypeInfo;
+            v24 = BalanceConfig_TypeInfo;
           }
-          v23 = v22->static_fields;
-          if ( v21 >= v23->UserEventItemMax )
+          v25 = v24->static_fields;
+          if ( v23 >= v25->UserEventItemMax )
           {
-            if ( !v22->_2.cctor_finished )
+            if ( !v24->_2.cctor_finished )
             {
-              j_il2cpp_runtime_class_init_0(v22);
-              v23 = BalanceConfig_TypeInfo->static_fields;
+              j_il2cpp_runtime_class_init_0(v24);
+              v25 = BalanceConfig_TypeInfo->static_fields;
             }
-            p_QpMax = &v23->UserEventItemMax;
+            p_UserEventItemMax = &v25->UserEventItemMax;
           }
-LABEL_46:
-          FriendPointMax = *p_QpMax;
-          goto LABEL_47;
+          v16 = *p_UserEventItemMax;
+          goto LABEL_51;
         }
       }
     }
-LABEL_53:
-    sub_1B86614(baseObject, *(_QWORD *)&itemId);
+LABEL_55:
+    sub_1BDBAD4(baseObject, *(_QWORD *)&itemId);
   }
   baseObject = (char *)UserGameMaster__getSelfUserGame(0LL);
   if ( !baseObject )
-    goto LABEL_53;
-  v16 = (UserGameEntity_o *)baseObject;
+    goto LABEL_55;
+  v17 = (UserGameEntity_o *)baseObject;
   FriendPoint = UserGameEntity__GetFriendPoint((UserGameEntity_o *)baseObject, 0LL);
-  v18 = BalanceConfig_TypeInfo;
+  v19 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v18 = BalanceConfig_TypeInfo;
+    v19 = BalanceConfig_TypeInfo;
   }
-  FriendPointMax = v18->static_fields->FriendPointMax;
+  FriendPointMax = v19->static_fields->FriendPointMax;
   if ( FriendPoint >= FriendPointMax )
   {
-    if ( !v18->_2.cctor_finished )
+    if ( !v19->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v18);
+      j_il2cpp_runtime_class_init_0(v19);
       FriendPointMax = BalanceConfig_TypeInfo->static_fields->FriendPointMax;
     }
   }
   else
   {
-    FriendPointMax = UserGameEntity__GetFriendPoint(v16, 0LL);
+    FriendPointMax = UserGameEntity__GetFriendPoint(v17, 0LL);
   }
-LABEL_47:
+  v16 = FriendPointMax;
+LABEL_51:
   dataLabel = this->fields.dataLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  baseObject = (char *)LocalizationManager__GetNumberFormat(FriendPointMax, 0LL);
+  baseObject = (char *)LocalizationManager__GetNumberFormatLong(v16, 0LL);
   if ( !dataLabel )
-    goto LABEL_53;
+    goto LABEL_55;
   UILabel__set_text(dataLabel, (System_String_o *)baseObject, 0LL);
 }
 
@@ -354,13 +357,13 @@ void __fastcall EventItemComponent__SetDailyMissionEvent(
   System_String_o *v12; // x0
   int32_t DailyMissionAchiveNum; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4A4D8E5 & 1) == 0 )
+  if ( (byte_4B43E91 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_EventMissionMaster___, *(_QWORD *)&eventId);
-    sub_1B863B8(&Method_DataManager_GetMasterData_UserEventMissionMaster___, v5);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1B863B8(&StringLiteral_1058/*"/"*/, v7);
-    byte_4A4D8E5 = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_EventMissionMaster___, *(_QWORD *)&eventId);
+    sub_1BDB878(&Method_DataManager_GetMasterData_UserEventMissionMaster___, v5);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1BDB878(&StringLiteral_1061/*"/"*/, v7);
+    byte_4B43E91 = 1;
   }
   this->fields.dataMissionEventId = eventId;
   if ( eventId < 1 )
@@ -401,18 +404,18 @@ void __fastcall EventItemComponent__SetDailyMissionEvent(
     if ( !baseObject )
       goto LABEL_21;
     UnityEngine_GameObject__SetActive(baseObject, 1, 0LL);
-    baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !baseObject )
       goto LABEL_21;
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)baseObject,
-                          (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_EventMissionMaster___);
-    baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                          (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventMissionMaster___);
+    baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !baseObject )
       goto LABEL_21;
     baseObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                (DataManager_o *)baseObject,
-                                               (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
+                                               (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
     if ( !baseObject
       || (textLabel = this->fields.textLabel,
           DailyMissionAchiveNum = UserEventMissionMaster__getDailyMissionAchiveNum(
@@ -427,15 +430,15 @@ void __fastcall EventItemComponent__SetDailyMissionEvent(
                                     eventId,
                                     0LL),
           v12 = System_Int32__ToString((int32_t)&DailyMissionAchiveNum, 0LL),
-          baseObject = (UnityEngine_GameObject_o *)System_String__Concat_61683424(
+          baseObject = (UnityEngine_GameObject_o *)System_String__Concat_62610508(
                                                      v11,
-                                                     (System_String_o *)StringLiteral_1058/*"/"*/,
+                                                     (System_String_o *)StringLiteral_1061/*"/"*/,
                                                      v12,
                                                      0LL),
           !textLabel) )
     {
 LABEL_21:
-      sub_1B86614(baseObject, *(_QWORD *)&eventId);
+      sub_1BDBAD4(baseObject, *(_QWORD *)&eventId);
     }
     UILabel__set_text(textLabel, (System_String_o *)baseObject, 0LL);
   }
@@ -463,17 +466,17 @@ void __fastcall EventItemComponent__SetGroupPointEvent(
   UILabel_o *dataLabel; // x19
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4A4D8E2 & 1) == 0 )
+  if ( (byte_4B43E8E & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&itemId);
-    sub_1B863B8(&Method_DataManager_GetMasterData_UserEventPointMaster___, v5);
-    sub_1B863B8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v6);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v7);
-    sub_1B863B8(&NetworkManager_TypeInfo, v8);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
-    sub_1B863B8(&StringLiteral_18908/*"eventId"*/, v10);
-    sub_1B863B8(&StringLiteral_18907/*"eventGroupId"*/, v11);
-    byte_4A4D8E2 = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&itemId);
+    sub_1BDB878(&Method_DataManager_GetMasterData_UserEventPointMaster___, v5);
+    sub_1BDB878(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v6);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v7);
+    sub_1BDB878(&NetworkManager_TypeInfo, v8);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v9);
+    sub_1BDB878(&StringLiteral_19152/*"eventId"*/, v10);
+    sub_1BDB878(&StringLiteral_19151/*"eventGroupId"*/, v11);
+    byte_4B43E8E = 1;
   }
   entity = 0LL;
   this->fields.dataPointGroupEventId = itemId;
@@ -518,44 +521,44 @@ void __fastcall EventItemComponent__SetGroupPointEvent(
   if ( !baseObject )
     goto LABEL_34;
   ItemIconComponent__SetItem((ItemIconComponent_o *)baseObject, itemId, -1, 1, 0LL);
-  baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !baseObject )
     goto LABEL_34;
   baseObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                              (DataManager_o *)baseObject,
-                                             (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                             (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !baseObject )
     goto LABEL_34;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)baseObject,
          &entity,
          itemId,
-         (const MethodInfo_32142CC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+         (const MethodInfo_32E1E88 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
   {
     baseObject = (UnityEngine_GameObject_o *)entity;
     if ( entity )
     {
       baseObject = (UnityEngine_GameObject_o *)ItemEntity__getScript(
                                                  (ItemEntity_o *)entity,
-                                                 (System_String_o *)StringLiteral_18908/*"eventId"*/,
+                                                 (System_String_o *)StringLiteral_19152/*"eventId"*/,
                                                  0,
                                                  0LL);
       if ( entity )
       {
         v13 = (int)baseObject;
-        Script = ItemEntity__getScript((ItemEntity_o *)entity, (System_String_o *)StringLiteral_18907/*"eventGroupId"*/, 0, 0LL);
-        baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Script = ItemEntity__getScript((ItemEntity_o *)entity, (System_String_o *)StringLiteral_19151/*"eventGroupId"*/, 0, 0LL);
+        baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( baseObject )
         {
           MasterData_object = DataManager__GetMasterData_object_(
                                 (DataManager_o *)baseObject,
-                                (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserEventPointMaster___);
+                                (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserEventPointMaster___);
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          if ( !byte_4A48C25 )
+          if ( !byte_4B3ED56 )
           {
-            sub_1B863B8(&NetworkManager_TypeInfo, *(_QWORD *)&itemId);
-            byte_4A48C25 = 1;
+            sub_1BDB878(&NetworkManager_TypeInfo, *(_QWORD *)&itemId);
+            byte_4B3ED56 = 1;
           }
           baseObject = (UnityEngine_GameObject_o *)NetworkManager_TypeInfo;
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -577,7 +580,7 @@ void __fastcall EventItemComponent__SetGroupPointEvent(
       }
     }
 LABEL_34:
-    sub_1B86614(baseObject, *(_QWORD *)&itemId);
+    sub_1BDBAD4(baseObject, *(_QWORD *)&itemId);
   }
   Point = 0LL;
 LABEL_30:
@@ -608,13 +611,13 @@ void __fastcall EventItemComponent__SetMissionEvent(
   int v13; // [xsp+8h] [xbp-28h] BYREF
   int32_t AchiveMissionNum; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4A4D8E4 & 1) == 0 )
+  if ( (byte_4B43E90 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_EventMissionMaster___, *(_QWORD *)&eventId);
-    sub_1B863B8(&Method_DataManager_GetMasterData_UserEventMissionMaster___, v5);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1B863B8(&StringLiteral_1058/*"/"*/, v7);
-    byte_4A4D8E4 = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_EventMissionMaster___, *(_QWORD *)&eventId);
+    sub_1BDB878(&Method_DataManager_GetMasterData_UserEventMissionMaster___, v5);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1BDB878(&StringLiteral_1061/*"/"*/, v7);
+    byte_4B43E90 = 1;
   }
   v13 = 0;
   this->fields.dataMissionEventId = eventId;
@@ -656,21 +659,21 @@ void __fastcall EventItemComponent__SetMissionEvent(
     if ( !baseObject )
       goto LABEL_22;
     UnityEngine_GameObject__SetActive(baseObject, 1, 0LL);
-    baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !baseObject )
       goto LABEL_22;
     baseObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                (DataManager_o *)baseObject,
-                                               (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_EventMissionMaster___);
+                                               (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventMissionMaster___);
     if ( !baseObject )
       goto LABEL_22;
     EventMissionList = EventMissionMaster__getEventMissionList((EventMissionMaster_o *)baseObject, eventId, 0LL);
-    baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !baseObject )
       goto LABEL_22;
     baseObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                (DataManager_o *)baseObject,
-                                               (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
+                                               (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
     if ( !baseObject
       || (AchiveMissionNum = UserEventMissionMaster__getAchiveMissionNum(
                                (UserEventMissionMaster_o *)baseObject,
@@ -682,15 +685,15 @@ void __fastcall EventItemComponent__SetMissionEvent(
       || (v11 = (System_String_o *)baseObject,
           v13 = *(_QWORD *)&EventMissionList->max_length,
           v12 = System_Int32__ToString((int32_t)&v13, 0LL),
-          baseObject = (UnityEngine_GameObject_o *)System_String__Concat_61683424(
+          baseObject = (UnityEngine_GameObject_o *)System_String__Concat_62610508(
                                                      v11,
-                                                     (System_String_o *)StringLiteral_1058/*"/"*/,
+                                                     (System_String_o *)StringLiteral_1061/*"/"*/,
                                                      v12,
                                                      0LL),
           !textLabel) )
     {
 LABEL_22:
-      sub_1B86614(baseObject, *(_QWORD *)&eventId);
+      sub_1BDBAD4(baseObject, *(_QWORD *)&eventId);
     }
     UILabel__set_text(textLabel, (System_String_o *)baseObject, 0LL);
   }
@@ -710,7 +713,7 @@ void __fastcall EventItemComponent__SetNum(
   float r; // s11
   UILabel_o *dataLabel; // x20
   System_String_o *v10; // x21
-  System_String_o *NumberFormat_39433948; // x0
+  System_String_o *NumberFormat_40281376; // x0
   __int64 v12; // x1
   int32_t v13; // [xsp+Ch] [xbp-44h] BYREF
   UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
@@ -720,27 +723,27 @@ void __fastcall EventItemComponent__SetNum(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4A4D8E7 & 1) == 0 )
+  if ( (byte_4B43E93 & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, *(_QWORD *)&num);
-    byte_4A4D8E7 = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, *(_QWORD *)&num);
+    byte_4B43E93 = 1;
   }
   dataLabel = this->fields.dataLabel;
   v10 = System_Int32__ToString((int32_t)&v13, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  NumberFormat_39433948 = LocalizationManager__GetNumberFormat_39433948(v10, 0LL);
+  NumberFormat_40281376 = LocalizationManager__GetNumberFormat_40281376(v10, 0LL);
   if ( !dataLabel
-    || (UILabel__set_text(dataLabel, NumberFormat_39433948, 0LL),
-        (NumberFormat_39433948 = (System_String_o *)this->fields.dataLabel) == 0LL) )
+    || (UILabel__set_text(dataLabel, NumberFormat_40281376, 0LL),
+        (NumberFormat_40281376 = (System_String_o *)this->fields.dataLabel) == 0LL) )
   {
-    sub_1B86614(NumberFormat_39433948, v12);
+    sub_1BDBAD4(NumberFormat_40281376, v12);
   }
   v14.fields.r = r;
   v14.fields.g = g;
   v14.fields.b = b;
   v14.fields.a = a;
-  UIWidget__set_color((UIWidget_o *)NumberFormat_39433948, v14, 0LL);
+  UIWidget__set_color((UIWidget_o *)NumberFormat_40281376, v14, 0LL);
 }
 
 
@@ -756,10 +759,10 @@ void __fastcall EventItemComponent__SetPointEvent(
   UILabel_o *dataLabel; // x21
   int64_t EventPoint; // x19
 
-  if ( (byte_4A4D8E3 & 1) == 0 )
+  if ( (byte_4B43E8F & 1) == 0 )
   {
-    sub_1B863B8(&LocalizationManager_TypeInfo, *(_QWORD *)&eventId);
-    byte_4A4D8E3 = 1;
+    sub_1BDB878(&LocalizationManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_4B43E8F = 1;
   }
   this->fields.dataPointEventId = eventId;
   this->fields.dataPointEventGroupId = groupId;
@@ -813,7 +816,7 @@ void __fastcall EventItemComponent__SetPointEvent(
     baseObject = (UnityEngine_GameObject_o *)LocalizationManager__GetNumberFormatLong(EventPoint, 0LL);
     if ( !dataLabel )
 LABEL_19:
-      sub_1B86614(baseObject, *(_QWORD *)&eventId);
+      sub_1BDBAD4(baseObject, *(_QWORD *)&eventId);
     UILabel__set_text(dataLabel, (System_String_o *)baseObject, 0LL);
   }
 }
@@ -834,12 +837,12 @@ void __fastcall EventItemComponent__SetRaidEvent(
   System_String_o *v12; // x20
   int64_t v13; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4A4D8E6 & 1) == 0 )
+  if ( (byte_4B43E92 & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataManager_GetMasterData_UserEventRaidMaster___, *(_QWORD *)&eventId);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v7);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_4A4D8E6 = 1;
+    sub_1BDB878(&Method_DataManager_GetMasterData_UserEventRaidMaster___, *(_QWORD *)&eventId);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v7);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    byte_4B43E92 = 1;
   }
   this->fields.dataRaidEventId = eventId;
   this->fields.dataRaidDay = day;
@@ -885,12 +888,12 @@ void __fastcall EventItemComponent__SetRaidEvent(
     if ( !baseObject )
       goto LABEL_24;
     ItemIconComponent__SetRaidEvent((ItemIconComponent_o *)baseObject, eventId, 0LL);
-    baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    baseObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !baseObject )
       goto LABEL_24;
     baseObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                (DataManager_o *)baseObject,
-                                               (const MethodInfo_2F6DCB8 *)Method_DataManager_GetMasterData_UserEventRaidMaster___);
+                                               (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserEventRaidMaster___);
     if ( !baseObject )
       goto LABEL_24;
     v10 = day
@@ -901,10 +904,10 @@ void __fastcall EventItemComponent__SetRaidEvent(
     v12 = System_Int64__ToString((int64_t)&v13, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    baseObject = (UnityEngine_GameObject_o *)LocalizationManager__GetNumberFormat_39433948(v12, 0LL);
+    baseObject = (UnityEngine_GameObject_o *)LocalizationManager__GetNumberFormat_40281376(v12, 0LL);
     if ( !dataLabel )
 LABEL_24:
-      sub_1B86614(baseObject, *(_QWORD *)&eventId);
+      sub_1BDBAD4(baseObject, *(_QWORD *)&eventId);
     UILabel__set_text(dataLabel, (System_String_o *)baseObject, 0LL);
   }
 }
@@ -959,10 +962,10 @@ void __fastcall EventItemComponent__setBaseSpriteDownloadAtlas(
   __int64 v6; // x1
   struct UISprite_o *v7; // x0
 
-  if ( (byte_4A4D8E8 & 1) == 0 )
+  if ( (byte_4B43E94 & 1) == 0 )
   {
-    sub_1B863B8(&AtlasManager_TypeInfo, spName);
-    byte_4A4D8E8 = 1;
+    sub_1BDB878(&AtlasManager_TypeInfo, spName);
+    byte_4B43E94 = 1;
   }
   baseSp = this->fields.baseSp;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -970,7 +973,7 @@ void __fastcall EventItemComponent__setBaseSpriteDownloadAtlas(
   AtlasManager__SetEventUI(baseSp, spName, 0LL);
   v7 = this->fields.baseSp;
   if ( !v7 )
-    sub_1B86614(0LL, v6);
+    sub_1BDBAD4(0LL, v6);
   ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v7->klass->vtable._33_MakePixelPerfect.method)(
     v7,
     v7->klass->vtable._34_get_minWidth.methodPtr);
@@ -986,7 +989,7 @@ void __fastcall EventItemComponent__setFontSizeDataLabel(
 
   dataLabel = this->fields.dataLabel;
   if ( !dataLabel )
-    sub_1B86614(0LL, size);
+    sub_1BDBAD4(0LL, size);
   UILabel__set_fontSize(dataLabel, size, 0LL);
 }
 
@@ -1000,7 +1003,7 @@ void __fastcall EventItemComponent__setHeightDataLabel(
 
   dataLabel = (UIWidget_o *)this->fields.dataLabel;
   if ( !dataLabel )
-    sub_1B86614(0LL, height);
+    sub_1BDBAD4(0LL, height);
   UIWidget__set_height(dataLabel, height, 0LL);
 }
 
@@ -1016,9 +1019,9 @@ void __fastcall EventItemComponent__setLocalPositionDataLabel(
 
   dataLabel = (UnityEngine_Component_o *)this->fields.dataLabel;
   if ( !dataLabel )
-    sub_1B86614(0LL, method);
+    sub_1BDBAD4(0LL, method);
   gameObject = UnityEngine_Component__get_gameObject(dataLabel, 0LL);
-  GameObjectExtensions__SetLocalPosition_34382392(gameObject, x, y, 0LL);
+  GameObjectExtensions__SetLocalPosition_35211104(gameObject, x, y, 0LL);
 }
 
 
@@ -1031,7 +1034,7 @@ void __fastcall EventItemComponent__setLocalPositionXItemIcon(
 
   itemIcon = this->fields.itemIcon;
   if ( !itemIcon )
-    sub_1B86614(0LL, method);
+    sub_1BDBAD4(0LL, method);
   ItemIconComponent__setLocalPositionIconSprite(itemIcon, x, 0LL);
 }
 
@@ -1045,7 +1048,7 @@ void __fastcall EventItemComponent__setPivotDataLabel(
 
   dataLabel = (UIWidget_o *)this->fields.dataLabel;
   if ( !dataLabel )
-    sub_1B86614(0LL, pivot);
+    sub_1BDBAD4(0LL, pivot);
   UIWidget__set_rawPivot(dataLabel, pivot, 0LL);
 }
 
@@ -1056,7 +1059,7 @@ void __fastcall EventItemComponent__setScaleItemIcon(EventItemComponent_o *this,
 
   itemIcon = this->fields.itemIcon;
   if ( !itemIcon )
-    sub_1B86614(0LL, method);
+    sub_1BDBAD4(0LL, method);
   ItemIconComponent__setLocalScaleIconSprite(itemIcon, scale, 0LL);
 }
 
@@ -1070,6 +1073,6 @@ void __fastcall EventItemComponent__setWidthDataLabel(
 
   dataLabel = (UIWidget_o *)this->fields.dataLabel;
   if ( !dataLabel )
-    sub_1B86614(0LL, width);
+    sub_1BDBAD4(0LL, width);
   UIWidget__set_width(dataLabel, width, 0LL);
 }

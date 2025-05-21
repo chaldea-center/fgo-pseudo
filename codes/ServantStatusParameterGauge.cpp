@@ -4,14 +4,14 @@ void __fastcall ServantStatusParameterGauge___ctor(ServantStatusParameterGauge_o
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4A4C464 & 1) == 0 )
+  if ( (byte_4B42687 & 1) == 0 )
   {
-    sub_1B863B8(&UISprite___TypeInfo, method);
-    byte_4A4C464 = 1;
+    sub_1BDB878(&UISprite___TypeInfo, method);
+    byte_4B42687 = 1;
   }
-  v3 = (struct UISprite_array *)sub_1B86460(UISprite___TypeInfo, 5LL);
+  v3 = (struct UISprite_array *)sub_1BDB920(UISprite___TypeInfo, 5LL);
   this->fields.gaugeSpriteList = v3;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.gaugeSpriteList, (int32_t)v3, v4, v5);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.gaugeSpriteList, (int32_t)v3, v4, v5);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
 }
 
@@ -51,34 +51,35 @@ void __fastcall ServantStatusParameterGauge__Set(
   __int64 *v32; // x8
   __int64 *v33; // x8
   UISprite_o *evaluationSprite; // x0
+  __int64 v35; // x2
   unsigned __int64 i; // x20
   struct UISprite_array *gaugeSpriteList; // x8
-  System_String_o *v37; // x8
-  System_String_o *v38; // x1
-  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
+  System_String_o *v38; // x8
+  System_String_o *v39; // x1
   UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4A4C462 & 1) == 0 )
+  if ( (byte_4B42685 & 1) == 0 )
   {
-    sub_1B863B8(&StringLiteral_20177/*"img_parameter_C"*/, *(_QWORD *)&kind);
-    sub_1B863B8(&StringLiteral_20192/*"img_parametergage_edge"*/, v7);
-    sub_1B863B8(&StringLiteral_20193/*"img_parametergage_edge_ex"*/, v8);
-    sub_1B863B8(&StringLiteral_20184/*"img_parameter_minus"*/, v9);
-    sub_1B863B8(&StringLiteral_20176/*"img_parameter_B"*/, v10);
-    sub_1B863B8(&StringLiteral_20178/*"img_parameter_D"*/, v11);
-    sub_1B863B8(&StringLiteral_20191/*"img_parametergage_bar_ex"*/, v12);
-    sub_1B863B8(&StringLiteral_20186/*"img_parameter_plus"*/, v13);
-    sub_1B863B8(&StringLiteral_20175/*"img_parameter_A"*/, v14);
-    sub_1B863B8(&StringLiteral_20190/*"img_parametergage_bar"*/, v15);
-    sub_1B863B8(&StringLiteral_20187/*"img_parameter_question"*/, v16);
-    sub_1B863B8(&StringLiteral_20179/*"img_parameter_E"*/, v17);
-    sub_1B863B8(&StringLiteral_20180/*"img_parameter_EX"*/, v18);
-    byte_4A4C462 = 1;
+    sub_1BDB878(&StringLiteral_20481/*"img_parameter_C"*/, *(_QWORD *)&kind);
+    sub_1BDB878(&StringLiteral_20496/*"img_parametergage_edge"*/, v7);
+    sub_1BDB878(&StringLiteral_20497/*"img_parametergage_edge_ex"*/, v8);
+    sub_1BDB878(&StringLiteral_20488/*"img_parameter_minus"*/, v9);
+    sub_1BDB878(&StringLiteral_20480/*"img_parameter_B"*/, v10);
+    sub_1BDB878(&StringLiteral_20482/*"img_parameter_D"*/, v11);
+    sub_1BDB878(&StringLiteral_20495/*"img_parametergage_bar_ex"*/, v12);
+    sub_1BDB878(&StringLiteral_20490/*"img_parameter_plus"*/, v13);
+    sub_1BDB878(&StringLiteral_20479/*"img_parameter_A"*/, v14);
+    sub_1BDB878(&StringLiteral_20494/*"img_parametergage_bar"*/, v15);
+    sub_1BDB878(&StringLiteral_20491/*"img_parameter_question"*/, v16);
+    sub_1BDB878(&StringLiteral_20483/*"img_parameter_E"*/, v17);
+    sub_1BDB878(&StringLiteral_20484/*"img_parameter_EX"*/, v18);
+    byte_4B42685 = 1;
   }
   ServantStatusParameterGauge__SetParameterTitleSprite(this, kind, *(const MethodInfo **)&rank);
-  v20 = StringLiteral_20190/*"img_parametergage_bar"*/;
-  v21 = StringLiteral_20192/*"img_parametergage_edge"*/;
+  v20 = StringLiteral_20494/*"img_parametergage_bar"*/;
+  v21 = StringLiteral_20496/*"img_parametergage_edge"*/;
   v22 = 0LL;
   v23 = 0LL;
   switch ( rank )
@@ -89,7 +90,7 @@ void __fastcall ServantStatusParameterGauge__Set(
     case 14:
     case 15:
     case 16:
-      v24 = &StringLiteral_20175/*"img_parameter_A"*/;
+      v24 = &StringLiteral_20479/*"img_parameter_A"*/;
       v22 = 5LL;
       goto LABEL_9;
     case 17:
@@ -119,7 +120,7 @@ void __fastcall ServantStatusParameterGauge__Set(
     case 24:
     case 25:
     case 26:
-      v24 = &StringLiteral_20176/*"img_parameter_B"*/;
+      v24 = &StringLiteral_20480/*"img_parameter_B"*/;
       v22 = 4LL;
       goto LABEL_9;
     case 31:
@@ -128,7 +129,7 @@ void __fastcall ServantStatusParameterGauge__Set(
     case 34:
     case 35:
     case 36:
-      v24 = &StringLiteral_20177/*"img_parameter_C"*/;
+      v24 = &StringLiteral_20481/*"img_parameter_C"*/;
       v22 = 3LL;
       goto LABEL_9;
     case 41:
@@ -137,7 +138,7 @@ void __fastcall ServantStatusParameterGauge__Set(
     case 44:
     case 45:
     case 46:
-      v24 = &StringLiteral_20178/*"img_parameter_D"*/;
+      v24 = &StringLiteral_20482/*"img_parameter_D"*/;
       v22 = 2LL;
       goto LABEL_9;
     case 51:
@@ -146,16 +147,16 @@ void __fastcall ServantStatusParameterGauge__Set(
     case 54:
     case 55:
     case 56:
-      v24 = &StringLiteral_20179/*"img_parameter_E"*/;
+      v24 = &StringLiteral_20483/*"img_parameter_E"*/;
       v22 = 1LL;
 LABEL_9:
       v23 = (System_String_o *)*v24;
       goto LABEL_10;
     case 61:
       v26 = 0LL;
-      v20 = StringLiteral_20191/*"img_parametergage_bar_ex"*/;
-      v21 = StringLiteral_20193/*"img_parametergage_edge_ex"*/;
-      v23 = (System_String_o *)StringLiteral_20180/*"img_parameter_EX"*/;
+      v20 = StringLiteral_20495/*"img_parametergage_bar_ex"*/;
+      v21 = StringLiteral_20497/*"img_parametergage_edge_ex"*/;
+      v23 = (System_String_o *)StringLiteral_20484/*"img_parameter_EX"*/;
       v27 = 1;
       v28 = 0.0;
       v29 = 16.0;
@@ -197,10 +198,10 @@ LABEL_24:
                                            0LL);
         if ( !evaluationSprite )
           goto LABEL_67;
-        v39.fields.y = 0.0;
-        v39.fields.z = 0.0;
-        v39.fields.x = v28;
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)evaluationSprite, v39, 0LL);
+        v40.fields.y = 0.0;
+        v40.fields.z = 0.0;
+        v40.fields.x = v28;
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)evaluationSprite, v40, 0LL);
         evaluationSprite = this->fields.evaluationAdd1Sprite;
         if ( !evaluationSprite )
           goto LABEL_67;
@@ -231,10 +232,10 @@ LABEL_24:
                                            0LL);
         if ( !evaluationSprite )
           goto LABEL_67;
-        v40.fields.x = v29 + v28;
-        v40.fields.y = 0.0;
-        v40.fields.z = 0.0;
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)evaluationSprite, v40, 0LL);
+        v41.fields.x = v29 + v28;
+        v41.fields.y = 0.0;
+        v41.fields.z = 0.0;
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)evaluationSprite, v41, 0LL);
         evaluationSprite = this->fields.evaluationAdd2Sprite;
         if ( !evaluationSprite )
           goto LABEL_67;
@@ -261,10 +262,10 @@ LABEL_24:
                                              0LL);
           if ( evaluationSprite )
           {
-            v41.fields.x = v28 + (float)(v29 + v29);
-            v41.fields.y = 0.0;
-            v41.fields.z = 0.0;
-            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)evaluationSprite, v41, 0LL);
+            v42.fields.x = v28 + (float)(v29 + v29);
+            v42.fields.y = 0.0;
+            v42.fields.z = 0.0;
+            UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)evaluationSprite, v42, 0LL);
             evaluationSprite = this->fields.evaluationAdd3Sprite;
             if ( evaluationSprite )
             {
@@ -281,7 +282,7 @@ LABEL_24:
           }
         }
 LABEL_67:
-        sub_1B86614(evaluationSprite, v19);
+        sub_1BDBAD4(evaluationSprite, v19);
       }
       UISprite__set_spriteName(evaluationSprite, 0LL, 0LL);
 LABEL_48:
@@ -291,34 +292,34 @@ LABEL_48:
         if ( !gaugeSpriteList )
           goto LABEL_67;
         if ( i >= gaugeSpriteList->max_length )
-          sub_1B8661C(evaluationSprite, v19);
+          sub_1BDBADC(evaluationSprite, v19, v35);
         evaluationSprite = gaugeSpriteList->m_Items[i];
         if ( i >= v22 )
         {
           if ( !evaluationSprite )
             goto LABEL_67;
-          v38 = 0LL;
+          v39 = 0LL;
         }
         else
         {
           if ( !evaluationSprite )
             goto LABEL_67;
           if ( i >= 4 )
-            v37 = (System_String_o *)v21;
-          else
-            v37 = (System_String_o *)v20;
-          if ( i )
-            v38 = v37;
-          else
             v38 = (System_String_o *)v21;
+          else
+            v38 = (System_String_o *)v20;
+          if ( i )
+            v39 = v38;
+          else
+            v39 = (System_String_o *)v21;
         }
-        UISprite__set_spriteName(evaluationSprite, v38, 0LL);
+        UISprite__set_spriteName(evaluationSprite, v39, 0LL);
       }
       return;
     default:
       v22 = 0LL;
       if ( rank == 98 )
-        v23 = (System_String_o *)StringLiteral_20187/*"img_parameter_question"*/;
+        v23 = (System_String_o *)StringLiteral_20491/*"img_parameter_question"*/;
       else
         v23 = 0LL;
 LABEL_10:
@@ -336,14 +337,14 @@ LABEL_10:
         case 20:
         case 30:
         case 40:
-          v32 = &StringLiteral_20186/*"img_parameter_plus"*/;
+          v32 = &StringLiteral_20490/*"img_parameter_plus"*/;
           goto LABEL_14;
         case 1:
         case 11:
         case 21:
         case 31:
         case 41:
-          v33 = &StringLiteral_20186/*"img_parameter_plus"*/;
+          v33 = &StringLiteral_20490/*"img_parameter_plus"*/;
           v27 = 0;
           v30 = 0;
           goto LABEL_18;
@@ -352,7 +353,7 @@ LABEL_10:
         case 22:
         case 32:
         case 42:
-          v32 = &StringLiteral_20184/*"img_parameter_minus"*/;
+          v32 = &StringLiteral_20488/*"img_parameter_minus"*/;
 LABEL_14:
           v27 = 0;
           v26 = (System_String_o *)*v32;
@@ -365,7 +366,7 @@ LABEL_14:
           v27 = 0;
           v30 = 0;
           v31 = 0;
-          v26 = (System_String_o *)StringLiteral_20186/*"img_parameter_plus"*/;
+          v26 = (System_String_o *)StringLiteral_20490/*"img_parameter_plus"*/;
           v28 = -2.0;
           v29 = 10.0;
           goto LABEL_20;
@@ -374,7 +375,7 @@ LABEL_14:
         case 24:
         case 34:
         case 44:
-          v33 = &StringLiteral_20187/*"img_parameter_question"*/;
+          v33 = &StringLiteral_20491/*"img_parameter_question"*/;
           v27 = 0;
           v30 = 1;
           v28 = 5.0;
@@ -426,16 +427,16 @@ void __fastcall ServantStatusParameterGauge__SetParameterTitleSprite(
   UISprite_o *v13; // x0
   __int64 *v14; // x8
 
-  if ( (byte_4A4C463 & 1) == 0 )
+  if ( (byte_4B42686 & 1) == 0 )
   {
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&kind);
-    sub_1B863B8(&StringLiteral_20183/*"img_parameter_magic"*/, v5);
-    sub_1B863B8(&StringLiteral_20185/*"img_parameter_np"*/, v6);
-    sub_1B863B8(&StringLiteral_20189/*"img_parameter_strength"*/, v7);
-    sub_1B863B8(&StringLiteral_20182/*"img_parameter_luck"*/, v8);
-    sub_1B863B8(&StringLiteral_20181/*"img_parameter_endurance"*/, v9);
-    sub_1B863B8(&StringLiteral_20188/*"img_parameter_speed"*/, v10);
-    byte_4A4C463 = 1;
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, *(_QWORD *)&kind);
+    sub_1BDB878(&StringLiteral_20487/*"img_parameter_magic"*/, v5);
+    sub_1BDB878(&StringLiteral_20489/*"img_parameter_np"*/, v6);
+    sub_1BDB878(&StringLiteral_20493/*"img_parameter_strength"*/, v7);
+    sub_1BDB878(&StringLiteral_20486/*"img_parameter_luck"*/, v8);
+    sub_1BDB878(&StringLiteral_20485/*"img_parameter_endurance"*/, v9);
+    sub_1BDB878(&StringLiteral_20492/*"img_parameter_speed"*/, v10);
+    byte_4B42686 = 1;
   }
   parameterTitleSprite = (UnityEngine_Object_o *)this->fields.parameterTitleSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -448,38 +449,38 @@ void __fastcall ServantStatusParameterGauge__SetParameterTitleSprite(
         v13 = this->fields.parameterTitleSprite;
         if ( !v13 )
           goto LABEL_20;
-        v14 = &StringLiteral_20189/*"img_parameter_strength"*/;
+        v14 = &StringLiteral_20493/*"img_parameter_strength"*/;
         goto LABEL_19;
       case 1:
         v13 = this->fields.parameterTitleSprite;
         if ( !v13 )
           goto LABEL_20;
-        v14 = &StringLiteral_20181/*"img_parameter_endurance"*/;
+        v14 = &StringLiteral_20485/*"img_parameter_endurance"*/;
         goto LABEL_19;
       case 2:
         v13 = this->fields.parameterTitleSprite;
         if ( !v13 )
           goto LABEL_20;
-        v14 = &StringLiteral_20188/*"img_parameter_speed"*/;
+        v14 = &StringLiteral_20492/*"img_parameter_speed"*/;
         goto LABEL_19;
       case 3:
         v13 = this->fields.parameterTitleSprite;
         if ( !v13 )
           goto LABEL_20;
-        v14 = &StringLiteral_20183/*"img_parameter_magic"*/;
+        v14 = &StringLiteral_20487/*"img_parameter_magic"*/;
         goto LABEL_19;
       case 4:
         v13 = this->fields.parameterTitleSprite;
         if ( !v13 )
           goto LABEL_20;
-        v14 = &StringLiteral_20182/*"img_parameter_luck"*/;
+        v14 = &StringLiteral_20486/*"img_parameter_luck"*/;
         goto LABEL_19;
       case 5:
         v13 = this->fields.parameterTitleSprite;
         if ( !v13 )
 LABEL_20:
-          sub_1B86614(v13, v12);
-        v14 = &StringLiteral_20185/*"img_parameter_np"*/;
+          sub_1BDBAD4(v13, v12);
+        v14 = &StringLiteral_20489/*"img_parameter_np"*/;
 LABEL_19:
         UISprite__set_spriteName(v13, (System_String_o *)*v14, 0LL);
         break;

@@ -47,39 +47,39 @@ void __fastcall LoginBonusWithTransitionDialog__Open(
   System_Collections_Generic_Dictionary_string__object__o *v36; // x0
   System_Action_o *v37; // x20
 
-  if ( (byte_4A50F60 & 1) == 0 )
+  if ( (byte_4B474AF & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, bonusData);
-    sub_1B863B8(&CommonConfirmDialog_ClickDelegate_TypeInfo, v14);
-    sub_1B863B8(&Method_CommonConfirmDialog_EndOpen__, v15);
-    sub_1B863B8(&LocalizationManager_TypeInfo, v16);
-    sub_1B863B8(&Method_LoginBonusWithTransitionDialog___c__DisplayClass1_0__Open_b__0__, v17);
-    sub_1B863B8(&LoginBonusWithTransitionDialog___c__DisplayClass1_0_TypeInfo, v18);
-    sub_1B863B8(&StringLiteral_3676/*"COMMON_CONFIRM_CLOSE"*/, v19);
-    sub_1B863B8(&StringLiteral_18367/*"detail"*/, v20);
-    sub_1B863B8(&StringLiteral_21826/*"name"*/, v21);
-    byte_4A50F60 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, bonusData);
+    sub_1BDB878(&CommonConfirmDialog_ClickDelegate_TypeInfo, v14);
+    sub_1BDB878(&Method_CommonConfirmDialog_EndOpen__, v15);
+    sub_1BDB878(&LocalizationManager_TypeInfo, v16);
+    sub_1BDB878(&Method_LoginBonusWithTransitionDialog___c__DisplayClass1_0__Open_b__0__, v17);
+    sub_1BDB878(&LoginBonusWithTransitionDialog___c__DisplayClass1_0_TypeInfo, v18);
+    sub_1BDB878(&StringLiteral_3717/*"COMMON_CONFIRM_CLOSE"*/, v19);
+    sub_1BDB878(&StringLiteral_18605/*"detail"*/, v20);
+    sub_1BDB878(&StringLiteral_22166/*"name"*/, v21);
+    byte_4B474AF = 1;
   }
-  v22 = sub_1B86604(LoginBonusWithTransitionDialog___c__DisplayClass1_0_TypeInfo);
+  v22 = sub_1BDBAC4(LoginBonusWithTransitionDialog___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v22, 0LL);
   if ( !v22 )
     goto LABEL_15;
   *(_QWORD *)(v22 + 16) = onDecideCallback;
-  sub_1B8635C((CGThumbnailListItem_o *)(v22 + 16), (int32_t)onDecideCallback, v25, v26);
+  sub_1BDB81C((CGThumbnailListItem_o *)(v22 + 16), (int32_t)onDecideCallback, v25, v26);
   *(_QWORD *)(v22 + 24) = onCancelCallback;
-  sub_1B8635C((CGThumbnailListItem_o *)(v22 + 24), (int32_t)onCancelCallback, v27, v28);
-  v29 = (CommonConfirmDialog_ClickDelegate_o *)sub_1B86604(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  sub_1BDB81C((CGThumbnailListItem_o *)(v22 + 24), (int32_t)onCancelCallback, v27, v28);
+  v29 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BDBAC4(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v29,
     (Il2CppObject *)v22,
     Method_LoginBonusWithTransitionDialog___c__DisplayClass1_0__Open_b__0__,
     0LL);
   this->fields.clickFunc = v29;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.clickFunc, (int32_t)v29, v30, v31);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.clickFunc, (int32_t)v29, v30, v31);
   buttonCancelLabel = this->fields.buttonCancelLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  buttonDecideLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  buttonDecideLabel = LocalizationManager__Get((System_String_o *)StringLiteral_3717/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
   if ( !buttonCancelLabel )
     goto LABEL_15;
   UILabel__set_text(buttonCancelLabel, buttonDecideLabel, 0LL);
@@ -93,7 +93,7 @@ void __fastcall LoginBonusWithTransitionDialog__Open(
   TransitionDialog = CommonUI_CampaignDirectBonusData__GetTransitionDialog(bonusData, 0LL);
   buttonDecideLabel = EntityScriptUtil__GetStringValue(
                         TransitionDialog,
-                        (System_String_o *)StringLiteral_21826/*"name"*/,
+                        (System_String_o *)StringLiteral_22166/*"name"*/,
                         0LL,
                         0LL);
   if ( !titleLabel )
@@ -101,7 +101,7 @@ void __fastcall LoginBonusWithTransitionDialog__Open(
   UILabel__set_text(titleLabel, buttonDecideLabel, 0LL);
   messageLabel = this->fields.messageLabel;
   v36 = CommonUI_CampaignDirectBonusData__GetTransitionDialog(bonusData, 0LL);
-  buttonDecideLabel = EntityScriptUtil__GetStringValue(v36, (System_String_o *)StringLiteral_18367/*"detail"*/, 0LL, 0LL);
+  buttonDecideLabel = EntityScriptUtil__GetStringValue(v36, (System_String_o *)StringLiteral_18605/*"detail"*/, 0LL, 0LL);
   if ( !messageLabel
     || (UILabel__set_text(messageLabel, buttonDecideLabel, 0LL), !giftMst)
     || (buttonDecideLabel = (System_String_o *)GiftMaster__getDataById(giftMst, bonusData->fields.giftId, 0LL)) == 0LL
@@ -109,17 +109,17 @@ void __fastcall LoginBonusWithTransitionDialog__Open(
         (buttonDecideLabel = (System_String_o *)this->fields.bonusItemIcon) == 0LL) )
   {
 LABEL_15:
-    sub_1B86614(buttonDecideLabel, v24);
+    sub_1BDBAD4(buttonDecideLabel, v24);
   }
   ItemIconComponent__SetGift((ItemIconComponent_o *)buttonDecideLabel, v24, v24->fields.num, 0, 0LL);
-  v37 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo);
+  v37 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
   System_Action___ctor(v37, (Il2CppObject *)this, Method_CommonConfirmDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v37, 0, 0LL);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall LoginBonusWithTransitionDialog__Open_44231024(
+void __fastcall LoginBonusWithTransitionDialog__Open_45015604(
         LoginBonusWithTransitionDialog_o *this,
         CommonUI_CampaignDirectBonusData_o *bonusData,
         GiftMaster_o *giftMst,
@@ -165,7 +165,7 @@ void __fastcall LoginBonusWithTransitionDialog__Open_44231024(
         !v11) )
   {
 LABEL_10:
-    sub_1B86614(buttonDecide, bonusData);
+    sub_1BDBAD4(buttonDecide, bonusData);
   }
   v15 = 0;
   v16 = v13;
@@ -199,22 +199,22 @@ void __fastcall LoginBonusWithTransitionDialog___c__DisplayClass1_0___Open_b__0(
   Il2CppObject *Instance; // x19
   System_Action_o *v14; // x20
 
-  if ( (byte_4A50F61 & 1) == 0 )
+  if ( (byte_4B474B0 & 1) == 0 )
   {
-    sub_1B863B8(&System_Action_TypeInfo, isDecide);
-    sub_1B863B8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1B863B8(&Method_LoginBonusWithTransitionDialog___c__DisplayClass1_1__Open_b__1__, v6);
-    sub_1B863B8(&LoginBonusWithTransitionDialog___c__DisplayClass1_1_TypeInfo, v7);
-    byte_4A50F61 = 1;
+    sub_1BDB878(&System_Action_TypeInfo, isDecide);
+    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1BDB878(&Method_LoginBonusWithTransitionDialog___c__DisplayClass1_1__Open_b__1__, v6);
+    sub_1BDB878(&LoginBonusWithTransitionDialog___c__DisplayClass1_1_TypeInfo, v7);
+    byte_4B474B0 = 1;
   }
-  v8 = sub_1B86604(LoginBonusWithTransitionDialog___c__DisplayClass1_1_TypeInfo);
+  v8 = sub_1BDBAC4(LoginBonusWithTransitionDialog___c__DisplayClass1_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8
     || (*(_QWORD *)(v8 + 24) = this,
-        sub_1B8635C((CGThumbnailListItem_o *)(v8 + 24), (int32_t)this, v11, v12),
+        sub_1BDB81C((CGThumbnailListItem_o *)(v8 + 24), (int32_t)this, v11, v12),
         *(_BYTE *)(v8 + 16) = isDecide,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3839680 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v14 = (System_Action_o *)sub_1B86604(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v14 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo),
         System_Action___ctor(
           v14,
           (Il2CppObject *)v8,
@@ -222,7 +222,7 @@ void __fastcall LoginBonusWithTransitionDialog___c__DisplayClass1_0___Open_b__0(
           0LL),
         !Instance) )
   {
-    sub_1B86614(v9, v10);
+    sub_1BDBAD4(v9, v10);
   }
   CommonUI__CloseLoginBonusWithTransitionDialog((CommonUI_o *)Instance, v14, 0LL);
 }
@@ -245,7 +245,7 @@ void __fastcall LoginBonusWithTransitionDialog___c__DisplayClass1_1___Open_b__1(
 
   CS___8__locals1 = this->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
-    sub_1B86614(this, method);
+    sub_1BDBAD4(this, method);
   v3 = 24LL;
   if ( this->fields.isDecide )
     v3 = 16LL;

@@ -8,24 +8,24 @@ void __fastcall BattleServantDeadComponent___ctor(BattleServantDeadComponent_o *
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4A518BF & 1) == 0 )
+  if ( (byte_4B47F29 & 1) == 0 )
   {
-    sub_1B863B8(&Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader___ctor__, method);
-    sub_1B863B8(&System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__TypeInfo, v3);
-    byte_4A518BF = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader___ctor__, method);
+    sub_1BDB878(&System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__TypeInfo, v3);
+    byte_4B47F29 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader___ctor__);
+    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader___ctor__);
   this->fields.replaceShaders = (struct System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__o *)v4;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.replaceShaders, (int32_t)v4, v5, v6);
-  v7 = (System_Collections_Generic_List_object__o *)sub_1B86604(System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__TypeInfo);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.replaceShaders, (int32_t)v4, v5, v6);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_35FC124 *)Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader___ctor__);
+    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader___ctor__);
   this->fields.replaceChocoShaders = (struct System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__o *)v7;
-  sub_1B8635C((CGThumbnailListItem_o *)&this->fields.replaceChocoShaders, (int32_t)v7, v8, v9);
+  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.replaceChocoShaders, (int32_t)v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -59,35 +59,35 @@ UnityEngine_Shader_o *__fastcall BattleServantDeadComponent__getReplaceChocoShad
   System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+20h] [xbp-60h] BYREF
 
   v5 = (UnityEngine_Object_o *)shader;
-  if ( (byte_4A518BE & 1) == 0 )
+  if ( (byte_4B47F28 & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__Dispose__,
       shader);
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__MoveNext__,
       v7);
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__get_Current__,
       v8);
-    sub_1B863B8(&Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__GetEnumerator__, v9);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v10);
-    byte_4A518BE = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__GetEnumerator__, v9);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v10);
+    byte_4B47F28 = 1;
   }
   memset(&v27, 0, sizeof(v27));
   replaceChocoShaders = (System_Collections_Generic_List_object__o *)this->fields.replaceChocoShaders;
   if ( !replaceChocoShaders )
-    sub_1B86614(0LL, shader);
+    sub_1BDBAD4(0LL, shader);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v26,
     replaceChocoShaders,
-    (const MethodInfo_35FD450 *)Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__GetEnumerator__);
+    (const MethodInfo_36D68BC *)Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__GetEnumerator__);
   v27 = v26;
   while ( 1 )
   {
     if ( !System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v27,
-            (const MethodInfo_3398634 *)Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__MoveNext__) )
+            (const MethodInfo_346A2A4 *)Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__MoveNext__) )
     {
       v5 = (UnityEngine_Object_o *)defaultChocoShader;
       goto LABEL_20;
@@ -107,10 +107,10 @@ UnityEngine_Shader_o *__fastcall BattleServantDeadComponent__getReplaceChocoShad
         {
           v16 = (UnityEngine_Object_o *)current[1].klass;
           if ( !v16 )
-            sub_1B86614(0LL, v15);
+            sub_1BDBAD4(0LL, v15);
           name = UnityEngine_Object__get_name(v16, 0LL);
           if ( !v5 )
-            sub_1B86614(name, v18);
+            sub_1BDBAD4(name, v18);
           v19 = name;
           v20 = UnityEngine_Object__get_name(v5, 0LL);
           if ( System_String__op_Equality(v19, v20, 0LL) )
@@ -121,7 +121,7 @@ UnityEngine_Shader_o *__fastcall BattleServantDeadComponent__getReplaceChocoShad
   }
   v22 = (UnityEngine_Object_o *)current[1].monitor;
   if ( !v22 )
-    sub_1B86614(0LL, v21);
+    sub_1BDBAD4(0LL, v21);
   v23 = UnityEngine_Object__get_name(v22, 0LL);
   v24 = UnityEngine_Object__get_name(v5, 0LL);
   if ( !System_String__op_Equality(v23, v24, 0LL) )
@@ -129,7 +129,7 @@ UnityEngine_Shader_o *__fastcall BattleServantDeadComponent__getReplaceChocoShad
 LABEL_20:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v27,
-    (const MethodInfo_3398630 *)Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__Dispose__);
+    (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__Dispose__);
   return (UnityEngine_Shader_o *)v5;
 }
 
@@ -163,35 +163,35 @@ UnityEngine_Shader_o *__fastcall BattleServantDeadComponent__getReplaceDeadShade
   System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+20h] [xbp-60h] BYREF
 
   v5 = (UnityEngine_Object_o *)shader;
-  if ( (byte_4A518BD & 1) == 0 )
+  if ( (byte_4B47F27 & 1) == 0 )
   {
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__Dispose__,
       shader);
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__MoveNext__,
       v7);
-    sub_1B863B8(
+    sub_1BDB878(
       &Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__get_Current__,
       v8);
-    sub_1B863B8(&Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__GetEnumerator__, v9);
-    sub_1B863B8(&UnityEngine_Object_TypeInfo, v10);
-    byte_4A518BD = 1;
+    sub_1BDB878(&Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__GetEnumerator__, v9);
+    sub_1BDB878(&UnityEngine_Object_TypeInfo, v10);
+    byte_4B47F27 = 1;
   }
   memset(&v27, 0, sizeof(v27));
   replaceShaders = (System_Collections_Generic_List_object__o *)this->fields.replaceShaders;
   if ( !replaceShaders )
-    sub_1B86614(0LL, shader);
+    sub_1BDBAD4(0LL, shader);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v26,
     replaceShaders,
-    (const MethodInfo_35FD450 *)Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__GetEnumerator__);
+    (const MethodInfo_36D68BC *)Method_System_Collections_Generic_List_BattleServantDeadComponent_ReplaceShader__GetEnumerator__);
   v27 = v26;
   while ( 1 )
   {
     if ( !System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v27,
-            (const MethodInfo_3398634 *)Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__MoveNext__) )
+            (const MethodInfo_346A2A4 *)Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__MoveNext__) )
     {
       v5 = (UnityEngine_Object_o *)defaultDeadShader;
       goto LABEL_20;
@@ -211,10 +211,10 @@ UnityEngine_Shader_o *__fastcall BattleServantDeadComponent__getReplaceDeadShade
         {
           v16 = (UnityEngine_Object_o *)current[1].klass;
           if ( !v16 )
-            sub_1B86614(0LL, v15);
+            sub_1BDBAD4(0LL, v15);
           name = UnityEngine_Object__get_name(v16, 0LL);
           if ( !v5 )
-            sub_1B86614(name, v18);
+            sub_1BDBAD4(name, v18);
           v19 = name;
           v20 = UnityEngine_Object__get_name(v5, 0LL);
           if ( System_String__op_Equality(v19, v20, 0LL) )
@@ -225,7 +225,7 @@ UnityEngine_Shader_o *__fastcall BattleServantDeadComponent__getReplaceDeadShade
   }
   v22 = (UnityEngine_Object_o *)current[1].monitor;
   if ( !v22 )
-    sub_1B86614(0LL, v21);
+    sub_1BDBAD4(0LL, v21);
   v23 = UnityEngine_Object__get_name(v22, 0LL);
   v24 = UnityEngine_Object__get_name(v5, 0LL);
   if ( !System_String__op_Equality(v23, v24, 0LL) )
@@ -233,7 +233,7 @@ UnityEngine_Shader_o *__fastcall BattleServantDeadComponent__getReplaceDeadShade
 LABEL_20:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v27,
-    (const MethodInfo_3398630 *)Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__Dispose__);
+    (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_BattleServantDeadComponent_ReplaceShader__Dispose__);
   return (UnityEngine_Shader_o *)v5;
 }
 

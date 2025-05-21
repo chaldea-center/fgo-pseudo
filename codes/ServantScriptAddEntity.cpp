@@ -1,17 +1,17 @@
 void __fastcall ServantScriptAddEntity___ctor(ServantScriptAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4A4EE30 & 1) == 0 )
+  if ( (byte_4B4542E & 1) == 0 )
   {
-    sub_1B863B8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4A4EE30 = 1;
+    sub_1BDB878(&Method_DataEntityBase_long___ctor__, method);
+    byte_4B4542E = 1;
   }
-  DataEntityBase_int____ctor(
-    (DataEntityBase_int__o *)this,
-    (const MethodInfo_3211D9C *)Method_DataEntityBase_int___ctor__);
+  DataEntityBase_long____ctor(
+    (DataEntityBase_long__o *)this,
+    (const MethodInfo_32DF9A0 *)Method_DataEntityBase_long___ctor__);
 }
 
 
-int32_t __fastcall ServantScriptAddEntity__CreatePrimaryKey(ServantScriptAddEntity_o *this, const MethodInfo *method)
+int64_t __fastcall ServantScriptAddEntity__CreatePrimaryKey(ServantScriptAddEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
@@ -22,21 +22,33 @@ UnityEngine_Vector2_o __fastcall ServantScriptAddEntity__getOffset(
         int32_t offsetKind,
         const MethodInfo *method)
 {
-  __int64 v3; // x8
-  __int64 v4; // x9
+  int32_t *p_offsetXEventShop; // x8
+  int32_t *p_offsetYEventShop; // x9
   float v5; // s0
   float v6; // s1
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  v3 = 28LL;
-  if ( offsetKind == 4 )
-    v3 = 36LL;
-  if ( offsetKind == 4 )
-    v4 = 32LL;
-  else
-    v4 = 24LL;
-  v5 = (float)*(int *)((char *)&this->klass + v4);
-  v6 = (float)*(int *)((char *)&this->klass + v3);
+  switch ( offsetKind )
+  {
+    case 4:
+      p_offsetXEventShop = &this->fields.offsetXEventShop;
+      p_offsetYEventShop = &this->fields.offsetYEventShop;
+      break;
+    case 9:
+      p_offsetXEventShop = &this->fields.offsetXGrandBoard;
+      p_offsetYEventShop = &this->fields.offsetYGrandBoard;
+      break;
+    case 8:
+      p_offsetXEventShop = &this->fields.offsetXGrandSelect;
+      p_offsetYEventShop = &this->fields.offsetYGrandSelect;
+      break;
+    default:
+      p_offsetXEventShop = &this->fields.offsetXEventReward;
+      p_offsetYEventShop = &this->fields.offsetYEventReward;
+      break;
+  }
+  v5 = (float)*p_offsetXEventShop;
+  v6 = (float)*p_offsetYEventShop;
   result.fields.y = v6;
   result.fields.x = v5;
   return result;
