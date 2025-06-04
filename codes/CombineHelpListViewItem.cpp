@@ -12,10 +12,10 @@ void __fastcall CombineHelpListViewItem___ctor(
 
   v6 = this;
   v7 = isUse;
-  ListViewItem___ctor_42734232((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42769384((ListViewItem_o *)this, index, 0LL);
   v6->fields.info = info;
   v6 = (CombineHelpListViewItem_o *)((char *)v6 + 112);
-  sub_1BDB81C((CGThumbnailListItem_o *)v6, (int32_t)info, v8, v9);
+  sub_1BC2FAC((CGThumbnailListItem_o *)v6, (int32_t)info, v8, v9);
   LOBYTE(v6->monitor) = v7;
 }
 
@@ -28,7 +28,7 @@ System_String_o *__fastcall CombineHelpListViewItem__get_ImageName(
 
   info = this->fields.info;
   if ( !info )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   return info->fields.imageName;
 }
 
@@ -50,14 +50,14 @@ System_String_o *__fastcall CombineHelpListViewItem__get_InfoText(
   System_String_o *textCode; // x19
 
   v2 = this;
-  if ( (byte_4B487FE & 1) == 0 )
+  if ( (byte_4B05DD5 & 1) == 0 )
   {
-    this = (CombineHelpListViewItem_o *)sub_1BDB878(&LocalizationManager_TypeInfo, method);
-    byte_4B487FE = 1;
+    this = (CombineHelpListViewItem_o *)sub_1BC3008(&LocalizationManager_TypeInfo, method);
+    byte_4B05DD5 = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   textCode = info->fields.textCode;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -77,7 +77,7 @@ int32_t __fastcall CombineHelpListViewItem__get_Kind(CombineHelpListViewItem_o *
 
   info = this->fields.info;
   if ( !info )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   return info->fields.kind;
 }
 
@@ -88,6 +88,6 @@ int32_t __fastcall CombineHelpListViewItem__get_LineCnt(CombineHelpListViewItem_
 
   info = this->fields.info;
   if ( !info )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   return info->fields.line;
 }

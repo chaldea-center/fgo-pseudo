@@ -7,12 +7,12 @@ int32_t __fastcall PurchaseByBankResponseCommand__ExecuteResponse(
   __int64 v5; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *success; // x19
 
-  if ( (byte_4B46574 & 1) == 0 )
+  if ( (byte_4B03B23 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, data);
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
-    this = (PurchaseByBankResponseCommand_o *)sub_1BDB878(&StringLiteral_23098/*"result"*/, v5);
-    byte_4B46574 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, data);
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
+    this = (PurchaseByBankResponseCommand_o *)sub_1BC3008(&StringLiteral_22850/*"result"*/, v5);
+    byte_4B03B23 = 1;
   }
   if ( !data )
     goto LABEL_9;
@@ -20,13 +20,13 @@ int32_t __fastcall PurchaseByBankResponseCommand__ExecuteResponse(
   if ( success
     && System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)success,
-         (Il2CppObject *)StringLiteral_23098/*"result"*/,
-         (const MethodInfo_33A0424 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_22850/*"result"*/,
+         (const MethodInfo_336D1DC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     this = (PurchaseByBankResponseCommand_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                 (System_Collections_Generic_Dictionary_object__object__o *)success,
-                                                (Il2CppObject *)StringLiteral_23098/*"result"*/,
-                                                (const MethodInfo_33A01B0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                (Il2CppObject *)StringLiteral_22850/*"result"*/,
+                                                (const MethodInfo_336CF68 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( this )
     {
       ((void (__fastcall *)(PurchaseByBankResponseCommand_o *, Il2CppMethodPointer))this->klass->vtable._3_ToString.method)(
@@ -35,7 +35,7 @@ int32_t __fastcall PurchaseByBankResponseCommand__ExecuteResponse(
       return 0;
     }
 LABEL_9:
-    sub_1BDBAD4(this, data);
+    sub_1BC3264(this, data);
   }
   return 0;
 }

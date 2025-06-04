@@ -18,10 +18,10 @@ void __fastcall WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
   __int64 v10; // x21
   il2cpp_array_size_t v11; // w22
 
-  if ( (byte_4B4231C & 1) == 0 )
+  if ( (byte_4AFF8A4 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, *(_QWORD *)&value);
-    byte_4B4231C = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, *(_QWORD *)&value);
+    byte_4AFF8A4 = 1;
   }
   if ( !this->fields.isInit )
     WarBoardObjectAnimationEvent__Init(this, *(const MethodInfo **)&value);
@@ -48,7 +48,7 @@ void __fastcall WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
         do
         {
           if ( v11 >= children->max_length )
-            sub_1BDBADC(v6, v7, v8);
+            sub_1BC326C(v6, v7, v8);
           v6 = children->m_Items[v11];
           if ( !v6 )
             break;
@@ -59,7 +59,7 @@ void __fastcall WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
         }
         while ( children );
 LABEL_18:
-        sub_1BDBAD4(v6, v7);
+        sub_1BC3264(v6, v7);
       }
     }
   }
@@ -74,14 +74,14 @@ void __fastcall WarBoardObjectAnimationEvent__ForceEndInProgressTask(
   __int64 v3; // x1
   Il2CppClass *klass; // x8
 
-  if ( (byte_4B4231E & 1) == 0 )
+  if ( (byte_4AFF8A6 & 1) == 0 )
   {
-    sub_1BDB878(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    byte_4B4231E = 1;
+    sub_1BC3008(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    byte_4AFF8A6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1BDBAD4(0LL, v3);
+    sub_1BC3264(0LL, v3);
   klass = Instance[63].klass;
   if ( klass )
     BYTE1(klass->_1.namespaze) = 1;
@@ -106,14 +106,14 @@ void __fastcall WarBoardObjectAnimationEvent__ForceEndWallBreakAnimTask(
   __int64 v3; // x1
   _BYTE *monitor; // x8
 
-  if ( (byte_4B4231F & 1) == 0 )
+  if ( (byte_4AFF8A7 & 1) == 0 )
   {
-    sub_1BDB878(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    byte_4B4231F = 1;
+    sub_1BC3008(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
+    byte_4AFF8A7 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1BDBAD4(0LL, v3);
+    sub_1BC3264(0LL, v3);
   monitor = Instance[63].monitor;
   if ( monitor )
     monitor[25] = 1;
@@ -132,12 +132,12 @@ void __fastcall WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4B4231A & 1) == 0 )
+  if ( (byte_4AFF8A2 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
-    sub_1BDB878(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____77096392, v3);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v4);
-    byte_4B4231A = 1;
+    sub_1BC3008(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
+    sub_1BC3008(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____76831896, v3);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v4);
+    byte_4AFF8A2 = 1;
   }
   if ( !this->fields.isInit )
   {
@@ -146,9 +146,9 @@ void __fastcall WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_
       ComponentsInChildren_object = UnityEngine_Component__GetComponentsInChildren_object_(
                                       (UnityEngine_Component_o *)this,
                                       1,
-                                      (const MethodInfo_302AE50 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____77096392);
+                                      (const MethodInfo_2FF9358 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____76831896);
       this->fields.children = (struct UIWidget_array *)ComponentsInChildren_object;
-      sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.children, (int32_t)ComponentsInChildren_object, v6, v7);
+      sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.children, (int32_t)ComponentsInChildren_object, v6, v7);
     }
     myWidget = (UnityEngine_Object_o *)this->fields.myWidget;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -157,9 +157,9 @@ void __fastcall WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_
     {
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)this,
-                           (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                           (const MethodInfo_2FF8634 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
       this->fields.myWidget = (struct UIWidget_o *)Component_object;
-      sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.myWidget, (int32_t)Component_object, v10, v11);
+      sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.myWidget, (int32_t)Component_object, v10, v11);
     }
     this->fields.isInit = 1;
   }
@@ -183,21 +183,21 @@ void __fastcall WarBoardObjectAnimationEvent__SetDispBgDiff(
   const MethodInfo *v13; // x3
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4B4231D & 1) == 0 )
+  if ( (byte_4AFF8A5 & 1) == 0 )
   {
-    sub_1BDB878(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, value);
-    this = (WarBoardObjectAnimationEvent_o *)sub_1BDB878(&StringLiteral_14551/*"True"*/, v4);
-    byte_4B4231D = 1;
+    sub_1BC3008(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, value);
+    this = (WarBoardObjectAnimationEvent_o *)sub_1BC3008(&StringLiteral_14450/*"True"*/, v4);
+    byte_4AFF8A5 = 1;
   }
   result = 0;
   if ( !value || (this = (WarBoardObjectAnimationEvent_o *)System_String__Split(value, 0x2Cu, 0, 0LL)) == 0LL )
 LABEL_16:
-    sub_1BDBAD4(this, value);
+    sub_1BC3264(this, value);
   m_CancellationTokenSource = this->fields.m_CancellationTokenSource;
   v6 = this;
   if ( (int)m_CancellationTokenSource >= 2 )
   {
-    this = (WarBoardObjectAnimationEvent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    this = (WarBoardObjectAnimationEvent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     v8 = this;
     v9 = 0LL;
     v10 = 2LL * ((unsigned int)m_CancellationTokenSource >> 1);
@@ -207,11 +207,11 @@ LABEL_16:
         || (v11 = (System_String_o **)(&v6->klass + v9),
             this = (WarBoardObjectAnimationEvent_o *)System_String__op_Equality(
                                                        v11[5],
-                                                       (System_String_o *)StringLiteral_14551/*"True"*/,
+                                                       (System_String_o *)StringLiteral_14450/*"True"*/,
                                                        0LL),
             v9 >= LODWORD(v6->fields.m_CancellationTokenSource)) )
       {
-        sub_1BDBADC(this, value, v7);
+        sub_1BC326C(this, value, v7);
       }
       v12 = (char)this;
       this = (WarBoardObjectAnimationEvent_o *)System_Int32__TryParse(v11[4], &result, 0LL);
@@ -258,10 +258,10 @@ void __fastcall WarBoardObjectAnimationEvent__SetWidgetDepth(
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
   v4 = this;
-  if ( (byte_4B4231B & 1) == 0 )
+  if ( (byte_4AFF8A3 & 1) == 0 )
   {
-    this = (WarBoardObjectAnimationEvent_o *)sub_1BDB878(&UnityEngine_Object_TypeInfo, nameAndDepth);
-    byte_4B4231B = 1;
+    this = (WarBoardObjectAnimationEvent_o *)sub_1BC3008(&UnityEngine_Object_TypeInfo, nameAndDepth);
+    byte_4AFF8A3 = 1;
   }
   result = 0;
   if ( !v4->fields.isInit )
@@ -270,7 +270,7 @@ void __fastcall WarBoardObjectAnimationEvent__SetWidgetDepth(
     || (this = (WarBoardObjectAnimationEvent_o *)System_String__Split(nameAndDepth, 0x2Cu, 0, 0LL)) == 0LL )
   {
 LABEL_37:
-    sub_1BDBAD4(this, nameAndDepth);
+    sub_1BC3264(this, nameAndDepth);
   }
   m_CancellationTokenSource = this->fields.m_CancellationTokenSource;
   v7 = this;
@@ -364,6 +364,6 @@ LABEL_33:
       }
     }
 LABEL_35:
-    sub_1BDBADC(this, nameAndDepth, v5);
+    sub_1BC326C(this, nameAndDepth, v5);
   }
 }

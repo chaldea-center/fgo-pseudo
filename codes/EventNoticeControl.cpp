@@ -5,18 +5,18 @@ void __fastcall EventNoticeControl___ctor(EventNoticeControl_o *this, const Meth
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4B487A9 & 1) == 0 )
+  if ( (byte_4B05D80 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo___ctor__, method);
-    sub_1BDB878(&System_Collections_Generic_List_EventNoticeControl_EventInfo__TypeInfo, v3);
-    byte_4B487A9 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo___ctor__, method);
+    sub_1BC3008(&System_Collections_Generic_List_EventNoticeControl_EventInfo__TypeInfo, v3);
+    byte_4B05D80 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_EventNoticeControl_EventInfo__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_EventNoticeControl_EventInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo___ctor__);
+    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo___ctor__);
   this->fields.eventInfoList = (struct System_Collections_Generic_List_EventNoticeControl_EventInfo__o *)v4;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.eventInfoList, (int32_t)v4, v5, v6);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.eventInfoList, (int32_t)v4, v5, v6);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -29,17 +29,17 @@ void __fastcall EventNoticeControl__ChangeEventInfo(EventNoticeControl_o *this, 
   struct System_Collections_Generic_List_EventNoticeControl_EventInfo__o *eventInfoList; // x8
   int v7; // w1
 
-  if ( (byte_4B487A5 & 1) == 0 )
+  if ( (byte_4B05D7C & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__, method);
-    byte_4B487A5 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__, method);
+    byte_4B05D7C = 1;
   }
   IsMultiple = EventNoticeControl__get_IsMultiple(this, method);
   if ( IsMultiple )
   {
     eventInfoList = this->fields.eventInfoList;
     if ( !eventInfoList )
-      sub_1BDBAD4(IsMultiple, v4);
+      sub_1BC3264(IsMultiple, v4);
     v7 = (this->fields.eventInfoIndex + 1) % eventInfoList->fields._size;
     this->fields.eventInfoIndex = v7;
     EventNoticeControl__SetLabelAndSprite(this, v7, v5);
@@ -61,14 +61,14 @@ void __fastcall EventNoticeControl__CheckCombineCampaignData(EventNoticeControl_
   int32_t eventInfoIndex; // w1
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B487A8 & 1) == 0 )
+  if ( (byte_4B05D7F & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__Dispose__, method);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__MoveNext__, v3);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__get_Current__, v4);
-    sub_1BDB878(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__GetEnumerator__, v5);
-    sub_1BDB878(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__, v6);
-    byte_4B487A8 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__Dispose__, method);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__MoveNext__, v3);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__get_Current__, v4);
+    sub_1BC3008(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__GetEnumerator__, v5);
+    sub_1BC3008(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__, v6);
+    byte_4B05D7F = 1;
   }
   memset(&v13, 0, sizeof(v13));
   eventInfoList = (System_Collections_Generic_List_object__o *)this->fields.eventInfoList;
@@ -77,22 +77,22 @@ void __fastcall EventNoticeControl__CheckCombineCampaignData(EventNoticeControl_
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v13,
     eventInfoList,
-    (const MethodInfo_36D68BC *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__GetEnumerator__);
+    (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v13,
-            (const MethodInfo_346A2A4 *)Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__MoveNext__) )
+            (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__MoveNext__) )
   {
     if ( !v13.fields._current )
-      sub_1BDBAD4(0LL, v8);
+      sub_1BC3264(0LL, v8);
     EventNoticeControl_EventInfo__CheckCombineCampaignData((EventNoticeControl_EventInfo_o *)v13.fields._current, v8);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v13,
-    (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__Dispose__);
+    (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__Dispose__);
   v10 = this->fields.eventInfoList;
   if ( !v10 )
 LABEL_16:
-    sub_1BDBAD4(eventInfoList, method);
+    sub_1BC3264(eventInfoList, method);
   size = v10->fields._size;
   if ( size == 1 )
   {
@@ -121,19 +121,19 @@ bool __fastcall EventNoticeControl__GetIsNeedToInfoUpdate(
   int32_t v11; // w21
   EventNoticeControl_o *v12; // x8
 
-  if ( (byte_4B487A3 & 1) == 0 )
+  if ( (byte_4B05D7A & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__, eventInfolist);
-    this = (EventNoticeControl_o *)sub_1BDB878(
+    sub_1BC3008(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__, eventInfolist);
+    this = (EventNoticeControl_o *)sub_1BC3008(
                                      &Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__,
                                      v8);
-    byte_4B487A3 = 1;
+    byte_4B05D7A = 1;
   }
   if ( isNeedToUpdate )
     return 1;
   if ( !eventInfolist )
 LABEL_15:
-    sub_1BDBAD4(this, eventInfolist);
+    sub_1BC3264(this, eventInfolist);
   size = eventInfolist->fields._size;
   if ( size < 1 )
     return 0;
@@ -143,7 +143,7 @@ LABEL_15:
     this = (EventNoticeControl_o *)System_Collections_Generic_List_object___get_Item(
                                      (System_Collections_Generic_List_object__o *)eventInfolist,
                                      v11,
-                                     (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__);
+                                     (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__);
     if ( !this )
       goto LABEL_15;
     v12 = this;
@@ -170,10 +170,10 @@ void __fastcall EventNoticeControl__InitLabelAndSprite(EventNoticeControl_o *thi
   UILabel_o *eventDetailLabel; // x0
   UnityEngine_Color_o v4; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B487A2 & 1) == 0 )
+  if ( (byte_4B05D79 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_1/*""*/, method);
-    byte_4B487A2 = 1;
+    sub_1BC3008(&StringLiteral_1/*""*/, method);
+    byte_4B05D79 = 1;
   }
   eventDetailLabel = this->fields.eventDetailLabel;
   if ( !eventDetailLabel )
@@ -193,7 +193,7 @@ void __fastcall EventNoticeControl__InitLabelAndSprite(EventNoticeControl_o *thi
         (eventDetailLabel = this->fields.eventRemainLabel) == 0LL) )
   {
 LABEL_8:
-    sub_1BDBAD4(eventDetailLabel, method);
+    sub_1BC3264(eventDetailLabel, method);
   }
   UILabel__set_text(eventDetailLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
@@ -205,10 +205,10 @@ void __fastcall EventNoticeControl__Initialize(EventNoticeControl_o *this, const
   int32_t size; // w2
   int v5; // w9
 
-  if ( (byte_4B4879F & 1) == 0 )
+  if ( (byte_4B05D76 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__Clear__, method);
-    byte_4B4879F = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__Clear__, method);
+    byte_4B05D76 = 1;
   }
   eventInfoList = this->fields.eventInfoList;
   if ( eventInfoList )
@@ -247,7 +247,7 @@ void __fastcall EventNoticeControl__SetAlpha(EventNoticeControl_o *this, float a
             v3),
           (eventDetailLabel = this->fields.eventRemainLabel) == 0LL) )
     {
-      sub_1BDBAD4(eventDetailLabel, v5);
+      sub_1BC3264(eventDetailLabel, v5);
     }
     (*(void (__fastcall **)(void *, _QWORD, long double))(*(_QWORD *)eventDetailLabel + 440LL))(
       eventDetailLabel,
@@ -275,14 +275,14 @@ void __fastcall EventNoticeControl__SetCombineEventData(
   __int64 size; // x10
   Il2CppClass **v16; // x0
 
-  if ( (byte_4B487A0 & 1) == 0 )
+  if ( (byte_4B05D77 & 1) == 0 )
   {
-    sub_1BDB878(&EventNoticeControl_EventInfo_TypeInfo, data);
-    sub_1BDB878(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__Add__, v5);
-    byte_4B487A0 = 1;
+    sub_1BC3008(&EventNoticeControl_EventInfo_TypeInfo, data);
+    sub_1BC3008(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__Add__, v5);
+    byte_4B05D77 = 1;
   }
   eventInfoList = (System_Collections_Generic_List_object__o *)this->fields.eventInfoList;
-  v7 = (EventNoticeControl_EventInfo_o *)sub_1BDBAC4(EventNoticeControl_EventInfo_TypeInfo);
+  v7 = (EventNoticeControl_EventInfo_o *)sub_1BC3254(EventNoticeControl_EventInfo_TypeInfo);
   EventNoticeControl_EventInfo___ctor(v7, data, v8);
   if ( !eventInfoList
     || (items = eventInfoList->fields._items,
@@ -290,7 +290,7 @@ void __fastcall EventNoticeControl__SetCombineEventData(
         ++eventInfoList->fields._version,
         !items) )
   {
-    sub_1BDBAD4(v9, v10);
+    sub_1BC3264(v9, v10);
   }
   size = eventInfoList->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -298,14 +298,14 @@ void __fastcall EventNoticeControl__SetCombineEventData(
     System_Collections_Generic_List_object___AddWithResize(
       eventInfoList,
       (Il2CppObject *)v7,
-      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
   else
   {
     v16 = &items->obj.klass + size;
     eventInfoList->fields._size = size + 1;
     v16[4] = (Il2CppClass *)v7;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v7, v11, v12);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v7, v11, v12);
   }
   this->fields.isNeedToUpdate = 1;
 }
@@ -342,15 +342,15 @@ void __fastcall EventNoticeControl__SetLabelAndSprite(
   UnityEngine_Color_o v27; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v28; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B487A6 & 1) == 0 )
+  if ( (byte_4B05D7D & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, *(_QWORD *)&index);
-    sub_1BDB878(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__, v5);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v6);
-    sub_1BDB878(&NetworkManager_TypeInfo, v7);
-    sub_1BDB878(&StringLiteral_25175/*"{0}"*/, v8);
-    sub_1BDB878(&StringLiteral_13389/*"TIME_REST_EVENT_BOARD_CAMPAIGN"*/, v9);
-    byte_4B487A6 = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, *(_QWORD *)&index);
+    sub_1BC3008(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__, v5);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v6);
+    sub_1BC3008(&NetworkManager_TypeInfo, v7);
+    sub_1BC3008(&StringLiteral_24860/*"{0}"*/, v8);
+    sub_1BC3008(&StringLiteral_13290/*"TIME_REST_EVENT_BOARD_CAMPAIGN"*/, v9);
+    byte_4B05D7D = 1;
   }
   eventInfoList = this->fields.eventInfoList;
   if ( !eventInfoList )
@@ -358,7 +358,7 @@ void __fastcall EventNoticeControl__SetLabelAndSprite(
   eventInfoList = System_Collections_Generic_List_object___get_Item(
                     (System_Collections_Generic_List_object__o *)eventInfoList,
                     index,
-                    (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__);
+                    (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__);
   if ( !eventInfoList )
     goto LABEL_46;
   v11 = eventInfoList;
@@ -410,14 +410,14 @@ void __fastcall EventNoticeControl__SetLabelAndSprite(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    eventInfoList = LocalizationManager__Get((System_String_o *)StringLiteral_13389/*"TIME_REST_EVENT_BOARD_CAMPAIGN"*/, 0LL);
+    eventInfoList = LocalizationManager__Get((System_String_o *)StringLiteral_13290/*"TIME_REST_EVENT_BOARD_CAMPAIGN"*/, 0LL);
     eventDetailLabel = this->fields.eventDetailLabel;
     if ( eventDetailLabel )
     {
-      v16 = System_String__Format_62613552(
+      v16 = System_String__Format_62389940(
               (System_String_o *)eventInfoList,
               (Il2CppObject *)eventDetailLabel->fields.mText,
-              (Il2CppObject *)StringLiteral_25175/*"{0}"*/,
+              (Il2CppObject *)StringLiteral_24860/*"{0}"*/,
               0LL);
       v17 = this->fields.eventDetailLabel;
       v18 = v16;
@@ -471,7 +471,7 @@ void __fastcall EventNoticeControl__SetLabelAndSprite(
       }
     }
 LABEL_46:
-    sub_1BDBAD4(eventInfoList, *(_QWORD *)&index);
+    sub_1BC3264(eventInfoList, *(_QWORD *)&index);
   }
   eventInfoList = this->fields.eventRemainLabel;
   if ( !eventInfoList )
@@ -551,19 +551,19 @@ void __fastcall EventNoticeControl__SetRemainTime(int64_t remainTime, UILabel_o 
   UnityEngine_Color_o v34; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = remainTime;
-  if ( (byte_4B487A4 & 1) == 0 )
+  if ( (byte_4B05D7B & 1) == 0 )
   {
-    sub_1BDB878(&int_TypeInfo, label);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v5);
-    sub_1BDB878(&StringLiteral_5630/*"EVENT_DAY_TXT"*/, v6);
-    sub_1BDB878(&StringLiteral_5746/*"EVENT_TIMEOVER_TXT"*/, v7);
-    sub_1BDB878(&StringLiteral_5747/*"EVENT_TIME_TXT"*/, v8);
-    sub_1BDB878(&StringLiteral_1/*""*/, v9);
-    remainTime = sub_1BDB878(&StringLiteral_5659/*"EVENT_MIN_TXT"*/, v10);
-    byte_4B487A4 = 1;
+    sub_1BC3008(&int_TypeInfo, label);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v5);
+    sub_1BC3008(&StringLiteral_5549/*"EVENT_DAY_TXT"*/, v6);
+    sub_1BC3008(&StringLiteral_5682/*"EVENT_TIMEOVER_TXT"*/, v7);
+    sub_1BC3008(&StringLiteral_5683/*"EVENT_TIME_TXT"*/, v8);
+    sub_1BC3008(&StringLiteral_1/*""*/, v9);
+    remainTime = sub_1BC3008(&StringLiteral_5585/*"EVENT_MIN_TXT"*/, v10);
+    byte_4B05D7B = 1;
   }
   if ( !label )
-    sub_1BDBAD4(remainTime, label);
+    sub_1BC3264(remainTime, label);
   v33.fields.r = 0.0;
   v33.fields.g = 0.0;
   v33.fields.b = 0.0;
@@ -573,12 +573,12 @@ void __fastcall EventNoticeControl__SetRemainTime(int64_t remainTime, UILabel_o 
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5746/*"EVENT_TIMEOVER_TXT"*/, 0LL);
+    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_5682/*"EVENT_TIMEOVER_TXT"*/, 0LL);
     goto LABEL_15;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5630/*"EVENT_DAY_TXT"*/, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5549/*"EVENT_DAY_TXT"*/, 0LL);
   v32 = v4 / 0x15180;
   v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32, v12, v13, v14);
   v16 = System_String__Format(v11, v15, 0LL);
@@ -586,7 +586,7 @@ void __fastcall EventNoticeControl__SetRemainTime(int64_t remainTime, UILabel_o 
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_5747/*"EVENT_TIME_TXT"*/, 0LL);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_5683/*"EVENT_TIME_TXT"*/, 0LL);
     v31 = v4 / 0xE10;
     v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31, v18, v19, v20);
     v16 = System_String__Format(v17, v21, 0LL);
@@ -595,7 +595,7 @@ void __fastcall EventNoticeControl__SetRemainTime(int64_t remainTime, UILabel_o 
       v24 = v4 / 0x3C;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5659/*"EVENT_MIN_TXT"*/, 0LL);
+      v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5585/*"EVENT_MIN_TXT"*/, 0LL);
       v30 = v24;
       v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v30, v26, v27, v28);
       v23 = System_String__Format(v25, v29, 0LL);
@@ -626,11 +626,11 @@ void __fastcall EventNoticeControl__UpdateEventNotice(EventNoticeControl_o *this
   struct System_Collections_Generic_List_EventNoticeControl_EventInfo__o *v9; // x8
   const MethodInfo *v10; // x2
 
-  if ( (byte_4B487A1 & 1) == 0 )
+  if ( (byte_4B05D78 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__, method);
-    sub_1BDB878(&NetworkManager_TypeInfo, v3);
-    byte_4B487A1 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__, method);
+    sub_1BC3008(&NetworkManager_TypeInfo, v3);
+    byte_4B05D78 = 1;
   }
   eventInfoList = this->fields.eventInfoList;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -647,7 +647,7 @@ void __fastcall EventNoticeControl__UpdateEventNotice(EventNoticeControl_o *this
     v9 = this->fields.eventInfoList;
     this->fields.isNeedToUpdate = 0;
     if ( !v9 )
-      sub_1BDBAD4(IsNeedToInfoUpdate, v8);
+      sub_1BC3264(IsNeedToInfoUpdate, v8);
     if ( v9->fields._size )
     {
       if ( !EventNoticeControl__get_IsMultiple(this, v8) )
@@ -667,16 +667,16 @@ bool __fastcall EventNoticeControl__get_IsMultiple(EventNoticeControl_o *this, c
   struct System_Collections_Generic_List_EventNoticeControl_EventInfo__o *eventInfoList; // x8
 
   v2 = this;
-  if ( (byte_4B487A7 & 1) == 0 )
+  if ( (byte_4B05D7E & 1) == 0 )
   {
-    this = (EventNoticeControl_o *)sub_1BDB878(
+    this = (EventNoticeControl_o *)sub_1BC3008(
                                      &Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__,
                                      method);
-    byte_4B487A7 = 1;
+    byte_4B05D7E = 1;
   }
   eventInfoList = v2->fields.eventInfoList;
   if ( !eventInfoList )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   return eventInfoList->fields._size > 1;
 }
 
@@ -735,44 +735,44 @@ void __fastcall EventNoticeControl_EventInfo___ctor(
   struct System_String_o *v51; // x1
   int32_t v52; // w1
 
-  if ( (byte_4B487AA & 1) == 0 )
+  if ( (byte_4B05D81 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_23934/*"synthesis_notice_"*/, eventInfoData);
-    sub_1BDB878(&StringLiteral_1/*""*/, v6);
-    byte_4B487AA = 1;
+    sub_1BC3008(&StringLiteral_23666/*"synthesis_notice_"*/, eventInfoData);
+    sub_1BC3008(&StringLiteral_1/*""*/, v6);
+    byte_4B05D81 = 1;
   }
   v7 = (int)StringLiteral_1/*""*/;
   this->fields.spriteName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.spriteName, v7, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.spriteName, v7, (int32_t)method, v3);
   v8 = (int)StringLiteral_1/*""*/;
   this->fields.eventName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.eventName, v8, v9, v10);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.eventName, v8, v9, v10);
   v11 = (int)StringLiteral_1/*""*/;
   this->fields.overwriteSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.overwriteSpriteName, v11, v12, v13);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.overwriteSpriteName, v11, v12, v13);
   v14 = (int)StringLiteral_1/*""*/;
   this->fields.overwriteText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.overwriteText, v14, v15, v16);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.overwriteText, v14, v15, v16);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !eventInfoData )
     goto LABEL_21;
   name = eventInfoData->fields.name;
   this->fields.eventName = name;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.eventName, (int32_t)name, v19, v20);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.eventName, (int32_t)name, v19, v20);
   this->fields._EventName_k__BackingField = name;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v22, v23);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v22, v23);
   v24 = *(int8x16_t *)&eventInfoData->fields.startAt;
   this->fields.infoData = eventInfoData;
   *(_WORD *)&this->fields._IsTimeOver_k__BackingField = 0;
   *(int8x16_t *)&this->fields._EndAt_k__BackingField = vextq_s8(v24, v24, 8uLL);
   this->fields._IsCampaignOpen_k__BackingField = 0;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.infoData, (int32_t)eventInfoData, v25, v26);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.infoData, (int32_t)eventInfoData, v25, v26);
   v27 = (int)StringLiteral_1/*""*/;
   this->fields.overwriteSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.overwriteSpriteName, v27, v28, v29);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.overwriteSpriteName, v27, v28, v29);
   v30 = (int)StringLiteral_1/*""*/;
   this->fields.overwriteText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.overwriteText, v30, v31, v32);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.overwriteText, v30, v31, v32);
   eventEntity = eventInfoData->fields.eventEntity;
   if ( !eventEntity )
     goto LABEL_21;
@@ -785,47 +785,47 @@ void __fastcall EventNoticeControl_EventInfo___ctor(
       while ( 1 )
       {
         if ( (unsigned int)v38 >= (unsigned int)v37 )
-          sub_1BDBADC(IsNullOrEmpty, v18, v33);
+          sub_1BC326C(IsNullOrEmpty, v18, v33);
         v39 = (System_String_o **)script->m_Items[v38];
         if ( !v39 )
           break;
         v40 = v39[7];
         if ( !System_String__IsNullOrEmpty(v40, 0LL) )
         {
-          v41 = System_String__Concat_62572260((System_String_o *)StringLiteral_23934/*"synthesis_notice_"*/, v40, 0LL);
+          v41 = System_String__Concat_62348648((System_String_o *)StringLiteral_23666/*"synthesis_notice_"*/, v40, 0LL);
           this->fields.spriteName = v41;
-          sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.spriteName, (int32_t)v41, v42, v43);
+          sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.spriteName, (int32_t)v41, v42, v43);
           this->fields._SpriteName_k__BackingField = v41;
-          sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, (int32_t)v41, v44, v45);
+          sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, (int32_t)v41, v44, v45);
           this->fields._IsSprite_k__BackingField = 1;
         }
         v46 = v39[8];
         if ( !System_String__IsNullOrEmpty(v46, 0LL) )
         {
-          v47 = System_String__Concat_62572260((System_String_o *)StringLiteral_23934/*"synthesis_notice_"*/, v46, 0LL);
+          v47 = System_String__Concat_62348648((System_String_o *)StringLiteral_23666/*"synthesis_notice_"*/, v46, 0LL);
           this->fields.overwriteSpriteName = v47;
-          sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.overwriteSpriteName, (int32_t)v47, v48, v49);
+          sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.overwriteSpriteName, (int32_t)v47, v48, v49);
         }
         IsNullOrEmpty = System_String__IsNullOrEmpty(v39[9], 0LL);
         if ( !IsNullOrEmpty )
         {
           v51 = v39[9];
           this->fields.overwriteText = v51;
-          sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.overwriteText, (int32_t)v51, v33, v50);
+          sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.overwriteText, (int32_t)v51, v33, v50);
         }
         LODWORD(v37) = script->max_length;
         if ( (int)++v38 >= (int)v37 )
           goto LABEL_20;
       }
 LABEL_21:
-      sub_1BDBAD4(IsNullOrEmpty, v18);
+      sub_1BC3264(IsNullOrEmpty, v18);
     }
   }
   else
   {
     v52 = (int)StringLiteral_1/*""*/;
     this->fields._SpriteName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, v52, v33, v34);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, v52, v33, v34);
     this->fields._IsSprite_k__BackingField = 0;
   }
 LABEL_20:
@@ -864,13 +864,13 @@ void __fastcall EventNoticeControl_EventInfo__CheckCombineCampaignData(
   EventCampaignReleaseEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
   v2 = this;
-  if ( (byte_4B487AB & 1) == 0 )
+  if ( (byte_4B05D82 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_EventCampaignMaster___, method);
-    sub_1BDB878(&Method_DataManager_GetMasterData_EventCampaignReleaseMaster___, v3);
-    sub_1BDB878(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v4);
-    this = (EventNoticeControl_EventInfo_o *)sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4B487AB = 1;
+    sub_1BC3008(&Method_DataManager_GetMasterData_EventCampaignMaster___, method);
+    sub_1BC3008(&Method_DataManager_GetMasterData_EventCampaignReleaseMaster___, v3);
+    sub_1BC3008(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v4);
+    this = (EventNoticeControl_EventInfo_o *)sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4B05D82 = 1;
   }
   entity = 0LL;
   infoData = v2->fields.infoData;
@@ -881,18 +881,18 @@ void __fastcall EventNoticeControl_EventInfo__CheckCombineCampaignData(
     goto LABEL_36;
   if ( eventEntity->fields.type != 5 )
     return;
-  this = (EventNoticeControl_EventInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (EventNoticeControl_EventInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_36;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)this,
-                        (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventCampaignReleaseMaster___);
-  this = (EventNoticeControl_EventInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_EventCampaignReleaseMaster___);
+  this = (EventNoticeControl_EventInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_36;
   this = (EventNoticeControl_EventInfo_o *)DataManager__GetMasterData_object_(
                                              (DataManager_o *)this,
-                                             (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventCampaignMaster___);
+                                             (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
   v9 = v2->fields.infoData;
   if ( !v9 || !this )
     goto LABEL_36;
@@ -930,7 +930,7 @@ void __fastcall EventNoticeControl_EventInfo__CheckCombineCampaignData(
       {
         spriteName = v10->fields.spriteName;
         v2->fields._EventName_k__BackingField = spriteName;
-        sub_1BDB81C((CGThumbnailListItem_o *)&v2->fields, (int32_t)spriteName, v11, v12);
+        sub_1BC2FAC((CGThumbnailListItem_o *)&v2->fields, (int32_t)spriteName, v11, v12);
       }
     }
   }
@@ -939,16 +939,16 @@ void __fastcall EventNoticeControl_EventInfo__CheckCombineCampaignData(
   {
     return;
   }
-  this = (EventNoticeControl_EventInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (EventNoticeControl_EventInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this
     || (this = (EventNoticeControl_EventInfo_o *)DataManager__GetMasterData_object_(
                                                    (DataManager_o *)this,
-                                                   (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___),
+                                                   (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___),
         (v14 = v2->fields.infoData) == 0LL)
     || !this )
   {
 LABEL_36:
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   }
   if ( UserServantCollectionMaster__IsServantHaving((UserServantCollectionMaster_o *)this, v14->fields.targetIds, 0LL) )
   {
@@ -960,7 +960,7 @@ LABEL_36:
     {
       v21 = v2->fields.spriteName;
       v2->fields._SpriteName_k__BackingField = v21;
-      sub_1BDB81C((CGThumbnailListItem_o *)&v2->fields._SpriteName_k__BackingField, (int32_t)v21, v15, v16);
+      sub_1BC2FAC((CGThumbnailListItem_o *)&v2->fields._SpriteName_k__BackingField, (int32_t)v21, v15, v16);
       v17 = 1;
     }
     eventName = v2->fields.eventName;
@@ -977,7 +977,7 @@ LABEL_36:
   {
     overwriteSpriteName = v2->fields.overwriteSpriteName;
     v2->fields._SpriteName_k__BackingField = overwriteSpriteName;
-    sub_1BDB81C(
+    sub_1BC2FAC(
       (CGThumbnailListItem_o *)&v2->fields._SpriteName_k__BackingField,
       (int32_t)overwriteSpriteName,
       v18,
@@ -992,7 +992,7 @@ LABEL_36:
     v2->fields._EventName_k__BackingField = eventName;
     p_fields = &v2->fields;
 LABEL_34:
-    sub_1BDB81C((CGThumbnailListItem_o *)p_fields, (int32_t)eventName, v15, v16);
+    sub_1BC2FAC((CGThumbnailListItem_o *)p_fields, (int32_t)eventName, v15, v16);
   }
 }
 
@@ -1086,7 +1086,7 @@ void __fastcall EventNoticeControl_EventInfo__set_EventName(
   const MethodInfo *v3; // x3
 
   this->fields._EventName_k__BackingField = value;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -1134,7 +1134,7 @@ void __fastcall EventNoticeControl_EventInfo__set_SpriteName(
   const MethodInfo *v3; // x3
 
   this->fields._SpriteName_k__BackingField = value;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

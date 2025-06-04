@@ -1,30 +1,30 @@
 void __fastcall UserShopEntity___ctor(UserShopEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B45AA2 & 1) == 0 )
+  if ( (byte_4B0304F & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B45AA2 = 1;
+    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B0304F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32DF9D0 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void __fastcall UserShopEntity___ctor_42188360(
+void __fastcall UserShopEntity___ctor_42224424(
         UserShopEntity_o *this,
         int64_t userId,
         int32_t shopId,
         const MethodInfo *method)
 {
-  if ( (byte_4B45AA3 & 1) == 0 )
+  if ( (byte_4B03050 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_string___ctor__, userId);
-    byte_4B45AA3 = 1;
+    sub_1BC3008(&Method_DataEntityBase_string___ctor__, userId);
+    byte_4B03050 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32DF9D0 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.shopId = shopId;
   this->fields.updatedAt = 0LL;
@@ -48,15 +48,15 @@ bool __fastcall UserShopEntity__CheckFlagKind(UserShopEntity_o *this, int32_t fl
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall UserShopEntity__CreatePK(int64_t userId, int32_t shopId, const MethodInfo *method)
 {
-  if ( (byte_4B45AA1 & 1) == 0 )
+  if ( (byte_4B0304E & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&shopId);
-    byte_4B45AA1 = 1;
+    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&shopId);
+    byte_4B0304E = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            shopId,
-           (const MethodInfo_3031BEC *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_30000F4 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

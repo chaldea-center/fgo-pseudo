@@ -32,18 +32,18 @@ void __fastcall BuffDataExtension_GeneralParamAccessorsBase__Assertion(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B429A3 & 1) == 0 )
+  if ( (byte_4AFFF2A & 1) == 0 )
   {
-    sub_1BDB878(&System_Diagnostics_StackFrame_TypeInfo, *(_QWORD *)&stackBackCount);
-    byte_4B429A3 = 1;
+    sub_1BC3008(&System_Diagnostics_StackFrame_TypeInfo, *(_QWORD *)&stackBackCount);
+    byte_4AFFF2A = 1;
   }
-  v4 = (System_Diagnostics_StackFrame_o *)sub_1BDBAC4(System_Diagnostics_StackFrame_TypeInfo);
-  System_Diagnostics_StackFrame___ctor_63878856(v4, stackBackCount, 1, 0LL);
+  v4 = (System_Diagnostics_StackFrame_o *)sub_1BC3254(System_Diagnostics_StackFrame_TypeInfo);
+  System_Diagnostics_StackFrame___ctor_63650396(v4, stackBackCount, 1, 0LL);
   if ( !v4 )
-    sub_1BDBAD4(v5, v6);
-  ((void (__fastcall *)(System_Diagnostics_StackFrame_o *, Il2CppMethodPointer))v4->klass->vtable._8_GetMethod.method)(
+    sub_1BC3264(v5, v6);
+  ((void (__fastcall *)(System_Diagnostics_StackFrame_o *, Il2CppMethodPointer))v4->klass->vtable._7_GetMethod.method)(
     v4,
-    v4->klass->vtable._9_GetNativeOffset.methodPtr);
+    v4->klass->vtable._8_GetNativeOffset.methodPtr);
 }
 
 
@@ -63,7 +63,7 @@ void __fastcall BuffDataExtension_GeneralParamAccessorsBase__SetGeneralParams(
   const MethodInfo *v3; // x3
 
   this->fields.generalParams = inputGeneralParams;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)inputGeneralParams, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)inputGeneralParams, (int32_t)method, v3);
 }
 
 
@@ -85,16 +85,16 @@ System_Int32_array *__fastcall BuffDataExtension_GeneralParamContinueFunction__M
   System_Int32_array *v6; // x20
   __int64 v7; // x2
 
-  if ( (byte_4B429A5 & 1) == 0 )
+  if ( (byte_4AFFF2C & 1) == 0 )
   {
-    sub_1BDB878(&int___TypeInfo, dataVals);
-    byte_4B429A5 = 1;
+    sub_1BC3008(&int___TypeInfo, dataVals);
+    byte_4AFFF2C = 1;
   }
-  Param = sub_1BDB920(int___TypeInfo, 1LL);
+  Param = sub_1BC30B0(int___TypeInfo, 1LL);
   if ( !dataVals || (v6 = (System_Int32_array *)Param, Param = DataVals__GetParam(dataVals, 151, 0, 0LL), !v6) )
-    sub_1BDBAD4(Param, v5);
+    sub_1BC3264(Param, v5);
   if ( !v6->max_length )
-    sub_1BDBADC(Param, v5, v7);
+    sub_1BC326C(Param, v5, v7);
   v6->m_Items[1] = Param;
   return v6;
 }
@@ -104,14 +104,14 @@ bool __fastcall BuffDataExtension_GeneralParamContinueFunction__get_NotExecFunct
         BuffDataExtension_GeneralParamContinueFunction_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B429A4 & 1) == 0 )
+  if ( (byte_4AFFF2B & 1) == 0 )
   {
-    sub_1BDB878(&Method_BasicHelper_IndexValue_int____77079288, method);
-    byte_4B429A4 = 1;
+    sub_1BC3008(&Method_BasicHelper_IndexValue_int____76814760, method);
+    byte_4AFFF2B = 1;
   }
   return BasicHelper__IndexValue_int_(
            this->fields.generalParams,
            0,
            0,
-           (const MethodInfo_3021F18 *)Method_BasicHelper_IndexValue_int____77079288) > 0;
+           (const MethodInfo_2FF03F8 *)Method_BasicHelper_IndexValue_int____76814760) > 0;
 }

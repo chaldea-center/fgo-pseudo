@@ -1,28 +1,28 @@
 void __fastcall EquipAddEntity___ctor(EquipAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B448F1 & 1) == 0 )
+  if ( (byte_4B01E94 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B448F1 = 1;
+    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B01E94 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32DF9D0 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall EquipAddEntity__CreatePK(int32_t id, int32_t equipId, const MethodInfo *method)
 {
-  if ( (byte_4B448EF & 1) == 0 )
+  if ( (byte_4B01E92 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&equipId);
-    byte_4B448EF = 1;
+    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&equipId);
+    byte_4B01E92 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            equipId,
-           (const MethodInfo_3031AE4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2FFFFEC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -50,16 +50,16 @@ bool __fastcall EquipAddEntity__IsOpen(EquipAddEntity_o *this, const MethodInfo 
   Il2CppObject *Master_object; // x0
   __int64 v5; // x1
 
-  if ( (byte_4B448F0 & 1) == 0 )
+  if ( (byte_4B01E93 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMaster_CommonReleaseMaster___, method);
-    sub_1BDB878(&DataManager_TypeInfo, v3);
-    byte_4B448F0 = 1;
+    sub_1BC3008(&Method_DataManager_GetMaster_CommonReleaseMaster___, method);
+    sub_1BC3008(&DataManager_TypeInfo, v3);
+    byte_4B01E93 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !Master_object )
-    sub_1BDBAD4(0LL, v5);
+    sub_1BC3264(0LL, v5);
   return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Master_object, this->fields.commonReleaseId, 0LL, 0, 0LL);
 }

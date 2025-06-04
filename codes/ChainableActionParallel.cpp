@@ -8,24 +8,24 @@ void __fastcall ChainableActionParallel___ctor(
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4B49253 & 1) == 0 )
+  if ( (byte_4B065AB & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_ChainableActionBase___ctor__, actionArray);
-    sub_1BDB878(&System_Collections_Generic_List_ChainableActionBase__TypeInfo, v5);
-    byte_4B49253 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_ChainableActionBase___ctor__, actionArray);
+    sub_1BC3008(&System_Collections_Generic_List_ChainableActionBase__TypeInfo, v5);
+    byte_4B065AB = 1;
   }
   ChainableActionBase___ctor((ChainableActionBase_o *)this, (const MethodInfo *)actionArray);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_ChainableActionBase__TypeInfo);
-  System_Collections_Generic_List_object____ctor_57497272(
+  v6 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_ChainableActionBase__TypeInfo);
+  System_Collections_Generic_List_object____ctor_57280308(
     v6,
     (System_Collections_Generic_IEnumerable_T__o *)actionArray,
-    (const MethodInfo_36D56B8 *)Method_System_Collections_Generic_List_ChainableActionBase___ctor__);
+    (const MethodInfo_36A0734 *)Method_System_Collections_Generic_List_ChainableActionBase___ctor__);
   this->fields.sysChainAction = (struct System_Collections_Generic_List_ChainableActionBase__o *)v6;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.sysChainAction, (int32_t)v6, v7, v8);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.sysChainAction, (int32_t)v6, v7, v8);
 }
 
 
-void __fastcall ChainableActionParallel___ctor_48338324(
+void __fastcall ChainableActionParallel___ctor_48135236(
         ChainableActionParallel_o *this,
         System_Action_Action__array *actions,
         const MethodInfo *method)
@@ -63,43 +63,43 @@ void __fastcall ChainableActionParallel__ExecuteOnDetail(ChainableActionParallel
   System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B49254 & 1) == 0 )
+  if ( (byte_4B065AC & 1) == 0 )
   {
-    sub_1BDB878(&System_Action___TypeInfo, method);
-    sub_1BDB878(&System_Action_TypeInfo, v3);
-    sub_1BDB878(&Method_ChainableActionParallel_OnOneActionEnded__, v4);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_ChainableActionBase__Dispose__, v5);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_ChainableActionBase__MoveNext__, v6);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_ChainableActionBase__get_Current__, v7);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ChainableActionBase__GetEnumerator__, v8);
-    byte_4B49254 = 1;
+    sub_1BC3008(&System_Action___TypeInfo, method);
+    sub_1BC3008(&System_Action_TypeInfo, v3);
+    sub_1BC3008(&Method_ChainableActionParallel_OnOneActionEnded__, v4);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_ChainableActionBase__Dispose__, v5);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_ChainableActionBase__MoveNext__, v6);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_ChainableActionBase__get_Current__, v7);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ChainableActionBase__GetEnumerator__, v8);
+    byte_4B065AC = 1;
   }
   memset(&v22, 0, sizeof(v22));
   sysChainAction = (System_Collections_Generic_List_object__o *)this->fields.sysChainAction;
   this->fields.executeEndCount = 0;
   if ( !sysChainAction )
-    sub_1BDBAD4(0LL, method);
+    sub_1BC3264(0LL, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v21,
     sysChainAction,
-    (const MethodInfo_36D68BC *)Method_System_Collections_Generic_List_ChainableActionBase__GetEnumerator__);
+    (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_ChainableActionBase__GetEnumerator__);
   v22 = v21;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v22,
-            (const MethodInfo_346A2A4 *)Method_System_Collections_Generic_List_Enumerator_ChainableActionBase__MoveNext__) )
+            (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_ChainableActionBase__MoveNext__) )
   {
     current = (ChainableActionBase_o *)v22.fields._current;
-    v11 = sub_1BDB920(System_Action___TypeInfo, 1LL);
-    v12 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+    v11 = sub_1BC30B0(System_Action___TypeInfo, 1LL);
+    v12 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
     System_Action___ctor(v12, (Il2CppObject *)this, Method_ChainableActionParallel_OnOneActionEnded__, 0LL);
     if ( !v11 )
-      sub_1BDBAD4(v13, v14);
+      sub_1BC3264(v13, v14);
     if ( !*(_DWORD *)(v11 + 24) )
-      sub_1BDBADC(v13, v14, v15);
+      sub_1BC326C(v13, v14, v15);
     *(_QWORD *)(v11 + 32) = v12;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v11 + 32), (int32_t)v12, v15, v16);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v11 + 32), (int32_t)v12, v15, v16);
     if ( !current )
-      sub_1BDBAD4(v17, v18);
+      sub_1BC3264(v17, v18);
     ChainableActionBase__Final(current, (System_Action_array *)v11, v19);
     if ( !current->fields._IsExecuted_k__BackingField )
     {
@@ -112,7 +112,7 @@ void __fastcall ChainableActionParallel__ExecuteOnDetail(ChainableActionParallel
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v22,
-    (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_ChainableActionBase__Dispose__);
+    (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_ChainableActionBase__Dispose__);
 }
 
 
@@ -123,18 +123,18 @@ void __fastcall ChainableActionParallel__OnOneActionEnded(ChainableActionParalle
   int v4; // w8
 
   v2 = this;
-  if ( (byte_4B49255 & 1) == 0 )
+  if ( (byte_4B065AD & 1) == 0 )
   {
-    this = (ChainableActionParallel_o *)sub_1BDB878(
+    this = (ChainableActionParallel_o *)sub_1BC3008(
                                           &Method_System_Collections_Generic_List_ChainableActionBase__get_Count__,
                                           method);
-    byte_4B49255 = 1;
+    byte_4B065AD = 1;
   }
   sysChainAction = v2->fields.sysChainAction;
   v4 = v2->fields.executeEndCount + 1;
   v2->fields.executeEndCount = v4;
   if ( !sysChainAction )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   if ( sysChainAction->fields._size <= v4 )
     ((void (__fastcall *)(ChainableActionParallel_o *, void *))v2->klass->vtable._5_End.method)(
       v2,

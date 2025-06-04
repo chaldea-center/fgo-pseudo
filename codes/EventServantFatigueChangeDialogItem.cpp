@@ -22,13 +22,13 @@ void __fastcall EventServantFatigueChangeDialogItem__Set(
   int32_t v13; // w21
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
-  if ( (byte_4B3F46E & 1) == 0 )
+  if ( (byte_4AFC9DB & 1) == 0 )
   {
-    sub_1BDB878(&IconLabelInfo_TypeInfo, userServantEntity);
-    sub_1BDB878(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
-    byte_4B3F46E = 1;
+    sub_1BC3008(&IconLabelInfo_TypeInfo, userServantEntity);
+    sub_1BC3008(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
+    byte_4AFC9DB = 1;
   }
-  v6 = (IconLabelInfo_o *)sub_1BDBAC4(IconLabelInfo_TypeInfo);
+  v6 = (IconLabelInfo_o *)sub_1BC3254(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v6, 0LL);
   if ( !userServantEntity )
     goto LABEL_11;
@@ -36,11 +36,11 @@ void __fastcall EventServantFatigueChangeDialogItem__Set(
   LevelMax = (ServantFaceIconComponent_o *)UserServantEntity__getLevelMax(userServantEntity, 0LL);
   if ( !v6 )
     goto LABEL_11;
-  IconLabelInfo__Set_39930232(v6, 2, lv, (int32_t)LevelMax, 0, 0, 0, 0, 0, 0LL);
+  IconLabelInfo__Set_39947860(v6, 2, lv, (int32_t)LevelMax, 0, 0, 0, 0, 0, 0LL);
   LevelMax = this->fields.servantFaceIconComponent;
   if ( !LevelMax )
     goto LABEL_11;
-  ServantFaceIconComponent__Set_40018236(LevelMax, userServantEntity, v6, 0LL, 0LL);
+  ServantFaceIconComponent__Set_40035864(LevelMax, userServantEntity, v6, 0LL, 0LL);
   LevelMax = (ServantFaceIconComponent_o *)this->fields.limitCountIconComponent;
   if ( !LevelMax )
     goto LABEL_11;
@@ -52,10 +52,10 @@ void __fastcall EventServantFatigueChangeDialogItem__Set(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v14.fields.currentCryptoKey = v12;
   *(_QWORD *)&v14.fields.fakeValue = v11;
-  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48227716(v14, 0LL);
+  v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(v14, 0LL);
   LevelMax = (ServantFaceIconComponent_o *)UserServantEntity__getLimitCntMax(userServantEntity, 0LL);
   if ( !limitCountIconComponent )
 LABEL_11:
-    sub_1BDBAD4(LevelMax, v8);
+    sub_1BC3264(LevelMax, v8);
   LimitCountIconComponent__Set(limitCountIconComponent, v13, (int32_t)LevelMax, 0LL);
 }

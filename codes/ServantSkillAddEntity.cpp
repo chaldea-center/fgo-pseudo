@@ -1,13 +1,13 @@
 void __fastcall ServantSkillAddEntity___ctor(ServantSkillAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B45455 & 1) == 0 )
+  if ( (byte_4B02A0A & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B45455 = 1;
+    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B02A0A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32DF9D0 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -23,14 +23,14 @@ UnityEngine_Color_o __fastcall ServantSkillAddEntity__ConvertColorFromString(
   float v8; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B45453 & 1) == 0 )
+  if ( (byte_4B02A08 & 1) == 0 )
   {
-    sub_1BDB878(&System_Convert_TypeInfo, colorCode);
-    byte_4B45453 = 1;
+    sub_1BC3008(&System_Convert_TypeInfo, colorCode);
+    byte_4B02A08 = 1;
   }
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v4 = System_Convert__ToInt32_63655352(colorCode, 16, 0LL);
+  v4 = System_Convert__ToInt32_63444384(colorCode, 16, 0LL);
   v5 = (float)BYTE2(v4) / 255.0;
   v6 = (float)BYTE1(v4) / 255.0;
   v7 = (float)(unsigned __int8)v4 / 255.0;
@@ -50,16 +50,16 @@ System_String_o *__fastcall ServantSkillAddEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4B45454 & 1) == 0 )
+  if ( (byte_4B02A09 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&num);
-    byte_4B45454 = 1;
+    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&num);
+    byte_4B02A09 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            num,
            priority,
-           (const MethodInfo_3031F74 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_300047C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -86,7 +86,7 @@ int32_t __fastcall ServantSkillAddEntity__GetBaseSkillId(ServantSkillAddEntity_o
   if ( !v4 )
     return 0;
   if ( !(_DWORD)v4 )
-    sub_1BDBADC(this, method, v2);
+    sub_1BC326C(this, method, v2);
   return skillIds->m_Items[1];
 }
 
@@ -95,12 +95,12 @@ int32_t __fastcall ServantSkillAddEntity__GetCondIgnoreSealedLimitCount(
         ServantSkillAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B4544E & 1) == 0 )
+  if ( (byte_4B02A03 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_18210/*"condIgnoreSealedLimitCount"*/, method);
-    byte_4B4544E = 1;
+    sub_1BC3008(&StringLiteral_18040/*"condIgnoreSealedLimitCount"*/, method);
+    byte_4B02A03 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18210/*"condIgnoreSealedLimitCount"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18040/*"condIgnoreSealedLimitCount"*/, 0, 0LL);
 }
 
 
@@ -128,12 +128,12 @@ UnityEngine_Color_o __fastcall ServantSkillAddEntity__GetCondLabelColor(
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4B45451 & 1) == 0 )
+  if ( (byte_4B02A06 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_18211/*"condLabelColor"*/, method);
-    byte_4B45451 = 1;
+    sub_1BC3008(&StringLiteral_18041/*"condLabelColor"*/, method);
+    byte_4B02A06 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18211/*"condLabelColor"*/, 0LL, 0LL);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18041/*"condLabelColor"*/, 0LL, 0LL);
   IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0LL);
   if ( !IsNullOrEmpty )
   {
@@ -179,12 +179,12 @@ UnityEngine_Color_o __fastcall ServantSkillAddEntity__GetCondSpriteColor(
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4B45452 & 1) == 0 )
+  if ( (byte_4B02A07 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_18213/*"condSpriteColor"*/, method);
-    byte_4B45452 = 1;
+    sub_1BC3008(&StringLiteral_18043/*"condSpriteColor"*/, method);
+    byte_4B02A07 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18213/*"condSpriteColor"*/, 0LL, 0LL);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18043/*"condSpriteColor"*/, 0LL, 0LL);
   IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0LL);
   if ( !IsNullOrEmpty )
   {
@@ -210,12 +210,12 @@ System_Int32_array *__fastcall ServantSkillAddEntity__GetEnableDispOnBattleConfi
         ServantSkillAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B4544F & 1) == 0 )
+  if ( (byte_4B02A04 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_18999/*"enableDispOnBattleConfirmDialog"*/, method);
-    byte_4B4544F = 1;
+    sub_1BC3008(&StringLiteral_18813/*"enableDispOnBattleConfirmDialog"*/, method);
+    byte_4B02A04 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18999/*"enableDispOnBattleConfirmDialog"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18813/*"enableDispOnBattleConfirmDialog"*/, 0LL, 0LL);
 }
 
 
@@ -235,12 +235,12 @@ bool __fastcall ServantSkillAddEntity__HasKeyEnableDispOnBattleConfirmDialog(
         ServantSkillAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B45450 & 1) == 0 )
+  if ( (byte_4B02A05 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_18999/*"enableDispOnBattleConfirmDialog"*/, method);
-    byte_4B45450 = 1;
+    sub_1BC3008(&StringLiteral_18813/*"enableDispOnBattleConfirmDialog"*/, method);
+    byte_4B02A05 = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_18999/*"enableDispOnBattleConfirmDialog"*/, 0LL);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_18813/*"enableDispOnBattleConfirmDialog"*/, 0LL);
 }
 
 

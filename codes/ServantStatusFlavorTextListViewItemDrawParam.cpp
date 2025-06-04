@@ -2,10 +2,10 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam___cctor(const Metho
 {
   __int64 v1; // x1
 
-  if ( (byte_4B412F7 & 1) == 0 )
+  if ( (byte_4AFE7C6 & 1) == 0 )
   {
-    sub_1BDB878(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo, v1);
-    byte_4B412F7 = 1;
+    sub_1BC3008(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo, v1);
+    byte_4AFE7C6 = 1;
   }
   *ServantStatusFlavorTextListViewItemDrawParam_TypeInfo->static_fields = (struct ServantStatusFlavorTextListViewItemDrawParam_StaticFields)0xFFFFFF8F0000009ALL;
 }
@@ -31,7 +31,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__Awake(
 
   baseSprite = this->fields.baseSprite;
   if ( !baseSprite )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   titleRoot = this->fields.titleRoot;
   this->fields.baseSpriteHeightBase = baseSprite->fields.mHeight;
   LocalPositionY = GameObjectExtensions__GetLocalPositionY(titleRoot, 0LL);
@@ -68,21 +68,21 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetCondTitle(
   float v16; // s8
   UILabel_o *v17; // x19
 
-  if ( (byte_4B412F6 & 1) == 0 )
+  if ( (byte_4AFE7C5 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_UISprite___, title);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BDB878(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo, v6);
-    sub_1BDB878(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v7);
-    sub_1BDB878(&StringLiteral_1/*""*/, v8);
-    byte_4B412F6 = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_UISprite___, title);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BC3008(&ServantStatusFlavorTextListViewItemDrawParam_TypeInfo, v6);
+    sub_1BC3008(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v7);
+    sub_1BC3008(&StringLiteral_1/*""*/, v8);
+    byte_4AFE7C5 = 1;
   }
   titleServantBase = this->fields.titleServantBase;
   if ( !titleServantBase )
     goto LABEL_45;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        titleServantBase,
-                       (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                       (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( System_String__IsNullOrEmpty(title, 0LL) )
   {
     titleServantBase = (UnityEngine_GameObject_o *)this->fields.titleName;
@@ -105,7 +105,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetCondTitle(
         return;
       }
 LABEL_45:
-      sub_1BDBAD4(titleServantBase, title);
+      sub_1BC3264(titleServantBase, title);
     }
   }
   else
@@ -294,7 +294,7 @@ LABEL_15:
         }
       }
     }
-    sub_1BDBAD4(transformNameSprite, item);
+    sub_1BC3264(transformNameSprite, item);
   }
 }
 
@@ -327,7 +327,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__SetParameterGauge(
     || (ServantStatusParameterGauge__Set(powerGauge, 4, luck, 0LL), (powerGauge = this->fields.npGauge) == 0LL) )
   {
 LABEL_8:
-    sub_1BDBAD4(powerGauge, *(_QWORD *)&power);
+    sub_1BC3264(powerGauge, *(_QWORD *)&power);
   }
   ServantStatusParameterGauge__Set(powerGauge, 5, np, 0LL);
 }
@@ -374,15 +374,15 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__UpdateParameter(
   ServantLimitAddEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
   v4 = (ServantStatusFlavorTextListViewItemDrawParam_o **)this;
-  if ( (byte_4B412F5 & 1) == 0 )
+  if ( (byte_4AFE7C4 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_ServantLimitMaster___, item);
-    sub_1BDB878(&Method_DataManager_GetMaster_ServantLimitAddMaster___, v5);
-    sub_1BDB878(&DataManager_TypeInfo, v6);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_1BDB878(&string_TypeInfo, v8);
-    this = (ServantStatusFlavorTextListViewItemDrawParam_o *)sub_1BDB878(&StringLiteral_1/*""*/, v9);
-    byte_4B412F5 = 1;
+    sub_1BC3008(&Method_DataManager_GetMasterData_ServantLimitMaster___, item);
+    sub_1BC3008(&Method_DataManager_GetMaster_ServantLimitAddMaster___, v5);
+    sub_1BC3008(&DataManager_TypeInfo, v6);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1BC3008(&string_TypeInfo, v8);
+    this = (ServantStatusFlavorTextListViewItemDrawParam_o *)sub_1BC3008(&StringLiteral_1/*""*/, v9);
+    byte_4AFE7C4 = 1;
   }
   entity = 0LL;
   if ( !item )
@@ -440,7 +440,7 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__UpdateParameter(
   paramLimitCount = item->fields.paramLimitCount;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
   this = (ServantStatusFlavorTextListViewItemDrawParam_o *)ServantStatusListViewItem__get_SvtId(item, v18);
   if ( !Master_object )
     goto LABEL_51;
@@ -486,12 +486,12 @@ void __fastcall ServantStatusFlavorTextListViewItemDrawParam__UpdateParameter(
       {
         v22 = paramLimitCount >= 11 ? 0 : paramLimitCount;
         ServantParameterLimitCount = ServantLimitAddEntity__GetServantParameterLimitCount(entity, v22, 0LL);
-        this = (ServantStatusFlavorTextListViewItemDrawParam_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        this = (ServantStatusFlavorTextListViewItemDrawParam_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( this )
         {
           MasterData_object = DataManager__GetMasterData_object_(
                                 (DataManager_o *)this,
-                                (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+                                (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
           this = (ServantStatusFlavorTextListViewItemDrawParam_o *)ServantStatusListViewItem__get_SvtId(item, v25);
           if ( MasterData_object )
           {
@@ -524,7 +524,7 @@ LABEL_50:
         }
       }
 LABEL_51:
-      sub_1BDBAD4(this, item);
+      sub_1BC3264(this, item);
     }
   }
   else

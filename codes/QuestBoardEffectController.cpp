@@ -12,16 +12,16 @@ System_Collections_IEnumerator_o *__fastcall QuestBoardEffectController__CoOnEff
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B41763 & 1) == 0 )
+  if ( (byte_4AFECE0 & 1) == 0 )
   {
-    sub_1BDB878(&QuestBoardEffectController__CoOnEffectFinishAction_d__12_TypeInfo, method);
-    byte_4B41763 = 1;
+    sub_1BC3008(&QuestBoardEffectController__CoOnEffectFinishAction_d__12_TypeInfo, method);
+    byte_4AFECE0 = 1;
   }
-  v3 = sub_1BDBAC4(QuestBoardEffectController__CoOnEffectFinishAction_d__12_TypeInfo);
+  v3 = sub_1BC3254(QuestBoardEffectController__CoOnEffectFinishAction_d__12_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -72,28 +72,28 @@ void __fastcall QuestBoardEffectController__StartBoardAppearEffect(
   System_Collections_IEnumerator_o *v43; // x0
   System_Collections_IEnumerator_o *v44; // x1
 
-  if ( (byte_4B41764 & 1) == 0 )
+  if ( (byte_4AFECE1 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, effectInfo);
-    sub_1BDB878(&Method_UnityEngine_Object_Instantiate_QuestBoardListEffectAppearComponent___, v5);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v6);
-    sub_1BDB878(&QuestBoardListEffectAppearComponent_TypeInfo, v7);
-    sub_1BDB878(&ScrTerminalListTop_TypeInfo, v8);
-    sub_1BDB878(&TerminalPramsManager_TypeInfo, v9);
-    sub_1BDB878(&Method_QuestBoardEffectController___c__DisplayClass13_0__StartBoardAppearEffect_b__0__, v10);
-    sub_1BDB878(&Method_QuestBoardEffectController___c__DisplayClass13_0__StartBoardAppearEffect_b__1__, v11);
-    sub_1BDB878(&QuestBoardEffectController___c__DisplayClass13_0_TypeInfo, v12);
-    byte_4B41764 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, effectInfo);
+    sub_1BC3008(&Method_UnityEngine_Object_Instantiate_QuestBoardListEffectAppearComponent___, v5);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v6);
+    sub_1BC3008(&QuestBoardListEffectAppearComponent_TypeInfo, v7);
+    sub_1BC3008(&ScrTerminalListTop_TypeInfo, v8);
+    sub_1BC3008(&TerminalPramsManager_TypeInfo, v9);
+    sub_1BC3008(&Method_QuestBoardEffectController___c__DisplayClass13_0__StartBoardAppearEffect_b__0__, v10);
+    sub_1BC3008(&Method_QuestBoardEffectController___c__DisplayClass13_0__StartBoardAppearEffect_b__1__, v11);
+    sub_1BC3008(&QuestBoardEffectController___c__DisplayClass13_0_TypeInfo, v12);
+    byte_4AFECE1 = 1;
   }
-  v13 = sub_1BDBAC4(QuestBoardEffectController___c__DisplayClass13_0_TypeInfo);
+  v13 = sub_1BC3254(QuestBoardEffectController___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0LL);
   if ( !v13 )
     goto LABEL_45;
   *(_QWORD *)(v13 + 16) = this;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v16, v17);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v16, v17);
   *(_QWORD *)(v13 + 24) = effectInfo;
   v18 = v13 + 24;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v13 + 24), (int32_t)effectInfo, v19, v20);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v13 + 24), (int32_t)effectInfo, v19, v20);
   if ( !*(_QWORD *)(v13 + 24) )
     goto LABEL_45;
   questBoardListViewManager = this->fields.questBoardListViewManager;
@@ -138,10 +138,10 @@ void __fastcall QuestBoardEffectController__StartBoardAppearEffect(
 LABEL_16:
     v26 = 0LL;
 LABEL_20:
-    v27 = UnityEngine_Object__Instantiate_object__51108816(
+    v27 = UnityEngine_Object__Instantiate_object__50900816(
             v26,
             transform,
-            (const MethodInfo_30BDBD0 *)Method_UnityEngine_Object_Instantiate_QuestBoardListEffectAppearComponent___);
+            (const MethodInfo_308AF50 *)Method_UnityEngine_Object_Instantiate_QuestBoardListEffectAppearComponent___);
     questBoardListViewManager = (QuestBoardListViewManager_o *)UnityEngine_Object__op_Equality(
                                                                  (UnityEngine_Object_o *)v27,
                                                                  0LL,
@@ -201,10 +201,10 @@ LABEL_20:
                     v34);
                   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-                  if ( !byte_4B417DD )
+                  if ( !byte_4AFED5B )
                   {
-                    sub_1BDB878(&TerminalPramsManager_TypeInfo, v15);
-                    byte_4B417DD = 1;
+                    sub_1BC3008(&TerminalPramsManager_TypeInfo, v15);
+                    byte_4AFED5B = 1;
                   }
                   v35 = TerminalPramsManager_TypeInfo;
                   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -237,13 +237,13 @@ LABEL_20:
                             *(float *)&v27[7].klass,
                             v38);
                           v39 = this->fields.questBoardListViewManager;
-                          v40 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+                          v40 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
                           System_Action___ctor(
                             v40,
                             (Il2CppObject *)v13,
                             Method_QuestBoardEffectController___c__DisplayClass13_0__StartBoardAppearEffect_b__0__,
                             0LL);
-                          v41 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+                          v41 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
                           System_Action___ctor(
                             v41,
                             (Il2CppObject *)v13,
@@ -269,7 +269,7 @@ LABEL_20:
                                       HIDWORD(v27[6].monitor),
                                       0LL,
                                       0LL);
-                              UnityEngine_MonoBehaviour__StartCoroutine_70269772(
+                              UnityEngine_MonoBehaviour__StartCoroutine_70019872(
                                 (UnityEngine_MonoBehaviour_o *)this,
                                 v43,
                                 0LL);
@@ -282,7 +282,7 @@ LABEL_20:
                                         *(float *)&v27[7].monitor,
                                         0LL,
                                         0LL);
-                                UnityEngine_MonoBehaviour__StartCoroutine_70269772(
+                                UnityEngine_MonoBehaviour__StartCoroutine_70019872(
                                   (UnityEngine_MonoBehaviour_o *)this,
                                   v44,
                                   0LL);
@@ -302,7 +302,7 @@ LABEL_20:
       }
     }
 LABEL_45:
-    sub_1BDBAD4(questBoardListViewManager, v15);
+    sub_1BC3264(questBoardListViewManager, v15);
   }
 }
 
@@ -354,32 +354,32 @@ void __fastcall QuestBoardEffectController__StartBoardEffect(
   System_Collections_IEnumerator_o *v43; // x0
   System_Collections_Generic_List_Enumerator_object__o v44; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4B41762 & 1) == 0 )
+  if ( (byte_4AFECDF & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, method);
-    sub_1BDB878(
+    sub_1BC3008(&System_Action_TypeInfo, method);
+    sub_1BC3008(
       &Method_System_Collections_Generic_List_Enumerator_QuestBoardEffectController_BoardEffectInfo__Dispose__,
       v5);
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_Generic_List_Enumerator_QuestBoardEffectController_BoardEffectInfo__MoveNext__,
       v6);
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_Generic_List_Enumerator_QuestBoardEffectController_BoardEffectInfo__get_Current__,
       v7);
-    sub_1BDB878(&Method_System_Collections_Generic_List_QuestBoardEffectController_BoardEffectInfo__GetEnumerator__, v8);
-    sub_1BDB878(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v9);
-    sub_1BDB878(&TerminalSceneComponent_TypeInfo, v10);
-    sub_1BDB878(&Method_QuestBoardEffectController___c__StartBoardEffect_b__11_0__, v11);
-    sub_1BDB878(&QuestBoardEffectController___c_TypeInfo, v12);
-    byte_4B41762 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_QuestBoardEffectController_BoardEffectInfo__GetEnumerator__, v8);
+    sub_1BC3008(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v9);
+    sub_1BC3008(&TerminalSceneComponent_TypeInfo, v10);
+    sub_1BC3008(&Method_QuestBoardEffectController___c__StartBoardEffect_b__11_0__, v11);
+    sub_1BC3008(&QuestBoardEffectController___c_TypeInfo, v12);
+    byte_4AFECDF = 1;
   }
   memset(&v44, 0, sizeof(v44));
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4B3EEEF )
+  if ( !byte_4AFC38D )
   {
-    sub_1BDB878(&TerminalSceneComponent_TypeInfo, method);
-    byte_4B3EEEF = 1;
+    sub_1BC3008(&TerminalSceneComponent_TypeInfo, method);
+    byte_4AFC38D = 1;
   }
   v13 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -390,19 +390,19 @@ void __fastcall QuestBoardEffectController__StartBoardEffect(
   p_mInstance = &v13->static_fields->mInstance;
   v15 = *p_mInstance;
   this->fields.terminalSceneComponent = *p_mInstance;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.terminalSceneComponent, (int32_t)v15, v2, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.terminalSceneComponent, (int32_t)v15, v2, v3);
   terminalSceneComponent = this->fields.terminalSceneComponent;
   if ( !terminalSceneComponent )
     goto LABEL_31;
   mTerminalList = terminalSceneComponent->fields.mTerminalList;
   this->fields.scrTerminalListTop = mTerminalList;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.scrTerminalListTop, (int32_t)mTerminalList, v18, v19);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.scrTerminalListTop, (int32_t)mTerminalList, v18, v19);
   scrTerminalListTop = this->fields.scrTerminalListTop;
   if ( !scrTerminalListTop )
     goto LABEL_31;
   mQuestBoardListViewManager = scrTerminalListTop->fields.mQuestBoardListViewManager;
   this->fields.questBoardListViewManager = mQuestBoardListViewManager;
-  sub_1BDB81C(
+  sub_1BC2FAC(
     (CGThumbnailListItem_o *)&this->fields.questBoardListViewManager,
     (int32_t)mQuestBoardListViewManager,
     v22,
@@ -412,8 +412,8 @@ void __fastcall QuestBoardEffectController__StartBoardEffect(
     goto LABEL_31;
   mTitleInfo = v28->fields.mTitleInfo;
   this->fields.titleInfoControl = mTitleInfo;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.titleInfoControl, (int32_t)mTitleInfo, v26, v27);
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39166A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.titleInfoControl, (int32_t)mTitleInfo, v26, v27);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_38E0168 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
     goto LABEL_31;
   MissionNotifyManager__StartPause((MissionNotifyManager_o *)Instance, 0LL);
@@ -433,33 +433,33 @@ void __fastcall QuestBoardEffectController__StartBoardEffect(
       Instance = QuestBoardEffectController___c_TypeInfo;
     }
     v33 = (Il2CppObject *)**((_QWORD **)Instance + 23);
-    v32 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+    v32 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
     System_Action___ctor(v32, v33, Method_QuestBoardEffectController___c__StartBoardEffect_b__11_0__, 0LL);
     static_fields = QuestBoardEffectController___c_TypeInfo->static_fields;
     static_fields->__9__11_0 = v32;
-    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)v32, v35, v36);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)v32, v35, v36);
   }
   if ( !questBoardListViewManager
     || (QuestBoardListViewManager__SetMode(questBoardListViewManager, 3, v32, 0, 1, 0, v30),
         (Instance = this->fields.effectInfoList) == 0LL) )
   {
 LABEL_31:
-    sub_1BDBAD4(Instance, v17);
+    sub_1BC3264(Instance, v17);
   }
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v44,
     (System_Collections_Generic_List_object__o *)Instance,
-    (const MethodInfo_36D68BC *)Method_System_Collections_Generic_List_QuestBoardEffectController_BoardEffectInfo__GetEnumerator__);
+    (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_QuestBoardEffectController_BoardEffectInfo__GetEnumerator__);
   while ( 1 )
   {
     v37 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v44,
-            (const MethodInfo_346A2A4 *)Method_System_Collections_Generic_List_Enumerator_QuestBoardEffectController_BoardEffectInfo__MoveNext__);
+            (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_QuestBoardEffectController_BoardEffectInfo__MoveNext__);
     if ( !v37 )
       break;
     current = (QuestBoardEffectController_BoardEffectInfo_o *)v44.fields._current;
     if ( !v44.fields._current )
-      sub_1BDBAD4(v37, v38);
+      sub_1BC3264(v37, v38);
     klass = (int)v44.fields._current[2].klass;
     BYTE4(v44.fields._current[2].klass) = 1;
     if ( klass )
@@ -476,9 +476,9 @@ LABEL_31:
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v44,
-    (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_QuestBoardEffectController_BoardEffectInfo__Dispose__);
+    (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_QuestBoardEffectController_BoardEffectInfo__Dispose__);
   v43 = QuestBoardEffectController__CoOnEffectFinishAction(this, v42);
-  UnityEngine_MonoBehaviour__StartCoroutine_70269772((UnityEngine_MonoBehaviour_o *)this, v43, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70019872((UnityEngine_MonoBehaviour_o *)this, v43, 0LL);
 }
 
 
@@ -507,21 +507,21 @@ void __fastcall QuestBoardEffectController__StartBoardFadeEffect(
   System_Action_o *v22; // x19
   const MethodInfo *v23; // x4
 
-  if ( (byte_4B41765 & 1) == 0 )
+  if ( (byte_4AFECE2 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, effectInfo);
-    sub_1BDB878(&Method_UnityEngine_Object_Instantiate_QuestBoardListEffectComponent___, v5);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v6);
-    sub_1BDB878(&Method_QuestBoardEffectController___c__DisplayClass14_0__StartBoardFadeEffect_b__0__, v7);
-    sub_1BDB878(&QuestBoardEffectController___c__DisplayClass14_0_TypeInfo, v8);
-    byte_4B41765 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, effectInfo);
+    sub_1BC3008(&Method_UnityEngine_Object_Instantiate_QuestBoardListEffectComponent___, v5);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v6);
+    sub_1BC3008(&Method_QuestBoardEffectController___c__DisplayClass14_0__StartBoardFadeEffect_b__0__, v7);
+    sub_1BC3008(&QuestBoardEffectController___c__DisplayClass14_0_TypeInfo, v8);
+    byte_4AFECE2 = 1;
   }
-  v9 = sub_1BDBAC4(QuestBoardEffectController___c__DisplayClass14_0_TypeInfo);
+  v9 = sub_1BC3254(QuestBoardEffectController___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
     goto LABEL_12;
   *(_QWORD *)(v9 + 16) = effectInfo;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v9 + 16), (int32_t)effectInfo, v12, v13);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)effectInfo, v12, v13);
   v14 = *(_QWORD *)(v9 + 16);
   if ( !v14 )
     goto LABEL_12;
@@ -535,17 +535,17 @@ void __fastcall QuestBoardEffectController__StartBoardFadeEffect(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)fadePanel, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  fadePanel = UnityEngine_Object__Instantiate_object__51108816(
+  fadePanel = UnityEngine_Object__Instantiate_object__50900816(
                 v16,
                 transform,
-                (const MethodInfo_30BDBD0 *)Method_UnityEngine_Object_Instantiate_QuestBoardListEffectComponent___);
+                (const MethodInfo_308AF50 *)Method_UnityEngine_Object_Instantiate_QuestBoardListEffectComponent___);
   if ( !fadePanel
     || (v18 = (QuestBoardListEffectComponent_o *)fadePanel,
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)fadePanel, 0LL),
         GameObjectExtensions__ResetTransform(gameObject, 0LL),
         QuestBoardListEffectComponent__Init(v18, 0, 0.0, 0.0, v20),
         v21 = this->fields.questBoardListViewManager,
-        v22 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo),
+        v22 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo),
         System_Action___ctor(
           v22,
           (Il2CppObject *)v9,
@@ -554,7 +554,7 @@ void __fastcall QuestBoardEffectController__StartBoardFadeEffect(
         !v21) )
   {
 LABEL_12:
-    sub_1BDBAD4(fadePanel, v11);
+    sub_1BC3264(fadePanel, v11);
   }
   QuestBoardListViewManager__PlayBoardEffect((QuestBoardListViewManager_o *)fadePanel, v18, 0LL, v22, v23);
 }
@@ -575,13 +575,13 @@ bool __fastcall QuestBoardEffectController___CoOnEffectFinishAction_b__12_0(
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4B41766 & 1) == 0 )
+  if ( (byte_4AFECE3 & 1) == 0 )
   {
-    sub_1BDB878(&Method_BasicHelper_Any_QuestBoardEffectController_BoardEffectInfo___, method);
-    sub_1BDB878(&System_Func_QuestBoardEffectController_BoardEffectInfo__bool__TypeInfo, v3);
-    sub_1BDB878(&Method_QuestBoardEffectController___c__CoOnEffectFinishAction_b__12_3__, v4);
-    sub_1BDB878(&QuestBoardEffectController___c_TypeInfo, v5);
-    byte_4B41766 = 1;
+    sub_1BC3008(&Method_BasicHelper_Any_QuestBoardEffectController_BoardEffectInfo___, method);
+    sub_1BC3008(&System_Func_QuestBoardEffectController_BoardEffectInfo__bool__TypeInfo, v3);
+    sub_1BC3008(&Method_QuestBoardEffectController___c__CoOnEffectFinishAction_b__12_3__, v4);
+    sub_1BC3008(&QuestBoardEffectController___c_TypeInfo, v5);
+    byte_4AFECE3 = 1;
   }
   v6 = QuestBoardEffectController___c_TypeInfo;
   effectInfoList = (System_Collections_Generic_List_T__o *)this->fields.effectInfoList;
@@ -599,7 +599,7 @@ bool __fastcall QuestBoardEffectController___CoOnEffectFinishAction_b__12_0(
       v6 = QuestBoardEffectController___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__12_3 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_QuestBoardEffectController_BoardEffectInfo__bool__TypeInfo);
+    _9__12_3 = (System_Func_object__bool__o *)sub_1BC3254(System_Func_QuestBoardEffectController_BoardEffectInfo__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__12_3,
       v9,
@@ -607,12 +607,12 @@ bool __fastcall QuestBoardEffectController___CoOnEffectFinishAction_b__12_0(
       0LL);
     static_fields = QuestBoardEffectController___c_TypeInfo->static_fields;
     static_fields->__9__12_3 = (struct System_Func_QuestBoardEffectController_BoardEffectInfo__bool__o *)_9__12_3;
-    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__12_3, (int32_t)_9__12_3, v11, v12);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__12_3, (int32_t)_9__12_3, v11, v12);
   }
   return BasicHelper__Any_object_(
            effectInfoList,
            (System_Func_T__bool__o *)_9__12_3,
-           (const MethodInfo_301CDFC *)Method_BasicHelper_Any_QuestBoardEffectController_BoardEffectInfo___);
+           (const MethodInfo_2FEB2DC *)Method_BasicHelper_Any_QuestBoardEffectController_BoardEffectInfo___);
 }
 
 
@@ -625,19 +625,19 @@ void __fastcall QuestBoardEffectController___CoOnEffectFinishAction_b__12_1(
   struct TerminalSceneComponent_o *terminalSceneComponent; // x8
 
   v2 = this;
-  if ( (byte_4B41767 & 1) == 0 )
+  if ( (byte_4AFECE4 & 1) == 0 )
   {
-    sub_1BDB878(&BgmManager_TypeInfo, method);
-    this = (QuestBoardEffectController_o *)sub_1BDB878(&StringLiteral_20917/*"isBgmPauseEnded"*/, v3);
-    byte_4B41767 = 1;
+    sub_1BC3008(&BgmManager_TypeInfo, method);
+    this = (QuestBoardEffectController_o *)sub_1BC3008(&StringLiteral_20703/*"isBgmPauseEnded"*/, v3);
+    byte_4AFECE4 = 1;
   }
   terminalSceneComponent = v2->fields.terminalSceneComponent;
   if ( !terminalSceneComponent
     || (this = (QuestBoardEffectController_o *)terminalSceneComponent->fields.mTerminalList) == 0LL )
   {
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   }
-  ScrTerminalListTop__SetFsmValueBool((ScrTerminalListTop_o *)this, (System_String_o *)StringLiteral_20917/*"isBgmPauseEnded"*/, 0, 0LL);
+  ScrTerminalListTop__SetFsmValueBool((ScrTerminalListTop_o *)this, (System_String_o *)StringLiteral_20703/*"isBgmPauseEnded"*/, 0, 0LL);
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
   BgmManager__PauseBgm(0, 0LL);
@@ -655,17 +655,17 @@ void __fastcall QuestBoardEffectController___CoOnEffectFinishAction_b__12_2(
   System_Action_o *v7; // x21
   System_Collections_IEnumerator_o *v8; // x1
 
-  if ( (byte_4B41768 & 1) == 0 )
+  if ( (byte_4AFECE5 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, method);
-    sub_1BDB878(&Method_QuestBoardEffectController__CoOnEffectFinishAction_b__12_4__, v4);
-    byte_4B41768 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, method);
+    sub_1BC3008(&Method_QuestBoardEffectController__CoOnEffectFinishAction_b__12_4__, v4);
+    byte_4AFECE5 = 1;
   }
   questBoardListViewManager = this->fields.questBoardListViewManager;
   if ( !questBoardListViewManager
     || (QuestBoardListViewManager__SetScrollBarEnable(questBoardListViewManager, 1, v2),
         scrTerminalListTop = this->fields.scrTerminalListTop,
-        v7 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo),
+        v7 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo),
         System_Action___ctor(
           v7,
           (Il2CppObject *)this,
@@ -673,10 +673,10 @@ void __fastcall QuestBoardEffectController___CoOnEffectFinishAction_b__12_2(
           0LL),
         !scrTerminalListTop) )
   {
-    sub_1BDBAD4(questBoardListViewManager, method);
+    sub_1BC3264(questBoardListViewManager, method);
   }
   v8 = ScrTerminalListTop__CoWaitEffectWhileNotification(scrTerminalListTop, v7, 0LL);
-  UnityEngine_MonoBehaviour__StartCoroutine_70269772((UnityEngine_MonoBehaviour_o *)this, v8, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70019872((UnityEngine_MonoBehaviour_o *)this, v8, 0LL);
 }
 
 
@@ -690,13 +690,13 @@ void __fastcall QuestBoardEffectController___CoOnEffectFinishAction_b__12_4(
   UnityEngine_Object_o *gameObject; // x20
   UnityEngine_Object_o *v7; // x19
 
-  if ( (byte_4B41769 & 1) == 0 )
+  if ( (byte_4AFECE6 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    sub_1BDB878(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v3);
-    byte_4B41769 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    sub_1BC3008(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v3);
+    byte_4AFECE6 = 1;
   }
-  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39166A8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38E0168 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   MissionNotifyManager__CancelPause(Instance, 0LL);
@@ -712,11 +712,11 @@ void __fastcall QuestBoardEffectController___CoOnEffectFinishAction_b__12_4(
       v7 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_70284200(v7, 0LL);
+      UnityEngine_Object__Destroy_70034300(v7, 0LL);
       return;
     }
 LABEL_11:
-    sub_1BDBAD4(Instance, v5);
+    sub_1BC3264(Instance, v5);
   }
 }
 
@@ -779,26 +779,26 @@ bool __fastcall QuestBoardEffectController__CoOnEffectFinishAction_d__12__MoveNe
   System_String_o *messageLocalizationKey; // x22
   struct QuestBoardEffectController_DialogParameter_o *v29; // x8
 
-  if ( (byte_4B4176B & 1) == 0 )
+  if ( (byte_4AFECE8 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, method);
-    sub_1BDB878(&System_Func_bool__TypeInfo, v3);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v4);
-    sub_1BDB878(&Method_QuestBoardEffectController__CoOnEffectFinishAction_b__12_0__, v5);
-    sub_1BDB878(&Method_QuestBoardEffectController__CoOnEffectFinishAction_b__12_1__, v6);
-    sub_1BDB878(&Method_QuestBoardEffectController__CoOnEffectFinishAction_b__12_2__, v7);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_1BDB878(&TerminalPramsManager_TypeInfo, v9);
-    sub_1BDB878(&UnityEngine_WaitWhile_TypeInfo, v10);
-    sub_1BDB878(&StringLiteral_1/*""*/, v11);
-    byte_4B4176B = 1;
+    sub_1BC3008(&System_Action_TypeInfo, method);
+    sub_1BC3008(&System_Func_bool__TypeInfo, v3);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v4);
+    sub_1BC3008(&Method_QuestBoardEffectController__CoOnEffectFinishAction_b__12_0__, v5);
+    sub_1BC3008(&Method_QuestBoardEffectController__CoOnEffectFinishAction_b__12_1__, v6);
+    sub_1BC3008(&Method_QuestBoardEffectController__CoOnEffectFinishAction_b__12_2__, v7);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
+    sub_1BC3008(&TerminalPramsManager_TypeInfo, v9);
+    sub_1BC3008(&UnityEngine_WaitWhile_TypeInfo, v10);
+    sub_1BC3008(&StringLiteral_1/*""*/, v11);
+    byte_4AFECE8 = 1;
   }
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
   if ( _1__state == 1 )
   {
     this->fields.__1__state = -1;
-    v19 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+    v19 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
     System_Action___ctor(
       v19,
       (Il2CppObject *)_4__this,
@@ -835,7 +835,7 @@ bool __fastcall QuestBoardEffectController__CoOnEffectFinishAction_d__12__MoveNe
             if ( terminalSceneComponent )
             {
               ScrTerminalListTop__IsAllTouchEnable((ScrTerminalListTop_o *)terminalSceneComponent, 1, 0LL, 0LL);
-              v25 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+              v25 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
               System_Action___ctor(
                 v25,
                 (Il2CppObject *)_4__this,
@@ -846,7 +846,7 @@ bool __fastcall QuestBoardEffectController__CoOnEffectFinishAction_d__12__MoveNe
                 ActionExtensions__Call(v25, 0LL);
                 return 0;
               }
-              terminalSceneComponent = (TerminalSceneComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+              terminalSceneComponent = (TerminalSceneComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
               dialogParameterAfterEffectFinish = _4__this->fields.dialogParameterAfterEffectFinish;
               if ( dialogParameterAfterEffectFinish )
               {
@@ -862,7 +862,7 @@ bool __fastcall QuestBoardEffectController__CoOnEffectFinishAction_d__12__MoveNe
                 {
                   if ( v27 )
                   {
-                    CommonUI__OpenNotificationDialog_30834564(
+                    CommonUI__OpenNotificationDialog_30732028(
                       v27,
                       (System_String_o *)StringLiteral_1/*""*/,
                       (System_String_o *)terminalSceneComponent,
@@ -890,21 +890,21 @@ bool __fastcall QuestBoardEffectController__CoOnEffectFinishAction_d__12__MoveNe
       }
     }
 LABEL_25:
-    sub_1BDBAD4(terminalSceneComponent, v21);
+    sub_1BC3264(terminalSceneComponent, v21);
   }
   if ( !_1__state )
   {
     this->fields.__1__state = -1;
-    v14 = (System_Func_bool__o *)sub_1BDBAC4(System_Func_bool__TypeInfo);
+    v14 = (System_Func_bool__o *)sub_1BC3254(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(
       v14,
       (Il2CppObject *)_4__this,
       Method_QuestBoardEffectController__CoOnEffectFinishAction_b__12_0__,
       0LL);
-    v15 = (UnityEngine_WaitWhile_o *)sub_1BDBAC4(UnityEngine_WaitWhile_TypeInfo);
+    v15 = (UnityEngine_WaitWhile_o *)sub_1BC3254(UnityEngine_WaitWhile_TypeInfo);
     UnityEngine_WaitWhile___ctor(v15, v14, 0LL);
     this->fields.__2__current = (Il2CppObject *)v15;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v15, v16, v17);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v15, v16, v17);
     result = 1;
     this->fields.__1__state = 1;
     return result;
@@ -929,11 +929,11 @@ void __fastcall __noreturn QuestBoardEffectController__CoOnEffectFinishAction_d_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BDB88C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BDBAC4(v2);
+  v2 = sub_1BC301C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BC3254(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BDB88C(&Method_QuestBoardEffectController__CoOnEffectFinishAction_d__12_System_Collections_IEnumerator_Reset__);
-  sub_1BDB9A0(v3, v4);
+  v4 = sub_1BC301C(&Method_QuestBoardEffectController__CoOnEffectFinishAction_d__12_System_Collections_IEnumerator_Reset__);
+  sub_1BC3130(v3, v4);
 }
 
 
@@ -960,15 +960,15 @@ void __fastcall QuestBoardEffectController___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B4176A & 1) == 0 )
+  if ( (byte_4AFECE7 & 1) == 0 )
   {
-    sub_1BDB878(&QuestBoardEffectController___c_TypeInfo, v1);
-    byte_4B4176A = 1;
+    sub_1BC3008(&QuestBoardEffectController___c_TypeInfo, v1);
+    byte_4AFECE7 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BDBAC4(QuestBoardEffectController___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BC3254(QuestBoardEffectController___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   QuestBoardEffectController___c_TypeInfo->static_fields->__9 = (struct QuestBoardEffectController___c_o *)v2;
-  sub_1BDB81C((CGThumbnailListItem_o *)QuestBoardEffectController___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BC2FAC((CGThumbnailListItem_o *)QuestBoardEffectController___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -984,7 +984,7 @@ bool __fastcall QuestBoardEffectController___c___CoOnEffectFinishAction_b__12_3(
         const MethodInfo *method)
 {
   if ( !effectInfo )
-    sub_1BDBAD4(this, 0LL);
+    sub_1BC3264(this, 0LL);
   return effectInfo->fields.isPlaying;
 }
 
@@ -1018,7 +1018,7 @@ void __fastcall QuestBoardEffectController___c__DisplayClass13_0___StartBoardApp
     || (effectInfo = this->fields.effectInfo) == 0LL
     || (this = (QuestBoardEffectController___c__DisplayClass13_0_o *)_4__this->fields.questBoardListViewManager) == 0LL )
   {
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   }
   QuestBoardListViewManager__DispBoardForQuestBoardEffect(
     (QuestBoardListViewManager_o *)this,
@@ -1052,7 +1052,7 @@ void __fastcall QuestBoardEffectController___c__DisplayClass13_0___StartBoardApp
     || (QuestBoardListViewManager__SetupDisp((QuestBoardListViewManager_o *)this, method),
         (effectInfo = v4->fields.effectInfo) == 0LL) )
   {
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   }
   effectInfo->fields.isPlaying = 0;
 }
@@ -1074,6 +1074,6 @@ void __fastcall QuestBoardEffectController___c__DisplayClass14_0___StartBoardFad
 
   effectInfo = this->fields.effectInfo;
   if ( !effectInfo )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   effectInfo->fields.isPlaying = 0;
 }

@@ -13,14 +13,14 @@ void __fastcall CommandCodeUnlockRequest__beginRequest(
 {
   __int64 v7; // x1
 
-  if ( (byte_4B464B6 & 1) == 0 )
+  if ( (byte_4B03A65 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_23899/*"svtId"*/, *(_QWORD *)&servantId);
-    sub_1BDB878(&StringLiteral_20284/*"idx"*/, v7);
-    byte_4B464B6 = 1;
+    sub_1BC3008(&StringLiteral_23631/*"svtId"*/, *(_QWORD *)&servantId);
+    sub_1BC3008(&StringLiteral_20072/*"idx"*/, v7);
+    byte_4B03A65 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23899/*"svtId"*/, servantId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20284/*"idx"*/, idx, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23631/*"svtId"*/, servantId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20072/*"idx"*/, idx, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -32,16 +32,16 @@ System_String_o *__fastcall CommandCodeUnlockRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B464B5 & 1) == 0 )
+  if ( (byte_4B03A64 & 1) == 0 )
   {
-    sub_1BDB878(&NetworkManager_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_18164/*"commandCode/unlock"*/, v2);
-    byte_4B464B5 = 1;
+    sub_1BC3008(&NetworkManager_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_17994/*"commandCode/unlock"*/, v2);
+    byte_4B03A64 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_18164/*"commandCode/unlock"*/, 0LL);
+  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_17994/*"commandCode/unlock"*/, 0LL);
 }
 
 
@@ -57,17 +57,17 @@ void __fastcall CommandCodeUnlockRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_4B464B7 & 1) == 0 )
+  if ( (byte_4B03A66 & 1) == 0 )
   {
-    sub_1BDB878(&JsonManager_TypeInfo, responseList);
-    sub_1BDB878(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BDB878(&StringLiteral_22233/*"ng"*/, v6);
-    byte_4B464B7 = 1;
+    sub_1BC3008(&JsonManager_TypeInfo, responseList);
+    sub_1BC3008(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BC3008(&StringLiteral_21997/*"ng"*/, v6);
+    byte_4B03A66 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(79, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_43151432(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_43184840(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -76,7 +76,7 @@ void __fastcall CommandCodeUnlockRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_22233/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_21997/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

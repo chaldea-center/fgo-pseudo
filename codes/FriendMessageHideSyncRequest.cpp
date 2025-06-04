@@ -8,18 +8,18 @@ void __fastcall FriendMessageHideSyncRequest__beginRequest(
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4B46546 & 1) == 0 )
+  if ( (byte_4B03AF5 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_19985/*"hideUserIds"*/, hideUserIds);
-    sub_1BDB878(&StringLiteral_24343/*"unHideUserIds"*/, v7);
-    byte_4B46546 = 1;
+    sub_1BC3008(&StringLiteral_19777/*"hideUserIds"*/, hideUserIds);
+    sub_1BC3008(&StringLiteral_24051/*"unHideUserIds"*/, v7);
+    byte_4B03AF5 = 1;
   }
-  RequestBase__addField_43155368(
+  RequestBase__addField_43193604(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19985/*"hideUserIds"*/,
+    (System_String_o *)StringLiteral_19777/*"hideUserIds"*/,
     &hideUserIds->obj,
     method);
-  RequestBase__addField_43155368((RequestBase_o *)this, (System_String_o *)StringLiteral_24343/*"unHideUserIds"*/, &unHideUserIds->obj, v8);
+  RequestBase__addField_43193604((RequestBase_o *)this, (System_String_o *)StringLiteral_24051/*"unHideUserIds"*/, &unHideUserIds->obj, v8);
   RequestBase__beginRequest((RequestBase_o *)this, v9);
 }
 
@@ -31,16 +31,16 @@ System_String_o *__fastcall FriendMessageHideSyncRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B46545 & 1) == 0 )
+  if ( (byte_4B03AF4 & 1) == 0 )
   {
-    sub_1BDB878(&NetworkManager_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_19686/*"friend/messageHideSync"*/, v2);
-    byte_4B46545 = 1;
+    sub_1BC3008(&NetworkManager_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_19487/*"friend/messageHideSync"*/, v2);
+    byte_4B03AF4 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_19686/*"friend/messageHideSync"*/, 0LL);
+  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_19487/*"friend/messageHideSync"*/, 0LL);
 }
 
 
@@ -56,12 +56,12 @@ void __fastcall FriendMessageHideSyncRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v10; // x9
 
-  if ( (byte_4B46547 & 1) == 0 )
+  if ( (byte_4B03AF6 & 1) == 0 )
   {
-    sub_1BDB878(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1BDB878(&StringLiteral_22401/*"ok"*/, v5);
-    sub_1BDB878(&StringLiteral_22233/*"ng"*/, v6);
-    byte_4B46547 = 1;
+    sub_1BC3008(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1BC3008(&StringLiteral_22163/*"ok"*/, v5);
+    sub_1BC3008(&StringLiteral_21997/*"ng"*/, v6);
+    byte_4B03AF6 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -71,14 +71,14 @@ void __fastcall FriendMessageHideSyncRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22401/*"ok"*/;
+    v10 = &StringLiteral_22163/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22233/*"ng"*/;
+    v10 = &StringLiteral_21997/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

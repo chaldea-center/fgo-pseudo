@@ -10,23 +10,23 @@ void __fastcall Crc32___cctor(const MethodInfo *method)
   const MethodInfo *v8; // x3
   System_RuntimeFieldHandle_o v9; // 0:w1.4
 
-  if ( (byte_4B44176 & 1) == 0 )
+  if ( (byte_4B01707 & 1) == 0 )
   {
-    sub_1BDB878(&Crc32_TypeInfo, v1);
-    sub_1BDB878(
+    sub_1BC3008(&Crc32_TypeInfo, v1);
+    sub_1BC3008(
       &Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86,
       v2);
-    sub_1BDB878(&uint___TypeInfo, v3);
-    byte_4B44176 = 1;
+    sub_1BC3008(&uint___TypeInfo, v3);
+    byte_4B01707 = 1;
   }
   Crc32_TypeInfo->static_fields->CRC_UNIT = 256;
-  v4 = (System_Array_o *)sub_1BDB920(uint___TypeInfo, 256LL);
+  v4 = (System_Array_o *)sub_1BC30B0(uint___TypeInfo, 256LL);
   v9.fields.value = Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86;
   v5 = v4;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63272576(v4, v9, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63047724(v4, v9, 0LL);
   static_fields = Crc32_TypeInfo->static_fields;
   static_fields->CrcTable = (struct System_UInt32_array *)v5;
-  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->CrcTable, (int32_t)v5, v7, v8);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->CrcTable, (int32_t)v5, v7, v8);
 }
 
 
@@ -42,14 +42,14 @@ uint32_t __fastcall Crc32__Compute(System_Byte_array *buffer, const MethodInfo *
   unsigned int v9; // w10
 
   v3 = buffer;
-  if ( (byte_4B44173 & 1) == 0 )
+  if ( (byte_4B01704 & 1) == 0 )
   {
-    buffer = (System_Byte_array *)sub_1BDB878(&Crc32_TypeInfo, method);
-    byte_4B44173 = 1;
+    buffer = (System_Byte_array *)sub_1BC3008(&Crc32_TypeInfo, method);
+    byte_4B01704 = 1;
   }
   if ( !v3 )
 LABEL_15:
-    sub_1BDBAD4(buffer, method);
+    sub_1BC3264(buffer, method);
   v4 = *(_QWORD *)&v3->max_length;
   if ( (int)v4 - 1 < 0 )
     return 0;
@@ -73,7 +73,7 @@ LABEL_15:
     v9 = (unsigned __int8)v6 ^ v3->m_Items[v5 + 4];
     if ( v9 >= *(_DWORD *)(v8 + 24) )
 LABEL_14:
-      sub_1BDBADC(buffer, method, v2);
+      sub_1BC326C(buffer, method, v2);
     ++v5;
     v6 = *(_DWORD *)(v8 + 4LL * v9 + 32) ^ (v6 >> 8);
   }
@@ -83,7 +83,7 @@ LABEL_14:
 
 
 // local variable allocation has failed, the output may be wrong!
-uint32_t __fastcall Crc32__Compute_40252332(System_Byte_array *buffer, int32_t length, const MethodInfo *method)
+uint32_t __fastcall Crc32__Compute_40270932(System_Byte_array *buffer, int32_t length, const MethodInfo *method)
 {
   int32_t v3; // w20
   System_Byte_array *v4; // x19
@@ -95,14 +95,14 @@ uint32_t __fastcall Crc32__Compute_40252332(System_Byte_array *buffer, int32_t l
 
   v3 = length;
   v4 = buffer;
-  if ( (byte_4B44174 & 1) == 0 )
+  if ( (byte_4B01705 & 1) == 0 )
   {
-    buffer = (System_Byte_array *)sub_1BDB878(&Crc32_TypeInfo, *(_QWORD *)&length);
-    byte_4B44174 = 1;
+    buffer = (System_Byte_array *)sub_1BC3008(&Crc32_TypeInfo, *(_QWORD *)&length);
+    byte_4B01705 = 1;
   }
   if ( !v4 )
 LABEL_17:
-    sub_1BDBAD4(buffer, *(_QWORD *)&length);
+    sub_1BC3264(buffer, *(_QWORD *)&length);
   v5 = *(_QWORD *)&v4->max_length;
   if ( (int)v5 < v3 )
     v3 = *(_QWORD *)&v4->max_length;
@@ -127,7 +127,7 @@ LABEL_17:
     v9 = (unsigned __int8)v7 ^ v4->m_Items[v6 + 4];
     if ( v9 >= *(_DWORD *)(v8 + 24) )
 LABEL_16:
-      sub_1BDBADC(buffer, *(_QWORD *)&length, method);
+      sub_1BC326C(buffer, *(_QWORD *)&length, method);
     ++v6;
     v7 = *(_DWORD *)(v8 + 4LL * v9 + 32) ^ (v7 >> 8);
   }
@@ -137,7 +137,7 @@ LABEL_16:
 
 
 // local variable allocation has failed, the output may be wrong!
-uint32_t __fastcall Crc32__Compute_40252556(
+uint32_t __fastcall Crc32__Compute_40271156(
         System_Byte_array *buffer,
         int32_t length,
         uint32_t crc,
@@ -153,14 +153,14 @@ uint32_t __fastcall Crc32__Compute_40252556(
 
   v5 = length;
   v6 = buffer;
-  if ( (byte_4B44175 & 1) == 0 )
+  if ( (byte_4B01706 & 1) == 0 )
   {
-    buffer = (System_Byte_array *)sub_1BDB878(&Crc32_TypeInfo, *(_QWORD *)&length);
-    byte_4B44175 = 1;
+    buffer = (System_Byte_array *)sub_1BC3008(&Crc32_TypeInfo, *(_QWORD *)&length);
+    byte_4B01706 = 1;
   }
   if ( !v6 )
 LABEL_16:
-    sub_1BDBAD4(buffer, *(_QWORD *)&length);
+    sub_1BC3264(buffer, *(_QWORD *)&length);
   v7 = *(_QWORD *)&v6->max_length;
   v8 = ~crc;
   if ( (int)v7 < v5 )
@@ -185,7 +185,7 @@ LABEL_16:
       v11 = (unsigned __int8)v8 ^ v6->m_Items[v9 + 4];
       if ( v11 >= *(_DWORD *)(v10 + 24) )
 LABEL_15:
-        sub_1BDBADC(buffer, *(_QWORD *)&length, *(_QWORD *)&crc);
+        sub_1BC326C(buffer, *(_QWORD *)&length, *(_QWORD *)&crc);
       ++v9;
       v8 = *(_DWORD *)(v10 + 4LL * v11 + 32) ^ (v8 >> 8);
     }

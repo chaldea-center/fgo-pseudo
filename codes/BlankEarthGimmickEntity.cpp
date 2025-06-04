@@ -1,13 +1,13 @@
 void __fastcall BlankEarthGimmickEntity___ctor(BlankEarthGimmickEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B44712 & 1) == 0 )
+  if ( (byte_4B01CB5 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B44712 = 1;
+    sub_1BC3008(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B01CB5 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32DF958 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32ACB8C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -17,12 +17,12 @@ bool __fastcall BlankEarthGimmickEntity__CheckGimmickCond(BlankEarthGimmickEntit
   __int64 v4; // x1
   bool v5; // w20
 
-  if ( (byte_4B4470C & 1) == 0 )
+  if ( (byte_4B01CAF & 1) == 0 )
   {
-    sub_1BDB878(&Method_SingletonTemplate_QuestTree__get_Instance__, method);
-    byte_4B4470C = 1;
+    sub_1BC3008(&Method_SingletonTemplate_QuestTree__get_Instance__, method);
+    byte_4B01CAF = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39166A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_38E0168 *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !Instance
     || (v5 = QuestTree__CheckMapGimmickCond(
                (QuestTree_o *)Instance,
@@ -31,9 +31,9 @@ bool __fastcall BlankEarthGimmickEntity__CheckGimmickCond(BlankEarthGimmickEntit
                this->fields.dispTargetId,
                this->fields.dispTargetValue,
                0LL),
-        (Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39166A8 *)Method_SingletonTemplate_QuestTree__get_Instance__)) == 0LL) )
+        (Instance = SingletonTemplate_object___get_Instance((const MethodInfo_38E0168 *)Method_SingletonTemplate_QuestTree__get_Instance__)) == 0LL) )
   {
-    sub_1BDBAD4(Instance, v4);
+    sub_1BC3264(Instance, v4);
   }
   return v5 & QuestTree__CheckMapGimmickCond(
                 (QuestTree_o *)Instance,
@@ -57,12 +57,12 @@ System_String_o *__fastcall BlankEarthGimmickEntity__GetBlankEarthOtherObjectFro
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4B4470F & 1) == 0 )
+  if ( (byte_4B01CB2 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_17322/*"blankEarthOtherObject"*/, method);
-    byte_4B4470F = 1;
+    sub_1BC3008(&StringLiteral_17157/*"blankEarthOtherObject"*/, method);
+    byte_4B01CB2 = 1;
   }
-  return BlankEarthGimmickEntity__GetStrFromScript(this, (System_String_o *)StringLiteral_17322/*"blankEarthOtherObject"*/, v2);
+  return BlankEarthGimmickEntity__GetStrFromScript(this, (System_String_o *)StringLiteral_17157/*"blankEarthOtherObject"*/, v2);
 }
 
 
@@ -76,11 +76,11 @@ int32_t __fastcall BlankEarthGimmickEntity__GetIntFromScript(
   Il2CppObject *v7; // x19
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B44710 & 1) == 0 )
+  if ( (byte_4B01CB3 & 1) == 0 )
   {
-    sub_1BDB878(&System_Convert_TypeInfo, key);
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v5);
-    byte_4B44710 = 1;
+    sub_1BC3008(&System_Convert_TypeInfo, key);
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v5);
+    byte_4B01CB3 = 1;
   }
   value = 0LL;
   script = this->fields.script;
@@ -90,7 +90,7 @@ int32_t __fastcall BlankEarthGimmickEntity__GetIntFromScript(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_33A1A3C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_336E7F4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       v7 = value;
       if ( !System_Convert_TypeInfo->_2.cctor_finished )
@@ -116,11 +116,11 @@ System_String_o *__fastcall BlankEarthGimmickEntity__GetStrFromScript(
   Il2CppObject *v7; // x19
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B44711 & 1) == 0 )
+  if ( (byte_4B01CB4 & 1) == 0 )
   {
-    sub_1BDB878(&System_Convert_TypeInfo, key);
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v5);
-    byte_4B44711 = 1;
+    sub_1BC3008(&System_Convert_TypeInfo, key);
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, v5);
+    byte_4B01CB4 = 1;
   }
   value = 0LL;
   result = (System_String_o *)this->fields.script;
@@ -130,7 +130,7 @@ System_String_o *__fastcall BlankEarthGimmickEntity__GetStrFromScript(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_33A1A3C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_336E7F4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       v7 = value;
       if ( !System_Convert_TypeInfo->_2.cctor_finished )
@@ -152,12 +152,12 @@ int32_t __fastcall BlankEarthGimmickEntity__GetUseAnimFromScript(
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4B4470E & 1) == 0 )
+  if ( (byte_4B01CB1 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_24537/*"useAnim"*/, method);
-    byte_4B4470E = 1;
+    sub_1BC3008(&StringLiteral_24238/*"useAnim"*/, method);
+    byte_4B01CB1 = 1;
   }
-  return BlankEarthGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24537/*"useAnim"*/, v2);
+  return BlankEarthGimmickEntity__GetIntFromScript(this, (System_String_o *)StringLiteral_24238/*"useAnim"*/, v2);
 }
 
 
@@ -174,10 +174,10 @@ bool __fastcall BlankEarthGimmickEntity__IsOpen(BlankEarthGimmickEntity_o *this,
 {
   int64_t Time; // x0
 
-  if ( (byte_4B4470D & 1) == 0 )
+  if ( (byte_4B01CB0 & 1) == 0 )
   {
-    sub_1BDB878(&NetworkManager_TypeInfo, method);
-    byte_4B4470D = 1;
+    sub_1BC3008(&NetworkManager_TypeInfo, method);
+    byte_4B01CB0 = 1;
   }
   if ( !BlankEarthGimmickEntity__CheckGimmickCond(this, method) )
     return 0;

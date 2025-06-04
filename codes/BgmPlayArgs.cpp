@@ -13,16 +13,16 @@ void __fastcall BgmPlayArgs___ctor(
   float value; // s0
   BgmManager_c *v16; // x0
 
-  if ( (byte_4B4410F & 1) == 0 )
+  if ( (byte_4B016A0 & 1) == 0 )
   {
-    sub_1BDB878(&BgmManager_TypeInfo, bgmName);
-    sub_1BDB878(&Method_System_Nullable_float__GetValueOrDefault__, v11);
-    sub_1BDB878(&Method_System_Nullable_float__get_HasValue__, v12);
-    byte_4B4410F = 1;
+    sub_1BC3008(&BgmManager_TypeInfo, bgmName);
+    sub_1BC3008(&Method_System_Nullable_float__GetValueOrDefault__, v11);
+    sub_1BC3008(&Method_System_Nullable_float__get_HasValue__, v12);
+    byte_4B016A0 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._BgmName_k__BackingField = bgmName;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)bgmName, v13, v14);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)bgmName, v13, v14);
   if ( volume.fields.hasValue )
   {
     value = volume.fields.value;
@@ -62,18 +62,18 @@ void __fastcall BgmPlayArgs__Update(
   value = startTime.fields.value;
   hasValue = startTime.fields.hasValue;
   v9 = this;
-  if ( (byte_4B44110 & 1) == 0 )
+  if ( (byte_4B016A1 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Nullable_float__GetValueOrDefault__, volume);
-    sub_1BDB878(&Method_System_Nullable_long__GetValueOrDefault__, v10);
-    sub_1BDB878(&Method_System_Nullable_long__get_HasValue__, v11);
-    this = (BgmPlayArgs_o *)sub_1BDB878(&Method_System_Nullable_float__get_HasValue__, v12);
-    byte_4B44110 = 1;
+    sub_1BC3008(&Method_System_Nullable_float__GetValueOrDefault__, volume);
+    sub_1BC3008(&Method_System_Nullable_long__GetValueOrDefault__, v10);
+    sub_1BC3008(&Method_System_Nullable_long__get_HasValue__, v11);
+    this = (BgmPlayArgs_o *)sub_1BC3008(&Method_System_Nullable_float__get_HasValue__, v12);
+    byte_4B016A1 = 1;
   }
   if ( volume.fields.hasValue )
   {
     if ( !v9 )
-      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1BDBAD4)(this, volume);
+      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1BC3264)(this, volume);
     Volume_k__BackingField = volume.fields.value;
   }
   else
@@ -121,7 +121,7 @@ void __fastcall BgmPlayArgs__set_BgmName(BgmPlayArgs_o *this, System_String_o *v
   const MethodInfo *v3; // x3
 
   this->fields._BgmName_k__BackingField = value;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 

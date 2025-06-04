@@ -20,13 +20,13 @@ void __fastcall EventMissionActionInfo___ctor(
     vals = eventMissionActionEntity->fields.vals;
     this->fields.vals = vals;
     p_vals = &this->fields.vals;
-    sub_1BDB81C((CGThumbnailListItem_o *)p_vals, (int32_t)vals, v5, v6);
+    sub_1BC2FAC((CGThumbnailListItem_o *)p_vals, (int32_t)vals, v5, v6);
     *((_DWORD *)p_vals + 2) = eventMissionActionEntity->fields.optionId;
   }
 }
 
 
-void __fastcall EventMissionActionInfo___ctor_43827660(
+void __fastcall EventMissionActionInfo___ctor_43872792(
         EventMissionActionInfo_o *this,
         EventMissionActionAddEntity_o *eventMissionActionAddEntity,
         const MethodInfo *method)
@@ -45,7 +45,7 @@ void __fastcall EventMissionActionInfo___ctor_43827660(
     vals = eventMissionActionAddEntity->fields.vals;
     this->fields.vals = vals;
     p_vals = &this->fields.vals;
-    sub_1BDB81C((CGThumbnailListItem_o *)p_vals, (int32_t)vals, v5, v6);
+    sub_1BC2FAC((CGThumbnailListItem_o *)p_vals, (int32_t)vals, v5, v6);
     *((_DWORD *)p_vals + 2) = eventMissionActionAddEntity->fields.optionId;
   }
 }
@@ -70,7 +70,7 @@ int32_t __fastcall EventMissionActionInfo__getValID(EventMissionActionInfo_o *th
     if ( this->fields.missionActionType == 3 )
     {
       if ( !(_DWORD)v4 )
-        sub_1BDBADC(0xFFFFFFFFLL, method, v2);
+        sub_1BC326C(0xFFFFFFFFLL, method, v2);
       if ( System_Int32__TryParse(vals->m_Items[0], &result, 0LL) )
         return result;
       else
@@ -92,16 +92,16 @@ System_String_o *__fastcall EventMissionActionInfo__getValMessage(
   System_String_o **m_Items; // x8
 
   v3 = this;
-  if ( (byte_4B46A5C & 1) == 0 )
+  if ( (byte_4B04021 & 1) == 0 )
   {
-    this = (EventMissionActionInfo_o *)sub_1BDB878(&StringLiteral_1/*""*/, method);
-    byte_4B46A5C = 1;
+    this = (EventMissionActionInfo_o *)sub_1BC3008(&StringLiteral_1/*""*/, method);
+    byte_4B04021 = 1;
   }
   vals = v3->fields.vals;
   if ( vals && (v5 = *(_QWORD *)&vals->max_length) != 0 && (unsigned int)(v3->fields.missionActionType - 1) <= 1 )
   {
     if ( !(_DWORD)v5 )
-      sub_1BDBADC(this, method, v2);
+      sub_1BC326C(this, method, v2);
     m_Items = vals->m_Items;
   }
   else

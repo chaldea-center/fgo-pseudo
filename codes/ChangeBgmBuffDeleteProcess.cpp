@@ -19,29 +19,29 @@ void __fastcall ChangeBgmBuffDeleteProcess__Exec(
   const MethodInfo *v12; // x2
   __int64 v13; // x0
 
-  if ( (byte_4B47363 & 1) == 0 )
+  if ( (byte_4B04920 & 1) == 0 )
   {
-    sub_1BDB878(&BattleBuffData_BuffData___TypeInfo, buff);
-    byte_4B47363 = 1;
+    sub_1BC3008(&BattleBuffData_BuffData___TypeInfo, buff);
+    byte_4B04920 = 1;
   }
   FieldEnvData_k__BackingField = this->fields._FieldEnvData_k__BackingField;
-  v7 = (BattleFieldEnvironmentData_o *)sub_1BDB920(BattleBuffData_BuffData___TypeInfo, 1LL);
+  v7 = (BattleFieldEnvironmentData_o *)sub_1BC30B0(BattleBuffData_BuffData___TypeInfo, 1LL);
   if ( !v7 )
     goto LABEL_10;
   v11 = v7;
   if ( buff )
   {
-    v7 = (BattleFieldEnvironmentData_o *)sub_1BDB9B4(buff, v7->klass->_1.element_class);
+    v7 = (BattleFieldEnvironmentData_o *)sub_1BC3144(buff, v7->klass->_1.element_class);
     if ( !v7 )
     {
-      v13 = sub_1BDBAF8(0LL);
-      sub_1BDB9A0(v13, 0LL);
+      v13 = sub_1BC3288(0LL);
+      sub_1BC3130(v13, 0LL);
     }
   }
   if ( !LODWORD(v11->fields._Data_k__BackingField) )
-    sub_1BDBADC(v7, v8, v9);
+    sub_1BC326C(v7, v8, v9);
   v11->fields._Perf_k__BackingField = (struct BattlePerformance_o *)buff;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v11->fields._Perf_k__BackingField, (int32_t)buff, v9, v10);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v11->fields._Perf_k__BackingField, (int32_t)buff, v9, v10);
   if ( !FieldEnvData_k__BackingField
     || (BattleFieldEnvironmentData__RemoveBgmRelateBuff(
           FieldEnvData_k__BackingField,
@@ -50,7 +50,7 @@ void __fastcall ChangeBgmBuffDeleteProcess__Exec(
         (v7 = this->fields._FieldEnvData_k__BackingField) == 0LL) )
   {
 LABEL_10:
-    sub_1BDBAD4(v7, v8);
+    sub_1BC3264(v7, v8);
   }
   BattleFieldEnvironmentData__AddUpdateBgmTask(v7, v8);
 }

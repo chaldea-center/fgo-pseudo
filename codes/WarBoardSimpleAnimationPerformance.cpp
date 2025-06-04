@@ -11,9 +11,9 @@ void __fastcall WarBoardSimpleAnimationPerformance___ctor(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)animation);
   this->fields.animation = animation;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.animation, (int32_t)animation, v7, v8);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.animation, (int32_t)animation, v7, v8);
   this->fields.animationName = animationName;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.animationName, (int32_t)animationName, v9, v10);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.animationName, (int32_t)animationName, v9, v10);
 }
 
 
@@ -25,16 +25,16 @@ System_Collections_IEnumerator_o *__fastcall WarBoardSimpleAnimationPerformance_
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B427D8 & 1) == 0 )
+  if ( (byte_4AFFD5F & 1) == 0 )
   {
-    sub_1BDB878(&WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo, method);
-    byte_4B427D8 = 1;
+    sub_1BC3008(&WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo, method);
+    byte_4AFFD5F = 1;
   }
-  v3 = sub_1BDBAC4(WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
+  v3 = sub_1BC3254(WarBoardSimpleAnimationPerformance__Execute_d__5_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -63,10 +63,10 @@ void __fastcall WarBoardSimpleAnimationPerformance__OnStart(
   __int64 v5; // x1
   SimpleAnimation_o *v6; // x0
 
-  if ( (byte_4B427D7 & 1) == 0 )
+  if ( (byte_4AFFD5E & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    byte_4B427D7 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    byte_4AFFD5E = 1;
   }
   StartCallback = this->fields.StartCallback;
   this->fields._isPlaying_k__BackingField = 1;
@@ -82,8 +82,8 @@ void __fastcall WarBoardSimpleAnimationPerformance__OnStart(
   {
     v6 = this->fields.animation;
     if ( !v6 || (SimpleAnimation__Rewind(v6, 0LL), (v6 = this->fields.animation) == 0LL) )
-      sub_1BDBAD4(v6, v5);
-    if ( SimpleAnimation__Play_65523240(v6, this->fields.animationName, 0LL) )
+      sub_1BC3264(v6, v5);
+    if ( SimpleAnimation__Play_65293968(v6, this->fields.animationName, 0LL) )
       this->fields.isStart = 1;
   }
 }
@@ -97,7 +97,7 @@ bool __fastcall WarBoardSimpleAnimationPerformance___Execute_b__5_0(
 
   animation = this->fields.animation;
   if ( !animation )
-    sub_1BDBAD4(0LL, method);
+    sub_1BC3264(0LL, method);
   return !SimpleAnimation__CheckPlaying(animation, 0LL) || this->fields.IsForceEnd;
 }
 
@@ -129,14 +129,14 @@ bool __fastcall WarBoardSimpleAnimationPerformance__Execute_d__5__MoveNext(
   bool result; // w0
 
   v2 = this;
-  if ( (byte_4B427D9 & 1) == 0 )
+  if ( (byte_4AFFD60 & 1) == 0 )
   {
-    sub_1BDB878(&System_Func_bool__TypeInfo, method);
-    sub_1BDB878(&UnityEngine_WaitUntil_TypeInfo, v3);
-    this = (WarBoardSimpleAnimationPerformance__Execute_d__5_o *)sub_1BDB878(
+    sub_1BC3008(&System_Func_bool__TypeInfo, method);
+    sub_1BC3008(&UnityEngine_WaitUntil_TypeInfo, v3);
+    this = (WarBoardSimpleAnimationPerformance__Execute_d__5_o *)sub_1BC3008(
                                                                    &Method_WarBoardSimpleAnimationPerformance__Execute_b__5_0__,
                                                                    v4);
-    byte_4B427D9 = 1;
+    byte_4AFFD60 = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -151,24 +151,24 @@ bool __fastcall WarBoardSimpleAnimationPerformance__Execute_d__5__MoveNext(
     _4__this = v2->fields.__4__this;
     v2->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1BDBAD4(this, method);
+      sub_1BC3264(this, method);
     if ( !_4__this->fields.isStart )
     {
       return 0;
     }
     else
     {
-      v7 = (System_Func_bool__o *)sub_1BDBAC4(System_Func_bool__TypeInfo);
+      v7 = (System_Func_bool__o *)sub_1BC3254(System_Func_bool__TypeInfo);
       System_Func_bool____ctor(
         v7,
         (Il2CppObject *)_4__this,
         Method_WarBoardSimpleAnimationPerformance__Execute_b__5_0__,
         0LL);
-      v8 = (UnityEngine_WaitUntil_o *)sub_1BDBAC4(UnityEngine_WaitUntil_TypeInfo);
+      v8 = (UnityEngine_WaitUntil_o *)sub_1BC3254(UnityEngine_WaitUntil_TypeInfo);
       UnityEngine_WaitUntil___ctor(v8, v7, 0LL);
       v2->fields.__2__current = (Il2CppObject *)v8;
       p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-      sub_1BDB81C(p__2__current, (int32_t)v8, v10, v11);
+      sub_1BC2FAC(p__2__current, (int32_t)v8, v10, v11);
       result = 1;
       LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
     }
@@ -193,11 +193,11 @@ void __fastcall __noreturn WarBoardSimpleAnimationPerformance__Execute_d__5__Sys
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BDB88C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BDBAC4(v2);
+  v2 = sub_1BC301C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BC3254(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BDB88C(&Method_WarBoardSimpleAnimationPerformance__Execute_d__5_System_Collections_IEnumerator_Reset__);
-  sub_1BDB9A0(v3, v4);
+  v4 = sub_1BC301C(&Method_WarBoardSimpleAnimationPerformance__Execute_d__5_System_Collections_IEnumerator_Reset__);
+  sub_1BC3130(v3, v4);
 }
 
 

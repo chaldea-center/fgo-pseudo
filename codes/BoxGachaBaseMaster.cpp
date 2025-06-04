@@ -1,14 +1,14 @@
 void __fastcall BoxGachaBaseMaster___ctor(BoxGachaBaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B44750 & 1) == 0 )
+  if ( (byte_4B01CF3 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataMasterBase_BoxGachaBaseMaster__BoxGachaBaseEntity__string___ctor__, method);
-    byte_4B44750 = 1;
+    sub_1BC3008(&Method_DataMasterBase_BoxGachaBaseMaster__BoxGachaBaseEntity__string___ctor__, method);
+    byte_4B01CF3 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     129,
-    (const MethodInfo_32E45D0 *)Method_DataMasterBase_BoxGachaBaseMaster__BoxGachaBaseEntity__string___ctor__);
+    (const MethodInfo_32B1804 *)Method_DataMasterBase_BoxGachaBaseMaster__BoxGachaBaseEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ BoxGachaBaseEntity_o *__fastcall BoxGachaBaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B4474E & 1) == 0 )
+  if ( (byte_4B01CF1 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataMasterBase_BoxGachaBaseMaster__BoxGachaBaseEntity__string__GetEntity__, *(_QWORD *)&id);
-    byte_4B4474E = 1;
+    sub_1BC3008(&Method_DataMasterBase_BoxGachaBaseMaster__BoxGachaBaseEntity__string__GetEntity__, *(_QWORD *)&id);
+    byte_4B01CF1 = 1;
   }
   PK = (Il2CppObject *)BoxGachaBaseEntity__CreatePK(id, no, *(const MethodInfo **)&no);
   return (BoxGachaBaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                    PK,
-                                   (const MethodInfo_32E68F4 *)Method_DataMasterBase_BoxGachaBaseMaster__BoxGachaBaseEntity__string__GetEntity__);
+                                   (const MethodInfo_32B3B28 *)Method_DataMasterBase_BoxGachaBaseMaster__BoxGachaBaseEntity__string__GetEntity__);
 }
 
 
@@ -44,17 +44,17 @@ bool __fastcall BoxGachaBaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B4474F & 1) == 0 )
+  if ( (byte_4B01CF2 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataMasterBase_BoxGachaBaseMaster__BoxGachaBaseEntity__string__TryGetEntity__, entity);
-    byte_4B4474F = 1;
+    sub_1BC3008(&Method_DataMasterBase_BoxGachaBaseMaster__BoxGachaBaseEntity__string__TryGetEntity__, entity);
+    byte_4B01CF2 = 1;
   }
   PK = (Il2CppObject *)BoxGachaBaseEntity__CreatePK(id, no, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32E6940 *)Method_DataMasterBase_BoxGachaBaseMaster__BoxGachaBaseEntity__string__TryGetEntity__);
+           (const MethodInfo_32B3B74 *)Method_DataMasterBase_BoxGachaBaseMaster__BoxGachaBaseEntity__string__TryGetEntity__);
 }
 
 
@@ -80,7 +80,7 @@ bool __fastcall BoxGachaBaseMaster__checkIsResetTarget(
     while ( 1 )
     {
       if ( max_length == v7 )
-        sub_1BDBADC(GachaBaseList, v4, v5);
+        sub_1BC326C(GachaBaseList, v4, v5);
       v8 = GachaBaseList->m_Items[v7];
       if ( !v8 )
         break;
@@ -89,7 +89,7 @@ bool __fastcall BoxGachaBaseMaster__checkIsResetTarget(
       return v7 < max_length;
     }
 LABEL_12:
-    sub_1BDBAD4(GachaBaseList, v4);
+    sub_1BC3264(GachaBaseList, v4);
   }
   v7 = 0;
   return v7 < max_length;
@@ -129,30 +129,30 @@ BoxGachaBaseEntity_array *__fastcall BoxGachaBaseMaster__getGachaBaseList(
   int32_t v29; // w2
   const MethodInfo *v30; // x3
 
-  if ( (byte_4B44751 & 1) == 0 )
+  if ( (byte_4B01CF4 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_ObjectModel_Collection_BoxGachaBaseEntity__get_Count__, *(_QWORD *)&id);
-    sub_1BDB878(&Method_System_Collections_ObjectModel_Collection_BoxGachaBaseEntity__get_Item__, v5);
-    sub_1BDB878(&System_Comparison_BoxGachaBaseEntity__TypeInfo, v6);
-    sub_1BDB878(&Method_System_Collections_Generic_List_BoxGachaBaseEntity__Add__, v7);
-    sub_1BDB878(&Method_System_Collections_Generic_List_BoxGachaBaseEntity__Sort__, v8);
-    sub_1BDB878(&Method_System_Collections_Generic_List_BoxGachaBaseEntity__ToArray__, v9);
-    sub_1BDB878(&Method_System_Collections_Generic_List_BoxGachaBaseEntity___ctor__, v10);
-    sub_1BDB878(&System_Collections_Generic_List_BoxGachaBaseEntity__TypeInfo, v11);
-    sub_1BDB878(&Method_BoxGachaBaseMaster___c__getGachaBaseList_b__3_0__, v12);
-    sub_1BDB878(&BoxGachaBaseMaster___c_TypeInfo, v13);
-    byte_4B44751 = 1;
+    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_BoxGachaBaseEntity__get_Count__, *(_QWORD *)&id);
+    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_BoxGachaBaseEntity__get_Item__, v5);
+    sub_1BC3008(&System_Comparison_BoxGachaBaseEntity__TypeInfo, v6);
+    sub_1BC3008(&Method_System_Collections_Generic_List_BoxGachaBaseEntity__Add__, v7);
+    sub_1BC3008(&Method_System_Collections_Generic_List_BoxGachaBaseEntity__Sort__, v8);
+    sub_1BC3008(&Method_System_Collections_Generic_List_BoxGachaBaseEntity__ToArray__, v9);
+    sub_1BC3008(&Method_System_Collections_Generic_List_BoxGachaBaseEntity___ctor__, v10);
+    sub_1BC3008(&System_Collections_Generic_List_BoxGachaBaseEntity__TypeInfo, v11);
+    sub_1BC3008(&Method_BoxGachaBaseMaster___c__getGachaBaseList_b__3_0__, v12);
+    sub_1BC3008(&BoxGachaBaseMaster___c_TypeInfo, v13);
+    byte_4B01CF4 = 1;
   }
-  v14 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_BoxGachaBaseEntity__TypeInfo);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_BoxGachaBaseEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v14,
-    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_BoxGachaBaseEntity___ctor__);
+    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_BoxGachaBaseEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_24;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_327D624 *)Method_System_Collections_ObjectModel_Collection_BoxGachaBaseEntity__get_Count__);
+            (const MethodInfo_324A858 *)Method_System_Collections_ObjectModel_Collection_BoxGachaBaseEntity__get_Count__);
   if ( Count >= 1 )
   {
     v18 = Count;
@@ -165,7 +165,7 @@ BoxGachaBaseEntity_array *__fastcall BoxGachaBaseMaster__getGachaBaseList(
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v19,
-               (const MethodInfo_327D6B4 *)Method_System_Collections_ObjectModel_Collection_BoxGachaBaseEntity__get_Item__);
+               (const MethodInfo_324A8E8 *)Method_System_Collections_ObjectModel_Collection_BoxGachaBaseEntity__get_Item__);
       if ( list )
       {
         v15 = (Il2CppClass *)list;
@@ -184,14 +184,14 @@ BoxGachaBaseEntity_array *__fastcall BoxGachaBaseMaster__getGachaBaseList(
             System_Collections_Generic_List_object___AddWithResize(
               v14,
               (Il2CppObject *)list,
-              *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+              *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
           }
           else
           {
             v25 = &items->obj.klass + size;
             v14->fields._size = size + 1;
             v25[4] = v15;
-            sub_1BDB81C((CGThumbnailListItem_o *)(v25 + 4), (int32_t)v15, v20, v21);
+            sub_1BC2FAC((CGThumbnailListItem_o *)(v25 + 4), (int32_t)v15, v20, v21);
           }
         }
       }
@@ -199,7 +199,7 @@ BoxGachaBaseEntity_array *__fastcall BoxGachaBaseMaster__getGachaBaseList(
         goto LABEL_16;
     }
 LABEL_24:
-    sub_1BDBAD4(list, v15);
+    sub_1BC3264(list, v15);
   }
 LABEL_16:
   list = BoxGachaBaseMaster___c_TypeInfo;
@@ -217,21 +217,21 @@ LABEL_16:
       list = BoxGachaBaseMaster___c_TypeInfo;
     }
     v27 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v26 = (System_Comparison_T__o *)sub_1BDBAC4(System_Comparison_BoxGachaBaseEntity__TypeInfo);
+    v26 = (System_Comparison_T__o *)sub_1BC3254(System_Comparison_BoxGachaBaseEntity__TypeInfo);
     System_Comparison_object____ctor(v26, v27, Method_BoxGachaBaseMaster___c__getGachaBaseList_b__3_0__, 0LL);
     static_fields = BoxGachaBaseMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Comparison_BoxGachaBaseEntity__o *)v26;
-    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)v26, v29, v30);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)v26, v29, v30);
   }
   if ( !v14 )
     goto LABEL_24;
-  System_Collections_Generic_List_object___Sort_57505928(
+  System_Collections_Generic_List_object___Sort_57288964(
     v14,
     v26,
-    (const MethodInfo_36D7888 *)Method_System_Collections_Generic_List_BoxGachaBaseEntity__Sort__);
+    (const MethodInfo_36A2904 *)Method_System_Collections_Generic_List_BoxGachaBaseEntity__Sort__);
   return (BoxGachaBaseEntity_array *)System_Collections_Generic_List_object___ToArray(
                                        v14,
-                                       (const MethodInfo_36D791C *)Method_System_Collections_Generic_List_BoxGachaBaseEntity__ToArray__);
+                                       (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_BoxGachaBaseEntity__ToArray__);
 }
 
 
@@ -242,15 +242,15 @@ void __fastcall BoxGachaBaseMaster___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B44752 & 1) == 0 )
+  if ( (byte_4B01CF5 & 1) == 0 )
   {
-    sub_1BDB878(&BoxGachaBaseMaster___c_TypeInfo, v1);
-    byte_4B44752 = 1;
+    sub_1BC3008(&BoxGachaBaseMaster___c_TypeInfo, v1);
+    byte_4B01CF5 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BDBAC4(BoxGachaBaseMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BC3254(BoxGachaBaseMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BoxGachaBaseMaster___c_TypeInfo->static_fields->__9 = (struct BoxGachaBaseMaster___c_o *)v2;
-  sub_1BDB81C((CGThumbnailListItem_o *)BoxGachaBaseMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BC2FAC((CGThumbnailListItem_o *)BoxGachaBaseMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -267,6 +267,6 @@ int32_t __fastcall BoxGachaBaseMaster___c___getGachaBaseList_b__3_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1BDBAD4(this, a);
+    sub_1BC3264(this, a);
   return b->fields.priority - a->fields.priority;
 }

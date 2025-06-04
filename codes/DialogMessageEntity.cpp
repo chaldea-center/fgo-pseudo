@@ -1,13 +1,13 @@
 void __fastcall DialogMessageEntity___ctor(DialogMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B448D5 & 1) == 0 )
+  if ( (byte_4B01E78 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B448D5 = 1;
+    sub_1BC3008(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B01E78 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32DF958 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32ACB8C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,12 +19,12 @@ int32_t __fastcall DialogMessageEntity__CreatePrimaryKey(DialogMessageEntity_o *
 
 int32_t __fastcall DialogMessageEntity__GetCommonReleaseId(DialogMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B448D0 & 1) == 0 )
+  if ( (byte_4B01E73 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_18181/*"commonReleaseId"*/, method);
-    byte_4B448D0 = 1;
+    sub_1BC3008(&StringLiteral_18011/*"commonReleaseId"*/, method);
+    byte_4B01E73 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18181/*"commonReleaseId"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18011/*"commonReleaseId"*/, 0, 0LL);
 }
 
 
@@ -34,12 +34,12 @@ int32_t __fastcall DialogMessageEntity__GetMsgFontSize(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4B448D2 & 1) == 0 )
+  if ( (byte_4B01E75 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_21708/*"msgFontSize"*/, *(_QWORD *)&defaultValue);
-    byte_4B448D2 = 1;
+    sub_1BC3008(&StringLiteral_21475/*"msgFontSize"*/, *(_QWORD *)&defaultValue);
+    byte_4B01E75 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21708/*"msgFontSize"*/, defaultValue, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21475/*"msgFontSize"*/, defaultValue, 0LL);
 }
 
 
@@ -52,18 +52,18 @@ System_Nullable_float__o __fastcall DialogMessageEntity__GetMsgPosY(
   System_Nullable_float__o v6; // [xsp+8h] [xbp-28h] BYREF
   System_Nullable_float__o v7; // 0:x0.8
 
-  if ( (byte_4B448D3 & 1) == 0 )
+  if ( (byte_4B01E76 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Nullable_float___ctor__, method);
-    sub_1BDB878(&StringLiteral_21709/*"msgPosY"*/, v3);
-    byte_4B448D3 = 1;
+    sub_1BC3008(&Method_System_Nullable_float___ctor__, method);
+    sub_1BC3008(&StringLiteral_21476/*"msgPosY"*/, v3);
+    byte_4B01E76 = 1;
   }
-  if ( EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_21709/*"msgPosY"*/, 0LL) )
+  if ( EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_21476/*"msgPosY"*/, 0LL) )
   {
-    FloatValue = EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_21709/*"msgPosY"*/, 0.0, 0LL);
+    FloatValue = EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_21476/*"msgPosY"*/, 0.0, 0LL);
     v7 = (System_Nullable_float__o)&v6;
     v6 = 0LL;
-    System_Nullable_float____ctor(v7, FloatValue, (const MethodInfo_37F7AEC *)Method_System_Nullable_float___ctor__);
+    System_Nullable_float____ctor(v7, FloatValue, (const MethodInfo_37C22BC *)Method_System_Nullable_float___ctor__);
     return v6;
   }
   else
@@ -75,12 +75,12 @@ System_Nullable_float__o __fastcall DialogMessageEntity__GetMsgPosY(
 
 int32_t __fastcall DialogMessageEntity__GetMsgSpacingY(DialogMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B448D4 & 1) == 0 )
+  if ( (byte_4B01E77 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_21710/*"msgSpacingY"*/, method);
-    byte_4B448D4 = 1;
+    sub_1BC3008(&StringLiteral_21477/*"msgSpacingY"*/, method);
+    byte_4B01E77 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21710/*"msgSpacingY"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21477/*"msgSpacingY"*/, 0, 0LL);
 }
 
 
@@ -120,26 +120,26 @@ System_Int32_array_array *__fastcall DialogMessageEntity__GetTargets(
   const MethodInfo *v26; // x3
   const MethodInfo *v27; // x3
 
-  if ( (byte_4B448C9 & 1) == 0 )
+  if ( (byte_4B01E6C & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Array_ConvertAll_string__int___, method);
-    sub_1BDB878(&System_Converter_string__int__TypeInfo, v3);
-    sub_1BDB878(&int_____TypeInfo, v4);
-    sub_1BDB878(&Method_DialogMessageEntity___c__GetTargets_b__14_0__, v5);
-    sub_1BDB878(&DialogMessageEntity___c_TypeInfo, v6);
-    sub_1BDB878(&StringLiteral_15782/*"["*/, v7);
-    sub_1BDB878(&StringLiteral_1/*""*/, v8);
-    sub_1BDB878(&StringLiteral_16038/*"]"*/, v9);
-    byte_4B448C9 = 1;
+    sub_1BC3008(&Method_System_Array_ConvertAll_string__int___, method);
+    sub_1BC3008(&System_Converter_string__int__TypeInfo, v3);
+    sub_1BC3008(&int_____TypeInfo, v4);
+    sub_1BC3008(&Method_DialogMessageEntity___c__GetTargets_b__14_0__, v5);
+    sub_1BC3008(&DialogMessageEntity___c_TypeInfo, v6);
+    sub_1BC3008(&StringLiteral_15658/*"["*/, v7);
+    sub_1BC3008(&StringLiteral_1/*""*/, v8);
+    sub_1BC3008(&StringLiteral_15911/*"]"*/, v9);
+    byte_4B01E6C = 1;
   }
   targetIds = this->fields.targetIds;
   if ( !targetIds )
-    return (System_Int32_array_array *)sub_1BDB920(int_____TypeInfo, 1LL);
-  v11 = (System_String_o *)sub_1BDB920(int_____TypeInfo, targetIds->max_length);
+    return (System_Int32_array_array *)sub_1BC30B0(int_____TypeInfo, 1LL);
+  v11 = (System_String_o *)sub_1BC30B0(int_____TypeInfo, targetIds->max_length);
   v14 = this->fields.targetIds;
   if ( !v14 )
 LABEL_20:
-    sub_1BDBAD4(v11, v12);
+    sub_1BC3264(v11, v12);
   v15 = (System_Int32_array_array *)v11;
   v16 = 0LL;
   p_monitor = (CGThumbnailListItem_o *)&v11[1].monitor;
@@ -153,16 +153,16 @@ LABEL_20:
     v11 = v14->m_Items[v16];
     if ( v11 )
     {
-      v11 = System_String__Replace_62618808(
+      v11 = System_String__Replace_62395196(
               v11,
-              (System_String_o *)StringLiteral_15782/*"["*/,
+              (System_String_o *)StringLiteral_15658/*"["*/,
               (System_String_o *)StringLiteral_1/*""*/,
               0LL);
       if ( v11 )
       {
-        v11 = System_String__Replace_62618808(
+        v11 = System_String__Replace_62395196(
                 v11,
-                (System_String_o *)StringLiteral_16038/*"]"*/,
+                (System_String_o *)StringLiteral_15911/*"]"*/,
                 (System_String_o *)StringLiteral_1/*""*/,
                 0LL);
         if ( v11 )
@@ -184,7 +184,7 @@ LABEL_20:
               v20 = DialogMessageEntity___c_TypeInfo;
             }
             v23 = (Il2CppObject *)v20->static_fields->__9;
-            _9__14_0 = (System_Converter_object__int__o *)sub_1BDBAC4(System_Converter_string__int__TypeInfo);
+            _9__14_0 = (System_Converter_object__int__o *)sub_1BC3254(System_Converter_string__int__TypeInfo);
             System_Converter_object__int____ctor(
               _9__14_0,
               v23,
@@ -192,19 +192,19 @@ LABEL_20:
               0LL);
             static_fields = DialogMessageEntity___c_TypeInfo->static_fields;
             static_fields->__9__14_0 = (struct System_Converter_string__int__o *)_9__14_0;
-            sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v25, v26);
+            sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v25, v26);
           }
           v11 = (System_String_o *)System_Array__ConvertAll_object__int_(
                                      v21,
                                      (System_Converter_TInput__TOutput__o *)_9__14_0,
-                                     (const MethodInfo_312F52C *)Method_System_Array_ConvertAll_string__int___);
+                                     (const MethodInfo_30FC8AC *)Method_System_Array_ConvertAll_string__int___);
           if ( v15 )
           {
             if ( (unsigned int)v16 >= v15->max_length )
 LABEL_23:
-              sub_1BDBADC(v11, v12, v13);
+              sub_1BC326C(v11, v12, v13);
             p_monitor->klass = (CGThumbnailListItem_c *)v11;
-            sub_1BDB81C(p_monitor, (int32_t)v11, v13, v27);
+            sub_1BC2FAC(p_monitor, (int32_t)v11, v13, v27);
             v14 = this->fields.targetIds;
             ++v16;
             p_monitor = (CGThumbnailListItem_o *)((char *)p_monitor + 8);
@@ -221,12 +221,12 @@ LABEL_23:
 
 int32_t __fastcall DialogMessageEntity__GetTitleFontSize(DialogMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B448D1 & 1) == 0 )
+  if ( (byte_4B01E74 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_24150/*"titleFontSize"*/, method);
-    byte_4B448D1 = 1;
+    sub_1BC3008(&StringLiteral_23862/*"titleFontSize"*/, method);
+    byte_4B01E74 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24150/*"titleFontSize"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23862/*"titleFontSize"*/, 0, 0LL);
 }
 
 
@@ -238,19 +238,19 @@ System_String_array *__fastcall DialogMessageEntity__GetTransitionParam(
   System_String_o *StringValue; // x0
   __int64 v5; // x1
 
-  if ( (byte_4B448CF & 1) == 0 )
+  if ( (byte_4B01E72 & 1) == 0 )
   {
-    sub_1BDB878(&string_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_24238/*"transitionParam"*/, v3);
-    byte_4B448CF = 1;
+    sub_1BC3008(&string_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_23947/*"transitionParam"*/, v3);
+    byte_4B01E72 = 1;
   }
   StringValue = EntityScriptUtil__GetStringValue(
                   this->fields.script,
-                  (System_String_o *)StringLiteral_24238/*"transitionParam"*/,
+                  (System_String_o *)StringLiteral_23947/*"transitionParam"*/,
                   string_TypeInfo->static_fields->Empty,
                   0LL);
   if ( !StringValue )
-    sub_1BDBAD4(0LL, v5);
+    sub_1BC3264(0LL, v5);
   return System_String__Split(StringValue, 0x2Fu, 0, 0LL);
 }
 
@@ -272,11 +272,11 @@ bool __fastcall DialogMessageEntity__IsOpenCondition(
   __int64 CommonReleaseId; // x0
   __int64 v13; // x1
 
-  if ( (byte_4B448CC & 1) == 0 )
+  if ( (byte_4B01E6F & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMaster_CommonReleaseMaster___, *(_QWORD *)&ex1);
-    sub_1BDB878(&DataManager_TypeInfo, v7);
-    byte_4B448CC = 1;
+    sub_1BC3008(&Method_DataManager_GetMaster_CommonReleaseMaster___, *(_QWORD *)&ex1);
+    sub_1BC3008(&DataManager_TypeInfo, v7);
+    byte_4B01E6F = 1;
   }
   DialogMessageEntity__GetTargets(this, *(const MethodInfo **)&ex1);
   v8 = this->fields.dialogOpenType - 1;
@@ -284,10 +284,10 @@ bool __fastcall DialogMessageEntity__IsOpenCondition(
     return v8 < 2;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   CommonReleaseId = DialogMessageEntity__GetCommonReleaseId(this, v11);
   if ( !Master_object )
-    sub_1BDBAD4(CommonReleaseId, v13);
+    sub_1BC3264(CommonReleaseId, v13);
   return (v8 < 2) & CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Master_object, CommonReleaseId, 0LL, 0, 0LL);
 }
 
@@ -303,18 +303,18 @@ bool __fastcall DialogMessageEntity__IsOpenTime(DialogMessageEntity_o *this, int
   __int64 v11; // x1
 
   v5 = this;
-  if ( (byte_4B448CA & 1) == 0 )
+  if ( (byte_4B01E6D & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMaster_CommonReleaseMaster___, now);
-    this = (DialogMessageEntity_o *)sub_1BDB878(&DataManager_TypeInfo, v6);
-    byte_4B448CA = 1;
+    sub_1BC3008(&Method_DataManager_GetMaster_CommonReleaseMaster___, now);
+    this = (DialogMessageEntity_o *)sub_1BC3008(&DataManager_TypeInfo, v6);
+    byte_4B01E6D = 1;
   }
   openedAt = v5->fields.openedAt;
   if ( openedAt )
     return DialogMessageEntity__IsOpenTimeInSpecifiedTimeRange(this, openedAt, v5->fields.closedAt, now, v3);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   this = (DialogMessageEntity_o *)DialogMessageEntity__GetCommonReleaseId(v5, v10);
   if ( !Master_object
     || (this = (DialogMessageEntity_o *)CommonReleaseMaster__getList(
@@ -322,7 +322,7 @@ bool __fastcall DialogMessageEntity__IsOpenTime(DialogMessageEntity_o *this, int
                                           (int32_t)this,
                                           0LL)) == 0LL )
   {
-    sub_1BDBAD4(this, v11);
+    sub_1BC3264(this, v11);
   }
   if ( !*(_QWORD *)&this->fields.dialogOpenType )
   {
@@ -340,10 +340,10 @@ bool __fastcall DialogMessageEntity__IsOpenTimeInSpecifiedTimeRange(
         int64_t now,
         const MethodInfo *method)
 {
-  if ( (byte_4B448CB & 1) == 0 )
+  if ( (byte_4B01E6E & 1) == 0 )
   {
-    sub_1BDB878(&NetworkManager_TypeInfo, start);
-    byte_4B448CB = 1;
+    sub_1BC3008(&NetworkManager_TypeInfo, start);
+    byte_4B01E6E = 1;
   }
   if ( !now )
   {
@@ -398,34 +398,34 @@ void __fastcall DialogMessageEntity__Open(
   int32_t spacingY; // w26
   const MethodInfo *v25; // x1
 
-  if ( (byte_4B448CD & 1) == 0 )
+  if ( (byte_4B01E70 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Action_Invoke__, callback);
-    sub_1BDB878(&System_Action_TypeInfo, v5);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    byte_4B448CD = 1;
+    sub_1BC3008(&Method_System_Action_Invoke__, callback);
+    sub_1BC3008(&System_Action_TypeInfo, v5);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    byte_4B01E70 = 1;
   }
   imageIds = this->fields.imageIds;
   if ( imageIds && *(_QWORD *)&imageIds->max_length )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v9 = this->fields.imageIds;
     v10 = (CommonUI_o *)Instance;
-    v11 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+    v11 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
     System_Action___ctor(v11, (Il2CppObject *)callback, Method_System_Action_Invoke__, 0LL);
     if ( v10 )
     {
-      CommonUI__OpenTutorialImageDialog_30860008(v10, v9, -1, 0, v11, 0LL, 0LL, 0LL);
+      CommonUI__OpenTutorialImageDialog_30757476(v10, v9, -1, 0, v11, 0LL, 0LL, 0LL);
       return;
     }
 LABEL_9:
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1BDBAD4)(messagePosY, v13);
+    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1BC3264)(messagePosY, v13);
   }
-  v14 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v14 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   title = this->fields.title;
   message = this->fields.message;
   v17 = (CommonUI_o *)v14;
-  v18 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  v18 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
   System_Action___ctor(v18, (Il2CppObject *)callback, Method_System_Action_Invoke__, 0LL);
   TitleFontSize = DialogMessageEntity__GetTitleFontSize(this, v19);
   messageFontSize = DialogMessageEntity__GetMsgFontSize(this, 0, v21);
@@ -489,34 +489,34 @@ void __fastcall DialogMessageEntity__OpenConfirmDecideDialog(
   const MethodInfo *v35; // x1
   float value; // s1
 
-  if ( (byte_4B448CE & 1) == 0 )
+  if ( (byte_4B01E71 & 1) == 0 )
   {
-    sub_1BDB878(&CommonConfirmDialog_ClickDelegate_TypeInfo, decideTxt);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v9);
-    sub_1BDB878(&Method_System_Nullable_float__GetValueOrDefault__, v10);
-    sub_1BDB878(&Method_System_Nullable_float__get_HasValue__, v11);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
-    sub_1BDB878(&Method_DialogMessageEntity___c__DisplayClass22_0__OpenConfirmDecideDialog_b__0__, v13);
-    sub_1BDB878(&DialogMessageEntity___c__DisplayClass22_0_TypeInfo, v14);
-    sub_1BDB878(&StringLiteral_3717/*"COMMON_CONFIRM_CLOSE"*/, v15);
-    byte_4B448CE = 1;
+    sub_1BC3008(&CommonConfirmDialog_ClickDelegate_TypeInfo, decideTxt);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v9);
+    sub_1BC3008(&Method_System_Nullable_float__GetValueOrDefault__, v10);
+    sub_1BC3008(&Method_System_Nullable_float__get_HasValue__, v11);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
+    sub_1BC3008(&Method_DialogMessageEntity___c__DisplayClass22_0__OpenConfirmDecideDialog_b__0__, v13);
+    sub_1BC3008(&DialogMessageEntity___c__DisplayClass22_0_TypeInfo, v14);
+    sub_1BC3008(&StringLiteral_3648/*"COMMON_CONFIRM_CLOSE"*/, v15);
+    byte_4B01E71 = 1;
   }
-  v16 = sub_1BDBAC4(DialogMessageEntity___c__DisplayClass22_0_TypeInfo);
+  v16 = sub_1BC3254(DialogMessageEntity___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v16, 0LL);
   if ( !v16 )
     goto LABEL_10;
   *(_QWORD *)(v16 + 16) = decideCallback;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v16 + 16), (int32_t)decideCallback, v19, v20);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v16 + 16), (int32_t)decideCallback, v19, v20);
   *(_QWORD *)(v16 + 24) = callback;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v16 + 24), (int32_t)callback, v21, v22);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v16 + 24), (int32_t)callback, v21, v22);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   title = this->fields.title;
   message = this->fields.message;
   v26 = (CommonUI_o *)Instance;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3717/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
-  v28 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BDBAC4(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3648/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  v28 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BC3254(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v28,
     (Il2CppObject *)v16,
@@ -528,7 +528,7 @@ void __fastcall DialogMessageEntity__OpenConfirmDecideDialog(
   titleFontSize = DialogMessageEntity__GetTitleFontSize(this, v35);
   if ( !v26 )
 LABEL_10:
-    sub_1BDBAD4(titleFontSize, v18);
+    sub_1BC3264(titleFontSize, v18);
   value = MsgPosY.fields.value;
   if ( !MsgPosY.fields.hasValue )
     value = 15.0;
@@ -561,15 +561,15 @@ void __fastcall DialogMessageEntity___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B448D6 & 1) == 0 )
+  if ( (byte_4B01E79 & 1) == 0 )
   {
-    sub_1BDB878(&DialogMessageEntity___c_TypeInfo, v1);
-    byte_4B448D6 = 1;
+    sub_1BC3008(&DialogMessageEntity___c_TypeInfo, v1);
+    byte_4B01E79 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BDBAC4(DialogMessageEntity___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BC3254(DialogMessageEntity___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   DialogMessageEntity___c_TypeInfo->static_fields->__9 = (struct DialogMessageEntity___c_o *)v2;
-  sub_1BDB81C((CGThumbnailListItem_o *)DialogMessageEntity___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BC2FAC((CGThumbnailListItem_o *)DialogMessageEntity___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -619,22 +619,22 @@ void __fastcall DialogMessageEntity___c__DisplayClass22_0___OpenConfirmDecideDia
   Il2CppObject *Instance; // x19
   System_Action_o *v14; // x20
 
-  if ( (byte_4B448D7 & 1) == 0 )
+  if ( (byte_4B01E7A & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, isDecide);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1BDB878(&Method_DialogMessageEntity___c__DisplayClass22_1__OpenConfirmDecideDialog_b__1__, v6);
-    sub_1BDB878(&DialogMessageEntity___c__DisplayClass22_1_TypeInfo, v7);
-    byte_4B448D7 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, isDecide);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1BC3008(&Method_DialogMessageEntity___c__DisplayClass22_1__OpenConfirmDecideDialog_b__1__, v6);
+    sub_1BC3008(&DialogMessageEntity___c__DisplayClass22_1_TypeInfo, v7);
+    byte_4B01E7A = 1;
   }
-  v8 = sub_1BDBAC4(DialogMessageEntity___c__DisplayClass22_1_TypeInfo);
+  v8 = sub_1BC3254(DialogMessageEntity___c__DisplayClass22_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8
     || (*(_QWORD *)(v8 + 24) = this,
-        sub_1BDB81C((CGThumbnailListItem_o *)(v8 + 24), (int32_t)this, v11, v12),
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v8 + 24), (int32_t)this, v11, v12),
         *(_BYTE *)(v8 + 16) = isDecide,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v14 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v14 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo),
         System_Action___ctor(
           v14,
           (Il2CppObject *)v8,
@@ -642,9 +642,9 @@ void __fastcall DialogMessageEntity___c__DisplayClass22_0___OpenConfirmDecideDia
           0LL),
         !Instance) )
   {
-    sub_1BDBAD4(v9, v10);
+    sub_1BC3264(v9, v10);
   }
-  CommonUI__CloseConfirmDialog_30833860((CommonUI_o *)Instance, v14, 0LL);
+  CommonUI__CloseConfirmDialog_30731324((CommonUI_o *)Instance, v14, 0LL);
 }
 
 
@@ -665,7 +665,7 @@ void __fastcall DialogMessageEntity___c__DisplayClass22_1___OpenConfirmDecideDia
 
   CS___8__locals1 = this->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   v3 = 24LL;
   if ( this->fields.isDecide )
     v3 = 16LL;

@@ -1,14 +1,14 @@
 void __fastcall LoginQuestMaster___ctor(LoginQuestMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B44E08 & 1) == 0 )
+  if ( (byte_4B023BA & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataMasterBase_LoginQuestMaster__LoginQuestEntity__int___ctor__, method);
-    byte_4B44E08 = 1;
+    sub_1BC3008(&Method_DataMasterBase_LoginQuestMaster__LoginQuestEntity__int___ctor__, method);
+    byte_4B023BA = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     366,
-    (const MethodInfo_32DFB18 *)Method_DataMasterBase_LoginQuestMaster__LoginQuestEntity__int___ctor__);
+    (const MethodInfo_32ACD4C *)Method_DataMasterBase_LoginQuestMaster__LoginQuestEntity__int___ctor__);
 }
 
 
@@ -40,24 +40,24 @@ LoginQuestEntity_o *__fastcall LoginQuestMaster__GetEntityByQuestId(
   int32_t *v24; // x10
   __int64 v25; // x0
 
-  if ( (byte_4B44E09 & 1) == 0 )
+  if ( (byte_4B023BB & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_ObjectModel_Collection_LoginQuestEntity__GetEnumerator__,
       *(_QWORD *)&questId);
-    sub_1BDB878(&System_IDisposable_TypeInfo, v5);
-    sub_1BDB878(&System_Collections_Generic_IEnumerator_LoginQuestEntity__TypeInfo, v6);
-    sub_1BDB878(&System_Collections_IEnumerator_TypeInfo, v7);
-    byte_4B44E09 = 1;
+    sub_1BC3008(&System_IDisposable_TypeInfo, v5);
+    sub_1BC3008(&System_Collections_Generic_IEnumerator_LoginQuestEntity__TypeInfo, v6);
+    sub_1BC3008(&System_Collections_IEnumerator_TypeInfo, v7);
+    byte_4B023BB = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BDBAD4(0LL, *(_QWORD *)&questId);
+    sub_1BC3264(0LL, *(_QWORD *)&questId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_327DBFC *)Method_System_Collections_ObjectModel_Collection_LoginQuestEntity__GetEnumerator__);
+                 (const MethodInfo_324AE30 *)Method_System_Collections_ObjectModel_Collection_LoginQuestEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BDBAD4(0LL, v9);
+    sub_1BC3264(0LL, v9);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -77,7 +77,7 @@ LoginQuestEntity_o *__fastcall LoginQuestMaster__GetEntityByQuestId(
     else
     {
 LABEL_9:
-      p_method = sub_1C2C00C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C13570(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -100,14 +100,14 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v18 = sub_1C2C00C(Enumerator, System_Collections_Generic_IEnumerator_LoginQuestEntity__TypeInfo, 0LL);
+      v18 = sub_1C13570(Enumerator, System_Collections_Generic_IEnumerator_LoginQuestEntity__TypeInfo, 0LL);
     }
     v19 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v18)(
             Enumerator,
             *(_QWORD *)(v18 + 8));
     v21 = (LoginQuestEntity_o *)v19;
     if ( !v19 )
-      sub_1BDBAD4(0LL, v20);
+      sub_1BC3264(0LL, v20);
     if ( *(_DWORD *)(v19 + 24) == questId )
       goto LABEL_22;
   }
@@ -130,7 +130,7 @@ LABEL_22:
   else
   {
 LABEL_26:
-    v25 = sub_1C2C00C(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v25 = sub_1C13570(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v25)(Enumerator, *(_QWORD *)(v25 + 8));
   return v21;

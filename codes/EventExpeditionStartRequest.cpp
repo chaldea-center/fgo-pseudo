@@ -15,16 +15,16 @@ void __fastcall EventExpeditionStartRequest__beginRequest(
   __int64 v9; // x1
   __int64 v10; // x1
 
-  if ( (byte_4B464F0 & 1) == 0 )
+  if ( (byte_4B03A9F & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_19152/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1BDB878(&StringLiteral_19335/*"expeditionIdx"*/, v9);
-    sub_1BDB878(&StringLiteral_22717/*"pieceIdx"*/, v10);
-    byte_4B464F0 = 1;
+    sub_1BC3008(&StringLiteral_18963/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_1BC3008(&StringLiteral_19145/*"expeditionIdx"*/, v9);
+    sub_1BC3008(&StringLiteral_22472/*"pieceIdx"*/, v10);
+    byte_4B03A9F = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19152/*"eventId"*/, eventId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19335/*"expeditionIdx"*/, expeditionIdx, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22717/*"pieceIdx"*/, pieceIdx, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18963/*"eventId"*/, eventId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19145/*"expeditionIdx"*/, expeditionIdx, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22472/*"pieceIdx"*/, pieceIdx, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -36,16 +36,16 @@ System_String_o *__fastcall EventExpeditionStartRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B464EF & 1) == 0 )
+  if ( (byte_4B03A9E & 1) == 0 )
   {
-    sub_1BDB878(&NetworkManager_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_19136/*"event/expeditionStart"*/, v2);
-    byte_4B464EF = 1;
+    sub_1BC3008(&NetworkManager_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_18947/*"event/expeditionStart"*/, v2);
+    byte_4B03A9E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_19136/*"event/expeditionStart"*/, 0LL);
+  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_18947/*"event/expeditionStart"*/, 0LL);
 }
 
 
@@ -61,11 +61,11 @@ void __fastcall EventExpeditionStartRequest__requestCompleted(
   System_String_o *v9; // x1
   Il2CppObject *success; // x20
 
-  if ( (byte_4B464F1 & 1) == 0 )
+  if ( (byte_4B03AA0 & 1) == 0 )
   {
-    sub_1BDB878(&JsonManager_TypeInfo, responseList);
-    sub_1BDB878(&ResponseCommandKind_TypeInfo, v5);
-    byte_4B464F1 = 1;
+    sub_1BC3008(&JsonManager_TypeInfo, responseList);
+    sub_1BC3008(&ResponseCommandKind_TypeInfo, v5);
+    byte_4B03AA0 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -73,7 +73,7 @@ void __fastcall EventExpeditionStartRequest__requestCompleted(
   if ( v6 )
   {
     v7 = v6;
-    v8 = ResponseData__checkError_43151432(v6, 0LL);
+    v8 = ResponseData__checkError_43184840(v6, 0LL);
     v9 = 0LL;
     if ( v8 )
     {

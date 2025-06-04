@@ -19,7 +19,7 @@ void __fastcall MapCameraPerformance___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v13->fields.sortValue2 = (int64_t)mapCamera;
   v13 = (CGThumbnailListItem_o *)((char *)v13 + 72);
-  sub_1BDB81C(v13, (int32_t)mapCamera, v14, v15);
+  sub_1BC2FAC(v13, (int32_t)mapCamera, v14, v15);
   *((float *)&v13[-1].fields._ThumbnailSpritePath_k__BackingField + 1) = second;
   *(struct ListViewObject_o **)((char *)&v13[-1].fields.viewObject + 4) = v11;
   *(float *)&v13[-1].fields._Priority_k__BackingField = y;
@@ -36,16 +36,16 @@ System_Collections_IEnumerator_o *__fastcall MapCameraPerformance__Execute(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B4666A & 1) == 0 )
+  if ( (byte_4B03C19 & 1) == 0 )
   {
-    sub_1BDB878(&MapCameraPerformance__Execute_d__6_TypeInfo, method);
-    byte_4B4666A = 1;
+    sub_1BC3008(&MapCameraPerformance__Execute_d__6_TypeInfo, method);
+    byte_4B03C19 = 1;
   }
-  v3 = sub_1BDBAC4(MapCameraPerformance__Execute_d__6_TypeInfo);
+  v3 = sub_1BC3254(MapCameraPerformance__Execute_d__6_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -79,7 +79,7 @@ bool __fastcall MapCameraPerformance__Execute_d__6__MoveNext(
   _BOOL8 v15; // x0
   __int64 v16; // x1
   UnityEngine_Object_o *v17; // x21
-  const MethodInfo_37F9FB0 *v18; // x2
+  const MethodInfo_37C4780 *v18; // x2
   bool result; // w0
   MapCamera_o *v20; // x21
   float v21; // s8
@@ -100,19 +100,19 @@ bool __fastcall MapCameraPerformance__Execute_d__6__MoveNext(
   System_Nullable_Vector3__o v36; // 0:x1.16
   UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B4666B & 1) == 0 )
+  if ( (byte_4B03C1A & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, method);
-    sub_1BDB878(&System_Func_bool__TypeInfo, v3);
-    sub_1BDB878(&Method_System_Nullable_Vector2__GetValueOrDefault__, v4);
-    sub_1BDB878(&Method_System_Nullable_Vector3___ctor__, v5);
-    sub_1BDB878(&Method_System_Nullable_Vector2__get_HasValue__, v6);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BDB878(&Method_MapCameraPerformance___c__DisplayClass6_0__Execute_b__0__, v8);
-    sub_1BDB878(&Method_MapCameraPerformance___c__DisplayClass6_0__Execute_b__1__, v9);
-    sub_1BDB878(&MapCameraPerformance___c__DisplayClass6_0_TypeInfo, v10);
-    sub_1BDB878(&UnityEngine_WaitUntil_TypeInfo, v11);
-    byte_4B4666B = 1;
+    sub_1BC3008(&System_Action_TypeInfo, method);
+    sub_1BC3008(&System_Func_bool__TypeInfo, v3);
+    sub_1BC3008(&Method_System_Nullable_Vector2__GetValueOrDefault__, v4);
+    sub_1BC3008(&Method_System_Nullable_Vector3___ctor__, v5);
+    sub_1BC3008(&Method_System_Nullable_Vector2__get_HasValue__, v6);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v7);
+    sub_1BC3008(&Method_MapCameraPerformance___c__DisplayClass6_0__Execute_b__0__, v8);
+    sub_1BC3008(&Method_MapCameraPerformance___c__DisplayClass6_0__Execute_b__1__, v9);
+    sub_1BC3008(&MapCameraPerformance___c__DisplayClass6_0_TypeInfo, v10);
+    sub_1BC3008(&UnityEngine_WaitUntil_TypeInfo, v11);
+    byte_4B03C1A = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -126,7 +126,7 @@ bool __fastcall MapCameraPerformance__Execute_d__6__MoveNext(
       return 0;
     this->fields.__1__state = -1;
     _4__this = this->fields.__4__this;
-    v14 = sub_1BDBAC4(MapCameraPerformance___c__DisplayClass6_0_TypeInfo);
+    v14 = sub_1BC3254(MapCameraPerformance___c__DisplayClass6_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v14, 0LL);
     if ( !_4__this )
       goto LABEL_17;
@@ -161,7 +161,7 @@ bool __fastcall MapCameraPerformance__Execute_d__6__MoveNext(
     }
     v24 = *(System_Nullable_float__o *)&_4__this->fields.position.fields.value.fields.y;
     value_low = LODWORD(_4__this->fields.size.fields.value);
-    v26 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+    v26 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
     System_Action___ctor(
       v26,
       (Il2CppObject *)v14,
@@ -169,22 +169,22 @@ bool __fastcall MapCameraPerformance__Execute_d__6__MoveNext(
       0LL);
     if ( !v20 )
 LABEL_17:
-      sub_1BDBAD4(v15, v16);
+      sub_1BC3264(v15, v16);
     *(_QWORD *)&v36.fields.hasValue = v23;
     *(_QWORD *)&v36.fields.value.fields.y = v22;
     v34 = v24;
     MapCamera__StartAutoWork(v20, v21, v36, v34, value_low, v26, 0LL);
-    v27 = (System_Func_bool__o *)sub_1BDBAC4(System_Func_bool__TypeInfo);
+    v27 = (System_Func_bool__o *)sub_1BC3254(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(
       v27,
       (Il2CppObject *)v14,
       Method_MapCameraPerformance___c__DisplayClass6_0__Execute_b__1__,
       0LL);
-    v28 = (UnityEngine_WaitUntil_o *)sub_1BDBAC4(UnityEngine_WaitUntil_TypeInfo);
+    v28 = (UnityEngine_WaitUntil_o *)sub_1BC3254(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v28, v27, 0LL);
     this->fields.__2__current = (Il2CppObject *)v28;
     p__2__current = &this->fields.__2__current;
-    sub_1BDB81C((CGThumbnailListItem_o *)p__2__current, (int32_t)v28, v30, v31);
+    sub_1BC2FAC((CGThumbnailListItem_o *)p__2__current, (int32_t)v28, v30, v31);
     result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
   }
@@ -208,11 +208,11 @@ void __fastcall __noreturn MapCameraPerformance__Execute_d__6__System_Collection
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BDB88C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BDBAC4(v2);
+  v2 = sub_1BC301C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BC3254(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BDB88C(&Method_MapCameraPerformance__Execute_d__6_System_Collections_IEnumerator_Reset__);
-  sub_1BDB9A0(v3, v4);
+  v4 = sub_1BC301C(&Method_MapCameraPerformance__Execute_d__6_System_Collections_IEnumerator_Reset__);
+  sub_1BC3130(v3, v4);
 }
 
 

@@ -18,20 +18,20 @@ void __fastcall TerminalTransitionInfo__Init(TerminalTransitionInfo_o *this, con
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4B41DB9 & 1) == 0 )
+  if ( (byte_4AFF33D & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_1/*""*/, method);
-    byte_4B41DB9 = 1;
+    sub_1BC3008(&StringLiteral_1/*""*/, method);
+    byte_4AFF33D = 1;
   }
   this->fields.missionId = 0;
   this->fields.beforeActionVals = 0LL;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.beforeActionVals, 0, v2, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.beforeActionVals, 0, v2, v3);
   this->fields.afterActionVals = 0LL;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.afterActionVals, 0, v5, v6);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.afterActionVals, 0, v5, v6);
   v7 = (int)StringLiteral_1/*""*/;
   this->fields.voiceAssetName = (struct System_String_o *)StringLiteral_1/*""*/;
   p_voiceAssetName = &this->fields.voiceAssetName;
-  sub_1BDB81C((CGThumbnailListItem_o *)p_voiceAssetName, v7, v9, v10);
+  sub_1BC2FAC((CGThumbnailListItem_o *)p_voiceAssetName, v7, v9, v10);
   *((_DWORD *)p_voiceAssetName + 2) = 0;
 }
 
@@ -45,9 +45,9 @@ void __fastcall TerminalTransitionInfo__SetParameters(
   struct System_String_o *voiceAssetName; // x1
 
   if ( !info )
-    sub_1BDBAD4(this, 0LL);
+    sub_1BC3264(this, 0LL);
   this->fields.missionId = info->fields.missionId;
   voiceAssetName = info->fields.voiceAssetName;
   this->fields.voiceAssetName = voiceAssetName;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.voiceAssetName, (int32_t)voiceAssetName, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.voiceAssetName, (int32_t)voiceAssetName, (int32_t)method, v3);
 }

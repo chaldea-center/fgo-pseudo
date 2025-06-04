@@ -1,13 +1,13 @@
 void __fastcall GachaTicketEntity___ctor(GachaTicketEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B44D4F & 1) == 0 )
+  if ( (byte_4B02301 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B44D4F = 1;
+    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B02301 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32DF9D0 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall GachaTicketEntity__CreatePK(
         int32_t ticketItemId,
         const MethodInfo *method)
 {
-  if ( (byte_4B44D4E & 1) == 0 )
+  if ( (byte_4B02300 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&ticketItemId);
-    byte_4B44D4E = 1;
+    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&ticketItemId);
+    byte_4B02300 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            gachaId,
            ticketItemId,
-           (const MethodInfo_3031AE4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2FFFFEC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

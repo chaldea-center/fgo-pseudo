@@ -55,19 +55,19 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__SetLabel(
   int v27; // [xsp+4h] [xbp-4Ch] BYREF
   int64_t v28; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4B4511A & 1) == 0 )
+  if ( (byte_4B02631 & 1) == 0 )
   {
-    sub_1BDB878(&int_TypeInfo, itemNum);
-    sub_1BDB878(&long_TypeInfo, v9);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v10);
-    sub_1BDB878(&StringLiteral_5594/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, v11);
-    sub_1BDB878(&StringLiteral_5595/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, v12);
-    byte_4B4511A = 1;
+    sub_1BC3008(&int_TypeInfo, itemNum);
+    sub_1BC3008(&long_TypeInfo, v9);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v10);
+    sub_1BC3008(&StringLiteral_5513/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, v11);
+    sub_1BC3008(&StringLiteral_5514/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, v12);
+    byte_4B02631 = 1;
   }
   itemNumLabel = this->fields.itemNumLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5594/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, 0LL);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_5513/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, 0LL);
   v28 = itemNum;
   v18 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v28, v15, v16, v17);
   v19 = System_String__Format(v14, v18, 0LL);
@@ -75,7 +75,7 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__SetLabel(
     goto LABEL_10;
   UILabel__set_text(itemNumLabel, v19, 0LL);
   productNumLabel = this->fields.productNumLabel;
-  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5595/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0LL);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_5514/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0LL);
   v27 = productNum - addNum;
   v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27, v23, v24, v25);
   v19 = System_String__Format(v22, v26, 0LL);
@@ -85,7 +85,7 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__SetLabel(
         (v19 = (System_String_o *)this->fields.productNumLabel) == 0LL) )
   {
 LABEL_10:
-    sub_1BDBAD4(v19, v20);
+    sub_1BC3264(v19, v20);
   }
   UILabel__SetCondensedScale((UILabel_o *)v19, this->fields.numLabelMaxWidth, 0, 0LL);
 }
@@ -105,13 +105,13 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__Start(
   UnityEngine_Object_o *productNumTitleLabel; // x20
   UILabel_o *v11; // x20
 
-  if ( (byte_4B45119 & 1) == 0 )
+  if ( (byte_4B02630 & 1) == 0 )
   {
-    sub_1BDB878(&LocalizationManager_TypeInfo, method);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
-    sub_1BDB878(&StringLiteral_5594/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, v4);
-    sub_1BDB878(&StringLiteral_5595/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, v5);
-    byte_4B45119 = 1;
+    sub_1BC3008(&LocalizationManager_TypeInfo, method);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
+    sub_1BC3008(&StringLiteral_5513/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, v4);
+    sub_1BC3008(&StringLiteral_5514/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, v5);
+    byte_4B02630 = 1;
   }
   itemNumTitleLabel = (UnityEngine_Object_o *)this->fields.itemNumTitleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -121,7 +121,7 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__Start(
     v7 = this->fields.itemNumTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5594/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5513/*"EVENT_CONQUEST_FARM_ITEM_FORMAT"*/, 0LL);
     if ( !v7 )
       goto LABEL_20;
     UILabel__set_text(v7, v8, 0LL);
@@ -138,7 +138,7 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__Start(
     v11 = this->fields.productNumTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5595/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0LL);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5514/*"EVENT_CONQUEST_FARM_PRODUCT_FORMAT"*/, 0LL);
     if ( v11 )
     {
       UILabel__set_text(v11, v8, 0LL);
@@ -150,7 +150,7 @@ void __fastcall EventInfoConquestItemFarmCounterComponent__Start(
       }
     }
 LABEL_20:
-    sub_1BDBAD4(v8, v9);
+    sub_1BC3264(v8, v9);
   }
 LABEL_19:
   ((void (__fastcall *)(EventInfoConquestItemFarmCounterComponent_o *, int64_t, _QWORD, _QWORD, Il2CppMethodPointer))this->klass->vtable._5_SetLabel.method)(

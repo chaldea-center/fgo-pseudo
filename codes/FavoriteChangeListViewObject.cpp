@@ -1,9 +1,9 @@
 void __fastcall FavoriteChangeListViewObject___ctor(FavoriteChangeListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B3FB07 & 1) == 0 )
+  if ( (byte_4AFD077 & 1) == 0 )
   {
-    sub_1BDB878(&ListViewObject_TypeInfo, method);
-    byte_4B3FB07 = 1;
+    sub_1BC3008(&ListViewObject_TypeInfo, method);
+    byte_4AFD077 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -16,19 +16,19 @@ void __fastcall FavoriteChangeListViewObject__Awake(FavoriteChangeListViewObject
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
 
-  if ( (byte_4B3FAFE & 1) == 0 )
+  if ( (byte_4AFD06E & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_FavoriteChangeListViewItemDraw___, method);
-    byte_4B3FAFE = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_FavoriteChangeListViewItemDraw___, method);
+    byte_4AFD06E = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BDBAD4(0LL, v3);
+    sub_1BC3264(0LL, v3);
   this->fields.itemDraw = (struct FavoriteChangeListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                        dispObject,
-                                                                       (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_FavoriteChangeListViewItemDraw___);
-  sub_1BDB81C(&this->fields.itemDraw);
+                                                                       (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_FavoriteChangeListViewItemDraw___);
+  sub_1BC2FAC(&this->fields.itemDraw);
 }
 
 
@@ -41,21 +41,21 @@ UnityEngine_GameObject_o *__fastcall FavoriteChangeListViewObject__CreateDragObj
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_4B3FB02 & 1) == 0 )
+  if ( (byte_4AFD072 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_FavoriteChangeListViewObject___, method);
-    byte_4B3FB02 = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_FavoriteChangeListViewObject___, method);
+    byte_4AFD072 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_FavoriteChangeListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_FavoriteChangeListViewObject___)) == 0LL) )
   {
-    sub_1BDBAD4(DragObject, v4);
+    sub_1BC3264(DragObject, v4);
   }
-  FavoriteChangeListViewObject__Init_32251084((FavoriteChangeListViewObject_o *)DragObject, 2, v6);
+  FavoriteChangeListViewObject__Init_32244584((FavoriteChangeListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -67,10 +67,10 @@ FavoriteChangeListViewItem_o *__fastcall FavoriteChangeListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4B3FB00 & 1) == 0 )
+  if ( (byte_4AFD070 & 1) == 0 )
   {
-    sub_1BDB878(&FavoriteChangeListViewItem_TypeInfo, method);
-    byte_4B3FB00 = 1;
+    sub_1BC3008(&FavoriteChangeListViewItem_TypeInfo, method);
+    byte_4AFD070 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -106,10 +106,10 @@ void __fastcall FavoriteChangeListViewObject__Init(
   int32_t v19; // w8
   struct System_Action_o *v20; // x19
 
-  if ( (byte_4B3FB03 & 1) == 0 )
+  if ( (byte_4AFD073 & 1) == 0 )
   {
-    sub_1BDB878(&FavoriteChangeListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B3FB03 = 1;
+    sub_1BC3008(&FavoriteChangeListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4AFD073 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -137,12 +137,12 @@ void __fastcall FavoriteChangeListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1BDBAD4(transform, v15);
+    sub_1BC3264(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
-  sub_1BDB81C(&this->fields.callbackFunc);
+  sub_1BC2FAC(&this->fields.callbackFunc);
   v18 = 1;
   v19 = v11;
   switch ( v11 )
@@ -174,7 +174,7 @@ LABEL_20:
       if ( *p_callbackFunc )
       {
         *p_callbackFunc = 0LL;
-        sub_1BDB81C(p_callbackFunc);
+        sub_1BC2FAC(p_callbackFunc);
         ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v20->fields.m_target)(
           v20->fields.original_method_info,
           *(_QWORD *)&v20->fields.extra_arg);
@@ -191,7 +191,7 @@ void __fastcall FavoriteChangeListViewObject__InitItem(FavoriteChangeListViewObj
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall FavoriteChangeListViewObject__Init_32251084(
+void __fastcall FavoriteChangeListViewObject__Init_32244584(
         FavoriteChangeListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -200,17 +200,17 @@ void __fastcall FavoriteChangeListViewObject__Init_32251084(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4B3E911 )
+  if ( !byte_4AFBDB1 )
   {
-    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B3E911 = 1;
+    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4AFBDB1 = 1;
   }
   FavoriteChangeListViewObject__Init(this, initMode, 0LL, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall FavoriteChangeListViewObject__Init_32252236(
+void __fastcall FavoriteChangeListViewObject__Init_32245736(
         FavoriteChangeListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -219,17 +219,17 @@ void __fastcall FavoriteChangeListViewObject__Init_32252236(
 {
   int v5; // s1
 
-  if ( !byte_4B3E911 )
+  if ( !byte_4AFBDB1 )
   {
-    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B3E911 = 1;
+    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4AFBDB1 = 1;
   }
   FavoriteChangeListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall FavoriteChangeListViewObject__Init_32252320(
+void __fastcall FavoriteChangeListViewObject__Init_32245820(
         FavoriteChangeListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -238,10 +238,10 @@ void __fastcall FavoriteChangeListViewObject__Init_32252320(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4B3E911 )
+  if ( !byte_4AFBDB1 )
   {
-    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B3E911 = 1;
+    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4AFBDB1 = 1;
   }
   FavoriteChangeListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -253,17 +253,17 @@ void __fastcall FavoriteChangeListViewObject__OnClickSelect(
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4B3FB05 & 1) == 0 )
+  if ( (byte_4AFD075 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_9867/*"OnClickSelectListView"*/, method);
-    byte_4B3FB05 = 1;
+    sub_1BC3008(&StringLiteral_9780/*"OnClickSelectListView"*/, method);
+    byte_4AFD075 = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1BDBAD4(0LL, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9867/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0LL);
+      sub_1BC3264(0LL, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9780/*"OnClickSelectListView"*/, (Il2CppObject *)this, 0LL);
   }
 }
 
@@ -276,11 +276,11 @@ void __fastcall FavoriteChangeListViewObject__OnDestroy(FavoriteChangeListViewOb
   struct UnityEngine_GameObject_o *dragObject; // t1
   UnityEngine_Object_o *v7; // x20
 
-  if ( (byte_4B3FAFF & 1) == 0 )
+  if ( (byte_4AFD06F & 1) == 0 )
   {
-    sub_1BDB878(&NGUITools_TypeInfo, method);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B3FAFF = 1;
+    sub_1BC3008(&NGUITools_TypeInfo, method);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
+    byte_4AFD06F = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = &this->fields.dragObject;
@@ -294,7 +294,7 @@ void __fastcall FavoriteChangeListViewObject__OnDestroy(FavoriteChangeListViewOb
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(v7, 0LL);
     *p_dragObject = 0LL;
-    sub_1BDB81C(p_dragObject);
+    sub_1BC2FAC(p_dragObject);
   }
 }
 
@@ -307,24 +307,24 @@ void __fastcall FavoriteChangeListViewObject__OnLongPush(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v5; // x1
 
-  if ( (byte_4B3FB06 & 1) == 0 )
+  if ( (byte_4AFD076 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_9927/*"OnLongPushListView"*/, method);
-    sub_1BDB878(&StringLiteral_9945/*"OnPressCancel"*/, v3);
-    byte_4B3FB06 = 1;
+    sub_1BC3008(&StringLiteral_9840/*"OnLongPushListView"*/, method);
+    sub_1BC3008(&StringLiteral_9858/*"OnPressCancel"*/, v3);
+    byte_4AFD076 = 1;
   }
   if ( this->fields.linkItem )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !gameObject
-      || (UnityEngine_GameObject__SendMessage_70266076(gameObject, (System_String_o *)StringLiteral_9945/*"OnPressCancel"*/, 0LL),
+      || (UnityEngine_GameObject__SendMessage_70016176(gameObject, (System_String_o *)StringLiteral_9858/*"OnPressCancel"*/, 0LL),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.manager) == 0LL) )
     {
-      sub_1BDBAD4(gameObject, v5);
+      sub_1BC3264(gameObject, v5);
     }
     UnityEngine_Component__SendMessage(
       (UnityEngine_Component_o *)gameObject,
-      (System_String_o *)StringLiteral_9927/*"OnLongPushListView"*/,
+      (System_String_o *)StringLiteral_9840/*"OnLongPushListView"*/,
       (Il2CppObject *)this,
       0LL);
   }
@@ -345,11 +345,11 @@ void __fastcall FavoriteChangeListViewObject__SetInput(
   struct ListViewItem_o *v10; // x1
   FavoriteChangeListViewItemDraw_o *v11; // x0
 
-  if ( (byte_4B3FB01 & 1) == 0 )
+  if ( (byte_4AFD071 & 1) == 0 )
   {
-    sub_1BDB878(&FavoriteChangeListViewItem_TypeInfo, isInput);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B3FB01 = 1;
+    sub_1BC3008(&FavoriteChangeListViewItem_TypeInfo, isInput);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
+    byte_4AFD071 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -373,7 +373,7 @@ void __fastcall FavoriteChangeListViewObject__SetInput(
     }
     v11 = this->fields.itemDraw;
     if ( !v11 )
-      sub_1BDBAD4(0LL, v10);
+      sub_1BC3264(0LL, v10);
     FavoriteChangeListViewItemDraw__SetInput(v11, (FavoriteChangeListViewItem_o *)v10, isInput, v7);
   }
 }
@@ -385,12 +385,12 @@ void __fastcall FavoriteChangeListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_42764972((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_42800124((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall FavoriteChangeListViewObject__SetItem_32256116(
+void __fastcall FavoriteChangeListViewObject__SetItem_32249616(
         FavoriteChangeListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -411,11 +411,11 @@ void __fastcall FavoriteChangeListViewObject__SetupDisp(FavoriteChangeListViewOb
   const MethodInfo *v9; // x3
   FavoriteChangeListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4B3FB04 & 1) == 0 )
+  if ( (byte_4AFD074 & 1) == 0 )
   {
-    sub_1BDB878(&FavoriteChangeListViewItem_TypeInfo, method);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B3FB04 = 1;
+    sub_1BC3008(&FavoriteChangeListViewItem_TypeInfo, method);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
+    byte_4AFD074 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -439,7 +439,7 @@ LABEL_8:
   {
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1BDBAD4(0LL, v8);
+      sub_1BC3264(0LL, v8);
     FavoriteChangeListViewItemDraw__SetItem(v10, (FavoriteChangeListViewItem_o *)linkItem, this->fields.dispMode, v9);
   }
 }
@@ -460,10 +460,10 @@ void __fastcall FavoriteChangeListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B3FAFC & 1) == 0 )
+  if ( (byte_4AFD06C & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, value);
-    byte_4B3FAFC = 1;
+    sub_1BC3008(&System_Action_TypeInfo, value);
+    byte_4AFD06C = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -476,13 +476,13 @@ void __fastcall FavoriteChangeListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
+    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (FavoriteChangeListViewObject_o *)sub_1BDBD94(v8);
+  v11 = (FavoriteChangeListViewObject_o *)sub_1BC3524(v8);
   FavoriteChangeListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -501,10 +501,10 @@ void __fastcall FavoriteChangeListViewObject__remove_callbackFunc(
   FavoriteChangeListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B3FAFD & 1) == 0 )
+  if ( (byte_4AFD06D & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, value);
-    byte_4B3FAFD = 1;
+    sub_1BC3008(&System_Action_TypeInfo, value);
+    byte_4AFD06D = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -517,12 +517,12 @@ void __fastcall FavoriteChangeListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
+    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (FavoriteChangeListViewObject_o *)sub_1BDBD94(v8);
+  v11 = (FavoriteChangeListViewObject_o *)sub_1BC3524(v8);
   FavoriteChangeListViewObject__Awake(v11, v12);
 }

@@ -1,13 +1,13 @@
 void __fastcall GrandGraphEntity___ctor(GrandGraphEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B44D9D & 1) == 0 )
+  if ( (byte_4B0234F & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B44D9D = 1;
+    sub_1BC3008(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B0234F = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32DF958 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32ACB8C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -24,13 +24,13 @@ bool __fastcall GrandGraphEntity__CanSelectToGrand(
   bool v10; // cc
 
   v4 = this;
-  if ( (byte_4B44D9C & 1) == 0 )
+  if ( (byte_4B0234E & 1) == 0 )
   {
-    this = (GrandGraphEntity_o *)sub_1BDB878(&BalanceConfig_TypeInfo, userServantEntity);
-    byte_4B44D9C = 1;
+    this = (GrandGraphEntity_o *)sub_1BC3008(&BalanceConfig_TypeInfo, userServantEntity);
+    byte_4B0234E = 1;
   }
   if ( !userServantEntity )
-    sub_1BDBAD4(this, userServantEntity);
+    sub_1BC3264(this, userServantEntity);
   if ( userServantEntity->fields.lv < v4->fields.condSvtLv )
     return 0;
   v6 = 0;
@@ -66,10 +66,10 @@ bool __fastcall GrandGraphEntity__IsOpen(GrandGraphEntity_o *this, const MethodI
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4B44D9B & 1) == 0 )
+  if ( (byte_4B0234D & 1) == 0 )
   {
-    sub_1BDB878(&CondType_TypeInfo, method);
-    byte_4B44D9B = 1;
+    sub_1BC3008(&CondType_TypeInfo, method);
+    byte_4B0234D = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

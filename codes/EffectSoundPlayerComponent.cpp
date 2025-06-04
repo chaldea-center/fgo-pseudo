@@ -21,15 +21,15 @@ void __fastcall EffectSoundPlayerComponent__ChangeVolumeBgm(
   float v13; // s8
   float v14; // s9
 
-  if ( (byte_4B45FED & 1) == 0 )
+  if ( (byte_4B03667 & 1) == 0 )
   {
-    sub_1BDB878(&BgmManager_TypeInfo, name);
-    sub_1BDB878(&System_Convert_TypeInfo, v4);
-    this = (EffectSoundPlayerComponent_o *)sub_1BDB878(&SoundManager_TypeInfo, v5);
-    byte_4B45FED = 1;
+    sub_1BC3008(&BgmManager_TypeInfo, name);
+    sub_1BC3008(&System_Convert_TypeInfo, v4);
+    this = (EffectSoundPlayerComponent_o *)sub_1BC3008(&SoundManager_TypeInfo, v5);
+    byte_4B03667 = 1;
   }
   if ( !name || (this = (EffectSoundPlayerComponent_o *)System_String__Split(name, 0x3Au, 0, 0LL)) == 0LL )
-    sub_1BDBAD4(this, name);
+    sub_1BC3264(this, name);
   v6 = this;
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -41,30 +41,30 @@ void __fastcall EffectSoundPlayerComponent__ChangeVolumeBgm(
   klass = (System_String_o *)v6[1].klass;
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v13 = System_Convert__ToSingle_63650584(klass, 0LL);
+  v13 = System_Convert__ToSingle_63439732(klass, 0LL);
   if ( m_CancellationTokenSource < 2 )
   {
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    SoundManager__playBgm_40514172(v11, v13, 0LL);
+    SoundManager__playBgm_40532824(v11, v13, 0LL);
     return;
   }
   if ( LODWORD(v6->fields.m_CancellationTokenSource) <= 1 )
 LABEL_19:
-    sub_1BDBADC(BgmName, v9, v10);
-  v14 = System_Convert__ToSingle_63650584((System_String_o *)v6[1].monitor, 0LL);
+    sub_1BC326C(BgmName, v9, v10);
+  v14 = System_Convert__ToSingle_63439732((System_String_o *)v6[1].monitor, 0LL);
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playBgm_40514288(v11, v13, v14, 0LL);
+  SoundManager__playBgm_40532940(v11, v13, v14, 0LL);
 }
 
 
 void __fastcall EffectSoundPlayerComponent__PauseBgm(EffectSoundPlayerComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B45FEB & 1) == 0 )
+  if ( (byte_4B03665 & 1) == 0 )
   {
-    sub_1BDB878(&BgmManager_TypeInfo, method);
-    byte_4B45FEB = 1;
+    sub_1BC3008(&BgmManager_TypeInfo, method);
+    byte_4B03665 = 1;
   }
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
@@ -86,18 +86,18 @@ void __fastcall EffectSoundPlayerComponent__PlayBgm(
   System_String_o *monitor; // x19
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B45FE9 & 1) == 0 )
+  if ( (byte_4B03663 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMaster_BgmMaster___, bgmId);
-    sub_1BDB878(&DataManager_TypeInfo, v4);
-    sub_1BDB878(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__, v5);
-    sub_1BDB878(&SoundManager_TypeInfo, v6);
-    byte_4B45FE9 = 1;
+    sub_1BC3008(&Method_DataManager_GetMaster_BgmMaster___, bgmId);
+    sub_1BC3008(&DataManager_TypeInfo, v4);
+    sub_1BC3008(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__, v5);
+    sub_1BC3008(&SoundManager_TypeInfo, v6);
+    byte_4B03663 = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_BgmMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_BgmMaster___);
   IsNullOrEmpty = System_Int32__Parse(bgmId, 0LL);
   if ( !Master_object )
     goto LABEL_14;
@@ -105,7 +105,7 @@ void __fastcall EffectSoundPlayerComponent__PlayBgm(
                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                     &entity,
                     IsNullOrEmpty,
-                    (const MethodInfo_32E1E88 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+                    (const MethodInfo_32AF0BC *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
   if ( (IsNullOrEmpty & 1) == 0 )
     return;
   if ( !entity )
@@ -115,7 +115,7 @@ void __fastcall EffectSoundPlayerComponent__PlayBgm(
     return;
   if ( !entity )
 LABEL_14:
-    sub_1BDBAD4(IsNullOrEmpty, v9);
+    sub_1BC3264(IsNullOrEmpty, v9);
   monitor = (System_String_o *)entity[1].monitor;
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -136,19 +136,19 @@ void __fastcall EffectSoundPlayerComponent__PlaySe(
   __int64 v9; // x2
   unsigned int v10; // w8
 
-  if ( (byte_4B45FE5 & 1) == 0 )
+  if ( (byte_4B0365F & 1) == 0 )
   {
-    this = (EffectSoundPlayerComponent_o *)sub_1BDB878(&Method_EffectSoundPlayerComponent_PlaySe__, name);
-    byte_4B45FE5 = 1;
+    this = (EffectSoundPlayerComponent_o *)sub_1BC3008(&Method_EffectSoundPlayerComponent_PlaySe__, name);
+    byte_4B0365F = 1;
   }
   if ( !name || (this = (EffectSoundPlayerComponent_o *)System_String__Split(name, 0x3Au, 0, 0LL)) == 0LL )
-    sub_1BDBAD4(this, name);
+    sub_1BC3264(this, name);
   v4 = this;
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
   v6 = Method_EffectSoundPlayerComponent_PlaySe__;
   if ( (*((_BYTE *)Method_EffectSoundPlayerComponent_PlaySe__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1BDB890(Method_EffectSoundPlayerComponent_PlaySe__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v6, v6[4]);
+    v6 = (_QWORD *)sub_1BC3020(Method_EffectSoundPlayerComponent_PlaySe__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v6, v6[4]);
   v10 = (unsigned int)v4->fields.m_CancellationTokenSource;
   if ( !v10 )
     goto LABEL_13;
@@ -160,8 +160,8 @@ void __fastcall EffectSoundPlayerComponent__PlaySe(
   }
   if ( v10 <= 1 )
 LABEL_13:
-    sub_1BDBADC(v7, klass, v9);
-  OverwriteAssetSoundName__PlaySe_40423116(v7, klass, (System_String_o *)v4[1].monitor, 1.0, 0LL, 0, 0LL);
+    sub_1BC326C(v7, klass, v9);
+  OverwriteAssetSoundName__PlaySe_40441768(v7, klass, (System_String_o *)v4[1].monitor, 1.0, 0LL, 0, 0LL);
 }
 
 
@@ -178,19 +178,19 @@ void __fastcall EffectSoundPlayerComponent__PlaySeContinue(
   __int64 v9; // x2
   unsigned int v10; // w8
 
-  if ( (byte_4B45FE6 & 1) == 0 )
+  if ( (byte_4B03660 & 1) == 0 )
   {
-    this = (EffectSoundPlayerComponent_o *)sub_1BDB878(&Method_EffectSoundPlayerComponent_PlaySeContinue__, name);
-    byte_4B45FE6 = 1;
+    this = (EffectSoundPlayerComponent_o *)sub_1BC3008(&Method_EffectSoundPlayerComponent_PlaySeContinue__, name);
+    byte_4B03660 = 1;
   }
   if ( !name || (this = (EffectSoundPlayerComponent_o *)System_String__Split(name, 0x3Au, 0, 0LL)) == 0LL )
-    sub_1BDBAD4(this, name);
+    sub_1BC3264(this, name);
   v4 = this;
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
   v6 = Method_EffectSoundPlayerComponent_PlaySeContinue__;
   if ( (*((_BYTE *)Method_EffectSoundPlayerComponent_PlaySeContinue__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1BDB890(Method_EffectSoundPlayerComponent_PlaySeContinue__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v6, v6[4]);
+    v6 = (_QWORD *)sub_1BC3020(Method_EffectSoundPlayerComponent_PlaySeContinue__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v6, v6[4]);
   v10 = (unsigned int)v4->fields.m_CancellationTokenSource;
   if ( !v10 )
     goto LABEL_13;
@@ -202,8 +202,8 @@ void __fastcall EffectSoundPlayerComponent__PlaySeContinue(
   }
   if ( v10 <= 1 )
 LABEL_13:
-    sub_1BDBADC(v7, klass, v9);
-  OverwriteAssetSoundName__PlaySeContinue_40422352(v7, klass, (System_String_o *)v4[1].monitor, 0, 0LL);
+    sub_1BC326C(v7, klass, v9);
+  OverwriteAssetSoundName__PlaySeContinue_40441004(v7, klass, (System_String_o *)v4[1].monitor, 0, 0LL);
 }
 
 
@@ -220,21 +220,21 @@ void __fastcall EffectSoundPlayerComponent__PlaySeContinueIgnorePreDelay(
   __int64 v9; // x2
   unsigned int v10; // w8
 
-  if ( (byte_4B45FE8 & 1) == 0 )
+  if ( (byte_4B03662 & 1) == 0 )
   {
-    this = (EffectSoundPlayerComponent_o *)sub_1BDB878(
+    this = (EffectSoundPlayerComponent_o *)sub_1BC3008(
                                              &Method_EffectSoundPlayerComponent_PlaySeContinueIgnorePreDelay__,
                                              soundInfo);
-    byte_4B45FE8 = 1;
+    byte_4B03662 = 1;
   }
   if ( !soundInfo || (this = (EffectSoundPlayerComponent_o *)System_String__Split(soundInfo, 0x3Au, 0, 0LL)) == 0LL )
-    sub_1BDBAD4(this, soundInfo);
+    sub_1BC3264(this, soundInfo);
   v4 = this;
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
   v6 = Method_EffectSoundPlayerComponent_PlaySeContinueIgnorePreDelay__;
   if ( (*((_BYTE *)Method_EffectSoundPlayerComponent_PlaySeContinueIgnorePreDelay__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1BDB890(Method_EffectSoundPlayerComponent_PlaySeContinueIgnorePreDelay__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v6, v6[4]);
+    v6 = (_QWORD *)sub_1BC3020(Method_EffectSoundPlayerComponent_PlaySeContinueIgnorePreDelay__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v6, v6[4]);
   v10 = (unsigned int)v4->fields.m_CancellationTokenSource;
   if ( !v10 )
     goto LABEL_13;
@@ -246,8 +246,8 @@ void __fastcall EffectSoundPlayerComponent__PlaySeContinueIgnorePreDelay(
   }
   if ( v10 <= 1 )
 LABEL_13:
-    sub_1BDBADC(v7, klass, v9);
-  OverwriteAssetSoundName__PlaySeContinue_40422352(v7, klass, (System_String_o *)v4[1].monitor, 1, 0LL);
+    sub_1BC326C(v7, klass, v9);
+  OverwriteAssetSoundName__PlaySeContinue_40441004(v7, klass, (System_String_o *)v4[1].monitor, 1, 0LL);
 }
 
 
@@ -264,21 +264,21 @@ void __fastcall EffectSoundPlayerComponent__PlaySeIgnorePreDelay(
   __int64 v9; // x2
   unsigned int v10; // w8
 
-  if ( (byte_4B45FE7 & 1) == 0 )
+  if ( (byte_4B03661 & 1) == 0 )
   {
-    this = (EffectSoundPlayerComponent_o *)sub_1BDB878(
+    this = (EffectSoundPlayerComponent_o *)sub_1BC3008(
                                              &Method_EffectSoundPlayerComponent_PlaySeIgnorePreDelay__,
                                              soundInfo);
-    byte_4B45FE7 = 1;
+    byte_4B03661 = 1;
   }
   if ( !soundInfo || (this = (EffectSoundPlayerComponent_o *)System_String__Split(soundInfo, 0x3Au, 0, 0LL)) == 0LL )
-    sub_1BDBAD4(this, soundInfo);
+    sub_1BC3264(this, soundInfo);
   v4 = this;
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
   v6 = Method_EffectSoundPlayerComponent_PlaySeIgnorePreDelay__;
   if ( (*((_BYTE *)Method_EffectSoundPlayerComponent_PlaySeIgnorePreDelay__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1BDB890(Method_EffectSoundPlayerComponent_PlaySeIgnorePreDelay__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v6, v6[4]);
+    v6 = (_QWORD *)sub_1BC3020(Method_EffectSoundPlayerComponent_PlaySeIgnorePreDelay__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v6, v6[4]);
   v10 = (unsigned int)v4->fields.m_CancellationTokenSource;
   if ( !v10 )
     goto LABEL_13;
@@ -290,17 +290,17 @@ void __fastcall EffectSoundPlayerComponent__PlaySeIgnorePreDelay(
   }
   if ( v10 <= 1 )
 LABEL_13:
-    sub_1BDBADC(v7, klass, v9);
-  OverwriteAssetSoundName__PlaySe_40423116(v7, klass, (System_String_o *)v4[1].monitor, 1.0, 0LL, 1, 0LL);
+    sub_1BC326C(v7, klass, v9);
+  OverwriteAssetSoundName__PlaySe_40441768(v7, klass, (System_String_o *)v4[1].monitor, 1.0, 0LL, 1, 0LL);
 }
 
 
 void __fastcall EffectSoundPlayerComponent__ResumeBgm(EffectSoundPlayerComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B45FEC & 1) == 0 )
+  if ( (byte_4B03666 & 1) == 0 )
   {
-    sub_1BDB878(&BgmManager_TypeInfo, method);
-    byte_4B45FEC = 1;
+    sub_1BC3008(&BgmManager_TypeInfo, method);
+    byte_4B03666 = 1;
   }
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
@@ -310,10 +310,10 @@ void __fastcall EffectSoundPlayerComponent__ResumeBgm(EffectSoundPlayerComponent
 
 void __fastcall EffectSoundPlayerComponent__StopBgm(EffectSoundPlayerComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B45FEA & 1) == 0 )
+  if ( (byte_4B03664 & 1) == 0 )
   {
-    sub_1BDB878(&SoundManager_TypeInfo, method);
-    byte_4B45FEA = 1;
+    sub_1BC3008(&SoundManager_TypeInfo, method);
+    byte_4B03664 = 1;
   }
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);

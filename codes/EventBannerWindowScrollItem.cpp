@@ -5,14 +5,14 @@ void __fastcall EventBannerWindowScrollItem___cctor(const MethodInfo *method)
   const MethodInfo *v3; // x3
   __int64 v4; // x1
 
-  if ( (byte_4B41456 & 1) == 0 )
+  if ( (byte_4AFE9C9 & 1) == 0 )
   {
-    sub_1BDB878(&EventBannerWindowScrollItem_TypeInfo, v1);
-    sub_1BDB878(&StringLiteral_17043/*"banner_loading"*/, v4);
-    byte_4B41456 = 1;
+    sub_1BC3008(&EventBannerWindowScrollItem_TypeInfo, v1);
+    sub_1BC3008(&StringLiteral_16880/*"banner_loading"*/, v4);
+    byte_4AFE9C9 = 1;
   }
-  EventBannerWindowScrollItem_TypeInfo->static_fields->DEFAULT_SP_NAME = (struct System_String_o *)StringLiteral_17043/*"banner_loading"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)EventBannerWindowScrollItem_TypeInfo->static_fields, StringLiteral_17043/*"banner_loading"*/, v2, v3);
+  EventBannerWindowScrollItem_TypeInfo->static_fields->DEFAULT_SP_NAME = (struct System_String_o *)StringLiteral_16880/*"banner_loading"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)EventBannerWindowScrollItem_TypeInfo->static_fields, StringLiteral_16880/*"banner_loading"*/, v2, v3);
 }
 
 
@@ -41,48 +41,48 @@ bool __fastcall EventBannerWindowScrollItem__IsGrayOut(EventBannerWindowScrollIt
   bool result; // w0
 
   v2 = this;
-  if ( (byte_4B41455 & 1) == 0 )
+  if ( (byte_4AFE9C8 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_EventDetailMaster___, method);
-    sub_1BDB878(&Method_DataManager_GetMasterData_EventMaster___, v3);
-    sub_1BDB878(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v4);
-    sub_1BDB878(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v5);
-    sub_1BDB878(&NetworkManager_TypeInfo, v6);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    this = (EventBannerWindowScrollItem_o *)sub_1BDB878(&TitleInfoControl_TypeInfo, v8);
-    byte_4B41455 = 1;
+    sub_1BC3008(&Method_DataManager_GetMasterData_EventDetailMaster___, method);
+    sub_1BC3008(&Method_DataManager_GetMasterData_EventMaster___, v3);
+    sub_1BC3008(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v4);
+    sub_1BC3008(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__, v5);
+    sub_1BC3008(&NetworkManager_TypeInfo, v6);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    this = (EventBannerWindowScrollItem_o *)sub_1BC3008(&TitleInfoControl_TypeInfo, v8);
+    byte_4AFE9C8 = 1;
   }
   mEventEndTimeInfo = v2->fields.mEventEndTimeInfo;
   if ( !mEventEndTimeInfo )
     goto LABEL_24;
   if ( !mEventEndTimeInfo->fields.is_reward && mEventEndTimeInfo->fields.is_shop_closed )
     return 1;
-  this = (EventBannerWindowScrollItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (EventBannerWindowScrollItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)this,
-                              (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventDetailMaster___),
-        (this = (EventBannerWindowScrollItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+                              (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_EventDetailMaster___),
+        (this = (EventBannerWindowScrollItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
     || (this = (EventBannerWindowScrollItem_o *)DataManager__GetMasterData_object_(
                                                   (DataManager_o *)this,
-                                                  (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventMaster___),
+                                                  (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_EventMaster___),
         (v11 = v2->fields.mEventEndTimeInfo) == 0LL)
     || !this
     || (this = (EventBannerWindowScrollItem_o *)DataMasterBase_object__object__int___GetEntity(
                                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                   v11->fields.event_id,
-                                                  (const MethodInfo_32E1E3C *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__),
+                                                  (const MethodInfo_32AF070 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__),
         (v12 = v2->fields.mEventEndTimeInfo) == 0LL)
     || !MasterData_object )
   {
 LABEL_24:
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   }
   v13 = (EventEntity_o *)this;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              v12->fields.event_id,
-             (const MethodInfo_32E1E3C *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+             (const MethodInfo_32AF070 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0LL);
@@ -93,7 +93,7 @@ LABEL_24:
       return 0;
     if ( !TitleInfoControl_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TitleInfoControl_TypeInfo);
-    return !TitleInfoControl__IsEnableEventShopButton_38960344((EventDetailEntity_o *)Entity, 0LL)
+    return !TitleInfoControl__IsEnableEventShopButton_38976912((EventDetailEntity_o *)Entity, 0LL)
         || Time >= v13->fields.finishedAt;
   }
   return result;
@@ -125,18 +125,18 @@ void __fastcall EventBannerWindowScrollItem__OnClickItem(EventBannerWindowScroll
   int32_t event_id; // w19
 
   v2 = this;
-  if ( (byte_4B41454 & 1) == 0 )
+  if ( (byte_4AFE9C7 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, method);
-    sub_1BDB878(&Method_DataManager_GetMasterData_EventDetailMaster___, v3);
-    sub_1BDB878(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v4);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1BDB878(&string_TypeInfo, v7);
-    sub_1BDB878(&TitleInfoControl_TypeInfo, v8);
-    sub_1BDB878(&Method_EventBannerWindowScrollItem___c__OnClickItem_b__9_0__, v9);
-    this = (EventBannerWindowScrollItem_o *)sub_1BDB878(&EventBannerWindowScrollItem___c_TypeInfo, v10);
-    byte_4B41454 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, method);
+    sub_1BC3008(&Method_DataManager_GetMasterData_EventDetailMaster___, v3);
+    sub_1BC3008(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__, v4);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1BC3008(&string_TypeInfo, v7);
+    sub_1BC3008(&TitleInfoControl_TypeInfo, v8);
+    sub_1BC3008(&Method_EventBannerWindowScrollItem___c__OnClickItem_b__9_0__, v9);
+    this = (EventBannerWindowScrollItem_o *)sub_1BC3008(&EventBannerWindowScrollItem___c_TypeInfo, v10);
+    byte_4AFE9C7 = 1;
   }
   mEventEndTimeInfo = v2->fields.mEventEndTimeInfo;
   if ( !mEventEndTimeInfo )
@@ -149,12 +149,12 @@ void __fastcall EventBannerWindowScrollItem__OnClickItem(EventBannerWindowScroll
   }
   if ( mEventEndTimeInfo->fields.is_shop_closed )
   {
-    this = (EventBannerWindowScrollItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (EventBannerWindowScrollItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( this )
     {
       this = (EventBannerWindowScrollItem_o *)DataManager__GetMasterData_object_(
                                                 (DataManager_o *)this,
-                                                (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                                                (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_EventDetailMaster___);
       v12 = v2->fields.mEventEndTimeInfo;
       if ( v12 )
       {
@@ -163,8 +163,8 @@ void __fastcall EventBannerWindowScrollItem__OnClickItem(EventBannerWindowScroll
           Entity = DataMasterBase_object__object__int___GetEntity(
                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                      v12->fields.event_id,
-                     (const MethodInfo_32E1E3C *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-          this = (EventBannerWindowScrollItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+                     (const MethodInfo_32AF070 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+          this = (EventBannerWindowScrollItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
           if ( Entity )
           {
             v14 = (CommonUI_o *)this;
@@ -185,11 +185,11 @@ void __fastcall EventBannerWindowScrollItem__OnClickItem(EventBannerWindowScroll
                 this = (EventBannerWindowScrollItem_o *)EventBannerWindowScrollItem___c_TypeInfo;
               }
               v18 = *(Il2CppObject **)this[2].monitor;
-              v17 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+              v17 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
               System_Action___ctor(v17, v18, Method_EventBannerWindowScrollItem___c__OnClickItem_b__9_0__, 0LL);
               static_fields = EventBannerWindowScrollItem___c_TypeInfo->static_fields;
               static_fields->__9__9_0 = v17;
-              sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__9_0, (int32_t)v17, v20, v21);
+              sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__9_0, (int32_t)v17, v20, v21);
             }
             if ( v14 )
             {
@@ -201,13 +201,13 @@ void __fastcall EventBannerWindowScrollItem__OnClickItem(EventBannerWindowScroll
       }
     }
 LABEL_24:
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   }
 LABEL_21:
   event_id = mEventEndTimeInfo->fields.event_id;
   if ( !TitleInfoControl_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TitleInfoControl_TypeInfo);
-  TitleInfoControl__OnClickEventBtn_38958444(event_id, 0LL);
+  TitleInfoControl__OnClickEventBtn_38975012(event_id, 0LL);
 }
 
 
@@ -250,21 +250,21 @@ void __fastcall EventBannerWindowScrollItem__Setup(
   const MethodInfo *v35; // x3
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4B41453 & 1) == 0 )
+  if ( (byte_4AFE9C6 & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, ev_end_time_inf);
-    sub_1BDB878(&EventBannerWindowScrollItem_TypeInfo, v6);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v7);
-    sub_1BDB878(&Method_UnityEngine_Object_Instantiate_NoticeNumberComponent___, v8);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v9);
-    sub_1BDB878(&string_TypeInfo, v10);
-    sub_1BDB878(&StringLiteral_5723/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, v11);
-    sub_1BDB878(&StringLiteral_5726/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, v12);
-    byte_4B41453 = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, ev_end_time_inf);
+    sub_1BC3008(&EventBannerWindowScrollItem_TypeInfo, v6);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v7);
+    sub_1BC3008(&Method_UnityEngine_Object_Instantiate_NoticeNumberComponent___, v8);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v9);
+    sub_1BC3008(&string_TypeInfo, v10);
+    sub_1BC3008(&StringLiteral_5659/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, v11);
+    sub_1BC3008(&StringLiteral_5662/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, v12);
+    byte_4AFE9C6 = 1;
   }
   this->fields.mEventEndTimeInfo = ev_end_time_inf;
   p_mEventEndTimeInfo = &this->fields.mEventEndTimeInfo;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.mEventEndTimeInfo, (int32_t)ev_end_time_inf, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.mEventEndTimeInfo, (int32_t)ev_end_time_inf, (int32_t)method, v3);
   if ( !this->fields.mEventEndTimeInfo )
     goto LABEL_24;
   mBannerSp = this->fields.mBannerSp;
@@ -295,7 +295,7 @@ void __fastcall EventBannerWindowScrollItem__Setup(
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      IsGrayOut = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5723/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, 0LL);
+      IsGrayOut = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5659/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, 0LL);
       v28 = *p_mEventEndTimeInfo;
       if ( !*p_mEventEndTimeInfo )
         goto LABEL_43;
@@ -305,7 +305,7 @@ void __fastcall EventBannerWindowScrollItem__Setup(
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      Empty = LocalizationManager__Get((System_String_o *)StringLiteral_5726/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, 0LL);
+      Empty = LocalizationManager__Get((System_String_o *)StringLiteral_5662/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, 0LL);
     }
   }
   IsGrayOut = this->fields.condMessageLabel;
@@ -361,14 +361,14 @@ LABEL_24:
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v33 = UnityEngine_Object__Instantiate_object_(
               noticeNumberPrefab,
-              (const MethodInfo_30BDAA4 *)Method_UnityEngine_Object_Instantiate_NoticeNumberComponent___);
+              (const MethodInfo_308AE24 *)Method_UnityEngine_Object_Instantiate_NoticeNumberComponent___);
       *p_mNoticeNumber = (struct NoticeNumberComponent_o *)v33;
-      sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.mNoticeNumber, (int32_t)v33, v34, v35);
+      sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.mNoticeNumber, (int32_t)v33, v34, v35);
       IsGrayOut = (UILabel_o *)*p_mNoticeNumber;
       if ( !*p_mNoticeNumber )
         goto LABEL_43;
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)IsGrayOut, 0LL);
-      GameObjectExtensions__SafeSetParent_35216896(gameObject, this->fields.noticeNumberRoot, 0LL);
+      GameObjectExtensions__SafeSetParent_35217712(gameObject, this->fields.noticeNumberRoot, 0LL);
     }
     if ( ev_end_time_inf )
     {
@@ -383,7 +383,7 @@ LABEL_24:
       }
     }
 LABEL_43:
-    sub_1BDBAD4(IsGrayOut, v14);
+    sub_1BC3264(IsGrayOut, v14);
   }
 }
 
@@ -395,15 +395,15 @@ void __fastcall EventBannerWindowScrollItem___c___cctor(const MethodInfo *method
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B41457 & 1) == 0 )
+  if ( (byte_4AFE9CA & 1) == 0 )
   {
-    sub_1BDB878(&EventBannerWindowScrollItem___c_TypeInfo, v1);
-    byte_4B41457 = 1;
+    sub_1BC3008(&EventBannerWindowScrollItem___c_TypeInfo, v1);
+    byte_4AFE9CA = 1;
   }
-  v2 = (Il2CppObject *)sub_1BDBAC4(EventBannerWindowScrollItem___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BC3254(EventBannerWindowScrollItem___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventBannerWindowScrollItem___c_TypeInfo->static_fields->__9 = (struct EventBannerWindowScrollItem___c_o *)v2;
-  sub_1BDB81C((CGThumbnailListItem_o *)EventBannerWindowScrollItem___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BC2FAC((CGThumbnailListItem_o *)EventBannerWindowScrollItem___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 

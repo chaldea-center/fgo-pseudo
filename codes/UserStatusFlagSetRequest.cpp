@@ -6,22 +6,22 @@ void __fastcall UserStatusFlagSetRequest__beginRequest(
 {
   __int64 v7; // x1
 
-  if ( (byte_4B46631 & 1) == 0 )
+  if ( (byte_4B03BE0 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_22385/*"offFlagNumbers"*/, onFlagNumbers);
-    sub_1BDB878(&StringLiteral_22435/*"onFlagNumbers"*/, v7);
-    byte_4B46631 = 1;
+    sub_1BC3008(&StringLiteral_22147/*"offFlagNumbers"*/, onFlagNumbers);
+    sub_1BC3008(&StringLiteral_22197/*"onFlagNumbers"*/, v7);
+    byte_4B03BE0 = 1;
   }
   if ( onFlagNumbers && *(_QWORD *)&onFlagNumbers->max_length )
-    RequestBase__addField_43155368(
+    RequestBase__addField_43193604(
       (RequestBase_o *)this,
-      (System_String_o *)StringLiteral_22435/*"onFlagNumbers"*/,
+      (System_String_o *)StringLiteral_22197/*"onFlagNumbers"*/,
       &onFlagNumbers->obj,
       method);
   if ( offFlagNumbers && *(_QWORD *)&offFlagNumbers->max_length )
-    RequestBase__addField_43155368(
+    RequestBase__addField_43193604(
       (RequestBase_o *)this,
-      (System_String_o *)StringLiteral_22385/*"offFlagNumbers"*/,
+      (System_String_o *)StringLiteral_22147/*"offFlagNumbers"*/,
       &offFlagNumbers->obj,
       method);
   RequestBase__beginRequest((RequestBase_o *)this, (const MethodInfo *)onFlagNumbers);
@@ -32,10 +32,10 @@ System_String_o *__fastcall UserStatusFlagSetRequest__getMockData(
         UserStatusFlagSetRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B46630 & 1) == 0 )
+  if ( (byte_4B03BDF & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_1/*""*/, method);
-    byte_4B46630 = 1;
+    sub_1BC3008(&StringLiteral_1/*""*/, method);
+    byte_4B03BDF = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -48,16 +48,16 @@ System_String_o *__fastcall UserStatusFlagSetRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B4662F & 1) == 0 )
+  if ( (byte_4B03BDE & 1) == 0 )
   {
-    sub_1BDB878(&NetworkManager_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_24633/*"userStatus/flagSet"*/, v2);
-    byte_4B4662F = 1;
+    sub_1BC3008(&NetworkManager_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_24334/*"userStatus/flagSet"*/, v2);
+    byte_4B03BDE = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_24633/*"userStatus/flagSet"*/, 0LL);
+  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_24334/*"userStatus/flagSet"*/, 0LL);
 }
 
 
@@ -73,17 +73,17 @@ void __fastcall UserStatusFlagSetRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v10; // x9
 
-  if ( (byte_4B46632 & 1) == 0 )
+  if ( (byte_4B03BE1 & 1) == 0 )
   {
-    sub_1BDB878(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1BDB878(&StringLiteral_22401/*"ok"*/, v5);
-    sub_1BDB878(&StringLiteral_22233/*"ng"*/, v6);
-    byte_4B46632 = 1;
+    sub_1BC3008(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1BC3008(&StringLiteral_22163/*"ok"*/, v5);
+    sub_1BC3008(&StringLiteral_21997/*"ng"*/, v6);
+    byte_4B03BE1 = 1;
   }
-  if ( (byte_4B465EF & 1) == 0 )
+  if ( (byte_4B03B9E & 1) == 0 )
   {
-    sub_1BDB878(&TopHomeRequest_TypeInfo, responseList);
-    byte_4B465EF = 1;
+    sub_1BC3008(&TopHomeRequest_TypeInfo, responseList);
+    byte_4B03B9E = 1;
   }
   TopHomeRequest_TypeInfo->static_fields->accessTime = 0LL;
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -94,14 +94,14 @@ void __fastcall UserStatusFlagSetRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22401/*"ok"*/;
+    v10 = &StringLiteral_22163/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22233/*"ng"*/;
+    v10 = &StringLiteral_21997/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

@@ -12,30 +12,30 @@ void __fastcall EventRandomMissionClearManager___cctor(const MethodInfo *method)
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4B4461E & 1) == 0 )
+  if ( (byte_4B01BB0 & 1) == 0 )
   {
-    sub_1BDB878(&EventRandomMissionClearManager_TypeInfo, v1);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ClearRandomMissionInfo___ctor__, v4);
-    sub_1BDB878(&System_Collections_Generic_List_ClearRandomMissionInfo__TypeInfo, v5);
-    sub_1BDB878(&StringLiteral_6692/*"Fgo_20211029"*/, v6);
-    byte_4B4461E = 1;
+    sub_1BC3008(&EventRandomMissionClearManager_TypeInfo, v1);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ClearRandomMissionInfo___ctor__, v4);
+    sub_1BC3008(&System_Collections_Generic_List_ClearRandomMissionInfo__TypeInfo, v5);
+    sub_1BC3008(&StringLiteral_6626/*"Fgo_20211029"*/, v6);
+    byte_4B01BB0 = 1;
   }
-  EventRandomMissionClearManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6692/*"Fgo_20211029"*/;
-  sub_1BDB81C(
+  EventRandomMissionClearManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6626/*"Fgo_20211029"*/;
+  sub_1BC2FAC(
     (CGThumbnailListItem_o *)EventRandomMissionClearManager_TypeInfo->static_fields,
-    StringLiteral_6692/*"Fgo_20211029"*/,
+    StringLiteral_6626/*"Fgo_20211029"*/,
     v2,
     v3);
   static_fields = EventRandomMissionClearManager_TypeInfo->static_fields;
   static_fields->LIST_MAX = 100;
   *(_WORD *)&static_fields->isModify = 0;
-  v8 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_ClearRandomMissionInfo__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_ClearRandomMissionInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_ClearRandomMissionInfo___ctor__);
+    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_ClearRandomMissionInfo___ctor__);
   v9 = EventRandomMissionClearManager_TypeInfo->static_fields;
   v9->clearRandomMissionList = (struct System_Collections_Generic_List_ClearRandomMissionInfo__o *)v8;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v9->clearRandomMissionList, (int32_t)v8, v10, v11);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v9->clearRandomMissionList, (int32_t)v8, v10, v11);
 }
 
 
@@ -63,13 +63,13 @@ void __fastcall EventRandomMissionClearManager__AddClearRandomMissionInfo(
   struct EventRandomMissionClearManager_StaticFields *static_fields; // x9
   System_Collections_Generic_List_object__o *v15; // x8
 
-  if ( (byte_4B4461A & 1) == 0 )
+  if ( (byte_4B01BAC & 1) == 0 )
   {
-    sub_1BDB878(&EventRandomMissionClearManager_TypeInfo, method);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__Add__, v5);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__RemoveAt__, v6);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__get_Count__, v7);
-    byte_4B4461A = 1;
+    sub_1BC3008(&EventRandomMissionClearManager_TypeInfo, method);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__Add__, v5);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__RemoveAt__, v6);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__get_Count__, v7);
+    byte_4B01BAC = 1;
   }
   v8 = EventRandomMissionClearManager_TypeInfo;
   if ( !EventRandomMissionClearManager_TypeInfo->_2.cctor_finished )
@@ -91,14 +91,14 @@ void __fastcall EventRandomMissionClearManager__AddClearRandomMissionInfo(
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)clearRandomMissionList,
       (Il2CppObject *)info,
-      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
   }
   else
   {
     v13 = &name[8 * namespaze_low];
     LODWORD(clearRandomMissionList->_1.namespaze) = namespaze_low + 1;
     *((_QWORD *)v13 + 4) = info;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v13 + 32), (int32_t)info, v2, v3);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v13 + 32), (int32_t)info, v2, v3);
   }
   clearRandomMissionList = EventRandomMissionClearManager_TypeInfo;
   static_fields = EventRandomMissionClearManager_TypeInfo->static_fields;
@@ -113,12 +113,12 @@ void __fastcall EventRandomMissionClearManager__AddClearRandomMissionInfo(
     v15 = (System_Collections_Generic_List_object__o *)EventRandomMissionClearManager_TypeInfo->static_fields->clearRandomMissionList;
     if ( !v15 )
 LABEL_18:
-      sub_1BDBAD4(clearRandomMissionList, method);
+      sub_1BC3264(clearRandomMissionList, method);
   }
   System_Collections_Generic_List_object___RemoveAt(
     v15,
     0,
-    (const MethodInfo_36D7598 *)Method_System_Collections_Generic_List_ClearRandomMissionInfo__RemoveAt__);
+    (const MethodInfo_36A2614 *)Method_System_Collections_Generic_List_ClearRandomMissionInfo__RemoveAt__);
   clearRandomMissionList = EventRandomMissionClearManager_TypeInfo;
 LABEL_15:
   if ( !clearRandomMissionList->_2.cctor_finished )
@@ -140,12 +140,12 @@ void __fastcall EventRandomMissionClearManager__ClearSaveDataList(const MethodIn
   int32_t size; // w2
   int v7; // w9
 
-  if ( (byte_4B44619 & 1) == 0 )
+  if ( (byte_4B01BAB & 1) == 0 )
   {
-    sub_1BDB878(&EventRandomMissionClearManager_TypeInfo, v1);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__Clear__, v2);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__get_Count__, v3);
-    byte_4B44619 = 1;
+    sub_1BC3008(&EventRandomMissionClearManager_TypeInfo, v1);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__Clear__, v2);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__get_Count__, v3);
+    byte_4B01BAB = 1;
   }
   v4 = EventRandomMissionClearManager_TypeInfo;
   if ( !EventRandomMissionClearManager_TypeInfo->_2.cctor_finished )
@@ -165,7 +165,7 @@ void __fastcall EventRandomMissionClearManager__ClearSaveDataList(const MethodIn
     clearRandomMissionList = EventRandomMissionClearManager_TypeInfo->static_fields->clearRandomMissionList;
     if ( !clearRandomMissionList )
 LABEL_14:
-      sub_1BDBAD4(v4, v1);
+      sub_1BC3264(v4, v1);
   }
   size = clearRandomMissionList->fields._size;
   v7 = clearRandomMissionList->fields._version + 1;
@@ -192,10 +192,10 @@ void __fastcall EventRandomMissionClearManager__DeleteSaveData(const MethodInfo 
   EventRandomMissionClearManager_c *v2; // x0
   System_String_o *SaveFileName; // x19
 
-  if ( (byte_4B44617 & 1) == 0 )
+  if ( (byte_4B01BA9 & 1) == 0 )
   {
-    sub_1BDB878(&EventRandomMissionClearManager_TypeInfo, v1);
-    byte_4B44617 = 1;
+    sub_1BC3008(&EventRandomMissionClearManager_TypeInfo, v1);
+    byte_4B01BA9 = 1;
   }
   v2 = EventRandomMissionClearManager_TypeInfo;
   if ( !EventRandomMissionClearManager_TypeInfo->_2.cctor_finished )
@@ -214,11 +214,11 @@ ClearRandomMissionInfo_array *__fastcall EventRandomMissionClearManager__GetClea
   EventRandomMissionClearManager_c *v3; // x0
   System_Collections_Generic_List_object__o *clearRandomMissionList; // x0
 
-  if ( (byte_4B4461B & 1) == 0 )
+  if ( (byte_4B01BAD & 1) == 0 )
   {
-    sub_1BDB878(&EventRandomMissionClearManager_TypeInfo, v1);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__ToArray__, v2);
-    byte_4B4461B = 1;
+    sub_1BC3008(&EventRandomMissionClearManager_TypeInfo, v1);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__ToArray__, v2);
+    byte_4B01BAD = 1;
   }
   v3 = EventRandomMissionClearManager_TypeInfo;
   if ( !EventRandomMissionClearManager_TypeInfo->_2.cctor_finished )
@@ -228,10 +228,10 @@ ClearRandomMissionInfo_array *__fastcall EventRandomMissionClearManager__GetClea
   }
   clearRandomMissionList = (System_Collections_Generic_List_object__o *)v3->static_fields->clearRandomMissionList;
   if ( !clearRandomMissionList )
-    sub_1BDBAD4(0LL, v1);
+    sub_1BC3264(0LL, v1);
   return (ClearRandomMissionInfo_array *)System_Collections_Generic_List_object___ToArray(
                                            clearRandomMissionList,
-                                           (const MethodInfo_36D791C *)Method_System_Collections_Generic_List_ClearRandomMissionInfo__ToArray__);
+                                           (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_ClearRandomMissionInfo__ToArray__);
 }
 
 
@@ -243,12 +243,12 @@ System_String_o *__fastcall EventRandomMissionClearManager__GetSaveFileName(cons
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4B44616 & 1) == 0 )
+  if ( (byte_4B01BA8 & 1) == 0 )
   {
-    sub_1BDB878(&AndroidUtil_TypeInfo, v1);
-    sub_1BDB878(&DatFileName_TypeInfo, v2);
-    sub_1BDB878(&StringLiteral_1061/*"/"*/, v3);
-    byte_4B44616 = 1;
+    sub_1BC3008(&AndroidUtil_TypeInfo, v1);
+    sub_1BC3008(&DatFileName_TypeInfo, v2);
+    sub_1BC3008(&StringLiteral_1039/*"/"*/, v3);
+    byte_4B01BA8 = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -256,7 +256,7 @@ System_String_o *__fastcall EventRandomMissionClearManager__GetSaveFileName(cons
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(36, 0LL);
-  return System_String__Concat_62610508(DatFileSavePath, (System_String_o *)StringLiteral_1061/*"/"*/, FileName, 0LL);
+  return System_String__Concat_62386896(DatFileSavePath, (System_String_o *)StringLiteral_1039/*"/"*/, FileName, 0LL);
 }
 
 
@@ -265,10 +265,10 @@ void __fastcall EventRandomMissionClearManager__Initialize(const MethodInfo *met
   __int64 v1; // x1
   EventRandomMissionClearManager_c *v2; // x0
 
-  if ( (byte_4B44618 & 1) == 0 )
+  if ( (byte_4B01BAA & 1) == 0 )
   {
-    sub_1BDB878(&EventRandomMissionClearManager_TypeInfo, v1);
-    byte_4B44618 = 1;
+    sub_1BC3008(&EventRandomMissionClearManager_TypeInfo, v1);
+    byte_4B01BAA = 1;
   }
   v2 = EventRandomMissionClearManager_TypeInfo;
   if ( !EventRandomMissionClearManager_TypeInfo->_2.cctor_finished )
@@ -326,15 +326,15 @@ bool __fastcall EventRandomMissionClearManager__ReadData(const MethodInfo *metho
   __int64 v46; // x0
   EventRandomMissionClearManager_c *v47; // x0
 
-  if ( (byte_4B4461C & 1) == 0 )
+  if ( (byte_4B01BAE & 1) == 0 )
   {
-    sub_1BDB878(&System_IO_BinaryReader_TypeInfo, v1);
-    sub_1BDB878(&ClearRandomMissionInfo_TypeInfo, v2);
-    sub_1BDB878(&EventRandomMissionClearManager_TypeInfo, v3);
-    sub_1BDB878(&System_IDisposable_TypeInfo, v4);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__Add__, v5);
-    sub_1BDB878(&ManagerConfig_TypeInfo, v6);
-    byte_4B4461C = 1;
+    sub_1BC3008(&System_IO_BinaryReader_TypeInfo, v1);
+    sub_1BC3008(&ClearRandomMissionInfo_TypeInfo, v2);
+    sub_1BC3008(&EventRandomMissionClearManager_TypeInfo, v3);
+    sub_1BC3008(&System_IDisposable_TypeInfo, v4);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__Add__, v5);
+    sub_1BC3008(&ManagerConfig_TypeInfo, v6);
+    byte_4B01BAE = 1;
   }
   v7 = EventRandomMissionClearManager_TypeInfo;
   if ( !EventRandomMissionClearManager_TypeInfo->_2.cctor_finished )
@@ -368,10 +368,10 @@ bool __fastcall EventRandomMissionClearManager__ReadData(const MethodInfo *metho
     j_il2cpp_runtime_class_init_0(EventRandomMissionClearManager_TypeInfo);
   EventRandomMissionClearManager__ClearSaveDataList((const MethodInfo *)v12);
   v13 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0LL);
-  v14 = (System_IO_BinaryReader_o *)sub_1BDBAC4(System_IO_BinaryReader_TypeInfo);
+  v14 = (System_IO_BinaryReader_o *)sub_1BC3254(System_IO_BinaryReader_TypeInfo);
   System_IO_BinaryReader___ctor(v14, v13, 0LL);
   if ( !v14 )
-    sub_1BDBAD4(v15, v16);
+    sub_1BC3264(v15, v16);
   v17 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v14->klass->vtable._22_ReadString.method)(
                              v14,
                              v14->klass->vtable._23_ReadChars.methodPtr);
@@ -410,13 +410,13 @@ bool __fastcall EventRandomMissionClearManager__ReadData(const MethodInfo *metho
         v24 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, Il2CppMethodPointer))v14->klass->vtable._22_ReadString.method)(
                 v14,
                 v14->klass->vtable._23_ReadChars.methodPtr);
-        v25 = sub_1BDBAC4(ClearRandomMissionInfo_TypeInfo);
+        v25 = sub_1BC3254(ClearRandomMissionInfo_TypeInfo);
         ClearRandomMissionInfo___ctor((ClearRandomMissionInfo_o *)v25, 0LL);
         if ( !v25 )
-          sub_1BDBAD4(v26, v27);
+          sub_1BC3264(v26, v27);
         *(_QWORD *)(v25 + 24) = v24;
         *(_DWORD *)(v25 + 16) = v23;
-        sub_1BDB81C((CGThumbnailListItem_o *)(v25 + 24), v24, v28, v29);
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v25 + 24), v24, v28, v29);
         v33 = EventRandomMissionClearManager_TypeInfo;
         if ( !EventRandomMissionClearManager_TypeInfo->_2.cctor_finished )
         {
@@ -425,26 +425,26 @@ bool __fastcall EventRandomMissionClearManager__ReadData(const MethodInfo *metho
         }
         clearRandomMissionList = (System_Collections_Generic_List_object__o *)v33->static_fields->clearRandomMissionList;
         if ( !clearRandomMissionList )
-          sub_1BDBAD4(0LL, v30);
+          sub_1BC3264(0LL, v30);
         items = clearRandomMissionList->fields._items;
         v36 = Method_System_Collections_Generic_List_ClearRandomMissionInfo__Add__;
         ++clearRandomMissionList->fields._version;
         if ( !items )
-          sub_1BDBAD4(clearRandomMissionList, v30);
+          sub_1BC3264(clearRandomMissionList, v30);
         size = clearRandomMissionList->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             clearRandomMissionList,
             (Il2CppObject *)v25,
-            *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+            *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
         }
         else
         {
           v38 = &items->obj.klass + size;
           clearRandomMissionList->fields._size = size + 1;
           v38[4] = (Il2CppClass *)v25;
-          sub_1BDB81C((CGThumbnailListItem_o *)(v38 + 4), v25, v31, v32);
+          sub_1BC2FAC((CGThumbnailListItem_o *)(v38 + 4), v25, v31, v32);
         }
         --v22;
       }
@@ -472,7 +472,7 @@ bool __fastcall EventRandomMissionClearManager__ReadData(const MethodInfo *metho
   else
   {
 LABEL_36:
-    v42 = sub_1C2C00C(v14, System_IDisposable_TypeInfo, 0LL);
+    v42 = sub_1C13570(v14, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v42)(v14, *(_QWORD *)(v42 + 8));
   if ( (v19 | 8) == 8 )
@@ -502,7 +502,7 @@ LABEL_36:
   else
   {
 LABEL_46:
-    v46 = sub_1C2C00C(v13, System_IDisposable_TypeInfo, 0LL);
+    v46 = sub_1C13570(v13, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_IO_Stream_o *, _QWORD))v46)(v13, *(_QWORD *)(v46 + 8));
   return v19 == 9;
@@ -545,15 +545,15 @@ bool __fastcall EventRandomMissionClearManager__WriteData(const MethodInfo *meth
   int32_t *v33; // x10
   __int64 v34; // x0
 
-  if ( (byte_4B4461D & 1) == 0 )
+  if ( (byte_4B01BAF & 1) == 0 )
   {
-    sub_1BDB878(&System_IO_BinaryWriter_TypeInfo, v1);
-    sub_1BDB878(&EventRandomMissionClearManager_TypeInfo, v2);
-    sub_1BDB878(&System_IDisposable_TypeInfo, v3);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__get_Count__, v4);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__get_Item__, v5);
-    sub_1BDB878(&ManagerConfig_TypeInfo, v6);
-    byte_4B4461D = 1;
+    sub_1BC3008(&System_IO_BinaryWriter_TypeInfo, v1);
+    sub_1BC3008(&EventRandomMissionClearManager_TypeInfo, v2);
+    sub_1BC3008(&System_IDisposable_TypeInfo, v3);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__get_Count__, v4);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ClearRandomMissionInfo__get_Item__, v5);
+    sub_1BC3008(&ManagerConfig_TypeInfo, v6);
+    byte_4B01BAF = 1;
   }
   v7 = EventRandomMissionClearManager_TypeInfo;
   if ( !EventRandomMissionClearManager_TypeInfo->_2.cctor_finished )
@@ -583,8 +583,8 @@ bool __fastcall EventRandomMissionClearManager__WriteData(const MethodInfo *meth
     j_il2cpp_runtime_class_init_0(EventRandomMissionClearManager_TypeInfo);
   SaveFileName = EventRandomMissionClearManager__GetSaveFileName((const MethodInfo *)v11);
   v13 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0LL);
-  v14 = (System_IO_BinaryWriter_o *)sub_1BDBAC4(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_63486724(v14, v13, 0LL);
+  v14 = (System_IO_BinaryWriter_o *)sub_1BC3254(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_63258572(v14, v13, 0LL);
   v16 = EventRandomMissionClearManager_TypeInfo;
   if ( !EventRandomMissionClearManager_TypeInfo->_2.cctor_finished )
   {
@@ -594,9 +594,9 @@ bool __fastcall EventRandomMissionClearManager__WriteData(const MethodInfo *meth
   v17 = v16->static_fields;
   clearRandomMissionList = v17->clearRandomMissionList;
   if ( !clearRandomMissionList )
-    sub_1BDBAD4(v16, v15);
+    sub_1BC3264(v16, v15);
   if ( !v14 )
-    sub_1BDBAD4(v16, v15);
+    sub_1BC3264(v16, v15);
   size = clearRandomMissionList->fields._size;
   ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, void *))v14->klass->vtable._22_Write.method)(
     v14,
@@ -622,14 +622,14 @@ bool __fastcall EventRandomMissionClearManager__WriteData(const MethodInfo *meth
       }
       v23 = (System_Collections_Generic_List_object__o *)v22->static_fields->clearRandomMissionList;
       if ( !v23 )
-        sub_1BDBAD4(0LL, v20);
+        sub_1BC3264(0LL, v20);
       Item = System_Collections_Generic_List_object___get_Item(
                v23,
                i,
-               (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_ClearRandomMissionInfo__get_Item__);
+               (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_ClearRandomMissionInfo__get_Item__);
       v26 = Item;
       if ( !Item )
-        sub_1BDBAD4(0LL, v25);
+        sub_1BC3264(0LL, v25);
       ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, Il2CppMethodPointer))v14->klass->vtable._17_Write.method)(
         v14,
         LODWORD(Item[1].klass),
@@ -660,7 +660,7 @@ bool __fastcall EventRandomMissionClearManager__WriteData(const MethodInfo *meth
   else
   {
 LABEL_29:
-    v30 = sub_1C2C00C(v14, System_IDisposable_TypeInfo, 0LL);
+    v30 = sub_1C13570(v14, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v30)(v14, *(_QWORD *)(v30 + 8));
   if ( v13 )
@@ -682,7 +682,7 @@ LABEL_29:
     else
     {
 LABEL_36:
-      v34 = sub_1C2C00C(v13, System_IDisposable_TypeInfo, 0LL);
+      v34 = sub_1C13570(v13, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(System_IO_Stream_o *, _QWORD))v34)(v13, *(_QWORD *)(v34 + 8));
   }

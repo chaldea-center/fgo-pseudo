@@ -19,10 +19,10 @@ void __fastcall CharaGraphServantListViewItem___ctor(
     method);
   UserServantEntity_k__BackingField = this->fields._UserServantEntity_k__BackingField;
   if ( !UserServantEntity_k__BackingField )
-    sub_1BDBAD4(0LL, v6);
+    sub_1BC3264(0LL, v6);
   OverwriteStatus = UserServantEntity__GetOverwriteStatus(UserServantEntity_k__BackingField, 0LL, 0LL);
   this->fields._OverwriteStatus_k__BackingField = OverwriteStatus;
-  sub_1BDB81C(
+  sub_1BC2FAC(
     (CGThumbnailListItem_o *)&this->fields._OverwriteStatus_k__BackingField,
     (int32_t)OverwriteStatus,
     v9,
@@ -44,10 +44,10 @@ void __fastcall CharaGraphServantListViewItem__UpdateProperties(
   CharaGraphServantListViewItemBase__UpdateProperties((CharaGraphServantListViewItemBase_o *)this, args, method);
   UserServantEntity_k__BackingField = this->fields._UserServantEntity_k__BackingField;
   if ( !UserServantEntity_k__BackingField )
-    sub_1BDBAD4(0LL, v4);
+    sub_1BC3264(0LL, v4);
   OverwriteStatus = UserServantEntity__GetOverwriteStatus(UserServantEntity_k__BackingField, 0LL, 0LL);
   this->fields._OverwriteStatus_k__BackingField = OverwriteStatus;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._OverwriteStatus_k__BackingField, (int32_t)OverwriteStatus, v7, v8);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._OverwriteStatus_k__BackingField, (int32_t)OverwriteStatus, v7, v8);
 }
 
 
@@ -59,7 +59,7 @@ int32_t __fastcall CharaGraphServantListViewItem__get_Atk(
 
   OverwriteStatus_k__BackingField = this->fields._OverwriteStatus_k__BackingField;
   if ( !OverwriteStatus_k__BackingField )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   return OverwriteStatus_k__BackingField->fields._Atk_k__BackingField;
 }
 
@@ -72,7 +72,7 @@ int32_t __fastcall CharaGraphServantListViewItem__get_Cost(
 
   OverwriteStatus_k__BackingField = this->fields._OverwriteStatus_k__BackingField;
   if ( !OverwriteStatus_k__BackingField )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   return OverwriteStatus_k__BackingField->fields._Cost_k__BackingField;
 }
 
@@ -85,7 +85,7 @@ int32_t __fastcall CharaGraphServantListViewItem__get_Hp(
 
   OverwriteStatus_k__BackingField = this->fields._OverwriteStatus_k__BackingField;
   if ( !OverwriteStatus_k__BackingField )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   return OverwriteStatus_k__BackingField->fields._Hp_k__BackingField;
 }
 
@@ -106,7 +106,7 @@ int32_t __fastcall CharaGraphServantListViewItem__get_Rarity(
 
   OverwriteStatus_k__BackingField = this->fields._OverwriteStatus_k__BackingField;
   if ( !OverwriteStatus_k__BackingField )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   return OverwriteStatus_k__BackingField->fields._Rarity_k__BackingField;
 }
 
@@ -119,7 +119,7 @@ void __fastcall CharaGraphServantListViewItem__set_OverwriteStatus(
   const MethodInfo *v3; // x3
 
   this->fields._OverwriteStatus_k__BackingField = value;
-  sub_1BDB81C(
+  sub_1BC2FAC(
     (CGThumbnailListItem_o *)&this->fields._OverwriteStatus_k__BackingField,
     (int32_t)value,
     (int32_t)method,

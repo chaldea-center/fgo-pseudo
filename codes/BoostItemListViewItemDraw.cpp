@@ -2,10 +2,10 @@ void __fastcall BoostItemListViewItemDraw___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4B40384 & 1) == 0 )
+  if ( (byte_4AFD8F4 & 1) == 0 )
   {
-    sub_1BDB878(&BoostItemListViewItemDraw_TypeInfo, v1);
-    byte_4B40384 = 1;
+    sub_1BC3008(&BoostItemListViewItemDraw_TypeInfo, v1);
+    byte_4AFD8F4 = 1;
   }
   BoostItemListViewItemDraw_TypeInfo->static_fields->DETAIL_FONT_SIZE = 18;
 }
@@ -56,14 +56,14 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
 
   v5 = item;
   v6 = this;
-  if ( (byte_4B40383 & 1) == 0 )
+  if ( (byte_4AFD8F3 & 1) == 0 )
   {
-    sub_1BDB878(&BalanceConfig_TypeInfo, item);
-    sub_1BDB878(&BoostItemListViewItemDraw_TypeInfo, v7);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v8);
-    sub_1BDB878(&StringLiteral_3965/*"CURRENT_NUM_TXT"*/, v9);
-    this = (BoostItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_20236/*"icon_race_"*/, v10);
-    byte_4B40383 = 1;
+    sub_1BC3008(&BalanceConfig_TypeInfo, item);
+    sub_1BC3008(&BoostItemListViewItemDraw_TypeInfo, v7);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v8);
+    sub_1BC3008(&StringLiteral_3897/*"CURRENT_NUM_TXT"*/, v9);
+    this = (BoostItemListViewItemDraw_o *)sub_1BC3008(&StringLiteral_20024/*"icon_race_"*/, v10);
+    byte_4AFD8F3 = 1;
   }
   if ( mode )
   {
@@ -78,7 +78,7 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
     this = (BoostItemListViewItemDraw_o *)v6->fields.itemIconInfo;
     if ( !this )
       goto LABEL_34;
-    ItemIconComponent__SetItemImage_39932756(
+    ItemIconComponent__SetItemImage_39950384(
       (ItemIconComponent_o *)this,
       itemEntity[10],
       itemEntity[11],
@@ -89,7 +89,7 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
     infoLabel = v6->fields.infoLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    this = (BoostItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3965/*"CURRENT_NUM_TXT"*/, 0LL);
+    this = (BoostItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3897/*"CURRENT_NUM_TXT"*/, 0LL);
     if ( !infoLabel )
       goto LABEL_34;
     UILabel__set_text(infoLabel, (System_String_o *)this, 0LL);
@@ -99,10 +99,10 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
       goto LABEL_34;
     UILabel__set_text(numLabel, (System_String_o *)this, 0LL);
     nameLabel = v6->fields.nameLabel;
-    if ( (byte_4B4037F & 1) == 0 )
+    if ( (byte_4AFD8EF & 1) == 0 )
     {
-      this = (BoostItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_19073/*"error"*/, item);
-      byte_4B4037F = 1;
+      this = (BoostItemListViewItemDraw_o *)sub_1BC3008(&StringLiteral_18886/*"error"*/, item);
+      byte_4AFD8EF = 1;
     }
     if ( !nameLabel )
       goto LABEL_34;
@@ -110,7 +110,7 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
     if ( v18 )
       p_name = &v18->fields.name;
     else
-      p_name = (System_String_o **)&StringLiteral_19073/*"error"*/;
+      p_name = (System_String_o **)&StringLiteral_18886/*"error"*/;
     UILabel__set_text(nameLabel, *p_name, 0LL);
     detailLabel = v6->fields.detailLabel;
     SkillText = BoostItemListViewItem__get_SkillText(v5, v21);
@@ -134,15 +134,15 @@ void __fastcall BoostItemListViewItemDraw__SetItem(
     if ( magnification >= 2 )
     {
       v26 = System_Int32__ToString((int32_t)&v33, 0LL);
-      this = (BoostItemListViewItemDraw_o *)System_String__Concat_62572260(
-                                              (System_String_o *)StringLiteral_20236/*"icon_race_"*/,
+      this = (BoostItemListViewItemDraw_o *)System_String__Concat_62348648(
+                                              (System_String_o *)StringLiteral_20024/*"icon_race_"*/,
                                               v26,
                                               0LL);
       item = (BoostItemListViewItem_o *)this;
     }
     if ( !magnificationSprite )
 LABEL_34:
-      sub_1BDBAD4(this, item);
+      sub_1BC3264(this, item);
     UISprite__set_spriteName(magnificationSprite, (System_String_o *)item, 0LL);
     v27 = (UIWidget_o *)v6->fields.magnificationSprite;
     if ( isCanNotSelect )

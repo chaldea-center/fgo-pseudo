@@ -4,10 +4,10 @@ void __fastcall PlayFieldMotionNpcActionData___ctor(
         int32_t targetId,
         const MethodInfo *method)
 {
-  if ( (byte_4B46F72 & 1) == 0 )
+  if ( (byte_4B0452E & 1) == 0 )
   {
-    sub_1BDB878(&BattleActionData_TypeInfo, *(_QWORD *)&targetId);
-    byte_4B46F72 = 1;
+    sub_1BC3008(&BattleActionData_TypeInfo, *(_QWORD *)&targetId);
+    byte_4B0452E = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
@@ -28,10 +28,10 @@ void __fastcall PlayFieldMotionNpcActionData__PreActionProcess(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4B46F73 & 1) == 0 )
+  if ( (byte_4B0452F & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, data);
-    byte_4B46F73 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, data);
+    byte_4B0452F = 1;
   }
   BattleActionData__PreActionProcess((BattleActionData_o *)this, data, 0LL);
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
@@ -41,9 +41,9 @@ void __fastcall PlayFieldMotionNpcActionData__PreActionProcess(
   if ( ((unsigned __int8)perf & 1) != 0 )
   {
     if ( !data || (perf = data->fields.perf) == 0LL )
-      sub_1BDBAD4(perf, v7);
+      sub_1BC3264(perf, v7);
     ServantGameObject = BattlePerformance__getServantGameObject(perf, this->fields.targetId, 0LL);
     this->fields.targetObject = ServantGameObject;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.targetObject, (int32_t)ServantGameObject, v9, v10);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.targetObject, (int32_t)ServantGameObject, v9, v10);
   }
 }

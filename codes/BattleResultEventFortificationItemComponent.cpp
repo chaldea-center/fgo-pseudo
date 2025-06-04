@@ -11,21 +11,21 @@ void __fastcall BattleResultEventFortificationItemComponent___ctor(
   const MethodInfo *v9; // x1
   System_RuntimeFieldHandle_o v10; // 0:w1.4
 
-  if ( (byte_4B480B8 & 1) == 0 )
+  if ( (byte_4B0568F & 1) == 0 )
   {
-    sub_1BDB878(&BattleResultEventItemComponent_TypeInfo, method);
-    sub_1BDB878(&int___TypeInfo, v3);
-    sub_1BDB878(
+    sub_1BC3008(&BattleResultEventItemComponent_TypeInfo, method);
+    sub_1BC3008(&int___TypeInfo, v3);
+    sub_1BC3008(
       &Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1,
       v4);
-    byte_4B480B8 = 1;
+    byte_4B0568F = 1;
   }
-  v5 = (System_Array_o *)sub_1BDB920(int___TypeInfo, 3LL);
+  v5 = (System_Array_o *)sub_1BC30B0(int___TypeInfo, 3LL);
   v10.fields.value = Field__PrivateImplementationDetails__88A785E43F0814338C5CB47BDE7DE708C7172EABAD671E4511199C78A3B4DAA1;
   v6 = (struct System_Int32_array *)v5;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63272576(v5, v10, 0LL);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_63047724(v5, v10, 0LL);
   this->fields.workTypeOrder = v6;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.workTypeOrder, (int32_t)v6, v7, v8);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.workTypeOrder, (int32_t)v6, v7, v8);
   if ( !BattleResultEventItemComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleResultEventItemComponent_TypeInfo);
   BattleResultEventItemComponent___ctor((BattleResultEventItemComponent_o *)this, v9);
@@ -40,7 +40,7 @@ bool __fastcall BattleResultEventFortificationItemComponent__IsFortificationInfo
 
   gaugeListRoot = this->fields.gaugeListRoot;
   if ( !gaugeListRoot )
-    sub_1BDBAD4(0LL, method);
+    sub_1BC3264(0LL, method);
   return UnityEngine_Transform__get_childCount(gaugeListRoot, 0LL) > 0;
 }
 
@@ -68,19 +68,19 @@ void __fastcall BattleResultEventFortificationItemComponent__SetFortificationInf
   Il2CppObject *Component_object; // x19
 
   v4 = this;
-  if ( (byte_4B480B7 & 1) == 0 )
+  if ( (byte_4B0568E & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_BattleFortificationInfo__TypeInfo, fortificationInfos);
-    sub_1BDB878(&Method_BasicHelper_ForEach_BattleFortificationInfo___, v5);
-    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_UIGrid___, v6);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BDB878(
+    sub_1BC3008(&System_Action_BattleFortificationInfo__TypeInfo, fortificationInfos);
+    sub_1BC3008(&Method_BasicHelper_ForEach_BattleFortificationInfo___, v5);
+    sub_1BC3008(&Method_UnityEngine_Component_GetComponent_UIGrid___, v6);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v7);
+    sub_1BC3008(
       &Method_BattleResultEventFortificationItemComponent___c__DisplayClass4_0__SetFortificationInfos_b__0__,
       v8);
-    this = (BattleResultEventFortificationItemComponent_o *)sub_1BDB878(
+    this = (BattleResultEventFortificationItemComponent_o *)sub_1BC3008(
                                                               &BattleResultEventFortificationItemComponent___c__DisplayClass4_0_TypeInfo,
                                                               v9);
-    byte_4B480B7 = 1;
+    byte_4B0568E = 1;
   }
   if ( fortificationInfos && *(_QWORD *)&fortificationInfos->max_length )
   {
@@ -92,16 +92,16 @@ void __fastcall BattleResultEventFortificationItemComponent__SetFortificationInf
       v11 = 0LL;
       while ( 1 )
       {
-        v12 = sub_1BDBAC4(BattleResultEventFortificationItemComponent___c__DisplayClass4_0_TypeInfo);
+        v12 = sub_1BC3254(BattleResultEventFortificationItemComponent___c__DisplayClass4_0_TypeInfo);
         System_Object___ctor((Il2CppObject *)v12, 0LL);
         if ( !v12 )
           break;
         *(_QWORD *)(v12 + 24) = v4;
-        sub_1BDB81C((CGThumbnailListItem_o *)(v12 + 24), (int32_t)v4, v13, v14);
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v12 + 24), (int32_t)v4, v13, v14);
         if ( v11 >= workTypeOrder->max_length )
-          sub_1BDBADC(v15, v16, v17);
+          sub_1BC326C(v15, v16, v17);
         *(_DWORD *)(v12 + 16) = workTypeOrder->m_Items[v11 + 1];
-        v18 = (System_Action_object__o *)sub_1BDBAC4(System_Action_BattleFortificationInfo__TypeInfo);
+        v18 = (System_Action_object__o *)sub_1BC3254(System_Action_BattleFortificationInfo__TypeInfo);
         System_Action_object____ctor(
           v18,
           (Il2CppObject *)v12,
@@ -110,12 +110,12 @@ void __fastcall BattleResultEventFortificationItemComponent__SetFortificationInf
         BasicHelper__ForEach_object_(
           (System_Collections_Generic_IEnumerable_T__o *)fortificationInfos,
           (System_Action_T__o *)v18,
-          (const MethodInfo_301FA1C *)Method_BasicHelper_ForEach_BattleFortificationInfo___);
+          (const MethodInfo_2FEDEFC *)Method_BasicHelper_ForEach_BattleFortificationInfo___);
         if ( (__int64)++v11 >= (int)workTypeOrder->max_length )
           goto LABEL_11;
       }
 LABEL_18:
-      sub_1BDBAD4(this, fortificationInfos);
+      sub_1BC3264(this, fortificationInfos);
     }
 LABEL_11:
     this = (BattleResultEventFortificationItemComponent_o *)v4->fields.gaugeListRoot;
@@ -123,7 +123,7 @@ LABEL_11:
       goto LABEL_18;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+                         (const MethodInfo_2FF8634 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (BattleResultEventFortificationItemComponent_o *)UnityEngine_Object__op_Inequality(
@@ -162,7 +162,7 @@ void __fastcall BattleResultEventFortificationItemComponent__setResultData(
       (BattleResultEventItemComponent_o *)this,
       drop,
       *(const MethodInfo **)&eventId);
-    BattleResultEventItemComponent__SetItemWindow_46453348((BattleResultEventItemComponent_o *)this, drop, v8);
+    BattleResultEventItemComponent__SetItemWindow_46493068((BattleResultEventItemComponent_o *)this, drop, v8);
   }
 }
 
@@ -188,11 +188,11 @@ void __fastcall BattleResultEventFortificationItemComponent___c__DisplayClass4_0
   Il2CppObject *fortificationGaugePrefab; // x21
   UnityEngine_Component_o *v11; // x20
 
-  if ( (byte_4B480B9 & 1) == 0 )
+  if ( (byte_4B05690 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_Object_Instantiate_FortificationGauge___, info);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B480B9 = 1;
+    sub_1BC3008(&Method_UnityEngine_Object_Instantiate_FortificationGauge___, info);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
+    byte_4B05690 = 1;
   }
   if ( info )
   {
@@ -206,17 +206,17 @@ void __fastcall BattleResultEventFortificationItemComponent___c__DisplayClass4_0
       gaugeListRoot = _4__this->fields.gaugeListRoot;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      FortificationWorkType = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object__51108816(
+      FortificationWorkType = (UnityEngine_Component_o *)UnityEngine_Object__Instantiate_object__50900816(
                                                            fortificationGaugePrefab,
                                                            gaugeListRoot,
-                                                           (const MethodInfo_30BDBD0 *)Method_UnityEngine_Object_Instantiate_FortificationGauge___);
+                                                           (const MethodInfo_308AF50 *)Method_UnityEngine_Object_Instantiate_FortificationGauge___);
       if ( !FortificationWorkType
         || (v11 = FortificationWorkType,
             FortificationGauge__SetData((FortificationGauge_o *)FortificationWorkType, info, 0LL),
             (FortificationWorkType = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(v11, 0LL)) == 0LL) )
       {
 LABEL_12:
-        sub_1BDBAD4(FortificationWorkType, v7);
+        sub_1BC3264(FortificationWorkType, v7);
       }
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)FortificationWorkType, 1, 0LL);
     }

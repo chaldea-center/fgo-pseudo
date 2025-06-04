@@ -1,4 +1,4 @@
-void __fastcall UseNoblePhantasmWaveTurnEvent___ctor_45857468(
+void __fastcall UseNoblePhantasmWaveTurnEvent___ctor_45820012(
         UseNoblePhantasmWaveTurnEvent_o *this,
         int32_t wave,
         int32_t turn,
@@ -19,15 +19,15 @@ UseNoblePhantasmWaveTurnEvent_o *__fastcall UseNoblePhantasmWaveTurnEvent__Creat
   Il2CppObject *v4; // x19
 
   v2 = saveData;
-  if ( (byte_4B47B69 & 1) == 0 )
+  if ( (byte_4B0507D & 1) == 0 )
   {
-    saveData = (ServantWaveTurnEvent_SaveData_o *)sub_1BDB878(&UseNoblePhantasmWaveTurnEvent_TypeInfo, method);
-    byte_4B47B69 = 1;
+    saveData = (ServantWaveTurnEvent_SaveData_o *)sub_1BC3008(&UseNoblePhantasmWaveTurnEvent_TypeInfo, method);
+    byte_4B0507D = 1;
   }
   if ( !v2 )
-    sub_1BDBAD4(saveData, method);
+    sub_1BC3264(saveData, method);
   v3 = *(Il2CppClass **)&v2->fields.Wave;
-  v4 = (Il2CppObject *)sub_1BDBAC4(UseNoblePhantasmWaveTurnEvent_TypeInfo);
+  v4 = (Il2CppObject *)sub_1BC3254(UseNoblePhantasmWaveTurnEvent_TypeInfo);
   System_Object___ctor(v4, 0LL);
   v4[1].klass = v3;
   return (UseNoblePhantasmWaveTurnEvent_o *)v4;

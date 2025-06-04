@@ -21,46 +21,46 @@ void __fastcall QuestBoardListEffectComponent__Awake(QuestBoardListEffectCompone
   Il2CppObject *v15; // x21
   const MethodInfo *v16; // x2
 
-  if ( (byte_4B41777 & 1) == 0 )
+  if ( (byte_4AFECF4 & 1) == 0 )
   {
-    sub_1BDB878(&Method_CStateManager_QuestBoardListEffectComponent___ctor__, method);
-    sub_1BDB878(&Method_CStateManager_QuestBoardListEffectComponent__add__, v3);
-    sub_1BDB878(&CStateManager_QuestBoardListEffectComponent__TypeInfo, v4);
-    sub_1BDB878(&QuestBoardListEffectComponent_StateNone_TypeInfo, v5);
-    sub_1BDB878(&QuestBoardListEffectComponent_StatePlay_TypeInfo, v6);
-    byte_4B41777 = 1;
+    sub_1BC3008(&Method_CStateManager_QuestBoardListEffectComponent___ctor__, method);
+    sub_1BC3008(&Method_CStateManager_QuestBoardListEffectComponent__add__, v3);
+    sub_1BC3008(&CStateManager_QuestBoardListEffectComponent__TypeInfo, v4);
+    sub_1BC3008(&QuestBoardListEffectComponent_StateNone_TypeInfo, v5);
+    sub_1BC3008(&QuestBoardListEffectComponent_StatePlay_TypeInfo, v6);
+    byte_4AFECF4 = 1;
   }
   if ( !this->fields.FSM )
   {
-    v7 = (CStateManager_T__o *)sub_1BDBAC4(CStateManager_QuestBoardListEffectComponent__TypeInfo);
+    v7 = (CStateManager_T__o *)sub_1BC3254(CStateManager_QuestBoardListEffectComponent__TypeInfo);
     CStateManager_object____ctor(
       v7,
       (Il2CppObject *)this,
       2,
-      (const MethodInfo_3270084 *)Method_CStateManager_QuestBoardListEffectComponent___ctor__);
+      (const MethodInfo_323D2B8 *)Method_CStateManager_QuestBoardListEffectComponent___ctor__);
     this->fields.FSM = (struct CStateManager_QuestBoardListEffectComponent__o *)v7;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.FSM, (int32_t)v7, v8, v9);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.FSM, (int32_t)v7, v8, v9);
     FSM = (CStateManager_T__o *)this->fields.FSM;
-    v11 = (Il2CppObject *)sub_1BDBAC4(QuestBoardListEffectComponent_StateNone_TypeInfo);
+    v11 = (Il2CppObject *)sub_1BC3254(QuestBoardListEffectComponent_StateNone_TypeInfo);
     System_Object___ctor(v11, 0LL);
     if ( !FSM
       || (CStateManager_object___add(
             FSM,
             0,
             (IState_T__o *)v11,
-            (const MethodInfo_327012C *)Method_CStateManager_QuestBoardListEffectComponent__add__),
+            (const MethodInfo_323D360 *)Method_CStateManager_QuestBoardListEffectComponent__add__),
           v14 = (CStateManager_T__o *)this->fields.FSM,
-          v15 = (Il2CppObject *)sub_1BDBAC4(QuestBoardListEffectComponent_StatePlay_TypeInfo),
+          v15 = (Il2CppObject *)sub_1BC3254(QuestBoardListEffectComponent_StatePlay_TypeInfo),
           System_Object___ctor(v15, 0LL),
           !v14) )
     {
-      sub_1BDBAD4(v12, v13);
+      sub_1BC3264(v12, v13);
     }
     CStateManager_object___add(
       v14,
       1,
       (IState_T__o *)v15,
-      (const MethodInfo_327012C *)Method_CStateManager_QuestBoardListEffectComponent__add__);
+      (const MethodInfo_323D360 *)Method_CStateManager_QuestBoardListEffectComponent__add__);
     QuestBoardListEffectComponent__SetState(this, 0, v16);
   }
 }
@@ -74,16 +74,16 @@ int32_t __fastcall QuestBoardListEffectComponent__GetState(
   struct CStateManager_QuestBoardListEffectComponent__o *FSM; // x8
 
   v2 = this;
-  if ( (byte_4B4177B & 1) == 0 )
+  if ( (byte_4AFECF8 & 1) == 0 )
   {
-    this = (QuestBoardListEffectComponent_o *)sub_1BDB878(
+    this = (QuestBoardListEffectComponent_o *)sub_1BC3008(
                                                 &Method_CStateManager_QuestBoardListEffectComponent__getState__,
                                                 method);
-    byte_4B4177B = 1;
+    byte_4AFECF8 = 1;
   }
   FSM = v2->fields.FSM;
   if ( !FSM )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   return FSM->fields.m_state;
 }
 
@@ -105,7 +105,7 @@ void __fastcall QuestBoardListEffectComponent__Init(
   const MethodInfo *v15; // x3
   UnityEngine_Component_o *transform; // x0
   __int64 v17; // x1
-  Il2CppObject *ComponentInChildren_object__50504592; // x0
+  Il2CppObject *ComponentInChildren_object__50301080; // x0
   struct SimpleAnimation_o **p_simpleAnimation; // x22
   int32_t v20; // w2
   const MethodInfo *v21; // x3
@@ -130,31 +130,31 @@ void __fastcall QuestBoardListEffectComponent__Init(
   SimpleAnimation_State_c **v40; // x10
   __int64 v41; // x0
 
-  if ( (byte_4B41779 & 1) == 0 )
+  if ( (byte_4AFECF6 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, isInitDisp);
-    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_Animation___, v9);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v10);
-    sub_1BDB878(&SimpleAnimation_State_TypeInfo, v11);
-    byte_4B41779 = 1;
+    sub_1BC3008(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, isInitDisp);
+    sub_1BC3008(&Method_UnityEngine_Component_GetComponent_Animation___, v9);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v10);
+    sub_1BC3008(&SimpleAnimation_State_TypeInfo, v11);
+    byte_4AFECF6 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_Animation___);
+                       (const MethodInfo_2FF8634 *)Method_UnityEngine_Component_GetComponent_Animation___);
   this->fields.normalAnimation = (struct UnityEngine_Animation_o *)Component_object;
   p_normalAnimation = &this->fields.normalAnimation;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.normalAnimation, (int32_t)Component_object, v14, v15);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.normalAnimation, (int32_t)Component_object, v14, v15);
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_38;
-  ComponentInChildren_object__50504592 = UnityEngine_Component__GetComponentInChildren_object__50504592(
+  ComponentInChildren_object__50301080 = UnityEngine_Component__GetComponentInChildren_object__50301080(
                                            transform,
-                                           (const MethodInfo_302A390 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
-  this->fields.simpleAnimation = (struct SimpleAnimation_o *)ComponentInChildren_object__50504592;
+                                           (const MethodInfo_2FF8898 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+  this->fields.simpleAnimation = (struct SimpleAnimation_o *)ComponentInChildren_object__50301080;
   p_simpleAnimation = &this->fields.simpleAnimation;
-  sub_1BDB81C(
+  sub_1BC2FAC(
     (CGThumbnailListItem_o *)&this->fields.simpleAnimation,
-    (int32_t)ComponentInChildren_object__50504592,
+    (int32_t)ComponentInChildren_object__50301080,
     v20,
     v21);
   simpleAnimation = (UnityEngine_Object_o *)this->fields.simpleAnimation;
@@ -199,7 +199,7 @@ void __fastcall QuestBoardListEffectComponent__Init(
       }
     }
 LABEL_38:
-    sub_1BDBAD4(transform, v17);
+    sub_1BC3264(transform, v17);
   }
   v23 = *p_simpleAnimation;
   if ( !*p_simpleAnimation )
@@ -229,7 +229,7 @@ LABEL_38:
   else
   {
 LABEL_14:
-    v29 = sub_1C2C00C(transform, SimpleAnimation_State_TypeInfo, 8LL);
+    v29 = sub_1C13570(transform, SimpleAnimation_State_TypeInfo, 8LL);
   }
   transform = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(UnityEngine_Component_o *, _QWORD, float))v29)(
                                            v26,
@@ -263,7 +263,7 @@ LABEL_14:
   else
   {
 LABEL_33:
-    v41 = sub_1C2C00C(transform, SimpleAnimation_State_TypeInfo, 6LL);
+    v41 = sub_1C13570(transform, SimpleAnimation_State_TypeInfo, 6LL);
   }
   (*(void (__fastcall **)(UnityEngine_Component_o *, _QWORD, float))v41)(v38, *(_QWORD *)(v41 + 8), 0.0);
 LABEL_36:
@@ -291,14 +291,14 @@ void __fastcall QuestBoardListEffectComponent__Play(
   if ( OnPlayingAct )
   {
     this->fields.OnPlayingAct = OnPlayingAct;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.OnPlayingAct, (int32_t)OnPlayingAct, (int32_t)end_act, method);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.OnPlayingAct, (int32_t)OnPlayingAct, (int32_t)end_act, method);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BDBAD4(0LL, v7);
+    sub_1BC3264(0LL, v7);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   this->fields.EndAct = end_act;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.EndAct, (int32_t)end_act, v8, v9);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.EndAct, (int32_t)end_act, v8, v9);
   QuestBoardListEffectComponent__SetState(this, 1, v10);
 }
 
@@ -320,18 +320,18 @@ void __fastcall QuestBoardListEffectComponent__SetState(
 {
   CStateManager_T__o *FSM; // x0
 
-  if ( (byte_4B4177C & 1) == 0 )
+  if ( (byte_4AFECF9 & 1) == 0 )
   {
-    sub_1BDB878(&Method_CStateManager_QuestBoardListEffectComponent__setState__, *(_QWORD *)&state);
-    byte_4B4177C = 1;
+    sub_1BC3008(&Method_CStateManager_QuestBoardListEffectComponent__setState__, *(_QWORD *)&state);
+    byte_4AFECF9 = 1;
   }
   FSM = (CStateManager_T__o *)this->fields.FSM;
   if ( !FSM )
-    sub_1BDBAD4(0LL, *(_QWORD *)&state);
+    sub_1BC3264(0LL, *(_QWORD *)&state);
   CStateManager_object___setState(
     FSM,
     state,
-    (const MethodInfo_32701B8 *)Method_CStateManager_QuestBoardListEffectComponent__setState__);
+    (const MethodInfo_323D3EC *)Method_CStateManager_QuestBoardListEffectComponent__setState__);
 }
 
 
@@ -358,11 +358,11 @@ void __fastcall QuestBoardListEffectComponent__Skip(
   System_String_o *v18; // x0
 
   v3 = *(long double *)&time;
-  if ( (byte_4B4177A & 1) == 0 )
+  if ( (byte_4AFECF7 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    sub_1BDB878(&SimpleAnimation_State_TypeInfo, v5);
-    byte_4B4177A = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    sub_1BC3008(&SimpleAnimation_State_TypeInfo, v5);
+    byte_4AFECF7 = 1;
   }
   simpleAnimation = (UnityEngine_Object_o *)this->fields.simpleAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -398,7 +398,7 @@ void __fastcall QuestBoardListEffectComponent__Skip(
           else
           {
 LABEL_13:
-            v15 = sub_1C2C00C(monitor, SimpleAnimation_State_TypeInfo, 4LL);
+            v15 = sub_1C13570(monitor, SimpleAnimation_State_TypeInfo, 4LL);
           }
           (*(void (__fastcall **)(UnityEngine_Object_o *, _QWORD, long double))v15)(v12, *(_QWORD *)(v15 + 8), v3);
           monitor = (UnityEngine_Object_o *)this->fields.simpleAnimation;
@@ -411,7 +411,7 @@ LABEL_13:
       }
     }
 LABEL_26:
-    sub_1BDBAD4(monitor, v8);
+    sub_1BC3264(monitor, v8);
   }
   normalAnimation = (UnityEngine_Object_o *)this->fields.normalAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -448,16 +448,16 @@ void __fastcall QuestBoardListEffectComponent__Update(QuestBoardListEffectCompon
 {
   CStateManager_T__o *FSM; // x0
 
-  if ( (byte_4B41778 & 1) == 0 )
+  if ( (byte_4AFECF5 & 1) == 0 )
   {
-    sub_1BDB878(&Method_CStateManager_QuestBoardListEffectComponent__update__, method);
-    byte_4B41778 = 1;
+    sub_1BC3008(&Method_CStateManager_QuestBoardListEffectComponent__update__, method);
+    byte_4AFECF5 = 1;
   }
   FSM = (CStateManager_T__o *)this->fields.FSM;
   if ( FSM )
     CStateManager_object___update(
       FSM,
-      (const MethodInfo_3270194 *)Method_CStateManager_QuestBoardListEffectComponent__update__);
+      (const MethodInfo_323D3C8 *)Method_CStateManager_QuestBoardListEffectComponent__update__);
 }
 
 
@@ -540,11 +540,11 @@ void __fastcall QuestBoardListEffectComponent_StatePlay__begin(
   int32_t *v32; // x10
   __int64 v33; // x0
 
-  if ( (byte_4B4177D & 1) == 0 )
+  if ( (byte_4AFECFA & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, that);
-    this = (QuestBoardListEffectComponent_StatePlay_o *)sub_1BDB878(&SimpleAnimation_State_TypeInfo, v5);
-    byte_4B4177D = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, that);
+    this = (QuestBoardListEffectComponent_StatePlay_o *)sub_1BC3008(&SimpleAnimation_State_TypeInfo, v5);
+    byte_4AFECFA = 1;
   }
   if ( !that )
     goto LABEL_49;
@@ -581,7 +581,7 @@ void __fastcall QuestBoardListEffectComponent_StatePlay__begin(
           if ( !this )
             goto LABEL_49;
           v22 = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
-          this = (QuestBoardListEffectComponent_StatePlay_o *)UnityEngine_Animation__Play_70027660(v21, v22, 0LL);
+          this = (QuestBoardListEffectComponent_StatePlay_o *)UnityEngine_Animation__Play_69779584(v21, v22, 0LL);
         }
         v23 = that->fields.normalAnimation;
         if ( v23 )
@@ -620,7 +620,7 @@ void __fastcall QuestBoardListEffectComponent_StatePlay__begin(
       }
     }
 LABEL_49:
-    sub_1BDBAD4(this, that);
+    sub_1BC3264(this, that);
   }
   v7 = that->fields.simpleAnimation;
   if ( !v7 )
@@ -639,7 +639,7 @@ LABEL_49:
     if ( !this )
       goto LABEL_49;
     v10 = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
-    this = (QuestBoardListEffectComponent_StatePlay_o *)SimpleAnimation__Play_65523240(v9, v10, 0LL);
+    this = (QuestBoardListEffectComponent_StatePlay_o *)SimpleAnimation__Play_65293968(v9, v10, 0LL);
   }
   v11 = that->fields.simpleAnimation;
   if ( !v11 )
@@ -670,7 +670,7 @@ LABEL_49:
   else
   {
 LABEL_20:
-    v17 = sub_1C2C00C(this, SimpleAnimation_State_TypeInfo, 4LL);
+    v17 = sub_1C13570(this, SimpleAnimation_State_TypeInfo, 4LL);
   }
   this = (QuestBoardListEffectComponent_StatePlay_o *)(*(__int64 (__fastcall **)(QuestBoardListEffectComponent_StatePlay_o *, _QWORD, long double))v17)(
                                                         v14,
@@ -704,7 +704,7 @@ LABEL_20:
   else
   {
 LABEL_46:
-    v33 = sub_1C2C00C(this, SimpleAnimation_State_TypeInfo, 8LL);
+    v33 = sub_1C13570(this, SimpleAnimation_State_TypeInfo, 8LL);
   }
   (*(void (__fastcall **)(QuestBoardListEffectComponent_StatePlay_o *, _QWORD, float))v33)(
     v30,
@@ -756,11 +756,11 @@ void __fastcall QuestBoardListEffectComponent_StatePlay__update(
   __int64 v30; // x0
   const MethodInfo *v31; // x2
 
-  if ( (byte_4B4177E & 1) == 0 )
+  if ( (byte_4AFECFB & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, that);
-    this = (QuestBoardListEffectComponent_StatePlay_o *)sub_1BDB878(&SimpleAnimation_State_TypeInfo, v4);
-    byte_4B4177E = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, that);
+    this = (QuestBoardListEffectComponent_StatePlay_o *)sub_1BC3008(&SimpleAnimation_State_TypeInfo, v4);
+    byte_4AFECFB = 1;
   }
   if ( !that )
     goto LABEL_58;
@@ -865,7 +865,7 @@ LABEL_57:
     else
     {
 LABEL_16:
-      v12 = sub_1C2C00C(this, SimpleAnimation_State_TypeInfo, 3LL);
+      v12 = sub_1C13570(this, SimpleAnimation_State_TypeInfo, 3LL);
     }
     if ( (*(float (__fastcall **)(QuestBoardListEffectComponent_StatePlay_o *, _QWORD))v12)(v9, *(_QWORD *)(v12 + 8)) >= that->fields.playingActStartTime )
     {
@@ -914,7 +914,7 @@ LABEL_16:
   else
   {
 LABEL_51:
-    v30 = sub_1C2C00C(this, SimpleAnimation_State_TypeInfo, 3LL);
+    v30 = sub_1C13570(this, SimpleAnimation_State_TypeInfo, 3LL);
   }
   if ( (*(float (__fastcall **)(QuestBoardListEffectComponent_StatePlay_o *, _QWORD))v30)(v27, *(_QWORD *)(v30 + 8)) >= that->fields.animationEndTime )
   {
@@ -925,6 +925,6 @@ LABEL_51:
       goto LABEL_57;
     }
 LABEL_58:
-    sub_1BDBAD4(this, that);
+    sub_1BC3264(this, that);
   }
 }

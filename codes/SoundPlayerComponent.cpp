@@ -8,10 +8,10 @@ void __fastcall SoundPlayerComponent__CreateContinueDeviceSaveData(const MethodI
 {
   __int64 v1; // x1
 
-  if ( (byte_4B401B1 & 1) == 0 )
+  if ( (byte_4AFD7F8 & 1) == 0 )
   {
-    sub_1BDB878(&SoundPlayerComponent_TypeInfo, v1);
-    byte_4B401B1 = 1;
+    sub_1BC3008(&SoundPlayerComponent_TypeInfo, v1);
+    byte_4AFD7F8 = 1;
   }
   SoundPlayerComponent_TypeInfo->static_fields->isContinueDevice = 1;
 }
@@ -19,10 +19,10 @@ void __fastcall SoundPlayerComponent__CreateContinueDeviceSaveData(const MethodI
 
 void __fastcall SoundPlayerComponent__DestroyMenu(SoundPlayerComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B401B7 & 1) == 0 )
+  if ( (byte_4AFD7FE & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, method);
-    byte_4B401B7 = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, method);
+    byte_4AFD7FE = 1;
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -36,7 +36,7 @@ void __fastcall SoundPlayerComponent__InitPlaySoundData(SoundPlayerComponent_o *
 
   soundPlayerMenu = this->fields.soundPlayerMenu;
   if ( !soundPlayerMenu )
-    sub_1BDBAD4(0LL, method);
+    sub_1BC3264(0LL, method);
   SoundPlayerMenu__InitPlaySoundData(soundPlayerMenu, method);
 }
 
@@ -84,51 +84,51 @@ void __fastcall SoundPlayerComponent__LoginProcess(const MethodInfo *method)
   int32_t Item; // [xsp+4h] [xbp-6Ch] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4B401B2 & 1) == 0 )
+  if ( (byte_4AFD7F9 & 1) == 0 )
   {
-    sub_1BDB878(&CondType_TypeInfo, v1);
-    sub_1BDB878(&Method_DataManager_GetMasterData_BgmMaster___, v2);
-    sub_1BDB878(&Method_DataManager_GetMasterData_BgmReleaseMaster___, v3);
-    sub_1BDB878(&Method_DataManager_GetMasterData_ShopMaster___, v4);
-    sub_1BDB878(&Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__, v5);
-    sub_1BDB878(&Method_DataMasterBase_BgmMaster__BgmEntity__int__getEntitys__, v6);
-    sub_1BDB878(&Method_System_Collections_Generic_List_int__Add__, v7);
-    sub_1BDB878(&Method_System_Collections_Generic_List_int___ctor__, v8);
-    sub_1BDB878(&Method_System_Collections_Generic_List_int__get_Count__, v9);
-    sub_1BDB878(&Method_System_Collections_Generic_List_int__get_Item__, v10);
-    sub_1BDB878(&System_Collections_Generic_List_int__TypeInfo, v11);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_1BDB878(&SoundPlayerComponent_TypeInfo, v13);
-    sub_1BDB878(&SoundPlayerMenu_TypeInfo, v14);
-    sub_1BDB878(&string___TypeInfo, v15);
-    sub_1BDB878(&StringLiteral_820/*","*/, v16);
-    byte_4B401B2 = 1;
+    sub_1BC3008(&CondType_TypeInfo, v1);
+    sub_1BC3008(&Method_DataManager_GetMasterData_BgmMaster___, v2);
+    sub_1BC3008(&Method_DataManager_GetMasterData_BgmReleaseMaster___, v3);
+    sub_1BC3008(&Method_DataManager_GetMasterData_ShopMaster___, v4);
+    sub_1BC3008(&Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__, v5);
+    sub_1BC3008(&Method_DataMasterBase_BgmMaster__BgmEntity__int__getEntitys__, v6);
+    sub_1BC3008(&Method_System_Collections_Generic_List_int__Add__, v7);
+    sub_1BC3008(&Method_System_Collections_Generic_List_int___ctor__, v8);
+    sub_1BC3008(&Method_System_Collections_Generic_List_int__get_Count__, v9);
+    sub_1BC3008(&Method_System_Collections_Generic_List_int__get_Item__, v10);
+    sub_1BC3008(&System_Collections_Generic_List_int__TypeInfo, v11);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    sub_1BC3008(&SoundPlayerComponent_TypeInfo, v13);
+    sub_1BC3008(&SoundPlayerMenu_TypeInfo, v14);
+    sub_1BC3008(&string___TypeInfo, v15);
+    sub_1BC3008(&StringLiteral_806/*","*/, v16);
+    byte_4AFD7F9 = 1;
   }
   entity = 0LL;
   Item = 0;
   if ( SoundPlayerComponent_TypeInfo->static_fields->isContinueDevice )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_37;
     DataManager__GetMasterData_object_(
       Instance,
-      (const MethodInfo_303395C *)Method_DataManager_GetMasterData_BgmReleaseMaster___);
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_BgmReleaseMaster___);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_37;
     Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                   Instance,
-                                  (const MethodInfo_303395C *)Method_DataManager_GetMasterData_BgmMaster___);
+                                  (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_BgmMaster___);
     if ( !Instance )
       goto LABEL_37;
     Entitys = DataMasterBase_object__object__int___getEntitys(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-                (const MethodInfo_32E10C0 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__getEntitys__);
-    v20 = (System_Collections_Generic_List_int__o *)sub_1BDBAC4(System_Collections_Generic_List_int__TypeInfo);
+                (const MethodInfo_32AE2F4 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__getEntitys__);
+    v20 = (System_Collections_Generic_List_int__o *)sub_1BC3254(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v20,
-      (const MethodInfo_36B854C *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_36835C8 *)Method_System_Collections_Generic_List_int___ctor__);
     if ( !Entitys )
       goto LABEL_37;
     max_length = Entitys->max_length;
@@ -139,7 +139,7 @@ void __fastcall SoundPlayerComponent__LoginProcess(const MethodInfo *method)
       {
         if ( v23 >= max_length )
 LABEL_38:
-          sub_1BDBADC(Instance, name_low, v21);
+          sub_1BC326C(Instance, name_low, v21);
         v24 = &Entitys->obj.klass + (int)v23;
         v25 = v24[4];
         if ( !v25 )
@@ -155,19 +155,19 @@ LABEL_38:
           Instance = (DataManager_o *)CondType__IsPurchaseShop(element_class, 1, 0LL);
           if ( ((unsigned __int8)Instance & 1) != 0 )
             goto LABEL_21;
-          Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !Instance )
             goto LABEL_37;
           Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                         Instance,
-                                        (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ShopMaster___);
+                                        (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ShopMaster___);
           if ( !Instance )
             goto LABEL_37;
           Instance = (DataManager_o *)DataMasterBase_object__object__int___TryGetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                         &entity,
                                         element_class,
-                                        (const MethodInfo_32E1E88 *)Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__);
+                                        (const MethodInfo_32AF0BC *)Method_DataMasterBase_ShopMaster__ShopEntity__int__TryGetEntity__);
           if ( ((unsigned __int8)Instance & 1) == 0 )
             break;
         }
@@ -194,7 +194,7 @@ LABEL_21:
         System_Collections_Generic_List_int___AddWithResize(
           v20,
           (int32_t)name_low,
-          *(const MethodInfo_36B8DA0 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+          *(const MethodInfo_3683E1C **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
       }
       else
       {
@@ -206,9 +206,9 @@ LABEL_21:
 LABEL_27:
     if ( !v20 )
 LABEL_37:
-      sub_1BDBAD4(Instance, name_low);
+      sub_1BC3264(Instance, name_low);
     v30 = (unsigned int)v20->fields._size;
-    v31 = sub_1BDB920(string___TypeInfo, (unsigned int)v30);
+    v31 = sub_1BC30B0(string___TypeInfo, (unsigned int)v30);
     v32 = (System_String_array *)v31;
     if ( (int)v30 >= 1 )
     {
@@ -219,20 +219,20 @@ LABEL_37:
         Item = System_Collections_Generic_List_int___get_Item(
                  v20,
                  v33,
-                 (const MethodInfo_36B8AB0 *)Method_System_Collections_Generic_List_int__get_Item__);
+                 (const MethodInfo_3683B2C *)Method_System_Collections_Generic_List_int__get_Item__);
         Instance = (DataManager_o *)System_Int32__ToString((int32_t)&Item, 0LL);
         if ( !v32 )
           goto LABEL_37;
         if ( v33 >= v32->max_length )
           goto LABEL_38;
         v34->klass = (CGThumbnailListItem_c *)Instance;
-        sub_1BDB81C(v34, (int32_t)Instance, v21, v35);
+        sub_1BC2FAC(v34, (int32_t)Instance, v21, v35);
         ++v33;
         v34 = (CGThumbnailListItem_o *)((char *)v34 + 8);
       }
       while ( v30 != v33 );
     }
-    v36 = System_String__Join((System_String_o *)StringLiteral_820/*","*/, v32, 0LL);
+    v36 = System_String__Join((System_String_o *)StringLiteral_806/*","*/, v32, 0LL);
     v37 = SoundPlayerMenu_TypeInfo;
     v38 = v36;
     if ( !SoundPlayerMenu_TypeInfo->_2.cctor_finished )
@@ -256,7 +256,7 @@ void __fastcall SoundPlayerComponent__SetEnableBlockTouch(
 
   soundPlayerMenu = this->fields.soundPlayerMenu;
   if ( !soundPlayerMenu || (this = (SoundPlayerComponent_o *)soundPlayerMenu->fields.maskColl) == 0LL )
-    sub_1BDBAD4(this, enable);
+    sub_1BC3264(this, enable);
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, enable, 0LL);
 }
 
@@ -265,17 +265,17 @@ void __fastcall SoundPlayerComponent___openMenu_b__10_0(SoundPlayerComponent_o *
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4B401BA & 1) == 0 )
+  if ( (byte_4AFD801 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_6989/*"GO_NEXT"*/, method);
-    byte_4B401BA = 1;
+    sub_1BC3008(&StringLiteral_6921/*"GO_NEXT"*/, method);
+    byte_4AFD801 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm
-    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6989/*"GO_NEXT"*/, 0LL),
+    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6921/*"GO_NEXT"*/, 0LL),
         (myRoomFsm = (PlayMakerFSM_o *)this->fields.myRoomCtrl) == 0LL) )
   {
-    sub_1BDBAD4(myRoomFsm, method);
+    sub_1BC3264(myRoomFsm, method);
   }
   MyRoomControl__SetBackButtonIgnore((MyRoomControl_o *)myRoomFsm, 0, 0LL);
 }
@@ -302,17 +302,17 @@ bool __fastcall SoundPlayerComponent__checkOpen(
   __int64 v17; // [xsp+8h] [xbp-68h]
 
   v4 = releaseEntity;
-  if ( (byte_4B401B3 & 1) == 0 )
+  if ( (byte_4AFD7FA & 1) == 0 )
   {
-    sub_1BDB878(&CondType_TypeInfo, *(_QWORD *)&kind);
-    sub_1BDB878(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v5);
-    sub_1BDB878(&NetworkManager_TypeInfo, v6);
-    releaseEntity = (BgmReleaseEntity_o *)sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    byte_4B401B3 = 1;
+    sub_1BC3008(&CondType_TypeInfo, *(_QWORD *)&kind);
+    sub_1BC3008(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v5);
+    sub_1BC3008(&NetworkManager_TypeInfo, v6);
+    releaseEntity = (BgmReleaseEntity_o *)sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    byte_4AFD7FA = 1;
   }
   if ( !v4 )
 LABEL_31:
-    sub_1BDBAD4(releaseEntity, *(_QWORD *)&kind);
+    sub_1BC3264(releaseEntity, *(_QWORD *)&kind);
   vals = v4->fields.vals;
   if ( !vals )
     return 0;
@@ -324,7 +324,7 @@ LABEL_31:
 LABEL_8:
   if ( v10 >= targetIds->max_length )
 LABEL_34:
-    sub_1BDBADC(releaseEntity, *(_QWORD *)&kind, method);
+    sub_1BC326C(releaseEntity, *(_QWORD *)&kind, method);
   v11 = targetIds->m_Items[v10 + 1];
   v12 = 0LL;
   while ( 1 )
@@ -344,18 +344,18 @@ LABEL_34:
     v14 = vals->m_Items[v12 + 1];
     if ( kind != 17 )
       break;
-    releaseEntity = (BgmReleaseEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    releaseEntity = (BgmReleaseEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !releaseEntity )
       goto LABEL_31;
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)releaseEntity,
-                          (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                          (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4B3ED56 )
+    if ( !byte_4AFC1F1 )
     {
-      sub_1BDB878(&NetworkManager_TypeInfo, *(_QWORD *)&kind);
-      byte_4B3ED56 = 1;
+      sub_1BC3008(&NetworkManager_TypeInfo, *(_QWORD *)&kind);
+      byte_4AFC1F1 = 1;
     }
     releaseEntity = (BgmReleaseEntity_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -401,17 +401,17 @@ bool __fastcall SoundPlayerComponent__closeMenu(SoundPlayerComponent_o *this, co
   __int64 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B401B5 & 1) == 0 )
+  if ( (byte_4AFD7FC & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, method);
-    sub_1BDB878(&Method_SoundPlayerComponent_onClose__, v3);
-    byte_4B401B5 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, method);
+    sub_1BC3008(&Method_SoundPlayerComponent_onClose__, v3);
+    byte_4AFD7FC = 1;
   }
   soundPlayerMenu = (BaseMenu_o *)this->fields.soundPlayerMenu;
-  v5 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_SoundPlayerComponent_onClose__, 0LL);
   if ( !soundPlayerMenu )
-    sub_1BDBAD4(v6, v7);
+    sub_1BC3264(v6, v7);
   BaseMenu__Close(soundPlayerMenu, v5, 0LL);
   return 1;
 }
@@ -425,7 +425,7 @@ System_String_o *__fastcall SoundPlayerComponent__getPlaySoundName(
 
   soundPlayerMenu = this->fields.soundPlayerMenu;
   if ( !soundPlayerMenu )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   return soundPlayerMenu->fields.playSoundName;
 }
 
@@ -441,7 +441,7 @@ void __fastcall SoundPlayerComponent__hideMenu(SoundPlayerComponent_o *this, con
                                                   (UnityEngine_Component_o *)this,
                                                   0LL)) == 0LL) )
   {
-    sub_1BDBAD4(soundPlayerMenu, method);
+    sub_1BC3264(soundPlayerMenu, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)soundPlayerMenu, 0, 0LL);
 }
@@ -451,16 +451,16 @@ void __fastcall SoundPlayerComponent__initMenu(SoundPlayerComponent_o *this, con
 {
   SoundPlayerMenu_o *soundPlayerMenu; // x0
 
-  if ( (byte_4B401B6 & 1) == 0 )
+  if ( (byte_4AFD7FD & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, method);
-    byte_4B401B6 = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, method);
+    byte_4AFD7FD = 1;
   }
   soundPlayerMenu = this->fields.soundPlayerMenu;
   if ( !soundPlayerMenu
     || (SoundPlayerMenu__Init(soundPlayerMenu, method), (soundPlayerMenu = this->fields.soundPlayerMenu) == 0LL) )
   {
-    sub_1BDBAD4(soundPlayerMenu, method);
+    sub_1BC3264(soundPlayerMenu, method);
   }
   SoundPlayerMenu__resetPlaySoundData(soundPlayerMenu, method);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -473,15 +473,15 @@ void __fastcall SoundPlayerComponent__onClose(SoundPlayerComponent_o *this, cons
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4B401B8 & 1) == 0 )
+  if ( (byte_4AFD7FF & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_3546/*"CLOSE_MENU"*/, method);
-    byte_4B401B8 = 1;
+    sub_1BC3008(&StringLiteral_3477/*"CLOSE_MENU"*/, method);
+    byte_4AFD7FF = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1BDBAD4(0LL, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3546/*"CLOSE_MENU"*/, 0LL);
+    sub_1BC3264(0LL, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3477/*"CLOSE_MENU"*/, 0LL);
 }
 
 
@@ -489,15 +489,15 @@ void __fastcall SoundPlayerComponent__onEndMenu(SoundPlayerComponent_o *this, co
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4B401B9 & 1) == 0 )
+  if ( (byte_4AFD800 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_3551/*"CLOSE_SOUND_PLAYER"*/, method);
-    byte_4B401B9 = 1;
+    sub_1BC3008(&StringLiteral_3482/*"CLOSE_SOUND_PLAYER"*/, method);
+    byte_4AFD800 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1BDBAD4(0LL, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3551/*"CLOSE_SOUND_PLAYER"*/, 0LL);
+    sub_1BC3264(0LL, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3482/*"CLOSE_SOUND_PLAYER"*/, 0LL);
 }
 
 
@@ -513,12 +513,12 @@ bool __fastcall SoundPlayerComponent__openMenu(SoundPlayerComponent_o *this, con
   System_Action_o *v10; // x22
   const MethodInfo *v11; // x3
 
-  if ( (byte_4B401B4 & 1) == 0 )
+  if ( (byte_4AFD7FB & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, method);
-    sub_1BDB878(&Method_SoundPlayerComponent__openMenu_b__10_0__, v3);
-    sub_1BDB878(&Method_SoundPlayerComponent_onEndMenu__, v4);
-    byte_4B401B4 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, method);
+    sub_1BC3008(&Method_SoundPlayerComponent__openMenu_b__10_0__, v3);
+    sub_1BC3008(&Method_SoundPlayerComponent_onEndMenu__, v4);
+    byte_4AFD7FB = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   GameObjectExtensions__ResetPosition(gameObject, 0LL);
@@ -529,19 +529,19 @@ bool __fastcall SoundPlayerComponent__openMenu(SoundPlayerComponent_o *this, con
   titleInfo = (UnityEngine_GameObject_o *)this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_8;
-  TitleInfoControl__changeTitleInfo_38893964((TitleInfoControl_o *)titleInfo, 1, 54, 0, 0LL);
+  TitleInfoControl__changeTitleInfo_38910764((TitleInfoControl_o *)titleInfo, 1, 54, 0, 0LL);
   titleInfo = (UnityEngine_GameObject_o *)this->fields.soundPlayerMenu;
   if ( !titleInfo
     || (SoundPlayerMenu__analyzeNewList((SoundPlayerMenu_o *)titleInfo, v7),
         soundPlayerMenu = this->fields.soundPlayerMenu,
-        v9 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo),
+        v9 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo),
         System_Action___ctor(v9, (Il2CppObject *)this, Method_SoundPlayerComponent__openMenu_b__10_0__, 0LL),
-        v10 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo),
+        v10 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo),
         System_Action___ctor(v10, (Il2CppObject *)this, Method_SoundPlayerComponent_onEndMenu__, 0LL),
         !soundPlayerMenu) )
   {
 LABEL_8:
-    sub_1BDBAD4(titleInfo, v7);
+    sub_1BC3264(titleInfo, v7);
   }
   SoundPlayerMenu__open(soundPlayerMenu, v9, v10, v11);
   return 1;
@@ -558,7 +558,7 @@ void __fastcall SoundPlayerComponent__showMenu(SoundPlayerComponent_o *this, con
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.soundPlayerMenu) == 0LL) )
   {
-    sub_1BDBAD4(gameObject, v4);
+    sub_1BC3264(gameObject, v4);
   }
   SoundPlayerMenu__Init((SoundPlayerMenu_o *)gameObject, v4);
 }

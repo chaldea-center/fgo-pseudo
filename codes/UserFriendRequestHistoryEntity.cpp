@@ -1,13 +1,13 @@
 void __fastcall UserFriendRequestHistoryEntity___ctor(UserFriendRequestHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B458A9 & 1) == 0 )
+  if ( (byte_4B02E56 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B458A9 = 1;
+    sub_1BC3008(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B02E56 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32DF958 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32ACB8C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -27,18 +27,18 @@ int64_t __fastcall UserFriendRequestHistoryEntity__getOtherUserId(
   NetworkManager_c *v4; // x0
   __int64 v5; // x8
 
-  if ( (byte_4B458A8 & 1) == 0 )
+  if ( (byte_4B02E55 & 1) == 0 )
   {
-    sub_1BDB878(&NetworkManager_TypeInfo, method);
-    byte_4B458A8 = 1;
+    sub_1BC3008(&NetworkManager_TypeInfo, method);
+    byte_4B02E55 = 1;
   }
   userId = this->fields.userId;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B3ED56 )
+  if ( !byte_4AFC1F1 )
   {
-    sub_1BDB878(&NetworkManager_TypeInfo, method);
-    byte_4B3ED56 = 1;
+    sub_1BC3008(&NetworkManager_TypeInfo, method);
+    byte_4AFC1F1 = 1;
   }
   v4 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )

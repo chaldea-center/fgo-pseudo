@@ -23,7 +23,7 @@ System_Int32_array *__fastcall PartyAllFieldTargetAggregator__GetCandidate(
         (v4 = v3->fields.args) == 0LL)
     || (v5 = (char)this, (this = (PartyAllFieldTargetAggregator_o *)v4->fields._battleData_k__BackingField) == 0LL) )
   {
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   }
   if ( (v5 & 1) != 0 )
     return BattleData__getFieldEnemyServantIDList((BattleData_o *)this, 0, 0LL);

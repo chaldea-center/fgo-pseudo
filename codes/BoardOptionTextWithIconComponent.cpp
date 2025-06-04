@@ -44,10 +44,10 @@ void __fastcall BoardOptionTextWithIconComponent__AdjustContentsAnchor(
   float iconSpaceWidth; // s0
   unsigned int v34; // w8
 
-  if ( (byte_4B413CB & 1) == 0 )
+  if ( (byte_4AFE93D & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    byte_4B413CB = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    byte_4AFE93D = 1;
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -73,7 +73,7 @@ void __fastcall BoardOptionTextWithIconComponent__AdjustContentsAnchor(
           *((_QWORD *)rightAnchor + 2) = 0LL;
           v10 = (char *)rightAnchor + 16;
           *((_DWORD *)v10 + 3) = 38;
-          sub_1BDB81C((CGThumbnailListItem_o *)v10, 0, v7, v8);
+          sub_1BC2FAC((CGThumbnailListItem_o *)v10, 0, v7, v8);
           v13 = this->fields.behindLabel;
           if ( !v13 )
             goto LABEL_45;
@@ -86,7 +86,7 @@ void __fastcall BoardOptionTextWithIconComponent__AdjustContentsAnchor(
             goto LABEL_45;
           target = topAnchor->fields.target;
           *((_QWORD *)rightAnchor + 2) = target;
-          sub_1BDB81C((CGThumbnailListItem_o *)((char *)rightAnchor + 16), (int32_t)target, v11, v12);
+          sub_1BC2FAC((CGThumbnailListItem_o *)((char *)rightAnchor + 16), (int32_t)target, v11, v12);
           rightAnchor = this->fields.behindLabel;
           if ( !rightAnchor )
             goto LABEL_45;
@@ -115,7 +115,7 @@ LABEL_44:
             {
               v21 = v20->fields.target;
               *((_QWORD *)rightAnchor + 2) = v21;
-              sub_1BDB81C((CGThumbnailListItem_o *)((char *)rightAnchor + 16), (int32_t)v21, v17, v18);
+              sub_1BC2FAC((CGThumbnailListItem_o *)((char *)rightAnchor + 16), (int32_t)v21, v17, v18);
               v24 = this->fields.behindLabel;
               if ( v24 )
               {
@@ -125,7 +125,7 @@ LABEL_44:
                   *((_QWORD *)rightAnchor + 2) = 0LL;
                   v25 = (char *)rightAnchor + 16;
                   *((_DWORD *)v25 + 3) = -38;
-                  sub_1BDB81C((CGThumbnailListItem_o *)v25, 0, v22, v23);
+                  sub_1BC2FAC((CGThumbnailListItem_o *)v25, 0, v22, v23);
                   rightAnchor = this->fields.behindLabel;
                   if ( rightAnchor )
                   {
@@ -192,7 +192,7 @@ LABEL_44:
       }
     }
 LABEL_45:
-    sub_1BDBAD4(rightAnchor, v5);
+    sub_1BC3264(rightAnchor, v5);
   }
 }
 
@@ -206,10 +206,10 @@ int32_t __fastcall BoardOptionTextWithIconComponent__GetBehindLabelWrappedWidth(
   struct UILabel_o *v6; // x0
   float FontWidth; // s0
 
-  if ( (byte_4B413CA & 1) == 0 )
+  if ( (byte_4AFE93C & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    byte_4B413CA = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    byte_4AFE93C = 1;
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -218,7 +218,7 @@ int32_t __fastcall BoardOptionTextWithIconComponent__GetBehindLabelWrappedWidth(
     return 0;
   v6 = this->fields.behindLabel;
   if ( !v6 )
-    sub_1BDBAD4(0LL, v4);
+    sub_1BC3264(0LL, v4);
   FontWidth = WrapControlText__getFontWidth(v6, v6->fields.mText, v6->fields.mFontSize, 0LL);
   if ( FontWidth == INFINITY )
     return 0x80000000;
@@ -253,7 +253,7 @@ float __fastcall BoardOptionTextWithIconComponent__GetBehindTextWidth(
              / (float)(ForwardText_k__BackingField->fields._stringLength + stringLength),
                0.0);
 LABEL_7:
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   }
   return 0.0;
 }
@@ -285,7 +285,7 @@ float __fastcall BoardOptionTextWithIconComponent__GetForwardTextWidth(
              / (float)(BehindText_k__BackingField->fields._stringLength + stringLength),
                0.0);
 LABEL_7:
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   }
   return 0.0;
 }
@@ -328,10 +328,10 @@ void __fastcall BoardOptionTextWithIconComponent__SetBehindText(
   UILabel_o *IsNullOrEmpty; // x0
   UnityEngine_GameObject_o *gameObject; // x20
 
-  if ( (byte_4B413CD & 1) == 0 )
+  if ( (byte_4AFE93F & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, text);
-    byte_4B413CD = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, text);
+    byte_4AFE93F = 1;
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -345,7 +345,7 @@ void __fastcall BoardOptionTextWithIconComponent__SetBehindText(
           IsNullOrEmpty = (UILabel_o *)System_String__IsNullOrEmpty(text, 0LL),
           !gameObject) )
     {
-      sub_1BDBAD4(IsNullOrEmpty, v6);
+      sub_1BC3264(IsNullOrEmpty, v6);
     }
     UnityEngine_GameObject__SetActive(gameObject, ((unsigned __int8)IsNullOrEmpty & 1) == 0, 0LL);
   }
@@ -375,10 +375,10 @@ void __fastcall BoardOptionTextWithIconComponent__SetCondensedScale(
   float BehindTextWidth; // s0
   int32_t v20; // w1
 
-  if ( (byte_4B413CE & 1) == 0 )
+  if ( (byte_4AFE940 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, *(_QWORD *)&wholeWidth);
-    byte_4B413CE = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, *(_QWORD *)&wholeWidth);
+    byte_4AFE940 = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -417,7 +417,7 @@ void __fastcall BoardOptionTextWithIconComponent__SetCondensedScale(
       return;
     }
 LABEL_20:
-    sub_1BDBAD4(v10, v11);
+    sub_1BC3264(v10, v11);
   }
 }
 
@@ -432,10 +432,10 @@ void __fastcall BoardOptionTextWithIconComponent__SetForwardText(
   UILabel_o *IsNullOrEmpty; // x0
   UnityEngine_GameObject_o *gameObject; // x20
 
-  if ( (byte_4B413CC & 1) == 0 )
+  if ( (byte_4AFE93E & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, text);
-    byte_4B413CC = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, text);
+    byte_4AFE93E = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -449,7 +449,7 @@ void __fastcall BoardOptionTextWithIconComponent__SetForwardText(
           IsNullOrEmpty = (UILabel_o *)System_String__IsNullOrEmpty(text, 0LL),
           !gameObject) )
     {
-      sub_1BDBAD4(IsNullOrEmpty, v6);
+      sub_1BC3264(IsNullOrEmpty, v6);
     }
     UnityEngine_GameObject__SetActive(gameObject, ((unsigned __int8)IsNullOrEmpty & 1) == 0, 0LL);
   }
@@ -470,12 +470,12 @@ void __fastcall BoardOptionTextWithIconComponent__SetItemIconAtlas(
   UISprite_o *v10; // x21
   bool v11; // w1
 
-  if ( (byte_4B413CF & 1) == 0 )
+  if ( (byte_4AFE941 & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, *(_QWORD *)&itemImageId);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BDB878(&StringLiteral_1/*""*/, v6);
-    byte_4B413CF = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, *(_QWORD *)&itemImageId);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BC3008(&StringLiteral_1/*""*/, v6);
+    byte_4AFE941 = 1;
   }
   itemIconSprite = (UnityEngine_Object_o *)this->fields.itemIconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -524,7 +524,7 @@ LABEL_17:
         }
       }
     }
-    sub_1BDBAD4(gameObject, v9);
+    sub_1BC3264(gameObject, v9);
   }
 }
 
@@ -554,7 +554,7 @@ void __fastcall BoardOptionTextWithIconComponent__UpdateUI(
 
   this->fields.data = data;
   p_data = &this->fields.data;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.data, (int32_t)data, wholeWidth, method);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.data, (int32_t)data, wholeWidth, method);
   v11 = (__int64)*(p_data - 4);
   if ( v11 )
     v12 = *(System_String_o **)(v11 + 416);
@@ -567,7 +567,7 @@ void __fastcall BoardOptionTextWithIconComponent__UpdateUI(
     if ( data )
       goto LABEL_6;
 LABEL_9:
-    sub_1BDBAD4(v8, v9);
+    sub_1BC3264(v8, v9);
   }
   mText = 0LL;
   if ( !data )
@@ -618,11 +618,11 @@ System_String_o *__fastcall BoardOptionTextWithIconComponent__get_behindLabelTex
   struct UILabel_o *v7; // x8
   System_String_o **p_mText; // x8
 
-  if ( (byte_4B413C4 & 1) == 0 )
+  if ( (byte_4AFE936 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_1/*""*/, v3);
-    byte_4B413C4 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_1/*""*/, v3);
+    byte_4AFE936 = 1;
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -632,7 +632,7 @@ System_String_o *__fastcall BoardOptionTextWithIconComponent__get_behindLabelTex
   {
     v7 = this->fields.behindLabel;
     if ( !v7 )
-      sub_1BDBAD4(v5, v6);
+      sub_1BC3264(v5, v6);
     p_mText = &v7->fields.mText;
   }
   else
@@ -654,11 +654,11 @@ System_String_o *__fastcall BoardOptionTextWithIconComponent__get_forwardLabelTe
   struct UILabel_o *v7; // x8
   System_String_o **p_mText; // x8
 
-  if ( (byte_4B413C3 & 1) == 0 )
+  if ( (byte_4AFE935 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_1/*""*/, v3);
-    byte_4B413C3 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_1/*""*/, v3);
+    byte_4AFE935 = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -668,7 +668,7 @@ System_String_o *__fastcall BoardOptionTextWithIconComponent__get_forwardLabelTe
   {
     v7 = this->fields.forwardLabel;
     if ( !v7 )
-      sub_1BDBAD4(v5, v6);
+      sub_1BC3264(v5, v6);
     p_mText = &v7->fields.mText;
   }
   else
@@ -690,10 +690,10 @@ float __fastcall BoardOptionTextWithIconComponent__get_iconSpaceWidth(
   struct TerminalBoardOptionTextData_o *data; // x8
   struct UISprite_o *v8; // x8
 
-  if ( (byte_4B413C9 & 1) == 0 )
+  if ( (byte_4AFE93B & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    byte_4B413C9 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    byte_4AFE93B = 1;
   }
   itemIconSprite = (UnityEngine_Object_o *)this->fields.itemIconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -709,7 +709,7 @@ float __fastcall BoardOptionTextWithIconComponent__get_iconSpaceWidth(
       {
         v8 = this->fields.itemIconSprite;
         if ( !v8 )
-          sub_1BDBAD4(v4, v5);
+          sub_1BC3264(v4, v5);
         return (float)(this->fields.itemIconPaddingLeft + v8->fields.mWidth + this->fields.itemIconPaddingRight);
       }
     }
@@ -729,10 +729,10 @@ void __fastcall BoardOptionTextWithIconComponent__set_Alpha(
   UnityEngine_Object_o *behindLabel; // x20
   UnityEngine_Object_o *itemIconSprite; // x20
 
-  if ( (byte_4B413C5 & 1) == 0 )
+  if ( (byte_4AFE937 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    byte_4B413C5 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    byte_4AFE937 = 1;
   }
   this->fields.alpha = value;
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
@@ -776,7 +776,7 @@ void __fastcall BoardOptionTextWithIconComponent__set_Alpha(
       return;
     }
 LABEL_19:
-    sub_1BDBAD4(v7, v6);
+    sub_1BC3264(v7, v6);
   }
 }
 
@@ -792,10 +792,10 @@ void __fastcall BoardOptionTextWithIconComponent__set_LabelFontSize(
   UILabel_o *v7; // x0
   UnityEngine_Object_o *behindLabel; // x21
 
-  if ( (byte_4B413C8 & 1) == 0 )
+  if ( (byte_4AFE93A & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, *(_QWORD *)&value);
-    byte_4B413C8 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, *(_QWORD *)&value);
+    byte_4AFE93A = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -819,7 +819,7 @@ void __fastcall BoardOptionTextWithIconComponent__set_LabelFontSize(
       return;
     }
 LABEL_14:
-    sub_1BDBAD4(v7, v6);
+    sub_1BC3264(v7, v6);
   }
 }
 
@@ -845,10 +845,10 @@ void __fastcall BoardOptionTextWithIconComponent__set_LabelGradientBottom(
   b = value.fields.b;
   g = value.fields.g;
   r = value.fields.r;
-  if ( (byte_4B413C7 & 1) == 0 )
+  if ( (byte_4AFE939 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    byte_4B413C7 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    byte_4AFE939 = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -880,7 +880,7 @@ void __fastcall BoardOptionTextWithIconComponent__set_LabelGradientBottom(
       return;
     }
 LABEL_14:
-    sub_1BDBAD4(v10, v9);
+    sub_1BC3264(v10, v9);
   }
 }
 
@@ -906,10 +906,10 @@ void __fastcall BoardOptionTextWithIconComponent__set_LabelGradientTop(
   b = value.fields.b;
   g = value.fields.g;
   r = value.fields.r;
-  if ( (byte_4B413C6 & 1) == 0 )
+  if ( (byte_4AFE938 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    byte_4B413C6 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    byte_4AFE938 = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -941,7 +941,7 @@ void __fastcall BoardOptionTextWithIconComponent__set_LabelGradientTop(
       return;
     }
 LABEL_14:
-    sub_1BDBAD4(v10, v9);
+    sub_1BC3264(v10, v9);
   }
 }
 

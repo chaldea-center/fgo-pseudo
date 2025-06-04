@@ -14,10 +14,10 @@ void __fastcall CGThumbnailListItemDraw__LoadAsset(
   struct UITexture_o *cgThumbnailTexture; // x20
 
   v6 = this;
-  if ( (byte_4B3FB24 & 1) == 0 )
+  if ( (byte_4AFD094 & 1) == 0 )
   {
-    this = (CGThumbnailListItemDraw_o *)sub_1BDB878(&Method_AssetData_GetObject_Texture2D___, item);
-    byte_4B3FB24 = 1;
+    this = (CGThumbnailListItemDraw_o *)sub_1BC3008(&Method_AssetData_GetObject_Texture2D___, item);
+    byte_4AFD094 = 1;
   }
   if ( !item )
     goto LABEL_9;
@@ -32,7 +32,7 @@ void __fastcall CGThumbnailListItemDraw__LoadAsset(
       cgThumbnailTexture = v6->fields.cgThumbnailTexture;
       this = (CGThumbnailListItemDraw_o *)AssetData__GetObject_object_(
                                             assetData,
-                                            (const MethodInfo_3014DA8 *)Method_AssetData_GetObject_Texture2D___);
+                                            (const MethodInfo_2FE3288 *)Method_AssetData_GetObject_Texture2D___);
       if ( cgThumbnailTexture )
       {
         ((void (__fastcall *)(struct UITexture_o *, CGThumbnailListItemDraw_o *, Il2CppMethodPointer))cgThumbnailTexture->klass->vtable._27_set_mainTexture.method)(
@@ -43,7 +43,7 @@ void __fastcall CGThumbnailListItemDraw__LoadAsset(
       }
     }
 LABEL_9:
-    sub_1BDBAD4(this, item);
+    sub_1BC3264(this, item);
   }
 }
 
@@ -59,11 +59,11 @@ void __fastcall CGThumbnailListItemDraw__SetInput(
   __int64 v9; // x1
   UnityEngine_Component_o *Component_object; // x0
 
-  if ( (byte_4B3FB25 & 1) == 0 )
+  if ( (byte_4AFD095 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v7);
-    byte_4B3FB25 = 1;
+    sub_1BC3008(&Method_UnityEngine_Component_GetComponent_Collider___, item);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v7);
+    byte_4AFD095 = 1;
   }
   if ( item )
   {
@@ -76,11 +76,11 @@ void __fastcall CGThumbnailListItemDraw__SetInput(
       if ( !Component_object
         || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                             Component_object,
-                                                            (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                            (const MethodInfo_2FF8634 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
         || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL),
             (Component_object = (UnityEngine_Component_o *)this->fields.baseButton) == 0LL) )
       {
-        sub_1BDBAD4(Component_object, v9);
+        sub_1BC3264(Component_object, v9);
       }
       ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))Component_object->klass[1]._1.implementedInterfaces)(
         Component_object,
@@ -129,24 +129,24 @@ void __fastcall CGThumbnailListItemDraw__SetItem(
   UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B3FB23 & 1) == 0 )
+  if ( (byte_4AFD093 & 1) == 0 )
   {
-    sub_1BDB878(&AssetManager_TypeInfo, item);
-    sub_1BDB878(&AssetLoader_LoadEndDataHandler_TypeInfo, v8);
-    sub_1BDB878(&Method_CGThumbnailListItemDraw___c__DisplayClass12_0__SetItem_b__0__, v9);
-    sub_1BDB878(&Method_CGThumbnailListItemDraw___c__DisplayClass12_0__SetItem_b__1__, v10);
-    sub_1BDB878(&CGThumbnailListItemDraw___c__DisplayClass12_0_TypeInfo, v11);
-    byte_4B3FB23 = 1;
+    sub_1BC3008(&AssetManager_TypeInfo, item);
+    sub_1BC3008(&AssetLoader_LoadEndDataHandler_TypeInfo, v8);
+    sub_1BC3008(&Method_CGThumbnailListItemDraw___c__DisplayClass12_0__SetItem_b__0__, v9);
+    sub_1BC3008(&Method_CGThumbnailListItemDraw___c__DisplayClass12_0__SetItem_b__1__, v10);
+    sub_1BC3008(&CGThumbnailListItemDraw___c__DisplayClass12_0_TypeInfo, v11);
+    byte_4AFD093 = 1;
   }
-  v12 = sub_1BDBAC4(CGThumbnailListItemDraw___c__DisplayClass12_0_TypeInfo);
+  v12 = sub_1BC3254(CGThumbnailListItemDraw___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0LL);
   if ( !v12 )
     goto LABEL_36;
   *(_QWORD *)(v12 + 16) = this;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v12 + 16), (int32_t)this, v15, v16);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v12 + 16), (int32_t)this, v15, v16);
   *(_QWORD *)(v12 + 24) = item;
   v17 = v12 + 24;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v12 + 24), (int32_t)item, v18, v19);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v12 + 24), (int32_t)item, v18, v19);
   cgThumbnailTexture = (UnityEngine_GameObject_o *)this->fields.cgThumbnailTexture;
   if ( !cgThumbnailTexture )
     goto LABEL_36;
@@ -158,11 +158,11 @@ void __fastcall CGThumbnailListItemDraw__SetItem(
     goto LABEL_36;
   v22 = *(struct System_String_o **)(*(_QWORD *)v17 + 128LL);
   this->fields._LoadedTexturePath_k__BackingField = v22;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._LoadedTexturePath_k__BackingField, (int32_t)v22, v20, v21);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._LoadedTexturePath_k__BackingField, (int32_t)v22, v20, v21);
   if ( !*(_QWORD *)v17 )
     goto LABEL_36;
   v23 = *(System_String_o **)(*(_QWORD *)v17 + 128LL);
-  v24 = (AssetLoader_LoadEndDataHandler_o *)sub_1BDBAC4(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v24 = (AssetLoader_LoadEndDataHandler_o *)sub_1BC3254(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v24,
     (Il2CppObject *)v12,
@@ -170,13 +170,13 @@ void __fastcall CGThumbnailListItemDraw__SetItem(
     0LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  cgThumbnailTexture = (UnityEngine_GameObject_o *)AssetManager__getAssetStorage_39562628(v23, v24, 0LL);
+  cgThumbnailTexture = (UnityEngine_GameObject_o *)AssetManager__getAssetStorage_39579800(v23, v24, 0LL);
   if ( ((unsigned __int8)cgThumbnailTexture & 1) == 0 )
   {
     if ( !*(_QWORD *)v17 )
       goto LABEL_36;
     v25 = *(System_String_o **)(*(_QWORD *)v17 + 128LL);
-    v26 = (AssetLoader_LoadEndDataHandler_o *)sub_1BDBAC4(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v26 = (AssetLoader_LoadEndDataHandler_o *)sub_1BC3254(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v26,
       (Il2CppObject *)v12,
@@ -255,7 +255,7 @@ void __fastcall CGThumbnailListItemDraw__SetItem(
       goto LABEL_36;
     if ( (unsigned int)v31 >= movieDiffNotifyPos->max_length )
 LABEL_37:
-      sub_1BDBADC(cgThumbnailTexture, v14, v27);
+      sub_1BC326C(cgThumbnailTexture, v14, v27);
     if ( cgThumbnailTexture )
     {
       UnityEngine_Transform__set_localPosition(
@@ -265,7 +265,7 @@ LABEL_37:
       return;
     }
 LABEL_36:
-    sub_1BDBAD4(cgThumbnailTexture, v14);
+    sub_1BC3264(cgThumbnailTexture, v14);
   }
 }
 
@@ -286,7 +286,7 @@ void __fastcall CGThumbnailListItemDraw__set_LoadedTexturePath(
   const MethodInfo *v3; // x3
 
   this->fields._LoadedTexturePath_k__BackingField = value;
-  sub_1BDB81C(
+  sub_1BC2FAC(
     (CGThumbnailListItem_o *)&this->fields._LoadedTexturePath_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -310,7 +310,7 @@ void __fastcall CGThumbnailListItemDraw___c__DisplayClass12_0___SetItem_b__0(
   const MethodInfo *v3; // x3
 
   if ( !this->fields.__4__this )
-    sub_1BDBAD4(this, loadedAssetData);
+    sub_1BC3264(this, loadedAssetData);
   CGThumbnailListItemDraw__LoadAsset(this->fields.__4__this, this->fields.item, loadedAssetData, v3);
 }
 
@@ -323,6 +323,6 @@ void __fastcall CGThumbnailListItemDraw___c__DisplayClass12_0___SetItem_b__1(
   const MethodInfo *v3; // x3
 
   if ( !this->fields.__4__this )
-    sub_1BDBAD4(this, assetData);
+    sub_1BC3264(this, assetData);
   CGThumbnailListItemDraw__LoadAsset(this->fields.__4__this, this->fields.item, assetData, v3);
 }

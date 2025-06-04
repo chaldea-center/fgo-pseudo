@@ -22,33 +22,33 @@ bool __fastcall EventUIPositionOverwriteComponent__ContainsKey(
   struct System_Collections_Generic_List_EventUIPositionOverwriteComponent_KeyPositionPairData__o *overwritePositionDic; // x19
   System_Func_object__bool__o *v14; // x20
 
-  if ( (byte_4B48C15 & 1) == 0 )
+  if ( (byte_4B061EF & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Linq_Enumerable_FirstOrDefault_EventUIPositionOverwriteComponent_KeyPositionPairData___,
       key);
-    sub_1BDB878(&System_Func_EventUIPositionOverwriteComponent_KeyPositionPairData__bool__TypeInfo, v5);
-    sub_1BDB878(&Method_EventUIPositionOverwriteComponent___c__DisplayClass3_0__ContainsKey_b__0__, v6);
-    sub_1BDB878(&EventUIPositionOverwriteComponent___c__DisplayClass3_0_TypeInfo, v7);
-    byte_4B48C15 = 1;
+    sub_1BC3008(&System_Func_EventUIPositionOverwriteComponent_KeyPositionPairData__bool__TypeInfo, v5);
+    sub_1BC3008(&Method_EventUIPositionOverwriteComponent___c__DisplayClass3_0__ContainsKey_b__0__, v6);
+    sub_1BC3008(&EventUIPositionOverwriteComponent___c__DisplayClass3_0_TypeInfo, v7);
+    byte_4B061EF = 1;
   }
-  v8 = sub_1BDBAC4(EventUIPositionOverwriteComponent___c__DisplayClass3_0_TypeInfo);
+  v8 = sub_1BC3254(EventUIPositionOverwriteComponent___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1BDBAD4(v9, v10);
+    sub_1BC3264(v9, v10);
   *(_QWORD *)(v8 + 16) = key;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v8 + 16), (int32_t)key, v11, v12);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v8 + 16), (int32_t)key, v11, v12);
   overwritePositionDic = this->fields.overwritePositionDic;
-  v14 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_EventUIPositionOverwriteComponent_KeyPositionPairData__bool__TypeInfo);
+  v14 = (System_Func_object__bool__o *)sub_1BC3254(System_Func_EventUIPositionOverwriteComponent_KeyPositionPairData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v14,
     (Il2CppObject *)v8,
     Method_EventUIPositionOverwriteComponent___c__DisplayClass3_0__ContainsKey_b__0__,
     0LL);
-  return System_Linq_Enumerable__FirstOrDefault_object__50698552(
+  return System_Linq_Enumerable__FirstOrDefault_object__50493748(
            (System_Collections_Generic_IEnumerable_TSource__o *)overwritePositionDic,
            (System_Func_TSource__bool__o *)v14,
-           (const MethodInfo_3059938 *)Method_System_Linq_Enumerable_FirstOrDefault_EventUIPositionOverwriteComponent_KeyPositionPairData___) != 0LL;
+           (const MethodInfo_3027934 *)Method_System_Linq_Enumerable_FirstOrDefault_EventUIPositionOverwriteComponent_KeyPositionPairData___) != 0LL;
 }
 
 
@@ -78,33 +78,33 @@ UnityEngine_Vector2_o __fastcall EventUIPositionOverwriteComponent__GetPosition(
 
   y = defaultPosition.fields.y;
   x = defaultPosition.fields.x;
-  if ( (byte_4B48C14 & 1) == 0 )
+  if ( (byte_4B061EE & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Linq_Enumerable_FirstOrDefault_EventUIPositionOverwriteComponent_KeyPositionPairData___,
       key);
-    sub_1BDB878(&System_Func_EventUIPositionOverwriteComponent_KeyPositionPairData__bool__TypeInfo, v8);
-    sub_1BDB878(&Method_EventUIPositionOverwriteComponent___c__DisplayClass2_0__GetPosition_b__0__, v9);
-    sub_1BDB878(&EventUIPositionOverwriteComponent___c__DisplayClass2_0_TypeInfo, v10);
-    byte_4B48C14 = 1;
+    sub_1BC3008(&System_Func_EventUIPositionOverwriteComponent_KeyPositionPairData__bool__TypeInfo, v8);
+    sub_1BC3008(&Method_EventUIPositionOverwriteComponent___c__DisplayClass2_0__GetPosition_b__0__, v9);
+    sub_1BC3008(&EventUIPositionOverwriteComponent___c__DisplayClass2_0_TypeInfo, v10);
+    byte_4B061EE = 1;
   }
-  v11 = sub_1BDBAC4(EventUIPositionOverwriteComponent___c__DisplayClass2_0_TypeInfo);
+  v11 = sub_1BC3254(EventUIPositionOverwriteComponent___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11 )
-    sub_1BDBAD4(v12, v13);
+    sub_1BC3264(v12, v13);
   *(_QWORD *)(v11 + 16) = key;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v11 + 16), (int32_t)key, v14, v15);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v11 + 16), (int32_t)key, v14, v15);
   overwritePositionDic = this->fields.overwritePositionDic;
-  v17 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_EventUIPositionOverwriteComponent_KeyPositionPairData__bool__TypeInfo);
+  v17 = (System_Func_object__bool__o *)sub_1BC3254(System_Func_EventUIPositionOverwriteComponent_KeyPositionPairData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v17,
     (Il2CppObject *)v11,
     Method_EventUIPositionOverwriteComponent___c__DisplayClass2_0__GetPosition_b__0__,
     0LL);
-  v18 = System_Linq_Enumerable__FirstOrDefault_object__50698552(
+  v18 = System_Linq_Enumerable__FirstOrDefault_object__50493748(
           (System_Collections_Generic_IEnumerable_TSource__o *)overwritePositionDic,
           (System_Func_TSource__bool__o *)v17,
-          (const MethodInfo_3059938 *)Method_System_Linq_Enumerable_FirstOrDefault_EventUIPositionOverwriteComponent_KeyPositionPairData___);
+          (const MethodInfo_3027934 *)Method_System_Linq_Enumerable_FirstOrDefault_EventUIPositionOverwriteComponent_KeyPositionPairData___);
   if ( v18 )
   {
     x = *(float *)&v18[1].monitor;
@@ -140,7 +140,7 @@ bool __fastcall EventUIPositionOverwriteComponent___c__DisplayClass2_0___GetPosi
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1BDBAD4(this, 0LL);
+    sub_1BC3264(this, 0LL);
   return System_String__op_Equality(data->fields.key, this->fields.key, 0LL);
 }
 
@@ -159,6 +159,6 @@ bool __fastcall EventUIPositionOverwriteComponent___c__DisplayClass3_0___Contain
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1BDBAD4(this, 0LL);
+    sub_1BC3264(this, 0LL);
   return System_String__op_Equality(data->fields.key, this->fields.key, 0LL);
 }

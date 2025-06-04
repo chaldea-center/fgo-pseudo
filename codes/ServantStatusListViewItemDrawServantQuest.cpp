@@ -2,10 +2,10 @@ void __fastcall ServantStatusListViewItemDrawServantQuest___cctor(const MethodIn
 {
   __int64 v1; // x1
 
-  if ( (byte_4B41C49 & 1) == 0 )
+  if ( (byte_4AFF0C5 & 1) == 0 )
   {
-    sub_1BDB878(&ServantStatusListViewItemDrawServantQuest_TypeInfo, v1);
-    byte_4B41C49 = 1;
+    sub_1BC3008(&ServantStatusListViewItemDrawServantQuest_TypeInfo, v1);
+    byte_4AFF0C5 = 1;
   }
   *ServantStatusListViewItemDrawServantQuest_TypeInfo->static_fields = (struct ServantStatusListViewItemDrawServantQuest_StaticFields)0x840000007ALL;
 }
@@ -20,18 +20,18 @@ void __fastcall ServantStatusListViewItemDrawServantQuest___ctor(
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4B41C48 & 1) == 0 )
+  if ( (byte_4AFF0C4 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw___ctor__, method);
-    sub_1BDB878(&System_Collections_Generic_List_ServantStatusQuestBoardDraw__TypeInfo, v3);
-    byte_4B41C48 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw___ctor__, method);
+    sub_1BC3008(&System_Collections_Generic_List_ServantStatusQuestBoardDraw__TypeInfo, v3);
+    byte_4AFF0C4 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_ServantStatusQuestBoardDraw__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_ServantStatusQuestBoardDraw__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw___ctor__);
+    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw___ctor__);
   this->fields.questBoardList = (struct System_Collections_Generic_List_ServantStatusQuestBoardDraw__o *)v4;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.questBoardList, (int32_t)v4, v5, v6);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.questBoardList, (int32_t)v4, v5, v6);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -102,7 +102,7 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__AdjustLayout(
     || (baseSprite = (UIWidget_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)baseSprite, 0LL)) == 0LL )
   {
 LABEL_10:
-    sub_1BDBAD4(baseSprite, *(_QWORD *)&baseHeight);
+    sub_1BC3264(baseSprite, *(_QWORD *)&baseHeight);
   }
   *(_QWORD *)&v22.fields.x = v17;
   v22.fields.z = v18;
@@ -134,47 +134,47 @@ UnityEngine_GameObject_o *__fastcall ServantStatusListViewItemDrawServantQuest__
   UnityEngine_GameObject_o *v21; // x20
   UnityEngine_GameObject_o *v22; // x19
 
-  if ( (byte_4B41C44 & 1) == 0 )
+  if ( (byte_4AFF0C0 & 1) == 0 )
   {
-    sub_1BDB878(&NGUITools_TypeInfo, parent);
-    sub_1BDB878(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v6);
-    sub_1BDB878(&Method_UnityEngine_Resources_Load_GameObject___, v7);
-    sub_1BDB878(&ServantStatusQuestBoardManager_TypeInfo, v8);
-    byte_4B41C44 = 1;
+    sub_1BC3008(&NGUITools_TypeInfo, parent);
+    sub_1BC3008(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v6);
+    sub_1BC3008(&Method_UnityEngine_Resources_Load_GameObject___, v7);
+    sub_1BC3008(&ServantStatusQuestBoardManager_TypeInfo, v8);
+    byte_4AFF0C0 = 1;
   }
   loadPrefab = (UnityEngine_Object_o *)this->fields.loadPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(loadPrefab, 0LL, 0LL) )
   {
-    v10 = (ServantStatusQuestBoardManager_o *)sub_1BDBAC4(ServantStatusQuestBoardManager_TypeInfo);
+    v10 = (ServantStatusQuestBoardManager_o *)sub_1BC3254(ServantStatusQuestBoardManager_TypeInfo);
     ServantStatusQuestBoardManager___ctor(v10, 0LL);
     this->fields.questBoardManager = v10;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.questBoardManager, (int32_t)v10, v11, v12);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.questBoardManager, (int32_t)v10, v11, v12);
     object = UnityEngine_Resources__Load_object_(
                this->fields.questBoardPrefabPath,
-               (const MethodInfo_30CD6D0 *)Method_UnityEngine_Resources_Load_GameObject___);
+               (const MethodInfo_309AA50 *)Method_UnityEngine_Resources_Load_GameObject___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v14 = UnityEngine_Object__Instantiate_object_(
             object,
-            (const MethodInfo_30BDAA4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+            (const MethodInfo_308AE24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     this->fields.loadPrefab = (struct UnityEngine_GameObject_o *)v14;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.loadPrefab, (int32_t)v14, v15, v16);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.loadPrefab, (int32_t)v14, v15, v16);
     v17 = this->fields.loadPrefab;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-    GameObjectExtensions__SetParent_35216820(v17, gameObject, 0LL);
+    GameObjectExtensions__SetParent_35217636(v17, gameObject, 0LL);
     v20 = this->fields.loadPrefab;
     if ( !v20 )
 LABEL_14:
-      sub_1BDBAD4(v20, v19);
+      sub_1BC3264(v20, v19);
     UnityEngine_GameObject__SetActive(v20, 0, 0LL);
   }
   v21 = this->fields.loadPrefab;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  v20 = NGUITools__AddChild_48644132(parent, v21, 0LL);
+  v20 = NGUITools__AddChild_48441044(parent, v21, 0LL);
   if ( !v20 )
     goto LABEL_14;
   v22 = v20;
@@ -202,28 +202,28 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__OnChangeAlphaAnim(
   __int64 v7; // x1
   System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B41C46 & 1) == 0 )
+  if ( (byte_4AFF0C2 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__Dispose__, method);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__MoveNext__, v3);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__get_Current__, v4);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw__GetEnumerator__, v5);
-    byte_4B41C46 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__Dispose__, method);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__MoveNext__, v3);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__get_Current__, v4);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw__GetEnumerator__, v5);
+    byte_4AFF0C2 = 1;
   }
   memset(&v8, 0, sizeof(v8));
   questBoardList = this->fields.questBoardList;
   if ( !questBoardList )
-    sub_1BDBAD4(0LL, method);
+    sub_1BC3264(0LL, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v8,
     (System_Collections_Generic_List_object__o *)questBoardList,
-    (const MethodInfo_36D68BC *)Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw__GetEnumerator__);
+    (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v8,
-            (const MethodInfo_346A2A4 *)Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__MoveNext__) )
+            (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__MoveNext__) )
   {
     if ( !v8.fields._current )
-      sub_1BDBAD4(0LL, v7);
+      sub_1BC3264(0LL, v7);
     ServantStatusQuestBoardDraw__OnChangeAlphaAnim(
       (ServantStatusQuestBoardDraw_o *)v8.fields._current,
       this->fields.questBoardManager,
@@ -231,7 +231,7 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__OnChangeAlphaAnim(
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v8,
-    (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__Dispose__);
+    (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__Dispose__);
 }
 
 
@@ -250,11 +250,11 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__OnDestroy(
   int32_t size; // w2
   int v12; // w9
 
-  if ( (byte_4B41C43 & 1) == 0 )
+  if ( (byte_4AFF0BF & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw__Clear__, method);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B41C43 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw__Clear__, method);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
+    byte_4AFF0BF = 1;
   }
   loadPrefab = (UnityEngine_Object_o *)this->fields.loadPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -264,12 +264,12 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__OnDestroy(
     v5 = (UnityEngine_Object_o *)this->fields.loadPrefab;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70284200(v5, 0LL);
+    UnityEngine_Object__Destroy_70034300(v5, 0LL);
     this->fields.loadPrefab = 0LL;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.loadPrefab, 0, v6, v7);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.loadPrefab, 0, v6, v7);
     questBoardList = this->fields.questBoardList;
     if ( !questBoardList )
-      sub_1BDBAD4(v8, v9);
+      sub_1BC3264(v8, v9);
     size = questBoardList->fields._size;
     v12 = questBoardList->fields._version + 1;
     questBoardList->fields._size = 0;
@@ -327,7 +327,7 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__SetItem(
   float v44; // s13
   float y; // s11
   int klass; // w29
-  const MethodInfo_39166A8 **v47; // x27
+  const MethodInfo_38E0168 **v47; // x27
   ServantLimitImageMaster_o *v48; // x20
   MapControl_QuestInfo_o *v49; // x25
   unsigned int v50; // w21
@@ -335,7 +335,7 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__SetItem(
   MapControl_QuestInfo_o *v52; // x24
   const MethodInfo *v53; // x2
   UILabel_o *v54; // x26
-  const MethodInfo_39166A8 **v55; // x23
+  const MethodInfo_38E0168 **v55; // x23
   UnityEngine_GameObject_o *v56; // x27
   Il2CppObject *Component_object; // x26
   UnityEngine_Transform_o *v58; // x27
@@ -436,27 +436,27 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__SetItem(
   UnityEngine_Vector3_o v153; // 0:s2.4,4:s3.4,8:s4.4
   UnityEngine_Vector3_o v154; // 0:s5.4,4:s6.4,8:s7.4
 
-  if ( (byte_4B41C45 & 1) == 0 )
+  if ( (byte_4AFF0C1 & 1) == 0 )
   {
-    sub_1BDB878(&BalanceConfig_TypeInfo, item);
-    sub_1BDB878(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v7);
-    sub_1BDB878(&Method_DataManager_GetMaster_QuestExtensionMaster___, v8);
-    sub_1BDB878(&Method_DataManager_GetMaster_QuestMaster___, v9);
-    sub_1BDB878(&Method_DataManager_GetMaster_UserQuestMaster___, v10);
-    sub_1BDB878(&DataManager_TypeInfo, v11);
-    sub_1BDB878(&Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__, v12);
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_ServantStatusQuestBoardDraw___, v13);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw__Add__, v14);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v15);
-    sub_1BDB878(&NetworkManager_TypeInfo, v16);
-    sub_1BDB878(&ServantStatusListViewItemDrawServantQuest_TypeInfo, v17);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
-    sub_1BDB878(&Method_SingletonTemplate_QuestTree__get_Instance__, v19);
-    sub_1BDB878(&StringLiteral_11896/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_INTERLUDE"*/, v20);
-    sub_1BDB878(&StringLiteral_11898/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_RAINFORCEMENT"*/, v21);
-    sub_1BDB878(&StringLiteral_11899/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_SVT_COIN"*/, v22);
-    sub_1BDB878(&StringLiteral_11897/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_LIMIT_LIBERATION"*/, v23);
-    byte_4B41C45 = 1;
+    sub_1BC3008(&BalanceConfig_TypeInfo, item);
+    sub_1BC3008(&Method_DataManager_GetMasterData_ServantLimitImageMaster___, v7);
+    sub_1BC3008(&Method_DataManager_GetMaster_QuestExtensionMaster___, v8);
+    sub_1BC3008(&Method_DataManager_GetMaster_QuestMaster___, v9);
+    sub_1BC3008(&Method_DataManager_GetMaster_UserQuestMaster___, v10);
+    sub_1BC3008(&DataManager_TypeInfo, v11);
+    sub_1BC3008(&Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__, v12);
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_ServantStatusQuestBoardDraw___, v13);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw__Add__, v14);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v15);
+    sub_1BC3008(&NetworkManager_TypeInfo, v16);
+    sub_1BC3008(&ServantStatusListViewItemDrawServantQuest_TypeInfo, v17);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v18);
+    sub_1BC3008(&Method_SingletonTemplate_QuestTree__get_Instance__, v19);
+    sub_1BC3008(&StringLiteral_11811/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_INTERLUDE"*/, v20);
+    sub_1BC3008(&StringLiteral_11813/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_RAINFORCEMENT"*/, v21);
+    sub_1BC3008(&StringLiteral_11814/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_SVT_COIN"*/, v22);
+    sub_1BC3008(&StringLiteral_11812/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_LIMIT_LIBERATION"*/, v23);
+    byte_4AFF0C1 = 1;
   }
   v143 = 0LL;
   entity = 0LL;
@@ -478,12 +478,12 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__SetItem(
         explanationLabel = this->fields.explanationLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        svtCoinBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11896/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_INTERLUDE"*/, 0LL);
+        svtCoinBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11811/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_INTERLUDE"*/, 0LL);
         if ( !explanationLabel )
           goto LABEL_156;
         UILabel__set_text(explanationLabel, (System_String_o *)svtCoinBase, 0LL);
         explanation2Label = this->fields.explanation2Label;
-        svtCoinBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11898/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_RAINFORCEMENT"*/, 0LL);
+        svtCoinBase = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11813/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_RAINFORCEMENT"*/, 0LL);
         if ( !explanation2Label )
           goto LABEL_156;
         UILabel__set_text(explanation2Label, (System_String_o *)svtCoinBase, 0LL);
@@ -491,7 +491,7 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__SetItem(
         {
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          svtCoinBase = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_QuestMaster___);
+          svtCoinBase = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_QuestMaster___);
           svtEntity = item->fields.svtEntity;
           if ( svtEntity )
           {
@@ -563,19 +563,19 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__SetItem(
                               {
                                 klass = 0;
                               }
-                              svtCoinBase = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                              svtCoinBase = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
                               if ( svtCoinBase )
                               {
                                 svtCoinBase = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                                             (DataManager_o *)svtCoinBase,
-                                                                            (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                                                                            (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
                                 v138 = klass;
                                 if ( klass < 1 )
                                   goto LABEL_59;
                                 if ( !v29 )
                                   goto LABEL_156;
                                 v140 = 0;
-                                v47 = (const MethodInfo_39166A8 **)&Method_SingletonTemplate_QuestTree__get_Instance__;
+                                v47 = (const MethodInfo_38E0168 **)&Method_SingletonTemplate_QuestTree__get_Instance__;
                                 v48 = (ServantLimitImageMaster_o *)svtCoinBase;
                                 v49 = 0LL;
                                 v50 = 0;
@@ -584,7 +584,7 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__SetItem(
                                 {
                                   if ( v50 >= LODWORD(v29[1].klass) )
 LABEL_157:
-                                    sub_1BDBADC(svtCoinBase, item, *(_QWORD *)&v145.fields.x);
+                                    sub_1BC326C(svtCoinBase, item, *(_QWORD *)&v145.fields.x);
                                   v51 = *((_QWORD *)&v29[1].monitor + (int)v50);
                                   svtCoinBase = (UnityEngine_GameObject_o *)SingletonTemplate_object___get_Instance(*v47);
                                   if ( !v51 || !svtCoinBase )
@@ -608,7 +608,7 @@ LABEL_157:
                                       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                       svtCoinBase = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                  (System_String_o *)StringLiteral_11897/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_LIMIT_LIBERATION"*/,
+                                                                                  (System_String_o *)StringLiteral_11812/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_LIMIT_LIBERATION"*/,
                                                                                   0LL);
                                       if ( !v54 )
                                         goto LABEL_156;
@@ -624,7 +624,7 @@ LABEL_157:
                                     v56 = svtCoinBase;
                                     Component_object = UnityEngine_GameObject__GetComponent_object_(
                                                          svtCoinBase,
-                                                         (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusQuestBoardDraw___);
+                                                         (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusQuestBoardDraw___);
                                     svtCoinBase = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(
                                                                                 v56,
                                                                                 0LL);
@@ -675,14 +675,14 @@ LABEL_157:
                                       System_Collections_Generic_List_object___AddWithResize(
                                         (System_Collections_Generic_List_object__o *)svtCoinBase,
                                         Component_object,
-                                        *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v66[4] + 192LL) + 112LL));
+                                        *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v66[4] + 192LL) + 112LL));
                                     }
                                     else
                                     {
                                       v69 = v65 + 8 * klass_low;
                                       LODWORD(svtCoinBase[1].klass) = klass_low + 1;
                                       *(_QWORD *)(v69 + 32) = Component_object;
-                                      sub_1BDB81C(
+                                      sub_1BC2FAC(
                                         (CGThumbnailListItem_o *)(v69 + 32),
                                         (int32_t)Component_object,
                                         v63,
@@ -730,7 +730,7 @@ LABEL_59:
                                   UnityEngine_Transform__set_localPosition(v72, v149, 0LL);
                                   svtCoinBase = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                               v71,
-                                                                              (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusQuestBoardDraw___);
+                                                                              (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusQuestBoardDraw___);
                                   if ( !svtCoinBase )
                                     goto LABEL_156;
                                   v73 = (Il2CppObject *)svtCoinBase;
@@ -751,14 +751,14 @@ LABEL_59:
                                     System_Collections_Generic_List_object___AddWithResize(
                                       (System_Collections_Generic_List_object__o *)svtCoinBase,
                                       v73,
-                                      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v77[4] + 192LL) + 112LL));
+                                      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v77[4] + 192LL) + 112LL));
                                   }
                                   else
                                   {
                                     v79 = v76 + 8 * v78;
                                     LODWORD(svtCoinBase[1].klass) = v78 + 1;
                                     *(_QWORD *)(v79 + 32) = v73;
-                                    sub_1BDB81C((CGThumbnailListItem_o *)(v79 + 32), (int32_t)v73, v74, v75);
+                                    sub_1BC2FAC((CGThumbnailListItem_o *)(v79 + 32), (int32_t)v73, v74, v75);
                                   }
                                   v80 = ServantStatusListViewItemDrawServantQuest_TypeInfo->static_fields->QuestBoardPitch;
                                   mHeight += v80;
@@ -769,7 +769,7 @@ LABEL_59:
                                 }
                                 if ( !DataManager_TypeInfo->_2.cctor_finished )
                                   j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                                svtCoinBase = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_QuestExtensionMaster___);
+                                svtCoinBase = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_QuestExtensionMaster___);
                                 v81 = (DataMasterBase_TMaster__TEntity__PKType__o *)svtCoinBase;
                                 if ( klass < 1 )
                                   goto LABEL_98;
@@ -782,7 +782,7 @@ LABEL_59:
                                   if ( i >= LODWORD(v29[1].klass) )
                                     goto LABEL_157;
                                   v84 = *((_QWORD *)&v29[1].monitor + (int)i);
-                                  svtCoinBase = (UnityEngine_GameObject_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39166A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+                                  svtCoinBase = (UnityEngine_GameObject_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38E0168 *)Method_SingletonTemplate_QuestTree__get_Instance__);
                                   if ( !v84 || !svtCoinBase )
                                     goto LABEL_156;
                                   svtCoinBase = (UnityEngine_GameObject_o *)QuestTree__GetQuestInfo(
@@ -803,7 +803,7 @@ LABEL_59:
                                           v81,
                                           &entity,
                                           *(_DWORD *)(v84 + 16),
-                                          (const MethodInfo_32E1E88 *)Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__) )
+                                          (const MethodInfo_32AF0BC *)Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__) )
                                     goto LABEL_85;
                                   svtCoinBase = (UnityEngine_GameObject_o *)entity;
                                   if ( !entity )
@@ -829,7 +829,7 @@ LABEL_85:
                                     v87 = svtCoinBase;
                                     v88 = UnityEngine_GameObject__GetComponent_object_(
                                             svtCoinBase,
-                                            (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusQuestBoardDraw___);
+                                            (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusQuestBoardDraw___);
                                     svtCoinBase = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(
                                                                                 v87,
                                                                                 0LL);
@@ -880,14 +880,14 @@ LABEL_85:
                                       System_Collections_Generic_List_object___AddWithResize(
                                         (System_Collections_Generic_List_object__o *)svtCoinBase,
                                         v88,
-                                        *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v97[4] + 192LL) + 112LL));
+                                        *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v97[4] + 192LL) + 112LL));
                                     }
                                     else
                                     {
                                       v100 = v96 + 8 * v98;
                                       LODWORD(svtCoinBase[1].klass) = v98 + 1;
                                       *(_QWORD *)(v100 + 32) = v88;
-                                      sub_1BDB81C((CGThumbnailListItem_o *)(v100 + 32), (int32_t)v88, v94, v95);
+                                      sub_1BC2FAC((CGThumbnailListItem_o *)(v100 + 32), (int32_t)v88, v94, v95);
                                     }
                                     v101 = ServantStatusListViewItemDrawServantQuest_TypeInfo->static_fields->QuestBoardPitch;
                                     mHeight = v101 + v99;
@@ -923,7 +923,7 @@ LABEL_98:
                                   UnityEngine_Transform__set_localPosition(v103, v151, 0LL);
                                   svtCoinBase = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                               v102,
-                                                                              (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusQuestBoardDraw___);
+                                                                              (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusQuestBoardDraw___);
                                   if ( !svtCoinBase )
                                     goto LABEL_156;
                                   v104 = (Il2CppObject *)svtCoinBase;
@@ -944,14 +944,14 @@ LABEL_98:
                                     System_Collections_Generic_List_object___AddWithResize(
                                       (System_Collections_Generic_List_object__o *)svtCoinBase,
                                       v104,
-                                      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v108[4] + 192LL) + 112LL));
+                                      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v108[4] + 192LL) + 112LL));
                                   }
                                   else
                                   {
                                     v110 = v107 + 8 * v109;
                                     LODWORD(svtCoinBase[1].klass) = v109 + 1;
                                     *(_QWORD *)(v110 + 32) = v104;
-                                    sub_1BDB81C((CGThumbnailListItem_o *)(v110 + 32), (int32_t)v104, v105, v106);
+                                    sub_1BC2FAC((CGThumbnailListItem_o *)(v110 + 32), (int32_t)v104, v105, v106);
                                   }
                                   v111 = ServantStatusListViewItemDrawServantQuest_TypeInfo->static_fields->QuestBoardPitch;
                                   mHeight += v111;
@@ -984,13 +984,13 @@ LABEL_155:
                                   }
                                   if ( !DataManager_TypeInfo->_2.cctor_finished )
                                     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                                  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_UserQuestMaster___);
+                                  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserQuestMaster___);
                                   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
                                     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-                                  if ( !byte_4B3ED56 )
+                                  if ( !byte_4AFC1F1 )
                                   {
-                                    sub_1BDB878(&NetworkManager_TypeInfo, item);
-                                    byte_4B3ED56 = 1;
+                                    sub_1BC3008(&NetworkManager_TypeInfo, item);
+                                    byte_4AFC1F1 = 1;
                                   }
                                   svtCoinBase = (UnityEngine_GameObject_o *)NetworkManager_TypeInfo;
                                   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1019,7 +1019,7 @@ LABEL_155:
                                         if ( j >= LODWORD(v29[1].klass) )
                                           goto LABEL_157;
                                         v117 = *((_QWORD *)&v29[1].monitor + (int)j);
-                                        svtCoinBase = (UnityEngine_GameObject_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39166A8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+                                        svtCoinBase = (UnityEngine_GameObject_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38E0168 *)Method_SingletonTemplate_QuestTree__get_Instance__);
                                         if ( !v117 || !svtCoinBase )
                                           goto LABEL_156;
                                         svtCoinBase = (UnityEngine_GameObject_o *)QuestTree__GetQuestInfo(
@@ -1035,7 +1035,7 @@ LABEL_155:
                                                                                     v81,
                                                                                     &v143,
                                                                                     *(_DWORD *)(v117 + 16),
-                                                                                    (const MethodInfo_32E1E88 *)Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__);
+                                                                                    (const MethodInfo_32AF0BC *)Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__);
                                         if ( ((unsigned __int8)svtCoinBase & 1) == 0 )
                                           goto LABEL_143;
                                         svtCoinBase = (UnityEngine_GameObject_o *)v143;
@@ -1056,7 +1056,7 @@ LABEL_155:
                                           v120 = svtCoinBase;
                                           v121 = UnityEngine_GameObject__GetComponent_object_(
                                                    svtCoinBase,
-                                                   (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusQuestBoardDraw___);
+                                                   (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusQuestBoardDraw___);
                                           svtCoinBase = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(
                                                                                       v120,
                                                                                       0LL);
@@ -1105,14 +1105,14 @@ LABEL_155:
                                             System_Collections_Generic_List_object___AddWithResize(
                                               (System_Collections_Generic_List_object__o *)svtCoinBase,
                                               v121,
-                                              *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v130[4] + 192LL) + 112LL));
+                                              *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v130[4] + 192LL) + 112LL));
                                           }
                                           else
                                           {
                                             v132 = v129 + 8 * v131;
                                             LODWORD(svtCoinBase[1].klass) = v131 + 1;
                                             *(_QWORD *)(v132 + 32) = v121;
-                                            sub_1BDB81C((CGThumbnailListItem_o *)(v132 + 32), (int32_t)v121, v127, v128);
+                                            sub_1BC2FAC((CGThumbnailListItem_o *)(v132 + 32), (int32_t)v121, v127, v128);
                                           }
                                           v133 = ServantStatusListViewItemDrawServantQuest_TypeInfo->static_fields->QuestBoardPitch;
                                           mHeight = v133 + v124;
@@ -1140,7 +1140,7 @@ LABEL_143:
                                           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                           svtCoinBase = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                      (System_String_o *)StringLiteral_11899/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_SVT_COIN"*/,
+                                                                                      (System_String_o *)StringLiteral_11814/*"SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_SVT_COIN"*/,
                                                                                       0LL);
                                           if ( svtCoinExplanationLabel )
                                           {
@@ -1170,7 +1170,7 @@ LABEL_143:
             }
           }
 LABEL_156:
-          sub_1BDBAD4(svtCoinBase, item);
+          sub_1BC3264(svtCoinBase, item);
         }
       }
     }
@@ -1191,13 +1191,13 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__Update(
   __int64 v9; // x1
   System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B41C47 & 1) == 0 )
+  if ( (byte_4AFF0C3 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__Dispose__, method);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__MoveNext__, v3);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__get_Current__, v4);
-    sub_1BDB878(&Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw__GetEnumerator__, v5);
-    byte_4B41C47 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__Dispose__, method);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__MoveNext__, v3);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__get_Current__, v4);
+    sub_1BC3008(&Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw__GetEnumerator__, v5);
+    byte_4AFF0C3 = 1;
   }
   memset(&v10, 0, sizeof(v10));
   questBoardManager = this->fields.questBoardManager;
@@ -1207,17 +1207,17 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__Update(
       ServantStatusListViewItemDrawServantQuest__OnChangeAlphaAnim(this, v7);
     questBoardList = this->fields.questBoardList;
     if ( !questBoardList )
-      sub_1BDBAD4(0LL, v7);
+      sub_1BC3264(0LL, v7);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v10,
       (System_Collections_Generic_List_object__o *)questBoardList,
-      (const MethodInfo_36D68BC *)Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw__GetEnumerator__);
+      (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_ServantStatusQuestBoardDraw__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v10,
-              (const MethodInfo_346A2A4 *)Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__MoveNext__) )
+              (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__MoveNext__) )
     {
       if ( !v10.fields._current )
-        sub_1BDBAD4(0LL, v9);
+        sub_1BC3264(0LL, v9);
       ServantStatusQuestBoardDraw__UpdateItem(
         (ServantStatusQuestBoardDraw_o *)v10.fields._current,
         this->fields.questBoardManager,
@@ -1225,6 +1225,6 @@ void __fastcall ServantStatusListViewItemDrawServantQuest__Update(
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v10,
-      (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__Dispose__);
+      (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_ServantStatusQuestBoardDraw__Dispose__);
   }
 }

@@ -7,18 +7,18 @@ void __fastcall SubmarineSelectScannerListViewItemDraw___ctor(
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4B414E4 & 1) == 0 )
+  if ( (byte_4AFEA57 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_UIAtlas___ctor__, method);
-    sub_1BDB878(&System_Collections_Generic_List_UIAtlas__TypeInfo, v3);
-    byte_4B414E4 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_UIAtlas___ctor__, method);
+    sub_1BC3008(&System_Collections_Generic_List_UIAtlas__TypeInfo, v3);
+    byte_4AFEA57 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_UIAtlas__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_UIAtlas__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
+    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
   this->fields.atlasList = (struct System_Collections_Generic_List_UIAtlas__o *)v4;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.atlasList, (int32_t)v4, v5, v6);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.atlasList, (int32_t)v4, v5, v6);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -42,15 +42,15 @@ System_String_o *__fastcall SubmarineSelectScannerListViewItemDraw__GetEventUIAs
   Il2CppObject *v7; // x0
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B414DD & 1) == 0 )
+  if ( (byte_4AFEA50 & 1) == 0 )
   {
-    sub_1BDB878(&int_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_6282/*"EventUI/Prefabs/{0}"*/, v6);
-    byte_4B414DD = 1;
+    sub_1BC3008(&int_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_6219/*"EventUI/Prefabs/{0}"*/, v6);
+    byte_4AFEA50 = 1;
   }
   v9 = eventId;
   v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9, v2, v3, v4);
-  return System_String__Format((System_String_o *)StringLiteral_6282/*"EventUI/Prefabs/{0}"*/, v7, 0LL);
+  return System_String__Format((System_String_o *)StringLiteral_6219/*"EventUI/Prefabs/{0}"*/, v7, 0LL);
 }
 
 
@@ -61,17 +61,17 @@ UnityEngine_GameObject_o *__fastcall SubmarineSelectScannerListViewItemDraw__Get
 {
   UnityEngine_GameObject_o *result; // x0
 
-  if ( (byte_4B414E3 & 1) == 0 )
+  if ( (byte_4AFEA56 & 1) == 0 )
   {
-    sub_1BDB878(&Method_AssetData_GetObject_GameObject____77074016, name);
-    byte_4B414E3 = 1;
+    sub_1BC3008(&Method_AssetData_GetObject_GameObject____76809672, name);
+    byte_4AFEA56 = 1;
   }
   result = (UnityEngine_GameObject_o *)this->fields.eventAssetData;
   if ( result )
-    return (UnityEngine_GameObject_o *)AssetData__GetObject_object__50417328(
+    return (UnityEngine_GameObject_o *)AssetData__GetObject_object__50213776(
                                          (AssetData_o *)result,
                                          name,
-                                         (const MethodInfo_3014EB0 *)Method_AssetData_GetObject_GameObject____77074016);
+                                         (const MethodInfo_2FE3390 *)Method_AssetData_GetObject_GameObject____76809672);
   return result;
 }
 
@@ -97,24 +97,24 @@ void __fastcall SubmarineSelectScannerListViewItemDraw__LoadEventUIAssetData(
   System_String_o *EventUIAssetDataPath; // x19
   AssetLoader_LoadEndDataHandler_o *v19; // x20
 
-  if ( (byte_4B414DE & 1) == 0 )
+  if ( (byte_4AFEA51 & 1) == 0 )
   {
-    sub_1BDB878(&AssetManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BDB878(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
-    sub_1BDB878(&Method_SubmarineSelectScannerListViewItemDraw___c__DisplayClass14_0__LoadEventUIAssetData_b__0__, v8);
-    sub_1BDB878(&SubmarineSelectScannerListViewItemDraw___c__DisplayClass14_0_TypeInfo, v9);
-    byte_4B414DE = 1;
+    sub_1BC3008(&AssetManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1BC3008(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
+    sub_1BC3008(&Method_SubmarineSelectScannerListViewItemDraw___c__DisplayClass14_0__LoadEventUIAssetData_b__0__, v8);
+    sub_1BC3008(&SubmarineSelectScannerListViewItemDraw___c__DisplayClass14_0_TypeInfo, v9);
+    byte_4AFEA51 = 1;
   }
-  v10 = sub_1BDBAC4(SubmarineSelectScannerListViewItemDraw___c__DisplayClass14_0_TypeInfo);
+  v10 = sub_1BC3254(SubmarineSelectScannerListViewItemDraw___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
-    sub_1BDBAD4(v11, v12);
+    sub_1BC3264(v11, v12);
   *(_QWORD *)(v10 + 16) = this;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v10 + 16), (int32_t)this, v13, v14);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v10 + 16), (int32_t)this, v13, v14);
   *(_QWORD *)(v10 + 24) = callback;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v10 + 24), (int32_t)callback, v15, v16);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v10 + 24), (int32_t)callback, v15, v16);
   EventUIAssetDataPath = SubmarineSelectScannerListViewItemDraw__GetEventUIAssetDataPath(eventId, v17);
-  v19 = (AssetLoader_LoadEndDataHandler_o *)sub_1BDBAC4(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v19 = (AssetLoader_LoadEndDataHandler_o *)sub_1BC3254(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v19,
     (Il2CppObject *)v10,
@@ -166,23 +166,23 @@ void __fastcall SubmarineSelectScannerListViewItemDraw__LoadLocalAtlas(
   int v34; // [xsp+Ch] [xbp-54h] BYREF
 
   v6 = this;
-  if ( (byte_4B414E1 & 1) == 0 )
+  if ( (byte_4AFEA54 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, *(_QWORD *)&eventId);
-    sub_1BDB878(&int_TypeInfo, v7);
-    sub_1BDB878(&Method_System_Collections_Generic_List_UIAtlas__Add__, v8);
-    sub_1BDB878(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v9);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v10);
-    sub_1BDB878(&StringLiteral_25139/*"{0:D2}"*/, v11);
-    this = (SubmarineSelectScannerListViewItemDraw_o *)sub_1BDB878(&StringLiteral_5382/*"DownloadEventUIAtlas{0}{1}"*/, v12);
-    byte_4B414E1 = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, *(_QWORD *)&eventId);
+    sub_1BC3008(&int_TypeInfo, v7);
+    sub_1BC3008(&Method_System_Collections_Generic_List_UIAtlas__Add__, v8);
+    sub_1BC3008(&Method_System_Collections_Generic_List_UIAtlas__Clear__, v9);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v10);
+    sub_1BC3008(&StringLiteral_24824/*"{0:D2}"*/, v11);
+    this = (SubmarineSelectScannerListViewItemDraw_o *)sub_1BC3008(&StringLiteral_5300/*"DownloadEventUIAtlas{0}{1}"*/, v12);
+    byte_4AFEA54 = 1;
   }
   if ( v6->fields.eventAssetData )
   {
     atlasList = v6->fields.atlasList;
     if ( !atlasList )
 LABEL_22:
-      sub_1BDBAD4(this, *(_QWORD *)&eventId);
+      sub_1BC3264(this, *(_QWORD *)&eventId);
     size = (unsigned int)atlasList->fields._size;
     v15 = atlasList->fields._version + 1;
     atlasList->fields._size = 0;
@@ -193,10 +193,10 @@ LABEL_22:
     {
       v34 = i;
       v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34, size, v3, v4);
-      v18 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_25139/*"{0:D2}"*/, v17, 0LL);
+      v18 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_24824/*"{0:D2}"*/, v17, 0LL);
       v33 = eventId;
       v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33, v19, v20, v21);
-      v23 = System_String__Format_62613552((System_String_o *)StringLiteral_5382/*"DownloadEventUIAtlas{0}{1}"*/, v22, v18, 0LL);
+      v23 = System_String__Format_62389940((System_String_o *)StringLiteral_5300/*"DownloadEventUIAtlas{0}{1}"*/, v22, v18, 0LL);
       GameObjectFromEventUIAssetData = (UnityEngine_Object_o *)SubmarineSelectScannerListViewItemDraw__GetGameObjectFromEventUIAssetData(
                                                                  v6,
                                                                  v23,
@@ -213,7 +213,7 @@ LABEL_22:
         goto LABEL_22;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)GameObjectFromEventUIAssetData,
-                           (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                           (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -232,14 +232,14 @@ LABEL_22:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)this,
           Component_object,
-          *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+          *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
       }
       else
       {
         v32 = v29 + 8 * m_CancellationTokenSource_low;
         LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
         *(_QWORD *)(v32 + 32) = Component_object;
-        sub_1BDB81C((CGThumbnailListItem_o *)(v32 + 32), (int32_t)Component_object, v27, v28);
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v32 + 32), (int32_t)Component_object, v27, v28);
       }
     }
   }
@@ -266,10 +266,10 @@ void __fastcall SubmarineSelectScannerListViewItemDraw__ReleaseEventUIAssetData(
 {
   System_String_o *EventUIAssetDataPath; // x19
 
-  if ( (byte_4B414DF & 1) == 0 )
+  if ( (byte_4AFEA52 & 1) == 0 )
   {
-    sub_1BDB878(&AssetManager_TypeInfo, *(_QWORD *)&eventId);
-    byte_4B414DF = 1;
+    sub_1BC3008(&AssetManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_4AFEA52 = 1;
   }
   if ( this->fields.eventAssetData )
   {
@@ -293,16 +293,16 @@ void __fastcall SubmarineSelectScannerListViewItemDraw__ReleaseLocalAtlas(
   int v5; // w9
 
   v2 = this;
-  if ( (byte_4B414E0 & 1) == 0 )
+  if ( (byte_4AFEA53 & 1) == 0 )
   {
-    this = (SubmarineSelectScannerListViewItemDraw_o *)sub_1BDB878(
+    this = (SubmarineSelectScannerListViewItemDraw_o *)sub_1BC3008(
                                                          &Method_System_Collections_Generic_List_UIAtlas__Clear__,
                                                          method);
-    byte_4B414E0 = 1;
+    byte_4AFEA53 = 1;
   }
   atlasList = v2->fields.atlasList;
   if ( !atlasList )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   size = atlasList->fields._size;
   v5 = atlasList->fields._version + 1;
   atlasList->fields._size = 0;
@@ -332,21 +332,21 @@ bool __fastcall SubmarineSelectScannerListViewItemDraw__SetSpriteByLocalAtlas(
   System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4B414E2 & 1) == 0 )
+  if ( (byte_4AFEA55 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Linq_Enumerable_Any_UIAtlas___, sprite);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__, v7);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__, v8);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__, v9);
-    sub_1BDB878(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__, v10);
-    byte_4B414E2 = 1;
+    sub_1BC3008(&Method_System_Linq_Enumerable_Any_UIAtlas___, sprite);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__, v7);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__, v8);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_UIAtlas__get_Current__, v9);
+    sub_1BC3008(&Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__, v10);
+    byte_4AFEA55 = 1;
   }
   memset(&v20, 0, sizeof(v20));
   IsNullOrEmpty = (struct System_Collections_Generic_List_UIAtlas__o *)System_String__IsNullOrEmpty(spriteName, 0LL);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0
     || (IsNullOrEmpty = (struct System_Collections_Generic_List_UIAtlas__o *)System_Linq_Enumerable__Any_object_(
                                                                                (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.atlasList,
-                                                                               (const MethodInfo_303F5F0 *)Method_System_Linq_Enumerable_Any_UIAtlas___),
+                                                                               (const MethodInfo_300D9DC *)Method_System_Linq_Enumerable_Any_UIAtlas___),
         ((unsigned __int8)IsNullOrEmpty & 1) == 0) )
   {
     if ( sprite )
@@ -362,39 +362,39 @@ bool __fastcall SubmarineSelectScannerListViewItemDraw__SetSpriteByLocalAtlas(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v19,
     (System_Collections_Generic_List_object__o *)IsNullOrEmpty,
-    (const MethodInfo_36D68BC *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
+    (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_UIAtlas__GetEnumerator__);
   v20 = v19;
   do
   {
     v13 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v20,
-            (const MethodInfo_346A2A4 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
+            (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__MoveNext__);
     if ( !v13 )
     {
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &v20,
-        (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+        (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
       if ( sprite )
       {
         UISprite__set_spriteName(sprite, 0LL, 0LL);
         return 0;
       }
 LABEL_19:
-      sub_1BDBAD4(IsNullOrEmpty, v12);
+      sub_1BC3264(IsNullOrEmpty, v12);
     }
     current = v20.fields._current;
     if ( !v20.fields._current )
-      sub_1BDBAD4(v13, v14);
+      sub_1BC3264(v13, v14);
     v16 = UIAtlas__GetSprite((UIAtlas_o *)v20.fields._current, spriteName, 0LL);
   }
   while ( !v16 );
   if ( !sprite )
-    sub_1BDBAD4(v16, v17);
+    sub_1BC3264(v16, v17);
   UISprite__set_atlas(sprite, (UIAtlas_o *)current, 0LL);
   UISprite__set_spriteName(sprite, spriteName, 0LL);
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v20,
-    (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
+    (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_UIAtlas__Dispose__);
   return 1;
 }
 
@@ -429,45 +429,45 @@ void __fastcall SubmarineSelectScannerListViewItemDraw__UpdateUi(
   UILabel_o *itemDescLabel; // x22
   System_String_o **v28; // x8
 
-  if ( (byte_4B414DC & 1) == 0 )
+  if ( (byte_4AFEA4F & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, item);
-    sub_1BDB878(&Method_DataManager_GetMasterData_EventPanelScanMaster___, v5);
-    sub_1BDB878(&Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__, v6);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v7);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_1BDB878(&Method_SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0__UpdateUi_b__0__, v9);
-    sub_1BDB878(&SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0_TypeInfo, v10);
-    sub_1BDB878(&StringLiteral_5741/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_PREFIX"*/, v11);
-    sub_1BDB878(&StringLiteral_5744/*"EVENT_SUBMARINE_UNKNOWN_VALUE"*/, v12);
-    byte_4B414DC = 1;
+    sub_1BC3008(&System_Action_TypeInfo, item);
+    sub_1BC3008(&Method_DataManager_GetMasterData_EventPanelScanMaster___, v5);
+    sub_1BC3008(&Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__, v6);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v7);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    sub_1BC3008(&Method_SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0__UpdateUi_b__0__, v9);
+    sub_1BC3008(&SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0_TypeInfo, v10);
+    sub_1BC3008(&StringLiteral_5677/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_PREFIX"*/, v11);
+    sub_1BC3008(&StringLiteral_5680/*"EVENT_SUBMARINE_UNKNOWN_VALUE"*/, v12);
+    byte_4AFEA4F = 1;
   }
-  v13 = sub_1BDBAC4(SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0_TypeInfo);
+  v13 = sub_1BC3254(SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0LL);
   if ( !v13 )
     goto LABEL_20;
   *(_QWORD *)(v13 + 16) = this;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v16, v17);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v16, v17);
   *(_QWORD *)(v13 + 24) = item;
   v18 = v13 + 24;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v13 + 24), (int32_t)item, v19, v20);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v13 + 24), (int32_t)item, v19, v20);
   if ( !*(_QWORD *)(v13 + 24) )
     goto LABEL_20;
   v21 = *(_DWORD *)(*(_QWORD *)(v13 + 24) + 112LL);
   this->fields.eventId = v21;
-  v22 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  v22 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
   System_Action___ctor(
     v22,
     (Il2CppObject *)v13,
     Method_SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0__UpdateUi_b__0__,
     0LL);
   SubmarineSelectScannerListViewItemDraw__LoadEventUIAssetData(this, v21, v22, v23);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_20;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventPanelScanMaster___);
+                                (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_EventPanelScanMaster___);
   if ( !*(_QWORD *)v18 )
     goto LABEL_20;
   v24 = (EventPanelScanMaster_o *)Instance;
@@ -476,7 +476,7 @@ void __fastcall SubmarineSelectScannerListViewItemDraw__UpdateUi(
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              *(_DWORD *)(*(_QWORD *)v18 + 116LL),
-             (const MethodInfo_32E1E3C *)Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
+             (const MethodInfo_32AF070 *)Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
   Instance = (DataManager_o *)EventPanelScanMaster__IsSatisfyReleaseCondition(
                                 v24,
                                 (EventPanelScanEntity_o *)Entity,
@@ -491,7 +491,7 @@ void __fastcall SubmarineSelectScannerListViewItemDraw__UpdateUi(
   itemDescLabel = this->fields.itemDescLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v28 = (System_String_o **)((v26 & 1) != 0 ? &StringLiteral_5741/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_PREFIX"*/ : &StringLiteral_5744/*"EVENT_SUBMARINE_UNKNOWN_VALUE"*/);
+  v28 = (System_String_o **)((v26 & 1) != 0 ? &StringLiteral_5677/*"EVENT_SUBMARINE_SELECT_SCAN_METHOD_PREFIX"*/ : &StringLiteral_5680/*"EVENT_SUBMARINE_UNKNOWN_VALUE"*/);
   Instance = (DataManager_o *)LocalizationManager__Get(*v28, 0LL);
   if ( !itemDescLabel
     || (UILabel__set_text(itemDescLabel, (System_String_o *)Instance, 0LL),
@@ -501,7 +501,7 @@ void __fastcall SubmarineSelectScannerListViewItemDraw__UpdateUi(
     || !Instance )
   {
 LABEL_20:
-    sub_1BDBAD4(Instance, v15);
+    sub_1BC3264(Instance, v15);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, *(_BYTE *)(*(_QWORD *)v18 + 144LL) == 0, 0LL);
 }
@@ -537,12 +537,12 @@ void __fastcall SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0___U
   int32_t iconImageId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
   v3 = this;
-  if ( (byte_4B414E5 & 1) == 0 )
+  if ( (byte_4AFEA58 & 1) == 0 )
   {
-    sub_1BDB878(&int_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_23219/*"scan_icon_{0}"*/, v4);
-    this = (SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0_o *)sub_1BDB878(&StringLiteral_20439/*"img_list_bg02"*/, v5);
-    byte_4B414E5 = 1;
+    sub_1BC3008(&int_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_22970/*"scan_icon_{0}"*/, v4);
+    this = (SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0_o *)sub_1BC3008(&StringLiteral_20227/*"img_list_bg02"*/, v5);
+    byte_4AFEA58 = 1;
   }
   item = v3->fields.item;
   if ( !item
@@ -555,17 +555,17 @@ void __fastcall SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0___U
     || (this = (SubmarineSelectScannerListViewItemDraw___c__DisplayClass11_0_o *)SubmarineSelectScannerListViewItemDraw__SetSpriteByLocalAtlas(
                                                                                    (SubmarineSelectScannerListViewItemDraw_o *)this,
                                                                                    (UISprite_o *)this[1].klass,
-                                                                                   (System_String_o *)StringLiteral_20439/*"img_list_bg02"*/,
+                                                                                   (System_String_o *)StringLiteral_20227/*"img_list_bg02"*/,
                                                                                    v7),
         (_4__this = v3->fields.__4__this) == 0LL)
     || (v12 = v3->fields.item) == 0LL )
   {
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   }
   icon = _4__this->fields.icon;
   iconImageId_k__BackingField = v12->fields._iconImageId_k__BackingField;
   v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &iconImageId_k__BackingField, v8, v9, v10);
-  v15 = System_String__Format((System_String_o *)StringLiteral_23219/*"scan_icon_{0}"*/, v14, 0LL);
+  v15 = System_String__Format((System_String_o *)StringLiteral_22970/*"scan_icon_{0}"*/, v14, 0LL);
   SubmarineSelectScannerListViewItemDraw__SetSpriteByLocalAtlas(_4__this, icon, v15, v16);
 }
 
@@ -588,8 +588,8 @@ void __fastcall SubmarineSelectScannerListViewItemDraw___c__DisplayClass14_0___L
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BDBAD4(0LL, data);
+    sub_1BC3264(0LL, data);
   _4__this->fields.eventAssetData = data;
-  sub_1BDB81C((CGThumbnailListItem_o *)&_4__this->fields.eventAssetData, (int32_t)data, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&_4__this->fields.eventAssetData, (int32_t)data, (int32_t)method, v3);
   ActionExtensions__Call(this->fields.callback, 0LL);
 }

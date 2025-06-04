@@ -8,18 +8,18 @@ void __fastcall MultiplyTargetMatrix___ctor(MultiplyTargetMatrix_o *this, const 
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B47B8B & 1) == 0 )
+  if ( (byte_4B0509F & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_16561/*"_rootMatrix"*/, method);
-    sub_1BDB878(&StringLiteral_16535/*"_invrootMatrix"*/, v5);
-    byte_4B47B8B = 1;
+    sub_1BC3008(&StringLiteral_16430/*"_rootMatrix"*/, method);
+    sub_1BC3008(&StringLiteral_16408/*"_invrootMatrix"*/, v5);
+    byte_4B0509F = 1;
   }
-  v6 = StringLiteral_16561/*"_rootMatrix"*/;
-  this->fields.mainMatrix = (struct System_String_o *)StringLiteral_16561/*"_rootMatrix"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.mainMatrix, v6, v2, v3);
-  v7 = StringLiteral_16535/*"_invrootMatrix"*/;
-  this->fields.invertMatrix = (struct System_String_o *)StringLiteral_16535/*"_invrootMatrix"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.invertMatrix, v7, v8, v9);
+  v6 = StringLiteral_16430/*"_rootMatrix"*/;
+  this->fields.mainMatrix = (struct System_String_o *)StringLiteral_16430/*"_rootMatrix"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.mainMatrix, v6, v2, v3);
+  v7 = StringLiteral_16408/*"_invrootMatrix"*/;
+  this->fields.invertMatrix = (struct System_String_o *)StringLiteral_16408/*"_invrootMatrix"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.invertMatrix, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -34,10 +34,10 @@ void __fastcall MultiplyTargetMatrix__SetTargetObj(
   const MethodInfo *v6; // x3
 
   if ( !obj )
-    sub_1BDBAD4(this, 0LL);
+    sub_1BC3264(this, 0LL);
   transform = UnityEngine_GameObject__get_transform(obj, 0LL);
   this->fields.targetObj = transform;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)transform, v5, v6);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)transform, v5, v6);
 }
 
 
@@ -51,10 +51,10 @@ void __fastcall MultiplyTargetMatrix__Start(MultiplyTargetMatrix_o *this, const 
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B47B88 & 1) == 0 )
+  if ( (byte_4B0509C & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    byte_4B47B88 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    byte_4B0509C = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -65,11 +65,11 @@ void __fastcall MultiplyTargetMatrix__Start(MultiplyTargetMatrix_o *this, const 
     if ( !gameObject
       || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0LL)) == 0LL )
     {
-      sub_1BDBAD4(gameObject, v6);
+      sub_1BC3264(gameObject, v6);
     }
     v7 = UnityEngine_Transform__Find((UnityEngine_Transform_o *)gameObject, this->fields.targetObjPath, 0LL);
     this->fields.targetObj = v7;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)v7, v8, v9);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.targetObj, (int32_t)v7, v8, v9);
   }
   MultiplyTargetMatrix__UpdateMatrix(this, v4);
 }
@@ -101,12 +101,12 @@ void __fastcall MultiplyTargetMatrix__UpdateMatrix(MultiplyTargetMatrix_o *this,
   Il2CppObject *v24; // x21
   __int64 v25; // x0
 
-  if ( (byte_4B47B89 & 1) == 0 )
+  if ( (byte_4B0509D & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_Renderer___, method);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v4);
-    sub_1BDB878(&UnityEngine_Renderer___TypeInfo, v5);
-    byte_4B47B89 = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_Renderer___, method);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v4);
+    sub_1BC3008(&UnityEngine_Renderer___TypeInfo, v5);
+    byte_4B0509D = 1;
   }
   MultiplyTargetMatrix__updateMatrix(this, this->fields.targetRenderers, v2);
   targetXWeaponTrails = this->fields.targetXWeaponTrails;
@@ -118,13 +118,13 @@ void __fastcall MultiplyTargetMatrix__UpdateMatrix(MultiplyTargetMatrix_o *this,
       p_targetXWeaponTrailRenderers = &this->fields.targetXWeaponTrailRenderers;
       if ( !this->fields.targetXWeaponTrailRenderers )
       {
-        v11 = (struct UnityEngine_Renderer_array *)sub_1BDB920(UnityEngine_Renderer___TypeInfo, v9);
+        v11 = (struct UnityEngine_Renderer_array *)sub_1BC30B0(UnityEngine_Renderer___TypeInfo, v9);
         this->fields.targetXWeaponTrailRenderers = v11;
-        sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.targetXWeaponTrailRenderers, (int32_t)v11, v12, v13);
+        sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.targetXWeaponTrailRenderers, (int32_t)v11, v12, v13);
         targetXWeaponTrails = this->fields.targetXWeaponTrails;
         if ( !targetXWeaponTrails )
 LABEL_27:
-          sub_1BDBAD4(Component_object, v14);
+          sub_1BC3264(Component_object, v14);
       }
       v15 = 4LL;
       v16 = 8LL;
@@ -163,24 +163,24 @@ LABEL_27:
             v22 = (unsigned int *)*p_targetXWeaponTrailRenderers;
             Component_object = UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)v21,
-                                 (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                                 (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
             if ( !v22 )
               goto LABEL_27;
             v24 = Component_object;
             if ( Component_object )
             {
-              Component_object = (Il2CppObject *)sub_1BDB9B4(Component_object, *(_QWORD *)(*(_QWORD *)v22 + 64LL));
+              Component_object = (Il2CppObject *)sub_1BC3144(Component_object, *(_QWORD *)(*(_QWORD *)v22 + 64LL));
               if ( !Component_object )
               {
-                v25 = sub_1BDBAF8(0LL);
-                sub_1BDB9A0(v25, 0LL);
+                v25 = sub_1BC3288(0LL);
+                sub_1BC3130(v25, 0LL);
               }
             }
             if ( v17 >= v22[6] )
 LABEL_30:
-              sub_1BDBADC(Component_object, v14, v7);
+              sub_1BC326C(Component_object, v14, v7);
             *(_QWORD *)&v22[2 * v15] = v24;
-            sub_1BDB81C((CGThumbnailListItem_o *)&v22[v16], (int32_t)v24, (int32_t)v7, v23);
+            sub_1BC2FAC((CGThumbnailListItem_o *)&v22[v16], (int32_t)v24, (int32_t)v7, v23);
           }
         }
         targetXWeaponTrails = this->fields.targetXWeaponTrails;
@@ -229,10 +229,10 @@ void __fastcall MultiplyTargetMatrix__updateMatrix(
   UnityEngine_Matrix4x4_o v31; // [xsp+1C0h] [xbp-D0h]
   UnityEngine_Matrix4x4_o v32; // [xsp+200h] [xbp-90h]
 
-  if ( (byte_4B47B8A & 1) == 0 )
+  if ( (byte_4B0509E & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, targetRenderers);
-    byte_4B47B8A = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, targetRenderers);
+    byte_4B0509E = 1;
   }
   memset(&v30, 0, sizeof(v30));
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
@@ -245,7 +245,7 @@ void __fastcall MultiplyTargetMatrix__updateMatrix(
     if ( !v8
       || (UnityEngine_Transform__get_localToWorldMatrix(&v29, v8, 0LL), v32 = v29, (v8 = this->fields.targetObj) == 0LL) )
     {
-      sub_1BDBAD4(v8, v7);
+      sub_1BC3264(v8, v7);
     }
     UnityEngine_Transform__get_localToWorldMatrix(&v29, v8, 0LL);
     v30 = v29;
@@ -258,7 +258,7 @@ void __fastcall MultiplyTargetMatrix__updateMatrix(
       do
       {
         if ( v13 >= (unsigned int)v12 )
-          sub_1BDBADC(inverse, v10, v11);
+          sub_1BC326C(inverse, v10, v11);
         v14 = (UnityEngine_Object_o *)targetRenderers->m_Items[v13];
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -269,38 +269,38 @@ void __fastcall MultiplyTargetMatrix__updateMatrix(
           if ( materialType == 1 )
           {
             if ( !v14 )
-              sub_1BDBAD4(inverse, v10);
+              sub_1BC3264(inverse, v10);
             material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)v14, 0LL);
             mainMatrix = this->fields.mainMatrix;
             v29 = v32;
             if ( !material )
-              sub_1BDBAD4(0LL, mainMatrix);
+              sub_1BC3264(0LL, mainMatrix);
             v25 = v29;
             UnityEngine_Material__SetMatrix(material, mainMatrix, &v25, 0LL);
             v22 = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)v14, 0LL);
             invertMatrix = this->fields.invertMatrix;
             v27 = v31;
             if ( !v22 )
-              sub_1BDBAD4(0LL, invertMatrix);
+              sub_1BC3264(0LL, invertMatrix);
             v24 = v27;
             UnityEngine_Material__SetMatrix(v22, invertMatrix, &v24, 0LL);
           }
           else if ( !materialType )
           {
             if ( !v14 )
-              sub_1BDBAD4(inverse, v10);
+              sub_1BC3264(inverse, v10);
             sharedMaterial = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)v14, 0LL);
             v17 = this->fields.mainMatrix;
             v29 = v32;
             if ( !sharedMaterial )
-              sub_1BDBAD4(0LL, v17);
+              sub_1BC3264(0LL, v17);
             v28 = v29;
             UnityEngine_Material__SetMatrix(sharedMaterial, v17, &v28, 0LL);
             v18 = UnityEngine_Renderer__get_sharedMaterial((UnityEngine_Renderer_o *)v14, 0LL);
             v19 = this->fields.invertMatrix;
             v27 = v31;
             if ( !v18 )
-              sub_1BDBAD4(0LL, v19);
+              sub_1BC3264(0LL, v19);
             v26 = v27;
             UnityEngine_Material__SetMatrix(v18, v19, &v26, 0LL);
           }

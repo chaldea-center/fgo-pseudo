@@ -1,9 +1,9 @@
 void __fastcall GrandServantResetDialog___ctor(GrandServantResetDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B3F9C6 & 1) == 0 )
+  if ( (byte_4AFCF36 & 1) == 0 )
   {
-    sub_1BDB878(&BaseDialog_TypeInfo, method);
-    byte_4B3F9C6 = 1;
+    sub_1BC3008(&BaseDialog_TypeInfo, method);
+    byte_4AFCF36 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -29,7 +29,7 @@ void __fastcall GrandServantResetDialog__Callback(GrandServantResetDialog_o *thi
   if ( callbackFunc )
   {
     *p_callbackFunc = 0LL;
-    sub_1BDB81C(p_callbackFunc);
+    sub_1BC2FAC(p_callbackFunc);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v3->fields.m_target)(
       v3->fields.original_method_info,
       *(_QWORD *)&v3->fields.extra_arg);
@@ -57,13 +57,13 @@ void __fastcall GrandServantResetDialog__OnEnable(GrandServantResetDialog_o *thi
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4B3F9C4 & 1) == 0 )
+  if ( (byte_4AFCF34 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_15614/*"Window/Buttons/CloseButton"*/, method);
-    byte_4B3F9C4 = 1;
+    sub_1BC3008(&StringLiteral_15493/*"Window/Buttons/CloseButton"*/, method);
+    byte_4AFCF34 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_43873512(transform, (System_String_o *)StringLiteral_15614/*"Window/Buttons/CloseButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_43913684(transform, (System_String_o *)StringLiteral_15493/*"Window/Buttons/CloseButton"*/, 0LL);
 }
 
 
@@ -89,20 +89,20 @@ void __fastcall GrandServantResetDialog__Open(
   const MethodInfo *v20; // x2
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v21; // 0:x0.16
 
-  if ( (byte_4B3F9C5 & 1) == 0 )
+  if ( (byte_4AFCF35 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMaster_GrandGraphMaster___, userServantEntity);
-    sub_1BDB878(&DataManager_TypeInfo, v7);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v8);
-    sub_1BDB878(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
-    sub_1BDB878(&StringLiteral_7013/*"GRAND_SERVANT_RESET_DIALOG_MESSAGE"*/, v10);
-    byte_4B3F9C5 = 1;
+    sub_1BC3008(&Method_DataManager_GetMaster_GrandGraphMaster___, userServantEntity);
+    sub_1BC3008(&DataManager_TypeInfo, v7);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v8);
+    sub_1BC3008(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v9);
+    sub_1BC3008(&StringLiteral_6945/*"GRAND_SERVANT_RESET_DIALOG_MESSAGE"*/, v10);
+    byte_4AFCF35 = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_1BDB81C(&this->fields.callbackFunc);
+  sub_1BC2FAC(&this->fields.callbackFunc);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (GrandGraphMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_GrandGraphMaster___);
+  Master_object = (GrandGraphMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_GrandGraphMaster___);
   if ( !userServantEntity )
     goto LABEL_15;
   v13 = Master_object;
@@ -112,7 +112,7 @@ void __fastcall GrandServantResetDialog__Open(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v21.fields.currentCryptoKey = v15;
   *(_QWORD *)&v21.fields.fakeValue = v14;
-  Master_object = (GrandGraphMaster_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48227716(v21, 0LL);
+  Master_object = (GrandGraphMaster_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(v21, 0LL);
   if ( !v13 )
     goto LABEL_15;
   EntityBySvtId = GrandGraphMaster__GetEntityBySvtId(v13, (int32_t)Master_object, 0LL);
@@ -120,10 +120,10 @@ void __fastcall GrandServantResetDialog__Open(
   v18 = EntityBySvtId;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_7013/*"GRAND_SERVANT_RESET_DIALOG_MESSAGE"*/, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_6945/*"GRAND_SERVANT_RESET_DIALOG_MESSAGE"*/, 0LL);
   Master_object = (GrandGraphMaster_o *)UserServantEntity__GetSvtName(userServantEntity, 0LL);
   if ( !v18
-    || (Master_object = (GrandGraphMaster_o *)System_String__Format_62613552(
+    || (Master_object = (GrandGraphMaster_o *)System_String__Format_62389940(
                                                 v19,
                                                 (Il2CppObject *)Master_object,
                                                 (Il2CppObject *)v18->fields.nameShort,
@@ -133,7 +133,7 @@ void __fastcall GrandServantResetDialog__Open(
         (Master_object = (GrandGraphMaster_o *)this->fields.servantFaceIcon) == 0LL) )
   {
 LABEL_15:
-    sub_1BDBAD4(Master_object, v12);
+    sub_1BC3264(Master_object, v12);
   }
   GrandServantListServantFaceIcon__Setup((GrandServantListServantFaceIcon_o *)Master_object, userServantEntity, v20);
   BaseDialog__SafeOpen((BaseDialog_o *)this, 0LL, 0, 0LL);
@@ -155,10 +155,10 @@ void __fastcall GrandServantResetDialog__add_callbackFunc(
   GrandServantResetDialog_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B3F9C2 & 1) == 0 )
+  if ( (byte_4AFCF32 & 1) == 0 )
   {
-    sub_1BDB878(&GrandServantResetDialog_CallbackFunc_TypeInfo, value);
-    byte_4B3F9C2 = 1;
+    sub_1BC3008(&GrandServantResetDialog_CallbackFunc_TypeInfo, value);
+    byte_4AFCF32 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -171,13 +171,13 @@ void __fastcall GrandServantResetDialog__add_callbackFunc(
       if ( (GrandServantResetDialog_CallbackFunc_c *)v8->klass != GrandServantResetDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
+    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (GrandServantResetDialog_o *)sub_1BDBD94(v8);
+  v11 = (GrandServantResetDialog_o *)sub_1BC3524(v8);
   GrandServantResetDialog__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -196,10 +196,10 @@ void __fastcall GrandServantResetDialog__remove_callbackFunc(
   GrandServantResetDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B3F9C3 & 1) == 0 )
+  if ( (byte_4AFCF33 & 1) == 0 )
   {
-    sub_1BDB878(&GrandServantResetDialog_CallbackFunc_TypeInfo, value);
-    byte_4B3F9C3 = 1;
+    sub_1BC3008(&GrandServantResetDialog_CallbackFunc_TypeInfo, value);
+    byte_4AFCF33 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -212,13 +212,13 @@ void __fastcall GrandServantResetDialog__remove_callbackFunc(
       if ( (GrandServantResetDialog_CallbackFunc_c *)v8->klass != GrandServantResetDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
+    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (GrandServantResetDialog_o *)sub_1BDBD94(v8);
+  v11 = (GrandServantResetDialog_o *)sub_1BC3524(v8);
   GrandServantResetDialog__Awake(v11, v12);
 }
 
@@ -241,15 +241,15 @@ void __fastcall GrandServantResetDialog_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BDB81C(&this->fields.method);
+  sub_1BC2FAC(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BDB938(v6) & 1) == 0 )
+  if ( (sub_1BC30C8(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1BDBAF0(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BDB9A0(v10, 0LL);
+      v10 = sub_1BC3280(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BC3130(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -261,9 +261,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A1D684;
+  this->fields.m_target = (Il2CppObject *)sub_1A05BC4;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A1D644;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A05B84;
 }
 
 
@@ -276,7 +276,7 @@ System_IAsyncResult_o *__fastcall GrandServantResetDialog_CallbackFunc__BeginInv
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_1BDB82C(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1BC2FBC(this, &v5, callback, object);
 }
 
 
@@ -285,7 +285,7 @@ void __fastcall GrandServantResetDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BDB830(result, 0LL, method);
+  sub_1BC2FC0(result, 0LL, method);
 }
 
 

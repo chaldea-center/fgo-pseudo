@@ -13,13 +13,13 @@ void __fastcall RecommendSupportMessageSelectDialog___ctor(
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4B40946 & 1) == 0 )
+  if ( (byte_4AFDEB6 & 1) == 0 )
   {
-    sub_1BDB878(&BalanceConfig_TypeInfo, method);
-    sub_1BDB878(&BaseDialog_TypeInfo, v3);
-    sub_1BDB878(&UILabel___TypeInfo, v4);
-    sub_1BDB878(&UISprite___TypeInfo, v5);
-    byte_4B40946 = 1;
+    sub_1BC3008(&BalanceConfig_TypeInfo, method);
+    sub_1BC3008(&BaseDialog_TypeInfo, v3);
+    sub_1BC3008(&UILabel___TypeInfo, v4);
+    sub_1BC3008(&UISprite___TypeInfo, v5);
+    byte_4AFDEB6 = 1;
   }
   v6 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -27,16 +27,16 @@ void __fastcall RecommendSupportMessageSelectDialog___ctor(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v6 = BalanceConfig_TypeInfo;
   }
-  v7 = (struct UILabel_array *)sub_1BDB920(
+  v7 = (struct UILabel_array *)sub_1BC30B0(
                                  UILabel___TypeInfo,
                                  (unsigned int)v6->static_fields->RecommendSupportAdviceMessageMax);
   this->fields.bodyMessageLabel = v7;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.bodyMessageLabel, (int32_t)v7, v8, v9);
-  v10 = (struct UISprite_array *)sub_1BDB920(
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.bodyMessageLabel, (int32_t)v7, v8, v9);
+  v10 = (struct UISprite_array *)sub_1BC30B0(
                                    UISprite___TypeInfo,
                                    (unsigned int)BalanceConfig_TypeInfo->static_fields->RecommendSupportAdviceMessageMax);
   this->fields.bodyMessageHighlight = v10;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.bodyMessageHighlight, (int32_t)v10, v11, v12);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.bodyMessageHighlight, (int32_t)v10, v11, v12);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0LL);
@@ -70,14 +70,14 @@ bool __fastcall RecommendSupportMessageSelectDialog__CheckSelectMessageNum(
   BalanceConfig_c *v15; // x8
   int32_t v16; // w19
 
-  if ( (byte_4B4093E & 1) == 0 )
+  if ( (byte_4AFDEAE & 1) == 0 )
   {
-    sub_1BDB878(&BalanceConfig_TypeInfo, method);
-    sub_1BDB878(&Method_System_Linq_Enumerable_Count_int____77114368, v3);
-    sub_1BDB878(&System_Func_int__bool__TypeInfo, v4);
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog___c__CheckSelectMessageNum_b__34_0__, v5);
-    sub_1BDB878(&RecommendSupportMessageSelectDialog___c_TypeInfo, v6);
-    byte_4B4093E = 1;
+    sub_1BC3008(&BalanceConfig_TypeInfo, method);
+    sub_1BC3008(&Method_System_Linq_Enumerable_Count_int____76849896, v3);
+    sub_1BC3008(&System_Func_int__bool__TypeInfo, v4);
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog___c__CheckSelectMessageNum_b__34_0__, v5);
+    sub_1BC3008(&RecommendSupportMessageSelectDialog___c_TypeInfo, v6);
+    byte_4AFDEAE = 1;
   }
   v7 = RecommendSupportMessageSelectDialog___c_TypeInfo;
   SelectMessageIds_k__BackingField = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields._SelectMessageIds_k__BackingField;
@@ -95,7 +95,7 @@ bool __fastcall RecommendSupportMessageSelectDialog__CheckSelectMessageNum(
       v7 = RecommendSupportMessageSelectDialog___c_TypeInfo;
     }
     v10 = (Il2CppObject *)v7->static_fields->__9;
-    _9__34_0 = (System_Func_int__bool__o *)sub_1BDBAC4(System_Func_int__bool__TypeInfo);
+    _9__34_0 = (System_Func_int__bool__o *)sub_1BC3254(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(
       _9__34_0,
       v10,
@@ -103,12 +103,12 @@ bool __fastcall RecommendSupportMessageSelectDialog__CheckSelectMessageNum(
       0LL);
     static_fields = RecommendSupportMessageSelectDialog___c_TypeInfo->static_fields;
     static_fields->__9__34_0 = _9__34_0;
-    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__34_0, (int32_t)_9__34_0, v12, v13);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__34_0, (int32_t)_9__34_0, v12, v13);
   }
-  v14 = System_Linq_Enumerable__Count_int__50662632(
+  v14 = System_Linq_Enumerable__Count_int__50458836(
           SelectMessageIds_k__BackingField,
           (System_Func_TSource__bool__o *)_9__34_0,
-          (const MethodInfo_3050CE8 *)Method_System_Linq_Enumerable_Count_int____77114368);
+          (const MethodInfo_301F0D4 *)Method_System_Linq_Enumerable_Count_int____76849896);
   v15 = BalanceConfig_TypeInfo;
   v16 = v14;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -138,25 +138,25 @@ void __fastcall RecommendSupportMessageSelectDialog__Close(
   const MethodInfo *v15; // x3
   System_Action_o *v16; // x20
 
-  if ( (byte_4B4093C & 1) == 0 )
+  if ( (byte_4AFDEAC & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, callback);
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog___c__DisplayClass29_0__Close_b__0__, v5);
-    sub_1BDB878(&RecommendSupportMessageSelectDialog___c__DisplayClass29_0_TypeInfo, v6);
-    byte_4B4093C = 1;
+    sub_1BC3008(&System_Action_TypeInfo, callback);
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog___c__DisplayClass29_0__Close_b__0__, v5);
+    sub_1BC3008(&RecommendSupportMessageSelectDialog___c__DisplayClass29_0_TypeInfo, v6);
+    byte_4AFDEAC = 1;
   }
-  v7 = sub_1BDBAC4(RecommendSupportMessageSelectDialog___c__DisplayClass29_0_TypeInfo);
+  v7 = sub_1BC3254(RecommendSupportMessageSelectDialog___c__DisplayClass29_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( !v7 )
-    sub_1BDBAD4(v8, v9);
+    sub_1BC3264(v8, v9);
   *(_QWORD *)(v7 + 16) = callback;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v7 + 16), (int32_t)callback, v10, v11);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)callback, v10, v11);
   *(_QWORD *)(v7 + 24) = this;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v7 + 24), (int32_t)this, v12, v13);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)this, v12, v13);
   category = this->fields.category;
   this->fields.state = 4;
   RecommendSupportMessageSelectDialog__SetCategory(this, category, 0, v15);
-  v16 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
   System_Action___ctor(
     v16,
     (Il2CppObject *)v7,
@@ -199,18 +199,18 @@ void __fastcall RecommendSupportMessageSelectDialog__Init(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B4093A & 1) == 0 )
+  if ( (byte_4AFDEAA & 1) == 0 )
   {
-    sub_1BDB878(&BalanceConfig_TypeInfo, method);
-    sub_1BDB878(&int___TypeInfo, v3);
-    byte_4B4093A = 1;
+    sub_1BC3008(&BalanceConfig_TypeInfo, method);
+    sub_1BC3008(&int___TypeInfo, v3);
+    byte_4AFDEAA = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 0, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.listViewManager) == 0LL) )
   {
-    sub_1BDBAD4(gameObject, v5);
+    sub_1BC3264(gameObject, v5);
   }
   ListViewManager__DestroyList((ListViewManager_o *)gameObject, 0LL);
   this->fields.state = 0;
@@ -221,11 +221,11 @@ void __fastcall RecommendSupportMessageSelectDialog__Init(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v6 = BalanceConfig_TypeInfo;
   }
-  v7 = (struct System_Int32_array *)sub_1BDB920(
+  v7 = (struct System_Int32_array *)sub_1BC30B0(
                                       int___TypeInfo,
                                       (unsigned int)v6->static_fields->RecommendSupportAdviceMessageMax);
   this->fields._SelectMessageIds_k__BackingField = v7;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._SelectMessageIds_k__BackingField, (int32_t)v7, v8, v9);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._SelectMessageIds_k__BackingField, (int32_t)v7, v8, v9);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
 
@@ -244,10 +244,10 @@ void __fastcall RecommendSupportMessageSelectDialog__ModifyList(
   const MethodInfo *v10; // x2
 
   v7 = RecommendSupportMessageSelectDialog__CheckSelectMessageNum(this, (const MethodInfo *)isNeedSort);
-  if ( !byte_4B40998 )
+  if ( !byte_4AFDF08 )
   {
-    sub_1BDB878(&RecommendSupportMessageSelectDialog_TypeInfo, v5);
-    byte_4B40998 = 1;
+    sub_1BC3008(&RecommendSupportMessageSelectDialog_TypeInfo, v5);
+    byte_4AFDF08 = 1;
   }
   RecommendSupportMessageSelectDialog_TypeInfo->static_fields->_IsSelectLimit_k__BackingField = v7;
   listViewManager = this->fields.listViewManager;
@@ -255,7 +255,7 @@ void __fastcall RecommendSupportMessageSelectDialog__ModifyList(
     || (RecommendSupportMessageSelectListViewManager__ModifyList(listViewManager, isNeedSort, v6),
         (v9 = this->fields.listViewManager) == 0LL) )
   {
-    sub_1BDBAD4(listViewManager, v5);
+    sub_1BC3264(listViewManager, v5);
   }
   v9->fields.initMode = 3;
   ListViewManager__set_IsInput((ListViewManager_o *)v9, 0, 0LL);
@@ -281,18 +281,18 @@ void __fastcall RecommendSupportMessageSelectDialog__OnClickCancel(
   int32_t v14; // w2
   const MethodInfo *v15; // x3
 
-  if ( (byte_4B40940 & 1) == 0 )
+  if ( (byte_4AFDEB0 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, method);
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog_OnClickCancel__, v3);
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog___c__OnClickCancel_b__36_0__, v4);
-    sub_1BDB878(&RecommendSupportMessageSelectDialog___c_TypeInfo, v5);
-    byte_4B40940 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, method);
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog_OnClickCancel__, v3);
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog___c__OnClickCancel_b__36_0__, v4);
+    sub_1BC3008(&RecommendSupportMessageSelectDialog___c_TypeInfo, v5);
+    byte_4AFDEB0 = 1;
   }
   v6 = Method_RecommendSupportMessageSelectDialog_OnClickCancel__;
   if ( (*((_BYTE *)Method_RecommendSupportMessageSelectDialog_OnClickCancel__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1BDB890(Method_RecommendSupportMessageSelectDialog_OnClickCancel__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v6, v6[4]);
+    v6 = (_QWORD *)sub_1BC3020(Method_RecommendSupportMessageSelectDialog_OnClickCancel__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v6, v6[4]);
   OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0, 0LL);
   v10 = RecommendSupportMessageSelectDialog___c_TypeInfo;
   if ( !RecommendSupportMessageSelectDialog___c_TypeInfo->_2.cctor_finished )
@@ -309,14 +309,14 @@ void __fastcall RecommendSupportMessageSelectDialog__OnClickCancel(
       v10 = RecommendSupportMessageSelectDialog___c_TypeInfo;
     }
     v12 = (Il2CppObject *)v10->static_fields->__9;
-    _9__36_0 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+    _9__36_0 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
     System_Action___ctor(_9__36_0, v12, Method_RecommendSupportMessageSelectDialog___c__OnClickCancel_b__36_0__, 0LL);
     static_fields = RecommendSupportMessageSelectDialog___c_TypeInfo->static_fields;
     static_fields->__9__36_0 = _9__36_0;
-    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__36_0, (int32_t)_9__36_0, v14, v15);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__36_0, (int32_t)_9__36_0, v14, v15);
   }
   if ( !this )
-    sub_1BDBAD4(v10, v8);
+    sub_1BC3264(v10, v8);
   RecommendSupportMessageSelectDialog__Close(this, _9__36_0, v9);
 }
 
@@ -332,19 +332,19 @@ void __fastcall RecommendSupportMessageSelectDialog__OnClickDecide(
   System_Action_o *v7; // x20
   const MethodInfo *v8; // x2
 
-  if ( (byte_4B4093F & 1) == 0 )
+  if ( (byte_4AFDEAF & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, method);
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog_OnClickDecide__, v3);
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog__OnClickDecide_b__35_0__, v4);
-    byte_4B4093F = 1;
+    sub_1BC3008(&System_Action_TypeInfo, method);
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog_OnClickDecide__, v3);
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog__OnClickDecide_b__35_0__, v4);
+    byte_4AFDEAF = 1;
   }
   v5 = Method_RecommendSupportMessageSelectDialog_OnClickDecide__;
   if ( (*((_BYTE *)Method_RecommendSupportMessageSelectDialog_OnClickDecide__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1BDB890(Method_RecommendSupportMessageSelectDialog_OnClickDecide__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v5, v5[4]);
+    v5 = (_QWORD *)sub_1BC3020(Method_RecommendSupportMessageSelectDialog_OnClickDecide__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
-  v7 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
   System_Action___ctor(
     v7,
     (Il2CppObject *)this,
@@ -366,24 +366,24 @@ void __fastcall RecommendSupportMessageSelectDialog__OnClickFilter(
   __int64 v8; // x1
   ListViewManager_o *listViewManager; // x0
 
-  if ( (byte_4B40943 & 1) == 0 )
+  if ( (byte_4AFDEB3 & 1) == 0 )
   {
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog_OnClickFilter__, method);
-    byte_4B40943 = 1;
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog_OnClickFilter__, method);
+    byte_4AFDEB3 = 1;
   }
   v3 = Method_RecommendSupportMessageSelectDialog_OnClickFilter__;
   if ( (*((_BYTE *)Method_RecommendSupportMessageSelectDialog_OnClickFilter__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1BDB890(Method_RecommendSupportMessageSelectDialog_OnClickFilter__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
+    v3 = (_QWORD *)sub_1BC3020(Method_RecommendSupportMessageSelectDialog_OnClickFilter__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
   category = this->fields.category;
   v7 = 0;
   if ( (unsigned int)category <= 4 )
-    v7 = dword_C22CF0[category];
+    v7 = dword_C163CC[category];
   RecommendSupportMessageSelectDialog__SetCategory(this, v7, 0, v5);
   listViewManager = (ListViewManager_o *)this->fields.listViewManager;
   if ( !listViewManager )
-    sub_1BDBAD4(0LL, v8);
+    sub_1BC3264(0LL, v8);
   ListViewManager__CheckScroll(listViewManager, 0, 0LL);
 }
 
@@ -426,24 +426,24 @@ void __fastcall RecommendSupportMessageSelectDialog__OnClickReset(
   const MethodInfo *v34; // x2
   const MethodInfo *v35; // x2
 
-  if ( (byte_4B40941 & 1) == 0 )
+  if ( (byte_4AFDEB1 & 1) == 0 )
   {
-    sub_1BDB878(&BalanceConfig_TypeInfo, method);
-    sub_1BDB878(&Method_System_Linq_Enumerable_SequenceEqual_int___, v3);
-    sub_1BDB878(&Method_System_Linq_Enumerable_ToArray_int___, v4);
-    sub_1BDB878(&Method_System_Linq_Enumerable_Where_int___, v5);
-    sub_1BDB878(&System_Func_int__bool__TypeInfo, v6);
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog_OnClickReset__, v7);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v8);
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog___c__OnClickReset_b__37_0__, v9);
-    sub_1BDB878(&RecommendSupportMessageSelectDialog___c_TypeInfo, v10);
-    sub_1BDB878(&StringLiteral_1/*""*/, v11);
-    byte_4B40941 = 1;
+    sub_1BC3008(&BalanceConfig_TypeInfo, method);
+    sub_1BC3008(&Method_System_Linq_Enumerable_SequenceEqual_int___, v3);
+    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_int___, v4);
+    sub_1BC3008(&Method_System_Linq_Enumerable_Where_int___, v5);
+    sub_1BC3008(&System_Func_int__bool__TypeInfo, v6);
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog_OnClickReset__, v7);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v8);
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog___c__OnClickReset_b__37_0__, v9);
+    sub_1BC3008(&RecommendSupportMessageSelectDialog___c_TypeInfo, v10);
+    sub_1BC3008(&StringLiteral_1/*""*/, v11);
+    byte_4AFDEB1 = 1;
   }
   v12 = Method_RecommendSupportMessageSelectDialog_OnClickReset__;
   if ( (*((_BYTE *)Method_RecommendSupportMessageSelectDialog_OnClickReset__ + 83) & 2) != 0 )
-    v12 = (_QWORD *)sub_1BDB890(Method_RecommendSupportMessageSelectDialog_OnClickReset__);
-  v13 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v12, v12[4]);
+    v12 = (_QWORD *)sub_1BC3020(Method_RecommendSupportMessageSelectDialog_OnClickReset__);
+  v13 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v12, v12[4]);
   OverwriteAssetSoundName__PlaySystemSe(v13, 0, 0, 0LL);
   for ( i = 0; ; ++i )
   {
@@ -489,7 +489,7 @@ void __fastcall RecommendSupportMessageSelectDialog__OnClickReset(
     goto LABEL_32;
   if ( !v21->max_length )
 LABEL_33:
-    sub_1BDBADC(gameObject, v14, v15);
+    sub_1BC326C(gameObject, v14, v15);
   gameObject = (UILabel_o *)v21->m_Items[0];
   if ( !gameObject )
     goto LABEL_32;
@@ -513,7 +513,7 @@ LABEL_33:
       v22 = RecommendSupportMessageSelectDialog___c_TypeInfo;
     }
     v25 = (Il2CppObject *)v22->static_fields->__9;
-    _9__37_0 = (System_Func_int__bool__o *)sub_1BDBAC4(System_Func_int__bool__TypeInfo);
+    _9__37_0 = (System_Func_int__bool__o *)sub_1BC3254(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(
       _9__37_0,
       v25,
@@ -521,18 +521,18 @@ LABEL_33:
       0LL);
     static_fields = RecommendSupportMessageSelectDialog___c_TypeInfo->static_fields;
     static_fields->__9__37_0 = _9__37_0;
-    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__37_0, (int32_t)_9__37_0, v27, v28);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__37_0, (int32_t)_9__37_0, v27, v28);
   }
   v29 = System_Linq_Enumerable__Where_int_(
           v23,
           (System_Func_TSource__bool__o *)_9__37_0,
-          (const MethodInfo_307716C *)Method_System_Linq_Enumerable_Where_int___);
+          (const MethodInfo_3044C3C *)Method_System_Linq_Enumerable_Where_int___);
   v30 = System_Linq_Enumerable__ToArray_int_(
           v29,
-          (const MethodInfo_3070610 *)Method_System_Linq_Enumerable_ToArray_int___);
+          (const MethodInfo_303E3B4 *)Method_System_Linq_Enumerable_ToArray_int___);
   decideButton = this->fields.decideButton;
   v32 = (System_Collections_Generic_IEnumerable_TSource__o *)v30;
-  gameObject = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  gameObject = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !gameObject
     || (SelectMessageIds = (System_Collections_Generic_IEnumerable_TSource__o *)RecommendSupportSelectControl__get_SelectMessageIds(
                                                                                   (RecommendSupportSelectControl_o *)gameObject,
@@ -540,11 +540,11 @@ LABEL_33:
         gameObject = (UILabel_o *)System_Linq_Enumerable__SequenceEqual_int_(
                                     SelectMessageIds,
                                     v32,
-                                    (const MethodInfo_306B1CC *)Method_System_Linq_Enumerable_SequenceEqual_int___),
+                                    (const MethodInfo_3038F70 *)Method_System_Linq_Enumerable_SequenceEqual_int___),
         !decideButton) )
   {
 LABEL_32:
-    sub_1BDBAD4(gameObject, v14);
+    sub_1BC3264(gameObject, v14);
   }
   UICommonButton__SetEnable(decideButton, ((unsigned __int8)gameObject & 1) == 0, 0LL);
   RecommendSupportMessageSelectDialog__ModifyList(this, 0, v34);
@@ -613,20 +613,20 @@ void __fastcall RecommendSupportMessageSelectDialog__OnSelect(
   System_Collections_Generic_IEnumerable_TSource__o *SelectMessageIds; // x0
   const MethodInfo *v58; // x2
 
-  if ( (byte_4B40942 & 1) == 0 )
+  if ( (byte_4AFDEB2 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Array_IndexOf_int___, *(_QWORD *)&iKind);
-    sub_1BDB878(&BalanceConfig_TypeInfo, v6);
-    sub_1BDB878(&Method_System_Linq_Enumerable_SequenceEqual_int___, v7);
-    sub_1BDB878(&Method_System_Linq_Enumerable_ToArray_int___, v8);
-    sub_1BDB878(&Method_System_Linq_Enumerable_Where_int___, v9);
-    sub_1BDB878(&System_Func_int__bool__TypeInfo, v10);
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog_OnSelect__, v11);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v12);
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog___c__OnSelect_b__38_0__, v13);
-    sub_1BDB878(&RecommendSupportMessageSelectDialog___c_TypeInfo, v14);
-    sub_1BDB878(&StringLiteral_1/*""*/, v15);
-    byte_4B40942 = 1;
+    sub_1BC3008(&Method_System_Array_IndexOf_int___, *(_QWORD *)&iKind);
+    sub_1BC3008(&BalanceConfig_TypeInfo, v6);
+    sub_1BC3008(&Method_System_Linq_Enumerable_SequenceEqual_int___, v7);
+    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_int___, v8);
+    sub_1BC3008(&Method_System_Linq_Enumerable_Where_int___, v9);
+    sub_1BC3008(&System_Func_int__bool__TypeInfo, v10);
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog_OnSelect__, v11);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v12);
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog___c__OnSelect_b__38_0__, v13);
+    sub_1BC3008(&RecommendSupportMessageSelectDialog___c_TypeInfo, v14);
+    sub_1BC3008(&StringLiteral_1/*""*/, v15);
+    byte_4AFDEB2 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -653,8 +653,8 @@ LABEL_66:
     {
       v20 = Method_RecommendSupportMessageSelectDialog_OnSelect__;
       if ( (*((_BYTE *)Method_RecommendSupportMessageSelectDialog_OnSelect__ + 83) & 2) != 0 )
-        v20 = (_QWORD *)sub_1BDB890(Method_RecommendSupportMessageSelectDialog_OnSelect__);
-      v21 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v20, v20[4]);
+        v20 = (_QWORD *)sub_1BC3020(Method_RecommendSupportMessageSelectDialog_OnSelect__);
+      v21 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v20, v20[4]);
       OverwriteAssetSoundName__PlaySystemSe(v21, 0, 0, 0LL);
       for ( i = 0LL; ; ++i )
       {
@@ -734,7 +734,7 @@ LABEL_45:
           v47 = RecommendSupportMessageSelectDialog___c_TypeInfo;
         }
         v49 = (Il2CppObject *)v47->static_fields->__9;
-        _9__38_0 = (System_Func_int__bool__o *)sub_1BDBAC4(System_Func_int__bool__TypeInfo);
+        _9__38_0 = (System_Func_int__bool__o *)sub_1BC3254(System_Func_int__bool__TypeInfo);
         System_Func_int__bool____ctor(
           _9__38_0,
           v49,
@@ -742,18 +742,18 @@ LABEL_45:
           0LL);
         static_fields = RecommendSupportMessageSelectDialog___c_TypeInfo->static_fields;
         static_fields->__9__38_0 = _9__38_0;
-        sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__38_0, (int32_t)_9__38_0, v51, v52);
+        sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__38_0, (int32_t)_9__38_0, v51, v52);
       }
       v53 = System_Linq_Enumerable__Where_int_(
               v46,
               (System_Func_TSource__bool__o *)_9__38_0,
-              (const MethodInfo_307716C *)Method_System_Linq_Enumerable_Where_int___);
+              (const MethodInfo_3044C3C *)Method_System_Linq_Enumerable_Where_int___);
       v54 = System_Linq_Enumerable__ToArray_int_(
               v53,
-              (const MethodInfo_3070610 *)Method_System_Linq_Enumerable_ToArray_int___);
+              (const MethodInfo_303E3B4 *)Method_System_Linq_Enumerable_ToArray_int___);
       decideButton = this->fields.decideButton;
       v56 = (System_Collections_Generic_IEnumerable_TSource__o *)v54;
-      listViewManager = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+      listViewManager = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
       if ( listViewManager )
       {
         SelectMessageIds = (System_Collections_Generic_IEnumerable_TSource__o *)RecommendSupportSelectControl__get_SelectMessageIds(
@@ -762,7 +762,7 @@ LABEL_45:
         listViewManager = (UILabel_o *)System_Linq_Enumerable__SequenceEqual_int_(
                                          SelectMessageIds,
                                          v56,
-                                         (const MethodInfo_306B1CC *)Method_System_Linq_Enumerable_SequenceEqual_int___);
+                                         (const MethodInfo_3038F70 *)Method_System_Linq_Enumerable_SequenceEqual_int___);
         if ( decideButton )
         {
           UICommonButton__SetEnable(decideButton, ((unsigned __int8)listViewManager & 1) == 0, 0LL);
@@ -772,27 +772,27 @@ LABEL_45:
         }
       }
 LABEL_67:
-      sub_1BDBAD4(listViewManager, *(_QWORD *)&iKind);
+      sub_1BC3264(listViewManager, *(_QWORD *)&iKind);
     }
-    if ( !byte_4B40999 )
+    if ( !byte_4AFDF09 )
     {
-      sub_1BDB878(&RecommendSupportMessageSelectDialog_TypeInfo, v18);
-      byte_4B40999 = 1;
+      sub_1BC3008(&RecommendSupportMessageSelectDialog_TypeInfo, v18);
+      byte_4AFDF09 = 1;
     }
     if ( RecommendSupportMessageSelectDialog_TypeInfo->static_fields->_IsSelectLimit_k__BackingField
       && !v19->fields._IsUse_k__BackingField )
     {
       v41 = Method_RecommendSupportMessageSelectDialog_OnSelect__;
       if ( (*((_BYTE *)Method_RecommendSupportMessageSelectDialog_OnSelect__ + 83) & 2) != 0 )
-        v41 = (_QWORD *)sub_1BDB890(Method_RecommendSupportMessageSelectDialog_OnSelect__);
-      v42 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v41, v41[4]);
+        v41 = (_QWORD *)sub_1BC3020(Method_RecommendSupportMessageSelectDialog_OnSelect__);
+      v42 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v41, v41[4]);
       OverwriteAssetSoundName__PlaySystemSe(v42, 2, 0, 0LL);
       goto LABEL_45;
     }
     v29 = Method_RecommendSupportMessageSelectDialog_OnSelect__;
     if ( (*((_BYTE *)Method_RecommendSupportMessageSelectDialog_OnSelect__ + 83) & 2) != 0 )
-      v29 = (_QWORD *)sub_1BDB890(Method_RecommendSupportMessageSelectDialog_OnSelect__);
-    v30 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v29, v29[4]);
+      v29 = (_QWORD *)sub_1BC3020(Method_RecommendSupportMessageSelectDialog_OnSelect__);
+    v30 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v29, v29[4]);
     OverwriteAssetSoundName__PlaySystemSe(v30, 0, 0, 0LL);
     v31 = this->fields._SelectMessageIds_k__BackingField;
     if ( !v31 )
@@ -822,7 +822,7 @@ LABEL_67:
         v39 = System_Array__IndexOf_int_(
                 this->fields._SelectMessageIds_k__BackingField,
                 -1,
-                (const MethodInfo_3132F28 *)Method_System_Array_IndexOf_int___);
+                (const MethodInfo_31002A8 *)Method_System_Array_IndexOf_int___);
         if ( v39 == -1 )
           v40 = 0;
         else
@@ -832,7 +832,7 @@ LABEL_67:
       }
     }
 LABEL_68:
-    sub_1BDBADC(listViewManager, *(_QWORD *)&iKind, v22);
+    sub_1BC326C(listViewManager, *(_QWORD *)&iKind, v22);
   }
 }
 
@@ -867,7 +867,7 @@ void __fastcall RecommendSupportMessageSelectDialog__Open(
   UILabel_o *decideLabel; // x21
   UILabel_o *cancelLabel; // x21
   UILabel_o *resetLabel; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *Entities_41528456; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *Entities_41565772; // x0
   System_Collections_Generic_List_T__o *v30; // x20
   unsigned __int64 i; // x21
   BalanceConfig_c *v32; // x0
@@ -890,26 +890,26 @@ void __fastcall RecommendSupportMessageSelectDialog__Open(
   const MethodInfo *v49; // x3
   System_Action_o *v50; // x20
 
-  if ( (byte_4B4093B & 1) == 0 )
+  if ( (byte_4AFDEAB & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, callback);
-    sub_1BDB878(&Method_System_Array_IndexOf_int___, v4);
-    sub_1BDB878(&BalanceConfig_TypeInfo, v5);
-    sub_1BDB878(&Method_BasicHelper_IsValidIndex_RecommendAdviceMessageEntity___, v6);
-    sub_1BDB878(&Method_DataManager_GetMaster_RecommendAdviceMessageMaster___, v7);
-    sub_1BDB878(&DataManager_TypeInfo, v8);
-    sub_1BDB878(&Method_System_Linq_Enumerable_ToList_RecommendAdviceMessageEntity___, v9);
-    sub_1BDB878(&Method_System_Collections_Generic_List_RecommendAdviceMessageEntity__get_Item__, v10);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v11);
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog_EndOpen__, v12);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v13);
-    sub_1BDB878(&StringLiteral_11007/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_EXPLANATION"*/, v14);
-    sub_1BDB878(&StringLiteral_11009/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_TITLE"*/, v15);
-    sub_1BDB878(&StringLiteral_3718/*"COMMON_CONFIRM_DECIDE"*/, v16);
-    sub_1BDB878(&StringLiteral_3716/*"COMMON_CONFIRM_CANCEL"*/, v17);
-    sub_1BDB878(&StringLiteral_11015/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_RESET"*/, v18);
-    sub_1BDB878(&StringLiteral_1/*""*/, v19);
-    byte_4B4093B = 1;
+    sub_1BC3008(&System_Action_TypeInfo, callback);
+    sub_1BC3008(&Method_System_Array_IndexOf_int___, v4);
+    sub_1BC3008(&BalanceConfig_TypeInfo, v5);
+    sub_1BC3008(&Method_BasicHelper_IsValidIndex_RecommendAdviceMessageEntity___, v6);
+    sub_1BC3008(&Method_DataManager_GetMaster_RecommendAdviceMessageMaster___, v7);
+    sub_1BC3008(&DataManager_TypeInfo, v8);
+    sub_1BC3008(&Method_System_Linq_Enumerable_ToList_RecommendAdviceMessageEntity___, v9);
+    sub_1BC3008(&Method_System_Collections_Generic_List_RecommendAdviceMessageEntity__get_Item__, v10);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v11);
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog_EndOpen__, v12);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v13);
+    sub_1BC3008(&StringLiteral_10918/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_EXPLANATION"*/, v14);
+    sub_1BC3008(&StringLiteral_10920/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_TITLE"*/, v15);
+    sub_1BC3008(&StringLiteral_3649/*"COMMON_CONFIRM_DECIDE"*/, v16);
+    sub_1BC3008(&StringLiteral_3647/*"COMMON_CONFIRM_CANCEL"*/, v17);
+    sub_1BC3008(&StringLiteral_10926/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_RESET"*/, v18);
+    sub_1BC3008(&StringLiteral_1/*""*/, v19);
+    byte_4AFDEAB = 1;
   }
   gameObject = (UISprite_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
@@ -917,36 +917,36 @@ void __fastcall RecommendSupportMessageSelectDialog__Open(
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_RecommendAdviceMessageMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_RecommendAdviceMessageMaster___);
   titleLabel = this->fields.titleLabel;
   v24 = (RecommendAdviceMessageMaster_o *)Master_object;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11009/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_TITLE"*/, 0LL);
+  gameObject = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10920/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_TITLE"*/, 0LL);
   if ( !titleLabel )
     goto LABEL_60;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
   explanationLabel = this->fields.explanationLabel;
-  gameObject = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11007/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_EXPLANATION"*/, 0LL);
+  gameObject = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10918/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_CHANGE_EXPLANATION"*/, 0LL);
   if ( !explanationLabel )
     goto LABEL_60;
   UILabel__set_text(explanationLabel, (System_String_o *)gameObject, 0LL);
   decideLabel = this->fields.decideLabel;
-  gameObject = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3718/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+  gameObject = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3649/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
   if ( !decideLabel )
     goto LABEL_60;
   UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0LL);
   cancelLabel = this->fields.cancelLabel;
-  gameObject = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3716/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+  gameObject = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3647/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
   if ( !cancelLabel )
     goto LABEL_60;
   UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0LL);
   resetLabel = this->fields.resetLabel;
-  gameObject = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11015/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_RESET"*/, 0LL);
+  gameObject = (UISprite_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10926/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_RESET"*/, 0LL);
   if ( !resetLabel )
     goto LABEL_60;
   UILabel__set_text(resetLabel, (System_String_o *)gameObject, 0LL);
-  gameObject = (UISprite_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  gameObject = (UISprite_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !gameObject )
     goto LABEL_60;
   gameObject = (UISprite_o *)RecommendSupportSelectControl__get_SelectMessageIds(
@@ -954,13 +954,13 @@ void __fastcall RecommendSupportMessageSelectDialog__Open(
                                0LL);
   if ( !v24 )
     goto LABEL_60;
-  Entities_41528456 = (System_Collections_Generic_IEnumerable_TSource__o *)RecommendAdviceMessageMaster__GetEntities_41528456(
+  Entities_41565772 = (System_Collections_Generic_IEnumerable_TSource__o *)RecommendAdviceMessageMaster__GetEntities_41565772(
                                                                              v24,
                                                                              (System_Int32_array *)gameObject,
                                                                              0LL);
   v30 = (System_Collections_Generic_List_T__o *)System_Linq_Enumerable__ToList_object_(
-                                                  Entities_41528456,
-                                                  (const MethodInfo_307503C *)Method_System_Linq_Enumerable_ToList_RecommendAdviceMessageEntity___);
+                                                  Entities_41565772,
+                                                  (const MethodInfo_3042DE0 *)Method_System_Linq_Enumerable_ToList_RecommendAdviceMessageEntity___);
   for ( i = 0LL; ; ++i )
   {
     v32 = BalanceConfig_TypeInfo;
@@ -974,7 +974,7 @@ void __fastcall RecommendSupportMessageSelectDialog__Open(
     gameObject = (UISprite_o *)BasicHelper__IsValidIndex_object_(
                                  v30,
                                  i,
-                                 (const MethodInfo_3022368 *)Method_BasicHelper_IsValidIndex_RecommendAdviceMessageEntity___);
+                                 (const MethodInfo_2FF0848 *)Method_BasicHelper_IsValidIndex_RecommendAdviceMessageEntity___);
     SelectMessageIds_k__BackingField = this->fields._SelectMessageIds_k__BackingField;
     if ( ((unsigned __int8)gameObject & 1) != 0 )
     {
@@ -983,7 +983,7 @@ void __fastcall RecommendSupportMessageSelectDialog__Open(
       gameObject = (UISprite_o *)System_Collections_Generic_List_object___get_Item(
                                    (System_Collections_Generic_List_object__o *)v30,
                                    i,
-                                   (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_RecommendAdviceMessageEntity__get_Item__);
+                                   (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_RecommendAdviceMessageEntity__get_Item__);
       if ( !gameObject || !SelectMessageIds_k__BackingField )
         goto LABEL_60;
       if ( i >= SelectMessageIds_k__BackingField->max_length )
@@ -998,7 +998,7 @@ void __fastcall RecommendSupportMessageSelectDialog__Open(
       gameObject = (UISprite_o *)System_Collections_Generic_List_object___get_Item(
                                    (System_Collections_Generic_List_object__o *)v30,
                                    i,
-                                   (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_RecommendAdviceMessageEntity__get_Item__);
+                                   (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_RecommendAdviceMessageEntity__get_Item__);
       if ( !gameObject )
         goto LABEL_60;
       if ( !v36 )
@@ -1051,7 +1051,7 @@ void __fastcall RecommendSupportMessageSelectDialog__Open(
   gameObject = (UISprite_o *)System_Array__IndexOf_int_(
                                this->fields._SelectMessageIds_k__BackingField,
                                -1,
-                               (const MethodInfo_3132F28 *)Method_System_Array_IndexOf_int___);
+                               (const MethodInfo_31002A8 *)Method_System_Array_IndexOf_int___);
   v41 = this->fields.bodyMessageHighlight;
   v42 = (_DWORD)gameObject == -1 ? 0 : (int)gameObject;
   this->fields.cursorPos = v42;
@@ -1059,7 +1059,7 @@ void __fastcall RecommendSupportMessageSelectDialog__Open(
     goto LABEL_60;
   if ( v42 >= v41->max_length )
 LABEL_61:
-    sub_1BDBADC(gameObject, v21, v33);
+    sub_1BC326C(gameObject, v21, v33);
   gameObject = v41->m_Items[v42];
   if ( !gameObject )
     goto LABEL_60;
@@ -1068,10 +1068,10 @@ LABEL_61:
     goto LABEL_60;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
   v44 = RecommendSupportMessageSelectDialog__CheckSelectMessageNum(this, v43);
-  if ( !byte_4B40998 )
+  if ( !byte_4AFDF08 )
   {
-    sub_1BDB878(&RecommendSupportMessageSelectDialog_TypeInfo, v21);
-    byte_4B40998 = 1;
+    sub_1BC3008(&RecommendSupportMessageSelectDialog_TypeInfo, v21);
+    byte_4AFDF08 = 1;
   }
   RecommendSupportMessageSelectDialog_TypeInfo->static_fields->_IsSelectLimit_k__BackingField = v44;
   gameObject = (UISprite_o *)this->fields.decideButton;
@@ -1095,13 +1095,13 @@ LABEL_61:
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
       RecommendSupportMessageSelectDialog__SetCategory(this, this->fields.category, 1, v49);
       this->fields.state = 1;
-      v50 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+      v50 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
       System_Action___ctor(v50, (Il2CppObject *)this, Method_RecommendSupportMessageSelectDialog_EndOpen__, 0LL);
       BaseDialog__Open((BaseDialog_o *)this, v50, 1, 0LL);
       return;
     }
 LABEL_60:
-    sub_1BDBAD4(gameObject, v21);
+    sub_1BC3264(gameObject, v21);
   }
 }
 
@@ -1136,7 +1136,7 @@ void __fastcall RecommendSupportMessageSelectDialog__SetCategory(
   v10 = this->fields.listViewManager;
   if ( !v10 )
 LABEL_9:
-    sub_1BDBAD4(listViewManager, v8);
+    sub_1BC3264(listViewManager, v8);
   if ( this->fields.state == 2 )
   {
     RecommendSupportMessageSelectListViewManager__ModifyList(this->fields.listViewManager, 0, v9);
@@ -1168,48 +1168,48 @@ void __fastcall RecommendSupportMessageSelectDialog__SetupFilterButton(
   __int64 v12; // x1
   UILabel_o *filterLabel; // x8
 
-  if ( (byte_4B40944 & 1) == 0 )
+  if ( (byte_4AFDEB4 & 1) == 0 )
   {
-    sub_1BDB878(&LocalizationManager_TypeInfo, *(_QWORD *)&kind);
-    sub_1BDB878(&StringLiteral_11010/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_ADVICE"*/, v5);
-    sub_1BDB878(&StringLiteral_11012/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_CLASSIFICATION"*/, v6);
-    sub_1BDB878(&StringLiteral_11011/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_ALL"*/, v7);
-    sub_1BDB878(&StringLiteral_11014/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_EFFECT"*/, v8);
-    sub_1BDB878(&StringLiteral_11013/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_COMPOSITION"*/, v9);
-    byte_4B40944 = 1;
+    sub_1BC3008(&LocalizationManager_TypeInfo, *(_QWORD *)&kind);
+    sub_1BC3008(&StringLiteral_10921/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_ADVICE"*/, v5);
+    sub_1BC3008(&StringLiteral_10923/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_CLASSIFICATION"*/, v6);
+    sub_1BC3008(&StringLiteral_10922/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_ALL"*/, v7);
+    sub_1BC3008(&StringLiteral_10925/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_EFFECT"*/, v8);
+    sub_1BC3008(&StringLiteral_10924/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_COMPOSITION"*/, v9);
+    byte_4AFDEB4 = 1;
   }
   switch ( kind )
   {
     case 1:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v10 = &StringLiteral_11013/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_COMPOSITION"*/;
+      v10 = &StringLiteral_10924/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_COMPOSITION"*/;
       break;
     case 2:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v10 = &StringLiteral_11012/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_CLASSIFICATION"*/;
+      v10 = &StringLiteral_10923/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_CLASSIFICATION"*/;
       break;
     case 3:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v10 = &StringLiteral_11014/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_EFFECT"*/;
+      v10 = &StringLiteral_10925/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_EFFECT"*/;
       break;
     case 4:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v10 = &StringLiteral_11010/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_ADVICE"*/;
+      v10 = &StringLiteral_10921/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_ADVICE"*/;
       break;
     default:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v10 = &StringLiteral_11011/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_ALL"*/;
+      v10 = &StringLiteral_10922/*"RECOMMEND_SUPPORT_ADVICE_MESSAGE_FILTER_ALL"*/;
       break;
   }
   v11 = LocalizationManager__Get((System_String_o *)*v10, 0LL);
   filterLabel = this->fields.filterLabel;
   if ( !filterLabel )
-    sub_1BDBAD4(v11, v12);
+    sub_1BC3264(v11, v12);
   UILabel__set_text(filterLabel, v11, 0LL);
 }
 
@@ -1230,24 +1230,24 @@ void __fastcall RecommendSupportMessageSelectDialog__ToInputState(
   const MethodInfo *v12; // x3
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B4093D & 1) == 0 )
+  if ( (byte_4AFDEAD & 1) == 0 )
   {
-    sub_1BDB878(&RecommendSupportMessageSelectListViewManager_CallbackFunc_TypeInfo, changeMode);
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog_OnSelect__, v5);
-    byte_4B4093D = 1;
+    sub_1BC3008(&RecommendSupportMessageSelectListViewManager_CallbackFunc_TypeInfo, changeMode);
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog_OnSelect__, v5);
+    byte_4AFDEAD = 1;
   }
   this->fields.state = 2;
   listViewManager = this->fields.listViewManager;
-  v7 = (RecommendSupportMessageSelectListViewManager_CallbackFunc_o *)sub_1BDBAC4(RecommendSupportMessageSelectListViewManager_CallbackFunc_TypeInfo);
+  v7 = (RecommendSupportMessageSelectListViewManager_CallbackFunc_o *)sub_1BC3254(RecommendSupportMessageSelectListViewManager_CallbackFunc_TypeInfo);
   RecommendSupportMessageSelectListViewManager_CallbackFunc___ctor(
     v7,
     (Il2CppObject *)this,
     (intptr_t)Method_RecommendSupportMessageSelectDialog_OnSelect__,
     v8);
   if ( !listViewManager )
-    sub_1BDBAD4(v9, v10);
+    sub_1BC3264(v9, v10);
   listViewManager->fields.FuncOnClick = v7;
-  sub_1BDB81C((CGThumbnailListItem_o *)&listViewManager->fields.FuncOnClick, (int32_t)v7, v11, v12);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&listViewManager->fields.FuncOnClick, (int32_t)v7, v11, v12);
   if ( changeMode )
   {
     listViewManager->fields.initMode = 2;
@@ -1282,16 +1282,16 @@ void __fastcall RecommendSupportMessageSelectDialog___OnClickDecide_b__35_0(
   const MethodInfo *v21; // x3
   Il2CppObject *Menu_object; // x19
 
-  if ( (byte_4B40947 & 1) == 0 )
+  if ( (byte_4AFDEB7 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Linq_Enumerable_ToArray_int___, method);
-    sub_1BDB878(&Method_System_Linq_Enumerable_Where_int___, v3);
-    sub_1BDB878(&System_Func_int__bool__TypeInfo, v4);
-    sub_1BDB878(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___, v5);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v6);
-    sub_1BDB878(&Method_RecommendSupportMessageSelectDialog___c__OnClickDecide_b__35_1__, v7);
-    sub_1BDB878(&RecommendSupportMessageSelectDialog___c_TypeInfo, v8);
-    byte_4B40947 = 1;
+    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_int___, method);
+    sub_1BC3008(&Method_System_Linq_Enumerable_Where_int___, v3);
+    sub_1BC3008(&System_Func_int__bool__TypeInfo, v4);
+    sub_1BC3008(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___, v5);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v6);
+    sub_1BC3008(&Method_RecommendSupportMessageSelectDialog___c__OnClickDecide_b__35_1__, v7);
+    sub_1BC3008(&RecommendSupportMessageSelectDialog___c_TypeInfo, v8);
+    byte_4AFDEB7 = 1;
   }
   v9 = RecommendSupportMessageSelectDialog___c_TypeInfo;
   SelectMessageIds_k__BackingField = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields._SelectMessageIds_k__BackingField;
@@ -1309,7 +1309,7 @@ void __fastcall RecommendSupportMessageSelectDialog___OnClickDecide_b__35_0(
       v9 = RecommendSupportMessageSelectDialog___c_TypeInfo;
     }
     v12 = (Il2CppObject *)v9->static_fields->__9;
-    _9__35_1 = (System_Func_int__bool__o *)sub_1BDBAC4(System_Func_int__bool__TypeInfo);
+    _9__35_1 = (System_Func_int__bool__o *)sub_1BC3254(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(
       _9__35_1,
       v12,
@@ -1317,33 +1317,33 @@ void __fastcall RecommendSupportMessageSelectDialog___OnClickDecide_b__35_0(
       0LL);
     static_fields = RecommendSupportMessageSelectDialog___c_TypeInfo->static_fields;
     static_fields->__9__35_1 = _9__35_1;
-    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__35_1, (int32_t)_9__35_1, v14, v15);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__35_1, (int32_t)_9__35_1, v14, v15);
   }
   v16 = System_Linq_Enumerable__Where_int_(
           SelectMessageIds_k__BackingField,
           (System_Func_TSource__bool__o *)_9__35_1,
-          (const MethodInfo_307716C *)Method_System_Linq_Enumerable_Where_int___);
+          (const MethodInfo_3044C3C *)Method_System_Linq_Enumerable_Where_int___);
   v17 = System_Linq_Enumerable__ToArray_int_(
           v16,
-          (const MethodInfo_3070610 *)Method_System_Linq_Enumerable_ToArray_int___);
-  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+          (const MethodInfo_303E3B4 *)Method_System_Linq_Enumerable_ToArray_int___);
+  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance
     || (RecommendSupportData_k__BackingField = Instance->fields._RecommendSupportData_k__BackingField,
-        (Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__)) == 0LL)
+        (Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__)) == 0LL)
     || !RecommendSupportData_k__BackingField
     || (RecommendSupportData__SetAdviceMessage(
           RecommendSupportData_k__BackingField,
           Instance->fields._SelectIndex_k__BackingField,
           v17,
           v21),
-        (Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__)) == 0LL)
+        (Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__)) == 0LL)
     || (Menu_object = RecommendSupportSelectControl__GetMenu_object_(
                         Instance,
-                        (const MethodInfo_30CAE40 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___),
-        (Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__)) == 0LL)
+                        (const MethodInfo_30981C0 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___),
+        (Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__)) == 0LL)
     || !Menu_object )
   {
-    sub_1BDBAD4(Instance, v19);
+    sub_1BC3264(Instance, v19);
   }
   RecommendSupportSelectListViewMenu__Redisplay(
     (RecommendSupportSelectListViewMenu_o *)Menu_object,
@@ -1356,10 +1356,10 @@ bool __fastcall RecommendSupportMessageSelectDialog__get_IsSelectLimit(const Met
 {
   __int64 v1; // x1
 
-  if ( (byte_4B40938 & 1) == 0 )
+  if ( (byte_4AFDEA8 & 1) == 0 )
   {
-    sub_1BDB878(&RecommendSupportMessageSelectDialog_TypeInfo, v1);
-    byte_4B40938 = 1;
+    sub_1BC3008(&RecommendSupportMessageSelectDialog_TypeInfo, v1);
+    byte_4AFDEA8 = 1;
   }
   return RecommendSupportMessageSelectDialog_TypeInfo->static_fields->_IsSelectLimit_k__BackingField;
 }
@@ -1381,10 +1381,10 @@ UnityEngine_GameObject_o *__fastcall RecommendSupportMessageSelectDialog__get_cl
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4B40945 & 1) == 0 )
+  if ( (byte_4AFDEB5 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    byte_4B40945 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    byte_4AFDEB5 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1393,17 +1393,17 @@ UnityEngine_GameObject_o *__fastcall RecommendSupportMessageSelectDialog__get_cl
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_1BDBAD4(0LL, v4);
+    sub_1BC3264(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 
 
 void __fastcall RecommendSupportMessageSelectDialog__set_IsSelectLimit(bool value, const MethodInfo *method)
 {
-  if ( (byte_4B40939 & 1) == 0 )
+  if ( (byte_4AFDEA9 & 1) == 0 )
   {
-    sub_1BDB878(&RecommendSupportMessageSelectDialog_TypeInfo, method);
-    byte_4B40939 = 1;
+    sub_1BC3008(&RecommendSupportMessageSelectDialog_TypeInfo, method);
+    byte_4AFDEA9 = 1;
   }
   RecommendSupportMessageSelectDialog_TypeInfo->static_fields->_IsSelectLimit_k__BackingField = value;
 }
@@ -1417,7 +1417,7 @@ void __fastcall RecommendSupportMessageSelectDialog__set_SelectMessageIds(
   const MethodInfo *v3; // x3
 
   this->fields._SelectMessageIds_k__BackingField = value;
-  sub_1BDB81C(
+  sub_1BC2FAC(
     (CGThumbnailListItem_o *)&this->fields._SelectMessageIds_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1432,15 +1432,15 @@ void __fastcall RecommendSupportMessageSelectDialog___c___cctor(const MethodInfo
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B40948 & 1) == 0 )
+  if ( (byte_4AFDEB8 & 1) == 0 )
   {
-    sub_1BDB878(&RecommendSupportMessageSelectDialog___c_TypeInfo, v1);
-    byte_4B40948 = 1;
+    sub_1BC3008(&RecommendSupportMessageSelectDialog___c_TypeInfo, v1);
+    byte_4AFDEB8 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BDBAC4(RecommendSupportMessageSelectDialog___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BC3254(RecommendSupportMessageSelectDialog___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   RecommendSupportMessageSelectDialog___c_TypeInfo->static_fields->__9 = (struct RecommendSupportMessageSelectDialog___c_o *)v2;
-  sub_1BDB81C(
+  sub_1BC2FAC(
     (CGThumbnailListItem_o *)RecommendSupportMessageSelectDialog___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -1474,21 +1474,21 @@ void __fastcall RecommendSupportMessageSelectDialog___c___OnClickCancel_b__36_0(
   __int64 v4; // x1
   Il2CppObject *Menu_object; // x19
 
-  if ( (byte_4B40949 & 1) == 0 )
+  if ( (byte_4AFDEB9 & 1) == 0 )
   {
-    sub_1BDB878(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___, method);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v2);
-    byte_4B40949 = 1;
+    sub_1BC3008(&Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___, method);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v2);
+    byte_4AFDEB9 = 1;
   }
-  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance
     || (Menu_object = RecommendSupportSelectControl__GetMenu_object_(
                         Instance,
-                        (const MethodInfo_30CAE40 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___),
-        (Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__)) == 0LL)
+                        (const MethodInfo_30981C0 *)Method_RecommendSupportSelectControl_GetMenu_RecommendSupportSelectListViewMenu___),
+        (Instance = (RecommendSupportSelectControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__)) == 0LL)
     || !Menu_object )
   {
-    sub_1BDBAD4(Instance, v4);
+    sub_1BC3264(Instance, v4);
   }
   RecommendSupportSelectListViewMenu__Redisplay(
     (RecommendSupportSelectListViewMenu_o *)Menu_object,
@@ -1546,6 +1546,6 @@ void __fastcall RecommendSupportMessageSelectDialog___c__DisplayClass29_0___Clos
       *(_QWORD *)&callback->fields.extra_arg);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BDBAD4(0LL, method);
+    sub_1BC3264(0LL, method);
   RecommendSupportMessageSelectDialog__Init(_4__this, method);
 }

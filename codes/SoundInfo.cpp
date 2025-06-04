@@ -74,26 +74,26 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
   UnityEngine_Rect_o v67; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v68; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B43FC9 & 1) == 0 )
+  if ( (byte_4B01558 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Application_TypeInfo, method);
-    sub_1BDB878(&BgmManager_TypeInfo, v3);
-    sub_1BDB878(&UnityEngine_GUI_TypeInfo, v4);
-    sub_1BDB878(&int_TypeInfo, v5);
-    sub_1BDB878(&SoundLogger_TypeInfo, v6);
-    sub_1BDB878(&string___TypeInfo, v7);
-    sub_1BDB878(&StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, v8);
-    sub_1BDB878(&StringLiteral_15873/*"[BGM]\n"*/, v9);
-    sub_1BDB878(&StringLiteral_5291/*"Detail:{0}"*/, v10);
-    sub_1BDB878(&StringLiteral_1747/*"<size="*/, v11);
-    sub_1BDB878(&StringLiteral_45/*"\n\n\n"*/, v12);
-    sub_1BDB878(&StringLiteral_5290/*"Detail: OFF"*/, v13);
-    sub_1BDB878(&StringLiteral_66/*"\n[SE]\n"*/, v14);
-    sub_1BDB878(&StringLiteral_1/*""*/, v15);
-    sub_1BDB878(&StringLiteral_1551/*"</size>"*/, v16);
-    sub_1BDB878(&StringLiteral_67/*"\n[VOICE]\n"*/, v17);
-    sub_1BDB878(&StringLiteral_1773/*">"*/, v18);
-    byte_4B43FC9 = 1;
+    sub_1BC3008(&UnityEngine_Application_TypeInfo, method);
+    sub_1BC3008(&BgmManager_TypeInfo, v3);
+    sub_1BC3008(&UnityEngine_GUI_TypeInfo, v4);
+    sub_1BC3008(&int_TypeInfo, v5);
+    sub_1BC3008(&SoundLogger_TypeInfo, v6);
+    sub_1BC3008(&string___TypeInfo, v7);
+    sub_1BC3008(&StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, v8);
+    sub_1BC3008(&StringLiteral_15749/*"[BGM]\n"*/, v9);
+    sub_1BC3008(&StringLiteral_5210/*"Detail:{0}"*/, v10);
+    sub_1BC3008(&StringLiteral_1713/*"<size="*/, v11);
+    sub_1BC3008(&StringLiteral_45/*"\n\n\n"*/, v12);
+    sub_1BC3008(&StringLiteral_5209/*"Detail: OFF"*/, v13);
+    sub_1BC3008(&StringLiteral_65/*"\n[SE]\n"*/, v14);
+    sub_1BC3008(&StringLiteral_1/*""*/, v15);
+    sub_1BC3008(&StringLiteral_1517/*"</size>"*/, v16);
+    sub_1BC3008(&StringLiteral_66/*"\n[VOICE]\n"*/, v17);
+    sub_1BC3008(&StringLiteral_1739/*">"*/, v18);
+    byte_4B01558 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -104,18 +104,18 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     if ( !SoundLogger_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
     LogBgm = SoundLogger__getLogBgm((const MethodInfo *)v20);
-    v23 = System_String__Concat_62572260((System_String_o *)StringLiteral_15873/*"[BGM]\n"*/, LogBgm, 0LL);
+    v23 = System_String__Concat_62348648((System_String_o *)StringLiteral_15749/*"[BGM]\n"*/, LogBgm, 0LL);
     if ( (bgmIndex & 0x80000000) != 0 )
     {
       v27 = SoundLogger_TypeInfo;
       if ( !SoundLogger_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundLogger_TypeInfo);
       LogBgmDetailLast = SoundLogger__GetLogBgmDetailLast((const MethodInfo *)v27);
-      v29 = System_String__Concat_62610508(v23, (System_String_o *)StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, LogBgmDetailLast, 0LL);
+      v29 = System_String__Concat_62386896(v23, (System_String_o *)StringLiteral_47/*"\n\n\n[Detail Last]\n"*/, LogBgmDetailLast, 0LL);
       LogVoice = SoundLogger__getLogVoice((const MethodInfo *)v29);
-      v23 = System_String__Concat_62610508(v29, (System_String_o *)StringLiteral_67/*"\n[VOICE]\n"*/, LogVoice, 0LL);
+      v23 = System_String__Concat_62386896(v29, (System_String_o *)StringLiteral_66/*"\n[VOICE]\n"*/, LogVoice, 0LL);
       LogSe = SoundLogger__getLogSe((const MethodInfo *)v23);
-      v26 = &StringLiteral_66/*"\n[SE]\n"*/;
+      v26 = &StringLiteral_65/*"\n[SE]\n"*/;
     }
     else
     {
@@ -125,7 +125,7 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
       LogSe = SoundLogger__GetLogBgmDetail(v24, v22);
       v26 = &StringLiteral_45/*"\n\n\n"*/;
     }
-    v31 = System_String__Concat_62610508(v23, (System_String_o *)*v26, LogSe, 0LL);
+    v31 = System_String__Concat_62386896(v23, (System_String_o *)*v26, LogSe, 0LL);
     v32 = this->fields.baseScale * (float)((float)UnityEngine_Screen__get_width(0LL) * 0.00097656);
     if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
@@ -134,36 +134,36 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
     v66.fields.m_Width = v32 * 310.0;
     v66.fields.m_Height = v32 * 825.0;
     UnityEngine_GUI__Box(v66, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-    v33 = (System_String_o *)sub_1BDB920(string___TypeInfo, 5LL);
+    v33 = (System_String_o *)sub_1BC30B0(string___TypeInfo, 5LL);
     if ( v33 )
     {
       v37 = v33;
       if ( !LODWORD(v33[1].klass) )
         goto LABEL_40;
-      v38 = StringLiteral_1747/*"<size="*/;
-      v33[1].monitor = (void *)StringLiteral_1747/*"<size="*/;
-      sub_1BDB81C((CGThumbnailListItem_o *)&v33[1].monitor, v38, v35, v36);
+      v38 = StringLiteral_1713/*"<size="*/;
+      v33[1].monitor = (void *)StringLiteral_1713/*"<size="*/;
+      sub_1BC2FAC((CGThumbnailListItem_o *)&v33[1].monitor, v38, v35, v36);
       v65[0] = v32 * 18.0;
       v33 = System_Single__ToString(18.0, (const MethodInfo *)v65);
       if ( LODWORD(v37[1].klass) <= 1 )
         goto LABEL_40;
       v37[1].fields = (System_String_Fields)v33;
-      sub_1BDB81C((CGThumbnailListItem_o *)&v37[1].fields, (int32_t)v33, v35, v39);
+      sub_1BC2FAC((CGThumbnailListItem_o *)&v37[1].fields, (int32_t)v33, v35, v39);
       if ( LODWORD(v37[1].klass) <= 2 )
         goto LABEL_40;
-      v41 = StringLiteral_1773/*">"*/;
-      v37[2].klass = (System_String_c *)StringLiteral_1773/*">"*/;
-      sub_1BDB81C((CGThumbnailListItem_o *)&v37[2], v41, v35, v40);
+      v41 = StringLiteral_1739/*">"*/;
+      v37[2].klass = (System_String_c *)StringLiteral_1739/*">"*/;
+      sub_1BC2FAC((CGThumbnailListItem_o *)&v37[2], v41, v35, v40);
       if ( LODWORD(v37[1].klass) <= 3 )
         goto LABEL_40;
       v37[2].monitor = v31;
-      sub_1BDB81C((CGThumbnailListItem_o *)&v37[2].monitor, (int32_t)v31, v35, v42);
+      sub_1BC2FAC((CGThumbnailListItem_o *)&v37[2].monitor, (int32_t)v31, v35, v42);
       if ( LODWORD(v37[1].klass) <= 4 )
         goto LABEL_40;
-      v44 = StringLiteral_1551/*"</size>"*/;
-      v37[2].fields = (System_String_Fields)StringLiteral_1551/*"</size>"*/;
-      sub_1BDB81C((CGThumbnailListItem_o *)&v37[2].fields, v44, v35, v43);
-      v45 = System_String__Concat_62612776((System_String_array *)v37, 0LL);
+      v44 = StringLiteral_1517/*"</size>"*/;
+      v37[2].fields = (System_String_Fields)StringLiteral_1517/*"</size>"*/;
+      sub_1BC2FAC((CGThumbnailListItem_o *)&v37[2].fields, v44, v35, v43);
+      v45 = System_String__Concat_62389164((System_String_array *)v37, 0LL);
       v67.fields.m_XMin = 10.0;
       v67.fields.m_YMin = 5.0;
       v67.fields.m_Width = v32 * 1000.0;
@@ -171,44 +171,44 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
       UnityEngine_GUI__Label(v67, v45, 0LL);
       if ( (bgmIndex & 0x80000000) != 0 )
       {
-        v50 = (System_String_o *)StringLiteral_5290/*"Detail: OFF"*/;
+        v50 = (System_String_o *)StringLiteral_5209/*"Detail: OFF"*/;
       }
       else
       {
         v64 = this->fields.bgmIndex;
         v49 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v64, v46, v47, v48);
-        v50 = System_String__Format((System_String_o *)StringLiteral_5291/*"Detail:{0}"*/, v49, 0LL);
+        v50 = System_String__Format((System_String_o *)StringLiteral_5210/*"Detail:{0}"*/, v49, 0LL);
       }
-      v33 = (System_String_o *)sub_1BDB920(string___TypeInfo, 5LL);
+      v33 = (System_String_o *)sub_1BC30B0(string___TypeInfo, 5LL);
       if ( v33 )
       {
         v52 = v33;
         if ( LODWORD(v33[1].klass) )
         {
-          v53 = StringLiteral_1747/*"<size="*/;
-          v33[1].monitor = (void *)StringLiteral_1747/*"<size="*/;
-          sub_1BDB81C((CGThumbnailListItem_o *)&v33[1].monitor, v53, v35, v51);
+          v53 = StringLiteral_1713/*"<size="*/;
+          v33[1].monitor = (void *)StringLiteral_1713/*"<size="*/;
+          sub_1BC2FAC((CGThumbnailListItem_o *)&v33[1].monitor, v53, v35, v51);
           v65[0] = v32 * 18.0;
           v33 = System_Single__ToString(v54, (const MethodInfo *)v65);
           if ( LODWORD(v52[1].klass) > 1 )
           {
             v52[1].fields = (System_String_Fields)v33;
-            sub_1BDB81C((CGThumbnailListItem_o *)&v52[1].fields, (int32_t)v33, v35, v55);
+            sub_1BC2FAC((CGThumbnailListItem_o *)&v52[1].fields, (int32_t)v33, v35, v55);
             if ( LODWORD(v52[1].klass) > 2 )
             {
-              v57 = StringLiteral_1773/*">"*/;
-              v52[2].klass = (System_String_c *)StringLiteral_1773/*">"*/;
-              sub_1BDB81C((CGThumbnailListItem_o *)&v52[2], v57, v35, v56);
+              v57 = StringLiteral_1739/*">"*/;
+              v52[2].klass = (System_String_c *)StringLiteral_1739/*">"*/;
+              sub_1BC2FAC((CGThumbnailListItem_o *)&v52[2], v57, v35, v56);
               if ( LODWORD(v52[1].klass) > 3 )
               {
                 v52[2].monitor = v50;
-                sub_1BDB81C((CGThumbnailListItem_o *)&v52[2].monitor, (int32_t)v50, v35, v58);
+                sub_1BC2FAC((CGThumbnailListItem_o *)&v52[2].monitor, (int32_t)v50, v35, v58);
                 if ( LODWORD(v52[1].klass) > 4 )
                 {
-                  v60 = StringLiteral_1551/*"</size>"*/;
-                  v52[2].fields = (System_String_Fields)StringLiteral_1551/*"</size>"*/;
-                  sub_1BDB81C((CGThumbnailListItem_o *)&v52[2].fields, v60, v35, v59);
-                  v61 = System_String__Concat_62612776((System_String_array *)v52, 0LL);
+                  v60 = StringLiteral_1517/*"</size>"*/;
+                  v52[2].fields = (System_String_Fields)StringLiteral_1517/*"</size>"*/;
+                  sub_1BC2FAC((CGThumbnailListItem_o *)&v52[2].fields, v60, v35, v59);
+                  v61 = System_String__Concat_62389164((System_String_array *)v52, 0LL);
                   if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
                   v68.fields.m_XMin = 10.0;
@@ -235,10 +235,10 @@ void __fastcall SoundInfo__OnGUI(SoundInfo_o *this, const MethodInfo *method)
           }
         }
 LABEL_40:
-        sub_1BDBADC(v33, v34, v35);
+        sub_1BC326C(v33, v34, v35);
       }
     }
-    sub_1BDBAD4(v33, v34);
+    sub_1BC3264(v33, v34);
   }
 }
 

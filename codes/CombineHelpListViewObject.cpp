@@ -1,9 +1,9 @@
 void __fastcall CombineHelpListViewObject___ctor(CombineHelpListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B48819 & 1) == 0 )
+  if ( (byte_4B05DF0 & 1) == 0 )
   {
-    sub_1BDB878(&ListViewObject_TypeInfo, method);
-    byte_4B48819 = 1;
+    sub_1BC3008(&ListViewObject_TypeInfo, method);
+    byte_4B05DF0 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,20 +19,20 @@ void __fastcall CombineHelpListViewObject__Awake(CombineHelpListViewObject_o *th
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B48813 & 1) == 0 )
+  if ( (byte_4B05DEA & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_CombineHelpListViewItemDraw___, method);
-    byte_4B48813 = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_CombineHelpListViewItemDraw___, method);
+    byte_4B05DEA = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BDBAD4(0LL, v3);
+    sub_1BC3264(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_CombineHelpListViewItemDraw___);
+                       (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_CombineHelpListViewItemDraw___);
   this->fields.itemDraw = (struct CombineHelpListViewItemDraw_o *)Component_object;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -45,21 +45,21 @@ UnityEngine_GameObject_o *__fastcall CombineHelpListViewObject__CreateDragObject
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_4B48816 & 1) == 0 )
+  if ( (byte_4B05DED & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_CombineHelpListViewObject___, method);
-    byte_4B48816 = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_CombineHelpListViewObject___, method);
+    byte_4B05DED = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_CombineHelpListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_CombineHelpListViewObject___)) == 0LL) )
   {
-    sub_1BDBAD4(DragObject, v4);
+    sub_1BC3264(DragObject, v4);
   }
-  CombineHelpListViewObject__Init_47262976((CombineHelpListViewObject_o *)DragObject, 2, v6);
+  CombineHelpListViewObject__Init_47319900((CombineHelpListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -71,10 +71,10 @@ CombineHelpListViewItem_o *__fastcall CombineHelpListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4B48815 & 1) == 0 )
+  if ( (byte_4B05DEC & 1) == 0 )
   {
-    sub_1BDB878(&CombineHelpListViewItem_TypeInfo, method);
-    byte_4B48815 = 1;
+    sub_1BC3008(&CombineHelpListViewItem_TypeInfo, method);
+    byte_4B05DEC = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -113,10 +113,10 @@ void __fastcall CombineHelpListViewObject__Init(
   int32_t v22; // w9
   CGThumbnailListItem_c *klass; // x19
 
-  if ( (byte_4B48817 & 1) == 0 )
+  if ( (byte_4B05DEE & 1) == 0 )
   {
-    sub_1BDB878(&CombineHelpListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B48817 = 1;
+    sub_1BC3008(&CombineHelpListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B05DEE = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -144,16 +144,16 @@ void __fastcall CombineHelpListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1BDBAD4(transform, v15);
+    sub_1BC3264(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
   if ( (unsigned int)v11 <= 3 )
   {
-    v22 = dword_BEA300[v11];
-    this->fields.dispMode = *((_DWORD *)&xmmword_BEAF30 + v11);
+    v22 = dword_BDDC30[v11];
+    this->fields.dispMode = *((_DWORD *)&xmmword_BDE870 + v11);
     this->fields.state = v22;
   }
   if ( !state || dispMode != this->fields.dispMode )
@@ -162,7 +162,7 @@ void __fastcall CombineHelpListViewObject__Init(
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1BDB81C(p_callbackFunc, 0, v20, v21);
+    sub_1BC2FAC(p_callbackFunc, 0, v20, v21);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
       klass->_1.element_class,
       *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -171,7 +171,7 @@ void __fastcall CombineHelpListViewObject__Init(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall CombineHelpListViewObject__Init_47262976(
+void __fastcall CombineHelpListViewObject__Init_47319900(
         CombineHelpListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -180,17 +180,17 @@ void __fastcall CombineHelpListViewObject__Init_47262976(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4B3E911 )
+  if ( !byte_4AFBDB1 )
   {
-    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B3E911 = 1;
+    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4AFBDB1 = 1;
   }
   CombineHelpListViewObject__Init(this, initMode, 0LL, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall CombineHelpListViewObject__Init_47263572(
+void __fastcall CombineHelpListViewObject__Init_47320628(
         CombineHelpListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -199,17 +199,17 @@ void __fastcall CombineHelpListViewObject__Init_47263572(
 {
   int v5; // s1
 
-  if ( !byte_4B3E911 )
+  if ( !byte_4AFBDB1 )
   {
-    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B3E911 = 1;
+    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4AFBDB1 = 1;
   }
   CombineHelpListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall CombineHelpListViewObject__Init_47264160(
+void __fastcall CombineHelpListViewObject__Init_47320712(
         CombineHelpListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -218,10 +218,10 @@ void __fastcall CombineHelpListViewObject__Init_47264160(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4B3E911 )
+  if ( !byte_4AFBDB1 )
   {
-    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B3E911 = 1;
+    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4AFBDB1 = 1;
   }
   CombineHelpListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -237,11 +237,11 @@ void __fastcall CombineHelpListViewObject__OnDestroy(CombineHelpListViewObject_o
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B48814 & 1) == 0 )
+  if ( (byte_4B05DEB & 1) == 0 )
   {
-    sub_1BDB878(&NGUITools_TypeInfo, method);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B48814 = 1;
+    sub_1BC3008(&NGUITools_TypeInfo, method);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B05DEB = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -255,7 +255,7 @@ void __fastcall CombineHelpListViewObject__OnDestroy(CombineHelpListViewObject_o
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1BDB81C(p_dragObject, 0, v8, v9);
+    sub_1BC2FAC(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -267,7 +267,7 @@ void __fastcall CombineHelpListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_42764972((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_42800124((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
@@ -279,14 +279,13 @@ void __fastcall CombineHelpListViewObject__SetupDisp(CombineHelpListViewObject_o
   bool v6; // w1
   UnityEngine_Object_o *itemDraw; // x21
   __int64 v8; // x1
-  const MethodInfo *v9; // x3
-  CombineHelpListViewItemDraw_o *v10; // x0
+  CombineHelpListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4B48818 & 1) == 0 )
+  if ( (byte_4B05DEF & 1) == 0 )
   {
-    sub_1BDB878(&CombineHelpListViewItem_TypeInfo, method);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B48818 = 1;
+    sub_1BC3008(&CombineHelpListViewItem_TypeInfo, method);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B05DEF = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -308,10 +307,10 @@ LABEL_8:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v10 = this->fields.itemDraw;
-    if ( !v10 )
-      sub_1BDBAD4(0LL, v8);
-    CombineHelpListViewItemDraw__SetItem(v10, (CombineHelpListViewItem_o *)linkItem, this->fields.dispMode, v9);
+    v9 = this->fields.itemDraw;
+    if ( !v9 )
+      sub_1BC3264(0LL, v8);
+    CombineHelpListViewItemDraw__SetItem(v9, (CombineHelpListViewItem_o *)linkItem, this->fields.dispMode, 0LL);
   }
 }
 
@@ -331,10 +330,10 @@ void __fastcall CombineHelpListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B48811 & 1) == 0 )
+  if ( (byte_4B05DE8 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, value);
-    byte_4B48811 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, value);
+    byte_4B05DE8 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -347,13 +346,13 @@ void __fastcall CombineHelpListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
+    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BDBD94(v8);
+  sub_1BC3524(v8);
   CombineHelpListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -372,10 +371,10 @@ void __fastcall CombineHelpListViewObject__remove_callbackFunc(
   CombineHelpListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B48812 & 1) == 0 )
+  if ( (byte_4B05DE9 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, value);
-    byte_4B48812 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, value);
+    byte_4B05DE9 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -388,12 +387,12 @@ void __fastcall CombineHelpListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
+    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BDBD94(v8);
+  sub_1BC3524(v8);
   CombineHelpListViewObject__Awake(v11, v12);
 }

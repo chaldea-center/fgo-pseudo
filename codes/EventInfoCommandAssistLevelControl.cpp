@@ -22,23 +22,23 @@ void __fastcall EventInfoCommandAssistLevelControl__Initialization(
   EventUiEntity_o *eventUiEntity; // x20
   System_Action_o *v14; // x21
 
-  if ( (byte_4B450F1 & 1) == 0 )
+  if ( (byte_4B02608 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, entity);
-    sub_1BDB878(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v5);
-    sub_1BDB878(&DataManager_TypeInfo, v6);
-    sub_1BDB878(&Method_EventInfoCommandAssistLevelControl__Initialization_b__13_0__, v7);
-    byte_4B450F1 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, entity);
+    sub_1BC3008(&Method_DataManager_GetMaster_EventCommandAssistMaster___, v5);
+    sub_1BC3008(&DataManager_TypeInfo, v6);
+    sub_1BC3008(&Method_EventInfoCommandAssistLevelControl__Initialization_b__13_0__, v7);
+    byte_4B02608 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
   this->fields.eventCommandAssistMst = (struct EventCommandAssistMaster_o *)Master_object;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.eventCommandAssistMst, (int32_t)Master_object, v9, v10);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.eventCommandAssistMst, (int32_t)Master_object, v9, v10);
   this->fields.eventUiEntity = entity;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.eventUiEntity, (int32_t)entity, v11, v12);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.eventUiEntity, (int32_t)entity, v11, v12);
   eventUiEntity = this->fields.eventUiEntity;
-  v14 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  v14 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
   System_Action___ctor(
     v14,
     (Il2CppObject *)this,
@@ -65,32 +65,32 @@ void __fastcall EventInfoCommandAssistLevelControl__OnClickDetailDialogButton(
   Il2CppObject *v13; // x22
   System_Action_o *v14; // x21
 
-  if ( (byte_4B450F4 & 1) == 0 )
+  if ( (byte_4B0260B & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, method);
-    sub_1BDB878(&Method_CommonUI_CloseCommandAssistConfirmDialog__, v3);
-    sub_1BDB878(&Method_EventInfoCommandAssistLevelControl_OnClickDetailDialogButton__, v4);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_4B450F4 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, method);
+    sub_1BC3008(&Method_CommonUI_CloseCommandAssistConfirmDialog__, v3);
+    sub_1BC3008(&Method_EventInfoCommandAssistLevelControl_OnClickDetailDialogButton__, v4);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    byte_4B0260B = 1;
   }
   v6 = Method_EventInfoCommandAssistLevelControl_OnClickDetailDialogButton__;
   if ( (*((_BYTE *)Method_EventInfoCommandAssistLevelControl_OnClickDetailDialogButton__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1BDB890(Method_EventInfoCommandAssistLevelControl_OnClickDetailDialogButton__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v6, v6[4]);
+    v6 = (_QWORD *)sub_1BC3020(Method_EventInfoCommandAssistLevelControl_OnClickDetailDialogButton__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v6, v6[4]);
   OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0LL);
   if ( this->fields.eventUiEntity )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     eventUiEntity = this->fields.eventUiEntity;
     if ( !eventUiEntity
       || (v11 = (CommonUI_o *)Instance,
           eventId = eventUiEntity->fields.eventId,
-          v13 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-          v14 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo),
+          v13 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+          v14 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo),
           System_Action___ctor(v14, v13, Method_CommonUI_CloseCommandAssistConfirmDialog__, 0LL),
           !v11) )
     {
-      sub_1BDBAD4(Instance, v9);
+      sub_1BC3264(Instance, v9);
     }
     CommonUI__OpenCommandAssistConfirmDialog(v11, eventId, v14, 0LL);
   }
@@ -105,7 +105,7 @@ void __fastcall EventInfoCommandAssistLevelControl__OnDestroy(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   EventInfoUIBase__ReleaseEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0LL);
   EventInfoUIBase__ReleaseLocalAtlas((EventInfoUIBase_o *)this, 0LL);
 }
@@ -170,29 +170,29 @@ void __fastcall EventInfoCommandAssistLevelControl__PlayAnim(
   int32_t v55; // w2
   const MethodInfo *v56; // x3
 
-  if ( (byte_4B450F3 & 1) == 0 )
+  if ( (byte_4B0260A & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, *(_QWORD *)&type);
-    sub_1BDB878(&Method_EventInfoCommandAssistLevelControl__PlayAnim_b__16_0__, v6);
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v7);
-    sub_1BDB878(&Method_System_Collections_Generic_List_EventInfoCommandAssistLevelComponent__Add__, v8);
-    sub_1BDB878(&Method_System_Collections_Generic_List_EventInfoCommandAssistLevelComponent___ctor__, v9);
-    sub_1BDB878(&Method_System_Collections_Generic_List_EventInfoCommandAssistLevelComponent__get_Count__, v10);
-    sub_1BDB878(&Method_System_Collections_Generic_List_EventInfoCommandAssistLevelComponent__get_Item__, v11);
-    sub_1BDB878(&System_Collections_Generic_List_EventInfoCommandAssistLevelComponent__TypeInfo, v12);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v13);
-    sub_1BDB878(&Method_EventInfoCommandAssistLevelControl___c__DisplayClass16_0__PlayAnim_b__1__, v14);
-    sub_1BDB878(&Method_EventInfoCommandAssistLevelControl___c__DisplayClass16_0__PlayAnim_b__2__, v15);
-    sub_1BDB878(&Method_EventInfoCommandAssistLevelControl___c__DisplayClass16_0__PlayAnim_b__3__, v16);
-    sub_1BDB878(&EventInfoCommandAssistLevelControl___c__DisplayClass16_0_TypeInfo, v17);
-    byte_4B450F3 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, *(_QWORD *)&type);
+    sub_1BC3008(&Method_EventInfoCommandAssistLevelControl__PlayAnim_b__16_0__, v6);
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, v7);
+    sub_1BC3008(&Method_System_Collections_Generic_List_EventInfoCommandAssistLevelComponent__Add__, v8);
+    sub_1BC3008(&Method_System_Collections_Generic_List_EventInfoCommandAssistLevelComponent___ctor__, v9);
+    sub_1BC3008(&Method_System_Collections_Generic_List_EventInfoCommandAssistLevelComponent__get_Count__, v10);
+    sub_1BC3008(&Method_System_Collections_Generic_List_EventInfoCommandAssistLevelComponent__get_Item__, v11);
+    sub_1BC3008(&System_Collections_Generic_List_EventInfoCommandAssistLevelComponent__TypeInfo, v12);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v13);
+    sub_1BC3008(&Method_EventInfoCommandAssistLevelControl___c__DisplayClass16_0__PlayAnim_b__1__, v14);
+    sub_1BC3008(&Method_EventInfoCommandAssistLevelControl___c__DisplayClass16_0__PlayAnim_b__2__, v15);
+    sub_1BC3008(&Method_EventInfoCommandAssistLevelControl___c__DisplayClass16_0__PlayAnim_b__3__, v16);
+    sub_1BC3008(&EventInfoCommandAssistLevelControl___c__DisplayClass16_0_TypeInfo, v17);
+    byte_4B0260A = 1;
   }
   if ( type == 1 )
   {
-    v18 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_EventInfoCommandAssistLevelComponent__TypeInfo);
+    v18 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_EventInfoCommandAssistLevelComponent__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v18,
-      (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_EventInfoCommandAssistLevelComponent___ctor__);
+      (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_EventInfoCommandAssistLevelComponent___ctor__);
     assistCompnentList = this->fields.assistCompnentList;
     if ( !assistCompnentList )
       goto LABEL_47;
@@ -203,7 +203,7 @@ void __fastcall EventInfoCommandAssistLevelControl__PlayAnim(
       while ( 1 )
       {
         if ( v25 >= max_length )
-          sub_1BDBADC(Item, v20, v21);
+          sub_1BC326C(Item, v20, v21);
         v20 = (Il2CppObject *)assistCompnentList->m_Items[v25];
         if ( !v20 )
           break;
@@ -225,14 +225,14 @@ void __fastcall EventInfoCommandAssistLevelControl__PlayAnim(
             System_Collections_Generic_List_object___AddWithResize(
               v18,
               v20,
-              *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+              *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
           }
           else
           {
             v30 = &items->obj.klass + size;
             v18->fields._size = size + 1;
             v30[4] = (Il2CppClass *)v20;
-            sub_1BDB81C((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v20, v21, v22);
+            sub_1BC2FAC((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v20, v21, v22);
           }
         }
         max_length = assistCompnentList->max_length;
@@ -240,7 +240,7 @@ void __fastcall EventInfoCommandAssistLevelControl__PlayAnim(
           goto LABEL_19;
       }
 LABEL_47:
-      sub_1BDBAD4(Item, v20);
+      sub_1BC3264(Item, v20);
     }
 LABEL_19:
     if ( !v18 )
@@ -248,7 +248,7 @@ LABEL_19:
     v31 = v18->fields._size;
     if ( v31 >= 1 )
     {
-      v32 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+      v32 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
       System_Action___ctor(
         v32,
         (Il2CppObject *)this,
@@ -258,17 +258,17 @@ LABEL_19:
       v34 = -v31;
       while ( 1 )
       {
-        v35 = sub_1BDBAC4(EventInfoCommandAssistLevelControl___c__DisplayClass16_0_TypeInfo);
+        v35 = sub_1BC3254(EventInfoCommandAssistLevelControl___c__DisplayClass16_0_TypeInfo);
         System_Object___ctor((Il2CppObject *)v35, 0LL);
         Item = (EventInfoCommandAssistLevelComponent_o *)System_Collections_Generic_List_object___get_Item(
                                                            v18,
                                                            v33,
-                                                           (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_EventInfoCommandAssistLevelComponent__get_Item__);
+                                                           (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_EventInfoCommandAssistLevelComponent__get_Item__);
         if ( !v35 )
           goto LABEL_47;
         *(_QWORD *)(v35 + 24) = Item;
         v38 = (UnityEngine_Component_o **)(v35 + 24);
-        sub_1BDB81C((CGThumbnailListItem_o *)(v35 + 24), (int32_t)Item, v36, v37);
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v35 + 24), (int32_t)Item, v36, v37);
         if ( v34 + v33 == -1 )
           v41 = v32;
         else
@@ -278,10 +278,10 @@ LABEL_19:
           v42 = callback;
         else
           v42 = 0LL;
-        sub_1BDB81C((CGThumbnailListItem_o *)(v35 + 16), (int32_t)v41, v39, v40);
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v35 + 16), (int32_t)v41, v39, v40);
         *(_QWORD *)(v35 + 32) = v42;
         v43 = (System_Action_o **)(v35 + 32);
-        sub_1BDB81C((CGThumbnailListItem_o *)(v35 + 32), (int32_t)v42, v44, v45);
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v35 + 32), (int32_t)v42, v44, v45);
         v46 = (UnityEngine_Object_o *)EventInfoUIBase__InstantiateFromEventUIAssetData(
                                         (EventInfoUIBase_o *)this,
                                         this->fields.effectPrefabName,
@@ -302,17 +302,17 @@ LABEL_19:
           if ( !v48 )
             goto LABEL_47;
           gameObject = UnityEngine_Component__get_gameObject(*v38, 0LL);
-          GameObjectExtensions__SafeSetParent_35216896((UnityEngine_GameObject_o *)v46, gameObject, 0LL);
+          GameObjectExtensions__SafeSetParent_35217712((UnityEngine_GameObject_o *)v46, gameObject, 0LL);
           if ( !v46 )
             goto LABEL_47;
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)v46,
-                               (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+                               (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
           {
-            v52 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+            v52 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
             System_Action___ctor(
               v52,
               (Il2CppObject *)v35,
@@ -321,21 +321,21 @@ LABEL_19:
             if ( !Component_object )
               goto LABEL_47;
             CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)Component_object, 0, v52, 0LL);
-            v53 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+            v53 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
             System_Action___ctor(
               v53,
               (Il2CppObject *)v35,
               Method_EventInfoCommandAssistLevelControl___c__DisplayClass16_0__PlayAnim_b__2__,
               0LL);
             CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)Component_object, 1, v53, 0LL);
-            v54 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+            v54 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
             System_Action___ctor(
               v54,
               (Il2CppObject *)v35,
               Method_EventInfoCommandAssistLevelControl___c__DisplayClass16_0__PlayAnim_b__3__,
               0LL);
             Component_object[2].monitor = v54;
-            sub_1BDB81C((CGThumbnailListItem_o *)&Component_object[2].monitor, (int32_t)v54, v55, v56);
+            sub_1BC2FAC((CGThumbnailListItem_o *)&Component_object[2].monitor, (int32_t)v54, v55, v56);
             goto LABEL_44;
           }
           Item = (EventInfoCommandAssistLevelComponent_o *)*v38;
@@ -377,7 +377,7 @@ void __fastcall EventInfoCommandAssistLevelControl__Redisplay(
   assistCompnentList = this->fields.assistCompnentList;
   if ( !assistCompnentList )
 LABEL_22:
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   v4 = this;
   v5 = 0LL;
   v6 = 0LL;
@@ -388,7 +388,7 @@ LABEL_22:
     if ( (int)v5 >= max_length )
       break;
     if ( (unsigned int)v5 >= max_length )
-      sub_1BDBADC(this, method, v2);
+      sub_1BC326C(this, method, v2);
     v9 = assistCompnentList->m_Items[v5];
     if ( !v9 )
       goto LABEL_22;
@@ -485,11 +485,11 @@ void __fastcall EventInfoCommandAssistLevelControl__Setup(
   int lookup; // w8
   struct EventInfoCommandAssistLevelComponent_array *v25; // x8
 
-  if ( (byte_4B450F2 & 1) == 0 )
+  if ( (byte_4B02609 & 1) == 0 )
   {
-    sub_1BDB878(&EventInfoCommandAssistLevelComponent_AssistData_TypeInfo, entitys);
-    sub_1BDB878(&TerminalPramsManager_TypeInfo, v5);
-    byte_4B450F2 = 1;
+    sub_1BC3008(&EventInfoCommandAssistLevelComponent_AssistData_TypeInfo, entitys);
+    sub_1BC3008(&TerminalPramsManager_TypeInfo, v5);
+    byte_4B02609 = 1;
   }
   if ( entitys )
   {
@@ -534,7 +534,7 @@ void __fastcall EventInfoCommandAssistLevelControl__Setup(
           (assistCompnentList = this->fields.assistCompnentList) == 0LL) )
     {
 LABEL_42:
-      sub_1BDBAD4(titleSprite, v6);
+      sub_1BC3264(titleSprite, v6);
     }
     v10 = titleSprite;
     v11 = 0LL;
@@ -547,7 +547,7 @@ LABEL_42:
         goto LABEL_42;
       if ( (int)v11 >= SLODWORD(v10->fields._MasterName_k__BackingField) )
         break;
-      v15 = sub_1BDBAC4(EventInfoCommandAssistLevelComponent_AssistData_TypeInfo);
+      v15 = sub_1BC3254(EventInfoCommandAssistLevelComponent_AssistData_TypeInfo);
       System_Object___ctor((Il2CppObject *)v15, 0LL);
       if ( (unsigned int)v11 >= LODWORD(v10->fields._MasterName_k__BackingField) )
         goto LABEL_44;
@@ -562,10 +562,10 @@ LABEL_42:
           eventId = v18->fields.eventId;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          if ( !byte_4B45123 )
+          if ( !byte_4B02633 )
           {
-            sub_1BDB878(&TerminalPramsManager_TypeInfo, v6);
-            byte_4B45123 = 1;
+            sub_1BC3008(&TerminalPramsManager_TypeInfo, v6);
+            byte_4B02633 = 1;
           }
           titleSprite = (EventCommandAssistMaster_o *)TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -621,7 +621,7 @@ LABEL_42:
                 {
                   if ( (unsigned int)v11 >= v25->max_length )
 LABEL_44:
-                    sub_1BDBADC(titleSprite, v6, v16);
+                    sub_1BC326C(titleSprite, v6, v16);
                   titleSprite = (EventCommandAssistMaster_o *)v25->m_Items[v11];
                   if ( titleSprite )
                   {
@@ -655,7 +655,7 @@ void __fastcall EventInfoCommandAssistLevelControl___Initialization_b__13_0(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   EventInfoUIBase__LoadLocalAtlas((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0LL);
 }
 
@@ -667,17 +667,17 @@ void __fastcall EventInfoCommandAssistLevelControl___PlayAnim_b__16_0(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4B450F5 & 1) == 0 )
+  if ( (byte_4B0260C & 1) == 0 )
   {
-    sub_1BDB878(&Method_EventInfoCommandAssistLevelControl__PlayAnim_b__16_0__, method);
-    byte_4B450F5 = 1;
+    sub_1BC3008(&Method_EventInfoCommandAssistLevelControl__PlayAnim_b__16_0__, method);
+    byte_4B0260C = 1;
   }
   if ( !System_String__IsNullOrEmpty(this->fields.seName, 0LL) )
   {
     v3 = Method_EventInfoCommandAssistLevelControl__PlayAnim_b__16_0__;
     if ( (*((_BYTE *)Method_EventInfoCommandAssistLevelControl__PlayAnim_b__16_0__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BDB890(Method_EventInfoCommandAssistLevelControl__PlayAnim_b__16_0__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BC3020(Method_EventInfoCommandAssistLevelControl__PlayAnim_b__16_0__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySe(v4, this->fields.seName, 0, 0LL);
   }
 }
@@ -709,7 +709,7 @@ void __fastcall EventInfoCommandAssistLevelControl___c__DisplayClass16_0___PlayA
 
   assistComponent = this->fields.assistComponent;
   if ( !assistComponent )
-    sub_1BDBAD4(0LL, method);
+    sub_1BC3264(0LL, method);
   assistData = assistComponent->fields.assistData;
   if ( assistData )
     EventInfoCommandAssistLevelComponent__SetupIcon(assistComponent, assistData->fields.lv, v2);
@@ -726,17 +726,17 @@ void __fastcall EventInfoCommandAssistLevelControl___c__DisplayClass16_0___PlayA
   struct EventInfoCommandAssistLevelComponent_AssistData_o *assistData; // x8
   int32_t lv; // w1
 
-  if ( (byte_4B450F6 & 1) == 0 )
+  if ( (byte_4B0260D & 1) == 0 )
   {
-    sub_1BDB878(&TerminalPramsManager_TypeInfo, method);
-    byte_4B450F6 = 1;
+    sub_1BC3008(&TerminalPramsManager_TypeInfo, method);
+    byte_4B0260D = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4B41F49 )
+  if ( !byte_4AFF4CF )
   {
-    sub_1BDB878(&TerminalPramsManager_TypeInfo, method);
-    byte_4B41F49 = 1;
+    sub_1BC3008(&TerminalPramsManager_TypeInfo, method);
+    byte_4AFF4CF = 1;
   }
   v4 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -747,7 +747,7 @@ void __fastcall EventInfoCommandAssistLevelControl___c__DisplayClass16_0___PlayA
   v4->static_fields->_EventUIEffectClearQuestId_k__BackingField = -1;
   assistComponent = this->fields.assistComponent;
   if ( !assistComponent )
-    sub_1BDBAD4(0LL, method);
+    sub_1BC3264(0LL, method);
   assistData = assistComponent->fields.assistData;
   if ( assistData )
   {

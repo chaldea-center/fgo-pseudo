@@ -41,208 +41,208 @@ void __fastcall SceneList___cctor(const MethodInfo *method)
   int32_t v39; // w2
   const MethodInfo *v40; // x3
 
-  if ( (byte_4B439F3 & 1) == 0 )
+  if ( (byte_4B00F7E & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__, v1);
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_SceneList_Type__string___ctor__, v2);
-    sub_1BDB878(&System_Collections_Generic_Dictionary_SceneList_Type__string__TypeInfo, v3);
-    sub_1BDB878(&SceneList_TypeInfo, v4);
-    sub_1BDB878(&StringLiteral_3170/*"BattleScriptScene"*/, v5);
-    sub_1BDB878(&StringLiteral_13141/*"SummonEffectScene"*/, v6);
-    sub_1BDB878(&StringLiteral_10564/*"PartyOrganizationScene"*/, v7);
-    sub_1BDB878(&StringLiteral_4514/*"ClassBoardSelectScene"*/, v8);
-    sub_1BDB878(&StringLiteral_15570/*"WarehouseScene"*/, v9);
-    sub_1BDB878(&StringLiteral_8939/*"MasterFormationScene"*/, v10);
-    sub_1BDB878(&StringLiteral_11206/*"RecommendSupportSelectScene"*/, v11);
-    sub_1BDB878(&StringLiteral_4513/*"ClassBoardScene"*/, v12);
-    sub_1BDB878(&StringLiteral_12701/*"ServantListScene"*/, v13);
-    sub_1BDB878(&StringLiteral_6790/*"FollowerScene"*/, v14);
-    sub_1BDB878(&StringLiteral_13145/*"SummonScene"*/, v15);
-    sub_1BDB878(&StringLiteral_12692/*"ServantEquipListScene"*/, v16);
-    sub_1BDB878(&StringLiteral_7648/*"InitScene"*/, v17);
-    sub_1BDB878(&StringLiteral_6257/*"EventRewardScene"*/, v18);
-    sub_1BDB878(&StringLiteral_8942/*"MasterMissionScene"*/, v19);
-    sub_1BDB878(&StringLiteral_6886/*"FriendScene"*/, v20);
-    sub_1BDB878(&StringLiteral_6842/*"FormationScene"*/, v21);
-    sub_1BDB878(&StringLiteral_12821/*"ShopScene"*/, v22);
-    sub_1BDB878(&StringLiteral_15565/*"WarBoardScene"*/, v23);
-    sub_1BDB878(&StringLiteral_3168/*"BattleScene"*/, v24);
-    sub_1BDB878(&StringLiteral_3159/*"BattleDemoScene"*/, v25);
-    sub_1BDB878(&StringLiteral_5215/*"DebugTestScene"*/, v26);
-    sub_1BDB878(&StringLiteral_13680/*"TerminalScene"*/, v27);
-    sub_1BDB878(&StringLiteral_5976/*"EmptyScene"*/, v28);
-    sub_1BDB878(&StringLiteral_13151/*"SupportSelectScene"*/, v29);
-    sub_1BDB878(&StringLiteral_7156/*"GrandServantListScene"*/, v30);
-    sub_1BDB878(&StringLiteral_4613/*"CombineScene"*/, v31);
-    sub_1BDB878(&StringLiteral_1/*""*/, v32);
-    sub_1BDB878(&StringLiteral_9225/*"MyRoomScene"*/, v33);
-    sub_1BDB878(&StringLiteral_14489/*"TitleScene"*/, v34);
-    sub_1BDB878(&StringLiteral_4569/*"CoinRoomScene"*/, v35);
-    byte_4B439F3 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__, v1);
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_SceneList_Type__string___ctor__, v2);
+    sub_1BC3008(&System_Collections_Generic_Dictionary_SceneList_Type__string__TypeInfo, v3);
+    sub_1BC3008(&SceneList_TypeInfo, v4);
+    sub_1BC3008(&StringLiteral_3104/*"BattleScriptScene"*/, v5);
+    sub_1BC3008(&StringLiteral_13045/*"SummonEffectScene"*/, v6);
+    sub_1BC3008(&StringLiteral_10476/*"PartyOrganizationScene"*/, v7);
+    sub_1BC3008(&StringLiteral_4437/*"ClassBoardSelectScene"*/, v8);
+    sub_1BC3008(&StringLiteral_15451/*"WarehouseScene"*/, v9);
+    sub_1BC3008(&StringLiteral_8865/*"MasterFormationScene"*/, v10);
+    sub_1BC3008(&StringLiteral_11116/*"RecommendSupportSelectScene"*/, v11);
+    sub_1BC3008(&StringLiteral_4436/*"ClassBoardScene"*/, v12);
+    sub_1BC3008(&StringLiteral_12611/*"ServantListScene"*/, v13);
+    sub_1BC3008(&StringLiteral_6723/*"FollowerScene"*/, v14);
+    sub_1BC3008(&StringLiteral_13049/*"SummonScene"*/, v15);
+    sub_1BC3008(&StringLiteral_12602/*"ServantEquipListScene"*/, v16);
+    sub_1BC3008(&StringLiteral_7579/*"InitScene"*/, v17);
+    sub_1BC3008(&StringLiteral_6194/*"EventRewardScene"*/, v18);
+    sub_1BC3008(&StringLiteral_8868/*"MasterMissionScene"*/, v19);
+    sub_1BC3008(&StringLiteral_6818/*"FriendScene"*/, v20);
+    sub_1BC3008(&StringLiteral_6775/*"FormationScene"*/, v21);
+    sub_1BC3008(&StringLiteral_12729/*"ShopScene"*/, v22);
+    sub_1BC3008(&StringLiteral_15446/*"WarBoardScene"*/, v23);
+    sub_1BC3008(&StringLiteral_3102/*"BattleScene"*/, v24);
+    sub_1BC3008(&StringLiteral_3093/*"BattleDemoScene"*/, v25);
+    sub_1BC3008(&StringLiteral_5134/*"DebugTestScene"*/, v26);
+    sub_1BC3008(&StringLiteral_13581/*"TerminalScene"*/, v27);
+    sub_1BC3008(&StringLiteral_5911/*"EmptyScene"*/, v28);
+    sub_1BC3008(&StringLiteral_13055/*"SupportSelectScene"*/, v29);
+    sub_1BC3008(&StringLiteral_7088/*"GrandServantListScene"*/, v30);
+    sub_1BC3008(&StringLiteral_4535/*"CombineScene"*/, v31);
+    sub_1BC3008(&StringLiteral_1/*""*/, v32);
+    sub_1BC3008(&StringLiteral_9146/*"MyRoomScene"*/, v33);
+    sub_1BC3008(&StringLiteral_14388/*"TitleScene"*/, v34);
+    sub_1BC3008(&StringLiteral_4491/*"CoinRoomScene"*/, v35);
+    byte_4B00F7E = 1;
   }
-  v36 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BDBAC4(System_Collections_Generic_Dictionary_SceneList_Type__string__TypeInfo);
+  v36 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BC3254(System_Collections_Generic_Dictionary_SceneList_Type__string__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
     v36,
-    (const MethodInfo_336C63C *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string___ctor__);
+    (const MethodInfo_33393F4 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string___ctor__);
   if ( !v36 )
-    sub_1BDBAD4(v37, v38);
+    sub_1BC3264(v37, v38);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     -1,
     (Il2CppObject *)StringLiteral_1/*""*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     0,
-    (Il2CppObject *)StringLiteral_7648/*"InitScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_7579/*"InitScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     4,
-    (Il2CppObject *)StringLiteral_5215/*"DebugTestScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_5134/*"DebugTestScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     9,
-    (Il2CppObject *)StringLiteral_14489/*"TitleScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_14388/*"TitleScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     10,
-    (Il2CppObject *)StringLiteral_3168/*"BattleScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_3102/*"BattleScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     20,
-    (Il2CppObject *)StringLiteral_13145/*"SummonScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_13049/*"SummonScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     22,
-    (Il2CppObject *)StringLiteral_12821/*"ShopScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_12729/*"ShopScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     23,
-    (Il2CppObject *)StringLiteral_6886/*"FriendScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_6818/*"FriendScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     30,
-    (Il2CppObject *)StringLiteral_9225/*"MyRoomScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_9146/*"MyRoomScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     32,
-    (Il2CppObject *)StringLiteral_4613/*"CombineScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_4535/*"CombineScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     34,
-    (Il2CppObject *)StringLiteral_13680/*"TerminalScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_13581/*"TerminalScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     35,
-    (Il2CppObject *)StringLiteral_6790/*"FollowerScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_6723/*"FollowerScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     38,
-    (Il2CppObject *)StringLiteral_3170/*"BattleScriptScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_3104/*"BattleScriptScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     39,
-    (Il2CppObject *)StringLiteral_6842/*"FormationScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_6775/*"FormationScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     40,
-    (Il2CppObject *)StringLiteral_10564/*"PartyOrganizationScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_10476/*"PartyOrganizationScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     41,
-    (Il2CppObject *)StringLiteral_12701/*"ServantListScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_12611/*"ServantListScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     42,
-    (Il2CppObject *)StringLiteral_12692/*"ServantEquipListScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_12602/*"ServantEquipListScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     44,
-    (Il2CppObject *)StringLiteral_8939/*"MasterFormationScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_8865/*"MasterFormationScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     50,
-    (Il2CppObject *)StringLiteral_3159/*"BattleDemoScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_3093/*"BattleDemoScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     60,
-    (Il2CppObject *)StringLiteral_13151/*"SupportSelectScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_13055/*"SupportSelectScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     61,
-    (Il2CppObject *)StringLiteral_11206/*"RecommendSupportSelectScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_11116/*"RecommendSupportSelectScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     71,
-    (Il2CppObject *)StringLiteral_15570/*"WarehouseScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_15451/*"WarehouseScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     72,
-    (Il2CppObject *)StringLiteral_6257/*"EventRewardScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_6194/*"EventRewardScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     1000,
-    (Il2CppObject *)StringLiteral_5976/*"EmptyScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_5911/*"EmptyScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     1001,
-    (Il2CppObject *)StringLiteral_13141/*"SummonEffectScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_13045/*"SummonEffectScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     80,
-    (Il2CppObject *)StringLiteral_15565/*"WarBoardScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_15446/*"WarBoardScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     90,
-    (Il2CppObject *)StringLiteral_4569/*"CoinRoomScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_4491/*"CoinRoomScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     91,
-    (Il2CppObject *)StringLiteral_4513/*"ClassBoardScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_4436/*"ClassBoardScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     92,
-    (Il2CppObject *)StringLiteral_4514/*"ClassBoardSelectScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_4437/*"ClassBoardSelectScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     100,
-    (Il2CppObject *)StringLiteral_8942/*"MasterMissionScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_8868/*"MasterMissionScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v36,
     43,
-    (Il2CppObject *)StringLiteral_7156/*"GrandServantListScene"*/,
-    (const MethodInfo_336D010 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
+    (Il2CppObject *)StringLiteral_7088/*"GrandServantListScene"*/,
+    (const MethodInfo_3339DC8 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__Add__);
   SceneList_TypeInfo->static_fields->nameList = (struct System_Collections_Generic_Dictionary_SceneList_Type__string__o *)v36;
-  sub_1BDB81C((CGThumbnailListItem_o *)SceneList_TypeInfo->static_fields, (int32_t)v36, v39, v40);
+  sub_1BC2FAC((CGThumbnailListItem_o *)SceneList_TypeInfo->static_fields, (int32_t)v36, v39, v40);
 }
 
 
@@ -260,12 +260,12 @@ System_String_o *__fastcall SceneList__getSceneName(int32_t type, const MethodIn
   System_Collections_Generic_Dictionary_TKey__TValue__o *nameList; // x0
   SceneList_c *v7; // x0
 
-  if ( (byte_4B439F1 & 1) == 0 )
+  if ( (byte_4B00F7C & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_SceneList_Type__string__ContainsKey__, method);
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_SceneList_Type__string__get_Item__, v3);
-    sub_1BDB878(&SceneList_TypeInfo, v4);
-    byte_4B439F1 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_SceneList_Type__string__ContainsKey__, method);
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_SceneList_Type__string__get_Item__, v3);
+    sub_1BC3008(&SceneList_TypeInfo, v4);
+    byte_4B00F7C = 1;
   }
   v5 = SceneList_TypeInfo;
   if ( !SceneList_TypeInfo->_2.cctor_finished )
@@ -279,7 +279,7 @@ System_String_o *__fastcall SceneList__getSceneName(int32_t type, const MethodIn
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          nameList,
          type,
-         (const MethodInfo_336D204 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__ContainsKey__) )
+         (const MethodInfo_3339FBC *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__ContainsKey__) )
   {
     v7 = SceneList_TypeInfo;
     if ( !SceneList_TypeInfo->_2.cctor_finished )
@@ -292,9 +292,9 @@ System_String_o *__fastcall SceneList__getSceneName(int32_t type, const MethodIn
       return (System_String_o *)System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                                   nameList,
                                   type,
-                                  (const MethodInfo_336CF70 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__get_Item__);
+                                  (const MethodInfo_3339D28 *)Method_System_Collections_Generic_Dictionary_SceneList_Type__string__get_Item__);
 LABEL_12:
-    sub_1BDBAD4(nameList, method);
+    sub_1BC3264(nameList, method);
   }
   return 0LL;
 }
@@ -316,22 +316,22 @@ int32_t __fastcall SceneList__getSceneType(System_String_o *name, const MethodIn
   System_Collections_Generic_IEnumerable_TSource__o *nameList; // x19
   System_Func_T__TResult__o *v15; // x21
 
-  if ( (byte_4B439F2 & 1) == 0 )
+  if ( (byte_4B00F7D & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Linq_Enumerable_FirstOrDefault_KeyValuePair_SceneList_Type__string____, method);
-    sub_1BDB878(&System_Func_KeyValuePair_SceneList_Type__string___bool__TypeInfo, v3);
-    sub_1BDB878(&Method_System_Collections_Generic_KeyValuePair_SceneList_Type__string__get_Key__, v4);
-    sub_1BDB878(&SceneList_TypeInfo, v5);
-    sub_1BDB878(&Method_SceneList___c__DisplayClass3_0__getSceneType_b__0__, v6);
-    sub_1BDB878(&SceneList___c__DisplayClass3_0_TypeInfo, v7);
-    byte_4B439F2 = 1;
+    sub_1BC3008(&Method_System_Linq_Enumerable_FirstOrDefault_KeyValuePair_SceneList_Type__string____, method);
+    sub_1BC3008(&System_Func_KeyValuePair_SceneList_Type__string___bool__TypeInfo, v3);
+    sub_1BC3008(&Method_System_Collections_Generic_KeyValuePair_SceneList_Type__string__get_Key__, v4);
+    sub_1BC3008(&SceneList_TypeInfo, v5);
+    sub_1BC3008(&Method_SceneList___c__DisplayClass3_0__getSceneType_b__0__, v6);
+    sub_1BC3008(&SceneList___c__DisplayClass3_0_TypeInfo, v7);
+    byte_4B00F7D = 1;
   }
-  v8 = sub_1BDBAC4(SceneList___c__DisplayClass3_0_TypeInfo);
+  v8 = sub_1BC3254(SceneList___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1BDBAD4(v9, v10);
+    sub_1BC3264(v9, v10);
   *(_QWORD *)(v8 + 16) = name;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v8 + 16), (int32_t)name, v11, v12);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v8 + 16), (int32_t)name, v11, v12);
   v13 = SceneList_TypeInfo;
   if ( !SceneList_TypeInfo->_2.cctor_finished )
   {
@@ -339,7 +339,7 @@ int32_t __fastcall SceneList__getSceneType(System_String_o *name, const MethodIn
     v13 = SceneList_TypeInfo;
   }
   nameList = (System_Collections_Generic_IEnumerable_TSource__o *)v13->static_fields->nameList;
-  v15 = (System_Func_T__TResult__o *)sub_1BDBAC4(System_Func_KeyValuePair_SceneList_Type__string___bool__TypeInfo);
+  v15 = (System_Func_T__TResult__o *)sub_1BC3254(System_Func_KeyValuePair_SceneList_Type__string___bool__TypeInfo);
   System_Func_KeyValuePair_Int32Enum__object___bool____ctor(
     v15,
     (Il2CppObject *)v8,
@@ -348,7 +348,7 @@ int32_t __fastcall SceneList__getSceneType(System_String_o *name, const MethodIn
   return System_Linq_Enumerable__FirstOrDefault_KeyValuePair_Int32Enum__object__(
            nameList,
            (System_Func_TSource__bool__o *)v15,
-           (const MethodInfo_3059270 *)Method_System_Linq_Enumerable_FirstOrDefault_KeyValuePair_SceneList_Type__string____).fields.key;
+           (const MethodInfo_302726C *)Method_System_Linq_Enumerable_FirstOrDefault_KeyValuePair_SceneList_Type__string____).fields.key;
 }
 
 
@@ -366,12 +366,12 @@ bool __fastcall SceneList___c__DisplayClass3_0___getSceneType_b__0(
   System_String_o *value; // x19
 
   value = c.fields.value;
-  if ( (byte_4B439F4 & 1) == 0 )
+  if ( (byte_4B00F7F & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_Generic_KeyValuePair_SceneList_Type__string__get_Value__,
       *(_QWORD *)&c.fields.key);
-    byte_4B439F4 = 1;
+    byte_4B00F7F = 1;
   }
   return System_String__op_Equality(value, this->fields.name, 0LL);
 }

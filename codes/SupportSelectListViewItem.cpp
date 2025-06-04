@@ -10,11 +10,11 @@ void __fastcall SupportSelectListViewItem___ctor(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  ListViewItem___ctor_42734232((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42769384((ListViewItem_o *)this, index, 0LL);
   this->fields.supportServantData = supportServantData;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.supportServantData, (int32_t)supportServantData, v8, v9);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.supportServantData, (int32_t)supportServantData, v8, v9);
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.eventFriendPoints, (int32_t)friendPointCampaigns, v10, v11);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.eventFriendPoints, (int32_t)friendPointCampaigns, v10, v11);
 }
 
 
@@ -26,7 +26,7 @@ void __fastcall SupportSelectListViewItem__ResetEventCampaign(
   const MethodInfo *v3; // x3
 
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_1BDB81C(
+  sub_1BC2FAC(
     (CGThumbnailListItem_o *)&this->fields.eventFriendPoints,
     (int32_t)friendPointCampaigns,
     (int32_t)method,
@@ -42,7 +42,7 @@ System_String_o *__fastcall SupportSelectListViewItem__get_DeckName(
 
   supportServantData = this->fields.supportServantData;
   if ( !supportServantData )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   return supportServantData->fields._deckName_k__BackingField;
 }
 
@@ -63,7 +63,7 @@ void __fastcall SupportSelectListViewItem__set_listObj(
   const MethodInfo *v3; // x3
 
   this->fields._listObj_k__BackingField = value;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._listObj_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._listObj_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -79,9 +79,9 @@ void __fastcall SupportSelectListViewItem__setuplistObj(
 
   this->fields._listObj_k__BackingField = obj;
   p_listObj_k__BackingField = &this->fields._listObj_k__BackingField;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._listObj_k__BackingField, (int32_t)obj, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._listObj_k__BackingField, (int32_t)obj, (int32_t)method, v3);
   if ( !*p_listObj_k__BackingField )
-    sub_1BDBAD4(0LL, v6);
+    sub_1BC3264(0LL, v6);
   SupportSelectListViewObject__Init(
     *p_listObj_k__BackingField,
     this->fields.supportServantData,

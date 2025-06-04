@@ -27,52 +27,52 @@ void __fastcall TitleInfoEventSideItemComponent___cctor(const MethodInfo *method
   int32_t v30; // w2
   const MethodInfo *v31; // x3
 
-  if ( (byte_4B43435 & 1) == 0 )
+  if ( (byte_4B009BE & 1) == 0 )
   {
-    sub_1BDB878(&string___TypeInfo, v1);
-    sub_1BDB878(&TitleInfoEventSideItemComponent_TypeInfo, v2);
-    sub_1BDB878(&StringLiteral_24136/*"time_status_side_04"*/, v3);
-    sub_1BDB878(&StringLiteral_24133/*"time_status_side_01"*/, v4);
-    sub_1BDB878(&StringLiteral_24135/*"time_status_side_03"*/, v5);
-    sub_1BDB878(&StringLiteral_22750/*"point_status_side"*/, v6);
-    sub_1BDB878(&StringLiteral_24134/*"time_status_side_02"*/, v7);
-    byte_4B43435 = 1;
+    sub_1BC3008(&string___TypeInfo, v1);
+    sub_1BC3008(&TitleInfoEventSideItemComponent_TypeInfo, v2);
+    sub_1BC3008(&StringLiteral_23848/*"time_status_side_04"*/, v3);
+    sub_1BC3008(&StringLiteral_23845/*"time_status_side_01"*/, v4);
+    sub_1BC3008(&StringLiteral_23847/*"time_status_side_03"*/, v5);
+    sub_1BC3008(&StringLiteral_22505/*"point_status_side"*/, v6);
+    sub_1BC3008(&StringLiteral_23846/*"time_status_side_02"*/, v7);
+    byte_4B009BE = 1;
   }
   TitleInfoEventSideItemComponent_TypeInfo->static_fields->ADD_LAST_LABEL_POS = (struct UnityEngine_Vector2_o)0x3F800000BF800000LL;
   __asm { FMOV            V0.2S, #1.0 }
   TitleInfoEventSideItemComponent_TypeInfo->static_fields->LAST_LABEL_OUTLINE = _D0;
-  v13 = sub_1BDB920(string___TypeInfo, 4LL);
+  v13 = sub_1BC30B0(string___TypeInfo, 4LL);
   if ( !v13 )
-    sub_1BDBAD4(0LL, v14);
+    sub_1BC3264(0LL, v14);
   v17 = v13;
   if ( !*(_DWORD *)(v13 + 24) )
     goto LABEL_9;
-  v18 = StringLiteral_24133/*"time_status_side_01"*/;
-  *(_QWORD *)(v13 + 32) = StringLiteral_24133/*"time_status_side_01"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v13 + 32), v18, v15, v16);
+  v18 = StringLiteral_23845/*"time_status_side_01"*/;
+  *(_QWORD *)(v13 + 32) = StringLiteral_23845/*"time_status_side_01"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v13 + 32), v18, v15, v16);
   if ( *(_DWORD *)(v17 + 24) <= 1u
-    || (v20 = StringLiteral_24135/*"time_status_side_03"*/,
-        *(_QWORD *)(v17 + 40) = StringLiteral_24135/*"time_status_side_03"*/,
-        sub_1BDB81C((CGThumbnailListItem_o *)(v17 + 40), v20, v15, v19),
+    || (v20 = StringLiteral_23847/*"time_status_side_03"*/,
+        *(_QWORD *)(v17 + 40) = StringLiteral_23847/*"time_status_side_03"*/,
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v17 + 40), v20, v15, v19),
         *(_DWORD *)(v17 + 24) <= 2u)
-    || (v22 = StringLiteral_24134/*"time_status_side_02"*/,
-        *(_QWORD *)(v17 + 48) = StringLiteral_24134/*"time_status_side_02"*/,
-        sub_1BDB81C((CGThumbnailListItem_o *)(v17 + 48), v22, v15, v21),
+    || (v22 = StringLiteral_23846/*"time_status_side_02"*/,
+        *(_QWORD *)(v17 + 48) = StringLiteral_23846/*"time_status_side_02"*/,
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v17 + 48), v22, v15, v21),
         *(_DWORD *)(v17 + 24) <= 3u) )
   {
 LABEL_9:
-    sub_1BDBADC(v13, v14, v15);
+    sub_1BC326C(v13, v14, v15);
   }
-  v24 = StringLiteral_24136/*"time_status_side_04"*/;
-  *(_QWORD *)(v17 + 56) = StringLiteral_24136/*"time_status_side_04"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v17 + 56), v24, v15, v23);
+  v24 = StringLiteral_23848/*"time_status_side_04"*/;
+  *(_QWORD *)(v17 + 56) = StringLiteral_23848/*"time_status_side_04"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v17 + 56), v24, v15, v23);
   static_fields = TitleInfoEventSideItemComponent_TypeInfo->static_fields;
   static_fields->TIME_STATUS_SPRITE_NAMES = (struct System_String_array *)v17;
-  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->TIME_STATUS_SPRITE_NAMES, v17, v26, v27);
-  v28 = StringLiteral_22750/*"point_status_side"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->TIME_STATUS_SPRITE_NAMES, v17, v26, v27);
+  v28 = StringLiteral_22505/*"point_status_side"*/;
   v29 = TitleInfoEventSideItemComponent_TypeInfo->static_fields;
-  v29->POINT_STATUS_STRING = (struct System_String_o *)StringLiteral_22750/*"point_status_side"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v29->POINT_STATUS_STRING, v28, v30, v31);
+  v29->POINT_STATUS_STRING = (struct System_String_o *)StringLiteral_22505/*"point_status_side"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v29->POINT_STATUS_STRING, v28, v30, v31);
 }
 
 
@@ -101,25 +101,25 @@ SideItemComponent_o *__fastcall TitleInfoEventSideItemComponent__CreateSideItem(
   UnityEngine_GameObject_o *v13; // x0
   UISprite_o *monitor; // x21
 
-  if ( (byte_4B43434 & 1) == 0 )
+  if ( (byte_4B009BD & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, spriteName);
-    sub_1BDB878(&Method_UnityEngine_Object_Instantiate_SideItemComponent___, v5);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v6);
-    byte_4B43434 = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, spriteName);
+    sub_1BC3008(&Method_UnityEngine_Object_Instantiate_SideItemComponent___, v5);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v6);
+    byte_4B009BD = 1;
   }
   clone = (Il2CppObject *)this->fields.clone;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__Instantiate_object_(
          clone,
-         (const MethodInfo_30BDAA4 *)Method_UnityEngine_Object_Instantiate_SideItemComponent___);
+         (const MethodInfo_308AE24 *)Method_UnityEngine_Object_Instantiate_SideItemComponent___);
   if ( !v8 )
     goto LABEL_10;
   v10 = (UnityEngine_Component_o *)v8;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v8, 0LL);
   v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  GameObjectExtensions__SafeSetParent_35216896(gameObject, v12, 0LL);
+  GameObjectExtensions__SafeSetParent_35217712(gameObject, v12, 0LL);
   v13 = UnityEngine_Component__get_gameObject(v10, 0LL);
   GameObjectExtensions__ResetLocalScale(v13, 0LL);
   monitor = (UISprite_o *)v10[1].monitor;
@@ -129,7 +129,7 @@ SideItemComponent_o *__fastcall TitleInfoEventSideItemComponent__CreateSideItem(
   v8 = (Il2CppObject *)v10[1].monitor;
   if ( !v8 )
 LABEL_10:
-    sub_1BDBAD4(v8, v9);
+    sub_1BC3264(v8, v9);
   ((void (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))v8->klass->vtable[33].method)(
     v8,
     v8->klass->vtable[34].methodPtr);
@@ -164,20 +164,20 @@ void __fastcall TitleInfoEventSideItemComponent__Setup(
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4B43431 & 1) == 0 )
+  if ( (byte_4B009BA & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_EventPointBuffMaster___, *(_QWORD *)&eventId);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4B43431 = 1;
+    sub_1BC3008(&Method_DataManager_GetMasterData_EventPointBuffMaster___, *(_QWORD *)&eventId);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4B009BA = 1;
   }
-  Instance = (EventPointBuffEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (EventPointBuffEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (EventPointBuffEntity_array *)DataManager__GetMasterData_object_(
                                                    (DataManager_o *)Instance,
-                                                   (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventPointBuffMaster___)) == 0LL
+                                                   (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_EventPointBuffMaster___)) == 0LL
     || (Instance = EventPointBuffMaster__getEntityList((EventPointBuffMaster_o *)Instance, eventId, 0LL)) == 0LL )
   {
-    sub_1BDBAD4(Instance, v7);
+    sub_1BC3264(Instance, v7);
   }
   if ( *(_QWORD *)&Instance->max_length )
     TitleInfoEventSideItemComponent__SetupBuffRateUI(this, eventId, Instance, v8);
@@ -268,21 +268,21 @@ void __fastcall TitleInfoEventSideItemComponent__SetupBuffRateUI(
   __int64 v79; // x0
   __int64 v80; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4B43433 & 1) == 0 )
+  if ( (byte_4B009BC & 1) == 0 )
   {
-    sub_1BDB878(&int_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BDB878(&long_TypeInfo, v7);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v8);
-    sub_1BDB878(&float_TypeInfo, v9);
-    sub_1BDB878(&string___TypeInfo, v10);
-    sub_1BDB878(&TitleInfoEventSideItemComponent_TypeInfo, v11);
-    sub_1BDB878(&StringLiteral_818/*"+{0:0.0}%"*/, v12);
-    sub_1BDB878(&StringLiteral_14785/*"UNIT_REST_NONE"*/, v13);
-    sub_1BDB878(&StringLiteral_25126/*"{0:#,0}"*/, v14);
-    sub_1BDB878(&StringLiteral_819/*"+{0}%"*/, v15);
-    sub_1BDB878(&StringLiteral_16602/*"_{0:00}"*/, v16);
-    sub_1BDB878(&StringLiteral_1142/*"0"*/, v17);
-    byte_4B43433 = 1;
+    sub_1BC3008(&int_TypeInfo, *(_QWORD *)&eventId);
+    sub_1BC3008(&long_TypeInfo, v7);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v8);
+    sub_1BC3008(&float_TypeInfo, v9);
+    sub_1BC3008(&string___TypeInfo, v10);
+    sub_1BC3008(&TitleInfoEventSideItemComponent_TypeInfo, v11);
+    sub_1BC3008(&StringLiteral_804/*"+{0:0.0}%"*/, v12);
+    sub_1BC3008(&StringLiteral_14684/*"UNIT_REST_NONE"*/, v13);
+    sub_1BC3008(&StringLiteral_24811/*"{0:#,0}"*/, v14);
+    sub_1BC3008(&StringLiteral_805/*"+{0}%"*/, v15);
+    sub_1BC3008(&StringLiteral_16471/*"_{0:00}"*/, v16);
+    sub_1BC3008(&StringLiteral_1113/*"0"*/, v17);
+    byte_4B009BC = 1;
   }
   EventPointNoGroup = UserEventPointMaster__GetEventPointNoGroup(eventId, 0LL);
   if ( !entitys )
@@ -322,7 +322,7 @@ LABEL_13:
   v28 = value / 10.0;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_14785/*"UNIT_REST_NONE"*/, 0LL);
+  v29 = LocalizationManager__Get((System_String_o *)StringLiteral_14684/*"UNIT_REST_NONE"*/, 0LL);
   v33 = (float)(int)v28;
   if ( v28 == INFINITY )
     v33 = -2147500000.0;
@@ -331,44 +331,44 @@ LABEL_13:
   if ( v28 == v33 )
   {
     v35 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v80, v30, v31, v32);
-    v36 = (System_String_o *)StringLiteral_819/*"+{0}%"*/;
+    v36 = (System_String_o *)StringLiteral_805/*"+{0}%"*/;
   }
   else
   {
     v35 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v80, v30, v31, v32);
-    v36 = (System_String_o *)StringLiteral_818/*"+{0:0.0}%"*/;
+    v36 = (System_String_o *)StringLiteral_804/*"+{0:0.0}%"*/;
   }
   v40 = System_String__Format(v36, v35, 0LL);
   if ( (_DWORD)v27 )
   {
     v80 = v27;
     v41 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v80, v37, v38, v39);
-    v34 = System_String__Format((System_String_o *)StringLiteral_25126/*"{0:#,0}"*/, v41, 0LL);
+    v34 = System_String__Format((System_String_o *)StringLiteral_24811/*"{0:#,0}"*/, v41, 0LL);
   }
-  EventPointNoGroup = sub_1BDB920(string___TypeInfo, 3LL);
+  EventPointNoGroup = sub_1BC30B0(string___TypeInfo, 3LL);
   if ( !EventPointNoGroup )
     goto LABEL_73;
   v43 = EventPointNoGroup;
   if ( !*(_DWORD *)(EventPointNoGroup + 24)
     || (*(_QWORD *)(EventPointNoGroup + 32) = v40,
-        sub_1BDB81C((CGThumbnailListItem_o *)(EventPointNoGroup + 32), (int32_t)v40, v20, v42),
+        sub_1BC2FAC((CGThumbnailListItem_o *)(EventPointNoGroup + 32), (int32_t)v40, v20, v42),
         v80 = v22,
         v47 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v80, v44, v45, v46),
-        EventPointNoGroup = (__int64)System_String__Format((System_String_o *)StringLiteral_25126/*"{0:#,0}"*/, v47, 0LL),
+        EventPointNoGroup = (__int64)System_String__Format((System_String_o *)StringLiteral_24811/*"{0:#,0}"*/, v47, 0LL),
         *(_DWORD *)(v43 + 24) <= 1u)
     || (*(_QWORD *)(v43 + 40) = EventPointNoGroup,
-        sub_1BDB81C((CGThumbnailListItem_o *)(v43 + 40), EventPointNoGroup, v20, v48),
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v43 + 40), EventPointNoGroup, v20, v48),
         *(_DWORD *)(v43 + 24) <= 2u) )
   {
 LABEL_74:
-    sub_1BDBADC(EventPointNoGroup, v19, v20);
+    sub_1BC326C(EventPointNoGroup, v19, v20);
   }
   *(_QWORD *)(v43 + 48) = v34;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v43 + 48), (int32_t)v34, v20, v49);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v43 + 48), (int32_t)v34, v20, v49);
   sideItems = this->fields.sideItems;
   if ( !sideItems )
 LABEL_73:
-    sub_1BDBAD4(EventPointNoGroup, v19);
+    sub_1BC3264(EventPointNoGroup, v19);
   v54 = *(_QWORD *)&sideItems->max_length;
   if ( (int)v54 >= 1 )
   {
@@ -386,8 +386,8 @@ LABEL_73:
       POINT_STATUS_STRING = v59->static_fields->POINT_STATUS_STRING;
       LODWORD(v80) = v56 + 1;
       v61 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v80, v50, v51, v52);
-      v62 = System_String__Format((System_String_o *)StringLiteral_16602/*"_{0:00}"*/, v61, 0LL);
-      v63 = System_String__Concat_62572260(POINT_STATUS_STRING, v62, 0LL);
+      v62 = System_String__Format((System_String_o *)StringLiteral_16471/*"_{0:00}"*/, v61, 0LL);
+      v63 = System_String__Concat_62348648(POINT_STATUS_STRING, v62, 0LL);
       EventPointNoGroup = (__int64)TitleInfoEventSideItemComponent__CreateSideItem(this, v63, v64);
       if ( !EventPointNoGroup )
         break;
@@ -400,7 +400,7 @@ LABEL_73:
         break;
       if ( v56 >= itemPositions->max_length )
         goto LABEL_74;
-      GameObjectExtensions__SetLocalPosition_35211000(
+      GameObjectExtensions__SetLocalPosition_35211816(
         (UnityEngine_GameObject_o *)EventPointNoGroup,
         *(UnityEngine_Vector2_o *)((char *)itemPositions + i - 4),
         0LL);
@@ -415,7 +415,7 @@ LABEL_73:
         break;
       if ( v56 >= spritePositions->max_length )
         goto LABEL_74;
-      GameObjectExtensions__SetLocalPosition_35211000(
+      GameObjectExtensions__SetLocalPosition_35211816(
         (UnityEngine_GameObject_o *)EventPointNoGroup,
         *(UnityEngine_Vector2_o *)((char *)spritePositions + i - 4),
         0LL);
@@ -454,7 +454,7 @@ LABEL_73:
         break;
       if ( v56 >= labelPositions->max_length )
         goto LABEL_74;
-      GameObjectExtensions__SetLocalPosition_35211000(
+      GameObjectExtensions__SetLocalPosition_35211816(
         (UnityEngine_GameObject_o *)EventPointNoGroup,
         *(UnityEngine_Vector2_o *)((char *)labelPositions + i - 4),
         0LL);
@@ -530,16 +530,16 @@ LABEL_73:
       v77 = this->fields.sideItems;
       if ( !v77 )
         goto LABEL_73;
-      EventPointNoGroup = sub_1BDB9B4(v65, v77->obj.klass->_1.element_class);
+      EventPointNoGroup = sub_1BC3144(v65, v77->obj.klass->_1.element_class);
       if ( !EventPointNoGroup )
       {
-        v79 = sub_1BDBAF8(0LL);
-        sub_1BDB9A0(v79, 0LL);
+        v79 = sub_1BC3288(0LL);
+        sub_1BC3130(v79, 0LL);
       }
       if ( v56 >= v77->max_length )
         goto LABEL_74;
       *(_QWORD *)((char *)v77 + i - 4) = v65;
-      sub_1BDB81C((CGThumbnailListItem_o *)((char *)v77 + i - 4), v65, v20, v78);
+      sub_1BC2FAC((CGThumbnailListItem_o *)((char *)v77 + i - 4), v65, v20, v78);
       v55 += 4LL;
       ++v56;
       if ( v57 == v55 )
@@ -588,20 +588,20 @@ void __fastcall TitleInfoEventSideItemComponent__SetupTotalPointUI(
   __int64 v33; // x0
   int64_t v35; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4B43432 & 1) == 0 )
+  if ( (byte_4B009BB & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_EventPointGroupMaster___, *(_QWORD *)&eventId);
-    sub_1BDB878(&long_TypeInfo, v4);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    sub_1BDB878(&TitleInfoEventSideItemComponent_TypeInfo, v6);
-    sub_1BDB878(&StringLiteral_25126/*"{0:#,0}"*/, v7);
-    byte_4B43432 = 1;
+    sub_1BC3008(&Method_DataManager_GetMasterData_EventPointGroupMaster___, *(_QWORD *)&eventId);
+    sub_1BC3008(&long_TypeInfo, v4);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    sub_1BC3008(&TitleInfoEventSideItemComponent_TypeInfo, v6);
+    sub_1BC3008(&StringLiteral_24811/*"{0:#,0}"*/, v7);
+    byte_4B009BB = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_303395C *)Method_DataManager_GetMasterData_EventPointGroupMaster___)) == 0LL
+                                      (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_EventPointGroupMaster___)) == 0LL
     || (Instance = (DataManager_o *)EventPointGroupMaster__getEntityList(
                                       (EventPointGroupMaster_o *)Instance,
                                       eventId,
@@ -609,7 +609,7 @@ void __fastcall TitleInfoEventSideItemComponent__SetupTotalPointUI(
         (sideItems = this->fields.sideItems) == 0LL) )
   {
 LABEL_31:
-    sub_1BDBAD4(Instance, v9);
+    sub_1BC3264(Instance, v9);
   }
   v12 = Instance;
   v13 = 0LL;
@@ -654,7 +654,7 @@ LABEL_31:
       {
         v20 = Instance;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0LL);
-        GameObjectExtensions__SetLocalPosition_35211208(
+        GameObjectExtensions__SetLocalPosition_35212024(
           gameObject,
           0.0,
           (float)(int)v13 * (float)-this->fields.margin,
@@ -673,7 +673,7 @@ LABEL_31:
             j_il2cpp_runtime_class_init_0(TitleInfoEventSideItemComponent_TypeInfo);
             v26 = TitleInfoEventSideItemComponent_TypeInfo;
           }
-          GameObjectExtensions__AddLocalPosition_35211872(v27, v26->static_fields->ADD_LAST_LABEL_POS, 0LL);
+          GameObjectExtensions__AddLocalPosition_35212688(v27, v26->static_fields->ADD_LAST_LABEL_POS, 0LL);
           Instance = (DataManager_o *)v20->fields.datalist;
           if ( !Instance )
             goto LABEL_31;
@@ -689,25 +689,25 @@ LABEL_31:
         datalist = (UILabel_o *)v20->fields.datalist;
         v35 = EventPoint;
         v29 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v35, v22, v23, v24);
-        Instance = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_25126/*"{0:#,0}"*/, v29, 0LL);
+        Instance = (DataManager_o *)System_String__Format((System_String_o *)StringLiteral_24811/*"{0:#,0}"*/, v29, 0LL);
         if ( datalist )
         {
           UILabel__set_text(datalist, (System_String_o *)Instance, 0LL);
           v30 = this->fields.sideItems;
           if ( v30 )
           {
-            Instance = (DataManager_o *)sub_1BDB9B4(v20, v30->obj.klass->_1.element_class);
+            Instance = (DataManager_o *)sub_1BC3144(v20, v30->obj.klass->_1.element_class);
             if ( !Instance )
             {
-              v33 = sub_1BDBAF8(0LL);
-              sub_1BDB9A0(v33, 0LL);
+              v33 = sub_1BC3288(0LL);
+              sub_1BC3130(v33, 0LL);
             }
             if ( v13 >= v30->max_length )
 LABEL_33:
-              sub_1BDBADC(Instance, v9, v10);
+              sub_1BC326C(Instance, v9, v10);
             v32 = &v30->obj.klass + v13;
             v32[4] = (Il2CppClass *)v20;
-            sub_1BDB81C((CGThumbnailListItem_o *)(v32 + 4), (int32_t)v20, (int32_t)v10, v31);
+            sub_1BC2FAC((CGThumbnailListItem_o *)(v32 + 4), (int32_t)v20, (int32_t)v10, v31);
             sideItems = this->fields.sideItems;
             ++v13;
             if ( sideItems )

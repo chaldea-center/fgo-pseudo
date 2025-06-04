@@ -11,7 +11,7 @@ void __fastcall BattleEndNotRelatedSurvivalStatusInstantlyTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)arg);
   this->fields.actiontype = 72;
   if ( !arg )
-    sub_1BDBAD4(v5, v6);
+    sub_1BC3264(v5, v6);
   v7 = arg->fields._FromProcState_k__BackingField == 2
     && ((__int64 (__fastcall *)(BaseAiActArgument_o *, Il2CppMethodPointer))arg->klass->vtable._4_get_UniqueId.method)(
          arg,
@@ -48,12 +48,12 @@ BattleActionData_o *__fastcall BattleEndNotRelatedSurvivalStatusInstantlyTask__M
 {
   BattleEndNotRelatedSurvivalStatusInstantlyData_o *v3; // x19
 
-  if ( (byte_4B47B59 & 1) == 0 )
+  if ( (byte_4B0506D & 1) == 0 )
   {
-    sub_1BDB878(&BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo, logic);
-    byte_4B47B59 = 1;
+    sub_1BC3008(&BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo, logic);
+    byte_4B0506D = 1;
   }
-  v3 = (BattleEndNotRelatedSurvivalStatusInstantlyData_o *)sub_1BDBAC4(BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
+  v3 = (BattleEndNotRelatedSurvivalStatusInstantlyData_o *)sub_1BC3254(BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
   BattleEndNotRelatedSurvivalStatusInstantlyData___ctor(v3, 0LL);
   return (BattleActionData_o *)v3;
 }

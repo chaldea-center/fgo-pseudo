@@ -32,10 +32,10 @@ void __fastcall SwitchActiveBaseConditionComponent__SwitchActive(
   __int64 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B4802E & 1) == 0 )
+  if ( (byte_4B05605 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, data);
-    byte_4B4802E = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, data);
+    byte_4B05605 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -47,7 +47,7 @@ void __fastcall SwitchActiveBaseConditionComponent__SwitchActive(
            data,
            this->klass[1]._1.image);
     if ( !gameObject )
-      sub_1BDBAD4(v6, v7);
+      sub_1BC3264(v6, v7);
     UnityEngine_GameObject__SetActive(gameObject, v6 & 1, 0LL);
   }
 }

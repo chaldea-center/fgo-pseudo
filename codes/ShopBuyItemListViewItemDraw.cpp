@@ -10,19 +10,19 @@ void __fastcall ShopBuyItemListViewItemDraw___cctor(const MethodInfo *method)
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B40D52 & 1) == 0 )
+  if ( (byte_4AFE2C3 & 1) == 0 )
   {
-    sub_1BDB878(&ShopBuyItemListViewItemDraw_TypeInfo, v1);
-    sub_1BDB878(&StringLiteral_20442/*"img_list_bg05"*/, v4);
-    sub_1BDB878(&StringLiteral_20441/*"img_list_bg04"*/, v5);
-    byte_4B40D52 = 1;
+    sub_1BC3008(&ShopBuyItemListViewItemDraw_TypeInfo, v1);
+    sub_1BC3008(&StringLiteral_20230/*"img_list_bg05"*/, v4);
+    sub_1BC3008(&StringLiteral_20229/*"img_list_bg04"*/, v5);
+    byte_4AFE2C3 = 1;
   }
-  ShopBuyItemListViewItemDraw_TypeInfo->static_fields->BASE_IMG_LIMIT_MATERIAL = (struct System_String_o *)StringLiteral_20441/*"img_list_bg04"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)ShopBuyItemListViewItemDraw_TypeInfo->static_fields, StringLiteral_20441/*"img_list_bg04"*/, v2, v3);
-  v6 = StringLiteral_20442/*"img_list_bg05"*/;
+  ShopBuyItemListViewItemDraw_TypeInfo->static_fields->BASE_IMG_LIMIT_MATERIAL = (struct System_String_o *)StringLiteral_20229/*"img_list_bg04"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)ShopBuyItemListViewItemDraw_TypeInfo->static_fields, StringLiteral_20229/*"img_list_bg04"*/, v2, v3);
+  v6 = StringLiteral_20230/*"img_list_bg05"*/;
   static_fields = ShopBuyItemListViewItemDraw_TypeInfo->static_fields;
-  static_fields->Shop18BaseSpriteName = (struct System_String_o *)StringLiteral_20442/*"img_list_bg05"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->Shop18BaseSpriteName, v6, v8, v9);
+  static_fields->Shop18BaseSpriteName = (struct System_String_o *)StringLiteral_20230/*"img_list_bg05"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->Shop18BaseSpriteName, v6, v8, v9);
 }
 
 
@@ -46,10 +46,10 @@ void __fastcall ShopBuyItemListViewItemDraw__Awake(ShopBuyItemListViewItemDraw_o
   struct UISprite_o *v12; // x8
   struct System_String_o *mSpriteName; // x1
 
-  if ( (byte_4B40D36 & 1) == 0 )
+  if ( (byte_4AFE2A6 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    byte_4B40D36 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    byte_4AFE2A6 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -61,14 +61,14 @@ void __fastcall ShopBuyItemListViewItemDraw__Awake(ShopBuyItemListViewItemDraw_o
     if ( !v8
       || (mAtlas = v8->fields.mAtlas,
           this->fields.baseAtlas = mAtlas,
-          sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v6, v7),
+          sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v6, v7),
           (v12 = this->fields.baseSprite) == 0LL) )
     {
-      sub_1BDBAD4(v4, v5);
+      sub_1BC3264(v4, v5);
     }
     mSpriteName = v12->fields.mSpriteName;
     this->fields.baseSpriteName = mSpriteName;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.baseSpriteName, (int32_t)mSpriteName, v10, v11);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.baseSpriteName, (int32_t)mSpriteName, v10, v11);
   }
 }
 
@@ -87,10 +87,10 @@ void __fastcall ShopBuyItemListViewItemDraw__ChangeNextAnotherItemIcon(
   UISprite_o *anotherPayItemImage; // x19
   int32_t v12; // w20
 
-  if ( (byte_4B40D38 & 1) == 0 )
+  if ( (byte_4AFE2A8 & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, manager);
-    byte_4B40D38 = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, manager);
+    byte_4AFE2A8 = 1;
   }
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty(
                     (System_Collections_ICollection_o *)this->fields.possessionAnotherItemIds,
@@ -99,11 +99,11 @@ void __fastcall ShopBuyItemListViewItemDraw__ChangeNextAnotherItemIcon(
   {
     possessionAnotherItemIds = this->fields.possessionAnotherItemIds;
     if ( !possessionAnotherItemIds || !manager )
-      sub_1BDBAD4(IsNullOrEmpty, v6);
+      sub_1BC3264(IsNullOrEmpty, v6);
     max_length = possessionAnotherItemIds->max_length;
     v10 = manager->fields.alphaAnimCnt % (int)max_length;
     if ( v10 >= max_length )
-      sub_1BDBADC(IsNullOrEmpty, v6, v7);
+      sub_1BC326C(IsNullOrEmpty, v6, v7);
     anotherPayItemImage = this->fields.anotherPayItemImage;
     v12 = possessionAnotherItemIds->m_Items[v10 + 1];
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -135,23 +135,23 @@ bool __fastcall ShopBuyItemListViewItemDraw__GetIsSetItemEventShop(
   int v10; // w9
   __int64 v11; // x10
 
-  if ( (byte_4B40D4C & 1) == 0 )
+  if ( (byte_4AFE2BD & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_SetItemMaster___, ids);
-    this = (ShopBuyItemListViewItemDraw_o *)sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4B40D4C = 1;
+    sub_1BC3008(&Method_DataManager_GetMasterData_SetItemMaster___, ids);
+    this = (ShopBuyItemListViewItemDraw_o *)sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4AFE2BD = 1;
   }
   if ( !ids )
     goto LABEL_20;
   if ( !*(_QWORD *)&ids->max_length )
     return 0;
-  this = (ShopBuyItemListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (ShopBuyItemListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
 LABEL_20:
-    sub_1BDBAD4(this, ids);
+    sub_1BC3264(this, ids);
   this = (ShopBuyItemListViewItemDraw_o *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)this,
-                                            (const MethodInfo_303395C *)Method_DataManager_GetMasterData_SetItemMaster___);
+                                            (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_SetItemMaster___);
   v6 = *(_QWORD *)&ids->max_length;
   if ( (int)v6 < 1 )
     return 0;
@@ -161,7 +161,7 @@ LABEL_20:
   {
     if ( v8 >= (unsigned int)v6 )
 LABEL_21:
-      sub_1BDBADC(this, ids, v5);
+      sub_1BC326C(this, ids, v5);
     if ( !v7 )
       goto LABEL_20;
     this = (ShopBuyItemListViewItemDraw_o *)SetItemMaster__GetList(v7, ids->m_Items[v8 + 1], 0LL);
@@ -217,22 +217,22 @@ System_Int32_array *__fastcall ShopBuyItemListViewItemDraw__GetUserItemCounts(
   int64_t v22; // x24
   unsigned int v23; // w0
 
-  if ( (byte_4B40D4D & 1) == 0 )
+  if ( (byte_4AFE2BE & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_UserItemMaster___, item);
-    sub_1BDB878(&int___TypeInfo, v4);
-    sub_1BDB878(&NetworkManager_TypeInfo, v5);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    byte_4B40D4D = 1;
+    sub_1BC3008(&Method_DataManager_GetMasterData_UserItemMaster___, item);
+    sub_1BC3008(&int___TypeInfo, v4);
+    sub_1BC3008(&NetworkManager_TypeInfo, v5);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    byte_4AFE2BE = 1;
   }
   SelfUserGame = (__int64)UserGameMaster__getSelfUserGame(0LL);
   if ( !item || (v9 = (_DWORD *)SelfUserGame, (SelfUserGame = (__int64)item->fields._Shop_k__BackingField) == 0) )
 LABEL_36:
-    sub_1BDBAD4(SelfUserGame, v8);
+    sub_1BC3264(SelfUserGame, v8);
   switch ( *(_DWORD *)(SelfUserGame + 68) )
   {
     case 1:
-      SelfUserGame = sub_1BDB920(int___TypeInfo, 1LL);
+      SelfUserGame = sub_1BC30B0(int___TypeInfo, 1LL);
       if ( !v9 )
         goto LABEL_36;
       v10 = (System_Int32_array *)SelfUserGame;
@@ -243,7 +243,7 @@ LABEL_36:
       v16 = v9[46];
       goto LABEL_50;
     case 4:
-      SelfUserGame = sub_1BDB920(int___TypeInfo, 1LL);
+      SelfUserGame = sub_1BC30B0(int___TypeInfo, 1LL);
       if ( !v9 )
         goto LABEL_36;
       v10 = (System_Int32_array *)SelfUserGame;
@@ -255,17 +255,17 @@ LABEL_36:
       goto LABEL_50;
     case 6:
     case 0xB:
-      SelfUserGame = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      SelfUserGame = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !SelfUserGame )
         goto LABEL_36;
       SelfUserGame = (__int64)DataManager__GetMasterData_object_(
                                 (DataManager_o *)SelfUserGame,
-                                (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserItemMaster___);
+                                (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_UserItemMaster___);
       if ( !item->fields._Shop_k__BackingField )
         goto LABEL_36;
       v17 = (UserItemMaster_o *)SelfUserGame;
       ItemCount = ShopEntity__GetItemCount(item->fields._Shop_k__BackingField, 0LL);
-      SelfUserGame = sub_1BDB920(int___TypeInfo, ItemCount);
+      SelfUserGame = sub_1BC30B0(int___TypeInfo, ItemCount);
       Shop_k__BackingField = item->fields._Shop_k__BackingField;
       if ( !Shop_k__BackingField )
         goto LABEL_36;
@@ -276,19 +276,19 @@ LABEL_36:
     case 8:
     case 9:
     case 0xC:
-      v10 = (System_Int32_array *)sub_1BDB920(int___TypeInfo, 1LL);
-      SelfUserGame = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      v10 = (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 1LL);
+      SelfUserGame = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !SelfUserGame )
         goto LABEL_36;
       MasterData_object = DataManager__GetMasterData_object_(
                             (DataManager_o *)SelfUserGame,
-                            (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserItemMaster___);
+                            (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_UserItemMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4B3ED56 )
+      if ( !byte_4AFC1F1 )
       {
-        sub_1BDB878(&NetworkManager_TypeInfo, v8);
-        byte_4B3ED56 = 1;
+        sub_1BC3008(&NetworkManager_TypeInfo, v8);
+        byte_4AFC1F1 = 1;
       }
       SelfUserGame = (__int64)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -316,7 +316,7 @@ LABEL_36:
       v16 = *(_DWORD *)(SelfUserGame + 28);
       goto LABEL_50;
     case 0xA:
-      SelfUserGame = sub_1BDB920(int___TypeInfo, 1LL);
+      SelfUserGame = sub_1BC30B0(int___TypeInfo, 1LL);
       if ( !v9 )
         goto LABEL_36;
       v10 = (System_Int32_array *)SelfUserGame;
@@ -330,16 +330,16 @@ LABEL_50:
       return v10;
     default:
       v23 = ShopEntity__GetItemCount((ShopEntity_o *)SelfUserGame, 0LL);
-      return (System_Int32_array *)sub_1BDB920(int___TypeInfo, v23);
+      return (System_Int32_array *)sub_1BC30B0(int___TypeInfo, v23);
   }
   while ( (__int64)v20 < ShopEntity__GetItemCount(Shop_k__BackingField, 0LL) )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4B3ED56 )
+    if ( !byte_4AFC1F1 )
     {
-      sub_1BDB878(&NetworkManager_TypeInfo, v8);
-      byte_4B3ED56 = 1;
+      sub_1BC3008(&NetworkManager_TypeInfo, v8);
+      byte_4AFC1F1 = 1;
     }
     SelfUserGame = (__int64)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -360,7 +360,7 @@ LABEL_50:
           {
             if ( v20 >= v10->max_length )
 LABEL_52:
-              sub_1BDBADC(SelfUserGame, v8, v15);
+              sub_1BC326C(SelfUserGame, v8, v15);
             *(_DWORD *)(v21 + 4 * v20) = *(_DWORD *)(SelfUserGame + 28);
             Shop_k__BackingField = item->fields._Shop_k__BackingField;
             ++v20;
@@ -385,17 +385,17 @@ System_Int64_array *__fastcall ShopBuyItemListViewItemDraw__GetUserItemCountsLon
   __int64 v4; // x1
   __int64 v5; // x2
 
-  if ( (byte_4B40D4E & 1) == 0 )
+  if ( (byte_4AFE2BF & 1) == 0 )
   {
-    sub_1BDB878(&long___TypeInfo, method);
-    byte_4B40D4E = 1;
+    sub_1BC3008(&long___TypeInfo, method);
+    byte_4AFE2BF = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
-  result = (System_Int64_array *)sub_1BDB920(long___TypeInfo, 1LL);
+  result = (System_Int64_array *)sub_1BC30B0(long___TypeInfo, 1LL);
   if ( !SelfUserGame || !result )
-    sub_1BDBAD4(result, v4);
+    sub_1BC3264(result, v4);
   if ( !result->max_length )
-    sub_1BDBADC(result, v4, v5);
+    sub_1BC326C(result, v4, v5);
   result->m_Items[0] = SelfUserGame->fields.qp;
   return result;
 }
@@ -415,17 +415,17 @@ void __fastcall ShopBuyItemListViewItemDraw__SetBandSprite(
   __int64 *v10; // x9
 
   v5 = this;
-  if ( (byte_4B40D3F & 1) == 0 )
+  if ( (byte_4AFE2AF & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_20724/*"img_txt_shop"*/, item);
-    sub_1BDB878(&StringLiteral_20708/*"img_txt_quest"*/, v6);
-    this = (ShopBuyItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_20634/*"img_txt_bgm"*/, v7);
-    byte_4B40D3F = 1;
+    sub_1BC3008(&StringLiteral_20514/*"img_txt_shop"*/, item);
+    sub_1BC3008(&StringLiteral_20498/*"img_txt_quest"*/, v6);
+    this = (ShopBuyItemListViewItemDraw_o *)sub_1BC3008(&StringLiteral_20424/*"img_txt_bgm"*/, v7);
+    byte_4AFE2AF = 1;
   }
   if ( !item || (Shop_k__BackingField = item->fields._Shop_k__BackingField) == 0LL )
-    sub_1BDBAD4(this, item);
+    sub_1BC3264(this, item);
   v9 = 0;
-  v10 = &StringLiteral_20708/*"img_txt_quest"*/;
+  v10 = &StringLiteral_20498/*"img_txt_quest"*/;
   switch ( Shop_k__BackingField->fields.purchaseType )
   {
     case 5:
@@ -442,10 +442,10 @@ void __fastcall ShopBuyItemListViewItemDraw__SetBandSprite(
     case 7:
     case 9:
 LABEL_7:
-      v10 = &StringLiteral_20724/*"img_txt_shop"*/;
+      v10 = &StringLiteral_20514/*"img_txt_shop"*/;
       goto LABEL_9;
     case 0xF:
-      v10 = &StringLiteral_20634/*"img_txt_bgm"*/;
+      v10 = &StringLiteral_20424/*"img_txt_bgm"*/;
 LABEL_9:
       ShopBuyItemListViewItemDraw__SetSpriteName(this, v5->fields.bandSprite, (System_String_o *)*v10, v3);
       v9 = 1;
@@ -471,11 +471,11 @@ void __fastcall ShopBuyItemListViewItemDraw__SetBaseButton(
   UIWidget_o *v11; // x19
   UnityEngine_Color_o **v12; // x0
 
-  if ( (byte_4B40D45 & 1) == 0 )
+  if ( (byte_4AFE2B6 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, isInPreparation);
-    sub_1BDB878(&UICommonButtonColor_TypeInfo, v7);
-    byte_4B40D45 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, isInPreparation);
+    sub_1BC3008(&UICommonButtonColor_TypeInfo, v7);
+    byte_4AFE2B6 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -500,7 +500,7 @@ void __fastcall ShopBuyItemListViewItemDraw__SetBaseButton(
         return;
       }
 LABEL_18:
-      sub_1BDBAD4(v12, v9);
+      sub_1BC3264(v12, v9);
     }
   }
   else
@@ -553,13 +553,13 @@ void __fastcall ShopBuyItemListViewItemDraw__SetBaseSprite(
   struct UISprite_o *v22; // x20
   struct System_String_o **onChange; // x8
 
-  if ( (byte_4B40D40 & 1) == 0 )
+  if ( (byte_4AFE2B0 & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, item);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BDB878(&ShopBuyItemListViewItemDraw_TypeInfo, v6);
-    sub_1BDB878(&StringLiteral_23478/*"shop_item_menu_"*/, v7);
-    byte_4B40D40 = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, item);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BC3008(&ShopBuyItemListViewItemDraw_TypeInfo, v6);
+    sub_1BC3008(&StringLiteral_23217/*"shop_item_menu_"*/, v7);
+    byte_4AFE2B0 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -586,7 +586,7 @@ LABEL_31:
       }
     }
 LABEL_32:
-    sub_1BDBAD4(v9, v10);
+    sub_1BC3264(v9, v10);
   }
   if ( Shop_k__BackingField->fields.shopType == 18 )
   {
@@ -600,7 +600,7 @@ LABEL_32:
     Shop18BaseSpriteName = v13->static_fields->Shop18BaseSpriteName;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetShopBanner_39627772(v12, Shop18BaseSpriteName, 0LL);
+    AtlasManager__SetShopBanner_39645084(v12, Shop18BaseSpriteName, 0LL);
     return;
   }
   bgImageId = Shop_k__BackingField->fields.bgImageId;
@@ -609,10 +609,10 @@ LABEL_32:
     goto LABEL_22;
   v18 = this->fields.baseSprite;
   v19 = System_Int32__ToString(v16, 0LL);
-  v20 = System_String__Concat_62572260((System_String_o *)StringLiteral_23478/*"shop_item_menu_"*/, v19, 0LL);
+  v20 = System_String__Concat_62348648((System_String_o *)StringLiteral_23217/*"shop_item_menu_"*/, v19, 0LL);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  if ( !AtlasManager__SetShopBanner_39627772(v18, v20, 0LL) )
+  if ( !AtlasManager__SetShopBanner_39645084(v18, v20, 0LL) )
   {
 LABEL_22:
     v9 = this->fields.baseSprite;
@@ -659,10 +659,10 @@ void __fastcall ShopBuyItemListViewItemDraw__SetButtonActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B40D3C & 1) == 0 )
+  if ( (byte_4AFE2AC & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, button);
-    byte_4B40D3C = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, button);
+    byte_4AFE2AC = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -670,7 +670,7 @@ void __fastcall ShopBuyItemListViewItemDraw__SetButtonActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !button || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)button, 0LL)) == 0LL )
-      sub_1BDBAD4(gameObject, v7);
+      sub_1BC3264(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0LL);
   }
 }
@@ -690,10 +690,10 @@ void __fastcall ShopBuyItemListViewItemDraw__SetCommonConsumeIcon(
   UnityEngine_GameObject_o *gameObject; // x0
   UISprite_o *iconSprite; // x19
 
-  if ( (byte_4B40D49 & 1) == 0 )
+  if ( (byte_4AFE2BA & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, itemIcon);
-    byte_4B40D49 = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, itemIcon);
+    byte_4AFE2BA = 1;
   }
   if ( commonConsumeEntity )
   {
@@ -713,7 +713,7 @@ void __fastcall ShopBuyItemListViewItemDraw__SetCommonConsumeIcon(
       if ( IsAp )
       {
         if ( !itemIcon )
-          sub_1BDBAD4(IsAp, v11);
+          sub_1BC3264(IsAp, v11);
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)itemIcon, 0LL);
         GameObjectExtensions__SetLocalPositionY(gameObject, -3.0, 0LL);
         iconSprite = itemIcon->fields.iconSprite;
@@ -744,12 +744,12 @@ void __fastcall ShopBuyItemListViewItemDraw__SetEventEndTime(
   struct UILabel_o *v17; // x19
   UILabel_o *v18; // x1
 
-  if ( (byte_4B40D4B & 1) == 0 )
+  if ( (byte_4AFE2BC & 1) == 0 )
   {
-    sub_1BDB878(&LocalizationManager_TypeInfo, isRarePriShopPurchased);
-    sub_1BDB878(&StringLiteral_12097/*"SHOP_INDEFINITE_PERIOD"*/, v11);
-    sub_1BDB878(&StringLiteral_13372/*"TIME_REST2_NONE"*/, v12);
-    byte_4B40D4B = 1;
+    sub_1BC3008(&LocalizationManager_TypeInfo, isRarePriShopPurchased);
+    sub_1BC3008(&StringLiteral_12013/*"SHOP_INDEFINITE_PERIOD"*/, v11);
+    sub_1BC3008(&StringLiteral_13273/*"TIME_REST2_NONE"*/, v12);
+    byte_4AFE2BC = 1;
   }
   if ( activeTime > 0 )
   {
@@ -761,7 +761,7 @@ void __fastcall ShopBuyItemListViewItemDraw__SetEventEndTime(
       {
 LABEL_6:
         RestTime2 = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_12097/*"SHOP_INDEFINITE_PERIOD"*/,
+                                                       (System_String_o *)StringLiteral_12013/*"SHOP_INDEFINITE_PERIOD"*/,
                                                        0LL);
 LABEL_12:
         v18 = restTimeLabel;
@@ -780,7 +780,7 @@ LABEL_12:
   v17 = this->fields.restTimeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  RestTime2 = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13372/*"TIME_REST2_NONE"*/, 0LL);
+  RestTime2 = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13273/*"TIME_REST2_NONE"*/, 0LL);
   v18 = v17;
 LABEL_13:
   ShopBuyItemListViewItemDraw__SetLabelText(RestTime2, v18, (System_String_o *)RestTime2, v16);
@@ -798,10 +798,10 @@ void __fastcall ShopBuyItemListViewItemDraw__SetEventItemIcon(
   __int64 v9; // x1
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4B40D4A & 1) == 0 )
+  if ( (byte_4AFE2BB & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, eventItemIcon);
-    byte_4B40D4A = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, eventItemIcon);
+    byte_4AFE2BB = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -809,7 +809,7 @@ void __fastcall ShopBuyItemListViewItemDraw__SetEventItemIcon(
   if ( !v8 )
   {
     if ( !eventItemIcon )
-      sub_1BDBAD4(v8, v9);
+      sub_1BC3264(v8, v9);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)eventItemIcon, 0LL);
     GameObjectExtensions__SetLocalPositionY(gameObject, 0.0, 0LL);
     if ( itemEntity )
@@ -927,7 +927,7 @@ LABEL_28:
         }
       }
 LABEL_37:
-      sub_1BDBAD4(this, item);
+      sub_1BC3264(this, item);
     }
 LABEL_22:
     ShopBuyItemListViewItemDraw__SetEventItemIcon(this, v6->fields.eventItemIcon, 0LL, 0, v4);
@@ -960,7 +960,7 @@ LABEL_35:
     ShopBuyItemListViewItemDraw__SetCommonConsumeIcon(v6, v6->fields.eventItemIcon1, v22, v7, v4);
     if ( CommonConsumeEntities_k__BackingField->max_length <= 1 )
 LABEL_38:
-      sub_1BDBADC(this, item, v12);
+      sub_1BC326C(this, item, v12);
   }
   v10 = CommonConsumeEntities_k__BackingField->m_Items[1];
   if ( v10 )
@@ -988,10 +988,10 @@ void __fastcall ShopBuyItemListViewItemDraw__SetInfoButton(
   struct ShopEntity_o *v14; // x8
 
   v6 = this;
-  if ( (byte_4B40D44 & 1) == 0 )
+  if ( (byte_4AFE2B5 & 1) == 0 )
   {
-    this = (ShopBuyItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_9273/*"NONE"*/, item);
-    byte_4B40D44 = 1;
+    this = (ShopBuyItemListViewItemDraw_o *)sub_1BC3008(&StringLiteral_9194/*"NONE"*/, item);
+    byte_4AFE2B5 = 1;
   }
   if ( !isInPreparation )
   {
@@ -1033,12 +1033,12 @@ LABEL_21:
         {
           this = (ShopBuyItemListViewItemDraw_o *)System_String__op_Inequality(
                                                     v14->fields.infoMessage,
-                                                    (System_String_o *)StringLiteral_9273/*"NONE"*/,
+                                                    (System_String_o *)StringLiteral_9194/*"NONE"*/,
                                                     0LL);
           goto LABEL_21;
         }
 LABEL_23:
-        sub_1BDBAD4(this, item);
+        sub_1BC3264(this, item);
       }
     }
     else if ( !item->fields.itemEntity )
@@ -1170,26 +1170,26 @@ void __fastcall ShopBuyItemListViewItemDraw__SetItem(
   System_String_o *message; // [xsp+38h] [xbp-48h] BYREF
 
   v6 = this;
-  if ( (byte_4B40D39 & 1) == 0 )
+  if ( (byte_4AFE2A9 & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, item);
-    sub_1BDB878(&Method_DataManager_GetMasterData_UserShopMaster___, v7);
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v8);
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v9);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v10);
-    sub_1BDB878(&NetworkManager_TypeInfo, v11);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v12);
-    sub_1BDB878(&ShopBuyItemUtility_TypeInfo, v13);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    sub_1BDB878(&StringLiteral_12008/*"SHOP_ACHIEVEMENT_FREE_EXCHANGE_CONDITIONS"*/, v15);
-    sub_1BDB878(&StringLiteral_19676/*"freeShopCondMessage"*/, v16);
-    sub_1BDB878(&StringLiteral_12104/*"SHOP_PAID_EXCHANGE_CONDITIONS"*/, v17);
-    sub_1BDB878(&StringLiteral_19675/*"freeShopCondId"*/, v18);
-    sub_1BDB878(&StringLiteral_20793/*"info_base"*/, v19);
-    sub_1BDB878(&StringLiteral_1/*""*/, v20);
-    sub_1BDB878(&StringLiteral_12009/*"SHOP_ACHIEVEMENT_PAID_EXCHANGE_CONDITIONS"*/, v21);
-    this = (ShopBuyItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_12076/*"SHOP_FREE_EXCHANGE_CONDITIONS"*/, v22);
-    byte_4B40D39 = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, item);
+    sub_1BC3008(&Method_DataManager_GetMasterData_UserShopMaster___, v7);
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v8);
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v9);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v10);
+    sub_1BC3008(&NetworkManager_TypeInfo, v11);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v12);
+    sub_1BC3008(&ShopBuyItemUtility_TypeInfo, v13);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    sub_1BC3008(&StringLiteral_11924/*"SHOP_ACHIEVEMENT_FREE_EXCHANGE_CONDITIONS"*/, v15);
+    sub_1BC3008(&StringLiteral_19477/*"freeShopCondMessage"*/, v16);
+    sub_1BC3008(&StringLiteral_12020/*"SHOP_PAID_EXCHANGE_CONDITIONS"*/, v17);
+    sub_1BC3008(&StringLiteral_19476/*"freeShopCondId"*/, v18);
+    sub_1BC3008(&StringLiteral_20583/*"info_base"*/, v19);
+    sub_1BC3008(&StringLiteral_1/*""*/, v20);
+    sub_1BC3008(&StringLiteral_11925/*"SHOP_ACHIEVEMENT_PAID_EXCHANGE_CONDITIONS"*/, v21);
+    this = (ShopBuyItemListViewItemDraw_o *)sub_1BC3008(&StringLiteral_11992/*"SHOP_FREE_EXCHANGE_CONDITIONS"*/, v22);
+    byte_4AFE2A9 = 1;
   }
   message = 0LL;
   itemName = 0LL;
@@ -1424,11 +1424,11 @@ LABEL_42:
   IsChocolateSvtEquip = (UnityEngine_Component_o *)v79->fields.script;
   if ( !IsChocolateSvtEquip )
 LABEL_104:
-    sub_1BDBAD4(IsChocolateSvtEquip, v48);
+    sub_1BC3264(IsChocolateSvtEquip, v48);
   IsChocolateSvtEquip = (UnityEngine_Component_o *)System_Collections_Generic_Dictionary_object__object___ContainsKey(
                                                      (System_Collections_Generic_Dictionary_object__object__o *)IsChocolateSvtEquip,
-                                                     (Il2CppObject *)StringLiteral_19675/*"freeShopCondId"*/,
-                                                     (const MethodInfo_33A0424 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                                                     (Il2CppObject *)StringLiteral_19476/*"freeShopCondId"*/,
+                                                     (const MethodInfo_336D1DC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   if ( ((unsigned __int8)IsChocolateSvtEquip & 1) != 0 && (!v27 || !v78) )
   {
     IsChocolateSvtEquip = (UnityEngine_Component_o *)item->fields._Shop_k__BackingField;
@@ -1462,25 +1462,25 @@ LABEL_56:
     goto LABEL_104;
   IsChocolateSvtEquip = (UnityEngine_Component_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                      (System_Collections_Generic_Dictionary_object__object__o *)IsChocolateSvtEquip,
-                                                     (Il2CppObject *)StringLiteral_19676/*"freeShopCondMessage"*/,
-                                                     (const MethodInfo_33A01B0 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                                                     (Il2CppObject *)StringLiteral_19477/*"freeShopCondMessage"*/,
+                                                     (const MethodInfo_336CF68 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !IsChocolateSvtEquip )
     goto LABEL_104;
   v83 = (Il2CppObject *)((__int64 (__fastcall *)(UnityEngine_Component_o *, void *))IsChocolateSvtEquip->klass->vtable._3_ToString.method)(
                           IsChocolateSvtEquip,
                           IsChocolateSvtEquip->klass[1]._1.image);
-  IsChocolateSvtEquip = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  IsChocolateSvtEquip = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !IsChocolateSvtEquip )
     goto LABEL_104;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)IsChocolateSvtEquip,
-                        (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserShopMaster___);
+                        (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_UserShopMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B3ED56 )
+  if ( !byte_4AFC1F1 )
   {
-    sub_1BDB878(&NetworkManager_TypeInfo, v48);
-    byte_4B3ED56 = 1;
+    sub_1BC3008(&NetworkManager_TypeInfo, v48);
+    byte_4AFC1F1 = 1;
   }
   IsChocolateSvtEquip = (UnityEngine_Component_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1515,13 +1515,13 @@ LABEL_56:
     if ( !ShopEntity__IsPaidExchange((ShopEntity_o *)IsChocolateSvtEquip, 0LL) )
       goto LABEL_56;
     LOBYTE(IsChocolateSvtEquip) = UserShopEntity__get_IsReturnRarePriShop(v86, 0LL);
-    v87 = (System_String_o **)&StringLiteral_12104/*"SHOP_PAID_EXCHANGE_CONDITIONS"*/;
-    v88 = (System_String_o **)&StringLiteral_12009/*"SHOP_ACHIEVEMENT_PAID_EXCHANGE_CONDITIONS"*/;
+    v87 = (System_String_o **)&StringLiteral_12020/*"SHOP_PAID_EXCHANGE_CONDITIONS"*/;
+    v88 = (System_String_o **)&StringLiteral_11925/*"SHOP_ACHIEVEMENT_PAID_EXCHANGE_CONDITIONS"*/;
   }
   else
   {
-    v87 = (System_String_o **)&StringLiteral_12076/*"SHOP_FREE_EXCHANGE_CONDITIONS"*/;
-    v88 = (System_String_o **)&StringLiteral_12008/*"SHOP_ACHIEVEMENT_FREE_EXCHANGE_CONDITIONS"*/;
+    v87 = (System_String_o **)&StringLiteral_11992/*"SHOP_FREE_EXCHANGE_CONDITIONS"*/;
+    v88 = (System_String_o **)&StringLiteral_11924/*"SHOP_ACHIEVEMENT_FREE_EXCHANGE_CONDITIONS"*/;
   }
   v90 = ((unsigned __int8)IsChocolateSvtEquip & 1) == 0;
   IsChocolateSvtEquip = (UnityEngine_Component_o *)v6->fields.freeExchangeConditionNoticeRoot;
@@ -1554,7 +1554,7 @@ LABEL_56:
     while ( 1 )
     {
       if ( v99 >= max_length )
-        sub_1BDBADC(IsChocolateSvtEquip, v48, v93);
+        sub_1BC326C(IsChocolateSvtEquip, v48, v93);
       v101 = &freeExchangeConditionNoticeBgSprites->obj.klass + (int)v99;
       v102 = (UISprite_o *)v101[4];
       if ( !v102 )
@@ -1564,7 +1564,7 @@ LABEL_56:
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       IsChocolateSvtEquip = (UnityEngine_Component_o *)AtlasManager__SetEventUI(
                                                          v102,
-                                                         (System_String_o *)StringLiteral_20793/*"info_base"*/,
+                                                         (System_String_o *)StringLiteral_20583/*"info_base"*/,
                                                          0LL);
       max_length = freeExchangeConditionNoticeBgSprites->max_length;
       if ( (int)++v99 >= max_length )
@@ -1581,24 +1581,38 @@ void __fastcall ShopBuyItemListViewItemDraw__SetItemIcon(
         bool isInPreparation,
         const MethodInfo *method)
 {
+  __int64 v7; // x1
+  __int64 v8; // x1
   void *itemIcon; // x0
-  ItemIconComponent_o *v8; // x20
-  int32_t v9; // w19
-  int32_t v10; // w2
+  int32_t v10; // w21
+  __int64 v11; // x2
+  struct ShopEntity_o *Shop_k__BackingField; // x8
+  struct System_Int32_array *targetIds; // x9
+  struct ItemIconComponent_o *v14; // x9
+  UISprite_o *iconSprite; // x19
+  int32_t v16; // w20
+  ItemIconComponent_o *v17; // x19
   int32_t imageId; // [xsp+Ch] [xbp-24h] BYREF
 
+  if ( (byte_4AFE2B1 & 1) == 0 )
+  {
+    sub_1BC3008(&AtlasManager_TypeInfo, item);
+    sub_1BC3008(&Method_DataManager_GetMaster_AssistMaster___, v7);
+    sub_1BC3008(&DataManager_TypeInfo, v8);
+    byte_4AFE2B1 = 1;
+  }
   imageId = 0;
   itemIcon = this->fields.itemIcon;
   if ( !itemIcon )
-    goto LABEL_18;
+    goto LABEL_30;
   ItemIconComponent__Clear((ItemIconComponent_o *)itemIcon, 0LL);
   if ( isInPreparation )
   {
     if ( !item )
-      goto LABEL_18;
+      goto LABEL_30;
     itemIcon = item->fields._Shop_k__BackingField;
     if ( !itemIcon )
-      goto LABEL_18;
+      goto LABEL_30;
     if ( ShopEntity__checkFlag((ShopEntity_o *)itemIcon, 2, 0LL) )
     {
       itemIcon = this->fields.itemIcon;
@@ -1607,44 +1621,67 @@ void __fastcall ShopBuyItemListViewItemDraw__SetItemIcon(
         ItemIconComponent__SetItemImage((ItemIconComponent_o *)itemIcon, 8007, 0LL);
         return;
       }
-LABEL_18:
-      sub_1BDBAD4(itemIcon, item);
+LABEL_30:
+      sub_1BC3264(itemIcon, item);
     }
   }
   else if ( !item )
   {
-    goto LABEL_18;
+    goto LABEL_30;
   }
   itemIcon = item->fields._Shop_k__BackingField;
   if ( !itemIcon )
-    goto LABEL_18;
-  itemIcon = (void *)ShopEntity__CheckEquipItem((ShopEntity_o *)itemIcon, &imageId, 0LL);
-  v8 = this->fields.itemIcon;
-  if ( ((unsigned __int8)itemIcon & 1) != 0 )
+    goto LABEL_30;
+  if ( ShopEntity__CheckEquipItem((ShopEntity_o *)itemIcon, &imageId, 0LL) )
   {
-    if ( !v8 )
-      goto LABEL_18;
-    ItemIconComponent__SetEquipItemImage(v8, imageId, 0LL);
+    itemIcon = this->fields.itemIcon;
+    if ( !itemIcon )
+      goto LABEL_30;
+    ItemIconComponent__SetEquipItemImage((ItemIconComponent_o *)itemIcon, imageId, 0LL);
   }
   else
   {
     itemIcon = item->fields._Shop_k__BackingField;
-    if ( itemIcon )
+    if ( !itemIcon )
+      goto LABEL_30;
+    v10 = *((_DWORD *)itemIcon + 12);
+    if ( v10 == 24 )
     {
-      v9 = *((_DWORD *)itemIcon + 12);
-      itemIcon = (void *)ShopEntity__get_TargetId((ShopEntity_o *)itemIcon, 0LL);
-      v10 = (int)itemIcon;
-      if ( !v8 )
-        goto LABEL_18;
+      if ( !DataManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+      itemIcon = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_AssistMaster___);
+      Shop_k__BackingField = item->fields._Shop_k__BackingField;
+      if ( !Shop_k__BackingField )
+        goto LABEL_30;
+      targetIds = Shop_k__BackingField->fields.targetIds;
+      if ( !targetIds )
+        goto LABEL_30;
+      if ( !targetIds->max_length )
+        sub_1BC326C(itemIcon, item, v11);
+      if ( !itemIcon )
+        goto LABEL_30;
+      itemIcon = AssistMaster__GetNextPartsEntity(
+                   (AssistMaster_o *)itemIcon,
+                   targetIds->m_Items[1],
+                   Shop_k__BackingField->fields.id,
+                   0LL);
+      v14 = this->fields.itemIcon;
+      if ( !v14 || !itemIcon )
+        goto LABEL_30;
+      iconSprite = v14->fields.iconSprite;
+      v16 = *((_DWORD *)itemIcon + 10);
+      if ( !AtlasManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+      AtlasManager__SetSkillIcon(iconSprite, v16, 0LL);
     }
     else
     {
-      v10 = 0;
-      v9 = item->fields.itemEntity != 0LL;
-      if ( !v8 )
-        goto LABEL_18;
+      v17 = this->fields.itemIcon;
+      itemIcon = (void *)ShopEntity__get_TargetId((ShopEntity_o *)itemIcon, 0LL);
+      if ( !v17 )
+        goto LABEL_30;
+      ItemIconComponent__SetPurchase(v17, v10, (int32_t)itemIcon, imageId, 0LL);
     }
-    ItemIconComponent__SetPurchase(v8, v9, v10, imageId, 0LL);
   }
 }
 
@@ -1658,10 +1695,10 @@ void __fastcall ShopBuyItemListViewItemDraw__SetLabelActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B40D3A & 1) == 0 )
+  if ( (byte_4AFE2AA & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, label);
-    byte_4B40D3A = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, label);
+    byte_4AFE2AA = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1669,7 +1706,7 @@ void __fastcall ShopBuyItemListViewItemDraw__SetLabelActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !label || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)label, 0LL)) == 0LL )
-      sub_1BDBAD4(gameObject, v7);
+      sub_1BC3264(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0LL);
   }
 }
@@ -1684,10 +1721,10 @@ void __fastcall ShopBuyItemListViewItemDraw__SetLabelText(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B40D3B & 1) == 0 )
+  if ( (byte_4AFE2AB & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, label);
-    byte_4B40D3B = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, label);
+    byte_4AFE2AB = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1695,7 +1732,7 @@ void __fastcall ShopBuyItemListViewItemDraw__SetLabelText(
   if ( !v6 )
   {
     if ( !label )
-      sub_1BDBAD4(v6, v7);
+      sub_1BC3264(v6, v7);
     WrapControlText__textAdjust(label, text, label->fields.mFontSize, 0, 0LL);
   }
 }
@@ -1709,7 +1746,7 @@ void __fastcall ShopBuyItemListViewItemDraw__SetListViewObject(
   const MethodInfo *v3; // x3
 
   this->fields.listViewObject = listViewObj;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.listViewObject, (int32_t)listViewObj, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.listViewObject, (int32_t)listViewObj, (int32_t)method, v3);
 }
 
 
@@ -1748,103 +1785,106 @@ void __fastcall ShopBuyItemListViewItemDraw__SetMask(
   __int64 v35; // x1
   __int64 v36; // x1
   __int64 v37; // x1
-  const MethodInfo *v38; // x2
-  int baseSprite; // w9
-  UILabel_o *v40; // x21
-  const MethodInfo *v41; // x3
-  UILabel_o *v42; // x1
-  ShopBuyItemListViewItemDraw_o *v43; // x2
+  __int64 v38; // x1
+  const MethodInfo *v39; // x2
+  int baseSprite; // w8
+  UILabel_o *v41; // x21
+  __int64 *v42; // x8
+  const MethodInfo *v43; // x3
+  UILabel_o *v44; // x1
+  ShopBuyItemListViewItemDraw_o *v45; // x2
+  UnityEngine_Object_o *prepareTextOnMask; // x21
+  const MethodInfo *v47; // x1
+  UILabel_o *v48; // x19
+  ShopBuyItemListViewItemDraw_o *v49; // x0
+  const MethodInfo *v50; // x3
   ShopEntity_o *Shop_k__BackingField; // x0
-  _BOOL4 v45; // w23
+  _BOOL4 v52; // w23
   UnityEngine_Object_o *anotherBuyable; // x21
-  const MethodInfo *v47; // x3
+  const MethodInfo *v54; // x3
   UnityEngine_Object_o *anotherPayItemImage; // x21
-  UnityEngine_GameObject_o *v49; // x22
+  UnityEngine_GameObject_o *v56; // x22
   struct ShopBuyItemListViewObject_o *listViewObject; // x9
   struct System_Int32_array *possessionAnotherItemIds; // x8
   __int64 methodPtr_low; // x10
   unsigned int max_length; // w10
-  int v54; // w9
-  UISprite_o *v55; // x21
-  int32_t v56; // w22
+  int v61; // w9
+  UISprite_o *v62; // x21
+  int32_t v63; // w22
   UISprite_o *maskSprite; // x1
-  bool v58; // w2
-  struct ShopEntity_o *v59; // x8
-  struct ShopEntity_o *v60; // x8
-  bool v61; // w20
-  struct ShopEntity_o *v62; // x8
-  ShopReleaseMaster_o *v63; // x21
-  struct ShopEntity_o *v64; // x8
-  bool v65; // w0
-  struct UILabel_o *v66; // x23
-  ShopBuyItemListViewItemDraw_o *v67; // x22
-  int v68; // w25
-  ShopBuyItemListViewItemDraw_o *v69; // x24
-  struct ShopEntity_o *v70; // x8
-  ShopReleaseMaster_o *v71; // x21
-  struct ShopEntity_o *v72; // x8
-  struct UISprite_o *v73; // x8
-  struct ShopEntity_o *v74; // x8
+  bool v65; // w2
+  struct ShopEntity_o *v66; // x8
+  struct ShopEntity_o *v67; // x8
+  bool v68; // w20
+  struct ShopEntity_o *v69; // x8
+  ShopReleaseMaster_o *v70; // x21
+  struct ShopEntity_o *v71; // x8
+  struct UISprite_o *v72; // x8
+  struct ShopEntity_o *v73; // x8
   struct System_Int32_array *targetIds; // x8
   Il2CppObject *Entity; // x0
-  struct ShopEntity_o *v77; // x8
-  __int64 *v78; // x8
+  struct ShopEntity_o *v76; // x8
+  __int64 *v77; // x8
   ShopBuyItemListViewItemDraw_o *Empty; // x21
-  UILabel_o *v80; // x21
-  ShopBuyItemListViewItemDraw_o *v81; // x0
-  const MethodInfo *v82; // x3
-  struct ShopEntity_o *v83; // x8
-  const MethodInfo *v84; // x2
-  UILabel_o *textOnMask; // x20
+  UILabel_o *v79; // x21
+  ShopBuyItemListViewItemDraw_o *v80; // x0
+  const MethodInfo *v81; // x3
+  struct ShopEntity_o *v82; // x8
+  const MethodInfo *v83; // x2
+  struct ShopEntity_o *v84; // x8
+  ShopReleaseMaster_o *v85; // x21
   struct ShopEntity_o *v86; // x8
-  struct ShopEntity_o *v87; // x8
-  UILabel_o *v88; // x21
-  UnityEngine_Object_o *prepareTextOnMask; // x21
-  const MethodInfo *v90; // x1
-  UILabel_o *v91; // x19
-  ShopBuyItemListViewItemDraw_o *v92; // x0
-  const MethodInfo *v93; // x3
-  ShopBuyItemListViewItemDraw_o *v94; // x0
-  ShopBuyItemListViewItem_o *v95; // x1
-  bool v96; // w2
-  const MethodInfo *v97; // x3
-  System_Int32_array *v98; // [xsp+0h] [xbp-60h] BYREF
+  bool v87; // w0
+  struct UILabel_o *v88; // x23
+  ShopBuyItemListViewItemDraw_o *v89; // x22
+  int v90; // w25
+  ShopBuyItemListViewItemDraw_o *v91; // x24
+  UILabel_o *textOnMask; // x20
+  struct ShopEntity_o *v93; // x8
+  struct ShopEntity_o *v94; // x8
+  UILabel_o *v95; // x21
+  ShopBuyItemListViewItemDraw_o *v96; // x0
+  ShopBuyItemListViewItem_o *v97; // x1
+  bool v98; // w2
+  const MethodInfo *v99; // x3
+  System_Int32_array *v100; // [xsp+0h] [xbp-60h] BYREF
   int32_t questId; // [xsp+Ch] [xbp-54h] BYREF
 
   v15 = item;
   v16 = this;
-  if ( (byte_4B40D46 & 1) == 0 )
+  if ( (byte_4AFE2B7 & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, item);
-    sub_1BDB878(&Method_DataManager_GetMasterData_ServantMaster___, v17);
-    sub_1BDB878(&Method_DataManager_GetMasterData_ShopReleaseMaster___, v18);
-    sub_1BDB878(&Method_DataManager_GetMaster_ShopReleaseMaster___, v19);
-    sub_1BDB878(&DataManager_TypeInfo, v20);
-    sub_1BDB878(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v21);
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v22);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v23);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v24);
-    sub_1BDB878(&ShopBuyItemListViewManager_TypeInfo, v25);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v26);
-    sub_1BDB878(&string_TypeInfo, v27);
-    sub_1BDB878(&StringLiteral_12066/*"SHOP_CANT_BUY"*/, v28);
-    sub_1BDB878(&StringLiteral_12004/*"SHOP18_CANT_BUY_MSG_1"*/, v29);
-    sub_1BDB878(&StringLiteral_12005/*"SHOP18_CANT_BUY_MSG_2"*/, v30);
-    sub_1BDB878(&StringLiteral_12107/*"SHOP_QUEST_OPEN"*/, v31);
-    sub_1BDB878(&StringLiteral_12105/*"SHOP_QUEST_ALREADY_CLEARED"*/, v32);
-    sub_1BDB878(&StringLiteral_19675/*"freeShopCondId"*/, v33);
-    sub_1BDB878(&StringLiteral_12103/*"SHOP_NOT_RELEASE_SET_ITEM"*/, v34);
-    sub_1BDB878(&StringLiteral_12038/*"SHOP_BUY_EVENTSHOP_PREPARATION"*/, v35);
-    sub_1BDB878(&StringLiteral_1/*""*/, v36);
-    this = (ShopBuyItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_12012/*"SHOP_ALREADY_GET"*/, v37);
-    byte_4B40D46 = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, item);
+    sub_1BC3008(&Method_DataManager_GetMasterData_ServantMaster___, v17);
+    sub_1BC3008(&Method_DataManager_GetMasterData_ShopReleaseMaster___, v18);
+    sub_1BC3008(&Method_DataManager_GetMaster_ShopReleaseMaster___, v19);
+    sub_1BC3008(&DataManager_TypeInfo, v20);
+    sub_1BC3008(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v21);
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v22);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v23);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v24);
+    sub_1BC3008(&ShopBuyItemListViewManager_TypeInfo, v25);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v26);
+    sub_1BC3008(&string_TypeInfo, v27);
+    sub_1BC3008(&StringLiteral_11982/*"SHOP_CANT_BUY"*/, v28);
+    sub_1BC3008(&StringLiteral_11920/*"SHOP18_CANT_BUY_MSG_1"*/, v29);
+    sub_1BC3008(&StringLiteral_11921/*"SHOP18_CANT_BUY_MSG_2"*/, v30);
+    sub_1BC3008(&StringLiteral_12023/*"SHOP_QUEST_OPEN"*/, v31);
+    sub_1BC3008(&StringLiteral_12021/*"SHOP_QUEST_ALREADY_CLEARED"*/, v32);
+    sub_1BC3008(&StringLiteral_19476/*"freeShopCondId"*/, v33);
+    sub_1BC3008(&StringLiteral_5641/*"EVENT_REWARD_PARTS_GET_LIMIT"*/, v34);
+    sub_1BC3008(&StringLiteral_12019/*"SHOP_NOT_RELEASE_SET_ITEM"*/, v35);
+    sub_1BC3008(&StringLiteral_11954/*"SHOP_BUY_EVENTSHOP_PREPARATION"*/, v36);
+    sub_1BC3008(&StringLiteral_1/*""*/, v37);
+    this = (ShopBuyItemListViewItemDraw_o *)sub_1BC3008(&StringLiteral_11928/*"SHOP_ALREADY_GET"*/, v38);
+    byte_4AFE2B7 = 1;
   }
   questId = 0;
-  v98 = 0LL;
+  v100 = 0LL;
   if ( !isInPreparation )
   {
     if ( !v15 )
-      goto LABEL_161;
+      goto LABEL_167;
     Shop_k__BackingField = v15->fields._Shop_k__BackingField;
     if ( Shop_k__BackingField
       && ShopEntity__IsSoldOut(Shop_k__BackingField, 0LL)
@@ -1852,12 +1892,12 @@ void __fastcall ShopBuyItemListViewItemDraw__SetMask(
     {
       this = (ShopBuyItemListViewItemDraw_o *)v15->fields._Shop_k__BackingField;
       if ( !this )
-        goto LABEL_161;
-      v45 = !ShopEntity__IsAnotherItemBuyable((ShopEntity_o *)this, &v98, 0LL);
+        goto LABEL_167;
+      v52 = !ShopEntity__IsAnotherItemBuyable((ShopEntity_o *)this, &v100, 0LL);
     }
     else
     {
-      v45 = 0;
+      v52 = 0;
     }
     anotherBuyable = (UnityEngine_Object_o *)v16->fields.anotherBuyable;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1873,15 +1913,15 @@ void __fastcall ShopBuyItemListViewItemDraw__SetMask(
       {
         this = (ShopBuyItemListViewItemDraw_o *)v15->fields._Shop_k__BackingField;
         if ( !this )
-          goto LABEL_161;
-        v49 = v16->fields.anotherBuyable;
+          goto LABEL_167;
+        v56 = v16->fields.anotherBuyable;
         this = (ShopBuyItemListViewItemDraw_o *)ShopEntity__IsAnotherItemBuyable(
                                                   (ShopEntity_o *)this,
                                                   &v16->fields.possessionAnotherItemIds,
                                                   0LL);
-        if ( !v49 )
-          goto LABEL_161;
-        UnityEngine_GameObject__SetActive(v49, (unsigned __int8)this & 1, 0LL);
+        if ( !v56 )
+          goto LABEL_167;
+        UnityEngine_GameObject__SetActive(v56, (unsigned __int8)this & 1, 0LL);
         this = (ShopBuyItemListViewItemDraw_o *)BasicHelper__IsNullOrEmpty(
                                                   (System_Collections_ICollection_o *)v16->fields.possessionAnotherItemIds,
                                                   0LL);
@@ -1889,76 +1929,76 @@ void __fastcall ShopBuyItemListViewItemDraw__SetMask(
         {
           listViewObject = v16->fields.listViewObject;
           if ( !listViewObject )
-            goto LABEL_161;
+            goto LABEL_167;
           possessionAnotherItemIds = v16->fields.possessionAnotherItemIds;
           if ( !possessionAnotherItemIds )
-            goto LABEL_161;
+            goto LABEL_167;
           this = (ShopBuyItemListViewItemDraw_o *)listViewObject->fields.manager;
           if ( !this )
-            goto LABEL_161;
+            goto LABEL_167;
           item = (ShopBuyItemListViewItem_o *)ShopBuyItemListViewManager_TypeInfo;
           methodPtr_low = LOBYTE(ShopBuyItemListViewManager_TypeInfo->vtable._0_Equals.methodPtr);
           if ( LOBYTE(this->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
             || (ShopBuyItemListViewManager_c *)this->klass->_2.typeHierarchy[methodPtr_low - 1] != ShopBuyItemListViewManager_TypeInfo )
           {
-            sub_1BDBD94(this);
-            ShopBuyItemListViewItemDraw__SetInfoButton(v94, v95, v96, v97);
+            sub_1BC3524(this);
+            ShopBuyItemListViewItemDraw__SetInfoButton(v96, v97, v98, v99);
             return;
           }
           max_length = possessionAnotherItemIds->max_length;
-          v54 = SLODWORD(this[1].fields.baseButton) % (int)max_length;
-          if ( v54 >= max_length )
-LABEL_162:
-            sub_1BDBADC(this, item, v38);
-          v55 = v16->fields.anotherPayItemImage;
-          v56 = possessionAnotherItemIds->m_Items[v54 + 1];
+          v61 = SLODWORD(this[1].fields.nameTextLabel) % (int)max_length;
+          if ( v61 >= max_length )
+LABEL_168:
+            sub_1BC326C(this, item, v39);
+          v62 = v16->fields.anotherPayItemImage;
+          v63 = possessionAnotherItemIds->m_Items[v61 + 1];
           if ( !AtlasManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-          this = (ShopBuyItemListViewItemDraw_o *)AtlasManager__SetItem(v55, v56, 0LL);
+          this = (ShopBuyItemListViewItemDraw_o *)AtlasManager__SetItem(v62, v63, 0LL);
         }
       }
     }
-    if ( v45 )
+    if ( v52 )
     {
-      ShopBuyItemListViewItemDraw__SetReplacedTextOnMask(v16, v15, v38);
+      ShopBuyItemListViewItemDraw__SetReplacedTextOnMask(v16, v15, v39);
       maskSprite = v16->fields.maskSprite;
-      v58 = 1;
-LABEL_46:
-      ShopBuyItemListViewItemDraw__SetSpriteActive(this, maskSprite, v58, v47);
+      v65 = 1;
+LABEL_55:
+      ShopBuyItemListViewItemDraw__SetSpriteActive(this, maskSprite, v65, v54);
       return;
     }
-    v59 = v15->fields._Shop_k__BackingField;
-    if ( !v59 || v59->fields.purchaseType != 6 )
+    v66 = v15->fields._Shop_k__BackingField;
+    if ( !v66 || v66->fields.purchaseType != 6 )
     {
       maskSprite = v16->fields.maskSprite;
-      v58 = 0;
-      goto LABEL_46;
+      v65 = 0;
+      goto LABEL_55;
     }
-    this = (ShopBuyItemListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (ShopBuyItemListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
-      goto LABEL_161;
+      goto LABEL_167;
     this = (ShopBuyItemListViewItemDraw_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)this,
-                                              (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ShopReleaseMaster___);
-    v60 = v15->fields._Shop_k__BackingField;
-    if ( !v60 )
-      goto LABEL_161;
+                                              (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ShopReleaseMaster___);
+    v67 = v15->fields._Shop_k__BackingField;
+    if ( !v67 )
+      goto LABEL_167;
     if ( !this )
-      goto LABEL_161;
+      goto LABEL_167;
     this = (ShopBuyItemListViewItemDraw_o *)ShopReleaseMaster__isQuestNotClearSet(
                                               (ShopReleaseMaster_o *)this,
-                                              v60->fields.id,
+                                              v67->fields.id,
                                               &questId,
                                               0LL);
     if ( !v15->fields._Shop_k__BackingField )
-      goto LABEL_161;
+      goto LABEL_167;
     if ( ((unsigned __int8)this & 1) != 0 )
     {
       if ( !ShopEntity__isQuestNotClearItemClosed(v15->fields._Shop_k__BackingField, 1, 0LL) )
       {
-LABEL_44:
-        v61 = 0;
-LABEL_123:
+LABEL_53:
+        v68 = 0;
+LABEL_138:
         this = (ShopBuyItemListViewItemDraw_o *)v16->fields.maskSprite;
         if ( this )
         {
@@ -1967,33 +2007,33 @@ LABEL_123:
                                                     0LL);
           if ( this )
           {
-            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v61, 0LL);
+            UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v68, 0LL);
             return;
           }
         }
-        goto LABEL_161;
+        goto LABEL_167;
       }
     }
     else if ( !ShopEntity__isExpireItemClosed(v15->fields._Shop_k__BackingField, 0LL) )
     {
-      goto LABEL_44;
+      goto LABEL_53;
     }
     textOnMask = v16->fields.textOnMask;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12107/*"SHOP_QUEST_OPEN"*/, 0LL);
+    this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12023/*"SHOP_QUEST_OPEN"*/, 0LL);
     if ( !textOnMask )
-      goto LABEL_161;
+      goto LABEL_167;
     UILabel__set_text(textOnMask, (System_String_o *)this, 0LL);
-    v61 = 1;
-    goto LABEL_123;
+    v68 = 1;
+    goto LABEL_138;
   }
   ShopBuyItemListViewItemDraw__SetSpriteActive(this, v16->fields.maskSprite, 1, (const MethodInfo *)isNotServantGet);
   if ( !v15 )
-    goto LABEL_161;
+    goto LABEL_167;
   this = (ShopBuyItemListViewItemDraw_o *)v15->fields._Shop_k__BackingField;
   if ( !this )
-    goto LABEL_161;
+    goto LABEL_167;
   baseSprite = (int)this->fields.baseSprite;
   switch ( baseSprite )
   {
@@ -2007,74 +2047,74 @@ LABEL_123:
     case 11:
     case 12:
     case 13:
-      goto LABEL_56;
+      goto LABEL_63;
     case 4:
-      v73 = this->fields.maskSprite;
-      if ( !v73 )
-        goto LABEL_161;
-      if ( !LODWORD(v73->fields.m_CancellationTokenSource) )
-        goto LABEL_162;
-      if ( !LODWORD(v73->fields.leftAnchor) )
-        goto LABEL_82;
-      this = (ShopBuyItemListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      v72 = this->fields.maskSprite;
+      if ( !v72 )
+        goto LABEL_167;
+      if ( !LODWORD(v72->fields.m_CancellationTokenSource) )
+        goto LABEL_168;
+      if ( !LODWORD(v72->fields.leftAnchor) )
+        goto LABEL_89;
+      this = (ShopBuyItemListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
-        goto LABEL_161;
+        goto LABEL_167;
       this = (ShopBuyItemListViewItemDraw_o *)DataManager__GetMasterData_object_(
                                                 (DataManager_o *)this,
-                                                (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ServantMaster___);
-      v74 = v15->fields._Shop_k__BackingField;
-      if ( !v74 )
-        goto LABEL_161;
-      targetIds = v74->fields.targetIds;
+                                                (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ServantMaster___);
+      v73 = v15->fields._Shop_k__BackingField;
+      if ( !v73 )
+        goto LABEL_167;
+      targetIds = v73->fields.targetIds;
       if ( !targetIds )
-        goto LABEL_161;
+        goto LABEL_167;
       if ( !targetIds->max_length )
-        goto LABEL_162;
+        goto LABEL_168;
       if ( !this )
-        goto LABEL_161;
+        goto LABEL_167;
       Entity = DataMasterBase_object__object__int___GetEntity(
                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                  targetIds->m_Items[1],
-                 (const MethodInfo_32E1E3C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                 (const MethodInfo_32AF070 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       if ( Entity
         && ServantEntity__get_IsServant((ServantEntity_o *)Entity, 0LL)
         && v15->fields._ShopKind_k__BackingField != 6 )
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v78 = &StringLiteral_12066/*"SHOP_CANT_BUY"*/;
-        goto LABEL_150;
+        v77 = &StringLiteral_11982/*"SHOP_CANT_BUY"*/;
+        goto LABEL_165;
       }
-LABEL_82:
+LABEL_89:
       if ( !isNotServantGet && !isNotServantHaving && !isServantHaving && !isNotCostumeGet && !isNotCommandCodeGet )
-        goto LABEL_153;
+        goto LABEL_13;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      this = (ShopBuyItemListViewItemDraw_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ShopReleaseMaster___);
-      v77 = v15->fields._Shop_k__BackingField;
-      if ( v77 && this )
+      this = (ShopBuyItemListViewItemDraw_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ShopReleaseMaster___);
+      v76 = v15->fields._Shop_k__BackingField;
+      if ( v76 && this )
       {
         this = (ShopBuyItemListViewItemDraw_o *)ShopReleaseMaster__CondClearCheck(
                                                   (ShopReleaseMaster_o *)this,
-                                                  v77->fields.id,
+                                                  v76->fields.id,
                                                   40,
                                                   0LL);
         if ( ((unsigned __int8)this & 1) == 0 )
         {
-          v43 = (ShopBuyItemListViewItemDraw_o *)StringLiteral_1/*""*/;
-LABEL_151:
-          v42 = v16->fields.textOnMask;
-          goto LABEL_152;
+          v45 = (ShopBuyItemListViewItemDraw_o *)StringLiteral_1/*""*/;
+LABEL_166:
+          v44 = v16->fields.textOnMask;
+          goto LABEL_12;
         }
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v78 = &StringLiteral_12012/*"SHOP_ALREADY_GET"*/;
-LABEL_150:
-        this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v78, 0LL);
-        v43 = this;
-        goto LABEL_151;
+        v77 = &StringLiteral_11928/*"SHOP_ALREADY_GET"*/;
+LABEL_165:
+        this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v77, 0LL);
+        v45 = this;
+        goto LABEL_166;
       }
-      goto LABEL_161;
+      goto LABEL_167;
     case 5:
       Empty = (ShopBuyItemListViewItemDraw_o *)string_TypeInfo->static_fields->Empty;
       this = (ShopBuyItemListViewItemDraw_o *)ShopEntity__IsSoldOut((ShopEntity_o *)this, 0LL);
@@ -2082,204 +2122,210 @@ LABEL_150:
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12103/*"SHOP_NOT_RELEASE_SET_ITEM"*/, 0LL);
+        this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12019/*"SHOP_NOT_RELEASE_SET_ITEM"*/, 0LL);
         Empty = this;
       }
-      v42 = v16->fields.textOnMask;
-      v43 = Empty;
-      goto LABEL_152;
+      v44 = v16->fields.textOnMask;
+      v45 = Empty;
+      goto LABEL_12;
     case 6:
       if ( !ShopEntity__isQuestNotClearItemClosed((ShopEntity_o *)this, 0, 0LL) )
-        goto LABEL_153;
-      v80 = v16->fields.textOnMask;
+        goto LABEL_13;
+      v79 = v16->fields.textOnMask;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v81 = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12105/*"SHOP_QUEST_ALREADY_CLEARED"*/, 0LL);
-      ShopBuyItemListViewItemDraw__SetLabelText(v81, v80, (System_String_o *)v81, v82);
+      v80 = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12021/*"SHOP_QUEST_ALREADY_CLEARED"*/, 0LL);
+      ShopBuyItemListViewItemDraw__SetLabelText(v80, v79, (System_String_o *)v80, v81);
       this = (ShopBuyItemListViewItemDraw_o *)v15->fields._Shop_k__BackingField;
       if ( !this )
-        goto LABEL_161;
+        goto LABEL_167;
       this = (ShopBuyItemListViewItemDraw_o *)ShopEntity__IsSoldOut((ShopEntity_o *)this, 0LL);
       if ( ((unsigned __int8)this & 1) == 0 )
-        goto LABEL_153;
-      v83 = v15->fields._Shop_k__BackingField;
-      if ( !v83 )
-        goto LABEL_161;
-      this = (ShopBuyItemListViewItemDraw_o *)v83->fields.script;
+        goto LABEL_13;
+      v82 = v15->fields._Shop_k__BackingField;
+      if ( !v82 )
+        goto LABEL_167;
+      this = (ShopBuyItemListViewItemDraw_o *)v82->fields.script;
       if ( !this )
-        goto LABEL_161;
+        goto LABEL_167;
       if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
              (System_Collections_Generic_Dictionary_object__object__o *)this,
-             (Il2CppObject *)StringLiteral_19675/*"freeShopCondId"*/,
-             (const MethodInfo_33A0424 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+             (Il2CppObject *)StringLiteral_19476/*"freeShopCondId"*/,
+             (const MethodInfo_336D1DC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
       {
-LABEL_117:
-        ShopBuyItemListViewItemDraw__SetReplacedTextOnMask(v16, v15, v84);
+LABEL_124:
+        ShopBuyItemListViewItemDraw__SetReplacedTextOnMask(v16, v15, v83);
       }
-      goto LABEL_153;
+      goto LABEL_13;
     case 14:
       if ( !isNotServantGet && !isNotServantHaving && !isServantHaving && !isNotCostumeGet && !isNotCommandCodeGet )
-        goto LABEL_153;
+        goto LABEL_13;
       if ( ShopEntity__GetFreeShopCondId((ShopEntity_o *)this, 0LL) < 1 )
-        goto LABEL_136;
+        goto LABEL_151;
       this = (ShopBuyItemListViewItemDraw_o *)v15->fields._Shop_k__BackingField;
       if ( !this )
-        goto LABEL_161;
+        goto LABEL_167;
       if ( ShopEntity__IsSoldOut((ShopEntity_o *)this, 0LL) )
-        goto LABEL_117;
-LABEL_136:
+        goto LABEL_124;
+LABEL_151:
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      this = (ShopBuyItemListViewItemDraw_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ShopReleaseMaster___);
-      v87 = v15->fields._Shop_k__BackingField;
-      if ( !v87 || !this )
-        goto LABEL_161;
+      this = (ShopBuyItemListViewItemDraw_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ShopReleaseMaster___);
+      v94 = v15->fields._Shop_k__BackingField;
+      if ( !v94 || !this )
+        goto LABEL_167;
       this = (ShopBuyItemListViewItemDraw_o *)ShopReleaseMaster__CondClearCheck(
                                                 (ShopReleaseMaster_o *)this,
-                                                v87->fields.id,
+                                                v94->fields.id,
                                                 1,
                                                 0LL);
-      v88 = v16->fields.textOnMask;
+      v95 = v16->fields.textOnMask;
       if ( ((unsigned __int8)this & 1) != 0 )
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12012/*"SHOP_ALREADY_GET"*/, 0LL);
-        v43 = this;
+        this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11928/*"SHOP_ALREADY_GET"*/, 0LL);
+        v45 = this;
       }
       else
       {
-        v43 = (ShopBuyItemListViewItemDraw_o *)StringLiteral_1/*""*/;
+        v45 = (ShopBuyItemListViewItemDraw_o *)StringLiteral_1/*""*/;
       }
-      v42 = v88;
-      goto LABEL_152;
+      v44 = v95;
+      goto LABEL_12;
     default:
       if ( baseSprite == 23 )
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        this = (ShopBuyItemListViewItemDraw_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ShopReleaseMaster___);
-        v62 = v15->fields._Shop_k__BackingField;
-        if ( v62 )
+        this = (ShopBuyItemListViewItemDraw_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ShopReleaseMaster___);
+        v84 = v15->fields._Shop_k__BackingField;
+        if ( !v84 )
+          goto LABEL_167;
+        v85 = (ShopReleaseMaster_o *)this;
+        if ( !this )
+          goto LABEL_167;
+        this = (ShopBuyItemListViewItemDraw_o *)ShopReleaseMaster__CondClearCheck(
+                                                  (ShopReleaseMaster_o *)this,
+                                                  v84->fields.id,
+                                                  1,
+                                                  0LL);
+        if ( ((unsigned __int8)this & 1) != 0 )
         {
-          v63 = (ShopReleaseMaster_o *)this;
-          if ( this )
+          v86 = v15->fields._Shop_k__BackingField;
+          if ( !v86 )
+            goto LABEL_167;
+          v87 = ShopReleaseMaster__CondClearCheck(v85, v86->fields.id, 113, 0LL);
+          v88 = v16->fields.textOnMask;
+          if ( v87 )
           {
-            this = (ShopBuyItemListViewItemDraw_o *)ShopReleaseMaster__CondClearCheck(
-                                                      (ShopReleaseMaster_o *)this,
-                                                      v62->fields.id,
-                                                      1,
-                                                      0LL);
-            if ( ((unsigned __int8)this & 1) != 0 )
-            {
-              v64 = v15->fields._Shop_k__BackingField;
-              if ( !v64 )
-                goto LABEL_161;
-              v65 = ShopReleaseMaster__CondClearCheck(v63, v64->fields.id, 113, 0LL);
-              v66 = v16->fields.textOnMask;
-              if ( v65 )
-              {
-                v67 = 0LL;
-                v68 = 0;
-                v40 = 0LL;
-                v69 = v16;
-                goto LABEL_128;
-              }
-            }
-            else
-            {
-              v66 = v16->fields.textOnMask;
-            }
-            v69 = 0LL;
-            v68 = 1;
-            v67 = v16;
-            v40 = v66;
-            v66 = 0LL;
-LABEL_128:
-            if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-              j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            if ( v68 )
-            {
-              this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_12005/*"SHOP18_CANT_BUY_MSG_2"*/,
-                                                        0LL);
-              v86 = v15->fields._Shop_k__BackingField;
-              if ( !v86 )
-                goto LABEL_161;
-              this = (ShopBuyItemListViewItemDraw_o *)System_String__Format(
-                                                        (System_String_o *)this,
-                                                        (Il2CppObject *)v86->fields.name,
-                                                        0LL);
-              if ( !v67 )
-                goto LABEL_161;
-            }
-            else
-            {
-              this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_12004/*"SHOP18_CANT_BUY_MSG_1"*/,
-                                                        0LL);
-              v40 = v66;
-              if ( !v69 )
-                goto LABEL_161;
-            }
-            goto LABEL_10;
+            v89 = 0LL;
+            v90 = 0;
+            v41 = 0LL;
+            v91 = v16;
+            goto LABEL_143;
           }
         }
-LABEL_161:
-        sub_1BDBAD4(this, item);
+        else
+        {
+          v88 = v16->fields.textOnMask;
+        }
+        v91 = 0LL;
+        v90 = 1;
+        v89 = v16;
+        v41 = v88;
+        v88 = 0LL;
+LABEL_143:
+        if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+        if ( v90 )
+        {
+          this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11921/*"SHOP18_CANT_BUY_MSG_2"*/, 0LL);
+          v93 = v15->fields._Shop_k__BackingField;
+          if ( v93 )
+          {
+            this = (ShopBuyItemListViewItemDraw_o *)System_String__Format(
+                                                      (System_String_o *)this,
+                                                      (Il2CppObject *)v93->fields.name,
+                                                      0LL);
+            if ( v89 )
+              goto LABEL_11;
+          }
+        }
+        else
+        {
+          this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11920/*"SHOP18_CANT_BUY_MSG_1"*/, 0LL);
+          v41 = v88;
+          if ( v91 )
+            goto LABEL_11;
+        }
+        goto LABEL_167;
       }
-LABEL_56:
+      if ( baseSprite == 24 )
+      {
+        if ( ShopEntity__IsSoldOut((ShopEntity_o *)this, 0LL) )
+          goto LABEL_13;
+        v41 = v16->fields.textOnMask;
+        if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+        v42 = &StringLiteral_5641/*"EVENT_REWARD_PARTS_GET_LIMIT"*/;
+        goto LABEL_10;
+      }
+LABEL_63:
       if ( !isNotServantGet && !isNotServantHaving && !isServantHaving && !isNotCostumeGet && !isNotCommandCodeGet )
-        goto LABEL_153;
+        goto LABEL_13;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      this = (ShopBuyItemListViewItemDraw_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ShopReleaseMaster___);
-      v70 = v15->fields._Shop_k__BackingField;
-      if ( !v70 )
-        goto LABEL_161;
-      v71 = (ShopReleaseMaster_o *)this;
+      this = (ShopBuyItemListViewItemDraw_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ShopReleaseMaster___);
+      v69 = v15->fields._Shop_k__BackingField;
+      if ( !v69 )
+        goto LABEL_167;
+      v70 = (ShopReleaseMaster_o *)this;
       if ( !this )
-        goto LABEL_161;
+        goto LABEL_167;
       this = (ShopBuyItemListViewItemDraw_o *)ShopReleaseMaster__CondClearCheck(
                                                 (ShopReleaseMaster_o *)this,
-                                                v70->fields.id,
+                                                v69->fields.id,
                                                 1,
                                                 0LL);
       if ( ((unsigned __int8)this & 1) == 0 )
-        goto LABEL_68;
-      v72 = v15->fields._Shop_k__BackingField;
-      if ( !v72 )
-        goto LABEL_161;
-      this = (ShopBuyItemListViewItemDraw_o *)ShopReleaseMaster__CondClearCheck(v71, v72->fields.id, 40, 0LL);
-      if ( ((unsigned __int8)this & 1) == 0 )
       {
-LABEL_68:
-        v42 = v16->fields.textOnMask;
-        v43 = (ShopBuyItemListViewItemDraw_o *)StringLiteral_1/*""*/;
-        goto LABEL_152;
+LABEL_75:
+        v44 = v16->fields.textOnMask;
+        v45 = (ShopBuyItemListViewItemDraw_o *)StringLiteral_1/*""*/;
+        goto LABEL_12;
       }
+      v71 = v15->fields._Shop_k__BackingField;
+      if ( !v71 )
+LABEL_167:
+        sub_1BC3264(this, item);
+      this = (ShopBuyItemListViewItemDraw_o *)ShopReleaseMaster__CondClearCheck(v70, v71->fields.id, 40, 0LL);
+      if ( ((unsigned __int8)this & 1) == 0 )
+        goto LABEL_75;
 LABEL_7:
-      v40 = v16->fields.textOnMask;
+      v41 = v16->fields.textOnMask;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12012/*"SHOP_ALREADY_GET"*/, 0LL);
+      v42 = &StringLiteral_11928/*"SHOP_ALREADY_GET"*/;
 LABEL_10:
-      v42 = v40;
-      v43 = this;
-LABEL_152:
-      ShopBuyItemListViewItemDraw__SetLabelText(this, v42, (System_String_o *)v43, v41);
-LABEL_153:
+      this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v42, 0LL);
+LABEL_11:
+      v44 = v41;
+      v45 = this;
+LABEL_12:
+      ShopBuyItemListViewItemDraw__SetLabelText(this, v44, (System_String_o *)v45, v43);
+LABEL_13:
       prepareTextOnMask = (UnityEngine_Object_o *)v16->fields.prepareTextOnMask;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(prepareTextOnMask, 0LL, 0LL)
-        && ShopBuyItemListViewItem__IsPrepareTextOnMask(v15, v90) )
+        && ShopBuyItemListViewItem__IsPrepareTextOnMask(v15, v47) )
       {
-        v91 = v16->fields.prepareTextOnMask;
+        v48 = v16->fields.prepareTextOnMask;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v92 = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12038/*"SHOP_BUY_EVENTSHOP_PREPARATION"*/, 0LL);
-        ShopBuyItemListViewItemDraw__SetLabelText(v92, v91, (System_String_o *)v92, v93);
+        v49 = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11954/*"SHOP_BUY_EVENTSHOP_PREPARATION"*/, 0LL);
+        ShopBuyItemListViewItemDraw__SetLabelText(v49, v48, (System_String_o *)v49, v50);
       }
       return;
   }
@@ -2332,12 +2378,12 @@ void __fastcall ShopBuyItemListViewItemDraw__SetNameAndMessageText(
   v10 = this;
   value = preparationItemName;
   message = preparationMessage;
-  if ( (byte_4B40D41 & 1) == 0 )
+  if ( (byte_4AFE2B2 & 1) == 0 )
   {
-    sub_1BDB878(&LocalizationManager_TypeInfo, item);
-    sub_1BDB878(&StringLiteral_15817/*"[000000]"*/, v11);
-    this = (ShopBuyItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_25666/*"？"*/, v12);
-    byte_4B40D41 = 1;
+    sub_1BC3008(&LocalizationManager_TypeInfo, item);
+    sub_1BC3008(&StringLiteral_15693/*"[000000]"*/, v11);
+    this = (ShopBuyItemListViewItemDraw_o *)sub_1BC3008(&StringLiteral_25337/*"？"*/, v12);
+    byte_4AFE2B2 = 1;
   }
   if ( isInPreparation )
   {
@@ -2345,8 +2391,8 @@ void __fastcall ShopBuyItemListViewItemDraw__SetNameAndMessageText(
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     v14 = LocalizationManager__ReplaceCommonTag(preparationMessage, 0, 0LL);
-    v15 = (ShopBuyItemListViewItemDraw_o *)System_String__Concat_62572260(
-                                             (System_String_o *)StringLiteral_15817/*"[000000]"*/,
+    v15 = (ShopBuyItemListViewItemDraw_o *)System_String__Concat_62348648(
+                                             (System_String_o *)StringLiteral_15693/*"[000000]"*/,
                                              v14,
                                              0LL);
     ShopBuyItemListViewItemDraw__SetLabelText(v15, messageTextLabel, (System_String_o *)v15, v16);
@@ -2360,7 +2406,7 @@ void __fastcall ShopBuyItemListViewItemDraw__SetNameAndMessageText(
           this = (ShopBuyItemListViewItemDraw_o *)v10->fields.nameTextLabel;
           if ( this )
           {
-            v17 = (ShopBuyItemListViewItemDraw_o *)StringLiteral_25666/*"？"*/;
+            v17 = (ShopBuyItemListViewItemDraw_o *)StringLiteral_25337/*"？"*/;
 LABEL_37:
             UICrossNarrowLabel__SetCrossNarrowText((UICrossNarrowLabel_o *)this, (System_String_o *)v17, 0LL);
             return;
@@ -2394,7 +2440,7 @@ LABEL_37:
       }
     }
 LABEL_42:
-    sub_1BDBAD4(this, item);
+    sub_1BC3264(this, item);
   }
   if ( !item )
     goto LABEL_42;
@@ -2412,8 +2458,8 @@ LABEL_42:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       v23 = LocalizationManager__ReplaceCommonTag(v22, 0, 0LL);
-      v24 = (ShopBuyItemListViewItemDraw_o *)System_String__Concat_62572260(
-                                               (System_String_o *)StringLiteral_15817/*"[000000]"*/,
+      v24 = (ShopBuyItemListViewItemDraw_o *)System_String__Concat_62348648(
+                                               (System_String_o *)StringLiteral_15693/*"[000000]"*/,
                                                v23,
                                                0LL);
       ShopBuyItemListViewItemDraw__SetLabelText(v24, v21, (System_String_o *)v24, v25);
@@ -2454,8 +2500,8 @@ LABEL_39:
   v33 = v10->fields.messageTextLabel;
   DetailText = ShopBuyItemListViewItem__get_DetailText(item, v34);
   v36 = LocalizationManager__ReplaceCommonTag(DetailText, 0, 0LL);
-  this = (ShopBuyItemListViewItemDraw_o *)System_String__Concat_62572260(
-                                            (System_String_o *)StringLiteral_15817/*"[000000]"*/,
+  this = (ShopBuyItemListViewItemDraw_o *)System_String__Concat_62348648(
+                                            (System_String_o *)StringLiteral_15693/*"[000000]"*/,
                                             v36,
                                             0LL);
   if ( !v33 )
@@ -2491,13 +2537,13 @@ void __fastcall ShopBuyItemListViewItemDraw__SetNumText(
   const MethodInfo *v24; // x3
 
   v6 = this;
-  if ( (byte_4B40D42 & 1) == 0 )
+  if ( (byte_4AFE2B3 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_int__TypeInfo, item);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v7);
-    sub_1BDB878(&Method_ShopBuyItemListViewItemDraw__SetNumText_b__74_0__, v8);
-    this = (ShopBuyItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_12044/*"SHOP_BUY_ITEM_HOLD"*/, v9);
-    byte_4B40D42 = 1;
+    sub_1BC3008(&System_Action_int__TypeInfo, item);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v7);
+    sub_1BC3008(&Method_ShopBuyItemListViewItemDraw__SetNumText_b__74_0__, v8);
+    this = (ShopBuyItemListViewItemDraw_o *)sub_1BC3008(&StringLiteral_11960/*"SHOP_BUY_ITEM_HOLD"*/, v9);
+    byte_4AFE2B3 = 1;
   }
   if ( isInPreparation )
   {
@@ -2529,13 +2575,13 @@ LABEL_16:
   numTitleLabel = v6->fields.numTitleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v13 = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12044/*"SHOP_BUY_ITEM_HOLD"*/, 0LL);
+  v13 = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11960/*"SHOP_BUY_ITEM_HOLD"*/, 0LL);
   ShopBuyItemListViewItemDraw__SetLabelText(v13, numTitleLabel, (System_String_o *)v13, v14);
   ShopBuyItemListViewItemDraw__SetLabelActive(v15, v6->fields.numTextLabel, 1, v16);
   this = (ShopBuyItemListViewItemDraw_o *)item->fields._Shop_k__BackingField;
   if ( !this )
 LABEL_18:
-    sub_1BDBAD4(this, item);
+    sub_1BC3264(this, item);
   numTextLabel = v6->fields.numTextLabel;
   HoldCount = ShopEntity__getHoldCount((ShopEntity_o *)this, 0LL);
   NumberFormat = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__GetNumberFormat(HoldCount, 0LL);
@@ -2543,7 +2589,7 @@ LABEL_18:
   if ( item->fields._ShopKind_k__BackingField == 7 )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v6, 0LL);
-    v22 = (System_Action_int__o *)sub_1BDBAC4(System_Action_int__TypeInfo);
+    v22 = (System_Action_int__o *)sub_1BC3254(System_Action_int__TypeInfo);
     System_Action_int____ctor(v22, (Il2CppObject *)v6, Method_ShopBuyItemListViewItemDraw__SetNumText_b__74_0__, 0LL);
     StoneCountRefreshComponent__AttachToGameObject(gameObject, v22, 1, 0LL);
   }
@@ -2587,15 +2633,15 @@ void __fastcall ShopBuyItemListViewItemDraw__SetPossessionInfo(
   Il2CppObject *entity; // [xsp+18h] [xbp-58h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v35; // 0:x0.16
 
-  if ( (byte_4B40D51 & 1) == 0 )
+  if ( (byte_4AFE2C2 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMaster_ServantMaster___, item);
-    sub_1BDB878(&DataManager_TypeInfo, v5);
-    sub_1BDB878(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v6);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BDB878(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
-    sub_1BDB878(&ShopBuyItemUtility_TypeInfo, v9);
-    byte_4B40D51 = 1;
+    sub_1BC3008(&Method_DataManager_GetMaster_ServantMaster___, item);
+    sub_1BC3008(&DataManager_TypeInfo, v5);
+    sub_1BC3008(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v6);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v7);
+    sub_1BC3008(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
+    sub_1BC3008(&ShopBuyItemUtility_TypeInfo, v9);
+    byte_4AFE2C2 = 1;
   }
   entity = 0LL;
   possessionGrid = (UnityEngine_Object_o *)this->fields.possessionGrid;
@@ -2671,11 +2717,11 @@ LABEL_42:
                       return;
                     }
 LABEL_47:
-                    sub_1BDBAD4(Master_object, v18);
+                    sub_1BC3264(Master_object, v18);
                   }
                   if ( !DataManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                  Master_object = (ShopEntity_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ServantMaster___);
+                  Master_object = (ShopEntity_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantMaster___);
                   v22 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
                   if ( item->fields._Shop_k__BackingField )
                   {
@@ -2692,7 +2738,7 @@ LABEL_47:
                          v22,
                          &entity,
                          v23,
-                         (const MethodInfo_32E1E88 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+                         (const MethodInfo_32AF0BC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
                   {
                     Master_object = (ShopEntity_o *)entity;
                     if ( !entity )
@@ -2708,7 +2754,7 @@ LABEL_47:
                         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
                       *(_QWORD *)&v35.fields.currentCryptoKey = klass;
                       *(_QWORD *)&v35.fields.fakeValue = monitor;
-                      v21 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48227716(v35, 0LL);
+                      v21 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(v35, 0LL);
                       goto LABEL_42;
                     }
                   }
@@ -2793,12 +2839,12 @@ void __fastcall ShopBuyItemListViewItemDraw__SetPriceIconText(
   UILabel_o **p_LineText2digit; // x8
 
   v6 = this;
-  if ( (byte_4B40D48 & 1) == 0 )
+  if ( (byte_4AFE2B9 & 1) == 0 )
   {
-    sub_1BDB878(&LocalizationManager_TypeInfo, item);
-    sub_1BDB878(&System_Math_TypeInfo, v7);
-    this = (ShopBuyItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_12073/*"SHOP_EVENT_NO_ITEMS_REQUIRED"*/, v8);
-    byte_4B40D48 = 1;
+    sub_1BC3008(&LocalizationManager_TypeInfo, item);
+    sub_1BC3008(&System_Math_TypeInfo, v7);
+    this = (ShopBuyItemListViewItemDraw_o *)sub_1BC3008(&StringLiteral_11989/*"SHOP_EVENT_NO_ITEMS_REQUIRED"*/, v8);
+    byte_4AFE2B9 = 1;
   }
   if ( !item )
     goto LABEL_105;
@@ -2875,14 +2921,14 @@ void __fastcall ShopBuyItemListViewItemDraw__SetPriceIconText(
     priceLabelFree = v6->fields.priceLabelFree;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12073/*"SHOP_EVENT_NO_ITEMS_REQUIRED"*/, 0LL);
+    this = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11989/*"SHOP_EVENT_NO_ITEMS_REQUIRED"*/, 0LL);
     if ( priceLabelFree )
     {
       UILabel__set_text(priceLabelFree, (System_String_o *)this, 0LL);
       return;
     }
 LABEL_105:
-    sub_1BDBAD4(this, item);
+    sub_1BC3264(this, item);
   }
   if ( ShopEntity__GetItemCount((ShopEntity_o *)this, 0LL) >= 2 )
   {
@@ -3035,7 +3081,7 @@ LABEL_34:
       goto LABEL_85;
     }
 LABEL_106:
-    sub_1BDBADC(this, item, v14);
+    sub_1BC326C(this, item, v14);
   }
   v52 = v6->fields.priceIconLabel;
   v53 = (ShopBuyItemListViewItemDraw_o *)ShopBuyItemListViewItem__get_PriceIcon(item, v32);
@@ -3141,18 +3187,18 @@ void __fastcall ShopBuyItemListViewItemDraw__SetReplacedTextOnMask(
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_4B40D47 & 1) == 0 )
+  if ( (byte_4AFE2B8 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_ServantMaster___, item);
-    sub_1BDB878(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v5);
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v6);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v7);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_1BDB878(&StringLiteral_12106/*"SHOP_QUEST_FREE_EXCHANGE_CLEARED"*/, v9);
-    sub_1BDB878(&StringLiteral_12108/*"SHOP_QUEST_PAID_EXCHANGE_CLEARED"*/, v10);
-    sub_1BDB878(&StringLiteral_19675/*"freeShopCondId"*/, v11);
-    this = (ShopBuyItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_12012/*"SHOP_ALREADY_GET"*/, v12);
-    byte_4B40D47 = 1;
+    sub_1BC3008(&Method_DataManager_GetMasterData_ServantMaster___, item);
+    sub_1BC3008(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v5);
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v6);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v7);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    sub_1BC3008(&StringLiteral_12022/*"SHOP_QUEST_FREE_EXCHANGE_CLEARED"*/, v9);
+    sub_1BC3008(&StringLiteral_12024/*"SHOP_QUEST_PAID_EXCHANGE_CLEARED"*/, v10);
+    sub_1BC3008(&StringLiteral_19476/*"freeShopCondId"*/, v11);
+    this = (ShopBuyItemListViewItemDraw_o *)sub_1BC3008(&StringLiteral_11928/*"SHOP_ALREADY_GET"*/, v12);
+    byte_4AFE2B8 = 1;
   }
   entity = 0LL;
   if ( item )
@@ -3163,12 +3209,12 @@ void __fastcall ShopBuyItemListViewItemDraw__SetReplacedTextOnMask(
     shopType = Shop_k__BackingField->fields.shopType;
     if ( shopType > 0x10 || ((1 << shopType) & 0x1000C) == 0 )
       goto LABEL_21;
-    this = (ShopBuyItemListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (ShopBuyItemListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( this )
     {
       this = (ShopBuyItemListViewItemDraw_o *)DataManager__GetMasterData_object_(
                                                 (DataManager_o *)this,
-                                                (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ServantMaster___);
+                                                (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ServantMaster___);
       v16 = item->fields._Shop_k__BackingField;
       if ( v16 )
       {
@@ -3176,14 +3222,14 @@ void __fastcall ShopBuyItemListViewItemDraw__SetReplacedTextOnMask(
         if ( targetIds )
         {
           if ( !targetIds->max_length )
-            sub_1BDBADC(this, item, v15);
+            sub_1BC326C(this, item, v15);
           if ( this )
           {
             this = (ShopBuyItemListViewItemDraw_o *)DataMasterBase_object__object__int___TryGetEntity(
                                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                       &entity,
                                                       targetIds->m_Items[1],
-                                                      (const MethodInfo_32E1E88 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                                      (const MethodInfo_32AF0BC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
             if ( ((unsigned __int8)this & 1) != 0 )
             {
               v18 = item->fields._Shop_k__BackingField;
@@ -3202,7 +3248,7 @@ void __fastcall ShopBuyItemListViewItemDraw__SetReplacedTextOnMask(
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   v19 = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_12012/*"SHOP_ALREADY_GET"*/,
+                                                           (System_String_o *)StringLiteral_11928/*"SHOP_ALREADY_GET"*/,
                                                            0LL);
                   ShopBuyItemListViewItemDraw__SetLabelText(v19, v4->fields.textOnMask, (System_String_o *)v19, v20);
                 }
@@ -3217,8 +3263,8 @@ LABEL_21:
               {
                 if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
                         (System_Collections_Generic_Dictionary_object__object__o *)this,
-                        (Il2CppObject *)StringLiteral_19675/*"freeShopCondId"*/,
-                        (const MethodInfo_33A0424 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+                        (Il2CppObject *)StringLiteral_19476/*"freeShopCondId"*/,
+                        (const MethodInfo_336D1DC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
                   return;
                 this = (ShopBuyItemListViewItemDraw_o *)item->fields._Shop_k__BackingField;
                 if ( this )
@@ -3231,9 +3277,9 @@ LABEL_21:
                     IsPaidExchange = ShopEntity__IsPaidExchange((ShopEntity_o *)this, 0LL);
                     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                    v22 = (System_String_o **)&StringLiteral_12108/*"SHOP_QUEST_PAID_EXCHANGE_CLEARED"*/;
+                    v22 = (System_String_o **)&StringLiteral_12024/*"SHOP_QUEST_PAID_EXCHANGE_CLEARED"*/;
                     if ( !IsPaidExchange )
-                      v22 = (System_String_o **)&StringLiteral_12106/*"SHOP_QUEST_FREE_EXCHANGE_CLEARED"*/;
+                      v22 = (System_String_o **)&StringLiteral_12022/*"SHOP_QUEST_FREE_EXCHANGE_CLEARED"*/;
                     v23 = (ShopBuyItemListViewItemDraw_o *)LocalizationManager__Get(*v22, 0LL);
                     ShopBuyItemListViewItemDraw__SetLabelText(v23, v4->fields.textOnMask, (System_String_o *)v23, v24);
                     this = (ShopBuyItemListViewItemDraw_o *)v4->fields.freeExchangeConditionNoticeRoot;
@@ -3251,7 +3297,7 @@ LABEL_21:
       }
     }
 LABEL_33:
-    sub_1BDBAD4(this, item);
+    sub_1BC3264(this, item);
   }
 }
 
@@ -3306,18 +3352,18 @@ void __fastcall ShopBuyItemListViewItemDraw__SetRestCountText(
   System_String_o *v52; // x21
 
   v16 = this;
-  if ( (byte_4B40D43 & 1) == 0 )
+  if ( (byte_4AFE2B4 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_ShopReleaseMaster___, item);
-    sub_1BDB878(&Method_DataManager_GetMasterData_UserShopMaster___, v17);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v18);
-    sub_1BDB878(&NetworkManager_TypeInfo, v19);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20);
-    sub_1BDB878(&StringLiteral_12048/*"SHOP_BUY_PREPARATION"*/, v21);
-    sub_1BDB878(&StringLiteral_8327/*"LOTTERY_REST_NUM"*/, v22);
-    sub_1BDB878(&StringLiteral_14785/*"UNIT_REST_NONE"*/, v23);
-    this = (ShopBuyItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_3889/*"COUNT_INFO"*/, v24);
-    byte_4B40D43 = 1;
+    sub_1BC3008(&Method_DataManager_GetMasterData_ShopReleaseMaster___, item);
+    sub_1BC3008(&Method_DataManager_GetMasterData_UserShopMaster___, v17);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v18);
+    sub_1BC3008(&NetworkManager_TypeInfo, v19);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20);
+    sub_1BC3008(&StringLiteral_11964/*"SHOP_BUY_PREPARATION"*/, v21);
+    sub_1BC3008(&StringLiteral_8258/*"LOTTERY_REST_NUM"*/, v22);
+    sub_1BC3008(&StringLiteral_14684/*"UNIT_REST_NONE"*/, v23);
+    this = (ShopBuyItemListViewItemDraw_o *)sub_1BC3008(&StringLiteral_3821/*"COUNT_INFO"*/, v24);
+    byte_4AFE2B4 = 1;
   }
   *isNotServantGet = 0;
   *isNotServantHaving = 0;
@@ -3334,18 +3380,18 @@ LABEL_11:
       goto LABEL_33;
     if ( Shop_k__BackingField->fields.limitNum > 0 )
     {
-      this = (ShopBuyItemListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      this = (ShopBuyItemListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
         goto LABEL_65;
       MasterData_object = DataManager__GetMasterData_object_(
                             (DataManager_o *)this,
-                            (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserShopMaster___);
+                            (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_UserShopMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4B3ED56 )
+      if ( !byte_4AFC1F1 )
       {
-        sub_1BDB878(&NetworkManager_TypeInfo, item);
-        byte_4B3ED56 = 1;
+        sub_1BC3008(&NetworkManager_TypeInfo, item);
+        byte_4AFC1F1 = 1;
       }
       this = (ShopBuyItemListViewItemDraw_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -3380,7 +3426,7 @@ LABEL_11:
         restCountLabel = v16->fields.restCountLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3889/*"COUNT_INFO"*/, 0LL);
+        v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3821/*"COUNT_INFO"*/, 0LL);
         v34 = v44;
 LABEL_58:
         NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(v34, 0LL);
@@ -3393,7 +3439,7 @@ LABEL_58:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
 LABEL_53:
-      v37 = &StringLiteral_14785/*"UNIT_REST_NONE"*/;
+      v37 = &StringLiteral_14684/*"UNIT_REST_NONE"*/;
       goto LABEL_54;
     }
     if ( ShopEntity__IsSoldOut(Shop_k__BackingField, 0LL) )
@@ -3409,7 +3455,7 @@ LABEL_33:
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     if ( purchaseType == 16 )
     {
-      v37 = &StringLiteral_8327/*"LOTTERY_REST_NUM"*/;
+      v37 = &StringLiteral_8258/*"LOTTERY_REST_NUM"*/;
       goto LABEL_54;
     }
     goto LABEL_53;
@@ -3422,12 +3468,12 @@ LABEL_33:
   baseSprite = (unsigned int)this->fields.baseSprite;
   if ( baseSprite > 9 || ((1 << baseSprite) & 0x2E0) == 0 )
   {
-    this = (ShopBuyItemListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (ShopBuyItemListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_65;
     this = (ShopBuyItemListViewItemDraw_o *)DataManager__GetMasterData_object_(
                                               (DataManager_o *)this,
-                                              (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ShopReleaseMaster___);
+                                              (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ShopReleaseMaster___);
     v38 = item->fields._Shop_k__BackingField;
     if ( !v38 )
       goto LABEL_65;
@@ -3484,7 +3530,7 @@ LABEL_9:
   this = (ShopBuyItemListViewItemDraw_o *)item->fields._Shop_k__BackingField;
   if ( !this )
 LABEL_65:
-    sub_1BDBAD4(this, item);
+    sub_1BC3264(this, item);
   switch ( LODWORD(this->fields.baseSprite) )
   {
     case 2:
@@ -3500,7 +3546,7 @@ LABEL_27:
       restCountLabel = v16->fields.restCountLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3889/*"COUNT_INFO"*/, 0LL);
+      v33 = LocalizationManager__Get((System_String_o *)StringLiteral_3821/*"COUNT_INFO"*/, 0LL);
       v34 = 0;
       goto LABEL_58;
     default:
@@ -3515,7 +3561,7 @@ LABEL_76:
         restCountLabel = v16->fields.restCountLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v52 = LocalizationManager__Get((System_String_o *)StringLiteral_3889/*"COUNT_INFO"*/, 0LL);
+        v52 = LocalizationManager__Get((System_String_o *)StringLiteral_3821/*"COUNT_INFO"*/, 0LL);
         NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(nameTextLabel, 0LL);
         v48 = v52;
 LABEL_59:
@@ -3538,7 +3584,7 @@ LABEL_71:
       restCountLabel = v16->fields.restCountLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v37 = &StringLiteral_12048/*"SHOP_BUY_PREPARATION"*/;
+      v37 = &StringLiteral_11964/*"SHOP_BUY_PREPARATION"*/;
       break;
   }
 LABEL_54:
@@ -3582,20 +3628,20 @@ void __fastcall ShopBuyItemListViewItemDraw__SetShopResetText(
   System_Int32_array *v31; // [xsp+0h] [xbp-50h] BYREF
   ShopResetEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4B40D50 & 1) == 0 )
+  if ( (byte_4AFE2C1 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMaster_ItemMaster___, shopEntity);
-    sub_1BDB878(&Method_DataManager_GetMaster_ShopResetMaster___, v5);
-    sub_1BDB878(&Method_DataManager_GetMaster_UserShopMaster___, v6);
-    sub_1BDB878(&DataManager_TypeInfo, v7);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v8);
-    sub_1BDB878(&NetworkManager_TypeInfo, v9);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v10);
-    sub_1BDB878(&StringLiteral_12067/*"SHOP_CAN_NOT_RESET_NOTICE_MESSAGE"*/, v11);
-    sub_1BDB878(&StringLiteral_12069/*"SHOP_CAN_RESET_NOTICE_MESSAGE"*/, v12);
-    sub_1BDB878(&StringLiteral_12068/*"SHOP_CAN_NOT_RESET_SOLD_OUT_NOTICE_MESSAGE"*/, v13);
-    sub_1BDB878(&StringLiteral_1/*""*/, v14);
-    byte_4B40D50 = 1;
+    sub_1BC3008(&Method_DataManager_GetMaster_ItemMaster___, shopEntity);
+    sub_1BC3008(&Method_DataManager_GetMaster_ShopResetMaster___, v5);
+    sub_1BC3008(&Method_DataManager_GetMaster_UserShopMaster___, v6);
+    sub_1BC3008(&DataManager_TypeInfo, v7);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v8);
+    sub_1BC3008(&NetworkManager_TypeInfo, v9);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v10);
+    sub_1BC3008(&StringLiteral_11983/*"SHOP_CAN_NOT_RESET_NOTICE_MESSAGE"*/, v11);
+    sub_1BC3008(&StringLiteral_11985/*"SHOP_CAN_RESET_NOTICE_MESSAGE"*/, v12);
+    sub_1BC3008(&StringLiteral_11984/*"SHOP_CAN_NOT_RESET_SOLD_OUT_NOTICE_MESSAGE"*/, v13);
+    sub_1BC3008(&StringLiteral_1/*""*/, v14);
+    byte_4AFE2C1 = 1;
   }
   v31 = 0LL;
   entity = 0LL;
@@ -3615,8 +3661,8 @@ void __fastcall ShopBuyItemListViewItemDraw__SetShopResetText(
         v18);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ShopResetMaster___);
-      IsSoldOut = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ItemMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ShopResetMaster___);
+      IsSoldOut = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ItemMaster___);
       if ( IsSoldOut )
       {
         if ( Master_object )
@@ -3640,13 +3686,13 @@ LABEL_42:
           }
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          v23 = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_UserShopMaster___);
+          v23 = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserShopMaster___);
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-          if ( !byte_4B3ED56 )
+          if ( !byte_4AFC1F1 )
           {
-            sub_1BDB878(&NetworkManager_TypeInfo, v17);
-            byte_4B3ED56 = 1;
+            sub_1BC3008(&NetworkManager_TypeInfo, v17);
+            byte_4AFC1F1 = 1;
           }
           IsSoldOut = NetworkManager_TypeInfo;
           if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -3685,9 +3731,9 @@ LABEL_42:
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   if ( (v26 & 1) != 0 )
-                    v29 = &StringLiteral_12068/*"SHOP_CAN_NOT_RESET_SOLD_OUT_NOTICE_MESSAGE"*/;
+                    v29 = &StringLiteral_11984/*"SHOP_CAN_NOT_RESET_SOLD_OUT_NOTICE_MESSAGE"*/;
                   else
-                    v29 = &StringLiteral_12067/*"SHOP_CAN_NOT_RESET_NOTICE_MESSAGE"*/;
+                    v29 = &StringLiteral_11983/*"SHOP_CAN_NOT_RESET_NOTICE_MESSAGE"*/;
                   goto LABEL_40;
                 }
 LABEL_30:
@@ -3705,7 +3751,7 @@ LABEL_41:
                 }
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                v29 = &StringLiteral_12069/*"SHOP_CAN_RESET_NOTICE_MESSAGE"*/;
+                v29 = &StringLiteral_11985/*"SHOP_CAN_RESET_NOTICE_MESSAGE"*/;
 LABEL_40:
                 IsSoldOut = LocalizationManager__Get((System_String_o *)*v29, 0LL);
                 v30 = (System_String_o *)IsSoldOut;
@@ -3717,7 +3763,7 @@ LABEL_40:
         }
       }
     }
-    sub_1BDBAD4(IsSoldOut, v17);
+    sub_1BC3264(IsSoldOut, v17);
   }
 }
 
@@ -3731,10 +3777,10 @@ void __fastcall ShopBuyItemListViewItemDraw__SetSpriteActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B40D3D & 1) == 0 )
+  if ( (byte_4AFE2AD & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, sprite);
-    byte_4B40D3D = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, sprite);
+    byte_4AFE2AD = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -3742,7 +3788,7 @@ void __fastcall ShopBuyItemListViewItemDraw__SetSpriteActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !sprite || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0LL)) == 0LL )
-      sub_1BDBAD4(gameObject, v7);
+      sub_1BC3264(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0LL);
   }
 }
@@ -3757,10 +3803,10 @@ void __fastcall ShopBuyItemListViewItemDraw__SetSpriteName(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B40D3E & 1) == 0 )
+  if ( (byte_4AFE2AE & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, sprite);
-    byte_4B40D3E = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, sprite);
+    byte_4AFE2AE = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -3768,7 +3814,7 @@ void __fastcall ShopBuyItemListViewItemDraw__SetSpriteName(
   if ( !v6 )
   {
     if ( !sprite )
-      sub_1BDBAD4(v6, v7);
+      sub_1BC3264(v6, v7);
     UISprite__set_spriteName(sprite, spriteName, 0LL);
   }
 }
@@ -3793,13 +3839,13 @@ void __fastcall ShopBuyItemListViewItemDraw__ShowSoldOut(
   UILabel_o *v15; // x19
 
   v4 = this;
-  if ( (byte_4B40D4F & 1) == 0 )
+  if ( (byte_4AFE2C0 & 1) == 0 )
   {
-    sub_1BDB878(&LocalizationManager_TypeInfo, item);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BDB878(&StringLiteral_12057/*"SHOP_BUY_SOLD_OUT"*/, v6);
-    this = (ShopBuyItemListViewItemDraw_o *)sub_1BDB878(&StringLiteral_1/*""*/, v7);
-    byte_4B40D4F = 1;
+    sub_1BC3008(&LocalizationManager_TypeInfo, item);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BC3008(&StringLiteral_11973/*"SHOP_BUY_SOLD_OUT"*/, v6);
+    this = (ShopBuyItemListViewItemDraw_o *)sub_1BC3008(&StringLiteral_1/*""*/, v7);
+    byte_4AFE2C0 = 1;
   }
   if ( !item )
     goto LABEL_21;
@@ -3834,7 +3880,7 @@ LABEL_12:
       }
     }
 LABEL_21:
-    sub_1BDBAD4(this, item);
+    sub_1BC3264(this, item);
   }
   if ( ((unsigned __int8)v11 & 1) != 0 )
   {
@@ -3849,7 +3895,7 @@ LABEL_21:
   v15 = v4->fields.restCountLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12057/*"SHOP_BUY_SOLD_OUT"*/, 0LL);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11973/*"SHOP_BUY_SOLD_OUT"*/, 0LL);
   restCountLabel = v15;
   v14 = v11;
 LABEL_20:
@@ -3869,10 +3915,10 @@ void __fastcall ShopBuyItemListViewItemDraw__UpdateListViewDraw(
   __int64 v9; // x1
   struct System_Int32_array *possessionAnotherItemIds; // x8
 
-  if ( (byte_4B40D37 & 1) == 0 )
+  if ( (byte_4AFE2A7 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, *(_QWORD *)&mode);
-    byte_4B40D37 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, *(_QWORD *)&mode);
+    byte_4AFE2A7 = 1;
   }
   if ( mode )
   {
@@ -3888,7 +3934,7 @@ void __fastcall ShopBuyItemListViewItemDraw__UpdateListViewDraw(
         if ( (int)possessionAnotherItemIds->max_length >= 2 )
         {
           if ( !manager || (v8 = this->fields.anotherBuyableWidget) == 0LL )
-            sub_1BDBAD4(v8, v9);
+            sub_1BC3264(v8, v9);
           ((void (__fastcall *)(struct UIWidget_o *, Il2CppMethodPointer, float))v8->klass->vtable._8_set_alpha.method)(
             v8,
             v8->klass->vtable._9_CalculateFinalAlpha.methodPtr,
@@ -3910,16 +3956,16 @@ void __fastcall ShopBuyItemListViewItemDraw___SetNumText_b__74_0(
   System_String_o *NumberFormat; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B40D53 & 1) == 0 )
+  if ( (byte_4AFE2C4 & 1) == 0 )
   {
-    sub_1BDB878(&LocalizationManager_TypeInfo, *(_QWORD *)&stoneCount);
-    byte_4B40D53 = 1;
+    sub_1BC3008(&LocalizationManager_TypeInfo, *(_QWORD *)&stoneCount);
+    byte_4AFE2C4 = 1;
   }
   numTextLabel = this->fields.numTextLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   NumberFormat = LocalizationManager__GetNumberFormat(stoneCount, 0LL);
   if ( !numTextLabel )
-    sub_1BDBAD4(NumberFormat, v7);
+    sub_1BC3264(NumberFormat, v7);
   UILabel__set_text(numTextLabel, NumberFormat, 0LL);
 }

@@ -5,20 +5,20 @@ void __fastcall BattleWarBoardEventLimitTurn___ctor(BattleWarBoardEventLimitTurn
   __int64 v5; // x2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4B472E2 & 1) == 0 )
+  if ( (byte_4B0489F & 1) == 0 )
   {
-    sub_1BDB878(&int___TypeInfo, method);
-    byte_4B472E2 = 1;
+    sub_1BC3008(&int___TypeInfo, method);
+    byte_4B0489F = 1;
   }
   *(_QWORD *)&this->fields.defLimitAct = 0x200000001LL;
-  v3 = (struct System_Int32_array *)sub_1BDB920(int___TypeInfo, 1LL);
+  v3 = (struct System_Int32_array *)sub_1BC30B0(int___TypeInfo, 1LL);
   if ( !v3 )
-    sub_1BDBAD4(0LL, v4);
+    sub_1BC3264(0LL, v4);
   if ( !v3->max_length )
-    sub_1BDBADC(v3, v3, v5);
+    sub_1BC326C(v3, v3, v5);
   v3->m_Items[1] = 3;
   this->fields.defTurnEffect = v3;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.defTurnEffect, (int32_t)v3, v5, v6);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.defTurnEffect, (int32_t)v3, v5, v6);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -29,66 +29,74 @@ void __fastcall BattleWarBoardEventLimitTurn__InitLimitInfo(
         StageEntity_o *stage,
         const MethodInfo *method)
 {
-  struct BattleWarBoardInfo_o *WarBoardBattleInfo_k__BackingField; // x9
-  WarBoardBattleEvent_o *v5; // x8
-  struct BattleData_o *Data_k__BackingField; // x22
+  struct BattleWarBoardInfo_o *WarBoardBattleInfo_k__BackingField; // x8
+  BattleWarBoardEventLimitTurn_o *v5; // x19
+  struct BattleData_o *Data_k__BackingField; // x21
   int limitAct; // w9
-  BattleWarBoardEventLimitTurn_Fields *v10; // x9
-  int32_t *v11; // x9
-  System_Int32_array *TurnEffect; // x0
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  struct System_Int32_array *v15; // x8
-  System_Int32_array *v16; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  int32_t *v8; // x9
+  int32_t *v9; // x9
+  System_Int32_array *TurnEffectArray_45463924; // x0
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  struct System_Int32_array *turnEffect; // x8
+  System_Int32_array *TurnEffectArray_45464208; // x0
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
 
   if ( !battleEvent )
     goto LABEL_16;
   WarBoardBattleInfo_k__BackingField = battleEvent->fields._WarBoardBattleInfo_k__BackingField;
-  v5 = battleEvent;
   if ( WarBoardBattleInfo_k__BackingField )
   {
-    battleEvent = (WarBoardBattleEvent_o *)(unsigned int)WarBoardBattleInfo_k__BackingField->fields.battleTurn;
-    if ( (int)battleEvent >= 1 )
+    v5 = this;
+    this = (BattleWarBoardEventLimitTurn_o *)(unsigned int)WarBoardBattleInfo_k__BackingField->fields.battleTurn;
+    if ( (int)this >= 1 )
     {
-      Data_k__BackingField = v5->fields._Data_k__BackingField;
+      Data_k__BackingField = battleEvent->fields._Data_k__BackingField;
       if ( Data_k__BackingField )
       {
         limitAct = Data_k__BackingField->fields.limitAct;
-        Data_k__BackingField->fields.limitTurnCount = (int)battleEvent;
-        v10 = limitAct >= 1
-            ? (BattleWarBoardEventLimitTurn_Fields *)&Data_k__BackingField->fields.limitAct
-            : &this->fields;
-        Data_k__BackingField->fields.limitAct = v10->defLimitAct;
-        v11 = Data_k__BackingField->fields.turnEffectType >= 1
-            ? &Data_k__BackingField->fields.turnEffectType
-            : &this->fields.defEffectType;
-        Data_k__BackingField->fields.turnEffectType = *v11;
+        Data_k__BackingField->fields.limitTurnCount = (int)this;
+        v8 = limitAct >= 1 ? &Data_k__BackingField->fields.limitAct : (int32_t *)&v5->fields;
+        Data_k__BackingField->fields.limitAct = *v8;
+        v9 = Data_k__BackingField->fields.turnEffectType >= 1
+           ? &Data_k__BackingField->fields.turnEffectType
+           : &v5->fields.defEffectType;
+        Data_k__BackingField->fields.turnEffectType = *v9;
         if ( stage )
         {
-          TurnEffect = StageEntity__getTurnEffect(stage, (int32_t)battleEvent, 0LL);
-          Data_k__BackingField->fields.turnEffect = TurnEffect;
-          sub_1BDB81C((CGThumbnailListItem_o *)&Data_k__BackingField->fields.turnEffect, (int32_t)TurnEffect, v13, v14);
-          v15 = Data_k__BackingField->fields.turnEffect;
-          if ( v15 )
+          TurnEffectArray_45463924 = BattleTurnLimitUtil__GetTurnEffectArray_45463924(
+                                       (int32_t)this,
+                                       stage->fields.script,
+                                       0LL);
+          Data_k__BackingField->fields.turnEffect = TurnEffectArray_45463924;
+          sub_1BC2FAC(
+            (CGThumbnailListItem_o *)&Data_k__BackingField->fields.turnEffect,
+            (int32_t)TurnEffectArray_45463924,
+            v11,
+            v12);
+          turnEffect = Data_k__BackingField->fields.turnEffect;
+          if ( turnEffect )
           {
-            if ( !*(_QWORD *)&v15->max_length )
+            if ( !*(_QWORD *)&turnEffect->max_length )
             {
-              v16 = StageEntity__GetTurnEffect(
-                      stage,
-                      Data_k__BackingField->fields.limitTurnCount,
-                      this->fields.defTurnEffect,
-                      0LL);
-              Data_k__BackingField->fields.turnEffect = v16;
-              sub_1BDB81C((CGThumbnailListItem_o *)&Data_k__BackingField->fields.turnEffect, (int32_t)v16, v17, v18);
+              TurnEffectArray_45464208 = BattleTurnLimitUtil__GetTurnEffectArray_45464208(
+                                           Data_k__BackingField->fields.limitTurnCount,
+                                           v5->fields.defTurnEffect,
+                                           0LL);
+              Data_k__BackingField->fields.turnEffect = TurnEffectArray_45464208;
+              sub_1BC2FAC(
+                (CGThumbnailListItem_o *)&Data_k__BackingField->fields.turnEffect,
+                (int32_t)TurnEffectArray_45464208,
+                v15,
+                v16);
             }
             return;
           }
         }
       }
 LABEL_16:
-      sub_1BDBAD4(this, battleEvent);
+      sub_1BC3264(this, battleEvent);
     }
   }
 }

@@ -13,26 +13,26 @@ void __fastcall FullDownloadControl__Init(FullDownloadControl_o *this, const Met
   __int64 v7; // x1
   UILabel_o *infoDetailLb; // x20
 
-  if ( (byte_4B3FBA2 & 1) == 0 )
+  if ( (byte_4AFD112 & 1) == 0 )
   {
-    sub_1BDB878(&LocalizationManager_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_6593/*"FULLDOWNLOAD_INFO_DETAIL_TXT"*/, v3);
-    sub_1BDB878(&StringLiteral_6594/*"FULLDOWNLOAD_INFO_TXT"*/, v4);
-    byte_4B3FBA2 = 1;
+    sub_1BC3008(&LocalizationManager_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_6527/*"FULLDOWNLOAD_INFO_DETAIL_TXT"*/, v3);
+    sub_1BC3008(&StringLiteral_6528/*"FULLDOWNLOAD_INFO_TXT"*/, v4);
+    byte_4AFD112 = 1;
   }
   infoLb = this->fields.infoLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  downLoadBtn = LocalizationManager__Get((System_String_o *)StringLiteral_6594/*"FULLDOWNLOAD_INFO_TXT"*/, 0LL);
+  downLoadBtn = LocalizationManager__Get((System_String_o *)StringLiteral_6528/*"FULLDOWNLOAD_INFO_TXT"*/, 0LL);
   if ( !infoLb
     || (UILabel__set_text(infoLb, downLoadBtn, 0LL),
         infoDetailLb = this->fields.infoDetailLb,
-        downLoadBtn = LocalizationManager__Get((System_String_o *)StringLiteral_6593/*"FULLDOWNLOAD_INFO_DETAIL_TXT"*/, 0LL),
+        downLoadBtn = LocalizationManager__Get((System_String_o *)StringLiteral_6527/*"FULLDOWNLOAD_INFO_DETAIL_TXT"*/, 0LL),
         !infoDetailLb)
     || (UILabel__set_text(infoDetailLb, downLoadBtn, 0LL),
         (downLoadBtn = (System_String_o *)this->fields.downLoadBtn) == 0LL) )
   {
-    sub_1BDBAD4(downLoadBtn, v7);
+    sub_1BC3264(downLoadBtn, v7);
   }
   ((void (__fastcall *)(System_String_o *, __int64, Il2CppMethodPointer))downLoadBtn->klass->vtable._5_System_Collections_IEnumerable_GetEnumerator.method)(
     downLoadBtn,
@@ -74,28 +74,28 @@ void __fastcall FullDownloadControl__OnClickFullDl(FullDownloadControl_o *this, 
   System_String_o *v31; // x21
   System_Action_o *v32; // x22
 
-  if ( (byte_4B3FBA3 & 1) == 0 )
+  if ( (byte_4AFD113 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, method);
-    sub_1BDB878(&CommonConfirmDialog_ClickDelegate_TypeInfo, v3);
-    sub_1BDB878(&Method_FullDownloadControl_OnClickFullDl__, v4);
-    sub_1BDB878(&Method_FullDownloadControl_closeDlg__, v5);
-    sub_1BDB878(&Method_FullDownloadControl_endDownLoad__, v6);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v7);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, v9);
-    sub_1BDB878(&StringLiteral_3818/*"CONNECT_LATEST_MESSAGE"*/, v10);
-    sub_1BDB878(&StringLiteral_6590/*"FULLDOWNLOAD_CONFIRM_DECIDE"*/, v11);
-    sub_1BDB878(&StringLiteral_6591/*"FULLDOWNLOAD_CONFIRM_MSG"*/, v12);
-    sub_1BDB878(&StringLiteral_6592/*"FULLDOWNLOAD_CONFIRM_TITLE"*/, v13);
-    sub_1BDB878(&StringLiteral_3716/*"COMMON_CONFIRM_CANCEL"*/, v14);
-    sub_1BDB878(&StringLiteral_1/*""*/, v15);
-    byte_4B3FBA3 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, method);
+    sub_1BC3008(&CommonConfirmDialog_ClickDelegate_TypeInfo, v3);
+    sub_1BC3008(&Method_FullDownloadControl_OnClickFullDl__, v4);
+    sub_1BC3008(&Method_FullDownloadControl_closeDlg__, v5);
+    sub_1BC3008(&Method_FullDownloadControl_endDownLoad__, v6);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v7);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, v9);
+    sub_1BC3008(&StringLiteral_3749/*"CONNECT_LATEST_MESSAGE"*/, v10);
+    sub_1BC3008(&StringLiteral_6524/*"FULLDOWNLOAD_CONFIRM_DECIDE"*/, v11);
+    sub_1BC3008(&StringLiteral_6525/*"FULLDOWNLOAD_CONFIRM_MSG"*/, v12);
+    sub_1BC3008(&StringLiteral_6526/*"FULLDOWNLOAD_CONFIRM_TITLE"*/, v13);
+    sub_1BC3008(&StringLiteral_3647/*"COMMON_CONFIRM_CANCEL"*/, v14);
+    sub_1BC3008(&StringLiteral_1/*""*/, v15);
+    byte_4AFD113 = 1;
   }
   v16 = Method_FullDownloadControl_OnClickFullDl__;
   if ( (*((_BYTE *)Method_FullDownloadControl_OnClickFullDl__ + 83) & 2) != 0 )
-    v16 = (_QWORD *)sub_1BDB890(Method_FullDownloadControl_OnClickFullDl__);
-  v17 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v16, v16[4]);
+    v16 = (_QWORD *)sub_1BC3020(Method_FullDownloadControl_OnClickFullDl__);
+  v17 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v16, v16[4]);
   OverwriteAssetSoundName__PlaySystemSe(v17, 0, 0, 0LL);
   downLoadBtn = (AssetManager_o *)this->fields.downLoadBtn;
   if ( !downLoadBtn )
@@ -104,11 +104,11 @@ void __fastcall FullDownloadControl__OnClickFullDl(FullDownloadControl_o *this, 
     downLoadBtn,
     0LL,
     downLoadBtn->klass[1]._1.byval_arg.data);
-  downLoadBtn = (AssetManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  downLoadBtn = (AssetManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !downLoadBtn )
     goto LABEL_18;
   AssetManager__SetupAssetStorageAll(downLoadBtn, 0LL);
-  downLoadBtn = (AssetManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  downLoadBtn = (AssetManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !downLoadBtn )
     goto LABEL_18;
   DownloadSize = AssetManager__GetDownloadSize(downLoadBtn, 0LL);
@@ -117,17 +117,17 @@ void __fastcall FullDownloadControl__OnClickFullDl(FullDownloadControl_o *this, 
     v21 = DownloadSize;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_6592/*"FULLDOWNLOAD_CONFIRM_TITLE"*/, 0LL);
-    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_6591/*"FULLDOWNLOAD_CONFIRM_MSG"*/, 0LL);
-    downLoadBtn = (AssetManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_6526/*"FULLDOWNLOAD_CONFIRM_TITLE"*/, 0LL);
+    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_6525/*"FULLDOWNLOAD_CONFIRM_MSG"*/, 0LL);
+    downLoadBtn = (AssetManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
     if ( downLoadBtn )
     {
       v24 = (Il2CppObject *)AssetManager__ConvertDownloadSizeToString(downLoadBtn, (double)v21, 0LL);
       v25 = System_String__Format(v23, v24, 0LL);
-      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_6590/*"FULLDOWNLOAD_CONFIRM_DECIDE"*/, 0LL);
-      v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3716/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v29 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BDBAC4(CommonConfirmDialog_ClickDelegate_TypeInfo);
+      v26 = LocalizationManager__Get((System_String_o *)StringLiteral_6524/*"FULLDOWNLOAD_CONFIRM_DECIDE"*/, 0LL);
+      v27 = LocalizationManager__Get((System_String_o *)StringLiteral_3647/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v29 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BC3254(CommonConfirmDialog_ClickDelegate_TypeInfo);
       CommonConfirmDialog_ClickDelegate___ctor(v29, (Il2CppObject *)this, Method_FullDownloadControl_closeDlg__, 0LL);
       if ( Instance )
       {
@@ -154,13 +154,13 @@ void __fastcall FullDownloadControl__OnClickFullDl(FullDownloadControl_o *this, 
       }
     }
 LABEL_18:
-    sub_1BDBAD4(downLoadBtn, v18);
+    sub_1BC3264(downLoadBtn, v18);
   }
-  v30 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v30 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3818/*"CONNECT_LATEST_MESSAGE"*/, 0LL);
-  v32 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  v31 = LocalizationManager__Get((System_String_o *)StringLiteral_3749/*"CONNECT_LATEST_MESSAGE"*/, 0LL);
+  v32 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
   System_Action___ctor(v32, (Il2CppObject *)this, Method_FullDownloadControl_endDownLoad__, 0LL);
   if ( !v30 )
     goto LABEL_18;
@@ -189,7 +189,7 @@ void __fastcall FullDownloadControl___checkDownLoadData_b__7_0(FullDownloadContr
   System_Collections_IEnumerator_o *All; // x1
 
   All = FullDownloadControl__downLoadAll(this, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_70269772((UnityEngine_MonoBehaviour_o *)this, All, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70019872((UnityEngine_MonoBehaviour_o *)this, All, 0LL);
 }
 
 
@@ -206,15 +206,15 @@ void __fastcall FullDownloadControl__checkDownLoadData(FullDownloadControl_o *th
   __int64 v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4B3FBA5 & 1) == 0 )
+  if ( (byte_4AFD115 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, method);
-    sub_1BDB878(&AvalonSceneManager_TypeInfo, v3);
-    sub_1BDB878(&Method_FullDownloadControl__checkDownLoadData_b__7_0__, v4);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_4B3FBA5 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, method);
+    sub_1BC3008(&AvalonSceneManager_TypeInfo, v3);
+    sub_1BC3008(&Method_FullDownloadControl__checkDownLoadData_b__7_0__, v4);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    byte_4AFD115 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v7 = AvalonSceneManager_TypeInfo;
   v8 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -223,10 +223,10 @@ void __fastcall FullDownloadControl__checkDownLoadData(FullDownloadControl_o *th
     v7 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v7->static_fields->DEFAULT_FADE_TIME;
-  v10 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_FullDownloadControl__checkDownLoadData_b__7_0__, 0LL);
   if ( !v8 )
-    sub_1BDBAD4(v11, v12);
+    sub_1BC3264(v11, v12);
   CommonUI__maskFadeout(v8, 1, DEFAULT_FADE_TIME, v10, 0LL);
 }
 
@@ -244,16 +244,16 @@ void __fastcall FullDownloadControl__closeDlg(FullDownloadControl_o *this, bool 
   __int64 v12; // x0
   __int64 v13; // x1
 
-  if ( (byte_4B3FBA4 & 1) == 0 )
+  if ( (byte_4AFD114 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, isRes);
-    sub_1BDB878(&Method_FullDownloadControl_checkDownLoadData__, v5);
-    sub_1BDB878(&Method_FullDownloadControl_endDownLoad__, v6);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    byte_4B3FBA4 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, isRes);
+    sub_1BC3008(&Method_FullDownloadControl_checkDownLoadData__, v5);
+    sub_1BC3008(&Method_FullDownloadControl_endDownLoad__, v6);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
+    byte_4AFD114 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v9 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v9 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
   v10 = v9;
   if ( isRes )
     v11 = &Method_FullDownloadControl_checkDownLoadData__;
@@ -261,8 +261,8 @@ void __fastcall FullDownloadControl__closeDlg(FullDownloadControl_o *this, bool 
     v11 = &Method_FullDownloadControl_endDownLoad__;
   System_Action___ctor(v9, (Il2CppObject *)this, *v11, 0LL);
   if ( !Instance )
-    sub_1BDBAD4(v12, v13);
-  CommonUI__CloseConfirmDialog_30833860((CommonUI_o *)Instance, v10, 0LL);
+    sub_1BC3264(v12, v13);
+  CommonUI__CloseConfirmDialog_30731324((CommonUI_o *)Instance, v10, 0LL);
 }
 
 
@@ -274,16 +274,16 @@ System_Collections_IEnumerator_o *__fastcall FullDownloadControl__downLoadAll(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B3FBA6 & 1) == 0 )
+  if ( (byte_4AFD116 & 1) == 0 )
   {
-    sub_1BDB878(&FullDownloadControl__downLoadAll_d__8_TypeInfo, method);
-    byte_4B3FBA6 = 1;
+    sub_1BC3008(&FullDownloadControl__downLoadAll_d__8_TypeInfo, method);
+    byte_4AFD116 = 1;
   }
-  v3 = sub_1BDBAC4(FullDownloadControl__downLoadAll_d__8_TypeInfo);
+  v3 = sub_1BC3254(FullDownloadControl__downLoadAll_d__8_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -293,17 +293,17 @@ void __fastcall FullDownloadControl__endDownLoad(FullDownloadControl_o *this, co
   AssetManager_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B3FBA7 & 1) == 0 )
+  if ( (byte_4AFD117 & 1) == 0 )
   {
-    sub_1BDB878(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, method);
-    byte_4B3FBA7 = 1;
+    sub_1BC3008(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, method);
+    byte_4AFD117 = 1;
   }
-  Instance = (AssetManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = (AssetManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !Instance
     || (AssetManager__CancelDownloadAssetStorageAll(Instance, 0LL),
         (Instance = (AssetManager_o *)this->fields.downLoadBtn) == 0LL) )
   {
-    sub_1BDBAD4(Instance, v4);
+    sub_1BC3264(Instance, v4);
   }
   ((void (__fastcall *)(AssetManager_o *, __int64, void *))Instance->klass[1]._1.namespaze)(
     Instance,
@@ -345,26 +345,26 @@ bool __fastcall FullDownloadControl__downLoadAll_d__8__MoveNext(
   bool result; // w0
   CommonUI_o *v20; // x19
 
-  if ( (byte_4B3FBA8 & 1) == 0 )
+  if ( (byte_4AFD118 & 1) == 0 )
   {
-    sub_1BDB878(&AvalonSceneManager_TypeInfo, method);
-    sub_1BDB878(&ManagementManager_TypeInfo, v3);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, v5);
-    sub_1BDB878(&UnityEngine_WaitForEndOfFrame_TypeInfo, v6);
-    byte_4B3FBA8 = 1;
+    sub_1BC3008(&AvalonSceneManager_TypeInfo, method);
+    sub_1BC3008(&ManagementManager_TypeInfo, v3);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__, v5);
+    sub_1BC3008(&UnityEngine_WaitForEndOfFrame_TypeInfo, v6);
+    byte_4AFD118 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
   {
     this->fields.__1__state = -1;
     _4__this = this->fields.__4__this;
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_21;
     if ( CommonUI__IsBusyLoad(Instance, 0LL) )
       goto LABEL_12;
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_21;
     CommonUI__SetLoadMode(Instance, 0, 0LL);
@@ -377,38 +377,38 @@ bool __fastcall FullDownloadControl__downLoadAll_d__8__MoveNext(
       Instance,
       1LL,
       Instance->klass[1]._1.byval_arg.data);
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v20 = Instance;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
     if ( !v20 )
 LABEL_21:
-      sub_1BDBAD4(Instance, v10);
+      sub_1BC3264(Instance, v10);
     CommonUI__maskFadein(v20, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0LL, 0LL);
   }
   else if ( !_1__state )
   {
     this->fields.__1__state = -1;
-    v8 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    v8 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
     if ( !ManagementManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
     Instance = (CommonUI_o *)ManagementManager__get_DownloadParallelMax(0LL);
     if ( v8 )
     {
       AssetManager__DownloadAssetStorageAll((AssetManager_o *)v8, (int32_t)Instance, 0LL);
-      Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( Instance )
       {
         CommonUI__SetLoadMode(Instance, 5, 0LL);
-        v11 = (UnityEngine_WaitForEndOfFrame_o *)sub_1BDBAC4(UnityEngine_WaitForEndOfFrame_TypeInfo);
+        v11 = (UnityEngine_WaitForEndOfFrame_o *)sub_1BC3254(UnityEngine_WaitForEndOfFrame_TypeInfo);
         UnityEngine_WaitForEndOfFrame___ctor(v11, 0LL);
         this->fields._wait_5__2 = v11;
-        sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._wait_5__2, (int32_t)v11, v12, v13);
+        sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._wait_5__2, (int32_t)v11, v12, v13);
 LABEL_12:
         wait_5__2 = (Il2CppObject *)this->fields._wait_5__2;
         this->fields.__2__current = wait_5__2;
         p__2__current = &this->fields.__2__current;
-        sub_1BDB81C((CGThumbnailListItem_o *)p__2__current, (int32_t)wait_5__2, v14, v15);
+        sub_1BC2FAC((CGThumbnailListItem_o *)p__2__current, (int32_t)wait_5__2, v14, v15);
         result = 1;
         *((_DWORD *)p__2__current - 2) = 1;
         return result;
@@ -436,11 +436,11 @@ void __fastcall __noreturn FullDownloadControl__downLoadAll_d__8__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BDB88C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BDBAC4(v2);
+  v2 = sub_1BC301C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BC3254(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BDB88C(&Method_FullDownloadControl__downLoadAll_d__8_System_Collections_IEnumerator_Reset__);
-  sub_1BDB9A0(v3, v4);
+  v4 = sub_1BC301C(&Method_FullDownloadControl__downLoadAll_d__8_System_Collections_IEnumerator_Reset__);
+  sub_1BC3130(v3, v4);
 }
 
 

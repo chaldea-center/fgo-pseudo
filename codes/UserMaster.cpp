@@ -1,12 +1,12 @@
 void __fastcall UserMaster___ctor(UserMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B45905 & 1) == 0 )
+  if ( (byte_4B02EB2 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataMasterBase_UserMaster__UserEntity__long___ctor__, method);
-    byte_4B45905 = 1;
+    sub_1BC3008(&Method_DataMasterBase_UserMaster__UserEntity__long___ctor__, method);
+    byte_4B02EB2 = 1;
   }
   DataMasterBase_object__object__long____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     27,
-    (const MethodInfo_32E2074 *)Method_DataMasterBase_UserMaster__UserEntity__long___ctor__);
+    (const MethodInfo_32AF2A8 *)Method_DataMasterBase_UserMaster__UserEntity__long___ctor__);
 }

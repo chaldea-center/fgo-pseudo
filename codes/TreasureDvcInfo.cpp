@@ -8,21 +8,21 @@ void __fastcall TreasureDvcInfo___ctor(TreasureDvcInfo_o *this, const MethodInfo
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B45E4F & 1) == 0 )
+  if ( (byte_4B033FC & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_1/*""*/, method);
-    byte_4B45E4F = 1;
+    sub_1BC3008(&StringLiteral_1/*""*/, method);
+    byte_4B033FC = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.id = 0LL;
   this->fields.maxLv = 0;
   v3 = (int)StringLiteral_1/*""*/;
   this->fields.name = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.name, v3, v4, v5);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.name, v3, v4, v5);
   v6 = (int)StringLiteral_1/*""*/;
   this->fields.explanation = (struct System_String_o *)StringLiteral_1/*""*/;
   p_explanation = &this->fields.explanation;
-  sub_1BDB81C((CGThumbnailListItem_o *)p_explanation, v6, v8, v9);
+  sub_1BC2FAC((CGThumbnailListItem_o *)p_explanation, v6, v8, v9);
   p_explanation[1] = 0LL;
   p_explanation[2] = 0LL;
   *((_BYTE *)p_explanation + 24) = 0;
@@ -62,24 +62,24 @@ System_String_o *__fastcall TreasureDvcInfo__GetName(TreasureDvcInfo_o *this, in
   System_String_o *v14; // x0
   LocalizationManager_c *v16; // x0
 
-  if ( (byte_4B45E50 & 1) == 0 )
+  if ( (byte_4B033FD & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_TreasureDvcMaster___, *(_QWORD *)&svtId);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v5);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1BDB878(&StringLiteral_1/*""*/, v7);
-    sub_1BDB878(&StringLiteral_9354/*"NP_NAME"*/, v8);
-    byte_4B45E50 = 1;
+    sub_1BC3008(&Method_DataManager_GetMasterData_TreasureDvcMaster___, *(_QWORD *)&svtId);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v5);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1BC3008(&StringLiteral_1/*""*/, v7);
+    sub_1BC3008(&StringLiteral_9276/*"NP_NAME"*/, v8);
+    byte_4B033FD = 1;
   }
   if ( this->fields.id < 1 )
     return (System_String_o *)StringLiteral_1/*""*/;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_303395C *)Method_DataManager_GetMasterData_TreasureDvcMaster___)) == 0LL )
+                     (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_TreasureDvcMaster___)) == 0LL )
   {
-    sub_1BDBAD4(Instance, v10);
+    sub_1BC3264(Instance, v10);
   }
   v11 = TreasureDvcMaster__GetEntityCheckServantOverwrite((TreasureDvcMaster_o *)Instance, svtId, this->fields.id, 0LL);
   v13 = v11;
@@ -88,7 +88,7 @@ System_String_o *__fastcall TreasureDvcInfo__GetName(TreasureDvcInfo_o *this, in
     if ( v11 )
     {
 LABEL_8:
-      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_9354/*"NP_NAME"*/, 0LL);
+      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_9276/*"NP_NAME"*/, 0LL);
       return System_String__Format(v14, (Il2CppObject *)v13->fields.name, 0LL);
     }
   }
@@ -98,10 +98,10 @@ LABEL_8:
     if ( v13 )
       goto LABEL_8;
   }
-  if ( !byte_4B3FEFD )
+  if ( !byte_4AFD46D )
   {
-    sub_1BDB878(&LocalizationManager_TypeInfo, v12);
-    byte_4B3FEFD = 1;
+    sub_1BC3008(&LocalizationManager_TypeInfo, v12);
+    byte_4AFD46D = 1;
   }
   v16 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )

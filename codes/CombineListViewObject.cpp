@@ -1,9 +1,9 @@
 void __fastcall CombineListViewObject___ctor(CombineListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B485ED & 1) == 0 )
+  if ( (byte_4B05C81 & 1) == 0 )
   {
-    sub_1BDB878(&ListViewObject_TypeInfo, method);
-    byte_4B485ED = 1;
+    sub_1BC3008(&ListViewObject_TypeInfo, method);
+    byte_4B05C81 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,20 +19,20 @@ void __fastcall CombineListViewObject__Awake(CombineListViewObject_o *this, cons
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B485DD & 1) == 0 )
+  if ( (byte_4B05C71 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_CombineListViewItemDraw___, method);
-    byte_4B485DD = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_CombineListViewItemDraw___, method);
+    byte_4B05C71 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BDBAD4(0LL, v3);
+    sub_1BC3264(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_CombineListViewItemDraw___);
+                       (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_CombineListViewItemDraw___);
   this->fields.itemDraw = (struct CombineListViewItemDraw_o *)Component_object;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -45,21 +45,21 @@ UnityEngine_GameObject_o *__fastcall CombineListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_4B485E0 & 1) == 0 )
+  if ( (byte_4B05C74 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___, method);
-    byte_4B485E0 = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___, method);
+    byte_4B05C74 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___)) == 0LL) )
   {
-    sub_1BDBAD4(DragObject, v4);
+    sub_1BC3264(DragObject, v4);
   }
-  CombineListViewObject__Init_47015696((CombineListViewObject_o *)DragObject, 2, v6);
+  CombineListViewObject__Init_47155036((CombineListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -81,10 +81,10 @@ void __fastcall CombineListViewObject__EventEnterMove(CombineListViewObject_o *t
   const MethodInfo *v16; // x3
   UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4B485E7 & 1) == 0 )
+  if ( (byte_4B05C7B & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_6223/*"EventEnterMove2"*/, method);
-    byte_4B485E7 = 1;
+    sub_1BC3008(&StringLiteral_6156/*"EventEnterMove2"*/, method);
+    byte_4B05C7B = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -109,16 +109,16 @@ void __fastcall CombineListViewObject__EventEnterMove(CombineListViewObject_o *t
                                                     0LL)) == 0LL) )
   {
 LABEL_9:
-    sub_1BDBAD4(dragObject, method);
+    sub_1BC3264(dragObject, method);
   }
   v10 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v10[3].monitor = gameObject;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v10[3].monitor, (int32_t)gameObject, v12, v13);
-  v14 = StringLiteral_6223/*"EventEnterMove2"*/;
-  *(_QWORD *)&v10[3].fields.m_CachedPtr = StringLiteral_6223/*"EventEnterMove2"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v10[3].fields, v14, v15, v16);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v10[3].monitor, (int32_t)gameObject, v12, v13);
+  v14 = StringLiteral_6156/*"EventEnterMove2"*/;
+  *(_QWORD *)&v10[3].fields.m_CachedPtr = StringLiteral_6156/*"EventEnterMove2"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v10[3].fields, v14, v15, v16);
 }
 
 
@@ -129,17 +129,17 @@ void __fastcall CombineListViewObject__EventEnterMove2(CombineListViewObject_o *
   const MethodInfo *v5; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4B485E8 & 1) == 0 )
+  if ( (byte_4B05C7C & 1) == 0 )
   {
-    sub_1BDB878(&NGUITools_TypeInfo, method);
-    byte_4B485E8 = 1;
+    sub_1BC3008(&NGUITools_TypeInfo, method);
+    byte_4B05C7C = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0LL);
   this->fields.dragObject = 0LL;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v4, v5);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v4, v5);
   CombineListViewObject__EventMoveEnd(this, v6);
 }
 
@@ -157,11 +157,11 @@ void __fastcall CombineListViewObject__EventEnterStart(
   UnityEngine_GameObject_o *dragObject; // x0
   const MethodInfo *v11; // x2
 
-  if ( (byte_4B485E6 & 1) == 0 )
+  if ( (byte_4B05C7A & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___, method);
-    sub_1BDB878(&StringLiteral_6222/*"EventEnterMove"*/, v5);
-    byte_4B485E6 = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___, method);
+    sub_1BC3008(&StringLiteral_6155/*"EventEnterMove"*/, v5);
+    byte_4B05C7A = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -171,19 +171,19 @@ void __fastcall CombineListViewObject__EventEnterStart(
                                             this,
                                             this->klass->vtable._9_SetInput.methodPtr);
   this->fields.dragObject = v6;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v6, v7, v8);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v6, v7, v8);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___)) == 0LL )
+                                                   (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___)) == 0LL )
   {
-    sub_1BDBAD4(dragObject, v9);
+    sub_1BC3264(dragObject, v9);
   }
-  CombineListViewObject__Init_47015696((CombineListViewObject_o *)dragObject, 2, v11);
+  CombineListViewObject__Init_47155036((CombineListViewObject_o *)dragObject, 2, v11);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6222/*"EventEnterMove"*/,
+    (System_String_o *)StringLiteral_6155/*"EventEnterMove"*/,
     delay,
     0LL);
 }
@@ -207,10 +207,10 @@ void __fastcall CombineListViewObject__EventIntoMove(CombineListViewObject_o *th
   const MethodInfo *v17; // x3
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4B485E4 & 1) == 0 )
+  if ( (byte_4B05C78 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_6236/*"EventIntoMove2"*/, method);
-    byte_4B485E4 = 1;
+    sub_1BC3008(&StringLiteral_6172/*"EventIntoMove2"*/, method);
+    byte_4B05C78 = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -237,16 +237,16 @@ void __fastcall CombineListViewObject__EventIntoMove(CombineListViewObject_o *th
                                                     0LL)) == 0LL) )
   {
 LABEL_9:
-    sub_1BDBAD4(dragObject, method);
+    sub_1BC3264(dragObject, method);
   }
   v11 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v11[3].monitor = gameObject;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v11[3].monitor, (int32_t)gameObject, v13, v14);
-  v15 = StringLiteral_6236/*"EventIntoMove2"*/;
-  *(_QWORD *)&v11[3].fields.m_CachedPtr = StringLiteral_6236/*"EventIntoMove2"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v11[3].fields, v15, v16, v17);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v11[3].monitor, (int32_t)gameObject, v13, v14);
+  v15 = StringLiteral_6172/*"EventIntoMove2"*/;
+  *(_QWORD *)&v11[3].fields.m_CachedPtr = StringLiteral_6172/*"EventIntoMove2"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v11[3].fields, v15, v16, v17);
 }
 
 
@@ -258,10 +258,10 @@ void __fastcall CombineListViewObject__EventIntoMove2(CombineListViewObject_o *t
   const MethodInfo *v6; // x3
   const MethodInfo *v7; // x1
 
-  if ( (byte_4B485E5 & 1) == 0 )
+  if ( (byte_4B05C79 & 1) == 0 )
   {
-    sub_1BDB878(&NGUITools_TypeInfo, method);
-    byte_4B485E5 = 1;
+    sub_1BC3008(&NGUITools_TypeInfo, method);
+    byte_4B05C79 = 1;
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, 1, 0LL);
   this->fields.dispMode = 2;
@@ -271,7 +271,7 @@ void __fastcall CombineListViewObject__EventIntoMove2(CombineListViewObject_o *t
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0LL);
   this->fields.dragObject = 0LL;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v5, v6);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v5, v6);
   CombineListViewObject__EventMoveEnd(this, v7);
 }
 
@@ -293,11 +293,11 @@ void __fastcall CombineListViewObject__EventIntoStart(
   UnityEngine_Transform_o *transform; // x20
   int v14; // s0
 
-  if ( (byte_4B485E3 & 1) == 0 )
+  if ( (byte_4B05C77 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___, method);
-    sub_1BDB878(&StringLiteral_6235/*"EventIntoMove"*/, v5);
-    byte_4B485E3 = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___, method);
+    sub_1BC3008(&StringLiteral_6171/*"EventIntoMove"*/, v5);
+    byte_4B05C77 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -308,19 +308,19 @@ void __fastcall CombineListViewObject__EventIntoStart(
                                             this->klass->vtable._9_SetInput.methodPtr);
   this->fields.dragObject = v6;
   p_dragObject = &this->fields.dragObject;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v6, v8, v9);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v6, v8, v9);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___)) == 0LL
-    || (CombineListViewObject__Init_47015696((CombineListViewObject_o *)dragObject, 2, v12),
+                                                   (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___)) == 0LL
+    || (CombineListViewObject__Init_47155036((CombineListViewObject_o *)dragObject, 2, v12),
         (dragObject = *p_dragObject) == 0LL)
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0LL),
         (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0LL)) == 0LL)
-    || (*(UnityEngine_Vector3_o *)&v14 = UnityEngine_Transform__TransformPoint_70311200(
+    || (*(UnityEngine_Vector3_o *)&v14 = UnityEngine_Transform__TransformPoint_70060900(
                                            (UnityEngine_Transform_o *)dragObject,
                                            1000.0,
                                            0.0,
@@ -328,12 +328,12 @@ void __fastcall CombineListViewObject__EventIntoStart(
                                            0LL),
         !transform) )
   {
-    sub_1BDBAD4(dragObject, v10);
+    sub_1BC3264(dragObject, v10);
   }
   UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v14, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6235/*"EventIntoMove"*/,
+    (System_String_o *)StringLiteral_6171/*"EventIntoMove"*/,
     delay,
     0LL);
 }
@@ -355,7 +355,7 @@ void __fastcall CombineListViewObject__EventMoveEnd(CombineListViewObject_o *thi
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1BDB81C(p_callbackFunc, 0, v2, v3);
+    sub_1BC2FAC(p_callbackFunc, 0, v2, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       *(_QWORD *)&v5->fields.extra_arg);
@@ -381,10 +381,10 @@ void __fastcall CombineListViewObject__EventRetryMove(CombineListViewObject_o *t
   const MethodInfo *v17; // x3
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4B485EA & 1) == 0 )
+  if ( (byte_4B05C7E & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_6254/*"EventRetryMove2"*/, method);
-    byte_4B485EA = 1;
+    sub_1BC3008(&StringLiteral_6190/*"EventRetryMove2"*/, method);
+    byte_4B05C7E = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -411,16 +411,16 @@ void __fastcall CombineListViewObject__EventRetryMove(CombineListViewObject_o *t
                                                     0LL)) == 0LL) )
   {
 LABEL_9:
-    sub_1BDBAD4(dragObject, method);
+    sub_1BC3264(dragObject, method);
   }
   v11 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   v11[3].monitor = gameObject;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v11[3].monitor, (int32_t)gameObject, v13, v14);
-  v15 = StringLiteral_6254/*"EventRetryMove2"*/;
-  *(_QWORD *)&v11[3].fields.m_CachedPtr = StringLiteral_6254/*"EventRetryMove2"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v11[3].fields, v15, v16, v17);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v11[3].monitor, (int32_t)gameObject, v13, v14);
+  v15 = StringLiteral_6190/*"EventRetryMove2"*/;
+  *(_QWORD *)&v11[3].fields.m_CachedPtr = StringLiteral_6190/*"EventRetryMove2"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v11[3].fields, v15, v16, v17);
 }
 
 
@@ -432,10 +432,10 @@ void __fastcall CombineListViewObject__EventRetryMove2(CombineListViewObject_o *
   const MethodInfo *v6; // x3
   const MethodInfo *v7; // x1
 
-  if ( (byte_4B485EB & 1) == 0 )
+  if ( (byte_4B05C7F & 1) == 0 )
   {
-    sub_1BDB878(&NGUITools_TypeInfo, method);
-    byte_4B485EB = 1;
+    sub_1BC3008(&NGUITools_TypeInfo, method);
+    byte_4B05C7F = 1;
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, 1, 0LL);
   this->fields.dispMode = 2;
@@ -445,7 +445,7 @@ void __fastcall CombineListViewObject__EventRetryMove2(CombineListViewObject_o *
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0LL);
   this->fields.dragObject = 0LL;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v5, v6);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v5, v6);
   CombineListViewObject__EventMoveEnd(this, v7);
 }
 
@@ -467,11 +467,11 @@ void __fastcall CombineListViewObject__EventRetryStart(
   UnityEngine_Transform_o *transform; // x20
   int v14; // s0
 
-  if ( (byte_4B485E9 & 1) == 0 )
+  if ( (byte_4B05C7D & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___, method);
-    sub_1BDB878(&StringLiteral_6253/*"EventRetryMove"*/, v5);
-    byte_4B485E9 = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___, method);
+    sub_1BC3008(&StringLiteral_6189/*"EventRetryMove"*/, v5);
+    byte_4B05C7D = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -482,19 +482,19 @@ void __fastcall CombineListViewObject__EventRetryStart(
                                             this->klass->vtable._9_SetInput.methodPtr);
   this->fields.dragObject = v6;
   p_dragObject = &this->fields.dragObject;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v6, v8, v9);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v6, v8, v9);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___)) == 0LL
-    || (CombineListViewObject__Init_47015696((CombineListViewObject_o *)dragObject, 2, v12),
+                                                   (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_CombineListViewObject___)) == 0LL
+    || (CombineListViewObject__Init_47155036((CombineListViewObject_o *)dragObject, 2, v12),
         (dragObject = *p_dragObject) == 0LL)
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0LL),
         (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0LL)) == 0LL)
-    || (*(UnityEngine_Vector3_o *)&v14 = UnityEngine_Transform__TransformPoint_70311200(
+    || (*(UnityEngine_Vector3_o *)&v14 = UnityEngine_Transform__TransformPoint_70060900(
                                            (UnityEngine_Transform_o *)dragObject,
                                            0.0,
                                            600.0,
@@ -502,12 +502,12 @@ void __fastcall CombineListViewObject__EventRetryStart(
                                            0LL),
         !transform) )
   {
-    sub_1BDBAD4(dragObject, v10);
+    sub_1BC3264(dragObject, v10);
   }
   UnityEngine_Transform__set_position(transform, *(UnityEngine_Vector3_o *)&v14, 0LL);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6253/*"EventRetryMove"*/,
+    (System_String_o *)StringLiteral_6189/*"EventRetryMove"*/,
     delay,
     0LL);
 }
@@ -520,10 +520,10 @@ CombineListViewItem_o *__fastcall CombineListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4B485DF & 1) == 0 )
+  if ( (byte_4B05C73 & 1) == 0 )
   {
-    sub_1BDB878(&CombineListViewItem_TypeInfo, method);
-    byte_4B485DF = 1;
+    sub_1BC3008(&CombineListViewItem_TypeInfo, method);
+    byte_4B05C73 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -562,10 +562,10 @@ void __fastcall CombineListViewObject__Init(
   int32_t v23; // w8
   CGThumbnailListItem_c *klass; // x19
 
-  if ( (byte_4B485E1 & 1) == 0 )
+  if ( (byte_4B05C75 & 1) == 0 )
   {
-    sub_1BDB878(&CombineListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B485E1 = 1;
+    sub_1BC3008(&CombineListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B05C75 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -593,12 +593,12 @@ void __fastcall CombineListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1BDBAD4(transform, v16);
+    sub_1BC3264(transform, v16);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v18, v19);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v18, v19);
   v23 = 1;
   switch ( v12 )
   {
@@ -636,7 +636,7 @@ LABEL_14:
       if ( p_callbackFunc->klass )
       {
         p_callbackFunc->klass = 0LL;
-        sub_1BDB81C(p_callbackFunc, 0, v21, v22);
+        sub_1BC2FAC(p_callbackFunc, 0, v21, v22);
         ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
           klass->_1.element_class,
           *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -653,7 +653,7 @@ void __fastcall CombineListViewObject__InitItem(CombineListViewObject_o *this, c
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall CombineListViewObject__Init_47015696(
+void __fastcall CombineListViewObject__Init_47155036(
         CombineListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -661,17 +661,17 @@ void __fastcall CombineListViewObject__Init_47015696(
   const MethodInfo *v3; // x3
   int v4; // s1
 
-  if ( !byte_4B3E911 )
+  if ( !byte_4AFBDB1 )
   {
-    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B3E911 = 1;
+    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4AFBDB1 = 1;
   }
   CombineListViewObject__Init(this, initMode, 0LL, 0.0, *(UnityEngine_Vector3_o *)&v4, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall CombineListViewObject__Init_47016996(
+void __fastcall CombineListViewObject__Init_47157180(
         CombineListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -680,17 +680,17 @@ void __fastcall CombineListViewObject__Init_47016996(
 {
   int v5; // s1
 
-  if ( !byte_4B3E911 )
+  if ( !byte_4AFBDB1 )
   {
-    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B3E911 = 1;
+    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4AFBDB1 = 1;
   }
   CombineListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall CombineListViewObject__Init_47017096(
+void __fastcall CombineListViewObject__Init_47157280(
         CombineListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -698,10 +698,10 @@ void __fastcall CombineListViewObject__Init_47017096(
 {
   int v4; // s1
 
-  if ( !byte_4B3E911 )
+  if ( !byte_4AFBDB1 )
   {
-    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B3E911 = 1;
+    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4AFBDB1 = 1;
   }
   CombineListViewObject__Init(this, initMode, callbackFunc, 0.0, *(UnityEngine_Vector3_o *)&v4, method);
 }
@@ -717,11 +717,11 @@ void __fastcall CombineListViewObject__OnDestroy(CombineListViewObject_o *this, 
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B485DE & 1) == 0 )
+  if ( (byte_4B05C72 & 1) == 0 )
   {
-    sub_1BDB878(&NGUITools_TypeInfo, method);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B485DE = 1;
+    sub_1BC3008(&NGUITools_TypeInfo, method);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B05C72 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -735,7 +735,7 @@ void __fastcall CombineListViewObject__OnDestroy(CombineListViewObject_o *this, 
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1BDB81C(p_dragObject, 0, v8, v9);
+    sub_1BC2FAC(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -747,11 +747,11 @@ void __fastcall CombineListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_42764972((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_42800124((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
-void __fastcall CombineListViewObject__SetItem_47019088(
+void __fastcall CombineListViewObject__SetItem_47155428(
         CombineListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -769,14 +769,13 @@ void __fastcall CombineListViewObject__SetupDisp(CombineListViewObject_o *this, 
   bool v6; // w1
   UnityEngine_Object_o *itemDraw; // x21
   __int64 v8; // x1
-  const MethodInfo *v9; // x3
-  CombineListViewItemDraw_o *v10; // x0
+  CombineListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4B485E2 & 1) == 0 )
+  if ( (byte_4B05C76 & 1) == 0 )
   {
-    sub_1BDB878(&CombineListViewItem_TypeInfo, method);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B485E2 = 1;
+    sub_1BC3008(&CombineListViewItem_TypeInfo, method);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B05C76 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -798,10 +797,10 @@ LABEL_8:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
   {
-    v10 = this->fields.itemDraw;
-    if ( !v10 )
-      sub_1BDBAD4(0LL, v8);
-    CombineListViewItemDraw__SetItem(v10, (CombineListViewItem_o *)linkItem, this->fields.dispMode, v9);
+    v9 = this->fields.itemDraw;
+    if ( !v9 )
+      sub_1BC3264(0LL, v8);
+    CombineListViewItemDraw__SetItem(v9, (CombineListViewItem_o *)linkItem, this->fields.dispMode, 0LL);
   }
 }
 
@@ -811,7 +810,7 @@ void __fastcall CombineListViewObject__Start(CombineListViewObject_o *this, cons
   const MethodInfo *v2; // x2
 
   if ( !this->fields.state )
-    CombineListViewObject__Init_47015696(this, 2, v2);
+    CombineListViewObject__Init_47155036(this, 2, v2);
 }
 
 
@@ -827,11 +826,11 @@ System_String_o *__fastcall CombineListViewObject__ToString(CombineListViewObjec
   __int64 v11; // [xsp+20h] [xbp-40h] BYREF
   float v12; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_4B485EC & 1) == 0 )
+  if ( (byte_4B05C80 & 1) == 0 )
   {
-    sub_1BDB878(&CombineListViewItemDraw_DispMode_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_115/*" "*/, v3);
-    byte_4B485EC = 1;
+    sub_1BC3008(&CombineListViewItemDraw_DispMode_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_113/*" "*/, v3);
+    byte_4B05C80 = 1;
   }
   v12 = 0.0;
   v11 = 0LL;
@@ -843,8 +842,8 @@ System_String_o *__fastcall CombineListViewObject__ToString(CombineListViewObjec
   v6 = v4;
   v11 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v12 = z;
-  v7 = (System_String_o *)sub_1D998C8(&v11, 0LL, 0LL, 0LL);
-  return System_String__Concat_62610508(v6, (System_String_o *)StringLiteral_115/*" "*/, v7, 0LL);
+  v7 = (System_String_o *)sub_1D80BBC(&v11, 0LL, 0LL, 0LL);
+  return System_String__Concat_62386896(v6, (System_String_o *)StringLiteral_113/*" "*/, v7, 0LL);
 }
 
 
@@ -863,10 +862,10 @@ void __fastcall CombineListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B485DB & 1) == 0 )
+  if ( (byte_4B05C6F & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, value);
-    byte_4B485DB = 1;
+    sub_1BC3008(&System_Action_TypeInfo, value);
+    byte_4B05C6F = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -879,13 +878,13 @@ void __fastcall CombineListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
+    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BDBD94(v8);
+  sub_1BC3524(v8);
   CombineListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -904,10 +903,10 @@ void __fastcall CombineListViewObject__remove_callbackFunc(
   CombineListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B485DC & 1) == 0 )
+  if ( (byte_4B05C70 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, value);
-    byte_4B485DC = 1;
+    sub_1BC3008(&System_Action_TypeInfo, value);
+    byte_4B05C70 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -920,12 +919,12 @@ void __fastcall CombineListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C15B34(p_callbackFunc, v8, v6);
+    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BDBD94(v8);
+  sub_1BC3524(v8);
   CombineListViewObject__Awake(v11, v12);
 }

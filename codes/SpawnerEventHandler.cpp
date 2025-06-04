@@ -7,22 +7,22 @@ void __fastcall SpawnerEventHandler___ctor(SpawnerEventHandler_o *this, const Me
 
 void __fastcall SpawnerEventHandler__Init(SpawnerEventHandler_o *this, const MethodInfo *method)
 {
-  System_Object_array *ComponentsInChildren_object__50507220; // x0
+  System_Object_array *ComponentsInChildren_object__50303708; // x0
   struct UnityEngine_ParticleSystem_array **p_particleArray; // x19
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4B4819F & 1) == 0 )
+  if ( (byte_4B05776 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___, method);
-    byte_4B4819F = 1;
+    sub_1BC3008(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___, method);
+    byte_4B05776 = 1;
   }
-  ComponentsInChildren_object__50507220 = UnityEngine_Component__GetComponentsInChildren_object__50507220(
+  ComponentsInChildren_object__50303708 = UnityEngine_Component__GetComponentsInChildren_object__50303708(
                                             (UnityEngine_Component_o *)this,
-                                            (const MethodInfo_302ADD4 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
-  this->fields.particleArray = (struct UnityEngine_ParticleSystem_array *)ComponentsInChildren_object__50507220;
+                                            (const MethodInfo_2FF92DC *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+  this->fields.particleArray = (struct UnityEngine_ParticleSystem_array *)ComponentsInChildren_object__50303708;
   p_particleArray = &this->fields.particleArray;
-  sub_1BDB81C((CGThumbnailListItem_o *)p_particleArray, (int32_t)ComponentsInChildren_object__50507220, v5, v6);
+  sub_1BC2FAC((CGThumbnailListItem_o *)p_particleArray, (int32_t)ComponentsInChildren_object__50303708, v5, v6);
   *((_BYTE *)p_particleArray + 8) = 1;
 }
 
@@ -48,7 +48,7 @@ void __fastcall SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, cons
       if ( (int)v5 >= max_length )
         break;
       if ( (unsigned int)v5 >= max_length )
-        sub_1BDBADC(this, method, v2);
+        sub_1BC326C(this, method, v2);
       this = (SpawnerEventHandler_o *)particleArray->m_Items[v5];
       if ( this )
       {
@@ -58,7 +58,7 @@ void __fastcall SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, cons
         if ( particleArray )
           continue;
       }
-      sub_1BDBAD4(this, method);
+      sub_1BC3264(this, method);
     }
   }
 }

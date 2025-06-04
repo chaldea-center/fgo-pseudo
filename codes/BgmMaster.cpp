@@ -1,14 +1,14 @@
 void __fastcall BgmMaster___ctor(BgmMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B446F7 & 1) == 0 )
+  if ( (byte_4B01C9A & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataMasterBase_BgmMaster__BgmEntity__int___ctor__, method);
-    byte_4B446F7 = 1;
+    sub_1BC3008(&Method_DataMasterBase_BgmMaster__BgmEntity__int___ctor__, method);
+    byte_4B01C9A = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     85,
-    (const MethodInfo_32DFB18 *)Method_DataMasterBase_BgmMaster__BgmEntity__int___ctor__);
+    (const MethodInfo_32ACD4C *)Method_DataMasterBase_BgmMaster__BgmEntity__int___ctor__);
 }
 
 
@@ -23,21 +23,21 @@ System_String_o *__fastcall BgmMaster__GetBgmFileName(
   __int64 v8; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B446F9 & 1) == 0 )
+  if ( (byte_4B01C9C & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__, *(_QWORD *)&id);
-    byte_4B446F9 = 1;
+    sub_1BC3008(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__, *(_QWORD *)&id);
+    byte_4B01C9C = 1;
   }
   entity = 0LL;
   v7 = DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          id,
-         (const MethodInfo_32E1E88 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+         (const MethodInfo_32AF0BC *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
   if ( v7 )
   {
     if ( !entity )
-      sub_1BDBAD4(v7, v8);
+      sub_1BC3264(v7, v8);
     return (System_String_o *)entity[1].monitor;
   }
   return defName;
@@ -63,34 +63,34 @@ int32_t __fastcall BgmMaster__GetBgmIdFromFileName(
   System_Func_object__bool__o *v17; // x21
   Il2CppObject *v18; // x0
 
-  if ( (byte_4B446FA & 1) == 0 )
+  if ( (byte_4B01C9D & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Linq_Enumerable_FirstOrDefault_BgmEntity___, bgmName);
-    sub_1BDB878(&Method_System_Linq_Enumerable_OfType_BgmEntity___, v7);
-    sub_1BDB878(&System_Func_BgmEntity__bool__TypeInfo, v8);
-    sub_1BDB878(&Method_BgmMaster___c__DisplayClass3_0__GetBgmIdFromFileName_b__0__, v9);
-    sub_1BDB878(&BgmMaster___c__DisplayClass3_0_TypeInfo, v10);
-    byte_4B446FA = 1;
+    sub_1BC3008(&Method_System_Linq_Enumerable_FirstOrDefault_BgmEntity___, bgmName);
+    sub_1BC3008(&Method_System_Linq_Enumerable_OfType_BgmEntity___, v7);
+    sub_1BC3008(&System_Func_BgmEntity__bool__TypeInfo, v8);
+    sub_1BC3008(&Method_BgmMaster___c__DisplayClass3_0__GetBgmIdFromFileName_b__0__, v9);
+    sub_1BC3008(&BgmMaster___c__DisplayClass3_0_TypeInfo, v10);
+    byte_4B01C9D = 1;
   }
-  v11 = sub_1BDBAC4(BgmMaster___c__DisplayClass3_0_TypeInfo);
+  v11 = sub_1BC3254(BgmMaster___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11 )
-    sub_1BDBAD4(v12, v13);
+    sub_1BC3264(v12, v13);
   *(_QWORD *)(v11 + 16) = bgmName;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v11 + 16), (int32_t)bgmName, v14, v15);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v11 + 16), (int32_t)bgmName, v14, v15);
   v16 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                (System_Collections_IEnumerable_o *)this->fields.list,
-                                                               (const MethodInfo_305F06C *)Method_System_Linq_Enumerable_OfType_BgmEntity___);
-  v17 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_BgmEntity__bool__TypeInfo);
+                                                               (const MethodInfo_302D068 *)Method_System_Linq_Enumerable_OfType_BgmEntity___);
+  v17 = (System_Func_object__bool__o *)sub_1BC3254(System_Func_BgmEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v17,
     (Il2CppObject *)v11,
     Method_BgmMaster___c__DisplayClass3_0__GetBgmIdFromFileName_b__0__,
     0LL);
-  v18 = System_Linq_Enumerable__FirstOrDefault_object__50698552(
+  v18 = System_Linq_Enumerable__FirstOrDefault_object__50493748(
           v16,
           (System_Func_TSource__bool__o *)v17,
-          (const MethodInfo_3059938 *)Method_System_Linq_Enumerable_FirstOrDefault_BgmEntity___);
+          (const MethodInfo_3027934 *)Method_System_Linq_Enumerable_FirstOrDefault_BgmEntity___);
   if ( v18 )
     return (int32_t)v18[1].klass;
   return defId;
@@ -128,23 +128,23 @@ System_String_array *__fastcall BgmMaster__GetBgmNameListWithIds(
   Il2CppClass **v28; // x0
   __int64 v30; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4B446F8 & 1) == 0 )
+  if ( (byte_4B01C9B & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataMasterBase_BgmMaster__BgmEntity__int__get_lookup__, ids);
-    sub_1BDB878(&System_Collections_Generic_IReadOnlyDictionary_string__BgmEntity__TypeInfo, v5);
-    sub_1BDB878(&Method_System_Collections_Generic_List_string__Add__, v6);
-    sub_1BDB878(&Method_System_Collections_Generic_List_string__ToArray__, v7);
-    sub_1BDB878(&Method_System_Collections_Generic_List_string___ctor__, v8);
-    sub_1BDB878(&System_Collections_Generic_List_string__TypeInfo, v9);
-    byte_4B446F8 = 1;
+    sub_1BC3008(&Method_DataMasterBase_BgmMaster__BgmEntity__int__get_lookup__, ids);
+    sub_1BC3008(&System_Collections_Generic_IReadOnlyDictionary_string__BgmEntity__TypeInfo, v5);
+    sub_1BC3008(&Method_System_Collections_Generic_List_string__Add__, v6);
+    sub_1BC3008(&Method_System_Collections_Generic_List_string__ToArray__, v7);
+    sub_1BC3008(&Method_System_Collections_Generic_List_string___ctor__, v8);
+    sub_1BC3008(&System_Collections_Generic_List_string__TypeInfo, v9);
+    byte_4B01C9B = 1;
   }
   v30 = 0LL;
   if ( !ids || !*(_QWORD *)&ids->max_length )
     return 0LL;
-  v10 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_string__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_string___ctor__);
   if ( (int)ids->max_length >= 1 )
   {
     v13 = 0LL;
@@ -152,9 +152,9 @@ System_String_array *__fastcall BgmMaster__GetBgmNameListWithIds(
     {
       lookup = DataMasterBase_object__object__int___get_lookup(
                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-                 (const MethodInfo_32DFC30 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__get_lookup__);
+                 (const MethodInfo_32ACE64 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__get_lookup__);
       if ( v13 >= ids->max_length )
-        sub_1BDBADC(lookup, v15, v16);
+        sub_1BC326C(lookup, v15, v16);
       v17 = lookup;
       v11 = System_Int32__ToString((int)ids + 4 * (int)v13 + 32, 0LL);
       if ( !v17 )
@@ -177,7 +177,7 @@ System_String_array *__fastcall BgmMaster__GetBgmNameListWithIds(
       else
       {
 LABEL_13:
-        p_method = sub_1C2C00C(v17, System_Collections_Generic_IReadOnlyDictionary_string__BgmEntity__TypeInfo, 1LL);
+        p_method = sub_1C13570(v17, System_Collections_Generic_IReadOnlyDictionary_string__BgmEntity__TypeInfo, 1LL);
       }
       v11 = (System_String_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyDictionary_string__TEntity__o *, System_String_o *, __int64 *, _QWORD))p_method)(
                                  v17,
@@ -202,28 +202,28 @@ LABEL_13:
           System_Collections_Generic_List_object___AddWithResize(
             v10,
             v12,
-            *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+            *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
         }
         else
         {
           v28 = &items->obj.klass + size;
           v10->fields._size = size + 1;
           v28[4] = (Il2CppClass *)v12;
-          sub_1BDB81C((CGThumbnailListItem_o *)(v28 + 4), (int32_t)v12, v23, v24);
+          sub_1BC2FAC((CGThumbnailListItem_o *)(v28 + 4), (int32_t)v12, v23, v24);
         }
       }
       if ( (__int64)++v13 >= (int)ids->max_length )
         goto LABEL_23;
     }
 LABEL_26:
-    sub_1BDBAD4(v11, v12);
+    sub_1BC3264(v11, v12);
   }
 LABEL_23:
   if ( !v10 )
     goto LABEL_26;
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   v10,
-                                  (const MethodInfo_36D791C *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -237,20 +237,20 @@ int32_t __fastcall BgmMaster__GetBgmPriority(
   const MethodInfo *v7; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B446FC & 1) == 0 )
+  if ( (byte_4B01C9F & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__, *(_QWORD *)&bgmId);
-    byte_4B446FC = 1;
+    sub_1BC3008(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__, *(_QWORD *)&bgmId);
+    byte_4B01C9F = 1;
   }
   entity = 0LL;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          bgmId,
-         (const MethodInfo_32E1E88 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__) )
+         (const MethodInfo_32AF0BC *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__) )
   {
     if ( !entity )
-      sub_1BDBAD4(0LL, v7);
+      sub_1BC3264(0LL, v7);
     return BgmEntity__GetPriorityBgm((BgmEntity_o *)entity, v7);
   }
   return defVal;
@@ -263,20 +263,20 @@ int32_t __fastcall BgmMaster__GetInvalidOverwrite(BgmMaster_o *this, int32_t bgm
   const MethodInfo *v5; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B446FB & 1) == 0 )
+  if ( (byte_4B01C9E & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__, *(_QWORD *)&bgmId);
-    byte_4B446FB = 1;
+    sub_1BC3008(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__, *(_QWORD *)&bgmId);
+    byte_4B01C9E = 1;
   }
   entity = 0LL;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
           &entity,
           bgmId,
-          (const MethodInfo_32E1E88 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__) )
+          (const MethodInfo_32AF0BC *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__) )
     return 0;
   if ( !entity )
-    sub_1BDBAD4(0LL, v5);
+    sub_1BC3264(0LL, v5);
   return BgmEntity__GetInvalidOverwrite((BgmEntity_o *)entity, v5);
 }
 
@@ -293,6 +293,6 @@ bool __fastcall BgmMaster___c__DisplayClass3_0___GetBgmIdFromFileName_b__0(
         const MethodInfo *method)
 {
   if ( !x || (this = (BgmMaster___c__DisplayClass3_0_o *)this->fields.bgmName) == 0LL )
-    sub_1BDBAD4(this, x);
-  return System_String__Equals_62607564((System_String_o *)this, x->fields.fileName, 0LL);
+    sub_1BC3264(this, x);
+  return System_String__Equals_62383952((System_String_o *)this, x->fields.fileName, 0LL);
 }

@@ -1,9 +1,9 @@
 void __fastcall ShopHelpListViewObject___ctor(ShopHelpListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B40DE5 & 1) == 0 )
+  if ( (byte_4AFE357 & 1) == 0 )
   {
-    sub_1BDB878(&ListViewObject_TypeInfo, method);
-    byte_4B40DE5 = 1;
+    sub_1BC3008(&ListViewObject_TypeInfo, method);
+    byte_4AFE357 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,20 +19,20 @@ void __fastcall ShopHelpListViewObject__Awake(ShopHelpListViewObject_o *this, co
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B40DDF & 1) == 0 )
+  if ( (byte_4AFE351 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_ShopHelpListViewItemDraw___, method);
-    byte_4B40DDF = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_ShopHelpListViewItemDraw___, method);
+    byte_4AFE351 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BDBAD4(0LL, v3);
+    sub_1BC3264(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_ShopHelpListViewItemDraw___);
+                       (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_ShopHelpListViewItemDraw___);
   this->fields.itemDraw = (struct ShopHelpListViewItemDraw_o *)Component_object;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -45,19 +45,19 @@ UnityEngine_GameObject_o *__fastcall ShopHelpListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_4B40DE2 & 1) == 0 )
+  if ( (byte_4AFE354 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_GameObject_GetComponent_ShopHelpListViewObject___, method);
-    byte_4B40DE2 = 1;
+    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_ShopHelpListViewObject___, method);
+    byte_4AFE354 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3088520 *)Method_UnityEngine_GameObject_GetComponent_ShopHelpListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_ShopHelpListViewObject___)) == 0LL) )
   {
-    sub_1BDBAD4(DragObject, v4);
+    sub_1BC3264(DragObject, v4);
   }
   ShopHelpListViewObject__Init((ShopHelpListViewObject_o *)DragObject, 2, v6);
   return v5;
@@ -71,10 +71,10 @@ ShopHelpListViewItem_o *__fastcall ShopHelpListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4B40DE1 & 1) == 0 )
+  if ( (byte_4AFE353 & 1) == 0 )
   {
-    sub_1BDB878(&ShopHelpListViewItem_TypeInfo, method);
-    byte_4B40DE1 = 1;
+    sub_1BC3008(&ShopHelpListViewItem_TypeInfo, method);
+    byte_4AFE353 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -119,11 +119,11 @@ void __fastcall ShopHelpListViewObject__Init(
   int32_t v14; // w9
   int v15; // w8
 
-  if ( (byte_4B40DE3 & 1) == 0 )
+  if ( (byte_4AFE355 & 1) == 0 )
   {
-    sub_1BDB878(&ShopHelpListViewItemDraw_TypeInfo, *(_QWORD *)&initMode);
-    sub_1BDB878(&ShopHelpListViewItem_TypeInfo, v5);
-    byte_4B40DE3 = 1;
+    sub_1BC3008(&ShopHelpListViewItemDraw_TypeInfo, *(_QWORD *)&initMode);
+    sub_1BC3008(&ShopHelpListViewItem_TypeInfo, v5);
+    byte_4AFE355 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -151,7 +151,7 @@ void __fastcall ShopHelpListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1BDBAD4(transform, v12);
+    sub_1BC3264(transform, v12);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   if ( !ShopHelpListViewItemDraw_TypeInfo->_2.cctor_finished )
@@ -202,11 +202,11 @@ void __fastcall ShopHelpListViewObject__OnDestroy(ShopHelpListViewObject_o *this
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B40DE0 & 1) == 0 )
+  if ( (byte_4AFE352 & 1) == 0 )
   {
-    sub_1BDB878(&NGUITools_TypeInfo, method);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B40DE0 = 1;
+    sub_1BC3008(&NGUITools_TypeInfo, method);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
+    byte_4AFE352 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -220,7 +220,7 @@ void __fastcall ShopHelpListViewObject__OnDestroy(ShopHelpListViewObject_o *this
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1BDB81C(p_dragObject, 0, v8, v9);
+    sub_1BC2FAC(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -232,7 +232,7 @@ void __fastcall ShopHelpListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_42764972((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_42800124((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
@@ -247,11 +247,11 @@ void __fastcall ShopHelpListViewObject__SetupDisp(ShopHelpListViewObject_o *this
   const MethodInfo *v9; // x3
   ShopHelpListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4B40DE4 & 1) == 0 )
+  if ( (byte_4AFE356 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    sub_1BDB878(&ShopHelpListViewItem_TypeInfo, v3);
-    byte_4B40DE4 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    sub_1BC3008(&ShopHelpListViewItem_TypeInfo, v3);
+    byte_4AFE356 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -275,7 +275,7 @@ LABEL_8:
   {
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1BDBAD4(0LL, v8);
+      sub_1BC3264(0LL, v8);
     ShopHelpListViewItemDraw__SetItem(v10, (ShopHelpListViewItem_o *)linkItem, this->fields.dispMode, v9);
   }
 }

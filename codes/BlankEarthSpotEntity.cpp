@@ -1,13 +1,13 @@
 void __fastcall BlankEarthSpotEntity___ctor(BlankEarthSpotEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B44724 & 1) == 0 )
+  if ( (byte_4B01CC7 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B44724 = 1;
+    sub_1BC3008(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B01CC7 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32DF958 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32ACB8C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -23,12 +23,12 @@ int32_t __fastcall BlankEarthSpotEntity__GetGrandClassIconId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4B44720 & 1) == 0 )
+  if ( (byte_4B01CC3 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_19897/*"grandClassIconId"*/, *(_QWORD *)&defaultValue);
-    byte_4B44720 = 1;
+    sub_1BC3008(&StringLiteral_19700/*"grandClassIconId"*/, *(_QWORD *)&defaultValue);
+    byte_4B01CC3 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19897/*"grandClassIconId"*/, defaultValue, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19700/*"grandClassIconId"*/, defaultValue, 0LL);
 }
 
 
@@ -38,12 +38,12 @@ int32_t __fastcall BlankEarthSpotEntity__GetGrandFaceId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4B44723 & 1) == 0 )
+  if ( (byte_4B01CC6 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_19898/*"grandFaceId"*/, *(_QWORD *)&defaultValue);
-    byte_4B44723 = 1;
+    sub_1BC3008(&StringLiteral_19701/*"grandFaceId"*/, *(_QWORD *)&defaultValue);
+    byte_4B01CC6 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19898/*"grandFaceId"*/, defaultValue, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19701/*"grandFaceId"*/, defaultValue, 0LL);
 }
 
 
@@ -53,12 +53,12 @@ int32_t __fastcall BlankEarthSpotEntity__GetGrandImageId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4B44721 & 1) == 0 )
+  if ( (byte_4B01CC4 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_19900/*"grandImageId"*/, *(_QWORD *)&defaultValue);
-    byte_4B44721 = 1;
+    sub_1BC3008(&StringLiteral_19703/*"grandImageId"*/, *(_QWORD *)&defaultValue);
+    byte_4B01CC4 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19900/*"grandImageId"*/, defaultValue, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19703/*"grandImageId"*/, defaultValue, 0LL);
 }
 
 
@@ -68,12 +68,12 @@ int32_t __fastcall BlankEarthSpotEntity__GetGrandLimitCount(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4B44722 & 1) == 0 )
+  if ( (byte_4B01CC5 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_19901/*"grandLimitCount"*/, *(_QWORD *)&defaultValue);
-    byte_4B44722 = 1;
+    sub_1BC3008(&StringLiteral_19704/*"grandLimitCount"*/, *(_QWORD *)&defaultValue);
+    byte_4B01CC5 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19901/*"grandLimitCount"*/, defaultValue, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19704/*"grandLimitCount"*/, defaultValue, 0LL);
 }
 
 
@@ -104,10 +104,10 @@ bool __fastcall BlankEarthSpotEntity__IsOpen(BlankEarthSpotEntity_o *this, const
   int32_t condTargetType; // w21
   int64_t condTargetNum; // x19
 
-  if ( (byte_4B4471E & 1) == 0 )
+  if ( (byte_4B01CC1 & 1) == 0 )
   {
-    sub_1BDB878(&CondType_TypeInfo, method);
-    byte_4B4471E = 1;
+    sub_1BC3008(&CondType_TypeInfo, method);
+    byte_4B01CC1 = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;
@@ -129,10 +129,10 @@ bool __fastcall BlankEarthSpotEntity__IsOpenForQAA(
   int32_t condTargetType; // w23
   int64_t condTargetNum; // x21
 
-  if ( (byte_4B4471F & 1) == 0 )
+  if ( (byte_4B01CC2 & 1) == 0 )
   {
-    sub_1BDB878(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
-    byte_4B4471F = 1;
+    sub_1BC3008(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
+    byte_4B01CC2 = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;

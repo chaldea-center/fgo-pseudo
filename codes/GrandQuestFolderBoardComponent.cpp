@@ -2,10 +2,10 @@ void __fastcall GrandQuestFolderBoardComponent___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4B3F80F & 1) == 0 )
+  if ( (byte_4AFCE49 & 1) == 0 )
   {
-    sub_1BDB878(&GrandQuestFolderBoardComponent_TypeInfo, v1);
-    byte_4B3F80F = 1;
+    sub_1BC3008(&GrandQuestFolderBoardComponent_TypeInfo, v1);
+    byte_4AFCE49 = 1;
   }
   GrandQuestFolderBoardComponent_TypeInfo->static_fields->NameLabelMaxWidth = 240;
 }
@@ -27,10 +27,10 @@ bool __fastcall GrandQuestFolderBoardComponent__ExistBoardImage(
   struct UISprite_o *v7; // x8
   UnityEngine_Object_o *mAtlas; // x19
 
-  if ( (byte_4B3F80E & 1) == 0 )
+  if ( (byte_4AFCE48 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    byte_4B3F80E = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    byte_4AFCE48 = 1;
   }
   boardSprite = (UnityEngine_Object_o *)this->fields.boardSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -40,7 +40,7 @@ bool __fastcall GrandQuestFolderBoardComponent__ExistBoardImage(
     return 0;
   v7 = this->fields.boardSprite;
   if ( !v7 )
-    sub_1BDBAD4(v4, v5);
+    sub_1BC3264(v4, v5);
   mAtlas = (UnityEngine_Object_o *)v7->fields.mAtlas;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -96,35 +96,35 @@ void __fastcall GrandQuestFolderBoardComponent__SetBoardInfo(
   struct GrandQuestFolderBoardComponent_LabelMaxWidth_o *maxLabelWidth; // x8
   int32_t IconId_k__BackingField; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B3F80D & 1) == 0 )
+  if ( (byte_4AFCE47 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Linq_Enumerable_ToList_string___, item);
-    sub_1BDB878(&Method_System_Collections_Generic_List_string__get_Item__, v9);
-    sub_1BDB878(&StringLiteral_43/*"\n"*/, v10);
-    sub_1BDB878(&StringLiteral_89/*"\r\n"*/, v11);
-    sub_1BDB878(&StringLiteral_20520/*"img_questboard_"*/, v12);
-    sub_1BDB878(&StringLiteral_20709/*"img_txt_questboard_"*/, v13);
-    sub_1BDB878(&StringLiteral_20522/*"img_questboard_80522"*/, v14);
-    byte_4B3F80D = 1;
+    sub_1BC3008(&Method_System_Linq_Enumerable_ToList_string___, item);
+    sub_1BC3008(&Method_System_Collections_Generic_List_string__get_Item__, v9);
+    sub_1BC3008(&StringLiteral_43/*"\n"*/, v10);
+    sub_1BC3008(&StringLiteral_87/*"\r\n"*/, v11);
+    sub_1BC3008(&StringLiteral_20310/*"img_questboard_"*/, v12);
+    sub_1BC3008(&StringLiteral_20499/*"img_txt_questboard_"*/, v13);
+    sub_1BC3008(&StringLiteral_20312/*"img_questboard_80522"*/, v14);
+    byte_4AFCE47 = 1;
   }
   this->fields.boardInfo = item;
-  sub_1BDB81C(&this->fields.boardInfo);
+  sub_1BC2FAC(&this->fields.boardInfo);
   this->fields.onTouch = onTouchCallback;
-  Name_k__BackingField = (UILabel_o *)sub_1BDB81C(&this->fields.onTouch);
+  Name_k__BackingField = (UILabel_o *)sub_1BC2FAC(&this->fields.onTouch);
   if ( !item )
     goto LABEL_24;
   this->fields.moveBoardIdx = item->fields.index;
   this->fields.atlasManager = atlasManagerUnit;
-  sub_1BDB81C(&this->fields.atlasManager);
+  sub_1BC2FAC(&this->fields.atlasManager);
   IconId_k__BackingField = item->fields._IconId_k__BackingField;
   v17 = System_Int32__ToString((int32_t)&IconId_k__BackingField, 0LL);
-  v18 = System_String__Concat_62572260((System_String_o *)StringLiteral_20520/*"img_questboard_"*/, v17, 0LL);
+  v18 = System_String__Concat_62348648((System_String_o *)StringLiteral_20310/*"img_questboard_"*/, v17, 0LL);
   GrandQuestFolderBoardComponent__SetImage(this, this->fields.classIconSprite, v18, v19);
   IconId_k__BackingField = item->fields._IconId_k__BackingField;
   v20 = System_Int32__ToString((int32_t)&IconId_k__BackingField, 0LL);
-  v21 = System_String__Concat_62572260((System_String_o *)StringLiteral_20709/*"img_txt_questboard_"*/, v20, 0LL);
+  v21 = System_String__Concat_62348648((System_String_o *)StringLiteral_20499/*"img_txt_questboard_"*/, v20, 0LL);
   GrandQuestFolderBoardComponent__SetImage(this, this->fields.classNameSprite, v21, v22);
-  GrandQuestFolderBoardComponent__SetImage(this, this->fields.boardSprite, (System_String_o *)StringLiteral_20522/*"img_questboard_80522"*/, v23);
+  GrandQuestFolderBoardComponent__SetImage(this, this->fields.boardSprite, (System_String_o *)StringLiteral_20312/*"img_questboard_80522"*/, v23);
   Name_k__BackingField = (UILabel_o *)item->fields._Name_k__BackingField;
   if ( !Name_k__BackingField )
     goto LABEL_24;
@@ -153,14 +153,14 @@ void __fastcall GrandQuestFolderBoardComponent__SetBoardInfo(
       }
     }
 LABEL_24:
-    sub_1BDBAD4(Name_k__BackingField, v16);
+    sub_1BC3264(Name_k__BackingField, v16);
   }
   Name_k__BackingField = (UILabel_o *)item->fields._Name_k__BackingField;
   if ( !Name_k__BackingField )
     goto LABEL_24;
-  Name_k__BackingField = (UILabel_o *)System_String__Replace_62618808(
+  Name_k__BackingField = (UILabel_o *)System_String__Replace_62395196(
                                         (System_String_o *)Name_k__BackingField,
-                                        (System_String_o *)StringLiteral_89/*"\r\n"*/,
+                                        (System_String_o *)StringLiteral_87/*"\r\n"*/,
                                         (System_String_o *)StringLiteral_43/*"\n"*/,
                                         0LL);
   if ( !Name_k__BackingField )
@@ -172,7 +172,7 @@ LABEL_24:
                                                                0LL);
   Name_k__BackingField = (UILabel_o *)System_Linq_Enumerable__ToList_object_(
                                         v24,
-                                        (const MethodInfo_307503C *)Method_System_Linq_Enumerable_ToList_string___);
+                                        (const MethodInfo_3042DE0 *)Method_System_Linq_Enumerable_ToList_string___);
   if ( !Name_k__BackingField )
     goto LABEL_24;
   nameLabelUp = this->fields.nameLabelUp;
@@ -180,7 +180,7 @@ LABEL_24:
   Name_k__BackingField = (UILabel_o *)System_Collections_Generic_List_object___get_Item(
                                         (System_Collections_Generic_List_object__o *)Name_k__BackingField,
                                         0,
-                                        (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                        (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_string__get_Item__);
   if ( !nameLabelUp )
     goto LABEL_24;
   UILabel__set_text(nameLabelUp, (System_String_o *)Name_k__BackingField, 0LL);
@@ -201,7 +201,7 @@ LABEL_24:
   Name_k__BackingField = (UILabel_o *)System_Collections_Generic_List_object___get_Item(
                                         v26,
                                         1,
-                                        (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                        (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_string__get_Item__);
   if ( !nameLabelBottom )
     goto LABEL_24;
   UILabel__set_text(nameLabelBottom, (System_String_o *)Name_k__BackingField, 0LL);
@@ -235,7 +235,7 @@ void __fastcall GrandQuestFolderBoardComponent__SetImage(
   if ( !atlasManager
     || (atlasManager = (AtlasManagerUnit_o *)AtlasManagerUnit__SetUI(atlasManager, uiSprite, spriteName, 0LL), !uiSprite) )
   {
-    sub_1BDBAD4(atlasManager, uiSprite);
+    sub_1BC3264(atlasManager, uiSprite);
   }
   ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))uiSprite->klass->vtable._33_MakePixelPerfect.method)(
     uiSprite,
@@ -258,10 +258,10 @@ void __fastcall GrandQuestFolderBoardComponent_LabelMaxWidth___ctor(
   GrandQuestFolderBoardComponent_c *v3; // x0
   int32_t NameLabelMaxWidth; // w8
 
-  if ( (byte_4B3F810 & 1) == 0 )
+  if ( (byte_4AFCE4A & 1) == 0 )
   {
-    sub_1BDB878(&GrandQuestFolderBoardComponent_TypeInfo, method);
-    byte_4B3F810 = 1;
+    sub_1BC3008(&GrandQuestFolderBoardComponent_TypeInfo, method);
+    byte_4AFCE4A = 1;
   }
   v3 = GrandQuestFolderBoardComponent_TypeInfo;
   if ( !GrandQuestFolderBoardComponent_TypeInfo->_2.cctor_finished )

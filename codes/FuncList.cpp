@@ -42,7 +42,7 @@ int32_t __fastcall FuncList__getRate(int32_t intype, System_Int32_array *vals, c
 }
 
 
-int32_t __fastcall FuncList__getRate_39446784(int32_t type, System_Int32_array *vals, const MethodInfo *method)
+int32_t __fastcall FuncList__getRate_39463976(int32_t type, System_Int32_array *vals, const MethodInfo *method)
 {
   if ( vals && (int)vals->max_length >= 1 )
     return vals->m_Items[1];
@@ -123,7 +123,7 @@ int32_t __fastcall FuncList__getValueFronIndex(System_Int32_array *vals, int32_t
     if ( (int)max_length >= index )
     {
       if ( max_length <= index )
-        sub_1BDBADC(vals, *(_QWORD *)&index, method);
+        sub_1BC326C(vals, *(_QWORD *)&index, method);
       LODWORD(vals) = vals->m_Items[index + 1];
     }
     else
@@ -151,19 +151,19 @@ bool __fastcall FuncList__isDamage(int32_t funcType, const MethodInfo *method)
   System_Enum_o v7; // [xsp+8h] [xbp-38h] BYREF
   int32_t v8; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_4B439A9 & 1) == 0 )
+  if ( (byte_4B00F34 & 1) == 0 )
   {
-    sub_1BDB878(&FuncList_TYPE_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_4997/*"DAMAGE"*/, v3);
-    byte_4B439A9 = 1;
+    sub_1BC3008(&FuncList_TYPE_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_4917/*"DAMAGE"*/, v3);
+    byte_4B00F34 = 1;
   }
   v7.klass = (System_Enum_c *)FuncList_TYPE_TypeInfo;
   v7.monitor = (void *)-1LL;
   v8 = funcType;
   v4 = System_Enum__ToString(&v7, 0LL);
   if ( !v4 )
-    sub_1BDBAD4(0LL, v5);
-  return System_String__Contains(v4, (System_String_o *)StringLiteral_4997/*"DAMAGE"*/, 0LL);
+    sub_1BC3264(0LL, v5);
+  return System_String__Contains(v4, (System_String_o *)StringLiteral_4917/*"DAMAGE"*/, 0LL);
 }
 
 

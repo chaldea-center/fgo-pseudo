@@ -47,38 +47,38 @@ void __fastcall WarBoardUIUtility__ShowRuleDialog(System_Action_o *callbackFunc,
   _BOOL4 v47; // [xsp+8h] [xbp-48h] BYREF
   int32_t id; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4B42889 & 1) == 0 )
+  if ( (byte_4AFFE10 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_WarBoardStageDetailMaster___, method);
-    sub_1BDB878(&int_TypeInfo, v3);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v4);
-    sub_1BDB878(&NetworkManager_TypeInfo, v5);
-    sub_1BDB878(&object___TypeInfo, v6);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v9);
-    sub_1BDB878(&Method_WarBoardUIUtility_ShowRuleDialog__, v10);
-    sub_1BDB878(&WebViewManager_TypeInfo, v11);
-    sub_1BDB878(&StringLiteral_25298/*"{0}{1}?stageId={2}&gameDomain={3}&changeWinCond={4}"*/, v12);
-    sub_1BDB878(&StringLiteral_15530/*"WEB_VIEW_TITLE_WARBOARD_RULE"*/, v13);
-    byte_4B42889 = 1;
+    sub_1BC3008(&Method_DataManager_GetMasterData_WarBoardStageDetailMaster___, method);
+    sub_1BC3008(&int_TypeInfo, v3);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v4);
+    sub_1BC3008(&NetworkManager_TypeInfo, v5);
+    sub_1BC3008(&object___TypeInfo, v6);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v7);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v9);
+    sub_1BC3008(&Method_WarBoardUIUtility_ShowRuleDialog__, v10);
+    sub_1BC3008(&WebViewManager_TypeInfo, v11);
+    sub_1BC3008(&StringLiteral_24968/*"{0}{1}?stageId={2}&gameDomain={3}&changeWinCond={4}"*/, v12);
+    sub_1BC3008(&StringLiteral_15411/*"WEB_VIEW_TITLE_WARBOARD_RULE"*/, v13);
+    byte_4AFFE10 = 1;
   }
   v14 = Method_WarBoardUIUtility_ShowRuleDialog__;
   if ( (*((_BYTE *)Method_WarBoardUIUtility_ShowRuleDialog__ + 83) & 2) != 0 )
-    v14 = (_QWORD *)sub_1BDB890(Method_WarBoardUIUtility_ShowRuleDialog__);
-  v15 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v14, v14[4]);
+    v14 = (_QWORD *)sub_1BC3020(Method_WarBoardUIUtility_ShowRuleDialog__);
+  v15 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v14, v14[4]);
   OverwriteAssetSoundName__PlaySystemSe(v15, 0, 0, 0LL);
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
   {
-    MasterData_object = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    MasterData_object = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( MasterData_object )
     {
       MasterData_object = (__int64)DataManager__GetMasterData_object_(
                                      (DataManager_o *)MasterData_object,
-                                     (const MethodInfo_303395C *)Method_DataManager_GetMasterData_WarBoardStageDetailMaster___);
+                                     (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_WarBoardStageDetailMaster___);
       if ( Instance )
       {
         warBoardData_k__BackingField = Instance->fields._warBoardData_k__BackingField;
@@ -100,51 +100,51 @@ void __fastcall WarBoardUIUtility__ShowRuleDialog(System_Action_o *callbackFunc,
             WarBoardManager__SetMapTouchEnable(Instance, 0, 0, 0LL);
             WarBoardManager__HideSimplePopup(Instance, 0LL, 0LL);
             HasNewWinCond = WarBoardData__HasNewWinCond(warBoardData_k__BackingField, 0LL);
-            v25 = (System_Object_array *)sub_1BDB920(object___TypeInfo, 5LL);
+            v25 = (System_Object_array *)sub_1BC30B0(object___TypeInfo, 5LL);
             if ( !NetworkManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-            MasterData_object = (__int64)NetworkManager__getWebViewAddress_40380348(13, 0LL);
+            MasterData_object = (__int64)NetworkManager__getWebViewAddress_40399000(13, 0LL);
             if ( v25 )
             {
               v28 = (Il2CppObject *)MasterData_object;
               if ( MasterData_object )
               {
-                MasterData_object = sub_1BDB9B4(MasterData_object, v25->obj.klass->_1.element_class);
+                MasterData_object = sub_1BC3144(MasterData_object, v25->obj.klass->_1.element_class);
                 if ( !MasterData_object )
                   goto LABEL_44;
               }
               if ( !v25->max_length )
                 goto LABEL_43;
               v25->m_Items[0] = v28;
-              sub_1BDB81C((CGThumbnailListItem_o *)v25->m_Items, (int32_t)v28, v26, v27);
+              sub_1BC2FAC((CGThumbnailListItem_o *)v25->m_Items, (int32_t)v28, v26, v27);
               detailUrl = (Il2CppObject *)v23->fields.detailUrl;
               if ( detailUrl )
               {
-                MasterData_object = sub_1BDB9B4(detailUrl, v25->obj.klass->_1.element_class);
+                MasterData_object = sub_1BC3144(detailUrl, v25->obj.klass->_1.element_class);
                 if ( !MasterData_object )
                   goto LABEL_44;
               }
               if ( v25->max_length <= 1 )
                 goto LABEL_43;
               v25->m_Items[1] = detailUrl;
-              sub_1BDB81C((CGThumbnailListItem_o *)&v25->m_Items[1], (int32_t)detailUrl, v26, v29);
+              sub_1BC2FAC((CGThumbnailListItem_o *)&v25->m_Items[1], (int32_t)detailUrl, v26, v29);
               id = WarBoardData__get_id(warBoardData_k__BackingField, 0LL);
               MasterData_object = j_il2cpp_value_box_0(int_TypeInfo, &id, v31, v32, v33);
               v35 = (Il2CppObject *)MasterData_object;
               if ( MasterData_object )
               {
-                MasterData_object = sub_1BDB9B4(MasterData_object, v25->obj.klass->_1.element_class);
+                MasterData_object = sub_1BC3144(MasterData_object, v25->obj.klass->_1.element_class);
                 if ( !MasterData_object )
                   goto LABEL_44;
               }
               if ( v25->max_length <= 2 )
                 goto LABEL_43;
               v25->m_Items[2] = v35;
-              sub_1BDB81C((CGThumbnailListItem_o *)&v25->m_Items[2], (int32_t)v35, v26, v34);
-              if ( !byte_4B4292C )
+              sub_1BC2FAC((CGThumbnailListItem_o *)&v25->m_Items[2], (int32_t)v35, v26, v34);
+              if ( !byte_4AFFEB3 )
               {
-                sub_1BDB878(&NetworkManager_TypeInfo, v18);
-                byte_4B4292C = 1;
+                sub_1BC3008(&NetworkManager_TypeInfo, v18);
+                byte_4AFFEB3 = 1;
               }
               v36 = NetworkManager_TypeInfo;
               if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -155,50 +155,50 @@ void __fastcall WarBoardUIUtility__ShowRuleDialog(System_Action_o *callbackFunc,
               MasterData_object = (__int64)v36->static_fields->gameServerAddress;
               if ( MasterData_object )
               {
-                MasterData_object = (__int64)System_String__TrimEnd_62629072(
+                MasterData_object = (__int64)System_String__TrimEnd_62405340(
                                                (System_String_o *)MasterData_object,
                                                0x2Fu,
                                                0LL);
                 v38 = (Il2CppObject *)MasterData_object;
                 if ( !MasterData_object
-                  || (MasterData_object = sub_1BDB9B4(MasterData_object, v25->obj.klass->_1.element_class)) != 0 )
+                  || (MasterData_object = sub_1BC3144(MasterData_object, v25->obj.klass->_1.element_class)) != 0 )
                 {
                   if ( v25->max_length <= 3 )
                     goto LABEL_43;
                   v25->m_Items[3] = v38;
-                  sub_1BDB81C((CGThumbnailListItem_o *)&v25->m_Items[3], (int32_t)v38, v26, v37);
+                  sub_1BC2FAC((CGThumbnailListItem_o *)&v25->m_Items[3], (int32_t)v38, v26, v37);
                   v47 = HasNewWinCond;
                   MasterData_object = j_il2cpp_value_box_0(int_TypeInfo, &v47, v39, v40, v41);
                   v43 = (Il2CppObject *)MasterData_object;
                   if ( !MasterData_object
-                    || (MasterData_object = sub_1BDB9B4(MasterData_object, v25->obj.klass->_1.element_class)) != 0 )
+                    || (MasterData_object = sub_1BC3144(MasterData_object, v25->obj.klass->_1.element_class)) != 0 )
                   {
                     if ( v25->max_length > 4 )
                     {
                       v25->m_Items[4] = v43;
-                      sub_1BDB81C((CGThumbnailListItem_o *)&v25->m_Items[4], (int32_t)v43, v26, v42);
-                      v44 = System_String__Format_62613688((System_String_o *)StringLiteral_25298/*"{0}{1}?stageId={2}&gameDomain={3}&changeWinCond={4}"*/, v25, 0LL);
+                      sub_1BC2FAC((CGThumbnailListItem_o *)&v25->m_Items[4], (int32_t)v43, v26, v42);
+                      v44 = System_String__Format_62390076((System_String_o *)StringLiteral_24968/*"{0}{1}?stageId={2}&gameDomain={3}&changeWinCond={4}"*/, v25, 0LL);
                       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                      v45 = LocalizationManager__Get((System_String_o *)StringLiteral_15530/*"WEB_VIEW_TITLE_WARBOARD_RULE"*/, 0LL);
+                      v45 = LocalizationManager__Get((System_String_o *)StringLiteral_15411/*"WEB_VIEW_TITLE_WARBOARD_RULE"*/, 0LL);
                       if ( !WebViewManager_TypeInfo->_2.cctor_finished )
                         j_il2cpp_runtime_class_init_0(WebViewManager_TypeInfo);
                       WebViewManager__OpenView(v45, v44, callbackFunc, 0LL);
                       return;
                     }
 LABEL_43:
-                    sub_1BDBADC(MasterData_object, v18, v26);
+                    sub_1BC326C(MasterData_object, v18, v26);
                   }
                 }
 LABEL_44:
-                v46 = sub_1BDBAF8();
-                sub_1BDB9A0(v46, 0LL);
+                v46 = sub_1BC3288();
+                sub_1BC3130(v46, 0LL);
               }
             }
           }
         }
       }
     }
-    sub_1BDBAD4(MasterData_object, v18);
+    sub_1BC3264(MasterData_object, v18);
   }
 }

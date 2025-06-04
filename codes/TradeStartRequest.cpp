@@ -18,24 +18,24 @@ void __fastcall TradeStartRequest__beginRequest(
   const MethodInfo *v20; // x3
   const MethodInfo *v21; // x1
 
-  if ( (byte_4B4660D & 1) == 0 )
+  if ( (byte_4B03BBC & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_19152/*"eventId"*/, *(_QWORD *)&eventId);
-    sub_1BDB878(&StringLiteral_23017/*"reduceTimeItemId"*/, v13);
-    sub_1BDB878(&StringLiteral_24219/*"tradeGoodsNum"*/, v14);
-    sub_1BDB878(&StringLiteral_24221/*"tradeStoreIdx"*/, v15);
-    sub_1BDB878(&StringLiteral_24218/*"tradeGoodsId"*/, v16);
-    byte_4B4660D = 1;
+    sub_1BC3008(&StringLiteral_18963/*"eventId"*/, *(_QWORD *)&eventId);
+    sub_1BC3008(&StringLiteral_22770/*"reduceTimeItemId"*/, v13);
+    sub_1BC3008(&StringLiteral_23930/*"tradeGoodsNum"*/, v14);
+    sub_1BC3008(&StringLiteral_23932/*"tradeStoreIdx"*/, v15);
+    sub_1BC3008(&StringLiteral_23929/*"tradeGoodsId"*/, v16);
+    byte_4B03BBC = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19152/*"eventId"*/,
+    (System_String_o *)StringLiteral_18963/*"eventId"*/,
     eventId,
     *(const MethodInfo **)&tradeGoodsId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24221/*"tradeStoreIdx"*/, tradeStoreIdx, v17);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24218/*"tradeGoodsId"*/, tradeGoodsId, v18);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24219/*"tradeGoodsNum"*/, tradeGoodsNum, v19);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23017/*"reduceTimeItemId"*/, itemId, v20);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23932/*"tradeStoreIdx"*/, tradeStoreIdx, v17);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23929/*"tradeGoodsId"*/, tradeGoodsId, v18);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23930/*"tradeGoodsNum"*/, tradeGoodsNum, v19);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22770/*"reduceTimeItemId"*/, itemId, v20);
   RequestBase__beginRequest((RequestBase_o *)this, v21);
 }
 
@@ -45,16 +45,16 @@ System_String_o *__fastcall TradeStartRequest__getURL(TradeStartRequest_o *this,
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B4660C & 1) == 0 )
+  if ( (byte_4B03BBB & 1) == 0 )
   {
-    sub_1BDB878(&NetworkManager_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_19146/*"event/tradeStart"*/, v2);
-    byte_4B4660C = 1;
+    sub_1BC3008(&NetworkManager_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_18957/*"event/tradeStart"*/, v2);
+    byte_4B03BBB = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_19146/*"event/tradeStart"*/, 0LL);
+  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_18957/*"event/tradeStart"*/, 0LL);
 }
 
 
@@ -73,12 +73,12 @@ void __fastcall TradeStartRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_4B4660E & 1) == 0 )
+  if ( (byte_4B03BBD & 1) == 0 )
   {
-    sub_1BDB878(&JsonManager_TypeInfo, responseList);
-    sub_1BDB878(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BDB878(&StringLiteral_22233/*"ng"*/, v6);
-    byte_4B4660E = 1;
+    sub_1BC3008(&JsonManager_TypeInfo, responseList);
+    sub_1BC3008(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BC3008(&StringLiteral_21997/*"ng"*/, v6);
+    byte_4B03BBD = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -103,7 +103,7 @@ void __fastcall TradeStartRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_22233/*"ng"*/,
+        StringLiteral_21997/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }

@@ -25,17 +25,17 @@ BattleServantData_array *__fastcall ReactTaskTargetPlayer__TargetServants(
   const MethodInfo *v15; // x3
   System_Collections_Generic_IEnumerable_TSource__o *v16; // x0
 
-  if ( (byte_4B47A2C & 1) == 0 )
+  if ( (byte_4B05003 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Linq_Enumerable_ToArray_BattleServantData___, data);
-    sub_1BDB878(&Method_System_Linq_Enumerable_Where_BattleServantData___, v4);
-    sub_1BDB878(&System_Func_BattleServantData__bool__TypeInfo, v5);
-    sub_1BDB878(&Method_ReactTaskTargetPlayer___c__TargetServants_b__0_0__, v6);
-    this = (ReactTaskTargetPlayer_o *)sub_1BDB878(&ReactTaskTargetPlayer___c_TypeInfo, v7);
-    byte_4B47A2C = 1;
+    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_BattleServantData___, data);
+    sub_1BC3008(&Method_System_Linq_Enumerable_Where_BattleServantData___, v4);
+    sub_1BC3008(&System_Func_BattleServantData__bool__TypeInfo, v5);
+    sub_1BC3008(&Method_ReactTaskTargetPlayer___c__TargetServants_b__0_0__, v6);
+    this = (ReactTaskTargetPlayer_o *)sub_1BC3008(&ReactTaskTargetPlayer___c_TypeInfo, v7);
+    byte_4B05003 = 1;
   }
   if ( !data )
-    sub_1BDBAD4(this, data);
+    sub_1BC3264(this, data);
   FieldPlayerServantList = BattleData__getFieldPlayerServantList(data, 0LL);
   v9 = ReactTaskTargetPlayer___c_TypeInfo;
   v10 = (System_Collections_Generic_IEnumerable_TSource__o *)FieldPlayerServantList;
@@ -53,19 +53,19 @@ BattleServantData_array *__fastcall ReactTaskTargetPlayer__TargetServants(
       v9 = ReactTaskTargetPlayer___c_TypeInfo;
     }
     v12 = (Il2CppObject *)v9->static_fields->__9;
-    _9__0_0 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_BattleServantData__bool__TypeInfo);
+    _9__0_0 = (System_Func_object__bool__o *)sub_1BC3254(System_Func_BattleServantData__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__0_0, v12, Method_ReactTaskTargetPlayer___c__TargetServants_b__0_0__, 0LL);
     static_fields = ReactTaskTargetPlayer___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = (struct System_Func_BattleServantData__bool__o *)_9__0_0;
-    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v14, v15);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v14, v15);
   }
   v16 = System_Linq_Enumerable__Where_object_(
           v10,
           (System_Func_TSource__bool__o *)_9__0_0,
-          (const MethodInfo_3077440 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
+          (const MethodInfo_3044F10 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
   return (BattleServantData_array *)System_Linq_Enumerable__ToArray_object_(
                                       v16,
-                                      (const MethodInfo_30707A8 *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+                                      (const MethodInfo_303E54C *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
 }
 
 
@@ -76,15 +76,15 @@ void __fastcall ReactTaskTargetPlayer___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B47A2D & 1) == 0 )
+  if ( (byte_4B05004 & 1) == 0 )
   {
-    sub_1BDB878(&ReactTaskTargetPlayer___c_TypeInfo, v1);
-    byte_4B47A2D = 1;
+    sub_1BC3008(&ReactTaskTargetPlayer___c_TypeInfo, v1);
+    byte_4B05004 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BDBAC4(ReactTaskTargetPlayer___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BC3254(ReactTaskTargetPlayer___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   ReactTaskTargetPlayer___c_TypeInfo->static_fields->__9 = (struct ReactTaskTargetPlayer___c_o *)v2;
-  sub_1BDB81C((CGThumbnailListItem_o *)ReactTaskTargetPlayer___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BC2FAC((CGThumbnailListItem_o *)ReactTaskTargetPlayer___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -100,6 +100,6 @@ bool __fastcall ReactTaskTargetPlayer___c___TargetServants_b__0_0(
         const MethodInfo *method)
 {
   if ( !svt || (this = (ReactTaskTargetPlayer___c_o *)BattleServantData__get_AiStateManager(svt, 0LL)) == 0LL )
-    sub_1BDBAD4(this, svt);
+    sub_1BC3264(this, svt);
   return (bool)this[3].monitor;
 }

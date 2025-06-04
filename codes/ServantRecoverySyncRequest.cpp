@@ -15,22 +15,22 @@ void __fastcall ServantRecoverySyncRequest__beginRequest(
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x1
 
-  if ( (byte_4B465D1 & 1) == 0 )
+  if ( (byte_4B03B80 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_20760/*"index"*/, *(_QWORD *)&eventId);
-    sub_1BDB878(&StringLiteral_19152/*"eventId"*/, v11);
-    sub_1BDB878(&StringLiteral_19050/*"enterUserSvtId"*/, v12);
-    sub_1BDB878(&StringLiteral_22524/*"outUserSvtId"*/, v13);
-    byte_4B465D1 = 1;
+    sub_1BC3008(&StringLiteral_20550/*"index"*/, *(_QWORD *)&eventId);
+    sub_1BC3008(&StringLiteral_18963/*"eventId"*/, v11);
+    sub_1BC3008(&StringLiteral_18863/*"enterUserSvtId"*/, v12);
+    sub_1BC3008(&StringLiteral_22285/*"outUserSvtId"*/, v13);
+    byte_4B03B80 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_19152/*"eventId"*/,
+    (System_String_o *)StringLiteral_18963/*"eventId"*/,
     eventId,
     (const MethodInfo *)inUserSvtId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20760/*"index"*/, index, v14);
-  RequestBase__addField_43153704((RequestBase_o *)this, (System_String_o *)StringLiteral_19050/*"enterUserSvtId"*/, inUserSvtId, v15);
-  RequestBase__addField_43153704((RequestBase_o *)this, (System_String_o *)StringLiteral_22524/*"outUserSvtId"*/, outUserSvtId, v16);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20550/*"index"*/, index, v14);
+  RequestBase__addField_43183652((RequestBase_o *)this, (System_String_o *)StringLiteral_18863/*"enterUserSvtId"*/, inUserSvtId, v15);
+  RequestBase__addField_43183652((RequestBase_o *)this, (System_String_o *)StringLiteral_22285/*"outUserSvtId"*/, outUserSvtId, v16);
   RequestBase__beginRequest((RequestBase_o *)this, v17);
 }
 
@@ -42,16 +42,16 @@ System_String_o *__fastcall ServantRecoverySyncRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B465D0 & 1) == 0 )
+  if ( (byte_4B03B7F & 1) == 0 )
   {
-    sub_1BDB878(&NetworkManager_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_19140/*"event/recoverySync"*/, v2);
-    byte_4B465D0 = 1;
+    sub_1BC3008(&NetworkManager_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_18951/*"event/recoverySync"*/, v2);
+    byte_4B03B7F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62572260(BaseUrl, (System_String_o *)StringLiteral_19140/*"event/recoverySync"*/, 0LL);
+  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_18951/*"event/recoverySync"*/, 0LL);
 }
 
 
@@ -70,12 +70,12 @@ void __fastcall ServantRecoverySyncRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v13; // x8
 
-  if ( (byte_4B465D2 & 1) == 0 )
+  if ( (byte_4B03B81 & 1) == 0 )
   {
-    sub_1BDB878(&JsonManager_TypeInfo, responseList);
-    sub_1BDB878(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BDB878(&StringLiteral_22233/*"ng"*/, v6);
-    byte_4B465D2 = 1;
+    sub_1BC3008(&JsonManager_TypeInfo, responseList);
+    sub_1BC3008(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BC3008(&StringLiteral_21997/*"ng"*/, v6);
+    byte_4B03B81 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -99,7 +99,7 @@ void __fastcall ServantRecoverySyncRequest__requestCompleted(
     if ( v13 )
       ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
         v13->fields.original_method_info,
-        StringLiteral_22233/*"ng"*/,
+        StringLiteral_21997/*"ng"*/,
         *(_QWORD *)&v13->fields.extra_arg);
   }
 }

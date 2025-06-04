@@ -12,20 +12,20 @@ void __fastcall EquipGraphServantItemDraw__SetInput(
 {
   UnityEngine_Component_o *decideButton; // x0
 
-  if ( (byte_4B45053 & 1) == 0 )
+  if ( (byte_4B02565 & 1) == 0 )
   {
-    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_Collider___, isInput);
-    byte_4B45053 = 1;
+    sub_1BC3008(&Method_UnityEngine_Component_GetComponent_Collider___, isInput);
+    byte_4B02565 = 1;
   }
   decideButton = (UnityEngine_Component_o *)this->fields.decideButton;
   if ( !decideButton
     || (decideButton = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     decideButton,
-                                                    (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                    (const MethodInfo_2FF8634 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)decideButton, isInput, 0LL),
         (decideButton = (UnityEngine_Component_o *)this->fields.decideButton) == 0LL) )
   {
-    sub_1BDBAD4(decideButton, isInput);
+    sub_1BC3264(decideButton, isInput);
   }
   ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))decideButton->klass[1]._1.implementedInterfaces)(
     decideButton,
@@ -98,13 +98,13 @@ void __fastcall EquipGraphServantItemDraw__SetItem(
 
   v7 = item;
   v8 = this;
-  if ( (byte_4B45052 & 1) == 0 )
+  if ( (byte_4B02564 & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, item);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v9);
-    sub_1BDB878(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10);
-    this = (EquipGraphServantItemDraw_o *)sub_1BDB878(&StringLiteral_1/*""*/, v11);
-    byte_4B45052 = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, item);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v9);
+    sub_1BC3008(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10);
+    this = (EquipGraphServantItemDraw_o *)sub_1BC3008(&StringLiteral_1/*""*/, v11);
+    byte_4B02564 = 1;
   }
   skillInfoList = 0LL;
   if ( !v7 )
@@ -149,7 +149,7 @@ void __fastcall EquipGraphServantItemDraw__SetItem(
       if ( !this )
         goto LABEL_116;
     }
-    UIIconLabel__Set_40036752((UIIconLabel_o *)this, 7, cost, 0, v16, 0LL, 0, 0, 0, 0, 0LL);
+    UIIconLabel__Set_40054380((UIIconLabel_o *)this, 7, cost, 0, v16, 0LL, 0, 0, 0, 0, 0LL);
   }
   equipUserSvtEntity = v7->fields.equipUserSvtEntity;
   if ( equipUserSvtEntity )
@@ -158,7 +158,7 @@ void __fastcall EquipGraphServantItemDraw__SetItem(
     if ( !skillInfoList )
       goto LABEL_116;
     if ( !skillInfoList->max_length )
-      sub_1BDBADC(this, item, v18);
+      sub_1BC326C(this, item, v18);
     v19 = skillInfoList->m_Items[0];
     if ( !v19 )
       goto LABEL_116;
@@ -193,7 +193,7 @@ void __fastcall EquipGraphServantItemDraw__SetItem(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v59.fields.currentCryptoKey = v25;
     *(_QWORD *)&v59.fields.fakeValue = v24;
-    v26 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48227716(v59, 0LL);
+    v26 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(v59, 0LL);
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     AtlasManager__SetEquipFace(equipSprite, v26, 0LL, 0LL);
@@ -277,7 +277,7 @@ LABEL_56:
         }
       }
 LABEL_116:
-      sub_1BDBAD4(this, item);
+      sub_1BC3264(this, item);
     }
   }
 LABEL_57:
@@ -305,7 +305,7 @@ LABEL_57:
     if ( !this )
       goto LABEL_116;
 LABEL_66:
-    UIIconLabel__Set_40036752((UIIconLabel_o *)this, 7, (_DWORD)v35 + (_DWORD)servantEntity, 0, 0, 0LL, 0, 0, 0, 0, 0LL);
+    UIIconLabel__Set_40054380((UIIconLabel_o *)this, 7, (_DWORD)v35 + (_DWORD)servantEntity, 0, 0, 0LL, 0, 0, 0, 0, 0LL);
   }
   differCostIconLabel = (UnityEngine_Object_o *)v8->fields.differCostIconLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -326,7 +326,7 @@ LABEL_66:
       if ( !this )
         goto LABEL_116;
     }
-    UIIconLabel__Set_40036752((UIIconLabel_o *)this, 43, v38, 0, 0, 0LL, 0, 0, 0, 0, 0LL);
+    UIIconLabel__Set_40054380((UIIconLabel_o *)this, 43, v38, 0, 0, 0LL, 0, 0, 0, 0, 0LL);
   }
   hpIconLabel = (UnityEngine_Object_o *)v8->fields.hpIconLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -349,7 +349,7 @@ LABEL_66:
       if ( !v41 )
         goto LABEL_116;
     }
-    UIIconLabel__Set_40036752(v41, 3, hp + addBaseHp, (int32_t)this, v44, 0LL, 0, 0, 0, 0, 0LL);
+    UIIconLabel__Set_40054380(v41, 3, hp + addBaseHp, (int32_t)this, v44, 0LL, 0, 0, 0, 0, 0LL);
   }
   differHpIconLabel = (UnityEngine_Object_o *)v8->fields.differHpIconLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -370,7 +370,7 @@ LABEL_66:
       if ( !this )
         goto LABEL_116;
     }
-    UIIconLabel__Set_40036752((UIIconLabel_o *)this, 41, v47, 0, 0, 0LL, 0, 0, 0, 0, 0LL);
+    UIIconLabel__Set_40054380((UIIconLabel_o *)this, 41, v47, 0, 0, 0LL, 0, 0, 0, 0, 0LL);
   }
   attackIconLabel = (UnityEngine_Object_o *)v8->fields.attackIconLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -393,7 +393,7 @@ LABEL_66:
       if ( !v50 )
         goto LABEL_116;
     }
-    UIIconLabel__Set_40036752(v50, 5, atk + addBaseAtk, (int32_t)this, v53, 0LL, 0, 0, 0, 0, 0LL);
+    UIIconLabel__Set_40054380(v50, 5, atk + addBaseAtk, (int32_t)this, v53, 0LL, 0, 0, 0, 0, 0LL);
   }
   differAttackIconLabel = (UnityEngine_Object_o *)v8->fields.differAttackIconLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -414,7 +414,7 @@ LABEL_66:
       if ( !this )
         goto LABEL_116;
     }
-    UIIconLabel__Set_40036752((UIIconLabel_o *)this, 42, v56, 0, 0, 0LL, 0, 0, 0, 0, 0LL);
+    UIIconLabel__Set_40054380((UIIconLabel_o *)this, 42, v56, 0, 0, 0LL, 0, 0, 0, 0, 0LL);
   }
   equipButton = (UnityEngine_Object_o *)v8->fields.equipButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

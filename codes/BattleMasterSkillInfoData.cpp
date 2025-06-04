@@ -4,6 +4,7 @@ void __fastcall BattleMasterSkillInfoData___ctor(BattleMasterSkillInfoData_o *th
   *(_QWORD *)&this->fields.cutInId = -1LL;
   *(_QWORD *)&this->fields.commonReleaseCondId = -1LL;
   this->fields._SelectAddIndex_k__BackingField = -1;
+  this->fields.canExecSkill = 1;
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 

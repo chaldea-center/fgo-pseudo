@@ -7,22 +7,22 @@ void __fastcall BattleServantParamSetting___ctor(BattleServantParamSetting_o *th
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4B47F99 & 1) == 0 )
+  if ( (byte_4B05570 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_1/*""*/, method);
-    byte_4B47F99 = 1;
+    sub_1BC3008(&StringLiteral_1/*""*/, method);
+    byte_4B05570 = 1;
   }
   this->fields.BoxColliderPosition.fields.x = NAN;
   v5 = (int)StringLiteral_1/*""*/;
   this->fields.TargetIconSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.TargetIconSpriteName, v5, v2, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.TargetIconSpriteName, v5, v2, v3);
   this->fields.TargetIconPosition.fields.z = 0.0;
   *(_QWORD *)&this->fields.TargetIconPosition.fields.x = 0x41B00000C25C0000LL;
-  *(_OWORD *)&this->fields.TargetIconWidth = xmmword_BEBF60;
+  *(_OWORD *)&this->fields.TargetIconWidth = xmmword_BDF890;
   *(_QWORD *)&this->fields.TargetIconHeightWhenFix = 0xFFFFFFE300000046LL;
   v6 = (int)StringLiteral_1/*""*/;
   this->fields.FixTargetIconSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.FixTargetIconSpriteName, v6, v7, v8);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.FixTargetIconSpriteName, v6, v7, v8);
   *(_QWORD *)&this->fields.FixTargetIconWidth = 0x4A0000004ALL;
   __asm { FMOV            V0.4S, #1.0 }
   this->fields.FixTargetIconColor = _Q0;
@@ -31,6 +31,6 @@ void __fastcall BattleServantParamSetting___ctor(BattleServantParamSetting_o *th
   this->fields.FixTargetIconPosition.fields.z = 0.0;
   this->fields.FixTargetIconDepth = -30;
   this->fields.FixTargetIconDepthWhenTarget = -30;
-  this->fields.FixTargetIconColorWhenTarget = (struct UnityEngine_Color_o)xmmword_BEC0B0;
+  this->fields.FixTargetIconColorWhenTarget = (struct UnityEngine_Color_o)xmmword_BDF9E0;
   UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0LL);
 }

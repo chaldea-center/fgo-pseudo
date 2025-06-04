@@ -25,11 +25,11 @@ bool __fastcall Target__CheckAressSkill(BattleData_o *bData, int32_t taskActorTy
   SkillLvEntity_o *Entity; // x0
 
   v5 = bData;
-  if ( (byte_4B439FD & 1) == 0 )
+  if ( (byte_4B00F88 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_SkillLvMaster___, *(_QWORD *)&taskActorType);
-    bData = (BattleData_o *)sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v6);
-    byte_4B439FD = 1;
+    sub_1BC3008(&Method_DataManager_GetMasterData_SkillLvMaster___, *(_QWORD *)&taskActorType);
+    bData = (BattleData_o *)sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v6);
+    byte_4B00F88 = 1;
   }
   if ( !v5 )
     goto LABEL_19;
@@ -42,15 +42,15 @@ bool __fastcall Target__CheckAressSkill(BattleData_o *bData, int32_t taskActorTy
     return 0;
   v8 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C2BF08(v3);
+    v8 = sub_1C1346C(v3);
   v9 = *(_QWORD *)(*(_QWORD *)(v8 + 192) + 16LL);
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C2BF08(v3);
+    v9 = sub_1C1346C(v3);
   bData = **(BattleData_o ***)(v9 + 184);
   if ( !bData
     || (bData = (BattleData_o *)DataManager__GetMasterData_object_(
                                   (DataManager_o *)bData,
-                                  (const MethodInfo_303395C *)Method_DataManager_GetMasterData_SkillLvMaster___),
+                                  (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_SkillLvMaster___),
         (skillInfo = beforeAction->fields.skillInfo) == 0LL)
     || (v11 = (SkillLvMaster_o *)bData,
         bData = (BattleData_o *)((__int64 (__fastcall *)(struct BattleSkillInfoData_o *, Il2CppMethodPointer))skillInfo->klass->vtable._5_get_skillId.method)(
@@ -60,7 +60,7 @@ bool __fastcall Target__CheckAressSkill(BattleData_o *bData, int32_t taskActorTy
     || !v11 )
   {
 LABEL_19:
-    sub_1BDBAD4(bData, *(_QWORD *)&taskActorType);
+    sub_1BC3264(bData, *(_QWORD *)&taskActorType);
   }
   Entity = SkillLvMaster__GetEntity(v11, (int32_t)bData, v12->fields.skilllv, 0LL);
   if ( Entity )
@@ -100,10 +100,10 @@ int32_t __fastcall Target__GetAliveFieldRandomTargetId(
     return -1;
   if ( !v5 )
 LABEL_10:
-    sub_1BDBAD4(battleData, isEnemyID);
+    sub_1BC3264(battleData, isEnemyID);
   Next = BattleRandom__getNext((int32_t)v5[1].monitor, 0LL);
   if ( (unsigned int)Next >= LODWORD(v5[1].monitor) )
-    sub_1BDBADC(Next, v8, v9);
+    sub_1BC326C(Next, v8, v9);
   return *((_DWORD *)&v5[2].klass + (int)Next);
 }
 
@@ -140,90 +140,90 @@ TargetAggregator_o *__fastcall Target__GetTargetAggregator(
   int32_t v33; // w2
   const MethodInfo *v34; // x3
 
-  if ( (byte_4B439FE & 1) == 0 )
+  if ( (byte_4B00F89 & 1) == 0 )
   {
-    sub_1BDB878(&AllFieldTargetAggregator_TypeInfo, *(_QWORD *)&actorId);
-    sub_1BDB878(&TargetAggregator_Args_TypeInfo, v15);
-    sub_1BDB878(&NoneTargetAggregator_TypeInfo, v16);
-    sub_1BDB878(&OpponentAllFieldTargetAggregator_TypeInfo, v17);
-    sub_1BDB878(&OpponentFullTargetAggregator_TypeInfo, v18);
-    sub_1BDB878(&OpponentOtherFullTargetAggregator_TypeInfo, v19);
-    sub_1BDB878(&OpponentOtherTargetAggregator_TypeInfo, v20);
-    sub_1BDB878(&OpponentRangeAggregator_TypeInfo, v21);
-    sub_1BDB878(&PartyAllFieldTargetAggregator_TypeInfo, v22);
-    sub_1BDB878(&PartyFullTargetAggregator_TypeInfo, v23);
-    sub_1BDB878(&PartyLowsetHpRateTargetChoicer_TypeInfo, v24);
-    sub_1BDB878(&PartyLowsetHpValueTargetChoicer_TypeInfo, v25);
-    sub_1BDB878(&PartyOneOtherTargetAggregator_TypeInfo, v26);
-    sub_1BDB878(&PartyOtherFullTargetAggregator_TypeInfo, v27);
-    sub_1BDB878(&PartyOtherTargetAggregator_TypeInfo, v28);
-    byte_4B439FE = 1;
+    sub_1BC3008(&AllFieldTargetAggregator_TypeInfo, *(_QWORD *)&actorId);
+    sub_1BC3008(&TargetAggregator_Args_TypeInfo, v15);
+    sub_1BC3008(&NoneTargetAggregator_TypeInfo, v16);
+    sub_1BC3008(&OpponentAllFieldTargetAggregator_TypeInfo, v17);
+    sub_1BC3008(&OpponentFullTargetAggregator_TypeInfo, v18);
+    sub_1BC3008(&OpponentOtherFullTargetAggregator_TypeInfo, v19);
+    sub_1BC3008(&OpponentOtherTargetAggregator_TypeInfo, v20);
+    sub_1BC3008(&OpponentRangeAggregator_TypeInfo, v21);
+    sub_1BC3008(&PartyAllFieldTargetAggregator_TypeInfo, v22);
+    sub_1BC3008(&PartyFullTargetAggregator_TypeInfo, v23);
+    sub_1BC3008(&PartyLowsetHpRateTargetChoicer_TypeInfo, v24);
+    sub_1BC3008(&PartyLowsetHpValueTargetChoicer_TypeInfo, v25);
+    sub_1BC3008(&PartyOneOtherTargetAggregator_TypeInfo, v26);
+    sub_1BC3008(&PartyOtherFullTargetAggregator_TypeInfo, v27);
+    sub_1BC3008(&PartyOtherTargetAggregator_TypeInfo, v28);
+    byte_4B00F89 = 1;
   }
   switch ( type )
   {
     case 3:
-      v29 = sub_1BDBAC4(PartyAllFieldTargetAggregator_TypeInfo);
+      v29 = sub_1BC3254(PartyAllFieldTargetAggregator_TypeInfo);
       PartyAllFieldTargetAggregator___ctor((PartyAllFieldTargetAggregator_o *)v29, 0LL);
       break;
     case 6:
-      v29 = sub_1BDBAC4(OpponentAllFieldTargetAggregator_TypeInfo);
+      v29 = sub_1BC3254(OpponentAllFieldTargetAggregator_TypeInfo);
       OpponentAllFieldTargetAggregator___ctor((OpponentAllFieldTargetAggregator_o *)v29, 0LL);
       break;
     case 7:
-      v29 = sub_1BDBAC4(PartyFullTargetAggregator_TypeInfo);
+      v29 = sub_1BC3254(PartyFullTargetAggregator_TypeInfo);
       PartyFullTargetAggregator___ctor((PartyFullTargetAggregator_o *)v29, 0LL);
       break;
     case 8:
-      v29 = sub_1BDBAC4(OpponentFullTargetAggregator_TypeInfo);
+      v29 = sub_1BC3254(OpponentFullTargetAggregator_TypeInfo);
       OpponentFullTargetAggregator___ctor((OpponentFullTargetAggregator_o *)v29, 0LL);
       break;
     case 9:
-      v29 = sub_1BDBAC4(PartyOtherTargetAggregator_TypeInfo);
+      v29 = sub_1BC3254(PartyOtherTargetAggregator_TypeInfo);
       PartyOtherTargetAggregator___ctor((PartyOtherTargetAggregator_o *)v29, 0LL);
       break;
     case 10:
-      v29 = sub_1BDBAC4(PartyOneOtherTargetAggregator_TypeInfo);
+      v29 = sub_1BC3254(PartyOneOtherTargetAggregator_TypeInfo);
       PartyOneOtherTargetAggregator___ctor((PartyOneOtherTargetAggregator_o *)v29, 0LL);
       break;
     case 12:
-      v29 = sub_1BDBAC4(OpponentOtherTargetAggregator_TypeInfo);
+      v29 = sub_1BC3254(OpponentOtherTargetAggregator_TypeInfo);
       OpponentOtherTargetAggregator___ctor((OpponentOtherTargetAggregator_o *)v29, 0LL);
       break;
     case 14:
-      v29 = sub_1BDBAC4(PartyOtherFullTargetAggregator_TypeInfo);
+      v29 = sub_1BC3254(PartyOtherFullTargetAggregator_TypeInfo);
       PartyOtherFullTargetAggregator___ctor((PartyOtherFullTargetAggregator_o *)v29, 0LL);
       break;
     case 15:
-      v29 = sub_1BDBAC4(OpponentOtherFullTargetAggregator_TypeInfo);
+      v29 = sub_1BC3254(OpponentOtherFullTargetAggregator_TypeInfo);
       OpponentOtherFullTargetAggregator___ctor((OpponentOtherFullTargetAggregator_o *)v29, 0LL);
       break;
     case 28:
-      v29 = sub_1BDBAC4(PartyLowsetHpValueTargetChoicer_TypeInfo);
+      v29 = sub_1BC3254(PartyLowsetHpValueTargetChoicer_TypeInfo);
       PartyLowsetHpValueTargetChoicer___ctor((PartyLowsetHpValueTargetChoicer_o *)v29, 0LL);
       break;
     case 29:
-      v29 = sub_1BDBAC4(PartyLowsetHpRateTargetChoicer_TypeInfo);
+      v29 = sub_1BC3254(PartyLowsetHpRateTargetChoicer_TypeInfo);
       PartyLowsetHpRateTargetChoicer___ctor((PartyLowsetHpRateTargetChoicer_o *)v29, 0LL);
       break;
     case 30:
-      v29 = sub_1BDBAC4(OpponentRangeAggregator_TypeInfo);
+      v29 = sub_1BC3254(OpponentRangeAggregator_TypeInfo);
       OpponentRangeAggregator___ctor((OpponentRangeAggregator_o *)v29, 0LL);
       break;
     case 32:
-      v29 = sub_1BDBAC4(AllFieldTargetAggregator_TypeInfo);
+      v29 = sub_1BC3254(AllFieldTargetAggregator_TypeInfo);
       AllFieldTargetAggregator___ctor((AllFieldTargetAggregator_o *)v29, 0LL);
       break;
     default:
-      v29 = sub_1BDBAC4(NoneTargetAggregator_TypeInfo);
+      v29 = sub_1BC3254(NoneTargetAggregator_TypeInfo);
       NoneTargetAggregator___ctor((NoneTargetAggregator_o *)v29, 0LL);
       break;
   }
-  v30 = (TargetAggregator_Args_o *)sub_1BDBAC4(TargetAggregator_Args_TypeInfo);
+  v30 = (TargetAggregator_Args_o *)sub_1BC3254(TargetAggregator_Args_TypeInfo);
   TargetAggregator_Args___ctor(v30, battleData, actorId, targetId, pttargetId, taskActorType, battleTargetArgs, 0LL);
   if ( !v29 )
-    sub_1BDBAD4(v31, v32);
+    sub_1BC3264(v31, v32);
   *(_QWORD *)(v29 + 16) = v30;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v29 + 16), (int32_t)v30, v33, v34);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v29 + 16), (int32_t)v30, v33, v34);
   return (TargetAggregator_o *)v29;
 }
 
@@ -238,7 +238,7 @@ bool __fastcall Target__IsActorPlayerSide(
   if ( (actorId & 0x80000000) != 0 )
     return (taskActorType != 5) & !Target__CheckAressSkill(bData, taskActorType, *(const MethodInfo **)&taskActorType);
   if ( !bData )
-    sub_1BDBAD4(0LL, actorId);
+    sub_1BC3264(0LL, actorId);
   return BattleData__isPlayerID(bData, actorId, 0LL);
 }
 
@@ -283,32 +283,32 @@ System_Int32_array *__fastcall Target__getOrderOneTargetIdArray(
   il2cpp_array_size_t v16; // w20
   __int64 v17; // x2
 
-  if ( (byte_4B439FC & 1) == 0 )
+  if ( (byte_4B00F87 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Array_IndexOf_int___, *(_QWORD *)&excludeId);
-    sub_1BDB878(&Method_System_Array_Reverse_int___, v9);
-    sub_1BDB878(&int___TypeInfo, v10);
-    byte_4B439FC = 1;
+    sub_1BC3008(&Method_System_Array_IndexOf_int___, *(_QWORD *)&excludeId);
+    sub_1BC3008(&Method_System_Array_Reverse_int___, v9);
+    sub_1BC3008(&int___TypeInfo, v10);
+    byte_4B00F87 = 1;
   }
-  v11 = sub_1BDB920(int___TypeInfo, 0LL);
+  v11 = sub_1BC30B0(int___TypeInfo, 0LL);
   if ( !checkIdArray )
     goto LABEL_18;
   v13 = (System_Int32_array *)v11;
   if ( *(_QWORD *)&checkIdArray->max_length )
   {
     if ( isOrderDesc )
-      System_Array__Reverse_int_(checkIdArray, (const MethodInfo_2FF4960 *)Method_System_Array_Reverse_int___);
+      System_Array__Reverse_int_(checkIdArray, (const MethodInfo_2FC2E40 *)Method_System_Array_Reverse_int___);
     v14 = System_Array__IndexOf_int_(
             checkIdArray,
             excludeId,
-            (const MethodInfo_3132F28 *)Method_System_Array_IndexOf_int___);
+            (const MethodInfo_31002A8 *)Method_System_Array_IndexOf_int___);
     v15 = v14 - 1;
     if ( !isPrev )
       v15 = 0;
     v16 = v14 >= 1 ? v15 : v14 == 0;
     if ( (signed int)v16 < (signed int)checkIdArray->max_length )
     {
-      v11 = sub_1BDB920(int___TypeInfo, 1LL);
+      v11 = sub_1BC30B0(int___TypeInfo, 1LL);
       if ( v16 >= checkIdArray->max_length )
         goto LABEL_19;
       v13 = (System_Int32_array *)v11;
@@ -320,10 +320,10 @@ System_Int32_array *__fastcall Target__getOrderOneTargetIdArray(
           return v13;
         }
 LABEL_19:
-        sub_1BDBADC(v11, v12, v17);
+        sub_1BC326C(v11, v12, v17);
       }
 LABEL_18:
-      sub_1BDBAD4(v11, v12);
+      sub_1BC3264(v11, v12);
     }
   }
   return v13;
@@ -341,12 +341,12 @@ System_Int32_array *__fastcall Target__getTargetIds(
 {
   const MethodInfo *v8; // [xsp+10h] [xbp-20h]
 
-  return Target__getTargetIds_39476520(bdata, actorId, targetId, pttargetId, tgType, 0, 0, tvals, 0, 0LL, v8);
+  return Target__getTargetIds_39493712(bdata, actorId, targetId, pttargetId, tgType, 0, 0, tvals, 0, 0LL, v8);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_Int32_array *__fastcall Target__getTargetIds_39476520(
+System_Int32_array *__fastcall Target__getTargetIds_39493712(
         BattleData_o *bdata,
         int32_t actorId,
         int32_t targetId,
@@ -475,31 +475,31 @@ System_Int32_array *__fastcall Target__getTargetIds_39476520(
   System_Int32_array *v134; // [xsp+0h] [xbp-70h]
   int32_t cardIndex; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4B439FB & 1) == 0 )
+  if ( (byte_4B00F86 & 1) == 0 )
   {
-    sub_1BDB878(&int___TypeInfo, *(_QWORD *)&actorId);
-    sub_1BDB878(&Method_System_Collections_Generic_List_int__Add__, v19);
-    sub_1BDB878(&Method_System_Collections_Generic_List_int___ctor__, v20);
-    sub_1BDB878(&Method_System_Collections_Generic_List_int__get_Count__, v21);
-    sub_1BDB878(&Method_System_Collections_Generic_List_int__get_Item__, v22);
-    sub_1BDB878(&System_Collections_Generic_List_int__TypeInfo, v23);
-    byte_4B439FB = 1;
+    sub_1BC3008(&int___TypeInfo, *(_QWORD *)&actorId);
+    sub_1BC3008(&Method_System_Collections_Generic_List_int__Add__, v19);
+    sub_1BC3008(&Method_System_Collections_Generic_List_int___ctor__, v20);
+    sub_1BC3008(&Method_System_Collections_Generic_List_int__get_Count__, v21);
+    sub_1BC3008(&Method_System_Collections_Generic_List_int__get_Item__, v22);
+    sub_1BC3008(&System_Collections_Generic_List_int__TypeInfo, v23);
+    byte_4B00F86 = 1;
   }
   cardIndex = 0;
-  v24 = sub_1BDB920(int___TypeInfo, 0LL);
+  v24 = sub_1BC30B0(int___TypeInfo, 0LL);
   v134 = (System_Int32_array *)v24;
   if ( !bdata )
     goto LABEL_142;
   v27 = 0LL;
   if ( !BattleData__IsAiNpcID(bdata, actorId, 0LL) )
     goto LABEL_8;
-  v24 = sub_1BDB920(int___TypeInfo, 1LL);
+  v24 = sub_1BC30B0(int___TypeInfo, 1LL);
   if ( !v24 )
 LABEL_142:
-    sub_1BDBAD4(v24, v25);
+    sub_1BC3264(v24, v25);
   v27 = (System_Int32_array *)v24;
   if ( !*(_DWORD *)(v24 + 24) )
-    sub_1BDBADC(v24, v25, v28);
+    sub_1BC326C(v24, v25, v28);
   *(_DWORD *)(v24 + 32) = actorId;
 LABEL_8:
   IsActorPlayerSide = Target__IsActorPlayerSide(bdata, actorId, taskActorType, v26);
@@ -507,35 +507,35 @@ LABEL_8:
   {
     case 0:
     case 25:
-      v34 = sub_1BDB920(int___TypeInfo, 1LL);
+      v34 = sub_1BC30B0(int___TypeInfo, 1LL);
       v37 = (System_Int32_array *)v34;
       if ( !v34 )
-        sub_1BDBAD4(0LL, v35);
+        sub_1BC3264(0LL, v35);
       if ( !*(_DWORD *)(v34 + 24) )
-        sub_1BDBADC(v34, v35, v36);
+        sub_1BC326C(v34, v35, v36);
       *(_DWORD *)(v34 + 32) = actorId;
       v134 = (System_Int32_array *)v34;
       if ( actorId == -1 )
       {
         FieldPlayerServantIDList = BattleData__getFieldPlayerServantIDList(bdata, 0LL, 0LL);
         if ( !FieldPlayerServantIDList )
-          sub_1BDBAD4(0LL, v39);
+          sub_1BC3264(0LL, v39);
         if ( !FieldPlayerServantIDList->max_length )
-          sub_1BDBADC(FieldPlayerServantIDList, v39, v40);
+          sub_1BC326C(FieldPlayerServantIDList, v39, v40);
         if ( !v37->max_length )
-          sub_1BDBADC(FieldPlayerServantIDList, v39, v40);
+          sub_1BC326C(FieldPlayerServantIDList, v39, v40);
         goto LABEL_70;
       }
       return v134;
     case 1:
-      v46 = (System_Int32_array *)sub_1BDB920(int___TypeInfo, 1LL);
+      v46 = (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 1LL);
       ServantData = BattleData__getServantData(bdata, pttargetId, 0LL);
       if ( !ServantData )
-        return (System_Int32_array *)sub_1BDB920(int___TypeInfo, 0LL);
+        return (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 0LL);
       if ( !v46 )
-        sub_1BDBAD4(ServantData, v55);
+        sub_1BC3264(ServantData, v55);
       if ( !v46->max_length )
-        sub_1BDBADC(ServantData, v55, v56);
+        sub_1BC326C(ServantData, v55, v56);
       goto LABEL_41;
     case 3:
       if ( BattleData__isEnemyID(bdata, actorId, 0LL) )
@@ -543,12 +543,12 @@ LABEL_8:
       else
         return BattleData__getFieldPlayerServantIDList(bdata, v27, 0LL);
     case 4:
-      v73 = sub_1BDB920(int___TypeInfo, 1LL);
+      v73 = sub_1BC30B0(int___TypeInfo, 1LL);
       v46 = (System_Int32_array *)v73;
       if ( !v73 )
-        sub_1BDBAD4(0LL, v74);
+        sub_1BC3264(0LL, v74);
       if ( !*(_DWORD *)(v73 + 24) )
-        sub_1BDBADC(v73, v74, v75);
+        sub_1BC326C(v73, v74, v75);
       goto LABEL_63;
     case 6:
       if ( BattleData__isEnemyID(bdata, actorId, 0LL) )
@@ -562,7 +562,7 @@ LABEL_8:
       {
         dataVals = args->fields.dataVals;
         if ( !dataVals )
-          sub_1BDBAD4(0LL, v59);
+          sub_1BC3264(0LL, v59);
         v133 = !DataVals__isCheckDead(dataVals, 0LL);
       }
       else
@@ -577,7 +577,7 @@ LABEL_8:
       {
         v61 = args->fields.dataVals;
         if ( !v61 )
-          sub_1BDBAD4(0LL, v60);
+          sub_1BC3264(0LL, v60);
         v62 = !DataVals__isCheckDead(v61, 0LL);
       }
       else
@@ -604,58 +604,58 @@ LABEL_8:
                            args,
                            v29);
       if ( !TargetAggregator )
-        sub_1BDBAD4(0LL, v32);
+        sub_1BC3264(0LL, v32);
       return (System_Int32_array *)((__int64 (__fastcall *)(TargetAggregator_o *, const char *))TargetAggregator->klass[1]._1.gc_desc)(
                                      TargetAggregator,
                                      TargetAggregator->klass[1]._1.name);
     case 11:
-      v46 = (System_Int32_array *)sub_1BDB920(int___TypeInfo, 1LL);
+      v46 = (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 1LL);
       isEnemyID = BattleData__isEnemyID(bdata, actorId, 0LL);
       AliveFieldRandomTargetId = Target__GetAliveFieldRandomTargetId(bdata, isEnemyID, 0, v69);
       if ( !v46 )
-        sub_1BDBAD4(AliveFieldRandomTargetId, v71);
+        sub_1BC3264(AliveFieldRandomTargetId, v71);
       if ( !v46->max_length )
-        sub_1BDBADC(AliveFieldRandomTargetId, v71, v72);
+        sub_1BC326C(AliveFieldRandomTargetId, v71, v72);
       goto LABEL_126;
     case 13:
-      v46 = (System_Int32_array *)sub_1BDB920(int___TypeInfo, 1LL);
+      v46 = (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 1LL);
       v81 = BattleData__isEnemyID(bdata, actorId, 0LL);
       AliveFieldRandomTargetId = Target__GetAliveFieldRandomTargetId(bdata, !v81, IsActorPlayerSide, v82);
       if ( !v46 )
-        sub_1BDBAD4(AliveFieldRandomTargetId, v83);
+        sub_1BC3264(AliveFieldRandomTargetId, v83);
       if ( !v46->max_length )
-        sub_1BDBADC(AliveFieldRandomTargetId, v83, v84);
+        sub_1BC326C(AliveFieldRandomTargetId, v83, v84);
       goto LABEL_126;
     case 16:
-      v46 = (System_Int32_array *)sub_1BDB920(int___TypeInfo, 1LL);
+      v46 = (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 1LL);
       v47 = BattleData__getServantData(bdata, pttargetId, 0LL);
       if ( !v47 )
-        return (System_Int32_array *)sub_1BDB920(int___TypeInfo, 0LL);
+        return (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 0LL);
       if ( !v46 )
-        sub_1BDBAD4(v47, v48);
+        sub_1BC3264(v47, v48);
       if ( !v46->max_length )
-        sub_1BDBADC(v47, v48, v49);
+        sub_1BC326C(v47, v48, v49);
 LABEL_41:
       v46->m_Items[1] = pttargetId;
       return v46;
     case 17:
-      v76 = sub_1BDB920(int___TypeInfo, 1LL);
+      v76 = sub_1BC30B0(int___TypeInfo, 1LL);
       v37 = (System_Int32_array *)v76;
       if ( !v76 )
-        sub_1BDBAD4(0LL, v77);
+        sub_1BC3264(0LL, v77);
       if ( !*(_DWORD *)(v76 + 24) )
-        sub_1BDBADC(v76, v77, v78);
+        sub_1BC326C(v76, v77, v78);
       *(_DWORD *)(v76 + 32) = actorId;
       v134 = (System_Int32_array *)v76;
       if ( actorId == -1 )
       {
         FieldPlayerServantIDList = BattleData__getFieldPlayerServantIDList(bdata, 0LL, 0LL);
         if ( !FieldPlayerServantIDList )
-          sub_1BDBAD4(0LL, v79);
+          sub_1BC3264(0LL, v79);
         if ( !FieldPlayerServantIDList->max_length )
-          sub_1BDBADC(FieldPlayerServantIDList, v79, v80);
+          sub_1BC326C(FieldPlayerServantIDList, v79, v80);
         if ( !v37->max_length )
-          sub_1BDBADC(FieldPlayerServantIDList, v79, v80);
+          sub_1BC326C(FieldPlayerServantIDList, v79, v80);
 LABEL_70:
         v134 = v37;
         v37->m_Items[1] = FieldPlayerServantIDList->m_Items[1];
@@ -667,12 +667,12 @@ LABEL_70:
       else
         AliveFieldEnemyServantIDList = BattleData__getAliveFieldPlayerServantIDList(bdata, 0LL, 0LL);
       v89 = AliveFieldEnemyServantIDList;
-      v90 = (System_Collections_Generic_List_int__o *)sub_1BDBAC4(System_Collections_Generic_List_int__TypeInfo);
+      v90 = (System_Collections_Generic_List_int__o *)sub_1BC3254(System_Collections_Generic_List_int__TypeInfo);
       System_Collections_Generic_List_int____ctor(
         v90,
-        (const MethodInfo_36B854C *)Method_System_Collections_Generic_List_int___ctor__);
+        (const MethodInfo_36835C8 *)Method_System_Collections_Generic_List_int___ctor__);
       if ( !v89 )
-        sub_1BDBAD4(v91, v92);
+        sub_1BC3264(v91, v92);
       v94 = *(_QWORD *)&v89->max_length;
       if ( (int)v94 >= 1 )
       {
@@ -680,24 +680,24 @@ LABEL_70:
         do
         {
           if ( v95 >= (unsigned int)v94 )
-            sub_1BDBADC(v91, v92, v93);
+            sub_1BC326C(v91, v92, v93);
           v92 = (unsigned int)v89->m_Items[v95 + 1];
           if ( (_DWORD)v92 != pttargetId )
           {
             if ( !v90 )
-              sub_1BDBAD4(v91, v92);
+              sub_1BC3264(v91, v92);
             items = v90->fields._items;
             v97 = Method_System_Collections_Generic_List_int__Add__;
             ++v90->fields._version;
             if ( !items )
-              sub_1BDBAD4(v91, v92);
+              sub_1BC3264(v91, v92);
             size = v90->fields._size;
             if ( (unsigned int)size >= items->max_length )
             {
               System_Collections_Generic_List_int___AddWithResize(
                 v90,
                 v92,
-                *(const MethodInfo_36B8DA0 **)(*(_QWORD *)(v97[4] + 192LL) + 112LL));
+                *(const MethodInfo_3683E1C **)(*(_QWORD *)(v97[4] + 192LL) + 112LL));
             }
             else
             {
@@ -711,20 +711,20 @@ LABEL_70:
         while ( (__int64)v95 < (int)v94 );
       }
       if ( !v90 )
-        sub_1BDBAD4(v91, v92);
+        sub_1BC3264(v91, v92);
       v99 = v90->fields._size;
       if ( !v99 )
-        return (System_Int32_array *)sub_1BDB920(int___TypeInfo, 0LL);
+        return (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 0LL);
       Next = BattleRandom__getNext(v99, 0LL);
-      v46 = (System_Int32_array *)sub_1BDB920(int___TypeInfo, 1LL);
+      v46 = (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 1LL);
       AliveFieldRandomTargetId = System_Collections_Generic_List_int___get_Item(
                                    v90,
                                    Next,
-                                   (const MethodInfo_36B8AB0 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                   (const MethodInfo_3683B2C *)Method_System_Collections_Generic_List_int__get_Item__);
       if ( !v46 )
-        sub_1BDBAD4(AliveFieldRandomTargetId, v101);
+        sub_1BC3264(AliveFieldRandomTargetId, v101);
       if ( !v46->max_length )
-        sub_1BDBADC(AliveFieldRandomTargetId, v101, v102);
+        sub_1BC326C(AliveFieldRandomTargetId, v101, v102);
       goto LABEL_126;
     case 19:
       if ( BattleData__isEnemyID(bdata, actorId, 0LL) )
@@ -732,12 +732,12 @@ LABEL_70:
       else
         AliveFieldPlayerServantIDList = BattleData__getAliveFieldPlayerServantIDList(bdata, 0LL, 0LL);
       v117 = AliveFieldPlayerServantIDList;
-      v118 = (System_Collections_Generic_List_int__o *)sub_1BDBAC4(System_Collections_Generic_List_int__TypeInfo);
+      v118 = (System_Collections_Generic_List_int__o *)sub_1BC3254(System_Collections_Generic_List_int__TypeInfo);
       System_Collections_Generic_List_int____ctor(
         v118,
-        (const MethodInfo_36B854C *)Method_System_Collections_Generic_List_int___ctor__);
+        (const MethodInfo_36835C8 *)Method_System_Collections_Generic_List_int___ctor__);
       if ( !v117 )
-        sub_1BDBAD4(v119, v120);
+        sub_1BC3264(v119, v120);
       v122 = *(_QWORD *)&v117->max_length;
       if ( (int)v122 >= 1 )
       {
@@ -745,24 +745,24 @@ LABEL_70:
         do
         {
           if ( v123 >= (unsigned int)v122 )
-            sub_1BDBADC(v119, v120, v121);
+            sub_1BC326C(v119, v120, v121);
           v120 = (unsigned int)v117->m_Items[v123 + 1];
           if ( (_DWORD)v120 != actorId )
           {
             if ( !v118 )
-              sub_1BDBAD4(v119, v120);
+              sub_1BC3264(v119, v120);
             v124 = v118->fields._items;
             v125 = Method_System_Collections_Generic_List_int__Add__;
             ++v118->fields._version;
             if ( !v124 )
-              sub_1BDBAD4(v119, v120);
+              sub_1BC3264(v119, v120);
             v126 = v118->fields._size;
             if ( (unsigned int)v126 >= v124->max_length )
             {
               System_Collections_Generic_List_int___AddWithResize(
                 v118,
                 v120,
-                *(const MethodInfo_36B8DA0 **)(*(_QWORD *)(v125[4] + 192LL) + 112LL));
+                *(const MethodInfo_3683E1C **)(*(_QWORD *)(v125[4] + 192LL) + 112LL));
             }
             else
             {
@@ -776,20 +776,20 @@ LABEL_70:
         while ( (__int64)v123 < (int)v122 );
       }
       if ( !v118 )
-        sub_1BDBAD4(v119, v120);
+        sub_1BC3264(v119, v120);
       v127 = v118->fields._size;
       if ( !v127 )
-        return (System_Int32_array *)sub_1BDB920(int___TypeInfo, 0LL);
+        return (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 0LL);
       v128 = BattleRandom__getNext(v127, 0LL);
-      v46 = (System_Int32_array *)sub_1BDB920(int___TypeInfo, 1LL);
+      v46 = (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 1LL);
       AliveFieldRandomTargetId = System_Collections_Generic_List_int___get_Item(
                                    v118,
                                    v128,
-                                   (const MethodInfo_36B8AB0 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                   (const MethodInfo_3683B2C *)Method_System_Collections_Generic_List_int__get_Item__);
       if ( !v46 )
-        sub_1BDBAD4(AliveFieldRandomTargetId, v129);
+        sub_1BC3264(AliveFieldRandomTargetId, v129);
       if ( !v46->max_length )
-        sub_1BDBADC(AliveFieldRandomTargetId, v129, v130);
+        sub_1BC326C(AliveFieldRandomTargetId, v129, v130);
       goto LABEL_126;
     case 20:
       if ( BattleData__isEnemyID(bdata, actorId, 0LL) )
@@ -797,12 +797,12 @@ LABEL_70:
       else
         v44 = BattleData__getAliveFieldEnemyServantIDList(bdata, IsActorPlayerSide, 0LL);
       v103 = v44;
-      v104 = (System_Collections_Generic_List_int__o *)sub_1BDBAC4(System_Collections_Generic_List_int__TypeInfo);
+      v104 = (System_Collections_Generic_List_int__o *)sub_1BC3254(System_Collections_Generic_List_int__TypeInfo);
       System_Collections_Generic_List_int____ctor(
         v104,
-        (const MethodInfo_36B854C *)Method_System_Collections_Generic_List_int___ctor__);
+        (const MethodInfo_36835C8 *)Method_System_Collections_Generic_List_int___ctor__);
       if ( !v103 )
-        sub_1BDBAD4(v105, v106);
+        sub_1BC3264(v105, v106);
       v108 = *(_QWORD *)&v103->max_length;
       if ( (int)v108 >= 1 )
       {
@@ -810,24 +810,24 @@ LABEL_70:
         do
         {
           if ( v109 >= (unsigned int)v108 )
-            sub_1BDBADC(v105, v106, v107);
+            sub_1BC326C(v105, v106, v107);
           v106 = (unsigned int)v103->m_Items[v109 + 1];
           if ( (_DWORD)v106 != targetId )
           {
             if ( !v104 )
-              sub_1BDBAD4(v105, v106);
+              sub_1BC3264(v105, v106);
             v110 = v104->fields._items;
             v111 = Method_System_Collections_Generic_List_int__Add__;
             ++v104->fields._version;
             if ( !v110 )
-              sub_1BDBAD4(v105, v106);
+              sub_1BC3264(v105, v106);
             v112 = v104->fields._size;
             if ( (unsigned int)v112 >= v110->max_length )
             {
               System_Collections_Generic_List_int___AddWithResize(
                 v104,
                 v106,
-                *(const MethodInfo_36B8DA0 **)(*(_QWORD *)(v111[4] + 192LL) + 112LL));
+                *(const MethodInfo_3683E1C **)(*(_QWORD *)(v111[4] + 192LL) + 112LL));
             }
             else
             {
@@ -841,20 +841,20 @@ LABEL_70:
         while ( (__int64)v109 < (int)v108 );
       }
       if ( !v104 )
-        sub_1BDBAD4(v105, v106);
+        sub_1BC3264(v105, v106);
       v113 = v104->fields._size;
       if ( !v113 )
-        return (System_Int32_array *)sub_1BDB920(int___TypeInfo, 0LL);
+        return (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 0LL);
       v114 = BattleRandom__getNext(v113, 0LL);
-      v46 = (System_Int32_array *)sub_1BDB920(int___TypeInfo, 1LL);
+      v46 = (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 1LL);
       AliveFieldRandomTargetId = System_Collections_Generic_List_int___get_Item(
                                    v104,
                                    v114,
-                                   (const MethodInfo_36B8AB0 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                   (const MethodInfo_3683B2C *)Method_System_Collections_Generic_List_int__get_Item__);
       if ( !v46 )
-        sub_1BDBAD4(AliveFieldRandomTargetId, v115);
+        sub_1BC3264(AliveFieldRandomTargetId, v115);
       if ( !v46->max_length )
-        sub_1BDBADC(AliveFieldRandomTargetId, v115, v116);
+        sub_1BC326C(AliveFieldRandomTargetId, v115, v116);
 LABEL_126:
       v46->m_Items[1] = AliveFieldRandomTargetId;
       return v46;
@@ -878,33 +878,33 @@ LABEL_126:
         targetId = BattleServantData__getRevengeTargetUniqueId(v50, 0LL);
       if ( BattleData__getServantData(bdata, targetId, 0LL) )
       {
-        v51 = sub_1BDB920(int___TypeInfo, 1LL);
+        v51 = sub_1BC30B0(int___TypeInfo, 1LL);
         v46 = (System_Int32_array *)v51;
         if ( !v51 )
-          sub_1BDBAD4(0LL, v52);
+          sub_1BC3264(0LL, v52);
         if ( !*(_DWORD *)(v51 + 24) )
-          sub_1BDBADC(v51, v52, v53);
+          sub_1BC326C(v51, v52, v53);
 LABEL_63:
         v46->m_Items[1] = targetId;
         return v46;
       }
       else
       {
-        return (System_Int32_array *)sub_1BDB920(int___TypeInfo, 0LL);
+        return (System_Int32_array *)sub_1BC30B0(int___TypeInfo, 0LL);
       }
     case 31:
-      v63 = sub_1BDB920(int___TypeInfo, 1LL);
+      v63 = sub_1BC30B0(int___TypeInfo, 1LL);
       PlayerServantFromRandomCommandCard = BattleData__GetPlayerServantFromRandomCommandCard(bdata, &cardIndex, 0LL);
       if ( !v63 )
-        sub_1BDBAD4(PlayerServantFromRandomCommandCard, v65);
+        sub_1BC3264(PlayerServantFromRandomCommandCard, v65);
       if ( !*(_DWORD *)(v63 + 24) )
-        sub_1BDBADC(PlayerServantFromRandomCommandCard, v65, v66);
+        sub_1BC326C(PlayerServantFromRandomCommandCard, v65, v66);
       *(_DWORD *)(v63 + 32) = PlayerServantFromRandomCommandCard;
       if ( !args )
-        sub_1BDBAD4(PlayerServantFromRandomCommandCard, v65);
+        sub_1BC3264(PlayerServantFromRandomCommandCard, v65);
       v67 = args->fields.dataVals;
       if ( !v67 )
-        sub_1BDBAD4(PlayerServantFromRandomCommandCard, v65);
+        sub_1BC3264(PlayerServantFromRandomCommandCard, v65);
       v134 = (System_Int32_array *)v63;
       v67->fields.targetCardIndex = cardIndex;
       return v134;
@@ -993,7 +993,7 @@ void __fastcall Target_BattleTargetArgs___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.dataVals = dataVals;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)dataVals, v5, v6);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)dataVals, v5, v6);
 }
 
 
@@ -1003,7 +1003,7 @@ bool __fastcall Target_BattleTargetArgs__IsCheckDead(Target_BattleTargetArgs_o *
 
   dataVals = this->fields.dataVals;
   if ( !dataVals )
-    sub_1BDBAD4(0LL, method);
+    sub_1BC3264(0LL, method);
   return DataVals__isCheckDead(dataVals, 0LL);
 }
 
@@ -1017,7 +1017,7 @@ void __fastcall Target_BattleTargetArgs__SetTargetCardIndex(
 
   dataVals = this->fields.dataVals;
   if ( !dataVals )
-    sub_1BDBAD4(this, cardIndex);
+    sub_1BC3264(this, cardIndex);
   dataVals->fields.targetCardIndex = cardIndex;
 }
 
@@ -1036,17 +1036,17 @@ System_Int32_array *__fastcall Target_BattleTargetArgs__get_EnemyRange(
   __int64 v10; // x0
   __int64 v11; // x0
 
-  if ( (byte_4B439FF & 1) == 0 )
+  if ( (byte_4B00F8A & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Array_Empty_int___, method);
-    byte_4B439FF = 1;
+    sub_1BC3008(&Method_System_Array_Empty_int___, method);
+    byte_4B00F8A = 1;
   }
   enemyRange = this->fields.enemyRange;
   if ( !enemyRange )
   {
     dataVals = this->fields.dataVals;
     if ( !dataVals )
-      sub_1BDBAD4(0LL, method);
+      sub_1BC3264(0LL, method);
     enemyRange = DataVals__GetParamArray(dataVals, 135, 0LL);
     if ( !enemyRange )
     {
@@ -1054,21 +1054,21 @@ System_Int32_array *__fastcall Target_BattleTargetArgs__get_EnemyRange(
       v9 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
       if ( !v9 )
       {
-        sub_1C2BF64(Method_System_Array_Empty_int___);
+        sub_1C134C8(Method_System_Array_Empty_int___);
         v9 = v8[7];
       }
       v10 = *(_QWORD *)(v9 + 16);
       if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-        v10 = sub_1C2BF08(inited);
+        v10 = sub_1C1346C(inited);
       if ( !*(_DWORD *)(v10 + 224) )
         inited = j_il2cpp_runtime_class_init_0(v10);
       v11 = *(_QWORD *)(v8[7] + 16LL);
       if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-        v11 = sub_1C2BF08(inited);
+        v11 = sub_1C1346C(inited);
       enemyRange = **(struct System_Int32_array ***)(v11 + 184);
     }
     this->fields.enemyRange = enemyRange;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.enemyRange, (int32_t)enemyRange, v5, v6);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.enemyRange, (int32_t)enemyRange, v5, v6);
   }
   return enemyRange;
 }

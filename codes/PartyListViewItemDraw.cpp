@@ -4,14 +4,14 @@ void __fastcall PartyListViewItemDraw___ctor(PartyListViewItemDraw_o *this, cons
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B404BB & 1) == 0 )
+  if ( (byte_4AFDA2B & 1) == 0 )
   {
-    sub_1BDB878(&PartyOrganizationListViewItemDraw___TypeInfo, method);
-    byte_4B404BB = 1;
+    sub_1BC3008(&PartyOrganizationListViewItemDraw___TypeInfo, method);
+    byte_4AFDA2B = 1;
   }
-  v3 = (struct PartyOrganizationListViewItemDraw_array *)sub_1BDB920(PartyOrganizationListViewItemDraw___TypeInfo, 6LL);
+  v3 = (struct PartyOrganizationListViewItemDraw_array *)sub_1BC30B0(PartyOrganizationListViewItemDraw___TypeInfo, 6LL);
   this->fields.itemDrawList = v3;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.itemDrawList, (int32_t)v3, v4, v5);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.itemDrawList, (int32_t)v3, v4, v5);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -31,21 +31,21 @@ void __fastcall PartyListViewItemDraw__SetActiveGrandEffect(
   System_Collections_Generic_IEnumerable_T__o *itemDrawList; // x19
   System_Action_object__o *v12; // x20
 
-  if ( (byte_4B404BA & 1) == 0 )
+  if ( (byte_4AFDA2A & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_PartyOrganizationListViewItemDraw__TypeInfo, flag);
-    sub_1BDB878(&Method_BasicHelper_ForEach_PartyOrganizationListViewItemDraw___, v5);
-    sub_1BDB878(&Method_PartyListViewItemDraw___c__DisplayClass12_0__SetActiveGrandEffect_b__0__, v6);
-    sub_1BDB878(&PartyListViewItemDraw___c__DisplayClass12_0_TypeInfo, v7);
-    byte_4B404BA = 1;
+    sub_1BC3008(&System_Action_PartyOrganizationListViewItemDraw__TypeInfo, flag);
+    sub_1BC3008(&Method_BasicHelper_ForEach_PartyOrganizationListViewItemDraw___, v5);
+    sub_1BC3008(&Method_PartyListViewItemDraw___c__DisplayClass12_0__SetActiveGrandEffect_b__0__, v6);
+    sub_1BC3008(&PartyListViewItemDraw___c__DisplayClass12_0_TypeInfo, v7);
+    byte_4AFDA2A = 1;
   }
-  v8 = sub_1BDBAC4(PartyListViewItemDraw___c__DisplayClass12_0_TypeInfo);
+  v8 = sub_1BC3254(PartyListViewItemDraw___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1BDBAD4(v9, v10);
+    sub_1BC3264(v9, v10);
   *(_BYTE *)(v8 + 16) = flag;
   itemDrawList = (System_Collections_Generic_IEnumerable_T__o *)this->fields.itemDrawList;
-  v12 = (System_Action_object__o *)sub_1BDBAC4(System_Action_PartyOrganizationListViewItemDraw__TypeInfo);
+  v12 = (System_Action_object__o *)sub_1BC3254(System_Action_PartyOrganizationListViewItemDraw__TypeInfo);
   System_Action_object____ctor(
     v12,
     (Il2CppObject *)v8,
@@ -54,7 +54,7 @@ void __fastcall PartyListViewItemDraw__SetActiveGrandEffect(
   BasicHelper__ForEach_object_(
     itemDrawList,
     (System_Action_T__o *)v12,
-    (const MethodInfo_301FA1C *)Method_BasicHelper_ForEach_PartyOrganizationListViewItemDraw___);
+    (const MethodInfo_2FEDEFC *)Method_BasicHelper_ForEach_PartyOrganizationListViewItemDraw___);
 }
 
 
@@ -74,12 +74,12 @@ void __fastcall PartyListViewItemDraw__SetInput(
   struct PartyOrganizationListViewItemDraw_array *itemDrawList; // x8
   PartyOrganizationListViewItemDraw_o *v15; // x23
 
-  if ( (byte_4B404B9 & 1) == 0 )
+  if ( (byte_4AFDA29 & 1) == 0 )
   {
-    sub_1BDB878(&BalanceConfig_TypeInfo, item);
-    sub_1BDB878(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v8);
-    byte_4B404B9 = 1;
+    sub_1BC3008(&BalanceConfig_TypeInfo, item);
+    sub_1BC3008(&Method_UnityEngine_Component_GetComponent_Collider___, v7);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v8);
+    byte_4AFDA29 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -90,12 +90,12 @@ void __fastcall PartyListViewItemDraw__SetInput(
     if ( !Component_object
       || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                           Component_object,
-                                                          (const MethodInfo_302A12C *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
+                                                          (const MethodInfo_2FF8634 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL
       || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL),
           (Component_object = (UnityEngine_Component_o *)this->fields.baseButton) == 0LL) )
     {
 LABEL_20:
-      sub_1BDBAD4(Component_object, v10);
+      sub_1BC3264(Component_object, v10);
     }
     ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))Component_object->klass[1]._1.implementedInterfaces)(
       Component_object,
@@ -119,7 +119,7 @@ LABEL_20:
       if ( !itemDrawList )
         goto LABEL_20;
       if ( i >= itemDrawList->max_length )
-        sub_1BDBADC(Component_object, v10, v11);
+        sub_1BC326C(Component_object, v10, v11);
       v15 = itemDrawList->m_Items[i];
       Component_object = (UnityEngine_Component_o *)PartyListViewItem__GetMember(item, i, 0LL);
       if ( !v15 )
@@ -165,17 +165,17 @@ void __fastcall PartyListViewItemDraw__SetItem(
   UILabel_o *startingMemberFriendshipUpLabel; // x20
   UILabel_o *startingMemberFriendshipUpLabelOver; // x19
 
-  if ( (byte_4B404B8 & 1) == 0 )
+  if ( (byte_4AFDA28 & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, item);
-    sub_1BDB878(&BalanceConfig_TypeInfo, v7);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v8);
-    sub_1BDB878(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v9);
-    sub_1BDB878(&StringLiteral_19728/*"func_group_icon_1009_starting"*/, v10);
-    sub_1BDB878(&StringLiteral_12277/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, v11);
-    sub_1BDB878(&StringLiteral_19630/*"formation_support_bg"*/, v12);
-    sub_1BDB878(&StringLiteral_19627/*"formation_member_bg"*/, v13);
-    byte_4B404B8 = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, item);
+    sub_1BC3008(&BalanceConfig_TypeInfo, v7);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v8);
+    sub_1BC3008(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__, v9);
+    sub_1BC3008(&StringLiteral_19528/*"func_group_icon_1009_starting"*/, v10);
+    sub_1BC3008(&StringLiteral_12193/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, v11);
+    sub_1BC3008(&StringLiteral_19431/*"formation_support_bg"*/, v12);
+    sub_1BC3008(&StringLiteral_19428/*"formation_member_bg"*/, v13);
+    byte_4AFDA28 = 1;
   }
   if ( item && mode )
   {
@@ -183,15 +183,15 @@ void __fastcall PartyListViewItemDraw__SetItem(
     IsSupportOnly = (void *)PartyListViewItem__IsSupportOnly(item, 0LL);
     if ( !baseSprite )
       goto LABEL_49;
-    v17 = (System_String_o **)&StringLiteral_19630/*"formation_support_bg"*/;
+    v17 = (System_String_o **)&StringLiteral_19431/*"formation_support_bg"*/;
     if ( ((unsigned __int8)IsSupportOnly & 1) == 0 )
-      v17 = (System_String_o **)&StringLiteral_19627/*"formation_member_bg"*/;
+      v17 = (System_String_o **)&StringLiteral_19428/*"formation_member_bg"*/;
     UISprite__set_spriteName(baseSprite, *v17, 0LL);
-    IsSupportOnly = SingletonTemplate_object___get_Instance((const MethodInfo_39166A8 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    IsSupportOnly = SingletonTemplate_object___get_Instance((const MethodInfo_38E0168 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
     if ( !IsSupportOnly )
       goto LABEL_49;
     *((_QWORD *)IsSupportOnly + 12) = item;
-    sub_1BDB81C((CGThumbnailListItem_o *)((char *)IsSupportOnly + 96), (int32_t)item, v18, v19);
+    sub_1BC2FAC((CGThumbnailListItem_o *)((char *)IsSupportOnly + 96), (int32_t)item, v18, v19);
     if ( mode == 4 )
     {
       for ( i = 0; ; ++i )
@@ -238,7 +238,7 @@ void __fastcall PartyListViewItemDraw__SetItem(
           goto LABEL_49;
         if ( j >= v25->max_length )
 LABEL_50:
-          sub_1BDBADC(IsSupportOnly, v16, v20);
+          sub_1BC326C(IsSupportOnly, v16, v20);
         v26 = v25->m_Items[j];
         IsSupportOnly = PartyListViewItem__GetMember(item, j, 0LL);
         if ( !v26 )
@@ -284,16 +284,16 @@ LABEL_50:
               startingMemberFriendshipUpSprite = this->fields.startingMemberFriendshipUpSprite;
               if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-              AtlasManager__SetEventUI(startingMemberFriendshipUpSprite, (System_String_o *)StringLiteral_19728/*"func_group_icon_1009_starting"*/, 0LL);
+              AtlasManager__SetEventUI(startingMemberFriendshipUpSprite, (System_String_o *)StringLiteral_19528/*"func_group_icon_1009_starting"*/, 0LL);
               startingMemberFriendshipUpLabel = this->fields.startingMemberFriendshipUpLabel;
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              IsSupportOnly = LocalizationManager__Get((System_String_o *)StringLiteral_12277/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0LL);
+              IsSupportOnly = LocalizationManager__Get((System_String_o *)StringLiteral_12193/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0LL);
               if ( startingMemberFriendshipUpLabel )
               {
                 UILabel__set_text(startingMemberFriendshipUpLabel, (System_String_o *)IsSupportOnly, 0LL);
                 startingMemberFriendshipUpLabelOver = this->fields.startingMemberFriendshipUpLabelOver;
-                IsSupportOnly = LocalizationManager__Get((System_String_o *)StringLiteral_12277/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0LL);
+                IsSupportOnly = LocalizationManager__Get((System_String_o *)StringLiteral_12193/*"STARTING_MEMBER_FRIENDSHIP_UP_TITLE"*/, 0LL);
                 if ( startingMemberFriendshipUpLabelOver )
                 {
                   UILabel__set_text(startingMemberFriendshipUpLabelOver, (System_String_o *)IsSupportOnly, 0LL);
@@ -305,7 +305,7 @@ LABEL_50:
         }
       }
 LABEL_49:
-      sub_1BDBAD4(IsSupportOnly, v16);
+      sub_1BC3264(IsSupportOnly, v16);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsSupportOnly, 0, 0LL);
     IsSupportOnly = this->fields.startingMemberFriendshipUpLabel;
@@ -340,6 +340,6 @@ void __fastcall PartyListViewItemDraw___c__DisplayClass12_0___SetActiveGrandEffe
         const MethodInfo *method)
 {
   if ( !item )
-    sub_1BDBAD4(this, 0LL);
+    sub_1BC3264(this, 0LL);
   PartyOrganizationListViewItemDraw__SetActiveGrandEffect(item, this->fields.flag, 0LL);
 }

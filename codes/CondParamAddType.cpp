@@ -19,16 +19,16 @@ int32_t __fastcall CondParamAddType__GetAddValue(
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = dataVals;
-  if ( (byte_4B438C0 & 1) == 0 )
+  if ( (byte_4B00E4A & 1) == 0 )
   {
-    dataVals = (DataVals_o *)sub_1BDB878(&System_Math_TypeInfo, *(_QWORD *)&kind);
-    byte_4B438C0 = 1;
+    dataVals = (DataVals_o *)sub_1BC3008(&System_Math_TypeInfo, *(_QWORD *)&kind);
+    byte_4B00E4A = 1;
   }
   param = 0;
   if ( classStatisticsInfos )
   {
     if ( !v6 )
-      sub_1BDBAD4(dataVals, *(_QWORD *)&kind);
+      sub_1BC3264(dataVals, *(_QWORD *)&kind);
     v7 = DataVals__GetParam(v6, 223, 0, 0LL);
     Num = CondParamAddType__GetNum(kind, classStatisticsInfos, v7, v8);
     if ( Num < 1 )
@@ -43,7 +43,7 @@ int32_t __fastcall CondParamAddType__GetAddValue(
         v10 = param;
         if ( !System_Math_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        LODWORD(classStatisticsInfos) = System_Math__Min_64100920((int64_t)classStatisticsInfos, v10, 0LL);
+        LODWORD(classStatisticsInfos) = System_Math__Min_63871024((int64_t)classStatisticsInfos, v10, 0LL);
       }
     }
   }
@@ -64,7 +64,7 @@ int64_t __fastcall CondParamAddType__GetNum(
 
   if ( !classStatisticsInfos )
 LABEL_11:
-    sub_1BDBAD4(type, classStatisticsInfos);
+    sub_1BC3264(type, classStatisticsInfos);
   max_length = classStatisticsInfos->max_length;
   if ( max_length < 1 )
     return 0LL;
@@ -72,7 +72,7 @@ LABEL_11:
   while ( 1 )
   {
     if ( max_length == v5 )
-      sub_1BDBADC(*(_QWORD *)&type, classStatisticsInfos, *(_QWORD *)&targetId);
+      sub_1BC326C(*(_QWORD *)&type, classStatisticsInfos, *(_QWORD *)&targetId);
     v6 = classStatisticsInfos->m_Items[v5];
     if ( !v6 )
       goto LABEL_11;
@@ -105,16 +105,16 @@ int32_t __fastcall CondParamAddType__GetRangeRateValue(
   int32_t param; // [xsp+Ch] [xbp-24h] BYREF
 
   v6 = dataVals;
-  if ( (byte_4B438C1 & 1) == 0 )
+  if ( (byte_4B00E4B & 1) == 0 )
   {
-    dataVals = (DataVals_o *)sub_1BDB878(&System_Math_TypeInfo, *(_QWORD *)&kind);
-    byte_4B438C1 = 1;
+    dataVals = (DataVals_o *)sub_1BC3008(&System_Math_TypeInfo, *(_QWORD *)&kind);
+    byte_4B00E4B = 1;
   }
   param = 0;
   if ( !classStatisticsInfos )
     return 0;
   if ( !v6 )
-    sub_1BDBAD4(dataVals, *(_QWORD *)&kind);
+    sub_1BC3264(dataVals, *(_QWORD *)&kind);
   v7 = DataVals__TryGetParam(v6, 225, &param, 0LL);
   result = 0;
   if ( v7 && param >= 1 )
@@ -125,12 +125,12 @@ int32_t __fastcall CondParamAddType__GetRangeRateValue(
     v13 = Num;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v14 = System_Math__Min_64100920(v13, v12, 0LL);
+    v14 = System_Math__Min_63871024(v13, v12, 0LL);
     if ( v14 >= 1 )
     {
       v15 = v14;
       v16 = DataVals__GetParam(v6, 226, 0, 0LL);
-      return BattleUtility__FloorToInt_45209196((double)v15 / (double)param * (double)v16, 0LL);
+      return BattleUtility__FloorToInt_45256544((double)v15 / (double)param * (double)v16, 0LL);
     }
     return 0;
   }

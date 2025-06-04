@@ -41,17 +41,17 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetClassIcons(
   __int64 v19; // x20
 
   v4 = this;
-  if ( (byte_4B40824 & 1) == 0 )
+  if ( (byte_4AFDD94 & 1) == 0 )
   {
-    this = (RestrictionNotSatisfySlotIcons_o *)sub_1BDB878(&AtlasManager_TypeInfo, classImageIds);
-    byte_4B40824 = 1;
+    this = (RestrictionNotSatisfySlotIcons_o *)sub_1BC3008(&AtlasManager_TypeInfo, classImageIds);
+    byte_4AFDD94 = 1;
   }
   classIcons = v4->fields.classIcons;
   if ( classIcons )
   {
     if ( !classImageIds )
 LABEL_26:
-      sub_1BDBAD4(this, classImageIds);
+      sub_1BC3264(this, classImageIds);
     max_length = classImageIds->max_length;
     v7 = 0LL;
     while ( 1 )
@@ -129,7 +129,7 @@ LABEL_26:
           goto LABEL_34;
       }
 LABEL_42:
-      sub_1BDBADC(this, classImageIds, method);
+      sub_1BC326C(this, classImageIds, method);
     }
   }
 LABEL_34:
@@ -199,16 +199,16 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
   Il2CppObject *entity; // [xsp+78h] [xbp-68h] BYREF
 
   v12 = this;
-  if ( (byte_4B40823 & 1) == 0 )
+  if ( (byte_4AFDD93 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_UserServantMaster___, servantIds);
-    sub_1BDB878(&Method_DataManager_GetMaster_ServantMaster___, v13);
-    sub_1BDB878(&DataManager_TypeInfo, v14);
-    sub_1BDB878(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v15);
-    this = (RestrictionNotSatisfySlotIcons_o *)sub_1BDB878(
+    sub_1BC3008(&Method_DataManager_GetMasterData_UserServantMaster___, servantIds);
+    sub_1BC3008(&Method_DataManager_GetMaster_ServantMaster___, v13);
+    sub_1BC3008(&DataManager_TypeInfo, v14);
+    sub_1BC3008(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v15);
+    this = (RestrictionNotSatisfySlotIcons_o *)sub_1BC3008(
                                                  &Method_SingletonMonoBehaviour_DataManager__get_Instance__,
                                                  v16);
-    byte_4B40823 = 1;
+    byte_4AFDD93 = 1;
   }
   v37 = 0LL;
   entity = 0LL;
@@ -301,7 +301,7 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ServantMaster___);
+        this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantMaster___);
         if ( v19 >= servantIds->max_length )
           goto LABEL_90;
         if ( !this )
@@ -310,7 +310,7 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
                                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                      &entity,
                                                      v20[v19],
-                                                     (const MethodInfo_32E1E88 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                                     (const MethodInfo_32AF0BC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           this = (RestrictionNotSatisfySlotIcons_o *)entity;
@@ -332,7 +332,7 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
         }
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_ServantMaster___);
+        this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantMaster___);
         if ( v19 >= servantIds->max_length )
           goto LABEL_90;
         if ( !this )
@@ -341,7 +341,7 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
                                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                      &v37,
                                                      v20[v19],
-                                                     (const MethodInfo_32E1E88 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                                     (const MethodInfo_32AF0BC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)this & 1) == 0 )
           goto LABEL_50;
         this = (RestrictionNotSatisfySlotIcons_o *)v37;
@@ -350,18 +350,18 @@ void __fastcall RestrictionNotSatisfySlotIcons__SetServantIcons(
         this = (RestrictionNotSatisfySlotIcons_o *)ServantEntity__checkIsHeroineSvt((ServantEntity_o *)v37, 0LL);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
-          this = (RestrictionNotSatisfySlotIcons_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          this = (RestrictionNotSatisfySlotIcons_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !this )
             break;
           this = (RestrictionNotSatisfySlotIcons_o *)DataManager__GetMasterData_object_(
                                                        (DataManager_o *)this,
-                                                       (const MethodInfo_303395C *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                                       (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_UserServantMaster___);
           if ( v19 >= servantIds->max_length )
             goto LABEL_90;
           if ( !this )
             break;
           HeroineData = UserServantMaster__getHeroineData((UserServantMaster_o *)this, v20[v19], 0LL);
-          this = (RestrictionNotSatisfySlotIcons_o *)QuestRestrictionInfo__ConvertOverwriteImageLimitCount_42374456(
+          this = (RestrictionNotSatisfySlotIcons_o *)QuestRestrictionInfo__ConvertOverwriteImageLimitCount_42410260(
                                                        questRestrictionInfo,
                                                        HeroineData,
                                                        0LL);
@@ -394,7 +394,7 @@ LABEL_53:
         this = (RestrictionNotSatisfySlotIcons_o *)v28->m_Items[v19];
         if ( !this )
           break;
-        ServantFaceIconComponent__Set_40019528(
+        ServantFaceIconComponent__Set_40037156(
           (ServantFaceIconComponent_o *)this,
           v20[v19],
           limitCounts->m_Items[v19 + 1],
@@ -460,7 +460,7 @@ LABEL_78:
       while ( servantFaceIcons );
     }
 LABEL_89:
-    sub_1BDBAD4(this, servantIds);
+    sub_1BC3264(this, servantIds);
   }
 LABEL_80:
   classIcons = v12->fields.classIcons;
@@ -486,7 +486,7 @@ LABEL_80:
           goto LABEL_87;
       }
 LABEL_90:
-      sub_1BDBADC(this, servantIds, limitCounts);
+      sub_1BC326C(this, servantIds, limitCounts);
     }
   }
 LABEL_87:

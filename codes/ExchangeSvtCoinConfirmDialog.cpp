@@ -1,9 +1,9 @@
 void __fastcall ExchangeSvtCoinConfirmDialog___ctor(ExchangeSvtCoinConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B3FA8D & 1) == 0 )
+  if ( (byte_4AFCFFD & 1) == 0 )
   {
-    sub_1BDB878(&BaseDialog_TypeInfo, method);
-    byte_4B3FA8D = 1;
+    sub_1BC3008(&BaseDialog_TypeInfo, method);
+    byte_4AFCFFD = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -21,11 +21,11 @@ void __fastcall ExchangeSvtCoinConfirmDialog__Close(ExchangeSvtCoinConfirmDialog
 {
   const MethodInfo *v2; // x2
 
-  ExchangeSvtCoinConfirmDialog__Close_32208200(this, 0LL, v2);
+  ExchangeSvtCoinConfirmDialog__Close_32201700(this, 0LL, v2);
 }
 
 
-void __fastcall ExchangeSvtCoinConfirmDialog__Close_32208200(
+void __fastcall ExchangeSvtCoinConfirmDialog__Close_32201700(
         ExchangeSvtCoinConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -33,16 +33,16 @@ void __fastcall ExchangeSvtCoinConfirmDialog__Close_32208200(
   __int64 v5; // x1
   System_Action_o *v6; // x20
 
-  if ( (byte_4B3FA89 & 1) == 0 )
+  if ( (byte_4AFCFF9 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, callback);
-    sub_1BDB878(&Method_ExchangeSvtCoinConfirmDialog_EndClose__, v5);
-    byte_4B3FA89 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, callback);
+    sub_1BC3008(&Method_ExchangeSvtCoinConfirmDialog_EndClose__, v5);
+    byte_4AFCFF9 = 1;
   }
   this->fields.onClose = callback;
-  sub_1BDB81C(&this->fields.onClose);
+  sub_1BC2FAC(&this->fields.onClose);
   this->fields.state = 2;
-  v6 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_ExchangeSvtCoinConfirmDialog_EndClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v6, 0LL);
 }
@@ -61,7 +61,7 @@ void __fastcall ExchangeSvtCoinConfirmDialog__EndClose(ExchangeSvtCoinConfirmDia
   if ( onClose )
   {
     *p_onClose = 0LL;
-    sub_1BDB81C(p_onClose);
+    sub_1BC2FAC(p_onClose);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v4->fields.m_target)(
       v4->fields.original_method_info,
       *(_QWORD *)&v4->fields.extra_arg);
@@ -72,9 +72,9 @@ void __fastcall ExchangeSvtCoinConfirmDialog__EndClose(ExchangeSvtCoinConfirmDia
 void __fastcall ExchangeSvtCoinConfirmDialog__Init(ExchangeSvtCoinConfirmDialog_o *this, const MethodInfo *method)
 {
   this->fields.onDecide = 0LL;
-  sub_1BDB81C(&this->fields.onDecide);
+  sub_1BC2FAC(&this->fields.onDecide);
   this->fields.onCancel = 0LL;
-  sub_1BDB81C(&this->fields.onCancel);
+  sub_1BC2FAC(&this->fields.onCancel);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
 }
@@ -91,24 +91,24 @@ void __fastcall ExchangeSvtCoinConfirmDialog__OnClickCancel(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4B3FA8B & 1) == 0 )
+  if ( (byte_4AFCFFB & 1) == 0 )
   {
-    sub_1BDB878(&Method_ExchangeSvtCoinConfirmDialog_OnClickCancel__, method);
-    byte_4B3FA8B = 1;
+    sub_1BC3008(&Method_ExchangeSvtCoinConfirmDialog_OnClickCancel__, method);
+    byte_4AFCFFB = 1;
   }
   if ( this->fields.state == 1 )
   {
     v3 = Method_ExchangeSvtCoinConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_ExchangeSvtCoinConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BDB890(Method_ExchangeSvtCoinConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BC3020(Method_ExchangeSvtCoinConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
-    ExchangeSvtCoinConfirmDialog__Close_32208200(this, 0LL, v5);
+    ExchangeSvtCoinConfirmDialog__Close_32201700(this, 0LL, v5);
     onCancel = this->fields.onCancel;
     this->fields.onCancel = 0LL;
-    v7 = sub_1BDB81C(&this->fields.onCancel);
+    v7 = sub_1BC2FAC(&this->fields.onCancel);
     if ( !onCancel )
-      sub_1BDBAD4(v7, v8);
+      sub_1BC3264(v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))onCancel->fields.m_target)(
       onCancel->fields.original_method_info,
       *(_QWORD *)&onCancel->fields.extra_arg);
@@ -127,24 +127,24 @@ void __fastcall ExchangeSvtCoinConfirmDialog__OnClickDecide(
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4B3FA8A & 1) == 0 )
+  if ( (byte_4AFCFFA & 1) == 0 )
   {
-    sub_1BDB878(&Method_ExchangeSvtCoinConfirmDialog_OnClickDecide__, method);
-    byte_4B3FA8A = 1;
+    sub_1BC3008(&Method_ExchangeSvtCoinConfirmDialog_OnClickDecide__, method);
+    byte_4AFCFFA = 1;
   }
   if ( this->fields.state == 1 && this->fields.onDecide )
   {
     v3 = Method_ExchangeSvtCoinConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ExchangeSvtCoinConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BDB890(Method_ExchangeSvtCoinConfirmDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BC3020(Method_ExchangeSvtCoinConfirmDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
-    ExchangeSvtCoinConfirmDialog__Close_32208200(this, 0LL, v5);
+    ExchangeSvtCoinConfirmDialog__Close_32201700(this, 0LL, v5);
     onDecide = this->fields.onDecide;
     this->fields.onDecide = 0LL;
-    v7 = sub_1BDB81C(&this->fields.onDecide);
+    v7 = sub_1BC2FAC(&this->fields.onDecide);
     if ( !onDecide )
-      sub_1BDBAD4(v7, v8);
+      sub_1BC3264(v7, v8);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))onDecide->fields.m_target)(
       onDecide->fields.original_method_info,
       *(_QWORD *)&onDecide->fields.extra_arg);
@@ -156,13 +156,13 @@ void __fastcall ExchangeSvtCoinConfirmDialog__OnEnable(ExchangeSvtCoinConfirmDia
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4B3FA8C & 1) == 0 )
+  if ( (byte_4AFCFFC & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_15625/*"Window/Objects/CancelButton"*/, method);
-    byte_4B3FA8C = 1;
+    sub_1BC3008(&StringLiteral_15504/*"Window/Objects/CancelButton"*/, method);
+    byte_4AFCFFC = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_43873512(transform, (System_String_o *)StringLiteral_15625/*"Window/Objects/CancelButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_43913684(transform, (System_String_o *)StringLiteral_15504/*"Window/Objects/CancelButton"*/, 0LL);
 }
 
 
@@ -202,43 +202,43 @@ void __fastcall ExchangeSvtCoinConfirmDialog__Open(
   UserItemEntity_o *v35; // x22
   int32_t v36; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B3FA88 & 1) == 0 )
+  if ( (byte_4AFCFF8 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMaster_UserItemMaster___, *(_QWORD *)&buyCount);
-    sub_1BDB878(&DataManager_TypeInfo, v11);
-    sub_1BDB878(&int_TypeInfo, v12);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v13);
-    sub_1BDB878(&NetworkManager_TypeInfo, v14);
-    sub_1BDB878(&StringLiteral_5770/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DECIDE_BUTTON"*/, v15);
-    sub_1BDB878(&StringLiteral_5772/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_TITLE"*/, v16);
-    sub_1BDB878(&StringLiteral_5771/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DETAIL"*/, v17);
-    sub_1BDB878(&StringLiteral_3716/*"COMMON_CONFIRM_CANCEL"*/, v18);
-    byte_4B3FA88 = 1;
+    sub_1BC3008(&Method_DataManager_GetMaster_UserItemMaster___, *(_QWORD *)&buyCount);
+    sub_1BC3008(&DataManager_TypeInfo, v11);
+    sub_1BC3008(&int_TypeInfo, v12);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v13);
+    sub_1BC3008(&NetworkManager_TypeInfo, v14);
+    sub_1BC3008(&StringLiteral_5706/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DECIDE_BUTTON"*/, v15);
+    sub_1BC3008(&StringLiteral_5708/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_TITLE"*/, v16);
+    sub_1BC3008(&StringLiteral_5707/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DETAIL"*/, v17);
+    sub_1BC3008(&StringLiteral_3647/*"COMMON_CONFIRM_CANCEL"*/, v18);
+    byte_4AFCFF8 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.onDecide = onDecideFunc;
-    sub_1BDB81C(&this->fields.onDecide);
+    sub_1BC2FAC(&this->fields.onDecide);
     this->fields.onCancel = onCancelFunc;
-    sub_1BDB81C(&this->fields.onCancel);
+    sub_1BC2FAC(&this->fields.onCancel);
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    TargetId = LocalizationManager__Get((System_String_o *)StringLiteral_5772/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_TITLE"*/, 0LL);
+    TargetId = LocalizationManager__Get((System_String_o *)StringLiteral_5708/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_TITLE"*/, 0LL);
     if ( !titleLabel )
       goto LABEL_24;
     UILabel__set_text(titleLabel, TargetId, 0LL);
     decideButtonLabel = this->fields.decideButtonLabel;
-    TargetId = LocalizationManager__Get((System_String_o *)StringLiteral_5770/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DECIDE_BUTTON"*/, 0LL);
+    TargetId = LocalizationManager__Get((System_String_o *)StringLiteral_5706/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DECIDE_BUTTON"*/, 0LL);
     if ( !decideButtonLabel )
       goto LABEL_24;
     UILabel__set_text(decideButtonLabel, TargetId, 0LL);
     cancelButtonLabel = this->fields.cancelButtonLabel;
-    TargetId = LocalizationManager__Get((System_String_o *)StringLiteral_3716/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+    TargetId = LocalizationManager__Get((System_String_o *)StringLiteral_3647/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
     if ( !cancelButtonLabel )
       goto LABEL_24;
     UILabel__set_text(cancelButtonLabel, TargetId, 0LL);
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_5771/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DETAIL"*/, 0LL);
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_5707/*"EXCHANGE_SVT_COIN_CONFIRM_DIALOG_DETAIL"*/, 0LL);
     detailLabel = this->fields.detailLabel;
     v26 = v24;
     v36 = buyCount;
@@ -249,13 +249,13 @@ void __fastcall ExchangeSvtCoinConfirmDialog__Open(
     UILabel__set_text(detailLabel, TargetId, 0LL);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_UserItemMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserItemMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4B3ED56 )
+    if ( !byte_4AFC1F1 )
     {
-      sub_1BDB878(&NetworkManager_TypeInfo, v21);
-      byte_4B3ED56 = 1;
+      sub_1BC3008(&NetworkManager_TypeInfo, v21);
+      byte_4AFC1F1 = 1;
     }
     TargetId = (System_String_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -279,7 +279,7 @@ void __fastcall ExchangeSvtCoinConfirmDialog__Open(
       || !itemIcon )
     {
 LABEL_24:
-      sub_1BDBAD4(TargetId, v21);
+      sub_1BC3264(TargetId, v21);
     }
     ItemIconComponent__SetItem(itemIcon, (int32_t)TargetId, v35->fields.num, 0, 0LL);
     this->fields.state = 1;

@@ -2,10 +2,10 @@ void __fastcall ClassBoardSquareDetailDialog___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4B4836E & 1) == 0 )
+  if ( (byte_4B05945 & 1) == 0 )
   {
-    sub_1BDB878(&ClassBoardSquareDetailDialog_TypeInfo, v1);
-    byte_4B4836E = 1;
+    sub_1BC3008(&ClassBoardSquareDetailDialog_TypeInfo, v1);
+    byte_4B05945 = 1;
   }
   *ClassBoardSquareDetailDialog_TypeInfo->static_fields = (struct ClassBoardSquareDetailDialog_StaticFields)0x40200000431E0000LL;
 }
@@ -23,14 +23,14 @@ void __fastcall ClassBoardSquareDetailDialog__Close(ClassBoardSquareDetailDialog
   __int64 v3; // x1
   System_Action_o *v4; // x20
 
-  if ( (byte_4B4836B & 1) == 0 )
+  if ( (byte_4B05942 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, method);
-    sub_1BDB878(&Method_ClassBoardSquareDetailDialog_EndClose__, v3);
-    byte_4B4836B = 1;
+    sub_1BC3008(&System_Action_TypeInfo, method);
+    sub_1BC3008(&Method_ClassBoardSquareDetailDialog_EndClose__, v3);
+    byte_4B05942 = 1;
   }
   this->fields.isButtonEnable = 0;
-  v4 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_ClassBoardSquareDetailDialog_EndClose__, 0LL);
   ClassBoardBaseDialog__Close((ClassBoardBaseDialog_o *)this, v4, 0LL);
 }
@@ -40,16 +40,16 @@ void __fastcall ClassBoardSquareDetailDialog__EndClose(ClassBoardSquareDetailDia
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4B4836C & 1) == 0 )
+  if ( (byte_4B05943 & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    byte_4B4836C = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    byte_4B05943 = 1;
   }
   ActionExtensions__Call(this->fields.closeFunc, 0LL);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_70284200(gameObject, 0LL);
+  UnityEngine_Object__Destroy_70034300(gameObject, 0LL);
 }
 
 
@@ -66,7 +66,7 @@ void __fastcall ClassBoardSquareDetailDialog__Init(ClassBoardSquareDetailDialog_
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BDBAD4(0LL, v4);
+    sub_1BC3264(0LL, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   ClassBoardBaseDialog__Init((ClassBoardBaseDialog_o *)this, 0LL);
 }
@@ -80,17 +80,17 @@ void __fastcall ClassBoardSquareDetailDialog__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4B4836A & 1) == 0 )
+  if ( (byte_4B05941 & 1) == 0 )
   {
-    sub_1BDB878(&Method_ClassBoardSquareDetailDialog_OnClickClose__, method);
-    byte_4B4836A = 1;
+    sub_1BC3008(&Method_ClassBoardSquareDetailDialog_OnClickClose__, method);
+    byte_4B05941 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_ClassBoardSquareDetailDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_ClassBoardSquareDetailDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BDB890(Method_ClassBoardSquareDetailDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BDB85C(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BC3020(Method_ClassBoardSquareDetailDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.onClickCloseSeKind, 0, 0LL);
     ClassBoardSquareDetailDialog__Close(this, v5);
   }
@@ -120,24 +120,24 @@ void __fastcall ClassBoardSquareDetailDialog__Open(
   ClassBoardSquareDetailDialog_c *v21; // x0
   System_Action_o *v22; // x20
 
-  if ( (byte_4B48369 & 1) == 0 )
+  if ( (byte_4B05940 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, square);
-    sub_1BDB878(&Method_ClassBoardSquareDetailDialog_EndOpen__, v7);
-    sub_1BDB878(&ClassBoardSquareDetailDialog_TypeInfo, v8);
-    sub_1BDB878(&Method_DataManager_GetMaster_UserClassStatisticsMaster___, v9);
-    sub_1BDB878(&DataManager_TypeInfo, v10);
-    sub_1BDB878(&LocalizationManager_TypeInfo, v11);
-    sub_1BDB878(&StringLiteral_3459/*"CLASS_BOARD_SQUARE_DETAIL_DIALOG_TITLE"*/, v12);
-    byte_4B48369 = 1;
+    sub_1BC3008(&System_Action_TypeInfo, square);
+    sub_1BC3008(&Method_ClassBoardSquareDetailDialog_EndOpen__, v7);
+    sub_1BC3008(&ClassBoardSquareDetailDialog_TypeInfo, v8);
+    sub_1BC3008(&Method_DataManager_GetMaster_UserClassStatisticsMaster___, v9);
+    sub_1BC3008(&DataManager_TypeInfo, v10);
+    sub_1BC3008(&LocalizationManager_TypeInfo, v11);
+    sub_1BC3008(&StringLiteral_3390/*"CLASS_BOARD_SQUARE_DETAIL_DIALOG_TITLE"*/, v12);
+    byte_4B05940 = 1;
   }
   this->fields.classBoardSquare = square;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.classBoardSquare, (int32_t)square, (int32_t)closeFunc, method);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.classBoardSquare, (int32_t)square, (int32_t)closeFunc, method);
   this->fields.closeFunc = closeFunc;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.closeFunc, (int32_t)closeFunc, v13, v14);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.closeFunc, (int32_t)closeFunc, v13, v14);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_UserClassStatisticsMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserClassStatisticsMaster___);
   if ( Master_object )
     ClassStatisticsInfos = UserClassStatisticsMaster__GetClassStatisticsInfos(
                              (UserClassStatisticsMaster_o *)Master_object,
@@ -147,9 +147,9 @@ void __fastcall ClassBoardSquareDetailDialog__Open(
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3459/*"CLASS_BOARD_SQUARE_DETAIL_DIALOG_TITLE"*/, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3390/*"CLASS_BOARD_SQUARE_DETAIL_DIALOG_TITLE"*/, 0LL);
   if ( !titleLabel || (UILabel__set_text(titleLabel, v18, 0LL), !square) )
-    sub_1BDBAD4(v18, v19);
+    sub_1BC3264(v18, v19);
   SquareModel_k__BackingField = square->fields._SquareModel_k__BackingField;
   v21 = ClassBoardSquareDetailDialog_TypeInfo;
   if ( !ClassBoardSquareDetailDialog_TypeInfo->_2.cctor_finished )
@@ -166,7 +166,7 @@ void __fastcall ClassBoardSquareDetailDialog__Open(
     0LL);
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 1, 0LL);
-  v22 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+  v22 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
   System_Action___ctor(v22, (Il2CppObject *)this, Method_ClassBoardSquareDetailDialog_EndOpen__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v22, 0, 0LL);
   ClassBoardBaseDialog__SetEffectScrollInitPos((ClassBoardBaseDialog_o *)this, 0LL);
@@ -177,10 +177,10 @@ System_String_o *__fastcall ClassBoardSquareDetailDialog__get_closeBtnPath(
         ClassBoardSquareDetailDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B4836D & 1) == 0 )
+  if ( (byte_4B05944 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_15617/*"Window/CloseBtn"*/, method);
-    byte_4B4836D = 1;
+    sub_1BC3008(&StringLiteral_15496/*"Window/CloseBtn"*/, method);
+    byte_4B05944 = 1;
   }
-  return (System_String_o *)StringLiteral_15617/*"Window/CloseBtn"*/;
+  return (System_String_o *)StringLiteral_15496/*"Window/CloseBtn"*/;
 }

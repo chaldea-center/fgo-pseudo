@@ -20,14 +20,14 @@ UnityEngine_Vector3_o __fastcall GalleryFullScreenDragProcess__GetOffsetAddPos(
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v3 = posInfo;
-  if ( (byte_4B3FB50 & 1) == 0 )
+  if ( (byte_4AFD0C0 & 1) == 0 )
   {
-    posInfo = (GalleryFullScreenDragProcess_PosInfo_o *)sub_1BDB878(&GalleryFullScreenDragProcess_TypeInfo, method);
-    byte_4B3FB50 = 1;
+    posInfo = (GalleryFullScreenDragProcess_PosInfo_o *)sub_1BC3008(&GalleryFullScreenDragProcess_TypeInfo, method);
+    byte_4AFD0C0 = 1;
   }
   touchInfo = GalleryFullScreenDragProcess_TypeInfo->static_fields->touchInfo;
   if ( !touchInfo )
-    sub_1BDBAD4(posInfo, method);
+    sub_1BC3264(posInfo, method);
   v5 = touchInfo->fields.scaleDelta < 0.0 || touchInfo->fields.isTouchRelease;
   x = touchInfo->fields.localDelta.fields.x;
   y = touchInfo->fields.localDelta.fields.y;
@@ -75,13 +75,13 @@ float __fastcall GalleryFullScreenDragProcess__GetOffsetAddX(
   x = localDelta.fields.x;
   v5 = isRecover;
   v6 = posInfo;
-  if ( (byte_4B3FB4E & 1) == 0 )
+  if ( (byte_4AFD0BE & 1) == 0 )
   {
-    posInfo = (GalleryFullScreenDragProcess_PosInfo_o *)sub_1BDB878(&GalleryFullScreenDragProcess_TypeInfo, isRecover);
-    byte_4B3FB4E = 1;
+    posInfo = (GalleryFullScreenDragProcess_PosInfo_o *)sub_1BC3008(&GalleryFullScreenDragProcess_TypeInfo, isRecover);
+    byte_4AFD0BE = 1;
   }
   if ( !v6 )
-    sub_1BDBAD4(posInfo, isRecover);
+    sub_1BC3264(posInfo, isRecover);
   v7 = v6->fields.screenCenterPos.fields.x;
   v8 = GalleryFullScreenDragProcess_TypeInfo->static_fields->screenSize.fields.x;
   v9 = v7 > (float)(v8 * 0.5);
@@ -135,13 +135,13 @@ float __fastcall GalleryFullScreenDragProcess__GetOffsetAddY(
   y = localDelta.fields.y;
   v5 = isRecover;
   v6 = posInfo;
-  if ( (byte_4B3FB4F & 1) == 0 )
+  if ( (byte_4AFD0BF & 1) == 0 )
   {
-    posInfo = (GalleryFullScreenDragProcess_PosInfo_o *)sub_1BDB878(&GalleryFullScreenDragProcess_TypeInfo, isRecover);
-    byte_4B3FB4F = 1;
+    posInfo = (GalleryFullScreenDragProcess_PosInfo_o *)sub_1BC3008(&GalleryFullScreenDragProcess_TypeInfo, isRecover);
+    byte_4AFD0BF = 1;
   }
   if ( !v6 )
-    sub_1BDBAD4(posInfo, isRecover);
+    sub_1BC3264(posInfo, isRecover);
   v7 = v6->fields.screenCenterPos.fields.y;
   v8 = GalleryFullScreenDragProcess_TypeInfo->static_fields->screenSize.fields.y;
   v9 = v7 > (float)(v8 * 0.5);
@@ -188,18 +188,18 @@ UnityEngine_Vector2_o __fastcall GalleryFullScreenDragProcess__GetScreenPosition
   z = worldPos.fields.z;
   y = worldPos.fields.y;
   x = worldPos.fields.x;
-  if ( (byte_4B3FB48 & 1) == 0 )
+  if ( (byte_4AFD0B8 & 1) == 0 )
   {
-    sub_1BDB878(&GalleryFullScreenDragProcess_TypeInfo, v2);
-    byte_4B3FB48 = 1;
+    sub_1BC3008(&GalleryFullScreenDragProcess_TypeInfo, v2);
+    byte_4AFD0B8 = 1;
   }
   camera = GalleryFullScreenDragProcess_TypeInfo->static_fields->camera;
   if ( !camera )
-    sub_1BDBAD4(0LL, v2);
+    sub_1BC3264(0LL, v2);
   v10.fields.y = y;
   v10.fields.z = z;
   v10.fields.x = x;
-  *(UnityEngine_Vector3_o *)&v7 = UnityEngine_Camera__WorldToScreenPoint_70090008(camera, v10, 0LL);
+  *(UnityEngine_Vector3_o *)&v7 = UnityEngine_Camera__WorldToScreenPoint_69840568(camera, v10, 0LL);
   result.fields.y = v8;
   result.fields.x = v7;
   return result;
@@ -223,18 +223,18 @@ UnityEngine_Vector3_o __fastcall GalleryFullScreenDragProcess__GetWorldPosition(
 
   y = screenPos.fields.y;
   x = screenPos.fields.x;
-  if ( (byte_4B3FB47 & 1) == 0 )
+  if ( (byte_4AFD0B7 & 1) == 0 )
   {
-    sub_1BDB878(&GalleryFullScreenDragProcess_TypeInfo, v2);
-    byte_4B3FB47 = 1;
+    sub_1BC3008(&GalleryFullScreenDragProcess_TypeInfo, v2);
+    byte_4AFD0B7 = 1;
   }
   camera = GalleryFullScreenDragProcess_TypeInfo->static_fields->camera;
   if ( !camera )
-    sub_1BDBAD4(0LL, v2);
+    sub_1BC3264(0LL, v2);
   v9.fields.z = 0.0;
   v9.fields.x = x;
   v9.fields.y = y;
-  *(UnityEngine_Vector3_o *)&v6 = UnityEngine_Camera__ScreenToWorldPoint_70090032(camera, v9, 0LL);
+  *(UnityEngine_Vector3_o *)&v6 = UnityEngine_Camera__ScreenToWorldPoint_69840592(camera, v9, 0LL);
   result.fields.z = v8;
   result.fields.y = v7;
   result.fields.x = v6;
@@ -269,27 +269,27 @@ void __fastcall GalleryFullScreenDragProcess__Init(
   __int64 v24; // x1
   UnityEngine_Transform_o *v25; // x19
 
-  if ( (byte_4B3FB44 & 1) == 0 )
+  if ( (byte_4AFD0B4 & 1) == 0 )
   {
-    sub_1BDB878(&BalanceConfig_TypeInfo, actionObject);
-    sub_1BDB878(&GalleryFullScreenDragProcess_TypeInfo, v6);
-    byte_4B3FB44 = 1;
+    sub_1BC3008(&BalanceConfig_TypeInfo, actionObject);
+    sub_1BC3008(&GalleryFullScreenDragProcess_TypeInfo, v6);
+    byte_4AFD0B4 = 1;
   }
   GalleryFullScreenDragProcess_TypeInfo->static_fields->camera = camera;
-  sub_1BDB81C(
+  sub_1BC2FAC(
     (CGThumbnailListItem_o *)GalleryFullScreenDragProcess_TypeInfo->static_fields,
     (int32_t)camera,
     (int32_t)method,
     v3);
   static_fields = GalleryFullScreenDragProcess_TypeInfo->static_fields;
   static_fields->actionObject = actionObject;
-  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->actionObject, (int32_t)actionObject, v8, v9);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->actionObject, (int32_t)actionObject, v8, v9);
   if ( !actionObject )
     goto LABEL_14;
   dragObject = actionObject->fields.dragObject;
   v15 = GalleryFullScreenDragProcess_TypeInfo->static_fields;
   v15->dragObject = dragObject;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v15->dragObject, (int32_t)dragObject, v12, v13);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v15->dragObject, (int32_t)dragObject, v12, v13);
   transform = GalleryFullScreenDragProcess_TypeInfo->static_fields->dragObject;
   if ( !transform )
     goto LABEL_14;
@@ -299,7 +299,7 @@ void __fastcall GalleryFullScreenDragProcess__Init(
   parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)transform, 0LL);
   v17 = GalleryFullScreenDragProcess_TypeInfo->static_fields;
   v17->parent = parent;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v17->parent, (int32_t)parent, v18, v19);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v17->parent, (int32_t)parent, v18, v19);
   transform = GalleryFullScreenDragProcess_TypeInfo->static_fields->dragObject;
   if ( !transform )
     goto LABEL_14;
@@ -324,12 +324,12 @@ void __fastcall GalleryFullScreenDragProcess__Init(
   v21->defaultZoomRate = (float)v23->GalleryDefaultZoomRateMax;
   if ( !transform )
 LABEL_14:
-    sub_1BDBAD4(transform, v11);
+    sub_1BC3264(transform, v11);
   v25 = UnityEngine_GameObject__get_transform(transform, 0LL);
-  if ( !byte_4B3E911 )
+  if ( !byte_4AFBDB1 )
   {
-    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, v24);
-    byte_4B3E911 = 1;
+    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, v24);
+    byte_4AFBDB1 = 1;
   }
   TransformHelper__SetLocalPosition(v25, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
 }
@@ -371,11 +371,11 @@ void __fastcall GalleryFullScreenDragProcess__NonTouch(bool isAbleToPinch, const
   UnityEngine_Vector2_o v34; // 0:s0.4,4:s1.4
 
   v2 = isAbleToPinch;
-  if ( (byte_4B3FB4A & 1) == 0 )
+  if ( (byte_4AFD0BA & 1) == 0 )
   {
-    sub_1BDB878(&GalleryFullScreenDragProcess_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_9164/*"Mouse ScrollWheel"*/, v3);
-    byte_4B3FB4A = 1;
+    sub_1BC3008(&GalleryFullScreenDragProcess_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_9085/*"Mouse ScrollWheel"*/, v3);
+    byte_4AFD0BA = 1;
   }
   *(UnityEngine_Vector3_o *)&v6 = UnityEngine_Input__get_mousePosition(0LL);
   static_fields = GalleryFullScreenDragProcess_TypeInfo->static_fields;
@@ -398,7 +398,7 @@ void __fastcall GalleryFullScreenDragProcess__NonTouch(bool isAbleToPinch, const
   if ( v2 && v12 )
   {
     v14 = GalleryFullScreenDragProcess_TypeInfo->static_fields->touchInfo;
-    Axis = UnityEngine_Input__GetAxis((System_String_o *)StringLiteral_9164/*"Mouse ScrollWheel"*/, 0LL);
+    Axis = UnityEngine_Input__GetAxis((System_String_o *)StringLiteral_9085/*"Mouse ScrollWheel"*/, 0LL);
     if ( !v14 )
       goto LABEL_24;
     v14->fields.scaleDelta = Axis;
@@ -460,7 +460,7 @@ LABEL_22:
       }
     }
 LABEL_24:
-    sub_1BDBAD4(parent, v5);
+    sub_1BC3264(parent, v5);
   }
   GalleryFullScreenDragProcess_TypeInfo->static_fields->isOldMousePosition = 0;
 }
@@ -518,12 +518,12 @@ void __fastcall GalleryFullScreenDragProcess__OnDragUpdate(
   UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B3FB46 & 1) == 0 )
+  if ( (byte_4AFD0B6 & 1) == 0 )
   {
-    sub_1BDB878(&GalleryFullScreenDragProcess_TypeInfo, sameScale);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BDB878(&GalleryFullScreenDragProcess_PosInfo_TypeInfo, v8);
-    byte_4B3FB46 = 1;
+    sub_1BC3008(&GalleryFullScreenDragProcess_TypeInfo, sameScale);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v7);
+    sub_1BC3008(&GalleryFullScreenDragProcess_PosInfo_TypeInfo, v8);
+    byte_4AFD0B6 = 1;
   }
   dragObject = (UnityEngine_Object_o *)GalleryFullScreenDragProcess_TypeInfo->static_fields->dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -537,10 +537,10 @@ void __fastcall GalleryFullScreenDragProcess__OnDragUpdate(
     static_fields = GalleryFullScreenDragProcess_TypeInfo->static_fields;
     x = static_fields->localScale.fields.x;
     baseScale = static_fields->baseScale;
-    if ( !byte_4B3E915 )
+    if ( !byte_4AFBDB5 )
     {
-      sub_1BDB878(&UnityEngine_Mathf_TypeInfo, v13);
-      byte_4B3E915 = 1;
+      sub_1BC3008(&UnityEngine_Mathf_TypeInfo, v13);
+      byte_4AFBDB5 = 1;
     }
     v17 = fabsf(x);
     v18 = fabsf(baseScale);
@@ -592,7 +592,7 @@ void __fastcall GalleryFullScreenDragProcess__OnDragUpdate(
           actionObject = v32->actionObject;
           v35 = v32->screenSize.fields.x;
           y = v32->screenSize.fields.y;
-          v37 = (GalleryFullScreenDragProcess_PosInfo_o *)sub_1BDBAC4(GalleryFullScreenDragProcess_PosInfo_TypeInfo);
+          v37 = (GalleryFullScreenDragProcess_PosInfo_o *)sub_1BC3254(GalleryFullScreenDragProcess_PosInfo_TypeInfo);
           v48.fields.x = v35;
           v48.fields.y = y;
           v38 = v37;
@@ -620,7 +620,7 @@ void __fastcall GalleryFullScreenDragProcess__OnDragUpdate(
       }
     }
 LABEL_27:
-    sub_1BDBAD4(transform, v22);
+    sub_1BC3264(transform, v22);
   }
 }
 
@@ -653,10 +653,10 @@ void __fastcall GalleryFullScreenDragProcess__OneTouch(const MethodInfo *method)
   UnityEngine_Touch_o v25; // [xsp+0h] [xbp-70h] BYREF
   UnityEngine_Vector2_o position; // 0:s0.4,4:s1.4
 
-  if ( (byte_4B3FB4B & 1) == 0 )
+  if ( (byte_4AFD0BB & 1) == 0 )
   {
-    sub_1BDB878(&GalleryFullScreenDragProcess_TypeInfo, v1);
-    byte_4B3FB4B = 1;
+    sub_1BC3008(&GalleryFullScreenDragProcess_TypeInfo, v1);
+    byte_4AFD0BB = 1;
   }
   memset(&v25, 0, sizeof(v25));
   GalleryFullScreenDragProcess_TypeInfo->static_fields->isOldMousePosition = 0;
@@ -664,7 +664,7 @@ void __fastcall GalleryFullScreenDragProcess__OneTouch(const MethodInfo *method)
   if ( !touches )
     goto LABEL_13;
   if ( !LODWORD(touches[1].klass) )
-    sub_1BDBADC(touches, v3, v4);
+    sub_1BC326C(touches, v3, v4);
   memmove(&v25, &touches[1].monitor, 0x44u);
   touchInfo = GalleryFullScreenDragProcess_TypeInfo->static_fields->touchInfo;
   position = UnityEngine_Touch__get_position(&v25, 0LL);
@@ -704,7 +704,7 @@ void __fastcall GalleryFullScreenDragProcess__OneTouch(const MethodInfo *method)
       }
     }
 LABEL_13:
-    sub_1BDBAD4(touches, v3);
+    sub_1BC3264(touches, v3);
   }
 LABEL_12:
   v22 = UnityEngine_Touch__get_position(&v25, 0LL);
@@ -754,10 +754,10 @@ void __fastcall GalleryFullScreenDragProcess__Scale(const MethodInfo *method)
   float v35; // s1
   UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B3FB4D & 1) == 0 )
+  if ( (byte_4AFD0BD & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_1BDB878(&GalleryFullScreenDragProcess_TypeInfo, v1);
-    byte_4B3FB4D = 1;
+    method = (const MethodInfo *)sub_1BC3008(&GalleryFullScreenDragProcess_TypeInfo, v1);
+    byte_4AFD0BD = 1;
   }
   static_fields = GalleryFullScreenDragProcess_TypeInfo->static_fields;
   touchInfo = static_fields->touchInfo;
@@ -791,10 +791,10 @@ void __fastcall GalleryFullScreenDragProcess__Scale(const MethodInfo *method)
     v10 = baseScale;
     v5->isTouchScaleRebase = 1;
   }
-  if ( !byte_4B3E915 )
+  if ( !byte_4AFBDB5 )
   {
-    sub_1BDB878(&UnityEngine_Mathf_TypeInfo, v1);
-    byte_4B3E915 = 1;
+    sub_1BC3008(&UnityEngine_Mathf_TypeInfo, v1);
+    byte_4AFBDB5 = 1;
   }
   v11 = fabsf(x);
   v12 = fabsf(v10);
@@ -904,7 +904,7 @@ void __fastcall GalleryFullScreenDragProcess__Scale(const MethodInfo *method)
       }
     }
 LABEL_38:
-    sub_1BDBAD4(method, v1);
+    sub_1BC3264(method, v1);
   }
 }
 
@@ -925,17 +925,17 @@ void __fastcall GalleryFullScreenDragProcess__SetUp(const MethodInfo *method)
   struct GalleryFullScreenDragProcess_StaticFields *v12; // x8
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B3FB45 & 1) == 0 )
+  if ( (byte_4AFD0B5 & 1) == 0 )
   {
-    sub_1BDB878(&GalleryFullScreenDragProcess_TypeInfo, v1);
-    sub_1BDB878(&GalleryFullScreenDragProcess_TouchInfo_TypeInfo, v2);
-    byte_4B3FB45 = 1;
+    sub_1BC3008(&GalleryFullScreenDragProcess_TypeInfo, v1);
+    sub_1BC3008(&GalleryFullScreenDragProcess_TouchInfo_TypeInfo, v2);
+    byte_4AFD0B5 = 1;
   }
   dragObject = GalleryFullScreenDragProcess_TypeInfo->static_fields->dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(dragObject, 0LL)) == 0LL )
   {
-    sub_1BDBAD4(dragObject, v1);
+    sub_1BC3264(dragObject, v1);
   }
   localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)dragObject, 0LL);
   v4 = GalleryFullScreenDragProcess_TypeInfo;
@@ -943,11 +943,11 @@ void __fastcall GalleryFullScreenDragProcess__SetUp(const MethodInfo *method)
   static_fields = v4->static_fields;
   static_fields->isTouchScaleRebase = 0;
   static_fields->scaleSqrMagnitude = 0.0;
-  v6 = (GalleryFullScreenDragProcess_TouchInfo_o *)sub_1BDBAC4(GalleryFullScreenDragProcess_TouchInfo_TypeInfo);
+  v6 = (GalleryFullScreenDragProcess_TouchInfo_o *)sub_1BC3254(GalleryFullScreenDragProcess_TouchInfo_TypeInfo);
   GalleryFullScreenDragProcess_TouchInfo___ctor(v6, v7);
   v8 = GalleryFullScreenDragProcess_TypeInfo->static_fields;
   v8->touchInfo = v6;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v8->touchInfo, (int32_t)v6, v9, v10);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v8->touchInfo, (int32_t)v6, v9, v10);
   LODWORD(v6) = UnityEngine_Screen__get_width(0LL);
   height = UnityEngine_Screen__get_height(0LL);
   v12 = GalleryFullScreenDragProcess_TypeInfo->static_fields;
@@ -963,10 +963,10 @@ void __fastcall GalleryFullScreenDragProcess__Touch(bool isAbleToPinch, const Me
   struct GalleryFullScreenDragProcess_StaticFields *static_fields; // x8
   struct GalleryFullScreenDragProcess_TouchInfo_o *touchInfo; // x9
 
-  if ( (byte_4B3FB49 & 1) == 0 )
+  if ( (byte_4AFD0B9 & 1) == 0 )
   {
-    sub_1BDB878(&GalleryFullScreenDragProcess_TypeInfo, method);
-    byte_4B3FB49 = 1;
+    sub_1BC3008(&GalleryFullScreenDragProcess_TypeInfo, method);
+    byte_4AFD0B9 = 1;
   }
   touchCount = (const MethodInfo *)UnityEngine_Input__get_touchCount(0LL);
   if ( (_DWORD)touchCount == 2 )
@@ -982,7 +982,7 @@ void __fastcall GalleryFullScreenDragProcess__Touch(bool isAbleToPinch, const Me
     static_fields = GalleryFullScreenDragProcess_TypeInfo->static_fields;
     touchInfo = static_fields->touchInfo;
     if ( !touchInfo )
-      sub_1BDBAD4(touchCount, v4);
+      sub_1BC3264(touchCount, v4);
     touchInfo->fields.isTouchRelease = static_fields->oldTouchCount > 0;
     static_fields->oldTouchCount = 0;
     static_fields->isTouchScale = 0;
@@ -1031,11 +1031,11 @@ void __fastcall GalleryFullScreenDragProcess__TwoTouch(bool isAbleToPinch, const
   UnityEngine_Touch_o dest; // [xsp+50h] [xbp-80h] BYREF
   UnityEngine_Vector2_o v37; // 0:s0.4,4:s1.4
 
-  if ( (byte_4B3FB4C & 1) == 0 )
+  if ( (byte_4AFD0BC & 1) == 0 )
   {
-    sub_1BDB878(&GalleryFullScreenDragProcess_TypeInfo, method);
-    sub_1BDB878(&System_Math_TypeInfo, v3);
-    byte_4B3FB4C = 1;
+    sub_1BC3008(&GalleryFullScreenDragProcess_TypeInfo, method);
+    sub_1BC3008(&System_Math_TypeInfo, v3);
+    byte_4AFD0BC = 1;
   }
   memset(&dest, 0, sizeof(dest));
   memset(&v35, 0, sizeof(v35));
@@ -1053,7 +1053,7 @@ void __fastcall GalleryFullScreenDragProcess__TwoTouch(bool isAbleToPinch, const
       goto LABEL_24;
     if ( LODWORD(touches[1].klass) <= 1 )
 LABEL_25:
-      sub_1BDBADC(touches, v5, v6);
+      sub_1BC326C(touches, v5, v6);
     memmove(&v35, (char *)&touches[4].klass + 4, 0x44u);
     position = UnityEngine_Touch__get_position(&dest, 0LL);
     v8 = UnityEngine_Touch__get_position(&v35, 0LL);
@@ -1070,7 +1070,7 @@ LABEL_25:
       || (touches = static_fields->parent) == 0LL )
     {
 LABEL_24:
-      sub_1BDBAD4(touches, v5);
+      sub_1BC3264(touches, v5);
     }
     v15[4] = UnityEngine_Transform__InverseTransformPoint(touches, v15[3], 0LL);
     v17 = GalleryFullScreenDragProcess_TypeInfo->static_fields;
@@ -1173,10 +1173,10 @@ void __fastcall GalleryFullScreenDragProcess_PosInfo___ctor(
   m_YMin = actionObject->fields.dragObjectRect.fields.m_YMin;
   m_Width = actionObject->fields.dragObjectRect.fields.m_Width;
   m_Height = actionObject->fields.dragObjectRect.fields.m_Height;
-  if ( !byte_4B3E80A )
+  if ( !byte_4AFBCAA )
   {
-    transform = (MethodInfo *)sub_1BDB878(&UnityEngine_Vector2_TypeInfo, v11);
-    byte_4B3E80A = 1;
+    transform = (MethodInfo *)sub_1BC3008(&UnityEngine_Vector2_TypeInfo, v11);
+    byte_4AFBCAA = 1;
   }
   this->fields.worldStartPos = GalleryFullScreenDragProcess__GetWorldPosition(
                                  UnityEngine_Vector2_TypeInfo->static_fields->zeroVector,
@@ -1203,7 +1203,7 @@ void __fastcall GalleryFullScreenDragProcess_PosInfo___ctor(
         (transform = (MethodInfo *)UnityEngine_GameObject__get_transform(dragObject, 0LL)) == 0LL) )
   {
 LABEL_9:
-    sub_1BDBAD4(transform, v11);
+    sub_1BC3264(transform, v11);
   }
   v24.fields.y = m_YMin + m_Height;
   v24.fields.x = m_XMin + m_Width;
@@ -1230,10 +1230,10 @@ void __fastcall GalleryFullScreenDragProcess_TouchInfo___ctor(
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.isTouchRelease = 0;
   this->fields.scaleDelta = 0.0;
-  if ( !byte_4B3E911 )
+  if ( !byte_4AFBDB1 )
   {
-    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, v3);
-    byte_4B3E911 = 1;
+    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, v3);
+    byte_4AFBDB1 = 1;
   }
   v4 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;

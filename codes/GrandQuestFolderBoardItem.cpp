@@ -4,7 +4,7 @@ void __fastcall GrandQuestFolderBoardItem___ctor(GrandQuestFolderBoardItem_o *th
 }
 
 
-void __fastcall GrandQuestFolderBoardItem___ctor_31940684(
+void __fastcall GrandQuestFolderBoardItem___ctor_32048056(
         GrandQuestFolderBoardItem_o *this,
         int32_t index,
         int32_t bannerId,
@@ -16,12 +16,12 @@ void __fastcall GrandQuestFolderBoardItem___ctor_31940684(
   GrandQuestFolderBoardItem_o *v11; // x23
 
   v11 = this;
-  ListViewItem___ctor_42734232((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42769384((ListViewItem_o *)this, index, 0LL);
   v11->fields._Name_k__BackingField = boardName;
   v11 = (GrandQuestFolderBoardItem_o *)((char *)v11 + 120);
   v11[-1].fields._IconId_k__BackingField = bannerId;
   *(&v11[-1].fields._IconId_k__BackingField + 1) = warId;
-  sub_1BDB81C(v11);
+  sub_1BC2FAC(v11);
   LODWORD(v11->monitor) = iconId;
 }
 

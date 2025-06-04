@@ -7,10 +7,10 @@ void __fastcall AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgu
   float v7; // s1
 
   this->fields.IsExec = 1;
-  if ( !byte_4B3E911 )
+  if ( !byte_4AFBDB1 )
   {
-    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4B3E911 = 1;
+    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4AFBDB1 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -26,7 +26,7 @@ void __fastcall AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgu
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall AdjustPopupPosInScreenArgument___ctor_45919708(
+void __fastcall AdjustPopupPosInScreenArgument___ctor_45970712(
         AdjustPopupPosInScreenArgument_o *this,
         UnityEngine_Vector3_o adjustAfterOffset,
         const MethodInfo *method)
@@ -44,10 +44,10 @@ void __fastcall AdjustPopupPosInScreenArgument___ctor_45919708(
   z = adjustAfterOffset.fields.z;
   y = adjustAfterOffset.fields.y;
   x = adjustAfterOffset.fields.x;
-  if ( !byte_4B3E911 )
+  if ( !byte_4AFBDB1 )
   {
-    sub_1BDB878(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4B3E911 = 1;
+    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4AFBDB1 = 1;
   }
   v7 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -81,7 +81,7 @@ AdjustPopupPosInScreenArgument_o *__fastcall AdjustPopupPosInScreenArgument__Ini
   z = worldPos.fields.z;
   y = worldPos.fields.y;
   x = worldPos.fields.x;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)camera, (int32_t)method, v4);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)camera, (int32_t)method, v4);
   this->fields._WorldPos_k__BackingField.fields.x = x;
   this->fields._WorldPos_k__BackingField.fields.y = y;
   this->fields._WorldPos_k__BackingField.fields.z = z;
@@ -140,10 +140,10 @@ UnityEngine_Vector3_o __fastcall AdjustPopupPosInScreenArgument__get_ViewPos(
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B47BF4 & 1) == 0 )
+  if ( (byte_4B051CB & 1) == 0 )
   {
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, method);
-    byte_4B47BF4 = 1;
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
+    byte_4B051CB = 1;
   }
   Camera_k__BackingField = (UnityEngine_Object_o *)this->fields._Camera_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -152,18 +152,18 @@ UnityEngine_Vector3_o __fastcall AdjustPopupPosInScreenArgument__get_ViewPos(
   {
     v5 = this->fields._Camera_k__BackingField;
     if ( !v5 )
-      sub_1BDBAD4(0LL, v4);
-    *(UnityEngine_Vector3_o *)&x = UnityEngine_Camera__WorldToViewportPoint_70090016(
+      sub_1BC3264(0LL, v4);
+    *(UnityEngine_Vector3_o *)&x = UnityEngine_Camera__WorldToViewportPoint_69840576(
                                      v5,
                                      this->fields._WorldPos_k__BackingField,
                                      0LL);
   }
   else
   {
-    if ( !byte_4B3E911 )
+    if ( !byte_4AFBDB1 )
     {
-      sub_1BDB878(&UnityEngine_Vector3_TypeInfo, v4);
-      byte_4B3E911 = 1;
+      sub_1BC3008(&UnityEngine_Vector3_TypeInfo, v4);
+      byte_4AFBDB1 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -204,7 +204,7 @@ void __fastcall AdjustPopupPosInScreenArgument__set_Camera(
   const MethodInfo *v3; // x3
 
   this->fields._Camera_k__BackingField = value;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

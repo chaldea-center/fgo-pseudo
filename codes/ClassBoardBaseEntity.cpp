@@ -1,13 +1,13 @@
 void __fastcall ClassBoardBaseEntity___ctor(ClassBoardBaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B447D6 & 1) == 0 )
+  if ( (byte_4B01D79 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B447D6 = 1;
+    sub_1BC3008(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B01D79 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32DF958 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32ACB8C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,12 +21,12 @@ int32_t __fastcall ClassBoardBaseEntity__GetQuestOpenDialogCondSignNum(
         ClassBoardBaseEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B447D4 & 1) == 0 )
+  if ( (byte_4B01D77 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_22884/*"questOpenDialogCondSignNum"*/, method);
-    byte_4B447D4 = 1;
+    sub_1BC3008(&StringLiteral_22637/*"questOpenDialogCondSignNum"*/, method);
+    byte_4B01D77 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22884/*"questOpenDialogCondSignNum"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22637/*"questOpenDialogCondSignNum"*/, 0, 0LL);
 }
 
 
@@ -34,12 +34,12 @@ int32_t __fastcall ClassBoardBaseEntity__GetQuestOpenDialogTransitionQuestId(
         ClassBoardBaseEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B447D5 & 1) == 0 )
+  if ( (byte_4B01D78 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_22885/*"questOpenDialogTransitionQuestId"*/, method);
-    byte_4B447D5 = 1;
+    sub_1BC3008(&StringLiteral_22638/*"questOpenDialogTransitionQuestId"*/, method);
+    byte_4B01D78 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22885/*"questOpenDialogTransitionQuestId"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22638/*"questOpenDialogTransitionQuestId"*/, 0, 0LL);
 }
 
 
@@ -55,10 +55,10 @@ bool __fastcall ClassBoardBaseEntity__IsOpen(ClassBoardBaseEntity_o *this, const
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4B447D3 & 1) == 0 )
+  if ( (byte_4B01D76 & 1) == 0 )
   {
-    sub_1BDB878(&CondType_TypeInfo, method);
-    byte_4B447D3 = 1;
+    sub_1BC3008(&CondType_TypeInfo, method);
+    byte_4B01D76 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

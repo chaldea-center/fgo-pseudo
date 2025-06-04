@@ -12,16 +12,16 @@ System_Collections_IEnumerator_o *__fastcall EventInfoUISpriteControl__CoWaitWhi
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B46A1D & 1) == 0 )
+  if ( (byte_4B03FE2 & 1) == 0 )
   {
-    sub_1BDB878(&EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction_d__8_TypeInfo, method);
-    byte_4B46A1D = 1;
+    sub_1BC3008(&EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction_d__8_TypeInfo, method);
+    byte_4B03FE2 = 1;
   }
-  v3 = sub_1BDBAC4(EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction_d__8_TypeInfo);
+  v3 = sub_1BC3254(EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction_d__8_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -48,12 +48,12 @@ void __fastcall EventInfoUISpriteControl__Initialization(
   const MethodInfo *v19; // x1
   System_Collections_IEnumerator_o *v20; // x1
 
-  if ( (byte_4B46A1B & 1) == 0 )
+  if ( (byte_4B03FE0 & 1) == 0 )
   {
-    sub_1BDB878(&System_Action_TypeInfo, eventUiEntity);
-    sub_1BDB878(&AtlasManager_TypeInfo, v5);
-    sub_1BDB878(&Method_EventInfoUISpriteControl__Initialization_b__5_0__, v6);
-    byte_4B46A1B = 1;
+    sub_1BC3008(&System_Action_TypeInfo, eventUiEntity);
+    sub_1BC3008(&AtlasManager_TypeInfo, v5);
+    sub_1BC3008(&Method_EventInfoUISpriteControl__Initialization_b__5_0__, v6);
+    byte_4B03FE0 = 1;
   }
   IsNullOrWhiteSpace = (struct UISprite_o *)System_String__IsNullOrWhiteSpace(this->fields.spriteName, 0LL);
   if ( ((unsigned __int8)IsNullOrWhiteSpace & 1) != 0 )
@@ -62,14 +62,14 @@ void __fastcall EventInfoUISpriteControl__Initialization(
       goto LABEL_18;
     v9 = System_Int32__ToString((int)eventUiEntity + 52, 0LL);
     this->fields.spriteName = v9;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.spriteName, (int32_t)v9, v10, v11);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.spriteName, (int32_t)v9, v10, v11);
   }
   if ( this->fields.isUseLocalAtlas )
   {
     if ( !eventUiEntity )
       goto LABEL_18;
     this->fields.eventId = eventUiEntity->fields.eventId;
-    v12 = (System_Action_o *)sub_1BDBAC4(System_Action_TypeInfo);
+    v12 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
     System_Action___ctor(v12, (Il2CppObject *)this, Method_EventInfoUISpriteControl__Initialization_b__5_0__, 0LL);
     EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity, v12, v13);
     EventInfoUIBase__SetSpriteByLocalAtlas(
@@ -89,7 +89,7 @@ void __fastcall EventInfoUISpriteControl__Initialization(
   IsNullOrWhiteSpace = this->fields.mainSprite;
   if ( !IsNullOrWhiteSpace )
 LABEL_18:
-    sub_1BDBAD4(IsNullOrWhiteSpace, v8);
+    sub_1BC3264(IsNullOrWhiteSpace, v8);
   v17 = (EventInfoUISpriteControl_o *)((__int64 (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))IsNullOrWhiteSpace->klass->vtable._33_MakePixelPerfect.method)(
                                         IsNullOrWhiteSpace,
                                         IsNullOrWhiteSpace->klass->vtable._34_get_minWidth.methodPtr);
@@ -103,7 +103,7 @@ LABEL_18:
         IsNullOrWhiteSpace->klass->vtable._9_CalculateFinalAlpha.methodPtr,
         0.0);
       v20 = EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction(this, v19);
-      UnityEngine_MonoBehaviour__StartCoroutine_70269772((UnityEngine_MonoBehaviour_o *)this, v20, 0LL);
+      UnityEngine_MonoBehaviour__StartCoroutine_70019872((UnityEngine_MonoBehaviour_o *)this, v20, 0LL);
       return;
     }
     goto LABEL_18;
@@ -117,7 +117,7 @@ bool __fastcall EventInfoUISpriteControl__IsDisplaying(EventInfoUISpriteControl_
 
   mainSprite = this->fields.mainSprite;
   if ( !mainSprite )
-    sub_1BDBAD4(0LL, method);
+    sub_1BC3264(0LL, method);
   return ((float (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))mainSprite->klass->vtable._7_get_alpha.method)(
            mainSprite,
            mainSprite->klass->vtable._8_set_alpha.methodPtr) >= 1.0;
@@ -135,29 +135,29 @@ bool __fastcall EventInfoUISpriteControl__IsPlayingAfterAction(
   TerminalPramsManager_c *v6; // x0
   TerminalPramsManager_c *v8; // x0
 
-  if ( (byte_4B46A1C & 1) == 0 )
+  if ( (byte_4B03FE1 & 1) == 0 )
   {
-    sub_1BDB878(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, method);
-    sub_1BDB878(&TerminalPramsManager_TypeInfo, v2);
-    byte_4B46A1C = 1;
+    sub_1BC3008(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__, method);
+    sub_1BC3008(&TerminalPramsManager_TypeInfo, v2);
+    byte_4B03FE1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   if ( QuestAfterAction__IsPlaying((QuestAfterAction_o *)Instance, 0LL) )
     return 1;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !Instance )
 LABEL_22:
-    sub_1BDBAD4(Instance, v4);
+    sub_1BC3264(Instance, v4);
   if ( QuestAfterAction__IsActiveCommand((QuestAfterAction_o *)Instance, 0LL) )
     return 1;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4B416CB )
+  if ( !byte_4AFEC44 )
   {
-    sub_1BDB878(&TerminalPramsManager_TypeInfo, v5);
-    byte_4B416CB = 1;
+    sub_1BC3008(&TerminalPramsManager_TypeInfo, v5);
+    byte_4AFEC44 = 1;
   }
   v6 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -169,10 +169,10 @@ LABEL_22:
     return 1;
   if ( !v6->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v6);
-  if ( !byte_4B416C8 )
+  if ( !byte_4AFEC41 )
   {
-    sub_1BDB878(&TerminalPramsManager_TypeInfo, v5);
-    byte_4B416C8 = 1;
+    sub_1BC3008(&TerminalPramsManager_TypeInfo, v5);
+    byte_4AFEC41 = 1;
   }
   v8 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -205,10 +205,10 @@ void __fastcall EventInfoUISpriteControl__Redisplay(EventInfoUISpriteControl_o *
   __int64 v6; // x1
   struct UISprite_o *v7; // x0
 
-  if ( (byte_4B46A1E & 1) == 0 )
+  if ( (byte_4B03FE3 & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, method);
-    byte_4B46A1E = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, method);
+    byte_4B03FE3 = 1;
   }
   mainSprite = this->fields.mainSprite;
   spriteName = this->fields.spriteName;
@@ -234,7 +234,7 @@ void __fastcall EventInfoUISpriteControl__Redisplay(EventInfoUISpriteControl_o *
           1.0),
         (v7 = this->fields.mainSprite) == 0LL) )
   {
-    sub_1BDBAD4(v7, v6);
+    sub_1BC3264(v7, v6);
   }
   ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v7->klass->vtable._33_MakePixelPerfect.method)(
     v7,
@@ -278,14 +278,14 @@ bool __fastcall EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction_d__8__Mo
   bool result; // w0
 
   v2 = this;
-  if ( (byte_4B46A1F & 1) == 0 )
+  if ( (byte_4B03FE4 & 1) == 0 )
   {
-    sub_1BDB878(&Method_EventInfoUISpriteControl_IsPlayingAfterAction__, method);
-    sub_1BDB878(&System_Func_bool__TypeInfo, v3);
-    this = (EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction_d__8_o *)sub_1BDB878(
+    sub_1BC3008(&Method_EventInfoUISpriteControl_IsPlayingAfterAction__, method);
+    sub_1BC3008(&System_Func_bool__TypeInfo, v3);
+    this = (EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction_d__8_o *)sub_1BC3008(
                                                                                &UnityEngine_WaitWhile_TypeInfo,
                                                                                v4);
-    byte_4B46A1F = 1;
+    byte_4B03FE4 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -295,7 +295,7 @@ bool __fastcall EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction_d__8__Mo
     if ( !_4__this
       || (this = (EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction_d__8_o *)_4__this->fields.mainSprite) == 0LL )
     {
-      sub_1BDBAD4(this, method);
+      sub_1BC3264(this, method);
     }
     ((void (__fastcall *)(EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction_d__8_o *, void *, float))this->klass->vtable._8_System_Collections_IEnumerator_Reset.method)(
       this,
@@ -305,12 +305,12 @@ bool __fastcall EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction_d__8__Mo
   else if ( !_1__state )
   {
     v2->fields.__1__state = -1;
-    v7 = (System_Func_bool__o *)sub_1BDBAC4(System_Func_bool__TypeInfo);
+    v7 = (System_Func_bool__o *)sub_1BC3254(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(v7, (Il2CppObject *)_4__this, Method_EventInfoUISpriteControl_IsPlayingAfterAction__, 0LL);
-    v8 = (UnityEngine_WaitWhile_o *)sub_1BDBAC4(UnityEngine_WaitWhile_TypeInfo);
+    v8 = (UnityEngine_WaitWhile_o *)sub_1BC3254(UnityEngine_WaitWhile_TypeInfo);
     UnityEngine_WaitWhile___ctor(v8, v7, 0LL);
     v2->fields.__2__current = (Il2CppObject *)v8;
-    sub_1BDB81C((CGThumbnailListItem_o *)&v2->fields.__2__current, (int32_t)v8, v9, v10);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&v2->fields.__2__current, (int32_t)v8, v9, v10);
     result = 1;
     v2->fields.__1__state = 1;
     return result;
@@ -335,11 +335,11 @@ void __fastcall __noreturn EventInfoUISpriteControl__CoWaitWhilePlayingAfterActi
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BDB88C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BDBAC4(v2);
+  v2 = sub_1BC301C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BC3254(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BDB88C(&Method_EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction_d__8_System_Collections_IEnumerator_Reset__);
-  sub_1BDB9A0(v3, v4);
+  v4 = sub_1BC301C(&Method_EventInfoUISpriteControl__CoWaitWhilePlayingAfterAction_d__8_System_Collections_IEnumerator_Reset__);
+  sub_1BC3130(v3, v4);
 }
 
 

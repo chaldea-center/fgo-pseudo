@@ -1,13 +1,13 @@
 void __fastcall GachaDetailEntity___ctor(GachaDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B44D0E & 1) == 0 )
+  if ( (byte_4B022C0 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B44D0E = 1;
+    sub_1BC3008(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B022C0 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32DF958 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32ACB8C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -34,17 +34,17 @@ int32_t __fastcall GachaDetailEntity__GetScriptInt(
   const MethodInfo *v14; // x3
 
   v4 = defVal;
-  if ( (byte_4B44D0B & 1) == 0 )
+  if ( (byte_4B022BD & 1) == 0 )
   {
-    sub_1BDB878(&long_TypeInfo, key);
-    byte_4B44D0B = 1;
+    sub_1BC3008(&long_TypeInfo, key);
+    byte_4B022BD = 1;
   }
   ScriptObj = GachaDetailEntity__GetScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
-  sub_1BDBD94(ScriptObj);
+  sub_1BC3524(ScriptObj);
   return (unsigned int)GachaDetailEntity__GetScriptIntArray(v11, v12, v13, v14);
 }
 
@@ -70,14 +70,14 @@ System_Int32_array *__fastcall GachaDetailEntity__GetScriptIntArray(
   System_Collections_Generic_List_int__o *v19; // x0
   __int64 v20; // x1
 
-  if ( (byte_4B44D0C & 1) == 0 )
+  if ( (byte_4B022BE & 1) == 0 )
   {
-    sub_1BDB878(&System_Converter_object__int__TypeInfo, key);
-    sub_1BDB878(&Method_System_Collections_Generic_List_object__ConvertAll_int___, v7);
-    sub_1BDB878(&Method_System_Collections_Generic_List_int__ToArray__, v8);
-    sub_1BDB878(&Method_GachaDetailEntity___c__GetScriptIntArray_b__8_0__, v9);
-    sub_1BDB878(&GachaDetailEntity___c_TypeInfo, v10);
-    byte_4B44D0C = 1;
+    sub_1BC3008(&System_Converter_object__int__TypeInfo, key);
+    sub_1BC3008(&Method_System_Collections_Generic_List_object__ConvertAll_int___, v7);
+    sub_1BC3008(&Method_System_Collections_Generic_List_int__ToArray__, v8);
+    sub_1BC3008(&Method_GachaDetailEntity___c__GetScriptIntArray_b__8_0__, v9);
+    sub_1BC3008(&GachaDetailEntity___c_TypeInfo, v10);
+    byte_4B022BE = 1;
   }
   ScriptObjList = GachaDetailEntity__GetScriptObjList(this, key, (const MethodInfo *)defVal);
   if ( !ScriptObjList )
@@ -98,21 +98,21 @@ System_Int32_array *__fastcall GachaDetailEntity__GetScriptIntArray(
       v13 = GachaDetailEntity___c_TypeInfo;
     }
     v15 = (Il2CppObject *)v13->static_fields->__9;
-    _9__8_0 = (System_Converter_object__int__o *)sub_1BDBAC4(System_Converter_object__int__TypeInfo);
+    _9__8_0 = (System_Converter_object__int__o *)sub_1BC3254(System_Converter_object__int__TypeInfo);
     System_Converter_object__int____ctor(_9__8_0, v15, Method_GachaDetailEntity___c__GetScriptIntArray_b__8_0__, 0LL);
     static_fields = GachaDetailEntity___c_TypeInfo->static_fields;
     static_fields->__9__8_0 = _9__8_0;
-    sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v17, v18);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v17, v18);
   }
   v19 = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_object___ConvertAll_int_(
                                                     v12,
                                                     (System_Converter_T__TOutput__o *)_9__8_0,
-                                                    (const MethodInfo_2F62DD0 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
+                                                    (const MethodInfo_2F31480 *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
   if ( !v19 )
-    sub_1BDBAD4(0LL, v20);
+    sub_1BC3264(0LL, v20);
   return System_Collections_Generic_List_int___ToArray(
            v19,
-           (const MethodInfo_36BA858 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_36858D4 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -124,10 +124,10 @@ Il2CppObject *__fastcall GachaDetailEntity__GetScriptObj(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B44D09 & 1) == 0 )
+  if ( (byte_4B022BB & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
-    byte_4B44D09 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
+    byte_4B022BB = 1;
   }
   result = (Il2CppObject *)this->fields.script;
   if ( result )
@@ -137,7 +137,7 @@ Il2CppObject *__fastcall GachaDetailEntity__GetScriptObj(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_33A1A3C *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_336E7F4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }
@@ -162,10 +162,10 @@ System_Collections_Generic_List_object__o *__fastcall GachaDetailEntity__GetScri
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4B44D0A & 1) == 0 )
+  if ( (byte_4B022BC & 1) == 0 )
   {
-    sub_1BDB878(&System_Collections_Generic_List_object__TypeInfo, key);
-    byte_4B44D0A = 1;
+    sub_1BC3008(&System_Collections_Generic_List_object__TypeInfo, key);
+    byte_4B022BC = 1;
   }
   result = (System_Collections_Generic_List_object__o *)GachaDetailEntity__GetScriptObj(this, key, method);
   if ( result )
@@ -174,7 +174,7 @@ System_Collections_Generic_List_object__o *__fastcall GachaDetailEntity__GetScri
     if ( LOBYTE(result->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (System_Collections_Generic_List_object__c *)result->klass->_2.typeHierarchy[methodPtr_low - 1] != System_Collections_Generic_List_object__TypeInfo )
     {
-      sub_1BDBD94(result);
+      sub_1BC3524(result);
       return (System_Collections_Generic_List_object__o *)GachaDetailEntity__GetScriptInt(v7, v8, v9, v10);
     }
   }
@@ -207,29 +207,29 @@ bool __fastcall GachaDetailEntity__IsPrivilegeSummon(
   int64_t v15; // [xsp+0h] [xbp-40h] BYREF
   UserPrivilegeEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B44D0D & 1) == 0 )
+  if ( (byte_4B022BF & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMaster_UserPrivilegeMaster___, endedAt);
-    sub_1BDB878(&DataManager_TypeInfo, v6);
-    sub_1BDB878(&NetworkManager_TypeInfo, v7);
-    sub_1BDB878(&StringLiteral_22800/*"privilegeId"*/, v8);
-    byte_4B44D0D = 1;
+    sub_1BC3008(&Method_DataManager_GetMaster_UserPrivilegeMaster___, endedAt);
+    sub_1BC3008(&DataManager_TypeInfo, v6);
+    sub_1BC3008(&NetworkManager_TypeInfo, v7);
+    sub_1BC3008(&StringLiteral_22555/*"privilegeId"*/, v8);
+    byte_4B022BF = 1;
   }
   v15 = 0LL;
   entity = 0LL;
-  ScriptInt = GachaDetailEntity__GetScriptInt(this, (System_String_o *)StringLiteral_22800/*"privilegeId"*/, -1, v3);
+  ScriptInt = GachaDetailEntity__GetScriptInt(this, (System_String_o *)StringLiteral_22555/*"privilegeId"*/, -1, v3);
   if ( (ScriptInt & 0x80000000) == 0 )
   {
     v10 = ScriptInt;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3033908 *)Method_DataManager_GetMaster_UserPrivilegeMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserPrivilegeMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4B3ED56 )
+    if ( !byte_4AFC1F1 )
     {
-      sub_1BDB878(&NetworkManager_TypeInfo, v11);
-      byte_4B3ED56 = 1;
+      sub_1BC3008(&NetworkManager_TypeInfo, v11);
+      byte_4AFC1F1 = 1;
     }
     p_image = &NetworkManager_TypeInfo->_1.image;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -253,7 +253,7 @@ bool __fastcall GachaDetailEntity__IsPrivilegeSummon(
         return 1;
       }
 LABEL_18:
-      sub_1BDBAD4(p_image, v11);
+      sub_1BC3264(p_image, v11);
     }
   }
   result = 0;
@@ -269,15 +269,15 @@ void __fastcall GachaDetailEntity___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B44D0F & 1) == 0 )
+  if ( (byte_4B022C1 & 1) == 0 )
   {
-    sub_1BDB878(&GachaDetailEntity___c_TypeInfo, v1);
-    byte_4B44D0F = 1;
+    sub_1BC3008(&GachaDetailEntity___c_TypeInfo, v1);
+    byte_4B022C1 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BDBAC4(GachaDetailEntity___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BC3254(GachaDetailEntity___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   GachaDetailEntity___c_TypeInfo->static_fields->__9 = (struct GachaDetailEntity___c_o *)v2;
-  sub_1BDB81C((CGThumbnailListItem_o *)GachaDetailEntity___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BC2FAC((CGThumbnailListItem_o *)GachaDetailEntity___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -294,10 +294,10 @@ int32_t __fastcall GachaDetailEntity___c___GetScriptIntArray_b__8_0(
 {
   System_String_o *v4; // x0
 
-  if ( (byte_4B44D10 & 1) == 0 )
+  if ( (byte_4B022C2 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_1/*""*/, x);
-    byte_4B44D10 = 1;
+    sub_1BC3008(&StringLiteral_1/*""*/, x);
+    byte_4B022C2 = 1;
   }
   if ( x )
     v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo *))x->klass->vtable[3].method)(

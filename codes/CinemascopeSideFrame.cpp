@@ -20,10 +20,10 @@ void __fastcall CinemascopeSideFrame__Hide(CinemascopeSideFrame_o *this, const M
 {
   _BOOL4 tempForceObi_16_9; // w19
 
-  if ( (byte_4B48BB1 & 1) == 0 )
+  if ( (byte_4B0618B & 1) == 0 )
   {
-    sub_1BDB878(&CommonUI_TypeInfo, method);
-    byte_4B48BB1 = 1;
+    sub_1BC3008(&CommonUI_TypeInfo, method);
+    byte_4B0618B = 1;
   }
   if ( this->fields.hide )
   {
@@ -39,10 +39,10 @@ void __fastcall CinemascopeSideFrame__HideLater(CinemascopeSideFrame_o *this, co
 {
   _BOOL4 tempForceObi_16_9; // w19
 
-  if ( (byte_4B48BB2 & 1) == 0 )
+  if ( (byte_4B0618C & 1) == 0 )
   {
-    sub_1BDB878(&CommonUI_TypeInfo, method);
-    byte_4B48BB2 = 1;
+    sub_1BC3008(&CommonUI_TypeInfo, method);
+    byte_4B0618C = 1;
   }
   if ( !this->fields.hide )
   {
@@ -67,12 +67,12 @@ System_Nullable_int__o __fastcall CinemascopeSideFrame__Show(
   System_Nullable_int__o v11; // [xsp+8h] [xbp-28h] BYREF
   System_Nullable_int__o v12; // 0:x0.8
 
-  if ( (byte_4B48BB0 & 1) == 0 )
+  if ( (byte_4B0618A & 1) == 0 )
   {
-    sub_1BDB878(&CommonUI_TypeInfo, name);
-    sub_1BDB878(&FSUtility_TypeInfo, v5);
-    sub_1BDB878(&Method_System_Nullable_int___ctor__, v6);
-    byte_4B48BB0 = 1;
+    sub_1BC3008(&CommonUI_TypeInfo, name);
+    sub_1BC3008(&FSUtility_TypeInfo, v5);
+    sub_1BC3008(&Method_System_Nullable_int___ctor__, v6);
+    byte_4B0618A = 1;
   }
   v11 = 0LL;
   if ( this->fields.show )
@@ -92,7 +92,7 @@ System_Nullable_int__o __fastcall CinemascopeSideFrame__Show(
       v9 = 1024;
     CommonUI__SetForceObi_16_9(v8, 0LL);
     v12 = (System_Nullable_int__o)&v11;
-    System_Nullable_int____ctor(v12, v9, (const MethodInfo_37F58C8 *)Method_System_Nullable_int___ctor__);
+    System_Nullable_int____ctor(v12, v9, (const MethodInfo_37C0098 *)Method_System_Nullable_int___ctor__);
   }
   return v11;
 }

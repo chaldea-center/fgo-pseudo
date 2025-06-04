@@ -38,18 +38,18 @@ LocalNotificationService_o *__fastcall LocalNotificationService__getNullObject(c
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B46405 & 1) == 0 )
+  if ( (byte_4B039B3 & 1) == 0 )
   {
-    sub_1BDB878(&LocalNotificationService_TypeInfo, v1);
-    byte_4B46405 = 1;
+    sub_1BC3008(&LocalNotificationService_TypeInfo, v1);
+    byte_4B039B3 = 1;
   }
   nullObject = LocalNotificationService_TypeInfo->static_fields->nullObject;
   if ( !nullObject )
   {
-    v3 = (Il2CppObject *)sub_1BDBAC4(LocalNotificationService_TypeInfo);
+    v3 = (Il2CppObject *)sub_1BC3254(LocalNotificationService_TypeInfo);
     System_Object___ctor(v3, 0LL);
     LocalNotificationService_TypeInfo->static_fields->nullObject = (struct LocalNotificationService_o *)v3;
-    sub_1BDB81C((CGThumbnailListItem_o *)LocalNotificationService_TypeInfo->static_fields, (int32_t)v3, v4, v5);
+    sub_1BC2FAC((CGThumbnailListItem_o *)LocalNotificationService_TypeInfo->static_fields, (int32_t)v3, v4, v5);
     return LocalNotificationService_TypeInfo->static_fields->nullObject;
   }
   return nullObject;

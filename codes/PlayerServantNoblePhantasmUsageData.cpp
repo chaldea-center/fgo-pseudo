@@ -7,22 +7,22 @@ void __fastcall PlayerServantNoblePhantasmUsageData___ctor(
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4B48041 & 1) == 0 )
+  if ( (byte_4B05618 & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue___ctor__,
       method);
-    sub_1BDB878(
+    sub_1BC3008(
       &System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__TypeInfo,
       v3);
-    byte_4B48041 = 1;
+    byte_4B05618 = 1;
   }
-  v4 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BDBAC4(System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__TypeInfo);
+  v4 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BC3254(System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__TypeInfo);
   System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__object____ctor(
     v4,
-    (const MethodInfo_33ECD40 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue___ctor__);
+    (const MethodInfo_33B9AF8 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue___ctor__);
   this->fields.usageDictionary = (struct System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__o *)v4;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)v4, v5, v6);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)v4, v5, v6);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -46,16 +46,16 @@ void __fastcall PlayerServantNoblePhantasmUsageData__AddNoblePhantasmUsage(
   PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_o v18; // 0:x1.12
   PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_o v19; // 0:x1.12
 
-  if ( (byte_4B4803F & 1) == 0 )
+  if ( (byte_4B05616 & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__TryGetValue__,
       *(_QWORD *)&svtId);
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__set_Item__,
       v11);
-    sub_1BDB878(&PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_TypeInfo, v12);
-    byte_4B4803F = 1;
+    sub_1BC3008(&PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_TypeInfo, v12);
+    byte_4B05616 = 1;
   }
   value = 0LL;
   if ( !isEnemy )
@@ -67,10 +67,10 @@ void __fastcall PlayerServantNoblePhantasmUsageData__AddNoblePhantasmUsage(
     v15 = seqId;
     *(_QWORD *)&v18.fields.servantId = v14;
     v18.fields.seqId = seqId;
-    usageDictionary = (struct System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__o *)System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__object___TryGetValue((System_Collections_Generic_Dictionary_TKey__TValue__o *)usageDictionary, v18, &value, (const MethodInfo_33EEF20 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__TryGetValue__);
+    usageDictionary = (struct System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__o *)System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__object___TryGetValue((System_Collections_Generic_Dictionary_TKey__TValue__o *)usageDictionary, v18, &value, (const MethodInfo_33BBCD8 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__TryGetValue__);
     if ( ((unsigned __int8)usageDictionary & 1) == 0 )
     {
-      v16 = (Il2CppObject *)sub_1BDBAC4(PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_TypeInfo);
+      v16 = (Il2CppObject *)sub_1BC3254(PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_TypeInfo);
       System_Object___ctor(v16, 0LL);
       value = v16;
       usageDictionary = this->fields.usageDictionary;
@@ -82,7 +82,7 @@ void __fastcall PlayerServantNoblePhantasmUsageData__AddNoblePhantasmUsage(
         (System_Collections_Generic_Dictionary_TKey__TValue__o *)usageDictionary,
         v19,
         v16,
-        (const MethodInfo_33ED720 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__set_Item__);
+        (const MethodInfo_33BA4D8 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__set_Item__);
     }
     if ( value )
     {
@@ -90,7 +90,7 @@ void __fastcall PlayerServantNoblePhantasmUsageData__AddNoblePhantasmUsage(
       return;
     }
 LABEL_11:
-    sub_1BDBAD4(usageDictionary, *(_QWORD *)&svtId);
+    sub_1BC3264(usageDictionary, *(_QWORD *)&svtId);
   }
 }
 
@@ -101,19 +101,19 @@ void __fastcall PlayerServantNoblePhantasmUsageData__Clear(
 {
   System_Collections_Generic_Dictionary_TKey__TValue__o *usageDictionary; // x0
 
-  if ( (byte_4B4803E & 1) == 0 )
+  if ( (byte_4B05615 & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__Clear__,
       method);
-    byte_4B4803E = 1;
+    byte_4B05615 = 1;
   }
   usageDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.usageDictionary;
   if ( !usageDictionary )
-    sub_1BDBAD4(0LL, method);
+    sub_1BC3264(0LL, method);
   System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__object___Clear(
     usageDictionary,
-    (const MethodInfo_33ED8E4 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__Clear__);
+    (const MethodInfo_33BA69C *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__Clear__);
 }
 
 
@@ -170,39 +170,39 @@ System_String_o *__fastcall PlayerServantNoblePhantasmUsageData__ConvertToJsonSt
   int v50; // [xsp+14h] [xbp-7Ch] BYREF
   System_Collections_Generic_KeyValuePair_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__object__o v51; // [xsp+18h] [xbp-78h] BYREF
 
-  if ( (byte_4B48040 & 1) == 0 )
+  if ( (byte_4B05617 & 1) == 0 )
   {
-    sub_1BDB878(&System_Collections_Generic_Dictionary_string__object____TypeInfo, method);
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object___ctor__, v3);
-    sub_1BDB878(
+    sub_1BC3008(&System_Collections_Generic_Dictionary_string__object____TypeInfo, method);
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_string__object___ctor__, v3);
+    sub_1BC3008(
       &Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__get_Count__,
       v4);
-    sub_1BDB878(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
-    sub_1BDB878(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v6);
-    sub_1BDB878(
+    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
+    sub_1BC3008(&System_Collections_Generic_Dictionary_string__object__TypeInfo, v6);
+    sub_1BC3008(
       &Method_System_Linq_Enumerable_ElementAt_KeyValuePair_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue____,
       v7);
-    sub_1BDB878(&int_TypeInfo, v8);
-    sub_1BDB878(&JsonManager_TypeInfo, v9);
-    sub_1BDB878(
+    sub_1BC3008(&int_TypeInfo, v8);
+    sub_1BC3008(&JsonManager_TypeInfo, v9);
+    sub_1BC3008(
       &Method_System_Collections_Generic_KeyValuePair_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__get_Key__,
       v10);
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_Generic_KeyValuePair_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__get_Value__,
       v11);
-    sub_1BDB878(&StringLiteral_23899/*"svtId"*/, v12);
-    sub_1BDB878(&StringLiteral_23301/*"seqId"*/, v13);
-    sub_1BDB878(&StringLiteral_19540/*"followerType"*/, v14);
-    sub_1BDB878(&StringLiteral_16653/*"addCount"*/, v15);
-    byte_4B48040 = 1;
+    sub_1BC3008(&StringLiteral_23631/*"svtId"*/, v12);
+    sub_1BC3008(&StringLiteral_23040/*"seqId"*/, v13);
+    sub_1BC3008(&StringLiteral_19346/*"followerType"*/, v14);
+    sub_1BC3008(&StringLiteral_16520/*"addCount"*/, v15);
+    byte_4B05617 = 1;
   }
   usageDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.usageDictionary;
   if ( !usageDictionary )
     goto LABEL_15;
   Count = System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__object___get_Count(
             usageDictionary,
-            (const MethodInfo_33ED3D0 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__get_Count__);
-  v18 = sub_1BDB920(System_Collections_Generic_Dictionary_string__object____TypeInfo, (unsigned int)Count);
+            (const MethodInfo_33BA188 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__get_Count__);
+  v18 = sub_1BC30B0(System_Collections_Generic_Dictionary_string__object____TypeInfo, (unsigned int)Count);
   v19 = (unsigned int *)v18;
   if ( Count >= 1 )
   {
@@ -215,14 +215,14 @@ System_String_o *__fastcall PlayerServantNoblePhantasmUsageData__ConvertToJsonSt
         &v51,
         (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.usageDictionary,
         v20,
-        (const MethodInfo_3053670 *)Method_System_Linq_Enumerable_ElementAt_KeyValuePair_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue____);
+        (const MethodInfo_3021A5C *)Method_System_Linq_Enumerable_ElementAt_KeyValuePair_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue____);
       v23 = *(_QWORD *)&v51.fields.key.fields.servantId;
       seqId = v51.fields.key.fields.seqId;
       value = v51.fields.value;
-      v26 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BDBAC4(System_Collections_Generic_Dictionary_string__object__TypeInfo);
+      v26 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1BC3254(System_Collections_Generic_Dictionary_string__object__TypeInfo);
       System_Collections_Generic_Dictionary_object__object____ctor(
         v26,
-        (const MethodInfo_339F880 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
+        (const MethodInfo_336C638 *)Method_System_Collections_Generic_Dictionary_string__object___ctor__);
       v51.fields.key.fields.servantId = v23;
       usageDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)j_il2cpp_value_box_0(
                                                                                    int_TypeInfo,
@@ -234,51 +234,51 @@ System_String_o *__fastcall PlayerServantNoblePhantasmUsageData__ConvertToJsonSt
         break;
       System_Collections_Generic_Dictionary_object__object___set_Item(
         v26,
-        (Il2CppObject *)StringLiteral_23899/*"svtId"*/,
+        (Il2CppObject *)StringLiteral_23631/*"svtId"*/,
         (Il2CppObject *)usageDictionary,
-        (const MethodInfo_33A021C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+        (const MethodInfo_336CFD4 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
       v50 = HIDWORD(v23);
       v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50, v30, v31, v32);
       System_Collections_Generic_Dictionary_object__object___set_Item(
         v26,
-        (Il2CppObject *)StringLiteral_19540/*"followerType"*/,
+        (Il2CppObject *)StringLiteral_19346/*"followerType"*/,
         v33,
-        (const MethodInfo_33A021C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+        (const MethodInfo_336CFD4 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
       v49 = seqId;
       v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49, v34, v35, v36);
       System_Collections_Generic_Dictionary_object__object___set_Item(
         v26,
-        (Il2CppObject *)StringLiteral_23301/*"seqId"*/,
+        (Il2CppObject *)StringLiteral_23040/*"seqId"*/,
         v37,
-        (const MethodInfo_33A021C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+        (const MethodInfo_336CFD4 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
       if ( !value )
         break;
       klass = (int)value[1].klass;
       v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &klass, v38, v39, v40);
       System_Collections_Generic_Dictionary_object__object___set_Item(
         v26,
-        (Il2CppObject *)StringLiteral_16653/*"addCount"*/,
+        (Il2CppObject *)StringLiteral_16520/*"addCount"*/,
         v41,
-        (const MethodInfo_33A021C *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+        (const MethodInfo_336CFD4 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
       if ( !v19 )
         break;
-      v42 = sub_1BDB9B4(v26, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
+      v42 = sub_1BC3144(v26, *(_QWORD *)(*(_QWORD *)v19 + 64LL));
       if ( !v42 )
       {
-        v47 = sub_1BDBAF8(0LL);
-        sub_1BDB9A0(v47, 0LL);
+        v47 = sub_1BC3288(0LL);
+        sub_1BC3130(v47, 0LL);
       }
       if ( v20 >= v19[6] )
-        sub_1BDBADC(v42, v43, v44);
+        sub_1BC326C(v42, v43, v44);
       v22->klass = (CGThumbnailListItem_c *)v26;
-      sub_1BDB81C(v22, (int32_t)v26, v44, v45);
+      sub_1BC2FAC(v22, (int32_t)v26, v44, v45);
       ++v20;
       v22 = (CGThumbnailListItem_o *)((char *)v22 + 8);
       if ( v21 == v20 )
         goto LABEL_12;
     }
 LABEL_15:
-    sub_1BDBAD4(usageDictionary, method);
+    sub_1BC3264(usageDictionary, method);
   }
 LABEL_12:
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -314,31 +314,31 @@ PlayerServantNoblePhantasmUsageData_SaveData_o *__fastcall PlayerServantNoblePha
   System_Collections_Generic_KeyValuePair_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__object__o usageDictionaryKey; // [xsp+8h] [xbp-68h] BYREF
   PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_o v25; // 0:x0.12
 
-  if ( (byte_4B4803C & 1) == 0 )
+  if ( (byte_4B05613 & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__get_Count__,
       method);
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Linq_Enumerable_ElementAt_KeyValuePair_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue____,
       v4);
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_Generic_KeyValuePair_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__get_Key__,
       v5);
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_Generic_KeyValuePair_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__get_Value__,
       v6);
-    sub_1BDB878(&PlayerServantNoblePhantasmUsageData_SaveDataEntity___TypeInfo, v7);
-    sub_1BDB878(&PlayerServantNoblePhantasmUsageData_SaveData_TypeInfo, v8);
-    byte_4B4803C = 1;
+    sub_1BC3008(&PlayerServantNoblePhantasmUsageData_SaveDataEntity___TypeInfo, v7);
+    sub_1BC3008(&PlayerServantNoblePhantasmUsageData_SaveData_TypeInfo, v8);
+    byte_4B05613 = 1;
   }
   usageDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.usageDictionary;
   if ( !usageDictionary )
     goto LABEL_12;
   Count = System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__object___get_Count(
             usageDictionary,
-            (const MethodInfo_33ED3D0 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__get_Count__);
-  v11 = sub_1BDB920(PlayerServantNoblePhantasmUsageData_SaveDataEntity___TypeInfo, (unsigned int)Count);
+            (const MethodInfo_33BA188 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__get_Count__);
+  v11 = sub_1BC30B0(PlayerServantNoblePhantasmUsageData_SaveDataEntity___TypeInfo, (unsigned int)Count);
   v12 = (PlayerServantNoblePhantasmUsageData_SaveDataEntity_array *)v11;
   if ( Count >= 1 )
   {
@@ -351,7 +351,7 @@ PlayerServantNoblePhantasmUsageData_SaveData_o *__fastcall PlayerServantNoblePha
         &usageDictionaryKey,
         (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.usageDictionary,
         v13,
-        (const MethodInfo_3053670 *)Method_System_Linq_Enumerable_ElementAt_KeyValuePair_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue____);
+        (const MethodInfo_3021A5C *)Method_System_Linq_Enumerable_ElementAt_KeyValuePair_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue____);
       *(_QWORD *)&v25.fields.servantId = *(_QWORD *)&usageDictionaryKey.fields.key.fields.servantId;
       v2 = v2 & 0xFFFFFFFF00000000LL | (unsigned int)usageDictionaryKey.fields.key.fields.seqId;
       v25.fields.seqId = v2;
@@ -364,30 +364,30 @@ PlayerServantNoblePhantasmUsageData_SaveData_o *__fastcall PlayerServantNoblePha
       v19 = (CGThumbnailListItem_c *)usageDictionary;
       if ( usageDictionary )
       {
-        usageDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BDB9B4(
+        usageDictionary = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BC3144(
                                                                                      usageDictionary,
                                                                                      v12->obj.klass->_1.element_class);
         if ( !usageDictionary )
         {
-          v23 = sub_1BDBAF8(0LL);
-          sub_1BDB9A0(v23, 0LL);
+          v23 = sub_1BC3288(0LL);
+          sub_1BC3130(v23, 0LL);
         }
       }
       if ( v13 >= v12->max_length )
-        sub_1BDBADC(usageDictionary, method, v17);
+        sub_1BC326C(usageDictionary, method, v17);
       v15->klass = v19;
-      sub_1BDB81C(v15, (int32_t)v19, v17, v18);
+      sub_1BC2FAC(v15, (int32_t)v19, v17, v18);
       ++v13;
       v15 = (CGThumbnailListItem_o *)((char *)v15 + 8);
       if ( v14 == v13 )
         goto LABEL_11;
     }
 LABEL_12:
-    sub_1BDBAD4(usageDictionary, method);
+    sub_1BC3264(usageDictionary, method);
   }
 LABEL_11:
-  v20 = (PlayerServantNoblePhantasmUsageData_SaveData_o *)sub_1BDBAC4(PlayerServantNoblePhantasmUsageData_SaveData_TypeInfo);
-  PlayerServantNoblePhantasmUsageData_SaveData___ctor_46380724(v20, v12, v21);
+  v20 = (PlayerServantNoblePhantasmUsageData_SaveData_o *)sub_1BC3254(PlayerServantNoblePhantasmUsageData_SaveData_TypeInfo);
+  PlayerServantNoblePhantasmUsageData_SaveData___ctor_46432084(v20, v12, v21);
   return v20;
 }
 
@@ -414,16 +414,16 @@ void __fastcall PlayerServantNoblePhantasmUsageData__SetSaveData(
   __int64 v19; // x23
   PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_o v20; // 0:x1.12
 
-  if ( (byte_4B4803D & 1) == 0 )
+  if ( (byte_4B05614 & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__Clear__,
       saveData);
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__set_Item__,
       v5);
-    sub_1BDB878(&PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_TypeInfo, v6);
-    byte_4B4803D = 1;
+    sub_1BC3008(&PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_TypeInfo, v6);
+    byte_4B05614 = 1;
   }
   if ( saveData )
   {
@@ -432,7 +432,7 @@ void __fastcall PlayerServantNoblePhantasmUsageData__SetSaveData(
       goto LABEL_15;
     System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__object___Clear(
       usageDictionary,
-      (const MethodInfo_33ED8E4 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__Clear__);
+      (const MethodInfo_33BA69C *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__Clear__);
     saveDataEntities = saveData->fields.saveDataEntities;
     if ( !saveDataEntities )
       goto LABEL_15;
@@ -443,7 +443,7 @@ void __fastcall PlayerServantNoblePhantasmUsageData__SetSaveData(
       while ( 1 )
       {
         if ( v11 >= max_length )
-          sub_1BDBADC(usageDictionary, saveData, v8);
+          sub_1BC326C(usageDictionary, saveData, v8);
         v12 = saveDataEntities->m_Items[v11];
         if ( !v12 )
           break;
@@ -455,7 +455,7 @@ void __fastcall PlayerServantNoblePhantasmUsageData__SetSaveData(
         followerType = usageDictionaryKeySaveData->fields.followerType;
         seqId = usageDictionaryKeySaveData->fields.seqId;
         usageDictionaryValueSaveData = v12->fields.usageDictionaryValueSaveData;
-        v19 = sub_1BDBAC4(PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_TypeInfo);
+        v19 = sub_1BC3254(PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_TypeInfo);
         System_Object___ctor((Il2CppObject *)v19, 0LL);
         if ( !usageDictionaryValueSaveData )
           break;
@@ -469,13 +469,13 @@ void __fastcall PlayerServantNoblePhantasmUsageData__SetSaveData(
           v14,
           v20,
           (Il2CppObject *)v19,
-          (const MethodInfo_33ED720 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__set_Item__);
+          (const MethodInfo_33BA4D8 *)Method_System_Collections_Generic_Dictionary_PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__set_Item__);
         max_length = saveDataEntities->max_length;
         if ( (int)++v11 >= max_length )
           return;
       }
 LABEL_15:
-      sub_1BDBAD4(usageDictionary, saveData);
+      sub_1BC3264(usageDictionary, saveData);
     }
   }
 }
@@ -495,35 +495,35 @@ void __fastcall PlayerServantNoblePhantasmUsageData_SaveData___ctor(
   struct PlayerServantNoblePhantasmUsageData_SaveDataEntity_array **v10; // x8
   struct PlayerServantNoblePhantasmUsageData_SaveDataEntity_array *v11; // x1
 
-  if ( (byte_4B48047 & 1) == 0 )
+  if ( (byte_4B0561E & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Array_Empty_PlayerServantNoblePhantasmUsageData_SaveDataEntity___, method);
-    byte_4B48047 = 1;
+    sub_1BC3008(&Method_System_Array_Empty_PlayerServantNoblePhantasmUsageData_SaveDataEntity___, method);
+    byte_4B0561E = 1;
   }
   v6 = Method_System_Array_Empty_PlayerServantNoblePhantasmUsageData_SaveDataEntity___;
   v7 = *((_QWORD *)Method_System_Array_Empty_PlayerServantNoblePhantasmUsageData_SaveDataEntity___ + 7);
   if ( !v7 )
   {
-    sub_1C2BF64(Method_System_Array_Empty_PlayerServantNoblePhantasmUsageData_SaveDataEntity___);
+    sub_1C134C8(Method_System_Array_Empty_PlayerServantNoblePhantasmUsageData_SaveDataEntity___);
     v7 = v6[7];
   }
   v8 = *(_QWORD *)(v7 + 16);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C2BF08(inited);
+    v8 = sub_1C1346C(inited);
   if ( !*(_DWORD *)(v8 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v8);
   v9 = *(_QWORD *)(v6[7] + 16LL);
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C2BF08(inited);
+    v9 = sub_1C1346C(inited);
   v10 = *(struct PlayerServantNoblePhantasmUsageData_SaveDataEntity_array ***)(v9 + 184);
   v11 = *v10;
   this->fields.saveDataEntities = *v10;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)v11, v2, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)v11, v2, v3);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
 
-void __fastcall PlayerServantNoblePhantasmUsageData_SaveData___ctor_46380724(
+void __fastcall PlayerServantNoblePhantasmUsageData_SaveData___ctor_46432084(
         PlayerServantNoblePhantasmUsageData_SaveData_o *this,
         PlayerServantNoblePhantasmUsageData_SaveDataEntity_array *inputSaveDataEntities,
         const MethodInfo *method)
@@ -539,35 +539,35 @@ void __fastcall PlayerServantNoblePhantasmUsageData_SaveData___ctor_46380724(
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4B48048 & 1) == 0 )
+  if ( (byte_4B0561F & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Array_Empty_PlayerServantNoblePhantasmUsageData_SaveDataEntity___, inputSaveDataEntities);
-    byte_4B48048 = 1;
+    sub_1BC3008(&Method_System_Array_Empty_PlayerServantNoblePhantasmUsageData_SaveDataEntity___, inputSaveDataEntities);
+    byte_4B0561F = 1;
   }
   v7 = Method_System_Array_Empty_PlayerServantNoblePhantasmUsageData_SaveDataEntity___;
   v8 = *((_QWORD *)Method_System_Array_Empty_PlayerServantNoblePhantasmUsageData_SaveDataEntity___ + 7);
   if ( !v8 )
   {
-    sub_1C2BF64(Method_System_Array_Empty_PlayerServantNoblePhantasmUsageData_SaveDataEntity___);
+    sub_1C134C8(Method_System_Array_Empty_PlayerServantNoblePhantasmUsageData_SaveDataEntity___);
     v8 = v7[7];
   }
   v9 = *(_QWORD *)(v8 + 16);
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C2BF08(inited);
+    v9 = sub_1C1346C(inited);
   if ( !*(_DWORD *)(v9 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v9);
   v10 = *(_QWORD *)(v7[7] + 16LL);
   if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C2BF08(inited);
+    v10 = sub_1C1346C(inited);
   v11 = *(struct PlayerServantNoblePhantasmUsageData_SaveDataEntity_array ***)(v10 + 184);
   v12 = *v11;
   this->fields.saveDataEntities = *v11;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)v12, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)v12, (int32_t)method, v3);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( inputSaveDataEntities )
   {
     this->fields.saveDataEntities = inputSaveDataEntities;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)inputSaveDataEntities, v13, v14);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)inputSaveDataEntities, v13, v14);
   }
 }
 
@@ -599,27 +599,27 @@ PlayerServantNoblePhantasmUsageData_SaveDataEntity_o *__fastcall PlayerServantNo
   PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_o v15; // 0:x0.12
 
   v14 = usageDictionaryKey;
-  if ( (byte_4B48046 & 1) == 0 )
+  if ( (byte_4B0561D & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &PlayerServantNoblePhantasmUsageData_SaveDataEntity_TypeInfo,
       *(_QWORD *)&usageDictionaryKey.fields.seqId);
-    byte_4B48046 = 1;
+    byte_4B0561D = 1;
   }
-  v4 = sub_1BDBAC4(PlayerServantNoblePhantasmUsageData_SaveDataEntity_TypeInfo);
+  v4 = sub_1BC3254(PlayerServantNoblePhantasmUsageData_SaveDataEntity_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0LL);
   *(_QWORD *)&v15.fields.servantId = &v14;
   SaveData = PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__GetSaveData(v15, v5);
   if ( !v4
     || (*(_QWORD *)(v4 + 16) = SaveData,
-        sub_1BDB81C((CGThumbnailListItem_o *)(v4 + 16), (int32_t)SaveData, v8, v9),
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v4 + 16), (int32_t)SaveData, v8, v9),
         !usageDictionaryValue) )
   {
-    sub_1BDBAD4(SaveData, v7);
+    sub_1BC3264(SaveData, v7);
   }
   v10 = PlayerServantNoblePhantasmUsageData_UsageDictionaryValue__GetSaveData(usageDictionaryValue, v7);
   *(_QWORD *)(v4 + 24) = v10;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v4 + 24), (int32_t)v10, v11, v12);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v4 + 24), (int32_t)v10, v11, v12);
   return (PlayerServantNoblePhantasmUsageData_SaveDataEntity_o *)v4;
 }
 
@@ -638,13 +638,13 @@ void __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryKey___ctor(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryKey___ctor_46381256(
+void __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryKey___ctor_46432616(
         PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_o this,
         PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveData_o *saveData,
         const MethodInfo *method)
 {
   if ( !*(_QWORD *)&this.fields.seqId )
-    sub_1BDBAD4(*(_QWORD *)&this.fields.servantId, 0LL);
+    sub_1BC3264(*(_QWORD *)&this.fields.servantId, 0LL);
   **(_QWORD **)&this.fields.servantId = *(_QWORD *)(*(_QWORD *)&this.fields.seqId + 16LL);
   *(_DWORD *)(*(_QWORD *)&this.fields.servantId + 8LL) = *(_DWORD *)(*(_QWORD *)&this.fields.seqId + 24LL);
 }
@@ -663,10 +663,10 @@ bool __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__Equals(
 
   v3 = *(PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_c ***)&this.fields.seqId;
   v4 = *(_QWORD *)&this.fields.servantId;
-  if ( (byte_4B48043 & 1) == 0 )
+  if ( (byte_4B0561A & 1) == 0 )
   {
-    sub_1BDB878(&PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_TypeInfo, *(_QWORD *)&this.fields.seqId);
-    byte_4B48043 = 1;
+    sub_1BC3008(&PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_TypeInfo, *(_QWORD *)&this.fields.seqId);
+    byte_4B0561A = 1;
   }
   result = v3
         && *v3 == PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_TypeInfo
@@ -677,7 +677,7 @@ bool __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__Equals(
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__Equals_46382932(
+bool __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__Equals_46434292(
         PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_o this,
         PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_o other,
         const MethodInfo *method)
@@ -704,11 +704,11 @@ int32_t __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__GetHa
   int Item2; // [xsp+18h] [xbp-38h]
 
   v2 = *(int32_t **)&this.fields.servantId;
-  if ( (byte_4B48044 & 1) == 0 )
+  if ( (byte_4B0561B & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_ValueTuple_int__Follower_Type__int__GetHashCode__, *(_QWORD *)&this.fields.seqId);
-    sub_1BDB878(&Method_System_ValueTuple_int__Follower_Type__int___ctor__, v3);
-    byte_4B48044 = 1;
+    sub_1BC3008(&Method_System_ValueTuple_int__Follower_Type__int__GetHashCode__, *(_QWORD *)&this.fields.seqId);
+    sub_1BC3008(&Method_System_ValueTuple_int__Follower_Type__int___ctor__, v3);
+    byte_4B0561B = 1;
   }
   Item2 = 0;
   v8.fields.Item3 = 0LL;
@@ -722,12 +722,12 @@ int32_t __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryKey__GetHa
     v4,
     v5,
     v6,
-    (const MethodInfo_3A2E674 *)Method_System_ValueTuple_int__Follower_Type__int___ctor__);
+    (const MethodInfo_39F80C0 *)Method_System_ValueTuple_int__Follower_Type__int___ctor__);
   v8.fields.Item3 = v8.fields.Item1;
   Item2 = (int)v8.fields.Item2;
   return System_ValueTuple_int__Int32Enum__int___GetHashCode(
            (System_ValueTuple_T1__T2__T3__o *)&v8.fields.Item3,
-           (const MethodInfo_3A2F1F4 *)Method_System_ValueTuple_int__Follower_Type__int__GetHashCode__);
+           (const MethodInfo_39F8C40 *)Method_System_ValueTuple_int__Follower_Type__int__GetHashCode__);
 }
 
 
@@ -742,16 +742,16 @@ PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveDat
   __int64 v5; // x19
 
   v2 = *(__int64 **)&this.fields.servantId;
-  if ( (byte_4B48042 & 1) == 0 )
+  if ( (byte_4B05619 & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveData_TypeInfo,
       *(_QWORD *)&this.fields.seqId);
-    byte_4B48042 = 1;
+    byte_4B05619 = 1;
   }
   v3 = *v2;
   v4 = *((_DWORD *)v2 + 2);
-  v5 = sub_1BDBAC4(PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveData_TypeInfo);
+  v5 = sub_1BC3254(PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_QWORD *)(v5 + 16) = v3;
   *(_DWORD *)(v5 + 24) = v4;
@@ -767,7 +767,7 @@ void __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDict
 }
 
 
-void __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveData___ctor_46382720(
+void __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveData___ctor_46434080(
         PlayerServantNoblePhantasmUsageData_UsageDictionaryKey_UsageDictionaryKeySaveData_o *this,
         int32_t servantId,
         int32_t followerType,
@@ -789,7 +789,7 @@ void __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryValue___ctor(
 }
 
 
-void __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryValue___ctor_46381292(
+void __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryValue___ctor_46432652(
         PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_o *this,
         PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSaveData_o *saveData,
         const MethodInfo *method)
@@ -799,7 +799,7 @@ void __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryValue___ctor_
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !saveData )
-    sub_1BDBAD4(v5, v6);
+    sub_1BC3264(v5, v6);
   this->fields.useCount = saveData->fields.useCount;
 }
 
@@ -811,13 +811,13 @@ PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSav
   int32_t useCount; // w21
   __int64 v4; // x19
 
-  if ( (byte_4B48045 & 1) == 0 )
+  if ( (byte_4B0561C & 1) == 0 )
   {
-    sub_1BDB878(&PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSaveData_TypeInfo, method);
-    byte_4B48045 = 1;
+    sub_1BC3008(&PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSaveData_TypeInfo, method);
+    byte_4B0561C = 1;
   }
   useCount = this->fields.useCount;
-  v4 = sub_1BDBAC4(PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSaveData_TypeInfo);
+  v4 = sub_1BC3254(PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0LL);
   *(_DWORD *)(v4 + 16) = useCount;
   return (PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSaveData_o *)v4;
@@ -848,7 +848,7 @@ void __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDi
 }
 
 
-void __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSaveData___ctor_46383260(
+void __fastcall PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSaveData___ctor_46434620(
         PlayerServantNoblePhantasmUsageData_UsageDictionaryValue_UsageDictionaryValueSaveData_o *this,
         int32_t useCount,
         const MethodInfo *method)

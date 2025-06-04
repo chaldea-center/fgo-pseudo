@@ -2,8 +2,8 @@ void __fastcall GrandServantIconComponentNameEffect___ctor(
         GrandServantIconComponentNameEffect_o *this,
         const MethodInfo *method)
 {
-  this->fields.toColor = (struct UnityEngine_Color_o)xmmword_BEBC80;
-  this->fields.fromColor = (struct UnityEngine_Color_o)xmmword_BEBDD0;
+  this->fields.toColor = (struct UnityEngine_Color_o)xmmword_BDF5C0;
+  this->fields.fromColor = (struct UnityEngine_Color_o)xmmword_BDF710;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -88,7 +88,7 @@ void __fastcall GrandServantIconComponentNameEffect__Update(
     v10 = 2.0;
   this->fields.t = v10;
   if ( !texture )
-    sub_1BDBAD4(v4, v5);
+    sub_1BC3264(v4, v5);
   if ( v10 >= 1.0 )
   {
     v18 = 1.0 - (float)(v10 + -1.0);

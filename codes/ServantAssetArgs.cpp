@@ -18,7 +18,7 @@ void __fastcall ServantAssetArgs___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   if ( !svtData )
-    sub_1BDBAD4(v5, v6);
+    sub_1BC3264(v5, v6);
   this->fields._SvtId_k__BackingField = BattleServantData__getSvtId(svtData, 0LL);
   this->fields._CommandImageSvtId_k__BackingField = BattleServantData__GetCommandImageSvtId(svtData, 0LL);
   this->fields._DispImageSvtId_k__BackingField = BattleServantData__GetDispImageSvtId(svtData, 0LL);
@@ -32,20 +32,20 @@ void __fastcall ServantAssetArgs___ctor(
   this->fields._AppearanceId_k__BackingField = BattleServantData__getAppearanceId(svtData, 0LL);
   CommandCodeIds = BattleServantData__GetCommandCodeIds(svtData, 0LL);
   this->fields._CommandCodeIds_k__BackingField = CommandCodeIds;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._CommandCodeIds_k__BackingField, (int32_t)CommandCodeIds, v8, v9);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._CommandCodeIds_k__BackingField, (int32_t)CommandCodeIds, v8, v9);
   skillInfoList = svtData->fields.skillInfoList;
   this->fields._skillList_k__BackingField = skillInfoList;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._skillList_k__BackingField, (int32_t)skillInfoList, v11, v12);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._skillList_k__BackingField, (int32_t)skillInfoList, v11, v12);
   deckSvt = svtData->fields.deckSvt;
   this->fields._deckSvt_k__BackingField = deckSvt;
   p_deckSvt_k__BackingField = &this->fields._deckSvt_k__BackingField;
-  sub_1BDB81C((CGThumbnailListItem_o *)p_deckSvt_k__BackingField, (int32_t)deckSvt, v15, v16);
+  sub_1BC2FAC((CGThumbnailListItem_o *)p_deckSvt_k__BackingField, (int32_t)deckSvt, v15, v16);
   *((_DWORD *)p_deckSvt_k__BackingField + 2) = svtData->fields.displayType;
   *((_DWORD *)p_deckSvt_k__BackingField + 3) = BattleServantData__GetLoadActorLimitCount(svtData, 0LL);
 }
 
 
-void __fastcall ServantAssetArgs___ctor_45427336(
+void __fastcall ServantAssetArgs___ctor_45476048(
         ServantAssetArgs_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -71,12 +71,12 @@ System_String_o *__fastcall ServantAssetArgs__GenerateUniqueKey(
         System_String_array *para,
         const MethodInfo *method)
 {
-  if ( (byte_4B47852 & 1) == 0 )
+  if ( (byte_4B04E20 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_16088/*"_"*/, para);
-    byte_4B47852 = 1;
+    sub_1BC3008(&StringLiteral_15961/*"_"*/, para);
+    byte_4B04E20 = 1;
   }
-  return System_String__Join((System_String_o *)StringLiteral_16088/*"_"*/, para, 0LL);
+  return System_String__Join((System_String_o *)StringLiteral_15961/*"_"*/, para, 0LL);
 }
 
 
@@ -172,58 +172,58 @@ System_String_o *__fastcall ServantAssetArgs__get_UniqueKey(ServantAssetArgs_o *
   const MethodInfo *v18; // x3
   int32_t SvtId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B47851 & 1) == 0 )
+  if ( (byte_4B04E1F & 1) == 0 )
   {
-    sub_1BDB878(&string___TypeInfo, method);
-    byte_4B47851 = 1;
+    sub_1BC3008(&string___TypeInfo, method);
+    byte_4B04E1F = 1;
   }
   p_uniqueKey = &this->fields.uniqueKey;
   if ( System_String__IsNullOrEmpty(this->fields.uniqueKey, 0LL) )
   {
-    v4 = sub_1BDB920(string___TypeInfo, 6LL);
+    v4 = sub_1BC30B0(string___TypeInfo, 6LL);
     SvtId_k__BackingField = this->fields._SvtId_k__BackingField;
     v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
     if ( !v4 )
-      sub_1BDBAD4(v5, v6);
+      sub_1BC3264(v5, v6);
     if ( !*(_DWORD *)(v4 + 24) )
       goto LABEL_13;
     *(_QWORD *)(v4 + 32) = v5;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v4 + 32), (int32_t)v5, v7, v8);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v4 + 32), (int32_t)v5, v7, v8);
     SvtId_k__BackingField = this->fields._CommandImageSvtId_k__BackingField;
     v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
     if ( *(_DWORD *)(v4 + 24) <= 1u )
       goto LABEL_13;
     *(_QWORD *)(v4 + 40) = v5;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v4 + 40), (int32_t)v5, v7, v9);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v4 + 40), (int32_t)v5, v7, v9);
     SvtId_k__BackingField = this->fields._DispImageSvtId_k__BackingField;
     v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
     if ( *(_DWORD *)(v4 + 24) <= 2u )
       goto LABEL_13;
     *(_QWORD *)(v4 + 48) = v5;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v4 + 48), (int32_t)v5, v7, v10);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v4 + 48), (int32_t)v5, v7, v10);
     SvtId_k__BackingField = this->fields._DispLimitCount_k__BackingField;
     v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
     if ( *(_DWORD *)(v4 + 24) <= 3u )
       goto LABEL_13;
     *(_QWORD *)(v4 + 56) = v5;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v4 + 56), (int32_t)v5, v7, v11);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v4 + 56), (int32_t)v5, v7, v11);
     SvtId_k__BackingField = this->fields._OverwriteSvtVoiceId_k__BackingField;
     v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
     if ( *(_DWORD *)(v4 + 24) <= 4u
       || (*(_QWORD *)(v4 + 64) = v5,
-          sub_1BDB81C((CGThumbnailListItem_o *)(v4 + 64), (int32_t)v5, v7, v12),
+          sub_1BC2FAC((CGThumbnailListItem_o *)(v4 + 64), (int32_t)v5, v7, v12),
           SvtId_k__BackingField = this->fields._AppearanceId_k__BackingField,
           v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL),
           *(_DWORD *)(v4 + 24) <= 5u) )
     {
 LABEL_13:
-      sub_1BDBADC(v5, v6, v7);
+      sub_1BC326C(v5, v6, v7);
     }
     *(_QWORD *)(v4 + 72) = v5;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v4 + 72), (int32_t)v5, v7, v13);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v4 + 72), (int32_t)v5, v7, v13);
     UniqueKey = ServantAssetArgs__GenerateUniqueKey(v14, (System_String_array *)v4, v15);
     *p_uniqueKey = UniqueKey;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.uniqueKey, (int32_t)UniqueKey, v17, v18);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.uniqueKey, (int32_t)UniqueKey, v17, v18);
   }
   return *p_uniqueKey;
 }
@@ -281,7 +281,7 @@ void __fastcall ServantAssetArgs__set_CommandCodeIds(
   const MethodInfo *v3; // x3
 
   this->fields._CommandCodeIds_k__BackingField = value;
-  sub_1BDB81C(
+  sub_1BC2FAC(
     (CGThumbnailListItem_o *)&this->fields._CommandCodeIds_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -378,7 +378,7 @@ void __fastcall ServantAssetArgs__set_deckSvt(
   const MethodInfo *v3; // x3
 
   this->fields._deckSvt_k__BackingField = value;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._deckSvt_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._deckSvt_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -390,5 +390,5 @@ void __fastcall ServantAssetArgs__set_skillList(
   const MethodInfo *v3; // x3
 
   this->fields._skillList_k__BackingField = value;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._skillList_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._skillList_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

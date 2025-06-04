@@ -2,10 +2,10 @@ void __fastcall ShopHelpListViewItemDraw___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4B40DD5 & 1) == 0 )
+  if ( (byte_4AFE347 & 1) == 0 )
   {
-    sub_1BDB878(&ShopHelpListViewItemDraw_TypeInfo, v1);
-    byte_4B40DD5 = 1;
+    sub_1BC3008(&ShopHelpListViewItemDraw_TypeInfo, v1);
+    byte_4AFE347 = 1;
   }
   *ShopHelpListViewItemDraw_TypeInfo->static_fields = (struct ShopHelpListViewItemDraw_StaticFields)0x500000003CLL;
 }
@@ -22,7 +22,7 @@ int32_t __fastcall ShopHelpListViewItemDraw__GetDispMode(int32_t initMode, const
   if ( (unsigned int)(initMode - 1) > 2 )
     return 0;
   else
-    return dword_C23AB0[initMode - 1];
+    return dword_C17168[initMode - 1];
 }
 
 
@@ -32,10 +32,10 @@ System_String_o *__fastcall ShopHelpListViewItemDraw__GetInfoText(
         System_String_o *infoText,
         const MethodInfo *method)
 {
-  if ( (byte_4B40DD4 & 1) == 0 )
+  if ( (byte_4AFE346 & 1) == 0 )
   {
-    sub_1BDB878(&StringLiteral_1/*""*/, imageName);
-    byte_4B40DD4 = 1;
+    sub_1BC3008(&StringLiteral_1/*""*/, imageName);
+    byte_4AFE346 = 1;
   }
   if ( System_String__IsNullOrEmpty(imageName, 0LL) )
     return (System_String_o *)StringLiteral_1/*""*/;
@@ -60,7 +60,7 @@ UnityEngine_Vector3_o __fastcall ShopHelpListViewItemDraw__GetInfoTextLabelPosit
   if ( isStone )
     v6 = 344.0;
   if ( v5 < 3 )
-    LODWORD(position.fields.y) = dword_C23D2C[v5];
+    LODWORD(position.fields.y) = dword_C173E4[v5];
   position.fields.x = v6;
   return position;
 }
@@ -92,10 +92,10 @@ void __fastcall ShopHelpListViewItemDraw__SetInfoTextLabel(
   struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x8
 
   v4 = this;
-  if ( (byte_4B40DD3 & 1) == 0 )
+  if ( (byte_4AFE345 & 1) == 0 )
   {
-    this = (ShopHelpListViewItemDraw_o *)sub_1BDB878(&ShopHelpListViewItemDraw_TypeInfo, item);
-    byte_4B40DD3 = 1;
+    this = (ShopHelpListViewItemDraw_o *)sub_1BC3008(&ShopHelpListViewItemDraw_TypeInfo, item);
+    byte_4AFE345 = 1;
   }
   if ( !item )
     goto LABEL_27;
@@ -143,7 +143,7 @@ void __fastcall ShopHelpListViewItemDraw__SetInfoTextLabel(
   if ( v17 )
     v16 = 344.0;
   if ( (unsigned int)v18 <= 2 )
-    v13 = dword_C23D2C[v18];
+    v13 = dword_C173E4[v18];
   if ( !v12 )
     goto LABEL_27;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v12, *(UnityEngine_Vector3_o *)(&v13 - 1), 0LL);
@@ -160,7 +160,7 @@ void __fastcall ShopHelpListViewItemDraw__SetInfoTextLabel(
   }
   if ( !baseTextSprite )
 LABEL_27:
-    sub_1BDBAD4(this, item);
+    sub_1BC3264(this, item);
   m_CancellationTokenSource = this[2].fields.m_CancellationTokenSource;
   if ( Line_k__BackingField == 3 )
     m_CancellationTokenSource = (struct System_Threading_CancellationTokenSource_o *)((char *)m_CancellationTokenSource
@@ -201,14 +201,14 @@ void __fastcall ShopHelpListViewItemDraw__SetItem(
   System_String_o **p_ImageName_k__BackingField; // x8
   struct ShopHelpItemInfo_o *v31; // x8
 
-  if ( (byte_4B40DD2 & 1) == 0 )
+  if ( (byte_4AFE344 & 1) == 0 )
   {
-    sub_1BDB878(&AtlasManager_TypeInfo, item);
-    sub_1BDB878(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BDB878(&StringLiteral_20617/*"img_tutorial_txtbg_sq"*/, v8);
-    sub_1BDB878(&StringLiteral_20561/*"img_shop_0"*/, v9);
-    sub_1BDB878(&StringLiteral_20616/*"img_tutorial_txtbg"*/, v10);
-    byte_4B40DD2 = 1;
+    sub_1BC3008(&AtlasManager_TypeInfo, item);
+    sub_1BC3008(&UnityEngine_Object_TypeInfo, v7);
+    sub_1BC3008(&StringLiteral_20407/*"img_tutorial_txtbg_sq"*/, v8);
+    sub_1BC3008(&StringLiteral_20351/*"img_shop_0"*/, v9);
+    sub_1BC3008(&StringLiteral_20406/*"img_tutorial_txtbg"*/, v10);
+    byte_4AFE344 = 1;
   }
   if ( item )
   {
@@ -248,8 +248,8 @@ void __fastcall ShopHelpListViewItemDraw__SetItem(
             if ( gameObject )
             {
               v17 = (System_String_o **)(v16->fields._Kind_k__BackingField == 6
-                                       ? &StringLiteral_20617/*"img_tutorial_txtbg_sq"*/
-                                       : &StringLiteral_20616/*"img_tutorial_txtbg"*/);
+                                       ? &StringLiteral_20407/*"img_tutorial_txtbg_sq"*/
+                                       : &StringLiteral_20406/*"img_tutorial_txtbg"*/);
               UISprite__set_spriteName((UISprite_o *)gameObject, *v17, 0LL);
               v18 = item->fields.info;
               if ( v18 )
@@ -286,7 +286,7 @@ void __fastcall ShopHelpListViewItemDraw__SetItem(
                       v22 = v24;
                       v23 = v25;
 LABEL_24:
-                      AtlasManager__SetShopBanner_39627772(v22, v23, 0LL);
+                      AtlasManager__SetShopBanner_39645084(v22, v23, 0LL);
                       return;
                     }
                     if ( !v24 )
@@ -301,7 +301,7 @@ LABEL_24:
                                                               0LL);
                     if ( ((unsigned __int8)gameObject & 1) != 0 )
                     {
-                      p_ImageName_k__BackingField = (System_String_o **)&StringLiteral_20561/*"img_shop_0"*/;
+                      p_ImageName_k__BackingField = (System_String_o **)&StringLiteral_20351/*"img_shop_0"*/;
                     }
                     else
                     {
@@ -324,6 +324,6 @@ LABEL_24:
       }
     }
 LABEL_41:
-    sub_1BDBAD4(gameObject, v12);
+    sub_1BC3264(gameObject, v12);
   }
 }

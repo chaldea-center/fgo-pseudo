@@ -37,26 +37,26 @@ void __fastcall NpInfoAddResultComponent__SetDisplay(
   UILabel_o *afterDetailLabel; // x21
   struct UILabel_o *v35; // x8
 
-  if ( (byte_4B48909 & 1) == 0 )
+  if ( (byte_4B05EE2 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataManager_GetMasterData_ServantMaster___, npAddManager);
-    sub_1BDB878(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___, v13);
-    sub_1BDB878(&Method_DataManager_GetMasterData_TreasureDvcMaster___, v14);
-    sub_1BDB878(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__, v15);
-    sub_1BDB878(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
-    byte_4B48909 = 1;
+    sub_1BC3008(&Method_DataManager_GetMasterData_ServantMaster___, npAddManager);
+    sub_1BC3008(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___, v13);
+    sub_1BC3008(&Method_DataManager_GetMasterData_TreasureDvcMaster___, v14);
+    sub_1BC3008(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__, v15);
+    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v16);
+    byte_4B05EE2 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3916288 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_30;
   v19 = (DataManager_o *)Instance;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_303395C *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
+                        (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_TreasureDvcMaster___);
   v21 = DataManager__GetMasterData_object_(
           v19,
-          (const MethodInfo_303395C *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
-  DataManager__GetMasterData_object_(v19, (const MethodInfo_303395C *)Method_DataManager_GetMasterData_ServantMaster___);
+          (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+  DataManager__GetMasterData_object_(v19, (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( transformCount >= 2 )
   {
     Instance = this->fields.transformTitle;
@@ -68,7 +68,7 @@ void __fastcall NpInfoAddResultComponent__SetDisplay(
         goto LABEL_10;
     }
 LABEL_30:
-    sub_1BDBAD4(Instance, v18);
+    sub_1BC3264(Instance, v18);
   }
   Instance = this->fields.title;
   if ( !Instance )
@@ -98,7 +98,7 @@ LABEL_10:
   Instance = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                *((_DWORD *)Instance + 6),
-               (const MethodInfo_32E1E3C *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+               (const MethodInfo_32AF070 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
   if ( !v21 )
     goto LABEL_30;
   v23 = (System_String_o **)Instance;
@@ -139,7 +139,7 @@ LABEL_10:
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              *((_DWORD *)Instance + 6),
-             (const MethodInfo_32E1E3C *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+             (const MethodInfo_32AF070 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
   v31 = TreasureDvcLvMaster__GetEntity((TreasureDvcLvMaster_o *)v21, v29[6], v29[7], 0LL);
   afterLvLabel = this->fields.afterLvLabel;
   v33 = v31;

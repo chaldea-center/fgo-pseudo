@@ -8,7 +8,7 @@ void __fastcall ServantAiResetChecker___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.svtData = svtData;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)svtData, v5, v6);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)svtData, v5, v6);
 }
 
 
@@ -18,7 +18,7 @@ bool __fastcall ServantAiResetChecker__IsDead(ServantAiResetChecker_o *this, con
 
   svtData = this->fields.svtData;
   if ( !svtData )
-    sub_1BDBAD4(0LL, method);
+    sub_1BC3264(0LL, method);
   return !BattleServantData__isAlive(svtData, 0, 0LL);
 }
 
@@ -30,7 +30,7 @@ int32_t __fastcall ServantAiResetChecker__get_AiResetTiming(ServantAiResetChecke
 
   svtData = this->fields.svtData;
   if ( !svtData )
-    sub_1BDBAD4(this, method);
+    sub_1BC3264(this, method);
   deckSvt = svtData->fields.deckSvt;
   if ( deckSvt )
     LODWORD(deckSvt) = BattleDeckServantData__GetAiResetTiming(deckSvt, 0, 0LL);

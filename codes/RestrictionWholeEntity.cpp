@@ -1,28 +1,28 @@
 void __fastcall RestrictionWholeEntity___ctor(RestrictionWholeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B45227 & 1) == 0 )
+  if ( (byte_4B027DB & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B45227 = 1;
+    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B027DB = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32DF9D0 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
 System_String_o *__fastcall RestrictionWholeEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4B45226 & 1) == 0 )
+  if ( (byte_4B027DA & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
-    byte_4B45226 = 1;
+    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
+    byte_4B027DA = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            idx,
-           (const MethodInfo_3031AE4 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_2FFFFEC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -52,12 +52,12 @@ System_Boolean_array *__fastcall RestrictionWholeEntity__GetSetPossiblePosition(
   unsigned __int64 max_length; // x9
   char v13; // w9
 
-  if ( (byte_4B45225 & 1) == 0 )
+  if ( (byte_4B027D9 & 1) == 0 )
   {
-    sub_1BDB878(&BalanceConfig_TypeInfo, method);
-    sub_1BDB878(&bool___TypeInfo, v3);
-    sub_1BDB878(&Method_System_Linq_Enumerable_Contains_int___, v4);
-    byte_4B45225 = 1;
+    sub_1BC3008(&BalanceConfig_TypeInfo, method);
+    sub_1BC3008(&bool___TypeInfo, v3);
+    sub_1BC3008(&Method_System_Linq_Enumerable_Contains_int___, v4);
+    byte_4B027D9 = 1;
   }
   v5 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -65,7 +65,7 @@ System_Boolean_array *__fastcall RestrictionWholeEntity__GetSetPossiblePosition(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v5 = BalanceConfig_TypeInfo;
   }
-  v6 = (System_Boolean_array *)sub_1BDB920(bool___TypeInfo, (unsigned int)v5->static_fields->DeckMemberMax);
+  v6 = (System_Boolean_array *)sub_1BC30B0(bool___TypeInfo, (unsigned int)v5->static_fields->DeckMemberMax);
   for ( i = 0LL; ; ++i )
   {
     v8 = BalanceConfig_TypeInfo;
@@ -79,9 +79,9 @@ System_Boolean_array *__fastcall RestrictionWholeEntity__GetSetPossiblePosition(
     v9 = System_Linq_Enumerable__Contains_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.targetVals2,
            i + 1,
-           (const MethodInfo_304CA50 *)Method_System_Linq_Enumerable_Contains_int___);
+           (const MethodInfo_301AE3C *)Method_System_Linq_Enumerable_Contains_int___);
     if ( !v6 )
-      sub_1BDBAD4(v9, v10);
+      sub_1BC3264(v9, v10);
     max_length = v6->max_length;
     if ( v9 )
     {
@@ -93,7 +93,7 @@ System_Boolean_array *__fastcall RestrictionWholeEntity__GetSetPossiblePosition(
     {
       if ( i >= max_length )
 LABEL_18:
-        sub_1BDBADC(v9, v10, v11);
+        sub_1BC326C(v9, v10, v11);
       v13 = 0;
     }
     v6->m_Items[i + 4] = v13;
@@ -153,7 +153,7 @@ bool __fastcall RestrictionWholeEntity__IsSearchVals(
         {
           if ( v7 >= v6 )
 LABEL_16:
-            sub_1BDBADC(0LL, vList, method);
+            sub_1BC326C(0LL, vList, method);
           max_length = vList->max_length;
           if ( max_length >= 1 )
             break;

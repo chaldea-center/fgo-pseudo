@@ -1,13 +1,13 @@
 void __fastcall UserInterruptionQuestEntity___ctor(UserInterruptionQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B458F6 & 1) == 0 )
+  if ( (byte_4B02EA3 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B458F6 = 1;
+    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B02EA3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32DF9D0 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -50,24 +50,24 @@ BattleWaveInfoData_array *__fastcall UserInterruptionQuestEntity__ConvertToBattl
   System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v37; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4B458F4 & 1) == 0 )
+  if ( (byte_4B02EA1 & 1) == 0 )
   {
-    sub_1BDB878(&BattleWaveInfoData_TypeInfo, method);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__Dispose__, v3);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__MoveNext__, v4);
-    sub_1BDB878(&Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__get_Current__, v5);
-    sub_1BDB878(&Method_System_Collections_Generic_List_BattleWaveInfoData__Add__, v6);
-    sub_1BDB878(&Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__GetEnumerator__, v7);
-    sub_1BDB878(&Method_System_Collections_Generic_List_BattleWaveInfoData__ToArray__, v8);
-    sub_1BDB878(&Method_System_Collections_Generic_List_BattleWaveInfoData___ctor__, v9);
-    sub_1BDB878(&System_Collections_Generic_List_BattleWaveInfoData__TypeInfo, v10);
-    byte_4B458F4 = 1;
+    sub_1BC3008(&BattleWaveInfoData_TypeInfo, method);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__Dispose__, v3);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__MoveNext__, v4);
+    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__get_Current__, v5);
+    sub_1BC3008(&Method_System_Collections_Generic_List_BattleWaveInfoData__Add__, v6);
+    sub_1BC3008(&Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__GetEnumerator__, v7);
+    sub_1BC3008(&Method_System_Collections_Generic_List_BattleWaveInfoData__ToArray__, v8);
+    sub_1BC3008(&Method_System_Collections_Generic_List_BattleWaveInfoData___ctor__, v9);
+    sub_1BC3008(&System_Collections_Generic_List_BattleWaveInfoData__TypeInfo, v10);
+    byte_4B02EA1 = 1;
   }
   memset(&v37, 0, sizeof(v37));
-  v11 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_BattleWaveInfoData__TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_BattleWaveInfoData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_BattleWaveInfoData___ctor__);
+    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_BattleWaveInfoData___ctor__);
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.waveInfoList, 0LL) )
     UserInterruptionQuestEntity__SetWaveInfoScript(this, v12);
   waveInfoList = (System_Collections_Generic_List_object__o *)this->fields.waveInfoList;
@@ -76,62 +76,62 @@ BattleWaveInfoData_array *__fastcall UserInterruptionQuestEntity__ConvertToBattl
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v36,
     waveInfoList,
-    (const MethodInfo_36D68BC *)Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__GetEnumerator__);
+    (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__GetEnumerator__);
   v37 = v36;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v37,
-            (const MethodInfo_346A2A4 *)Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__MoveNext__) )
+            (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__MoveNext__) )
   {
     current = v37.fields._current;
-    v15 = sub_1BDBAC4(BattleWaveInfoData_TypeInfo);
+    v15 = sub_1BC3254(BattleWaveInfoData_TypeInfo);
     BattleWaveInfoData___ctor((BattleWaveInfoData_o *)v15, 0LL);
     if ( !current )
-      sub_1BDBAD4(v16, v17);
+      sub_1BC3264(v16, v17);
     if ( !v15 )
-      sub_1BDBAD4(v16, v17);
+      sub_1BC3264(v16, v17);
     *(_QWORD *)(v15 + 16) = current[1].klass;
     monitor = current[1].monitor;
     *(_QWORD *)(v15 + 24) = monitor;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v15 + 24), (int32_t)monitor, v18, v19);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v15 + 24), (int32_t)monitor, v18, v19);
     klass = current[2].klass;
     *(_QWORD *)(v15 + 32) = klass;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v15 + 32), (int32_t)klass, v22, v23);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v15 + 32), (int32_t)klass, v22, v23);
     v24 = current[2].monitor;
     *(_QWORD *)(v15 + 40) = v24;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v15 + 40), (int32_t)v24, v25, v26);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v15 + 40), (int32_t)v24, v25, v26);
     *(_DWORD *)(v15 + 48) = current[3].klass;
     if ( !v11 )
-      sub_1BDBAD4(v27, v28);
+      sub_1BC3264(v27, v28);
     items = v11->fields._items;
     v32 = Method_System_Collections_Generic_List_BattleWaveInfoData__Add__;
     ++v11->fields._version;
     if ( !items )
-      sub_1BDBAD4(v27, v28);
+      sub_1BC3264(v27, v28);
     size = v11->fields._size;
     if ( (unsigned int)size >= items->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v11,
         (Il2CppObject *)v15,
-        *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+        *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
     }
     else
     {
       v34 = &items->obj.klass + size;
       v11->fields._size = size + 1;
       v34[4] = (Il2CppClass *)v15;
-      sub_1BDB81C((CGThumbnailListItem_o *)(v34 + 4), v15, v29, v30);
+      sub_1BC2FAC((CGThumbnailListItem_o *)(v34 + 4), v15, v29, v30);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v37,
-    (const MethodInfo_346A2A0 *)Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__Dispose__);
+    (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_UserInterruptionQuestEntity_Wave__Dispose__);
   if ( !v11 )
 LABEL_21:
-    sub_1BDBAD4(waveInfoList, v12);
+    sub_1BC3264(waveInfoList, v12);
   return (BattleWaveInfoData_array *)System_Collections_Generic_List_object___ToArray(
                                        v11,
-                                       (const MethodInfo_36D791C *)Method_System_Collections_Generic_List_BattleWaveInfoData__ToArray__);
+                                       (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_BattleWaveInfoData__ToArray__);
 }
 
 
@@ -142,16 +142,16 @@ System_String_o *__fastcall UserInterruptionQuestEntity__CreatePK(
         int32_t phase,
         const MethodInfo *method)
 {
-  if ( (byte_4B458F5 & 1) == 0 )
+  if ( (byte_4B02EA2 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&questId);
-    byte_4B458F5 = 1;
+    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&questId);
+    byte_4B02EA2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            questId,
            phase,
-           (const MethodInfo_3032130 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_3000638 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -176,13 +176,13 @@ UserInterruptionQuestEntity_InterruptionInfo_o *__fastcall UserInterruptionQuest
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4B458F2 & 1) == 0 )
+  if ( (byte_4B02E9F & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_Newtonsoft_Json_JsonConvert_DeserializeObject_UserInterruptionQuestEntity_InterruptionInfo___,
       method);
-    sub_1BDB878(&Newtonsoft_Json_JsonConvert_TypeInfo, v3);
-    byte_4B458F2 = 1;
+    sub_1BC3008(&Newtonsoft_Json_JsonConvert_TypeInfo, v3);
+    byte_4B02E9F = 1;
   }
   p_optionInfo = (CGThumbnailListItem_o *)&this->fields.optionInfo;
   optionInfo = this->fields.optionInfo;
@@ -193,9 +193,9 @@ UserInterruptionQuestEntity_InterruptionInfo_o *__fastcall UserInterruptionQuest
       j_il2cpp_runtime_class_init_0(Newtonsoft_Json_JsonConvert_TypeInfo);
     optionInfo = (UserInterruptionQuestEntity_InterruptionInfo_o *)Newtonsoft_Json_JsonConvert__DeserializeObject_object_(
                                                                      interruptionInfo,
-                                                                     (const MethodInfo_308EEF0 *)Method_Newtonsoft_Json_JsonConvert_DeserializeObject_UserInterruptionQuestEntity_InterruptionInfo___);
+                                                                     (const MethodInfo_305C368 *)Method_Newtonsoft_Json_JsonConvert_DeserializeObject_UserInterruptionQuestEntity_InterruptionInfo___);
     p_optionInfo->klass = (CGThumbnailListItem_c *)optionInfo;
-    sub_1BDB81C(p_optionInfo, (int32_t)optionInfo, v7, v8);
+    sub_1BC2FAC(p_optionInfo, (int32_t)optionInfo, v7, v8);
   }
   return optionInfo;
 }
@@ -210,10 +210,10 @@ int32_t __fastcall UserInterruptionQuestEntity__GetRestartWave(
   __int64 v5; // x1
   struct System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__o *v7; // x8
 
-  if ( (byte_4B458F3 & 1) == 0 )
+  if ( (byte_4B02EA0 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__get_Count__, method);
-    byte_4B458F3 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__get_Count__, method);
+    byte_4B02EA0 = 1;
   }
   waveInfoList = (System_Collections_ICollection_o *)this->fields.waveInfoList;
   if ( !waveInfoList )
@@ -228,7 +228,7 @@ int32_t __fastcall UserInterruptionQuestEntity__GetRestartWave(
     return 1;
   v7 = this->fields.waveInfoList;
   if ( !v7 )
-    sub_1BDBAD4(IsNullOrEmpty, v5);
+    sub_1BC3264(IsNullOrEmpty, v5);
   return v7->fields._size;
 }
 
@@ -243,20 +243,20 @@ void __fastcall UserInterruptionQuestEntity__SetWaveInfoScript(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B458F1 & 1) == 0 )
+  if ( (byte_4B02E9E & 1) == 0 )
   {
-    sub_1BDB878(&Method_Newtonsoft_Json_JsonConvert_DeserializeObject_List_UserInterruptionQuestEntity_Wave____, method);
-    sub_1BDB878(&Newtonsoft_Json_JsonConvert_TypeInfo, v3);
-    byte_4B458F1 = 1;
+    sub_1BC3008(&Method_Newtonsoft_Json_JsonConvert_DeserializeObject_List_UserInterruptionQuestEntity_Wave____, method);
+    sub_1BC3008(&Newtonsoft_Json_JsonConvert_TypeInfo, v3);
+    byte_4B02E9E = 1;
   }
   waveInfo = this->fields.waveInfo;
   if ( !Newtonsoft_Json_JsonConvert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Newtonsoft_Json_JsonConvert_TypeInfo);
   v5 = Newtonsoft_Json_JsonConvert__DeserializeObject_object_(
          waveInfo,
-         (const MethodInfo_308EEF0 *)Method_Newtonsoft_Json_JsonConvert_DeserializeObject_List_UserInterruptionQuestEntity_Wave____);
+         (const MethodInfo_305C368 *)Method_Newtonsoft_Json_JsonConvert_DeserializeObject_List_UserInterruptionQuestEntity_Wave____);
   this->fields.waveInfoList = (struct System_Collections_Generic_List_UserInterruptionQuestEntity_Wave__o *)v5;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields, (int32_t)v5, v6, v7);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)v5, v6, v7);
 }
 
 
@@ -332,7 +332,7 @@ void __fastcall UserInterruptionQuestEntity_Wave__set_battleItemInfos(
   const MethodInfo *v3; // x3
 
   this->fields._battleItemInfos_k__BackingField = value;
-  sub_1BDB81C(
+  sub_1BC2FAC(
     (CGThumbnailListItem_o *)&this->fields._battleItemInfos_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -348,7 +348,7 @@ void __fastcall UserInterruptionQuestEntity_Wave__set_dropInfos(
   const MethodInfo *v3; // x3
 
   this->fields._dropInfos_k__BackingField = value;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields._dropInfos_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._dropInfos_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -360,7 +360,7 @@ void __fastcall UserInterruptionQuestEntity_Wave__set_equipSkillChargeNum(
   const MethodInfo *v3; // x3
 
   this->fields._equipSkillChargeNum_k__BackingField = value;
-  sub_1BDB81C(
+  sub_1BC2FAC(
     (CGThumbnailListItem_o *)&this->fields._equipSkillChargeNum_k__BackingField,
     (int32_t)value,
     (int32_t)method,

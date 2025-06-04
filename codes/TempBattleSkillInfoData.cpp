@@ -11,6 +11,7 @@ void __fastcall TempBattleSkillInfoData___ctor(
   *(_QWORD *)&this->fields.cutInId = -1LL;
   *(_QWORD *)&this->fields.commonReleaseCondId = -1LL;
   this->fields._SelectAddIndex_k__BackingField = -1;
+  this->fields.canExecSkill = 1;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   klass = this->klass;
   this->fields.type = 20;

@@ -7,9 +7,9 @@ void __fastcall ScriptPlayListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  ListViewItem___ctor_42734232((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42769384((ListViewItem_o *)this, index, 0LL);
   this->fields.path = path;
-  sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.path, (int32_t)path, v6, v7);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.path, (int32_t)path, v6, v7);
 }
 
 
@@ -40,7 +40,7 @@ System_String_o *__fastcall ScriptPlayListViewItem__get_TitleText(
     if ( this->fields.path )
       return System_String__Substring(this->fields.path, (int)path + 1, 0LL);
 LABEL_6:
-    sub_1BDBAD4(path, method);
+    sub_1BC3264(path, method);
   }
   return this->fields.path;
 }

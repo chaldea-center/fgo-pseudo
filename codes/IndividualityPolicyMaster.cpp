@@ -1,14 +1,14 @@
 void __fastcall IndividualityPolicyMaster___ctor(IndividualityPolicyMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B44DD3 & 1) == 0 )
+  if ( (byte_4B02385 & 1) == 0 )
   {
-    sub_1BDB878(&Method_DataMasterBase_IndividualityPolicyMaster__IndividualityPolicyEntity__int___ctor__, method);
-    byte_4B44DD3 = 1;
+    sub_1BC3008(&Method_DataMasterBase_IndividualityPolicyMaster__IndividualityPolicyEntity__int___ctor__, method);
+    byte_4B02385 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     483,
-    (const MethodInfo_32DFB18 *)Method_DataMasterBase_IndividualityPolicyMaster__IndividualityPolicyEntity__int___ctor__);
+    (const MethodInfo_32ACD4C *)Method_DataMasterBase_IndividualityPolicyMaster__IndividualityPolicyEntity__int___ctor__);
 }
 
 
@@ -47,28 +47,28 @@ int32_t __fastcall IndividualityPolicyMaster__GetPolicyValue(
   int32_t *v32; // x10
   __int64 v33; // x0
 
-  if ( (byte_4B44DD1 & 1) == 0 )
+  if ( (byte_4B02383 & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_System_Collections_ObjectModel_Collection_IndividualityPolicyEntity__GetEnumerator__,
       individuality);
-    sub_1BDB878(&Method_System_Linq_Enumerable_All_int___, v5);
-    sub_1BDB878(&Method_System_Linq_Enumerable_Contains_int___, v6);
-    sub_1BDB878(&System_Func_int__bool__TypeInfo, v7);
-    sub_1BDB878(&System_IDisposable_TypeInfo, v8);
-    sub_1BDB878(&System_Collections_Generic_IEnumerator_IndividualityPolicyEntity__TypeInfo, v9);
-    sub_1BDB878(&System_Collections_IEnumerator_TypeInfo, v10);
-    sub_1BDB878(&IndividualityPolicyEntity_TypeInfo, v11);
-    byte_4B44DD1 = 1;
+    sub_1BC3008(&Method_System_Linq_Enumerable_All_int___, v5);
+    sub_1BC3008(&Method_System_Linq_Enumerable_Contains_int___, v6);
+    sub_1BC3008(&System_Func_int__bool__TypeInfo, v7);
+    sub_1BC3008(&System_IDisposable_TypeInfo, v8);
+    sub_1BC3008(&System_Collections_Generic_IEnumerator_IndividualityPolicyEntity__TypeInfo, v9);
+    sub_1BC3008(&System_Collections_IEnumerator_TypeInfo, v10);
+    sub_1BC3008(&IndividualityPolicyEntity_TypeInfo, v11);
+    byte_4B02383 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BDBAD4(0LL, individuality);
+    sub_1BC3264(0LL, individuality);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_327DBFC *)Method_System_Collections_ObjectModel_Collection_IndividualityPolicyEntity__GetEnumerator__);
+                 (const MethodInfo_324AE30 *)Method_System_Collections_ObjectModel_Collection_IndividualityPolicyEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BDBAD4(0LL, v13);
+    sub_1BC3264(0LL, v13);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -88,7 +88,7 @@ int32_t __fastcall IndividualityPolicyMaster__GetPolicyValue(
     else
     {
 LABEL_9:
-      p_method = sub_1C2C00C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C13570(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -111,7 +111,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v22 = sub_1C2C00C(Enumerator, System_Collections_Generic_IEnumerator_IndividualityPolicyEntity__TypeInfo, 0LL);
+      v22 = sub_1C13570(Enumerator, System_Collections_Generic_IEnumerator_IndividualityPolicyEntity__TypeInfo, 0LL);
     }
     v23 = (_QWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
                       Enumerator,
@@ -125,17 +125,17 @@ LABEL_16:
       {
         v27 = v23[3];
         if ( !v27 )
-          sub_1BDBAD4(v23, v24);
+          sub_1BC3264(v23, v24);
         if ( !individuality )
-          sub_1BDBAD4(v23, v24);
+          sub_1BC3264(v23, v24);
         if ( *(_DWORD *)(v27 + 24) == individuality->max_length )
         {
-          v28 = (System_Func_int__bool__o *)sub_1BDBAC4(System_Func_int__bool__TypeInfo);
+          v28 = (System_Func_int__bool__o *)sub_1BC3254(System_Func_int__bool__TypeInfo);
           System_Func_int__bool____ctor(v28, &individuality->obj, Method_System_Linq_Enumerable_Contains_int___, 0LL);
           if ( System_Linq_Enumerable__All_int_(
                  (System_Collections_Generic_IEnumerable_TSource__o *)v27,
                  (System_Func_TSource__bool__o *)v28,
-                 (const MethodInfo_303D8D0 *)Method_System_Linq_Enumerable_All_int___) )
+                 (const MethodInfo_300BCBC *)Method_System_Linq_Enumerable_All_int___) )
           {
             v29 = *((_DWORD *)v25 + 5);
             goto LABEL_27;
@@ -163,7 +163,7 @@ LABEL_27:
   else
   {
 LABEL_31:
-    v33 = sub_1C2C00C(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v33 = sub_1C13570(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v33)(Enumerator, *(_QWORD *)(v33 + 8));
   return v29;
@@ -188,32 +188,32 @@ bool __fastcall IndividualityPolicyMaster__TryGetEntityByPolicyValue(
   int32_t v16; // w2
   const MethodInfo *v17; // x3
 
-  if ( (byte_4B44DD2 & 1) == 0 )
+  if ( (byte_4B02384 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Linq_Enumerable_FirstOrDefault_IndividualityPolicyEntity___, entity);
-    sub_1BDB878(&System_Func_IndividualityPolicyEntity__bool__TypeInfo, v7);
-    sub_1BDB878(&Method_IndividualityPolicyMaster___c__DisplayClass1_0__TryGetEntityByPolicyValue_b__0__, v8);
-    sub_1BDB878(&IndividualityPolicyMaster___c__DisplayClass1_0_TypeInfo, v9);
-    byte_4B44DD2 = 1;
+    sub_1BC3008(&Method_System_Linq_Enumerable_FirstOrDefault_IndividualityPolicyEntity___, entity);
+    sub_1BC3008(&System_Func_IndividualityPolicyEntity__bool__TypeInfo, v7);
+    sub_1BC3008(&Method_IndividualityPolicyMaster___c__DisplayClass1_0__TryGetEntityByPolicyValue_b__0__, v8);
+    sub_1BC3008(&IndividualityPolicyMaster___c__DisplayClass1_0_TypeInfo, v9);
+    byte_4B02384 = 1;
   }
-  v10 = sub_1BDBAC4(IndividualityPolicyMaster___c__DisplayClass1_0_TypeInfo);
+  v10 = sub_1BC3254(IndividualityPolicyMaster___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
-    sub_1BDBAD4(v11, v12);
+    sub_1BC3264(v11, v12);
   *(_DWORD *)(v10 + 16) = policyValue;
   list = this->fields.list;
-  v14 = (System_Func_object__bool__o *)sub_1BDBAC4(System_Func_IndividualityPolicyEntity__bool__TypeInfo);
+  v14 = (System_Func_object__bool__o *)sub_1BC3254(System_Func_IndividualityPolicyEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v14,
     (Il2CppObject *)v10,
     Method_IndividualityPolicyMaster___c__DisplayClass1_0__TryGetEntityByPolicyValue_b__0__,
     0LL);
-  v15 = System_Linq_Enumerable__FirstOrDefault_object__50698552(
+  v15 = System_Linq_Enumerable__FirstOrDefault_object__50493748(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
           (System_Func_TSource__bool__o *)v14,
-          (const MethodInfo_3059938 *)Method_System_Linq_Enumerable_FirstOrDefault_IndividualityPolicyEntity___);
+          (const MethodInfo_3027934 *)Method_System_Linq_Enumerable_FirstOrDefault_IndividualityPolicyEntity___);
   *entity = (IndividualityPolicyEntity_o *)v15;
-  sub_1BDB81C((CGThumbnailListItem_o *)entity, (int32_t)v15, v16, v17);
+  sub_1BC2FAC((CGThumbnailListItem_o *)entity, (int32_t)v15, v16, v17);
   return *entity != 0LL;
 }
 
@@ -232,6 +232,6 @@ bool __fastcall IndividualityPolicyMaster___c__DisplayClass1_0___TryGetEntityByP
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1BDBAD4(this, 0LL);
+    sub_1BC3264(this, 0LL);
   return e->fields.policyValue == this->fields.policyValue;
 }

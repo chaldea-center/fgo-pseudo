@@ -13,7 +13,7 @@ void __fastcall CharaGraphListViewItemDrawPatternGrandEquip__SetupUseSprite(
         const MethodInfo *method)
 {
   if ( !itemDraw )
-    sub_1BDBAD4(this, 0LL);
+    sub_1BC3264(this, 0LL);
   CharaGraphListViewItemDrawPatternDefault__SetActive(
     (CharaGraphListViewItemDrawPatternDefault_o *)this,
     (UnityEngine_Component_o *)itemDraw->fields.useSprite,
@@ -37,16 +37,16 @@ void __fastcall CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask
 
   v5 = itemDraw;
   v6 = (CharaGraphListViewItemDrawPatternDefault_o *)this;
-  if ( (byte_4B3F966 & 1) == 0 )
+  if ( (byte_4AFCED6 & 1) == 0 )
   {
-    sub_1BDB878(&LocalizationManager_TypeInfo, itemDraw);
-    sub_1BDB878(&StringLiteral_1/*""*/, v7);
-    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)sub_1BDB878(&StringLiteral_5525/*"EQUIP_GRAPH_USE"*/, v8);
-    byte_4B3F966 = 1;
+    sub_1BC3008(&LocalizationManager_TypeInfo, itemDraw);
+    sub_1BC3008(&StringLiteral_1/*""*/, v7);
+    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)sub_1BC3008(&StringLiteral_5444/*"EQUIP_GRAPH_USE"*/, v8);
+    byte_4AFCED6 = 1;
   }
   if ( !item )
 LABEL_15:
-    sub_1BDBAD4(this, itemDraw);
+    sub_1BC3264(this, itemDraw);
   if ( !item->fields._IsUse_k__BackingField )
   {
     if ( !v5 )
@@ -67,7 +67,7 @@ LABEL_12:
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)LocalizationManager__Get(
-                                                            (System_String_o *)StringLiteral_5525/*"EQUIP_GRAPH_USE"*/,
+                                                            (System_String_o *)StringLiteral_5444/*"EQUIP_GRAPH_USE"*/,
                                                             0LL);
   itemDraw = (CharaGraphListViewItemDraw_o *)this;
   v10 = 1;

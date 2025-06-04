@@ -13,32 +13,32 @@ void __fastcall MotionInfo___cctor(const MethodInfo *method)
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4B43F34 & 1) == 0 )
+  if ( (byte_4B014C3 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_List_string____ctor__, v1);
-    sub_1BDB878(&System_Collections_Generic_List_List_string___TypeInfo, v4);
-    sub_1BDB878(&MotionInfo_TypeInfo, v5);
-    sub_1BDB878(&StringLiteral_1/*""*/, v6);
-    byte_4B43F34 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_List_string____ctor__, v1);
+    sub_1BC3008(&System_Collections_Generic_List_List_string___TypeInfo, v4);
+    sub_1BC3008(&MotionInfo_TypeInfo, v5);
+    sub_1BC3008(&StringLiteral_1/*""*/, v6);
+    byte_4B014C3 = 1;
   }
   MotionInfo_TypeInfo->static_fields->svtName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)MotionInfo_TypeInfo->static_fields, (int32_t)StringLiteral_1/*""*/, v2, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)MotionInfo_TypeInfo->static_fields, (int32_t)StringLiteral_1/*""*/, v2, v3);
   static_fields = MotionInfo_TypeInfo->static_fields;
   *(_WORD *)&static_fields->_IsRandom_k__BackingField = 0;
-  if ( !byte_4B3E80A )
+  if ( !byte_4AFBCAA )
   {
-    sub_1BDB878(&UnityEngine_Vector2_TypeInfo, v7);
-    byte_4B3E80A = 1;
+    sub_1BC3008(&UnityEngine_Vector2_TypeInfo, v7);
+    byte_4AFBCAA = 1;
     static_fields = MotionInfo_TypeInfo->static_fields;
   }
   static_fields->scrollPosition = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
-  v9 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_List_string___TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_List_string___TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_List_string____ctor__);
+    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_List_string____ctor__);
   v10 = MotionInfo_TypeInfo->static_fields;
   v10->voicePlaybackLogList = (struct System_Collections_Generic_List_List_string___o *)v9;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v10->voicePlaybackLogList, (int32_t)v9, v11, v12);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v10->voicePlaybackLogList, (int32_t)v9, v11, v12);
   MotionInfo_TypeInfo->static_fields->voicePlayLogLineSize = 0;
 }
 
@@ -66,18 +66,18 @@ void __fastcall MotionInfo__AddSeLog(System_String_o *seId, const MethodInfo *me
   struct MotionInfo_StaticFields *v13; // x0
   const MethodInfo *v14; // x0
 
-  if ( (byte_4B43F2E & 1) == 0 )
+  if ( (byte_4B014BD & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, method);
-    sub_1BDB878(&StringLiteral_11481/*"SE"*/, v5);
-    byte_4B43F2E = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, method);
+    sub_1BC3008(&StringLiteral_11396/*"SE"*/, v5);
+    byte_4B014BD = 1;
   }
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MotionInfo_TypeInfo);
-  if ( !byte_4B43F55 )
+  if ( !byte_4B014E4 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, method);
-    byte_4B43F55 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, method);
+    byte_4B014E4 = 1;
   }
   v6 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -86,11 +86,11 @@ void __fastcall MotionInfo__AddSeLog(System_String_o *seId, const MethodInfo *me
     v6 = MotionInfo_TypeInfo;
   }
   v6->static_fields->_VoiceWeight_k__BackingField = 100.0;
-  if ( !byte_4B43F56 )
+  if ( !byte_4B014E5 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, method);
+    sub_1BC3008(&MotionInfo_TypeInfo, method);
     v6 = MotionInfo_TypeInfo;
-    byte_4B43F56 = 1;
+    byte_4B014E5 = 1;
   }
   if ( !v6->_2.cctor_finished )
   {
@@ -98,11 +98,11 @@ void __fastcall MotionInfo__AddSeLog(System_String_o *seId, const MethodInfo *me
     v6 = MotionInfo_TypeInfo;
   }
   v6->static_fields->_VoiceTotalWeight_k__BackingField = 100.0;
-  if ( !byte_4B43F54 )
+  if ( !byte_4B014E3 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, method);
+    sub_1BC3008(&MotionInfo_TypeInfo, method);
     v6 = MotionInfo_TypeInfo;
-    byte_4B43F54 = 1;
+    byte_4B014E3 = 1;
   }
   if ( !v6->_2.cctor_finished )
   {
@@ -111,11 +111,11 @@ void __fastcall MotionInfo__AddSeLog(System_String_o *seId, const MethodInfo *me
   }
   static_fields = v6->static_fields;
   static_fields->_VoiceId_k__BackingField = seId;
-  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->_VoiceId_k__BackingField, (int32_t)seId, v2, v3);
-  if ( !byte_4B43F58 )
+  sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->_VoiceId_k__BackingField, (int32_t)seId, v2, v3);
+  if ( !byte_4B014E7 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v8);
-    byte_4B43F58 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v8);
+    byte_4B014E7 = 1;
   }
   v11 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -124,11 +124,11 @@ void __fastcall MotionInfo__AddSeLog(System_String_o *seId, const MethodInfo *me
     v11 = MotionInfo_TypeInfo;
   }
   v11->static_fields->_VoiceIndex_k__BackingField = 0;
-  if ( !byte_4B43F59 )
+  if ( !byte_4B014E8 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v8);
+    sub_1BC3008(&MotionInfo_TypeInfo, v8);
     v11 = MotionInfo_TypeInfo;
-    byte_4B43F59 = 1;
+    byte_4B014E8 = 1;
   }
   if ( !v11->_2.cctor_finished )
   {
@@ -136,11 +136,11 @@ void __fastcall MotionInfo__AddSeLog(System_String_o *seId, const MethodInfo *me
     v11 = MotionInfo_TypeInfo;
   }
   v11->static_fields->_IsSe_k__BackingField = 1;
-  if ( !byte_4B43F5A )
+  if ( !byte_4B014E9 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v8);
+    sub_1BC3008(&MotionInfo_TypeInfo, v8);
     v11 = MotionInfo_TypeInfo;
-    byte_4B43F5A = 1;
+    byte_4B014E9 = 1;
   }
   if ( !v11->_2.cctor_finished )
   {
@@ -148,12 +148,12 @@ void __fastcall MotionInfo__AddSeLog(System_String_o *seId, const MethodInfo *me
     v11 = MotionInfo_TypeInfo;
   }
   v11->static_fields->_IsRandom_k__BackingField = 0;
-  v12 = StringLiteral_11481/*"SE"*/;
-  if ( !byte_4B43F57 )
+  v12 = StringLiteral_11396/*"SE"*/;
+  if ( !byte_4B014E6 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v8);
+    sub_1BC3008(&MotionInfo_TypeInfo, v8);
     v11 = MotionInfo_TypeInfo;
-    byte_4B43F57 = 1;
+    byte_4B014E6 = 1;
   }
   if ( !v11->_2.cctor_finished )
   {
@@ -162,7 +162,7 @@ void __fastcall MotionInfo__AddSeLog(System_String_o *seId, const MethodInfo *me
   }
   v13 = v11->static_fields;
   v13->_VoiceType_k__BackingField = (struct System_String_o *)v12;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v13->_VoiceType_k__BackingField, v12, v9, v10);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v13->_VoiceType_k__BackingField, v12, v9, v10);
   MotionInfo__AddVoiceLog(v14);
 }
 
@@ -259,31 +259,31 @@ void __fastcall MotionInfo__AddVoiceLog(const MethodInfo *method)
   const MethodInfo *v88; // x0
   System_String_o format; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B43F2F & 1) == 0 )
+  if ( (byte_4B014BE & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_List_string___Add__, v1);
-    sub_1BDB878(&Method_System_Collections_Generic_List_string__Add__, v2);
-    sub_1BDB878(&Method_System_Collections_Generic_List_string___ctor__, v3);
-    sub_1BDB878(&System_Collections_Generic_List_string__TypeInfo, v4);
-    sub_1BDB878(&MotionInfo_TypeInfo, v5);
-    sub_1BDB878(&string___TypeInfo, v6);
-    sub_1BDB878(&StringLiteral_333/*" 確率 / 合計 : "*/, v7);
-    sub_1BDB878(&StringLiteral_202/*" VoiceID : "*/, v8);
-    sub_1BDB878(&StringLiteral_1146/*"0.00"*/, v9);
-    sub_1BDB878(&StringLiteral_162/*" / "*/, v10);
-    sub_1BDB878(&StringLiteral_886/*"--- Voice・SE Log ---"*/, v11);
-    sub_1BDB878(&StringLiteral_195/*" SEID : "*/, v12);
-    sub_1BDB878(&StringLiteral_332/*" 分類 : "*/, v13);
-    sub_1BDB878(&StringLiteral_12697/*"ServantID : "*/, v14);
-    byte_4B43F2F = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_List_string___Add__, v1);
+    sub_1BC3008(&Method_System_Collections_Generic_List_string__Add__, v2);
+    sub_1BC3008(&Method_System_Collections_Generic_List_string___ctor__, v3);
+    sub_1BC3008(&System_Collections_Generic_List_string__TypeInfo, v4);
+    sub_1BC3008(&MotionInfo_TypeInfo, v5);
+    sub_1BC3008(&string___TypeInfo, v6);
+    sub_1BC3008(&StringLiteral_331/*" 確率 / 合計 : "*/, v7);
+    sub_1BC3008(&StringLiteral_200/*" VoiceID : "*/, v8);
+    sub_1BC3008(&StringLiteral_1117/*"0.00"*/, v9);
+    sub_1BC3008(&StringLiteral_160/*" / "*/, v10);
+    sub_1BC3008(&StringLiteral_871/*"--- Voice・SE Log ---"*/, v11);
+    sub_1BC3008(&StringLiteral_193/*" SEID : "*/, v12);
+    sub_1BC3008(&StringLiteral_330/*" 分類 : "*/, v13);
+    sub_1BC3008(&StringLiteral_12607/*"ServantID : "*/, v14);
+    byte_4B014BE = 1;
   }
   LODWORD(format.klass) = 0;
-  v15 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_string__TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_string___ctor__);
   NewLine = System_Environment__get_NewLine(0LL);
-  voicePlaybackLogList = (char *)System_String__Concat_62572260((System_String_o *)StringLiteral_886/*"--- Voice・SE Log ---"*/, NewLine, 0LL);
+  voicePlaybackLogList = (char *)System_String__Concat_62348648((System_String_o *)StringLiteral_871/*"--- Voice・SE Log ---"*/, NewLine, 0LL);
   if ( !v15 )
     goto LABEL_74;
   items = v15->fields._items;
@@ -298,31 +298,31 @@ void __fastcall MotionInfo__AddVoiceLog(const MethodInfo *method)
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)voicePlaybackLogList,
-      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
   }
   else
   {
     v25 = &items->obj.klass + size;
     v15->fields._size = size + 1;
     v25[4] = v24;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v25 + 4), (int32_t)v24, v19, v20);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v25 + 4), (int32_t)v24, v19, v20);
   }
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MotionInfo_TypeInfo);
-  if ( !byte_4B43F4D )
+  if ( !byte_4B014DC )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v26);
-    byte_4B43F4D = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v26);
+    byte_4B014DC = 1;
   }
   if ( MotionInfo_TypeInfo->_2.cctor_finished )
   {
     if ( MotionInfo_TypeInfo->static_fields->_IsSe_k__BackingField )
     {
 LABEL_14:
-      if ( !byte_4B43F4F )
+      if ( !byte_4B014DE )
       {
-        sub_1BDB878(&MotionInfo_TypeInfo, v26);
-        byte_4B43F4F = 1;
+        sub_1BC3008(&MotionInfo_TypeInfo, v26);
+        byte_4B014DE = 1;
       }
       v27 = MotionInfo_TypeInfo;
       if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -332,7 +332,7 @@ LABEL_14:
       }
       VoiceId_k__BackingField = v27->static_fields->_VoiceId_k__BackingField;
       v29 = System_Environment__get_NewLine(0LL);
-      v30 = (System_String_o *)StringLiteral_195/*" SEID : "*/;
+      v30 = (System_String_o *)StringLiteral_193/*" SEID : "*/;
       goto LABEL_34;
     }
   }
@@ -352,10 +352,10 @@ LABEL_14:
         goto LABEL_14;
     }
   }
-  if ( !byte_4B43F4E )
+  if ( !byte_4B014DD )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v26);
-    byte_4B43F4E = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v26);
+    byte_4B014DD = 1;
   }
   v32 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -365,8 +365,8 @@ LABEL_14:
   }
   VoiceServantId_k__BackingField = v32->static_fields->_VoiceServantId_k__BackingField;
   v34 = System_Environment__get_NewLine(0LL);
-  voicePlaybackLogList = (char *)System_String__Concat_62610508(
-                                   (System_String_o *)StringLiteral_12697/*"ServantID : "*/,
+  voicePlaybackLogList = (char *)System_String__Concat_62386896(
+                                   (System_String_o *)StringLiteral_12607/*"ServantID : "*/,
                                    VoiceServantId_k__BackingField,
                                    v34,
                                    0LL);
@@ -375,7 +375,7 @@ LABEL_14:
   ++v15->fields._version;
   if ( !v37 )
 LABEL_74:
-    sub_1BDBAD4(voicePlaybackLogList, v18);
+    sub_1BC3264(voicePlaybackLogList, v18);
   v39 = v15->fields._size;
   v40 = (Il2CppClass *)voicePlaybackLogList;
   if ( (unsigned int)v39 >= v37->max_length )
@@ -383,19 +383,19 @@ LABEL_74:
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)voicePlaybackLogList,
-      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
+      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
   }
   else
   {
     v41 = &v37->obj.klass + v39;
     v15->fields._size = v39 + 1;
     v41[4] = v40;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v41 + 4), (int32_t)v40, v35, v36);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v41 + 4), (int32_t)v40, v35, v36);
   }
-  if ( !byte_4B43F4F )
+  if ( !byte_4B014DE )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v42);
-    byte_4B43F4F = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v42);
+    byte_4B014DE = 1;
   }
   v43 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -405,9 +405,9 @@ LABEL_74:
   }
   VoiceId_k__BackingField = v43->static_fields->_VoiceId_k__BackingField;
   v29 = System_Environment__get_NewLine(0LL);
-  v30 = (System_String_o *)StringLiteral_202/*" VoiceID : "*/;
+  v30 = (System_String_o *)StringLiteral_200/*" VoiceID : "*/;
 LABEL_34:
-  voicePlaybackLogList = (char *)System_String__Concat_62610508(v30, VoiceId_k__BackingField, v29, 0LL);
+  voicePlaybackLogList = (char *)System_String__Concat_62386896(v30, VoiceId_k__BackingField, v29, 0LL);
   v46 = v15->fields._items;
   v47 = Method_System_Collections_Generic_List_string__Add__;
   ++v15->fields._version;
@@ -420,30 +420,30 @@ LABEL_34:
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)voicePlaybackLogList,
-      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v47[4] + 192LL) + 112LL));
+      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v47[4] + 192LL) + 112LL));
   }
   else
   {
     v50 = &v46->obj.klass + v48;
     v15->fields._size = v48 + 1;
     v50[4] = v49;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v50 + 4), (int32_t)v49, v44, v45);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v50 + 4), (int32_t)v49, v44, v45);
   }
-  voicePlaybackLogList = (char *)sub_1BDB920(string___TypeInfo, 5LL);
+  voicePlaybackLogList = (char *)sub_1BC30B0(string___TypeInfo, 5LL);
   if ( !voicePlaybackLogList )
     goto LABEL_74;
   v53 = voicePlaybackLogList;
   if ( !*((_DWORD *)voicePlaybackLogList + 6) )
     goto LABEL_75;
-  v54 = StringLiteral_333/*" 確率 / 合計 : "*/;
-  *((_QWORD *)voicePlaybackLogList + 4) = StringLiteral_333/*" 確率 / 合計 : "*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)(voicePlaybackLogList + 32), v54, v51, v52);
+  v54 = StringLiteral_331/*" 確率 / 合計 : "*/;
+  *((_QWORD *)voicePlaybackLogList + 4) = StringLiteral_331/*" 確率 / 合計 : "*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)(voicePlaybackLogList + 32), v54, v51, v52);
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MotionInfo_TypeInfo);
-  if ( !byte_4B43F50 )
+  if ( !byte_4B014DF )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v55);
-    byte_4B43F50 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v55);
+    byte_4B014DF = 1;
   }
   v56 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -452,23 +452,23 @@ LABEL_34:
     v56 = MotionInfo_TypeInfo;
   }
   *(float *)&format.klass = v56->static_fields->_VoiceWeight_k__BackingField;
-  voicePlaybackLogList = (char *)System_Single__ToString_64172632(
+  voicePlaybackLogList = (char *)System_Single__ToString_63942724(
                                    *(float *)&format.klass,
                                    &format,
-                                   (const MethodInfo *)StringLiteral_1146/*"0.00"*/);
+                                   (const MethodInfo *)StringLiteral_1117/*"0.00"*/);
   if ( *((_DWORD *)v53 + 6) <= 1u )
     goto LABEL_75;
   *((_QWORD *)v53 + 5) = voicePlaybackLogList;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v53 + 40), (int32_t)voicePlaybackLogList, v51, v57);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v53 + 40), (int32_t)voicePlaybackLogList, v51, v57);
   if ( *((_DWORD *)v53 + 6) <= 2u )
     goto LABEL_75;
-  v59 = StringLiteral_162/*" / "*/;
-  *((_QWORD *)v53 + 6) = StringLiteral_162/*" / "*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v53 + 48), v59, v51, v58);
-  if ( !byte_4B43F51 )
+  v59 = StringLiteral_160/*" / "*/;
+  *((_QWORD *)v53 + 6) = StringLiteral_160/*" / "*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v53 + 48), v59, v51, v58);
+  if ( !byte_4B014E0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v60);
-    byte_4B43F51 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v60);
+    byte_4B014E0 = 1;
   }
   v61 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -477,22 +477,22 @@ LABEL_34:
     v61 = MotionInfo_TypeInfo;
   }
   *(float *)&format.klass = v61->static_fields->_VoiceTotalWeight_k__BackingField;
-  voicePlaybackLogList = (char *)System_Single__ToString_64172632(
+  voicePlaybackLogList = (char *)System_Single__ToString_63942724(
                                    *(float *)&format.klass,
                                    &format,
-                                   (const MethodInfo *)StringLiteral_1146/*"0.00"*/);
+                                   (const MethodInfo *)StringLiteral_1117/*"0.00"*/);
   if ( *((_DWORD *)v53 + 6) <= 3u
     || (*((_QWORD *)v53 + 7) = voicePlaybackLogList,
-        sub_1BDB81C((CGThumbnailListItem_o *)(v53 + 56), (int32_t)voicePlaybackLogList, v51, v62),
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v53 + 56), (int32_t)voicePlaybackLogList, v51, v62),
         voicePlaybackLogList = (char *)System_Environment__get_NewLine(0LL),
         *((_DWORD *)v53 + 6) <= 4u) )
   {
 LABEL_75:
-    sub_1BDBADC(voicePlaybackLogList, v18, v51);
+    sub_1BC326C(voicePlaybackLogList, v18, v51);
   }
   *((_QWORD *)v53 + 8) = voicePlaybackLogList;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v53 + 64), (int32_t)voicePlaybackLogList, v51, v63);
-  voicePlaybackLogList = (char *)System_String__Concat_62612776((System_String_array *)v53, 0LL);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v53 + 64), (int32_t)voicePlaybackLogList, v51, v63);
+  voicePlaybackLogList = (char *)System_String__Concat_62389164((System_String_array *)v53, 0LL);
   v66 = v15->fields._items;
   v67 = Method_System_Collections_Generic_List_string__Add__;
   ++v15->fields._version;
@@ -505,19 +505,19 @@ LABEL_75:
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)voicePlaybackLogList,
-      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v67[4] + 192LL) + 112LL));
+      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v67[4] + 192LL) + 112LL));
   }
   else
   {
     v70 = &v66->obj.klass + v68;
     v15->fields._size = v68 + 1;
     v70[4] = v69;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v70 + 4), (int32_t)v69, v64, v65);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v70 + 4), (int32_t)v69, v64, v65);
   }
-  if ( !byte_4B43F52 )
+  if ( !byte_4B014E1 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v71);
-    byte_4B43F52 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v71);
+    byte_4B014E1 = 1;
   }
   v72 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -527,8 +527,8 @@ LABEL_75:
   }
   VoiceType_k__BackingField = v72->static_fields->_VoiceType_k__BackingField;
   v74 = System_Environment__get_NewLine(0LL);
-  voicePlaybackLogList = (char *)System_String__Concat_62610508(
-                                   (System_String_o *)StringLiteral_332/*" 分類 : "*/,
+  voicePlaybackLogList = (char *)System_String__Concat_62386896(
+                                   (System_String_o *)StringLiteral_330/*" 分類 : "*/,
                                    VoiceType_k__BackingField,
                                    v74,
                                    0LL);
@@ -544,14 +544,14 @@ LABEL_75:
     System_Collections_Generic_List_object___AddWithResize(
       v15,
       (Il2CppObject *)voicePlaybackLogList,
-      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v78[4] + 192LL) + 112LL));
+      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v78[4] + 192LL) + 112LL));
   }
   else
   {
     v81 = &v77->obj.klass + v79;
     v15->fields._size = v79 + 1;
     v81[4] = v80;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v81 + 4), (int32_t)v80, v75, v76);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v81 + 4), (int32_t)v80, v75, v76);
   }
   voicePlaybackLogList = (char *)MotionInfo_TypeInfo->static_fields->voicePlaybackLogList;
   if ( !voicePlaybackLogList )
@@ -567,20 +567,20 @@ LABEL_75:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)voicePlaybackLogList,
       (Il2CppObject *)v15,
-      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v85[4] + 192LL) + 112LL));
+      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v85[4] + 192LL) + 112LL));
   }
   else
   {
     v87 = v84 + 8 * v86;
     *((_DWORD *)voicePlaybackLogList + 6) = v86 + 1;
     *(_QWORD *)(v87 + 32) = v15;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v87 + 32), (int32_t)v15, v82, v83);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v87 + 32), (int32_t)v15, v82, v83);
   }
   MotionInfo__UpdateVoicePlaybackLogString(v88);
 }
 
 
-void __fastcall MotionInfo__AddVoiceLog_39990820(System_String_o *str, const MethodInfo *method)
+void __fastcall MotionInfo__AddVoiceLog_40008448(System_String_o *str, const MethodInfo *method)
 {
   __int64 v3; // x1
   __int64 v4; // x1
@@ -604,19 +604,19 @@ void __fastcall MotionInfo__AddVoiceLog_39990820(System_String_o *str, const Met
   Il2CppClass **v22; // x8
   const MethodInfo *v23; // x0
 
-  if ( (byte_4B43F30 & 1) == 0 )
+  if ( (byte_4B014BF & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_List_string___Add__, method);
-    sub_1BDB878(&Method_System_Collections_Generic_List_string__Add__, v3);
-    sub_1BDB878(&Method_System_Collections_Generic_List_string___ctor__, v4);
-    sub_1BDB878(&System_Collections_Generic_List_string__TypeInfo, v5);
-    sub_1BDB878(&MotionInfo_TypeInfo, v6);
-    byte_4B43F30 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_List_string___Add__, method);
+    sub_1BC3008(&Method_System_Collections_Generic_List_string__Add__, v3);
+    sub_1BC3008(&Method_System_Collections_Generic_List_string___ctor__, v4);
+    sub_1BC3008(&System_Collections_Generic_List_string__TypeInfo, v5);
+    sub_1BC3008(&MotionInfo_TypeInfo, v6);
+    byte_4B014BF = 1;
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_1BDBAC4(System_Collections_Generic_List_string__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_36D5590 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_string___ctor__);
   if ( !v7 )
     goto LABEL_16;
   items = v7->fields._items;
@@ -630,14 +630,14 @@ void __fastcall MotionInfo__AddVoiceLog_39990820(System_String_o *str, const Met
     System_Collections_Generic_List_object___AddWithResize(
       v7,
       (Il2CppObject *)str,
-      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
     v15 = &items->obj.klass + size;
     v7->fields._size = size + 1;
     v15[4] = (Il2CppClass *)str;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v15 + 4), (int32_t)str, v10, v11);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v15 + 4), (int32_t)str, v10, v11);
   }
   v18 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -653,7 +653,7 @@ void __fastcall MotionInfo__AddVoiceLog_39990820(System_String_o *str, const Met
         !v19) )
   {
 LABEL_16:
-    sub_1BDBAD4(voicePlaybackLogList, v9);
+    sub_1BC3264(voicePlaybackLogList, v9);
   }
   v21 = voicePlaybackLogList->fields._size;
   if ( (unsigned int)v21 >= v19->max_length )
@@ -661,14 +661,14 @@ LABEL_16:
     System_Collections_Generic_List_object___AddWithResize(
       voicePlaybackLogList,
       (Il2CppObject *)v7,
-      *(const MethodInfo_36D5DC4 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
   }
   else
   {
     v22 = &v19->obj.klass + v21;
     voicePlaybackLogList->fields._size = v21 + 1;
     v22[4] = (Il2CppClass *)v7;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v7, v16, v17);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v7, v16, v17);
   }
   MotionInfo__UpdateVoicePlaybackLogString(v23);
 }
@@ -686,30 +686,30 @@ System_String_o *__fastcall MotionInfo__GetTypeName(MotionInfo_o *this, int32_t 
   int32_t v10; // [xsp+Ch] [xbp-24h] BYREF
 
   v10 = type;
-  if ( (byte_4B43F2C & 1) == 0 )
+  if ( (byte_4B014BB & 1) == 0 )
   {
-    sub_1BDB878(&BattleCommand_TypeInfo, *(_QWORD *)&type);
-    sub_1BDB878(&StringLiteral_25513/*"バスター"*/, v4);
-    sub_1BDB878(&StringLiteral_25495/*"クイック"*/, v5);
-    sub_1BDB878(&StringLiteral_25484/*"アーツ"*/, v6);
-    sub_1BDB878(&StringLiteral_25488/*"エクストラ"*/, v7);
-    byte_4B43F2C = 1;
+    sub_1BC3008(&BattleCommand_TypeInfo, *(_QWORD *)&type);
+    sub_1BC3008(&StringLiteral_25184/*"バスター"*/, v4);
+    sub_1BC3008(&StringLiteral_25166/*"クイック"*/, v5);
+    sub_1BC3008(&StringLiteral_25155/*"アーツ"*/, v6);
+    sub_1BC3008(&StringLiteral_25159/*"エクストラ"*/, v7);
+    byte_4B014BB = 1;
   }
   if ( !BattleCommand_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo);
   switch ( BattleCommand__getType(type, 0LL) )
   {
     case 1:
-      v8 = &StringLiteral_25484/*"アーツ"*/;
+      v8 = &StringLiteral_25155/*"アーツ"*/;
       goto LABEL_11;
     case 2:
-      v8 = &StringLiteral_25513/*"バスター"*/;
+      v8 = &StringLiteral_25184/*"バスター"*/;
       goto LABEL_11;
     case 3:
-      v8 = &StringLiteral_25495/*"クイック"*/;
+      v8 = &StringLiteral_25166/*"クイック"*/;
       goto LABEL_11;
     case 4:
-      v8 = &StringLiteral_25488/*"エクストラ"*/;
+      v8 = &StringLiteral_25159/*"エクストラ"*/;
 LABEL_11:
       result = (System_String_o *)*v8;
       break;
@@ -989,49 +989,49 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
   UnityEngine_Rect_o v266; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v267; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B43F2B & 1) == 0 )
+  if ( (byte_4B014BA & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Linq_Enumerable_SelectMany_List_string___string___, method);
-    sub_1BDB878(&System_Func_List_string___IEnumerable_string___TypeInfo, v4);
-    sub_1BDB878(&UnityEngine_GUIStyle_TypeInfo, v5);
-    sub_1BDB878(&UnityEngine_GUI_TypeInfo, v6);
-    sub_1BDB878(&System_IDisposable_TypeInfo, v7);
-    sub_1BDB878(&System_Collections_Generic_IEnumerable_string__TypeInfo, v8);
-    sub_1BDB878(&System_Collections_Generic_IEnumerator_string__TypeInfo, v9);
-    sub_1BDB878(&System_Collections_IEnumerator_TypeInfo, v10);
-    sub_1BDB878(&int_TypeInfo, v11);
-    sub_1BDB878(&System_Math_TypeInfo, v12);
-    sub_1BDB878(&MotionInfo_TypeInfo, v13);
-    sub_1BDB878(&float_TypeInfo, v14);
-    sub_1BDB878(&string___TypeInfo, v15);
-    sub_1BDB878(&Method_MotionInfo___c__OnGUI_b__46_0__, v16);
-    sub_1BDB878(&MotionInfo___c_TypeInfo, v17);
-    sub_1BDB878(&StringLiteral_1748/*"<size={0}>+</size>"*/, v18);
-    sub_1BDB878(&StringLiteral_1755/*"<size={fontSize}>ログ消去</size>"*/, v19);
-    sub_1BDB878(&StringLiteral_25467/*"【モーションID】"*/, v20);
-    sub_1BDB878(&StringLiteral_25466/*"【ボイス・SE】"*/, v21);
-    sub_1BDB878(&StringLiteral_1752/*"<size={0}>▲</size>"*/, v22);
-    sub_1BDB878(&StringLiteral_15347/*"VoiceID : "*/, v23);
-    sub_1BDB878(&StringLiteral_25468/*"【名前】"*/, v24);
-    sub_1BDB878(&StringLiteral_333/*" 確率 / 合計 : "*/, v25);
-    sub_1BDB878(&StringLiteral_1747/*"<size="*/, v26);
-    sub_1BDB878(&StringLiteral_25465/*"【カード属性】"*/, v27);
-    sub_1BDB878(&StringLiteral_1146/*"0.00"*/, v28);
-    sub_1BDB878(&StringLiteral_1754/*"<size={0}>スクロール操作用UI\n　▲▼：上下移動\n　－＋：速度変更(～10倍)</size>"*/, v29);
-    sub_1BDB878(&StringLiteral_162/*" / "*/, v30);
-    sub_1BDB878(&StringLiteral_195/*" SEID : "*/, v31);
-    sub_1BDB878(&StringLiteral_25445/*"▶ ログ非表示"*/, v32);
-    sub_1BDB878(&StringLiteral_1753/*"<size={0}>▼</size>"*/, v33);
-    sub_1BDB878(&StringLiteral_1750/*"<size={0}>{1}/{2}</size>"*/, v34);
-    sub_1BDB878(&StringLiteral_1751/*"<size={0}>{1}</size>"*/, v35);
-    sub_1BDB878(&StringLiteral_1/*""*/, v36);
-    sub_1BDB878(&StringLiteral_332/*" 分類 : "*/, v37);
-    sub_1BDB878(&StringLiteral_1551/*"</size>"*/, v38);
-    sub_1BDB878(&StringLiteral_1773/*">"*/, v39);
-    sub_1BDB878(&StringLiteral_12697/*"ServantID : "*/, v40);
-    sub_1BDB878(&StringLiteral_25446/*"◀ ログ表示　"*/, v41);
-    sub_1BDB878(&StringLiteral_1749/*"<size={0}>-</size>"*/, v42);
-    byte_4B43F2B = 1;
+    sub_1BC3008(&Method_System_Linq_Enumerable_SelectMany_List_string___string___, method);
+    sub_1BC3008(&System_Func_List_string___IEnumerable_string___TypeInfo, v4);
+    sub_1BC3008(&UnityEngine_GUIStyle_TypeInfo, v5);
+    sub_1BC3008(&UnityEngine_GUI_TypeInfo, v6);
+    sub_1BC3008(&System_IDisposable_TypeInfo, v7);
+    sub_1BC3008(&System_Collections_Generic_IEnumerable_string__TypeInfo, v8);
+    sub_1BC3008(&System_Collections_Generic_IEnumerator_string__TypeInfo, v9);
+    sub_1BC3008(&System_Collections_IEnumerator_TypeInfo, v10);
+    sub_1BC3008(&int_TypeInfo, v11);
+    sub_1BC3008(&System_Math_TypeInfo, v12);
+    sub_1BC3008(&MotionInfo_TypeInfo, v13);
+    sub_1BC3008(&float_TypeInfo, v14);
+    sub_1BC3008(&string___TypeInfo, v15);
+    sub_1BC3008(&Method_MotionInfo___c__OnGUI_b__46_0__, v16);
+    sub_1BC3008(&MotionInfo___c_TypeInfo, v17);
+    sub_1BC3008(&StringLiteral_1714/*"<size={0}>+</size>"*/, v18);
+    sub_1BC3008(&StringLiteral_1721/*"<size={fontSize}>ログ消去</size>"*/, v19);
+    sub_1BC3008(&StringLiteral_25138/*"【モーションID】"*/, v20);
+    sub_1BC3008(&StringLiteral_25137/*"【ボイス・SE】"*/, v21);
+    sub_1BC3008(&StringLiteral_1718/*"<size={0}>▲</size>"*/, v22);
+    sub_1BC3008(&StringLiteral_15228/*"VoiceID : "*/, v23);
+    sub_1BC3008(&StringLiteral_25139/*"【名前】"*/, v24);
+    sub_1BC3008(&StringLiteral_331/*" 確率 / 合計 : "*/, v25);
+    sub_1BC3008(&StringLiteral_1713/*"<size="*/, v26);
+    sub_1BC3008(&StringLiteral_25136/*"【カード属性】"*/, v27);
+    sub_1BC3008(&StringLiteral_1117/*"0.00"*/, v28);
+    sub_1BC3008(&StringLiteral_1720/*"<size={0}>スクロール操作用UI\n　▲▼：上下移動\n　－＋：速度変更(～10倍)</size>"*/, v29);
+    sub_1BC3008(&StringLiteral_160/*" / "*/, v30);
+    sub_1BC3008(&StringLiteral_193/*" SEID : "*/, v31);
+    sub_1BC3008(&StringLiteral_25116/*"▶ ログ非表示"*/, v32);
+    sub_1BC3008(&StringLiteral_1719/*"<size={0}>▼</size>"*/, v33);
+    sub_1BC3008(&StringLiteral_1716/*"<size={0}>{1}/{2}</size>"*/, v34);
+    sub_1BC3008(&StringLiteral_1717/*"<size={0}>{1}</size>"*/, v35);
+    sub_1BC3008(&StringLiteral_1/*""*/, v36);
+    sub_1BC3008(&StringLiteral_330/*" 分類 : "*/, v37);
+    sub_1BC3008(&StringLiteral_1517/*"</size>"*/, v38);
+    sub_1BC3008(&StringLiteral_1739/*">"*/, v39);
+    sub_1BC3008(&StringLiteral_12607/*"ServantID : "*/, v40);
+    sub_1BC3008(&StringLiteral_25117/*"◀ ログ表示　"*/, v41);
+    sub_1BC3008(&StringLiteral_1715/*"<size={0}>-</size>"*/, v42);
+    byte_4B014BA = 1;
   }
   HIDWORD(format.monitor) = 0;
   if ( !this->fields.show )
@@ -1071,10 +1071,10 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
   }
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MotionInfo_TypeInfo);
-  if ( !byte_4B43F4D )
+  if ( !byte_4B014DC )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, method);
-    byte_4B43F4D = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, method);
+    byte_4B014DC = 1;
   }
   v49 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1090,10 +1090,10 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
   {
     if ( !v49->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v49);
-    if ( !byte_4B43F4E )
+    if ( !byte_4B014DD )
     {
-      sub_1BDB878(&MotionInfo_TypeInfo, method);
-      byte_4B43F4E = 1;
+      sub_1BC3008(&MotionInfo_TypeInfo, method);
+      byte_4B014DD = 1;
     }
     v51 = MotionInfo_TypeInfo;
     if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1103,8 +1103,8 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
     }
     VoiceServantId_k__BackingField = v51->static_fields->_VoiceServantId_k__BackingField;
     NewLine = System_Environment__get_NewLine(0LL);
-    v54 = System_String__Concat_62610508(
-            (System_String_o *)StringLiteral_12697/*"ServantID : "*/,
+    v54 = System_String__Concat_62386896(
+            (System_String_o *)StringLiteral_12607/*"ServantID : "*/,
             VoiceServantId_k__BackingField,
             NewLine,
             0LL);
@@ -1113,10 +1113,10 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
   }
   if ( !v49->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v49);
-  if ( !byte_4B43F4D )
+  if ( !byte_4B014DC )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, method);
-    byte_4B43F4D = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, method);
+    byte_4B014DC = 1;
   }
   v55 = MotionInfo_TypeInfo;
   cctor_finished = MotionInfo_TypeInfo->_2.cctor_finished;
@@ -1127,16 +1127,16 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
     cctor_finished = MotionInfo_TypeInfo->_2.cctor_finished;
   }
   if ( v55->static_fields->_IsSe_k__BackingField )
-    v57 = (System_String_o **)&StringLiteral_195/*" SEID : "*/;
+    v57 = (System_String_o **)&StringLiteral_193/*" SEID : "*/;
   else
-    v57 = (System_String_o **)&StringLiteral_15347/*"VoiceID : "*/;
+    v57 = (System_String_o **)&StringLiteral_15228/*"VoiceID : "*/;
   v58 = *v57;
   if ( !cctor_finished )
     j_il2cpp_runtime_class_init_0(v55);
-  if ( !byte_4B43F4F )
+  if ( !byte_4B014DE )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, method);
-    byte_4B43F4F = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, method);
+    byte_4B014DE = 1;
   }
   v59 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1146,24 +1146,24 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
   }
   VoiceId_k__BackingField = v59->static_fields->_VoiceId_k__BackingField;
   v61 = System_Environment__get_NewLine(0LL);
-  v62 = System_String__Concat_62612512(v50, v58, VoiceId_k__BackingField, v61, 0LL);
-  normal = (char *)sub_1BDB920(string___TypeInfo, 8LL);
+  v62 = System_String__Concat_62388900(v50, v58, VoiceId_k__BackingField, v61, 0LL);
+  normal = (char *)sub_1BC30B0(string___TypeInfo, 8LL);
   if ( !normal )
     goto LABEL_203;
   v65 = normal;
   if ( !*((_DWORD *)normal + 6) )
     goto LABEL_196;
   *((_QWORD *)normal + 4) = v62;
-  sub_1BDB81C((CGThumbnailListItem_o *)(normal + 32), (int32_t)v62, v63, v64);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(normal + 32), (int32_t)v62, v63, v64);
   if ( *((_DWORD *)v65 + 6) <= 1u )
     goto LABEL_196;
-  v67 = StringLiteral_333/*" 確率 / 合計 : "*/;
-  *((_QWORD *)v65 + 5) = StringLiteral_333/*" 確率 / 合計 : "*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v65 + 40), v67, v63, v66);
-  if ( !byte_4B43F50 )
+  v67 = StringLiteral_331/*" 確率 / 合計 : "*/;
+  *((_QWORD *)v65 + 5) = StringLiteral_331/*" 確率 / 合計 : "*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v65 + 40), v67, v63, v66);
+  if ( !byte_4B014DF )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v68);
-    byte_4B43F50 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v68);
+    byte_4B014DF = 1;
   }
   v69 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1172,23 +1172,23 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
     v69 = MotionInfo_TypeInfo;
   }
   *(float *)&format.klass = v69->static_fields->_VoiceWeight_k__BackingField;
-  normal = (char *)System_Single__ToString_64172632(
+  normal = (char *)System_Single__ToString_63942724(
                      *(float *)&format.klass,
                      &format,
-                     (const MethodInfo *)StringLiteral_1146/*"0.00"*/);
+                     (const MethodInfo *)StringLiteral_1117/*"0.00"*/);
   if ( *((_DWORD *)v65 + 6) <= 2u )
     goto LABEL_196;
   *((_QWORD *)v65 + 6) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v65 + 48), (int32_t)normal, v63, v70);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v65 + 48), (int32_t)normal, v63, v70);
   if ( *((_DWORD *)v65 + 6) <= 3u )
     goto LABEL_196;
-  v72 = StringLiteral_162/*" / "*/;
-  *((_QWORD *)v65 + 7) = StringLiteral_162/*" / "*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v65 + 56), v72, v63, v71);
-  if ( !byte_4B43F51 )
+  v72 = StringLiteral_160/*" / "*/;
+  *((_QWORD *)v65 + 7) = StringLiteral_160/*" / "*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v65 + 56), v72, v63, v71);
+  if ( !byte_4B014E0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v73);
-    byte_4B43F51 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v73);
+    byte_4B014E0 = 1;
   }
   v74 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1197,28 +1197,28 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
     v74 = MotionInfo_TypeInfo;
   }
   *(float *)&format.klass = v74->static_fields->_VoiceTotalWeight_k__BackingField;
-  normal = (char *)System_Single__ToString_64172632(
+  normal = (char *)System_Single__ToString_63942724(
                      *(float *)&format.klass,
                      &format,
-                     (const MethodInfo *)StringLiteral_1146/*"0.00"*/);
+                     (const MethodInfo *)StringLiteral_1117/*"0.00"*/);
   if ( *((_DWORD *)v65 + 6) <= 4u )
     goto LABEL_196;
   *((_QWORD *)v65 + 8) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v65 + 64), (int32_t)normal, v63, v75);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v65 + 64), (int32_t)normal, v63, v75);
   normal = (char *)System_Environment__get_NewLine(0LL);
   if ( *((_DWORD *)v65 + 6) <= 5u )
     goto LABEL_196;
   *((_QWORD *)v65 + 9) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v65 + 72), (int32_t)normal, v63, v76);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v65 + 72), (int32_t)normal, v63, v76);
   if ( *((_DWORD *)v65 + 6) <= 6u )
     goto LABEL_196;
-  v78 = StringLiteral_332/*" 分類 : "*/;
-  *((_QWORD *)v65 + 10) = StringLiteral_332/*" 分類 : "*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v65 + 80), v78, v63, v77);
-  if ( !byte_4B43F52 )
+  v78 = StringLiteral_330/*" 分類 : "*/;
+  *((_QWORD *)v65 + 10) = StringLiteral_330/*" 分類 : "*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v65 + 80), v78, v63, v77);
+  if ( !byte_4B014E1 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v46);
-    byte_4B43F52 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v46);
+    byte_4B014E1 = 1;
   }
   normal = (char *)MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1230,117 +1230,117 @@ void __fastcall MotionInfo__OnGUI(MotionInfo_o *this, const MethodInfo *method)
     goto LABEL_196;
   v80 = *(_QWORD *)(*((_QWORD *)normal + 23) + 40LL);
   *((_QWORD *)v65 + 11) = v80;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v65 + 88), v80, v63, v79);
-  v81 = System_String__Concat_62612776((System_String_array *)v65, 0LL);
-  v82 = sub_1BDB920(string___TypeInfo, 21LL);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v65 + 88), v80, v63, v79);
+  v81 = System_String__Concat_62389164((System_String_array *)v65, 0LL);
+  v82 = sub_1BC30B0(string___TypeInfo, 21LL);
   normal = (char *)System_Environment__get_NewLine(0LL);
   if ( !v82 )
     goto LABEL_203;
   if ( !*(_DWORD *)(v82 + 24) )
     goto LABEL_196;
   *(_QWORD *)(v82 + 32) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 32), (int32_t)normal, v63, v83);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 32), (int32_t)normal, v63, v83);
   if ( *(_DWORD *)(v82 + 24) <= 1u )
     goto LABEL_196;
-  v85 = StringLiteral_25468/*"【名前】"*/;
-  *(_QWORD *)(v82 + 40) = StringLiteral_25468/*"【名前】"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 40), v85, v63, v84);
+  v85 = StringLiteral_25139/*"【名前】"*/;
+  *(_QWORD *)(v82 + 40) = StringLiteral_25139/*"【名前】"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 40), v85, v63, v84);
   normal = (char *)System_Environment__get_NewLine(0LL);
   if ( *(_DWORD *)(v82 + 24) <= 2u )
     goto LABEL_196;
   *(_QWORD *)(v82 + 48) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 48), (int32_t)normal, v63, v86);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 48), (int32_t)normal, v63, v86);
   if ( *(_DWORD *)(v82 + 24) <= 3u )
     goto LABEL_196;
   static_fields = MotionInfo_TypeInfo->static_fields;
   svtName = static_fields->svtName;
   *(_QWORD *)(v82 + 56) = static_fields->svtName;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 56), (int32_t)svtName, v63, v87);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 56), (int32_t)svtName, v63, v87);
   normal = (char *)System_Environment__get_NewLine(0LL);
   if ( *(_DWORD *)(v82 + 24) <= 4u )
     goto LABEL_196;
   *(_QWORD *)(v82 + 64) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 64), (int32_t)normal, v63, v90);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 64), (int32_t)normal, v63, v90);
   normal = (char *)System_Environment__get_NewLine(0LL);
   if ( *(_DWORD *)(v82 + 24) <= 5u )
     goto LABEL_196;
   *(_QWORD *)(v82 + 72) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 72), (int32_t)normal, v63, v91);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 72), (int32_t)normal, v63, v91);
   if ( *(_DWORD *)(v82 + 24) <= 6u )
     goto LABEL_196;
-  v93 = StringLiteral_25467/*"【モーションID】"*/;
-  *(_QWORD *)(v82 + 80) = StringLiteral_25467/*"【モーションID】"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 80), v93, v63, v92);
+  v93 = StringLiteral_25138/*"【モーションID】"*/;
+  *(_QWORD *)(v82 + 80) = StringLiteral_25138/*"【モーションID】"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 80), v93, v63, v92);
   normal = (char *)System_Environment__get_NewLine(0LL);
   if ( *(_DWORD *)(v82 + 24) <= 7u )
     goto LABEL_196;
   *(_QWORD *)(v82 + 88) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 88), (int32_t)normal, v63, v94);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 88), (int32_t)normal, v63, v94);
   normal = (char *)System_Int32__ToString((int32_t)&format.fields, 0LL);
   if ( *(_DWORD *)(v82 + 24) <= 8u )
     goto LABEL_196;
   *(_QWORD *)(v82 + 96) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 96), (int32_t)normal, v63, v95);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 96), (int32_t)normal, v63, v95);
   normal = (char *)System_Environment__get_NewLine(0LL);
   if ( *(_DWORD *)(v82 + 24) <= 9u )
     goto LABEL_196;
   *(_QWORD *)(v82 + 104) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 104), (int32_t)normal, v63, v96);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 104), (int32_t)normal, v63, v96);
   normal = (char *)System_Environment__get_NewLine(0LL);
   if ( *(_DWORD *)(v82 + 24) <= 0xAu )
     goto LABEL_196;
   *(_QWORD *)(v82 + 112) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 112), (int32_t)normal, v63, v97);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 112), (int32_t)normal, v63, v97);
   if ( *(_DWORD *)(v82 + 24) <= 0xBu )
     goto LABEL_196;
-  v99 = StringLiteral_25465/*"【カード属性】"*/;
-  *(_QWORD *)(v82 + 120) = StringLiteral_25465/*"【カード属性】"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 120), v99, v63, v98);
+  v99 = StringLiteral_25136/*"【カード属性】"*/;
+  *(_QWORD *)(v82 + 120) = StringLiteral_25136/*"【カード属性】"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 120), v99, v63, v98);
   normal = (char *)System_Environment__get_NewLine(0LL);
   if ( *(_DWORD *)(v82 + 24) <= 0xCu )
     goto LABEL_196;
   *(_QWORD *)(v82 + 128) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 128), (int32_t)normal, v63, v100);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 128), (int32_t)normal, v63, v100);
   if ( *(_DWORD *)(v82 + 24) <= 0xDu )
     goto LABEL_196;
   *(_QWORD *)(v82 + 136) = TypeName;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 136), (int32_t)TypeName, v63, v101);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 136), (int32_t)TypeName, v63, v101);
   normal = (char *)System_Environment__get_NewLine(0LL);
   if ( *(_DWORD *)(v82 + 24) <= 0xEu )
     goto LABEL_196;
   *(_QWORD *)(v82 + 144) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 144), (int32_t)normal, v63, v102);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 144), (int32_t)normal, v63, v102);
   normal = (char *)System_Environment__get_NewLine(0LL);
   if ( *(_DWORD *)(v82 + 24) <= 0xFu )
     goto LABEL_196;
   *(_QWORD *)(v82 + 152) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 152), (int32_t)normal, v63, v103);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 152), (int32_t)normal, v63, v103);
   if ( *(_DWORD *)(v82 + 24) <= 0x10u )
     goto LABEL_196;
-  v105 = StringLiteral_25466/*"【ボイス・SE】"*/;
-  *(_QWORD *)(v82 + 160) = StringLiteral_25466/*"【ボイス・SE】"*/;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 160), v105, v63, v104);
+  v105 = StringLiteral_25137/*"【ボイス・SE】"*/;
+  *(_QWORD *)(v82 + 160) = StringLiteral_25137/*"【ボイス・SE】"*/;
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 160), v105, v63, v104);
   normal = (char *)System_Environment__get_NewLine(0LL);
   if ( *(_DWORD *)(v82 + 24) <= 0x11u )
     goto LABEL_196;
   *(_QWORD *)(v82 + 168) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 168), (int32_t)normal, v63, v106);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 168), (int32_t)normal, v63, v106);
   if ( *(_DWORD *)(v82 + 24) <= 0x12u
     || (*(_QWORD *)(v82 + 176) = v81,
-        sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 176), (int32_t)v81, v63, v107),
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 176), (int32_t)v81, v63, v107),
         normal = (char *)System_Environment__get_NewLine(0LL),
         *(_DWORD *)(v82 + 24) <= 0x13u)
     || (*(_QWORD *)(v82 + 184) = normal,
-        sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 184), (int32_t)normal, v63, v108),
+        sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 184), (int32_t)normal, v63, v108),
         normal = (char *)System_Environment__get_NewLine(0LL),
         *(_DWORD *)(v82 + 24) <= 0x14u) )
   {
 LABEL_196:
-    sub_1BDBADC(normal, v46, v63);
+    sub_1BC326C(normal, v46, v63);
   }
   *(_QWORD *)(v82 + 192) = normal;
-  sub_1BDB81C((CGThumbnailListItem_o *)(v82 + 192), (int32_t)normal, v63, v109);
-  v110 = (Il2CppObject *)System_String__Concat_62612776((System_String_array *)v82, 0LL);
+  sub_1BC2FAC((CGThumbnailListItem_o *)(v82 + 192), (int32_t)normal, v63, v109);
+  v110 = (Il2CppObject *)System_String__Concat_62389164((System_String_array *)v82, 0LL);
   height = UnityEngine_Screen__get_height(0LL);
   v112 = (float)((float)UnityEngine_Screen__get_width(0LL) * 0.00097656) * 0.7;
   *((float *)&format.monitor + 1) = v112 * 17.5;
@@ -1351,7 +1351,7 @@ LABEL_196:
       j_il2cpp_runtime_class_init_0(UnityEngine_GUIStyle_TypeInfo);
     none = UnityEngine_GUIStyle__get_none(0LL);
     *p_labelStyle = none;
-    sub_1BDB81C((CGThumbnailListItem_o *)&this->fields.labelStyle, (int32_t)none, v115, v116);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.labelStyle, (int32_t)none, v115, v116);
     normal = (char *)*p_labelStyle;
     if ( !*p_labelStyle )
       goto LABEL_203;
@@ -1395,7 +1395,7 @@ LABEL_196:
   UnityEngine_GUIStyle__set_alignment((UnityEngine_GUIStyle_o *)normal, 1, 0LL);
   v253 = *((float *)&format.monitor + 1);
   v128 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v253, v125, v126, v127);
-  v129 = System_String__Format_62613552((System_String_o *)StringLiteral_1751/*"<size={0}>{1}</size>"*/, v128, v110, 0LL);
+  v129 = System_String__Format_62389940((System_String_o *)StringLiteral_1717/*"<size={0}>{1}</size>"*/, v128, v110, 0LL);
   v130 = *p_labelStyle;
   v131 = v129;
   if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
@@ -1404,15 +1404,15 @@ LABEL_196:
   v257.fields.m_XMin = v121;
   v257.fields.m_Width = v119;
   v257.fields.m_Height = v117 + v117;
-  UnityEngine_GUI__Label_70413496(v257, v131, v130, 0LL);
+  UnityEngine_GUI__Label_70162892(v257, v131, v130, 0LL);
   isLogAreaShow = this->fields.isLogAreaShow;
   monitor_high = HIDWORD(format.monitor);
   v136 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &monitor_high, v133, v134, v135);
   if ( this->fields.isLogAreaShow )
-    v137 = (Il2CppObject **)&StringLiteral_25445/*"▶ ログ非表示"*/;
+    v137 = (Il2CppObject **)&StringLiteral_25116/*"▶ ログ非表示"*/;
   else
-    v137 = (Il2CppObject **)&StringLiteral_25446/*"◀ ログ表示　"*/;
-  v138 = System_String__Format_62613552((System_String_o *)StringLiteral_1751/*"<size={0}>{1}</size>"*/, v136, *v137, 0LL);
+    v137 = (Il2CppObject **)&StringLiteral_25117/*"◀ ログ表示　"*/;
+  v138 = System_String__Format_62389940((System_String_o *)StringLiteral_1717/*"<size={0}>{1}</size>"*/, v136, *v137, 0LL);
   if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
   v258.fields.m_XMin = v121;
@@ -1429,7 +1429,7 @@ LABEL_196:
   v259.fields.m_YMin = (float)((float)(v117 + v117) + 10.0) + 0.0;
   v259.fields.m_Width = v119 * 0.5;
   v259.fields.m_Height = v118;
-  if ( UnityEngine_GUI__Button(v259, (System_String_o *)StringLiteral_1755/*"<size={fontSize}>ログ消去</size>"*/, 0LL) )
+  if ( UnityEngine_GUI__Button(v259, (System_String_o *)StringLiteral_1721/*"<size={fontSize}>ログ消去</size>"*/, 0LL) )
   {
     v144 = MotionInfo_TypeInfo;
     if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1445,7 +1445,7 @@ LABEL_196:
   v249 = v140;
   v253 = *((float *)&format.monitor + 1);
   v146 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v253, v141, v142, v143);
-  v147 = System_String__Format((System_String_o *)StringLiteral_1752/*"<size={0}>▲</size>"*/, v146, 0LL);
+  v147 = System_String__Format((System_String_o *)StringLiteral_1718/*"<size={0}>▲</size>"*/, v146, 0LL);
   if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
   v260.fields.m_XMin = v121;
@@ -1465,7 +1465,7 @@ LABEL_196:
   }
   v253 = *((float *)&format.monitor + 1);
   v152 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v253, v148, v149, v150);
-  v153 = System_String__Format((System_String_o *)StringLiteral_1753/*"<size={0}>▼</size>"*/, v152, 0LL);
+  v153 = System_String__Format((System_String_o *)StringLiteral_1719/*"<size={0}>▼</size>"*/, v152, 0LL);
   if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
   v261.fields.m_XMin = v118 + v121;
@@ -1485,7 +1485,7 @@ LABEL_196:
   }
   v253 = *((float *)&format.monitor + 1);
   v158 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v253, v154, v155, v156);
-  v159 = System_String__Format((System_String_o *)StringLiteral_1749/*"<size={0}>-</size>"*/, v158, 0LL);
+  v159 = System_String__Format((System_String_o *)StringLiteral_1715/*"<size={0}>-</size>"*/, v158, 0LL);
   if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
   v262.fields.m_XMin = v118 + (float)(v118 + v121);
@@ -1498,7 +1498,7 @@ LABEL_196:
     this->fields.scrollSpeed = v163;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    this->fields.scrollSpeed = System_Math__Max_64100580(v163, 1, 0LL);
+    this->fields.scrollSpeed = System_Math__Max_63870684(v163, 1, 0LL);
   }
   v253 = *((float *)&format.monitor + 1) * 0.9;
   v164 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v253, v160, v161, v162);
@@ -1506,7 +1506,7 @@ LABEL_196:
   v168 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &monitor_high, v165, v166, v167);
   v251 = 10;
   v172 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v251, v169, v170, v171);
-  v173 = System_String__Format_62613620((System_String_o *)StringLiteral_1750/*"<size={0}>{1}/{2}</size>"*/, v164, v168, v172, 0LL);
+  v173 = System_String__Format_62390008((System_String_o *)StringLiteral_1716/*"<size={0}>{1}/{2}</size>"*/, v164, v168, v172, 0LL);
   if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
   v263.fields.m_XMin = v118 + (float)(v118 + (float)(v118 + v121));
@@ -1516,7 +1516,7 @@ LABEL_196:
   UnityEngine_GUI__Box(v263, v173, 0LL);
   v250 = HIDWORD(format.monitor);
   v177 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v250, v174, v175, v176);
-  v178 = System_String__Format((System_String_o *)StringLiteral_1748/*"<size={0}>+</size>"*/, v177, 0LL);
+  v178 = System_String__Format((System_String_o *)StringLiteral_1714/*"<size={0}>+</size>"*/, v177, 0LL);
   v264.fields.m_XMin = v145 + (float)(v118 + (float)(v118 + (float)(v118 + v121)));
   v264.fields.m_YMin = (float)((float)((float)(v117 + v117) + 10.0) + 0.0) + (float)(v118 + 10.0);
   v264.fields.m_Width = v118;
@@ -1527,7 +1527,7 @@ LABEL_196:
     this->fields.scrollSpeed = v179;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    this->fields.scrollSpeed = System_Math__Min_64100908(v179, 10, 0LL);
+    this->fields.scrollSpeed = System_Math__Min_63871012(v179, 10, 0LL);
   }
   normal = (char *)*p_labelStyle;
   if ( !*p_labelStyle )
@@ -1535,7 +1535,7 @@ LABEL_196:
   UnityEngine_GUIStyle__set_alignment((UnityEngine_GUIStyle_o *)normal, 0, 0LL);
   v253 = *((float *)&format.monitor + 1);
   v183 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v253, v180, v181, v182);
-  v184 = System_String__Format((System_String_o *)StringLiteral_1754/*"<size={0}>スクロール操作用UI\n　▲▼：上下移動\n　－＋：速度変更(～10倍)</size>"*/, v183, 0LL);
+  v184 = System_String__Format((System_String_o *)StringLiteral_1720/*"<size={0}>スクロール操作用UI\n　▲▼：上下移動\n　－＋：速度変更(～10倍)</size>"*/, v183, 0LL);
   v185 = *p_labelStyle;
   v186 = v184;
   if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
@@ -1544,7 +1544,7 @@ LABEL_196:
   v265.fields.m_XMin = v121;
   v265.fields.m_YMin = v145 + (float)((float)((float)((float)(v117 + v117) + 10.0) + 0.0) + (float)(v118 + 10.0));
   v265.fields.m_Width = v119;
-  UnityEngine_GUI__Label_70413496(v265, v186, v185, 0LL);
+  UnityEngine_GUI__Label_70162892(v265, v186, v185, 0LL);
   v187 = (float)((float)UnityEngine_Screen__get_width(0LL) - v119) + -10.0;
   v188 = *((float *)&format.monitor + 1) + 10.0;
   v189 = UnityEngine_Screen__get_height(0LL);
@@ -1582,19 +1582,19 @@ LABEL_196:
       v195 = MotionInfo___c_TypeInfo;
     }
     v198 = (Il2CppObject *)v195->static_fields->__9;
-    _9__46_0 = (System_Func_object__object__o *)sub_1BDBAC4(System_Func_List_string___IEnumerable_string___TypeInfo);
+    _9__46_0 = (System_Func_object__object__o *)sub_1BC3254(System_Func_List_string___IEnumerable_string___TypeInfo);
     System_Func_object__object____ctor(_9__46_0, v198, Method_MotionInfo___c__OnGUI_b__46_0__, 0LL);
     v199 = MotionInfo___c_TypeInfo->static_fields;
     v199->__9__46_0 = (struct System_Func_List_string___IEnumerable_string___o *)_9__46_0;
-    sub_1BDB81C((CGThumbnailListItem_o *)&v199->__9__46_0, (int32_t)_9__46_0, v200, v201);
+    sub_1BC2FAC((CGThumbnailListItem_o *)&v199->__9__46_0, (int32_t)_9__46_0, v200, v201);
   }
   normal = (char *)System_Linq_Enumerable__SelectMany_object__object_(
                      voicePlaybackLogList,
                      (System_Func_TSource__IEnumerable_TResult___o *)_9__46_0,
-                     (const MethodInfo_306AA08 *)Method_System_Linq_Enumerable_SelectMany_List_string___string___);
+                     (const MethodInfo_3038834 *)Method_System_Linq_Enumerable_SelectMany_List_string___string___);
   if ( !normal )
 LABEL_203:
-    sub_1BDBAD4(normal, v46);
+    sub_1BC3264(normal, v46);
   v202 = *(_QWORD *)normal;
   v203 = normal;
   v204 = *(unsigned __int16 *)(*(_QWORD *)normal + 302LL);
@@ -1613,11 +1613,11 @@ LABEL_203:
   else
   {
 LABEL_159:
-    v206 = sub_1C2C00C(normal, System_Collections_Generic_IEnumerable_string__TypeInfo, 0LL);
+    v206 = sub_1C13570(normal, System_Collections_Generic_IEnumerable_string__TypeInfo, 0LL);
   }
   v208 = (*(__int64 (__fastcall **)(char *, _QWORD))v206)(v203, *(_QWORD *)(v206 + 8));
   if ( !v208 )
-    sub_1BDBAD4(0LL, v207);
+    sub_1BC3264(0LL, v207);
   for ( i = 0; ; ++i )
   {
     v210 = *(_QWORD *)v208;
@@ -1637,7 +1637,7 @@ LABEL_159:
     else
     {
 LABEL_168:
-      v213 = sub_1C2C00C(v208, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v213 = sub_1C13570(v208, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v213)(v208, *(_QWORD *)(v213 + 8)) & 1) == 0 )
       break;
@@ -1658,38 +1658,38 @@ LABEL_168:
     else
     {
 LABEL_175:
-      v217 = sub_1C2C00C(v208, System_Collections_Generic_IEnumerator_string__TypeInfo, 0LL);
+      v217 = sub_1C13570(v208, System_Collections_Generic_IEnumerator_string__TypeInfo, 0LL);
     }
     v218 = (*(__int64 (__fastcall **)(__int64, _QWORD))v217)(v208, *(_QWORD *)(v217 + 8));
-    v219 = sub_1BDB920(string___TypeInfo, 5LL);
+    v219 = sub_1BC30B0(string___TypeInfo, 5LL);
     v223 = v219;
     if ( !v219 )
-      sub_1BDBAD4(0LL, v220);
+      sub_1BC3264(0LL, v220);
     if ( !*(_DWORD *)(v219 + 24) )
-      sub_1BDBADC(v219, v220, v221);
-    v224 = StringLiteral_1747/*"<size="*/;
-    *(_QWORD *)(v219 + 32) = StringLiteral_1747/*"<size="*/;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v219 + 32), v224, v221, v222);
+      sub_1BC326C(v219, v220, v221);
+    v224 = StringLiteral_1713/*"<size="*/;
+    *(_QWORD *)(v219 + 32) = StringLiteral_1713/*"<size="*/;
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v219 + 32), v224, v221, v222);
     v226 = System_Single__ToString(v225, (const MethodInfo *)((char *)&format.monitor + 4));
     if ( *(_DWORD *)(v223 + 24) <= 1u )
-      sub_1BDBADC(v226, v226, v227);
+      sub_1BC326C(v226, v226, v227);
     *(_QWORD *)(v223 + 40) = v226;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v223 + 40), (int32_t)v226, v227, v228);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v223 + 40), (int32_t)v226, v227, v228);
     if ( *(_DWORD *)(v223 + 24) <= 2u )
-      sub_1BDBADC(v229, v230, v231);
-    v233 = StringLiteral_1773/*">"*/;
-    *(_QWORD *)(v223 + 48) = StringLiteral_1773/*">"*/;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v223 + 48), v233, v231, v232);
+      sub_1BC326C(v229, v230, v231);
+    v233 = StringLiteral_1739/*">"*/;
+    *(_QWORD *)(v223 + 48) = StringLiteral_1739/*">"*/;
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v223 + 48), v233, v231, v232);
     if ( *(_DWORD *)(v223 + 24) <= 3u )
-      sub_1BDBADC(v234, v235, v236);
+      sub_1BC326C(v234, v235, v236);
     *(_QWORD *)(v223 + 56) = v218;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v223 + 56), v218, v236, v237);
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v223 + 56), v218, v236, v237);
     if ( *(_DWORD *)(v223 + 24) <= 4u )
-      sub_1BDBADC(v238, v239, v240);
-    v242 = StringLiteral_1551/*"</size>"*/;
-    *(_QWORD *)(v223 + 64) = StringLiteral_1551/*"</size>"*/;
-    sub_1BDB81C((CGThumbnailListItem_o *)(v223 + 64), v242, v240, v241);
-    v243 = System_String__Concat_62612776((System_String_array *)v223, 0LL);
+      sub_1BC326C(v238, v239, v240);
+    v242 = StringLiteral_1517/*"</size>"*/;
+    *(_QWORD *)(v223 + 64) = StringLiteral_1517/*"</size>"*/;
+    sub_1BC2FAC((CGThumbnailListItem_o *)(v223 + 64), v242, v240, v241);
+    v243 = System_String__Concat_62389164((System_String_array *)v223, 0LL);
     if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
     v267.fields.m_YMin = v188 * (float)i;
@@ -1715,7 +1715,7 @@ LABEL_175:
   else
   {
 LABEL_190:
-    v247 = sub_1C2C00C(v208, System_IDisposable_TypeInfo, 0LL);
+    v247 = sub_1C13570(v208, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v247)(v208, *(_QWORD *)(v247 + 8));
   if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
@@ -1749,19 +1749,19 @@ void __fastcall MotionInfo__ResetVoiceLog(const MethodInfo *method)
   __int64 v20; // x1
   MotionInfo_c *v21; // x0
 
-  if ( (byte_4B43F2D & 1) == 0 )
+  if ( (byte_4B014BC & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v1);
-    sub_1BDB878(&StringLiteral_1/*""*/, v4);
-    byte_4B43F2D = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v1);
+    sub_1BC3008(&StringLiteral_1/*""*/, v4);
+    byte_4B014BC = 1;
   }
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MotionInfo_TypeInfo);
   v5 = (struct System_String_o *)StringLiteral_1/*""*/;
-  if ( !byte_4B43F53 )
+  if ( !byte_4B014E2 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v1);
-    byte_4B43F53 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v1);
+    byte_4B014E2 = 1;
   }
   v6 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1771,12 +1771,12 @@ void __fastcall MotionInfo__ResetVoiceLog(const MethodInfo *method)
   }
   static_fields = v6->static_fields;
   static_fields->_VoiceServantId_k__BackingField = v5;
-  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->_VoiceServantId_k__BackingField, (int32_t)v5, v2, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->_VoiceServantId_k__BackingField, (int32_t)v5, v2, v3);
   v11 = (struct System_String_o *)StringLiteral_1/*""*/;
-  if ( !byte_4B43F54 )
+  if ( !byte_4B014E3 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v8);
-    byte_4B43F54 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v8);
+    byte_4B014E3 = 1;
   }
   v12 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1786,11 +1786,11 @@ void __fastcall MotionInfo__ResetVoiceLog(const MethodInfo *method)
   }
   v13 = v12->static_fields;
   v13->_VoiceId_k__BackingField = v11;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v13->_VoiceId_k__BackingField, (int32_t)v11, v9, v10);
-  if ( !byte_4B43F55 )
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v13->_VoiceId_k__BackingField, (int32_t)v11, v9, v10);
+  if ( !byte_4B014E4 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v14);
-    byte_4B43F55 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v14);
+    byte_4B014E4 = 1;
   }
   v17 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1799,11 +1799,11 @@ void __fastcall MotionInfo__ResetVoiceLog(const MethodInfo *method)
     v17 = MotionInfo_TypeInfo;
   }
   v17->static_fields->_VoiceWeight_k__BackingField = 0.0;
-  if ( !byte_4B43F56 )
+  if ( !byte_4B014E5 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v14);
+    sub_1BC3008(&MotionInfo_TypeInfo, v14);
     v17 = MotionInfo_TypeInfo;
-    byte_4B43F56 = 1;
+    byte_4B014E5 = 1;
   }
   if ( !v17->_2.cctor_finished )
   {
@@ -1812,11 +1812,11 @@ void __fastcall MotionInfo__ResetVoiceLog(const MethodInfo *method)
   }
   v17->static_fields->_VoiceTotalWeight_k__BackingField = 0.0;
   v18 = (struct System_String_o *)StringLiteral_1/*""*/;
-  if ( !byte_4B43F57 )
+  if ( !byte_4B014E6 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v14);
+    sub_1BC3008(&MotionInfo_TypeInfo, v14);
     v17 = MotionInfo_TypeInfo;
-    byte_4B43F57 = 1;
+    byte_4B014E6 = 1;
   }
   if ( !v17->_2.cctor_finished )
   {
@@ -1825,11 +1825,11 @@ void __fastcall MotionInfo__ResetVoiceLog(const MethodInfo *method)
   }
   v19 = v17->static_fields;
   v19->_VoiceType_k__BackingField = v18;
-  sub_1BDB81C((CGThumbnailListItem_o *)&v19->_VoiceType_k__BackingField, (int32_t)v18, v15, v16);
-  if ( !byte_4B43F58 )
+  sub_1BC2FAC((CGThumbnailListItem_o *)&v19->_VoiceType_k__BackingField, (int32_t)v18, v15, v16);
+  if ( !byte_4B014E7 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v20);
-    byte_4B43F58 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v20);
+    byte_4B014E7 = 1;
   }
   v21 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1838,11 +1838,11 @@ void __fastcall MotionInfo__ResetVoiceLog(const MethodInfo *method)
     v21 = MotionInfo_TypeInfo;
   }
   v21->static_fields->_VoiceIndex_k__BackingField = -1;
-  if ( !byte_4B43F59 )
+  if ( !byte_4B014E8 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v20);
+    sub_1BC3008(&MotionInfo_TypeInfo, v20);
     v21 = MotionInfo_TypeInfo;
-    byte_4B43F59 = 1;
+    byte_4B014E8 = 1;
   }
   if ( !v21->_2.cctor_finished )
   {
@@ -1858,17 +1858,17 @@ void __fastcall MotionInfo__ResetVoiceLogStatus(const MethodInfo *method)
   __int64 v1; // x1
   MotionInfo_c *v2; // x0
 
-  if ( (byte_4B43F33 & 1) == 0 )
+  if ( (byte_4B014C2 & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v1);
-    byte_4B43F33 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v1);
+    byte_4B014C2 = 1;
   }
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MotionInfo_TypeInfo);
-  if ( !byte_4B43F5A )
+  if ( !byte_4B014E9 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v1);
-    byte_4B43F5A = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v1);
+    byte_4B014E9 = 1;
   }
   v2 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1890,11 +1890,11 @@ void __fastcall MotionInfo__ResetVoicePlaybackLog(const MethodInfo *method)
   int32_t size; // w2
   int v7; // w10
 
-  if ( (byte_4B43F32 & 1) == 0 )
+  if ( (byte_4B014C1 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_List_string___Clear__, v1);
-    sub_1BDB878(&MotionInfo_TypeInfo, v2);
-    byte_4B43F32 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_List_string___Clear__, v1);
+    sub_1BC3008(&MotionInfo_TypeInfo, v2);
+    byte_4B014C1 = 1;
   }
   v3 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1905,7 +1905,7 @@ void __fastcall MotionInfo__ResetVoicePlaybackLog(const MethodInfo *method)
   static_fields = v3->static_fields;
   voicePlaybackLogList = static_fields->voicePlaybackLogList;
   if ( !voicePlaybackLogList )
-    sub_1BDBAD4(v3, v1);
+    sub_1BC3264(v3, v1);
   size = voicePlaybackLogList->fields._size;
   v7 = voicePlaybackLogList->fields._version + 1;
   voicePlaybackLogList->fields._size = 0;
@@ -1930,10 +1930,10 @@ void __fastcall MotionInfo__SetActionData(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B43F2A & 1) == 0 )
+  if ( (byte_4B014B9 & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, svtName);
-    byte_4B43F2A = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, svtName);
+    byte_4B014B9 = 1;
   }
   v6 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1942,10 +1942,10 @@ void __fastcall MotionInfo__SetActionData(
     v6 = MotionInfo_TypeInfo;
   }
   v6->static_fields->svtName = svtName;
-  sub_1BDB81C((CGThumbnailListItem_o *)MotionInfo_TypeInfo->static_fields, (int32_t)svtName, (int32_t)method, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)MotionInfo_TypeInfo->static_fields, (int32_t)svtName, (int32_t)method, v3);
   static_fields = MotionInfo_TypeInfo->static_fields;
   static_fields->actionData = actionData;
-  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->actionData, (int32_t)actionData, v8, v9);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->actionData, (int32_t)actionData, v8, v9);
 }
 
 
@@ -1968,14 +1968,14 @@ void __fastcall MotionInfo__UpdateVoicePlaybackLogString(const MethodInfo *metho
   struct MotionInfo_StaticFields *v15; // x8
   int32_t v16; // w9
 
-  if ( (byte_4B43F31 & 1) == 0 )
+  if ( (byte_4B014C0 & 1) == 0 )
   {
-    sub_1BDB878(&Method_System_Collections_Generic_List_List_string___RemoveAt__, v1);
-    sub_1BDB878(&Method_System_Collections_Generic_List_string__get_Count__, v2);
-    sub_1BDB878(&Method_System_Collections_Generic_List_List_string___get_Count__, v3);
-    sub_1BDB878(&Method_System_Collections_Generic_List_List_string___get_Item__, v4);
-    sub_1BDB878(&MotionInfo_TypeInfo, v5);
-    byte_4B43F31 = 1;
+    sub_1BC3008(&Method_System_Collections_Generic_List_List_string___RemoveAt__, v1);
+    sub_1BC3008(&Method_System_Collections_Generic_List_string__get_Count__, v2);
+    sub_1BC3008(&Method_System_Collections_Generic_List_List_string___get_Count__, v3);
+    sub_1BC3008(&Method_System_Collections_Generic_List_List_string___get_Item__, v4);
+    sub_1BC3008(&MotionInfo_TypeInfo, v5);
+    byte_4B014C0 = 1;
   }
   Item = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -1997,10 +1997,10 @@ void __fastcall MotionInfo__UpdateVoicePlaybackLogString(const MethodInfo *metho
         (Item = System_Collections_Generic_List_object___get_Item(
                   voicePlaybackLogList,
                   voicePlaybackLogList->fields._size - 1,
-                  (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_List_string___get_Item__)) == 0LL) )
+                  (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_List_string___get_Item__)) == 0LL) )
   {
 LABEL_24:
-    sub_1BDBAD4(Item, v1);
+    sub_1BC3264(Item, v1);
   }
   v10 = Item;
   v11 = MotionInfo_TypeInfo;
@@ -2030,7 +2030,7 @@ LABEL_18:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)Item,
              0,
-             (const MethodInfo_36D5AF4 *)Method_System_Collections_Generic_List_List_string___get_Item__);
+             (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_List_string___get_Item__);
     if ( !Item )
       goto LABEL_24;
     v15 = MotionInfo_TypeInfo->static_fields;
@@ -2042,7 +2042,7 @@ LABEL_18:
     System_Collections_Generic_List_object___RemoveAt(
       (System_Collections_Generic_List_object__o *)Item,
       0,
-      (const MethodInfo_36D7598 *)Method_System_Collections_Generic_List_List_string___RemoveAt__);
+      (const MethodInfo_36A2614 *)Method_System_Collections_Generic_List_List_string___RemoveAt__);
     v11 = MotionInfo_TypeInfo;
   }
   j_il2cpp_runtime_class_init_0(MotionInfo_TypeInfo);
@@ -2060,10 +2060,10 @@ bool __fastcall MotionInfo__get_IsRandom(const MethodInfo *method)
   __int64 v1; // x1
   MotionInfo_c *v2; // x0
 
-  if ( (byte_4B43F26 & 1) == 0 )
+  if ( (byte_4B014B5 & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v1);
-    byte_4B43F26 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v1);
+    byte_4B014B5 = 1;
   }
   v2 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2080,10 +2080,10 @@ bool __fastcall MotionInfo__get_IsSe(const MethodInfo *method)
   __int64 v1; // x1
   MotionInfo_c *v2; // x0
 
-  if ( (byte_4B43F28 & 1) == 0 )
+  if ( (byte_4B014B7 & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v1);
-    byte_4B43F28 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v1);
+    byte_4B014B7 = 1;
   }
   v2 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2100,10 +2100,10 @@ System_String_o *__fastcall MotionInfo__get_VoiceId(const MethodInfo *method)
   __int64 v1; // x1
   MotionInfo_c *v2; // x0
 
-  if ( (byte_4B43F20 & 1) == 0 )
+  if ( (byte_4B014AF & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v1);
-    byte_4B43F20 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v1);
+    byte_4B014AF = 1;
   }
   v2 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2120,10 +2120,10 @@ int32_t __fastcall MotionInfo__get_VoiceIndex(const MethodInfo *method)
   __int64 v1; // x1
   MotionInfo_c *v2; // x0
 
-  if ( (byte_4B43F24 & 1) == 0 )
+  if ( (byte_4B014B3 & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v1);
-    byte_4B43F24 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v1);
+    byte_4B014B3 = 1;
   }
   v2 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2140,10 +2140,10 @@ System_String_o *__fastcall MotionInfo__get_VoiceServantId(const MethodInfo *met
   __int64 v1; // x1
   MotionInfo_c *v2; // x0
 
-  if ( (byte_4B43F1A & 1) == 0 )
+  if ( (byte_4B014A9 & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v1);
-    byte_4B43F1A = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v1);
+    byte_4B014A9 = 1;
   }
   v2 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2160,10 +2160,10 @@ float __fastcall MotionInfo__get_VoiceTotalWeight(const MethodInfo *method)
   __int64 v1; // x1
   MotionInfo_c *v2; // x0
 
-  if ( (byte_4B43F1E & 1) == 0 )
+  if ( (byte_4B014AD & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v1);
-    byte_4B43F1E = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v1);
+    byte_4B014AD = 1;
   }
   v2 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2180,10 +2180,10 @@ System_String_o *__fastcall MotionInfo__get_VoiceType(const MethodInfo *method)
   __int64 v1; // x1
   MotionInfo_c *v2; // x0
 
-  if ( (byte_4B43F22 & 1) == 0 )
+  if ( (byte_4B014B1 & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v1);
-    byte_4B43F22 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v1);
+    byte_4B014B1 = 1;
   }
   v2 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2200,10 +2200,10 @@ float __fastcall MotionInfo__get_VoiceWeight(const MethodInfo *method)
   __int64 v1; // x1
   MotionInfo_c *v2; // x0
 
-  if ( (byte_4B43F1C & 1) == 0 )
+  if ( (byte_4B014AB & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v1);
-    byte_4B43F1C = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v1);
+    byte_4B014AB = 1;
   }
   v2 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2219,10 +2219,10 @@ void __fastcall MotionInfo__set_IsRandom(bool value, const MethodInfo *method)
 {
   MotionInfo_c *v3; // x0
 
-  if ( (byte_4B43F27 & 1) == 0 )
+  if ( (byte_4B014B6 & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, method);
-    byte_4B43F27 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, method);
+    byte_4B014B6 = 1;
   }
   v3 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2238,10 +2238,10 @@ void __fastcall MotionInfo__set_IsSe(bool value, const MethodInfo *method)
 {
   MotionInfo_c *v3; // x0
 
-  if ( (byte_4B43F29 & 1) == 0 )
+  if ( (byte_4B014B8 & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, method);
-    byte_4B43F29 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, method);
+    byte_4B014B8 = 1;
   }
   v3 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2260,10 +2260,10 @@ void __fastcall MotionInfo__set_VoiceId(System_String_o *value, const MethodInfo
   MotionInfo_c *v5; // x0
   struct MotionInfo_StaticFields *static_fields; // x0
 
-  if ( (byte_4B43F21 & 1) == 0 )
+  if ( (byte_4B014B0 & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, method);
-    byte_4B43F21 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, method);
+    byte_4B014B0 = 1;
   }
   v5 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2273,7 +2273,7 @@ void __fastcall MotionInfo__set_VoiceId(System_String_o *value, const MethodInfo
   }
   static_fields = v5->static_fields;
   static_fields->_VoiceId_k__BackingField = value;
-  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->_VoiceId_k__BackingField, (int32_t)value, v2, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->_VoiceId_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -2281,10 +2281,10 @@ void __fastcall MotionInfo__set_VoiceIndex(int32_t value, const MethodInfo *meth
 {
   MotionInfo_c *v3; // x0
 
-  if ( (byte_4B43F25 & 1) == 0 )
+  if ( (byte_4B014B4 & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, method);
-    byte_4B43F25 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, method);
+    byte_4B014B4 = 1;
   }
   v3 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2303,10 +2303,10 @@ void __fastcall MotionInfo__set_VoiceServantId(System_String_o *value, const Met
   MotionInfo_c *v5; // x0
   struct MotionInfo_StaticFields *static_fields; // x0
 
-  if ( (byte_4B43F1B & 1) == 0 )
+  if ( (byte_4B014AA & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, method);
-    byte_4B43F1B = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, method);
+    byte_4B014AA = 1;
   }
   v5 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2316,7 +2316,7 @@ void __fastcall MotionInfo__set_VoiceServantId(System_String_o *value, const Met
   }
   static_fields = v5->static_fields;
   static_fields->_VoiceServantId_k__BackingField = value;
-  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->_VoiceServantId_k__BackingField, (int32_t)value, v2, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->_VoiceServantId_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -2325,10 +2325,10 @@ void __fastcall MotionInfo__set_VoiceTotalWeight(float value, const MethodInfo *
   __int64 v2; // x1
   MotionInfo_c *v4; // x0
 
-  if ( (byte_4B43F1F & 1) == 0 )
+  if ( (byte_4B014AE & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v2);
-    byte_4B43F1F = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v2);
+    byte_4B014AE = 1;
   }
   v4 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2347,10 +2347,10 @@ void __fastcall MotionInfo__set_VoiceType(System_String_o *value, const MethodIn
   MotionInfo_c *v5; // x0
   struct MotionInfo_StaticFields *static_fields; // x0
 
-  if ( (byte_4B43F23 & 1) == 0 )
+  if ( (byte_4B014B2 & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, method);
-    byte_4B43F23 = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, method);
+    byte_4B014B2 = 1;
   }
   v5 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2360,7 +2360,7 @@ void __fastcall MotionInfo__set_VoiceType(System_String_o *value, const MethodIn
   }
   static_fields = v5->static_fields;
   static_fields->_VoiceType_k__BackingField = value;
-  sub_1BDB81C((CGThumbnailListItem_o *)&static_fields->_VoiceType_k__BackingField, (int32_t)value, v2, v3);
+  sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->_VoiceType_k__BackingField, (int32_t)value, v2, v3);
 }
 
 
@@ -2369,10 +2369,10 @@ void __fastcall MotionInfo__set_VoiceWeight(float value, const MethodInfo *metho
   __int64 v2; // x1
   MotionInfo_c *v4; // x0
 
-  if ( (byte_4B43F1D & 1) == 0 )
+  if ( (byte_4B014AC & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo_TypeInfo, v2);
-    byte_4B43F1D = 1;
+    sub_1BC3008(&MotionInfo_TypeInfo, v2);
+    byte_4B014AC = 1;
   }
   v4 = MotionInfo_TypeInfo;
   if ( !MotionInfo_TypeInfo->_2.cctor_finished )
@@ -2391,15 +2391,15 @@ void __fastcall MotionInfo___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B43F35 & 1) == 0 )
+  if ( (byte_4B014C4 & 1) == 0 )
   {
-    sub_1BDB878(&MotionInfo___c_TypeInfo, v1);
-    byte_4B43F35 = 1;
+    sub_1BC3008(&MotionInfo___c_TypeInfo, v1);
+    byte_4B014C4 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BDBAC4(MotionInfo___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BC3254(MotionInfo___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   MotionInfo___c_TypeInfo->static_fields->__9 = (struct MotionInfo___c_o *)v2;
-  sub_1BDB81C((CGThumbnailListItem_o *)MotionInfo___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BC2FAC((CGThumbnailListItem_o *)MotionInfo___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 

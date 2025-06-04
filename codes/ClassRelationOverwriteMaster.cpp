@@ -1,16 +1,16 @@
 void __fastcall ClassRelationOverwriteMaster___ctor(ClassRelationOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B4480B & 1) == 0 )
+  if ( (byte_4B01DAE & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__,
       method);
-    byte_4B4480B = 1;
+    byte_4B01DAE = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     298,
-    (const MethodInfo_32E45D0 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
+    (const MethodInfo_32B1804 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
 }
 
 
@@ -25,12 +25,12 @@ ClassRelationOverwriteEntity_o *__fastcall ClassRelationOverwriteMaster__GetEnti
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B44809 & 1) == 0 )
+  if ( (byte_4B01DAC & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__,
       *(_QWORD *)&id);
-    byte_4B44809 = 1;
+    byte_4B01DAC = 1;
   }
   PK = (Il2CppObject *)ClassRelationOverwriteEntity__CreatePK(
                          id,
@@ -41,7 +41,7 @@ ClassRelationOverwriteEntity_o *__fastcall ClassRelationOverwriteMaster__GetEnti
   return (ClassRelationOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              PK,
-                                             (const MethodInfo_32E68F4 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
+                                             (const MethodInfo_32B3B28 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -57,12 +57,12 @@ bool __fastcall ClassRelationOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B4480A & 1) == 0 )
+  if ( (byte_4B01DAD & 1) == 0 )
   {
-    sub_1BDB878(
+    sub_1BC3008(
       &Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__,
       entity);
-    byte_4B4480A = 1;
+    byte_4B01DAD = 1;
   }
   PK = (Il2CppObject *)ClassRelationOverwriteEntity__CreatePK(
                          id,
@@ -74,7 +74,7 @@ bool __fastcall ClassRelationOverwriteMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32E6940 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_32B3B74 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
 }
 
 
@@ -107,16 +107,16 @@ bool __fastcall ClassRelationOverwriteMaster__getEntity(
   int32_t v30; // w2
   int32_t v31; // w3
 
-  if ( (byte_4B4480C & 1) == 0 )
+  if ( (byte_4B01DAF & 1) == 0 )
   {
-    sub_1BDB878(&int___TypeInfo, outEnt);
-    byte_4B4480C = 1;
+    sub_1BC3008(&int___TypeInfo, outEnt);
+    byte_4B01DAF = 1;
   }
   *outEnt = 0LL;
-  sub_1BDB81C((CGThumbnailListItem_o *)outEnt, 0, relationId, (const MethodInfo *)isAtkSide);
-  Entity = sub_1BDB920(int___TypeInfo, 4LL);
+  sub_1BC2FAC((CGThumbnailListItem_o *)outEnt, 0, relationId, (const MethodInfo *)isAtkSide);
+  Entity = sub_1BC30B0(int___TypeInfo, 4LL);
   if ( !Entity )
-    sub_1BDBAD4(0LL, v14);
+    sub_1BC3264(0LL, v14);
   v17 = *(_DWORD *)(Entity + 24);
   v18 = (_DWORD *)Entity;
   if ( !v17 )
@@ -161,7 +161,7 @@ bool __fastcall ClassRelationOverwriteMaster__getEntity(
   v29 = v18[6];
   if ( v29 <= 2 || (v18[10] = 0, v29 == 3) )
 LABEL_19:
-    sub_1BDBADC(Entity, v14, v15);
+    sub_1BC326C(Entity, v14, v15);
   v30 = v18[8];
   v31 = v18[9];
   v18[11] = 0;
