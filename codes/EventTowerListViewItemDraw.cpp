@@ -5,18 +5,18 @@ void __fastcall EventTowerListViewItemDraw___cctor(const MethodInfo *method)
   __int64 v3; // x1
   struct EventTowerListViewItemDraw_StaticFields *static_fields; // x0
 
-  if ( (byte_4AFCA65 & 1) == 0 )
+  if ( (byte_4B16F21 & 1) == 0 )
   {
-    sub_1BC3008(&EventTowerListViewItemDraw_TypeInfo, v1);
-    sub_1BC3008(&StringLiteral_19109/*"event_tower_rewardget_"*/, v2);
-    sub_1BC3008(&StringLiteral_19110/*"event_towerbanner_"*/, v3);
-    byte_4AFCA65 = 1;
+    sub_1BCAFF8(&EventTowerListViewItemDraw_TypeInfo, v1);
+    sub_1BCAFF8(&StringLiteral_19123/*"event_tower_rewardget_"*/, v2);
+    sub_1BCAFF8(&StringLiteral_19124/*"event_towerbanner_"*/, v3);
+    byte_4B16F21 = 1;
   }
-  EventTowerListViewItemDraw_TypeInfo->static_fields->BANNER_NAME = (struct System_String_o *)StringLiteral_19110/*"event_towerbanner_"*/;
-  sub_1BC2FAC(EventTowerListViewItemDraw_TypeInfo->static_fields);
+  EventTowerListViewItemDraw_TypeInfo->static_fields->BANNER_NAME = (struct System_String_o *)StringLiteral_19124/*"event_towerbanner_"*/;
+  sub_1BCAF9C(EventTowerListViewItemDraw_TypeInfo->static_fields);
   static_fields = EventTowerListViewItemDraw_TypeInfo->static_fields;
-  static_fields->REWARD_GET_NAME = (struct System_String_o *)StringLiteral_19109/*"event_tower_rewardget_"*/;
-  sub_1BC2FAC(&static_fields->REWARD_GET_NAME);
+  static_fields->REWARD_GET_NAME = (struct System_String_o *)StringLiteral_19123/*"event_tower_rewardget_"*/;
+  sub_1BCAF9C(&static_fields->REWARD_GET_NAME);
 }
 
 
@@ -72,14 +72,14 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
   int32_t eventId; // [xsp+Ch] [xbp-34h] BYREF
 
   v5 = item;
-  if ( (byte_4AFCA64 & 1) == 0 )
+  if ( (byte_4B16F20 & 1) == 0 )
   {
-    sub_1BC3008(&EventRewardRootComponent_TypeInfo, item);
-    sub_1BC3008(&EventTowerListViewItemDraw_TypeInfo, v7);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v8);
-    sub_1BC3008(&StringLiteral_5688/*"EVENT_TOWER_HIDE_COND"*/, v9);
-    sub_1BC3008(&StringLiteral_1120/*"00"*/, v10);
-    byte_4AFCA64 = 1;
+    sub_1BCAFF8(&EventRewardRootComponent_TypeInfo, item);
+    sub_1BCAFF8(&EventTowerListViewItemDraw_TypeInfo, v7);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v8);
+    sub_1BCAFF8(&StringLiteral_5692/*"EVENT_TOWER_HIDE_COND"*/, v9);
+    sub_1BCAFF8(&StringLiteral_1120/*"00"*/, v10);
+    byte_4B16F20 = 1;
   }
   if ( v5 && mode )
   {
@@ -112,7 +112,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
                 goto LABEL_51;
               eventId = itemInfo->fields.eventId;
               v17 = System_Int32__ToString((int32_t)&eventId, 0LL);
-              v16 = System_String__Concat_62386896(v14, v17, (System_String_o *)StringLiteral_1120/*"00"*/, 0LL);
+              v16 = System_String__Concat_62488672(v14, v17, (System_String_o *)StringLiteral_1120/*"00"*/, 0LL);
             }
             else
             {
@@ -120,7 +120,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
                 goto LABEL_51;
               eventId = itemInfo->fields.boardImageId;
               v15 = System_Int32__ToString((int32_t)&eventId, 0LL);
-              v16 = System_String__Concat_62348648(v14, v15, 0LL);
+              v16 = System_String__Concat_62450424(v14, v15, 0LL);
             }
             v18 = v16;
             baseSprite = this->fields.baseSprite;
@@ -134,7 +134,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
               if ( rewardGetInfo )
               {
                 v21 = clearReward[7] <= 1 ? -1 : clearReward[7];
-                ItemIconComponent__SetGift_39952716(
+                ItemIconComponent__SetGift_40107980(
                   (ItemIconComponent_o *)rewardGetInfo,
                   clearReward[5],
                   clearReward[6],
@@ -189,7 +189,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
                               goto LABEL_51;
                             eventId = v25->fields.eventId;
                             v30 = System_Int32__ToString((int32_t)&eventId, 0LL);
-                            v29 = System_String__Concat_62386896(v27, v30, (System_String_o *)StringLiteral_1120/*"00"*/, 0LL);
+                            v29 = System_String__Concat_62488672(v27, v30, (System_String_o *)StringLiteral_1120/*"00"*/, 0LL);
                           }
                           else
                           {
@@ -197,7 +197,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
                               goto LABEL_51;
                             eventId = v25->fields.boardImageId;
                             v28 = System_Int32__ToString((int32_t)&eventId, 0LL);
-                            v29 = System_String__Concat_62348648(v27, v28, 0LL);
+                            v29 = System_String__Concat_62450424(v27, v28, 0LL);
                           }
                           v31 = v29;
                           rewardGetSprite = this->fields.rewardGetSprite;
@@ -219,7 +219,7 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
                             v33 = this->fields.rewardCondMessage;
                             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                            rewardGetInfo = LocalizationManager__Get((System_String_o *)StringLiteral_5688/*"EVENT_TOWER_HIDE_COND"*/, 0LL);
+                            rewardGetInfo = LocalizationManager__Get((System_String_o *)StringLiteral_5692/*"EVENT_TOWER_HIDE_COND"*/, 0LL);
                             if ( v33 )
                             {
                               UILabel__set_text(v33, (System_String_o *)rewardGetInfo, 0LL);
@@ -238,6 +238,6 @@ void __fastcall EventTowerListViewItemDraw__SetItem(
       }
     }
 LABEL_51:
-    sub_1BC3264(rewardGetInfo, item);
+    sub_1BCB254(rewardGetInfo, item);
   }
 }

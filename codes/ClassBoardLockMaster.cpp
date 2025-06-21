@@ -1,14 +1,14 @@
 void __fastcall ClassBoardLockMaster___ctor(ClassBoardLockMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B01D99 & 1) == 0 )
+  if ( (byte_4B1C298 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int___ctor__, method);
-    byte_4B01D99 = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int___ctor__, method);
+    byte_4B1C298 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     434,
-    (const MethodInfo_32ACD4C *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int___ctor__);
+    (const MethodInfo_32C5ADC *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int___ctor__);
 }
 
 
@@ -24,24 +24,24 @@ bool __fastcall ClassBoardLockMaster__IsOpen(ClassBoardLockMaster_o *this, int32
   int32_t klass; // w21
   int64_t monitor_low; // x20
 
-  if ( (byte_4B01D98 & 1) == 0 )
+  if ( (byte_4B1C297 & 1) == 0 )
   {
-    sub_1BC3008(&CondType_TypeInfo, *(_QWORD *)&releaseId);
-    sub_1BC3008(&Method_DataManager_GetMaster_ClassBoardLockMaster___, v4);
-    sub_1BC3008(&DataManager_TypeInfo, v5);
-    sub_1BC3008(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__, v6);
-    byte_4B01D98 = 1;
+    sub_1BCAFF8(&CondType_TypeInfo, *(_QWORD *)&releaseId);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_ClassBoardLockMaster___, v4);
+    sub_1BCAFF8(&DataManager_TypeInfo, v5);
+    sub_1BCAFF8(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__, v6);
+    byte_4B1C297 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
   if ( !Master_object
     || (Master_object = DataMasterBase_object__object__int___GetEntity(
                           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                           releaseId,
-                          (const MethodInfo_32AF070 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__)) == 0LL )
+                          (const MethodInfo_32C7E00 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__)) == 0LL )
   {
-    sub_1BC3264(Master_object, v8);
+    sub_1BCB254(Master_object, v8);
   }
   klass_high = HIDWORD(Master_object[3].klass);
   if ( !klass_high )

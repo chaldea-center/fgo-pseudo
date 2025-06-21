@@ -1,14 +1,14 @@
 void __fastcall WarBoardStageDetailMaster___ctor(WarBoardStageDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B031AE & 1) == 0 )
+  if ( (byte_4B1D6B7 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_WarBoardStageDetailMaster__WarBoardStageDetailEntity__string___ctor__, method);
-    byte_4B031AE = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_WarBoardStageDetailMaster__WarBoardStageDetailEntity__string___ctor__, method);
+    byte_4B1D6B7 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     423,
-    (const MethodInfo_32B1804 *)Method_DataMasterBase_WarBoardStageDetailMaster__WarBoardStageDetailEntity__string___ctor__);
+    (const MethodInfo_32CA594 *)Method_DataMasterBase_WarBoardStageDetailMaster__WarBoardStageDetailEntity__string___ctor__);
 }
 
 
@@ -26,20 +26,20 @@ WarBoardStageDetailEntity_o *__fastcall WarBoardStageDetailMaster__GetWarBoardSt
   int32_t v11; // w23
   WarBoardStageDetailEntity_o *result; // x0
 
-  if ( (byte_4B031AF & 1) == 0 )
+  if ( (byte_4B1D6B8 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_ObjectModel_Collection_WarBoardStageDetailEntity__get_Count__,
       *(_QWORD *)&stageId);
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_WarBoardStageDetailEntity__get_Item__, v7);
-    byte_4B031AF = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_WarBoardStageDetailEntity__get_Item__, v7);
+    byte_4B1D6B8 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_13;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_324A858 *)Method_System_Collections_ObjectModel_Collection_WarBoardStageDetailEntity__get_Count__);
+            (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_WarBoardStageDetailEntity__get_Count__);
   if ( Count >= 1 )
   {
     v10 = Count;
@@ -52,7 +52,7 @@ WarBoardStageDetailEntity_o *__fastcall WarBoardStageDetailMaster__GetWarBoardSt
       result = (WarBoardStageDetailEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                 list,
                                                 v11,
-                                                (const MethodInfo_324A8E8 *)Method_System_Collections_ObjectModel_Collection_WarBoardStageDetailEntity__get_Item__);
+                                                (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_WarBoardStageDetailEntity__get_Item__);
       if ( result
         && result->fields.stageId == stageId
         && result->fields.warBoardCommonReleaseId == warBoardCommonReleaseId )
@@ -63,7 +63,7 @@ WarBoardStageDetailEntity_o *__fastcall WarBoardStageDetailMaster__GetWarBoardSt
         return 0LL;
     }
 LABEL_13:
-    sub_1BC3264(list, *(_QWORD *)&stageId);
+    sub_1BCB254(list, *(_QWORD *)&stageId);
   }
   return 0LL;
 }

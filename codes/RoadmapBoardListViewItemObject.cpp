@@ -1,9 +1,9 @@
 void __fastcall RoadmapBoardListViewItemObject___ctor(RoadmapBoardListViewItemObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AFC418 & 1) == 0 )
+  if ( (byte_4B167F8 & 1) == 0 )
   {
-    sub_1BC3008(&ListViewObject_TypeInfo, method);
-    byte_4AFC418 = 1;
+    sub_1BCAFF8(&ListViewObject_TypeInfo, method);
+    byte_4B167F8 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -28,23 +28,23 @@ void __fastcall RoadmapBoardListViewItemObject__SetItem(
   RoadmapBoardListViewItemDraw_o *itemDraw; // x0
   __int64 methodPtr_low; // x9
 
-  if ( (byte_4AFC417 & 1) == 0 )
+  if ( (byte_4B167F7 & 1) == 0 )
   {
-    sub_1BC3008(&RoadmapBoardListViewItem_TypeInfo, item);
-    byte_4AFC417 = 1;
+    sub_1BCAFF8(&RoadmapBoardListViewItem_TypeInfo, item);
+    byte_4B167F7 = 1;
   }
-  ListViewObject__SetItem_42800124((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_42963052((ListViewObject_o *)this, item, seed, 0LL);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_1BC3264(itemDraw, v7);
+    sub_1BCB254(itemDraw, v7);
   if ( item )
   {
     methodPtr_low = LOBYTE(RoadmapBoardListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
     if ( LOBYTE(item->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (RoadmapBoardListViewItem_c *)item->klass->_2.typeHierarchy[methodPtr_low - 1] != RoadmapBoardListViewItem_TypeInfo )
     {
-      itemDraw = (RoadmapBoardListViewItemDraw_o *)sub_1BC3524(item);
+      itemDraw = (RoadmapBoardListViewItemDraw_o *)sub_1BCB514(item);
       goto LABEL_9;
     }
   }

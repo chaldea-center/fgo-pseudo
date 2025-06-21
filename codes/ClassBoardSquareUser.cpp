@@ -8,7 +8,7 @@ void __fastcall ClassBoardSquareUser___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.squareEntity = masterEntity;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.squareEntity, (int32_t)masterEntity, v5, v6);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.squareEntity, (int32_t)masterEntity, v5, v6);
 }
 
 
@@ -25,15 +25,15 @@ void __fastcall ClassBoardSquareUser__OnReleaseResponse(
   struct System_Action_IClassBoardSquareUser__o *releaseResponseCallback; // x8
 
   v4 = this;
-  if ( (byte_4B05981 & 1) == 0 )
+  if ( (byte_4B1FEC4 & 1) == 0 )
   {
-    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, result);
-    this = (ClassBoardSquareUser_o *)sub_1BC3008(&StringLiteral_21997/*"ng"*/, v5);
-    byte_4B05981 = 1;
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, result);
+    this = (ClassBoardSquareUser_o *)sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v5);
+    byte_4B1FEC4 = 1;
   }
   if ( !result )
     goto LABEL_11;
-  if ( System_String__Equals_62383952(result, (System_String_o *)StringLiteral_21997/*"ng"*/, 0LL) )
+  if ( System_String__Equals_62485728(result, (System_String_o *)StringLiteral_22015/*"ng"*/, 0LL) )
     return;
   userUpdateEvent = v4->fields.userUpdateEvent;
   if ( userUpdateEvent )
@@ -48,11 +48,11 @@ void __fastcall ClassBoardSquareUser__OnReleaseResponse(
       v4,
       *(_QWORD *)&releaseResponseCallback->fields.extra_arg);
   v4->fields.releaseResponseCallback = 0LL;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v4->fields.releaseResponseCallback, 0, v6, v7);
-  this = (ClassBoardSquareUser_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v4->fields.releaseResponseCallback, 0, v6, v7);
+  this = (ClassBoardSquareUser_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
 LABEL_11:
-    sub_1BC3264(this, result);
+    sub_1BCB254(this, result);
   CommonUI__SetConnect((CommonUI_o *)this, 0, 0LL);
 }
 
@@ -92,16 +92,16 @@ void __fastcall ClassBoardSquareUser__RequestRelease(
   ClassBoardReleaseRequestData_o p_data; // 0:x0.8
   ClassBoardReleaseRequestData_o v20; // 0:x1.8
 
-  if ( (byte_4B05980 & 1) == 0 )
+  if ( (byte_4B1FEC3 & 1) == 0 )
   {
-    sub_1BC3008(&Method_ClassBoardSquareUser_OnReleaseResponse__, callback);
-    sub_1BC3008(&Method_NetworkManager_getRequest_ClassBoardReleaseSquareRequest___, v5);
-    sub_1BC3008(&NetworkManager_TypeInfo, v6);
-    sub_1BC3008(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    byte_4B05980 = 1;
+    sub_1BCAFF8(&Method_ClassBoardSquareUser_OnReleaseResponse__, callback);
+    sub_1BCAFF8(&Method_NetworkManager_getRequest_ClassBoardReleaseSquareRequest___, v5);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v6);
+    sub_1BCAFF8(&NetworkManager_ResultCallbackFunc_TypeInfo, v7);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
+    byte_4B1FEC3 = 1;
   }
-  v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1BC3254(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1BCB244(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v9,
     (Il2CppObject *)this,
@@ -111,10 +111,10 @@ void __fastcall ClassBoardSquareUser__RequestRelease(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v9,
-                     (const MethodInfo_3089B54 *)Method_NetworkManager_getRequest_ClassBoardReleaseSquareRequest___);
+                     (const MethodInfo_30A28E4 *)Method_NetworkManager_getRequest_ClassBoardReleaseSquareRequest___);
   this->fields.releaseResponseCallback = callback;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.releaseResponseCallback, (int32_t)callback, v11, v12);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.releaseResponseCallback, (int32_t)callback, v11, v12);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__SetConnect((CommonUI_o *)Instance, 1, 0LL), (squareEntity = this->fields.squareEntity) == 0LL)
     || (classBoardBaseId = squareEntity->fields.classBoardBaseId,
@@ -124,7 +124,7 @@ void __fastcall ClassBoardSquareUser__RequestRelease(
         ClassBoardReleaseRequestData___ctor(p_data, classBoardBaseId, id, 0LL),
         !Request_object) )
   {
-    sub_1BC3264(Instance, v14);
+    sub_1BCB254(Instance, v14);
   }
   v20 = data;
   ClassBoardReleaseSquareRequest__beginRequest((ClassBoardReleaseSquareRequest_o *)Request_object, v20, 0LL);
@@ -148,10 +148,10 @@ void __fastcall ClassBoardSquareUser__add_userUpdateEvent(
   System_Action_IClassBoardSquareUser__o *v14; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_4B0597D & 1) == 0 )
+  if ( (byte_4B1FEC0 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_IClassBoardSquareUser__TypeInfo, value);
-    byte_4B0597D = 1;
+    sub_1BCAFF8(&System_Action_IClassBoardSquareUser__TypeInfo, value);
+    byte_4B1FEC0 = 1;
   }
   userUpdateEvent = this->fields.userUpdateEvent;
   p_fields = &this->fields;
@@ -165,17 +165,17 @@ void __fastcall ClassBoardSquareUser__add_userUpdateEvent(
       goto LABEL_8;
     }
     v9 = v8;
-    v10 = sub_1BC3144(v8, System_Action_IClassBoardSquareUser__TypeInfo);
+    v10 = sub_1BCB134(v8, System_Action_IClassBoardSquareUser__TypeInfo);
     if ( !v10 )
       break;
 LABEL_8:
-    v11 = sub_1BFD098(p_fields, v10, v6);
+    v11 = sub_1C05088(p_fields, v10, v6);
     v12 = v6 == (System_Delegate_o *)v11;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_1BC3524(v9);
+  sub_1BCB514(v9);
   ClassBoardSquareUser__remove_userUpdateEvent(v13, v14, v15);
 }
 
@@ -186,17 +186,17 @@ bool __fastcall ClassBoardSquareUser__get_IsRelease(ClassBoardSquareUser_o *this
   Il2CppObject *Master_object; // x0
   __int64 v5; // x1
 
-  if ( (byte_4B0597F & 1) == 0 )
+  if ( (byte_4B1FEC2 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMaster_UserClassBoardSquareMaster___, method);
-    sub_1BC3008(&DataManager_TypeInfo, v3);
-    byte_4B0597F = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMaster_UserClassBoardSquareMaster___, method);
+    sub_1BCAFF8(&DataManager_TypeInfo, v3);
+    byte_4B1FEC2 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserClassBoardSquareMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_UserClassBoardSquareMaster___);
   if ( !Master_object )
-    sub_1BC3264(0LL, v5);
+    sub_1BCB254(0LL, v5);
   return UserClassBoardSquareMaster__HasSquare(
            (UserClassBoardSquareMaster_o *)Master_object,
            this->fields.squareEntity,
@@ -220,10 +220,10 @@ void __fastcall ClassBoardSquareUser__remove_userUpdateEvent(
   ClassBoardSquareUser_o *v13; // x0
   const MethodInfo *v14; // x1
 
-  if ( (byte_4B0597E & 1) == 0 )
+  if ( (byte_4B1FEC1 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_IClassBoardSquareUser__TypeInfo, value);
-    byte_4B0597E = 1;
+    sub_1BCAFF8(&System_Action_IClassBoardSquareUser__TypeInfo, value);
+    byte_4B1FEC1 = 1;
   }
   userUpdateEvent = this->fields.userUpdateEvent;
   p_fields = &this->fields;
@@ -237,16 +237,16 @@ void __fastcall ClassBoardSquareUser__remove_userUpdateEvent(
       goto LABEL_8;
     }
     v9 = v8;
-    v10 = sub_1BC3144(v8, System_Action_IClassBoardSquareUser__TypeInfo);
+    v10 = sub_1BCB134(v8, System_Action_IClassBoardSquareUser__TypeInfo);
     if ( !v10 )
       break;
 LABEL_8:
-    v11 = sub_1BFD098(p_fields, v10, v6);
+    v11 = sub_1C05088(p_fields, v10, v6);
     v12 = v6 == (System_Delegate_o *)v11;
     v6 = (System_Delegate_o *)v11;
     if ( v12 )
       return;
   }
-  sub_1BC3524(v9);
+  sub_1BCB514(v9);
   ClassBoardSquareUser__get_IsRelease(v13, v14);
 }

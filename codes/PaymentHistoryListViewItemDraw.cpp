@@ -31,7 +31,7 @@ void __fastcall PaymentHistoryListViewItemDraw__SetItem(
         (upsideMessageLabel = (UnityEngine_Component_o *)this->fields.bottomMessageLabel) == 0LL) )
   {
 LABEL_9:
-    sub_1BC3264(upsideMessageLabel, item);
+    sub_1BCB254(upsideMessageLabel, item);
   }
   UILabel__set_text((UILabel_o *)upsideMessageLabel, item->fields._BottomMessage_k__BackingField, 0LL);
 }

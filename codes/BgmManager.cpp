@@ -13,22 +13,22 @@ void __fastcall BgmManager___cctor(const MethodInfo *method)
   const MethodInfo *v11; // x3
   struct BgmManager_StaticFields *v12; // x8
 
-  if ( (byte_4B01699 & 1) == 0 )
+  if ( (byte_4B1BB8C & 1) == 0 )
   {
-    sub_1BC3008(&BgmManager_TypeInfo, v1);
-    sub_1BC3008(&StringLiteral_2892/*"BGM_CHALDEA_1"*/, v4);
-    sub_1BC3008(&StringLiteral_2893/*"BGM_CHALDEA_2"*/, v5);
-    byte_4B01699 = 1;
+    sub_1BCAFF8(&BgmManager_TypeInfo, v1);
+    sub_1BCAFF8(&StringLiteral_2894/*"BGM_CHALDEA_1"*/, v4);
+    sub_1BCAFF8(&StringLiteral_2895/*"BGM_CHALDEA_2"*/, v5);
+    byte_4B1BB8C = 1;
   }
   static_fields = BgmManager_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->DEFAULT_VOLUME = 0x3DCCCCCD3F800000LL;
-  v7 = StringLiteral_2892/*"BGM_CHALDEA_1"*/;
-  static_fields->DEFAULT_MAIN_BGM_NAME = (struct System_String_o *)StringLiteral_2892/*"BGM_CHALDEA_1"*/;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->DEFAULT_MAIN_BGM_NAME, v7, v2, v3);
-  v8 = StringLiteral_2893/*"BGM_CHALDEA_2"*/;
+  v7 = StringLiteral_2894/*"BGM_CHALDEA_1"*/;
+  static_fields->DEFAULT_MAIN_BGM_NAME = (struct System_String_o *)StringLiteral_2894/*"BGM_CHALDEA_1"*/;
+  sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->DEFAULT_MAIN_BGM_NAME, v7, v2, v3);
+  v8 = StringLiteral_2895/*"BGM_CHALDEA_2"*/;
   v9 = BgmManager_TypeInfo->static_fields;
-  v9->COSMOS_IN_THE_LOSTBELT_BGM_NAME = (struct System_String_o *)StringLiteral_2893/*"BGM_CHALDEA_2"*/;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v9->COSMOS_IN_THE_LOSTBELT_BGM_NAME, v8, v10, v11);
+  v9->COSMOS_IN_THE_LOSTBELT_BGM_NAME = (struct System_String_o *)StringLiteral_2895/*"BGM_CHALDEA_2"*/;
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v9->COSMOS_IN_THE_LOSTBELT_BGM_NAME, v8, v10, v11);
   v12 = BgmManager_TypeInfo->static_fields;
   *(_QWORD *)&v12->ADD_BIND_MAX = 0x400000005LL;
   v12->isMute = 0;
@@ -52,36 +52,36 @@ void __fastcall BgmManager___ctor(BgmManager_o *this, const MethodInfo *method)
   int32_t v14; // w2
   const MethodInfo *v15; // x3
 
-  if ( (byte_4B01698 & 1) == 0 )
+  if ( (byte_4B1BB8B & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase___ctor__, method);
-    sub_1BC3008(&Method_System_Collections_Generic_List_string___ctor__, v3);
-    sub_1BC3008(&System_Collections_Generic_List_BgmPlayerBase__TypeInfo, v4);
-    sub_1BC3008(&System_Collections_Generic_List_string__TypeInfo, v5);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager___ctor__, v6);
-    byte_4B01698 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase___ctor__, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string___ctor__, v3);
+    sub_1BCAFF8(&System_Collections_Generic_List_BgmPlayerBase__TypeInfo, v4);
+    sub_1BCAFF8(&System_Collections_Generic_List_string__TypeInfo, v5);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager___ctor__, v6);
+    byte_4B1BB8B = 1;
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_string__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.addBindList = (struct System_Collections_Generic_List_string__o *)v7;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.addBindList, (int32_t)v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_string__TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.addBindList, (int32_t)v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.loadingBgmCueNameList = (struct System_Collections_Generic_List_string__o *)v10;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.loadingBgmCueNameList, (int32_t)v10, v11, v12);
-  v13 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_BgmPlayerBase__TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.loadingBgmCueNameList, (int32_t)v10, v11, v12);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_BgmPlayerBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_BgmPlayerBase___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_BgmPlayerBase___ctor__);
   this->fields.bgmPlayers = (struct System_Collections_Generic_List_BgmPlayerBase__o *)v13;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.bgmPlayers, (int32_t)v13, v14, v15);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.bgmPlayers, (int32_t)v13, v14, v15);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_38E0160 *)Method_SingletonMonoBehaviour_BgmManager___ctor__);
+    (const MethodInfo_38F8EF0 *)Method_SingletonMonoBehaviour_BgmManager___ctor__);
 }
 
 
@@ -100,26 +100,25 @@ void __fastcall BgmManager__ChangePlayerVolume(System_String_o *bgmName, float v
   Il2CppObject *Instance; // x20
   System_Collections_Generic_List_object__o *klass; // x20
   System_Predicate_object__o *v17; // x21
-  BgmPlayerBase_o *v18; // x0
-  const MethodInfo *v19; // x1
+  Il2CppObject *v18; // x0
 
-  if ( (byte_4B0166F & 1) == 0 )
+  if ( (byte_4B1BB62 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__Find__, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BC3008(&System_Predicate_BgmPlayerBase__TypeInfo, v6);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v7);
-    sub_1BC3008(&Method_BgmManager___c__DisplayClass29_0__ChangePlayerVolume_b__0__, v8);
-    sub_1BC3008(&BgmManager___c__DisplayClass29_0_TypeInfo, v9);
-    byte_4B0166F = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__Find__, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BCAFF8(&System_Predicate_BgmPlayerBase__TypeInfo, v6);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v7);
+    sub_1BCAFF8(&Method_BgmManager___c__DisplayClass29_0__ChangePlayerVolume_b__0__, v8);
+    sub_1BCAFF8(&BgmManager___c__DisplayClass29_0_TypeInfo, v9);
+    byte_4B1BB62 = 1;
   }
-  v10 = sub_1BC3254(BgmManager___c__DisplayClass29_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v10, 0LL);
+  v10 = sub_1BCB244(BgmManager___c__DisplayClass29_0_TypeInfo);
+  BgmManager___c__DisplayClass29_0___ctor((BgmManager___c__DisplayClass29_0_o *)v10, 0LL);
   if ( !v10 )
     goto LABEL_12;
   *(_QWORD *)(v10 + 16) = bgmName;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v10 + 16), (int32_t)bgmName, v13, v14);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v10 + 16), (int32_t)bgmName, v13, v14);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v11 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
@@ -128,7 +127,7 @@ void __fastcall BgmManager__ChangePlayerVolume(System_String_o *bgmName, float v
     if ( Instance )
     {
       klass = (System_Collections_Generic_List_object__o *)Instance[4].klass;
-      v17 = (System_Predicate_object__o *)sub_1BC3254(System_Predicate_BgmPlayerBase__TypeInfo);
+      v17 = (System_Predicate_object__o *)sub_1BCB244(System_Predicate_BgmPlayerBase__TypeInfo);
       System_Predicate_object____ctor(
         v17,
         (Il2CppObject *)v10,
@@ -136,20 +135,17 @@ void __fastcall BgmManager__ChangePlayerVolume(System_String_o *bgmName, float v
         0LL);
       if ( klass )
       {
-        v18 = (BgmPlayerBase_o *)System_Collections_Generic_List_object___Find(
-                                   klass,
-                                   (System_Predicate_T__o *)v17,
-                                   (const MethodInfo_36A14A8 *)Method_System_Collections_Generic_List_BgmPlayerBase__Find__);
+        v18 = System_Collections_Generic_List_object___Find(
+                klass,
+                (System_Predicate_T__o *)v17,
+                (const MethodInfo_36BA238 *)Method_System_Collections_Generic_List_BgmPlayerBase__Find__);
         if ( v18 )
-        {
-          v18->fields.bgmVolume = volume;
-          BgmPlayerBase__UpdateVolume(v18, v19);
-        }
+          BgmPlayerBase__set_BgmVolume((BgmPlayerBase_o *)v18, volume, 0LL);
         return;
       }
     }
 LABEL_12:
-    sub_1BC3264(v11, v12);
+    sub_1BCB254(v11, v12);
   }
 }
 
@@ -161,27 +157,30 @@ System_Collections_IEnumerator_o *__fastcall BgmManager__CoWaitSameAudioLoading(
         const MethodInfo *method)
 {
   __int64 v7; // x22
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  __int64 v8; // x0
+  __int64 v9; // x1
   int32_t v10; // w2
   const MethodInfo *v11; // x3
   int32_t v12; // w2
   const MethodInfo *v13; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
 
-  if ( (byte_4B0168C & 1) == 0 )
+  if ( (byte_4B1BB7F & 1) == 0 )
   {
-    sub_1BC3008(&BgmManager__CoWaitSameAudioLoading_d__63_TypeInfo, bgmName);
-    byte_4B0168C = 1;
+    sub_1BCAFF8(&BgmManager__CoWaitSameAudioLoading_d__63_TypeInfo, bgmName);
+    byte_4B1BB7F = 1;
   }
-  v7 = sub_1BC3254(BgmManager__CoWaitSameAudioLoading_d__63_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v7, 0LL);
-  *(_DWORD *)(v7 + 16) = 0;
+  v7 = sub_1BCB244(BgmManager__CoWaitSameAudioLoading_d__63_TypeInfo);
+  BgmManager__CoWaitSameAudioLoading_d__63___ctor((BgmManager__CoWaitSameAudioLoading_d__63_o *)v7, 0, 0LL);
+  if ( !v7 )
+    sub_1BCB254(v8, v9);
   *(_QWORD *)(v7 + 32) = this;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v8, v9);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v10, v11);
   *(_QWORD *)(v7 + 40) = bgmName;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v7 + 40), (int32_t)bgmName, v10, v11);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v7 + 40), (int32_t)bgmName, v12, v13);
   *(_QWORD *)(v7 + 48) = finishCallback;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v7 + 48), (int32_t)finishCallback, v12, v13);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v7 + 48), (int32_t)finishCallback, v14, v15);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -194,20 +193,20 @@ void __fastcall BgmManager__Enable_KeepSubBgm(bool value, const MethodInfo *meth
   __int64 v6; // x1
   int v7; // w9
 
-  if ( (byte_4B01682 & 1) == 0 )
+  if ( (byte_4B1BB75 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v3);
-    byte_4B01682 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v3);
+    byte_4B1BB75 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v5 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( !v5 )
   {
     if ( !Instance )
-      sub_1BC3264(v5, v6);
+      sub_1BCB254(v5, v6);
     if ( value )
       v7 = 1;
     else
@@ -220,10 +219,10 @@ void __fastcall BgmManager__Enable_KeepSubBgm(bool value, const MethodInfo *meth
 System_Collections_Generic_IEnumerable_T__o *__fastcall BgmManager__EnumeratePlayersHavingBgmName_object_(
         BgmManager_o *this,
         System_String_o *bgmNameFilter,
-        const MethodInfo_2FF34C4 *method)
+        const MethodInfo_300C104 *method)
 {
   long double v3; // q0
-  const MethodInfo_2FF34C4_RGCTXs *rgctx_data; // x8
+  const MethodInfo_300C104_RGCTXs *rgctx_data; // x8
   __int64 _0_BgmManager___c__DisplayClass54_0_T; // x0
   __int64 v9; // x22
   __int64 v10; // x0
@@ -233,14 +232,14 @@ System_Collections_Generic_IEnumerable_T__o *__fastcall BgmManager__EnumeratePla
   __int64 v14; // x21
   System_Collections_Generic_IEnumerable_TResult__o *v15; // x0
   long double inited; // q0
-  const MethodInfo_2FF34C4_RGCTXs *v17; // x8
+  const MethodInfo_300C104_RGCTXs *v17; // x8
   System_Collections_Generic_IEnumerable_TSource__o *v18; // x20
   __int64 _5_System_Func_T__bool; // x0
   System_Func_object__bool__o *v20; // x21
   __int64 _6_BgmManager___c__54_T; // x0
   Il2CppClass *v22; // x0
   Il2CppClass *v23; // x0
-  const MethodInfo_2FF34C4_RGCTXs *v24; // x8
+  const MethodInfo_300C104_RGCTXs *v24; // x8
   __int64 v25; // x0
   __int64 v26; // x8
   Il2CppObject *v27; // x22
@@ -253,108 +252,108 @@ System_Collections_Generic_IEnumerable_T__o *__fastcall BgmManager__EnumeratePla
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C134C8(method);
+    sub_1C1B4B8(method);
     rgctx_data = method->rgctx_data;
   }
   _0_BgmManager___c__DisplayClass54_0_T = (__int64)rgctx_data->_0_BgmManager___c__DisplayClass54_0_T_;
   if ( (BYTE5(rgctx_data->_0_BgmManager___c__DisplayClass54_0_T_->vtable[0].methodPtr) & 1) == 0 )
-    _0_BgmManager___c__DisplayClass54_0_T = sub_1C1346C(v3);
-  v9 = sub_1BC3254(_0_BgmManager___c__DisplayClass54_0_T);
+    _0_BgmManager___c__DisplayClass54_0_T = sub_1C1B45C(v3);
+  v9 = sub_1BCB244(_0_BgmManager___c__DisplayClass54_0_T);
   BgmManager___c__DisplayClass54_0_object____ctor(
     (BgmManager___c__DisplayClass54_0_T__o *)v9,
-    (const MethodInfo_31CFDD0 *)method->rgctx_data->_1_BgmManager___c__DisplayClass54_0_T___ctor);
+    (const MethodInfo_31E8B60 *)method->rgctx_data->_1_BgmManager___c__DisplayClass54_0_T___ctor);
   if ( !v9 )
-    sub_1BC3264(v10, v11);
+    sub_1BCB254(v10, v11);
   *(_QWORD *)(v9 + 16) = bgmNameFilter;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)bgmNameFilter, v12, v13);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v9 + 16), (int32_t)bgmNameFilter, v12, v13);
   v14 = *(_QWORD *)(v9 + 16);
   v15 = System_Linq_Enumerable__OfType_object_(
           (System_Collections_IEnumerable_o *)this->fields.bgmPlayers,
-          (const MethodInfo_302D068 *)method->rgctx_data->_2_System_Linq_Enumerable_OfType_T_);
+          (const MethodInfo_3045CA8 *)method->rgctx_data->_2_System_Linq_Enumerable_OfType_T_);
   v17 = method->rgctx_data;
   v18 = (System_Collections_Generic_IEnumerable_TSource__o *)v15;
   if ( v14 )
   {
     _5_System_Func_T__bool = (__int64)v17->_5_System_Func_T__bool_;
     if ( (*(_BYTE *)(_5_System_Func_T__bool + 309) & 1) == 0 )
-      _5_System_Func_T__bool = sub_1C1346C(inited);
-    v20 = (System_Func_object__bool__o *)sub_1BC3254(_5_System_Func_T__bool);
+      _5_System_Func_T__bool = sub_1C1B45C(inited);
+    v20 = (System_Func_object__bool__o *)sub_1BCB244(_5_System_Func_T__bool);
     System_Func_object__bool____ctor(
       v20,
       (Il2CppObject *)v9,
       (intptr_t)method->rgctx_data->_10_BgmManager___c__DisplayClass54_0_T___EnumeratePlayersHavingBgmName_b__1,
-      (const MethodInfo_353ED58 *)method->rgctx_data->_8_System_Func_T__bool___ctor);
+      (const MethodInfo_3557AE8 *)method->rgctx_data->_8_System_Func_T__bool___ctor);
   }
   else
   {
     _6_BgmManager___c__54_T = (__int64)v17->_6_BgmManager___c__54_T_;
     if ( (*(_BYTE *)(_6_BgmManager___c__54_T + 309) & 1) == 0 )
-      _6_BgmManager___c__54_T = sub_1C1346C(inited);
+      _6_BgmManager___c__54_T = sub_1C1B45C(inited);
     if ( !*(_DWORD *)(_6_BgmManager___c__54_T + 224) )
       inited = j_il2cpp_runtime_class_init_0(_6_BgmManager___c__54_T);
     v22 = method->rgctx_data->_6_BgmManager___c__54_T_;
     if ( (BYTE5(v22->vtable[0].methodPtr) & 1) == 0 )
-      v22 = (Il2CppClass *)sub_1C1346C(inited);
+      v22 = (Il2CppClass *)sub_1C1B45C(inited);
     v20 = (System_Func_object__bool__o *)*((_QWORD *)v22->static_fields + 1);
     if ( !v20 )
     {
       v23 = method->rgctx_data->_6_BgmManager___c__54_T_;
       if ( (BYTE5(v23->vtable[0].methodPtr) & 1) == 0 )
-        v23 = (Il2CppClass *)sub_1C1346C(inited);
+        v23 = (Il2CppClass *)sub_1C1B45C(inited);
       if ( !v23->_2.cctor_finished )
         inited = j_il2cpp_runtime_class_init_0(v23);
       v24 = method->rgctx_data;
       v25 = (__int64)v24->_6_BgmManager___c__54_T_;
       if ( (*(_BYTE *)(v25 + 309) & 1) == 0 )
       {
-        v25 = sub_1C1346C(inited);
+        v25 = sub_1C1B45C(inited);
         v24 = method->rgctx_data;
       }
       v26 = (__int64)v24->_5_System_Func_T__bool_;
       v27 = **(Il2CppObject ***)(v25 + 184);
       if ( (*(_BYTE *)(v26 + 309) & 1) == 0 )
-        v26 = sub_1C1346C(inited);
-      v20 = (System_Func_object__bool__o *)sub_1BC3254(v26);
+        v26 = sub_1C1B45C(inited);
+      v20 = (System_Func_object__bool__o *)sub_1BCB244(v26);
       System_Func_object__bool____ctor(
         v20,
         v27,
         (intptr_t)method->rgctx_data->_7_BgmManager___c__54_T___EnumeratePlayersHavingBgmName_b__54_0,
-        (const MethodInfo_353ED58 *)method->rgctx_data->_8_System_Func_T__bool___ctor);
+        (const MethodInfo_3557AE8 *)method->rgctx_data->_8_System_Func_T__bool___ctor);
       v31 = method->rgctx_data->_6_BgmManager___c__54_T_;
       if ( (BYTE5(v31->vtable[0].methodPtr) & 1) == 0 )
-        v31 = (Il2CppClass *)sub_1C1346C(v30);
+        v31 = (Il2CppClass *)sub_1C1B45C(v30);
       *((_QWORD *)v31->static_fields + 1) = v20;
       v32 = method->rgctx_data->_6_BgmManager___c__54_T_;
       if ( (BYTE5(v32->vtable[0].methodPtr) & 1) == 0 )
-        v32 = (Il2CppClass *)sub_1C1346C(v30);
-      sub_1BC2FAC((CGThumbnailListItem_o *)((char *)v32->static_fields + 8), (int32_t)v20, v28, v29);
+        v32 = (Il2CppClass *)sub_1C1B45C(v30);
+      sub_1BCAF9C((CGThumbnailListItem_o *)((char *)v32->static_fields + 8), (int32_t)v20, v28, v29);
     }
   }
   return (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Where_object_(
                                                           v18,
                                                           (System_Func_TSource__bool__o *)v20,
-                                                          (const MethodInfo_3044F10 *)method->rgctx_data->_9_System_Linq_Enumerable_Where_T_);
+                                                          (const MethodInfo_305DC88 *)method->rgctx_data->_9_System_Linq_Enumerable_Where_T_);
 }
 
 
 bool __fastcall BgmManager__ExistsPlayerHavingBgmName_object_(
         BgmManager_o *this,
         System_String_o *bgmNameFilter,
-        const MethodInfo_2FF3690 *method)
+        const MethodInfo_300C2D0 *method)
 {
-  const MethodInfo_2FF34C4 **rgctx_data; // x8
+  const MethodInfo_300C104 **rgctx_data; // x8
   System_Collections_Generic_IEnumerable_T__o *v7; // x0
 
-  rgctx_data = (const MethodInfo_2FF34C4 **)method->rgctx_data;
+  rgctx_data = (const MethodInfo_300C104 **)method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C134C8(method);
-    rgctx_data = (const MethodInfo_2FF34C4 **)method->rgctx_data;
+    sub_1C1B4B8(method);
+    rgctx_data = (const MethodInfo_300C104 **)method->rgctx_data;
   }
   v7 = BgmManager__EnumeratePlayersHavingBgmName_object_(this, bgmNameFilter, *rgctx_data);
   return System_Linq_Enumerable__Any_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)v7,
-           (const MethodInfo_300D9DC *)method->rgctx_data->_2_System_Linq_Enumerable_Any_T_);
+           (const MethodInfo_302661C *)method->rgctx_data->_2_System_Linq_Enumerable_Any_T_);
 }
 
 
@@ -367,32 +366,32 @@ BgmPlayArgsGroup_o *__fastcall BgmManager__ExportPlayArgsGroup(const MethodInfo 
   _BOOL8 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B01667 & 1) == 0 )
+  if ( (byte_4B1BB5A & 1) == 0 )
   {
-    sub_1BC3008(&Method_BgmManager_ExportPlayArgsGroupLocal_BgmPlayerBase___, v1);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v2);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v3);
-    byte_4B01667 = 1;
+    sub_1BCAFF8(&Method_BgmManager_ExportPlayArgsGroupLocal_BgmPlayerBase___, v1);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v2);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v3);
+    byte_4B1BB5A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v5 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( v5 )
     return 0LL;
   if ( !Instance )
-    sub_1BC3264(v5, v6);
+    sub_1BCB254(v5, v6);
   return BgmManager__ExportPlayArgsGroupLocal_object_(
            (BgmManager_o *)Instance,
-           (const MethodInfo_2FF36DC *)Method_BgmManager_ExportPlayArgsGroupLocal_BgmPlayerBase___);
+           (const MethodInfo_300C31C *)Method_BgmManager_ExportPlayArgsGroupLocal_BgmPlayerBase___);
 }
 
 
 BgmPlayArgsGroup_o *__fastcall BgmManager__ExportPlayArgsGroupLocal_object_(
         BgmManager_o *this,
-        const MethodInfo_2FF36DC *method)
+        const MethodInfo_300C31C *method)
 {
-  const MethodInfo_2FF34C4 **rgctx_data; // x8
+  const MethodInfo_300C104 **rgctx_data; // x8
   __int64 v5; // x1
   System_Collections_Generic_IEnumerable_T__o *v6; // x20
   long double inited; // q0
@@ -400,7 +399,7 @@ BgmPlayArgsGroup_o *__fastcall BgmManager__ExportPlayArgsGroupLocal_object_(
   Il2CppClass *v9; // x0
   System_Func_object__object__o *v10; // x21
   Il2CppClass *v11; // x0
-  const MethodInfo_2FF36DC_RGCTXs *v12; // x8
+  const MethodInfo_300C31C_RGCTXs *v12; // x8
   __int64 v13; // x0
   __int64 _3_System_Func_T__BgmPlayArgs; // x8
   Il2CppObject *v15; // x22
@@ -413,70 +412,70 @@ BgmPlayArgsGroup_o *__fastcall BgmManager__ExportPlayArgsGroupLocal_object_(
   System_Object_array *v22; // x19
   BgmPlayArgsGroup_o *v23; // x20
 
-  rgctx_data = (const MethodInfo_2FF34C4 **)method->rgctx_data;
+  rgctx_data = (const MethodInfo_300C104 **)method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1BC3008(&BgmPlayArgsGroup_TypeInfo, method);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___, v5);
-    rgctx_data = (const MethodInfo_2FF34C4 **)method->rgctx_data;
+    sub_1BCAFF8(&BgmPlayArgsGroup_TypeInfo, method);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___, v5);
+    rgctx_data = (const MethodInfo_300C104 **)method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1C134C8(method);
-      rgctx_data = (const MethodInfo_2FF34C4 **)method->rgctx_data;
+      sub_1C1B4B8(method);
+      rgctx_data = (const MethodInfo_300C104 **)method->rgctx_data;
     }
   }
   v6 = BgmManager__EnumeratePlayersHavingBgmName_object_(this, 0LL, *rgctx_data);
   _4_BgmManager___c__76_T = method->rgctx_data->_4_BgmManager___c__76_T_;
   if ( (BYTE5(_4_BgmManager___c__76_T->vtable[0].methodPtr) & 1) == 0 )
-    _4_BgmManager___c__76_T = (Il2CppClass *)sub_1C1346C(inited);
+    _4_BgmManager___c__76_T = (Il2CppClass *)sub_1C1B45C(inited);
   if ( !_4_BgmManager___c__76_T->_2.cctor_finished )
     inited = j_il2cpp_runtime_class_init_0(_4_BgmManager___c__76_T);
   v9 = method->rgctx_data->_4_BgmManager___c__76_T_;
   if ( (BYTE5(v9->vtable[0].methodPtr) & 1) == 0 )
-    v9 = (Il2CppClass *)sub_1C1346C(inited);
+    v9 = (Il2CppClass *)sub_1C1B45C(inited);
   v10 = (System_Func_object__object__o *)*((_QWORD *)v9->static_fields + 1);
   if ( !v10 )
   {
     v11 = method->rgctx_data->_4_BgmManager___c__76_T_;
     if ( (BYTE5(v11->vtable[0].methodPtr) & 1) == 0 )
-      v11 = (Il2CppClass *)sub_1C1346C(inited);
+      v11 = (Il2CppClass *)sub_1C1B45C(inited);
     if ( !v11->_2.cctor_finished )
       inited = j_il2cpp_runtime_class_init_0(v11);
     v12 = method->rgctx_data;
     v13 = (__int64)v12->_4_BgmManager___c__76_T_;
     if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
     {
-      v13 = sub_1C1346C(inited);
+      v13 = sub_1C1B45C(inited);
       v12 = method->rgctx_data;
     }
     _3_System_Func_T__BgmPlayArgs = (__int64)v12->_3_System_Func_T__BgmPlayArgs_;
     v15 = **(Il2CppObject ***)(v13 + 184);
     if ( (*(_BYTE *)(_3_System_Func_T__BgmPlayArgs + 309) & 1) == 0 )
-      _3_System_Func_T__BgmPlayArgs = sub_1C1346C(inited);
-    v10 = (System_Func_object__object__o *)sub_1BC3254(_3_System_Func_T__BgmPlayArgs);
+      _3_System_Func_T__BgmPlayArgs = sub_1C1B45C(inited);
+    v10 = (System_Func_object__object__o *)sub_1BCB244(_3_System_Func_T__BgmPlayArgs);
     System_Func_object__object____ctor(
       v10,
       v15,
       (intptr_t)method->rgctx_data->_5_BgmManager___c__76_T___ExportPlayArgsGroupLocal_b__76_0,
-      (const MethodInfo_353F400 *)method->rgctx_data->_6_System_Func_T__BgmPlayArgs___ctor);
+      (const MethodInfo_3558190 *)method->rgctx_data->_6_System_Func_T__BgmPlayArgs___ctor);
     v19 = method->rgctx_data->_4_BgmManager___c__76_T_;
     if ( (BYTE5(v19->vtable[0].methodPtr) & 1) == 0 )
-      v19 = (Il2CppClass *)sub_1C1346C(v18);
+      v19 = (Il2CppClass *)sub_1C1B45C(v18);
     *((_QWORD *)v19->static_fields + 1) = v10;
     v20 = method->rgctx_data->_4_BgmManager___c__76_T_;
     if ( (BYTE5(v20->vtable[0].methodPtr) & 1) == 0 )
-      v20 = (Il2CppClass *)sub_1C1346C(v18);
-    sub_1BC2FAC((CGThumbnailListItem_o *)((char *)v20->static_fields + 8), (int32_t)v10, v16, v17);
+      v20 = (Il2CppClass *)sub_1C1B45C(v18);
+    sub_1BCAF9C((CGThumbnailListItem_o *)((char *)v20->static_fields + 8), (int32_t)v10, v16, v17);
   }
   v21 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v6,
                                                                (System_Func_TSource__TResult__o *)v10,
-                                                               (const MethodInfo_3036320 *)method->rgctx_data->_7_System_Linq_Enumerable_Select_T__BgmPlayArgs_);
+                                                               (const MethodInfo_304EFCC *)method->rgctx_data->_7_System_Linq_Enumerable_Select_T__BgmPlayArgs_);
   v22 = System_Linq_Enumerable__ToArray_object_(
           v21,
-          (const MethodInfo_303E54C *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
-  v23 = (BgmPlayArgsGroup_o *)sub_1BC3254(BgmPlayArgsGroup_TypeInfo);
-  BgmPlayArgsGroup___ctor_40232532(v23, (BgmPlayArgs_array *)v22, 0LL);
+          (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+  v23 = (BgmPlayArgsGroup_o *)sub_1BCB244(BgmPlayArgsGroup_TypeInfo);
+  BgmPlayArgsGroup___ctor_40386428(v23, (BgmPlayArgs_array *)v22, 0LL);
   return v23;
 }
 
@@ -491,25 +490,25 @@ System_String_o *__fastcall BgmManager__ExtractCueName(
   __int64 v6; // x2
   __int64 v7; // x8
 
-  if ( (byte_4B0168F & 1) == 0 )
+  if ( (byte_4B1BB82 & 1) == 0 )
   {
-    sub_1BC3008(&char___TypeInfo, name);
-    byte_4B0168F = 1;
+    sub_1BCAFF8(&char___TypeInfo, name);
+    byte_4B1BB82 = 1;
   }
-  v4 = (System_Char_array *)sub_1BC30B0(char___TypeInfo, 1LL);
+  v4 = (System_Char_array *)sub_1BCB0A0(char___TypeInfo, 1LL);
   if ( !v4 )
     goto LABEL_9;
   v5 = v4;
   if ( !v4->max_length )
     goto LABEL_10;
   v4->m_Items[2] = 47;
-  if ( !name || (v4 = (System_Char_array *)System_String__Split_62397724(name, v4, 0LL)) == 0LL )
+  if ( !name || (v4 = (System_Char_array *)System_String__Split_62499500(name, v4, 0LL)) == 0LL )
 LABEL_9:
-    sub_1BC3264(v4, v5);
+    sub_1BCB254(v4, v5);
   v7 = *(_QWORD *)&v4->max_length;
   if ( !(_DWORD)v7 )
 LABEL_10:
-    sub_1BC326C(v4, v5, v6);
+    sub_1BCB25C(v4, v5, v6);
   return *(System_String_o **)((char *)&v4->m_Items[2] + (((v7 << 32) - 0x100000000LL) >> 29));
 }
 
@@ -518,10 +517,10 @@ void __fastcall BgmManager__FadeoutBgm(float fadeoutTime, System_Action_o *callb
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_4B01677 & 1) == 0 )
+  if ( (byte_4B1BB6A & 1) == 0 )
   {
-    sub_1BC3008(&BgmManager_TypeInfo, method);
-    byte_4B01677 = 1;
+    sub_1BCAFF8(&BgmManager_TypeInfo, method);
+    byte_4B1BB6A = 1;
   }
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
@@ -534,9 +533,9 @@ bool __fastcall BgmManager__FadeoutBgmLocal_object_(
         BgmManager_o *this,
         float fadeoutTime,
         System_String_o *name,
-        const MethodInfo_2FF3898 *method)
+        const MethodInfo_300C4D8 *method)
 {
-  const MethodInfo_2FF3898_RGCTXs *rgctx_data; // x8
+  const MethodInfo_300C4D8_RGCTXs *rgctx_data; // x8
   __int64 v9; // x1
   __int64 _0_BgmManager___c__DisplayClass67_0_T; // x0
   BgmManager___c__DisplayClass67_0_T__o *v11; // x22
@@ -552,46 +551,46 @@ bool __fastcall BgmManager__FadeoutBgmLocal_object_(
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1BC3008(&Method_System_Linq_Enumerable_Any_bool___, name);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_bool___, v9);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_Any_bool___, name);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_bool___, v9);
     rgctx_data = method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1C134C8(method);
+      sub_1C1B4B8(method);
       rgctx_data = method->rgctx_data;
     }
   }
   _0_BgmManager___c__DisplayClass67_0_T = (__int64)rgctx_data->_0_BgmManager___c__DisplayClass67_0_T_;
   if ( (BYTE5(rgctx_data->_0_BgmManager___c__DisplayClass67_0_T_->vtable[0].methodPtr) & 1) == 0 )
-    _0_BgmManager___c__DisplayClass67_0_T = sub_1C1346C(*(long double *)&fadeoutTime);
-  v11 = (BgmManager___c__DisplayClass67_0_T__o *)sub_1BC3254(_0_BgmManager___c__DisplayClass67_0_T);
+    _0_BgmManager___c__DisplayClass67_0_T = sub_1C1B45C(*(long double *)&fadeoutTime);
+  v11 = (BgmManager___c__DisplayClass67_0_T__o *)sub_1BCB244(_0_BgmManager___c__DisplayClass67_0_T);
   BgmManager___c__DisplayClass67_0_object____ctor(
     v11,
-    (const MethodInfo_31D1334 *)method->rgctx_data->_1_BgmManager___c__DisplayClass67_0_T___ctor);
+    (const MethodInfo_31EA0C4 *)method->rgctx_data->_1_BgmManager___c__DisplayClass67_0_T___ctor);
   if ( !v11 )
-    sub_1BC3264(v12, v13);
+    sub_1BCB254(v12, v13);
   v11->fields.fadeoutTime = fadeoutTime;
   v14 = BgmManager__EnumeratePlayersHavingBgmName_object_(
           this,
           name,
-          (const MethodInfo_2FF34C4 *)method->rgctx_data->_2_BgmManager_EnumeratePlayersHavingBgmName_T_);
+          (const MethodInfo_300C104 *)method->rgctx_data->_2_BgmManager_EnumeratePlayersHavingBgmName_T_);
   _5_System_Func_T__bool = method->rgctx_data->_5_System_Func_T__bool_;
   if ( (BYTE5(_5_System_Func_T__bool->vtable[0].methodPtr) & 1) == 0 )
-    _5_System_Func_T__bool = (Il2CppClass *)sub_1C1346C(v15);
-  v17 = (System_Func_object__bool__o *)sub_1BC3254(_5_System_Func_T__bool);
+    _5_System_Func_T__bool = (Il2CppClass *)sub_1C1B45C(v15);
+  v17 = (System_Func_object__bool__o *)sub_1BCB244(_5_System_Func_T__bool);
   System_Func_object__bool____ctor(
     v17,
     (Il2CppObject *)v11,
     (intptr_t)method->rgctx_data->_4_BgmManager___c__DisplayClass67_0_T___FadeoutBgmLocal_b__0,
-    (const MethodInfo_353ED58 *)method->rgctx_data->_6_System_Func_T__bool___ctor);
+    (const MethodInfo_3557AE8 *)method->rgctx_data->_6_System_Func_T__bool___ctor);
   v18 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__bool_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v14,
                                                                (System_Func_TSource__TResult__o *)v17,
-                                                               (const MethodInfo_303545C *)method->rgctx_data->_7_System_Linq_Enumerable_Select_T__bool_);
+                                                               (const MethodInfo_304E108 *)method->rgctx_data->_7_System_Linq_Enumerable_Select_T__bool_);
   v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_bool_(
                                                                v18,
-                                                               (const MethodInfo_303E21C *)Method_System_Linq_Enumerable_ToArray_bool___);
-  return System_Linq_Enumerable__Any_bool_(v19, (const MethodInfo_300D214 *)Method_System_Linq_Enumerable_Any_bool___);
+                                                               (const MethodInfo_3056F94 *)Method_System_Linq_Enumerable_ToArray_bool___);
+  return System_Linq_Enumerable__Any_bool_(v19, (const MethodInfo_3025E54 *)Method_System_Linq_Enumerable_Any_bool___);
 }
 
 
@@ -604,26 +603,26 @@ void __fastcall BgmManager__FadeoutJingle(float fadeoutTime, const MethodInfo *m
   _BOOL8 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4B01680 & 1) == 0 )
+  if ( (byte_4B1BB73 & 1) == 0 )
   {
-    sub_1BC3008(&Method_BgmManager_FadeoutBgmLocal_JinglePlayer___, v2);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v4);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v5);
-    byte_4B01680 = 1;
+    sub_1BCAFF8(&Method_BgmManager_FadeoutBgmLocal_JinglePlayer___, v2);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v5);
+    byte_4B1BB73 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( !v7 )
   {
     if ( !Instance )
-      sub_1BC3264(v7, v8);
+      sub_1BCB254(v7, v8);
     BgmManager__FadeoutBgmLocal_object_(
       (BgmManager_o *)Instance,
       fadeoutTime,
       0LL,
-      (const MethodInfo_2FF3898 *)Method_BgmManager_FadeoutBgmLocal_JinglePlayer___);
+      (const MethodInfo_300C4D8 *)Method_BgmManager_FadeoutBgmLocal_JinglePlayer___);
   }
 }
 
@@ -690,29 +689,29 @@ void __fastcall BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *me
   const MethodInfo *v59; // x3
 
   v2 = this;
-  if ( (byte_4B01696 & 1) == 0 )
+  if ( (byte_4B1BB89 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_GeneralBgmPlayer__TypeInfo, method);
-    sub_1BC3008(&System_Action_BgmPlayerBase__TypeInfo, v3);
-    sub_1BC3008(&System_Action_BgmPlayArgs__TypeInfo, v4);
-    sub_1BC3008(&Method_BasicHelper_ForEach_BgmPlayArgs___, v5);
-    sub_1BC3008(&Method_BasicHelper_ForEach_GeneralBgmPlayer___, v6);
-    sub_1BC3008(&Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___, v7);
-    sub_1BC3008(&Method_BgmManager_ExportPlayArgsGroupLocal_GeneralBgmPlayer___, v8);
-    sub_1BC3008(&Method_BgmManager_StopBgmLocal_GeneralBgmPlayer___, v9);
-    sub_1BC3008(&BgmManager_TypeInfo, v10);
-    sub_1BC3008(&Method_System_Linq_Enumerable_Any_GeneralBgmPlayer___, v11);
-    sub_1BC3008(&Method_System_Linq_Enumerable_OfType_GeneralBgmPlayer___, v12);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___, v13);
-    sub_1BC3008(&System_Func_GeneralBgmPlayer__bool__TypeInfo, v14);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__, v15);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__, v16);
-    sub_1BC3008(&Method_BgmManager___c__FixedUpdate_b__78_0__, v17);
-    sub_1BC3008(&Method_BgmManager___c__FixedUpdate_b__78_1__, v18);
-    sub_1BC3008(&Method_BgmManager___c__FixedUpdate_b__78_2__, v19);
-    sub_1BC3008(&Method_BgmManager___c__FixedUpdate_b__78_3__, v20);
-    this = (BgmManager_o *)sub_1BC3008(&BgmManager___c_TypeInfo, v21);
-    byte_4B01696 = 1;
+    sub_1BCAFF8(&System_Action_GeneralBgmPlayer__TypeInfo, method);
+    sub_1BCAFF8(&System_Action_BgmPlayerBase__TypeInfo, v3);
+    sub_1BCAFF8(&System_Action_BgmPlayArgs__TypeInfo, v4);
+    sub_1BCAFF8(&Method_BasicHelper_ForEach_BgmPlayArgs___, v5);
+    sub_1BCAFF8(&Method_BasicHelper_ForEach_GeneralBgmPlayer___, v6);
+    sub_1BCAFF8(&Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___, v7);
+    sub_1BCAFF8(&Method_BgmManager_ExportPlayArgsGroupLocal_GeneralBgmPlayer___, v8);
+    sub_1BCAFF8(&Method_BgmManager_StopBgmLocal_GeneralBgmPlayer___, v9);
+    sub_1BCAFF8(&BgmManager_TypeInfo, v10);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_Any_GeneralBgmPlayer___, v11);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_OfType_GeneralBgmPlayer___, v12);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___, v13);
+    sub_1BCAFF8(&System_Func_GeneralBgmPlayer__bool__TypeInfo, v14);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__, v15);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__, v16);
+    sub_1BCAFF8(&Method_BgmManager___c__FixedUpdate_b__78_0__, v17);
+    sub_1BCAFF8(&Method_BgmManager___c__FixedUpdate_b__78_1__, v18);
+    sub_1BCAFF8(&Method_BgmManager___c__FixedUpdate_b__78_2__, v19);
+    sub_1BCAFF8(&Method_BgmManager___c__FixedUpdate_b__78_3__, v20);
+    this = (BgmManager_o *)sub_1BCAFF8(&BgmManager___c_TypeInfo, v21);
+    byte_4B1BB89 = 1;
   }
   p_bgmPlayers = (System_Collections_IEnumerable_o **)&v2->fields.bgmPlayers;
   bgmPlayers = (System_Collections_IEnumerable_o *)v2->fields.bgmPlayers;
@@ -723,7 +722,7 @@ void __fastcall BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *me
     jinglePlayer = (BgmPlayerBase_o *)v2->fields.jinglePlayer;
     if ( jinglePlayer )
     {
-      IsPlaying = BgmPlayerBase__IsPlaying(jinglePlayer, method);
+      IsPlaying = BgmPlayerBase__IsPlaying(jinglePlayer, 0LL);
       bgmPlayers = *p_bgmPlayers;
       v26 = IsPlaying;
     }
@@ -733,7 +732,7 @@ void __fastcall BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *me
     }
     v27 = System_Linq_Enumerable__OfType_object_(
             bgmPlayers,
-            (const MethodInfo_302D068 *)Method_System_Linq_Enumerable_OfType_GeneralBgmPlayer___);
+            (const MethodInfo_3045CA8 *)Method_System_Linq_Enumerable_OfType_GeneralBgmPlayer___);
     v28 = BgmManager___c_TypeInfo;
     v29 = (System_Collections_Generic_IEnumerable_TSource__o *)v27;
     if ( !BgmManager___c_TypeInfo->_2.cctor_finished )
@@ -750,21 +749,21 @@ void __fastcall BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *me
         v28 = BgmManager___c_TypeInfo;
       }
       v31 = (Il2CppObject *)v28->static_fields->__9;
-      _9__78_0 = (System_Func_object__bool__o *)sub_1BC3254(System_Func_GeneralBgmPlayer__bool__TypeInfo);
+      _9__78_0 = (System_Func_object__bool__o *)sub_1BCB244(System_Func_GeneralBgmPlayer__bool__TypeInfo);
       System_Func_object__bool____ctor(_9__78_0, v31, Method_BgmManager___c__FixedUpdate_b__78_0__, 0LL);
       static_fields = BgmManager___c_TypeInfo->static_fields;
       static_fields->__9__78_0 = (struct System_Func_GeneralBgmPlayer__bool__o *)_9__78_0;
-      sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__78_0, (int32_t)_9__78_0, v33, v34);
+      sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__78_0, (int32_t)_9__78_0, v33, v34);
     }
-    v35 = System_Linq_Enumerable__Any_object__50395312(
+    v35 = System_Linq_Enumerable__Any_object__50496752(
             v29,
             (System_Func_TSource__bool__o *)_9__78_0,
-            (const MethodInfo_300F8B0 *)Method_System_Linq_Enumerable_Any_GeneralBgmPlayer___);
+            (const MethodInfo_30284F0 *)Method_System_Linq_Enumerable_Any_GeneralBgmPlayer___);
     if ( (v35 & v26) != 0 )
     {
       v36 = System_Linq_Enumerable__OfType_object_(
               *p_bgmPlayers,
-              (const MethodInfo_302D068 *)Method_System_Linq_Enumerable_OfType_GeneralBgmPlayer___);
+              (const MethodInfo_3045CA8 *)Method_System_Linq_Enumerable_OfType_GeneralBgmPlayer___);
       v37 = BgmManager___c_TypeInfo;
       v38 = (System_Collections_Generic_IEnumerable_T__o *)v36;
       if ( !BgmManager___c_TypeInfo->_2.cctor_finished )
@@ -781,16 +780,16 @@ void __fastcall BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *me
           v37 = BgmManager___c_TypeInfo;
         }
         v40 = (Il2CppObject *)v37->static_fields->__9;
-        _9__78_1 = (System_Action_object__o *)sub_1BC3254(System_Action_GeneralBgmPlayer__TypeInfo);
+        _9__78_1 = (System_Action_object__o *)sub_1BCB244(System_Action_GeneralBgmPlayer__TypeInfo);
         System_Action_object____ctor(_9__78_1, v40, Method_BgmManager___c__FixedUpdate_b__78_1__, 0LL);
         v41 = BgmManager___c_TypeInfo->static_fields;
         v41->__9__78_1 = (struct System_Action_GeneralBgmPlayer__o *)_9__78_1;
-        sub_1BC2FAC((CGThumbnailListItem_o *)&v41->__9__78_1, (int32_t)_9__78_1, v42, v43);
+        sub_1BCAF9C((CGThumbnailListItem_o *)&v41->__9__78_1, (int32_t)_9__78_1, v42, v43);
       }
       BasicHelper__ForEach_object_(
         v38,
         (System_Action_T__o *)_9__78_1,
-        (const MethodInfo_2FEDEFC *)Method_BasicHelper_ForEach_GeneralBgmPlayer___);
+        (const MethodInfo_3006B3C *)Method_BasicHelper_ForEach_GeneralBgmPlayer___);
       v2->fields.isBgmStopJingle = 1;
     }
     else if ( !v35
@@ -799,22 +798,22 @@ void __fastcall BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *me
            && BgmManager__ExistsPlayerHavingBgmName_object_(
                 v2,
                 0LL,
-                (const MethodInfo_2FF3690 *)Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___) )
+                (const MethodInfo_300C2D0 *)Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___) )
     {
       this = (BgmManager_o *)BgmManager__ExportPlayArgsGroupLocal_object_(
                                v2,
-                               (const MethodInfo_2FF36DC *)Method_BgmManager_ExportPlayArgsGroupLocal_GeneralBgmPlayer___);
+                               (const MethodInfo_300C31C *)Method_BgmManager_ExportPlayArgsGroupLocal_GeneralBgmPlayer___);
       if ( !this )
         goto LABEL_47;
       v44 = this;
-      v45 = BgmPlayArgsGroup__AllArgsListNullExcluded((BgmPlayArgsGroup_o *)this, method);
+      v45 = BgmPlayArgsGroup__AllArgsListNullExcluded((BgmPlayArgsGroup_o *)this, 0LL);
       v46 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__ToArray_object_(
                                                              (System_Collections_Generic_IEnumerable_TSource__o *)v45,
-                                                             (const MethodInfo_303E54C *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+                                                             (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
       this = (BgmManager_o *)BgmManager__StopBgmLocal_object_(
                                v2,
                                0LL,
-                               (const MethodInfo_2FF3A84 *)Method_BgmManager_StopBgmLocal_GeneralBgmPlayer___);
+                               (const MethodInfo_300C6C4 *)Method_BgmManager_StopBgmLocal_GeneralBgmPlayer___);
       if ( !v46 )
         goto LABEL_47;
       if ( v46[1].monitor )
@@ -834,19 +833,19 @@ void __fastcall BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *me
             v47 = BgmManager___c_TypeInfo;
           }
           v49 = (Il2CppObject *)v47->static_fields->__9;
-          _9__78_3 = (System_Action_object__o *)sub_1BC3254(System_Action_BgmPlayArgs__TypeInfo);
+          _9__78_3 = (System_Action_object__o *)sub_1BCB244(System_Action_BgmPlayArgs__TypeInfo);
           System_Action_object____ctor(_9__78_3, v49, Method_BgmManager___c__FixedUpdate_b__78_3__, 0LL);
           v50 = BgmManager___c_TypeInfo->static_fields;
           v50->__9__78_3 = (struct System_Action_BgmPlayArgs__o *)_9__78_3;
-          sub_1BC2FAC((CGThumbnailListItem_o *)&v50->__9__78_3, (int32_t)_9__78_3, v51, v52);
+          sub_1BCAF9C((CGThumbnailListItem_o *)&v50->__9__78_3, (int32_t)_9__78_3, v51, v52);
         }
         BasicHelper__ForEach_object_(
           v46,
           (System_Action_T__o *)_9__78_3,
-          (const MethodInfo_2FEDEFC *)Method_BasicHelper_ForEach_BgmPlayArgs___);
+          (const MethodInfo_3006B3C *)Method_BasicHelper_ForEach_BgmPlayArgs___);
         if ( !BgmManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-        BgmManager__PlayBgm_40215184((BgmPlayArgsGroup_o *)v44, 0LL, v53);
+        BgmManager__PlayBgm_40369660((BgmPlayArgsGroup_o *)v44, 0LL, v53);
       }
     }
     if ( !v26 )
@@ -867,22 +866,22 @@ void __fastcall BgmManager__FixedUpdate(BgmManager_o *this, const MethodInfo *me
         this = (BgmManager_o *)BgmManager___c_TypeInfo;
       }
       v56 = *(Il2CppObject **)this[2].monitor;
-      v55 = (System_Action_object__o *)sub_1BC3254(System_Action_BgmPlayerBase__TypeInfo);
+      v55 = (System_Action_object__o *)sub_1BCB244(System_Action_BgmPlayerBase__TypeInfo);
       System_Action_object____ctor(v55, v56, Method_BgmManager___c__FixedUpdate_b__78_2__, 0LL);
       v57 = BgmManager___c_TypeInfo->static_fields;
       v57->__9__78_2 = (struct System_Action_BgmPlayerBase__o *)v55;
-      sub_1BC2FAC((CGThumbnailListItem_o *)&v57->__9__78_2, (int32_t)v55, v58, v59);
+      sub_1BCAF9C((CGThumbnailListItem_o *)&v57->__9__78_2, (int32_t)v55, v58, v59);
     }
     if ( v54 )
     {
       System_Collections_Generic_List_object___ForEach(
         (System_Collections_Generic_List_object__o *)v54,
         (System_Action_T__o *)v55,
-        (const MethodInfo_36A1880 *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+        (const MethodInfo_36BA610 *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
       return;
     }
 LABEL_47:
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   }
 }
 
@@ -895,20 +894,20 @@ void __fastcall BgmManager__ForceDisable_KeepSubBgm(const MethodInfo *method)
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4B01683 & 1) == 0 )
+  if ( (byte_4B1BB76 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v1);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v2);
-    byte_4B01683 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v1);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v2);
+    byte_4B1BB76 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1BC3264(v4, v5);
+      sub_1BCB254(v4, v5);
     LODWORD(Instance[4].monitor) = 0;
   }
 }
@@ -919,17 +918,17 @@ CriAtomSource_o *__fastcall BgmManager__GenerateCriAtomSource(BgmManager_o *this
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B01694 & 1) == 0 )
+  if ( (byte_4B1BB87 & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_AddComponent_CriAtomSource___, method);
-    byte_4B01694 = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_AddComponent_CriAtomSource___, method);
+    byte_4B1BB87 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BC3264(0LL, v4);
+    sub_1BCB254(0LL, v4);
   return (CriAtomSource_o *)UnityEngine_GameObject__AddComponent_object_(
                               gameObject,
-                              (const MethodInfo_30558B0 *)Method_UnityEngine_GameObject_AddComponent_CriAtomSource___);
+                              (const MethodInfo_306E628 *)Method_UnityEngine_GameObject_AddComponent_CriAtomSource___);
 }
 
 
@@ -942,15 +941,15 @@ int32_t __fastcall BgmManager__GetAssetType(System_String_o *name, const MethodI
   SoundManager_c *v7; // x8
   System_String_o *v8; // x19
 
-  if ( (byte_4B01669 & 1) == 0 )
+  if ( (byte_4B1BB5C & 1) == 0 )
   {
-    sub_1BC3008(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, method);
-    sub_1BC3008(&SoundManager_TypeInfo, v3);
-    byte_4B01669 = 1;
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, method);
+    sub_1BCAFF8(&SoundManager_TypeInfo, v3);
+    byte_4B1BB5C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   if ( !Instance )
-    sub_1BC3264(0LL, v5);
+    sub_1BCB254(0LL, v5);
   CueSheet = SoundManager__GetCueSheet((SoundManager_o *)Instance, name, 0LL);
   v7 = SoundManager_TypeInfo;
   v8 = CueSheet;
@@ -973,13 +972,13 @@ System_String_o *__fastcall BgmManager__GetBgmName(const MethodInfo *method)
   System_String_o *result; // x0
   UnityEngine_Object_c *klass; // x8
 
-  if ( (byte_4B0167B & 1) == 0 )
+  if ( (byte_4B1BB6E & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v1);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v2);
-    byte_4B0167B = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v1);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v2);
+    byte_4B1BB6E = 1;
   }
-  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v5 = UnityEngine_Object__op_Equality(Instance, 0LL, 0LL);
@@ -987,7 +986,7 @@ System_String_o *__fastcall BgmManager__GetBgmName(const MethodInfo *method)
   if ( !v5 )
   {
     if ( !Instance || (klass = Instance[2].klass) == 0LL )
-      sub_1BC3264(0LL, v4);
+      sub_1BCB254(0LL, v4);
     return (System_String_o *)klass->_1.namespaze;
   }
   return result;
@@ -1015,25 +1014,25 @@ System_String_o *__fastcall BgmManager__GetMainBgmName(bool isFormation, const M
   TerminalOverwriteEntity_o *v20; // [xsp+0h] [xbp-30h] BYREF
   System_String_o *bgmName; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B01697 & 1) == 0 )
+  if ( (byte_4B1BB8A & 1) == 0 )
   {
-    sub_1BC3008(&BalanceConfig_TypeInfo, method);
-    sub_1BC3008(&BgmManager_TypeInfo, v3);
-    sub_1BC3008(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___, v4);
-    sub_1BC3008(&Method_System_Linq_Enumerable_Contains_int___, v5);
-    sub_1BC3008(&ServantCommentManager_TypeInfo, v6);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
-    sub_1BC3008(&StringLiteral_19137/*"excludeFormation"*/, v8);
-    byte_4B01697 = 1;
+    sub_1BCAFF8(&BalanceConfig_TypeInfo, method);
+    sub_1BCAFF8(&BgmManager_TypeInfo, v3);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___, v4);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_Contains_int___, v5);
+    sub_1BCAFF8(&ServantCommentManager_TypeInfo, v6);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v7);
+    sub_1BCAFF8(&StringLiteral_19151/*"excludeFormation"*/, v8);
+    byte_4B1BB8A = 1;
   }
   v20 = 0LL;
   bgmName = 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_25;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
+                        (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
   if ( !MasterData_object )
     goto LABEL_9;
   Instance = (Il2CppObject *)TerminalOverwriteMaster__TryGetOverwriteMainBgmName(
@@ -1051,8 +1050,8 @@ LABEL_23:
   }
   if ( !v20 )
 LABEL_25:
-    sub_1BC3264(Instance, v10);
-  if ( EntityScriptUtil__GetIntValue(v20->fields.script, (System_String_o *)StringLiteral_19137/*"excludeFormation"*/, 0, 0LL) != 1 )
+    sub_1BCB254(Instance, v10);
+  if ( EntityScriptUtil__GetIntValue(v20->fields.script, (System_String_o *)StringLiteral_19151/*"excludeFormation"*/, 0, 0LL) != 1 )
     goto LABEL_23;
 LABEL_9:
   if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
@@ -1070,7 +1069,7 @@ LABEL_9:
   if ( !System_Linq_Enumerable__Contains_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)ClearWarIdList,
           v14->static_fields->OrdealCallWarId,
-          (const MethodInfo_301AE3C *)Method_System_Linq_Enumerable_Contains_int___) )
+          (const MethodInfo_3033A7C *)Method_System_Linq_Enumerable_Contains_int___) )
   {
 LABEL_18:
     v17 = BgmManager_TypeInfo;
@@ -1104,10 +1103,10 @@ float __fastcall BgmManager__GetMasterVolume(const MethodInfo *method)
   __int64 v1; // x1
   BgmManager_c *v2; // x0
 
-  if ( (byte_4B0166D & 1) == 0 )
+  if ( (byte_4B1BB60 & 1) == 0 )
   {
-    sub_1BC3008(&BgmManager_TypeInfo, v1);
-    byte_4B0166D = 1;
+    sub_1BCAFF8(&BgmManager_TypeInfo, v1);
+    byte_4B1BB60 = 1;
   }
   v2 = BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -1131,7 +1130,7 @@ JinglePlayer_o *__fastcall BgmManager__GetOrCreateJinglePlayer(BgmManager_o *thi
   __int64 v10; // x2
   struct System_String_o *bgmName; // x8
   JinglePlayer_o **p_jinglePlayer; // x20
-  __int64 v13; // x21
+  JinglePlayer_o *v13; // x21
   int32_t v14; // w2
   const MethodInfo *v15; // x3
   struct System_Collections_Generic_List_BgmPlayerBase__o *bgmPlayers; // x8
@@ -1143,32 +1142,31 @@ JinglePlayer_o *__fastcall BgmManager__GetOrCreateJinglePlayer(BgmManager_o *thi
   __int64 bgmName_low; // x10
   __int64 v23; // x8
 
-  if ( (byte_4B01693 & 1) == 0 )
+  if ( (byte_4B1BB86 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Linq_Enumerable_OfType_JinglePlayer___, method);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_JinglePlayer___, v3);
-    sub_1BC3008(&JinglePlayer_TypeInfo, v4);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__Add__, v5);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__, v6);
-    byte_4B01693 = 1;
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_OfType_JinglePlayer___, method);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_JinglePlayer___, v3);
+    sub_1BCAFF8(&JinglePlayer_TypeInfo, v4);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__Add__, v5);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__, v6);
+    byte_4B1BB86 = 1;
   }
   v7 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                               (System_Collections_IEnumerable_o *)this->fields.bgmPlayers,
-                                                              (const MethodInfo_302D068 *)Method_System_Linq_Enumerable_OfType_JinglePlayer___);
+                                                              (const MethodInfo_3045CA8 *)Method_System_Linq_Enumerable_OfType_JinglePlayer___);
   v8 = (JinglePlayer_o *)System_Linq_Enumerable__ToArray_object_(
                            v7,
-                           (const MethodInfo_303E54C *)Method_System_Linq_Enumerable_ToArray_JinglePlayer___);
+                           (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_JinglePlayer___);
   if ( !v8 )
     goto LABEL_15;
   bgmName = v8->fields.bgmName;
   if ( !bgmName )
   {
-    v13 = sub_1BC3254(JinglePlayer_TypeInfo);
-    *(_DWORD *)(v13 + 36) = -1082130432;
-    System_Object___ctor((Il2CppObject *)v13, 0LL);
-    this->fields.jinglePlayer = (struct JinglePlayer_o *)v13;
+    v13 = (JinglePlayer_o *)sub_1BCB244(JinglePlayer_TypeInfo);
+    JinglePlayer___ctor(v13, 0LL);
+    this->fields.jinglePlayer = v13;
     p_jinglePlayer = &this->fields.jinglePlayer;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.jinglePlayer, v13, v14, v15);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.jinglePlayer, (int32_t)v13, v14, v15);
     bgmPlayers = this->fields.bgmPlayers;
     if ( bgmPlayers )
     {
@@ -1195,14 +1193,14 @@ JinglePlayer_o *__fastcall BgmManager__GetOrCreateJinglePlayer(BgmManager_o *thi
               System_Collections_Generic_List_object___AddWithResize(
                 (System_Collections_Generic_List_object__o *)v8,
                 jinglePlayer,
-                *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+                *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
             }
             else
             {
               v23 = v20 + 8 * bgmName_low;
               LODWORD(v8->fields.bgmName) = bgmName_low + 1;
               *(_QWORD *)(v23 + 32) = jinglePlayer;
-              sub_1BC2FAC((CGThumbnailListItem_o *)(v23 + 32), (int32_t)jinglePlayer, v18, v19);
+              sub_1BCAF9C((CGThumbnailListItem_o *)(v23 + 32), (int32_t)jinglePlayer, v18, v19);
             }
             return *p_jinglePlayer;
           }
@@ -1210,10 +1208,10 @@ JinglePlayer_o *__fastcall BgmManager__GetOrCreateJinglePlayer(BgmManager_o *thi
       }
     }
 LABEL_15:
-    sub_1BC3264(v8, jinglePlayer);
+    sub_1BCB254(v8, jinglePlayer);
   }
   if ( !(_DWORD)bgmName )
-    sub_1BC326C(v8, jinglePlayer, v10);
+    sub_1BCB25C(v8, jinglePlayer, v10);
   p_jinglePlayer = (JinglePlayer_o **)&v8->fields.bgmVolume;
   return *p_jinglePlayer;
 }
@@ -1243,7 +1241,7 @@ SubBgmPlayer_o *__fastcall BgmManager__GetOrCreateSubBgmPlayer(
   System_Collections_Generic_IEnumerable_TSource__o *v21; // x0
   System_Object_array *v22; // x20
   System_Func_object__bool__o *v23; // x22
-  Il2CppObject *object; // x21
+  SubBgmPlayer_o *object; // x21
   BgmManager___c_c *v25; // x0
   System_Func_object__bool__o *_9__72_1; // x21
   Il2CppObject *v27; // x22
@@ -1251,7 +1249,7 @@ SubBgmPlayer_o *__fastcall BgmManager__GetOrCreateSubBgmPlayer(
   int32_t v29; // w2
   const MethodInfo *v30; // x3
   struct System_Collections_Generic_List_BgmPlayerBase__o *bgmPlayers; // x8
-  Il2CppClass *klass; // x9
+  SubBgmPlayer_c *klass; // x9
   int32_t v34; // w2
   const MethodInfo *v35; // x3
   struct System_Object_array *items; // x8
@@ -1259,46 +1257,46 @@ SubBgmPlayer_o *__fastcall BgmManager__GetOrCreateSubBgmPlayer(
   __int64 size; // x10
   Il2CppClass **v39; // x8
 
-  if ( (byte_4B01692 & 1) == 0 )
+  if ( (byte_4B1BB85 & 1) == 0 )
   {
-    sub_1BC3008(&Method_BasicHelper_Find_SubBgmPlayer___, bgmName);
-    sub_1BC3008(&Method_System_Linq_Enumerable_First_SubBgmPlayer___, v5);
-    sub_1BC3008(&Method_System_Linq_Enumerable_OfType_SubBgmPlayer___, v6);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_SubBgmPlayer___, v7);
-    sub_1BC3008(&System_Func_SubBgmPlayer__bool__TypeInfo, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__Add__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__, v10);
-    sub_1BC3008(&SubBgmPlayer_TypeInfo, v11);
-    sub_1BC3008(&Method_BgmManager___c__GetOrCreateSubBgmPlayer_b__72_1__, v12);
-    sub_1BC3008(&Method_BgmManager___c__DisplayClass72_0__GetOrCreateSubBgmPlayer_b__0__, v13);
-    sub_1BC3008(&BgmManager___c__DisplayClass72_0_TypeInfo, v14);
-    sub_1BC3008(&BgmManager___c_TypeInfo, v15);
-    byte_4B01692 = 1;
+    sub_1BCAFF8(&Method_BasicHelper_Find_SubBgmPlayer___, bgmName);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_First_SubBgmPlayer___, v5);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_OfType_SubBgmPlayer___, v6);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_SubBgmPlayer___, v7);
+    sub_1BCAFF8(&System_Func_SubBgmPlayer__bool__TypeInfo, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__Add__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__, v10);
+    sub_1BCAFF8(&SubBgmPlayer_TypeInfo, v11);
+    sub_1BCAFF8(&Method_BgmManager___c__GetOrCreateSubBgmPlayer_b__72_1__, v12);
+    sub_1BCAFF8(&Method_BgmManager___c__DisplayClass72_0__GetOrCreateSubBgmPlayer_b__0__, v13);
+    sub_1BCAFF8(&BgmManager___c__DisplayClass72_0_TypeInfo, v14);
+    sub_1BCAFF8(&BgmManager___c_TypeInfo, v15);
+    byte_4B1BB85 = 1;
   }
-  v16 = sub_1BC3254(BgmManager___c__DisplayClass72_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v16, 0LL);
+  v16 = sub_1BCB244(BgmManager___c__DisplayClass72_0_TypeInfo);
+  BgmManager___c__DisplayClass72_0___ctor((BgmManager___c__DisplayClass72_0_o *)v16, 0LL);
   if ( !v16 )
-    goto LABEL_22;
+    goto LABEL_23;
   *(_QWORD *)(v16 + 16) = bgmName;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v16 + 16), (int32_t)bgmName, v19, v20);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v16 + 16), (int32_t)bgmName, v19, v20);
   v21 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                (System_Collections_IEnumerable_o *)this->fields.bgmPlayers,
-                                                               (const MethodInfo_302D068 *)Method_System_Linq_Enumerable_OfType_SubBgmPlayer___);
+                                                               (const MethodInfo_3045CA8 *)Method_System_Linq_Enumerable_OfType_SubBgmPlayer___);
   v22 = System_Linq_Enumerable__ToArray_object_(
           v21,
-          (const MethodInfo_303E54C *)Method_System_Linq_Enumerable_ToArray_SubBgmPlayer___);
-  v23 = (System_Func_object__bool__o *)sub_1BC3254(System_Func_SubBgmPlayer__bool__TypeInfo);
+          (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_SubBgmPlayer___);
+  v23 = (System_Func_object__bool__o *)sub_1BCB244(System_Func_SubBgmPlayer__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v23,
     (Il2CppObject *)v16,
     Method_BgmManager___c__DisplayClass72_0__GetOrCreateSubBgmPlayer_b__0__,
     0LL);
-  object = BasicHelper__Find_object_(
-             v22,
-             (System_Func_T__bool__o *)v23,
-             (const MethodInfo_2FEBEA8 *)Method_BasicHelper_Find_SubBgmPlayer___);
+  object = (SubBgmPlayer_o *)BasicHelper__Find_object_(
+                               v22,
+                               (System_Func_T__bool__o *)v23,
+                               (const MethodInfo_3004AE8 *)Method_BasicHelper_Find_SubBgmPlayer___);
   if ( object )
-    return (SubBgmPlayer_o *)object;
+    return object;
   v25 = BgmManager___c_TypeInfo;
   if ( !BgmManager___c_TypeInfo->_2.cctor_finished )
   {
@@ -1314,67 +1312,69 @@ SubBgmPlayer_o *__fastcall BgmManager__GetOrCreateSubBgmPlayer(
       v25 = BgmManager___c_TypeInfo;
     }
     v27 = (Il2CppObject *)v25->static_fields->__9;
-    _9__72_1 = (System_Func_object__bool__o *)sub_1BC3254(System_Func_SubBgmPlayer__bool__TypeInfo);
+    _9__72_1 = (System_Func_object__bool__o *)sub_1BCB244(System_Func_SubBgmPlayer__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__72_1, v27, Method_BgmManager___c__GetOrCreateSubBgmPlayer_b__72_1__, 0LL);
     static_fields = BgmManager___c_TypeInfo->static_fields;
     static_fields->__9__72_1 = (struct System_Func_SubBgmPlayer__bool__o *)_9__72_1;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__72_1, (int32_t)_9__72_1, v29, v30);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__72_1, (int32_t)_9__72_1, v29, v30);
   }
   v17 = (System_Collections_Generic_List_object__o *)BasicHelper__Find_object_(
                                                        v22,
                                                        (System_Func_T__bool__o *)_9__72_1,
-                                                       (const MethodInfo_2FEBEA8 *)Method_BasicHelper_Find_SubBgmPlayer___);
-  object = (Il2CppObject *)v17;
+                                                       (const MethodInfo_3004AE8 *)Method_BasicHelper_Find_SubBgmPlayer___);
+  object = (SubBgmPlayer_o *)v17;
   if ( v17 )
-    return (SubBgmPlayer_o *)object;
+    return object;
   if ( !v22 )
-LABEL_22:
-    sub_1BC3264(v17, v18);
+LABEL_23:
+    sub_1BCB254(v17, v18);
   if ( (int)v22->max_length <= 1 )
   {
-    object = (Il2CppObject *)sub_1BC3254(SubBgmPlayer_TypeInfo);
-    HIDWORD(object[2].klass) = -1082130432;
-    System_Object___ctor(object, 0LL);
+    object = (SubBgmPlayer_o *)sub_1BCB244(SubBgmPlayer_TypeInfo);
+    SubBgmPlayer___ctor(object, 0LL);
     bgmPlayers = this->fields.bgmPlayers;
     if ( bgmPlayers )
     {
-      klass = object->klass;
-      LODWORD(object[1].klass) = bgmPlayers->fields._size;
-      ((void (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))klass->vtable[5].method)(
-        object,
-        klass->vtable[6].methodPtr);
-      v17 = (System_Collections_Generic_List_object__o *)this->fields.bgmPlayers;
-      if ( v17 )
+      if ( object )
       {
-        items = v17->fields._items;
-        v37 = Method_System_Collections_Generic_List_BgmPlayerBase__Add__;
-        ++v17->fields._version;
-        if ( items )
+        klass = object->klass;
+        object->fields.index = bgmPlayers->fields._size;
+        ((void (__fastcall *)(SubBgmPlayer_o *, Il2CppMethodPointer))klass->vtable._5_Initialize.method)(
+          object,
+          klass->vtable._6_Reset.methodPtr);
+        v17 = (System_Collections_Generic_List_object__o *)this->fields.bgmPlayers;
+        if ( v17 )
         {
-          size = v17->fields._size;
-          if ( (unsigned int)size >= items->max_length )
+          items = v17->fields._items;
+          v37 = Method_System_Collections_Generic_List_BgmPlayerBase__Add__;
+          ++v17->fields._version;
+          if ( items )
           {
-            System_Collections_Generic_List_object___AddWithResize(
-              v17,
-              object,
-              *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+            size = v17->fields._size;
+            if ( (unsigned int)size >= items->max_length )
+            {
+              System_Collections_Generic_List_object___AddWithResize(
+                v17,
+                (Il2CppObject *)object,
+                *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+            }
+            else
+            {
+              v39 = &items->obj.klass + size;
+              v17->fields._size = size + 1;
+              v39[4] = (Il2CppClass *)object;
+              sub_1BCAF9C((CGThumbnailListItem_o *)(v39 + 4), (int32_t)object, v34, v35);
+            }
+            return object;
           }
-          else
-          {
-            v39 = &items->obj.klass + size;
-            v17->fields._size = size + 1;
-            v39[4] = (Il2CppClass *)object;
-            sub_1BC2FAC((CGThumbnailListItem_o *)(v39 + 4), (int32_t)object, v34, v35);
-          }
-          return (SubBgmPlayer_o *)object;
         }
       }
     }
-    goto LABEL_22;
+    goto LABEL_23;
   }
   return (SubBgmPlayer_o *)System_Linq_Enumerable__First_object_(
                              (System_Collections_Generic_IEnumerable_TSource__o *)v22,
-                             (const MethodInfo_3024764 *)Method_System_Linq_Enumerable_First_SubBgmPlayer___);
+                             (const MethodInfo_303D3A4 *)Method_System_Linq_Enumerable_First_SubBgmPlayer___);
 }
 
 
@@ -1386,20 +1386,20 @@ void __fastcall BgmManager__Initialize(const MethodInfo *method)
   _BOOL8 v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4B01668 & 1) == 0 )
+  if ( (byte_4B1BB5B & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v1);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v2);
-    byte_4B01668 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v1);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v2);
+    byte_4B1BB5B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1BC3264(v4, v5);
+      sub_1BCB254(v4, v5);
     BgmManager__InitializeLocal((BgmManager_o *)Instance, v5);
   }
 }
@@ -1416,7 +1416,7 @@ void __fastcall BgmManager__InitializeLocal(BgmManager_o *this, const MethodInfo
   __int64 v8; // x1
   __int64 v9; // x1
   struct System_Collections_Generic_List_BgmPlayerBase__o *bgmPlayers; // x8
-  __int64 v11; // x20
+  MainBgmPlayer_o *v11; // x20
   int32_t v12; // w2
   const MethodInfo *v13; // x3
   int32_t v14; // w2
@@ -1434,28 +1434,27 @@ void __fastcall BgmManager__InitializeLocal(BgmManager_o *this, const MethodInfo
   BgmManager_c *v26; // x0
 
   v2 = this;
-  if ( (byte_4B01684 & 1) == 0 )
+  if ( (byte_4B1BB77 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_BgmPlayerBase__TypeInfo, method);
-    sub_1BC3008(&BgmManager_TypeInfo, v3);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__Add__, v4);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__, v5);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__, v6);
-    sub_1BC3008(&MainBgmPlayer_TypeInfo, v7);
-    sub_1BC3008(&Method_BgmManager___c__InitializeLocal_b__50_0__, v8);
-    this = (BgmManager_o *)sub_1BC3008(&BgmManager___c_TypeInfo, v9);
-    byte_4B01684 = 1;
+    sub_1BCAFF8(&System_Action_BgmPlayerBase__TypeInfo, method);
+    sub_1BCAFF8(&BgmManager_TypeInfo, v3);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__Add__, v4);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__, v5);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__get_Count__, v6);
+    sub_1BCAFF8(&MainBgmPlayer_TypeInfo, v7);
+    sub_1BCAFF8(&Method_BgmManager___c__InitializeLocal_b__50_0__, v8);
+    this = (BgmManager_o *)sub_1BCAFF8(&BgmManager___c_TypeInfo, v9);
+    byte_4B1BB77 = 1;
   }
   bgmPlayers = v2->fields.bgmPlayers;
   if ( !bgmPlayers )
     goto LABEL_21;
   if ( bgmPlayers->fields._size <= 0 )
   {
-    v11 = sub_1BC3254(MainBgmPlayer_TypeInfo);
-    *(_DWORD *)(v11 + 36) = -1082130432;
-    System_Object___ctor((Il2CppObject *)v11, 0LL);
-    v2->fields.mainBgmPlayer = (struct MainBgmPlayer_o *)v11;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&v2->fields.mainBgmPlayer, v11, v12, v13);
+    v11 = (MainBgmPlayer_o *)sub_1BCB244(MainBgmPlayer_TypeInfo);
+    MainBgmPlayer___ctor(v11, 0LL);
+    v2->fields.mainBgmPlayer = v11;
+    sub_1BCAF9C((CGThumbnailListItem_o *)&v2->fields.mainBgmPlayer, (int32_t)v11, v12, v13);
     method = (const MethodInfo *)v2->fields.mainBgmPlayer;
     if ( !method )
       goto LABEL_21;
@@ -1474,14 +1473,14 @@ void __fastcall BgmManager__InitializeLocal(BgmManager_o *this, const MethodInfo
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)this,
         (Il2CppObject *)method,
-        *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+        *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
     }
     else
     {
       v19 = v16 + 8 * m_CancellationTokenSource_low;
       LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
       *(_QWORD *)(v19 + 32) = method;
-      sub_1BC2FAC((CGThumbnailListItem_o *)(v19 + 32), (int32_t)method, v14, v15);
+      sub_1BCAF9C((CGThumbnailListItem_o *)(v19 + 32), (int32_t)method, v14, v15);
     }
   }
   v20 = (System_Collections_Generic_List_object__o *)v2->fields.bgmPlayers;
@@ -1500,19 +1499,19 @@ void __fastcall BgmManager__InitializeLocal(BgmManager_o *this, const MethodInfo
       this = (BgmManager_o *)BgmManager___c_TypeInfo;
     }
     v22 = *(Il2CppObject **)this[2].monitor;
-    v21 = (System_Action_object__o *)sub_1BC3254(System_Action_BgmPlayerBase__TypeInfo);
+    v21 = (System_Action_object__o *)sub_1BCB244(System_Action_BgmPlayerBase__TypeInfo);
     System_Action_object____ctor(v21, v22, Method_BgmManager___c__InitializeLocal_b__50_0__, 0LL);
     static_fields = BgmManager___c_TypeInfo->static_fields;
     static_fields->__9__50_0 = (struct System_Action_BgmPlayerBase__o *)v21;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__50_0, (int32_t)v21, v24, v25);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__50_0, (int32_t)v21, v24, v25);
   }
   if ( !v20 )
 LABEL_21:
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   System_Collections_Generic_List_object___ForEach(
     v20,
     (System_Action_T__o *)v21,
-    (const MethodInfo_36A1880 *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+    (const MethodInfo_36BA610 *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
   v26 = BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
@@ -1534,11 +1533,11 @@ bool __fastcall BgmManager__IsLoadingLocal(BgmManager_o *this, System_String_o *
   struct System_Collections_Generic_List_string__o *v8; // x8
 
   v4 = this;
-  if ( (byte_4B0168E & 1) == 0 )
+  if ( (byte_4B1BB81 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__Contains__, name);
-    this = (BgmManager_o *)sub_1BC3008(&Method_System_Collections_Generic_List_string__get_Count__, v5);
-    byte_4B0168E = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__Contains__, name);
+    this = (BgmManager_o *)sub_1BCAFF8(&Method_System_Collections_Generic_List_string__get_Count__, v5);
+    byte_4B1BB81 = 1;
   }
   if ( name )
   {
@@ -1548,9 +1547,9 @@ bool __fastcall BgmManager__IsLoadingLocal(BgmManager_o *this, System_String_o *
       return System_Collections_Generic_List_object___Contains(
                loadingBgmCueNameList,
                (Il2CppObject *)this,
-               (const MethodInfo_36A11D0 *)Method_System_Collections_Generic_List_string__Contains__);
+               (const MethodInfo_36B9F60 *)Method_System_Collections_Generic_List_string__Contains__);
 LABEL_8:
-    sub_1BC3264(this, name);
+    sub_1BCB254(this, name);
   }
   v8 = v4->fields.loadingBgmCueNameList;
   if ( !v8 )
@@ -1567,25 +1566,25 @@ bool __fastcall BgmManager__IsPlayBgm(System_String_o *name, const MethodInfo *m
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B01670 & 1) == 0 )
+  if ( (byte_4B1BB63 & 1) == 0 )
   {
-    sub_1BC3008(&Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v4);
-    byte_4B01670 = 1;
+    sub_1BCAFF8(&Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v4);
+    byte_4B1BB63 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( v6 )
     return 0;
   if ( !Instance )
-    sub_1BC3264(v6, v7);
+    sub_1BCB254(v6, v7);
   return BgmManager__ExistsPlayerHavingBgmName_object_(
            (BgmManager_o *)Instance,
            name,
-           (const MethodInfo_2FF3690 *)Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___);
+           (const MethodInfo_300C2D0 *)Method_BgmManager_ExistsPlayerHavingBgmName_GeneralBgmPlayer___);
 }
 
 
@@ -1597,25 +1596,25 @@ bool __fastcall BgmManager__IsPlayJingle(System_String_o *name, const MethodInfo
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B0167C & 1) == 0 )
+  if ( (byte_4B1BB6F & 1) == 0 )
   {
-    sub_1BC3008(&Method_BgmManager_ExistsPlayerHavingBgmName_JinglePlayer___, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v4);
-    byte_4B0167C = 1;
+    sub_1BCAFF8(&Method_BgmManager_ExistsPlayerHavingBgmName_JinglePlayer___, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v4);
+    byte_4B1BB6F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( v6 )
     return 0;
   if ( !Instance )
-    sub_1BC3264(v6, v7);
+    sub_1BCB254(v6, v7);
   return BgmManager__ExistsPlayerHavingBgmName_object_(
            (BgmManager_o *)Instance,
            name,
-           (const MethodInfo_2FF3690 *)Method_BgmManager_ExistsPlayerHavingBgmName_JinglePlayer___);
+           (const MethodInfo_300C2D0 *)Method_BgmManager_ExistsPlayerHavingBgmName_JinglePlayer___);
 }
 
 
@@ -1626,15 +1625,15 @@ bool __fastcall BgmManager__IsPreloadSucceeded(BgmManager_o *this, System_String
   System_String_o *CueName; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B0168D & 1) == 0 )
+  if ( (byte_4B1BB80 & 1) == 0 )
   {
-    sub_1BC3008(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, bgmName);
-    byte_4B0168D = 1;
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, bgmName);
+    byte_4B1BB80 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   CueName = BgmManager__ExtractCueName((BgmManager_o *)Instance, bgmName, v5);
   if ( !Instance )
-    sub_1BC3264(CueName, v7);
+    sub_1BCB254(CueName, v7);
   return SoundManager__GetCueSheet((SoundManager_o *)Instance, CueName, 0LL) != 0LL;
 }
 
@@ -1649,33 +1648,33 @@ void __fastcall BgmManager__PauseBgm(bool isPause, const MethodInfo *method)
   __int64 v8; // x1
   bool v9; // w19
 
-  if ( (byte_4B01681 & 1) == 0 )
+  if ( (byte_4B1BB74 & 1) == 0 )
   {
-    sub_1BC3008(&Method_BgmManager_PauseBgmLocal_MainBgmPlayer___, method);
-    sub_1BC3008(&Method_BgmManager_PauseBgmLocal_SubBgmPlayer___, v3);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v4);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v5);
-    byte_4B01681 = 1;
+    sub_1BCAFF8(&Method_BgmManager_PauseBgmLocal_MainBgmPlayer___, method);
+    sub_1BCAFF8(&Method_BgmManager_PauseBgmLocal_SubBgmPlayer___, v3);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v5);
+    byte_4B1BB74 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( !v7 )
   {
     if ( !Instance )
-      sub_1BC3264(v7, v8);
+      sub_1BCB254(v7, v8);
     v9 = isPause;
     BgmManager__PauseBgmLocal_object_(
       (BgmManager_o *)Instance,
       v9,
       0LL,
-      (const MethodInfo_2FF39B4 *)Method_BgmManager_PauseBgmLocal_MainBgmPlayer___);
+      (const MethodInfo_300C5F4 *)Method_BgmManager_PauseBgmLocal_MainBgmPlayer___);
     BgmManager__PauseBgmLocal_object_(
       (BgmManager_o *)Instance,
       v9,
       0LL,
-      (const MethodInfo_2FF39B4 *)Method_BgmManager_PauseBgmLocal_SubBgmPlayer___);
+      (const MethodInfo_300C5F4 *)Method_BgmManager_PauseBgmLocal_SubBgmPlayer___);
   }
 }
 
@@ -1684,10 +1683,10 @@ void __fastcall BgmManager__PauseBgmLocal_object_(
         BgmManager_o *this,
         bool isPause,
         System_String_o *name,
-        const MethodInfo_2FF39B4 *method)
+        const MethodInfo_300C5F4 *method)
 {
   long double v4; // q0
-  const MethodInfo_2FF39B4_RGCTXs *rgctx_data; // x8
+  const MethodInfo_300C5F4_RGCTXs *rgctx_data; // x8
   __int64 _0_BgmManager___c__DisplayClass70_0_T; // x0
   BgmManager___c__DisplayClass70_0_T__o *v10; // x22
   __int64 v11; // x0
@@ -1700,35 +1699,35 @@ void __fastcall BgmManager__PauseBgmLocal_object_(
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C134C8(method);
+    sub_1C1B4B8(method);
     rgctx_data = method->rgctx_data;
   }
   _0_BgmManager___c__DisplayClass70_0_T = (__int64)rgctx_data->_0_BgmManager___c__DisplayClass70_0_T_;
   if ( (BYTE5(rgctx_data->_0_BgmManager___c__DisplayClass70_0_T_->vtable[0].methodPtr) & 1) == 0 )
-    _0_BgmManager___c__DisplayClass70_0_T = sub_1C1346C(v4);
-  v10 = (BgmManager___c__DisplayClass70_0_T__o *)sub_1BC3254(_0_BgmManager___c__DisplayClass70_0_T);
+    _0_BgmManager___c__DisplayClass70_0_T = sub_1C1B45C(v4);
+  v10 = (BgmManager___c__DisplayClass70_0_T__o *)sub_1BCB244(_0_BgmManager___c__DisplayClass70_0_T);
   BgmManager___c__DisplayClass70_0_object____ctor(
     v10,
-    (const MethodInfo_31D2680 *)method->rgctx_data->_1_BgmManager___c__DisplayClass70_0_T___ctor);
+    (const MethodInfo_31EB410 *)method->rgctx_data->_1_BgmManager___c__DisplayClass70_0_T___ctor);
   if ( !v10 )
-    sub_1BC3264(v11, v12);
+    sub_1BCB254(v11, v12);
   v10->fields.isPause = isPause;
   v13 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__OfType_object_(
                                                          (System_Collections_IEnumerable_o *)this->fields.bgmPlayers,
-                                                         (const MethodInfo_302D068 *)method->rgctx_data->_2_System_Linq_Enumerable_OfType_T_);
+                                                         (const MethodInfo_3045CA8 *)method->rgctx_data->_2_System_Linq_Enumerable_OfType_T_);
   _5_System_Action_T = method->rgctx_data->_5_System_Action_T_;
   if ( (BYTE5(_5_System_Action_T->vtable[0].methodPtr) & 1) == 0 )
-    _5_System_Action_T = (Il2CppClass *)sub_1C1346C(v14);
-  v16 = (System_Action_object__o *)sub_1BC3254(_5_System_Action_T);
+    _5_System_Action_T = (Il2CppClass *)sub_1C1B45C(v14);
+  v16 = (System_Action_object__o *)sub_1BCB244(_5_System_Action_T);
   System_Action_object____ctor(
     v16,
     (Il2CppObject *)v10,
     (intptr_t)method->rgctx_data->_4_BgmManager___c__DisplayClass70_0_T___PauseBgmLocal_b__0,
-    (const MethodInfo_33226B8 *)method->rgctx_data->_6_System_Action_T___ctor);
+    (const MethodInfo_333B448 *)method->rgctx_data->_6_System_Action_T___ctor);
   BasicHelper__ForEach_object_(
     v13,
     (System_Action_T__o *)v16,
-    (const MethodInfo_2FEDEFC *)method->rgctx_data->_7_BasicHelper_ForEach_T_);
+    (const MethodInfo_3006B3C *)method->rgctx_data->_7_BasicHelper_ForEach_T_);
 }
 
 
@@ -1744,36 +1743,35 @@ void __fastcall BgmManager__PlayBgm(
   __int64 v12; // x1
   BgmPlayArgsGroup_o *v13; // x0
   BgmPlayArgsGroup_o *v14; // x22
-  const MethodInfo *v15; // x4
-  const MethodInfo *v16; // x2
+  const MethodInfo *v15; // x2
   System_Nullable_float__o volumeNullable; // [xsp+8h] [xbp-58h] BYREF
   System_Nullable_float__o p_volumeNullable; // 0:x0.8
-  System_Nullable_float__o v19; // 0:x2.8
+  System_Nullable_float__o v18; // 0:x2.8
 
-  if ( (byte_4B01672 & 1) == 0 )
+  if ( (byte_4B1BB65 & 1) == 0 )
   {
-    sub_1BC3008(&BgmManager_TypeInfo, startTime);
-    sub_1BC3008(&BgmPlayArgsGroup_TypeInfo, v11);
-    sub_1BC3008(&Method_System_Nullable_float___ctor__, v12);
-    byte_4B01672 = 1;
+    sub_1BCAFF8(&BgmManager_TypeInfo, startTime);
+    sub_1BCAFF8(&BgmPlayArgsGroup_TypeInfo, v11);
+    sub_1BCAFF8(&Method_System_Nullable_float___ctor__, v12);
+    byte_4B1BB65 = 1;
   }
   p_volumeNullable = (System_Nullable_float__o)&volumeNullable;
   volumeNullable = 0LL;
   System_Nullable_float____ctor(
     p_volumeNullable,
     volume,
-    (const MethodInfo_37C22BC *)Method_System_Nullable_float___ctor__);
-  v13 = (BgmPlayArgsGroup_o *)sub_1BC3254(BgmPlayArgsGroup_TypeInfo);
-  v19 = volumeNullable;
+    (const MethodInfo_37DB04C *)Method_System_Nullable_float___ctor__);
+  v13 = (BgmPlayArgsGroup_o *)sub_1BCB244(BgmPlayArgsGroup_TypeInfo);
+  v18 = volumeNullable;
   v14 = v13;
-  BgmPlayArgsGroup___ctor_40215080(v13, name, v19, fadeTime, startTime, v15);
+  BgmPlayArgsGroup___ctor_40387548(v13, name, v18, fadeTime, startTime, 0LL);
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  BgmManager__PlayBgm_40215184(v14, finishCallback, v16);
+  BgmManager__PlayBgm_40369660(v14, finishCallback, v15);
 }
 
 
-void __fastcall BgmManager__PlayBgm_40215184(
+void __fastcall BgmManager__PlayBgm_40369660(
         BgmPlayArgsGroup_o *argsGroup,
         System_Action_o *finishCallback,
         const MethodInfo *method)
@@ -1784,13 +1782,13 @@ void __fastcall BgmManager__PlayBgm_40215184(
   __int64 v8; // x1
   const MethodInfo *v9; // x4
 
-  if ( (byte_4B01674 & 1) == 0 )
+  if ( (byte_4B1BB67 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, finishCallback);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v5);
-    byte_4B01674 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, finishCallback);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v5);
+    byte_4B1BB67 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
@@ -1801,13 +1799,13 @@ void __fastcall BgmManager__PlayBgm_40215184(
   else
   {
     if ( !Instance )
-      sub_1BC3264(v7, v8);
+      sub_1BCB254(v7, v8);
     BgmManager__PreloadAndPlayBgms((BgmManager_o *)Instance, argsGroup, finishCallback, 1, v9);
   }
 }
 
 
-void __fastcall BgmManager__PlayBgm_40215380(
+void __fastcall BgmManager__PlayBgm_40369856(
         MainBgmPlayArgs_o *main,
         SubBgmPlayArgs_array *subArray,
         System_Action_o *finishCallback,
@@ -1815,20 +1813,19 @@ void __fastcall BgmManager__PlayBgm_40215380(
 {
   __int64 v7; // x1
   BgmPlayArgsGroup_o *v8; // x22
-  const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x2
+  const MethodInfo *v9; // x2
 
-  if ( (byte_4B01673 & 1) == 0 )
+  if ( (byte_4B1BB66 & 1) == 0 )
   {
-    sub_1BC3008(&BgmManager_TypeInfo, subArray);
-    sub_1BC3008(&BgmPlayArgsGroup_TypeInfo, v7);
-    byte_4B01673 = 1;
+    sub_1BCAFF8(&BgmManager_TypeInfo, subArray);
+    sub_1BCAFF8(&BgmPlayArgsGroup_TypeInfo, v7);
+    byte_4B1BB66 = 1;
   }
-  v8 = (BgmPlayArgsGroup_o *)sub_1BC3254(BgmPlayArgsGroup_TypeInfo);
-  BgmPlayArgsGroup___ctor(v8, main, (BgmPlayArgs_array *)subArray, v9);
+  v8 = (BgmPlayArgsGroup_o *)sub_1BCB244(BgmPlayArgsGroup_TypeInfo);
+  BgmPlayArgsGroup___ctor(v8, main, (BgmPlayArgs_array *)subArray, 0LL);
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  BgmManager__PlayBgm_40215184(v8, finishCallback, v10);
+  BgmManager__PlayBgm_40369660(v8, finishCallback, v9);
 }
 
 
@@ -1844,20 +1841,20 @@ void __fastcall BgmManager__PlayJingle(
   __int64 v10; // x1
   const MethodInfo *v11; // x3
 
-  if ( (byte_4B0167D & 1) == 0 )
+  if ( (byte_4B1BB70 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, callbackFunc);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v7);
-    byte_4B0167D = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, callbackFunc);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v7);
+    byte_4B1BB70 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v9 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( !v9 )
   {
     if ( !Instance )
-      sub_1BC3264(v9, v10);
+      sub_1BCB254(v9, v10);
     BgmManager__PlayJingleLocal((BgmManager_o *)Instance, name, volume, callbackFunc, v11);
   }
 }
@@ -1885,39 +1882,39 @@ void __fastcall BgmManager__PlayJingleLocal(
   System_Action_o *v21; // x21
   const MethodInfo *v22; // x3
 
-  if ( (byte_4B01691 & 1) == 0 )
+  if ( (byte_4B1BB84 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, name);
-    sub_1BC3008(&Method_BgmManager___c__DisplayClass71_0__PlayJingleLocal_b__0__, v9);
-    sub_1BC3008(&BgmManager___c__DisplayClass71_0_TypeInfo, v10);
-    byte_4B01691 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, name);
+    sub_1BCAFF8(&Method_BgmManager___c__DisplayClass71_0__PlayJingleLocal_b__0__, v9);
+    sub_1BCAFF8(&BgmManager___c__DisplayClass71_0_TypeInfo, v10);
+    byte_4B1BB84 = 1;
   }
-  v11 = sub_1BC3254(BgmManager___c__DisplayClass71_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v11, 0LL);
+  v11 = sub_1BCB244(BgmManager___c__DisplayClass71_0_TypeInfo);
+  BgmManager___c__DisplayClass71_0___ctor((BgmManager___c__DisplayClass71_0_o *)v11, 0LL);
   if ( !v11 )
-    sub_1BC3264(v12, v13);
+    sub_1BCB254(v12, v13);
   *(_QWORD *)(v11 + 16) = this;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v11 + 16), (int32_t)this, v14, v15);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v11 + 16), (int32_t)this, v14, v15);
   *(_QWORD *)(v11 + 24) = name;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v11 + 24), (int32_t)name, v16, v17);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v11 + 24), (int32_t)name, v16, v17);
   *(float *)(v11 + 32) = volume;
   *(_QWORD *)(v11 + 40) = callbackFunc;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v11 + 40), (int32_t)callbackFunc, v18, v19);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v11 + 40), (int32_t)callbackFunc, v18, v19);
   v20 = *(System_String_o **)(v11 + 24);
-  v21 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  v21 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(v21, (Il2CppObject *)v11, Method_BgmManager___c__DisplayClass71_0__PlayJingleLocal_b__0__, 0LL);
   BgmManager__PreloadBgm(this, v20, v21, v22);
 }
 
 
-void __fastcall BgmManager__PlayJingle_40219780(System_String_o *name, float volume, const MethodInfo *method)
+void __fastcall BgmManager__PlayJingle_40373824(System_String_o *name, float volume, const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
 
-  if ( (byte_4B0167E & 1) == 0 )
+  if ( (byte_4B1BB71 & 1) == 0 )
   {
-    sub_1BC3008(&BgmManager_TypeInfo, method);
-    byte_4B0167E = 1;
+    sub_1BCAFF8(&BgmManager_TypeInfo, method);
+    byte_4B1BB71 = 1;
   }
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
@@ -1929,14 +1926,14 @@ void __fastcall BgmManager__PlayMainBgm(MainBgmPlayArgs_o *args, const MethodInf
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B01675 & 1) == 0 )
+  if ( (byte_4B1BB68 & 1) == 0 )
   {
-    sub_1BC3008(&BgmManager_TypeInfo, method);
-    byte_4B01675 = 1;
+    sub_1BCAFF8(&BgmManager_TypeInfo, method);
+    byte_4B1BB68 = 1;
   }
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  BgmManager__PlayBgm_40215380(args, 0LL, 0LL, v2);
+  BgmManager__PlayBgm_40369856(args, 0LL, 0LL, v2);
 }
 
 
@@ -1952,20 +1949,20 @@ void __fastcall BgmManager__PlayPreloadBgms(BgmManager_o *this, const MethodInfo
   System_Object_array *v10; // x21
   unsigned __int64 v11; // x22
 
-  if ( (byte_4B01689 & 1) == 0 )
+  if ( (byte_4B1BB7C & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___, method);
-    byte_4B01689 = 1;
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___, method);
+    byte_4B1BB7C = 1;
   }
   cacheArgsGroup = this->fields.cacheArgsGroup;
   if ( cacheArgsGroup )
   {
-    v4 = BgmPlayArgsGroup__AllArgsListNullExcluded(cacheArgsGroup, method);
+    v4 = BgmPlayArgsGroup__AllArgsListNullExcluded(cacheArgsGroup, 0LL);
     v5 = System_Linq_Enumerable__ToArray_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)v4,
-           (const MethodInfo_303E54C *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+           (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
     if ( !v5 )
-      sub_1BC3264(0LL, v6);
+      sub_1BCB254(0LL, v6);
     v9 = *(_QWORD *)&v5->max_length;
     v10 = v5;
     if ( (int)v9 >= 1 )
@@ -1974,7 +1971,7 @@ void __fastcall BgmManager__PlayPreloadBgms(BgmManager_o *this, const MethodInfo
       do
       {
         if ( v11 >= (unsigned int)v9 )
-          sub_1BC326C(v5, v6, v7);
+          sub_1BCB25C(v5, v6, v7);
         BgmManager__PlayPreloadedBgm(this, (BgmPlayArgs_o *)v10->m_Items[v11], v7);
         LODWORD(v9) = v10->max_length;
         ++v11;
@@ -1982,7 +1979,7 @@ void __fastcall BgmManager__PlayPreloadBgms(BgmManager_o *this, const MethodInfo
       while ( (__int64)v11 < (int)v9 );
     }
     this->fields.cacheArgsGroup = 0LL;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.cacheArgsGroup, 0, (int32_t)v7, v8);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.cacheArgsGroup, 0, (int32_t)v7, v8);
   }
 }
 
@@ -1999,11 +1996,11 @@ void __fastcall BgmManager__PlayPreloadedBgm(BgmManager_o *this, BgmPlayArgs_o *
   __int64 v12; // x11
   void *mainBgmPlayer; // x0
 
-  if ( (byte_4B0168A & 1) == 0 )
+  if ( (byte_4B1BB7D & 1) == 0 )
   {
-    sub_1BC3008(&MainBgmPlayArgs_TypeInfo, args);
-    sub_1BC3008(&SubBgmPlayArgs_TypeInfo, v5);
-    byte_4B0168A = 1;
+    sub_1BCAFF8(&MainBgmPlayArgs_TypeInfo, args);
+    sub_1BCAFF8(&SubBgmPlayArgs_TypeInfo, v5);
+    byte_4B1BB7D = 1;
   }
   if ( args )
   {
@@ -2031,7 +2028,7 @@ void __fastcall BgmManager__PlayPreloadedBgm(BgmManager_o *this, BgmPlayArgs_o *
           mainBgmPlayer = BgmManager__GetOrCreateSubBgmPlayer(this, BgmName_k__BackingField, v8);
         }
         if ( !mainBgmPlayer )
-          sub_1BC3264(0LL, v7);
+          sub_1BCB254(0LL, v7);
         (*(void (__fastcall **)(void *, System_String_o *, int64_t, _QWORD, float, float))(*(_QWORD *)mainBgmPlayer
                                                                                          + 456LL))(
           mainBgmPlayer,
@@ -2067,25 +2064,25 @@ void __fastcall BgmManager__PlaySubBgm(SubBgmPlayArgs_o *args, const MethodInfo 
   System_Action_o *v19; // x22
   const MethodInfo *v20; // x3
 
-  if ( (byte_4B01676 & 1) == 0 )
+  if ( (byte_4B1BB69 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v4);
-    sub_1BC3008(&Method_BgmManager___c__DisplayClass36_0__PlaySubBgm_b__0__, v5);
-    sub_1BC3008(&BgmManager___c__DisplayClass36_0_TypeInfo, v6);
-    byte_4B01676 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v4);
+    sub_1BCAFF8(&Method_BgmManager___c__DisplayClass36_0__PlaySubBgm_b__0__, v5);
+    sub_1BCAFF8(&BgmManager___c__DisplayClass36_0_TypeInfo, v6);
+    byte_4B1BB69 = 1;
   }
-  v7 = sub_1BC3254(BgmManager___c__DisplayClass36_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v7, 0LL);
+  v7 = sub_1BCB244(BgmManager___c__DisplayClass36_0_TypeInfo);
+  BgmManager___c__DisplayClass36_0___ctor((BgmManager___c__DisplayClass36_0_o *)v7, 0LL);
   if ( !v7 )
     goto LABEL_10;
   *(_QWORD *)(v7 + 24) = args;
   v12 = v7 + 24;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)args, v10, v11);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v7 + 24), (int32_t)args, v10, v11);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   *(_QWORD *)(v7 + 16) = Instance;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)Instance, v14, v15);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v7 + 16), (int32_t)Instance, v14, v15);
   v16 = *(UnityEngine_Object_o **)(v7 + 16);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2096,7 +2093,7 @@ void __fastcall BgmManager__PlaySubBgm(SubBgmPlayArgs_o *args, const MethodInfo 
     {
       v17 = *(System_String_o **)(*(_QWORD *)v12 + 16LL);
       v18 = *(BgmManager_o **)(v7 + 16);
-      v19 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+      v19 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
       System_Action___ctor(v19, (Il2CppObject *)v7, Method_BgmManager___c__DisplayClass36_0__PlaySubBgm_b__0__, 0LL);
       if ( v18 )
       {
@@ -2105,7 +2102,7 @@ void __fastcall BgmManager__PlaySubBgm(SubBgmPlayArgs_o *args, const MethodInfo 
       }
     }
 LABEL_10:
-    sub_1BC3264(v8, v9);
+    sub_1BCB254(v8, v9);
   }
 }
 
@@ -2131,7 +2128,7 @@ void __fastcall BgmManager__PreloadAndPlayBgms(
   __int64 v20; // x1
   __int64 v21; // x19
   BgmPlayArgsGroup_o *v22; // x0
-  const MethodInfo *v23; // x1
+  __int64 v23; // x1
   int32_t v24; // w2
   const MethodInfo *v25; // x3
   bool v26; // w24
@@ -2169,54 +2166,54 @@ void __fastcall BgmManager__PreloadAndPlayBgms(
   System_Action_o *v58; // x22
   const MethodInfo *v59; // x3
 
-  if ( (byte_4B01688 & 1) == 0 )
+  if ( (byte_4B1BB7B & 1) == 0 )
   {
-    sub_1BC3008(&System_Action___TypeInfo, argsGroup);
-    sub_1BC3008(&System_Action_Action__TypeInfo, v9);
-    sub_1BC3008(&System_Action_TypeInfo, v10);
-    sub_1BC3008(&ChainableActionParallel_TypeInfo, v11);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___, v12);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Action_Action___Add__, v13);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Action_Action___ToArray__, v14);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Action_Action____ctor__, v15);
-    sub_1BC3008(&System_Collections_Generic_List_Action_Action___TypeInfo, v16);
-    sub_1BC3008(&Method_BgmManager___c__DisplayClass57_0__PreloadAndPlayBgms_b__0__, v17);
-    sub_1BC3008(&BgmManager___c__DisplayClass57_0_TypeInfo, v18);
-    sub_1BC3008(&Method_BgmManager___c__DisplayClass57_1__PreloadAndPlayBgms_b__1__, v19);
-    sub_1BC3008(&BgmManager___c__DisplayClass57_1_TypeInfo, v20);
-    byte_4B01688 = 1;
+    sub_1BCAFF8(&System_Action___TypeInfo, argsGroup);
+    sub_1BCAFF8(&System_Action_Action__TypeInfo, v9);
+    sub_1BCAFF8(&System_Action_TypeInfo, v10);
+    sub_1BCAFF8(&ChainableActionParallel_TypeInfo, v11);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___, v12);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Action_Action___Add__, v13);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Action_Action___ToArray__, v14);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Action_Action____ctor__, v15);
+    sub_1BCAFF8(&System_Collections_Generic_List_Action_Action___TypeInfo, v16);
+    sub_1BCAFF8(&Method_BgmManager___c__DisplayClass57_0__PreloadAndPlayBgms_b__0__, v17);
+    sub_1BCAFF8(&BgmManager___c__DisplayClass57_0_TypeInfo, v18);
+    sub_1BCAFF8(&Method_BgmManager___c__DisplayClass57_1__PreloadAndPlayBgms_b__1__, v19);
+    sub_1BCAFF8(&BgmManager___c__DisplayClass57_1_TypeInfo, v20);
+    byte_4B1BB7B = 1;
   }
-  v21 = sub_1BC3254(BgmManager___c__DisplayClass57_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v21, 0LL);
+  v21 = sub_1BCB244(BgmManager___c__DisplayClass57_0_TypeInfo);
+  BgmManager___c__DisplayClass57_0___ctor((BgmManager___c__DisplayClass57_0_o *)v21, 0LL);
   if ( !v21 )
     goto LABEL_24;
   *(_QWORD *)(v21 + 16) = this;
   v26 = isPlay;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v21 + 16), (int32_t)this, v24, v25);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v21 + 16), (int32_t)this, v24, v25);
   *(_QWORD *)(v21 + 24) = argsGroup;
   v27 = (BgmPlayArgsGroup_o **)(v21 + 24);
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v21 + 24), (int32_t)argsGroup, v28, v29);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v21 + 24), (int32_t)argsGroup, v28, v29);
   *(_QWORD *)(v21 + 48) = finishCallback;
   *(_BYTE *)(v21 + 32) = v26;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v21 + 48), (int32_t)finishCallback, v30, v31);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v21 + 48), (int32_t)finishCallback, v30, v31);
   v34 = *(struct BgmPlayArgsGroup_o **)(v21 + 24);
   if ( v34 )
   {
     this->fields.cacheArgsGroup = v34;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.cacheArgsGroup, (int32_t)v34, v32, v33);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.cacheArgsGroup, (int32_t)v34, v32, v33);
     v22 = *v27;
     if ( !*v27 )
       goto LABEL_24;
-    v35 = BgmPlayArgsGroup__AllArgsListNullExcluded(v22, v23);
+    v35 = BgmPlayArgsGroup__AllArgsListNullExcluded(v22, 0LL);
     v36 = System_Linq_Enumerable__ToArray_object_(
             (System_Collections_Generic_IEnumerable_TSource__o *)v35,
-            (const MethodInfo_303E54C *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
+            (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_BgmPlayArgs___);
     *(_QWORD *)(v21 + 40) = v36;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v21 + 40), (int32_t)v36, v37, v38);
-    v39 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_Action_Action___TypeInfo);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v21 + 40), (int32_t)v36, v37, v38);
+    v39 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_Action_Action___TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v39,
-      (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_Action_Action____ctor__);
+      (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_Action_Action____ctor__);
     v40 = *(_QWORD *)(v21 + 40);
     if ( !v40 )
       goto LABEL_24;
@@ -2225,18 +2222,18 @@ void __fastcall BgmManager__PreloadAndPlayBgms(
       v41 = 0LL;
       while ( 1 )
       {
-        v42 = sub_1BC3254(BgmManager___c__DisplayClass57_1_TypeInfo);
-        System_Object___ctor((Il2CppObject *)v42, 0LL);
+        v42 = sub_1BCB244(BgmManager___c__DisplayClass57_1_TypeInfo);
+        BgmManager___c__DisplayClass57_1___ctor((BgmManager___c__DisplayClass57_1_o *)v42, 0LL);
         if ( !v42 )
           break;
         *(_QWORD *)(v42 + 24) = v21;
-        sub_1BC2FAC((CGThumbnailListItem_o *)(v42 + 24), v21, v43, v44);
+        sub_1BCAF9C((CGThumbnailListItem_o *)(v42 + 24), v21, v43, v44);
         if ( v41 >= *(unsigned int *)(v40 + 24) )
           goto LABEL_25;
         v47 = *(_QWORD *)(v40 + 32 + 8 * v41);
         *(_QWORD *)(v42 + 16) = v47;
-        sub_1BC2FAC((CGThumbnailListItem_o *)(v42 + 16), v47, v45, v46);
-        v48 = (System_Action_object__o *)sub_1BC3254(System_Action_Action__TypeInfo);
+        sub_1BCAF9C((CGThumbnailListItem_o *)(v42 + 16), v47, v45, v46);
+        v48 = (System_Action_object__o *)sub_1BCB244(System_Action_Action__TypeInfo);
         System_Action_object____ctor(
           v48,
           (Il2CppObject *)v42,
@@ -2255,31 +2252,31 @@ void __fastcall BgmManager__PreloadAndPlayBgms(
           System_Collections_Generic_List_object___AddWithResize(
             v39,
             (Il2CppObject *)v48,
-            *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
+            *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
         }
         else
         {
           v54 = &items->obj.klass + size;
           v39->fields._size = size + 1;
           v54[4] = (Il2CppClass *)v48;
-          sub_1BC2FAC((CGThumbnailListItem_o *)(v54 + 4), (int32_t)v48, v49, v50);
+          sub_1BCAF9C((CGThumbnailListItem_o *)(v54 + 4), (int32_t)v48, v49, v50);
         }
         if ( (__int64)++v41 >= *(int *)(v40 + 24) )
           goto LABEL_17;
       }
 LABEL_24:
-      sub_1BC3264(v22, v23);
+      sub_1BCB254(v22, v23);
     }
 LABEL_17:
     if ( !v39 )
       goto LABEL_24;
     v55 = System_Collections_Generic_List_object___ToArray(
             v39,
-            (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_Action_Action___ToArray__);
-    v56 = (ChainableActionParallel_o *)sub_1BC3254(ChainableActionParallel_TypeInfo);
-    ChainableActionParallel___ctor_48135236(v56, (System_Action_Action__array *)v55, 0LL);
-    v57 = sub_1BC30B0(System_Action___TypeInfo, 1LL);
-    v58 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+            (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_Action_Action___ToArray__);
+    v56 = (ChainableActionParallel_o *)sub_1BCB244(ChainableActionParallel_TypeInfo);
+    ChainableActionParallel___ctor_48236352(v56, (System_Action_Action__array *)v55, 0LL);
+    v57 = sub_1BCB0A0(System_Action___TypeInfo, 1LL);
+    v58 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
     System_Action___ctor(
       v58,
       (Il2CppObject *)v21,
@@ -2289,9 +2286,9 @@ LABEL_17:
       goto LABEL_24;
     if ( !*(_DWORD *)(v57 + 24) )
 LABEL_25:
-      sub_1BC326C(v22, v23, v45);
+      sub_1BCB25C(v22, v23, v45);
     *(_QWORD *)(v57 + 32) = v58;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v57 + 32), (int32_t)v58, v45, v59);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v57 + 32), (int32_t)v58, v45, v59);
     if ( !v56 )
       goto LABEL_24;
     v22 = (BgmPlayArgsGroup_o *)ChainableActionBase__Final(
@@ -2342,35 +2339,35 @@ bool __fastcall BgmManager__PreloadBgm(
   const MethodInfo *v31; // x3
   System_Collections_IEnumerator_o *v32; // x0
 
-  if ( (byte_4B0168B & 1) == 0 )
+  if ( (byte_4B1BB7E & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, name);
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__Contains__, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__Insert__, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__Remove__, v9);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v10);
-    sub_1BC3008(&Method_BgmManager___c__DisplayClass61_0__PreloadBgm_b__0__, v11);
-    sub_1BC3008(&BgmManager___c__DisplayClass61_0_TypeInfo, v12);
-    byte_4B0168B = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, name);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__Contains__, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__Insert__, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__Remove__, v9);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__, v10);
+    sub_1BCAFF8(&Method_BgmManager___c__DisplayClass61_0__PreloadBgm_b__0__, v11);
+    sub_1BCAFF8(&BgmManager___c__DisplayClass61_0_TypeInfo, v12);
+    byte_4B1BB7E = 1;
   }
-  v13 = sub_1BC3254(BgmManager___c__DisplayClass61_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v13, 0LL);
+  v13 = sub_1BCB244(BgmManager___c__DisplayClass61_0_TypeInfo);
+  BgmManager___c__DisplayClass61_0___ctor((BgmManager___c__DisplayClass61_0_o *)v13, 0LL);
   if ( !v13 )
     goto LABEL_14;
   *(_QWORD *)(v13 + 32) = this;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v13 + 32), (int32_t)this, v16, v17);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v13 + 32), (int32_t)this, v16, v17);
   *(_QWORD *)(v13 + 40) = finishCallback;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v13 + 40), (int32_t)finishCallback, v18, v19);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v13 + 40), (int32_t)finishCallback, v18, v19);
   CueName = BgmManager__ExtractCueName(v20, name, v21);
   *(_QWORD *)(v13 + 24) = CueName;
   v23 = (Il2CppObject **)(v13 + 24);
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v13 + 24), (int32_t)CueName, v24, v25);
-  Instance = (SoundManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v13 + 24), (int32_t)CueName, v24, v25);
+  Instance = (SoundManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   CueSheet = SoundManager__GetCueSheet(Instance, *(System_String_o **)(v13 + 24), 0LL);
   *(_QWORD *)(v13 + 16) = CueSheet;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v13 + 16), (int32_t)CueSheet, v27, v28);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v13 + 16), (int32_t)CueSheet, v27, v28);
   IsNullOrEmpty = System_String__IsNullOrEmpty(*(System_String_o **)(v13 + 16), 0LL);
   if ( !IsNullOrEmpty )
   {
@@ -2380,7 +2377,7 @@ bool __fastcall BgmManager__PreloadBgm(
       if ( !System_Collections_Generic_List_object___Contains(
               (System_Collections_Generic_List_object__o *)Instance,
               *v23,
-              (const MethodInfo_36A11D0 *)Method_System_Collections_Generic_List_string__Contains__) )
+              (const MethodInfo_36B9F60 *)Method_System_Collections_Generic_List_string__Contains__) )
       {
 LABEL_12:
         ActionExtensions__Call(*(System_Action_o **)(v13 + 40), 0LL);
@@ -2392,7 +2389,7 @@ LABEL_12:
         System_Collections_Generic_List_object___Remove(
           (System_Collections_Generic_List_object__o *)Instance,
           *v23,
-          (const MethodInfo_36A2368 *)Method_System_Collections_Generic_List_string__Remove__);
+          (const MethodInfo_36BB0F8 *)Method_System_Collections_Generic_List_string__Remove__);
         Instance = (SoundManager_o *)this->fields.addBindList;
         if ( Instance )
         {
@@ -2400,18 +2397,18 @@ LABEL_12:
             (System_Collections_Generic_List_object__o *)Instance,
             0,
             *v23,
-            (const MethodInfo_36A1BF0 *)Method_System_Collections_Generic_List_string__Insert__);
+            (const MethodInfo_36BA980 *)Method_System_Collections_Generic_List_string__Insert__);
           goto LABEL_12;
         }
       }
     }
 LABEL_14:
-    sub_1BC3264(Instance, v15);
+    sub_1BCB254(Instance, v15);
   }
-  v30 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  v30 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(v30, (Il2CppObject *)v13, Method_BgmManager___c__DisplayClass61_0__PreloadBgm_b__0__, 0LL);
   v32 = BgmManager__CoWaitSameAudioLoading(this, name, v30, v31);
-  UnityEngine_MonoBehaviour__StartCoroutine_70019872((UnityEngine_MonoBehaviour_o *)this, v32, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70121648((UnityEngine_MonoBehaviour_o *)this, v32, 0LL);
   return !IsNullOrEmpty;
 }
 
@@ -2441,13 +2438,13 @@ void __fastcall BgmManager__ReflectMasterVolumeLocal(BgmManager_o *this, const M
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4B01687 & 1) == 0 )
+  if ( (byte_4B1BB7A & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_BgmPlayerBase__TypeInfo, method);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__, v3);
-    sub_1BC3008(&Method_BgmManager___c__ReflectMasterVolumeLocal_b__53_0__, v4);
-    sub_1BC3008(&BgmManager___c_TypeInfo, v5);
-    byte_4B01687 = 1;
+    sub_1BCAFF8(&System_Action_BgmPlayerBase__TypeInfo, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__, v3);
+    sub_1BCAFF8(&Method_BgmManager___c__ReflectMasterVolumeLocal_b__53_0__, v4);
+    sub_1BCAFF8(&BgmManager___c_TypeInfo, v5);
+    byte_4B1BB7A = 1;
   }
   v6 = BgmManager___c_TypeInfo;
   bgmPlayers = (System_Collections_Generic_List_object__o *)this->fields.bgmPlayers;
@@ -2465,18 +2462,18 @@ void __fastcall BgmManager__ReflectMasterVolumeLocal(BgmManager_o *this, const M
       v6 = BgmManager___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__53_0 = (System_Action_object__o *)sub_1BC3254(System_Action_BgmPlayerBase__TypeInfo);
+    _9__53_0 = (System_Action_object__o *)sub_1BCB244(System_Action_BgmPlayerBase__TypeInfo);
     System_Action_object____ctor(_9__53_0, v9, Method_BgmManager___c__ReflectMasterVolumeLocal_b__53_0__, 0LL);
     static_fields = BgmManager___c_TypeInfo->static_fields;
     static_fields->__9__53_0 = (struct System_Action_BgmPlayerBase__o *)_9__53_0;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__53_0, (int32_t)_9__53_0, v11, v12);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__53_0, (int32_t)_9__53_0, v11, v12);
   }
   if ( !bgmPlayers )
-    sub_1BC3264(v6, method);
+    sub_1BCB254(v6, method);
   System_Collections_Generic_List_object___ForEach(
     bgmPlayers,
     (System_Action_T__o *)_9__53_0,
-    (const MethodInfo_36A1880 *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+    (const MethodInfo_36BA610 *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
 }
 
 
@@ -2504,7 +2501,7 @@ void __fastcall BgmManager__RemoveUnusedOldFromBindList(BgmManager_o *this, cons
   int32_t m_CancellationTokenSource; // w20
   BgmManager_c *v22; // x0
   System_Collections_Generic_HashSet_T__o *v23; // x20
-  const MethodInfo *v24; // x1
+  __int64 v24; // x1
   System_Collections_Generic_IEnumerable_T__o *UsingCueNames; // x0
   BgmManager_c *klass; // x8
   BgmManager_o *v27; // x21
@@ -2538,27 +2535,27 @@ void __fastcall BgmManager__RemoveUnusedOldFromBindList(BgmManager_o *this, cons
   System_Collections_Generic_List_Enumerator_object__o v55; // [xsp+20h] [xbp-70h] BYREF
 
   v2 = (BgmManager_o **)this;
-  if ( (byte_4B01695 & 1) == 0 )
+  if ( (byte_4B1BB88 & 1) == 0 )
   {
-    sub_1BC3008(&BgmManager_TypeInfo, method);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__Dispose__, v3);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__MoveNext__, v4);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__get_Current__, v5);
-    sub_1BC3008(&Method_System_Collections_Generic_HashSet_string__Add__, v6);
-    sub_1BC3008(&Method_System_Collections_Generic_HashSet_string__Contains__, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_HashSet_string__UnionWith__, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_HashSet_string___ctor__, v9);
-    sub_1BC3008(&System_Collections_Generic_HashSet_string__TypeInfo, v10);
-    sub_1BC3008(&System_IDisposable_TypeInfo, v11);
-    sub_1BC3008(&System_Collections_Generic_IEnumerable_BgmPlayArgs__TypeInfo, v12);
-    sub_1BC3008(&System_Collections_Generic_IEnumerator_BgmPlayArgs__TypeInfo, v13);
-    sub_1BC3008(&System_Collections_IEnumerator_TypeInfo, v14);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__GetEnumerator__, v15);
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__RemoveAt__, v16);
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__get_Count__, v17);
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__get_Item__, v18);
-    this = (BgmManager_o *)sub_1BC3008(&SoundManager_TypeInfo, v19);
-    byte_4B01695 = 1;
+    sub_1BCAFF8(&BgmManager_TypeInfo, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__Dispose__, v3);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__MoveNext__, v4);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__get_Current__, v5);
+    sub_1BCAFF8(&Method_System_Collections_Generic_HashSet_string__Add__, v6);
+    sub_1BCAFF8(&Method_System_Collections_Generic_HashSet_string__Contains__, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_HashSet_string__UnionWith__, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_HashSet_string___ctor__, v9);
+    sub_1BCAFF8(&System_Collections_Generic_HashSet_string__TypeInfo, v10);
+    sub_1BCAFF8(&System_IDisposable_TypeInfo, v11);
+    sub_1BCAFF8(&System_Collections_Generic_IEnumerable_BgmPlayArgs__TypeInfo, v12);
+    sub_1BCAFF8(&System_Collections_Generic_IEnumerator_BgmPlayArgs__TypeInfo, v13);
+    sub_1BCAFF8(&System_Collections_IEnumerator_TypeInfo, v14);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__GetEnumerator__, v15);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__RemoveAt__, v16);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__get_Count__, v17);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__get_Item__, v18);
+    this = (BgmManager_o *)sub_1BCAFF8(&SoundManager_TypeInfo, v19);
+    byte_4B1BB88 = 1;
   }
   memset(&v55, 0, sizeof(v55));
   v20 = v2[4];
@@ -2573,41 +2570,41 @@ void __fastcall BgmManager__RemoveUnusedOldFromBindList(BgmManager_o *this, cons
   }
   if ( m_CancellationTokenSource > v22->static_fields->ADD_BIND_MAX )
   {
-    v23 = (System_Collections_Generic_HashSet_T__o *)sub_1BC3254(System_Collections_Generic_HashSet_string__TypeInfo);
+    v23 = (System_Collections_Generic_HashSet_T__o *)sub_1BCB244(System_Collections_Generic_HashSet_string__TypeInfo);
     System_Collections_Generic_HashSet_object____ctor(
       v23,
-      (const MethodInfo_355E2AC *)Method_System_Collections_Generic_HashSet_string___ctor__);
+      (const MethodInfo_357703C *)Method_System_Collections_Generic_HashSet_string___ctor__);
     this = v2[8];
     if ( !this )
       goto LABEL_59;
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v54,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_BgmPlayerBase__GetEnumerator__);
+      (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_BgmPlayerBase__GetEnumerator__);
     v55 = v54;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v55,
-              (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__MoveNext__) )
+              (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__MoveNext__) )
     {
       if ( !v55.fields._current )
-        sub_1BC3264(0LL, v24);
+        sub_1BCB254(0LL, v24);
       UsingCueNames = (System_Collections_Generic_IEnumerable_T__o *)BgmPlayerBase__GetUsingCueNames(
                                                                        (BgmPlayerBase_o *)v55.fields._current,
-                                                                       v24);
+                                                                       0LL);
       if ( !v23 )
-        sub_1BC3264(UsingCueNames, UsingCueNames);
+        sub_1BCB254(UsingCueNames, UsingCueNames);
       System_Collections_Generic_HashSet_object___UnionWith(
         v23,
         UsingCueNames,
-        (const MethodInfo_355F4A0 *)Method_System_Collections_Generic_HashSet_string__UnionWith__);
+        (const MethodInfo_3578230 *)Method_System_Collections_Generic_HashSet_string__UnionWith__);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v55,
-      (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__Dispose__);
+      (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_BgmPlayerBase__Dispose__);
     this = v2[10];
     if ( this )
     {
-      this = (BgmManager_o *)BgmPlayArgsGroup__AllArgsListNullExcluded((BgmPlayArgsGroup_o *)this, method);
+      this = (BgmManager_o *)BgmPlayArgsGroup__AllArgsListNullExcluded((BgmPlayArgsGroup_o *)this, 0LL);
       if ( !this )
         goto LABEL_59;
       klass = this->klass;
@@ -2628,11 +2625,11 @@ void __fastcall BgmManager__RemoveUnusedOldFromBindList(BgmManager_o *this, cons
       else
       {
 LABEL_19:
-        v30 = sub_1C13570(this, System_Collections_Generic_IEnumerable_BgmPlayArgs__TypeInfo, 0LL);
+        v30 = sub_1C1B560(this, System_Collections_Generic_IEnumerable_BgmPlayArgs__TypeInfo, 0LL);
       }
       v32 = (*(__int64 (__fastcall **)(BgmManager_o *, _QWORD))v30)(v27, *(_QWORD *)(v30 + 8));
       if ( !v32 )
-        sub_1BC3264(0LL, v31);
+        sub_1BCB254(0LL, v31);
       while ( 1 )
       {
         v33 = *(_QWORD *)v32;
@@ -2652,7 +2649,7 @@ LABEL_19:
         else
         {
 LABEL_26:
-          v36 = sub_1C13570(v32, System_Collections_IEnumerator_TypeInfo, 0LL);
+          v36 = sub_1C1B560(v32, System_Collections_IEnumerator_TypeInfo, 0LL);
         }
         if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v36)(v32, *(_QWORD *)(v36 + 8)) & 1) == 0 )
           break;
@@ -2673,18 +2670,18 @@ LABEL_26:
         else
         {
 LABEL_33:
-          v40 = sub_1C13570(v32, System_Collections_Generic_IEnumerator_BgmPlayArgs__TypeInfo, 0LL);
+          v40 = sub_1C1B560(v32, System_Collections_Generic_IEnumerator_BgmPlayArgs__TypeInfo, 0LL);
         }
         v41 = (*(__int64 (__fastcall **)(__int64, _QWORD))v40)(v32, *(_QWORD *)(v40 + 8));
         if ( !v41 )
-          sub_1BC3264(0LL, v42);
+          sub_1BCB254(0LL, v42);
         CueName = (Il2CppObject *)BgmManager__ExtractCueName((BgmManager_o *)v41, *(System_String_o **)(v41 + 16), v43);
         if ( !v23 )
-          sub_1BC3264(CueName, CueName);
+          sub_1BCB254(CueName, CueName);
         System_Collections_Generic_HashSet_object___Add(
           v23,
           CueName,
-          (const MethodInfo_355F490 *)Method_System_Collections_Generic_HashSet_string__Add__);
+          (const MethodInfo_3578220 *)Method_System_Collections_Generic_HashSet_string__Add__);
       }
       v45 = *(_QWORD *)v32;
       v46 = *(unsigned __int16 *)(*(_QWORD *)v32 + 302LL);
@@ -2703,14 +2700,14 @@ LABEL_33:
       else
       {
 LABEL_42:
-        v48 = sub_1C13570(v32, System_IDisposable_TypeInfo, 0LL);
+        v48 = sub_1C1B560(v32, System_IDisposable_TypeInfo, 0LL);
       }
       this = (BgmManager_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v48)(v32, *(_QWORD *)(v48 + 8));
     }
     v49 = (System_Collections_Generic_List_object__o *)v2[4];
     if ( !v49 )
 LABEL_59:
-      sub_1BC3264(this, method);
+      sub_1BCB254(this, method);
     v50 = v49->fields._size - 1;
     if ( v50 >= 1 )
     {
@@ -2719,13 +2716,13 @@ LABEL_59:
         this = (BgmManager_o *)System_Collections_Generic_List_object___get_Item(
                                  v49,
                                  v50,
-                                 (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                 (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_string__get_Item__);
         if ( !v23 )
           break;
         this = (BgmManager_o *)System_Collections_Generic_HashSet_object___Contains(
                                  v23,
                                  (Il2CppObject *)this,
-                                 (const MethodInfo_355E9A0 *)Method_System_Collections_Generic_HashSet_string__Contains__);
+                                 (const MethodInfo_3577730 *)Method_System_Collections_Generic_HashSet_string__Contains__);
         if ( ((unsigned __int8)this & 1) == 0 )
         {
           this = v2[4];
@@ -2734,7 +2731,7 @@ LABEL_59:
           Item = System_Collections_Generic_List_object___get_Item(
                    (System_Collections_Generic_List_object__o *)this,
                    v50,
-                   (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_string__get_Item__);
+                   (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_string__get_Item__);
           if ( !SoundManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
           SoundManager__releaseAudioAssetStorage((System_String_o *)Item, 0LL);
@@ -2744,7 +2741,7 @@ LABEL_59:
           System_Collections_Generic_List_object___RemoveAt(
             (System_Collections_Generic_List_object__o *)this,
             v50,
-            (const MethodInfo_36A2614 *)Method_System_Collections_Generic_List_string__RemoveAt__);
+            (const MethodInfo_36BB3A4 *)Method_System_Collections_Generic_List_string__RemoveAt__);
           v52 = v2[4];
           if ( !v52 )
             goto LABEL_59;
@@ -2777,20 +2774,20 @@ void __fastcall BgmManager__Reset(const MethodInfo *method)
   _BOOL8 v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4B0166A & 1) == 0 )
+  if ( (byte_4B1BB5D & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v1);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v2);
-    byte_4B0166A = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v1);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v2);
+    byte_4B1BB5D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1BC3264(v4, v5);
+      sub_1BCB254(v4, v5);
     BgmManager__ResetLocal((BgmManager_o *)Instance, v5);
   }
 }
@@ -2809,13 +2806,13 @@ void __fastcall BgmManager__ResetLocal(BgmManager_o *this, const MethodInfo *met
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4B01685 & 1) == 0 )
+  if ( (byte_4B1BB78 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_BgmPlayerBase__TypeInfo, method);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__, v3);
-    sub_1BC3008(&Method_BgmManager___c__ResetLocal_b__51_0__, v4);
-    sub_1BC3008(&BgmManager___c_TypeInfo, v5);
-    byte_4B01685 = 1;
+    sub_1BCAFF8(&System_Action_BgmPlayerBase__TypeInfo, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__, v3);
+    sub_1BCAFF8(&Method_BgmManager___c__ResetLocal_b__51_0__, v4);
+    sub_1BCAFF8(&BgmManager___c_TypeInfo, v5);
+    byte_4B1BB78 = 1;
   }
   v6 = BgmManager___c_TypeInfo;
   bgmPlayers = (System_Collections_Generic_List_object__o *)this->fields.bgmPlayers;
@@ -2833,18 +2830,18 @@ void __fastcall BgmManager__ResetLocal(BgmManager_o *this, const MethodInfo *met
       v6 = BgmManager___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__51_0 = (System_Action_object__o *)sub_1BC3254(System_Action_BgmPlayerBase__TypeInfo);
+    _9__51_0 = (System_Action_object__o *)sub_1BCB244(System_Action_BgmPlayerBase__TypeInfo);
     System_Action_object____ctor(_9__51_0, v9, Method_BgmManager___c__ResetLocal_b__51_0__, 0LL);
     static_fields = BgmManager___c_TypeInfo->static_fields;
     static_fields->__9__51_0 = (struct System_Action_BgmPlayerBase__o *)_9__51_0;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__51_0, (int32_t)_9__51_0, v11, v12);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__51_0, (int32_t)_9__51_0, v11, v12);
   }
   if ( !bgmPlayers )
-    sub_1BC3264(v6, method);
+    sub_1BCB254(v6, method);
   System_Collections_Generic_List_object___ForEach(
     bgmPlayers,
     (System_Action_T__o *)_9__51_0,
-    (const MethodInfo_36A1880 *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+    (const MethodInfo_36BA610 *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
 }
 
 
@@ -2859,12 +2856,12 @@ void __fastcall BgmManager__SetMasterVolume(float volume, const MethodInfo *meth
   _BOOL8 v9; // x0
   const MethodInfo *v10; // x1
 
-  if ( (byte_4B0166E & 1) == 0 )
+  if ( (byte_4B1BB61 & 1) == 0 )
   {
-    sub_1BC3008(&BgmManager_TypeInfo, v2);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v4);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v5);
-    byte_4B0166E = 1;
+    sub_1BCAFF8(&BgmManager_TypeInfo, v2);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v5);
+    byte_4B1BB61 = 1;
   }
   v6 = BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -2881,14 +2878,14 @@ void __fastcall BgmManager__SetMasterVolume(float volume, const MethodInfo *meth
       static_fields = BgmManager_TypeInfo->static_fields;
     }
     static_fields->masterVolume = volume;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v9 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
     if ( !v9 )
     {
       if ( !Instance )
-        sub_1BC3264(v9, v10);
+        sub_1BCB254(v9, v10);
       BgmManager__ReflectMasterVolumeLocal((BgmManager_o *)Instance, v10);
     }
   }
@@ -2907,12 +2904,12 @@ void __fastcall BgmManager__SetMute(bool isMute, const MethodInfo *method)
   __int64 v10; // x1
   const MethodInfo *v11; // x2
 
-  if ( (byte_4B0166C & 1) == 0 )
+  if ( (byte_4B1BB5F & 1) == 0 )
   {
-    sub_1BC3008(&BgmManager_TypeInfo, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v4);
-    byte_4B0166C = 1;
+    sub_1BCAFF8(&BgmManager_TypeInfo, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v4);
+    byte_4B1BB5F = 1;
   }
   v5 = BgmManager_TypeInfo;
   v6 = isMute;
@@ -2930,14 +2927,14 @@ void __fastcall BgmManager__SetMute(bool isMute, const MethodInfo *method)
       static_fields = BgmManager_TypeInfo->static_fields;
     }
     static_fields->isMute = v6;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v9 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
     if ( !v9 )
     {
       if ( !Instance )
-        sub_1BC3264(v9, v10);
+        sub_1BCB254(v9, v10);
       BgmManager__SetMuteLocal((BgmManager_o *)Instance, isMute, v11);
     }
   }
@@ -2950,26 +2947,26 @@ void __fastcall BgmManager__SetMuteLocal(BgmManager_o *this, bool isMute, const 
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
-  __int64 v8; // x21
+  BgmManager___c__DisplayClass52_0_o *v8; // x21
   __int64 v9; // x0
   __int64 v10; // x1
   System_Collections_Generic_List_object__o *bgmPlayers; // x19
   System_Action_object__o *v12; // x20
 
-  if ( (byte_4B01686 & 1) == 0 )
+  if ( (byte_4B1BB79 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_BgmPlayerBase__TypeInfo, isMute);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__, v5);
-    sub_1BC3008(&Method_BgmManager___c__DisplayClass52_0__SetMuteLocal_b__0__, v6);
-    sub_1BC3008(&BgmManager___c__DisplayClass52_0_TypeInfo, v7);
-    byte_4B01686 = 1;
+    sub_1BCAFF8(&System_Action_BgmPlayerBase__TypeInfo, isMute);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__, v5);
+    sub_1BCAFF8(&Method_BgmManager___c__DisplayClass52_0__SetMuteLocal_b__0__, v6);
+    sub_1BCAFF8(&BgmManager___c__DisplayClass52_0_TypeInfo, v7);
+    byte_4B1BB79 = 1;
   }
-  v8 = sub_1BC3254(BgmManager___c__DisplayClass52_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
+  v8 = (BgmManager___c__DisplayClass52_0_o *)sub_1BCB244(BgmManager___c__DisplayClass52_0_TypeInfo);
+  BgmManager___c__DisplayClass52_0___ctor(v8, 0LL);
   if ( !v8
-    || (*(_BYTE *)(v8 + 16) = isMute,
+    || (v8->fields.isMute = isMute,
         bgmPlayers = (System_Collections_Generic_List_object__o *)this->fields.bgmPlayers,
-        v12 = (System_Action_object__o *)sub_1BC3254(System_Action_BgmPlayerBase__TypeInfo),
+        v12 = (System_Action_object__o *)sub_1BCB244(System_Action_BgmPlayerBase__TypeInfo),
         System_Action_object____ctor(
           v12,
           (Il2CppObject *)v8,
@@ -2977,12 +2974,12 @@ void __fastcall BgmManager__SetMuteLocal(BgmManager_o *this, bool isMute, const 
           0LL),
         !bgmPlayers) )
   {
-    sub_1BC3264(v9, v10);
+    sub_1BCB254(v9, v10);
   }
   System_Collections_Generic_List_object___ForEach(
     bgmPlayers,
     (System_Action_T__o *)v12,
-    (const MethodInfo_36A1880 *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
+    (const MethodInfo_36BA610 *)Method_System_Collections_Generic_List_BgmPlayerBase__ForEach__);
 }
 
 
@@ -2996,33 +2993,33 @@ void __fastcall BgmManager__StopAll(float fadeoutTime, const MethodInfo *method)
   _BOOL8 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4B01679 & 1) == 0 )
+  if ( (byte_4B1BB6C & 1) == 0 )
   {
-    sub_1BC3008(&Method_BgmManager_FadeoutBgmLocal_BgmPlayerBase___, v2);
-    sub_1BC3008(&Method_BgmManager_StopBgmLocal_BgmPlayerBase___, v4);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v6);
-    byte_4B01679 = 1;
+    sub_1BCAFF8(&Method_BgmManager_FadeoutBgmLocal_BgmPlayerBase___, v2);
+    sub_1BCAFF8(&Method_BgmManager_StopBgmLocal_BgmPlayerBase___, v4);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v6);
+    byte_4B1BB6C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( !v8 )
   {
     if ( !Instance )
-      sub_1BC3264(v8, v9);
+      sub_1BCB254(v8, v9);
     if ( fadeoutTime <= 0.0 )
       BgmManager__StopBgmLocal_object_(
         (BgmManager_o *)Instance,
         0LL,
-        (const MethodInfo_2FF3A84 *)Method_BgmManager_StopBgmLocal_BgmPlayerBase___);
+        (const MethodInfo_300C6C4 *)Method_BgmManager_StopBgmLocal_BgmPlayerBase___);
     else
       BgmManager__FadeoutBgmLocal_object_(
         (BgmManager_o *)Instance,
         fadeoutTime,
         0LL,
-        (const MethodInfo_2FF3898 *)Method_BgmManager_FadeoutBgmLocal_BgmPlayerBase___);
+        (const MethodInfo_300C4D8 *)Method_BgmManager_FadeoutBgmLocal_BgmPlayerBase___);
   }
 }
 
@@ -3043,37 +3040,37 @@ void __fastcall BgmManager__StopBgm(
   __int64 v14; // x1
   bool v15; // w22
 
-  if ( (byte_4B01678 & 1) == 0 )
+  if ( (byte_4B1BB6B & 1) == 0 )
   {
-    sub_1BC3008(&Method_BgmManager_FadeoutBgmLocal_MainBgmPlayer___, successCallback);
-    sub_1BC3008(&Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___, v7);
-    sub_1BC3008(&Method_BgmManager_StopBgmLocal_MainBgmPlayer___, v8);
-    sub_1BC3008(&Method_BgmManager_StopBgmLocal_SubBgmPlayer___, v9);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v10);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v11);
-    byte_4B01678 = 1;
+    sub_1BCAFF8(&Method_BgmManager_FadeoutBgmLocal_MainBgmPlayer___, successCallback);
+    sub_1BCAFF8(&Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___, v7);
+    sub_1BCAFF8(&Method_BgmManager_StopBgmLocal_MainBgmPlayer___, v8);
+    sub_1BCAFF8(&Method_BgmManager_StopBgmLocal_SubBgmPlayer___, v9);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v10);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v11);
+    byte_4B1BB6B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v13 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( !v13 )
   {
     if ( !Instance )
-      sub_1BC3264(v13, v14);
+      sub_1BCB254(v13, v14);
     if ( fadeoutTime <= 0.0 )
     {
       v15 = BgmManager__StopBgmLocal_object_(
               (BgmManager_o *)Instance,
               name,
-              (const MethodInfo_2FF3A84 *)Method_BgmManager_StopBgmLocal_MainBgmPlayer___);
+              (const MethodInfo_300C6C4 *)Method_BgmManager_StopBgmLocal_MainBgmPlayer___);
       if ( name && !v15 )
         return;
       if ( SLODWORD(Instance[4].monitor) <= 0 )
         BgmManager__StopBgmLocal_object_(
           (BgmManager_o *)Instance,
           0LL,
-          (const MethodInfo_2FF3A84 *)Method_BgmManager_StopBgmLocal_SubBgmPlayer___);
+          (const MethodInfo_300C6C4 *)Method_BgmManager_StopBgmLocal_SubBgmPlayer___);
     }
     else
     {
@@ -3081,7 +3078,7 @@ void __fastcall BgmManager__StopBgm(
               (BgmManager_o *)Instance,
               fadeoutTime,
               name,
-              (const MethodInfo_2FF3898 *)Method_BgmManager_FadeoutBgmLocal_MainBgmPlayer___);
+              (const MethodInfo_300C4D8 *)Method_BgmManager_FadeoutBgmLocal_MainBgmPlayer___);
       if ( name && !v15 )
         return;
       if ( SLODWORD(Instance[4].monitor) <= 0 )
@@ -3089,7 +3086,7 @@ void __fastcall BgmManager__StopBgm(
           (BgmManager_o *)Instance,
           fadeoutTime,
           0LL,
-          (const MethodInfo_2FF3898 *)Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___);
+          (const MethodInfo_300C4D8 *)Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___);
     }
     if ( v15 )
       ActionExtensions__Call(successCallback, 0LL);
@@ -3100,9 +3097,9 @@ void __fastcall BgmManager__StopBgm(
 bool __fastcall BgmManager__StopBgmLocal_object_(
         BgmManager_o *this,
         System_String_o *name,
-        const MethodInfo_2FF3A84 *method)
+        const MethodInfo_300C6C4 *method)
 {
-  const MethodInfo_2FF34C4 **rgctx_data; // x8
+  const MethodInfo_300C104 **rgctx_data; // x8
   __int64 v7; // x1
   System_Collections_Generic_IEnumerable_T__o *v8; // x20
   long double inited; // q0
@@ -3110,7 +3107,7 @@ bool __fastcall BgmManager__StopBgmLocal_object_(
   Il2CppClass *v11; // x0
   System_Func_object__bool__o *v12; // x21
   Il2CppClass *v13; // x0
-  const MethodInfo_2FF3A84_RGCTXs *v14; // x8
+  const MethodInfo_300C6C4_RGCTXs *v14; // x8
   __int64 v15; // x0
   __int64 _3_System_Func_T__bool; // x8
   Il2CppObject *v17; // x22
@@ -3122,69 +3119,69 @@ bool __fastcall BgmManager__StopBgmLocal_object_(
   System_Collections_Generic_IEnumerable_TSource__o *v23; // x0
   System_Collections_Generic_IEnumerable_TSource__o *v24; // x0
 
-  rgctx_data = (const MethodInfo_2FF34C4 **)method->rgctx_data;
+  rgctx_data = (const MethodInfo_300C104 **)method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1BC3008(&Method_System_Linq_Enumerable_Any_bool___, name);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_bool___, v7);
-    rgctx_data = (const MethodInfo_2FF34C4 **)method->rgctx_data;
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_Any_bool___, name);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_bool___, v7);
+    rgctx_data = (const MethodInfo_300C104 **)method->rgctx_data;
     if ( !rgctx_data )
     {
-      sub_1C134C8(method);
-      rgctx_data = (const MethodInfo_2FF34C4 **)method->rgctx_data;
+      sub_1C1B4B8(method);
+      rgctx_data = (const MethodInfo_300C104 **)method->rgctx_data;
     }
   }
   v8 = BgmManager__EnumeratePlayersHavingBgmName_object_(this, name, *rgctx_data);
   _4_BgmManager___c__68_T = method->rgctx_data->_4_BgmManager___c__68_T_;
   if ( (BYTE5(_4_BgmManager___c__68_T->vtable[0].methodPtr) & 1) == 0 )
-    _4_BgmManager___c__68_T = (Il2CppClass *)sub_1C1346C(inited);
+    _4_BgmManager___c__68_T = (Il2CppClass *)sub_1C1B45C(inited);
   if ( !_4_BgmManager___c__68_T->_2.cctor_finished )
     inited = j_il2cpp_runtime_class_init_0(_4_BgmManager___c__68_T);
   v11 = method->rgctx_data->_4_BgmManager___c__68_T_;
   if ( (BYTE5(v11->vtable[0].methodPtr) & 1) == 0 )
-    v11 = (Il2CppClass *)sub_1C1346C(inited);
+    v11 = (Il2CppClass *)sub_1C1B45C(inited);
   v12 = (System_Func_object__bool__o *)*((_QWORD *)v11->static_fields + 1);
   if ( !v12 )
   {
     v13 = method->rgctx_data->_4_BgmManager___c__68_T_;
     if ( (BYTE5(v13->vtable[0].methodPtr) & 1) == 0 )
-      v13 = (Il2CppClass *)sub_1C1346C(inited);
+      v13 = (Il2CppClass *)sub_1C1B45C(inited);
     if ( !v13->_2.cctor_finished )
       inited = j_il2cpp_runtime_class_init_0(v13);
     v14 = method->rgctx_data;
     v15 = (__int64)v14->_4_BgmManager___c__68_T_;
     if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
     {
-      v15 = sub_1C1346C(inited);
+      v15 = sub_1C1B45C(inited);
       v14 = method->rgctx_data;
     }
     _3_System_Func_T__bool = (__int64)v14->_3_System_Func_T__bool_;
     v17 = **(Il2CppObject ***)(v15 + 184);
     if ( (*(_BYTE *)(_3_System_Func_T__bool + 309) & 1) == 0 )
-      _3_System_Func_T__bool = sub_1C1346C(inited);
-    v12 = (System_Func_object__bool__o *)sub_1BC3254(_3_System_Func_T__bool);
+      _3_System_Func_T__bool = sub_1C1B45C(inited);
+    v12 = (System_Func_object__bool__o *)sub_1BCB244(_3_System_Func_T__bool);
     System_Func_object__bool____ctor(
       v12,
       v17,
       (intptr_t)method->rgctx_data->_5_BgmManager___c__68_T___StopBgmLocal_b__68_0,
-      (const MethodInfo_353ED58 *)method->rgctx_data->_6_System_Func_T__bool___ctor);
+      (const MethodInfo_3557AE8 *)method->rgctx_data->_6_System_Func_T__bool___ctor);
     v21 = method->rgctx_data->_4_BgmManager___c__68_T_;
     if ( (BYTE5(v21->vtable[0].methodPtr) & 1) == 0 )
-      v21 = (Il2CppClass *)sub_1C1346C(v20);
+      v21 = (Il2CppClass *)sub_1C1B45C(v20);
     *((_QWORD *)v21->static_fields + 1) = v12;
     v22 = method->rgctx_data->_4_BgmManager___c__68_T_;
     if ( (BYTE5(v22->vtable[0].methodPtr) & 1) == 0 )
-      v22 = (Il2CppClass *)sub_1C1346C(v20);
-    sub_1BC2FAC((CGThumbnailListItem_o *)((char *)v22->static_fields + 8), (int32_t)v12, v18, v19);
+      v22 = (Il2CppClass *)sub_1C1B45C(v20);
+    sub_1BCAF9C((CGThumbnailListItem_o *)((char *)v22->static_fields + 8), (int32_t)v12, v18, v19);
   }
   v23 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__bool_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v8,
                                                                (System_Func_TSource__TResult__o *)v12,
-                                                               (const MethodInfo_303545C *)method->rgctx_data->_7_System_Linq_Enumerable_Select_T__bool_);
+                                                               (const MethodInfo_304E108 *)method->rgctx_data->_7_System_Linq_Enumerable_Select_T__bool_);
   v24 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_bool_(
                                                                v23,
-                                                               (const MethodInfo_303E21C *)Method_System_Linq_Enumerable_ToArray_bool___);
-  return System_Linq_Enumerable__Any_bool_(v24, (const MethodInfo_300D214 *)Method_System_Linq_Enumerable_Any_bool___);
+                                                               (const MethodInfo_3056F94 *)Method_System_Linq_Enumerable_ToArray_bool___);
+  return System_Linq_Enumerable__Any_bool_(v24, (const MethodInfo_3025E54 *)Method_System_Linq_Enumerable_Any_bool___);
 }
 
 
@@ -3197,25 +3194,25 @@ void __fastcall BgmManager__StopJingle(const MethodInfo *method)
   _BOOL8 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B0167F & 1) == 0 )
+  if ( (byte_4B1BB72 & 1) == 0 )
   {
-    sub_1BC3008(&Method_BgmManager_StopBgmLocal_JinglePlayer___, v1);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v2);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v3);
-    byte_4B0167F = 1;
+    sub_1BCAFF8(&Method_BgmManager_StopBgmLocal_JinglePlayer___, v1);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v2);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v3);
+    byte_4B1BB72 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v5 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( !v5 )
   {
     if ( !Instance )
-      sub_1BC3264(v5, v6);
+      sub_1BCB254(v5, v6);
     BgmManager__StopBgmLocal_object_(
       (BgmManager_o *)Instance,
       0LL,
-      (const MethodInfo_2FF3A84 *)Method_BgmManager_StopBgmLocal_JinglePlayer___);
+      (const MethodInfo_300C6C4 *)Method_BgmManager_StopBgmLocal_JinglePlayer___);
   }
 }
 
@@ -3229,33 +3226,33 @@ void __fastcall BgmManager__StopSubBgm(System_String_o *name, float fadeoutTime,
   _BOOL8 v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_4B0167A & 1) == 0 )
+  if ( (byte_4B1BB6D & 1) == 0 )
   {
-    sub_1BC3008(&Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___, method);
-    sub_1BC3008(&Method_BgmManager_StopBgmLocal_SubBgmPlayer___, v5);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v6);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v7);
-    byte_4B0167A = 1;
+    sub_1BCAFF8(&Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___, method);
+    sub_1BCAFF8(&Method_BgmManager_StopBgmLocal_SubBgmPlayer___, v5);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v6);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v7);
+    byte_4B1BB6D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v9 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( !v9 )
   {
     if ( !Instance )
-      sub_1BC3264(v9, v10);
+      sub_1BCB254(v9, v10);
     if ( fadeoutTime <= 0.0 )
       BgmManager__StopBgmLocal_object_(
         (BgmManager_o *)Instance,
         name,
-        (const MethodInfo_2FF3A84 *)Method_BgmManager_StopBgmLocal_SubBgmPlayer___);
+        (const MethodInfo_300C6C4 *)Method_BgmManager_StopBgmLocal_SubBgmPlayer___);
     else
       BgmManager__FadeoutBgmLocal_object_(
         (BgmManager_o *)Instance,
         fadeoutTime,
         name,
-        (const MethodInfo_2FF3898 *)Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___);
+        (const MethodInfo_300C4D8 *)Method_BgmManager_FadeoutBgmLocal_SubBgmPlayer___);
   }
 }
 
@@ -3301,25 +3298,25 @@ void __fastcall BgmManager__StopUnrequestedSubBgm(
   int32_t v38; // w2
   const MethodInfo *v39; // x3
 
-  if ( (byte_4B01690 & 1) == 0 )
+  if ( (byte_4B1BB83 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_SubBgmPlayer__TypeInfo, requestedBgmArgs);
-    sub_1BC3008(&Method_BasicHelper_ForEach_SubBgmPlayer___, v5);
-    sub_1BC3008(&Method_System_Linq_Enumerable_OfType_SubBgmPlayer___, v6);
-    sub_1BC3008(&Method_System_Linq_Enumerable_Select_SubBgmPlayArgs__string___, v7);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_string___, v8);
-    sub_1BC3008(&Method_System_Linq_Enumerable_Where_SubBgmPlayer___, v9);
-    sub_1BC3008(&System_Func_SubBgmPlayArgs__string__TypeInfo, v10);
-    sub_1BC3008(&System_Func_SubBgmPlayer__bool__TypeInfo, v11);
-    sub_1BC3008(&Method_BgmManager___c__StopUnrequestedSubBgm_b__69_0__, v12);
-    sub_1BC3008(&Method_BgmManager___c__StopUnrequestedSubBgm_b__69_2__, v13);
-    sub_1BC3008(&Method_BgmManager___c__DisplayClass69_0__StopUnrequestedSubBgm_b__1__, v14);
-    sub_1BC3008(&BgmManager___c__DisplayClass69_0_TypeInfo, v15);
-    sub_1BC3008(&BgmManager___c_TypeInfo, v16);
-    byte_4B01690 = 1;
+    sub_1BCAFF8(&System_Action_SubBgmPlayer__TypeInfo, requestedBgmArgs);
+    sub_1BCAFF8(&Method_BasicHelper_ForEach_SubBgmPlayer___, v5);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_OfType_SubBgmPlayer___, v6);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_Select_SubBgmPlayArgs__string___, v7);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_string___, v8);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_Where_SubBgmPlayer___, v9);
+    sub_1BCAFF8(&System_Func_SubBgmPlayArgs__string__TypeInfo, v10);
+    sub_1BCAFF8(&System_Func_SubBgmPlayer__bool__TypeInfo, v11);
+    sub_1BCAFF8(&Method_BgmManager___c__StopUnrequestedSubBgm_b__69_0__, v12);
+    sub_1BCAFF8(&Method_BgmManager___c__StopUnrequestedSubBgm_b__69_2__, v13);
+    sub_1BCAFF8(&Method_BgmManager___c__DisplayClass69_0__StopUnrequestedSubBgm_b__1__, v14);
+    sub_1BCAFF8(&BgmManager___c__DisplayClass69_0_TypeInfo, v15);
+    sub_1BCAFF8(&BgmManager___c_TypeInfo, v16);
+    byte_4B1BB83 = 1;
   }
-  v17 = sub_1BC3254(BgmManager___c__DisplayClass69_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v17, 0LL);
+  v17 = sub_1BCB244(BgmManager___c__DisplayClass69_0_TypeInfo);
+  BgmManager___c__DisplayClass69_0___ctor((BgmManager___c__DisplayClass69_0_o *)v17, 0LL);
   if ( this->fields.enableCounter_KeepSubBgm <= 0 )
   {
     if ( !requestedBgmArgs )
@@ -3340,28 +3337,28 @@ void __fastcall BgmManager__StopUnrequestedSubBgm(
         v21 = BgmManager___c_TypeInfo;
       }
       v23 = (Il2CppObject *)v21->static_fields->__9;
-      _9__69_0 = (System_Func_object__object__o *)sub_1BC3254(System_Func_SubBgmPlayArgs__string__TypeInfo);
+      _9__69_0 = (System_Func_object__object__o *)sub_1BCB244(System_Func_SubBgmPlayArgs__string__TypeInfo);
       System_Func_object__object____ctor(_9__69_0, v23, Method_BgmManager___c__StopUnrequestedSubBgm_b__69_0__, 0LL);
       static_fields = BgmManager___c_TypeInfo->static_fields;
       static_fields->__9__69_0 = (struct System_Func_SubBgmPlayArgs__string__o *)_9__69_0;
-      sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__69_0, (int32_t)_9__69_0, v25, v26);
+      sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__69_0, (int32_t)_9__69_0, v25, v26);
     }
     v27 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                  (System_Collections_Generic_IEnumerable_TSource__o *)SubArgsList_k__BackingField,
                                                                  (System_Func_TSource__TResult__o *)_9__69_0,
-                                                                 (const MethodInfo_3036320 *)Method_System_Linq_Enumerable_Select_SubBgmPlayArgs__string___);
+                                                                 (const MethodInfo_304EFCC *)Method_System_Linq_Enumerable_Select_SubBgmPlayArgs__string___);
     v18 = System_Linq_Enumerable__ToArray_object_(
             v27,
-            (const MethodInfo_303E54C *)Method_System_Linq_Enumerable_ToArray_string___);
+            (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_string___);
     if ( !v17 )
 LABEL_19:
-      sub_1BC3264(v18, v19);
+      sub_1BCB254(v18, v19);
     *(_QWORD *)(v17 + 16) = v18;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v17 + 16), (int32_t)v18, v28, v29);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v17 + 16), (int32_t)v18, v28, v29);
     v30 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                  (System_Collections_IEnumerable_o *)this->fields.bgmPlayers,
-                                                                 (const MethodInfo_302D068 *)Method_System_Linq_Enumerable_OfType_SubBgmPlayer___);
-    v31 = (System_Func_object__bool__o *)sub_1BC3254(System_Func_SubBgmPlayer__bool__TypeInfo);
+                                                                 (const MethodInfo_3045CA8 *)Method_System_Linq_Enumerable_OfType_SubBgmPlayer___);
+    v31 = (System_Func_object__bool__o *)sub_1BCB244(System_Func_SubBgmPlayer__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v31,
       (Il2CppObject *)v17,
@@ -3370,7 +3367,7 @@ LABEL_19:
     v32 = System_Linq_Enumerable__Where_object_(
             v30,
             (System_Func_TSource__bool__o *)v31,
-            (const MethodInfo_3044F10 *)Method_System_Linq_Enumerable_Where_SubBgmPlayer___);
+            (const MethodInfo_305DC88 *)Method_System_Linq_Enumerable_Where_SubBgmPlayer___);
     v33 = BgmManager___c_TypeInfo;
     v34 = (System_Collections_Generic_IEnumerable_T__o *)v32;
     if ( !BgmManager___c_TypeInfo->_2.cctor_finished )
@@ -3387,16 +3384,16 @@ LABEL_19:
         v33 = BgmManager___c_TypeInfo;
       }
       v36 = (Il2CppObject *)v33->static_fields->__9;
-      _9__69_2 = (System_Action_object__o *)sub_1BC3254(System_Action_SubBgmPlayer__TypeInfo);
+      _9__69_2 = (System_Action_object__o *)sub_1BCB244(System_Action_SubBgmPlayer__TypeInfo);
       System_Action_object____ctor(_9__69_2, v36, Method_BgmManager___c__StopUnrequestedSubBgm_b__69_2__, 0LL);
       v37 = BgmManager___c_TypeInfo->static_fields;
       v37->__9__69_2 = (struct System_Action_SubBgmPlayer__o *)_9__69_2;
-      sub_1BC2FAC((CGThumbnailListItem_o *)&v37->__9__69_2, (int32_t)_9__69_2, v38, v39);
+      sub_1BCAF9C((CGThumbnailListItem_o *)&v37->__9__69_2, (int32_t)_9__69_2, v38, v39);
     }
     BasicHelper__ForEach_object_(
       v34,
       (System_Action_T__o *)_9__69_2,
-      (const MethodInfo_2FEDEFC *)Method_BasicHelper_ForEach_SubBgmPlayer___);
+      (const MethodInfo_3006B3C *)Method_BasicHelper_ForEach_SubBgmPlayer___);
   }
 }
 
@@ -3410,7 +3407,7 @@ void __fastcall BgmManager__WaitSameAudioLoading(
   System_Collections_IEnumerator_o *v5; // x1
 
   v5 = BgmManager__CoWaitSameAudioLoading(this, bgmName, finishCallback, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_70019872((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70121648((UnityEngine_MonoBehaviour_o *)this, v5, 0LL);
 }
 
 
@@ -3420,7 +3417,7 @@ System_String_o *__fastcall BgmManager__get_BgmName(BgmManager_o *this, const Me
 
   mainBgmPlayer = this->fields.mainBgmPlayer;
   if ( !mainBgmPlayer )
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   return mainBgmPlayer->fields.bgmName;
 }
 
@@ -3434,20 +3431,20 @@ bool __fastcall BgmManager__get_IsBusy(const MethodInfo *method)
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4B01666 & 1) == 0 )
+  if ( (byte_4B1BB59 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v1);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v2);
-    byte_4B01666 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v1);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v2);
+    byte_4B1BB59 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
     return 0;
-  v4 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  v4 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !v4 )
-    sub_1BC3264(0LL, v5);
+    sub_1BCB254(0LL, v5);
   return BgmManager__IsLoadingLocal((BgmManager_o *)v4, 0LL, v6);
 }
 
@@ -3457,10 +3454,10 @@ bool __fastcall BgmManager__get_IsMute(const MethodInfo *method)
   __int64 v1; // x1
   BgmManager_c *v2; // x0
 
-  if ( (byte_4B0166B & 1) == 0 )
+  if ( (byte_4B1BB5E & 1) == 0 )
   {
-    sub_1BC3008(&BgmManager_TypeInfo, v1);
-    byte_4B0166B = 1;
+    sub_1BCAFF8(&BgmManager_TypeInfo, v1);
+    byte_4B1BB5E = 1;
   }
   v2 = BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -3480,20 +3477,20 @@ bool __fastcall BgmManager__isLoading(System_String_o *name, const MethodInfo *m
   __int64 v6; // x1
   const MethodInfo *v7; // x2
 
-  if ( (byte_4B01671 & 1) == 0 )
+  if ( (byte_4B1BB64 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v3);
-    byte_4B01671 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BgmManager__get_Instance__, v3);
+    byte_4B1BB64 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_BgmManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v5 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
   if ( v5 )
     return 0;
   if ( !Instance )
-    sub_1BC3264(v5, v6);
+    sub_1BCB254(v5, v6);
   return BgmManager__IsLoadingLocal((BgmManager_o *)Instance, name, v7);
 }
 
@@ -3526,22 +3523,21 @@ bool __fastcall BgmManager__CoWaitSameAudioLoading_d__63__MoveNext(
   struct System_String_o *bgmName; // x1
   int32_t v15; // w2
   const MethodInfo *v16; // x3
-  const MethodInfo *v17; // x2
-  System_Func_bool__o *v18; // x21
-  UnityEngine_WaitWhile_o *v19; // x20
+  System_Func_bool__o *v17; // x21
+  UnityEngine_WaitWhile_o *v18; // x20
   Il2CppObject **p__2__current; // x19
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
   bool result; // w0
   System_Action_o *finishCallback; // x0
 
-  if ( (byte_4B0169F & 1) == 0 )
+  if ( (byte_4B1BB95 & 1) == 0 )
   {
-    sub_1BC3008(&System_Func_bool__TypeInfo, method);
-    sub_1BC3008(&Method_BgmManager___c__DisplayClass63_0__CoWaitSameAudioLoading_b__0__, v3);
-    sub_1BC3008(&BgmManager___c__DisplayClass63_0_TypeInfo, v4);
-    sub_1BC3008(&UnityEngine_WaitWhile_TypeInfo, v5);
-    byte_4B0169F = 1;
+    sub_1BCAFF8(&System_Func_bool__TypeInfo, method);
+    sub_1BCAFF8(&Method_BgmManager___c__DisplayClass63_0__CoWaitSameAudioLoading_b__0__, v3);
+    sub_1BCAFF8(&BgmManager___c__DisplayClass63_0_TypeInfo, v4);
+    sub_1BCAFF8(&UnityEngine_WaitWhile_TypeInfo, v5);
+    byte_4B1BB95 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -3556,32 +3552,32 @@ LABEL_11:
   {
     this->fields.__1__state = -1;
     _4__this = this->fields.__4__this;
-    v8 = sub_1BC3254(BgmManager___c__DisplayClass63_0_TypeInfo);
+    v8 = sub_1BCB244(BgmManager___c__DisplayClass63_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v8, 0LL);
     if ( !v8
       || (v13 = this->fields.__4__this,
           *(_QWORD *)(v8 + 16) = v13,
-          sub_1BC2FAC((CGThumbnailListItem_o *)(v8 + 16), (int32_t)v13, v11, v12),
+          sub_1BCAF9C((CGThumbnailListItem_o *)(v8 + 16), (int32_t)v13, v11, v12),
           bgmName = this->fields.bgmName,
           *(_QWORD *)(v8 + 24) = bgmName,
-          sub_1BC2FAC((CGThumbnailListItem_o *)(v8 + 24), (int32_t)bgmName, v15, v16),
+          sub_1BCAF9C((CGThumbnailListItem_o *)(v8 + 24), (int32_t)bgmName, v15, v16),
           !_4__this) )
     {
-      sub_1BC3264(v9, v10);
+      sub_1BCB254(v9, v10);
     }
-    if ( BgmManager__IsLoadingLocal(_4__this, *(System_String_o **)(v8 + 24), v17) )
+    if ( BgmManager__IsLoadingLocal(_4__this, *(System_String_o **)(v8 + 24), 0LL) )
     {
-      v18 = (System_Func_bool__o *)sub_1BC3254(System_Func_bool__TypeInfo);
+      v17 = (System_Func_bool__o *)sub_1BCB244(System_Func_bool__TypeInfo);
       System_Func_bool____ctor(
-        v18,
+        v17,
         (Il2CppObject *)v8,
         Method_BgmManager___c__DisplayClass63_0__CoWaitSameAudioLoading_b__0__,
         0LL);
-      v19 = (UnityEngine_WaitWhile_o *)sub_1BC3254(UnityEngine_WaitWhile_TypeInfo);
-      UnityEngine_WaitWhile___ctor(v19, v18, 0LL);
-      this->fields.__2__current = (Il2CppObject *)v19;
+      v18 = (UnityEngine_WaitWhile_o *)sub_1BCB244(UnityEngine_WaitWhile_TypeInfo);
+      UnityEngine_WaitWhile___ctor(v18, v17, 0LL);
+      this->fields.__2__current = (Il2CppObject *)v18;
       p__2__current = &this->fields.__2__current;
-      sub_1BC2FAC((CGThumbnailListItem_o *)p__2__current, (int32_t)v19, v21, v22);
+      sub_1BCAF9C((CGThumbnailListItem_o *)p__2__current, (int32_t)v18, v20, v21);
       result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
       return result;
@@ -3609,11 +3605,11 @@ void __fastcall __noreturn BgmManager__CoWaitSameAudioLoading_d__63__System_Coll
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BC301C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BC3254(v2);
+  v2 = sub_1BCB00C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BCB244(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BC301C(&Method_BgmManager__CoWaitSameAudioLoading_d__63_System_Collections_IEnumerator_Reset__);
-  sub_1BC3130(v3, v4);
+  v4 = sub_1BCB00C(&Method_BgmManager__CoWaitSameAudioLoading_d__63_System_Collections_IEnumerator_Reset__);
+  sub_1BCB120(v3, v4);
 }
 
 
@@ -3640,15 +3636,15 @@ void __fastcall BgmManager___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B0169A & 1) == 0 )
+  if ( (byte_4B1BB90 & 1) == 0 )
   {
-    sub_1BC3008(&BgmManager___c_TypeInfo, v1);
-    byte_4B0169A = 1;
+    sub_1BCAFF8(&BgmManager___c_TypeInfo, v1);
+    byte_4B1BB90 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BC3254(BgmManager___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BCB244(BgmManager___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BgmManager___c_TypeInfo->static_fields->__9 = (struct BgmManager___c_o *)v2;
-  sub_1BC2FAC((CGThumbnailListItem_o *)BgmManager___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BCAF9C((CGThumbnailListItem_o *)BgmManager___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -3664,7 +3660,7 @@ bool __fastcall BgmManager___c___FixedUpdate_b__78_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return BgmPlayerBase__IsPlaying((BgmPlayerBase_o *)x, (const MethodInfo *)x);
 }
 
@@ -3675,7 +3671,7 @@ void __fastcall BgmManager___c___FixedUpdate_b__78_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   ((void (__fastcall *)(GeneralBgmPlayer_o *, __int64, Il2CppMethodPointer))x->klass->vtable._11_StopBgm.method)(
     x,
     1LL,
@@ -3689,7 +3685,7 @@ void __fastcall BgmManager___c___FixedUpdate_b__78_2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   ((void (__fastcall *)(BgmPlayerBase_o *, void *))x->klass->vtable._13_FixedUpdate.method)(x, x->klass[1]._1.image);
 }
 
@@ -3700,7 +3696,7 @@ void __fastcall BgmManager___c___FixedUpdate_b__78_3(
         const MethodInfo *method)
 {
   __int64 v4; // x1
-  const MethodInfo_37C0824 *v5; // x3
+  const MethodInfo_37D95B4 *v5; // x3
   __int64 v6; // x0
   __int64 v7; // x1
   const MethodInfo *v8; // x5
@@ -3711,22 +3707,22 @@ void __fastcall BgmManager___c___FixedUpdate_b__78_3(
   System_Nullable_float__o v13; // 0:x2.8
   System_Nullable_long__o v14; // 0:x0.16
 
-  if ( (byte_4B0169B & 1) == 0 )
+  if ( (byte_4B1BB91 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Nullable_long___ctor__, x);
-    sub_1BC3008(&Method_System_Nullable_float___ctor__, v4);
-    byte_4B0169B = 1;
+    sub_1BCAFF8(&Method_System_Nullable_long___ctor__, x);
+    sub_1BCAFF8(&Method_System_Nullable_float___ctor__, v4);
+    byte_4B1BB91 = 1;
   }
   p_fadeTime = (System_Nullable_float__o)&fadeTime;
   fadeTime = 0LL;
   *(_QWORD *)&v9.fields.hasValue = 0LL;
   v9.fields.value = 0LL;
-  System_Nullable_float____ctor(p_fadeTime, 0.0, (const MethodInfo_37C22BC *)Method_System_Nullable_float___ctor__);
+  System_Nullable_float____ctor(p_fadeTime, 0.0, (const MethodInfo_37DB04C *)Method_System_Nullable_float___ctor__);
   *(_QWORD *)&v14.fields.hasValue = &v9;
   v14.fields.value = 0LL;
   System_Nullable_long____ctor(v14, Method_System_Nullable_long___ctor__, v5);
   if ( !x )
-    sub_1BC3264(v6, v7);
+    sub_1BCB254(v6, v7);
   v13 = fadeTime;
   v12 = 0LL;
   BgmPlayArgs__Update(x, v12, v13, v9, v8);
@@ -3739,7 +3735,7 @@ bool __fastcall BgmManager___c___GetOrCreateSubBgmPlayer_b__72_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return x->fields.bgmName == 0LL;
 }
 
@@ -3750,7 +3746,7 @@ void __fastcall BgmManager___c___InitializeLocal_b__50_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   ((void (__fastcall *)(BgmPlayerBase_o *, Il2CppMethodPointer))x->klass->vtable._5_Initialize.method)(
     x,
     x->klass->vtable._6_Reset.methodPtr);
@@ -3763,7 +3759,7 @@ void __fastcall BgmManager___c___ReflectMasterVolumeLocal_b__53_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   ((void (__fastcall *)(BgmPlayerBase_o *, Il2CppMethodPointer))x->klass->vtable._8_ReflectMasterVolume.method)(
     x,
     x->klass->vtable._9_PlayBgm.methodPtr);
@@ -3776,7 +3772,7 @@ void __fastcall BgmManager___c___ResetLocal_b__51_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   ((void (__fastcall *)(BgmPlayerBase_o *, Il2CppMethodPointer))x->klass->vtable._6_Reset.method)(
     x,
     x->klass->vtable._7_SetMute.methodPtr);
@@ -3789,7 +3785,7 @@ System_String_o *__fastcall BgmManager___c___StopUnrequestedSubBgm_b__69_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return x->fields._BgmName_k__BackingField;
 }
 
@@ -3800,7 +3796,7 @@ void __fastcall BgmManager___c___StopUnrequestedSubBgm_b__69_2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   ((void (__fastcall *)(SubBgmPlayer_o *, _QWORD, Il2CppMethodPointer))x->klass->vtable._11_StopBgm.method)(
     x,
     0LL,
@@ -3808,7 +3804,7 @@ void __fastcall BgmManager___c___StopUnrequestedSubBgm_b__69_2(
 }
 
 
-void __fastcall BgmManager___c__54_object____cctor(const MethodInfo_31CAA8C *method)
+void __fastcall BgmManager___c__54_object____cctor(const MethodInfo_31E381C *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
@@ -3822,32 +3818,32 @@ void __fastcall BgmManager___c__54_object____cctor(const MethodInfo_31CAA8C *met
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C1346C();
+    klass = sub_1C1B45C();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C1346C();
-  v4 = (Il2CppObject *)sub_1BC3254(v3);
+    v3 = sub_1C1B45C();
+  v4 = (Il2CppObject *)sub_1BCB244(v3);
   if ( (BYTE5(method->klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_1C1346C();
+    sub_1C1B45C();
   System_Object___ctor(v4, 0LL);
   v7 = (__int64)method->klass;
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C1346C();
+    v7 = sub_1C1B45C();
   v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C1346C();
+    v8 = sub_1C1B45C();
   **(_QWORD **)(v8 + 184) = v4;
   v9 = (__int64)method->klass;
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C1346C();
+    v9 = sub_1C1B45C();
   v10 = *(_QWORD *)(*(_QWORD *)(v9 + 192) + 16LL);
   if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C1346C();
-  sub_1BC2FAC(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
+    v10 = sub_1C1B45C();
+  sub_1BCAF9C(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
 }
 
 
-void __fastcall BgmManager___c__54_object____ctor(BgmManager___c__54_T__o *this, const MethodInfo_31CAB48 *method)
+void __fastcall BgmManager___c__54_object____ctor(BgmManager___c__54_T__o *this, const MethodInfo_31E38D8 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -3856,15 +3852,15 @@ void __fastcall BgmManager___c__54_object____ctor(BgmManager___c__54_T__o *this,
 bool __fastcall BgmManager___c__54_object____EnumeratePlayersHavingBgmName_b__54_0(
         BgmManager___c__54_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_31CAB50 *method)
+        const MethodInfo_31E38E0 *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return x[1].monitor != 0LL;
 }
 
 
-void __fastcall BgmManager___c__68_object____cctor(const MethodInfo_31CADBC *method)
+void __fastcall BgmManager___c__68_object____cctor(const MethodInfo_31E3B4C *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
@@ -3878,32 +3874,32 @@ void __fastcall BgmManager___c__68_object____cctor(const MethodInfo_31CADBC *met
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C1346C();
+    klass = sub_1C1B45C();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C1346C();
-  v4 = (Il2CppObject *)sub_1BC3254(v3);
+    v3 = sub_1C1B45C();
+  v4 = (Il2CppObject *)sub_1BCB244(v3);
   if ( (BYTE5(method->klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_1C1346C();
+    sub_1C1B45C();
   System_Object___ctor(v4, 0LL);
   v7 = (__int64)method->klass;
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C1346C();
+    v7 = sub_1C1B45C();
   v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C1346C();
+    v8 = sub_1C1B45C();
   **(_QWORD **)(v8 + 184) = v4;
   v9 = (__int64)method->klass;
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C1346C();
+    v9 = sub_1C1B45C();
   v10 = *(_QWORD *)(*(_QWORD *)(v9 + 192) + 16LL);
   if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C1346C();
-  sub_1BC2FAC(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
+    v10 = sub_1C1B45C();
+  sub_1BCAF9C(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
 }
 
 
-void __fastcall BgmManager___c__68_object____ctor(BgmManager___c__68_T__o *this, const MethodInfo_31CAE78 *method)
+void __fastcall BgmManager___c__68_object____ctor(BgmManager___c__68_T__o *this, const MethodInfo_31E3C08 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -3912,10 +3908,10 @@ void __fastcall BgmManager___c__68_object____ctor(BgmManager___c__68_T__o *this,
 bool __fastcall BgmManager___c__68_object____StopBgmLocal_b__68_0(
         BgmManager___c__68_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_31CAE80 *method)
+        const MethodInfo_31E3C10 *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return ((__int64 (__fastcall *)(Il2CppObject *, _QWORD, Il2CppMethodPointer))x->klass->vtable[11].method)(
            x,
            0LL,
@@ -3923,7 +3919,7 @@ bool __fastcall BgmManager___c__68_object____StopBgmLocal_b__68_0(
 }
 
 
-void __fastcall BgmManager___c__76_object____cctor(const MethodInfo_31CAFAC *method)
+void __fastcall BgmManager___c__76_object____cctor(const MethodInfo_31E3D3C *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
@@ -3937,32 +3933,32 @@ void __fastcall BgmManager___c__76_object____cctor(const MethodInfo_31CAFAC *met
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C1346C();
+    klass = sub_1C1B45C();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C1346C();
-  v4 = (Il2CppObject *)sub_1BC3254(v3);
+    v3 = sub_1C1B45C();
+  v4 = (Il2CppObject *)sub_1BCB244(v3);
   if ( (BYTE5(method->klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_1C1346C();
+    sub_1C1B45C();
   System_Object___ctor(v4, 0LL);
   v7 = (__int64)method->klass;
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C1346C();
+    v7 = sub_1C1B45C();
   v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C1346C();
+    v8 = sub_1C1B45C();
   **(_QWORD **)(v8 + 184) = v4;
   v9 = (__int64)method->klass;
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C1346C();
+    v9 = sub_1C1B45C();
   v10 = *(_QWORD *)(*(_QWORD *)(v9 + 192) + 16LL);
   if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C1346C();
-  sub_1BC2FAC(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
+    v10 = sub_1C1B45C();
+  sub_1BCAF9C(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
 }
 
 
-void __fastcall BgmManager___c__76_object____ctor(BgmManager___c__76_T__o *this, const MethodInfo_31CB068 *method)
+void __fastcall BgmManager___c__76_object____ctor(BgmManager___c__76_T__o *this, const MethodInfo_31E3DF8 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -3971,10 +3967,10 @@ void __fastcall BgmManager___c__76_object____ctor(BgmManager___c__76_T__o *this,
 BgmPlayArgs_o *__fastcall BgmManager___c__76_object____ExportPlayArgsGroupLocal_b__76_0(
         BgmManager___c__76_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_31CB070 *method)
+        const MethodInfo_31E3E00 *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return (BgmPlayArgs_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))x->klass->vtable[12].method)(
                             x,
                             x->klass->vtable[13].methodPtr);
@@ -3995,7 +3991,7 @@ bool __fastcall BgmManager___c__DisplayClass29_0___ChangePlayerVolume_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return System_String__op_Equality(x->fields.bgmName, this->fields.bgmName, 0LL);
 }
 
@@ -4012,11 +4008,12 @@ void __fastcall BgmManager___c__DisplayClass36_0___PlaySubBgm_b__0(
         BgmManager___c__DisplayClass36_0_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo *v2; // x2
+  BgmManager_o *ins; // x0
 
-  if ( !this->fields.ins )
-    sub_1BC3264(this, method);
-  BgmManager__PlayPreloadedBgm(this->fields.ins, (BgmPlayArgs_o *)this->fields.args, v2);
+  ins = this->fields.ins;
+  if ( !ins )
+    sub_1BCB254(0LL, method);
+  BgmManager__PlayPreloadedBgm(ins, (BgmPlayArgs_o *)this->fields.args, 0LL);
 }
 
 
@@ -4034,7 +4031,7 @@ void __fastcall BgmManager___c__DisplayClass52_0___SetMuteLocal_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   ((void (__fastcall *)(BgmPlayerBase_o *, bool, Il2CppMethodPointer))x->klass->vtable._7_SetMute.method)(
     x,
     this->fields.isMute,
@@ -4044,7 +4041,7 @@ void __fastcall BgmManager___c__DisplayClass52_0___SetMuteLocal_b__0(
 
 void __fastcall BgmManager___c__DisplayClass54_0_object____ctor(
         BgmManager___c__DisplayClass54_0_T__o *this,
-        const MethodInfo_31CFDD0 *method)
+        const MethodInfo_31E8B60 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -4053,10 +4050,10 @@ void __fastcall BgmManager___c__DisplayClass54_0_object____ctor(
 bool __fastcall BgmManager___c__DisplayClass54_0_object____EnumeratePlayersHavingBgmName_b__1(
         BgmManager___c__DisplayClass54_0_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_31CFDD8 *method)
+        const MethodInfo_31E8B68 *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return System_String__op_Equality((System_String_o *)x[1].monitor, this->fields.bgmNameFilter, 0LL);
 }
 
@@ -4073,13 +4070,12 @@ void __fastcall BgmManager___c__DisplayClass57_0___PreloadAndPlayBgms_b__0(
         BgmManager___c__DisplayClass57_0_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo *v2; // x2
   struct BgmManager_o *_4__this; // x0
-  const MethodInfo *v5; // x2
-  const MethodInfo *v6; // x3
+  __int64 v4; // x2
+  const MethodInfo *v5; // x3
   struct BgmPlayArgs_array *nonNullArgsAll; // x20
-  __int64 v8; // x8
-  unsigned __int64 v9; // x21
+  __int64 v7; // x8
+  unsigned __int64 v8; // x21
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -4087,43 +4083,43 @@ void __fastcall BgmManager___c__DisplayClass57_0___PreloadAndPlayBgms_b__0(
   method = (const MethodInfo *)this->fields.argsGroup;
   if ( (const MethodInfo *)_4__this->fields.cacheArgsGroup == method )
   {
-    BgmManager__StopUnrequestedSubBgm(_4__this, (BgmPlayArgsGroup_o *)method, v2);
+    BgmManager__StopUnrequestedSubBgm(_4__this, (BgmPlayArgsGroup_o *)method, 0LL);
     if ( this->fields.isPlay )
     {
       nonNullArgsAll = this->fields.nonNullArgsAll;
       if ( !nonNullArgsAll )
         goto LABEL_14;
-      v8 = *(_QWORD *)&nonNullArgsAll->max_length;
-      if ( (int)v8 >= 1 )
+      v7 = *(_QWORD *)&nonNullArgsAll->max_length;
+      if ( (int)v7 >= 1 )
       {
-        v9 = 0LL;
+        v8 = 0LL;
         while ( 1 )
         {
-          if ( v9 >= (unsigned int)v8 )
-            sub_1BC326C(_4__this, method, v5);
+          if ( v8 >= (unsigned int)v7 )
+            sub_1BCB25C(_4__this, method, v4);
           _4__this = this->fields.__4__this;
           if ( !_4__this )
             break;
-          BgmManager__PlayPreloadedBgm(_4__this, nonNullArgsAll->m_Items[v9], v5);
-          LODWORD(v8) = nonNullArgsAll->max_length;
-          if ( (__int64)++v9 >= (int)v8 )
+          BgmManager__PlayPreloadedBgm(_4__this, nonNullArgsAll->m_Items[v8], 0LL);
+          LODWORD(v7) = nonNullArgsAll->max_length;
+          if ( (__int64)++v8 >= (int)v7 )
             goto LABEL_10;
         }
 LABEL_14:
-        sub_1BC3264(_4__this, method);
+        sub_1BCB254(_4__this, method);
       }
 LABEL_10:
       _4__this = this->fields.__4__this;
       if ( !_4__this )
         goto LABEL_14;
       _4__this->fields.cacheArgsGroup = 0LL;
-      sub_1BC2FAC((CGThumbnailListItem_o *)&_4__this->fields.cacheArgsGroup, 0, (int32_t)v5, v6);
+      sub_1BCAF9C((CGThumbnailListItem_o *)&_4__this->fields.cacheArgsGroup, 0, v4, v5);
     }
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_14;
-  BgmManager__RemoveUnusedOldFromBindList(_4__this, method);
+  BgmManager__RemoveUnusedOldFromBindList(_4__this, 0LL);
   ActionExtensions__Call(this->fields.finishCallback, 0LL);
 }
 
@@ -4141,7 +4137,6 @@ void __fastcall BgmManager___c__DisplayClass57_1___PreloadAndPlayBgms_b__1(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
   struct BgmManager___c__DisplayClass57_0_o *CS___8__locals1; // x9
   struct BgmPlayArgs_o *args; // x8
 
@@ -4150,9 +4145,9 @@ void __fastcall BgmManager___c__DisplayClass57_1___PreloadAndPlayBgms_b__1(
     || (args = this->fields.args) == 0LL
     || (this = (BgmManager___c__DisplayClass57_1_o *)CS___8__locals1->fields.__4__this) == 0LL )
   {
-    sub_1BC3264(this, callback);
+    sub_1BCB254(this, callback);
   }
-  BgmManager__PreloadBgm((BgmManager_o *)this, args->fields._BgmName_k__BackingField, callback, v3);
+  BgmManager__PreloadBgm((BgmManager_o *)this, args->fields._BgmName_k__BackingField, callback, 0LL);
 }
 
 
@@ -4188,17 +4183,17 @@ void __fastcall BgmManager___c__DisplayClass61_0___PreloadBgm_b__0(
   int32_t v20; // w2
   const MethodInfo *v21; // x3
 
-  if ( (byte_4B0169C & 1) == 0 )
+  if ( (byte_4B1BB92 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__Add__, v5);
-    sub_1BC3008(&SoundManager_TypeInfo, v6);
-    sub_1BC3008(&Method_BgmManager___c__DisplayClass61_0__PreloadBgm_b__1__, v7);
-    byte_4B0169C = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__Add__, v5);
+    sub_1BCAFF8(&SoundManager_TypeInfo, v6);
+    sub_1BCAFF8(&Method_BgmManager___c__DisplayClass61_0__PreloadBgm_b__1__, v7);
+    byte_4B1BB92 = 1;
   }
   cueName = this->fields.cueName;
   this->fields.tempCueSheetName = cueName;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)cueName, v2, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)cueName, v2, v3);
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (loadingBgmCueNameList = (System_Collections_Generic_List_object__o *)_4__this->fields.loadingBgmCueNameList) == 0LL
@@ -4208,7 +4203,7 @@ void __fastcall BgmManager___c__DisplayClass61_0___PreloadBgm_b__0(
         ++loadingBgmCueNameList->fields._version,
         !items) )
   {
-    sub_1BC3264(loadingBgmCueNameList, v10);
+    sub_1BCB254(loadingBgmCueNameList, v10);
   }
   size = loadingBgmCueNameList->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -4216,23 +4211,23 @@ void __fastcall BgmManager___c__DisplayClass61_0___PreloadBgm_b__0(
     System_Collections_Generic_List_object___AddWithResize(
       loadingBgmCueNameList,
       v10,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
   }
   else
   {
     v17 = &items->obj.klass + size;
     loadingBgmCueNameList->fields._size = size + 1;
     v17[4] = (Il2CppClass *)v10;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v10, v11, v12);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v10, v11, v12);
   }
   _9__1 = this->fields.__9__1;
   tempCueSheetName = this->fields.tempCueSheetName;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
     System_Action___ctor(_9__1, (Il2CppObject *)this, Method_BgmManager___c__DisplayClass61_0__PreloadBgm_b__1__, 0LL);
     this->fields.__9__1 = _9__1;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v20, v21);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v20, v21);
   }
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
@@ -4253,15 +4248,15 @@ void __fastcall BgmManager___c__DisplayClass61_0___PreloadBgm_b__1(
   struct BgmManager_o *v8; // x8
 
   v2 = this;
-  if ( (byte_4B0169D & 1) == 0 )
+  if ( (byte_4B1BB93 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__Contains__, method);
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__Insert__, v3);
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__Remove__, v4);
-    this = (BgmManager___c__DisplayClass61_0_o *)sub_1BC3008(
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__Contains__, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__Insert__, v3);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__Remove__, v4);
+    this = (BgmManager___c__DisplayClass61_0_o *)sub_1BCAFF8(
                                                    &Method_SingletonMonoBehaviour_SoundManager__get_Instance__,
                                                    v5);
-    byte_4B0169D = 1;
+    byte_4B1BB93 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -4272,8 +4267,8 @@ void __fastcall BgmManager___c__DisplayClass61_0___PreloadBgm_b__1(
   System_Collections_Generic_List_object___Remove(
     (System_Collections_Generic_List_object__o *)this,
     (Il2CppObject *)v2->fields.cueName,
-    (const MethodInfo_36A2368 *)Method_System_Collections_Generic_List_string__Remove__);
-  this = (BgmManager___c__DisplayClass61_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    (const MethodInfo_36BB0F8 *)Method_System_Collections_Generic_List_string__Remove__);
+  this = (BgmManager___c__DisplayClass61_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
   if ( !this )
     goto LABEL_14;
   this = (BgmManager___c__DisplayClass61_0_o *)SoundManager__GetCueSheet(
@@ -4291,7 +4286,7 @@ void __fastcall BgmManager___c__DisplayClass61_0___PreloadBgm_b__1(
     this = (BgmManager___c__DisplayClass61_0_o *)System_Collections_Generic_List_object___Contains(
                                                    (System_Collections_Generic_List_object__o *)this,
                                                    (Il2CppObject *)v2->fields.cueName,
-                                                   (const MethodInfo_36A11D0 *)Method_System_Collections_Generic_List_string__Contains__);
+                                                   (const MethodInfo_36B9F60 *)Method_System_Collections_Generic_List_string__Contains__);
     if ( ((unsigned __int8)this & 1) == 0 )
     {
       v8 = v2->fields.__4__this;
@@ -4304,12 +4299,12 @@ void __fastcall BgmManager___c__DisplayClass61_0___PreloadBgm_b__1(
             (System_Collections_Generic_List_object__o *)this,
             0,
             (Il2CppObject *)v2->fields.cueName,
-            (const MethodInfo_36A1BF0 *)Method_System_Collections_Generic_List_string__Insert__);
+            (const MethodInfo_36BA980 *)Method_System_Collections_Generic_List_string__Insert__);
           goto LABEL_13;
         }
       }
 LABEL_14:
-      sub_1BC3264(this, method);
+      sub_1BCB254(this, method);
     }
   }
 LABEL_13:
@@ -4329,17 +4324,18 @@ bool __fastcall BgmManager___c__DisplayClass63_0___CoWaitSameAudioLoading_b__0(
         BgmManager___c__DisplayClass63_0_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo *v2; // x2
+  BgmManager_o *_4__this; // x0
 
-  if ( !this->fields.__4__this )
-    sub_1BC3264(this, method);
-  return BgmManager__IsLoadingLocal(this->fields.__4__this, this->fields.bgmName, v2);
+  _4__this = this->fields.__4__this;
+  if ( !_4__this )
+    sub_1BCB254(0LL, method);
+  return BgmManager__IsLoadingLocal(_4__this, this->fields.bgmName, 0LL);
 }
 
 
 void __fastcall BgmManager___c__DisplayClass67_0_object____ctor(
         BgmManager___c__DisplayClass67_0_T__o *this,
-        const MethodInfo_31D1334 *method)
+        const MethodInfo_31EA0C4 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -4348,10 +4344,10 @@ void __fastcall BgmManager___c__DisplayClass67_0_object____ctor(
 bool __fastcall BgmManager___c__DisplayClass67_0_object____FadeoutBgmLocal_b__0(
         BgmManager___c__DisplayClass67_0_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_31D133C *method)
+        const MethodInfo_31EA0CC *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return ((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, float))x->klass->vtable[10].method)(
            x,
            x->klass->vtable[11].methodPtr,
@@ -4375,23 +4371,23 @@ bool __fastcall BgmManager___c__DisplayClass69_0___StopUnrequestedSubBgm_b__1(
   BgmManager___c__DisplayClass69_0_o *v4; // x20
 
   v4 = this;
-  if ( (byte_4B0169E & 1) == 0 )
+  if ( (byte_4B1BB94 & 1) == 0 )
   {
-    this = (BgmManager___c__DisplayClass69_0_o *)sub_1BC3008(&Method_System_Array_IndexOf_string___, x);
-    byte_4B0169E = 1;
+    this = (BgmManager___c__DisplayClass69_0_o *)sub_1BCAFF8(&Method_System_Array_IndexOf_string___, x);
+    byte_4B1BB94 = 1;
   }
   if ( !x )
-    sub_1BC3264(this, x);
+    sub_1BCB254(this, x);
   return (unsigned int)System_Array__IndexOf_object_(
                          (System_Object_array *)v4->fields.subBgmNamesToPlay,
                          (Il2CppObject *)x->fields.bgmName,
-                         (const MethodInfo_3100440 *)Method_System_Array_IndexOf_string___) >> 31;
+                         (const MethodInfo_31191D0 *)Method_System_Array_IndexOf_string___) >> 31;
 }
 
 
 void __fastcall BgmManager___c__DisplayClass70_0_object____ctor(
         BgmManager___c__DisplayClass70_0_T__o *this,
-        const MethodInfo_31D2680 *method)
+        const MethodInfo_31EB410 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
@@ -4400,10 +4396,10 @@ void __fastcall BgmManager___c__DisplayClass70_0_object____ctor(
 void __fastcall BgmManager___c__DisplayClass70_0_object____PauseBgmLocal_b__0(
         BgmManager___c__DisplayClass70_0_T__o *this,
         Il2CppObject *x,
-        const MethodInfo_31D2688 *method)
+        const MethodInfo_31EB418 *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   BgmPlayerBase__PauseBgm((BgmPlayerBase_o *)x, this->fields.isPause, 0LL);
 }
 
@@ -4424,8 +4420,8 @@ void __fastcall BgmManager___c__DisplayClass71_0___PlayJingleLocal_b__0(
   const MethodInfo *v4; // x3
 
   _4__this = this->fields.__4__this;
-  if ( !_4__this || (_4__this = (BgmManager_o *)BgmManager__GetOrCreateJinglePlayer(_4__this, method)) == 0LL )
-    sub_1BC3264(_4__this, method);
+  if ( !_4__this || (_4__this = (BgmManager_o *)BgmManager__GetOrCreateJinglePlayer(_4__this, 0LL)) == 0LL )
+    sub_1BCB254(_4__this, method);
   JinglePlayer__PlayBgm(
     (JinglePlayer_o *)_4__this,
     this->fields.name,
@@ -4449,6 +4445,6 @@ bool __fastcall BgmManager___c__DisplayClass72_0___GetOrCreateSubBgmPlayer_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return System_String__op_Equality(x->fields.bgmName, this->fields.bgmName, 0LL);
 }

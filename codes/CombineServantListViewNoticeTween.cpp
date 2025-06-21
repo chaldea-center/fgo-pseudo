@@ -10,24 +10,24 @@ void __fastcall CombineServantListViewNoticeTween___ctor(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4B06065 & 1) == 0 )
+  if ( (byte_4B205A7 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController___ctor__,
       monoBehaviour);
-    sub_1BC3008(&System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__TypeInfo, v5);
-    byte_4B06065 = 1;
+    sub_1BCAFF8(&System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__TypeInfo, v5);
+    byte_4B205A7 = 1;
   }
   this->fields.to = 1.0;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.monoBehaviour = monoBehaviour;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.monoBehaviour, (int32_t)monoBehaviour, v6, v7);
-  v8 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.monoBehaviour, (int32_t)monoBehaviour, v6, v7);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController___ctor__);
   this->fields.tweenControllers = (struct System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__o *)v8;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)v8, v9, v10);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)v8, v9, v10);
 }
 
 
@@ -50,13 +50,13 @@ void __fastcall CombineServantListViewNoticeTween__AddTarget(
   __int64 size; // x10
   Il2CppClass **v18; // x0
 
-  if ( (byte_4B06066 & 1) == 0 )
+  if ( (byte_4B205A8 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__Add__,
       tweenTarget);
-    sub_1BC3008(&CombineServantListViewNoticeTween_TweenController_TypeInfo, v7);
-    byte_4B06066 = 1;
+    sub_1BCAFF8(&CombineServantListViewNoticeTween_TweenController_TypeInfo, v7);
+    byte_4B205A8 = 1;
   }
   if ( !CombineServantListViewNoticeTween__IsTweenControllersContainsTarget(
           this,
@@ -64,7 +64,7 @@ void __fastcall CombineServantListViewNoticeTween__AddTarget(
           (const MethodInfo *)texts) )
   {
     tweenControllers = (System_Collections_Generic_List_object__o *)this->fields.tweenControllers;
-    v9 = (CombineServantListViewNoticeTween_TweenController_o *)sub_1BC3254(CombineServantListViewNoticeTween_TweenController_TypeInfo);
+    v9 = (CombineServantListViewNoticeTween_TweenController_o *)sub_1BCB244(CombineServantListViewNoticeTween_TweenController_TypeInfo);
     CombineServantListViewNoticeTween_TweenController___ctor(v9, tweenTarget, texts, v10);
     if ( !tweenControllers
       || (items = tweenControllers->fields._items,
@@ -72,7 +72,7 @@ void __fastcall CombineServantListViewNoticeTween__AddTarget(
           ++tweenControllers->fields._version,
           !items) )
     {
-      sub_1BC3264(v11, v12);
+      sub_1BCB254(v11, v12);
     }
     size = tweenControllers->fields._size;
     if ( (unsigned int)size >= items->max_length )
@@ -80,14 +80,14 @@ void __fastcall CombineServantListViewNoticeTween__AddTarget(
       System_Collections_Generic_List_object___AddWithResize(
         tweenControllers,
         (Il2CppObject *)v9,
-        *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+        *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
     }
     else
     {
       v18 = &items->obj.klass + size;
       tweenControllers->fields._size = size + 1;
       v18[4] = (Il2CppClass *)v9;
-      sub_1BC2FAC((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v9, v13, v14);
+      sub_1BCAF9C((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v9, v13, v14);
     }
   }
 }
@@ -101,12 +101,12 @@ void __fastcall CombineServantListViewNoticeTween__Clear(
   int32_t size; // w2
   int v5; // w9
 
-  if ( (byte_4B06069 & 1) == 0 )
+  if ( (byte_4B205AB & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__Clear__,
       method);
-    byte_4B06069 = 1;
+    byte_4B205AB = 1;
   }
   tweenControllers = this->fields.tweenControllers;
   if ( tweenControllers )
@@ -130,14 +130,14 @@ bool __fastcall CombineServantListViewNoticeTween__GetIsTweenAlphaEnabled(
   unsigned int v5; // w21
   UnityEngine_Object_o *v6; // x20
 
-  if ( (byte_4B0606B & 1) == 0 )
+  if ( (byte_4B205AD & 1) == 0 )
   {
-    this = (CombineServantListViewNoticeTween_o *)sub_1BC3008(&UnityEngine_Object_TypeInfo, tweenAlphas);
-    byte_4B0606B = 1;
+    this = (CombineServantListViewNoticeTween_o *)sub_1BCAFF8(&UnityEngine_Object_TypeInfo, tweenAlphas);
+    byte_4B205AD = 1;
   }
   if ( !tweenAlphas )
 LABEL_16:
-    sub_1BC3264(this, tweenAlphas);
+    sub_1BCB254(this, tweenAlphas);
   max_length = tweenAlphas->max_length;
   if ( max_length < 1 )
     return 0;
@@ -145,7 +145,7 @@ LABEL_16:
   while ( 1 )
   {
     if ( v5 >= max_length )
-      sub_1BC326C(this, tweenAlphas, method);
+      sub_1BCB25C(this, tweenAlphas, method);
     v6 = (UnityEngine_Object_o *)tweenAlphas->m_Items[v5];
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -176,21 +176,21 @@ bool __fastcall CombineServantListViewNoticeTween__IsTweenControllersContainsTar
   int32_t size; // w25
   UnityEngine_Object_o *items; // x22
 
-  if ( (byte_4B06067 & 1) == 0 )
+  if ( (byte_4B205A9 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Count__,
       tweenTarget);
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Item__,
       v5);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v6);
-    byte_4B06067 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v6);
+    byte_4B205A9 = 1;
   }
   tweenControllers = (System_Collections_Generic_List_object__o *)this->fields.tweenControllers;
   if ( !tweenControllers )
 LABEL_11:
-    sub_1BC3264(tweenControllers, tweenTarget);
+    sub_1BCB254(tweenControllers, tweenTarget);
   v8 = 0;
   while ( 1 )
   {
@@ -200,7 +200,7 @@ LABEL_11:
     tweenControllers = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       tweenControllers,
                                                                       v8,
-                                                                      (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Item__);
+                                                                      (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Item__);
     if ( !tweenControllers )
       goto LABEL_11;
     items = (UnityEngine_Object_o *)tweenControllers->fields._items;
@@ -233,23 +233,23 @@ void __fastcall CombineServantListViewNoticeTween__RemoveTarget(
   System_Collections_Generic_List_object__o *tweenControllers; // x19
   System_Predicate_object__o *v14; // x20
 
-  if ( (byte_4B06068 & 1) == 0 )
+  if ( (byte_4B205AA & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__RemoveAll__,
       tweenTarget);
-    sub_1BC3008(&System_Predicate_CombineServantListViewNoticeTween_TweenController__TypeInfo, v5);
-    sub_1BC3008(&Method_CombineServantListViewNoticeTween___c__DisplayClass9_0__RemoveTarget_b__0__, v6);
-    sub_1BC3008(&CombineServantListViewNoticeTween___c__DisplayClass9_0_TypeInfo, v7);
-    byte_4B06068 = 1;
+    sub_1BCAFF8(&System_Predicate_CombineServantListViewNoticeTween_TweenController__TypeInfo, v5);
+    sub_1BCAFF8(&Method_CombineServantListViewNoticeTween___c__DisplayClass9_0__RemoveTarget_b__0__, v6);
+    sub_1BCAFF8(&CombineServantListViewNoticeTween___c__DisplayClass9_0_TypeInfo, v7);
+    byte_4B205AA = 1;
   }
-  v8 = sub_1BC3254(CombineServantListViewNoticeTween___c__DisplayClass9_0_TypeInfo);
+  v8 = sub_1BCB244(CombineServantListViewNoticeTween___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8
     || (*(_QWORD *)(v8 + 16) = tweenTarget,
-        sub_1BC2FAC((CGThumbnailListItem_o *)(v8 + 16), (int32_t)tweenTarget, v11, v12),
+        sub_1BCAF9C((CGThumbnailListItem_o *)(v8 + 16), (int32_t)tweenTarget, v11, v12),
         tweenControllers = (System_Collections_Generic_List_object__o *)this->fields.tweenControllers,
-        v14 = (System_Predicate_object__o *)sub_1BC3254(System_Predicate_CombineServantListViewNoticeTween_TweenController__TypeInfo),
+        v14 = (System_Predicate_object__o *)sub_1BCB244(System_Predicate_CombineServantListViewNoticeTween_TweenController__TypeInfo),
         System_Predicate_object____ctor(
           v14,
           (Il2CppObject *)v8,
@@ -257,12 +257,12 @@ void __fastcall CombineServantListViewNoticeTween__RemoveTarget(
           0LL),
         !tweenControllers) )
   {
-    sub_1BC3264(v9, v10);
+    sub_1BCB254(v9, v10);
   }
   System_Collections_Generic_List_object___RemoveAll(
     tweenControllers,
     (System_Predicate_T__o *)v14,
-    (const MethodInfo_36A249C *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__RemoveAll__);
+    (const MethodInfo_36BB22C *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__RemoveAll__);
 }
 
 
@@ -277,15 +277,15 @@ void __fastcall CombineServantListViewNoticeTween__SetTexts(
   int32_t v7; // w20
   int32_t v8; // w20
 
-  if ( (byte_4B0606C & 1) == 0 )
+  if ( (byte_4B205AE & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Count__,
       isSwitch);
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Item__,
       v5);
-    byte_4B0606C = 1;
+    byte_4B205AE = 1;
   }
   tweenControllers = (System_Collections_Generic_List_object__o *)this->fields.tweenControllers;
   if ( !isSwitch )
@@ -293,7 +293,7 @@ void __fastcall CombineServantListViewNoticeTween__SetTexts(
     if ( tweenControllers )
       goto LABEL_11;
 LABEL_15:
-    sub_1BC3264(tweenControllers, isSwitch);
+    sub_1BCB254(tweenControllers, isSwitch);
   }
   if ( !tweenControllers )
     goto LABEL_15;
@@ -303,7 +303,7 @@ LABEL_15:
     tweenControllers = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       tweenControllers,
                                                                       v7,
-                                                                      (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Item__);
+                                                                      (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Item__);
     if ( tweenControllers )
     {
       CombineServantListViewNoticeTween_TweenController__SetNextIndex(
@@ -323,7 +323,7 @@ LABEL_11:
     tweenControllers = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       tweenControllers,
                                                                       v8,
-                                                                      (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Item__);
+                                                                      (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Item__);
     if ( tweenControllers )
     {
       CombineServantListViewNoticeTween_TweenController__SetTextToLabel(
@@ -362,13 +362,13 @@ void __fastcall CombineServantListViewNoticeTween__Start(
     monoBehaviour = CombineServantListViewNoticeTween__TweenLoop(this, v5);
     if ( v6 )
     {
-      started = UnityEngine_MonoBehaviour__StartCoroutine_70019872(v6, monoBehaviour, 0LL);
+      started = UnityEngine_MonoBehaviour__StartCoroutine_70121648(v6, monoBehaviour, 0LL);
       this->fields.coroutine = started;
-      sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.coroutine, (int32_t)started, v8, v9);
+      sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.coroutine, (int32_t)started, v8, v9);
       return;
     }
 LABEL_6:
-    sub_1BC3264(monoBehaviour, v3);
+    sub_1BCB254(monoBehaviour, v3);
   }
 }
 
@@ -390,10 +390,10 @@ void __fastcall CombineServantListViewNoticeTween__Stop(
   {
     monoBehaviour = this->fields.monoBehaviour;
     if ( !monoBehaviour )
-      sub_1BC3264(0LL, coroutine);
-    UnityEngine_MonoBehaviour__StopCoroutine_70020492(monoBehaviour, coroutine, 0LL);
+      sub_1BCB254(0LL, coroutine);
+    UnityEngine_MonoBehaviour__StopCoroutine_70122268(monoBehaviour, coroutine, 0LL);
     p_coroutine->klass = 0LL;
-    sub_1BC2FAC(p_coroutine, 0, v5, v6);
+    sub_1BCAF9C(p_coroutine, 0, v5, v6);
   }
 }
 
@@ -406,16 +406,16 @@ System_Collections_IEnumerator_o *__fastcall CombineServantListViewNoticeTween__
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B0606A & 1) == 0 )
+  if ( (byte_4B205AC & 1) == 0 )
   {
-    sub_1BC3008(&CombineServantListViewNoticeTween__TweenLoop_d__13_TypeInfo, method);
-    byte_4B0606A = 1;
+    sub_1BCAFF8(&CombineServantListViewNoticeTween__TweenLoop_d__13_TypeInfo, method);
+    byte_4B205AC = 1;
   }
-  v3 = sub_1BC3254(CombineServantListViewNoticeTween__TweenLoop_d__13_TypeInfo);
+  v3 = sub_1BCB244(CombineServantListViewNoticeTween__TweenLoop_d__13_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -435,10 +435,10 @@ void __fastcall CombineServantListViewNoticeTween_TweenController___ctor(
   v6 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   v6->fields._TweenTarget_k__BackingField = tweenTarget;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v6->fields, (int32_t)tweenTarget, v7, v8);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v6->fields, (int32_t)tweenTarget, v7, v8);
   v6->fields._Texts_k__BackingField = texts;
   v6 = (CombineServantListViewNoticeTween_TweenController_o *)((char *)v6 + 24);
-  sub_1BC2FAC((CGThumbnailListItem_o *)v6, (int32_t)texts, v9, v10);
+  sub_1BCAF9C((CGThumbnailListItem_o *)v6, (int32_t)texts, v9, v10);
   LODWORD(v6->monitor) = 0;
 }
 
@@ -453,16 +453,16 @@ void __fastcall CombineServantListViewNoticeTween_TweenController__SetNextIndex(
   int32_t v5; // w8
 
   v2 = this;
-  if ( (byte_4B0606D & 1) == 0 )
+  if ( (byte_4B205AF & 1) == 0 )
   {
-    this = (CombineServantListViewNoticeTween_TweenController_o *)sub_1BC3008(
+    this = (CombineServantListViewNoticeTween_TweenController_o *)sub_1BCAFF8(
                                                                     &Method_System_Collections_Generic_List_string__get_Count__,
                                                                     method);
-    byte_4B0606D = 1;
+    byte_4B205AF = 1;
   }
   Texts_k__BackingField = v2->fields._Texts_k__BackingField;
   if ( !Texts_k__BackingField )
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   index_k__BackingField = v2->fields._index_k__BackingField;
   if ( index_k__BackingField == Texts_k__BackingField->fields._size - 1 )
     v5 = 0;
@@ -479,10 +479,10 @@ void __fastcall CombineServantListViewNoticeTween_TweenController__SetTextToLabe
   System_Collections_Generic_List_object__o *Texts_k__BackingField; // x0
   UILabel_o *TweenTarget_k__BackingField; // x20
 
-  if ( (byte_4B0606E & 1) == 0 )
+  if ( (byte_4B205B0 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__get_Item__, method);
-    byte_4B0606E = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__get_Item__, method);
+    byte_4B205B0 = 1;
   }
   Texts_k__BackingField = (System_Collections_Generic_List_object__o *)this->fields._Texts_k__BackingField;
   if ( !Texts_k__BackingField
@@ -490,10 +490,10 @@ void __fastcall CombineServantListViewNoticeTween_TweenController__SetTextToLabe
         Texts_k__BackingField = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                Texts_k__BackingField,
                                                                                this->fields._index_k__BackingField,
-                                                                               (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_string__get_Item__),
+                                                                               (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_string__get_Item__),
         !TweenTarget_k__BackingField) )
   {
-    sub_1BC3264(Texts_k__BackingField, method);
+    sub_1BCB254(Texts_k__BackingField, method);
   }
   UILabel__set_text(TweenTarget_k__BackingField, (System_String_o *)Texts_k__BackingField, 0LL);
 }
@@ -531,7 +531,7 @@ void __fastcall CombineServantListViewNoticeTween_TweenController__set_Texts(
   const MethodInfo *v3; // x3
 
   this->fields._Texts_k__BackingField = value;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._Texts_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Texts_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -543,7 +543,7 @@ void __fastcall CombineServantListViewNoticeTween_TweenController__set_TweenTarg
   const MethodInfo *v3; // x3
 
   this->fields._TweenTarget_k__BackingField = value;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -607,28 +607,28 @@ bool __fastcall CombineServantListViewNoticeTween__TweenLoop_d__13__MoveNext(
   __int64 v36; // x0
 
   v4 = this;
-  if ( (byte_4B06070 & 1) == 0 )
+  if ( (byte_4B205B2 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Count__,
       method);
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Item__,
       v5);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v6);
-    sub_1BC3008(&TweenAlpha___TypeInfo, v7);
-    this = (CombineServantListViewNoticeTween__TweenLoop_d__13_o *)sub_1BC3008(&UnityEngine_WaitForSeconds_TypeInfo, v8);
-    byte_4B06070 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v6);
+    sub_1BCAFF8(&TweenAlpha___TypeInfo, v7);
+    this = (CombineServantListViewNoticeTween__TweenLoop_d__13_o *)sub_1BCAFF8(&UnityEngine_WaitForSeconds_TypeInfo, v8);
+    byte_4B205B2 = 1;
   }
   _4__this = v4->fields.__4__this;
   switch ( v4->fields.__1__state )
   {
     case 0:
       v4->fields.__1__state = -1;
-      v10 = (UnityEngine_WaitForSeconds_o *)sub_1BC3254(UnityEngine_WaitForSeconds_TypeInfo);
+      v10 = (UnityEngine_WaitForSeconds_o *)sub_1BCB244(UnityEngine_WaitForSeconds_TypeInfo);
       UnityEngine_WaitForSeconds___ctor(v10, 3.0, 0LL);
       v4->fields._loopWaitOnShow_5__2 = v10;
-      sub_1BC2FAC((CGThumbnailListItem_o *)&v4->fields._loopWaitOnShow_5__2, (int32_t)v10, v11, v12);
+      sub_1BCAF9C((CGThumbnailListItem_o *)&v4->fields._loopWaitOnShow_5__2, (int32_t)v10, v11, v12);
       if ( !_4__this )
         goto LABEL_40;
       if ( _4__this->fields.to == 0.0 )
@@ -636,7 +636,7 @@ bool __fastcall CombineServantListViewNoticeTween__TweenLoop_d__13__MoveNext(
         loopWaitOnShow_5__2 = (Il2CppObject *)v4->fields._loopWaitOnShow_5__2;
         v4->fields.__2__current = loopWaitOnShow_5__2;
         p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1BC2FAC(p__2__current, (int32_t)loopWaitOnShow_5__2, (int32_t)v2, v3);
+        sub_1BCAF9C(p__2__current, (int32_t)loopWaitOnShow_5__2, (int32_t)v2, v3);
         result = 1;
         LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
         return result;
@@ -664,7 +664,7 @@ bool __fastcall CombineServantListViewNoticeTween__TweenLoop_d__13__MoveNext(
 LABEL_17:
     if ( !_4__this )
 LABEL_40:
-      sub_1BC3264(this, method);
+      sub_1BCB254(this, method);
     if ( !_4__this->fields.isTween )
       return 0;
     tweenControllers = _4__this->fields.tweenControllers;
@@ -672,14 +672,14 @@ LABEL_40:
     {
       v4->fields.__2__current = 0LL;
       v33 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-      sub_1BC2FAC(v33, 0, (int32_t)v2, v3);
+      sub_1BCAF9C(v33, 0, (int32_t)v2, v3);
       v34 = 2;
       goto LABEL_48;
     }
-    v20 = sub_1BC30B0(TweenAlpha___TypeInfo, size);
+    v20 = sub_1BCB0A0(TweenAlpha___TypeInfo, size);
     v4->fields._tweenAlphas_5__3 = (struct TweenAlpha_array *)v20;
     p_tweenAlphas_5__3 = (unsigned int **)&v4->fields._tweenAlphas_5__3;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&v4->fields._tweenAlphas_5__3, v20, v22, v23);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&v4->fields._tweenAlphas_5__3, v20, v22, v23);
     this = (CombineServantListViewNoticeTween__TweenLoop_d__13_o *)_4__this->fields.tweenControllers;
     if ( !this )
       goto LABEL_40;
@@ -689,7 +689,7 @@ LABEL_40:
       this = (CombineServantListViewNoticeTween__TweenLoop_d__13_o *)System_Collections_Generic_List_object___get_Item(
                                                                        (System_Collections_Generic_List_object__o *)this,
                                                                        v24,
-                                                                       (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Item__);
+                                                                       (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Item__);
       if ( !this )
         goto LABEL_40;
       v25 = *(UnityEngine_Object_o **)&this->fields.__1__state;
@@ -704,7 +704,7 @@ LABEL_40:
         this = (CombineServantListViewNoticeTween__TweenLoop_d__13_o *)System_Collections_Generic_List_object___get_Item(
                                                                          (System_Collections_Generic_List_object__o *)this,
                                                                          v24,
-                                                                         (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Item__);
+                                                                         (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_CombineServantListViewNoticeTween_TweenController__get_Item__);
         if ( !this )
           goto LABEL_40;
         this = *(CombineServantListViewNoticeTween__TweenLoop_d__13_o **)&this->fields.__1__state;
@@ -721,26 +721,26 @@ LABEL_40:
         v29 = this;
         if ( this )
         {
-          this = (CombineServantListViewNoticeTween__TweenLoop_d__13_o *)sub_1BC3144(
+          this = (CombineServantListViewNoticeTween__TweenLoop_d__13_o *)sub_1BCB134(
                                                                            this,
                                                                            *(_QWORD *)(*(_QWORD *)v26 + 64LL));
           if ( !this )
           {
-            v36 = sub_1BC3288(0LL);
-            sub_1BC3130(v36, 0LL);
+            v36 = sub_1BCB278(0LL);
+            sub_1BCB120(v36, 0LL);
           }
         }
         if ( v24 >= v26[6] )
           goto LABEL_49;
         v30 = &v26[2 * v24];
         *((_QWORD *)v30 + 4) = v29;
-        sub_1BC2FAC((CGThumbnailListItem_o *)(v30 + 8), (int32_t)v29, (int32_t)v2, v28);
+        sub_1BCAF9C((CGThumbnailListItem_o *)(v30 + 8), (int32_t)v29, (int32_t)v2, v28);
         v31 = *p_tweenAlphas_5__3;
         if ( !*p_tweenAlphas_5__3 )
           goto LABEL_40;
         if ( v24 >= v31[6] )
 LABEL_49:
-          sub_1BC326C(this, method, v2);
+          sub_1BCB25C(this, method, v2);
         v32 = *(_QWORD *)&v31[2 * v24 + 8];
         if ( !v32 )
           goto LABEL_40;
@@ -771,7 +771,7 @@ LABEL_9:
       v35 = (Il2CppObject *)v4->fields._loopWaitOnShow_5__2;
       v4->fields.__2__current = v35;
       v33 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-      sub_1BC2FAC(v33, (int32_t)v35, (int32_t)v2, v3);
+      sub_1BCAF9C(v33, (int32_t)v35, (int32_t)v2, v3);
       v34 = 4;
       goto LABEL_48;
     }
@@ -779,13 +779,13 @@ LABEL_14:
     if ( _4__this->fields.to == 1.0 )
       CombineServantListViewNoticeTween__SetTexts(_4__this, 1, v2);
     v4->fields._tweenAlphas_5__3 = 0LL;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&v4->fields._tweenAlphas_5__3, 0, (int32_t)v2, v3);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&v4->fields._tweenAlphas_5__3, 0, (int32_t)v2, v3);
   }
   if ( !_4__this->fields.isTween )
     return 0;
   v4->fields.__2__current = 0LL;
   v33 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-  sub_1BC2FAC(v33, 0, (int32_t)v2, v3);
+  sub_1BCAF9C(v33, 0, (int32_t)v2, v3);
   v34 = 3;
 LABEL_48:
   LODWORD(v33[-1].fields._ThumbnailSpritePath_k__BackingField) = v34;
@@ -809,11 +809,11 @@ void __fastcall __noreturn CombineServantListViewNoticeTween__TweenLoop_d__13__S
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BC301C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BC3254(v2);
+  v2 = sub_1BCB00C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BCB244(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BC301C(&Method_CombineServantListViewNoticeTween__TweenLoop_d__13_System_Collections_IEnumerator_Reset__);
-  sub_1BC3130(v3, v4);
+  v4 = sub_1BCB00C(&Method_CombineServantListViewNoticeTween__TweenLoop_d__13_System_Collections_IEnumerator_Reset__);
+  sub_1BCB120(v3, v4);
 }
 
 
@@ -851,13 +851,13 @@ bool __fastcall CombineServantListViewNoticeTween___c__DisplayClass9_0___RemoveT
   UnityEngine_Object_o *tweenTarget; // x20
 
   v4 = this;
-  if ( (byte_4B0606F & 1) == 0 )
+  if ( (byte_4B205B1 & 1) == 0 )
   {
-    this = (CombineServantListViewNoticeTween___c__DisplayClass9_0_o *)sub_1BC3008(&UnityEngine_Object_TypeInfo, t);
-    byte_4B0606F = 1;
+    this = (CombineServantListViewNoticeTween___c__DisplayClass9_0_o *)sub_1BCAFF8(&UnityEngine_Object_TypeInfo, t);
+    byte_4B205B1 = 1;
   }
   if ( !t )
-    sub_1BC3264(this, t);
+    sub_1BCB254(this, t);
   TweenTarget_k__BackingField = (UnityEngine_Object_o *)t->fields._TweenTarget_k__BackingField;
   tweenTarget = (UnityEngine_Object_o *)v4->fields.tweenTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

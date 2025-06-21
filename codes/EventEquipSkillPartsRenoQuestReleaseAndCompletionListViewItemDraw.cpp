@@ -24,12 +24,12 @@ void __fastcall EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDra
   int32_t SkillId_k__BackingField; // w22
 
   v4 = this;
-  if ( (byte_4B062AE & 1) == 0 )
+  if ( (byte_4B168BB & 1) == 0 )
   {
-    this = (EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDraw_o *)sub_1BC3008(
+    this = (EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDraw_o *)sub_1BCAFF8(
                                                                                     &AtlasManager_TypeInfo,
                                                                                     item);
-    byte_4B062AE = 1;
+    byte_4B168BB = 1;
   }
   if ( !item )
     goto LABEL_8;
@@ -41,7 +41,7 @@ void __fastcall EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDra
   this = (EventEquipSkillPartsRenoQuestReleaseAndCompletionListViewItemDraw_o *)v4->fields.nameLabel;
   if ( !this )
 LABEL_8:
-    sub_1BC3264(this, item);
+    sub_1BCB254(this, item);
   UILabel__set_text((UILabel_o *)this, item->fields._Name_k__BackingField, 0LL);
   WrapControlText__textAdjust(v4->fields.detailLabel, item->fields._Detail_k__BackingField, 16, 0, 0LL);
 }

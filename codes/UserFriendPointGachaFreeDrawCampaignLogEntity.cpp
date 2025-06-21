@@ -2,14 +2,14 @@ void __fastcall UserFriendPointGachaFreeDrawCampaignLogEntity___ctor(
         UserFriendPointGachaFreeDrawCampaignLogEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B02E52 & 1) == 0 )
+  if ( (byte_4B1D35B & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B02E52 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B1D35B = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,10 +17,10 @@ System_String_o *__fastcall UserFriendPointGachaFreeDrawCampaignLogEntity__Creat
         UserFriendPointGachaFreeDrawCampaignLogEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B02E51 & 1) == 0 )
+  if ( (byte_4B1D35A & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_1/*""*/, method);
-    byte_4B02E51 = 1;
+    sub_1BCAFF8(&StringLiteral_1/*""*/, method);
+    byte_4B1D35A = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }

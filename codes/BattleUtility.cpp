@@ -1,15 +1,15 @@
 // local variable allocation has failed, the output may be wrong!
 bool __fastcall BattleUtility__Above(System_Int32_array *condArray, int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4B04C4F & 1) == 0 )
+  if ( (byte_4B1F186 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Linq_Enumerable_First_int___, *(_QWORD *)&value);
-    byte_4B04C4F = 1;
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_First_int___, *(_QWORD *)&value);
+    byte_4B1F186 = 1;
   }
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)condArray, 0LL)
       && System_Linq_Enumerable__First_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)condArray,
-           (const MethodInfo_3024314 *)Method_System_Linq_Enumerable_First_int___) <= value;
+           (const MethodInfo_303CF54 *)Method_System_Linq_Enumerable_First_int___) <= value;
 }
 
 
@@ -17,10 +17,10 @@ float __fastcall BattleUtility__Abs(float f, const MethodInfo *method)
 {
   __int64 v2; // x1
 
-  if ( (byte_4B04C4D & 1) == 0 )
+  if ( (byte_4B1F184 & 1) == 0 )
   {
-    sub_1BC3008(&System_Math_TypeInfo, v2);
-    byte_4B04C4D = 1;
+    sub_1BCAFF8(&System_Math_TypeInfo, v2);
+    byte_4B1F184 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -28,12 +28,12 @@ float __fastcall BattleUtility__Abs(float f, const MethodInfo *method)
 }
 
 
-int32_t __fastcall BattleUtility__Abs_45256752(int32_t value, const MethodInfo *method)
+int32_t __fastcall BattleUtility__Abs_45439140(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4B04C4E & 1) == 0 )
+  if ( (byte_4B1F185 & 1) == 0 )
   {
-    sub_1BC3008(&System_Math_TypeInfo, method);
-    byte_4B04C4E = 1;
+    sub_1BCAFF8(&System_Math_TypeInfo, method);
+    byte_4B1F185 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -47,15 +47,15 @@ int32_t __fastcall BattleUtility__Abs_45256752(int32_t value, const MethodInfo *
 // local variable allocation has failed, the output may be wrong!
 bool __fastcall BattleUtility__Below(System_Int32_array *condArray, int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4B04C50 & 1) == 0 )
+  if ( (byte_4B1F187 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Linq_Enumerable_First_int___, *(_QWORD *)&value);
-    byte_4B04C50 = 1;
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_First_int___, *(_QWORD *)&value);
+    byte_4B1F187 = 1;
   }
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)condArray, 0LL)
       && System_Linq_Enumerable__First_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)condArray,
-           (const MethodInfo_3024314 *)Method_System_Linq_Enumerable_First_int___) >= value;
+           (const MethodInfo_303CF54 *)Method_System_Linq_Enumerable_First_int___) >= value;
 }
 
 
@@ -66,24 +66,24 @@ bool __fastcall BattleUtility__Between(System_Int32_array *condArray, int32_t va
   _BOOL8 IsNullOrEmpty; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B04C51 & 1) == 0 )
+  if ( (byte_4B1F188 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Linq_Enumerable_First_int___, *(_QWORD *)&value);
-    sub_1BC3008(&Method_System_Linq_Enumerable_Last_int___, v5);
-    byte_4B04C51 = 1;
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_First_int___, *(_QWORD *)&value);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_Last_int___, v5);
+    byte_4B1F188 = 1;
   }
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)condArray, 0LL);
   if ( IsNullOrEmpty )
     return 0;
   if ( !condArray )
-    sub_1BC3264(IsNullOrEmpty, v7);
+    sub_1BCB254(IsNullOrEmpty, v7);
   return condArray->max_length == 2
       && System_Linq_Enumerable__First_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)condArray,
-           (const MethodInfo_3024314 *)Method_System_Linq_Enumerable_First_int___) <= value
+           (const MethodInfo_303CF54 *)Method_System_Linq_Enumerable_First_int___) <= value
       && System_Linq_Enumerable__Last_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)condArray,
-           (const MethodInfo_30288B0 *)Method_System_Linq_Enumerable_Last_int___) >= value;
+           (const MethodInfo_30414F0 *)Method_System_Linq_Enumerable_Last_int___) >= value;
 }
 
 
@@ -93,15 +93,15 @@ int32_t __fastcall BattleUtility__FloorToInt(float f, const MethodInfo *method)
 }
 
 
-int32_t __fastcall BattleUtility__FloorToInt_45256544(double d, const MethodInfo *method)
+int32_t __fastcall BattleUtility__FloorToInt_45438932(double d, const MethodInfo *method)
 {
   __int64 v2; // x1
   int32_t v4; // w9
 
-  if ( (byte_4B04C4B & 1) == 0 )
+  if ( (byte_4B1F182 & 1) == 0 )
   {
-    sub_1BC3008(&System_Math_TypeInfo, v2);
-    byte_4B04C4B = 1;
+    sub_1BCAFF8(&System_Math_TypeInfo, v2);
+    byte_4B1F182 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -118,10 +118,10 @@ int64_t __fastcall BattleUtility__FloorToLong(double f, const MethodInfo *method
   __int64 v2; // x1
   int64_t v4; // x9
 
-  if ( (byte_4B04C4C & 1) == 0 )
+  if ( (byte_4B1F183 & 1) == 0 )
   {
-    sub_1BC3008(&System_Math_TypeInfo, v2);
-    byte_4B04C4C = 1;
+    sub_1BCAFF8(&System_Math_TypeInfo, v2);
+    byte_4B1F183 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -172,15 +172,15 @@ float __fastcall BattleUtility__Lerp(float a, float b, float t, const MethodInfo
   __int64 v4; // x1
   float v8; // s0
 
-  if ( (byte_4B04C49 & 1) == 0 )
+  if ( (byte_4B1F180 & 1) == 0 )
   {
-    sub_1BC3008(&System_Math_TypeInfo, v4);
-    byte_4B04C49 = 1;
+    sub_1BCAFF8(&System_Math_TypeInfo, v4);
+    byte_4B1F180 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v8 = System_Math__Max_63870724(0.0, t, 0LL);
-  return (float)((float)(b - a) * System_Math__Min_63871052(v8, 1.0, 0LL)) + a;
+  v8 = System_Math__Max_63972500(0.0, t, 0LL);
+  return (float)((float)(b - a) * System_Math__Min_63972828(v8, 1.0, 0LL)) + a;
 }
 
 
@@ -189,13 +189,13 @@ double __fastcall BattleUtility__LerpDouble(double a, double b, float t, const M
   __int64 v4; // x1
   float v8; // s0
 
-  if ( (byte_4B04C4A & 1) == 0 )
+  if ( (byte_4B1F181 & 1) == 0 )
   {
-    sub_1BC3008(&System_Math_TypeInfo, v4);
-    byte_4B04C4A = 1;
+    sub_1BCAFF8(&System_Math_TypeInfo, v4);
+    byte_4B1F181 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v8 = System_Math__Max_63870724(0.0, t, 0LL);
-  return (b - a) * System_Math__Min_63871052(v8, 1.0, 0LL) + a;
+  v8 = System_Math__Max_63972500(0.0, t, 0LL);
+  return (b - a) * System_Math__Min_63972828(v8, 1.0, 0LL) + a;
 }

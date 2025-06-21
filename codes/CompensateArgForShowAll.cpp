@@ -30,23 +30,23 @@ void __fastcall CompensateArgForShowAll___ctor(
   int32_t v32; // w2
   const MethodInfo *v33; // x3
 
-  if ( (byte_4B0444E & 1) == 0 )
+  if ( (byte_4B1E964 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_CompensateArgForShowAll_EffectType__TypeInfo, perf);
-    sub_1BC3008(&Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___, v11);
-    sub_1BC3008(&Method_BitValue_CompensateArgForShowAll_EffectType___ctor__, v12);
-    sub_1BC3008(&BitValue_CompensateArgForShowAll_EffectType__TypeInfo, v13);
-    sub_1BC3008(&Method_CompensateArgForShowAll___ctor_b__13_1__, v14);
-    sub_1BC3008(&System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo, v15);
-    sub_1BC3008(&Method_CompensateArgForShowAll___c___ctor_b__13_0__, v16);
-    sub_1BC3008(&CompensateArgForShowAll___c_TypeInfo, v17);
-    byte_4B0444E = 1;
+    sub_1BCAFF8(&System_Action_CompensateArgForShowAll_EffectType__TypeInfo, perf);
+    sub_1BCAFF8(&Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___, v11);
+    sub_1BCAFF8(&Method_BitValue_CompensateArgForShowAll_EffectType___ctor__, v12);
+    sub_1BCAFF8(&BitValue_CompensateArgForShowAll_EffectType__TypeInfo, v13);
+    sub_1BCAFF8(&Method_CompensateArgForShowAll___ctor_b__13_1__, v14);
+    sub_1BCAFF8(&System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo, v15);
+    sub_1BCAFF8(&Method_CompensateArgForShowAll___c___ctor_b__13_0__, v16);
+    sub_1BCAFF8(&CompensateArgForShowAll___c_TypeInfo, v17);
+    byte_4B1E964 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._Perf_k__BackingField = perf;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)perf, v18, v19);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)perf, v18, v19);
   this->fields._ActObj_k__BackingField = actObj;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._ActObj_k__BackingField, (int32_t)actObj, v20, v21);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._ActObj_k__BackingField, (int32_t)actObj, v20, v21);
   v22 = CompensateArgForShowAll___c_TypeInfo;
   if ( !CompensateArgForShowAll___c_TypeInfo->_2.cctor_finished )
   {
@@ -62,27 +62,27 @@ void __fastcall CompensateArgForShowAll___ctor(
       v22 = CompensateArgForShowAll___c_TypeInfo;
     }
     v24 = (Il2CppObject *)v22->static_fields->__9;
-    _9__13_0 = (System_Func_T__TResult__o *)sub_1BC3254(System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
+    _9__13_0 = (System_Func_T__TResult__o *)sub_1BCB244(System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
     System_Func_Int32Enum__int____ctor(_9__13_0, v24, Method_CompensateArgForShowAll___c___ctor_b__13_0__, 0LL);
     static_fields = CompensateArgForShowAll___c_TypeInfo->static_fields;
     static_fields->__9__13_0 = (struct System_Func_CompensateArgForShowAll_EffectType__int__o *)_9__13_0;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v26, v27);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v26, v27);
   }
-  v28 = (BitValue_T__o *)sub_1BC3254(BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
+  v28 = (BitValue_T__o *)sub_1BCB244(BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
   BitValue_Int32Enum____ctor(
     v28,
     (System_Func_T__int__o *)_9__13_0,
-    (const MethodInfo_3231F8C *)Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
+    (const MethodInfo_324AD1C *)Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
   this->fields._EffectTypeBit_k__BackingField = (struct BitValue_CompensateArgForShowAll_EffectType__o *)v28;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._EffectTypeBit_k__BackingField, (int32_t)v28, v29, v30);
-  v31 = (System_Action_T__o *)sub_1BC3254(System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._EffectTypeBit_k__BackingField, (int32_t)v28, v29, v30);
+  v31 = (System_Action_T__o *)sub_1BCB244(System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
   System_Action_Int32Enum____ctor(v31, (Il2CppObject *)this, Method_CompensateArgForShowAll___ctor_b__13_1__, 0LL);
   BasicHelper__ForEach_Int32Enum_(
     (System_Collections_Generic_IEnumerable_T__o *)effectTypes,
     v31,
-    (const MethodInfo_2FED8E4 *)Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
+    (const MethodInfo_3006524 *)Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
   this->fields._ExtraEffectIdArray_k__BackingField = extraEffectIdArray;
-  sub_1BC2FAC(
+  sub_1BCAF9C(
     (CGThumbnailListItem_o *)&this->fields._ExtraEffectIdArray_k__BackingField,
     (int32_t)extraEffectIdArray,
     v32,
@@ -98,18 +98,18 @@ void __fastcall CompensateArgForShowAll____ctor_b__13_1(
 {
   BitValue_T__o *EffectTypeBit_k__BackingField; // x0
 
-  if ( (byte_4B0444F & 1) == 0 )
+  if ( (byte_4B1E965 & 1) == 0 )
   {
-    sub_1BC3008(&Method_BitValue_CompensateArgForShowAll_EffectType__On__, *(_QWORD *)&x);
-    byte_4B0444F = 1;
+    sub_1BCAFF8(&Method_BitValue_CompensateArgForShowAll_EffectType__On__, *(_QWORD *)&x);
+    byte_4B1E965 = 1;
   }
   EffectTypeBit_k__BackingField = (BitValue_T__o *)this->fields._EffectTypeBit_k__BackingField;
   if ( !EffectTypeBit_k__BackingField )
-    sub_1BC3264(0LL, *(_QWORD *)&x);
+    sub_1BCB254(0LL, *(_QWORD *)&x);
   BitValue_Int32Enum___On(
     EffectTypeBit_k__BackingField,
     x,
-    (const MethodInfo_3231FBC *)Method_BitValue_CompensateArgForShowAll_EffectType__On__);
+    (const MethodInfo_324AD4C *)Method_BitValue_CompensateArgForShowAll_EffectType__On__);
 }
 
 
@@ -152,15 +152,15 @@ void __fastcall CompensateArgForShowAll___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B04450 & 1) == 0 )
+  if ( (byte_4B1E966 & 1) == 0 )
   {
-    sub_1BC3008(&CompensateArgForShowAll___c_TypeInfo, v1);
-    byte_4B04450 = 1;
+    sub_1BCAFF8(&CompensateArgForShowAll___c_TypeInfo, v1);
+    byte_4B1E966 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BC3254(CompensateArgForShowAll___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BCB244(CompensateArgForShowAll___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   CompensateArgForShowAll___c_TypeInfo->static_fields->__9 = (struct CompensateArgForShowAll___c_o *)v2;
-  sub_1BC2FAC((CGThumbnailListItem_o *)CompensateArgForShowAll___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BCAF9C((CGThumbnailListItem_o *)CompensateArgForShowAll___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 

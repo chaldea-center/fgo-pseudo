@@ -1,13 +1,13 @@
 void __fastcall ServantPassiveSkillEntity___ctor(ServantPassiveSkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B029A7 & 1) == 0 )
+  if ( (byte_4B1CEB0 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B029A7 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B1CEB0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall ServantPassiveSkillEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4B029A3 & 1) == 0 )
+  if ( (byte_4B1CEAC & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&num);
-    byte_4B029A3 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&num);
+    byte_4B1CEAC = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            num,
            priority,
-           (const MethodInfo_300047C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30190BC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -82,27 +82,27 @@ void __fastcall ServantPassiveSkillEntity__getEffectExplanation(
   const MethodInfo *v33; // x3
   System_String_o *EffectExplanation; // x0
 
-  if ( (byte_4B029A5 & 1) == 0 )
+  if ( (byte_4B1CEAE & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMasterData_SkillMaster___, charge);
-    sub_1BC3008(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v13);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v14);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
-    sub_1BC3008(&StringLiteral_1/*""*/, v16);
-    byte_4B029A5 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_SkillMaster___, charge);
+    sub_1BCAFF8(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v13);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v14);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v15);
+    sub_1BCAFF8(&StringLiteral_1/*""*/, v16);
+    byte_4B1CEAE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0LL )
+                     (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0LL )
   {
-    sub_1BC3264(Instance, v18);
+    sub_1BCB254(Instance, v18);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.skillId,
-             (const MethodInfo_32AF070 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_32C7E00 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( Entity )
   {
     v23 = (SkillEntity_o *)Entity;
@@ -119,7 +119,7 @@ void __fastcall ServantPassiveSkillEntity__getEffectExplanation(
     *charge = EffectChargeTurn;
     EffectTitle = SkillEntity__getEffectTitle(v23, v24, 0LL);
     *title = EffectTitle;
-    sub_1BC2FAC((CGThumbnailListItem_o *)title, (int32_t)EffectTitle, v32, v33);
+    sub_1BCAF9C((CGThumbnailListItem_o *)title, (int32_t)EffectTitle, v32, v33);
     EffectExplanation = SkillEntity__getEffectExplanation(v23, skillLv, 0LL);
     v30 = (int)EffectExplanation;
     *explanation = EffectExplanation;
@@ -129,10 +129,10 @@ void __fastcall ServantPassiveSkillEntity__getEffectExplanation(
     *charge = -1;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    if ( !byte_4AFD46D )
+    if ( !byte_4B1794E )
     {
-      sub_1BC3008(&LocalizationManager_TypeInfo, v20);
-      byte_4AFD46D = 1;
+      sub_1BCAFF8(&LocalizationManager_TypeInfo, v20);
+      byte_4B1794E = 1;
     }
     v26 = LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -142,11 +142,11 @@ void __fastcall ServantPassiveSkillEntity__getEffectExplanation(
     }
     unknownNameText = v26->static_fields->unknownNameText;
     *title = unknownNameText;
-    sub_1BC2FAC((CGThumbnailListItem_o *)title, (int32_t)unknownNameText, v21, v22);
+    sub_1BCAF9C((CGThumbnailListItem_o *)title, (int32_t)unknownNameText, v21, v22);
     *explanation = (System_String_o *)StringLiteral_1/*""*/;
     v30 = (int)StringLiteral_1/*""*/;
   }
-  sub_1BC2FAC((CGThumbnailListItem_o *)explanation, v30, v28, v29);
+  sub_1BCAF9C((CGThumbnailListItem_o *)explanation, v30, v28, v29);
 }
 
 
@@ -183,34 +183,34 @@ System_String_o *__fastcall ServantPassiveSkillEntity__getSkillName(
   __int64 v9; // x1
   LocalizationManager_c *v11; // x0
 
-  if ( (byte_4B029A6 & 1) == 0 )
+  if ( (byte_4B1CEAF & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMasterData_SkillMaster___, method);
-    sub_1BC3008(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v3);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v4);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4B029A6 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_SkillMaster___, method);
+    sub_1BCAFF8(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v3);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v4);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
+    byte_4B1CEAF = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0LL )
+                     (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_SkillMaster___)) == 0LL )
   {
-    sub_1BC3264(Instance, v7);
+    sub_1BCB254(Instance, v7);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.skillId,
-             (const MethodInfo_32AF070 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_32C7E00 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( Entity )
     return SkillEntity__getName((SkillEntity_o *)Entity, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  if ( !byte_4AFD46D )
+  if ( !byte_4B1794E )
   {
-    sub_1BC3008(&LocalizationManager_TypeInfo, v9);
-    byte_4AFD46D = 1;
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v9);
+    byte_4B1794E = 1;
   }
   v11 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -258,19 +258,19 @@ bool __fastcall ServantPassiveSkillEntity__isUse(
   EventFilterEntity_o *entity; // [xsp+18h] [xbp-58h] BYREF
 
   Time = nowTime;
-  if ( (byte_4B029A4 & 1) == 0 )
+  if ( (byte_4B1CEAD & 1) == 0 )
   {
-    sub_1BC3008(&CondType_TypeInfo, userId);
-    sub_1BC3008(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v19);
-    sub_1BC3008(&Method_DataManager_GetMasterData_EventFilterMaster___, v20);
-    sub_1BC3008(&Method_DataManager_GetMasterData_EventMaster___, v21);
-    sub_1BC3008(&Method_DataManager_GetMasterData_ServantPassiveSkillReleaseMaster___, v22);
-    sub_1BC3008(&Method_DataManager_GetMaster_UserExchangeSvtMaster___, v23);
-    sub_1BC3008(&DataManager_TypeInfo, v24);
-    sub_1BC3008(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v25);
-    sub_1BC3008(&NetworkManager_TypeInfo, v26);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v27);
-    byte_4B029A4 = 1;
+    sub_1BCAFF8(&CondType_TypeInfo, userId);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_CommonReleaseMaster___, v19);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_EventFilterMaster___, v20);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_EventMaster___, v21);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_ServantPassiveSkillReleaseMaster___, v22);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_UserExchangeSvtMaster___, v23);
+    sub_1BCAFF8(&DataManager_TypeInfo, v24);
+    sub_1BCAFF8(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v25);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v26);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v27);
+    byte_4B1CEAD = 1;
   }
   entity = 0LL;
   v39 = 0LL;
@@ -284,15 +284,15 @@ bool __fastcall ServantPassiveSkillEntity__isUse(
     return 0;
   if ( this->fields.eventId < 1 )
     goto LABEL_22;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_45;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_EventFilterMaster___);
+                                (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_EventFilterMaster___);
   if ( !Instance )
     goto LABEL_45;
-  if ( EventFilterMaster__TryGetEntity_40993028((EventFilterMaster_o *)Instance, &entity, this->fields.eventId, 0, 0LL) )
+  if ( EventFilterMaster__TryGetEntity_41150180((EventFilterMaster_o *)Instance, &entity, this->fields.eventId, 0, 0LL) )
   {
     Instance = (DataManager_o *)entity;
     if ( !entity )
@@ -300,19 +300,19 @@ bool __fastcall ServantPassiveSkillEntity__isUse(
     if ( !EventFilterEntity__IsOpen(entity, 0LL) )
       return 0;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_45;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_EventMaster___);
+                                (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_45;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
           &v39,
           this->fields.eventId,
-          (const MethodInfo_32AF0BC *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
+          (const MethodInfo_32C7E4C *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
     goto LABEL_22;
   Instance = (DataManager_o *)v39;
   if ( !v39 )
@@ -339,12 +339,12 @@ LABEL_22:
         if ( this->fields.commonReleaseId < 1 )
           goto LABEL_44;
 LABEL_39:
-        Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !Instance )
           goto LABEL_45;
         Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                      (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
         if ( !Instance )
           goto LABEL_45;
         v38 = (CommonReleaseMaster_o *)Instance;
@@ -355,7 +355,7 @@ LABEL_39:
         {
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserExchangeSvtMaster___);
+          Instance = (DataManager_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_UserExchangeSvtMaster___);
           if ( !Instance )
             goto LABEL_45;
           IsExchangeSvt = UserExchangeSvtMaster__IsExchangeSvt(
@@ -375,12 +375,12 @@ LABEL_44:
       IsExchangeSvt = 0;
     }
 LABEL_26:
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ServantPassiveSkillReleaseMaster___);
+                                    (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ServantPassiveSkillReleaseMaster___);
       if ( Instance )
         return ServantPassiveSkillReleaseMaster__isUse(
                  (ServantPassiveSkillReleaseMaster_o *)Instance,
@@ -393,7 +393,7 @@ LABEL_26:
                  v33);
     }
 LABEL_45:
-    sub_1BC3264(Instance, v29);
+    sub_1BCB254(Instance, v29);
   }
   return v31;
 }

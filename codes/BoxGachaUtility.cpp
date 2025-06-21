@@ -6,10 +6,10 @@ void __fastcall BoxGachaUtility___cctor(const MethodInfo *method)
   struct BoxGachaUtility_StaticFields *v4; // x9
   int32x2_t *v5; // x8
 
-  if ( (byte_4AFC56A & 1) == 0 )
+  if ( (byte_4B16A26 & 1) == 0 )
   {
-    sub_1BC3008(&BoxGachaUtility_TypeInfo, v1);
-    byte_4AFC56A = 1;
+    sub_1BCAFF8(&BoxGachaUtility_TypeInfo, v1);
+    byte_4B16A26 = 1;
   }
   static_fields = BoxGachaUtility_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->NORMAL_ITEM_SIZE.fields.x = 0x3F3AE1483F400000LL;
@@ -35,17 +35,17 @@ void __fastcall BoxGachaUtility__SetBoxGachaNumSprite(UISprite_o *sprite, int32_
   __int64 v10; // x1
   int32_t v11; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4AFC569 & 1) == 0 )
+  if ( (byte_4B16A25 & 1) == 0 )
   {
-    sub_1BC3008(&int_TypeInfo, *(_QWORD *)&num);
-    sub_1BC3008(&StringLiteral_20213/*"img_gachatxt_{0:D2}"*/, v7);
-    byte_4AFC569 = 1;
+    sub_1BCAFF8(&int_TypeInfo, *(_QWORD *)&num);
+    sub_1BCAFF8(&StringLiteral_20228/*"img_gachatxt_{0:D2}"*/, v7);
+    byte_4B16A25 = 1;
   }
   v11 = num;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11, method, v3, v4);
-  v9 = System_String__Format((System_String_o *)StringLiteral_20213/*"img_gachatxt_{0:D2}"*/, v8, 0LL);
+  v9 = System_String__Format((System_String_o *)StringLiteral_20228/*"img_gachatxt_{0:D2}"*/, v8, 0LL);
   if ( !sprite )
-    sub_1BC3264(v9, v10);
+    sub_1BCB254(v9, v10);
   UISprite__set_spriteName(sprite, v9, 0LL);
   ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))sprite->klass->vtable._33_MakePixelPerfect.method)(
     sprite,
@@ -75,10 +75,10 @@ void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
   const MethodInfo *v19; // x2
 
   v8 = gachaTime;
-  if ( (byte_4AFC568 & 1) == 0 )
+  if ( (byte_4B16A24 & 1) == 0 )
   {
-    *(_QWORD *)&gachaTime = sub_1BC3008(&BoxGachaUtility_TypeInfo, oneDigit);
-    byte_4AFC568 = 1;
+    *(_QWORD *)&gachaTime = sub_1BCAFF8(&BoxGachaUtility_TypeInfo, oneDigit);
+    byte_4B16A24 = 1;
   }
   if ( v8 < 10 )
     goto LABEL_9;
@@ -145,7 +145,7 @@ void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
       }
     }
 LABEL_32:
-    sub_1BC3264(*(_QWORD *)&gachaTime, oneDigit);
+    sub_1BCB254(*(_QWORD *)&gachaTime, oneDigit);
   }
   if ( v9 )
     return;

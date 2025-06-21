@@ -1,14 +1,14 @@
 void __fastcall EventPanelSpotMaster___ctor(EventPanelSpotMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B0207F & 1) == 0 )
+  if ( (byte_4B1C57E & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_EventPanelSpotMaster__EventPanelSpotEntity__int___ctor__, method);
-    byte_4B0207F = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_EventPanelSpotMaster__EventPanelSpotEntity__int___ctor__, method);
+    byte_4B1C57E = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     349,
-    (const MethodInfo_32ACD4C *)Method_DataMasterBase_EventPanelSpotMaster__EventPanelSpotEntity__int___ctor__);
+    (const MethodInfo_32C5ADC *)Method_DataMasterBase_EventPanelSpotMaster__EventPanelSpotEntity__int___ctor__);
 }
 
 
@@ -36,28 +36,28 @@ EventPanelSpotEntity_array *__fastcall EventPanelSpotMaster__GetEntityList(
   __int64 size; // x10
   Il2CppClass **v22; // x0
 
-  if ( (byte_4B02080 & 1) == 0 )
+  if ( (byte_4B1C57F & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Count__,
       *(_QWORD *)&eventId);
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Item__, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventPanelSpotEntity__Add__, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventPanelSpotEntity__ToArray__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventPanelSpotEntity___ctor__, v10);
-    sub_1BC3008(&System_Collections_Generic_List_EventPanelSpotEntity__TypeInfo, v11);
-    byte_4B02080 = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Item__, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventPanelSpotEntity__Add__, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventPanelSpotEntity__ToArray__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventPanelSpotEntity___ctor__, v10);
+    sub_1BCAFF8(&System_Collections_Generic_List_EventPanelSpotEntity__TypeInfo, v11);
+    byte_4B1C57F = 1;
   }
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_EventPanelSpotEntity__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventPanelSpotEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_EventPanelSpotEntity___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventPanelSpotEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_18;
   list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                              list,
-                                                             (const MethodInfo_324A858 *)Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Count__);
+                                                             (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Count__);
   if ( (int)list >= 1 )
   {
     v15 = (int)list;
@@ -70,7 +70,7 @@ EventPanelSpotEntity_array *__fastcall EventPanelSpotMaster__GetEntityList(
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v16,
-                                                                 (const MethodInfo_324A8E8 *)Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Item__);
+                                                                 (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Item__);
       if ( list )
       {
         v13 = list;
@@ -89,14 +89,14 @@ EventPanelSpotEntity_array *__fastcall EventPanelSpotMaster__GetEntityList(
             System_Collections_Generic_List_object___AddWithResize(
               v12,
               (Il2CppObject *)list,
-              *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+              *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
           }
           else
           {
             v22 = &items->obj.klass + size;
             v12->fields._size = size + 1;
             v22[4] = (Il2CppClass *)v13;
-            sub_1BC2FAC((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v13, v17, v18);
+            sub_1BCAF9C((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v13, v17, v18);
           }
         }
       }
@@ -104,14 +104,14 @@ EventPanelSpotEntity_array *__fastcall EventPanelSpotMaster__GetEntityList(
         goto LABEL_16;
     }
 LABEL_18:
-    sub_1BC3264(list, v13);
+    sub_1BCB254(list, v13);
   }
 LABEL_16:
   if ( !v12 )
     goto LABEL_18;
   return (EventPanelSpotEntity_array *)System_Collections_Generic_List_object___ToArray(
                                          v12,
-                                         (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_EventPanelSpotEntity__ToArray__);
+                                         (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_EventPanelSpotEntity__ToArray__);
 }
 
 
@@ -138,28 +138,28 @@ EventPanelSpotEntity_array *__fastcall EventPanelSpotMaster__GetEntityListFromEv
   __int64 size; // x10
   Il2CppClass **v20; // x0
 
-  if ( (byte_4B02081 & 1) == 0 )
+  if ( (byte_4B1C580 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Count__,
       *(_QWORD *)&eventId);
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Item__, v5);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventPanelSpotEntity__Add__, v6);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventPanelSpotEntity__ToArray__, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventPanelSpotEntity___ctor__, v8);
-    sub_1BC3008(&System_Collections_Generic_List_EventPanelSpotEntity__TypeInfo, v9);
-    byte_4B02081 = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Item__, v5);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventPanelSpotEntity__Add__, v6);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventPanelSpotEntity__ToArray__, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventPanelSpotEntity___ctor__, v8);
+    sub_1BCAFF8(&System_Collections_Generic_List_EventPanelSpotEntity__TypeInfo, v9);
+    byte_4B1C580 = 1;
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_EventPanelSpotEntity__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventPanelSpotEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_EventPanelSpotEntity___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventPanelSpotEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_17;
   list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                              list,
-                                                             (const MethodInfo_324A858 *)Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Count__);
+                                                             (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Count__);
   if ( (int)list >= 1 )
   {
     v13 = (int)list;
@@ -172,7 +172,7 @@ EventPanelSpotEntity_array *__fastcall EventPanelSpotMaster__GetEntityListFromEv
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v14,
-                                                                 (const MethodInfo_324A8E8 *)Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Item__);
+                                                                 (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_EventPanelSpotEntity__get_Item__);
       if ( list )
       {
         v11 = list;
@@ -191,14 +191,14 @@ EventPanelSpotEntity_array *__fastcall EventPanelSpotMaster__GetEntityListFromEv
             System_Collections_Generic_List_object___AddWithResize(
               v10,
               (Il2CppObject *)list,
-              *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+              *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
           }
           else
           {
             v20 = &items->obj.klass + size;
             v10->fields._size = size + 1;
             v20[4] = (Il2CppClass *)v11;
-            sub_1BC2FAC((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v11, v15, v16);
+            sub_1BCAF9C((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v11, v15, v16);
           }
         }
       }
@@ -206,12 +206,12 @@ EventPanelSpotEntity_array *__fastcall EventPanelSpotMaster__GetEntityListFromEv
         goto LABEL_15;
     }
 LABEL_17:
-    sub_1BC3264(list, v11);
+    sub_1BCB254(list, v11);
   }
 LABEL_15:
   if ( !v10 )
     goto LABEL_17;
   return (EventPanelSpotEntity_array *)System_Collections_Generic_List_object___ToArray(
                                          v10,
-                                         (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_EventPanelSpotEntity__ToArray__);
+                                         (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_EventPanelSpotEntity__ToArray__);
 }

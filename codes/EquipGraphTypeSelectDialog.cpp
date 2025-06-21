@@ -1,9 +1,9 @@
 void __fastcall EquipGraphTypeSelectDialog___ctor(EquipGraphTypeSelectDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AFD95F & 1) == 0 )
+  if ( (byte_4B17E3D & 1) == 0 )
   {
-    sub_1BC3008(&BaseDialog_TypeInfo, method);
-    byte_4AFD95F = 1;
+    sub_1BCAFF8(&BaseDialog_TypeInfo, method);
+    byte_4B17E3D = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -29,19 +29,19 @@ void __fastcall EquipGraphTypeSelectDialog__OnClickCancel(EquipGraphTypeSelectDi
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4AFD95D & 1) == 0 )
+  if ( (byte_4B17E3B & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&Method_EquipGraphTypeSelectDialog_OnClickCancel__, v3);
-    sub_1BC3008(&Method_EquipGraphTypeSelectDialog__OnClickCancel_b__25_0__, v4);
-    byte_4AFD95D = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&Method_EquipGraphTypeSelectDialog_OnClickCancel__, v3);
+    sub_1BCAFF8(&Method_EquipGraphTypeSelectDialog__OnClickCancel_b__25_0__, v4);
+    byte_4B17E3B = 1;
   }
   v5 = Method_EquipGraphTypeSelectDialog_OnClickCancel__;
   if ( (*((_BYTE *)Method_EquipGraphTypeSelectDialog_OnClickCancel__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1BC3020(Method_EquipGraphTypeSelectDialog_OnClickCancel__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v5, v5[4]);
+    v5 = (_QWORD *)sub_1BCB010(Method_EquipGraphTypeSelectDialog_OnClickCancel__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0, 0LL);
-  v7 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_EquipGraphTypeSelectDialog__OnClickCancel_b__25_0__, 0LL);
   BaseDialog__SafeClose((BaseDialog_o *)this, v7, 0LL);
 }
@@ -60,23 +60,23 @@ void __fastcall EquipGraphTypeSelectDialog__OnClickDecide(EquipGraphTypeSelectDi
   System_Action_int__long__o *v11; // x21
   System_Action_o *v12; // x20
 
-  if ( (byte_4AFD95C & 1) == 0 )
+  if ( (byte_4B17E3A & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_int__long__TypeInfo, method);
-    sub_1BC3008(&System_Action_TypeInfo, v3);
-    sub_1BC3008(&Method_BasicHelper_ForEach_long___, v4);
-    sub_1BC3008(&Method_EquipGraphTypeSelectDialog_OnClickDecide__, v5);
-    sub_1BC3008(&Method_EquipGraphTypeSelectDialog__OnClickDecide_b__24_0__, v6);
-    sub_1BC3008(&Method_EquipGraphTypeSelectDialog__OnClickDecide_b__24_1__, v7);
-    byte_4AFD95C = 1;
+    sub_1BCAFF8(&System_Action_int__long__TypeInfo, method);
+    sub_1BCAFF8(&System_Action_TypeInfo, v3);
+    sub_1BCAFF8(&Method_BasicHelper_ForEach_long___, v4);
+    sub_1BCAFF8(&Method_EquipGraphTypeSelectDialog_OnClickDecide__, v5);
+    sub_1BCAFF8(&Method_EquipGraphTypeSelectDialog__OnClickDecide_b__24_0__, v6);
+    sub_1BCAFF8(&Method_EquipGraphTypeSelectDialog__OnClickDecide_b__24_1__, v7);
+    byte_4B17E3A = 1;
   }
   v8 = Method_EquipGraphTypeSelectDialog_OnClickDecide__;
   if ( (*((_BYTE *)Method_EquipGraphTypeSelectDialog_OnClickDecide__ + 83) & 2) != 0 )
-    v8 = (_QWORD *)sub_1BC3020(Method_EquipGraphTypeSelectDialog_OnClickDecide__);
-  v9 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v8, v8[4]);
+    v8 = (_QWORD *)sub_1BCB010(Method_EquipGraphTypeSelectDialog_OnClickDecide__);
+  v9 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v8, v8[4]);
   OverwriteAssetSoundName__PlaySystemSe(v9, 8, 0, 0LL);
   equipIdList = (System_Collections_Generic_IEnumerable_T__o *)this->fields.equipIdList;
-  v11 = (System_Action_int__long__o *)sub_1BC3254(System_Action_int__long__TypeInfo);
+  v11 = (System_Action_int__long__o *)sub_1BCB244(System_Action_int__long__TypeInfo);
   System_Action_int__long____ctor(
     v11,
     (Il2CppObject *)this,
@@ -85,8 +85,8 @@ void __fastcall EquipGraphTypeSelectDialog__OnClickDecide(EquipGraphTypeSelectDi
   BasicHelper__ForEach_long_(
     equipIdList,
     (System_Action_int__T__o *)v11,
-    (const MethodInfo_2FEDBE4 *)Method_BasicHelper_ForEach_long___);
-  v12 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+    (const MethodInfo_3006824 *)Method_BasicHelper_ForEach_long___);
+  v12 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_EquipGraphTypeSelectDialog__OnClickDecide_b__24_1__, 0LL);
   BaseDialog__SafeClose((BaseDialog_o *)this, v12, 0LL);
 }
@@ -117,36 +117,36 @@ void __fastcall EquipGraphTypeSelectDialog__OnClickEquip(
   CommonUI_o *v21; // x24
   EquipGraphListMenu_CallbackFunc_o *v22; // x25
 
-  if ( (byte_4AFD95B & 1) == 0 )
+  if ( (byte_4B17E39 & 1) == 0 )
   {
-    sub_1BC3008(&EquipGraphListMenu_CallbackFunc_TypeInfo, *(_QWORD *)&type);
-    sub_1BC3008(&Method_EquipGraphTypeSelectDialog_OnClickEquip__, v5);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1BC3008(&Method_EquipGraphTypeSelectDialog___c__DisplayClass23_0__OnClickEquip_b__0__, v7);
-    sub_1BC3008(&EquipGraphTypeSelectDialog___c__DisplayClass23_0_TypeInfo, v8);
-    byte_4AFD95B = 1;
+    sub_1BCAFF8(&EquipGraphListMenu_CallbackFunc_TypeInfo, *(_QWORD *)&type);
+    sub_1BCAFF8(&Method_EquipGraphTypeSelectDialog_OnClickEquip__, v5);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1BCAFF8(&Method_EquipGraphTypeSelectDialog___c__DisplayClass23_0__OnClickEquip_b__0__, v7);
+    sub_1BCAFF8(&EquipGraphTypeSelectDialog___c__DisplayClass23_0_TypeInfo, v8);
+    byte_4B17E39 = 1;
   }
-  v9 = sub_1BC3254(EquipGraphTypeSelectDialog___c__DisplayClass23_0_TypeInfo);
+  v9 = sub_1BCB244(EquipGraphTypeSelectDialog___c__DisplayClass23_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
     goto LABEL_10;
   *(_QWORD *)(v9 + 24) = this;
   *(_DWORD *)(v9 + 16) = type;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v9 + 24), (int32_t)this, v12, v13);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v9 + 24), (int32_t)this, v12, v13);
   if ( this->fields.baseState == 2 )
   {
     v14 = Method_EquipGraphTypeSelectDialog_OnClickEquip__;
     if ( (*((_BYTE *)Method_EquipGraphTypeSelectDialog_OnClickEquip__ + 83) & 2) != 0 )
-      v14 = (_QWORD *)sub_1BC3020(Method_EquipGraphTypeSelectDialog_OnClickEquip__);
-    v15 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v14, v14[4]);
+      v14 = (_QWORD *)sub_1BCB010(Method_EquipGraphTypeSelectDialog_OnClickEquip__);
+    v15 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v14, v14[4]);
     OverwriteAssetSoundName__PlaySystemSe(v15, 0, 0, 0LL);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     partyList = this->fields.partyList;
     cloneSelectParty = this->fields.cloneSelectParty;
     memberIndex = this->fields.memberIndex;
     eventUpValInfo = this->fields.eventUpValInfo;
     v21 = (CommonUI_o *)Instance;
-    v22 = (EquipGraphListMenu_CallbackFunc_o *)sub_1BC3254(EquipGraphListMenu_CallbackFunc_TypeInfo);
+    v22 = (EquipGraphListMenu_CallbackFunc_o *)sub_1BCB244(EquipGraphListMenu_CallbackFunc_TypeInfo);
     EquipGraphListMenu_CallbackFunc___ctor(
       v22,
       (Il2CppObject *)v9,
@@ -166,7 +166,7 @@ void __fastcall EquipGraphTypeSelectDialog__OnClickEquip(
       return;
     }
 LABEL_10:
-    sub_1BC3264(v10, v11);
+    sub_1BCB254(v10, v11);
   }
 }
 
@@ -195,13 +195,13 @@ void __fastcall EquipGraphTypeSelectDialog__OnEnable(EquipGraphTypeSelectDialog_
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4AFD95E & 1) == 0 )
+  if ( (byte_4B17E3C & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_15503/*"Window/Objects/Buttons/CancelButton"*/, method);
-    byte_4AFD95E = 1;
+    sub_1BCAFF8(&StringLiteral_15515/*"Window/Objects/Buttons/CancelButton"*/, method);
+    byte_4B17E3C = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  AndroidBackKeyManager__AddBackBtn_43913684(transform, (System_String_o *)StringLiteral_15503/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
+  AndroidBackKeyManager__AddBackBtn_44083552(transform, (System_String_o *)StringLiteral_15515/*"Window/Objects/Buttons/CancelButton"*/, 0LL);
 }
 
 
@@ -256,22 +256,22 @@ void __fastcall EquipGraphTypeSelectDialog__Open(
   const MethodInfo *v51; // x1
   const MethodInfo *v52; // x1
 
-  if ( (byte_4AFD958 & 1) == 0 )
+  if ( (byte_4B17E36 & 1) == 0 )
   {
-    sub_1BC3008(&BalanceConfig_TypeInfo, baseDeckItemList);
-    sub_1BC3008(&bool___TypeInfo, v13);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_long___, v14);
-    sub_1BC3008(&Method_System_Collections_Generic_List_int__ToArray__, v15);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v16);
-    sub_1BC3008(&StringLiteral_5439/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_MESSAGE_1"*/, v17);
-    sub_1BC3008(&StringLiteral_5440/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_MESSAGE_2"*/, v18);
-    sub_1BC3008(&StringLiteral_3649/*"COMMON_CONFIRM_DECIDE"*/, v19);
-    sub_1BC3008(&StringLiteral_3647/*"COMMON_CONFIRM_CANCEL"*/, v20);
-    sub_1BC3008(&StringLiteral_5443/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_TITLE"*/, v21);
-    byte_4AFD958 = 1;
+    sub_1BCAFF8(&BalanceConfig_TypeInfo, baseDeckItemList);
+    sub_1BCAFF8(&bool___TypeInfo, v13);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_long___, v14);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__ToArray__, v15);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v16);
+    sub_1BCAFF8(&StringLiteral_5442/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_MESSAGE_1"*/, v17);
+    sub_1BCAFF8(&StringLiteral_5443/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_MESSAGE_2"*/, v18);
+    sub_1BCAFF8(&StringLiteral_3651/*"COMMON_CONFIRM_DECIDE"*/, v19);
+    sub_1BCAFF8(&StringLiteral_3649/*"COMMON_CONFIRM_CANCEL"*/, v20);
+    sub_1BCAFF8(&StringLiteral_5446/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_TITLE"*/, v21);
+    byte_4B17E36 = 1;
   }
   this->fields.partyList = baseDeckItemList;
-  sub_1BC2FAC(
+  sub_1BCAF9C(
     (CGThumbnailListItem_o *)&this->fields.partyList,
     (int32_t)baseDeckItemList,
     (int32_t)partyItem,
@@ -280,12 +280,12 @@ void __fastcall EquipGraphTypeSelectDialog__Open(
     goto LABEL_20;
   v24 = PartyListViewItem__Clone(partyItem, 0LL);
   this->fields.cloneSelectParty = v24;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.cloneSelectParty, (int32_t)v24, v25, v26);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.cloneSelectParty, (int32_t)v24, v25, v26);
   this->fields.memberIndex = member;
   this->fields.eventUpValInfo = setupInfo;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.eventUpValInfo, (int32_t)setupInfo, v27, v28);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventUpValInfo, (int32_t)setupInfo, v27, v28);
   this->fields.closeCallFunc = callback;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.closeCallFunc, (int32_t)callback, v29, v30);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.closeCallFunc, (int32_t)callback, v29, v30);
   EquipSvtIdList = PartyListViewItem__GetMember(partyItem, member, 0LL);
   if ( !EquipSvtIdList )
     goto LABEL_20;
@@ -296,9 +296,9 @@ void __fastcall EquipGraphTypeSelectDialog__Open(
     goto LABEL_20;
   v31 = System_Collections_Generic_List_int___ToArray(
           (System_Collections_Generic_List_int__o *)EquipSvtIdList,
-          (const MethodInfo_36858D4 *)Method_System_Collections_Generic_List_int__ToArray__);
+          (const MethodInfo_369E664 *)Method_System_Collections_Generic_List_int__ToArray__);
   this->fields.equipSvtIdList = v31;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.equipSvtIdList, (int32_t)v31, v32, v33);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.equipSvtIdList, (int32_t)v31, v32, v33);
   EquipSvtIdList = (PartyOrganizationListViewItem_o *)this->fields.cloneSelectParty;
   if ( !EquipSvtIdList )
     goto LABEL_20;
@@ -310,9 +310,9 @@ void __fastcall EquipGraphTypeSelectDialog__Open(
                                                                      0LL);
   v35 = System_Linq_Enumerable__ToArray_long_(
           EquipList,
-          (const MethodInfo_303E4C4 *)Method_System_Linq_Enumerable_ToArray_long___);
+          (const MethodInfo_305723C *)Method_System_Linq_Enumerable_ToArray_long___);
   this->fields.equipIdList = v35;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.equipIdList, (int32_t)v35, v36, v37);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.equipIdList, (int32_t)v35, v36, v37);
   EquipSvtIdList = PartyListViewItem__GetMember(partyItem, member, 0LL);
   if ( !EquipSvtIdList )
     goto LABEL_20;
@@ -321,18 +321,18 @@ void __fastcall EquipGraphTypeSelectDialog__Open(
                                                                0LL);
   v39 = System_Linq_Enumerable__ToArray_long_(
           v38,
-          (const MethodInfo_303E4C4 *)Method_System_Linq_Enumerable_ToArray_long___);
+          (const MethodInfo_305723C *)Method_System_Linq_Enumerable_ToArray_long___);
   this->fields.originalMemberEquipList = v39;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.originalMemberEquipList, (int32_t)v39, v40, v41);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.originalMemberEquipList, (int32_t)v39, v40, v41);
   v42 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v42 = BalanceConfig_TypeInfo;
   }
-  v43 = (struct System_Boolean_array *)sub_1BC30B0(bool___TypeInfo, (unsigned int)v42->static_fields->GrandSvtEquipMax);
+  v43 = (struct System_Boolean_array *)sub_1BCB0A0(bool___TypeInfo, (unsigned int)v42->static_fields->GrandSvtEquipMax);
   this->fields.updateFlagList = v43;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.updateFlagList, (int32_t)v43, v44, v45);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.updateFlagList, (int32_t)v43, v44, v45);
   EquipSvtIdList = PartyListViewItem__GetMember(partyItem, member, 0LL);
   if ( !EquipSvtIdList )
     goto LABEL_20;
@@ -341,38 +341,38 @@ void __fastcall EquipGraphTypeSelectDialog__Open(
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   EquipSvtIdList = (PartyOrganizationListViewItem_o *)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_5443/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_TITLE"*/,
+                                                        (System_String_o *)StringLiteral_5446/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_TITLE"*/,
                                                         0LL);
   if ( !titleLabel )
     goto LABEL_20;
   UILabel__set_text(titleLabel, (System_String_o *)EquipSvtIdList, 0LL);
   messageLabel1 = this->fields.messageLabel1;
   EquipSvtIdList = (PartyOrganizationListViewItem_o *)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_5439/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_MESSAGE_1"*/,
+                                                        (System_String_o *)StringLiteral_5442/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_MESSAGE_1"*/,
                                                         0LL);
   if ( !messageLabel1 )
     goto LABEL_20;
   UILabel__set_text(messageLabel1, (System_String_o *)EquipSvtIdList, 0LL);
   messageLabel2 = this->fields.messageLabel2;
   EquipSvtIdList = (PartyOrganizationListViewItem_o *)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_5440/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_MESSAGE_2"*/,
+                                                        (System_String_o *)StringLiteral_5443/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_MESSAGE_2"*/,
                                                         0LL);
   if ( !messageLabel2
     || (UILabel__set_text(messageLabel2, (System_String_o *)EquipSvtIdList, 0LL),
         decideLabel = this->fields.decideLabel,
         EquipSvtIdList = (PartyOrganizationListViewItem_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3649/*"COMMON_CONFIRM_DECIDE"*/,
+                                                              (System_String_o *)StringLiteral_3651/*"COMMON_CONFIRM_DECIDE"*/,
                                                               0LL),
         !decideLabel)
     || (UILabel__set_text(decideLabel, (System_String_o *)EquipSvtIdList, 0LL),
         cancelLabel = this->fields.cancelLabel,
         EquipSvtIdList = (PartyOrganizationListViewItem_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3647/*"COMMON_CONFIRM_CANCEL"*/,
+                                                              (System_String_o *)StringLiteral_3649/*"COMMON_CONFIRM_CANCEL"*/,
                                                               0LL),
         !cancelLabel) )
   {
 LABEL_20:
-    sub_1BC3264(EquipSvtIdList, v23);
+    sub_1BCB254(EquipSvtIdList, v23);
   }
   UILabel__set_text(cancelLabel, (System_String_o *)EquipSvtIdList, 0LL);
   EquipGraphTypeSelectDialog__SetEquipSvtLabel(this, v51);
@@ -433,27 +433,27 @@ void __fastcall EquipGraphTypeSelectDialog__SetEquipSprite(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v48; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v49; // 0:x0.16
 
-  if ( (byte_4AFD95A & 1) == 0 )
+  if ( (byte_4B17E38 & 1) == 0 )
   {
-    sub_1BC3008(&AtlasManager_TypeInfo, method);
-    sub_1BC3008(&Method_DataManager_GetMaster_ServantMaster___, v3);
-    sub_1BC3008(&Method_DataManager_GetMaster_UserServantMaster___, v4);
-    sub_1BC3008(&DataManager_TypeInfo, v5);
-    sub_1BC3008(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v6);
-    sub_1BC3008(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v7);
-    sub_1BC3008(&Method_System_Linq_Enumerable_Contains_long___, v8);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v9);
-    sub_1BC3008(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10);
-    sub_1BC3008(&StringLiteral_19531/*"func_group_icon_385"*/, v11);
-    sub_1BC3008(&StringLiteral_20143/*"img_bond_category"*/, v12);
-    byte_4AFD95A = 1;
+    sub_1BCAFF8(&AtlasManager_TypeInfo, method);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantMaster___, v3);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_UserServantMaster___, v4);
+    sub_1BCAFF8(&DataManager_TypeInfo, v5);
+    sub_1BCAFF8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v6);
+    sub_1BCAFF8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v7);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_Contains_long___, v8);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v9);
+    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v10);
+    sub_1BCAFF8(&StringLiteral_19543/*"func_group_icon_385"*/, v11);
+    sub_1BCAFF8(&StringLiteral_20158/*"img_bond_category"*/, v12);
+    byte_4B17E38 = 1;
   }
   v45 = 0LL;
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantMaster___);
-  gameObject = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantMaster___);
+  gameObject = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !this->fields.cloneSelectParty
     || (v16 = gameObject,
         gameObject = (DataMasterBase_TMaster__TEntity__PKType__o *)PartyListViewItem__CheckDuplicationGrandQuestEquipment(
@@ -463,7 +463,7 @@ void __fastcall EquipGraphTypeSelectDialog__SetEquipSprite(
     || (equipSvtIdList = this->fields.equipSvtIdList) == 0LL )
   {
 LABEL_83:
-    sub_1BC3264(gameObject, v15);
+    sub_1BCB254(gameObject, v15);
   }
   v20 = 0LL;
   self = (System_Collections_ICollection_o *)cloneSelectParty->fields.duplicatedEquipmentUserSvtIdList;
@@ -529,7 +529,7 @@ LABEL_83:
                                                                    (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                                                    &entity,
                                                                    v23,
-                                                                   (const MethodInfo_32AF0BC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                                                   (const MethodInfo_32C7E4C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)gameObject & 1) != 0 )
       {
         if ( !entity )
@@ -540,7 +540,7 @@ LABEL_83:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v47.fields.currentCryptoKey = klass;
         *(_QWORD *)&v47.fields.fakeValue = monitor;
-        gameObject = (DataMasterBase_TMaster__TEntity__PKType__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(
+        gameObject = (DataMasterBase_TMaster__TEntity__PKType__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(
                                                                      v47,
                                                                      0LL);
         v27 = (int)gameObject;
@@ -589,11 +589,11 @@ LABEL_83:
             gameObject = (DataMasterBase_TMaster__TEntity__PKType__o *)v24->fields.friendShipSvtEquipSkillIconSprite;
             if ( !gameObject )
               goto LABEL_83;
-            UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_20143/*"img_bond_category"*/, 0LL);
+            UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_20158/*"img_bond_category"*/, 0LL);
           }
           else
           {
-            AtlasManager__SetEventUI(v35, (System_String_o *)StringLiteral_19531/*"func_group_icon_385"*/, 0LL);
+            AtlasManager__SetEventUI(v35, (System_String_o *)StringLiteral_19543/*"func_group_icon_385"*/, 0LL);
           }
         }
       }
@@ -626,7 +626,7 @@ LABEL_83:
                                                                    v16,
                                                                    &v45,
                                                                    equipIdList->m_Items[v20],
-                                                                   (const MethodInfo_32B1618 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+                                                                   (const MethodInfo_32CA3A8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
       if ( ((unsigned __int8)gameObject & 1) == 0 )
         goto LABEL_65;
       if ( !v45 )
@@ -637,7 +637,7 @@ LABEL_83:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v48.fields.currentCryptoKey = v38;
       *(_QWORD *)&v48.fields.fakeValue = v37;
-      gameObject = (DataMasterBase_TMaster__TEntity__PKType__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(
+      gameObject = (DataMasterBase_TMaster__TEntity__PKType__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(
                                                                    v48,
                                                                    0LL);
       if ( (int)gameObject >= 4 )
@@ -651,7 +651,7 @@ LABEL_83:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v49.fields.currentCryptoKey = v41;
         *(_QWORD *)&v49.fields.fakeValue = v40;
-        v39 = v43 >= CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(v49, 0LL);
+        v39 = v43 >= CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v49, 0LL);
       }
       else
       {
@@ -676,11 +676,11 @@ LABEL_65:
       goto LABEL_83;
     if ( v20 >= v42->max_length )
 LABEL_85:
-      sub_1BC326C(gameObject, v15, v17);
+      sub_1BCB25C(gameObject, v15, v17);
     if ( !System_Linq_Enumerable__Contains_long_(
             (System_Collections_Generic_IEnumerable_TSource__o *)self,
             v42->m_Items[v20],
-            (const MethodInfo_301B034 *)Method_System_Linq_Enumerable_Contains_long___) )
+            (const MethodInfo_3033C74 *)Method_System_Linq_Enumerable_Contains_long___) )
     {
 LABEL_80:
       gameObject = (DataMasterBase_TMaster__TEntity__PKType__o *)v24->fields.duplicationEquipMarkWarningIcon;
@@ -723,13 +723,13 @@ void __fastcall EquipGraphTypeSelectDialog__SetEquipSvtLabel(
   UILabel_o *v15; // x19
 
   v3 = this;
-  if ( (byte_4AFD959 & 1) == 0 )
+  if ( (byte_4B17E37 & 1) == 0 )
   {
-    sub_1BC3008(&LocalizationManager_TypeInfo, method);
-    sub_1BC3008(&StringLiteral_5438/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_BOND"*/, v4);
-    sub_1BC3008(&StringLiteral_5441/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_NORMAL"*/, v5);
-    this = (EquipGraphTypeSelectDialog_o *)sub_1BC3008(&StringLiteral_5442/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_REWARD_UP"*/, v6);
-    byte_4AFD959 = 1;
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, method);
+    sub_1BCAFF8(&StringLiteral_5441/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_BOND"*/, v4);
+    sub_1BCAFF8(&StringLiteral_5444/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_NORMAL"*/, v5);
+    this = (EquipGraphTypeSelectDialog_o *)sub_1BCAFF8(&StringLiteral_5445/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_REWARD_UP"*/, v6);
+    byte_4B17E37 = 1;
   }
   equipSvtInfoList = v3->fields.equipSvtInfoList;
   if ( !equipSvtInfoList )
@@ -742,7 +742,7 @@ void __fastcall EquipGraphTypeSelectDialog__SetEquipSvtLabel(
   equipLabel = v8->fields.equipLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this = (EquipGraphTypeSelectDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5441/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_NORMAL"*/, 0LL);
+  this = (EquipGraphTypeSelectDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5444/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_NORMAL"*/, 0LL);
   if ( !equipLabel )
     goto LABEL_18;
   UILabel__set_text(equipLabel, (System_String_o *)this, 0LL);
@@ -754,21 +754,21 @@ void __fastcall EquipGraphTypeSelectDialog__SetEquipSvtLabel(
   v11 = v10->m_Items[1];
   if ( !v11
     || (v12 = v11->fields.equipLabel,
-        this = (EquipGraphTypeSelectDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5438/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_BOND"*/, 0LL),
+        this = (EquipGraphTypeSelectDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5441/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_BOND"*/, 0LL),
         !v12)
     || (UILabel__set_text(v12, (System_String_o *)this, 0LL), (v13 = v3->fields.equipSvtInfoList) == 0LL) )
   {
 LABEL_18:
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   }
   if ( v13->max_length <= 2 )
 LABEL_19:
-    sub_1BC326C(this, method, v2);
+    sub_1BCB25C(this, method, v2);
   v14 = v13->m_Items[2];
   if ( !v14 )
     goto LABEL_18;
   v15 = v14->fields.equipLabel;
-  this = (EquipGraphTypeSelectDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5442/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_REWARD_UP"*/, 0LL);
+  this = (EquipGraphTypeSelectDialog_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5445/*"EQUIP_GRAPH_TYPE_SELECT_DIALOG_REWARD_UP"*/, 0LL);
   if ( !v15 )
     goto LABEL_18;
   UILabel__set_text(v15, (System_String_o *)this, 0LL);
@@ -786,7 +786,7 @@ void __fastcall EquipGraphTypeSelectDialog___OnClickCancel_b__25_0(
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   closeCallFunc = this->fields.closeCallFunc;
   if ( !closeCallFunc )
-    sub_1BC3264(v3, v4);
+    sub_1BCB254(v3, v4);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, struct System_Int64_array *, struct System_Boolean_array *, __int64, _QWORD))closeCallFunc->fields.m_target)(
     closeCallFunc->fields.original_method_info,
     0LL,
@@ -817,10 +817,10 @@ void __fastcall EquipGraphTypeSelectDialog___OnClickDecide_b__24_0(
   updateFlagList = this->fields.updateFlagList;
   if ( !updateFlagList )
 LABEL_8:
-    sub_1BC3264(this, i);
+    sub_1BCB254(this, i);
   if ( updateFlagList->max_length <= i )
 LABEL_9:
-    sub_1BC326C(this, *(_QWORD *)&i, equipId);
+    sub_1BCB25C(this, *(_QWORD *)&i, equipId);
   updateFlagList->m_Items[i + 4] = 1;
 }
 
@@ -843,13 +843,13 @@ void __fastcall EquipGraphTypeSelectDialog___OnClickDecide_b__24_1(
   _BOOL8 v14; // x0
   __int64 v15; // x1
 
-  if ( (byte_4AFD960 & 1) == 0 )
+  if ( (byte_4B17E3E & 1) == 0 )
   {
-    sub_1BC3008(&Method_BasicHelper_Any_bool___, method);
-    sub_1BC3008(&System_Func_bool__bool__TypeInfo, v3);
-    sub_1BC3008(&Method_EquipGraphTypeSelectDialog___c__OnClickDecide_b__24_2__, v4);
-    sub_1BC3008(&EquipGraphTypeSelectDialog___c_TypeInfo, v5);
-    byte_4AFD960 = 1;
+    sub_1BCAFF8(&Method_BasicHelper_Any_bool___, method);
+    sub_1BCAFF8(&System_Func_bool__bool__TypeInfo, v3);
+    sub_1BCAFF8(&Method_EquipGraphTypeSelectDialog___c__OnClickDecide_b__24_2__, v4);
+    sub_1BCAFF8(&EquipGraphTypeSelectDialog___c_TypeInfo, v5);
+    byte_4B17E3E = 1;
   }
   v6 = EquipGraphTypeSelectDialog___c_TypeInfo;
   closeCallFunc = this->fields.closeCallFunc;
@@ -868,18 +868,18 @@ void __fastcall EquipGraphTypeSelectDialog___OnClickDecide_b__24_1(
       v6 = EquipGraphTypeSelectDialog___c_TypeInfo;
     }
     v10 = (Il2CppObject *)v6->static_fields->__9;
-    _9__24_2 = (System_Func_bool__bool__o *)sub_1BC3254(System_Func_bool__bool__TypeInfo);
+    _9__24_2 = (System_Func_bool__bool__o *)sub_1BCB244(System_Func_bool__bool__TypeInfo);
     System_Func_bool__bool____ctor(_9__24_2, v10, Method_EquipGraphTypeSelectDialog___c__OnClickDecide_b__24_2__, 0LL);
     static_fields = EquipGraphTypeSelectDialog___c_TypeInfo->static_fields;
     static_fields->__9__24_2 = _9__24_2;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__24_2, (int32_t)_9__24_2, v12, v13);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__24_2, (int32_t)_9__24_2, v12, v13);
   }
   v14 = BasicHelper__Any_bool_(
           updateFlagList,
           (System_Func_T__bool__o *)_9__24_2,
-          (const MethodInfo_2FEAF14 *)Method_BasicHelper_Any_bool___);
+          (const MethodInfo_3003B54 *)Method_BasicHelper_Any_bool___);
   if ( !closeCallFunc )
-    sub_1BC3264(v14, v15);
+    sub_1BCB254(v14, v15);
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _BOOL8, struct System_Int64_array *, struct System_Boolean_array *, _QWORD, _QWORD))closeCallFunc->fields.m_target)(
     closeCallFunc->fields.original_method_info,
     v14,
@@ -905,15 +905,15 @@ void __fastcall EquipGraphTypeSelectDialog___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4AFD961 & 1) == 0 )
+  if ( (byte_4B17E3F & 1) == 0 )
   {
-    sub_1BC3008(&EquipGraphTypeSelectDialog___c_TypeInfo, v1);
-    byte_4AFD961 = 1;
+    sub_1BCAFF8(&EquipGraphTypeSelectDialog___c_TypeInfo, v1);
+    byte_4B17E3F = 1;
   }
-  v2 = (Il2CppObject *)sub_1BC3254(EquipGraphTypeSelectDialog___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BCB244(EquipGraphTypeSelectDialog___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EquipGraphTypeSelectDialog___c_TypeInfo->static_fields->__9 = (struct EquipGraphTypeSelectDialog___c_o *)v2;
-  sub_1BC2FAC((CGThumbnailListItem_o *)EquipGraphTypeSelectDialog___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BCAF9C((CGThumbnailListItem_o *)EquipGraphTypeSelectDialog___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -983,14 +983,14 @@ void __fastcall EquipGraphTypeSelectDialog___c__DisplayClass23_0___OnClickEquip_
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v39; // [xsp+80h] [xbp-60h] BYREF
 
   v6 = this;
-  if ( (byte_4AFD962 & 1) == 0 )
+  if ( (byte_4B17E40 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_int__ToArray__, *(_QWORD *)&result);
-    sub_1BC3008(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
-    this = (EquipGraphTypeSelectDialog___c__DisplayClass23_0_o *)sub_1BC3008(
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__ToArray__, *(_QWORD *)&result);
+    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v7);
+    this = (EquipGraphTypeSelectDialog___c__DisplayClass23_0_o *)sub_1BCAFF8(
                                                                    &Method_SingletonMonoBehaviour_CommonUI__get_Instance__,
                                                                    v8);
-    byte_4AFD962 = 1;
+    byte_4B17E40 = 1;
   }
   if ( result != 1 )
     goto LABEL_37;
@@ -1057,13 +1057,13 @@ LABEL_12:
     goto LABEL_39;
   if ( type >= equipIdList->max_length )
 LABEL_40:
-    sub_1BC326C(this, *(_QWORD *)&result, v13);
+    sub_1BCB25C(this, *(_QWORD *)&result, v13);
   v23 = (EquipGraphTypeSelectDialog___c__DisplayClass23_0_o *)equipIdList->m_Items[type];
   v37 = v39;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v36 = v37;
-  this = (EquipGraphTypeSelectDialog___c__DisplayClass23_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48027584(
+  this = (EquipGraphTypeSelectDialog___c__DisplayClass23_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(
                                                                  &v36,
                                                                  0LL);
   if ( v20 || v23 != this )
@@ -1077,7 +1077,7 @@ LABEL_40:
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
       v35 = v37;
-      this = (EquipGraphTypeSelectDialog___c__DisplayClass23_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48027584(
+      this = (EquipGraphTypeSelectDialog___c__DisplayClass23_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(
                                                                      &v35,
                                                                      0LL);
       if ( cloneSelectParty )
@@ -1102,9 +1102,9 @@ LABEL_40:
               {
                 v28 = System_Collections_Generic_List_int___ToArray(
                         (System_Collections_Generic_List_int__o *)this,
-                        (const MethodInfo_36858D4 *)Method_System_Collections_Generic_List_int__ToArray__);
+                        (const MethodInfo_369E664 *)Method_System_Collections_Generic_List_int__ToArray__);
                 v27->fields.equipSvtIdList = v28;
-                sub_1BC2FAC((CGThumbnailListItem_o *)&v27->fields.equipSvtIdList, (int32_t)v28, v29, v30);
+                sub_1BCAF9C((CGThumbnailListItem_o *)&v27->fields.equipSvtIdList, (int32_t)v28, v29, v30);
                 v31 = v6->fields.__4__this;
                 if ( v31 )
                 {
@@ -1121,7 +1121,7 @@ LABEL_40:
                                     (PartyOrganizationListViewItem_o *)this,
                                     0LL);
                       v31->fields.equipIdList = EquipList;
-                      sub_1BC2FAC((CGThumbnailListItem_o *)&v31->fields.equipIdList, (int32_t)EquipList, v33, v34);
+                      sub_1BCAF9C((CGThumbnailListItem_o *)&v31->fields.equipIdList, (int32_t)EquipList, v33, v34);
                       this = (EquipGraphTypeSelectDialog___c__DisplayClass23_0_o *)v6->fields.__4__this;
                       if ( this )
                       {
@@ -1140,10 +1140,10 @@ LABEL_40:
       }
     }
 LABEL_39:
-    sub_1BC3264(this, *(_QWORD *)&result);
+    sub_1BCB254(this, *(_QWORD *)&result);
   }
 LABEL_37:
-  this = (EquipGraphTypeSelectDialog___c__DisplayClass23_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (EquipGraphTypeSelectDialog___c__DisplayClass23_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
     goto LABEL_39;
   CommonUI__CloseEquipGraphListMenu((CommonUI_o *)this, 0LL, 0LL);

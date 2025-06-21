@@ -1,14 +1,14 @@
 void __fastcall GalleryMaster___ctor(GalleryMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B0230C & 1) == 0 )
+  if ( (byte_4B1C815 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_GalleryMaster__GalleryEntity__int___ctor__, method);
-    byte_4B0230C = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_GalleryMaster__GalleryEntity__int___ctor__, method);
+    byte_4B1C815 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     542,
-    (const MethodInfo_32ACD4C *)Method_DataMasterBase_GalleryMaster__GalleryEntity__int___ctor__);
+    (const MethodInfo_32C5ADC *)Method_DataMasterBase_GalleryMaster__GalleryEntity__int___ctor__);
 }
 
 
@@ -29,22 +29,22 @@ System_Collections_Generic_List_GalleryEntity__o *__fastcall GalleryMaster__GetE
   System_Func_object__bool__o *v13; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
 
-  if ( (byte_4B0230A & 1) == 0 )
+  if ( (byte_4B1C813 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToList_GalleryEntity___, *(_QWORD *)&warId);
-    sub_1BC3008(&Method_System_Linq_Enumerable_Where_GalleryEntity___, v5);
-    sub_1BC3008(&System_Func_GalleryEntity__bool__TypeInfo, v6);
-    sub_1BC3008(&Method_GalleryMaster___c__DisplayClass0_0__GetEnableGalleryEntitiesByWarId_b__0__, v7);
-    sub_1BC3008(&GalleryMaster___c__DisplayClass0_0_TypeInfo, v8);
-    byte_4B0230A = 1;
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToList_GalleryEntity___, *(_QWORD *)&warId);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_Where_GalleryEntity___, v5);
+    sub_1BCAFF8(&System_Func_GalleryEntity__bool__TypeInfo, v6);
+    sub_1BCAFF8(&Method_GalleryMaster___c__DisplayClass0_0__GetEnableGalleryEntitiesByWarId_b__0__, v7);
+    sub_1BCAFF8(&GalleryMaster___c__DisplayClass0_0_TypeInfo, v8);
+    byte_4B1C813 = 1;
   }
-  v9 = sub_1BC3254(GalleryMaster___c__DisplayClass0_0_TypeInfo);
+  v9 = sub_1BCB244(GalleryMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
-    sub_1BC3264(v10, v11);
+    sub_1BCB254(v10, v11);
   *(_DWORD *)(v9 + 16) = warId;
   list = this->fields.list;
-  v13 = (System_Func_object__bool__o *)sub_1BC3254(System_Func_GalleryEntity__bool__TypeInfo);
+  v13 = (System_Func_object__bool__o *)sub_1BCB244(System_Func_GalleryEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v13,
     (Il2CppObject *)v9,
@@ -53,10 +53,10 @@ System_Collections_Generic_List_GalleryEntity__o *__fastcall GalleryMaster__GetE
   v14 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
           (System_Func_TSource__bool__o *)v13,
-          (const MethodInfo_3044F10 *)Method_System_Linq_Enumerable_Where_GalleryEntity___);
+          (const MethodInfo_305DC88 *)Method_System_Linq_Enumerable_Where_GalleryEntity___);
   return (System_Collections_Generic_List_GalleryEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                v14,
-                                                               (const MethodInfo_3042DE0 *)Method_System_Linq_Enumerable_ToList_GalleryEntity___);
+                                                               (const MethodInfo_305BB58 *)Method_System_Linq_Enumerable_ToList_GalleryEntity___);
 }
 
 
@@ -72,30 +72,30 @@ bool __fastcall GalleryMaster__HasEnableGalleryWar(GalleryMaster_o *this, int32_
   struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x19
   System_Func_object__bool__o *v12; // x20
 
-  if ( (byte_4B0230B & 1) == 0 )
+  if ( (byte_4B1C814 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Linq_Enumerable_Any_GalleryEntity____76848944, *(_QWORD *)&warId);
-    sub_1BC3008(&System_Func_GalleryEntity__bool__TypeInfo, v5);
-    sub_1BC3008(&Method_GalleryMaster___c__DisplayClass1_0__HasEnableGalleryWar_b__0__, v6);
-    sub_1BC3008(&GalleryMaster___c__DisplayClass1_0_TypeInfo, v7);
-    byte_4B0230B = 1;
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_Any_GalleryEntity____76954640, *(_QWORD *)&warId);
+    sub_1BCAFF8(&System_Func_GalleryEntity__bool__TypeInfo, v5);
+    sub_1BCAFF8(&Method_GalleryMaster___c__DisplayClass1_0__HasEnableGalleryWar_b__0__, v6);
+    sub_1BCAFF8(&GalleryMaster___c__DisplayClass1_0_TypeInfo, v7);
+    byte_4B1C814 = 1;
   }
-  v8 = sub_1BC3254(GalleryMaster___c__DisplayClass1_0_TypeInfo);
+  v8 = sub_1BCB244(GalleryMaster___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
-    sub_1BC3264(v9, v10);
+    sub_1BCB254(v9, v10);
   *(_DWORD *)(v8 + 16) = warId;
   list = this->fields.list;
-  v12 = (System_Func_object__bool__o *)sub_1BC3254(System_Func_GalleryEntity__bool__TypeInfo);
+  v12 = (System_Func_object__bool__o *)sub_1BCB244(System_Func_GalleryEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v12,
     (Il2CppObject *)v8,
     Method_GalleryMaster___c__DisplayClass1_0__HasEnableGalleryWar_b__0__,
     0LL);
-  return System_Linq_Enumerable__Any_object__50395312(
+  return System_Linq_Enumerable__Any_object__50496752(
            (System_Collections_Generic_IEnumerable_TSource__o *)list,
            (System_Func_TSource__bool__o *)v12,
-           (const MethodInfo_300F8B0 *)Method_System_Linq_Enumerable_Any_GalleryEntity____76848944);
+           (const MethodInfo_30284F0 *)Method_System_Linq_Enumerable_Any_GalleryEntity____76954640);
 }
 
 
@@ -113,7 +113,7 @@ bool __fastcall GalleryMaster___c__DisplayClass0_0___GetEnableGalleryEntitiesByW
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return entity->fields.warId == this->fields.warId
       && GalleryEntity__IsEnableGallery(entity, (const MethodInfo *)entity);
 }
@@ -133,7 +133,7 @@ bool __fastcall GalleryMaster___c__DisplayClass1_0___HasEnableGalleryWar_b__0(
         const MethodInfo *method)
 {
   if ( !entity )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return entity->fields.warId == this->fields.warId
       && GalleryEntity__IsEnableGallery(entity, (const MethodInfo *)entity);
 }

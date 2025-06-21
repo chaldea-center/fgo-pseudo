@@ -9,14 +9,14 @@ void __fastcall QuestBoardInformationText___cctor(const MethodInfo *method)
   struct QuestBoardInformationText_StaticFields *v7; // x9
   struct QuestBoardInformationText_StaticFields *v8; // x9
 
-  if ( (byte_4AFECF2 & 1) == 0 )
+  if ( (byte_4B191DB & 1) == 0 )
   {
-    sub_1BC3008(&QuestBoardInformationText_TypeInfo, v1);
-    sub_1BC3008(&StringLiteral_17535/*"caldeagate_notice_{0:00}"*/, v4);
-    byte_4AFECF2 = 1;
+    sub_1BCAFF8(&QuestBoardInformationText_TypeInfo, v1);
+    sub_1BCAFF8(&StringLiteral_17546/*"caldeagate_notice_{0:00}"*/, v4);
+    byte_4B191DB = 1;
   }
-  QuestBoardInformationText_TypeInfo->static_fields->QUEST_BOARD_INFO_FRAME_NAME = (struct System_String_o *)StringLiteral_17535/*"caldeagate_notice_{0:00}"*/;
-  sub_1BC2FAC((CGThumbnailListItem_o *)QuestBoardInformationText_TypeInfo->static_fields, StringLiteral_17535/*"caldeagate_notice_{0:00}"*/, v2, v3);
+  QuestBoardInformationText_TypeInfo->static_fields->QUEST_BOARD_INFO_FRAME_NAME = (struct System_String_o *)StringLiteral_17546/*"caldeagate_notice_{0:00}"*/;
+  sub_1BCAF9C((CGThumbnailListItem_o *)QuestBoardInformationText_TypeInfo->static_fields, StringLiteral_17546/*"caldeagate_notice_{0:00}"*/, v2, v3);
   v5 = QuestBoardInformationText_TypeInfo;
   static_fields = QuestBoardInformationText_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->INFO_FRAME_RIGHT_OFFSET.fields.x = 0xC180000043C58000LL;
@@ -26,12 +26,12 @@ void __fastcall QuestBoardInformationText___cctor(const MethodInfo *method)
   v7->INFO_FRAME_LEFT_OFFSET.fields.z = 0.0;
   v8 = v5->static_fields;
   *(_QWORD *)&v8->INFO_FRAME_SIDE_SIZE = 0x1200000050LL;
-  v8->CAMPAIGN_TOP_COLOR = (struct UnityEngine_Color_o)xmmword_BDDFE0;
+  v8->CAMPAIGN_TOP_COLOR = (struct UnityEngine_Color_o)xmmword_BE1AF0;
   v8->INFO_LABEL_BASE_WIDTH = 355;
-  v5->static_fields->CAMPAIGN_BOTTOM_COLOR = (struct UnityEngine_Color_o)xmmword_BDE2E0;
+  v5->static_fields->CAMPAIGN_BOTTOM_COLOR = (struct UnityEngine_Color_o)xmmword_BE1DF0;
   __asm { FMOV            V0.4S, #1.0 }
   v5->static_fields->NORMAL_TOP_COLOR = _Q0;
-  v5->static_fields->NORMAL_BOTTOM_COLOR = (struct UnityEngine_Color_o)xmmword_BDE5F0;
+  v5->static_fields->NORMAL_BOTTOM_COLOR = (struct UnityEngine_Color_o)xmmword_BE2100;
   v5->static_fields->CHANGE_START_REMAINING_TIME = 86399LL;
 }
 
@@ -55,9 +55,9 @@ void __fastcall QuestBoardInformationText___ctor(
   v12 = isCampaign;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.dispText = dispText;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)dispText, v13, v14);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)dispText, v13, v14);
   this->fields.dispTextExtend = dispTextExtend;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.dispTextExtend, (int32_t)dispTextExtend, v15, v16);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.dispTextExtend, (int32_t)dispTextExtend, v15, v16);
   this->fields.time = time;
   this->fields.isCampaign = v12;
   this->fields.isColorSetting = 0;
@@ -73,7 +73,7 @@ void __fastcall QuestBoardInformationText___ctor(
 }
 
 
-void __fastcall QuestBoardInformationText___ctor_35482144(
+void __fastcall QuestBoardInformationText___ctor_35627624(
         QuestBoardInformationText_o *this,
         System_String_o *inDispText,
         int64_t inTime,
@@ -94,17 +94,17 @@ void __fastcall QuestBoardInformationText___ctor_35482144(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.dispText = inDispText;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)inDispText, v13, v14);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)inDispText, v13, v14);
   this->fields.time = inTime;
   TimeDataList = QuestBoardInformationText__CreateTimeDataList(v15, inTime, defaultColor, changedColor, v16);
   this->fields.timeDataList = TimeDataList;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.timeDataList, (int32_t)TimeDataList, v18, v19);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.timeDataList, (int32_t)TimeDataList, v18, v19);
   QuestBoardInformationText__CreateDispTextExtendIfNotExists(this, 0, v20);
   QuestBoardInformationText__SetParamFromScript(this, checkTime, v21);
 }
 
 
-void __fastcall QuestBoardInformationText___ctor_35483060(
+void __fastcall QuestBoardInformationText___ctor_35628540(
         QuestBoardInformationText_o *this,
         BoardMessageEntity_o *boardMessageEntity,
         System_String_o *dispText,
@@ -121,27 +121,27 @@ void __fastcall QuestBoardInformationText___ctor_35483060(
   const MethodInfo *v18; // x3
   const MethodInfo *v19; // x2
   const MethodInfo *v20; // x2
-  bool IsLeft; // w0
+  int32_t pivotType; // w1
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.boardMessageEnt = boardMessageEntity;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)boardMessageEntity, v13, v14);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)boardMessageEntity, v13, v14);
   this->fields.dispText = dispText;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)dispText, v15, v16);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)dispText, v15, v16);
   this->fields.time = time;
   this->fields.isCampaign = 0;
   this->fields.eventCampaignEnt = eventCampaignEnt;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.eventCampaignEnt, (int32_t)eventCampaignEnt, v17, v18);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventCampaignEnt, (int32_t)eventCampaignEnt, v17, v18);
   QuestBoardInformationText__SetParamFromScript(this, checkTime, v19);
   if ( boardMessageEntity )
-    IsLeft = BoardMessageEntity__IsLeft(boardMessageEntity, 0LL);
+    pivotType = boardMessageEntity->fields.pivotType;
   else
-    IsLeft = 0;
-  QuestBoardInformationText__CreateDispTextExtendIfNotExists(this, IsLeft, v20);
+    pivotType = 0;
+  QuestBoardInformationText__CreateDispTextExtendIfNotExists(this, pivotType, v20);
 }
 
 
-void __fastcall QuestBoardInformationText___ctor_35483228(
+void __fastcall QuestBoardInformationText___ctor_35628696(
         QuestBoardInformationText_o *this,
         EventEntity_o *eventEntity,
         System_String_o *dispText,
@@ -161,13 +161,13 @@ void __fastcall QuestBoardInformationText___ctor_35483228(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.eventEntity = eventEntity;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.eventEntity, (int32_t)eventEntity, v13, v14);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventEntity, (int32_t)eventEntity, v13, v14);
   this->fields.dispText = dispText;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)dispText, v15, v16);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.dispText, (int32_t)dispText, v15, v16);
   this->fields.time = time;
   this->fields.isCampaign = 0;
   this->fields.eventCampaignEnt = eventCampaignEnt;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.eventCampaignEnt, (int32_t)eventCampaignEnt, v17, v18);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventCampaignEnt, (int32_t)eventCampaignEnt, v17, v18);
   QuestBoardInformationText__SetParamFromScript(this, checkTime, v19);
   QuestBoardInformationText__CreateDispTextExtendIfNotExists(this, 0, v20);
 }
@@ -229,20 +229,20 @@ void __fastcall QuestBoardInformationText__ChangeBehindText(
   int v51; // [xsp+1Ch] [xbp-34h] BYREF
 
   v3 = this;
-  if ( (byte_4AFECEA & 1) == 0 )
+  if ( (byte_4B191D3 & 1) == 0 )
   {
-    sub_1BC3008(&int_TypeInfo, method);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v4);
-    sub_1BC3008(&object___TypeInfo, v5);
-    sub_1BC3008(&float_TypeInfo, v6);
-    this = (QuestBoardInformationText_o *)sub_1BC3008(&StringLiteral_1/*""*/, v7);
-    byte_4AFECEA = 1;
+    sub_1BCAFF8(&int_TypeInfo, method);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v4);
+    sub_1BCAFF8(&object___TypeInfo, v5);
+    sub_1BCAFF8(&float_TypeInfo, v6);
+    this = (QuestBoardInformationText_o *)sub_1BCAFF8(&StringLiteral_1/*""*/, v7);
+    byte_4B191D3 = 1;
   }
   eventCampaignEnt = (int32_t *)v3->fields.eventCampaignEnt;
   if ( !eventCampaignEnt )
   {
     dispTextExtend = v3->fields.dispTextExtend;
-    v42 = sub_1BC30B0(object___TypeInfo, 1LL);
+    v42 = sub_1BCB0A0(object___TypeInfo, 1LL);
     time = v3->fields.time;
     v44 = v42;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -251,12 +251,12 @@ void __fastcall QuestBoardInformationText__ChangeBehindText(
     if ( !v44 )
       goto LABEL_39;
     v46 = RestTime2;
-    if ( !RestTime2 || (RestTime2 = sub_1BC3144(RestTime2, *(_QWORD *)(*(_QWORD *)v44 + 64LL))) != 0 )
+    if ( !RestTime2 || (RestTime2 = sub_1BCB134(RestTime2, *(_QWORD *)(*(_QWORD *)v44 + 64LL))) != 0 )
     {
       if ( *(_DWORD *)(v44 + 24) )
       {
         *(_QWORD *)(v44 + 32) = v46;
-        sub_1BC2FAC((CGThumbnailListItem_o *)(v44 + 32), v46, v18, v45);
+        sub_1BCAF9C((CGThumbnailListItem_o *)(v44 + 32), v46, v18, v45);
         if ( dispTextExtend )
         {
           TerminalBoardOptionTextData__SetParamsToBehindText(dispTextExtend, (System_Object_array *)v44, 0LL);
@@ -273,18 +273,18 @@ void __fastcall QuestBoardInformationText__ChangeBehindText(
   if ( boardMessageEnt && boardMessageEnt->fields.referenceType == 5 )
   {
     v11 = v3->fields.dispTextExtend;
-    v12 = sub_1BC30B0(object___TypeInfo, 1LL);
+    v12 = sub_1BCB0A0(object___TypeInfo, 1LL);
     v51 = v10;
     RestTime2 = j_il2cpp_value_box_0(float_TypeInfo, &v51, v13, v14, v15);
     if ( !v12 )
       goto LABEL_39;
     v20 = RestTime2;
-    if ( !RestTime2 || (RestTime2 = sub_1BC3144(RestTime2, *(_QWORD *)(*(_QWORD *)v12 + 64LL))) != 0 )
+    if ( !RestTime2 || (RestTime2 = sub_1BCB134(RestTime2, *(_QWORD *)(*(_QWORD *)v12 + 64LL))) != 0 )
     {
       if ( *(_DWORD *)(v12 + 24) )
       {
         *(_QWORD *)(v12 + 32) = v20;
-        sub_1BC2FAC((CGThumbnailListItem_o *)(v12 + 32), v20, v18, v19);
+        sub_1BCAF9C((CGThumbnailListItem_o *)(v12 + 32), v20, v18, v19);
         if ( v11 )
         {
           v21 = v11;
@@ -309,41 +309,41 @@ LABEL_27:
       {
         v47 = (int)StringLiteral_1/*""*/;
         v25->fields._BehindText_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-        sub_1BC2FAC((CGThumbnailListItem_o *)&v25->fields._BehindText_k__BackingField, v47, v23, v24);
+        sub_1BCAF9C((CGThumbnailListItem_o *)&v25->fields._BehindText_k__BackingField, v47, v23, v24);
         return;
       }
       goto LABEL_39;
     }
     v26 = RestTime2;
-    v27 = sub_1BC30B0(object___TypeInfo, 3LL);
+    v27 = sub_1BCB0A0(object___TypeInfo, 3LL);
     v50 = v10;
     RestTime2 = j_il2cpp_value_box_0(float_TypeInfo, &v50, v28, v29, v30);
     if ( !v27 )
       goto LABEL_39;
     v32 = RestTime2;
-    if ( !RestTime2 || (RestTime2 = sub_1BC3144(RestTime2, *(_QWORD *)(*(_QWORD *)v27 + 64LL))) != 0 )
+    if ( !RestTime2 || (RestTime2 = sub_1BCB134(RestTime2, *(_QWORD *)(*(_QWORD *)v27 + 64LL))) != 0 )
     {
       if ( !*(_DWORD *)(v27 + 24) )
         goto LABEL_40;
       *(_QWORD *)(v27 + 32) = v32;
-      sub_1BC2FAC((CGThumbnailListItem_o *)(v27 + 32), v32, v18, v31);
+      sub_1BCAF9C((CGThumbnailListItem_o *)(v27 + 32), v32, v18, v31);
       v49 = v26;
       RestTime2 = j_il2cpp_value_box_0(int_TypeInfo, &v49, v33, v34, v35);
       v37 = RestTime2;
-      if ( !RestTime2 || (RestTime2 = sub_1BC3144(RestTime2, *(_QWORD *)(*(_QWORD *)v27 + 64LL))) != 0 )
+      if ( !RestTime2 || (RestTime2 = sub_1BCB134(RestTime2, *(_QWORD *)(*(_QWORD *)v27 + 64LL))) != 0 )
       {
         if ( *(_DWORD *)(v27 + 24) <= 1u )
           goto LABEL_40;
         *(_QWORD *)(v27 + 40) = v37;
-        sub_1BC2FAC((CGThumbnailListItem_o *)(v27 + 40), v37, v18, v36);
+        sub_1BCAF9C((CGThumbnailListItem_o *)(v27 + 40), v37, v18, v36);
         RestTime2 = (__int64)QuestBoardInformationText__GetDailyDropUpRestTimeStr(v3, v38);
         v40 = RestTime2;
-        if ( !RestTime2 || (RestTime2 = sub_1BC3144(RestTime2, *(_QWORD *)(*(_QWORD *)v27 + 64LL))) != 0 )
+        if ( !RestTime2 || (RestTime2 = sub_1BCB134(RestTime2, *(_QWORD *)(*(_QWORD *)v27 + 64LL))) != 0 )
         {
           if ( *(_DWORD *)(v27 + 24) > 2u )
           {
             *(_QWORD *)(v27 + 48) = v40;
-            sub_1BC2FAC((CGThumbnailListItem_o *)(v27 + 48), v40, v18, v39);
+            sub_1BCAF9C((CGThumbnailListItem_o *)(v27 + 48), v40, v18, v39);
             if ( v25 )
             {
               v21 = v25;
@@ -351,16 +351,16 @@ LABEL_27:
               goto LABEL_27;
             }
 LABEL_39:
-            sub_1BC3264(RestTime2, v17);
+            sub_1BCB254(RestTime2, v17);
           }
 LABEL_40:
-          sub_1BC326C(RestTime2, v17, v18);
+          sub_1BCB25C(RestTime2, v17, v18);
         }
       }
     }
 LABEL_41:
-    v48 = sub_1BC3288();
-    sub_1BC3130(v48, 0LL);
+    v48 = sub_1BCB278();
+    sub_1BCB120(v48, 0LL);
   }
 }
 
@@ -375,10 +375,10 @@ bool __fastcall QuestBoardInformationText__ChangeText(
   const MethodInfo *v7; // x1
   struct TerminalBoardOptionTextData_o *dispTextExtend; // x8
 
-  if ( (byte_4AFECE9 & 1) == 0 )
+  if ( (byte_4B191D2 & 1) == 0 )
   {
-    sub_1BC3008(&QuestBoardInformationText_TypeInfo, component);
-    byte_4AFECE9 = 1;
+    sub_1BCAFF8(&QuestBoardInformationText_TypeInfo, component);
+    byte_4B191D2 = 1;
   }
   behindLabelText = (BoardOptionTextWithIconComponent_o *)QuestBoardInformationText_TypeInfo;
   v6 = *component;
@@ -401,7 +401,7 @@ bool __fastcall QuestBoardInformationText__ChangeText(
                                        0LL),
         (behindLabelText = *component) == 0LL) )
   {
-    sub_1BC3264(behindLabelText, component);
+    sub_1BCB254(behindLabelText, component);
   }
   BoardOptionTextWithIconComponent__UpdateUI(
     behindLabelText,
@@ -415,7 +415,7 @@ bool __fastcall QuestBoardInformationText__ChangeText(
 // local variable allocation has failed, the output may be wrong!
 void __fastcall QuestBoardInformationText__CreateDispTextExtendIfNotExists(
         QuestBoardInformationText_o *this,
-        bool isLeft,
+        int32_t alignment,
         const MethodInfo *method)
 {
   __int64 v5; // x1
@@ -424,19 +424,19 @@ void __fastcall QuestBoardInformationText__CreateDispTextExtendIfNotExists(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4AFECEB & 1) == 0 )
+  if ( (byte_4B191D4 & 1) == 0 )
   {
-    sub_1BC3008(&TerminalBoardOptionTextData_TypeInfo, isLeft);
-    sub_1BC3008(&StringLiteral_1/*""*/, v5);
-    byte_4AFECEB = 1;
+    sub_1BCAFF8(&TerminalBoardOptionTextData_TypeInfo, *(_QWORD *)&alignment);
+    sub_1BCAFF8(&StringLiteral_1/*""*/, v5);
+    byte_4B191D4 = 1;
   }
   if ( !this->fields.dispTextExtend )
   {
     dispText = this->fields.dispText;
-    v7 = (TerminalBoardOptionTextData_o *)sub_1BC3254(TerminalBoardOptionTextData_TypeInfo);
-    TerminalBoardOptionTextData___ctor(v7, (System_String_o *)StringLiteral_1/*""*/, dispText, 0, isLeft, 0LL);
+    v7 = (TerminalBoardOptionTextData_o *)sub_1BCB244(TerminalBoardOptionTextData_TypeInfo);
+    TerminalBoardOptionTextData___ctor(v7, (System_String_o *)StringLiteral_1/*""*/, dispText, 0, 0, 0, alignment, 0LL);
     this->fields.dispTextExtend = v7;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.dispTextExtend, (int32_t)v7, v8, v9);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.dispTextExtend, (int32_t)v7, v8, v9);
   }
 }
 
@@ -467,36 +467,36 @@ QuestBoardInformationText_TimeData_array *__fastcall QuestBoardInformationText__
   const MethodInfo *v24; // x3
   __int64 v26; // x0
 
-  if ( (byte_4AFECF1 & 1) == 0 )
+  if ( (byte_4B191DA & 1) == 0 )
   {
-    sub_1BC3008(&QuestBoardInformationText_TypeInfo, endTime);
-    sub_1BC3008(&QuestBoardInformationText_TimeData___TypeInfo, v8);
-    sub_1BC3008(&QuestBoardInformationText_TimeData_TypeInfo, v9);
-    byte_4AFECF1 = 1;
+    sub_1BCAFF8(&QuestBoardInformationText_TypeInfo, endTime);
+    sub_1BCAFF8(&QuestBoardInformationText_TimeData___TypeInfo, v8);
+    sub_1BCAFF8(&QuestBoardInformationText_TimeData_TypeInfo, v9);
+    byte_4B191DA = 1;
   }
-  v10 = (QuestBoardInformationText_TimeData_array *)sub_1BC30B0(QuestBoardInformationText_TimeData___TypeInfo, 2LL);
-  v11 = sub_1BC3254(QuestBoardInformationText_TimeData_TypeInfo);
+  v10 = (QuestBoardInformationText_TimeData_array *)sub_1BCB0A0(QuestBoardInformationText_TimeData___TypeInfo, 2LL);
+  v11 = sub_1BCB244(QuestBoardInformationText_TimeData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11 )
     goto LABEL_13;
   *(_QWORD *)(v11 + 24) = defaultColor;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v11 + 24), (int32_t)defaultColor, v14, v15);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v11 + 24), (int32_t)defaultColor, v14, v15);
   if ( !v10 )
     goto LABEL_13;
-  v16 = sub_1BC3144(v11, v10->obj.klass->_1.element_class);
+  v16 = sub_1BCB134(v11, v10->obj.klass->_1.element_class);
   if ( !v16 )
     goto LABEL_14;
   if ( !v10->max_length )
     goto LABEL_15;
   v10->m_Items[0] = (QuestBoardInformationText_TimeData_o *)v11;
-  sub_1BC2FAC((CGThumbnailListItem_o *)v10->m_Items, v11, v18, v19);
-  v20 = sub_1BC3254(QuestBoardInformationText_TimeData_TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)v10->m_Items, v11, v18, v19);
+  v20 = sub_1BCB244(QuestBoardInformationText_TimeData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v20, 0LL);
   if ( !v20 )
 LABEL_13:
-    sub_1BC3264(v12, v13);
+    sub_1BCB254(v12, v13);
   *(_QWORD *)(v20 + 24) = changedColor;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v20 + 24), (int32_t)changedColor, v21, v22);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v20 + 24), (int32_t)changedColor, v21, v22);
   v23 = QuestBoardInformationText_TypeInfo;
   if ( !QuestBoardInformationText_TypeInfo->_2.cctor_finished )
   {
@@ -504,18 +504,18 @@ LABEL_13:
     v23 = QuestBoardInformationText_TypeInfo;
   }
   *(_QWORD *)(v20 + 16) = endTime - v23->static_fields->CHANGE_START_REMAINING_TIME;
-  v16 = sub_1BC3144(v20, v10->obj.klass->_1.element_class);
+  v16 = sub_1BCB134(v20, v10->obj.klass->_1.element_class);
   if ( !v16 )
   {
 LABEL_14:
-    v26 = sub_1BC3288();
-    sub_1BC3130(v26, 0LL);
+    v26 = sub_1BCB278();
+    sub_1BCB120(v26, 0LL);
   }
   if ( v10->max_length <= 1 )
 LABEL_15:
-    sub_1BC326C(v16, v17, v18);
+    sub_1BCB25C(v16, v17, v18);
   v10->m_Items[1] = (QuestBoardInformationText_TimeData_o *)v20;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v10->m_Items[1], v20, v18, v24);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v10->m_Items[1], v20, v18, v24);
   return v10;
 }
 
@@ -568,7 +568,7 @@ QuestBoardInformationText_TimeData_o *__fastcall QuestBoardInformationText__GetC
     {
       v8 = timeDataList->m_Items[v6];
       if ( !v8 )
-        sub_1BC3264(this, nowTime);
+        sub_1BCB254(this, nowTime);
       v9 = nowTime - v8->fields.startTime;
       v10 = v9 >= 0;
       v11 = v9 < v7;
@@ -581,7 +581,7 @@ QuestBoardInformationText_TimeData_o *__fastcall QuestBoardInformationText__GetC
     while ( (_DWORD)v4 != v6 );
   }
   if ( v5 >= (unsigned int)v4 )
-    sub_1BC326C(this, nowTime, method);
+    sub_1BCB25C(this, nowTime, method);
   return timeDataList->m_Items[v5];
 }
 
@@ -606,7 +606,7 @@ int32_t __fastcall QuestBoardInformationText__GetDailyDropUpRestCount(
   int32_t Day; // w22
   int32_t Value; // w4
   int32_t v17; // w0
-  int64_t NextDayTime_40387508; // x0
+  int64_t NextDayTime_40543992; // x0
   uint64_t v19; // x20
   uint64_t v20; // x21
   uint64_t v21; // x20
@@ -625,30 +625,30 @@ int32_t __fastcall QuestBoardInformationText__GetDailyDropUpRestCount(
   System_DateTime_o v35; // 0:x1.8
   System_DateTime_o v36; // 0:x1.8
 
-  if ( (byte_4AFECEC & 1) == 0 )
+  if ( (byte_4B191D5 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMasterData_UserEventMaster___, *(_QWORD *)&eventId);
-    sub_1BC3008(&System_DateTime_TypeInfo, v4);
-    sub_1BC3008(&NetworkManager_TypeInfo, v5);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
-    sub_1BC3008(&StringLiteral_4915/*"DAILY_DROP_UP_RESET_AT"*/, v7);
-    sub_1BC3008(&StringLiteral_4914/*"DAILY_DROP_UP_COUNT"*/, v8);
-    byte_4AFECEC = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_UserEventMaster___, *(_QWORD *)&eventId);
+    sub_1BCAFF8(&System_DateTime_TypeInfo, v4);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v5);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v6);
+    sub_1BCAFF8(&StringLiteral_4917/*"DAILY_DROP_UP_RESET_AT"*/, v7);
+    sub_1BCAFF8(&StringLiteral_4916/*"DAILY_DROP_UP_COUNT"*/, v8);
+    byte_4B191D5 = 1;
   }
   t1.fields._dateData = 0LL;
   dateData = 0LL;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_26;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_UserEventMaster___);
+                        (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4AFC1F1 )
+  if ( !byte_4B165D1 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, v10);
-    byte_4AFC1F1 = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v10);
+    byte_4B165D1 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -658,7 +658,7 @@ int32_t __fastcall QuestBoardInformationText__GetDailyDropUpRestCount(
   }
   if ( !MasterData_object )
 LABEL_26:
-    sub_1BC3264(Instance, v10);
+    sub_1BCB254(Instance, v10);
   Entity = UserEventMaster__GetEntity(
              (UserEventMaster_o *)MasterData_object,
              *(_QWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 64LL),
@@ -677,13 +677,13 @@ LABEL_26:
     Month = System_DateTime__get_Month(v28, 0LL);
     v29.fields._dateData = (uint64_t)&dateData;
     Day = System_DateTime__get_Day(v29, 0LL);
-    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_4915/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
+    Value = ConstantMaster__getValue((System_String_o *)StringLiteral_4917/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
     v30.fields._dateData = (uint64_t)&t1;
-    System_DateTime___ctor_63733596(v30, Year, Month, Day, Value, 0, 0, 0LL);
-    v17 = ConstantMaster__getValue((System_String_o *)StringLiteral_4915/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
-    NextDayTime_40387508 = NetworkManager__getNextDayTime_40387508(v17, 0LL);
-    v19 = NetworkManager__getServerDateTime_40297788(NextDayTime_40387508, 0LL).fields._dateData;
-    v20 = NetworkManager__getServerDateTime_40297788(Entity->fields.updatedAt, 0LL).fields._dateData;
+    System_DateTime___ctor_63835372(v30, Year, Month, Day, Value, 0, 0, 0LL);
+    v17 = ConstantMaster__getValue((System_String_o *)StringLiteral_4917/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
+    NextDayTime_40543992 = NetworkManager__getNextDayTime_40543992(v17, 0LL);
+    v19 = NetworkManager__getServerDateTime_40543292(NextDayTime_40543992, 0LL).fields._dateData;
+    v20 = NetworkManager__getServerDateTime_40543292(Entity->fields.updatedAt, 0LL).fields._dateData;
     v34.fields._dateData = v20;
     v31.fields._dateData = t1.fields._dateData;
     if ( System_DateTime__op_LessThanOrEqual(v31, v34, 0LL) )
@@ -707,7 +707,7 @@ LABEL_23:
     else
       LODWORD(Entity) = 0;
   }
-  v23 = ConstantMaster__getValue((System_String_o *)StringLiteral_4914/*"DAILY_DROP_UP_COUNT"*/, 0LL);
+  v23 = ConstantMaster__getValue((System_String_o *)StringLiteral_4916/*"DAILY_DROP_UP_COUNT"*/, 0LL);
   return (v23 - (_DWORD)Entity) & ~((v23 - (int)Entity) >> 31);
 }
 
@@ -719,27 +719,27 @@ System_String_o *__fastcall QuestBoardInformationText__GetDailyDropUpRestTimeStr
   __int64 v3; // x1
   __int64 v4; // x1
   int32_t Value; // w20
-  int64_t NextDayTime_40387508; // x0
+  int64_t NextDayTime_40543992; // x0
   int64_t time; // x19
   uint32_t cctor_finished; // w9
   int64_t v9; // x20
 
-  if ( (byte_4AFECED & 1) == 0 )
+  if ( (byte_4B191D6 & 1) == 0 )
   {
-    sub_1BC3008(&LocalizationManager_TypeInfo, method);
-    sub_1BC3008(&NetworkManager_TypeInfo, v3);
-    sub_1BC3008(&StringLiteral_4915/*"DAILY_DROP_UP_RESET_AT"*/, v4);
-    byte_4AFECED = 1;
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, method);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v3);
+    sub_1BCAFF8(&StringLiteral_4917/*"DAILY_DROP_UP_RESET_AT"*/, v4);
+    byte_4B191D6 = 1;
   }
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_4915/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_4917/*"DAILY_DROP_UP_RESET_AT"*/, 0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  NextDayTime_40387508 = NetworkManager__getNextDayTime_40387508(Value, 0LL);
+  NextDayTime_40543992 = NetworkManager__getNextDayTime_40543992(Value, 0LL);
   time = this->fields.time;
   cctor_finished = LocalizationManager_TypeInfo->_2.cctor_finished;
-  if ( time >= NextDayTime_40387508 )
+  if ( time >= NextDayTime_40543992 )
   {
-    v9 = NextDayTime_40387508;
+    v9 = NextDayTime_40543992;
     if ( !cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     time = v9;
@@ -771,10 +771,10 @@ bool __fastcall QuestBoardInformationText__IsQuestOpened(QuestBoardInformationTe
   struct BoardMessageEntity_o *boardMessageEnt; // x8
   int64_t time; // x19
 
-  if ( (byte_4AFECF0 & 1) == 0 )
+  if ( (byte_4B191D9 & 1) == 0 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, method);
-    byte_4AFECF0 = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
+    byte_4B191D9 = 1;
   }
   boardMessageEnt = this->fields.boardMessageEnt;
   if ( !boardMessageEnt || boardMessageEnt->fields.referenceType != 2 )
@@ -802,149 +802,146 @@ void __fastcall QuestBoardInformationText__SetFrameSprite(
   BoardOptionTextWithIconComponent_o **v13; // x21
   __int64 v15; // x1
   __int64 v16; // x1
-  BoardOptionTextWithIconComponent_o *IsTextEmpty; // x0
-  struct TerminalBoardOptionTextData_o *dispTextExtend; // x8
-  __int64 v19; // x2
-  __int64 v20; // x3
-  __int64 v21; // x4
-  QuestBoardInformationText_c *v22; // x0
+  UnityEngine_Component_o *gameObject; // x0
+  __int64 v18; // x2
+  __int64 v19; // x3
+  __int64 v20; // x4
+  QuestBoardInformationText_c *v21; // x0
   struct QuestBoardInformationText_StaticFields *static_fields; // x10
   float *p_x; // x8
   float *p_y; // x9
   float *p_z; // x10
-  struct QuestBoardInformationText_StaticFields *v27; // x10
-  float v28; // s11
-  float v29; // s12
-  float v30; // s13
+  struct QuestBoardInformationText_StaticFields *v26; // x10
+  float v27; // s11
+  float v28; // s12
+  float v29; // s13
   System_String_o *QUEST_BOARD_INFO_FRAME_NAME; // x24
-  Il2CppObject *v32; // x0
-  System_String_o *v33; // x0
-  UISprite_o *v34; // x24
-  System_String_o *v35; // x23
+  Il2CppObject *v31; // x0
+  System_String_o *v32; // x0
+  UISprite_o *v33; // x24
+  System_String_o *v34; // x23
   int32_t BehindLabelWrappedWidth; // w0
-  QuestBoardInformationText_c *v37; // x8
+  QuestBoardInformationText_c *v36; // x8
   int32_t INFO_LABEL_BASE_WIDTH; // w23
-  int32_t v39; // w22
+  int32_t v38; // w22
   int32_t mWidth; // w8
-  bool v41; // vf
-  int v42; // w8
-  struct TerminalBoardOptionTextData_o *v43; // x9
-  _BOOL4 IsLeft_k__BackingField; // w9
+  bool v40; // vf
+  int v41; // w22
+  bool IsLeft; // w0
+  int v43; // w9
+  float v44; // s0
   float v45; // s1
-  float v46; // s0
-  int v47; // w8
-  int v48; // w9
-  int32_t v49; // [xsp+3Ch] [xbp-34h] BYREF
-  UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4
+  int v46; // w8
+  int32_t v47; // [xsp+3Ch] [xbp-34h] BYREF
+  UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
 
   z = boardOffset.fields.z;
   y = boardOffset.fields.y;
   x = boardOffset.fields.x;
   v13 = component;
-  if ( (byte_4AFECEE & 1) == 0 )
+  if ( (byte_4B191D7 & 1) == 0 )
   {
-    sub_1BC3008(&AtlasManager_TypeInfo, component);
-    sub_1BC3008(&int_TypeInfo, v15);
-    sub_1BC3008(&QuestBoardInformationText_TypeInfo, v16);
-    byte_4AFECEE = 1;
+    sub_1BCAFF8(&AtlasManager_TypeInfo, component);
+    sub_1BCAFF8(&int_TypeInfo, v15);
+    sub_1BCAFF8(&QuestBoardInformationText_TypeInfo, v16);
+    byte_4B191D7 = 1;
   }
   if ( (boardId & 0x80000000) != 0 )
     goto LABEL_6;
-  IsTextEmpty = *v13;
+  gameObject = (UnityEngine_Component_o *)*v13;
   if ( !*v13 )
-    goto LABEL_51;
-  IsTextEmpty = (BoardOptionTextWithIconComponent_o *)BoardOptionTextWithIconComponent__IsTextEmpty(IsTextEmpty, 0LL);
-  if ( ((unsigned __int8)IsTextEmpty & 1) != 0 )
+    goto LABEL_54;
+  if ( BoardOptionTextWithIconComponent__IsTextEmpty((BoardOptionTextWithIconComponent_o *)gameObject, 0LL) )
   {
 LABEL_6:
-    IsTextEmpty = (BoardOptionTextWithIconComponent_o *)*frameSprite;
+    gameObject = (UnityEngine_Component_o *)*frameSprite;
     if ( *frameSprite )
     {
-      IsTextEmpty = (BoardOptionTextWithIconComponent_o *)UnityEngine_Component__get_gameObject(
-                                                            (UnityEngine_Component_o *)IsTextEmpty,
-                                                            0LL);
-      if ( IsTextEmpty )
+      gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+      if ( gameObject )
       {
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsTextEmpty, 0, 0LL);
-        IsTextEmpty = *v13;
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
+        gameObject = (UnityEngine_Component_o *)*v13;
         if ( *v13 )
         {
-          BoardOptionTextWithIconComponent__SetAnchorOffset(IsTextEmpty, 0, 0LL);
+          BoardOptionTextWithIconComponent__SetAnchorOffset((BoardOptionTextWithIconComponent_o *)gameObject, 0, 0LL);
           return;
         }
       }
     }
-LABEL_51:
-    sub_1BC3264(IsTextEmpty, component);
+LABEL_54:
+    sub_1BCB254(gameObject, component);
   }
-  dispTextExtend = this->fields.dispTextExtend;
-  if ( !dispTextExtend )
-    goto LABEL_51;
-  IsTextEmpty = (BoardOptionTextWithIconComponent_o *)*frameSprite;
+  gameObject = (UnityEngine_Component_o *)this->fields.dispTextExtend;
+  if ( !gameObject )
+    goto LABEL_54;
+  gameObject = (UnityEngine_Component_o *)TerminalBoardOptionTextData__get_IsLeft(
+                                            (TerminalBoardOptionTextData_o *)gameObject,
+                                            0LL);
   if ( !*frameSprite )
-    goto LABEL_51;
-  if ( dispTextExtend->fields._IsLeft_k__BackingField )
+    goto LABEL_54;
+  if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
-    UIWidget__set_pivot((UIWidget_o *)IsTextEmpty, 3, 0LL);
-    v22 = QuestBoardInformationText_TypeInfo;
+    UIWidget__set_pivot((UIWidget_o *)*frameSprite, 3, 0LL);
+    v21 = QuestBoardInformationText_TypeInfo;
     if ( !QuestBoardInformationText_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(QuestBoardInformationText_TypeInfo);
-      v22 = QuestBoardInformationText_TypeInfo;
+      v21 = QuestBoardInformationText_TypeInfo;
     }
-    static_fields = v22->static_fields;
+    static_fields = v21->static_fields;
     p_x = &static_fields->INFO_FRAME_LEFT_OFFSET.fields.x;
     p_y = &static_fields->INFO_FRAME_LEFT_OFFSET.fields.y;
     p_z = &static_fields->INFO_FRAME_LEFT_OFFSET.fields.z;
   }
   else
   {
-    UIWidget__set_pivot((UIWidget_o *)IsTextEmpty, 5, 0LL);
-    v22 = QuestBoardInformationText_TypeInfo;
+    UIWidget__set_pivot((UIWidget_o *)*frameSprite, 5, 0LL);
+    v21 = QuestBoardInformationText_TypeInfo;
     if ( !QuestBoardInformationText_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(QuestBoardInformationText_TypeInfo);
-      v22 = QuestBoardInformationText_TypeInfo;
+      v21 = QuestBoardInformationText_TypeInfo;
     }
-    v27 = v22->static_fields;
-    p_x = &v27->INFO_FRAME_RIGHT_OFFSET.fields.x;
-    p_y = &v27->INFO_FRAME_RIGHT_OFFSET.fields.y;
-    p_z = &v27->INFO_FRAME_RIGHT_OFFSET.fields.z;
+    v26 = v21->static_fields;
+    p_x = &v26->INFO_FRAME_RIGHT_OFFSET.fields.x;
+    p_y = &v26->INFO_FRAME_RIGHT_OFFSET.fields.y;
+    p_z = &v26->INFO_FRAME_RIGHT_OFFSET.fields.z;
   }
-  v28 = *p_x;
-  v29 = *p_y;
-  v30 = *p_z;
-  if ( !v22->_2.cctor_finished )
+  v27 = *p_x;
+  v28 = *p_y;
+  v29 = *p_z;
+  if ( !v21->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v22);
-    v22 = QuestBoardInformationText_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v21);
+    v21 = QuestBoardInformationText_TypeInfo;
   }
-  QUEST_BOARD_INFO_FRAME_NAME = v22->static_fields->QUEST_BOARD_INFO_FRAME_NAME;
-  v49 = boardId;
-  v32 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49, v19, v20, v21);
-  v33 = System_String__Format(QUEST_BOARD_INFO_FRAME_NAME, v32, 0LL);
-  v34 = *frameSprite;
-  v35 = v33;
+  QUEST_BOARD_INFO_FRAME_NAME = v21->static_fields->QUEST_BOARD_INFO_FRAME_NAME;
+  v47 = boardId;
+  v31 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v47, v18, v19, v20);
+  v32 = System_String__Format(QUEST_BOARD_INFO_FRAME_NAME, v31, 0LL);
+  v33 = *frameSprite;
+  v34 = v32;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetBanner(v34, v35, 0LL);
-  IsTextEmpty = (BoardOptionTextWithIconComponent_o *)*frameSprite;
+  AtlasManager__SetBanner(v33, v34, 0LL);
+  gameObject = (UnityEngine_Component_o *)*frameSprite;
   if ( !*frameSprite )
-    goto LABEL_51;
-  IsTextEmpty = (BoardOptionTextWithIconComponent_o *)UnityEngine_Component__get_transform(
-                                                        (UnityEngine_Component_o *)IsTextEmpty,
-                                                        0LL);
-  if ( !IsTextEmpty )
-    goto LABEL_51;
-  v50.fields.z = z + v30;
-  v50.fields.y = y + v29;
-  v50.fields.x = x + v28;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)IsTextEmpty, v50, 0LL);
-  IsTextEmpty = *v13;
+    goto LABEL_54;
+  gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(gameObject, 0LL);
+  if ( !gameObject )
+    goto LABEL_54;
+  v48.fields.z = z + v29;
+  v48.fields.y = y + v28;
+  v48.fields.x = x + v27;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v48, 0LL);
+  gameObject = (UnityEngine_Component_o *)*v13;
   if ( !*v13 )
-    goto LABEL_51;
-  BehindLabelWrappedWidth = BoardOptionTextWithIconComponent__GetBehindLabelWrappedWidth(IsTextEmpty, 0LL);
-  v37 = QuestBoardInformationText_TypeInfo;
+    goto LABEL_54;
+  BehindLabelWrappedWidth = BoardOptionTextWithIconComponent__GetBehindLabelWrappedWidth(
+                              (BoardOptionTextWithIconComponent_o *)gameObject,
+                              0LL);
+  v36 = QuestBoardInformationText_TypeInfo;
   if ( QuestBoardInformationText_TypeInfo->static_fields->INFO_LABEL_BASE_WIDTH >= BehindLabelWrappedWidth )
   {
     INFO_LABEL_BASE_WIDTH = BehindLabelWrappedWidth;
@@ -954,67 +951,71 @@ LABEL_51:
     if ( !QuestBoardInformationText_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(QuestBoardInformationText_TypeInfo);
-      v37 = QuestBoardInformationText_TypeInfo;
+      v36 = QuestBoardInformationText_TypeInfo;
     }
     INFO_LABEL_BASE_WIDTH = QuestBoardInformationText_TypeInfo->static_fields->INFO_LABEL_BASE_WIDTH;
   }
-  if ( !v37->_2.cctor_finished )
+  if ( !v36->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v37);
-    v37 = QuestBoardInformationText_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v36);
+    v36 = QuestBoardInformationText_TypeInfo;
   }
-  IsTextEmpty = (BoardOptionTextWithIconComponent_o *)*frameSprite;
+  gameObject = (UnityEngine_Component_o *)*frameSprite;
   if ( !*frameSprite )
-    goto LABEL_51;
-  v39 = INFO_LABEL_BASE_WIDTH + sideSizeOffset + v37->static_fields->INFO_FRAME_SIDE_SIZE;
-  UIWidget__set_width((UIWidget_o *)IsTextEmpty, v39, 0LL);
+    goto LABEL_54;
+  v38 = INFO_LABEL_BASE_WIDTH + sideSizeOffset + v36->static_fields->INFO_FRAME_SIDE_SIZE;
+  UIWidget__set_width((UIWidget_o *)gameObject, v38, 0LL);
   if ( !this->fields.isFrameBg )
-    goto LABEL_46;
+    goto LABEL_49;
   if ( !*frameSprite )
-    goto LABEL_51;
+    goto LABEL_54;
   mWidth = (*frameSprite)->fields.mWidth;
-  v41 = __OFSUB__(mWidth, v39);
-  v42 = mWidth - v39;
-  if ( (v42 < 0) ^ v41 | (v42 == 0) )
+  v40 = __OFSUB__(mWidth, v38);
+  v41 = mWidth - v38;
+  if ( (v41 < 0) ^ v40 | (v41 == 0) )
   {
-LABEL_46:
-    IsTextEmpty = *v13;
+LABEL_49:
+    gameObject = (UnityEngine_Component_o *)*v13;
     if ( !*v13 )
-      goto LABEL_51;
+      goto LABEL_54;
     LODWORD(component) = 0;
   }
   else
   {
-    v43 = this->fields.dispTextExtend;
-    if ( !v43 )
-      goto LABEL_51;
-    IsLeft_k__BackingField = v43->fields._IsLeft_k__BackingField;
-    v45 = INFINITY;
-    v46 = -x;
-    v47 = v42 + (v42 < 0);
-    if ( !IsLeft_k__BackingField )
-      v45 = -INFINITY;
-    if ( IsLeft_k__BackingField )
-      v46 = x;
-    v48 = (int)v46;
+    gameObject = (UnityEngine_Component_o *)this->fields.dispTextExtend;
+    if ( !gameObject )
+      goto LABEL_54;
+    IsLeft = TerminalBoardOptionTextData__get_IsLeft((TerminalBoardOptionTextData_o *)gameObject, 0LL);
+    if ( v41 >= 0 )
+      v43 = v41;
+    else
+      v43 = v41 + 1;
+    v44 = -x;
+    v45 = -INFINITY;
+    if ( IsLeft )
+      v45 = INFINITY;
+    if ( IsLeft )
+      v44 = x;
+    v46 = (int)v44;
     if ( x == v45 )
-      v48 = 0x80000000;
-    component = (BoardOptionTextWithIconComponent_o **)(unsigned int)(v48 + (v47 >> 1));
+      v46 = 0x80000000;
+    component = (BoardOptionTextWithIconComponent_o **)(unsigned int)(v46 + (v43 >> 1));
     this->fields.initFrameOffset = (int)component;
-    IsTextEmpty = *v13;
+    gameObject = (UnityEngine_Component_o *)*v13;
     if ( !*v13 )
-      goto LABEL_51;
+      goto LABEL_54;
   }
-  BoardOptionTextWithIconComponent__SetAnchorOffset(IsTextEmpty, (int32_t)component, 0LL);
-  IsTextEmpty = (BoardOptionTextWithIconComponent_o *)*frameSprite;
+  BoardOptionTextWithIconComponent__SetAnchorOffset(
+    (BoardOptionTextWithIconComponent_o *)gameObject,
+    (int32_t)component,
+    0LL);
+  gameObject = (UnityEngine_Component_o *)*frameSprite;
   if ( !*frameSprite )
-    goto LABEL_51;
-  IsTextEmpty = (BoardOptionTextWithIconComponent_o *)UnityEngine_Component__get_gameObject(
-                                                        (UnityEngine_Component_o *)IsTextEmpty,
-                                                        0LL);
-  if ( !IsTextEmpty )
-    goto LABEL_51;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsTextEmpty, this->fields.isFrameBg, 0LL);
+    goto LABEL_54;
+  gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+  if ( !gameObject )
+    goto LABEL_54;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, this->fields.isFrameBg, 0LL);
 }
 
 
@@ -1167,10 +1168,10 @@ void __fastcall QuestBoardInformationText__SetTextColor(
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4AFECEF & 1) == 0 )
+  if ( (byte_4B191D8 & 1) == 0 )
   {
-    sub_1BC3008(&QuestBoardInformationText_TypeInfo, component);
-    byte_4AFECEF = 1;
+    sub_1BCAFF8(&QuestBoardInformationText_TypeInfo, component);
+    byte_4B191D8 = 1;
   }
   if ( !this->fields.isColorSetting )
   {
@@ -1221,7 +1222,7 @@ void __fastcall QuestBoardInformationText__SetTextColor(
       }
     }
 LABEL_17:
-    sub_1BC3264(v5, component);
+    sub_1BCB254(v5, component);
   }
   v5 = *component;
   if ( !*component )
@@ -1257,37 +1258,36 @@ void __fastcall QuestBoardInformationText__SetTextOffset(
 {
   QuestBoardInformationText_o *v5; // x19
   float x; // s8
-  struct TerminalBoardOptionTextData_o *dispTextExtend; // x8
-  _BOOL4 IsLeft_k__BackingField; // w8
-  float v9; // s0
-  float v10; // s1
-  int v11; // w9
+  float v7; // s0
+  float v8; // s1
+  int v9; // w10
 
   if ( !*component )
     goto LABEL_12;
   v5 = this;
   x = textOffset.fields.x;
-  this = (QuestBoardInformationText_o *)BoardOptionTextWithIconComponent__IsTextEmpty(*component, 0LL);
-  if ( ((unsigned __int8)this & 1) != 0 )
+  if ( BoardOptionTextWithIconComponent__IsTextEmpty(*component, 0LL) )
     return;
-  dispTextExtend = v5->fields.dispTextExtend;
-  if ( !dispTextExtend || (this = (QuestBoardInformationText_o *)*component) == 0LL )
+  this = (QuestBoardInformationText_o *)v5->fields.dispTextExtend;
+  if ( !this
+    || (this = (QuestBoardInformationText_o *)TerminalBoardOptionTextData__get_IsLeft(
+                                                (TerminalBoardOptionTextData_o *)this,
+                                                0LL),
+        !*component) )
+  {
 LABEL_12:
-    sub_1BC3264(this, component);
-  IsLeft_k__BackingField = dispTextExtend->fields._IsLeft_k__BackingField;
-  v9 = INFINITY;
-  if ( !IsLeft_k__BackingField )
-    v9 = -INFINITY;
-  v10 = -x;
-  if ( IsLeft_k__BackingField )
-    v10 = x;
-  v11 = (int)v10;
-  if ( x == v9 )
-    v11 = 0x80000000;
-  BoardOptionTextWithIconComponent__SetAnchorOffset(
-    (BoardOptionTextWithIconComponent_o *)this,
-    v5->fields.initFrameOffset + v11,
-    0LL);
+    sub_1BCB254(this, component);
+  }
+  v7 = -INFINITY;
+  if ( ((unsigned __int8)this & 1) != 0 )
+    v7 = INFINITY;
+  v8 = -x;
+  if ( ((unsigned __int8)this & 1) != 0 )
+    v8 = x;
+  v9 = (int)v8;
+  if ( x == v7 )
+    v9 = 0x80000000;
+  BoardOptionTextWithIconComponent__SetAnchorOffset(*component, v5->fields.initFrameOffset + v9, 0LL);
 }
 
 
@@ -1315,7 +1315,7 @@ void __fastcall QuestBoardInformationText__SetTime(
 }
 
 
-void __fastcall QuestBoardInformationText__SetTime_35485232(
+void __fastcall QuestBoardInformationText__SetTime_35630724(
         QuestBoardInformationText_o *this,
         BoardOptionTextWithIconComponent_o **component,
         UISprite_o **frameSprite,

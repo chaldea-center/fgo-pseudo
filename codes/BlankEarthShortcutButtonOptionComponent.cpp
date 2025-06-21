@@ -2,10 +2,10 @@ void __fastcall BlankEarthShortcutButtonOptionComponent___cctor(const MethodInfo
 {
   __int64 v1; // x1
 
-  if ( (byte_4AFE921 & 1) == 0 )
+  if ( (byte_4B18E09 & 1) == 0 )
   {
-    sub_1BC3008(&BlankEarthShortcutButtonOptionComponent_TypeInfo, v1);
-    byte_4AFE921 = 1;
+    sub_1BCAFF8(&BlankEarthShortcutButtonOptionComponent_TypeInfo, v1);
+    byte_4B18E09 = 1;
   }
   BlankEarthShortcutButtonOptionComponent_TypeInfo->static_fields->OPTION_COMPONENT_UPDATE_INTERVAL = 60LL;
 }
@@ -32,11 +32,11 @@ bool __fastcall BlankEarthShortcutButtonOptionComponent__CheckUpdateText(
   int64_t v9; // x20
   int64_t OPTION_COMPONENT_UPDATE_INTERVAL; // x22
 
-  if ( (byte_4AFE920 & 1) == 0 )
+  if ( (byte_4B18E08 & 1) == 0 )
   {
-    sub_1BC3008(&BlankEarthShortcutButtonOptionComponent_TypeInfo, ent);
-    sub_1BC3008(&NetworkManager_TypeInfo, v4);
-    byte_4AFE920 = 1;
+    sub_1BCAFF8(&BlankEarthShortcutButtonOptionComponent_TypeInfo, ent);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v4);
+    byte_4B18E08 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -83,11 +83,11 @@ void __fastcall BlankEarthShortcutButtonOptionComponent__SetUpOptionInfo(
   float g; // s1
   UnityEngine_Color_o v20; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_4AFE91F & 1) == 0 )
+  if ( (byte_4B18E07 & 1) == 0 )
   {
-    sub_1BC3008(&LocalizationManager_TypeInfo, ent);
-    sub_1BC3008(&NetworkManager_TypeInfo, v7);
-    byte_4AFE91F = 1;
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, ent);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v7);
+    byte_4B18E07 = 1;
   }
   *(_QWORD *)&v20.fields.r = 0LL;
   *(_QWORD *)&v20.fields.b = 0LL;
@@ -145,7 +145,7 @@ void __fastcall BlankEarthShortcutButtonOptionComponent__SetUpOptionInfo(
       goto LABEL_22;
     }
 LABEL_24:
-    sub_1BC3264(Time, v9);
+    sub_1BCB254(Time, v9);
   }
   if ( !v15 )
     goto LABEL_24;

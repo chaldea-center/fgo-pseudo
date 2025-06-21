@@ -4,14 +4,14 @@ void __fastcall BattleActionLogManagerNOP___ctor(BattleActionLogManagerNOP_o *th
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B0441D & 1) == 0 )
+  if ( (byte_4B1E933 & 1) == 0 )
   {
-    sub_1BC3008(&byte___TypeInfo, method);
-    byte_4B0441D = 1;
+    sub_1BCAFF8(&byte___TypeInfo, method);
+    byte_4B1E933 = 1;
   }
-  v3 = (struct System_Byte_array *)sub_1BC30B0(byte___TypeInfo, 1LL);
+  v3 = (struct System_Byte_array *)sub_1BCB0A0(byte___TypeInfo, 1LL);
   this->fields.dummy = v3;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 

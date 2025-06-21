@@ -2,10 +2,10 @@ void __fastcall ServantStatusListViewItemDrawNp___cctor(const MethodInfo *method
 {
   __int64 v1; // x1
 
-  if ( (byte_4AFF0B2 & 1) == 0 )
+  if ( (byte_4B193FA & 1) == 0 )
   {
-    sub_1BC3008(&ServantStatusListViewItemDrawNp_TypeInfo, v1);
-    byte_4AFF0B2 = 1;
+    sub_1BCAFF8(&ServantStatusListViewItemDrawNp_TypeInfo, v1);
+    byte_4B193FA = 1;
   }
   ServantStatusListViewItemDrawNp_TypeInfo->static_fields->NP_LIST_MAX = 2;
 }
@@ -21,11 +21,11 @@ void __fastcall ServantStatusListViewItemDrawNp___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4AFF0B1 & 1) == 0 )
+  if ( (byte_4B193F9 & 1) == 0 )
   {
-    sub_1BC3008(&ServantStatusListViewItemDrawNp_TypeInfo, method);
-    sub_1BC3008(&ServantStatusNpComponent___TypeInfo, v3);
-    byte_4AFF0B1 = 1;
+    sub_1BCAFF8(&ServantStatusListViewItemDrawNp_TypeInfo, method);
+    sub_1BCAFF8(&ServantStatusNpComponent___TypeInfo, v3);
+    byte_4B193F9 = 1;
   }
   v4 = ServantStatusListViewItemDrawNp_TypeInfo;
   if ( !ServantStatusListViewItemDrawNp_TypeInfo->_2.cctor_finished )
@@ -33,11 +33,11 @@ void __fastcall ServantStatusListViewItemDrawNp___ctor(
     j_il2cpp_runtime_class_init_0(ServantStatusListViewItemDrawNp_TypeInfo);
     v4 = ServantStatusListViewItemDrawNp_TypeInfo;
   }
-  v5 = (struct ServantStatusNpComponent_array *)sub_1BC30B0(
+  v5 = (struct ServantStatusNpComponent_array *)sub_1BCB0A0(
                                                   ServantStatusNpComponent___TypeInfo,
                                                   v4->static_fields->NP_LIST_MAX);
   this->fields.npList = v5;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.npList, (int32_t)v5, v6, v7);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.npList, (int32_t)v5, v6, v7);
   this->fields.transformNameAddHeight = 42;
   this->fields.dispLimitCnt = -1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
@@ -129,10 +129,10 @@ void __fastcall ServantStatusListViewItemDrawNp__Awake(
   v3->fields.titleBasePosition.fields.z = v15;
   if ( !v16 )
 LABEL_24:
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   if ( !v16->max_length )
 LABEL_25:
-    sub_1BC326C(this, method, v4);
+    sub_1BCB25C(this, method, v4);
   this = (ServantStatusListViewItemDrawNp_o *)v16->m_Items[0];
   if ( !this )
     goto LABEL_24;
@@ -163,10 +163,10 @@ void __fastcall ServantStatusListViewItemDrawNp__ModifyCommandCard(
   ServantStatusListViewItemDrawNp_c *v6; // x0
   struct ServantStatusNpComponent_array *npList; // x8
 
-  if ( (byte_4AFF0B0 & 1) == 0 )
+  if ( (byte_4B193F8 & 1) == 0 )
   {
-    sub_1BC3008(&ServantStatusListViewItemDrawNp_TypeInfo, item);
-    byte_4AFF0B0 = 1;
+    sub_1BCAFF8(&ServantStatusListViewItemDrawNp_TypeInfo, item);
+    byte_4B193F8 = 1;
   }
   v5 = 0;
   this->fields.isStart = 1;
@@ -184,11 +184,11 @@ void __fastcall ServantStatusListViewItemDrawNp__ModifyCommandCard(
     if ( !npList )
       goto LABEL_12;
     if ( v5 >= npList->max_length )
-      sub_1BC326C(v6, item, method);
+      sub_1BCB25C(v6, item, method);
     v6 = (ServantStatusListViewItemDrawNp_c *)npList->m_Items[v5];
     if ( !v6 )
 LABEL_12:
-      sub_1BC3264(v6, item);
+      sub_1BCB254(v6, item);
     ServantStatusNpComponent__ModifyCommandCard((ServantStatusNpComponent_o *)v6, item, 0LL);
     ++v5;
   }
@@ -301,41 +301,41 @@ void __fastcall ServantStatusListViewItemDrawNp__SetItem(
   UnityEngine_Color_o v103; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v104; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4AFF0AF & 1) == 0 )
+  if ( (byte_4B193F7 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMasterData_ServantTreasureDeviceAddMaster___, item);
-    sub_1BC3008(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v7);
-    sub_1BC3008(&DataManager_TypeInfo, v8);
-    sub_1BC3008(&ImageLimitCount_TypeInfo, v9);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v10);
-    sub_1BC3008(&ServantStatusListViewItemDrawNp_TypeInfo, v11);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v12);
-    sub_1BC3008(&TreasureDvcInfo_TypeInfo, v13);
-    sub_1BC3008(&StringLiteral_1/*""*/, v14);
-    byte_4AFF0AF = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_ServantTreasureDeviceAddMaster___, item);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v7);
+    sub_1BCAFF8(&DataManager_TypeInfo, v8);
+    sub_1BCAFF8(&ImageLimitCount_TypeInfo, v9);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v10);
+    sub_1BCAFF8(&ServantStatusListViewItemDrawNp_TypeInfo, v11);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v12);
+    sub_1BCAFF8(&TreasureDvcInfo_TypeInfo, v13);
+    sub_1BCAFF8(&StringLiteral_1/*""*/, v14);
+    byte_4B193F7 = 1;
   }
   this->fields.dispMode = mode;
-  v15 = (TreasureDvcInfo_o *)sub_1BC3254(TreasureDvcInfo_TypeInfo);
+  v15 = (TreasureDvcInfo_o *)sub_1BCB244(TreasureDvcInfo_TypeInfo);
   TreasureDvcInfo___ctor(v15, 0LL);
   this->fields.tdInfo = v15;
   p_tdInfo = &this->fields.tdInfo;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.tdInfo, (int32_t)v15, v17, v18);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.tdInfo, (int32_t)v15, v17, v18);
   if ( !item || !mode )
     return;
   ConvertOverwriteDispImageLimitCount = ServantStatusListViewItem__get_ConvertOverwriteDispImageLimitCount(item, 0LL);
   LimitCount = ServantStatusListViewItem__get_LimitCount(item, 0LL);
   v23 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v23 + 309) & 1) == 0 )
-    v23 = sub_1C1346C(v22);
+    v23 = sub_1C1B45C(v22);
   v24 = *(_QWORD *)(*(_QWORD *)(v23 + 192) + 16LL);
   if ( (*(_BYTE *)(v24 + 309) & 1) == 0 )
-    v24 = sub_1C1346C(v22);
+    v24 = sub_1C1B45C(v22);
   SvtId = **(ServantStatusNpComponent_o ***)(v24 + 184);
   if ( !SvtId )
     goto LABEL_131;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)SvtId,
-                        (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ServantTreasureDeviceAddMaster___);
+                        (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ServantTreasureDeviceAddMaster___);
   if ( item->fields._IsTransformed_k__BackingField )
   {
     ServantStatusListViewItem__GetTransformedNpInfo(item, &this->fields.tdInfo, 0LL);
@@ -348,7 +348,7 @@ void __fastcall ServantStatusListViewItemDrawNp__SetItem(
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
       SvtId = (ServantStatusNpComponent_o *)ServantStatusListViewItem__get_SvtId(item, 0LL);
       if ( !Master_object )
         goto LABEL_131;
@@ -357,7 +357,7 @@ void __fastcall ServantStatusListViewItemDrawNp__SetItem(
                                               (int32_t)SvtId,
                                               ConvertOverwriteDispImageLimitCount,
                                               0LL);
-      ServantStatusListViewItem__GetNpInfo_34907020(
+      ServantStatusListViewItem__GetNpInfo_34973340(
         item,
         &this->fields.tdInfo,
         ConvertOverwriteDispImageLimitCount,
@@ -540,7 +540,7 @@ LABEL_59:
           goto LABEL_131;
         if ( i >= v61->max_length )
 LABEL_132:
-          sub_1BC326C(SvtId, v20, v43);
+          sub_1BCB25C(SvtId, v20, v43);
         v62 = v61->m_Items[i];
         v101.fields.r = 0.0;
         v101.fields.g = 0.0;
@@ -710,7 +710,7 @@ LABEL_100:
                                                  0LL)) == 0LL) )
   {
 LABEL_131:
-    sub_1BC3264(SvtId, v20);
+    sub_1BCB254(SvtId, v20);
   }
   v88 = v84 >> 1;
   v99.fields.y = v86 + (float)(v84 >> 1);

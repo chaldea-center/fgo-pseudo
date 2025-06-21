@@ -17,20 +17,20 @@ void __fastcall CommandCodeAttachRequest__beginRequest(
   __int64 v12; // x1
   __int64 v13; // x1
 
-  if ( (byte_4B03A54 & 1) == 0 )
+  if ( (byte_4B1DF5F & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_23631/*"svtId"*/, *(_QWORD *)&servantId);
-    sub_1BC3008(&StringLiteral_24269/*"userCommandCodeId"*/, v11);
-    sub_1BC3008(&StringLiteral_20072/*"idx"*/, v12);
-    sub_1BC3008(&StringLiteral_16778/*"attachedUserCommandCodeId"*/, v13);
-    byte_4B03A54 = 1;
+    sub_1BCAFF8(&StringLiteral_23653/*"svtId"*/, *(_QWORD *)&servantId);
+    sub_1BCAFF8(&StringLiteral_24291/*"userCommandCodeId"*/, v11);
+    sub_1BCAFF8(&StringLiteral_20086/*"idx"*/, v12);
+    sub_1BCAFF8(&StringLiteral_16790/*"attachedUserCommandCodeId"*/, v13);
+    byte_4B1DF5F = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23631/*"svtId"*/, servantId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20072/*"idx"*/, idx, 0LL);
-  RequestBase__addField_43183652((RequestBase_o *)this, (System_String_o *)StringLiteral_24269/*"userCommandCodeId"*/, userCommandCodeId, 0LL);
-  RequestBase__addField_43183652(
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23653/*"svtId"*/, servantId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20086/*"idx"*/, idx, 0LL);
+  RequestBase__addField_43346700((RequestBase_o *)this, (System_String_o *)StringLiteral_24291/*"userCommandCodeId"*/, userCommandCodeId, 0LL);
+  RequestBase__addField_43346700(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_16778/*"attachedUserCommandCodeId"*/,
+    (System_String_o *)StringLiteral_16790/*"attachedUserCommandCodeId"*/,
     attachedUserCommandCodeId,
     0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
@@ -44,16 +44,16 @@ System_String_o *__fastcall CommandCodeAttachRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B03A53 & 1) == 0 )
+  if ( (byte_4B1DF5E & 1) == 0 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, method);
-    sub_1BC3008(&StringLiteral_17989/*"commandCode/attach"*/, v2);
-    byte_4B03A53 = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
+    sub_1BCAFF8(&StringLiteral_18000/*"commandCode/attach"*/, v2);
+    byte_4B1DF5E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_17989/*"commandCode/attach"*/, 0LL);
+  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_18000/*"commandCode/attach"*/, 0LL);
 }
 
 
@@ -69,17 +69,17 @@ void __fastcall CommandCodeAttachRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_4B03A55 & 1) == 0 )
+  if ( (byte_4B1DF60 & 1) == 0 )
   {
-    sub_1BC3008(&JsonManager_TypeInfo, responseList);
-    sub_1BC3008(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BC3008(&StringLiteral_21997/*"ng"*/, v6);
-    byte_4B03A55 = 1;
+    sub_1BCAFF8(&JsonManager_TypeInfo, responseList);
+    sub_1BCAFF8(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v6);
+    byte_4B1DF60 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(77, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_43184840(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_43347888(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -88,7 +88,7 @@ void __fastcall CommandCodeAttachRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_21997/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_22015/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

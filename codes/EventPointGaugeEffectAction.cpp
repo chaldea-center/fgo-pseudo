@@ -18,7 +18,7 @@ void __fastcall EventPointGaugeEffectAction__OnPlayGaugeBarAnime(
   p_gaugeStartAction = (CGThumbnailListItem_o *)&this->fields.gaugeStartAction;
   v5 = gaugeStartAction;
   p_gaugeStartAction->klass = 0LL;
-  sub_1BC2FAC(p_gaugeStartAction, 0, v2, v3);
+  sub_1BCAF9C(p_gaugeStartAction, 0, v2, v3);
   if ( gaugeStartAction )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
@@ -34,5 +34,5 @@ void __fastcall EventPointGaugeEffectAction__Setup(
   const MethodInfo *v3; // x3
 
   this->fields.gaugeStartAction = gaugeStartAct;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.gaugeStartAction, (int32_t)gaugeStartAct, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.gaugeStartAction, (int32_t)gaugeStartAct, (int32_t)method, v3);
 }

@@ -32,7 +32,7 @@ void __fastcall ExtraBattleUserInterfaceComponent__SetActive(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BC3264(0LL, v5);
+    sub_1BCB254(0LL, v5);
   UnityEngine_GameObject__SetActive(gameObject, value, 0LL);
 }
 
@@ -45,7 +45,7 @@ void __fastcall ExtraBattleUserInterfaceComponent__SetOnTapCallback(
   const MethodInfo *v3; // x3
 
   this->fields.onTapCallback = callback;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.onTapCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.onTapCallback, (int32_t)callback, (int32_t)method, v3);
 }
 
 
@@ -114,7 +114,7 @@ void __fastcall ExtraBattleUserInterfaceComponent__UpdateData(
             break;
           if ( v11 >= v14->max_length )
 LABEL_20:
-            sub_1BC326C(this, uiData, battleData);
+            sub_1BCB25C(this, uiData, battleData);
           this = (ExtraBattleUserInterfaceComponent_o *)v14->m_Items[v11];
           if ( !this )
             break;
@@ -126,7 +126,7 @@ LABEL_20:
             return;
         }
 LABEL_19:
-        sub_1BC3264(this, uiData);
+        sub_1BCB254(this, uiData);
       }
     }
   }

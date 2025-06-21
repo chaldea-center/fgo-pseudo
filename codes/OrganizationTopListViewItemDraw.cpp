@@ -23,12 +23,12 @@ void __fastcall OrganizationTopListViewItemDraw__SetItem(
   UnityEngine_Object_o *v14; // x20
 
   v6 = (OrganizationTopListViewItemDraw_o **)this;
-  if ( (byte_4AFD87B & 1) == 0 )
+  if ( (byte_4B17D59 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, item);
-    sub_1BC3008(&StringLiteral_20351/*"img_shop_0"*/, v7);
-    this = (OrganizationTopListViewItemDraw_o *)sub_1BC3008(&StringLiteral_1/*""*/, v8);
-    byte_4AFD87B = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, item);
+    sub_1BCAFF8(&StringLiteral_20367/*"img_shop_0"*/, v7);
+    this = (OrganizationTopListViewItemDraw_o *)sub_1BCAFF8(&StringLiteral_1/*""*/, v8);
+    byte_4B17D59 = 1;
   }
   if ( item && mode )
   {
@@ -39,7 +39,7 @@ void __fastcall OrganizationTopListViewItemDraw__SetItem(
     if ( System_String__IsNullOrEmpty(imageName, 0LL) )
     {
       v11 = v6[6];
-      imageName = (System_String_o *)StringLiteral_20351/*"img_shop_0"*/;
+      imageName = (System_String_o *)StringLiteral_20367/*"img_shop_0"*/;
       this = (OrganizationTopListViewItemDraw_o *)OrganizationTopListViewItem__get_InfoText(
                                                     item,
                                                     (const MethodInfo *)item);
@@ -69,7 +69,7 @@ void __fastcall OrganizationTopListViewItemDraw__SetItem(
     this = v6[4];
     if ( !this )
 LABEL_23:
-      sub_1BC3264(this, item);
+      sub_1BCB254(this, item);
     UISprite__set_spriteName((UISprite_o *)this, imageName, 0LL);
     v14 = (UnityEngine_Object_o *)v6[5];
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

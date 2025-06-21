@@ -23,14 +23,14 @@ void __fastcall MasterMissionListViewItem___ctor(
   const MethodInfo *v23; // x1
   struct EventMissionEntity_o *v24; // x8
 
-  if ( (byte_4B0525F & 1) == 0 )
+  if ( (byte_4B1F6E5 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_1/*""*/, missionData);
-    byte_4B0525F = 1;
+    sub_1BCAFF8(&StringLiteral_1/*""*/, missionData);
+    byte_4B1F6E5 = 1;
   }
   ListViewItem___ctor((ListViewItem_o *)this, 0LL);
   this->fields.eventMissionEnt = missionData;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.eventMissionEnt, (int32_t)missionData, v7, v8);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventMissionEnt, (int32_t)missionData, v7, v8);
   if ( !missionData )
     goto LABEL_7;
   this->fields.currentEventId = missionData->fields.missionTargetId;
@@ -40,16 +40,16 @@ void __fastcall MasterMissionListViewItem___ctor(
   this->fields.dispNo = missionData->fields.dispNo;
   v14 = (int)StringLiteral_1/*""*/;
   this->fields.condMsg = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.condMsg, v14, v11, v12);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.condMsg, v14, v11, v12);
   this->fields.progVal = 0.0;
   this->fields.targetNum = 0LL;
   this->fields.progNum = 0LL;
   v15 = (int)StringLiteral_1/*""*/;
   this->fields.closedMessage = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.closedMessage, v15, v16, v17);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.closedMessage, v15, v16, v17);
   v18 = (int)StringLiteral_1/*""*/;
   this->fields.progTxt = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.progTxt, v18, v19, v20);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.progTxt, v18, v19, v20);
   eventMissionEnt = this->fields.eventMissionEnt;
   *(_QWORD *)&this->fields.progStatus = 0x400000000LL;
   this->fields.bannerGroupId = missionData->fields.bannerGroup;
@@ -65,7 +65,7 @@ void __fastcall MasterMissionListViewItem___ctor(
         (v24 = this->fields.eventMissionEnt) == 0LL) )
   {
 LABEL_7:
-    sub_1BC3264(eventMissionEnt, v10);
+    sub_1BCB254(eventMissionEnt, v10);
   }
   this->fields.sortValue2 = -v24->fields.id;
   MissionListViewItem__CheckEventMissionAdd((MissionListViewItem_o *)this, v10);
@@ -125,7 +125,7 @@ LABEL_18:
     {
       v8 = this->fields.progStatus;
       if ( (unsigned int)v8 <= 4 )
-        this->fields.sortValue0 = qword_C17FF8[v8];
+        this->fields.sortValue0 = qword_C1BB38[v8];
       if ( sort )
       {
         if ( sort->fields.sortKind != 1 )
@@ -139,7 +139,7 @@ LABEL_18:
         }
       }
     }
-    sub_1BC3264(v5, v6);
+    sub_1BCB254(v5, v6);
   }
   return 0;
 }
@@ -154,7 +154,7 @@ bool __fastcall MasterMissionListViewItem__get_IsHideReward(
 
   eventMissionEnt = this->fields.eventMissionEnt;
   if ( !eventMissionEnt )
-    sub_1BC3264(0LL, method);
+    sub_1BCB254(0LL, method);
   v4 = this->fields.progStatus < 2u;
   return v4 & EventMissionEntity__IsHideReward(eventMissionEnt, 0LL);
 }

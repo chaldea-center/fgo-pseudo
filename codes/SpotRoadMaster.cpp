@@ -1,14 +1,14 @@
 void __fastcall SpotRoadMaster___ctor(SpotRoadMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B02BE1 & 1) == 0 )
+  if ( (byte_4B1D0EA & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_SpotRoadMaster__SpotRoadEntity__int___ctor__, method);
-    byte_4B02BE1 = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_SpotRoadMaster__SpotRoadEntity__int___ctor__, method);
+    byte_4B1D0EA = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     22,
-    (const MethodInfo_32ACD4C *)Method_DataMasterBase_SpotRoadMaster__SpotRoadEntity__int___ctor__);
+    (const MethodInfo_32C5ADC *)Method_DataMasterBase_SpotRoadMaster__SpotRoadEntity__int___ctor__);
 }
 
 
@@ -34,20 +34,20 @@ SpotRoadEntity_array *__fastcall SpotRoadMaster__getList(
   __int64 size; // x10
   Il2CppClass **v19; // x0
 
-  if ( (byte_4B02BE2 & 1) == 0 )
+  if ( (byte_4B1D0EB & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_SpotRoadEntity__get_Count__, *(_QWORD *)&map_id);
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_SpotRoadEntity__get_Item__, v5);
-    sub_1BC3008(&Method_System_Collections_Generic_List_SpotRoadEntity__Add__, v6);
-    sub_1BC3008(&Method_System_Collections_Generic_List_SpotRoadEntity__ToArray__, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_SpotRoadEntity___ctor__, v8);
-    sub_1BC3008(&System_Collections_Generic_List_SpotRoadEntity__TypeInfo, v9);
-    byte_4B02BE2 = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_SpotRoadEntity__get_Count__, *(_QWORD *)&map_id);
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_SpotRoadEntity__get_Item__, v5);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_SpotRoadEntity__Add__, v6);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_SpotRoadEntity__ToArray__, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_SpotRoadEntity___ctor__, v8);
+    sub_1BCAFF8(&System_Collections_Generic_List_SpotRoadEntity__TypeInfo, v9);
+    byte_4B1D0EB = 1;
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_SpotRoadEntity__TypeInfo);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_SpotRoadEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_SpotRoadEntity___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_SpotRoadEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_18;
@@ -56,7 +56,7 @@ SpotRoadEntity_array *__fastcall SpotRoadMaster__getList(
   {
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                                list,
-                                                               (const MethodInfo_324A858 *)Method_System_Collections_ObjectModel_Collection_SpotRoadEntity__get_Count__);
+                                                               (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_SpotRoadEntity__get_Count__);
     if ( v13 >= (int)list )
       break;
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -65,7 +65,7 @@ SpotRoadEntity_array *__fastcall SpotRoadMaster__getList(
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                list,
                                                                v13,
-                                                               (const MethodInfo_324A8E8 *)Method_System_Collections_ObjectModel_Collection_SpotRoadEntity__get_Item__);
+                                                               (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_SpotRoadEntity__get_Item__);
     if ( list )
     {
       v11 = list;
@@ -84,14 +84,14 @@ SpotRoadEntity_array *__fastcall SpotRoadMaster__getList(
           System_Collections_Generic_List_object___AddWithResize(
             v10,
             (Il2CppObject *)list,
-            *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+            *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
         }
         else
         {
           v19 = &items->obj.klass + size;
           v10->fields._size = size + 1;
           v19[4] = (Il2CppClass *)v11;
-          sub_1BC2FAC((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v11, v14, v15);
+          sub_1BCAF9C((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v11, v14, v15);
         }
       }
     }
@@ -102,8 +102,8 @@ SpotRoadEntity_array *__fastcall SpotRoadMaster__getList(
   }
   if ( !v10 )
 LABEL_18:
-    sub_1BC3264(list, v11);
+    sub_1BCB254(list, v11);
   return (SpotRoadEntity_array *)System_Collections_Generic_List_object___ToArray(
                                    v10,
-                                   (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_SpotRoadEntity__ToArray__);
+                                   (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_SpotRoadEntity__ToArray__);
 }

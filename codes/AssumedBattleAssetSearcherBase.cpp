@@ -8,24 +8,24 @@ void __fastcall AssumedBattleAssetSearcherBase___ctor(AssumedBattleAssetSearcher
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B0442C & 1) == 0 )
+  if ( (byte_4B1E942 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_string___ctor__, method);
-    sub_1BC3008(&System_Collections_Generic_List_string__TypeInfo, v3);
-    byte_4B0442C = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string___ctor__, method);
+    sub_1BCAFF8(&System_Collections_Generic_List_string__TypeInfo, v3);
+    byte_4B1E942 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_string__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.assetPathList = (struct System_Collections_Generic_List_string__o *)v4;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.assetPathList, (int32_t)v4, v5, v6);
-  v7 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_string__TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.assetPathList, (int32_t)v4, v5, v6);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.audioPathList = (struct System_Collections_Generic_List_string__o *)v7;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.audioPathList, (int32_t)v7, v8, v9);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.audioPathList, (int32_t)v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -42,10 +42,10 @@ void __fastcall AssumedBattleAssetSearcherBase__AppendPreloadedAssetPath(
   __int64 size; // x10
   Il2CppClass **v10; // x8
 
-  if ( (byte_4B04427 & 1) == 0 )
+  if ( (byte_4B1E93D & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__Add__, path);
-    byte_4B04427 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__Add__, path);
+    byte_4B1E93D = 1;
   }
   assetPathList = (System_Collections_Generic_List_object__o *)this->fields.assetPathList;
   if ( !assetPathList
@@ -54,7 +54,7 @@ void __fastcall AssumedBattleAssetSearcherBase__AppendPreloadedAssetPath(
         ++assetPathList->fields._version,
         !items) )
   {
-    sub_1BC3264(assetPathList, path);
+    sub_1BCB254(assetPathList, path);
   }
   size = assetPathList->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -62,14 +62,14 @@ void __fastcall AssumedBattleAssetSearcherBase__AppendPreloadedAssetPath(
     System_Collections_Generic_List_object___AddWithResize(
       assetPathList,
       (Il2CppObject *)path,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
   }
   else
   {
     v10 = &items->obj.klass + size;
     assetPathList->fields._size = size + 1;
     v10[4] = (Il2CppClass *)path;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v10 + 4), (int32_t)path, (int32_t)method, v3);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v10 + 4), (int32_t)path, (int32_t)method, v3);
   }
 }
 
@@ -86,10 +86,10 @@ void __fastcall AssumedBattleAssetSearcherBase__AppendPreloadedAudioAssetPath(
   __int64 size; // x10
   Il2CppClass **v10; // x8
 
-  if ( (byte_4B04429 & 1) == 0 )
+  if ( (byte_4B1E93F & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__Add__, path);
-    byte_4B04429 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__Add__, path);
+    byte_4B1E93F = 1;
   }
   audioPathList = (System_Collections_Generic_List_object__o *)this->fields.audioPathList;
   if ( !audioPathList
@@ -98,7 +98,7 @@ void __fastcall AssumedBattleAssetSearcherBase__AppendPreloadedAudioAssetPath(
         ++audioPathList->fields._version,
         !items) )
   {
-    sub_1BC3264(audioPathList, path);
+    sub_1BCB254(audioPathList, path);
   }
   size = audioPathList->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -106,14 +106,14 @@ void __fastcall AssumedBattleAssetSearcherBase__AppendPreloadedAudioAssetPath(
     System_Collections_Generic_List_object___AddWithResize(
       audioPathList,
       (Il2CppObject *)path,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
   }
   else
   {
     v10 = &items->obj.klass + size;
     audioPathList->fields._size = size + 1;
     v10[4] = (Il2CppClass *)path;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v10 + 4), (int32_t)path, (int32_t)method, v3);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v10 + 4), (int32_t)path, (int32_t)method, v3);
   }
 }
 
@@ -124,17 +124,17 @@ System_String_array *__fastcall AssumedBattleAssetSearcherBase__GetPreloadedAsse
 {
   struct System_Collections_Generic_List_string__o *assetPathList; // x0
 
-  if ( (byte_4B04428 & 1) == 0 )
+  if ( (byte_4B1E93E & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__ToArray__, method);
-    byte_4B04428 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__ToArray__, method);
+    byte_4B1E93E = 1;
   }
   assetPathList = this->fields.assetPathList;
   if ( !assetPathList )
-    sub_1BC3264(0LL, method);
+    sub_1BCB254(0LL, method);
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   (System_Collections_Generic_List_object__o *)assetPathList,
-                                  (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -144,17 +144,17 @@ System_String_array *__fastcall AssumedBattleAssetSearcherBase__GetPreloadedAudi
 {
   struct System_Collections_Generic_List_string__o *audioPathList; // x0
 
-  if ( (byte_4B0442A & 1) == 0 )
+  if ( (byte_4B1E940 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_string__ToArray__, method);
-    byte_4B0442A = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__ToArray__, method);
+    byte_4B1E940 = 1;
   }
   audioPathList = this->fields.audioPathList;
   if ( !audioPathList )
-    sub_1BC3264(0LL, method);
+    sub_1BCB254(0LL, method);
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   (System_Collections_Generic_List_object__o *)audioPathList,
-                                  (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -167,16 +167,16 @@ bool __fastcall AssumedBattleAssetSearcherBase__HasAnyPreloadedAssetPaths(
   struct System_Collections_Generic_List_string__o *audioPathList; // x9
 
   v2 = this;
-  if ( (byte_4B0442B & 1) == 0 )
+  if ( (byte_4B1E941 & 1) == 0 )
   {
-    this = (AssumedBattleAssetSearcherBase_o *)sub_1BC3008(
+    this = (AssumedBattleAssetSearcherBase_o *)sub_1BCAFF8(
                                                  &Method_System_Collections_Generic_List_string__get_Count__,
                                                  method);
-    byte_4B0442B = 1;
+    byte_4B1E941 = 1;
   }
   assetPathList = v2->fields.assetPathList;
   if ( !assetPathList || (audioPathList = v2->fields.audioPathList) == 0LL )
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   return audioPathList->fields._size + assetPathList->fields._size > 0;
 }
 
@@ -189,7 +189,7 @@ void __fastcall AssumedBattleAssetSearcherBase__SetManager(
   const MethodInfo *v3; // x3
 
   this->fields.manager = manager;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.manager, (int32_t)manager, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.manager, (int32_t)manager, (int32_t)method, v3);
 }
 
 

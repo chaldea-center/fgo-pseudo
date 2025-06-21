@@ -10,10 +10,10 @@ void __fastcall CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, 
 
   v3 = CharaGraphSortLogicBase__ClearedIcon((const MethodInfo *)this);
   this->fields._IconInfo1_k__BackingField = v3;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)v3, v4, v5);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)v3, v4, v5);
   v7 = CharaGraphSortLogicBase__ClearedIcon(v6);
   this->fields._IconInfo2_k__BackingField = v7;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v7, v8, v9);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -25,15 +25,15 @@ IconLabelInfo_o *__fastcall CharaGraphSortLogicBase__ClearedIcon(const MethodInf
   __int64 v3; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B0139E & 1) == 0 )
+  if ( (byte_4B1B891 & 1) == 0 )
   {
-    sub_1BC3008(&IconLabelInfo_TypeInfo, v1);
-    byte_4B0139E = 1;
+    sub_1BCAFF8(&IconLabelInfo_TypeInfo, v1);
+    byte_4B1B891 = 1;
   }
-  v2 = (IconLabelInfo_o *)sub_1BC3254(IconLabelInfo_TypeInfo);
+  v2 = (IconLabelInfo_o *)sub_1BCB244(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v2, 0LL);
   if ( !v2 )
-    sub_1BC3264(v3, v4);
+    sub_1BCB254(v3, v4);
   IconLabelInfo__Clear(v2, 0LL);
   return v2;
 }
@@ -53,7 +53,7 @@ void __fastcall CharaGraphSortLogicBase__InitSortValue(CharaGraphSortLogicBase_o
     || (IconLabelInfo__Clear(IconInfo1_k__BackingField, 0LL),
         (IconInfo1_k__BackingField = this->fields._IconInfo2_k__BackingField) == 0LL) )
   {
-    sub_1BC3264(IconInfo1_k__BackingField, method);
+    sub_1BCB254(IconInfo1_k__BackingField, method);
   }
   IconLabelInfo__Clear(IconInfo1_k__BackingField, 0LL);
 }
@@ -67,7 +67,7 @@ void __fastcall CharaGraphSortLogicBase__SetListViewItem(
   const MethodInfo *v3; // x3
 
   this->fields.item = inputItem;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.item, (int32_t)inputItem, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.item, (int32_t)inputItem, (int32_t)method, v3);
 }
 
 
@@ -79,7 +79,7 @@ void __fastcall CharaGraphSortLogicBase__SetListViewSort(
   const MethodInfo *v3; // x3
 
   this->fields.sort = inputSort;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3);
 }
 
 
@@ -94,19 +94,18 @@ void __fastcall CharaGraphSortLogicBase__SetSortValue(CharaGraphSortLogicBase_o 
 
 void __fastcall CharaGraphSortLogicBase__SetSortValueLocal(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
-  CharaGraphListViewItemBase_o *item; // x0
+  struct CharaGraphListViewItemBase_o *item; // x8
   struct ListViewSort_o *sort; // x8
 
   item = this->fields.item;
   if ( !item )
     goto LABEL_7;
-  item = (CharaGraphListViewItemBase_o *)CharaGraphListViewItemBase__get_IsDispChoice(item, 0LL);
-  if ( ((unsigned __int8)item & 1) == 0 )
+  if ( item->fields._IsSwapChoice_k__BackingField == item->fields._IsChoice_k__BackingField )
     return;
   sort = this->fields.sort;
   if ( !sort )
 LABEL_7:
-    sub_1BC3264(item, method);
+    sub_1BCB254(this, method);
   if ( sort->fields.isChoiceSort )
     this->fields._SortValue0_k__BackingField = 10LL;
 }
@@ -189,7 +188,7 @@ void __fastcall CharaGraphSortLogicBase__set_IconInfo1(
   const MethodInfo *v3; // x3
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -201,7 +200,7 @@ void __fastcall CharaGraphSortLogicBase__set_IconInfo2(
   const MethodInfo *v3; // x3
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

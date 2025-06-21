@@ -2,14 +2,14 @@ void __fastcall ServantAnimationOverwriteEntity___ctor(
         ServantAnimationOverwriteEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B02803 & 1) == 0 )
+  if ( (byte_4B1CD0C & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B02803 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B1CD0C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ System_String_o *__fastcall ServantAnimationOverwriteEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4B02802 & 1) == 0 )
+  if ( (byte_4B1CD0B & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&svtLimitCount);
-    byte_4B02802 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&svtLimitCount);
+    byte_4B1CD0B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            svtLimitCount,
            idx,
-           (const MethodInfo_300047C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30190BC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

@@ -54,14 +54,14 @@ void __fastcall PresentBoxNotificationListViewItemDraw__SetItem(
       if ( !nameTextLabel )
         goto LABEL_13;
     }
-    ItemIconComponent__SetGift_39952716((ItemIconComponent_o *)nameTextLabel, (int32_t)item, objectId, -1, 0, 0LL);
+    ItemIconComponent__SetGift_40107980((ItemIconComponent_o *)nameTextLabel, (int32_t)item, objectId, -1, 0, 0LL);
     nameTextLabel = this->fields.nameTextLabel;
     if ( !nameTextLabel
       || (UILabel__set_text(nameTextLabel, v6->fields.presentName, 0LL),
           (nameTextLabel = this->fields.countTextLabel) == 0LL) )
     {
 LABEL_13:
-      sub_1BC3264(nameTextLabel, item);
+      sub_1BCB254(nameTextLabel, item);
     }
     UILabel__set_text(nameTextLabel, v6->fields.presentCount, 0LL);
   }

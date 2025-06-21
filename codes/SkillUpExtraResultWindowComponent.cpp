@@ -2,10 +2,10 @@ void __fastcall SkillUpExtraResultWindowComponent___ctor(
         SkillUpExtraResultWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B05EF4 & 1) == 0 )
+  if ( (byte_4B20436 & 1) == 0 )
   {
-    sub_1BC3008(&BaseDialog_TypeInfo, method);
-    byte_4B05EF4 = 1;
+    sub_1BCAFF8(&BaseDialog_TypeInfo, method);
+    byte_4B20436 = 1;
   }
   this->fields.detailTextFontSize = 16;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -28,20 +28,20 @@ void __fastcall SkillUpExtraResultWindowComponent__CloseToNext(
   const MethodInfo *v11; // x3
   System_Action_o *v12; // x20
 
-  if ( (byte_4B05EF3 & 1) == 0 )
+  if ( (byte_4B20435 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, callback);
-    sub_1BC3008(&Method_SkillUpExtraResultWindowComponent___c__DisplayClass22_0__CloseToNext_b__0__, v5);
-    sub_1BC3008(&SkillUpExtraResultWindowComponent___c__DisplayClass22_0_TypeInfo, v6);
-    byte_4B05EF3 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, callback);
+    sub_1BCAFF8(&Method_SkillUpExtraResultWindowComponent___c__DisplayClass22_0__CloseToNext_b__0__, v5);
+    sub_1BCAFF8(&SkillUpExtraResultWindowComponent___c__DisplayClass22_0_TypeInfo, v6);
+    byte_4B20435 = 1;
   }
-  v7 = sub_1BC3254(SkillUpExtraResultWindowComponent___c__DisplayClass22_0_TypeInfo);
+  v7 = sub_1BCB244(SkillUpExtraResultWindowComponent___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0LL);
   if ( !v7 )
-    sub_1BC3264(v8, v9);
+    sub_1BCB254(v8, v9);
   *(_QWORD *)(v7 + 16) = callback;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)callback, v10, v11);
-  v12 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v7 + 16), (int32_t)callback, v10, v11);
+  v12 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(
     v12,
     (Il2CppObject *)v7,
@@ -95,19 +95,19 @@ void __fastcall SkillUpExtraResultWindowComponent__OpenSkillChangeResultInfo(
   int32_t svtId; // [xsp+14h] [xbp-6Ch] BYREF
   System_String_o *resultText; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4B05EF0 & 1) == 0 )
+  if ( (byte_4B20432 & 1) == 0 )
   {
-    sub_1BC3008(&AtlasManager_TypeInfo, *(_QWORD *)&oldSkillId);
-    sub_1BC3008(&int_TypeInfo, v18);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v19);
-    sub_1BC3008(&Method_SkillUpExtraResultWindowComponent_OpenSkillChangeResultInfo__, v20);
-    sub_1BC3008(&string_TypeInfo, v21);
-    sub_1BC3008(&StringLiteral_20165/*"img_combine_arrow_sp"*/, v22);
-    sub_1BC3008(&StringLiteral_3806/*"COSTUME_CHANGE_SKILL_TITLE_{0}_{1}"*/, v23);
-    sub_1BC3008(&StringLiteral_20376/*"img_skillwindow_sp"*/, v24);
-    sub_1BC3008(&StringLiteral_20105/*"img_arrow_change"*/, v25);
-    sub_1BC3008(&StringLiteral_3805/*"COSTUME_CHANGE_SKILL_TITLE"*/, v26);
-    byte_4B05EF0 = 1;
+    sub_1BCAFF8(&AtlasManager_TypeInfo, *(_QWORD *)&oldSkillId);
+    sub_1BCAFF8(&int_TypeInfo, v18);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v19);
+    sub_1BCAFF8(&Method_SkillUpExtraResultWindowComponent_OpenSkillChangeResultInfo__, v20);
+    sub_1BCAFF8(&string_TypeInfo, v21);
+    sub_1BCAFF8(&StringLiteral_20180/*"img_combine_arrow_sp"*/, v22);
+    sub_1BCAFF8(&StringLiteral_3808/*"COSTUME_CHANGE_SKILL_TITLE_{0}_{1}"*/, v23);
+    sub_1BCAFF8(&StringLiteral_20392/*"img_skillwindow_sp"*/, v24);
+    sub_1BCAFF8(&StringLiteral_20120/*"img_arrow_change"*/, v25);
+    sub_1BCAFF8(&StringLiteral_3807/*"COSTUME_CHANGE_SKILL_TITLE"*/, v26);
+    byte_4B20432 = 1;
   }
   resultText = 0LL;
   skillChangeInfoDetailOld = this->fields.skillChangeInfoDetailOld;
@@ -124,8 +124,8 @@ void __fastcall SkillUpExtraResultWindowComponent__OpenSkillChangeResultInfo(
   UILabel__set_fontSize(skillChangeInfoDetailOld, this->fields.detailTextFontSize, 0LL);
   v28 = Method_SkillUpExtraResultWindowComponent_OpenSkillChangeResultInfo__;
   if ( (*((_BYTE *)Method_SkillUpExtraResultWindowComponent_OpenSkillChangeResultInfo__ + 83) & 2) != 0 )
-    v28 = (_QWORD *)sub_1BC3020(Method_SkillUpExtraResultWindowComponent_OpenSkillChangeResultInfo__);
-  v29 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v28, v28[4]);
+    v28 = (_QWORD *)sub_1BCB010(Method_SkillUpExtraResultWindowComponent_OpenSkillChangeResultInfo__);
+  v29 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v28, v28[4]);
   OverwriteAssetSoundName__PlaySystemSe(v29, 6, 0, 0LL);
   skillChangeInfoDetailOld = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !skillChangeInfoDetailOld )
@@ -134,15 +134,15 @@ void __fastcall SkillUpExtraResultWindowComponent__OpenSkillChangeResultInfo(
   windowBgSprite = this->fields.windowBgSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetDownloadCommonSprite(windowBgSprite, (System_String_o *)StringLiteral_20376/*"img_skillwindow_sp"*/, 0LL);
-  AtlasManager__SetDownloadCommonSprite(this->fields.arrowSprite, (System_String_o *)StringLiteral_20105/*"img_arrow_change"*/, 0LL);
+  AtlasManager__SetDownloadCommonSprite(windowBgSprite, (System_String_o *)StringLiteral_20392/*"img_skillwindow_sp"*/, 0LL);
+  AtlasManager__SetDownloadCommonSprite(this->fields.arrowSprite, (System_String_o *)StringLiteral_20120/*"img_arrow_change"*/, 0LL);
   AtlasManager__SetDownloadCommonSprite(
     this->fields.skillChangeInfoArrowSprite1,
-    (System_String_o *)StringLiteral_20165/*"img_combine_arrow_sp"*/,
+    (System_String_o *)StringLiteral_20180/*"img_combine_arrow_sp"*/,
     0LL);
   AtlasManager__SetDownloadCommonSprite(
     this->fields.skillChangeInfoArrowSprite2,
-    (System_String_o *)StringLiteral_20165/*"img_combine_arrow_sp"*/,
+    (System_String_o *)StringLiteral_20180/*"img_combine_arrow_sp"*/,
     0LL);
   skillChangeInfoDetailOld = (UILabel_o *)this->fields.skillChangeInfo;
   if ( !skillChangeInfoDetailOld )
@@ -160,17 +160,17 @@ void __fastcall SkillUpExtraResultWindowComponent__OpenSkillChangeResultInfo(
       goto LABEL_19;
     }
 LABEL_20:
-    sub_1BC3264(skillChangeInfoDetailOld, *(_QWORD *)&oldSkillId);
+    sub_1BCB254(skillChangeInfoDetailOld, *(_QWORD *)&oldSkillId);
   }
   BasicHelper__SetActiveSafely(skillChangeInfoTitle, 1, 0LL);
   svtId = svtCostumeEnt->fields.svtId;
   v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &svtId, v32, v33, v34);
   id = svtCostumeEnt->fields.id;
   v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &id, v36, v37, v38);
-  v40 = System_String__Format_62389940((System_String_o *)StringLiteral_3806/*"COSTUME_CHANGE_SKILL_TITLE_{0}_{1}"*/, v35, v39, 0LL);
+  v40 = System_String__Format_62491716((System_String_o *)StringLiteral_3808/*"COSTUME_CHANGE_SKILL_TITLE_{0}_{1}"*/, v35, v39, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3805/*"COSTUME_CHANGE_SKILL_TITLE"*/, 0LL);
+  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_3807/*"COSTUME_CHANGE_SKILL_TITLE"*/, 0LL);
   LocalizationManager__TryGet(&resultText, v40, v41, 0LL);
   v42 = this->fields.skillChangeInfoTitle;
   skillChangeInfoDetailOld = (UILabel_o *)System_String__Format(
@@ -232,16 +232,16 @@ void __fastcall SkillUpExtraResultWindowComponent__SetSkillInfo(
   Il2CppObject *v38; // [xsp+40h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+48h] [xbp-68h] BYREF
 
-  if ( (byte_4B05EF1 & 1) == 0 )
+  if ( (byte_4B20433 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMaster_SkillMaster___, *(_QWORD *)&oldSkillId);
-    sub_1BC3008(&DataManager_TypeInfo, v15);
-    sub_1BC3008(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__, v16);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v17);
-    sub_1BC3008(&StringLiteral_6904/*"GET_SKILL_NAME"*/, v18);
-    sub_1BC3008(&StringLiteral_2883/*"BEFORE_CHANGE_SKILL_SUB_TITLE_SPCIAL"*/, v19);
-    sub_1BC3008(&StringLiteral_1918/*"AFTER_CHANGE_SKILL_SUB_TITLE_SPCIAL"*/, v20);
-    byte_4B05EF1 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMaster_SkillMaster___, *(_QWORD *)&oldSkillId);
+    sub_1BCAFF8(&DataManager_TypeInfo, v15);
+    sub_1BCAFF8(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__, v16);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v17);
+    sub_1BCAFF8(&StringLiteral_6909/*"GET_SKILL_NAME"*/, v18);
+    sub_1BCAFF8(&StringLiteral_2885/*"BEFORE_CHANGE_SKILL_SUB_TITLE_SPCIAL"*/, v19);
+    sub_1BCAFF8(&StringLiteral_1920/*"AFTER_CHANGE_SKILL_SUB_TITLE_SPCIAL"*/, v20);
+    byte_4B20433 = 1;
   }
   v38 = 0LL;
   entity = 0LL;
@@ -267,20 +267,20 @@ void __fastcall SkillUpExtraResultWindowComponent__SetSkillInfo(
   skillChangeInfoSubTitleOld = this->fields.skillChangeInfoSubTitleOld;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  skillChangeInfoDetailOld = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2883/*"BEFORE_CHANGE_SKILL_SUB_TITLE_SPCIAL"*/, 0LL);
+  skillChangeInfoDetailOld = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2885/*"BEFORE_CHANGE_SKILL_SUB_TITLE_SPCIAL"*/, 0LL);
   if ( !skillChangeInfoSubTitleOld )
     goto LABEL_42;
   UILabel__set_text(skillChangeInfoSubTitleOld, (System_String_o *)skillChangeInfoDetailOld, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  skillChangeInfoDetailOld = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_SkillMaster___);
+  skillChangeInfoDetailOld = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !skillChangeInfoDetailOld )
     goto LABEL_42;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)skillChangeInfoDetailOld,
          &entity,
          oldSkillId,
-         (const MethodInfo_32AF0BC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
+         (const MethodInfo_32C7E4C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
   {
     skillChangeInfoDetailOld = (UILabel_o *)entity;
     if ( !entity )
@@ -289,7 +289,7 @@ void __fastcall SkillUpExtraResultWindowComponent__SetSkillInfo(
     skillChangeInfoNameOld = this->fields.skillChangeInfoNameOld;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_6904/*"GET_SKILL_NAME"*/, 0LL);
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_6909/*"GET_SKILL_NAME"*/, 0LL);
     skillChangeInfoDetailOld = (UILabel_o *)System_String__Format(v24, (Il2CppObject *)name, 0LL);
     if ( !skillChangeInfoNameOld )
       goto LABEL_42;
@@ -304,20 +304,20 @@ void __fastcall SkillUpExtraResultWindowComponent__SetSkillInfo(
   skillChangeInfoSubTitleNow = this->fields.skillChangeInfoSubTitleNow;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  skillChangeInfoDetailOld = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_1918/*"AFTER_CHANGE_SKILL_SUB_TITLE_SPCIAL"*/, 0LL);
+  skillChangeInfoDetailOld = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_1920/*"AFTER_CHANGE_SKILL_SUB_TITLE_SPCIAL"*/, 0LL);
   if ( !skillChangeInfoSubTitleNow )
     goto LABEL_42;
   UILabel__set_text(skillChangeInfoSubTitleNow, (System_String_o *)skillChangeInfoDetailOld, 0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  skillChangeInfoDetailOld = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_SkillMaster___);
+  skillChangeInfoDetailOld = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !skillChangeInfoDetailOld )
     goto LABEL_42;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)skillChangeInfoDetailOld,
          &v38,
          nowSkillId,
-         (const MethodInfo_32AF0BC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
+         (const MethodInfo_32C7E4C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
   {
     skillChangeInfoDetailOld = (UILabel_o *)v38;
     if ( !v38 )
@@ -326,7 +326,7 @@ void __fastcall SkillUpExtraResultWindowComponent__SetSkillInfo(
     skillChangeInfoNameNow = this->fields.skillChangeInfoNameNow;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_6904/*"GET_SKILL_NAME"*/, 0LL);
+    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_6909/*"GET_SKILL_NAME"*/, 0LL);
     skillChangeInfoDetailOld = (UILabel_o *)System_String__Format(v28, (Il2CppObject *)v35, 0LL);
     if ( !skillChangeInfoNameNow )
       goto LABEL_42;
@@ -349,14 +349,14 @@ void __fastcall SkillUpExtraResultWindowComponent__SetSkillInfo(
     GameObjectHelper__SetActiveSafely(this->fields.skillExtraInfo, 1, 0LL);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    skillChangeInfoDetailOld = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_SkillMaster___);
+    skillChangeInfoDetailOld = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_SkillMaster___);
     if ( !skillChangeInfoDetailOld )
       goto LABEL_42;
     if ( DataMasterBase_object__object__int___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)skillChangeInfoDetailOld,
            &v33,
            exNowSkillId,
-           (const MethodInfo_32AF0BC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
+           (const MethodInfo_32C7E4C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
     {
       skillChangeInfoDetailOld = (UILabel_o *)v33;
       if ( v33 )
@@ -365,7 +365,7 @@ void __fastcall SkillUpExtraResultWindowComponent__SetSkillInfo(
         skillExtraInfoNameNow = this->fields.skillExtraInfoNameNow;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v30 = LocalizationManager__Get((System_String_o *)StringLiteral_6904/*"GET_SKILL_NAME"*/, 0LL);
+        v30 = LocalizationManager__Get((System_String_o *)StringLiteral_6909/*"GET_SKILL_NAME"*/, 0LL);
         skillChangeInfoDetailOld = (UILabel_o *)System_String__Format(v30, (Il2CppObject *)v32, 0LL);
         if ( skillExtraInfoNameNow )
         {
@@ -380,7 +380,7 @@ void __fastcall SkillUpExtraResultWindowComponent__SetSkillInfo(
         }
       }
 LABEL_42:
-      sub_1BC3264(skillChangeInfoDetailOld, *(_QWORD *)&oldSkillId);
+      sub_1BCB254(skillChangeInfoDetailOld, *(_QWORD *)&oldSkillId);
     }
   }
 }
@@ -407,17 +407,17 @@ void __fastcall SkillUpExtraResultWindowComponent__SetupLayout(
   float v17; // s1
   float v18; // s0
 
-  if ( (byte_4B05EF2 & 1) == 0 )
+  if ( (byte_4B20434 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, isExtra);
-    byte_4B05EF2 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, isExtra);
+    byte_4B20434 = 1;
   }
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.layoutDatas, 0LL);
   if ( !IsNullOrEmpty )
   {
     layoutDatas = this->fields.layoutDatas;
     if ( !layoutDatas )
-      sub_1BC3264(IsNullOrEmpty, v6);
+      sub_1BCB254(IsNullOrEmpty, v6);
     v9 = *(_QWORD *)&layoutDatas->max_length;
     if ( (int)v9 >= 1 )
     {
@@ -426,7 +426,7 @@ void __fastcall SkillUpExtraResultWindowComponent__SetupLayout(
       do
       {
         if ( v10 >= (unsigned int)v9 )
-          sub_1BC326C(IsNullOrEmpty, v6, v7);
+          sub_1BCB25C(IsNullOrEmpty, v6, v7);
         v12 = *(UnityEngine_Object_o **)(p_y - 5);
         v13 = *(p_y - 3);
         v14 = *(p_y - 2);
@@ -445,7 +445,7 @@ void __fastcall SkillUpExtraResultWindowComponent__SetupLayout(
             v18 = v15;
           else
             v18 = v13;
-          GameObjectExtensions__SetLocalPosition_35211816(
+          GameObjectExtensions__SetLocalPosition_35356744(
             (UnityEngine_GameObject_o *)v12,
             *(UnityEngine_Vector2_o *)(&v17 - 1),
             0LL);

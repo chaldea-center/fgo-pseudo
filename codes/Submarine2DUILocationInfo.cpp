@@ -57,18 +57,18 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
   __int64 v56; // x10
   Il2CppObject *v57; // x8
 
-  if ( (byte_4AFE9D7 & 1) == 0 )
+  if ( (byte_4B18EBF & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_Rect__Add__, method);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Rect___ctor__, v3);
-    sub_1BC3008(&System_Collections_Generic_List_Rect__TypeInfo, v4);
-    byte_4AFE9D7 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Rect__Add__, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Rect___ctor__, v3);
+    sub_1BCAFF8(&System_Collections_Generic_List_Rect__TypeInfo, v4);
+    byte_4B18EBF = 1;
   }
   Base2DUILocationInfo___ctor((Base2DUILocationInfo_o *)this, 0LL);
-  v5 = (System_Collections_Generic_List_Rect__o *)sub_1BC3254(System_Collections_Generic_List_Rect__TypeInfo);
+  v5 = (System_Collections_Generic_List_Rect__o *)sub_1BCB244(System_Collections_Generic_List_Rect__TypeInfo);
   System_Collections_Generic_List_Rect____ctor(
     v5,
-    (const MethodInfo_36B1354 *)Method_System_Collections_Generic_List_Rect___ctor__);
+    (const MethodInfo_36CA0E4 *)Method_System_Collections_Generic_List_Rect___ctor__);
   v6 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, Il2CppMethodPointer))this->klass->vtable._8_GetScanDialogRect.method)(
          this,
          this->klass->vtable._9_GetStorageRect.methodPtr);
@@ -85,7 +85,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v8,
-      *(const MethodInfo_36B1BE0 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_36CA970 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
@@ -110,7 +110,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v16,
-      *(const MethodInfo_36B1BE0 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+      *(const MethodInfo_36CA970 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
   }
   else
   {
@@ -135,7 +135,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v24,
-      *(const MethodInfo_36B1BE0 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+      *(const MethodInfo_36CA970 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
   }
   else
   {
@@ -160,7 +160,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v32,
-      *(const MethodInfo_36B1BE0 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+      *(const MethodInfo_36CA970 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
   }
   else
   {
@@ -185,7 +185,7 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v40,
-      *(const MethodInfo_36B1BE0 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+      *(const MethodInfo_36CA970 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
   }
   else
   {
@@ -204,14 +204,14 @@ void __fastcall Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *th
   ++v5->fields._version;
   if ( !v54 )
 LABEL_29:
-    sub_1BC3264(v6, v7);
+    sub_1BCB254(v6, v7);
   v56 = v5->fields._size;
   if ( (unsigned int)v56 >= v54->max_length )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v5,
       *(UnityEngine_Rect_o *)&v50,
-      *(const MethodInfo_36B1BE0 **)(*(_QWORD *)(v55[4] + 192LL) + 112LL));
+      *(const MethodInfo_36CA970 **)(*(_QWORD *)(v55[4] + 192LL) + 112LL));
   }
   else
   {
@@ -223,7 +223,7 @@ LABEL_29:
     HIDWORD(v57[2].monitor) = v53;
   }
   this->fields._rects_k__BackingField = v5;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)v5, v48, v49);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)v5, v48, v49);
 }
 
 

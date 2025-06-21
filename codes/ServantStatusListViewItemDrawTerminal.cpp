@@ -2,7 +2,7 @@ void __fastcall ServantStatusListViewItemDrawTerminal___ctor(
         ServantStatusListViewItemDrawTerminal_o *this,
         const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  ServantStatusListViewItemDraw___ctor((ServantStatusListViewItemDraw_o *)this, 0LL);
 }
 
 

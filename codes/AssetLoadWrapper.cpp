@@ -1,3 +1,4 @@
+// local variable allocation has failed, the output may be wrong!
 bool __fastcall AssetLoadWrapper__LoadAssetStorage(
         AssetLoadWrapper_o *this,
         System_String_o *path,
@@ -10,19 +11,23 @@ bool __fastcall AssetLoadWrapper__LoadAssetStorage(
   bool AssetStorage; // w21
   AssetPathLoadCounter_o *pathCounter; // x0
 
-  if ( (byte_4B01079 & 1) == 0 )
+  if ( (byte_4B1B566 & 1) == 0 )
   {
-    sub_1BC3008(&AssetManager_TypeInfo, path);
-    byte_4B01079 = 1;
+    sub_1BCAFF8(&AssetManager_TypeInfo, path);
+    byte_4B1B566 = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetStorage = AssetManager__loadAssetStorage(path, callbackFunc, maxParallelLoad, 0LL);
+  AssetStorage = AssetManager__loadAssetStorage(
+                   path,
+                   callbackFunc,
+                   maxParallelLoad,
+                   *(const MethodInfo **)&maxParallelLoad);
   if ( AssetStorage )
   {
     pathCounter = this->fields.pathCounter;
     if ( !pathCounter )
-      sub_1BC3264(0LL, v9);
+      sub_1BCB254(0LL, v9);
     AssetPathLoadCounter__AddCount(pathCounter, path, v10);
   }
   return AssetStorage;
@@ -31,14 +36,14 @@ bool __fastcall AssetLoadWrapper__LoadAssetStorage(
 
 void __fastcall AssetLoadWrapper__Release(AssetLoadWrapper_o *this, System_String_o *path, const MethodInfo *method)
 {
-  if ( (byte_4B0107A & 1) == 0 )
+  if ( (byte_4B1B567 & 1) == 0 )
   {
-    sub_1BC3008(&AssetManager_TypeInfo, path);
-    byte_4B0107A = 1;
+    sub_1BCAFF8(&AssetManager_TypeInfo, path);
+    byte_4B1B567 = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAssetStorage(path, 0LL);
+  AssetManager__releaseAssetStorage(path, (const MethodInfo *)path);
 }
 
 
@@ -57,6 +62,6 @@ void __fastcall AssetLoadWrapper__ReleaseAssetStorage(
     this->klass[1]._1.image);
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1BC3264(0LL, v5);
+    sub_1BCB254(0LL, v5);
   AssetPathLoadCounter__SubCount(pathCounter, path, v6);
 }

@@ -9,22 +9,22 @@ void __fastcall CodeInputRequest__beginRequest(
         System_String_o *code,
         const MethodInfo *method)
 {
-  if ( (byte_4B03A4B & 1) == 0 )
+  if ( (byte_4B1DF56 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_17871/*"code"*/, code);
-    byte_4B03A4B = 1;
+    sub_1BCAFF8(&StringLiteral_17882/*"code"*/, code);
+    byte_4B1DF56 = 1;
   }
-  RequestBase__addField_43185568((RequestBase_o *)this, (System_String_o *)StringLiteral_17871/*"code"*/, code, 0LL);
+  RequestBase__addField_43348616((RequestBase_o *)this, (System_String_o *)StringLiteral_17882/*"code"*/, code, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
 
 System_String_o *__fastcall CodeInputRequest__getMockData(CodeInputRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B03A4A & 1) == 0 )
+  if ( (byte_4B1DF55 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_1/*""*/, method);
-    byte_4B03A4A = 1;
+    sub_1BCAFF8(&StringLiteral_1/*""*/, method);
+    byte_4B1DF55 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -35,16 +35,16 @@ System_String_o *__fastcall CodeInputRequest__getURL(CodeInputRequest_o *this, c
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B03A49 & 1) == 0 )
+  if ( (byte_4B1DF54 & 1) == 0 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, method);
-    sub_1BC3008(&StringLiteral_17872/*"code/input"*/, v2);
-    byte_4B03A49 = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
+    sub_1BCAFF8(&StringLiteral_17883/*"code/input"*/, v2);
+    byte_4B1DF54 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_17872/*"code/input"*/, 0LL);
+  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_17883/*"code/input"*/, 0LL);
 }
 
 
@@ -60,17 +60,17 @@ void __fastcall CodeInputRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_4B03A4C & 1) == 0 )
+  if ( (byte_4B1DF57 & 1) == 0 )
   {
-    sub_1BC3008(&JsonManager_TypeInfo, responseList);
-    sub_1BC3008(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BC3008(&StringLiteral_21997/*"ng"*/, v6);
-    byte_4B03A4C = 1;
+    sub_1BCAFF8(&JsonManager_TypeInfo, responseList);
+    sub_1BCAFF8(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v6);
+    byte_4B1DF57 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(30, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_43184840(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_43347888(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -79,7 +79,7 @@ void __fastcall CodeInputRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_21997/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_22015/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

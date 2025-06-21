@@ -7,17 +7,17 @@ void __fastcall WarClearReward___ctor(WarClearReward_o *this, const MethodInfo *
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4AFF341 & 1) == 0 )
+  if ( (byte_4B19816 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_1/*""*/, method);
-    byte_4AFF341 = 1;
+    sub_1BCAFF8(&StringLiteral_1/*""*/, method);
+    byte_4B19816 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   *(_QWORD *)&this->fields.giftId = 0LL;
   v3 = (int)StringLiteral_1/*""*/;
   this->fields.title = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.title, v3, v4, v5);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.title, v3, v4, v5);
   v6 = (int)StringLiteral_1/*""*/;
   this->fields.message = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.message, v6, v7, v8);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.message, v6, v7, v8);
 }

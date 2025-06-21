@@ -13,34 +13,34 @@ void __fastcall EventBuddyPointResultManager___cctor(const MethodInfo *method)
   struct EventBuddyPointResultManager_StaticFields *v11; // x0
   struct EventBuddyPointResultManager_StaticFields *v12; // x0
 
-  if ( (byte_4AFC79B & 1) == 0 )
+  if ( (byte_4B16C58 & 1) == 0 )
   {
-    sub_1BC3008(&EventBuddyPointResultManager_TypeInfo, v1);
-    sub_1BC3008(&StringLiteral_3206/*"BuddyResultEventUI"*/, v2);
-    sub_1BC3008(&StringLiteral_2886/*"BEST_BUDDY_POINT_RESULT"*/, v3);
-    sub_1BC3008(&StringLiteral_2887/*"BEST_BUDDY_RESULT_REPLAY_DIALOG"*/, v4);
-    sub_1BC3008(&StringLiteral_17467/*"buddy_bg_at"*/, v5);
-    sub_1BC3008(&StringLiteral_6212/*"EventUI/Prefabs"*/, v6);
-    sub_1BC3008(&StringLiteral_17029/*"bit_buddy_result"*/, v7);
-    byte_4AFC79B = 1;
+    sub_1BCAFF8(&EventBuddyPointResultManager_TypeInfo, v1);
+    sub_1BCAFF8(&StringLiteral_3208/*"BuddyResultEventUI"*/, v2);
+    sub_1BCAFF8(&StringLiteral_2888/*"BEST_BUDDY_POINT_RESULT"*/, v3);
+    sub_1BCAFF8(&StringLiteral_2889/*"BEST_BUDDY_RESULT_REPLAY_DIALOG"*/, v4);
+    sub_1BCAFF8(&StringLiteral_17478/*"buddy_bg_at"*/, v5);
+    sub_1BCAFF8(&StringLiteral_6216/*"EventUI/Prefabs"*/, v6);
+    sub_1BCAFF8(&StringLiteral_17040/*"bit_buddy_result"*/, v7);
+    byte_4B16C58 = 1;
   }
-  EventBuddyPointResultManager_TypeInfo->static_fields->EVENT_UI_ASSET_PATH = (struct System_String_o *)StringLiteral_6212/*"EventUI/Prefabs"*/;
-  sub_1BC2FAC(EventBuddyPointResultManager_TypeInfo->static_fields);
+  EventBuddyPointResultManager_TypeInfo->static_fields->EVENT_UI_ASSET_PATH = (struct System_String_o *)StringLiteral_6216/*"EventUI/Prefabs"*/;
+  sub_1BCAF9C(EventBuddyPointResultManager_TypeInfo->static_fields);
   static_fields = EventBuddyPointResultManager_TypeInfo->static_fields;
-  static_fields->BUDDY_POINT_RESULT_PREFAB = (struct System_String_o *)StringLiteral_17029/*"bit_buddy_result"*/;
-  sub_1BC2FAC(&static_fields->BUDDY_POINT_RESULT_PREFAB);
+  static_fields->BUDDY_POINT_RESULT_PREFAB = (struct System_String_o *)StringLiteral_17040/*"bit_buddy_result"*/;
+  sub_1BCAF9C(&static_fields->BUDDY_POINT_RESULT_PREFAB);
   v9 = EventBuddyPointResultManager_TypeInfo->static_fields;
-  v9->BUDDY_RESULT_ATLAS = (struct System_String_o *)StringLiteral_17467/*"buddy_bg_at"*/;
-  sub_1BC2FAC(&v9->BUDDY_RESULT_ATLAS);
+  v9->BUDDY_RESULT_ATLAS = (struct System_String_o *)StringLiteral_17478/*"buddy_bg_at"*/;
+  sub_1BCAF9C(&v9->BUDDY_RESULT_ATLAS);
   v10 = EventBuddyPointResultManager_TypeInfo->static_fields;
-  v10->SAVEKEY_BEST_BUDDY_POINT_RESULT = (struct System_String_o *)StringLiteral_2886/*"BEST_BUDDY_POINT_RESULT"*/;
-  sub_1BC2FAC(&v10->SAVEKEY_BEST_BUDDY_POINT_RESULT);
+  v10->SAVEKEY_BEST_BUDDY_POINT_RESULT = (struct System_String_o *)StringLiteral_2888/*"BEST_BUDDY_POINT_RESULT"*/;
+  sub_1BCAF9C(&v10->SAVEKEY_BEST_BUDDY_POINT_RESULT);
   v11 = EventBuddyPointResultManager_TypeInfo->static_fields;
-  v11->SAVEKEY_BEST_BUDDY_RESULT_REPLAY_DIALOG = (struct System_String_o *)StringLiteral_2887/*"BEST_BUDDY_RESULT_REPLAY_DIALOG"*/;
-  sub_1BC2FAC(&v11->SAVEKEY_BEST_BUDDY_RESULT_REPLAY_DIALOG);
+  v11->SAVEKEY_BEST_BUDDY_RESULT_REPLAY_DIALOG = (struct System_String_o *)StringLiteral_2889/*"BEST_BUDDY_RESULT_REPLAY_DIALOG"*/;
+  sub_1BCAF9C(&v11->SAVEKEY_BEST_BUDDY_RESULT_REPLAY_DIALOG);
   v12 = EventBuddyPointResultManager_TypeInfo->static_fields;
-  v12->BUDDY_RESULT_UI_PREFAB = (struct System_String_o *)StringLiteral_3206/*"BuddyResultEventUI"*/;
-  sub_1BC2FAC(&v12->BUDDY_RESULT_UI_PREFAB);
+  v12->BUDDY_RESULT_UI_PREFAB = (struct System_String_o *)StringLiteral_3208/*"BuddyResultEventUI"*/;
+  sub_1BCAF9C(&v12->BUDDY_RESULT_UI_PREFAB);
 }
 
 
@@ -66,19 +66,19 @@ bool __fastcall EventBuddyPointResultManager__CheckDisplayCondition(
   Il2CppObject *v11; // x20
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4AFC796 & 1) == 0 )
+  if ( (byte_4B16C53 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMaster_EventMaster___, *(_QWORD *)&eventId);
-    sub_1BC3008(&Method_DataManager_GetMaster_EventServantPointRankMaster___, v4);
-    sub_1BC3008(&Method_DataManager_GetMaster_UserEventServantPointMaster___, v5);
-    sub_1BC3008(&DataManager_TypeInfo, v6);
-    sub_1BC3008(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v7);
-    sub_1BC3008(&NetworkManager_TypeInfo, v8);
-    byte_4AFC796 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMaster_EventMaster___, *(_QWORD *)&eventId);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_EventServantPointRankMaster___, v4);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_UserEventServantPointMaster___, v5);
+    sub_1BCAFF8(&DataManager_TypeInfo, v6);
+    sub_1BCAFF8(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__, v7);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v8);
+    byte_4B16C53 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventServantPointRankMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
+  Master_object = (EventServantPointRankMaster_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_EventServantPointRankMaster___);
   if ( !Master_object )
     goto LABEL_25;
   if ( !EventServantPointRankMaster__IsEnableEvent(Master_object, eventId, 0LL) )
@@ -86,15 +86,15 @@ bool __fastcall EventBuddyPointResultManager__CheckDisplayCondition(
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventServantPointRankMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_EventMaster___);
+  Master_object = (EventServantPointRankMaster_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_EventMaster___);
   if ( !Master_object )
 LABEL_25:
-    sub_1BC3264(Master_object, v10);
+    sub_1BCB254(Master_object, v10);
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           eventId,
-          (const MethodInfo_32AF0BC *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
+          (const MethodInfo_32C7E4C *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__) )
     return 0;
   Master_object = (EventServantPointRankMaster_o *)entity;
   if ( !entity )
@@ -103,13 +103,13 @@ LABEL_25:
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  v11 = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserEventServantPointMaster___);
+  v11 = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_UserEventServantPointMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4AFC1F1 )
+  if ( !byte_4B165D1 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, v10);
-    byte_4AFC1F1 = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v10);
+    byte_4B165D1 = 1;
   }
   Master_object = (EventServantPointRankMaster_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -152,10 +152,10 @@ bool __fastcall EventBuddyPointResultManager__CheckReplayIntroDialogDisplayCondi
   System_String_o *SaveKey; // x0
 
   v4 = this;
-  if ( (byte_4AFC798 & 1) == 0 )
+  if ( (byte_4B16C55 & 1) == 0 )
   {
-    this = (EventBuddyPointResultManager_o *)sub_1BC3008(&EventBuddyPointResultManager_TypeInfo, *(_QWORD *)&eventId);
-    byte_4AFC798 = 1;
+    this = (EventBuddyPointResultManager_o *)sub_1BCAFF8(&EventBuddyPointResultManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_4B16C55 = 1;
   }
   if ( EventBuddyPointResultManager__CheckDisplayCondition(this, eventId, method)
     && EventBuddyPointResultManager__IsFirstTimeDisplayed(v4, eventId, v5) )
@@ -188,15 +188,15 @@ System_String_o *__fastcall EventBuddyPointResultManager__GetSaveKey(
   Il2CppObject *v8; // x0
   int32_t v10; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4AFC797 & 1) == 0 )
+  if ( (byte_4B16C54 & 1) == 0 )
   {
-    sub_1BC3008(&int_TypeInfo, keyBase);
-    sub_1BC3008(&StringLiteral_24957/*"{0}_{1}"*/, v7);
-    byte_4AFC797 = 1;
+    sub_1BCAFF8(&int_TypeInfo, keyBase);
+    sub_1BCAFF8(&StringLiteral_24978/*"{0}_{1}"*/, v7);
+    byte_4B16C54 = 1;
   }
   v10 = eventId;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10, *(_QWORD *)&eventId, method, v4);
-  return System_String__Format_62389940((System_String_o *)StringLiteral_24957/*"{0}_{1}"*/, (Il2CppObject *)keyBase, v8, 0LL);
+  return System_String__Format_62491716((System_String_o *)StringLiteral_24978/*"{0}_{1}"*/, (Il2CppObject *)keyBase, v8, 0LL);
 }
 
 
@@ -210,18 +210,18 @@ BuddyResultReplayUIControl_o *__fastcall EventBuddyPointResultManager__Instantia
   __int64 v6; // x1
   AssetData_o *eventUIAssetData; // x19
   EventBuddyPointResultManager_c *v8; // x0
-  Il2CppObject *Object_object__50213776; // x19
+  Il2CppObject *Object_object__50315216; // x19
   Il2CppObject *v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4AFC78D & 1) == 0 )
+  if ( (byte_4B16C4A & 1) == 0 )
   {
-    sub_1BC3008(&Method_AssetData_GetObject_GameObject____76809672, method);
-    sub_1BC3008(&EventBuddyPointResultManager_TypeInfo, v3);
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_BuddyResultReplayUIControl___, v4);
-    sub_1BC3008(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v6);
-    byte_4AFC78D = 1;
+    sub_1BCAFF8(&Method_AssetData_GetObject_GameObject____76915336, method);
+    sub_1BCAFF8(&EventBuddyPointResultManager_TypeInfo, v3);
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_BuddyResultReplayUIControl___, v4);
+    sub_1BCAFF8(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v6);
+    byte_4B16C4A = 1;
   }
   eventUIAssetData = this->fields.eventUIAssetData;
   if ( !eventUIAssetData )
@@ -232,24 +232,24 @@ BuddyResultReplayUIControl_o *__fastcall EventBuddyPointResultManager__Instantia
     j_il2cpp_runtime_class_init_0(EventBuddyPointResultManager_TypeInfo);
     v8 = EventBuddyPointResultManager_TypeInfo;
   }
-  Object_object__50213776 = AssetData__GetObject_object__50213776(
+  Object_object__50315216 = AssetData__GetObject_object__50315216(
                               eventUIAssetData,
                               v8->static_fields->BUDDY_RESULT_UI_PREFAB,
-                              (const MethodInfo_2FE3390 *)Method_AssetData_GetObject_GameObject____76809672);
+                              (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__50213776, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__50315216, 0LL, 0LL) )
     return 0LL;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v11 = UnityEngine_Object__Instantiate_object_(
-          Object_object__50213776,
-          (const MethodInfo_308AE24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          Object_object__50315216,
+          (const MethodInfo_30A3BB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !v11 )
-    sub_1BC3264(0LL, v12);
+    sub_1BCB254(0LL, v12);
   return (BuddyResultReplayUIControl_o *)UnityEngine_GameObject__GetComponent_object_(
                                            (UnityEngine_GameObject_o *)v11,
-                                           (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_BuddyResultReplayUIControl___);
+                                           (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_BuddyResultReplayUIControl___);
 }
 
 
@@ -263,18 +263,18 @@ EventBuddyPointResultComponent_o *__fastcall EventBuddyPointResultManager__Insta
   __int64 v6; // x1
   AssetData_o *eventUIAssetData; // x19
   EventBuddyPointResultManager_c *v8; // x0
-  Il2CppObject *Object_object__50213776; // x19
+  Il2CppObject *Object_object__50315216; // x19
   Il2CppObject *v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4AFC791 & 1) == 0 )
+  if ( (byte_4B16C4E & 1) == 0 )
   {
-    sub_1BC3008(&Method_AssetData_GetObject_GameObject____76809672, method);
-    sub_1BC3008(&EventBuddyPointResultManager_TypeInfo, v3);
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_EventBuddyPointResultComponent___, v4);
-    sub_1BC3008(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v6);
-    byte_4AFC791 = 1;
+    sub_1BCAFF8(&Method_AssetData_GetObject_GameObject____76915336, method);
+    sub_1BCAFF8(&EventBuddyPointResultManager_TypeInfo, v3);
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_EventBuddyPointResultComponent___, v4);
+    sub_1BCAFF8(&Method_UnityEngine_Object_Instantiate_GameObject___, v5);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v6);
+    byte_4B16C4E = 1;
   }
   eventUIAssetData = this->fields.eventUIAssetData;
   if ( !eventUIAssetData )
@@ -285,24 +285,24 @@ EventBuddyPointResultComponent_o *__fastcall EventBuddyPointResultManager__Insta
     j_il2cpp_runtime_class_init_0(EventBuddyPointResultManager_TypeInfo);
     v8 = EventBuddyPointResultManager_TypeInfo;
   }
-  Object_object__50213776 = AssetData__GetObject_object__50213776(
+  Object_object__50315216 = AssetData__GetObject_object__50315216(
                               eventUIAssetData,
                               v8->static_fields->BUDDY_POINT_RESULT_PREFAB,
-                              (const MethodInfo_2FE3390 *)Method_AssetData_GetObject_GameObject____76809672);
+                              (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__50213776, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__50315216, 0LL, 0LL) )
     return 0LL;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v11 = UnityEngine_Object__Instantiate_object_(
-          Object_object__50213776,
-          (const MethodInfo_308AE24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          Object_object__50315216,
+          (const MethodInfo_30A3BB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !v11 )
-    sub_1BC3264(0LL, v12);
+    sub_1BCB254(0LL, v12);
   return (EventBuddyPointResultComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                (UnityEngine_GameObject_o *)v11,
-                                               (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_EventBuddyPointResultComponent___);
+                                               (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_EventBuddyPointResultComponent___);
 }
 
 
@@ -316,10 +316,10 @@ bool __fastcall EventBuddyPointResultManager__IsFirstTimeDisplayed(
   EventBuddyPointResultManager_o *v5; // x0
   System_String_o *SaveKey; // x0
 
-  if ( (byte_4AFC795 & 1) == 0 )
+  if ( (byte_4B16C52 & 1) == 0 )
   {
-    sub_1BC3008(&EventBuddyPointResultManager_TypeInfo, *(_QWORD *)&eventId);
-    byte_4AFC795 = 1;
+    sub_1BCAFF8(&EventBuddyPointResultManager_TypeInfo, *(_QWORD *)&eventId);
+    byte_4B16C52 = 1;
   }
   v5 = (EventBuddyPointResultManager_o *)EventBuddyPointResultManager_TypeInfo;
   if ( !EventBuddyPointResultManager_TypeInfo->_2.cctor_finished )
@@ -358,25 +358,25 @@ bool __fastcall EventBuddyPointResultManager__LoadAssetData(
   AssetLoader_LoadEndDataHandler_o *v23; // x20
   int32_t v25; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4AFC78B & 1) == 0 )
+  if ( (byte_4B16C48 & 1) == 0 )
   {
-    sub_1BC3008(&AssetManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BC3008(&EventBuddyPointResultManager_TypeInfo, v7);
-    sub_1BC3008(&int_TypeInfo, v8);
-    sub_1BC3008(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
-    sub_1BC3008(&Method_EventBuddyPointResultManager___c__DisplayClass14_0__LoadAssetData_b__0__, v10);
-    sub_1BC3008(&EventBuddyPointResultManager___c__DisplayClass14_0_TypeInfo, v11);
-    sub_1BC3008(&StringLiteral_24915/*"{0}/{1}"*/, v12);
-    byte_4AFC78B = 1;
+    sub_1BCAFF8(&AssetManager_TypeInfo, *(_QWORD *)&eventId);
+    sub_1BCAFF8(&EventBuddyPointResultManager_TypeInfo, v7);
+    sub_1BCAFF8(&int_TypeInfo, v8);
+    sub_1BCAFF8(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
+    sub_1BCAFF8(&Method_EventBuddyPointResultManager___c__DisplayClass14_0__LoadAssetData_b__0__, v10);
+    sub_1BCAFF8(&EventBuddyPointResultManager___c__DisplayClass14_0_TypeInfo, v11);
+    sub_1BCAFF8(&StringLiteral_24937/*"{0}/{1}"*/, v12);
+    byte_4B16C48 = 1;
   }
-  v13 = (Il2CppObject *)sub_1BC3254(EventBuddyPointResultManager___c__DisplayClass14_0_TypeInfo);
+  v13 = (Il2CppObject *)sub_1BCB244(EventBuddyPointResultManager___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor(v13, 0LL);
   if ( !v13 )
-    sub_1BC3264(v14, v15);
+    sub_1BCB254(v14, v15);
   v13[1].klass = (Il2CppClass *)this;
-  sub_1BC2FAC(&v13[1]);
+  sub_1BCAF9C(&v13[1]);
   v13[1].monitor = callback;
-  sub_1BC2FAC(&v13[1].monitor);
+  sub_1BCAF9C(&v13[1].monitor);
   v19 = EventBuddyPointResultManager_TypeInfo;
   if ( !EventBuddyPointResultManager_TypeInfo->_2.cctor_finished )
   {
@@ -386,8 +386,8 @@ bool __fastcall EventBuddyPointResultManager__LoadAssetData(
   EVENT_UI_ASSET_PATH = (Il2CppObject *)v19->static_fields->EVENT_UI_ASSET_PATH;
   v25 = eventId;
   v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v16, v17, v18);
-  v22 = System_String__Format_62389940((System_String_o *)StringLiteral_24915/*"{0}/{1}"*/, EVENT_UI_ASSET_PATH, v21, 0LL);
-  v23 = (AssetLoader_LoadEndDataHandler_o *)sub_1BC3254(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v22 = System_String__Format_62491716((System_String_o *)StringLiteral_24937/*"{0}/{1}"*/, EVENT_UI_ASSET_PATH, v21, 0LL);
+  v23 = (AssetLoader_LoadEndDataHandler_o *)sub_1BCB244(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v23,
     v13,
@@ -408,17 +408,17 @@ UIAtlas_o *__fastcall EventBuddyPointResultManager__LoadAtlasFromAssetData(
   __int64 v5; // x1
   AssetData_o *eventUIAssetData; // x19
   EventBuddyPointResultManager_c *v7; // x0
-  Il2CppObject *Object_object__50213776; // x19
+  Il2CppObject *Object_object__50315216; // x19
   _BOOL8 v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_4AFC790 & 1) == 0 )
+  if ( (byte_4B16C4D & 1) == 0 )
   {
-    sub_1BC3008(&Method_AssetData_GetObject_GameObject____76809672, method);
-    sub_1BC3008(&EventBuddyPointResultManager_TypeInfo, v3);
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v4);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
-    byte_4AFC790 = 1;
+    sub_1BCAFF8(&Method_AssetData_GetObject_GameObject____76915336, method);
+    sub_1BCAFF8(&EventBuddyPointResultManager_TypeInfo, v3);
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v4);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
+    byte_4B16C4D = 1;
   }
   eventUIAssetData = this->fields.eventUIAssetData;
   if ( !eventUIAssetData )
@@ -429,20 +429,20 @@ UIAtlas_o *__fastcall EventBuddyPointResultManager__LoadAtlasFromAssetData(
     j_il2cpp_runtime_class_init_0(EventBuddyPointResultManager_TypeInfo);
     v7 = EventBuddyPointResultManager_TypeInfo;
   }
-  Object_object__50213776 = AssetData__GetObject_object__50213776(
+  Object_object__50315216 = AssetData__GetObject_object__50315216(
                               eventUIAssetData,
                               v7->static_fields->BUDDY_RESULT_ATLAS,
-                              (const MethodInfo_2FE3390 *)Method_AssetData_GetObject_GameObject____76809672);
+                              (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v9 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__50213776, 0LL, 0LL);
+  v9 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__50315216, 0LL, 0LL);
   if ( v9 )
     return 0LL;
-  if ( !Object_object__50213776 )
-    sub_1BC3264(v9, v10);
+  if ( !Object_object__50315216 )
+    sub_1BCB254(v9, v10);
   return (UIAtlas_o *)UnityEngine_GameObject__GetComponent_object_(
-                        (UnityEngine_GameObject_o *)Object_object__50213776,
-                        (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                        (UnityEngine_GameObject_o *)Object_object__50315216,
+                        (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
 }
 
 
@@ -457,11 +457,11 @@ void __fastcall EventBuddyPointResultManager__OnClickReplayButton(
   const MethodInfo *v7; // x1
   BuddyResultReplayUIControl_o *v8; // x0
 
-  if ( (byte_4AFC793 & 1) == 0 )
+  if ( (byte_4B16C50 & 1) == 0 )
   {
-    sub_1BC3008(&Method_EventBuddyPointResultManager_OnClickReplayButton__, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
-    byte_4AFC793 = 1;
+    sub_1BCAFF8(&Method_EventBuddyPointResultManager_OnClickReplayButton__, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B16C50 = 1;
   }
   uiControl = (UnityEngine_Object_o *)this->fields.uiControl;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -470,12 +470,12 @@ void __fastcall EventBuddyPointResultManager__OnClickReplayButton(
   {
     v5 = Method_EventBuddyPointResultManager_OnClickReplayButton__;
     if ( (*((_BYTE *)Method_EventBuddyPointResultManager_OnClickReplayButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1BC3020(Method_EventBuddyPointResultManager_OnClickReplayButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BCB010(Method_EventBuddyPointResultManager_OnClickReplayButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
     v8 = this->fields.uiControl;
     if ( !v8 )
-      sub_1BC3264(0LL, v7);
+      sub_1BCB254(0LL, v7);
     BuddyResultReplayUIControl__OpenSelectDialog(v8, v7);
   }
 }
@@ -489,10 +489,10 @@ void __fastcall EventBuddyPointResultManager__OnCloseReplayDialog(
   EventBuddyPointResultManager_o *v4; // x0
   System_String_o *SaveKey; // x0
 
-  if ( (byte_4AFC79A & 1) == 0 )
+  if ( (byte_4B16C57 & 1) == 0 )
   {
-    sub_1BC3008(&EventBuddyPointResultManager_TypeInfo, method);
-    byte_4AFC79A = 1;
+    sub_1BCAFF8(&EventBuddyPointResultManager_TypeInfo, method);
+    byte_4B16C57 = 1;
   }
   v4 = (EventBuddyPointResultManager_o *)EventBuddyPointResultManager_TypeInfo;
   if ( !EventBuddyPointResultManager_TypeInfo->_2.cctor_finished )
@@ -522,15 +522,15 @@ void __fastcall EventBuddyPointResultManager__OnPlayEnd(EventBuddyPointResultMan
   __int64 v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4AFC78F & 1) == 0 )
+  if ( (byte_4B16C4C & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&AvalonSceneManager_TypeInfo, v3);
-    sub_1BC3008(&Method_EventBuddyPointResultManager__OnPlayEnd_b__18_0__, v4);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_4AFC78F = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&AvalonSceneManager_TypeInfo, v3);
+    sub_1BCAFF8(&Method_EventBuddyPointResultManager__OnPlayEnd_b__18_0__, v4);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    byte_4B16C4C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v7 = AvalonSceneManager_TypeInfo;
   v8 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -539,10 +539,10 @@ void __fastcall EventBuddyPointResultManager__OnPlayEnd(EventBuddyPointResultMan
     v7 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v7->static_fields->DEFAULT_FADE_TIME;
-  v10 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_EventBuddyPointResultManager__OnPlayEnd_b__18_0__, 0LL);
   if ( !v8 )
-    sub_1BC3264(v11, v12);
+    sub_1BCB254(v11, v12);
   CommonUI__maskFadeout(v8, 1, DEFAULT_FADE_TIME, v10, 0LL);
 }
 
@@ -567,28 +567,28 @@ void __fastcall EventBuddyPointResultManager__OnSelectPortraitImgCount(
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *v17; // x21
 
-  if ( (byte_4AFC794 & 1) == 0 )
+  if ( (byte_4B16C51 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, *(_QWORD *)&id);
-    sub_1BC3008(&AvalonSceneManager_TypeInfo, v5);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1BC3008(&Method_EventBuddyPointResultManager___c__DisplayClass23_0__OnSelectPortraitImgCount_b__0__, v7);
-    sub_1BC3008(&EventBuddyPointResultManager___c__DisplayClass23_0_TypeInfo, v8);
-    byte_4AFC794 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&id);
+    sub_1BCAFF8(&AvalonSceneManager_TypeInfo, v5);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
+    sub_1BCAFF8(&Method_EventBuddyPointResultManager___c__DisplayClass23_0__OnSelectPortraitImgCount_b__0__, v7);
+    sub_1BCAFF8(&EventBuddyPointResultManager___c__DisplayClass23_0_TypeInfo, v8);
+    byte_4B16C51 = 1;
   }
-  v9 = sub_1BC3254(EventBuddyPointResultManager___c__DisplayClass23_0_TypeInfo);
+  v9 = sub_1BCB244(EventBuddyPointResultManager___c__DisplayClass23_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0LL);
   if ( !v9 )
     goto LABEL_10;
   *(_QWORD *)(v9 + 16) = this;
-  sub_1BC2FAC(v9 + 16);
+  sub_1BCAF9C(v9 + 16);
   *(_DWORD *)(v9 + 24) = id;
   onReplayStartCallback = this->fields.onReplayStartCallback;
   if ( onReplayStartCallback )
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))onReplayStartCallback->fields.m_target)(
       onReplayStartCallback->fields.original_method_info,
       *(_QWORD *)&onReplayStartCallback->fields.extra_arg);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v14 = AvalonSceneManager_TypeInfo;
   v15 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -597,7 +597,7 @@ void __fastcall EventBuddyPointResultManager__OnSelectPortraitImgCount(
     v14 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v14->static_fields->DEFAULT_FADE_TIME;
-  v17 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  v17 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(
     v17,
     (Il2CppObject *)v9,
@@ -605,7 +605,7 @@ void __fastcall EventBuddyPointResultManager__OnSelectPortraitImgCount(
     0LL);
   if ( !v15 )
 LABEL_10:
-    sub_1BC3264(v10, v11);
+    sub_1BCB254(v10, v11);
   CommonUI__maskFadeout(v15, 1, DEFAULT_FADE_TIME, v17, 0LL);
 }
 
@@ -623,12 +623,12 @@ void __fastcall EventBuddyPointResultManager__OpenResultReplayDialog(
   __int64 v9; // x1
   const MethodInfo *v10; // x2
 
-  if ( (byte_4AFC799 & 1) == 0 )
+  if ( (byte_4B16C56 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&Method_EventBuddyPointResultManager_OnCloseReplayDialog__, v3);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v4);
-    byte_4AFC799 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&Method_EventBuddyPointResultManager_OnCloseReplayDialog__, v3);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
+    byte_4B16C56 = 1;
   }
   uiControl = (UnityEngine_Object_o *)this->fields.uiControl;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -636,10 +636,10 @@ void __fastcall EventBuddyPointResultManager__OpenResultReplayDialog(
   if ( UnityEngine_Object__op_Inequality(uiControl, 0LL, 0LL) )
   {
     v6 = this->fields.uiControl;
-    v7 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_EventBuddyPointResultManager_OnCloseReplayDialog__, 0LL);
     if ( !v6 )
-      sub_1BC3264(v8, v9);
+      sub_1BCB254(v8, v9);
     BuddyResultReplayUIControl__OpenReplayIntroDialog(v6, v7, v10);
   }
 }
@@ -671,35 +671,35 @@ bool __fastcall EventBuddyPointResultManager__PlayBestBuddyResult(
   System_Action_o *v26; // x21
   const MethodInfo *v27; // x6
 
-  if ( (byte_4AFC78E & 1) == 0 )
+  if ( (byte_4B16C4B & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, setupEndCallback);
-    sub_1BC3008(&Method_EventBuddyPointResultManager_OnPlayEnd__, v9);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v10);
-    sub_1BC3008(&Method_EventBuddyPointResultManager___c__DisplayClass17_0__PlayBestBuddyResult_b__0__, v11);
-    sub_1BC3008(&EventBuddyPointResultManager___c__DisplayClass17_0_TypeInfo, v12);
-    byte_4AFC78E = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, setupEndCallback);
+    sub_1BCAFF8(&Method_EventBuddyPointResultManager_OnPlayEnd__, v9);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v10);
+    sub_1BCAFF8(&Method_EventBuddyPointResultManager___c__DisplayClass17_0__PlayBestBuddyResult_b__0__, v11);
+    sub_1BCAFF8(&EventBuddyPointResultManager___c__DisplayClass17_0_TypeInfo, v12);
+    byte_4B16C4B = 1;
   }
-  v13 = (Il2CppObject *)sub_1BC3254(EventBuddyPointResultManager___c__DisplayClass17_0_TypeInfo);
+  v13 = (Il2CppObject *)sub_1BCB244(EventBuddyPointResultManager___c__DisplayClass17_0_TypeInfo);
   System_Object___ctor(v13, 0LL);
   if ( !v13 )
     goto LABEL_19;
   v13[1].klass = (Il2CppClass *)setupEndCallback;
-  sub_1BC2FAC(&v13[1]);
+  sub_1BCAF9C(&v13[1]);
   v13[1].monitor = this;
-  sub_1BC2FAC(&v13[1].monitor);
+  sub_1BCAF9C(&v13[1].monitor);
   if ( !this->fields.eventUIAssetData )
     return 0;
   this->fields.eventBuddyPointStageComponent = EventBuddyPointResultManager__InstantiateResultPrefab(this, v16);
   p_eventBuddyPointStageComponent = &this->fields.eventBuddyPointStageComponent;
-  sub_1BC2FAC(&this->fields.eventBuddyPointStageComponent);
+  sub_1BCAF9C(&this->fields.eventBuddyPointStageComponent);
   eventBuddyPointStageComponent = (UnityEngine_Object_o *)this->fields.eventBuddyPointStageComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(eventBuddyPointStageComponent, 0LL, 0LL) )
     return 0;
   this->fields.onPlayEndCallback = onPlayEndCallback;
-  sub_1BC2FAC(&this->fields.onPlayEndCallback);
+  sub_1BCAF9C(&this->fields.onPlayEndCallback);
   backgroundObj = (UnityEngine_Object_o *)this->fields.backgroundObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -727,17 +727,17 @@ bool __fastcall EventBuddyPointResultManager__PlayBestBuddyResult(
   GameObjectExtensions__SafeSetParent(gameObject, (UnityEngine_Component_o *)this, 0LL);
   v23 = this->fields.eventBuddyPointStageComponent;
   currentEventId = this->fields.currentEventId;
-  v25 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  v25 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(
     v25,
     v13,
     Method_EventBuddyPointResultManager___c__DisplayClass17_0__PlayBestBuddyResult_b__0__,
     0LL);
-  v26 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  v26 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(v26, (Il2CppObject *)this, Method_EventBuddyPointResultManager_OnPlayEnd__, 0LL);
   if ( !v23 )
 LABEL_19:
-    sub_1BC3264(AtlasFromAssetData, v15);
+    sub_1BCB254(AtlasFromAssetData, v15);
   EventBuddyPointResultComponent__Setup(v23, currentEventId, v21, v25, v26, selectLimitCount, v27);
   return 1;
 }
@@ -759,31 +759,31 @@ void __fastcall EventBuddyPointResultManager__Setup(
   System_Action_o *v13; // x21
   const MethodInfo *v14; // x3
 
-  if ( (byte_4AFC78A & 1) == 0 )
+  if ( (byte_4B16C47 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BC3008(&Method_EventBuddyPointResultManager___c__DisplayClass13_0__Setup_b__0__, v7);
-    sub_1BC3008(&EventBuddyPointResultManager___c__DisplayClass13_0_TypeInfo, v8);
-    byte_4AFC78A = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&eventId);
+    sub_1BCAFF8(&Method_EventBuddyPointResultManager___c__DisplayClass13_0__Setup_b__0__, v7);
+    sub_1BCAFF8(&EventBuddyPointResultManager___c__DisplayClass13_0_TypeInfo, v8);
+    byte_4B16C47 = 1;
   }
-  v9 = (Il2CppObject *)sub_1BC3254(EventBuddyPointResultManager___c__DisplayClass13_0_TypeInfo);
+  v9 = (Il2CppObject *)sub_1BCB244(EventBuddyPointResultManager___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor(v9, 0LL);
   if ( !v9 )
     goto LABEL_7;
   v9[1].klass = (Il2CppClass *)this;
-  sub_1BC2FAC(&v9[1]);
+  sub_1BCAF9C(&v9[1]);
   v9[1].monitor = setupEndCallback;
   p_monitor = &v9[1].monitor;
-  sub_1BC2FAC(&v9[1].monitor);
+  sub_1BCAF9C(&v9[1].monitor);
   this->fields.currentEventId = eventId;
-  v13 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  v13 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(v13, v9, Method_EventBuddyPointResultManager___c__DisplayClass13_0__Setup_b__0__, 0LL);
   AssetData = EventBuddyPointResultManager__LoadAssetData(this, eventId, v13, v14);
   if ( AssetData )
     return;
   if ( !*p_monitor )
 LABEL_7:
-    sub_1BC3264(AssetData, v11);
+    sub_1BCB254(AssetData, v11);
   (*((void (__fastcall **)(_QWORD, _QWORD))*p_monitor + 3))(*((_QWORD *)*p_monitor + 8), *((_QWORD *)*p_monitor + 5));
 }
 
@@ -811,12 +811,12 @@ void __fastcall EventBuddyPointResultManager__SetupEventUI(
   const MethodInfo *v18; // x3
 
   v4 = this;
-  if ( (byte_4AFC78C & 1) == 0 )
+  if ( (byte_4B16C49 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_int__TypeInfo, *(_QWORD *)&eventId);
-    sub_1BC3008(&Method_EventBuddyPointResultManager_OnSelectPortraitImgCount__, v5);
-    this = (EventBuddyPointResultManager_o *)sub_1BC3008(&UnityEngine_Object_TypeInfo, v6);
-    byte_4AFC78C = 1;
+    sub_1BCAFF8(&System_Action_int__TypeInfo, *(_QWORD *)&eventId);
+    sub_1BCAFF8(&Method_EventBuddyPointResultManager_OnSelectPortraitImgCount__, v5);
+    this = (EventBuddyPointResultManager_o *)sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v6);
+    byte_4B16C49 = 1;
   }
   v7 = EventBuddyPointResultManager__CheckDisplayCondition(this, eventId, method);
   if ( v7 )
@@ -828,7 +828,7 @@ void __fastcall EventBuddyPointResultManager__SetupEventUI(
     if ( UnityEngine_Object__op_Equality(uiControl, 0LL, 0LL) )
     {
       v4->fields.uiControl = EventBuddyPointResultManager__InstantiateEventUIPrefab(v4, v10);
-      sub_1BC2FAC(&v4->fields.uiControl);
+      sub_1BCAF9C(&v4->fields.uiControl);
       v11 = (UnityEngine_Object_o *)v4->fields.uiControl;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -857,7 +857,7 @@ void __fastcall EventBuddyPointResultManager__SetupEventUI(
     if ( v7 )
     {
       v16 = v4->fields.uiControl;
-      v17 = (System_Action_int__o *)sub_1BC3254(System_Action_int__TypeInfo);
+      v17 = (System_Action_int__o *)sub_1BCB244(System_Action_int__TypeInfo);
       System_Action_int____ctor(
         v17,
         (Il2CppObject *)v4,
@@ -869,7 +869,7 @@ void __fastcall EventBuddyPointResultManager__SetupEventUI(
         return;
       }
 LABEL_21:
-      sub_1BC3264(v13, v12);
+      sub_1BCB254(v13, v12);
     }
   }
 }
@@ -898,13 +898,13 @@ void __fastcall EventBuddyPointResultManager__SetupReplayEnv(
   const MethodInfo *v21; // x1
 
   v10 = this;
-  if ( (byte_4AFC792 & 1) == 0 )
+  if ( (byte_4B16C4F & 1) == 0 )
   {
-    sub_1BC3008(&EventDelegate_Callback_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BC3008(&Method_EventBuddyPointResultManager_OnClickReplayButton__, v11);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v12);
-    this = (EventBuddyPointResultManager_o *)sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v13);
-    byte_4AFC792 = 1;
+    sub_1BCAFF8(&EventDelegate_Callback_TypeInfo, *(_QWORD *)&eventId);
+    sub_1BCAFF8(&Method_EventBuddyPointResultManager_OnClickReplayButton__, v11);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v12);
+    this = (EventBuddyPointResultManager_o *)sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v13);
+    byte_4B16C4F = 1;
   }
   v15 = EventBuddyPointResultManager__CheckDisplayCondition(this, eventId, (const MethodInfo *)replayButton)
      && EventBuddyPointResultManager__IsFirstTimeDisplayed(v10, eventId, v14);
@@ -924,7 +924,7 @@ void __fastcall EventBuddyPointResultManager__SetupReplayEnv(
     UnityEngine_GameObject__SetActive(gameObject, v15, 0LL);
     if ( v15 )
     {
-      v18 = (EventDelegate_Callback_o *)sub_1BC3254(EventDelegate_Callback_TypeInfo);
+      v18 = (EventDelegate_Callback_o *)sub_1BCB244(EventDelegate_Callback_TypeInfo);
       EventDelegate_Callback___ctor(
         v18,
         (Il2CppObject *)v10,
@@ -932,12 +932,12 @@ void __fastcall EventBuddyPointResultManager__SetupReplayEnv(
         0LL);
       BuddyPointResultReplayButton__Setup(replayButton, v18, v19);
       v10->fields.onReplayStartCallback = onRePlayStartCallback;
-      sub_1BC2FAC(&v10->fields.onReplayStartCallback);
+      sub_1BCAF9C(&v10->fields.onReplayStartCallback);
       v10->fields.onPlayEndCallback = onPlayEndCallback;
-      sub_1BC2FAC(&v10->fields.onPlayEndCallback);
+      sub_1BCAF9C(&v10->fields.onPlayEndCallback);
       if ( EventBuddyPointResultManager__CheckReplayIntroDialogDisplayCondition(v10, eventId, v20) )
       {
-        gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( gameObject )
         {
           if ( !CommonUI__IsActive_TutorialBigDialog((CommonUI_o *)gameObject, 0LL) )
@@ -945,7 +945,7 @@ void __fastcall EventBuddyPointResultManager__SetupReplayEnv(
           return;
         }
 LABEL_17:
-        sub_1BC3264(gameObject, v17);
+        sub_1BCB254(gameObject, v17);
       }
     }
   }
@@ -968,11 +968,11 @@ void __fastcall EventBuddyPointResultManager___OnPlayEnd_b__18_0(
   UnityEngine_Object_o *gameObject; // x20
   UnityEngine_Object_o *v13; // x19
 
-  if ( (byte_4AFC79C & 1) == 0 )
+  if ( (byte_4B16C59 & 1) == 0 )
   {
-    sub_1BC3008(&EventBuddyPointResultManager_TypeInfo, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
-    byte_4AFC79C = 1;
+    sub_1BCAFF8(&EventBuddyPointResultManager_TypeInfo, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B16C59 = 1;
   }
   backgroundObj = (UnityEngine_Object_o *)this->fields.backgroundObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1020,11 +1020,11 @@ void __fastcall EventBuddyPointResultManager___OnPlayEnd_b__18_0(
         v13 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v7, 0LL);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_70034300(v13, 0LL);
+        UnityEngine_Object__Destroy_70136076(v13, 0LL);
         return;
       }
 LABEL_24:
-      sub_1BC3264(v7, v5);
+      sub_1BCB254(v7, v5);
     }
   }
 }
@@ -1035,15 +1035,15 @@ void __fastcall EventBuddyPointResultManager___c___cctor(const MethodInfo *metho
   __int64 v1; // x1
   Il2CppObject *v2; // x19
 
-  if ( (byte_4AFC79D & 1) == 0 )
+  if ( (byte_4B16C5A & 1) == 0 )
   {
-    sub_1BC3008(&EventBuddyPointResultManager___c_TypeInfo, v1);
-    byte_4AFC79D = 1;
+    sub_1BCAFF8(&EventBuddyPointResultManager___c_TypeInfo, v1);
+    byte_4B16C5A = 1;
   }
-  v2 = (Il2CppObject *)sub_1BC3254(EventBuddyPointResultManager___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BCB244(EventBuddyPointResultManager___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventBuddyPointResultManager___c_TypeInfo->static_fields->__9 = (struct EventBuddyPointResultManager___c_o *)v2;
-  sub_1BC2FAC(EventBuddyPointResultManager___c_TypeInfo->static_fields);
+  sub_1BCAF9C(EventBuddyPointResultManager___c_TypeInfo->static_fields);
 }
 
 
@@ -1073,16 +1073,16 @@ void __fastcall EventBuddyPointResultManager___c___OnSelectPortraitImgCount_b__2
   Il2CppObject *v13; // x21
   struct EventBuddyPointResultManager___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4AFC79E & 1) == 0 )
+  if ( (byte_4B16C5B & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&AvalonSceneManager_TypeInfo, v2);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    sub_1BC3008(&Method_EventBuddyPointResultManager___c__OnSelectPortraitImgCount_b__23_2__, v4);
-    sub_1BC3008(&EventBuddyPointResultManager___c_TypeInfo, v5);
-    byte_4AFC79E = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&AvalonSceneManager_TypeInfo, v2);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
+    sub_1BCAFF8(&Method_EventBuddyPointResultManager___c__OnSelectPortraitImgCount_b__23_2__, v4);
+    sub_1BCAFF8(&EventBuddyPointResultManager___c_TypeInfo, v5);
+    byte_4B16C5B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v8 = AvalonSceneManager_TypeInfo;
   v9 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -1106,7 +1106,7 @@ void __fastcall EventBuddyPointResultManager___c___OnSelectPortraitImgCount_b__2
       v10 = EventBuddyPointResultManager___c_TypeInfo;
     }
     v13 = (Il2CppObject *)v10->static_fields->__9;
-    _9__23_2 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+    _9__23_2 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
     System_Action___ctor(
       _9__23_2,
       v13,
@@ -1114,10 +1114,10 @@ void __fastcall EventBuddyPointResultManager___c___OnSelectPortraitImgCount_b__2
       0LL);
     static_fields = EventBuddyPointResultManager___c_TypeInfo->static_fields;
     static_fields->__9__23_2 = _9__23_2;
-    v10 = (EventBuddyPointResultManager___c_c *)sub_1BC2FAC(&static_fields->__9__23_2);
+    v10 = (EventBuddyPointResultManager___c_c *)sub_1BCAF9C(&static_fields->__9__23_2);
   }
   if ( !v9 )
-    sub_1BC3264(v10, v7);
+    sub_1BCB254(v10, v7);
   CommonUI__maskFadein(v9, DEFAULT_FADE_TIME, _9__23_2, 0LL);
 }
 
@@ -1151,7 +1151,7 @@ void __fastcall EventBuddyPointResultManager___c__DisplayClass13_0___Setup_b__0(
     || (EventBuddyPointResultManager__SetupEventUI(_4__this, _4__this->fields.currentEventId, v2),
         (setupEndCallback = this->fields.setupEndCallback) == 0LL) )
   {
-    sub_1BC3264(_4__this, method);
+    sub_1BCB254(_4__this, method);
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))setupEndCallback->fields.m_target)(
     setupEndCallback->fields.original_method_info,
@@ -1178,10 +1178,10 @@ void __fastcall EventBuddyPointResultManager___c__DisplayClass14_0___LoadAssetDa
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (_4__this->fields.eventUIAssetData = prefabData,
-        _4__this = (struct EventBuddyPointResultManager_o *)sub_1BC2FAC(&_4__this->fields.eventUIAssetData),
+        _4__this = (struct EventBuddyPointResultManager_o *)sub_1BCAF9C(&_4__this->fields.eventUIAssetData),
         (callback = this->fields.callback) == 0LL) )
   {
-    sub_1BC3264(_4__this, prefabData);
+    sub_1BCB254(_4__this, prefabData);
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callback->fields.m_target)(
     callback->fields.original_method_info,
@@ -1217,7 +1217,7 @@ void __fastcall EventBuddyPointResultManager___c__DisplayClass17_0___PlayBestBud
       || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL),
           (setupEndCallback = v3->fields.setupEndCallback) == 0LL) )
     {
-      sub_1BC3264(this, method);
+      sub_1BCB254(this, method);
     }
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))setupEndCallback->fields.m_target)(
       setupEndCallback->fields.original_method_info,
@@ -1248,12 +1248,12 @@ void __fastcall EventBuddyPointResultManager___c__DisplayClass23_0___OnSelectPor
   struct EventBuddyPointResultManager___c_StaticFields *static_fields; // x0
   struct EventBuddyPointResultManager_o *v11; // x8
 
-  if ( (byte_4AFC79F & 1) == 0 )
+  if ( (byte_4B16C5C & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&Method_EventBuddyPointResultManager___c__OnSelectPortraitImgCount_b__23_1__, v4);
-    sub_1BC3008(&EventBuddyPointResultManager___c_TypeInfo, v5);
-    byte_4AFC79F = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&Method_EventBuddyPointResultManager___c__OnSelectPortraitImgCount_b__23_1__, v4);
+    sub_1BCAFF8(&EventBuddyPointResultManager___c_TypeInfo, v5);
+    byte_4B16C5C = 1;
   }
   v6 = EventBuddyPointResultManager___c_TypeInfo;
   _4__this = this->fields.__4__this;
@@ -1271,15 +1271,15 @@ void __fastcall EventBuddyPointResultManager___c__DisplayClass23_0___OnSelectPor
       v6 = EventBuddyPointResultManager___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__23_1 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+    _9__23_1 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
     System_Action___ctor(_9__23_1, v9, Method_EventBuddyPointResultManager___c__OnSelectPortraitImgCount_b__23_1__, 0LL);
     static_fields = EventBuddyPointResultManager___c_TypeInfo->static_fields;
     static_fields->__9__23_1 = _9__23_1;
-    v6 = (EventBuddyPointResultManager___c_c *)sub_1BC2FAC(&static_fields->__9__23_1);
+    v6 = (EventBuddyPointResultManager___c_c *)sub_1BCAF9C(&static_fields->__9__23_1);
   }
   v11 = this->fields.__4__this;
   if ( !v11 || !_4__this )
-    sub_1BC3264(v6, method);
+    sub_1BCB254(v6, method);
   EventBuddyPointResultManager__PlayBestBuddyResult(
     _4__this,
     _9__23_1,

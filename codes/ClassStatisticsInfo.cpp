@@ -4,7 +4,7 @@ void __fastcall ClassStatisticsInfo___ctor(ClassStatisticsInfo_o *this, const Me
 }
 
 
-void __fastcall ClassStatisticsInfo___ctor_40607636(
+void __fastcall ClassStatisticsInfo___ctor_40762248(
         ClassStatisticsInfo_o *this,
         int32_t classId,
         int32_t type,

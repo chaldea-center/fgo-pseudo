@@ -10,23 +10,23 @@ void __fastcall EventInfoSkillExplanationDialog___cctor(const MethodInfo *method
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B03F40 & 1) == 0 )
+  if ( (byte_4B1E382 & 1) == 0 )
   {
-    sub_1BC3008(&EventInfoSkillExplanationDialog_TypeInfo, v1);
-    sub_1BC3008(&StringLiteral_5572/*"EVENT_INFO_SKILL_EXPLANATION_DIALOG_TEXT_{0}"*/, v4);
-    sub_1BC3008(&StringLiteral_5571/*"EVENT_INFO_SKILL_EXPLANATIOIN_MESSAGE_02"*/, v5);
-    byte_4B03F40 = 1;
+    sub_1BCAFF8(&EventInfoSkillExplanationDialog_TypeInfo, v1);
+    sub_1BCAFF8(&StringLiteral_5576/*"EVENT_INFO_SKILL_EXPLANATION_DIALOG_TEXT_{0}"*/, v4);
+    sub_1BCAFF8(&StringLiteral_5575/*"EVENT_INFO_SKILL_EXPLANATIOIN_MESSAGE_02"*/, v5);
+    byte_4B1E382 = 1;
   }
-  EventInfoSkillExplanationDialog_TypeInfo->static_fields->Message01LocalizationKey = (struct System_String_o *)StringLiteral_5572/*"EVENT_INFO_SKILL_EXPLANATION_DIALOG_TEXT_{0}"*/;
-  sub_1BC2FAC(
+  EventInfoSkillExplanationDialog_TypeInfo->static_fields->Message01LocalizationKey = (struct System_String_o *)StringLiteral_5576/*"EVENT_INFO_SKILL_EXPLANATION_DIALOG_TEXT_{0}"*/;
+  sub_1BCAF9C(
     (CGThumbnailListItem_o *)EventInfoSkillExplanationDialog_TypeInfo->static_fields,
-    StringLiteral_5572/*"EVENT_INFO_SKILL_EXPLANATION_DIALOG_TEXT_{0}"*/,
+    StringLiteral_5576/*"EVENT_INFO_SKILL_EXPLANATION_DIALOG_TEXT_{0}"*/,
     v2,
     v3);
-  v6 = StringLiteral_5571/*"EVENT_INFO_SKILL_EXPLANATIOIN_MESSAGE_02"*/;
+  v6 = StringLiteral_5575/*"EVENT_INFO_SKILL_EXPLANATIOIN_MESSAGE_02"*/;
   static_fields = EventInfoSkillExplanationDialog_TypeInfo->static_fields;
-  static_fields->Message02LocalizationKey = (struct System_String_o *)StringLiteral_5571/*"EVENT_INFO_SKILL_EXPLANATIOIN_MESSAGE_02"*/;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->Message02LocalizationKey, v6, v8, v9);
+  static_fields->Message02LocalizationKey = (struct System_String_o *)StringLiteral_5575/*"EVENT_INFO_SKILL_EXPLANATIOIN_MESSAGE_02"*/;
+  sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->Message02LocalizationKey, v6, v8, v9);
 }
 
 
@@ -34,10 +34,10 @@ void __fastcall EventInfoSkillExplanationDialog___ctor(
         EventInfoSkillExplanationDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B03F3F & 1) == 0 )
+  if ( (byte_4B1E381 & 1) == 0 )
   {
-    sub_1BC3008(&BaseDialog_TypeInfo, method);
-    byte_4B03F3F = 1;
+    sub_1BCAFF8(&BaseDialog_TypeInfo, method);
+    byte_4B1E381 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -66,7 +66,7 @@ void __fastcall EventInfoSkillExplanationDialog__Init(
   v2->fields.callback = 0LL;
   v2 = (EventInfoSkillExplanationDialog_o *)((char *)v2 + 168);
   LOBYTE(v2->monitor) = 0;
-  sub_1BC2FAC((CGThumbnailListItem_o *)v2, 0, v3, v4);
+  sub_1BCAF9C((CGThumbnailListItem_o *)v2, 0, v3, v4);
 }
 
 
@@ -80,21 +80,21 @@ void __fastcall EventInfoSkillExplanationDialog__OnClickCancelButton(
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4B03F3D & 1) == 0 )
+  if ( (byte_4B1E37F & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&Method_EventInfoSkillExplanationDialog_OnClickCancelButton__, v3);
-    sub_1BC3008(&Method_EventInfoSkillExplanationDialog__OnClickCancelButton_b__16_0__, v4);
-    byte_4B03F3D = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&Method_EventInfoSkillExplanationDialog_OnClickCancelButton__, v3);
+    sub_1BCAFF8(&Method_EventInfoSkillExplanationDialog__OnClickCancelButton_b__16_0__, v4);
+    byte_4B1E37F = 1;
   }
   if ( !this->fields.isClose )
   {
     v5 = Method_EventInfoSkillExplanationDialog_OnClickCancelButton__;
     if ( (*((_BYTE *)Method_EventInfoSkillExplanationDialog_OnClickCancelButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1BC3020(Method_EventInfoSkillExplanationDialog_OnClickCancelButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BCB010(Method_EventInfoSkillExplanationDialog_OnClickCancelButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0, 0LL);
-    v7 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
     System_Action___ctor(
       v7,
       (Il2CppObject *)this,
@@ -116,21 +116,21 @@ void __fastcall EventInfoSkillExplanationDialog__OnClickDecideButton(
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4B03F3C & 1) == 0 )
+  if ( (byte_4B1E37E & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&Method_EventInfoSkillExplanationDialog_OnClickDecideButton__, v3);
-    sub_1BC3008(&Method_EventInfoSkillExplanationDialog__OnClickDecideButton_b__15_0__, v4);
-    byte_4B03F3C = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&Method_EventInfoSkillExplanationDialog_OnClickDecideButton__, v3);
+    sub_1BCAFF8(&Method_EventInfoSkillExplanationDialog__OnClickDecideButton_b__15_0__, v4);
+    byte_4B1E37E = 1;
   }
   if ( !this->fields.isClose )
   {
     v5 = Method_EventInfoSkillExplanationDialog_OnClickDecideButton__;
     if ( (*((_BYTE *)Method_EventInfoSkillExplanationDialog_OnClickDecideButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1BC3020(Method_EventInfoSkillExplanationDialog_OnClickDecideButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BCB010(Method_EventInfoSkillExplanationDialog_OnClickDecideButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0, 0LL);
-    v7 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
     System_Action___ctor(
       v7,
       (Il2CppObject *)this,
@@ -196,35 +196,35 @@ void __fastcall EventInfoSkillExplanationDialog__Open(
   int32_t condId; // [xsp+Ch] [xbp-54h] BYREF
   SkillLvEntity_o *entity; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4B03F3B & 1) == 0 )
+  if ( (byte_4B1E37D & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, imagePartsGroupEntity);
-    sub_1BC3008(&AtlasManager_TypeInfo, v7);
-    sub_1BC3008(&Method_DataManager_GetMaster_QuestMaster___, v8);
-    sub_1BC3008(&Method_DataManager_GetMaster_SkillLvMaster___, v9);
-    sub_1BC3008(&DataManager_TypeInfo, v10);
-    sub_1BC3008(&EventInfoSkillExplanationDialog_TypeInfo, v11);
-    sub_1BC3008(&int_TypeInfo, v12);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v13);
-    sub_1BC3008(&Method_EventInfoSkillExplanationDialog___c__DisplayClass14_0__Open_b__0__, v14);
-    sub_1BC3008(&EventInfoSkillExplanationDialog___c__DisplayClass14_0_TypeInfo, v15);
-    sub_1BC3008(&StringLiteral_10792/*"QUEST_MESSAGE_DLG_DECIDE"*/, v16);
-    sub_1BC3008(&StringLiteral_10791/*"QUEST_MESSAGE_DLG_CANCEL"*/, v17);
-    byte_4B03F3B = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, imagePartsGroupEntity);
+    sub_1BCAFF8(&AtlasManager_TypeInfo, v7);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_QuestMaster___, v8);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_SkillLvMaster___, v9);
+    sub_1BCAFF8(&DataManager_TypeInfo, v10);
+    sub_1BCAFF8(&EventInfoSkillExplanationDialog_TypeInfo, v11);
+    sub_1BCAFF8(&int_TypeInfo, v12);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v13);
+    sub_1BCAFF8(&Method_EventInfoSkillExplanationDialog___c__DisplayClass14_0__Open_b__0__, v14);
+    sub_1BCAFF8(&EventInfoSkillExplanationDialog___c__DisplayClass14_0_TypeInfo, v15);
+    sub_1BCAFF8(&StringLiteral_10803/*"QUEST_MESSAGE_DLG_DECIDE"*/, v16);
+    sub_1BCAFF8(&StringLiteral_10802/*"QUEST_MESSAGE_DLG_CANCEL"*/, v17);
+    byte_4B1E37D = 1;
   }
   entity = 0LL;
-  v18 = sub_1BC3254(EventInfoSkillExplanationDialog___c__DisplayClass14_0_TypeInfo);
+  v18 = sub_1BCB244(EventInfoSkillExplanationDialog___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v18, 0LL);
   if ( !v18 )
     goto LABEL_30;
   *(_QWORD *)(v18 + 16) = clickCallback;
   v23 = (struct CommonConfirmDialog_ClickDelegate_o **)(v18 + 16);
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v18 + 16), (int32_t)clickCallback, v21, v22);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v18 + 16), (int32_t)clickCallback, v21, v22);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   this->fields.callback = 0LL;
   this->fields.isClose = 0;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.callback, 0, v24, v25);
-  v26 = sub_1BC3254(System_Action_TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.callback, 0, v24, v25);
+  v26 = sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(
     (System_Action_o *)v26,
     (Il2CppObject *)v18,
@@ -234,7 +234,7 @@ void __fastcall EventInfoSkillExplanationDialog__Open(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_SkillLvMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_SkillLvMaster___);
     SkillId = ImagePartsGroupEntity__GetSkillId(imagePartsGroupEntity, 0LL);
     SkillLv = (QuestMaster_o *)ImagePartsGroupEntity__GetSkillLv(imagePartsGroupEntity, 0LL);
     if ( !Master_object )
@@ -249,7 +249,7 @@ void __fastcall EventInfoSkillExplanationDialog__Open(
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      SkillLv = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_QuestMaster___);
+      SkillLv = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_QuestMaster___);
       if ( SkillLv )
       {
         SkillLv = (QuestMaster_o *)QuestMaster__getQuestEntity(SkillLv, imagePartsGroupEntity->fields.condId, 0LL);
@@ -303,18 +303,18 @@ void __fastcall EventInfoSkillExplanationDialog__Open(
                   {
                     UILabel__set_text(skillExplanationLabel, (System_String_o *)SkillLv, 0LL);
                     decideLabel = this->fields.decideLabel;
-                    SkillLv = (QuestMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10792/*"QUEST_MESSAGE_DLG_DECIDE"*/, 0LL);
+                    SkillLv = (QuestMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10803/*"QUEST_MESSAGE_DLG_DECIDE"*/, 0LL);
                     if ( decideLabel )
                     {
                       UILabel__set_text(decideLabel, (System_String_o *)SkillLv, 0LL);
                       cancelLabel = this->fields.cancelLabel;
-                      SkillLv = (QuestMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10791/*"QUEST_MESSAGE_DLG_CANCEL"*/, 0LL);
+                      SkillLv = (QuestMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10802/*"QUEST_MESSAGE_DLG_CANCEL"*/, 0LL);
                       if ( cancelLabel )
                       {
                         UILabel__set_text(cancelLabel, (System_String_o *)SkillLv, 0LL);
                         v49 = *v23;
                         this->fields.callback = *v23;
-                        sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.callback, (int32_t)v49, v50, v51);
+                        sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.callback, (int32_t)v49, v50, v51);
                         BaseDialog__Open((BaseDialog_o *)this, 0LL, 0, 0LL);
                         return;
                       }
@@ -327,7 +327,7 @@ void __fastcall EventInfoSkillExplanationDialog__Open(
         }
       }
 LABEL_30:
-      sub_1BC3264(SkillLv, v20);
+      sub_1BCB254(SkillLv, v20);
     }
   }
   if ( !v26 )
@@ -355,7 +355,7 @@ void __fastcall EventInfoSkillExplanationDialog___OnClickCancelButton_b__16_0(
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   this->fields.isClose = 0;
   this->fields.callback = 0LL;
-  sub_1BC2FAC((CGThumbnailListItem_o *)p_callback, 0, v5, v6);
+  sub_1BCAF9C((CGThumbnailListItem_o *)p_callback, 0, v5, v6);
 }
 
 
@@ -378,7 +378,7 @@ void __fastcall EventInfoSkillExplanationDialog___OnClickDecideButton_b__15_0(
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
   this->fields.isClose = 0;
   this->fields.callback = 0LL;
-  sub_1BC2FAC((CGThumbnailListItem_o *)p_callback, 0, v5, v6);
+  sub_1BCAF9C((CGThumbnailListItem_o *)p_callback, 0, v5, v6);
 }
 
 
@@ -390,10 +390,10 @@ UnityEngine_GameObject_o *__fastcall EventInfoSkillExplanationDialog__get_closeB
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4B03F3E & 1) == 0 )
+  if ( (byte_4B1E380 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    byte_4B03F3E = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    byte_4B1E380 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -402,7 +402,7 @@ UnityEngine_GameObject_o *__fastcall EventInfoSkillExplanationDialog__get_closeB
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_1BC3264(0LL, v4);
+    sub_1BCB254(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }
 

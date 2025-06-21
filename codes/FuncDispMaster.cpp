@@ -1,14 +1,14 @@
 void __fastcall FuncDispMaster___ctor(FuncDispMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B0226E & 1) == 0 )
+  if ( (byte_4B1C777 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_FuncDispMaster__FuncDispEntity__int___ctor__, method);
-    byte_4B0226E = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_FuncDispMaster__FuncDispEntity__int___ctor__, method);
+    byte_4B1C777 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     456,
-    (const MethodInfo_32ACD4C *)Method_DataMasterBase_FuncDispMaster__FuncDispEntity__int___ctor__);
+    (const MethodInfo_32C5ADC *)Method_DataMasterBase_FuncDispMaster__FuncDispEntity__int___ctor__);
 }
 
 
@@ -45,25 +45,25 @@ bool __fastcall FuncDispMaster__IsContainFuncIds(
   int32_t *v31; // x10
   __int64 v32; // x0
 
-  if ( (byte_4B0226C & 1) == 0 )
+  if ( (byte_4B1C775 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_FuncDispEntity__GetEnumerator__, entity);
-    sub_1BC3008(&Method_System_Linq_Enumerable_SequenceEqual_int___, v7);
-    sub_1BC3008(&System_IDisposable_TypeInfo, v8);
-    sub_1BC3008(&System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo, v9);
-    sub_1BC3008(&System_Collections_IEnumerator_TypeInfo, v10);
-    byte_4B0226C = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_FuncDispEntity__GetEnumerator__, entity);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_SequenceEqual_int___, v7);
+    sub_1BCAFF8(&System_IDisposable_TypeInfo, v8);
+    sub_1BCAFF8(&System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo, v9);
+    sub_1BCAFF8(&System_Collections_IEnumerator_TypeInfo, v10);
+    byte_4B1C775 = 1;
   }
   *entity = 0LL;
-  sub_1BC2FAC((CGThumbnailListItem_o *)entity, 0, (int32_t)funcIds, method);
+  sub_1BCAF9C((CGThumbnailListItem_o *)entity, 0, (int32_t)funcIds, method);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BC3264(0LL, v11);
+    sub_1BCB254(0LL, v11);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_324AE30 *)Method_System_Collections_ObjectModel_Collection_FuncDispEntity__GetEnumerator__);
+                 (const MethodInfo_3263BC0 *)Method_System_Collections_ObjectModel_Collection_FuncDispEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BC3264(0LL, v13);
+    sub_1BCB254(0LL, v13);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -83,7 +83,7 @@ bool __fastcall FuncDispMaster__IsContainFuncIds(
     else
     {
 LABEL_9:
-      p_method = sub_1C13570(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C1B560(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -106,21 +106,21 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v22 = sub_1C13570(Enumerator, System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo, 0LL);
+      v22 = sub_1C1B560(Enumerator, System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo, 0LL);
     }
     v23 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
             Enumerator,
             *(_QWORD *)(v22 + 8));
     v25 = (FuncDispEntity_o *)v23;
     if ( !v23 )
-      sub_1BC3264(0LL, v24);
+      sub_1BCB254(0LL, v24);
     if ( System_Linq_Enumerable__SequenceEqual_int_(
            *(System_Collections_Generic_IEnumerable_TSource__o **)(v23 + 24),
            (System_Collections_Generic_IEnumerable_TSource__o *)funcIds,
-           (const MethodInfo_3038F70 *)Method_System_Linq_Enumerable_SequenceEqual_int___) )
+           (const MethodInfo_3051C1C *)Method_System_Linq_Enumerable_SequenceEqual_int___) )
     {
       *entity = v25;
-      sub_1BC2FAC((CGThumbnailListItem_o *)entity, (int32_t)v25, v26, v27);
+      sub_1BCAF9C((CGThumbnailListItem_o *)entity, (int32_t)v25, v26, v27);
       v28 = 1;
       goto LABEL_22;
     }
@@ -144,7 +144,7 @@ LABEL_22:
   else
   {
 LABEL_26:
-    v32 = sub_1C13570(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v32 = sub_1C1B560(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v32)(Enumerator, *(_QWORD *)(v32 + 8));
   return v28;
@@ -198,19 +198,19 @@ System_String_o *__fastcall FuncDispMaster__ReplaceFractionFormat(
   System_String_o *v44; // x21
   MethodInfo methoda; // [xsp+8h] [xbp-78h] BYREF
 
-  if ( (byte_4B0226D & 1) == 0 )
+  if ( (byte_4B1C776 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_24987/*"{x"*/, funcVals);
-    sub_1BC3008(&StringLiteral_24792/*"{"*/, v5);
-    sub_1BC3008(&StringLiteral_24723/*"xx}"*/, v6);
-    sub_1BC3008(&StringLiteral_24722/*"xxx}"*/, v7);
-    sub_1BC3008(&StringLiteral_25016/*"}"*/, v8);
-    sub_1BC3008(&StringLiteral_24990/*"{xxxx"*/, v9);
-    sub_1BC3008(&StringLiteral_24988/*"{xx"*/, v10);
-    sub_1BC3008(&StringLiteral_24721/*"xxxx}"*/, v11);
-    sub_1BC3008(&StringLiteral_24724/*"x}"*/, v12);
-    sub_1BC3008(&StringLiteral_24989/*"{xxx"*/, v13);
-    byte_4B0226D = 1;
+    sub_1BCAFF8(&StringLiteral_25008/*"{x"*/, funcVals);
+    sub_1BCAFF8(&StringLiteral_24814/*"{"*/, v5);
+    sub_1BCAFF8(&StringLiteral_24745/*"xx}"*/, v6);
+    sub_1BCAFF8(&StringLiteral_24744/*"xxx}"*/, v7);
+    sub_1BCAFF8(&StringLiteral_25037/*"}"*/, v8);
+    sub_1BCAFF8(&StringLiteral_25011/*"{xxxx"*/, v9);
+    sub_1BCAFF8(&StringLiteral_25009/*"{xx"*/, v10);
+    sub_1BCAFF8(&StringLiteral_24743/*"xxxx}"*/, v11);
+    sub_1BCAFF8(&StringLiteral_24746/*"x}"*/, v12);
+    sub_1BCAFF8(&StringLiteral_25010/*"{xxx"*/, v13);
+    byte_4B1C776 = 1;
   }
   LODWORD(methoda.methodPointer) = 0;
   IsNullOrEmpty = (System_String_o *)BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)funcVals, 0LL);
@@ -224,58 +224,58 @@ System_String_o *__fastcall FuncDispMaster__ReplaceFractionFormat(
       while ( 1 )
       {
         v16 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0LL);
-        v17 = System_String__Concat_62386896(
-                (System_String_o *)StringLiteral_24792/*"{"*/,
+        v17 = System_String__Concat_62488672(
+                (System_String_o *)StringLiteral_24814/*"{"*/,
                 v16,
-                (System_String_o *)StringLiteral_24721/*"xxxx}"*/,
+                (System_String_o *)StringLiteral_24743/*"xxxx}"*/,
                 0LL);
         v18 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0LL);
-        v19 = System_String__Concat_62386896(
-                (System_String_o *)StringLiteral_24792/*"{"*/,
+        v19 = System_String__Concat_62488672(
+                (System_String_o *)StringLiteral_24814/*"{"*/,
                 v18,
-                (System_String_o *)StringLiteral_24722/*"xxx}"*/,
+                (System_String_o *)StringLiteral_24744/*"xxx}"*/,
                 0LL);
         v20 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0LL);
-        v21 = System_String__Concat_62386896(
-                (System_String_o *)StringLiteral_24792/*"{"*/,
+        v21 = System_String__Concat_62488672(
+                (System_String_o *)StringLiteral_24814/*"{"*/,
                 v20,
-                (System_String_o *)StringLiteral_24723/*"xx}"*/,
+                (System_String_o *)StringLiteral_24745/*"xx}"*/,
                 0LL);
         v22 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0LL);
-        v23 = System_String__Concat_62386896(
-                (System_String_o *)StringLiteral_24792/*"{"*/,
+        v23 = System_String__Concat_62488672(
+                (System_String_o *)StringLiteral_24814/*"{"*/,
                 v22,
-                (System_String_o *)StringLiteral_24724/*"x}"*/,
+                (System_String_o *)StringLiteral_24746/*"x}"*/,
                 0LL);
         v24 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0LL);
-        v25 = System_String__Concat_62386896(
-                (System_String_o *)StringLiteral_24792/*"{"*/,
+        v25 = System_String__Concat_62488672(
+                (System_String_o *)StringLiteral_24814/*"{"*/,
                 v24,
-                (System_String_o *)StringLiteral_25016/*"}"*/,
+                (System_String_o *)StringLiteral_25037/*"}"*/,
                 0LL);
         v26 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0LL);
-        v27 = System_String__Concat_62386896(
-                (System_String_o *)StringLiteral_24987/*"{x"*/,
+        v27 = System_String__Concat_62488672(
+                (System_String_o *)StringLiteral_25008/*"{x"*/,
                 v26,
-                (System_String_o *)StringLiteral_25016/*"}"*/,
+                (System_String_o *)StringLiteral_25037/*"}"*/,
                 0LL);
         v28 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0LL);
-        v29 = System_String__Concat_62386896(
-                (System_String_o *)StringLiteral_24988/*"{xx"*/,
+        v29 = System_String__Concat_62488672(
+                (System_String_o *)StringLiteral_25009/*"{xx"*/,
                 v28,
-                (System_String_o *)StringLiteral_25016/*"}"*/,
+                (System_String_o *)StringLiteral_25037/*"}"*/,
                 0LL);
         v30 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0LL);
-        v31 = System_String__Concat_62386896(
-                (System_String_o *)StringLiteral_24989/*"{xxx"*/,
+        v31 = System_String__Concat_62488672(
+                (System_String_o *)StringLiteral_25010/*"{xxx"*/,
                 v30,
-                (System_String_o *)StringLiteral_25016/*"}"*/,
+                (System_String_o *)StringLiteral_25037/*"}"*/,
                 0LL);
         v32 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0LL);
-        v33 = System_String__Concat_62386896(
-                (System_String_o *)StringLiteral_24990/*"{xxxx"*/,
+        v33 = System_String__Concat_62488672(
+                (System_String_o *)StringLiteral_25011/*"{xxxx"*/,
                 v32,
-                (System_String_o *)StringLiteral_25016/*"}"*/,
+                (System_String_o *)StringLiteral_25037/*"}"*/,
                 0LL);
         if ( HIDWORD(methoda.methodPointer) >= funcVals->max_length )
           goto LABEL_26;
@@ -284,7 +284,7 @@ System_String_o *__fastcall FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !text )
           break;
-        v33 = System_String__Replace_62395196(text, v17, IsNullOrEmpty, 0LL);
+        v33 = System_String__Replace_62496972(text, v17, IsNullOrEmpty, 0LL);
         if ( HIDWORD(methoda.methodPointer) >= funcVals->max_length )
           goto LABEL_26;
         v37 = v33;
@@ -292,7 +292,7 @@ System_String_o *__fastcall FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v37 )
           break;
-        v33 = System_String__Replace_62395196(v37, v19, IsNullOrEmpty, 0LL);
+        v33 = System_String__Replace_62496972(v37, v19, IsNullOrEmpty, 0LL);
         if ( HIDWORD(methoda.methodPointer) >= funcVals->max_length )
           goto LABEL_26;
         v38 = v33;
@@ -300,7 +300,7 @@ System_String_o *__fastcall FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v38 )
           break;
-        v33 = System_String__Replace_62395196(v38, v21, IsNullOrEmpty, 0LL);
+        v33 = System_String__Replace_62496972(v38, v21, IsNullOrEmpty, 0LL);
         if ( HIDWORD(methoda.methodPointer) >= funcVals->max_length )
           goto LABEL_26;
         v39 = v33;
@@ -308,7 +308,7 @@ System_String_o *__fastcall FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v39 )
           break;
-        v33 = System_String__Replace_62395196(v39, v23, IsNullOrEmpty, 0LL);
+        v33 = System_String__Replace_62496972(v39, v23, IsNullOrEmpty, 0LL);
         if ( HIDWORD(methoda.methodPointer) >= funcVals->max_length )
           goto LABEL_26;
         v40 = v33;
@@ -316,7 +316,7 @@ System_String_o *__fastcall FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v40 )
           break;
-        v33 = System_String__Replace_62395196(v40, v25, IsNullOrEmpty, 0LL);
+        v33 = System_String__Replace_62496972(v40, v25, IsNullOrEmpty, 0LL);
         if ( HIDWORD(methoda.methodPointer) >= funcVals->max_length )
           goto LABEL_26;
         v41 = v33;
@@ -324,7 +324,7 @@ System_String_o *__fastcall FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v41 )
           break;
-        v33 = System_String__Replace_62395196(v41, v27, IsNullOrEmpty, 0LL);
+        v33 = System_String__Replace_62496972(v41, v27, IsNullOrEmpty, 0LL);
         if ( HIDWORD(methoda.methodPointer) >= funcVals->max_length )
           goto LABEL_26;
         v42 = v33;
@@ -332,7 +332,7 @@ System_String_o *__fastcall FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v42 )
           break;
-        v33 = System_String__Replace_62395196(v42, v29, IsNullOrEmpty, 0LL);
+        v33 = System_String__Replace_62496972(v42, v29, IsNullOrEmpty, 0LL);
         if ( HIDWORD(methoda.methodPointer) >= funcVals->max_length )
           goto LABEL_26;
         v43 = v33;
@@ -340,22 +340,22 @@ System_String_o *__fastcall FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v43 )
           break;
-        v33 = System_String__Replace_62395196(v43, v31, IsNullOrEmpty, 0LL);
+        v33 = System_String__Replace_62496972(v43, v31, IsNullOrEmpty, 0LL);
         if ( HIDWORD(methoda.methodPointer) >= funcVals->max_length )
 LABEL_26:
-          sub_1BC326C(v33, v34, v35);
+          sub_1BCB25C(v33, v34, v35);
         v44 = v33;
         *(float *)&methoda.methodPointer = (float)funcVals->m_Items[SHIDWORD(methoda.methodPointer) + 1] / 10000.0;
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v44 )
           break;
-        text = System_String__Replace_62395196(v44, v36, IsNullOrEmpty, 0LL);
+        text = System_String__Replace_62496972(v44, v36, IsNullOrEmpty, 0LL);
         ++HIDWORD(methoda.methodPointer);
         if ( SHIDWORD(methoda.methodPointer) >= (signed int)funcVals->max_length )
           return text;
       }
 LABEL_27:
-      sub_1BC3264(IsNullOrEmpty, v15);
+      sub_1BCB254(IsNullOrEmpty, v15);
     }
   }
   return text;

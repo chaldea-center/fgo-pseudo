@@ -16,16 +16,16 @@ void __fastcall ExchangeAppendPassiveSkillRequest__beginRequest(
   __int64 v9; // x1
   __int64 v10; // x1
 
-  if ( (byte_4B03ABF & 1) == 0 )
+  if ( (byte_4B1DFCA & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_16900/*"baseUserSvtId"*/, baseUsrSvtId);
-    sub_1BC3008(&StringLiteral_16895/*"baseSkillNum"*/, v9);
-    sub_1BC3008(&StringLiteral_23762/*"targetSkillNum"*/, v10);
-    byte_4B03ABF = 1;
+    sub_1BCAFF8(&StringLiteral_16911/*"baseUserSvtId"*/, baseUsrSvtId);
+    sub_1BCAFF8(&StringLiteral_16906/*"baseSkillNum"*/, v9);
+    sub_1BCAFF8(&StringLiteral_23784/*"targetSkillNum"*/, v10);
+    byte_4B1DFCA = 1;
   }
-  RequestBase__addField_43183652((RequestBase_o *)this, (System_String_o *)StringLiteral_16900/*"baseUserSvtId"*/, baseUsrSvtId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23762/*"targetSkillNum"*/, targetSkillNum, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16895/*"baseSkillNum"*/, baseSkillNum, 0LL);
+  RequestBase__addField_43346700((RequestBase_o *)this, (System_String_o *)StringLiteral_16911/*"baseUserSvtId"*/, baseUsrSvtId, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23784/*"targetSkillNum"*/, targetSkillNum, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16906/*"baseSkillNum"*/, baseSkillNum, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -37,16 +37,16 @@ System_String_o *__fastcall ExchangeAppendPassiveSkillRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B03ABE & 1) == 0 )
+  if ( (byte_4B1DFC9 & 1) == 0 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, method);
-    sub_1BC3008(&StringLiteral_17592/*"card/exchangeAppendPassiveSkill"*/, v2);
-    byte_4B03ABE = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
+    sub_1BCAFF8(&StringLiteral_17603/*"card/exchangeAppendPassiveSkill"*/, v2);
+    byte_4B1DFC9 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_17592/*"card/exchangeAppendPassiveSkill"*/, 0LL);
+  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_17603/*"card/exchangeAppendPassiveSkill"*/, 0LL);
 }
 
 
@@ -62,17 +62,17 @@ void __fastcall ExchangeAppendPassiveSkillRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v10; // x1
 
-  if ( (byte_4B03AC0 & 1) == 0 )
+  if ( (byte_4B1DFCB & 1) == 0 )
   {
-    sub_1BC3008(&JsonManager_TypeInfo, responseList);
-    sub_1BC3008(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BC3008(&StringLiteral_21997/*"ng"*/, v6);
-    byte_4B03AC0 = 1;
+    sub_1BCAFF8(&JsonManager_TypeInfo, responseList);
+    sub_1BCAFF8(&ResponseCommandKind_TypeInfo, v5);
+    sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v6);
+    byte_4B1DFCB = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(135, responseList, 0LL);
-  if ( v7 && (v8 = v7, ResponseData__checkError_43184840(v7, 0LL)) )
+  if ( v7 && (v8 = v7, ResponseData__checkError_43347888(v7, 0LL)) )
   {
     success = (Il2CppObject *)v8->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -81,7 +81,7 @@ void __fastcall ExchangeAppendPassiveSkillRequest__requestCompleted(
   }
   else
   {
-    v10 = (System_String_o *)StringLiteral_21997/*"ng"*/;
+    v10 = (System_String_o *)StringLiteral_22015/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v10, 0LL);
 }

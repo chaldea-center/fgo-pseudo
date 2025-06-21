@@ -16,6 +16,6 @@ void __fastcall GrandSvtInfo___ctor(
   v10 = (GrandSvtInfo_o *)((char *)v10 + 32);
   LODWORD(v10[-1].fields.userSvtEquipIds) = grandGraphId;
   *(_QWORD *)&v10[-1].fields.equipTarget2SkillChange = userSvtId;
-  sub_1BC2FAC((CGThumbnailListItem_o *)v10, (int32_t)userSvtEquipIds, v11, v12);
+  sub_1BCAF9C((CGThumbnailListItem_o *)v10, (int32_t)userSvtEquipIds, v11, v12);
   LODWORD(v10->monitor) = equipTarget2SkillChange;
 }

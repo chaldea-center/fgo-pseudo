@@ -14,19 +14,19 @@ void __fastcall MultipleViewListViewItemDraw__SetInput(
   UnityEngine_Component_o *maskLb; // x0
   UnityEngine_Object_o *baseButton; // x22
   UnityEngine_Object_o *lockSprite; // x21
-  bool isLock; // w1
+  UnityEngine_GameObject_o *gameObject; // x21
   UnityEngine_Object_o *choiceSprite; // x21
-  bool isChoice; // w1
+  UnityEngine_GameObject_o *v13; // x21
   UnityEngine_Object_o *pushSprite; // x21
   UnityEngine_Object_o *maskSprite; // x21
   UnityEngine_Object_o *removeObject; // x21
   const MethodInfo *v17; // x2
 
-  if ( (byte_4AFD369 & 1) == 0 )
+  if ( (byte_4B1784C & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_Component_GetComponent_Collider___, item);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v7);
-    byte_4AFD369 = 1;
+    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_Collider___, item);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v7);
+    byte_4B1784C = 1;
   }
   if ( item )
   {
@@ -44,16 +44,16 @@ void __fastcall MultipleViewListViewItemDraw__SetInput(
         {
           maskLb = (UnityEngine_Component_o *)this->fields.baseButton;
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                 maskLb,
-                                                (const MethodInfo_2FF8634 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_Collider___);
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskLb, isInput, 0LL);
           maskLb = (UnityEngine_Component_o *)this->fields.baseButton;
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))maskLb->klass[1]._1.implementedInterfaces)(
             maskLb,
             0LL,
@@ -67,15 +67,12 @@ void __fastcall MultipleViewListViewItemDraw__SetInput(
         {
           maskLb = (UnityEngine_Component_o *)this->fields.lockSprite;
           if ( !maskLb )
-            goto LABEL_50;
-          maskLb = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskLb, 0LL);
-          if ( !maskLb )
-            goto LABEL_50;
-          if ( item->fields.isSwapLock )
-            isLock = !item->fields.isLock;
-          else
-            isLock = item->fields.isLock;
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskLb, isLock, 0LL);
+            goto LABEL_44;
+          gameObject = UnityEngine_Component__get_gameObject(maskLb, 0LL);
+          maskLb = (UnityEngine_Component_o *)MultipleViewListViewItem__get_IsDispLock(item, 0LL);
+          if ( !gameObject )
+            goto LABEL_44;
+          UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)maskLb & 1, 0LL);
         }
         choiceSprite = (UnityEngine_Object_o *)this->fields.choiceSprite;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -84,15 +81,12 @@ void __fastcall MultipleViewListViewItemDraw__SetInput(
         {
           maskLb = (UnityEngine_Component_o *)this->fields.choiceSprite;
           if ( !maskLb )
-            goto LABEL_50;
-          maskLb = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskLb, 0LL);
-          if ( !maskLb )
-            goto LABEL_50;
-          if ( item->fields.isSwapChoice )
-            isChoice = !item->fields.isChoice;
-          else
-            isChoice = item->fields.isChoice;
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskLb, isChoice, 0LL);
+            goto LABEL_44;
+          v13 = UnityEngine_Component__get_gameObject(maskLb, 0LL);
+          maskLb = (UnityEngine_Component_o *)MultipleViewListViewItem__get_IsDispChoice(item, 0LL);
+          if ( !v13 )
+            goto LABEL_44;
+          UnityEngine_GameObject__SetActive(v13, (unsigned __int8)maskLb & 1, 0LL);
         }
         pushSprite = (UnityEngine_Object_o *)this->fields.pushSprite;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -101,10 +95,10 @@ void __fastcall MultipleViewListViewItemDraw__SetInput(
         {
           maskLb = (UnityEngine_Component_o *)this->fields.pushSprite;
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskLb, 0LL);
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskLb, item->fields.isPush, 0LL);
         }
         maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
@@ -114,29 +108,29 @@ void __fastcall MultipleViewListViewItemDraw__SetInput(
         {
           maskLb = (UnityEngine_Component_o *)this->fields.maskSprite;
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskLb, 0LL);
           if ( !maskLb )
-            goto LABEL_50;
+            goto LABEL_44;
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskLb, 0, 0LL);
         }
         removeObject = (UnityEngine_Object_o *)this->fields.removeObject;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         if ( !UnityEngine_Object__op_Inequality(removeObject, 0LL, 0LL) )
-          goto LABEL_48;
+          goto LABEL_42;
         maskLb = (UnityEngine_Component_o *)this->fields.removeObject;
         if ( maskLb )
         {
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskLb, item->fields.selectNum >= 0, 0LL);
-LABEL_48:
+LABEL_42:
           MultipleViewListViewItemDraw__SetMaskInfo(this, item, v17);
           return;
         }
       }
     }
-LABEL_50:
-    sub_1BC3264(maskLb, item);
+LABEL_44:
+    sub_1BCB254(maskLb, item);
   }
 }
 
@@ -149,26 +143,27 @@ void __fastcall MultipleViewListViewItemDraw__SetItem(
 {
   ServantFaceIconComponent_o *servantFaceIcon; // x0
   UnityEngine_Object_o *partyIcon; // x21
+  FlashingIconComponent_o *v9; // x21
   UnityEngine_Object_o *lockSprite; // x21
-  bool isLock; // w1
+  UnityEngine_GameObject_o *gameObject; // x21
   UnityEngine_Object_o *choiceSprite; // x21
-  bool isChoice; // w1
+  UnityEngine_GameObject_o *v13; // x21
   UnityEngine_Object_o *pushSprite; // x21
   UnityEngine_Object_o *maskSprite; // x21
   UnityEngine_Object_o *removeObject; // x21
-  const MethodInfo *v16; // x2
+  const MethodInfo *v17; // x2
 
-  if ( (byte_4AFD368 & 1) == 0 )
+  if ( (byte_4B1784B & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, item);
-    byte_4AFD368 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, item);
+    byte_4B1784B = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( servantFaceIcon )
     {
-      ServantFaceIconComponent__Set_40035864(
+      ServantFaceIconComponent__Set_40190236(
         servantFaceIcon,
         item->fields.userSvtEntity,
         item->fields.iconLabelInfo1,
@@ -197,13 +192,11 @@ void __fastcall MultipleViewListViewItemDraw__SetItem(
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               if ( UnityEngine_Object__op_Inequality(partyIcon, 0LL, 0LL) )
               {
-                servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.partyIcon;
-                if ( !servantFaceIcon )
-                  goto LABEL_52;
-                FlashingIconComponent__Set_39931536(
-                  (FlashingIconComponent_o *)servantFaceIcon,
-                  item->fields.partyIndex >= 0,
-                  0LL);
+                v9 = this->fields.partyIcon;
+                servantFaceIcon = (ServantFaceIconComponent_o *)MultipleViewListViewItem__get_IsParty(item, 0LL);
+                if ( !v9 )
+                  goto LABEL_46;
+                FlashingIconComponent__Set_40087648(v9, (unsigned __int8)servantFaceIcon & 1, 0LL);
               }
               lockSprite = (UnityEngine_Object_o *)this->fields.lockSprite;
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -212,17 +205,12 @@ void __fastcall MultipleViewListViewItemDraw__SetItem(
               {
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.lockSprite;
                 if ( !servantFaceIcon )
-                  goto LABEL_52;
-                servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
-                                                                  (UnityEngine_Component_o *)servantFaceIcon,
-                                                                  0LL);
-                if ( !servantFaceIcon )
-                  goto LABEL_52;
-                if ( item->fields.isSwapLock )
-                  isLock = !item->fields.isLock;
-                else
-                  isLock = item->fields.isLock;
-                UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, isLock, 0LL);
+                  goto LABEL_46;
+                gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantFaceIcon, 0LL);
+                servantFaceIcon = (ServantFaceIconComponent_o *)MultipleViewListViewItem__get_IsDispLock(item, 0LL);
+                if ( !gameObject )
+                  goto LABEL_46;
+                UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)servantFaceIcon & 1, 0LL);
               }
               choiceSprite = (UnityEngine_Object_o *)this->fields.choiceSprite;
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -231,17 +219,12 @@ void __fastcall MultipleViewListViewItemDraw__SetItem(
               {
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.choiceSprite;
                 if ( !servantFaceIcon )
-                  goto LABEL_52;
-                servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
-                                                                  (UnityEngine_Component_o *)servantFaceIcon,
-                                                                  0LL);
-                if ( !servantFaceIcon )
-                  goto LABEL_52;
-                if ( item->fields.isSwapChoice )
-                  isChoice = !item->fields.isChoice;
-                else
-                  isChoice = item->fields.isChoice;
-                UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, isChoice, 0LL);
+                  goto LABEL_46;
+                v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)servantFaceIcon, 0LL);
+                servantFaceIcon = (ServantFaceIconComponent_o *)MultipleViewListViewItem__get_IsDispChoice(item, 0LL);
+                if ( !v13 )
+                  goto LABEL_46;
+                UnityEngine_GameObject__SetActive(v13, (unsigned __int8)servantFaceIcon & 1, 0LL);
               }
               pushSprite = (UnityEngine_Object_o *)this->fields.pushSprite;
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -250,12 +233,12 @@ void __fastcall MultipleViewListViewItemDraw__SetItem(
               {
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.pushSprite;
                 if ( !servantFaceIcon )
-                  goto LABEL_52;
+                  goto LABEL_46;
                 servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
                                                                   (UnityEngine_Component_o *)servantFaceIcon,
                                                                   0LL);
                 if ( !servantFaceIcon )
-                  goto LABEL_52;
+                  goto LABEL_46;
                 UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, item->fields.isPush, 0LL);
               }
               maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
@@ -265,19 +248,19 @@ void __fastcall MultipleViewListViewItemDraw__SetItem(
               {
                 servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.maskSprite;
                 if ( !servantFaceIcon )
-                  goto LABEL_52;
+                  goto LABEL_46;
                 servantFaceIcon = (ServantFaceIconComponent_o *)UnityEngine_Component__get_gameObject(
                                                                   (UnityEngine_Component_o *)servantFaceIcon,
                                                                   0LL);
                 if ( !servantFaceIcon )
-                  goto LABEL_52;
+                  goto LABEL_46;
                 UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 0, 0LL);
               }
               removeObject = (UnityEngine_Object_o *)this->fields.removeObject;
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               if ( !UnityEngine_Object__op_Inequality(removeObject, 0LL, 0LL) )
-                goto LABEL_50;
+                goto LABEL_44;
               servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.removeObject;
               if ( servantFaceIcon )
               {
@@ -285,8 +268,8 @@ void __fastcall MultipleViewListViewItemDraw__SetItem(
                   (UnityEngine_GameObject_o *)servantFaceIcon,
                   item->fields.selectNum >= 0,
                   0LL);
-LABEL_50:
-                MultipleViewListViewItemDraw__SetMaskInfo(this, item, v16);
+LABEL_44:
+                MultipleViewListViewItemDraw__SetMaskInfo(this, item, v17);
                 return;
               }
             }
@@ -294,8 +277,8 @@ LABEL_50:
         }
       }
     }
-LABEL_52:
-    sub_1BC3264(servantFaceIcon, item);
+LABEL_46:
+    sub_1BCB254(servantFaceIcon, item);
   }
 }
 
@@ -309,114 +292,112 @@ void __fastcall MultipleViewListViewItemDraw__SetMaskInfo(
   __int64 v5; // x1
   __int64 v6; // x1
   __int64 v7; // x1
-  UserServantEntity_o *userSvtEntity; // x0
   UILabel_o *maskLb; // x19
-  __int64 *v10; // x8
-  System_String_o *v11; // x0
+  __int64 *v9; // x8
+  System_String_o *v10; // x0
+  System_String_o *v11; // x20
   System_String_o *v12; // x0
-  System_String_o *v13; // x20
   int32_t selectNum; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_4AFD36A & 1) == 0 )
+  if ( (byte_4B1784D & 1) == 0 )
   {
-    sub_1BC3008(&LocalizationManager_TypeInfo, item);
-    sub_1BC3008(&StringLiteral_11406/*"SELECT_CANNOT"*/, v5);
-    sub_1BC3008(&StringLiteral_11437/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
-    this = (MultipleViewListViewItemDraw_o *)sub_1BC3008(&StringLiteral_8737/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/, v7);
-    byte_4AFD36A = 1;
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, item);
+    sub_1BCAFF8(&StringLiteral_11417/*"SELECT_CANNOT"*/, v5);
+    sub_1BCAFF8(&StringLiteral_11448/*"SELECT_SERVANT_EVENT_JOIN"*/, v6);
+    this = (MultipleViewListViewItemDraw_o *)sub_1BCAFF8(&StringLiteral_8748/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/, v7);
+    byte_4B1784D = 1;
   }
   if ( !item )
-    goto LABEL_39;
+    goto LABEL_37;
   if ( item->fields.isPushMode )
   {
-    userSvtEntity = item->fields.userSvtEntity;
-    if ( userSvtEntity && UserServantEntity__IsEventJoin(userSvtEntity, 0LL) )
+    if ( MultipleViewListViewItem__get_IsEventJoin(item, 0LL) )
     {
       this = (MultipleViewListViewItemDraw_o *)v4->fields.maskSprite;
       if ( !this )
-        goto LABEL_39;
+        goto LABEL_37;
       this = (MultipleViewListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
                                                  (UnityEngine_Component_o *)this,
                                                  0LL);
       if ( !this )
-        goto LABEL_39;
+        goto LABEL_37;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
       this = (MultipleViewListViewItemDraw_o *)v4->fields.maskLb;
       if ( !this )
-        goto LABEL_39;
+        goto LABEL_37;
       this = (MultipleViewListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
                                                  (UnityEngine_Component_o *)this,
                                                  0LL);
       if ( !this )
-        goto LABEL_39;
+        goto LABEL_37;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
       maskLb = v4->fields.maskLb;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v10 = &StringLiteral_11437/*"SELECT_SERVANT_EVENT_JOIN"*/;
-LABEL_24:
-      v11 = (System_String_o *)*v10;
-LABEL_25:
-      this = (MultipleViewListViewItemDraw_o *)LocalizationManager__Get(v11, 0LL);
+      v9 = &StringLiteral_11448/*"SELECT_SERVANT_EVENT_JOIN"*/;
+LABEL_33:
+      v12 = (System_String_o *)*v9;
+LABEL_34:
+      this = (MultipleViewListViewItemDraw_o *)LocalizationManager__Get(v12, 0LL);
       if ( maskLb )
       {
         UILabel__set_text(maskLb, (System_String_o *)this, 0LL);
         return;
       }
-LABEL_39:
-      sub_1BC3264(this, item);
+LABEL_37:
+      sub_1BCB254(this, item);
     }
-    if ( !MultipleViewListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
+    if ( !MultipleViewListViewItem__get_IsHerioneReave(item, 0LL) )
       return;
-LABEL_17:
+LABEL_26:
     this = (MultipleViewListViewItemDraw_o *)v4->fields.maskSprite;
     if ( !this )
-      goto LABEL_39;
+      goto LABEL_37;
     this = (MultipleViewListViewItemDraw_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !this )
-      goto LABEL_39;
+      goto LABEL_37;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
     this = (MultipleViewListViewItemDraw_o *)v4->fields.maskLb;
     if ( !this )
-      goto LABEL_39;
+      goto LABEL_37;
     this = (MultipleViewListViewItemDraw_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !this )
-      goto LABEL_39;
+      goto LABEL_37;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
     maskLb = v4->fields.maskLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v10 = &StringLiteral_11406/*"SELECT_CANNOT"*/;
-    goto LABEL_24;
+    v9 = &StringLiteral_11417/*"SELECT_CANNOT"*/;
+    goto LABEL_33;
   }
-  if ( MultipleViewListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
-    goto LABEL_17;
+  if ( MultipleViewListViewItem__get_IsHerioneReave(item, 0LL) )
+    goto LABEL_26;
   if ( (item->fields.selectNum & 0x80000000) == 0 )
   {
     this = (MultipleViewListViewItemDraw_o *)v4->fields.maskSprite;
     if ( !this )
-      goto LABEL_39;
+      goto LABEL_37;
     this = (MultipleViewListViewItemDraw_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !this )
-      goto LABEL_39;
+      goto LABEL_37;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
     this = (MultipleViewListViewItemDraw_o *)v4->fields.maskLb;
     if ( !this )
-      goto LABEL_39;
+      goto LABEL_37;
     this = (MultipleViewListViewItemDraw_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
     if ( !this )
-      goto LABEL_39;
+      goto LABEL_37;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
     maskLb = v4->fields.maskLb;
     selectNum = item->fields.selectNum;
-    v12 = System_Int32__ToString((int32_t)&selectNum, 0LL);
-    v13 = System_String__Concat_62348648((System_String_o *)StringLiteral_8737/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/, v12, 0LL);
+    v10 = System_Int32__ToString((int32_t)&selectNum, 0LL);
+    v11 = System_String__Concat_62450424((System_String_o *)StringLiteral_8748/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/, v10, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v11 = v13;
-    goto LABEL_25;
+    v12 = v11;
+    goto LABEL_34;
   }
   if ( item->fields.isSelectedSvtId || item->fields.isSelectedMax )
-    goto LABEL_17;
+    goto LABEL_26;
 }

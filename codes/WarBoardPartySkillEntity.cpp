@@ -1,13 +1,13 @@
 void __fastcall WarBoardPartySkillEntity___ctor(WarBoardPartySkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B0316D & 1) == 0 )
+  if ( (byte_4B1D676 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B0316D = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B1D676 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall WarBoardPartySkillEntity__CreatePK(
         int32_t num,
         const MethodInfo *method)
 {
-  if ( (byte_4B0316B & 1) == 0 )
+  if ( (byte_4B1D674 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&target);
-    byte_4B0316B = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&target);
+    byte_4B1D674 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            target,
            num,
-           (const MethodInfo_300047C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30190BC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -50,22 +50,22 @@ SkillEntity_o *__fastcall WarBoardPartySkillEntity__GetSkillEntity(
   Il2CppObject *Master_object; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B0316C & 1) == 0 )
+  if ( (byte_4B1D675 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMaster_SkillMaster___, method);
-    sub_1BC3008(&DataManager_TypeInfo, v3);
-    sub_1BC3008(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v4);
-    byte_4B0316C = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMaster_SkillMaster___, method);
+    sub_1BCAFF8(&DataManager_TypeInfo, v3);
+    sub_1BCAFF8(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__, v4);
+    byte_4B1D675 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_SkillMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !Master_object )
-    sub_1BC3264(0LL, v6);
+    sub_1BCB254(0LL, v6);
   return (SkillEntity_o *)DataMasterBase_object__object__int___GetEntity(
                             (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                             this->fields.skillId,
-                            (const MethodInfo_32AF070 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                            (const MethodInfo_32C7E00 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
 }
 
 

@@ -3,10 +3,10 @@ void __fastcall MasterMissionReceiveConfirmListViewItemDraw___cctor(const Method
   __int64 v1; // x1
   struct MasterMissionReceiveConfirmListViewItemDraw_StaticFields *static_fields; // x8
 
-  if ( (byte_4B05291 & 1) == 0 )
+  if ( (byte_4B1F717 & 1) == 0 )
   {
-    sub_1BC3008(&MasterMissionReceiveConfirmListViewItemDraw_TypeInfo, v1);
-    byte_4B05291 = 1;
+    sub_1BCAFF8(&MasterMissionReceiveConfirmListViewItemDraw_TypeInfo, v1);
+    byte_4B1F717 = 1;
   }
   static_fields = MasterMissionReceiveConfirmListViewItemDraw_TypeInfo->static_fields;
   static_fields->REWARD_TEXT_WIDTH = 630.0;
@@ -87,18 +87,18 @@ void __fastcall MasterMissionReceiveConfirmListViewItemDraw__SetItem(
   System_String_o *nameText; // [xsp+38h] [xbp-68h] BYREF
 
   v10 = this;
-  if ( (byte_4B05290 & 1) == 0 )
+  if ( (byte_4B1F716 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMasterData_GiftMaster___, message);
-    sub_1BC3008(&Method_DataManager_GetMasterData_ItemMaster___, v11);
-    sub_1BC3008(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v12);
-    sub_1BC3008(&int_TypeInfo, v13);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v14);
-    sub_1BC3008(&MasterMissionReceiveConfirmListViewItemDraw_TypeInfo, v15);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v16);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    this = (MasterMissionReceiveConfirmListViewItemDraw_o *)sub_1BC3008(&StringLiteral_8482/*"MASTER_MISSION_RECEIVE_CONFIRM_REWARD_FMT"*/, v18);
-    byte_4B05290 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_GiftMaster___, message);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_ItemMaster___, v11);
+    sub_1BCAFF8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v12);
+    sub_1BCAFF8(&int_TypeInfo, v13);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v14);
+    sub_1BCAFF8(&MasterMissionReceiveConfirmListViewItemDraw_TypeInfo, v15);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v16);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
+    this = (MasterMissionReceiveConfirmListViewItemDraw_o *)sub_1BCAFF8(&StringLiteral_8492/*"MASTER_MISSION_RECEIVE_CONFIRM_REWARD_FMT"*/, v18);
+    byte_4B1F716 = 1;
   }
   countText = 0LL;
   nameText = 0LL;
@@ -133,25 +133,25 @@ void __fastcall MasterMissionReceiveConfirmListViewItemDraw__SetItem(
       v21 = MasterMissionReceiveConfirmListViewItemDraw_TypeInfo;
     }
     MSG_REWARD_SPACE = v21->static_fields->MSG_REWARD_SPACE;
-    this = (MasterMissionReceiveConfirmListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (MasterMissionReceiveConfirmListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_71;
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)this,
-                          (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ItemMaster___);
-    this = (MasterMissionReceiveConfirmListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                          (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ItemMaster___);
+    this = (MasterMissionReceiveConfirmListViewItemDraw_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !this )
       goto LABEL_71;
     this = (MasterMissionReceiveConfirmListViewItemDraw_o *)DataManager__GetMasterData_object_(
                                                               (DataManager_o *)this,
-                                                              (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_GiftMaster___);
+                                                              (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_GiftMaster___);
     if ( !this )
       goto LABEL_71;
     GiftListById = GiftMaster__GetGiftListById((GiftMaster_o *)this, giftId, 0LL);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     this = (MasterMissionReceiveConfirmListViewItemDraw_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_8482/*"MASTER_MISSION_RECEIVE_CONFIRM_REWARD_FMT"*/,
+                                                              (System_String_o *)StringLiteral_8492/*"MASTER_MISSION_RECEIVE_CONFIRM_REWARD_FMT"*/,
                                                               0LL);
     rewardLabel = v10->fields.rewardLabel;
     format = (System_String_o *)this;
@@ -169,7 +169,7 @@ void __fastcall MasterMissionReceiveConfirmListViewItemDraw__SetItem(
       v58 = isLineDisp;
       if ( !(_DWORD)v27 )
 LABEL_57:
-        sub_1BC326C(this, message, v24);
+        sub_1BCB25C(this, message, v24);
       v30 = 0LL;
       v31 = 1;
       while ( 1 )
@@ -205,7 +205,7 @@ LABEL_57:
         if ( !v32 )
           goto LABEL_71;
         GiftEntity__GetInfo(v32, &nameText, &countText, 0LL);
-        this = (MasterMissionReceiveConfirmListViewItemDraw_o *)Gift__IsItem_39466008(v32->fields.type, 0LL);
+        this = (MasterMissionReceiveConfirmListViewItemDraw_o *)Gift__IsItem_39617068(v32->fields.type, 0LL);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           this = (MasterMissionReceiveConfirmListViewItemDraw_o *)MasterData_object;
@@ -215,7 +215,7 @@ LABEL_57:
                                                                     (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                                                                     &entity,
                                                                     v32->fields.objectId,
-                                                                    (const MethodInfo_32AF0BC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                                                                    (const MethodInfo_32C7E4C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
           if ( ((unsigned __int8)this & 1) != 0 )
           {
             if ( !entity )
@@ -236,7 +236,7 @@ LABEL_57:
         v43 = (Il2CppObject *)nameText;
         v61 = num;
         v44 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v61, v24, v38, v39);
-        this = (MasterMissionReceiveConfirmListViewItemDraw_o *)System_String__Format_62390008(
+        this = (MasterMissionReceiveConfirmListViewItemDraw_o *)System_String__Format_62491784(
                                                                   format,
                                                                   v43,
                                                                   v35,
@@ -256,7 +256,7 @@ LABEL_57:
           j_il2cpp_runtime_class_init_0(MasterMissionReceiveConfirmListViewItemDraw_TypeInfo);
         if ( !v46 )
           goto LABEL_71;
-        UILabel__SetCondensedScale_48617464(
+        UILabel__SetCondensedScale_48718744(
           v46,
           MasterMissionReceiveConfirmListViewItemDraw_TypeInfo->static_fields->REWARD_TEXT_WIDTH,
           0.0,
@@ -321,7 +321,7 @@ LABEL_57:
         }
       }
 LABEL_71:
-      sub_1BC3264(this, message);
+      sub_1BCB254(this, message);
     }
   }
 }

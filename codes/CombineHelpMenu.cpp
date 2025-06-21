@@ -1,9 +1,9 @@
 void __fastcall CombineHelpMenu___ctor(CombineHelpMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B05DF5 & 1) == 0 )
+  if ( (byte_4B20338 & 1) == 0 )
   {
-    sub_1BC3008(&BaseDialog_TypeInfo, method);
-    byte_4B05DF5 = 1;
+    sub_1BCAFF8(&BaseDialog_TypeInfo, method);
+    byte_4B20338 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -20,15 +20,15 @@ void __fastcall CombineHelpMenu__Close(
   __int64 v6; // x1
   System_Action_o *v7; // x20
 
-  if ( (byte_4B05DF3 & 1) == 0 )
+  if ( (byte_4B20336 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, callback);
-    sub_1BC3008(&Method_CombineHelpMenu_endClose__, v6);
-    byte_4B05DF3 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, callback);
+    sub_1BCAFF8(&Method_CombineHelpMenu_endClose__, v6);
+    byte_4B20336 = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
-  v7 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
+  v7 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_CombineHelpMenu_endClose__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
 }
@@ -61,10 +61,10 @@ void __fastcall CombineHelpMenu__add_callbackFunc(
   CombineHelpMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B05DF1 & 1) == 0 )
+  if ( (byte_4B20334 & 1) == 0 )
   {
-    sub_1BC3008(&CombineHelpMenu_CallbackFunc_TypeInfo, value);
-    byte_4B05DF1 = 1;
+    sub_1BCAFF8(&CombineHelpMenu_CallbackFunc_TypeInfo, value);
+    byte_4B20334 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -77,13 +77,13 @@ void __fastcall CombineHelpMenu__add_callbackFunc(
       if ( (CombineHelpMenu_CallbackFunc_c *)v8->klass != CombineHelpMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
+    v9 = sub_1C05088(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BC3524(v8);
+  sub_1BCB514(v8);
   CombineHelpMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -100,7 +100,7 @@ void __fastcall CombineHelpMenu__endClose(CombineHelpMenu_o *this, const MethodI
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
   v6 = callbackFunc;
   p_callbackFunc->klass = 0LL;
-  sub_1BC2FAC(p_callbackFunc, 0, v2, v3);
+  sub_1BCAF9C(p_callbackFunc, 0, v2, v3);
   if ( callbackFunc )
   {
     BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -113,12 +113,12 @@ void __fastcall CombineHelpMenu__endClose(CombineHelpMenu_o *this, const MethodI
 
 System_String_o *__fastcall CombineHelpMenu__get_closeBtnPath(CombineHelpMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B05DF4 & 1) == 0 )
+  if ( (byte_4B20337 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_4534/*"CombineHelpListPanel/BaseWindow/UpperCloseButton"*/, method);
-    byte_4B05DF4 = 1;
+    sub_1BCAFF8(&StringLiteral_4536/*"CombineHelpListPanel/BaseWindow/UpperCloseButton"*/, method);
+    byte_4B20337 = 1;
   }
-  return (System_String_o *)StringLiteral_4534/*"CombineHelpListPanel/BaseWindow/UpperCloseButton"*/;
+  return (System_String_o *)StringLiteral_4536/*"CombineHelpListPanel/BaseWindow/UpperCloseButton"*/;
 }
 
 
@@ -136,10 +136,10 @@ void __fastcall CombineHelpMenu__remove_callbackFunc(
   CombineHelpMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B05DF2 & 1) == 0 )
+  if ( (byte_4B20335 & 1) == 0 )
   {
-    sub_1BC3008(&CombineHelpMenu_CallbackFunc_TypeInfo, value);
-    byte_4B05DF2 = 1;
+    sub_1BCAFF8(&CombineHelpMenu_CallbackFunc_TypeInfo, value);
+    byte_4B20335 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -152,13 +152,13 @@ void __fastcall CombineHelpMenu__remove_callbackFunc(
       if ( (CombineHelpMenu_CallbackFunc_c *)v8->klass != CombineHelpMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
+    v9 = sub_1C05088(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BC3524(v8);
+  sub_1BCB514(v8);
   CombineHelpMenu__Init(v11, v12);
 }
 
@@ -181,15 +181,15 @@ void __fastcall CombineHelpMenu_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BC30C8(v6) & 1) == 0 )
+  if ( (sub_1BCB0B8(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1BC3280(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BC3130(v10, 0LL);
+      v10 = sub_1BCB270(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BCB120(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -201,9 +201,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A11DA0;
+  this->fields.m_target = (Il2CppObject *)sub_1A19BFC;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A11D60;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A19BBC;
 }
 
 
@@ -216,7 +216,7 @@ System_IAsyncResult_o *__fastcall CombineHelpMenu_CallbackFunc__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0LL;
-  return (System_IAsyncResult_o *)sub_1BC2FBC(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1BCAFAC(this, &v5, callback, object);
 }
 
 
@@ -225,7 +225,7 @@ void __fastcall CombineHelpMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BC2FC0(result, 0LL, method);
+  sub_1BCAFB0(result, 0LL, method);
 }
 
 

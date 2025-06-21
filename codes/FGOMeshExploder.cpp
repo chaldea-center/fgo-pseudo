@@ -2,10 +2,10 @@ void __fastcall FGOMeshExploder___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4B00DFE & 1) == 0 )
+  if ( (byte_4B1B2EB & 1) == 0 )
   {
-    sub_1BC3008(&FGOMeshExploder_TypeInfo, v1);
-    byte_4B00DFE = 1;
+    sub_1BCAFF8(&FGOMeshExploder_TypeInfo, v1);
+    byte_4B1B2EB = 1;
   }
   LODWORD(FGOMeshExploder_TypeInfo->static_fields->PieceDeltaSqrSize) = (struct FGOMeshExploder_StaticFields)841731190;
 }
@@ -21,32 +21,32 @@ void __fastcall FGOMeshExploder___ctor(FGOMeshExploder_o *this, const MethodInfo
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B00DFD & 1) == 0 )
+  if ( (byte_4B1B2EA & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
-    sub_1BC3008(&System_Collections_Generic_List_GameObject__TypeInfo, v3);
-    byte_4B00DFD = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
+    sub_1BCAFF8(&System_Collections_Generic_List_GameObject__TypeInfo, v3);
+    byte_4B1B2EA = 1;
   }
   *(_WORD *)&this->fields.useBrokenPiece = 257;
   this->fields.mass = 1.0;
-  if ( !byte_4AFBDB1 )
+  if ( !byte_4B16191 )
   {
-    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4AFBDB1 = 1;
+    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, method);
+    byte_4B16191 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v5 = *(_QWORD *)&static_fields->zeroVector.fields.x;
   z = static_fields->zeroVector.fields.z;
   *(_QWORD *)&this->fields.minPieceVertex = 0x140000000ALL;
-  *(_OWORD *)&this->fields.minBrokenSpeed = xmmword_BDED30;
+  *(_OWORD *)&this->fields.minBrokenSpeed = xmmword_BE2840;
   *(_QWORD *)&this->fields.angularVelocity.fields.x = v5;
   this->fields.angularVelocity.fields.z = z;
-  v7 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_GameObject__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.pieces = (struct System_Collections_Generic_List_GameObject__o *)v7;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.pieces, (int32_t)v7, v8, v9);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.pieces, (int32_t)v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -139,16 +139,16 @@ UnityEngine_Vector4_array *__fastcall FGOMeshExploder__CalculateMeshTangents(
   UnityEngine_Vector3_o v87; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v88; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B00DFC & 1) == 0 )
+  if ( (byte_4B1B2E9 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_Vector3__get_Count__, vertices);
-    sub_1BC3008(&Method_System_Collections_Generic_List_int__get_Count__, v10);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Vector2__get_Item__, v11);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Vector3__get_Item__, v12);
-    sub_1BC3008(&Method_System_Collections_Generic_List_int__get_Item__, v13);
-    sub_1BC3008(&UnityEngine_Vector3___TypeInfo, v14);
-    this = (FGOMeshExploder_o *)sub_1BC3008(&UnityEngine_Vector4___TypeInfo, v15);
-    byte_4B00DFC = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Vector3__get_Count__, vertices);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__get_Count__, v10);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Vector2__get_Item__, v11);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Vector3__get_Item__, v12);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__get_Item__, v13);
+    sub_1BCAFF8(&UnityEngine_Vector3___TypeInfo, v14);
+    this = (FGOMeshExploder_o *)sub_1BCAFF8(&UnityEngine_Vector4___TypeInfo, v15);
+    byte_4B1B2E9 = 1;
   }
   normal.fields.z = 0.0;
   *(_QWORD *)&normal.fields.x = 0LL;
@@ -161,10 +161,10 @@ UnityEngine_Vector4_array *__fastcall FGOMeshExploder__CalculateMeshTangents(
     goto LABEL_32;
   size = (unsigned int)vertices->fields._size;
   v17 = triangles->fields._size;
-  v18 = sub_1BC30B0(UnityEngine_Vector3___TypeInfo, (unsigned int)size);
-  v19 = sub_1BC30B0(UnityEngine_Vector3___TypeInfo, (unsigned int)size);
+  v18 = sub_1BCB0A0(UnityEngine_Vector3___TypeInfo, (unsigned int)size);
+  v19 = sub_1BCB0A0(UnityEngine_Vector3___TypeInfo, (unsigned int)size);
   v77 = size;
-  this = (FGOMeshExploder_o *)sub_1BC30B0(UnityEngine_Vector4___TypeInfo, (unsigned int)size);
+  this = (FGOMeshExploder_o *)sub_1BCB0A0(UnityEngine_Vector4___TypeInfo, (unsigned int)size);
   v79 = v17;
   v76 = (UnityEngine_Vector4_array *)this;
   if ( v17 >= 1 )
@@ -175,35 +175,35 @@ UnityEngine_Vector4_array *__fastcall FGOMeshExploder__CalculateMeshTangents(
       Item = System_Collections_Generic_List_int___get_Item(
                triangles,
                v20,
-               (const MethodInfo_3683B2C *)Method_System_Collections_Generic_List_int__get_Item__);
+               (const MethodInfo_369C8BC *)Method_System_Collections_Generic_List_int__get_Item__);
       v22 = System_Collections_Generic_List_int___get_Item(
               triangles,
               v20 + 1,
-              (const MethodInfo_3683B2C *)Method_System_Collections_Generic_List_int__get_Item__);
+              (const MethodInfo_369C8BC *)Method_System_Collections_Generic_List_int__get_Item__);
       v23 = v20 + 2;
       v24 = v22;
       v25 = System_Collections_Generic_List_int___get_Item(
               triangles,
               v23,
-              (const MethodInfo_3683B2C *)Method_System_Collections_Generic_List_int__get_Item__);
+              (const MethodInfo_369C8BC *)Method_System_Collections_Generic_List_int__get_Item__);
       v87 = System_Collections_Generic_List_Vector3___get_Item(
               vertices,
               Item,
-              (const MethodInfo_36F44D8 *)Method_System_Collections_Generic_List_Vector3__get_Item__);
+              (const MethodInfo_370D268 *)Method_System_Collections_Generic_List_Vector3__get_Item__);
       x = v87.fields.x;
       z = v87.fields.z;
       y = v87.fields.y;
       v88 = System_Collections_Generic_List_Vector3___get_Item(
               vertices,
               v24,
-              (const MethodInfo_36F44D8 *)Method_System_Collections_Generic_List_Vector3__get_Item__);
+              (const MethodInfo_370D268 *)Method_System_Collections_Generic_List_Vector3__get_Item__);
       v80 = v88.fields.x;
       v81 = v88.fields.z;
       v82 = v88.fields.y;
       *(UnityEngine_Vector3_o *)&v27 = System_Collections_Generic_List_Vector3___get_Item(
                                          vertices,
                                          v25,
-                                         (const MethodInfo_36F44D8 *)Method_System_Collections_Generic_List_Vector3__get_Item__);
+                                         (const MethodInfo_370D268 *)Method_System_Collections_Generic_List_Vector3__get_Item__);
       if ( !uvs )
         break;
       v30 = v27;
@@ -212,15 +212,15 @@ UnityEngine_Vector4_array *__fastcall FGOMeshExploder__CalculateMeshTangents(
       v33 = System_Collections_Generic_List_Vector2___get_Item(
               uvs,
               Item,
-              (const MethodInfo_36F1C2C *)Method_System_Collections_Generic_List_Vector2__get_Item__);
+              (const MethodInfo_370A9BC *)Method_System_Collections_Generic_List_Vector2__get_Item__);
       v34 = System_Collections_Generic_List_Vector2___get_Item(
               uvs,
               v24,
-              (const MethodInfo_36F1C2C *)Method_System_Collections_Generic_List_Vector2__get_Item__);
+              (const MethodInfo_370A9BC *)Method_System_Collections_Generic_List_Vector2__get_Item__);
       v36 = System_Collections_Generic_List_Vector2___get_Item(
               uvs,
               v25,
-              (const MethodInfo_36F1C2C *)Method_System_Collections_Generic_List_Vector2__get_Item__);
+              (const MethodInfo_370A9BC *)Method_System_Collections_Generic_List_Vector2__get_Item__);
       if ( !v18 )
         break;
       if ( (unsigned int)Item >= *(_DWORD *)(v18 + 24) )
@@ -286,7 +286,7 @@ UnityEngine_Vector4_array *__fastcall FGOMeshExploder__CalculateMeshTangents(
             (unsigned int)v25 >= *(_DWORD *)(v19 + 24)) )
       {
 LABEL_31:
-        sub_1BC326C(this, vertices, v35);
+        sub_1BCB25C(this, vertices, v35);
       }
       v63 = (float *)(v19 + 12LL * v25);
       v20 = v23 + 1;
@@ -299,7 +299,7 @@ LABEL_31:
         goto LABEL_17;
     }
 LABEL_32:
-    sub_1BC3264(this, vertices);
+    sub_1BCB254(this, vertices);
   }
 LABEL_17:
   if ( (int)size >= 1 )
@@ -314,7 +314,7 @@ LABEL_17:
         normal = System_Collections_Generic_List_Vector3___get_Item(
                    v78,
                    v66,
-                   (const MethodInfo_36F44D8 *)Method_System_Collections_Generic_List_Vector3__get_Item__);
+                   (const MethodInfo_370D268 *)Method_System_Collections_Generic_List_Vector3__get_Item__);
         if ( !v18 )
           break;
         if ( v66 >= *(unsigned int *)(v18 + 24) )
@@ -500,38 +500,38 @@ void __fastcall FGOMeshExploder__CreateMeshPiece(
 
   v16 = (UnityEngine_Component_o *)target;
   v17 = this;
-  if ( (byte_4B00DFB & 1) == 0 )
+  if ( (byte_4B1B2E8 & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_Component_GetComponent_Renderer___, target);
-    sub_1BC3008(&FGOMeshExploder_TypeInfo, v18);
-    sub_1BC3008(&Method_UnityEngine_GameObject_AddComponent_FGOMeshExplodeFader___, v19);
-    sub_1BC3008(&Method_UnityEngine_GameObject_AddComponent_MeshCollider___, v20);
-    sub_1BC3008(&Method_UnityEngine_GameObject_AddComponent_MeshFilter___, v21);
-    sub_1BC3008(&Method_UnityEngine_GameObject_AddComponent_MeshRenderer___, v22);
-    sub_1BC3008(&Method_UnityEngine_GameObject_AddComponent_Rigidbody___, v23);
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_Renderer___, v24);
-    sub_1BC3008(&UnityEngine_GameObject_TypeInfo, v25);
-    sub_1BC3008(&Method_System_Collections_Generic_List_int__Add__, v26);
-    sub_1BC3008(&Method_System_Collections_Generic_List_GameObject__Add__, v27);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Vector3__Add__, v28);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Vector2__Add__, v29);
-    sub_1BC3008(&Method_System_Collections_Generic_List_int___ctor__, v30);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Vector2___ctor__, v31);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Vector3___ctor__, v32);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Vector3__get_Count__, v33);
-    sub_1BC3008(&System_Collections_Generic_List_int__TypeInfo, v34);
-    sub_1BC3008(&System_Collections_Generic_List_Vector3__TypeInfo, v35);
-    sub_1BC3008(&System_Collections_Generic_List_Vector2__TypeInfo, v36);
-    sub_1BC3008(&UnityEngine_Material___TypeInfo, v37);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v38);
-    this = (FGOMeshExploder_o *)sub_1BC3008(&StringLiteral_22471/*"piece"*/, v39);
-    byte_4B00DFB = 1;
+    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_Renderer___, target);
+    sub_1BCAFF8(&FGOMeshExploder_TypeInfo, v18);
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_AddComponent_FGOMeshExplodeFader___, v19);
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_AddComponent_MeshCollider___, v20);
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_AddComponent_MeshFilter___, v21);
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_AddComponent_MeshRenderer___, v22);
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_AddComponent_Rigidbody___, v23);
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_Renderer___, v24);
+    sub_1BCAFF8(&UnityEngine_GameObject_TypeInfo, v25);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__Add__, v26);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__Add__, v27);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Vector3__Add__, v28);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Vector2__Add__, v29);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_int___ctor__, v30);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Vector2___ctor__, v31);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Vector3___ctor__, v32);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Vector3__get_Count__, v33);
+    sub_1BCAFF8(&System_Collections_Generic_List_int__TypeInfo, v34);
+    sub_1BCAFF8(&System_Collections_Generic_List_Vector3__TypeInfo, v35);
+    sub_1BCAFF8(&System_Collections_Generic_List_Vector2__TypeInfo, v36);
+    sub_1BCAFF8(&UnityEngine_Material___TypeInfo, v37);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v38);
+    this = (FGOMeshExploder_o *)sub_1BCAFF8(&StringLiteral_22490/*"piece"*/, v39);
+    byte_4B1B2E8 = 1;
   }
   if ( !v16 )
     goto LABEL_114;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        v16,
-                       (const MethodInfo_2FF8634 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   charaMesh = (UnityEngine_Object_o *)v17->fields.charaMesh;
   v42 = (UnityEngine_Renderer_o *)Component_object;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -546,7 +546,7 @@ void __fastcall FGOMeshExploder__CreateMeshPiece(
       goto LABEL_114;
     this = (FGOMeshExploder_o *)UnityEngine_GameObject__GetComponent_object_(
                                   (UnityEngine_GameObject_o *)this,
-                                  (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                                  (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
     if ( !this )
       goto LABEL_114;
     v43 = this;
@@ -559,7 +559,7 @@ void __fastcall FGOMeshExploder__CreateMeshPiece(
     this = (FGOMeshExploder_o *)UnityEngine_Renderer__get_materials(v42, 0LL);
     if ( !this )
       goto LABEL_114;
-    v45 = (System_Array_o *)sub_1BC30B0(
+    v45 = (System_Array_o *)sub_1BCB0A0(
                               UnityEngine_Material___TypeInfo,
                               (unsigned int)(LODWORD(this->fields.m_CancellationTokenSource)
                                            + LODWORD(v44->fields.m_CancellationTokenSource)));
@@ -567,7 +567,7 @@ void __fastcall FGOMeshExploder__CreateMeshPiece(
     this = (FGOMeshExploder_o *)UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)v43, 0LL);
     if ( !this )
       goto LABEL_114;
-    System_Array__Copy_64013500(materials, v45, (int32_t)this->fields.m_CancellationTokenSource, 0LL);
+    System_Array__Copy_64115276(materials, v45, (int32_t)this->fields.m_CancellationTokenSource, 0LL);
     v47 = (System_Array_o *)UnityEngine_Renderer__get_materials(v42, 0LL);
     this = (FGOMeshExploder_o *)UnityEngine_Renderer__get_materials((UnityEngine_Renderer_o *)v43, 0LL);
     if ( !this )
@@ -577,7 +577,7 @@ void __fastcall FGOMeshExploder__CreateMeshPiece(
     if ( !this )
       goto LABEL_114;
     value = (UnityEngine_Material_array *)v45;
-    System_Array__Copy_64009512(
+    System_Array__Copy_64111288(
       v47,
       0,
       v45,
@@ -592,7 +592,7 @@ void __fastcall FGOMeshExploder__CreateMeshPiece(
     this = (FGOMeshExploder_o *)UnityEngine_Renderer__get_materials(v42, 0LL);
     if ( !this )
       goto LABEL_114;
-    v49 = (System_Array_o *)sub_1BC30B0(
+    v49 = (System_Array_o *)sub_1BCB0A0(
                               UnityEngine_Material___TypeInfo,
                               LODWORD(this->fields.m_CancellationTokenSource));
     v50 = (System_Array_o *)UnityEngine_Renderer__get_materials(v42, 0LL);
@@ -600,24 +600,24 @@ void __fastcall FGOMeshExploder__CreateMeshPiece(
     if ( !this )
       goto LABEL_114;
     value = (UnityEngine_Material_array *)v49;
-    System_Array__Copy_64013500(v50, v49, (int32_t)this->fields.m_CancellationTokenSource, 0LL);
+    System_Array__Copy_64115276(v50, v49, (int32_t)this->fields.m_CancellationTokenSource, 0LL);
   }
-  v51 = (System_Collections_Generic_List_Vector3__o *)sub_1BC3254(System_Collections_Generic_List_Vector3__TypeInfo);
+  v51 = (System_Collections_Generic_List_Vector3__o *)sub_1BCB244(System_Collections_Generic_List_Vector3__TypeInfo);
   System_Collections_Generic_List_Vector3____ctor(
     v51,
-    (const MethodInfo_36F3F74 *)Method_System_Collections_Generic_List_Vector3___ctor__);
-  v52 = (System_Collections_Generic_List_Vector2__o *)sub_1BC3254(System_Collections_Generic_List_Vector2__TypeInfo);
+    (const MethodInfo_370CD04 *)Method_System_Collections_Generic_List_Vector3___ctor__);
+  v52 = (System_Collections_Generic_List_Vector2__o *)sub_1BCB244(System_Collections_Generic_List_Vector2__TypeInfo);
   System_Collections_Generic_List_Vector2____ctor(
     v52,
-    (const MethodInfo_36F16C8 *)Method_System_Collections_Generic_List_Vector2___ctor__);
-  v53 = (System_Collections_Generic_List_int__o *)sub_1BC3254(System_Collections_Generic_List_int__TypeInfo);
+    (const MethodInfo_370A458 *)Method_System_Collections_Generic_List_Vector2___ctor__);
+  v53 = (System_Collections_Generic_List_int__o *)sub_1BCB244(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v53,
-    (const MethodInfo_36835C8 *)Method_System_Collections_Generic_List_int___ctor__);
-  normals = (System_Collections_Generic_List_Vector3__o *)sub_1BC3254(System_Collections_Generic_List_Vector3__TypeInfo);
+    (const MethodInfo_369C358 *)Method_System_Collections_Generic_List_int___ctor__);
+  normals = (System_Collections_Generic_List_Vector3__o *)sub_1BCB244(System_Collections_Generic_List_Vector3__TypeInfo);
   System_Collections_Generic_List_Vector3____ctor(
     normals,
-    (const MethodInfo_36F3F74 *)Method_System_Collections_Generic_List_Vector3___ctor__);
+    (const MethodInfo_370CD04 *)Method_System_Collections_Generic_List_Vector3___ctor__);
   if ( vtxCount >= 3 )
   {
     if ( !tri )
@@ -654,7 +654,7 @@ void __fastcall FGOMeshExploder__CreateMeshPiece(
       v65 = UVs->max_length;
       if ( (unsigned int)v60 >= v65 || (unsigned int)v63 >= v65 || (unsigned int)v64 >= v65 )
 LABEL_115:
-        sub_1BC326C(this, target, v54);
+        sub_1BCB25C(this, target, v54);
       v66 = (float *)((char *)Vtx + 12 * v60);
       v68 = v66[8];
       v67 = v66[9];
@@ -716,7 +716,7 @@ LABEL_115:
         System_Collections_Generic_List_Vector3___AddWithResize(
           v51,
           v135,
-          *(const MethodInfo_36F4808 **)(*(_QWORD *)(v79[4] + 192LL) + 112LL));
+          *(const MethodInfo_370D598 **)(*(_QWORD *)(v79[4] + 192LL) + 112LL));
       }
       else
       {
@@ -740,7 +740,7 @@ LABEL_115:
         System_Collections_Generic_List_Vector3___AddWithResize(
           v51,
           v136,
-          *(const MethodInfo_36F4808 **)(*(_QWORD *)(v83[4] + 192LL) + 112LL));
+          *(const MethodInfo_370D598 **)(*(_QWORD *)(v83[4] + 192LL) + 112LL));
       }
       else
       {
@@ -764,7 +764,7 @@ LABEL_115:
         System_Collections_Generic_List_Vector3___AddWithResize(
           v51,
           v137,
-          *(const MethodInfo_36F4808 **)(*(_QWORD *)(v87[4] + 192LL) + 112LL));
+          *(const MethodInfo_370D598 **)(*(_QWORD *)(v87[4] + 192LL) + 112LL));
       }
       else
       {
@@ -787,7 +787,7 @@ LABEL_115:
         System_Collections_Generic_List_Vector2___AddWithResize(
           v52,
           v131,
-          *(const MethodInfo_36F1F30 **)(*(_QWORD *)(v91[4] + 192LL) + 112LL));
+          *(const MethodInfo_370ACC0 **)(*(_QWORD *)(v91[4] + 192LL) + 112LL));
       }
       else
       {
@@ -805,7 +805,7 @@ LABEL_115:
         System_Collections_Generic_List_Vector2___AddWithResize(
           v52,
           v130,
-          *(const MethodInfo_36F1F30 **)(*(_QWORD *)(v94[4] + 192LL) + 112LL));
+          *(const MethodInfo_370ACC0 **)(*(_QWORD *)(v94[4] + 192LL) + 112LL));
       }
       else
       {
@@ -823,7 +823,7 @@ LABEL_115:
         System_Collections_Generic_List_Vector2___AddWithResize(
           v52,
           v129,
-          *(const MethodInfo_36F1F30 **)(*(_QWORD *)(v97[4] + 192LL) + 112LL));
+          *(const MethodInfo_370ACC0 **)(*(_QWORD *)(v97[4] + 192LL) + 112LL));
       }
       else
       {
@@ -843,7 +843,7 @@ LABEL_115:
         System_Collections_Generic_List_int___AddWithResize(
           v53,
           v55,
-          *(const MethodInfo_3683E1C **)(*(_QWORD *)(v100[4] + 192LL) + 112LL));
+          *(const MethodInfo_369CBAC **)(*(_QWORD *)(v100[4] + 192LL) + 112LL));
         v99 = v53->fields._items;
         v100 = Method_System_Collections_Generic_List_int__Add__;
         ++v53->fields._version;
@@ -863,7 +863,7 @@ LABEL_115:
         System_Collections_Generic_List_int___AddWithResize(
           v53,
           v103,
-          *(const MethodInfo_3683E1C **)(*(_QWORD *)(v100[4] + 192LL) + 112LL));
+          *(const MethodInfo_369CBAC **)(*(_QWORD *)(v100[4] + 192LL) + 112LL));
         v99 = v53->fields._items;
         v100 = Method_System_Collections_Generic_List_int__Add__;
         ++v53->fields._version;
@@ -883,7 +883,7 @@ LABEL_115:
         System_Collections_Generic_List_int___AddWithResize(
           v53,
           (int32_t)target,
-          *(const MethodInfo_3683E1C **)(*(_QWORD *)(v100[4] + 192LL) + 112LL));
+          *(const MethodInfo_369CBAC **)(*(_QWORD *)(v100[4] + 192LL) + 112LL));
       }
       else
       {
@@ -895,11 +895,11 @@ LABEL_115:
   }
   if ( !v51 )
 LABEL_114:
-    sub_1BC3264(this, target);
+    sub_1BCB254(this, target);
   if ( v51->fields._size < 4 )
     return;
-  v105 = (UnityEngine_GameObject_o *)sub_1BC3254(UnityEngine_GameObject_TypeInfo);
-  UnityEngine_GameObject___ctor(v105, (System_String_o *)StringLiteral_22471/*"piece"*/, 0LL);
+  v105 = (UnityEngine_GameObject_o *)sub_1BCB244(UnityEngine_GameObject_TypeInfo);
+  UnityEngine_GameObject___ctor(v105, (System_String_o *)StringLiteral_22490/*"piece"*/, 0LL);
   this = (FGOMeshExploder_o *)v17->fields.pieces;
   if ( !this )
     goto LABEL_114;
@@ -914,14 +914,14 @@ LABEL_114:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)v105,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v109[4] + 192LL) + 112LL));
   }
   else
   {
     v111 = v108 + 8 * m_CancellationTokenSource_low;
     LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
     *(_QWORD *)(v111 + 32) = v105;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v111 + 32), (int32_t)v105, v106, v107);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v111 + 32), (int32_t)v105, v106, v107);
   }
   if ( !v105 )
     goto LABEL_114;
@@ -935,16 +935,16 @@ LABEL_114:
   UnityEngine_GameObject__set_layer(v105, layer, 0LL);
   this = (FGOMeshExploder_o *)UnityEngine_GameObject__AddComponent_object_(
                                 v105,
-                                (const MethodInfo_30558B0 *)Method_UnityEngine_GameObject_AddComponent_MeshFilter___);
+                                (const MethodInfo_306E628 *)Method_UnityEngine_GameObject_AddComponent_MeshFilter___);
   if ( !this )
     goto LABEL_114;
   mesh = UnityEngine_MeshFilter__get_mesh((UnityEngine_MeshFilter_o *)this, 0LL);
   UnityEngine_GameObject__AddComponent_object_(
     v105,
-    (const MethodInfo_30558B0 *)Method_UnityEngine_GameObject_AddComponent_MeshRenderer___);
+    (const MethodInfo_306E628 *)Method_UnityEngine_GameObject_AddComponent_MeshRenderer___);
   this = (FGOMeshExploder_o *)UnityEngine_GameObject__GetComponent_object_(
                                 v105,
-                                (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                                (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
   if ( !this )
     goto LABEL_114;
   UnityEngine_Renderer__set_materials((UnityEngine_Renderer_o *)this, value, 0LL);
@@ -974,7 +974,7 @@ LABEL_114:
   UnityEngine_Mesh__set_tangents(mesh, v117, 0LL);
   v118 = UnityEngine_GameObject__AddComponent_object_(
            v105,
-           (const MethodInfo_30558B0 *)Method_UnityEngine_GameObject_AddComponent_Rigidbody___);
+           (const MethodInfo_306E628 *)Method_UnityEngine_GameObject_AddComponent_Rigidbody___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v118, 0LL, 0LL) )
@@ -996,7 +996,7 @@ LABEL_114:
   }
   v121 = UnityEngine_GameObject__AddComponent_object_(
            v105,
-           (const MethodInfo_30558B0 *)Method_UnityEngine_GameObject_AddComponent_MeshCollider___);
+           (const MethodInfo_306E628 *)Method_UnityEngine_GameObject_AddComponent_MeshCollider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (FGOMeshExploder_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v121, 0LL, 0LL);
@@ -1009,7 +1009,7 @@ LABEL_114:
   }
   v122 = UnityEngine_GameObject__AddComponent_object_(
            v105,
-           (const MethodInfo_30558B0 *)Method_UnityEngine_GameObject_AddComponent_FGOMeshExplodeFader___);
+           (const MethodInfo_306E628 *)Method_UnityEngine_GameObject_AddComponent_FGOMeshExplodeFader___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (FGOMeshExploder_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v122, 0LL, 0LL);
@@ -1031,11 +1031,11 @@ void __fastcall FGOMeshExploder__Explode(FGOMeshExploder_o *this, const MethodIn
   const MethodInfo *v4; // x2
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  FGOMeshExploder__Explode_39304276(this, gameObject, v4);
+  FGOMeshExploder__Explode_39453216(this, gameObject, v4);
 }
 
 
-void __fastcall FGOMeshExploder__Explode_39304276(
+void __fastcall FGOMeshExploder__Explode_39453216(
         FGOMeshExploder_o *this,
         UnityEngine_GameObject_o *target,
         const MethodInfo *method)
@@ -1052,22 +1052,22 @@ void __fastcall FGOMeshExploder__Explode_39304276(
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-48h] BYREF
 
   v4 = this;
-  if ( (byte_4B00DFA & 1) == 0 )
+  if ( (byte_4B1B2E7 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, target);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v5);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v6);
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v8);
-    this = (FGOMeshExploder_o *)sub_1BC3008(&UnityEngine_Object_TypeInfo, v9);
-    byte_4B00DFA = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, target);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v5);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v6);
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v8);
+    this = (FGOMeshExploder_o *)sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v9);
+    byte_4B1B2E7 = 1;
   }
   memset(&v13, 0, sizeof(v13));
   if ( !target )
     goto LABEL_21;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        target,
-                       (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___);
+                       (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
@@ -1077,7 +1077,7 @@ void __fastcall FGOMeshExploder__Explode_39304276(
 LABEL_14:
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_70034300((UnityEngine_Object_o *)target, 0LL);
+      UnityEngine_Object__Destroy_70136076((UnityEngine_Object_o *)target, 0LL);
       onBroken = v4->fields.onBroken;
       if ( onBroken )
         ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))onBroken->fields.m_target)(
@@ -1092,22 +1092,22 @@ LABEL_14:
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v13,
         (System_Collections_Generic_List_object__o *)this,
-        (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+        (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                 &v13,
-                (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+                (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
       {
         if ( !v13.fields._current )
-          sub_1BC3264(0LL, v11);
+          sub_1BCB254(0LL, v11);
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v13.fields._current, 1, 0LL);
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &v13,
-        (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+        (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
       goto LABEL_14;
     }
 LABEL_21:
-    sub_1BC3264(this, target);
+    sub_1BCB254(this, target);
   }
 }
 
@@ -1120,16 +1120,16 @@ System_Collections_IEnumerator_o *__fastcall FGOMeshExploder__PreCreatePiece(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B00DF9 & 1) == 0 )
+  if ( (byte_4B1B2E6 & 1) == 0 )
   {
-    sub_1BC3008(&FGOMeshExploder__PreCreatePiece_d__16_TypeInfo, method);
-    byte_4B00DF9 = 1;
+    sub_1BCAFF8(&FGOMeshExploder__PreCreatePiece_d__16_TypeInfo, method);
+    byte_4B1B2E6 = 1;
   }
-  v3 = sub_1BC3254(FGOMeshExploder__PreCreatePiece_d__16_TypeInfo);
+  v3 = sub_1BCB244(FGOMeshExploder__PreCreatePiece_d__16_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -1216,11 +1216,11 @@ bool __fastcall FGOMeshExploder__PreCreatePiece_d__16__MoveNext(
   UnityEngine_Quaternion_o v60; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = this;
-  if ( (byte_4B00DFF & 1) == 0 )
+  if ( (byte_4B1B2EC & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___, method);
-    this = (FGOMeshExploder__PreCreatePiece_d__16_o *)sub_1BC3008(&UnityEngine_Mesh_TypeInfo, v5);
-    byte_4B00DFF = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___, method);
+    this = (FGOMeshExploder__PreCreatePiece_d__16_o *)sub_1BCAFF8(&UnityEngine_Mesh_TypeInfo, v5);
+    byte_4B1B2EC = 1;
   }
   _1__state = v4->fields.__1__state;
   _4__this = v4->fields.__4__this;
@@ -1233,7 +1233,7 @@ bool __fastcall FGOMeshExploder__PreCreatePiece_d__16__MoveNext(
   if ( _1__state == 1 )
   {
     v4->fields.__1__state = -1;
-    v11 = (UnityEngine_Mesh_o *)sub_1BC3254(UnityEngine_Mesh_TypeInfo);
+    v11 = (UnityEngine_Mesh_o *)sub_1BCB244(UnityEngine_Mesh_TypeInfo);
     UnityEngine_Mesh___ctor(v11, 0LL);
     if ( _4__this )
     {
@@ -1244,7 +1244,7 @@ bool __fastcall FGOMeshExploder__PreCreatePiece_d__16__MoveNext(
       {
         this = (FGOMeshExploder__PreCreatePiece_d__16_o *)UnityEngine_GameObject__GetComponent_object_(
                                                             (UnityEngine_GameObject_o *)this,
-                                                            (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___);
+                                                            (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_SkinnedMeshRenderer___);
         if ( this )
         {
           UnityEngine_SkinnedMeshRenderer__BakeMesh((UnityEngine_SkinnedMeshRenderer_o *)this, v11, 0LL);
@@ -1252,16 +1252,16 @@ bool __fastcall FGOMeshExploder__PreCreatePiece_d__16__MoveNext(
           {
             vertices = UnityEngine_Mesh__get_vertices(v11, 0LL);
             v4->fields._vertices_5__2 = vertices;
-            sub_1BC2FAC((CGThumbnailListItem_o *)&v4->fields._vertices_5__2, (int32_t)vertices, v13, v14);
+            sub_1BCAF9C((CGThumbnailListItem_o *)&v4->fields._vertices_5__2, (int32_t)vertices, v13, v14);
             normals = UnityEngine_Mesh__get_normals(v11, 0LL);
             v4->fields._normals_5__3 = normals;
-            sub_1BC2FAC((CGThumbnailListItem_o *)&v4->fields._normals_5__3, (int32_t)normals, v16, v17);
+            sub_1BCAF9C((CGThumbnailListItem_o *)&v4->fields._normals_5__3, (int32_t)normals, v16, v17);
             triangles = UnityEngine_Mesh__get_triangles(v11, 0LL);
             v4->fields._triangles_5__4 = triangles;
-            sub_1BC2FAC((CGThumbnailListItem_o *)&v4->fields._triangles_5__4, (int32_t)triangles, v19, v20);
+            sub_1BCAF9C((CGThumbnailListItem_o *)&v4->fields._triangles_5__4, (int32_t)triangles, v19, v20);
             uv = UnityEngine_Mesh__get_uv(v11, 0LL);
             v4->fields._uvs_5__5 = uv;
-            sub_1BC2FAC((CGThumbnailListItem_o *)&v4->fields._uvs_5__5, (int32_t)uv, v22, v23);
+            sub_1BCAF9C((CGThumbnailListItem_o *)&v4->fields._uvs_5__5, (int32_t)uv, v22, v23);
             *(_QWORD *)&v4->fields._yield_trianble_count_5__6 = 0LL;
             if ( v4->fields._triangles_5__4 )
             {
@@ -1272,15 +1272,15 @@ LABEL_16:
               {
                 if ( !_4__this )
                   goto LABEL_45;
-                this = (FGOMeshExploder__PreCreatePiece_d__16_o *)UnityEngine_Random__Range_69994520(
+                this = (FGOMeshExploder__PreCreatePiece_d__16_o *)UnityEngine_Random__Range_70096296(
                                                                     _4__this->fields.minPieceVertex,
                                                                     _4__this->fields.maxPieceVertex,
                                                                     0LL);
                 v25 = (int)this;
-                if ( !byte_4B00F1D )
+                if ( !byte_4B1B32D )
                 {
-                  this = (FGOMeshExploder__PreCreatePiece_d__16_o *)sub_1BC3008(&UnityEngine_Vector3_TypeInfo, method);
-                  byte_4B00F1D = 1;
+                  this = (FGOMeshExploder__PreCreatePiece_d__16_o *)sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, method);
+                  byte_4B1B32D = 1;
                 }
                 normals_5__3 = v4->fields._normals_5__3;
                 if ( !normals_5__3 )
@@ -1300,7 +1300,7 @@ LABEL_16:
                     || (v33 = v29 + 2, v33 >= max_length)
                     || (v34 = triangles_5__4->m_Items[v33 + 1], (unsigned int)v34 >= (unsigned int)v27) )
                   {
-                    sub_1BC326C(this, method, v24);
+                    sub_1BCB25C(this, method, v24);
                   }
                   v35 = (char *)normals_5__3 + 12 * v31;
                   v36 = (char *)normals_5__3 + 12 * v32;
@@ -1311,10 +1311,10 @@ LABEL_16:
                   v41.n64_u64[0] = *(unsigned __int64 *)(v36 + 36);
                   v42 = *((float *)v37 + 8);
                   v43.n64_u64[0] = *(unsigned __int64 *)(v37 + 36);
-                  if ( !byte_4AFBDB4 )
+                  if ( !byte_4B16194 )
                   {
-                    sub_1BC3008(&System_Math_TypeInfo, method);
-                    byte_4AFBDB4 = 1;
+                    sub_1BCAFF8(&System_Math_TypeInfo, method);
+                    byte_4B16194 = 1;
                   }
                   if ( !System_Math_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1324,10 +1324,10 @@ LABEL_16:
                          *((float *)&v45 + 1)
                        + (float)((float)((float)((float)(v38 + v40) + v42) * (float)((float)(v38 + v40) + v42))
                                + *(float *)&v45)) <= 0.00001
-                    && !byte_4AFBDB1 )
+                    && !byte_4B16191 )
                   {
-                    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, method);
-                    byte_4AFBDB1 = 1;
+                    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, method);
+                    byte_4B16191 = 1;
                   }
                 }
                 this = (FGOMeshExploder__PreCreatePiece_d__16_o *)UnityEngine_Component__get_gameObject(
@@ -1394,7 +1394,7 @@ LABEL_16:
                   v4->fields.__2__current = 0LL;
                   p__2__current = &v4->fields.__2__current;
                   *((_DWORD *)p__2__current + 12) = 0;
-                  sub_1BC2FAC((CGThumbnailListItem_o *)p__2__current, 0, v52, v53);
+                  sub_1BCAF9C((CGThumbnailListItem_o *)p__2__current, 0, v52, v53);
                   *((_DWORD *)p__2__current - 2) = 2;
                   return 1;
                 }
@@ -1412,12 +1412,12 @@ LABEL_16:
   v4->fields.__1__state = -1;
   if ( !_4__this )
 LABEL_45:
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   if ( _4__this->fields.useBrokenPiece )
   {
     v4->fields.__2__current = 0LL;
     v8 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-    sub_1BC2FAC(v8, 0, v2, v3);
+    sub_1BCAF9C(v8, 0, v2, v3);
     result = 1;
     LODWORD(v8[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
     return result;
@@ -1442,11 +1442,11 @@ void __fastcall __noreturn FGOMeshExploder__PreCreatePiece_d__16__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BC301C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BC3254(v2);
+  v2 = sub_1BCB00C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BCB244(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BC301C(&Method_FGOMeshExploder__PreCreatePiece_d__16_System_Collections_IEnumerator_Reset__);
-  sub_1BC3130(v3, v4);
+  v4 = sub_1BCB00C(&Method_FGOMeshExploder__PreCreatePiece_d__16_System_Collections_IEnumerator_Reset__);
+  sub_1BCB120(v3, v4);
 }
 
 

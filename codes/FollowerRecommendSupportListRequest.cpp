@@ -3,10 +3,10 @@ void __fastcall FollowerRecommendSupportListRequest___cctor(const MethodInfo *me
   __int64 v1; // x1
   struct FollowerRecommendSupportListRequest_StaticFields *static_fields; // x8
 
-  if ( (byte_4B03AE0 & 1) == 0 )
+  if ( (byte_4B1DFEB & 1) == 0 )
   {
-    sub_1BC3008(&FollowerRecommendSupportListRequest_TypeInfo, v1);
-    byte_4B03AE0 = 1;
+    sub_1BCAFF8(&FollowerRecommendSupportListRequest_TypeInfo, v1);
+    byte_4B1DFEB = 1;
   }
   static_fields = FollowerRecommendSupportListRequest_TypeInfo->static_fields;
   static_fields->refreshResetTime = -1LL;
@@ -24,12 +24,12 @@ bool __fastcall FollowerRecommendSupportListRequest__CheckRefreshRate(const Meth
   FollowerRecommendSupportListRequest_c *v6; // x8
   int64_t v7; // x19
 
-  if ( (byte_4B03ADA & 1) == 0 )
+  if ( (byte_4B1DFE5 & 1) == 0 )
   {
-    sub_1BC3008(&BalanceConfig_TypeInfo, v1);
-    sub_1BC3008(&FollowerRecommendSupportListRequest_TypeInfo, v2);
-    sub_1BC3008(&NetworkManager_TypeInfo, v3);
-    byte_4B03ADA = 1;
+    sub_1BCAFF8(&BalanceConfig_TypeInfo, v1);
+    sub_1BCAFF8(&FollowerRecommendSupportListRequest_TypeInfo, v2);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v3);
+    byte_4B1DFE5 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -58,10 +58,10 @@ void __fastcall FollowerRecommendSupportListRequest__ClearRefreshRate(const Meth
   __int64 v1; // x1
   FollowerRecommendSupportListRequest_c *v2; // x0
 
-  if ( (byte_4B03AD9 & 1) == 0 )
+  if ( (byte_4B1DFE4 & 1) == 0 )
   {
-    sub_1BC3008(&FollowerRecommendSupportListRequest_TypeInfo, v1);
-    byte_4B03AD9 = 1;
+    sub_1BCAFF8(&FollowerRecommendSupportListRequest_TypeInfo, v1);
+    byte_4B1DFE4 = 1;
   }
   v2 = FollowerRecommendSupportListRequest_TypeInfo;
   if ( !FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished )
@@ -83,12 +83,12 @@ int64_t __fastcall FollowerRecommendSupportListRequest__GetRefreshRemain(const M
   int64_t refreshResetTime; // x20
   int64_t Time; // x0
 
-  if ( (byte_4B03ADC & 1) == 0 )
+  if ( (byte_4B1DFE7 & 1) == 0 )
   {
-    sub_1BC3008(&BalanceConfig_TypeInfo, v1);
-    sub_1BC3008(&FollowerRecommendSupportListRequest_TypeInfo, v2);
-    sub_1BC3008(&NetworkManager_TypeInfo, v3);
-    byte_4B03ADC = 1;
+    sub_1BCAFF8(&BalanceConfig_TypeInfo, v1);
+    sub_1BCAFF8(&FollowerRecommendSupportListRequest_TypeInfo, v2);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v3);
+    byte_4B1DFE7 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -140,24 +140,24 @@ bool __fastcall FollowerRecommendSupportListRequest__beginRequest(
   FollowerRecommendSupportListRequest_c *v19; // x0
   char v20; // w8
 
-  if ( (byte_4B03ADE & 1) == 0 )
+  if ( (byte_4B1DFE9 & 1) == 0 )
   {
-    sub_1BC3008(&BalanceConfig_TypeInfo, isEnforceRefresh);
-    sub_1BC3008(&FollowerRecommendSupportListRequest_TypeInfo, v9);
-    sub_1BC3008(&StringLiteral_22780/*"refresh"*/, v10);
-    sub_1BC3008(&StringLiteral_22639/*"questPhase"*/, v11);
-    sub_1BC3008(&StringLiteral_22635/*"questId"*/, v12);
-    byte_4B03ADE = 1;
+    sub_1BCAFF8(&BalanceConfig_TypeInfo, isEnforceRefresh);
+    sub_1BCAFF8(&FollowerRecommendSupportListRequest_TypeInfo, v9);
+    sub_1BCAFF8(&StringLiteral_22799/*"refresh"*/, v10);
+    sub_1BCAFF8(&StringLiteral_22658/*"questPhase"*/, v11);
+    sub_1BCAFF8(&StringLiteral_22654/*"questId"*/, v12);
+    byte_4B1DFE9 = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_22635/*"questId"*/,
+    (System_String_o *)StringLiteral_22654/*"questId"*/,
     questId,
     *(const MethodInfo **)&questPhase);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22639/*"questPhase"*/, questPhase, v13);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22658/*"questPhase"*/, questPhase, v13);
   if ( !this )
-    sub_1BC3264(v14, v15);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22780/*"refresh"*/, isEnforceRefresh, v16);
+    sub_1BCB254(v14, v15);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22799/*"refresh"*/, isEnforceRefresh, v16);
   if ( !isEnforceRefresh )
     goto LABEL_11;
   v18 = BalanceConfig_TypeInfo;
@@ -205,15 +205,15 @@ bool __fastcall FollowerRecommendSupportListRequest__checkExpirationDate(
   __int64 v7; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4B03ADB & 1) == 0 )
+  if ( (byte_4B1DFE6 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMaster_UserRecommendFollowerMaster___, method);
-    sub_1BC3008(&DataManager_TypeInfo, v2);
-    sub_1BC3008(
+    sub_1BCAFF8(&Method_DataManager_GetMaster_UserRecommendFollowerMaster___, method);
+    sub_1BCAFF8(&DataManager_TypeInfo, v2);
+    sub_1BCAFF8(
       &Method_DataMasterBase_UserRecommendFollowerMaster__UserRecommendFollowerEntity__long__TryGetSingleEntity__,
       v3);
-    sub_1BC3008(&FollowerRecommendSupportListRequest_TypeInfo, v4);
-    byte_4B03ADB = 1;
+    sub_1BCAFF8(&FollowerRecommendSupportListRequest_TypeInfo, v4);
+    byte_4B1DFE6 = 1;
   }
   v5 = FollowerRecommendSupportListRequest_TypeInfo;
   entity = 0LL;
@@ -226,14 +226,14 @@ bool __fastcall FollowerRecommendSupportListRequest__checkExpirationDate(
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserRecommendFollowerMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_UserRecommendFollowerMaster___);
   if ( !Master_object )
 LABEL_14:
-    sub_1BC3264(Master_object, v7);
+    sub_1BCB254(Master_object, v7);
   if ( !DataMasterBase_object__object__long___TryGetSingleEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
-          (const MethodInfo_32B16F8 *)Method_DataMasterBase_UserRecommendFollowerMaster__UserRecommendFollowerEntity__long__TryGetSingleEntity__) )
+          (const MethodInfo_32CA488 *)Method_DataMasterBase_UserRecommendFollowerMaster__UserRecommendFollowerEntity__long__TryGetSingleEntity__) )
     return 0;
   Master_object = entity;
   if ( !entity )
@@ -249,16 +249,16 @@ System_String_o *__fastcall FollowerRecommendSupportListRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B03ADD & 1) == 0 )
+  if ( (byte_4B1DFE8 & 1) == 0 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, method);
-    sub_1BC3008(&StringLiteral_19336/*"follower/recommendSupportList"*/, v2);
-    byte_4B03ADD = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
+    sub_1BCAFF8(&StringLiteral_19350/*"follower/recommendSupportList"*/, v2);
+    byte_4B1DFE8 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_19336/*"follower/recommendSupportList"*/, 0LL);
+  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_19350/*"follower/recommendSupportList"*/, 0LL);
 }
 
 
@@ -278,12 +278,12 @@ void __fastcall FollowerRecommendSupportListRequest__requestCompleted(
   struct FollowerRecommendSupportListRequest_StaticFields *static_fields; // x8
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
 
-  if ( (byte_4B03ADF & 1) == 0 )
+  if ( (byte_4B1DFEA & 1) == 0 )
   {
-    sub_1BC3008(&BalanceConfig_TypeInfo, responseList);
-    sub_1BC3008(&FollowerRecommendSupportListRequest_TypeInfo, v4);
-    sub_1BC3008(&NetworkManager_TypeInfo, v5);
-    byte_4B03ADF = 1;
+    sub_1BCAFF8(&BalanceConfig_TypeInfo, responseList);
+    sub_1BCAFF8(&FollowerRecommendSupportListRequest_TypeInfo, v4);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v5);
+    byte_4B1DFEA = 1;
   }
   v6 = FollowerRecommendSupportListRequest_TypeInfo;
   if ( !FollowerRecommendSupportListRequest_TypeInfo->_2.cctor_finished )

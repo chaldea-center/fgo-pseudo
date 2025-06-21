@@ -11,9 +11,9 @@ void __fastcall StandFigureCollect___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._entity_k__BackingField = entity;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)entity, v7, v8);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)entity, v7, v8);
   this->fields._standFigure_k__BackingField = standFigure;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._standFigure_k__BackingField, (int32_t)standFigure, v9, v10);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._standFigure_k__BackingField, (int32_t)standFigure, v9, v10);
 }
 
 
@@ -39,7 +39,7 @@ void __fastcall StandFigureCollect__set_entity(
   const MethodInfo *v3; // x3
 
   this->fields._entity_k__BackingField = value;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -51,5 +51,5 @@ void __fastcall StandFigureCollect__set_standFigure(
   const MethodInfo *v3; // x3
 
   this->fields._standFigure_k__BackingField = value;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._standFigure_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._standFigure_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

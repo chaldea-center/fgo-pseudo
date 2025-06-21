@@ -24,21 +24,21 @@ BattleActionData_o *__fastcall BattleLogicSpecial__createCounterOverwriteSpecial
 
   v3 = task;
   v4 = this;
-  if ( (byte_4B05037 & 1) == 0 )
+  if ( (byte_4B1F575 & 1) == 0 )
   {
-    this = (BattleLogicSpecial_o *)sub_1BC3008(&BattleTreasureDeviceCommandData_TypeInfo, task);
-    byte_4B05037 = 1;
+    this = (BattleLogicSpecial_o *)sub_1BCAFF8(&BattleTreasureDeviceCommandData_TypeInfo, task);
+    byte_4B1F575 = 1;
   }
   baseActionData = 0LL;
   if ( !v3 )
 LABEL_16:
-    sub_1BC3264(this, task);
+    sub_1BCB254(this, task);
   actorIdlist = v3->fields.actorIdlist;
   this = (BattleLogicSpecial_o *)v4->fields.data;
   if ( actorIdlist )
   {
     if ( !actorIdlist->max_length )
-      sub_1BC326C(this, task, method);
+      sub_1BCB25C(this, task, method);
     task = (BattleLogicTask_o *)(unsigned int)actorIdlist->m_Items[1];
     if ( !this )
       goto LABEL_16;
@@ -65,10 +65,10 @@ LABEL_16:
     goto LABEL_16;
   }
   BattleServantData__OverwriteTreasureDevice(v6, v3->fields.treasureDvcId, v3->fields.tresureDvcLv, 0LL);
-  v9 = (BattleTreasureDeviceCommandData_o *)sub_1BC3254(BattleTreasureDeviceCommandData_TypeInfo);
+  v9 = (BattleTreasureDeviceCommandData_o *)sub_1BCB244(BattleTreasureDeviceCommandData_TypeInfo);
   BattleTreasureDeviceCommandData___ctor(v9, v6, 0LL);
   v3->fields.command = (struct BattleCommandData_o *)v9;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v3->fields.command, (int32_t)v9, v10, v11);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v3->fields.command, (int32_t)v9, v10, v11);
   v13 = BattleLogicSpecial__createSpecialDataCommonFunction(v4, &baseActionData, v3, 1, v12);
   BattleServantData__ResetOverwriteTreasureDevice(v6, 0LL);
   this = (BattleLogicSpecial_o *)v4->fields.logic;
@@ -97,10 +97,10 @@ BattleActionData_o *__fastcall BattleLogicSpecial__createSpecialData(
 
   v3 = task;
   v4 = this;
-  if ( (byte_4B05036 & 1) == 0 )
+  if ( (byte_4B1F574 & 1) == 0 )
   {
-    this = (BattleLogicSpecial_o *)sub_1BC3008(&Method_System_Collections_Generic_List_int__ToArray__, task);
-    byte_4B05036 = 1;
+    this = (BattleLogicSpecial_o *)sub_1BCAFF8(&Method_System_Collections_Generic_List_int__ToArray__, task);
+    byte_4B1F574 = 1;
   }
   baseActionData = 0LL;
   if ( !v3 )
@@ -144,7 +144,7 @@ LABEL_18:
       {
         this = (BattleLogicSpecial_o *)System_Collections_Generic_List_int___ToArray(
                                          (System_Collections_Generic_List_int__o *)this,
-                                         (const MethodInfo_36858D4 *)Method_System_Collections_Generic_List_int__ToArray__);
+                                         (const MethodInfo_369E664 *)Method_System_Collections_Generic_List_int__ToArray__);
         if ( data )
         {
           BattleData__SetWasAttackTargetIdList(data, v11, (System_Int32_array *)this, 0LL);
@@ -152,10 +152,10 @@ LABEL_18:
         }
       }
 LABEL_23:
-      sub_1BC3264(this, task);
+      sub_1BCB254(this, task);
     }
 LABEL_24:
-    sub_1BC326C(this, task, method);
+    sub_1BCB25C(this, task, method);
   }
   OverwriteTdData_k__BackingField = v3->fields._OverwriteTdData_k__BackingField;
   if ( OverwriteTdData_k__BackingField )
@@ -175,7 +175,7 @@ BattleActionData_o *__fastcall BattleLogicSpecial__createSpecialDataCommonFuncti
         bool isCounterOverwriteTreasureDevice,
         const MethodInfo *method)
 {
-  CGThumbnailListItem_o *v7; // x22
+  CGThumbnailListItem_o *v7; // x23
   __int64 v9; // x1
   __int64 v10; // x1
   __int64 v11; // x1
@@ -204,8 +204,8 @@ BattleActionData_o *__fastcall BattleLogicSpecial__createSpecialDataCommonFuncti
   const MethodInfo *v34; // x4
   struct System_Int32_array *v35; // x8
   int v36; // w8
-  BattleCommandData_o *command; // x27
-  int32_t v38; // w22
+  BattleCommandData_o *v37; // x27
+  int32_t v38; // w23
   BattleLogic_o *logic; // x19
   int32_t actorId; // w20
   BattleActionData_o *v41; // x26
@@ -223,15 +223,15 @@ BattleActionData_o *__fastcall BattleLogicSpecial__createSpecialDataCommonFuncti
   DataMasterBase_TMaster__TEntity__PKType__o *v54; // x29
   il2cpp_array_size_t v55; // w24
   struct System_Int32_array *funcId; // x8
-  Il2CppClass **v57; // x27
+  Il2CppClass **v57; // x22
   __int64 v58; // x21
-  __int64 *v59; // x27
+  __int64 *v59; // x22
   __int64 v60; // t1
-  Il2CppClass **v61; // x23
-  DataVals_o **v62; // x23
+  Il2CppClass **v61; // x27
+  DataVals_o **v62; // x27
   __int64 v63; // t1
   BattleCommandData_o *v64; // x21
-  BattleServantData_o *v65; // x23
+  BattleServantData_o *v65; // x22
   BattleBuffData_CheckIndividualitiesData_o *v66; // x28
   System_Int32_array *v67; // x28
   __int64 v68; // x29
@@ -241,13 +241,13 @@ BattleActionData_o *__fastcall BattleLogicSpecial__createSpecialDataCommonFuncti
   int v72; // w8
   SkillLvMaster_o *v73; // x27
   __int64 v74; // x24
-  __int64 v75; // x29
-  __int64 v76; // x23
+  __int64 v75; // x22
+  __int64 v76; // x29
   _DWORD *v77; // x8
   __int64 v78; // x21
   const MethodInfo *v79; // x3
   __int64 v80; // x8
-  __int64 v81; // x23
+  __int64 v81; // x29
   Il2CppClass *v82; // x21
   Il2CppClass **v83; // x0
   int32_t TreasureDvcId; // w0
@@ -262,108 +262,111 @@ BattleActionData_o *__fastcall BattleLogicSpecial__createSpecialDataCommonFuncti
   int32_t TreasureDvcMotionId; // w0
   int OverwriteTdMotionId; // w8
   struct BattleLogic_o *v95; // x8
-  BattlePerformance_o *v96; // x23
+  BattlePerformance_o *v96; // x24
   BattleActionData_o *v97; // x21
   struct BattleLogic_o *v98; // x8
-  BattlePerformance_o *v99; // x25
-  BattleActionWaitCond_UntilSideEffectInvisible_o *v100; // x24
-  BattleLogic_o *v101; // x20
+  BattlePerformance_o *v99; // x28
+  BattleActionWaitCond_UntilSideEffectInvisible_o *v100; // x25
+  BattleLogic_o *v101; // x24
   BattleAddSkillTaskAfterCounterTreasureDevice_o *v102; // x21
-  __int64 v103; // x0
-  BattleServantData_o *v104; // [xsp+30h] [xbp-80h]
-  BattleCommandData_o *v105; // [xsp+38h] [xbp-78h]
-  bool v106; // [xsp+44h] [xbp-6Ch]
-  TreasureDvcLvEntity_o *v107; // [xsp+48h] [xbp-68h]
-  __int64 v108; // [xsp+48h] [xbp-68h]
+  __int64 v103; // x19
+  int v104; // w8
+  unsigned int v105; // w20
+  __int64 v106; // x0
+  BattleCommandData_o *command; // [xsp+30h] [xbp-80h]
+  bool v108; // [xsp+3Ch] [xbp-74h]
+  BattleServantData_o *v109; // [xsp+40h] [xbp-70h]
+  TreasureDvcLvEntity_o *v110; // [xsp+48h] [xbp-68h]
+  __int64 v111; // [xsp+48h] [xbp-68h]
 
   v7 = (CGThumbnailListItem_o *)baseActionData;
-  if ( (byte_4B05038 & 1) == 0 )
+  if ( (byte_4B1F576 & 1) == 0 )
   {
-    sub_1BC3008(&BattleActionData_TypeInfo, baseActionData);
-    sub_1BC3008(&BattleAddSkillTaskAfterCounterTreasureDevice_TypeInfo, v9);
-    sub_1BC3008(&BattleAddSkillTaskAfterTreasureDevice_TypeInfo, v10);
-    sub_1BC3008(&BattleAddSkillTaskBeforeCounterTreasureDevice_TypeInfo, v11);
-    sub_1BC3008(&BattleAddSkillTaskBeforeTreasureDevice_TypeInfo, v12);
-    sub_1BC3008(&BattleCommandData_TypeInfo, v13);
-    sub_1BC3008(&BattlePerformance_TypeInfo, v14);
-    sub_1BC3008(&BattleBuffData_CheckIndividualitiesData_TypeInfo, v15);
-    sub_1BC3008(&Method_DataManager_GetMasterData_FunctionMaster___, v16);
-    sub_1BC3008(&Method_DataManager_GetMasterData_SkillLvMaster___, v17);
-    sub_1BC3008(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___, v18);
-    sub_1BC3008(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__, v19);
-    sub_1BC3008(&BattleLogicFunction_FunctionArgument_TypeInfo, v20);
-    sub_1BC3008(&int___TypeInfo, v21);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v22);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v23);
-    sub_1BC3008(&BattleLogicFunction_TreasureDeviceSideEffectFunctionArgument_TypeInfo, v24);
-    sub_1BC3008(&BattleActionWaitCond_UntilSideEffectInvisible_TypeInfo, v25);
-    byte_4B05038 = 1;
+    sub_1BCAFF8(&BattleActionData_TypeInfo, baseActionData);
+    sub_1BCAFF8(&BattleAddSkillTaskAfterCounterTreasureDevice_TypeInfo, v9);
+    sub_1BCAFF8(&BattleAddSkillTaskAfterTreasureDevice_TypeInfo, v10);
+    sub_1BCAFF8(&BattleAddSkillTaskBeforeCounterTreasureDevice_TypeInfo, v11);
+    sub_1BCAFF8(&BattleAddSkillTaskBeforeTreasureDevice_TypeInfo, v12);
+    sub_1BCAFF8(&BattleCommandData_TypeInfo, v13);
+    sub_1BCAFF8(&BattlePerformance_TypeInfo, v14);
+    sub_1BCAFF8(&BattleBuffData_CheckIndividualitiesData_TypeInfo, v15);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_FunctionMaster___, v16);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_SkillLvMaster___, v17);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_TreasureDvcLvMaster___, v18);
+    sub_1BCAFF8(&Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__, v19);
+    sub_1BCAFF8(&BattleLogicFunction_FunctionArgument_TypeInfo, v20);
+    sub_1BCAFF8(&int___TypeInfo, v21);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__getInstance__, v22);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v23);
+    sub_1BCAFF8(&BattleLogicFunction_TreasureDeviceSideEffectFunctionArgument_TypeInfo, v24);
+    sub_1BCAFF8(&BattleActionWaitCond_UntilSideEffectInvisible_TypeInfo, v25);
+    byte_4B1F576 = 1;
   }
   data = (__int64)this->fields.data;
   if ( !data )
-    goto LABEL_133;
+    goto LABEL_144;
   BattleData__ResetWasAttackTargetId((BattleData_o *)data, 0LL);
   data = (__int64)this->fields.data;
   if ( !data )
-    goto LABEL_133;
+    goto LABEL_144;
   BattleData__ResetFunctionedFunctionIds((BattleData_o *)data, 0LL);
   if ( !task )
-    goto LABEL_133;
+    goto LABEL_144;
   actorIdlist = task->fields.actorIdlist;
   data = (__int64)this->fields.data;
   if ( actorIdlist )
   {
     if ( !actorIdlist->max_length )
-      goto LABEL_134;
+      goto LABEL_145;
     baseActionData = (BattleActionData_o **)(unsigned int)actorIdlist->m_Items[1];
     if ( !data )
-      goto LABEL_133;
+      goto LABEL_144;
   }
   else
   {
     baseActionData = (BattleActionData_o **)0xFFFFFFFFLL;
     if ( !data )
-      goto LABEL_133;
+      goto LABEL_144;
   }
   ServantData = BattleData__getServantData((BattleData_o *)data, (int32_t)baseActionData, 0LL);
-  v30 = (BattleActionData_o *)sub_1BC3254(BattleActionData_TypeInfo);
+  v30 = (BattleActionData_o *)sub_1BCB244(BattleActionData_TypeInfo);
   BattleActionData___ctor(v30, 0LL);
   if ( !v30 )
-    goto LABEL_133;
+    goto LABEL_144;
   v31 = BattleActionData__AddDisplayTriggerIntervalBuff(v30, task, 0LL);
   v7->klass = (CGThumbnailListItem_c *)v31;
-  sub_1BC2FAC(v7, (int32_t)v31, v32, v33);
+  sub_1BCAF9C(v7, (int32_t)v31, v32, v33);
   v35 = task->fields.actorIdlist;
   if ( v35 )
   {
     if ( !v35->max_length )
-      goto LABEL_134;
+      goto LABEL_145;
     v36 = v35->m_Items[1];
     if ( !v31 )
-      goto LABEL_133;
+      goto LABEL_144;
   }
   else
   {
     v36 = -1;
     if ( !v31 )
-      goto LABEL_133;
+      goto LABEL_144;
   }
   v31->fields.actorId = v36;
   data = (__int64)this->fields.logictarget;
   if ( !data )
-    goto LABEL_133;
-  command = task->fields.command;
+    goto LABEL_144;
+  v37 = task->fields.command;
   data = BattleLogicTarget__getTargetBase((BattleLogicTarget_o *)data, task->fields.targetIdlist, 0, 1, v34);
   v31->fields.targetId = data;
   if ( (int)data < 1 )
     return 0LL;
   baseActionData = (BattleActionData_o **)this->fields.data;
   if ( !baseActionData )
-    goto LABEL_133;
+    goto LABEL_144;
   if ( *((_BYTE *)baseActionData + 280) || *((_BYTE *)baseActionData + 281) )
     return 0LL;
   if ( !ServantData )
-    goto LABEL_133;
+    goto LABEL_144;
   v38 = data;
   if ( !BattleServantData__checkUseTDvc(ServantData, (BattleData_o *)baseActionData, 1, 0LL)
     && !isCounterOverwriteTreasureDevice )
@@ -387,25 +390,25 @@ BattleActionData_o *__fastcall BattleLogicSpecial__createSpecialDataCommonFuncti
         return 0LL;
       }
     }
-    goto LABEL_133;
+    goto LABEL_144;
   }
   data = (__int64)ServantData->fields.buffData;
   if ( !data )
-    goto LABEL_133;
+    goto LABEL_144;
   BattleBuffData__ResetCommandCodeBuffActiveFlg((BattleBuffData_o *)data, 0LL);
   data = (__int64)ServantData->fields.buffData;
   if ( !data )
-    goto LABEL_133;
+    goto LABEL_144;
   BattleBuffData__ResetCommandAssistBuffActiveFlg((BattleBuffData_o *)data, 0LL);
-  data = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  data = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !data )
-    goto LABEL_133;
+    goto LABEL_144;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)data,
-                        (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
+                        (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_TreasureDvcLvMaster___);
   data = BattleServantData__getTreasureDvcId(ServantData, !isCounterOverwriteTreasureDevice, 0LL, 0LL);
   if ( !MasterData_object )
-    goto LABEL_133;
+    goto LABEL_144;
   Entity = TreasureDvcLvMaster__GetEntity(
              (TreasureDvcLvMaster_o *)MasterData_object,
              data,
@@ -413,356 +416,381 @@ BattleActionData_o *__fastcall BattleLogicSpecial__createSpecialDataCommonFuncti
              0LL);
   v45 = this->fields.logic;
   v46 = Entity;
-  if ( isCounterOverwriteTreasureDevice )
+  if ( !isCounterOverwriteTreasureDevice )
   {
-    v47 = (BattleAddSkillTaskBeforeCounterTreasureDevice_o *)sub_1BC3254(BattleAddSkillTaskBeforeCounterTreasureDevice_TypeInfo);
-    BattleAddSkillTaskBeforeCounterTreasureDevice___ctor(v47, 0LL);
-    if ( !v45 )
-      goto LABEL_133;
-    v48 = BattleLogic__AddSkillTask(v45, (BattleAddSkillTaskAroundTargetTask_o *)v47, task, v38, 0LL);
-    v41 = 0LL;
-    if ( v48 )
-      return v41;
-  }
-  else
-  {
-    v49 = (BattleAddSkillTaskBeforeTreasureDevice_o *)sub_1BC3254(BattleAddSkillTaskBeforeTreasureDevice_TypeInfo);
+    v49 = (BattleAddSkillTaskBeforeTreasureDevice_o *)sub_1BCB244(BattleAddSkillTaskBeforeTreasureDevice_TypeInfo);
     BattleAddSkillTaskBeforeTreasureDevice___ctor(v49, 0LL);
     if ( !v45 )
-      goto LABEL_133;
+      goto LABEL_144;
     data = BattleLogic__AddSkillTask(v45, (BattleAddSkillTaskAroundTargetTask_o *)v49, task, v38, 0LL);
     if ( (data & 1) != 0 )
     {
-      if ( !command )
-        goto LABEL_133;
-      ChainBonus = BattleCommandData__getChainBonus(command, 0LL);
+      if ( !v37 )
+        goto LABEL_144;
+      ChainBonus = BattleCommandData__getChainBonus(v37, 0LL);
       BattleServantData__UsedTpWeapon(ServantData, ChainBonus, this->fields.data, 1, 0LL);
       return 0LL;
     }
     data = (__int64)this->fields.logic;
     if ( !data )
-      goto LABEL_133;
+      goto LABEL_144;
     BattleLogic__AddUnExecutedUpdateIntervalBuffActionData((BattleLogic_o *)data, 0LL);
-    if ( !command )
-      goto LABEL_133;
-    v51 = BattleCommandData__getChainBonus(command, 0LL);
+    if ( !v37 )
+      goto LABEL_144;
+    v51 = BattleCommandData__getChainBonus(v37, 0LL);
     BattleServantData__UsedTpWeapon(ServantData, v51, this->fields.data, 0, 0LL);
+    goto LABEL_47;
   }
-  data = (__int64)this->fields.logic;
-  if ( !data )
-    goto LABEL_133;
-  BattleLogic__updateResultServant((BattleLogic_o *)data, 0LL);
-  data = BattleServantData__getNpPer(ServantData, 0LL);
-  baseActionData = isCounterOverwriteTreasureDevice
-                 ? (BattleActionData_o **)(unsigned int)(100 * task->fields.counterOc)
-                 : (BattleActionData_o **)(unsigned int)data;
-  v31->fields.npPer = (int)baseActionData;
-  if ( !v46 )
-    goto LABEL_133;
-  v104 = ServantData;
-  v105 = command;
-  v106 = isCounterOverwriteTreasureDevice;
-  DataValsList = TreasureDvcLvEntity__getDataValsList(v46, (int32_t)baseActionData, 0LL);
-  v107 = v46;
-  v53 = TreasureDvcLvEntity__getDataValsList(v46, 100, 0LL);
-  data = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-  if ( !data )
-    goto LABEL_133;
-  data = (__int64)DataManager__GetMasterData_object_(
-                    (DataManager_o *)data,
-                    (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_FunctionMaster___);
-  if ( !DataValsList )
-    goto LABEL_133;
-  if ( (int)DataValsList->max_length >= 1 )
+  v47 = (BattleAddSkillTaskBeforeCounterTreasureDevice_o *)sub_1BCB244(BattleAddSkillTaskBeforeCounterTreasureDevice_TypeInfo);
+  BattleAddSkillTaskBeforeCounterTreasureDevice___ctor(v47, 0LL);
+  if ( !v45 )
+    goto LABEL_144;
+  v48 = BattleLogic__AddSkillTask(v45, (BattleAddSkillTaskAroundTargetTask_o *)v47, task, v38, 0LL);
+  v41 = 0LL;
+  if ( !v48 )
   {
-    v54 = (DataMasterBase_TMaster__TEntity__PKType__o *)data;
-    v55 = 0;
-    do
-    {
-      funcId = v107->fields.funcId;
-      if ( !funcId )
-        goto LABEL_133;
-      if ( v55 >= funcId->max_length )
-        goto LABEL_134;
-      if ( !v54 )
-        goto LABEL_133;
-      data = (__int64)DataMasterBase_object__object__int___GetEntity(
-                        v54,
-                        funcId->m_Items[v55 + 1],
-                        (const MethodInfo_32AF070 *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
-      if ( v55 >= DataValsList->max_length )
-        goto LABEL_134;
-      v57 = &DataValsList->obj.klass + (int)v55;
-      v58 = data;
-      v60 = (__int64)v57[4];
-      v59 = (__int64 *)(v57 + 4);
-      data = v60;
-      if ( !v58 )
-        goto LABEL_133;
-      if ( !data )
-        goto LABEL_133;
-      DataVals__SetTempType((DataVals_o *)data, (FunctionMaster_o *)v54, *(_DWORD *)(v58 + 24), 0LL);
-      if ( !v53 )
-        goto LABEL_133;
-      if ( v55 >= v53->max_length )
-        goto LABEL_134;
-      v61 = &v53->obj.klass + (int)v55;
-      v63 = (__int64)v61[4];
-      v62 = (DataVals_o **)(v61 + 4);
-      data = v63;
-      if ( !v63 )
-        goto LABEL_133;
-      DataVals__SetTempType((DataVals_o *)data, (FunctionMaster_o *)v54, *(_DWORD *)(v58 + 24), 0LL);
-      if ( v55 >= DataValsList->max_length || v55 >= v53->max_length )
-        goto LABEL_134;
-      data = *v59;
-      if ( !*v59 )
-        goto LABEL_133;
-      data = DataVals__CheckOverCharge((DataVals_o *)data, *v62, 0LL);
-      if ( (data & 1) != 0 )
-      {
-        if ( v55 >= DataValsList->max_length )
-          goto LABEL_134;
-        data = *v59;
-        if ( !*v59 )
-          goto LABEL_133;
-        DataVals__SetOverCharge((DataVals_o *)data, 1, 0LL);
-      }
-      if ( v55 >= DataValsList->max_length || v55 >= v53->max_length )
-        goto LABEL_134;
-      if ( !*v62 )
-        goto LABEL_133;
-      data = *v59;
-      if ( !*v59 )
-        goto LABEL_133;
-      DataVals__SetDependOverChargeFlag((DataVals_o *)data, (*v62)->fields.dependDataValsList, 0LL);
-    }
-    while ( (signed int)++v55 < (signed int)DataValsList->max_length );
-  }
-  v64 = (BattleCommandData_o *)sub_1BC3254(BattleCommandData_TypeInfo);
-  BattleCommandData___ctor(v64, 0LL);
-  v65 = v104;
-  data = BattleServantData__getTreasureDvcId(v104, 1, 0LL, 0LL);
-  if ( !v64 )
-    goto LABEL_133;
-  v64->fields.treasureDvc = data;
-  v66 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1BC3254(BattleBuffData_CheckIndividualitiesData_TypeInfo);
-  BattleBuffData_CheckIndividualitiesData___ctor_44721444(v66, v104, 0LL, v64, 0LL, 0LL, 0LL, 0LL);
-  data = (__int64)BattleServantData__getNPSideEffect(v104, v66, 0LL);
-  if ( !data )
-    goto LABEL_133;
-  v67 = v107->fields.funcId;
-  v68 = data;
-  if ( *(_QWORD *)(data + 24) )
-  {
-    if ( !v67 )
-      goto LABEL_133;
-    data = sub_1BC30B0(int___TypeInfo, v67->max_length);
-    if ( !v107->fields.funcId )
-      goto LABEL_133;
-    v67 = (System_Int32_array *)data;
-    System_Array__CopyTo((System_Array_o *)v107->fields.funcId, (System_Array_o *)data, 0, 0LL);
-    v70 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
-    if ( (*(_BYTE *)(v70 + 309) & 1) == 0 )
-      v70 = sub_1C1346C(v69);
-    v71 = *(_QWORD *)(*(_QWORD *)(v70 + 192) + 16LL);
-    if ( (*(_BYTE *)(v71 + 309) & 1) == 0 )
-      v71 = sub_1C1346C(v69);
-    data = **(_QWORD **)(v71 + 184);
+LABEL_47:
+    data = (__int64)this->fields.logic;
     if ( !data )
-      goto LABEL_133;
+      goto LABEL_144;
+    BattleLogic__updateResultServant((BattleLogic_o *)data, 0LL);
+    data = BattleServantData__getNpPer(ServantData, 0LL);
+    baseActionData = isCounterOverwriteTreasureDevice
+                   ? (BattleActionData_o **)(unsigned int)(100 * task->fields.counterOc)
+                   : (BattleActionData_o **)(unsigned int)data;
+    v31->fields.npPer = (int)baseActionData;
+    if ( !v46 )
+      goto LABEL_144;
+    command = v37;
+    v109 = ServantData;
+    v108 = isCounterOverwriteTreasureDevice;
+    DataValsList = TreasureDvcLvEntity__getDataValsList(v46, (int32_t)baseActionData, 0LL);
+    v110 = v46;
+    v53 = TreasureDvcLvEntity__getDataValsList(v46, 100, 0LL);
+    data = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    if ( !data )
+      goto LABEL_144;
     data = (__int64)DataManager__GetMasterData_object_(
                       (DataManager_o *)data,
-                      (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_SkillLvMaster___);
-    v72 = *(_DWORD *)(v68 + 24);
-    if ( v72 >= 1 )
+                      (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_FunctionMaster___);
+    if ( !DataValsList )
+      goto LABEL_144;
+    if ( (int)DataValsList->max_length >= 1 )
     {
-      v73 = (SkillLvMaster_o *)data;
-      v74 = 0LL;
-      v108 = v68;
-      v75 = v68 + 32;
-      while ( (unsigned int)v74 < v72 )
+      v54 = (DataMasterBase_TMaster__TEntity__PKType__o *)data;
+      v55 = 0;
+      do
       {
-        v76 = *(_QWORD *)(v75 + 8 * v74);
-        if ( !v76 )
-          goto LABEL_133;
-        v77 = *(_DWORD **)(v76 + 104);
-        if ( !v77 )
-          goto LABEL_133;
-        if ( v77[6] < 2u )
-          break;
-        if ( !v73 )
-          goto LABEL_133;
-        data = (__int64)SkillLvMaster__GetEntity(v73, v77[8], v77[9], 0LL);
+        funcId = v110->fields.funcId;
+        if ( !funcId )
+          goto LABEL_144;
+        if ( v55 >= funcId->max_length )
+          goto LABEL_145;
+        if ( !v54 )
+          goto LABEL_144;
+        data = (__int64)DataMasterBase_object__object__int___GetEntity(
+                          v54,
+                          funcId->m_Items[v55 + 1],
+                          (const MethodInfo_32C7E00 *)Method_DataMasterBase_FunctionMaster__FunctionEntity__int__GetEntity__);
+        if ( v55 >= DataValsList->max_length )
+          goto LABEL_145;
+        v57 = &DataValsList->obj.klass + (int)v55;
+        v58 = data;
+        v60 = (__int64)v57[4];
+        v59 = (__int64 *)(v57 + 4);
+        data = v60;
+        if ( !v58 )
+          goto LABEL_144;
         if ( !data )
-          goto LABEL_133;
-        v78 = data;
-        data = (__int64)SkillLvEntity__getDataValsList((SkillLvEntity_o *)data, 0LL);
-        v80 = *(_QWORD *)(v78 + 32);
-        if ( !v80 )
-          goto LABEL_133;
-        if ( !*(_DWORD *)(v80 + 24) )
-          break;
-        if ( !v67 )
-          goto LABEL_133;
-        v81 = *(int *)(v76 + 28);
-        if ( (unsigned int)v81 >= v67->max_length )
-          break;
-        v67->m_Items[v81 + 1] = *(_DWORD *)(v80 + 32);
-        if ( !data )
-          goto LABEL_133;
-        if ( !*(_DWORD *)(data + 24) )
-          break;
-        v82 = *(Il2CppClass **)(data + 32);
-        if ( v82 )
+          goto LABEL_144;
+        DataVals__SetTempType((DataVals_o *)data, (FunctionMaster_o *)v54, *(_DWORD *)(v58 + 24), 0LL);
+        if ( !v53 )
+          goto LABEL_144;
+        if ( v55 >= v53->max_length )
+          goto LABEL_145;
+        v61 = &v53->obj.klass + (int)v55;
+        v63 = (__int64)v61[4];
+        v62 = (DataVals_o **)(v61 + 4);
+        data = v63;
+        if ( !v63 )
+          goto LABEL_144;
+        DataVals__SetTempType((DataVals_o *)data, (FunctionMaster_o *)v54, *(_DWORD *)(v58 + 24), 0LL);
+        if ( v55 >= DataValsList->max_length || v55 >= v53->max_length )
+          goto LABEL_145;
+        data = *v59;
+        if ( !*v59 )
+          goto LABEL_144;
+        data = DataVals__CheckOverCharge((DataVals_o *)data, *v62, 0LL);
+        if ( (data & 1) != 0 )
         {
-          data = sub_1BC3144(*(_QWORD *)(data + 32), DataValsList->obj.klass->_1.element_class);
-          if ( !data )
-          {
-            v103 = sub_1BC3288(0LL);
-            sub_1BC3130(v103, 0LL);
-          }
+          if ( v55 >= DataValsList->max_length )
+            goto LABEL_145;
+          data = *v59;
+          if ( !*v59 )
+            goto LABEL_144;
+          DataVals__SetOverCharge((DataVals_o *)data, 1, 0LL);
         }
-        if ( (unsigned int)v81 >= DataValsList->max_length )
-          break;
-        v83 = &DataValsList->obj.klass + v81;
-        v83[4] = v82;
-        sub_1BC2FAC((CGThumbnailListItem_o *)(v83 + 4), (int32_t)v82, v27, v79);
-        ++v74;
-        v72 = *(_DWORD *)(v108 + 24);
-        if ( (int)v74 >= v72 )
-          goto LABEL_105;
+        if ( v55 >= DataValsList->max_length || v55 >= v53->max_length )
+          goto LABEL_145;
+        if ( !*v62 )
+          goto LABEL_144;
+        data = *v59;
+        if ( !*v59 )
+          goto LABEL_144;
+        DataVals__SetDependOverChargeFlag((DataVals_o *)data, (*v62)->fields.dependDataValsList, 0LL);
       }
-LABEL_134:
-      sub_1BC326C(data, baseActionData, v27);
+      while ( (signed int)++v55 < (signed int)DataValsList->max_length );
     }
-LABEL_105:
-    v65 = v104;
-  }
-  TreasureDvcId = BattleServantData__getTreasureDvcId(v65, 1, 0LL, 0LL);
-  v31->fields.treasureDvcId = TreasureDvcId;
-  v85 = TreasureDvcId;
-  argument = (BattleLogicFunction_FunctionArgument_o *)sub_1BC3254(BattleLogicFunction_FunctionArgument_TypeInfo);
-  BattleLogicFunction_FunctionArgument___ctor(argument, 0LL);
-  if ( v106 )
-  {
-    v31->fields.isCounter = task->fields.isCounter;
-    motionMessage = task->fields.motionMessage;
-    v31->fields.motionMessage = motionMessage;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&v31->fields.motionMessage, (int32_t)motionMessage, v87, v88);
-    v31->fields._MessageType_k__BackingField = task->fields.messageType;
-  }
-  else
-  {
-    v90 = this->fields.data;
-    if ( !v90 )
-      goto LABEL_133;
-    perf = v90->fields.perf;
-    if ( !perf )
-      goto LABEL_133;
-    if ( !v105 )
-      goto LABEL_133;
-    data = (__int64)perf->fields.commandPerf;
+    v64 = (BattleCommandData_o *)sub_1BCB244(BattleCommandData_TypeInfo);
+    BattleCommandData___ctor(v64, 0LL);
+    v65 = v109;
+    data = BattleServantData__getTreasureDvcId(v109, 1, 0LL, 0LL);
+    if ( !v64 )
+      goto LABEL_144;
+    v64->fields.treasureDvc = data;
+    v66 = (BattleBuffData_CheckIndividualitiesData_o *)sub_1BCB244(BattleBuffData_CheckIndividualitiesData_TypeInfo);
+    BattleBuffData_CheckIndividualitiesData___ctor_44896728(v66, v109, 0LL, v64, 0LL, 0LL, 0LL, 0LL);
+    data = (__int64)BattleServantData__getNPSideEffect(v109, v66, 0LL);
     if ( !data )
-      goto LABEL_133;
-    BattlePerformanceCommandCard__UpdateRemainingCardBuff(
-      (BattlePerformanceCommandCard_o *)data,
-      v105->fields.actionIndex,
-      0LL);
-    v92 = (BattleLogicFunction_TreasureDeviceSideEffectFunctionArgument_o *)sub_1BC3254(BattleLogicFunction_TreasureDeviceSideEffectFunctionArgument_TypeInfo);
-    BattleLogicFunction_TreasureDeviceSideEffectFunctionArgument___ctor(v92, 0LL);
-    if ( !argument )
-      goto LABEL_133;
-    BattleLogicFunction_FunctionArgument__SetAfterFuncSideEffectArgument(
-      argument,
-      (BattleLogicFunction_FuncSideEffectFunctionArgument_o *)v92,
-      0LL);
+      goto LABEL_144;
+    v67 = v110->fields.funcId;
+    v68 = data;
+    if ( *(_QWORD *)(data + 24) )
+    {
+      if ( !v67 )
+        goto LABEL_144;
+      data = sub_1BCB0A0(int___TypeInfo, v67->max_length);
+      if ( !v110->fields.funcId )
+        goto LABEL_144;
+      v67 = (System_Int32_array *)data;
+      System_Array__CopyTo((System_Array_o *)v110->fields.funcId, (System_Array_o *)data, 0, 0LL);
+      v70 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
+      if ( (*(_BYTE *)(v70 + 309) & 1) == 0 )
+        v70 = sub_1C1B45C(v69);
+      v71 = *(_QWORD *)(*(_QWORD *)(v70 + 192) + 16LL);
+      if ( (*(_BYTE *)(v71 + 309) & 1) == 0 )
+        v71 = sub_1C1B45C(v69);
+      data = **(_QWORD **)(v71 + 184);
+      if ( !data )
+        goto LABEL_144;
+      data = (__int64)DataManager__GetMasterData_object_(
+                        (DataManager_o *)data,
+                        (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_SkillLvMaster___);
+      v72 = *(_DWORD *)(v68 + 24);
+      if ( v72 >= 1 )
+      {
+        v73 = (SkillLvMaster_o *)data;
+        v74 = 0LL;
+        v111 = v68 + 32;
+        do
+        {
+          if ( (unsigned int)v74 >= v72 )
+            goto LABEL_145;
+          v75 = v68;
+          v76 = *(_QWORD *)(v111 + 8 * v74);
+          if ( !v76 )
+            goto LABEL_144;
+          v77 = *(_DWORD **)(v76 + 104);
+          if ( !v77 )
+            goto LABEL_144;
+          if ( v77[6] < 2u )
+            goto LABEL_145;
+          if ( !v73 )
+            goto LABEL_144;
+          data = (__int64)SkillLvMaster__GetEntity(v73, v77[8], v77[9], 0LL);
+          if ( !data )
+            goto LABEL_144;
+          v78 = data;
+          data = (__int64)SkillLvEntity__getDataValsList((SkillLvEntity_o *)data, 0LL);
+          v80 = *(_QWORD *)(v78 + 32);
+          if ( !v80 )
+            goto LABEL_144;
+          if ( !*(_DWORD *)(v80 + 24) )
+            goto LABEL_145;
+          if ( !v67 )
+            goto LABEL_144;
+          v81 = *(int *)(v76 + 28);
+          if ( (unsigned int)v81 >= v67->max_length )
+            goto LABEL_145;
+          v67->m_Items[v81 + 1] = *(_DWORD *)(v80 + 32);
+          if ( !data )
+            goto LABEL_144;
+          if ( !*(_DWORD *)(data + 24) )
+            goto LABEL_145;
+          v82 = *(Il2CppClass **)(data + 32);
+          if ( v82 )
+          {
+            data = sub_1BCB134(*(_QWORD *)(data + 32), DataValsList->obj.klass->_1.element_class);
+            if ( !data )
+            {
+              v106 = sub_1BCB278(0LL);
+              sub_1BCB120(v106, 0LL);
+            }
+          }
+          if ( (unsigned int)v81 >= DataValsList->max_length )
+            goto LABEL_145;
+          v83 = &DataValsList->obj.klass + v81;
+          v83[4] = v82;
+          sub_1BCAF9C((CGThumbnailListItem_o *)(v83 + 4), (int32_t)v82, v27, v79);
+          v72 = *(_DWORD *)(v75 + 24);
+          ++v74;
+          v68 = v75;
+        }
+        while ( (int)v74 < v72 );
+        v65 = v109;
+      }
+    }
+    TreasureDvcId = BattleServantData__getTreasureDvcId(v65, 1, 0LL, 0LL);
+    v31->fields.treasureDvcId = TreasureDvcId;
+    v85 = TreasureDvcId;
+    argument = (BattleLogicFunction_FunctionArgument_o *)sub_1BCB244(BattleLogicFunction_FunctionArgument_TypeInfo);
+    BattleLogicFunction_FunctionArgument___ctor(argument, 0LL);
+    if ( v108 )
+    {
+      v31->fields.isCounter = task->fields.isCounter;
+      motionMessage = task->fields.motionMessage;
+      v31->fields.motionMessage = motionMessage;
+      sub_1BCAF9C((CGThumbnailListItem_o *)&v31->fields.motionMessage, (int32_t)motionMessage, v87, v88);
+      v31->fields._MessageType_k__BackingField = task->fields.messageType;
+    }
+    else
+    {
+      v90 = this->fields.data;
+      if ( !v90 )
+        goto LABEL_144;
+      perf = v90->fields.perf;
+      if ( !perf )
+        goto LABEL_144;
+      if ( !command )
+        goto LABEL_144;
+      data = (__int64)perf->fields.commandPerf;
+      if ( !data )
+        goto LABEL_144;
+      BattlePerformanceCommandCard__UpdateRemainingCardBuff(
+        (BattlePerformanceCommandCard_o *)data,
+        command->fields.actionIndex,
+        0LL);
+      v92 = (BattleLogicFunction_TreasureDeviceSideEffectFunctionArgument_o *)sub_1BCB244(BattleLogicFunction_TreasureDeviceSideEffectFunctionArgument_TypeInfo);
+      BattleLogicFunction_TreasureDeviceSideEffectFunctionArgument___ctor(v92, 0LL);
+      if ( !argument )
+        goto LABEL_144;
+      BattleLogicFunction_FunctionArgument__SetAfterFuncSideEffectArgument(
+        argument,
+        (BattleLogicFunction_FuncSideEffectFunctionArgument_o *)v92,
+        0LL);
+    }
+    data = (__int64)this->fields.logicfunction;
+    if ( !data )
+      goto LABEL_144;
+    v41 = BattleLogicFunction__procList(
+            (BattleLogicFunction_o *)data,
+            v31,
+            v67,
+            DataValsList,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            argument,
+            0,
+            0LL);
+    BattleServantData__checkRegainNPUsedNoble(v109, 0LL);
+    data = (__int64)v109->fields.buffData;
+    if ( !data )
+      goto LABEL_144;
+    data = (__int64)BattleBuffData__usedProgressing((BattleBuffData_o *)data, 0LL);
+    if ( !v108 )
+    {
+      v109->fields.tmpNp = v109->fields.np;
+      BattleServantData__changeNp(v109, 0, 0, 0LL);
+    }
+    if ( !v41 )
+      goto LABEL_144;
+    v41->fields.targetId = v38;
+    BattleActionData__setTypeTA(v41, 0LL);
+    if ( !v108 )
+      BattleActionData__setCommand(v41, command, 0LL);
+    TreasureDvcMotionId = BattleServantData__getTreasureDvcMotionId(v109, 0LL);
+    OverwriteTdMotionId = v41->fields.OverwriteTdMotionId;
+    if ( OverwriteTdMotionId < 1 )
+      OverwriteTdMotionId = TreasureDvcMotionId;
+    v41->fields.motionId = OverwriteTdMotionId;
+    data = (__int64)this->fields.logic;
+    if ( !data )
+      goto LABEL_144;
+    BattleLogic__updateConditionsBuffAll((BattleLogic_o *)data, 0LL, 0LL);
+    v41->fields.prevattackme = 0;
+    v41->fields.isForcedSpeedOne = task->fields.isForcedSpeedOne;
+    data = (__int64)this->fields.data;
+    if ( !data )
+      goto LABEL_144;
+    BattleData__setCommandAttack((BattleData_o *)data, 0, 0, 0LL);
+    v95 = this->fields.logic;
+    if ( !v95 )
+      goto LABEL_144;
+    v96 = v95->fields.perf;
+    v97 = (BattleActionData_o *)sub_1BCB244(BattleActionData_TypeInfo);
+    BattleActionData___ctor(v97, 0LL);
+    v98 = this->fields.logic;
+    if ( !v98 )
+      goto LABEL_144;
+    v99 = v98->fields.perf;
+    v100 = (BattleActionWaitCond_UntilSideEffectInvisible_o *)sub_1BCB244(BattleActionWaitCond_UntilSideEffectInvisible_TypeInfo);
+    BattleActionWaitCond_UntilSideEffectInvisible___ctor(v100, v99, 0LL);
+    if ( !v97 )
+      goto LABEL_144;
+    data = (__int64)BattleActionData__SetWaitCond(v97, (BattleActionWaitCond_Base_o *)v100, 0LL);
+    if ( !v96 )
+      goto LABEL_144;
+    BattlePerformance__addActionData_44188008(v96, (BattleActionData_o *)data, 0LL);
+    v41->fields.treasureDvcId = v85;
+    BattleActionData__SetFuncTargetAllDead(v41, this->fields.data, 0LL);
+    v101 = this->fields.logic;
+    if ( v108 )
+    {
+      v102 = (BattleAddSkillTaskAfterCounterTreasureDevice_o *)sub_1BCB244(BattleAddSkillTaskAfterCounterTreasureDevice_TypeInfo);
+      BattleAddSkillTaskAfterCounterTreasureDevice___ctor(v102, 0LL);
+      if ( !v101 )
+        goto LABEL_144;
+    }
+    else
+    {
+      v102 = (BattleAddSkillTaskAfterCounterTreasureDevice_o *)sub_1BCB244(BattleAddSkillTaskAfterTreasureDevice_TypeInfo);
+      BattleAddSkillTaskAfterTreasureDevice___ctor((BattleAddSkillTaskAfterTreasureDevice_o *)v102, 0LL);
+      if ( !v101 )
+        goto LABEL_144;
+    }
+    BattleLogic__AddSkillTask(v101, (BattleAddSkillTaskAroundTargetTask_o *)v102, task, v38, 0LL);
+    data = (__int64)this->fields.data;
+    if ( !data
+      || (!v109->fields.isEnemy
+        ? (data = (__int64)BattleData__getFieldEnemyServantList((BattleData_o *)data, 0, 0LL))
+        : (data = (__int64)BattleData__getFieldPlayerServantList((BattleData_o *)data, 0LL)),
+          (v103 = data) == 0) )
+    {
+LABEL_144:
+      sub_1BCB254(data, baseActionData);
+    }
+    v104 = *(_DWORD *)(data + 24);
+    if ( v104 < 1 )
+      return v41;
+    v105 = 0;
+    while ( v105 < v104 )
+    {
+      data = *(_QWORD *)(v103 + 8LL * (int)v105 + 32);
+      if ( !data )
+        goto LABEL_144;
+      BattleServantData__SetEnableLastAttackToSelfHistory((BattleServantData_o *)data, 1, 0LL);
+      v104 = *(_DWORD *)(v103 + 24);
+      if ( (int)++v105 >= v104 )
+        return v41;
+    }
+LABEL_145:
+    sub_1BCB25C(data, baseActionData, v27);
   }
-  data = (__int64)this->fields.logicfunction;
-  if ( !data )
-    goto LABEL_133;
-  v41 = BattleLogicFunction__procList(
-          (BattleLogicFunction_o *)data,
-          v31,
-          v67,
-          DataValsList,
-          0,
-          1,
-          0,
-          0,
-          1,
-          1,
-          1,
-          argument,
-          0,
-          0LL);
-  BattleServantData__checkRegainNPUsedNoble(v65, 0LL);
-  data = (__int64)v65->fields.buffData;
-  if ( !data )
-    goto LABEL_133;
-  data = (__int64)BattleBuffData__usedProgressing((BattleBuffData_o *)data, 0LL);
-  if ( !v106 )
-  {
-    v65->fields.tmpNp = v65->fields.np;
-    BattleServantData__changeNp(v65, 0, 0, 0LL);
-  }
-  if ( !v41 )
-    goto LABEL_133;
-  v41->fields.targetId = v38;
-  BattleActionData__setTypeTA(v41, 0LL);
-  if ( !v106 )
-    BattleActionData__setCommand(v41, v105, 0LL);
-  TreasureDvcMotionId = BattleServantData__getTreasureDvcMotionId(v65, 0LL);
-  OverwriteTdMotionId = v41->fields.OverwriteTdMotionId;
-  if ( OverwriteTdMotionId < 1 )
-    OverwriteTdMotionId = TreasureDvcMotionId;
-  v41->fields.motionId = OverwriteTdMotionId;
-  data = (__int64)this->fields.logic;
-  if ( !data )
-    goto LABEL_133;
-  BattleLogic__updateConditionsBuffAll((BattleLogic_o *)data, 0LL);
-  v41->fields.prevattackme = 0;
-  v41->fields.isForcedSpeedOne = task->fields.isForcedSpeedOne;
-  data = (__int64)this->fields.data;
-  if ( !data )
-    goto LABEL_133;
-  BattleData__setCommandAttack((BattleData_o *)data, 0, 0, 0LL);
-  v95 = this->fields.logic;
-  if ( !v95 )
-    goto LABEL_133;
-  v96 = v95->fields.perf;
-  v97 = (BattleActionData_o *)sub_1BC3254(BattleActionData_TypeInfo);
-  BattleActionData___ctor(v97, 0LL);
-  v98 = this->fields.logic;
-  if ( !v98
-    || (v99 = v98->fields.perf,
-        v100 = (BattleActionWaitCond_UntilSideEffectInvisible_o *)sub_1BC3254(BattleActionWaitCond_UntilSideEffectInvisible_TypeInfo),
-        BattleActionWaitCond_UntilSideEffectInvisible___ctor(v100, v99, 0LL),
-        !v97)
-    || (data = (__int64)BattleActionData__SetWaitCond(v97, (BattleActionWaitCond_Base_o *)v100, 0LL), !v96) )
-  {
-LABEL_133:
-    sub_1BC3264(data, baseActionData);
-  }
-  BattlePerformance__addActionData_44018140(v96, (BattleActionData_o *)data, 0LL);
-  v41->fields.treasureDvcId = v85;
-  BattleActionData__SetFuncTargetAllDead(v41, this->fields.data, 0LL);
-  v101 = this->fields.logic;
-  if ( v106 )
-  {
-    v102 = (BattleAddSkillTaskAfterCounterTreasureDevice_o *)sub_1BC3254(BattleAddSkillTaskAfterCounterTreasureDevice_TypeInfo);
-    BattleAddSkillTaskAfterCounterTreasureDevice___ctor(v102, 0LL);
-    if ( !v101 )
-      goto LABEL_133;
-  }
-  else
-  {
-    v102 = (BattleAddSkillTaskAfterCounterTreasureDevice_o *)sub_1BC3254(BattleAddSkillTaskAfterTreasureDevice_TypeInfo);
-    BattleAddSkillTaskAfterTreasureDevice___ctor((BattleAddSkillTaskAfterTreasureDevice_o *)v102, 0LL);
-    if ( !v101 )
-      goto LABEL_133;
-  }
-  BattleLogic__AddSkillTask(v101, (BattleAddSkillTaskAroundTargetTask_o *)v102, task, v38, 0LL);
   return v41;
 }
 
@@ -803,21 +831,21 @@ BattleLogicTask_array *__fastcall BattleLogicSpecial__taskEnemyTresureDvc(
   __int64 size; // x10
   Il2CppClass **v33; // x0
 
-  if ( (byte_4B05034 & 1) == 0 )
+  if ( (byte_4B1F572 & 1) == 0 )
   {
-    sub_1BC3008(&BattleComboData_TypeInfo, *(_QWORD *)&ltype);
-    sub_1BC3008(&BattleCommandData_TypeInfo, v6);
-    sub_1BC3008(&BattleLogicTask_TypeInfo, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BattleLogicTask__Add__, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__, v10);
-    sub_1BC3008(&System_Collections_Generic_List_BattleLogicTask__TypeInfo, v11);
-    byte_4B05034 = 1;
+    sub_1BCAFF8(&BattleComboData_TypeInfo, *(_QWORD *)&ltype);
+    sub_1BCAFF8(&BattleCommandData_TypeInfo, v6);
+    sub_1BCAFF8(&BattleLogicTask_TypeInfo, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask__Add__, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__, v10);
+    sub_1BCAFF8(&System_Collections_Generic_List_BattleLogicTask__TypeInfo, v11);
+    byte_4B1F572 = 1;
   }
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   if ( ltype == 16 )
     v16 = 2;
   else
@@ -828,7 +856,7 @@ BattleLogicTask_array *__fastcall BattleLogicSpecial__taskEnemyTresureDvc(
   if ( !e_entryid )
     goto LABEL_19;
   if ( v16 >= e_entryid->max_length )
-    sub_1BC326C(EnemyServantData, v14, v15);
+    sub_1BCB25C(EnemyServantData, v14, v15);
   v14 = (unsigned int)e_entryid->m_Items[v16 + 1];
   if ( (int)v14 < 1 )
     goto LABEL_18;
@@ -842,19 +870,19 @@ LABEL_18:
     if ( v12 )
       return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                         v12,
-                                        (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                        (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 LABEL_19:
-    sub_1BC3264(EnemyServantData, v14);
+    sub_1BCB254(EnemyServantData, v14);
   }
-  v19 = sub_1BC3254(BattleLogicTask_TypeInfo);
+  v19 = sub_1BCB244(BattleLogicTask_TypeInfo);
   BattleLogicTask___ctor((BattleLogicTask_o *)v19, v20);
   if ( !v19 )
     goto LABEL_19;
   BattleLogicTask__setActor((BattleLogicTask_o *)v19, 3, v18->fields.uniqueId, v21);
   FieldPlayerServantIDList = BattleData__getFieldPlayerServantIDList(data, 0LL, 0LL);
   *(_QWORD *)(v19 + 32) = FieldPlayerServantIDList;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v19 + 32), (int32_t)FieldPlayerServantIDList, v23, v24);
-  v25 = (BattleCommandData_o *)sub_1BC3254(BattleCommandData_TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v19 + 32), (int32_t)FieldPlayerServantIDList, v23, v24);
+  v25 = (BattleCommandData_o *)sub_1BCB244(BattleCommandData_TypeInfo);
   BattleCommandData___ctor(v25, 0LL);
   EnemyServantData = (BattleServantData_o *)BattleServantData__getTreasureDvcCardId(v18, 0LL);
   if ( !v25 )
@@ -864,7 +892,7 @@ LABEL_19:
   v25->fields.uniqueId = v18->fields.uniqueId;
   v25->fields.svtId = BattleServantData__getSvtId(v18, 0LL);
   v25->fields.treasureDvc = BattleServantData__getTreasureDvcId(v18, 1, 0LL, 0LL);
-  v26 = (BattleComboData_o *)sub_1BC3254(BattleComboData_TypeInfo);
+  v26 = (BattleComboData_o *)sub_1BCB244(BattleComboData_TypeInfo);
   BattleComboData___ctor(v26, 0LL);
   BattleLogicTask__setActionCommand((BattleLogicTask_o *)v19, v26, v25, v16, v27);
   EnemyServantData = (BattleServantData_o *)BattleServantData__getTreasureDvcId(v18, 1, 0LL, 0LL);
@@ -884,18 +912,18 @@ LABEL_19:
     System_Collections_Generic_List_object___AddWithResize(
       v12,
       (Il2CppObject *)v19,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
   }
   else
   {
     v33 = &items->obj.klass + size;
     v12->fields._size = size + 1;
     v33[4] = (Il2CppClass *)v19;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v33 + 4), v19, v28, v29);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v33 + 4), v19, v28, v29);
   }
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v12,
-                                    (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -935,21 +963,21 @@ BattleLogicTask_array *__fastcall BattleLogicSpecial__taskEnemyTresureDvcAlways(
   __int64 size; // x10
   Il2CppClass **v33; // x0
 
-  if ( (byte_4B05035 & 1) == 0 )
+  if ( (byte_4B1F573 & 1) == 0 )
   {
-    sub_1BC3008(&BattleComboData_TypeInfo, *(_QWORD *)&ltype);
-    sub_1BC3008(&BattleCommandData_TypeInfo, v6);
-    sub_1BC3008(&BattleLogicTask_TypeInfo, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BattleLogicTask__Add__, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__, v10);
-    sub_1BC3008(&System_Collections_Generic_List_BattleLogicTask__TypeInfo, v11);
-    byte_4B05035 = 1;
+    sub_1BCAFF8(&BattleComboData_TypeInfo, *(_QWORD *)&ltype);
+    sub_1BCAFF8(&BattleCommandData_TypeInfo, v6);
+    sub_1BCAFF8(&BattleLogicTask_TypeInfo, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask__Add__, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__, v10);
+    sub_1BCAFF8(&System_Collections_Generic_List_BattleLogicTask__TypeInfo, v11);
+    byte_4B1F573 = 1;
   }
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   if ( ltype == 23 )
     v16 = 2;
   else
@@ -960,7 +988,7 @@ BattleLogicTask_array *__fastcall BattleLogicSpecial__taskEnemyTresureDvcAlways(
   if ( !e_entryid )
     goto LABEL_19;
   if ( v16 >= e_entryid->max_length )
-    sub_1BC326C(EnemyServantData, v14, v15);
+    sub_1BCB25C(EnemyServantData, v14, v15);
   v14 = (unsigned int)e_entryid->m_Items[v16 + 1];
   if ( (int)v14 < 1 )
     goto LABEL_18;
@@ -975,19 +1003,19 @@ LABEL_18:
     if ( v12 )
       return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                         v12,
-                                        (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                        (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 LABEL_19:
-    sub_1BC3264(EnemyServantData, v14);
+    sub_1BCB254(EnemyServantData, v14);
   }
-  v19 = sub_1BC3254(BattleLogicTask_TypeInfo);
+  v19 = sub_1BCB244(BattleLogicTask_TypeInfo);
   BattleLogicTask___ctor((BattleLogicTask_o *)v19, v20);
   if ( !v19 )
     goto LABEL_19;
   BattleLogicTask__setActor((BattleLogicTask_o *)v19, 3, v18->fields.uniqueId, v21);
   FieldPlayerServantIDList = BattleData__getFieldPlayerServantIDList(data, 0LL, 0LL);
   *(_QWORD *)(v19 + 32) = FieldPlayerServantIDList;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v19 + 32), (int32_t)FieldPlayerServantIDList, v23, v24);
-  v25 = (BattleCommandData_o *)sub_1BC3254(BattleCommandData_TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v19 + 32), (int32_t)FieldPlayerServantIDList, v23, v24);
+  v25 = (BattleCommandData_o *)sub_1BCB244(BattleCommandData_TypeInfo);
   BattleCommandData___ctor(v25, 0LL);
   EnemyServantData = (BattleServantData_o *)BattleServantData__getTreasureDvcCardId(v18, 0LL);
   if ( !v25 )
@@ -997,7 +1025,7 @@ LABEL_19:
   v25->fields.uniqueId = v18->fields.uniqueId;
   v25->fields.svtId = BattleServantData__getSvtId(v18, 0LL);
   v25->fields.treasureDvc = BattleServantData__getTreasureDvcId(v18, 1, 0LL, 0LL);
-  v26 = (BattleComboData_o *)sub_1BC3254(BattleComboData_TypeInfo);
+  v26 = (BattleComboData_o *)sub_1BCB244(BattleComboData_TypeInfo);
   BattleComboData___ctor(v26, 0LL);
   BattleLogicTask__setActionCommand((BattleLogicTask_o *)v19, v26, v25, v16, v27);
   EnemyServantData = (BattleServantData_o *)BattleServantData__getTreasureDvcId(v18, 1, 0LL, 0LL);
@@ -1017,18 +1045,18 @@ LABEL_19:
     System_Collections_Generic_List_object___AddWithResize(
       v12,
       (Il2CppObject *)v19,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
   }
   else
   {
     v33 = &items->obj.klass + size;
     v12->fields._size = size + 1;
     v33[4] = (Il2CppClass *)v19;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v33 + 4), v19, v28, v29);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v33 + 4), v19, v28, v29);
   }
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v12,
-                                    (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -1068,21 +1096,21 @@ BattleLogicTask_array *__fastcall BattleLogicSpecial__taskTresureDvc(
   __int64 size; // x10
   Il2CppClass **v33; // x0
 
-  if ( (byte_4B05032 & 1) == 0 )
+  if ( (byte_4B1F570 & 1) == 0 )
   {
-    sub_1BC3008(&BattleComboData_TypeInfo, *(_QWORD *)&ltype);
-    sub_1BC3008(&BattleCommandData_TypeInfo, v6);
-    sub_1BC3008(&BattleLogicTask_TypeInfo, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BattleLogicTask__Add__, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__, v10);
-    sub_1BC3008(&System_Collections_Generic_List_BattleLogicTask__TypeInfo, v11);
-    byte_4B05032 = 1;
+    sub_1BCAFF8(&BattleComboData_TypeInfo, *(_QWORD *)&ltype);
+    sub_1BCAFF8(&BattleCommandData_TypeInfo, v6);
+    sub_1BCAFF8(&BattleLogicTask_TypeInfo, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask__Add__, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__, v10);
+    sub_1BCAFF8(&System_Collections_Generic_List_BattleLogicTask__TypeInfo, v11);
+    byte_4B1F570 = 1;
   }
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   if ( ltype == 8 )
     v16 = 2;
   else
@@ -1093,26 +1121,26 @@ BattleLogicTask_array *__fastcall BattleLogicSpecial__taskTresureDvc(
   if ( !p_entryid )
     goto LABEL_18;
   if ( v16 >= p_entryid->max_length )
-    sub_1BC326C(PlayerServantData, v14, v15);
+    sub_1BCB25C(PlayerServantData, v14, v15);
   PlayerServantData = BattleData__getPlayerServantData(data, p_entryid->m_Items[v16 + 1], 0LL);
   if ( !PlayerServantData || (v18 = PlayerServantData, !PlayerServantData->fields.reservationspecial) )
   {
     if ( v12 )
       return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                         v12,
-                                        (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                        (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 LABEL_18:
-    sub_1BC3264(PlayerServantData, v14);
+    sub_1BCB254(PlayerServantData, v14);
   }
-  v19 = sub_1BC3254(BattleLogicTask_TypeInfo);
+  v19 = sub_1BCB244(BattleLogicTask_TypeInfo);
   BattleLogicTask___ctor((BattleLogicTask_o *)v19, v20);
   if ( !v19 )
     goto LABEL_18;
   BattleLogicTask__setActor((BattleLogicTask_o *)v19, 2, v18->fields.uniqueId, v21);
   FieldEnemyServantIDList = BattleData__getFieldEnemyServantIDList(data, 1, 0LL);
   *(_QWORD *)(v19 + 32) = FieldEnemyServantIDList;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v19 + 32), (int32_t)FieldEnemyServantIDList, v23, v24);
-  v25 = (BattleCommandData_o *)sub_1BC3254(BattleCommandData_TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v19 + 32), (int32_t)FieldEnemyServantIDList, v23, v24);
+  v25 = (BattleCommandData_o *)sub_1BCB244(BattleCommandData_TypeInfo);
   BattleCommandData___ctor(v25, 0LL);
   PlayerServantData = (BattleServantData_o *)BattleServantData__getTreasureDvcCardId(v18, 0LL);
   if ( !v25 )
@@ -1122,7 +1150,7 @@ LABEL_18:
   v25->fields.uniqueId = v18->fields.uniqueId;
   v25->fields.svtId = BattleServantData__getSvtId(v18, 0LL);
   v25->fields.treasureDvc = BattleServantData__getTreasureDvcId(v18, 1, 0LL, 0LL);
-  v26 = (BattleComboData_o *)sub_1BC3254(BattleComboData_TypeInfo);
+  v26 = (BattleComboData_o *)sub_1BCB244(BattleComboData_TypeInfo);
   BattleComboData___ctor(v26, 0LL);
   BattleLogicTask__setActionCommand((BattleLogicTask_o *)v19, v26, v25, v16, v27);
   PlayerServantData = (BattleServantData_o *)BattleServantData__getTreasureDvcId(v18, 1, 0LL, 0LL);
@@ -1142,18 +1170,18 @@ LABEL_18:
     System_Collections_Generic_List_object___AddWithResize(
       v12,
       (Il2CppObject *)v19,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
   }
   else
   {
     v33 = &items->obj.klass + size;
     v12->fields._size = size + 1;
     v33[4] = (Il2CppClass *)v19;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v33 + 4), v19, v28, v29);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v33 + 4), v19, v28, v29);
   }
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v12,
-                                    (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }
 
 
@@ -1191,21 +1219,21 @@ BattleLogicTask_array *__fastcall BattleLogicSpecial__taskTresureDvcAlways(
   __int64 size; // x10
   Il2CppClass **v32; // x0
 
-  if ( (byte_4B05033 & 1) == 0 )
+  if ( (byte_4B1F571 & 1) == 0 )
   {
-    sub_1BC3008(&BattleComboData_TypeInfo, *(_QWORD *)&ltype);
-    sub_1BC3008(&BattleCommandData_TypeInfo, v7);
-    sub_1BC3008(&BattleLogicTask_TypeInfo, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BattleLogicTask__Add__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__, v10);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__, v11);
-    sub_1BC3008(&System_Collections_Generic_List_BattleLogicTask__TypeInfo, v12);
-    byte_4B05033 = 1;
+    sub_1BCAFF8(&BattleComboData_TypeInfo, *(_QWORD *)&ltype);
+    sub_1BCAFF8(&BattleCommandData_TypeInfo, v7);
+    sub_1BCAFF8(&BattleLogicTask_TypeInfo, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask__Add__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__, v10);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__, v11);
+    sub_1BCAFF8(&System_Collections_Generic_List_BattleLogicTask__TypeInfo, v12);
+    byte_4B1F571 = 1;
   }
-  v13 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   if ( ltype == 6 )
   {
     v17 = 0;
@@ -1224,9 +1252,9 @@ BattleLogicTask_array *__fastcall BattleLogicSpecial__taskTresureDvcAlways(
   if ( !p_entryid )
     goto LABEL_21;
   if ( v17 >= p_entryid->max_length )
-    sub_1BC326C(logictarget, v15, v16);
+    sub_1BCB25C(logictarget, v15, v16);
   PlayerServantData = BattleData__getPlayerServantData(data, p_entryid->m_Items[v17 + 1], 0LL);
-  v20 = (BattleLogicTask_o *)sub_1BC3254(BattleLogicTask_TypeInfo);
+  v20 = (BattleLogicTask_o *)sub_1BCB244(BattleLogicTask_TypeInfo);
   BattleLogicTask___ctor(v20, v21);
   if ( !PlayerServantData )
     goto LABEL_21;
@@ -1237,7 +1265,7 @@ BattleLogicTask_array *__fastcall BattleLogicSpecial__taskTresureDvcAlways(
   if ( !logictarget )
     goto LABEL_21;
   BattleLogicTarget__getTargetBattleServantData(logictarget, v20, v23);
-  v24 = (BattleCommandData_o *)sub_1BC3254(BattleCommandData_TypeInfo);
+  v24 = (BattleCommandData_o *)sub_1BCB244(BattleCommandData_TypeInfo);
   BattleCommandData___ctor(v24, 0LL);
   logictarget = (BattleLogicTarget_o *)BattleServantData__getTreasureDvcCardId(PlayerServantData, 0LL);
   if ( !v24 )
@@ -1247,7 +1275,7 @@ BattleLogicTask_array *__fastcall BattleLogicSpecial__taskTresureDvcAlways(
   v24->fields.uniqueId = PlayerServantData->fields.uniqueId;
   v24->fields.svtId = BattleServantData__getSvtId(PlayerServantData, 0LL);
   v24->fields.treasureDvc = BattleServantData__getTreasureDvcId(PlayerServantData, 1, 0LL, 0LL);
-  v25 = (BattleComboData_o *)sub_1BC3254(BattleComboData_TypeInfo);
+  v25 = (BattleComboData_o *)sub_1BCB244(BattleComboData_TypeInfo);
   BattleComboData___ctor(v25, 0LL);
   BattleLogicTask__setActionCommand(v20, v25, v24, v17, v26);
   logictarget = (BattleLogicTarget_o *)BattleServantData__getTreasureDvcId(PlayerServantData, 1, 0LL, 0LL);
@@ -1261,7 +1289,7 @@ BattleLogicTask_array *__fastcall BattleLogicSpecial__taskTresureDvcAlways(
         !items) )
   {
 LABEL_21:
-    sub_1BC3264(logictarget, v15);
+    sub_1BCB254(logictarget, v15);
   }
   size = v13->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -1269,16 +1297,16 @@ LABEL_21:
     System_Collections_Generic_List_object___AddWithResize(
       v13,
       (Il2CppObject *)v20,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
   }
   else
   {
     v32 = &items->obj.klass + size;
     v13->fields._size = size + 1;
     v32[4] = (Il2CppClass *)v20;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v32 + 4), (int32_t)v20, v27, v28);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v32 + 4), (int32_t)v20, v27, v28);
   }
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
                                     v13,
-                                    (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }

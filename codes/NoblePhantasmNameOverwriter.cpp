@@ -9,15 +9,15 @@ void __fastcall NoblePhantasmNameOverwriter__SetOverwriteNpLabel(
   const MethodInfo *v9; // x4
 
   if ( !entity )
-    sub_1BC3264(0LL, npNameLabel);
+    sub_1BCB254(0LL, npNameLabel);
   SvtId = UserServantEntity__getSvtId(entity, 0LL);
   DispSelectLimitCount = UserServantEntity__getDispSelectLimitCount(entity, 0, 0LL);
-  NoblePhantasmNameOverwriter__SetOverwriteNpLabel_47328272(SvtId, DispSelectLimitCount, npNameLabel, npRubyLabel, v9);
+  NoblePhantasmNameOverwriter__SetOverwriteNpLabel_47517488(SvtId, DispSelectLimitCount, npNameLabel, npRubyLabel, v9);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall NoblePhantasmNameOverwriter__SetOverwriteNpLabel_47328272(
+void __fastcall NoblePhantasmNameOverwriter__SetOverwriteNpLabel_47517488(
         int32_t servantId,
         int32_t dispLimitCount,
         UILabel_o *npNameLabel,
@@ -38,20 +38,20 @@ void __fastcall NoblePhantasmNameOverwriter__SetOverwriteNpLabel_47328272(
   const MethodInfo *v20; // x2
   ServantLimitAddEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B05E06 & 1) == 0 )
+  if ( (byte_4B20349 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, *(_QWORD *)&dispLimitCount);
-    sub_1BC3008(&Method_DataManager_GetMasterData_ServantMaster___, v9);
-    sub_1BC3008(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v10);
-    sub_1BC3008(&DataManager_TypeInfo, v11);
-    sub_1BC3008(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v12);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    byte_4B05E06 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_ServantLimitAddMaster___, *(_QWORD *)&dispLimitCount);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_ServantMaster___, v9);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v10);
+    sub_1BCAFF8(&DataManager_TypeInfo, v11);
+    sub_1BCAFF8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v12);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
+    byte_4B20349 = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ServantLimitImageMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  Master_object = (ServantLimitImageMaster_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   if ( !Master_object )
     goto LABEL_17;
   ServantLimitCountSealAfter = ServantLimitImageMaster__GetServantLimitCountSealAfter(
@@ -59,12 +59,12 @@ void __fastcall NoblePhantasmNameOverwriter__SetOverwriteNpLabel_47328272(
                                  servantId,
                                  dispLimitCount,
                                  0LL);
-  Master_object = (ServantLimitImageMaster_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Master_object = (ServantLimitImageMaster_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_17;
   Master_object = (ServantLimitImageMaster_o *)DataManager__GetMasterData_object_(
                                                  (DataManager_o *)Master_object,
-                                                 (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+                                                 (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___);
   if ( !Master_object )
     goto LABEL_17;
   if ( !ServantLimitAddMaster__TryGetEntity(
@@ -74,18 +74,18 @@ void __fastcall NoblePhantasmNameOverwriter__SetOverwriteNpLabel_47328272(
           ServantLimitCountSealAfter,
           0LL) )
     return;
-  Master_object = (ServantLimitImageMaster_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Master_object = (ServantLimitImageMaster_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_17;
   Master_object = (ServantLimitImageMaster_o *)DataManager__GetMasterData_object_(
                                                  (DataManager_o *)Master_object,
-                                                 (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                                 (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !Master_object )
     goto LABEL_17;
   Master_object = (ServantLimitImageMaster_o *)DataMasterBase_object__object__int___GetEntity(
                                                  (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                                  servantId,
-                                                 (const MethodInfo_32AF070 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                                 (const MethodInfo_32C7E00 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   if ( !Master_object )
     goto LABEL_17;
   if ( !ServantEntity__IsNameTrue((ServantEntity_o *)Master_object, 0LL) )
@@ -97,7 +97,7 @@ void __fastcall NoblePhantasmNameOverwriter__SetOverwriteNpLabel_47328272(
         (Master_object = (ServantLimitImageMaster_o *)entity) == 0LL) )
   {
 LABEL_17:
-    sub_1BC3264(Master_object, v15);
+    sub_1BCB254(Master_object, v15);
   }
   OverwriteTDRuby = ServantLimitAddEntity__GetOverwriteTDRuby(entity, 0LL);
   NoblePhantasmNameOverwriter__SetOverwriteText(npRubyLabel, OverwriteTDRuby, v20);
@@ -116,7 +116,7 @@ void __fastcall NoblePhantasmNameOverwriter__SetOverwriteText(
   if ( !IsNullOrEmpty )
   {
     if ( !label )
-      sub_1BC3264(IsNullOrEmpty, v6);
+      sub_1BCB254(IsNullOrEmpty, v6);
     UILabel__set_text(label, overwriteText, 0LL);
   }
 }

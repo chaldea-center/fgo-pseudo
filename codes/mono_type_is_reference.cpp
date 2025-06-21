@@ -1,4 +1,4 @@
 __int64 mono_type_is_reference()
 {
-  return sub_1BF77F4() & 1;
+  return sub_1BFF7E4() & 1;
 }

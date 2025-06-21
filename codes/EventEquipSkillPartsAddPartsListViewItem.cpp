@@ -8,19 +8,15 @@ void __fastcall EventEquipSkillPartsAddPartsListViewItem___ctor(
         const MethodInfo *method)
 {
   EventEquipSkillPartsAddPartsListViewItem_o *v11; // x23
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
 
   v11 = this;
-  ListViewItem___ctor_42769384((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
   v11->fields._SkillId_k__BackingField = skillId;
   v11->fields._Name_k__BackingField = name;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v11->fields._Name_k__BackingField, (int32_t)name, v12, v13);
+  sub_1BCAF9C(&v11->fields._Name_k__BackingField);
   v11->fields._Detail_k__BackingField = detail;
   v11 = (EventEquipSkillPartsAddPartsListViewItem_o *)((char *)v11 + 128);
-  sub_1BC2FAC((CGThumbnailListItem_o *)v11, (int32_t)detail, v14, v15);
+  sub_1BCAF9C(v11);
   LOBYTE(v11->monitor) = isLast;
 }
 
@@ -62,10 +58,8 @@ void __fastcall EventEquipSkillPartsAddPartsListViewItem__set_Detail(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-
   this->fields._Detail_k__BackingField = value;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._Detail_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BCAF9C(&this->fields._Detail_k__BackingField);
 }
 
 
@@ -83,10 +77,8 @@ void __fastcall EventEquipSkillPartsAddPartsListViewItem__set_Name(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-
   this->fields._Name_k__BackingField = value;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BCAF9C(&this->fields._Name_k__BackingField);
 }
 
 

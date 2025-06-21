@@ -12,23 +12,23 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill___cctor(const Meth
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4AFD706 & 1) == 0 )
+  if ( (byte_4B17AF5 & 1) == 0 )
   {
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, v1);
-    sub_1BC3008(&StringLiteral_20529/*"img_windowbg_saintquartz_2"*/, v4);
-    sub_1BC3008(&StringLiteral_20105/*"img_arrow_change"*/, v5);
-    byte_4AFD706 = 1;
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, v1);
+    sub_1BCAFF8(&StringLiteral_20545/*"img_windowbg_saintquartz_2"*/, v4);
+    sub_1BCAFF8(&StringLiteral_20120/*"img_arrow_change"*/, v5);
+    byte_4B17AF5 = 1;
   }
   static_fields = BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->TitleCellHeight = 0x3F80000000000019LL;
   static_fields->MultipleOffsetPosY = 4;
-  v7 = StringLiteral_20105/*"img_arrow_change"*/;
-  static_fields->ArrowChangeSpriteName = (struct System_String_o *)StringLiteral_20105/*"img_arrow_change"*/;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->ArrowChangeSpriteName, v7, v2, v3);
-  v8 = StringLiteral_20529/*"img_windowbg_saintquartz_2"*/;
+  v7 = StringLiteral_20120/*"img_arrow_change"*/;
+  static_fields->ArrowChangeSpriteName = (struct System_String_o *)StringLiteral_20120/*"img_arrow_change"*/;
+  sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->ArrowChangeSpriteName, v7, v2, v3);
+  v8 = StringLiteral_20545/*"img_windowbg_saintquartz_2"*/;
   v9 = BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo->static_fields;
-  v9->BgChangeSpriteName = (struct System_String_o *)StringLiteral_20529/*"img_windowbg_saintquartz_2"*/;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v9->BgChangeSpriteName, v8, v10, v11);
+  v9->BgChangeSpriteName = (struct System_String_o *)StringLiteral_20545/*"img_windowbg_saintquartz_2"*/;
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v9->BgChangeSpriteName, v8, v10, v11);
 }
 
 
@@ -45,11 +45,11 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill___ctor(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4AFD705 & 1) == 0 )
+  if ( (byte_4B17AF4 & 1) == 0 )
   {
-    sub_1BC3008(&BalanceConfig_TypeInfo, method);
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___TypeInfo, v3);
-    byte_4AFD705 = 1;
+    sub_1BCAFF8(&BalanceConfig_TypeInfo, method);
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___TypeInfo, v3);
+    byte_4B17AF4 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -57,16 +57,16 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill___ctor(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v4 = BalanceConfig_TypeInfo;
   }
-  v5 = (struct BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_array *)sub_1BC30B0(
+  v5 = (struct BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_array *)sub_1BCB0A0(
                                                                                        BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___TypeInfo,
                                                                                        (unsigned int)v4->static_fields->SvtSkillListMax);
   this->fields.nowSkillBaseObjectList = v5;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.nowSkillBaseObjectList, (int32_t)v5, v6, v7);
-  v8 = (struct BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_array *)sub_1BC30B0(
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.nowSkillBaseObjectList, (int32_t)v5, v6, v7);
+  v8 = (struct BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_array *)sub_1BCB0A0(
                                                                                        BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___TypeInfo,
                                                                                        (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtSkillListMax);
   this->fields.nextSkillBaseObjectList = v8;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.nextSkillBaseObjectList, (int32_t)v8, v9, v10);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.nextSkillBaseObjectList, (int32_t)v8, v9, v10);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
@@ -85,10 +85,10 @@ float __fastcall BattleCharaChangeConfirmListViewItemDrawSkill__GetArrowOffsetY(
 {
   BattleCharaChangeConfirmListViewItemDrawSkill_c *v2; // x0
 
-  if ( (byte_4AFD704 & 1) == 0 )
+  if ( (byte_4B17AF3 & 1) == 0 )
   {
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, method);
-    byte_4AFD704 = 1;
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, method);
+    byte_4B17AF3 = 1;
   }
   v2 = BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo;
   if ( !BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo->_2.cctor_finished )
@@ -119,27 +119,27 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill__Init(
   struct BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_array *nowSkillBaseObjectList; // x24
   struct BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_array *nextSkillBaseObjectList; // x8
 
-  if ( (byte_4AFD6FE & 1) == 0 )
+  if ( (byte_4B17AED & 1) == 0 )
   {
-    sub_1BC3008(&BalanceConfig_TypeInfo, *(_QWORD *)&kind);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v5);
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, v6);
-    sub_1BC3008(&StringLiteral_11786/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, v7);
-    byte_4AFD6FE = 1;
+    sub_1BCAFF8(&BalanceConfig_TypeInfo, *(_QWORD *)&kind);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v5);
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, v6);
+    sub_1BCAFF8(&StringLiteral_11797/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, v7);
+    byte_4B17AED = 1;
   }
   BattleCharaChangeConfirmListViewItemDraw__Init((BattleCharaChangeConfirmListViewItemDraw_o *)this, kind, method);
   nowTitleLabel = this->fields.nowTitleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11786/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11797/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, 0LL);
   if ( !nowTitleLabel
     || (UILabel__set_text(nowTitleLabel, v9, 0LL),
         nextTitleLabel = this->fields.nextTitleLabel,
-        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11786/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, 0LL),
+        v9 = LocalizationManager__Get((System_String_o *)StringLiteral_11797/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE"*/, 0LL),
         !nextTitleLabel) )
   {
 LABEL_19:
-    sub_1BC3264(v9, v10);
+    sub_1BCB254(v9, v10);
   }
   UILabel__set_text(nextTitleLabel, v9, 0LL);
   v13 = 0LL;
@@ -169,7 +169,7 @@ LABEL_19:
       goto LABEL_19;
     if ( v13 >= nextSkillBaseObjectList->max_length )
 LABEL_20:
-      sub_1BC326C(v9, v10, v12);
+      sub_1BCB25C(v9, v10, v12);
     BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__Init(
       (BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_o *)((char *)nextSkillBaseObjectList + i),
       v10);
@@ -190,21 +190,21 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill__ModifyColor(
   BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_c *v8; // x0
 
   v6 = this;
-  if ( (byte_4AFD6FF & 1) == 0 )
+  if ( (byte_4B17AEE & 1) == 0 )
   {
-    this = (BattleCharaChangeConfirmListViewItemDrawSkill_o *)sub_1BC3008(
+    this = (BattleCharaChangeConfirmListViewItemDrawSkill_o *)sub_1BCAFF8(
                                                                 &BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo,
                                                                 color);
-    byte_4AFD6FF = 1;
+    byte_4B17AEE = 1;
   }
   nextSkillBaseObjectList = v6->fields.nextSkillBaseObjectList;
   if ( !nextSkillBaseObjectList )
-    sub_1BC3264(this, color);
+    sub_1BCB254(this, color);
   v8 = BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo;
   if ( !BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo);
   if ( nextSkillBaseObjectList->max_length <= index )
-    sub_1BC326C(v8, color, *(_QWORD *)&index);
+    sub_1BCB25C(v8, color, *(_QWORD *)&index);
   BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__ModifyColor(
     &nextSkillBaseObjectList->m_Items[index],
     color,
@@ -219,10 +219,10 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill__RePosition(
   BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_array *nowSkillBaseObjectList; // x20
   const MethodInfo *v4; // x1
 
-  if ( (byte_4AFD702 & 1) == 0 )
+  if ( (byte_4B17AF1 & 1) == 0 )
   {
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, method);
-    byte_4AFD702 = 1;
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, method);
+    byte_4B17AF1 = 1;
   }
   nowSkillBaseObjectList = this->fields.nowSkillBaseObjectList;
   if ( !BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo->_2.cctor_finished )
@@ -248,10 +248,10 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill__ReSize(
   int32_t mHeight; // w9
   int32_t v11; // w1
 
-  if ( (byte_4AFD703 & 1) == 0 )
+  if ( (byte_4B17AF2 & 1) == 0 )
   {
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, method);
-    byte_4AFD703 = 1;
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, method);
+    byte_4B17AF2 = 1;
   }
   nowFrameSprite = this->fields.nowFrameSprite;
   nowSkillBaseObjectList = this->fields.nowSkillBaseObjectList;
@@ -267,7 +267,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill__ReSize(
     v6);
   v8 = (UIWidget_o *)this->fields.nowFrameSprite;
   if ( !v8 || (nextFrameSprite = this->fields.nextFrameSprite) == 0LL )
-    sub_1BC3264(v8, v7);
+    sub_1BCB254(v8, v7);
   mHeight = v8->fields.mHeight;
   v11 = nextFrameSprite->fields.mHeight;
   if ( mHeight <= v11 )
@@ -324,15 +324,15 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill__SetItem(
   int32_t dispLimitCount; // [xsp+Ch] [xbp-64h]
 
   v6 = this;
-  if ( (byte_4AFD700 & 1) == 0 )
+  if ( (byte_4B17AEF & 1) == 0 )
   {
-    sub_1BC3008(&BalanceConfig_TypeInfo, item);
-    sub_1BC3008(&Method_DataManager_GetMaster_ServantSkillAddMaster___, v7);
-    sub_1BC3008(&DataManager_TypeInfo, v8);
-    sub_1BC3008(&Method_System_Linq_Enumerable_SequenceEqual_int___, v9);
-    sub_1BC3008(&ImageLimitCount_TypeInfo, v10);
-    this = (BattleCharaChangeConfirmListViewItemDrawSkill_o *)sub_1BC3008(&int___TypeInfo, v11);
-    byte_4AFD700 = 1;
+    sub_1BCAFF8(&BalanceConfig_TypeInfo, item);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantSkillAddMaster___, v7);
+    sub_1BCAFF8(&DataManager_TypeInfo, v8);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_SequenceEqual_int___, v9);
+    sub_1BCAFF8(&ImageLimitCount_TypeInfo, v10);
+    this = (BattleCharaChangeConfirmListViewItemDrawSkill_o *)sub_1BCAFF8(&int___TypeInfo, v11);
+    byte_4B17AEF = 1;
   }
   v6->fields.dispMode = mode;
   if ( item && mode )
@@ -360,7 +360,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill__SetItem(
       || (v19 = item->fields._NextData_k__BackingField) == 0LL )
     {
 LABEL_37:
-      sub_1BC3264(this, item);
+      sub_1BCB254(this, item);
     }
     SkillInfoArray_k__BackingField = v18->fields._SkillInfoArray_k__BackingField;
     v21 = v19->fields._SkillInfoArray_k__BackingField;
@@ -403,7 +403,7 @@ LABEL_37:
         goto LABEL_37;
       if ( i >= SkillInfoArray_k__BackingField->max_length )
 LABEL_38:
-        sub_1BC326C(this, item, v25);
+        sub_1BCB25C(this, item, v25);
       v28 = SkillInfoArray_k__BackingField->m_Items[i];
       if ( !v28 || !v21 )
         goto LABEL_37;
@@ -422,7 +422,7 @@ LABEL_34:
     }
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    this = (BattleCharaChangeConfirmListViewItemDrawSkill_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantSkillAddMaster___);
+    this = (BattleCharaChangeConfirmListViewItemDrawSkill_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantSkillAddMaster___);
     if ( !this )
       goto LABEL_37;
     v31 = this;
@@ -453,16 +453,16 @@ LABEL_34:
     }
     else
     {
-      skillIds = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1BC30B0(int___TypeInfo, 0LL);
+      skillIds = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1BCB0A0(int___TypeInfo, 0LL);
       if ( !v34 )
       {
 LABEL_31:
-        v36 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1BC30B0(int___TypeInfo, 0LL);
+        v36 = (System_Collections_Generic_IEnumerable_TSource__o *)sub_1BCB0A0(int___TypeInfo, 0LL);
 LABEL_32:
         if ( System_Linq_Enumerable__SequenceEqual_int_(
                skillIds,
                v36,
-               (const MethodInfo_3038F70 *)Method_System_Linq_Enumerable_SequenceEqual_int___) )
+               (const MethodInfo_3051C1C *)Method_System_Linq_Enumerable_SequenceEqual_int___) )
         {
           goto LABEL_34;
         }
@@ -496,11 +496,11 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill__SetUI(
   _QWORD *p_image; // x0
   SkillInfo_o *v19; // x25
 
-  if ( (byte_4AFD701 & 1) == 0 )
+  if ( (byte_4B17AF0 & 1) == 0 )
   {
-    sub_1BC3008(&BalanceConfig_TypeInfo, *(_QWORD *)&svtId);
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, v12);
-    byte_4AFD701 = 1;
+    sub_1BCAFF8(&BalanceConfig_TypeInfo, *(_QWORD *)&svtId);
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, v12);
+    byte_4B17AF0 = 1;
   }
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)skillInfoArray, 0LL) )
   {
@@ -524,13 +524,13 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill__SetUI(
       {
         if ( !uiObjects )
 LABEL_20:
-          sub_1BC3264(p_image, v13);
+          sub_1BCB254(p_image, v13);
         p_image = &BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo->_1.image;
         if ( !BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo);
         if ( v16 >= uiObjects->max_length )
 LABEL_21:
-          sub_1BC326C(p_image, v13, v14);
+          sub_1BCB25C(p_image, v13, v14);
         BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__Set(
           i,
           svtId,
@@ -590,20 +590,20 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill___RePosition_g__Ca
   BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_o v41; // [xsp+0h] [xbp-C0h] BYREF
   BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_o self; // [xsp+30h] [xbp-90h] BYREF
 
-  if ( (byte_4AFD707 & 1) == 0 )
+  if ( (byte_4B17AF6 & 1) == 0 )
   {
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, method);
-    sub_1BC3008(
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, method);
+    sub_1BCAFF8(
       &Method_System_Linq_Enumerable_ToArray_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___,
       v3);
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Linq_Enumerable_Where_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___,
       v4);
-    sub_1BC3008(&System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool__TypeInfo, v5);
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, v6);
-    sub_1BC3008(&Method_BattleCharaChangeConfirmListViewItemDrawSkill___c__RePosition_b__14_1__, v7);
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo, v8);
-    byte_4AFD707 = 1;
+    sub_1BCAFF8(&System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool__TypeInfo, v5);
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, v6);
+    sub_1BCAFF8(&Method_BattleCharaChangeConfirmListViewItemDrawSkill___c__RePosition_b__14_1__, v7);
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo, v8);
+    byte_4B17AF6 = 1;
   }
   v9 = BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo;
   if ( !BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo->_2.cctor_finished )
@@ -620,7 +620,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill___RePosition_g__Ca
       v9 = BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v9->static_fields->__9;
-    _9__14_1 = (System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool__o *)sub_1BC3254(System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool__TypeInfo);
+    _9__14_1 = (System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool__o *)sub_1BCB244(System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool__TypeInfo);
     System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool____ctor(
       _9__14_1,
       v11,
@@ -628,17 +628,17 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill___RePosition_g__Ca
       0LL);
     static_fields = BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo->static_fields;
     static_fields->__9__14_1 = _9__14_1;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__14_1, (int32_t)_9__14_1, v13, v14);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__14_1, (int32_t)_9__14_1, v13, v14);
   }
   v15 = System_Linq_Enumerable__Where_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_(
           (System_Collections_Generic_IEnumerable_TSource__o *)uiObjects,
           (System_Func_TSource__bool__o *)_9__14_1,
-          (const MethodInfo_3045A80 *)Method_System_Linq_Enumerable_Where_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___);
+          (const MethodInfo_305E7F8 *)Method_System_Linq_Enumerable_Where_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___);
   v16 = System_Linq_Enumerable__ToArray_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_(
           v15,
-          (const MethodInfo_303E7F8 *)Method_System_Linq_Enumerable_ToArray_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___);
+          (const MethodInfo_3057570 *)Method_System_Linq_Enumerable_ToArray_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___);
   if ( !v16 )
-    sub_1BC3264(0LL, v17);
+    sub_1BCB254(0LL, v17);
   v19 = *((_QWORD *)v16 + 3);
   v20 = (unsigned int *)v16;
   if ( (int)v19 >= 1 )
@@ -740,7 +740,7 @@ LABEL_26:
               !v20[6]) )
         {
 LABEL_45:
-          sub_1BC326C(v16, v17, v18);
+          sub_1BCB25C(v16, v17, v18);
         }
         v40 = -(int)v16;
         baseObject = *v22;
@@ -802,20 +802,20 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill___ReSize_g__CalcCe
   BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_o v42; // [xsp+0h] [xbp-B0h] BYREF
   BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_o v43; // [xsp+30h] [xbp-80h] BYREF
 
-  if ( (byte_4AFD708 & 1) == 0 )
+  if ( (byte_4B17AF7 & 1) == 0 )
   {
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, uiObjects);
-    sub_1BC3008(
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, uiObjects);
+    sub_1BCAFF8(
       &Method_System_Linq_Enumerable_ToArray_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___,
       v5);
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Linq_Enumerable_Where_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___,
       v6);
-    sub_1BC3008(&System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool__TypeInfo, v7);
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, v8);
-    sub_1BC3008(&Method_BattleCharaChangeConfirmListViewItemDrawSkill___c__ReSize_b__15_1__, v9);
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo, v10);
-    byte_4AFD708 = 1;
+    sub_1BCAFF8(&System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool__TypeInfo, v7);
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, v8);
+    sub_1BCAFF8(&Method_BattleCharaChangeConfirmListViewItemDrawSkill___c__ReSize_b__15_1__, v9);
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo, v10);
+    byte_4B17AF7 = 1;
   }
   v11 = BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo;
   memset(&v42, 0, sizeof(v42));
@@ -833,7 +833,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill___ReSize_g__CalcCe
       v11 = BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo;
     }
     v13 = (Il2CppObject *)v11->static_fields->__9;
-    _9__15_1 = (System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool__o *)sub_1BC3254(System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool__TypeInfo);
+    _9__15_1 = (System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool__o *)sub_1BCB244(System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool__TypeInfo);
     System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__bool____ctor(
       _9__15_1,
       v13,
@@ -841,15 +841,15 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill___ReSize_g__CalcCe
       0LL);
     static_fields = BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo->static_fields;
     static_fields->__9__15_1 = _9__15_1;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__15_1, (int32_t)_9__15_1, v15, v16);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__15_1, (int32_t)_9__15_1, v15, v16);
   }
   v17 = System_Linq_Enumerable__Where_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_(
           (System_Collections_Generic_IEnumerable_TSource__o *)uiObjects,
           (System_Func_TSource__bool__o *)_9__15_1,
-          (const MethodInfo_3045A80 *)Method_System_Linq_Enumerable_Where_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___);
+          (const MethodInfo_305E7F8 *)Method_System_Linq_Enumerable_Where_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___);
   v18 = (struct UISprite_o **)System_Linq_Enumerable__ToArray_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_(
                                 v17,
-                                (const MethodInfo_303E7F8 *)Method_System_Linq_Enumerable_ToArray_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___);
+                                (const MethodInfo_3057570 *)Method_System_Linq_Enumerable_ToArray_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___);
   if ( !v18 )
     goto LABEL_50;
   v21 = v18;
@@ -888,7 +888,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill___ReSize_g__CalcCe
   v18 = (struct UISprite_o **)BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__get_Height(&v43, v25);
   if ( !frame )
 LABEL_50:
-    sub_1BC3264(v18, v19);
+    sub_1BCB254(v18, v19);
   UIWidget__set_height((UIWidget_o *)frame, TitleCellHeight + MultipleOffsetPosY + (_DWORD)v18, 0LL);
   v29 = v21[3];
   if ( (int)v29 >= 2 )
@@ -944,7 +944,7 @@ LABEL_36:
         goto LABEL_40;
     }
 LABEL_49:
-    sub_1BC326C(v18, v19, v20);
+    sub_1BCB25C(v18, v19, v20);
   }
 LABEL_40:
   if ( v29 )
@@ -979,10 +979,10 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___
   __int64 v1; // x1
   struct BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_StaticFields *static_fields; // x8
 
-  if ( (byte_4AFD70F & 1) == 0 )
+  if ( (byte_4B17AFE & 1) == 0 )
   {
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, v1);
-    byte_4AFD70F = 1;
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, v1);
+    byte_4B17AFE = 1;
   }
   static_fields = BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->AddSkillMaxNum = 0x3700000002LL;
@@ -1011,15 +1011,15 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__I
   UISprite_o *changeArrowSprite; // x20
   System_String_o *ArrowChangeSpriteName; // x21
 
-  if ( (byte_4AFD70C & 1) == 0 )
+  if ( (byte_4B17AFB & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__TypeInfo, method);
-    sub_1BC3008(&AtlasManager_TypeInfo, v3);
-    sub_1BC3008(&Method_BasicHelper_ForEach_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject___, v4);
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, v5);
-    sub_1BC3008(&Method_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c__Init_b__15_0__, v6);
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo, v7);
-    byte_4AFD70C = 1;
+    sub_1BCAFF8(&System_Action_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__TypeInfo, method);
+    sub_1BCAFF8(&AtlasManager_TypeInfo, v3);
+    sub_1BCAFF8(&Method_BasicHelper_ForEach_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject___, v4);
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_TypeInfo, v5);
+    sub_1BCAFF8(&Method_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c__Init_b__15_0__, v6);
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo, v7);
+    byte_4B17AFB = 1;
   }
   baseObject = this->fields.baseObject;
   if ( !this->fields.baseObject )
@@ -1041,7 +1041,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__I
       v9 = BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo;
     }
     v12 = (Il2CppObject *)v9->static_fields->__9;
-    _9__15_0 = (System_Action_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__o *)sub_1BC3254(System_Action_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__TypeInfo);
+    _9__15_0 = (System_Action_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__o *)sub_1BCB244(System_Action_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__TypeInfo);
     System_Action_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject____ctor(
       _9__15_0,
       v12,
@@ -1049,12 +1049,12 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__I
       0LL);
     static_fields = BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo->static_fields;
     static_fields->__9__15_0 = _9__15_0;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__15_0, (int32_t)_9__15_0, v14, v15);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__15_0, (int32_t)_9__15_0, v14, v15);
   }
   BasicHelper__ForEach_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject_(
     uiObject,
     (System_Action_T__o *)_9__15_0,
-    (const MethodInfo_2FEF000 *)Method_BasicHelper_ForEach_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject___);
+    (const MethodInfo_3007C40 *)Method_BasicHelper_ForEach_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject___);
   baseObject = (UnityEngine_GameObject_o *)this->fields.changeArrowSprite;
   if ( !baseObject )
     goto LABEL_19;
@@ -1078,7 +1078,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__I
     || (baseObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseObject, 0LL)) == 0LL )
   {
 LABEL_19:
-    sub_1BC3264(baseObject, method);
+    sub_1BCB254(baseObject, method);
   }
   UnityEngine_GameObject__SetActive(baseObject, 0, 0LL);
   AtlasManager__SetDownloadCommonSprite(
@@ -1098,10 +1098,10 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__M
   BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_c *v7; // x0
   struct BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject_array *uiObject; // x8
 
-  if ( (byte_4AFD70E & 1) == 0 )
+  if ( (byte_4B17AFD & 1) == 0 )
   {
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, color);
-    byte_4AFD70E = 1;
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, color);
+    byte_4B17AFD = 1;
   }
   v5 = 0LL;
   for ( i = 32LL; ; i += 24LL )
@@ -1116,9 +1116,9 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__M
       break;
     uiObject = this->fields.uiObject;
     if ( !uiObject )
-      sub_1BC3264(v7, color);
+      sub_1BCB254(v7, color);
     if ( v5 >= uiObject->max_length )
-      sub_1BC326C(v7, color, method);
+      sub_1BCB25C(v7, color, method);
     BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__ModifyColor(
       (BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject_o *)((char *)uiObject + i),
       color,
@@ -1165,21 +1165,21 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__S
   System_Int32_array *v36; // [xsp+0h] [xbp-70h]
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4AFD70D & 1) == 0 )
+  if ( (byte_4B17AFC & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMaster_ServantSkillAddMaster___, *(_QWORD *)&svtId);
-    sub_1BC3008(&Method_DataManager_GetMaster_SkillMaster___, v11);
-    sub_1BC3008(&DataManager_TypeInfo, v12);
-    sub_1BC3008(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__, v13);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v14);
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, v15);
-    byte_4AFD70D = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantSkillAddMaster___, *(_QWORD *)&svtId);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_SkillMaster___, v11);
+    sub_1BCAFF8(&DataManager_TypeInfo, v12);
+    sub_1BCAFF8(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__, v13);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v14);
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, v15);
+    byte_4B17AFC = 1;
   }
   entity = 0LL;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantSkillAddMaster___);
-  EnableEntity = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_SkillMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantSkillAddMaster___);
+  EnableEntity = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !this->fields.baseObject )
     goto LABEL_47;
   v19 = EnableEntity;
@@ -1238,7 +1238,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__S
                                                                          v19,
                                                                          &entity,
                                                                          v27,
-                                                                         (const MethodInfo_32AF0BC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+                                                                         (const MethodInfo_32C7E4C *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
           if ( v24 >= uiObject->max_length )
             goto LABEL_48;
           if ( ((unsigned __int8)EnableEntity & 1) != 0 )
@@ -1252,10 +1252,10 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__S
           {
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            if ( !byte_4AFD46D )
+            if ( !byte_4B1794E )
             {
-              sub_1BC3008(&LocalizationManager_TypeInfo, v18);
-              byte_4AFD46D = 1;
+              sub_1BCAFF8(&LocalizationManager_TypeInfo, v18);
+              byte_4B1794E = 1;
             }
             v31 = LocalizationManager_TypeInfo;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1313,7 +1313,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__S
     EnableEntity = (DataMasterBase_TMaster__TEntity__PKType__o *)SkillInfo__GetName(skillInfo, 0LL);
     if ( !v33->max_length )
 LABEL_48:
-      sub_1BC326C(EnableEntity, v18, v22);
+      sub_1BCB25C(EnableEntity, v18, v22);
     BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__Set(
       v33->m_Items,
       id,
@@ -1323,7 +1323,7 @@ LABEL_48:
   EnableEntity = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.grid;
   if ( !EnableEntity )
 LABEL_47:
-    sub_1BC3264(EnableEntity, v18);
+    sub_1BCB254(EnableEntity, v18);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)EnableEntity, 1, 0LL);
 }
 
@@ -1339,10 +1339,10 @@ int32_t __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject
   int32_t mHeight; // w19
   BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_c *v9; // x0
 
-  if ( (byte_4AFD70A & 1) == 0 )
+  if ( (byte_4B17AF9 & 1) == 0 )
   {
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, method);
-    byte_4AFD70A = 1;
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo, method);
+    byte_4B17AF9 = 1;
   }
   if ( !BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo);
@@ -1351,7 +1351,7 @@ int32_t __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject
   {
     changeBgSprite = this->fields.changeBgSprite;
     if ( !changeBgSprite )
-      sub_1BC3264(v3, v4);
+      sub_1BCB254(v3, v4);
     v6 = BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo;
     mHeight = changeBgSprite->fields.mHeight;
     if ( !BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject_TypeInfo->_2.cctor_finished )
@@ -1389,15 +1389,15 @@ bool __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__g
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4AFD70B & 1) == 0 )
+  if ( (byte_4B17AFA & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Linq_Enumerable_Count_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject___,
       method);
-    sub_1BC3008(&System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__bool__TypeInfo, v3);
-    sub_1BC3008(&Method_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c__get_IsMultiple_b__11_0__, v4);
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo, v5);
-    byte_4AFD70B = 1;
+    sub_1BCAFF8(&System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__bool__TypeInfo, v3);
+    sub_1BCAFF8(&Method_BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c__get_IsMultiple_b__11_0__, v4);
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo, v5);
+    byte_4B17AFA = 1;
   }
   v6 = BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo;
   uiObject = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.uiObject;
@@ -1415,7 +1415,7 @@ bool __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__g
       v6 = BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__11_0 = (System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__bool__o *)sub_1BC3254(System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__bool__TypeInfo);
+    _9__11_0 = (System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__bool__o *)sub_1BCB244(System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__bool__TypeInfo);
     System_Func_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__bool____ctor(
       _9__11_0,
       v9,
@@ -1423,12 +1423,12 @@ bool __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject__g
       0LL);
     static_fields = BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo->static_fields;
     static_fields->__9__11_0 = _9__11_0;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v11, v12);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v11, v12);
   }
   return System_Linq_Enumerable__Count_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject_(
            uiObject,
            (System_Func_TSource__bool__o *)_9__11_0,
-           (const MethodInfo_3020600 *)Method_System_Linq_Enumerable_Count_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject___) > 1;
+           (const MethodInfo_3039240 *)Method_System_Linq_Enumerable_Count_BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject___) > 1;
 }
 
 
@@ -1456,15 +1456,15 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4AFD710 & 1) == 0 )
+  if ( (byte_4B17AFF & 1) == 0 )
   {
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo, v1);
-    byte_4AFD710 = 1;
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo, v1);
+    byte_4B17AFF = 1;
   }
-  v2 = (Il2CppObject *)sub_1BC3254(BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BCB244(BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo->static_fields->__9 = (struct BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_o *)v2;
-  sub_1BC2FAC(
+  sub_1BCAF9C(
     (CGThumbnailListItem_o *)BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -1495,7 +1495,7 @@ bool __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillBaseObject___
         const MethodInfo *method)
 {
   if ( !ui->fields.baseObject )
-    sub_1BC3264(0LL, ui);
+    sub_1BCB254(0LL, ui);
   return UnityEngine_GameObject__get_activeSelf(ui->fields.baseObject, 0LL);
 }
 
@@ -1506,10 +1506,10 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__Ini
 {
   UnityEngine_GameObject_o *baseObject; // x0
 
-  if ( (byte_4AFD709 & 1) == 0 )
+  if ( (byte_4B17AF8 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_1/*""*/, method);
-    byte_4AFD709 = 1;
+    sub_1BCAFF8(&StringLiteral_1/*""*/, method);
+    byte_4B17AF8 = 1;
   }
   baseObject = this->fields.baseObject;
   if ( !this->fields.baseObject
@@ -1518,7 +1518,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__Ini
     || (SkillIconComponent__Clear((SkillIconComponent_o *)baseObject, 0LL),
         (baseObject = (UnityEngine_GameObject_o *)this->fields.nameLabel) == 0LL) )
   {
-    sub_1BC3264(baseObject, method);
+    sub_1BCB254(baseObject, method);
   }
   UILabel__set_text((UILabel_o *)baseObject, (System_String_o *)StringLiteral_1/*""*/, 0LL);
 }
@@ -1534,8 +1534,8 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__Mod
 
   nameLabel = this->fields.nameLabel;
   if ( !nameLabel )
-    sub_1BC3264(this, color);
-  v4 = System_String__Concat_62348648(color, nameLabel->fields.mText, 0LL);
+    sub_1BCB254(this, color);
+  v4 = System_String__Concat_62450424(color, nameLabel->fields.mText, 0LL);
   UILabel__set_text(nameLabel, v4, 0LL);
 }
 
@@ -1556,7 +1556,7 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill_SkillUIObject__Set
     || (SkillIconComponent__Set((SkillIconComponent_o *)baseObject, skillId, 0LL),
         (baseObject = (UnityEngine_GameObject_o *)this->fields.nameLabel) == 0LL) )
   {
-    sub_1BC3264(baseObject, *(_QWORD *)&skillId);
+    sub_1BCB254(baseObject, *(_QWORD *)&skillId);
   }
   UILabel__set_text((UILabel_o *)baseObject, skillName, 0LL);
 }
@@ -1569,15 +1569,15 @@ void __fastcall BattleCharaChangeConfirmListViewItemDrawSkill___c___cctor(const 
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4AFD711 & 1) == 0 )
+  if ( (byte_4B17B00 & 1) == 0 )
   {
-    sub_1BC3008(&BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo, v1);
-    byte_4AFD711 = 1;
+    sub_1BCAFF8(&BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo, v1);
+    byte_4B17B00 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BC3254(BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BCB244(BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo->static_fields->__9 = (struct BattleCharaChangeConfirmListViewItemDrawSkill___c_o *)v2;
-  sub_1BC2FAC(
+  sub_1BCAF9C(
     (CGThumbnailListItem_o *)BattleCharaChangeConfirmListViewItemDrawSkill___c_TypeInfo->static_fields,
     (int32_t)v2,
     v3,
@@ -1599,7 +1599,7 @@ bool __fastcall BattleCharaChangeConfirmListViewItemDrawSkill___c___RePosition_b
         const MethodInfo *method)
 {
   if ( !ui->fields.baseObject )
-    sub_1BC3264(0LL, ui);
+    sub_1BCB254(0LL, ui);
   return UnityEngine_GameObject__get_activeSelf(ui->fields.baseObject, 0LL);
 }
 
@@ -1610,6 +1610,6 @@ bool __fastcall BattleCharaChangeConfirmListViewItemDrawSkill___c___ReSize_b__15
         const MethodInfo *method)
 {
   if ( !ui->fields.baseObject )
-    sub_1BC3264(0LL, ui);
+    sub_1BCB254(0LL, ui);
   return UnityEngine_GameObject__get_activeSelf(ui->fields.baseObject, 0LL);
 }

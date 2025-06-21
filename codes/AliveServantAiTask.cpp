@@ -18,7 +18,7 @@ bool __fastcall AliveServantAiTask__IsActable(
         return BattleData__checkAlivePlayers((BattleData_o *)svtData, 0LL);
     }
 LABEL_7:
-    sub_1BC3264(svtData, logic);
+    sub_1BCB254(svtData, logic);
   }
   return 0;
 }

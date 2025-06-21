@@ -6,20 +6,20 @@ void __fastcall EventUiValueEntity___ctor(EventUiValueEntity_o *this, const Meth
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B0223A & 1) == 0 )
+  if ( (byte_4B1C743 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
-    sub_1BC3008(&StringLiteral_1/*""*/, v3);
-    byte_4B0223A = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
+    sub_1BCAFF8(&StringLiteral_1/*""*/, v3);
+    byte_4B1C743 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.id = 0LL;
   v4 = (int)StringLiteral_1/*""*/;
   this->fields.value = (struct System_String_o *)StringLiteral_1/*""*/;
   p_value = &this->fields.value;
-  sub_1BC2FAC((CGThumbnailListItem_o *)p_value, v4, v6, v7);
+  sub_1BCAF9C((CGThumbnailListItem_o *)p_value, v4, v6, v7);
   *((_DWORD *)p_value + 2) = 0;
 }
 
@@ -31,16 +31,16 @@ System_String_o *__fastcall EventUiValueEntity__CreatePK(
         System_String_o *value,
         const MethodInfo *method)
 {
-  if ( (byte_4B0223B & 1) == 0 )
+  if ( (byte_4B1C744 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_long__long__string___, *(_QWORD *)&type);
-    byte_4B0223B = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long__long__string___, *(_QWORD *)&type);
+    byte_4B1C744 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long__object_(
            id,
            type,
            (Il2CppObject *)value,
-           (const MethodInfo_30006CC *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+           (const MethodInfo_301930C *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
 }
 
 

@@ -15,7 +15,7 @@ bool __fastcall ServantCharaGraphEquipFilterLogicGrand__IsMatchAllFilter(
 
   ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem((ServantCharaGraphFilterLogic_o *)this, 0LL);
   if ( !ListViewItem )
-    sub_1BC3264(0LL, v4);
+    sub_1BCB254(0LL, v4);
   return ListViewItem->fields._IsBase_k__BackingField
       || ServantCharaGraphEquipFilterLogic__IsMatchAllFilter((ServantCharaGraphEquipFilterLogic_o *)this, 0LL);
 }

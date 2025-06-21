@@ -8,27 +8,27 @@ void __fastcall BillBoardGroupManager___cctor(const MethodInfo *method)
   struct BillBoardGroupManager_StaticFields *v6; // x9
   float v7; // s1
 
-  if ( (byte_4B013ED & 1) == 0 )
+  if ( (byte_4B1B8E3 & 1) == 0 )
   {
-    sub_1BC3008(&BillBoardGroupManager_TypeInfo, v1);
-    byte_4B013ED = 1;
+    sub_1BCAFF8(&BillBoardGroupManager_TypeInfo, v1);
+    byte_4B1B8E3 = 1;
   }
   static_fields = BillBoardGroupManager_TypeInfo->static_fields;
   static_fields->targetFov = 40.0;
-  if ( !byte_4AFBDB1 )
+  if ( !byte_4B16191 )
   {
-    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, v1);
-    byte_4AFBDB1 = 1;
+    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v1);
+    byte_4B16191 = 1;
     static_fields = BillBoardGroupManager_TypeInfo->static_fields;
   }
   v3 = UnityEngine_Vector3_TypeInfo->static_fields;
   z = v3->zeroVector.fields.z;
   *(_QWORD *)&static_fields->VecZero.fields.x = *(_QWORD *)&v3->zeroVector.fields.x;
   static_fields->VecZero.fields.z = z;
-  if ( !byte_4AFE8DB )
+  if ( !byte_4B18DC3 )
   {
-    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, v1);
-    byte_4AFE8DB = 1;
+    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v1);
+    byte_4B18DC3 = 1;
   }
   v5 = UnityEngine_Vector3_TypeInfo->static_fields;
   v6 = BillBoardGroupManager_TypeInfo->static_fields;
@@ -40,14 +40,14 @@ void __fastcall BillBoardGroupManager___cctor(const MethodInfo *method)
 
 void __fastcall BillBoardGroupManager___ctor(BillBoardGroupManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B013EC & 1) == 0 )
+  if ( (byte_4B1B8E2 & 1) == 0 )
   {
-    sub_1BC3008(&Method_SingletonMonoBehaviour_BillBoardGroupManager___ctor__, method);
-    byte_4B013EC = 1;
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_BillBoardGroupManager___ctor__, method);
+    byte_4B1B8E2 = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_38E0160 *)Method_SingletonMonoBehaviour_BillBoardGroupManager___ctor__);
+    (const MethodInfo_38F8EF0 *)Method_SingletonMonoBehaviour_BillBoardGroupManager___ctor__);
 }
 
 
@@ -83,41 +83,41 @@ void __fastcall BillBoardGroupManager__AddData(
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v30; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o i; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4B013E9 & 1) == 0 )
+  if ( (byte_4B1B8DF & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__Add__,
       *(_QWORD *)&groupId);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__ContainsKey__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData___ctor__, v10);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__get_Item__, v11);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__get_Values__, v12);
-    sub_1BC3008(&System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__TypeInfo, v13);
-    sub_1BC3008(
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__ContainsKey__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData___ctor__, v10);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__get_Item__, v11);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__get_Values__, v12);
+    sub_1BCAFF8(&System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__TypeInfo, v13);
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__BillBoardGroupManager_GroupData__Dispose__,
       v14);
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__BillBoardGroupManager_GroupData__MoveNext__,
       v15);
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__BillBoardGroupManager_GroupData__get_Current__,
       v16);
-    sub_1BC3008(&BillBoardGroupManager_GroupData_TypeInfo, v17);
-    sub_1BC3008(
+    sub_1BCAFF8(&BillBoardGroupManager_GroupData_TypeInfo, v17);
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_Dictionary_ValueCollection_int__BillBoardGroupManager_GroupData__GetEnumerator__,
       v18);
-    byte_4B013E9 = 1;
+    byte_4B1B8DF = 1;
   }
   memset(&i, 0, sizeof(i));
   p_datas = (System_Collections_Generic_Dictionary_int__object__o **)&this->fields.datas;
   if ( !this->fields.datas )
   {
-    v20 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BC3254(System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__TypeInfo);
+    v20 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BCB244(System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__TypeInfo);
     System_Collections_Generic_Dictionary_int__object____ctor(
       v20,
-      (const MethodInfo_3307B80 *)Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData___ctor__);
+      (const MethodInfo_3320910 *)Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData___ctor__);
     *p_datas = v20;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.datas, (int32_t)v20, v21, v22);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.datas, (int32_t)v20, v21, v22);
   }
   if ( this->fields.phaseNow != 1 )
   {
@@ -126,25 +126,25 @@ void __fastcall BillBoardGroupManager__AddData(
       goto LABEL_22;
     Values = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Values(
                                                                        Values,
-                                                                       (const MethodInfo_3308364 *)Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__get_Values__);
+                                                                       (const MethodInfo_33210F4 *)Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__get_Values__);
     if ( !Values )
       goto LABEL_22;
     System_Collections_Generic_Dictionary_ValueCollection_int__object___GetEnumerator(
       &v30,
       (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)Values,
-      (const MethodInfo_39C96D4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_int__BillBoardGroupManager_GroupData__GetEnumerator__);
+      (const MethodInfo_39E2464 *)Method_System_Collections_Generic_Dictionary_ValueCollection_int__BillBoardGroupManager_GroupData__GetEnumerator__);
     for ( i = v30;
           System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__object___MoveNext(
             &i,
-            (const MethodInfo_345ABF4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__BillBoardGroupManager_GroupData__MoveNext__);
+            (const MethodInfo_3473984 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__BillBoardGroupManager_GroupData__MoveNext__);
           BillBoardGroupManager_GroupData__Reset((BillBoardGroupManager_GroupData_o *)i.fields._currentValue, cam, v25) )
     {
       if ( !i.fields._currentValue )
-        sub_1BC3264(0LL, v24);
+        sub_1BCB254(0LL, v24);
     }
     System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__object___Dispose(
       &i,
-      (const MethodInfo_345ABF0 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__BillBoardGroupManager_GroupData__Dispose__);
+      (const MethodInfo_3473980 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_int__BillBoardGroupManager_GroupData__Dispose__);
     this->fields.phaseNow = 1;
   }
   Values = *p_datas;
@@ -153,7 +153,7 @@ void __fastcall BillBoardGroupManager__AddData(
   Values = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___ContainsKey(
                                                                      Values,
                                                                      groupId,
-                                                                     (const MethodInfo_3308748 *)Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__ContainsKey__);
+                                                                     (const MethodInfo_33214D8 *)Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__ContainsKey__);
   v26 = *p_datas;
   if ( ((unsigned __int8)Values & 1) != 0 )
   {
@@ -162,7 +162,7 @@ void __fastcall BillBoardGroupManager__AddData(
       Values = (System_Collections_Generic_Dictionary_int__object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                                          *p_datas,
                                                                          groupId,
-                                                                         (const MethodInfo_33084B4 *)Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__get_Item__);
+                                                                         (const MethodInfo_3321244 *)Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__get_Item__);
       if ( Values )
       {
         BillBoardGroupManager_GroupData__AddObj((BillBoardGroupManager_GroupData_o *)Values, obj, v27);
@@ -170,9 +170,9 @@ void __fastcall BillBoardGroupManager__AddData(
       }
     }
 LABEL_22:
-    sub_1BC3264(Values, *(_QWORD *)&groupId);
+    sub_1BCB254(Values, *(_QWORD *)&groupId);
   }
-  v28 = (BillBoardGroupManager_GroupData_o *)sub_1BC3254(BillBoardGroupManager_GroupData_TypeInfo);
+  v28 = (BillBoardGroupManager_GroupData_o *)sub_1BCB244(BillBoardGroupManager_GroupData_TypeInfo);
   BillBoardGroupManager_GroupData___ctor(v28, cam, v29);
   if ( !v26 )
     goto LABEL_22;
@@ -180,7 +180,7 @@ LABEL_22:
     v26,
     groupId,
     (Il2CppObject *)v28,
-    (const MethodInfo_3308554 *)Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__Add__);
+    (const MethodInfo_33212E4 *)Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__Add__);
 }
 
 
@@ -202,11 +202,11 @@ UnityEngine_Vector3_o __fastcall BillBoardGroupManager__GetLookVec(
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B013EA & 1) == 0 )
+  if ( (byte_4B1B8E0 & 1) == 0 )
   {
-    sub_1BC3008(&BillBoardGroupManager_TypeInfo, *(_QWORD *)&groupId);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__TryGetValue__, v7);
-    byte_4B013EA = 1;
+    sub_1BCAFF8(&BillBoardGroupManager_TypeInfo, *(_QWORD *)&groupId);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__TryGetValue__, v7);
+    byte_4B1B8E0 = 1;
   }
   value = 0LL;
   datas = this->fields.datas;
@@ -216,10 +216,10 @@ UnityEngine_Vector3_o __fastcall BillBoardGroupManager__GetLookVec(
          (System_Collections_Generic_Dictionary_int__object__o *)datas,
          groupId,
          &value,
-         (const MethodInfo_3309CE0 *)Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__TryGetValue__) )
+         (const MethodInfo_3322A70 *)Method_System_Collections_Generic_Dictionary_int__BillBoardGroupManager_GroupData__TryGetValue__) )
   {
     if ( !value )
-      sub_1BC3264(0LL, v9);
+      sub_1BCB254(0LL, v9);
     *(UnityEngine_Vector3_o *)&v10 = BillBoardGroupManager_GroupData__GetLookVec(
                                        (BillBoardGroupManager_GroupData_o *)value,
                                        v9);
@@ -254,10 +254,10 @@ float __fastcall BillBoardGroupManager__GetMagnifier(float angleRad, const Metho
   float v6; // s8
   float targetFov; // s0
 
-  if ( (byte_4B013EB & 1) == 0 )
+  if ( (byte_4B1B8E1 & 1) == 0 )
   {
-    sub_1BC3008(&BillBoardGroupManager_TypeInfo, v2);
-    byte_4B013EB = 1;
+    sub_1BCAFF8(&BillBoardGroupManager_TypeInfo, v2);
+    byte_4B1B8E1 = 1;
   }
   v4 = BillBoardGroupManager_TypeInfo;
   v5 = angleRad + -6.2832;
@@ -313,10 +313,10 @@ UnityEngine_Vector3_o __fastcall BillBoardGroupManager__GetNormalizedLookAt(
   v7 = fromPos.fields.z;
   v8 = fromPos.fields.y;
   v9 = fromPos.fields.x;
-  if ( !byte_4AFBDB4 )
+  if ( !byte_4B16194 )
   {
-    sub_1BC3008(&System_Math_TypeInfo, v3);
-    byte_4AFBDB4 = 1;
+    sub_1BCAFF8(&System_Math_TypeInfo, v3);
+    byte_4B16194 = 1;
   }
   v10 = x - v9;
   v11 = y - v8;
@@ -326,10 +326,10 @@ UnityEngine_Vector3_o __fastcall BillBoardGroupManager__GetNormalizedLookAt(
   v13 = sqrtf((float)(v12 * v12) + (float)((float)(v10 * v10) + (float)(v11 * v11)));
   if ( v13 <= 0.00001 )
   {
-    if ( !byte_4AFBDB1 )
+    if ( !byte_4B16191 )
     {
-      sub_1BC3008(&UnityEngine_Vector3_TypeInfo, v3);
-      byte_4AFBDB1 = 1;
+      sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v3);
+      byte_4B16191 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     v14 = static_fields->zeroVector.fields.x;
@@ -366,16 +366,16 @@ void __fastcall BillBoardGroupManager_GroupData___ctor(
   int32_t v14; // w2
   const MethodInfo *v15; // x3
 
-  if ( (byte_4B013EE & 1) == 0 )
+  if ( (byte_4B1B8E4 & 1) == 0 )
   {
-    sub_1BC3008(&BillBoardGroupManager_TypeInfo, pCam);
-    sub_1BC3008(&Method_System_Collections_Generic_List_GameObject___ctor__, v5);
-    sub_1BC3008(&System_Collections_Generic_List_GameObject__TypeInfo, v6);
-    byte_4B013EE = 1;
+    sub_1BCAFF8(&BillBoardGroupManager_TypeInfo, pCam);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject___ctor__, v5);
+    sub_1BCAFF8(&System_Collections_Generic_List_GameObject__TypeInfo, v6);
+    byte_4B1B8E4 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.cam = pCam;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)pCam, v7, v8);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)pCam, v7, v8);
   v9 = BillBoardGroupManager_TypeInfo;
   if ( !BillBoardGroupManager_TypeInfo->_2.cctor_finished )
   {
@@ -387,12 +387,12 @@ void __fastcall BillBoardGroupManager_GroupData___ctor(
   v12 = *(_QWORD *)&static_fields->VecZero.fields.x;
   this->fields.resVec.fields.z = z;
   *(_QWORD *)&this->fields.resVec.fields.x = v12;
-  v13 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_GameObject__TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.objs = (struct System_Collections_Generic_List_GameObject__o *)v13;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.objs, (int32_t)v13, v14, v15);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.objs, (int32_t)v13, v14, v15);
 }
 
 
@@ -408,10 +408,10 @@ void __fastcall BillBoardGroupManager_GroupData__AddObj(
   __int64 size; // x10
   Il2CppClass **v10; // x8
 
-  if ( (byte_4B013F0 & 1) == 0 )
+  if ( (byte_4B1B8E6 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_GameObject__Add__, obj);
-    byte_4B013F0 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__Add__, obj);
+    byte_4B1B8E6 = 1;
   }
   objs = (System_Collections_Generic_List_object__o *)this->fields.objs;
   if ( !objs
@@ -420,7 +420,7 @@ void __fastcall BillBoardGroupManager_GroupData__AddObj(
         ++objs->fields._version,
         !items) )
   {
-    sub_1BC3264(objs, obj);
+    sub_1BCB254(objs, obj);
   }
   size = objs->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -428,14 +428,14 @@ void __fastcall BillBoardGroupManager_GroupData__AddObj(
     System_Collections_Generic_List_object___AddWithResize(
       objs,
       (Il2CppObject *)obj,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
   }
   else
   {
     v10 = &items->obj.klass + size;
     objs->fields._size = size + 1;
     v10[4] = (Il2CppClass *)obj;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v10 + 4), (int32_t)obj, (int32_t)method, v3);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v10 + 4), (int32_t)obj, (int32_t)method, v3);
   }
 }
 
@@ -518,17 +518,17 @@ UnityEngine_Vector3_o __fastcall BillBoardGroupManager_GroupData__GetLookVec(
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v74; // 0:s3.4,4:s4.4,8:s5.4
 
-  if ( (byte_4B013F1 & 1) == 0 )
+  if ( (byte_4B1B8E7 & 1) == 0 )
   {
-    sub_1BC3008(&BillBoardGroupManager_TypeInfo, method);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v3);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v4);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v5);
-    sub_1BC3008(&Method_System_Collections_Generic_List_GameObject__Clear__, v6);
-    sub_1BC3008(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_GameObject__get_Count__, v8);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v9);
-    byte_4B013F1 = 1;
+    sub_1BCAFF8(&BillBoardGroupManager_TypeInfo, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v3);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v4);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v5);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__Clear__, v6);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__get_Count__, v8);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v9);
+    byte_4B1B8E7 = 1;
   }
   memset(&v68, 0, sizeof(v68));
   cam = (UnityEngine_Object_o *)this->fields.cam;
@@ -559,12 +559,12 @@ UnityEngine_Vector3_o __fastcall BillBoardGroupManager_GroupData__GetLookVec(
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v67,
         objs,
-        (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+        (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
       v69 = 57.296;
       v68 = v67;
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                 &v68,
-                (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+                (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
       {
         current = v68.fields._current;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -573,20 +573,20 @@ UnityEngine_Vector3_o __fastcall BillBoardGroupManager_GroupData__GetLookVec(
         if ( !v20 )
         {
           if ( !current )
-            sub_1BC3264(v20, v21);
+            sub_1BCB254(v20, v21);
           transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)current, 0LL);
           if ( !transform )
-            sub_1BC3264(0LL, v23);
+            sub_1BCB254(0LL, v23);
           *(UnityEngine_Vector3_o *)&v25 = UnityEngine_Transform__get_position(transform, 0LL);
           v28 = (UnityEngine_Component_o *)this->fields.cam;
           if ( !v28 )
-            sub_1BC3264(0LL, v24);
+            sub_1BCB254(0LL, v24);
           v29 = v25;
           v30 = v26;
           v31 = v27;
           v32 = UnityEngine_Component__get_transform(v28, 0LL);
           if ( !v32 )
-            sub_1BC3264(0LL, v33);
+            sub_1BCB254(0LL, v33);
           position = UnityEngine_Transform__get_position(v32, 0LL);
           v34 = BillBoardGroupManager_TypeInfo;
           v35 = position.fields.x;
@@ -608,19 +608,19 @@ UnityEngine_Vector3_o __fastcall BillBoardGroupManager_GroupData__GetLookVec(
           v65 = v41;
           v42 = (UnityEngine_Component_o *)this->fields.cam;
           if ( !v42 )
-            sub_1BC3264(0LL, v38);
+            sub_1BCB254(0LL, v38);
           v43 = v39;
           v44 = UnityEngine_Component__get_transform(v42, 0LL);
           if ( !v44 )
-            sub_1BC3264(0LL, v45);
+            sub_1BCB254(0LL, v45);
           forward = UnityEngine_Transform__get_forward(v44, 0LL);
           v47 = forward.fields.x;
           v48 = forward.fields.y;
           v49 = forward.fields.z;
-          if ( !byte_4AFE8E3 )
+          if ( !byte_4B18DCB )
           {
-            sub_1BC3008(&System_Math_TypeInfo, v46);
-            byte_4AFE8E3 = 1;
+            sub_1BCAFF8(&System_Math_TypeInfo, v46);
+            byte_4B18DCB = 1;
           }
           v50 = System_Math_TypeInfo;
           if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -654,11 +654,11 @@ UnityEngine_Vector3_o __fastcall BillBoardGroupManager_GroupData__GetLookVec(
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &v68,
-        (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+        (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
       v59 = this->fields.objs;
       if ( !v59 )
 LABEL_46:
-        sub_1BC3264(objs, v11);
+        sub_1BCB254(objs, v11);
       size = v59->fields._size;
       v61 = v59->fields._version + 1;
       v59->fields._size = 0;
@@ -689,13 +689,13 @@ void __fastcall BillBoardGroupManager_GroupData__Reset(
   float z; // w9
   __int64 v9; // x8
 
-  if ( (byte_4B013EF & 1) == 0 )
+  if ( (byte_4B1B8E5 & 1) == 0 )
   {
-    sub_1BC3008(&BillBoardGroupManager_TypeInfo, pCam);
-    byte_4B013EF = 1;
+    sub_1BCAFF8(&BillBoardGroupManager_TypeInfo, pCam);
+    byte_4B1B8E5 = 1;
   }
   this->fields.cam = pCam;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)pCam, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)pCam, (int32_t)method, v3);
   v6 = BillBoardGroupManager_TypeInfo;
   if ( !BillBoardGroupManager_TypeInfo->_2.cctor_finished )
   {

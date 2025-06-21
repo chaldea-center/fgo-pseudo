@@ -1,14 +1,14 @@
 void __fastcall ServantTransformMaster___ctor(ServantTransformMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B02A3A & 1) == 0 )
+  if ( (byte_4B1CF42 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string___ctor__, method);
-    byte_4B02A3A = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string___ctor__, method);
+    byte_4B1CF42 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     495,
-    (const MethodInfo_32B1804 *)Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string___ctor__);
+    (const MethodInfo_32CA594 *)Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string___ctor__);
 }
 
 
@@ -24,22 +24,22 @@ ServantTransformEntity_o *__fastcall ServantTransformMaster__GetBeforeTransformE
   int32_t v9; // w22
   ServantTransformEntity_o *result; // x0
 
-  if ( (byte_4B02A37 & 1) == 0 )
+  if ( (byte_4B1CF3F & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_ObjectModel_Collection_ServantTransformEntity__get_Count__,
       *(_QWORD *)&aftSvtId);
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_ServantTransformEntity__get_Item__, v7);
-    byte_4B02A37 = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_ServantTransformEntity__get_Item__, v7);
+    byte_4B1CF3F = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_11:
-    sub_1BC3264(list, *(_QWORD *)&aftSvtId);
+    sub_1BCB254(list, *(_QWORD *)&aftSvtId);
   v9 = 0;
   while ( v9 < System_Collections_ObjectModel_Collection_object___get_Count(
                  list,
-                 (const MethodInfo_324A858 *)Method_System_Collections_ObjectModel_Collection_ServantTransformEntity__get_Count__) )
+                 (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_ServantTransformEntity__get_Count__) )
   {
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
     if ( !list )
@@ -47,7 +47,7 @@ LABEL_11:
     result = (ServantTransformEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                            list,
                                            v9,
-                                           (const MethodInfo_324A8E8 *)Method_System_Collections_ObjectModel_Collection_ServantTransformEntity__get_Item__);
+                                           (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_ServantTransformEntity__get_Item__);
     if ( result && result->fields.aftSvtId == aftSvtId && result->fields.aftDispLimitCount == aftDispLimitCount )
       return result;
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -69,10 +69,10 @@ int32_t __fastcall ServantTransformMaster__GetCommandCardTypeChange(
 {
   CommandCardTypeChange_array *v9; // x0
 
-  if ( (byte_4B02A39 & 1) == 0 )
+  if ( (byte_4B1CF41 & 1) == 0 )
   {
-    sub_1BC3008(&Method_BasicHelper_IndexValue_CommandCardTypeChange___, *(_QWORD *)&baseSvtId);
-    byte_4B02A39 = 1;
+    sub_1BCAFF8(&Method_BasicHelper_IndexValue_CommandCardTypeChange___, *(_QWORD *)&baseSvtId);
+    byte_4B1CF41 = 1;
   }
   v9 = ServantTransformMaster__GetCommandCardTypeChangeArray(
          this,
@@ -83,7 +83,7 @@ int32_t __fastcall ServantTransformMaster__GetCommandCardTypeChange(
            (System_Int32Enum_array *)v9,
            index,
            0,
-           (const MethodInfo_2FF042C *)Method_BasicHelper_IndexValue_CommandCardTypeChange___);
+           (const MethodInfo_300906C *)Method_BasicHelper_IndexValue_CommandCardTypeChange___);
 }
 
 
@@ -116,20 +116,20 @@ CommandCardTypeChange_array *__fastcall ServantTransformMaster__GetCommandCardTy
   System_Collections_Generic_IEnumerable_TSource__o *v26; // x0
   ServantTransformEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B02A38 & 1) == 0 )
+  if ( (byte_4B1CF40 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMaster_ServantMaster___, *(_QWORD *)&svtId);
-    sub_1BC3008(&DataManager_TypeInfo, v7);
-    sub_1BC3008(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v8);
-    sub_1BC3008(&Method_System_Linq_Enumerable_Select_int__CommandCardTypeChange___, v9);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_CommandCardTypeChange___, v10);
-    sub_1BC3008(&System_Func_int__int__CommandCardTypeChange__TypeInfo, v11);
-    sub_1BC3008(&Method_ServantTransformMaster___c__DisplayClass3_0__GetCommandCardTypeChangeArray_b__0__, v12);
-    sub_1BC3008(&ServantTransformMaster___c__DisplayClass3_0_TypeInfo, v13);
-    byte_4B02A38 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantMaster___, *(_QWORD *)&svtId);
+    sub_1BCAFF8(&DataManager_TypeInfo, v7);
+    sub_1BCAFF8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v8);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_Select_int__CommandCardTypeChange___, v9);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_CommandCardTypeChange___, v10);
+    sub_1BCAFF8(&System_Func_int__int__CommandCardTypeChange__TypeInfo, v11);
+    sub_1BCAFF8(&Method_ServantTransformMaster___c__DisplayClass3_0__GetCommandCardTypeChangeArray_b__0__, v12);
+    sub_1BCAFF8(&ServantTransformMaster___c__DisplayClass3_0_TypeInfo, v13);
+    byte_4B1CF40 = 1;
   }
   entity = 0LL;
-  v14 = sub_1BC3254(ServantTransformMaster___c__DisplayClass3_0_TypeInfo);
+  v14 = sub_1BCB244(ServantTransformMaster___c__DisplayClass3_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v14, 0LL);
   if ( ServantTransformMaster__TryGetEntity(this, &entity, svtId, dispLimitCount, v15)
     || (result = (CommandCardTypeChange_array *)ServantTransformMaster__GetBeforeTransformEntity(
@@ -141,7 +141,7 @@ CommandCardTypeChange_array *__fastcall ServantTransformMaster__GetCommandCardTy
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantMaster___);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantMaster___);
     if ( entity )
     {
       v20 = Master_object;
@@ -150,14 +150,14 @@ CommandCardTypeChange_array *__fastcall ServantTransformMaster__GetCommandCardTy
         Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___GetEntity(
                                                                         Master_object,
                                                                         entity->fields.befSvtId,
-                                                                        (const MethodInfo_32AF070 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                                                        (const MethodInfo_32C7E00 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
         v21 = Master_object ? Master_object[2].klass : 0LL;
         if ( entity )
         {
           Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___GetEntity(
                                                                           v20,
                                                                           entity->fields.aftSvtId,
-                                                                          (const MethodInfo_32AF070 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                                                          (const MethodInfo_32C7E00 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
           if ( Master_object )
           {
             klass = Master_object[2].klass;
@@ -166,22 +166,22 @@ CommandCardTypeChange_array *__fastcall ServantTransformMaster__GetCommandCardTy
 LABEL_15:
               *(_QWORD *)(v14 + 16) = klass;
               v24 = v14 + 16;
-              sub_1BC2FAC((CGThumbnailListItem_o *)(v14 + 16), (int32_t)klass, v22, v23);
+              sub_1BCAF9C((CGThumbnailListItem_o *)(v14 + 16), (int32_t)klass, v22, v23);
               if ( !v21 || !*(_QWORD *)v24 || LODWORD(v21->_1.namespaze) != *(_DWORD *)(*(_QWORD *)v24 + 24LL) )
                 return 0LL;
-              v25 = (System_Func_T1__T2__TResult__o *)sub_1BC3254(System_Func_int__int__CommandCardTypeChange__TypeInfo);
+              v25 = (System_Func_T1__T2__TResult__o *)sub_1BCB244(System_Func_int__int__CommandCardTypeChange__TypeInfo);
               System_Func_int__int__Int32Enum____ctor(
                 v25,
                 (Il2CppObject *)v14,
                 Method_ServantTransformMaster___c__DisplayClass3_0__GetCommandCardTypeChangeArray_b__0__,
                 0LL);
-              v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__Int32Enum__50542824(
+              v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__Int32Enum__50644372(
                                                                            (System_Collections_Generic_IEnumerable_TSource__o *)v21,
                                                                            (System_Func_TSource__int__TResult__o *)v25,
-                                                                           (const MethodInfo_30338E8 *)Method_System_Linq_Enumerable_Select_int__CommandCardTypeChange___);
+                                                                           (const MethodInfo_304C594 *)Method_System_Linq_Enumerable_Select_int__CommandCardTypeChange___);
               return (CommandCardTypeChange_array *)System_Linq_Enumerable__ToArray_Int32Enum_(
                                                       v26,
-                                                      (const MethodInfo_303E43C *)Method_System_Linq_Enumerable_ToArray_CommandCardTypeChange___);
+                                                      (const MethodInfo_30571B4 *)Method_System_Linq_Enumerable_ToArray_CommandCardTypeChange___);
             }
           }
           else
@@ -193,7 +193,7 @@ LABEL_15:
         }
       }
     }
-    sub_1BC3264(Master_object, klass);
+    sub_1BCB254(Master_object, klass);
   }
   return result;
 }
@@ -208,18 +208,18 @@ ServantTransformEntity_o *__fastcall ServantTransformMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B02A3B & 1) == 0 )
+  if ( (byte_4B1CF43 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__GetEntity__,
       *(_QWORD *)&befSvtId);
-    byte_4B02A3B = 1;
+    byte_4B1CF43 = 1;
   }
   PK = (Il2CppObject *)ServantTransformEntity__CreatePK(befSvtId, befDispLimitCount, 0LL);
   return (ServantTransformEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_32B3B28 *)Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__GetEntity__);
+                                       (const MethodInfo_32CC8B8 *)Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__GetEntity__);
 }
 
 
@@ -243,18 +243,18 @@ System_Collections_Generic_List_int__o *__fastcall ServantTransformMaster__GetTr
   __int64 size; // x11
   ServantTransformEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B02A35 & 1) == 0 )
+  if ( (byte_4B1CF3D & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_int__Add__, *(_QWORD *)&baseSvtId);
-    sub_1BC3008(&Method_System_Collections_Generic_List_int___ctor__, v7);
-    sub_1BC3008(&System_Collections_Generic_List_int__TypeInfo, v8);
-    byte_4B02A35 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__Add__, *(_QWORD *)&baseSvtId);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_int___ctor__, v7);
+    sub_1BCAFF8(&System_Collections_Generic_List_int__TypeInfo, v8);
+    byte_4B1CF3D = 1;
   }
   entity = 0LL;
-  v9 = (System_Collections_Generic_List_int__o *)sub_1BC3254(System_Collections_Generic_List_int__TypeInfo);
+  v9 = (System_Collections_Generic_List_int__o *)sub_1BCB244(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v9,
-    (const MethodInfo_36835C8 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_369C358 *)Method_System_Collections_Generic_List_int___ctor__);
   for ( i = ServantTransformMaster__TryGetEntity(this, &entity, baseSvtId, baseDispLimitCount, v10);
         i;
         i = ServantTransformMaster__TryGetEntity(
@@ -274,7 +274,7 @@ System_Collections_Generic_List_int__o *__fastcall ServantTransformMaster__GetTr
           !items) )
     {
 LABEL_12:
-      sub_1BC3264(i, aftSvtId);
+      sub_1BCB254(i, aftSvtId);
     }
     size = v9->fields._size;
     if ( (unsigned int)size >= items->max_length )
@@ -282,7 +282,7 @@ LABEL_12:
       System_Collections_Generic_List_int___AddWithResize(
         v9,
         aftSvtId,
-        *(const MethodInfo_3683E1C **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+        *(const MethodInfo_369CBAC **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
       v14 = entity;
       if ( !entity )
         goto LABEL_12;
@@ -358,27 +358,27 @@ System_Collections_Generic_List_TransformServantInfo__o *__fastcall ServantTrans
   ServantTransformEntity_o *v59; // [xsp+0h] [xbp-60h] BYREF
   ServantTransformEntity_o *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4B02A36 & 1) == 0 )
+  if ( (byte_4B1CF3E & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Linq_Enumerable_Last_TransformServantInfo___, *(_QWORD *)&baseSvtId);
-    sub_1BC3008(&Method_System_Collections_Generic_List_TransformServantInfo__Add__, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_TransformServantInfo___ctor__, v8);
-    sub_1BC3008(&System_Collections_Generic_List_TransformServantInfo__TypeInfo, v9);
-    sub_1BC3008(&TransformServantInfo_TypeInfo, v10);
-    sub_1BC3008(&StringLiteral_1/*""*/, v11);
-    byte_4B02A36 = 1;
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_Last_TransformServantInfo___, *(_QWORD *)&baseSvtId);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_TransformServantInfo__Add__, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_TransformServantInfo___ctor__, v8);
+    sub_1BCAFF8(&System_Collections_Generic_List_TransformServantInfo__TypeInfo, v9);
+    sub_1BCAFF8(&TransformServantInfo_TypeInfo, v10);
+    sub_1BCAFF8(&StringLiteral_1/*""*/, v11);
+    byte_4B1CF3E = 1;
   }
   v59 = 0LL;
   entity = 0LL;
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_TransformServantInfo__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_TransformServantInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_TransformServantInfo___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_TransformServantInfo___ctor__);
   object = (Il2CppObject *)ServantTransformMaster__TryGetEntity(this, &entity, baseSvtId, baseDispLimitCount, v13);
   if ( ((unsigned __int8)object & 1) == 0 )
   {
-    v26 = (TransformServantInfo_o *)sub_1BC3254(TransformServantInfo_TypeInfo);
-    TransformServantInfo___ctor_42495040(v26, baseSvtId, baseDispLimitCount, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+    v26 = (TransformServantInfo_o *)sub_1BCB244(TransformServantInfo_TypeInfo);
+    TransformServantInfo___ctor_42657972(v26, baseSvtId, baseDispLimitCount, (System_String_o *)StringLiteral_1/*""*/, 0LL);
     if ( v12 )
     {
       items = v12->fields._items;
@@ -392,28 +392,28 @@ System_Collections_Generic_List_TransformServantInfo__o *__fastcall ServantTrans
           System_Collections_Generic_List_object___AddWithResize(
             v12,
             (Il2CppObject *)v26,
-            *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+            *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
         }
         else
         {
           v32 = &items->obj.klass + size;
           v12->fields._size = size + 1;
           v32[4] = (Il2CppClass *)v26;
-          sub_1BC2FAC((CGThumbnailListItem_o *)(v32 + 4), (int32_t)v26, v27, v28);
+          sub_1BCAF9C((CGThumbnailListItem_o *)(v32 + 4), (int32_t)v26, v27, v28);
         }
         return (System_Collections_Generic_List_TransformServantInfo__o *)v12;
       }
     }
 LABEL_31:
-    sub_1BC3264(object, v15);
+    sub_1BCB254(object, v15);
   }
   if ( !entity )
     goto LABEL_31;
   befSvtId = entity->fields.befSvtId;
   befDispLimitCount = entity->fields.befDispLimitCount;
   befTitle = entity->fields.befTitle;
-  v19 = (TransformServantInfo_o *)sub_1BC3254(TransformServantInfo_TypeInfo);
-  TransformServantInfo___ctor_42495040(v19, befSvtId, befDispLimitCount, befTitle, 0LL);
+  v19 = (TransformServantInfo_o *)sub_1BCB244(TransformServantInfo_TypeInfo);
+  TransformServantInfo___ctor_42657972(v19, befSvtId, befDispLimitCount, befTitle, 0LL);
   if ( !v12 )
     goto LABEL_31;
   v22 = v12->fields._items;
@@ -427,22 +427,22 @@ LABEL_31:
     System_Collections_Generic_List_object___AddWithResize(
       v12,
       (Il2CppObject *)v19,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
   }
   else
   {
     v25 = &v22->obj.klass + v24;
     v12->fields._size = v24 + 1;
     v25[4] = (Il2CppClass *)v19;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v25 + 4), (int32_t)v19, v20, v21);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v25 + 4), (int32_t)v19, v20, v21);
   }
   if ( !entity )
     goto LABEL_31;
   aftSvtId = entity->fields.aftSvtId;
   aftDispLimitCount = entity->fields.aftDispLimitCount;
   aftTitle = entity->fields.aftTitle;
-  v36 = (TransformServantInfo_o *)sub_1BC3254(TransformServantInfo_TypeInfo);
-  TransformServantInfo___ctor_42495040(v36, aftSvtId, aftDispLimitCount, aftTitle, 0LL);
+  v36 = (TransformServantInfo_o *)sub_1BCB244(TransformServantInfo_TypeInfo);
+  TransformServantInfo___ctor_42657972(v36, aftSvtId, aftDispLimitCount, aftTitle, 0LL);
   v39 = v12->fields._items;
   v40 = Method_System_Collections_Generic_List_TransformServantInfo__Add__;
   ++v12->fields._version;
@@ -454,14 +454,14 @@ LABEL_31:
     System_Collections_Generic_List_object___AddWithResize(
       v12,
       (Il2CppObject *)v36,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
   }
   else
   {
     v42 = &v39->obj.klass + v41;
     v12->fields._size = v41 + 1;
     v42[4] = (Il2CppClass *)v36;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v42 + 4), (int32_t)v36, v37, v38);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v42 + 4), (int32_t)v36, v37, v38);
   }
   v45 = entity;
   if ( !entity )
@@ -470,21 +470,21 @@ LABEL_31:
   {
     object = System_Linq_Enumerable__Last_object_(
                (System_Collections_Generic_IEnumerable_TSource__o *)v12,
-               (const MethodInfo_3028D60 *)Method_System_Linq_Enumerable_Last_TransformServantInfo___);
+               (const MethodInfo_30419A0 *)Method_System_Linq_Enumerable_Last_TransformServantInfo___);
     if ( v59 )
     {
       if ( object )
       {
         v48 = v59->fields.befTitle;
         object[1].monitor = v48;
-        sub_1BC2FAC((CGThumbnailListItem_o *)&object[1].monitor, (int32_t)v48, v46, v47);
+        sub_1BCAF9C((CGThumbnailListItem_o *)&object[1].monitor, (int32_t)v48, v46, v47);
         if ( v59 )
         {
           v49 = v59->fields.aftSvtId;
           v50 = v59->fields.aftDispLimitCount;
           v51 = v59->fields.aftTitle;
-          v52 = (TransformServantInfo_o *)sub_1BC3254(TransformServantInfo_TypeInfo);
-          TransformServantInfo___ctor_42495040(v52, v49, v50, v51, 0LL);
+          v52 = (TransformServantInfo_o *)sub_1BCB244(TransformServantInfo_TypeInfo);
+          TransformServantInfo___ctor_42657972(v52, v49, v50, v51, 0LL);
           v55 = v12->fields._items;
           v56 = Method_System_Collections_Generic_List_TransformServantInfo__Add__;
           ++v12->fields._version;
@@ -496,14 +496,14 @@ LABEL_31:
               System_Collections_Generic_List_object___AddWithResize(
                 v12,
                 (Il2CppObject *)v52,
-                *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
+                *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
             }
             else
             {
               v58 = &v55->obj.klass + v57;
               v12->fields._size = v57 + 1;
               v58[4] = (Il2CppClass *)v52;
-              sub_1BC2FAC((CGThumbnailListItem_o *)(v58 + 4), (int32_t)v52, v53, v54);
+              sub_1BCAF9C((CGThumbnailListItem_o *)(v58 + 4), (int32_t)v52, v53, v54);
             }
             v45 = v59;
             if ( v59 )
@@ -527,17 +527,17 @@ bool __fastcall ServantTransformMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B02A3C & 1) == 0 )
+  if ( (byte_4B1CF44 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__TryGetEntity__, entity);
-    byte_4B02A3C = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__TryGetEntity__, entity);
+    byte_4B1CF44 = 1;
   }
   PK = (Il2CppObject *)ServantTransformEntity__CreatePK(befSvtId, befDispLimitCount, 0LL);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32B3B74 *)Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__TryGetEntity__);
+           (const MethodInfo_32CC904 *)Method_DataMasterBase_ServantTransformMaster__ServantTransformEntity__string__TryGetEntity__);
 }
 
 
@@ -561,16 +561,16 @@ int32_t __fastcall ServantTransformMaster___c__DisplayClass3_0___GetCommandCardT
   int32_t v8; // w20
 
   v6 = this;
-  if ( (byte_4B02A3D & 1) == 0 )
+  if ( (byte_4B1CF45 & 1) == 0 )
   {
-    this = (ServantTransformMaster___c__DisplayClass3_0_o *)sub_1BC3008(&BattleCommand_TypeInfo, *(_QWORD *)&x);
-    byte_4B02A3D = 1;
+    this = (ServantTransformMaster___c__DisplayClass3_0_o *)sub_1BCAFF8(&BattleCommand_TypeInfo, *(_QWORD *)&x);
+    byte_4B1CF45 = 1;
   }
   afterSvtCardIds = v6->fields.afterSvtCardIds;
   if ( !afterSvtCardIds )
-    sub_1BC3264(this, *(_QWORD *)&x);
+    sub_1BCB254(this, *(_QWORD *)&x);
   if ( afterSvtCardIds->max_length <= i )
-    sub_1BC326C(this, *(_QWORD *)&x, *(_QWORD *)&i);
+    sub_1BCB25C(this, *(_QWORD *)&x, *(_QWORD *)&i);
   v8 = afterSvtCardIds->m_Items[i + 1];
   if ( !BattleCommand_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo);

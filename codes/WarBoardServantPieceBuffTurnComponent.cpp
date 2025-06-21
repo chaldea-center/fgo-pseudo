@@ -24,7 +24,7 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__Awake(
         (bgSprite = (UnityEngine_Component_o *)this->fields.turnLabel) == 0LL)
     || (bgSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bgSprite, 0LL)) == 0LL )
   {
-    sub_1BC3264(bgSprite, method);
+    sub_1BCB254(bgSprite, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bgSprite, 0, 0LL);
 }
@@ -40,11 +40,11 @@ UnityEngine_GameObject_o *__fastcall WarBoardServantPieceBuffTurnComponent__Crea
   Il2CppObject *v8; // x20
   Il2CppObject *v9; // x20
 
-  if ( (byte_4AFF8E3 & 1) == 0 )
+  if ( (byte_4B19DB9 & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_Object_Instantiate_GameObject___, parent);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
-    byte_4AFF8E3 = 1;
+    sub_1BCAFF8(&Method_UnityEngine_Object_Instantiate_GameObject___, parent);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
+    byte_4B19DB9 = 1;
   }
   barrierEffectBasePrefab = (UnityEngine_Object_o *)this->fields.barrierEffectBasePrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -56,8 +56,8 @@ UnityEngine_GameObject_o *__fastcall WarBoardServantPieceBuffTurnComponent__Crea
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v9 = UnityEngine_Object__Instantiate_object_(
          v8,
-         (const MethodInfo_308AE24 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  GameObjectExtensions__SafeSetParent_35217712((UnityEngine_GameObject_o *)v9, parent, 0LL);
+         (const MethodInfo_30A3BB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  GameObjectExtensions__SafeSetParent_35362640((UnityEngine_GameObject_o *)v9, parent, 0LL);
   return (UnityEngine_GameObject_o *)v9;
 }
 
@@ -80,14 +80,14 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__EndBarrierAnim(
   _QWORD *v17; // x0
   System_Reflection_MethodBase_o *v18; // x0
 
-  if ( (byte_4AFF8E6 & 1) == 0 )
+  if ( (byte_4B19DBC & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, startAction);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v9);
-    sub_1BC3008(&Method_WarBoardServantPieceBuffTurnComponent_EndBarrierAnim__, v10);
-    sub_1BC3008(&StringLiteral_2415/*"AttackUnable_end"*/, v11);
-    sub_1BC3008(&StringLiteral_16711/*"ar256"*/, v12);
-    byte_4AFF8E6 = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, startAction);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v9);
+    sub_1BCAFF8(&Method_WarBoardServantPieceBuffTurnComponent_EndBarrierAnim__, v10);
+    sub_1BCAFF8(&StringLiteral_2417/*"AttackUnable_end"*/, v11);
+    sub_1BCAFF8(&StringLiteral_16723/*"ar256"*/, v12);
+    byte_4B19DBC = 1;
   }
   barrierAnimation = (UnityEngine_Object_o *)this->fields.barrierAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -102,7 +102,7 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__EndBarrierAnim(
       goto LABEL_15;
     gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                               (UnityEngine_GameObject_o *)gameObject,
-                                              (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+                                              (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
     if ( !gameObject )
       goto LABEL_15;
     v16 = (CommonEffectActionComponent_o *)gameObject;
@@ -112,17 +112,17 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__EndBarrierAnim(
     {
       v17 = Method_WarBoardServantPieceBuffTurnComponent_EndBarrierAnim__;
       if ( (*((_BYTE *)Method_WarBoardServantPieceBuffTurnComponent_EndBarrierAnim__ + 83) & 2) != 0 )
-        v17 = (_QWORD *)sub_1BC3020(Method_WarBoardServantPieceBuffTurnComponent_EndBarrierAnim__);
-      v18 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v17, v17[4]);
-      OverwriteAssetSoundName__PlaySe(v18, (System_String_o *)StringLiteral_16711/*"ar256"*/, 0, 0LL);
+        v17 = (_QWORD *)sub_1BCB010(Method_WarBoardServantPieceBuffTurnComponent_EndBarrierAnim__);
+      v18 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v17, v17[4]);
+      OverwriteAssetSoundName__PlaySe(v18, (System_String_o *)StringLiteral_16723/*"ar256"*/, 0, 0LL);
     }
     gameObject = (UnityEngine_Component_o *)this->fields.barrierAnimation;
     if ( !gameObject )
 LABEL_15:
-      sub_1BC3264(gameObject, v14);
-    UnityEngine_Animation__Play_69779584(
+      sub_1BCB254(gameObject, v14);
+    UnityEngine_Animation__Play_69881360(
       (UnityEngine_Animation_o *)gameObject,
-      (System_String_o *)StringLiteral_2415/*"AttackUnable_end"*/,
+      (System_String_o *)StringLiteral_2417/*"AttackUnable_end"*/,
       0LL);
   }
 }
@@ -139,11 +139,11 @@ BattleBuffData_BuffData_o *__fastcall WarBoardServantPieceBuffTurnComponent__Get
   _BOOL8 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4AFF8E2 & 1) == 0 )
+  if ( (byte_4B19DB8 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Linq_Enumerable_Any_BattleBuffData_BuffData___, method);
-    sub_1BC3008(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v3);
-    byte_4AFF8E2 = 1;
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_Any_BattleBuffData_BuffData___, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__, v3);
+    byte_4B19DB8 = 1;
   }
   pieceData = this->fields.pieceData;
   if ( !pieceData )
@@ -154,15 +154,15 @@ BattleBuffData_BuffData_o *__fastcall WarBoardServantPieceBuffTurnComponent__Get
   CurrentWarBoardNotAttackedBuff = BattleBuffData__GetCurrentWarBoardNotAttackedBuff(BuffData, 0LL);
   v7 = System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)CurrentWarBoardNotAttackedBuff,
-         (const MethodInfo_300D9DC *)Method_System_Linq_Enumerable_Any_BattleBuffData_BuffData___);
+         (const MethodInfo_302661C *)Method_System_Linq_Enumerable_Any_BattleBuffData_BuffData___);
   if ( !v7 )
     return 0LL;
   if ( !CurrentWarBoardNotAttackedBuff )
-    sub_1BC3264(v7, v8);
+    sub_1BCB254(v7, v8);
   return (BattleBuffData_BuffData_o *)System_Collections_Generic_List_object___get_Item(
                                         (System_Collections_Generic_List_object__o *)CurrentWarBoardNotAttackedBuff,
                                         0,
-                                        (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
+                                        (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_BattleBuffData_BuffData__get_Item__);
 }
 
 
@@ -205,10 +205,10 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__ReleaseBarrierAnim(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4AFF8E7 & 1) == 0 )
+  if ( (byte_4B19DBD & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    byte_4AFF8E7 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    byte_4B19DBD = 1;
   }
   barrierAnimation = this->fields.barrierAnimation;
   p_barrierAnimation = (CGThumbnailListItem_o *)&this->fields.barrierAnimation;
@@ -223,14 +223,14 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__ReleaseBarrierAnim(
       || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)klass, 0, 0LL),
           (klass = (UnityEngine_Component_o *)p_barrierAnimation->klass) == 0LL) )
     {
-      sub_1BC3264(klass, v6);
+      sub_1BCB254(klass, v6);
     }
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(klass, 0LL);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70034300(gameObject, 0LL);
+    UnityEngine_Object__Destroy_70136076(gameObject, 0LL);
     p_barrierAnimation->klass = 0LL;
-    sub_1BC2FAC(p_barrierAnimation, 0, v9, v10);
+    sub_1BCAF9C(p_barrierAnimation, 0, v9, v10);
   }
 }
 
@@ -258,22 +258,22 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__SetDispActive(
   System_Action_o *v20; // x22
   const MethodInfo *v21; // x4
 
-  if ( (byte_4AFF8E1 & 1) == 0 )
+  if ( (byte_4B19DB7 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, isActive);
-    sub_1BC3008(&Method_WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0__SetDispActive_b__0__, v7);
-    sub_1BC3008(&WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0_TypeInfo, v8);
-    sub_1BC3008(&Method_WarBoardServantPieceBuffTurnComponent_ReleaseBarrierAnim__, v9);
-    byte_4AFF8E1 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, isActive);
+    sub_1BCAFF8(&Method_WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0__SetDispActive_b__0__, v7);
+    sub_1BCAFF8(&WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0_TypeInfo, v8);
+    sub_1BCAFF8(&Method_WarBoardServantPieceBuffTurnComponent_ReleaseBarrierAnim__, v9);
+    byte_4B19DB7 = 1;
   }
-  v10 = sub_1BC3254(WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0_TypeInfo);
+  v10 = sub_1BCB244(WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0LL);
   if ( !v10 )
     goto LABEL_16;
   *(_QWORD *)(v10 + 16) = this;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v10 + 16), (int32_t)this, v13, v14);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v10 + 16), (int32_t)this, v13, v14);
   *(_BYTE *)(v10 + 24) = isActive;
-  v15 = sub_1BC3254(System_Action_TypeInfo);
+  v15 = sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(
     (System_Action_o *)v15,
     (Il2CppObject *)v10,
@@ -304,7 +304,7 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__SetDispActive(
   }
   if ( !v15 )
 LABEL_16:
-    sub_1BC3264(bgSprite, v12);
+    sub_1BCB254(bgSprite, v12);
   v19 = v17 & v16;
   (*(void (__fastcall **)(_QWORD, _QWORD))(v15 + 24))(*(_QWORD *)(v15 + 64), *(_QWORD *)(v15 + 40));
   if ( (v19 & 1) == 0 )
@@ -313,7 +313,7 @@ LABEL_16:
 LABEL_13:
   if ( !v16 )
   {
-    v20 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+    v20 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
     System_Action___ctor(
       v20,
       (Il2CppObject *)this,
@@ -333,7 +333,7 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__Setup(
   const MethodInfo *v5; // x2
 
   this->fields.pieceData = pieceData;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.pieceData, (int32_t)pieceData, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.pieceData, (int32_t)pieceData, (int32_t)method, v3);
   WarBoardServantPieceBuffTurnComponent__UpdateDisp(this, 0, v5);
 }
 
@@ -355,11 +355,11 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__SetupBarrierAnim(
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4AFF8E4 & 1) == 0 )
+  if ( (byte_4B19DBA & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_Animation___, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
-    byte_4AFF8E4 = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_Animation___, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B19DBA = 1;
   }
   pieceData = this->fields.pieceData;
   if ( pieceData && WarBoardPieceData__get_IsStageBoss(pieceData, 0LL) )
@@ -387,13 +387,13 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__SetupBarrierAnim(
         {
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)BarrierEffectObject,
-                               (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                               (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
           p_barrierAnimation->klass = (CGThumbnailListItem_c *)Component_object;
-          sub_1BC2FAC(p_barrierAnimation, (int32_t)Component_object, v13, v14);
+          sub_1BCAF9C(p_barrierAnimation, (int32_t)Component_object, v13, v14);
           return;
         }
 LABEL_15:
-        sub_1BC3264(v8, v7);
+        sub_1BCB254(v8, v7);
       }
     }
   }
@@ -416,14 +416,14 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__StartBarrierAnim(
   _QWORD *v14; // x0
   System_Reflection_MethodBase_o *v15; // x0
 
-  if ( (byte_4AFF8E5 & 1) == 0 )
+  if ( (byte_4B19DBB & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, endAction);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BC3008(&Method_WarBoardServantPieceBuffTurnComponent_StartBarrierAnim__, v8);
-    sub_1BC3008(&StringLiteral_16710/*"ar255"*/, v9);
-    sub_1BC3008(&StringLiteral_2416/*"AttackUnable_start"*/, v10);
-    byte_4AFF8E5 = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___, endAction);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v7);
+    sub_1BCAFF8(&Method_WarBoardServantPieceBuffTurnComponent_StartBarrierAnim__, v8);
+    sub_1BCAFF8(&StringLiteral_16722/*"ar255"*/, v9);
+    sub_1BCAFF8(&StringLiteral_2418/*"AttackUnable_start"*/, v10);
+    byte_4B19DBB = 1;
   }
   barrierAnimation = (UnityEngine_Object_o *)this->fields.barrierAnimation;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -445,7 +445,7 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__StartBarrierAnim(
       goto LABEL_17;
     gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                               (UnityEngine_GameObject_o *)gameObject,
-                                              (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+                                              (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
     if ( !gameObject )
       goto LABEL_17;
     CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)gameObject, 1, endAction, 0LL);
@@ -453,17 +453,17 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__StartBarrierAnim(
     {
       v14 = Method_WarBoardServantPieceBuffTurnComponent_StartBarrierAnim__;
       if ( (*((_BYTE *)Method_WarBoardServantPieceBuffTurnComponent_StartBarrierAnim__ + 83) & 2) != 0 )
-        v14 = (_QWORD *)sub_1BC3020(Method_WarBoardServantPieceBuffTurnComponent_StartBarrierAnim__);
-      v15 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v14, v14[4]);
-      OverwriteAssetSoundName__PlaySe(v15, (System_String_o *)StringLiteral_16710/*"ar255"*/, 0, 0LL);
+        v14 = (_QWORD *)sub_1BCB010(Method_WarBoardServantPieceBuffTurnComponent_StartBarrierAnim__);
+      v15 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v14, v14[4]);
+      OverwriteAssetSoundName__PlaySe(v15, (System_String_o *)StringLiteral_16722/*"ar255"*/, 0, 0LL);
     }
     gameObject = (UnityEngine_Component_o *)this->fields.barrierAnimation;
     if ( !gameObject )
 LABEL_17:
-      sub_1BC3264(gameObject, v12);
-    UnityEngine_Animation__Play_69779584(
+      sub_1BCB254(gameObject, v12);
+    UnityEngine_Animation__Play_69881360(
       (UnityEngine_Animation_o *)gameObject,
-      (System_String_o *)StringLiteral_2416/*"AttackUnable_start"*/,
+      (System_String_o *)StringLiteral_2418/*"AttackUnable_start"*/,
       0LL);
   }
 }
@@ -494,7 +494,7 @@ void __fastcall WarBoardServantPieceBuffTurnComponent__UpdateDisp(
           v7) )
   {
     *p_buffData = CurrentWarBoardNotAttackedBuff;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.buffData, (int32_t)CurrentWarBoardNotAttackedBuff, v8, v9);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.buffData, (int32_t)CurrentWarBoardNotAttackedBuff, v8, v9);
     if ( *p_buffData )
       v11 = BattleBuffData_BuffData__get_DispTurn(*p_buffData, 0LL) > 0;
     else
@@ -544,15 +544,15 @@ void __fastcall WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0___Se
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
   v2 = this;
-  if ( (byte_4AFF8E8 & 1) == 0 )
+  if ( (byte_4B19DBE & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMaster_BuffMaster___, method);
-    sub_1BC3008(&DataManager_TypeInfo, v3);
-    sub_1BC3008(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v4);
-    sub_1BC3008(&int_TypeInfo, v5);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v6);
-    this = (WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0_o *)sub_1BC3008(&StringLiteral_15243/*"WARBOARD_BUFF_STATE_REST_TURN"*/, v7);
-    byte_4AFF8E8 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMaster_BuffMaster___, method);
+    sub_1BCAFF8(&DataManager_TypeInfo, v3);
+    sub_1BCAFF8(&Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__, v4);
+    sub_1BCAFF8(&int_TypeInfo, v5);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v6);
+    this = (WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0_o *)sub_1BCAFF8(&StringLiteral_15255/*"WARBOARD_BUFF_STATE_REST_TURN"*/, v7);
+    byte_4B19DBE = 1;
   }
   entity = 0LL;
   _4__this = v2->fields.__4__this;
@@ -600,7 +600,7 @@ void __fastcall WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0___Se
     return;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_BuffMaster___);
+  this = (WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_BuffMaster___);
   v12 = v2->fields.__4__this;
   if ( !v12 )
     goto LABEL_36;
@@ -611,7 +611,7 @@ void __fastcall WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0___Se
                                                                             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                                             &entity,
                                                                             buffData->fields.buffId,
-                                                                            (const MethodInfo_32AF0BC *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
+                                                                            (const MethodInfo_32C7E4C *)Method_DataMasterBase_BuffMaster__BuffEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)this & 1) == 0 )
     return;
   v14 = v2->fields.__4__this;
@@ -641,7 +641,7 @@ void __fastcall WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0___Se
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   this = (WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0_o *)LocalizationManager__Get(
-                                                                            (System_String_o *)StringLiteral_15243/*"WARBOARD_BUFF_STATE_REST_TURN"*/,
+                                                                            (System_String_o *)StringLiteral_15255/*"WARBOARD_BUFF_STATE_REST_TURN"*/,
                                                                             0LL);
   v19 = v2->fields.__4__this;
   if ( !v19 )
@@ -660,7 +660,7 @@ void __fastcall WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0___Se
     || (this = (WarBoardServantPieceBuffTurnComponent___c__DisplayClass12_0_o *)v25->fields.turnLabel) == 0LL )
   {
 LABEL_36:
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   }
   UILabel__SetCondensedScale((UILabel_o *)this, v25->fields.turnLabelWidth, 0, 0LL);
 }

@@ -8,11 +8,11 @@ void __fastcall WarBoardParallelSchedule___ctor(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)taskBases);
   this->fields.tasks = taskBases;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.tasks, (int32_t)taskBases, v5, v6);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.tasks, (int32_t)taskBases, v5, v6);
 }
 
 
-void __fastcall WarBoardParallelSchedule___ctor_37353208(
+void __fastcall WarBoardParallelSchedule___ctor_37481580(
         WarBoardParallelSchedule_o *this,
         System_Collections_Generic_List_WarBoardTaskBase__o *taskBases,
         const MethodInfo *method)
@@ -23,19 +23,19 @@ void __fastcall WarBoardParallelSchedule___ctor_37353208(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4AFFD58 & 1) == 0 )
+  if ( (byte_4B1A207 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__, taskBases);
-    byte_4AFFD58 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__, taskBases);
+    byte_4B1A207 = 1;
   }
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)taskBases);
   if ( !taskBases )
-    sub_1BC3264(v5, v6);
+    sub_1BCB254(v5, v6);
   v7 = System_Collections_Generic_List_object___ToArray(
          (System_Collections_Generic_List_object__o *)taskBases,
-         (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
+         (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_WarBoardTaskBase__ToArray__);
   this->fields.tasks = (struct WarBoardTaskBase_array *)v7;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.tasks, (int32_t)v7, v8, v9);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.tasks, (int32_t)v7, v8, v9);
 }
 
 
@@ -47,16 +47,16 @@ System_Collections_IEnumerator_o *__fastcall WarBoardParallelSchedule__Execute(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4AFFD59 & 1) == 0 )
+  if ( (byte_4B1A208 & 1) == 0 )
   {
-    sub_1BC3008(&WarBoardParallelSchedule__Execute_d__4_TypeInfo, method);
-    byte_4AFFD59 = 1;
+    sub_1BCAFF8(&WarBoardParallelSchedule__Execute_d__4_TypeInfo, method);
+    byte_4B1A208 = 1;
   }
-  v3 = sub_1BC3254(WarBoardParallelSchedule__Execute_d__4_TypeInfo);
+  v3 = sub_1BCB244(WarBoardParallelSchedule__Execute_d__4_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -93,7 +93,7 @@ void __fastcall WarBoardParallelSchedule__OnStart(WarBoardParallelSchedule_o *th
   tasks = v4->fields.tasks;
   if ( !tasks )
 LABEL_11:
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   if ( (int)*(_QWORD *)&tasks->max_length >= 1 )
   {
     v6 = 0LL;
@@ -101,7 +101,7 @@ LABEL_11:
     while ( 1 )
     {
       if ( v6 >= tasks->max_length )
-        sub_1BC326C(this, method, v2);
+        sub_1BCB25C(this, method, v2);
       this = (WarBoardParallelSchedule_o *)tasks->m_Items[v6];
       if ( this )
         this = (WarBoardParallelSchedule_o *)((__int64 (__fastcall *)(WarBoardParallelSchedule_o *, Il2CppMethodPointer))this->klass->vtable._5_OnStart.method)(
@@ -194,18 +194,18 @@ bool __fastcall WarBoardParallelSchedule__Execute_d__4__MoveNext(
   __int64 v62; // x0
 
   v2 = this;
-  if ( (byte_4AFFD5B & 1) == 0 )
+  if ( (byte_4B1A20A & 1) == 0 )
   {
-    sub_1BC3008(&bool___TypeInfo, method);
-    sub_1BC3008(&Method_System_Linq_Enumerable_All_bool___, v3);
-    sub_1BC3008(&System_Func_bool__bool__TypeInfo, v4);
-    sub_1BC3008(&System_Collections_IEnumerator___TypeInfo, v5);
-    sub_1BC3008(&System_Collections_IEnumerator_TypeInfo, v6);
-    sub_1BC3008(&object___TypeInfo, v7);
-    sub_1BC3008(&Method_WarBoardParallelSchedule___c__Execute_b__4_0__, v8);
-    sub_1BC3008(&WarBoardParallelSchedule___c_TypeInfo, v9);
-    this = (WarBoardParallelSchedule__Execute_d__4_o *)sub_1BC3008(&WarBoardManager_TypeInfo, v10);
-    byte_4AFFD5B = 1;
+    sub_1BCAFF8(&bool___TypeInfo, method);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_All_bool___, v3);
+    sub_1BCAFF8(&System_Func_bool__bool__TypeInfo, v4);
+    sub_1BCAFF8(&System_Collections_IEnumerator___TypeInfo, v5);
+    sub_1BCAFF8(&System_Collections_IEnumerator_TypeInfo, v6);
+    sub_1BCAFF8(&object___TypeInfo, v7);
+    sub_1BCAFF8(&Method_WarBoardParallelSchedule___c__Execute_b__4_0__, v8);
+    sub_1BCAFF8(&WarBoardParallelSchedule___c_TypeInfo, v9);
+    this = (WarBoardParallelSchedule__Execute_d__4_o *)sub_1BCAFF8(&WarBoardManager_TypeInfo, v10);
+    byte_4B1A20A = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -225,16 +225,16 @@ bool __fastcall WarBoardParallelSchedule__Execute_d__4__MoveNext(
       goto LABEL_65;
     max_length = tasks->max_length;
     v2->fields._count_5__2 = max_length;
-    v15 = sub_1BC30B0(bool___TypeInfo, max_length);
+    v15 = sub_1BCB0A0(bool___TypeInfo, max_length);
     v2->fields._endFlags_5__3 = (struct System_Boolean_array *)v15;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&v2->fields._endFlags_5__3, v15, v16, v17);
-    v18 = sub_1BC30B0(object___TypeInfo, (unsigned int)v2->fields._count_5__2);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&v2->fields._endFlags_5__3, v15, v16, v17);
+    v18 = sub_1BCB0A0(object___TypeInfo, (unsigned int)v2->fields._count_5__2);
     v2->fields._currentObjects_5__4 = (struct System_Object_array *)v18;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&v2->fields._currentObjects_5__4, v18, v19, v20);
-    v21 = sub_1BC30B0(System_Collections_IEnumerator___TypeInfo, (unsigned int)v2->fields._count_5__2);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&v2->fields._currentObjects_5__4, v18, v19, v20);
+    v21 = sub_1BCB0A0(System_Collections_IEnumerator___TypeInfo, (unsigned int)v2->fields._count_5__2);
     v2->fields._executes_5__5 = (struct System_Collections_IEnumerator_array *)v21;
     p_executes_5__5 = (unsigned int **)&v2->fields._executes_5__5;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&v2->fields._executes_5__5, v21, v23, v24);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&v2->fields._executes_5__5, v21, v23, v24);
     if ( v2->fields._count_5__2 >= 1 )
     {
       v27 = 0LL;
@@ -247,7 +247,7 @@ bool __fastcall WarBoardParallelSchedule__Execute_d__4__MoveNext(
         if ( v27 >= v29[6] )
           goto LABEL_66;
         *(_QWORD *)&v29[v28] = 0LL;
-        sub_1BC2FAC((CGThumbnailListItem_o *)&v29[v28], 0, v25, v26);
+        sub_1BCAF9C((CGThumbnailListItem_o *)&v29[v28], 0, v25, v26);
         v30 = _4__this->fields.tasks;
         if ( !v30 )
           break;
@@ -265,19 +265,19 @@ bool __fastcall WarBoardParallelSchedule__Execute_d__4__MoveNext(
           v33 = this;
           if ( this )
           {
-            this = (WarBoardParallelSchedule__Execute_d__4_o *)sub_1BC3144(this, *(_QWORD *)(*(_QWORD *)v31 + 64LL));
+            this = (WarBoardParallelSchedule__Execute_d__4_o *)sub_1BCB134(this, *(_QWORD *)(*(_QWORD *)v31 + 64LL));
             if ( !this )
             {
 LABEL_67:
-              v62 = sub_1BC3288();
-              sub_1BC3130(v62, 0LL);
+              v62 = sub_1BCB278();
+              sub_1BCB120(v62, 0LL);
             }
           }
           if ( v27 >= v31[6] )
 LABEL_66:
-            sub_1BC326C(this, method, v25);
+            sub_1BCB25C(this, method, v25);
           *(_QWORD *)&v31[v28] = v33;
-          sub_1BC2FAC((CGThumbnailListItem_o *)&v31[v28], (int32_t)v33, v25, v32);
+          sub_1BCAF9C((CGThumbnailListItem_o *)&v31[v28], (int32_t)v33, v25, v32);
         }
         ++v27;
         v28 += 2LL;
@@ -285,7 +285,7 @@ LABEL_66:
           goto LABEL_22;
       }
 LABEL_65:
-      sub_1BC3264(this, method);
+      sub_1BCB254(this, method);
     }
   }
 LABEL_22:
@@ -305,16 +305,16 @@ LABEL_22:
       v35 = WarBoardParallelSchedule___c_TypeInfo;
     }
     v37 = (Il2CppObject *)v35->static_fields->__9;
-    _9__4_0 = (System_Func_bool__bool__o *)sub_1BC3254(System_Func_bool__bool__TypeInfo);
+    _9__4_0 = (System_Func_bool__bool__o *)sub_1BCB244(System_Func_bool__bool__TypeInfo);
     System_Func_bool__bool____ctor(_9__4_0, v37, Method_WarBoardParallelSchedule___c__Execute_b__4_0__, 0LL);
     static_fields = WarBoardParallelSchedule___c_TypeInfo->static_fields;
     static_fields->__9__4_0 = _9__4_0;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v39, v40);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v39, v40);
   }
   this = (WarBoardParallelSchedule__Execute_d__4_o *)System_Linq_Enumerable__All_bool_(
                                                        endFlags_5__3,
                                                        (System_Func_TSource__bool__o *)_9__4_0,
-                                                       (const MethodInfo_300B98C *)Method_System_Linq_Enumerable_All_bool___);
+                                                       (const MethodInfo_30245CC *)Method_System_Linq_Enumerable_All_bool___);
   if ( ((unsigned __int8)this & 1) != 0 )
     return 0;
   if ( v2->fields._count_5__2 >= 1 )
@@ -362,7 +362,7 @@ LABEL_22:
           else
           {
 LABEL_45:
-            p_method = sub_1C13570(v47, System_Collections_IEnumerator_TypeInfo, 1LL);
+            p_method = sub_1C1B560(v47, System_Collections_IEnumerator_TypeInfo, 1LL);
           }
           this = (WarBoardParallelSchedule__Execute_d__4_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))p_method)(
                                                                v47,
@@ -372,7 +372,7 @@ LABEL_45:
           v55 = this;
           if ( this )
           {
-            this = (WarBoardParallelSchedule__Execute_d__4_o *)sub_1BC3144(
+            this = (WarBoardParallelSchedule__Execute_d__4_o *)sub_1BCB134(
                                                                  this,
                                                                  *(_QWORD *)(*(_QWORD *)currentObjects_5__4 + 64LL));
             if ( !this )
@@ -397,7 +397,7 @@ LABEL_45:
           v54[4] = 0LL;
           v56 = (CGThumbnailListItem_o *)(v54 + 4);
         }
-        sub_1BC2FAC(v56, (int32_t)v55, v25, v41);
+        sub_1BCAF9C(v56, (int32_t)v55, v25, v41);
         v58 = v2->fields._endFlags_5__3;
         if ( !v58 )
           goto LABEL_65;
@@ -426,7 +426,7 @@ LABEL_45:
   v60 = v2->fields._currentObjects_5__4;
   v2->fields.__2__current = &v60->obj;
   p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-  sub_1BC2FAC(p__2__current, (int32_t)v60, v25, v41);
+  sub_1BCAF9C(p__2__current, (int32_t)v60, v25, v41);
   result = 1;
   LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
   return result;
@@ -449,11 +449,11 @@ void __fastcall __noreturn WarBoardParallelSchedule__Execute_d__4__System_Collec
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BC301C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BC3254(v2);
+  v2 = sub_1BCB00C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BCB244(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BC301C(&Method_WarBoardParallelSchedule__Execute_d__4_System_Collections_IEnumerator_Reset__);
-  sub_1BC3130(v3, v4);
+  v4 = sub_1BCB00C(&Method_WarBoardParallelSchedule__Execute_d__4_System_Collections_IEnumerator_Reset__);
+  sub_1BCB120(v3, v4);
 }
 
 
@@ -480,15 +480,15 @@ void __fastcall WarBoardParallelSchedule___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4AFFD5A & 1) == 0 )
+  if ( (byte_4B1A209 & 1) == 0 )
   {
-    sub_1BC3008(&WarBoardParallelSchedule___c_TypeInfo, v1);
-    byte_4AFFD5A = 1;
+    sub_1BCAFF8(&WarBoardParallelSchedule___c_TypeInfo, v1);
+    byte_4B1A209 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BC3254(WarBoardParallelSchedule___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BCB244(WarBoardParallelSchedule___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   WarBoardParallelSchedule___c_TypeInfo->static_fields->__9 = (struct WarBoardParallelSchedule___c_o *)v2;
-  sub_1BC2FAC((CGThumbnailListItem_o *)WarBoardParallelSchedule___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BCAF9C((CGThumbnailListItem_o *)WarBoardParallelSchedule___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 

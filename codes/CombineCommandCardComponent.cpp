@@ -1,9 +1,9 @@
 void __fastcall CombineCommandCardComponent___ctor(CombineCommandCardComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B05CAF & 1) == 0 )
+  if ( (byte_4B201F2 & 1) == 0 )
   {
-    sub_1BC3008(&BattleCommandComponent_TypeInfo, method);
-    byte_4B05CAF = 1;
+    sub_1BCAFF8(&BattleCommandComponent_TypeInfo, method);
+    byte_4B201F2 = 1;
   }
   if ( !BattleCommandComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleCommandComponent_TypeInfo);
@@ -26,15 +26,15 @@ void __fastcall CombineCommandCardComponent__DispCommandCard(
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x3
 
-  if ( (byte_4B05CA9 & 1) == 0 )
+  if ( (byte_4B201EC & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_14999/*"Unlit/Transparent Colored"*/, data);
-    byte_4B05CA9 = 1;
+    sub_1BCAFF8(&StringLiteral_15011/*"Unlit/Transparent Colored"*/, data);
+    byte_4B201EC = 1;
   }
   CombineCommandCardComponent__SetCommandCardEnable(this, 1, (const MethodInfo *)userCommandCodeId);
   CombineCommandCardComponent__SetSpriteActive(v13, this->fields.selectedSprite, 0, v14);
   BattleCommandComponent__setData((BattleCommandComponent_o *)this, data, 0LL, 0, 1, 0, 1, 0LL);
-  BattleCommandComponent__setShader((BattleCommandComponent_o *)this, (System_String_o *)StringLiteral_14999/*"Unlit/Transparent Colored"*/, 0LL);
+  BattleCommandComponent__setShader((BattleCommandComponent_o *)this, (System_String_o *)StringLiteral_15011/*"Unlit/Transparent Colored"*/, 0LL);
   BattleCommandComponent__updateView((BattleCommandComponent_o *)this, 1, 0, 1, 0, 0, 0LL);
   CombineCommandCardComponent__SetKind(this, userCommandCodeId, v15);
   CombineCommandCardComponent__SetPowerUpCardValue(this, commandCardParam, isShowValue, v16);
@@ -50,7 +50,7 @@ void __fastcall CombineCommandCardComponent__HideCommandCodeSprite(
 
   codeSprite = this->fields.codeSprite;
   if ( !codeSprite )
-    sub_1BC3264(0LL, method);
+    sub_1BCB254(0LL, method);
   UISprite__set_spriteName(codeSprite, 0LL, 0LL);
 }
 
@@ -63,7 +63,7 @@ void __fastcall CombineCommandCardComponent__HideUnlockInfo(
 
   lockInfoObj = this->fields.lockInfoObj;
   if ( !lockInfoObj )
-    sub_1BC3264(0LL, method);
+    sub_1BCB254(0LL, method);
   UnityEngine_GameObject__SetActive(lockInfoObj, 0, 0LL);
 }
 
@@ -111,11 +111,11 @@ void __fastcall CombineCommandCardComponent__SetColor(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4B05CAA & 1) == 0 )
+  if ( (byte_4B201ED & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_UISprite___, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v8);
-    byte_4B05CAA = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_UISprite___, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v8);
+    byte_4B201ED = 1;
   }
   v13.fields.r = r;
   v13.fields.g = g;
@@ -132,7 +132,7 @@ void __fastcall CombineCommandCardComponent__SetColor(
     {
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            icon,
-                           (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                           (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       icon = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
@@ -178,7 +178,7 @@ void __fastcall CombineCommandCardComponent__SetColor(
         }
       }
     }
-    sub_1BC3264(icon, v10);
+    sub_1BCB254(icon, v10);
   }
 }
 
@@ -201,7 +201,7 @@ void __fastcall CombineCommandCardComponent__SetCommandCardEnable(
   if ( !objectRoot
     || (objectRoot = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(objectRoot, 0LL)) == 0LL )
   {
-    sub_1BC3264(objectRoot, isEnable);
+    sub_1BCB254(objectRoot, isEnable);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)objectRoot, isEnable, 0LL);
   CombineCommandCardComponent__SetObjectActive(v6, this->fields.lockInfoObj, isEnable, v7);
@@ -227,13 +227,13 @@ void __fastcall CombineCommandCardComponent__SetExceedableLabel(
   __int64 v13; // x1
   UnityEngine_GameObject_o *v14; // x21
 
-  if ( (byte_4B05CAE & 1) == 0 )
+  if ( (byte_4B201F1 & 1) == 0 )
   {
-    sub_1BC3008(&BalanceConfig_TypeInfo, *(_QWORD *)&commandCardParam);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v7);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v8);
-    sub_1BC3008(&StringLiteral_8709/*"MSG_ABLED_COMMAND_CARD_EXCEED"*/, v9);
-    byte_4B05CAE = 1;
+    sub_1BCAFF8(&BalanceConfig_TypeInfo, *(_QWORD *)&commandCardParam);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v7);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v8);
+    sub_1BCAFF8(&StringLiteral_8720/*"MSG_ABLED_COMMAND_CARD_EXCEED"*/, v9);
+    byte_4B201F1 = 1;
   }
   exceedableLabel = (UnityEngine_Object_o *)this->fields.exceedableLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -243,7 +243,7 @@ void __fastcall CombineCommandCardComponent__SetExceedableLabel(
     v11 = this->fields.exceedableLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_8709/*"MSG_ABLED_COMMAND_CARD_EXCEED"*/, 0LL);
+    gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_8720/*"MSG_ABLED_COMMAND_CARD_EXCEED"*/, 0LL);
     if ( !v11 )
       goto LABEL_14;
     UILabel__set_text(v11, gameObject, 0LL);
@@ -256,7 +256,7 @@ void __fastcall CombineCommandCardComponent__SetExceedableLabel(
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     if ( !v14 )
 LABEL_14:
-      sub_1BC3264(gameObject, v13);
+      sub_1BCB254(gameObject, v13);
     UnityEngine_GameObject__SetActive(
       v14,
       BalanceConfig_TypeInfo->static_fields->CommandCardParamUpMax > commandCardParam && isShowExceedable,
@@ -301,7 +301,7 @@ void __fastcall CombineCommandCardComponent__SetLayout(
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   GameObjectExtensions__SetLocalPositionY(gameObject, positionY, 0LL);
   v8 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  GameObjectExtensions__SetLocalScale_35213928(v8, scale, 0LL);
+  GameObjectExtensions__SetLocalScale_35358856(v8, scale, 0LL);
 }
 
 
@@ -314,10 +314,10 @@ void __fastcall CombineCommandCardComponent__SetObjectActive(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B05CAB & 1) == 0 )
+  if ( (byte_4B201EE & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, target);
-    byte_4B05CAB = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, target);
+    byte_4B201EE = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -325,7 +325,7 @@ void __fastcall CombineCommandCardComponent__SetObjectActive(
   if ( !v6 )
   {
     if ( !target )
-      sub_1BC3264(v6, v7);
+      sub_1BCB254(v6, v7);
     UnityEngine_GameObject__SetActive(target, isActive, 0LL);
   }
 }
@@ -350,13 +350,13 @@ void __fastcall CombineCommandCardComponent__SetPowerUpCardValue(
   BalanceConfig_c *v16; // x8
   Il2CppObject *v17; // x0
 
-  if ( (byte_4B05CAD & 1) == 0 )
+  if ( (byte_4B201F0 & 1) == 0 )
   {
-    sub_1BC3008(&BalanceConfig_TypeInfo, *(_QWORD *)&commandCardParam);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v7);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v8);
-    sub_1BC3008(&StringLiteral_3604/*"COMMAND_CARD_EXCEED_STATUS_COMBINE"*/, v9);
-    byte_4B05CAD = 1;
+    sub_1BCAFF8(&BalanceConfig_TypeInfo, *(_QWORD *)&commandCardParam);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v7);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v8);
+    sub_1BCAFF8(&StringLiteral_3606/*"COMMAND_CARD_EXCEED_STATUS_COMBINE"*/, v9);
+    byte_4B201F0 = 1;
   }
   powerUpCardValue = (UnityEngine_Object_o *)this->fields.powerUpCardValue;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -375,7 +375,7 @@ void __fastcall CombineCommandCardComponent__SetPowerUpCardValue(
       v13 = this->fields.powerUpCardValue;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3604/*"COMMAND_CARD_EXCEED_STATUS_COMBINE"*/, 0LL);
+      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3606/*"COMMAND_CARD_EXCEED_STATUS_COMBINE"*/, 0LL);
       NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(commandCardParam, 0LL);
       v16 = BalanceConfig_TypeInfo;
       if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -384,14 +384,14 @@ void __fastcall CombineCommandCardComponent__SetPowerUpCardValue(
         v16 = BalanceConfig_TypeInfo;
       }
       v17 = (Il2CppObject *)LocalizationManager__GetNumberFormat(v16->static_fields->CommandCardParamUpMax, 0LL);
-      gameObject = (UnityEngine_Component_o *)System_String__Format_62389940(v14, NumberFormat, v17, 0LL);
+      gameObject = (UnityEngine_Component_o *)System_String__Format_62491716(v14, NumberFormat, v17, 0LL);
       if ( v13 )
       {
         UILabel__set_text(v13, (System_String_o *)gameObject, 0LL);
         return;
       }
 LABEL_16:
-      sub_1BC3264(gameObject, v11);
+      sub_1BCB254(gameObject, v11);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   }
@@ -418,10 +418,10 @@ void __fastcall CombineCommandCardComponent__SetSpriteActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B05CAC & 1) == 0 )
+  if ( (byte_4B201EF & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, target);
-    byte_4B05CAC = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, target);
+    byte_4B201EF = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -429,7 +429,7 @@ void __fastcall CombineCommandCardComponent__SetSpriteActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !target || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)target, 0LL)) == 0LL )
-      sub_1BC3264(gameObject, v7);
+      sub_1BCB254(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0LL);
   }
 }

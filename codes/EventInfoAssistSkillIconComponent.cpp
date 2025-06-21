@@ -31,17 +31,17 @@ void __fastcall EventInfoAssistSkillIconComponent__Redisplay(
   UnityEngine_GameObject_o *locked; // x19
   char v13; // w8
 
-  if ( (byte_4B025B4 & 1) == 0 )
+  if ( (byte_4B1C913 & 1) == 0 )
   {
-    sub_1BC3008(&AtlasManager_TypeInfo, method);
-    sub_1BC3008(&Method_DataManager_GetMaster_AssistMaster___, v3);
-    sub_1BC3008(&DataManager_TypeInfo, v4);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B025B4 = 1;
+    sub_1BCAFF8(&AtlasManager_TypeInfo, method);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_AssistMaster___, v3);
+    sub_1BCAFF8(&DataManager_TypeInfo, v4);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
+    byte_4B1C913 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_AssistMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_AssistMaster___);
   if ( !Master_object )
     goto LABEL_19;
   CurrentEntity = AssistMaster__GetCurrentEntity((AssistMaster_o *)Master_object, this->fields.assistId, 0LL);
@@ -49,7 +49,7 @@ void __fastcall EventInfoAssistSkillIconComponent__Redisplay(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_AssistMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_AssistMaster___);
     if ( Master_object )
     {
       CurrentEntity = AssistMaster__GetMinPriorityEntity((AssistMaster_o *)Master_object, this->fields.assistId, 0LL);
@@ -58,7 +58,7 @@ void __fastcall EventInfoAssistSkillIconComponent__Redisplay(
       goto LABEL_11;
     }
 LABEL_19:
-    sub_1BC3264(Master_object, v7);
+    sub_1BCB254(Master_object, v7);
   }
 LABEL_11:
   skillIconSprite = (UnityEngine_Object_o *)this->fields.skillIconSprite;

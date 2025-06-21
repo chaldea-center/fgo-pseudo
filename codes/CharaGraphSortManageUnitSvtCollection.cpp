@@ -10,15 +10,15 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitSvtCollection__C
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
-  ServantCollectionCharaGraphFilterLogic_o *v2; // x19
+  Il2CppObject *v2; // x19
 
-  if ( (byte_4B0138E & 1) == 0 )
+  if ( (byte_4B1B881 & 1) == 0 )
   {
-    sub_1BC3008(&ServantCollectionCharaGraphFilterLogic_TypeInfo, method);
-    byte_4B0138E = 1;
+    sub_1BCAFF8(&ServantCollectionCharaGraphFilterLogic_TypeInfo, method);
+    byte_4B1B881 = 1;
   }
-  v2 = (ServantCollectionCharaGraphFilterLogic_o *)sub_1BC3254(ServantCollectionCharaGraphFilterLogic_TypeInfo);
-  ServantCollectionCharaGraphFilterLogic___ctor(v2, 0LL);
+  v2 = (Il2CppObject *)sub_1BCB244(ServantCollectionCharaGraphFilterLogic_TypeInfo);
+  System_Object___ctor(v2, 0LL);
   return (CharaGraphFilterLogicBase_o *)v2;
 }
 
@@ -30,12 +30,12 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitSvtCollection__Cre
   CharaGraphSortLogicBase_o *v2; // x19
   const MethodInfo *v3; // x1
 
-  if ( (byte_4B0138D & 1) == 0 )
+  if ( (byte_4B1B880 & 1) == 0 )
   {
-    sub_1BC3008(&ServantCollectionCharaGraphSortLogic_TypeInfo, method);
-    byte_4B0138D = 1;
+    sub_1BCAFF8(&ServantCollectionCharaGraphSortLogic_TypeInfo, method);
+    byte_4B1B880 = 1;
   }
-  v2 = (CharaGraphSortLogicBase_o *)sub_1BC3254(ServantCollectionCharaGraphSortLogic_TypeInfo);
+  v2 = (CharaGraphSortLogicBase_o *)sub_1BCB244(ServantCollectionCharaGraphSortLogic_TypeInfo);
   CharaGraphSortLogicBase___ctor(v2, v3);
   return v2;
 }
@@ -77,10 +77,10 @@ System_String_o *__fastcall CharaGraphSortManageUnitSvtCollection__get_SortSaveK
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B0138C & 1) == 0 )
+  if ( (byte_4B1B87F & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_1411/*"5"*/, method);
-    byte_4B0138C = 1;
+    sub_1BCAFF8(&StringLiteral_1412/*"5"*/, method);
+    byte_4B1B87F = 1;
   }
-  return (System_String_o *)StringLiteral_1411/*"5"*/;
+  return (System_String_o *)StringLiteral_1412/*"5"*/;
 }

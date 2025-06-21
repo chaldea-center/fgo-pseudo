@@ -2,10 +2,10 @@ void __fastcall FortificationConfirmDialogComponent___ctor(
         FortificationConfirmDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4AFC51C & 1) == 0 )
+  if ( (byte_4B169D8 & 1) == 0 )
   {
-    sub_1BC3008(&BaseDialog_TypeInfo, method);
-    byte_4AFC51C = 1;
+    sub_1BCAFF8(&BaseDialog_TypeInfo, method);
+    byte_4B169D8 = 1;
   }
   this->fields.iconBetweenWidth = -16;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -26,7 +26,7 @@ void __fastcall FortificationConfirmDialogComponent__CallOnDecide(
   {
     p_onDecide = &this->fields.onDecide;
     *p_onDecide = 0LL;
-    sub_1BC2FAC(p_onDecide);
+    sub_1BCAF9C(p_onDecide);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))onDecide->fields.m_target)(
       onDecide->fields.original_method_info,
       *(_QWORD *)&onDecide->fields.extra_arg);
@@ -41,14 +41,14 @@ void __fastcall FortificationConfirmDialogComponent__Close(
   __int64 v3; // x1
   System_Action_o *v4; // x20
 
-  if ( (byte_4AFC51A & 1) == 0 )
+  if ( (byte_4B169D6 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&Method_FortificationConfirmDialogComponent__Close_b__41_0__, v3);
-    byte_4AFC51A = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&Method_FortificationConfirmDialogComponent__Close_b__41_0__, v3);
+    byte_4B169D6 = 1;
   }
   this->fields.state = 4;
-  v4 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_FortificationConfirmDialogComponent__Close_b__41_0__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v4, 0LL);
 }
@@ -64,7 +64,7 @@ void __fastcall FortificationConfirmDialogComponent__Init(
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BC3264(0LL, v6);
+    sub_1BCB254(0LL, v6);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
   this->fields.eventId = eventId;
   this->fields.state = 0;
@@ -87,11 +87,11 @@ bool __fastcall FortificationConfirmDialogComponent__IsNpcServant(
   UISprite_o *guestIconBefore; // x19
 
   v5 = this;
-  if ( (byte_4AFC516 & 1) == 0 )
+  if ( (byte_4B169D2 & 1) == 0 )
   {
-    sub_1BC3008(&AtlasManager_TypeInfo, userServantEntity);
-    this = (FortificationConfirmDialogComponent_o *)sub_1BC3008(&StringLiteral_20012/*"icon_guest"*/, v6);
-    byte_4AFC516 = 1;
+    sub_1BCAFF8(&AtlasManager_TypeInfo, userServantEntity);
+    this = (FortificationConfirmDialogComponent_o *)sub_1BCAFF8(&StringLiteral_20026/*"icon_guest"*/, v6);
+    byte_4B169D2 = 1;
   }
   if ( !userServantEntity )
     goto LABEL_21;
@@ -102,7 +102,7 @@ bool __fastcall FortificationConfirmDialogComponent__IsNpcServant(
   while ( 1 )
   {
     if ( max_length == v8 )
-      sub_1BC326C(this, userServantEntity, method, v3);
+      sub_1BCB25C(this, userServantEntity, method, v3);
     v9 = userServantEntity->m_Items[v8];
     if ( !v9 )
       goto LABEL_21;
@@ -128,7 +128,7 @@ bool __fastcall FortificationConfirmDialogComponent__IsNpcServant(
       }
     }
 LABEL_21:
-    sub_1BC3264(this, userServantEntity);
+    sub_1BCB254(this, userServantEntity);
   }
   this = (FortificationConfirmDialogComponent_o *)v5->fields.guestIconAfter;
   if ( !this )
@@ -144,7 +144,7 @@ LABEL_21:
 LABEL_18:
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_39643540(eventId, guestIconBefore, (System_String_o *)StringLiteral_20012/*"icon_guest"*/, 0LL);
+  AtlasManager__SetEventUI_39794720(eventId, guestIconBefore, (System_String_o *)StringLiteral_20026/*"icon_guest"*/, 0LL);
   return 1;
 }
 
@@ -157,18 +157,18 @@ void __fastcall FortificationConfirmDialogComponent__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4AFC519 & 1) == 0 )
+  if ( (byte_4B169D5 & 1) == 0 )
   {
-    sub_1BC3008(&Method_FortificationConfirmDialogComponent_OnClickCancel__, method);
-    byte_4AFC519 = 1;
+    sub_1BCAFF8(&Method_FortificationConfirmDialogComponent_OnClickCancel__, method);
+    byte_4B169D5 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_FortificationConfirmDialogComponent_OnClickCancel__;
     if ( (*((_BYTE *)Method_FortificationConfirmDialogComponent_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BC3020(Method_FortificationConfirmDialogComponent_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BCB010(Method_FortificationConfirmDialogComponent_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     FortificationConfirmDialogComponent__Close(this, v5);
   }
@@ -257,34 +257,34 @@ void __fastcall FortificationConfirmDialogComponent__Open(
   int32_t v71; // [xsp+Ch] [xbp-44h] BYREF
 
   v71 = workType;
-  if ( (byte_4AFC515 & 1) == 0 )
+  if ( (byte_4B169D1 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, *(_QWORD *)&dialogType);
-    sub_1BC3008(&AtlasManager_TypeInfo, v16);
-    sub_1BC3008(&Method_FortificationConfirmDialogComponent__Open_b__32_0__, v17);
-    sub_1BC3008(&int_TypeInfo, v18);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v19);
-    sub_1BC3008(&StringLiteral_4910/*"D2"*/, v20);
-    sub_1BC3008(&StringLiteral_6433/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_WARNING_DESCRIPTION"*/, v21);
-    sub_1BC3008(&StringLiteral_6442/*"FORTIFICATION_NPC_CHANGE_CONFIRM_DIALOG_DESCRIPTION"*/, v22);
-    sub_1BC3008(&StringLiteral_6445/*"FORTIFICATION_REMOVE_CONFIRM_DIALOG_TITLE"*/, v23);
-    sub_1BC3008(&StringLiteral_6432/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_TITLE"*/, v24);
-    sub_1BC3008(&StringLiteral_6431/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_DESCRIPTION"*/, v25);
-    sub_1BC3008(&StringLiteral_6447/*"FORTIFICATION_SET_CONFIRM_DIALOG_TITLE"*/, v26);
-    sub_1BC3008(&StringLiteral_3649/*"COMMON_CONFIRM_DECIDE"*/, v27);
-    sub_1BC3008(&StringLiteral_3648/*"COMMON_CONFIRM_CLOSE"*/, v28);
-    sub_1BC3008(&StringLiteral_6448/*"FORTIFICATION_SET_CONFIRM_DIALOG_WARNING_DESCRIPTION"*/, v29);
-    sub_1BC3008(&StringLiteral_6444/*"FORTIFICATION_REMOVE_CONFIRM_DIALOG_DESCRIPTION"*/, v30);
-    sub_1BC3008(&StringLiteral_20004/*"icon_event_{0}{1}"*/, v31);
-    sub_1BC3008(&StringLiteral_6436/*"FORTIFICATION_CONFIRM_DIALOG_SUB_TITLE"*/, v32);
-    sub_1BC3008(&StringLiteral_6446/*"FORTIFICATION_SET_CONFIRM_DIALOG_DESCRIPTION"*/, v33);
-    sub_1BC3008(&StringLiteral_1/*""*/, v34);
-    byte_4AFC515 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&dialogType);
+    sub_1BCAFF8(&AtlasManager_TypeInfo, v16);
+    sub_1BCAFF8(&Method_FortificationConfirmDialogComponent__Open_b__32_0__, v17);
+    sub_1BCAFF8(&int_TypeInfo, v18);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v19);
+    sub_1BCAFF8(&StringLiteral_4912/*"D2"*/, v20);
+    sub_1BCAFF8(&StringLiteral_6438/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_WARNING_DESCRIPTION"*/, v21);
+    sub_1BCAFF8(&StringLiteral_6447/*"FORTIFICATION_NPC_CHANGE_CONFIRM_DIALOG_DESCRIPTION"*/, v22);
+    sub_1BCAFF8(&StringLiteral_6450/*"FORTIFICATION_REMOVE_CONFIRM_DIALOG_TITLE"*/, v23);
+    sub_1BCAFF8(&StringLiteral_6437/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_TITLE"*/, v24);
+    sub_1BCAFF8(&StringLiteral_6436/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_DESCRIPTION"*/, v25);
+    sub_1BCAFF8(&StringLiteral_6452/*"FORTIFICATION_SET_CONFIRM_DIALOG_TITLE"*/, v26);
+    sub_1BCAFF8(&StringLiteral_3651/*"COMMON_CONFIRM_DECIDE"*/, v27);
+    sub_1BCAFF8(&StringLiteral_3650/*"COMMON_CONFIRM_CLOSE"*/, v28);
+    sub_1BCAFF8(&StringLiteral_6453/*"FORTIFICATION_SET_CONFIRM_DIALOG_WARNING_DESCRIPTION"*/, v29);
+    sub_1BCAFF8(&StringLiteral_6449/*"FORTIFICATION_REMOVE_CONFIRM_DIALOG_DESCRIPTION"*/, v30);
+    sub_1BCAFF8(&StringLiteral_20018/*"icon_event_{0}{1}"*/, v31);
+    sub_1BCAFF8(&StringLiteral_6441/*"FORTIFICATION_CONFIRM_DIALOG_SUB_TITLE"*/, v32);
+    sub_1BCAFF8(&StringLiteral_6451/*"FORTIFICATION_SET_CONFIRM_DIALOG_DESCRIPTION"*/, v33);
+    sub_1BCAFF8(&StringLiteral_1/*""*/, v34);
+    byte_4B169D1 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.onDecide = onDecide;
-    sub_1BC2FAC(&this->fields.onDecide);
+    sub_1BCAF9C(&this->fields.onDecide);
     guestIconBefore = (UnityEngine_Component_o *)this->fields.guestIconBefore;
     if ( !guestIconBefore )
       goto LABEL_52;
@@ -307,7 +307,7 @@ void __fastcall FortificationConfirmDialogComponent__Open(
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         guestIconBefore = (UnityEngine_Component_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_6445/*"FORTIFICATION_REMOVE_CONFIRM_DIALOG_TITLE"*/,
+                                                       (System_String_o *)StringLiteral_6450/*"FORTIFICATION_REMOVE_CONFIRM_DIALOG_TITLE"*/,
                                                        0LL);
         if ( !titleLb )
           goto LABEL_52;
@@ -321,7 +321,7 @@ void __fastcall FortificationConfirmDialogComponent__Open(
           goto LABEL_52;
         UILabel__set_text((UILabel_o *)guestIconBefore, (System_String_o *)StringLiteral_1/*""*/, 0LL);
         removeDescriptionLb = this->fields.removeDescriptionLb;
-        v51 = LocalizationManager__Get((System_String_o *)StringLiteral_6444/*"FORTIFICATION_REMOVE_CONFIRM_DIALOG_DESCRIPTION"*/, 0LL);
+        v51 = LocalizationManager__Get((System_String_o *)StringLiteral_6449/*"FORTIFICATION_REMOVE_CONFIRM_DIALOG_DESCRIPTION"*/, 0LL);
         guestIconBefore = (UnityEngine_Component_o *)System_String__Format(v51, (Il2CppObject *)detailName, 0LL);
         if ( !removeDescriptionLb )
           goto LABEL_52;
@@ -336,20 +336,20 @@ void __fastcall FortificationConfirmDialogComponent__Open(
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         guestIconBefore = (UnityEngine_Component_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_6447/*"FORTIFICATION_SET_CONFIRM_DIALOG_TITLE"*/,
+                                                       (System_String_o *)StringLiteral_6452/*"FORTIFICATION_SET_CONFIRM_DIALOG_TITLE"*/,
                                                        0LL);
         if ( !v40 )
           goto LABEL_52;
         UILabel__set_text(v40, (System_String_o *)guestIconBefore, 0LL);
         descriptionLb = this->fields.descriptionLb;
-        v42 = LocalizationManager__Get((System_String_o *)StringLiteral_6446/*"FORTIFICATION_SET_CONFIRM_DIALOG_DESCRIPTION"*/, 0LL);
+        v42 = LocalizationManager__Get((System_String_o *)StringLiteral_6451/*"FORTIFICATION_SET_CONFIRM_DIALOG_DESCRIPTION"*/, 0LL);
         guestIconBefore = (UnityEngine_Component_o *)System_String__Format(v42, (Il2CppObject *)detailName, 0LL);
         if ( !descriptionLb )
           goto LABEL_52;
         UILabel__set_text(descriptionLb, (System_String_o *)guestIconBefore, 0LL);
         warningDescriptionLb = this->fields.warningDescriptionLb;
         guestIconBefore = (UnityEngine_Component_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_6448/*"FORTIFICATION_SET_CONFIRM_DIALOG_WARNING_DESCRIPTION"*/,
+                                                       (System_String_o *)StringLiteral_6453/*"FORTIFICATION_SET_CONFIRM_DIALOG_WARNING_DESCRIPTION"*/,
                                                        0LL);
         if ( !warningDescriptionLb )
           goto LABEL_52;
@@ -366,16 +366,16 @@ LABEL_40:
       workTypeIcon = this->fields.workTypeIcon;
       v70 = eventId;
       v58 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v70, v37, v38, v39);
-      v59 = (Il2CppObject *)System_Int32__ToString_63857360((int32_t)&v71, (System_String_o *)StringLiteral_4910/*"D2"*/, 0LL);
-      v60 = System_String__Format_62389940((System_String_o *)StringLiteral_20004/*"icon_event_{0}{1}"*/, v58, v59, 0LL);
+      v59 = (Il2CppObject *)System_Int32__ToString_63959136((int32_t)&v71, (System_String_o *)StringLiteral_4912/*"D2"*/, 0LL);
+      v60 = System_String__Format_62491716((System_String_o *)StringLiteral_20018/*"icon_event_{0}{1}"*/, v58, v59, 0LL);
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventUI_39643540(eventId, workTypeIcon, v60, 0LL);
+      AtlasManager__SetEventUI_39794720(eventId, workTypeIcon, v60, 0LL);
       subTitleLb = this->fields.subTitleLb;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v62 = LocalizationManager__Get((System_String_o *)StringLiteral_6436/*"FORTIFICATION_CONFIRM_DIALOG_SUB_TITLE"*/, 0LL);
-      guestIconBefore = (UnityEngine_Component_o *)System_String__Format_62389940(
+      v62 = LocalizationManager__Get((System_String_o *)StringLiteral_6441/*"FORTIFICATION_CONFIRM_DIALOG_SUB_TITLE"*/, 0LL);
+      guestIconBefore = (UnityEngine_Component_o *)System_String__Format_62491716(
                                                      v62,
                                                      (Il2CppObject *)teamName,
                                                      (Il2CppObject *)detailName,
@@ -401,20 +401,20 @@ LABEL_40:
                 0LL);
               decideButtonLb = this->fields.decideButtonLb;
               guestIconBefore = (UnityEngine_Component_o *)LocalizationManager__Get(
-                                                             (System_String_o *)StringLiteral_3649/*"COMMON_CONFIRM_DECIDE"*/,
+                                                             (System_String_o *)StringLiteral_3651/*"COMMON_CONFIRM_DECIDE"*/,
                                                              0LL);
               if ( decideButtonLb )
               {
                 UILabel__set_text(decideButtonLb, (System_String_o *)guestIconBefore, 0LL);
                 cancelButtonLb = this->fields.cancelButtonLb;
                 guestIconBefore = (UnityEngine_Component_o *)LocalizationManager__Get(
-                                                               (System_String_o *)StringLiteral_3648/*"COMMON_CONFIRM_CLOSE"*/,
+                                                               (System_String_o *)StringLiteral_3650/*"COMMON_CONFIRM_CLOSE"*/,
                                                                0LL);
                 if ( cancelButtonLb )
                 {
                   UILabel__set_text(cancelButtonLb, (System_String_o *)guestIconBefore, 0LL);
                   this->fields.state = 1;
-                  v69 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+                  v69 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
                   System_Action___ctor(
                     v69,
                     (Il2CppObject *)this,
@@ -429,12 +429,12 @@ LABEL_40:
         }
       }
 LABEL_52:
-      sub_1BC3264(guestIconBefore, v35);
+      sub_1BCB254(guestIconBefore, v35);
     }
     v45 = this->fields.titleLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    guestIconBefore = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6432/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_TITLE"*/, 0LL);
+    guestIconBefore = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6437/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_TITLE"*/, 0LL);
     if ( !v45 )
       goto LABEL_52;
     UILabel__set_text(v45, (System_String_o *)guestIconBefore, 0LL);
@@ -446,7 +446,7 @@ LABEL_52:
       {
 LABEL_23:
         guestIconBefore = (UnityEngine_Component_o *)LocalizationManager__Get(
-                                                       (System_String_o *)StringLiteral_6442/*"FORTIFICATION_NPC_CHANGE_CONFIRM_DIALOG_DESCRIPTION"*/,
+                                                       (System_String_o *)StringLiteral_6447/*"FORTIFICATION_NPC_CHANGE_CONFIRM_DIALOG_DESCRIPTION"*/,
                                                        0LL);
         goto LABEL_34;
       }
@@ -457,7 +457,7 @@ LABEL_23:
       if ( IsNpcServant )
         goto LABEL_23;
     }
-    v53 = LocalizationManager__Get((System_String_o *)StringLiteral_6431/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_DESCRIPTION"*/, 0LL);
+    v53 = LocalizationManager__Get((System_String_o *)StringLiteral_6436/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_DESCRIPTION"*/, 0LL);
     guestIconBefore = (UnityEngine_Component_o *)System_String__Format(v53, (Il2CppObject *)detailName, 0LL);
 LABEL_34:
     v35 = guestIconBefore;
@@ -467,7 +467,7 @@ LABEL_34:
     v54 = this->fields.warningDescriptionLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    guestIconBefore = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6433/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_WARNING_DESCRIPTION"*/, 0LL);
+    guestIconBefore = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6438/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_WARNING_DESCRIPTION"*/, 0LL);
     if ( !v54 )
       goto LABEL_52;
     UILabel__set_text(v54, (System_String_o *)guestIconBefore, 0LL);
@@ -505,12 +505,12 @@ void __fastcall FortificationConfirmDialogComponent__SetDoubleServantDisplay(
   UILabel_o *afterLb; // x22
   const MethodInfo *v15; // x6
 
-  if ( (byte_4AFC517 & 1) == 0 )
+  if ( (byte_4B169D3 & 1) == 0 )
   {
-    sub_1BC3008(&LocalizationManager_TypeInfo, userServantEntity);
-    sub_1BC3008(&StringLiteral_6429/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_AFTER"*/, v7);
-    sub_1BC3008(&StringLiteral_6430/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_BEFOR"*/, v8);
-    byte_4AFC517 = 1;
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, userServantEntity);
+    sub_1BCAFF8(&StringLiteral_6434/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_AFTER"*/, v7);
+    sub_1BCAFF8(&StringLiteral_6435/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_BEFOR"*/, v8);
+    byte_4B169D3 = 1;
   }
   singleServantDisplayObject = this->fields.singleServantDisplayObject;
   if ( !singleServantDisplayObject )
@@ -524,7 +524,7 @@ void __fastcall FortificationConfirmDialogComponent__SetDoubleServantDisplay(
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   singleServantDisplayObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                             (System_String_o *)StringLiteral_6430/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_BEFOR"*/,
+                                                             (System_String_o *)StringLiteral_6435/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_BEFOR"*/,
                                                              0LL);
   if ( !beforeLb )
     goto LABEL_16;
@@ -547,15 +547,15 @@ void __fastcall FortificationConfirmDialogComponent__SetDoubleServantDisplay(
     v13);
   afterLb = this->fields.afterLb;
   singleServantDisplayObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                             (System_String_o *)StringLiteral_6429/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_AFTER"*/,
+                                                             (System_String_o *)StringLiteral_6434/*"FORTIFICATION_CHANGE_CONFIRM_DIALOG_AFTER"*/,
                                                              0LL);
   if ( !afterLb )
 LABEL_16:
-    sub_1BC3264(singleServantDisplayObject, userServantEntity);
+    sub_1BCB254(singleServantDisplayObject, userServantEntity);
   UILabel__set_text(afterLb, (System_String_o *)singleServantDisplayObject, 0LL);
   if ( userServantEntity->max_length <= 1 || point->max_length <= 1 )
 LABEL_17:
-    sub_1BC326C(singleServantDisplayObject, userServantEntity, v11, v12);
+    sub_1BCB25C(singleServantDisplayObject, userServantEntity, v11, v12);
   FortificationConfirmDialogComponent__SetServant(
     (FortificationConfirmDialogComponent_o *)singleServantDisplayObject,
     this->fields.pointDescriptionLbAfter,
@@ -593,38 +593,38 @@ void __fastcall FortificationConfirmDialogComponent__SetServant(
   int32_t lv; // w21
   int32_t v27; // [xsp+1Ch] [xbp-54h] BYREF
 
-  if ( (byte_4AFC518 & 1) == 0 )
+  if ( (byte_4B169D4 & 1) == 0 )
   {
-    sub_1BC3008(&IconLabelInfo_TypeInfo, label1);
-    sub_1BC3008(&int_TypeInfo, v12);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v13);
-    sub_1BC3008(&StringLiteral_6434/*"FORTIFICATION_CONFIRM_DIALOG_POINT"*/, v14);
-    sub_1BC3008(&StringLiteral_6435/*"FORTIFICATION_CONFIRM_DIALOG_POINT_DESCRIPTION"*/, v15);
-    sub_1BC3008(&StringLiteral_24811/*"{0:#,0}"*/, v16);
-    byte_4AFC518 = 1;
+    sub_1BCAFF8(&IconLabelInfo_TypeInfo, label1);
+    sub_1BCAFF8(&int_TypeInfo, v12);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v13);
+    sub_1BCAFF8(&StringLiteral_6439/*"FORTIFICATION_CONFIRM_DIALOG_POINT"*/, v14);
+    sub_1BCAFF8(&StringLiteral_6440/*"FORTIFICATION_CONFIRM_DIALOG_POINT_DESCRIPTION"*/, v15);
+    sub_1BCAFF8(&StringLiteral_24833/*"{0:#,0}"*/, v16);
+    byte_4B169D4 = 1;
   }
-  v17 = (IconLabelInfo_o *)sub_1BC3254(IconLabelInfo_TypeInfo);
+  v17 = (IconLabelInfo_o *)sub_1BCB244(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v17, 0LL);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  LevelMax = LocalizationManager__Get((System_String_o *)StringLiteral_6435/*"FORTIFICATION_CONFIRM_DIALOG_POINT_DESCRIPTION"*/, 0LL);
+  LevelMax = LocalizationManager__Get((System_String_o *)StringLiteral_6440/*"FORTIFICATION_CONFIRM_DIALOG_POINT_DESCRIPTION"*/, 0LL);
   if ( !label1 )
     goto LABEL_11;
   UILabel__set_text(label1, LevelMax, 0LL);
-  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_6434/*"FORTIFICATION_CONFIRM_DIALOG_POINT"*/, 0LL);
+  v20 = LocalizationManager__Get((System_String_o *)StringLiteral_6439/*"FORTIFICATION_CONFIRM_DIALOG_POINT"*/, 0LL);
   v27 = point;
   v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27, v21, v22, v23);
-  v25 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_24811/*"{0:#,0}"*/, v24, 0LL);
+  v25 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_24833/*"{0:#,0}"*/, v24, 0LL);
   LevelMax = System_String__Format(v20, v25, 0LL);
   if ( !label2
     || (UILabel__set_text(label2, LevelMax, 0LL), !ent)
     || (lv = ent->fields.lv, LevelMax = (System_String_o *)UserServantEntity__getLevelMax(ent, 0LL), !v17)
-    || (IconLabelInfo__Set_39947860(v17, 2, lv, (int32_t)LevelMax, 0, 0, 0, 0, 0, 0LL), !faceIcon) )
+    || (IconLabelInfo__Set_40103972(v17, 2, lv, (int32_t)LevelMax, 0, 0, 0, 0, 0, 0LL), !faceIcon) )
   {
 LABEL_11:
-    sub_1BC3264(LevelMax, v19);
+    sub_1BCB254(LevelMax, v19);
   }
-  ServantFaceIconComponent__Set_40035864(faceIcon, ent, v17, 0LL, 0LL);
+  ServantFaceIconComponent__Set_40190236(faceIcon, ent, v17, 0LL, 0LL);
 }
 
 
@@ -653,10 +653,10 @@ void __fastcall FortificationConfirmDialogComponent__SetSingleServantDisplay(
     goto LABEL_9;
   if ( !point )
 LABEL_8:
-    sub_1BC3264(singleServantDisplayObject, userServantEntity);
+    sub_1BCB254(singleServantDisplayObject, userServantEntity);
   if ( !point->max_length )
 LABEL_9:
-    sub_1BC326C(singleServantDisplayObject, userServantEntity, v8, v9);
+    sub_1BCB25C(singleServantDisplayObject, userServantEntity, v8, v9);
   FortificationConfirmDialogComponent__SetServant(
     (FortificationConfirmDialogComponent_o *)singleServantDisplayObject,
     this->fields.pointDescriptionLb,
@@ -694,10 +694,10 @@ UnityEngine_GameObject_o *__fastcall FortificationConfirmDialogComponent__get_cl
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4AFC51B & 1) == 0 )
+  if ( (byte_4B169D7 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    byte_4AFC51B = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    byte_4B169D7 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -706,6 +706,6 @@ UnityEngine_GameObject_o *__fastcall FortificationConfirmDialogComponent__get_cl
     return 0LL;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_1BC3264(0LL, v4);
+    sub_1BCB254(0LL, v4);
   return UnityEngine_Component__get_gameObject(v6, 0LL);
 }

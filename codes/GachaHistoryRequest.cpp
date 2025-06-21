@@ -7,12 +7,12 @@ void __fastcall GachaHistoryRequest__beginRequest(
   const MethodInfo *v3; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4B03B0B & 1) == 0 )
+  if ( (byte_4B1E016 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_19548/*"gachaId"*/, *(_QWORD *)&gachaId);
-    byte_4B03B0B = 1;
+    sub_1BCAFF8(&StringLiteral_19560/*"gachaId"*/, *(_QWORD *)&gachaId);
+    byte_4B1E016 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19548/*"gachaId"*/, gachaId, v3);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19560/*"gachaId"*/, gachaId, v3);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -21,11 +21,11 @@ System_String_o *__fastcall GachaHistoryRequest__getMockData(GachaHistoryRequest
 {
   __int64 v2; // x1
 
-  if ( (byte_4B03B0A & 1) == 0 )
+  if ( (byte_4B1E015 & 1) == 0 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, method);
-    sub_1BC3008(&StringLiteral_1/*""*/, v2);
-    byte_4B03B0A = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
+    sub_1BCAFF8(&StringLiteral_1/*""*/, v2);
+    byte_4B1E015 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -38,16 +38,16 @@ System_String_o *__fastcall GachaHistoryRequest__getURL(GachaHistoryRequest_o *t
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B03B09 & 1) == 0 )
+  if ( (byte_4B1E014 & 1) == 0 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, method);
-    sub_1BC3008(&StringLiteral_19547/*"gacha/drawHistory"*/, v2);
-    byte_4B03B09 = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
+    sub_1BCAFF8(&StringLiteral_19559/*"gacha/drawHistory"*/, v2);
+    byte_4B1E014 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_19547/*"gacha/drawHistory"*/, 0LL);
+  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_19559/*"gacha/drawHistory"*/, 0LL);
 }
 
 
@@ -63,12 +63,12 @@ void __fastcall GachaHistoryRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v10; // x9
 
-  if ( (byte_4B03B0C & 1) == 0 )
+  if ( (byte_4B1E017 & 1) == 0 )
   {
-    sub_1BC3008(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1BC3008(&StringLiteral_22163/*"ok"*/, v5);
-    sub_1BC3008(&StringLiteral_21997/*"ng"*/, v6);
-    byte_4B03B0C = 1;
+    sub_1BCAFF8(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1BCAFF8(&StringLiteral_22181/*"ok"*/, v5);
+    sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v6);
+    byte_4B1E017 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -78,14 +78,14 @@ void __fastcall GachaHistoryRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_22163/*"ok"*/;
+    v10 = &StringLiteral_22181/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v10 = &StringLiteral_21997/*"ng"*/;
+    v10 = &StringLiteral_22015/*"ng"*/;
   }
   ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
     CallBack->fields.original_method_info,

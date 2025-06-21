@@ -10,13 +10,13 @@ void __fastcall BackupHelper__SetNoBackupFlag(System_String_array *pathArray, co
 }
 
 
-void __fastcall BackupHelper__SetNoBackupFlag_43106964(System_String_o *path, const MethodInfo *method)
+void __fastcall BackupHelper__SetNoBackupFlag_43270012(System_String_o *path, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall BackupHelper__SetNoBackupFlag_43106968(
+void __fastcall BackupHelper__SetNoBackupFlag_43270016(
         System_String_o *path,
         System_String_array *excludeFileList,
         const MethodInfo *method)

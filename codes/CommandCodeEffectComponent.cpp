@@ -1,9 +1,9 @@
 void __fastcall CommandCodeEffectComponent___ctor(CommandCodeEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B05D2C & 1) == 0 )
+  if ( (byte_4B2026F & 1) == 0 )
   {
-    sub_1BC3008(&CommonEffectComponent_TypeInfo, method);
-    byte_4B05D2C = 1;
+    sub_1BCAFF8(&CommonEffectComponent_TypeInfo, method);
+    byte_4B2026F = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -30,19 +30,19 @@ void __fastcall CommandCodeEffectComponent__PlayAnimation(CommandCodeEffectCompo
   _BOOL8 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4B05D2B & 1) == 0 )
+  if ( (byte_4B2026E & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_Component_GetComponent_Animation___, method);
-    sub_1BC3008(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v3);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v4);
-    byte_4B05D2B = 1;
+    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_Animation___, method);
+    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___, v3);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
+    byte_4B2026E = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_2FF8634 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
   v6 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_2FF8634 *)Method_UnityEngine_Component_GetComponent_Animation___);
+         (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -54,7 +54,7 @@ void __fastcall CommandCodeEffectComponent__PlayAnimation(CommandCodeEffectCompo
       return;
     }
 LABEL_14:
-    sub_1BC3264(v7, v8);
+    sub_1BCB254(v7, v8);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -98,11 +98,11 @@ void __fastcall CommandCodeEffectComponent__SetCommandCodeImg(
   UnityEngine_Object_o *commandCodeImg; // x21
   UISprite_o *v7; // x20
 
-  if ( (byte_4B05D2A & 1) == 0 )
+  if ( (byte_4B2026D & 1) == 0 )
   {
-    sub_1BC3008(&AtlasManager_TypeInfo, *(_QWORD *)&commandCodeId);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B05D2A = 1;
+    sub_1BCAFF8(&AtlasManager_TypeInfo, *(_QWORD *)&commandCodeId);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
+    byte_4B2026D = 1;
   }
   commandCodeImg = (UnityEngine_Object_o *)this->fields.commandCodeImg;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -127,7 +127,7 @@ void __fastcall CommandCodeEffectComponent__SetDestroyEffectCallback(
   if ( callback )
   {
     this->fields.destroyEffectCallback = callback;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.destroyEffectCallback, (int32_t)callback, (int32_t)method, v3);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.destroyEffectCallback, (int32_t)callback, (int32_t)method, v3);
   }
 }
 
@@ -142,7 +142,7 @@ void __fastcall CommandCodeEffectComponent__SetDetachEffect(
   if ( action )
   {
     this->fields.commandCodeDetachAction = action;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.commandCodeDetachAction, (int32_t)action, (int32_t)method, v3);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.commandCodeDetachAction, (int32_t)action, (int32_t)method, v3);
   }
 }
 
@@ -157,6 +157,6 @@ void __fastcall CommandCodeEffectComponent__SetEndEffectCallbak(
   if ( callback )
   {
     this->fields.endEffectCallback = callback;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.endEffectCallback, (int32_t)callback, (int32_t)method, v3);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.endEffectCallback, (int32_t)callback, (int32_t)method, v3);
   }
 }

@@ -1,13 +1,13 @@
 void __fastcall MissionItemDisplayEntity___ctor(MissionItemDisplayEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B02413 & 1) == 0 )
+  if ( (byte_4B1C9F5 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B02413 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B1C9F5 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32ACB8C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ bool __fastcall MissionItemDisplayEntity__IsEnable(MissionItemDisplayEntity_o *t
 {
   int64_t Time; // x0
 
-  if ( (byte_4B02412 & 1) == 0 )
+  if ( (byte_4B1C9F4 & 1) == 0 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, method);
-    byte_4B02412 = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
+    byte_4B1C9F4 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

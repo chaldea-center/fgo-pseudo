@@ -10,11 +10,11 @@ void __fastcall PaymentHistoryListViewItem___ctor(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  ListViewItem___ctor_42769384((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
   this->fields._UpsideMessage_k__BackingField = upsideMessage;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._UpsideMessage_k__BackingField, (int32_t)upsideMessage, v8, v9);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._UpsideMessage_k__BackingField, (int32_t)upsideMessage, v8, v9);
   this->fields._BottomMessage_k__BackingField = bottomMessage;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._BottomMessage_k__BackingField, (int32_t)bottomMessage, v10, v11);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._BottomMessage_k__BackingField, (int32_t)bottomMessage, v10, v11);
 }
 
 
@@ -42,7 +42,7 @@ void __fastcall PaymentHistoryListViewItem__set_BottomMessage(
   const MethodInfo *v3; // x3
 
   this->fields._BottomMessage_k__BackingField = value;
-  sub_1BC2FAC(
+  sub_1BCAF9C(
     (CGThumbnailListItem_o *)&this->fields._BottomMessage_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -58,7 +58,7 @@ void __fastcall PaymentHistoryListViewItem__set_UpsideMessage(
   const MethodInfo *v3; // x3
 
   this->fields._UpsideMessage_k__BackingField = value;
-  sub_1BC2FAC(
+  sub_1BCAF9C(
     (CGThumbnailListItem_o *)&this->fields._UpsideMessage_k__BackingField,
     (int32_t)value,
     (int32_t)method,

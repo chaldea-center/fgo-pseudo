@@ -21,33 +21,33 @@ void __fastcall CommandCodeStatusSyncRequest__beginRequest(
   System_String_o *v16; // x0
 
   v10 = (RequestBase_o *)this;
-  if ( (byte_4B03A62 & 1) == 0 )
+  if ( (byte_4B1DF6D & 1) == 0 )
   {
-    sub_1BC3008(&JsonManager_TypeInfo, changeCommandCodeIds);
-    sub_1BC3008(&StringLiteral_17647/*"changeCommandCodeIds"*/, v11);
-    sub_1BC3008(&StringLiteral_22875/*"revokeCommandCodeIds"*/, v12);
-    sub_1BC3008(&StringLiteral_20727/*"isLock"*/, v13);
-    this = (CommandCodeStatusSyncRequest_o *)sub_1BC3008(&StringLiteral_20705/*"isChoice"*/, v14);
-    byte_4B03A62 = 1;
+    sub_1BCAFF8(&JsonManager_TypeInfo, changeCommandCodeIds);
+    sub_1BCAFF8(&StringLiteral_17658/*"changeCommandCodeIds"*/, v11);
+    sub_1BCAFF8(&StringLiteral_22894/*"revokeCommandCodeIds"*/, v12);
+    sub_1BCAFF8(&StringLiteral_20743/*"isLock"*/, v13);
+    this = (CommandCodeStatusSyncRequest_o *)sub_1BCAFF8(&StringLiteral_20721/*"isChoice"*/, v14);
+    byte_4B1DF6D = 1;
   }
   if ( changeCommandCodeIds && *(_QWORD *)&changeCommandCodeIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v15 = JsonManager__toJson(&changeCommandCodeIds->obj, 0, 0, 0LL);
-    RequestBase__addField_43185568(v10, (System_String_o *)StringLiteral_17647/*"changeCommandCodeIds"*/, v15, 0LL);
+    RequestBase__addField_43348616(v10, (System_String_o *)StringLiteral_17658/*"changeCommandCodeIds"*/, v15, 0LL);
   }
   if ( revokeCommandCodeIds && *(_QWORD *)&revokeCommandCodeIds->max_length )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v16 = JsonManager__toJson(&revokeCommandCodeIds->obj, 0, 0, 0LL);
-    RequestBase__addField_43185568(v10, (System_String_o *)StringLiteral_22875/*"revokeCommandCodeIds"*/, v16, 0LL);
+    RequestBase__addField_43348616(v10, (System_String_o *)StringLiteral_22894/*"revokeCommandCodeIds"*/, v16, 0LL);
   }
   if ( !v10 )
-    sub_1BC3264(this, changeCommandCodeIds);
-  RequestBase__addField(v10, (System_String_o *)StringLiteral_20727/*"isLock"*/, isLock, 0LL);
-  RequestBase__addField(v10, (System_String_o *)StringLiteral_20705/*"isChoice"*/, isChoice, 0LL);
+    sub_1BCB254(this, changeCommandCodeIds);
+  RequestBase__addField(v10, (System_String_o *)StringLiteral_20743/*"isLock"*/, isLock, 0LL);
+  RequestBase__addField(v10, (System_String_o *)StringLiteral_20721/*"isChoice"*/, isChoice, 0LL);
   RequestBase__beginRequest(v10, 0LL);
 }
 
@@ -58,11 +58,11 @@ System_String_o *__fastcall CommandCodeStatusSyncRequest__getMockData(
 {
   __int64 v2; // x1
 
-  if ( (byte_4B03A61 & 1) == 0 )
+  if ( (byte_4B1DF6C & 1) == 0 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, method);
-    sub_1BC3008(&StringLiteral_1/*""*/, v2);
-    byte_4B03A61 = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
+    sub_1BCAFF8(&StringLiteral_1/*""*/, v2);
+    byte_4B1DF6C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -77,16 +77,16 @@ System_String_o *__fastcall CommandCodeStatusSyncRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B03A60 & 1) == 0 )
+  if ( (byte_4B1DF6B & 1) == 0 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, method);
-    sub_1BC3008(&StringLiteral_17993/*"commandCode/statusSync"*/, v2);
-    byte_4B03A60 = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
+    sub_1BCAFF8(&StringLiteral_18004/*"commandCode/statusSync"*/, v2);
+    byte_4B1DF6B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_17993/*"commandCode/statusSync"*/, 0LL);
+  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_18004/*"commandCode/statusSync"*/, 0LL);
 }
 
 
@@ -100,19 +100,19 @@ void __fastcall CommandCodeStatusSyncRequest__requestCompleted(
   ResponseData_o *v7; // x0
   __int64 *v8; // x8
 
-  if ( (byte_4B03A63 & 1) == 0 )
+  if ( (byte_4B1DF6E & 1) == 0 )
   {
-    sub_1BC3008(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1BC3008(&StringLiteral_22163/*"ok"*/, v5);
-    sub_1BC3008(&StringLiteral_21997/*"ng"*/, v6);
-    byte_4B03A63 = 1;
+    sub_1BCAFF8(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1BCAFF8(&StringLiteral_22181/*"ok"*/, v5);
+    sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v6);
+    byte_4B1DF6E = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(72, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_43184840(v7, 0LL) )
-    v8 = &StringLiteral_22163/*"ok"*/;
+  if ( v7 && ResponseData__checkError_43347888(v7, 0LL) )
+    v8 = &StringLiteral_22181/*"ok"*/;
   else
-    v8 = &StringLiteral_21997/*"ng"*/;
+    v8 = &StringLiteral_22015/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
 }

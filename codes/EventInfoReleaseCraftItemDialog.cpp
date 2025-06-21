@@ -2,10 +2,10 @@ void __fastcall EventInfoReleaseCraftItemDialog___ctor(
         EventInfoReleaseCraftItemDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B03631 & 1) == 0 )
+  if ( (byte_4B1DA57 & 1) == 0 )
   {
-    sub_1BC3008(&BaseDialog_TypeInfo, method);
-    byte_4B03631 = 1;
+    sub_1BCAFF8(&BaseDialog_TypeInfo, method);
+    byte_4B1DA57 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -28,12 +28,12 @@ void __fastcall EventInfoReleaseCraftItemDialog__CreateCraftItem(
   Il2CppObject *Component_object; // x20
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B0362E & 1) == 0 )
+  if ( (byte_4B1DA54 & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_EventInfoCraftItemComponent___, eventTradeGoodsEntity);
-    sub_1BC3008(&Method_UnityEngine_Object_Instantiate_GameObject____76895672, v5);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v6);
-    byte_4B0362E = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_EventInfoCraftItemComponent___, eventTradeGoodsEntity);
+    sub_1BCAFF8(&Method_UnityEngine_Object_Instantiate_GameObject____77001424, v5);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v6);
+    byte_4B1DA54 = 1;
   }
   if ( eventTradeGoodsEntity )
   {
@@ -41,10 +41,10 @@ void __fastcall EventInfoReleaseCraftItemDialog__CreateCraftItem(
     craftItemParent = this->fields.craftItemParent;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v9 = UnityEngine_Object__Instantiate_object__50900816(
+    v9 = UnityEngine_Object__Instantiate_object__51002592(
            craftItemPrefab,
            craftItemParent,
-           (const MethodInfo_308AF50 *)Method_UnityEngine_Object_Instantiate_GameObject____76895672);
+           (const MethodInfo_30A3CE0 *)Method_UnityEngine_Object_Instantiate_GameObject____77001424);
     v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v9, 0LL, 0LL);
     if ( !v10 )
     {
@@ -53,7 +53,7 @@ void __fastcall EventInfoReleaseCraftItemDialog__CreateCraftItem(
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 1, 0LL);
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)v9,
-                             (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_EventInfoCraftItemComponent___);
+                             (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_EventInfoCraftItemComponent___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
@@ -68,7 +68,7 @@ void __fastcall EventInfoReleaseCraftItemDialog__CreateCraftItem(
           return;
         }
       }
-      sub_1BC3264(v10, v11);
+      sub_1BCB254(v10, v11);
     }
   }
 }
@@ -86,13 +86,13 @@ void __fastcall EventInfoReleaseCraftItemDialog__OnClose(
   System_Reflection_MethodBase_o *v8; // x0
   System_Action_o *v9; // x20
 
-  if ( (byte_4B03630 & 1) == 0 )
+  if ( (byte_4B1DA56 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&Method_EventInfoReleaseCraftItemDialog_OnClose__, v3);
-    sub_1BC3008(&Method_EventInfoReleaseCraftItemDialog__OnClose_b__11_0__, v4);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B03630 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&Method_EventInfoReleaseCraftItemDialog_OnClose__, v3);
+    sub_1BCAFF8(&Method_EventInfoReleaseCraftItemDialog__OnClose_b__11_0__, v4);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
+    byte_4B1DA56 = 1;
   }
   if ( this->fields.canTap )
   {
@@ -104,10 +104,10 @@ void __fastcall EventInfoReleaseCraftItemDialog__OnClose(
       AndroidBackKeyManager__RemoveBackBtn(this->fields.closeBtn, 0LL);
     v7 = Method_EventInfoReleaseCraftItemDialog_OnClose__;
     if ( (*((_BYTE *)Method_EventInfoReleaseCraftItemDialog_OnClose__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1BC3020(Method_EventInfoReleaseCraftItemDialog_OnClose__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v7, v7[4]);
+      v7 = (_QWORD *)sub_1BCB010(Method_EventInfoReleaseCraftItemDialog_OnClose__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 1, 0, 0LL);
-    v9 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
     System_Action___ctor(v9, (Il2CppObject *)this, Method_EventInfoReleaseCraftItemDialog__OnClose_b__11_0__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v9, 0LL);
   }
@@ -124,22 +124,22 @@ void __fastcall EventInfoReleaseCraftItemDialog__OnToCraft(
   System_Reflection_MethodBase_o *v6; // x0
   System_Action_o *v7; // x20
 
-  if ( (byte_4B0362F & 1) == 0 )
+  if ( (byte_4B1DA55 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&Method_EventInfoReleaseCraftItemDialog_OnToCraft__, v3);
-    sub_1BC3008(&Method_EventInfoReleaseCraftItemDialog__OnToCraft_b__10_0__, v4);
-    byte_4B0362F = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&Method_EventInfoReleaseCraftItemDialog_OnToCraft__, v3);
+    sub_1BCAFF8(&Method_EventInfoReleaseCraftItemDialog__OnToCraft_b__10_0__, v4);
+    byte_4B1DA55 = 1;
   }
   if ( this->fields.canTap )
   {
     this->fields.canTap = 0;
     v5 = Method_EventInfoReleaseCraftItemDialog_OnToCraft__;
     if ( (*((_BYTE *)Method_EventInfoReleaseCraftItemDialog_OnToCraft__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1BC3020(Method_EventInfoReleaseCraftItemDialog_OnToCraft__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BCB010(Method_EventInfoReleaseCraftItemDialog_OnToCraft__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0, 0LL);
-    v7 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_EventInfoReleaseCraftItemDialog__OnToCraft_b__10_0__, 0LL);
     BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
   }
@@ -176,15 +176,15 @@ void __fastcall EventInfoReleaseCraftItemDialog__SetStoreLabel(
   int MasterName_k__BackingField; // [xsp+8h] [xbp-38h] BYREF
   int v28; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B0362D & 1) == 0 )
+  if ( (byte_4B1DA53 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMaster_EventTradeStoreMaster___, *(_QWORD *)&eventId);
-    sub_1BC3008(&DataManager_TypeInfo, v7);
-    sub_1BC3008(&int_TypeInfo, v8);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v9);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v10);
-    sub_1BC3008(&StringLiteral_3879/*"CRAFT_RELEASE_DIALOG_RELEASE_STORE_DESCRIPTION"*/, v11);
-    byte_4B0362D = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMaster_EventTradeStoreMaster___, *(_QWORD *)&eventId);
+    sub_1BCAFF8(&DataManager_TypeInfo, v7);
+    sub_1BCAFF8(&int_TypeInfo, v8);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v9);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v10);
+    sub_1BCAFF8(&StringLiteral_3881/*"CRAFT_RELEASE_DIALOG_RELEASE_STORE_DESCRIPTION"*/, v11);
+    byte_4B1DA53 = 1;
   }
   storeLabel = (UnityEngine_Object_o *)this->fields.storeLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -193,7 +193,7 @@ void __fastcall EventInfoReleaseCraftItemDialog__SetStoreLabel(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (EventTradeStoreMaster_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    Master_object = (EventTradeStoreMaster_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
     if ( !Master_object )
       goto LABEL_15;
     Master_object = (EventTradeStoreMaster_o *)EventTradeStoreMaster__GetOpenTradeStoreEntityArray(
@@ -207,15 +207,15 @@ void __fastcall EventInfoReleaseCraftItemDialog__SetStoreLabel(
     v17 = LODWORD(Master_object->fields._MasterName_k__BackingField) - releaseCount;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3879/*"CRAFT_RELEASE_DIALOG_RELEASE_STORE_DESCRIPTION"*/, 0LL);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3881/*"CRAFT_RELEASE_DIALOG_RELEASE_STORE_DESCRIPTION"*/, 0LL);
     v28 = v17;
     v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28, v19, v20, v21);
     MasterName_k__BackingField = (int)v15->fields._MasterName_k__BackingField;
     v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &MasterName_k__BackingField, v23, v24, v25);
-    Master_object = (EventTradeStoreMaster_o *)System_String__Format_62389940(v18, v22, v26, 0LL);
+    Master_object = (EventTradeStoreMaster_o *)System_String__Format_62491716(v18, v22, v26, 0LL);
     if ( !v16 )
 LABEL_15:
-      sub_1BC3264(Master_object, v14);
+      sub_1BCB254(Master_object, v14);
     UILabel__set_text(v16, (System_String_o *)Master_object, 0LL);
   }
 }
@@ -247,12 +247,12 @@ void __fastcall EventInfoReleaseCraftItemDialog__Setup(
   unsigned __int64 v26; // x21
   System_Action_o *v27; // x20
 
-  if ( (byte_4B0362C & 1) == 0 )
+  if ( (byte_4B1DA52 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BC3008(&Method_EventInfoReleaseCraftItemDialog__Setup_b__7_0__, v13);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v14);
-    byte_4B0362C = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&eventId);
+    sub_1BCAFF8(&Method_EventInfoReleaseCraftItemDialog__Setup_b__7_0__, v13);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v14);
+    byte_4B1DA52 = 1;
   }
   this->fields.canTap = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -262,9 +262,9 @@ void __fastcall EventInfoReleaseCraftItemDialog__Setup(
   if ( UnityEngine_Object__op_Inequality(closeBtn, 0LL, 0LL) )
     AndroidBackKeyManager__AddBackBtn(this->fields.closeBtn, 0LL);
   this->fields.onClosed = inOnClosed;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.onClosed, (int32_t)inOnClosed, v16, v17);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.onClosed, (int32_t)inOnClosed, v16, v17);
   this->fields.onToCraft = inOnToCraft;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.onToCraft, (int32_t)inOnToCraft, v18, v19);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.onToCraft, (int32_t)inOnToCraft, v18, v19);
   if ( releaseTradeStoreEntities )
     max_length = releaseTradeStoreEntities->max_length;
   else
@@ -280,14 +280,14 @@ void __fastcall EventInfoReleaseCraftItemDialog__Setup(
       do
       {
         if ( v26 >= (unsigned int)v25 )
-          sub_1BC326C(v22, v23, v24);
+          sub_1BCB25C(v22, v23, v24);
         EventInfoReleaseCraftItemDialog__CreateCraftItem(this, releaseCraftItems->m_Items[v26], v24);
         LODWORD(v25) = releaseCraftItems->max_length;
         ++v26;
       }
       while ( (__int64)v26 < (int)v25 );
     }
-    v27 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+    v27 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
     System_Action___ctor(v27, (Il2CppObject *)this, Method_EventInfoReleaseCraftItemDialog__Setup_b__7_0__, 0LL);
     BaseDialog__Open((BaseDialog_o *)this, v27, 0, 0LL);
   }
@@ -300,16 +300,16 @@ void __fastcall EventInfoReleaseCraftItemDialog___OnClose_b__11_0(
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4B03633 & 1) == 0 )
+  if ( (byte_4B1DA59 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    byte_4B03633 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    byte_4B1DA59 = 1;
   }
   ActionExtensions__Call(this->fields.onClosed, 0LL);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_70034300(gameObject, 0LL);
+  UnityEngine_Object__Destroy_70136076(gameObject, 0LL);
 }
 
 
@@ -319,16 +319,16 @@ void __fastcall EventInfoReleaseCraftItemDialog___OnToCraft_b__10_0(
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4B03632 & 1) == 0 )
+  if ( (byte_4B1DA58 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    byte_4B03632 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    byte_4B1DA58 = 1;
   }
   ActionExtensions__Call(this->fields.onToCraft, 0LL);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_70034300(gameObject, 0LL);
+  UnityEngine_Object__Destroy_70136076(gameObject, 0LL);
 }
 
 

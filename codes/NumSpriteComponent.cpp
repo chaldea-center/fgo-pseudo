@@ -31,18 +31,18 @@ bool __fastcall NumSpriteComponent__TryGetSpriteByIndex(
   UISprite_o *v13; // x1
 
   *sprite = 0LL;
-  sub_1BC2FAC((CGThumbnailListItem_o *)sprite, 0, index, method);
+  sub_1BCAF9C((CGThumbnailListItem_o *)sprite, 0, index, method);
   numberSp = this->fields.numberSp;
   if ( !numberSp )
-    sub_1BC3264(v7, v8);
+    sub_1BCB254(v7, v8);
   max_length = numberSp->max_length;
   if ( max_length > index )
   {
     if ( max_length <= (unsigned int)index )
-      sub_1BC326C(v7, v8, v9);
+      sub_1BCB25C(v7, v8, v9);
     v13 = numberSp->m_Items[index];
     *sprite = v13;
-    sub_1BC2FAC((CGThumbnailListItem_o *)sprite, (int32_t)v13, v9, v10);
+    sub_1BCAF9C((CGThumbnailListItem_o *)sprite, (int32_t)v13, v9, v10);
   }
   return max_length > index;
 }

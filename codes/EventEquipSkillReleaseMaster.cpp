@@ -1,16 +1,16 @@
 void __fastcall EventEquipSkillReleaseMaster___ctor(EventEquipSkillReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B01FA1 & 1) == 0 )
+  if ( (byte_4B1C4A0 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string___ctor__,
       method);
-    byte_4B01FA1 = 1;
+    byte_4B1C4A0 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     273,
-    (const MethodInfo_32B1804 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string___ctor__);
+    (const MethodInfo_32CA594 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string___ctor__);
 }
 
 
@@ -25,12 +25,12 @@ EventEquipSkillReleaseEntity_o *__fastcall EventEquipSkillReleaseMaster__GetEnti
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B01F9F & 1) == 0 )
+  if ( (byte_4B1C49E & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__GetEntity__,
       *(_QWORD *)&eventId);
-    byte_4B01F9F = 1;
+    byte_4B1C49E = 1;
   }
   PK = (Il2CppObject *)EventEquipSkillReleaseEntity__CreatePK(
                          eventId,
@@ -41,7 +41,7 @@ EventEquipSkillReleaseEntity_o *__fastcall EventEquipSkillReleaseMaster__GetEnti
   return (EventEquipSkillReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              PK,
-                                             (const MethodInfo_32B3B28 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__GetEntity__);
+                                             (const MethodInfo_32CC8B8 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__GetEntity__);
 }
 
 
@@ -57,12 +57,12 @@ bool __fastcall EventEquipSkillReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B01FA0 & 1) == 0 )
+  if ( (byte_4B1C49F & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__TryGetEntity__,
       entity);
-    byte_4B01FA0 = 1;
+    byte_4B1C49F = 1;
   }
   PK = (Il2CppObject *)EventEquipSkillReleaseEntity__CreatePK(
                          eventId,
@@ -74,7 +74,7 @@ bool __fastcall EventEquipSkillReleaseMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32B3B74 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_32CC904 *)Method_DataMasterBase_EventEquipSkillReleaseMaster__EventEquipSkillReleaseEntity__string__TryGetEntity__);
 }
 
 
@@ -111,26 +111,26 @@ bool __fastcall EventEquipSkillReleaseMaster__tryGetOpenEventEquipSkillReleaseEn
   int32_t *v30; // x10
   __int64 v31; // x0
 
-  if ( (byte_4B01FA2 & 1) == 0 )
+  if ( (byte_4B1C4A1 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_ObjectModel_Collection_EventEquipSkillReleaseEntity__GetEnumerator__,
       *(_QWORD *)&eventId);
-    sub_1BC3008(&System_IDisposable_TypeInfo, v7);
-    sub_1BC3008(&System_Collections_Generic_IEnumerator_EventEquipSkillReleaseEntity__TypeInfo, v8);
-    sub_1BC3008(&System_Collections_IEnumerator_TypeInfo, v9);
-    byte_4B01FA2 = 1;
+    sub_1BCAFF8(&System_IDisposable_TypeInfo, v7);
+    sub_1BCAFF8(&System_Collections_Generic_IEnumerator_EventEquipSkillReleaseEntity__TypeInfo, v8);
+    sub_1BCAFF8(&System_Collections_IEnumerator_TypeInfo, v9);
+    byte_4B1C4A1 = 1;
   }
   *outEnt = 0LL;
-  sub_1BC2FAC((CGThumbnailListItem_o *)outEnt, 0, (int32_t)outEnt, method);
+  sub_1BCAF9C((CGThumbnailListItem_o *)outEnt, 0, (int32_t)outEnt, method);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BC3264(0LL, v10);
+    sub_1BCB254(0LL, v10);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_324AE30 *)Method_System_Collections_ObjectModel_Collection_EventEquipSkillReleaseEntity__GetEnumerator__);
+                 (const MethodInfo_3263BC0 *)Method_System_Collections_ObjectModel_Collection_EventEquipSkillReleaseEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BC3264(0LL, v12);
+    sub_1BCB254(0LL, v12);
   priority = -1;
   while ( 1 )
   {
@@ -151,7 +151,7 @@ bool __fastcall EventEquipSkillReleaseMaster__tryGetOpenEventEquipSkillReleaseEn
     else
     {
 LABEL_10:
-      p_method = sub_1C13570(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C1B560(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -174,20 +174,20 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v22 = sub_1C13570(Enumerator, System_Collections_Generic_IEnumerator_EventEquipSkillReleaseEntity__TypeInfo, 0LL);
+      v22 = sub_1C1B560(Enumerator, System_Collections_Generic_IEnumerator_EventEquipSkillReleaseEntity__TypeInfo, 0LL);
     }
     v23 = (EventEquipSkillReleaseEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
                                               Enumerator,
                                               *(_QWORD *)(v22 + 8));
     v25 = v23;
     if ( !v23 )
-      sub_1BC3264(0LL, v24);
+      sub_1BCB254(0LL, v24);
     if ( v23->fields.eventId == eventId
       && EventEquipSkillReleaseEntity__isOpen(v23, v24)
       && priority < v25->fields.priority )
     {
       *outEnt = v25;
-      sub_1BC2FAC((CGThumbnailListItem_o *)outEnt, (int32_t)v25, v26, v27);
+      sub_1BCAF9C((CGThumbnailListItem_o *)outEnt, (int32_t)v25, v26, v27);
       priority = v25->fields.priority;
     }
   }
@@ -208,7 +208,7 @@ LABEL_17:
   else
   {
 LABEL_28:
-    v31 = sub_1C13570(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v31 = sub_1C1B560(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v31)(Enumerator, *(_QWORD *)(v31 + 8));
   return *outEnt != 0LL;

@@ -12,14 +12,14 @@ void __fastcall BattleHitStopControl__Clear(BattleHitStopControl_o *this, const 
   int v5; // w9
 
   v2 = this;
-  if ( (byte_4B04937 & 1) == 0 )
+  if ( (byte_4B1EF3D & 1) == 0 )
   {
-    this = (BattleHitStopControl_o *)sub_1BC3008(&Method_System_Collections_Generic_List_GameObject__Clear__, method);
-    byte_4B04937 = 1;
+    this = (BattleHitStopControl_o *)sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__Clear__, method);
+    byte_4B1EF3D = 1;
   }
   stopobjlist = v2->fields.stopobjlist;
   if ( !stopobjlist )
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   size = stopobjlist->fields._size;
   v5 = stopobjlist->fields._version + 1;
   stopobjlist->fields._size = 0;
@@ -36,18 +36,18 @@ void __fastcall BattleHitStopControl__Start(BattleHitStopControl_o *this, const 
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4B04936 & 1) == 0 )
+  if ( (byte_4B1EF3C & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
-    sub_1BC3008(&System_Collections_Generic_List_GameObject__TypeInfo, v3);
-    byte_4B04936 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
+    sub_1BCAFF8(&System_Collections_Generic_List_GameObject__TypeInfo, v3);
+    byte_4B1EF3C = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_GameObject__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.stopobjlist = (struct System_Collections_Generic_List_GameObject__o *)v4;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.stopobjlist, (int32_t)v4, v5, v6);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.stopobjlist, (int32_t)v4, v5, v6);
 }
 
 
@@ -56,7 +56,7 @@ void __fastcall BattleHitStopControl__actWait(BattleHitStopControl_o *this, floa
   System_Collections_IEnumerator_o *v4; // x1
 
   v4 = BattleHitStopControl__stopwaitCor(this, time, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_70019872((UnityEngine_MonoBehaviour_o *)this, v4, 0LL);
+  UnityEngine_MonoBehaviour__StartCoroutine_70121648((UnityEngine_MonoBehaviour_o *)this, v4, 0LL);
 }
 
 
@@ -72,10 +72,10 @@ void __fastcall BattleHitStopControl__setTargetObject(
   __int64 size; // x10
   Il2CppClass **v10; // x8
 
-  if ( (byte_4B04938 & 1) == 0 )
+  if ( (byte_4B1EF3E & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_GameObject__Add__, obj);
-    byte_4B04938 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__Add__, obj);
+    byte_4B1EF3E = 1;
   }
   stopobjlist = (System_Collections_Generic_List_object__o *)this->fields.stopobjlist;
   if ( !stopobjlist
@@ -84,7 +84,7 @@ void __fastcall BattleHitStopControl__setTargetObject(
         ++stopobjlist->fields._version,
         !items) )
   {
-    sub_1BC3264(stopobjlist, obj);
+    sub_1BCB254(stopobjlist, obj);
   }
   size = stopobjlist->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -92,14 +92,14 @@ void __fastcall BattleHitStopControl__setTargetObject(
     System_Collections_Generic_List_object___AddWithResize(
       stopobjlist,
       (Il2CppObject *)obj,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
   }
   else
   {
     v10 = &items->obj.klass + size;
     stopobjlist->fields._size = size + 1;
     v10[4] = (Il2CppClass *)obj;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v10 + 4), (int32_t)obj, (int32_t)method, v3);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v10 + 4), (int32_t)obj, (int32_t)method, v3);
   }
 }
 
@@ -113,16 +113,16 @@ System_Collections_IEnumerator_o *__fastcall BattleHitStopControl__stopwaitCor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B04939 & 1) == 0 )
+  if ( (byte_4B1EF3F & 1) == 0 )
   {
-    sub_1BC3008(&BattleHitStopControl__stopwaitCor_d__5_TypeInfo, method);
-    byte_4B04939 = 1;
+    sub_1BCAFF8(&BattleHitStopControl__stopwaitCor_d__5_TypeInfo, method);
+    byte_4B1EF3F = 1;
   }
-  v5 = sub_1BC3254(BattleHitStopControl__stopwaitCor_d__5_TypeInfo);
+  v5 = sub_1BCB244(BattleHitStopControl__stopwaitCor_d__5_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0LL);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v6, v7);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v6, v7);
   *(float *)(v5 + 40) = time;
   return (System_Collections_IEnumerator_o *)v5;
 }
@@ -170,17 +170,17 @@ bool __fastcall BattleHitStopControl__stopwaitCor_d__5__MoveNext(
   System_Collections_Generic_List_Enumerator_object__o i; // [xsp+20h] [xbp-50h] BYREF
 
   v4 = this;
-  if ( (byte_4B0493A & 1) == 0 )
+  if ( (byte_4B1EF40 & 1) == 0 )
   {
-    sub_1BC3008(&DefCoroutine_TypeInfo, method);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v5);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v6);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v8);
-    sub_1BC3008(&UnityEngine_WaitForSeconds_TypeInfo, v9);
-    sub_1BC3008(&StringLiteral_22859/*"resumeAnimation"*/, v10);
-    this = (BattleHitStopControl__stopwaitCor_d__5_o *)sub_1BC3008(&StringLiteral_23479/*"stopAnimation"*/, v11);
-    byte_4B0493A = 1;
+    sub_1BCAFF8(&DefCoroutine_TypeInfo, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, v5);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v6);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v8);
+    sub_1BCAFF8(&UnityEngine_WaitForSeconds_TypeInfo, v9);
+    sub_1BCAFF8(&StringLiteral_22878/*"resumeAnimation"*/, v10);
+    this = (BattleHitStopControl__stopwaitCor_d__5_o *)sub_1BCAFF8(&StringLiteral_23501/*"stopAnimation"*/, v11);
+    byte_4B1EF40 = 1;
   }
   memset(&i, 0, sizeof(i));
   _1__state = v4->fields.__1__state;
@@ -196,27 +196,27 @@ bool __fastcall BattleHitStopControl__stopwaitCor_d__5__MoveNext(
         System_Collections_Generic_List_object___GetEnumerator(
           (System_Collections_Generic_List_Enumerator_T__o *)&v26,
           (System_Collections_Generic_List_object__o *)this,
-          (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+          (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
         for ( i = v26;
               System_Collections_Generic_List_Enumerator_object___MoveNext(
                 &i,
-                (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-              UnityEngine_GameObject__SendMessage_70016176(
+                (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+              UnityEngine_GameObject__SendMessage_70117952(
                 (UnityEngine_GameObject_o *)i.fields._current,
-                (System_String_o *)StringLiteral_22859/*"resumeAnimation"*/,
+                (System_String_o *)StringLiteral_22878/*"resumeAnimation"*/,
                 0LL) )
         {
           if ( !i.fields._current )
-            sub_1BC3264(0LL, v20);
+            sub_1BCB254(0LL, v20);
         }
         System_Collections_Generic_List_Enumerator_object___Dispose(
           &i,
-          (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+          (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
         return 0;
       }
     }
 LABEL_26:
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   }
   if ( _1__state != 1 )
   {
@@ -233,7 +233,7 @@ LABEL_26:
       milliSecPointOne = (Il2CppObject *)static_fields->milliSecPointOne;
       v4->fields.__2__current = (Il2CppObject *)static_fields->milliSecPointOne;
       p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-      sub_1BC2FAC(p__2__current, (int32_t)milliSecPointOne, v2, v3);
+      sub_1BCAF9C(p__2__current, (int32_t)milliSecPointOne, v2, v3);
       result = 1;
       LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
       return result;
@@ -249,28 +249,28 @@ LABEL_26:
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v26,
     (System_Collections_Generic_List_object__o *)this,
-    (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   for ( i = v26;
         System_Collections_Generic_List_Enumerator_object___MoveNext(
           &i,
-          (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-        UnityEngine_GameObject__SendMessage_70016176(
+          (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+        UnityEngine_GameObject__SendMessage_70117952(
           (UnityEngine_GameObject_o *)i.fields._current,
-          (System_String_o *)StringLiteral_23479/*"stopAnimation"*/,
+          (System_String_o *)StringLiteral_23501/*"stopAnimation"*/,
           0LL) )
   {
     if ( !i.fields._current )
-      sub_1BC3264(0LL, v19);
+      sub_1BCB254(0LL, v19);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &i,
-    (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   time = v4->fields.time;
-  v22 = (UnityEngine_WaitForSeconds_o *)sub_1BC3254(UnityEngine_WaitForSeconds_TypeInfo);
+  v22 = (UnityEngine_WaitForSeconds_o *)sub_1BCB244(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v22, time, 0LL);
   v4->fields.__2__current = (Il2CppObject *)v22;
   v23 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-  sub_1BC2FAC(v23, (int32_t)v22, v24, v25);
+  sub_1BCAF9C(v23, (int32_t)v22, v24, v25);
   result = 1;
   LODWORD(v23[-1].fields._ThumbnailSpritePath_k__BackingField) = 2;
   return result;
@@ -293,11 +293,11 @@ void __fastcall __noreturn BattleHitStopControl__stopwaitCor_d__5__System_Collec
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BC301C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BC3254(v2);
+  v2 = sub_1BCB00C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BCB244(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BC301C(&Method_BattleHitStopControl__stopwaitCor_d__5_System_Collections_IEnumerator_Reset__);
-  sub_1BC3130(v3, v4);
+  v4 = sub_1BCB00C(&Method_BattleHitStopControl__stopwaitCor_d__5_System_Collections_IEnumerator_Reset__);
+  sub_1BCB120(v3, v4);
 }
 
 

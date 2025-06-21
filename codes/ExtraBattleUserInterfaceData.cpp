@@ -30,23 +30,23 @@ void __fastcall ExtraBattleUserInterfaceData___ctor(
   __int64 v30; // x0
   __int64 v31; // x0
 
-  if ( (byte_4B04DFB & 1) == 0 )
+  if ( (byte_4B1F332 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Array_Empty_ExtraBattleUserInterfaceData_LabelDataWrapper___, value);
-    sub_1BC3008(
+    sub_1BCAFF8(&Method_System_Array_Empty_ExtraBattleUserInterfaceData_LabelDataWrapper___, value);
+    sub_1BCAFF8(
       &Method_System_Linq_Enumerable_Select_ExtraBattleUserInterfaceData_LabelData__ExtraBattleUserInterfaceData_LabelDataWrapper___,
       v7);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_ExtraBattleUserInterfaceData_LabelDataWrapper___, v8);
-    sub_1BC3008(
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_ExtraBattleUserInterfaceData_LabelDataWrapper___, v8);
+    sub_1BCAFF8(
       &System_Func_ExtraBattleUserInterfaceData_LabelData__ExtraBattleUserInterfaceData_LabelDataWrapper__TypeInfo,
       v9);
-    sub_1BC3008(&Method_ExtraBattleUserInterfaceData___c___ctor_b__18_0__, v10);
-    sub_1BC3008(&ExtraBattleUserInterfaceData___c_TypeInfo, v11);
-    byte_4B04DFB = 1;
+    sub_1BCAFF8(&Method_ExtraBattleUserInterfaceData___c___ctor_b__18_0__, v10);
+    sub_1BCAFF8(&ExtraBattleUserInterfaceData___c_TypeInfo, v11);
+    byte_4B1F332 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.data = value;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, v12, v13);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, v12, v13);
   data = this->fields.data;
   this->fields._Wave_k__BackingField = wave;
   if ( data && (labels = (System_Collections_Generic_IEnumerable_TSource__o *)data->fields.labels) != 0LL )
@@ -66,22 +66,22 @@ void __fastcall ExtraBattleUserInterfaceData___ctor(
         v19 = ExtraBattleUserInterfaceData___c_TypeInfo;
       }
       v21 = (Il2CppObject *)v19->static_fields->__9;
-      _9__18_0 = (System_Func_object__object__o *)sub_1BC3254(System_Func_ExtraBattleUserInterfaceData_LabelData__ExtraBattleUserInterfaceData_LabelDataWrapper__TypeInfo);
+      _9__18_0 = (System_Func_object__object__o *)sub_1BCB244(System_Func_ExtraBattleUserInterfaceData_LabelData__ExtraBattleUserInterfaceData_LabelDataWrapper__TypeInfo);
       System_Func_object__object____ctor(_9__18_0, v21, Method_ExtraBattleUserInterfaceData___c___ctor_b__18_0__, 0LL);
       static_fields = ExtraBattleUserInterfaceData___c_TypeInfo->static_fields;
       static_fields->__9__18_0 = (struct System_Func_ExtraBattleUserInterfaceData_LabelData__ExtraBattleUserInterfaceData_LabelDataWrapper__o *)_9__18_0;
-      sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__18_0, (int32_t)_9__18_0, v23, v24);
+      sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__18_0, (int32_t)_9__18_0, v23, v24);
     }
     v25 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                  labels,
                                                                  (System_Func_TSource__TResult__o *)_9__18_0,
-                                                                 (const MethodInfo_3036320 *)Method_System_Linq_Enumerable_Select_ExtraBattleUserInterfaceData_LabelData__ExtraBattleUserInterfaceData_LabelDataWrapper___);
+                                                                 (const MethodInfo_304EFCC *)Method_System_Linq_Enumerable_Select_ExtraBattleUserInterfaceData_LabelData__ExtraBattleUserInterfaceData_LabelDataWrapper___);
     v26 = System_Linq_Enumerable__ToArray_object_(
             v25,
-            (const MethodInfo_303E54C *)Method_System_Linq_Enumerable_ToArray_ExtraBattleUserInterfaceData_LabelDataWrapper___);
+            (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_ExtraBattleUserInterfaceData_LabelDataWrapper___);
     v27 = (struct ExtraBattleUserInterfaceData_LabelDataWrapper_array *)v26;
     if ( !this )
-      sub_1BC3264(v26, v26);
+      sub_1BCB254(v26, v26);
   }
   else
   {
@@ -89,21 +89,21 @@ void __fastcall ExtraBattleUserInterfaceData___ctor(
     v29 = *((_QWORD *)Method_System_Array_Empty_ExtraBattleUserInterfaceData_LabelDataWrapper___ + 7);
     if ( !v29 )
     {
-      sub_1C134C8(Method_System_Array_Empty_ExtraBattleUserInterfaceData_LabelDataWrapper___);
+      sub_1C1B4B8(Method_System_Array_Empty_ExtraBattleUserInterfaceData_LabelDataWrapper___);
       v29 = v28[7];
     }
     v30 = *(_QWORD *)(v29 + 16);
     if ( (*(_BYTE *)(v30 + 309) & 1) == 0 )
-      v30 = sub_1C1346C(inited);
+      v30 = sub_1C1B45C(inited);
     if ( !*(_DWORD *)(v30 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v30);
     v31 = *(_QWORD *)(v28[7] + 16LL);
     if ( (*(_BYTE *)(v31 + 309) & 1) == 0 )
-      v31 = sub_1C1346C(inited);
+      v31 = sub_1C1B45C(inited);
     v27 = **(struct ExtraBattleUserInterfaceData_LabelDataWrapper_array ***)(v31 + 184);
   }
   this->fields._Labels_k__BackingField = v27;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._Labels_k__BackingField, (int32_t)v27, v14, v15);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Labels_k__BackingField, (int32_t)v27, v14, v15);
 }
 
 
@@ -162,15 +162,15 @@ void __fastcall ExtraBattleUserInterfaceData_LabelData___ctor(
   struct System_String_StaticFields *static_fields; // x8
   struct System_String_o *Empty; // x1
 
-  if ( (byte_4B04DFC & 1) == 0 )
+  if ( (byte_4B1F333 & 1) == 0 )
   {
-    sub_1BC3008(&string_TypeInfo, method);
-    byte_4B04DFC = 1;
+    sub_1BCAFF8(&string_TypeInfo, method);
+    byte_4B1F333 = 1;
   }
   static_fields = string_TypeInfo->static_fields;
   Empty = static_fields->Empty;
   this->fields.valueStringFormat = static_fields->Empty;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.valueStringFormat, (int32_t)Empty, v2, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.valueStringFormat, (int32_t)Empty, v2, v3);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -197,15 +197,15 @@ void __fastcall ExtraBattleUserInterfaceData_LabelDataWrapper___ctor(
   int32_t countMax; // w22
   struct UnityEngine_Color_o v25; // [xsp+0h] [xbp-60h]
 
-  if ( (byte_4B04DFD & 1) == 0 )
+  if ( (byte_4B1F334 & 1) == 0 )
   {
-    sub_1BC3008(&CondType_TypeInfo, value);
-    byte_4B04DFD = 1;
+    sub_1BCAFF8(&CondType_TypeInfo, value);
+    byte_4B1F334 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.data = value;
   p_fields = &this->fields;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, v6, v7);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, v6, v7);
   data = this->fields.data;
   if ( !data )
     goto LABEL_27;
@@ -221,7 +221,7 @@ void __fastcall ExtraBattleUserInterfaceData_LabelDataWrapper___ctor(
         do
         {
           if ( (unsigned int)v14 >= (unsigned int)v13 )
-            sub_1BC326C(NumMissionCondDetail, v9, v10);
+            sub_1BCB25C(NumMissionCondDetail, v9, v10);
           v15 = values->m_Items[v14];
           if ( !v15 )
             goto LABEL_27;
@@ -264,7 +264,7 @@ LABEL_20:
     this->fields.normalColor = v25;
   if ( !p_fields->data )
 LABEL_27:
-    sub_1BC3264(NumMissionCondDetail, v9);
+    sub_1BCB254(NumMissionCondDetail, v9);
   NumMissionCondDetail = System_String__IsNullOrEmpty(p_fields->data->fields.overBorderColor, 0LL);
   if ( (NumMissionCondDetail & 1) == 0 )
   {
@@ -310,8 +310,8 @@ System_String_o *__fastcall ExtraBattleUserInterfaceData_LabelDataWrapper__Conve
   v6 = v4->fields.data;
   if ( !v6 )
 LABEL_7:
-    sub_1BC3264(this, *(_QWORD *)&value);
-  return System_Int32__ToString_63857360((int32_t)&v7, v6->fields.valueStringFormat, 0LL);
+    sub_1BCB254(this, *(_QWORD *)&value);
+  return System_Int32__ToString_63959136((int32_t)&v7, v6->fields.valueStringFormat, 0LL);
 }
 
 
@@ -333,10 +333,10 @@ int32_t __fastcall ExtraBattleUserInterfaceData_LabelDataWrapper__GetTotalCount(
   int32_t v14; // w19
 
   v4 = this;
-  if ( (byte_4B04DFE & 1) == 0 )
+  if ( (byte_4B1F335 & 1) == 0 )
   {
-    this = (ExtraBattleUserInterfaceData_LabelDataWrapper_o *)sub_1BC3008(&System_Math_TypeInfo, battleData);
-    byte_4B04DFE = 1;
+    this = (ExtraBattleUserInterfaceData_LabelDataWrapper_o *)sub_1BCAFF8(&System_Math_TypeInfo, battleData);
+    byte_4B1F335 = 1;
   }
   data = v4->fields.data;
   if ( !data )
@@ -354,7 +354,7 @@ int32_t __fastcall ExtraBattleUserInterfaceData_LabelDataWrapper__GetTotalCount(
     while ( 1 )
     {
       if ( v9 >= max_length )
-        sub_1BC326C(this, battleData, method);
+        sub_1BCB25C(this, battleData, method);
       v10 = values->m_Items[v9];
       if ( !v10 )
         break;
@@ -373,7 +373,7 @@ int32_t __fastcall ExtraBattleUserInterfaceData_LabelDataWrapper__GetTotalCount(
         goto LABEL_14;
     }
 LABEL_22:
-    sub_1BC3264(this, battleData);
+    sub_1BCB254(this, battleData);
   }
 LABEL_14:
   v11 = v4->fields.data;
@@ -387,7 +387,7 @@ LABEL_14:
     v14 = countMax;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  return System_Math__Min_63871024(v14, staticCount, 0LL);
+  return System_Math__Min_63972800(v14, staticCount, 0LL);
 }
 
 
@@ -411,10 +411,10 @@ void __fastcall ExtraBattleUserInterfaceData_LabelDataWrapper__LoadTextAndColorB
   System_String_o *v18; // x1
 
   v8 = this;
-  if ( (byte_4B04DFF & 1) == 0 )
+  if ( (byte_4B1F336 & 1) == 0 )
   {
-    this = (ExtraBattleUserInterfaceData_LabelDataWrapper_o *)sub_1BC3008(&StringLiteral_1039/*"/"*/, battleData);
-    byte_4B04DFF = 1;
+    this = (ExtraBattleUserInterfaceData_LabelDataWrapper_o *)sub_1BCAFF8(&StringLiteral_1039/*"/"*/, battleData);
+    byte_4B1F336 = 1;
   }
   *color = v8->fields.normalColor;
   data = v8->fields.data;
@@ -424,7 +424,7 @@ void __fastcall ExtraBattleUserInterfaceData_LabelDataWrapper__LoadTextAndColorB
   {
     v18 = data->fields.text;
     *text = v18;
-    sub_1BC2FAC((CGThumbnailListItem_o *)text, (int32_t)v18, (int32_t)text, (const MethodInfo *)color);
+    sub_1BCAF9C((CGThumbnailListItem_o *)text, (int32_t)v18, (int32_t)text, (const MethodInfo *)color);
     return;
   }
   TotalCount = ExtraBattleUserInterfaceData_LabelDataWrapper__GetTotalCount(v8, battleData, (const MethodInfo *)text);
@@ -439,14 +439,14 @@ void __fastcall ExtraBattleUserInterfaceData_LabelDataWrapper__LoadTextAndColorB
   if ( v14->fields.showBorder == 1 )
   {
     v16 = ExtraBattleUserInterfaceData_LabelDataWrapper__ConvertIntToString(v8, v14->fields.countBorder, v12);
-    v15 = System_String__Concat_62386896(v15, (System_String_o *)StringLiteral_1039/*"/"*/, v16, 0LL);
+    v15 = System_String__Concat_62488672(v15, (System_String_o *)StringLiteral_1039/*"/"*/, v16, 0LL);
   }
   *text = v15;
-  sub_1BC2FAC((CGThumbnailListItem_o *)text, (int32_t)v15, (int32_t)v12, v13);
+  sub_1BCAF9C((CGThumbnailListItem_o *)text, (int32_t)v15, (int32_t)v12, v13);
   v17 = v8->fields.data;
   if ( !v17 )
 LABEL_13:
-    sub_1BC3264(this, battleData);
+    sub_1BCB254(this, battleData);
   if ( v17->fields.countBorder <= TotalCount )
     *color = v8->fields.overBorderColor;
 }
@@ -462,7 +462,7 @@ int32_t __fastcall ExtraBattleUserInterfaceData_LabelDataWrapper__get_CountMax(
 
   data = this->fields.data;
   if ( !data )
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   countBorder = data->fields.countBorder;
   countMax = data->fields.countMax;
   if ( countBorder >= countMax )
@@ -487,15 +487,15 @@ void __fastcall ExtraBattleUserInterfaceData___c___cctor(const MethodInfo *metho
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B04E00 & 1) == 0 )
+  if ( (byte_4B1F337 & 1) == 0 )
   {
-    sub_1BC3008(&ExtraBattleUserInterfaceData___c_TypeInfo, v1);
-    byte_4B04E00 = 1;
+    sub_1BCAFF8(&ExtraBattleUserInterfaceData___c_TypeInfo, v1);
+    byte_4B1F337 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BC3254(ExtraBattleUserInterfaceData___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BCB244(ExtraBattleUserInterfaceData___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   ExtraBattleUserInterfaceData___c_TypeInfo->static_fields->__9 = (struct ExtraBattleUserInterfaceData___c_o *)v2;
-  sub_1BC2FAC((CGThumbnailListItem_o *)ExtraBattleUserInterfaceData___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BCAF9C((CGThumbnailListItem_o *)ExtraBattleUserInterfaceData___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -515,12 +515,12 @@ ExtraBattleUserInterfaceData_LabelDataWrapper_o *__fastcall ExtraBattleUserInter
   ExtraBattleUserInterfaceData_LabelDataWrapper_o *v4; // x20
   const MethodInfo *v5; // x2
 
-  if ( (byte_4B04E01 & 1) == 0 )
+  if ( (byte_4B1F338 & 1) == 0 )
   {
-    sub_1BC3008(&ExtraBattleUserInterfaceData_LabelDataWrapper_TypeInfo, ld);
-    byte_4B04E01 = 1;
+    sub_1BCAFF8(&ExtraBattleUserInterfaceData_LabelDataWrapper_TypeInfo, ld);
+    byte_4B1F338 = 1;
   }
-  v4 = (ExtraBattleUserInterfaceData_LabelDataWrapper_o *)sub_1BC3254(ExtraBattleUserInterfaceData_LabelDataWrapper_TypeInfo);
+  v4 = (ExtraBattleUserInterfaceData_LabelDataWrapper_o *)sub_1BCB244(ExtraBattleUserInterfaceData_LabelDataWrapper_TypeInfo);
   ExtraBattleUserInterfaceData_LabelDataWrapper___ctor(v4, ld, v5);
   return v4;
 }

@@ -1,14 +1,14 @@
 void __fastcall ConstantLongMaster___ctor(ConstantLongMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B01E46 & 1) == 0 )
+  if ( (byte_4B1C345 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string___ctor__, method);
-    byte_4B01E46 = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string___ctor__, method);
+    byte_4B1C345 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     106,
-    (const MethodInfo_32B1804 *)Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string___ctor__);
+    (const MethodInfo_32CA594 *)Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string___ctor__);
 }
 
 
@@ -21,26 +21,26 @@ int64_t __fastcall ConstantLongMaster__GetValue(
   __int64 v6; // x1
   Il2CppObject *result; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B01E48 & 1) == 0 )
+  if ( (byte_4B1C347 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntityFromId__, name);
-    byte_4B01E48 = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntityFromId__, name);
+    byte_4B1C347 = 1;
   }
   result = 0LL;
   EntityFromId = DataMasterBase_object__object__object___TryGetEntityFromId(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                    &result,
                    name,
-                   (const MethodInfo_32B31D8 *)Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntityFromId__);
+                   (const MethodInfo_32CBF68 *)Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntityFromId__);
   if ( !EntityFromId )
     return -1LL;
   if ( !result )
-    sub_1BC3264(EntityFromId, v6);
+    sub_1BCB254(EntityFromId, v6);
   return (int64_t)result[1].monitor;
 }
 
 
-int64_t __fastcall ConstantLongMaster__GetValue_40907052(
+int64_t __fastcall ConstantLongMaster__GetValue_41064204(
         ConstantLongMaster_o *this,
         System_String_o *name,
         int64_t def,
@@ -50,21 +50,21 @@ int64_t __fastcall ConstantLongMaster__GetValue_40907052(
   __int64 v8; // x1
   Il2CppObject *result; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B01E49 & 1) == 0 )
+  if ( (byte_4B1C348 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntityFromId__, name);
-    byte_4B01E49 = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntityFromId__, name);
+    byte_4B1C348 = 1;
   }
   result = 0LL;
   EntityFromId = DataMasterBase_object__object__object___TryGetEntityFromId(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                    &result,
                    name,
-                   (const MethodInfo_32B31D8 *)Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntityFromId__);
+                   (const MethodInfo_32CBF68 *)Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntityFromId__);
   if ( EntityFromId )
   {
     if ( !result )
-      sub_1BC3264(EntityFromId, v8);
+      sub_1BCB254(EntityFromId, v8);
     return (int64_t)result[1].monitor;
   }
   return def;
@@ -85,33 +85,33 @@ int64_t __fastcall ConstantLongMaster__getValue(System_String_o *name, const Met
   __int64 v6; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B01E47 & 1) == 0 )
+  if ( (byte_4B1C346 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMasterData_ConstantLongMaster___, method);
-    sub_1BC3008(&Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntity__, v3);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4B01E47 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_ConstantLongMaster___, method);
+    sub_1BCAFF8(&Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntity__, v3);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
+    byte_4B1C346 = 1;
   }
   entity = 0LL;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ConstantLongMaster___);
+               (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ConstantLongMaster___);
   if ( !Instance )
     goto LABEL_10;
   Instance = (Il2CppObject *)DataMasterBase_object__object__object___TryGetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                &entity,
                                (Il2CppObject *)name,
-                               (const MethodInfo_32B3B74 *)Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntity__);
+                               (const MethodInfo_32CC904 *)Method_DataMasterBase_ConstantLongMaster__ConstantLongEntity__string__TryGetEntity__);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
     if ( entity )
       return (int64_t)entity[1].monitor;
 LABEL_10:
-    sub_1BC3264(Instance, v6);
+    sub_1BCB254(Instance, v6);
   }
   return -1LL;
 }

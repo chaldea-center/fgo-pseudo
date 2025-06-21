@@ -2,10 +2,10 @@ void __fastcall RecommendSupportQuestBoardListViewObject___ctor(
         RecommendSupportQuestBoardListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4AFDEFF & 1) == 0 )
+  if ( (byte_4B184BB & 1) == 0 )
   {
-    sub_1BC3008(&ListViewObject_TypeInfo, method);
-    byte_4AFDEFF = 1;
+    sub_1BCAFF8(&ListViewObject_TypeInfo, method);
+    byte_4B184BB = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -23,20 +23,20 @@ void __fastcall RecommendSupportQuestBoardListViewObject__Awake(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4AFDEFC & 1) == 0 )
+  if ( (byte_4B184B8 & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestBoardListViewItemDraw___, method);
-    byte_4AFDEFC = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestBoardListViewItemDraw___, method);
+    byte_4B184B8 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BC3264(0LL, v3);
+    sub_1BCB254(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestBoardListViewItemDraw___);
+                       (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_RecommendSupportQuestBoardListViewItemDraw___);
   this->fields.itemDraw = (struct RecommendSupportQuestBoardListViewItemDraw_o *)Component_object;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -47,10 +47,10 @@ RecommendSupportQuestBoardListViewItem_o *__fastcall RecommendSupportQuestBoardL
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4AFDEFE & 1) == 0 )
+  if ( (byte_4B184BA & 1) == 0 )
   {
-    sub_1BC3008(&RecommendSupportQuestBoardListViewItem_TypeInfo, method);
-    byte_4AFDEFE = 1;
+    sub_1BCAFF8(&RecommendSupportQuestBoardListViewItem_TypeInfo, method);
+    byte_4B184BA = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -75,23 +75,23 @@ void __fastcall RecommendSupportQuestBoardListViewObject__SetItem(
   RecommendSupportQuestBoardListViewItemDraw_o *itemDraw; // x0
   __int64 methodPtr_low; // x9
 
-  if ( (byte_4AFDEFD & 1) == 0 )
+  if ( (byte_4B184B9 & 1) == 0 )
   {
-    sub_1BC3008(&RecommendSupportQuestBoardListViewItem_TypeInfo, item);
-    byte_4AFDEFD = 1;
+    sub_1BCAFF8(&RecommendSupportQuestBoardListViewItem_TypeInfo, item);
+    byte_4B184B9 = 1;
   }
-  ListViewObject__SetItem_42800124((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_42963052((ListViewObject_o *)this, item, seed, 0LL);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_1BC3264(itemDraw, v7);
+    sub_1BCB254(itemDraw, v7);
   if ( item )
   {
     methodPtr_low = LOBYTE(RecommendSupportQuestBoardListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
     if ( LOBYTE(item->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (RecommendSupportQuestBoardListViewItem_c *)item->klass->_2.typeHierarchy[methodPtr_low - 1] != RecommendSupportQuestBoardListViewItem_TypeInfo )
     {
-      itemDraw = (RecommendSupportQuestBoardListViewItemDraw_o *)sub_1BC3524(item);
+      itemDraw = (RecommendSupportQuestBoardListViewItemDraw_o *)sub_1BCB514(item);
       goto LABEL_9;
     }
   }

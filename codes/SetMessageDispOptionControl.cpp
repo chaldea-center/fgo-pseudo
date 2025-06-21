@@ -16,25 +16,25 @@ void __fastcall SetMessageDispOptionControl__Init(SetMessageDispOptionControl_o 
   UILabel_o *infoLb; // x20
   const MethodInfo *v10; // x1
 
-  if ( (byte_4AFD12D & 1) == 0 )
+  if ( (byte_4B1760E & 1) == 0 )
   {
-    sub_1BC3008(&LocalizationManager_TypeInfo, method);
-    sub_1BC3008(&OptionManager_TypeInfo, v3);
-    sub_1BC3008(&StringLiteral_9582/*"OPTION_FRIEND_MESSAGE_DISP"*/, v4);
-    sub_1BC3008(&StringLiteral_9583/*"OPTION_FRIEND_MESSAGE_EXPLANATION"*/, v5);
-    byte_4AFD12D = 1;
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, method);
+    sub_1BCAFF8(&OptionManager_TypeInfo, v3);
+    sub_1BCAFF8(&StringLiteral_9593/*"OPTION_FRIEND_MESSAGE_DISP"*/, v4);
+    sub_1BCAFF8(&StringLiteral_9594/*"OPTION_FRIEND_MESSAGE_EXPLANATION"*/, v5);
+    byte_4B1760E = 1;
   }
   dispTitle = this->fields.dispTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9582/*"OPTION_FRIEND_MESSAGE_DISP"*/, 0LL);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9593/*"OPTION_FRIEND_MESSAGE_DISP"*/, 0LL);
   if ( !dispTitle
     || (UILabel__set_text(dispTitle, v7, 0LL),
         infoLb = this->fields.infoLb,
-        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9583/*"OPTION_FRIEND_MESSAGE_EXPLANATION"*/, 0LL),
+        v7 = LocalizationManager__Get((System_String_o *)StringLiteral_9594/*"OPTION_FRIEND_MESSAGE_EXPLANATION"*/, 0LL),
         !infoLb) )
   {
-    sub_1BC3264(v7, v8);
+    sub_1BCB254(v7, v8);
   }
   UILabel__set_text(infoLb, v7, 0LL);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -50,15 +50,15 @@ void __fastcall SetMessageDispOptionControl__OnChangeBtn(SetMessageDispOptionCon
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4AFD130 & 1) == 0 )
+  if ( (byte_4B17611 & 1) == 0 )
   {
-    sub_1BC3008(&Method_SetMessageDispOptionControl_OnChangeBtn__, method);
-    byte_4AFD130 = 1;
+    sub_1BCAFF8(&Method_SetMessageDispOptionControl_OnChangeBtn__, method);
+    byte_4B17611 = 1;
   }
   v3 = Method_SetMessageDispOptionControl_OnChangeBtn__;
   if ( (*((_BYTE *)Method_SetMessageDispOptionControl_OnChangeBtn__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1BC3020(Method_SetMessageDispOptionControl_OnChangeBtn__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1BCB010(Method_SetMessageDispOptionControl_OnChangeBtn__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.isDisp, 0, 0LL);
   this->fields.isDisp ^= 1u;
   SetMessageDispOptionControl__setDispValue(this, v5);
@@ -69,10 +69,10 @@ void __fastcall SetMessageDispOptionControl__Reflection(SetMessageDispOptionCont
 {
   _BOOL4 isDisp; // w19
 
-  if ( (byte_4AFD12F & 1) == 0 )
+  if ( (byte_4B17610 & 1) == 0 )
   {
-    sub_1BC3008(&OptionManager_TypeInfo, method);
-    byte_4AFD12F = 1;
+    sub_1BCAFF8(&OptionManager_TypeInfo, method);
+    byte_4B17610 = 1;
   }
   isDisp = this->fields.isDisp;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -89,18 +89,18 @@ void __fastcall SetMessageDispOptionControl__setDispValue(
   UIButton_o *switchButton; // x0
   __int64 *v5; // x8
 
-  if ( (byte_4AFD12E & 1) == 0 )
+  if ( (byte_4B1760F & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_17352/*"btn_on"*/, method);
-    sub_1BC3008(&StringLiteral_17351/*"btn_off"*/, v3);
-    byte_4AFD12E = 1;
+    sub_1BCAFF8(&StringLiteral_17363/*"btn_on"*/, method);
+    sub_1BCAFF8(&StringLiteral_17362/*"btn_off"*/, v3);
+    byte_4B1760F = 1;
   }
   switchButton = this->fields.switchButton;
   if ( !switchButton )
-    sub_1BC3264(0LL, method);
+    sub_1BCB254(0LL, method);
   if ( this->fields.isDisp )
-    v5 = &StringLiteral_17352/*"btn_on"*/;
+    v5 = &StringLiteral_17363/*"btn_on"*/;
   else
-    v5 = &StringLiteral_17351/*"btn_off"*/;
+    v5 = &StringLiteral_17362/*"btn_off"*/;
   UIButton__set_normalSprite(switchButton, (System_String_o *)*v5, 0LL);
 }

@@ -16,12 +16,12 @@ void __fastcall GrandQuestClassBoardClassIconController__LateUpdate(
 
   transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   v4 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4AFBDB7 )
+  if ( !byte_4B16197 )
   {
-    transform = sub_1BC3008(&UnityEngine_Quaternion_TypeInfo, v3);
-    byte_4AFBDB7 = 1;
+    transform = sub_1BCAFF8(&UnityEngine_Quaternion_TypeInfo, v3);
+    byte_4B16197 = 1;
   }
   if ( !v4 )
-    sub_1BC3264(transform, v3);
+    sub_1BCB254(transform, v3);
   UnityEngine_Transform__set_rotation(v4, UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion, 0LL);
 }

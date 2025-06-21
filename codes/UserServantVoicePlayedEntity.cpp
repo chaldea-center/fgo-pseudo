@@ -1,13 +1,13 @@
 void __fastcall UserServantVoicePlayedEntity___ctor(UserServantVoicePlayedEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B0304A & 1) == 0 )
+  if ( (byte_4B1D553 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B0304A = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B1D553 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall UserServantVoicePlayedEntity__CreatePK(
         int32_t svtId,
         const MethodInfo *method)
 {
-  if ( (byte_4B03047 & 1) == 0 )
+  if ( (byte_4B1D550 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&svtId);
-    byte_4B03047 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&svtId);
+    byte_4B1D550 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            svtId,
-           (const MethodInfo_30000F4 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3018D34 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -39,10 +39,10 @@ System_String_o *__fastcall UserServantVoicePlayedEntity__CreatePrimaryKey(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v8; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_4B03046 & 1) == 0 )
+  if ( (byte_4B1D54F & 1) == 0 )
   {
-    sub_1BC3008(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
-    byte_4B03046 = 1;
+    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
+    byte_4B1D54F = 1;
   }
   v3 = *(_OWORD *)&this->fields.userId.fields.fakeValue;
   *(_OWORD *)&v8.fields.currentCryptoKey = *(_OWORD *)&this->fields.userId.fields.currentCryptoKey;
@@ -50,7 +50,7 @@ System_String_o *__fastcall UserServantVoicePlayedEntity__CreatePrimaryKey(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v7 = v8;
-  v4 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48027584(&v7, 0LL);
+  v4 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v7, 0LL);
   return UserServantVoicePlayedEntity__CreatePK(v4, this->fields.svtId, v5);
 }
 
@@ -71,12 +71,12 @@ bool __fastcall UserServantVoicePlayedEntity__IsPlayed(
   const MethodInfo *v13; // x3
   __int64 v14; // x1
 
-  if ( (byte_4B03048 & 1) == 0 )
+  if ( (byte_4B1D551 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_HashSet_int__Contains__, *(_QWORD *)&flagNum);
-    sub_1BC3008(&Method_System_Collections_Generic_HashSet_int___ctor___76739976, v5);
-    sub_1BC3008(&System_Collections_Generic_HashSet_int__TypeInfo, v6);
-    byte_4B03048 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_HashSet_int__Contains__, *(_QWORD *)&flagNum);
+    sub_1BCAFF8(&Method_System_Collections_Generic_HashSet_int___ctor___76845584, v5);
+    sub_1BCAFF8(&System_Collections_Generic_HashSet_int__TypeInfo, v6);
+    byte_4B1D551 = 1;
   }
   p_voicePlayedHash = (CGThumbnailListItem_o *)&this->fields.voicePlayedHash;
   voicePlayedHash = this->fields.voicePlayedHash;
@@ -84,24 +84,24 @@ bool __fastcall UserServantVoicePlayedEntity__IsPlayed(
     return System_Collections_Generic_HashSet_int___Contains(
              voicePlayedHash,
              flagNum,
-             (const MethodInfo_355857C *)Method_System_Collections_Generic_HashSet_int__Contains__);
+             (const MethodInfo_357130C *)Method_System_Collections_Generic_HashSet_int__Contains__);
   voicePlayed = (System_Collections_Generic_IEnumerable_T__o *)this->fields.voicePlayed;
   if ( voicePlayed && voicePlayed[1].monitor )
   {
-    v11 = (System_Collections_Generic_HashSet_int__o *)sub_1BC3254(System_Collections_Generic_HashSet_int__TypeInfo);
-    System_Collections_Generic_HashSet_int____ctor_55934840(
+    v11 = (System_Collections_Generic_HashSet_int__o *)sub_1BCB244(System_Collections_Generic_HashSet_int__TypeInfo);
+    System_Collections_Generic_HashSet_int____ctor_56036616(
       v11,
       voicePlayed,
-      (const MethodInfo_3557F78 *)Method_System_Collections_Generic_HashSet_int___ctor___76739976);
+      (const MethodInfo_3570D08 *)Method_System_Collections_Generic_HashSet_int___ctor___76845584);
     p_voicePlayedHash->klass = (CGThumbnailListItem_c *)v11;
-    sub_1BC2FAC(p_voicePlayedHash, (int32_t)v11, v12, v13);
+    sub_1BCAF9C(p_voicePlayedHash, (int32_t)v11, v12, v13);
     voicePlayedHash = (System_Collections_Generic_HashSet_int__o *)p_voicePlayedHash->klass;
     if ( !p_voicePlayedHash->klass )
-      sub_1BC3264(0LL, v14);
+      sub_1BCB254(0LL, v14);
     return System_Collections_Generic_HashSet_int___Contains(
              voicePlayedHash,
              flagNum,
-             (const MethodInfo_355857C *)Method_System_Collections_Generic_HashSet_int__Contains__);
+             (const MethodInfo_357130C *)Method_System_Collections_Generic_HashSet_int__Contains__);
   }
   return 0;
 }
@@ -122,32 +122,32 @@ bool __fastcall UserServantVoicePlayedEntity__SetPlayed(
   const MethodInfo *v11; // x3
   __int64 v12; // x1
 
-  if ( (byte_4B03049 & 1) == 0 )
+  if ( (byte_4B1D552 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_HashSet_int__Add__, *(_QWORD *)&flagNum);
-    sub_1BC3008(&Method_System_Collections_Generic_HashSet_int___ctor___76739976, v5);
-    sub_1BC3008(&System_Collections_Generic_HashSet_int__TypeInfo, v6);
-    byte_4B03049 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_HashSet_int__Add__, *(_QWORD *)&flagNum);
+    sub_1BCAFF8(&Method_System_Collections_Generic_HashSet_int___ctor___76845584, v5);
+    sub_1BCAFF8(&System_Collections_Generic_HashSet_int__TypeInfo, v6);
+    byte_4B1D552 = 1;
   }
   voicePlayedHash = this->fields.voicePlayedHash;
   if ( !voicePlayedHash )
   {
     voicePlayed = (System_Collections_Generic_IEnumerable_T__o *)this->fields.voicePlayed;
-    v9 = (System_Collections_Generic_HashSet_int__o *)sub_1BC3254(System_Collections_Generic_HashSet_int__TypeInfo);
-    System_Collections_Generic_HashSet_int____ctor_55934840(
+    v9 = (System_Collections_Generic_HashSet_int__o *)sub_1BCB244(System_Collections_Generic_HashSet_int__TypeInfo);
+    System_Collections_Generic_HashSet_int____ctor_56036616(
       v9,
       voicePlayed,
-      (const MethodInfo_3557F78 *)Method_System_Collections_Generic_HashSet_int___ctor___76739976);
+      (const MethodInfo_3570D08 *)Method_System_Collections_Generic_HashSet_int___ctor___76845584);
     this->fields.voicePlayedHash = v9;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.voicePlayedHash, (int32_t)v9, v10, v11);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.voicePlayedHash, (int32_t)v9, v10, v11);
     voicePlayedHash = this->fields.voicePlayedHash;
     if ( !voicePlayedHash )
-      sub_1BC3264(0LL, v12);
+      sub_1BCB254(0LL, v12);
   }
   return System_Collections_Generic_HashSet_int___Add(
            voicePlayedHash,
            flagNum,
-           (const MethodInfo_355908C *)Method_System_Collections_Generic_HashSet_int__Add__);
+           (const MethodInfo_3571E1C *)Method_System_Collections_Generic_HashSet_int__Add__);
 }
 
 

@@ -4,23 +4,25 @@ void __fastcall TerminalBoardOptionTextData___ctor(
         System_String_o *behindTextFormat,
         int32_t itemImageId,
         bool isLeft,
+        bool isCenter,
+        int32_t alignment,
         const MethodInfo *method)
 {
-  TerminalBoardOptionTextData_o *v10; // x23
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  TerminalBoardOptionTextData_o *v12; // x23
   int32_t v13; // w2
   const MethodInfo *v14; // x3
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
 
-  v10 = this;
+  v12 = this;
   System_Object___ctor((Il2CppObject *)this, 0LL);
-  v10->fields._ForwardText_k__BackingField = forwardText;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v10->fields, (int32_t)forwardText, v11, v12);
-  v10->fields._BehindTextFormat_k__BackingField = behindTextFormat;
-  v10 = (TerminalBoardOptionTextData_o *)((char *)v10 + 32);
-  sub_1BC2FAC((CGThumbnailListItem_o *)v10, (int32_t)behindTextFormat, v13, v14);
-  LODWORD(v10->monitor) = itemImageId;
-  BYTE4(v10->monitor) = isLeft;
+  v12->fields._ForwardText_k__BackingField = forwardText;
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v12->fields, (int32_t)forwardText, v13, v14);
+  v12->fields._BehindTextFormat_k__BackingField = behindTextFormat;
+  v12 = (TerminalBoardOptionTextData_o *)((char *)v12 + 32);
+  sub_1BCAF9C((CGThumbnailListItem_o *)v12, (int32_t)behindTextFormat, v15, v16);
+  LODWORD(v12->monitor) = itemImageId;
+  HIDWORD(v12->monitor) = alignment;
 }
 
 
@@ -37,24 +39,32 @@ void __fastcall TerminalBoardOptionTextData__SetParamsToBehindText(
   const MethodInfo *v10; // x3
 
   if ( !args )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   v6 = *(_QWORD *)&args->max_length;
   BehindTextFormat_k__BackingField = this->fields._BehindTextFormat_k__BackingField;
   if ( v6 )
   {
-    v8 = System_String__Format_62390076(this->fields._BehindTextFormat_k__BackingField, args, 0LL);
+    v8 = System_String__Format_62491852(this->fields._BehindTextFormat_k__BackingField, args, 0LL);
     this->fields._BehindText_k__BackingField = v8;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._BehindText_k__BackingField, (int32_t)v8, v9, v10);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._BehindText_k__BackingField, (int32_t)v8, v9, v10);
   }
   else
   {
     this->fields._BehindText_k__BackingField = BehindTextFormat_k__BackingField;
-    sub_1BC2FAC(
+    sub_1BCAF9C(
       (CGThumbnailListItem_o *)&this->fields._BehindText_k__BackingField,
       (int32_t)BehindTextFormat_k__BackingField,
       (int32_t)method,
       v3);
   }
+}
+
+
+int32_t __fastcall TerminalBoardOptionTextData__get_Alignment(
+        TerminalBoardOptionTextData_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._Alignment_k__BackingField;
 }
 
 
@@ -84,7 +94,7 @@ System_String_o *__fastcall TerminalBoardOptionTextData__get_ForwardText(
 
 bool __fastcall TerminalBoardOptionTextData__get_IsLeft(TerminalBoardOptionTextData_o *this, const MethodInfo *method)
 {
-  return this->fields._IsLeft_k__BackingField;
+  return this->fields._Alignment_k__BackingField == 1;
 }
 
 
@@ -104,7 +114,7 @@ void __fastcall TerminalBoardOptionTextData__set_BehindText(
   const MethodInfo *v3; // x3
 
   this->fields._BehindText_k__BackingField = value;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._BehindText_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._BehindText_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -116,7 +126,7 @@ void __fastcall TerminalBoardOptionTextData__set_BehindTextFormat(
   const MethodInfo *v3; // x3
 
   this->fields._BehindTextFormat_k__BackingField = value;
-  sub_1BC2FAC(
+  sub_1BCAF9C(
     (CGThumbnailListItem_o *)&this->fields._BehindTextFormat_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -132,16 +142,7 @@ void __fastcall TerminalBoardOptionTextData__set_ForwardText(
   const MethodInfo *v3; // x3
 
   this->fields._ForwardText_k__BackingField = value;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
-}
-
-
-void __fastcall TerminalBoardOptionTextData__set_IsLeft(
-        TerminalBoardOptionTextData_o *this,
-        bool value,
-        const MethodInfo *method)
-{
-  this->fields._IsLeft_k__BackingField = value;
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 

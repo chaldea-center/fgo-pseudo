@@ -21,18 +21,18 @@ void __fastcall RecommendSupportQuestBoardListViewItem___ctor(
 
   v12 = this;
   v13 = isSetting;
-  ListViewItem___ctor_42769384((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
   v12->fields._QuestFolderInfo_k__BackingField = folderInfo;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v12->fields._QuestFolderInfo_k__BackingField, (int32_t)folderInfo, v14, v15);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v12->fields._QuestFolderInfo_k__BackingField, (int32_t)folderInfo, v14, v15);
   v12->fields._QuestInfo_k__BackingField = questInfo;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v12->fields._QuestInfo_k__BackingField, (int32_t)questInfo, v16, v17);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v12->fields._QuestInfo_k__BackingField, (int32_t)questInfo, v16, v17);
   v19 = RecommendSupportQuestBoardListViewItem__CheckQuestRestriction(v12, v18);
   v12->fields._SettingSvtName_k__BackingField = svtName;
   v12 = (RecommendSupportQuestBoardListViewItem_o *)((char *)v12 + 136);
   LOBYTE(v12[-1].fields._SettingSvtName_k__BackingField) = v19;
   BYTE1(v12[-1].fields._SettingSvtName_k__BackingField) = v13;
   HIDWORD(v12[-1].fields._SettingSvtName_k__BackingField) = selectIndex;
-  sub_1BC2FAC((CGThumbnailListItem_o *)v12, (int32_t)svtName, v20, v21);
+  sub_1BCAF9C((CGThumbnailListItem_o *)v12, (int32_t)svtName, v20, v21);
 }
 
 
@@ -55,34 +55,34 @@ bool __fastcall RecommendSupportQuestBoardListViewItem__CheckQuestRestriction(
   Il2CppObject *v15; // x20
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4AFDED5 & 1) == 0 )
+  if ( (byte_4B18491 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMaster_UserServantMaster___, method);
-    sub_1BC3008(&DataManager_TypeInfo, v3);
-    sub_1BC3008(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v4);
-    sub_1BC3008(&QuestRestrictionInfo_TypeInfo, v5);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v6);
-    byte_4AFDED5 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMaster_UserServantMaster___, method);
+    sub_1BCAFF8(&DataManager_TypeInfo, v3);
+    sub_1BCAFF8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v4);
+    sub_1BCAFF8(&QuestRestrictionInfo_TypeInfo, v5);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__, v6);
+    byte_4B18491 = 1;
   }
   entity = 0LL;
   if ( !this->fields._QuestInfo_k__BackingField )
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserServantMaster___);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance
     || (Instance = RecommendSupportSelectControl__get_SelectServantId((RecommendSupportSelectControl_o *)Instance, 0LL),
         !Master_object) )
   {
 LABEL_16:
-    sub_1BC3264(Instance, v9);
+    sub_1BCB254(Instance, v9);
   }
   Instance = DataMasterBase_object__object__long___TryGetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                &entity,
                Instance,
-               (const MethodInfo_32B1618 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+               (const MethodInfo_32CA3A8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
   if ( (Instance & 1) == 0 )
     return 0;
   QuestInfo_k__BackingField = this->fields._QuestInfo_k__BackingField;
@@ -93,8 +93,8 @@ LABEL_16:
     goto LABEL_16;
   phase = QuestInfo_k__BackingField->fields.phase;
   id = questEntity->fields.id;
-  v14 = (QuestRestrictionInfo_o *)sub_1BC3254(QuestRestrictionInfo_TypeInfo);
-  QuestRestrictionInfo___ctor_42371264(v14, 0, id, phase, 0LL);
+  v14 = (QuestRestrictionInfo_o *)sub_1BCB244(QuestRestrictionInfo_TypeInfo);
+  QuestRestrictionInfo___ctor_42534072(v14, 0, id, phase, 0LL);
   v15 = entity;
   if ( !entity )
     goto LABEL_16;

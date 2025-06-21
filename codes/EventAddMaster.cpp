@@ -1,14 +1,14 @@
 void __fastcall EventAddMaster___ctor(EventAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B01EAC & 1) == 0 )
+  if ( (byte_4B1C3AB & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_EventAddMaster__EventAddEntity__string___ctor__, method);
-    byte_4B01EAC = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_EventAddMaster__EventAddEntity__string___ctor__, method);
+    byte_4B1C3AB = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     206,
-    (const MethodInfo_32B1804 *)Method_DataMasterBase_EventAddMaster__EventAddEntity__string___ctor__);
+    (const MethodInfo_32CA594 *)Method_DataMasterBase_EventAddMaster__EventAddEntity__string___ctor__);
 }
 
 
@@ -22,16 +22,16 @@ EventAddEntity_o *__fastcall EventAddMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B01EAA & 1) == 0 )
+  if ( (byte_4B1C3A9 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_EventAddMaster__EventAddEntity__string__GetEntity__, *(_QWORD *)&eventId);
-    byte_4B01EAA = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_EventAddMaster__EventAddEntity__string__GetEntity__, *(_QWORD *)&eventId);
+    byte_4B1C3A9 = 1;
   }
   PK = (Il2CppObject *)EventAddEntity__CreatePK(eventId, overwriteType, priority, *(const MethodInfo **)&priority);
   return (EventAddEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                PK,
-                               (const MethodInfo_32B3B28 *)Method_DataMasterBase_EventAddMaster__EventAddEntity__string__GetEntity__);
+                               (const MethodInfo_32CC8B8 *)Method_DataMasterBase_EventAddMaster__EventAddEntity__string__GetEntity__);
 }
 
 
@@ -46,17 +46,17 @@ bool __fastcall EventAddMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B01EAB & 1) == 0 )
+  if ( (byte_4B1C3AA & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_EventAddMaster__EventAddEntity__string__TryGetEntity__, entity);
-    byte_4B01EAB = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_EventAddMaster__EventAddEntity__string__TryGetEntity__, entity);
+    byte_4B1C3AA = 1;
   }
   PK = (Il2CppObject *)EventAddEntity__CreatePK(eventId, overwriteType, priority, *(const MethodInfo **)&overwriteType);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32B3B74 *)Method_DataMasterBase_EventAddMaster__EventAddEntity__string__TryGetEntity__);
+           (const MethodInfo_32CC904 *)Method_DataMasterBase_EventAddMaster__EventAddEntity__string__TryGetEntity__);
 }
 
 
@@ -99,32 +99,32 @@ EventAddEntity_o *__fastcall EventAddMaster__getOverwriteEventAddEntity(
   int32_t v36; // w2
   const MethodInfo *v37; // x3
 
-  if ( (byte_4B01EAD & 1) == 0 )
+  if ( (byte_4B1C3AC & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_EventAddEntity__get_Count__, *(_QWORD *)&eventId);
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_EventAddEntity__get_Item__, v7);
-    sub_1BC3008(&System_Comparison_EventAddEntity__TypeInfo, v8);
-    sub_1BC3008(&CondType_TypeInfo, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventAddEntity__Add__, v10);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventAddEntity__Sort__, v11);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventAddEntity___ctor__, v12);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventAddEntity__get_Count__, v13);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventAddEntity__get_Item__, v14);
-    sub_1BC3008(&System_Collections_Generic_List_EventAddEntity__TypeInfo, v15);
-    sub_1BC3008(&Method_EventAddMaster___c__getOverwriteEventAddEntity_b__3_0__, v16);
-    sub_1BC3008(&EventAddMaster___c_TypeInfo, v17);
-    byte_4B01EAD = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_EventAddEntity__get_Count__, *(_QWORD *)&eventId);
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_EventAddEntity__get_Item__, v7);
+    sub_1BCAFF8(&System_Comparison_EventAddEntity__TypeInfo, v8);
+    sub_1BCAFF8(&CondType_TypeInfo, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventAddEntity__Add__, v10);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventAddEntity__Sort__, v11);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventAddEntity___ctor__, v12);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventAddEntity__get_Count__, v13);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventAddEntity__get_Item__, v14);
+    sub_1BCAFF8(&System_Collections_Generic_List_EventAddEntity__TypeInfo, v15);
+    sub_1BCAFF8(&Method_EventAddMaster___c__getOverwriteEventAddEntity_b__3_0__, v16);
+    sub_1BCAFF8(&EventAddMaster___c_TypeInfo, v17);
+    byte_4B1C3AC = 1;
   }
-  v18 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_EventAddEntity__TypeInfo);
+  v18 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventAddEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v18,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_EventAddEntity___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventAddEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_29;
   list = (void *)System_Collections_ObjectModel_Collection_object___get_Count(
                    (System_Collections_ObjectModel_Collection_T__o *)list,
-                   (const MethodInfo_324A858 *)Method_System_Collections_ObjectModel_Collection_EventAddEntity__get_Count__);
+                   (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_EventAddEntity__get_Count__);
   if ( (int)list >= 1 )
   {
     v21 = (int)list;
@@ -137,7 +137,7 @@ EventAddEntity_o *__fastcall EventAddMaster__getOverwriteEventAddEntity(
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v22,
-               (const MethodInfo_324A8E8 *)Method_System_Collections_ObjectModel_Collection_EventAddEntity__get_Item__);
+               (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_EventAddEntity__get_Item__);
       if ( !list )
         break;
       v23 = (Il2CppObject *)list;
@@ -163,14 +163,14 @@ EventAddEntity_o *__fastcall EventAddMaster__getOverwriteEventAddEntity(
             System_Collections_Generic_List_object___AddWithResize(
               v18,
               v23,
-              *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+              *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
           }
           else
           {
             v31 = &items->obj.klass + size;
             v18->fields._size = size + 1;
             v31[4] = (Il2CppClass *)v23;
-            sub_1BC2FAC((CGThumbnailListItem_o *)(v31 + 4), (int32_t)v23, v26, v27);
+            sub_1BCAF9C((CGThumbnailListItem_o *)(v31 + 4), (int32_t)v23, v26, v27);
           }
         }
       }
@@ -178,7 +178,7 @@ EventAddEntity_o *__fastcall EventAddMaster__getOverwriteEventAddEntity(
         goto LABEL_19;
     }
 LABEL_29:
-    sub_1BC3264(list, v19);
+    sub_1BCB254(list, v19);
   }
 LABEL_19:
   if ( !v18 )
@@ -200,20 +200,20 @@ LABEL_19:
       v32 = EventAddMaster___c_TypeInfo;
     }
     v34 = (Il2CppObject *)v32->static_fields->__9;
-    _9__3_0 = (System_Comparison_T__o *)sub_1BC3254(System_Comparison_EventAddEntity__TypeInfo);
+    _9__3_0 = (System_Comparison_T__o *)sub_1BCB244(System_Comparison_EventAddEntity__TypeInfo);
     System_Comparison_object____ctor(_9__3_0, v34, Method_EventAddMaster___c__getOverwriteEventAddEntity_b__3_0__, 0LL);
     static_fields = EventAddMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Comparison_EventAddEntity__o *)_9__3_0;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v36, v37);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v36, v37);
   }
-  System_Collections_Generic_List_object___Sort_57288964(
+  System_Collections_Generic_List_object___Sort_57390740(
     v18,
     _9__3_0,
-    (const MethodInfo_36A2904 *)Method_System_Collections_Generic_List_EventAddEntity__Sort__);
+    (const MethodInfo_36BB694 *)Method_System_Collections_Generic_List_EventAddEntity__Sort__);
   return (EventAddEntity_o *)System_Collections_Generic_List_object___get_Item(
                                v18,
                                0,
-                               (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_EventAddEntity__get_Item__);
+                               (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_EventAddEntity__get_Item__);
 }
 
 
@@ -224,15 +224,15 @@ void __fastcall EventAddMaster___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B01EAE & 1) == 0 )
+  if ( (byte_4B1C3AD & 1) == 0 )
   {
-    sub_1BC3008(&EventAddMaster___c_TypeInfo, v1);
-    byte_4B01EAE = 1;
+    sub_1BCAFF8(&EventAddMaster___c_TypeInfo, v1);
+    byte_4B1C3AD = 1;
   }
-  v2 = (Il2CppObject *)sub_1BC3254(EventAddMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BCB244(EventAddMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventAddMaster___c_TypeInfo->static_fields->__9 = (struct EventAddMaster___c_o *)v2;
-  sub_1BC2FAC((CGThumbnailListItem_o *)EventAddMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BCAF9C((CGThumbnailListItem_o *)EventAddMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -249,6 +249,6 @@ int32_t __fastcall EventAddMaster___c___getOverwriteEventAddEntity_b__3_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1BC3264(this, a);
+    sub_1BCB254(this, a);
   return b->fields.priority - a->fields.priority;
 }

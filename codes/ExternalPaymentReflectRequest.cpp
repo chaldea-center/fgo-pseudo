@@ -11,16 +11,16 @@ System_String_o *__fastcall ExternalPaymentReflectRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B03AC1 & 1) == 0 )
+  if ( (byte_4B1DFCC & 1) == 0 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, method);
-    sub_1BC3008(&StringLiteral_19155/*"externalPayment/reflect"*/, v2);
-    byte_4B03AC1 = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
+    sub_1BCAFF8(&StringLiteral_19169/*"externalPayment/reflect"*/, v2);
+    byte_4B1DFCC = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_19155/*"externalPayment/reflect"*/, 0LL);
+  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_19169/*"externalPayment/reflect"*/, 0LL);
 }
 
 
@@ -36,21 +36,21 @@ void __fastcall ExternalPaymentReflectRequest__requestCompleted(
   System_String_o *v8; // x1
 
   v4 = (RequestBase_o *)this;
-  if ( (byte_4B03AC2 & 1) == 0 )
+  if ( (byte_4B1DFCD & 1) == 0 )
   {
-    sub_1BC3008(&JsonManager_TypeInfo, responseList);
-    this = (ExternalPaymentReflectRequest_o *)sub_1BC3008(&StringLiteral_21997/*"ng"*/, v5);
-    byte_4B03AC2 = 1;
+    sub_1BCAFF8(&JsonManager_TypeInfo, responseList);
+    this = (ExternalPaymentReflectRequest_o *)sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v5);
+    byte_4B1DFCD = 1;
   }
   if ( !responseList )
     goto LABEL_12;
   if ( !responseList->max_length )
-    sub_1BC326C(this, responseList, method);
+    sub_1BCB25C(this, responseList, method);
   v6 = responseList->m_Items[0];
   if ( !v6 )
 LABEL_12:
-    sub_1BC3264(this, responseList);
-  if ( ResponseData__checkError_43184840(v6, 0LL) )
+    sub_1BCB254(this, responseList);
+  if ( ResponseData__checkError_43347888(v6, 0LL) )
   {
     success = (Il2CppObject *)v6->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -59,7 +59,7 @@ LABEL_12:
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_21997/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22015/*"ng"*/;
   }
   RequestBase__completed(v4, v8, 0LL);
 }

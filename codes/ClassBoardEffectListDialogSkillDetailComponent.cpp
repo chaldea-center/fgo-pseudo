@@ -24,7 +24,7 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent__Init(
   const MethodInfo *v3; // x3
 
   this->fields.listComponent = listComponent;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.listComponent, (int32_t)listComponent, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.listComponent, (int32_t)listComponent, (int32_t)method, v3);
 }
 
 
@@ -46,10 +46,10 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
   struct ClassBoardEffectListDialogSkillListComponent_o *listComponent; // x8
   System_String_o *v20; // x2
 
-  if ( (byte_4B0588A & 1) == 0 )
+  if ( (byte_4B1FDCC & 1) == 0 )
   {
-    sub_1BC3008(&ClassBoardUtility_TypeInfo, name);
-    byte_4B0588A = 1;
+    sub_1BCAFF8(&ClassBoardUtility_TypeInfo, name);
+    byte_4B1FDCC = 1;
   }
   effectNameLabel = this->fields.effectNameLabel;
   if ( !effectNameLabel )
@@ -90,7 +90,7 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
       }
     }
 LABEL_16:
-    sub_1BC3264(effectNameLabel, name);
+    sub_1BCB254(effectNameLabel, name);
   }
   return v16 + (float)this->fields.adjustSetPosY;
 }
@@ -122,7 +122,7 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAn
         LocalPositionY = GameObjectExtensions__GetLocalPositionY(gameObject, 0LL),
         (v8 = this->fields.effectDetailLabel) == 0LL) )
   {
-    sub_1BC3264(effectDetailLabel, detail);
+    sub_1BCB254(effectDetailLabel, detail);
   }
   detailMinHeight = this->fields.detailMinHeight;
   result = (float)(fabsf(LocalPositionY) + (float)v8->fields.mHeight) + (float)this->fields.detailUnderMargin;
@@ -139,7 +139,7 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetIconFromBattl
         const MethodInfo *method)
 {
   if ( !atlasManagerUnit )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   AtlasManagerUnit__SetUI(atlasManagerUnit, this->fields.effectIcon, spriteName, 0LL);
 }
 

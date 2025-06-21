@@ -1,17 +1,17 @@
 void __fastcall SpotRoadEntity___ctor(SpotRoadEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B02BDF & 1) == 0 )
+  if ( (byte_4B1D0E8 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B02BDF = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B1D0E8 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32ACB8C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
 }
 
 
-void __fastcall SpotRoadEntity___ctor_41905724(
+void __fastcall SpotRoadEntity___ctor_42068136(
         SpotRoadEntity_o *this,
         SpotRoadEntity_o *cSrc,
         const MethodInfo *method)
@@ -19,16 +19,16 @@ void __fastcall SpotRoadEntity___ctor_41905724(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B02BE0 & 1) == 0 )
+  if ( (byte_4B1D0E9 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_int___ctor__, cSrc);
-    byte_4B02BE0 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, cSrc);
+    byte_4B1D0E9 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32ACB8C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
   if ( !cSrc )
-    sub_1BC3264(v5, v6);
+    sub_1BCB254(v5, v6);
   *(_OWORD *)&this->fields.id = *(_OWORD *)&cSrc->fields.id;
   *(_OWORD *)&this->fields.type = *(_OWORD *)&cSrc->fields.type;
   this->fields.dispTargetValue = cSrc->fields.dispTargetValue;

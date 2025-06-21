@@ -1,9 +1,9 @@
 void __fastcall BoostItemListViewObject___ctor(BoostItemListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AFD90A & 1) == 0 )
+  if ( (byte_4B17DE8 & 1) == 0 )
   {
-    sub_1BC3008(&ListViewObject_TypeInfo, method);
-    byte_4AFD90A = 1;
+    sub_1BCAFF8(&ListViewObject_TypeInfo, method);
+    byte_4B17DE8 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,20 +19,20 @@ void __fastcall BoostItemListViewObject__Awake(BoostItemListViewObject_o *this, 
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4AFD904 & 1) == 0 )
+  if ( (byte_4B17DE2 & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_BoostItemListViewItemDraw___, method);
-    byte_4AFD904 = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_BoostItemListViewItemDraw___, method);
+    byte_4B17DE2 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BC3264(0LL, v3);
+    sub_1BCB254(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_BoostItemListViewItemDraw___);
+                       (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_BoostItemListViewItemDraw___);
   this->fields.itemDraw = (struct BoostItemListViewItemDraw_o *)Component_object;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -45,21 +45,21 @@ UnityEngine_GameObject_o *__fastcall BoostItemListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_4AFD907 & 1) == 0 )
+  if ( (byte_4B17DE5 & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_BoostItemListViewObject___, method);
-    byte_4AFD907 = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_BoostItemListViewObject___, method);
+    byte_4B17DE5 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_BoostItemListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_BoostItemListViewObject___)) == 0LL) )
   {
-    sub_1BC3264(DragObject, v4);
+    sub_1BCB254(DragObject, v4);
   }
-  BoostItemListViewObject__Init_33112764((BoostItemListViewObject_o *)DragObject, 2, v6);
+  BoostItemListViewObject__Init_33253064((BoostItemListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -80,7 +80,7 @@ void __fastcall BoostItemListViewObject__EventMoveEnd(BoostItemListViewObject_o 
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1BC2FAC(p_callbackFunc, 0, v2, v3);
+    sub_1BCAF9C(p_callbackFunc, 0, v2, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       *(_QWORD *)&v5->fields.extra_arg);
@@ -95,10 +95,10 @@ BoostItemListViewItem_o *__fastcall BoostItemListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4AFD906 & 1) == 0 )
+  if ( (byte_4B17DE4 & 1) == 0 )
   {
-    sub_1BC3008(&BoostItemListViewItem_TypeInfo, method);
-    byte_4AFD906 = 1;
+    sub_1BCAFF8(&BoostItemListViewItem_TypeInfo, method);
+    byte_4B17DE4 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -137,10 +137,10 @@ void __fastcall BoostItemListViewObject__Init(
   int32_t v22; // w8
   CGThumbnailListItem_c *klass; // x19
 
-  if ( (byte_4AFD908 & 1) == 0 )
+  if ( (byte_4B17DE6 & 1) == 0 )
   {
-    sub_1BC3008(&BoostItemListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4AFD908 = 1;
+    sub_1BCAFF8(&BoostItemListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B17DE6 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -168,15 +168,15 @@ void __fastcall BoostItemListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1BC3264(transform, v15);
+    sub_1BCB254(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
   if ( v11 <= 3 )
   {
-    v22 = dword_BDDC30[v11];
+    v22 = dword_BE1740[v11];
     this->fields.dispMode = v11;
     this->fields.state = v22;
   }
@@ -186,7 +186,7 @@ void __fastcall BoostItemListViewObject__Init(
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1BC2FAC(p_callbackFunc, 0, v20, v21);
+    sub_1BCAF9C(p_callbackFunc, 0, v20, v21);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
       klass->_1.element_class,
       *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -195,7 +195,7 @@ void __fastcall BoostItemListViewObject__Init(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BoostItemListViewObject__Init_33112764(
+void __fastcall BoostItemListViewObject__Init_33253064(
         BoostItemListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -204,17 +204,17 @@ void __fastcall BoostItemListViewObject__Init_33112764(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4AFBDB1 )
+  if ( !byte_4B16191 )
   {
-    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4AFBDB1 = 1;
+    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B16191 = 1;
   }
   BoostItemListViewObject__Init(this, initMode, 0LL, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BoostItemListViewObject__Init_33114072(
+void __fastcall BoostItemListViewObject__Init_33254372(
         BoostItemListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -223,17 +223,17 @@ void __fastcall BoostItemListViewObject__Init_33114072(
 {
   int v5; // s1
 
-  if ( !byte_4AFBDB1 )
+  if ( !byte_4B16191 )
   {
-    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4AFBDB1 = 1;
+    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B16191 = 1;
   }
   BoostItemListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BoostItemListViewObject__Init_33114156(
+void __fastcall BoostItemListViewObject__Init_33254456(
         BoostItemListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -242,10 +242,10 @@ void __fastcall BoostItemListViewObject__Init_33114156(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4AFBDB1 )
+  if ( !byte_4B16191 )
   {
-    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4AFBDB1 = 1;
+    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B16191 = 1;
   }
   BoostItemListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -261,11 +261,11 @@ void __fastcall BoostItemListViewObject__OnDestroy(BoostItemListViewObject_o *th
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4AFD905 & 1) == 0 )
+  if ( (byte_4B17DE3 & 1) == 0 )
   {
-    sub_1BC3008(&NGUITools_TypeInfo, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
-    byte_4AFD905 = 1;
+    sub_1BCAFF8(&NGUITools_TypeInfo, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B17DE3 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -279,7 +279,7 @@ void __fastcall BoostItemListViewObject__OnDestroy(BoostItemListViewObject_o *th
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1BC2FAC(p_dragObject, 0, v8, v9);
+    sub_1BCAF9C(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -291,7 +291,7 @@ void __fastcall BoostItemListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_42800124((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_42963052((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
@@ -306,11 +306,11 @@ void __fastcall BoostItemListViewObject__SetupDisp(BoostItemListViewObject_o *th
   const MethodInfo *v9; // x3
   BoostItemListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4AFD909 & 1) == 0 )
+  if ( (byte_4B17DE7 & 1) == 0 )
   {
-    sub_1BC3008(&BoostItemListViewItem_TypeInfo, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
-    byte_4AFD909 = 1;
+    sub_1BCAFF8(&BoostItemListViewItem_TypeInfo, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B17DE7 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -334,7 +334,7 @@ LABEL_8:
   {
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1BC3264(0LL, v8);
+      sub_1BCB254(0LL, v8);
     BoostItemListViewItemDraw__SetItem(v10, (BoostItemListViewItem_o *)linkItem, this->fields.dispMode, v9);
   }
 }
@@ -355,10 +355,10 @@ void __fastcall BoostItemListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4AFD902 & 1) == 0 )
+  if ( (byte_4B17DE0 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, value);
-    byte_4AFD902 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, value);
+    byte_4B17DE0 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -371,13 +371,13 @@ void __fastcall BoostItemListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
+    v9 = sub_1C05088(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (BoostItemListViewObject_o *)sub_1BC3524(v8);
+  v11 = (BoostItemListViewObject_o *)sub_1BCB514(v8);
   BoostItemListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -396,10 +396,10 @@ void __fastcall BoostItemListViewObject__remove_callbackFunc(
   BoostItemListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4AFD903 & 1) == 0 )
+  if ( (byte_4B17DE1 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, value);
-    byte_4AFD903 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, value);
+    byte_4B17DE1 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -412,12 +412,12 @@ void __fastcall BoostItemListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
+    v9 = sub_1C05088(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (BoostItemListViewObject_o *)sub_1BC3524(v8);
+  v11 = (BoostItemListViewObject_o *)sub_1BCB514(v8);
   BoostItemListViewObject__Awake(v11, v12);
 }

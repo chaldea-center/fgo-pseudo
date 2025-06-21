@@ -22,7 +22,7 @@ void __fastcall MasterMissionReceiveResultListViewManager__CreateList(
   __int64 v13; // x1
   void *Instance; // x0
   __int64 v15; // x1
-  EventMissionEntity_array *EventMissionList_41048228; // x25
+  EventMissionEntity_array *EventMissionList_41205380; // x25
   Il2CppObject *MasterData_object; // x26
   Il2CppObject *v18; // x22
   __int64 v19; // x2
@@ -62,67 +62,67 @@ void __fastcall MasterMissionReceiveResultListViewManager__CreateList(
   System_String_o *nameText; // [xsp+20h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+28h] [xbp-68h] BYREF
 
-  if ( (byte_4B052A4 & 1) == 0 )
+  if ( (byte_4B1F72A & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMasterData_EventMissionMaster___, receiveMissionIds);
-    sub_1BC3008(&Method_DataManager_GetMasterData_GiftMaster___, v5);
-    sub_1BC3008(&Method_DataManager_GetMasterData_ItemMaster___, v6);
-    sub_1BC3008(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v7);
-    sub_1BC3008(&int_TypeInfo, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_List_ListViewItem__Add__, v9);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v10);
-    sub_1BC3008(&MasterMissionReceiveResultListViewItem_TypeInfo, v11);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
-    sub_1BC3008(&StringLiteral_8485/*"MASTER_MISSION_RECEIVE_RESULT_REWARD_FMT"*/, v13);
-    byte_4B052A4 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_EventMissionMaster___, receiveMissionIds);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_GiftMaster___, v5);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_ItemMaster___, v6);
+    sub_1BCAFF8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__, v7);
+    sub_1BCAFF8(&int_TypeInfo, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_ListViewItem__Add__, v9);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v10);
+    sub_1BCAFF8(&MasterMissionReceiveResultListViewItem_TypeInfo, v11);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v12);
+    sub_1BCAFF8(&StringLiteral_8495/*"MASTER_MISSION_RECEIVE_RESULT_REWARD_FMT"*/, v13);
+    byte_4B1F72A = 1;
   }
   nameText = 0LL;
   entity = 0LL;
   countText = 0LL;
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_36;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_EventMissionMaster___);
+               (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_EventMissionMaster___);
   if ( !Instance )
     goto LABEL_36;
-  EventMissionList_41048228 = EventMissionMaster__getEventMissionList_41048228(
+  EventMissionList_41205380 = EventMissionMaster__getEventMissionList_41205380(
                                 (EventMissionMaster_o *)Instance,
                                 receiveMissionIds,
                                 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_36;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_GiftMaster___);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_GiftMaster___);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_36;
   v18 = DataManager__GetMasterData_object_(
           (DataManager_o *)Instance,
-          (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ItemMaster___);
+          (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ItemMaster___);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_8485/*"MASTER_MISSION_RECEIVE_RESULT_REWARD_FMT"*/, 0LL);
-  if ( !EventMissionList_41048228 )
+  Instance = LocalizationManager__Get((System_String_o *)StringLiteral_8495/*"MASTER_MISSION_RECEIVE_RESULT_REWARD_FMT"*/, 0LL);
+  if ( !EventMissionList_41205380 )
     goto LABEL_36;
-  max_length = EventMissionList_41048228->max_length;
+  max_length = EventMissionList_41205380->max_length;
   if ( max_length >= 1 )
   {
     v21 = (System_String_o *)Instance;
     v22 = 0;
     v23 = 0;
     v48 = MasterData_object;
-    v49 = EventMissionList_41048228;
+    v49 = EventMissionList_41205380;
     while ( 1 )
     {
       if ( v22 >= max_length )
 LABEL_37:
-        sub_1BC326C(Instance, v15, v19);
-      v24 = EventMissionList_41048228->m_Items[v22];
+        sub_1BCB25C(Instance, v15, v19);
+      v24 = EventMissionList_41205380->m_Items[v22];
       if ( !v24 )
         break;
       if ( !MasterData_object )
@@ -146,7 +146,7 @@ LABEL_37:
             goto LABEL_36;
           CountableString = (Il2CppObject *)Instance;
           GiftEntity__GetInfo(v28, &nameText, &countText, 0LL);
-          Instance = (void *)Gift__IsItem_39466008(v28->fields.type, 0LL);
+          Instance = (void *)Gift__IsItem_39617068(v28->fields.type, 0LL);
           if ( ((unsigned __int8)Instance & 1) != 0 )
           {
             if ( !v18 )
@@ -155,7 +155,7 @@ LABEL_37:
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)v18,
                                  &entity,
                                  v28->fields.objectId,
-                                 (const MethodInfo_32AF0BC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                                 (const MethodInfo_32C7E4C *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
             if ( ((unsigned __int8)Instance & 1) != 0 )
             {
               if ( !entity )
@@ -166,13 +166,13 @@ LABEL_37:
           v33 = (Il2CppObject *)nameText;
           num = v28->fields.num;
           v34 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &num, v30, v31, v32);
-          v35 = System_String__Format_62390008(v21, v33, CountableString, v34, 0LL);
+          v35 = System_String__Format_62491784(v21, v33, CountableString, v34, 0LL);
           itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
           v37 = v35;
-          v38 = sub_1BC3254(MasterMissionReceiveResultListViewItem_TypeInfo);
-          ListViewItem___ctor_42769384((ListViewItem_o *)v38, v23 + v27, 0LL);
+          v38 = sub_1BCB244(MasterMissionReceiveResultListViewItem_TypeInfo);
+          ListViewItem___ctor_42932312((ListViewItem_o *)v38, v23 + v27, 0LL);
           *(_QWORD *)(v38 + 112) = v37;
-          sub_1BC2FAC((CGThumbnailListItem_o *)(v38 + 112), (int32_t)v37, v39, v40);
+          sub_1BCAF9C((CGThumbnailListItem_o *)(v38 + 112), (int32_t)v37, v39, v40);
           if ( !itemList )
             goto LABEL_36;
           items = itemList->fields._items;
@@ -186,30 +186,30 @@ LABEL_37:
             System_Collections_Generic_List_object___AddWithResize(
               itemList,
               (Il2CppObject *)v38,
-              *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
+              *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
           }
           else
           {
             v46 = &items->obj.klass + size;
             itemList->fields._size = size + 1;
             v46[4] = (Il2CppClass *)v38;
-            sub_1BC2FAC((CGThumbnailListItem_o *)(v46 + 4), v38, v41, v42);
+            sub_1BCAF9C((CGThumbnailListItem_o *)(v46 + 4), v38, v41, v42);
           }
           v25 = *((_DWORD *)v26 + 6);
           ++v27;
         }
         while ( v27 < v25 );
         MasterData_object = v48;
-        EventMissionList_41048228 = v49;
+        EventMissionList_41205380 = v49;
         v22 = v50;
         v23 += v27;
       }
-      max_length = EventMissionList_41048228->max_length;
+      max_length = EventMissionList_41205380->max_length;
       if ( (int)++v22 >= max_length )
         goto LABEL_33;
     }
 LABEL_36:
-    sub_1BC3264(Instance, v15);
+    sub_1BCB254(Instance, v15);
   }
 LABEL_33:
   sort = this->fields.sort;
@@ -233,19 +233,19 @@ void __fastcall MasterMissionReceiveResultListViewManager__SetObjectItem(
 {
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4B052A5 & 1) == 0 )
+  if ( (byte_4B1F72B & 1) == 0 )
   {
-    this = (MasterMissionReceiveResultListViewManager_o *)sub_1BC3008(
+    this = (MasterMissionReceiveResultListViewManager_o *)sub_1BCAFF8(
                                                             &MasterMissionReceiveResultListViewObject_TypeInfo,
                                                             obj);
-    byte_4B052A5 = 1;
+    byte_4B1F72B = 1;
   }
   if ( !obj
     || (methodPtr_low = LOBYTE(MasterMissionReceiveResultListViewObject_TypeInfo->vtable._0_Equals.methodPtr),
         LOBYTE(obj->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
     || (MasterMissionReceiveResultListViewObject_c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != MasterMissionReceiveResultListViewObject_TypeInfo )
   {
-    sub_1BC3264(this, obj);
+    sub_1BCB254(this, obj);
   }
   MasterMissionReceiveResultListViewObject__SetupDisp(
     (MasterMissionReceiveResultListViewObject_o *)obj,
@@ -264,6 +264,6 @@ float __fastcall MasterMissionReceiveResultListViewManager__get_ListViewHeight(
   ItemSum = ListViewManager__get_ItemSum((ListViewManager_o *)this, 0LL);
   seed = this->fields.seed;
   if ( !seed )
-    sub_1BC3264(ItemSum, v4);
+    sub_1BCB254(ItemSum, v4);
   return seed->fields.arrangementPich.fields.y * (float)(int)ItemSum;
 }

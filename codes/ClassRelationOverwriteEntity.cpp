@@ -1,13 +1,13 @@
 void __fastcall ClassRelationOverwriteEntity___ctor(ClassRelationOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B01DAB & 1) == 0 )
+  if ( (byte_4B1C2AA & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B01DAB = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B1C2AA = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -19,17 +19,17 @@ System_String_o *__fastcall ClassRelationOverwriteEntity__CreatePK(
         int32_t defClass,
         const MethodInfo *method)
 {
-  if ( (byte_4B01DA9 & 1) == 0 )
+  if ( (byte_4B1C2A8 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&atkSide);
-    byte_4B01DA9 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&atkSide);
+    byte_4B1C2A8 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            id,
            atkSide,
            atkClass,
            defClass,
-           (const MethodInfo_300093C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_301957C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -96,82 +96,82 @@ System_String_o *__fastcall ClassRelationOverwriteEntity__getFieldsLogString(
   int32_t atkSide; // [xsp+38h] [xbp-28h] BYREF
   int32_t id; // [xsp+3Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B01DAA & 1) == 0 )
+  if ( (byte_4B1C2A9 & 1) == 0 )
   {
-    sub_1BC3008(&int_TypeInfo, method);
-    sub_1BC3008(&object___TypeInfo, v3);
-    sub_1BC3008(&ClassRelationOverwriteEntity_TYPE_TypeInfo, v4);
-    sub_1BC3008(&StringLiteral_20064/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/, v5);
-    byte_4B01DAA = 1;
+    sub_1BCAFF8(&int_TypeInfo, method);
+    sub_1BCAFF8(&object___TypeInfo, v3);
+    sub_1BCAFF8(&ClassRelationOverwriteEntity_TYPE_TypeInfo, v4);
+    sub_1BCAFF8(&StringLiteral_20078/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/, v5);
+    byte_4B1C2A9 = 1;
   }
-  v6 = (System_Object_array *)sub_1BC30B0(object___TypeInfo, 6LL);
+  v6 = (System_Object_array *)sub_1BCB0A0(object___TypeInfo, 6LL);
   id = this->fields.id;
   v10 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &id, v7, v8, v9);
   if ( !v6 )
-    sub_1BC3264(v10, v11);
+    sub_1BCB254(v10, v11);
   v14 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = (System_String_o *)sub_1BC3144(v10, v6->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_1BCB134(v10, v6->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_24;
   }
   if ( !v6->max_length )
     goto LABEL_23;
   v6->m_Items[0] = v14;
-  sub_1BC2FAC((CGThumbnailListItem_o *)v6->m_Items, (int32_t)v14, v12, v13);
+  sub_1BCAF9C((CGThumbnailListItem_o *)v6->m_Items, (int32_t)v14, v12, v13);
   atkSide = this->fields.atkSide;
   v10 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &atkSide, v15, v16, v17);
   v19 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = (System_String_o *)sub_1BC3144(v10, v6->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_1BCB134(v10, v6->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_24;
   }
   if ( v6->max_length <= 1 )
     goto LABEL_23;
   v6->m_Items[1] = v19;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v6->m_Items[1], (int32_t)v19, v12, v18);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v6->m_Items[1], (int32_t)v19, v12, v18);
   atkClass = this->fields.atkClass;
   v10 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &atkClass, v20, v21, v22);
   v24 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = (System_String_o *)sub_1BC3144(v10, v6->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_1BCB134(v10, v6->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_24;
   }
   if ( v6->max_length <= 2 )
     goto LABEL_23;
   v6->m_Items[2] = v24;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v6->m_Items[2], (int32_t)v24, v12, v23);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v6->m_Items[2], (int32_t)v24, v12, v23);
   defClass = this->fields.defClass;
   v10 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &defClass, v25, v26, v27);
   v29 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = (System_String_o *)sub_1BC3144(v10, v6->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_1BCB134(v10, v6->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_24;
   }
   if ( v6->max_length <= 3 )
     goto LABEL_23;
   v6->m_Items[3] = v29;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v6->m_Items[3], (int32_t)v29, v12, v28);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v6->m_Items[3], (int32_t)v29, v12, v28);
   damageRate = this->fields.damageRate;
   v10 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &damageRate, v30, v31, v32);
   v34 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = (System_String_o *)sub_1BC3144(v10, v6->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_1BCB134(v10, v6->obj.klass->_1.element_class);
     if ( !v10 )
       goto LABEL_24;
   }
   if ( v6->max_length <= 4 )
     goto LABEL_23;
   v6->m_Items[4] = v34;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v6->m_Items[4], (int32_t)v34, v12, v33);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v6->m_Items[4], (int32_t)v34, v12, v33);
   type = this->fields.type;
   v40.klass = (System_Enum_c *)ClassRelationOverwriteEntity_TYPE_TypeInfo;
   v40.monitor = (void *)-1LL;
@@ -180,20 +180,20 @@ System_String_o *__fastcall ClassRelationOverwriteEntity__getFieldsLogString(
   v37 = (Il2CppObject *)v10;
   if ( v10 )
   {
-    v10 = (System_String_o *)sub_1BC3144(v10, v6->obj.klass->_1.element_class);
+    v10 = (System_String_o *)sub_1BCB134(v10, v6->obj.klass->_1.element_class);
     if ( !v10 )
     {
 LABEL_24:
-      v39 = sub_1BC3288(v10);
-      sub_1BC3130(v39, 0LL);
+      v39 = sub_1BCB278(v10);
+      sub_1BCB120(v39, 0LL);
     }
   }
   if ( v6->max_length <= 5 )
 LABEL_23:
-    sub_1BC326C(v10, v11, v12);
+    sub_1BCB25C(v10, v11, v12);
   v6->m_Items[5] = v37;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v6->m_Items[5], (int32_t)v37, v12, v36);
-  return System_String__Format_62390076((System_String_o *)StringLiteral_20064/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/, v6, 0LL);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v6->m_Items[5], (int32_t)v37, v12, v36);
+  return System_String__Format_62491852((System_String_o *)StringLiteral_20078/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/, v6, 0LL);
 }
 
 

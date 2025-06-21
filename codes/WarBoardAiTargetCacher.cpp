@@ -10,18 +10,18 @@ void __fastcall WarBoardAiTargetCacher___ctor(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4AFF9EA & 1) == 0 )
+  if ( (byte_4B19EC0 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_TargetDetector___ctor__, *(_QWORD *)&forceId);
-    sub_1BC3008(&System_Collections_Generic_List_TargetDetector__TypeInfo, v7);
-    byte_4AFF9EA = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_TargetDetector___ctor__, *(_QWORD *)&forceId);
+    sub_1BCAFF8(&System_Collections_Generic_List_TargetDetector__TypeInfo, v7);
+    byte_4B19EC0 = 1;
   }
-  v8 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_TargetDetector__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_TargetDetector__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_TargetDetector___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_TargetDetector___ctor__);
   this->fields.targetDetectorList = (struct System_Collections_Generic_List_TargetDetector__o *)v8;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)v8, v9, v10);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)v8, v9, v10);
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields._ForceId_k__BackingField = forceId;
   this->fields._GroupId_k__BackingField = groupId;
@@ -44,21 +44,21 @@ void __fastcall WarBoardAiTargetCacher__AggregateTargetObject(
   System_Collections_Generic_List_object__o *targetDetectorList; // x19
   System_Action_object__o *v14; // x20
 
-  if ( (byte_4AFF9EE & 1) == 0 )
+  if ( (byte_4B19EC4 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TargetDetector__TypeInfo, objectArray);
-    sub_1BC3008(&Method_System_Collections_Generic_List_TargetDetector__ForEach__, v5);
-    sub_1BC3008(&Method_WarBoardAiTargetCacher___c__DisplayClass14_0__AggregateTargetObject_b__0__, v6);
-    sub_1BC3008(&WarBoardAiTargetCacher___c__DisplayClass14_0_TypeInfo, v7);
-    byte_4AFF9EE = 1;
+    sub_1BCAFF8(&System_Action_TargetDetector__TypeInfo, objectArray);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_TargetDetector__ForEach__, v5);
+    sub_1BCAFF8(&Method_WarBoardAiTargetCacher___c__DisplayClass14_0__AggregateTargetObject_b__0__, v6);
+    sub_1BCAFF8(&WarBoardAiTargetCacher___c__DisplayClass14_0_TypeInfo, v7);
+    byte_4B19EC4 = 1;
   }
-  v8 = sub_1BC3254(WarBoardAiTargetCacher___c__DisplayClass14_0_TypeInfo);
+  v8 = sub_1BCB244(WarBoardAiTargetCacher___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8
     || (*(_QWORD *)(v8 + 16) = objectArray,
-        sub_1BC2FAC((CGThumbnailListItem_o *)(v8 + 16), (int32_t)objectArray, v11, v12),
+        sub_1BCAF9C((CGThumbnailListItem_o *)(v8 + 16), (int32_t)objectArray, v11, v12),
         targetDetectorList = (System_Collections_Generic_List_object__o *)this->fields.targetDetectorList,
-        v14 = (System_Action_object__o *)sub_1BC3254(System_Action_TargetDetector__TypeInfo),
+        v14 = (System_Action_object__o *)sub_1BCB244(System_Action_TargetDetector__TypeInfo),
         System_Action_object____ctor(
           v14,
           (Il2CppObject *)v8,
@@ -66,12 +66,12 @@ void __fastcall WarBoardAiTargetCacher__AggregateTargetObject(
           0LL),
         !targetDetectorList) )
   {
-    sub_1BC3264(v9, v10);
+    sub_1BCB254(v9, v10);
   }
   System_Collections_Generic_List_object___ForEach(
     targetDetectorList,
     (System_Action_T__o *)v14,
-    (const MethodInfo_36A1880 *)Method_System_Collections_Generic_List_TargetDetector__ForEach__);
+    (const MethodInfo_36BA610 *)Method_System_Collections_Generic_List_TargetDetector__ForEach__);
 }
 
 
@@ -88,13 +88,13 @@ void __fastcall WarBoardAiTargetCacher__ClearTargetObject(WarBoardAiTargetCacher
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4AFF9ED & 1) == 0 )
+  if ( (byte_4B19EC3 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TargetDetector__TypeInfo, method);
-    sub_1BC3008(&Method_System_Collections_Generic_List_TargetDetector__ForEach__, v3);
-    sub_1BC3008(&Method_WarBoardAiTargetCacher___c__ClearTargetObject_b__13_0__, v4);
-    sub_1BC3008(&WarBoardAiTargetCacher___c_TypeInfo, v5);
-    byte_4AFF9ED = 1;
+    sub_1BCAFF8(&System_Action_TargetDetector__TypeInfo, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_TargetDetector__ForEach__, v3);
+    sub_1BCAFF8(&Method_WarBoardAiTargetCacher___c__ClearTargetObject_b__13_0__, v4);
+    sub_1BCAFF8(&WarBoardAiTargetCacher___c_TypeInfo, v5);
+    byte_4B19EC3 = 1;
   }
   v6 = WarBoardAiTargetCacher___c_TypeInfo;
   targetDetectorList = (System_Collections_Generic_List_object__o *)this->fields.targetDetectorList;
@@ -112,18 +112,18 @@ void __fastcall WarBoardAiTargetCacher__ClearTargetObject(WarBoardAiTargetCacher
       v6 = WarBoardAiTargetCacher___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__13_0 = (System_Action_object__o *)sub_1BC3254(System_Action_TargetDetector__TypeInfo);
+    _9__13_0 = (System_Action_object__o *)sub_1BCB244(System_Action_TargetDetector__TypeInfo);
     System_Action_object____ctor(_9__13_0, v9, Method_WarBoardAiTargetCacher___c__ClearTargetObject_b__13_0__, 0LL);
     static_fields = WarBoardAiTargetCacher___c_TypeInfo->static_fields;
     static_fields->__9__13_0 = (struct System_Action_TargetDetector__o *)_9__13_0;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v11, v12);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v11, v12);
   }
   if ( !targetDetectorList )
-    sub_1BC3264(v6, method);
+    sub_1BCB254(v6, method);
   System_Collections_Generic_List_object___ForEach(
     targetDetectorList,
     (System_Action_T__o *)_9__13_0,
-    (const MethodInfo_36A1880 *)Method_System_Collections_Generic_List_TargetDetector__ForEach__);
+    (const MethodInfo_36BA610 *)Method_System_Collections_Generic_List_TargetDetector__ForEach__);
 }
 
 
@@ -141,20 +141,20 @@ TargetDetector_o *__fastcall WarBoardAiTargetCacher__GetDetectorByTrendKey(
   System_Collections_Generic_List_object__o *targetDetectorList; // x19
   System_Predicate_object__o *v12; // x20
 
-  if ( (byte_4AFF9EF & 1) == 0 )
+  if ( (byte_4B19EC5 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_TargetDetector__Find__, trendKey);
-    sub_1BC3008(&System_Predicate_TargetDetector__TypeInfo, v5);
-    sub_1BC3008(&Method_WarBoardAiTargetCacher___c__DisplayClass15_0__GetDetectorByTrendKey_b__0__, v6);
-    sub_1BC3008(&WarBoardAiTargetCacher___c__DisplayClass15_0_TypeInfo, v7);
-    byte_4AFF9EF = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_TargetDetector__Find__, trendKey);
+    sub_1BCAFF8(&System_Predicate_TargetDetector__TypeInfo, v5);
+    sub_1BCAFF8(&Method_WarBoardAiTargetCacher___c__DisplayClass15_0__GetDetectorByTrendKey_b__0__, v6);
+    sub_1BCAFF8(&WarBoardAiTargetCacher___c__DisplayClass15_0_TypeInfo, v7);
+    byte_4B19EC5 = 1;
   }
-  v8 = (Il2CppObject *)sub_1BC3254(WarBoardAiTargetCacher___c__DisplayClass15_0_TypeInfo);
+  v8 = (Il2CppObject *)sub_1BCB244(WarBoardAiTargetCacher___c__DisplayClass15_0_TypeInfo);
   System_Object___ctor(v8, 0LL);
   if ( !v8
     || (v8[1].klass = (Il2CppClass *)trendKey,
         targetDetectorList = (System_Collections_Generic_List_object__o *)this->fields.targetDetectorList,
-        v12 = (System_Predicate_object__o *)sub_1BC3254(System_Predicate_TargetDetector__TypeInfo),
+        v12 = (System_Predicate_object__o *)sub_1BCB244(System_Predicate_TargetDetector__TypeInfo),
         System_Predicate_object____ctor(
           v12,
           v8,
@@ -162,12 +162,12 @@ TargetDetector_o *__fastcall WarBoardAiTargetCacher__GetDetectorByTrendKey(
           0LL),
         !targetDetectorList) )
   {
-    sub_1BC3264(v9, v10);
+    sub_1BCB254(v9, v10);
   }
   return (TargetDetector_o *)System_Collections_Generic_List_object___Find(
                                targetDetectorList,
                                (System_Predicate_T__o *)v12,
-                               (const MethodInfo_36A14A8 *)Method_System_Collections_Generic_List_TargetDetector__Find__);
+                               (const MethodInfo_36BA238 *)Method_System_Collections_Generic_List_TargetDetector__Find__);
 }
 
 
@@ -193,10 +193,10 @@ IWarBoardObjectData_array *__fastcall WarBoardAiTargetCacher__GetTargetObjectsBy
   TargetDetector_o *DetectorByTrendKey; // x0
   System_Collections_Generic_IEnumerable_TSource__o *TargetObjectHashSet_k__BackingField; // x0
 
-  if ( (byte_4AFF9EC & 1) == 0 )
+  if ( (byte_4B19EC2 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_IWarBoardObjectData___, trendKey);
-    byte_4AFF9EC = 1;
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_IWarBoardObjectData___, trendKey);
+    byte_4B19EC2 = 1;
   }
   DetectorByTrendKey = WarBoardAiTargetCacher__GetDetectorByTrendKey(this, trendKey, method);
   if ( DetectorByTrendKey
@@ -204,7 +204,7 @@ IWarBoardObjectData_array *__fastcall WarBoardAiTargetCacher__GetTargetObjectsBy
   {
     return (IWarBoardObjectData_array *)System_Linq_Enumerable__ToArray_object_(
                                           TargetObjectHashSet_k__BackingField,
-                                          (const MethodInfo_303E54C *)Method_System_Linq_Enumerable_ToArray_IWarBoardObjectData___);
+                                          (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_IWarBoardObjectData___);
   }
   else
   {
@@ -252,27 +252,27 @@ void __fastcall WarBoardAiTargetCacher__Register(
   __int64 size; // x10
   Il2CppClass **v30; // x8
 
-  if ( (byte_4AFF9EB & 1) == 0 )
+  if ( (byte_4B19EC1 & 1) == 0 )
   {
-    sub_1BC3008(&IndividualityTargetDetector_TypeInfo, trendKey);
-    sub_1BC3008(&Method_System_Collections_Generic_List_TargetDetector__Add__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_TargetDetector__Find__, v10);
-    sub_1BC3008(&System_Predicate_TargetDetector__TypeInfo, v11);
-    sub_1BC3008(&Method_WarBoardAiTargetCacher___c__DisplayClass9_0__Register_b__0__, v12);
-    sub_1BC3008(&WarBoardAiTargetCacher___c__DisplayClass9_0_TypeInfo, v13);
-    byte_4AFF9EB = 1;
+    sub_1BCAFF8(&IndividualityTargetDetector_TypeInfo, trendKey);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_TargetDetector__Add__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_TargetDetector__Find__, v10);
+    sub_1BCAFF8(&System_Predicate_TargetDetector__TypeInfo, v11);
+    sub_1BCAFF8(&Method_WarBoardAiTargetCacher___c__DisplayClass9_0__Register_b__0__, v12);
+    sub_1BCAFF8(&WarBoardAiTargetCacher___c__DisplayClass9_0_TypeInfo, v13);
+    byte_4B19EC1 = 1;
   }
-  v14 = sub_1BC3254(WarBoardAiTargetCacher___c__DisplayClass9_0_TypeInfo);
+  v14 = sub_1BCB244(WarBoardAiTargetCacher___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v14, 0LL);
-  v15 = (IndividualityTargetDetector_o *)sub_1BC3254(IndividualityTargetDetector_TypeInfo);
+  v15 = (IndividualityTargetDetector_o *)sub_1BCB244(IndividualityTargetDetector_TypeInfo);
   IndividualityTargetDetector___ctor(v15, entity, this, teamCond, v16);
   if ( !v14 )
     goto LABEL_15;
   *(_QWORD *)(v14 + 16) = v15;
   v21 = (System_Collections_Generic_List_object__o **)(v14 + 16);
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v14 + 16), (int32_t)v15, v19, v20);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v14 + 16), (int32_t)v15, v19, v20);
   targetDetectorList = (System_Collections_Generic_List_object__o *)this->fields.targetDetectorList;
-  v23 = (System_Predicate_object__o *)sub_1BC3254(System_Predicate_TargetDetector__TypeInfo);
+  v23 = (System_Predicate_object__o *)sub_1BCB244(System_Predicate_TargetDetector__TypeInfo);
   System_Predicate_object____ctor(
     v23,
     (Il2CppObject *)v14,
@@ -283,7 +283,7 @@ void __fastcall WarBoardAiTargetCacher__Register(
   v17 = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___Find(
                                                        targetDetectorList,
                                                        (System_Predicate_T__o *)v23,
-                                                       (const MethodInfo_36A14A8 *)Method_System_Collections_Generic_List_TargetDetector__Find__);
+                                                       (const MethodInfo_36BA238 *)Method_System_Collections_Generic_List_TargetDetector__Find__);
   if ( v17 )
     goto LABEL_13;
   v18 = *v21;
@@ -298,7 +298,7 @@ void __fastcall WarBoardAiTargetCacher__Register(
         !items) )
   {
 LABEL_15:
-    sub_1BC3264(v17, v18);
+    sub_1BCB254(v17, v18);
   }
   size = v17->fields._size;
   if ( (unsigned int)size >= items->max_length )
@@ -306,14 +306,14 @@ LABEL_15:
     System_Collections_Generic_List_object___AddWithResize(
       v17,
       (Il2CppObject *)v18,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
   }
   else
   {
     v30 = &items->obj.klass + size;
     v17->fields._size = size + 1;
     v30[4] = (Il2CppClass *)v18;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v18, (int32_t)v24, v25);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v18, (int32_t)v24, v25);
   }
   v17 = *v21;
 LABEL_13:
@@ -342,15 +342,15 @@ void __fastcall WarBoardAiTargetCacher___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4AFF9F0 & 1) == 0 )
+  if ( (byte_4B19EC6 & 1) == 0 )
   {
-    sub_1BC3008(&WarBoardAiTargetCacher___c_TypeInfo, v1);
-    byte_4AFF9F0 = 1;
+    sub_1BCAFF8(&WarBoardAiTargetCacher___c_TypeInfo, v1);
+    byte_4B19EC6 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BC3254(WarBoardAiTargetCacher___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BCB244(WarBoardAiTargetCacher___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   WarBoardAiTargetCacher___c_TypeInfo->static_fields->__9 = (struct WarBoardAiTargetCacher___c_o *)v2;
-  sub_1BC2FAC((CGThumbnailListItem_o *)WarBoardAiTargetCacher___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BCAF9C((CGThumbnailListItem_o *)WarBoardAiTargetCacher___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -366,7 +366,7 @@ void __fastcall WarBoardAiTargetCacher___c___ClearTargetObject_b__13_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   TargetDetector__ClearTargetObject(x, (const MethodInfo *)x);
 }
 
@@ -385,7 +385,7 @@ void __fastcall WarBoardAiTargetCacher___c__DisplayClass14_0___AggregateTargetOb
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   ((void (__fastcall *)(TargetDetector_o *, struct IWarBoardObjectData_array *, void *))x->klass[1]._1.namespaze)(
     x,
     this->fields.objectArray,
@@ -409,22 +409,22 @@ bool __fastcall WarBoardAiTargetCacher___c__DisplayClass15_0___GetDetectorByTren
   WarBoardAiTargetCacher___c__DisplayClass15_0_o *v4; // x19
 
   v4 = this;
-  if ( (byte_4AFF9F1 & 1) == 0 )
+  if ( (byte_4B19EC7 & 1) == 0 )
   {
-    this = (WarBoardAiTargetCacher___c__DisplayClass15_0_o *)sub_1BC3008(
+    this = (WarBoardAiTargetCacher___c__DisplayClass15_0_o *)sub_1BCAFF8(
                                                                &Method_System_Collections_Generic_HashSet_long__Contains__,
                                                                x);
-    byte_4AFF9F1 = 1;
+    byte_4B19EC7 = 1;
   }
   if ( !x
     || (this = (WarBoardAiTargetCacher___c__DisplayClass15_0_o *)x->fields._TrendKeyHashSet_k__BackingField) == 0LL )
   {
-    sub_1BC3264(this, x);
+    sub_1BCB254(this, x);
   }
   return System_Collections_Generic_HashSet_long___Contains(
            (System_Collections_Generic_HashSet_long__o *)this,
            v4->fields.trendKey,
-           (const MethodInfo_355C884 *)Method_System_Collections_Generic_HashSet_long__Contains__);
+           (const MethodInfo_3575614 *)Method_System_Collections_Generic_HashSet_long__Contains__);
 }
 
 
@@ -442,7 +442,7 @@ bool __fastcall WarBoardAiTargetCacher___c__DisplayClass9_0___Register_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return ((__int64 (__fastcall *)(TargetDetector_o *, struct IndividualityTargetDetector_o *, const char *))x->klass[1]._1.gc_desc)(
            x,
            this->fields.newDetector,

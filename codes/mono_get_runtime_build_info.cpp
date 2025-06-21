@@ -1,4 +1,4 @@
 __int64 mono_get_runtime_build_info()
 {
-  return sub_1B9F970("0.0 (IL2CPP)");
+  return sub_1BA7960("0.0 (IL2CPP)");
 }

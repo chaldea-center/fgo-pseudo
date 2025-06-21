@@ -6,23 +6,23 @@ void __fastcall QuestBehaviorMaster___ctor(QuestBehaviorMaster_o *this, const Me
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B024E7 & 1) == 0 )
+  if ( (byte_4B1CAC9 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_QuestBehaviorMaster__QuestBehaviorEntity__string___ctor__, method);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity_____ctor__, v3);
-    sub_1BC3008(&System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____TypeInfo, v4);
-    byte_4B024E7 = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_QuestBehaviorMaster__QuestBehaviorEntity__string___ctor__, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity_____ctor__, v3);
+    sub_1BCAFF8(&System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____TypeInfo, v4);
+    byte_4B1CAC9 = 1;
   }
-  v5 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BC3254(System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BCB244(System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____TypeInfo);
   System_Collections_Generic_Dictionary_long__object____ctor(
     v5,
-    (const MethodInfo_334B364 *)Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity_____ctor__);
+    (const MethodInfo_33640F4 *)Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity_____ctor__);
   this->fields.dictQuestPhaseCache = (struct System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____o *)v5;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.dictQuestPhaseCache, (int32_t)v5, v6, v7);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.dictQuestPhaseCache, (int32_t)v5, v6, v7);
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     205,
-    (const MethodInfo_32B1804 *)Method_DataMasterBase_QuestBehaviorMaster__QuestBehaviorEntity__string___ctor__);
+    (const MethodInfo_32CA594 *)Method_DataMasterBase_QuestBehaviorMaster__QuestBehaviorEntity__string___ctor__);
 }
 
 
@@ -50,9 +50,9 @@ int32_t __fastcall QuestBehaviorMaster__GetBattleBg(
     {
       behaviorValues = v6->fields.behaviorValues;
       if ( !behaviorValues )
-        sub_1BC3264(IsNullOrEmpty, v8);
+        sub_1BCB254(IsNullOrEmpty, v8);
       if ( !behaviorValues->max_length )
-        sub_1BC326C(IsNullOrEmpty, v8, v9);
+        sub_1BCB25C(IsNullOrEmpty, v8, v9);
       return behaviorValues->m_Items[1];
     }
   }
@@ -84,9 +84,9 @@ int32_t __fastcall QuestBehaviorMaster__GetBattleBgType(
     {
       behaviorValues = v6->fields.behaviorValues;
       if ( !behaviorValues )
-        sub_1BC3264(IsNullOrEmpty, v8);
+        sub_1BCB254(IsNullOrEmpty, v8);
       if ( !behaviorValues->max_length )
-        sub_1BC326C(IsNullOrEmpty, v8, v9);
+        sub_1BCB25C(IsNullOrEmpty, v8, v9);
       return behaviorValues->m_Items[1];
     }
   }
@@ -107,10 +107,10 @@ System_Int32_array *__fastcall QuestBehaviorMaster__GetBattleIndividuality(
   __int64 v11; // x0
   __int64 v12; // x0
 
-  if ( (byte_4B024EB & 1) == 0 )
+  if ( (byte_4B1CACD & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Array_Empty_int___, questPhaseUniqueId);
-    byte_4B024EB = 1;
+    sub_1BCAFF8(&Method_System_Array_Empty_int___, questPhaseUniqueId);
+    byte_4B1CACD = 1;
   }
   PriorityEntity = QuestBehaviorMaster__GetPriorityEntity(this, questPhaseUniqueId, 4, method);
   if ( PriorityEntity )
@@ -122,17 +122,17 @@ System_Int32_array *__fastcall QuestBehaviorMaster__GetBattleIndividuality(
       v10 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
       if ( !v10 )
       {
-        sub_1C134C8(Method_System_Array_Empty_int___);
+        sub_1C1B4B8(Method_System_Array_Empty_int___);
         v10 = v9[7];
       }
       v11 = *(_QWORD *)(v10 + 16);
       if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-        v11 = sub_1C1346C(inited);
+        v11 = sub_1C1B45C(inited);
       if ( !*(_DWORD *)(v11 + 224) )
         inited = j_il2cpp_runtime_class_init_0(v11);
       v12 = *(_QWORD *)(v9[7] + 16LL);
       if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-        v12 = sub_1C1346C(inited);
+        v12 = sub_1C1B45C(inited);
       return **(System_Int32_array ***)(v12 + 184);
     }
   }
@@ -151,18 +151,18 @@ QuestBehaviorEntity_o *__fastcall QuestBehaviorMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B024E5 & 1) == 0 )
+  if ( (byte_4B1CAC7 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_DataMasterBase_QuestBehaviorMaster__QuestBehaviorEntity__string__GetEntity__,
       *(_QWORD *)&questId);
-    byte_4B024E5 = 1;
+    byte_4B1CAC7 = 1;
   }
   PK = (Il2CppObject *)QuestBehaviorEntity__CreatePK(questId, phase, num, priority, *(const MethodInfo **)&priority);
   return (QuestBehaviorEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_32B3B28 *)Method_DataMasterBase_QuestBehaviorMaster__QuestBehaviorEntity__string__GetEntity__);
+                                    (const MethodInfo_32CC8B8 *)Method_DataMasterBase_QuestBehaviorMaster__QuestBehaviorEntity__string__GetEntity__);
 }
 
 
@@ -183,43 +183,43 @@ QuestBehaviorEntity_o *__fastcall QuestBehaviorMaster__GetPriorityEntity(
   System_Func_object__bool__o *v15; // x20
   Il2CppObject *value; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B024EC & 1) == 0 )
+  if ( (byte_4B1CACE & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____TryGetValue__,
       questPhaseUniqueId);
-    sub_1BC3008(&Method_System_Linq_Enumerable_FirstOrDefault_QuestBehaviorEntity___, v7);
-    sub_1BC3008(&System_Func_QuestBehaviorEntity__bool__TypeInfo, v8);
-    sub_1BC3008(&Method_QuestBehaviorMaster___c__DisplayClass10_0__GetPriorityEntity_b__0__, v9);
-    sub_1BC3008(&QuestBehaviorMaster___c__DisplayClass10_0_TypeInfo, v10);
-    byte_4B024EC = 1;
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_FirstOrDefault_QuestBehaviorEntity___, v7);
+    sub_1BCAFF8(&System_Func_QuestBehaviorEntity__bool__TypeInfo, v8);
+    sub_1BCAFF8(&Method_QuestBehaviorMaster___c__DisplayClass10_0__GetPriorityEntity_b__0__, v9);
+    sub_1BCAFF8(&QuestBehaviorMaster___c__DisplayClass10_0_TypeInfo, v10);
+    byte_4B1CACE = 1;
   }
   value = 0LL;
-  v11 = sub_1BC3254(QuestBehaviorMaster___c__DisplayClass10_0_TypeInfo);
+  v11 = sub_1BCB244(QuestBehaviorMaster___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0LL);
   if ( !v11
     || (*(_DWORD *)(v11 + 16) = kind,
         (dictQuestPhaseCache = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.dictQuestPhaseCache) == 0LL) )
   {
-    sub_1BC3264(dictQuestPhaseCache, v13);
+    sub_1BCB254(dictQuestPhaseCache, v13);
   }
   if ( !System_Collections_Generic_Dictionary_long__object___TryGetValue(
           dictQuestPhaseCache,
           questPhaseUniqueId,
           &value,
-          (const MethodInfo_334D4AC *)Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____TryGetValue__) )
+          (const MethodInfo_336623C *)Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____TryGetValue__) )
     return 0LL;
   v14 = value;
-  v15 = (System_Func_object__bool__o *)sub_1BC3254(System_Func_QuestBehaviorEntity__bool__TypeInfo);
+  v15 = (System_Func_object__bool__o *)sub_1BCB244(System_Func_QuestBehaviorEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v15,
     (Il2CppObject *)v11,
     Method_QuestBehaviorMaster___c__DisplayClass10_0__GetPriorityEntity_b__0__,
     0LL);
-  return (QuestBehaviorEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__50493748(
+  return (QuestBehaviorEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__50595188(
                                     (System_Collections_Generic_IEnumerable_TSource__o *)v14,
                                     (System_Func_TSource__bool__o *)v15,
-                                    (const MethodInfo_3027934 *)Method_System_Linq_Enumerable_FirstOrDefault_QuestBehaviorEntity___);
+                                    (const MethodInfo_3040574 *)Method_System_Linq_Enumerable_FirstOrDefault_QuestBehaviorEntity___);
 }
 
 
@@ -281,41 +281,41 @@ void __fastcall QuestBehaviorMaster__InitQuestPhaseCache(QuestBehaviorMaster_o *
   System_Action_T__o *v56; // x21
   Il2CppObject *v57; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4B024EE & 1) == 0 )
+  if ( (byte_4B1CAD0 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_KeyValuePair_long__List_QuestBehaviorEntity____TypeInfo, method);
-    sub_1BC3008(&Method_BasicHelper_ForEach_KeyValuePair_long__List_QuestBehaviorEntity_____, v3);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____Clear__, v4);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___Clear__, v5);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___ContainsKey__, v6);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity____ctor__, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___get_Item__, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___set_Item__, v9);
-    sub_1BC3008(&System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___TypeInfo, v10);
-    sub_1BC3008(&Method_System_Linq_Enumerable_OfType_QuestBehaviorEntity___, v11);
-    sub_1BC3008(&System_IDisposable_TypeInfo, v12);
-    sub_1BC3008(&System_Collections_Generic_IEnumerable_QuestBehaviorEntity__TypeInfo, v13);
-    sub_1BC3008(&System_Collections_Generic_IEnumerator_QuestBehaviorEntity__TypeInfo, v14);
-    sub_1BC3008(&System_Collections_IEnumerator_TypeInfo, v15);
-    sub_1BC3008(&Method_System_Collections_Generic_List_QuestBehaviorEntity__Add__, v16);
-    sub_1BC3008(&Method_System_Collections_Generic_List_QuestBehaviorEntity___ctor__, v17);
-    sub_1BC3008(&System_Collections_Generic_List_QuestBehaviorEntity__TypeInfo, v18);
-    sub_1BC3008(&Method_QuestBehaviorMaster__InitQuestPhaseCache_b__13_0__, v19);
-    byte_4B024EE = 1;
+    sub_1BCAFF8(&System_Action_KeyValuePair_long__List_QuestBehaviorEntity____TypeInfo, method);
+    sub_1BCAFF8(&Method_BasicHelper_ForEach_KeyValuePair_long__List_QuestBehaviorEntity_____, v3);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____Clear__, v4);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___Clear__, v5);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___ContainsKey__, v6);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity____ctor__, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___get_Item__, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___set_Item__, v9);
+    sub_1BCAFF8(&System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___TypeInfo, v10);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_OfType_QuestBehaviorEntity___, v11);
+    sub_1BCAFF8(&System_IDisposable_TypeInfo, v12);
+    sub_1BCAFF8(&System_Collections_Generic_IEnumerable_QuestBehaviorEntity__TypeInfo, v13);
+    sub_1BCAFF8(&System_Collections_Generic_IEnumerator_QuestBehaviorEntity__TypeInfo, v14);
+    sub_1BCAFF8(&System_Collections_IEnumerator_TypeInfo, v15);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_QuestBehaviorEntity__Add__, v16);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_QuestBehaviorEntity___ctor__, v17);
+    sub_1BCAFF8(&System_Collections_Generic_List_QuestBehaviorEntity__TypeInfo, v18);
+    sub_1BCAFF8(&Method_QuestBehaviorMaster__InitQuestPhaseCache_b__13_0__, v19);
+    byte_4B1CAD0 = 1;
   }
   dictQuestPhaseCache = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.dictQuestPhaseCache;
   if ( !dictQuestPhaseCache )
     goto LABEL_46;
   System_Collections_Generic_Dictionary_long__object___Clear(
     dictQuestPhaseCache,
-    (const MethodInfo_334BEBC *)Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____Clear__);
-  v21 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BC3254(System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___TypeInfo);
+    (const MethodInfo_3364C4C *)Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____Clear__);
+  v21 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1BCB244(System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___TypeInfo);
   System_Collections_Generic_Dictionary_long__object____ctor(
     v21,
-    (const MethodInfo_334B364 *)Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity____ctor__);
+    (const MethodInfo_33640F4 *)Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity____ctor__);
   dictQuestPhaseCache = (System_Collections_Generic_Dictionary_TKey__TValue__o *)System_Linq_Enumerable__OfType_object_(
                                                                                    (System_Collections_IEnumerable_o *)this->fields.list,
-                                                                                   (const MethodInfo_302D068 *)Method_System_Linq_Enumerable_OfType_QuestBehaviorEntity___);
+                                                                                   (const MethodInfo_3045CA8 *)Method_System_Linq_Enumerable_OfType_QuestBehaviorEntity___);
   if ( !dictQuestPhaseCache )
     goto LABEL_46;
   klass = dictQuestPhaseCache->klass;
@@ -336,14 +336,14 @@ void __fastcall QuestBehaviorMaster__InitQuestPhaseCache(QuestBehaviorMaster_o *
   else
   {
 LABEL_9:
-    v26 = sub_1C13570(dictQuestPhaseCache, System_Collections_Generic_IEnumerable_QuestBehaviorEntity__TypeInfo, 0LL);
+    v26 = sub_1C1B560(dictQuestPhaseCache, System_Collections_Generic_IEnumerable_QuestBehaviorEntity__TypeInfo, 0LL);
   }
   v57 = (Il2CppObject *)this;
   v28 = (*(__int64 (__fastcall **)(System_Collections_Generic_Dictionary_TKey__TValue__o *, _QWORD))v26)(
           v23,
           *(_QWORD *)(v26 + 8));
   if ( !v28 )
-    sub_1BC3264(0LL, v27);
+    sub_1BCB254(0LL, v27);
   while ( 1 )
   {
     v29 = *(_QWORD *)v28;
@@ -363,7 +363,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v32 = sub_1C13570(v28, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v32 = sub_1C1B560(v28, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v32)(v28, *(_QWORD *)(v32 + 8)) & 1) == 0 )
       break;
@@ -384,56 +384,56 @@ LABEL_16:
     else
     {
 LABEL_23:
-      v36 = sub_1C13570(v28, System_Collections_Generic_IEnumerator_QuestBehaviorEntity__TypeInfo, 0LL);
+      v36 = sub_1C1B560(v28, System_Collections_Generic_IEnumerator_QuestBehaviorEntity__TypeInfo, 0LL);
     }
     v37 = (QuestBehaviorEntity_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v36)(v28, *(_QWORD *)(v36 + 8));
     v39 = (Il2CppObject *)v37;
     if ( !v37 )
-      sub_1BC3264(0LL, v38);
+      sub_1BCB254(0LL, v38);
     UniqueId = QuestBehaviorEntity__GetUniqueId(v37, v38);
     if ( !v21 )
-      sub_1BC3264(UniqueId, v41);
+      sub_1BCB254(UniqueId, v41);
     v42 = UniqueId;
     if ( !System_Collections_Generic_Dictionary_long__object___ContainsKey(
             v21,
             UniqueId,
-            (const MethodInfo_334BF28 *)Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___ContainsKey__) )
+            (const MethodInfo_3364CB8 *)Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___ContainsKey__) )
     {
-      v43 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_QuestBehaviorEntity__TypeInfo);
+      v43 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_QuestBehaviorEntity__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v43,
-        (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_QuestBehaviorEntity___ctor__);
+        (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_QuestBehaviorEntity___ctor__);
       System_Collections_Generic_Dictionary_long__object___set_Item(
         v21,
         v42,
         (Il2CppObject *)v43,
-        (const MethodInfo_334BD20 *)Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___set_Item__);
+        (const MethodInfo_3364AB0 *)Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___set_Item__);
     }
     Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_Dictionary_long__object___get_Item(
                                                           v21,
                                                           v42,
-                                                          (const MethodInfo_334BC94 *)Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___get_Item__);
+                                                          (const MethodInfo_3364A24 *)Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___get_Item__);
     if ( !Item )
-      sub_1BC3264(0LL, v45);
+      sub_1BCB254(0LL, v45);
     items = Item->fields._items;
     v49 = Method_System_Collections_Generic_List_QuestBehaviorEntity__Add__;
     ++Item->fields._version;
     if ( !items )
-      sub_1BC3264(Item, v45);
+      sub_1BCB254(Item, v45);
     size = Item->fields._size;
     if ( (unsigned int)size >= items->max_length )
     {
       System_Collections_Generic_List_object___AddWithResize(
         Item,
         v39,
-        *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+        *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
     }
     else
     {
       v51 = &items->obj.klass + size;
       Item->fields._size = size + 1;
       v51[4] = (Il2CppClass *)v39;
-      sub_1BC2FAC((CGThumbnailListItem_o *)(v51 + 4), (int32_t)v39, v46, v47);
+      sub_1BCAF9C((CGThumbnailListItem_o *)(v51 + 4), (int32_t)v39, v46, v47);
     }
   }
   v52 = *(_QWORD *)v28;
@@ -453,10 +453,10 @@ LABEL_23:
   else
   {
 LABEL_38:
-    v55 = sub_1C13570(v28, System_IDisposable_TypeInfo, 0LL);
+    v55 = sub_1C1B560(v28, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v55)(v28, *(_QWORD *)(v55 + 8));
-  v56 = (System_Action_T__o *)sub_1BC3254(System_Action_KeyValuePair_long__List_QuestBehaviorEntity____TypeInfo);
+  v56 = (System_Action_T__o *)sub_1BCB244(System_Action_KeyValuePair_long__List_QuestBehaviorEntity____TypeInfo);
   System_Action_KeyValuePair_long__object_____ctor(
     v56,
     v57,
@@ -465,13 +465,13 @@ LABEL_38:
   BasicHelper__ForEach_KeyValuePair_long__object__(
     (System_Collections_Generic_IEnumerable_T__o *)v21,
     v56,
-    (const MethodInfo_2FEC69C *)Method_BasicHelper_ForEach_KeyValuePair_long__List_QuestBehaviorEntity_____);
+    (const MethodInfo_30052DC *)Method_BasicHelper_ForEach_KeyValuePair_long__List_QuestBehaviorEntity_____);
   if ( !v21 )
 LABEL_46:
-    sub_1BC3264(dictQuestPhaseCache, method);
+    sub_1BCB254(dictQuestPhaseCache, method);
   System_Collections_Generic_Dictionary_long__object___Clear(
     v21,
-    (const MethodInfo_334BEBC *)Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___Clear__);
+    (const MethodInfo_3364C4C *)Method_System_Collections_Generic_Dictionary_long__List_QuestBehaviorEntity___Clear__);
 }
 
 
@@ -487,19 +487,19 @@ bool __fastcall QuestBehaviorMaster__IsOpenQuestBehaviorCond(
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t v11; // w23
 
-  if ( (byte_4B024ED & 1) == 0 )
+  if ( (byte_4B1CACF & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Count__, *(_QWORD *)&questId);
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Item__, v9);
-    byte_4B024ED = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Count__, *(_QWORD *)&questId);
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Item__, v9);
+    byte_4B1CACF = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_14:
-    sub_1BC3264(list, *(_QWORD *)&questId);
+    sub_1BCB254(list, *(_QWORD *)&questId);
   v11 = System_Collections_ObjectModel_Collection_object___get_Count(
           list,
-          (const MethodInfo_324A858 *)Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Count__)
+          (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Count__)
       - 1;
   if ( v11 < 0 )
     return 0;
@@ -511,7 +511,7 @@ LABEL_14:
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                list,
                                                                v11,
-                                                               (const MethodInfo_324A8E8 *)Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Item__);
+                                                               (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Item__);
     if ( !list )
       goto LABEL_14;
     if ( LODWORD(list->fields.items) == questId
@@ -539,17 +539,17 @@ bool __fastcall QuestBehaviorMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B024E6 & 1) == 0 )
+  if ( (byte_4B1CAC8 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_QuestBehaviorMaster__QuestBehaviorEntity__string__TryGetEntity__, entity);
-    byte_4B024E6 = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_QuestBehaviorMaster__QuestBehaviorEntity__string__TryGetEntity__, entity);
+    byte_4B1CAC8 = 1;
   }
   PK = (Il2CppObject *)QuestBehaviorEntity__CreatePK(questId, phase, num, priority, *(const MethodInfo **)&num);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32B3B74 *)Method_DataMasterBase_QuestBehaviorMaster__QuestBehaviorEntity__string__TryGetEntity__);
+           (const MethodInfo_32CC904 *)Method_DataMasterBase_QuestBehaviorMaster__QuestBehaviorEntity__string__TryGetEntity__);
 }
 
 
@@ -580,17 +580,17 @@ void __fastcall QuestBehaviorMaster___InitQuestPhaseCache_b__13_0(
 
   value = (System_Collections_Generic_IEnumerable_TSource__o *)pair.fields.value;
   key = pair.fields.key;
-  if ( (byte_4B024EF & 1) == 0 )
+  if ( (byte_4B1CAD1 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____set_Item__, pair.fields.key);
-    sub_1BC3008(&Method_System_Linq_Enumerable_OrderByDescending_QuestBehaviorEntity__int___, v6);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_QuestBehaviorEntity___, v7);
-    sub_1BC3008(&System_Func_QuestBehaviorEntity__int__TypeInfo, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_KeyValuePair_long__List_QuestBehaviorEntity___get_Key__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_KeyValuePair_long__List_QuestBehaviorEntity___get_Value__, v10);
-    sub_1BC3008(&Method_QuestBehaviorMaster___c__InitQuestPhaseCache_b__13_1__, v11);
-    sub_1BC3008(&QuestBehaviorMaster___c_TypeInfo, v12);
-    byte_4B024EF = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____set_Item__, pair.fields.key);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_OrderByDescending_QuestBehaviorEntity__int___, v6);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_QuestBehaviorEntity___, v7);
+    sub_1BCAFF8(&System_Func_QuestBehaviorEntity__int__TypeInfo, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_KeyValuePair_long__List_QuestBehaviorEntity___get_Key__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_KeyValuePair_long__List_QuestBehaviorEntity___get_Value__, v10);
+    sub_1BCAFF8(&Method_QuestBehaviorMaster___c__InitQuestPhaseCache_b__13_1__, v11);
+    sub_1BCAFF8(&QuestBehaviorMaster___c_TypeInfo, v12);
+    byte_4B1CAD1 = 1;
   }
   v13 = QuestBehaviorMaster___c_TypeInfo;
   dictQuestPhaseCache = (System_Collections_Generic_Dictionary_TKey__TValue__o *)this->fields.dictQuestPhaseCache;
@@ -608,26 +608,26 @@ void __fastcall QuestBehaviorMaster___InitQuestPhaseCache_b__13_0(
       v13 = QuestBehaviorMaster___c_TypeInfo;
     }
     v16 = (Il2CppObject *)v13->static_fields->__9;
-    _9__13_1 = (System_Func_object__int__o *)sub_1BC3254(System_Func_QuestBehaviorEntity__int__TypeInfo);
+    _9__13_1 = (System_Func_object__int__o *)sub_1BCB244(System_Func_QuestBehaviorEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__13_1, v16, Method_QuestBehaviorMaster___c__InitQuestPhaseCache_b__13_1__, 0LL);
     static_fields = QuestBehaviorMaster___c_TypeInfo->static_fields;
     static_fields->__9__13_1 = (struct System_Func_QuestBehaviorEntity__int__o *)_9__13_1;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__13_1, (int32_t)_9__13_1, v18, v19);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__13_1, (int32_t)_9__13_1, v18, v19);
   }
   v20 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
                                                                value,
                                                                (System_Func_TSource__TKey__o *)_9__13_1,
-                                                               (const MethodInfo_302DA1C *)Method_System_Linq_Enumerable_OrderByDescending_QuestBehaviorEntity__int___);
+                                                               (const MethodInfo_30466C8 *)Method_System_Linq_Enumerable_OrderByDescending_QuestBehaviorEntity__int___);
   v21 = System_Linq_Enumerable__ToArray_object_(
           v20,
-          (const MethodInfo_303E54C *)Method_System_Linq_Enumerable_ToArray_QuestBehaviorEntity___);
+          (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_QuestBehaviorEntity___);
   if ( !dictQuestPhaseCache )
-    sub_1BC3264(v21, v22);
+    sub_1BCB254(v21, v22);
   System_Collections_Generic_Dictionary_long__object___set_Item(
     dictQuestPhaseCache,
     key,
     &v21->obj,
-    (const MethodInfo_334BD20 *)Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____set_Item__);
+    (const MethodInfo_3364AB0 *)Method_System_Collections_Generic_Dictionary_long__QuestBehaviorEntity____set_Item__);
 }
 
 
@@ -656,31 +656,31 @@ QuestBehaviorEntity_array *__fastcall QuestBehaviorMaster__getBattleSkill(
   int32_t priority; // w28
   System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *Values; // x0
 
-  if ( (byte_4B024E9 & 1) == 0 )
+  if ( (byte_4B1CACB & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Count__, *(_QWORD *)&questId);
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Item__, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__Add__, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__ContainsKey__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__Remove__, v10);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity___ctor__, v11);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__get_Count__, v12);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__get_Item__, v13);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__get_Values__, v14);
-    sub_1BC3008(&System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__TypeInfo, v15);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToArray_QuestBehaviorEntity___, v16);
-    byte_4B024E9 = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Count__, *(_QWORD *)&questId);
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Item__, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__Add__, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__ContainsKey__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__Remove__, v10);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity___ctor__, v11);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__get_Count__, v12);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__get_Item__, v13);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__get_Values__, v14);
+    sub_1BCAFF8(&System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__TypeInfo, v15);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_QuestBehaviorEntity___, v16);
+    byte_4B1CACB = 1;
   }
-  v17 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BC3254(System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__TypeInfo);
+  v17 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BCB244(System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v17,
-    (const MethodInfo_3307B80 *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity___ctor__);
+    (const MethodInfo_3320910 *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_21;
   list = (void *)System_Collections_ObjectModel_Collection_object___get_Count(
                    (System_Collections_ObjectModel_Collection_T__o *)list,
-                   (const MethodInfo_324A858 *)Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Count__);
+                   (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Count__);
   v20 = (_DWORD)list - 1;
   if ( (int)list - 1 >= 0 )
   {
@@ -692,7 +692,7 @@ QuestBehaviorEntity_array *__fastcall QuestBehaviorMaster__getBattleSkill(
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v20,
-               (const MethodInfo_324A8E8 *)Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Item__);
+               (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Item__);
       if ( !list )
         break;
       v21 = (QuestBehaviorEntity_o *)list;
@@ -703,13 +703,13 @@ QuestBehaviorEntity_array *__fastcall QuestBehaviorMaster__getBattleSkill(
         if ( !System_Collections_Generic_Dictionary_int__object___ContainsKey(
                 v17,
                 *((_DWORD *)list + 6),
-                (const MethodInfo_3308748 *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__ContainsKey__) )
+                (const MethodInfo_33214D8 *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__ContainsKey__) )
           goto LABEL_14;
         priority = v21->fields.priority;
         list = System_Collections_Generic_Dictionary_int__object___get_Item(
                  v17,
                  v21->fields.num,
-                 (const MethodInfo_33084B4 *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__get_Item__);
+                 (const MethodInfo_3321244 *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__get_Item__);
         if ( !list )
           break;
         if ( priority >= *((_DWORD *)list + 7) )
@@ -721,12 +721,12 @@ LABEL_14:
             System_Collections_Generic_Dictionary_int__object___Remove(
               v17,
               v21->fields.num,
-              (const MethodInfo_33099DC *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__Remove__);
+              (const MethodInfo_332276C *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__Remove__);
             System_Collections_Generic_Dictionary_int__object___Add(
               v17,
               v21->fields.num,
               (Il2CppObject *)v21,
-              (const MethodInfo_3308554 *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__Add__);
+              (const MethodInfo_33212E4 *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__Add__);
           }
         }
       }
@@ -734,21 +734,21 @@ LABEL_14:
         goto LABEL_17;
     }
 LABEL_21:
-    sub_1BC3264(list, v18);
+    sub_1BCB254(list, v18);
   }
 LABEL_17:
   if ( !v17 )
     goto LABEL_21;
   if ( !System_Collections_Generic_Dictionary_int__object___get_Count(
           v17,
-          (const MethodInfo_3308204 *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__get_Count__) )
+          (const MethodInfo_3320F94 *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__get_Count__) )
     return 0LL;
   Values = System_Collections_Generic_Dictionary_int__object___get_Values(
              v17,
-             (const MethodInfo_3308364 *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__get_Values__);
+             (const MethodInfo_33210F4 *)Method_System_Collections_Generic_Dictionary_int__QuestBehaviorEntity__get_Values__);
   return (QuestBehaviorEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                         (System_Collections_Generic_IEnumerable_TSource__o *)Values,
-                                        (const MethodInfo_303E54C *)Method_System_Linq_Enumerable_ToArray_QuestBehaviorEntity___);
+                                        (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_QuestBehaviorEntity___);
 }
 
 
@@ -763,19 +763,19 @@ bool __fastcall QuestBehaviorMaster__getEnableContinue(
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t v9; // w22
 
-  if ( (byte_4B024EA & 1) == 0 )
+  if ( (byte_4B1CACC & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Count__, *(_QWORD *)&questId);
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Item__, v7);
-    byte_4B024EA = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Count__, *(_QWORD *)&questId);
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Item__, v7);
+    byte_4B1CACC = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
 LABEL_15:
-    sub_1BC3264(list, *(_QWORD *)&questId);
+    sub_1BCB254(list, *(_QWORD *)&questId);
   v9 = System_Collections_ObjectModel_Collection_object___get_Count(
          list,
-         (const MethodInfo_324A858 *)Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Count__)
+         (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Count__)
      - 1;
   if ( v9 < 0 )
     return 0;
@@ -787,7 +787,7 @@ LABEL_15:
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                list,
                                                                v9,
-                                                               (const MethodInfo_324A8E8 *)Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Item__);
+                                                               (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_QuestBehaviorEntity__get_Item__);
     if ( !list )
       goto LABEL_15;
     if ( LODWORD(list->fields.items) == questId
@@ -811,17 +811,17 @@ QuestBehaviorEntity_array *__fastcall QuestBehaviorMaster__getList(
 {
   __int64 v4; // x1
 
-  if ( (byte_4B024E8 & 1) == 0 )
+  if ( (byte_4B1CACA & 1) == 0 )
   {
-    sub_1BC3008(&Method_JsonManager_DeserializeArray_QuestBehaviorEntity___, obj);
-    sub_1BC3008(&JsonManager_TypeInfo, v4);
-    byte_4B024E8 = 1;
+    sub_1BCAFF8(&Method_JsonManager_DeserializeArray_QuestBehaviorEntity___, obj);
+    sub_1BCAFF8(&JsonManager_TypeInfo, v4);
+    byte_4B1CACA = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   return (QuestBehaviorEntity_array *)JsonManager__DeserializeArray_object_(
                                         obj,
-                                        (const MethodInfo_306D91C *)Method_JsonManager_DeserializeArray_QuestBehaviorEntity___);
+                                        (const MethodInfo_3086694 *)Method_JsonManager_DeserializeArray_QuestBehaviorEntity___);
 }
 
 
@@ -839,15 +839,15 @@ void __fastcall QuestBehaviorMaster___c___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B024F0 & 1) == 0 )
+  if ( (byte_4B1CAD2 & 1) == 0 )
   {
-    sub_1BC3008(&QuestBehaviorMaster___c_TypeInfo, v1);
-    byte_4B024F0 = 1;
+    sub_1BCAFF8(&QuestBehaviorMaster___c_TypeInfo, v1);
+    byte_4B1CAD2 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BC3254(QuestBehaviorMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BCB244(QuestBehaviorMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   QuestBehaviorMaster___c_TypeInfo->static_fields->__9 = (struct QuestBehaviorMaster___c_o *)v2;
-  sub_1BC2FAC((CGThumbnailListItem_o *)QuestBehaviorMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BCAF9C((CGThumbnailListItem_o *)QuestBehaviorMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -863,7 +863,7 @@ int32_t __fastcall QuestBehaviorMaster___c___InitQuestPhaseCache_b__13_1(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return ent->fields.priority;
 }
 
@@ -882,6 +882,6 @@ bool __fastcall QuestBehaviorMaster___c__DisplayClass10_0___GetPriorityEntity_b_
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   return x->fields.behaviorType == this->fields.kind && QuestBehaviorEntity__checkConditions(x, (const MethodInfo *)x);
 }

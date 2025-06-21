@@ -28,16 +28,16 @@ void __fastcall EventTowerListViewItem___ctor(
 
   v7 = isClearFloor;
   v8 = isOpenFloor;
-  if ( (byte_4AFCA62 & 1) == 0 )
+  if ( (byte_4B16F1E & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMasterData_GiftMaster___, targetEntity);
-    sub_1BC3008(&Method_DataManager_GetMasterData_ItemMaster___, v9);
-    sub_1BC3008(&Method_DataManager_GetMasterData_ServantCostumeMaster___, v10);
-    sub_1BC3008(&Method_DataManager_GetMasterData_ServantMaster___, v11);
-    sub_1BC3008(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v12);
-    sub_1BC3008(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v13);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
-    byte_4AFCA62 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_GiftMaster___, targetEntity);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_ItemMaster___, v9);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_ServantCostumeMaster___, v10);
+    sub_1BCAFF8(&Method_DataManager_GetMasterData_ServantMaster___, v11);
+    sub_1BCAFF8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v12);
+    sub_1BCAFF8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v13);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v14);
+    byte_4B16F1E = 1;
   }
   entity = 0LL;
   ListViewItem___ctor((ListViewItem_o *)this, 0LL);
@@ -45,57 +45,57 @@ void __fastcall EventTowerListViewItem___ctor(
   p_itemInfo = &this->fields.itemInfo;
   this->fields.isClearFloor = v7;
   this->fields.isOpenFloor = v8;
-  sub_1BC2FAC(&this->fields.itemInfo);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1BCAF9C(&this->fields.itemInfo);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_24;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_GiftMaster___);
+                                (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_GiftMaster___);
   if ( !*p_itemInfo || !Instance )
     goto LABEL_24;
   this->fields.clearReward = GiftMaster__getDataById((GiftMaster_o *)Instance, (*p_itemInfo)->fields.giftId, 0LL);
   p_clearReward = &this->fields.clearReward;
-  sub_1BC2FAC(&this->fields.clearReward);
+  sub_1BCAF9C(&this->fields.clearReward);
   if ( !this->fields.clearReward )
     return;
   GiftEntity__GetInfo(this->fields.clearReward, &this->fields.rewardName, &this->fields.rewardNum, 0LL);
   clearReward = this->fields.clearReward;
   if ( !clearReward )
 LABEL_24:
-    sub_1BC3264(Instance, v17);
+    sub_1BCB254(Instance, v17);
   switch ( clearReward->fields.type )
   {
     case 1:
     case 6:
     case 7:
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_24;
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                    (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( !*p_clearReward || !Instance )
         goto LABEL_24;
       this->fields.servantEntity = (struct ServantEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                                                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                                                (*p_clearReward)->fields.objectId,
-                                                               (const MethodInfo_32AF070 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                                               (const MethodInfo_32C7E00 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       p_servantEntity = &this->fields.servantEntity;
       goto LABEL_22;
     case 2:
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_24;
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                    (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ItemMaster___);
       if ( !*p_clearReward || !Instance )
         goto LABEL_24;
       this->fields.itemEntity = (struct ItemEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                                          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                                          (*p_clearReward)->fields.objectId,
-                                                         (const MethodInfo_32AF070 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                                         (const MethodInfo_32C7E00 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
       p_servantEntity = &this->fields.itemEntity;
       goto LABEL_22;
     case 9:
@@ -103,16 +103,16 @@ LABEL_24:
       if ( !Instance )
         goto LABEL_24;
       v21 = (System_String_o *)Instance;
-      v22 = System_String__Substring_62394572((System_String_o *)Instance, 0, Instance->fields.m_CachedPtr - 2, 0LL);
+      v22 = System_String__Substring_62496348((System_String_o *)Instance, 0, Instance->fields.m_CachedPtr - 2, 0LL);
       v23 = System_Int32__Parse(v22, 0LL);
       v24 = System_String__Substring(v21, v21->fields._stringLength - 2, 0LL);
       v25 = System_Int32__Parse(v24, 0LL);
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_24;
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_3001E64 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
+                                    (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
       if ( !Instance )
         goto LABEL_24;
       if ( !ServantCostumeMaster__TryGetEntity((ServantCostumeMaster_o *)Instance, &entity, v23, v25, 0LL) )
@@ -120,7 +120,7 @@ LABEL_24:
       this->fields.servantCostumeEntity = entity;
       p_servantEntity = &this->fields.servantCostumeEntity;
 LABEL_22:
-      sub_1BC2FAC(p_servantEntity);
+      sub_1BCAF9C(p_servantEntity);
       break;
     default:
       return;
@@ -139,7 +139,7 @@ bool __fastcall EventTowerListViewItem__SetSortValue(
   itemInfo = this->fields.itemInfo;
   *(_WORD *)&this->fields.isTermination = 0;
   if ( !itemInfo )
-    sub_1BC3264(this, sort);
+    sub_1BCB254(this, sort);
   this->fields.sortValue0 = -itemInfo->fields.towerId;
   result = 1;
   this->fields.sortValue1 = itemInfo->fields.floor;
@@ -153,7 +153,7 @@ int32_t __fastcall EventTowerListViewItem__get_BannerId(EventTowerListViewItem_o
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   return itemInfo->fields.boardImageId;
 }
 
@@ -174,22 +174,22 @@ System_String_o *__fastcall EventTowerListViewItem__get_BoardMessage(
   int32_t floor; // [xsp+Ch] [xbp-14h] BYREF
 
   v2 = this;
-  if ( (byte_4AFCA63 & 1) == 0 )
+  if ( (byte_4B16F1F & 1) == 0 )
   {
-    sub_1BC3008(&int_TypeInfo, method);
-    this = (EventTowerListViewItem_o *)sub_1BC3008(&StringLiteral_24860/*"{0}"*/, v3);
-    byte_4AFCA63 = 1;
+    sub_1BCAFF8(&int_TypeInfo, method);
+    this = (EventTowerListViewItem_o *)sub_1BCAFF8(&StringLiteral_24882/*"{0}"*/, v3);
+    byte_4B16F1F = 1;
   }
   itemInfo = v2->fields.itemInfo;
   if ( !itemInfo
     || (this = (EventTowerListViewItem_o *)itemInfo->fields.boardMessage) == 0LL
     || (this = (EventTowerListViewItem_o *)System_String__Contains(
                                              (System_String_o *)this,
-                                             (System_String_o *)StringLiteral_24860/*"{0}"*/,
+                                             (System_String_o *)StringLiteral_24882/*"{0}"*/,
                                              0LL),
         (v8 = v2->fields.itemInfo) == 0LL) )
   {
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   }
   boardMessage = v8->fields.boardMessage;
   if ( ((unsigned __int8)this & 1) != 0 )
@@ -208,7 +208,7 @@ int32_t __fastcall EventTowerListViewItem__get_EventId(EventTowerListViewItem_o 
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   return itemInfo->fields.eventId;
 }
 
@@ -219,7 +219,7 @@ int32_t __fastcall EventTowerListViewItem__get_GiftType(EventTowerListViewItem_o
 
   clearReward = this->fields.clearReward;
   if ( !clearReward )
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   return clearReward->fields.type;
 }
 
@@ -230,7 +230,7 @@ int32_t __fastcall EventTowerListViewItem__get_IconId(EventTowerListViewItem_o *
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   return itemInfo->fields.iconId;
 }
 
@@ -278,7 +278,7 @@ int32_t __fastcall EventTowerListViewItem__get_RewardNum(EventTowerListViewItem_
 
   clearReward = this->fields.clearReward;
   if ( !clearReward )
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   num = clearReward->fields.num;
   if ( num <= 1 )
     return -1;
@@ -293,7 +293,7 @@ int32_t __fastcall EventTowerListViewItem__get_RewardObjectId(EventTowerListView
 
   clearReward = this->fields.clearReward;
   if ( !clearReward )
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   return clearReward->fields.objectId;
 }
 

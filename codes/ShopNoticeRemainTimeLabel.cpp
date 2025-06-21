@@ -13,9 +13,9 @@ void __fastcall ShopNoticeRemainTimeLabel___ctor(
   this->fields.onTimeOverLabelColor = _Q0;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.label = label;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.label, (int32_t)label, v12, v13);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.label, (int32_t)label, v12, v13);
   this->fields.monoBehaviour = monoBehaviour;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)monoBehaviour, v14, v15);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)monoBehaviour, v14, v15);
 }
 
 
@@ -27,7 +27,7 @@ void __fastcall ShopNoticeRemainTimeLabel__SetTimeLimit(
 {
   this->fields.timeLimit = timeLimit;
   if ( isChangeTimeOverLabelColorToRed )
-    this->fields.onTimeOverLabelColor = (struct UnityEngine_Color_o)xmmword_BDF9E0;
+    this->fields.onTimeOverLabelColor = (struct UnityEngine_Color_o)xmmword_BE34F0;
 }
 
 
@@ -45,10 +45,10 @@ void __fastcall ShopNoticeRemainTimeLabel__Start(ShopNoticeRemainTimeLabel_o *th
   monoBehaviour = this->fields.monoBehaviour;
   updated = ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel(this, v4);
   if ( !monoBehaviour )
-    sub_1BC3264(updated, v6);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_70019872(monoBehaviour, updated, 0LL);
+    sub_1BCB254(updated, v6);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_70121648(monoBehaviour, updated, 0LL);
   this->fields.coroutine = started;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.coroutine, (int32_t)started, v8, v9);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.coroutine, (int32_t)started, v8, v9);
 }
 
 
@@ -66,10 +66,10 @@ void __fastcall ShopNoticeRemainTimeLabel__Stop(ShopNoticeRemainTimeLabel_o *thi
   {
     monoBehaviour = this->fields.monoBehaviour;
     if ( !monoBehaviour )
-      sub_1BC3264(0LL, coroutine);
-    UnityEngine_MonoBehaviour__StopCoroutine_70020492(monoBehaviour, coroutine, 0LL);
+      sub_1BCB254(0LL, coroutine);
+    UnityEngine_MonoBehaviour__StopCoroutine_70122268(monoBehaviour, coroutine, 0LL);
     p_coroutine->klass = 0LL;
-    sub_1BC2FAC(p_coroutine, 0, v5, v6);
+    sub_1BCAF9C(p_coroutine, 0, v5, v6);
   }
 }
 
@@ -82,16 +82,16 @@ System_Collections_IEnumerator_o *__fastcall ShopNoticeRemainTimeLabel__UpdateRe
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4AFE36C & 1) == 0 )
+  if ( (byte_4B18852 & 1) == 0 )
   {
-    sub_1BC3008(&ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_TypeInfo, method);
-    byte_4AFE36C = 1;
+    sub_1BCAFF8(&ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_TypeInfo, method);
+    byte_4B18852 = 1;
   }
-  v3 = sub_1BC3254(ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_TypeInfo);
+  v3 = sub_1BCB244(ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0LL);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -128,14 +128,14 @@ bool __fastcall ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9__MoveNext(
   CGThumbnailListItem_o *p__2__current; // x19
 
   v2 = this;
-  if ( (byte_4AFE36D & 1) == 0 )
+  if ( (byte_4B18853 & 1) == 0 )
   {
-    sub_1BC3008(&LocalizationManager_TypeInfo, method);
-    sub_1BC3008(&NetworkManager_TypeInfo, v3);
-    this = (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_o *)sub_1BC3008(
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, method);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v3);
+    this = (ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_o *)sub_1BCAFF8(
                                                                         &UnityEngine_WaitForSeconds_TypeInfo,
                                                                         v4);
-    byte_4AFE36D = 1;
+    byte_4B18853 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -148,10 +148,10 @@ bool __fastcall ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9__MoveNext(
     if ( _1__state )
       return 0;
     v2->fields.__1__state = -1;
-    v7 = (UnityEngine_WaitForSeconds_o *)sub_1BC3254(UnityEngine_WaitForSeconds_TypeInfo);
+    v7 = (UnityEngine_WaitForSeconds_o *)sub_1BCB244(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v7, 1.0, 0LL);
     v2->fields._loopWait_5__2 = v7;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&v2->fields._loopWait_5__2, (int32_t)v7, v8, v9);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&v2->fields._loopWait_5__2, (int32_t)v7, v8, v9);
   }
   if ( !_4__this )
     goto LABEL_18;
@@ -165,7 +165,7 @@ bool __fastcall ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9__MoveNext(
                                                                       0LL);
   if ( !label )
 LABEL_18:
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   UILabel__set_text(label, (System_String_o *)this, 0LL);
   v12 = _4__this->fields.timeLimit;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -183,7 +183,7 @@ LABEL_18:
   loopWait_5__2 = (Il2CppObject *)v2->fields._loopWait_5__2;
   v2->fields.__2__current = loopWait_5__2;
   p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-  sub_1BC2FAC(p__2__current, (int32_t)loopWait_5__2, v13, v14);
+  sub_1BCAF9C(p__2__current, (int32_t)loopWait_5__2, v13, v14);
   result = 1;
   LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
   return result;
@@ -206,11 +206,11 @@ void __fastcall __noreturn ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BC301C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BC3254(v2);
+  v2 = sub_1BCB00C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1BCB244(v2);
   System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BC301C(&Method_ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_System_Collections_IEnumerator_Reset__);
-  sub_1BC3130(v3, v4);
+  v4 = sub_1BCB00C(&Method_ShopNoticeRemainTimeLabel__UpdateRemainTimeLabel_d__9_System_Collections_IEnumerator_Reset__);
+  sub_1BCB120(v3, v4);
 }
 
 

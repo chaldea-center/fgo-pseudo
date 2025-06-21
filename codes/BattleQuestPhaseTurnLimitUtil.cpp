@@ -8,11 +8,11 @@ void __fastcall BattleQuestPhaseTurnLimitUtil___ctor(
   const MethodInfo *v6; // x3
 
   if ( !questPhaseEnt )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   script = questPhaseEnt->fields.script;
   System_Object___ctor((Il2CppObject *)this, 0LL);
   this->fields.EntityScript = script;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)script, v5, v6);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)script, v5, v6);
 }
 
 

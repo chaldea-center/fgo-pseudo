@@ -1,14 +1,14 @@
 void __fastcall CompleteMissionMaster___ctor(CompleteMissionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B01E42 & 1) == 0 )
+  if ( (byte_4B1C341 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__, method);
-    byte_4B01E42 = 1;
+    sub_1BCAFF8(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__, method);
+    byte_4B1C341 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     145,
-    (const MethodInfo_32ACD4C *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
+    (const MethodInfo_32C5ADC *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
 }
 
 
@@ -45,22 +45,22 @@ bool __fastcall CompleteMissionMaster__TryGetEntityFromObjectId(
   int32_t v31; // w2
   const MethodInfo *v32; // x3
 
-  if ( (byte_4B01E43 & 1) == 0 )
+  if ( (byte_4B1C342 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__, entity);
-    sub_1BC3008(&System_IDisposable_TypeInfo, v7);
-    sub_1BC3008(&System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, v8);
-    sub_1BC3008(&System_Collections_IEnumerator_TypeInfo, v9);
-    byte_4B01E43 = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__, entity);
+    sub_1BCAFF8(&System_IDisposable_TypeInfo, v7);
+    sub_1BCAFF8(&System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, v8);
+    sub_1BCAFF8(&System_Collections_IEnumerator_TypeInfo, v9);
+    byte_4B1C342 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BC3264(0LL, entity);
+    sub_1BCB254(0LL, entity);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_324AE30 *)Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
+                 (const MethodInfo_3263BC0 *)Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BC3264(0LL, v11);
+    sub_1BCB254(0LL, v11);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -80,7 +80,7 @@ bool __fastcall CompleteMissionMaster__TryGetEntityFromObjectId(
     else
     {
 LABEL_9:
-      p_method = sub_1C13570(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C1B560(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -103,17 +103,17 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v20 = sub_1C13570(Enumerator, System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, 0LL);
+      v20 = sub_1C1B560(Enumerator, System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, 0LL);
     }
     v21 = (CompleteMissionEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
                                        Enumerator,
                                        *(_QWORD *)(v20 + 8));
     if ( !v21 )
-      sub_1BC3264(0LL, v22);
+      sub_1BCB254(0LL, v22);
     if ( v21->fields.objectId == objectId )
     {
       *entity = v21;
-      sub_1BC2FAC((CGThumbnailListItem_o *)entity, (int32_t)v21, v23, v24);
+      sub_1BCAF9C((CGThumbnailListItem_o *)entity, (int32_t)v21, v23, v24);
       v25 = 1;
       v26 = 4;
       goto LABEL_22;
@@ -139,13 +139,13 @@ LABEL_22:
   else
   {
 LABEL_26:
-    v30 = sub_1C13570(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v30 = sub_1C1B560(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(Enumerator, *(_QWORD *)(v30 + 8));
   if ( v26 == 5 )
   {
     *entity = 0LL;
-    sub_1BC2FAC((CGThumbnailListItem_o *)entity, 0, v31, v32);
+    sub_1BCAF9C((CGThumbnailListItem_o *)entity, 0, v31, v32);
     return 0;
   }
   return v25;

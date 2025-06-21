@@ -13,10 +13,10 @@ void __fastcall SetNoticeNumControl__clear(SetNoticeNumControl_o *this, const Me
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4B060E6 & 1) == 0 )
+  if ( (byte_4B20628 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    byte_4B060E6 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    byte_4B20628 = 1;
   }
   noticeNumObj = this->fields.noticeNumObj;
   p_noticeNumObj = (CGThumbnailListItem_o *)&this->fields.noticeNumObj;
@@ -28,9 +28,9 @@ void __fastcall SetNoticeNumControl__clear(SetNoticeNumControl_o *this, const Me
     klass = (UnityEngine_Object_o *)p_noticeNumObj->klass;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70034300(klass, 0LL);
+    UnityEngine_Object__Destroy_70136076(klass, 0LL);
     p_noticeNumObj->klass = 0LL;
-    sub_1BC2FAC(p_noticeNumObj, 0, v7, v8);
+    sub_1BCAF9C(p_noticeNumObj, 0, v7, v8);
   }
 }
 
@@ -52,10 +52,10 @@ void __fastcall SetNoticeNumControl__setNoticeNum(
   UnityEngine_Transform_o *v13; // x22
   bool v14; // w1
 
-  if ( (byte_4B060E5 & 1) == 0 )
+  if ( (byte_4B20627 & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___, *(_QWORD *)&resNum);
-    byte_4B060E5 = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___, *(_QWORD *)&resNum);
+    byte_4B20627 = 1;
   }
   SetNoticeNumControl__clear(this, *(const MethodInfo **)&resNum);
   if ( resNum < 1 )
@@ -67,23 +67,23 @@ void __fastcall SetNoticeNumControl__setNoticeNum(
       goto LABEL_14;
     }
 LABEL_15:
-    sub_1BC3264(gameObject, v11);
+    sub_1BCB254(gameObject, v11);
   }
   noticeNumberPrefab = this->fields.noticeNumberPrefab;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, noticeNumberPrefab, transform, 0LL, 0LL);
   this->fields.noticeNumObj = Object;
   p_noticeNumObj = &this->fields.noticeNumObj;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.noticeNumObj, (int32_t)Object, v9, v10);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.noticeNumObj, (int32_t)Object, v9, v10);
   gameObject = this->fields.noticeNumObj;
   if ( !gameObject )
     goto LABEL_15;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0LL);
   v13 = (UnityEngine_Transform_o *)gameObject;
-  if ( !byte_4AFBDB1 )
+  if ( !byte_4B16191 )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_1BC3008(&UnityEngine_Vector3_TypeInfo, v11);
-    byte_4AFBDB1 = 1;
+    gameObject = (UnityEngine_GameObject_o *)sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v11);
+    byte_4B16191 = 1;
   }
   if ( !v13 )
     goto LABEL_15;
@@ -93,7 +93,7 @@ LABEL_15:
     goto LABEL_15;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                              gameObject,
-                                             (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+                                             (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
   if ( !gameObject )
     goto LABEL_15;
   NoticeNumberComponent__SetNumber((NoticeNumberComponent_o *)gameObject, resNum, 0LL);

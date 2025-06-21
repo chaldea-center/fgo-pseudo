@@ -22,12 +22,12 @@ void __fastcall FollowerSelectItemListViewItemEquipDraw__SetEmpty(
   UnityEngine_Object_o *equipLimitCountSprite; // x20
   UnityEngine_Object_o *friendShipSvtEquipSkillIcon; // x20
 
-  if ( (byte_4AFCBA0 & 1) == 0 )
+  if ( (byte_4B1705C & 1) == 0 )
   {
-    sub_1BC3008(&AtlasManager_TypeInfo, noneEquipSpriteName);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BC3008(&StringLiteral_1/*""*/, v6);
-    byte_4AFCBA0 = 1;
+    sub_1BCAFF8(&AtlasManager_TypeInfo, noneEquipSpriteName);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
+    sub_1BCAFF8(&StringLiteral_1/*""*/, v6);
+    byte_4B1705C = 1;
   }
   noneEquipSprite = (UnityEngine_Object_o *)this->fields.noneEquipSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -58,7 +58,7 @@ void __fastcall FollowerSelectItemListViewItemEquipDraw__SetEmpty(
     || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL)) == 0LL )
   {
 LABEL_33:
-    sub_1BC3264(gameObject, v8);
+    sub_1BCB254(gameObject, v8);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
   equipLimitCountSprite = (UnityEngine_Object_o *)this->fields.equipLimitCountSprite;
@@ -120,10 +120,10 @@ void __fastcall FollowerSelectItemListViewItemEquipDraw__SetEquip(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v17; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // 0:x0.16
 
-  if ( (byte_4AFCB9E & 1) == 0 )
+  if ( (byte_4B1705A & 1) == 0 )
   {
-    sub_1BC3008(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, equipTarget);
-    byte_4AFCB9E = 1;
+    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, equipTarget);
+    byte_4B1705A = 1;
   }
   if ( !equipTarget )
     goto LABEL_10;
@@ -133,7 +133,7 @@ void __fastcall FollowerSelectItemListViewItemEquipDraw__SetEquip(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v17.fields.currentCryptoKey = v12;
   *(_QWORD *)&v17.fields.fakeValue = v11;
-  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(v17, 0LL) > 0 )
+  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v17, 0LL) > 0 )
   {
     v14 = *(_QWORD *)&equipTarget->fields.svtId.fields.currentCryptoKey;
     v13 = *(_QWORD *)&equipTarget->fields.svtId.fields.fakeValue;
@@ -141,8 +141,8 @@ void __fastcall FollowerSelectItemListViewItemEquipDraw__SetEquip(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v18.fields.currentCryptoKey = v14;
     *(_QWORD *)&v18.fields.fakeValue = v13;
-    v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(v18, 0LL);
-    FollowerSelectItemListViewItemEquipDraw__SetEquip_31767576(
+    v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v18, 0LL);
+    FollowerSelectItemListViewItemEquipDraw__SetEquip_31892564(
       this,
       v15,
       equipTarget->fields.limitCount,
@@ -163,7 +163,7 @@ LABEL_10:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall FollowerSelectItemListViewItemEquipDraw__SetEquip_31767576(
+void __fastcall FollowerSelectItemListViewItemEquipDraw__SetEquip_31892564(
         FollowerSelectItemListViewItemEquipDraw_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -189,16 +189,16 @@ void __fastcall FollowerSelectItemListViewItemEquipDraw__SetEquip_31767576(
   UnityEngine_Component_o *v27; // x8
   UnityEngine_Component_o *v28; // x20
 
-  if ( (byte_4AFCB9F & 1) == 0 )
+  if ( (byte_4B1705B & 1) == 0 )
   {
-    sub_1BC3008(&AtlasManager_TypeInfo, *(_QWORD *)&svtId);
-    sub_1BC3008(&Method_DataManager_GetMaster_ServantMaster___, v13);
-    sub_1BC3008(&DataManager_TypeInfo, v14);
-    sub_1BC3008(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v15);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v16);
-    sub_1BC3008(&StringLiteral_19531/*"func_group_icon_385"*/, v17);
-    sub_1BC3008(&StringLiteral_20143/*"img_bond_category"*/, v18);
-    byte_4AFCB9F = 1;
+    sub_1BCAFF8(&AtlasManager_TypeInfo, *(_QWORD *)&svtId);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantMaster___, v13);
+    sub_1BCAFF8(&DataManager_TypeInfo, v14);
+    sub_1BCAFF8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v15);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v16);
+    sub_1BCAFF8(&StringLiteral_19543/*"func_group_icon_385"*/, v17);
+    sub_1BCAFF8(&StringLiteral_20158/*"img_bond_category"*/, v18);
+    byte_4B1705B = 1;
   }
   equipSprite = (UnityEngine_Object_o *)this->fields.equipSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -249,7 +249,7 @@ void __fastcall FollowerSelectItemListViewItemEquipDraw__SetEquip_31767576(
         if ( isChangeFriendShipSvtEquipSkill )
         {
 LABEL_24:
-          AtlasManager__SetEventUI(v25, (System_String_o *)StringLiteral_19531/*"func_group_icon_385"*/, 0LL);
+          AtlasManager__SetEventUI(v25, (System_String_o *)StringLiteral_19543/*"func_group_icon_385"*/, 0LL);
           goto LABEL_28;
         }
       }
@@ -263,7 +263,7 @@ LABEL_24:
       gameObject = (UnityEngine_Component_o *)this->fields.friendShipSvtEquipSkillIcon;
       if ( !gameObject )
         goto LABEL_39;
-      UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_20143/*"img_bond_category"*/, 0LL);
+      UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)StringLiteral_20158/*"img_bond_category"*/, 0LL);
     }
   }
 LABEL_28:
@@ -274,13 +274,13 @@ LABEL_28:
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    gameObject = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantMaster___);
+    gameObject = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantMaster___);
     if ( gameObject )
     {
       gameObject = (UnityEngine_Component_o *)DataMasterBase_object__object__int___GetEntity(
                                                 (DataMasterBase_TMaster__TEntity__PKType__o *)gameObject,
                                                 svtId,
-                                                (const MethodInfo_32AF070 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                                (const MethodInfo_32C7E00 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       v27 = (UnityEngine_Component_o *)this->fields.equipLimitCountSprite;
       if ( v27 )
       {
@@ -300,6 +300,6 @@ LABEL_28:
       }
     }
 LABEL_39:
-    sub_1BC3264(gameObject, v21);
+    sub_1BCB254(gameObject, v21);
   }
 }

@@ -1,9 +1,9 @@
 void __fastcall ServantOperationListViewObject___ctor(ServantOperationListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AFE1E5 & 1) == 0 )
+  if ( (byte_4B186CB & 1) == 0 )
   {
-    sub_1BC3008(&ListViewObject_TypeInfo, method);
-    byte_4AFE1E5 = 1;
+    sub_1BCAFF8(&ListViewObject_TypeInfo, method);
+    byte_4B186CB = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -23,26 +23,26 @@ void __fastcall ServantOperationListViewObject__Awake(ServantOperationListViewOb
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4AFE1D9 & 1) == 0 )
+  if ( (byte_4B186BF & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_Component_GetComponent_UIDragDropListViewItem___, method);
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_ServantOperationListViewItemDraw___, v3);
-    byte_4AFE1D9 = 1;
+    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_UIDragDropListViewItem___, method);
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_ServantOperationListViewItemDraw___, v3);
+    byte_4B186BF = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BC3264(0LL, v4);
+    sub_1BCB254(0LL, v4);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_ServantOperationListViewItemDraw___);
+                       (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_ServantOperationListViewItemDraw___);
   this->fields.itemDraw = (struct ServantOperationListViewItemDraw_o *)Component_object;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v7, v8);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v7, v8);
   v9 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_2FF8634 *)Method_UnityEngine_Component_GetComponent_UIDragDropListViewItem___);
+         (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_UIDragDropListViewItem___);
   this->fields.itemDrag = (struct UIDragDropListViewItem_o *)v9;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.itemDrag, (int32_t)v9, v10, v11);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.itemDrag, (int32_t)v9, v10, v11);
 }
 
 
@@ -62,7 +62,7 @@ void __fastcall ServantOperationListViewObject__CallOnMoveEnd(
   if ( onMoveEnd )
   {
     p_onMoveEnd->klass = 0LL;
-    sub_1BC2FAC(p_onMoveEnd, 0, v2, v3);
+    sub_1BCAF9C(p_onMoveEnd, 0, v2, v3);
     ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
       v5->fields.original_method_info,
       *(_QWORD *)&v5->fields.extra_arg);
@@ -82,11 +82,11 @@ UnityEngine_GameObject_o *__fastcall ServantOperationListViewObject__CreateDragO
   ServantOperationListViewObject_o *v8; // x20
   const MethodInfo *v9; // x1
 
-  if ( (byte_4AFE1DE & 1) == 0 )
+  if ( (byte_4B186C4 & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_ServantOperationListViewObject___, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
-    byte_4AFE1DE = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_ServantOperationListViewObject___, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B186C4 = 1;
   }
   DragObject = (UnityEngine_Object_o *)ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -97,9 +97,9 @@ UnityEngine_GameObject_o *__fastcall ServantOperationListViewObject__CreateDragO
     if ( !DragObject
       || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)DragObject,
-                               (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_ServantOperationListViewObject___)) == 0LL )
+                               (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_ServantOperationListViewObject___)) == 0LL )
     {
-      sub_1BC3264(Component_object, v6);
+      sub_1BCB254(Component_object, v6);
     }
     v8 = (ServantOperationListViewObject_o *)Component_object;
     ServantOperationListViewObject__Init((ServantOperationListViewObject_o *)Component_object, 2, 0LL, v7);
@@ -131,10 +131,10 @@ ServantOperationListViewItem_o *__fastcall ServantOperationListViewObject__GetIt
   struct ListViewItem_o *linkItem; // x8
   __int64 methodPtr_low; // x11
 
-  if ( (byte_4AFE1DB & 1) == 0 )
+  if ( (byte_4B186C1 & 1) == 0 )
   {
-    sub_1BC3008(&ServantOperationListViewItem_TypeInfo, method);
-    byte_4AFE1DB = 1;
+    sub_1BCAFF8(&ServantOperationListViewItem_TypeInfo, method);
+    byte_4B186C1 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -181,10 +181,10 @@ void __fastcall ServantOperationListViewObject__Init(
   int v17; // w8
 
   v5 = initMode;
-  if ( (byte_4AFE1DF & 1) == 0 )
+  if ( (byte_4B186C5 & 1) == 0 )
   {
-    sub_1BC3008(&ServantOperationListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4AFE1DF = 1;
+    sub_1BCAFF8(&ServantOperationListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B186C5 = 1;
   }
   linkItem = this->fields.linkItem;
   dispMode = this->fields.dispMode;
@@ -195,7 +195,7 @@ void __fastcall ServantOperationListViewObject__Init(
   if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
     || (ServantOperationListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantOperationListViewItem_TypeInfo )
   {
-    sub_1BC3524(linkItem);
+    sub_1BCB514(linkItem);
 LABEL_7:
     v5 = 0;
   }
@@ -209,11 +209,11 @@ LABEL_7:
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1BC3264(transform, v12);
+    sub_1BCB254(transform, v12);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.onMoveEnd = onMoveEnd;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.onMoveEnd, (int32_t)onMoveEnd, v13, v14);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.onMoveEnd, (int32_t)onMoveEnd, v13, v14);
   if ( v5 == 1 )
     goto LABEL_13;
   if ( v5 == 3 )
@@ -270,12 +270,12 @@ bool __fastcall ServantOperationListViewObject__IsCanDrag(
   ServantOperationListViewObject_o *v12; // x0
   const MethodInfo *v13; // x1
 
-  if ( (byte_4AFE1DD & 1) == 0 )
+  if ( (byte_4B186C3 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    sub_1BC3008(&ServantOperationListViewItem_TypeInfo, v4);
-    sub_1BC3008(&ServantOperationListViewManager_TypeInfo, v5);
-    byte_4AFE1DD = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    sub_1BCAFF8(&ServantOperationListViewItem_TypeInfo, v4);
+    sub_1BCAFF8(&ServantOperationListViewManager_TypeInfo, v5);
+    byte_4B186C3 = 1;
   }
   manager = (UITouchPress_o *)this->fields.manager;
   if ( !manager )
@@ -284,7 +284,7 @@ bool __fastcall ServantOperationListViewObject__IsCanDrag(
   if ( LOBYTE(manager->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
     || (ServantOperationListViewManager_c *)manager->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantOperationListViewManager_TypeInfo )
   {
-    manager = (UITouchPress_o *)sub_1BC3524(manager);
+    manager = (UITouchPress_o *)sub_1BCB514(manager);
     goto LABEL_19;
   }
   if ( (LODWORD(manager[5].fields.clickRange) & 0x80000000) != 0 )
@@ -302,7 +302,7 @@ LABEL_12:
       return 0;
     }
 LABEL_19:
-    sub_1BC3264(manager, method);
+    sub_1BCB254(manager, method);
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem
@@ -319,7 +319,7 @@ LABEL_19:
     }
     goto LABEL_12;
   }
-  v12 = (ServantOperationListViewObject_o *)sub_1BC3524(this->fields.linkItem);
+  v12 = (ServantOperationListViewObject_o *)sub_1BCB514(this->fields.linkItem);
   return (unsigned __int8)ServantOperationListViewObject__CreateDragObject(v12, v13);
 }
 
@@ -354,17 +354,17 @@ void __fastcall ServantOperationListViewObject__OnClickSelect(
   const MethodInfo *v25; // x1
 
   v2 = this;
-  if ( (byte_4AFE1E1 & 1) == 0 )
+  if ( (byte_4B186C7 & 1) == 0 )
   {
-    sub_1BC3008(&ServantOperationListViewItem_TypeInfo, method);
-    sub_1BC3008(&ServantOperationListViewManager_TypeInfo, v3);
-    sub_1BC3008(&Method_ServantOperationListViewObject_OnClickSelect__, v4);
-    sub_1BC3008(&TutorialFlag_TypeInfo, v5);
-    sub_1BC3008(&StringLiteral_9780/*"OnClickSelectListView"*/, v6);
-    sub_1BC3008(&StringLiteral_9751/*"OnClickChoiceModeItem"*/, v7);
-    sub_1BC3008(&StringLiteral_9777/*"OnClickPushModeItem"*/, v8);
-    this = (ServantOperationListViewObject_o *)sub_1BC3008(&StringLiteral_9773/*"OnClickLockModeItem"*/, v9);
-    byte_4AFE1E1 = 1;
+    sub_1BCAFF8(&ServantOperationListViewItem_TypeInfo, method);
+    sub_1BCAFF8(&ServantOperationListViewManager_TypeInfo, v3);
+    sub_1BCAFF8(&Method_ServantOperationListViewObject_OnClickSelect__, v4);
+    sub_1BCAFF8(&TutorialFlag_TypeInfo, v5);
+    sub_1BCAFF8(&StringLiteral_9791/*"OnClickSelectListView"*/, v6);
+    sub_1BCAFF8(&StringLiteral_9762/*"OnClickChoiceModeItem"*/, v7);
+    sub_1BCAFF8(&StringLiteral_9788/*"OnClickPushModeItem"*/, v8);
+    this = (ServantOperationListViewObject_o *)sub_1BCAFF8(&StringLiteral_9784/*"OnClickLockModeItem"*/, v9);
+    byte_4B186C7 = 1;
   }
   linkItem = (Il2CppObject *)v2->fields.linkItem;
   if ( linkItem )
@@ -374,7 +374,7 @@ void __fastcall ServantOperationListViewObject__OnClickSelect(
     if ( LOBYTE(linkItem->klass->vtable[0].methodPtr) < (unsigned int)methodPtr_low
       || (ServantOperationListViewItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantOperationListViewItem_TypeInfo )
     {
-      v24 = (ServantOperationListViewObject_o *)sub_1BC3524(v2->fields.linkItem);
+      v24 = (ServantOperationListViewObject_o *)sub_1BCB514(v2->fields.linkItem);
       ServantOperationListViewObject__OnLongPush(v24, v25);
       return;
     }
@@ -393,7 +393,7 @@ void __fastcall ServantOperationListViewObject__OnClickSelect(
                     (ServantOperationListViewItem_o *)v2->fields.linkItem,
                     0LL) )
             {
-              v16 = &StringLiteral_9777/*"OnClickPushModeItem"*/;
+              v16 = &StringLiteral_9788/*"OnClickPushModeItem"*/;
               goto LABEL_25;
             }
             goto LABEL_28;
@@ -404,10 +404,10 @@ void __fastcall ServantOperationListViewObject__OnClickSelect(
               goto LABEL_24;
             if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-            if ( !TutorialFlag__Get_39466584(126, 0LL) )
+            if ( !TutorialFlag__Get_39617644(126, 0LL) )
             {
 LABEL_24:
-              v16 = &StringLiteral_9751/*"OnClickChoiceModeItem"*/;
+              v16 = &StringLiteral_9762/*"OnClickChoiceModeItem"*/;
               goto LABEL_25;
             }
             goto LABEL_28;
@@ -418,10 +418,10 @@ LABEL_24:
               goto LABEL_16;
             if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-            if ( !TutorialFlag__Get_39466584(126, 0LL) )
+            if ( !TutorialFlag__Get_39617644(126, 0LL) )
             {
 LABEL_16:
-              v16 = &StringLiteral_9773/*"OnClickLockModeItem"*/;
+              v16 = &StringLiteral_9784/*"OnClickLockModeItem"*/;
 LABEL_25:
               v17 = (System_String_o *)*v16;
               v18 = manager;
@@ -439,8 +439,8 @@ LABEL_26:
 LABEL_28:
           v21 = Method_ServantOperationListViewObject_OnClickSelect__;
           if ( (*((_BYTE *)Method_ServantOperationListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-            v21 = (_QWORD *)sub_1BC3020(Method_ServantOperationListViewObject_OnClickSelect__);
-          v22 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v21, v21[4]);
+            v21 = (_QWORD *)sub_1BCB010(Method_ServantOperationListViewObject_OnClickSelect__);
+          v22 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v21, v21[4]);
           OverwriteAssetSoundName__PlaySystemSe(v22, 2, 0, 0LL);
           return;
         }
@@ -450,12 +450,12 @@ LABEL_28:
         {
           v19 = (Il2CppObject *)this;
           v18 = v23;
-          v17 = (System_String_o *)StringLiteral_9780/*"OnClickSelectListView"*/;
+          v17 = (System_String_o *)StringLiteral_9791/*"OnClickSelectListView"*/;
           goto LABEL_26;
         }
       }
     }
-    sub_1BC3264(this, v11);
+    sub_1BCB254(this, v11);
   }
 }
 
@@ -472,11 +472,11 @@ void __fastcall ServantOperationListViewObject__OnDestroy(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4AFE1DA & 1) == 0 )
+  if ( (byte_4B186C0 & 1) == 0 )
   {
-    sub_1BC3008(&NGUITools_TypeInfo, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
-    byte_4AFE1DA = 1;
+    sub_1BCAFF8(&NGUITools_TypeInfo, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B186C0 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -490,7 +490,7 @@ void __fastcall ServantOperationListViewObject__OnDestroy(
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1BC2FAC(p_dragObject, 0, v8, v9);
+    sub_1BCAF9C(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -504,11 +504,11 @@ void __fastcall ServantOperationListViewObject__OnDragDropStart(
   __int64 methodPtr_low; // x9
   UnityEngine_Object_o *touchPress; // x20
 
-  if ( (byte_4AFE1E3 & 1) == 0 )
+  if ( (byte_4B186C9 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    sub_1BC3008(&ServantOperationListViewManager_TypeInfo, v3);
-    byte_4AFE1E3 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    sub_1BCAFF8(&ServantOperationListViewManager_TypeInfo, v3);
+    byte_4B186C9 = 1;
   }
   manager = (UITouchPress_o *)this->fields.manager;
   if ( !manager )
@@ -517,7 +517,7 @@ void __fastcall ServantOperationListViewObject__OnDragDropStart(
   if ( LOBYTE(manager->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
     || (ServantOperationListViewManager_c *)manager->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantOperationListViewManager_TypeInfo )
   {
-    manager = (UITouchPress_o *)sub_1BC3524(manager);
+    manager = (UITouchPress_o *)sub_1BCB514(manager);
     goto LABEL_14;
   }
   if ( (LODWORD(manager[5].fields.clickRange) & 0x80000000) == 0 )
@@ -534,7 +534,7 @@ void __fastcall ServantOperationListViewObject__OnDragDropStart(
         return;
       }
 LABEL_14:
-      sub_1BC3264(manager, method);
+      sub_1BCB254(manager, method);
     }
   }
 }
@@ -556,11 +556,11 @@ void __fastcall ServantOperationListViewObject__OnLongPush(
   const MethodInfo *v11; // x3
 
   indicator = (ServantOperationListViewManager_o *)this;
-  if ( (byte_4AFE1E2 & 1) == 0 )
+  if ( (byte_4B186C8 & 1) == 0 )
   {
-    sub_1BC3008(&ServantOperationListViewItem_TypeInfo, method);
-    this = (ServantOperationListViewObject_o *)sub_1BC3008(&ServantOperationListViewManager_TypeInfo, v4);
-    byte_4AFE1E2 = 1;
+    sub_1BCAFF8(&ServantOperationListViewItem_TypeInfo, method);
+    this = (ServantOperationListViewObject_o *)sub_1BCAFF8(&ServantOperationListViewManager_TypeInfo, v4);
+    byte_4B186C8 = 1;
   }
   emptyMessageLabel = (ListViewItem_o *)indicator->fields.emptyMessageLabel;
   if ( emptyMessageLabel )
@@ -591,11 +591,11 @@ void __fastcall ServantOperationListViewObject__OnLongPush(
     }
     else
     {
-      sub_1BC3524(indicator->fields.emptyMessageLabel);
+      sub_1BCB514(indicator->fields.emptyMessageLabel);
     }
-    this = (ServantOperationListViewObject_o *)sub_1BC3524(indicator);
+    this = (ServantOperationListViewObject_o *)sub_1BCB514(indicator);
 LABEL_14:
-    sub_1BC3264(this, v6);
+    sub_1BCB254(this, v6);
   }
 }
 
@@ -612,13 +612,13 @@ void __fastcall ServantOperationListViewObject__OnLongRelease(
   UIDragDropListViewItem_o *manager; // x0
   __int64 methodPtr_low; // x10
 
-  if ( (byte_4AFE1E4 & 1) == 0 )
+  if ( (byte_4B186CA & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    sub_1BC3008(&ServantOperationListViewManager_TypeInfo, v3);
-    sub_1BC3008(&StringLiteral_9840/*"OnLongPushListView"*/, v4);
-    sub_1BC3008(&StringLiteral_3994/*"CancelDragEnd"*/, v5);
-    byte_4AFE1E4 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    sub_1BCAFF8(&ServantOperationListViewManager_TypeInfo, v3);
+    sub_1BCAFF8(&StringLiteral_9851/*"OnLongPushListView"*/, v4);
+    sub_1BCAFF8(&StringLiteral_3996/*"CancelDragEnd"*/, v5);
+    byte_4B186CA = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -641,16 +641,16 @@ void __fastcall ServantOperationListViewObject__OnLongRelease(
       {
         if ( HIDWORD(manager[3].fields.mListViewObject) )
           return;
-        UnityEngine_Component__SendMessage_70006020(
+        UnityEngine_Component__SendMessage_70107796(
           (UnityEngine_Component_o *)manager,
-          (System_String_o *)StringLiteral_3994/*"CancelDragEnd"*/,
+          (System_String_o *)StringLiteral_3996/*"CancelDragEnd"*/,
           0LL);
         manager = (UIDragDropListViewItem_o *)this->fields.manager;
         if ( manager )
         {
           UnityEngine_Component__SendMessage(
             (UnityEngine_Component_o *)manager,
-            (System_String_o *)StringLiteral_9840/*"OnLongPushListView"*/,
+            (System_String_o *)StringLiteral_9851/*"OnLongPushListView"*/,
             (Il2CppObject *)this->fields.linkItem,
             0LL);
           return;
@@ -658,7 +658,7 @@ void __fastcall ServantOperationListViewObject__OnLongRelease(
       }
     }
 LABEL_16:
-    sub_1BC3264(manager, v7);
+    sub_1BCB254(manager, v7);
   }
 }
 
@@ -683,12 +683,12 @@ void __fastcall ServantOperationListViewObject__SetInput(
   ServantOperationListViewObject_o *v16; // x0
   const MethodInfo *v17; // x1
 
-  if ( (byte_4AFE1DC & 1) == 0 )
+  if ( (byte_4B186C2 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, isInput);
-    sub_1BC3008(&ServantOperationListViewItem_TypeInfo, v5);
-    sub_1BC3008(&ServantOperationListViewManager_TypeInfo, v6);
-    byte_4AFE1DC = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, isInput);
+    sub_1BCAFF8(&ServantOperationListViewItem_TypeInfo, v5);
+    sub_1BCAFF8(&ServantOperationListViewManager_TypeInfo, v6);
+    byte_4B186C2 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -703,7 +703,7 @@ void __fastcall ServantOperationListViewObject__SetInput(
            LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)v11)
        || (ServantOperationListViewItem_c *)linkItem->klass->_2.typeHierarchy[v11 - 1] != ServantOperationListViewItem_TypeInfo) )
     {
-      v16 = (ServantOperationListViewObject_o *)sub_1BC3524(this->fields.linkItem);
+      v16 = (ServantOperationListViewObject_o *)sub_1BCB514(this->fields.linkItem);
       ServantOperationListViewObject__IsCanDrag(v16, v17);
     }
     else
@@ -722,7 +722,7 @@ void __fastcall ServantOperationListViewObject__SetInput(
                                                     v9),
             !v14) )
       {
-        sub_1BC3264(manager, v8);
+        sub_1BCB254(manager, v8);
       }
       ServantOperationListViewItemDraw__SetInput(
         v14,
@@ -740,12 +740,12 @@ void __fastcall ServantOperationListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_42800124((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_42963052((ListViewObject_o *)this, item, seed, 0LL);
   this->fields.state = 0;
 }
 
 
-void __fastcall ServantOperationListViewObject__SetItem_34167708(
+void __fastcall ServantOperationListViewObject__SetItem_34311864(
         ServantOperationListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -774,12 +774,12 @@ void __fastcall ServantOperationListViewObject__SetupDisp(
   int32_t dispMode; // w19
   const MethodInfo *v16; // x5
 
-  if ( (byte_4AFE1E0 & 1) == 0 )
+  if ( (byte_4B186C6 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    sub_1BC3008(&ServantOperationListViewItem_TypeInfo, v4);
-    sub_1BC3008(&ServantOperationListViewManager_TypeInfo, v5);
-    byte_4AFE1E0 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    sub_1BCAFF8(&ServantOperationListViewItem_TypeInfo, v4);
+    sub_1BCAFF8(&ServantOperationListViewManager_TypeInfo, v5);
+    byte_4B186C6 = 1;
   }
   manager = (ServantOperationListViewManager_o *)this->fields.manager;
   if ( manager )
@@ -788,7 +788,7 @@ void __fastcall ServantOperationListViewObject__SetupDisp(
     if ( LOBYTE(manager->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
       || (ServantOperationListViewManager_c *)manager->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantOperationListViewManager_TypeInfo )
     {
-      sub_1BC3524(this->fields.manager);
+      sub_1BCB514(this->fields.manager);
       goto LABEL_18;
     }
   }
@@ -803,7 +803,7 @@ void __fastcall ServantOperationListViewObject__SetupDisp(
       goto LABEL_11;
     }
 LABEL_18:
-    IsSelectEnable = sub_1BC3524(linkItem);
+    IsSelectEnable = sub_1BCB514(linkItem);
     goto LABEL_19;
   }
   v9 = 0;
@@ -838,6 +838,6 @@ LABEL_11:
       }
     }
 LABEL_19:
-    sub_1BC3264(IsSelectEnable, v12);
+    sub_1BCB254(IsSelectEnable, v12);
   }
 }

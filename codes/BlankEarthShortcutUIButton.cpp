@@ -69,7 +69,7 @@ void __fastcall BlankEarthShortcutUIButton__SetPressAction(
   const MethodInfo *v3; // x3
 
   this->fields.onPressedAction = pressAction;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.onPressedAction, (int32_t)pressAction, (int32_t)method, v3);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.onPressedAction, (int32_t)pressAction, (int32_t)method, v3);
 }
 
 

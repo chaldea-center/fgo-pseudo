@@ -1,9 +1,9 @@
 void __fastcall BattleCharaChangeConfirmDialog___ctor(BattleCharaChangeConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AFD6E5 & 1) == 0 )
+  if ( (byte_4B17AD4 & 1) == 0 )
   {
-    sub_1BC3008(&BaseDialog_TypeInfo, method);
-    byte_4AFD6E5 = 1;
+    sub_1BCAFF8(&BaseDialog_TypeInfo, method);
+    byte_4B17AD4 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -23,18 +23,18 @@ void __fastcall BattleCharaChangeConfirmDialog__Close(BattleCharaChangeConfirmDi
   BattleCharaChangeConfirmListViewManager_o *listViewManager; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4AFD6E1 & 1) == 0 )
+  if ( (byte_4B17AD0 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&Method_BattleCharaChangeConfirmDialog_EndClose__, v3);
-    byte_4AFD6E1 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&Method_BattleCharaChangeConfirmDialog_EndClose__, v3);
+    byte_4B17AD0 = 1;
   }
   listViewManager = this->fields.listViewManager;
   if ( !listViewManager )
-    sub_1BC3264(0LL, method);
+    sub_1BCB254(0LL, method);
   BattleCharaChangeConfirmListViewManager__DestroyList(listViewManager, method);
   this->fields.isButtonEnable = 0;
-  v5 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_BattleCharaChangeConfirmDialog_EndClose__, 0LL);
   BaseDialog__SafeClose((BaseDialog_o *)this, v5, 0LL);
 }
@@ -55,7 +55,7 @@ void __fastcall BattleCharaChangeConfirmDialog__EndClose(
                                                                           (UnityEngine_Component_o *)this,
                                                                           0LL)) == 0LL) )
   {
-    sub_1BC3264(listViewManager, method);
+    sub_1BCB254(listViewManager, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)listViewManager, 0, 0LL);
 }
@@ -78,13 +78,13 @@ void __fastcall BattleCharaChangeConfirmDialog__Init(BattleCharaChangeConfirmDia
   UILabel_o *buttonDecideLabel; // x20
   UILabel_o *buttonCancelLabel; // x20
 
-  if ( (byte_4AFD6DF & 1) == 0 )
+  if ( (byte_4B17ACE & 1) == 0 )
   {
-    sub_1BC3008(&LocalizationManager_TypeInfo, method);
-    sub_1BC3008(&StringLiteral_3651/*"COMMON_CONFIRM_NO"*/, v3);
-    sub_1BC3008(&StringLiteral_3656/*"COMMON_CONFIRM_YES"*/, v4);
-    sub_1BC3008(&StringLiteral_1/*""*/, v5);
-    byte_4AFD6DF = 1;
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, method);
+    sub_1BCAFF8(&StringLiteral_3653/*"COMMON_CONFIRM_NO"*/, v3);
+    sub_1BCAFF8(&StringLiteral_3658/*"COMMON_CONFIRM_YES"*/, v4);
+    sub_1BCAFF8(&StringLiteral_1/*""*/, v5);
+    byte_4B17ACE = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
@@ -93,18 +93,18 @@ void __fastcall BattleCharaChangeConfirmDialog__Init(BattleCharaChangeConfirmDia
   buttonDecideLabel = this->fields.buttonDecideLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  messageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3656/*"COMMON_CONFIRM_YES"*/, 0LL);
+  messageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3658/*"COMMON_CONFIRM_YES"*/, 0LL);
   if ( !buttonDecideLabel
     || (UILabel__set_text(buttonDecideLabel, (System_String_o *)messageLabel, 0LL),
         buttonCancelLabel = this->fields.buttonCancelLabel,
-        messageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3651/*"COMMON_CONFIRM_NO"*/, 0LL),
+        messageLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3653/*"COMMON_CONFIRM_NO"*/, 0LL),
         !buttonCancelLabel)
     || (UILabel__set_text(buttonCancelLabel, (System_String_o *)messageLabel, 0LL),
         this->fields.isButtonEnable = 0,
         (messageLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
 LABEL_10:
-    sub_1BC3264(messageLabel, method);
+    sub_1BCB254(messageLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, 0, 0LL);
   BaseDialog__Init((BaseDialog_o *)this, 0LL);
@@ -119,17 +119,17 @@ void __fastcall BattleCharaChangeConfirmDialog__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   struct BattleCharaChangeConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4AFD6E3 & 1) == 0 )
+  if ( (byte_4B17AD2 & 1) == 0 )
   {
-    sub_1BC3008(&Method_BattleCharaChangeConfirmDialog_OnClickCancel__, method);
-    byte_4AFD6E3 = 1;
+    sub_1BCAFF8(&Method_BattleCharaChangeConfirmDialog_OnClickCancel__, method);
+    byte_4B17AD2 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_BattleCharaChangeConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_BattleCharaChangeConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BC3020(Method_BattleCharaChangeConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BCB010(Method_BattleCharaChangeConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -150,17 +150,17 @@ void __fastcall BattleCharaChangeConfirmDialog__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   struct BattleCharaChangeConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4AFD6E2 & 1) == 0 )
+  if ( (byte_4B17AD1 & 1) == 0 )
   {
-    sub_1BC3008(&Method_BattleCharaChangeConfirmDialog_OnClickDecide__, method);
-    byte_4AFD6E2 = 1;
+    sub_1BCAFF8(&Method_BattleCharaChangeConfirmDialog_OnClickDecide__, method);
+    byte_4B17AD1 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_BattleCharaChangeConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_BattleCharaChangeConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BC3020(Method_BattleCharaChangeConfirmDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1BCB010(Method_BattleCharaChangeConfirmDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
     clickFunc = this->fields.clickFunc;
     this->fields.isButtonEnable = 0;
@@ -189,20 +189,20 @@ void __fastcall BattleCharaChangeConfirmDialog__Open(
   const MethodInfo *v14; // x2
   System_Action_o *v15; // x20
 
-  if ( (byte_4AFD6E0 & 1) == 0 )
+  if ( (byte_4B17ACF & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, func);
-    sub_1BC3008(&Method_BattleCharaChangeConfirmDialog_EndOpen__, v7);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v8);
-    sub_1BC3008(&StringLiteral_11782/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MESSAGE_ADD"*/, v9);
-    byte_4AFD6E0 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, func);
+    sub_1BCAFF8(&Method_BattleCharaChangeConfirmDialog_EndOpen__, v7);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v8);
+    sub_1BCAFF8(&StringLiteral_11793/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MESSAGE_ADD"*/, v9);
+    byte_4B17ACF = 1;
   }
   this->fields.clickFunc = func;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.clickFunc, (int32_t)func, (int32_t)itemInfo, method);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.clickFunc, (int32_t)func, (int32_t)itemInfo, method);
   messageLabel = this->fields.messageLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  listViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_11782/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MESSAGE_ADD"*/, 0LL);
+  listViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_11793/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MESSAGE_ADD"*/, 0LL);
   if ( !messageLabel )
     goto LABEL_10;
   UILabel__set_text(messageLabel, listViewManager, 0LL);
@@ -220,13 +220,13 @@ void __fastcall BattleCharaChangeConfirmDialog__Open(
           2,
           v14),
         this->fields.isButtonEnable = 0,
-        v15 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo),
+        v15 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo),
         System_Action___ctor(v15, (Il2CppObject *)this, Method_BattleCharaChangeConfirmDialog_EndOpen__, 0LL),
         BaseDialog__SafeOpen((BaseDialog_o *)this, v15, 0, 0LL),
         (listViewManager = (System_String_o *)this->fields.listViewManager) == 0LL) )
   {
 LABEL_10:
-    sub_1BC3264(listViewManager, v12);
+    sub_1BCB254(listViewManager, v12);
   }
   BattleCharaChangeConfirmListViewManager__ResetScrollViewPosition(
     (BattleCharaChangeConfirmListViewManager_o *)listViewManager,
@@ -238,12 +238,12 @@ System_String_o *__fastcall BattleCharaChangeConfirmDialog__get_closeBtnPath(
         BattleCharaChangeConfirmDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4AFD6E4 & 1) == 0 )
+  if ( (byte_4B17AD3 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_15495/*"Window/CancelButton"*/, method);
-    byte_4AFD6E4 = 1;
+    sub_1BCAFF8(&StringLiteral_15507/*"Window/CancelButton"*/, method);
+    byte_4B17AD3 = 1;
   }
-  return (System_String_o *)StringLiteral_15495/*"Window/CancelButton"*/;
+  return (System_String_o *)StringLiteral_15507/*"Window/CancelButton"*/;
 }
 
 
@@ -265,15 +265,15 @@ void __fastcall BattleCharaChangeConfirmDialog_ClickDelegate___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BC30C8(v6) & 1) == 0 )
+  if ( (sub_1BCB0B8(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1BC3280(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BC3130(v10, 0LL);
+      v10 = sub_1BCB270(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BCB120(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -285,9 +285,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A06AE4;
+  this->fields.m_target = (Il2CppObject *)sub_1A0E6F0;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A06A9C;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A0E6A8;
 }
 
 
@@ -303,14 +303,14 @@ System_IAsyncResult_o *__fastcall BattleCharaChangeConfirmDialog_ClickDelegate__
   char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4AFD6E6 & 1) == 0 )
+  if ( (byte_4B17AD5 & 1) == 0 )
   {
-    sub_1BC3008(&bool_TypeInfo, isDecide);
-    byte_4AFD6E6 = 1;
+    sub_1BCAFF8(&bool_TypeInfo, isDecide);
+    byte_4B17AD5 = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1BC2FBC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BCAFAC(this, v9, callback, object);
 }
 
 
@@ -319,7 +319,7 @@ void __fastcall BattleCharaChangeConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BC2FC0(result, 0LL, method);
+  sub_1BCAFB0(result, 0LL, method);
 }
 
 

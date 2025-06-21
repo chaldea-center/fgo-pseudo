@@ -21,19 +21,19 @@ void __fastcall BattleDropPointComponent__Initialize(
   const MethodInfo *v17; // x3
   const MethodInfo *v18; // x1
 
-  if ( (byte_4B0483F & 1) == 0 )
+  if ( (byte_4B1ED6C & 1) == 0 )
   {
-    sub_1BC3008(&ServantAssetLoadManager_TypeInfo, data);
-    byte_4B0483F = 1;
+    sub_1BCAFF8(&ServantAssetLoadManager_TypeInfo, data);
+    byte_4B1ED6C = 1;
   }
   this->fields.dropPointData = data;
-  sub_1BC2FAC(
+  sub_1BCAF9C(
     (CGThumbnailListItem_o *)&this->fields.dropPointData,
     (int32_t)data,
     (int32_t)svtPosTr,
     *(const MethodInfo **)&svtId);
   this->fields.defaultPosTransform = svtPosTr;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.defaultPosTransform, (int32_t)svtPosTr, v13, v14);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.defaultPosTransform, (int32_t)svtPosTr, v13, v14);
   if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
   Manager__LoadBattleDropPointAdjustSetting = ServantAssetLoadManager__LoadBattleDropPointAdjustSetting(
@@ -42,7 +42,7 @@ void __fastcall BattleDropPointComponent__Initialize(
                                                 isForceAppearance,
                                                 0LL);
   this->fields.adjustSetting = Manager__LoadBattleDropPointAdjustSetting;
-  sub_1BC2FAC(
+  sub_1BCAF9C(
     (CGThumbnailListItem_o *)&this->fields.adjustSetting,
     (int32_t)Manager__LoadBattleDropPointAdjustSetting,
     v16,
@@ -66,10 +66,10 @@ void __fastcall BattleDropPointComponent__ReAdjust(BattleDropPointComponent_o *t
   struct BattleDropPointAdjustSetting_o *v13; // x10
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B04840 & 1) == 0 )
+  if ( (byte_4B1ED6D & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    byte_4B04840 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    byte_4B1ED6D = 1;
   }
   adjustSetting = (UnityEngine_Object_o *)this->fields.adjustSetting;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -101,7 +101,7 @@ void __fastcall BattleDropPointComponent__ReAdjust(BattleDropPointComponent_o *t
         }
       }
 LABEL_20:
-      sub_1BC3264(transform, v5);
+      sub_1BCB254(transform, v5);
     }
   }
   transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
@@ -118,10 +118,10 @@ LABEL_20:
   UnityEngine_Transform__SetParent(v8, (UnityEngine_Transform_o *)transform, 0LL);
   transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   v9 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4AFBDB1 )
+  if ( !byte_4B16191 )
   {
-    transform = sub_1BC3008(&UnityEngine_Vector3_TypeInfo, v5);
-    byte_4AFBDB1 = 1;
+    transform = sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v5);
+    byte_4B16191 = 1;
   }
   if ( !v9 )
     goto LABEL_20;

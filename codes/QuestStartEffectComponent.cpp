@@ -1,9 +1,9 @@
 void __fastcall QuestStartEffectComponent___ctor(QuestStartEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B03690 & 1) == 0 )
+  if ( (byte_4B1DB99 & 1) == 0 )
   {
-    sub_1BC3008(&CommonEffectComponent_TypeInfo, method);
-    byte_4B03690 = 1;
+    sub_1BCAFF8(&CommonEffectComponent_TypeInfo, method);
+    byte_4B1DB99 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -18,10 +18,10 @@ void __fastcall QuestStartEffectComponent__RefreshPanel(QuestStartEffectComponen
   UnityEngine_Component_o *gameObject; // x0
   UnityEngine_Object_o *base2Panel; // x20
 
-  if ( (byte_4B0368F & 1) == 0 )
+  if ( (byte_4B1DB98 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    byte_4B0368F = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    byte_4B1DB98 = 1;
   }
   basePanel = (UnityEngine_Object_o *)this->fields.basePanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -68,7 +68,7 @@ void __fastcall QuestStartEffectComponent__RefreshPanel(QuestStartEffectComponen
       }
     }
 LABEL_20:
-    sub_1BC3264(gameObject, v4);
+    sub_1BCB254(gameObject, v4);
   }
 }
 
@@ -143,25 +143,25 @@ void __fastcall QuestStartEffectComponent__SetParam(
   const MethodInfo *v67; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B0368E & 1) == 0 )
+  if ( (byte_4B1DB97 & 1) == 0 )
   {
-    sub_1BC3008(&CommonEffectParam_TypeInfo, param);
-    sub_1BC3008(&Method_DataManager_GetMaster_QuestExtensionMaster___, v6);
-    sub_1BC3008(&DataManager_TypeInfo, v7);
-    sub_1BC3008(&Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__, v8);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v9);
-    sub_1BC3008(&System_Text_RegularExpressions_Regex_TypeInfo, v10);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v11);
-    sub_1BC3008(&StringLiteral_22650/*"quest_free"*/, v12);
-    sub_1BC3008(&StringLiteral_22649/*"quest_event"*/, v13);
-    sub_1BC3008(&StringLiteral_22651/*"quest_heroic"*/, v14);
-    sub_1BC3008(&StringLiteral_15813/*"[^0-9]"*/, v15);
-    sub_1BC3008(&StringLiteral_22653/*"quest_main"*/, v16);
-    sub_1BC3008(&StringLiteral_22644/*"quest_Interlude"*/, v17);
-    sub_1BC3008(&StringLiteral_23573/*"sub_title_"*/, v18);
-    sub_1BC3008(&StringLiteral_1/*""*/, v19);
-    sub_1BC3008(&StringLiteral_23864/*"title_"*/, v20);
-    byte_4B0368E = 1;
+    sub_1BCAFF8(&CommonEffectParam_TypeInfo, param);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_QuestExtensionMaster___, v6);
+    sub_1BCAFF8(&DataManager_TypeInfo, v7);
+    sub_1BCAFF8(&Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__, v8);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v9);
+    sub_1BCAFF8(&System_Text_RegularExpressions_Regex_TypeInfo, v10);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__, v11);
+    sub_1BCAFF8(&StringLiteral_22669/*"quest_free"*/, v12);
+    sub_1BCAFF8(&StringLiteral_22668/*"quest_event"*/, v13);
+    sub_1BCAFF8(&StringLiteral_22670/*"quest_heroic"*/, v14);
+    sub_1BCAFF8(&StringLiteral_15825/*"[^0-9]"*/, v15);
+    sub_1BCAFF8(&StringLiteral_22672/*"quest_main"*/, v16);
+    sub_1BCAFF8(&StringLiteral_22663/*"quest_Interlude"*/, v17);
+    sub_1BCAFF8(&StringLiteral_23595/*"sub_title_"*/, v18);
+    sub_1BCAFF8(&StringLiteral_1/*""*/, v19);
+    sub_1BCAFF8(&StringLiteral_23886/*"title_"*/, v20);
+    byte_4B1DB97 = 1;
   }
   entity = 0LL;
   if ( !param )
@@ -181,7 +181,7 @@ void __fastcall QuestStartEffectComponent__SetParam(
     {
       p_commonParam = &this->fields.commonParam;
 LABEL_10:
-      sub_1BC2FAC((CGThumbnailListItem_o *)p_commonParam, (int32_t)param, (int32_t)method, v3);
+      sub_1BCAF9C((CGThumbnailListItem_o *)p_commonParam, (int32_t)param, (int32_t)method, v3);
       titleSpriteDecoration = this->fields.titleSpriteDecoration;
       if ( !titleSpriteDecoration )
         goto LABEL_136;
@@ -203,7 +203,7 @@ LABEL_10:
             goto LABEL_17;
         }
 LABEL_137:
-        sub_1BC326C(gameObject, questMessageLabelMaxLine, v26);
+        sub_1BCB25C(gameObject, questMessageLabelMaxLine, v26);
       }
 LABEL_17:
       titleLabelDecoration = this->fields.titleLabelDecoration;
@@ -246,7 +246,7 @@ LABEL_24:
       if ( !*p_commonParam )
         goto LABEL_136;
       v34 = System_Int32__ToString((unsigned int)*p_commonParam + 48, 0LL);
-      v35 = System_String__Concat_62348648((System_String_o *)StringLiteral_23864/*"title_"*/, v34, 0LL);
+      v35 = System_String__Concat_62450424((System_String_o *)StringLiteral_23886/*"title_"*/, v34, 0LL);
       v36 = (UnityEngine_Object_o *)this->fields.titleSprite;
       v37 = v35;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -342,7 +342,7 @@ LABEL_55:
               j_il2cpp_runtime_class_init_0(System_Text_RegularExpressions_Regex_TypeInfo);
             v47 = System_Text_RegularExpressions_Regex__Replace(
                     mText,
-                    (System_String_o *)StringLiteral_15813/*"[^0-9]"*/,
+                    (System_String_o *)StringLiteral_15825/*"[^0-9]"*/,
                     (System_String_o *)StringLiteral_1/*""*/,
                     0LL);
             UILabel__set_text(v45, v47, 0LL);
@@ -392,8 +392,8 @@ LABEL_75:
           goto LABEL_136;
         v55 = this->fields.messageSprite;
         v56 = System_Int32__ToString((int)v54 + 48, 0LL);
-        gameObject = (UnityEngine_Component_o *)System_String__Concat_62348648(
-                                                  (System_String_o *)StringLiteral_23573/*"sub_title_"*/,
+        gameObject = (UnityEngine_Component_o *)System_String__Concat_62450424(
+                                                  (System_String_o *)StringLiteral_23595/*"sub_title_"*/,
                                                   v56,
                                                   0LL);
         if ( !v55 )
@@ -503,14 +503,14 @@ LABEL_75:
         goto LABEL_132;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      gameObject = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_QuestExtensionMaster___);
+      gameObject = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_QuestExtensionMaster___);
       if ( *p_commonParam && gameObject )
       {
         gameObject = (UnityEngine_Component_o *)DataMasterBase_object__object__int___TryGetEntity(
                                                   (DataMasterBase_TMaster__TEntity__PKType__o *)gameObject,
                                                   &entity,
                                                   (*p_commonParam)->fields.questId,
-                                                  (const MethodInfo_32AF0BC *)Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__);
+                                                  (const MethodInfo_32C7E4C *)Method_DataMasterBase_QuestExtensionMaster__QuestExtensionEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)gameObject & 1) == 0 )
           goto LABEL_141;
         gameObject = (UnityEngine_Component_o *)entity;
@@ -522,7 +522,7 @@ LABEL_75:
         if ( ((unsigned __int8)gameObject & 1) != 0 )
         {
 LABEL_124:
-          v64 = &StringLiteral_22649/*"quest_event"*/;
+          v64 = &StringLiteral_22668/*"quest_event"*/;
 LABEL_128:
           questMessageLabelMaxLine = *v64;
         }
@@ -535,18 +535,18 @@ LABEL_141:
           switch ( (*p_commonParam)->fields.type )
           {
             case 1:
-              v64 = &StringLiteral_22653/*"quest_main"*/;
+              v64 = &StringLiteral_22672/*"quest_main"*/;
               goto LABEL_128;
             case 2:
-              v64 = &StringLiteral_22650/*"quest_free"*/;
+              v64 = &StringLiteral_22669/*"quest_free"*/;
               goto LABEL_128;
             case 3:
-              v64 = &StringLiteral_22644/*"quest_Interlude"*/;
+              v64 = &StringLiteral_22663/*"quest_Interlude"*/;
               goto LABEL_128;
             case 5:
               goto LABEL_124;
             case 6:
-              v64 = &StringLiteral_22651/*"quest_heroic"*/;
+              v64 = &StringLiteral_22670/*"quest_heroic"*/;
               goto LABEL_128;
             default:
               break;
@@ -566,7 +566,7 @@ LABEL_132:
             baseName = this->fields.baseName;
             if ( !System_String__IsNullOrEmpty(this->fields.overwriteEffectNameForTapSkip, 0LL) )
               baseName = this->fields.overwriteEffectNameForTapSkip;
-            gameObject = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+            gameObject = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
             if ( gameObject )
             {
               ScriptManager__InitQuestStartEffectSkip(
@@ -580,10 +580,10 @@ LABEL_132:
         }
       }
 LABEL_136:
-      sub_1BC3264(gameObject, questMessageLabelMaxLine);
+      sub_1BCB254(gameObject, questMessageLabelMaxLine);
     }
   }
-  sub_1BC3524(param);
+  sub_1BCB514(param);
   QuestStartEffectComponent__RefreshPanel(v66, v67);
 }
 

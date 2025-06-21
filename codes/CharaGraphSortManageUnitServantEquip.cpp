@@ -10,15 +10,15 @@ CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitServantEquip__Cr
         CharaGraphSortManageUnitServantEquip_o *this,
         const MethodInfo *method)
 {
-  ServantCharaGraphEquipFilterLogic_o *v2; // x19
+  Il2CppObject *v2; // x19
 
-  if ( (byte_4B01388 & 1) == 0 )
+  if ( (byte_4B1B87B & 1) == 0 )
   {
-    sub_1BC3008(&ServantCharaGraphEquipFilterLogic_TypeInfo, method);
-    byte_4B01388 = 1;
+    sub_1BCAFF8(&ServantCharaGraphEquipFilterLogic_TypeInfo, method);
+    byte_4B1B87B = 1;
   }
-  v2 = (ServantCharaGraphEquipFilterLogic_o *)sub_1BC3254(ServantCharaGraphEquipFilterLogic_TypeInfo);
-  ServantCharaGraphEquipFilterLogic___ctor(v2, 0LL);
+  v2 = (Il2CppObject *)sub_1BCB244(ServantCharaGraphEquipFilterLogic_TypeInfo);
+  System_Object___ctor(v2, 0LL);
   return (CharaGraphFilterLogicBase_o *)v2;
 }
 
@@ -30,12 +30,12 @@ CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitServantEquip__Crea
   CharaGraphSortLogicBase_o *v2; // x19
   const MethodInfo *v3; // x1
 
-  if ( (byte_4B01387 & 1) == 0 )
+  if ( (byte_4B1B87A & 1) == 0 )
   {
-    sub_1BC3008(&ServantEquipCharaGraphSortLogic_TypeInfo, method);
-    byte_4B01387 = 1;
+    sub_1BCAFF8(&ServantEquipCharaGraphSortLogic_TypeInfo, method);
+    byte_4B1B87A = 1;
   }
-  v2 = (CharaGraphSortLogicBase_o *)sub_1BC3254(ServantEquipCharaGraphSortLogic_TypeInfo);
+  v2 = (CharaGraphSortLogicBase_o *)sub_1BCB244(ServantEquipCharaGraphSortLogic_TypeInfo);
   CharaGraphSortLogicBase___ctor(v2, v3);
   return v2;
 }
@@ -77,10 +77,10 @@ System_String_o *__fastcall CharaGraphSortManageUnitServantEquip__get_SortSaveKe
         CharaGraphSortManageUnitServantEquip_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B01386 & 1) == 0 )
+  if ( (byte_4B1B879 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_1308/*"2"*/, method);
-    byte_4B01386 = 1;
+    sub_1BCAFF8(&StringLiteral_1309/*"2"*/, method);
+    byte_4B1B879 = 1;
   }
-  return (System_String_o *)StringLiteral_1308/*"2"*/;
+  return (System_String_o *)StringLiteral_1309/*"2"*/;
 }

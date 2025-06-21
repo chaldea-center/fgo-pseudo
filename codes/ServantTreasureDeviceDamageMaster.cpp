@@ -2,17 +2,17 @@ void __fastcall ServantTreasureDeviceDamageMaster___ctor(
         ServantTreasureDeviceDamageMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B02A55 & 1) == 0 )
+  if ( (byte_4B1CF5D & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string___ctor__,
       method);
-    byte_4B02A55 = 1;
+    byte_4B1CF5D = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     302,
-    (const MethodInfo_32B1804 *)Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string___ctor__);
+    (const MethodInfo_32CA594 *)Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string___ctor__);
 }
 
 
@@ -25,12 +25,12 @@ ServantTreasureDeviceDamageEntity_o *__fastcall ServantTreasureDeviceDamageMaste
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B02A53 & 1) == 0 )
+  if ( (byte_4B1CF5B & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__GetEntity__,
       *(_QWORD *)&svtId);
-    byte_4B02A53 = 1;
+    byte_4B1CF5B = 1;
   }
   PK = (Il2CppObject *)ServantTreasureDeviceDamageEntity__CreatePK(
                          svtId,
@@ -39,7 +39,7 @@ ServantTreasureDeviceDamageEntity_o *__fastcall ServantTreasureDeviceDamageMaste
   return (ServantTreasureDeviceDamageEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                   PK,
-                                                  (const MethodInfo_32B3B28 *)Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__GetEntity__);
+                                                  (const MethodInfo_32CC8B8 *)Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__GetEntity__);
 }
 
 
@@ -53,17 +53,17 @@ bool __fastcall ServantTreasureDeviceDamageMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B02A54 & 1) == 0 )
+  if ( (byte_4B1CF5C & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__TryGetEntity__,
       entity);
-    byte_4B02A54 = 1;
+    byte_4B1CF5C = 1;
   }
   PK = (Il2CppObject *)ServantTreasureDeviceDamageEntity__CreatePK(svtId, voicePrefix, *(const MethodInfo **)&svtId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32B3B74 *)Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__TryGetEntity__);
+           (const MethodInfo_32CC904 *)Method_DataMasterBase_ServantTreasureDeviceDamageMaster__ServantTreasureDeviceDamageEntity__string__TryGetEntity__);
 }

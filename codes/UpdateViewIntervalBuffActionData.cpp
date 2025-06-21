@@ -6,17 +6,17 @@ void __fastcall UpdateViewIntervalBuffActionData___ctor(
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4B0452D & 1) == 0 )
+  if ( (byte_4B1EA43 & 1) == 0 )
   {
-    sub_1BC3008(&BattleActionData_TypeInfo, actData);
-    byte_4B0452D = 1;
+    sub_1BCAFF8(&BattleActionData_TypeInfo, actData);
+    byte_4B1EA43 = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
   BattleActionData___ctor((BattleActionData_o *)this, 0LL);
   this->fields.state = 7;
   this->fields.targetActionData = actData;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.targetActionData, (int32_t)actData, v5, v6);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.targetActionData, (int32_t)actData, v5, v6);
 }
 
 

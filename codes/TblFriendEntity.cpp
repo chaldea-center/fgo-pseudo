@@ -1,27 +1,27 @@
 void __fastcall TblFriendEntity___ctor(TblFriendEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B02C62 & 1) == 0 )
+  if ( (byte_4B1D16B & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B02C62 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B1D16B = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *__fastcall TblFriendEntity__CreatePK(int64_t userId, int64_t friendId, const MethodInfo *method)
 {
-  if ( (byte_4B02C61 & 1) == 0 )
+  if ( (byte_4B1D16A & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_long__long___, friendId);
-    byte_4B02C61 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long__long___, friendId);
+    byte_4B1D16A = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long_(
            userId,
            friendId,
-           (const MethodInfo_3000178 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
+           (const MethodInfo_3018DB8 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
 }
 
 

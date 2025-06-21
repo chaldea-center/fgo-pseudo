@@ -50,21 +50,21 @@ void __fastcall CharaGraphUtil__PushRequest(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v49; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v50; // 0:x0.16
 
-  if ( (byte_4B013A6 & 1) == 0 )
+  if ( (byte_4B1B899 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMaster_UserServantCollectionMaster___, callbackOnEndRequest);
-    sub_1BC3008(&DataManager_TypeInfo, v5);
-    sub_1BC3008(&Method_NetworkManager_getRequest_CardFavoriteRequest___, v6);
-    sub_1BC3008(&NetworkManager_TypeInfo, v7);
-    sub_1BC3008(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
-    sub_1BC3008(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
-    byte_4B013A6 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMaster_UserServantCollectionMaster___, callbackOnEndRequest);
+    sub_1BCAFF8(&DataManager_TypeInfo, v5);
+    sub_1BCAFF8(&Method_NetworkManager_getRequest_CardFavoriteRequest___, v6);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v7);
+    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v8);
+    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
+    byte_4B1B899 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  limitCountSupport = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  limitCountSupport = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !SelfUserGame || !selectUserSvt )
     goto LABEL_18;
   v14 = (UserServantCollectionMaster_o *)limitCountSupport;
@@ -75,11 +75,11 @@ void __fastcall CharaGraphUtil__PushRequest(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v49.fields.currentCryptoKey = v17;
   *(_QWORD *)&v49.fields.fakeValue = v16;
-  limitCountSupport = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(v49, 0LL);
+  limitCountSupport = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v49, 0LL);
   if ( !v14 )
     goto LABEL_18;
   EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(v14, userId, (int32_t)limitCountSupport, 0LL);
-  limitCountSupport = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  limitCountSupport = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !limitCountSupport )
     goto LABEL_18;
   CommonUI__SetConnectMarkFadeInLag((CommonUI_o *)limitCountSupport, 0, 0LL);
@@ -92,32 +92,32 @@ void __fastcall CharaGraphUtil__PushRequest(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v47 = v48;
-  v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48027584(&v47, 0LL);
+  v22 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v47, 0LL);
   v23 = *(_OWORD *)&selectUserSvt->fields.id.fields.fakeValue;
   favoriteUserSvtId = SelfUserGame->fields.favoriteUserSvtId;
   v43 = v22;
   *(_OWORD *)&v46.fields.currentCryptoKey = *(_OWORD *)&p_fields->id.fields.currentCryptoKey;
   *(_OWORD *)&v46.fields.fakeValue = v23;
-  v41 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48027584(&v46, 0LL);
+  v41 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v46, 0LL);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      callbackOnEndRequest,
-                     (const MethodInfo_3089B54 *)Method_NetworkManager_getRequest_CardFavoriteRequest___);
+                     (const MethodInfo_30A28E4 *)Method_NetworkManager_getRequest_CardFavoriteRequest___);
   v25 = *(_OWORD *)&selectUserSvt->fields.id.fields.fakeValue;
   v26 = (CardFavoriteRequest_o *)Request_object;
   *(_OWORD *)&v45.fields.currentCryptoKey = *(_OWORD *)&p_fields->id.fields.currentCryptoKey;
   *(_OWORD *)&v45.fields.fakeValue = v25;
-  targetUsrSVtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48027584(&v45, 0LL);
-  imageLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(
+  targetUsrSVtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v45, 0LL);
+  imageLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(
                       selectUserSvt->fields.imageLimitCount,
                       0LL);
-  v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(selectUserSvt->fields.dispLimitCount, 0LL);
-  v28 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(
+  v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(selectUserSvt->fields.dispLimitCount, 0LL);
+  v28 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(
           selectUserSvt->fields.commandCardLimitCount,
           0LL);
-  v29 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(selectUserSvt->fields.iconLimitCount, 0LL);
-  v30 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(
+  v29 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(selectUserSvt->fields.iconLimitCount, 0LL);
+  v30 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(
           selectUserSvt->fields.portraitLimitCount,
           0LL);
   IsLock = UserServantEntity__IsLock(selectUserSvt, 0LL);
@@ -126,23 +126,23 @@ void __fastcall CharaGraphUtil__PushRequest(
     goto LABEL_18;
   v32 = (char)limitCountSupport;
   commonFlag = EntityDefinitely->fields.svtCommonFlag;
-  battleVoice = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(
+  battleVoice = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(
                   selectUserSvt->fields.battleVoice,
                   0LL);
-  randomSettingOwn = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(
+  randomSettingOwn = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(
                        selectUserSvt->fields.randomLimitCount,
                        0LL);
-  v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(
+  v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(
           selectUserSvt->fields.randomLimitCountSupport,
           0LL);
   v37 = *(_QWORD *)&selectUserSvt->fields.limitCountSupport.fields.currentCryptoKey;
   *(_QWORD *)&v50.fields.fakeValue = *(_QWORD *)&selectUserSvt->fields.limitCountSupport.fields.fakeValue;
   randomSettingSupport = v36;
   *(_QWORD *)&v50.fields.currentCryptoKey = v37;
-  limitCountSupport = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(v50, 0LL);
+  limitCountSupport = (Il2CppObject *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v50, 0LL);
   if ( !v26 )
 LABEL_18:
-    sub_1BC3264(limitCountSupport, v13);
+    sub_1BCB254(limitCountSupport, v13);
   CardFavoriteRequest__beginRequest(
     v26,
     targetUsrSVtId,
@@ -246,41 +246,41 @@ void __fastcall CharaGraphUtil__PushRequestWithConfirmDialog(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v80; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v81; // 0:x0.16
 
-  if ( (byte_4B013A5 & 1) == 0 )
+  if ( (byte_4B1B898 & 1) == 0 )
   {
-    sub_1BC3008(&BalanceConfig_TypeInfo, onCloseDialog);
-    sub_1BC3008(&CommonConfirmDialog_ClickDelegate_TypeInfo, v7);
-    sub_1BC3008(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v8);
-    sub_1BC3008(&Method_DataManager_GetMaster_ServantMaster___, v9);
-    sub_1BC3008(&Method_DataManager_GetMaster_UserServantMaster___, v10);
-    sub_1BC3008(&DataManager_TypeInfo, v11);
-    sub_1BC3008(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v12);
-    sub_1BC3008(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v13);
-    sub_1BC3008(&LocalizationManager_TypeInfo, v14);
-    sub_1BC3008(&object___TypeInfo, v15);
-    sub_1BC3008(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16);
-    sub_1BC3008(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v17);
-    sub_1BC3008(&Rarity_TypeInfo, v18);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v19);
-    sub_1BC3008(&Method_CharaGraphUtil___c__DisplayClass0_0__PushRequestWithConfirmDialog_g__OnCloseDialog_0__, v20);
-    sub_1BC3008(&CharaGraphUtil___c__DisplayClass0_0_TypeInfo, v21);
-    sub_1BC3008(&StringLiteral_11833/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, v22);
-    sub_1BC3008(&StringLiteral_11831/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, v23);
-    sub_1BC3008(&StringLiteral_11832/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, v24);
-    sub_1BC3008(&StringLiteral_11834/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, v25);
-    byte_4B013A5 = 1;
+    sub_1BCAFF8(&BalanceConfig_TypeInfo, onCloseDialog);
+    sub_1BCAFF8(&CommonConfirmDialog_ClickDelegate_TypeInfo, v7);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v8);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantMaster___, v9);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_UserServantMaster___, v10);
+    sub_1BCAFF8(&DataManager_TypeInfo, v11);
+    sub_1BCAFF8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v12);
+    sub_1BCAFF8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__, v13);
+    sub_1BCAFF8(&LocalizationManager_TypeInfo, v14);
+    sub_1BCAFF8(&object___TypeInfo, v15);
+    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v16);
+    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v17);
+    sub_1BCAFF8(&Rarity_TypeInfo, v18);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v19);
+    sub_1BCAFF8(&Method_CharaGraphUtil___c__DisplayClass0_0__PushRequestWithConfirmDialog_g__OnCloseDialog_0__, v20);
+    sub_1BCAFF8(&CharaGraphUtil___c__DisplayClass0_0_TypeInfo, v21);
+    sub_1BCAFF8(&StringLiteral_11845/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, v22);
+    sub_1BCAFF8(&StringLiteral_11843/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, v23);
+    sub_1BCAFF8(&StringLiteral_11844/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, v24);
+    sub_1BCAFF8(&StringLiteral_11846/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, v25);
+    byte_4B1B898 = 1;
   }
-  v26 = sub_1BC3254(CharaGraphUtil___c__DisplayClass0_0_TypeInfo);
+  v26 = sub_1BCB244(CharaGraphUtil___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v26, 0LL);
   if ( !v26 )
     goto LABEL_55;
   *(_QWORD *)(v26 + 16) = onCloseDialog;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v26 + 16), (int32_t)onCloseDialog, v29, v30);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v26 + 16), (int32_t)onCloseDialog, v29, v30);
   *(_QWORD *)(v26 + 24) = nextUserServantEntity;
   v31 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **)(v26 + 24);
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v26 + 24), (int32_t)nextUserServantEntity, v32, v33);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v26 + 24), (int32_t)nextUserServantEntity, v32, v33);
   *(_QWORD *)(v26 + 32) = callbackOnEndRequest;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v26 + 32), (int32_t)callbackOnEndRequest, v34, v35);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v26 + 32), (int32_t)callbackOnEndRequest, v34, v35);
   SelfUserGame = (__int64)UserGameMaster__getSelfUserGame(0LL);
   if ( !SelfUserGame )
     goto LABEL_55;
@@ -300,19 +300,19 @@ LABEL_10:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v78 = v79;
-  if ( v37 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48027584(&v78, 0LL) )
+  if ( v37 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v78, 0LL) )
     goto LABEL_10;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantMaster___);
-  v41 = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
-  SelfUserGame = (__int64)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantMaster___);
+  v41 = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  SelfUserGame = (__int64)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !SelfUserGame )
     goto LABEL_55;
   SelfUserGame = (__int64)DataMasterBase_object__object__long___GetEntity(
                             (DataMasterBase_TMaster__TEntity__PKType__o *)SelfUserGame,
                             v37,
-                            (const MethodInfo_32B15CC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                            (const MethodInfo_32CA35C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   if ( !SelfUserGame )
     goto LABEL_55;
   v42 = SelfUserGame;
@@ -322,21 +322,21 @@ LABEL_10:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v80.fields.currentCryptoKey = v44;
   *(_QWORD *)&v80.fields.fakeValue = v43;
-  SelfUserGame = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(v80, 0LL);
+  SelfUserGame = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v80, 0LL);
   if ( !Master_object )
     goto LABEL_55;
   SelfUserGame = (__int64)DataMasterBase_object__object__int___GetEntity(
                             (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                             SelfUserGame,
-                            (const MethodInfo_32AF070 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                            (const MethodInfo_32C7E00 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   if ( !*v31 )
     goto LABEL_55;
   v45 = (ServantEntity_o *)SelfUserGame;
-  v46 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060((*v31)[5], 0LL);
+  v46 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176((*v31)[5], 0LL);
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              v46,
-             (const MethodInfo_32AF070 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+             (const MethodInfo_32C7E00 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   SelfUserGame = (__int64)UserServantEntity__GetOverwriteStatus((UserServantEntity_o *)v42, 0LL, 0LL);
   if ( !SelfUserGame )
     goto LABEL_55;
@@ -349,48 +349,48 @@ LABEL_10:
   v49 = *(_DWORD *)(SelfUserGame + 24);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_11834/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0LL);
-  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_11833/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0LL);
-  v52 = (System_Object_array *)sub_1BC30B0(object___TypeInfo, 6LL);
+  v50 = LocalizationManager__Get((System_String_o *)StringLiteral_11846/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0LL);
+  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_11845/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0LL);
+  v52 = (System_Object_array *)sub_1BCB0A0(object___TypeInfo, 6LL);
   if ( !Rarity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
   SelfUserGame = (__int64)Rarity__getRarityType(v48, 0LL);
   if ( !v52 )
 LABEL_55:
-    sub_1BC3264(SelfUserGame, v28);
+    sub_1BCB254(SelfUserGame, v28);
   v55 = (Il2CppObject *)SelfUserGame;
   if ( SelfUserGame )
   {
-    SelfUserGame = sub_1BC3144(SelfUserGame, v52->obj.klass->_1.element_class);
+    SelfUserGame = sub_1BCB134(SelfUserGame, v52->obj.klass->_1.element_class);
     if ( !SelfUserGame )
       goto LABEL_57;
   }
   if ( !v52->max_length )
     goto LABEL_56;
   v52->m_Items[0] = v55;
-  sub_1BC2FAC((CGThumbnailListItem_o *)v52->m_Items, (int32_t)v55, v53, v54);
+  sub_1BCAF9C((CGThumbnailListItem_o *)v52->m_Items, (int32_t)v55, v53, v54);
   if ( !v45 )
     goto LABEL_55;
   SelfUserGame = (__int64)ServantEntity__getClassName(v45, 0LL);
   v57 = (Il2CppObject *)SelfUserGame;
   if ( SelfUserGame )
   {
-    SelfUserGame = sub_1BC3144(SelfUserGame, v52->obj.klass->_1.element_class);
+    SelfUserGame = sub_1BCB134(SelfUserGame, v52->obj.klass->_1.element_class);
     if ( !SelfUserGame )
       goto LABEL_57;
   }
   if ( v52->max_length <= 1 )
     goto LABEL_56;
   v52->m_Items[1] = v57;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v52->m_Items[1], (int32_t)v57, v53, v56);
-  v58 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v52->m_Items[1], (int32_t)v57, v53, v56);
+  v58 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(
           *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)(v42 + 80),
           0LL);
   v59 = *(_QWORD *)(v42 + 96);
   *(_QWORD *)&v81.fields.fakeValue = *(_QWORD *)(v42 + 104);
   v60 = v58;
   *(_QWORD *)&v81.fields.currentCryptoKey = v59;
-  SelfUserGame = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(v81, 0LL);
+  SelfUserGame = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v81, 0LL);
   if ( !v41 )
     goto LABEL_55;
   SelfUserGame = (__int64)ServantLimitImageMaster__GetLimitCountSealedServantName(
@@ -402,48 +402,48 @@ LABEL_55:
   v62 = (Il2CppObject *)SelfUserGame;
   if ( SelfUserGame )
   {
-    SelfUserGame = sub_1BC3144(SelfUserGame, v52->obj.klass->_1.element_class);
+    SelfUserGame = sub_1BCB134(SelfUserGame, v52->obj.klass->_1.element_class);
     if ( !SelfUserGame )
       goto LABEL_57;
   }
   if ( v52->max_length <= 2 )
     goto LABEL_56;
   v52->m_Items[2] = v62;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v52->m_Items[2], (int32_t)v62, v53, v61);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v52->m_Items[2], (int32_t)v62, v53, v61);
   SelfUserGame = (__int64)Rarity__getRarityType(v49, 0LL);
   v64 = (Il2CppObject *)SelfUserGame;
   if ( SelfUserGame )
   {
-    SelfUserGame = sub_1BC3144(SelfUserGame, v52->obj.klass->_1.element_class);
+    SelfUserGame = sub_1BCB134(SelfUserGame, v52->obj.klass->_1.element_class);
     if ( !SelfUserGame )
       goto LABEL_57;
   }
   if ( v52->max_length <= 3 )
     goto LABEL_56;
   v52->m_Items[3] = v64;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v52->m_Items[3], (int32_t)v64, v53, v63);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v52->m_Items[3], (int32_t)v64, v53, v63);
   if ( !Entity )
     goto LABEL_55;
   SelfUserGame = (__int64)ServantEntity__getClassName((ServantEntity_o *)Entity, 0LL);
   v66 = (Il2CppObject *)SelfUserGame;
   if ( SelfUserGame )
   {
-    SelfUserGame = sub_1BC3144(SelfUserGame, v52->obj.klass->_1.element_class);
+    SelfUserGame = sub_1BCB134(SelfUserGame, v52->obj.klass->_1.element_class);
     if ( !SelfUserGame )
       goto LABEL_57;
   }
   if ( v52->max_length <= 4 )
     goto LABEL_56;
   v52->m_Items[4] = v66;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v52->m_Items[4], (int32_t)v66, v53, v65);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v52->m_Items[4], (int32_t)v66, v53, v65);
   if ( !*v31 )
     goto LABEL_55;
-  SelfUserGame = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060((*v31)[5], 0LL);
+  SelfUserGame = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176((*v31)[5], 0LL);
   v67 = (UserServantEntity_o *)*v31;
   if ( !*v31 )
     goto LABEL_55;
   v68 = SelfUserGame;
-  v69 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(v67->fields.limitCount, 0LL);
+  v69 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v67->fields.limitCount, 0LL);
   SelfUserGame = (__int64)ServantLimitImageMaster__GetLimitCountSealedServantName(
                             (ServantLimitImageMaster_o *)v41,
                             v68,
@@ -453,24 +453,24 @@ LABEL_55:
   v71 = (Il2CppObject *)SelfUserGame;
   if ( SelfUserGame )
   {
-    SelfUserGame = sub_1BC3144(SelfUserGame, v52->obj.klass->_1.element_class);
+    SelfUserGame = sub_1BCB134(SelfUserGame, v52->obj.klass->_1.element_class);
     if ( !SelfUserGame )
     {
 LABEL_57:
-      v77 = sub_1BC3288(SelfUserGame);
-      sub_1BC3130(v77, 0LL);
+      v77 = sub_1BCB278(SelfUserGame);
+      sub_1BCB120(v77, 0LL);
     }
   }
   if ( v52->max_length <= 5 )
 LABEL_56:
-    sub_1BC326C(SelfUserGame, v28, v53);
+    sub_1BCB25C(SelfUserGame, v28, v53);
   v52->m_Items[5] = v71;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&v52->m_Items[5], (int32_t)v71, v53, v70);
-  v72 = System_String__Format_62390076(v51, v52, 0LL);
-  v73 = LocalizationManager__Get((System_String_o *)StringLiteral_11832/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0LL);
-  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_11831/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v76 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BC3254(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&v52->m_Items[5], (int32_t)v71, v53, v70);
+  v72 = System_String__Format_62491852(v51, v52, 0LL);
+  v73 = LocalizationManager__Get((System_String_o *)StringLiteral_11844/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0LL);
+  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_11843/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v76 = (CommonConfirmDialog_ClickDelegate_o *)sub_1BCB244(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v76,
     (Il2CppObject *)v26,
@@ -484,7 +484,7 @@ LABEL_56:
   }
   if ( !Instance )
     goto LABEL_55;
-  CommonUI__OpenConfirmDialog_30731096(
+  CommonUI__OpenConfirmDialog_30763852(
     (CommonUI_o *)Instance,
     v50,
     v72,
@@ -531,22 +531,22 @@ void __fastcall CharaGraphUtil___c__DisplayClass0_0___PushRequestWithConfirmDial
   Il2CppObject *Instance; // x19
   System_Action_o *v14; // x20
 
-  if ( (byte_4B013A7 & 1) == 0 )
+  if ( (byte_4B1B89A & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, isDecide);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    sub_1BC3008(&Method_CharaGraphUtil___c__DisplayClass0_1__PushRequestWithConfirmDialog_b__1__, v6);
-    sub_1BC3008(&CharaGraphUtil___c__DisplayClass0_1_TypeInfo, v7);
-    byte_4B013A7 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, isDecide);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
+    sub_1BCAFF8(&Method_CharaGraphUtil___c__DisplayClass0_1__PushRequestWithConfirmDialog_b__1__, v6);
+    sub_1BCAFF8(&CharaGraphUtil___c__DisplayClass0_1_TypeInfo, v7);
+    byte_4B1B89A = 1;
   }
-  v8 = sub_1BC3254(CharaGraphUtil___c__DisplayClass0_1_TypeInfo);
+  v8 = sub_1BCB244(CharaGraphUtil___c__DisplayClass0_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8
     || (*(_QWORD *)(v8 + 24) = this,
-        sub_1BC2FAC((CGThumbnailListItem_o *)(v8 + 24), (int32_t)this, v11, v12),
+        sub_1BCAF9C((CGThumbnailListItem_o *)(v8 + 24), (int32_t)this, v11, v12),
         *(_BYTE *)(v8 + 16) = isDecide,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38DFD48 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v14 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v14 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo),
         System_Action___ctor(
           v14,
           (Il2CppObject *)v8,
@@ -554,9 +554,9 @@ void __fastcall CharaGraphUtil___c__DisplayClass0_0___PushRequestWithConfirmDial
           0LL),
         !Instance) )
   {
-    sub_1BC3264(v9, v10);
+    sub_1BCB254(v9, v10);
   }
-  CommonUI__CloseConfirmDialog_30731324((CommonUI_o *)Instance, v14, 0LL);
+  CommonUI__CloseConfirmDialog_30764080((CommonUI_o *)Instance, v14, 0LL);
 }
 
 
@@ -578,10 +578,10 @@ void __fastcall CharaGraphUtil___c__DisplayClass0_1___PushRequestWithConfirmDial
   struct CharaGraphUtil___c__DisplayClass0_0_o *v5; // x8
 
   v2 = this;
-  if ( (byte_4B013A8 & 1) == 0 )
+  if ( (byte_4B1B89B & 1) == 0 )
   {
-    this = (CharaGraphUtil___c__DisplayClass0_1_o *)sub_1BC3008(&Method_ActionExtensions_Call_bool___, method);
-    byte_4B013A8 = 1;
+    this = (CharaGraphUtil___c__DisplayClass0_1_o *)sub_1BCAFF8(&Method_ActionExtensions_Call_bool___, method);
+    byte_4B1B89B = 1;
   }
   CS___8__locals1 = v2->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
@@ -589,7 +589,7 @@ void __fastcall CharaGraphUtil___c__DisplayClass0_1___PushRequestWithConfirmDial
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)CS___8__locals1->fields.onCloseDialog,
     v2->fields.isDecide,
-    (const MethodInfo_2F513BC *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_2F69FFC *)Method_ActionExtensions_Call_bool___);
   if ( v2->fields.isDecide )
   {
     v5 = v2->fields.CS___8__locals1;
@@ -599,6 +599,6 @@ void __fastcall CharaGraphUtil___c__DisplayClass0_1___PushRequestWithConfirmDial
       return;
     }
 LABEL_8:
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   }
 }

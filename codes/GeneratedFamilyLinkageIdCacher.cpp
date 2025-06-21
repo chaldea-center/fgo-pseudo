@@ -10,26 +10,26 @@ void __fastcall GeneratedFamilyLinkageIdCacher___ctor(GeneratedFamilyLinkageIdCa
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4B04E05 & 1) == 0 )
+  if ( (byte_4B1F33C & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator___ctor__, method);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_string__int___ctor__, v3);
-    sub_1BC3008(&System_Collections_Generic_Dictionary_string__int__TypeInfo, v4);
-    sub_1BC3008(&System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__TypeInfo, v5);
-    byte_4B04E05 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator___ctor__, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_string__int___ctor__, v3);
+    sub_1BCAFF8(&System_Collections_Generic_Dictionary_string__int__TypeInfo, v4);
+    sub_1BCAFF8(&System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__TypeInfo, v5);
+    byte_4B1F33C = 1;
   }
-  v6 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1BC3254(System_Collections_Generic_Dictionary_string__int__TypeInfo);
+  v6 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1BCB244(System_Collections_Generic_Dictionary_string__int__TypeInfo);
   System_Collections_Generic_Dictionary_object__int____ctor(
     v6,
-    (const MethodInfo_3363694 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    (const MethodInfo_337C424 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
   this->fields.familyLinkageIdMap = (struct System_Collections_Generic_Dictionary_string__int__o *)v6;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields, (int32_t)v6, v7, v8);
-  v9 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BC3254(System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__TypeInfo);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)v6, v7, v8);
+  v9 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BCB244(System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v9,
-    (const MethodInfo_3307B80 *)Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator___ctor__);
+    (const MethodInfo_3320910 *)Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator___ctor__);
   this->fields.generatorMap = (struct System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__o *)v9;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.generatorMap, (int32_t)v9, v10, v11);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.generatorMap, (int32_t)v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0LL);
 }
 
@@ -51,17 +51,17 @@ System_String_o *__fastcall GeneratedFamilyLinkageIdCacher__CreateKeyOfFamilyLin
   int32_t v14; // [xsp+8h] [xbp-38h] BYREF
   int32_t v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B04E04 & 1) == 0 )
+  if ( (byte_4B1F33B & 1) == 0 )
   {
-    sub_1BC3008(&int_TypeInfo, *(_QWORD *)&uniqueId);
-    sub_1BC3008(&StringLiteral_24957/*"{0}_{1}"*/, v7);
-    byte_4B04E04 = 1;
+    sub_1BCAFF8(&int_TypeInfo, *(_QWORD *)&uniqueId);
+    sub_1BCAFF8(&StringLiteral_24978/*"{0}_{1}"*/, v7);
+    byte_4B1F33B = 1;
   }
   v15 = uniqueId;
   v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15, *(_QWORD *)&linkageIndividuality, method, v4);
   v14 = linkageIndividuality;
   v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14, v9, v10, v11);
-  return System_String__Format_62389940((System_String_o *)StringLiteral_24957/*"{0}_{1}"*/, v8, v12, 0LL);
+  return System_String__Format_62491716((System_String_o *)StringLiteral_24978/*"{0}_{1}"*/, v8, v12, 0LL);
 }
 
 
@@ -80,15 +80,15 @@ FamilyBuffLinkageIdGenerator_o *__fastcall GeneratedFamilyLinkageIdCacher__GetOr
   const MethodInfo *v11; // x2
 
   v4 = this;
-  if ( (byte_4B04E03 & 1) == 0 )
+  if ( (byte_4B1F33A & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__ContainsKey__,
       targetSvtData);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__get_Item__, v5);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__set_Item__, v6);
-    this = (GeneratedFamilyLinkageIdCacher_o *)sub_1BC3008(&FamilyBuffLinkageIdGenerator_TypeInfo, v7);
-    byte_4B04E03 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__get_Item__, v5);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__set_Item__, v6);
+    this = (GeneratedFamilyLinkageIdCacher_o *)sub_1BCAFF8(&FamilyBuffLinkageIdGenerator_TypeInfo, v7);
+    byte_4B1F33A = 1;
   }
   if ( !targetSvtData )
     goto LABEL_10;
@@ -99,10 +99,10 @@ FamilyBuffLinkageIdGenerator_o *__fastcall GeneratedFamilyLinkageIdCacher__GetOr
   if ( !System_Collections_Generic_Dictionary_int__object___ContainsKey(
           (System_Collections_Generic_Dictionary_int__object__o *)this,
           uniqueId,
-          (const MethodInfo_3308748 *)Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__ContainsKey__) )
+          (const MethodInfo_33214D8 *)Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__ContainsKey__) )
   {
     generatorMap = (System_Collections_Generic_Dictionary_int__object__o *)v4->fields.generatorMap;
-    v10 = (FamilyBuffLinkageIdGenerator_o *)sub_1BC3254(FamilyBuffLinkageIdGenerator_TypeInfo);
+    v10 = (FamilyBuffLinkageIdGenerator_o *)sub_1BCB244(FamilyBuffLinkageIdGenerator_TypeInfo);
     FamilyBuffLinkageIdGenerator___ctor(v10, targetSvtData, v11);
     if ( !generatorMap )
       goto LABEL_10;
@@ -110,16 +110,16 @@ FamilyBuffLinkageIdGenerator_o *__fastcall GeneratedFamilyLinkageIdCacher__GetOr
       generatorMap,
       uniqueId,
       (Il2CppObject *)v10,
-      (const MethodInfo_3308540 *)Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__set_Item__);
+      (const MethodInfo_33212D0 *)Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__set_Item__);
   }
   this = (GeneratedFamilyLinkageIdCacher_o *)v4->fields.generatorMap;
   if ( !this )
 LABEL_10:
-    sub_1BC3264(this, targetSvtData);
+    sub_1BCB254(this, targetSvtData);
   return (FamilyBuffLinkageIdGenerator_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                              (System_Collections_Generic_Dictionary_int__object__o *)this,
                                              uniqueId,
-                                             (const MethodInfo_33084B4 *)Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__get_Item__);
+                                             (const MethodInfo_3321244 *)Method_System_Collections_Generic_Dictionary_int__FamilyBuffLinkageIdGenerator__get_Item__);
 }
 
 
@@ -139,16 +139,16 @@ int32_t __fastcall GeneratedFamilyLinkageIdCacher__GetOrGenerateFamilyLinkageId(
   GeneratedFamilyLinkageIdCacher_o *v12; // x8
 
   v6 = this;
-  if ( (byte_4B04E02 & 1) == 0 )
+  if ( (byte_4B1F339 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__,
       *(_QWORD *)&linkageIndividuality);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__, v7);
-    this = (GeneratedFamilyLinkageIdCacher_o *)sub_1BC3008(
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__, v7);
+    this = (GeneratedFamilyLinkageIdCacher_o *)sub_1BCAFF8(
                                                  &Method_System_Collections_Generic_Dictionary_string__int__set_Item__,
                                                  v8);
-    byte_4B04E02 = 1;
+    byte_4B1F339 = 1;
   }
   if ( !targetSvtData )
     goto LABEL_11;
@@ -163,7 +163,7 @@ int32_t __fastcall GeneratedFamilyLinkageIdCacher__GetOrGenerateFamilyLinkageId(
   if ( System_Collections_Generic_Dictionary_object__int___ContainsKey(
          (System_Collections_Generic_Dictionary_object__int__o *)v6->fields.familyLinkageIdMap,
          (Il2CppObject *)this,
-         (const MethodInfo_336423C *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__) )
+         (const MethodInfo_337CFCC *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__) )
   {
     goto LABEL_9;
   }
@@ -179,13 +179,13 @@ int32_t __fastcall GeneratedFamilyLinkageIdCacher__GetOrGenerateFamilyLinkageId(
         !this) )
   {
 LABEL_11:
-    sub_1BC3264(this, *(_QWORD *)&linkageIndividuality);
+    sub_1BCB254(this, *(_QWORD *)&linkageIndividuality);
   }
   System_Collections_Generic_Dictionary_object__int___set_Item(
     (System_Collections_Generic_Dictionary_object__int__o *)this,
     v9,
     familyLinkageIdMap + 1,
-    (const MethodInfo_3364034 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+    (const MethodInfo_337CDC4 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
 LABEL_9:
   this = (GeneratedFamilyLinkageIdCacher_o *)v6->fields.familyLinkageIdMap;
   if ( !this )
@@ -193,5 +193,5 @@ LABEL_9:
   return System_Collections_Generic_Dictionary_object__int___get_Item(
            (System_Collections_Generic_Dictionary_object__int__o *)this,
            v9,
-           (const MethodInfo_3363FC8 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+           (const MethodInfo_337CD58 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
 }

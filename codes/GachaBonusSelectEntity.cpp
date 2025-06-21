@@ -1,13 +1,13 @@
 void __fastcall GachaBonusSelectEntity___ctor(GachaBonusSelectEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B022AD & 1) == 0 )
+  if ( (byte_4B1C7B6 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B022AD = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B1C7B6 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,16 +18,16 @@ System_String_o *__fastcall GachaBonusSelectEntity__CreatePK(
         int32_t slot,
         const MethodInfo *method)
 {
-  if ( (byte_4B022AA & 1) == 0 )
+  if ( (byte_4B1C7B3 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&gachaBonusId);
-    byte_4B022AA = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&gachaBonusId);
+    byte_4B1C7B3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            gachaId,
            gachaBonusId,
            slot,
-           (const MethodInfo_300047C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30190BC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -50,11 +50,11 @@ System_String_o *__fastcall GachaBonusSelectEntity__GetClassIconId(
   int32_t v5; // w8
   int32_t ClassId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B022AB & 1) == 0 )
+  if ( (byte_4B1C7B4 & 1) == 0 )
   {
-    sub_1BC3008(&SvtClassAttri_TypeInfo, method);
-    sub_1BC3008(&StringLiteral_4911/*"D3"*/, v4);
-    byte_4B022AB = 1;
+    sub_1BCAFF8(&SvtClassAttri_TypeInfo, method);
+    sub_1BCAFF8(&StringLiteral_4913/*"D3"*/, v4);
+    byte_4B1C7B4 = 1;
   }
   ClassId = GachaBonusSelectEntity__GetClassId(this, 1001, v2);
   if ( !SvtClassAttri_TypeInfo->_2.cctor_finished )
@@ -64,7 +64,7 @@ System_String_o *__fastcall GachaBonusSelectEntity__GetClassIconId(
     v5 = 1004;
 LABEL_11:
     ClassId = v5;
-    return System_Int32__ToString_63857360((int32_t)&ClassId, (System_String_o *)StringLiteral_4911/*"D3"*/, 0LL);
+    return System_Int32__ToString_63959136((int32_t)&ClassId, (System_String_o *)StringLiteral_4913/*"D3"*/, 0LL);
   }
   if ( !SvtClassAttri_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SvtClassAttri_TypeInfo);
@@ -73,7 +73,7 @@ LABEL_11:
     v5 = 1005;
     goto LABEL_11;
   }
-  return System_Int32__ToString_63857360((int32_t)&ClassId, (System_String_o *)StringLiteral_4911/*"D3"*/, 0LL);
+  return System_Int32__ToString_63959136((int32_t)&ClassId, (System_String_o *)StringLiteral_4913/*"D3"*/, 0LL);
 }
 
 
@@ -83,10 +83,10 @@ int32_t __fastcall GachaBonusSelectEntity__GetClassId(
         int32_t defId,
         const MethodInfo *method)
 {
-  if ( (byte_4B022AC & 1) == 0 )
+  if ( (byte_4B1C7B5 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_17826/*"classId"*/, *(_QWORD *)&defId);
-    byte_4B022AC = 1;
+    sub_1BCAFF8(&StringLiteral_17837/*"classId"*/, *(_QWORD *)&defId);
+    byte_4B1C7B5 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17826/*"classId"*/, defId, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_17837/*"classId"*/, defId, 0LL);
 }

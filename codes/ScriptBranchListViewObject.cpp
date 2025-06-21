@@ -1,9 +1,9 @@
 void __fastcall ScriptBranchListViewObject___ctor(ScriptBranchListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AFF64F & 1) == 0 )
+  if ( (byte_4B19B25 & 1) == 0 )
   {
-    sub_1BC3008(&ListViewObject_TypeInfo, method);
-    byte_4AFF64F = 1;
+    sub_1BCAFF8(&ListViewObject_TypeInfo, method);
+    byte_4B19B25 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,20 +19,20 @@ void __fastcall ScriptBranchListViewObject__Awake(ScriptBranchListViewObject_o *
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4AFF64A & 1) == 0 )
+  if ( (byte_4B19B20 & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewItemDraw___, method);
-    byte_4AFF64A = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewItemDraw___, method);
+    byte_4B19B20 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0LL);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BC3264(0LL, v3);
+    sub_1BCB254(0LL, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewItemDraw___);
+                       (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewItemDraw___);
   this->fields.itemDraw = (struct ScriptBranchListViewItemDraw_o *)Component_object;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -45,21 +45,21 @@ UnityEngine_GameObject_o *__fastcall ScriptBranchListViewObject__CreateDragObjec
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x3
 
-  if ( (byte_4AFF64C & 1) == 0 )
+  if ( (byte_4B19B22 & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewObject___, method);
-    byte_4AFF64C = 1;
+    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewObject___, method);
+    byte_4B19B22 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0LL);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3055998 *)Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewObject___)) == 0LL) )
+                                                    (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_ScriptBranchListViewObject___)) == 0LL) )
   {
-    sub_1BC3264(DragObject, v4);
+    sub_1BCB254(DragObject, v4);
   }
-  ScriptBranchListViewObject__Init_36498732((ScriptBranchListViewObject_o *)DragObject, 2, 0LL, v6);
+  ScriptBranchListViewObject__Init_36636028((ScriptBranchListViewObject_o *)DragObject, 2, 0LL, v6);
   return v5;
 }
 
@@ -89,10 +89,10 @@ void __fastcall ScriptBranchListViewObject__Init(
   int32_t v22; // w9
   CGThumbnailListItem_c *klass; // x19
 
-  if ( (byte_4AFF64D & 1) == 0 )
+  if ( (byte_4B19B23 & 1) == 0 )
   {
-    sub_1BC3008(&ScriptBranchListViewItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4AFF64D = 1;
+    sub_1BCAFF8(&ScriptBranchListViewItem_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B19B23 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -120,16 +120,16 @@ void __fastcall ScriptBranchListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
   {
-    sub_1BC3264(transform, v15);
+    sub_1BCB254(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
   if ( (unsigned int)v11 <= 3 )
   {
-    v22 = dword_BDDC30[v11];
-    this->fields.dispMode = *((_DWORD *)&xmmword_BDE870 + v11);
+    v22 = dword_BE1740[v11];
+    this->fields.dispMode = *((_DWORD *)&xmmword_BE2380 + v11);
     this->fields.state = v22;
   }
   if ( !state || dispMode != this->fields.dispMode )
@@ -138,7 +138,7 @@ void __fastcall ScriptBranchListViewObject__Init(
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0LL;
-    sub_1BC2FAC(p_callbackFunc, 0, v20, v21);
+    sub_1BCAF9C(p_callbackFunc, 0, v20, v21);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
       klass->_1.element_class,
       *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -147,7 +147,7 @@ void __fastcall ScriptBranchListViewObject__Init(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ScriptBranchListViewObject__Init_36498732(
+void __fastcall ScriptBranchListViewObject__Init_36636028(
         ScriptBranchListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -156,10 +156,10 @@ void __fastcall ScriptBranchListViewObject__Init_36498732(
   float v4; // s0
   int v5; // s1
 
-  if ( !byte_4AFBDB1 )
+  if ( !byte_4B16191 )
   {
-    sub_1BC3008(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4AFBDB1 = 1;
+    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
+    byte_4B16191 = 1;
   }
   ScriptBranchListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -175,11 +175,11 @@ void __fastcall ScriptBranchListViewObject__OnDestroy(ScriptBranchListViewObject
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4AFF64B & 1) == 0 )
+  if ( (byte_4B19B21 & 1) == 0 )
   {
-    sub_1BC3008(&NGUITools_TypeInfo, method);
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, v3);
-    byte_4AFF64B = 1;
+    sub_1BCAFF8(&NGUITools_TypeInfo, method);
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
+    byte_4B19B21 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -193,7 +193,7 @@ void __fastcall ScriptBranchListViewObject__OnDestroy(ScriptBranchListViewObject
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0LL);
     p_dragObject->klass = 0LL;
-    sub_1BC2FAC(p_dragObject, 0, v8, v9);
+    sub_1BCAF9C(p_dragObject, 0, v8, v9);
   }
 }
 
@@ -205,7 +205,7 @@ void __fastcall ScriptBranchListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_42800124((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_42963052((ListViewObject_o *)this, item, seed, 0LL);
 }
 
 
@@ -220,11 +220,11 @@ void __fastcall ScriptBranchListViewObject__SetupDisp(ScriptBranchListViewObject
   const MethodInfo *v9; // x3
   ScriptBranchListViewItemDraw_o *v10; // x0
 
-  if ( (byte_4AFF64E & 1) == 0 )
+  if ( (byte_4B19B24 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    sub_1BC3008(&ScriptBranchListViewItem_TypeInfo, v3);
-    byte_4AFF64E = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    sub_1BCAFF8(&ScriptBranchListViewItem_TypeInfo, v3);
+    byte_4B19B24 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -248,7 +248,7 @@ LABEL_8:
   {
     v10 = this->fields.itemDraw;
     if ( !v10 )
-      sub_1BC3264(0LL, v8);
+      sub_1BCB254(0LL, v8);
     ScriptBranchListViewItemDraw__SetItem(v10, (ScriptBranchListViewItem_o *)linkItem, this->fields.dispMode, v9);
   }
 }
@@ -259,7 +259,7 @@ void __fastcall ScriptBranchListViewObject__Start(ScriptBranchListViewObject_o *
   const MethodInfo *v2; // x3
 
   if ( !this->fields.state )
-    ScriptBranchListViewObject__Init_36498732(this, 2, 0LL, v2);
+    ScriptBranchListViewObject__Init_36636028(this, 2, 0LL, v2);
 }
 
 
@@ -278,10 +278,10 @@ void __fastcall ScriptBranchListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4AFF648 & 1) == 0 )
+  if ( (byte_4B19B1E & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, value);
-    byte_4AFF648 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, value);
+    byte_4B19B1E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -294,13 +294,13 @@ void __fastcall ScriptBranchListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
+    v9 = sub_1C05088(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BC3524(v8);
+  sub_1BCB514(v8);
   ScriptBranchListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -319,10 +319,10 @@ void __fastcall ScriptBranchListViewObject__remove_callbackFunc(
   ScriptBranchListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4AFF649 & 1) == 0 )
+  if ( (byte_4B19B1F & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, value);
-    byte_4AFF649 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, value);
+    byte_4B19B1F = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -335,12 +335,12 @@ void __fastcall ScriptBranchListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1BFD098(p_callbackFunc, v8, v6);
+    v9 = sub_1C05088(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BC3524(v8);
+  sub_1BCB514(v8);
   ScriptBranchListViewObject__Awake(v11, v12);
 }

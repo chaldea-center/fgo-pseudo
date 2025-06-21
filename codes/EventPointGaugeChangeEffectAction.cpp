@@ -20,10 +20,10 @@ bool __fastcall EventPointGaugeChangeEffectAction__IsEnd(
   UnityEngine_Animation_o *v10; // x19
   System_String_o *v11; // x0
 
-  if ( (byte_4B061E3 & 1) == 0 )
+  if ( (byte_4B20732 & 1) == 0 )
   {
-    sub_1BC3008(&UnityEngine_Object_TypeInfo, method);
-    byte_4B061E3 = 1;
+    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
+    byte_4B20732 = 1;
   }
   commonEffectComponent = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -44,7 +44,7 @@ bool __fastcall EventPointGaugeChangeEffectAction__IsEnd(
     v7 = this->fields.simpleAnimation;
     if ( !v7 || (monitor = (CommonEffectComponent_o *)v7[1].monitor) == 0LL )
 LABEL_23:
-      sub_1BC3264(monitor, v4);
+      sub_1BCB254(monitor, v4);
     name = UnityEngine_Object__get_name((UnityEngine_Object_o *)monitor, 0LL);
     if ( !SimpleAnimation__IsPlaying(v7, name, 0LL) )
       return 1;
@@ -80,7 +80,7 @@ void __fastcall EventPointGaugeChangeEffectAction__OnChangeGauge(
   p_gaugeChangeAction = (CGThumbnailListItem_o *)&this->fields.gaugeChangeAction;
   v5 = gaugeChangeAction;
   p_gaugeChangeAction->klass = 0LL;
-  sub_1BC2FAC(p_gaugeChangeAction, 0, v2, v3);
+  sub_1BCAF9C(p_gaugeChangeAction, 0, v2, v3);
   if ( gaugeChangeAction )
     ActionExtensions__Call(v5, 0LL);
 }
@@ -96,7 +96,7 @@ void __fastcall EventPointGaugeChangeEffectAction__Setup(
   __int64 v8; // x1
   UnityEngine_Component_o *transform; // x0
   __int64 v10; // x1
-  Il2CppObject *ComponentInChildren_object__50301080; // x0
+  Il2CppObject *ComponentInChildren_object__50402520; // x0
   int32_t v12; // w2
   const MethodInfo *v13; // x3
   Il2CppObject *v14; // x0
@@ -110,48 +110,48 @@ void __fastcall EventPointGaugeChangeEffectAction__Setup(
   int32_t v22; // w2
   const MethodInfo *v23; // x3
 
-  if ( (byte_4B061E2 & 1) == 0 )
+  if ( (byte_4B20731 & 1) == 0 )
   {
-    sub_1BC3008(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, gaugeChangeAct);
-    sub_1BC3008(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___, v7);
-    sub_1BC3008(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, v8);
-    byte_4B061E2 = 1;
+    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponentInChildren_Animation___, gaugeChangeAct);
+    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___, v7);
+    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___, v8);
+    byte_4B20731 = 1;
   }
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform )
     goto LABEL_7;
-  ComponentInChildren_object__50301080 = UnityEngine_Component__GetComponentInChildren_object__50301080(
+  ComponentInChildren_object__50402520 = UnityEngine_Component__GetComponentInChildren_object__50402520(
                                            transform,
-                                           (const MethodInfo_2FF8898 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
-  this->fields.commonEffectComponent = (struct CommonEffectComponent_o *)ComponentInChildren_object__50301080;
-  sub_1BC2FAC(
+                                           (const MethodInfo_30114D8 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+  this->fields.commonEffectComponent = (struct CommonEffectComponent_o *)ComponentInChildren_object__50402520;
+  sub_1BCAF9C(
     (CGThumbnailListItem_o *)&this->fields.commonEffectComponent,
-    (int32_t)ComponentInChildren_object__50301080,
+    (int32_t)ComponentInChildren_object__50402520,
     v12,
     v13);
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
   if ( !transform
-    || (v14 = UnityEngine_Component__GetComponentInChildren_object__50301080(
+    || (v14 = UnityEngine_Component__GetComponentInChildren_object__50402520(
                 transform,
-                (const MethodInfo_2FF8898 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
+                (const MethodInfo_30114D8 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
         this->fields.simpleAnimation = (struct SimpleAnimation_o *)v14,
-        sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.simpleAnimation, (int32_t)v14, v15, v16),
+        sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.simpleAnimation, (int32_t)v14, v15, v16),
         (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
                                                   (UnityEngine_Component_o *)this,
                                                   0LL)) == 0LL) )
   {
 LABEL_7:
-    sub_1BC3264(transform, v10);
+    sub_1BCB254(transform, v10);
   }
-  v17 = UnityEngine_Component__GetComponentInChildren_object__50301080(
+  v17 = UnityEngine_Component__GetComponentInChildren_object__50402520(
           transform,
-          (const MethodInfo_2FF8898 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+          (const MethodInfo_30114D8 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
   this->fields.animation = (struct UnityEngine_Animation_o *)v17;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.animation, (int32_t)v17, v18, v19);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.animation, (int32_t)v17, v18, v19);
   this->fields.gaugeChangeAction = gaugeChangeAct;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.gaugeChangeAction, (int32_t)gaugeChangeAct, v20, v21);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.gaugeChangeAction, (int32_t)gaugeChangeAct, v20, v21);
   this->fields.endAction = endAct;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.endAction, (int32_t)endAct, v22, v23);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.endAction, (int32_t)endAct, v22, v23);
 }
 
 
@@ -167,7 +167,7 @@ void __fastcall EventPointGaugeChangeEffectAction__Update(
   {
     endAction = this->fields.endAction;
     this->fields.endAction = 0LL;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields.endAction, 0, v3, v4);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.endAction, 0, v3, v4);
     if ( endAction )
       ActionExtensions__Call(endAction, 0LL);
   }

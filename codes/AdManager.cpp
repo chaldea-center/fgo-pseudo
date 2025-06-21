@@ -7,19 +7,19 @@ void __fastcall AdManager___cctor(const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4B01592 & 1) == 0 )
+  if ( (byte_4B1BB2D & 1) == 0 )
   {
-    sub_1BC3008(&AdManager_TypeInfo, v1);
-    sub_1BC3008(&Method_System_Collections_Generic_List_AdImplementation_Base___ctor__, v2);
-    sub_1BC3008(&System_Collections_Generic_List_AdImplementation_Base__TypeInfo, v3);
-    byte_4B01592 = 1;
+    sub_1BCAFF8(&AdManager_TypeInfo, v1);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_AdImplementation_Base___ctor__, v2);
+    sub_1BCAFF8(&System_Collections_Generic_List_AdImplementation_Base__TypeInfo, v3);
+    byte_4B1BB2D = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_AdImplementation_Base__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_AdImplementation_Base__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_AdImplementation_Base___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_AdImplementation_Base___ctor__);
   AdManager_TypeInfo->static_fields->_adInstanceList = (struct System_Collections_Generic_List_AdImplementation_Base__o *)v4;
-  sub_1BC2FAC((CGThumbnailListItem_o *)AdManager_TypeInfo->static_fields, (int32_t)v4, v5, v6);
+  sub_1BCAF9C((CGThumbnailListItem_o *)AdManager_TypeInfo->static_fields, (int32_t)v4, v5, v6);
 }
 
 
@@ -30,18 +30,18 @@ void __fastcall AdManager___ctor(AdManager_o *this, const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4B01591 & 1) == 0 )
+  if ( (byte_4B1BB2C & 1) == 0 )
   {
-    sub_1BC3008(&bool___TypeInfo, method);
-    sub_1BC3008(&Method_SingletonMonoBehaviour_AdManager___ctor__, v3);
-    byte_4B01591 = 1;
+    sub_1BCAFF8(&bool___TypeInfo, method);
+    sub_1BCAFF8(&Method_SingletonMonoBehaviour_AdManager___ctor__, v3);
+    byte_4B1BB2C = 1;
   }
-  v4 = (struct System_Boolean_array *)sub_1BC30B0(bool___TypeInfo, 3LL);
+  v4 = (struct System_Boolean_array *)sub_1BCB0A0(bool___TypeInfo, 3LL);
   this->fields._isInitializedAdLibraries = v4;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._isInitializedAdLibraries, (int32_t)v4, v5, v6);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._isInitializedAdLibraries, (int32_t)v4, v5, v6);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_38E0160 *)Method_SingletonMonoBehaviour_AdManager___ctor__);
+    (const MethodInfo_38F8EF0 *)Method_SingletonMonoBehaviour_AdManager___ctor__);
 }
 
 
@@ -50,10 +50,10 @@ void __fastcall AdManager__Initialize(AdManager_o *this, int32_t adLibrary, cons
 {
   ManagerConfig_c *v5; // x0
 
-  if ( (byte_4B01588 & 1) == 0 )
+  if ( (byte_4B1BB23 & 1) == 0 )
   {
-    sub_1BC3008(&ManagerConfig_TypeInfo, *(_QWORD *)&adLibrary);
-    byte_4B01588 = 1;
+    sub_1BCAFF8(&ManagerConfig_TypeInfo, *(_QWORD *)&adLibrary);
+    byte_4B1BB23 = 1;
   }
   v5 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -98,12 +98,12 @@ void __fastcall AdManager__InitializeAdjust(AdManager_o *this, const MethodInfo 
   struct System_Boolean_array *v17; // x8
 
   v3 = this;
-  if ( (byte_4B01589 & 1) == 0 )
+  if ( (byte_4B1BB24 & 1) == 0 )
   {
-    sub_1BC3008(&Framework_Core_Ad_AdImplementation_Adjust_TypeInfo, method);
-    sub_1BC3008(&AdManager_TypeInfo, v4);
-    this = (AdManager_o *)sub_1BC3008(&Method_System_Collections_Generic_List_AdImplementation_Base__Add__, v5);
-    byte_4B01589 = 1;
+    sub_1BCAFF8(&Framework_Core_Ad_AdImplementation_Adjust_TypeInfo, method);
+    sub_1BCAFF8(&AdManager_TypeInfo, v4);
+    this = (AdManager_o *)sub_1BCAFF8(&Method_System_Collections_Generic_List_AdImplementation_Base__Add__, v5);
+    byte_4B1BB24 = 1;
   }
   isInitializedAdLibraries = v3->fields._isInitializedAdLibraries;
   if ( !isInitializedAdLibraries )
@@ -119,7 +119,7 @@ void __fastcall AdManager__InitializeAdjust(AdManager_o *this, const MethodInfo 
     v7 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v7->static_fields->_adInstanceList;
-  v9 = (Framework_Core_Ad_AdImplementation_Adjust_o *)sub_1BC3254(Framework_Core_Ad_AdImplementation_Adjust_TypeInfo);
+  v9 = (Framework_Core_Ad_AdImplementation_Adjust_o *)sub_1BCB244(Framework_Core_Ad_AdImplementation_Adjust_TypeInfo);
   Framework_Core_Ad_AdImplementation_Adjust___ctor(v9, 0LL);
   if ( !v9 )
     goto LABEL_18;
@@ -140,22 +140,22 @@ void __fastcall AdManager__InitializeAdjust(AdManager_o *this, const MethodInfo 
     System_Collections_Generic_List_object___AddWithResize(
       adInstanceList,
       (Il2CppObject *)this,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
     v16 = &items->obj.klass + size;
     adInstanceList->fields._size = size + 1;
     v16[4] = (Il2CppClass *)v15;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v15, v10, v11);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v15, v10, v11);
   }
   v17 = v3->fields._isInitializedAdLibraries;
   if ( !v17 )
 LABEL_18:
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   if ( !v17->max_length )
 LABEL_19:
-    sub_1BC326C(this, method, v2);
+    sub_1BCB25C(this, method, v2);
   v17->m_Items[4] = 1;
 }
 
@@ -180,12 +180,12 @@ void __fastcall AdManager__InitializeRepro(AdManager_o *this, const MethodInfo *
   struct System_Boolean_array *v17; // x8
 
   v3 = this;
-  if ( (byte_4B0158A & 1) == 0 )
+  if ( (byte_4B1BB25 & 1) == 0 )
   {
-    sub_1BC3008(&Framework_Core_Ad_AdImplementation_Repro_TypeInfo, method);
-    sub_1BC3008(&AdManager_TypeInfo, v4);
-    this = (AdManager_o *)sub_1BC3008(&Method_System_Collections_Generic_List_AdImplementation_Base__Add__, v5);
-    byte_4B0158A = 1;
+    sub_1BCAFF8(&Framework_Core_Ad_AdImplementation_Repro_TypeInfo, method);
+    sub_1BCAFF8(&AdManager_TypeInfo, v4);
+    this = (AdManager_o *)sub_1BCAFF8(&Method_System_Collections_Generic_List_AdImplementation_Base__Add__, v5);
+    byte_4B1BB25 = 1;
   }
   isInitializedAdLibraries = v3->fields._isInitializedAdLibraries;
   if ( !isInitializedAdLibraries )
@@ -201,7 +201,7 @@ void __fastcall AdManager__InitializeRepro(AdManager_o *this, const MethodInfo *
     v7 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v7->static_fields->_adInstanceList;
-  v9 = (Framework_Core_Ad_AdImplementation_Repro_o *)sub_1BC3254(Framework_Core_Ad_AdImplementation_Repro_TypeInfo);
+  v9 = (Framework_Core_Ad_AdImplementation_Repro_o *)sub_1BCB244(Framework_Core_Ad_AdImplementation_Repro_TypeInfo);
   Framework_Core_Ad_AdImplementation_Repro___ctor(v9, 0LL);
   if ( !v9 )
     goto LABEL_18;
@@ -222,22 +222,22 @@ void __fastcall AdManager__InitializeRepro(AdManager_o *this, const MethodInfo *
     System_Collections_Generic_List_object___AddWithResize(
       adInstanceList,
       (Il2CppObject *)this,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
     v16 = &items->obj.klass + size;
     adInstanceList->fields._size = size + 1;
     v16[4] = (Il2CppClass *)v15;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v15, v10, v11);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v15, v10, v11);
   }
   v17 = v3->fields._isInitializedAdLibraries;
   if ( !v17 )
 LABEL_18:
-    sub_1BC3264(this, method);
+    sub_1BCB254(this, method);
   if ( v17->max_length <= 1 )
 LABEL_19:
-    sub_1BC326C(this, method, v2);
+    sub_1BCB25C(this, method, v2);
   v17->m_Items[5] = 1;
 }
 
@@ -257,21 +257,21 @@ void __fastcall AdManager__SendPushRegistrationId(AdManager_o *this, System_Stri
   System_Collections_Generic_List_object__o *adInstanceList; // x19
   System_Action_object__o *v15; // x21
 
-  if ( (byte_4B0158D & 1) == 0 )
+  if ( (byte_4B1BB28 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_AdImplementation_Base__TypeInfo, regId);
-    sub_1BC3008(&AdManager_TypeInfo, v4);
-    sub_1BC3008(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__, v5);
-    sub_1BC3008(&Method_AdManager___c__DisplayClass12_0__SendPushRegistrationId_b__0__, v6);
-    sub_1BC3008(&AdManager___c__DisplayClass12_0_TypeInfo, v7);
-    byte_4B0158D = 1;
+    sub_1BCAFF8(&System_Action_AdImplementation_Base__TypeInfo, regId);
+    sub_1BCAFF8(&AdManager_TypeInfo, v4);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__, v5);
+    sub_1BCAFF8(&Method_AdManager___c__DisplayClass12_0__SendPushRegistrationId_b__0__, v6);
+    sub_1BCAFF8(&AdManager___c__DisplayClass12_0_TypeInfo, v7);
+    byte_4B1BB28 = 1;
   }
-  v8 = sub_1BC3254(AdManager___c__DisplayClass12_0_TypeInfo);
+  v8 = sub_1BCB244(AdManager___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
     goto LABEL_8;
   *(_QWORD *)(v8 + 16) = regId;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v8 + 16), (int32_t)regId, v11, v12);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v8 + 16), (int32_t)regId, v11, v12);
   v13 = AdManager_TypeInfo;
   if ( !AdManager_TypeInfo->_2.cctor_finished )
   {
@@ -279,7 +279,7 @@ void __fastcall AdManager__SendPushRegistrationId(AdManager_o *this, System_Stri
     v13 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v13->static_fields->_adInstanceList;
-  v15 = (System_Action_object__o *)sub_1BC3254(System_Action_AdImplementation_Base__TypeInfo);
+  v15 = (System_Action_object__o *)sub_1BCB244(System_Action_AdImplementation_Base__TypeInfo);
   System_Action_object____ctor(
     v15,
     (Il2CppObject *)v8,
@@ -287,11 +287,11 @@ void __fastcall AdManager__SendPushRegistrationId(AdManager_o *this, System_Stri
     0LL);
   if ( !adInstanceList )
 LABEL_8:
-    sub_1BC3264(v9, v10);
+    sub_1BCB254(v9, v10);
   System_Collections_Generic_List_object___ForEach(
     adInstanceList,
     (System_Action_T__o *)v15,
-    (const MethodInfo_36A1880 *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    (const MethodInfo_36BA610 *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
 }
 
 
@@ -310,21 +310,21 @@ void __fastcall AdManager__SetFriendCode(AdManager_o *this, System_String_o *fri
   System_Collections_Generic_List_object__o *adInstanceList; // x19
   System_Action_object__o *v15; // x21
 
-  if ( (byte_4B0158B & 1) == 0 )
+  if ( (byte_4B1BB26 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_AdImplementation_Base__TypeInfo, friendCode);
-    sub_1BC3008(&AdManager_TypeInfo, v4);
-    sub_1BC3008(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__, v5);
-    sub_1BC3008(&Method_AdManager___c__DisplayClass10_0__SetFriendCode_b__0__, v6);
-    sub_1BC3008(&AdManager___c__DisplayClass10_0_TypeInfo, v7);
-    byte_4B0158B = 1;
+    sub_1BCAFF8(&System_Action_AdImplementation_Base__TypeInfo, friendCode);
+    sub_1BCAFF8(&AdManager_TypeInfo, v4);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__, v5);
+    sub_1BCAFF8(&Method_AdManager___c__DisplayClass10_0__SetFriendCode_b__0__, v6);
+    sub_1BCAFF8(&AdManager___c__DisplayClass10_0_TypeInfo, v7);
+    byte_4B1BB26 = 1;
   }
-  v8 = sub_1BC3254(AdManager___c__DisplayClass10_0_TypeInfo);
+  v8 = sub_1BCB244(AdManager___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
     goto LABEL_8;
   *(_QWORD *)(v8 + 16) = friendCode;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v8 + 16), (int32_t)friendCode, v11, v12);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v8 + 16), (int32_t)friendCode, v11, v12);
   v13 = AdManager_TypeInfo;
   if ( !AdManager_TypeInfo->_2.cctor_finished )
   {
@@ -332,7 +332,7 @@ void __fastcall AdManager__SetFriendCode(AdManager_o *this, System_String_o *fri
     v13 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v13->static_fields->_adInstanceList;
-  v15 = (System_Action_object__o *)sub_1BC3254(System_Action_AdImplementation_Base__TypeInfo);
+  v15 = (System_Action_object__o *)sub_1BCB244(System_Action_AdImplementation_Base__TypeInfo);
   System_Action_object____ctor(
     v15,
     (Il2CppObject *)v8,
@@ -340,11 +340,11 @@ void __fastcall AdManager__SetFriendCode(AdManager_o *this, System_String_o *fri
     0LL);
   if ( !adInstanceList )
 LABEL_8:
-    sub_1BC3264(v9, v10);
+    sub_1BCB254(v9, v10);
   System_Collections_Generic_List_object___ForEach(
     adInstanceList,
     (System_Action_T__o *)v15,
-    (const MethodInfo_36A1880 *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    (const MethodInfo_36BA610 *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
 }
 
 
@@ -362,16 +362,16 @@ void __fastcall AdManager__SetOpenedStoryQuest(AdManager_o *this, int32_t questI
   System_Collections_Generic_List_object__o *adInstanceList; // x19
   System_Action_object__o *v13; // x21
 
-  if ( (byte_4B0158C & 1) == 0 )
+  if ( (byte_4B1BB27 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_AdImplementation_Base__TypeInfo, *(_QWORD *)&questId);
-    sub_1BC3008(&AdManager_TypeInfo, v4);
-    sub_1BC3008(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__, v5);
-    sub_1BC3008(&Method_AdManager___c__DisplayClass11_0__SetOpenedStoryQuest_b__0__, v6);
-    sub_1BC3008(&AdManager___c__DisplayClass11_0_TypeInfo, v7);
-    byte_4B0158C = 1;
+    sub_1BCAFF8(&System_Action_AdImplementation_Base__TypeInfo, *(_QWORD *)&questId);
+    sub_1BCAFF8(&AdManager_TypeInfo, v4);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__, v5);
+    sub_1BCAFF8(&Method_AdManager___c__DisplayClass11_0__SetOpenedStoryQuest_b__0__, v6);
+    sub_1BCAFF8(&AdManager___c__DisplayClass11_0_TypeInfo, v7);
+    byte_4B1BB27 = 1;
   }
-  v8 = sub_1BC3254(AdManager___c__DisplayClass11_0_TypeInfo);
+  v8 = sub_1BCB244(AdManager___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0LL);
   if ( !v8 )
     goto LABEL_8;
@@ -383,7 +383,7 @@ void __fastcall AdManager__SetOpenedStoryQuest(AdManager_o *this, int32_t questI
     v11 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v11->static_fields->_adInstanceList;
-  v13 = (System_Action_object__o *)sub_1BC3254(System_Action_AdImplementation_Base__TypeInfo);
+  v13 = (System_Action_object__o *)sub_1BCB244(System_Action_AdImplementation_Base__TypeInfo);
   System_Action_object____ctor(
     v13,
     (Il2CppObject *)v8,
@@ -391,11 +391,11 @@ void __fastcall AdManager__SetOpenedStoryQuest(AdManager_o *this, int32_t questI
     0LL);
   if ( !adInstanceList )
 LABEL_8:
-    sub_1BC3264(v9, v10);
+    sub_1BCB254(v9, v10);
   System_Collections_Generic_List_object___ForEach(
     adInstanceList,
     (System_Action_T__o *)v13,
-    (const MethodInfo_36A1880 *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    (const MethodInfo_36BA610 *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
 }
 
 
@@ -409,7 +409,7 @@ void __fastcall AdManager__SetUserId(AdManager_o *this, int64_t userId, const Me
   v7 = userId;
   v4 = System_Int64__ToString((int64_t)&v7, 0LL);
   this->fields._userIdStr = v4;
-  sub_1BC2FAC((CGThumbnailListItem_o *)&this->fields._userIdStr, (int32_t)v4, v5, v6);
+  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._userIdStr, (int32_t)v4, v5, v6);
 }
 
 
@@ -438,16 +438,16 @@ void __fastcall AdManager__TrackEvent(
   System_Collections_Generic_List_object__o *adInstanceList; // x19
   System_Action_object__o *v26; // x20
 
-  if ( (byte_4B0158E & 1) == 0 )
+  if ( (byte_4B1BB29 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_AdImplementation_Base__TypeInfo, *(_QWORD *)&category);
-    sub_1BC3008(&AdManager_TypeInfo, v13);
-    sub_1BC3008(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__, v14);
-    sub_1BC3008(&Method_AdManager___c__DisplayClass13_0__TrackEvent_b__0__, v15);
-    sub_1BC3008(&AdManager___c__DisplayClass13_0_TypeInfo, v16);
-    byte_4B0158E = 1;
+    sub_1BCAFF8(&System_Action_AdImplementation_Base__TypeInfo, *(_QWORD *)&category);
+    sub_1BCAFF8(&AdManager_TypeInfo, v13);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__, v14);
+    sub_1BCAFF8(&Method_AdManager___c__DisplayClass13_0__TrackEvent_b__0__, v15);
+    sub_1BCAFF8(&AdManager___c__DisplayClass13_0_TypeInfo, v16);
+    byte_4B1BB29 = 1;
   }
-  v17 = sub_1BC3254(AdManager___c__DisplayClass13_0_TypeInfo);
+  v17 = sub_1BCB244(AdManager___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0LL);
   if ( !v17 )
     goto LABEL_8;
@@ -456,9 +456,9 @@ void __fastcall AdManager__TrackEvent(
   *(_DWORD *)(v17 + 24) = num;
   *(_DWORD *)(v17 + 28) = num2;
   *(_QWORD *)(v17 + 32) = this;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v17 + 32), (int32_t)this, v20, v21);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v17 + 32), (int32_t)this, v20, v21);
   *(_QWORD *)(v17 + 40) = propertyStr;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v17 + 40), (int32_t)propertyStr, v22, v23);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v17 + 40), (int32_t)propertyStr, v22, v23);
   v24 = AdManager_TypeInfo;
   if ( !AdManager_TypeInfo->_2.cctor_finished )
   {
@@ -466,15 +466,15 @@ void __fastcall AdManager__TrackEvent(
     v24 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v24->static_fields->_adInstanceList;
-  v26 = (System_Action_object__o *)sub_1BC3254(System_Action_AdImplementation_Base__TypeInfo);
+  v26 = (System_Action_object__o *)sub_1BCB244(System_Action_AdImplementation_Base__TypeInfo);
   System_Action_object____ctor(v26, (Il2CppObject *)v17, Method_AdManager___c__DisplayClass13_0__TrackEvent_b__0__, 0LL);
   if ( !adInstanceList )
 LABEL_8:
-    sub_1BC3264(v18, v19);
+    sub_1BCB254(v18, v19);
   System_Collections_Generic_List_object___ForEach(
     adInstanceList,
     (System_Action_T__o *)v26,
-    (const MethodInfo_36A1880 *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    (const MethodInfo_36BA610 *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
 }
 
 
@@ -504,27 +504,27 @@ void __fastcall AdManager__TrackPurchase(
   System_Collections_Generic_List_object__o *adInstanceList; // x19
   System_Action_object__o *v26; // x20
 
-  if ( (byte_4B0158F & 1) == 0 )
+  if ( (byte_4B1BB2A & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_AdImplementation_Base__TypeInfo, *(_QWORD *)&actionId);
-    sub_1BC3008(&AdManager_TypeInfo, v11);
-    sub_1BC3008(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__, v12);
-    sub_1BC3008(&Method_AdManager___c__DisplayClass14_0__TrackPurchase_b__0__, v13);
-    sub_1BC3008(&AdManager___c__DisplayClass14_0_TypeInfo, v14);
-    byte_4B0158F = 1;
+    sub_1BCAFF8(&System_Action_AdImplementation_Base__TypeInfo, *(_QWORD *)&actionId);
+    sub_1BCAFF8(&AdManager_TypeInfo, v11);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__, v12);
+    sub_1BCAFF8(&Method_AdManager___c__DisplayClass14_0__TrackPurchase_b__0__, v13);
+    sub_1BCAFF8(&AdManager___c__DisplayClass14_0_TypeInfo, v14);
+    byte_4B1BB2A = 1;
   }
-  v15 = sub_1BC3254(AdManager___c__DisplayClass14_0_TypeInfo);
+  v15 = sub_1BCB244(AdManager___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v15, 0LL);
   if ( !v15 )
     goto LABEL_8;
   *(_DWORD *)(v15 + 16) = actionId;
   *(double *)(v15 + 24) = price;
   *(_QWORD *)(v15 + 32) = currency;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v15 + 32), (int32_t)currency, v18, v19);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v15 + 32), (int32_t)currency, v18, v19);
   *(_QWORD *)(v15 + 40) = transactionId;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v15 + 40), (int32_t)transactionId, v20, v21);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v15 + 40), (int32_t)transactionId, v20, v21);
   *(_QWORD *)(v15 + 48) = this;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v15 + 48), (int32_t)this, v22, v23);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v15 + 48), (int32_t)this, v22, v23);
   v24 = AdManager_TypeInfo;
   if ( !AdManager_TypeInfo->_2.cctor_finished )
   {
@@ -532,7 +532,7 @@ void __fastcall AdManager__TrackPurchase(
     v24 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v24->static_fields->_adInstanceList;
-  v26 = (System_Action_object__o *)sub_1BC3254(System_Action_AdImplementation_Base__TypeInfo);
+  v26 = (System_Action_object__o *)sub_1BCB244(System_Action_AdImplementation_Base__TypeInfo);
   System_Action_object____ctor(
     v26,
     (Il2CppObject *)v15,
@@ -540,11 +540,11 @@ void __fastcall AdManager__TrackPurchase(
     0LL);
   if ( !adInstanceList )
 LABEL_8:
-    sub_1BC3264(v16, v17);
+    sub_1BCB254(v16, v17);
   System_Collections_Generic_List_object___ForEach(
     adInstanceList,
     (System_Action_T__o *)v26,
-    (const MethodInfo_36A1880 *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    (const MethodInfo_36BA610 *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
 }
 
 
@@ -574,27 +574,27 @@ void __fastcall AdManager__TrackPurchaseExternal(
   System_Collections_Generic_List_object__o *adInstanceList; // x19
   System_Action_object__o *v26; // x20
 
-  if ( (byte_4B01590 & 1) == 0 )
+  if ( (byte_4B1BB2B & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_AdImplementation_Base__TypeInfo, *(_QWORD *)&actionId);
-    sub_1BC3008(&AdManager_TypeInfo, v11);
-    sub_1BC3008(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__, v12);
-    sub_1BC3008(&Method_AdManager___c__DisplayClass15_0__TrackPurchaseExternal_b__0__, v13);
-    sub_1BC3008(&AdManager___c__DisplayClass15_0_TypeInfo, v14);
-    byte_4B01590 = 1;
+    sub_1BCAFF8(&System_Action_AdImplementation_Base__TypeInfo, *(_QWORD *)&actionId);
+    sub_1BCAFF8(&AdManager_TypeInfo, v11);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__, v12);
+    sub_1BCAFF8(&Method_AdManager___c__DisplayClass15_0__TrackPurchaseExternal_b__0__, v13);
+    sub_1BCAFF8(&AdManager___c__DisplayClass15_0_TypeInfo, v14);
+    byte_4B1BB2B = 1;
   }
-  v15 = sub_1BC3254(AdManager___c__DisplayClass15_0_TypeInfo);
+  v15 = sub_1BCB244(AdManager___c__DisplayClass15_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v15, 0LL);
   if ( !v15 )
     goto LABEL_8;
   *(_DWORD *)(v15 + 16) = actionId;
   *(double *)(v15 + 24) = price;
   *(_QWORD *)(v15 + 32) = currency;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v15 + 32), (int32_t)currency, v18, v19);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v15 + 32), (int32_t)currency, v18, v19);
   *(_QWORD *)(v15 + 40) = transactionId;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v15 + 40), (int32_t)transactionId, v20, v21);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v15 + 40), (int32_t)transactionId, v20, v21);
   *(_QWORD *)(v15 + 48) = this;
-  sub_1BC2FAC((CGThumbnailListItem_o *)(v15 + 48), (int32_t)this, v22, v23);
+  sub_1BCAF9C((CGThumbnailListItem_o *)(v15 + 48), (int32_t)this, v22, v23);
   v24 = AdManager_TypeInfo;
   if ( !AdManager_TypeInfo->_2.cctor_finished )
   {
@@ -602,7 +602,7 @@ void __fastcall AdManager__TrackPurchaseExternal(
     v24 = AdManager_TypeInfo;
   }
   adInstanceList = (System_Collections_Generic_List_object__o *)v24->static_fields->_adInstanceList;
-  v26 = (System_Action_object__o *)sub_1BC3254(System_Action_AdImplementation_Base__TypeInfo);
+  v26 = (System_Action_object__o *)sub_1BCB244(System_Action_AdImplementation_Base__TypeInfo);
   System_Action_object____ctor(
     v26,
     (Il2CppObject *)v15,
@@ -610,11 +610,11 @@ void __fastcall AdManager__TrackPurchaseExternal(
     0LL);
   if ( !adInstanceList )
 LABEL_8:
-    sub_1BC3264(v16, v17);
+    sub_1BCB254(v16, v17);
   System_Collections_Generic_List_object___ForEach(
     adInstanceList,
     (System_Action_T__o *)v26,
-    (const MethodInfo_36A1880 *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
+    (const MethodInfo_36BA610 *)Method_System_Collections_Generic_List_AdImplementation_Base__ForEach__);
 }
 
 
@@ -632,7 +632,7 @@ void __fastcall AdManager___c__DisplayClass10_0___SetFriendCode_b__0(
         const MethodInfo *method)
 {
   if ( !ad )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   ((void (__fastcall *)(Framework_Core_Ad_AdImplementation_Base_o *, struct System_String_o *, Il2CppMethodPointer))ad->klass->vtable._7_SetFriendCode.method)(
     ad,
     this->fields.friendCode,
@@ -654,7 +654,7 @@ void __fastcall AdManager___c__DisplayClass11_0___SetOpenedStoryQuest_b__0(
         const MethodInfo *method)
 {
   if ( !ad )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   ((void (__fastcall *)(Framework_Core_Ad_AdImplementation_Base_o *, _QWORD, Il2CppMethodPointer))ad->klass->vtable._8_SetOpenedStoryQuest.method)(
     ad,
     (unsigned int)this->fields.questId,
@@ -676,7 +676,7 @@ void __fastcall AdManager___c__DisplayClass12_0___SendPushRegistrationId_b__0(
         const MethodInfo *method)
 {
   if ( !ad )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   ((void (__fastcall *)(Framework_Core_Ad_AdImplementation_Base_o *, struct System_String_o *, Il2CppMethodPointer))ad->klass->vtable._9_SendPushRegistrationId.method)(
     ad,
     this->fields.regId,
@@ -701,7 +701,7 @@ void __fastcall AdManager___c__DisplayClass13_0___TrackEvent_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || !ad )
-    sub_1BC3264(this, ad);
+    sub_1BCB254(this, ad);
   ((void (__fastcall *)(Framework_Core_Ad_AdImplementation_Base_o *, _QWORD, _QWORD, _QWORD, _QWORD, struct System_String_o *, struct System_String_o *, Il2CppMethodPointer))ad->klass->vtable._10_TrackEvent.method)(
     ad,
     (unsigned int)this->fields.category,
@@ -731,7 +731,7 @@ void __fastcall AdManager___c__DisplayClass14_0___TrackPurchase_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || !ad )
-    sub_1BC3264(this, ad);
+    sub_1BCB254(this, ad);
   ((void (__fastcall *)(Framework_Core_Ad_AdImplementation_Base_o *, _QWORD, struct System_String_o *, struct System_String_o *, struct System_String_o *, Il2CppMethodPointer, double))ad->klass->vtable._11_TrackPurchase.method)(
     ad,
     (unsigned int)this->fields.actionId,
@@ -760,7 +760,7 @@ void __fastcall AdManager___c__DisplayClass15_0___TrackPurchaseExternal_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || !ad )
-    sub_1BC3264(this, ad);
+    sub_1BCB254(this, ad);
   ((void (__fastcall *)(Framework_Core_Ad_AdImplementation_Base_o *, _QWORD, struct System_String_o *, struct System_String_o *, struct System_String_o *, void *, double))ad->klass->vtable._12_TrackPurchaseExternal.method)(
     ad,
     (unsigned int)this->fields.actionId,

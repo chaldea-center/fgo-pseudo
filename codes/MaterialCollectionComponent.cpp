@@ -10,17 +10,17 @@ void __fastcall MaterialCollectionComponent___openMenu_b__5_0(
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4AFD21F & 1) == 0 )
+  if ( (byte_4B176FE & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_6921/*"GO_NEXT"*/, method);
-    byte_4AFD21F = 1;
+    sub_1BCAFF8(&StringLiteral_6926/*"GO_NEXT"*/, method);
+    byte_4B176FE = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm
-    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6921/*"GO_NEXT"*/, 0LL),
+    || (PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6926/*"GO_NEXT"*/, 0LL),
         (myRoomFsm = (PlayMakerFSM_o *)this->fields.myRoomCtrl) == 0LL) )
   {
-    sub_1BC3264(myRoomFsm, method);
+    sub_1BCB254(myRoomFsm, method);
   }
   MyRoomControl__SetBackButtonIgnore((MyRoomControl_o *)myRoomFsm, 0, 0LL);
 }
@@ -35,18 +35,18 @@ bool __fastcall MaterialCollectionComponent__closeMenu(MaterialCollectionCompone
   __int64 v7; // x1
   const MethodInfo *v8; // x2
 
-  if ( (byte_4AFD21C & 1) == 0 )
+  if ( (byte_4B176FB & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&Method_MaterialCollectionComponent_onClose__, v3);
-    byte_4AFD21C = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&Method_MaterialCollectionComponent_onClose__, v3);
+    byte_4B176FB = 1;
   }
   materialCollectionMenu = this->fields.materialCollectionMenu;
-  v5 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_MaterialCollectionComponent_onClose__, 0LL);
   if ( !materialCollectionMenu )
-    sub_1BC3264(v6, v7);
-  MaterialCollectionMenu__Close_32386196(materialCollectionMenu, v5, v8);
+    sub_1BCB254(v6, v7);
+  MaterialCollectionMenu__Close_32524672(materialCollectionMenu, v5, v8);
   return 1;
 }
 
@@ -62,7 +62,7 @@ void __fastcall MaterialCollectionComponent__hideMenu(MaterialCollectionComponen
                                                                 (UnityEngine_Component_o *)this,
                                                                 0LL)) == 0LL) )
   {
-    sub_1BC3264(materialCollectionMenu, method);
+    sub_1BCB254(materialCollectionMenu, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)materialCollectionMenu, 0, 0LL);
 }
@@ -72,15 +72,15 @@ void __fastcall MaterialCollectionComponent__onClose(MaterialCollectionComponent
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4AFD21D & 1) == 0 )
+  if ( (byte_4B176FC & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_3477/*"CLOSE_MENU"*/, method);
-    byte_4AFD21D = 1;
+    sub_1BCAFF8(&StringLiteral_3479/*"CLOSE_MENU"*/, method);
+    byte_4B176FC = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1BC3264(0LL, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3477/*"CLOSE_MENU"*/, 0LL);
+    sub_1BCB254(0LL, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3479/*"CLOSE_MENU"*/, 0LL);
 }
 
 
@@ -90,15 +90,15 @@ void __fastcall MaterialCollectionComponent__onCloseWebView(
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4AFD21B & 1) == 0 )
+  if ( (byte_4B176FA & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_3474/*"CLOSE_MATERIAL"*/, method);
-    byte_4AFD21B = 1;
+    sub_1BCAFF8(&StringLiteral_3476/*"CLOSE_MATERIAL"*/, method);
+    byte_4B176FA = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1BC3264(0LL, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3474/*"CLOSE_MATERIAL"*/, 0LL);
+    sub_1BCB254(0LL, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3476/*"CLOSE_MATERIAL"*/, 0LL);
 }
 
 
@@ -112,18 +112,18 @@ void __fastcall MaterialCollectionComponent__onEndMenu(
   PlayMakerFSM_o *myRoomFsm; // x0
   __int64 *v7; // x8
 
-  if ( (byte_4AFD21E & 1) == 0 )
+  if ( (byte_4B176FD & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_3474/*"CLOSE_MATERIAL"*/, *(_QWORD *)&result);
-    sub_1BC3008(&StringLiteral_3402/*"CLICK_BACK"*/, v5);
-    byte_4AFD21E = 1;
+    sub_1BCAFF8(&StringLiteral_3476/*"CLOSE_MATERIAL"*/, *(_QWORD *)&result);
+    sub_1BCAFF8(&StringLiteral_3404/*"CLICK_BACK"*/, v5);
+    byte_4B176FD = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1BC3264(0LL, *(_QWORD *)&result);
-  v7 = &StringLiteral_3402/*"CLICK_BACK"*/;
+    sub_1BCB254(0LL, *(_QWORD *)&result);
+  v7 = &StringLiteral_3404/*"CLICK_BACK"*/;
   if ( result != 1 )
-    v7 = &StringLiteral_3474/*"CLOSE_MATERIAL"*/;
+    v7 = &StringLiteral_3476/*"CLOSE_MATERIAL"*/;
   PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)*v7, 0LL);
 }
 
@@ -141,21 +141,21 @@ bool __fastcall MaterialCollectionComponent__openMenu(MaterialCollectionComponen
   const MethodInfo *v11; // x3
   const MethodInfo *v12; // x3
 
-  if ( (byte_4AFD21A & 1) == 0 )
+  if ( (byte_4B176F9 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, method);
-    sub_1BC3008(&MaterialCollectionMenu_CallbackFunc_TypeInfo, v3);
-    sub_1BC3008(&Method_MaterialCollectionComponent__openMenu_b__5_0__, v4);
-    sub_1BC3008(&Method_MaterialCollectionComponent_onEndMenu__, v5);
-    byte_4AFD21A = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, method);
+    sub_1BCAFF8(&MaterialCollectionMenu_CallbackFunc_TypeInfo, v3);
+    sub_1BCAFF8(&Method_MaterialCollectionComponent__openMenu_b__5_0__, v4);
+    sub_1BCAFF8(&Method_MaterialCollectionComponent_onEndMenu__, v5);
+    byte_4B176F9 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         materialCollectionMenu = this->fields.materialCollectionMenu,
-        v9 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo),
+        v9 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo),
         System_Action___ctor(v9, (Il2CppObject *)this, Method_MaterialCollectionComponent__openMenu_b__5_0__, 0LL),
-        v10 = (MaterialCollectionMenu_CallbackFunc_o *)sub_1BC3254(MaterialCollectionMenu_CallbackFunc_TypeInfo),
+        v10 = (MaterialCollectionMenu_CallbackFunc_o *)sub_1BCB244(MaterialCollectionMenu_CallbackFunc_TypeInfo),
         MaterialCollectionMenu_CallbackFunc___ctor(
           v10,
           (Il2CppObject *)this,
@@ -163,7 +163,7 @@ bool __fastcall MaterialCollectionComponent__openMenu(MaterialCollectionComponen
           v11),
         !materialCollectionMenu) )
   {
-    sub_1BC3264(gameObject, v7);
+    sub_1BCB254(gameObject, v7);
   }
   MaterialCollectionMenu__Open(materialCollectionMenu, v9, v10, v12);
   return 1;
@@ -180,7 +180,7 @@ void __fastcall MaterialCollectionComponent__showMenu(MaterialCollectionComponen
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.materialCollectionMenu) == 0LL) )
   {
-    sub_1BC3264(gameObject, v4);
+    sub_1BCB254(gameObject, v4);
   }
   MaterialCollectionMenu__Init((MaterialCollectionMenu_o *)gameObject, v4);
 }

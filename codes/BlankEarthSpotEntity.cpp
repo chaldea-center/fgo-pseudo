@@ -1,13 +1,13 @@
 void __fastcall BlankEarthSpotEntity___ctor(BlankEarthSpotEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B01CC7 & 1) == 0 )
+  if ( (byte_4B1C1C6 & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B01CC7 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
+    byte_4B1C1C6 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32ACB8C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -23,12 +23,12 @@ int32_t __fastcall BlankEarthSpotEntity__GetGrandClassIconId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4B01CC3 & 1) == 0 )
+  if ( (byte_4B1C1C1 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_19700/*"grandClassIconId"*/, *(_QWORD *)&defaultValue);
-    byte_4B01CC3 = 1;
+    sub_1BCAFF8(&StringLiteral_19712/*"grandClassIconId"*/, *(_QWORD *)&defaultValue);
+    byte_4B1C1C1 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19700/*"grandClassIconId"*/, defaultValue, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19712/*"grandClassIconId"*/, defaultValue, 0LL);
 }
 
 
@@ -38,12 +38,12 @@ int32_t __fastcall BlankEarthSpotEntity__GetGrandFaceId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4B01CC6 & 1) == 0 )
+  if ( (byte_4B1C1C4 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_19701/*"grandFaceId"*/, *(_QWORD *)&defaultValue);
-    byte_4B01CC6 = 1;
+    sub_1BCAFF8(&StringLiteral_19713/*"grandFaceId"*/, *(_QWORD *)&defaultValue);
+    byte_4B1C1C4 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19701/*"grandFaceId"*/, defaultValue, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19713/*"grandFaceId"*/, defaultValue, 0LL);
 }
 
 
@@ -53,12 +53,12 @@ int32_t __fastcall BlankEarthSpotEntity__GetGrandImageId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4B01CC4 & 1) == 0 )
+  if ( (byte_4B1C1C2 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_19703/*"grandImageId"*/, *(_QWORD *)&defaultValue);
-    byte_4B01CC4 = 1;
+    sub_1BCAFF8(&StringLiteral_19715/*"grandImageId"*/, *(_QWORD *)&defaultValue);
+    byte_4B1C1C2 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19703/*"grandImageId"*/, defaultValue, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19715/*"grandImageId"*/, defaultValue, 0LL);
 }
 
 
@@ -68,12 +68,27 @@ int32_t __fastcall BlankEarthSpotEntity__GetGrandLimitCount(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4B01CC5 & 1) == 0 )
+  if ( (byte_4B1C1C3 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_19704/*"grandLimitCount"*/, *(_QWORD *)&defaultValue);
-    byte_4B01CC5 = 1;
+    sub_1BCAFF8(&StringLiteral_19716/*"grandLimitCount"*/, *(_QWORD *)&defaultValue);
+    byte_4B1C1C3 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19704/*"grandLimitCount"*/, defaultValue, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19716/*"grandLimitCount"*/, defaultValue, 0LL);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+int32_t __fastcall BlankEarthSpotEntity__GetGrandOffsetX(
+        BlankEarthSpotEntity_o *this,
+        int32_t defaultValue,
+        const MethodInfo *method)
+{
+  if ( (byte_4B1C1C5 & 1) == 0 )
+  {
+    sub_1BCAFF8(&StringLiteral_19717/*"grandOffsetX"*/, *(_QWORD *)&defaultValue);
+    byte_4B1C1C5 = 1;
+  }
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19717/*"grandOffsetX"*/, defaultValue, 0LL);
 }
 
 
@@ -104,10 +119,10 @@ bool __fastcall BlankEarthSpotEntity__IsOpen(BlankEarthSpotEntity_o *this, const
   int32_t condTargetType; // w21
   int64_t condTargetNum; // x19
 
-  if ( (byte_4B01CC1 & 1) == 0 )
+  if ( (byte_4B1C1BF & 1) == 0 )
   {
-    sub_1BC3008(&CondType_TypeInfo, method);
-    byte_4B01CC1 = 1;
+    sub_1BCAFF8(&CondType_TypeInfo, method);
+    byte_4B1C1BF = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;
@@ -129,10 +144,10 @@ bool __fastcall BlankEarthSpotEntity__IsOpenForQAA(
   int32_t condTargetType; // w23
   int64_t condTargetNum; // x21
 
-  if ( (byte_4B01CC2 & 1) == 0 )
+  if ( (byte_4B1C1C0 & 1) == 0 )
   {
-    sub_1BC3008(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
-    byte_4B01CC2 = 1;
+    sub_1BCAFF8(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
+    byte_4B1C1C0 = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;

@@ -2,7 +2,7 @@ void __fastcall SwitchParameterDisplayComponent___ctor(
         SwitchParameterDisplayComponent_o *this,
         const MethodInfo *method)
 {
-  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
 }
 
 

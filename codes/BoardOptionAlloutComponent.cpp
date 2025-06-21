@@ -33,28 +33,28 @@ void __fastcall BoardOptionAlloutComponent__SetIcon(
   int ServantLimitCountSealAfter; // w26
   int32_t CardImageLimitCount; // w25
   int32_t v27; // w25
-  int32_t LimitCountByImageLimit_39470800; // w2
+  int32_t LimitCountByImageLimit_39621860; // w2
   int32_t v29; // w28
   int32_t v30; // w29
   ServantOverwriteStatus_o *v31; // x27
   ServantLimitImageMaster_o *v32; // [xsp+60h] [xbp-70h]
 
-  if ( (byte_4AFE922 & 1) == 0 )
+  if ( (byte_4B18E0A & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMaster_ServantLimitImageMaster___, *(_QWORD *)&questId);
-    sub_1BC3008(&Method_DataManager_GetMaster_UserEventAlloutBattleMaster___, v5);
-    sub_1BC3008(&DataManager_TypeInfo, v6);
-    sub_1BC3008(&IconLabelInfo_TypeInfo, v7);
-    sub_1BC3008(&ImageLimitCount_TypeInfo, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__ToArray__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Count__, v10);
-    sub_1BC3008(&Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Item__, v11);
-    sub_1BC3008(&ServantOverwriteStatus_TypeInfo, v12);
-    byte_4AFE922 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantLimitImageMaster___, *(_QWORD *)&questId);
+    sub_1BCAFF8(&Method_DataManager_GetMaster_UserEventAlloutBattleMaster___, v5);
+    sub_1BCAFF8(&DataManager_TypeInfo, v6);
+    sub_1BCAFF8(&IconLabelInfo_TypeInfo, v7);
+    sub_1BCAFF8(&ImageLimitCount_TypeInfo, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__ToArray__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Count__, v10);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Item__, v11);
+    sub_1BCAFF8(&ServantOverwriteStatus_TypeInfo, v12);
+    byte_4B18E0A = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_UserEventAlloutBattleMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_UserEventAlloutBattleMaster___);
   if ( Master_object )
   {
     ClearDeckInfo = (System_Collections_Generic_List_object__o *)UserEventAlloutBattleMaster__GetClearDeckInfo(
@@ -65,33 +65,33 @@ void __fastcall BoardOptionAlloutComponent__SetIcon(
       goto LABEL_31;
     v16 = System_Collections_Generic_List_object___ToArray(
             ClearDeckInfo,
-            (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__ToArray__);
+            (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_UserEventAlloutBattleMaster_ClearSvtInfo__ToArray__);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    ClearDeckInfo = (System_Collections_Generic_List_object__o *)DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    ClearDeckInfo = (System_Collections_Generic_List_object__o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
     servantFaceIconList = (System_Collections_Generic_List_object__o *)this->fields.servantFaceIconList;
     v32 = (ServantLimitImageMaster_o *)ClearDeckInfo;
     if ( !servantFaceIconList )
 LABEL_31:
-      sub_1BC3264(ClearDeckInfo, v15);
+      sub_1BCB254(ClearDeckInfo, v15);
     v18 = 0LL;
     while ( v18 < servantFaceIconList->fields._size )
     {
       ClearDeckInfo = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                      servantFaceIconList,
                                                                      v18,
-                                                                     (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Item__);
+                                                                     (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_ServantFaceIconComponent__get_Item__);
       v20 = (ServantFaceIconComponent_o *)ClearDeckInfo;
       if ( v16 && (max_length = v16->max_length, v18 < (int)max_length) )
       {
         if ( v18 >= max_length )
-          sub_1BC326C(ClearDeckInfo, v15, v19);
+          sub_1BCB25C(ClearDeckInfo, v15, v19);
         v22 = (int32_t *)v16->m_Items[v18];
-        v23 = (IconLabelInfo_o *)sub_1BC3254(IconLabelInfo_TypeInfo);
+        v23 = (IconLabelInfo_o *)sub_1BCB244(IconLabelInfo_TypeInfo);
         IconLabelInfo___ctor(v23, 0LL);
         if ( !v22 || !v23 )
           goto LABEL_31;
-        IconLabelInfo__Set_39947860(v23, 2, v22[6], v22[6], 0, 0, 1, 0, 0, 0LL);
+        IconLabelInfo__Set_40103972(v23, 2, v22[6], v22[6], 0, 0, 1, 0, 0, 0LL);
         v24 = v22[8];
         if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
@@ -101,7 +101,7 @@ LABEL_31:
           v27 = v22[7];
           if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
-          LimitCountByImageLimit_39470800 = ImageLimitCount__GetLimitCountByImageLimit_39470800(
+          LimitCountByImageLimit_39621860 = ImageLimitCount__GetLimitCountByImageLimit_39621860(
                                               ServantLimitCountSealAfter,
                                               v27,
                                               0LL);
@@ -111,7 +111,7 @@ LABEL_31:
           ServantLimitCountSealAfter = ServantLimitImageMaster__GetServantLimitCountSealAfter(
                                          v32,
                                          v22[5],
-                                         LimitCountByImageLimit_39470800,
+                                         LimitCountByImageLimit_39621860,
                                          0LL);
           CardImageLimitCount = ImageLimitCount__GetCardImageLimitCount(v22[5], ServantLimitCountSealAfter, 1, 0, 0LL);
         }
@@ -121,8 +121,8 @@ LABEL_31:
         }
         v29 = v22[5];
         v30 = v22[7];
-        v31 = (ServantOverwriteStatus_o *)sub_1BC3254(ServantOverwriteStatus_TypeInfo);
-        ServantOverwriteStatus___ctor_32954528(v31, v29, v30, ServantLimitCountSealAfter, 0LL);
+        v31 = (ServantOverwriteStatus_o *)sub_1BCB244(ServantOverwriteStatus_TypeInfo);
+        ServantOverwriteStatus___ctor_33009428(v31, v29, v30, ServantLimitCountSealAfter, 0LL);
         if ( !v31 || !v20 )
           goto LABEL_31;
         ServantFaceIconComponent__SetIcon(

@@ -6,21 +6,21 @@ void __fastcall EventMissionConditionMaster___ctor(EventMissionConditionMaster_o
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B02047 & 1) == 0 )
+  if ( (byte_4B1C546 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string___ctor__,
       method);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity____ctor__, v3);
-    sub_1BC3008(&System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TypeInfo, v4);
-    byte_4B02047 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity____ctor__, v3);
+    sub_1BCAFF8(&System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TypeInfo, v4);
+    byte_4B1C546 = 1;
   }
-  v5 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BC3254(System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TypeInfo);
+  v5 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BCB244(System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v5,
-    (const MethodInfo_3307B80 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity____ctor__);
+    (const MethodInfo_3320910 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity____ctor__);
   this->fields.missionIdToEventMissionConditionEntityListDictionary = (struct System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___o *)v5;
-  sub_1BC2FAC(
+  sub_1BCAF9C(
     (CGThumbnailListItem_o *)&this->fields.missionIdToEventMissionConditionEntityListDictionary,
     (int32_t)v5,
     v6,
@@ -28,7 +28,7 @@ void __fastcall EventMissionConditionMaster___ctor(EventMissionConditionMaster_o
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     139,
-    (const MethodInfo_32B1804 *)Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string___ctor__);
+    (const MethodInfo_32CA594 *)Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string___ctor__);
 }
 
 
@@ -52,18 +52,18 @@ void __fastcall EventMissionConditionMaster__AddMissionIdToEventMissionCondition
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_4B02049 & 1) == 0 )
+  if ( (byte_4B1C548 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__,
       eventMissionConditionEntity);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___set_Item__, v5);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, v6);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v7);
-    this = (EventMissionConditionMaster_o *)sub_1BC3008(
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___set_Item__, v5);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, v6);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v7);
+    this = (EventMissionConditionMaster_o *)sub_1BCAFF8(
                                               &System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo,
                                               v8);
-    byte_4B02049 = 1;
+    byte_4B1C548 = 1;
   }
   value = 0LL;
   if ( !eventMissionConditionEntity )
@@ -75,12 +75,12 @@ void __fastcall EventMissionConditionMaster__AddMissionIdToEventMissionCondition
           (System_Collections_Generic_Dictionary_int__object__o *)this,
           eventMissionConditionEntity->fields.missionId,
           &value,
-          (const MethodInfo_3309CE0 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__) )
+          (const MethodInfo_3322A70 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__) )
   {
-    v11 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+    v11 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v11,
-      (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+      (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
     value = (Il2CppObject *)v11;
     this = (EventMissionConditionMaster_o *)v4->fields.missionIdToEventMissionConditionEntityListDictionary;
     if ( !this )
@@ -89,7 +89,7 @@ void __fastcall EventMissionConditionMaster__AddMissionIdToEventMissionCondition
       (System_Collections_Generic_Dictionary_int__object__o *)this,
       eventMissionConditionEntity->fields.missionId,
       (Il2CppObject *)v11,
-      (const MethodInfo_3308540 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___set_Item__);
+      (const MethodInfo_33212D0 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___set_Item__);
   }
   this = (EventMissionConditionMaster_o *)value;
   if ( !value
@@ -99,7 +99,7 @@ void __fastcall EventMissionConditionMaster__AddMissionIdToEventMissionCondition
         !klass) )
   {
 LABEL_14:
-    sub_1BC3264(this, eventMissionConditionEntity);
+    sub_1BCB254(this, eventMissionConditionEntity);
   }
   MasterName_k__BackingField_low = SLODWORD(this->fields._MasterName_k__BackingField);
   if ( (unsigned int)MasterName_k__BackingField_low >= LODWORD(klass->_1.namespaze) )
@@ -107,14 +107,14 @@ LABEL_14:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)this,
       (Il2CppObject *)eventMissionConditionEntity,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
     v15 = &klass->_1.image + MasterName_k__BackingField_low;
     LODWORD(this->fields._MasterName_k__BackingField) = MasterName_k__BackingField_low + 1;
     v15[4] = eventMissionConditionEntity;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v15 + 4), (int32_t)eventMissionConditionEntity, v9, v10);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v15 + 4), (int32_t)eventMissionConditionEntity, v9, v10);
   }
 }
 
@@ -145,29 +145,29 @@ void __fastcall EventMissionConditionMaster__CreateMissionIdToEventMissionCondit
   int32_t *v22; // x10
   __int64 v23; // x0
 
-  if ( (byte_4B02048 & 1) == 0 )
+  if ( (byte_4B1C547 & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__GetEnumerator__, method);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___Clear__, v3);
-    sub_1BC3008(&System_IDisposable_TypeInfo, v4);
-    sub_1BC3008(&System_Collections_Generic_IEnumerator_EventMissionConditionEntity__TypeInfo, v5);
-    sub_1BC3008(&System_Collections_IEnumerator_TypeInfo, v6);
-    byte_4B02048 = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__GetEnumerator__, method);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___Clear__, v3);
+    sub_1BCAFF8(&System_IDisposable_TypeInfo, v4);
+    sub_1BCAFF8(&System_Collections_Generic_IEnumerator_EventMissionConditionEntity__TypeInfo, v5);
+    sub_1BCAFF8(&System_Collections_IEnumerator_TypeInfo, v6);
+    byte_4B1C547 = 1;
   }
   missionIdToEventMissionConditionEntityListDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.missionIdToEventMissionConditionEntityListDictionary;
   if ( !missionIdToEventMissionConditionEntityListDictionary
     || (System_Collections_Generic_Dictionary_int__object___Clear(
           missionIdToEventMissionConditionEntityListDictionary,
-          (const MethodInfo_33086DC *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___Clear__),
+          (const MethodInfo_332146C *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___Clear__),
         (missionIdToEventMissionConditionEntityListDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.list) == 0LL) )
   {
-    sub_1BC3264(missionIdToEventMissionConditionEntityListDictionary, method);
+    sub_1BCB254(missionIdToEventMissionConditionEntityListDictionary, method);
   }
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)missionIdToEventMissionConditionEntityListDictionary,
-                 (const MethodInfo_324AE30 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__GetEnumerator__);
+                 (const MethodInfo_3263BC0 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BC3264(0LL, v8);
+    sub_1BCB254(0LL, v8);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -187,7 +187,7 @@ void __fastcall EventMissionConditionMaster__CreateMissionIdToEventMissionCondit
     else
     {
 LABEL_10:
-      p_method = sub_1C13570(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      p_method = sub_1C1B560(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
             Enumerator,
@@ -210,7 +210,7 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v17 = sub_1C13570(Enumerator, System_Collections_Generic_IEnumerator_EventMissionConditionEntity__TypeInfo, 0LL);
+      v17 = sub_1C1B560(Enumerator, System_Collections_Generic_IEnumerator_EventMissionConditionEntity__TypeInfo, 0LL);
     }
     v18 = (EventMissionConditionEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
                                              Enumerator,
@@ -235,7 +235,7 @@ LABEL_17:
   else
   {
 LABEL_25:
-    v23 = sub_1C13570(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v23 = sub_1C1B560(Enumerator, System_IDisposable_TypeInfo, 0LL);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v23)(Enumerator, *(_QWORD *)(v23 + 8));
 }
@@ -280,34 +280,34 @@ System_Collections_Generic_List_EventMissionConditionEntity__o *__fastcall Event
   int32_t *v35; // x10
   __int64 v36; // x0
 
-  if ( (byte_4B02052 & 1) == 0 )
+  if ( (byte_4B1C551 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__GetEnumerator__,
       *(_QWORD *)&missionTargetId);
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__getEntityList__,
       v5);
-    sub_1BC3008(&System_IDisposable_TypeInfo, v6);
-    sub_1BC3008(&System_Collections_Generic_IEnumerator_EventMissionConditionEntity__TypeInfo, v7);
-    sub_1BC3008(&System_Collections_IEnumerator_TypeInfo, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v10);
-    sub_1BC3008(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v11);
-    byte_4B02052 = 1;
+    sub_1BCAFF8(&System_IDisposable_TypeInfo, v6);
+    sub_1BCAFF8(&System_Collections_Generic_IEnumerator_EventMissionConditionEntity__TypeInfo, v7);
+    sub_1BCAFF8(&System_Collections_IEnumerator_TypeInfo, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v10);
+    sub_1BCAFF8(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v11);
+    byte_4B1C551 = 1;
   }
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( list )
   {
     Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                    list,
-                   (const MethodInfo_324AE30 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__GetEnumerator__);
+                   (const MethodInfo_3263BC0 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__GetEnumerator__);
     if ( !Enumerator )
-      sub_1BC3264(0LL, v14);
+      sub_1BCB254(0LL, v14);
     while ( 1 )
     {
       klass = Enumerator->klass;
@@ -327,7 +327,7 @@ System_Collections_Generic_List_EventMissionConditionEntity__o *__fastcall Event
       else
       {
 LABEL_9:
-        p_method = sub_1C13570(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+        p_method = sub_1C1B560(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
       }
       if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
               Enumerator,
@@ -350,37 +350,37 @@ LABEL_9:
       else
       {
 LABEL_16:
-        v23 = sub_1C13570(Enumerator, System_Collections_Generic_IEnumerator_EventMissionConditionEntity__TypeInfo, 0LL);
+        v23 = sub_1C1B560(Enumerator, System_Collections_Generic_IEnumerator_EventMissionConditionEntity__TypeInfo, 0LL);
       }
       v24 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v23)(
               Enumerator,
               *(_QWORD *)(v23 + 8));
       v28 = v24;
       if ( !v24 )
-        sub_1BC3264(0LL, v25);
+        sub_1BCB254(0LL, v25);
       if ( *(_DWORD *)(v24 + 32) == missionTargetId )
       {
         if ( !v12 )
-          sub_1BC3264(v24, v25);
+          sub_1BCB254(v24, v25);
         items = v12->fields._items;
         v30 = Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__;
         ++v12->fields._version;
         if ( !items )
-          sub_1BC3264(v24, v25);
+          sub_1BCB254(v24, v25);
         size = v12->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v12,
             (Il2CppObject *)v24,
-            *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+            *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
         }
         else
         {
           v32 = &items->obj.klass + size;
           v12->fields._size = size + 1;
           v32[4] = (Il2CppClass *)v28;
-          sub_1BC2FAC((CGThumbnailListItem_o *)(v32 + 4), v28, v26, v27);
+          sub_1BCAF9C((CGThumbnailListItem_o *)(v32 + 4), v28, v26, v27);
         }
       }
     }
@@ -401,7 +401,7 @@ LABEL_16:
     else
     {
 LABEL_29:
-      v36 = sub_1C13570(Enumerator, System_IDisposable_TypeInfo, 0LL);
+      v36 = sub_1C1B560(Enumerator, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v36)(
       Enumerator,
@@ -421,12 +421,12 @@ EventMissionConditionEntity_o *__fastcall EventMissionConditionMaster__GetEntity
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B02045 & 1) == 0 )
+  if ( (byte_4B1C544 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__GetEntity__,
       *(_QWORD *)&missionId);
-    byte_4B02045 = 1;
+    byte_4B1C544 = 1;
   }
   PK = (Il2CppObject *)EventMissionConditionEntity__CreatePK(
                          missionId,
@@ -436,7 +436,7 @@ EventMissionConditionEntity_o *__fastcall EventMissionConditionMaster__GetEntity
   return (EventMissionConditionEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                             PK,
-                                            (const MethodInfo_32B3B28 *)Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__GetEntity__);
+                                            (const MethodInfo_32CC8B8 *)Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__GetEntity__);
 }
 
 
@@ -480,34 +480,34 @@ System_Collections_Generic_List_EventMissionConditionEntity__o *__fastcall Event
   int32_t *v37; // x10
   __int64 v38; // x0
 
-  if ( (byte_4B02053 & 1) == 0 )
+  if ( (byte_4B1C552 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__GetEnumerator__,
       *(_QWORD *)&targetId);
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__getEntityList__,
       v7);
-    sub_1BC3008(&System_IDisposable_TypeInfo, v8);
-    sub_1BC3008(&System_Collections_Generic_IEnumerator_EventMissionConditionEntity__TypeInfo, v9);
-    sub_1BC3008(&System_Collections_IEnumerator_TypeInfo, v10);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, v11);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v12);
-    sub_1BC3008(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v13);
-    byte_4B02053 = 1;
+    sub_1BCAFF8(&System_IDisposable_TypeInfo, v8);
+    sub_1BCAFF8(&System_Collections_Generic_IEnumerator_EventMissionConditionEntity__TypeInfo, v9);
+    sub_1BCAFF8(&System_Collections_IEnumerator_TypeInfo, v10);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, v11);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v12);
+    sub_1BCAFF8(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v13);
+    byte_4B1C552 = 1;
   }
-  v14 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v14,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( list )
   {
     Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                    list,
-                   (const MethodInfo_324AE30 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__GetEnumerator__);
+                   (const MethodInfo_3263BC0 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__GetEnumerator__);
     if ( !Enumerator )
-      sub_1BC3264(0LL, v16);
+      sub_1BCB254(0LL, v16);
     while ( 1 )
     {
       klass = Enumerator->klass;
@@ -527,7 +527,7 @@ System_Collections_Generic_List_EventMissionConditionEntity__o *__fastcall Event
       else
       {
 LABEL_9:
-        p_method = sub_1C13570(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+        p_method = sub_1C1B560(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
       }
       if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
               Enumerator,
@@ -550,37 +550,37 @@ LABEL_9:
       else
       {
 LABEL_16:
-        v25 = sub_1C13570(Enumerator, System_Collections_Generic_IEnumerator_EventMissionConditionEntity__TypeInfo, 0LL);
+        v25 = sub_1C1B560(Enumerator, System_Collections_Generic_IEnumerator_EventMissionConditionEntity__TypeInfo, 0LL);
       }
       v26 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v25)(
               Enumerator,
               *(_QWORD *)(v25 + 8));
       v30 = v26;
       if ( !v26 )
-        sub_1BC3264(0LL, v27);
+        sub_1BCB254(0LL, v27);
       if ( *(_DWORD *)(v26 + 32) == targetId && *(_DWORD *)(v26 + 40) == condType )
       {
         if ( !v14 )
-          sub_1BC3264(v26, v27);
+          sub_1BCB254(v26, v27);
         items = v14->fields._items;
         v32 = Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__;
         ++v14->fields._version;
         if ( !items )
-          sub_1BC3264(v26, v27);
+          sub_1BCB254(v26, v27);
         size = v14->fields._size;
         if ( (unsigned int)size >= items->max_length )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v14,
             (Il2CppObject *)v26,
-            *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+            *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
         }
         else
         {
           v34 = &items->obj.klass + size;
           v14->fields._size = size + 1;
           v34[4] = (Il2CppClass *)v30;
-          sub_1BC2FAC((CGThumbnailListItem_o *)(v34 + 4), v30, v28, v29);
+          sub_1BCAF9C((CGThumbnailListItem_o *)(v34 + 4), v30, v28, v29);
         }
       }
     }
@@ -601,7 +601,7 @@ LABEL_16:
     else
     {
 LABEL_30:
-      v38 = sub_1C13570(Enumerator, System_IDisposable_TypeInfo, 0LL);
+      v38 = sub_1C1B560(Enumerator, System_IDisposable_TypeInfo, 0LL);
     }
     (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v38)(
       Enumerator,
@@ -642,26 +642,26 @@ System_Collections_Generic_List_EventMissionConditionEntity__o *__fastcall Event
   System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+20h] [xbp-60h] BYREF
   Il2CppObject *value; // [xsp+38h] [xbp-48h] BYREF
 
-  if ( (byte_4B02054 & 1) == 0 )
+  if ( (byte_4B1C553 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__,
       *(_QWORD *)&missionId);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__, v10);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__get_Current__, v11);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, v12);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__, v13);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v14);
-    sub_1BC3008(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v15);
-    byte_4B02054 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__, v10);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__get_Current__, v11);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, v12);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__, v13);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v14);
+    sub_1BCAFF8(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v15);
+    byte_4B1C553 = 1;
   }
   value = 0LL;
   memset(&v30, 0, sizeof(v30));
-  v16 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+  v16 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
   missionIdToEventMissionConditionEntityListDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.missionIdToEventMissionConditionEntityListDictionary;
   if ( !missionIdToEventMissionConditionEntityListDictionary )
     goto LABEL_21;
@@ -669,56 +669,56 @@ System_Collections_Generic_List_EventMissionConditionEntity__o *__fastcall Event
           missionIdToEventMissionConditionEntityListDictionary,
           missionId,
           &value,
-          (const MethodInfo_3309CE0 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__) )
+          (const MethodInfo_3322A70 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__) )
     return (System_Collections_Generic_List_EventMissionConditionEntity__o *)v16;
   missionIdToEventMissionConditionEntityListDictionary = (System_Collections_Generic_Dictionary_int__object__o *)value;
   if ( !value )
 LABEL_21:
-    sub_1BC3264(missionIdToEventMissionConditionEntityListDictionary, v17);
+    sub_1BCB254(missionIdToEventMissionConditionEntityListDictionary, v17);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v29,
     (System_Collections_Generic_List_object__o *)value,
-    (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__);
+    (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__);
   v30 = v29;
   while ( 1 )
   {
     v19 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v30,
-            (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__);
+            (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__);
     if ( !v19 )
       break;
     current = v30.fields._current;
     if ( !v30.fields._current )
-      sub_1BC3264(v19, v20);
+      sub_1BCB254(v19, v20);
     if ( HIDWORD(v30.fields._current[1].klass) == progressType && LODWORD(v30.fields._current[2].monitor) == condType )
     {
       if ( !v16 )
-        sub_1BC3264(v19, v20);
+        sub_1BCB254(v19, v20);
       items = v16->fields._items;
       v25 = Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__;
       ++v16->fields._version;
       if ( !items )
-        sub_1BC3264(v19, v20);
+        sub_1BCB254(v19, v20);
       size = v16->fields._size;
       if ( (unsigned int)size >= items->max_length )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v16,
           current,
-          *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+          *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
       }
       else
       {
         v27 = &items->obj.klass + size;
         v16->fields._size = size + 1;
         v27[4] = (Il2CppClass *)current;
-        sub_1BC2FAC((CGThumbnailListItem_o *)(v27 + 4), (int32_t)current, v21, v22);
+        sub_1BCAF9C((CGThumbnailListItem_o *)(v27 + 4), (int32_t)current, v21, v22);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v30,
-    (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__);
+    (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__);
   return (System_Collections_Generic_List_EventMissionConditionEntity__o *)v16;
 }
 
@@ -745,16 +745,16 @@ bool __fastcall EventMissionConditionMaster__IsMissionRunning(
   System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+20h] [xbp-40h] BYREF
   Il2CppObject *value; // [xsp+38h] [xbp-28h] BYREF
 
-  if ( (byte_4B02051 & 1) == 0 )
+  if ( (byte_4B1C550 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__,
       *(_QWORD *)&missionId);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__, v5);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__, v6);
-    sub_1BC3008(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__get_Current__, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__, v8);
-    byte_4B02051 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__, v5);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__, v6);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__get_Current__, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__, v8);
+    byte_4B1C550 = 1;
   }
   value = 0LL;
   memset(&v19, 0, sizeof(v19));
@@ -765,7 +765,7 @@ bool __fastcall EventMissionConditionMaster__IsMissionRunning(
           missionIdToEventMissionConditionEntityListDictionary,
           missionId,
           &value,
-          (const MethodInfo_3309CE0 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__) )
+          (const MethodInfo_3322A70 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__) )
   {
     v16 = 1;
     return v16 ^ 1;
@@ -773,11 +773,11 @@ bool __fastcall EventMissionConditionMaster__IsMissionRunning(
   missionIdToEventMissionConditionEntityListDictionary = (System_Collections_Generic_Dictionary_int__object__o *)value;
   if ( !value )
 LABEL_25:
-    sub_1BC3264(missionIdToEventMissionConditionEntityListDictionary, *(_QWORD *)&missionId);
+    sub_1BCB254(missionIdToEventMissionConditionEntityListDictionary, *(_QWORD *)&missionId);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v18,
     (System_Collections_Generic_List_object__o *)value,
-    (const MethodInfo_36A1938 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__);
+    (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__);
   v10 = 0;
   v19 = v18;
   v11 = 1;
@@ -785,17 +785,17 @@ LABEL_25:
   {
     v12 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v19,
-            (const MethodInfo_343678C *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__);
+            (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__);
     if ( !v12 )
     {
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &v19,
-        (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__);
+        (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__);
       v16 = v11 & 1;
       return v16 ^ 1;
     }
     if ( !v19.fields._current )
-      sub_1BC3264(v12, v13);
+      sub_1BCB254(v12, v13);
     klass_high = HIDWORD(v19.fields._current[1].klass);
     if ( (klass_high & 0xFFFFFFFE) != 2 )
     {
@@ -820,7 +820,7 @@ LABEL_15:
 LABEL_22:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v19,
-    (const MethodInfo_3436788 *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__);
+    (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__);
   return v15;
 }
 
@@ -892,16 +892,16 @@ void __fastcall EventMissionConditionMaster__OnListChangedImplementation(
   __int64 v63; // x0
 
   v4 = this;
-  if ( (byte_4B0204B & 1) == 0 )
+  if ( (byte_4B1C54A & 1) == 0 )
   {
-    sub_1BC3008(&EventMissionConditionEntity_TypeInfo, e);
-    sub_1BC3008(&System_IDisposable_TypeInfo, v5);
-    sub_1BC3008(&System_Collections_IEnumerable_TypeInfo, v6);
-    this = (EventMissionConditionMaster_o *)sub_1BC3008(&System_Collections_IEnumerator_TypeInfo, v7);
-    byte_4B0204B = 1;
+    sub_1BCAFF8(&EventMissionConditionEntity_TypeInfo, e);
+    sub_1BCAFF8(&System_IDisposable_TypeInfo, v5);
+    sub_1BCAFF8(&System_Collections_IEnumerable_TypeInfo, v6);
+    this = (EventMissionConditionMaster_o *)sub_1BCAFF8(&System_Collections_IEnumerator_TypeInfo, v7);
+    byte_4B1C54A = 1;
   }
   if ( !e )
-    sub_1BC3264(this, e);
+    sub_1BCB254(this, e);
   action = e->fields._action;
   if ( action >= 3 )
   {
@@ -909,11 +909,11 @@ void __fastcall EventMissionConditionMaster__OnListChangedImplementation(
     {
       if ( action != 4 )
       {
-        v14 = sub_1BC301C(&System_NotImplementedException_TypeInfo);
-        v15 = (System_NotImplementedException_o *)sub_1BC3254(v14);
+        v14 = sub_1BCB00C(&System_NotImplementedException_TypeInfo);
+        v15 = (System_NotImplementedException_o *)sub_1BCB244(v14);
         System_NotImplementedException___ctor(v15, 0LL);
-        v16 = sub_1BC301C(&Method_EventMissionConditionMaster_OnListChangedImplementation__);
-        sub_1BC3130(v15, v16);
+        v16 = sub_1BCB00C(&Method_EventMissionConditionMaster_OnListChangedImplementation__);
+        sub_1BCB120(v15, v16);
       }
       EventMissionConditionMaster__CreateMissionIdToEventMissionConditionEntityListDictionary(v4, (const MethodInfo *)e);
     }
@@ -940,13 +940,13 @@ void __fastcall EventMissionConditionMaster__OnListChangedImplementation(
       else
       {
 LABEL_10:
-        p_method = sub_1C13570(e->fields._oldItems, System_Collections_IEnumerable_TypeInfo, 0LL);
+        p_method = sub_1C1B560(e->fields._oldItems, System_Collections_IEnumerable_TypeInfo, 0LL);
       }
       v18 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))p_method)(
               oldItems,
               *(_QWORD *)(p_method + 8));
       if ( !v18 )
-        sub_1BC3264(0LL, v17);
+        sub_1BCB254(0LL, v17);
       while ( 1 )
       {
         v19 = *(_QWORD *)v18;
@@ -966,7 +966,7 @@ LABEL_10:
         else
         {
 LABEL_20:
-          v22 = sub_1C13570(v18, System_Collections_IEnumerator_TypeInfo, 0LL);
+          v22 = sub_1C1B560(v18, System_Collections_IEnumerator_TypeInfo, 0LL);
         }
         if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v18, *(_QWORD *)(v22 + 8)) & 1) == 0 )
           break;
@@ -987,7 +987,7 @@ LABEL_20:
         else
         {
 LABEL_27:
-          v26 = sub_1C13570(v18, System_Collections_IEnumerator_TypeInfo, 1LL);
+          v26 = sub_1C1B560(v18, System_Collections_IEnumerator_TypeInfo, 1LL);
         }
         v27 = (*(__int64 (__fastcall **)(__int64, _QWORD))v26)(v18, *(_QWORD *)(v26 + 8));
         v28 = (EventMissionConditionEntity_o *)v27;
@@ -1003,7 +1003,7 @@ LABEL_27:
           }
         }
       }
-      v32 = sub_1BC3144(v18, System_IDisposable_TypeInfo);
+      v32 = sub_1BCB134(v18, System_IDisposable_TypeInfo);
       if ( v32 )
       {
         v33 = *(_QWORD *)v32;
@@ -1024,7 +1024,7 @@ LABEL_27:
         else
         {
 LABEL_39:
-          v37 = sub_1C13570(v32, System_IDisposable_TypeInfo, 0LL);
+          v37 = sub_1C1B560(v32, System_IDisposable_TypeInfo, 0LL);
         }
         (*(void (__fastcall **)(__int64, _QWORD))v37)(v34, *(_QWORD *)(v37 + 8));
       }
@@ -1049,11 +1049,11 @@ LABEL_39:
       else
       {
 LABEL_47:
-        v42 = sub_1C13570(newItems, System_Collections_IEnumerable_TypeInfo, 0LL);
+        v42 = sub_1C1B560(newItems, System_Collections_IEnumerable_TypeInfo, 0LL);
       }
       v44 = (*(__int64 (__fastcall **)(struct System_Collections_IList_o *, _QWORD))v42)(newItems, *(_QWORD *)(v42 + 8));
       if ( !v44 )
-        sub_1BC3264(0LL, v43);
+        sub_1BCB254(0LL, v43);
       while ( 1 )
       {
         v45 = *(_QWORD *)v44;
@@ -1073,7 +1073,7 @@ LABEL_47:
         else
         {
 LABEL_54:
-          v48 = sub_1C13570(v44, System_Collections_IEnumerator_TypeInfo, 0LL);
+          v48 = sub_1C1B560(v44, System_Collections_IEnumerator_TypeInfo, 0LL);
         }
         if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v48)(v44, *(_QWORD *)(v48 + 8)) & 1) == 0 )
           break;
@@ -1094,7 +1094,7 @@ LABEL_54:
         else
         {
 LABEL_61:
-          v52 = sub_1C13570(v44, System_Collections_IEnumerator_TypeInfo, 1LL);
+          v52 = sub_1C1B560(v44, System_Collections_IEnumerator_TypeInfo, 1LL);
         }
         v53 = (*(__int64 (__fastcall **)(__int64, _QWORD))v52)(v44, *(_QWORD *)(v52 + 8));
         v54 = (EventMissionConditionEntity_o *)v53;
@@ -1110,7 +1110,7 @@ LABEL_61:
           }
         }
       }
-      v58 = sub_1BC3144(v44, System_IDisposable_TypeInfo);
+      v58 = sub_1BCB134(v44, System_IDisposable_TypeInfo);
       if ( v58 )
       {
         v59 = *(_QWORD *)v58;
@@ -1131,7 +1131,7 @@ LABEL_61:
         else
         {
 LABEL_73:
-          v63 = sub_1C13570(v58, System_IDisposable_TypeInfo, 0LL);
+          v63 = sub_1C1B560(v58, System_IDisposable_TypeInfo, 0LL);
         }
         (*(void (__fastcall **)(__int64, _QWORD))v63)(v60, *(_QWORD *)(v63 + 8));
       }
@@ -1152,17 +1152,17 @@ void __fastcall EventMissionConditionMaster__RemoveMissionIdToEventMissionCondit
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_4B0204A & 1) == 0 )
+  if ( (byte_4B1C549 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___Remove__,
       eventMissionConditionEntity);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__, v5);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Remove__, v6);
-    this = (EventMissionConditionMaster_o *)sub_1BC3008(
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__, v5);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Remove__, v6);
+    this = (EventMissionConditionMaster_o *)sub_1BCAFF8(
                                               &Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Count__,
                                               v7);
-    byte_4B0204A = 1;
+    byte_4B1C549 = 1;
   }
   value = 0LL;
   if ( !eventMissionConditionEntity )
@@ -1174,7 +1174,7 @@ void __fastcall EventMissionConditionMaster__RemoveMissionIdToEventMissionCondit
           (System_Collections_Generic_Dictionary_int__object__o *)this,
           eventMissionConditionEntity->fields.missionId,
           &value,
-          (const MethodInfo_3309CE0 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__) )
+          (const MethodInfo_3322A70 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__) )
     return;
   this = (EventMissionConditionMaster_o *)value;
   if ( !value )
@@ -1182,7 +1182,7 @@ void __fastcall EventMissionConditionMaster__RemoveMissionIdToEventMissionCondit
   this = (EventMissionConditionMaster_o *)System_Collections_Generic_List_object___Remove(
                                             (System_Collections_Generic_List_object__o *)value,
                                             (Il2CppObject *)eventMissionConditionEntity,
-                                            (const MethodInfo_36A2368 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__Remove__);
+                                            (const MethodInfo_36BB0F8 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__Remove__);
   if ( !value )
     goto LABEL_12;
   if ( LODWORD(value[1].monitor) )
@@ -1190,11 +1190,11 @@ void __fastcall EventMissionConditionMaster__RemoveMissionIdToEventMissionCondit
   this = (EventMissionConditionMaster_o *)v4->fields.missionIdToEventMissionConditionEntityListDictionary;
   if ( !this )
 LABEL_12:
-    sub_1BC3264(this, eventMissionConditionEntity);
+    sub_1BCB254(this, eventMissionConditionEntity);
   System_Collections_Generic_Dictionary_int__object___Remove(
     (System_Collections_Generic_Dictionary_int__object__o *)this,
     eventMissionConditionEntity->fields.missionId,
-    (const MethodInfo_33099DC *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___Remove__);
+    (const MethodInfo_332276C *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___Remove__);
 }
 
 
@@ -1209,12 +1209,12 @@ bool __fastcall EventMissionConditionMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B02046 & 1) == 0 )
+  if ( (byte_4B1C545 & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__TryGetEntity__,
       entity);
-    byte_4B02046 = 1;
+    byte_4B1C545 = 1;
   }
   PK = (Il2CppObject *)EventMissionConditionEntity__CreatePK(
                          missionId,
@@ -1225,7 +1225,7 @@ bool __fastcall EventMissionConditionMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32B3B74 *)Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__TryGetEntity__);
+           (const MethodInfo_32CC904 *)Method_DataMasterBase_EventMissionConditionMaster__EventMissionConditionEntity__string__TryGetEntity__);
 }
 
 
@@ -1238,7 +1238,7 @@ bool __fastcall EventMissionConditionMaster__checkEventMissionCondition(
   int32_t condType; // w8
 
   if ( !entity )
-    sub_1BC3264(this, 0LL);
+    sub_1BCB254(this, 0LL);
   condType = entity->fields.condType;
   switch ( condType )
   {
@@ -1292,26 +1292,26 @@ EventMissionConditionEntity_array *__fastcall EventMissionConditionMaster__getMi
   const MethodInfo *v32; // x3
   Il2CppObject *value; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B0204C & 1) == 0 )
+  if ( (byte_4B1C54B & 1) == 0 )
   {
-    sub_1BC3008(&System_Comparison_EventMissionConditionEntity__TypeInfo, *(_QWORD *)&eventId);
-    sub_1BC3008(&Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Sort__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__ToArray__, v10);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v11);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Count__, v12);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__, v13);
-    sub_1BC3008(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v14);
-    sub_1BC3008(&Method_EventMissionConditionMaster___c__getMissionCondList_b__8_0__, v15);
-    sub_1BC3008(&EventMissionConditionMaster___c_TypeInfo, v16);
-    byte_4B0204C = 1;
+    sub_1BCAFF8(&System_Comparison_EventMissionConditionEntity__TypeInfo, *(_QWORD *)&eventId);
+    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Sort__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__ToArray__, v10);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v11);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Count__, v12);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__, v13);
+    sub_1BCAFF8(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v14);
+    sub_1BCAFF8(&Method_EventMissionConditionMaster___c__getMissionCondList_b__8_0__, v15);
+    sub_1BCAFF8(&EventMissionConditionMaster___c_TypeInfo, v16);
+    byte_4B1C54B = 1;
   }
   value = 0LL;
-  v17 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+  v17 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v17,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
   missionIdToEventMissionConditionEntityListDictionary = this->fields.missionIdToEventMissionConditionEntityListDictionary;
   if ( !missionIdToEventMissionConditionEntityListDictionary )
     goto LABEL_26;
@@ -1319,7 +1319,7 @@ EventMissionConditionEntity_array *__fastcall EventMissionConditionMaster__getMi
          (System_Collections_Generic_Dictionary_int__object__o *)missionIdToEventMissionConditionEntityListDictionary,
          missionId,
          &value,
-         (const MethodInfo_3309CE0 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__) )
+         (const MethodInfo_3322A70 *)Method_System_Collections_Generic_Dictionary_int__List_EventMissionConditionEntity___TryGetValue__) )
   {
     missionIdToEventMissionConditionEntityListDictionary = value;
     if ( !value )
@@ -1333,7 +1333,7 @@ EventMissionConditionEntity_array *__fastcall EventMissionConditionMaster__getMi
         missionIdToEventMissionConditionEntityListDictionary = System_Collections_Generic_List_object___get_Item(
                                                                  (System_Collections_Generic_List_object__o *)missionIdToEventMissionConditionEntityListDictionary,
                                                                  v21,
-                                                                 (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__);
+                                                                 (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__);
         if ( !missionIdToEventMissionConditionEntityListDictionary )
           break;
         v18 = (Il2CppClass *)missionIdToEventMissionConditionEntityListDictionary;
@@ -1352,14 +1352,14 @@ EventMissionConditionEntity_array *__fastcall EventMissionConditionMaster__getMi
             System_Collections_Generic_List_object___AddWithResize(
               v17,
               (Il2CppObject *)missionIdToEventMissionConditionEntityListDictionary,
-              *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+              *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
           }
           else
           {
             v27 = &items->obj.klass + size;
             v17->fields._size = size + 1;
             v27[4] = v18;
-            sub_1BC2FAC((CGThumbnailListItem_o *)(v27 + 4), (int32_t)v18, v22, v23);
+            sub_1BCAF9C((CGThumbnailListItem_o *)(v27 + 4), (int32_t)v18, v22, v23);
           }
         }
         if ( monitor == ++v21 )
@@ -1368,7 +1368,7 @@ EventMissionConditionEntity_array *__fastcall EventMissionConditionMaster__getMi
       }
       while ( value );
 LABEL_26:
-      sub_1BC3264(missionIdToEventMissionConditionEntityListDictionary, v18);
+      sub_1BCB254(missionIdToEventMissionConditionEntityListDictionary, v18);
     }
   }
 LABEL_18:
@@ -1387,21 +1387,21 @@ LABEL_18:
       missionIdToEventMissionConditionEntityListDictionary = EventMissionConditionMaster___c_TypeInfo;
     }
     v29 = (Il2CppObject *)**((_QWORD **)missionIdToEventMissionConditionEntityListDictionary + 23);
-    v28 = (System_Comparison_T__o *)sub_1BC3254(System_Comparison_EventMissionConditionEntity__TypeInfo);
+    v28 = (System_Comparison_T__o *)sub_1BCB244(System_Comparison_EventMissionConditionEntity__TypeInfo);
     System_Comparison_object____ctor(v28, v29, Method_EventMissionConditionMaster___c__getMissionCondList_b__8_0__, 0LL);
     static_fields = EventMissionConditionMaster___c_TypeInfo->static_fields;
     static_fields->__9__8_0 = (struct System_Comparison_EventMissionConditionEntity__o *)v28;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__8_0, (int32_t)v28, v31, v32);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__8_0, (int32_t)v28, v31, v32);
   }
   if ( !v17 )
     goto LABEL_26;
-  System_Collections_Generic_List_object___Sort_57288964(
+  System_Collections_Generic_List_object___Sort_57390740(
     v17,
     v28,
-    (const MethodInfo_36A2904 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__Sort__);
+    (const MethodInfo_36BB694 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__Sort__);
   return (EventMissionConditionEntity_array *)System_Collections_Generic_List_object___ToArray(
                                                 v17,
-                                                (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__ToArray__);
+                                                (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__ToArray__);
 }
 
 
@@ -1428,22 +1428,22 @@ System_Collections_Generic_List_EventMissionConditionEntity__o *__fastcall Event
   __int64 size; // x10
   Il2CppClass **v22; // x0
 
-  if ( (byte_4B0204E & 1) == 0 )
+  if ( (byte_4B1C54D & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, *(_QWORD *)&eventId);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v9);
-    sub_1BC3008(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v10);
-    byte_4B0204E = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, *(_QWORD *)&eventId);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v9);
+    sub_1BCAFF8(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v10);
+    byte_4B1C54D = 1;
   }
   MissionCondList = EventMissionConditionMaster__getMissionCondList(
                       this,
                       eventId,
                       missionId,
                       *(const MethodInfo **)&type);
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
   if ( !MissionCondList )
     goto LABEL_17;
   v17 = *(_QWORD *)&MissionCondList->max_length;
@@ -1453,7 +1453,7 @@ System_Collections_Generic_List_EventMissionConditionEntity__o *__fastcall Event
     while ( 1 )
     {
       if ( (unsigned int)v18 >= (unsigned int)v17 )
-        sub_1BC326C(v13, v14, v15);
+        sub_1BCB25C(v13, v14, v15);
       v14 = MissionCondList->m_Items[v18];
       if ( !v14 )
         break;
@@ -1472,14 +1472,14 @@ System_Collections_Generic_List_EventMissionConditionEntity__o *__fastcall Event
           System_Collections_Generic_List_object___AddWithResize(
             v12,
             (Il2CppObject *)v14,
-            *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+            *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
         }
         else
         {
           v22 = &items->obj.klass + size;
           v12->fields._size = size + 1;
           v22[4] = (Il2CppClass *)v14;
-          sub_1BC2FAC((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v14, v15, v16);
+          sub_1BCAF9C((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v14, v15, v16);
         }
       }
       LODWORD(v17) = MissionCondList->max_length;
@@ -1487,7 +1487,7 @@ System_Collections_Generic_List_EventMissionConditionEntity__o *__fastcall Event
         return (System_Collections_Generic_List_EventMissionConditionEntity__o *)v12;
     }
 LABEL_17:
-    sub_1BC3264(v13, v14);
+    sub_1BCB254(v13, v14);
   }
   return (System_Collections_Generic_List_EventMissionConditionEntity__o *)v12;
 }
@@ -1518,18 +1518,18 @@ EventMissionConditionEntity_array *__fastcall EventMissionConditionMaster__getMi
   __int64 size; // x10
   Il2CppClass **v24; // x0
 
-  if ( (byte_4B0204D & 1) == 0 )
+  if ( (byte_4B1C54C & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, *(_QWORD *)&eventId);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__ToArray__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v10);
-    sub_1BC3008(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v11);
-    byte_4B0204D = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, *(_QWORD *)&eventId);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__ToArray__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v10);
+    sub_1BCAFF8(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v11);
+    byte_4B1C54C = 1;
   }
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
   MissionCondList = EventMissionConditionMaster__getMissionCondList(this, eventId, missionId, v13);
   if ( !MissionCondList )
     goto LABEL_22;
@@ -1570,9 +1570,9 @@ LABEL_21:
     if ( v12 )
       return (EventMissionConditionEntity_array *)System_Collections_Generic_List_object___ToArray(
                                                     v12,
-                                                    (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__ToArray__);
+                                                    (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__ToArray__);
 LABEL_22:
-    sub_1BC3264(MissionCondList, v15);
+    sub_1BCB254(MissionCondList, v15);
   }
   if ( !v12 )
     goto LABEL_22;
@@ -1587,18 +1587,18 @@ LABEL_22:
     System_Collections_Generic_List_object___AddWithResize(
       v12,
       (Il2CppObject *)v15,
-      *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
   }
   else
   {
     v24 = &items->obj.klass + size;
     v12->fields._size = size + 1;
     v24[4] = (Il2CppClass *)v15;
-    sub_1BC2FAC((CGThumbnailListItem_o *)(v24 + 4), (int32_t)v15, v16, v17);
+    sub_1BCAF9C((CGThumbnailListItem_o *)(v24 + 4), (int32_t)v15, v16, v17);
   }
   return (EventMissionConditionEntity_array *)System_Collections_Generic_List_object___ToArray(
                                                 v12,
-                                                (const MethodInfo_36A2998 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__ToArray__);
+                                                (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__ToArray__);
 }
 
 
@@ -1628,22 +1628,22 @@ System_Collections_Generic_List_int__o *__fastcall EventMissionConditionMaster__
   _QWORD *v23; // x9
   __int64 size; // x10
 
-  if ( (byte_4B0204F & 1) == 0 )
+  if ( (byte_4B1C54E & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Count__,
       *(_QWORD *)&eventId);
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Item__, v7);
-    sub_1BC3008(&Method_System_Collections_Generic_List_int__Add__, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_List_int___ctor__, v9);
-    sub_1BC3008(&System_Collections_Generic_List_int__TypeInfo, v10);
-    sub_1BC3008(&NetworkManager_TypeInfo, v11);
-    byte_4B0204F = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Item__, v7);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__Add__, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_int___ctor__, v9);
+    sub_1BCAFF8(&System_Collections_Generic_List_int__TypeInfo, v10);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v11);
+    byte_4B1C54E = 1;
   }
-  v12 = (System_Collections_Generic_List_int__o *)sub_1BC3254(System_Collections_Generic_List_int__TypeInfo);
+  v12 = (System_Collections_Generic_List_int__o *)sub_1BCB244(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v12,
-    (const MethodInfo_36835C8 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_369C358 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   NetworkManager__getServerDateTime(0LL);
@@ -1652,7 +1652,7 @@ System_Collections_Generic_List_int__o *__fastcall EventMissionConditionMaster__
     goto LABEL_24;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_324A858 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Count__);
+            (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Count__);
   if ( Count >= 1 )
   {
     v16 = Count;
@@ -1666,7 +1666,7 @@ System_Collections_Generic_List_int__o *__fastcall EventMissionConditionMaster__
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v17,
-               (const MethodInfo_324A8E8 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Item__);
+               (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Item__);
       if ( Item )
       {
         v21 = (EventMissionConditionEntity_o *)Item;
@@ -1702,7 +1702,7 @@ System_Collections_Generic_List_int__o *__fastcall EventMissionConditionMaster__
                 System_Collections_Generic_List_int___AddWithResize(
                   v12,
                   (int32_t)v13,
-                  *(const MethodInfo_3683E1C **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+                  *(const MethodInfo_369CBAC **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
               }
               else
               {
@@ -1717,7 +1717,7 @@ System_Collections_Generic_List_int__o *__fastcall EventMissionConditionMaster__
         return v12;
     }
 LABEL_24:
-    sub_1BC3264(list, v13);
+    sub_1BCB254(list, v13);
   }
   return v12;
 }
@@ -1776,24 +1776,24 @@ int32_t __fastcall EventMissionConditionMaster__getTodayFirstMissionId(
   System_DateTime_o v50; // 0:x0.8
 
   v3 = &NetworkManager_TypeInfo;
-  if ( (byte_4B02050 & 1) == 0 )
+  if ( (byte_4B1C54F & 1) == 0 )
   {
-    sub_1BC3008(
+    sub_1BCAFF8(
       &Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Count__,
       *(_QWORD *)&eventId);
-    sub_1BC3008(&Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Item__, v6);
-    sub_1BC3008(&System_Comparison_EventMissionConditionEntity__TypeInfo, v7);
-    sub_1BC3008(&System_DateTime_TypeInfo, v8);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, v9);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Sort__, v10);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v11);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Count__, v12);
-    sub_1BC3008(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__, v13);
-    sub_1BC3008(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v14);
-    sub_1BC3008(&NetworkManager_TypeInfo, v15);
-    sub_1BC3008(&Method_EventMissionConditionMaster___c__getTodayFirstMissionId_b__13_0__, v16);
-    sub_1BC3008(&EventMissionConditionMaster___c_TypeInfo, v17);
-    byte_4B02050 = 1;
+    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Item__, v6);
+    sub_1BCAFF8(&System_Comparison_EventMissionConditionEntity__TypeInfo, v7);
+    sub_1BCAFF8(&System_DateTime_TypeInfo, v8);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Add__, v9);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__Sort__, v10);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__, v11);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Count__, v12);
+    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__, v13);
+    sub_1BCAFF8(&System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo, v14);
+    sub_1BCAFF8(&NetworkManager_TypeInfo, v15);
+    sub_1BCAFF8(&Method_EventMissionConditionMaster___c__getTodayFirstMissionId_b__13_0__, v16);
+    sub_1BCAFF8(&EventMissionConditionMaster___c_TypeInfo, v17);
+    byte_4B1C54F = 1;
   }
   v45 = 0LL;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1805,16 +1805,16 @@ int32_t __fastcall EventMissionConditionMaster__getTodayFirstMissionId(
   Month = System_DateTime__get_Month(v47, 0LL);
   v48.fields._dateData = (uint64_t)&dateData;
   Day = System_DateTime__get_Day(v48, 0LL);
-  v20 = (System_Collections_Generic_List_object__o *)sub_1BC3254(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
+  v20 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventMissionConditionEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v20,
-    (const MethodInfo_36A060C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
+    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventMissionConditionEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_40;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_324A858 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Count__);
+            (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Count__);
   if ( Count >= 1 )
   {
     v24 = Count;
@@ -1827,7 +1827,7 @@ int32_t __fastcall EventMissionConditionMaster__getTodayFirstMissionId(
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v25,
-               (const MethodInfo_324A8E8 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Item__);
+               (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_EventMissionConditionEntity__get_Item__);
       if ( Item )
       {
         v27 = Item;
@@ -1838,7 +1838,7 @@ int32_t __fastcall EventMissionConditionMaster__getTodayFirstMissionId(
           monitor = (int64_t)v27[3].monitor;
           if ( !v28->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(v28);
-          v45 = NetworkManager__getServerDateTime_40297788(monitor, 0LL).fields._dateData;
+          v45 = NetworkManager__getServerDateTime_40543292(monitor, 0LL).fields._dateData;
           if ( !System_DateTime_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
           v49.fields._dateData = (uint64_t)&v45;
@@ -1862,14 +1862,14 @@ int32_t __fastcall EventMissionConditionMaster__getTodayFirstMissionId(
               System_Collections_Generic_List_object___AddWithResize(
                 v20,
                 v27,
-                *(const MethodInfo_36A0E40 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+                *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
             }
             else
             {
               v38 = &items->obj.klass + size;
               v20->fields._size = size + 1;
               v38[4] = (Il2CppClass *)v27;
-              sub_1BC2FAC((CGThumbnailListItem_o *)(v38 + 4), (int32_t)v27, v32, v33);
+              sub_1BCAF9C((CGThumbnailListItem_o *)(v38 + 4), (int32_t)v27, v32, v33);
             }
           }
         }
@@ -1878,7 +1878,7 @@ int32_t __fastcall EventMissionConditionMaster__getTodayFirstMissionId(
         goto LABEL_28;
     }
 LABEL_40:
-    sub_1BC3264(list, v21);
+    sub_1BCB254(list, v21);
   }
 LABEL_28:
   list = EventMissionConditionMaster___c_TypeInfo;
@@ -1896,7 +1896,7 @@ LABEL_28:
       list = EventMissionConditionMaster___c_TypeInfo;
     }
     v40 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v39 = (System_Comparison_T__o *)sub_1BC3254(System_Comparison_EventMissionConditionEntity__TypeInfo);
+    v39 = (System_Comparison_T__o *)sub_1BCB244(System_Comparison_EventMissionConditionEntity__TypeInfo);
     System_Comparison_object____ctor(
       v39,
       v40,
@@ -1904,20 +1904,20 @@ LABEL_28:
       0LL);
     static_fields = EventMissionConditionMaster___c_TypeInfo->static_fields;
     static_fields->__9__13_0 = (struct System_Comparison_EventMissionConditionEntity__o *)v39;
-    sub_1BC2FAC((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)v39, v42, v43);
+    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)v39, v42, v43);
   }
   if ( !v20 )
     goto LABEL_40;
-  System_Collections_Generic_List_object___Sort_57288964(
+  System_Collections_Generic_List_object___Sort_57390740(
     v20,
     v39,
-    (const MethodInfo_36A2904 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__Sort__);
+    (const MethodInfo_36BB694 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__Sort__);
   if ( v20->fields._size < 1 )
     return 0;
   list = System_Collections_Generic_List_object___get_Item(
            v20,
            0,
-           (const MethodInfo_36A0B70 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__);
+           (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Item__);
   if ( !list )
     goto LABEL_40;
   return *((_DWORD *)list + 4);
@@ -1931,15 +1931,15 @@ void __fastcall EventMissionConditionMaster___c___cctor(const MethodInfo *method
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  if ( (byte_4B02055 & 1) == 0 )
+  if ( (byte_4B1C554 & 1) == 0 )
   {
-    sub_1BC3008(&EventMissionConditionMaster___c_TypeInfo, v1);
-    byte_4B02055 = 1;
+    sub_1BCAFF8(&EventMissionConditionMaster___c_TypeInfo, v1);
+    byte_4B1C554 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BC3254(EventMissionConditionMaster___c_TypeInfo);
+  v2 = (Il2CppObject *)sub_1BCB244(EventMissionConditionMaster___c_TypeInfo);
   System_Object___ctor(v2, 0LL);
   EventMissionConditionMaster___c_TypeInfo->static_fields->__9 = (struct EventMissionConditionMaster___c_o *)v2;
-  sub_1BC2FAC((CGThumbnailListItem_o *)EventMissionConditionMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  sub_1BCAF9C((CGThumbnailListItem_o *)EventMissionConditionMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
 }
 
 
@@ -1958,7 +1958,7 @@ int32_t __fastcall EventMissionConditionMaster___c___getMissionCondList_b__8_0(
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1BC3264(this, a);
+    sub_1BCB254(this, a);
   return a->fields.missionProgressType - b->fields.missionProgressType;
 }
 
@@ -1970,6 +1970,6 @@ int32_t __fastcall EventMissionConditionMaster___c___getTodayFirstMissionId_b__1
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1BC3264(this, a);
+    sub_1BCB254(this, a);
   return a->fields.id - b->fields.id;
 }

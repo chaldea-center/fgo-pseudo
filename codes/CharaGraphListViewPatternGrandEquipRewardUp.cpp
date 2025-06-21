@@ -12,37 +12,37 @@ void __fastcall CharaGraphListViewPatternGrandEquipRewardUp___ctor(
   System_Collections_Generic_IEnumerable_TSource__o *RewardUpFuncCategory; // x0
   System_Collections_Generic_IEnumerable_TSource__o *RewardUpIgnoreSvtId; // x0
 
-  if ( (byte_4AFCED3 & 1) == 0 )
+  if ( (byte_4B173AD & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataManager_GetMaster_ConstantStrMaster___, otherEquipUserId);
-    sub_1BC3008(&DataManager_TypeInfo, v7);
-    sub_1BC3008(&Method_System_Linq_Enumerable_ToHashSet_int___, v8);
-    byte_4AFCED3 = 1;
+    sub_1BCAFF8(&Method_DataManager_GetMaster_ConstantStrMaster___, otherEquipUserId);
+    sub_1BCAFF8(&DataManager_TypeInfo, v7);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToHashSet_int___, v8);
+    byte_4B173AD = 1;
   }
   CharaGraphListViewPatternServantEquip___ctor((CharaGraphListViewPatternServantEquip_o *)this, 0LL);
   this->fields.otherUsedEquipUserSvtId = otherEquipUserId;
-  sub_1BC2FAC(&this->fields.otherUsedEquipUserSvtId);
+  sub_1BCAF9C(&this->fields.otherUsedEquipUserSvtId);
   this->fields.selectedEquipUserSvtId = selectedEquipUserSvtId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_3001E10 *)Method_DataManager_GetMaster_ConstantStrMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ConstantStrMaster___);
   if ( !Master_object )
-    sub_1BC3264(0LL, v10);
+    sub_1BCB254(0LL, v10);
   v11 = (ConstantStrMaster_o *)Master_object;
   RewardUpFuncCategory = (System_Collections_Generic_IEnumerable_TSource__o *)ConstantStrMaster__GetRewardUpFuncCategory(
                                                                                 (ConstantStrMaster_o *)Master_object,
                                                                                 0LL);
   this->fields.rewardUpCategoryList = (struct System_Collections_Generic_HashSet_int__o *)System_Linq_Enumerable__ToHashSet_int_(
                                                                                             RewardUpFuncCategory,
-                                                                                            (const MethodInfo_3042970 *)Method_System_Linq_Enumerable_ToHashSet_int___);
-  sub_1BC2FAC(&this->fields.rewardUpCategoryList);
+                                                                                            (const MethodInfo_305B6E8 *)Method_System_Linq_Enumerable_ToHashSet_int___);
+  sub_1BCAF9C(&this->fields.rewardUpCategoryList);
   RewardUpIgnoreSvtId = (System_Collections_Generic_IEnumerable_TSource__o *)ConstantStrMaster__GetRewardUpIgnoreSvtId(
                                                                                v11,
                                                                                0LL);
   this->fields.rewardUpIgnoreSvtIdList = (struct System_Collections_Generic_HashSet_int__o *)System_Linq_Enumerable__ToHashSet_int_(
                                                                                                RewardUpIgnoreSvtId,
-                                                                                               (const MethodInfo_3042970 *)Method_System_Linq_Enumerable_ToHashSet_int___);
-  sub_1BC2FAC(&this->fields.rewardUpIgnoreSvtIdList);
+                                                                                               (const MethodInfo_305B6E8 *)Method_System_Linq_Enumerable_ToHashSet_int___);
+  sub_1BCAF9C(&this->fields.rewardUpIgnoreSvtIdList);
 }
 
 
@@ -65,16 +65,16 @@ bool __fastcall CharaGraphListViewPatternGrandEquipRewardUp__Filter(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_4AFCED4 & 1) == 0 )
+  if ( (byte_4B173AE & 1) == 0 )
   {
-    sub_1BC3008(&Method_CharaGraphListViewPatternGrandEquipRewardUp__Filter_b__3_0__, userEquipEntity);
-    sub_1BC3008(&Method_System_Linq_Enumerable_All_int___, v5);
-    sub_1BC3008(&System_Func_int__bool__TypeInfo, v6);
-    sub_1BC3008(&Method_System_Collections_Generic_HashSet_int__Contains__, v7);
-    this = (CharaGraphListViewPatternGrandEquipRewardUp_o *)sub_1BC3008(
+    sub_1BCAFF8(&Method_CharaGraphListViewPatternGrandEquipRewardUp__Filter_b__3_0__, userEquipEntity);
+    sub_1BCAFF8(&Method_System_Linq_Enumerable_All_int___, v5);
+    sub_1BCAFF8(&System_Func_int__bool__TypeInfo, v6);
+    sub_1BCAFF8(&Method_System_Collections_Generic_HashSet_int__Contains__, v7);
+    this = (CharaGraphListViewPatternGrandEquipRewardUp_o *)sub_1BCAFF8(
                                                               &CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
                                                               v8);
-    byte_4AFCED4 = 1;
+    byte_4B173AE = 1;
   }
   if ( !userEquipEntity )
     goto LABEL_11;
@@ -85,16 +85,16 @@ bool __fastcall CharaGraphListViewPatternGrandEquipRewardUp__Filter(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v16.fields.currentCryptoKey = v11;
   *(_QWORD *)&v16.fields.fakeValue = v10;
-  this = (CharaGraphListViewPatternGrandEquipRewardUp_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48024060(
+  this = (CharaGraphListViewPatternGrandEquipRewardUp_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(
                                                             v16,
                                                             0LL);
   if ( !klass )
 LABEL_11:
-    sub_1BC3264(this, userEquipEntity);
+    sub_1BCB254(this, userEquipEntity);
   if ( System_Collections_Generic_HashSet_int___Contains(
          klass,
          (int32_t)this,
-         (const MethodInfo_355857C *)Method_System_Collections_Generic_HashSet_int__Contains__) )
+         (const MethodInfo_357130C *)Method_System_Collections_Generic_HashSet_int__Contains__) )
   {
     return 0;
   }
@@ -102,12 +102,12 @@ LABEL_11:
   if ( !EquipCategoryIdList )
     return 0;
   v13 = (System_Collections_Generic_IEnumerable_TSource__o *)EquipCategoryIdList;
-  v14 = (System_Func_int__bool__o *)sub_1BC3254(System_Func_int__bool__TypeInfo);
+  v14 = (System_Func_int__bool__o *)sub_1BCB244(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(v14, v4, Method_CharaGraphListViewPatternGrandEquipRewardUp__Filter_b__3_0__, 0LL);
   return System_Linq_Enumerable__All_int_(
            v13,
            (System_Func_TSource__bool__o *)v14,
-           (const MethodInfo_300BCBC *)Method_System_Linq_Enumerable_All_int___);
+           (const MethodInfo_30248FC *)Method_System_Linq_Enumerable_All_int___);
 }
 
 
@@ -119,16 +119,16 @@ bool __fastcall CharaGraphListViewPatternGrandEquipRewardUp___Filter_b__3_0(
 {
   System_Collections_Generic_HashSet_int__o *rewardUpCategoryList; // x0
 
-  if ( (byte_4AFCED5 & 1) == 0 )
+  if ( (byte_4B173AF & 1) == 0 )
   {
-    sub_1BC3008(&Method_System_Collections_Generic_HashSet_int__Contains__, *(_QWORD *)&x);
-    byte_4AFCED5 = 1;
+    sub_1BCAFF8(&Method_System_Collections_Generic_HashSet_int__Contains__, *(_QWORD *)&x);
+    byte_4B173AF = 1;
   }
   rewardUpCategoryList = this->fields.rewardUpCategoryList;
   if ( !rewardUpCategoryList )
-    sub_1BC3264(0LL, *(_QWORD *)&x);
+    sub_1BCB254(0LL, *(_QWORD *)&x);
   return System_Collections_Generic_HashSet_int___Contains(
            rewardUpCategoryList,
            x,
-           (const MethodInfo_355857C *)Method_System_Collections_Generic_HashSet_int__Contains__);
+           (const MethodInfo_357130C *)Method_System_Collections_Generic_HashSet_int__Contains__);
 }

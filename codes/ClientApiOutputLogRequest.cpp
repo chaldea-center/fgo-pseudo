@@ -14,16 +14,16 @@ void __fastcall ClientApiOutputLogRequest__beginRequest(
   __int64 v9; // x1
   __int64 v10; // x1
 
-  if ( (byte_4B03A47 & 1) == 0 )
+  if ( (byte_4B1DF52 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_17871/*"code"*/, title);
-    sub_1BC3008(&StringLiteral_23860/*"title"*/, v9);
-    sub_1BC3008(&StringLiteral_21474/*"msg"*/, v10);
-    byte_4B03A47 = 1;
+    sub_1BCAFF8(&StringLiteral_17882/*"code"*/, title);
+    sub_1BCAFF8(&StringLiteral_23882/*"title"*/, v9);
+    sub_1BCAFF8(&StringLiteral_21492/*"msg"*/, v10);
+    byte_4B1DF52 = 1;
   }
-  RequestBase__addField_43185568((RequestBase_o *)this, (System_String_o *)StringLiteral_23860/*"title"*/, title, 0LL);
-  RequestBase__addField_43185568((RequestBase_o *)this, (System_String_o *)StringLiteral_21474/*"msg"*/, message, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17871/*"code"*/, code, 0LL);
+  RequestBase__addField_43348616((RequestBase_o *)this, (System_String_o *)StringLiteral_23882/*"title"*/, title, 0LL);
+  RequestBase__addField_43348616((RequestBase_o *)this, (System_String_o *)StringLiteral_21492/*"msg"*/, message, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17882/*"code"*/, code, 0LL);
   RequestBase__beginRequest((RequestBase_o *)this, 0LL);
 }
 
@@ -32,10 +32,10 @@ System_String_o *__fastcall ClientApiOutputLogRequest__getMockData(
         ClientApiOutputLogRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B03A46 & 1) == 0 )
+  if ( (byte_4B1DF51 & 1) == 0 )
   {
-    sub_1BC3008(&StringLiteral_1/*""*/, method);
-    byte_4B03A46 = 1;
+    sub_1BCAFF8(&StringLiteral_1/*""*/, method);
+    byte_4B1DF51 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -48,16 +48,16 @@ System_String_o *__fastcall ClientApiOutputLogRequest__getURL(
   __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B03A45 & 1) == 0 )
+  if ( (byte_4B1DF50 & 1) == 0 )
   {
-    sub_1BC3008(&NetworkManager_TypeInfo, method);
-    sub_1BC3008(&StringLiteral_4462/*"ClientApi/OutputLog"*/, v2);
-    byte_4B03A45 = 1;
+    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
+    sub_1BCAFF8(&StringLiteral_4464/*"ClientApi/OutputLog"*/, v2);
+    byte_4B1DF50 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62348648(BaseUrl, (System_String_o *)StringLiteral_4462/*"ClientApi/OutputLog"*/, 0LL);
+  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_4464/*"ClientApi/OutputLog"*/, 0LL);
 }
 
 
@@ -71,19 +71,19 @@ void __fastcall ClientApiOutputLogRequest__requestCompleted(
   ResponseData_o *v7; // x0
   __int64 *v8; // x8
 
-  if ( (byte_4B03A48 & 1) == 0 )
+  if ( (byte_4B1DF53 & 1) == 0 )
   {
-    sub_1BC3008(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1BC3008(&StringLiteral_22163/*"ok"*/, v5);
-    sub_1BC3008(&StringLiteral_21997/*"ng"*/, v6);
-    byte_4B03A48 = 1;
+    sub_1BCAFF8(&ResponseCommandKind_TypeInfo, responseList);
+    sub_1BCAFF8(&StringLiteral_22181/*"ok"*/, v5);
+    sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v6);
+    byte_4B1DF53 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v7 = ResponseCommandKind__SearchData(30, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_43184840(v7, 0LL) )
-    v8 = &StringLiteral_22163/*"ok"*/;
+  if ( v7 && ResponseData__checkError_43347888(v7, 0LL) )
+    v8 = &StringLiteral_22181/*"ok"*/;
   else
-    v8 = &StringLiteral_21997/*"ng"*/;
+    v8 = &StringLiteral_22015/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
 }

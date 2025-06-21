@@ -4,25 +4,27 @@ void __fastcall GrandQuestFolderBoardItem___ctor(GrandQuestFolderBoardItem_o *th
 }
 
 
-void __fastcall GrandQuestFolderBoardItem___ctor_32048056(
+void __fastcall GrandQuestFolderBoardItem___ctor_32178856(
         GrandQuestFolderBoardItem_o *this,
         int32_t index,
         int32_t bannerId,
         int32_t warId,
         System_String_o *boardName,
         int32_t iconId,
+        int64_t listCreatedTime,
         const MethodInfo *method)
 {
-  GrandQuestFolderBoardItem_o *v11; // x23
+  GrandQuestFolderBoardItem_o *v13; // x24
 
-  v11 = this;
-  ListViewItem___ctor_42769384((ListViewItem_o *)this, index, 0LL);
-  v11->fields._Name_k__BackingField = boardName;
-  v11 = (GrandQuestFolderBoardItem_o *)((char *)v11 + 120);
-  v11[-1].fields._IconId_k__BackingField = bannerId;
-  *(&v11[-1].fields._IconId_k__BackingField + 1) = warId;
-  sub_1BC2FAC(v11);
-  LODWORD(v11->monitor) = iconId;
+  v13 = this;
+  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  v13->fields._Name_k__BackingField = boardName;
+  v13 = (GrandQuestFolderBoardItem_o *)((char *)v13 + 120);
+  LODWORD(v13[-1].fields._ListCreatedTime_k__BackingField) = bannerId;
+  HIDWORD(v13[-1].fields._ListCreatedTime_k__BackingField) = warId;
+  sub_1BCAF9C(v13);
+  LODWORD(v13->monitor) = iconId;
+  *(_QWORD *)&v13->fields.selectNum = listCreatedTime;
 }
 
 
@@ -35,6 +37,14 @@ int32_t __fastcall GrandQuestFolderBoardItem__get_BannerId(GrandQuestFolderBoard
 int32_t __fastcall GrandQuestFolderBoardItem__get_IconId(GrandQuestFolderBoardItem_o *this, const MethodInfo *method)
 {
   return this->fields._IconId_k__BackingField;
+}
+
+
+int64_t __fastcall GrandQuestFolderBoardItem__get_ListCreatedTime(
+        GrandQuestFolderBoardItem_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._ListCreatedTime_k__BackingField;
 }
 
 

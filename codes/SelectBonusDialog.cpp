@@ -1,9 +1,9 @@
 void __fastcall SelectBonusDialog___ctor(SelectBonusDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4AFC449 & 1) == 0 )
+  if ( (byte_4B16829 & 1) == 0 )
   {
-    sub_1BC3008(&BaseDialog_TypeInfo, method);
-    byte_4AFC449 = 1;
+    sub_1BCAFF8(&BaseDialog_TypeInfo, method);
+    byte_4B16829 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -21,11 +21,11 @@ void __fastcall SelectBonusDialog__Close(SelectBonusDialog_o *this, const Method
 {
   const MethodInfo *v2; // x2
 
-  SelectBonusDialog__Close_30922664(this, 0LL, v2);
+  SelectBonusDialog__Close_30955684(this, 0LL, v2);
 }
 
 
-void __fastcall SelectBonusDialog__Close_30922664(
+void __fastcall SelectBonusDialog__Close_30955684(
         SelectBonusDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -37,23 +37,23 @@ void __fastcall SelectBonusDialog__Close_30922664(
   __int64 v9; // x1
   System_Action_o *v10; // x20
 
-  if ( (byte_4AFC447 & 1) == 0 )
+  if ( (byte_4B16827 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, callback);
-    sub_1BC3008(&Method_SelectBonusDialog___c__DisplayClass10_0__Close_b__0__, v5);
-    sub_1BC3008(&SelectBonusDialog___c__DisplayClass10_0_TypeInfo, v6);
-    byte_4AFC447 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, callback);
+    sub_1BCAFF8(&Method_SelectBonusDialog___c__DisplayClass10_0__Close_b__0__, v5);
+    sub_1BCAFF8(&SelectBonusDialog___c__DisplayClass10_0_TypeInfo, v6);
+    byte_4B16827 = 1;
   }
-  v7 = (Il2CppObject *)sub_1BC3254(SelectBonusDialog___c__DisplayClass10_0_TypeInfo);
+  v7 = (Il2CppObject *)sub_1BCB244(SelectBonusDialog___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor(v7, 0LL);
   if ( !v7 )
-    sub_1BC3264(v8, v9);
+    sub_1BCB254(v8, v9);
   v7[1].klass = (Il2CppClass *)this;
-  sub_1BC2FAC(&v7[1]);
+  sub_1BCAF9C(&v7[1]);
   v7[1].monitor = callback;
-  sub_1BC2FAC(&v7[1].monitor);
+  sub_1BCAF9C(&v7[1].monitor);
   this->fields.state = 3;
-  v10 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(v10, v7, Method_SelectBonusDialog___c__DisplayClass10_0__Close_b__0__, 0LL);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
 }
@@ -72,7 +72,7 @@ void __fastcall SelectBonusDialog__ExecClickedFunc(SelectBonusDialog_o *this, in
       index,
       *(_QWORD *)&clickedFunc->fields.extra_arg);
   *p_clickedFunc = 0LL;
-  sub_1BC2FAC(p_clickedFunc);
+  sub_1BCAF9C(p_clickedFunc);
 }
 
 
@@ -93,17 +93,17 @@ void __fastcall SelectBonusDialog__OnClickIndexButton(
   System_Reflection_MethodBase_o *v6; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4AFC448 & 1) == 0 )
+  if ( (byte_4B16828 & 1) == 0 )
   {
-    sub_1BC3008(&Method_SelectBonusDialog_OnClickIndexButton__, *(_QWORD *)&index);
-    byte_4AFC448 = 1;
+    sub_1BCAFF8(&Method_SelectBonusDialog_OnClickIndexButton__, *(_QWORD *)&index);
+    byte_4B16828 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v5 = Method_SelectBonusDialog_OnClickIndexButton__;
     if ( (*((_BYTE *)Method_SelectBonusDialog_OnClickIndexButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1BC3020(Method_SelectBonusDialog_OnClickIndexButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1BC2FEC(v5, v5[4]);
+      v5 = (_QWORD *)sub_1BCB010(Method_SelectBonusDialog_OnClickIndexButton__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
     SelectBonusDialog__ExecClickedFunc(this, index, v7);
   }
@@ -120,21 +120,21 @@ void __fastcall SelectBonusDialog__Open(
   __int64 v7; // x1
   System_Action_o *v8; // x20
 
-  if ( (byte_4AFC446 & 1) == 0 )
+  if ( (byte_4B16826 & 1) == 0 )
   {
-    sub_1BC3008(&System_Action_TypeInfo, clickedAction);
-    sub_1BC3008(&Method_SelectBonusDialog__Open_b__8_0__, v5);
-    byte_4AFC446 = 1;
+    sub_1BCAFF8(&System_Action_TypeInfo, clickedAction);
+    sub_1BCAFF8(&Method_SelectBonusDialog__Open_b__8_0__, v5);
+    byte_4B16826 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
   if ( !gameObject )
-    sub_1BC3264(0LL, v7);
+    sub_1BCB254(0LL, v7);
   UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
   this->fields.clickedFunc = clickedAction;
-  sub_1BC2FAC(&this->fields.clickedFunc);
+  sub_1BCAF9C(&this->fields.clickedFunc);
   this->fields.state = 1;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 0, 0LL);
-  v8 = (System_Action_o *)sub_1BC3254(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_SelectBonusDialog__Open_b__8_0__, 0LL);
   BaseDialog__Open((BaseDialog_o *)this, v8, 0, 0LL);
 }
@@ -161,10 +161,10 @@ void __fastcall SelectBonusDialog__add_clickedFunc(
   SelectBonusDialog_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4AFC444 & 1) == 0 )
+  if ( (byte_4B16824 & 1) == 0 )
   {
-    sub_1BC3008(&SelectBonusDialog_CallbackFunc_TypeInfo, value);
-    byte_4AFC444 = 1;
+    sub_1BCAFF8(&SelectBonusDialog_CallbackFunc_TypeInfo, value);
+    byte_4B16824 = 1;
   }
   clickedFunc = this->fields.clickedFunc;
   p_clickedFunc = &this->fields.clickedFunc;
@@ -177,13 +177,13 @@ void __fastcall SelectBonusDialog__add_clickedFunc(
       if ( (SelectBonusDialog_CallbackFunc_c *)v8->klass != SelectBonusDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BFD098(p_clickedFunc, v8, v6);
+    v9 = sub_1C05088(p_clickedFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (SelectBonusDialog_o *)sub_1BC3524(v8);
+  v11 = (SelectBonusDialog_o *)sub_1BCB514(v8);
   SelectBonusDialog__remove_clickedFunc(v11, v12, v13);
 }
 
@@ -202,10 +202,10 @@ void __fastcall SelectBonusDialog__remove_clickedFunc(
   SelectBonusDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4AFC445 & 1) == 0 )
+  if ( (byte_4B16825 & 1) == 0 )
   {
-    sub_1BC3008(&SelectBonusDialog_CallbackFunc_TypeInfo, value);
-    byte_4AFC445 = 1;
+    sub_1BCAFF8(&SelectBonusDialog_CallbackFunc_TypeInfo, value);
+    byte_4B16825 = 1;
   }
   clickedFunc = this->fields.clickedFunc;
   p_clickedFunc = &this->fields.clickedFunc;
@@ -218,13 +218,13 @@ void __fastcall SelectBonusDialog__remove_clickedFunc(
       if ( (SelectBonusDialog_CallbackFunc_c *)v8->klass != SelectBonusDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1BFD098(p_clickedFunc, v8, v6);
+    v9 = sub_1C05088(p_clickedFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (SelectBonusDialog_o *)sub_1BC3524(v8);
+  v11 = (SelectBonusDialog_o *)sub_1BCB514(v8);
   SelectBonusDialog__Awake(v11, v12);
 }
 
@@ -247,15 +247,15 @@ void __fastcall SelectBonusDialog_CallbackFunc___ctor(
   v6 = *(_QWORD *)&method;
   *(_QWORD *)&this->fields.method_ptr = v4;
   *(_QWORD *)&this->fields.method = object;
-  sub_1BC2FAC(&this->fields.method);
+  sub_1BCAF9C(&this->fields.method);
   v8 = *(unsigned __int8 *)(v6 + 82);
   this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BC30C8(v6) & 1) == 0 )
+  if ( (sub_1BCB0B8(v6) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1BC3280(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BC3130(v10, 0LL);
+      v10 = sub_1BCB270(0LL, "Delegate to an instance method cannot have null 'this'.");
+      sub_1BCB120(v10, 0LL);
     }
     goto LABEL_5;
   }
@@ -267,9 +267,9 @@ LABEL_5:
     this->fields.original_method_info = v9;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A04AF0;
+  this->fields.m_target = (Il2CppObject *)sub_1A0C8E8;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A04AA8;
+  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A0C8A0;
 }
 
 
@@ -285,14 +285,14 @@ System_IAsyncResult_o *__fastcall SelectBonusDialog_CallbackFunc__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = index;
-  if ( (byte_4AFC44A & 1) == 0 )
+  if ( (byte_4B1682A & 1) == 0 )
   {
-    sub_1BC3008(&int_TypeInfo, *(_QWORD *)&index);
-    byte_4AFC44A = 1;
+    sub_1BCAFF8(&int_TypeInfo, *(_QWORD *)&index);
+    byte_4B1682A = 1;
   }
   v9[1] = 0LL;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1BC2FBC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1BCAFAC(this, v9, callback, object);
 }
 
 
@@ -301,7 +301,7 @@ void __fastcall SelectBonusDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BC2FC0(result, 0LL, method);
+  sub_1BCAFB0(result, 0LL, method);
 }
 
 
@@ -333,7 +333,7 @@ void __fastcall SelectBonusDialog___c__DisplayClass10_0___Close_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BC3264(0LL, method);
+    sub_1BCB254(0LL, method);
   _4__this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)_4__this, 0LL);
   ActionExtensions__Call(this->fields.callback, 0LL);

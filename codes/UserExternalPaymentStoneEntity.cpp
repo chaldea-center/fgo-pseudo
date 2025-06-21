@@ -1,13 +1,13 @@
 void __fastcall UserExternalPaymentStoneEntity___ctor(UserExternalPaymentStoneEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B02E44 & 1) == 0 )
+  if ( (byte_4B1D34D & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B02E44 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
+    byte_4B1D34D = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32ACC04 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,15 +17,15 @@ System_String_o *__fastcall UserExternalPaymentStoneEntity__CreatePK(
         int32_t type,
         const MethodInfo *method)
 {
-  if ( (byte_4B02E43 & 1) == 0 )
+  if ( (byte_4B1D34C & 1) == 0 )
   {
-    sub_1BC3008(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&type);
-    byte_4B02E43 = 1;
+    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&type);
+    byte_4B1D34C = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            type,
-           (const MethodInfo_30000F4 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_3018D34 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
