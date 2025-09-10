@@ -1,10 +1,10 @@
-void __fastcall EventSaveData___ctor(EventSaveData_o *this, const MethodInfo *method)
+void EventSaveData___ctor(EventSaveData_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-System_String_array *__fastcall EventSaveData__GetValueByArray(
+System_String_array *EventSaveData__GetValueByArray(
         EventSaveData_o *this,
         uint16_t separator,
         const MethodInfo *method)
@@ -13,12 +13,12 @@ System_String_array *__fastcall EventSaveData__GetValueByArray(
 
   result = (System_String_array *)this->fields.value;
   if ( result )
-    return System_String__Split((System_String_o *)result, separator, 0, 0LL);
+    return System_String__Split((System_String_o *)result, separator, 0, 0);
   return result;
 }
 
 
-void __fastcall EventSaveData__SetValueByArray(
+void EventSaveData__SetValueByArray(
         EventSaveData_o *this,
         System_String_array *valueArray,
         uint16_t separator,
@@ -31,18 +31,18 @@ void __fastcall EventSaveData__SetValueByArray(
   uint16_t v10; // [xsp+Ch] [xbp-24h] BYREF
 
   v10 = separator;
-  if ( (byte_4B19813 & 1) == 0 )
+  if ( (byte_4C24596 & 1) == 0 )
   {
-    sub_1BCAFF8(&char_TypeInfo, valueArray);
-    byte_4B19813 = 1;
+    sub_1C2D490(&char_TypeInfo);
+    byte_4C24596 = 1;
   }
   if ( valueArray )
   {
     if ( !char_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(char_TypeInfo);
-    v6 = System_Char__ToString((uint16_t)&v10, 0LL);
-    v7 = System_String__Join(v6, valueArray, 0LL);
+    v6 = System_Char__ToString((uint16_t)&v10, 0);
+    v7 = System_String__Join(v6, valueArray, 0);
     this->fields.value = v7;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.value, (int32_t)v7, v8, v9);
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.value, (int32_t)v7, v8, v9);
   }
 }

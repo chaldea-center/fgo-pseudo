@@ -1,12 +1,10 @@
-void __fastcall GrandServantListServantFaceIcon___ctor(
-        GrandServantListServantFaceIcon_o *this,
-        const MethodInfo *method)
+void GrandServantListServantFaceIcon___ctor(GrandServantListServantFaceIcon_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall GrandServantListServantFaceIcon__Setup(
+void GrandServantListServantFaceIcon__Setup(
         GrandServantListServantFaceIcon_o *this,
         UserServantEntity_o *userServantEntity,
         const MethodInfo *method)
@@ -20,40 +18,40 @@ void __fastcall GrandServantListServantFaceIcon__Setup(
   TreasureDvcInfo_o *tdInfo; // [xsp+18h] [xbp-38h] BYREF
   SkillInfo_array *skillInfoList; // [xsp+28h] [xbp-28h] BYREF
 
-  if ( (byte_4B17409 & 1) == 0 )
+  if ( (byte_4C22135 & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, userServantEntity);
-    byte_4B17409 = 1;
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    byte_4C22135 = 1;
   }
-  skillInfoList = 0LL;
-  tdInfo = 0LL;
+  skillInfoList = 0;
+  tdInfo = 0;
   servantFaceIcon = this->fields.servantFaceIcon;
   if ( !servantFaceIcon )
     goto LABEL_12;
-  ServantFaceIconComponent__Set_40190236(servantFaceIcon, userServantEntity, 0LL, 0LL, 0LL);
+  ServantFaceIconComponent__Set_40783748(servantFaceIcon, userServantEntity, 0, 0, 0);
   if ( !userServantEntity )
     goto LABEL_12;
   iconLabelLevel = this->fields.iconLabelLevel;
   lv = userServantEntity->fields.lv;
-  servantFaceIcon = (ServantFaceIconComponent_o *)UserServantEntity__getLevelMax(userServantEntity, 0LL);
+  servantFaceIcon = (ServantFaceIconComponent_o *)UserServantEntity__getLevelMax(userServantEntity, 0);
   if ( !iconLabelLevel )
     goto LABEL_12;
-  UIIconLabel__Set_40290232(iconLabelLevel, 2, lv, (int32_t)servantFaceIcon, 0, 0LL, 0, 0, 0, 0, 0LL);
+  UIIconLabel__Set_40889008(iconLabelLevel, 2, lv, (int32_t)servantFaceIcon, 0, 0, 0, 0, 0, 0, 0);
   iconLabelFriendRank = this->fields.iconLabelFriendRank;
-  servantFaceIcon = (ServantFaceIconComponent_o *)UserServantEntity__getFriendshipRank(userServantEntity, 0LL);
+  servantFaceIcon = (ServantFaceIconComponent_o *)UserServantEntity__getFriendshipRank(userServantEntity, 0);
   if ( !iconLabelFriendRank )
     goto LABEL_12;
-  UIIconLabel__Set_40290232(iconLabelFriendRank, 32, (int32_t)servantFaceIcon, 0, 0, 0LL, 0, 0, 0, 0, 0LL);
-  UserServantEntity__getSkillInfo(userServantEntity, &skillInfoList, -1, -1, 1, 0, -1, 0LL);
-  UserServantEntity__getTreasureDeviceInfo(userServantEntity, &tdInfo, -1, -1, 0, 0LL);
+  UIIconLabel__Set_40889008(iconLabelFriendRank, 32, (int32_t)servantFaceIcon, 0, 0, 0, 0, 0, 0, 0, 0);
+  UserServantEntity__getSkillInfo(userServantEntity, &skillInfoList, -1, -1, 1, 0, -1, 0);
+  UserServantEntity__getTreasureDeviceInfo(userServantEntity, &tdInfo, -1, -1, 0, 0);
   skillListTreasureDevice = this->fields.skillListTreasureDevice;
   v10 = skillInfoList;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__GetLevelList_40457824(v10, 0LL);
+  servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__GetLevelList_41056784(v10, 0);
   if ( !tdInfo || !skillListTreasureDevice )
 LABEL_12:
-    sub_1BCB254(servantFaceIcon, userServantEntity);
+    sub_1C2D6EC(servantFaceIcon, userServantEntity);
   SkillListTreasureDeviceComponent__SetWithoutAdjustPosition(
     skillListTreasureDevice,
     (System_String_o *)servantFaceIcon,
@@ -61,5 +59,5 @@ LABEL_12:
     tdInfo->fields.strengthStatus,
     tdInfo->fields.treasureDeviceNum,
     0,
-    0LL);
+    0);
 }

@@ -1,240 +1,220 @@
-// local variable allocation has failed, the output may be wrong!
-void __fastcall WarBoardBuffSaveRequest__beginRequest(
+void WarBoardBuffSaveRequest__beginRequest(
         WarBoardBuffSaveRequest_o *this,
         int32_t stageId,
         WarBoardPieceData_array *pieces,
         WarBoardSquareIndexData_array *squareIndexInfo,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  WarBoardBuffSaveRequest___c_c *v21; // x0
+  WarBoardBuffSaveRequest___c_c *v9; // x0
   System_Func_object__object__o *_9__1_0; // x24
-  System_String_o *v23; // x23
-  System_String_o *v24; // x22
-  Il2CppObject *v25; // x25
+  System_String_o *v11; // x23
+  System_String_o *v12; // x22
+  Il2CppObject *v13; // x25
   struct WarBoardBuffSaveRequest___c_StaticFields *static_fields; // x0
-  int32_t v27; // w2
-  const MethodInfo *v28; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v29; // x0
-  System_String_array *v30; // x0
-  Il2CppObject *v31; // x0
-  RequestBase_o *v32; // x0
-  const MethodInfo *v33; // x2
-  System_Byte_array *v34; // x21
-  System_Byte_array *v35; // x21
-  System_String_o *v36; // x0
-  const MethodInfo *v37; // x3
-  RequestBase_o *v38; // x0
-  const MethodInfo *v39; // x2
-  System_Byte_array *v40; // x0
-  System_Byte_array *v41; // x0
-  System_String_o *v42; // x0
-  const MethodInfo *v43; // x3
-  const MethodInfo *v44; // x1
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v17; // x0
+  System_String_array *v18; // x0
+  Il2CppObject *v19; // x0
+  RequestBase_o *v20; // x0
+  const MethodInfo *v21; // x2
+  System_Byte_array *v22; // x21
+  System_Byte_array *v23; // x21
+  System_String_o *v24; // x0
+  const MethodInfo *v25; // x3
+  RequestBase_o *v26; // x0
+  const MethodInfo *v27; // x2
+  System_Byte_array *v28; // x0
+  System_Byte_array *v29; // x0
+  System_String_o *v30; // x0
+  const MethodInfo *v31; // x3
+  const MethodInfo *v32; // x1
 
-  if ( (byte_4B1E0F8 & 1) == 0 )
+  if ( (byte_4C28F0A & 1) == 0 )
   {
-    sub_1BCAFF8(&CatAndMouseGame_TypeInfo, *(_QWORD *)&stageId);
-    sub_1BCAFF8(&System_Convert_TypeInfo, v9);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Select_WarBoardPieceData__string___, v10);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_string___, v11);
-    sub_1BCAFF8(&System_Func_WarBoardPieceData__string__TypeInfo, v12);
-    sub_1BCAFF8(&JsonManager_TypeInfo, v13);
-    sub_1BCAFF8(&Method_WarBoardBuffSaveRequest___c__beginRequest_b__1_0__, v14);
-    sub_1BCAFF8(&WarBoardBuffSaveRequest___c_TypeInfo, v15);
-    sub_1BCAFF8(&StringLiteral_23437/*"stageId"*/, v16);
-    sub_1BCAFF8(&StringLiteral_23655/*"svtInfo"*/, v17);
-    sub_1BCAFF8(&StringLiteral_23417/*"squareIndexInfo"*/, v18);
-    sub_1BCAFF8(&StringLiteral_806/*","*/, v19);
-    sub_1BCAFF8(&StringLiteral_15881/*"[{0}]"*/, v20);
-    byte_4B1E0F8 = 1;
+    sub_1C2D490(&CatAndMouseGame_TypeInfo);
+    sub_1C2D490(&System_Convert_TypeInfo);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Select_WarBoardPieceData__string___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_ToArray_string___);
+    sub_1C2D490(&System_Func_WarBoardPieceData__string__TypeInfo);
+    sub_1C2D490(&JsonManager_TypeInfo);
+    sub_1C2D490(&Method_WarBoardBuffSaveRequest___c__beginRequest_b__1_0__);
+    sub_1C2D490(&WarBoardBuffSaveRequest___c_TypeInfo);
+    sub_1C2D490(&StringLiteral_23626/*"stageId"*/);
+    sub_1C2D490(&StringLiteral_23848/*"svtInfo"*/);
+    sub_1C2D490(&StringLiteral_23606/*"squareIndexInfo"*/);
+    sub_1C2D490(&StringLiteral_811/*","*/);
+    sub_1C2D490(&StringLiteral_16013/*"[{0}]"*/);
+    byte_4C28F0A = 1;
   }
   RequestBase__addField(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_23437/*"stageId"*/,
+    (System_String_o *)StringLiteral_23626/*"stageId"*/,
     stageId,
     (const MethodInfo *)squareIndexInfo);
-  v21 = WarBoardBuffSaveRequest___c_TypeInfo;
+  v9 = WarBoardBuffSaveRequest___c_TypeInfo;
   if ( !WarBoardBuffSaveRequest___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardBuffSaveRequest___c_TypeInfo);
-    v21 = WarBoardBuffSaveRequest___c_TypeInfo;
+    v9 = WarBoardBuffSaveRequest___c_TypeInfo;
   }
-  _9__1_0 = (System_Func_object__object__o *)v21->static_fields->__9__1_0;
-  v23 = (System_String_o *)StringLiteral_806/*","*/;
-  v24 = (System_String_o *)StringLiteral_15881/*"[{0}]"*/;
+  _9__1_0 = (System_Func_object__object__o *)v9->static_fields->__9__1_0;
+  v11 = (System_String_o *)StringLiteral_811/*","*/;
+  v12 = (System_String_o *)StringLiteral_16013/*"[{0}]"*/;
   if ( !_9__1_0 )
   {
-    if ( !v21->_2.cctor_finished )
+    if ( !v9->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v21);
-      v21 = WarBoardBuffSaveRequest___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v9);
+      v9 = WarBoardBuffSaveRequest___c_TypeInfo;
     }
-    v25 = (Il2CppObject *)v21->static_fields->__9;
-    _9__1_0 = (System_Func_object__object__o *)sub_1BCB244(System_Func_WarBoardPieceData__string__TypeInfo);
-    System_Func_object__object____ctor(_9__1_0, v25, Method_WarBoardBuffSaveRequest___c__beginRequest_b__1_0__, 0LL);
+    v13 = (Il2CppObject *)v9->static_fields->__9;
+    _9__1_0 = (System_Func_object__object__o *)sub_1C2D6DC(System_Func_WarBoardPieceData__string__TypeInfo);
+    System_Func_object__object____ctor(_9__1_0, v13, Method_WarBoardBuffSaveRequest___c__beginRequest_b__1_0__, 0);
     static_fields = WarBoardBuffSaveRequest___c_TypeInfo->static_fields;
     static_fields->__9__1_0 = (struct System_Func_WarBoardPieceData__string__o *)_9__1_0;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v27, v28);
+    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__1_0, (int32_t)_9__1_0, v15, v16);
   }
-  v29 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
+  v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)pieces,
                                                                (System_Func_TSource__TResult__o *)_9__1_0,
-                                                               (const MethodInfo_304EFCC *)Method_System_Linq_Enumerable_Select_WarBoardPieceData__string___);
-  v30 = (System_String_array *)System_Linq_Enumerable__ToArray_object_(
-                                 v29,
-                                 (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_string___);
-  v31 = (Il2CppObject *)System_String__Join(v23, v30, 0LL);
-  v32 = (RequestBase_o *)System_String__Format(v24, v31, 0LL);
-  v34 = RequestBase__PackToMessagePack(v32, (Il2CppObject *)v32, v33);
+                                                               (const MethodInfo_310501C *)Method_System_Linq_Enumerable_Select_WarBoardPieceData__string___);
+  v18 = (System_String_array *)System_Linq_Enumerable__ToArray_object_(
+                                 v17,
+                                 (const MethodInfo_310DFEC *)Method_System_Linq_Enumerable_ToArray_string___);
+  v19 = (Il2CppObject *)System_String__Join(v11, v18, 0);
+  v20 = (RequestBase_o *)System_String__Format(v12, v19, 0);
+  v22 = RequestBase__PackToMessagePack(v20, (Il2CppObject *)v20, v21);
   if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-  v35 = CatAndMouseGame__CatGame5Bytes(v34, 0LL);
+  v23 = CatAndMouseGame__CatGame5Bytes(v22, 0);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v36 = System_Convert__ToBase64String(v35, 0LL);
-  RequestBase__addField_43348616((RequestBase_o *)this, (System_String_o *)StringLiteral_23655/*"svtInfo"*/, v36, v37);
+  v24 = System_Convert__ToBase64String(v23, 0);
+  RequestBase__addField_44009064((RequestBase_o *)this, (System_String_o *)StringLiteral_23848/*"svtInfo"*/, v24, v25);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v38 = (RequestBase_o *)JsonManager__toJson(&squareIndexInfo->obj, 0, 0, 0LL);
-  v40 = RequestBase__PackToMessagePack(v38, (Il2CppObject *)v38, v39);
-  v41 = CatAndMouseGame__CatGame5Bytes(v40, 0LL);
-  v42 = System_Convert__ToBase64String(v41, 0LL);
-  RequestBase__addField_43348616((RequestBase_o *)this, (System_String_o *)StringLiteral_23417/*"squareIndexInfo"*/, v42, v43);
-  RequestBase__beginRequest((RequestBase_o *)this, v44);
+  v26 = (RequestBase_o *)JsonManager__toJson(&squareIndexInfo->obj, 0, 0, 0);
+  v28 = RequestBase__PackToMessagePack(v26, (Il2CppObject *)v26, v27);
+  v29 = CatAndMouseGame__CatGame5Bytes(v28, 0);
+  v30 = System_Convert__ToBase64String(v29, 0);
+  RequestBase__addField_44009064((RequestBase_o *)this, (System_String_o *)StringLiteral_23606/*"squareIndexInfo"*/, v30, v31);
+  RequestBase__beginRequest((RequestBase_o *)this, v32);
 }
 
 
-System_String_o *__fastcall WarBoardBuffSaveRequest__getURL(WarBoardBuffSaveRequest_o *this, const MethodInfo *method)
+System_String_o *WarBoardBuffSaveRequest__getURL(WarBoardBuffSaveRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B1E0F7 & 1) == 0 )
+  if ( (byte_4C28F09 & 1) == 0 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_24515/*"warBoard/buffSave"*/, v2);
-    byte_4B1E0F7 = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_24709/*"warBoard/buffSave"*/);
+    byte_4C28F09 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_24515/*"warBoard/buffSave"*/, 0LL);
+  BaseUrl = NetworkManager__getBaseUrl(1, 0);
+  return System_String__Concat_63457864(BaseUrl, (System_String_o *)StringLiteral_24709/*"warBoard/buffSave"*/, 0);
 }
 
 
-void __fastcall WarBoardBuffSaveRequest__requestCompleted(
+void WarBoardBuffSaveRequest__requestCompleted(
         WarBoardBuffSaveRequest_o *this,
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  ResponseData_o *v10; // x0
-  const MethodInfo *v11; // x2
-  ResponseData_o *v12; // x20
+  ResponseData_o *v5; // x0
+  const MethodInfo *v6; // x2
+  ResponseData_o *v7; // x20
   System_Collections_Generic_Dictionary_object__object__o *success; // x20
   Il2CppObject *Item; // x0
-  const MethodInfo *v15; // x2
-  Il2CppObject *v16; // x0
-  System_String_o *v17; // x0
+  const MethodInfo *v10; // x2
+  Il2CppObject *v11; // x0
+  System_String_o *v12; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v19; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v14; // x8
 
-  if ( (byte_4B1E0F9 & 1) == 0 )
+  if ( (byte_4C28F0B & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, responseList);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__, v5);
-    sub_1BCAFF8(&JsonManager_TypeInfo, v6);
-    sub_1BCAFF8(&ResponseCommandKind_TypeInfo, v7);
-    sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v8);
-    sub_1BCAFF8(&StringLiteral_24528/*"warBoardData"*/, v9);
-    byte_4B1E0F9 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    sub_1C2D490(&JsonManager_TypeInfo);
+    sub_1C2D490(&ResponseCommandKind_TypeInfo);
+    sub_1C2D490(&StringLiteral_22195/*"ng"*/);
+    sub_1C2D490(&StringLiteral_24722/*"warBoardData"*/);
+    byte_4C28F0B = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v10 = ResponseCommandKind__SearchData(92, responseList, 0LL);
-  if ( v10
-    && (v12 = v10, ResponseData__checkError(v10, v10->fields.resCode, v11))
-    && (success = (System_Collections_Generic_Dictionary_object__object__o *)v12->fields.success) != 0LL )
+  v5 = ResponseCommandKind__SearchData(92, responseList, 0);
+  if ( v5
+    && (v7 = v5, ResponseData__checkError(v5, v5->fields.resCode, v6))
+    && (success = (System_Collections_Generic_Dictionary_object__object__o *)v7->fields.success) != 0 )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_24528/*"warBoardData"*/,
-             (const MethodInfo_3385CF8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    v16 = RequestBase__UnpackToMessagePack((RequestBase_o *)Item, Item, v15);
+             (Il2CppObject *)StringLiteral_24722/*"warBoardData"*/,
+             (const MethodInfo_344A2A8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    v11 = RequestBase__UnpackToMessagePack((RequestBase_o *)Item, Item, v10);
     System_Collections_Generic_Dictionary_object__object___set_Item(
       success,
-      (Il2CppObject *)StringLiteral_24528/*"warBoardData"*/,
-      v16,
-      (const MethodInfo_3385D64 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+      (Il2CppObject *)StringLiteral_24722/*"warBoardData"*/,
+      v11,
+      (const MethodInfo_344A314 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v17 = JsonManager__toJson((Il2CppObject *)success, 0, 0, 0LL);
+    v12 = JsonManager__toJson((Il2CppObject *)success, 0, 0, 0);
     CallBack = this->fields.CallBack;
     if ( CallBack )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
-        CallBack->fields.original_method_info,
-        v17,
-        *(_QWORD *)&CallBack->fields.extra_arg);
+      ((void (__fastcall *)(intptr_t, System_String_o *, intptr_t))CallBack->fields.invoke_impl)(
+        CallBack->fields.method_code,
+        v12,
+        CallBack->fields.method);
   }
   else
   {
-    v19 = this->fields.CallBack;
-    if ( v19 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v19->fields.m_target)(
-        v19->fields.original_method_info,
-        StringLiteral_22015/*"ng"*/,
-        *(_QWORD *)&v19->fields.extra_arg);
+    v14 = this->fields.CallBack;
+    if ( v14 )
+      ((void (__fastcall *)(intptr_t, __int64, intptr_t))v14->fields.invoke_impl)(
+        v14->fields.method_code,
+        StringLiteral_22195/*"ng"*/,
+        v14->fields.method);
   }
 }
 
 
-void __fastcall WarBoardBuffSaveRequest___c___cctor(const MethodInfo *method)
+void WarBoardBuffSaveRequest___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  const MethodInfo *v4; // x3
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
 
-  if ( (byte_4B1E0FA & 1) == 0 )
+  if ( (byte_4C28F0C & 1) == 0 )
   {
-    sub_1BCAFF8(&WarBoardBuffSaveRequest___c_TypeInfo, v1);
-    byte_4B1E0FA = 1;
+    sub_1C2D490(&WarBoardBuffSaveRequest___c_TypeInfo);
+    byte_4C28F0C = 1;
   }
-  v2 = (Il2CppObject *)sub_1BCB244(WarBoardBuffSaveRequest___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  WarBoardBuffSaveRequest___c_TypeInfo->static_fields->__9 = (struct WarBoardBuffSaveRequest___c_o *)v2;
-  sub_1BCAF9C((CGThumbnailListItem_o *)WarBoardBuffSaveRequest___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  v1 = (Il2CppObject *)sub_1C2D6DC(WarBoardBuffSaveRequest___c_TypeInfo);
+  System_Object___ctor(v1, 0);
+  WarBoardBuffSaveRequest___c_TypeInfo->static_fields->__9 = (struct WarBoardBuffSaveRequest___c_o *)v1;
+  sub_1C2D434((CGThumbnailListItem_o *)WarBoardBuffSaveRequest___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
-void __fastcall WarBoardBuffSaveRequest___c___ctor(WarBoardBuffSaveRequest___c_o *this, const MethodInfo *method)
+void WarBoardBuffSaveRequest___c___ctor(WarBoardBuffSaveRequest___c_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-System_String_o *__fastcall WarBoardBuffSaveRequest___c___beginRequest_b__1_0(
+System_String_o *WarBoardBuffSaveRequest___c___beginRequest_b__1_0(
         WarBoardBuffSaveRequest___c_o *this,
         WarBoardPieceData_o *x,
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BCB254(this, 0LL);
-  return WarBoardPieceData__ToJson(x, 0LL);
+    sub_1C2D6EC(this, 0);
+  return WarBoardPieceData__ToJson(x, 0);
 }

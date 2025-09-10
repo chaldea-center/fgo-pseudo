@@ -1,19 +1,19 @@
-void __fastcall EquipSkillMaster___ctor(EquipSkillMaster_o *this, const MethodInfo *method)
+void EquipSkillMaster___ctor(EquipSkillMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C3A6 & 1) == 0 )
+  if ( (byte_4C27152 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string___ctor__, method);
-    byte_4B1C3A6 = 1;
+    sub_1C2D490(&Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string___ctor__);
+    byte_4C27152 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     53,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-EquipSkillEntity_o *__fastcall EquipSkillMaster__GetEntity(
+EquipSkillEntity_o *EquipSkillMaster__GetEntity(
         EquipSkillMaster_o *this,
         int32_t equipId,
         int32_t num,
@@ -21,21 +21,21 @@ EquipSkillEntity_o *__fastcall EquipSkillMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1C3A4 & 1) == 0 )
+  if ( (byte_4C27150 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__GetEntity__, *(_QWORD *)&equipId);
-    byte_4B1C3A4 = 1;
+    sub_1C2D490(&Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__GetEntity__);
+    byte_4C27150 = 1;
   }
   PK = (Il2CppObject *)EquipSkillEntity__CreatePK(equipId, num, *(const MethodInfo **)&num);
   return (EquipSkillEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_32CC8B8 *)Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__GetEntity__);
+                                 (const MethodInfo_338C850 *)Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall EquipSkillMaster__TryGetEntity(
+bool EquipSkillMaster__TryGetEntity(
         EquipSkillMaster_o *this,
         EquipSkillEntity_o **entity,
         int32_t equipId,
@@ -44,15 +44,15 @@ bool __fastcall EquipSkillMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1C3A5 & 1) == 0 )
+  if ( (byte_4C27151 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__TryGetEntity__, entity);
-    byte_4B1C3A5 = 1;
+    sub_1C2D490(&Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__TryGetEntity__);
+    byte_4C27151 = 1;
   }
   PK = (Il2CppObject *)EquipSkillEntity__CreatePK(equipId, num, *(const MethodInfo **)&equipId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_EquipSkillMaster__EquipSkillEntity__string__TryGetEntity__);
 }

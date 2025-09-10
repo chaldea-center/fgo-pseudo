@@ -1,18 +1,17 @@
-void __fastcall ServantCostumeReleaseEntity___ctor(ServantCostumeReleaseEntity_o *this, const MethodInfo *method)
+void ServantCostumeReleaseEntity___ctor(ServantCostumeReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CDA6 & 1) == 0 )
+  if ( (byte_4C27B84 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1CDA6 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C27B84 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall ServantCostumeReleaseEntity__CreatePK(
+System_String_o *ServantCostumeReleaseEntity__CreatePK(
         int32_t svtId,
         int32_t releaseType,
         int32_t costumeId,
@@ -20,10 +19,10 @@ System_String_o *__fastcall ServantCostumeReleaseEntity__CreatePK(
         int32_t condTargetId,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CDA4 & 1) == 0 )
+  if ( (byte_4C27B82 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___, *(_QWORD *)&releaseType);
-    byte_4B1CDA4 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
+    byte_4C27B82 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int__int_(
            svtId,
@@ -31,11 +30,11 @@ System_String_o *__fastcall ServantCostumeReleaseEntity__CreatePK(
            costumeId,
            condType,
            condTargetId,
-           (const MethodInfo_3019AC0 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
+           (const MethodInfo_30CD96C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int__int___);
 }
 
 
-System_String_o *__fastcall ServantCostumeReleaseEntity__CreatePrimaryKey(
+System_String_o *ServantCostumeReleaseEntity__CreatePrimaryKey(
         ServantCostumeReleaseEntity_o *this,
         const MethodInfo *method)
 {
@@ -51,7 +50,7 @@ System_String_o *__fastcall ServantCostumeReleaseEntity__CreatePrimaryKey(
 }
 
 
-bool __fastcall ServantCostumeReleaseEntity__IsAvailable(ServantCostumeReleaseEntity_o *this, const MethodInfo *method)
+bool ServantCostumeReleaseEntity__IsAvailable(ServantCostumeReleaseEntity_o *this, const MethodInfo *method)
 {
   int32_t condType; // w20
   int32_t svtId; // w20
@@ -60,10 +59,10 @@ bool __fastcall ServantCostumeReleaseEntity__IsAvailable(ServantCostumeReleaseEn
   int32_t v7; // w1
   int32_t condTargetId; // w21
 
-  if ( (byte_4B1CDA5 & 1) == 0 )
+  if ( (byte_4C27B83 & 1) == 0 )
   {
-    sub_1BCAFF8(&CondType_TypeInfo, method);
-    byte_4B1CDA5 = 1;
+    sub_1C2D490(&CondType_TypeInfo);
+    byte_4C27B83 = 1;
   }
   condType = this->fields.condType;
   if ( condType == 64 )
@@ -84,11 +83,11 @@ bool __fastcall ServantCostumeReleaseEntity__IsAvailable(ServantCostumeReleaseEn
     v6 = condType;
     v7 = condTargetId;
   }
-  return CondType__IsOpen(v6, v7, costumeId, 0, 0LL, 0LL);
+  return CondType__IsOpen(v6, v7, costumeId, 0, 0, 0);
 }
 
 
-bool __fastcall ServantCostumeReleaseEntity__IsCondAboutQuestClear(
+bool ServantCostumeReleaseEntity__IsCondAboutQuestClear(
         ServantCostumeReleaseEntity_o *this,
         int32_t questId,
         int32_t phase,

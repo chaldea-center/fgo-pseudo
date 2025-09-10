@@ -1,20 +1,18 @@
-void __fastcall UserExternalPaymentStoneMaster___ctor(UserExternalPaymentStoneMaster_o *this, const MethodInfo *method)
+void UserExternalPaymentStoneMaster___ctor(UserExternalPaymentStoneMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D7AF & 1) == 0 )
+  if ( (byte_4C285B3 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_UserExternalPaymentStoneMaster__UserExternalPaymentStoneEntity__string___ctor__,
-      method);
-    byte_4B1D7AF = 1;
+    sub_1C2D490(&Method_DataMasterBase_UserExternalPaymentStoneMaster__UserExternalPaymentStoneEntity__string___ctor__);
+    byte_4C285B3 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     506,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_UserExternalPaymentStoneMaster__UserExternalPaymentStoneEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_UserExternalPaymentStoneMaster__UserExternalPaymentStoneEntity__string___ctor__);
 }
 
 
-UserExternalPaymentStoneEntity_o *__fastcall UserExternalPaymentStoneMaster__GetEntity(
+UserExternalPaymentStoneEntity_o *UserExternalPaymentStoneMaster__GetEntity(
         UserExternalPaymentStoneMaster_o *this,
         int64_t userId,
         int32_t type,
@@ -22,22 +20,20 @@ UserExternalPaymentStoneEntity_o *__fastcall UserExternalPaymentStoneMaster__Get
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1D7B0 & 1) == 0 )
+  if ( (byte_4C285B4 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_UserExternalPaymentStoneMaster__UserExternalPaymentStoneEntity__string__GetEntity__,
-      userId);
-    byte_4B1D7B0 = 1;
+    sub_1C2D490(&Method_DataMasterBase_UserExternalPaymentStoneMaster__UserExternalPaymentStoneEntity__string__GetEntity__);
+    byte_4C285B4 = 1;
   }
-  PK = (Il2CppObject *)UserExternalPaymentStoneEntity__CreatePK(userId, type, 0LL);
+  PK = (Il2CppObject *)UserExternalPaymentStoneEntity__CreatePK(userId, type, 0);
   return (UserExternalPaymentStoneEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                PK,
-                                               (const MethodInfo_32CC8B8 *)Method_DataMasterBase_UserExternalPaymentStoneMaster__UserExternalPaymentStoneEntity__string__GetEntity__);
+                                               (const MethodInfo_338C850 *)Method_DataMasterBase_UserExternalPaymentStoneMaster__UserExternalPaymentStoneEntity__string__GetEntity__);
 }
 
 
-bool __fastcall UserExternalPaymentStoneMaster__TryGetEntity(
+bool UserExternalPaymentStoneMaster__TryGetEntity(
         UserExternalPaymentStoneMaster_o *this,
         UserExternalPaymentStoneEntity_o **entity,
         int64_t userId,
@@ -46,17 +42,15 @@ bool __fastcall UserExternalPaymentStoneMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1D7B1 & 1) == 0 )
+  if ( (byte_4C285B5 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_UserExternalPaymentStoneMaster__UserExternalPaymentStoneEntity__string__TryGetEntity__,
-      entity);
-    byte_4B1D7B1 = 1;
+    sub_1C2D490(&Method_DataMasterBase_UserExternalPaymentStoneMaster__UserExternalPaymentStoneEntity__string__TryGetEntity__);
+    byte_4C285B5 = 1;
   }
-  PK = (Il2CppObject *)UserExternalPaymentStoneEntity__CreatePK(userId, type, 0LL);
+  PK = (Il2CppObject *)UserExternalPaymentStoneEntity__CreatePK(userId, type, 0);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_UserExternalPaymentStoneMaster__UserExternalPaymentStoneEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_UserExternalPaymentStoneMaster__UserExternalPaymentStoneEntity__string__TryGetEntity__);
 }

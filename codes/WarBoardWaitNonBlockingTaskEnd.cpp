@@ -1,104 +1,101 @@
-System_Collections_IEnumerator_o *__fastcall WarBoardWaitNonBlockingTaskEnd__Execute(
+System_Collections_IEnumerator_o *WarBoardWaitNonBlockingTaskEnd__Execute(
         WarBoardWaitNonBlockingTaskEnd_o *this,
         const MethodInfo *method)
 {
   __int64 v2; // x19
 
-  if ( (byte_4B1A221 & 1) == 0 )
+  if ( (byte_4C24FA5 & 1) == 0 )
   {
-    sub_1BCAFF8(&WarBoardWaitNonBlockingTaskEnd__Execute_d__0_TypeInfo, method);
-    byte_4B1A221 = 1;
+    sub_1C2D490(&WarBoardWaitNonBlockingTaskEnd__Execute_d__0_TypeInfo);
+    byte_4C24FA5 = 1;
   }
-  v2 = sub_1BCB244(WarBoardWaitNonBlockingTaskEnd__Execute_d__0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v2, 0LL);
+  v2 = sub_1C2D6DC(WarBoardWaitNonBlockingTaskEnd__Execute_d__0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v2, 0);
   *(_DWORD *)(v2 + 16) = 0;
   return (System_Collections_IEnumerator_o *)v2;
 }
 
 
-void __fastcall WarBoardWaitNonBlockingTaskEnd__Execute_d__0___ctor(
+void WarBoardWaitNonBlockingTaskEnd__Execute_d__0___ctor(
         WarBoardWaitNonBlockingTaskEnd__Execute_d__0_o *this,
         int32_t 1__state,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.__1__state = 1__state;
 }
 
 
-bool __fastcall WarBoardWaitNonBlockingTaskEnd__Execute_d__0__MoveNext(
+bool WarBoardWaitNonBlockingTaskEnd__Execute_d__0__MoveNext(
         WarBoardWaitNonBlockingTaskEnd__Execute_d__0_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   int32_t _1__state; // w8
   bool result; // w0
-  WarBoardWaitNonBlockingTaskEnd___c_c *v8; // x0
+  WarBoardWaitNonBlockingTaskEnd___c_c *v5; // x0
   System_Func_bool__o *_9__0_0; // x20
-  Il2CppObject *v10; // x21
+  Il2CppObject *v7; // x21
   struct WarBoardWaitNonBlockingTaskEnd___c_StaticFields *static_fields; // x0
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  UnityEngine_WaitUntil_o *v11; // x21
   int32_t v12; // w2
   const MethodInfo *v13; // x3
-  UnityEngine_WaitUntil_o *v14; // x21
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  int32_t v17; // w8
+  int32_t v14; // w8
 
-  if ( (byte_4B1A224 & 1) == 0 )
+  if ( (byte_4C24FA8 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Func_bool__TypeInfo, method);
-    sub_1BCAFF8(&Method_WarBoardWaitNonBlockingTaskEnd___c__Execute_b__0_0__, v3);
-    sub_1BCAFF8(&WarBoardWaitNonBlockingTaskEnd___c_TypeInfo, v4);
-    sub_1BCAFF8(&UnityEngine_WaitUntil_TypeInfo, v5);
-    byte_4B1A224 = 1;
+    sub_1C2D490(&System_Func_bool__TypeInfo);
+    sub_1C2D490(&Method_WarBoardWaitNonBlockingTaskEnd___c__Execute_b__0_0__);
+    sub_1C2D490(&WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
+    sub_1C2D490(&UnityEngine_WaitUntil_TypeInfo);
+    byte_4C24FA8 = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
   if ( _1__state == 1 )
   {
-    v17 = -1;
+    v14 = -1;
   }
   else
   {
     if ( _1__state )
       return result;
     this->fields.__1__state = -1;
-    v8 = WarBoardWaitNonBlockingTaskEnd___c_TypeInfo;
+    v5 = WarBoardWaitNonBlockingTaskEnd___c_TypeInfo;
     if ( !WarBoardWaitNonBlockingTaskEnd___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
-      v8 = WarBoardWaitNonBlockingTaskEnd___c_TypeInfo;
+      v5 = WarBoardWaitNonBlockingTaskEnd___c_TypeInfo;
     }
-    _9__0_0 = v8->static_fields->__9__0_0;
+    _9__0_0 = v5->static_fields->__9__0_0;
     if ( !_9__0_0 )
     {
-      if ( !v8->_2.cctor_finished )
+      if ( !v5->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v8);
-        v8 = WarBoardWaitNonBlockingTaskEnd___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v5);
+        v5 = WarBoardWaitNonBlockingTaskEnd___c_TypeInfo;
       }
-      v10 = (Il2CppObject *)v8->static_fields->__9;
-      _9__0_0 = (System_Func_bool__o *)sub_1BCB244(System_Func_bool__TypeInfo);
-      System_Func_bool____ctor(_9__0_0, v10, Method_WarBoardWaitNonBlockingTaskEnd___c__Execute_b__0_0__, 0LL);
+      v7 = (Il2CppObject *)v5->static_fields->__9;
+      _9__0_0 = (System_Func_bool__o *)sub_1C2D6DC(System_Func_bool__TypeInfo);
+      System_Func_bool____ctor(_9__0_0, v7, Method_WarBoardWaitNonBlockingTaskEnd___c__Execute_b__0_0__, 0);
       static_fields = WarBoardWaitNonBlockingTaskEnd___c_TypeInfo->static_fields;
       static_fields->__9__0_0 = _9__0_0;
-      sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v12, v13);
+      sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v9, v10);
     }
-    v14 = (UnityEngine_WaitUntil_o *)sub_1BCB244(UnityEngine_WaitUntil_TypeInfo);
-    UnityEngine_WaitUntil___ctor(v14, _9__0_0, 0LL);
-    this->fields.__2__current = (Il2CppObject *)v14;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v14, v15, v16);
-    v17 = 1;
+    v11 = (UnityEngine_WaitUntil_o *)sub_1C2D6DC(UnityEngine_WaitUntil_TypeInfo);
+    UnityEngine_WaitUntil___ctor(v11, _9__0_0, 0);
+    this->fields.__2__current = (Il2CppObject *)v11;
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v11, v12, v13);
+    v14 = 1;
     result = 1;
   }
-  this->fields.__1__state = v17;
+  this->fields.__1__state = v14;
   return result;
 }
 
 
-Il2CppObject *__fastcall WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_Collections_Generic_IEnumerator_System_Object__get_Current(
+Il2CppObject *WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_Collections_Generic_IEnumerator_System_Object__get_Current(
         WarBoardWaitNonBlockingTaskEnd__Execute_d__0_o *this,
         const MethodInfo *method)
 {
@@ -106,7 +103,7 @@ Il2CppObject *__fastcall WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_Co
 }
 
 
-void __fastcall __noreturn WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_Collections_IEnumerator_Reset(
+void __noreturn WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_Collections_IEnumerator_Reset(
         WarBoardWaitNonBlockingTaskEnd__Execute_d__0_o *this,
         const MethodInfo *method)
 {
@@ -114,15 +111,15 @@ void __fastcall __noreturn WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BCB00C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BCB244(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BCB00C(&Method_WarBoardWaitNonBlockingTaskEnd__Execute_d__0_System_Collections_IEnumerator_Reset__);
-  sub_1BCB120(v3, v4);
+  v2 = sub_1C2D4A4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C2D6DC(v2);
+  System_NotSupportedException___ctor(v3, 0);
+  v4 = sub_1C2D4A4(&Method_WarBoardWaitNonBlockingTaskEnd__Execute_d__0_System_Collections_IEnumerator_Reset__);
+  sub_1C2D5B8(v3, v4);
 }
 
 
-Il2CppObject *__fastcall WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_Collections_IEnumerator_get_Current(
+Il2CppObject *WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_Collections_IEnumerator_get_Current(
         WarBoardWaitNonBlockingTaskEnd__Execute_d__0_o *this,
         const MethodInfo *method)
 {
@@ -130,7 +127,7 @@ Il2CppObject *__fastcall WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_Co
 }
 
 
-void __fastcall WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_IDisposable_Dispose(
+void WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_IDisposable_Dispose(
         WarBoardWaitNonBlockingTaskEnd__Execute_d__0_o *this,
         const MethodInfo *method)
 {
@@ -138,47 +135,44 @@ void __fastcall WarBoardWaitNonBlockingTaskEnd__Execute_d__0__System_IDisposable
 }
 
 
-void __fastcall WarBoardWaitNonBlockingTaskEnd___c___cctor(const MethodInfo *method)
+void WarBoardWaitNonBlockingTaskEnd___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  const MethodInfo *v4; // x3
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
 
-  if ( (byte_4B1A222 & 1) == 0 )
+  if ( (byte_4C24FA6 & 1) == 0 )
   {
-    sub_1BCAFF8(&WarBoardWaitNonBlockingTaskEnd___c_TypeInfo, v1);
-    byte_4B1A222 = 1;
+    sub_1C2D490(&WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
+    byte_4C24FA6 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BCB244(WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  WarBoardWaitNonBlockingTaskEnd___c_TypeInfo->static_fields->__9 = (struct WarBoardWaitNonBlockingTaskEnd___c_o *)v2;
-  sub_1BCAF9C((CGThumbnailListItem_o *)WarBoardWaitNonBlockingTaskEnd___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  v1 = (Il2CppObject *)sub_1C2D6DC(WarBoardWaitNonBlockingTaskEnd___c_TypeInfo);
+  System_Object___ctor(v1, 0);
+  WarBoardWaitNonBlockingTaskEnd___c_TypeInfo->static_fields->__9 = (struct WarBoardWaitNonBlockingTaskEnd___c_o *)v1;
+  sub_1C2D434((CGThumbnailListItem_o *)WarBoardWaitNonBlockingTaskEnd___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
-void __fastcall WarBoardWaitNonBlockingTaskEnd___c___ctor(
-        WarBoardWaitNonBlockingTaskEnd___c_o *this,
-        const MethodInfo *method)
+void WarBoardWaitNonBlockingTaskEnd___c___ctor(WarBoardWaitNonBlockingTaskEnd___c_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall WarBoardWaitNonBlockingTaskEnd___c___Execute_b__0_0(
+bool WarBoardWaitNonBlockingTaskEnd___c___Execute_b__0_0(
         WarBoardWaitNonBlockingTaskEnd___c_o *this,
         const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4B1A223 & 1) == 0 )
+  if ( (byte_4C24FA7 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    byte_4B1A223 = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4C24FA7 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1BCB254(0LL, v3);
-  return WarBoardManager__IsNonBlockTaskEnmpty((WarBoardManager_o *)Instance, 0LL);
+    sub_1C2D6EC(0, v3);
+  return WarBoardManager__IsNonBlockTaskEnmpty((WarBoardManager_o *)Instance, 0);
 }

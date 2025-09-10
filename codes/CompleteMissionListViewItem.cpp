@@ -1,4 +1,4 @@
-void __fastcall CompleteMissionListViewItem___ctor(
+void CompleteMissionListViewItem___ctor(
         CompleteMissionListViewItem_o *this,
         EventMissionEntity_o *missionData,
         int32_t type,
@@ -22,14 +22,14 @@ void __fastcall CompleteMissionListViewItem___ctor(
   CompleteMissionListViewItem_c *klass; // x8
   struct EventMissionEntity_o *v23; // x8
 
-  if ( (byte_4B1B056 & 1) == 0 )
+  if ( (byte_4C25DE7 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1/*""*/, missionData);
-    byte_4B1B056 = 1;
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C25DE7 = 1;
   }
-  MissionListViewItem___ctor((MissionListViewItem_o *)this, 0LL);
+  MissionListViewItem___ctor((MissionListViewItem_o *)this, 0);
   this->fields.eventMissionEnt = missionData;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventMissionEnt, (int32_t)missionData, v7, v8);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.eventMissionEnt, (int32_t)missionData, v7, v8);
   if ( !missionData )
     goto LABEL_7;
   this->fields.currentEventId = missionData->fields.missionTargetId;
@@ -37,45 +37,41 @@ void __fastcall CompleteMissionListViewItem___ctor(
   this->fields.isNew = 0;
   this->fields.currentMissionId = id;
   this->fields.dispNo = missionData->fields.dispNo;
-  v14 = (int)StringLiteral_1/*""*/;
+  v14 = StringLiteral_1/*""*/;
   this->fields.condMsg = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.condMsg, v14, v11, v12);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.condMsg, v14, v11, v12);
   this->fields.progVal = 0.0;
-  this->fields.targetNum = 0LL;
-  this->fields.progNum = 0LL;
-  v15 = (int)StringLiteral_1/*""*/;
+  this->fields.targetNum = 0;
+  this->fields.progNum = 0;
+  v15 = StringLiteral_1/*""*/;
   this->fields.closedMessage = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.closedMessage, v15, v16, v17);
-  v18 = (int)StringLiteral_1/*""*/;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.closedMessage, v15, v16, v17);
+  v18 = StringLiteral_1/*""*/;
   this->fields.progTxt = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.progTxt, v18, v19, v20);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.progTxt, v18, v19, v20);
   eventMissionEnt = this->fields.eventMissionEnt;
   *(_QWORD *)&this->fields.progStatus = 0x400000000LL;
   this->fields.bannerGroupId = missionData->fields.bannerGroup;
   if ( !eventMissionEnt
-    || (isNowMission = EventMissionEntity__isNowMission(eventMissionEnt, 0LL),
+    || (isNowMission = EventMissionEntity__isNowMission(eventMissionEnt, 0),
         klass = this->klass,
         this->fields.missionType = type,
         this->fields.isNowMission = isNowMission,
-        ((void (__fastcall *)(CompleteMissionListViewItem_o *, Il2CppMethodPointer))klass->vtable._6_CheckMissionCond.method)(
+        ((void (__fastcall *)(CompleteMissionListViewItem_o *, const MethodInfo *))klass->vtable._6_CheckMissionCond.methodPtr)(
           this,
-          klass->vtable._7_SetGiftData.methodPtr),
-        MissionListViewItem__SetRewardInfo((MissionListViewItem_o *)this, 0LL),
-        (v23 = this->fields.eventMissionEnt) == 0LL) )
+          klass->vtable._6_CheckMissionCond.method),
+        MissionListViewItem__SetRewardInfo((MissionListViewItem_o *)this, 0),
+        (v23 = this->fields.eventMissionEnt) == 0) )
   {
 LABEL_7:
-    sub_1BCB254(eventMissionEnt, v10);
+    sub_1C2D6EC(eventMissionEnt, v10);
   }
   this->fields.sortValue2 = -v23->fields.id;
 }
 
 
-void __fastcall CompleteMissionListViewItem__CheckMissionCond(
-        CompleteMissionListViewItem_o *this,
-        const MethodInfo *method)
+void CompleteMissionListViewItem__CheckMissionCond(CompleteMissionListViewItem_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   EventMissionEntity_o *eventMissionEnt; // x0
   _BOOL4 isNowMission; // w23
   int32_t currentEventId; // w20
@@ -83,50 +79,50 @@ void __fastcall CompleteMissionListViewItem__CheckMissionCond(
   bool IsIgnoreStartCondition; // w22
   NotEndEventMissionFixEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B1B057 & 1) == 0 )
+  if ( (byte_4C25DE8 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___, method);
-    sub_1BCAFF8(&MissionInfoMaker_TypeInfo, v3);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4B1B057 = 1;
+    sub_1C2D490(&Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___);
+    sub_1C2D490(&MissionInfoMaker_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C25DE8 = 1;
   }
-  entity = 0LL;
+  entity = 0;
   eventMissionEnt = this->fields.eventMissionEnt;
   if ( !eventMissionEnt
-    || (this->fields.isNowMission = EventMissionEntity__isNowMission(eventMissionEnt, 0LL),
-        (eventMissionEnt = (EventMissionEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0LL)
+    || (this->fields.isNowMission = EventMissionEntity__isNowMission(eventMissionEnt, 0),
+        (eventMissionEnt = (EventMissionEntity_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (eventMissionEnt = (EventMissionEntity_o *)DataManager__GetMasterData_object_(
                                                     (DataManager_o *)eventMissionEnt,
-                                                    (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___)) == 0LL
+                                                    (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_NotEndEventMissionFixMaster___)) == 0
     || (!NotEndEventMissionFixMaster__TryGetEntity(
            (NotEndEventMissionFixMaster_o *)eventMissionEnt,
            &entity,
            this->fields.currentEventId,
            this->fields.currentMissionId,
-           0LL)
+           0)
       ? (isNowMission = this->fields.isNowMission)
       : (isNowMission = 1, this->fields.isNowMission = 1),
-        (eventMissionEnt = this->fields.eventMissionEnt) == 0LL) )
+        (eventMissionEnt = this->fields.eventMissionEnt) == 0) )
   {
-    sub_1BCB254(eventMissionEnt, method);
+    sub_1C2D6EC(eventMissionEnt, method);
   }
   currentEventId = this->fields.currentEventId;
   currentMissionId = this->fields.currentMissionId;
-  IsIgnoreStartCondition = EventMissionEntity__IsIgnoreStartCondition(eventMissionEnt, 0LL);
+  IsIgnoreStartCondition = EventMissionEntity__IsIgnoreStartCondition(eventMissionEnt, 0);
   if ( !MissionInfoMaker_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MissionInfoMaker_TypeInfo);
-  this->fields.progType = MissionInfoMaker__GetMissionProgressType_46181736(
+  this->fields.progType = MissionInfoMaker__GetMissionProgressType_46811480(
                             currentEventId,
                             currentMissionId,
                             isNowMission,
                             IsIgnoreStartCondition,
-                            0LL);
-  MissionListViewItem__SetMissionCondInfo((MissionListViewItem_o *)this, 0LL);
-  MissionListViewItem__SetMissionCondMsg((MissionListViewItem_o *)this, 0LL);
+                            0);
+  MissionListViewItem__SetMissionCondInfo((MissionListViewItem_o *)this, 0);
+  MissionListViewItem__SetMissionCondMsg((MissionListViewItem_o *)this, 0);
 }
 
 
-bool __fastcall CompleteMissionListViewItem__SetSortValue(
+bool CompleteMissionListViewItem__SetSortValue(
         CompleteMissionListViewItem_o *this,
         ListViewSort_o *sort,
         const MethodInfo *method)
@@ -136,12 +132,12 @@ bool __fastcall CompleteMissionListViewItem__SetSortValue(
   __int64 progStatus; // x8
   struct EventMissionEntity_o *eventMissionEnt; // x8
 
-  v5 = MissionListViewItem__SetSortValue((MissionListViewItem_o *)this, sort, 0LL);
+  v5 = MissionListViewItem__SetSortValue((MissionListViewItem_o *)this, sort, 0);
   if ( v5 )
   {
     progStatus = this->fields.progStatus;
     if ( (unsigned int)progStatus <= 4 )
-      this->fields.sortValue0 = qword_C1BB38[progStatus];
+      this->fields.sortValue0 = qword_C42EC8[progStatus];
     if ( sort )
     {
       if ( sort->fields.sortKind != 1 )
@@ -154,44 +150,38 @@ bool __fastcall CompleteMissionListViewItem__SetSortValue(
         return 1;
       }
     }
-    sub_1BCB254(v5, v6);
+    sub_1C2D6EC(v5, v6);
   }
   return 0;
 }
 
 
-bool __fastcall CompleteMissionListViewItem__get_IsHideReward(
-        CompleteMissionListViewItem_o *this,
-        const MethodInfo *method)
+bool CompleteMissionListViewItem__get_IsHideReward(CompleteMissionListViewItem_o *this, const MethodInfo *method)
 {
   EventMissionEntity_o *eventMissionEnt; // x0
   bool v4; // w19
 
   eventMissionEnt = this->fields.eventMissionEnt;
   if ( !eventMissionEnt )
-    sub_1BCB254(0LL, method);
+    sub_1C2D6EC(0, method);
   v4 = this->fields.progStatus < 2u;
-  return v4 & EventMissionEntity__IsHideReward(eventMissionEnt, 0LL);
+  return v4 & EventMissionEntity__IsHideReward(eventMissionEnt, 0);
 }
 
 
-bool __fastcall CompleteMissionListViewItem__get_IsHideRewardDetail(
-        CompleteMissionListViewItem_o *this,
-        const MethodInfo *method)
+bool CompleteMissionListViewItem__get_IsHideRewardDetail(CompleteMissionListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields.isHideRewardDetail;
 }
 
 
-int32_t __fastcall CompleteMissionListViewItem__get_MissionType(
-        CompleteMissionListViewItem_o *this,
-        const MethodInfo *method)
+int32_t CompleteMissionListViewItem__get_MissionType(CompleteMissionListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields.missionType;
 }
 
 
-void __fastcall CompleteMissionListViewItem__set_IsHideRewardDetail(
+void CompleteMissionListViewItem__set_IsHideRewardDetail(
         CompleteMissionListViewItem_o *this,
         bool value,
         const MethodInfo *method)

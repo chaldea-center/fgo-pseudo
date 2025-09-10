@@ -1,32 +1,30 @@
-void __fastcall PartyOrganizationConfirmMyServantMenu___cctor(const MethodInfo *method)
+void PartyOrganizationConfirmMyServantMenu___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4B17FC4 & 1) == 0 )
+  if ( (byte_4C22D00 & 1) == 0 )
   {
-    sub_1BCAFF8(&PartyOrganizationConfirmMyServantMenu_TypeInfo, v1);
-    byte_4B17FC4 = 1;
+    sub_1C2D490(&PartyOrganizationConfirmMyServantMenu_TypeInfo);
+    byte_4C22D00 = 1;
   }
   LODWORD(PartyOrganizationConfirmMyServantMenu_TypeInfo->static_fields->MESSAGE_POS_Y_DEFAULT) = (struct PartyOrganizationConfirmMyServantMenu_StaticFields)1118437376;
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu___ctor(
+void PartyOrganizationConfirmMyServantMenu___ctor(
         PartyOrganizationConfirmMyServantMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B17FC3 & 1) == 0 )
+  if ( (byte_4C22CFF & 1) == 0 )
   {
-    sub_1BCAFF8(&BaseDialog_TypeInfo, method);
-    byte_4B17FC3 = 1;
+    sub_1C2D490(&BaseDialog_TypeInfo);
+    byte_4C22CFF = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
-  BaseDialog___ctor((BaseDialog_o *)this, 0LL);
+  BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu__Callback(
+void PartyOrganizationConfirmMyServantMenu__Callback(
         PartyOrganizationConfirmMyServantMenu_o *this,
         bool result,
         const MethodInfo *method)
@@ -41,51 +39,50 @@ void __fastcall PartyOrganizationConfirmMyServantMenu__Callback(
   v5 = callbackFunc;
   if ( callbackFunc )
   {
-    p_callbackFunc->klass = 0LL;
-    sub_1BCAF9C(p_callbackFunc, 0, (int32_t)method, v3);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))v5->fields.m_target)(
-      v5->fields.original_method_info,
+    p_callbackFunc->klass = 0;
+    sub_1C2D434(p_callbackFunc, 0, (int32_t)method, v3);
+    ((void (__fastcall *)(intptr_t, bool, intptr_t))v5->fields.invoke_impl)(
+      v5->fields.method_code,
       result,
-      *(_QWORD *)&v5->fields.extra_arg);
+      v5->fields.method);
   }
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu__Close(
+void PartyOrganizationConfirmMyServantMenu__Close(
         PartyOrganizationConfirmMyServantMenu_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
-  PartyOrganizationConfirmMyServantMenu__Close_33463500(this, 0LL, v2);
+  PartyOrganizationConfirmMyServantMenu__Close_33989900(this, 0, v2);
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu__Close_33463500(
+void PartyOrganizationConfirmMyServantMenu__Close_33989900(
         PartyOrganizationConfirmMyServantMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
-  __int64 v6; // x1
-  System_Action_o *v7; // x20
+  System_Action_o *v6; // x20
 
-  if ( (byte_4B17FBF & 1) == 0 )
+  if ( (byte_4C22CFB & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, callback);
-    sub_1BCAFF8(&Method_PartyOrganizationConfirmMyServantMenu_EndClose__, v6);
-    byte_4B17FBF = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_PartyOrganizationConfirmMyServantMenu_EndClose__);
+    byte_4C22CFB = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
   this->fields.state = 4;
-  v7 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_PartyOrganizationConfirmMyServantMenu_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
+  v6 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_PartyOrganizationConfirmMyServantMenu_EndClose__, 0);
+  BaseDialog__Close((BaseDialog_o *)this, v6, 0);
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu__EndClose(
+void PartyOrganizationConfirmMyServantMenu__EndClose(
         PartyOrganizationConfirmMyServantMenu_o *this,
         const MethodInfo *method)
 {
@@ -101,16 +98,14 @@ void __fastcall PartyOrganizationConfirmMyServantMenu__EndClose(
   v6 = closeCallbackFunc;
   if ( closeCallbackFunc )
   {
-    p_closeCallbackFunc->klass = 0LL;
-    sub_1BCAF9C(p_closeCallbackFunc, 0, v3, v4);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v6->fields.m_target)(
-      v6->fields.original_method_info,
-      *(_QWORD *)&v6->fields.extra_arg);
+    p_closeCallbackFunc->klass = 0;
+    sub_1C2D434(p_closeCallbackFunc, 0, v3, v4);
+    ((void (__fastcall *)(intptr_t, intptr_t))v6->fields.invoke_impl)(v6->fields.method_code, v6->fields.method);
   }
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu__EndOpen(
+void PartyOrganizationConfirmMyServantMenu__EndOpen(
         PartyOrganizationConfirmMyServantMenu_o *this,
         const MethodInfo *method)
 {
@@ -118,40 +113,39 @@ void __fastcall PartyOrganizationConfirmMyServantMenu__EndOpen(
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu__Init(
+void PartyOrganizationConfirmMyServantMenu__Init(
         PartyOrganizationConfirmMyServantMenu_o *this,
         const MethodInfo *method)
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4B17FBD & 1) == 0 )
+  if ( (byte_4C22CF9 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1/*""*/, method);
-    byte_4B17FBD = 1;
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C22CF9 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_9;
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   titleLabel = this->fields.messageLabel;
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
-        (titleLabel = this->fields.decideLabel) == 0LL)
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
-        (titleLabel = this->fields.cancelLabel) == 0LL)
-    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL),
-        (titleLabel = this->fields.closeLabel) == 0LL) )
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
+        (titleLabel = this->fields.decideLabel) == 0)
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
+        (titleLabel = this->fields.cancelLabel) == 0)
+    || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0), (titleLabel = this->fields.closeLabel) == 0) )
   {
 LABEL_9:
-    sub_1BCB254(titleLabel, method);
+    sub_1C2D6EC(titleLabel, method);
   }
-  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.state = 0;
-  BaseDialog__Init((BaseDialog_o *)this, 0LL);
+  BaseDialog__Init((BaseDialog_o *)this, 0);
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu__OnClickCancel(
+void PartyOrganizationConfirmMyServantMenu__OnClickCancel(
         PartyOrganizationConfirmMyServantMenu_o *this,
         const MethodInfo *method)
 {
@@ -159,25 +153,25 @@ void __fastcall PartyOrganizationConfirmMyServantMenu__OnClickCancel(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4B17FC1 & 1) == 0 )
+  if ( (byte_4C22CFD & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_PartyOrganizationConfirmMyServantMenu_OnClickCancel__, method);
-    byte_4B17FC1 = 1;
+    sub_1C2D490(&Method_PartyOrganizationConfirmMyServantMenu_OnClickCancel__);
+    byte_4C22CFD = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationConfirmMyServantMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_PartyOrganizationConfirmMyServantMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BCB010(Method_PartyOrganizationConfirmMyServantMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_PartyOrganizationConfirmMyServantMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     PartyOrganizationConfirmMyServantMenu__Callback(this, 0, v5);
   }
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu__OnClickClose(
+void PartyOrganizationConfirmMyServantMenu__OnClickClose(
         PartyOrganizationConfirmMyServantMenu_o *this,
         const MethodInfo *method)
 {
@@ -185,25 +179,25 @@ void __fastcall PartyOrganizationConfirmMyServantMenu__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4B17FC2 & 1) == 0 )
+  if ( (byte_4C22CFE & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_PartyOrganizationConfirmMyServantMenu_OnClickClose__, method);
-    byte_4B17FC2 = 1;
+    sub_1C2D490(&Method_PartyOrganizationConfirmMyServantMenu_OnClickClose__);
+    byte_4C22CFE = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationConfirmMyServantMenu_OnClickClose__;
     if ( (*((_BYTE *)Method_PartyOrganizationConfirmMyServantMenu_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BCB010(Method_PartyOrganizationConfirmMyServantMenu_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_PartyOrganizationConfirmMyServantMenu_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     PartyOrganizationConfirmMyServantMenu__Callback(this, 0, v5);
   }
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu__OnClickDecide(
+void PartyOrganizationConfirmMyServantMenu__OnClickDecide(
         PartyOrganizationConfirmMyServantMenu_o *this,
         const MethodInfo *method)
 {
@@ -211,26 +205,25 @@ void __fastcall PartyOrganizationConfirmMyServantMenu__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4B17FC0 & 1) == 0 )
+  if ( (byte_4C22CFC & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_PartyOrganizationConfirmMyServantMenu_OnClickDecide__, method);
-    byte_4B17FC0 = 1;
+    sub_1C2D490(&Method_PartyOrganizationConfirmMyServantMenu_OnClickDecide__);
+    byte_4C22CFC = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationConfirmMyServantMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_PartyOrganizationConfirmMyServantMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BCB010(Method_PartyOrganizationConfirmMyServantMenu_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_PartyOrganizationConfirmMyServantMenu_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     PartyOrganizationConfirmMyServantMenu__Callback(this, 1, v5);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall PartyOrganizationConfirmMyServantMenu__Open(
+void PartyOrganizationConfirmMyServantMenu__Open(
         PartyOrganizationConfirmMyServantMenu_o *this,
         int32_t kind,
         PartyListViewItem_o *partyItem,
@@ -239,270 +232,239 @@ void __fastcall PartyOrganizationConfirmMyServantMenu__Open(
         PartyOrganizationConfirmMyServantMenu_CallbackFunc_o *callback,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
+  UnityEngine_GameObject_o *gameObject; // x0
   __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  __int64 v26; // x1
-  __int64 v27; // x1
-  __int64 v28; // x1
-  __int64 v29; // x1
-  __int64 v30; // x1
-  __int64 v31; // x1
-  __int64 v32; // x1
-  __int64 v33; // x1
-  __int64 v34; // x1
-  __int64 v35; // x1
-  __int64 v36; // x1
-  __int64 v37; // x1
-  __int64 v38; // x1
-  __int64 v39; // x1
-  __int64 v40; // x1
-  __int64 v41; // x1
-  __int64 gameObject; // x0
-  __int64 v43; // x1
-  System_Text_StringBuilder_o *v44; // x23
+  System_Text_StringBuilder_o *v13; // x23
   System_Int32_array *FixedMyServantSingleSvtIdList; // x0
-  System_Int32_array *v46; // x29
-  UnityEngine_GameObject_o *v47; // x0
-  PartyOrganizationConfirmMyServantMenu_c *v48; // x8
-  UnityEngine_GameObject_o *v49; // x19
-  __int64 v50; // x2
-  __int64 v51; // x8
-  unsigned __int64 v52; // x21
-  int32_t v53; // w19
-  System_Collections_Generic_List_object__o *v54; // x25
-  const MethodInfo *v55; // x5
-  __int64 v56; // x19
+  System_Int32_array *v15; // x29
+  UnityEngine_GameObject_o *v16; // x0
+  PartyOrganizationConfirmMyServantMenu_c *v17; // x8
+  UnityEngine_GameObject_o *v18; // x19
+  __int64 v19; // x2
+  il2cpp_array_size_t max_length; // x8
+  unsigned __int64 v21; // x21
+  int32_t v22; // w19
+  System_Collections_Generic_List_object__o *v23; // x25
+  const MethodInfo *v24; // x5
+  il2cpp_array_size_t v25; // x19
   Il2CppObject *MasterData_object; // x20
-  __int64 v58; // x27
-  unsigned __int64 v59; // x28
-  int32_t v60; // w21
+  UnityEngine_GameObject_o *v27; // x27
+  unsigned __int64 v28; // x28
+  int32_t v29; // w21
   UserServantCollectionEntity_o *EntityDefinitely; // x19
   bool IsGrandSvt; // w22
-  int v63; // w8
-  unsigned int v64; // w25
-  FollowerInfo_o *v65; // x19
-  ServantLeaderInfo_o *v66; // x26
-  __int64 v67; // x23
-  __int64 v68; // x24
+  int klass; // w8
+  unsigned int v33; // w25
+  FollowerInfo_o *v34; // x19
+  ServantLeaderInfo_o *v35; // x26
+  UnityEngine_GameObject_c *v36; // x23
+  void *monitor; // x24
   int32_t ReturnTypeByQuestId; // w0
-  PartyOrganizationListViewItem_o *v70; // x19
+  PartyOrganizationListViewItem_o *v39; // x19
   System_String_o *SvtNameText; // x0
-  System_String_o *v72; // x0
-  int32_t v73; // w2
-  const MethodInfo *v74; // x3
+  System_String_o *v41; // x0
+  int32_t v42; // w2
+  const MethodInfo *v43; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v76; // x9
+  _QWORD *v45; // x9
   __int64 size; // x10
-  Il2CppClass **v78; // x0
+  Il2CppClass **v47; // x0
   UnityEngine_GameObject_o *supportMemberBase; // x19
   PartyOrganizationConfirmItemDraw_array *memberObjectList; // x21
-  Il2CppObject *v81; // x21
+  Il2CppObject *v50; // x21
   UILabel_o *titleLabel; // x19
   UILabel_o *messageLabel; // x19
-  System_String_o *v84; // x0
+  System_String_o *v53; // x0
   UILabel_o *closeLabel; // x19
-  __int64 *v86; // x8
+  __int64 *v55; // x8
   _BOOL4 isFixedMyServantPosition; // w23
-  UILabel_o *v88; // x19
-  UILabel_o *v89; // x19
-  System_String_o *v90; // x0
-  UnityEngine_GameObject_o *v91; // x0
-  UILabel_o *v92; // x19
-  System_String_o *v93; // x0
-  System_Action_o *v94; // x19
-  unsigned int v95; // [xsp+18h] [xbp-A8h]
-  int v96; // [xsp+1Ch] [xbp-A4h]
-  PartyOrganizationConfirmMyServantMenu_o *v97; // [xsp+20h] [xbp-A0h]
-  System_Collections_Generic_List_object__o *v98; // [xsp+28h] [xbp-98h]
-  System_Text_StringBuilder_o *v99; // [xsp+30h] [xbp-90h]
-  __int64 v100; // [xsp+38h] [xbp-88h]
+  UILabel_o *v57; // x19
+  UILabel_o *v58; // x19
+  System_String_o *v59; // x0
+  UnityEngine_GameObject_o *v60; // x0
+  UILabel_o *v61; // x19
+  System_String_o *v62; // x0
+  System_Action_o *v63; // x19
+  unsigned int v64; // [xsp+18h] [xbp-A8h]
+  int v65; // [xsp+1Ch] [xbp-A4h]
+  PartyOrganizationConfirmMyServantMenu_o *v66; // [xsp+20h] [xbp-A0h]
+  System_Collections_Generic_List_object__o *v67; // [xsp+28h] [xbp-98h]
+  System_Text_StringBuilder_o *v68; // [xsp+30h] [xbp-90h]
+  __int64 v69; // [xsp+38h] [xbp-88h]
   int maxLimitCount; // [xsp+48h] [xbp-78h]
   int32_t limitCount; // [xsp+4Ch] [xbp-74h]
-  QuestRestrictionInfo_o *v104; // [xsp+50h] [xbp-70h]
+  QuestRestrictionInfo_o *v73; // [xsp+50h] [xbp-70h]
   Il2CppObject *entity; // [xsp+58h] [xbp-68h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v106; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v75; // 0:x0.16
 
-  if ( (byte_4B17FBE & 1) == 0 )
+  if ( (byte_4C22CFA & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&kind);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_NpcFollowerMaster___, v11);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_UserServantCollectionMaster___, v12);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantMaster___, v13);
-    sub_1BCAFF8(&DataManager_TypeInfo, v14);
-    sub_1BCAFF8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v15);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_PartyOrganizationListViewItem__Add__, v16);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_PartyOrganizationListViewItem___ctor__, v17);
-    sub_1BCAFF8(&System_Collections_Generic_List_PartyOrganizationListViewItem__TypeInfo, v18);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v19);
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v20);
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v21);
-    sub_1BCAFF8(&OptionManager_TypeInfo, v22);
-    sub_1BCAFF8(&PartyOrganizationConfirmItemDraw_TypeInfo, v23);
-    sub_1BCAFF8(&Method_PartyOrganizationConfirmMyServantMenu_EndOpen__, v24);
-    sub_1BCAFF8(&PartyOrganizationConfirmMyServantMenu_TypeInfo, v25);
-    sub_1BCAFF8(&PartyOrganizationListViewItem_TypeInfo, v26);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v27);
-    sub_1BCAFF8(&System_Text_StringBuilder_TypeInfo, v28);
-    sub_1BCAFF8(&StringLiteral_43/*"\n"*/, v29);
-    sub_1BCAFF8(&StringLiteral_10117/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_TITLE"*/, v30);
-    sub_1BCAFF8(&StringLiteral_10065/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_END"*/, v31);
-    sub_1BCAFF8(&StringLiteral_10122/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_MESSAGE"*/, v32);
-    sub_1BCAFF8(&StringLiteral_10115/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_CLOSE"*/, v33);
-    sub_1BCAFF8(&StringLiteral_10118/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_CLOSE"*/, v34);
-    sub_1BCAFF8(&StringLiteral_10121/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_CLOSE"*/, v35);
-    sub_1BCAFF8(&StringLiteral_10119/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_MESSAGE"*/, v36);
-    sub_1BCAFF8(&StringLiteral_10123/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_TITLE"*/, v37);
-    sub_1BCAFF8(&StringLiteral_10116/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_MESSAGE"*/, v38);
-    sub_1BCAFF8(&StringLiteral_10066/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_SPLIT"*/, v39);
-    sub_1BCAFF8(&StringLiteral_10067/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_START"*/, v40);
-    sub_1BCAFF8(&StringLiteral_10120/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_TITLE"*/, v41);
-    byte_4B17FBE = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMasterData_NpcFollowerMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_1C2D490(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_PartyOrganizationListViewItem__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_PartyOrganizationListViewItem___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_PartyOrganizationListViewItem__TypeInfo);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C2D490(&OptionManager_TypeInfo);
+    sub_1C2D490(&PartyOrganizationConfirmItemDraw_TypeInfo);
+    sub_1C2D490(&Method_PartyOrganizationConfirmMyServantMenu_EndOpen__);
+    sub_1C2D490(&PartyOrganizationConfirmMyServantMenu_TypeInfo);
+    sub_1C2D490(&PartyOrganizationListViewItem_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C2D490(&System_Text_StringBuilder_TypeInfo);
+    sub_1C2D490(&StringLiteral_43/*"\n"*/);
+    sub_1C2D490(&StringLiteral_10188/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_TITLE"*/);
+    sub_1C2D490(&StringLiteral_10136/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_END"*/);
+    sub_1C2D490(&StringLiteral_10193/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_MESSAGE"*/);
+    sub_1C2D490(&StringLiteral_10186/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_CLOSE"*/);
+    sub_1C2D490(&StringLiteral_10189/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_CLOSE"*/);
+    sub_1C2D490(&StringLiteral_10192/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_CLOSE"*/);
+    sub_1C2D490(&StringLiteral_10190/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_MESSAGE"*/);
+    sub_1C2D490(&StringLiteral_10194/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_TITLE"*/);
+    sub_1C2D490(&StringLiteral_10187/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_MESSAGE"*/);
+    sub_1C2D490(&StringLiteral_10137/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_SPLIT"*/);
+    sub_1C2D490(&StringLiteral_10138/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_START"*/);
+    sub_1C2D490(&StringLiteral_10191/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_TITLE"*/);
+    byte_4C22CFA = 1;
   }
-  entity = 0LL;
+  entity = 0;
   if ( (this->fields.state | 4) == 4 )
   {
     this->fields.callbackFunc = callback;
-    sub_1BCAF9C(
+    sub_1C2D434(
       (CGThumbnailListItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)partyItem,
       (const MethodInfo *)setupInfo);
-    gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
       goto LABEL_128;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
-    v44 = (System_Text_StringBuilder_o *)sub_1BCB244(System_Text_StringBuilder_TypeInfo);
-    System_Text_StringBuilder___ctor(v44, 0LL);
+    UnityEngine_GameObject__SetActive(gameObject, 1, 0);
+    v13 = (System_Text_StringBuilder_o *)sub_1C2D6DC(System_Text_StringBuilder_TypeInfo);
+    System_Text_StringBuilder___ctor(v13, 0);
     if ( kind )
     {
       if ( kind != 1 )
       {
-        v46 = 0LL;
+        v15 = 0;
 LABEL_13:
-        gameObject = (__int64)this->fields.messageLabel;
+        gameObject = (UnityEngine_GameObject_o *)this->fields.messageLabel;
         if ( !gameObject )
           goto LABEL_128;
-        v47 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
-        v48 = PartyOrganizationConfirmMyServantMenu_TypeInfo;
-        v49 = v47;
+        v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+        v17 = PartyOrganizationConfirmMyServantMenu_TypeInfo;
+        v18 = v16;
         if ( !PartyOrganizationConfirmMyServantMenu_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(PartyOrganizationConfirmMyServantMenu_TypeInfo);
-          v48 = PartyOrganizationConfirmMyServantMenu_TypeInfo;
+          v17 = PartyOrganizationConfirmMyServantMenu_TypeInfo;
         }
-        v97 = this;
-        GameObjectExtensions__SetLocalPositionY(v49, v48->static_fields->MESSAGE_POS_Y_DEFAULT, 0LL);
-        v104 = questRestrictionInfo;
-        v95 = kind;
-        if ( v46 && (v51 = *(_QWORD *)&v46->max_length, (int)v51 >= 1) )
+        v66 = this;
+        GameObjectExtensions__SetLocalPositionY(v18, v17->static_fields->MESSAGE_POS_Y_DEFAULT, 0);
+        v73 = questRestrictionInfo;
+        v64 = kind;
+        if ( v15 && (max_length = v15->max_length, (int)max_length >= 1) )
         {
-          v52 = 0LL;
+          v21 = 0;
           while ( 1 )
           {
-            if ( v52 >= (unsigned int)v51 )
+            if ( v21 >= (unsigned int)max_length )
               goto LABEL_129;
-            v53 = v46->m_Items[v52 + 1];
+            v22 = v15->m_Items[v21];
             if ( !DataManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-            gameObject = (__int64)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantMaster___);
+            gameObject = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ServantMaster___);
             if ( !gameObject )
               goto LABEL_128;
-            gameObject = DataMasterBase_object__object__int___TryGetEntity(
-                           (DataMasterBase_TMaster__TEntity__PKType__o *)gameObject,
-                           &entity,
-                           v53,
-                           (const MethodInfo_32C7E4C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-            if ( (gameObject & 1) == 0 )
+            gameObject = (UnityEngine_GameObject_o *)DataMasterBase_object__object__int___TryGetEntity(
+                                                       (DataMasterBase_TMaster__TEntity__PKType__o *)gameObject,
+                                                       &entity,
+                                                       v22,
+                                                       (const MethodInfo_3387DE4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+            if ( ((unsigned __int8)gameObject & 1) == 0 )
               break;
-            LODWORD(v51) = v46->max_length;
-            if ( (__int64)++v52 >= (int)v51 )
+            LODWORD(max_length) = v15->max_length;
+            if ( (__int64)++v21 >= (int)max_length )
               goto LABEL_25;
           }
-          gameObject = (__int64)this->fields.messageLabel;
+          gameObject = (UnityEngine_GameObject_o *)this->fields.messageLabel;
           if ( !gameObject )
             goto LABEL_128;
-          v91 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
-          GameObjectExtensions__SetLocalPositionY(v91, 0.0, 0LL);
-          v96 = 0;
+          v60 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+          GameObjectExtensions__SetLocalPositionY(v60, 0.0, 0);
+          v65 = 0;
         }
         else
         {
 LABEL_25:
-          v96 = 1;
+          v65 = 1;
         }
-        v54 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_PartyOrganizationListViewItem__TypeInfo);
+        v23 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_PartyOrganizationListViewItem__TypeInfo);
         System_Collections_Generic_List_object____ctor(
-          v54,
-          (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_PartyOrganizationListViewItem___ctor__);
-        if ( v46 && v96 )
+          v23,
+          (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_PartyOrganizationListViewItem___ctor__);
+        if ( v15 && v65 )
         {
-          v56 = *(_QWORD *)&v46->max_length;
-          gameObject = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          v25 = v15->max_length;
+          gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !gameObject )
             goto LABEL_128;
           MasterData_object = DataManager__GetMasterData_object_(
                                 (DataManager_o *)gameObject,
-                                (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-          gameObject = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                                (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+          gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !gameObject )
             goto LABEL_128;
-          gameObject = (__int64)DataManager__GetMasterData_object_(
-                                  (DataManager_o *)gameObject,
-                                  (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_NpcFollowerMaster___);
+          gameObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
+                                                     (DataManager_o *)gameObject,
+                                                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_NpcFollowerMaster___);
           if ( !questRestrictionInfo || !gameObject )
             goto LABEL_128;
-          gameObject = (__int64)NpcFollowerMaster__GetQuestFollowerList(
-                                  (NpcFollowerMaster_o *)gameObject,
-                                  questRestrictionInfo->fields.questId,
-                                  questRestrictionInfo->fields.questPhase,
-                                  0LL);
-          if ( (int)v56 >= 1 )
+          gameObject = (UnityEngine_GameObject_o *)NpcFollowerMaster__GetQuestFollowerList(
+                                                     (NpcFollowerMaster_o *)gameObject,
+                                                     questRestrictionInfo->fields.questId,
+                                                     questRestrictionInfo->fields.questPhase,
+                                                     0);
+          if ( (int)v25 >= 1 )
           {
-            v100 = (unsigned int)v56;
-            v58 = gameObject;
-            v59 = 0LL;
-            v98 = v54;
-            v99 = v44;
-            while ( v59 < v46->max_length )
+            v69 = (unsigned int)v25;
+            v27 = gameObject;
+            v28 = 0;
+            v67 = v23;
+            v68 = v13;
+            while ( v28 < LODWORD(v15->max_length) )
             {
-              v60 = v46->m_Items[v59 + 1];
+              v29 = v15->m_Items[v28];
               if ( !NetworkManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-              if ( !byte_4B165D1 )
+              if ( !byte_4C211E1 )
               {
-                sub_1BCAFF8(&NetworkManager_TypeInfo, v43);
-                byte_4B165D1 = 1;
+                sub_1C2D490(&NetworkManager_TypeInfo);
+                byte_4C211E1 = 1;
               }
-              gameObject = (__int64)NetworkManager_TypeInfo;
+              gameObject = (UnityEngine_GameObject_o *)NetworkManager_TypeInfo;
               if ( !NetworkManager_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-                gameObject = (__int64)NetworkManager_TypeInfo;
+                gameObject = (UnityEngine_GameObject_o *)NetworkManager_TypeInfo;
               }
               if ( !MasterData_object )
                 goto LABEL_128;
               EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(
                                    (UserServantCollectionMaster_o *)MasterData_object,
-                                   *(_QWORD *)(*(_QWORD *)(gameObject + 184) + 64LL),
-                                   v60,
-                                   0LL);
+                                   *(_QWORD *)(gameObject[7].fields.m_CachedPtr + 64),
+                                   v29,
+                                   0);
               if ( !OptionManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-              gameObject = OptionManager__GetSpoilerSetting(0LL);
-              if ( (gameObject & 1) != 0 )
+              gameObject = (UnityEngine_GameObject_o *)OptionManager__GetSpoilerSetting(0);
+              if ( ((unsigned __int8)gameObject & 1) != 0 )
               {
                 if ( !EntityDefinitely )
                   goto LABEL_128;
@@ -513,12 +475,14 @@ LABEL_25:
               {
                 if ( !EntityDefinitely )
                   goto LABEL_128;
-                gameObject = UserServantCollectionEntity__IsGet(EntityDefinitely, 0LL);
-                if ( (gameObject & 1) != 0 )
+                gameObject = (UnityEngine_GameObject_o *)UserServantCollectionEntity__IsGet(EntityDefinitely, 0);
+                if ( ((unsigned __int8)gameObject & 1) != 0 )
                 {
                   maxLimitCount = EntityDefinitely->fields.maxLimitCount;
-                  gameObject = UserServantCollectionEntity__IsGrandServant(EntityDefinitely, 0LL);
-                  IsGrandSvt = gameObject;
+                  gameObject = (UnityEngine_GameObject_o *)UserServantCollectionEntity__IsGrandServant(
+                                                             EntityDefinitely,
+                                                             0);
+                  IsGrandSvt = (char)gameObject;
                 }
                 else
                 {
@@ -526,232 +490,244 @@ LABEL_25:
                   maxLimitCount = 0;
                 }
               }
-              if ( !v58 )
+              if ( !v27 )
                 goto LABEL_128;
-              v63 = *(_DWORD *)(v58 + 24);
+              klass = (int)v27[1].klass;
               limitCount = EntityDefinitely->fields.maxLimitCount;
-              if ( v63 >= 1 )
+              if ( klass >= 1 )
               {
-                v64 = 0;
+                v33 = 0;
                 while ( 1 )
                 {
-                  if ( v64 >= v63 )
+                  if ( v33 >= klass )
                     goto LABEL_129;
-                  v65 = *(FollowerInfo_o **)(v58 + 8LL * (int)v64 + 32);
-                  gameObject = FollowerInfo__GetReturnTypeByQuestId(questRestrictionInfo->fields.questId, 0LL);
-                  if ( !v65 )
+                  v34 = (FollowerInfo_o *)*((_QWORD *)&v27[1].monitor + (int)v33);
+                  gameObject = (UnityEngine_GameObject_o *)FollowerInfo__GetReturnTypeByQuestId(
+                                                             questRestrictionInfo->fields.questId,
+                                                             0);
+                  if ( !v34 )
                     goto LABEL_128;
-                  gameObject = (__int64)FollowerInfo__getServantLeaderInfo(v65, 0, gameObject, 0LL);
+                  gameObject = (UnityEngine_GameObject_o *)FollowerInfo__getServantLeaderInfo(
+                                                             v34,
+                                                             0,
+                                                             (int32_t)gameObject,
+                                                             0);
                   if ( gameObject )
                   {
-                    v66 = (ServantLeaderInfo_o *)gameObject;
-                    v67 = *(_QWORD *)(gameObject + 48);
-                    v68 = *(_QWORD *)(gameObject + 56);
+                    v35 = (ServantLeaderInfo_o *)gameObject;
+                    v36 = gameObject[2].klass;
+                    monitor = gameObject[2].monitor;
                     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-                    *(_QWORD *)&v106.fields.currentCryptoKey = v67;
-                    *(_QWORD *)&v106.fields.fakeValue = v68;
-                    gameObject = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v106, 0LL);
-                    questRestrictionInfo = v104;
-                    if ( (_DWORD)gameObject == v60 )
+                    *(_QWORD *)&v75.fields.currentCryptoKey = v36;
+                    *(_QWORD *)&v75.fields.fakeValue = monitor;
+                    gameObject = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(
+                                                               v75,
+                                                               0);
+                    questRestrictionInfo = v73;
+                    if ( (_DWORD)gameObject == v29 )
                       break;
                   }
-                  v63 = *(_DWORD *)(v58 + 24);
-                  if ( (int)++v64 >= v63 )
+                  klass = (int)v27[1].klass;
+                  if ( (int)++v33 >= klass )
                     goto LABEL_63;
                 }
-                ReturnTypeByQuestId = FollowerInfo__GetReturnTypeByQuestId(v104->fields.questId, 0LL);
-                limitCount = FollowerInfo__getLimitCount(v65, 0, ReturnTypeByQuestId, 0LL);
-                IsGrandSvt = ServantLeaderInfo__get_IsGrandSvt(v66, 0LL);
+                ReturnTypeByQuestId = FollowerInfo__GetReturnTypeByQuestId(v73->fields.questId, 0);
+                limitCount = FollowerInfo__getLimitCount(v34, 0, ReturnTypeByQuestId, 0);
+                IsGrandSvt = ServantLeaderInfo__get_IsGrandSvt(v35, 0);
 LABEL_63:
-                v54 = v98;
-                v44 = v99;
+                v23 = v67;
+                v13 = v68;
               }
-              v70 = (PartyOrganizationListViewItem_o *)sub_1BCB244(PartyOrganizationListViewItem_TypeInfo);
-              PartyOrganizationListViewItem___ctor_33522228(
-                v70,
-                v59,
-                v60,
+              v39 = (PartyOrganizationListViewItem_o *)sub_1C2D6DC(PartyOrganizationListViewItem_TypeInfo);
+              PartyOrganizationListViewItem___ctor_34031660(
+                v39,
+                v28,
+                v29,
                 limitCount,
                 setupInfo,
                 questRestrictionInfo,
-                0LL,
+                0,
                 0,
                 IsGrandSvt,
-                0LL);
-              if ( !v70 )
+                0);
+              if ( !v39 )
                 goto LABEL_128;
-              v70->fields.nameLimitCount = maxLimitCount;
-              if ( v59 )
+              v39->fields.nameLimitCount = maxLimitCount;
+              if ( v28 )
               {
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10066/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_SPLIT"*/, 0LL);
-                if ( !v44 )
+                gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
+                                                           (System_String_o *)StringLiteral_10137/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_SPLIT"*/,
+                                                           0);
+                if ( !v13 )
                   goto LABEL_128;
-                System_Text_StringBuilder__Append_62534368(v44, (System_String_o *)gameObject, 0LL);
-                System_Text_StringBuilder__Append_62534368(v44, (System_String_o *)StringLiteral_43/*"\n"*/, 0LL);
+                System_Text_StringBuilder__Append_63542928(v13, (System_String_o *)gameObject, 0);
+                System_Text_StringBuilder__Append_63542928(v13, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
               }
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10067/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_START"*/, 0LL);
-              if ( !v44 )
+              gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
+                                                         (System_String_o *)StringLiteral_10138/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_START"*/,
+                                                         0);
+              if ( !v13 )
                 goto LABEL_128;
-              System_Text_StringBuilder__Append_62534368(v44, (System_String_o *)gameObject, 0LL);
-              SvtNameText = PartyOrganizationListViewItem__get_SvtNameText(v70, 0LL);
-              System_Text_StringBuilder__Append_62534368(v44, SvtNameText, 0LL);
-              v72 = LocalizationManager__Get((System_String_o *)StringLiteral_10065/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_END"*/, 0LL);
-              gameObject = (__int64)System_Text_StringBuilder__Append_62534368(v44, v72, 0LL);
-              if ( !v54 )
+              System_Text_StringBuilder__Append_63542928(v13, (System_String_o *)gameObject, 0);
+              SvtNameText = PartyOrganizationListViewItem__get_SvtNameText(v39, 0);
+              System_Text_StringBuilder__Append_63542928(v13, SvtNameText, 0);
+              v41 = LocalizationManager__Get((System_String_o *)StringLiteral_10136/*"PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_END"*/, 0);
+              gameObject = (UnityEngine_GameObject_o *)System_Text_StringBuilder__Append_63542928(v13, v41, 0);
+              if ( !v23 )
                 goto LABEL_128;
-              items = v54->fields._items;
-              v76 = Method_System_Collections_Generic_List_PartyOrganizationListViewItem__Add__;
-              ++v54->fields._version;
+              items = v23->fields._items;
+              v45 = Method_System_Collections_Generic_List_PartyOrganizationListViewItem__Add__;
+              ++v23->fields._version;
               if ( !items )
                 goto LABEL_128;
-              size = v54->fields._size;
-              if ( (unsigned int)size >= items->max_length )
+              size = v23->fields._size;
+              if ( (unsigned int)size >= LODWORD(items->max_length) )
               {
                 System_Collections_Generic_List_object___AddWithResize(
-                  v54,
-                  (Il2CppObject *)v70,
-                  *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v76[4] + 192LL) + 112LL));
+                  v23,
+                  (Il2CppObject *)v39,
+                  *(const MethodInfo_3789B84 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
               }
               else
               {
-                v78 = &items->obj.klass + size;
-                v54->fields._size = size + 1;
-                v78[4] = (Il2CppClass *)v70;
-                sub_1BCAF9C((CGThumbnailListItem_o *)(v78 + 4), (int32_t)v70, v73, v74);
+                v47 = &items->obj.klass + size;
+                v23->fields._size = size + 1;
+                v47[4] = (Il2CppClass *)v39;
+                sub_1C2D434((CGThumbnailListItem_o *)(v47 + 4), (int32_t)v39, v42, v43);
               }
-              if ( ++v59 == v100 )
+              if ( ++v28 == v69 )
                 goto LABEL_79;
             }
 LABEL_129:
-            sub_1BCB25C(gameObject, v43, v50);
+            sub_1C2D6F4(gameObject, v12, v19);
           }
         }
 LABEL_79:
-        supportMemberBase = v97->fields.supportMemberBase;
-        memberObjectList = v97->fields.memberObjectList;
+        supportMemberBase = v66->fields.supportMemberBase;
+        memberObjectList = v66->fields.memberObjectList;
         if ( !PartyOrganizationConfirmItemDraw_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(PartyOrganizationConfirmItemDraw_TypeInfo);
         PartyOrganizationConfirmItemDraw__SetPartyIcon(
-          (System_Collections_Generic_List_PartyOrganizationListViewItem__o *)v54,
+          (System_Collections_Generic_List_PartyOrganizationListViewItem__o *)v23,
           memberObjectList,
           supportMemberBase,
           0,
           0,
-          v55);
-        if ( v95 <= 1 )
+          v24);
+        if ( v64 <= 1 )
         {
-          gameObject = (__int64)v97->fields.decideButton;
+          gameObject = (UnityEngine_GameObject_o *)v66->fields.decideButton;
           if ( !gameObject )
             goto LABEL_128;
-          gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+          gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
           if ( !gameObject )
             goto LABEL_128;
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
-          gameObject = (__int64)v97->fields.cancelButton;
+          UnityEngine_GameObject__SetActive(gameObject, 0, 0);
+          gameObject = (UnityEngine_GameObject_o *)v66->fields.cancelButton;
           if ( !gameObject )
             goto LABEL_128;
-          gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+          gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
           if ( !gameObject )
             goto LABEL_128;
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
-          gameObject = (__int64)v97->fields.closeButton;
+          UnityEngine_GameObject__SetActive(gameObject, 0, 0);
+          gameObject = (UnityEngine_GameObject_o *)v66->fields.closeButton;
           if ( !gameObject )
             goto LABEL_128;
-          gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+          gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
           if ( !gameObject )
             goto LABEL_128;
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
-          gameObject = (__int64)v97->fields.closeButton;
+          UnityEngine_GameObject__SetActive(gameObject, 1, 0);
+          gameObject = (UnityEngine_GameObject_o *)v66->fields.closeButton;
           if ( !gameObject )
             goto LABEL_128;
-          gameObject = (*(__int64 (__fastcall **)(__int64, _QWORD, __int64, _QWORD))(*(_QWORD *)gameObject + 536LL))(
-                         gameObject,
-                         0LL,
-                         1LL,
-                         *(_QWORD *)(*(_QWORD *)gameObject + 544LL));
+          gameObject = (UnityEngine_GameObject_o *)((__int64 (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, __int64, Il2CppClass **))gameObject->klass[1]._1.nestedTypes)(
+                                                     gameObject,
+                                                     0,
+                                                     1,
+                                                     gameObject->klass[1]._1.implementedInterfaces);
         }
-        if ( !v44 )
+        if ( !v13 )
           goto LABEL_128;
-        gameObject = ((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))v44->klass->vtable._3_ToString.method)(
-                       v44,
-                       v44->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
-        v81 = (Il2CppObject *)gameObject;
-        if ( v95 )
+        gameObject = (UnityEngine_GameObject_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v13->klass->vtable._3_ToString.methodPtr)(
+                                                   v13,
+                                                   v13->klass->vtable._3_ToString.method);
+        v50 = (Il2CppObject *)gameObject;
+        if ( v64 )
         {
-          if ( v95 != 1 )
+          if ( v64 != 1 )
           {
 LABEL_126:
-            v97->fields.state = 1;
-            v94 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-            System_Action___ctor(v94, (Il2CppObject *)v97, Method_PartyOrganizationConfirmMyServantMenu_EndOpen__, 0LL);
-            BaseDialog__Open((BaseDialog_o *)v97, v94, 0, 0LL);
+            v66->fields.state = 1;
+            v63 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+            System_Action___ctor(v63, (Il2CppObject *)v66, Method_PartyOrganizationConfirmMyServantMenu_EndOpen__, 0);
+            BaseDialog__Open((BaseDialog_o *)v66, v63, 0, 0);
             return;
           }
-          titleLabel = v97->fields.titleLabel;
+          titleLabel = v66->fields.titleLabel;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10120/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_TITLE"*/, 0LL);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10191/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_TITLE"*/, 0);
           if ( !titleLabel
-            || (UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL),
-                messageLabel = v97->fields.messageLabel,
-                v84 = LocalizationManager__Get((System_String_o *)StringLiteral_10119/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_MESSAGE"*/, 0LL),
-                gameObject = (__int64)System_String__Format(v84, v81, 0LL),
+            || (UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0),
+                messageLabel = v66->fields.messageLabel,
+                v53 = LocalizationManager__Get((System_String_o *)StringLiteral_10190/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_MESSAGE"*/, 0),
+                gameObject = (UnityEngine_GameObject_o *)System_String__Format(v53, v50, 0),
                 !messageLabel) )
           {
 LABEL_128:
-            sub_1BCB254(gameObject, v43);
+            sub_1C2D6EC(gameObject, v12);
           }
-          UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0LL);
-          closeLabel = v97->fields.closeLabel;
-          v86 = &StringLiteral_10118/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_CLOSE"*/;
+          UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0);
+          closeLabel = v66->fields.closeLabel;
+          v55 = &StringLiteral_10189/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_CLOSE"*/;
 LABEL_124:
-          gameObject = (__int64)LocalizationManager__Get((System_String_o *)*v86, 0LL);
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v55, 0);
           if ( closeLabel )
           {
-            UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0LL);
+            UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0);
             goto LABEL_126;
           }
           goto LABEL_128;
         }
-        if ( !v104 )
+        if ( !v73 )
           goto LABEL_128;
-        isFixedMyServantPosition = v104->fields.isFixedMyServantPosition;
-        v88 = v97->fields.titleLabel;
+        isFixedMyServantPosition = v73->fields.isFixedMyServantPosition;
+        v57 = v66->fields.titleLabel;
         if ( LocalizationManager_TypeInfo->_2.cctor_finished )
         {
-          if ( v104->fields.isFixedMyServantPosition )
+          if ( v73->fields.isFixedMyServantPosition )
           {
 LABEL_101:
-            gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10117/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_TITLE"*/, 0LL);
-            if ( !v88 )
+            gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10188/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_TITLE"*/, 0);
+            if ( !v57 )
               goto LABEL_128;
-            UILabel__set_text(v88, (System_String_o *)gameObject, 0LL);
-            v89 = v97->fields.messageLabel;
-            if ( v96 )
+            UILabel__set_text(v57, (System_String_o *)gameObject, 0);
+            v58 = v66->fields.messageLabel;
+            if ( v65 )
             {
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              v90 = LocalizationManager__Get((System_String_o *)StringLiteral_10116/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_MESSAGE"*/, 0LL);
-              gameObject = (__int64)System_String__Format(v90, v81, 0LL);
-              if ( !v89 )
+              v59 = LocalizationManager__Get((System_String_o *)StringLiteral_10187/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_MESSAGE"*/, 0);
+              gameObject = (UnityEngine_GameObject_o *)System_String__Format(v59, v50, 0);
+              if ( !v58 )
                 goto LABEL_128;
             }
             else
             {
-              gameObject = (__int64)QuestRestrictionInfo__GetDialogMessageMySvtPos(v104, 0LL);
-              if ( !v89 )
+              gameObject = (UnityEngine_GameObject_o *)QuestRestrictionInfo__GetDialogMessageMySvtPos(v73, 0);
+              if ( !v58 )
                 goto LABEL_128;
             }
-            UILabel__set_text(v89, (System_String_o *)gameObject, 0LL);
-            closeLabel = v97->fields.closeLabel;
+            UILabel__set_text(v58, (System_String_o *)gameObject, 0);
+            closeLabel = v66->fields.closeLabel;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v86 = &StringLiteral_10115/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_CLOSE"*/;
+            v55 = &StringLiteral_10186/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_CLOSE"*/;
             goto LABEL_124;
           }
         }
@@ -761,50 +737,50 @@ LABEL_101:
           if ( isFixedMyServantPosition )
             goto LABEL_101;
         }
-        gameObject = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_10123/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_TITLE"*/, 0LL);
-        if ( !v88 )
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10194/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_TITLE"*/, 0);
+        if ( !v57 )
           goto LABEL_128;
-        UILabel__set_text(v88, (System_String_o *)gameObject, 0LL);
-        v92 = v97->fields.messageLabel;
-        if ( v96 )
+        UILabel__set_text(v57, (System_String_o *)gameObject, 0);
+        v61 = v66->fields.messageLabel;
+        if ( v65 )
         {
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v93 = LocalizationManager__Get((System_String_o *)StringLiteral_10122/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_MESSAGE"*/, 0LL);
-          gameObject = (__int64)System_String__Format(v93, v81, 0LL);
-          if ( !v92 )
+          v62 = LocalizationManager__Get((System_String_o *)StringLiteral_10193/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_MESSAGE"*/, 0);
+          gameObject = (UnityEngine_GameObject_o *)System_String__Format(v62, v50, 0);
+          if ( !v61 )
             goto LABEL_128;
         }
         else
         {
-          gameObject = (__int64)QuestRestrictionInfo__GetDialogMessageSvtPos(v104, 0LL);
-          if ( !v92 )
+          gameObject = (UnityEngine_GameObject_o *)QuestRestrictionInfo__GetDialogMessageSvtPos(v73, 0);
+          if ( !v61 )
             goto LABEL_128;
         }
-        UILabel__set_text(v92, (System_String_o *)gameObject, 0LL);
-        closeLabel = v97->fields.closeLabel;
+        UILabel__set_text(v61, (System_String_o *)gameObject, 0);
+        closeLabel = v66->fields.closeLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v86 = &StringLiteral_10121/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_CLOSE"*/;
+        v55 = &StringLiteral_10192/*"PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_CLOSE"*/;
         goto LABEL_124;
       }
       if ( !questRestrictionInfo )
         goto LABEL_128;
-      FixedMyServantSingleSvtIdList = QuestRestrictionInfo__GetFixedMyServantSingleSvtIdList(questRestrictionInfo, 0LL);
+      FixedMyServantSingleSvtIdList = QuestRestrictionInfo__GetFixedMyServantSingleSvtIdList(questRestrictionInfo, 0);
     }
     else
     {
       if ( !questRestrictionInfo )
         goto LABEL_128;
-      FixedMyServantSingleSvtIdList = QuestRestrictionInfo__GetFixedServantPositionSvtIdList(questRestrictionInfo, 0LL);
+      FixedMyServantSingleSvtIdList = QuestRestrictionInfo__GetFixedServantPositionSvtIdList(questRestrictionInfo, 0);
     }
-    v46 = FixedMyServantSingleSvtIdList;
+    v15 = FixedMyServantSingleSvtIdList;
     goto LABEL_13;
   }
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu__add_callbackFunc(
+void PartyOrganizationConfirmMyServantMenu__add_callbackFunc(
         PartyOrganizationConfirmMyServantMenu_o *this,
         PartyOrganizationConfirmMyServantMenu_CallbackFunc_o *value,
         const MethodInfo *method)
@@ -819,34 +795,34 @@ void __fastcall PartyOrganizationConfirmMyServantMenu__add_callbackFunc(
   PartyOrganizationConfirmMyServantMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B17FBB & 1) == 0 )
+  if ( (byte_4C22CF7 & 1) == 0 )
   {
-    sub_1BCAFF8(&PartyOrganizationConfirmMyServantMenu_CallbackFunc_TypeInfo, value);
-    byte_4B17FBB = 1;
+    sub_1C2D490(&PartyOrganizationConfirmMyServantMenu_CallbackFunc_TypeInfo);
+    byte_4C22CF7 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
   v6 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0LL);
+    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0);
     if ( v8 )
     {
       if ( (PartyOrganizationConfirmMyServantMenu_CallbackFunc_c *)v8->klass != PartyOrganizationConfirmMyServantMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C05088(p_callbackFunc, v8, v6);
+    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PartyOrganizationConfirmMyServantMenu_o *)sub_1BCB514(v8);
+  v11 = (PartyOrganizationConfirmMyServantMenu_o *)sub_1C2D9AC(v8);
   PartyOrganizationConfirmMyServantMenu__remove_callbackFunc(v11, v12, v13);
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu__remove_callbackFunc(
+void PartyOrganizationConfirmMyServantMenu__remove_callbackFunc(
         PartyOrganizationConfirmMyServantMenu_o *this,
         PartyOrganizationConfirmMyServantMenu_CallbackFunc_o *value,
         const MethodInfo *method)
@@ -860,116 +836,112 @@ void __fastcall PartyOrganizationConfirmMyServantMenu__remove_callbackFunc(
   PartyOrganizationConfirmMyServantMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B17FBC & 1) == 0 )
+  if ( (byte_4C22CF8 & 1) == 0 )
   {
-    sub_1BCAFF8(&PartyOrganizationConfirmMyServantMenu_CallbackFunc_TypeInfo, value);
-    byte_4B17FBC = 1;
+    sub_1C2D490(&PartyOrganizationConfirmMyServantMenu_CallbackFunc_TypeInfo);
+    byte_4C22CF8 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
   v6 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0LL);
+    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0);
     if ( v8 )
     {
       if ( (PartyOrganizationConfirmMyServantMenu_CallbackFunc_c *)v8->klass != PartyOrganizationConfirmMyServantMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C05088(p_callbackFunc, v8, v6);
+    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PartyOrganizationConfirmMyServantMenu_o *)sub_1BCB514(v8);
+  v11 = (PartyOrganizationConfirmMyServantMenu_o *)sub_1C2D9AC(v8);
   PartyOrganizationConfirmMyServantMenu__Init(v11, v12);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall PartyOrganizationConfirmMyServantMenu_CallbackFunc___ctor(
+void PartyOrganizationConfirmMyServantMenu_CallbackFunc___ctor(
         PartyOrganizationConfirmMyServantMenu_CallbackFunc_o *this,
         Il2CppObject *object,
         intptr_t method,
         const MethodInfo *a4)
 {
-  __int64 v4; // x8
-  __int64 v6; // x21
+  intptr_t v4; // x8
   int v8; // w22
-  struct System_Reflection_MethodInfo_o *v9; // x9
+  Il2CppObject *m_target; // x9
   __int64 v10; // x0
 
-  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
-  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v6 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v4;
-  *(_QWORD *)&this->fields.method = object;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(v6 + 82);
-  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BCB0B8(v6) & 1) == 0 )
+  v4 = *(_QWORD *)(method + 8);
+  this->fields.method = method;
+  this->fields.method_ptr = v4;
+  this->fields.m_target = object;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  v8 = *(unsigned __int8 *)(method + 82);
+  this->fields.method_code = (intptr_t)this;
+  if ( (sub_1C2D550(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1BCB270(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BCB120(v10, 0LL);
+      v10 = sub_1C2D708(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C2D5B8(v10, 0);
     }
     goto LABEL_5;
   }
   if ( v8 != 1 )
   {
 LABEL_5:
-    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
-    this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-    this->fields.original_method_info = v9;
+    m_target = this->fields.m_target;
+    this->fields.invoke_impl = this->fields.method_ptr;
+    this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A0FA54;
+  this->fields.invoke_impl = (intptr_t)sub_1A6C36C;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A0FA0C;
+  this->fields.extra_arg = (intptr_t)sub_1A6C324;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_IAsyncResult_o *__fastcall PartyOrganizationConfirmMyServantMenu_CallbackFunc__BeginInvoke(
+System_IAsyncResult_o *PartyOrganizationConfirmMyServantMenu_CallbackFunc__BeginInvoke(
         PartyOrganizationConfirmMyServantMenu_CallbackFunc_o *this,
         bool result,
         System_AsyncCallback_o *callback,
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v9[2]; // [xsp+8h] [xbp-48h] BYREF
-  char v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
+  bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = result;
-  if ( (byte_4B17FC6 & 1) == 0 )
+  if ( (byte_4C22D02 & 1) == 0 )
   {
-    sub_1BCAFF8(&bool_TypeInfo, result);
-    byte_4B17FC6 = 1;
+    sub_1C2D490(&bool_TypeInfo);
+    byte_4C22D02 = 1;
   }
-  v9[1] = 0LL;
+  v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1BCAFAC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C2D444(this, v9, callback, object);
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu_CallbackFunc__EndInvoke(
+void PartyOrganizationConfirmMyServantMenu_CallbackFunc__EndInvoke(
         PartyOrganizationConfirmMyServantMenu_CallbackFunc_o *this,
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BCAFB0(result, 0LL, method);
+  sub_1C2D448(result, 0, method);
 }
 
 
-void __fastcall PartyOrganizationConfirmMyServantMenu_CallbackFunc__Invoke(
+void PartyOrganizationConfirmMyServantMenu_CallbackFunc__Invoke(
         PartyOrganizationConfirmMyServantMenu_CallbackFunc_o *this,
         bool result,
         const MethodInfo *method)
 {
-  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, _QWORD))this->fields.m_target)(
-    this->fields.original_method_info,
+  ((void (__fastcall *)(intptr_t, bool, intptr_t))this->fields.invoke_impl)(
+    this->fields.method_code,
     result,
-    *(_QWORD *)&this->fields.extra_arg);
+    this->fields.method);
 }

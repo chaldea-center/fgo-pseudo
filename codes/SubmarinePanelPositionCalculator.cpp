@@ -1,12 +1,10 @@
-void __fastcall SubmarinePanelPositionCalculator___ctor(
-        SubmarinePanelPositionCalculator_o *this,
-        const MethodInfo *method)
+void SubmarinePanelPositionCalculator___ctor(SubmarinePanelPositionCalculator_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-UnityEngine_Vector3_o __fastcall SubmarinePanelPositionCalculator__GetPositionByIndices(
+UnityEngine_Vector3_o SubmarinePanelPositionCalculator__GetPositionByIndices(
         SubmarinePanelPositionCalculator_o *this,
         int32_t hIndex,
         int32_t vIndex,
@@ -24,7 +22,7 @@ UnityEngine_Vector3_o __fastcall SubmarinePanelPositionCalculator__GetPositionBy
              (float32x2_t)this->fields._PanelUnitSize_k__BackingField,
              vcvt_f32_s32(
                vsub_s32(
-                 (int32x2_t)(vshl_n_s32((int32x2_t)__PAIR64__(vIndex, hIndex), 1uLL).n64_u64[0] | 0x100000001LL),
+                 (int32x2_t)(vshl_n_s32((int32x2_t)__PAIR64__(vIndex, hIndex), 1u).n64_u64[0] | 0x100000001LL),
                  *(int32x2_t *)&this->fields._HorizontalPanelNum_k__BackingField))),
            (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
   v5 = *((float *)&v4 + 1);
@@ -36,20 +34,20 @@ UnityEngine_Vector3_o __fastcall SubmarinePanelPositionCalculator__GetPositionBy
 }
 
 
-void __fastcall SubmarinePanelPositionCalculator__LoadSettings(
+void SubmarinePanelPositionCalculator__LoadSettings(
         SubmarinePanelPositionCalculator_o *this,
         SubmarineSettingsManager_o *settings,
         const MethodInfo *method)
 {
   if ( !settings )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   this->fields._OffsetX_k__BackingField = settings->fields._BoardOffset_k__BackingField.fields.x;
   this->fields._OffsetY_k__BackingField = settings->fields._BoardOffset_k__BackingField.fields.y;
   this->fields._PanelUnitSize_k__BackingField = settings->fields._PanelUnitSize_k__BackingField;
 }
 
 
-int32_t __fastcall SubmarinePanelPositionCalculator__get_HorizontalPanelNum(
+int32_t SubmarinePanelPositionCalculator__get_HorizontalPanelNum(
         SubmarinePanelPositionCalculator_o *this,
         const MethodInfo *method)
 {
@@ -57,7 +55,7 @@ int32_t __fastcall SubmarinePanelPositionCalculator__get_HorizontalPanelNum(
 }
 
 
-UnityEngine_Vector3_o __fastcall SubmarinePanelPositionCalculator__get_LeftBottomEdgePos(
+UnityEngine_Vector3_o SubmarinePanelPositionCalculator__get_LeftBottomEdgePos(
         SubmarinePanelPositionCalculator_o *this,
         const MethodInfo *method)
 {
@@ -84,23 +82,19 @@ UnityEngine_Vector3_o __fastcall SubmarinePanelPositionCalculator__get_LeftBotto
 }
 
 
-float __fastcall SubmarinePanelPositionCalculator__get_OffsetX(
-        SubmarinePanelPositionCalculator_o *this,
-        const MethodInfo *method)
+float SubmarinePanelPositionCalculator__get_OffsetX(SubmarinePanelPositionCalculator_o *this, const MethodInfo *method)
 {
   return this->fields._OffsetX_k__BackingField;
 }
 
 
-float __fastcall SubmarinePanelPositionCalculator__get_OffsetY(
-        SubmarinePanelPositionCalculator_o *this,
-        const MethodInfo *method)
+float SubmarinePanelPositionCalculator__get_OffsetY(SubmarinePanelPositionCalculator_o *this, const MethodInfo *method)
 {
   return this->fields._OffsetY_k__BackingField;
 }
 
 
-UnityEngine_Vector2_o __fastcall SubmarinePanelPositionCalculator__get_PanelUnitSize(
+UnityEngine_Vector2_o SubmarinePanelPositionCalculator__get_PanelUnitSize(
         SubmarinePanelPositionCalculator_o *this,
         const MethodInfo *method)
 {
@@ -116,7 +110,7 @@ UnityEngine_Vector2_o __fastcall SubmarinePanelPositionCalculator__get_PanelUnit
 }
 
 
-int32_t __fastcall SubmarinePanelPositionCalculator__get_PanelUnitSizeX(
+int32_t SubmarinePanelPositionCalculator__get_PanelUnitSizeX(
         SubmarinePanelPositionCalculator_o *this,
         const MethodInfo *method)
 {
@@ -130,7 +124,7 @@ int32_t __fastcall SubmarinePanelPositionCalculator__get_PanelUnitSizeX(
 }
 
 
-int32_t __fastcall SubmarinePanelPositionCalculator__get_PanelUnitSizeY(
+int32_t SubmarinePanelPositionCalculator__get_PanelUnitSizeY(
         SubmarinePanelPositionCalculator_o *this,
         const MethodInfo *method)
 {
@@ -144,7 +138,7 @@ int32_t __fastcall SubmarinePanelPositionCalculator__get_PanelUnitSizeY(
 }
 
 
-UnityEngine_Vector3_o __fastcall SubmarinePanelPositionCalculator__get_RightTopEdgePos(
+UnityEngine_Vector3_o SubmarinePanelPositionCalculator__get_RightTopEdgePos(
         SubmarinePanelPositionCalculator_o *this,
         const MethodInfo *method)
 {
@@ -163,7 +157,7 @@ UnityEngine_Vector3_o __fastcall SubmarinePanelPositionCalculator__get_RightTopE
                vcvt_f32_s32(
                  vadd_s32(
                    vmvn_s8(*(int8x8_t *)&this->fields._HorizontalPanelNum_k__BackingField),
-                   vshl_n_s32(*(int32x2_t *)&this->fields._HorizontalPanelNum_k__BackingField, 1uLL)))),
+                   vshl_n_s32(*(int32x2_t *)&this->fields._HorizontalPanelNum_k__BackingField, 1u)))),
              (float32x2_t)0x3F0000003F000000LL))).n64_u64[0];
   v3 = *((float *)&v2 + 1);
   v4 = 0.0;
@@ -174,7 +168,7 @@ UnityEngine_Vector3_o __fastcall SubmarinePanelPositionCalculator__get_RightTopE
 }
 
 
-int32_t __fastcall SubmarinePanelPositionCalculator__get_TotalPanelNum(
+int32_t SubmarinePanelPositionCalculator__get_TotalPanelNum(
         SubmarinePanelPositionCalculator_o *this,
         const MethodInfo *method)
 {
@@ -182,7 +176,7 @@ int32_t __fastcall SubmarinePanelPositionCalculator__get_TotalPanelNum(
 }
 
 
-int32_t __fastcall SubmarinePanelPositionCalculator__get_VerticalPanelNum(
+int32_t SubmarinePanelPositionCalculator__get_VerticalPanelNum(
         SubmarinePanelPositionCalculator_o *this,
         const MethodInfo *method)
 {
@@ -190,7 +184,7 @@ int32_t __fastcall SubmarinePanelPositionCalculator__get_VerticalPanelNum(
 }
 
 
-void __fastcall SubmarinePanelPositionCalculator__set_HorizontalPanelNum(
+void SubmarinePanelPositionCalculator__set_HorizontalPanelNum(
         SubmarinePanelPositionCalculator_o *this,
         int32_t value,
         const MethodInfo *method)
@@ -199,7 +193,7 @@ void __fastcall SubmarinePanelPositionCalculator__set_HorizontalPanelNum(
 }
 
 
-void __fastcall SubmarinePanelPositionCalculator__set_OffsetX(
+void SubmarinePanelPositionCalculator__set_OffsetX(
         SubmarinePanelPositionCalculator_o *this,
         float value,
         const MethodInfo *method)
@@ -208,7 +202,7 @@ void __fastcall SubmarinePanelPositionCalculator__set_OffsetX(
 }
 
 
-void __fastcall SubmarinePanelPositionCalculator__set_OffsetY(
+void SubmarinePanelPositionCalculator__set_OffsetY(
         SubmarinePanelPositionCalculator_o *this,
         float value,
         const MethodInfo *method)
@@ -217,8 +211,7 @@ void __fastcall SubmarinePanelPositionCalculator__set_OffsetY(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall SubmarinePanelPositionCalculator__set_PanelUnitSize(
+void SubmarinePanelPositionCalculator__set_PanelUnitSize(
         SubmarinePanelPositionCalculator_o *this,
         UnityEngine_Vector2_o value,
         const MethodInfo *method)
@@ -227,7 +220,7 @@ void __fastcall SubmarinePanelPositionCalculator__set_PanelUnitSize(
 }
 
 
-void __fastcall SubmarinePanelPositionCalculator__set_VerticalPanelNum(
+void SubmarinePanelPositionCalculator__set_VerticalPanelNum(
         SubmarinePanelPositionCalculator_o *this,
         int32_t value,
         const MethodInfo *method)

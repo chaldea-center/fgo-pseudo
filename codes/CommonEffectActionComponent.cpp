@@ -1,85 +1,78 @@
-void __fastcall CommonEffectActionComponent___ctor(CommonEffectActionComponent_o *this, const MethodInfo *method)
+void CommonEffectActionComponent___ctor(CommonEffectActionComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall CommonEffectActionComponent__Awake(CommonEffectActionComponent_o *this, const MethodInfo *method)
+void CommonEffectActionComponent__Awake(CommonEffectActionComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_Dictionary_int__object__o *v4; // x20
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  System_Collections_Generic_Dictionary_int__object__o *v3; // x20
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4B1DB02 & 1) == 0 )
+  if ( (byte_4C2890F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__Action___ctor__, method);
-    sub_1BCAFF8(&System_Collections_Generic_Dictionary_int__Action__TypeInfo, v3);
-    byte_4B1DB02 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
+    sub_1C2D490(&System_Collections_Generic_Dictionary_int__Action__TypeInfo);
+    byte_4C2890F = 1;
   }
-  v4 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BCB244(System_Collections_Generic_Dictionary_int__Action__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C2D6DC(System_Collections_Generic_Dictionary_int__Action__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
-    v4,
-    (const MethodInfo_3320910 *)Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
-  this->fields.eventActionList = (struct System_Collections_Generic_Dictionary_int__Action__o *)v4;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventActionList, (int32_t)v4, v5, v6);
+    v3,
+    (const MethodInfo_33E08A8 *)Method_System_Collections_Generic_Dictionary_int__Action___ctor__);
+  this->fields.eventActionList = (struct System_Collections_Generic_Dictionary_int__Action__o *)v3;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.eventActionList, (int32_t)v3, v4, v5);
 }
 
 
-void __fastcall CommonEffectActionComponent__CallEndAction(
-        CommonEffectActionComponent_o *this,
-        const MethodInfo *method)
+void CommonEffectActionComponent__CallEndAction(CommonEffectActionComponent_o *this, const MethodInfo *method)
 {
-  ActionExtensions__Call(this->fields.endAction, 0LL);
+  ActionExtensions__Call(this->fields.endAction, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall CommonEffectActionComponent__CallEventAction(
+void CommonEffectActionComponent__CallEventAction(
         CommonEffectActionComponent_o *this,
         int32_t key,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   struct System_Collections_Generic_Dictionary_int__Action__o *eventActionList; // x0
-  __int64 v7; // x1
-  struct System_Collections_Generic_Dictionary_int__Action__o *v8; // x0
+  __int64 v6; // x1
+  struct System_Collections_Generic_Dictionary_int__Action__o *v7; // x0
   Il2CppObject *Item; // x0
 
-  if ( (byte_4B1DB04 & 1) == 0 )
+  if ( (byte_4C28911 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__, *(_QWORD *)&key);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__Action__get_Item__, v5);
-    byte_4B1DB04 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__);
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
+    byte_4C28911 = 1;
   }
   eventActionList = this->fields.eventActionList;
   if ( eventActionList
     && System_Collections_Generic_Dictionary_int__object___ContainsKey(
          (System_Collections_Generic_Dictionary_int__object__o *)eventActionList,
          key,
-         (const MethodInfo_33214D8 *)Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__) )
+         (const MethodInfo_33E1470 *)Method_System_Collections_Generic_Dictionary_int__Action__ContainsKey__) )
   {
-    v8 = this->fields.eventActionList;
-    if ( !v8 )
-      sub_1BCB254(0LL, v7);
+    v7 = this->fields.eventActionList;
+    if ( !v7 )
+      sub_1C2D6EC(0, v6);
     Item = System_Collections_Generic_Dictionary_int__object___get_Item(
-             (System_Collections_Generic_Dictionary_int__object__o *)v8,
+             (System_Collections_Generic_Dictionary_int__object__o *)v7,
              key,
-             (const MethodInfo_3321244 *)Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
-    ActionExtensions__Call((System_Action_o *)Item, 0LL);
+             (const MethodInfo_33E11DC *)Method_System_Collections_Generic_Dictionary_int__Action__get_Item__);
+    ActionExtensions__Call((System_Action_o *)Item, 0);
   }
 }
 
 
-void __fastcall CommonEffectActionComponent__CallStartAction(
-        CommonEffectActionComponent_o *this,
-        const MethodInfo *method)
+void CommonEffectActionComponent__CallStartAction(CommonEffectActionComponent_o *this, const MethodInfo *method)
 {
-  ActionExtensions__Call(this->fields.startAction, 0LL);
+  ActionExtensions__Call(this->fields.startAction, 0);
 }
 
 
-void __fastcall CommonEffectActionComponent__SetEndAction(
+void CommonEffectActionComponent__SetEndAction(
         CommonEffectActionComponent_o *this,
         System_Action_o *endAction,
         const MethodInfo *method)
@@ -87,12 +80,11 @@ void __fastcall CommonEffectActionComponent__SetEndAction(
   const MethodInfo *v3; // x3
 
   this->fields.endAction = endAction;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.endAction, (int32_t)endAction, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.endAction, (int32_t)endAction, (int32_t)method, v3);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall CommonEffectActionComponent__SetEventAction(
+void CommonEffectActionComponent__SetEventAction(
         CommonEffectActionComponent_o *this,
         int32_t key,
         System_Action_o *action,
@@ -100,10 +92,10 @@ void __fastcall CommonEffectActionComponent__SetEventAction(
 {
   struct System_Collections_Generic_Dictionary_int__Action__o *eventActionList; // x0
 
-  if ( (byte_4B1DB03 & 1) == 0 )
+  if ( (byte_4C28910 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__Action__set_Item__, *(_QWORD *)&key);
-    byte_4B1DB03 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
+    byte_4C28910 = 1;
   }
   eventActionList = this->fields.eventActionList;
   if ( eventActionList )
@@ -111,11 +103,11 @@ void __fastcall CommonEffectActionComponent__SetEventAction(
       (System_Collections_Generic_Dictionary_int__object__o *)eventActionList,
       key,
       (Il2CppObject *)action,
-      (const MethodInfo_33212D0 *)Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
+      (const MethodInfo_33E1268 *)Method_System_Collections_Generic_Dictionary_int__Action__set_Item__);
 }
 
 
-void __fastcall CommonEffectActionComponent__SetStartAction(
+void CommonEffectActionComponent__SetStartAction(
         CommonEffectActionComponent_o *this,
         System_Action_o *startAction,
         const MethodInfo *method)
@@ -123,5 +115,5 @@ void __fastcall CommonEffectActionComponent__SetStartAction(
   const MethodInfo *v3; // x3
 
   this->fields.startAction = startAction;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.startAction, (int32_t)startAction, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.startAction, (int32_t)startAction, (int32_t)method, v3);
 }

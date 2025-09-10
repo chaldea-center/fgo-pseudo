@@ -1,31 +1,31 @@
-void __fastcall UserFollowEntity___ctor(UserFollowEntity_o *this, const MethodInfo *method)
+void UserFollowEntity___ctor(UserFollowEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D34F & 1) == 0 )
+  if ( (byte_4C28146 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D34F = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C28146 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-System_String_o *__fastcall UserFollowEntity__CreatePK(int64_t userId, int64_t followId, const MethodInfo *method)
+System_String_o *UserFollowEntity__CreatePK(int64_t userId, int64_t followId, const MethodInfo *method)
 {
-  if ( (byte_4B1D34E & 1) == 0 )
+  if ( (byte_4C28145 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long__long___, followId);
-    byte_4B1D34E = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__long___);
+    byte_4C28145 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long_(
            userId,
            followId,
-           (const MethodInfo_3018DB8 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
+           (const MethodInfo_30CCC64 *)Method_DataEntityBase_CreateMultiplePK_long__long___);
 }
 
 
-System_String_o *__fastcall UserFollowEntity__CreatePrimaryKey(UserFollowEntity_o *this, const MethodInfo *method)
+System_String_o *UserFollowEntity__CreatePrimaryKey(UserFollowEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
@@ -33,13 +33,13 @@ System_String_o *__fastcall UserFollowEntity__CreatePrimaryKey(UserFollowEntity_
 }
 
 
-bool __fastcall UserFollowEntity__HasFlag(UserFollowEntity_o *this, int32_t typeFlag, const MethodInfo *method)
+bool UserFollowEntity__HasFlag(UserFollowEntity_o *this, int32_t typeFlag, const MethodInfo *method)
 {
   return (this->fields.flag & typeFlag) != 0;
 }
 
 
-bool __fastcall UserFollowEntity__IsLock(UserFollowEntity_o *this, const MethodInfo *method)
+bool UserFollowEntity__IsLock(UserFollowEntity_o *this, const MethodInfo *method)
 {
   return (LOBYTE(this->fields.flag) >> 1) & 1;
 }

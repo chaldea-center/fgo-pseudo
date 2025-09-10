@@ -1,401 +1,348 @@
-void __fastcall EventBoardGameTokenManager___ctor(EventBoardGameTokenManager_o *this, const MethodInfo *method)
+void EventBoardGameTokenManager___ctor(EventBoardGameTokenManager_o *this, const MethodInfo *method)
 {
   this->fields.arrangementPich = (struct UnityEngine_Vector2_o)0x4260000042400000LL;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall EventBoardGameTokenManager__Awake(EventBoardGameTokenManager_o *this, const MethodInfo *method)
+void EventBoardGameTokenManager__Awake(EventBoardGameTokenManager_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-
   this->fields.isEventUILoad = 0;
-  this->fields.eventUILoadCallbackFunc = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventUILoadCallbackFunc, 0, v2, v3);
-  this->fields.eventUIAssetData = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventUIAssetData, 0, v5, v6);
-  this->fields.eventUIDownloadAtlas = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventUIDownloadAtlas, 0, v7, v8);
+  this->fields.eventUILoadCallbackFunc = 0;
+  sub_1C2D434(&this->fields.eventUILoadCallbackFunc);
+  this->fields.eventUIAssetData = 0;
+  sub_1C2D434(&this->fields.eventUIAssetData);
+  this->fields.eventUIDownloadAtlas = 0;
+  sub_1C2D434(&this->fields.eventUIDownloadAtlas);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-UnityEngine_GameObject_o *__fastcall EventBoardGameTokenManager__CreateMenu(
+UnityEngine_GameObject_o *EventBoardGameTokenManager__CreateMenu(
         EventBoardGameTokenManager_o *this,
         UnityEngine_GameObject_o *prefab,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   UnityEngine_GameObject_o *parentObject; // x0
-  __int64 v7; // x1
-  UnityEngine_GameObject_o *v8; // x19
+  __int64 v6; // x1
+  UnityEngine_GameObject_o *v7; // x19
   UnityEngine_Transform_o *transform; // x20
   float x; // s11
   float y; // s12
   float z; // s13
-  float v13; // s0
-  float v14; // s1
-  float v15; // s2
-  float v16; // s8
-  float v17; // s9
-  float v18; // s10
-  __int64 v19; // x1
+  float v12; // s8
+  float v13; // s9
+  float v14; // s10
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B2074C & 1) == 0 )
+  if ( (byte_4C21508 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_Object_Instantiate_GameObject___, prefab);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B2074C = 1;
+    sub_1C2D490(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C21508 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   parentObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                (Il2CppObject *)prefab,
-                                               (const MethodInfo_30A3BB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                               (const MethodInfo_315ACB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !parentObject )
     goto LABEL_13;
-  v8 = parentObject;
-  transform = UnityEngine_GameObject__get_transform(parentObject, 0LL);
-  parentObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v8, 0LL);
+  v7 = parentObject;
+  transform = UnityEngine_GameObject__get_transform(parentObject, 0);
+  parentObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v7, 0);
   if ( !parentObject )
     goto LABEL_13;
-  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)parentObject, 0LL);
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)parentObject, 0);
   x = localPosition.fields.x;
   y = localPosition.fields.y;
   z = localPosition.fields.z;
-  parentObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v8, 0LL);
+  parentObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(v7, 0);
   if ( !parentObject
-    || (*(UnityEngine_Vector3_o *)&v13 = UnityEngine_Transform__get_localScale(
-                                           (UnityEngine_Transform_o *)parentObject,
-                                           0LL),
-        (parentObject = this->fields.parentObject) == 0LL)
-    || (v16 = v13,
-        v17 = v14,
-        v18 = v15,
-        parentObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(parentObject, 0LL),
+    || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)parentObject, 0),
+        (parentObject = this->fields.parentObject) == 0)
+    || (v12 = localScale.fields.x,
+        v13 = localScale.fields.y,
+        v14 = localScale.fields.z,
+        parentObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(parentObject, 0),
         !transform) )
   {
 LABEL_13:
-    sub_1BCB254(parentObject, v7);
+    sub_1C2D6EC(parentObject, v6);
   }
-  UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)parentObject, 0LL);
-  v22.fields.x = x;
-  v22.fields.y = y;
-  v22.fields.z = z;
-  UnityEngine_Transform__set_localPosition(transform, v22, 0LL);
-  if ( !byte_4B16197 )
+  UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)parentObject, 0);
+  v18.fields.x = x;
+  v18.fields.y = y;
+  v18.fields.z = z;
+  UnityEngine_Transform__set_localPosition(transform, v18, 0);
+  if ( !byte_4C20DA7 )
   {
-    sub_1BCAFF8(&UnityEngine_Quaternion_TypeInfo, v19);
-    byte_4B16197 = 1;
+    sub_1C2D490(&UnityEngine_Quaternion_TypeInfo);
+    byte_4C20DA7 = 1;
   }
   UnityEngine_Transform__set_localRotation(
     transform,
     UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
-    0LL);
-  v23.fields.x = v16;
-  v23.fields.y = v17;
-  v23.fields.z = v18;
-  UnityEngine_Transform__set_localScale(transform, v23, 0LL);
-  return v8;
+    0);
+  v19.fields.x = v12;
+  v19.fields.y = v13;
+  v19.fields.z = v14;
+  UnityEngine_Transform__set_localScale(transform, v19, 0);
+  return v7;
 }
 
 
-UIAtlas_o *__fastcall EventBoardGameTokenManager__CreateUIAtlasFromAssetData(
+UIAtlas_o *EventBoardGameTokenManager__CreateUIAtlasFromAssetData(
         EventBoardGameTokenManager_o *this,
         AssetData_o *assetData,
         System_String_o *name,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
-  __int64 v7; // x1
   System_Object_array *ObjectList_object; // x0
 
-  if ( (byte_4B20750 & 1) == 0 )
+  if ( (byte_4C2150C & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_AssetData_GetObjectList_GameObject___, assetData);
-    sub_1BCAFF8(&Method_AssetData_GetObject_GameObject____76915336, v6);
-    this = (EventBoardGameTokenManager_o *)sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___, v7);
-    byte_4B20750 = 1;
+    sub_1C2D490(&Method_AssetData_GetObjectList_GameObject___);
+    sub_1C2D490(&Method_AssetData_GetObject_GameObject____77994080);
+    this = (EventBoardGameTokenManager_o *)sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    byte_4C2150C = 1;
   }
   if ( !assetData )
     goto LABEL_9;
   ObjectList_object = AssetData__GetObjectList_object_(
                         assetData,
-                        (const MethodInfo_2FFC188 *)Method_AssetData_GetObjectList_GameObject___);
-  if ( ObjectList_object && *(_QWORD *)&ObjectList_object->max_length )
+                        (const MethodInfo_30AFE78 *)Method_AssetData_GetObjectList_GameObject___);
+  if ( ObjectList_object && ObjectList_object->max_length )
   {
-    this = (EventBoardGameTokenManager_o *)AssetData__GetObject_object__50315216(
+    this = (EventBoardGameTokenManager_o *)AssetData__GetObject_object__51051712(
                                              assetData,
                                              name,
-                                             (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
+                                             (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080);
     if ( this )
       return (UIAtlas_o *)UnityEngine_GameObject__GetComponent_object_(
                             (UnityEngine_GameObject_o *)this,
-                            (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                            (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
 LABEL_9:
-    sub_1BCB254(this, assetData);
+    sub_1C2D6EC(this, assetData);
   }
-  return 0LL;
+  return 0;
 }
 
 
-void __fastcall EventBoardGameTokenManager__DestoryList(EventBoardGameTokenManager_o *this, const MethodInfo *method)
+void EventBoardGameTokenManager__DestoryList(EventBoardGameTokenManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   System_Collections_Generic_List_object__o *tokenList; // x0
   struct System_Collections_Generic_List_EventBoardGameTokenItem__o **p_tokenList; // x20
-  int32_t v6; // w21
+  int32_t v5; // w21
   Il2CppObject *Item; // x22
+  const MethodInfo *v7; // x1
   const MethodInfo *v8; // x1
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  const MethodInfo *v11; // x1
-  const MethodInfo *v12; // x1
+  const MethodInfo *v9; // x1
 
-  if ( (byte_4B2074D & 1) == 0 )
+  if ( (byte_4C21509 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__, method);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B2074D = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C21509 = 1;
   }
   p_tokenList = &this->fields.tokenList;
   tokenList = (System_Collections_Generic_List_object__o *)this->fields.tokenList;
   if ( tokenList )
   {
-    v6 = 0;
+    v5 = 0;
     while ( 1 )
     {
       Item = System_Collections_Generic_List_object___get_Item(
                tokenList,
-               v6,
-               (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__);
+               v5,
+               (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Item, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Item, 0, 0) )
       {
         tokenList = (System_Collections_Generic_List_object__o *)*p_tokenList;
         if ( !*p_tokenList
           || (tokenList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                          tokenList,
-                                                                         v6,
-                                                                         (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__)) == 0LL )
+                                                                         v5,
+                                                                         (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__)) == 0 )
         {
 LABEL_13:
-          sub_1BCB254(tokenList, v8);
+          sub_1C2D6EC(tokenList, v7);
         }
-        EventBoardGameTokenItem__DestroyItem((EventBoardGameTokenItem_o *)tokenList, v8);
+        EventBoardGameTokenItem__DestroyItem((EventBoardGameTokenItem_o *)tokenList, v7);
       }
-      if ( v6 == 51 )
+      if ( v5 == 51 )
         break;
       tokenList = (System_Collections_Generic_List_object__o *)*p_tokenList;
-      ++v6;
+      ++v5;
       if ( !*p_tokenList )
         goto LABEL_13;
     }
-    this->fields.tokenList = 0LL;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.tokenList, 0, v9, v10);
-    EventBoardGameTokenManager__closeTokenInfo(this, v11);
-    EventBoardGameTokenManager__ReleaseEventUI(this, v12);
+    this->fields.tokenList = 0;
+    sub_1C2D434(&this->fields.tokenList);
+    EventBoardGameTokenManager__closeTokenInfo(this, v8);
+    EventBoardGameTokenManager__ReleaseEventUI(this, v9);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall EventBoardGameTokenManager__Init(
-        EventBoardGameTokenManager_o *this,
-        int32_t eventId,
-        const MethodInfo *method)
+void EventBoardGameTokenManager__Init(EventBoardGameTokenManager_o *this, int32_t eventId, const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x21
-  __int64 v8; // x0
-  __int64 v9; // x1
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  System_Action_o *v12; // x20
-  const MethodInfo *v13; // x3
+  __int64 v5; // x21
+  __int64 v6; // x0
+  __int64 v7; // x1
+  System_Action_o *v8; // x20
+  const MethodInfo *v9; // x3
 
-  if ( (byte_4B20748 & 1) == 0 )
+  if ( (byte_4C21504 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BCAFF8(&Method_EventBoardGameTokenManager___c__DisplayClass18_0__Init_b__0__, v5);
-    sub_1BCAFF8(&EventBoardGameTokenManager___c__DisplayClass18_0_TypeInfo, v6);
-    byte_4B20748 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_EventBoardGameTokenManager___c__DisplayClass18_0__Init_b__0__);
+    sub_1C2D490(&EventBoardGameTokenManager___c__DisplayClass18_0_TypeInfo);
+    byte_4C21504 = 1;
   }
-  v7 = sub_1BCB244(EventBoardGameTokenManager___c__DisplayClass18_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v7, 0LL);
-  if ( !v7 )
-    sub_1BCB254(v8, v9);
-  *(_QWORD *)(v7 + 16) = this;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
-  *(_DWORD *)(v7 + 24) = eventId;
-  v12 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(
-    v12,
-    (Il2CppObject *)v7,
-    Method_EventBoardGameTokenManager___c__DisplayClass18_0__Init_b__0__,
-    0LL);
-  EventBoardGameTokenManager__LoadEventUI(this, v12, 1, v13);
+  v5 = sub_1C2D6DC(EventBoardGameTokenManager___c__DisplayClass18_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
+  if ( !v5 )
+    sub_1C2D6EC(v6, v7);
+  *(_QWORD *)(v5 + 16) = this;
+  sub_1C2D434(v5 + 16);
+  *(_DWORD *)(v5 + 24) = eventId;
+  v8 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v8, (Il2CppObject *)v5, Method_EventBoardGameTokenManager___c__DisplayClass18_0__Init_b__0__, 0);
+  EventBoardGameTokenManager__LoadEventUI(this, v8, 1, v9);
 }
 
 
-void __fastcall EventBoardGameTokenManager__LoadEventUI(
+void EventBoardGameTokenManager__LoadEventUI(
         EventBoardGameTokenManager_o *this,
         System_Action_o *callback,
         int32_t loadParallelMax,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   AssetData_o *eventUIAssetData; // x0
-  long double v12; // q0
   struct System_Action_o **p_eventUILoadCallbackFunc; // x22
-  System_Delegate_o *v14; // x0
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  System_Action_c *v17; // x1
-  AssetLoader_LoadEndDataHandler_o *v18; // x21
-  const MethodInfo *v19; // x2
+  System_Delegate_o *v9; // x0
+  System_Action_c *v10; // x1
+  AssetLoader_LoadEndDataHandler_o *v11; // x21
+  const MethodInfo *v12; // x2
 
-  if ( (byte_4B2074E & 1) == 0 )
+  if ( (byte_4C2150A & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, callback);
-    sub_1BCAFF8(&AssetManager_TypeInfo, v7);
-    sub_1BCAFF8(&Method_EventBoardGameTokenManager_LoadEventUIEnd__, v8);
-    sub_1BCAFF8(&AssetLoader_LoadEndDataHandler_TypeInfo, v9);
-    sub_1BCAFF8(&StringLiteral_6218/*"EventUI/Prefabs/80285"*/, v10);
-    byte_4B2074E = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&AssetManager_TypeInfo);
+    sub_1C2D490(&Method_EventBoardGameTokenManager_LoadEventUIEnd__);
+    sub_1C2D490(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C2D490(&StringLiteral_6260/*"EventUI/Prefabs/80285"*/);
+    byte_4C2150A = 1;
   }
   eventUIAssetData = this->fields.eventUIAssetData;
-  if ( eventUIAssetData && !AssetData__get_IsEmpty(eventUIAssetData, 0LL) )
+  if ( eventUIAssetData && !AssetData__get_IsEmpty(eventUIAssetData, 0) )
     goto LABEL_9;
   p_eventUILoadCallbackFunc = &this->fields.eventUILoadCallbackFunc;
-  v14 = System_Delegate__Combine(
-          (System_Delegate_o *)this->fields.eventUILoadCallbackFunc,
-          (System_Delegate_o *)callback,
-          0LL);
-  if ( v14 )
+  v9 = System_Delegate__Combine(
+         (System_Delegate_o *)this->fields.eventUILoadCallbackFunc,
+         (System_Delegate_o *)callback,
+         0);
+  if ( v9 )
   {
-    v17 = System_Action_TypeInfo;
-    if ( (System_Action_c *)v14->klass != System_Action_TypeInfo
-      || (*p_eventUILoadCallbackFunc = (struct System_Action_o *)v14, (System_Action_c *)v14->klass != v17) )
+    v10 = System_Action_TypeInfo;
+    if ( (System_Action_c *)v9->klass != System_Action_TypeInfo
+      || (*p_eventUILoadCallbackFunc = (struct System_Action_o *)v9, (System_Action_c *)v9->klass != v10) )
     {
-      v12 = sub_1BCB514(v14);
+      sub_1C2D9AC(v9);
 LABEL_9:
       if ( callback )
-        ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, long double))callback->fields.m_target)(
-          callback->fields.original_method_info,
-          *(_QWORD *)&callback->fields.extra_arg,
-          v12);
+        ((void (__fastcall *)(intptr_t, intptr_t))callback->fields.invoke_impl)(
+          callback->fields.method_code,
+          callback->fields.method);
       return;
     }
   }
   else
   {
-    *p_eventUILoadCallbackFunc = 0LL;
+    *p_eventUILoadCallbackFunc = 0;
   }
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventUILoadCallbackFunc, (int32_t)v14, v15, v16);
+  sub_1C2D434(&this->fields.eventUILoadCallbackFunc);
   if ( !this->fields.isEventUILoad )
   {
     this->fields.isEventUILoad = 1;
-    v18 = (AssetLoader_LoadEndDataHandler_o *)sub_1BCB244(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v11 = (AssetLoader_LoadEndDataHandler_o *)sub_1C2D6DC(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
-      v18,
+      v11,
       (Il2CppObject *)this,
       Method_EventBoardGameTokenManager_LoadEventUIEnd__,
-      0LL);
+      0);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    if ( !AssetManager__loadAssetStorage((System_String_o *)StringLiteral_6218/*"EventUI/Prefabs/80285"*/, v18, loadParallelMax, 0LL) )
+    if ( !AssetManager__loadAssetStorage((System_String_o *)StringLiteral_6260/*"EventUI/Prefabs/80285"*/, v11, loadParallelMax, 0) )
     {
       this->fields.isEventUILoad = 0;
-      EventBoardGameTokenManager__LoadEventUIEnd(this, 0LL, v19);
+      EventBoardGameTokenManager__LoadEventUIEnd(this, 0, v12);
     }
   }
 }
 
 
-void __fastcall EventBoardGameTokenManager__LoadEventUIEnd(
+void EventBoardGameTokenManager__LoadEventUIEnd(
         EventBoardGameTokenManager_o *this,
         AssetData_o *assetData,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  EventBoardGameTokenManager_o *v6; // x0
-  const MethodInfo *v7; // x3
-  struct UIAtlas_o *UIAtlasFromAssetData; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  CGThumbnailListItem_o *p_eventUILoadCallbackFunc; // x19
-  struct System_Action_o *v12; // x20
+  EventBoardGameTokenManager_o *v5; // x0
+  const MethodInfo *v6; // x3
+  struct System_Action_o **p_eventUILoadCallbackFunc; // x19
+  struct System_Action_o *v8; // x20
   struct System_Action_o *eventUILoadCallbackFunc; // t1
 
-  if ( (byte_4B2074F & 1) == 0 )
+  if ( (byte_4C2150B & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_5301/*"DownloadEventUIAtlas8028500"*/, assetData);
-    byte_4B2074F = 1;
+    sub_1C2D490(&StringLiteral_5336/*"DownloadEventUIAtlas8028500"*/);
+    byte_4C2150B = 1;
   }
   if ( this->fields.isEventUILoad )
   {
     this->fields.isEventUILoad = 0;
     this->fields.eventUIAssetData = assetData;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventUIAssetData, (int32_t)assetData, (int32_t)method, v3);
-    UIAtlasFromAssetData = EventBoardGameTokenManager__CreateUIAtlasFromAssetData(
-                             v6,
-                             assetData,
-                             (System_String_o *)StringLiteral_5301/*"DownloadEventUIAtlas8028500"*/,
-                             v7);
-    this->fields.eventUIDownloadAtlas = UIAtlasFromAssetData;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventUIDownloadAtlas, (int32_t)UIAtlasFromAssetData, v9, v10);
+    v5 = (EventBoardGameTokenManager_o *)sub_1C2D434(&this->fields.eventUIAssetData);
+    this->fields.eventUIDownloadAtlas = EventBoardGameTokenManager__CreateUIAtlasFromAssetData(
+                                          v5,
+                                          assetData,
+                                          (System_String_o *)StringLiteral_5336/*"DownloadEventUIAtlas8028500"*/,
+                                          v6);
+    sub_1C2D434(&this->fields.eventUIDownloadAtlas);
   }
   eventUILoadCallbackFunc = this->fields.eventUILoadCallbackFunc;
-  p_eventUILoadCallbackFunc = (CGThumbnailListItem_o *)&this->fields.eventUILoadCallbackFunc;
-  v12 = eventUILoadCallbackFunc;
+  p_eventUILoadCallbackFunc = &this->fields.eventUILoadCallbackFunc;
+  v8 = eventUILoadCallbackFunc;
   if ( eventUILoadCallbackFunc )
   {
-    p_eventUILoadCallbackFunc->klass = 0LL;
-    sub_1BCAF9C(p_eventUILoadCallbackFunc, 0, (int32_t)method, v3);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v12->fields.m_target)(
-      v12->fields.original_method_info,
-      *(_QWORD *)&v12->fields.extra_arg);
+    *p_eventUILoadCallbackFunc = 0;
+    sub_1C2D434(p_eventUILoadCallbackFunc);
+    ((void (__fastcall *)(intptr_t, intptr_t))v8->fields.invoke_impl)(v8->fields.method_code, v8->fields.method);
   }
 }
 
 
-void __fastcall EventBoardGameTokenManager__ReleaseEventUI(
-        EventBoardGameTokenManager_o *this,
-        const MethodInfo *method)
+void EventBoardGameTokenManager__ReleaseEventUI(EventBoardGameTokenManager_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  __int64 v5; // x1
   AssetData_o *eventUIAssetData; // x20
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
 
-  if ( (byte_4B20751 & 1) == 0 )
+  if ( (byte_4C2150D & 1) == 0 )
   {
-    sub_1BCAFF8(&AssetManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_6218/*"EventUI/Prefabs/80285"*/, v5);
-    byte_4B20751 = 1;
+    sub_1C2D490(&AssetManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_6260/*"EventUI/Prefabs/80285"*/);
+    byte_4C2150D = 1;
   }
   if ( this->fields.isEventUILoad )
   {
     this->fields.isEventUILoad = 0;
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAssetStorage((System_String_o *)StringLiteral_6218/*"EventUI/Prefabs/80285"*/, 0LL);
+    AssetManager__releaseAssetStorage((System_String_o *)StringLiteral_6260/*"EventUI/Prefabs/80285"*/, 0);
   }
   else
   {
@@ -404,230 +351,211 @@ void __fastcall EventBoardGameTokenManager__ReleaseEventUI(
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAsset_39722652(eventUIAssetData, 0LL);
+      AssetManager__releaseAsset_40313100(eventUIAssetData, 0);
     }
   }
-  this->fields.eventUIDownloadAtlas = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventUIDownloadAtlas, 0, v2, v3);
-  this->fields.eventUIAssetData = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventUIAssetData, 0, v7, v8);
+  this->fields.eventUIDownloadAtlas = 0;
+  sub_1C2D434(&this->fields.eventUIDownloadAtlas);
+  this->fields.eventUIAssetData = 0;
+  sub_1C2D434(&this->fields.eventUIAssetData);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall EventBoardGameTokenManager__SetArrangement(
+void EventBoardGameTokenManager__SetArrangement(
         EventBoardGameTokenManager_o *this,
         int32_t eventId,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 Instance; // x0
-  const MethodInfo *v15; // x1
+  DataManager_o *Instance; // x0
+  const MethodInfo *v5; // x1
   Il2CppObject *MasterData_object; // x26
-  System_Collections_Generic_List_object__o *v17; // x22
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  int v20; // w8
-  int v21; // w11
-  int32_t v22; // w23
-  int v23; // w21
-  int v24; // w22
+  System_Collections_Generic_List_object__o *v7; // x22
+  int v8; // w8
+  int v9; // w11
+  int32_t v10; // w23
+  int v11; // w21
+  int v12; // w22
   Il2CppObject *tokenPrefab; // x24
-  _BOOL4 v26; // w29
-  int v27; // w21
-  int v28; // w19
-  int v29; // w8
-  float v30; // s10
-  UnityEngine_GameObject_o *v31; // x24
-  __int64 v32; // x25
-  int32_t v33; // w2
-  const MethodInfo *v34; // x3
-  Il2CppObject *v35; // x0
+  _BOOL4 v14; // w29
+  int v15; // w21
+  int v16; // w19
+  int v17; // w8
+  float v18; // s10
+  UnityEngine_GameObject_o *v19; // x24
+  EventBoardGameTokenItem_o *v20; // x25
+  Il2CppObject *v21; // x0
   bool IsHavingToken; // w26
-  struct UIAtlas_o *eventUIDownloadAtlas; // x1
-  EventBoardGameTokenEntity_o *v38; // x27
-  System_Action_int__o *v39; // x28
-  const MethodInfo *v40; // x5
-  int32_t v41; // w2
-  const MethodInfo *v42; // x3
-  __int64 v43; // x8
-  _QWORD *v44; // x9
-  __int64 v45; // x10
-  __int64 v46; // x8
-  UnityEngine_Transform_o *v47; // x25
-  UnityEngine_Transform_o *v48; // x24
-  Il2CppObject *v49; // [xsp+8h] [xbp-98h]
-  int v51; // [xsp+14h] [xbp-8Ch]
+  EventBoardGameTokenEntity_o *v23; // x27
+  System_Action_int__o *v24; // x28
+  const MethodInfo *v25; // x5
+  intptr_t m_CachedPtr; // x8
+  _QWORD *v27; // x9
+  __int64 m_CancellationTokenSource_low; // x10
+  intptr_t v29; // x8
+  UnityEngine_Transform_o *v30; // x25
+  UnityEngine_Transform_o *v31; // x24
+  Il2CppObject *v32; // [xsp+8h] [xbp-98h]
+  int v34; // [xsp+14h] [xbp-8Ch]
   EventBoardGameTokenEntity_o *entity; // [xsp+18h] [xbp-88h] BYREF
   EventBoardGameTokenItem_o *item; // [xsp+28h] [xbp-78h] BYREF
-  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B20749 & 1) == 0 )
+  if ( (byte_4C21505 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_int__TypeInfo, *(_QWORD *)&eventId);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_EventBoardGameTokenMaster___, v4);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_UserEventBoardGameTokenMaster___, v5);
-    sub_1BCAFF8(&Method_EventBoardGameTokenManager_checkTokenInfo__, v6);
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenItem___, v7);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventBoardGameTokenItem__Add__, v8);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventBoardGameTokenItem___ctor__, v9);
-    sub_1BCAFF8(&System_Collections_Generic_List_EventBoardGameTokenItem__TypeInfo, v10);
-    sub_1BCAFF8(&Method_UnityEngine_Object_Instantiate_GameObject___, v11);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v12);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    byte_4B20749 = 1;
+    sub_1C2D490(&System_Action_int__TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMasterData_EventBoardGameTokenMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_UserEventBoardGameTokenMaster___);
+    sub_1C2D490(&Method_EventBoardGameTokenManager_checkTokenInfo__);
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenItem___);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventBoardGameTokenItem__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventBoardGameTokenItem___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_EventBoardGameTokenItem__TypeInfo);
+    sub_1C2D490(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C21505 = 1;
   }
-  entity = 0LL;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  entity = 0;
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
 LABEL_37:
-    sub_1BCB254(Instance, v15);
+    sub_1C2D6EC(Instance, v5);
   MasterData_object = DataManager__GetMasterData_object_(
-                        (DataManager_o *)Instance,
-                        (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_EventBoardGameTokenMaster___);
-  v17 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventBoardGameTokenItem__TypeInfo);
+                        Instance,
+                        (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventBoardGameTokenMaster___);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_EventBoardGameTokenItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v17,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventBoardGameTokenItem___ctor__);
-  this->fields.tokenList = (struct System_Collections_Generic_List_EventBoardGameTokenItem__o *)v17;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.tokenList, (int32_t)v17, v18, v19);
-  v20 = 0;
-  v21 = 11;
-  v22 = 1;
-  v23 = 1;
-  v24 = 1;
-  v49 = MasterData_object;
+    v7,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_EventBoardGameTokenItem___ctor__);
+  this->fields.tokenList = (struct System_Collections_Generic_List_EventBoardGameTokenItem__o *)v7;
+  sub_1C2D434(&this->fields.tokenList);
+  v8 = 0;
+  v9 = 11;
+  v10 = 1;
+  v11 = 1;
+  v12 = 1;
+  v32 = MasterData_object;
   do
   {
     tokenPrefab = (Il2CppObject *)this->fields.tokenPrefab;
-    v26 = v20 == 0 || v20 % v21 != 0;
-    v27 = v23 ^ v26;
-    if ( v26 )
-      v28 = v20;
+    v14 = v8 == 0 || v8 % v9 != 0;
+    v15 = v11 ^ v14;
+    if ( v14 )
+      v16 = v8;
     else
-      v28 = 0;
-    if ( (v27 & 1) != 0 )
-      v29 = 11;
+      v16 = 0;
+    if ( (v15 & 1) != 0 )
+      v17 = 11;
     else
-      v29 = 10;
-    if ( (v27 & 1) != 0 )
-      v30 = 0.0;
+      v17 = 10;
+    if ( (v15 & 1) != 0 )
+      v18 = 0.0;
     else
-      v30 = 22.0;
-    v51 = v29;
+      v18 = 22.0;
+    v34 = v17;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    Instance = (__int64)UnityEngine_Object__Instantiate_object_(
-                          tokenPrefab,
-                          (const MethodInfo_30A3BB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+    Instance = (DataManager_o *)UnityEngine_Object__Instantiate_object_(
+                                  tokenPrefab,
+                                  (const MethodInfo_315ACB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !Instance )
       goto LABEL_37;
-    v31 = (UnityEngine_GameObject_o *)Instance;
-    Instance = (__int64)UnityEngine_GameObject__GetComponent_object_(
-                          (UnityEngine_GameObject_o *)Instance,
-                          (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenItem___);
+    v19 = (UnityEngine_GameObject_o *)Instance;
+    Instance = (DataManager_o *)UnityEngine_GameObject__GetComponent_object_(
+                                  (UnityEngine_GameObject_o *)Instance,
+                                  (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenItem___);
     item = (EventBoardGameTokenItem_o *)Instance;
     if ( !Instance )
       goto LABEL_37;
-    v32 = Instance;
-    EventBoardGameTokenItem__Init((EventBoardGameTokenItem_o *)Instance, v15);
-    entity = 0LL;
+    v20 = (EventBoardGameTokenItem_o *)Instance;
+    EventBoardGameTokenItem__Init((EventBoardGameTokenItem_o *)Instance, v5);
+    entity = 0;
     if ( !MasterData_object )
       goto LABEL_37;
     if ( !EventBoardGameTokenMaster__TryGetEntity(
             (EventBoardGameTokenMaster_o *)MasterData_object,
             &entity,
             eventId,
-            v22,
-            0LL) )
+            v10,
+            0) )
       goto LABEL_23;
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_37;
-    v35 = DataManager__GetMasterData_object_(
-            (DataManager_o *)Instance,
-            (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_UserEventBoardGameTokenMaster___);
-    if ( v35 )
-      IsHavingToken = UserEventBoardGameTokenMaster__IsHavingToken((UserEventBoardGameTokenMaster_o *)v35, v22, 0LL);
+    v21 = DataManager__GetMasterData_object_(
+            Instance,
+            (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_UserEventBoardGameTokenMaster___);
+    if ( v21 )
+      IsHavingToken = UserEventBoardGameTokenMaster__IsHavingToken((UserEventBoardGameTokenMaster_o *)v21, v10, 0);
     else
 LABEL_23:
       IsHavingToken = 0;
-    eventUIDownloadAtlas = this->fields.eventUIDownloadAtlas;
-    *(_QWORD *)(v32 + 80) = eventUIDownloadAtlas;
-    sub_1BCAF9C((CGThumbnailListItem_o *)(v32 + 80), (int32_t)eventUIDownloadAtlas, v33, v34);
-    v38 = entity;
-    v39 = (System_Action_int__o *)sub_1BCB244(System_Action_int__TypeInfo);
-    System_Action_int____ctor(v39, (Il2CppObject *)this, Method_EventBoardGameTokenManager_checkTokenInfo__, 0LL);
-    EventBoardGameTokenItem__SetItem((EventBoardGameTokenItem_o *)v32, &item, v38, IsHavingToken, v39, v40);
-    Instance = (__int64)this->fields.tokenList;
+    v20->fields.eventAtlas = this->fields.eventUIDownloadAtlas;
+    sub_1C2D434(&v20->fields.eventAtlas);
+    v23 = entity;
+    v24 = (System_Action_int__o *)sub_1C2D6DC(System_Action_int__TypeInfo);
+    System_Action_int____ctor(v24, (Il2CppObject *)this, Method_EventBoardGameTokenManager_checkTokenInfo__, 0);
+    EventBoardGameTokenItem__SetItem(v20, &item, v23, IsHavingToken, v24, v25);
+    Instance = (DataManager_o *)this->fields.tokenList;
     if ( !Instance )
       goto LABEL_37;
-    v43 = *(_QWORD *)(Instance + 16);
-    v44 = Method_System_Collections_Generic_List_EventBoardGameTokenItem__Add__;
-    ++*(_DWORD *)(Instance + 28);
-    if ( !v43 )
+    m_CachedPtr = Instance->fields.m_CachedPtr;
+    v27 = Method_System_Collections_Generic_List_EventBoardGameTokenItem__Add__;
+    ++HIDWORD(Instance->fields.m_CancellationTokenSource);
+    if ( !m_CachedPtr )
       goto LABEL_37;
-    v45 = *(int *)(Instance + 24);
-    MasterData_object = v49;
-    if ( (unsigned int)v45 >= *(_DWORD *)(v43 + 24) )
+    m_CancellationTokenSource_low = SLODWORD(Instance->fields.m_CancellationTokenSource);
+    MasterData_object = v32;
+    if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(m_CachedPtr + 24) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)Instance,
-        (Il2CppObject *)v32,
-        *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
+        (Il2CppObject *)v20,
+        *(const MethodInfo_3789B84 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
     }
     else
     {
-      v46 = v43 + 8 * v45;
-      *(_DWORD *)(Instance + 24) = v45 + 1;
-      *(_QWORD *)(v46 + 32) = v32;
-      sub_1BCAF9C((CGThumbnailListItem_o *)(v46 + 32), v32, v41, v42);
+      v29 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
+      LODWORD(Instance->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
+      *(_QWORD *)(v29 + 32) = v20;
+      sub_1C2D434(v29 + 32);
     }
-    Instance = (__int64)UnityEngine_GameObject__get_transform(v31, 0LL);
+    Instance = (DataManager_o *)UnityEngine_GameObject__get_transform(v19, 0);
     if ( !this->fields.parentObject )
       goto LABEL_37;
-    v47 = (UnityEngine_Transform_o *)Instance;
-    Instance = (__int64)UnityEngine_GameObject__get_transform(this->fields.parentObject, 0LL);
-    if ( !v47 )
+    v30 = (UnityEngine_Transform_o *)Instance;
+    Instance = (DataManager_o *)UnityEngine_GameObject__get_transform(this->fields.parentObject, 0);
+    if ( !v30 )
       goto LABEL_37;
-    UnityEngine_Transform__set_parent(v47, (UnityEngine_Transform_o *)Instance, 0LL);
-    Instance = (__int64)UnityEngine_GameObject__get_transform(v31, 0LL);
+    UnityEngine_Transform__set_parent(v30, (UnityEngine_Transform_o *)Instance, 0);
+    Instance = (DataManager_o *)UnityEngine_GameObject__get_transform(v19, 0);
     if ( !Instance )
       goto LABEL_37;
-    v24 += !v26;
-    v54.fields.y = (float)v24 * (float)-this->fields.arrangementPich.fields.y;
-    v54.fields.x = v30 + (float)(this->fields.arrangementPich.fields.x * (float)v28);
-    v54.fields.z = 0.0;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v54, 0LL);
-    Instance = (__int64)UnityEngine_GameObject__get_transform(v31, 0LL);
-    v48 = (UnityEngine_Transform_o *)Instance;
-    if ( !byte_4B16196 )
+    v12 += !v14;
+    v37.fields.y = (float)v12 * (float)-this->fields.arrangementPich.fields.y;
+    v37.fields.x = v18 + (float)(this->fields.arrangementPich.fields.x * (float)v16);
+    v37.fields.z = 0.0;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Instance, v37, 0);
+    Instance = (DataManager_o *)UnityEngine_GameObject__get_transform(v19, 0);
+    v31 = (UnityEngine_Transform_o *)Instance;
+    if ( !byte_4C20DA6 )
     {
-      Instance = sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v15);
-      byte_4B16196 = 1;
+      Instance = (DataManager_o *)sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+      byte_4C20DA6 = 1;
     }
-    if ( !v48 )
+    if ( !v31 )
       goto LABEL_37;
-    v23 = v27 ^ 1;
-    UnityEngine_Transform__set_localScale(v48, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
-    v21 = v51;
-    ++v22;
-    v20 = v28 + 1;
+    v11 = v15 ^ 1;
+    UnityEngine_Transform__set_localScale(v31, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
+    v9 = v34;
+    ++v10;
+    v8 = v16 + 1;
   }
-  while ( v22 != 53 );
+  while ( v10 != 53 );
 }
 
 
-bool __fastcall EventBoardGameTokenManager__SetEventUI(
+bool EventBoardGameTokenManager__SetEventUI(
         EventBoardGameTokenManager_o *this,
         UISprite_o *sprite,
         System_String_o *spriteName,
@@ -638,162 +566,147 @@ bool __fastcall EventBoardGameTokenManager__SetEventUI(
   UnityEngine_Object_o *eventUIDownloadAtlas; // x22
   bool v10; // w21
 
-  if ( (byte_4B20752 & 1) == 0 )
+  if ( (byte_4C2150E & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, sprite);
-    byte_4B20752 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2150E = 1;
   }
-  IsNullOrEmpty = (UIAtlas_o *)System_String__IsNullOrEmpty(spriteName, 0LL);
+  IsNullOrEmpty = (UIAtlas_o *)System_String__IsNullOrEmpty(spriteName, 0);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
   {
     eventUIDownloadAtlas = (UnityEngine_Object_o *)this->fields.eventUIDownloadAtlas;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    IsNullOrEmpty = (UIAtlas_o *)UnityEngine_Object__op_Equality(eventUIDownloadAtlas, 0LL, 0LL);
+    IsNullOrEmpty = (UIAtlas_o *)UnityEngine_Object__op_Equality(eventUIDownloadAtlas, 0, 0);
     if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
     {
       IsNullOrEmpty = this->fields.eventUIDownloadAtlas;
       if ( IsNullOrEmpty )
       {
-        IsNullOrEmpty = (UIAtlas_o *)UIAtlas__GetSprite(IsNullOrEmpty, spriteName, 0LL);
+        IsNullOrEmpty = (UIAtlas_o *)UIAtlas__GetSprite(IsNullOrEmpty, spriteName, 0);
         if ( IsNullOrEmpty )
         {
           if ( sprite )
           {
-            UISprite__set_atlas(sprite, this->fields.eventUIDownloadAtlas, 0LL);
+            UISprite__set_atlas(sprite, this->fields.eventUIDownloadAtlas, 0);
             goto LABEL_9;
           }
         }
         else if ( sprite )
         {
-          spriteName = 0LL;
+          spriteName = 0;
           v10 = 0;
           goto LABEL_10;
         }
       }
 LABEL_17:
-      sub_1BCB254(IsNullOrEmpty, v8);
+      sub_1C2D6EC(IsNullOrEmpty, v8);
     }
   }
   if ( !sprite )
     goto LABEL_17;
-  spriteName = 0LL;
+  spriteName = 0;
 LABEL_9:
   v10 = 1;
 LABEL_10:
-  UISprite__set_spriteName(sprite, spriteName, 0LL);
+  UISprite__set_spriteName(sprite, spriteName, 0);
   return v10;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall EventBoardGameTokenManager__checkTokenInfo(
+void EventBoardGameTokenManager__checkTokenInfo(
         EventBoardGameTokenManager_o *this,
         int32_t tokenId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
   UnityEngine_Object_o *tokenInfoDialog; // x22
-  __int64 v8; // x1
-  const MethodInfo *v9; // x2
-  void *Menu; // x0
-  Il2CppObject *Component_object; // x0
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  struct UIAtlas_o *eventUIDownloadAtlas; // x1
-  EventBoardGameTokenInfoDialog_o *v17; // x20
-  const MethodInfo *v18; // x2
+  __int64 v6; // x1
+  const MethodInfo *v7; // x2
+  UnityEngine_GameObject_o *Menu; // x0
+  EventBoardGameTokenInfoDialog_o *v9; // x20
+  const MethodInfo *v10; // x2
 
-  if ( (byte_4B2074A & 1) == 0 )
+  if ( (byte_4C21506 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenInfoDialog___, *(_QWORD *)&tokenId);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__, v5);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v6);
-    byte_4B2074A = 1;
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenInfoDialog___);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C21506 = 1;
   }
   tokenInfoDialog = (UnityEngine_Object_o *)this->fields.tokenInfoDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(tokenInfoDialog, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(tokenInfoDialog, 0, 0) )
   {
-    Menu = EventBoardGameTokenManager__CreateMenu(this, this->fields.tokenInfoDialogPrefab, v9);
+    Menu = EventBoardGameTokenManager__CreateMenu(this, this->fields.tokenInfoDialogPrefab, v7);
     if ( !Menu
-      || (Component_object = UnityEngine_GameObject__GetComponent_object_(
-                               (UnityEngine_GameObject_o *)Menu,
-                               (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenInfoDialog___),
-          this->fields.tokenInfoDialog = (struct EventBoardGameTokenInfoDialog_o *)Component_object,
-          sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.tokenInfoDialog, (int32_t)Component_object, v12, v13),
-          (Menu = this->fields.tokenInfoDialog) == 0LL) )
+      || (this->fields.tokenInfoDialog = (struct EventBoardGameTokenInfoDialog_o *)UnityEngine_GameObject__GetComponent_object_(
+                                                                                     Menu,
+                                                                                     (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_EventBoardGameTokenInfoDialog___),
+          sub_1C2D434(&this->fields.tokenInfoDialog),
+          (Menu = (UnityEngine_GameObject_o *)this->fields.tokenInfoDialog) == 0) )
     {
 LABEL_12:
-      sub_1BCB254(Menu, v8);
+      sub_1C2D6EC(Menu, v6);
     }
-    eventUIDownloadAtlas = this->fields.eventUIDownloadAtlas;
-    *((_QWORD *)Menu + 17) = eventUIDownloadAtlas;
-    sub_1BCAF9C((CGThumbnailListItem_o *)Menu + 1, (int32_t)eventUIDownloadAtlas, v14, v15);
+    Menu[5].fields.m_CachedPtr = (intptr_t)this->fields.eventUIDownloadAtlas;
+    sub_1C2D434(&Menu[5].fields);
   }
-  Menu = this->fields.tokenList;
+  Menu = (UnityEngine_GameObject_o *)this->fields.tokenList;
   if ( !Menu )
     goto LABEL_12;
-  v17 = this->fields.tokenInfoDialog;
-  Menu = System_Collections_Generic_List_object___get_Item(
-           (System_Collections_Generic_List_object__o *)Menu,
-           tokenId - 1,
-           (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__);
-  if ( !v17 )
+  v9 = this->fields.tokenInfoDialog;
+  Menu = (UnityEngine_GameObject_o *)System_Collections_Generic_List_object___get_Item(
+                                       (System_Collections_Generic_List_object__o *)Menu,
+                                       tokenId - 1,
+                                       (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_EventBoardGameTokenItem__get_Item__);
+  if ( !v9 )
     goto LABEL_12;
-  EventBoardGameTokenInfoDialog__OpenInfo(v17, (EventBoardGameTokenItem_o *)Menu, v18);
+  EventBoardGameTokenInfoDialog__OpenInfo(v9, (EventBoardGameTokenItem_o *)Menu, v10);
 }
 
 
-void __fastcall EventBoardGameTokenManager__closeTokenInfo(
-        EventBoardGameTokenManager_o *this,
-        const MethodInfo *method)
+void EventBoardGameTokenManager__closeTokenInfo(EventBoardGameTokenManager_o *this, const MethodInfo *method)
 {
   UnityEngine_Component_o **p_tokenInfoDialog; // x19
   UnityEngine_Object_o *v4; // x20
   struct EventBoardGameTokenInfoDialog_o *tokenInfoDialog; // t1
   __int64 v6; // x1
   UnityEngine_Object_o *gameObject; // x20
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
 
-  if ( (byte_4B2074B & 1) == 0 )
+  if ( (byte_4C21507 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B2074B = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C21507 = 1;
   }
   tokenInfoDialog = this->fields.tokenInfoDialog;
   p_tokenInfoDialog = (UnityEngine_Component_o **)&this->fields.tokenInfoDialog;
   v4 = (UnityEngine_Object_o *)tokenInfoDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v4, 0, 0) )
   {
     if ( !*p_tokenInfoDialog )
-      sub_1BCB254(0LL, v6);
-    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_tokenInfoDialog, 0LL);
+      sub_1C2D6EC(0, v6);
+    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_tokenInfoDialog, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(gameObject, 0LL);
-    *p_tokenInfoDialog = 0LL;
-    sub_1BCAF9C((CGThumbnailListItem_o *)p_tokenInfoDialog, 0, v8, v9);
+    UnityEngine_Object__Destroy_71163704(gameObject, 0);
+    *p_tokenInfoDialog = 0;
+    sub_1C2D434(p_tokenInfoDialog);
   }
 }
 
 
-void __fastcall EventBoardGameTokenManager___c__DisplayClass18_0___ctor(
+void EventBoardGameTokenManager___c__DisplayClass18_0___ctor(
         EventBoardGameTokenManager___c__DisplayClass18_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall EventBoardGameTokenManager___c__DisplayClass18_0___Init_b__0(
+void EventBoardGameTokenManager___c__DisplayClass18_0___Init_b__0(
         EventBoardGameTokenManager___c__DisplayClass18_0_o *this,
         const MethodInfo *method)
 {
@@ -801,21 +714,21 @@ void __fastcall EventBoardGameTokenManager___c__DisplayClass18_0___Init_b__0(
   struct EventBoardGameTokenManager_o *_4__this; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4B20753 & 1) == 0 )
+  if ( (byte_4C2150F & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_23899/*"token_bg"*/, method);
-    byte_4B20753 = 1;
+    sub_1C2D490(&StringLiteral_24093/*"token_bg"*/);
+    byte_4C2150F = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (EventBoardGameTokenManager__SetEventUI(
           _4__this,
           _4__this->fields.bgImage,
-          (System_String_o *)StringLiteral_23899/*"token_bg"*/,
+          (System_String_o *)StringLiteral_24093/*"token_bg"*/,
           v2),
-        (_4__this = this->fields.__4__this) == 0LL) )
+        (_4__this = this->fields.__4__this) == 0) )
   {
-    sub_1BCB254(_4__this, method);
+    sub_1C2D6EC(_4__this, method);
   }
   if ( !_4__this->fields.tokenList )
     EventBoardGameTokenManager__SetArrangement(_4__this, this->fields.eventId, v5);

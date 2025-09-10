@@ -1,4 +1,4 @@
-bool __fastcall TreasureDeviceConditionUtil__HasEnoughCriticalStar(
+bool TreasureDeviceConditionUtil__HasEnoughCriticalStar(
         BattleServantData_o *servantData,
         BattleData_o *data,
         const MethodInfo *method)
@@ -8,25 +8,25 @@ bool __fastcall TreasureDeviceConditionUtil__HasEnoughCriticalStar(
   const MethodInfo *v6; // x3
 
   v4 = servantData;
-  if ( (byte_4B1F5D6 & 1) == 0 )
+  if ( (byte_4C2A47E & 1) == 0 )
   {
-    servantData = (BattleServantData_o *)sub_1BCAFF8(&StringLiteral_12243/*"STAR_HIGHER"*/, data);
-    byte_4B1F5D6 = 1;
+    servantData = (BattleServantData_o *)sub_1C2D490(&StringLiteral_12343/*"STAR_HIGHER"*/);
+    byte_4C2A47E = 1;
   }
   if ( !v4 )
     goto LABEL_11;
   if ( v4->fields.isEnemy )
     return 1;
-  if ( !data || (servantData = (BattleServantData_o *)data->fields.changePhaseNotify) == 0LL )
+  if ( !data || (servantData = (BattleServantData_o *)data->fields.changePhaseNotify) == 0 )
 LABEL_11:
-    sub_1BCB254(servantData, data);
+    sub_1C2D6EC(servantData, data);
   if ( ChangeBattlePhaseNotify__get_Phase((ChangeBattlePhaseNotify_o *)servantData, (const MethodInfo *)data) != 3 )
   {
-    TDvcLv = BattleServantData__get_TDvcLv(v4, 0LL);
+    TDvcLv = BattleServantData__get_TDvcLv(v4, 0);
     if ( TDvcLv )
       return TreasureDeviceConditionUtil__HigherCondition(
                TDvcLv->fields.script,
-               (System_String_o *)StringLiteral_12243/*"STAR_HIGHER"*/,
+               (System_String_o *)StringLiteral_12343/*"STAR_HIGHER"*/,
                data->fields.totalCriticalStars,
                v6);
   }
@@ -34,48 +34,47 @@ LABEL_11:
 }
 
 
-bool __fastcall TreasureDeviceConditionUtil__HigherCondition(
+bool TreasureDeviceConditionUtil__HigherCondition(
         System_Collections_Generic_Dictionary_string__object__o *script,
         System_String_o *key,
         int32_t val,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
   Il2CppObject *Item; // x0
-  __int64 v9; // x1
-  System_String_o *v10; // x0
+  __int64 v8; // x1
+  System_String_o *v9; // x0
   int64_t result; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B1F5D5 & 1) == 0 )
+  if ( (byte_4C2A47D & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, key);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v7);
-    byte_4B1F5D5 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    byte_4C2A47D = 1;
   }
   if ( !script
     || !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)script,
           (Il2CppObject *)key,
-          (const MethodInfo_3385F6C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (const MethodInfo_344A51C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     return 1;
   }
-  result = 0LL;
+  result = 0;
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)script,
            (Il2CppObject *)key,
-           (const MethodInfo_3385CF8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (const MethodInfo_344A2A8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
-    sub_1BCB254(0LL, v9);
-  v10 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Item->klass->vtable[3].method)(
-                             Item,
-                             Item->klass->vtable[4].methodPtr);
-  return !System_Int64__TryParse(v10, &result, 0LL) || (int)result <= val;
+    sub_1C2D6EC(0, v8);
+  v9 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
+                            Item,
+                            Item->klass->vtable[3].method);
+  return !System_Int64__TryParse(v9, &result, 0) || (int)result <= val;
 }
 
 
 // attributes: thunk
-bool __fastcall TreasureDeviceConditionUtil__IsSatisfyEachCondition(
+bool TreasureDeviceConditionUtil__IsSatisfyEachCondition(
         BattleServantData_o *servantData,
         BattleData_o *data,
         const MethodInfo *method)

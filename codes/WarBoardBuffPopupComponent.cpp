@@ -1,28 +1,27 @@
-void __fastcall WarBoardBuffPopupComponent___ctor(WarBoardBuffPopupComponent_o *this, const MethodInfo *method)
+void WarBoardBuffPopupComponent___ctor(WarBoardBuffPopupComponent_o *this, const MethodInfo *method)
 {
   this->fields.ADD_DEPTH = 400;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall WarBoardBuffPopupComponent__Destroy(WarBoardBuffPopupComponent_o *this, const MethodInfo *method)
+void WarBoardBuffPopupComponent__Destroy(WarBoardBuffPopupComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4B19D3D & 1) == 0 )
+  if ( (byte_4C24AC1 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B19D3D = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C24AC1 = 1;
   }
-  gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_70136076(gameObject, 0LL);
+  UnityEngine_Object__Destroy_71163704(gameObject, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall WarBoardBuffPopupComponent__SetLabel(
+void WarBoardBuffPopupComponent__SetLabel(
         WarBoardBuffPopupComponent_o *this,
         System_String_o *popupName,
         int32_t popupIconId,
@@ -48,64 +47,65 @@ void __fastcall WarBoardBuffPopupComponent__SetLabel(
   z = targetPosition.fields.z;
   y = targetPosition.fields.y;
   x = targetPosition.fields.x;
-  if ( (byte_4B19D3C & 1) == 0 )
+  if ( (byte_4C24AC0 & 1) == 0 )
   {
-    sub_1BCAFF8(&AtlasManager_TypeInfo, popupName);
-    byte_4B19D3C = 1;
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    byte_4C24AC0 = 1;
   }
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_18;
-  gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
   if ( !gameObject )
     goto LABEL_18;
   v21.fields.x = x;
   v21.fields.y = y;
   v21.fields.z = z;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v21, 0LL);
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)gameObject, v21, 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.buffIcon;
   if ( !gameObject )
     goto LABEL_18;
-  v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+  v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
   buffIcon = this->fields.buffIcon;
   v15 = v13;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)AtlasManager__SetSBuffIconByIconId(buffIcon, popupIconId, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)AtlasManager__SetSBuffIconByIconId(buffIcon, popupIconId, 0);
   if ( !v15 )
     goto LABEL_18;
-  UnityEngine_GameObject__SetActive(v15, (unsigned __int8)gameObject & 1, 0LL);
+  UnityEngine_GameObject__SetActive(v15, (unsigned __int8)gameObject & 1, 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.buffIcon;
   if ( !gameObject )
     goto LABEL_18;
-  UIWidget__set_depth((UIWidget_o *)gameObject, this->fields.ADD_DEPTH + LODWORD(gameObject[7].monitor), 0LL);
+  UIWidget__set_depth((UIWidget_o *)gameObject, this->fields.ADD_DEPTH + LODWORD(gameObject[7].monitor), 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.buffNameLabel;
   if ( !gameObject )
     goto LABEL_18;
-  UILabel__set_text((UILabel_o *)gameObject, popupName, 0LL);
+  UILabel__set_text((UILabel_o *)gameObject, popupName, 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.buffNameLabel;
   if ( !gameObject )
     goto LABEL_18;
-  UIWidget__set_depth((UIWidget_o *)gameObject, this->fields.ADD_DEPTH + LODWORD(gameObject[7].monitor), 0LL);
+  UIWidget__set_depth((UIWidget_o *)gameObject, this->fields.ADD_DEPTH + LODWORD(gameObject[7].monitor), 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.buffIcon;
   if ( !gameObject )
     goto LABEL_18;
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
   if ( !gameObject
-    || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0LL),
-        (v16 = this->fields.buffIcon) == 0LL)
+    || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0),
+        (v16 = this->fields.buffIcon) == 0)
     || (v17 = (UnityEngine_Transform_o *)gameObject,
-        ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v16->klass->vtable._22_get_localSize.method)(
+        ((void (__fastcall *)(struct UISprite_o *__return_ptr, struct UISprite_o *, const MethodInfo *))v16->klass->vtable._22_get_localSize.methodPtr)(
+          v16,
           this->fields.buffIcon,
-          v16->klass->vtable._23_get_drawingDimensions.methodPtr),
-        (gameObject = (UnityEngine_GameObject_o *)this->fields.buffNameLabel) == 0LL)
-    || (v19 = v18, LODWORD(v20) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)gameObject, 0LL), !v17) )
+          v16->klass->vtable._22_get_localSize.method),
+        (gameObject = (UnityEngine_GameObject_o *)this->fields.buffNameLabel) == 0)
+    || (v19 = v18, LODWORD(v20) = *(_QWORD *)&UILabel__get_printedSize((UILabel_o *)gameObject, 0), !v17) )
   {
 LABEL_18:
-    sub_1BCB254(gameObject, v12);
+    sub_1C2D6EC(gameObject, v12);
   }
   v22.fields.y = 2.0;
   v22.fields.x = -(float)((float)(v19 * 0.5) + (float)(v20 * 0.5));
   v22.fields.z = 0.0;
-  UnityEngine_Transform__set_localPosition(v17, v22, 0LL);
+  UnityEngine_Transform__set_localPosition(v17, v22, 0);
 }

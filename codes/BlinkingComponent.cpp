@@ -1,20 +1,20 @@
-void __fastcall BlinkingComponent___ctor(BlinkingComponent_o *this, const MethodInfo *method)
+void BlinkingComponent___ctor(BlinkingComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall BlinkingComponent__Awake(BlinkingComponent_o *this, const MethodInfo *method)
+void BlinkingComponent__Awake(BlinkingComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
   const MethodInfo *v4; // x1
 
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   this->fields.mOrgScl = GameObjectExtensions__GetLocalScale(gameObject, v4);
 }
 
 
-void __fastcall BlinkingComponent__OnEnable(BlinkingComponent_o *this, const MethodInfo *method)
+void BlinkingComponent__OnEnable(BlinkingComponent_o *this, const MethodInfo *method)
 {
   this->fields.mOldTime = 0.0;
   this->fields.mIsPlay = 1;
@@ -22,7 +22,7 @@ void __fastcall BlinkingComponent__OnEnable(BlinkingComponent_o *this, const Met
 }
 
 
-void __fastcall BlinkingComponent__Play(BlinkingComponent_o *this, const MethodInfo *method)
+void BlinkingComponent__Play(BlinkingComponent_o *this, const MethodInfo *method)
 {
   this->fields.mOldTime = 0.0;
   this->fields.mIsPlay = 1;
@@ -30,7 +30,7 @@ void __fastcall BlinkingComponent__Play(BlinkingComponent_o *this, const MethodI
 }
 
 
-void __fastcall BlinkingComponent__PlayExec(BlinkingComponent_o *this, const MethodInfo *method)
+void BlinkingComponent__PlayExec(BlinkingComponent_o *this, const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
   float realtimeSinceStartup; // s0
@@ -38,7 +38,7 @@ void __fastcall BlinkingComponent__PlayExec(BlinkingComponent_o *this, const Met
 
   if ( this->fields.mIsPlay )
   {
-    realtimeSinceStartup = UnityEngine_Time__get_realtimeSinceStartup(0LL);
+    realtimeSinceStartup = UnityEngine_Time__get_realtimeSinceStartup(0);
     if ( (float)(realtimeSinceStartup - this->fields.mOldTime) >= 0.75 )
     {
       mIsDisp = this->fields.mIsDisp;
@@ -49,8 +49,7 @@ void __fastcall BlinkingComponent__PlayExec(BlinkingComponent_o *this, const Met
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BlinkingComponent__SetDisp(BlinkingComponent_o *this, bool is_disp, const MethodInfo *method)
+void BlinkingComponent__SetDisp(BlinkingComponent_o *this, bool is_disp, const MethodInfo *method)
 {
   struct UnityEngine_Vector3_StaticFields *p_mOrgScl; // x8
   float *p_y; // x9
@@ -71,10 +70,10 @@ void __fastcall BlinkingComponent__SetDisp(BlinkingComponent_o *this, bool is_di
   }
   else
   {
-    if ( !byte_4B16191 )
+    if ( !byte_4C20DA1 )
     {
-      sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, is_disp);
-      byte_4B16191 = 1;
+      sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+      byte_4C20DA1 = 1;
     }
     p_mOrgScl = UnityEngine_Vector3_TypeInfo->static_fields;
     p_y = &p_mOrgScl->zeroVector.fields.y;
@@ -83,7 +82,7 @@ void __fastcall BlinkingComponent__SetDisp(BlinkingComponent_o *this, bool is_di
   x = p_mOrgScl->zeroVector.fields.x;
   v8 = *p_y;
   v9 = *p_z;
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v12.fields.x = x;
   v12.fields.y = v8;
   v12.fields.z = v9;
@@ -91,7 +90,7 @@ void __fastcall BlinkingComponent__SetDisp(BlinkingComponent_o *this, bool is_di
 }
 
 
-void __fastcall BlinkingComponent__Stop(BlinkingComponent_o *this, const MethodInfo *method)
+void BlinkingComponent__Stop(BlinkingComponent_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
@@ -101,7 +100,7 @@ void __fastcall BlinkingComponent__Stop(BlinkingComponent_o *this, const MethodI
 
 
 // attributes: thunk
-void __fastcall BlinkingComponent__Update(BlinkingComponent_o *this, const MethodInfo *method)
+void BlinkingComponent__Update(BlinkingComponent_o *this, const MethodInfo *method)
 {
   BlinkingComponent__PlayExec(this, method);
 }

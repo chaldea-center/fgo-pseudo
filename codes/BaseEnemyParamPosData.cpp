@@ -1,11 +1,10 @@
-void __fastcall BaseEnemyParamPosData___ctor(BaseEnemyParamPosData_o *this, const MethodInfo *method)
+void BaseEnemyParamPosData___ctor(BaseEnemyParamPosData_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__GetSvtBuffLocalPos(
+UnityEngine_Vector3_o BaseEnemyParamPosData__GetSvtBuffLocalPos(
         BaseEnemyParamPosData_o *this,
         UnityEngine_Vector3_o defPos,
         const MethodInfo *method)
@@ -14,13 +13,13 @@ UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__GetSvtBuffLocalPos(
 }
 
 
-int32_t __fastcall BaseEnemyParamPosData__get_BuffIconMaxLine(BaseEnemyParamPosData_o *this, const MethodInfo *method)
+int32_t BaseEnemyParamPosData__get_BuffIconMaxLine(BaseEnemyParamPosData_o *this, const MethodInfo *method)
 {
   return 2;
 }
 
 
-UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_ExBattleUiTrPos(
+UnityEngine_Vector3_o BaseEnemyParamPosData__get_ExBattleUiTrPos(
         BaseEnemyParamPosData_o *this,
         const MethodInfo *method)
 {
@@ -30,10 +29,10 @@ UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_ExBattleUiTrPos(
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_4B16191 )
+  if ( !byte_4C20DA1 )
   {
-    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4B16191 = 1;
+    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -46,7 +45,7 @@ UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_ExBattleUiTrPos(
 }
 
 
-UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_NormalTrLocalPos(
+UnityEngine_Vector3_o BaseEnemyParamPosData__get_NormalTrLocalPos(
         BaseEnemyParamPosData_o *this,
         const MethodInfo *method)
 {
@@ -56,10 +55,10 @@ UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_NormalTrLocalPos(
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_4B16191 )
+  if ( !byte_4C20DA1 )
   {
-    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4B16191 = 1;
+    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -72,7 +71,7 @@ UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_NormalTrLocalPos(
 }
 
 
-UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_NormalTrLocalScale(
+UnityEngine_Vector3_o BaseEnemyParamPosData__get_NormalTrLocalScale(
         BaseEnemyParamPosData_o *this,
         const MethodInfo *method)
 {
@@ -82,10 +81,10 @@ UnityEngine_Vector3_o __fastcall BaseEnemyParamPosData__get_NormalTrLocalScale(
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_4B16196 )
+  if ( !byte_4C20DA6 )
   {
-    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4B16196 = 1;
+    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA6 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->oneVector.fields.x;

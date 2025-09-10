@@ -1,31 +1,31 @@
-void __fastcall ChangeBattlePhaseObserver___ctor(ChangeBattlePhaseObserver_o *this, const MethodInfo *method)
+void ChangeBattlePhaseObserver___ctor(ChangeBattlePhaseObserver_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall ChangeBattlePhaseObserver__Update(
+void ChangeBattlePhaseObserver__Update(
         ChangeBattlePhaseObserver_o *this,
         BattleSubject_o *subject,
         const MethodInfo *method)
 {
-  __int64 methodPtr_low; // x10
+  __int64 naturalAligment; // x10
 
-  if ( (byte_4B1F5E6 & 1) == 0 )
+  if ( (byte_4C2A48E & 1) == 0 )
   {
-    sub_1BCAFF8(&ChangeBattlePhaseNotify_TypeInfo, subject);
-    byte_4B1F5E6 = 1;
+    sub_1C2D490(&ChangeBattlePhaseNotify_TypeInfo);
+    byte_4C2A48E = 1;
   }
   if ( subject )
   {
-    methodPtr_low = LOBYTE(ChangeBattlePhaseNotify_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(subject->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
-      && (ChangeBattlePhaseNotify_c *)subject->klass->_2.typeHierarchy[methodPtr_low - 1] == ChangeBattlePhaseNotify_TypeInfo )
+    naturalAligment = ChangeBattlePhaseNotify_TypeInfo->_2.naturalAligment;
+    if ( subject->klass->_2.naturalAligment >= (unsigned int)naturalAligment
+      && (ChangeBattlePhaseNotify_c *)subject->klass->_2.typeHierarchy[naturalAligment - 1] == ChangeBattlePhaseNotify_TypeInfo )
     {
-      ((void (__fastcall *)(ChangeBattlePhaseObserver_o *, BattleSubject_o *, const char *))this->klass[1]._1.gc_desc)(
+      ((void (__fastcall *)(ChangeBattlePhaseObserver_o *, BattleSubject_o *, void *))this->klass[1]._1.image)(
         this,
         subject,
-        this->klass[1]._1.name);
+        this->klass[1]._1.gc_desc);
     }
   }
 }

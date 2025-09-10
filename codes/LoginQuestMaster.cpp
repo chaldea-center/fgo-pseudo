@@ -1,137 +1,133 @@
-void __fastcall LoginQuestMaster___ctor(LoginQuestMaster_o *this, const MethodInfo *method)
+void LoginQuestMaster___ctor(LoginQuestMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C99C & 1) == 0 )
+  if ( (byte_4C27764 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_LoginQuestMaster__LoginQuestEntity__int___ctor__, method);
-    byte_4B1C99C = 1;
+    sub_1C2D490(&Method_DataMasterBase_LoginQuestMaster__LoginQuestEntity__int___ctor__);
+    byte_4C27764 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     366,
-    (const MethodInfo_32C5ADC *)Method_DataMasterBase_LoginQuestMaster__LoginQuestEntity__int___ctor__);
+    (const MethodInfo_3385A74 *)Method_DataMasterBase_LoginQuestMaster__LoginQuestEntity__int___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-LoginQuestEntity_o *__fastcall LoginQuestMaster__GetEntityByQuestId(
+LoginQuestEntity_o *LoginQuestMaster__GetEntityByQuestId(
         LoginQuestMaster_o *this,
         int32_t questId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  __int64 v9; // x1
+  __int64 v6; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v12; // x9
+  __int64 v9; // x9
   int32_t *p_offset; // x10
-  __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v15; // x8
-  __int64 v16; // x9
-  int32_t *v17; // x10
-  __int64 v18; // x0
-  __int64 v19; // x0
-  __int64 v20; // x1
-  LoginQuestEntity_o *v21; // x21
-  System_Collections_Generic_IEnumerator_T__c *v22; // x8
-  __int64 v23; // x9
-  int32_t *v24; // x10
-  __int64 v25; // x0
+  __int64 v11; // x0
+  System_Collections_Generic_IEnumerator_T__c *v12; // x8
+  __int64 v13; // x9
+  int32_t *v14; // x10
+  __int64 v15; // x0
+  __int64 v16; // x0
+  __int64 v17; // x1
+  LoginQuestEntity_o *v18; // x21
+  System_Collections_Generic_IEnumerator_T__c *v19; // x8
+  __int64 v20; // x9
+  int32_t *v21; // x10
+  __int64 v22; // x0
 
-  if ( (byte_4B1C99D & 1) == 0 )
+  if ( (byte_4C27765 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_System_Collections_ObjectModel_Collection_LoginQuestEntity__GetEnumerator__,
-      *(_QWORD *)&questId);
-    sub_1BCAFF8(&System_IDisposable_TypeInfo, v5);
-    sub_1BCAFF8(&System_Collections_Generic_IEnumerator_LoginQuestEntity__TypeInfo, v6);
-    sub_1BCAFF8(&System_Collections_IEnumerator_TypeInfo, v7);
-    byte_4B1C99D = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_LoginQuestEntity__GetEnumerator__);
+    sub_1C2D490(&System_IDisposable_TypeInfo);
+    sub_1C2D490(&System_Collections_Generic_IEnumerator_LoginQuestEntity__TypeInfo);
+    sub_1C2D490(&System_Collections_IEnumerator_TypeInfo);
+    byte_4C27765 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BCB254(0LL, *(_QWORD *)&questId);
+    sub_1C2D6EC(0, *(_QWORD *)&questId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3263BC0 *)Method_System_Collections_ObjectModel_Collection_LoginQuestEntity__GetEnumerator__);
+                 (const MethodInfo_33217E0 *)Method_System_Collections_ObjectModel_Collection_LoginQuestEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BCB254(0LL, v9);
+    sub_1C2D6EC(0, v6);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v12 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
-    if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
+    v9 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+    if ( *(_WORD *)&Enumerator->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v12;
+        --v9;
         p_offset += 4;
-        if ( !v12 )
+        if ( !v9 )
           goto LABEL_9;
       }
-      p_method = (__int64)&klass->vtable[*p_offset].method;
+      v11 = (__int64)&klass->vtable[*p_offset];
     }
     else
     {
 LABEL_9:
-      p_method = sub_1C1B560(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v11 = sub_1C7DCA8(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
+    if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v11)(
             Enumerator,
-            *(_QWORD *)(p_method + 8)) & 1) == 0 )
+            *(_QWORD *)(v11 + 8))
+        & 1) == 0 )
       break;
-    v15 = Enumerator->klass;
-    v16 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
-    if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
+    v12 = Enumerator->klass;
+    v13 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+    if ( *(_WORD *)&Enumerator->klass->_2.rank )
     {
-      v17 = &v15->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_LoginQuestEntity__c **)v17 - 1) != System_Collections_Generic_IEnumerator_LoginQuestEntity__TypeInfo )
+      v14 = &v12->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_LoginQuestEntity__c **)v14 - 1) != System_Collections_Generic_IEnumerator_LoginQuestEntity__TypeInfo )
       {
-        --v16;
-        v17 += 4;
-        if ( !v16 )
+        --v13;
+        v14 += 4;
+        if ( !v13 )
           goto LABEL_16;
       }
-      v18 = (__int64)&v15->vtable[*v17].method;
+      v15 = (__int64)&v12->vtable[*v14];
     }
     else
     {
 LABEL_16:
-      v18 = sub_1C1B560(Enumerator, System_Collections_Generic_IEnumerator_LoginQuestEntity__TypeInfo, 0LL);
+      v15 = sub_1C7DCA8(Enumerator, System_Collections_Generic_IEnumerator_LoginQuestEntity__TypeInfo, 0);
     }
-    v19 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v18)(
+    v16 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v15)(
             Enumerator,
-            *(_QWORD *)(v18 + 8));
-    v21 = (LoginQuestEntity_o *)v19;
-    if ( !v19 )
-      sub_1BCB254(0LL, v20);
-    if ( *(_DWORD *)(v19 + 24) == questId )
+            *(_QWORD *)(v15 + 8));
+    v18 = (LoginQuestEntity_o *)v16;
+    if ( !v16 )
+      sub_1C2D6EC(0, v17);
+    if ( *(_DWORD *)(v16 + 24) == questId )
       goto LABEL_22;
   }
-  v21 = 0LL;
+  v18 = 0;
 LABEL_22:
-  v22 = Enumerator->klass;
-  v23 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
+  v19 = Enumerator->klass;
+  v20 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+  if ( *(_WORD *)&Enumerator->klass->_2.rank )
   {
-    v24 = &v22->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v24 - 1) != System_IDisposable_TypeInfo )
+    v21 = &v19->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v21 - 1) != System_IDisposable_TypeInfo )
     {
-      --v23;
-      v24 += 4;
-      if ( !v23 )
+      --v20;
+      v21 += 4;
+      if ( !v20 )
         goto LABEL_26;
     }
-    v25 = (__int64)&v22->vtable[*v24].method;
+    v22 = (__int64)&v19->vtable[*v21];
   }
   else
   {
 LABEL_26:
-    v25 = sub_1C1B560(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v22 = sub_1C7DCA8(Enumerator, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v25)(Enumerator, *(_QWORD *)(v25 + 8));
-  return v21;
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(Enumerator, *(_QWORD *)(v22 + 8));
+  return v18;
 }

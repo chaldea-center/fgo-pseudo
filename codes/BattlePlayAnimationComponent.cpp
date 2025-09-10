@@ -1,10 +1,10 @@
-void __fastcall BattlePlayAnimationComponent___ctor(BattlePlayAnimationComponent_o *this, const MethodInfo *method)
+void BattlePlayAnimationComponent___ctor(BattlePlayAnimationComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent__GetSaveData(
+BattlePlayAnimationComponent_SaveData_o *BattlePlayAnimationComponent__GetSaveData(
         BattlePlayAnimationComponent_o *this,
         const MethodInfo *method)
 {
@@ -16,48 +16,48 @@ BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent
   const MethodInfo *v8; // x1
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B1F9E0 & 1) == 0 )
+  if ( (byte_4C2A897 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattlePlayAnimationComponent_SaveData_TypeInfo, method);
-    byte_4B1F9E0 = 1;
+    sub_1C2D490(&BattlePlayAnimationComponent_SaveData_TypeInfo);
+    byte_4C2A897 = 1;
   }
   WrapAnimation = (System_String_o *)BattlePlayAnimationComponent__get_WrapAnimation(this, method);
   if ( !WrapAnimation )
     goto LABEL_9;
-  v5 = ((__int64 (__fastcall *)(System_String_o *, Il2CppMethodPointer))WrapAnimation->klass->vtable._5_System_Collections_IEnumerable_GetEnumerator.method)(
+  v5 = ((__int64 (__fastcall *)(System_String_o *, const MethodInfo *))WrapAnimation->klass->vtable._5_System_Collections_IEnumerable_GetEnumerator.methodPtr)(
          WrapAnimation,
-         WrapAnimation->klass->vtable._6_System_Collections_Generic_IEnumerable_System_Char__GetEnumerator.methodPtr);
+         WrapAnimation->klass->vtable._5_System_Collections_IEnumerable_GetEnumerator.method);
   if ( !v5 )
-    return 0LL;
+    return 0;
   v6 = (WrapBattleBaseAnimation_SimpleData_o *)v5;
-  v7 = (BattlePlayAnimationComponent_SaveData_o *)sub_1BCB244(BattlePlayAnimationComponent_SaveData_TypeInfo);
+  v7 = (BattlePlayAnimationComponent_SaveData_o *)sub_1C2D6DC(BattlePlayAnimationComponent_SaveData_TypeInfo);
   BattlePlayAnimationComponent_SaveData___ctor(v7, v8);
-  WrapAnimation = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
+  WrapAnimation = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
   if ( !v7 )
 LABEL_9:
-    sub_1BCB254(WrapAnimation, v4);
+    sub_1C2D6EC(WrapAnimation, v4);
   BattlePlayAnimationComponent_SaveData__Init(v7, WrapAnimation, v6, v9);
   return v7;
 }
 
 
-bool __fastcall BattlePlayAnimationComponent__IsMatchKey(
+bool BattlePlayAnimationComponent__IsMatchKey(
         BattlePlayAnimationComponent_o *this,
         System_String_o *key,
         const MethodInfo *method)
 {
-  return BasicHelper__EqualExceptNullOrEmpty(this->fields.motionKey, key, 0LL);
+  return BasicHelper__EqualExceptNullOrEmpty(this->fields.motionKey, key, 0);
 }
 
 
-bool __fastcall BattlePlayAnimationComponent__IsSave(BattlePlayAnimationComponent_o *this, const MethodInfo *method)
+bool BattlePlayAnimationComponent__IsSave(BattlePlayAnimationComponent_o *this, const MethodInfo *method)
 {
   return this->fields.isSaveAnimation;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BattlePlayAnimationComponent__PlayAnimation(
+void BattlePlayAnimationComponent__PlayAnimation(
         BattlePlayAnimationComponent_o *this,
         System_String_o *animName,
         float timeline,
@@ -70,16 +70,16 @@ void __fastcall BattlePlayAnimationComponent__PlayAnimation(
   v4 = *(long double *)&timeline;
   WrapAnimation = BattlePlayAnimationComponent__get_WrapAnimation(this, (const MethodInfo *)animName);
   if ( !WrapAnimation )
-    sub_1BCB254(0LL, v7);
-  ((void (__fastcall *)(WrapBattleBaseAnimation_o *, System_String_o *, Il2CppMethodPointer, long double))WrapAnimation->klass->vtable._4_PlayAnimation.method)(
+    sub_1C2D6EC(0, v7);
+  ((void (__fastcall *)(WrapBattleBaseAnimation_o *, System_String_o *, const MethodInfo *, long double))WrapAnimation->klass->vtable._4_PlayAnimation.methodPtr)(
     WrapAnimation,
     animName,
-    WrapAnimation->klass->vtable._5_GetPlayingSimpleAnimData.methodPtr,
+    WrapAnimation->klass->vtable._4_PlayAnimation.method,
     v4);
 }
 
 
-void __fastcall BattlePlayAnimationComponent__SetSaveData(
+void BattlePlayAnimationComponent__SetSaveData(
         BattlePlayAnimationComponent_o *this,
         BattlePlayAnimationComponent_SaveData_o *save,
         const MethodInfo *method)
@@ -88,13 +88,13 @@ void __fastcall BattlePlayAnimationComponent__SetSaveData(
 
   if ( save )
   {
-    if ( !System_String__IsNullOrEmpty(save->fields.animName, 0LL) )
+    if ( !System_String__IsNullOrEmpty(save->fields.animName, 0) )
       BattlePlayAnimationComponent__PlayAnimation(this, save->fields.animName, save->fields.timeline, v5);
   }
 }
 
 
-WrapBattleBaseAnimation_o *__fastcall BattlePlayAnimationComponent__get_WrapAnimation(
+WrapBattleBaseAnimation_o *BattlePlayAnimationComponent__get_WrapAnimation(
         BattlePlayAnimationComponent_o *this,
         const MethodInfo *method)
 {
@@ -108,16 +108,16 @@ WrapBattleBaseAnimation_o *__fastcall BattlePlayAnimationComponent__get_WrapAnim
   wrapAnimation = this->fields._wrapAnimation;
   if ( !wrapAnimation )
   {
-    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-    wrapAnimation = WrapBattleBaseAnimation__MakeWrapAnimation(gameObject, 0LL);
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    wrapAnimation = WrapBattleBaseAnimation__MakeWrapAnimation(gameObject, 0);
     this->fields._wrapAnimation = wrapAnimation;
-    sub_1BCAF9C((CGThumbnailListItem_o *)p_wrapAnimation, (int32_t)wrapAnimation, v6, v7);
+    sub_1C2D434((CGThumbnailListItem_o *)p_wrapAnimation, (int32_t)wrapAnimation, v6, v7);
   }
   return wrapAnimation;
 }
 
 
-void __fastcall BattlePlayAnimationComponent_SaveData___ctor(
+void BattlePlayAnimationComponent_SaveData___ctor(
         BattlePlayAnimationComponent_SaveData_o *this,
         const MethodInfo *method)
 {
@@ -128,22 +128,22 @@ void __fastcall BattlePlayAnimationComponent_SaveData___ctor(
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4B1F9E1 & 1) == 0 )
+  if ( (byte_4C2A898 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1/*""*/, method);
-    byte_4B1F9E1 = 1;
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C2A898 = 1;
   }
-  v5 = (int)StringLiteral_1/*""*/;
+  v5 = StringLiteral_1/*""*/;
   this->fields.componentName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, v5, v2, v3);
-  v6 = (int)StringLiteral_1/*""*/;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, v5, v2, v3);
+  v6 = StringLiteral_1/*""*/;
   this->fields.animName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.animName, v6, v7, v8);
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.animName, v6, v7, v8);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent_SaveData__Init(
+BattlePlayAnimationComponent_SaveData_o *BattlePlayAnimationComponent_SaveData__Init(
         BattlePlayAnimationComponent_SaveData_o *this,
         System_String_o *objName,
         WrapBattleBaseAnimation_SimpleData_o *data,
@@ -157,12 +157,12 @@ BattlePlayAnimationComponent_SaveData_o *__fastcall BattlePlayAnimationComponent
   BattlePlayAnimationComponent_SaveData_o *result; // x0
 
   this->fields.componentName = objName;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)objName, (int32_t)data, method);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)objName, (int32_t)data, method);
   if ( !data )
-    sub_1BCB254(v6, v7);
+    sub_1C2D6EC(v6, v7);
   animName = data->fields.animName;
   this->fields.animName = animName;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.animName, (int32_t)animName, v8, v9);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.animName, (int32_t)animName, v8, v9);
   result = this;
   this->fields.timeline = data->fields.timeline;
   return result;

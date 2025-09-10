@@ -1,132 +1,139 @@
-void __fastcall BattleDropRandomBoundOverwriteSetting___ctor(
+void BattleDropRandomBoundOverwriteSetting___ctor(
         BattleDropRandomBoundOverwriteSetting_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x20
-  const MethodInfo *v5; // x1
-  __int64 v6; // x0
-  __int64 v7; // x1
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  __int64 v10; // x20
-  const MethodInfo *v11; // x1
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  __int64 v14; // x20
-  const MethodInfo *v15; // x1
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  __int64 v18; // x20
-  const MethodInfo *v19; // x1
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  __int64 v22; // x20
-  const MethodInfo *v23; // x1
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  __int64 v26; // x20
-  const MethodInfo *v27; // x1
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
+  __int64 v3; // x20
+  const MethodInfo *v4; // x1
+  __int64 v5; // x0
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  __int64 v9; // x20
+  const MethodInfo *v10; // x1
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  __int64 v13; // x20
+  const MethodInfo *v14; // x1
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  __int64 v17; // x20
+  const MethodInfo *v18; // x1
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  __int64 v21; // x20
+  const MethodInfo *v22; // x1
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
+  __int64 v25; // x20
+  const MethodInfo *v26; // x1
+  int32_t v27; // w2
+  const MethodInfo *v28; // x3
 
-  if ( (byte_4B1ED7A & 1) == 0 )
+  if ( (byte_4C29CC4 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleDropRandomBound_RangeFloat_TypeInfo, method);
-    sub_1BCAFF8(&BattleDropRandomBound_RangeInt_TypeInfo, v3);
-    byte_4B1ED7A = 1;
+    sub_1C2D490(&BattleDropRandomBound_RangeFloat_TypeInfo);
+    sub_1C2D490(&BattleDropRandomBound_RangeInt_TypeInfo);
+    byte_4C29CC4 = 1;
   }
-  LODWORD(this->fields.moveSpeedXRange) = 1036831949;
-  v4 = sub_1BCB244(BattleDropRandomBound_RangeFloat_TypeInfo);
-  BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v4, v5);
-  if ( !v4 )
+  this->fields.gravity = 0.1;
+  v3 = sub_1C2D6DC(BattleDropRandomBound_RangeFloat_TypeInfo);
+  BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v3, v4);
+  if ( !v3 )
     goto LABEL_10;
-  *(_QWORD *)(v4 + 16) = 0x3DCCCCCDBDCCCCCDLL;
-  this->fields.moveSpeedYRange = (struct BattleDropRandomBound_RangeFloat_o *)v4;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.moveSpeedYRange, v4, v8, v9);
-  v10 = sub_1BCB244(BattleDropRandomBound_RangeFloat_TypeInfo);
-  BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v10, v11);
-  if ( !v10 )
+  *(_QWORD *)(v3 + 16) = 0x3DCCCCCDBDCCCCCDLL;
+  this->fields.moveSpeedXRange = (struct BattleDropRandomBound_RangeFloat_o *)v3;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.moveSpeedXRange, v3, v7, v8);
+  v9 = sub_1C2D6DC(BattleDropRandomBound_RangeFloat_TypeInfo);
+  BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v9, v10);
+  if ( !v9 )
     goto LABEL_10;
-  *(int32x2_t *)(v10 + 16) = vdup_n_s32(0x3F266666u);
-  this->fields.delayStartTimeRange = (struct BattleDropRandomBound_RangeFloat_o *)v10;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.delayStartTimeRange, v10, v12, v13);
-  v14 = sub_1BCB244(BattleDropRandomBound_RangeFloat_TypeInfo);
-  BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v14, v15);
-  if ( !v14 )
+  *(int32x2_t *)(v9 + 16) = vdup_n_s32(0x3F266666u);
+  this->fields.moveSpeedYRange = (struct BattleDropRandomBound_RangeFloat_o *)v9;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.moveSpeedYRange, v9, v11, v12);
+  v13 = sub_1C2D6DC(BattleDropRandomBound_RangeFloat_TypeInfo);
+  BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v13, v14);
+  if ( !v13 )
     goto LABEL_10;
-  *(_QWORD *)(v14 + 16) = 0x3ECCCCCD3DCCCCCDLL;
-  this->fields.boundCountRange = (struct BattleDropRandomBound_RangeInt_o *)v14;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.boundCountRange, v14, v16, v17);
-  v18 = sub_1BCB244(BattleDropRandomBound_RangeInt_TypeInfo);
-  BattleDropRandomBound_RangeInt___ctor((BattleDropRandomBound_RangeInt_o *)v18, v19);
-  if ( !v18 )
+  *(_QWORD *)(v13 + 16) = 0x3ECCCCCD3DCCCCCDLL;
+  this->fields.delayStartTimeRange = (struct BattleDropRandomBound_RangeFloat_o *)v13;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.delayStartTimeRange, v13, v15, v16);
+  v17 = sub_1C2D6DC(BattleDropRandomBound_RangeInt_TypeInfo);
+  BattleDropRandomBound_RangeInt___ctor((BattleDropRandomBound_RangeInt_o *)v17, v18);
+  if ( !v17 )
     goto LABEL_10;
-  *(_QWORD *)(v18 + 16) = 0x200000001LL;
-  *(_QWORD *)&this->fields.boundSpeedYRate = v18;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.boundSpeedYRate, v18, v20, v21);
-  LODWORD(this->fields.initScatterPosBaseRectXRange) = 1056964608;
-  v22 = sub_1BCB244(BattleDropRandomBound_RangeFloat_TypeInfo);
-  BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v22, v23);
-  if ( !v22
-    || (*(_QWORD *)(v22 + 16) = 0x3DCCCCCDBDCCCCCDLL,
-        this->fields.initScatterPosBaseRectYRange = (struct BattleDropRandomBound_RangeFloat_o *)v22,
-        sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.initScatterPosBaseRectYRange, v22, v24, v25),
-        v26 = sub_1BCB244(BattleDropRandomBound_RangeFloat_TypeInfo),
-        BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v26, v27),
-        !v26) )
+  *(_QWORD *)(v17 + 16) = 0x200000001LL;
+  this->fields.boundCountRange = (struct BattleDropRandomBound_RangeInt_o *)v17;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.boundCountRange, v17, v19, v20);
+  this->fields.boundSpeedYRate = 0.5;
+  v21 = sub_1C2D6DC(BattleDropRandomBound_RangeFloat_TypeInfo);
+  BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v21, v22);
+  if ( !v21
+    || (*(_QWORD *)(v21 + 16) = 0x3DCCCCCDBDCCCCCDLL,
+        this->fields.initScatterPosBaseRectXRange = (struct BattleDropRandomBound_RangeFloat_o *)v21,
+        sub_1C2D434((CGThumbnailListItem_o *)&this->fields.initScatterPosBaseRectXRange, v21, v23, v24),
+        v25 = sub_1C2D6DC(BattleDropRandomBound_RangeFloat_TypeInfo),
+        BattleDropRandomBound_RangeFloat___ctor((BattleDropRandomBound_RangeFloat_o *)v25, v26),
+        !v25) )
   {
 LABEL_10:
-    sub_1BCB254(v6, v7);
+    sub_1C2D6EC(v5, v6);
   }
-  *(_QWORD *)(v26 + 16) = 0x3DCCCCCDBDCCCCCDLL;
-  *(_QWORD *)&this->fields.initScatterPosBaseRectAngle = v26;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.initScatterPosBaseRectAngle, v26, v28, v29);
-  UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0LL);
+  *(_QWORD *)(v25 + 16) = 0x3DCCCCCDBDCCCCCDLL;
+  this->fields.initScatterPosBaseRectYRange = (struct BattleDropRandomBound_RangeFloat_o *)v25;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.initScatterPosBaseRectYRange, v25, v27, v28);
+  UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0);
 }
 
 
-BattleDropRandomBound_RangeInt_o *__fastcall BattleDropRandomBoundOverwriteSetting__get_BoundCountRange(
+BattleDropRandomBound_RangeInt_o *BattleDropRandomBoundOverwriteSetting__get_BoundCountRange(
         BattleDropRandomBoundOverwriteSetting_o *this,
         const MethodInfo *method)
 {
-  return *(BattleDropRandomBound_RangeInt_o **)&this->fields.boundSpeedYRate;
+  return this->fields.boundCountRange;
 }
 
 
-float __fastcall BattleDropRandomBoundOverwriteSetting__get_BoundSpeedYRate(
+float BattleDropRandomBoundOverwriteSetting__get_BoundSpeedYRate(
         BattleDropRandomBoundOverwriteSetting_o *this,
         const MethodInfo *method)
 {
-  return *(float *)&this->fields.initScatterPosBaseRectXRange;
+  return this->fields.boundSpeedYRate;
 }
 
 
-BattleDropRandomBound_RangeFloat_o *__fastcall BattleDropRandomBoundOverwriteSetting__get_DelayStartTimeRange(
+BattleDropRandomBound_RangeFloat_o *BattleDropRandomBoundOverwriteSetting__get_DelayStartTimeRange(
         BattleDropRandomBoundOverwriteSetting_o *this,
         const MethodInfo *method)
 {
-  return (BattleDropRandomBound_RangeFloat_o *)this->fields.boundCountRange;
+  return this->fields.delayStartTimeRange;
 }
 
 
-float __fastcall BattleDropRandomBoundOverwriteSetting__get_Gravity(
+float BattleDropRandomBoundOverwriteSetting__get_Gravity(
         BattleDropRandomBoundOverwriteSetting_o *this,
         const MethodInfo *method)
 {
-  return *(float *)&this->fields.moveSpeedXRange;
+  return this->fields.gravity;
 }
 
 
-float __fastcall BattleDropRandomBoundOverwriteSetting__get_InitScatterPosBaseRectAngle(
+float BattleDropRandomBoundOverwriteSetting__get_InitScatterPosBaseRectAngle(
         BattleDropRandomBoundOverwriteSetting_o *this,
         const MethodInfo *method)
 {
-  return *(float *)&this[1].klass;
+  return this->fields.initScatterPosBaseRectAngle;
 }
 
 
-BattleDropRandomBound_RangeFloat_o *__fastcall BattleDropRandomBoundOverwriteSetting__get_InitScatterPosBaseRectXRange(
+BattleDropRandomBound_RangeFloat_o *BattleDropRandomBoundOverwriteSetting__get_InitScatterPosBaseRectXRange(
+        BattleDropRandomBoundOverwriteSetting_o *this,
+        const MethodInfo *method)
+{
+  return this->fields.initScatterPosBaseRectXRange;
+}
+
+
+BattleDropRandomBound_RangeFloat_o *BattleDropRandomBoundOverwriteSetting__get_InitScatterPosBaseRectYRange(
         BattleDropRandomBoundOverwriteSetting_o *this,
         const MethodInfo *method)
 {
@@ -134,33 +141,25 @@ BattleDropRandomBound_RangeFloat_o *__fastcall BattleDropRandomBoundOverwriteSet
 }
 
 
-BattleDropRandomBound_RangeFloat_o *__fastcall BattleDropRandomBoundOverwriteSetting__get_InitScatterPosBaseRectYRange(
+float BattleDropRandomBoundOverwriteSetting__get_InitialHeight(
         BattleDropRandomBoundOverwriteSetting_o *this,
         const MethodInfo *method)
 {
-  return *(BattleDropRandomBound_RangeFloat_o **)&this->fields.initScatterPosBaseRectAngle;
+  return this->fields.initialHeight;
 }
 
 
-float __fastcall BattleDropRandomBoundOverwriteSetting__get_InitialHeight(
+BattleDropRandomBound_RangeFloat_o *BattleDropRandomBoundOverwriteSetting__get_MoveSpeedXRange(
         BattleDropRandomBoundOverwriteSetting_o *this,
         const MethodInfo *method)
 {
-  return *((float *)&this->fields.initScatterPosBaseRectXRange + 1);
+  return this->fields.moveSpeedXRange;
 }
 
 
-BattleDropRandomBound_RangeFloat_o *__fastcall BattleDropRandomBoundOverwriteSetting__get_MoveSpeedXRange(
+BattleDropRandomBound_RangeFloat_o *BattleDropRandomBoundOverwriteSetting__get_MoveSpeedYRange(
         BattleDropRandomBoundOverwriteSetting_o *this,
         const MethodInfo *method)
 {
   return this->fields.moveSpeedYRange;
-}
-
-
-BattleDropRandomBound_RangeFloat_o *__fastcall BattleDropRandomBoundOverwriteSetting__get_MoveSpeedYRange(
-        BattleDropRandomBoundOverwriteSetting_o *this,
-        const MethodInfo *method)
-{
-  return this->fields.delayStartTimeRange;
 }

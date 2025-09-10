@@ -1,18 +1,18 @@
-void __fastcall EnemyScriptParam___ctor(EnemyScriptParam_o *this, const MethodInfo *method)
+void EnemyScriptParam___ctor(EnemyScriptParam_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall EnemyScriptParam_EnemyTargetTouchAreaData___ctor(
+void EnemyScriptParam_EnemyTargetTouchAreaData___ctor(
         EnemyScriptParam_EnemyTargetTouchAreaData_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall EnemyScriptParam_EnemyTargetTouchAreaData__TryGetOffsetInfo(
+bool EnemyScriptParam_EnemyTargetTouchAreaData__TryGetOffsetInfo(
         EnemyScriptParam_EnemyTargetTouchAreaData_o *this,
         int32_t *x,
         int32_t *y,
@@ -31,11 +31,11 @@ bool __fastcall EnemyScriptParam_EnemyTargetTouchAreaData__TryGetOffsetInfo(
     *y = 0;
     *x = 0;
   }
-  return offset != 0LL;
+  return offset != 0;
 }
 
 
-bool __fastcall EnemyScriptParam_EnemyTargetTouchAreaData__TryGetPositionInfo(
+bool EnemyScriptParam_EnemyTargetTouchAreaData__TryGetPositionInfo(
         EnemyScriptParam_EnemyTargetTouchAreaData_o *this,
         int32_t *x,
         int32_t *y,
@@ -54,11 +54,11 @@ bool __fastcall EnemyScriptParam_EnemyTargetTouchAreaData__TryGetPositionInfo(
     *y = 0;
     *x = 0;
   }
-  return position != 0LL;
+  return position != 0;
 }
 
 
-bool __fastcall EnemyScriptParam_EnemyTargetTouchAreaData__TryGetSizeInfo(
+bool EnemyScriptParam_EnemyTargetTouchAreaData__TryGetSizeInfo(
         EnemyScriptParam_EnemyTargetTouchAreaData_o *this,
         int32_t *width,
         int32_t *height,
@@ -77,11 +77,11 @@ bool __fastcall EnemyScriptParam_EnemyTargetTouchAreaData__TryGetSizeInfo(
     *height = 0;
     *width = 0;
   }
-  return size != 0LL;
+  return size != 0;
 }
 
 
-bool __fastcall EnemyScriptParam_EnemyTargetTouchAreaData__get_IsActive(
+bool EnemyScriptParam_EnemyTargetTouchAreaData__get_IsActive(
         EnemyScriptParam_EnemyTargetTouchAreaData_o *this,
         const MethodInfo *method)
 {
@@ -89,39 +89,39 @@ bool __fastcall EnemyScriptParam_EnemyTargetTouchAreaData__get_IsActive(
 }
 
 
-void __fastcall EnemyScriptParam_EnemyTargetTouchAreaData_Offset___ctor(
+void EnemyScriptParam_EnemyTargetTouchAreaData_Offset___ctor(
         EnemyScriptParam_EnemyTargetTouchAreaData_Offset_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall EnemyScriptParam_EnemyTargetTouchAreaData_Position___ctor(
+void EnemyScriptParam_EnemyTargetTouchAreaData_Position___ctor(
         EnemyScriptParam_EnemyTargetTouchAreaData_Position_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall EnemyScriptParam_EnemyTargetTouchAreaData_Size___ctor(
+void EnemyScriptParam_EnemyTargetTouchAreaData_Size___ctor(
         EnemyScriptParam_EnemyTargetTouchAreaData_Size_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall EnemyScriptParam_OverwriteShadowData___ctor(
+void EnemyScriptParam_OverwriteShadowData___ctor(
         EnemyScriptParam_OverwriteShadowData_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall EnemyScriptParam_OverwriteShadowData__IsForceOverwrite(
+bool EnemyScriptParam_OverwriteShadowData__IsForceOverwrite(
         EnemyScriptParam_OverwriteShadowData_o *this,
         const MethodInfo *method)
 {
@@ -129,7 +129,7 @@ bool __fastcall EnemyScriptParam_OverwriteShadowData__IsForceOverwrite(
 }
 
 
-bool __fastcall EnemyScriptParam_OverwriteShadowData__IsMatchBg(
+bool EnemyScriptParam_OverwriteShadowData__IsMatchBg(
         EnemyScriptParam_OverwriteShadowData_o *this,
         int32_t id,
         int32_t type,
@@ -143,7 +143,7 @@ bool __fastcall EnemyScriptParam_OverwriteShadowData__IsMatchBg(
 }
 
 
-bool __fastcall EnemyScriptParam_OverwriteShadowData__get_IsHideShadow(
+bool EnemyScriptParam_OverwriteShadowData__get_IsHideShadow(
         EnemyScriptParam_OverwriteShadowData_o *this,
         const MethodInfo *method)
 {
@@ -151,7 +151,7 @@ bool __fastcall EnemyScriptParam_OverwriteShadowData__get_IsHideShadow(
 }
 
 
-int32_t __fastcall EnemyScriptParam_OverwriteShadowData__get_ShadowImageId(
+int32_t EnemyScriptParam_OverwriteShadowData__get_ShadowImageId(
         EnemyScriptParam_OverwriteShadowData_o *this,
         const MethodInfo *method)
 {
@@ -159,7 +159,7 @@ int32_t __fastcall EnemyScriptParam_OverwriteShadowData__get_ShadowImageId(
 }
 
 
-int32_t __fastcall EnemyScriptParam_OverwriteShadowData__get_SpecialShadowEffectId(
+int32_t EnemyScriptParam_OverwriteShadowData__get_SpecialShadowEffectId(
         EnemyScriptParam_OverwriteShadowData_o *this,
         const MethodInfo *method)
 {
@@ -167,15 +167,13 @@ int32_t __fastcall EnemyScriptParam_OverwriteShadowData__get_SpecialShadowEffect
 }
 
 
-void __fastcall EnemyScriptParam_OverwriteShiftIcon___ctor(
-        EnemyScriptParam_OverwriteShiftIcon_o *this,
-        const MethodInfo *method)
+void EnemyScriptParam_OverwriteShiftIcon___ctor(EnemyScriptParam_OverwriteShiftIcon_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-int32_t __fastcall EnemyScriptParam_OverwriteShiftIcon__get_ImageNo(
+int32_t EnemyScriptParam_OverwriteShiftIcon__get_ImageNo(
         EnemyScriptParam_OverwriteShiftIcon_o *this,
         const MethodInfo *method)
 {
@@ -183,7 +181,7 @@ int32_t __fastcall EnemyScriptParam_OverwriteShiftIcon__get_ImageNo(
 }
 
 
-int32_t __fastcall EnemyScriptParam_OverwriteShiftIcon__get_ImageType(
+int32_t EnemyScriptParam_OverwriteShiftIcon__get_ImageType(
         EnemyScriptParam_OverwriteShiftIcon_o *this,
         const MethodInfo *method)
 {
@@ -191,7 +189,7 @@ int32_t __fastcall EnemyScriptParam_OverwriteShiftIcon__get_ImageType(
 }
 
 
-int32_t __fastcall EnemyScriptParam_OverwriteShiftIcon__get_Index(
+int32_t EnemyScriptParam_OverwriteShiftIcon__get_Index(
         EnemyScriptParam_OverwriteShiftIcon_o *this,
         const MethodInfo *method)
 {

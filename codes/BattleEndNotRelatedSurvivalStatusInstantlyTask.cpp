@@ -1,4 +1,4 @@
-void __fastcall BattleEndNotRelatedSurvivalStatusInstantlyTask___ctor(
+void BattleEndNotRelatedSurvivalStatusInstantlyTask___ctor(
         BattleEndNotRelatedSurvivalStatusInstantlyTask_o *this,
         BaseAiActArgument_o *arg,
         const MethodInfo *method)
@@ -11,21 +11,21 @@ void __fastcall BattleEndNotRelatedSurvivalStatusInstantlyTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)arg);
   this->fields.actiontype = 72;
   if ( !arg )
-    sub_1BCB254(v5, v6);
+    sub_1C2D6EC(v5, v6);
   v7 = arg->fields._FromProcState_k__BackingField == 2
-    && ((__int64 (__fastcall *)(BaseAiActArgument_o *, Il2CppMethodPointer))arg->klass->vtable._4_get_UniqueId.method)(
+    && ((unsigned int (__fastcall *)(BaseAiActArgument_o *, const MethodInfo *))arg->klass->vtable._4_get_UniqueId.methodPtr)(
          arg,
-         arg->klass->vtable._5_InitCommonTask.methodPtr) != -1;
+         arg->klass->vtable._4_get_UniqueId.method) != -1;
   this->fields.isAddAfterDeadTask = v7;
   v8 = arg->fields._FromProcState_k__BackingField == 2
-    && ((__int64 (__fastcall *)(BaseAiActArgument_o *, Il2CppMethodPointer))arg->klass->vtable._4_get_UniqueId.method)(
+    && ((unsigned int (__fastcall *)(BaseAiActArgument_o *, const MethodInfo *))arg->klass->vtable._4_get_UniqueId.methodPtr)(
          arg,
-         arg->klass->vtable._5_InitCommonTask.methodPtr) == -1;
+         arg->klass->vtable._4_get_UniqueId.method) == -1;
   this->fields.isAddLastDeadTask = v8;
 }
 
 
-bool __fastcall BattleEndNotRelatedSurvivalStatusInstantlyTask__IsAddAfterDeadTask(
+bool BattleEndNotRelatedSurvivalStatusInstantlyTask__IsAddAfterDeadTask(
         BattleEndNotRelatedSurvivalStatusInstantlyTask_o *this,
         const MethodInfo *method)
 {
@@ -33,7 +33,7 @@ bool __fastcall BattleEndNotRelatedSurvivalStatusInstantlyTask__IsAddAfterDeadTa
 }
 
 
-bool __fastcall BattleEndNotRelatedSurvivalStatusInstantlyTask__IsAddLastDeadTask(
+bool BattleEndNotRelatedSurvivalStatusInstantlyTask__IsAddLastDeadTask(
         BattleEndNotRelatedSurvivalStatusInstantlyTask_o *this,
         const MethodInfo *method)
 {
@@ -41,19 +41,19 @@ bool __fastcall BattleEndNotRelatedSurvivalStatusInstantlyTask__IsAddLastDeadTas
 }
 
 
-BattleActionData_o *__fastcall BattleEndNotRelatedSurvivalStatusInstantlyTask__MakeActionData(
+BattleActionData_o *BattleEndNotRelatedSurvivalStatusInstantlyTask__MakeActionData(
         BattleEndNotRelatedSurvivalStatusInstantlyTask_o *this,
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
   BattleEndNotRelatedSurvivalStatusInstantlyData_o *v3; // x19
 
-  if ( (byte_4B1F5AB & 1) == 0 )
+  if ( (byte_4C2A453 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo, logic);
-    byte_4B1F5AB = 1;
+    sub_1C2D490(&BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
+    byte_4C2A453 = 1;
   }
-  v3 = (BattleEndNotRelatedSurvivalStatusInstantlyData_o *)sub_1BCB244(BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
-  BattleEndNotRelatedSurvivalStatusInstantlyData___ctor(v3, 0LL);
+  v3 = (BattleEndNotRelatedSurvivalStatusInstantlyData_o *)sub_1C2D6DC(BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
+  BattleEndNotRelatedSurvivalStatusInstantlyData___ctor(v3, 0);
   return (BattleActionData_o *)v3;
 }

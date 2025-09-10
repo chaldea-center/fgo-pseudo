@@ -1,14 +1,14 @@
-void __fastcall ClassBoardEffectListDialogSkillDetailComponent___ctor(
+void ClassBoardEffectListDialogSkillDetailComponent___ctor(
         ClassBoardEffectListDialogSkillDetailComponent_o *this,
         const MethodInfo *method)
 {
   this->fields.detailUnderMargin = 4;
   *(_QWORD *)&this->fields.detailMinHeight = 0x1200000064LL;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall ClassBoardEffectListDialogSkillDetailComponent__Awake(
+void ClassBoardEffectListDialogSkillDetailComponent__Awake(
         ClassBoardEffectListDialogSkillDetailComponent_o *this,
         const MethodInfo *method)
 {
@@ -16,7 +16,7 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent__Awake(
 }
 
 
-void __fastcall ClassBoardEffectListDialogSkillDetailComponent__Init(
+void ClassBoardEffectListDialogSkillDetailComponent__Init(
         ClassBoardEffectListDialogSkillDetailComponent_o *this,
         ClassBoardEffectListDialogSkillListComponent_o *listComponent,
         const MethodInfo *method)
@@ -24,11 +24,11 @@ void __fastcall ClassBoardEffectListDialogSkillDetailComponent__Init(
   const MethodInfo *v3; // x3
 
   this->fields.listComponent = listComponent;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.listComponent, (int32_t)listComponent, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.listComponent, (int32_t)listComponent, (int32_t)method, v3);
 }
 
 
-float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
+float ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
         ClassBoardEffectListDialogSkillDetailComponent_o *this,
         System_String_o *name,
         System_String_o *detail,
@@ -46,19 +46,19 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
   struct ClassBoardEffectListDialogSkillListComponent_o *listComponent; // x8
   System_String_o *v20; // x2
 
-  if ( (byte_4B1FDCC & 1) == 0 )
+  if ( (byte_4C2ACC7 & 1) == 0 )
   {
-    sub_1BCAFF8(&ClassBoardUtility_TypeInfo, name);
-    byte_4B1FDCC = 1;
+    sub_1C2D490(&ClassBoardUtility_TypeInfo);
+    byte_4C2ACC7 = 1;
   }
   effectNameLabel = this->fields.effectNameLabel;
   if ( !effectNameLabel )
     goto LABEL_16;
-  UILabel__set_text(effectNameLabel, name, 0LL);
+  UILabel__set_text(effectNameLabel, name, 0);
   effectNameLabel = this->fields.effectNameLabel;
   if ( !effectNameLabel )
     goto LABEL_16;
-  UILabel__UpdateCondensedScaleComponent(effectNameLabel, 0LL);
+  UILabel__UpdateCondensedScaleComponent(effectNameLabel, 0);
   ContentHeight = ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAndGetContentHeight(this, detail, v14);
   effectNameLabel = (UILabel_o *)this->fields.background;
   if ( !effectNameLabel )
@@ -68,10 +68,10 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
     v17 = 0x80000000;
   else
     v17 = (int)ContentHeight;
-  UIWidget__set_height((UIWidget_o *)effectNameLabel, v17, 0LL);
+  UIWidget__set_height((UIWidget_o *)effectNameLabel, v17, 0);
   if ( !ClassBoardUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
-  effectNameLabel = (UILabel_o *)ClassBoardUtility__GetClassBoardSkillIconName(iconId, skillType, 0LL);
+  effectNameLabel = (UILabel_o *)ClassBoardUtility__GetClassBoardSkillIconName(iconId, skillType, 0);
   if ( !fromBattleSvtWindow )
   {
     listComponent = this->fields.listComponent;
@@ -90,13 +90,13 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetail(
       }
     }
 LABEL_16:
-    sub_1BCB254(effectNameLabel, name);
+    sub_1C2D6EC(effectNameLabel, name);
   }
   return v16 + (float)this->fields.adjustSetPosY;
 }
 
 
-float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAndGetContentHeight(
+float ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAndGetContentHeight(
         ClassBoardEffectListDialogSkillDetailComponent_o *this,
         System_String_o *detail,
         const MethodInfo *method)
@@ -110,19 +110,19 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAn
 
   effectDetailLabel = this->fields.effectDetailLabel;
   if ( !effectDetailLabel
-    || (UILabel__SetDefaultFont(effectDetailLabel, 0LL),
+    || (UILabel__SetDefaultFont(effectDetailLabel, 0),
         WrapControlText__textBBCodeAdjust(
           this->fields.effectDetailLabel,
           detail,
           this->fields.detailFontSize,
           this->fields.detailFontSize,
-          0LL),
-        (effectDetailLabel = this->fields.effectDetailLabel) == 0LL)
-    || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)effectDetailLabel, 0LL),
-        LocalPositionY = GameObjectExtensions__GetLocalPositionY(gameObject, 0LL),
-        (v8 = this->fields.effectDetailLabel) == 0LL) )
+          0),
+        (effectDetailLabel = this->fields.effectDetailLabel) == 0)
+    || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)effectDetailLabel, 0),
+        LocalPositionY = GameObjectExtensions__GetLocalPositionY(gameObject, 0),
+        (v8 = this->fields.effectDetailLabel) == 0) )
   {
-    sub_1BCB254(effectDetailLabel, detail);
+    sub_1C2D6EC(effectDetailLabel, detail);
   }
   detailMinHeight = this->fields.detailMinHeight;
   result = (float)(fabsf(LocalPositionY) + (float)v8->fields.mHeight) + (float)this->fields.detailUnderMargin;
@@ -132,19 +132,19 @@ float __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetDetailTextAn
 }
 
 
-void __fastcall ClassBoardEffectListDialogSkillDetailComponent__SetIconFromBattleServantWindow(
+void ClassBoardEffectListDialogSkillDetailComponent__SetIconFromBattleServantWindow(
         ClassBoardEffectListDialogSkillDetailComponent_o *this,
         AtlasManagerUnit_o *atlasManagerUnit,
         System_String_o *spriteName,
         const MethodInfo *method)
 {
   if ( !atlasManagerUnit )
-    sub_1BCB254(this, 0LL);
-  AtlasManagerUnit__SetUI(atlasManagerUnit, this->fields.effectIcon, spriteName, 0LL);
+    sub_1C2D6EC(this, 0);
+  AtlasManagerUnit__SetUI(atlasManagerUnit, this->fields.effectIcon, spriteName, 0);
 }
 
 
-UISprite_o *__fastcall ClassBoardEffectListDialogSkillDetailComponent__get_Background(
+UISprite_o *ClassBoardEffectListDialogSkillDetailComponent__get_Background(
         ClassBoardEffectListDialogSkillDetailComponent_o *this,
         const MethodInfo *method)
 {
@@ -152,7 +152,7 @@ UISprite_o *__fastcall ClassBoardEffectListDialogSkillDetailComponent__get_Backg
 }
 
 
-UISprite_o *__fastcall ClassBoardEffectListDialogSkillDetailComponent__get_Line(
+UISprite_o *ClassBoardEffectListDialogSkillDetailComponent__get_Line(
         ClassBoardEffectListDialogSkillDetailComponent_o *this,
         const MethodInfo *method)
 {

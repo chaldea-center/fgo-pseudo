@@ -1,10 +1,10 @@
-void __fastcall CombineEnableData___ctor(CombineEnableData_o *this, const MethodInfo *method)
+void CombineEnableData___ctor(CombineEnableData_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-int32_t __fastcall CombineEnableData__sumEnableNum(CombineEnableData_o *this, const MethodInfo *method)
+int32_t CombineEnableData__sumEnableNum(CombineEnableData_o *this, const MethodInfo *method)
 {
   return vaddvq_s32(*(int32x4_t *)&this->fields.limitUpEnableNum)
        + this->fields.costumeCombineEnableNum

@@ -1,10 +1,10 @@
-void __fastcall CharaGraphSortManageUnitBase___ctor(CharaGraphSortManageUnitBase_o *this, const MethodInfo *method)
+void CharaGraphSortManageUnitBase___ctor(CharaGraphSortManageUnitBase_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall CharaGraphSortManageUnitBase__SetSortSaveKeyPrefix(
+void CharaGraphSortManageUnitBase__SetSortSaveKeyPrefix(
         CharaGraphSortManageUnitBase_o *this,
         System_String_o *sortSaveKeyPrefix,
         const MethodInfo *method)
@@ -12,11 +12,11 @@ void __fastcall CharaGraphSortManageUnitBase__SetSortSaveKeyPrefix(
   const MethodInfo *v3; // x3
 
   this->fields._SortSaveKeyPrefix_k__BackingField = sortSaveKeyPrefix;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)sortSaveKeyPrefix, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)sortSaveKeyPrefix, (int32_t)method, v3);
 }
 
 
-ListViewSort_o *__fastcall CharaGraphSortManageUnitBase__get_SortInfo(
+ListViewSort_o *CharaGraphSortManageUnitBase__get_SortInfo(
         CharaGraphSortManageUnitBase_o *this,
         const MethodInfo *method)
 {
@@ -30,38 +30,38 @@ ListViewSort_o *__fastcall CharaGraphSortManageUnitBase__get_SortInfo(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4B1B875 & 1) == 0 )
+  if ( (byte_4C26617 & 1) == 0 )
   {
-    sub_1BCAFF8(&ListViewSort_TypeInfo, method);
-    byte_4B1B875 = 1;
+    sub_1C2D490(&ListViewSort_TypeInfo);
+    byte_4C26617 = 1;
   }
   sortInfo = this->fields.sortInfo;
   if ( !sortInfo )
   {
     SortSaveKeyPrefix_k__BackingField = this->fields._SortSaveKeyPrefix_k__BackingField;
-    v5 = (System_String_o *)((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, const char *))this->klass[1]._1.gc_desc)(
+    v5 = (System_String_o *)((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, void *))this->klass[1]._1.image)(
                               this,
-                              this->klass[1]._1.name);
-    v6 = System_String__Concat_62450424(SortSaveKeyPrefix_k__BackingField, v5, 0LL);
-    v7 = ((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, void *))this->klass[1]._1.namespaze)(
+                              this->klass[1]._1.gc_desc);
+    v6 = System_String__Concat_63457864(SortSaveKeyPrefix_k__BackingField, v5, 0);
+    v7 = ((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, const char *))this->klass[1]._1.name)(
            this,
-           this->klass[1]._1.byval_arg.data);
-    sortInfo = (struct ListViewSort_o *)sub_1BCB244(ListViewSort_TypeInfo);
-    ListViewSort___ctor_42965576(sortInfo, v6, v7, 0, 0LL);
-    v8 = (*(__int64 (__fastcall **)(CharaGraphSortManageUnitBase_o *, void *))&this->klass[1]._1.byval_arg.bits)(
+           this->klass[1]._1.namespaze);
+    sortInfo = (struct ListViewSort_o *)sub_1C2D6DC(ListViewSort_TypeInfo);
+    ListViewSort___ctor_43600724(sortInfo, v6, v7, 0, 0);
+    v8 = ((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, _QWORD))this->klass[1]._1.byval_arg.data)(
            this,
-           this->klass[1]._1.this_arg.data);
+           *(_QWORD *)&this->klass[1]._1.byval_arg.bits);
     if ( !sortInfo )
-      sub_1BCB254(v8, v9);
+      sub_1C2D6EC(v8, v9);
     sortInfo->fields.listViewKind = v8;
     this->fields.sortInfo = sortInfo;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.sortInfo, (int32_t)sortInfo, v10, v11);
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.sortInfo, (int32_t)sortInfo, v10, v11);
   }
   return sortInfo;
 }
 
 
-System_String_o *__fastcall CharaGraphSortManageUnitBase__get_SortSaveKeyPrefix(
+System_String_o *CharaGraphSortManageUnitBase__get_SortSaveKeyPrefix(
         CharaGraphSortManageUnitBase_o *this,
         const MethodInfo *method)
 {
@@ -69,7 +69,7 @@ System_String_o *__fastcall CharaGraphSortManageUnitBase__get_SortSaveKeyPrefix(
 }
 
 
-void __fastcall CharaGraphSortManageUnitBase__set_SortSaveKeyPrefix(
+void CharaGraphSortManageUnitBase__set_SortSaveKeyPrefix(
         CharaGraphSortManageUnitBase_o *this,
         System_String_o *value,
         const MethodInfo *method)
@@ -77,5 +77,5 @@ void __fastcall CharaGraphSortManageUnitBase__set_SortSaveKeyPrefix(
   const MethodInfo *v3; // x3
 
   this->fields._SortSaveKeyPrefix_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }

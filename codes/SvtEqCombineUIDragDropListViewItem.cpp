@@ -1,97 +1,90 @@
-void __fastcall SvtEqCombineUIDragDropListViewItem___ctor(
-        SvtEqCombineUIDragDropListViewItem_o *this,
-        const MethodInfo *method)
+void SvtEqCombineUIDragDropListViewItem___ctor(SvtEqCombineUIDragDropListViewItem_o *this, const MethodInfo *method)
 {
-  UIDragDropListViewItem___ctor((UIDragDropListViewItem_o *)this, 0LL);
+  UIDragDropListViewItem___ctor((UIDragDropListViewItem_o *)this, 0);
 }
 
 
-void __fastcall SvtEqCombineUIDragDropListViewItem__DragEnd(
-        SvtEqCombineUIDragDropListViewItem_o *this,
-        const MethodInfo *method)
+void SvtEqCombineUIDragDropListViewItem__DragEnd(SvtEqCombineUIDragDropListViewItem_o *this, const MethodInfo *method)
 {
   struct ListViewManager_o *manager; // x21
   SvtEqCombineUIDragDropListViewItem_o *v3; // x19
-  __int64 v4; // x1
-  __int64 v5; // x1
   SvtEqCombineListViewObject_o *mListViewObject; // x20
-  __int64 methodPtr_low; // x9
-  __int64 v8; // x9
-  const MethodInfo *v9; // x2
+  __int64 naturalAligment; // x9
+  __int64 v6; // x9
+  const MethodInfo *v7; // x2
   UnityEngine_Object_o *mDragScrollView; // x20
-  struct UIDragScrollView_o *v11; // x8
+  struct UIDragScrollView_o *v9; // x8
   UnityEngine_Object_o *scrollView; // x19
-  const MethodInfo *v13; // x2
+  const MethodInfo *v11; // x2
 
   v3 = this;
-  if ( (byte_4B206B8 & 1) == 0 )
+  if ( (byte_4C2B5DC & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    sub_1BCAFF8(&SvtEqCombineListViewManager_TypeInfo, v4);
-    this = (SvtEqCombineUIDragDropListViewItem_o *)sub_1BCAFF8(&SvtEqCombineListViewObject_TypeInfo, v5);
-    byte_4B206B8 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&SvtEqCombineListViewManager_TypeInfo);
+    this = (SvtEqCombineUIDragDropListViewItem_o *)sub_1C2D490(&SvtEqCombineListViewObject_TypeInfo);
+    byte_4C2B5DC = 1;
   }
   mListViewObject = (SvtEqCombineListViewObject_o *)v3->fields.mListViewObject;
   if ( !mListViewObject )
     goto LABEL_22;
-  methodPtr_low = LOBYTE(SvtEqCombineListViewObject_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( LOBYTE(mListViewObject->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
-    || (SvtEqCombineListViewObject_c *)mListViewObject->klass->_2.typeHierarchy[methodPtr_low - 1] != SvtEqCombineListViewObject_TypeInfo )
+  naturalAligment = SvtEqCombineListViewObject_TypeInfo->_2.naturalAligment;
+  if ( mListViewObject->klass->_2.naturalAligment < (unsigned int)naturalAligment
+    || (SvtEqCombineListViewObject_c *)mListViewObject->klass->_2.typeHierarchy[naturalAligment - 1] != SvtEqCombineListViewObject_TypeInfo )
   {
-    sub_1BCB514(v3->fields.mListViewObject);
+    sub_1C2D9AC(v3->fields.mListViewObject);
     goto LABEL_20;
   }
   manager = mListViewObject->fields.manager;
   if ( !manager )
   {
 LABEL_21:
-    UIDragDropListViewItem__OnDragDropRelease((UIDragDropListViewItem_o *)v3, 0LL, 0LL);
-    SvtEqCombineListViewObject__Init_47988144(mListViewObject, 4, v13);
+    UIDragDropListViewItem__OnDragDropRelease((UIDragDropListViewItem_o *)v3, 0, 0);
+    SvtEqCombineListViewObject__Init_48762908(mListViewObject, 4, v11);
     goto LABEL_22;
   }
-  v8 = LOBYTE(SvtEqCombineListViewManager_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( LOBYTE(manager->klass->vtable._0_Equals.methodPtr) < (unsigned int)v8
-    || (SvtEqCombineListViewManager_c *)manager->klass->_2.typeHierarchy[v8 - 1] != SvtEqCombineListViewManager_TypeInfo )
+  v6 = SvtEqCombineListViewManager_TypeInfo->_2.naturalAligment;
+  if ( manager->klass->_2.naturalAligment < (unsigned int)v6
+    || (SvtEqCombineListViewManager_c *)manager->klass->_2.typeHierarchy[v6 - 1] != SvtEqCombineListViewManager_TypeInfo )
   {
 LABEL_20:
-    sub_1BCB514(manager);
+    sub_1C2D9AC(manager);
     goto LABEL_21;
   }
-  UIDragDropListViewItem__OnDragDropRelease((UIDragDropListViewItem_o *)v3, 0LL, 0LL);
-  SvtEqCombineListViewObject__Init_47988144(mListViewObject, 4, v9);
-  ((void (__fastcall *)(struct ListViewManager_o *, Il2CppMethodPointer))manager->klass->vtable._9_ItemDragEnd.method)(
+  UIDragDropListViewItem__OnDragDropRelease((UIDragDropListViewItem_o *)v3, 0, 0);
+  SvtEqCombineListViewObject__Init_48762908(mListViewObject, 4, v7);
+  ((void (__fastcall *)(struct ListViewManager_o *, const MethodInfo *))manager->klass->vtable._9_ItemDragEnd.methodPtr)(
     manager,
-    manager->klass->vtable._10_SetSortKind.methodPtr);
+    manager->klass->vtable._9_ItemDragEnd.method);
   v3->fields.isDrag = 0;
   mDragScrollView = (UnityEngine_Object_o *)v3->fields.mDragScrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  this = (SvtEqCombineUIDragDropListViewItem_o *)UnityEngine_Object__op_Inequality(mDragScrollView, 0LL, 0LL);
+  this = (SvtEqCombineUIDragDropListViewItem_o *)UnityEngine_Object__op_Inequality(mDragScrollView, 0, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    v11 = v3->fields.mDragScrollView;
-    if ( !v11 )
+    v9 = v3->fields.mDragScrollView;
+    if ( !v9 )
       goto LABEL_22;
-    scrollView = (UnityEngine_Object_o *)v11->fields.scrollView;
+    scrollView = (UnityEngine_Object_o *)v9->fields.scrollView;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    this = (SvtEqCombineUIDragDropListViewItem_o *)UnityEngine_Object__op_Inequality(scrollView, 0LL, 0LL);
+    this = (SvtEqCombineUIDragDropListViewItem_o *)UnityEngine_Object__op_Inequality(scrollView, 0, 0);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
       if ( scrollView )
       {
-        UIScrollView__Press((UIScrollView_o *)scrollView, 0, 0LL);
+        UIScrollView__Press((UIScrollView_o *)scrollView, 0, 0);
         return;
       }
 LABEL_22:
-      sub_1BCB254(this, method);
+      sub_1C2D6EC(this, method);
     }
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall SvtEqCombineUIDragDropListViewItem__OnDragDropMove(
+void SvtEqCombineUIDragDropListViewItem__OnDragDropMove(
         SvtEqCombineUIDragDropListViewItem_o *this,
         UnityEngine_Vector3_o delta,
         const MethodInfo *method)
@@ -108,167 +101,164 @@ void __fastcall SvtEqCombineUIDragDropListViewItem__OnDragDropMove(
   z = delta.fields.z;
   y = delta.fields.y;
   x = delta.fields.x;
-  if ( (byte_4B206B5 & 1) == 0 )
+  if ( (byte_4C2B5D9 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B206B5 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2B5D9 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(dragObject, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(dragObject, 0, 0) )
   {
     transform = this->fields.dragObject;
     if ( !transform
-      || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0LL)) == 0LL )
+      || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0 )
     {
-      sub_1BCB254(transform, v8);
+      sub_1C2D6EC(transform, v8);
     }
     v10 = (UnityEngine_Transform_o *)transform;
-    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0LL);
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
     localPosition.fields.y = y + localPosition.fields.y;
     localPosition.fields.z = z + localPosition.fields.z;
     localPosition.fields.x = x + localPosition.fields.x;
-    UnityEngine_Transform__set_localPosition(v10, localPosition, 0LL);
+    UnityEngine_Transform__set_localPosition(v10, localPosition, 0);
   }
 }
 
 
-void __fastcall SvtEqCombineUIDragDropListViewItem__OnDragDropRelease(
+void SvtEqCombineUIDragDropListViewItem__OnDragDropRelease(
         SvtEqCombineUIDragDropListViewItem_o *this,
         UnityEngine_GameObject_o *surface,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
   struct ListViewObject_o *mListViewObject; // x0
-  __int64 methodPtr_low; // x9
-  __int64 v7; // x9
-  const MethodInfo *v8; // x1
+  __int64 naturalAligment; // x9
+  __int64 v6; // x9
+  const MethodInfo *v7; // x1
 
-  if ( (byte_4B206B7 & 1) == 0 )
+  if ( (byte_4C2B5DB & 1) == 0 )
   {
-    sub_1BCAFF8(&SvtEqCombineListViewManager_TypeInfo, surface);
-    sub_1BCAFF8(&SvtEqCombineListViewObject_TypeInfo, v4);
-    byte_4B206B7 = 1;
+    sub_1C2D490(&SvtEqCombineListViewManager_TypeInfo);
+    sub_1C2D490(&SvtEqCombineListViewObject_TypeInfo);
+    byte_4C2B5DB = 1;
   }
   mListViewObject = this->fields.mListViewObject;
   if ( !mListViewObject )
 LABEL_11:
-    sub_1BCB254(mListViewObject, surface);
+    sub_1C2D6EC(mListViewObject, surface);
   surface = (UnityEngine_GameObject_o *)SvtEqCombineListViewObject_TypeInfo;
-  methodPtr_low = LOBYTE(SvtEqCombineListViewObject_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( LOBYTE(mListViewObject->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
-    || (SvtEqCombineListViewObject_c *)mListViewObject->klass->_2.typeHierarchy[methodPtr_low - 1] != SvtEqCombineListViewObject_TypeInfo )
+  naturalAligment = SvtEqCombineListViewObject_TypeInfo->_2.naturalAligment;
+  if ( mListViewObject->klass->_2.naturalAligment < (unsigned int)naturalAligment
+    || (SvtEqCombineListViewObject_c *)mListViewObject->klass->_2.typeHierarchy[naturalAligment - 1] != SvtEqCombineListViewObject_TypeInfo )
   {
     goto LABEL_10;
   }
   mListViewObject = (struct ListViewObject_o *)mListViewObject->fields.manager;
   if ( !mListViewObject )
     goto LABEL_11;
-  v7 = LOBYTE(SvtEqCombineListViewManager_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( LOBYTE(mListViewObject->klass->vtable._0_Equals.methodPtr) < (unsigned int)v7
-    || (SvtEqCombineListViewManager_c *)mListViewObject->klass->_2.typeHierarchy[v7 - 1] != SvtEqCombineListViewManager_TypeInfo )
+  v6 = SvtEqCombineListViewManager_TypeInfo->_2.naturalAligment;
+  if ( mListViewObject->klass->_2.naturalAligment < (unsigned int)v6
+    || (SvtEqCombineListViewManager_c *)mListViewObject->klass->_2.typeHierarchy[v6 - 1] != SvtEqCombineListViewManager_TypeInfo )
   {
 LABEL_10:
-    sub_1BCB514(mListViewObject);
+    sub_1C2D9AC(mListViewObject);
     goto LABEL_11;
   }
   SvtEqCombineListViewManager__SetDragEnd(
     (SvtEqCombineListViewManager_o *)mListViewObject,
     (const MethodInfo *)SvtEqCombineListViewManager_TypeInfo);
-  SvtEqCombineUIDragDropListViewItem__DragEnd(this, v8);
+  SvtEqCombineUIDragDropListViewItem__DragEnd(this, v7);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall SvtEqCombineUIDragDropListViewItem__OnDragDropStart(
+void SvtEqCombineUIDragDropListViewItem__OnDragDropStart(
         SvtEqCombineUIDragDropListViewItem_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   UnityEngine_Object_o *mDragScrollView; // x20
   UnityEngine_Collider_o *mCollider; // x0
-  __int64 v7; // x1
-  struct UIDragScrollView_o *v8; // x8
+  __int64 v5; // x1
+  struct UIDragScrollView_o *v6; // x8
   SvtEqCombineListViewObject_o *mListViewObject; // x21
-  const MethodInfo *v10; // x1
-  __int64 methodPtr_low; // x9
-  __int64 v12; // x9
+  const MethodInfo *v8; // x1
+  __int64 naturalAligment; // x9
+  __int64 v10; // x9
   ListViewItem_o *Item; // x22
-  const MethodInfo *v14; // x1
+  const MethodInfo *v12; // x1
   int32_t sortIndex; // w21
-  const MethodInfo *v16; // x3
-  SvtEqCombineUIDragDropListViewItem_o *v17; // x0
-  const MethodInfo *v18; // x1
-  long double v19; // q0 OVERLAPPED
+  const MethodInfo *v14; // x3
+  SvtEqCombineUIDragDropListViewItem_o *v15; // x0
+  const MethodInfo *v16; // x1
+  long double v17; // q0 OVERLAPPED
 
-  if ( (byte_4B206B4 & 1) == 0 )
+  if ( (byte_4C2B5D8 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    sub_1BCAFF8(&SvtEqCombineListViewManager_TypeInfo, v3);
-    sub_1BCAFF8(&SvtEqCombineListViewObject_TypeInfo, v4);
-    byte_4B206B4 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&SvtEqCombineListViewManager_TypeInfo);
+    sub_1C2D490(&SvtEqCombineListViewObject_TypeInfo);
+    byte_4C2B5D8 = 1;
   }
   mDragScrollView = (UnityEngine_Object_o *)this->fields.mDragScrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  mCollider = (UnityEngine_Collider_o *)UnityEngine_Object__op_Inequality(mDragScrollView, 0LL, 0LL);
+  mCollider = (UnityEngine_Collider_o *)UnityEngine_Object__op_Inequality(mDragScrollView, 0, 0);
   if ( ((unsigned __int8)mCollider & 1) != 0 )
   {
-    v8 = this->fields.mDragScrollView;
-    if ( !v8 )
+    v6 = this->fields.mDragScrollView;
+    if ( !v6 )
       goto LABEL_22;
-    mDragScrollView = (UnityEngine_Object_o *)v8->fields.scrollView;
+    mDragScrollView = (UnityEngine_Object_o *)v6->fields.scrollView;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    mCollider = (UnityEngine_Collider_o *)UnityEngine_Object__op_Inequality(mDragScrollView, 0LL, 0LL);
+    mCollider = (UnityEngine_Collider_o *)UnityEngine_Object__op_Inequality(mDragScrollView, 0, 0);
     if ( ((unsigned __int8)mCollider & 1) != 0 )
     {
       if ( !mDragScrollView )
         goto LABEL_22;
-      UIScrollView__Press((UIScrollView_o *)mDragScrollView, 0, 0LL);
+      UIScrollView__Press((UIScrollView_o *)mDragScrollView, 0, 0);
     }
   }
-  UIDragDropListViewItem__OnDragDropStart((UIDragDropListViewItem_o *)this, 0LL);
+  UIDragDropListViewItem__OnDragDropStart((UIDragDropListViewItem_o *)this, 0);
   mCollider = this->fields.mCollider;
   if ( !mCollider
-    || (UnityEngine_Collider__set_enabled(mCollider, 1, 0LL),
-        (mListViewObject = (SvtEqCombineListViewObject_o *)this->fields.mListViewObject) == 0LL) )
+    || (UnityEngine_Collider__set_enabled(mCollider, 1, 0),
+        (mListViewObject = (SvtEqCombineListViewObject_o *)this->fields.mListViewObject) == 0) )
   {
 LABEL_22:
-    sub_1BCB254(mCollider, v7);
+    sub_1C2D6EC(mCollider, v5);
   }
-  v10 = (const MethodInfo *)SvtEqCombineListViewObject_TypeInfo;
-  methodPtr_low = LOBYTE(SvtEqCombineListViewObject_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( LOBYTE(mListViewObject->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
-    && (SvtEqCombineListViewObject_c *)mListViewObject->klass->_2.typeHierarchy[methodPtr_low - 1] == SvtEqCombineListViewObject_TypeInfo )
+  v8 = (const MethodInfo *)SvtEqCombineListViewObject_TypeInfo;
+  naturalAligment = SvtEqCombineListViewObject_TypeInfo->_2.naturalAligment;
+  if ( mListViewObject->klass->_2.naturalAligment >= (unsigned int)naturalAligment
+    && (SvtEqCombineListViewObject_c *)mListViewObject->klass->_2.typeHierarchy[naturalAligment - 1] == SvtEqCombineListViewObject_TypeInfo )
   {
     mDragScrollView = (UnityEngine_Object_o *)mListViewObject->fields.manager;
     if ( !mDragScrollView
-      || (v10 = (const MethodInfo *)SvtEqCombineListViewManager_TypeInfo,
-          v12 = LOBYTE(SvtEqCombineListViewManager_TypeInfo->vtable._0_Equals.methodPtr),
-          LOBYTE(mDragScrollView->klass->vtable._0_Equals.methodPtr) >= (unsigned int)v12)
-      && (SvtEqCombineListViewManager_c *)mDragScrollView->klass->_2.typeHierarchy[v12 - 1] == SvtEqCombineListViewManager_TypeInfo )
+      || (v8 = (const MethodInfo *)SvtEqCombineListViewManager_TypeInfo,
+          v10 = SvtEqCombineListViewManager_TypeInfo->_2.naturalAligment,
+          mDragScrollView->klass->_2.naturalAligment >= (unsigned int)v10)
+      && (SvtEqCombineListViewManager_c *)mDragScrollView->klass->_2.typeHierarchy[v10 - 1] == SvtEqCombineListViewManager_TypeInfo )
     {
       Item = (ListViewItem_o *)SvtEqCombineListViewObject__GetItem(
                                  (SvtEqCombineListViewObject_o *)this->fields.mListViewObject,
-                                 v10);
-      SvtEqCombineListViewObject__OnDragDropStart(mListViewObject, v14);
+                                 v8);
+      SvtEqCombineListViewObject__OnDragDropStart(mListViewObject, v12);
       if ( Item )
       {
         sortIndex = Item->fields.sortIndex;
-        mCollider = (UnityEngine_Collider_o *)ListViewItem__get_IsSelect(Item, 0LL);
+        mCollider = (UnityEngine_Collider_o *)ListViewItem__get_IsSelect(Item, 0);
         if ( mDragScrollView )
         {
           SvtEqCombineListViewManager__SetDragStart(
             (SvtEqCombineListViewManager_o *)mDragScrollView,
             sortIndex,
             ((unsigned __int8)mCollider & 1) == 0,
-            v16);
-          ((void (__fastcall *)(UnityEngine_Object_o *, Il2CppClass *))mDragScrollView->klass[1]._1.castClass)(
+            v14);
+          ((void (__fastcall *)(UnityEngine_Object_o *, Il2CppClass *))mDragScrollView->klass[1]._1.element_class)(
             mDragScrollView,
-            mDragScrollView->klass[1]._1.declaringType);
+            mDragScrollView->klass[1]._1.castClass);
           *(_WORD *)&this->fields.isDrag = 1;
           return;
         }
@@ -278,310 +268,304 @@ LABEL_22:
   }
   else
   {
-    sub_1BCB514(this->fields.mListViewObject);
+    sub_1C2D9AC(this->fields.mListViewObject);
   }
-  v19 = sub_1BCB514(mDragScrollView);
-  SvtEqCombineUIDragDropListViewItem__OnDragDropMove(v17, *(UnityEngine_Vector3_o *)&v19, v18);
+  v17 = sub_1C2D9AC(mDragScrollView);
+  SvtEqCombineUIDragDropListViewItem__OnDragDropMove(v15, *(UnityEngine_Vector3_o *)&v17, v16);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall SvtEqCombineUIDragDropListViewItem__Update(
-        SvtEqCombineUIDragDropListViewItem_o *this,
-        const MethodInfo *method)
+void SvtEqCombineUIDragDropListViewItem__Update(SvtEqCombineUIDragDropListViewItem_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  void *main; // x0
-  SvtEqCombineListViewManager_c *v9; // x1
-  UICamera_c *v10; // x8
-  UnityEngine_Camera_o *v11; // x20
+  intptr_t main; // x0
+  SvtEqCombineListViewManager_c *v4; // x1
+  UICamera_c *v5; // x8
+  UnityEngine_Camera_o *v6; // x20
   struct UICamera_StaticFields *static_fields; // x8
-  Il2CppObject *Component_object; // x20
-  SvtEqCombineListViewManager_o *monitor; // x21
-  __int64 methodPtr_low; // x9
-  const MethodInfo *v16; // x3
-  int32_t v17; // w2
+  UnityEngine_Object_o *Component_object; // x20
+  SvtEqCombineListViewManager_o *m_CachedPtr; // x21
+  __int64 naturalAligment; // x9
+  const MethodInfo *v11; // x3
+  int32_t v12; // w2
   UnityEngine_Object_o *mDragScrollView; // x20
-  struct UIDragScrollView_o *v19; // x8
-  struct UIScrollView_o *scrollView; // x20
-  struct UIPanel_o *mPanel; // x21
-  UICamera_c *v22; // x8
-  UnityEngine_Camera_o *v23; // x22
-  struct UICamera_StaticFields *v24; // x8
-  float v25; // s0
-  float v26; // s1
-  float v27; // s2
-  float v28; // s8
-  float v29; // s9
-  float v30; // s10
-  float x; // s14
-  float y; // s15
-  float v33; // s8
-  float v34; // s11
+  struct UIDragScrollView_o *v14; // x8
+  UnityEngine_Object_o *scrollView; // x20
+  void *monitor; // x21
+  UICamera_c *v17; // x8
+  UnityEngine_Camera_o *v18; // x22
+  struct UICamera_StaticFields *v19; // x8
+  float x; // s8
+  float y; // s9
+  float z; // s10
+  float v23; // s14
+  float v24; // s15
+  float v25; // s8
+  float v26; // s11
   UnityEngine_Vector2_o ViewSize; // kr00_8
-  __int64 v36; // x9
-  float v37; // s10
-  float v38; // s13
+  __int64 v28; // x9
+  float v29; // s10
+  float v30; // s13
   bool IsLimitOverPosition2; // w21
-  UnityEngine_Object_o *verticalScrollBar; // x22
-  float v41; // s0
-  float v42; // s1
-  float v43; // s0
-  float v44; // s1
-  UnityEngine_Object_o *horizontalScrollBar; // x22
-  int v46; // s2
-  float v47; // s0
-  float v48; // s0
-  float v49; // s1
-  int v50; // s2
-  SvtEqCombineUIDragDropListViewItem_o *v51; // x0
-  UnityEngine_GameObject_o *v52; // x1
-  const MethodInfo *v53; // x2
-  UnityEngine_Ray_o v54; // [xsp+0h] [xbp-100h] BYREF
-  UnityEngine_Ray_o v55; // [xsp+18h] [xbp-E8h] BYREF
-  UnityEngine_Ray_o v56; // [xsp+30h] [xbp-D0h]
-  UnityEngine_RaycastHit_o v57; // [xsp+50h] [xbp-B0h] BYREF
-  UnityEngine_Vector3_o v58; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v59; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v60; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v61; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Object_o *v32; // x22
+  float v33; // s0
+  float v34; // s1
+  float v35; // s0 OVERLAPPED
+  float v36; // s1
+  UnityEngine_Object_o *v37; // x22
+  int v38; // s2
+  float v39; // s0
+  float v40; // s0 OVERLAPPED
+  float v41; // s1
+  int v42; // s2
+  SvtEqCombineUIDragDropListViewItem_o *v43; // x0
+  UnityEngine_GameObject_o *v44; // x1
+  const MethodInfo *v45; // x2
+  UnityEngine_Ray_o v46; // [xsp+0h] [xbp-100h] BYREF
+  UnityEngine_Ray_o v47; // [xsp+18h] [xbp-E8h] BYREF
+  UnityEngine_Ray_o v48; // [xsp+30h] [xbp-D0h]
+  UnityEngine_RaycastHit_o v49; // [xsp+50h] [xbp-B0h] BYREF
+  UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B206B6 & 1) == 0 )
+  if ( (byte_4C2B5DA & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_BoxCollider_TypeInfo, method);
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_SvtEqCombineListViewObject___, v3);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
-    sub_1BCAFF8(&UnityEngine_Physics_TypeInfo, v5);
-    sub_1BCAFF8(&SvtEqCombineListViewManager_TypeInfo, v6);
-    sub_1BCAFF8(&UICamera_TypeInfo, v7);
-    byte_4B206B6 = 1;
+    sub_1C2D490(&UnityEngine_BoxCollider_TypeInfo);
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_SvtEqCombineListViewObject___);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&UnityEngine_Physics_TypeInfo);
+    sub_1C2D490(&SvtEqCombineListViewManager_TypeInfo);
+    sub_1C2D490(&UICamera_TypeInfo);
+    byte_4C2B5DA = 1;
   }
-  memset(&v57, 0, sizeof(v57));
+  memset(&v49, 0, sizeof(v49));
   if ( !this->fields.isDrag )
     return;
-  main = UnityEngine_Camera__get_main(0LL);
-  v10 = UICamera_TypeInfo;
-  v11 = (UnityEngine_Camera_o *)main;
+  main = (intptr_t)UnityEngine_Camera__get_main(0);
+  v5 = UICamera_TypeInfo;
+  v6 = (UnityEngine_Camera_o *)main;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-    v10 = UICamera_TypeInfo;
+    v5 = UICamera_TypeInfo;
   }
-  if ( !v11 )
+  if ( !v6 )
     goto LABEL_78;
-  static_fields = v10->static_fields;
-  v58.fields.z = 0.0;
-  v58.fields.x = static_fields->lastTouchPosition.fields.x;
-  v58.fields.y = static_fields->lastTouchPosition.fields.y;
-  UnityEngine_Camera__ScreenPointToRay_69942832(&v55, v11, v58, 0LL);
-  v56 = v55;
+  static_fields = v5->static_fields;
+  v50.fields.z = 0.0;
+  v50.fields.x = static_fields->lastTouchPosition.fields.x;
+  v50.fields.y = static_fields->lastTouchPosition.fields.y;
+  UnityEngine_Camera__ScreenPointToRay_70970460(&v47, v6, v50, 0);
+  v48 = v47;
   if ( !UnityEngine_Physics_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Physics_TypeInfo);
-  v54 = v56;
-  if ( UnityEngine_Physics__Raycast_70452400(&v54, &v57, 0LL) )
+  v46 = v48;
+  if ( UnityEngine_Physics__Raycast_71480028(&v46, &v49, 0) )
   {
-    main = UnityEngine_RaycastHit__get_collider(&v57, 0LL);
+    main = (intptr_t)UnityEngine_RaycastHit__get_collider(&v49, 0);
     if ( !main )
       goto LABEL_78;
-    Component_object = UnityEngine_Component__GetComponent_object_(
-                         (UnityEngine_Component_o *)main,
-                         (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_SvtEqCombineListViewObject___);
+    Component_object = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_object_(
+                                                 (UnityEngine_Component_o *)main,
+                                                 (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_SvtEqCombineListViewObject___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    main = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
-    if ( ((unsigned __int8)main & 1) != 0 )
+    main = UnityEngine_Object__op_Inequality(Component_object, 0, 0);
+    if ( (main & 1) != 0 )
     {
       if ( !Component_object )
         goto LABEL_78;
-      monitor = (SvtEqCombineListViewManager_o *)Component_object[2].monitor;
-      if ( monitor )
+      m_CachedPtr = (SvtEqCombineListViewManager_o *)Component_object[1].fields.m_CachedPtr;
+      if ( m_CachedPtr )
       {
-        v9 = SvtEqCombineListViewManager_TypeInfo;
-        methodPtr_low = LOBYTE(SvtEqCombineListViewManager_TypeInfo->vtable._0_Equals.methodPtr);
-        if ( LOBYTE(monitor->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
-          || (SvtEqCombineListViewManager_c *)monitor->klass->_2.typeHierarchy[methodPtr_low - 1] != SvtEqCombineListViewManager_TypeInfo )
+        v4 = SvtEqCombineListViewManager_TypeInfo;
+        naturalAligment = SvtEqCombineListViewManager_TypeInfo->_2.naturalAligment;
+        if ( m_CachedPtr->klass->_2.naturalAligment < (unsigned int)naturalAligment
+          || (SvtEqCombineListViewManager_c *)m_CachedPtr->klass->_2.typeHierarchy[naturalAligment - 1] != SvtEqCombineListViewManager_TypeInfo )
         {
-          main = Component_object[2].monitor;
+          main = Component_object[1].fields.m_CachedPtr;
           goto LABEL_80;
         }
       }
-      main = SvtEqCombineListViewObject__GetItem(
-               (SvtEqCombineListViewObject_o *)Component_object,
-               (const MethodInfo *)v9);
-      if ( !main || !monitor )
+      main = (intptr_t)SvtEqCombineListViewObject__GetItem(
+                         (SvtEqCombineListViewObject_o *)Component_object,
+                         (const MethodInfo *)v4);
+      if ( !main || !m_CachedPtr )
         goto LABEL_78;
-      v17 = *((_DWORD *)main + 6);
-      if ( monitor->fields.dragEndIndex != v17 )
-        SvtEqCombineListViewManager__SetDragSelectItem(monitor, monitor->fields.dragStartIndex, v17, v16);
+      v12 = *(_DWORD *)(main + 24);
+      if ( m_CachedPtr->fields.dragEndIndex != v12 )
+        SvtEqCombineListViewManager__SetDragSelectItem(m_CachedPtr, m_CachedPtr->fields.dragStartIndex, v12, v11);
     }
   }
   mDragScrollView = (UnityEngine_Object_o *)this->fields.mDragScrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  main = (void *)UnityEngine_Object__op_Inequality(mDragScrollView, 0LL, 0LL);
-  if ( ((unsigned __int8)main & 1) == 0 )
+  main = UnityEngine_Object__op_Inequality(mDragScrollView, 0, 0);
+  if ( (main & 1) == 0 )
     return;
-  v19 = this->fields.mDragScrollView;
-  if ( !v19 )
+  v14 = this->fields.mDragScrollView;
+  if ( !v14 )
     goto LABEL_78;
-  scrollView = v19->fields.scrollView;
+  scrollView = (UnityEngine_Object_o *)v14->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  main = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)scrollView, 0LL, 0LL);
-  if ( ((unsigned __int8)main & 1) == 0 )
+  main = UnityEngine_Object__op_Inequality(scrollView, 0, 0);
+  if ( (main & 1) == 0 )
     return;
   if ( !scrollView )
     goto LABEL_78;
-  mPanel = scrollView->fields.mPanel;
+  monitor = scrollView[6].monitor;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)mPanel, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)monitor, 0, 0) )
     return;
-  main = UnityEngine_Camera__get_main(0LL);
-  v22 = UICamera_TypeInfo;
-  v23 = (UnityEngine_Camera_o *)main;
+  main = (intptr_t)UnityEngine_Camera__get_main(0);
+  v17 = UICamera_TypeInfo;
+  v18 = (UnityEngine_Camera_o *)main;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-    v22 = UICamera_TypeInfo;
+    v17 = UICamera_TypeInfo;
   }
-  if ( !v23 )
+  if ( !v18 )
     goto LABEL_78;
-  v24 = v22->static_fields;
-  v59.fields.z = 0.0;
-  v59.fields.x = v24->lastTouchPosition.fields.x;
-  v59.fields.y = v24->lastTouchPosition.fields.y;
-  *(UnityEngine_Vector3_o *)&v25 = UnityEngine_Camera__ScreenToWorldPoint_69942368(v23, v59, 0LL);
-  if ( !mPanel )
+  v19 = v17->static_fields;
+  v51.fields.z = 0.0;
+  v51.fields.x = v19->lastTouchPosition.fields.x;
+  v51.fields.y = v19->lastTouchPosition.fields.y;
+  v52 = UnityEngine_Camera__ScreenToWorldPoint_70969996(v18, v51, 0);
+  if ( !monitor )
     goto LABEL_78;
-  v28 = v25;
-  v29 = v26;
-  v30 = v27;
-  main = UnityEngine_Component__get_transform((UnityEngine_Component_o *)mPanel, 0LL);
+  x = v52.fields.x;
+  y = v52.fields.y;
+  z = v52.fields.z;
+  main = (intptr_t)UnityEngine_Component__get_transform((UnityEngine_Component_o *)monitor, 0);
   if ( !main )
     goto LABEL_78;
-  v60.fields.x = v28;
-  v60.fields.y = v29;
-  v60.fields.z = v30;
-  v61 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)main, v60, 0LL);
-  x = mPanel->fields.mClipOffset.fields.x;
-  y = mPanel->fields.mClipOffset.fields.y;
-  v33 = v61.fields.x;
-  v34 = v61.fields.y;
-  ViewSize = UIPanel__GetViewSize(mPanel, 0LL);
-  main = this->fields.mCollider;
+  v53.fields.x = x;
+  v53.fields.y = y;
+  v53.fields.z = z;
+  v54 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)main, v53, 0);
+  v23 = *((float *)monitor + 83);
+  v24 = *((float *)monitor + 84);
+  v25 = v54.fields.x;
+  v26 = v54.fields.y;
+  ViewSize = UIPanel__GetViewSize((UIPanel_o *)monitor, 0);
+  main = (intptr_t)this->fields.mCollider;
   if ( !main )
     goto LABEL_78;
-  v36 = LOBYTE(UnityEngine_BoxCollider_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( *(unsigned __int8 *)(*(_QWORD *)main + 304LL) < (unsigned int)v36
-    || *(UnityEngine_BoxCollider_c **)(*(_QWORD *)(*(_QWORD *)main + 200LL) + 8 * v36 - 8) != UnityEngine_BoxCollider_TypeInfo )
+  v28 = UnityEngine_BoxCollider_TypeInfo->_2.naturalAligment;
+  if ( *(unsigned __int8 *)(*(_QWORD *)main + 304LL) < (unsigned int)v28
+    || *(UnityEngine_BoxCollider_c **)(*(_QWORD *)(*(_QWORD *)main + 200LL) + 8 * v28 - 8) != UnityEngine_BoxCollider_TypeInfo )
   {
 LABEL_80:
-    sub_1BCB514(main);
-    SvtEqCombineUIDragDropListViewItem__OnDragDropRelease(v51, v52, v53);
+    sub_1C2D9AC(main);
+    SvtEqCombineUIDragDropListViewItem__OnDragDropRelease(v43, v44, v45);
     return;
   }
-  size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)main, 0LL);
-  v37 = size.fields.x;
-  v38 = size.fields.y;
-  IsLimitOverPosition2 = UIScrollView__IsLimitOverPosition2(scrollView, 0LL);
+  size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)main, 0);
+  v29 = size.fields.x;
+  v30 = size.fields.y;
+  IsLimitOverPosition2 = UIScrollView__IsLimitOverPosition2((UIScrollView_o *)scrollView, 0);
   if ( IsLimitOverPosition2 )
     this->fields.isLimit = 1;
-  if ( UIScrollView__get_canMoveVertically(scrollView, 0LL) )
+  if ( UIScrollView__get_canMoveVertically((UIScrollView_o *)scrollView, 0) )
   {
-    verticalScrollBar = (UnityEngine_Object_o *)scrollView->fields.verticalScrollBar;
+    v32 = (UnityEngine_Object_o *)scrollView[2].fields.m_CachedPtr;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality(verticalScrollBar, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality(v32, 0, 0) )
     {
-      main = scrollView->fields.verticalScrollBar;
+      main = scrollView[2].fields.m_CachedPtr;
       if ( !main )
         goto LABEL_78;
-      if ( UIProgressBar__get_alpha((UIProgressBar_o *)main, 0LL) > 0.0 )
+      if ( UIProgressBar__get_alpha((UIProgressBar_o *)main, 0) > 0.0 )
       {
-        v41 = v34 - y;
-        v42 = (float)(ViewSize.fields.y - v38) * 0.5;
+        v33 = v26 - v24;
+        v34 = (float)(ViewSize.fields.y - v30) * 0.5;
         if ( !this->fields.isLimit )
         {
-          if ( v41 > (float)-v42 )
+          if ( v33 > (float)-v34 )
           {
-            if ( v41 < v42 )
+            if ( v33 < v34 )
               return;
-            v43 = 0.0;
-            v44 = -1.0;
+            v35 = 0.0;
+            v36 = -1.0;
 LABEL_71:
-            v46 = 0;
-            if ( !UIScrollView__IsLimitOverPosition2_48429596(scrollView, *(UnityEngine_Vector3_o *)&v43, 0LL) )
+            v38 = 0;
+            if ( !UIScrollView__IsLimitOverPosition2_49133624(
+                    (UIScrollView_o *)scrollView,
+                    *(UnityEngine_Vector3_o *)&v35,
+                    0) )
             {
-              v47 = 0.5;
+              v39 = 0.5;
 LABEL_77:
-              UIScrollView__Scroll(scrollView, v47, 0LL);
+              UIScrollView__Scroll((UIScrollView_o *)scrollView, v39, 0);
               return;
             }
             return;
           }
-          v48 = 0.0;
-          v49 = 1.0;
+          v40 = 0.0;
+          v41 = 1.0;
           goto LABEL_75;
         }
         goto LABEL_60;
       }
     }
   }
-  if ( !UIScrollView__get_canMoveHorizontally(scrollView, 0LL) )
+  if ( !UIScrollView__get_canMoveHorizontally((UIScrollView_o *)scrollView, 0) )
     goto LABEL_62;
-  horizontalScrollBar = (UnityEngine_Object_o *)scrollView->fields.horizontalScrollBar;
+  v37 = (UnityEngine_Object_o *)scrollView[2].monitor;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Inequality(horizontalScrollBar, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Inequality(v37, 0, 0) )
   {
 LABEL_62:
     if ( IsLimitOverPosition2 )
       return;
     goto LABEL_63;
   }
-  main = scrollView->fields.horizontalScrollBar;
+  main = (intptr_t)scrollView[2].monitor;
   if ( !main )
 LABEL_78:
-    sub_1BCB254(main, v9);
-  if ( UIProgressBar__get_alpha((UIProgressBar_o *)main, 0LL) <= 0.0 )
+    sub_1C2D6EC(main, v4);
+  if ( UIProgressBar__get_alpha((UIProgressBar_o *)main, 0) <= 0.0 )
     goto LABEL_62;
-  v41 = v33 - x;
-  v42 = (float)(ViewSize.fields.x - v37) * 0.5;
+  v33 = v25 - v23;
+  v34 = (float)(ViewSize.fields.x - v29) * 0.5;
   if ( this->fields.isLimit )
   {
 LABEL_60:
     if ( IsLimitOverPosition2 )
     {
-      UIScrollView__Press(scrollView, 0, 0LL);
+      UIScrollView__Press((UIScrollView_o *)scrollView, 0, 0);
       return;
     }
-    if ( v41 <= (float)-v42 || v41 >= v42 )
+    if ( v33 <= (float)-v34 || v33 >= v34 )
       return;
 LABEL_63:
     this->fields.isLimit = 0;
     return;
   }
-  if ( v41 > (float)-v42 )
+  if ( v33 > (float)-v34 )
   {
-    if ( v41 < v42 )
+    if ( v33 < v34 )
       return;
-    v43 = -1.0;
-    v44 = 0.0;
+    v35 = -1.0;
+    v36 = 0.0;
     goto LABEL_71;
   }
-  v48 = 1.0;
-  v49 = 0.0;
+  v40 = 1.0;
+  v41 = 0.0;
 LABEL_75:
-  v50 = 0;
-  if ( !UIScrollView__IsLimitOverPosition2_48429596(scrollView, *(UnityEngine_Vector3_o *)&v48, 0LL) )
+  v42 = 0;
+  if ( !UIScrollView__IsLimitOverPosition2_49133624((UIScrollView_o *)scrollView, *(UnityEngine_Vector3_o *)&v40, 0) )
   {
-    v47 = -0.5;
+    v39 = -0.5;
     goto LABEL_77;
   }
 }

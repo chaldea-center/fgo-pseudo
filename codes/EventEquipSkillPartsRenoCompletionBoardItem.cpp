@@ -1,20 +1,20 @@
-void __fastcall EventEquipSkillPartsRenoCompletionBoardItem___ctor(
+void EventEquipSkillPartsRenoCompletionBoardItem___ctor(
         EventEquipSkillPartsRenoCompletionBoardItem_o *this,
         int32_t skillId,
         System_String_o *name,
         System_String_o *detail,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._SkillId_k__BackingField = skillId;
   this->fields._Name_k__BackingField = name;
-  sub_1BCAF9C(&this->fields._Name_k__BackingField);
+  sub_1C2D434(&this->fields._Name_k__BackingField);
   this->fields._Detail_k__BackingField = detail;
-  sub_1BCAF9C(&this->fields._Detail_k__BackingField);
+  sub_1C2D434(&this->fields._Detail_k__BackingField);
 }
 
 
-System_String_o *__fastcall EventEquipSkillPartsRenoCompletionBoardItem__get_Detail(
+System_String_o *EventEquipSkillPartsRenoCompletionBoardItem__get_Detail(
         EventEquipSkillPartsRenoCompletionBoardItem_o *this,
         const MethodInfo *method)
 {
@@ -22,7 +22,7 @@ System_String_o *__fastcall EventEquipSkillPartsRenoCompletionBoardItem__get_Det
 }
 
 
-System_String_o *__fastcall EventEquipSkillPartsRenoCompletionBoardItem__get_Name(
+System_String_o *EventEquipSkillPartsRenoCompletionBoardItem__get_Name(
         EventEquipSkillPartsRenoCompletionBoardItem_o *this,
         const MethodInfo *method)
 {
@@ -30,7 +30,7 @@ System_String_o *__fastcall EventEquipSkillPartsRenoCompletionBoardItem__get_Nam
 }
 
 
-int32_t __fastcall EventEquipSkillPartsRenoCompletionBoardItem__get_SkillId(
+int32_t EventEquipSkillPartsRenoCompletionBoardItem__get_SkillId(
         EventEquipSkillPartsRenoCompletionBoardItem_o *this,
         const MethodInfo *method)
 {
@@ -38,27 +38,27 @@ int32_t __fastcall EventEquipSkillPartsRenoCompletionBoardItem__get_SkillId(
 }
 
 
-void __fastcall EventEquipSkillPartsRenoCompletionBoardItem__set_Detail(
+void EventEquipSkillPartsRenoCompletionBoardItem__set_Detail(
         EventEquipSkillPartsRenoCompletionBoardItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
 {
   this->fields._Detail_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._Detail_k__BackingField);
+  sub_1C2D434(&this->fields._Detail_k__BackingField);
 }
 
 
-void __fastcall EventEquipSkillPartsRenoCompletionBoardItem__set_Name(
+void EventEquipSkillPartsRenoCompletionBoardItem__set_Name(
         EventEquipSkillPartsRenoCompletionBoardItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
 {
   this->fields._Name_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._Name_k__BackingField);
+  sub_1C2D434(&this->fields._Name_k__BackingField);
 }
 
 
-void __fastcall EventEquipSkillPartsRenoCompletionBoardItem__set_SkillId(
+void EventEquipSkillPartsRenoCompletionBoardItem__set_SkillId(
         EventEquipSkillPartsRenoCompletionBoardItem_o *this,
         int32_t value,
         const MethodInfo *method)

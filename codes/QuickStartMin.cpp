@@ -1,10 +1,10 @@
-void __fastcall QuickStartMin___ctor(QuickStartMin_o *this, const MethodInfo *method)
+void QuickStartMin___ctor(QuickStartMin_o *this, const MethodInfo *method)
 {
-  RequestBase___ctor((RequestBase_o *)this, 0LL);
+  RequestBase___ctor((RequestBase_o *)this, 0);
 }
 
 
-System_String_o *__fastcall QuickStartMin__getURL(QuickStartMin_o *this, const MethodInfo *method)
+System_String_o *QuickStartMin__getURL(QuickStartMin_o *this, const MethodInfo *method)
 {
-  return 0LL;
+  return 0;
 }

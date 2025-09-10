@@ -1,32 +1,31 @@
-void __fastcall RestrictionSlotDetailEntity___ctor(RestrictionSlotDetailEntity_o *this, const MethodInfo *method)
+void RestrictionSlotDetailEntity___ctor(RestrictionSlotDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CCD7 & 1) == 0 )
+  if ( (byte_4C27AB0 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1CCD7 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C27AB0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall RestrictionSlotDetailEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
+System_String_o *RestrictionSlotDetailEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4B1CCD6 & 1) == 0 )
+  if ( (byte_4C27AAF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
-    byte_4B1CCD6 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C27AAF = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            idx,
-           (const MethodInfo_3018C2C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
-System_String_o *__fastcall RestrictionSlotDetailEntity__CreatePrimaryKey(
+System_String_o *RestrictionSlotDetailEntity__CreatePrimaryKey(
         RestrictionSlotDetailEntity_o *this,
         const MethodInfo *method)
 {
@@ -36,7 +35,7 @@ System_String_o *__fastcall RestrictionSlotDetailEntity__CreatePrimaryKey(
 }
 
 
-bool __fastcall RestrictionSlotDetailEntity__IsIndividuality(
+bool RestrictionSlotDetailEntity__IsIndividuality(
         RestrictionSlotDetailEntity_o *this,
         System_Int32_array *individualities,
         const MethodInfo *method)
@@ -57,16 +56,16 @@ bool __fastcall RestrictionSlotDetailEntity__IsIndividuality(
 }
 
 
-bool __fastcall RestrictionSlotDetailEntity__IsSearchVals(
+bool RestrictionSlotDetailEntity__IsSearchVals(
         RestrictionSlotDetailEntity_o *this,
         System_Int32_array *vList,
         const MethodInfo *method)
 {
   bool result; // w0
   struct System_Int32_array *targetVals; // x8
-  unsigned __int64 v6; // x10
+  unsigned __int64 max_length; // x10
   unsigned __int64 v7; // x9
-  signed int max_length; // w13
+  int v8; // w13
   __int64 v9; // x15
 
   result = 0;
@@ -75,36 +74,36 @@ bool __fastcall RestrictionSlotDetailEntity__IsSearchVals(
     targetVals = this->fields.targetVals;
     if ( targetVals )
     {
-      if ( (int)*(_QWORD *)&targetVals->max_length < 1 )
+      if ( (int)targetVals->max_length < 1 )
       {
         return 0;
       }
       else
       {
-        v6 = (unsigned int)*(_QWORD *)&targetVals->max_length;
-        v7 = 0LL;
+        max_length = (unsigned int)targetVals->max_length;
+        v7 = 0;
         while ( 1 )
         {
-          if ( v7 >= v6 )
+          if ( v7 >= max_length )
 LABEL_16:
-            sub_1BCB25C(0LL, vList, method);
-          max_length = vList->max_length;
-          if ( max_length >= 1 )
+            sub_1C2D6F4(0, vList, method);
+          v8 = vList->max_length;
+          if ( v8 >= 1 )
             break;
 LABEL_11:
           ++v7;
           result = 0;
-          if ( (__int64)v7 >= (int)v6 )
+          if ( (__int64)v7 >= (int)max_length )
             return result;
         }
-        v9 = 0LL;
+        v9 = 0;
         while ( 1 )
         {
-          if ( (unsigned int)v9 >= max_length )
+          if ( (unsigned int)v9 >= v8 )
             goto LABEL_16;
-          if ( targetVals->m_Items[v7 + 1] == vList->m_Items[v9 + 1] )
+          if ( targetVals->m_Items[v7] == vList->m_Items[v9] )
             return 1;
-          if ( (int)++v9 >= max_length )
+          if ( (int)++v9 >= v8 )
             goto LABEL_11;
         }
       }

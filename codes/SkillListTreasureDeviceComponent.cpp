@@ -1,48 +1,41 @@
-void __fastcall SkillListTreasureDeviceComponent___cctor(const MethodInfo *method)
+void SkillListTreasureDeviceComponent___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4B1BADF & 1) == 0 )
+  if ( (byte_4C26876 & 1) == 0 )
   {
-    sub_1BCAFF8(&SkillListTreasureDeviceComponent_TypeInfo, v1);
-    byte_4B1BADF = 1;
+    sub_1C2D490(&SkillListTreasureDeviceComponent_TypeInfo);
+    byte_4C26876 = 1;
   }
   LODWORD(SkillListTreasureDeviceComponent_TypeInfo->static_fields->ADJUST_X_POS) = (struct SkillListTreasureDeviceComponent_StaticFields)1098907648;
 }
 
 
-void __fastcall SkillListTreasureDeviceComponent___ctor(
-        SkillListTreasureDeviceComponent_o *this,
-        const MethodInfo *method)
+void SkillListTreasureDeviceComponent___ctor(SkillListTreasureDeviceComponent_o *this, const MethodInfo *method)
 {
   *(_QWORD *)&this->fields.normalRange = 0xA00000044LL;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall SkillListTreasureDeviceComponent__Clear(
-        SkillListTreasureDeviceComponent_o *this,
-        const MethodInfo *method)
+void SkillListTreasureDeviceComponent__Clear(SkillListTreasureDeviceComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UILabel_o *skillLevelListLabel; // x0
   UnityEngine_Object_o *treasureDeviceIconLabel; // x20
   UnityEngine_Object_o *skillIconSprite; // x20
 
-  if ( (byte_4B1BADC & 1) == 0 )
+  if ( (byte_4C26873 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v3);
-    byte_4B1BADC = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C26873 = 1;
   }
   skillLevelListLabel = this->fields.skillLevelListLabel;
   if ( !skillLevelListLabel )
     goto LABEL_15;
-  UILabel__set_text(skillLevelListLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  UILabel__set_text(skillLevelListLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   treasureDeviceIconLabel = (UnityEngine_Object_o *)this->fields.treasureDeviceIconLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(treasureDeviceIconLabel, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(treasureDeviceIconLabel, 0, 0) )
   {
     skillLevelListLabel = (UILabel_o *)this->fields.treasureDeviceIconLabel;
     if ( !skillLevelListLabel )
@@ -52,22 +45,21 @@ void __fastcall SkillListTreasureDeviceComponent__Clear(
   skillIconSprite = (UnityEngine_Object_o *)this->fields.skillIconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(skillIconSprite, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(skillIconSprite, 0, 0) )
   {
     skillLevelListLabel = (UILabel_o *)this->fields.skillIconSprite;
     if ( skillLevelListLabel )
     {
-      UISprite__set_spriteName((UISprite_o *)skillLevelListLabel, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+      UISprite__set_spriteName((UISprite_o *)skillLevelListLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
       return;
     }
 LABEL_15:
-    sub_1BCB254(skillLevelListLabel, method);
+    sub_1C2D6EC(skillLevelListLabel, method);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall SkillListTreasureDeviceComponent__Set(
+void SkillListTreasureDeviceComponent__Set(
         SkillListTreasureDeviceComponent_o *this,
         System_String_o *skillLevelListText,
         int32_t tdLv,
@@ -77,32 +69,29 @@ void __fastcall SkillListTreasureDeviceComponent__Set(
         const MethodInfo *method)
 {
   __int64 v13; // x1
-  __int64 v14; // x1
   UnityEngine_Component_o *skillLevelListLabel; // x0
-  float v16; // s1
-  float v17; // s2
-  float v18; // s10
-  float v19; // s11
-  float v20; // s1
-  float v21; // s2
-  float v22; // s8
-  float v23; // s9
+  float y; // s10
+  float z; // s11
+  float v17; // s8
+  float v18; // s9
   float x; // s0
   UnityEngine_Object_o *skillIconSprite; // x20
-  int v26; // w10
-  int v27; // w21
-  float v28; // s12
-  float v29; // s13
-  SkillListTreasureDeviceComponent_c *v30; // x0
+  int v21; // w10
+  int v22; // w21
+  float v23; // s12
+  float v24; // s13
+  SkillListTreasureDeviceComponent_c *v25; // x0
   float ADJUST_X_POS; // s0
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B1BADE & 1) == 0 )
+  if ( (byte_4C26875 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, skillLevelListText);
-    sub_1BCAFF8(&SkillListTreasureDeviceComponent_TypeInfo, v13);
-    byte_4B1BADE = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&SkillListTreasureDeviceComponent_TypeInfo);
+    byte_4C26875 = 1;
   }
   if ( SkillListTreasureDeviceComponent__SetWithoutAdjustPosition(
          this,
@@ -116,84 +105,78 @@ void __fastcall SkillListTreasureDeviceComponent__Set(
     skillLevelListLabel = (UnityEngine_Component_o *)this->fields.skillLevelListLabel;
     if ( !skillLevelListLabel )
       goto LABEL_25;
-    skillLevelListLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(skillLevelListLabel, 0LL);
+    skillLevelListLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(skillLevelListLabel, 0);
     if ( !skillLevelListLabel )
       goto LABEL_25;
-    *(UnityEngine_Vector3_o *)(&v16 - 1) = UnityEngine_Transform__get_localPosition(
-                                             (UnityEngine_Transform_o *)skillLevelListLabel,
-                                             0LL);
+    localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)skillLevelListLabel, 0);
     skillLevelListLabel = (UnityEngine_Component_o *)this->fields.treasureDeviceIconLabel;
     if ( !skillLevelListLabel )
       goto LABEL_25;
-    v18 = v16;
-    v19 = v17;
-    skillLevelListLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(skillLevelListLabel, 0LL);
+    y = localPosition.fields.y;
+    z = localPosition.fields.z;
+    skillLevelListLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(skillLevelListLabel, 0);
     if ( !skillLevelListLabel )
       goto LABEL_25;
     skillLevelListLabel = (UnityEngine_Component_o *)UnityEngine_Transform__get_parent(
                                                        (UnityEngine_Transform_o *)skillLevelListLabel,
-                                                       0LL);
+                                                       0);
     if ( !skillLevelListLabel )
       goto LABEL_25;
-    *(UnityEngine_Vector3_o *)(&v20 - 1) = UnityEngine_Transform__get_localPosition(
-                                             (UnityEngine_Transform_o *)skillLevelListLabel,
-                                             0LL);
+    v28 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)skillLevelListLabel, 0);
     skillLevelListLabel = (UnityEngine_Component_o *)this->fields.skillLevelListLabel;
     if ( !skillLevelListLabel )
       goto LABEL_25;
-    v22 = v20;
-    v23 = v21;
-    x = UILabel__get_printedSize((UILabel_o *)skillLevelListLabel, 0LL).fields.x;
+    v17 = v28.fields.y;
+    v18 = v28.fields.z;
+    x = UILabel__get_printedSize((UILabel_o *)skillLevelListLabel, 0).fields.x;
     skillIconSprite = (UnityEngine_Object_o *)this->fields.skillIconSprite;
-    v26 = (int)x;
+    v21 = (int)x;
     if ( x == INFINITY )
-      v26 = 0x80000000;
-    v27 = v26 + this->fields.treasureDeviceSpace;
+      v21 = 0x80000000;
+    v22 = v21 + this->fields.treasureDeviceSpace;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v28 = (float)v27;
-    v29 = 0.0;
-    if ( UnityEngine_Object__op_Inequality(skillIconSprite, 0LL, 0LL) )
+    v23 = (float)v22;
+    v24 = 0.0;
+    if ( UnityEngine_Object__op_Inequality(skillIconSprite, 0, 0) )
     {
-      v30 = SkillListTreasureDeviceComponent_TypeInfo;
+      v25 = SkillListTreasureDeviceComponent_TypeInfo;
       if ( !SkillListTreasureDeviceComponent_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(SkillListTreasureDeviceComponent_TypeInfo);
-        v30 = SkillListTreasureDeviceComponent_TypeInfo;
+        v25 = SkillListTreasureDeviceComponent_TypeInfo;
       }
-      ADJUST_X_POS = v30->static_fields->ADJUST_X_POS;
-      v29 = ADJUST_X_POS + 0.0;
-      v28 = ADJUST_X_POS + v28;
+      ADJUST_X_POS = v25->static_fields->ADJUST_X_POS;
+      v24 = ADJUST_X_POS + 0.0;
+      v23 = ADJUST_X_POS + v23;
     }
     skillLevelListLabel = (UnityEngine_Component_o *)this->fields.skillLevelListLabel;
     if ( !skillLevelListLabel )
       goto LABEL_25;
-    skillLevelListLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(skillLevelListLabel, 0LL);
+    skillLevelListLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(skillLevelListLabel, 0);
     if ( !skillLevelListLabel
-      || (v32.fields.x = v29,
-          v32.fields.y = v18,
-          v32.fields.z = v19,
-          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)skillLevelListLabel, v32, 0LL),
-          (skillLevelListLabel = (UnityEngine_Component_o *)this->fields.treasureDeviceIconLabel) == 0LL)
-      || (skillLevelListLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
-                                                             skillLevelListLabel,
-                                                             0LL)) == 0LL
+      || (v29.fields.x = v24,
+          v29.fields.y = y,
+          v29.fields.z = z,
+          UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)skillLevelListLabel, v29, 0),
+          (skillLevelListLabel = (UnityEngine_Component_o *)this->fields.treasureDeviceIconLabel) == 0)
+      || (skillLevelListLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(skillLevelListLabel, 0)) == 0
       || (skillLevelListLabel = (UnityEngine_Component_o *)UnityEngine_Transform__get_parent(
                                                              (UnityEngine_Transform_o *)skillLevelListLabel,
-                                                             0LL)) == 0LL )
+                                                             0)) == 0 )
     {
 LABEL_25:
-      sub_1BCB254(skillLevelListLabel, v14);
+      sub_1C2D6EC(skillLevelListLabel, v13);
     }
-    v33.fields.y = v22;
-    v33.fields.z = v23;
-    v33.fields.x = v28;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)skillLevelListLabel, v33, 0LL);
+    v30.fields.y = v17;
+    v30.fields.z = v18;
+    v30.fields.x = v23;
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)skillLevelListLabel, v30, 0);
   }
 }
 
 
-void __fastcall SkillListTreasureDeviceComponent__SetBitmapFont(
+void SkillListTreasureDeviceComponent__SetBitmapFont(
         SkillListTreasureDeviceComponent_o *this,
         UIFont_o *bitmapFont,
         const MethodInfo *method)
@@ -203,17 +186,17 @@ void __fastcall SkillListTreasureDeviceComponent__SetBitmapFont(
 
   skillLevelListLabel = this->fields.skillLevelListLabel;
   if ( !skillLevelListLabel
-    || (UILabel__set_bitmapFont(skillLevelListLabel, bitmapFont, 0LL),
-        (treasureDeviceIconLabel = this->fields.treasureDeviceIconLabel) == 0LL)
-    || (skillLevelListLabel = treasureDeviceIconLabel->fields.textLabel) == 0LL )
+    || (UILabel__set_bitmapFont(skillLevelListLabel, bitmapFont, 0),
+        (treasureDeviceIconLabel = this->fields.treasureDeviceIconLabel) == 0)
+    || (skillLevelListLabel = treasureDeviceIconLabel->fields.textLabel) == 0 )
   {
-    sub_1BCB254(skillLevelListLabel, bitmapFont);
+    sub_1C2D6EC(skillLevelListLabel, bitmapFont);
   }
-  UILabel__set_bitmapFont(skillLevelListLabel, bitmapFont, 0LL);
+  UILabel__set_bitmapFont(skillLevelListLabel, bitmapFont, 0);
 }
 
 
-void __fastcall SkillListTreasureDeviceComponent__SetLabelSkillLevelLabelScaleX(
+void SkillListTreasureDeviceComponent__SetLabelSkillLevelLabelScaleX(
         SkillListTreasureDeviceComponent_o *this,
         float scale,
         const MethodInfo *method)
@@ -223,14 +206,13 @@ void __fastcall SkillListTreasureDeviceComponent__SetLabelSkillLevelLabelScaleX(
 
   skillLevelListLabel = (UnityEngine_Component_o *)this->fields.skillLevelListLabel;
   if ( !skillLevelListLabel )
-    sub_1BCB254(0LL, method);
-  gameObject = UnityEngine_Component__get_gameObject(skillLevelListLabel, 0LL);
-  GameObjectExtensions__SetLocalScaleX(gameObject, scale, 0LL);
+    sub_1C2D6EC(0, method);
+  gameObject = UnityEngine_Component__get_gameObject(skillLevelListLabel, 0);
+  GameObjectExtensions__SetLocalScaleX(gameObject, scale, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall SkillListTreasureDeviceComponent__SetTreasureDeviceIconPosition(
+void SkillListTreasureDeviceComponent__SetTreasureDeviceIconPosition(
         SkillListTreasureDeviceComponent_o *this,
         UnityEngine_Vector3_o position,
         const MethodInfo *method)
@@ -248,21 +230,21 @@ void __fastcall SkillListTreasureDeviceComponent__SetTreasureDeviceIconPosition(
         x = position.fields.x,
         (treasureDeviceIconLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
                                                                 treasureDeviceIconLabel,
-                                                                0LL)) == 0LL)
+                                                                0)) == 0)
     || (treasureDeviceIconLabel = (UnityEngine_Component_o *)UnityEngine_Transform__get_parent(
                                                                (UnityEngine_Transform_o *)treasureDeviceIconLabel,
-                                                               0LL)) == 0LL )
+                                                               0)) == 0 )
   {
-    sub_1BCB254(treasureDeviceIconLabel, method);
+    sub_1C2D6EC(treasureDeviceIconLabel, method);
   }
   v7.fields.y = y;
   v7.fields.z = z;
   v7.fields.x = x;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)treasureDeviceIconLabel, v7, 0LL);
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)treasureDeviceIconLabel, v7, 0);
 }
 
 
-bool __fastcall SkillListTreasureDeviceComponent__SetWithoutAdjustPosition(
+bool SkillListTreasureDeviceComponent__SetWithoutAdjustPosition(
         SkillListTreasureDeviceComponent_o *this,
         System_String_o *skillLevelListText,
         int32_t tdLv,
@@ -271,90 +253,88 @@ bool __fastcall SkillListTreasureDeviceComponent__SetWithoutAdjustPosition(
         bool isHideTreasureDevice,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
-  __int64 v14; // x1
-  const MethodInfo *v15; // x1
+  const MethodInfo *v13; // x1
   UILabel_o *skillLevelListLabel; // x0
   UnityEngine_Object_o *treasureDeviceIconLabel; // x24
   UnityEngine_Object_o *skillIconSprite; // x21
-  UISprite_o *v20; // x21
+  UISprite_o *v18; // x21
   UnityEngine_Object_o *treasureDeviceObj; // x21
-  const MethodInfo *v22; // [xsp+10h] [xbp-50h]
+  const MethodInfo *v20; // [xsp+10h] [xbp-50h]
 
-  if ( (byte_4B1BADD & 1) == 0 )
+  if ( (byte_4C26874 & 1) == 0 )
   {
-    sub_1BCAFF8(&AtlasManager_TypeInfo, skillLevelListText);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v13);
-    sub_1BCAFF8(&StringLiteral_20050/*"icon_skill_mini"*/, v14);
-    byte_4B1BADD = 1;
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_20215/*"icon_skill_mini"*/);
+    byte_4C26874 = 1;
   }
-  if ( System_String__IsNullOrEmpty(skillLevelListText, 0LL) )
+  if ( System_String__IsNullOrEmpty(skillLevelListText, 0) )
   {
-    SkillListTreasureDeviceComponent__Clear(this, v15);
+    SkillListTreasureDeviceComponent__Clear(this, v13);
     return 0;
   }
   skillLevelListLabel = this->fields.skillLevelListLabel;
   if ( !skillLevelListLabel )
     goto LABEL_26;
-  UILabel__set_text(skillLevelListLabel, skillLevelListText, 0LL);
+  UILabel__set_text(skillLevelListLabel, skillLevelListText, 0);
   treasureDeviceIconLabel = (UnityEngine_Object_o *)this->fields.treasureDeviceIconLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(treasureDeviceIconLabel, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(treasureDeviceIconLabel, 0, 0) )
   {
     skillLevelListLabel = (UILabel_o *)StrengthStatus__GetTreasureDeviceStrengthAdjustData(
                                          tdStrengthStatus,
                                          treasureDeviceNum,
-                                         0LL);
+                                         0);
     if ( !this->fields.treasureDeviceIconLabel )
       goto LABEL_26;
-    UIIconLabel__Set_40290232(
+    UIIconLabel__Set_40889008(
       this->fields.treasureDeviceIconLabel,
       34,
       tdLv,
       (int32_t)skillLevelListLabel,
       0,
-      0LL,
       0,
       0,
       0,
       0,
-      v22);
+      0,
+      v20);
   }
   skillIconSprite = (UnityEngine_Object_o *)this->fields.skillIconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(skillIconSprite, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(skillIconSprite, 0, 0) )
   {
     skillLevelListLabel = (UILabel_o *)this->fields.skillIconSprite;
     if ( !skillLevelListLabel )
       goto LABEL_26;
     skillLevelListLabel = (UILabel_o *)UnityEngine_Component__get_gameObject(
                                          (UnityEngine_Component_o *)skillLevelListLabel,
-                                         0LL);
+                                         0);
     if ( !skillLevelListLabel )
       goto LABEL_26;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)skillLevelListLabel, 1, 0LL);
-    v20 = this->fields.skillIconSprite;
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)skillLevelListLabel, 1, 0);
+    v18 = this->fields.skillIconSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventSprite(v20, (System_String_o *)StringLiteral_20050/*"icon_skill_mini"*/, 0LL);
+    AtlasManager__SetEventSprite(v18, (System_String_o *)StringLiteral_20215/*"icon_skill_mini"*/, 0);
     skillLevelListLabel = (UILabel_o *)this->fields.skillIconSprite;
     if ( !skillLevelListLabel )
       goto LABEL_26;
-    ((void (__fastcall *)(UILabel_o *, Il2CppMethodPointer))skillLevelListLabel->klass->vtable._33_MakePixelPerfect.method)(
+    ((void (__fastcall *)(UILabel_o *, const MethodInfo *))skillLevelListLabel->klass->vtable._33_MakePixelPerfect.methodPtr)(
       skillLevelListLabel,
-      skillLevelListLabel->klass->vtable._34_get_minWidth.methodPtr);
+      skillLevelListLabel->klass->vtable._33_MakePixelPerfect.method);
   }
   treasureDeviceObj = (UnityEngine_Object_o *)this->fields.treasureDeviceObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Inequality(treasureDeviceObj, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Inequality(treasureDeviceObj, 0, 0) )
     return 1;
   skillLevelListLabel = (UILabel_o *)this->fields.treasureDeviceObj;
   if ( !skillLevelListLabel )
 LABEL_26:
-    sub_1BCB254(skillLevelListLabel, v15);
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)skillLevelListLabel, !isHideTreasureDevice, 0LL);
+    sub_1C2D6EC(skillLevelListLabel, v13);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)skillLevelListLabel, !isHideTreasureDevice, 0);
   return 1;
 }

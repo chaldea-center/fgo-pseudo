@@ -1,10 +1,10 @@
-void __fastcall ServantVoiceData___ctor(ServantVoiceData_o *this, const MethodInfo *method)
+void ServantVoiceData___ctor(ServantVoiceData_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-float __fastcall ServantVoiceData__GetFadeTime(ServantVoiceData_o *this, const MethodInfo *method)
+float ServantVoiceData__GetFadeTime(ServantVoiceData_o *this, const MethodInfo *method)
 {
   int32_t fadeTime; // w8
 
@@ -16,7 +16,7 @@ float __fastcall ServantVoiceData__GetFadeTime(ServantVoiceData_o *this, const M
 }
 
 
-ServantVoicePerformance_ServantVoicePerformanceDetail_o *__fastcall ServantVoiceData__get_AfterPerformance(
+ServantVoicePerformance_ServantVoicePerformanceDetail_o *ServantVoiceData__get_AfterPerformance(
         ServantVoiceData_o *this,
         const MethodInfo *method)
 {
@@ -26,11 +26,11 @@ ServantVoicePerformance_ServantVoicePerformanceDetail_o *__fastcall ServantVoice
   if ( additionalPerformances )
     return additionalPerformances->fields.afterPerformance;
   else
-    return 0LL;
+    return 0;
 }
 
 
-ServantVoicePerformance_ServantVoicePerformanceDetail_o *__fastcall ServantVoiceData__get_BeforePerformance(
+ServantVoicePerformance_ServantVoicePerformanceDetail_o *ServantVoiceData__get_BeforePerformance(
         ServantVoiceData_o *this,
         const MethodInfo *method)
 {
@@ -40,11 +40,11 @@ ServantVoicePerformance_ServantVoicePerformanceDetail_o *__fastcall ServantVoice
   if ( additionalPerformances )
     return additionalPerformances->fields.beforePerformance;
   else
-    return 0LL;
+    return 0;
 }
 
 
-ServantVoicePerformance_ServantVoicePerformanceDetail_o *__fastcall ServantVoiceData__get_StartPerformance(
+ServantVoicePerformance_ServantVoicePerformanceDetail_o *ServantVoiceData__get_StartPerformance(
         ServantVoiceData_o *this,
         const MethodInfo *method)
 {
@@ -54,5 +54,5 @@ ServantVoicePerformance_ServantVoicePerformanceDetail_o *__fastcall ServantVoice
   if ( additionalPerformances )
     return additionalPerformances->fields.startPerformance;
   else
-    return 0LL;
+    return 0;
 }

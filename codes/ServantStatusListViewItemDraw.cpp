@@ -1,18 +1,16 @@
-void __fastcall ServantStatusListViewItemDraw___ctor(ServantStatusListViewItemDraw_o *this, const MethodInfo *method)
+void ServantStatusListViewItemDraw___ctor(ServantStatusListViewItemDraw_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-int32_t __fastcall ServantStatusListViewItemDraw__GetKind(
-        ServantStatusListViewItemDraw_o *this,
-        const MethodInfo *method)
+int32_t ServantStatusListViewItemDraw__GetKind(ServantStatusListViewItemDraw_o *this, const MethodInfo *method)
 {
   return 0;
 }
 
 
-void __fastcall ServantStatusListViewItemDraw__ModifyCommandCard(
+void ServantStatusListViewItemDraw__ModifyCommandCard(
         ServantStatusListViewItemDraw_o *this,
         ServantStatusListViewItem_o *item,
         const MethodInfo *method)
@@ -21,7 +19,7 @@ void __fastcall ServantStatusListViewItemDraw__ModifyCommandCard(
 }
 
 
-void __fastcall ServantStatusListViewItemDraw__ModifyFace(
+void ServantStatusListViewItemDraw__ModifyFace(
         ServantStatusListViewItemDraw_o *this,
         ServantStatusListViewItem_o *item,
         const MethodInfo *method)
@@ -30,7 +28,7 @@ void __fastcall ServantStatusListViewItemDraw__ModifyFace(
 }
 
 
-void __fastcall ServantStatusListViewItemDraw__ModifyPortrait(
+void ServantStatusListViewItemDraw__ModifyPortrait(
         ServantStatusListViewItemDraw_o *this,
         ServantStatusListViewItem_o *item,
         const MethodInfo *method)
@@ -39,7 +37,7 @@ void __fastcall ServantStatusListViewItemDraw__ModifyPortrait(
 }
 
 
-void __fastcall ServantStatusListViewItemDraw__ModifyRandomLimitCountSetting(
+void ServantStatusListViewItemDraw__ModifyRandomLimitCountSetting(
         ServantStatusListViewItemDraw_o *this,
         ServantStatusListViewItem_o *item,
         const MethodInfo *method)
@@ -48,7 +46,7 @@ void __fastcall ServantStatusListViewItemDraw__ModifyRandomLimitCountSetting(
 }
 
 
-void __fastcall ServantStatusListViewItemDraw__ModifyRandomLimitCountSupport(
+void ServantStatusListViewItemDraw__ModifyRandomLimitCountSupport(
         ServantStatusListViewItemDraw_o *this,
         ServantStatusListViewItem_o *item,
         const MethodInfo *method)
@@ -57,7 +55,7 @@ void __fastcall ServantStatusListViewItemDraw__ModifyRandomLimitCountSupport(
 }
 
 
-void __fastcall ServantStatusListViewItemDraw__ModifyServantQuest(
+void ServantStatusListViewItemDraw__ModifyServantQuest(
         ServantStatusListViewItemDraw_o *this,
         ServantStatusListViewItem_o *item,
         const MethodInfo *method)
@@ -66,7 +64,7 @@ void __fastcall ServantStatusListViewItemDraw__ModifyServantQuest(
 }
 
 
-void __fastcall ServantStatusListViewItemDraw__ModifyStatus(
+void ServantStatusListViewItemDraw__ModifyStatus(
         ServantStatusListViewItemDraw_o *this,
         ServantStatusListViewItem_o *item,
         const MethodInfo *method)
@@ -75,7 +73,7 @@ void __fastcall ServantStatusListViewItemDraw__ModifyStatus(
 }
 
 
-void __fastcall ServantStatusListViewItemDraw__PlayBattle(
+void ServantStatusListViewItemDraw__PlayBattle(
         ServantStatusListViewItemDraw_o *this,
         ServantStatusListViewItem_o *item,
         const MethodInfo *method)
@@ -84,7 +82,7 @@ void __fastcall ServantStatusListViewItemDraw__PlayBattle(
 }
 
 
-void __fastcall ServantStatusListViewItemDraw__SetItem(
+void ServantStatusListViewItemDraw__SetItem(
         ServantStatusListViewItemDraw_o *this,
         ServantStatusListViewItem_o *item,
         int32_t mode,

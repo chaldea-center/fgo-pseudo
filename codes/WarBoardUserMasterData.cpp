@@ -1,69 +1,64 @@
-void __fastcall WarBoardUserMasterData___ctor(WarBoardUserMasterData_o *this, const MethodInfo *method)
+void WarBoardUserMasterData___ctor(WarBoardUserMasterData_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-WarBoardUserMasterData_o *__fastcall WarBoardUserMasterData__FromJson(System_String_o *json, const MethodInfo *method)
+WarBoardUserMasterData_o *WarBoardUserMasterData__FromJson(System_String_o *json, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  Il2CppObject *v5; // x19
+  Il2CppObject *v3; // x19
   WarBoardUserMasterData_o *result; // x0
-  __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x8
+  __int64 v5; // x1
+  __int64 v6; // x2
+  __int64 v7; // x8
 
-  if ( (byte_4B1A135 & 1) == 0 )
+  if ( (byte_4C24EB9 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_JsonManager_DeserializeArray_WarBoardUserMasterData___, method);
-    sub_1BCAFF8(&JsonManager_TypeInfo, v3);
-    sub_1BCAFF8(&StringLiteral_15881/*"[{0}]"*/, v4);
-    byte_4B1A135 = 1;
+    sub_1C2D490(&Method_JsonManager_DeserializeArray_WarBoardUserMasterData___);
+    sub_1C2D490(&JsonManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_16013/*"[{0}]"*/);
+    byte_4C24EB9 = 1;
   }
-  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_15881/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
+  v3 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_16013/*"[{0}]"*/, (Il2CppObject *)json, 0);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   result = (WarBoardUserMasterData_o *)JsonManager__DeserializeArray_object_(
-                                         v5,
-                                         (const MethodInfo_3086694 *)Method_JsonManager_DeserializeArray_WarBoardUserMasterData___);
+                                         v3,
+                                         (const MethodInfo_313DDBC *)Method_JsonManager_DeserializeArray_WarBoardUserMasterData___);
   if ( result )
   {
-    v9 = *(_QWORD *)&result->fields.skill1Ct;
-    if ( v9 )
+    v7 = *(_QWORD *)&result->fields.skill1Ct;
+    if ( v7 )
     {
-      if ( !(_DWORD)v9 )
-        sub_1BCB25C(result, v7, v8);
+      if ( !(_DWORD)v7 )
+        sub_1C2D6F4(result, v5, v6);
       return *(WarBoardUserMasterData_o **)&result->fields.skill3Ct;
     }
     else
     {
-      return 0LL;
+      return 0;
     }
   }
   return result;
 }
 
 
-void __fastcall WarBoardUserMasterData__SetBattleData(
+void WarBoardUserMasterData__SetBattleData(
         WarBoardUserMasterData_o *this,
         BattleData_o *battleData,
         const MethodInfo *method)
 {
   WarBoardUserMasterData_o *v4; // x19
-  __int64 v5; // x1
   int32_t skill1Ct; // w22
 
   v4 = this;
-  if ( (byte_4B1A133 & 1) == 0 )
+  if ( (byte_4C24EB7 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Count__, battleData);
-    this = (WarBoardUserMasterData_o *)sub_1BCAFF8(
-                                         &Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__,
-                                         v5);
-    byte_4B1A133 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Count__);
+    this = (WarBoardUserMasterData_o *)sub_1C2D490(&Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
+    byte_4C24EB7 = 1;
   }
-  *(_QWORD *)&v4->fields.skill1Ct = 0LL;
+  *(_QWORD *)&v4->fields.skill1Ct = 0;
   v4->fields.skill3Ct = 0;
   if ( !battleData )
     goto LABEL_15;
@@ -76,10 +71,12 @@ void __fastcall WarBoardUserMasterData__SetBattleData(
   this = (WarBoardUserMasterData_o *)System_Collections_Generic_List_object___get_Item(
                                        (System_Collections_Generic_List_object__o *)this,
                                        0,
-                                       (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
+                                       (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
   if ( !this )
     goto LABEL_15;
-  v4->fields.skill1Ct = this->fields.forceActionPoint;
+  v4->fields.skill1Ct = ((__int64 (__fastcall *)(WarBoardUserMasterData_o *, _QWORD))this->klass[1]._1.byval_arg.data)(
+                          this,
+                          *(_QWORD *)&this->klass[1]._1.byval_arg.bits);
   if ( skill1Ct < 2 )
     return;
   this = (WarBoardUserMasterData_o *)battleData->fields.masterSkillInfo;
@@ -88,10 +85,12 @@ void __fastcall WarBoardUserMasterData__SetBattleData(
   this = (WarBoardUserMasterData_o *)System_Collections_Generic_List_object___get_Item(
                                        (System_Collections_Generic_List_object__o *)this,
                                        1,
-                                       (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
+                                       (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__);
   if ( !this )
     goto LABEL_15;
-  v4->fields.skill2Ct = this->fields.forceActionPoint;
+  v4->fields.skill2Ct = ((__int64 (__fastcall *)(WarBoardUserMasterData_o *, _QWORD))this->klass[1]._1.byval_arg.data)(
+                          this,
+                          *(_QWORD *)&this->klass[1]._1.byval_arg.bits);
   if ( skill1Ct < 3 )
     return;
   this = (WarBoardUserMasterData_o *)battleData->fields.masterSkillInfo;
@@ -99,22 +98,24 @@ void __fastcall WarBoardUserMasterData__SetBattleData(
     || (this = (WarBoardUserMasterData_o *)System_Collections_Generic_List_object___get_Item(
                                              (System_Collections_Generic_List_object__o *)this,
                                              2,
-                                             (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__)) == 0LL )
+                                             (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_BattleSkillInfoData__get_Item__)) == 0 )
   {
 LABEL_15:
-    sub_1BCB254(this, battleData);
+    sub_1C2D6EC(this, battleData);
   }
-  v4->fields.skill3Ct = this->fields.forceActionPoint;
+  v4->fields.skill3Ct = ((__int64 (__fastcall *)(WarBoardUserMasterData_o *, _QWORD))this->klass[1]._1.byval_arg.data)(
+                          this,
+                          *(_QWORD *)&this->klass[1]._1.byval_arg.bits);
 }
 
 
-void __fastcall WarBoardUserMasterData__SetSaveData(
+void WarBoardUserMasterData__SetSaveData(
         WarBoardUserMasterData_o *this,
         WarBoardPieceData_SaveData_o *saveData,
         const MethodInfo *method)
 {
   if ( !saveData )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   this->fields.currentLimitActionPoint = saveData->fields.actionCount;
   this->fields.squareIndex = saveData->fields.squareIndex;
   this->fields.currentForceActionPoint = saveData->fields.currentForceActionPoint;
@@ -124,14 +125,14 @@ void __fastcall WarBoardUserMasterData__SetSaveData(
 }
 
 
-System_String_o *__fastcall WarBoardUserMasterData__ToJson(WarBoardUserMasterData_o *this, const MethodInfo *method)
+System_String_o *WarBoardUserMasterData__ToJson(WarBoardUserMasterData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1A134 & 1) == 0 )
+  if ( (byte_4C24EB8 & 1) == 0 )
   {
-    sub_1BCAFF8(&JsonManager_TypeInfo, method);
-    byte_4B1A134 = 1;
+    sub_1C2D490(&JsonManager_TypeInfo);
+    byte_4C24EB8 = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  return JsonManager__toJson((Il2CppObject *)this, 0, 0, 0LL);
+  return JsonManager__toJson((Il2CppObject *)this, 0, 0, 0);
 }

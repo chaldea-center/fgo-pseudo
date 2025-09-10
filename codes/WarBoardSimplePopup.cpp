@@ -1,33 +1,32 @@
-void __fastcall WarBoardSimplePopup___cctor(const MethodInfo *method)
+void WarBoardSimplePopup___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
   struct WarBoardSimplePopup_StaticFields *static_fields; // x8
 
-  if ( (byte_4B1A255 & 1) == 0 )
+  if ( (byte_4C24FD9 & 1) == 0 )
   {
-    sub_1BCAFF8(&WarBoardSimplePopup_TypeInfo, v1);
-    byte_4B1A255 = 1;
+    sub_1C2D490(&WarBoardSimplePopup_TypeInfo);
+    byte_4C24FD9 = 1;
   }
   static_fields = WarBoardSimplePopup_TypeInfo->static_fields;
-  *(_OWORD *)&static_fields->LEFT_MARGIN_WHEN_LOCATING_ON_LEFT_SIDE = xmmword_BE26D0;
-  *(_OWORD *)&static_fields->FS_LEFT_MARGIN_WHEN_LOCATING_ON_LEFT_SIDE = xmmword_BE1780;
+  *(_OWORD *)&static_fields->LEFT_MARGIN_WHEN_LOCATING_ON_LEFT_SIDE = xmmword_C09D80;
+  *(_OWORD *)&static_fields->FS_LEFT_MARGIN_WHEN_LOCATING_ON_LEFT_SIDE = xmmword_C08D70;
 }
 
 
-void __fastcall WarBoardSimplePopup___ctor(WarBoardSimplePopup_o *this, const MethodInfo *method)
+void WarBoardSimplePopup___ctor(WarBoardSimplePopup_o *this, const MethodInfo *method)
 {
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( (byte_4B1A254 & 1) == 0 )
+  if ( (byte_4C24FD8 & 1) == 0 )
   {
-    sub_1BCAFF8(&WarBoardInfoPopupBase_TypeInfo, method);
-    byte_4B1A254 = 1;
+    sub_1C2D490(&WarBoardInfoPopupBase_TypeInfo);
+    byte_4C24FD8 = 1;
   }
-  if ( !byte_4B16191 )
+  if ( !byte_4C20DA1 )
   {
-    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4B16191 = 1;
+    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA1 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -35,131 +34,125 @@ void __fastcall WarBoardSimplePopup___ctor(WarBoardSimplePopup_o *this, const Me
   this->fields.targetPiecePosition.fields.z = z;
   if ( !WarBoardInfoPopupBase_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarBoardInfoPopupBase_TypeInfo);
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-UnityEngine_GameObject_o *__fastcall WarBoardSimplePopup__AddElement(
+UnityEngine_GameObject_o *WarBoardSimplePopup__AddElement(
         WarBoardSimplePopup_o *this,
         UnityEngine_GameObject_o *elemPrefab,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   UnityEngine_GameObject_o *mainView; // x0
   UnityEngine_Transform_o *transform; // x20
 
-  if ( (byte_4B1A250 & 1) == 0 )
+  if ( (byte_4C24FD4 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_Object_Instantiate_GameObject____77001424, elemPrefab);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B1A250 = 1;
+    sub_1C2D490(&Method_UnityEngine_Object_Instantiate_GameObject____78081576);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C24FD4 = 1;
   }
   mainView = this->fields.mainView;
   if ( !mainView )
-    sub_1BCB254(0LL, elemPrefab);
-  transform = UnityEngine_GameObject__get_transform(mainView, 0LL);
+    sub_1C2D6EC(0, elemPrefab);
+  transform = UnityEngine_GameObject__get_transform(mainView, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  return (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__51002592(
+  return (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__51752420(
                                        (Il2CppObject *)elemPrefab,
                                        transform,
-                                       (const MethodInfo_30A3CE0 *)Method_UnityEngine_Object_Instantiate_GameObject____77001424);
+                                       (const MethodInfo_315ADE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78081576);
 }
 
 
-void __fastcall WarBoardSimplePopup__AdjustMainViewPosition(WarBoardSimplePopup_o *this, const MethodInfo *method)
+void WarBoardSimplePopup__AdjustMainViewPosition(WarBoardSimplePopup_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   UnityEngine_GameObject_o *mainView; // x0
   Il2CppObject *Component_object; // x19
   float x; // s8
-  int v11; // w8
+  int v6; // w8
   _DWORD *monitor; // x21
-  int v13; // w22
-  _DWORD *v14; // x9
+  int v8; // w22
+  _DWORD *v9; // x9
   _DWORD *klass; // x8
-  int v16; // w9
-  Il2CppObject *v17; // x21
+  int v11; // w9
+  Il2CppObject *v12; // x21
   int32_t width; // w22
   int32_t height; // w23
-  ManagerConfig_c *v20; // x8
-  float v21; // s0
-  int32_t v22; // w22
-  float v23; // s8
-  int v24; // w8
-  _DWORD *v25; // x21
-  _DWORD *v26; // x9
-  _DWORD *v27; // x8
-  int v28; // w9
-  Il2CppClass *v29; // x21
+  ManagerConfig_c *v15; // x8
+  float v16; // s0
+  int32_t v17; // w22
+  float v18; // s8
+  int v19; // w8
+  _DWORD *v20; // x21
+  _DWORD *v21; // x9
+  _DWORD *v22; // x8
+  int v23; // w9
+  Il2CppClass *v24; // x21
   float y; // s8
+  int v26; // w8
+  Il2CppClass *v27; // x8
+  Il2CppClass *v28; // x9
+  float v29; // s8
+  _DWORD *v30; // x21
   int v31; // w8
   Il2CppClass *v32; // x8
-  Il2CppClass *v33; // x9
-  float v34; // s8
-  _DWORD *v35; // x21
-  int v36; // w8
+  _DWORD *v33; // x9
+  Il2CppClass *v34; // x21
+  WarBoardSimplePopup_c *v35; // x0
+  float v36; // s8
   Il2CppClass *v37; // x8
-  _DWORD *v38; // x9
-  Il2CppClass *v39; // x21
-  WarBoardSimplePopup_c *v40; // x0
-  float v41; // s8
-  Il2CppClass *v42; // x8
-  int v43; // w10
-  int v44; // w10
-  int v45; // w9
-  Il2CppClass *v46; // x21
-  float v47; // s8
-  int v48; // w8
-  Il2CppClass *v49; // x8
-  Il2CppClass *v50; // x9
-  float v51; // s8
-  int v52; // w8
-  Il2CppClass *v53; // x21
-  WarBoardSimplePopup_c *v54; // x0
-  float v55; // s8
-  int v56; // w8
-  int v57; // w9
-  int v58; // w10
-  _DWORD *v59; // x9
+  int v38; // w10
+  int v39; // w10
+  int v40; // w9
+  Il2CppClass *v41; // x21
+  float v42; // s8
+  int v43; // w8
+  Il2CppClass *v44; // x8
+  Il2CppClass *v45; // x9
+  float v46; // s8
+  int v47; // w8
+  Il2CppClass *v48; // x21
+  WarBoardSimplePopup_c *v49; // x0
+  float v50; // s8
+  int v51; // w8
+  int v52; // w9
+  int v53; // w10
+  _DWORD *v54; // x9
 
-  if ( (byte_4B1A252 & 1) == 0 )
+  if ( (byte_4C24FD6 & 1) == 0 )
   {
-    sub_1BCAFF8(&FSUtility_TypeInfo, method);
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v3);
-    sub_1BCAFF8(&ManagerConfig_TypeInfo, v4);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v6);
-    sub_1BCAFF8(&WarBoardSimplePopup_TypeInfo, v7);
-    byte_4B1A252 = 1;
+    sub_1C2D490(&FSUtility_TypeInfo);
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_1C2D490(&ManagerConfig_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_1C2D490(&WarBoardSimplePopup_TypeInfo);
+    byte_4C24FD6 = 1;
   }
   mainView = this->fields.mainView;
   if ( !mainView )
     goto LABEL_130;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        mainView,
-                       (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                       (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
   {
     if ( !FSUtility_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
-    if ( FSUtility__IsUnderVista(0LL) )
+    if ( FSUtility__IsUnderVista(0) )
     {
       x = this->fields.targetPiecePosition.fields.x;
-      mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_width(0LL);
+      mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_width(0);
       if ( !Component_object )
         goto LABEL_130;
       if ( (int)mainView >= 0 )
-        v11 = (int)mainView;
+        v6 = (int)mainView;
       else
-        v11 = (_DWORD)mainView + 1;
-      if ( x < (float)(v11 >> 1) )
+        v6 = (_DWORD)mainView + 1;
+      if ( x < (float)(v6 >> 1) )
       {
         monitor = Component_object[2].monitor;
         mainView = (UnityEngine_GameObject_o *)ManagerConfig_TypeInfo;
@@ -168,168 +161,168 @@ void __fastcall WarBoardSimplePopup__AdjustMainViewPosition(WarBoardSimplePopup_
           j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
           mainView = (UnityEngine_GameObject_o *)ManagerConfig_TypeInfo;
         }
-        v13 = *(_DWORD *)(*(_QWORD *)&mainView[7].fields.m_CachedPtr + 80LL);
+        v8 = *(_DWORD *)(mainView[7].fields.m_CachedPtr + 80);
         if ( !WarBoardSimplePopup_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(WarBoardSimplePopup_TypeInfo);
         if ( !monitor )
           goto LABEL_130;
-        monitor[7] = v13 - WarBoardSimplePopup_TypeInfo->static_fields->RIGHT_MARGIN_WHEN_LOCATING_ON_RIGHT_SIDE;
-        v14 = Component_object[2].monitor;
-        if ( !v14 )
+        monitor[7] = v8 - WarBoardSimplePopup_TypeInfo->static_fields->RIGHT_MARGIN_WHEN_LOCATING_ON_RIGHT_SIDE;
+        v9 = Component_object[2].monitor;
+        if ( !v9 )
           goto LABEL_130;
         klass = Component_object[2].klass;
         if ( !klass )
           goto LABEL_130;
-        v16 = v14[7] - LODWORD(Component_object[10].monitor);
+        v11 = v9[7] - LODWORD(Component_object[10].monitor);
         goto LABEL_64;
       }
-      v29 = Component_object[2].klass;
+      v24 = Component_object[2].klass;
       mainView = (UnityEngine_GameObject_o *)WarBoardSimplePopup_TypeInfo;
       if ( !WarBoardSimplePopup_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(WarBoardSimplePopup_TypeInfo);
-      if ( v29 )
+      if ( v24 )
       {
-        HIDWORD(v29->_1.namespaze) = WarBoardSimplePopup_TypeInfo->static_fields->LEFT_MARGIN_WHEN_LOCATING_ON_LEFT_SIDE;
-        mainView = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+        HIDWORD(v24->_1.namespaze) = WarBoardSimplePopup_TypeInfo->static_fields->LEFT_MARGIN_WHEN_LOCATING_ON_LEFT_SIDE;
+        mainView = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
         if ( mainView )
         {
           if ( LODWORD(mainView[21].monitor) == 1 )
           {
             y = this->fields.targetPiecePosition.fields.y;
-            mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_height(0LL);
-            v31 = (int)mainView >= 0 ? (int)mainView : (_DWORD)mainView + 1;
-            if ( y >= (float)(v31 >> 1) )
+            mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_height(0);
+            v26 = (int)mainView >= 0 ? (int)mainView : (_DWORD)mainView + 1;
+            if ( y >= (float)(v26 >> 1) )
             {
-              v32 = Component_object[2].klass;
-              if ( !v32 )
+              v27 = Component_object[2].klass;
+              if ( !v27 )
                 goto LABEL_130;
-              HIDWORD(v32->_1.namespaze) += 48;
+              HIDWORD(v27->_1.namespaze) += 48;
             }
           }
-          v33 = Component_object[2].klass;
-          if ( v33 )
+          v28 = Component_object[2].klass;
+          if ( v28 )
           {
             klass = Component_object[2].monitor;
             if ( klass )
             {
-              v16 = HIDWORD(v33->_1.namespaze) + LODWORD(Component_object[10].monitor);
+              v11 = HIDWORD(v28->_1.namespaze) + LODWORD(Component_object[10].monitor);
 LABEL_64:
-              klass[7] = v16;
-              v34 = this->fields.targetPiecePosition.fields.y;
-              mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_height(0LL);
-              v35 = Component_object[3].monitor;
-              if ( !v35 )
+              klass[7] = v11;
+              v29 = this->fields.targetPiecePosition.fields.y;
+              mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_height(0);
+              v30 = Component_object[3].monitor;
+              if ( !v30 )
                 goto LABEL_130;
               if ( (int)mainView >= 0 )
-                v36 = (int)mainView;
+                v31 = (int)mainView;
               else
-                v36 = (_DWORD)mainView + 1;
-              if ( v34 < (float)(v36 >> 1) )
+                v31 = (_DWORD)mainView + 1;
+              if ( v29 < (float)(v31 >> 1) )
               {
-                v35[6] = 1065353216;
-                v37 = Component_object[3].klass;
-                if ( !v37 )
+                v30[6] = 1065353216;
+                v32 = Component_object[3].klass;
+                if ( !v32 )
                   goto LABEL_130;
-                LODWORD(v37->_1.namespaze) = 1065353216;
+                LODWORD(v32->_1.namespaze) = 1065353216;
                 mainView = (UnityEngine_GameObject_o *)WarBoardSimplePopup_TypeInfo;
                 if ( WarBoardSimplePopup_TypeInfo->_2.cctor_finished )
                 {
-                  v38 = v35;
+                  v33 = v30;
                 }
                 else
                 {
                   j_il2cpp_runtime_class_init_0(WarBoardSimplePopup_TypeInfo);
                   mainView = (UnityEngine_GameObject_o *)WarBoardSimplePopup_TypeInfo;
-                  v37 = Component_object[3].klass;
-                  v38 = Component_object[3].monitor;
+                  v32 = Component_object[3].klass;
+                  v33 = Component_object[3].monitor;
                 }
-                v58 = *(_DWORD *)(*(_QWORD *)&mainView[7].fields.m_CachedPtr + 12LL);
+                v53 = *(_DWORD *)(mainView[7].fields.m_CachedPtr + 12);
 LABEL_126:
-                v35[7] = -v58;
-                if ( v38 && v37 )
+                v30[7] = -v53;
+                if ( v33 && v32 )
                 {
-                  HIDWORD(v37->_1.namespaze) = v38[7] - HIDWORD(Component_object[10].monitor);
+                  HIDWORD(v32->_1.namespaze) = v33[7] - HIDWORD(Component_object[10].monitor);
                   return;
                 }
                 goto LABEL_130;
               }
-              v35[6] = 0;
-              v39 = Component_object[3].klass;
-              if ( !v39 )
+              v30[6] = 0;
+              v34 = Component_object[3].klass;
+              if ( !v34 )
                 goto LABEL_130;
-              LODWORD(v39->_1.namespaze) = 0;
-              v40 = WarBoardSimplePopup_TypeInfo;
+              LODWORD(v34->_1.namespaze) = 0;
+              v35 = WarBoardSimplePopup_TypeInfo;
               if ( !WarBoardSimplePopup_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(WarBoardSimplePopup_TypeInfo);
-                v40 = WarBoardSimplePopup_TypeInfo;
+                v35 = WarBoardSimplePopup_TypeInfo;
               }
-              HIDWORD(v39->_1.namespaze) = v40->static_fields->BOTTOM_MARGIN;
-              mainView = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+              HIDWORD(v34->_1.namespaze) = v35->static_fields->BOTTOM_MARGIN;
+              mainView = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
               if ( !mainView )
                 goto LABEL_130;
               if ( LODWORD(mainView[21].monitor) == 1 )
               {
-                v41 = this->fields.targetPiecePosition.fields.x;
-                mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_width(0LL);
-                v42 = Component_object[3].klass;
-                if ( !v42 )
+                v36 = this->fields.targetPiecePosition.fields.x;
+                mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_width(0);
+                v37 = Component_object[3].klass;
+                if ( !v37 )
                   goto LABEL_130;
                 if ( (int)mainView >= 0 )
-                  v43 = (int)mainView;
+                  v38 = (int)mainView;
                 else
-                  v43 = (_DWORD)mainView + 1;
-                if ( v41 >= (float)(v43 >> 1) )
-                  v44 = -1;
+                  v38 = (_DWORD)mainView + 1;
+                if ( v36 >= (float)(v38 >> 1) )
+                  v39 = -1;
                 else
-                  v44 = 12;
-                v45 = HIDWORD(v42->_1.namespaze) + v44;
+                  v39 = 12;
+                v40 = HIDWORD(v37->_1.namespaze) + v39;
 LABEL_121:
-                HIDWORD(v42->_1.namespaze) = v45;
+                HIDWORD(v37->_1.namespaze) = v40;
 LABEL_122:
-                v59 = Component_object[3].monitor;
-                if ( v59 )
+                v54 = Component_object[3].monitor;
+                if ( v54 )
                 {
-                  v59[7] = HIDWORD(v42->_1.namespaze) + HIDWORD(Component_object[10].monitor);
+                  v54[7] = HIDWORD(v37->_1.namespaze) + HIDWORD(Component_object[10].monitor);
                   return;
                 }
                 goto LABEL_130;
               }
-              v42 = Component_object[3].klass;
+              v37 = Component_object[3].klass;
               goto LABEL_115;
             }
           }
         }
       }
 LABEL_130:
-      sub_1BCB254(mainView, method);
+      sub_1C2D6EC(mainView, method);
     }
-    mainView = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+    mainView = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !mainView )
       goto LABEL_130;
-    v17 = UnityEngine_GameObject__GetComponent_object_(
+    v12 = UnityEngine_GameObject__GetComponent_object_(
             mainView,
-            (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+            (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v17, 0LL, 0LL) )
+    if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v12, 0, 0) )
     {
-      width = UnityEngine_Screen__get_width(0LL);
-      height = UnityEngine_Screen__get_height(0LL);
-      v20 = ManagerConfig_TypeInfo;
+      width = UnityEngine_Screen__get_width(0);
+      height = UnityEngine_Screen__get_height(0);
+      v15 = ManagerConfig_TypeInfo;
       if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-        v20 = ManagerConfig_TypeInfo;
+        v15 = ManagerConfig_TypeInfo;
       }
-      v21 = (float)((float)((float)width / (float)height) / 1.7778) * (float)v20->static_fields->WIDTH;
-      if ( v21 == INFINITY )
-        v22 = 0x80000000;
+      v16 = (float)((float)((float)width / (float)height) / 1.7778) * (float)v15->static_fields->WIDTH;
+      if ( v16 == INFINITY )
+        v17 = 0x80000000;
       else
-        v22 = (int)v21;
+        v17 = (int)v16;
       if ( !FSUtility_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
-      mainView = (UnityEngine_GameObject_o *)FSUtility__IsOverScope(0LL);
+      mainView = (UnityEngine_GameObject_o *)FSUtility__IsOverScope(0);
       if ( ((unsigned __int8)mainView & 1) != 0 )
       {
         mainView = (UnityEngine_GameObject_o *)ManagerConfig_TypeInfo;
@@ -338,130 +331,130 @@ LABEL_130:
           j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
           mainView = (UnityEngine_GameObject_o *)ManagerConfig_TypeInfo;
         }
-        v22 = *(_DWORD *)(*(_QWORD *)&mainView[7].fields.m_CachedPtr + 84LL);
+        v17 = *(_DWORD *)(mainView[7].fields.m_CachedPtr + 84);
       }
-      if ( !v17 )
+      if ( !v12 )
         goto LABEL_130;
-      UIWidget__set_width((UIWidget_o *)v17, v22, 0LL);
-      v23 = this->fields.targetPiecePosition.fields.x;
-      mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_width(0LL);
+      UIWidget__set_width((UIWidget_o *)v12, v17, 0);
+      v18 = this->fields.targetPiecePosition.fields.x;
+      mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_width(0);
       if ( !Component_object )
         goto LABEL_130;
       if ( (int)mainView >= 0 )
-        v24 = (int)mainView;
+        v19 = (int)mainView;
       else
-        v24 = (_DWORD)mainView + 1;
-      if ( v23 >= (float)(v24 >> 1) )
+        v19 = (_DWORD)mainView + 1;
+      if ( v18 >= (float)(v19 >> 1) )
       {
-        v46 = Component_object[2].klass;
+        v41 = Component_object[2].klass;
         mainView = (UnityEngine_GameObject_o *)WarBoardSimplePopup_TypeInfo;
         if ( !WarBoardSimplePopup_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(WarBoardSimplePopup_TypeInfo);
-        if ( !v46 )
+        if ( !v41 )
           goto LABEL_130;
-        HIDWORD(v46->_1.namespaze) = WarBoardSimplePopup_TypeInfo->static_fields->FS_LEFT_MARGIN_WHEN_LOCATING_ON_LEFT_SIDE;
-        mainView = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+        HIDWORD(v41->_1.namespaze) = WarBoardSimplePopup_TypeInfo->static_fields->FS_LEFT_MARGIN_WHEN_LOCATING_ON_LEFT_SIDE;
+        mainView = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
         if ( !mainView )
           goto LABEL_130;
         if ( LODWORD(mainView[21].monitor) == 1 )
         {
-          v47 = this->fields.targetPiecePosition.fields.y;
-          mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_height(0LL);
-          v48 = (int)mainView >= 0 ? (int)mainView : (_DWORD)mainView + 1;
-          if ( v47 >= (float)(v48 >> 1) )
+          v42 = this->fields.targetPiecePosition.fields.y;
+          mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_height(0);
+          v43 = (int)mainView >= 0 ? (int)mainView : (_DWORD)mainView + 1;
+          if ( v42 >= (float)(v43 >> 1) )
           {
-            v49 = Component_object[2].klass;
-            if ( !v49 )
+            v44 = Component_object[2].klass;
+            if ( !v44 )
               goto LABEL_130;
-            HIDWORD(v49->_1.namespaze) += 52;
+            HIDWORD(v44->_1.namespaze) += 52;
           }
         }
-        v50 = Component_object[2].klass;
-        if ( !v50 )
+        v45 = Component_object[2].klass;
+        if ( !v45 )
           goto LABEL_130;
-        v27 = Component_object[2].monitor;
-        if ( !v27 )
+        v22 = Component_object[2].monitor;
+        if ( !v22 )
           goto LABEL_130;
-        v28 = HIDWORD(v50->_1.namespaze) + LODWORD(Component_object[10].monitor);
+        v23 = HIDWORD(v45->_1.namespaze) + LODWORD(Component_object[10].monitor);
       }
       else
       {
-        v25 = Component_object[2].monitor;
+        v20 = Component_object[2].monitor;
         mainView = (UnityEngine_GameObject_o *)WarBoardSimplePopup_TypeInfo;
         if ( !WarBoardSimplePopup_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(WarBoardSimplePopup_TypeInfo);
-        if ( !v25 )
+        if ( !v20 )
           goto LABEL_130;
-        v25[7] = v22 - WarBoardSimplePopup_TypeInfo->static_fields->FS_RIGHT_MARGIN_WHEN_LOCATING_ON_RIGHT_SIDE;
-        v26 = Component_object[2].monitor;
-        if ( !v26 )
+        v20[7] = v17 - WarBoardSimplePopup_TypeInfo->static_fields->FS_RIGHT_MARGIN_WHEN_LOCATING_ON_RIGHT_SIDE;
+        v21 = Component_object[2].monitor;
+        if ( !v21 )
           goto LABEL_130;
-        v27 = Component_object[2].klass;
-        if ( !v27 )
+        v22 = Component_object[2].klass;
+        if ( !v22 )
           goto LABEL_130;
-        v28 = v26[7] - LODWORD(Component_object[10].monitor);
+        v23 = v21[7] - LODWORD(Component_object[10].monitor);
       }
-      v27[7] = v28;
-      v51 = this->fields.targetPiecePosition.fields.y;
-      mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_height(0LL);
-      v35 = Component_object[3].monitor;
-      if ( !v35 )
+      v22[7] = v23;
+      v46 = this->fields.targetPiecePosition.fields.y;
+      mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_height(0);
+      v30 = Component_object[3].monitor;
+      if ( !v30 )
         goto LABEL_130;
       if ( (int)mainView >= 0 )
-        v52 = (int)mainView;
+        v47 = (int)mainView;
       else
-        v52 = (_DWORD)mainView + 1;
-      if ( v51 < (float)(v52 >> 1) )
+        v47 = (_DWORD)mainView + 1;
+      if ( v46 < (float)(v47 >> 1) )
       {
-        v35[6] = 1065353216;
-        v37 = Component_object[3].klass;
-        if ( !v37 )
+        v30[6] = 1065353216;
+        v32 = Component_object[3].klass;
+        if ( !v32 )
           goto LABEL_130;
-        LODWORD(v37->_1.namespaze) = 1065353216;
+        LODWORD(v32->_1.namespaze) = 1065353216;
         mainView = (UnityEngine_GameObject_o *)WarBoardSimplePopup_TypeInfo;
         if ( WarBoardSimplePopup_TypeInfo->_2.cctor_finished )
         {
-          v38 = v35;
+          v33 = v30;
         }
         else
         {
           j_il2cpp_runtime_class_init_0(WarBoardSimplePopup_TypeInfo);
           mainView = (UnityEngine_GameObject_o *)WarBoardSimplePopup_TypeInfo;
-          v37 = Component_object[3].klass;
-          v38 = Component_object[3].monitor;
+          v32 = Component_object[3].klass;
+          v33 = Component_object[3].monitor;
         }
-        v58 = *(_DWORD *)(*(_QWORD *)&mainView[7].fields.m_CachedPtr + 28LL);
+        v53 = *(_DWORD *)(mainView[7].fields.m_CachedPtr + 28);
         goto LABEL_126;
       }
-      v35[6] = 0;
-      v53 = Component_object[3].klass;
-      if ( !v53 )
+      v30[6] = 0;
+      v48 = Component_object[3].klass;
+      if ( !v48 )
         goto LABEL_130;
-      LODWORD(v53->_1.namespaze) = 0;
-      v54 = WarBoardSimplePopup_TypeInfo;
+      LODWORD(v48->_1.namespaze) = 0;
+      v49 = WarBoardSimplePopup_TypeInfo;
       if ( !WarBoardSimplePopup_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(WarBoardSimplePopup_TypeInfo);
-        v54 = WarBoardSimplePopup_TypeInfo;
+        v49 = WarBoardSimplePopup_TypeInfo;
       }
-      HIDWORD(v53->_1.namespaze) = v54->static_fields->FS_BOTTOM_MARGIN;
-      v55 = this->fields.targetPiecePosition.fields.x;
-      mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_width(0LL);
+      HIDWORD(v48->_1.namespaze) = v49->static_fields->FS_BOTTOM_MARGIN;
+      v50 = this->fields.targetPiecePosition.fields.x;
+      mainView = (UnityEngine_GameObject_o *)UnityEngine_Screen__get_width(0);
       if ( (int)mainView >= 0 )
-        v56 = (int)mainView;
+        v51 = (int)mainView;
       else
-        v56 = (_DWORD)mainView + 1;
-      v57 = v56 >> 1;
-      v42 = Component_object[3].klass;
-      if ( v55 >= (float)v57 )
+        v51 = (_DWORD)mainView + 1;
+      v52 = v51 >> 1;
+      v37 = Component_object[3].klass;
+      if ( v50 >= (float)v52 )
       {
-        if ( !v42 )
+        if ( !v37 )
           goto LABEL_130;
-        v45 = HIDWORD(v42->_1.namespaze) - 13;
+        v40 = HIDWORD(v37->_1.namespaze) - 13;
         goto LABEL_121;
       }
 LABEL_115:
-      if ( !v42 )
+      if ( !v37 )
         goto LABEL_130;
       goto LABEL_122;
     }
@@ -469,24 +462,24 @@ LABEL_115:
 }
 
 
-void __fastcall WarBoardSimplePopup__CleanPopup(WarBoardSimplePopup_o *this, const MethodInfo *method)
+void WarBoardSimplePopup__CleanPopup(WarBoardSimplePopup_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *mainView; // x0
   int32_t v4; // w20
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_4B1A253 & 1) == 0 )
+  if ( (byte_4C24FD7 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1A253 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C24FD7 = 1;
   }
   mainView = this->fields.mainView;
   if ( !mainView )
     goto LABEL_13;
-  mainView = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(mainView, 0LL);
+  mainView = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(mainView, 0);
   if ( !mainView )
     goto LABEL_13;
-  v4 = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)mainView, 0LL) - 1;
+  v4 = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)mainView, 0) - 1;
   if ( v4 >= 0 )
   {
     while ( 1 )
@@ -494,117 +487,107 @@ void __fastcall WarBoardSimplePopup__CleanPopup(WarBoardSimplePopup_o *this, con
       mainView = this->fields.mainView;
       if ( !mainView )
         break;
-      mainView = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(mainView, 0LL);
+      mainView = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(mainView, 0);
       if ( !mainView )
         break;
-      mainView = (UnityEngine_GameObject_o *)UnityEngine_Transform__GetChild(
-                                               (UnityEngine_Transform_o *)mainView,
-                                               v4,
-                                               0LL);
+      mainView = (UnityEngine_GameObject_o *)UnityEngine_Transform__GetChild((UnityEngine_Transform_o *)mainView, v4, 0);
       if ( !mainView )
         break;
-      gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
-                                             (UnityEngine_Component_o *)mainView,
-                                             0LL);
+      gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)mainView, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__DestroyImmediate_70136264(gameObject, 0LL);
+      UnityEngine_Object__DestroyImmediate_71163892(gameObject, 0);
       if ( --v4 < 0 )
         return;
     }
 LABEL_13:
-    sub_1BCB254(mainView, method);
+    sub_1C2D6EC(mainView, method);
   }
 }
 
 
-void __fastcall WarBoardSimplePopup__MainViewContentsFit(WarBoardSimplePopup_o *this, const MethodInfo *method)
+void WarBoardSimplePopup__MainViewContentsFit(WarBoardSimplePopup_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   UnityEngine_GameObject_o *mainView; // x0
   Il2CppObject *Component_object; // x20
-  int v7; // w22
-  int32_t v8; // w21
+  int v5; // w22
+  int32_t v6; // w21
   int32_t i; // w23
-  Il2CppObject *v10; // x24
+  Il2CppObject *v8; // x24
   int monitor_high; // w28
   _DWORD *monitor; // x8
   Il2CppClass *klass; // x9
 
-  if ( (byte_4B1A251 & 1) == 0 )
+  if ( (byte_4C24FD5 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_UIWidget___, method);
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_UIWidget___, v3);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
-    byte_4B1A251 = 1;
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C24FD5 = 1;
   }
   mainView = this->fields.mainView;
   if ( !mainView )
     goto LABEL_23;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        mainView,
-                       (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                       (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
   {
     mainView = this->fields.mainView;
     if ( mainView )
     {
-      mainView = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(mainView, 0LL);
+      mainView = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(mainView, 0);
       if ( mainView )
       {
         mainView = (UnityEngine_GameObject_o *)UnityEngine_Transform__get_childCount(
                                                  (UnityEngine_Transform_o *)mainView,
-                                                 0LL);
+                                                 0);
         if ( (int)mainView < 1 )
         {
-          v8 = 0;
+          v6 = 0;
           if ( Component_object )
           {
 LABEL_21:
-            UIWidget__set_height((UIWidget_o *)Component_object, v8, 0LL);
+            UIWidget__set_height((UIWidget_o *)Component_object, v6, 0);
             return;
           }
         }
         else
         {
-          v7 = (int)mainView;
-          v8 = 0;
-          for ( i = 0; i != v7; ++i )
+          v5 = (int)mainView;
+          v6 = 0;
+          for ( i = 0; i != v5; ++i )
           {
-            mainView = (UnityEngine_GameObject_o *)GameObjectExtensions__GetChild(this->fields.mainView, i, 0LL);
+            mainView = (UnityEngine_GameObject_o *)GameObjectExtensions__GetChild(this->fields.mainView, i, 0);
             if ( !mainView )
               goto LABEL_23;
-            v10 = UnityEngine_Component__GetComponent_object_(
-                    (UnityEngine_Component_o *)mainView,
-                    (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+            v8 = UnityEngine_Component__GetComponent_object_(
+                   (UnityEngine_Component_o *)mainView,
+                   (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-            mainView = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
-                                                     (UnityEngine_Object_o *)v10,
-                                                     0LL,
-                                                     0LL);
+            mainView = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v8, 0, 0);
             if ( ((unsigned __int8)mainView & 1) != 0 )
             {
-              if ( !v10 )
+              if ( !v8 )
                 goto LABEL_23;
-              monitor_high = HIDWORD(v10[10].monitor);
-              UIRect__SetAnchor_48605200((UIRect_o *)v10, this->fields.mainView, 0LL);
-              monitor = v10[3].monitor;
+              monitor_high = HIDWORD(v8[10].monitor);
+              UIRect__SetAnchor_49309228((UIRect_o *)v8, this->fields.mainView, 0);
+              monitor = v8[3].monitor;
               if ( !monitor )
                 goto LABEL_23;
               monitor[6] = 1065353216;
-              klass = v10[3].klass;
+              klass = v8[3].klass;
               if ( !klass )
                 goto LABEL_23;
               LODWORD(klass->_1.namespaze) = 1065353216;
-              monitor[7] = -v8;
-              HIDWORD(klass->_1.namespaze) = -v8 - monitor_high;
-              v8 += monitor_high;
-              UIRect__ResetAnchors((UIRect_o *)v10, 0LL);
-              UIRect__UpdateAnchors((UIRect_o *)v10, 0LL);
+              monitor[7] = -v6;
+              HIDWORD(klass->_1.namespaze) = -v6 - monitor_high;
+              v6 += monitor_high;
+              UIRect__ResetAnchors((UIRect_o *)v8, 0);
+              UIRect__UpdateAnchors((UIRect_o *)v8, 0);
             }
           }
           if ( Component_object )
@@ -613,12 +596,12 @@ LABEL_21:
       }
     }
 LABEL_23:
-    sub_1BCB254(mainView, method);
+    sub_1C2D6EC(mainView, method);
   }
 }
 
 
-void __fastcall WarBoardSimplePopup__OnBeforeShow(WarBoardSimplePopup_o *this, const MethodInfo *method)
+void WarBoardSimplePopup__OnBeforeShow(WarBoardSimplePopup_o *this, const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
   const MethodInfo *v4; // x1
@@ -629,16 +612,15 @@ void __fastcall WarBoardSimplePopup__OnBeforeShow(WarBoardSimplePopup_o *this, c
 }
 
 
-void __fastcall WarBoardSimplePopup__OnDestroy(WarBoardSimplePopup_o *this, const MethodInfo *method)
+void WarBoardSimplePopup__OnDestroy(WarBoardSimplePopup_o *this, const MethodInfo *method)
 {
-  ((void (__fastcall *)(WarBoardSimplePopup_o *, void *))this->klass->vtable._9_CleanPopup.method)(
+  ((void (__fastcall *)(WarBoardSimplePopup_o *, const MethodInfo *))this->klass->vtable._9_CleanPopup.methodPtr)(
     this,
-    this->klass[1]._1.image);
+    this->klass->vtable._9_CleanPopup.method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall WarBoardSimplePopup__SetTargetPiecePosition(
+void WarBoardSimplePopup__SetTargetPiecePosition(
         WarBoardSimplePopup_o *this,
         UnityEngine_Vector3_o pos,
         const MethodInfo *method)

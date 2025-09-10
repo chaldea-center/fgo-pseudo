@@ -1,11 +1,11 @@
-void __fastcall LocalNotificationManagerIOS___ctor(LocalNotificationManagerIOS_o *this, const MethodInfo *method)
+void LocalNotificationManagerIOS___ctor(LocalNotificationManagerIOS_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1DEBD & 1) == 0 )
+  if ( (byte_4C28CCF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonTemplate_LocalNotificationManagerIOS___ctor__, method);
-    byte_4B1DEBD = 1;
+    sub_1C2D490(&Method_SingletonTemplate_LocalNotificationManagerIOS___ctor__);
+    byte_4C28CCF = 1;
   }
   SingletonTemplate_object____ctor(
     (SingletonTemplate_CLASS__o *)this,
-    (const MethodInfo_38F8FF0 *)Method_SingletonTemplate_LocalNotificationManagerIOS___ctor__);
+    (const MethodInfo_39D41E4 *)Method_SingletonTemplate_LocalNotificationManagerIOS___ctor__);
 }

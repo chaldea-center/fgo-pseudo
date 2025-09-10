@@ -1,16 +1,16 @@
-void __fastcall EventMapManagerIdle___ctor(EventMapManagerIdle_o *this, const MethodInfo *method)
+void EventMapManagerIdle___ctor(EventMapManagerIdle_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall EventMapManagerIdle__DestroyMapObjects(EventMapManagerIdle_o *this, const MethodInfo *method)
+void EventMapManagerIdle__DestroyMapObjects(EventMapManagerIdle_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall EventMapManagerIdle__ExtractMapObjectFromAssetData(
+void EventMapManagerIdle__ExtractMapObjectFromAssetData(
         EventMapManagerIdle_o *this,
         AssetData_o *assetData,
         const MethodInfo *method)
@@ -19,90 +19,85 @@ void __fastcall EventMapManagerIdle__ExtractMapObjectFromAssetData(
 }
 
 
-void __fastcall EventMapManagerIdle__Finish(EventMapManagerIdle_o *this, const MethodInfo *method)
+void EventMapManagerIdle__Finish(EventMapManagerIdle_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-bool __fastcall EventMapManagerIdle__HasSelfQuestAfterAction(EventMapManagerIdle_o *this, const MethodInfo *method)
+bool EventMapManagerIdle__HasSelfQuestAfterAction(EventMapManagerIdle_o *this, const MethodInfo *method)
 {
   return 0;
 }
 
 
-void __fastcall EventMapManagerIdle__Initialize(EventMapManagerIdle_o *this, const MethodInfo *method)
+void EventMapManagerIdle__Initialize(EventMapManagerIdle_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-bool __fastcall EventMapManagerIdle__IsShowQuestListWhenComingBackToMap(
-        EventMapManagerIdle_o *this,
-        const MethodInfo *method)
+bool EventMapManagerIdle__IsShowQuestListWhenComingBackToMap(EventMapManagerIdle_o *this, const MethodInfo *method)
 {
   return 1;
 }
 
 
-void __fastcall EventMapManagerIdle__LoadAssets(
+void EventMapManagerIdle__LoadAssets(
         EventMapManagerIdle_o *this,
         System_Action_o *finishCallback,
         const MethodInfo *method)
 {
-  ActionExtensions__Call(finishCallback, 0LL);
+  ActionExtensions__Call(finishCallback, 0);
 }
 
 
-void __fastcall EventMapManagerIdle__OnAfterQuestAfterAction(
+void EventMapManagerIdle__OnAfterQuestAfterAction(
         EventMapManagerIdle_o *this,
         System_Action_o *finishCallback,
         const MethodInfo *method)
 {
-  ActionExtensions__Call(finishCallback, 0LL);
+  ActionExtensions__Call(finishCallback, 0);
 }
 
 
-void __fastcall EventMapManagerIdle__OnAfterSpotCreated(
+void EventMapManagerIdle__OnAfterSpotCreated(
         EventMapManagerIdle_o *this,
         System_Action_o *finishCallback,
         const MethodInfo *method)
 {
-  ActionExtensions__Call(finishCallback, 0LL);
+  ActionExtensions__Call(finishCallback, 0);
 }
 
 
-void __fastcall EventMapManagerIdle__OnBeforeQuestAfterAction(
+void EventMapManagerIdle__OnBeforeQuestAfterAction(
         EventMapManagerIdle_o *this,
         System_Action_o *finishCallback,
         const MethodInfo *method)
 {
-  ActionExtensions__Call(finishCallback, 0LL);
+  ActionExtensions__Call(finishCallback, 0);
 }
 
 
-void __fastcall EventMapManagerIdle__OnEveryActionEnd(EventMapManagerIdle_o *this, const MethodInfo *method)
+void EventMapManagerIdle__OnEveryActionEnd(EventMapManagerIdle_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall EventMapManagerIdle__ReleaseAssets(EventMapManagerIdle_o *this, const MethodInfo *method)
+void EventMapManagerIdle__ReleaseAssets(EventMapManagerIdle_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall EventMapManagerIdle__SetClickPanelEnable(
-        EventMapManagerIdle_o *this,
-        bool isEnable,
-        const MethodInfo *method)
+void EventMapManagerIdle__SetClickPanelEnable(EventMapManagerIdle_o *this, bool isEnable, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall EventMapManagerIdle__SetTerminalMapInfo(
+void EventMapManagerIdle__SetTerminalMapInfo(
         EventMapManagerIdle_o *this,
         ScrTerminalMap_o *terminalMap,
         MapControl_MapInfo_o *mapInfo,

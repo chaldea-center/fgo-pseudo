@@ -1,27 +1,24 @@
-void __fastcall MyRoomListItem___ctor(MyRoomListItem_o *this, const MethodInfo *method)
+void MyRoomListItem___ctor(MyRoomListItem_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall MyRoomListItem__Awake(MyRoomListItem_o *this, const MethodInfo *method)
+void MyRoomListItem__Awake(MyRoomListItem_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall MyRoomListItem__EnableBlackOutPanel(
-        MyRoomListItem_o *this,
-        System_String_o *message,
-        const MethodInfo *method)
+void MyRoomListItem__EnableBlackOutPanel(MyRoomListItem_o *this, System_String_o *message, const MethodInfo *method)
 {
   BlackoutPanelControl_o *blackOutPanel; // x0
 
   blackOutPanel = this->fields.blackOutPanel;
   if ( !blackOutPanel
-    || (BlackoutPanelControl__Show(blackOutPanel, 0LL), (blackOutPanel = this->fields.blackOutPanel) == 0LL) )
+    || (BlackoutPanelControl__Show(blackOutPanel, 0), (blackOutPanel = this->fields.blackOutPanel) == 0) )
   {
-    sub_1BCB254(blackOutPanel, message);
+    sub_1C2D6EC(blackOutPanel, message);
   }
-  BlackoutPanelControl__SetTextCenter(blackOutPanel, message, 0LL);
+  BlackoutPanelControl__SetTextCenter(blackOutPanel, message, 0);
 }

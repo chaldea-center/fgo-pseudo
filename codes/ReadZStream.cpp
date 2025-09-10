@@ -10,7 +10,7 @@ __int64 __fastcall ReadZStream(__int64 *a1, __int64 a2, int a3)
   if ( a1 && a2 && (a3 & 0x80000000) == 0 )
   {
     if ( *((_BYTE *)a1 + 33) )
-      return 0LL;
+      return 0;
     v6 = *a1;
     *(_QWORD *)(v6 + 24) = a2;
     *(_DWORD *)(v6 + 32) = a3;
@@ -20,14 +20,14 @@ __int64 __fastcall ReadZStream(__int64 *a1, __int64 a2, int a3)
       {
         if ( !*(_DWORD *)(v6 + 8) )
         {
-          v7 = ((__int64 (__fastcall *)(__int64, __int64, __int64))a1[2])(a1[1], 4096LL, a1[3]);
+          v7 = ((__int64 (__fastcall *)(__int64, __int64, __int64))a1[2])(a1[1], 4096, a1[3]);
           v8 = a1[1];
           v9 = v7 & ~(v7 >> 31);
           *((_DWORD *)a1 + 9) += v9;
           *(_QWORD *)v6 = v8;
           *(_DWORD *)(v6 + 8) = v9;
         }
-        result = sub_1C4F724(*a1, 2LL);
+        result = sub_1CB1FA8(*a1, 2);
         if ( (_DWORD)result )
           break;
         if ( !*(_DWORD *)(v6 + 32) )

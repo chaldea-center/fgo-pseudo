@@ -1,19 +1,19 @@
-void __fastcall NpcServantFollowerIndividualityEntity___ctor(
+void NpcServantFollowerIndividualityEntity___ctor(
         NpcServantFollowerIndividualityEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CA71 & 1) == 0 )
+  if ( (byte_4C27840 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_long___ctor__, method);
-    byte_4B1CA71 = 1;
+    sub_1C2D490(&Method_DataEntityBase_long___ctor__);
+    byte_4C27840 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_32C5964 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_33858FC *)Method_DataEntityBase_long___ctor__);
 }
 
 
-int64_t __fastcall NpcServantFollowerIndividualityEntity__CreatePrimaryKey(
+int64_t NpcServantFollowerIndividualityEntity__CreatePrimaryKey(
         NpcServantFollowerIndividualityEntity_o *this,
         const MethodInfo *method)
 {
@@ -21,255 +21,244 @@ int64_t __fastcall NpcServantFollowerIndividualityEntity__CreatePrimaryKey(
 }
 
 
-System_Int32_array *__fastcall NpcServantFollowerIndividualityEntity__GetAddIndividuality(
+System_Int32_array *NpcServantFollowerIndividualityEntity__GetAddIndividuality(
         NpcServantFollowerIndividualityEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
+  System_Collections_Generic_List_int__o *v3; // x19
+  __int64 v4; // x0
   __int64 v5; // x1
-  System_Collections_Generic_List_int__o *v6; // x19
-  __int64 v7; // x0
-  __int64 v8; // x1
-  __int64 v9; // x2
+  __int64 v6; // x2
   struct System_Int32_array *individuality; // x20
-  __int64 v11; // x8
-  unsigned __int64 v12; // x21
+  il2cpp_array_size_t max_length; // x8
+  unsigned __int64 v9; // x21
   struct System_Int32_array *items; // x8
-  _QWORD *v14; // x9
+  _QWORD *v11; // x9
   __int64 size; // x10
 
-  if ( (byte_4B1CA6F & 1) == 0 )
+  if ( (byte_4C2783E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__Add__, method);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__ToArray__, v3);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int___ctor__, v4);
-    sub_1BCAFF8(&System_Collections_Generic_List_int__TypeInfo, v5);
-    byte_4B1CA6F = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C2783E = 1;
   }
-  v6 = (System_Collections_Generic_List_int__o *)sub_1BCB244(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C2D6DC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v6,
-    (const MethodInfo_369C358 *)Method_System_Collections_Generic_List_int___ctor__);
+    v3,
+    (const MethodInfo_376C30C *)Method_System_Collections_Generic_List_int___ctor__);
   individuality = this->fields.individuality;
   if ( !individuality )
     goto LABEL_16;
-  v11 = *(_QWORD *)&individuality->max_length;
-  if ( (int)v11 >= 1 )
+  max_length = individuality->max_length;
+  if ( (int)max_length >= 1 )
   {
-    v12 = 0LL;
+    v9 = 0;
     do
     {
-      if ( v12 >= (unsigned int)v11 )
-        sub_1BCB25C(v7, v8, v9);
-      v8 = (unsigned int)individuality->m_Items[v12 + 1];
-      if ( (int)v8 >= 1 )
+      if ( v9 >= (unsigned int)max_length )
+        sub_1C2D6F4(v4, v5, v6);
+      v5 = (unsigned int)individuality->m_Items[v9];
+      if ( (int)v5 >= 1 )
       {
-        if ( !v6 )
+        if ( !v3 )
           goto LABEL_16;
-        items = v6->fields._items;
-        v14 = Method_System_Collections_Generic_List_int__Add__;
-        ++v6->fields._version;
+        items = v3->fields._items;
+        v11 = Method_System_Collections_Generic_List_int__Add__;
+        ++v3->fields._version;
         if ( !items )
           goto LABEL_16;
-        size = v6->fields._size;
-        if ( (unsigned int)size >= items->max_length )
+        size = v3->fields._size;
+        if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_int___AddWithResize(
-            v6,
-            v8,
-            *(const MethodInfo_369CBAC **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+            v3,
+            v5,
+            *(const MethodInfo_376CB60 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
         }
         else
         {
-          v6->fields._size = size + 1;
-          items->m_Items[size + 1] = v8;
+          v3->fields._size = size + 1;
+          items->m_Items[size] = v5;
         }
       }
-      LODWORD(v11) = individuality->max_length;
+      LODWORD(max_length) = individuality->max_length;
     }
-    while ( (__int64)++v12 < (int)v11 );
+    while ( (__int64)++v9 < (int)max_length );
   }
-  if ( !v6 )
+  if ( !v3 )
 LABEL_16:
-    sub_1BCB254(v7, v8);
+    sub_1C2D6EC(v4, v5);
   return System_Collections_Generic_List_int___ToArray(
-           v6,
-           (const MethodInfo_369E664 *)Method_System_Collections_Generic_List_int__ToArray__);
+           v3,
+           (const MethodInfo_376E618 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
-System_Int32_array *__fastcall NpcServantFollowerIndividualityEntity__GetExcludedIndividuality(
+System_Int32_array *NpcServantFollowerIndividualityEntity__GetExcludedIndividuality(
         NpcServantFollowerIndividualityEntity_o *this,
         System_Int32_array *individualities,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   System_Collections_Generic_List_int__o *SubIndividuality; // x21
-  System_Collections_Generic_List_int__o *v11; // x20
-  _BOOL8 v12; // x0
-  __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x8
-  unsigned __int64 v16; // x22
-  int32_t *v17; // x23
+  System_Collections_Generic_List_int__o *v6; // x20
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
+  __int64 v9; // x2
+  il2cpp_array_size_t max_length; // x8
+  unsigned __int64 v11; // x22
+  int32_t *m_Items; // x23
   struct System_Int32_array *items; // x8
-  _QWORD *v19; // x9
+  _QWORD *v14; // x9
   __int64 size; // x10
 
-  if ( (byte_4B1CA70 & 1) == 0 )
+  if ( (byte_4C2783F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__Add__, individualities);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__Contains__, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__ToArray__, v6);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int___ctor__, v7);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__get_Count__, v8);
-    sub_1BCAFF8(&System_Collections_Generic_List_int__TypeInfo, v9);
-    byte_4B1CA70 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C2D490(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C2783F = 1;
   }
   SubIndividuality = NpcServantFollowerIndividualityEntity__GetSubIndividuality(
                        this,
                        (const MethodInfo *)individualities);
-  v11 = (System_Collections_Generic_List_int__o *)sub_1BCB244(System_Collections_Generic_List_int__TypeInfo);
+  v6 = (System_Collections_Generic_List_int__o *)sub_1C2D6DC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v11,
-    (const MethodInfo_369C358 *)Method_System_Collections_Generic_List_int___ctor__);
+    v6,
+    (const MethodInfo_376C30C *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !SubIndividuality || SubIndividuality->fields._size < 1 )
     return individualities;
   if ( !individualities )
     goto LABEL_21;
-  v15 = *(_QWORD *)&individualities->max_length;
-  if ( (int)v15 >= 1 )
+  max_length = individualities->max_length;
+  if ( (int)max_length >= 1 )
   {
-    v16 = 0LL;
-    v17 = &individualities->m_Items[1];
+    v11 = 0;
+    m_Items = individualities->m_Items;
     do
     {
-      if ( v16 >= (unsigned int)v15 )
+      if ( v11 >= (unsigned int)max_length )
 LABEL_20:
-        sub_1BCB25C(v12, v13, v14);
-      v12 = System_Collections_Generic_List_int___Contains(
-              SubIndividuality,
-              v17[v16],
-              (const MethodInfo_369CF24 *)Method_System_Collections_Generic_List_int__Contains__);
-      if ( !v12 )
+        sub_1C2D6F4(v7, v8, v9);
+      v7 = System_Collections_Generic_List_int___Contains(
+             SubIndividuality,
+             m_Items[v11],
+             (const MethodInfo_376CED8 *)Method_System_Collections_Generic_List_int__Contains__);
+      if ( !v7 )
       {
-        if ( v16 >= individualities->max_length )
+        if ( v11 >= LODWORD(individualities->max_length) )
           goto LABEL_20;
-        if ( !v11 )
-          goto LABEL_21;
-        v13 = (unsigned int)v17[v16];
-        items = v11->fields._items;
-        v19 = Method_System_Collections_Generic_List_int__Add__;
-        ++v11->fields._version;
-        if ( !items )
-          goto LABEL_21;
-        size = v11->fields._size;
-        if ( (unsigned int)size >= items->max_length )
-        {
-          System_Collections_Generic_List_int___AddWithResize(
-            v11,
-            v13,
-            *(const MethodInfo_369CBAC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
-        }
-        else
-        {
-          v11->fields._size = size + 1;
-          items->m_Items[size + 1] = v13;
-        }
-      }
-      LODWORD(v15) = individualities->max_length;
-    }
-    while ( (__int64)++v16 < (int)v15 );
-  }
-  if ( !v11 )
-LABEL_21:
-    sub_1BCB254(v12, v13);
-  return System_Collections_Generic_List_int___ToArray(
-           v11,
-           (const MethodInfo_369E664 *)Method_System_Collections_Generic_List_int__ToArray__);
-}
-
-
-System_Collections_Generic_List_int__o *__fastcall NpcServantFollowerIndividualityEntity__GetSubIndividuality(
-        NpcServantFollowerIndividualityEntity_o *this,
-        const MethodInfo *method)
-{
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  System_Collections_Generic_List_int__o *v6; // x19
-  System_Math_c *v7; // x0
-  __int64 v8; // x1
-  __int64 v9; // x2
-  struct System_Int32_array *individuality; // x20
-  __int64 v11; // x8
-  unsigned __int64 i; // x21
-  int v13; // w25
-  struct System_Int32_array *items; // x8
-  _QWORD *v15; // x9
-  __int64 size; // x10
-
-  if ( (byte_4B1CA6E & 1) == 0 )
-  {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__Add__, method);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int___ctor__, v3);
-    sub_1BCAFF8(&System_Collections_Generic_List_int__TypeInfo, v4);
-    sub_1BCAFF8(&System_Math_TypeInfo, v5);
-    byte_4B1CA6E = 1;
-  }
-  v6 = (System_Collections_Generic_List_int__o *)sub_1BCB244(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor(
-    v6,
-    (const MethodInfo_369C358 *)Method_System_Collections_Generic_List_int___ctor__);
-  individuality = this->fields.individuality;
-  if ( !individuality )
-LABEL_21:
-    sub_1BCB254(v7, v8);
-  v11 = *(_QWORD *)&individuality->max_length;
-  if ( (int)v11 >= 1 )
-  {
-    for ( i = 0LL; (__int64)i < (int)v11; ++i )
-    {
-      if ( i >= (unsigned int)v11 )
-        sub_1BCB25C(v7, v8, v9);
-      v13 = individuality->m_Items[i + 1];
-      if ( (v13 & 0x80000000) != 0 )
-      {
-        v7 = System_Math_TypeInfo;
-        if ( !System_Math_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        if ( v13 >= 0 )
-          v8 = (unsigned int)v13;
-        else
-          v8 = (unsigned int)-v13;
         if ( !v6 )
           goto LABEL_21;
+        v8 = (unsigned int)m_Items[v11];
         items = v6->fields._items;
-        v15 = Method_System_Collections_Generic_List_int__Add__;
+        v14 = Method_System_Collections_Generic_List_int__Add__;
         ++v6->fields._version;
         if ( !items )
           goto LABEL_21;
         size = v6->fields._size;
-        if ( (unsigned int)size >= items->max_length )
+        if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_int___AddWithResize(
             v6,
             v8,
-            *(const MethodInfo_369CBAC **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+            *(const MethodInfo_376CB60 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
         }
         else
         {
           v6->fields._size = size + 1;
-          items->m_Items[size + 1] = v8;
+          items->m_Items[size] = v8;
         }
       }
-      LODWORD(v11) = individuality->max_length;
+      LODWORD(max_length) = individualities->max_length;
+    }
+    while ( (__int64)++v11 < (int)max_length );
+  }
+  if ( !v6 )
+LABEL_21:
+    sub_1C2D6EC(v7, v8);
+  return System_Collections_Generic_List_int___ToArray(
+           v6,
+           (const MethodInfo_376E618 *)Method_System_Collections_Generic_List_int__ToArray__);
+}
+
+
+System_Collections_Generic_List_int__o *NpcServantFollowerIndividualityEntity__GetSubIndividuality(
+        NpcServantFollowerIndividualityEntity_o *this,
+        const MethodInfo *method)
+{
+  System_Collections_Generic_List_int__o *v3; // x19
+  System_Math_c *v4; // x0
+  __int64 v5; // x1
+  __int64 v6; // x2
+  struct System_Int32_array *individuality; // x20
+  il2cpp_array_size_t max_length; // x8
+  unsigned __int64 i; // x21
+  int v10; // w25
+  struct System_Int32_array *items; // x8
+  _QWORD *v12; // x9
+  __int64 size; // x10
+
+  if ( (byte_4C2783D & 1) == 0 )
+  {
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C2D490(&System_Math_TypeInfo);
+    byte_4C2783D = 1;
+  }
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C2D6DC(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor(
+    v3,
+    (const MethodInfo_376C30C *)Method_System_Collections_Generic_List_int___ctor__);
+  individuality = this->fields.individuality;
+  if ( !individuality )
+LABEL_21:
+    sub_1C2D6EC(v4, v5);
+  max_length = individuality->max_length;
+  if ( (int)max_length >= 1 )
+  {
+    for ( i = 0; (__int64)i < (int)max_length; ++i )
+    {
+      if ( i >= (unsigned int)max_length )
+        sub_1C2D6F4(v4, v5, v6);
+      v10 = individuality->m_Items[i];
+      if ( v10 < 0 )
+      {
+        v4 = System_Math_TypeInfo;
+        if ( !System_Math_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
+        if ( v10 >= 0 )
+          v5 = (unsigned int)v10;
+        else
+          v5 = (unsigned int)-v10;
+        if ( !v3 )
+          goto LABEL_21;
+        items = v3->fields._items;
+        v12 = Method_System_Collections_Generic_List_int__Add__;
+        ++v3->fields._version;
+        if ( !items )
+          goto LABEL_21;
+        size = v3->fields._size;
+        if ( (unsigned int)size >= LODWORD(items->max_length) )
+        {
+          System_Collections_Generic_List_int___AddWithResize(
+            v3,
+            v5,
+            *(const MethodInfo_376CB60 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+        }
+        else
+        {
+          v3->fields._size = size + 1;
+          items->m_Items[size] = v5;
+        }
+      }
+      LODWORD(max_length) = individuality->max_length;
     }
   }
-  return v6;
+  return v3;
 }

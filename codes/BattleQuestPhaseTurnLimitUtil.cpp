@@ -1,4 +1,4 @@
-void __fastcall BattleQuestPhaseTurnLimitUtil___ctor(
+void BattleQuestPhaseTurnLimitUtil___ctor(
         BattleQuestPhaseTurnLimitUtil_o *this,
         QuestPhaseEntity_o *questPhaseEnt,
         const MethodInfo *method)
@@ -8,15 +8,15 @@ void __fastcall BattleQuestPhaseTurnLimitUtil___ctor(
   const MethodInfo *v6; // x3
 
   if ( !questPhaseEnt )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   script = questPhaseEnt->fields.script;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.EntityScript = script;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)script, v5, v6);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)script, v5, v6);
 }
 
 
-bool __fastcall BattleQuestPhaseTurnLimitUtil__IsTurnElapsedEndBattleFlag(
+bool BattleQuestPhaseTurnLimitUtil__IsTurnElapsedEndBattleFlag(
         BattleQuestPhaseTurnLimitUtil_o *this,
         const MethodInfo *method)
 {
@@ -24,9 +24,7 @@ bool __fastcall BattleQuestPhaseTurnLimitUtil__IsTurnElapsedEndBattleFlag(
 }
 
 
-int32_t __fastcall BattleQuestPhaseTurnLimitUtil__get_TurnMode(
-        BattleQuestPhaseTurnLimitUtil_o *this,
-        const MethodInfo *method)
+int32_t BattleQuestPhaseTurnLimitUtil__get_TurnMode(BattleQuestPhaseTurnLimitUtil_o *this, const MethodInfo *method)
 {
   return 2;
 }

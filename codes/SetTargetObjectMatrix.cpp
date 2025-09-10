@@ -1,87 +1,82 @@
-void __fastcall SetTargetObjectMatrix___ctor(SetTargetObjectMatrix_o *this, const MethodInfo *method)
+void SetTargetObjectMatrix___ctor(SetTargetObjectMatrix_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-Il2CppObject *__fastcall SetTargetObjectMatrix__GetRenderer_object_(
+Il2CppObject *SetTargetObjectMatrix__GetRenderer_object_(
         SetTargetObjectMatrix_o *this,
-        const MethodInfo_30BE544 *method)
+        const MethodInfo_3176174 *method)
 {
   UnityEngine_Component_o *v3; // x20
 
   v3 = (UnityEngine_Component_o *)this;
   if ( !method->rgctx_data )
-    this = (SetTargetObjectMatrix_o *)sub_1C1B4B8();
-  if ( !v3 || (this = (SetTargetObjectMatrix_o *)UnityEngine_Component__get_gameObject(v3, 0LL)) == 0LL )
-    sub_1BCB254(this, method);
+    this = (SetTargetObjectMatrix_o *)sub_1C7DC00();
+  if ( !v3 || (this = (SetTargetObjectMatrix_o *)UnityEngine_Component__get_gameObject(v3, 0)) == 0 )
+    sub_1C2D6EC(this, method);
   return UnityEngine_GameObject__GetComponent_object_(
            (UnityEngine_GameObject_o *)this,
-           (const MethodInfo_306E710 *)method->rgctx_data->_0_UnityEngine_GameObject_GetComponent_T_);
+           (const MethodInfo_3125ED0 *)method->rgctx_data->_0_UnityEngine_GameObject_GetComponent_T_);
 }
 
 
-void __fastcall SetTargetObjectMatrix__Start(SetTargetObjectMatrix_o *this, const MethodInfo *method)
+void SetTargetObjectMatrix__Start(SetTargetObjectMatrix_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 *v8; // x8
+  __int64 *v3; // x8
   Il2CppObject *Renderer_object; // x0
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4B1FCAF & 1) == 0 )
+  if ( (byte_4C2AB97 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___, v3);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
-    sub_1BCAFF8(&Method_SetTargetObjectMatrix_GetRenderer_MeshRenderer___, v5);
-    sub_1BCAFF8(&Method_SetTargetObjectMatrix_GetRenderer_SkinnedMeshRenderer___, v6);
-    sub_1BCAFF8(&Method_SetTargetObjectMatrix_GetRenderer_SpriteRenderer___, v7);
-    byte_4B1FCAF = 1;
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SetTargetObjectMatrix_GetRenderer_MeshRenderer___);
+    sub_1C2D490(&Method_SetTargetObjectMatrix_GetRenderer_SkinnedMeshRenderer___);
+    sub_1C2D490(&Method_SetTargetObjectMatrix_GetRenderer_SpriteRenderer___);
+    byte_4C2AB97 = 1;
   }
   switch ( this->fields.rendererType )
   {
     case 0:
-      v8 = &Method_SetTargetObjectMatrix_GetRenderer_SkinnedMeshRenderer___;
+      v3 = &Method_SetTargetObjectMatrix_GetRenderer_SkinnedMeshRenderer___;
       goto LABEL_7;
     case 1:
-      v8 = &Method_SetTargetObjectMatrix_GetRenderer_MeshRenderer___;
+      v3 = &Method_SetTargetObjectMatrix_GetRenderer_MeshRenderer___;
       goto LABEL_7;
     case 2:
-      v8 = &Method_SetTargetObjectMatrix_GetRenderer_SpriteRenderer___;
+      v3 = &Method_SetTargetObjectMatrix_GetRenderer_SpriteRenderer___;
 LABEL_7:
-      Renderer_object = SetTargetObjectMatrix__GetRenderer_object_(this, (const MethodInfo_30BE544 *)*v8);
+      Renderer_object = SetTargetObjectMatrix__GetRenderer_object_(this, (const MethodInfo_3176174 *)*v3);
       goto LABEL_8;
     case 3:
-      gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+      gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !gameObject )
         goto LABEL_16;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            gameObject,
-                           (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+                           (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
                                                  (UnityEngine_Object_o *)Component_object,
-                                                 0LL,
-                                                 0LL);
+                                                 0,
+                                                 0);
       if ( ((unsigned __int8)gameObject & 1) != 0 )
       {
         if ( !Component_object )
 LABEL_16:
-          sub_1BCB254(gameObject, method);
+          sub_1C2D6EC(gameObject, method);
         Renderer_object = UnityEngine_Component__GetComponent_object_(
                             (UnityEngine_Component_o *)Component_object,
-                            (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                            (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Renderer___);
 LABEL_8:
         this->fields.targetRenderer = (struct UnityEngine_Renderer_o *)Renderer_object;
-        sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.targetRenderer, (int32_t)Renderer_object, v10, v11);
+        sub_1C2D434((CGThumbnailListItem_o *)&this->fields.targetRenderer, (int32_t)Renderer_object, v5, v6);
       }
 LABEL_9:
       SetTargetObjectMatrix__updateMatrix(this, method);
@@ -92,46 +87,45 @@ LABEL_9:
 }
 
 
-void __fastcall SetTargetObjectMatrix__updateMatrix(SetTargetObjectMatrix_o *this, const MethodInfo *method)
+void SetTargetObjectMatrix__updateMatrix(SetTargetObjectMatrix_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *targetObj; // x20
   UnityEngine_Object_o *targetRenderer; // x20
-  __int64 v6; // x1
+  __int64 v5; // x1
   UnityEngine_Transform_o *material; // x0
   int32_t materialType; // w8
-  UnityEngine_Matrix4x4_o *v9; // x2
-  System_String_o *v10; // x1
-  UnityEngine_Matrix4x4_o v11; // [xsp+0h] [xbp-170h] BYREF
-  UnityEngine_Matrix4x4_o v12; // [xsp+40h] [xbp-130h] BYREF
-  UnityEngine_Matrix4x4_o v13; // [xsp+80h] [xbp-F0h] BYREF
-  UnityEngine_Matrix4x4_o v14; // [xsp+C0h] [xbp-B0h] BYREF
-  UnityEngine_Matrix4x4_o v15; // [xsp+100h] [xbp-70h] BYREF
+  UnityEngine_Matrix4x4_o *v8; // x2
+  System_String_o *v9; // x1
+  UnityEngine_Matrix4x4_o v10; // [xsp+0h] [xbp-170h] BYREF
+  UnityEngine_Matrix4x4_o v11; // [xsp+40h] [xbp-130h] BYREF
+  UnityEngine_Matrix4x4_o v12; // [xsp+80h] [xbp-F0h] BYREF
+  UnityEngine_Matrix4x4_o v13; // [xsp+C0h] [xbp-B0h] BYREF
+  UnityEngine_Matrix4x4_o v14; // [xsp+100h] [xbp-70h] BYREF
 
-  if ( (byte_4B1FCB0 & 1) == 0 )
+  if ( (byte_4C2AB98 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_16449/*"_targetMatrix"*/, v3);
-    byte_4B1FCB0 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_16582/*"_targetMatrix"*/);
+    byte_4C2AB98 = 1;
   }
-  memset(&v14, 0, sizeof(v14));
+  memset(&v13, 0, sizeof(v13));
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(targetObj, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(targetObj, 0, 0) )
   {
     targetRenderer = (UnityEngine_Object_o *)this->fields.targetRenderer;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality(targetRenderer, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality(targetRenderer, 0, 0) )
     {
       material = this->fields.targetObj;
       if ( material )
       {
-        UnityEngine_Transform__get_localToWorldMatrix(&v15, material, 0LL);
-        v14 = v15;
-        UnityEngine_Matrix4x4__get_inverse(&v13, &v14, 0LL);
-        v15 = v13;
+        UnityEngine_Transform__get_localToWorldMatrix(&v14, material, 0);
+        v13 = v14;
+        UnityEngine_Matrix4x4__get_inverse(&v12, &v13, 0);
+        v14 = v12;
         materialType = this->fields.materialType;
         if ( materialType == 1 )
         {
@@ -140,13 +134,13 @@ void __fastcall SetTargetObjectMatrix__updateMatrix(SetTargetObjectMatrix_o *thi
           {
             material = (UnityEngine_Transform_o *)UnityEngine_Renderer__get_material(
                                                     (UnityEngine_Renderer_o *)material,
-                                                    0LL);
-            v13 = v15;
+                                                    0);
+            v12 = v14;
             if ( material )
             {
-              v9 = &v11;
-              v10 = (System_String_o *)StringLiteral_16449/*"_targetMatrix"*/;
-              v11 = v13;
+              v8 = &v10;
+              v9 = (System_String_o *)StringLiteral_16582/*"_targetMatrix"*/;
+              v10 = v12;
               goto LABEL_18;
             }
           }
@@ -160,21 +154,21 @@ void __fastcall SetTargetObjectMatrix__updateMatrix(SetTargetObjectMatrix_o *thi
           {
             material = (UnityEngine_Transform_o *)UnityEngine_Renderer__get_sharedMaterial(
                                                     (UnityEngine_Renderer_o *)material,
-                                                    0LL);
-            v13 = v15;
+                                                    0);
+            v12 = v14;
             if ( material )
             {
-              v9 = &v12;
-              v10 = (System_String_o *)StringLiteral_16449/*"_targetMatrix"*/;
-              v12 = v13;
+              v8 = &v11;
+              v9 = (System_String_o *)StringLiteral_16582/*"_targetMatrix"*/;
+              v11 = v12;
 LABEL_18:
-              UnityEngine_Material__SetMatrix((UnityEngine_Material_o *)material, v10, v9, 0LL);
+              UnityEngine_Material__SetMatrix((UnityEngine_Material_o *)material, v9, v8, 0);
               return;
             }
           }
         }
       }
-      sub_1BCB254(material, v6);
+      sub_1C2D6EC(material, v5);
     }
   }
 }

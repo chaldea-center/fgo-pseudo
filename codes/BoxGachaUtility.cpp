@@ -1,60 +1,57 @@
-void __fastcall BoxGachaUtility___cctor(const MethodInfo *method)
+void BoxGachaUtility___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
   struct BoxGachaUtility_StaticFields *static_fields; // x8
-  BoxGachaUtility_c *v3; // x8
-  struct BoxGachaUtility_StaticFields *v4; // x9
-  int32x2_t *v5; // x8
+  BoxGachaUtility_c *v2; // x8
+  struct BoxGachaUtility_StaticFields *v3; // x9
+  int32x2_t *v4; // x8
 
-  if ( (byte_4B16A26 & 1) == 0 )
+  if ( (byte_4C21724 & 1) == 0 )
   {
-    sub_1BCAFF8(&BoxGachaUtility_TypeInfo, v1);
-    byte_4B16A26 = 1;
+    sub_1C2D490(&BoxGachaUtility_TypeInfo);
+    byte_4C21724 = 1;
   }
   static_fields = BoxGachaUtility_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->NORMAL_ITEM_SIZE.fields.x = 0x3F3AE1483F400000LL;
   static_fields->NORMAL_ITEM_SIZE.fields.z = 0.68;
-  v3 = BoxGachaUtility_TypeInfo;
-  v4 = BoxGachaUtility_TypeInfo->static_fields;
-  *(int32x2_t *)&v4->CHANGE_MAX_ITEM_SIZE.fields.x = vdup_n_s32(0x3EC28F5Cu);
-  v4->CHANGE_MAX_ITEM_SIZE.fields.z = 0.38;
-  v5 = (int32x2_t *)v3->static_fields;
-  v5[3].n64_u64[0] = vdup_n_s32(0x3F018937u).n64_u64[0];
-  v5[4].n64_u32[0] = 1057065271;
+  v2 = BoxGachaUtility_TypeInfo;
+  v3 = BoxGachaUtility_TypeInfo->static_fields;
+  *(int32x2_t *)&v3->CHANGE_MAX_ITEM_SIZE.fields.x = vdup_n_s32(0x3EC28F5Cu);
+  v3->CHANGE_MAX_ITEM_SIZE.fields.z = 0.38;
+  v4 = (int32x2_t *)v2->static_fields;
+  v4[3].n64_u64[0] = vdup_n_s32(0x3F018937u).n64_u64[0];
+  v4[4].n64_u32[0] = 1057065271;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BoxGachaUtility__SetBoxGachaNumSprite(UISprite_o *sprite, int32_t num, const MethodInfo *method)
+void BoxGachaUtility__SetBoxGachaNumSprite(UISprite_o *sprite, int32_t num, const MethodInfo *method)
 {
   __int64 v3; // x3
   __int64 v4; // x4
-  __int64 v7; // x1
-  Il2CppObject *v8; // x0
-  System_String_o *v9; // x0
-  __int64 v10; // x1
-  int32_t v11; // [xsp+Ch] [xbp-34h] BYREF
+  Il2CppObject *v7; // x0
+  System_String_o *v8; // x0
+  __int64 v9; // x1
+  int32_t v10; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B16A25 & 1) == 0 )
+  if ( (byte_4C21723 & 1) == 0 )
   {
-    sub_1BCAFF8(&int_TypeInfo, *(_QWORD *)&num);
-    sub_1BCAFF8(&StringLiteral_20228/*"img_gachatxt_{0:D2}"*/, v7);
-    byte_4B16A25 = 1;
+    sub_1C2D490(&int_TypeInfo);
+    sub_1C2D490(&StringLiteral_20399/*"img_gachatxt_{0:D2}"*/);
+    byte_4C21723 = 1;
   }
-  v11 = num;
-  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11, method, v3, v4);
-  v9 = System_String__Format((System_String_o *)StringLiteral_20228/*"img_gachatxt_{0:D2}"*/, v8, 0LL);
+  v10 = num;
+  v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10, method, v3, v4);
+  v8 = System_String__Format((System_String_o *)StringLiteral_20399/*"img_gachatxt_{0:D2}"*/, v7, 0);
   if ( !sprite )
-    sub_1BCB254(v9, v10);
-  UISprite__set_spriteName(sprite, v9, 0LL);
-  ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))sprite->klass->vtable._33_MakePixelPerfect.method)(
+    sub_1C2D6EC(v8, v9);
+  UISprite__set_spriteName(sprite, v8, 0);
+  ((void (__fastcall *)(UISprite_o *, const MethodInfo *))sprite->klass->vtable._33_MakePixelPerfect.methodPtr)(
     sprite,
-    sprite->klass->vtable._34_get_minWidth.methodPtr);
+    sprite->klass->vtable._33_MakePixelPerfect.method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
+void BoxGachaUtility__SetMultiGachaButtonDigitNum(
         int32_t gachaTime,
         UISprite_o *oneDigit,
         UISprite_o *twoDigit,
@@ -75,10 +72,10 @@ void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
   const MethodInfo *v19; // x2
 
   v8 = gachaTime;
-  if ( (byte_4B16A24 & 1) == 0 )
+  if ( (byte_4C21722 & 1) == 0 )
   {
-    *(_QWORD *)&gachaTime = sub_1BCAFF8(&BoxGachaUtility_TypeInfo, oneDigit);
-    byte_4B16A24 = 1;
+    *(_QWORD *)&gachaTime = sub_1C2D490(&BoxGachaUtility_TypeInfo);
+    byte_4C21722 = 1;
   }
   if ( v8 < 10 )
     goto LABEL_9;
@@ -95,16 +92,16 @@ void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
   {
     if ( twoDigit )
     {
-      *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)twoDigit, 0LL);
+      *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)twoDigit, 0);
       if ( *(_QWORD *)&gachaTime )
       {
-        UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 1, 0LL);
+        UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 1, 0);
         if ( threeDigit )
         {
-          *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)threeDigit, 0LL);
+          *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)threeDigit, 0);
           if ( *(_QWORD *)&gachaTime )
           {
-            UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 1, 0LL);
+            UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 1, 0);
             if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
             BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, v8 % 10, v15);
@@ -123,16 +120,16 @@ void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
   {
     if ( twoDigit )
     {
-      *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)twoDigit, 0LL);
+      *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)twoDigit, 0);
       if ( *(_QWORD *)&gachaTime )
       {
-        UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 1, 0LL);
+        UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 1, 0);
         if ( threeDigit )
         {
-          *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)threeDigit, 0LL);
+          *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)threeDigit, 0);
           if ( *(_QWORD *)&gachaTime )
           {
-            UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 0, 0LL);
+            UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 0, 0);
             if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
             BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, v8 % 10, v18);
@@ -145,23 +142,23 @@ void __fastcall BoxGachaUtility__SetMultiGachaButtonDigitNum(
       }
     }
 LABEL_32:
-    sub_1BCB254(*(_QWORD *)&gachaTime, oneDigit);
+    sub_1C2D6EC(*(_QWORD *)&gachaTime, oneDigit);
   }
   if ( v9 )
     return;
 LABEL_9:
   if ( !twoDigit )
     goto LABEL_32;
-  *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)twoDigit, 0LL);
+  *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)twoDigit, 0);
   if ( !*(_QWORD *)&gachaTime )
     goto LABEL_32;
-  UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 0, 0LL);
+  UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 0, 0);
   if ( !threeDigit )
     goto LABEL_32;
-  *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)threeDigit, 0LL);
+  *(_QWORD *)&gachaTime = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)threeDigit, 0);
   if ( !*(_QWORD *)&gachaTime )
     goto LABEL_32;
-  UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 0, 0LL);
+  UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&gachaTime, 0, 0);
   if ( !BoxGachaUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BoxGachaUtility_TypeInfo);
   BoxGachaUtility__SetBoxGachaNumSprite(oneDigit, v8, v12);
@@ -169,6 +166,6 @@ LABEL_9:
   if ( !oneDigit )
     goto LABEL_32;
 LABEL_16:
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)oneDigit, 0LL);
-  GameObjectExtensions__SetLocalPositionX(gameObject, v13, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)oneDigit, 0);
+  GameObjectExtensions__SetLocalPositionX(gameObject, v13, 0);
 }

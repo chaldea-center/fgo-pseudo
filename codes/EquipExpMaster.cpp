@@ -1,19 +1,19 @@
-void __fastcall EquipExpMaster___ctor(EquipExpMaster_o *this, const MethodInfo *method)
+void EquipExpMaster___ctor(EquipExpMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C39C & 1) == 0 )
+  if ( (byte_4C27148 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string___ctor__, method);
-    byte_4B1C39C = 1;
+    sub_1C2D490(&Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string___ctor__);
+    byte_4C27148 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     52,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-EquipExpEntity_o *__fastcall EquipExpMaster__GetEntity(
+EquipExpEntity_o *EquipExpMaster__GetEntity(
         EquipExpMaster_o *this,
         int32_t equipId,
         int32_t lv,
@@ -21,21 +21,21 @@ EquipExpEntity_o *__fastcall EquipExpMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1C39A & 1) == 0 )
+  if ( (byte_4C27146 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__GetEntity__, *(_QWORD *)&equipId);
-    byte_4B1C39A = 1;
+    sub_1C2D490(&Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__GetEntity__);
+    byte_4C27146 = 1;
   }
   PK = (Il2CppObject *)EquipExpEntity__CreatePK(equipId, lv, *(const MethodInfo **)&lv);
   return (EquipExpEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                PK,
-                               (const MethodInfo_32CC8B8 *)Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__GetEntity__);
+                               (const MethodInfo_338C850 *)Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall EquipExpMaster__TryGetEntity(
+bool EquipExpMaster__TryGetEntity(
         EquipExpMaster_o *this,
         EquipExpEntity_o **entity,
         int32_t equipId,
@@ -44,22 +44,22 @@ bool __fastcall EquipExpMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1C39B & 1) == 0 )
+  if ( (byte_4C27147 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__TryGetEntity__, entity);
-    byte_4B1C39B = 1;
+    sub_1C2D490(&Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__TryGetEntity__);
+    byte_4C27147 = 1;
   }
   PK = (Il2CppObject *)EquipExpEntity__CreatePK(equipId, lv, *(const MethodInfo **)&equipId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_EquipExpMaster__EquipExpEntity__string__TryGetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall EquipExpMaster__getLevel(
+int32_t EquipExpMaster__getLevel(
         EquipExpMaster_o *this,
         int32_t equipId,
         int32_t exp,
@@ -98,33 +98,32 @@ int32_t __fastcall EquipExpMaster__getLevel(
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall EquipExpMaster__getLevelMax(EquipExpMaster_o *this, int32_t id, const MethodInfo *method)
+int32_t EquipExpMaster__getLevelMax(EquipExpMaster_o *this, int32_t id, const MethodInfo *method)
 {
-  __int64 v5; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t Count; // w0
-  int32_t v8; // w22
+  int32_t v7; // w22
   int32_t klass_high; // w21
-  int32_t v10; // w23
+  int32_t v9; // w23
   Il2CppObject *Item; // x0
 
-  if ( (byte_4B1C39D & 1) == 0 )
+  if ( (byte_4C27149 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Count__, *(_QWORD *)&id);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Item__, v5);
-    byte_4B1C39D = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Item__);
+    byte_4C27149 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_15;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Count__);
+            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Count__);
   if ( Count >= 1 )
   {
-    v8 = Count;
+    v7 = Count;
     klass_high = 0;
-    v10 = 0;
+    v9 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -132,15 +131,15 @@ int32_t __fastcall EquipExpMaster__getLevelMax(EquipExpMaster_o *this, int32_t i
         break;
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
-               v10,
-               (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Item__);
+               v9,
+               (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_EquipExpEntity__get_Item__);
       if ( Item && LODWORD(Item[1].klass) == id && SHIDWORD(Item[1].klass) > klass_high )
         klass_high = HIDWORD(Item[1].klass);
-      if ( v8 == ++v10 )
+      if ( v7 == ++v9 )
         return klass_high;
     }
 LABEL_15:
-    sub_1BCB254(list, *(_QWORD *)&id);
+    sub_1C2D6EC(list, *(_QWORD *)&id);
   }
   return 0;
 }

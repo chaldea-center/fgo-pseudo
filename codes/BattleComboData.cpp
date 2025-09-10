@@ -1,32 +1,32 @@
-void __fastcall BattleComboData___ctor(BattleComboData_o *this, const MethodInfo *method)
+void BattleComboData___ctor(BattleComboData_o *this, const MethodInfo *method)
 {
   struct System_Boolean_array *v3; // x0
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B1F1B9 & 1) == 0 )
+  if ( (byte_4C2A03F & 1) == 0 )
   {
-    sub_1BCAFF8(&bool___TypeInfo, method);
-    byte_4B1F1B9 = 1;
+    sub_1C2D490(&bool___TypeInfo);
+    byte_4C2A03F = 1;
   }
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.flash = 0;
   this->fields.samecount = 0;
-  v3 = (struct System_Boolean_array *)sub_1BCB0A0(bool___TypeInfo, 3LL);
+  v3 = (struct System_Boolean_array *)sub_1C2D538(bool___TypeInfo, 3);
   this->fields.sameflg = v3;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.sameflg, (int32_t)v3, v4, v5);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.sameflg, (int32_t)v3, v4, v5);
 }
 
 
-bool __fastcall BattleComboData__AchieveAnyChain(BattleComboData_o *this, const MethodInfo *method)
+bool BattleComboData__AchieveAnyChain(BattleComboData_o *this, const MethodInfo *method)
 {
   int32_t samecount; // w20
   BattleDataDefine_c *v4; // x0
 
-  if ( (byte_4B1F1BA & 1) == 0 )
+  if ( (byte_4C2A040 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleDataDefine_TypeInfo, method);
-    byte_4B1F1BA = 1;
+    sub_1C2D490(&BattleDataDefine_TypeInfo);
+    byte_4C2A040 = 1;
   }
   if ( this->fields.flash )
     return 1;
@@ -41,31 +41,31 @@ bool __fastcall BattleComboData__AchieveAnyChain(BattleComboData_o *this, const 
 }
 
 
-bool __fastcall BattleComboData__IsTreasureDvc(BattleComboData_o *this, const MethodInfo *method)
+bool BattleComboData__IsTreasureDvc(BattleComboData_o *this, const MethodInfo *method)
 {
   return this->fields.isTreasureDvc;
 }
 
 
-void __fastcall BattleComboData__SetTreasureDvc(BattleComboData_o *this, bool flag, const MethodInfo *method)
+void BattleComboData__SetTreasureDvc(BattleComboData_o *this, bool flag, const MethodInfo *method)
 {
   this->fields.isTreasureDvc = flag;
 }
 
 
-bool __fastcall BattleComboData__isChainError(BattleComboData_o *this, const MethodInfo *method)
+bool BattleComboData__isChainError(BattleComboData_o *this, const MethodInfo *method)
 {
   return this->fields.chainError;
 }
 
 
-bool __fastcall BattleComboData__isExtraAttack(BattleComboData_o *this, const MethodInfo *method)
+bool BattleComboData__isExtraAttack(BattleComboData_o *this, const MethodInfo *method)
 {
   return this->fields.samecount > 2;
 }
 
 
-bool __fastcall BattleComboData__isGrand(BattleComboData_o *this, const MethodInfo *method)
+bool BattleComboData__isGrand(BattleComboData_o *this, const MethodInfo *method)
 {
   return this->fields.samecount >= 3 && this->fields.flash;
 }

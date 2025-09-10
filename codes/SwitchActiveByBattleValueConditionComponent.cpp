@@ -1,12 +1,12 @@
-void __fastcall SwitchActiveByBattleValueConditionComponent___ctor(
+void SwitchActiveByBattleValueConditionComponent___ctor(
         SwitchActiveByBattleValueConditionComponent_o *this,
         const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-bool __fastcall SwitchActiveByBattleValueConditionComponent__IsSatisfyCond(
+bool SwitchActiveByBattleValueConditionComponent__IsSatisfyCond(
         SwitchActiveByBattleValueConditionComponent_o *this,
         BattleData_o *data,
         const MethodInfo *method)
@@ -15,9 +15,9 @@ bool __fastcall SwitchActiveByBattleValueConditionComponent__IsSatisfyCond(
 
   value = 0;
   if ( !data )
-    sub_1BCB254(this, 0LL);
-  if ( BattleData__TryGetBattleValue(data, this->fields.BattleValKeyId, &value, 0LL) )
-    return BattleUtility__IsSatisfyValueCond(this->fields.CondType, this->fields.CondValArray, value, 0LL);
+    sub_1C2D6EC(this, 0);
+  if ( BattleData__TryGetBattleValue(data, this->fields.BattleValKeyId, &value, 0) )
+    return BattleUtility__IsSatisfyValueCond(this->fields.CondType, this->fields.CondValArray, value, 0);
   else
     return this->fields.IsSuccessNotExistKey;
 }

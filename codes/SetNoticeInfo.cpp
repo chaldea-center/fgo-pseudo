@@ -1,70 +1,66 @@
-void __fastcall SetNoticeInfo___cctor(const MethodInfo *method)
+void SetNoticeInfo___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4B1D8E6 & 1) == 0 )
+  if ( (byte_4C286EC & 1) == 0 )
   {
-    sub_1BCAFF8(&SetNoticeInfo_TypeInfo, v1);
-    byte_4B1D8E6 = 1;
+    sub_1C2D490(&SetNoticeInfo_TypeInfo);
+    byte_4C286EC = 1;
   }
   *SetNoticeInfo_TypeInfo->static_fields = (struct SetNoticeInfo_StaticFields)257;
 }
 
 
-void __fastcall SetNoticeInfo___ctor(SetNoticeInfo_o *this, const MethodInfo *method)
+void SetNoticeInfo___ctor(SetNoticeInfo_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall SetNoticeInfo__GetisApRecover(const MethodInfo *method)
+bool SetNoticeInfo__GetisApRecover(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  SetNoticeInfo_c *v2; // x0
+  SetNoticeInfo_c *v1; // x0
 
-  if ( (byte_4B1D8E3 & 1) == 0 )
+  if ( (byte_4C286E9 & 1) == 0 )
   {
-    sub_1BCAFF8(&SetNoticeInfo_TypeInfo, v1);
-    byte_4B1D8E3 = 1;
+    sub_1C2D490(&SetNoticeInfo_TypeInfo);
+    byte_4C286E9 = 1;
   }
-  v2 = SetNoticeInfo_TypeInfo;
+  v1 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SetNoticeInfo_TypeInfo);
-    v2 = SetNoticeInfo_TypeInfo;
+    v1 = SetNoticeInfo_TypeInfo;
   }
-  return v2->static_fields->isApRecover;
+  return v1->static_fields->isApRecover;
 }
 
 
-bool __fastcall SetNoticeInfo__GetisGameNotice(const MethodInfo *method)
+bool SetNoticeInfo__GetisGameNotice(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  SetNoticeInfo_c *v2; // x0
+  SetNoticeInfo_c *v1; // x0
 
-  if ( (byte_4B1D8E5 & 1) == 0 )
+  if ( (byte_4C286EB & 1) == 0 )
   {
-    sub_1BCAFF8(&SetNoticeInfo_TypeInfo, v1);
-    byte_4B1D8E5 = 1;
+    sub_1C2D490(&SetNoticeInfo_TypeInfo);
+    byte_4C286EB = 1;
   }
-  v2 = SetNoticeInfo_TypeInfo;
+  v1 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SetNoticeInfo_TypeInfo);
-    v2 = SetNoticeInfo_TypeInfo;
+    v1 = SetNoticeInfo_TypeInfo;
   }
-  return v2->static_fields->isGameNotice;
+  return v1->static_fields->isGameNotice;
 }
 
 
-void __fastcall SetNoticeInfo__SetisApRecover(bool isNotice, const MethodInfo *method)
+void SetNoticeInfo__SetisApRecover(bool isNotice, const MethodInfo *method)
 {
   SetNoticeInfo_c *v3; // x0
 
-  if ( (byte_4B1D8E2 & 1) == 0 )
+  if ( (byte_4C286E8 & 1) == 0 )
   {
-    sub_1BCAFF8(&SetNoticeInfo_TypeInfo, method);
-    byte_4B1D8E2 = 1;
+    sub_1C2D490(&SetNoticeInfo_TypeInfo);
+    byte_4C286E8 = 1;
   }
   v3 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )
@@ -76,14 +72,14 @@ void __fastcall SetNoticeInfo__SetisApRecover(bool isNotice, const MethodInfo *m
 }
 
 
-void __fastcall SetNoticeInfo__SetisGameNotice(bool isNotice, const MethodInfo *method)
+void SetNoticeInfo__SetisGameNotice(bool isNotice, const MethodInfo *method)
 {
   SetNoticeInfo_c *v3; // x0
 
-  if ( (byte_4B1D8E4 & 1) == 0 )
+  if ( (byte_4C286EA & 1) == 0 )
   {
-    sub_1BCAFF8(&SetNoticeInfo_TypeInfo, method);
-    byte_4B1D8E4 = 1;
+    sub_1C2D490(&SetNoticeInfo_TypeInfo);
+    byte_4C286EA = 1;
   }
   v3 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )

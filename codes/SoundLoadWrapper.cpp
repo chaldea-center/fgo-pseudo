@@ -1,4 +1,4 @@
-void __fastcall SoundLoadWrapper__LoadAudioAssetStorage(
+void SoundLoadWrapper__LoadAudioAssetStorage(
         SoundLoadWrapper_o *this,
         System_String_o *path,
         System_Action_o *callbackFunc,
@@ -9,35 +9,35 @@ void __fastcall SoundLoadWrapper__LoadAudioAssetStorage(
   const MethodInfo *v10; // x2
   AssetPathLoadCounter_o *pathCounter; // x0
 
-  if ( (byte_4B1B568 & 1) == 0 )
+  if ( (byte_4C26308 & 1) == 0 )
   {
-    sub_1BCAFF8(&SoundManager_TypeInfo, path);
-    byte_4B1B568 = 1;
+    sub_1C2D490(&SoundManager_TypeInfo);
+    byte_4C26308 = 1;
   }
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__loadAudioAssetStorage(path, callbackFunc, cueType, 0LL);
+  SoundManager__loadAudioAssetStorage(path, callbackFunc, cueType, 0);
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1BCB254(0LL, v9);
+    sub_1C2D6EC(0, v9);
   AssetPathLoadCounter__AddCount(pathCounter, path, v10);
 }
 
 
-void __fastcall SoundLoadWrapper__Release(SoundLoadWrapper_o *this, System_String_o *path, const MethodInfo *method)
+void SoundLoadWrapper__Release(SoundLoadWrapper_o *this, System_String_o *path, const MethodInfo *method)
 {
-  if ( (byte_4B1B569 & 1) == 0 )
+  if ( (byte_4C26309 & 1) == 0 )
   {
-    sub_1BCAFF8(&SoundManager_TypeInfo, path);
-    byte_4B1B569 = 1;
+    sub_1C2D490(&SoundManager_TypeInfo);
+    byte_4C26309 = 1;
   }
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__releaseAudioAssetStorage(path, 0LL);
+  SoundManager__releaseAudioAssetStorage(path, 0);
 }
 
 
-void __fastcall SoundLoadWrapper__ReleaseAudioAssetStorage(
+void SoundLoadWrapper__ReleaseAudioAssetStorage(
         SoundLoadWrapper_o *this,
         System_String_o *path,
         const MethodInfo *method)
@@ -46,12 +46,12 @@ void __fastcall SoundLoadWrapper__ReleaseAudioAssetStorage(
   const MethodInfo *v6; // x2
   AssetPathLoadCounter_o *pathCounter; // x0
 
-  ((void (__fastcall *)(SoundLoadWrapper_o *, System_String_o *, void *))this->klass->vtable._4_Release.method)(
+  ((void (__fastcall *)(SoundLoadWrapper_o *, System_String_o *, const MethodInfo *))this->klass->vtable._4_Release.methodPtr)(
     this,
     path,
-    this->klass[1]._1.image);
+    this->klass->vtable._4_Release.method);
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1BCB254(0LL, v5);
+    sub_1C2D6EC(0, v5);
   AssetPathLoadCounter__SubCount(pathCounter, path, v6);
 }

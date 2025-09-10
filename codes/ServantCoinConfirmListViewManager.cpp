@@ -1,116 +1,113 @@
-void __fastcall ServantCoinConfirmListViewManager___ctor(
-        ServantCoinConfirmListViewManager_o *this,
-        const MethodInfo *method)
+void ServantCoinConfirmListViewManager___ctor(ServantCoinConfirmListViewManager_o *this, const MethodInfo *method)
 {
-  ListViewManager___ctor((ListViewManager_o *)this, 0LL);
+  ListViewManager___ctor((ListViewManager_o *)this, 0);
 }
 
 
-void __fastcall ServantCoinConfirmListViewManager__CreateList(
+void ServantCoinConfirmListViewManager__CreateList(
         ServantCoinConfirmListViewManager_o *this,
         GetSvtCoin_array *svtCoins,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   UIScrollView_o *scrollView; // x0
-  __int64 v7; // x1
-  __int64 v8; // x8
-  int v9; // w24
-  int32_t v10; // w21
-  GetSvtCoin_o *v11; // x8
+  __int64 v6; // x1
+  il2cpp_array_size_t max_length; // x8
+  int v8; // w24
+  int32_t v9; // w21
+  GetSvtCoin_o *v10; // x8
   System_Collections_Generic_List_object__o *itemList; // x22
-  ListViewItem_c *v13; // d8
-  ListViewItem_o *v14; // x23
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  ListViewItem_c *v12; // d8
+  ListViewItem_o *v13; // x23
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v18; // x9
+  _QWORD *v17; // x9
   __int64 size; // x10
-  Il2CppClass **v20; // x0
-  __int64 v21; // x2
+  Il2CppClass **v19; // x0
+  __int64 v20; // x2
 
-  if ( (byte_4B1EEB8 & 1) == 0 )
+  if ( (byte_4C29C3D & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ListViewItem__Add__, svtCoins);
-    sub_1BCAFF8(&ServantCoinConfirmListViewItem_TypeInfo, v5);
-    byte_4B1EEB8 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C2D490(&ServantCoinConfirmListViewItem_TypeInfo);
+    byte_4C29C3D = 1;
   }
-  ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
+  ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   if ( !svtCoins )
     goto LABEL_17;
-  v8 = *(_QWORD *)&svtCoins->max_length;
-  v9 = v8 - 1;
-  if ( (int)v8 >= 1 )
+  max_length = svtCoins->max_length;
+  v8 = max_length - 1;
+  if ( (int)max_length >= 1 )
   {
-    v10 = 0;
+    v9 = 0;
     while ( 1 )
     {
-      v11 = svtCoins->m_Items[v10];
-      if ( !v11 )
+      v10 = svtCoins->m_Items[v9];
+      if ( !v10 )
         break;
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-      v13 = *(ListViewItem_c **)&v11->fields.itemId;
-      v14 = (ListViewItem_o *)sub_1BCB244(ServantCoinConfirmListViewItem_TypeInfo);
-      ListViewItem___ctor_42932312(v14, v10, 0LL);
-      v14[1].klass = v13;
+      v12 = *(ListViewItem_c **)&v10->fields.itemId;
+      v13 = (ListViewItem_o *)sub_1C2D6DC(ServantCoinConfirmListViewItem_TypeInfo);
+      ListViewItem___ctor_43566844(v13, v9, 0);
+      v13[1].klass = v12;
       if ( !itemList )
         break;
       items = itemList->fields._items;
-      v18 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+      v17 = Method_System_Collections_Generic_List_ListViewItem__Add__;
       ++itemList->fields._version;
       if ( !items )
         break;
       size = itemList->fields._size;
-      if ( (unsigned int)size >= items->max_length )
+      if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
-          (Il2CppObject *)v14,
-          *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+          (Il2CppObject *)v13,
+          *(const MethodInfo_3789B84 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
       }
       else
       {
-        v20 = &items->obj.klass + size;
+        v19 = &items->obj.klass + size;
         itemList->fields._size = size + 1;
-        v20[4] = (Il2CppClass *)v14;
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v14, v15, v16);
+        v19[4] = (Il2CppClass *)v13;
+        sub_1C2D434((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v13, v14, v15);
       }
-      if ( v9 == v10 )
+      if ( v8 == v9 )
         goto LABEL_15;
-      if ( ++v10 >= svtCoins->max_length )
-        sub_1BCB25C(scrollView, v7, v21);
+      if ( (unsigned int)++v9 >= LODWORD(svtCoins->max_length) )
+        sub_1C2D6F4(scrollView, v6, v20);
     }
 LABEL_17:
-    sub_1BCB254(scrollView, v7);
+    sub_1C2D6EC(scrollView, v6);
   }
 LABEL_15:
   scrollView = this->fields.scrollView;
   if ( !scrollView )
     goto LABEL_17;
-  UIScrollView__ResetPosition(scrollView, 0LL);
-  ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0LL);
+  UIScrollView__ResetPosition(scrollView, 0);
+  ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
 }
 
 
-void __fastcall ServantCoinConfirmListViewManager__SetObjectItem(
+void ServantCoinConfirmListViewManager__SetObjectItem(
         ServantCoinConfirmListViewManager_o *this,
         ListViewObject_o *obj,
         ListViewItem_o *item,
         const MethodInfo *method)
 {
-  __int64 methodPtr_low; // x10
+  __int64 naturalAligment; // x10
 
-  if ( (byte_4B1EEB9 & 1) == 0 )
+  if ( (byte_4C29C3E & 1) == 0 )
   {
-    this = (ServantCoinConfirmListViewManager_o *)sub_1BCAFF8(&ServantCoinConfirmListViewObject_TypeInfo, obj);
-    byte_4B1EEB9 = 1;
+    this = (ServantCoinConfirmListViewManager_o *)sub_1C2D490(&ServantCoinConfirmListViewObject_TypeInfo);
+    byte_4C29C3E = 1;
   }
   if ( !obj
-    || (methodPtr_low = LOBYTE(ServantCoinConfirmListViewObject_TypeInfo->vtable._0_Equals.methodPtr),
-        LOBYTE(obj->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
-    || (ServantCoinConfirmListViewObject_c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != ServantCoinConfirmListViewObject_TypeInfo )
+    || (naturalAligment = ServantCoinConfirmListViewObject_TypeInfo->_2.naturalAligment,
+        obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
+    || (ServantCoinConfirmListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != ServantCoinConfirmListViewObject_TypeInfo )
   {
-    sub_1BCB254(this, obj);
+    sub_1C2D6EC(this, obj);
   }
   ServantCoinConfirmListViewObject__SetupDisp((ServantCoinConfirmListViewObject_o *)obj, (const MethodInfo *)obj);
 }

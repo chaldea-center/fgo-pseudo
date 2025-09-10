@@ -1,19 +1,19 @@
-void __fastcall EventRewardSetMaster___ctor(EventRewardSetMaster_o *this, const MethodInfo *method)
+void EventRewardSetMaster___ctor(EventRewardSetMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C64D & 1) == 0 )
+  if ( (byte_4C273FB & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string___ctor__, method);
-    byte_4B1C64D = 1;
+    sub_1C2D490(&Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string___ctor__);
+    byte_4C273FB = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     144,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-EventRewardSetEntity_o *__fastcall EventRewardSetMaster__GetEntity(
+EventRewardSetEntity_o *EventRewardSetMaster__GetEntity(
         EventRewardSetMaster_o *this,
         int32_t rewardSetType,
         int32_t eventId,
@@ -22,23 +22,21 @@ EventRewardSetEntity_o *__fastcall EventRewardSetMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1C64B & 1) == 0 )
+  if ( (byte_4C273F9 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__GetEntity__,
-      *(_QWORD *)&rewardSetType);
-    byte_4B1C64B = 1;
+    sub_1C2D490(&Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__GetEntity__);
+    byte_4C273F9 = 1;
   }
   PK = (Il2CppObject *)EventRewardSetEntity__CreatePK(rewardSetType, eventId, id, *(const MethodInfo **)&id);
   return (EventRewardSetEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_32CC8B8 *)Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__GetEntity__);
+                                     (const MethodInfo_338C850 *)Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall EventRewardSetMaster__TryGetEntity(
+bool EventRewardSetMaster__TryGetEntity(
         EventRewardSetMaster_o *this,
         EventRewardSetEntity_o **entity,
         int32_t rewardSetType,
@@ -48,15 +46,15 @@ bool __fastcall EventRewardSetMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1C64C & 1) == 0 )
+  if ( (byte_4C273FA & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__TryGetEntity__, entity);
-    byte_4B1C64C = 1;
+    sub_1C2D490(&Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__TryGetEntity__);
+    byte_4C273FA = 1;
   }
   PK = (Il2CppObject *)EventRewardSetEntity__CreatePK(rewardSetType, eventId, id, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_EventRewardSetMaster__EventRewardSetEntity__string__TryGetEntity__);
 }

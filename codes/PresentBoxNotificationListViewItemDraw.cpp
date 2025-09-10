@@ -1,12 +1,12 @@
-void __fastcall PresentBoxNotificationListViewItemDraw___ctor(
+void PresentBoxNotificationListViewItemDraw___ctor(
         PresentBoxNotificationListViewItemDraw_o *this,
         const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall PresentBoxNotificationListViewItemDraw__SetInput(
+void PresentBoxNotificationListViewItemDraw__SetInput(
         PresentBoxNotificationListViewItemDraw_o *this,
         PresentBoxNotificationListViewItem_o *item,
         bool isInput,
@@ -16,7 +16,7 @@ void __fastcall PresentBoxNotificationListViewItemDraw__SetInput(
 }
 
 
-void __fastcall PresentBoxNotificationListViewItemDraw__SetItem(
+void PresentBoxNotificationListViewItemDraw__SetItem(
         PresentBoxNotificationListViewItemDraw_o *this,
         PresentBoxNotificationListViewItem_o *item,
         int32_t mode,
@@ -33,11 +33,11 @@ void __fastcall PresentBoxNotificationListViewItemDraw__SetItem(
     if ( !nameTextLabel )
       goto LABEL_13;
     v6 = item;
-    UILabel__set_text(nameTextLabel, item->fields.presentName, 0LL);
+    UILabel__set_text(nameTextLabel, item->fields.presentName, 0);
     nameTextLabel = this->fields.countTextLabel;
     if ( !nameTextLabel )
       goto LABEL_13;
-    UILabel__set_text(nameTextLabel, v6->fields.presentCount, 0LL);
+    UILabel__set_text(nameTextLabel, v6->fields.presentCount, 0);
     entity = v6->fields.entity;
     nameTextLabel = (UILabel_o *)this->fields.itemIcon;
     if ( entity )
@@ -49,20 +49,19 @@ void __fastcall PresentBoxNotificationListViewItemDraw__SetItem(
     }
     else
     {
-      item = 0LL;
+      item = 0;
       objectId = 0;
       if ( !nameTextLabel )
         goto LABEL_13;
     }
-    ItemIconComponent__SetGift_40107980((ItemIconComponent_o *)nameTextLabel, (int32_t)item, objectId, -1, 0, 0LL);
+    ItemIconComponent__SetGift_40700316((ItemIconComponent_o *)nameTextLabel, (int32_t)item, objectId, -1, 0, 0);
     nameTextLabel = this->fields.nameTextLabel;
     if ( !nameTextLabel
-      || (UILabel__set_text(nameTextLabel, v6->fields.presentName, 0LL),
-          (nameTextLabel = this->fields.countTextLabel) == 0LL) )
+      || (UILabel__set_text(nameTextLabel, v6->fields.presentName, 0), (nameTextLabel = this->fields.countTextLabel) == 0) )
     {
 LABEL_13:
-      sub_1BCB254(nameTextLabel, item);
+      sub_1C2D6EC(nameTextLabel, item);
     }
-    UILabel__set_text(nameTextLabel, v6->fields.presentCount, 0LL);
+    UILabel__set_text(nameTextLabel, v6->fields.presentCount, 0);
   }
 }

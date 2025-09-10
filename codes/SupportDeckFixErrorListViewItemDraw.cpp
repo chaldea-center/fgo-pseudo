@@ -1,12 +1,10 @@
-void __fastcall SupportDeckFixErrorListViewItemDraw___ctor(
-        SupportDeckFixErrorListViewItemDraw_o *this,
-        const MethodInfo *method)
+void SupportDeckFixErrorListViewItemDraw___ctor(SupportDeckFixErrorListViewItemDraw_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall SupportDeckFixErrorListViewItemDraw__SetMessage(
+void SupportDeckFixErrorListViewItemDraw__SetMessage(
         SupportDeckFixErrorListViewItemDraw_o *this,
         System_String_o *message,
         const MethodInfo *method)
@@ -15,6 +13,6 @@ void __fastcall SupportDeckFixErrorListViewItemDraw__SetMessage(
 
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
-    sub_1BCB254(0LL, message);
-  UILabel__set_text(messageLabel, message, 0LL);
+    sub_1C2D6EC(0, message);
+  UILabel__set_text(messageLabel, message, 0);
 }

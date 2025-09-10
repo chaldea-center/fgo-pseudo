@@ -1,87 +1,83 @@
-// local variable allocation has failed, the output may be wrong!
-int32_t __fastcall EnumUtility__CastToEnum_Int32Enum_(
+int32_t EnumUtility__CastToEnum_Int32Enum_(
         System_String_o *rawValue,
         int32_t defaultValue,
-        const MethodInfo_3021A68 *method)
+        const MethodInfo_30D5914 *method)
 {
-  int32_t v4; // w21
-  __int64 v6; // x1
   Il2CppType *_1_TEnum; // x22
+  System_RuntimeTypeHandle_o v7; // x0
   System_Type_o *TypeFromHandle; // x22
   Il2CppType *v9; // x21
-  System_Type_o *v10; // x21
-  Il2CppObject *v11; // x0
-  __int64 v12; // x2
-  __int64 v13; // x3
-  long double v14; // q0
-  const MethodInfo_3021A68_RGCTXs *rgctx_data; // x8
-  Il2CppObject *v16; // x19
+  System_RuntimeTypeHandle_o v10; // x0
+  System_Type_o *v11; // x21
+  Il2CppObject *v12; // x0
+  __int64 v13; // x2
+  __int64 v14; // x3
+  long double v15; // q0
+  const MethodInfo_30D5914_RGCTXs *rgctx_data; // x8
+  Il2CppObject *v17; // x19
   _QWORD *p_image; // x1
-  long double v19; // q0
-  System_RuntimeTypeHandle_o v20; // 0:w0.4
-  System_RuntimeTypeHandle_o v21; // 0:w0.4
+  long double v20; // q0
 
-  v4 = defaultValue;
   if ( !method->rgctx_data )
   {
-    sub_1BCAFF8(&System_Enum_TypeInfo, *(_QWORD *)&defaultValue);
-    sub_1BCAFF8(&System_Type_TypeInfo, v6);
+    sub_1C2D490(&System_Enum_TypeInfo);
+    sub_1C2D490(&System_Type_TypeInfo);
     if ( !method->rgctx_data )
-      sub_1C1B4B8();
+      sub_1C7DC00();
   }
-  if ( System_String__IsNullOrEmpty(rawValue, 0LL) )
-    return v4;
+  if ( System_String__IsNullOrEmpty(rawValue, 0) )
+    return defaultValue;
   _1_TEnum = method->rgctx_data->_1_TEnum;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v20.fields.value = (int)_1_TEnum;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v20, 0LL);
+  v7.fields.value = (intptr_t)_1_TEnum;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v7, 0);
   if ( !System_Enum_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
-  if ( !System_Enum__IsDefined(TypeFromHandle, (Il2CppObject *)rawValue, 0LL) )
-    return v4;
+  if ( !System_Enum__IsDefined(TypeFromHandle, (Il2CppObject *)rawValue, 0) )
+    return defaultValue;
   v9 = method->rgctx_data->_1_TEnum;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v21.fields.value = (int)v9;
-  v10 = System_Type__GetTypeFromHandle(v21, 0LL);
+  v10.fields.value = (intptr_t)v9;
+  v11 = System_Type__GetTypeFromHandle(v10, 0);
   if ( !System_Enum_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
-  v11 = System_Enum__Parse(v10, rawValue, 0LL);
+  v12 = System_Enum__Parse(v11, rawValue, 0);
   rgctx_data = method->rgctx_data;
-  v16 = v11;
+  v17 = v12;
   p_image = &rgctx_data->_0_TEnum->_1.image;
-  if ( (BYTE5(rgctx_data->_0_TEnum->vtable[0].methodPtr) & 1) == 0 )
+  if ( (*(&rgctx_data->_0_TEnum->_2.bitflags2 + 2) & 1) == 0 )
   {
-    v11 = (Il2CppObject *)sub_1C1B45C(v14);
-    p_image = &v11->klass;
+    v12 = (Il2CppObject *)sub_1C7DBA4(v15);
+    p_image = &v12->klass;
   }
-  if ( !v16 )
-    sub_1BCB254(v11, p_image);
-  if ( v16->klass->_1.element_class == (Il2CppClass *)p_image[8] )
-    return *(_DWORD *)j_il2cpp_object_unbox_0(v16, p_image, v12, v13);
-  v19 = sub_1BCB514(v16);
-  return EnumUtility__CastToEnum___Il2CppFullySharedGenericStructType_(v19);
+  if ( !v17 )
+    sub_1C2D6EC(v12, p_image);
+  if ( v17->klass->_1.element_class == (Il2CppClass *)p_image[8] )
+    return *(_DWORD *)j_il2cpp_object_unbox_0(v17, p_image, v13, v14);
+  v20 = sub_1C2D9AC(v17);
+  return EnumUtility__CastToEnum___Il2CppFullySharedGenericStructType_(v20);
 }
 
 
 void *__fastcall EnumUtility__CastToEnum___Il2CppFullySharedGenericStructType_(
         int32_t a1,
         const void *a2,
-        __int64 a3,
+        void *a3,
         __int64 a4)
 {
-  __int64 *v7; // x8
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x25
-  __int64 v11; // x20
+  intptr_t *v7; // x8
+  intptr_t v8; // x25
+  size_t v9; // x20
+  System_RuntimeTypeHandle_o v10; // x0
   System_Type_o *TypeFromHandle; // x25
-  __int64 v13; // x2
-  __int64 v14; // x3
-  __int64 v15; // x4
-  Il2CppObject *v16; // x26
-  __int64 v17; // x23
+  __int64 v12; // x2
+  __int64 v13; // x3
+  __int64 v14; // x4
+  Il2CppObject *v15; // x26
+  intptr_t v16; // x23
+  System_RuntimeTypeHandle_o v17; // x0
   System_Type_o *v18; // x23
   Il2CppObject *v19; // x0
   __int64 v20; // x2
@@ -96,149 +92,146 @@ void *__fastcall EnumUtility__CastToEnum___Il2CppFullySharedGenericStructType_(
   void *v30; // [xsp+8h] [xbp-18h]
   int32_t v31; // [xsp+14h] [xbp-Ch] BYREF
   __int64 v32; // [xsp+18h] [xbp-8h]
-  System_RuntimeTypeHandle_o v33; // 0:w0.4
-  System_RuntimeTypeHandle_o v34; // 0:w0.4
 
-  v30 = (void *)a3;
-  v32 = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
-  v7 = *(__int64 **)(a4 + 56);
+  v30 = a3;
+  v32 = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
+  v7 = *(intptr_t **)(a4 + 56);
   if ( !v7 )
   {
-    sub_1BCAFF8(&System_Enum_TypeInfo, a2);
-    sub_1BCAFF8(&int_TypeInfo, v8);
-    sub_1BCAFF8(&System_Type_TypeInfo, v9);
-    v7 = *(__int64 **)(a4 + 56);
+    sub_1C2D490(&System_Enum_TypeInfo);
+    sub_1C2D490(&int_TypeInfo);
+    sub_1C2D490(&System_Type_TypeInfo);
+    v7 = *(intptr_t **)(a4 + 56);
     if ( !v7 )
     {
-      sub_1C1B4B8();
-      v7 = *(__int64 **)(a4 + 56);
+      sub_1C7DC00();
+      v7 = *(intptr_t **)(a4 + 56);
     }
   }
-  v10 = *v7;
-  v11 = *(unsigned int *)(v7[1] + 252);
+  v8 = *v7;
+  v9 = *(unsigned int *)(v7[1] + 252);
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v33.fields.value = v10;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v33, 0LL);
+  v10.fields.value = v8;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v10, 0);
   v31 = a1;
-  v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31, v13, v14, v15);
+  v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v31, v12, v13, v14);
   if ( !System_Enum_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
-  if ( System_Enum__IsDefined(TypeFromHandle, v16, 0LL) )
+  if ( System_Enum__IsDefined(TypeFromHandle, v15, 0) )
   {
-    v17 = **(_QWORD **)(a4 + 56);
+    v16 = **(_QWORD **)(a4 + 56);
     if ( !System_Type_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-    v34.fields.value = v17;
-    v18 = System_Type__GetTypeFromHandle(v34, 0LL);
+    v17.fields.value = v16;
+    v18 = System_Type__GetTypeFromHandle(v17, 0);
     if ( !System_Enum_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
-    v19 = System_Enum__ToObject_64185360(v18, a1, 0LL);
+    v19 = System_Enum__ToObject_65194728(v18, a1, 0);
     v23 = *(_QWORD *)(a4 + 56);
     v24 = v19;
     v25 = *(Il2CppObject **)(v23 + 8);
     if ( (BYTE5(v25[19].klass) & 1) == 0 )
     {
-      v19 = (Il2CppObject *)sub_1C1B45C(v22);
+      v19 = (Il2CppObject *)sub_1C7DBA4(v22);
       v25 = v19;
     }
     if ( !v24 )
-      sub_1BCB254(v19, v25);
+      sub_1C2D6EC(v19, v25);
     if ( v24->klass->_1.element_class != v25[4].klass )
-      sub_1BCB514(v24);
+      sub_1C2D9AC(v24);
     v26 = (char *)j_il2cpp_object_unbox_0(v24, v25, v20, v21);
     v27 = v30;
   }
   else
   {
-    memcpy((char *)&v29 - ((v11 + 15) & 0x1FFFFFFF0LL), a2, v11);
+    memcpy((char *)&v29 - ((v9 + 15) & 0x1FFFFFFF0LL), a2, v9);
     v27 = v30;
-    v26 = (char *)&v29 - ((v11 + 15) & 0x1FFFFFFF0LL);
+    v26 = (char *)&v29 - ((v9 + 15) & 0x1FFFFFFF0LL);
   }
-  return memcpy(v27, v26, v11);
+  return memcpy(v27, v26, v9);
 }
 
 
-void *__fastcall EnumUtility__CastToEnum___Il2CppFullySharedGenericStructType__50470356(
+void *__fastcall EnumUtility__CastToEnum___Il2CppFullySharedGenericStructType__51207296(
         System_String_o *a1,
         const void *a2,
         void *a3,
         __int64 a4)
 {
   __int64 v7; // x8
-  __int64 v9; // x1
-  __int64 v10; // x20
-  __int64 v11; // x25
+  size_t v9; // x20
+  intptr_t v10; // x25
+  System_RuntimeTypeHandle_o v11; // x0
   System_Type_o *TypeFromHandle; // x25
-  __int64 v13; // x23
-  System_Type_o *v14; // x23
-  Il2CppObject *v15; // x0
-  __int64 v16; // x2
-  __int64 v17; // x3
-  long double v18; // q0
-  Il2CppObject **v19; // x8
-  Il2CppObject *v20; // x21
-  Il2CppObject *v21; // x1
-  char *v22; // x1
-  void *v23; // x0
-  _QWORD v25[2]; // [xsp+0h] [xbp-10h] BYREF
-  System_RuntimeTypeHandle_o v26; // 0:w0.4
-  System_RuntimeTypeHandle_o v27; // 0:w0.4
+  intptr_t v13; // x23
+  System_RuntimeTypeHandle_o v14; // x0
+  System_Type_o *v15; // x23
+  Il2CppObject *v16; // x0
+  __int64 v17; // x2
+  __int64 v18; // x3
+  long double v19; // q0
+  Il2CppObject **v20; // x8
+  Il2CppObject *v21; // x21
+  Il2CppObject *v22; // x1
+  char *v23; // x1
+  void *v24; // x0
+  _QWORD v26[2]; // [xsp+0h] [xbp-10h] BYREF
 
-  v25[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  v26[1] = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
   v7 = *(_QWORD *)(a4 + 56);
   if ( !v7 )
   {
-    sub_1BCAFF8(&System_Enum_TypeInfo, a2);
-    sub_1BCAFF8(&System_Type_TypeInfo, v9);
+    sub_1C2D490(&System_Enum_TypeInfo);
+    sub_1C2D490(&System_Type_TypeInfo);
     v7 = *(_QWORD *)(a4 + 56);
     if ( !v7 )
     {
-      sub_1C1B4B8();
+      sub_1C7DC00();
       v7 = *(_QWORD *)(a4 + 56);
     }
   }
-  v10 = *(unsigned int *)(*(_QWORD *)v7 + 252LL);
-  if ( System_String__IsNullOrEmpty(a1, 0LL) )
+  v9 = *(unsigned int *)(*(_QWORD *)v7 + 252LL);
+  if ( System_String__IsNullOrEmpty(a1, 0) )
     goto LABEL_19;
-  v11 = *(_QWORD *)(*(_QWORD *)(a4 + 56) + 8LL);
+  v10 = *(_QWORD *)(*(_QWORD *)(a4 + 56) + 8LL);
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-  v26.fields.value = v11;
-  TypeFromHandle = System_Type__GetTypeFromHandle(v26, 0LL);
+  v11.fields.value = v10;
+  TypeFromHandle = System_Type__GetTypeFromHandle(v11, 0);
   if ( !System_Enum_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
-  if ( !System_Enum__IsDefined(TypeFromHandle, (Il2CppObject *)a1, 0LL) )
+  if ( !System_Enum__IsDefined(TypeFromHandle, (Il2CppObject *)a1, 0) )
   {
 LABEL_19:
-    memcpy((char *)v25 - ((v10 + 15) & 0x1FFFFFFF0LL), a2, v10);
-    v23 = a3;
-    v22 = (char *)v25 - ((v10 + 15) & 0x1FFFFFFF0LL);
+    memcpy((char *)v26 - ((v9 + 15) & 0x1FFFFFFF0LL), a2, v9);
+    v24 = a3;
+    v23 = (char *)v26 - ((v9 + 15) & 0x1FFFFFFF0LL);
   }
   else
   {
     v13 = *(_QWORD *)(*(_QWORD *)(a4 + 56) + 8LL);
     if ( !System_Type_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-    v27.fields.value = v13;
-    v14 = System_Type__GetTypeFromHandle(v27, 0LL);
+    v14.fields.value = v13;
+    v15 = System_Type__GetTypeFromHandle(v14, 0);
     if ( !System_Enum_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
-    v15 = System_Enum__Parse(v14, a1, 0LL);
-    v19 = *(Il2CppObject ***)(a4 + 56);
-    v20 = v15;
-    v21 = *v19;
-    if ( (BYTE5((*v19)[19].klass) & 1) == 0 )
+    v16 = System_Enum__Parse(v15, a1, 0);
+    v20 = *(Il2CppObject ***)(a4 + 56);
+    v21 = v16;
+    v22 = *v20;
+    if ( (BYTE5((*v20)[19].klass) & 1) == 0 )
     {
-      v15 = (Il2CppObject *)sub_1C1B45C(v18);
-      v21 = v15;
+      v16 = (Il2CppObject *)sub_1C7DBA4(v19);
+      v22 = v16;
     }
-    if ( !v20 )
-      sub_1BCB254(v15, v21);
-    if ( v20->klass->_1.element_class != v21[4].klass )
-      sub_1BCB514(v20);
-    v22 = (char *)j_il2cpp_object_unbox_0(v20, v21, v16, v17);
-    v23 = a3;
+    if ( !v21 )
+      sub_1C2D6EC(v16, v22);
+    if ( v21->klass->_1.element_class != v22[4].klass )
+      sub_1C2D9AC(v21);
+    v23 = (char *)j_il2cpp_object_unbox_0(v21, v22, v17, v18);
+    v24 = a3;
   }
-  return memcpy(v23, v22, v10);
+  return memcpy(v24, v23, v9);
 }

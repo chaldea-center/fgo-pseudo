@@ -1,4 +1,4 @@
-void __fastcall ScriptSelectListViewItem___ctor(
+void ScriptSelectListViewItem___ctor(
         ScriptSelectListViewItem_o *this,
         int32_t index,
         System_String_o *message,
@@ -10,44 +10,38 @@ void __fastcall ScriptSelectListViewItem___ctor(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   this->fields.message = message;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.message, (int32_t)message, v8, v9);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.message, (int32_t)message, v8, v9);
   this->fields.fontType = fontType;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.fontType, (int32_t)fontType, v10, v11);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.fontType, (int32_t)fontType, v10, v11);
 }
 
 
-void __fastcall ScriptSelectListViewItem__Finalize(ScriptSelectListViewItem_o *this, const MethodInfo *method)
+void ScriptSelectListViewItem__Finalize(ScriptSelectListViewItem_o *this, const MethodInfo *method)
 {
-  ListViewItem__Finalize((ListViewItem_o *)this, 0LL);
+  ListViewItem__Finalize((ListViewItem_o *)this, 0);
 }
 
 
-System_String_o *__fastcall ScriptSelectListViewItem__ToString(
-        ScriptSelectListViewItem_o *this,
-        const MethodInfo *method)
+System_String_o *ScriptSelectListViewItem__ToString(ScriptSelectListViewItem_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1E4C5 & 1) == 0 )
+  if ( (byte_4C292DC & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_21347/*"message "*/, method);
-    byte_4B1E4C5 = 1;
+    sub_1C2D490(&StringLiteral_21524/*"message "*/);
+    byte_4C292DC = 1;
   }
-  return System_String__Concat_62450424((System_String_o *)StringLiteral_21347/*"message "*/, this->fields.message, 0LL);
+  return System_String__Concat_63457864((System_String_o *)StringLiteral_21524/*"message "*/, this->fields.message, 0);
 }
 
 
-UnityEngine_Font_o *__fastcall ScriptSelectListViewItem__get_FontType(
-        ScriptSelectListViewItem_o *this,
-        const MethodInfo *method)
+UnityEngine_Font_o *ScriptSelectListViewItem__get_FontType(ScriptSelectListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields.fontType;
 }
 
 
-System_String_o *__fastcall ScriptSelectListViewItem__get_MessageText(
-        ScriptSelectListViewItem_o *this,
-        const MethodInfo *method)
+System_String_o *ScriptSelectListViewItem__get_MessageText(ScriptSelectListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields.message;
 }

@@ -1,4 +1,4 @@
-void __fastcall SupportSelectDeckListViewItem___ctor(
+void SupportSelectDeckListViewItem___ctor(
         SupportSelectDeckListViewItem_o *this,
         SupportServantData_o *data,
         int32_t index,
@@ -15,16 +15,16 @@ void __fastcall SupportSelectDeckListViewItem___ctor(
   v7 = this;
   v8 = isSameKind;
   v9 = isPossibleCopy;
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   v7->fields.supportData = data;
-  v7 = (SupportSelectDeckListViewItem_o *)((char *)v7 + 112);
-  sub_1BCAF9C((CGThumbnailListItem_o *)v7, (int32_t)data, v10, v11);
+  v7 = (SupportSelectDeckListViewItem_o *)((char *)v7 + 120);
+  sub_1C2D434((CGThumbnailListItem_o *)v7, (int32_t)data, v10, v11);
   LOBYTE(v7->monitor) = v8;
   BYTE1(v7->monitor) = v9;
 }
 
 
-SupportServantData_o *__fastcall SupportSelectDeckListViewItem__GetSupportData(
+SupportServantData_o *SupportSelectDeckListViewItem__GetSupportData(
         SupportSelectDeckListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -32,7 +32,7 @@ SupportServantData_o *__fastcall SupportSelectDeckListViewItem__GetSupportData(
 }
 
 
-bool __fastcall SupportSelectDeckListViewItem__get_IsPossibleSelect(
+bool SupportSelectDeckListViewItem__get_IsPossibleSelect(
         SupportSelectDeckListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -40,9 +40,7 @@ bool __fastcall SupportSelectDeckListViewItem__get_IsPossibleSelect(
 }
 
 
-bool __fastcall SupportSelectDeckListViewItem__get_IsSameKind(
-        SupportSelectDeckListViewItem_o *this,
-        const MethodInfo *method)
+bool SupportSelectDeckListViewItem__get_IsSameKind(SupportSelectDeckListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields.isSameKind;
 }

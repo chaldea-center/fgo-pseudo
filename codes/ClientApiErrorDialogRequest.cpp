@@ -1,10 +1,10 @@
-void __fastcall ClientApiErrorDialogRequest___ctor(ClientApiErrorDialogRequest_o *this, const MethodInfo *method)
+void ClientApiErrorDialogRequest___ctor(ClientApiErrorDialogRequest_o *this, const MethodInfo *method)
 {
-  RequestBase___ctor((RequestBase_o *)this, 0LL);
+  RequestBase___ctor((RequestBase_o *)this, 0);
 }
 
 
-void __fastcall ClientApiErrorDialogRequest__beginRequest(
+void ClientApiErrorDialogRequest__beginRequest(
         ClientApiErrorDialogRequest_o *this,
         System_String_o *errorTitle,
         System_String_o *errorMessage,
@@ -12,90 +12,82 @@ void __fastcall ClientApiErrorDialogRequest__beginRequest(
         bool isSendLogDetail,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
+  __int64 v11; // x0
   __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x0
-  __int64 v15; // x1
-  System_String_o *v16; // x2
+  System_String_o *v13; // x2
 
-  if ( (byte_4B1DF4E & 1) == 0 )
+  if ( (byte_4C28D60 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18904/*"errorMessage"*/, errorTitle);
-    sub_1BCAFF8(&StringLiteral_21147/*"logDetail"*/, v11);
-    sub_1BCAFF8(&StringLiteral_18905/*"errorTitle"*/, v12);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v13);
-    byte_4B1DF4E = 1;
+    sub_1C2D490(&StringLiteral_19060/*"errorMessage"*/);
+    sub_1C2D490(&StringLiteral_21324/*"logDetail"*/);
+    sub_1C2D490(&StringLiteral_19061/*"errorTitle"*/);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C28D60 = 1;
   }
-  RequestBase__addField_43348616((RequestBase_o *)this, (System_String_o *)StringLiteral_18905/*"errorTitle"*/, errorTitle, 0LL);
-  RequestBase__addField_43348616((RequestBase_o *)this, (System_String_o *)StringLiteral_18904/*"errorMessage"*/, errorMessage, 0LL);
+  RequestBase__addField_44009064((RequestBase_o *)this, (System_String_o *)StringLiteral_19061/*"errorTitle"*/, errorTitle, 0);
+  RequestBase__addField_44009064((RequestBase_o *)this, (System_String_o *)StringLiteral_19060/*"errorMessage"*/, errorMessage, 0);
   if ( !this )
-    sub_1BCB254(v14, v15);
+    sub_1C2D6EC(v11, v12);
   if ( isSendLogDetail )
-    v16 = logDetail;
+    v13 = logDetail;
   else
-    v16 = (System_String_o *)StringLiteral_1/*""*/;
-  RequestBase__addField_43348616((RequestBase_o *)this, (System_String_o *)StringLiteral_21147/*"logDetail"*/, v16, 0LL);
-  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
+    v13 = (System_String_o *)StringLiteral_1/*""*/;
+  RequestBase__addField_44009064((RequestBase_o *)this, (System_String_o *)StringLiteral_21324/*"logDetail"*/, v13, 0);
+  RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
 
-System_String_o *__fastcall ClientApiErrorDialogRequest__getMockData(
+System_String_o *ClientApiErrorDialogRequest__getMockData(
         ClientApiErrorDialogRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1DF4D & 1) == 0 )
+  if ( (byte_4C28D5F & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1/*""*/, method);
-    byte_4B1DF4D = 1;
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C28D5F = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
-System_String_o *__fastcall ClientApiErrorDialogRequest__getURL(
-        ClientApiErrorDialogRequest_o *this,
-        const MethodInfo *method)
+System_String_o *ClientApiErrorDialogRequest__getURL(ClientApiErrorDialogRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B1DF4C & 1) == 0 )
+  if ( (byte_4C28D5E & 1) == 0 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_4463/*"ClientApi/ErrorDialog"*/, v2);
-    byte_4B1DF4C = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_4492/*"ClientApi/ErrorDialog"*/);
+    byte_4C28D5E = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_4463/*"ClientApi/ErrorDialog"*/, 0LL);
+  BaseUrl = NetworkManager__getBaseUrl(1, 0);
+  return System_String__Concat_63457864(BaseUrl, (System_String_o *)StringLiteral_4492/*"ClientApi/ErrorDialog"*/, 0);
 }
 
 
-void __fastcall ClientApiErrorDialogRequest__requestCompleted(
+void ClientApiErrorDialogRequest__requestCompleted(
         ClientApiErrorDialogRequest_o *this,
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  __int64 *v8; // x8
+  ResponseData_o *v5; // x0
+  __int64 *v6; // x8
 
-  if ( (byte_4B1DF4F & 1) == 0 )
+  if ( (byte_4C28D61 & 1) == 0 )
   {
-    sub_1BCAFF8(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1BCAFF8(&StringLiteral_22181/*"ok"*/, v5);
-    sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v6);
-    byte_4B1DF4F = 1;
+    sub_1C2D490(&ResponseCommandKind_TypeInfo);
+    sub_1C2D490(&StringLiteral_22362/*"ok"*/);
+    sub_1C2D490(&StringLiteral_22195/*"ng"*/);
+    byte_4C28D61 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(118, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_43347888(v7, 0LL) )
-    v8 = &StringLiteral_22181/*"ok"*/;
+  v5 = ResponseCommandKind__SearchData(118, responseList, 0);
+  if ( v5 && ResponseData__checkError_44004292(v5, 0) )
+    v6 = &StringLiteral_22362/*"ok"*/;
   else
-    v8 = &StringLiteral_22015/*"ng"*/;
-  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
+    v6 = &StringLiteral_22195/*"ng"*/;
+  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0);
 }

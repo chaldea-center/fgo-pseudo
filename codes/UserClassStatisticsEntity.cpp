@@ -1,37 +1,36 @@
-void __fastcall UserClassStatisticsEntity___ctor(UserClassStatisticsEntity_o *this, const MethodInfo *method)
+void UserClassStatisticsEntity___ctor(UserClassStatisticsEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D7AB & 1) == 0 )
+  if ( (byte_4C285AF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D7AB = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C285AF = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall UserClassStatisticsEntity__CreatePK(
+System_String_o *UserClassStatisticsEntity__CreatePK(
         int64_t userId,
         int32_t classId,
         int32_t type,
         const MethodInfo *method)
 {
-  if ( (byte_4B1D7AA & 1) == 0 )
+  if ( (byte_4C285AE & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&classId);
-    byte_4B1D7AA = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4C285AE = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            classId,
            type,
-           (const MethodInfo_3019278 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_30CD124 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
-System_String_o *__fastcall UserClassStatisticsEntity__CreatePrimaryKey(
+System_String_o *UserClassStatisticsEntity__CreatePrimaryKey(
         UserClassStatisticsEntity_o *this,
         const MethodInfo *method)
 {

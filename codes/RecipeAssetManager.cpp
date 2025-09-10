@@ -1,107 +1,101 @@
-void __fastcall RecipeAssetManager___ctor(RecipeAssetManager_o *this, const MethodInfo *method)
+void RecipeAssetManager___ctor(RecipeAssetManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x0
-  __int64 v5; // x1
-  __int64 v6; // x2
-  struct System_String_array *v7; // x20
+  __int64 v3; // x0
+  __int64 v4; // x1
+  __int64 v5; // x2
+  struct System_String_array *v6; // x20
 
-  if ( (byte_4B16C1E & 1) == 0 )
+  if ( (byte_4C2191D & 1) == 0 )
   {
-    sub_1BCAFF8(&string___TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_6221/*"EventUI/Prefabs/80391"*/, v3);
-    byte_4B16C1E = 1;
+    sub_1C2D490(&string___TypeInfo);
+    sub_1C2D490(&StringLiteral_6263/*"EventUI/Prefabs/80391"*/);
+    byte_4C2191D = 1;
   }
-  v4 = sub_1BCB0A0(string___TypeInfo, 1LL);
-  if ( !v4 )
-    sub_1BCB254(0LL, v5);
-  v7 = (struct System_String_array *)v4;
-  if ( !*(_DWORD *)(v4 + 24) )
-    sub_1BCB25C(v4, v5, v6);
-  *(_QWORD *)(v4 + 32) = StringLiteral_6221/*"EventUI/Prefabs/80391"*/;
-  sub_1BCAF9C(v4 + 32);
-  this->fields.loadAssetNames = v7;
-  sub_1BCAF9C(&this->fields.loadAssetNames);
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  v3 = sub_1C2D538(string___TypeInfo, 1);
+  if ( !v3 )
+    sub_1C2D6EC(0, v4);
+  v6 = (struct System_String_array *)v3;
+  if ( !*(_DWORD *)(v3 + 24) )
+    sub_1C2D6F4(v3, v4, v5);
+  *(_QWORD *)(v3 + 32) = StringLiteral_6263/*"EventUI/Prefabs/80391"*/;
+  sub_1C2D434(v3 + 32);
+  this->fields.loadAssetNames = v6;
+  sub_1C2D434(&this->fields.loadAssetNames);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall RecipeAssetManager__GetAssets(
+void RecipeAssetManager__GetAssets(
         RecipeAssetManager_o *this,
         int32_t eventId,
         System_Action_o *finishCallback,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v7; // x22
+  __int64 v8; // x0
   __int64 v9; // x1
-  __int64 v10; // x22
-  __int64 v11; // x0
-  __int64 v12; // x1
-  __int64 v13; // x2
+  __int64 v10; // x2
   struct System_String_array *loadAssetNames; // x8
-  System_String_o *v15; // x19
-  AssetLoader_LoadEndDataHandler_o *v16; // x20
+  System_String_o *v12; // x19
+  AssetLoader_LoadEndDataHandler_o *v13; // x20
 
-  if ( (byte_4B16C1C & 1) == 0 )
+  if ( (byte_4C2191B & 1) == 0 )
   {
-    sub_1BCAFF8(&AssetManager_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BCAFF8(&AssetLoader_LoadEndDataHandler_TypeInfo, v7);
-    sub_1BCAFF8(&Method_RecipeAssetManager___c__DisplayClass17_0__GetAssets_b__0__, v8);
-    sub_1BCAFF8(&RecipeAssetManager___c__DisplayClass17_0_TypeInfo, v9);
-    byte_4B16C1C = 1;
+    sub_1C2D490(&AssetManager_TypeInfo);
+    sub_1C2D490(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C2D490(&Method_RecipeAssetManager___c__DisplayClass17_0__GetAssets_b__0__);
+    sub_1C2D490(&RecipeAssetManager___c__DisplayClass17_0_TypeInfo);
+    byte_4C2191B = 1;
   }
-  v10 = sub_1BCB244(RecipeAssetManager___c__DisplayClass17_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v10, 0LL);
-  if ( !v10
-    || (*(_QWORD *)(v10 + 16) = this,
-        sub_1BCAF9C(v10 + 16),
-        *(_QWORD *)(v10 + 32) = finishCallback,
-        *(_DWORD *)(v10 + 24) = eventId,
-        v11 = sub_1BCAF9C(v10 + 32),
-        (loadAssetNames = this->fields.loadAssetNames) == 0LL) )
+  v7 = sub_1C2D6DC(RecipeAssetManager___c__DisplayClass17_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0);
+  if ( !v7
+    || (*(_QWORD *)(v7 + 16) = this,
+        sub_1C2D434(v7 + 16),
+        *(_QWORD *)(v7 + 32) = finishCallback,
+        *(_DWORD *)(v7 + 24) = eventId,
+        v8 = sub_1C2D434(v7 + 32),
+        (loadAssetNames = this->fields.loadAssetNames) == 0) )
   {
-    sub_1BCB254(v11, v12);
+    sub_1C2D6EC(v8, v9);
   }
-  if ( !loadAssetNames->max_length )
-    sub_1BCB25C(v11, v12, v13);
-  v15 = loadAssetNames->m_Items[0];
-  v16 = (AssetLoader_LoadEndDataHandler_o *)sub_1BCB244(AssetLoader_LoadEndDataHandler_TypeInfo);
+  if ( !LODWORD(loadAssetNames->max_length) )
+    sub_1C2D6F4(v8, v9, v10);
+  v12 = loadAssetNames->m_Items[0];
+  v13 = (AssetLoader_LoadEndDataHandler_o *)sub_1C2D6DC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v16,
-    (Il2CppObject *)v10,
+    v13,
+    (Il2CppObject *)v7,
     Method_RecipeAssetManager___c__DisplayClass17_0__GetAssets_b__0__,
-    0LL);
+    0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(v15, v16, 1, 0LL);
+  AssetManager__loadAssetStorage(v12, v13, 1, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall RecipeAssetManager__Release(RecipeAssetManager_o *this, int32_t eventId, const MethodInfo *method)
+void RecipeAssetManager__Release(RecipeAssetManager_o *this, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_4B16C1D & 1) == 0 )
+  if ( (byte_4C2191C & 1) == 0 )
   {
-    sub_1BCAFF8(&AtlasManager_TypeInfo, *(_QWORD *)&eventId);
-    byte_4B16C1D = 1;
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    byte_4C2191C = 1;
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__ReleaseEventUI_39794596(eventId, 0LL);
-  this->fields._recipeRewardDialog_k__BackingField = 0LL;
-  sub_1BCAF9C(&this->fields);
-  this->fields._recipePointRewardDialog_k__BackingField = 0LL;
-  sub_1BCAF9C(&this->fields._recipePointRewardDialog_k__BackingField);
-  this->fields._recipeConfirmDialog_k__BackingField = 0LL;
-  sub_1BCAF9C(&this->fields._recipeConfirmDialog_k__BackingField);
-  this->fields._recipeDropEffetct_k__BackingField = 0LL;
-  sub_1BCAF9C(&this->fields._recipeDropEffetct_k__BackingField);
+  AtlasManager__ReleaseEventUI_40385248(eventId, 0);
+  this->fields._recipeRewardDialog_k__BackingField = 0;
+  sub_1C2D434(&this->fields);
+  this->fields._recipePointRewardDialog_k__BackingField = 0;
+  sub_1C2D434(&this->fields._recipePointRewardDialog_k__BackingField);
+  this->fields._recipeConfirmDialog_k__BackingField = 0;
+  sub_1C2D434(&this->fields._recipeConfirmDialog_k__BackingField);
+  this->fields._recipeDropEffetct_k__BackingField = 0;
+  sub_1C2D434(&this->fields._recipeDropEffetct_k__BackingField);
 }
 
 
-UnityEngine_GameObject_o *__fastcall RecipeAssetManager__get_recipeConfirmDialog(
+UnityEngine_GameObject_o *RecipeAssetManager__get_recipeConfirmDialog(
         RecipeAssetManager_o *this,
         const MethodInfo *method)
 {
@@ -109,7 +103,7 @@ UnityEngine_GameObject_o *__fastcall RecipeAssetManager__get_recipeConfirmDialog
 }
 
 
-UnityEngine_GameObject_o *__fastcall RecipeAssetManager__get_recipeDropEffetct(
+UnityEngine_GameObject_o *RecipeAssetManager__get_recipeDropEffetct(
         RecipeAssetManager_o *this,
         const MethodInfo *method)
 {
@@ -117,7 +111,7 @@ UnityEngine_GameObject_o *__fastcall RecipeAssetManager__get_recipeDropEffetct(
 }
 
 
-UnityEngine_GameObject_o *__fastcall RecipeAssetManager__get_recipePointRewardDialog(
+UnityEngine_GameObject_o *RecipeAssetManager__get_recipePointRewardDialog(
         RecipeAssetManager_o *this,
         const MethodInfo *method)
 {
@@ -125,7 +119,7 @@ UnityEngine_GameObject_o *__fastcall RecipeAssetManager__get_recipePointRewardDi
 }
 
 
-UnityEngine_GameObject_o *__fastcall RecipeAssetManager__get_recipeRewardDialog(
+UnityEngine_GameObject_o *RecipeAssetManager__get_recipeRewardDialog(
         RecipeAssetManager_o *this,
         const MethodInfo *method)
 {
@@ -133,147 +127,140 @@ UnityEngine_GameObject_o *__fastcall RecipeAssetManager__get_recipeRewardDialog(
 }
 
 
-void __fastcall RecipeAssetManager__set_recipeConfirmDialog(
+void RecipeAssetManager__set_recipeConfirmDialog(
         RecipeAssetManager_o *this,
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
 {
   this->fields._recipeConfirmDialog_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._recipeConfirmDialog_k__BackingField);
+  sub_1C2D434(&this->fields._recipeConfirmDialog_k__BackingField);
 }
 
 
-void __fastcall RecipeAssetManager__set_recipeDropEffetct(
+void RecipeAssetManager__set_recipeDropEffetct(
         RecipeAssetManager_o *this,
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
 {
   this->fields._recipeDropEffetct_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._recipeDropEffetct_k__BackingField);
+  sub_1C2D434(&this->fields._recipeDropEffetct_k__BackingField);
 }
 
 
-void __fastcall RecipeAssetManager__set_recipePointRewardDialog(
+void RecipeAssetManager__set_recipePointRewardDialog(
         RecipeAssetManager_o *this,
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
 {
   this->fields._recipePointRewardDialog_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._recipePointRewardDialog_k__BackingField);
+  sub_1C2D434(&this->fields._recipePointRewardDialog_k__BackingField);
 }
 
 
-void __fastcall RecipeAssetManager__set_recipeRewardDialog(
+void RecipeAssetManager__set_recipeRewardDialog(
         RecipeAssetManager_o *this,
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
 {
   this->fields._recipeRewardDialog_k__BackingField = value;
-  sub_1BCAF9C(&this->fields);
+  sub_1C2D434(&this->fields);
 }
 
 
-void __fastcall RecipeAssetManager___c__DisplayClass17_0___ctor(
+void RecipeAssetManager___c__DisplayClass17_0___ctor(
         RecipeAssetManager___c__DisplayClass17_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall RecipeAssetManager___c__DisplayClass17_0___GetAssets_b__0(
+void RecipeAssetManager___c__DisplayClass17_0___GetAssets_b__0(
         RecipeAssetManager___c__DisplayClass17_0_o *this,
         AssetData_o *assetData,
         const MethodInfo *method)
 {
   RecipeAssetManager___c__DisplayClass17_0_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   struct RecipeAssetManager_o *_4__this; // x21
-  struct RecipeAssetManager_o *v13; // x21
-  struct RecipeAssetManager_o *v14; // x21
-  struct RecipeAssetManager_o *v15; // x21
+  struct RecipeAssetManager_o *v6; // x21
+  struct RecipeAssetManager_o *v7; // x21
+  struct RecipeAssetManager_o *v8; // x21
   System_Action_o *_9__1; // x21
   int32_t eventId; // w20
 
   v4 = this;
-  if ( (byte_4B16C1F & 1) == 0 )
+  if ( (byte_4C2191E & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, assetData);
-    sub_1BCAFF8(&Method_AssetData_GetObject_GameObject____76915336, v5);
-    sub_1BCAFF8(&AtlasManager_TypeInfo, v6);
-    sub_1BCAFF8(&Method_RecipeAssetManager___c__DisplayClass17_0__GetAssets_b__1__, v7);
-    sub_1BCAFF8(&StringLiteral_11120/*"RecipeRewardDialog"*/, v8);
-    sub_1BCAFF8(&StringLiteral_18706/*"ef_treasure_drop"*/, v9);
-    sub_1BCAFF8(&StringLiteral_11119/*"RecipePointRewardDialog"*/, v10);
-    this = (RecipeAssetManager___c__DisplayClass17_0_o *)sub_1BCAFF8(&StringLiteral_6192/*"EventRecipeConfirmDialog"*/, v11);
-    byte_4B16C1F = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_AssetData_GetObject_GameObject____77994080);
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&Method_RecipeAssetManager___c__DisplayClass17_0__GetAssets_b__1__);
+    sub_1C2D490(&StringLiteral_11217/*"RecipeRewardDialog"*/);
+    sub_1C2D490(&StringLiteral_18859/*"ef_treasure_drop"*/);
+    sub_1C2D490(&StringLiteral_11216/*"RecipePointRewardDialog"*/);
+    this = (RecipeAssetManager___c__DisplayClass17_0_o *)sub_1C2D490(&StringLiteral_6235/*"EventRecipeConfirmDialog"*/);
+    byte_4C2191E = 1;
   }
   if ( !assetData )
     goto LABEL_13;
   _4__this = v4->fields.__4__this;
-  this = (RecipeAssetManager___c__DisplayClass17_0_o *)AssetData__GetObject_object__50315216(
+  this = (RecipeAssetManager___c__DisplayClass17_0_o *)AssetData__GetObject_object__51051712(
                                                          assetData,
-                                                         (System_String_o *)StringLiteral_11120/*"RecipeRewardDialog"*/,
-                                                         (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
+                                                         (System_String_o *)StringLiteral_11217/*"RecipeRewardDialog"*/,
+                                                         (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080);
   if ( !_4__this )
     goto LABEL_13;
   _4__this->fields._recipeRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1BCAF9C(&_4__this->fields);
-  v13 = v4->fields.__4__this;
-  this = (RecipeAssetManager___c__DisplayClass17_0_o *)AssetData__GetObject_object__50315216(
+  sub_1C2D434(&_4__this->fields);
+  v6 = v4->fields.__4__this;
+  this = (RecipeAssetManager___c__DisplayClass17_0_o *)AssetData__GetObject_object__51051712(
                                                          assetData,
-                                                         (System_String_o *)StringLiteral_11119/*"RecipePointRewardDialog"*/,
-                                                         (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
-  if ( !v13 )
+                                                         (System_String_o *)StringLiteral_11216/*"RecipePointRewardDialog"*/,
+                                                         (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080);
+  if ( !v6 )
     goto LABEL_13;
-  v13->fields._recipePointRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1BCAF9C(&v13->fields._recipePointRewardDialog_k__BackingField);
-  v14 = v4->fields.__4__this;
-  this = (RecipeAssetManager___c__DisplayClass17_0_o *)AssetData__GetObject_object__50315216(
+  v6->fields._recipePointRewardDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2D434(&v6->fields._recipePointRewardDialog_k__BackingField);
+  v7 = v4->fields.__4__this;
+  this = (RecipeAssetManager___c__DisplayClass17_0_o *)AssetData__GetObject_object__51051712(
                                                          assetData,
-                                                         (System_String_o *)StringLiteral_6192/*"EventRecipeConfirmDialog"*/,
-                                                         (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
-  if ( !v14
-    || (v14->fields._recipeConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this,
-        sub_1BCAF9C(&v14->fields._recipeConfirmDialog_k__BackingField),
-        v15 = v4->fields.__4__this,
-        this = (RecipeAssetManager___c__DisplayClass17_0_o *)AssetData__GetObject_object__50315216(
+                                                         (System_String_o *)StringLiteral_6235/*"EventRecipeConfirmDialog"*/,
+                                                         (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080);
+  if ( !v7
+    || (v7->fields._recipeConfirmDialog_k__BackingField = (struct UnityEngine_GameObject_o *)this,
+        sub_1C2D434(&v7->fields._recipeConfirmDialog_k__BackingField),
+        v8 = v4->fields.__4__this,
+        this = (RecipeAssetManager___c__DisplayClass17_0_o *)AssetData__GetObject_object__51051712(
                                                                assetData,
-                                                               (System_String_o *)StringLiteral_18706/*"ef_treasure_drop"*/,
-                                                               (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336),
-        !v15) )
+                                                               (System_String_o *)StringLiteral_18859/*"ef_treasure_drop"*/,
+                                                               (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080),
+        !v8) )
   {
 LABEL_13:
-    sub_1BCB254(this, assetData);
+    sub_1C2D6EC(this, assetData);
   }
-  v15->fields._recipeDropEffetct_k__BackingField = (struct UnityEngine_GameObject_o *)this;
-  sub_1BCAF9C(&v15->fields._recipeDropEffetct_k__BackingField);
+  v8->fields._recipeDropEffetct_k__BackingField = (struct UnityEngine_GameObject_o *)this;
+  sub_1C2D434(&v8->fields._recipeDropEffetct_k__BackingField);
   _9__1 = v4->fields.__9__1;
   eventId = v4->fields.eventId;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v4,
       Method_RecipeAssetManager___c__DisplayClass17_0__GetAssets_b__1__,
-      0LL);
+      0);
     v4->fields.__9__1 = _9__1;
-    sub_1BCAF9C(&v4->fields.__9__1);
+    sub_1C2D434(&v4->fields.__9__1);
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadEventUI_39794424(eventId, _9__1, 1, 0LL);
+  AtlasManager__LoadEventUI_40385076(eventId, _9__1, 1, 0);
 }
 
 
-void __fastcall RecipeAssetManager___c__DisplayClass17_0___GetAssets_b__1(
+void RecipeAssetManager___c__DisplayClass17_0___GetAssets_b__1(
         RecipeAssetManager___c__DisplayClass17_0_o *this,
         const MethodInfo *method)
 {
@@ -281,5 +268,5 @@ void __fastcall RecipeAssetManager___c__DisplayClass17_0___GetAssets_b__1(
 
   finishCallback = this->fields.finishCallback;
   if ( finishCallback )
-    ActionExtensions__Call(finishCallback, 0LL);
+    ActionExtensions__Call(finishCallback, 0);
 }

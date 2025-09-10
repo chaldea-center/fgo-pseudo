@@ -1,97 +1,90 @@
-void __fastcall CharaGraphListViewPatternServant___ctor(
-        CharaGraphListViewPatternServant_o *this,
-        const MethodInfo *method)
+void CharaGraphListViewPatternServant___ctor(CharaGraphListViewPatternServant_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *__fastcall CharaGraphListViewPatternServant__GenerateListViewItem(
+System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *CharaGraphListViewPatternServant__GenerateListViewItem(
         CharaGraphListViewPatternServant_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
+  __int64 v3; // x19
+  NetworkManager_c *v4; // x0
   __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x19
-  NetworkManager_c *v9; // x0
-  __int64 v10; // x1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  __int64 v13; // x0
-  __int64 *v14; // x20
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  __int64 v8; // x0
+  __int64 *v9; // x20
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
   Il2CppObject *Master_object; // x21
-  __int64 v18; // x21
-  System_Func_T__TResult__o *v19; // x20
+  __int64 v13; // x21
+  System_Func_T__TResult__o *v14; // x20
   System_Int64_array *equipIdList; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B1B868 & 1) == 0 )
+  if ( (byte_4C2660A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_BasicHelper_ToIterator_CharaGraphPartyServantListViewItem___, method);
-    sub_1BCAFF8(&Method_CharaGraphListViewPatternBase_GetMaster_UserDeckMaster___, v3);
-    sub_1BCAFF8(&System_Func_int__CharaGraphPartyServantListViewItem__TypeInfo, v4);
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v5);
-    sub_1BCAFF8(&Method_CharaGraphListViewPatternServant___c__DisplayClass2_0__GenerateListViewItem_b__0__, v6);
-    sub_1BCAFF8(&CharaGraphListViewPatternServant___c__DisplayClass2_0_TypeInfo, v7);
-    byte_4B1B868 = 1;
+    sub_1C2D490(&Method_BasicHelper_ToIterator_CharaGraphPartyServantListViewItem___);
+    sub_1C2D490(&Method_CharaGraphListViewPatternBase_GetMaster_UserDeckMaster___);
+    sub_1C2D490(&System_Func_int__CharaGraphPartyServantListViewItem__TypeInfo);
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&Method_CharaGraphListViewPatternServant___c__DisplayClass2_0__GenerateListViewItem_b__0__);
+    sub_1C2D490(&CharaGraphListViewPatternServant___c__DisplayClass2_0_TypeInfo);
+    byte_4C2660A = 1;
   }
-  equipIdList = 0LL;
-  v8 = sub_1BCB244(CharaGraphListViewPatternServant___c__DisplayClass2_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
-  if ( !v8 )
+  equipIdList = 0;
+  v3 = sub_1C2D6DC(CharaGraphListViewPatternServant___c__DisplayClass2_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0);
+  if ( !v3 )
     goto LABEL_13;
-  *(_QWORD *)(v8 + 16) = this;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v8 + 16), (int32_t)this, v11, v12);
-  v13 = ((__int64 (__fastcall *)(CharaGraphListViewPatternServant_o *, void *))this->klass->vtable._15_GetServantArray.method)(
-          this,
-          this->klass[1]._1.image);
-  *(_QWORD *)(v8 + 24) = v13;
-  v14 = (__int64 *)(v8 + 24);
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v8 + 24), v13, v15, v16);
-  Master_object = CharaGraphListViewPatternBase__GetMaster_object_((const MethodInfo_300E224 *)Method_CharaGraphListViewPatternBase_GetMaster_UserDeckMaster___);
+  *(_QWORD *)(v3 + 16) = this;
+  sub_1C2D434((CGThumbnailListItem_o *)(v3 + 16), (int32_t)this, v6, v7);
+  v8 = ((__int64 (__fastcall *)(CharaGraphListViewPatternServant_o *, const MethodInfo *))this->klass->vtable._15_GetServantArray.methodPtr)(
+         this,
+         this->klass->vtable._15_GetServantArray.method);
+  *(_QWORD *)(v3 + 24) = v8;
+  v9 = (__int64 *)(v3 + 24);
+  sub_1C2D434((CGThumbnailListItem_o *)(v3 + 24), v8, v10, v11);
+  Master_object = CharaGraphListViewPatternBase__GetMaster_object_((const MethodInfo_30C20D0 *)Method_CharaGraphListViewPatternBase_GetMaster_UserDeckMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B165D1 )
+  if ( !byte_4C211E1 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v10);
-    byte_4B165D1 = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    byte_4C211E1 = 1;
   }
-  v9 = NetworkManager_TypeInfo;
+  v4 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v9 = NetworkManager_TypeInfo;
+    v4 = NetworkManager_TypeInfo;
   }
   if ( !Master_object
     || (UserDeckMaster__getPartyList(
           (UserDeckMaster_o *)Master_object,
-          (System_Int64_array **)(v8 + 32),
+          (System_Int64_array **)(v3 + 32),
           &equipIdList,
-          v9->static_fields->userIdNumber,
-          0LL),
-        (v18 = *v14) == 0) )
+          v4->static_fields->userIdNumber,
+          0),
+        (v13 = *v9) == 0) )
   {
 LABEL_13:
-    sub_1BCB254(v9, v10);
+    sub_1C2D6EC(v4, v5);
   }
-  v19 = (System_Func_T__TResult__o *)sub_1BCB244(System_Func_int__CharaGraphPartyServantListViewItem__TypeInfo);
+  v14 = (System_Func_T__TResult__o *)sub_1C2D6DC(System_Func_int__CharaGraphPartyServantListViewItem__TypeInfo);
   System_Func_int__object____ctor(
-    v19,
-    (Il2CppObject *)v8,
+    v14,
+    (Il2CppObject *)v3,
     Method_CharaGraphListViewPatternServant___c__DisplayClass2_0__GenerateListViewItem_b__0__,
-    0LL);
+    0);
   return (System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *)BasicHelper__ToIterator_object_(
-                                                                                   *(_DWORD *)(v18 + 24),
-                                                                                   (System_Func_int__T__o *)v19,
-                                                                                   (const MethodInfo_300A6F4 *)Method_BasicHelper_ToIterator_CharaGraphPartyServantListViewItem___);
+                                                                                   *(_DWORD *)(v13 + 24),
+                                                                                   (System_Func_int__T__o *)v14,
+                                                                                   (const MethodInfo_30BE4C8 *)Method_BasicHelper_ToIterator_CharaGraphPartyServantListViewItem___);
 }
 
 
-System_Int32_array *__fastcall CharaGraphListViewPatternServant__GetBonusEventCampaignIds(
+System_Int32_array *CharaGraphListViewPatternServant__GetBonusEventCampaignIds(
         CharaGraphListViewPatternServant_o *this,
         const MethodInfo *method)
 {
@@ -101,11 +94,11 @@ System_Int32_array *__fastcall CharaGraphListViewPatternServant__GetBonusEventCa
   if ( EventValSetupInfo_k__BackingField )
     return EventValSetupInfo_k__BackingField->fields.servantFilterEventCampaignIds;
   else
-    return 0LL;
+    return 0;
 }
 
 
-System_Int32_array *__fastcall CharaGraphListViewPatternServant__GetBonusEventIds(
+System_Int32_array *CharaGraphListViewPatternServant__GetBonusEventIds(
         CharaGraphListViewPatternServant_o *this,
         const MethodInfo *method)
 {
@@ -115,30 +108,30 @@ System_Int32_array *__fastcall CharaGraphListViewPatternServant__GetBonusEventId
   if ( EventValSetupInfo_k__BackingField )
     return EventValSetupInfo_k__BackingField->fields.servantFilterEventIds;
   else
-    return 0LL;
+    return 0;
 }
 
 
-UserServantEntity_array *__fastcall CharaGraphListViewPatternServant__GetServantArray(
+UserServantEntity_array *CharaGraphListViewPatternServant__GetServantArray(
         CharaGraphListViewPatternServant_o *this,
         const MethodInfo *method)
 {
   Il2CppObject *Master_object; // x0
   __int64 v3; // x1
 
-  if ( (byte_4B1B869 & 1) == 0 )
+  if ( (byte_4C2660B & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_CharaGraphListViewPatternBase_GetMaster_UserServantMaster___, method);
-    byte_4B1B869 = 1;
+    sub_1C2D490(&Method_CharaGraphListViewPatternBase_GetMaster_UserServantMaster___);
+    byte_4C2660B = 1;
   }
-  Master_object = CharaGraphListViewPatternBase__GetMaster_object_((const MethodInfo_300E224 *)Method_CharaGraphListViewPatternBase_GetMaster_UserServantMaster___);
+  Master_object = CharaGraphListViewPatternBase__GetMaster_object_((const MethodInfo_30C20D0 *)Method_CharaGraphListViewPatternBase_GetMaster_UserServantMaster___);
   if ( !Master_object )
-    sub_1BCB254(0LL, v3);
-  return UserServantMaster__getKeepServantList((UserServantMaster_o *)Master_object, 0LL);
+    sub_1C2D6EC(0, v3);
+  return UserServantMaster__getKeepServantList((UserServantMaster_o *)Master_object, 0);
 }
 
 
-System_Int32_array *__fastcall CharaGraphListViewPatternServant__GetServantFilterIds(
+System_Int32_array *CharaGraphListViewPatternServant__GetServantFilterIds(
         CharaGraphListViewPatternServant_o *this,
         const MethodInfo *method)
 {
@@ -148,33 +141,33 @@ System_Int32_array *__fastcall CharaGraphListViewPatternServant__GetServantFilte
   if ( EventValSetupInfo_k__BackingField )
     return EventValSetupInfo_k__BackingField->fields.servantFilterIds;
   else
-    return 0LL;
+    return 0;
 }
 
 
-System_String_o *__fastcall CharaGraphListViewPatternServant__get_EmptyMessageCode(
+System_String_o *CharaGraphListViewPatternServant__get_EmptyMessageCode(
         CharaGraphListViewPatternServant_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1B867 & 1) == 0 )
+  if ( (byte_4C26609 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_11503/*"SERVANT_EQUIP_EMPTY"*/, method);
-    byte_4B1B867 = 1;
+    sub_1C2D490(&StringLiteral_11601/*"SERVANT_EQUIP_EMPTY"*/);
+    byte_4C26609 = 1;
   }
-  return (System_String_o *)StringLiteral_11503/*"SERVANT_EQUIP_EMPTY"*/;
+  return (System_String_o *)StringLiteral_11601/*"SERVANT_EQUIP_EMPTY"*/;
 }
 
 
-void __fastcall CharaGraphListViewPatternServant___c__DisplayClass2_0___ctor(
+void CharaGraphListViewPatternServant___c__DisplayClass2_0___ctor(
         CharaGraphListViewPatternServant___c__DisplayClass2_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-CharaGraphPartyServantListViewItem_o *__fastcall CharaGraphListViewPatternServant___c__DisplayClass2_0___GenerateListViewItem_b__0(
+CharaGraphPartyServantListViewItem_o *CharaGraphListViewPatternServant___c__DisplayClass2_0___GenerateListViewItem_b__0(
         CharaGraphListViewPatternServant___c__DisplayClass2_0_o *this,
         int32_t i,
         const MethodInfo *method)
@@ -188,22 +181,20 @@ CharaGraphPartyServantListViewItem_o *__fastcall CharaGraphListViewPatternServan
   const MethodInfo *v10; // x5
 
   v4 = this;
-  if ( (byte_4B1B86A & 1) == 0 )
+  if ( (byte_4C2660C & 1) == 0 )
   {
-    this = (CharaGraphListViewPatternServant___c__DisplayClass2_0_o *)sub_1BCAFF8(
-                                                                        &CharaGraphPartyServantListViewItem_TypeInfo,
-                                                                        *(_QWORD *)&i);
-    byte_4B1B86A = 1;
+    this = (CharaGraphListViewPatternServant___c__DisplayClass2_0_o *)sub_1C2D490(&CharaGraphPartyServantListViewItem_TypeInfo);
+    byte_4C2660C = 1;
   }
   svtArray = v4->fields.svtArray;
   if ( !svtArray )
-    sub_1BCB254(this, *(_QWORD *)&i);
-  if ( svtArray->max_length <= i )
-    sub_1BCB25C(this, *(_QWORD *)&i, method);
+    sub_1C2D6EC(this, *(_QWORD *)&i);
+  if ( LODWORD(svtArray->max_length) <= i )
+    sub_1C2D6F4(this, *(_QWORD *)&i, method);
   _4__this = (CharaGraphListViewPatternBase_o *)v4->fields.__4__this;
   partyUserServantList = v4->fields.partyUserServantList;
   v8 = svtArray->m_Items[i];
-  v9 = (CharaGraphPartyServantListViewItem_o *)sub_1BCB244(CharaGraphPartyServantListViewItem_TypeInfo);
+  v9 = (CharaGraphPartyServantListViewItem_o *)sub_1C2D6DC(CharaGraphPartyServantListViewItem_TypeInfo);
   CharaGraphPartyServantListViewItem___ctor(v9, i, _4__this, v8, partyUserServantList, v10);
   return v9;
 }

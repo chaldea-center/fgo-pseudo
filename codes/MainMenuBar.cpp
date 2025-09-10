@@ -1,126 +1,181 @@
-void __fastcall MainMenuBar___ctor(MainMenuBar_o *this, const MethodInfo *method)
+void MainMenuBar___ctor(MainMenuBar_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1BCA5 & 1) == 0 )
+  if ( (byte_4C26A40 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar___ctor__, method);
-    byte_4B1BCA5 = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar___ctor__);
+    byte_4C26A40 = 1;
   }
   this->fields.panelDepth = -1;
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_38F8EF0 *)Method_SingletonMonoBehaviour_MainMenuBar___ctor__);
+    (const MethodInfo_39D40E4 *)Method_SingletonMonoBehaviour_MainMenuBar___ctor__);
 }
 
 
-void __fastcall MainMenuBar__FrameIn(bool is_force, const MethodInfo *method)
+void MainMenuBar__ClearSummonBalloonClickAction(MainMenuBar_o *this, const MethodInfo *method)
+{
+  UnityEngine_Object_o *barBase; // x20
+  _BOOL8 v4; // x0
+  __int64 v5; // x1
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  CGThumbnailListItem_o *v8; // x8
+
+  if ( (byte_4C26A36 & 1) == 0 )
+  {
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C26A36 = 1;
+  }
+  barBase = (UnityEngine_Object_o *)this->fields.barBase;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v4 = UnityEngine_Object__op_Inequality(barBase, 0, 0);
+  if ( v4 )
+  {
+    v8 = (CGThumbnailListItem_o *)this->fields.barBase;
+    if ( !v8 )
+      sub_1C2D6EC(v4, v5);
+    v8[3].klass = 0;
+    sub_1C2D434(v8 + 3, 0, v6, v7);
+  }
+}
+
+
+void MainMenuBar__FrameIn(bool is_force, const MethodInfo *method)
 {
   MainMenuBarBase_o *Instance; // x0
   __int64 v4; // x1
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B1BCA3 & 1) == 0 )
+  if ( (byte_4C26A3E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, method);
-    byte_4B1BCA3 = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A3E = 1;
   }
-  Instance = (MainMenuBarBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-  if ( !Instance || (Instance = (MainMenuBarBase_o *)Instance->fields.partyBtn) == 0LL )
-    sub_1BCB254(Instance, v4);
+  Instance = (MainMenuBarBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !Instance || (Instance = (MainMenuBarBase_o *)Instance->fields.partyBtn) == 0 )
+    sub_1C2D6EC(Instance, v4);
   MainMenuBarBase__FrameInOut(Instance, 1, is_force, v5);
 }
 
 
-void __fastcall MainMenuBar__FrameOut(bool is_force, const MethodInfo *method)
+void MainMenuBar__FrameOut(bool is_force, const MethodInfo *method)
 {
   MainMenuBarBase_o *Instance; // x0
   __int64 v4; // x1
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B1BCA4 & 1) == 0 )
+  if ( (byte_4C26A3F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, method);
-    byte_4B1BCA4 = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A3F = 1;
   }
-  Instance = (MainMenuBarBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-  if ( !Instance || (Instance = (MainMenuBarBase_o *)Instance->fields.partyBtn) == 0LL )
-    sub_1BCB254(Instance, v4);
+  Instance = (MainMenuBarBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !Instance || (Instance = (MainMenuBarBase_o *)Instance->fields.partyBtn) == 0 )
+    sub_1C2D6EC(Instance, v4);
   MainMenuBarBase__FrameInOut(Instance, 0, is_force, v5);
 }
 
 
-void __fastcall MainMenuBar__RequestSelectedSceneChange(MainMenuBar_o *this, const MethodInfo *method)
+void MainMenuBar__RegisterSummonBalloonClickAction(System_Action_int__bool__o *callback, const MethodInfo *method)
+{
+  Il2CppObject *Instance; // x20
+  Il2CppObject *v4; // x0
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
+
+  if ( (byte_4C26A2B & 1) == 0 )
+  {
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A2B = 1;
+  }
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0) )
+  {
+    v4 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    if ( !v4 )
+      sub_1C2D6EC(0, v5);
+    MainMenuBar__SetSummonBalloonClickAction((MainMenuBar_o *)v4, callback, v6);
+  }
+}
+
+
+void MainMenuBar__RequestSelectedSceneChange(MainMenuBar_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *barBase; // x20
   const MethodInfo *v4; // x1
   MainMenuBarBase_o *v5; // x0
 
-  if ( (byte_4B1BC9B & 1) == 0 )
+  if ( (byte_4C26A34 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1BC9B = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C26A34 = 1;
   }
   barBase = (UnityEngine_Object_o *)this->fields.barBase;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(barBase, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(barBase, 0, 0) )
   {
     v5 = this->fields.barBase;
     if ( !v5 )
-      sub_1BCB254(0LL, v4);
+      sub_1C2D6EC(0, v4);
     MainMenuBarBase__RequestSelectedSceneChange(v5, v4);
   }
 }
 
 
-void __fastcall MainMenuBar__RequestSelectedSignal(MainMenuBar_o *this, const MethodInfo *method)
+void MainMenuBar__RequestSelectedSignal(MainMenuBar_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *barBase; // x20
   const MethodInfo *v4; // x1
   MainMenuBarBase_o *v5; // x0
 
-  if ( (byte_4B1BC99 & 1) == 0 )
+  if ( (byte_4C26A32 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1BC99 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C26A32 = 1;
   }
   barBase = (UnityEngine_Object_o *)this->fields.barBase;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(barBase, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(barBase, 0, 0) )
   {
     v5 = this->fields.barBase;
     if ( !v5 )
-      sub_1BCB254(0LL, v4);
+      sub_1C2D6EC(0, v4);
     MainMenuBarBase__RequestSelectedSignal(v5, v4);
   }
 }
 
 
-void __fastcall MainMenuBar__RequestTerminalSceneChange(MainMenuBar_o *this, const MethodInfo *method)
+void MainMenuBar__RequestTerminalSceneChange(MainMenuBar_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *barBase; // x20
   _BOOL8 v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4B1BC9A & 1) == 0 )
+  if ( (byte_4C26A33 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1BC9A = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C26A33 = 1;
   }
   barBase = (UnityEngine_Object_o *)this->fields.barBase;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v4 = UnityEngine_Object__op_Inequality(barBase, 0LL, 0LL);
+  v4 = UnityEngine_Object__op_Inequality(barBase, 0, 0);
   if ( v4 )
   {
     if ( !this->fields.barBase )
-      sub_1BCB254(v4, v5);
+      sub_1C2D6EC(v4, v5);
     MainMenuBarBase__RequestTerminalSceneChange((MainMenuBarBase_o *)v4, v5);
   }
 }
 
 
-void __fastcall MainMenuBar__SetActiveScene(
+void MainMenuBar__SetActiveScene(
         MainMenuBar_o *this,
         SceneRootComponent_o *scene,
         int32_t kind,
@@ -142,44 +197,44 @@ void __fastcall MainMenuBar__SetActiveScene(
   __int64 v22; // x1
   const MethodInfo *v23; // x5
 
-  if ( (byte_4B1BC94 & 1) == 0 )
+  if ( (byte_4C26A2D & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, scene);
-    byte_4B1BC94 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C26A2D = 1;
   }
   p_barBase = &this->fields.barBase;
   barBase = (UnityEngine_Object_o *)this->fields.barBase;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(barBase, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(barBase, 0, 0) )
   {
     obj = (UnityEngine_Object_o *)this->fields.obj;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__DestroyImmediate_70136264(obj, 0LL);
-    this->fields.obj = 0LL;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.obj, 0, v16, v17);
-    *p_barBase = 0LL;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.barBase, 0, v18, v19);
+    UnityEngine_Object__DestroyImmediate_71163892(obj, 0);
+    this->fields.obj = 0;
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.obj, 0, v16, v17);
+    *p_barBase = 0;
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.barBase, 0, v18, v19);
   }
   this->fields.activeScene = scene;
   p_activeScene = (CGThumbnailListItem_o *)&this->fields.activeScene;
   LODWORD(p_activeScene[-1].fields._ThumbnailSpritePath_k__BackingField) = kind;
   HIDWORD(p_activeScene[-1].fields._ThumbnailSpritePath_k__BackingField) = panelDepth;
-  sub_1BCAF9C(p_activeScene, (int32_t)scene, v13, v14);
+  sub_1C2D434(p_activeScene, (int32_t)scene, v13, v14);
   monitor = (UnityEngine_Object_o *)p_activeScene->monitor;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(monitor, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(monitor, 0, 0) )
   {
     if ( !*p_barBase )
-      sub_1BCB254(0LL, v22);
+      sub_1C2D6EC(0, v22);
     MainMenuBarBase__SetActiveScene(*p_barBase, scene, kind, panelDepth, cam, v23);
   }
 }
 
 
-void __fastcall MainMenuBar__SetAllBtnAct(System_Action_o *act, const MethodInfo *method)
+void MainMenuBar__SetAllBtnAct(System_Action_o *act, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
@@ -187,43 +242,40 @@ void __fastcall MainMenuBar__SetAllBtnAct(System_Action_o *act, const MethodInfo
   const MethodInfo *v6; // x3
   Il2CppClass *klass; // x8
 
-  if ( (byte_4B1BCA2 & 1) == 0 )
+  if ( (byte_4C26A3D & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, method);
-    byte_4B1BCA2 = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A3D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-  if ( !Instance || (klass = Instance[3].klass) == 0LL )
-    sub_1BCB254(Instance, v4);
-  klass->vtable[6].methodPtr = (Il2CppMethodPointer)act;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&klass->vtable[6], (int32_t)act, v5, v6);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !Instance || (klass = Instance[3].klass) == 0 )
+    sub_1C2D6EC(Instance, v4);
+  klass->vtable[7].methodPtr = (Il2CppMethodPointer)act;
+  sub_1C2D434((CGThumbnailListItem_o *)&klass->vtable[7], (int32_t)act, v5, v6);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall MainMenuBar__SetAlpha(float alpha, const MethodInfo *method)
+void MainMenuBar__SetAlpha(float alpha, const MethodInfo *method)
 {
-  __int64 v2; // x1
-  long double v3; // q8
-  __int64 v4; // x1
-  __int64 v5; // x1
+  long double v2; // q8
   UnityEngine_Object_o *Instance; // x19
   UnityEngine_Component_o *Component_object; // x0
-  __int64 v8; // x1
+  __int64 v5; // x1
   UnityEngine_Object_o *klass; // x20
 
-  v3 = *(long double *)&alpha;
-  if ( (byte_4B1BC8E & 1) == 0 )
+  v2 = *(long double *)&alpha;
+  if ( (byte_4C26A25 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_UIPanel___, v2);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v5);
-    byte_4B1BC8E = 1;
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A25 = 1;
   }
-  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  Component_object = (UnityEngine_Component_o *)UnityEngine_Object__op_Equality(Instance, 0LL, 0LL);
+  Component_object = (UnityEngine_Component_o *)UnityEngine_Object__op_Equality(Instance, 0, 0);
   if ( ((unsigned __int8)Component_object & 1) == 0 )
   {
     if ( Instance )
@@ -231,170 +283,156 @@ void __fastcall MainMenuBar__SetAlpha(float alpha, const MethodInfo *method)
       klass = (UnityEngine_Object_o *)Instance[2].klass;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Equality(klass, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Equality(klass, 0, 0) )
         return;
       Component_object = (UnityEngine_Component_o *)Instance[2].klass;
       if ( Component_object )
       {
         Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                         Component_object,
-                                                        (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                                                        (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
         if ( Component_object )
         {
-          ((void (__fastcall *)(UnityEngine_Component_o *, Il2CppClass *, long double))Component_object->klass[1]._1.castClass)(
+          ((void (__fastcall *)(UnityEngine_Component_o *, Il2CppClass *, long double))Component_object->klass[1]._1.element_class)(
             Component_object,
-            Component_object->klass[1]._1.declaringType,
-            v3);
+            Component_object->klass[1]._1.castClass,
+            v2);
           return;
         }
       }
     }
-    sub_1BCB254(Component_object, v8);
+    sub_1C2D6EC(Component_object, v5);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall MainMenuBar__SetButtonActive(
-        MainMenuBar_o *this,
-        int32_t kind,
-        bool isActive,
-        const MethodInfo *method)
+void MainMenuBar__SetButtonActive(MainMenuBar_o *this, int32_t kind, bool isActive, const MethodInfo *method)
 {
   UnityEngine_Object_o *barBase; // x22
   __int64 v8; // x1
   const MethodInfo *v9; // x3
   MainMenuBarBase_o *v10; // x0
 
-  if ( (byte_4B1BC98 & 1) == 0 )
+  if ( (byte_4C26A31 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&kind);
-    byte_4B1BC98 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C26A31 = 1;
   }
   barBase = (UnityEngine_Object_o *)this->fields.barBase;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(barBase, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(barBase, 0, 0) )
   {
     v10 = this->fields.barBase;
     if ( !v10 )
-      sub_1BCB254(0LL, v8);
+      sub_1C2D6EC(0, v8);
     MainMenuBarBase__SetButtonActive(v10, kind, isActive, v9);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall MainMenuBar__SetButtonKind(MainMenuBar_o *this, int32_t kind, const MethodInfo *method)
+void MainMenuBar__SetButtonKind(MainMenuBar_o *this, int32_t kind, const MethodInfo *method)
 {
   UnityEngine_Object_o *barBase; // x21
   _BOOL8 v6; // x0
   __int64 v7; // x1
   struct MainMenuBarBase_o *v8; // x8
 
-  if ( (byte_4B1BC95 & 1) == 0 )
+  if ( (byte_4C26A2E & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&kind);
-    byte_4B1BC95 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C26A2E = 1;
   }
   this->fields.kind = kind;
   barBase = (UnityEngine_Object_o *)this->fields.barBase;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v6 = UnityEngine_Object__op_Inequality(barBase, 0LL, 0LL);
+  v6 = UnityEngine_Object__op_Inequality(barBase, 0, 0);
   if ( v6 )
   {
     v8 = this->fields.barBase;
     if ( !v8 )
-      sub_1BCB254(v6, v7);
+      sub_1C2D6EC(v6, v7);
     v8->fields.kind = kind;
   }
 }
 
 
-void __fastcall MainMenuBar__SetDispBtnAct(int32_t kind, System_Action_o *act, const MethodInfo *method)
+void MainMenuBar__SetDispBtnAct(int32_t kind, System_Action_o *act, const MethodInfo *method)
 {
   MainMenuBarBase_o *Instance; // x0
   __int64 v6; // x1
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B1BCA1 & 1) == 0 )
+  if ( (byte_4C26A3C & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, act);
-    byte_4B1BCA1 = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A3C = 1;
   }
-  Instance = (MainMenuBarBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-  if ( !Instance || (Instance = (MainMenuBarBase_o *)Instance->fields.partyBtn) == 0LL )
-    sub_1BCB254(Instance, v6);
+  Instance = (MainMenuBarBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !Instance || (Instance = (MainMenuBarBase_o *)Instance->fields.partyBtn) == 0 )
+    sub_1C2D6EC(Instance, v6);
   MainMenuBarBase__SetDispBtnAct(Instance, kind, act, v7);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall MainMenuBar__SetDispBtnColliderEnable(bool is_enable, int32_t kind, const MethodInfo *method)
+void MainMenuBar__SetDispBtnColliderEnable(bool is_enable, int32_t kind, const MethodInfo *method)
 {
   MainMenuBarBase_o *Instance; // x0
   __int64 v6; // x1
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B1BCA0 & 1) == 0 )
+  if ( (byte_4C26A3B & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, *(_QWORD *)&kind);
-    byte_4B1BCA0 = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A3B = 1;
   }
-  Instance = (MainMenuBarBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-  if ( !Instance || (Instance = (MainMenuBarBase_o *)Instance->fields.partyBtn) == 0LL )
-    sub_1BCB254(Instance, v6);
+  Instance = (MainMenuBarBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !Instance || (Instance = (MainMenuBarBase_o *)Instance->fields.partyBtn) == 0 )
+    sub_1C2D6EC(Instance, v6);
   MainMenuBarBase__SetDispBtnColliderEnable(Instance, is_enable, kind, v7);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall MainMenuBar__SetMenuActive(
+void MainMenuBar__SetMenuActive(
         MainMenuBar_o *this,
         bool isActive,
         UnityEngine_Camera_o *cam,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
   struct UnityEngine_GameObject_o **p_obj; // x22
   UnityEngine_Object_o *obj; // x23
   UnityEngine_Object_o *activeScene; // x23
   __int64 gameObject; // x0
-  __int64 v17; // x1
-  Il2CppObject *ComponentInChildren_object__50402520; // x0
-  UnityEngine_Component_o *v19; // x23
+  __int64 v11; // x1
+  Il2CppObject *ComponentInChildren_object__51139460; // x0
+  UnityEngine_Component_o *v13; // x23
   Il2CppObject *object; // x24
-  Il2CppObject *v21; // x0
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  UnityEngine_Transform_o *v24; // x24
-  UnityEngine_Transform_o *v25; // x24
-  UnityEngine_Transform_o *v26; // x24
-  UnityEngine_Transform_o *v27; // x24
-  UnityEngine_GameObject_o *v28; // x24
+  Il2CppObject *v15; // x0
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  UnityEngine_Transform_o *v18; // x24
+  UnityEngine_Transform_o *v19; // x24
+  UnityEngine_Transform_o *v20; // x24
+  UnityEngine_Transform_o *v21; // x24
+  UnityEngine_GameObject_o *v22; // x24
   Il2CppObject *Component_object; // x0
-  int32_t v30; // w2
-  const MethodInfo *v31; // x3
-  const MethodInfo *v32; // x5
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
+  const MethodInfo *v26; // x5
   UnityEngine_Object_o *barBase; // x21
-  const MethodInfo *v34; // x2
+  const MethodInfo *v28; // x2
 
-  if ( (byte_4B1BC97 & 1) == 0 )
+  if ( (byte_4C26A30 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponentInChildren_UICamera___, isActive);
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_MainMenuBarBase___, v7);
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_UICamera___, v8);
-    sub_1BCAFF8(&Method_UnityEngine_Object_Instantiate_GameObject___, v9);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v10);
-    sub_1BCAFF8(&Method_UnityEngine_Resources_Load_GameObject___, v11);
-    sub_1BCAFF8(&StringLiteral_4573/*"CommonUI/MainMenuBarPrefab"*/, v12);
-    byte_4B1BC97 = 1;
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponentInChildren_UICamera___);
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_MainMenuBarBase___);
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_UICamera___);
+    sub_1C2D490(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_UnityEngine_Resources_Load_GameObject___);
+    sub_1C2D490(&StringLiteral_4603/*"CommonUI/MainMenuBarPrefab"*/);
+    byte_4C26A30 = 1;
   }
   if ( isActive )
   {
@@ -402,120 +440,120 @@ void __fastcall MainMenuBar__SetMenuActive(
     obj = (UnityEngine_Object_o *)this->fields.obj;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Equality(obj, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Equality(obj, 0, 0) )
     {
       activeScene = (UnityEngine_Object_o *)this->fields.activeScene;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality(activeScene, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Inequality(activeScene, 0, 0) )
       {
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        gameObject = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)cam, 0LL, 0LL);
+        gameObject = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)cam, 0, 0);
         if ( (gameObject & 1) != 0 )
         {
           gameObject = (__int64)this->fields.activeScene;
           if ( !gameObject )
             goto LABEL_49;
-          ComponentInChildren_object__50402520 = UnityEngine_Component__GetComponentInChildren_object__50402520(
+          ComponentInChildren_object__51139460 = UnityEngine_Component__GetComponentInChildren_object__51139460(
                                                    (UnityEngine_Component_o *)gameObject,
-                                                   (const MethodInfo_30114D8 *)Method_UnityEngine_Component_GetComponentInChildren_UICamera___);
+                                                   (const MethodInfo_30C5384 *)Method_UnityEngine_Component_GetComponentInChildren_UICamera___);
         }
         else
         {
           if ( !cam )
             goto LABEL_49;
-          gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)cam, 0LL);
+          gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)cam, 0);
           if ( !gameObject )
             goto LABEL_49;
-          ComponentInChildren_object__50402520 = UnityEngine_GameObject__GetComponent_object_(
+          ComponentInChildren_object__51139460 = UnityEngine_GameObject__GetComponent_object_(
                                                    (UnityEngine_GameObject_o *)gameObject,
-                                                   (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_UICamera___);
+                                                   (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_UICamera___);
         }
-        v19 = (UnityEngine_Component_o *)ComponentInChildren_object__50402520;
+        v13 = (UnityEngine_Component_o *)ComponentInChildren_object__51139460;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v19, 0LL, 0LL) )
+        if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v13, 0, 0) )
         {
           object = UnityEngine_Resources__Load_object_(
-                     (System_String_o *)StringLiteral_4573/*"CommonUI/MainMenuBarPrefab"*/,
-                     (const MethodInfo_30B37E0 *)Method_UnityEngine_Resources_Load_GameObject___);
+                     (System_String_o *)StringLiteral_4603/*"CommonUI/MainMenuBarPrefab"*/,
+                     (const MethodInfo_316AF08 *)Method_UnityEngine_Resources_Load_GameObject___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          v21 = UnityEngine_Object__Instantiate_object_(
+          v15 = UnityEngine_Object__Instantiate_object_(
                   object,
-                  (const MethodInfo_30A3BB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-          *p_obj = (struct UnityEngine_GameObject_o *)v21;
-          sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.obj, (int32_t)v21, v22, v23);
+                  (const MethodInfo_315ACB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+          *p_obj = (struct UnityEngine_GameObject_o *)v15;
+          sub_1C2D434((CGThumbnailListItem_o *)&this->fields.obj, (int32_t)v15, v16, v17);
           gameObject = (__int64)*p_obj;
           if ( !*p_obj )
             goto LABEL_49;
-          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0LL);
+          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+          if ( !v13 )
+            goto LABEL_49;
+          v18 = (UnityEngine_Transform_o *)gameObject;
+          gameObject = (__int64)UnityEngine_Component__get_transform(v13, 0);
+          if ( !v18 )
+            goto LABEL_49;
+          UnityEngine_Transform__set_parent(v18, (UnityEngine_Transform_o *)gameObject, 0);
+          gameObject = (__int64)*p_obj;
+          if ( !*p_obj )
+            goto LABEL_49;
+          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+          v19 = (UnityEngine_Transform_o *)gameObject;
+          if ( !byte_4C20DA1 )
+          {
+            gameObject = sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+            byte_4C20DA1 = 1;
+          }
           if ( !v19 )
             goto LABEL_49;
-          v24 = (UnityEngine_Transform_o *)gameObject;
-          gameObject = (__int64)UnityEngine_Component__get_transform(v19, 0LL);
-          if ( !v24 )
-            goto LABEL_49;
-          UnityEngine_Transform__set_parent(v24, (UnityEngine_Transform_o *)gameObject, 0LL);
+          UnityEngine_Transform__set_localPosition(v19, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
           gameObject = (__int64)*p_obj;
           if ( !*p_obj )
             goto LABEL_49;
-          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0LL);
-          v25 = (UnityEngine_Transform_o *)gameObject;
-          if ( !byte_4B16191 )
+          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+          v20 = (UnityEngine_Transform_o *)gameObject;
+          if ( !byte_4C20DA7 )
           {
-            gameObject = sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v17);
-            byte_4B16191 = 1;
+            gameObject = sub_1C2D490(&UnityEngine_Quaternion_TypeInfo);
+            byte_4C20DA7 = 1;
           }
-          if ( !v25 )
-            goto LABEL_49;
-          UnityEngine_Transform__set_localPosition(v25, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-          gameObject = (__int64)*p_obj;
-          if ( !*p_obj )
-            goto LABEL_49;
-          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0LL);
-          v26 = (UnityEngine_Transform_o *)gameObject;
-          if ( !byte_4B16197 )
-          {
-            gameObject = sub_1BCAFF8(&UnityEngine_Quaternion_TypeInfo, v17);
-            byte_4B16197 = 1;
-          }
-          if ( !v26 )
+          if ( !v20 )
             goto LABEL_49;
           UnityEngine_Transform__set_localRotation(
-            v26,
+            v20,
             UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
-            0LL);
+            0);
           gameObject = (__int64)*p_obj;
           if ( !*p_obj )
             goto LABEL_49;
-          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0LL);
-          v27 = (UnityEngine_Transform_o *)gameObject;
-          if ( !byte_4B16196 )
+          gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
+          v21 = (UnityEngine_Transform_o *)gameObject;
+          if ( !byte_4C20DA6 )
           {
-            gameObject = sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v17);
-            byte_4B16196 = 1;
+            gameObject = sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+            byte_4C20DA6 = 1;
           }
-          if ( !v27 )
+          if ( !v21 )
             goto LABEL_49;
-          UnityEngine_Transform__set_localScale(v27, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
-          v28 = *p_obj;
-          gameObject = (__int64)UnityEngine_Component__get_gameObject(v19, 0LL);
+          UnityEngine_Transform__set_localScale(v21, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
+          v22 = *p_obj;
+          gameObject = (__int64)UnityEngine_Component__get_gameObject(v13, 0);
           if ( !gameObject )
             goto LABEL_49;
-          gameObject = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)gameObject, 0LL);
-          if ( !v28 )
+          gameObject = UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)gameObject, 0);
+          if ( !v22 )
             goto LABEL_49;
-          UnityEngine_GameObject__set_layer(v28, gameObject, 0LL);
+          UnityEngine_GameObject__set_layer(v22, gameObject, 0);
           gameObject = (__int64)*p_obj;
           if ( !*p_obj )
             goto LABEL_49;
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)gameObject,
-                               (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_MainMenuBarBase___);
+                               (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_MainMenuBarBase___);
           this->fields.barBase = (struct MainMenuBarBase_o *)Component_object;
-          sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.barBase, (int32_t)Component_object, v30, v31);
+          sub_1C2D434((CGThumbnailListItem_o *)&this->fields.barBase, (int32_t)Component_object, v24, v25);
           gameObject = (__int64)this->fields.barBase;
           if ( !gameObject )
             goto LABEL_49;
@@ -525,7 +563,7 @@ void __fastcall MainMenuBar__SetMenuActive(
             this->fields.kind,
             this->fields.panelDepth,
             cam,
-            v32);
+            v26);
         }
       }
     }
@@ -533,21 +571,21 @@ void __fastcall MainMenuBar__SetMenuActive(
   barBase = (UnityEngine_Object_o *)this->fields.barBase;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(barBase, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(barBase, 0, 0) )
   {
     gameObject = (__int64)this->fields.barBase;
     if ( gameObject )
     {
-      MainMenuBarBase__SetMenuActive((MainMenuBarBase_o *)gameObject, isActive, v34);
+      MainMenuBarBase__SetMenuActive((MainMenuBarBase_o *)gameObject, isActive, v28);
       return;
     }
 LABEL_49:
-    sub_1BCB254(gameObject, v17);
+    sub_1C2D6EC(gameObject, v11);
   }
 }
 
 
-void __fastcall MainMenuBar__SetMenuBtnAct(System_Action_o *act, const MethodInfo *method)
+void MainMenuBar__SetMenuBtnAct(System_Action_o *act, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
@@ -555,39 +593,38 @@ void __fastcall MainMenuBar__SetMenuBtnAct(System_Action_o *act, const MethodInf
   const MethodInfo *v6; // x3
   Il2CppClass *klass; // x8
 
-  if ( (byte_4B1BC9F & 1) == 0 )
+  if ( (byte_4C26A3A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, method);
-    byte_4B1BC9F = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A3A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-  if ( !Instance || (klass = Instance[3].klass) == 0LL )
-    sub_1BCB254(Instance, v4);
-  klass->vtable[5].methodPtr = (Il2CppMethodPointer)act;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&klass->vtable[5], (int32_t)act, v5, v6);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !Instance || (klass = Instance[3].klass) == 0 )
+    sub_1C2D6EC(Instance, v4);
+  klass->vtable[6].methodPtr = (Il2CppMethodPointer)act;
+  sub_1C2D434((CGThumbnailListItem_o *)&klass->vtable[6], (int32_t)act, v5, v6);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall MainMenuBar__SetMenuBtnColliderEnable(bool isEnable, bool isGray, const MethodInfo *method)
+void MainMenuBar__SetMenuBtnColliderEnable(bool isEnable, bool isGray, const MethodInfo *method)
 {
   MainMenuBarBase_o *Instance; // x0
   __int64 v6; // x1
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B1BC9E & 1) == 0 )
+  if ( (byte_4C26A39 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, isGray);
-    byte_4B1BC9E = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A39 = 1;
   }
-  Instance = (MainMenuBarBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-  if ( !Instance || (Instance = (MainMenuBarBase_o *)Instance->fields.partyBtn) == 0LL )
-    sub_1BCB254(Instance, v6);
+  Instance = (MainMenuBarBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !Instance || (Instance = (MainMenuBarBase_o *)Instance->fields.partyBtn) == 0 )
+    sub_1C2D6EC(Instance, v6);
   MainMenuBarBase__SetMenuBtnColliderEnable(Instance, isEnable, isGray, v7);
 }
 
 
-void __fastcall MainMenuBar__SetResumeMenu(
+void MainMenuBar__SetResumeMenu(
         MainMenuBar_o *this,
         SceneRootComponent_o *scene,
         int32_t kind,
@@ -605,95 +642,182 @@ void __fastcall MainMenuBar__SetResumeMenu(
   const MethodInfo *v17; // x3
   const MethodInfo *v18; // x3
 
-  if ( (byte_4B1BC96 & 1) == 0 )
+  if ( (byte_4C26A2F & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, scene);
-    byte_4B1BC96 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C26A2F = 1;
   }
   activeScene = (UnityEngine_Object_o *)this->fields.activeScene;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(activeScene, (UnityEngine_Object_o *)scene, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(activeScene, (UnityEngine_Object_o *)scene, 0) )
   {
     this->fields.kind = kind;
     this->fields.panelDepth = panelDepth;
     this->fields.activeScene = scene;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.activeScene, (int32_t)scene, v10, v11);
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.activeScene, (int32_t)scene, v10, v11);
     obj = (UnityEngine_Object_o *)this->fields.obj;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality(obj, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality(obj, 0, 0) )
     {
       v13 = (UnityEngine_Object_o *)this->fields.obj;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__DestroyImmediate_70136264(v13, 0LL);
-      this->fields.obj = 0LL;
-      sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.obj, 0, v14, v15);
-      this->fields.barBase = 0LL;
-      sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.barBase, 0, v16, v17);
-      MainMenuBar__SetMenuActive(this, 1, 0LL, v18);
+      UnityEngine_Object__DestroyImmediate_71163892(v13, 0);
+      this->fields.obj = 0;
+      sub_1C2D434((CGThumbnailListItem_o *)&this->fields.obj, 0, v14, v15);
+      this->fields.barBase = 0;
+      sub_1C2D434((CGThumbnailListItem_o *)&this->fields.barBase, 0, v16, v17);
+      MainMenuBar__SetMenuActive(this, 1, 0, v18);
     }
   }
 }
 
 
-void __fastcall MainMenuBar__SetSceneChangeFadeType(int32_t fadeType, const MethodInfo *method)
+void MainMenuBar__SetSceneChangeFadeType(int32_t fadeType, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
   Il2CppClass *klass; // x8
 
-  if ( (byte_4B1BC9C & 1) == 0 )
+  if ( (byte_4C26A37 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, method);
-    byte_4B1BC9C = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A37 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-  if ( !Instance || (klass = Instance[3].klass) == 0LL )
-    sub_1BCB254(Instance, v4);
-  LODWORD(klass->vtable[3].methodPtr) = fadeType;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !Instance || (klass = Instance[3].klass) == 0 )
+    sub_1C2D6EC(Instance, v4);
+  LODWORD(klass->vtable[4].methodPtr) = fadeType;
 }
 
 
-void __fastcall MainMenuBar__UpdateNoticeNumber(const MethodInfo *method)
+void MainMenuBar__SetSummonBalloonClickAction(
+        MainMenuBar_o *this,
+        System_Action_int__bool__o *callback,
+        const MethodInfo *method)
 {
-  __int64 v1; // x1
-  MainMenuBarBase_o *Instance; // x0
+  UnityEngine_Object_o *barBase; // x21
+  _BOOL8 v6; // x0
+  __int64 v7; // x1
+  struct MainMenuBarBase_o *v8; // x8
+  CGThumbnailListItem_o *p_OnClickBalloonAction; // x20
+  System_Delegate_o *v10; // x0
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  System_Delegate_o *v13; // x19
+  __int64 v14; // x0
+  __int64 v15; // x0
+  int32_t v16; // w1
+
+  if ( (byte_4C26A35 & 1) == 0 )
+  {
+    sub_1C2D490(&System_Action_int__bool__TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C26A35 = 1;
+  }
+  if ( callback )
+  {
+    barBase = (UnityEngine_Object_o *)this->fields.barBase;
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    v6 = UnityEngine_Object__op_Inequality(barBase, 0, 0);
+    if ( v6 )
+    {
+      v8 = this->fields.barBase;
+      if ( !v8 )
+        sub_1C2D6EC(v6, v7);
+      p_OnClickBalloonAction = (CGThumbnailListItem_o *)&v8->fields.OnClickBalloonAction;
+      v10 = System_Delegate__Combine(
+              (System_Delegate_o *)v8->fields.OnClickBalloonAction,
+              (System_Delegate_o *)callback,
+              0);
+      if ( v10 )
+      {
+        v13 = v10;
+        v14 = sub_1C2D5CC(v10, System_Action_int__bool__TypeInfo);
+        if ( !v14
+          || (p_OnClickBalloonAction->klass = (CGThumbnailListItem_c *)v14,
+              v15 = sub_1C2D5CC(v13, System_Action_int__bool__TypeInfo),
+              v16 = v15,
+              !v15) )
+        {
+          sub_1C2D9AC(v13);
+          return;
+        }
+      }
+      else
+      {
+        v16 = 0;
+        p_OnClickBalloonAction->klass = 0;
+      }
+      sub_1C2D434(p_OnClickBalloonAction, v16, v11, v12);
+    }
+  }
+}
+
+
+void MainMenuBar__UnregisterSummonBalloonClickAction(const MethodInfo *method)
+{
+  Il2CppObject *Instance; // x19
+  Il2CppObject *v2; // x0
   const MethodInfo *v3; // x1
 
-  if ( (byte_4B1BC9D & 1) == 0 )
+  if ( (byte_4C26A2C & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v1);
-    byte_4B1BC9D = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A2C = 1;
   }
-  Instance = (MainMenuBarBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-  if ( !Instance || (Instance = (MainMenuBarBase_o *)Instance->fields.partyBtn) == 0LL )
-    sub_1BCB254(Instance, v3);
-  MainMenuBarBase__UpdateNoticeNumber(Instance, v3);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0) )
+  {
+    v2 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    if ( !v2 )
+      sub_1C2D6EC(0, v3);
+    MainMenuBar__ClearSummonBalloonClickAction((MainMenuBar_o *)v2, v3);
+  }
 }
 
 
-bool __fastcall MainMenuBar__get_IsEnableOutSideCollider(const MethodInfo *method)
+void MainMenuBar__UpdateNoticeNumber(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
+  MainMenuBarBase_o *Instance; // x0
+  const MethodInfo *v2; // x1
+
+  if ( (byte_4C26A38 & 1) == 0 )
+  {
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A38 = 1;
+  }
+  Instance = (MainMenuBarBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !Instance || (Instance = (MainMenuBarBase_o *)Instance->fields.partyBtn) == 0 )
+    sub_1C2D6EC(Instance, v2);
+  MainMenuBarBase__UpdateNoticeNumber(Instance, v2);
+}
+
+
+bool MainMenuBar__get_IsEnableOutSideCollider(const MethodInfo *method)
+{
   UnityEngine_Object_o *Instance; // x19
   UnityEngine_Collider_o *properties; // x0
-  __int64 v5; // x1
+  __int64 v3; // x1
   UnityEngine_Object_o *klass; // x20
-  UnityEngine_Object_c *v8; // x8
+  UnityEngine_Object_c *v6; // x8
 
-  if ( (byte_4B1BC86 & 1) == 0 )
+  if ( (byte_4C26A1D & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v1);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v2);
-    byte_4B1BC86 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A1D = 1;
   }
-  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  properties = (UnityEngine_Collider_o *)UnityEngine_Object__op_Equality(Instance, 0LL, 0LL);
+  properties = (UnityEngine_Collider_o *)UnityEngine_Object__op_Equality(Instance, 0, 0);
   if ( ((unsigned __int8)properties & 1) != 0 )
     return 0;
   if ( !Instance )
@@ -701,357 +825,332 @@ bool __fastcall MainMenuBar__get_IsEnableOutSideCollider(const MethodInfo *metho
   klass = (UnityEngine_Object_o *)Instance[2].klass;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  properties = (UnityEngine_Collider_o *)UnityEngine_Object__op_Equality(klass, 0LL, 0LL);
+  properties = (UnityEngine_Collider_o *)UnityEngine_Object__op_Equality(klass, 0, 0);
   if ( ((unsigned __int8)properties & 1) != 0 )
     return 0;
-  v8 = Instance[2].klass;
-  if ( !v8 || (properties = (UnityEngine_Collider_o *)v8->_1.properties) == 0LL )
+  v6 = Instance[2].klass;
+  if ( !v6 || (properties = (UnityEngine_Collider_o *)v6->_1.properties) == 0 )
 LABEL_14:
-    sub_1BCB254(properties, v5);
-  return UnityEngine_Collider__get_enabled(properties, 0LL);
+    sub_1C2D6EC(properties, v3);
+  return UnityEngine_Collider__get_enabled(properties, 0);
 }
 
 
-bool __fastcall MainMenuBar__get_IsMenuBarActive(const MethodInfo *method)
+bool MainMenuBar__get_IsMenuBarActive(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
   UnityEngine_Object_o *Instance; // x19
-  UnityEngine_Object_c *v4; // x0
-  const MethodInfo *v5; // x1
+  UnityEngine_Object_c *v2; // x0
+  const MethodInfo *v3; // x1
   UnityEngine_Object_o *klass; // x20
 
-  if ( (byte_4B1BC87 & 1) == 0 )
+  if ( (byte_4C26A1E & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v1);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v2);
-    byte_4B1BC87 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A1E = 1;
   }
-  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  Instance = (UnityEngine_Object_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v4 = (UnityEngine_Object_c *)UnityEngine_Object__op_Equality(Instance, 0LL, 0LL);
-  if ( ((unsigned __int8)v4 & 1) != 0 )
+  v2 = (UnityEngine_Object_c *)UnityEngine_Object__op_Equality(Instance, 0, 0);
+  if ( ((unsigned __int8)v2 & 1) != 0 )
     return 0;
   if ( !Instance )
     goto LABEL_13;
   klass = (UnityEngine_Object_o *)Instance[2].klass;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(klass, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(klass, 0, 0) )
     return 0;
-  v4 = Instance[2].klass;
-  if ( !v4 )
+  v2 = Instance[2].klass;
+  if ( !v2 )
 LABEL_13:
-    sub_1BCB254(v4, v5);
-  return MainMenuBarBase__get_IsMenuBarActive((MainMenuBarBase_o *)v4, v5);
+    sub_1C2D6EC(v2, v3);
+  return MainMenuBarBase__get_IsMenuBarActive((MainMenuBarBase_o *)v2, v3);
 }
 
 
-void __fastcall MainMenuBar__requestSelectedSceneChange(const MethodInfo *method)
+void MainMenuBar__requestSelectedSceneChange(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
   Il2CppObject *Instance; // x19
-  Il2CppObject *v4; // x0
-  const MethodInfo *v5; // x1
+  Il2CppObject *v2; // x0
+  const MethodInfo *v3; // x1
 
-  if ( (byte_4B1BC93 & 1) == 0 )
+  if ( (byte_4C26A2A & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v1);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v2);
-    byte_4B1BC93 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A2A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0) )
   {
-    v4 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-    if ( !v4 )
-      sub_1BCB254(0LL, v5);
-    MainMenuBar__RequestSelectedSceneChange((MainMenuBar_o *)v4, v5);
+    v2 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    if ( !v2 )
+      sub_1C2D6EC(0, v3);
+    MainMenuBar__RequestSelectedSceneChange((MainMenuBar_o *)v2, v3);
   }
 }
 
 
-void __fastcall MainMenuBar__requestSelectedSignal(const MethodInfo *method)
+void MainMenuBar__requestSelectedSignal(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
   Il2CppObject *Instance; // x19
-  Il2CppObject *v4; // x0
-  const MethodInfo *v5; // x1
+  Il2CppObject *v2; // x0
+  const MethodInfo *v3; // x1
 
-  if ( (byte_4B1BC91 & 1) == 0 )
+  if ( (byte_4C26A28 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v1);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v2);
-    byte_4B1BC91 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A28 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0) )
   {
-    v4 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-    if ( !v4 )
-      sub_1BCB254(0LL, v5);
-    MainMenuBar__RequestSelectedSignal((MainMenuBar_o *)v4, v5);
+    v2 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    if ( !v2 )
+      sub_1C2D6EC(0, v3);
+    MainMenuBar__RequestSelectedSignal((MainMenuBar_o *)v2, v3);
   }
 }
 
 
-void __fastcall MainMenuBar__requestTerminalSceneChange(const MethodInfo *method)
+void MainMenuBar__requestTerminalSceneChange(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
   Il2CppObject *Instance; // x19
-  Il2CppObject *v4; // x0
-  const MethodInfo *v5; // x1
+  Il2CppObject *v2; // x0
+  const MethodInfo *v3; // x1
 
-  if ( (byte_4B1BC92 & 1) == 0 )
+  if ( (byte_4C26A29 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v1);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v2);
-    byte_4B1BC92 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A29 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0) )
   {
-    v4 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-    if ( !v4 )
-      sub_1BCB254(0LL, v5);
-    MainMenuBar__RequestTerminalSceneChange((MainMenuBar_o *)v4, v5);
+    v2 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    if ( !v2 )
+      sub_1C2D6EC(0, v3);
+    MainMenuBar__RequestTerminalSceneChange((MainMenuBar_o *)v2, v3);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall MainMenuBar__resumeMenuBar(
-        SceneRootComponent_o *scene,
-        int32_t kind,
-        int32_t depth,
-        const MethodInfo *method)
+void MainMenuBar__resumeMenuBar(SceneRootComponent_o *scene, int32_t kind, int32_t depth, const MethodInfo *method)
 {
-  __int64 v7; // x1
   Il2CppObject *Instance; // x22
-  _BOOL8 v9; // x0
-  __int64 v10; // x1
-  const MethodInfo *v11; // x4
-
-  if ( (byte_4B1BC88 & 1) == 0 )
-  {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&kind);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v7);
-    byte_4B1BC88 = 1;
-  }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v9 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
-  if ( !v9 )
-  {
-    if ( !Instance )
-      sub_1BCB254(v9, v10);
-    MainMenuBar__SetResumeMenu((MainMenuBar_o *)Instance, scene, kind, depth, v11);
-  }
-}
-
-
-void __fastcall MainMenuBar__setActiveScene(
-        SceneRootComponent_o *scene,
-        UnityEngine_Camera_o *cam,
-        const MethodInfo *method)
-{
-  __int64 v5; // x1
-  Il2CppObject *Instance; // x21
-  _BOOL8 v7; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x5
-
-  if ( (byte_4B1BC89 & 1) == 0 )
-  {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, cam);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v5);
-    byte_4B1BC89 = 1;
-  }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
-  if ( !v7 )
-  {
-    if ( !Instance )
-      sub_1BCB254(v7, v8);
-    MainMenuBar__SetActiveScene((MainMenuBar_o *)Instance, scene, 0, -1, cam, v9);
-  }
-}
-
-
-// local variable allocation has failed, the output may be wrong!
-void __fastcall MainMenuBar__setActiveScene_40466524(
-        SceneRootComponent_o *scene,
-        int32_t depth,
-        UnityEngine_Camera_o *cam,
-        const MethodInfo *method)
-{
-  __int64 v7; // x1
-  Il2CppObject *Instance; // x22
-  _BOOL8 v9; // x0
-  __int64 v10; // x1
-  const MethodInfo *v11; // x5
-
-  if ( (byte_4B1BC8A & 1) == 0 )
-  {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&depth);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v7);
-    byte_4B1BC8A = 1;
-  }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v9 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
-  if ( !v9 )
-  {
-    if ( !Instance )
-      sub_1BCB254(v9, v10);
-    MainMenuBar__SetActiveScene((MainMenuBar_o *)Instance, scene, 0, depth, cam, v11);
-  }
-}
-
-
-// local variable allocation has failed, the output may be wrong!
-void __fastcall MainMenuBar__setActiveScene_40466732(
-        SceneRootComponent_o *scene,
-        int32_t kind,
-        int32_t depth,
-        UnityEngine_Camera_o *cam,
-        const MethodInfo *method)
-{
+  _BOOL8 v8; // x0
   __int64 v9; // x1
-  Il2CppObject *Instance; // x23
-  _BOOL8 v11; // x0
-  __int64 v12; // x1
-  const MethodInfo *v13; // x5
+  const MethodInfo *v10; // x4
 
-  if ( (byte_4B1BC8B & 1) == 0 )
+  if ( (byte_4C26A1F & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&kind);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v9);
-    byte_4B1BC8B = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A1F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v11 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
-  if ( !v11 )
+  v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
+  if ( !v8 )
   {
     if ( !Instance )
-      sub_1BCB254(v11, v12);
-    MainMenuBar__SetActiveScene((MainMenuBar_o *)Instance, scene, kind, depth, cam, v13);
+      sub_1C2D6EC(v8, v9);
+    MainMenuBar__SetResumeMenu((MainMenuBar_o *)Instance, scene, kind, depth, v10);
   }
 }
 
 
-void __fastcall MainMenuBar__setButtonActive(bool isActive, const MethodInfo *method)
+void MainMenuBar__setActiveScene(SceneRootComponent_o *scene, UnityEngine_Camera_o *cam, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  Il2CppObject *Instance; // x20
-  _BOOL8 v5; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x3
+  Il2CppObject *Instance; // x21
+  _BOOL8 v6; // x0
+  __int64 v7; // x1
+  const MethodInfo *v8; // x5
 
-  if ( (byte_4B1BC90 & 1) == 0 )
+  if ( (byte_4C26A20 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v3);
-    byte_4B1BC90 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A20 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v5 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
-  if ( !v5 )
+  v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
+  if ( !v6 )
   {
     if ( !Instance )
-      sub_1BCB254(v5, v6);
-    MainMenuBar__SetButtonActive((MainMenuBar_o *)Instance, (int32_t)Instance[2].klass, isActive, v7);
+      sub_1C2D6EC(v6, v7);
+    MainMenuBar__SetActiveScene((MainMenuBar_o *)Instance, scene, 0, -1, cam, v8);
   }
 }
 
 
-void __fastcall MainMenuBar__setCloseHideMode(bool is_enable, const MethodInfo *method)
+void MainMenuBar__setActiveScene_41065484(
+        SceneRootComponent_o *scene,
+        int32_t depth,
+        UnityEngine_Camera_o *cam,
+        const MethodInfo *method)
+{
+  Il2CppObject *Instance; // x22
+  _BOOL8 v8; // x0
+  __int64 v9; // x1
+  const MethodInfo *v10; // x5
+
+  if ( (byte_4C26A21 & 1) == 0 )
+  {
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A21 = 1;
+  }
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
+  if ( !v8 )
+  {
+    if ( !Instance )
+      sub_1C2D6EC(v8, v9);
+    MainMenuBar__SetActiveScene((MainMenuBar_o *)Instance, scene, 0, depth, cam, v10);
+  }
+}
+
+
+void MainMenuBar__setActiveScene_41065692(
+        SceneRootComponent_o *scene,
+        int32_t kind,
+        int32_t depth,
+        UnityEngine_Camera_o *cam,
+        const MethodInfo *method)
+{
+  Il2CppObject *Instance; // x23
+  _BOOL8 v10; // x0
+  __int64 v11; // x1
+  const MethodInfo *v12; // x5
+
+  if ( (byte_4C26A22 & 1) == 0 )
+  {
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A22 = 1;
+  }
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
+  if ( !v10 )
+  {
+    if ( !Instance )
+      sub_1C2D6EC(v10, v11);
+    MainMenuBar__SetActiveScene((MainMenuBar_o *)Instance, scene, kind, depth, cam, v12);
+  }
+}
+
+
+void MainMenuBar__setButtonActive(bool isActive, const MethodInfo *method)
+{
+  Il2CppObject *Instance; // x20
+  _BOOL8 v4; // x0
+  __int64 v5; // x1
+  const MethodInfo *v6; // x3
+
+  if ( (byte_4C26A27 & 1) == 0 )
+  {
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A27 = 1;
+  }
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
+  if ( !v4 )
+  {
+    if ( !Instance )
+      sub_1C2D6EC(v4, v5);
+    MainMenuBar__SetButtonActive((MainMenuBar_o *)Instance, (int32_t)Instance[2].klass, isActive, v6);
+  }
+}
+
+
+void MainMenuBar__setCloseHideMode(bool is_enable, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
   Il2CppClass *klass; // x8
 
-  if ( (byte_4B1BC8F & 1) == 0 )
+  if ( (byte_4C26A26 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, method);
-    byte_4B1BC8F = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A26 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
-  if ( !Instance || (klass = Instance[3].klass) == 0LL )
-    sub_1BCB254(Instance, v4);
-  LOBYTE(klass->vtable[6].method) = is_enable;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  if ( !Instance || (klass = Instance[3].klass) == 0 )
+    sub_1C2D6EC(Instance, v4);
+  LOBYTE(klass->vtable[8].methodPtr) = is_enable;
   if ( is_enable )
-    GameObjectExtensions__SetLocalPositionY((UnityEngine_GameObject_o *)klass->_1.interopData, -420.0, 0LL);
+    GameObjectExtensions__SetLocalPositionY((UnityEngine_GameObject_o *)klass->_1.interopData, -420.0, 0);
 }
 
 
-void __fastcall MainMenuBar__setKind(int32_t kind, const MethodInfo *method)
+void MainMenuBar__setKind(int32_t kind, const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Instance; // x20
-  _BOOL8 v5; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x2
+  _BOOL8 v4; // x0
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
 
-  if ( (byte_4B1BC8C & 1) == 0 )
+  if ( (byte_4C26A23 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v3);
-    byte_4B1BC8C = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A23 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v5 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
-  if ( !v5 )
+  v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
+  if ( !v4 )
   {
     if ( !Instance )
-      sub_1BCB254(v5, v6);
-    MainMenuBar__SetButtonKind((MainMenuBar_o *)Instance, kind, v7);
+      sub_1C2D6EC(v4, v5);
+    MainMenuBar__SetButtonKind((MainMenuBar_o *)Instance, kind, v6);
   }
 }
 
 
-void __fastcall MainMenuBar__setMenuActive(bool isActive, UnityEngine_Camera_o *cam, const MethodInfo *method)
+void MainMenuBar__setMenuActive(bool isActive, UnityEngine_Camera_o *cam, const MethodInfo *method)
 {
-  __int64 v5; // x1
   Il2CppObject *Instance; // x21
-  _BOOL8 v7; // x0
-  __int64 v8; // x1
-  const MethodInfo *v9; // x3
+  _BOOL8 v6; // x0
+  __int64 v7; // x1
+  const MethodInfo *v8; // x3
 
-  if ( (byte_4B1BC8D & 1) == 0 )
+  if ( (byte_4C26A24 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, cam);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__, v5);
-    byte_4B1BC8D = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+    byte_4C26A24 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_MainMenuBar__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0LL, 0LL);
-  if ( !v7 )
+  v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
+  if ( !v6 )
   {
     if ( !Instance )
-      sub_1BCB254(v7, v8);
-    MainMenuBar__SetMenuActive((MainMenuBar_o *)Instance, isActive, cam, v9);
+      sub_1C2D6EC(v6, v7);
+    MainMenuBar__SetMenuActive((MainMenuBar_o *)Instance, isActive, cam, v8);
   }
 }

@@ -1,4 +1,4 @@
-void __fastcall ServantStatusCharaGraphListViewIndicator___ctor(
+void ServantStatusCharaGraphListViewIndicator___ctor(
         ServantStatusCharaGraphListViewIndicator_o *this,
         const MethodInfo *method)
 {
@@ -6,19 +6,19 @@ void __fastcall ServantStatusCharaGraphListViewIndicator___ctor(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B17B63 & 1) == 0 )
+  if ( (byte_4C22811 & 1) == 0 )
   {
-    sub_1BCAFF8(&UISprite___TypeInfo, method);
-    byte_4B17B63 = 1;
+    sub_1C2D490(&UISprite___TypeInfo);
+    byte_4C22811 = 1;
   }
-  v3 = (struct UISprite_array *)sub_1BCB0A0(UISprite___TypeInfo, 4LL);
+  v3 = (struct UISprite_array *)sub_1C2D538(UISprite___TypeInfo, 4);
   this->fields.pageSpriteList = v3;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.pageSpriteList, (int32_t)v3, v4, v5);
-  ListViewIndicator___ctor((ListViewIndicator_o *)this, 0LL);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.pageSpriteList, (int32_t)v3, v4, v5);
+  ListViewIndicator___ctor((ListViewIndicator_o *)this, 0);
 }
 
 
-int32_t __fastcall ServantStatusCharaGraphListViewIndicator__GetPageIndex(
+int32_t ServantStatusCharaGraphListViewIndicator__GetPageIndex(
         ServantStatusCharaGraphListViewIndicator_o *this,
         const MethodInfo *method)
 {
@@ -26,150 +26,148 @@ int32_t __fastcall ServantStatusCharaGraphListViewIndicator__GetPageIndex(
 }
 
 
-void __fastcall ServantStatusCharaGraphListViewIndicator__OnClickLeft(
+void ServantStatusCharaGraphListViewIndicator__OnClickLeft(
         ServantStatusCharaGraphListViewIndicator_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *manager; // x20
-  __int64 v5; // x1
-  ListViewManager_o *v6; // x0
-  _QWORD *v7; // x0
-  System_Reflection_MethodBase_o *v8; // x0
+  __int64 v4; // x1
+  ListViewManager_o *v5; // x0
+  _QWORD *v6; // x0
+  System_Reflection_MethodBase_o *v7; // x0
   int32_t pageIndex; // w8
-  struct ListViewManager_o *v10; // x8
-  _QWORD *v11; // x0
-  System_Reflection_MethodBase_o *v12; // x0
+  struct ListViewManager_o *v9; // x8
+  _QWORD *v10; // x0
+  System_Reflection_MethodBase_o *v11; // x0
 
-  if ( (byte_4B17B61 & 1) == 0 )
+  if ( (byte_4C2280F & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    sub_1BCAFF8(&Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__, v3);
-    byte_4B17B61 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__);
+    byte_4C2280F = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality(manager, 0LL, 0LL) && (this->fields.pageIndex & 0x80000000) == 0 )
+  if ( !UnityEngine_Object__op_Equality(manager, 0, 0) && (this->fields.pageIndex & 0x80000000) == 0 )
   {
-    v6 = this->fields.manager;
-    if ( !v6 )
+    v5 = this->fields.manager;
+    if ( !v5 )
       goto LABEL_21;
-    ListViewManager__BackLoopItem(v6, 0LL);
+    ListViewManager__BackLoopItem(v5, 0);
     if ( this->fields.pageIndex >= 1 )
     {
-      v7 = Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__;
+      v6 = Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__;
       if ( (*((_BYTE *)Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__ + 83) & 2) != 0 )
-        v7 = (_QWORD *)sub_1BCB010(Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__);
-      v8 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v7, v7[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v8, 7, 0, 0LL);
-      v6 = this->fields.manager;
-      if ( v6 )
+        v6 = (_QWORD *)sub_1C2D4A8(Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__);
+      v7 = (System_Reflection_MethodBase_o *)sub_1C2D474(v6, v6[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v7, 7, 0, 0);
+      v5 = this->fields.manager;
+      if ( v5 )
       {
         pageIndex = this->fields.pageIndex;
 LABEL_19:
-        ListViewManager__MoveCenterItem(v6, pageIndex - 1, 1, 0, 0.0, 0LL);
+        ListViewManager__MoveCenterItem(v5, pageIndex - 1, 1, 0, 0.0, 0);
         return;
       }
       goto LABEL_21;
     }
-    v10 = this->fields.manager;
-    if ( !v10 )
+    v9 = this->fields.manager;
+    if ( !v9 )
       goto LABEL_21;
-    if ( v10->fields.isLoop )
+    if ( v9->fields.isLoop )
     {
-      v11 = Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__;
+      v10 = Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__;
       if ( (*((_BYTE *)Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__ + 83) & 2) != 0 )
-        v11 = (_QWORD *)sub_1BCB010(Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__);
-      v12 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v11, v11[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v12, 7, 0, 0LL);
-      v6 = this->fields.manager;
-      if ( v6 )
+        v10 = (_QWORD *)sub_1C2D4A8(Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__);
+      v11 = (System_Reflection_MethodBase_o *)sub_1C2D474(v10, v10[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v11, 7, 0, 0);
+      v5 = this->fields.manager;
+      if ( v5 )
       {
         pageIndex = this->fields.pageMax;
         goto LABEL_19;
       }
 LABEL_21:
-      sub_1BCB254(v6, v5);
+      sub_1C2D6EC(v5, v4);
     }
   }
 }
 
 
-void __fastcall ServantStatusCharaGraphListViewIndicator__OnClickRight(
+void ServantStatusCharaGraphListViewIndicator__OnClickRight(
         ServantStatusCharaGraphListViewIndicator_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *manager; // x20
-  __int64 v5; // x1
-  ListViewManager_o *v6; // x0
+  __int64 v4; // x1
+  ListViewManager_o *v5; // x0
   int32_t pageIndex; // w8
-  _QWORD *v8; // x0
-  System_Reflection_MethodBase_o *v9; // x0
-  int32_t v10; // w1
-  struct ListViewManager_o *v11; // x8
-  _QWORD *v12; // x0
-  System_Reflection_MethodBase_o *v13; // x0
+  _QWORD *v7; // x0
+  System_Reflection_MethodBase_o *v8; // x0
+  int32_t v9; // w1
+  struct ListViewManager_o *v10; // x8
+  _QWORD *v11; // x0
+  System_Reflection_MethodBase_o *v12; // x0
 
-  if ( (byte_4B17B62 & 1) == 0 )
+  if ( (byte_4C22810 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    sub_1BCAFF8(&Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__, v3);
-    byte_4B17B62 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__);
+    byte_4C22810 = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality(manager, 0LL, 0LL) && (this->fields.pageIndex & 0x80000000) == 0 )
+  if ( !UnityEngine_Object__op_Equality(manager, 0, 0) && (this->fields.pageIndex & 0x80000000) == 0 )
   {
-    v6 = this->fields.manager;
-    if ( !v6 )
+    v5 = this->fields.manager;
+    if ( !v5 )
       goto LABEL_22;
-    ListViewManager__FowardLoopItem(v6, 0LL);
+    ListViewManager__FowardLoopItem(v5, 0);
     pageIndex = this->fields.pageIndex;
     if ( (pageIndex & 0x80000000) == 0 && pageIndex < this->fields.pageMax - 1 )
     {
-      v8 = Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__;
+      v7 = Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__;
       if ( (*((_BYTE *)Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__ + 83) & 2) != 0 )
-        v8 = (_QWORD *)sub_1BCB010(Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__);
-      v9 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v8, v8[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v9, 7, 0, 0LL);
-      v6 = this->fields.manager;
-      if ( v6 )
+        v7 = (_QWORD *)sub_1C2D4A8(Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__);
+      v8 = (System_Reflection_MethodBase_o *)sub_1C2D474(v7, v7[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v8, 7, 0, 0);
+      v5 = this->fields.manager;
+      if ( v5 )
       {
-        v10 = this->fields.pageIndex + 1;
+        v9 = this->fields.pageIndex + 1;
 LABEL_20:
-        ListViewManager__MoveCenterItem(v6, v10, 1, 0, 0.0, 0LL);
+        ListViewManager__MoveCenterItem(v5, v9, 1, 0, 0.0, 0);
         return;
       }
       goto LABEL_22;
     }
-    v11 = this->fields.manager;
-    if ( !v11 )
+    v10 = this->fields.manager;
+    if ( !v10 )
       goto LABEL_22;
-    if ( v11->fields.isLoop )
+    if ( v10->fields.isLoop )
     {
-      v12 = Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__;
+      v11 = Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__;
       if ( (*((_BYTE *)Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__ + 83) & 2) != 0 )
-        v12 = (_QWORD *)sub_1BCB010(Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__);
-      v13 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v12, v12[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v13, 7, 0, 0LL);
-      v6 = this->fields.manager;
-      if ( v6 )
+        v11 = (_QWORD *)sub_1C2D4A8(Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__);
+      v12 = (System_Reflection_MethodBase_o *)sub_1C2D474(v11, v11[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v12, 7, 0, 0);
+      v5 = this->fields.manager;
+      if ( v5 )
       {
-        v10 = 0;
+        v9 = 0;
         goto LABEL_20;
       }
 LABEL_22:
-      sub_1BCB254(v6, v5);
+      sub_1C2D6EC(v5, v4);
     }
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusCharaGraphListViewIndicator__OnModifyCenterItem(
+void ServantStatusCharaGraphListViewIndicator__OnModifyCenterItem(
         ServantStatusCharaGraphListViewIndicator_o *this,
         ListViewManager_o *manager,
         ListViewItem_o *item,
@@ -195,7 +193,7 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__OnModifyCenterItem(
   p_manager = &this->fields.manager;
   v10 = isRight;
   v11 = isLeft;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields.manager,
     (int32_t)manager,
     (int32_t)item,
@@ -209,13 +207,13 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__OnModifyCenterItem(
     v10 |= v11;
   if ( !leftObject
     || ((isEnableArrowObj = this->fields.isEnableArrowObj, isLoop) ? (v18 = v16) : (v18 = v11),
-        UnityEngine_GameObject__SetActive(leftObject, v18 && isEnableArrowObj, 0LL),
-        (leftObject = this->fields.rightObject) == 0LL) )
+        UnityEngine_GameObject__SetActive(leftObject, v18 && isEnableArrowObj, 0),
+        (leftObject = this->fields.rightObject) == 0) )
   {
 LABEL_13:
-    sub_1BCB254(leftObject, v14);
+    sub_1C2D6EC(leftObject, v14);
   }
-  UnityEngine_GameObject__SetActive(leftObject, (v10 & isEnableArrowObj) != 0, 0LL);
+  UnityEngine_GameObject__SetActive(leftObject, (v10 & isEnableArrowObj) != 0, 0);
   if ( item )
     index = item->fields.index;
   else
@@ -224,7 +222,7 @@ LABEL_13:
 }
 
 
-void __fastcall ServantStatusCharaGraphListViewIndicator__OnModifyPosition(
+void ServantStatusCharaGraphListViewIndicator__OnModifyPosition(
         ServantStatusCharaGraphListViewIndicator_o *this,
         ListViewManager_o *manager,
         ListViewItem_o *item,
@@ -233,10 +231,9 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__OnModifyPosition(
   ServantStatusCharaGraphListViewIndicator_o *v4; // x19
   struct ListViewManager_o *v5; // x8
   bool v6; // w10
-  _BOOL4 isLoop; // w8
   bool isEnableArrowObj; // w11
+  bool v8; // w8
   bool v9; // w8
-  bool v10; // w8
   bool value; // [xsp+0h] [xbp-20h] BYREF
   bool isLeft; // [xsp+4h] [xbp-1Ch] BYREF
   bool isBottom; // [xsp+8h] [xbp-18h] BYREF
@@ -247,7 +244,7 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__OnModifyPosition(
   isLeft = 0;
   value = 0;
   if ( !manager )
-    goto LABEL_11;
+    goto LABEL_9;
   v4 = this;
   this = (ServantStatusCharaGraphListViewIndicator_o *)ListViewManager__GetCanScrollList(
                                                          manager,
@@ -255,33 +252,38 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__OnModifyPosition(
                                                          &isBottom,
                                                          &isLeft,
                                                          &value,
-                                                         0LL);
+                                                         0);
   v5 = v4->fields.manager;
   if ( !v5 )
-    goto LABEL_11;
+    goto LABEL_9;
   v6 = value;
-  isLoop = v5->fields.isLoop;
   isEnableArrowObj = v4->fields.isEnableArrowObj;
-  if ( isLoop )
+  if ( v5->fields.isLoop )
+  {
     v6 = value || isLeft;
-  v9 = isLoop ? value || isLeft : isLeft;
-  v10 = isEnableArrowObj && v9;
-  isLeft = v10;
+    v8 = value || isLeft;
+  }
+  else
+  {
+    v8 = isLeft;
+  }
+  v9 = isEnableArrowObj && v8;
+  isLeft = v9;
   value = v6 && isEnableArrowObj;
   this = (ServantStatusCharaGraphListViewIndicator_o *)v4->fields.leftObject;
   if ( !this
-    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v10, 0LL),
-        (this = (ServantStatusCharaGraphListViewIndicator_o *)v4->fields.rightObject) == 0LL) )
+    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v9, 0),
+        (this = (ServantStatusCharaGraphListViewIndicator_o *)v4->fields.rightObject) == 0) )
   {
-LABEL_11:
-    sub_1BCB254(this, manager);
+LABEL_9:
+    sub_1C2D6EC(this, manager);
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, value, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, value, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusCharaGraphListViewIndicator__SetActiveArrowObject(
+void ServantStatusCharaGraphListViewIndicator__SetActiveArrowObject(
         ServantStatusCharaGraphListViewIndicator_o *this,
         bool active,
         const MethodInfo *method)
@@ -300,19 +302,19 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__SetActiveArrowObject(
   manager = this->fields.manager;
   this->fields.isEnableArrowObj = active;
   if ( !manager
-    || (ListViewManager__GetCanScrollList(manager, &isTop, &isBottom, &isLeft, &isRight, 0LL),
-        (manager = (ListViewManager_o *)this->fields.leftObject) == 0LL)
+    || (ListViewManager__GetCanScrollList(manager, &isTop, &isBottom, &isLeft, &isRight, 0),
+        (manager = (ListViewManager_o *)this->fields.leftObject) == 0)
     || (v6 = active,
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)manager, isLeft && v6, 0LL),
-        (manager = (ListViewManager_o *)this->fields.rightObject) == 0LL) )
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)manager, isLeft && v6, 0),
+        (manager = (ListViewManager_o *)this->fields.rightObject) == 0) )
   {
-    sub_1BCB254(manager, active);
+    sub_1C2D6EC(manager, active);
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)manager, isRight && v6, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)manager, isRight && v6, 0);
 }
 
 
-void __fastcall ServantStatusCharaGraphListViewIndicator__SetIndexMax(
+void ServantStatusCharaGraphListViewIndicator__SetIndexMax(
         ServantStatusCharaGraphListViewIndicator_o *this,
         int32_t max,
         const MethodInfo *method)
@@ -323,64 +325,63 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__SetIndexMax(
   ServantStatusCharaGraphListViewIndicator__SetPageMax(this, max, method);
   leftObject = this->fields.leftObject;
   if ( !leftObject
-    || (UnityEngine_GameObject__SetActive(leftObject, 0, 0LL), (leftObject = this->fields.rightObject) == 0LL) )
+    || (UnityEngine_GameObject__SetActive(leftObject, 0, 0), (leftObject = this->fields.rightObject) == 0) )
   {
-    sub_1BCB254(leftObject, v4);
+    sub_1C2D6EC(leftObject, v4);
   }
-  UnityEngine_GameObject__SetActive(leftObject, 0, 0LL);
+  UnityEngine_GameObject__SetActive(leftObject, 0, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusCharaGraphListViewIndicator__SetPageIndex(
+void ServantStatusCharaGraphListViewIndicator__SetPageIndex(
         ServantStatusCharaGraphListViewIndicator_o *this,
         int32_t index,
         const MethodInfo *method)
 {
   ServantStatusCharaGraphListViewIndicator_o *v4; // x19
-  __int64 v5; // x1
   int pageMax; // w8
-  __int64 v7; // x21
+  __int64 v6; // x21
   struct UISprite_array *pageSpriteList; // x8
-  __int64 *v9; // x8
+  __int64 *v8; // x8
 
   v4 = this;
-  if ( (byte_4B17B60 & 1) == 0 )
+  if ( (byte_4C2280E & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_20394/*"img_slider_on"*/, *(_QWORD *)&index);
-    this = (ServantStatusCharaGraphListViewIndicator_o *)sub_1BCAFF8(&StringLiteral_20393/*"img_slider_off"*/, v5);
-    byte_4B17B60 = 1;
+    sub_1C2D490(&StringLiteral_20565/*"img_slider_on"*/);
+    this = (ServantStatusCharaGraphListViewIndicator_o *)sub_1C2D490(&StringLiteral_20564/*"img_slider_off"*/);
+    byte_4C2280E = 1;
   }
   pageMax = v4->fields.pageMax;
   v4->fields.pageIndex = index;
   if ( pageMax >= 1 )
   {
-    v7 = 0LL;
+    v6 = 0;
     do
     {
       pageSpriteList = v4->fields.pageSpriteList;
       if ( !pageSpriteList )
         goto LABEL_13;
-      if ( (unsigned int)v7 >= pageSpriteList->max_length )
-        sub_1BCB25C(this, *(_QWORD *)&index, method);
-      this = (ServantStatusCharaGraphListViewIndicator_o *)pageSpriteList->m_Items[v7];
+      if ( (unsigned int)v6 >= LODWORD(pageSpriteList->max_length) )
+        sub_1C2D6F4(this, *(_QWORD *)&index, method);
+      this = (ServantStatusCharaGraphListViewIndicator_o *)pageSpriteList->m_Items[v6];
       if ( !this )
 LABEL_13:
-        sub_1BCB254(this, *(_QWORD *)&index);
-      if ( index == (_DWORD)v7 )
-        v9 = &StringLiteral_20394/*"img_slider_on"*/;
+        sub_1C2D6EC(this, *(_QWORD *)&index);
+      if ( index == (_DWORD)v6 )
+        v8 = &StringLiteral_20565/*"img_slider_on"*/;
       else
-        v9 = &StringLiteral_20393/*"img_slider_off"*/;
-      UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v9, 0LL);
-      ++v7;
+        v8 = &StringLiteral_20564/*"img_slider_off"*/;
+      UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v8, 0);
+      ++v6;
     }
-    while ( (int)v7 < v4->fields.pageMax );
+    while ( (int)v6 < v4->fields.pageMax );
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusCharaGraphListViewIndicator__SetPageMax(
+void ServantStatusCharaGraphListViewIndicator__SetPageMax(
         ServantStatusCharaGraphListViewIndicator_o *this,
         int32_t max,
         const MethodInfo *method)
@@ -391,18 +392,17 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__SetPageMax(
   int32_t v7; // w11
   int32_t v8; // w20
   System_String_o *v9; // x1
-  float v10; // s1
-  float v11; // s2
   int32_t pageMax; // w19
-  float v13; // s8
-  float v14; // s9
-  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s8
+  float z; // s9
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4B17B5F & 1) == 0 )
+  if ( (byte_4C2280D & 1) == 0 )
   {
-    this = (ServantStatusCharaGraphListViewIndicator_o *)sub_1BCAFF8(&StringLiteral_20393/*"img_slider_off"*/, *(_QWORD *)&max);
-    byte_4B17B5F = 1;
+    this = (ServantStatusCharaGraphListViewIndicator_o *)sub_1C2D490(&StringLiteral_20564/*"img_slider_off"*/);
+    byte_4C2280D = 1;
   }
   pageSpriteList = v4->fields.pageSpriteList;
   if ( !pageSpriteList )
@@ -420,12 +420,12 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__SetPageMax(
     while ( 1 )
     {
       if ( v8 >= (unsigned int)max_length )
-        sub_1BCB25C(this, *(_QWORD *)&max, method);
+        sub_1C2D6F4(this, *(_QWORD *)&max, method);
       this = (ServantStatusCharaGraphListViewIndicator_o *)pageSpriteList->m_Items[v8];
       if ( !this )
         break;
-      v9 = v8 >= v4->fields.pageMax ? 0LL : (System_String_o *)StringLiteral_20393/*"img_slider_off"*/;
-      UISprite__set_spriteName((UISprite_o *)this, v9, 0LL);
+      v9 = v8 >= v4->fields.pageMax ? 0LL : (System_String_o *)StringLiteral_20564/*"img_slider_off"*/;
+      UISprite__set_spriteName((UISprite_o *)this, v9, 0);
       pageSpriteList = v4->fields.pageSpriteList;
       if ( !pageSpriteList )
         break;
@@ -434,7 +434,7 @@ void __fastcall ServantStatusCharaGraphListViewIndicator__SetPageMax(
         goto LABEL_16;
     }
 LABEL_21:
-    sub_1BCB254(this, *(_QWORD *)&max);
+    sub_1C2D6EC(this, *(_QWORD *)&max);
   }
 LABEL_16:
   this = (ServantStatusCharaGraphListViewIndicator_o *)v4->fields.pageBaseObject;
@@ -442,23 +442,23 @@ LABEL_16:
     goto LABEL_21;
   this = (ServantStatusCharaGraphListViewIndicator_o *)UnityEngine_GameObject__get_transform(
                                                          (UnityEngine_GameObject_o *)this,
-                                                         0LL);
+                                                         0);
   if ( !this )
     goto LABEL_21;
-  *(UnityEngine_Vector3_o *)(&v10 - 1) = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
   this = (ServantStatusCharaGraphListViewIndicator_o *)v4->fields.pageBaseObject;
   if ( !this )
     goto LABEL_21;
   pageMax = v4->fields.pageMax;
-  v13 = v10;
-  v14 = v11;
+  y = localPosition.fields.y;
+  z = localPosition.fields.z;
   this = (ServantStatusCharaGraphListViewIndicator_o *)UnityEngine_GameObject__get_transform(
                                                          (UnityEngine_GameObject_o *)this,
-                                                         0LL);
+                                                         0);
   if ( !this )
     goto LABEL_21;
-  v15.fields.x = (float)(-10 * pageMax + 10);
-  v15.fields.y = v13;
-  v15.fields.z = v14;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v15, 0LL);
+  v14.fields.x = (float)(-10 * pageMax + 10);
+  v14.fields.y = y;
+  v14.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v14, 0);
 }

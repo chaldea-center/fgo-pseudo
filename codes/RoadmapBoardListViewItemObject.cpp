@@ -1,23 +1,23 @@
-void __fastcall RoadmapBoardListViewItemObject___ctor(RoadmapBoardListViewItemObject_o *this, const MethodInfo *method)
+void RoadmapBoardListViewItemObject___ctor(RoadmapBoardListViewItemObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B167F8 & 1) == 0 )
+  if ( (byte_4C2140E & 1) == 0 )
   {
-    sub_1BCAFF8(&ListViewObject_TypeInfo, method);
-    byte_4B167F8 = 1;
+    sub_1C2D490(&ListViewObject_TypeInfo);
+    byte_4C2140E = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
-  ListViewObject___ctor((ListViewObject_o *)this, 0LL);
+  ListViewObject___ctor((ListViewObject_o *)this, 0);
 }
 
 
-void __fastcall RoadmapBoardListViewItemObject__Awake(RoadmapBoardListViewItemObject_o *this, const MethodInfo *method)
+void RoadmapBoardListViewItemObject__Awake(RoadmapBoardListViewItemObject_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall RoadmapBoardListViewItemObject__SetItem(
+void RoadmapBoardListViewItemObject__SetItem(
         RoadmapBoardListViewItemObject_o *this,
         ListViewItem_o *item,
         ListViewItemSeed_o *seed,
@@ -26,25 +26,25 @@ void __fastcall RoadmapBoardListViewItemObject__SetItem(
   __int64 v7; // x1
   const MethodInfo *v8; // x2
   RoadmapBoardListViewItemDraw_o *itemDraw; // x0
-  __int64 methodPtr_low; // x9
+  __int64 naturalAligment; // x9
 
-  if ( (byte_4B167F7 & 1) == 0 )
+  if ( (byte_4C2140D & 1) == 0 )
   {
-    sub_1BCAFF8(&RoadmapBoardListViewItem_TypeInfo, item);
-    byte_4B167F7 = 1;
+    sub_1C2D490(&RoadmapBoardListViewItem_TypeInfo);
+    byte_4C2140D = 1;
   }
-  ListViewObject__SetItem_42963052((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_43593652((ListViewObject_o *)this, item, seed, 0);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_1BCB254(itemDraw, v7);
+    sub_1C2D6EC(itemDraw, v7);
   if ( item )
   {
-    methodPtr_low = LOBYTE(RoadmapBoardListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(item->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
-      || (RoadmapBoardListViewItem_c *)item->klass->_2.typeHierarchy[methodPtr_low - 1] != RoadmapBoardListViewItem_TypeInfo )
+    naturalAligment = RoadmapBoardListViewItem_TypeInfo->_2.naturalAligment;
+    if ( item->klass->_2.naturalAligment < (unsigned int)naturalAligment
+      || (RoadmapBoardListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] != RoadmapBoardListViewItem_TypeInfo )
     {
-      itemDraw = (RoadmapBoardListViewItemDraw_o *)sub_1BCB514(item);
+      itemDraw = (RoadmapBoardListViewItemDraw_o *)sub_1C2D9AC(item);
       goto LABEL_9;
     }
   }

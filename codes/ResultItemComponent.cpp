@@ -1,88 +1,87 @@
-void __fastcall ResultItemComponent___ctor(ResultItemComponent_o *this, const MethodInfo *method)
+void ResultItemComponent___ctor(ResultItemComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall ResultItemComponent__Clear(ResultItemComponent_o *this, const MethodInfo *method)
+void ResultItemComponent__Clear(ResultItemComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *baseObject; // x0
 
   baseObject = this->fields.baseObject;
   if ( !baseObject
-    || (UnityEngine_GameObject__SetActive(baseObject, 0, 0LL),
-        (baseObject = (UnityEngine_GameObject_o *)this->fields.bonusSprite) == 0LL)
-    || (baseObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseObject, 0LL)) == 0LL
-    || (UnityEngine_GameObject__SetActive(baseObject, 0, 0LL),
-        (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0LL) )
+    || (UnityEngine_GameObject__SetActive(baseObject, 0, 0),
+        (baseObject = (UnityEngine_GameObject_o *)this->fields.bonusSprite) == 0)
+    || (baseObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseObject, 0)) == 0
+    || (UnityEngine_GameObject__SetActive(baseObject, 0, 0),
+        (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0) )
   {
-    sub_1BCB254(baseObject, method);
+    sub_1C2D6EC(baseObject, method);
   }
-  ItemIconComponent__Clear((ItemIconComponent_o *)baseObject, 0LL);
+  ItemIconComponent__Clear((ItemIconComponent_o *)baseObject, 0);
 }
 
 
-void __fastcall ResultItemComponent__Set(
+void ResultItemComponent__Set(
         ResultItemComponent_o *this,
         GiftEntity_o *giftEnt,
         int32_t count,
+        int32_t overwriteItemId,
         const MethodInfo *method)
 {
-  GiftEntity_o *v4; // x20
-  ResultItemComponent_o *v5; // x21
+  GiftEntity_o *v5; // x19
+  ResultItemComponent_o *v6; // x22
+  int32_t v7; // w20
   int32_t num; // w3
-  int32_t v8; // w3
+  int64_t v10; // x3
 
   if ( !giftEnt )
-    goto LABEL_16;
-  v4 = giftEnt;
-  v5 = this;
+    goto LABEL_19;
+  v5 = giftEnt;
+  v6 = this;
   if ( giftEnt->fields.objectId < 1 )
   {
     ResultItemComponent__Clear(this, (const MethodInfo *)giftEnt);
     return;
   }
   this = (ResultItemComponent_o *)this->fields.baseObject;
+  v7 = overwriteItemId <= 0 ? giftEnt->fields.objectId : overwriteItemId;
   if ( !this )
-    goto LABEL_16;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0LL);
-  giftEnt = (GiftEntity_o *)(unsigned int)v4->fields.prioredIconId;
-  this = (ResultItemComponent_o *)v5->fields.itemIcon;
+    goto LABEL_19;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
+  giftEnt = (GiftEntity_o *)(unsigned int)v5->fields.prioredIconId;
+  this = (ResultItemComponent_o *)v6->fields.itemIcon;
   if ( (int)giftEnt >= 1 )
   {
     if ( this )
     {
-      if ( v4->fields.num <= 1 )
+      if ( v5->fields.num <= 1 )
         num = -1;
       else
-        num = v4->fields.num;
-      ItemIconComponent__SetItemImage_40111660(
+        num = v5->fields.num;
+      ItemIconComponent__SetItemImage_40704000(
         (ItemIconComponent_o *)this,
         (int32_t)giftEnt,
-        v4->fields.objectId,
+        v5->fields.objectId,
         num,
-        0LL);
+        0);
       return;
     }
-LABEL_16:
-    sub_1BCB254(this, giftEnt);
+LABEL_19:
+    sub_1C2D6EC(this, giftEnt);
   }
   if ( !this )
-    goto LABEL_16;
+    goto LABEL_19;
   if ( count < 1 )
-    v8 = -1;
+    v10 = -1;
   else
-    v8 = count;
-  ItemIconComponent__SetGift_40107980((ItemIconComponent_o *)this, v4->fields.type, v4->fields.objectId, v8, 0, 0LL);
+    v10 = (unsigned int)count;
+  ItemIconComponent__SetGift_40700316((ItemIconComponent_o *)this, v5->fields.type, v7, v10, 0, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ResultItemComponent__SetExtra(
-        ResultItemComponent_o *this,
-        int32_t imgId,
-        int32_t bgId,
-        const MethodInfo *method)
+void ResultItemComponent__SetExtra(ResultItemComponent_o *this, int32_t imgId, int32_t bgId, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *baseObject; // x0
 
@@ -94,18 +93,17 @@ void __fastcall ResultItemComponent__SetExtra(
   {
     baseObject = this->fields.baseObject;
     if ( !baseObject
-      || (UnityEngine_GameObject__SetActive(baseObject, 1, 0LL),
-          (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0LL) )
+      || (UnityEngine_GameObject__SetActive(baseObject, 1, 0),
+          (baseObject = (UnityEngine_GameObject_o *)this->fields.itemIcon) == 0) )
     {
-      sub_1BCB254(baseObject, *(_QWORD *)&imgId);
+      sub_1C2D6EC(baseObject, *(_QWORD *)&imgId);
     }
-    ItemIconComponent__SetItemImage_40105648((ItemIconComponent_o *)baseObject, imgId, bgId, -1, -1, 1, 0LL);
+    ItemIconComponent__SetItemImage_40697980((ItemIconComponent_o *)baseObject, imgId, bgId, -1, -1, 1, 0);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall ResultItemComponent__SetItemIconScale(
+void ResultItemComponent__SetItemIconScale(
         ResultItemComponent_o *this,
         UnityEngine_Vector3_o vec,
         const MethodInfo *method)
@@ -119,27 +117,27 @@ void __fastcall ResultItemComponent__SetItemIconScale(
 
   itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
   if ( !itemIcon )
-    sub_1BCB254(0LL, method);
+    sub_1C2D6EC(0, method);
   z = vec.fields.z;
   y = vec.fields.y;
   x = vec.fields.x;
-  gameObject = UnityEngine_Component__get_gameObject(itemIcon, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject(itemIcon, 0);
   v8.fields.y = y;
   v8.fields.z = z;
   v8.fields.x = x;
-  GameObjectExtensions__SetLocalScale(gameObject, v8, 0LL);
+  GameObjectExtensions__SetLocalScale(gameObject, v8, 0);
 }
 
 
-void __fastcall ResultItemComponent__SetRareItem(ResultItemComponent_o *this, const MethodInfo *method)
+void ResultItemComponent__SetRareItem(ResultItemComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Component_o *bonusSprite; // x0
 
   bonusSprite = (UnityEngine_Component_o *)this->fields.bonusSprite;
   if ( !bonusSprite
-    || (bonusSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bonusSprite, 0LL)) == 0LL )
+    || (bonusSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bonusSprite, 0)) == 0 )
   {
-    sub_1BCB254(bonusSprite, method);
+    sub_1C2D6EC(bonusSprite, method);
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bonusSprite, 1, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bonusSprite, 1, 0);
 }

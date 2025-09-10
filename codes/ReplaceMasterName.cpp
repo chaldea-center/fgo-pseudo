@@ -1,10 +1,10 @@
-void __fastcall ReplaceMasterName___ctor(ReplaceMasterName_o *this, const MethodInfo *method)
+void ReplaceMasterName___ctor(ReplaceMasterName_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-System_String_o *__fastcall ReplaceMasterName__Replace(
+System_String_o *ReplaceMasterName__Replace(
         ReplaceMasterName_o *this,
         ParseBattleMessage_o *parse,
         System_String_o *str,
@@ -14,27 +14,27 @@ System_String_o *__fastcall ReplaceMasterName__Replace(
   __int64 v5; // x1
   System_String_o *name; // x19
 
-  if ( (byte_4B1F5FE & 1) == 0 )
+  if ( (byte_4C2A4A6 & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, parse);
-    byte_4B1F5FE = 1;
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    byte_4C2A4A6 = 1;
   }
-  SelfUserGame = UserGameMaster__getSelfUserGame(0LL);
+  SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
-    sub_1BCB254(0LL, v5);
+    sub_1C2D6EC(0, v5);
   name = SelfUserGame->fields.name;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__ReplaceNameTag(name, 0, 0LL);
+  return LocalizationManager__ReplaceNameTag(name, 0, 0);
 }
 
 
-System_String_o *__fastcall ReplaceMasterName__get_Tag(ReplaceMasterName_o *this, const MethodInfo *method)
+System_String_o *ReplaceMasterName__get_Tag(ReplaceMasterName_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1F5FD & 1) == 0 )
+  if ( (byte_4C2A4A5 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_21264/*"masterName"*/, method);
-    byte_4B1F5FD = 1;
+    sub_1C2D490(&StringLiteral_21441/*"masterName"*/);
+    byte_4C2A4A5 = 1;
   }
-  return (System_String_o *)StringLiteral_21264/*"masterName"*/;
+  return (System_String_o *)StringLiteral_21441/*"masterName"*/;
 }

@@ -1,4 +1,4 @@
-void __fastcall CharaGraphServantMissionListViewItem___ctor(
+void CharaGraphServantMissionListViewItem___ctor(
         CharaGraphServantMissionListViewItem_o *this,
         int32_t index,
         CharaGraphListViewPatternBase_o *listViewPattern,
@@ -10,11 +10,11 @@ void __fastcall CharaGraphServantMissionListViewItem___ctor(
     index,
     listViewPattern,
     userSvtCollectionEntity,
-    0LL);
+    0);
 }
 
 
-void __fastcall CharaGraphServantMissionListViewItem__ModifyLocal(
+void CharaGraphServantMissionListViewItem__ModifyLocal(
         CharaGraphServantMissionListViewItem_o *this,
         CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *args,
         const MethodInfo *method)
@@ -23,7 +23,7 @@ void __fastcall CharaGraphServantMissionListViewItem__ModifyLocal(
 }
 
 
-void __fastcall CharaGraphServantMissionListViewItem__UpdateProperties(
+void CharaGraphServantMissionListViewItem__UpdateProperties(
         CharaGraphServantMissionListViewItem_o *this,
         const MethodInfo *method)
 {

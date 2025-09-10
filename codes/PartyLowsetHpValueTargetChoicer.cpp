@@ -1,12 +1,10 @@
-void __fastcall PartyLowsetHpValueTargetChoicer___ctor(
-        PartyLowsetHpValueTargetChoicer_o *this,
-        const MethodInfo *method)
+void PartyLowsetHpValueTargetChoicer___ctor(PartyLowsetHpValueTargetChoicer_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-System_Int32_array *__fastcall PartyLowsetHpValueTargetChoicer__GetCandidate(
+System_Int32_array *PartyLowsetHpValueTargetChoicer__GetCandidate(
         PartyLowsetHpValueTargetChoicer_o *this,
         const MethodInfo *method)
 {
@@ -19,17 +17,17 @@ System_Int32_array *__fastcall PartyLowsetHpValueTargetChoicer__GetCandidate(
   BattleServantData_o *MostMatchedServant; // x0
   const MethodInfo *v10; // x2
 
-  if ( (byte_4B1F5C8 & 1) == 0 )
+  if ( (byte_4C2A470 & 1) == 0 )
   {
-    sub_1BCAFF8(&TargetFilterLowestHpValue_TypeInfo, method);
-    byte_4B1F5C8 = 1;
+    sub_1C2D490(&TargetFilterLowestHpValue_TypeInfo);
+    byte_4C2A470 = 1;
   }
   Candidate = PartyAllFieldTargetAggregator__GetCandidate((PartyAllFieldTargetAggregator_o *)this, method);
-  v4 = (Il2CppObject *)sub_1BCB244(TargetFilterLowestHpValue_TypeInfo);
-  System_Object___ctor(v4, 0LL);
+  v4 = (Il2CppObject *)sub_1C2D6DC(TargetFilterLowestHpValue_TypeInfo);
+  System_Object___ctor(v4, 0);
   args = this->fields.args;
   if ( !args )
-    sub_1BCB254(v5, v6);
+    sub_1C2D6EC(v5, v6);
   MostMatchedServant = TargetAggregator__GetMostMatchedServant(
                          (TargetAggregator_o *)this,
                          Candidate,

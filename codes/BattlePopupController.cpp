@@ -1,191 +1,177 @@
-void __fastcall BattlePopupController___ctor(
-        BattlePopupController_o *this,
-        BattlePerformance_o *perf,
-        const MethodInfo *method)
+void BattlePopupController___ctor(BattlePopupController_o *this, BattlePerformance_o *perf, const MethodInfo *method)
 {
-  __int64 v5; // x1
-  System_Collections_Generic_List_object__o *v6; // x21
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x2
+  System_Collections_Generic_List_object__o *v5; // x21
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  const MethodInfo *v8; // x2
 
-  if ( (byte_4B1F191 & 1) == 0 )
+  if ( (byte_4C2A017 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__, perf);
-    sub_1BCAFF8(&System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo, v5);
-    byte_4B1F191 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
+    byte_4C2A017 = 1;
   }
-  v6 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v6,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
-  this->fields.popupList = (struct System_Collections_Generic_List_WrapBaseBattlePopupControl__o *)v6;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.popupList, (int32_t)v6, v7, v8);
-  System_Object___ctor((Il2CppObject *)this, 0LL);
-  BattlePopupController__InitWrapPopup(this, perf, v9);
+    v5,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
+  this->fields.popupList = (struct System_Collections_Generic_List_WrapBaseBattlePopupControl__o *)v5;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.popupList, (int32_t)v5, v6, v7);
+  System_Object___ctor((Il2CppObject *)this, 0);
+  BattlePopupController__InitWrapPopup(this, perf, v8);
 }
 
 
-void __fastcall BattlePopupController__InitWrapPopup(
+void BattlePopupController__InitWrapPopup(
         BattlePopupController_o *this,
         BattlePerformance_o *perf,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
+  System_Collections_Generic_List_object__o *v5; // x20
+  WrapBattlePopupControl_o *v6; // x22
+  const MethodInfo *v7; // x2
+  __int64 v8; // x0
   __int64 v9; // x1
-  System_Collections_Generic_List_object__o *v10; // x20
-  WrapBattlePopupControl_o *v11; // x22
-  const MethodInfo *v12; // x2
-  __int64 v13; // x0
-  __int64 v14; // x1
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v18; // x9
+  _QWORD *v13; // x9
   __int64 size; // x10
-  Il2CppClass **v20; // x0
-  WrapBattleUIFrontPopupControl_o *v21; // x22
-  const MethodInfo *v22; // x2
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  struct System_Object_array *v25; // x8
-  _QWORD *v26; // x9
-  __int64 v27; // x10
-  Il2CppClass **v28; // x0
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
+  Il2CppClass **v15; // x0
+  WrapBattleUIFrontPopupControl_o *v16; // x22
+  const MethodInfo *v17; // x2
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
+  struct System_Object_array *v20; // x8
+  _QWORD *v21; // x9
+  __int64 v22; // x10
+  Il2CppClass **v23; // x0
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
   Il2CppObject *object; // x0
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
+  int32_t v27; // w2
+  const MethodInfo *v28; // x3
 
-  if ( (byte_4B1F192 & 1) == 0 )
+  if ( (byte_4C2A018 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___, perf);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_WrapBaseBattlePopupControl__Add__, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__, v6);
-    sub_1BCAFF8(&System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo, v7);
-    sub_1BCAFF8(&WrapBattlePopupControl_TypeInfo, v8);
-    sub_1BCAFF8(&WrapBattleUIFrontPopupControl_TypeInfo, v9);
-    byte_4B1F192 = 1;
+    sub_1C2D490(&Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
+    sub_1C2D490(&Method_System_Collections_Generic_List_WrapBaseBattlePopupControl__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
+    sub_1C2D490(&WrapBattlePopupControl_TypeInfo);
+    sub_1C2D490(&WrapBattleUIFrontPopupControl_TypeInfo);
+    byte_4C2A018 = 1;
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_WrapBaseBattlePopupControl__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v10,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
-  v11 = (WrapBattlePopupControl_o *)sub_1BCB244(WrapBattlePopupControl_TypeInfo);
-  WrapBattlePopupControl___ctor(v11, perf, v12);
-  if ( !v10 )
+    v5,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_WrapBaseBattlePopupControl___ctor__);
+  v6 = (WrapBattlePopupControl_o *)sub_1C2D6DC(WrapBattlePopupControl_TypeInfo);
+  WrapBattlePopupControl___ctor(v6, perf, v7);
+  if ( !v5 )
     goto LABEL_13;
-  items = v10->fields._items;
-  v18 = Method_System_Collections_Generic_List_WrapBaseBattlePopupControl__Add__;
-  ++v10->fields._version;
+  items = v5->fields._items;
+  v13 = Method_System_Collections_Generic_List_WrapBaseBattlePopupControl__Add__;
+  ++v5->fields._version;
   if ( !items )
     goto LABEL_13;
-  size = v10->fields._size;
-  if ( (unsigned int)size >= items->max_length )
+  size = v5->fields._size;
+  if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v10,
-      (Il2CppObject *)v11,
-      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+      v5,
+      (Il2CppObject *)v6,
+      *(const MethodInfo_3789B84 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
-    v20 = &items->obj.klass + size;
-    v10->fields._size = size + 1;
-    v20[4] = (Il2CppClass *)v11;
-    sub_1BCAF9C((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v11, v15, v16);
+    v15 = &items->obj.klass + size;
+    v5->fields._size = size + 1;
+    v15[4] = (Il2CppClass *)v6;
+    sub_1C2D434((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v6, v10, v11);
   }
-  v21 = (WrapBattleUIFrontPopupControl_o *)sub_1BCB244(WrapBattleUIFrontPopupControl_TypeInfo);
-  WrapBattleUIFrontPopupControl___ctor(v21, perf, v22);
-  v25 = v10->fields._items;
-  v26 = Method_System_Collections_Generic_List_WrapBaseBattlePopupControl__Add__;
-  ++v10->fields._version;
-  if ( !v25 )
+  v16 = (WrapBattleUIFrontPopupControl_o *)sub_1C2D6DC(WrapBattleUIFrontPopupControl_TypeInfo);
+  WrapBattleUIFrontPopupControl___ctor(v16, perf, v17);
+  v20 = v5->fields._items;
+  v21 = Method_System_Collections_Generic_List_WrapBaseBattlePopupControl__Add__;
+  ++v5->fields._version;
+  if ( !v20 )
 LABEL_13:
-    sub_1BCB254(v13, v14);
-  v27 = v10->fields._size;
-  if ( (unsigned int)v27 >= v25->max_length )
+    sub_1C2D6EC(v8, v9);
+  v22 = v5->fields._size;
+  if ( (unsigned int)v22 >= LODWORD(v20->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v10,
-      (Il2CppObject *)v21,
-      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+      v5,
+      (Il2CppObject *)v16,
+      *(const MethodInfo_3789B84 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
   }
   else
   {
-    v28 = &v25->obj.klass + v27;
-    v10->fields._size = v27 + 1;
-    v28[4] = (Il2CppClass *)v21;
-    sub_1BCAF9C((CGThumbnailListItem_o *)(v28 + 4), (int32_t)v21, v23, v24);
+    v23 = &v20->obj.klass + v22;
+    v5->fields._size = v22 + 1;
+    v23[4] = (Il2CppClass *)v16;
+    sub_1C2D434((CGThumbnailListItem_o *)(v23 + 4), (int32_t)v16, v18, v19);
   }
-  this->fields.popupList = (struct System_Collections_Generic_List_WrapBaseBattlePopupControl__o *)v10;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.popupList, (int32_t)v10, v29, v30);
+  this->fields.popupList = (struct System_Collections_Generic_List_WrapBaseBattlePopupControl__o *)v5;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.popupList, (int32_t)v5, v24, v25);
   object = System_Linq_Enumerable__First_object_(
              (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.popupList,
-             (const MethodInfo_303D3A4 *)Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
+             (const MethodInfo_30F5228 *)Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
   this->fields._CurPopup_k__BackingField = (struct WrapBaseBattlePopupControl_o *)object;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)object, v32, v33);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)object, v27, v28);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BattlePopupController__SwitchDisplayPopup(
+void BattlePopupController__SwitchDisplayPopup(
         BattlePopupController_o *this,
         int32_t targetLayer,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v5; // x21
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x21
-  __int64 v10; // x0
-  __int64 v11; // x1
   struct System_Collections_Generic_List_WrapBaseBattlePopupControl__o *popupList; // x20
-  System_Func_object__bool__o *v13; // x22
+  System_Func_object__bool__o *v9; // x22
   Il2CppObject *object; // x1
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4B1F193 & 1) == 0 )
+  if ( (byte_4C2A019 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_FirstOrDefault_WrapBaseBattlePopupControl___, *(_QWORD *)&targetLayer);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___, v5);
-    sub_1BCAFF8(&System_Func_WrapBaseBattlePopupControl__bool__TypeInfo, v6);
-    sub_1BCAFF8(&Method_BattlePopupController___c__DisplayClass7_0__SwitchDisplayPopup_b__0__, v7);
-    sub_1BCAFF8(&BattlePopupController___c__DisplayClass7_0_TypeInfo, v8);
-    byte_4B1F193 = 1;
+    sub_1C2D490(&Method_System_Linq_Enumerable_FirstOrDefault_WrapBaseBattlePopupControl___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
+    sub_1C2D490(&System_Func_WrapBaseBattlePopupControl__bool__TypeInfo);
+    sub_1C2D490(&Method_BattlePopupController___c__DisplayClass7_0__SwitchDisplayPopup_b__0__);
+    sub_1C2D490(&BattlePopupController___c__DisplayClass7_0_TypeInfo);
+    byte_4C2A019 = 1;
   }
-  v9 = sub_1BCB244(BattlePopupController___c__DisplayClass7_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v9, 0LL);
-  if ( !v9 )
-    sub_1BCB254(v10, v11);
-  *(_DWORD *)(v9 + 16) = targetLayer;
+  v5 = sub_1C2D6DC(BattlePopupController___c__DisplayClass7_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
+  if ( !v5 )
+    sub_1C2D6EC(v6, v7);
+  *(_DWORD *)(v5 + 16) = targetLayer;
   popupList = this->fields.popupList;
-  v13 = (System_Func_object__bool__o *)sub_1BCB244(System_Func_WrapBaseBattlePopupControl__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_WrapBaseBattlePopupControl__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v13,
-    (Il2CppObject *)v9,
+    v9,
+    (Il2CppObject *)v5,
     Method_BattlePopupController___c__DisplayClass7_0__SwitchDisplayPopup_b__0__,
-    0LL);
-  object = System_Linq_Enumerable__FirstOrDefault_object__50595188(
+    0);
+  object = System_Linq_Enumerable__FirstOrDefault_object__51348472(
              (System_Collections_Generic_IEnumerable_TSource__o *)popupList,
-             (System_Func_TSource__bool__o *)v13,
-             (const MethodInfo_3040574 *)Method_System_Linq_Enumerable_FirstOrDefault_WrapBaseBattlePopupControl___);
+             (System_Func_TSource__bool__o *)v9,
+             (const MethodInfo_30F83F8 *)Method_System_Linq_Enumerable_FirstOrDefault_WrapBaseBattlePopupControl___);
   if ( !object )
     object = System_Linq_Enumerable__First_object_(
                (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.popupList,
-               (const MethodInfo_303D3A4 *)Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
+               (const MethodInfo_30F5228 *)Method_System_Linq_Enumerable_First_WrapBaseBattlePopupControl___);
   this->fields._CurPopup_k__BackingField = (struct WrapBaseBattlePopupControl_o *)object;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)object, v15, v16);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)object, v11, v12);
 }
 
 
-WrapBaseBattlePopupControl_o *__fastcall BattlePopupController__get_CurPopup(
+WrapBaseBattlePopupControl_o *BattlePopupController__get_CurPopup(
         BattlePopupController_o *this,
         const MethodInfo *method)
 {
@@ -193,7 +179,7 @@ WrapBaseBattlePopupControl_o *__fastcall BattlePopupController__get_CurPopup(
 }
 
 
-void __fastcall BattlePopupController__set_CurPopup(
+void BattlePopupController__set_CurPopup(
         BattlePopupController_o *this,
         WrapBaseBattlePopupControl_o *value,
         const MethodInfo *method)
@@ -201,24 +187,24 @@ void __fastcall BattlePopupController__set_CurPopup(
   const MethodInfo *v3; // x3
 
   this->fields._CurPopup_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall BattlePopupController___c__DisplayClass7_0___ctor(
+void BattlePopupController___c__DisplayClass7_0___ctor(
         BattlePopupController___c__DisplayClass7_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall BattlePopupController___c__DisplayClass7_0___SwitchDisplayPopup_b__0(
+bool BattlePopupController___c__DisplayClass7_0___SwitchDisplayPopup_b__0(
         BattlePopupController___c__DisplayClass7_0_o *this,
         WrapBaseBattlePopupControl_o *x,
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   return x->fields._Layer_k__BackingField == this->fields.targetLayer;
 }

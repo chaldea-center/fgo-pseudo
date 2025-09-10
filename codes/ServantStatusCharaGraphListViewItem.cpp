@@ -1,4 +1,4 @@
-void __fastcall ServantStatusCharaGraphListViewItem___ctor(
+void ServantStatusCharaGraphListViewItem___ctor(
         ServantStatusCharaGraphListViewItem_o *this,
         int32_t index,
         ServantStatusListViewItem_o *mainInfo,
@@ -10,23 +10,23 @@ void __fastcall ServantStatusCharaGraphListViewItem___ctor(
   const MethodInfo *v9; // x3
 
   v7 = this;
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   v7->fields.mainInfo = mainInfo;
-  v7 = (ServantStatusCharaGraphListViewItem_o *)((char *)v7 + 112);
-  sub_1BCAF9C((CGThumbnailListItem_o *)v7, (int32_t)mainInfo, v8, v9);
+  v7 = (ServantStatusCharaGraphListViewItem_o *)((char *)v7 + 120);
+  sub_1C2D434((CGThumbnailListItem_o *)v7, (int32_t)mainInfo, v8, v9);
   LODWORD(v7->monitor) = imageLimitCount;
 }
 
 
-void __fastcall ServantStatusCharaGraphListViewItem__Finalize(
+void ServantStatusCharaGraphListViewItem__Finalize(
         ServantStatusCharaGraphListViewItem_o *this,
         const MethodInfo *method)
 {
-  ListViewItem__Finalize((ListViewItem_o *)this, 0LL);
+  ListViewItem__Finalize((ListViewItem_o *)this, 0);
 }
 
 
-int32_t __fastcall ServantStatusCharaGraphListViewItem__get_ImageLimitCount(
+int32_t ServantStatusCharaGraphListViewItem__get_ImageLimitCount(
         ServantStatusCharaGraphListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -34,7 +34,7 @@ int32_t __fastcall ServantStatusCharaGraphListViewItem__get_ImageLimitCount(
 }
 
 
-ServantStatusListViewItem_o *__fastcall ServantStatusCharaGraphListViewItem__get_MainInfo(
+ServantStatusListViewItem_o *ServantStatusCharaGraphListViewItem__get_MainInfo(
         ServantStatusCharaGraphListViewItem_o *this,
         const MethodInfo *method)
 {

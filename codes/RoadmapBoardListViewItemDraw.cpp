@@ -1,24 +1,22 @@
-void __fastcall RoadmapBoardListViewItemDraw___ctor(RoadmapBoardListViewItemDraw_o *this, const MethodInfo *method)
+void RoadmapBoardListViewItemDraw___ctor(RoadmapBoardListViewItemDraw_o *this, const MethodInfo *method)
 {
-  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall RoadmapBoardListViewItemDraw__Awake(RoadmapBoardListViewItemDraw_o *this, const MethodInfo *method)
-{
-  ;
-}
-
-
-void __fastcall RoadmapBoardListViewItemDraw__CheckAssert(
-        RoadmapBoardListViewItemDraw_o *this,
-        const MethodInfo *method)
+void RoadmapBoardListViewItemDraw__Awake(RoadmapBoardListViewItemDraw_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall RoadmapBoardListViewItemDraw__UpdateBoard(
+void RoadmapBoardListViewItemDraw__CheckAssert(RoadmapBoardListViewItemDraw_o *this, const MethodInfo *method)
+{
+  ;
+}
+
+
+void RoadmapBoardListViewItemDraw__UpdateBoard(
         RoadmapBoardListViewItemDraw_o *this,
         RoadmapBoardListViewItem_o *item,
         const MethodInfo *method)
@@ -32,60 +30,60 @@ void __fastcall RoadmapBoardListViewItemDraw__UpdateBoard(
   UnityEngine_GameObject_o *v11; // x22
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4B167F6 & 1) == 0 )
+  if ( (byte_4C2140C & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, item);
-    byte_4B167F6 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2140C = 1;
   }
   boardSprite = (UnityEngine_Component_o *)this->fields.boardSprite;
   if ( !boardSprite )
     goto LABEL_21;
-  boardSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(boardSprite, 0LL);
+  boardSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(boardSprite, 0);
   if ( !item )
     goto LABEL_21;
   v6 = (UnityEngine_GameObject_o *)boardSprite;
   Atlas_k__BackingField = (UnityEngine_Object_o *)item->fields._Atlas_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  boardSprite = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(Atlas_k__BackingField, 0LL, 0LL);
+  boardSprite = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(Atlas_k__BackingField, 0, 0);
   if ( !v6 )
     goto LABEL_21;
-  UnityEngine_GameObject__SetActive(v6, (unsigned __int8)boardSprite & 1, 0LL);
+  UnityEngine_GameObject__SetActive(v6, (unsigned __int8)boardSprite & 1, 0);
   p_boardPrefab = &this->fields.boardPrefab;
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)this->fields.boardPrefab, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)this->fields.boardPrefab, 0, 0) )
   {
     boardSprite = (UnityEngine_Component_o *)*p_boardPrefab;
     if ( !*p_boardPrefab )
       goto LABEL_21;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)boardSprite, 0, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)boardSprite, 0, 0);
     v9 = (UnityEngine_Object_o *)*p_boardPrefab;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(v9, 0LL);
-    *p_boardPrefab = 0LL;
-    sub_1BCAF9C(&this->fields.boardPrefab);
+    UnityEngine_Object__Destroy_71163704(v9, 0);
+    *p_boardPrefab = 0;
+    sub_1C2D434(&this->fields.boardPrefab);
   }
   BoardPrefab_k__BackingField = (UnityEngine_Object_o *)item->fields._BoardPrefab_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(BoardPrefab_k__BackingField, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(BoardPrefab_k__BackingField, 0, 0) )
   {
     v11 = item->fields._BoardPrefab_k__BackingField;
-    transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-    this->fields.boardPrefab = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v11, transform, 0LL, 0LL);
-    sub_1BCAF9C(&this->fields.boardPrefab);
+    transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+    this->fields.boardPrefab = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, v11, transform, 0, 0);
+    sub_1C2D434(&this->fields.boardPrefab);
     boardSprite = (UnityEngine_Component_o *)this->fields.boardPrefab;
     if ( !boardSprite )
       goto LABEL_21;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)boardSprite, 1, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)boardSprite, 1, 0);
   }
   boardSprite = (UnityEngine_Component_o *)this->fields.boardSprite;
   if ( !boardSprite
-    || (UISprite__set_atlas((UISprite_o *)boardSprite, item->fields._Atlas_k__BackingField, 0LL),
-        (boardSprite = (UnityEngine_Component_o *)this->fields.boardSprite) == 0LL) )
+    || (UISprite__set_atlas((UISprite_o *)boardSprite, item->fields._Atlas_k__BackingField, 0),
+        (boardSprite = (UnityEngine_Component_o *)this->fields.boardSprite) == 0) )
   {
 LABEL_21:
-    sub_1BCB254(boardSprite, item);
+    sub_1C2D6EC(boardSprite, item);
   }
-  UISprite__set_spriteName((UISprite_o *)boardSprite, item->fields._SpriteName_k__BackingField, 0LL);
+  UISprite__set_spriteName((UISprite_o *)boardSprite, item->fields._SpriteName_k__BackingField, 0);
 }

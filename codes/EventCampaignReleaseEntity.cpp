@@ -1,37 +1,36 @@
-void __fastcall EventCampaignReleaseEntity___ctor(EventCampaignReleaseEntity_o *this, const MethodInfo *method)
+void EventCampaignReleaseEntity___ctor(EventCampaignReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C419 & 1) == 0 )
+  if ( (byte_4C271C5 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1C419 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C271C5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall EventCampaignReleaseEntity__CreatePK(
+System_String_o *EventCampaignReleaseEntity__CreatePK(
         int32_t eventId,
         int32_t target,
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4B1C418 & 1) == 0 )
+  if ( (byte_4C271C4 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&target);
-    byte_4B1C418 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C271C4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            target,
            idx,
-           (const MethodInfo_30190BC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30CCF68 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
-System_String_o *__fastcall EventCampaignReleaseEntity__CreatePrimaryKey(
+System_String_o *EventCampaignReleaseEntity__CreatePrimaryKey(
         EventCampaignReleaseEntity_o *this,
         const MethodInfo *method)
 {
@@ -41,66 +40,64 @@ System_String_o *__fastcall EventCampaignReleaseEntity__CreatePrimaryKey(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall EventCampaignReleaseEntity__getCreatePrimarykey(
+System_String_o *EventCampaignReleaseEntity__getCreatePrimarykey(
         int32_t eventId,
         int32_t target,
         int32_t idx,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x19
-  System_String_o *v6; // x0
-  __int64 v7; // x1
-  __int64 v8; // x2
+  __int64 v4; // x19
+  System_String_o *v5; // x0
+  __int64 v6; // x1
+  __int64 v7; // x2
+  const MethodInfo *v8; // x3
   const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x3
-  int32_t v11; // w1
+  int32_t v10; // w1
+  const MethodInfo *v11; // x3
   const MethodInfo *v12; // x3
-  const MethodInfo *v13; // x3
-  int32_t v14; // w1
-  const MethodInfo *v15; // x3
-  int32_t v17; // [xsp+4h] [xbp-2Ch] BYREF
-  int32_t v18; // [xsp+8h] [xbp-28h] BYREF
-  int32_t v19; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t v13; // w1
+  const MethodInfo *v14; // x3
+  int32_t v16; // [xsp+4h] [xbp-2Ch] BYREF
+  int32_t v17; // [xsp+8h] [xbp-28h] BYREF
+  int32_t v18; // [xsp+Ch] [xbp-24h] BYREF
 
-  v18 = target;
-  v19 = eventId;
-  v17 = idx;
-  if ( (byte_4B1C417 & 1) == 0 )
+  v17 = target;
+  v18 = eventId;
+  v16 = idx;
+  if ( (byte_4C271C3 & 1) == 0 )
   {
-    sub_1BCAFF8(&string___TypeInfo, *(_QWORD *)&target);
-    sub_1BCAFF8(&StringLiteral_1448/*":"*/, v4);
-    byte_4B1C417 = 1;
+    sub_1C2D490(&string___TypeInfo);
+    sub_1C2D490(&StringLiteral_1456/*":"*/);
+    byte_4C271C3 = 1;
   }
-  v5 = sub_1BCB0A0(string___TypeInfo, 5LL);
-  v6 = System_Int32__ToString((int32_t)&v19, 0LL);
-  if ( !v5 )
-    sub_1BCB254(v6, v7);
-  if ( !*(_DWORD *)(v5 + 24) )
+  v4 = sub_1C2D538(string___TypeInfo, 5);
+  v5 = System_Int32__ToString((int32_t)&v18, 0);
+  if ( !v4 )
+    sub_1C2D6EC(v5, v6);
+  if ( !*(_DWORD *)(v4 + 24) )
     goto LABEL_10;
-  *(_QWORD *)(v5 + 32) = v6;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v5 + 32), (int32_t)v6, v8, v9);
-  if ( *(_DWORD *)(v5 + 24) <= 1u )
+  *(_QWORD *)(v4 + 32) = v5;
+  sub_1C2D434((CGThumbnailListItem_o *)(v4 + 32), (int32_t)v5, v7, v8);
+  if ( *(_DWORD *)(v4 + 24) <= 1u )
     goto LABEL_10;
-  v11 = StringLiteral_1448/*":"*/;
-  *(_QWORD *)(v5 + 40) = StringLiteral_1448/*":"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v5 + 40), v11, v8, v10);
-  v6 = System_Int32__ToString((int32_t)&v18, 0LL);
-  if ( *(_DWORD *)(v5 + 24) <= 2u
-    || (*(_QWORD *)(v5 + 48) = v6,
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v5 + 48), (int32_t)v6, v8, v12),
-        *(_DWORD *)(v5 + 24) <= 3u)
-    || (v14 = StringLiteral_1448/*":"*/,
-        *(_QWORD *)(v5 + 56) = StringLiteral_1448/*":"*/,
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v5 + 56), v14, v8, v13),
-        v6 = System_Int32__ToString((int32_t)&v17, 0LL),
-        *(_DWORD *)(v5 + 24) <= 4u) )
+  v10 = StringLiteral_1456/*":"*/;
+  *(_QWORD *)(v4 + 40) = StringLiteral_1456/*":"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)(v4 + 40), v10, v7, v9);
+  v5 = System_Int32__ToString((int32_t)&v17, 0);
+  if ( *(_DWORD *)(v4 + 24) <= 2u
+    || (*(_QWORD *)(v4 + 48) = v5,
+        sub_1C2D434((CGThumbnailListItem_o *)(v4 + 48), (int32_t)v5, v7, v11),
+        *(_DWORD *)(v4 + 24) <= 3u)
+    || (v13 = StringLiteral_1456/*":"*/,
+        *(_QWORD *)(v4 + 56) = StringLiteral_1456/*":"*/,
+        sub_1C2D434((CGThumbnailListItem_o *)(v4 + 56), v13, v7, v12),
+        v5 = System_Int32__ToString((int32_t)&v16, 0),
+        *(_DWORD *)(v4 + 24) <= 4u) )
   {
 LABEL_10:
-    sub_1BCB25C(v6, v7, v8);
+    sub_1C2D6F4(v5, v6, v7);
   }
-  *(_QWORD *)(v5 + 64) = v6;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v5 + 64), (int32_t)v6, v8, v15);
-  return System_String__Concat_62490940((System_String_array *)v5, 0LL);
+  *(_QWORD *)(v4 + 64) = v5;
+  sub_1C2D434((CGThumbnailListItem_o *)(v4 + 64), (int32_t)v5, v7, v14);
+  return System_String__Concat_63498380((System_String_array *)v4, 0);
 }

@@ -1,117 +1,111 @@
-System_String_o *__fastcall TopSignupRequest__getMockData(TopSignupRequest_o *this, const MethodInfo *method)
+System_String_o *TopSignupRequest__getMockData(TopSignupRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1E0C1 & 1) == 0 )
+  if ( (byte_4C28ED3 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1/*""*/, method);
-    byte_4B1E0C1 = 1;
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C28ED3 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
-System_String_o *__fastcall TopSignupRequest__getURL(TopSignupRequest_o *this, const MethodInfo *method)
+System_String_o *TopSignupRequest__getURL(TopSignupRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B1E0C0 & 1) == 0 )
+  if ( (byte_4C28ED2 & 1) == 0 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_23289/*"signup/top"*/, v2);
-    byte_4B1E0C0 = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_23477/*"signup/top"*/);
+    byte_4C28ED2 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_23289/*"signup/top"*/, 0LL);
+  BaseUrl = NetworkManager__getBaseUrl(1, 0);
+  return System_String__Concat_63457864(BaseUrl, (System_String_o *)StringLiteral_23477/*"signup/top"*/, 0);
 }
 
 
-void __fastcall TopSignupRequest__requestCompleted(
+void TopSignupRequest__requestCompleted(
         TopSignupRequest_o *this,
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  ResponseData_o *v10; // x0
-  const MethodInfo *v11; // x2
+  ResponseData_o *v5; // x0
+  const MethodInfo *v6; // x2
   UserGameEntity_o *SelfUserGame; // x0
-  UserGameEntity_o *v13; // x20
+  UserGameEntity_o *v8; // x20
   int64_t birthDay; // x21
   Il2CppObject *Instance; // x0
   System_String_o *name; // x22
   int32_t genderType; // w21
-  NetworkManager_o *v18; // x23
+  NetworkManager_o *v13; // x23
+  System_DateTime_o v14; // x0
   int32_t Month; // w24
+  System_DateTime_o v16; // x0
   Il2CppObject *Day; // x0
-  __int64 v21; // x1
+  __int64 v18; // x1
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 *v23; // x9
+  __int64 *v20; // x9
   uint64_t dateData; // [xsp+8h] [xbp-48h] BYREF
-  System_DateTime_o v25; // 0:x0.8
-  System_DateTime_o v26; // 0:x0.8
 
-  if ( (byte_4B1E0C2 & 1) == 0 )
+  if ( (byte_4C28ED4 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_DateTime_TypeInfo, responseList);
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v5);
-    sub_1BCAFF8(&ResponseCommandKind_TypeInfo, v6);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__, v7);
-    sub_1BCAFF8(&StringLiteral_22181/*"ok"*/, v8);
-    sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v9);
-    byte_4B1E0C2 = 1;
+    sub_1C2D490(&System_DateTime_TypeInfo);
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&ResponseCommandKind_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    sub_1C2D490(&StringLiteral_22362/*"ok"*/);
+    sub_1C2D490(&StringLiteral_22195/*"ng"*/);
+    byte_4C28ED4 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v10 = ResponseCommandKind__SearchData(1, responseList, 0LL);
-  if ( !v10
-    || !ResponseData__checkError(v10, v10->fields.resCode, v11)
-    || (SelfUserGame = UserGameMaster__getSelfUserGame(0LL)) == 0LL )
+  v5 = ResponseCommandKind__SearchData(1, responseList, 0);
+  if ( !v5
+    || !ResponseData__checkError(v5, v5->fields.resCode, v6)
+    || (SelfUserGame = UserGameMaster__getSelfUserGame(0)) == 0 )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v23 = &StringLiteral_22015/*"ng"*/;
+    v20 = &StringLiteral_22195/*"ng"*/;
     goto LABEL_20;
   }
-  v13 = SelfUserGame;
+  v8 = SelfUserGame;
   birthDay = SelfUserGame->fields.birthDay;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  dateData = NetworkManager__getDateTime_40542964(birthDay, 0LL).fields._dateData;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-  name = v13->fields.name;
-  genderType = v13->fields.genderType;
-  v18 = (NetworkManager_o *)Instance;
+  dateData = NetworkManager__getDateTime_41145724(birthDay, 0).fields._dateData;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  name = v8->fields.name;
+  genderType = v8->fields.genderType;
+  v13 = (NetworkManager_o *)Instance;
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
-  v25.fields._dateData = (uint64_t)&dateData;
-  Month = System_DateTime__get_Month(v25, 0LL);
-  v26.fields._dateData = (uint64_t)&dateData;
-  Day = (Il2CppObject *)System_DateTime__get_Day(v26, 0LL);
-  if ( !v18
-    || (NetworkManager__SetSignup_40532888(v18, name, genderType, Month, (int32_t)Day, 0LL),
-        (Day = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL)
-    || (NetworkManager__WriteSignup((NetworkManager_o *)Day, 0LL),
-        (Day = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL)
-    || (NetworkManager__SetFriendCode((NetworkManager_o *)Day, v13->fields.friendCode, 0LL),
-        (Day = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0LL) )
+  v14.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Month(v14, 0);
+  v16.fields._dateData = (uint64_t)&dateData;
+  Day = (Il2CppObject *)System_DateTime__get_Day(v16, 0);
+  if ( !v13
+    || (NetworkManager__SetSignup_41135648(v13, name, genderType, Month, (int32_t)Day, 0),
+        (Day = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0)
+    || (NetworkManager__WriteSignup((NetworkManager_o *)Day, 0),
+        (Day = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0)
+    || (NetworkManager__SetFriendCode((NetworkManager_o *)Day, v8->fields.friendCode, 0),
+        (Day = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0) )
   {
-    sub_1BCB254(Day, v21);
+    sub_1C2D6EC(Day, v18);
   }
-  NetworkManager__WriteFriendCode((NetworkManager_o *)Day, 0LL);
+  NetworkManager__WriteFriendCode((NetworkManager_o *)Day, 0);
   CallBack = this->fields.CallBack;
   if ( CallBack )
   {
-    v23 = &StringLiteral_22181/*"ok"*/;
+    v20 = &StringLiteral_22362/*"ok"*/;
 LABEL_20:
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))CallBack->fields.m_target)(
-      CallBack->fields.original_method_info,
-      *v23,
-      *(_QWORD *)&CallBack->fields.extra_arg);
+    ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
+      CallBack->fields.method_code,
+      *v20,
+      CallBack->fields.method);
   }
 }

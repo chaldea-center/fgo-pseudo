@@ -1,17 +1,17 @@
-void __fastcall DeckNameInputMenu___ctor(DeckNameInputMenu_o *this, const MethodInfo *method)
+void DeckNameInputMenu___ctor(DeckNameInputMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B17E18 & 1) == 0 )
+  if ( (byte_4C22B50 & 1) == 0 )
   {
-    sub_1BCAFF8(&BaseDialog_TypeInfo, method);
-    byte_4B17E18 = 1;
+    sub_1C2D490(&BaseDialog_TypeInfo);
+    byte_4C22B50 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
-  BaseDialog___ctor((BaseDialog_o *)this, 0LL);
+  BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
 
-void __fastcall DeckNameInputMenu__Callback(
+void DeckNameInputMenu__Callback(
         DeckNameInputMenu_o *this,
         bool result,
         System_String_o *name,
@@ -26,140 +26,131 @@ void __fastcall DeckNameInputMenu__Callback(
   v5 = callbackFunc;
   if ( callbackFunc )
   {
-    p_callbackFunc->klass = 0LL;
-    sub_1BCAF9C(p_callbackFunc, 0, (int32_t)name, method);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, System_String_o *, _QWORD))v5->fields.m_target)(
-      v5->fields.original_method_info,
+    p_callbackFunc->klass = 0;
+    sub_1C2D434(p_callbackFunc, 0, (int32_t)name, method);
+    ((void (__fastcall *)(intptr_t, bool, System_String_o *, intptr_t))v5->fields.invoke_impl)(
+      v5->fields.method_code,
       result,
       name,
-      *(_QWORD *)&v5->fields.extra_arg);
+      v5->fields.method);
   }
 }
 
 
-void __fastcall DeckNameInputMenu__ChangeInput(
-        DeckNameInputMenu_o *this,
-        System_String_o *inputName,
-        const MethodInfo *method)
+void DeckNameInputMenu__ChangeInput(DeckNameInputMenu_o *this, System_String_o *inputName, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
-  __int64 v6; // x1
   struct System_String_o **p_changeName; // x20
-  __int64 v8; // x1
+  __int64 v7; // x1
   System_String_o *decideButton; // x0
-  System_String_o *v10; // x0
-  _BOOL4 v11; // w8
-  System_String_o *v12; // x20
-  int32_t v13; // w21
+  System_String_o *v9; // x0
+  _BOOL4 v10; // w8
+  System_String_o *v11; // x20
+  int32_t v12; // w21
   uint16_t Chars; // w0
   System_String_o *name; // x20
-  System_String_o *v16; // x0
+  System_String_o *v15; // x0
 
-  if ( (byte_4B17E10 & 1) == 0 )
+  if ( (byte_4C22B48 & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, inputName);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v6);
-    byte_4B17E10 = 1;
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C22B48 = 1;
   }
   this->fields.changeName = inputName;
   p_changeName = &this->fields.changeName;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.changeName, (int32_t)inputName, (int32_t)method, v3);
-  if ( System_String__IsNullOrEmpty(this->fields.changeName, 0LL) )
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.changeName, (int32_t)inputName, (int32_t)method, v3);
+  if ( System_String__IsNullOrEmpty(this->fields.changeName, 0) )
     goto LABEL_7;
   decideButton = *p_changeName;
   if ( !*p_changeName )
     goto LABEL_19;
-  v10 = System_String__Trim(decideButton, 0LL);
-  if ( System_String__op_Equality(v10, (System_String_o *)StringLiteral_1/*""*/, 0LL) )
+  v9 = System_String__Trim(decideButton, 0);
+  if ( System_String__op_Equality(v9, (System_String_o *)StringLiteral_1/*""*/, 0) )
     goto LABEL_7;
-  decideButton = (System_String_o *)System_String__op_Equality(this->fields.changeName, this->fields.baseName, 0LL);
+  decideButton = (System_String_o *)System_String__op_Equality(this->fields.changeName, this->fields.baseName, 0);
   if ( ((unsigned __int8)decideButton & 1) != 0 )
     goto LABEL_7;
-  v12 = *p_changeName;
-  if ( !v12 )
+  v11 = *p_changeName;
+  if ( !v11 )
     goto LABEL_19;
-  if ( v12->fields._stringLength >= 1 )
+  if ( v11->fields._stringLength >= 1 )
   {
-    v13 = 0;
+    v12 = 0;
     while ( 1 )
     {
-      Chars = System_String__get_Chars(v12, v13, 0LL);
-      if ( EmojiUtility__IsEmojiChar(Chars, 0LL) )
+      Chars = System_String__get_Chars(v11, v12, 0);
+      if ( EmojiUtility__IsEmojiChar(Chars, 0) )
         break;
-      if ( ++v13 >= v12->fields._stringLength )
+      if ( ++v12 >= v11->fields._stringLength )
         goto LABEL_15;
     }
 LABEL_7:
-    LOBYTE(v11) = 0;
+    LOBYTE(v10) = 0;
     goto LABEL_8;
   }
 LABEL_15:
-  name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0LL);
+  name = UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  decideButton = LocalizationManager__ReplaceNameTag(name, 0, 0LL);
+  decideButton = LocalizationManager__ReplaceNameTag(name, 0, 0);
   if ( !decideButton )
 LABEL_19:
-    sub_1BCB254(decideButton, v8);
-  v16 = System_String__Trim(decideButton, 0LL);
-  v11 = !System_String__IsNullOrEmpty(v16, 0LL);
+    sub_1C2D6EC(decideButton, v7);
+  v15 = System_String__Trim(decideButton, 0);
+  v10 = !System_String__IsNullOrEmpty(v15, 0);
 LABEL_8:
   decideButton = (System_String_o *)this->fields.decideButton;
   if ( !decideButton )
     goto LABEL_19;
-  ((void (__fastcall *)(System_String_o *, _BOOL4, Il2CppMethodPointer))decideButton->klass->vtable._5_System_Collections_IEnumerable_GetEnumerator.method)(
+  ((void (__fastcall *)(System_String_o *, _BOOL4, const MethodInfo *))decideButton->klass->vtable._5_System_Collections_IEnumerable_GetEnumerator.methodPtr)(
     decideButton,
-    v11,
-    decideButton->klass->vtable._6_System_Collections_Generic_IEnumerable_System_Char__GetEnumerator.methodPtr);
+    v10,
+    decideButton->klass->vtable._5_System_Collections_IEnumerable_GetEnumerator.method);
 }
 
 
-void __fastcall DeckNameInputMenu__Close(DeckNameInputMenu_o *this, const MethodInfo *method)
+void DeckNameInputMenu__Close(DeckNameInputMenu_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
-  DeckNameInputMenu__Close_33270036(this, 0LL, v2);
+  DeckNameInputMenu__Close_33794072(this, 0, v2);
 }
 
 
-void __fastcall DeckNameInputMenu__Close_33270036(
-        DeckNameInputMenu_o *this,
-        System_Action_o *callback,
-        const MethodInfo *method)
+void DeckNameInputMenu__Close_33794072(DeckNameInputMenu_o *this, System_Action_o *callback, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
   __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   UnityEngine_Component_o *inputTarget; // x0
-  System_Action_o *v10; // x20
+  System_Action_o *v8; // x20
 
-  if ( (byte_4B17E12 & 1) == 0 )
+  if ( (byte_4C22B4A & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, callback);
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_Collider___, v6);
-    sub_1BCAFF8(&Method_DeckNameInputMenu_EndClose__, v7);
-    byte_4B17E12 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C2D490(&Method_DeckNameInputMenu_EndClose__);
+    byte_4C22B4A = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
   inputTarget = (UnityEngine_Component_o *)this->fields.inputTarget;
   this->fields.state = 3;
   if ( !inputTarget
     || (inputTarget = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                    inputTarget,
-                                                   (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL )
+                                                   (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0 )
   {
-    sub_1BCB254(inputTarget, v8);
+    sub_1C2D6EC(inputTarget, v6);
   }
-  UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)inputTarget, 0, 0LL);
-  v10 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v10, (Il2CppObject *)this, Method_DeckNameInputMenu_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v10, 0LL);
+  UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)inputTarget, 0, 0);
+  v8 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v8, (Il2CppObject *)this, Method_DeckNameInputMenu_EndClose__, 0);
+  BaseDialog__Close((BaseDialog_o *)this, v8, 0);
 }
 
 
-void __fastcall DeckNameInputMenu__EndClose(DeckNameInputMenu_o *this, const MethodInfo *method)
+void DeckNameInputMenu__EndClose(DeckNameInputMenu_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
@@ -170,32 +161,30 @@ void __fastcall DeckNameInputMenu__EndClose(DeckNameInputMenu_o *this, const Met
   struct System_Action_o *closeCallbackFunc; // t1
 
   DeckNameInputMenu__Init(this, method);
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1BCB254(0LL, v4);
-  UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
+    sub_1C2D6EC(0, v4);
+  UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (CGThumbnailListItem_o *)&this->fields.closeCallbackFunc;
   v8 = closeCallbackFunc;
   if ( closeCallbackFunc )
   {
-    p_closeCallbackFunc->klass = 0LL;
-    sub_1BCAF9C(p_closeCallbackFunc, 0, v5, v6);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v8->fields.m_target)(
-      v8->fields.original_method_info,
-      *(_QWORD *)&v8->fields.extra_arg);
+    p_closeCallbackFunc->klass = 0;
+    sub_1C2D434(p_closeCallbackFunc, 0, v5, v6);
+    ((void (__fastcall *)(intptr_t, intptr_t))v8->fields.invoke_impl)(v8->fields.method_code, v8->fields.method);
   }
 }
 
 
-void __fastcall DeckNameInputMenu__EndOpen(DeckNameInputMenu_o *this, const MethodInfo *method)
+void DeckNameInputMenu__EndOpen(DeckNameInputMenu_o *this, const MethodInfo *method)
 {
   UnityEngine_Component_o *inputTarget; // x0
 
-  if ( (byte_4B17E11 & 1) == 0 )
+  if ( (byte_4C22B49 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_Collider___, method);
-    byte_4B17E11 = 1;
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Collider___);
+    byte_4C22B49 = 1;
   }
   if ( this->fields.state == 1 )
   {
@@ -204,43 +193,43 @@ void __fastcall DeckNameInputMenu__EndOpen(DeckNameInputMenu_o *this, const Meth
     if ( !inputTarget
       || (inputTarget = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                      inputTarget,
-                                                     (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL )
+                                                     (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0 )
     {
-      sub_1BCB254(inputTarget, method);
+      sub_1C2D6EC(inputTarget, method);
     }
-    UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)inputTarget, 1, 0LL);
+    UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)inputTarget, 1, 0);
   }
 }
 
 
-void __fastcall DeckNameInputMenu__Init(DeckNameInputMenu_o *this, const MethodInfo *method)
+void DeckNameInputMenu__Init(DeckNameInputMenu_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B17E0E & 1) == 0 )
+  if ( (byte_4C22B46 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_Collider___, method);
-    byte_4B17E0E = 1;
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Collider___);
+    byte_4C22B46 = 1;
   }
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
-    || (UnityEngine_GameObject__SetActive(gameObject, 0, 0LL),
+    || (UnityEngine_GameObject__SetActive(gameObject, 0, 0),
         gameObject = (UnityEngine_GameObject_o *)this->fields.inputTarget,
         this->fields.state = 0,
         !gameObject)
     || (gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                                    (UnityEngine_Component_o *)gameObject,
-                                                   (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0LL )
+                                                   (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0 )
   {
-    sub_1BCB254(gameObject, v4);
+    sub_1C2D6EC(gameObject, v4);
   }
-  UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0LL);
-  BaseDialog__Init((BaseDialog_o *)this, 0LL);
+  UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0);
+  BaseDialog__Init((BaseDialog_o *)this, 0);
 }
 
 
-void __fastcall DeckNameInputMenu__OnChangeInput(DeckNameInputMenu_o *this, const MethodInfo *method)
+void DeckNameInputMenu__OnChangeInput(DeckNameInputMenu_o *this, const MethodInfo *method)
 {
   UILineInput_o *nameInput; // x0
   System_String_o *Text; // x1
@@ -248,100 +237,97 @@ void __fastcall DeckNameInputMenu__OnChangeInput(DeckNameInputMenu_o *this, cons
 
   nameInput = this->fields.nameInput;
   if ( !nameInput )
-    sub_1BCB254(0LL, method);
-  Text = UILineInput__GetText(nameInput, 0LL);
+    sub_1C2D6EC(0, method);
+  Text = UILineInput__GetText(nameInput, 0);
   DeckNameInputMenu__ChangeInput(this, Text, v5);
 }
 
 
-void __fastcall DeckNameInputMenu__OnClickCancel(DeckNameInputMenu_o *this, const MethodInfo *method)
+void DeckNameInputMenu__OnClickCancel(DeckNameInputMenu_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
-  const MethodInfo *v6; // x3
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4B17E14 & 1) == 0 )
+  if ( (byte_4C22B4C & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DeckNameInputMenu_OnClickCancel__, method);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v3);
-    byte_4B17E14 = 1;
+    sub_1C2D490(&Method_DeckNameInputMenu_OnClickCancel__);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C22B4C = 1;
   }
   if ( this->fields.state == 2 )
   {
-    v4 = Method_DeckNameInputMenu_OnClickCancel__;
+    v3 = Method_DeckNameInputMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_DeckNameInputMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BCB010(Method_DeckNameInputMenu_OnClickCancel__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0, 0LL);
-    DeckNameInputMenu__Callback(this, 0, (System_String_o *)StringLiteral_1/*""*/, v6);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_DeckNameInputMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
+    DeckNameInputMenu__Callback(this, 0, (System_String_o *)StringLiteral_1/*""*/, v5);
   }
 }
 
 
-void __fastcall DeckNameInputMenu__OnClickClear(DeckNameInputMenu_o *this, const MethodInfo *method)
+void DeckNameInputMenu__OnClickClear(DeckNameInputMenu_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
-  __int64 v6; // x1
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  __int64 v5; // x1
   UIInput_o *inputTarget; // x0
-  const MethodInfo *v8; // x1
+  const MethodInfo *v7; // x1
 
-  if ( (byte_4B17E15 & 1) == 0 )
+  if ( (byte_4C22B4D & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DeckNameInputMenu_OnClickClear__, method);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v3);
-    byte_4B17E15 = 1;
+    sub_1C2D490(&Method_DeckNameInputMenu_OnClickClear__);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C22B4D = 1;
   }
   if ( this->fields.state == 2 )
   {
-    v4 = Method_DeckNameInputMenu_OnClickClear__;
+    v3 = Method_DeckNameInputMenu_OnClickClear__;
     if ( (*((_BYTE *)Method_DeckNameInputMenu_OnClickClear__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BCB010(Method_DeckNameInputMenu_OnClickClear__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_DeckNameInputMenu_OnClickClear__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     inputTarget = this->fields.inputTarget;
     if ( !inputTarget )
-      sub_1BCB254(0LL, v6);
-    UIInput__set_value(inputTarget, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-    DeckNameInputMenu__OnChangeInput(this, v8);
+      sub_1C2D6EC(0, v5);
+    UIInput__set_value(inputTarget, (System_String_o *)StringLiteral_1/*""*/, 0);
+    DeckNameInputMenu__OnChangeInput(this, v7);
   }
 }
 
 
-void __fastcall DeckNameInputMenu__OnClickDecide(DeckNameInputMenu_o *this, const MethodInfo *method)
+void DeckNameInputMenu__OnClickDecide(DeckNameInputMenu_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
   System_String_o *changeName; // x20
-  System_String_o *v7; // x2
-  const MethodInfo *v8; // x3
+  System_String_o *v6; // x2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4B17E13 & 1) == 0 )
+  if ( (byte_4C22B4B & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DeckNameInputMenu_OnClickDecide__, method);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v3);
-    byte_4B17E13 = 1;
+    sub_1C2D490(&Method_DeckNameInputMenu_OnClickDecide__);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    byte_4C22B4B = 1;
   }
   if ( this->fields.state == 2 )
   {
-    v4 = Method_DeckNameInputMenu_OnClickDecide__;
+    v3 = Method_DeckNameInputMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_DeckNameInputMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BCB010(Method_DeckNameInputMenu_OnClickDecide__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 8, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_DeckNameInputMenu_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     changeName = this->fields.changeName;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = LocalizationManager__ReplaceNameTag(changeName, 1, 0LL);
-    DeckNameInputMenu__Callback(this, 1, v7, v8);
+    v6 = LocalizationManager__ReplaceNameTag(changeName, 1, 0);
+    DeckNameInputMenu__Callback(this, 1, v6, v7);
   }
 }
 
 
-void __fastcall DeckNameInputMenu__OnClickInit(DeckNameInputMenu_o *this, const MethodInfo *method)
+void DeckNameInputMenu__OnClickInit(DeckNameInputMenu_o *this, const MethodInfo *method)
 {
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
@@ -349,162 +335,151 @@ void __fastcall DeckNameInputMenu__OnClickInit(DeckNameInputMenu_o *this, const 
   UIInput_o *inputTarget; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4B17E16 & 1) == 0 )
+  if ( (byte_4C22B4E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DeckNameInputMenu_OnClickInit__, method);
-    byte_4B17E16 = 1;
+    sub_1C2D490(&Method_DeckNameInputMenu_OnClickInit__);
+    byte_4C22B4E = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_DeckNameInputMenu_OnClickInit__;
     if ( (*((_BYTE *)Method_DeckNameInputMenu_OnClickInit__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BCB010(Method_DeckNameInputMenu_OnClickInit__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_DeckNameInputMenu_OnClickInit__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     inputTarget = this->fields.inputTarget;
     if ( !inputTarget )
-      sub_1BCB254(0LL, v5);
-    UIInput__set_value(inputTarget, this->fields.initName, 0LL);
+      sub_1C2D6EC(0, v5);
+    UIInput__set_value(inputTarget, this->fields.initName, 0);
     DeckNameInputMenu__ChangeInput(this, this->fields.initName, v7);
   }
 }
 
 
-void __fastcall DeckNameInputMenu__Open(
+void DeckNameInputMenu__Open(
         DeckNameInputMenu_o *this,
         System_String_o *deckName,
         System_String_o *initName,
         DeckNameInputMenu_CallbackFunc_o *callback,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v21; // x1
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
+  __int64 v10; // x1
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
   UILabel_o *titleLabel; // x21
   UILabel_o *explanationLabel; // x21
-  struct UIInput_o *inputTarget; // x20
-  UIInput_OnValidate_o *v33; // x21
-  int32_t v34; // w2
-  const MethodInfo *v35; // x3
+  CGThumbnailListItem_o *inputTarget; // x20
+  UIInput_OnValidate_o *v22; // x21
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
   UILabel_o *decideLabel; // x20
   UILabel_o *cancelLabel; // x20
   UILabel_o *clearLabel; // x20
   UILabel_o *initLabel; // x20
-  System_Action_o *v40; // x20
+  System_Action_o *v29; // x20
 
-  if ( (byte_4B17E0F & 1) == 0 )
+  if ( (byte_4C22B47 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, deckName);
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_Collider___, v9);
-    sub_1BCAFF8(&Method_DeckNameInputMenu_EndOpen__, v10);
-    sub_1BCAFF8(&Method_EmojiUtility_ValidateNameText__, v11);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v12);
-    sub_1BCAFF8(&UIInput_OnValidate_TypeInfo, v13);
-    sub_1BCAFF8(&StringLiteral_10179/*"PARTY_ORGANIZATION_INPUT_DECK_NAME_TITLE"*/, v14);
-    sub_1BCAFF8(&StringLiteral_3651/*"COMMON_CONFIRM_DECIDE"*/, v15);
-    sub_1BCAFF8(&StringLiteral_10183/*"PARTY_ORGANIZATION_NAME_INIT"*/, v16);
-    sub_1BCAFF8(&StringLiteral_3649/*"COMMON_CONFIRM_CANCEL"*/, v17);
-    sub_1BCAFF8(&StringLiteral_10178/*"PARTY_ORGANIZATION_INPUT_DECK_NAME_EXPLANATION"*/, v18);
-    sub_1BCAFF8(&StringLiteral_10182/*"PARTY_ORGANIZATION_NAME_CLEAR"*/, v19);
-    byte_4B17E0F = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C2D490(&Method_DeckNameInputMenu_EndOpen__);
+    sub_1C2D490(&Method_EmojiUtility_ValidateNameText__);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&UIInput_OnValidate_TypeInfo);
+    sub_1C2D490(&StringLiteral_10250/*"PARTY_ORGANIZATION_INPUT_DECK_NAME_TITLE"*/);
+    sub_1C2D490(&StringLiteral_3679/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C2D490(&StringLiteral_10254/*"PARTY_ORGANIZATION_NAME_INIT"*/);
+    sub_1C2D490(&StringLiteral_3677/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C2D490(&StringLiteral_10249/*"PARTY_ORGANIZATION_INPUT_DECK_NAME_EXPLANATION"*/);
+    sub_1C2D490(&StringLiteral_10253/*"PARTY_ORGANIZATION_NAME_CLEAR"*/);
+    byte_4C22B47 = 1;
   }
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_18;
-  UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
+  UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.changeName = deckName;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.changeName, (int32_t)deckName, v22, v23);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.changeName, (int32_t)deckName, v11, v12);
   this->fields.baseName = deckName;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.baseName, (int32_t)deckName, v24, v25);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.baseName, (int32_t)deckName, v13, v14);
   this->fields.initName = initName;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.initName, (int32_t)initName, v26, v27);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.initName, (int32_t)initName, v15, v16);
   this->fields.callbackFunc = callback;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v28, v29);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v17, v18);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10179/*"PARTY_ORGANIZATION_INPUT_DECK_NAME_TITLE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10250/*"PARTY_ORGANIZATION_INPUT_DECK_NAME_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_18;
-  UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
   explanationLabel = this->fields.explanationLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10178/*"PARTY_ORGANIZATION_INPUT_DECK_NAME_EXPLANATION"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10249/*"PARTY_ORGANIZATION_INPUT_DECK_NAME_EXPLANATION"*/, 0);
   if ( !explanationLabel )
     goto LABEL_18;
-  UILabel__set_text(explanationLabel, (System_String_o *)gameObject, 0LL);
+  UILabel__set_text(explanationLabel, (System_String_o *)gameObject, 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.inputTarget;
   if ( !gameObject )
     goto LABEL_18;
-  UIInput__set_value((UIInput_o *)gameObject, deckName, 0LL);
+  UIInput__set_value((UIInput_o *)gameObject, deckName, 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.inputTarget;
   if ( !gameObject )
     goto LABEL_18;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                              (UnityEngine_Component_o *)gameObject,
-                                             (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                             (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !gameObject )
     goto LABEL_18;
-  UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0LL);
-  inputTarget = this->fields.inputTarget;
-  v33 = (UIInput_OnValidate_o *)sub_1BCB244(UIInput_OnValidate_TypeInfo);
-  UIInput_OnValidate___ctor(v33, 0LL, Method_EmojiUtility_ValidateNameText__, 0LL);
+  UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0);
+  inputTarget = (CGThumbnailListItem_o *)this->fields.inputTarget;
+  v22 = (UIInput_OnValidate_o *)sub_1C2D6DC(UIInput_OnValidate_TypeInfo);
+  UIInput_OnValidate___ctor(v22, 0, Method_EmojiUtility_ValidateNameText__, 0);
   if ( !inputTarget )
     goto LABEL_18;
-  inputTarget->fields.onValidate = v33;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&inputTarget->fields.onValidate, (int32_t)v33, v34, v35);
+  inputTarget[1].klass = (CGThumbnailListItem_c *)v22;
+  sub_1C2D434(inputTarget + 1, (int32_t)v22, v23, v24);
   decideLabel = this->fields.decideLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3651/*"COMMON_CONFIRM_DECIDE"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideLabel )
     goto LABEL_18;
-  UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0LL);
+  UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0);
   cancelLabel = this->fields.cancelLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3649/*"COMMON_CONFIRM_CANCEL"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3677/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelLabel )
     goto LABEL_18;
-  UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0LL);
+  UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0);
   clearLabel = this->fields.clearLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10182/*"PARTY_ORGANIZATION_NAME_CLEAR"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10253/*"PARTY_ORGANIZATION_NAME_CLEAR"*/, 0);
   if ( !clearLabel
-    || (UILabel__set_text(clearLabel, (System_String_o *)gameObject, 0LL),
+    || (UILabel__set_text(clearLabel, (System_String_o *)gameObject, 0),
         initLabel = this->fields.initLabel,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10183/*"PARTY_ORGANIZATION_NAME_INIT"*/, 0LL),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10254/*"PARTY_ORGANIZATION_NAME_INIT"*/, 0),
         !initLabel)
-    || (UILabel__set_text(initLabel, (System_String_o *)gameObject, 0LL),
-        (gameObject = (UnityEngine_GameObject_o *)this->fields.decideButton) == 0LL) )
+    || (UILabel__set_text(initLabel, (System_String_o *)gameObject, 0),
+        (gameObject = (UnityEngine_GameObject_o *)this->fields.decideButton) == 0) )
   {
 LABEL_18:
-    sub_1BCB254(gameObject, v21);
+    sub_1C2D6EC(gameObject, v10);
   }
-  ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, void *))gameObject->klass[1]._1.namespaze)(
+  ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, const char *))gameObject->klass[1]._1.name)(
     gameObject,
-    0LL,
-    gameObject->klass[1]._1.byval_arg.data);
+    0,
+    gameObject->klass[1]._1.namespaze);
   this->fields.state = 1;
-  v40 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v40, (Il2CppObject *)this, Method_DeckNameInputMenu_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v40, 0, 0LL);
+  v29 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v29, (Il2CppObject *)this, Method_DeckNameInputMenu_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v29, 0, 0);
 }
 
 
-void __fastcall DeckNameInputMenu__add_callbackFunc(
+void DeckNameInputMenu__add_callbackFunc(
         DeckNameInputMenu_o *this,
         DeckNameInputMenu_CallbackFunc_o *value,
         const MethodInfo *method)
@@ -519,45 +494,45 @@ void __fastcall DeckNameInputMenu__add_callbackFunc(
   DeckNameInputMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B17E0C & 1) == 0 )
+  if ( (byte_4C22B44 & 1) == 0 )
   {
-    sub_1BCAFF8(&DeckNameInputMenu_CallbackFunc_TypeInfo, value);
-    byte_4B17E0C = 1;
+    sub_1C2D490(&DeckNameInputMenu_CallbackFunc_TypeInfo);
+    byte_4C22B44 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
   v6 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0LL);
+    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0);
     if ( v8 )
     {
       if ( (DeckNameInputMenu_CallbackFunc_c *)v8->klass != DeckNameInputMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C05088(p_callbackFunc, v8, v6);
+    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (DeckNameInputMenu_o *)sub_1BCB514(v8);
+  v11 = (DeckNameInputMenu_o *)sub_1C2D9AC(v8);
   DeckNameInputMenu__remove_callbackFunc(v11, v12, v13);
 }
 
 
-System_String_o *__fastcall DeckNameInputMenu__get_closeBtnPath(DeckNameInputMenu_o *this, const MethodInfo *method)
+System_String_o *DeckNameInputMenu__get_closeBtnPath(DeckNameInputMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B17E17 & 1) == 0 )
+  if ( (byte_4C22B4F & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_3055/*"BaseWindow/CancleButton"*/, method);
-    byte_4B17E17 = 1;
+    sub_1C2D490(&StringLiteral_3071/*"BaseWindow/CancleButton"*/);
+    byte_4C22B4F = 1;
   }
-  return (System_String_o *)StringLiteral_3055/*"BaseWindow/CancleButton"*/;
+  return (System_String_o *)StringLiteral_3071/*"BaseWindow/CancleButton"*/;
 }
 
 
-void __fastcall DeckNameInputMenu__remove_callbackFunc(
+void DeckNameInputMenu__remove_callbackFunc(
         DeckNameInputMenu_o *this,
         DeckNameInputMenu_CallbackFunc_o *value,
         const MethodInfo *method)
@@ -571,79 +546,75 @@ void __fastcall DeckNameInputMenu__remove_callbackFunc(
   DeckNameInputMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B17E0D & 1) == 0 )
+  if ( (byte_4C22B45 & 1) == 0 )
   {
-    sub_1BCAFF8(&DeckNameInputMenu_CallbackFunc_TypeInfo, value);
-    byte_4B17E0D = 1;
+    sub_1C2D490(&DeckNameInputMenu_CallbackFunc_TypeInfo);
+    byte_4C22B45 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
   v6 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0LL);
+    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0);
     if ( v8 )
     {
       if ( (DeckNameInputMenu_CallbackFunc_c *)v8->klass != DeckNameInputMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C05088(p_callbackFunc, v8, v6);
+    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (DeckNameInputMenu_o *)sub_1BCB514(v8);
+  v11 = (DeckNameInputMenu_o *)sub_1C2D9AC(v8);
   DeckNameInputMenu__Init(v11, v12);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall DeckNameInputMenu_CallbackFunc___ctor(
+void DeckNameInputMenu_CallbackFunc___ctor(
         DeckNameInputMenu_CallbackFunc_o *this,
         Il2CppObject *object,
         intptr_t method,
         const MethodInfo *a4)
 {
-  __int64 v4; // x8
-  __int64 v6; // x21
+  intptr_t v4; // x8
   int v8; // w22
-  struct System_Reflection_MethodInfo_o *v9; // x9
+  Il2CppObject *m_target; // x9
   __int64 v10; // x0
 
-  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
-  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v6 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v4;
-  *(_QWORD *)&this->fields.method = object;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(v6 + 82);
-  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BCB0B8(v6) & 1) == 0 )
+  v4 = *(_QWORD *)(method + 8);
+  this->fields.method = method;
+  this->fields.method_ptr = v4;
+  this->fields.m_target = object;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  v8 = *(unsigned __int8 *)(method + 82);
+  this->fields.method_code = (intptr_t)this;
+  if ( (sub_1C2D550(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1BCB270(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BCB120(v10, 0LL);
+      v10 = sub_1C2D708(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C2D5B8(v10, 0);
     }
     goto LABEL_5;
   }
   if ( v8 != 2 )
   {
 LABEL_5:
-    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
-    this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-    this->fields.original_method_info = v9;
+    m_target = this->fields.m_target;
+    this->fields.invoke_impl = this->fields.method_ptr;
+    this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A0F35C;
+  this->fields.invoke_impl = (intptr_t)sub_1A6BC74;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A0F304;
+  this->fields.extra_arg = (intptr_t)sub_1A6BC1C;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_IAsyncResult_o *__fastcall DeckNameInputMenu_CallbackFunc__BeginInvoke(
+System_IAsyncResult_o *DeckNameInputMenu_CallbackFunc__BeginInvoke(
         DeckNameInputMenu_CallbackFunc_o *this,
         bool result,
         System_String_o *changeName,
@@ -651,40 +622,40 @@ System_IAsyncResult_o *__fastcall DeckNameInputMenu_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v11[3]; // [xsp+8h] [xbp-58h] BYREF
-  char v12[4]; // [xsp+2Ch] [xbp-34h] BYREF
+  _QWORD v11[3]; // [xsp+8h] [xbp-58h] BYREF
+  bool v12[4]; // [xsp+2Ch] [xbp-34h] BYREF
 
   v12[0] = result;
-  if ( (byte_4B17E19 & 1) == 0 )
+  if ( (byte_4C22B51 & 1) == 0 )
   {
-    sub_1BCAFF8(&bool_TypeInfo, result);
-    byte_4B17E19 = 1;
+    sub_1C2D490(&bool_TypeInfo);
+    byte_4C22B51 = 1;
   }
-  v11[2] = 0LL;
+  v11[2] = 0;
   v11[0] = j_il2cpp_value_box_0(bool_TypeInfo, v12, changeName, callback, object);
-  v11[1] = (__int64)changeName;
-  return (System_IAsyncResult_o *)sub_1BCAFAC(this, v11, callback, object);
+  v11[1] = changeName;
+  return (System_IAsyncResult_o *)sub_1C2D444(this, v11, callback, object);
 }
 
 
-void __fastcall DeckNameInputMenu_CallbackFunc__EndInvoke(
+void DeckNameInputMenu_CallbackFunc__EndInvoke(
         DeckNameInputMenu_CallbackFunc_o *this,
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BCAFB0(result, 0LL, method);
+  sub_1C2D448(result, 0, method);
 }
 
 
-void __fastcall DeckNameInputMenu_CallbackFunc__Invoke(
+void DeckNameInputMenu_CallbackFunc__Invoke(
         DeckNameInputMenu_CallbackFunc_o *this,
         bool result,
         System_String_o *changeName,
         const MethodInfo *method)
 {
-  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, bool, System_String_o *, _QWORD))this->fields.m_target)(
-    this->fields.original_method_info,
+  ((void (__fastcall *)(intptr_t, bool, System_String_o *, intptr_t))this->fields.invoke_impl)(
+    this->fields.method_code,
     result,
     changeName,
-    *(_QWORD *)&this->fields.extra_arg);
+    this->fields.method);
 }

@@ -1,51 +1,48 @@
-void __fastcall ShopHelpListViewItemDraw___cctor(const MethodInfo *method)
+void ShopHelpListViewItemDraw___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4B1882D & 1) == 0 )
+  if ( (byte_4C23583 & 1) == 0 )
   {
-    sub_1BCAFF8(&ShopHelpListViewItemDraw_TypeInfo, v1);
-    byte_4B1882D = 1;
+    sub_1C2D490(&ShopHelpListViewItemDraw_TypeInfo);
+    byte_4C23583 = 1;
   }
   *ShopHelpListViewItemDraw_TypeInfo->static_fields = (struct ShopHelpListViewItemDraw_StaticFields)0x500000003CLL;
 }
 
 
-void __fastcall ShopHelpListViewItemDraw___ctor(ShopHelpListViewItemDraw_o *this, const MethodInfo *method)
+void ShopHelpListViewItemDraw___ctor(ShopHelpListViewItemDraw_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-int32_t __fastcall ShopHelpListViewItemDraw__GetDispMode(int32_t initMode, const MethodInfo *method)
+int32_t ShopHelpListViewItemDraw__GetDispMode(int32_t initMode, const MethodInfo *method)
 {
   if ( (unsigned int)(initMode - 1) > 2 )
     return 0;
   else
-    return dword_C1ACA4[initMode - 1];
+    return dword_C42004[initMode - 1];
 }
 
 
-System_String_o *__fastcall ShopHelpListViewItemDraw__GetInfoText(
+System_String_o *ShopHelpListViewItemDraw__GetInfoText(
         ShopHelpListViewItemDraw_o *this,
         System_String_o *imageName,
         System_String_o *infoText,
         const MethodInfo *method)
 {
-  if ( (byte_4B1882C & 1) == 0 )
+  if ( (byte_4C23582 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1/*""*/, imageName);
-    byte_4B1882C = 1;
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C23582 = 1;
   }
-  if ( System_String__IsNullOrEmpty(imageName, 0LL) )
+  if ( System_String__IsNullOrEmpty(imageName, 0) )
     return (System_String_o *)StringLiteral_1/*""*/;
   else
     return infoText;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-UnityEngine_Vector3_o __fastcall ShopHelpListViewItemDraw__GetInfoTextLabelPosition(
+UnityEngine_Vector3_o ShopHelpListViewItemDraw__GetInfoTextLabelPosition(
         ShopHelpListViewItemDraw_o *this,
         UnityEngine_Vector3_o position,
         int32_t lineCount,
@@ -60,14 +57,13 @@ UnityEngine_Vector3_o __fastcall ShopHelpListViewItemDraw__GetInfoTextLabelPosit
   if ( isStone )
     v6 = 344.0;
   if ( v5 < 3 )
-    LODWORD(position.fields.y) = dword_C1AF20[v5];
+    LODWORD(position.fields.y) = dword_C4224C[v5];
   position.fields.x = v6;
   return position;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall ShopHelpListViewItemDraw__SetInfoTextLabel(
+void ShopHelpListViewItemDraw__SetInfoTextLabel(
         ShopHelpListViewItemDraw_o *this,
         ShopHelpListViewItem_o *item,
         const MethodInfo *method)
@@ -81,21 +77,21 @@ void __fastcall ShopHelpListViewItemDraw__SetInfoTextLabel(
   struct ShopHelpItemInfo_o *v10; // x8
   int32_t v11; // w1
   ShopHelpListViewItemDraw_o *v12; // x21
-  int v13; // s1
-  struct ShopHelpItemInfo_o *v15; // x8
-  float v16; // s0
-  bool v17; // zf
-  int v18; // w8
-  struct ShopHelpItemInfo_o *v19; // x8
+  struct ShopHelpItemInfo_o *v13; // x8
+  float v14; // s0
+  bool v15; // zf
+  int v16; // w8
+  struct ShopHelpItemInfo_o *v17; // x8
   UIWidget_o *baseTextSprite; // x19
   int32_t Line_k__BackingField; // w20
-  struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x8
+  int32_t *m_CancellationTokenSource; // x8
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4B1882B & 1) == 0 )
+  if ( (byte_4C23581 & 1) == 0 )
   {
-    this = (ShopHelpListViewItemDraw_o *)sub_1BCAFF8(&ShopHelpListViewItemDraw_TypeInfo, item);
-    byte_4B1882B = 1;
+    this = (ShopHelpListViewItemDraw_o *)sub_1C2D490(&ShopHelpListViewItemDraw_TypeInfo);
+    byte_4C23581 = 1;
   }
   if ( !item )
     goto LABEL_27;
@@ -112,7 +108,7 @@ void __fastcall ShopHelpListViewItemDraw__SetInfoTextLabel(
                                          v9);
   if ( !infoTextLabel )
     goto LABEL_27;
-  UILabel__set_text(infoTextLabel, (System_String_o *)this, 0LL);
+  UILabel__set_text(infoTextLabel, (System_String_o *)this, 0);
   v10 = item->fields.info;
   if ( !v10 )
     goto LABEL_27;
@@ -120,38 +116,38 @@ void __fastcall ShopHelpListViewItemDraw__SetInfoTextLabel(
   if ( !this )
     goto LABEL_27;
   v11 = v10->fields._Line_k__BackingField == 1 ? 21 : 18;
-  UILabel__set_fontSize((UILabel_o *)this, v11, 0LL);
+  UILabel__set_fontSize((UILabel_o *)this, v11, 0);
   this = (ShopHelpListViewItemDraw_o *)v4->fields.infoTextLabel;
   if ( !this )
     goto LABEL_27;
-  this = (ShopHelpListViewItemDraw_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  this = (ShopHelpListViewItemDraw_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !v4->fields.infoTextLabel )
     goto LABEL_27;
   v12 = this;
   this = (ShopHelpListViewItemDraw_o *)UnityEngine_Component__get_transform(
                                          (UnityEngine_Component_o *)v4->fields.infoTextLabel,
-                                         0LL);
+                                         0);
   if ( !this )
     goto LABEL_27;
-  *(UnityEngine_Vector3_o *)(&v13 - 1) = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0LL);
-  v15 = item->fields.info;
-  if ( !v15 )
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+  v13 = item->fields.info;
+  if ( !v13 )
     goto LABEL_27;
-  v16 = 284.0;
-  v17 = v15->fields._Kind_k__BackingField == 6;
-  v18 = v15->fields._Line_k__BackingField - 1;
-  if ( v17 )
-    v16 = 344.0;
-  if ( (unsigned int)v18 <= 2 )
-    v13 = dword_C1AF20[v18];
+  v14 = 284.0;
+  v15 = v13->fields._Kind_k__BackingField == 6;
+  v16 = v13->fields._Line_k__BackingField - 1;
+  if ( v15 )
+    v14 = 344.0;
+  if ( (unsigned int)v16 <= 2 )
+    LODWORD(localPosition.fields.y) = dword_C4224C[v16];
   if ( !v12 )
     goto LABEL_27;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v12, *(UnityEngine_Vector3_o *)(&v13 - 1), 0LL);
-  v19 = item->fields.info;
-  if ( !v19 )
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v12, localPosition, 0);
+  v17 = item->fields.info;
+  if ( !v17 )
     goto LABEL_27;
   baseTextSprite = (UIWidget_o *)v4->fields.baseTextSprite;
-  Line_k__BackingField = v19->fields._Line_k__BackingField;
+  Line_k__BackingField = v17->fields._Line_k__BackingField;
   this = (ShopHelpListViewItemDraw_o *)ShopHelpListViewItemDraw_TypeInfo;
   if ( !ShopHelpListViewItemDraw_TypeInfo->_2.cctor_finished )
   {
@@ -160,78 +156,73 @@ void __fastcall ShopHelpListViewItemDraw__SetInfoTextLabel(
   }
   if ( !baseTextSprite )
 LABEL_27:
-    sub_1BCB254(this, item);
-  m_CancellationTokenSource = this[2].fields.m_CancellationTokenSource;
+    sub_1C2D6EC(this, item);
+  m_CancellationTokenSource = (int32_t *)this[2].fields.m_CancellationTokenSource;
   if ( Line_k__BackingField == 3 )
-    m_CancellationTokenSource = (struct System_Threading_CancellationTokenSource_o *)((char *)m_CancellationTokenSource
-                                                                                    + 4);
-  UIWidget__set_height(baseTextSprite, (int32_t)m_CancellationTokenSource->klass, 0LL);
+    ++m_CancellationTokenSource;
+  UIWidget__set_height(baseTextSprite, *m_CancellationTokenSource, 0);
 }
 
 
-void __fastcall ShopHelpListViewItemDraw__SetItem(
+void ShopHelpListViewItemDraw__SetItem(
         ShopHelpListViewItemDraw_o *this,
         ShopHelpListViewItem_o *item,
         int32_t mode,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   UnityEngine_Object_o *rangeSprite; // x22
-  __int64 v12; // x1
-  const MethodInfo *v13; // x2
+  __int64 v8; // x1
+  const MethodInfo *v9; // x2
   UnityEngine_Component_o *gameObject; // x0
   struct ShopHelpItemInfo_o *info; // x8
-  struct ShopHelpItemInfo_o *v16; // x8
-  System_String_o **v17; // x8
-  struct ShopHelpItemInfo_o *v18; // x8
+  struct ShopHelpItemInfo_o *v12; // x8
+  System_String_o **v13; // x8
+  struct ShopHelpItemInfo_o *v14; // x8
   int32_t Kind_k__BackingField; // w9
   struct UISprite_o *baseImageSprite; // x19
   System_String_o *ImageName_k__BackingField; // x20
-  UISprite_o *v22; // x0
-  System_String_o *v23; // x1
-  struct UISprite_o *v24; // x21
-  System_String_o *v25; // x19
-  UISprite_o *v26; // x19
-  System_String_o *v27; // x20
-  struct ShopHelpItemInfo_o *v28; // x8
-  UISprite_o *v29; // x19
+  UISprite_o *v18; // x0
+  System_String_o *v19; // x1
+  struct UISprite_o *v20; // x21
+  System_String_o *v21; // x19
+  UISprite_o *v22; // x19
+  System_String_o *v23; // x20
+  struct ShopHelpItemInfo_o *v24; // x8
+  UISprite_o *v25; // x19
   System_String_o **p_ImageName_k__BackingField; // x8
-  struct ShopHelpItemInfo_o *v31; // x8
+  struct ShopHelpItemInfo_o *v27; // x8
 
-  if ( (byte_4B1882A & 1) == 0 )
+  if ( (byte_4C23580 & 1) == 0 )
   {
-    sub_1BCAFF8(&AtlasManager_TypeInfo, item);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BCAFF8(&StringLiteral_20423/*"img_tutorial_txtbg_sq"*/, v8);
-    sub_1BCAFF8(&StringLiteral_20367/*"img_shop_0"*/, v9);
-    sub_1BCAFF8(&StringLiteral_20422/*"img_tutorial_txtbg"*/, v10);
-    byte_4B1882A = 1;
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_20594/*"img_tutorial_txtbg_sq"*/);
+    sub_1C2D490(&StringLiteral_20538/*"img_shop_0"*/);
+    sub_1C2D490(&StringLiteral_20593/*"img_tutorial_txtbg"*/);
+    byte_4C23580 = 1;
   }
   if ( item )
   {
     rangeSprite = (UnityEngine_Object_o *)this->fields.rangeSprite;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality(rangeSprite, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality(rangeSprite, 0, 0) )
     {
       gameObject = (UnityEngine_Component_o *)this->fields.rangeSprite;
       if ( !gameObject )
         goto LABEL_41;
-      gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+      gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0);
       if ( !gameObject )
         goto LABEL_41;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, mode == 0, 0LL);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, mode == 0, 0);
     }
     if ( !mode )
       return;
-    ShopHelpListViewItemDraw__SetInfoTextLabel(this, item, v13);
+    ShopHelpListViewItemDraw__SetInfoTextLabel(this, item, v9);
     gameObject = (UnityEngine_Component_o *)this->fields.stoneSprite;
     if ( gameObject )
     {
-      gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+      gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0);
       info = item->fields.info;
       if ( info )
       {
@@ -240,21 +231,21 @@ void __fastcall ShopHelpListViewItemDraw__SetItem(
           UnityEngine_GameObject__SetActive(
             (UnityEngine_GameObject_o *)gameObject,
             info->fields._Kind_k__BackingField == 6,
-            0LL);
-          v16 = item->fields.info;
-          if ( v16 )
+            0);
+          v12 = item->fields.info;
+          if ( v12 )
           {
             gameObject = (UnityEngine_Component_o *)this->fields.baseTextSprite;
             if ( gameObject )
             {
-              v17 = (System_String_o **)(v16->fields._Kind_k__BackingField == 6
-                                       ? &StringLiteral_20423/*"img_tutorial_txtbg_sq"*/
-                                       : &StringLiteral_20422/*"img_tutorial_txtbg"*/);
-              UISprite__set_spriteName((UISprite_o *)gameObject, *v17, 0LL);
-              v18 = item->fields.info;
-              if ( v18 )
+              v13 = (System_String_o **)(v12->fields._Kind_k__BackingField == 6
+                                       ? &StringLiteral_20594/*"img_tutorial_txtbg_sq"*/
+                                       : &StringLiteral_20593/*"img_tutorial_txtbg"*/);
+              UISprite__set_spriteName((UISprite_o *)gameObject, *v13, 0);
+              v14 = item->fields.info;
+              if ( v14 )
               {
-                Kind_k__BackingField = v18->fields._Kind_k__BackingField;
+                Kind_k__BackingField = v14->fields._Kind_k__BackingField;
                 switch ( Kind_k__BackingField )
                 {
                   case 15:
@@ -263,56 +254,56 @@ void __fastcall ShopHelpListViewItemDraw__SetItem(
                   case 20:
                   case 21:
                     baseImageSprite = this->fields.baseImageSprite;
-                    ImageName_k__BackingField = v18->fields._ImageName_k__BackingField;
+                    ImageName_k__BackingField = v14->fields._ImageName_k__BackingField;
                     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                    v22 = baseImageSprite;
-                    v23 = ImageName_k__BackingField;
+                    v18 = baseImageSprite;
+                    v19 = ImageName_k__BackingField;
                     goto LABEL_24;
                   case 17:
-                    v26 = this->fields.baseImageSprite;
-                    v27 = v18->fields._ImageName_k__BackingField;
+                    v22 = this->fields.baseImageSprite;
+                    v23 = v14->fields._ImageName_k__BackingField;
                     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                    AtlasManager__SetEventSprite(v26, v27, 0LL);
+                    AtlasManager__SetEventSprite(v22, v23, 0);
                     return;
                   default:
-                    v24 = this->fields.baseImageSprite;
+                    v20 = this->fields.baseImageSprite;
                     if ( Kind_k__BackingField == 22 )
                     {
-                      v25 = v18->fields._ImageName_k__BackingField;
+                      v21 = v14->fields._ImageName_k__BackingField;
                       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                      v22 = v24;
-                      v23 = v25;
+                      v18 = v20;
+                      v19 = v21;
 LABEL_24:
-                      AtlasManager__SetShopBanner_39796272(v22, v23, 0LL);
+                      AtlasManager__SetShopBanner_40386924(v18, v19, 0);
                       return;
                     }
+                    if ( !v20 )
+                      break;
+                    UISprite__set_atlas(this->fields.baseImageSprite, this->fields.baseAtlas, 0);
+                    v24 = item->fields.info;
                     if ( !v24 )
                       break;
-                    UISprite__set_atlas(this->fields.baseImageSprite, this->fields.baseAtlas, 0LL);
-                    v28 = item->fields.info;
-                    if ( !v28 )
-                      break;
-                    v29 = this->fields.baseImageSprite;
+                    v25 = this->fields.baseImageSprite;
                     gameObject = (UnityEngine_Component_o *)System_String__IsNullOrEmpty(
-                                                              v28->fields._ImageName_k__BackingField,
-                                                              0LL);
+                                                              v24->fields._ImageName_k__BackingField,
+                                                              0);
                     if ( ((unsigned __int8)gameObject & 1) != 0 )
                     {
-                      p_ImageName_k__BackingField = (System_String_o **)&StringLiteral_20367/*"img_shop_0"*/;
+                      p_ImageName_k__BackingField = (System_String_o **)&StringLiteral_20538/*"img_shop_0"*/;
                     }
                     else
                     {
-                      v31 = item->fields.info;
-                      if ( !v31 )
+                      v27 = item->fields.info;
+                      if ( !v27 )
                         break;
-                      p_ImageName_k__BackingField = &v31->fields._ImageName_k__BackingField;
+                      p_ImageName_k__BackingField = &v27->fields._ImageName_k__BackingField;
                     }
-                    if ( v29 )
+                    if ( v25 )
                     {
-                      UISprite__set_spriteName(v29, *p_ImageName_k__BackingField, 0LL);
+                      UISprite__set_spriteName(v25, *p_ImageName_k__BackingField, 0);
                       return;
                     }
                     break;
@@ -324,6 +315,6 @@ LABEL_24:
       }
     }
 LABEL_41:
-    sub_1BCB254(gameObject, v12);
+    sub_1C2D6EC(gameObject, v8);
   }
 }

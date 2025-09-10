@@ -1,12 +1,10 @@
-void __fastcall UserGradeComponent___ctor(UserGradeComponent_o *this, const MethodInfo *method)
+void UserGradeComponent___ctor(UserGradeComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-UnityEngine_Vector2_o __fastcall UserGradeComponent__GetGradeLocalSize(
-        UserGradeComponent_o *this,
-        const MethodInfo *method)
+UnityEngine_Vector2_o UserGradeComponent__GetGradeLocalSize(UserGradeComponent_o *this, const MethodInfo *method)
 {
   struct UISprite_o *usrGradeImg; // x0
   float v3; // s0
@@ -15,99 +13,90 @@ UnityEngine_Vector2_o __fastcall UserGradeComponent__GetGradeLocalSize(
 
   usrGradeImg = this->fields.usrGradeImg;
   if ( !usrGradeImg )
-    sub_1BCB254(0LL, method);
-  ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))usrGradeImg->klass->vtable._22_get_localSize.method)(
+    sub_1C2D6EC(0, method);
+  ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))usrGradeImg->klass->vtable._22_get_localSize.methodPtr)(
     usrGradeImg,
-    usrGradeImg->klass->vtable._23_get_drawingDimensions.methodPtr);
+    usrGradeImg->klass->vtable._22_get_localSize.method);
   result.fields.y = v4;
   result.fields.x = v3;
   return result;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall UserGradeComponent__Set(UserGradeComponent_o *this, int32_t gradeKind, const MethodInfo *method)
+void UserGradeComponent__Set(UserGradeComponent_o *this, int32_t gradeKind, const MethodInfo *method)
 {
   System_String_o *IconImage; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4B1B2CF & 1) == 0 )
+  if ( (byte_4C26060 & 1) == 0 )
   {
-    sub_1BCAFF8(&Grade_TypeInfo, *(_QWORD *)&gradeKind);
-    byte_4B1B2CF = 1;
+    sub_1C2D490(&Grade_TypeInfo);
+    byte_4C26060 = 1;
   }
   if ( !Grade_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Grade_TypeInfo);
-  IconImage = Grade__GetIconImage(gradeKind, 0LL);
+  IconImage = Grade__GetIconImage(gradeKind, 0);
   UserGradeComponent__SetImage(this, IconImage, v6);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall UserGradeComponent__SetGradeAlpha(UserGradeComponent_o *this, float alpha, const MethodInfo *method)
+void UserGradeComponent__SetGradeAlpha(UserGradeComponent_o *this, float alpha, const MethodInfo *method)
 {
   struct UISprite_o *usrGradeImg; // x0
 
   usrGradeImg = this->fields.usrGradeImg;
   if ( !usrGradeImg )
-    sub_1BCB254(0LL, method);
-  ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer, long double))usrGradeImg->klass->vtable._8_set_alpha.method)(
+    sub_1C2D6EC(0, method);
+  ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *, float))usrGradeImg->klass->vtable._8_set_alpha.methodPtr)(
     usrGradeImg,
-    usrGradeImg->klass->vtable._9_CalculateFinalAlpha.methodPtr,
-    *(long double *)&alpha);
+    usrGradeImg->klass->vtable._8_set_alpha.method,
+    alpha);
 }
 
 
-void __fastcall UserGradeComponent__SetImage(
-        UserGradeComponent_o *this,
-        System_String_o *spName,
-        const MethodInfo *method)
+void UserGradeComponent__SetImage(UserGradeComponent_o *this, System_String_o *spName, const MethodInfo *method)
 {
-  __int64 v5; // x1
   UnityEngine_Object_o *usrGradeImg; // x21
-  UISprite_o *v7; // x20
+  UISprite_o *v6; // x20
 
-  if ( (byte_4B1B2D0 & 1) == 0 )
+  if ( (byte_4C26061 & 1) == 0 )
   {
-    sub_1BCAFF8(&AtlasManager_TypeInfo, spName);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B1B2D0 = 1;
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C26061 = 1;
   }
   usrGradeImg = (UnityEngine_Object_o *)this->fields.usrGradeImg;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(usrGradeImg, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(usrGradeImg, 0, 0) )
   {
-    v7 = this->fields.usrGradeImg;
+    v6 = this->fields.usrGradeImg;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetGradeIcon(v7, spName, 0LL);
+    AtlasManager__SetGradeIcon(v6, spName, 0);
   }
 }
 
 
-void __fastcall UserGradeComponent__SetImageLocal(
-        UserGradeComponent_o *this,
-        System_String_o *spName,
-        const MethodInfo *method)
+void UserGradeComponent__SetImageLocal(UserGradeComponent_o *this, System_String_o *spName, const MethodInfo *method)
 {
   UnityEngine_Object_o *usrGradeImg; // x21
   __int64 v6; // x1
   UISprite_o *v7; // x0
 
-  if ( (byte_4B1B2D1 & 1) == 0 )
+  if ( (byte_4C26062 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, spName);
-    byte_4B1B2D1 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C26062 = 1;
   }
   usrGradeImg = (UnityEngine_Object_o *)this->fields.usrGradeImg;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(usrGradeImg, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(usrGradeImg, 0, 0) )
   {
     v7 = this->fields.usrGradeImg;
     if ( !v7 )
-      sub_1BCB254(0LL, v6);
-    UISprite__set_spriteName(v7, spName, 0LL);
+      sub_1C2D6EC(0, v6);
+    UISprite__set_spriteName(v7, spName, 0);
   }
 }

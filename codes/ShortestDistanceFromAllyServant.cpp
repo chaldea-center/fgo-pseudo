@@ -1,13 +1,11 @@
-void __fastcall ShortestDistanceFromAllyServant___ctor(
-        ShortestDistanceFromAllyServant_o *this,
-        const MethodInfo *method)
+void ShortestDistanceFromAllyServant___ctor(ShortestDistanceFromAllyServant_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-float __fastcall ShortestDistanceFromAllyServant__GetRatingBase(
+float ShortestDistanceFromAllyServant__GetRatingBase(
         ShortestDistanceFromAllyServant_o *this,
         int32_t forceId,
         WarBoardSquareData_o *calcSquare,
@@ -17,71 +15,69 @@ float __fastcall ShortestDistanceFromAllyServant__GetRatingBase(
         const MethodInfo *method)
 {
   ShortestDistanceFromAllyServant_o *v11; // x19
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
   uint32_t Item; // w23
   WarBoardPieceData_o *PieceUnique; // x0
-  WarBoardPieceData_o *v17; // x23
+  WarBoardPieceData_o *v14; // x23
   int32_t squareIndex_k__BackingField; // w21
-  int32_t v19; // w20
-  System_Int32_array *v20; // x0
-  __int64 v21; // x20
+  int32_t v16; // w20
+  System_Int32_array *v17; // x0
+  il2cpp_array_size_t max_length; // x20
   float BreakPoint; // s0
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   v11 = this;
-  if ( (byte_4B19E34 & 1) == 0 )
+  if ( (byte_4C24C5A & 1) == 0 )
   {
-    sub_1BCAFF8(&AStarSearch_TypeInfo, *(_QWORD *)&forceId);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__, v12);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__, v13);
-    this = (ShortestDistanceFromAllyServant_o *)sub_1BCAFF8(&WarBoardAIManager_TypeInfo, v14);
-    byte_4B19E34 = 1;
+    sub_1C2D490(&AStarSearch_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__);
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
+    this = (ShortestDistanceFromAllyServant_o *)sub_1C2D490(&WarBoardAIManager_TypeInfo);
+    byte_4C24C5A = 1;
   }
   if ( !targetSquare || !dicPiecePlaceData )
     goto LABEL_20;
   if ( System_Collections_Generic_Dictionary_int__uint___ContainsKey(
          dicPiecePlaceData,
          targetSquare->fields._squareIndex_k__BackingField,
-         (const MethodInfo_33442A4 *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
+         (const MethodInfo_34058C4 *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_int__uint___get_Item(
              dicPiecePlaceData,
              targetSquare->fields._squareIndex_k__BackingField,
-             (const MethodInfo_334401C *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
+             (const MethodInfo_340563C *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
     if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-    PieceUnique = WarBoardAIManager__GetPieceUnique(Item, 0LL);
+    PieceUnique = WarBoardAIManager__GetPieceUnique(Item, 0);
     if ( PieceUnique )
     {
-      v17 = PieceUnique;
+      v14 = PieceUnique;
       if ( PieceUnique->fields._forceId_k__BackingField == forceId )
       {
-        this = (ShortestDistanceFromAllyServant_o *)WarBoardPieceData__get_isMaster(PieceUnique, 0LL);
+        this = (ShortestDistanceFromAllyServant_o *)WarBoardPieceData__get_isMaster(PieceUnique, 0);
         if ( ((unsigned __int8)this & 1) == 0 )
         {
           if ( !calcSquare )
             goto LABEL_20;
           squareIndex_k__BackingField = calcSquare->fields._squareIndex_k__BackingField;
-          v19 = targetSquare->fields._squareIndex_k__BackingField;
+          v16 = targetSquare->fields._squareIndex_k__BackingField;
           if ( !AStarSearch_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AStarSearch_TypeInfo);
-          v20 = AStarSearch__RouteSearch(v17, squareIndex_k__BackingField, v19, 0, 0LL, 0LL);
-          if ( v20 )
+          v17 = AStarSearch__RouteSearch(v14, squareIndex_k__BackingField, v16, 0, 0, 0);
+          if ( v17 )
           {
-            v21 = *(_QWORD *)&v20->max_length;
+            max_length = v17->max_length;
             if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-            BreakPoint = WarBoardAIManager__GetBreakPoint(v17, 0LL);
+            BreakPoint = WarBoardAIManager__GetBreakPoint(v14, 0);
             ratingBase = v11->fields.ratingBase;
             if ( ratingBase )
               return fmaxf(
                        (float)(BreakPoint * (float)ratingBase->fields.adjustmentValueB)
-                     + (float)(ratingBase->fields.adjustmentValueA1 - ratingBase->fields.adjustmentValueA2 * (v21 - 1)),
+                     + (float)(ratingBase->fields.adjustmentValueA1
+                             - ratingBase->fields.adjustmentValueA2 * ((int)max_length - 1)),
                        0.0);
 LABEL_20:
-            sub_1BCB254(this, *(_QWORD *)&forceId);
+            sub_1C2D6EC(this, *(_QWORD *)&forceId);
           }
         }
       }

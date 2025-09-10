@@ -1,29 +1,26 @@
-void __fastcall BattleDebug___cctor(const MethodInfo *method)
+void BattleDebug___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  __int64 v3; // x1
-  System_Collections_Generic_Queue_T__o *v4; // x19
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  System_Collections_Generic_Queue_T__o *v1; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
 
-  if ( (byte_4B1ECE8 & 1) == 0 )
+  if ( (byte_4C29B47 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleDebug_TypeInfo, v1);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Queue_string___ctor__, v2);
-    sub_1BCAFF8(&System_Collections_Generic_Queue_string__TypeInfo, v3);
-    byte_4B1ECE8 = 1;
+    sub_1C2D490(&BattleDebug_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_Queue_string___ctor__);
+    sub_1C2D490(&System_Collections_Generic_Queue_string__TypeInfo);
+    byte_4C29B47 = 1;
   }
-  v4 = (System_Collections_Generic_Queue_T__o *)sub_1BCB244(System_Collections_Generic_Queue_string__TypeInfo);
+  v1 = (System_Collections_Generic_Queue_T__o *)sub_1C2D6DC(System_Collections_Generic_Queue_string__TypeInfo);
   System_Collections_Generic_Queue_object____ctor(
-    v4,
-    (const MethodInfo_382E240 *)Method_System_Collections_Generic_Queue_string___ctor__);
-  BattleDebug_TypeInfo->static_fields->logQueue = (struct System_Collections_Generic_Queue_string__o *)v4;
-  sub_1BCAF9C((CGThumbnailListItem_o *)BattleDebug_TypeInfo->static_fields, (int32_t)v4, v5, v6);
+    v1,
+    (const MethodInfo_39307A0 *)Method_System_Collections_Generic_Queue_string___ctor__);
+  BattleDebug_TypeInfo->static_fields->logQueue = (struct System_Collections_Generic_Queue_string__o *)v1;
+  sub_1C2D434((CGThumbnailListItem_o *)BattleDebug_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
-void __fastcall BattleDebug__CheckNull(System_String_o *errorText, Il2CppObject *obj, const MethodInfo *method)
+void BattleDebug__CheckNull(System_String_o *errorText, Il2CppObject *obj, const MethodInfo *method)
 {
   __int64 v4; // x0
   System_Exception_o *v5; // x20
@@ -31,34 +28,34 @@ void __fastcall BattleDebug__CheckNull(System_String_o *errorText, Il2CppObject 
 
   if ( !obj )
   {
-    v4 = sub_1BCB00C(&System_Exception_TypeInfo);
-    v5 = (System_Exception_o *)sub_1BCB244(v4);
-    System_Exception___ctor_64196888(v5, errorText, 0LL);
-    v6 = sub_1BCB00C(&Method_BattleDebug_CheckNull__);
-    sub_1BCB120(v5, v6);
+    v4 = sub_1C2D4A4(&System_Exception_TypeInfo);
+    v5 = (System_Exception_o *)sub_1C2D6DC(v4);
+    System_Exception___ctor_65206256(v5, errorText, 0);
+    v6 = sub_1C2D4A4(&Method_BattleDebug_CheckNull__);
+    sub_1C2D5B8(v5, v6);
   }
 }
 
 
-void __fastcall BattleDebug__DebugLog(System_String_o *str, const MethodInfo *method)
+void BattleDebug__DebugLog(System_String_o *str, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall BattleDebug__ErrorLog(System_String_o *str, const MethodInfo *method)
+void BattleDebug__ErrorLog(System_String_o *str, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall BattleDebug__Log(System_String_o *str, int32_t tag, const MethodInfo *method)
+void BattleDebug__Log(System_String_o *str, int32_t tag, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall BattleDebug__Log_44947520(
+void BattleDebug__Log_45623816(
         System_Collections_Generic_LinkedList_BattleLogicTask__o *taskList,
         int32_t tag,
         const MethodInfo *method)
@@ -67,7 +64,7 @@ void __fastcall BattleDebug__Log_44947520(
 }
 
 
-void __fastcall __noreturn BattleDebug__OutputError(
+void __noreturn BattleDebug__OutputError(
         System_String_o *errorText,
         System_Exception_o *exception,
         const MethodInfo *method)
@@ -85,203 +82,190 @@ void __fastcall __noreturn BattleDebug__OutputError(
 
   if ( exception )
   {
-    v6 = (Il2CppObject *)((__int64 (__fastcall *)(System_Exception_o *, Il2CppMethodPointer, const MethodInfo *))exception->klass->vtable._5_get_Message.method)(
+    v6 = (Il2CppObject *)((__int64 (__fastcall *)(System_Exception_o *, const MethodInfo *, const MethodInfo *))exception->klass->vtable._5_get_Message.methodPtr)(
                            exception,
-                           exception->klass->vtable._6_get_Data.methodPtr,
+                           exception->klass->vtable._5_get_Message.method,
                            method);
-    v7 = (Il2CppObject *)((__int64 (__fastcall *)(System_Exception_o *, Il2CppMethodPointer))exception->klass->vtable._9_get_StackTrace.method)(
+    v7 = (Il2CppObject *)((__int64 (__fastcall *)(System_Exception_o *, const MethodInfo *))exception->klass->vtable._9_get_StackTrace.methodPtr)(
                            exception,
-                           exception->klass->vtable._10_get_Source.methodPtr);
-    v8 = (System_String_o *)sub_1BCB00C(&StringLiteral_8965/*"Message:\n{0}\nStackTrace:\n{1}\n"*/);
-    v4 = System_String__Format_62491716(v8, v6, v7, 0LL);
+                           exception->klass->vtable._9_get_StackTrace.method);
+    v8 = (System_String_o *)sub_1C2D4A4(&StringLiteral_9029/*"Message:\n{0}\nStackTrace:\n{1}\n"*/);
+    v4 = System_String__Format_63499156(v8, v6, v7, 0);
   }
   else
   {
-    v4 = (System_String_o *)sub_1BCB00C(&StringLiteral_1/*""*/);
+    v4 = (System_String_o *)sub_1C2D4A4(&StringLiteral_1/*""*/);
   }
   v9 = v4;
-  v10 = (System_String_o *)sub_1BCB00C(&StringLiteral_43/*"\n"*/);
-  v11 = System_String__Concat_62488672(errorText, v10, v9, 0LL);
-  v12 = sub_1BCB00C(&System_Exception_TypeInfo);
-  v13 = (System_Exception_o *)sub_1BCB244(v12);
-  System_Exception___ctor_64196888(v13, v11, 0LL);
-  v14 = sub_1BCB00C(&Method_BattleDebug_OutputError__);
-  sub_1BCB120(v13, v14);
+  v10 = (System_String_o *)sub_1C2D4A4(&StringLiteral_43/*"\n"*/);
+  v11 = System_String__Concat_63496112(errorText, v10, v9, 0);
+  v12 = sub_1C2D4A4(&System_Exception_TypeInfo);
+  v13 = (System_Exception_o *)sub_1C2D6DC(v12);
+  System_Exception___ctor_65206256(v13, v11, 0);
+  v14 = sub_1C2D4A4(&Method_BattleDebug_OutputError__);
+  sub_1C2D5B8(v13, v14);
 }
 
 
-void __fastcall BattleDebug__Reset(const MethodInfo *method)
+void BattleDebug__Reset(const MethodInfo *method)
 {
   __int64 v1; // x1
-  __int64 v2; // x1
-  BattleDebug_c *v3; // x0
+  BattleDebug_c *v2; // x0
   System_Collections_Generic_Queue_T__o *logQueue; // x0
 
-  if ( (byte_4B1ECE6 & 1) == 0 )
+  if ( (byte_4C29B45 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleDebug_TypeInfo, v1);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Queue_string__Clear__, v2);
-    byte_4B1ECE6 = 1;
+    sub_1C2D490(&BattleDebug_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_Queue_string__Clear__);
+    byte_4C29B45 = 1;
   }
-  v3 = BattleDebug_TypeInfo;
+  v2 = BattleDebug_TypeInfo;
   if ( !BattleDebug_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleDebug_TypeInfo);
-    v3 = BattleDebug_TypeInfo;
+    v2 = BattleDebug_TypeInfo;
   }
-  logQueue = (System_Collections_Generic_Queue_T__o *)v3->static_fields->logQueue;
+  logQueue = (System_Collections_Generic_Queue_T__o *)v2->static_fields->logQueue;
   if ( !logQueue )
-    sub_1BCB254(0LL, v1);
+    sub_1C2D6EC(0, v1);
   System_Collections_Generic_Queue_object___Clear(
     logQueue,
-    (const MethodInfo_382E4C8 *)Method_System_Collections_Generic_Queue_string__Clear__);
+    (const MethodInfo_3930A28 *)Method_System_Collections_Generic_Queue_string__Clear__);
 }
 
 
-void __fastcall BattleDebug__WarningLog(System_String_o *str, const MethodInfo *method)
+void BattleDebug__WarningLog(System_String_o *str, const MethodInfo *method)
 {
   ;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_array *__fastcall BattleDebug__getLoglist(
+System_String_array *BattleDebug__getLoglist(
         System_String_o *serchText,
         int32_t tag,
         bool reverseFlg,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x20
+  __int64 v7; // x20
   System_Collections_Generic_Queue_T__o *logQueue; // x0
-  __int64 v17; // x1
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  BattleDebug_c *v20; // x0
-  System_Object_array *v21; // x21
-  System_Predicate_object__o *v22; // x23
-  System_Predicate_object__o *v23; // x22
+  __int64 v9; // x1
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  BattleDebug_c *v12; // x0
+  System_Object_array *v13; // x21
+  System_Predicate_object__o *v14; // x23
+  System_Predicate_object__o *v15; // x22
   System_Object_array *All_object; // x0
-  System_String_array *v25; // x20
+  System_String_array *v17; // x20
 
-  if ( (byte_4B1ECE7 & 1) == 0 )
+  if ( (byte_4C29B46 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Array_FindAll_string___, *(_QWORD *)&tag);
-    sub_1BCAFF8(&Method_System_Array_Reverse_string___, v7);
-    sub_1BCAFF8(&BattleDebug_TypeInfo, v8);
-    sub_1BCAFF8(&System_Predicate_string__TypeInfo, v9);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Queue_string__ToArray__, v10);
-    sub_1BCAFF8(&Method_BattleDebug___c__DisplayClass7_0__getLoglist_b__0__, v11);
-    sub_1BCAFF8(&Method_BattleDebug___c__DisplayClass7_0__getLoglist_b__1__, v12);
-    sub_1BCAFF8(&BattleDebug___c__DisplayClass7_0_TypeInfo, v13);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v14);
-    byte_4B1ECE7 = 1;
+    sub_1C2D490(&Method_System_Array_FindAll_string___);
+    sub_1C2D490(&Method_System_Array_Reverse_string___);
+    sub_1C2D490(&BattleDebug_TypeInfo);
+    sub_1C2D490(&System_Predicate_string__TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_Queue_string__ToArray__);
+    sub_1C2D490(&Method_BattleDebug___c__DisplayClass7_0__getLoglist_b__0__);
+    sub_1C2D490(&Method_BattleDebug___c__DisplayClass7_0__getLoglist_b__1__);
+    sub_1C2D490(&BattleDebug___c__DisplayClass7_0_TypeInfo);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C29B46 = 1;
   }
-  v15 = sub_1BCB244(BattleDebug___c__DisplayClass7_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v15, 0LL);
-  if ( !v15 )
+  v7 = sub_1C2D6DC(BattleDebug___c__DisplayClass7_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0);
+  if ( !v7 )
     goto LABEL_13;
-  *(_QWORD *)(v15 + 24) = serchText;
-  *(_DWORD *)(v15 + 16) = tag;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v15 + 24), (int32_t)serchText, v18, v19);
-  v20 = BattleDebug_TypeInfo;
+  *(_QWORD *)(v7 + 24) = serchText;
+  *(_DWORD *)(v7 + 16) = tag;
+  sub_1C2D434((CGThumbnailListItem_o *)(v7 + 24), (int32_t)serchText, v10, v11);
+  v12 = BattleDebug_TypeInfo;
   if ( !BattleDebug_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleDebug_TypeInfo);
-    v20 = BattleDebug_TypeInfo;
+    v12 = BattleDebug_TypeInfo;
   }
-  logQueue = (System_Collections_Generic_Queue_T__o *)v20->static_fields->logQueue;
+  logQueue = (System_Collections_Generic_Queue_T__o *)v12->static_fields->logQueue;
   if ( !logQueue )
     goto LABEL_13;
   logQueue = (System_Collections_Generic_Queue_T__o *)System_Collections_Generic_Queue_object___ToArray(
                                                         logQueue,
-                                                        (const MethodInfo_382EC44 *)Method_System_Collections_Generic_Queue_string__ToArray__);
-  v21 = (System_Object_array *)logQueue;
-  if ( *(_DWORD *)(v15 + 16) )
+                                                        (const MethodInfo_39311A4 *)Method_System_Collections_Generic_Queue_string__ToArray__);
+  v13 = (System_Object_array *)logQueue;
+  if ( *(_DWORD *)(v7 + 16) )
   {
-    v22 = (System_Predicate_object__o *)sub_1BCB244(System_Predicate_string__TypeInfo);
+    v14 = (System_Predicate_object__o *)sub_1C2D6DC(System_Predicate_string__TypeInfo);
     System_Predicate_object____ctor(
-      v22,
-      (Il2CppObject *)v15,
+      v14,
+      (Il2CppObject *)v7,
       Method_BattleDebug___c__DisplayClass7_0__getLoglist_b__0__,
-      0LL);
+      0);
     logQueue = (System_Collections_Generic_Queue_T__o *)System_Array__FindAll_object_(
-                                                          v21,
-                                                          (System_Predicate_T__o *)v22,
-                                                          (const MethodInfo_311762C *)Method_System_Array_FindAll_string___);
-    v21 = (System_Object_array *)logQueue;
+                                                          v13,
+                                                          (System_Predicate_T__o *)v14,
+                                                          (const MethodInfo_31D3FC4 *)Method_System_Array_FindAll_string___);
+    v13 = (System_Object_array *)logQueue;
   }
-  if ( !*(_QWORD *)(v15 + 24) )
+  if ( !*(_QWORD *)(v7 + 24) )
 LABEL_13:
-    sub_1BCB254(logQueue, v17);
-  v23 = (System_Predicate_object__o *)sub_1BCB244(System_Predicate_string__TypeInfo);
+    sub_1C2D6EC(logQueue, v9);
+  v15 = (System_Predicate_object__o *)sub_1C2D6DC(System_Predicate_string__TypeInfo);
   System_Predicate_object____ctor(
-    v23,
-    (Il2CppObject *)v15,
+    v15,
+    (Il2CppObject *)v7,
     Method_BattleDebug___c__DisplayClass7_0__getLoglist_b__1__,
-    0LL);
+    0);
   All_object = System_Array__FindAll_object_(
-                 v21,
-                 (System_Predicate_T__o *)v23,
-                 (const MethodInfo_311762C *)Method_System_Array_FindAll_string___);
-  v25 = (System_String_array *)All_object;
+                 v13,
+                 (System_Predicate_T__o *)v15,
+                 (const MethodInfo_31D3FC4 *)Method_System_Array_FindAll_string___);
+  v17 = (System_String_array *)All_object;
   if ( reverseFlg )
-    System_Array__Reverse_object_(All_object, (const MethodInfo_2FDBB00 *)Method_System_Array_Reverse_string___);
-  return v25;
+    System_Array__Reverse_object_(All_object, (const MethodInfo_308F3DC *)Method_System_Array_Reverse_string___);
+  return v17;
 }
 
 
-int32_t __fastcall BattleDebug__getTag(int32_t param, const MethodInfo *method)
+int32_t BattleDebug__getTag(int32_t param, const MethodInfo *method)
 {
   return param;
 }
 
 
-void __fastcall BattleDebug___c__DisplayClass7_0___ctor(
-        BattleDebug___c__DisplayClass7_0_o *this,
-        const MethodInfo *method)
+void BattleDebug___c__DisplayClass7_0___ctor(BattleDebug___c__DisplayClass7_0_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall BattleDebug___c__DisplayClass7_0___getLoglist_b__0(
+bool BattleDebug___c__DisplayClass7_0___getLoglist_b__0(
         BattleDebug___c__DisplayClass7_0_o *this,
         System_String_o *s,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  Il2CppObject *v6; // x0
-  System_String_o *v7; // x0
-  __int64 v8; // x1
-  System_Enum_o v10; // [xsp+8h] [xbp-48h] BYREF
+  Il2CppObject *v5; // x0
+  System_String_o *v6; // x0
+  __int64 v7; // x1
+  System_Enum_o v9; // [xsp+8h] [xbp-48h] BYREF
   int32_t tag; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_4B1ECE9 & 1) == 0 )
+  if ( (byte_4C29B48 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleDebug_TAG_TypeInfo, s);
-    sub_1BCAFF8(&StringLiteral_1734/*"<{0}>"*/, v5);
-    byte_4B1ECE9 = 1;
+    sub_1C2D490(&BattleDebug_TAG_TypeInfo);
+    sub_1C2D490(&StringLiteral_1742/*"<{0}>"*/);
+    byte_4C29B48 = 1;
   }
-  v10.klass = (System_Enum_c *)BattleDebug_TAG_TypeInfo;
-  v10.monitor = (void *)-1LL;
+  v9.klass = (System_Enum_c *)BattleDebug_TAG_TypeInfo;
+  v9.monitor = (void *)-1LL;
   tag = this->fields.tag;
-  v6 = (Il2CppObject *)System_Enum__ToString(&v10, 0LL);
-  v7 = System_String__Format((System_String_o *)StringLiteral_1734/*"<{0}>"*/, v6, 0LL);
+  v5 = (Il2CppObject *)System_Enum__ToString(&v9, 0);
+  v6 = System_String__Format((System_String_o *)StringLiteral_1742/*"<{0}>"*/, v5, 0);
   if ( !s )
-    sub_1BCB254(v7, v8);
-  return System_String__IndexOf_62508800(s, v7, 0LL) >= 0;
+    sub_1C2D6EC(v6, v7);
+  return System_String__IndexOf_63516240(s, v6, 0) >= 0;
 }
 
 
-bool __fastcall BattleDebug___c__DisplayClass7_0___getLoglist_b__1(
+bool BattleDebug___c__DisplayClass7_0___getLoglist_b__1(
         BattleDebug___c__DisplayClass7_0_o *this,
         System_String_o *s,
         const MethodInfo *method)
@@ -289,13 +273,13 @@ bool __fastcall BattleDebug___c__DisplayClass7_0___getLoglist_b__1(
   System_String_o *v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B1ECEA & 1) == 0 )
+  if ( (byte_4C29B49 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_24882/*"{0}"*/, s);
-    byte_4B1ECEA = 1;
+    sub_1C2D490(&StringLiteral_25078/*"{0}"*/);
+    byte_4C29B49 = 1;
   }
-  v5 = System_String__Format((System_String_o *)StringLiteral_24882/*"{0}"*/, (Il2CppObject *)this->fields.serchText, 0LL);
+  v5 = System_String__Format((System_String_o *)StringLiteral_25078/*"{0}"*/, (Il2CppObject *)this->fields.serchText, 0);
   if ( !s )
-    sub_1BCB254(v5, v6);
-  return System_String__IndexOf_62508800(s, v5, 0LL) >= 0;
+    sub_1C2D6EC(v5, v6);
+  return System_String__IndexOf_63516240(s, v5, 0) >= 0;
 }

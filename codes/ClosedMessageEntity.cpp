@@ -1,35 +1,35 @@
-void __fastcall ClosedMessageEntity___ctor(ClosedMessageEntity_o *this, const MethodInfo *method)
+void ClosedMessageEntity___ctor(ClosedMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C2AF & 1) == 0 )
+  if ( (byte_4C2705A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1C2AF = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C2705A = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall ClosedMessageEntity__CreatePrimaryKey(ClosedMessageEntity_o *this, const MethodInfo *method)
+int32_t ClosedMessageEntity__CreatePrimaryKey(ClosedMessageEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-bool __fastcall ClosedMessageEntity__HasFlag(ClosedMessageEntity_o *this, int32_t typeFlag, const MethodInfo *method)
+bool ClosedMessageEntity__HasFlag(ClosedMessageEntity_o *this, int32_t typeFlag, const MethodInfo *method)
 {
   return (this->fields.flag & typeFlag) != 0;
 }
 
 
-bool __fastcall ClosedMessageEntity__IsChangeDispClosedMessage(ClosedMessageEntity_o *this, const MethodInfo *method)
+bool ClosedMessageEntity__IsChangeDispClosedMessage(ClosedMessageEntity_o *this, const MethodInfo *method)
 {
   return (LOBYTE(this->fields.flag) >> 1) & 1;
 }
 
 
-bool __fastcall ClosedMessageEntity__IsChangeDispPositionLeft(ClosedMessageEntity_o *this, const MethodInfo *method)
+bool ClosedMessageEntity__IsChangeDispPositionLeft(ClosedMessageEntity_o *this, const MethodInfo *method)
 {
   return (LOBYTE(this->fields.flag) >> 2) & 1;
 }

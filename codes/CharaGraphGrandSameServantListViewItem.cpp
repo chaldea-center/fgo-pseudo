@@ -1,4 +1,4 @@
-void __fastcall CharaGraphGrandSameServantListViewItem___ctor(
+void CharaGraphGrandSameServantListViewItem___ctor(
         CharaGraphGrandSameServantListViewItem_o *this,
         int32_t index,
         CharaGraphListViewPatternBase_o *listViewPattern,
@@ -10,5 +10,5 @@ void __fastcall CharaGraphGrandSameServantListViewItem___ctor(
     index,
     listViewPattern,
     userSvtEntity,
-    0LL);
+    0);
 }

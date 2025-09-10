@@ -1,10 +1,10 @@
-void __fastcall CombineAdjustTarget___ctor(CombineAdjustTarget_o *this, const MethodInfo *method)
+void CombineAdjustTarget___ctor(CombineAdjustTarget_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall CombineAdjustTarget__isTerminalExposable(int32_t type, const MethodInfo *method)
+bool CombineAdjustTarget__isTerminalExposable(int32_t type, const MethodInfo *method)
 {
   _BOOL4 v2; // w0
 

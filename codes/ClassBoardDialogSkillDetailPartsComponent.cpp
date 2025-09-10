@@ -1,14 +1,14 @@
-void __fastcall ClassBoardDialogSkillDetailPartsComponent___ctor(
+void ClassBoardDialogSkillDetailPartsComponent___ctor(
         ClassBoardDialogSkillDetailPartsComponent_o *this,
         const MethodInfo *method)
 {
   this->fields.detailUnderMargin = 4.0;
   *(_QWORD *)&this->fields.detailMinHeight = 0x1400000064LL;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall ClassBoardDialogSkillDetailPartsComponent__Awake(
+void ClassBoardDialogSkillDetailPartsComponent__Awake(
         ClassBoardDialogSkillDetailPartsComponent_o *this,
         const MethodInfo *method)
 {
@@ -16,7 +16,7 @@ void __fastcall ClassBoardDialogSkillDetailPartsComponent__Awake(
 }
 
 
-float __fastcall ClassBoardDialogSkillDetailPartsComponent__SetDetail(
+float ClassBoardDialogSkillDetailPartsComponent__SetDetail(
         ClassBoardDialogSkillDetailPartsComponent_o *this,
         System_String_o *name,
         System_String_o *detail,
@@ -34,26 +34,26 @@ float __fastcall ClassBoardDialogSkillDetailPartsComponent__SetDetail(
   int32_t v18; // w1
   System_String_o *ClassBoardSkillIconName; // x20
 
-  if ( (byte_4B1FDA4 & 1) == 0 )
+  if ( (byte_4C2AC9F & 1) == 0 )
   {
-    sub_1BCAFF8(&ClassBoardUtility_TypeInfo, name);
-    byte_4B1FDA4 = 1;
+    sub_1C2D490(&ClassBoardUtility_TypeInfo);
+    byte_4C2AC9F = 1;
   }
   effectNameLabel = this->fields.effectNameLabel;
   if ( !effectNameLabel )
     goto LABEL_17;
-  UILabel__set_text(effectNameLabel, name, 0LL);
+  UILabel__set_text(effectNameLabel, name, 0);
   WrapControlText__textBBCodeAdjust(
     this->fields.effectDetailLabel,
     detail,
     this->fields.detailFontSize,
     this->fields.detailFontSize,
-    0LL);
+    0);
   effectNameLabel = this->fields.effectDetailLabel;
   if ( !effectNameLabel )
     goto LABEL_17;
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)effectNameLabel, 0LL);
-  LocalPositionY = GameObjectExtensions__GetLocalPositionY(gameObject, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)effectNameLabel, 0);
+  LocalPositionY = GameObjectExtensions__GetLocalPositionY(gameObject, 0);
   effectDetailLabel = this->fields.effectDetailLabel;
   if ( !effectDetailLabel )
     goto LABEL_17;
@@ -64,14 +64,14 @@ float __fastcall ClassBoardDialogSkillDetailPartsComponent__SetDetail(
   if ( !effectNameLabel )
     goto LABEL_17;
   v18 = v17 == INFINITY ? 0x80000000 : (int)v17;
-  UIWidget__set_height((UIWidget_o *)effectNameLabel, v18, 0LL);
+  UIWidget__set_height((UIWidget_o *)effectNameLabel, v18, 0);
   if ( !ClassBoardUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
-  ClassBoardSkillIconName = ClassBoardUtility__GetClassBoardSkillIconName(iconId, skillType, 0LL);
-  effectNameLabel = (UILabel_o *)ClassBoardGlobalObject__get_IconAtlasManagerUnit((const MethodInfo *)ClassBoardSkillIconName);
+  ClassBoardSkillIconName = ClassBoardUtility__GetClassBoardSkillIconName(iconId, skillType, 0);
+  effectNameLabel = (UILabel_o *)ClassBoardGlobalObject__get_IconAtlasManagerUnit(0);
   if ( !effectNameLabel )
 LABEL_17:
-    sub_1BCB254(effectNameLabel, name);
-  AtlasManagerUnit__SetUI((AtlasManagerUnit_o *)effectNameLabel, this->fields.effectIcon, ClassBoardSkillIconName, 0LL);
+    sub_1C2D6EC(effectNameLabel, name);
+  AtlasManagerUnit__SetUI((AtlasManagerUnit_o *)effectNameLabel, this->fields.effectIcon, ClassBoardSkillIconName, 0);
   return v17;
 }

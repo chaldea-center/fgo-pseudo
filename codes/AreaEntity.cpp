@@ -1,41 +1,41 @@
-void __fastcall AreaEntity___ctor(AreaEntity_o *this, const MethodInfo *method)
+void AreaEntity___ctor(AreaEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C102 & 1) == 0 )
+  if ( (byte_4C26EA6 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1C102 = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C26EA6 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall AreaEntity__CreatePrimaryKey(AreaEntity_o *this, const MethodInfo *method)
+int32_t AreaEntity__CreatePrimaryKey(AreaEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-int32_t __fastcall AreaEntity__getAreaId(AreaEntity_o *this, const MethodInfo *method)
+int32_t AreaEntity__getAreaId(AreaEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-int32_t __fastcall AreaEntity__getAreaPosX(AreaEntity_o *this, const MethodInfo *method)
+int32_t AreaEntity__getAreaPosX(AreaEntity_o *this, const MethodInfo *method)
 {
   return this->fields.x;
 }
 
 
-int32_t __fastcall AreaEntity__getAreaPosY(AreaEntity_o *this, const MethodInfo *method)
+int32_t AreaEntity__getAreaPosY(AreaEntity_o *this, const MethodInfo *method)
 {
   return this->fields.y;
 }
 
 
-int32_t __fastcall AreaEntity__getWorldId(AreaEntity_o *this, const MethodInfo *method)
+int32_t AreaEntity__getWorldId(AreaEntity_o *this, const MethodInfo *method)
 {
   return this->fields.worldId;
 }

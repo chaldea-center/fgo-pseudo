@@ -1,11 +1,10 @@
-void __fastcall PosCountSpEnemyParamPosData___ctor(PosCountSpEnemyParamPosData_o *this, const MethodInfo *method)
+void PosCountSpEnemyParamPosData___ctor(PosCountSpEnemyParamPosData_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-UnityEngine_Vector3_o __fastcall PosCountSpEnemyParamPosData__GetSvtBuffLocalPos(
+UnityEngine_Vector3_o PosCountSpEnemyParamPosData__GetSvtBuffLocalPos(
         PosCountSpEnemyParamPosData_o *this,
         UnityEngine_Vector3_o defPos,
         const MethodInfo *method)
@@ -18,15 +17,13 @@ UnityEngine_Vector3_o __fastcall PosCountSpEnemyParamPosData__GetSvtBuffLocalPos
 }
 
 
-int32_t __fastcall PosCountSpEnemyParamPosData__get_BuffIconMaxLine(
-        PosCountSpEnemyParamPosData_o *this,
-        const MethodInfo *method)
+int32_t PosCountSpEnemyParamPosData__get_BuffIconMaxLine(PosCountSpEnemyParamPosData_o *this, const MethodInfo *method)
 {
   return 1;
 }
 
 
-UnityEngine_Vector3_o __fastcall PosCountSpEnemyParamPosData__get_ExBattleUiTrPos(
+UnityEngine_Vector3_o PosCountSpEnemyParamPosData__get_ExBattleUiTrPos(
         PosCountSpEnemyParamPosData_o *this,
         const MethodInfo *method)
 {
@@ -45,7 +42,7 @@ UnityEngine_Vector3_o __fastcall PosCountSpEnemyParamPosData__get_ExBattleUiTrPo
 }
 
 
-UnityEngine_Vector3_o __fastcall PosCountSpEnemyParamPosData__get_NormalTrLocalPos(
+UnityEngine_Vector3_o PosCountSpEnemyParamPosData__get_NormalTrLocalPos(
         PosCountSpEnemyParamPosData_o *this,
         const MethodInfo *method)
 {
@@ -64,7 +61,7 @@ UnityEngine_Vector3_o __fastcall PosCountSpEnemyParamPosData__get_NormalTrLocalP
 }
 
 
-UnityEngine_Vector3_o __fastcall PosCountSpEnemyParamPosData__get_NormalTrLocalScale(
+UnityEngine_Vector3_o PosCountSpEnemyParamPosData__get_NormalTrLocalScale(
         PosCountSpEnemyParamPosData_o *this,
         const MethodInfo *method)
 {

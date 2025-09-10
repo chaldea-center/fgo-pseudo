@@ -1,13 +1,10 @@
-void __fastcall BattleActionCondType___ctor(BattleActionCondType_o *this, const MethodInfo *method)
+void BattleActionCondType___ctor(BattleActionCondType_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall BattleActionCondType__IsAchieve(
-        int32_t condType,
-        BattleActionData_o *actData,
-        const MethodInfo *method)
+bool BattleActionCondType__IsAchieve(int32_t condType, BattleActionData_o *actData, const MethodInfo *method)
 {
   if ( !actData )
     return 0;

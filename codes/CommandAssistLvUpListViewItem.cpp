@@ -1,4 +1,4 @@
-void __fastcall CommandAssistLvUpListViewItem___ctor(
+void CommandAssistLvUpListViewItem___ctor(
         CommandAssistLvUpListViewItem_o *this,
         int32_t index,
         int32_t eventId,
@@ -14,32 +14,30 @@ void __fastcall CommandAssistLvUpListViewItem___ctor(
   CommandAssistLvUpListViewItem_o *v17; // x26
 
   v17 = this;
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   v17->fields._EventId_k__BackingField = eventId;
   v17->fields._AssistId_k__BackingField = assistId;
   v17->fields._IconImageId_k__BackingField = iconImageId;
   v17->fields._Name_k__BackingField = name;
-  sub_1BCAF9C(&v17->fields._Name_k__BackingField);
+  sub_1C2D434(&v17->fields._Name_k__BackingField);
   v17->fields._Detail_k__BackingField = detail;
-  sub_1BCAF9C(&v17->fields._Detail_k__BackingField);
+  sub_1C2D434(&v17->fields._Detail_k__BackingField);
   v17->fields._BeforeName_k__BackingField = beforeName;
-  sub_1BCAF9C(&v17->fields._BeforeName_k__BackingField);
+  sub_1C2D434(&v17->fields._BeforeName_k__BackingField);
   v17->fields._BeforeDetail_k__BackingField = beforeDetail;
-  v17 = (CommandAssistLvUpListViewItem_o *)((char *)v17 + 152);
-  sub_1BCAF9C(v17);
+  v17 = (CommandAssistLvUpListViewItem_o *)((char *)v17 + 160);
+  sub_1C2D434(v17);
   LOBYTE(v17->monitor) = isLast;
 }
 
 
-int32_t __fastcall CommandAssistLvUpListViewItem__get_AssistId(
-        CommandAssistLvUpListViewItem_o *this,
-        const MethodInfo *method)
+int32_t CommandAssistLvUpListViewItem__get_AssistId(CommandAssistLvUpListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._AssistId_k__BackingField;
 }
 
 
-System_String_o *__fastcall CommandAssistLvUpListViewItem__get_BeforeDetail(
+System_String_o *CommandAssistLvUpListViewItem__get_BeforeDetail(
         CommandAssistLvUpListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -47,7 +45,7 @@ System_String_o *__fastcall CommandAssistLvUpListViewItem__get_BeforeDetail(
 }
 
 
-System_String_o *__fastcall CommandAssistLvUpListViewItem__get_BeforeName(
+System_String_o *CommandAssistLvUpListViewItem__get_BeforeName(
         CommandAssistLvUpListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -55,7 +53,7 @@ System_String_o *__fastcall CommandAssistLvUpListViewItem__get_BeforeName(
 }
 
 
-System_String_o *__fastcall CommandAssistLvUpListViewItem__get_Detail(
+System_String_o *CommandAssistLvUpListViewItem__get_Detail(
         CommandAssistLvUpListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -63,31 +61,25 @@ System_String_o *__fastcall CommandAssistLvUpListViewItem__get_Detail(
 }
 
 
-int32_t __fastcall CommandAssistLvUpListViewItem__get_EventId(
-        CommandAssistLvUpListViewItem_o *this,
-        const MethodInfo *method)
+int32_t CommandAssistLvUpListViewItem__get_EventId(CommandAssistLvUpListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._EventId_k__BackingField;
 }
 
 
-int32_t __fastcall CommandAssistLvUpListViewItem__get_IconImageId(
-        CommandAssistLvUpListViewItem_o *this,
-        const MethodInfo *method)
+int32_t CommandAssistLvUpListViewItem__get_IconImageId(CommandAssistLvUpListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._IconImageId_k__BackingField;
 }
 
 
-bool __fastcall CommandAssistLvUpListViewItem__get_IsLast(
-        CommandAssistLvUpListViewItem_o *this,
-        const MethodInfo *method)
+bool CommandAssistLvUpListViewItem__get_IsLast(CommandAssistLvUpListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._IsLast_k__BackingField;
 }
 
 
-System_String_o *__fastcall CommandAssistLvUpListViewItem__get_Name(
+System_String_o *CommandAssistLvUpListViewItem__get_Name(
         CommandAssistLvUpListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -95,7 +87,7 @@ System_String_o *__fastcall CommandAssistLvUpListViewItem__get_Name(
 }
 
 
-void __fastcall CommandAssistLvUpListViewItem__set_AssistId(
+void CommandAssistLvUpListViewItem__set_AssistId(
         CommandAssistLvUpListViewItem_o *this,
         int32_t value,
         const MethodInfo *method)
@@ -104,37 +96,37 @@ void __fastcall CommandAssistLvUpListViewItem__set_AssistId(
 }
 
 
-void __fastcall CommandAssistLvUpListViewItem__set_BeforeDetail(
+void CommandAssistLvUpListViewItem__set_BeforeDetail(
         CommandAssistLvUpListViewItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
 {
   this->fields._BeforeDetail_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._BeforeDetail_k__BackingField);
+  sub_1C2D434(&this->fields._BeforeDetail_k__BackingField);
 }
 
 
-void __fastcall CommandAssistLvUpListViewItem__set_BeforeName(
+void CommandAssistLvUpListViewItem__set_BeforeName(
         CommandAssistLvUpListViewItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
 {
   this->fields._BeforeName_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._BeforeName_k__BackingField);
+  sub_1C2D434(&this->fields._BeforeName_k__BackingField);
 }
 
 
-void __fastcall CommandAssistLvUpListViewItem__set_Detail(
+void CommandAssistLvUpListViewItem__set_Detail(
         CommandAssistLvUpListViewItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
 {
   this->fields._Detail_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._Detail_k__BackingField);
+  sub_1C2D434(&this->fields._Detail_k__BackingField);
 }
 
 
-void __fastcall CommandAssistLvUpListViewItem__set_EventId(
+void CommandAssistLvUpListViewItem__set_EventId(
         CommandAssistLvUpListViewItem_o *this,
         int32_t value,
         const MethodInfo *method)
@@ -143,7 +135,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_EventId(
 }
 
 
-void __fastcall CommandAssistLvUpListViewItem__set_IconImageId(
+void CommandAssistLvUpListViewItem__set_IconImageId(
         CommandAssistLvUpListViewItem_o *this,
         int32_t value,
         const MethodInfo *method)
@@ -152,7 +144,7 @@ void __fastcall CommandAssistLvUpListViewItem__set_IconImageId(
 }
 
 
-void __fastcall CommandAssistLvUpListViewItem__set_IsLast(
+void CommandAssistLvUpListViewItem__set_IsLast(
         CommandAssistLvUpListViewItem_o *this,
         bool value,
         const MethodInfo *method)
@@ -161,11 +153,11 @@ void __fastcall CommandAssistLvUpListViewItem__set_IsLast(
 }
 
 
-void __fastcall CommandAssistLvUpListViewItem__set_Name(
+void CommandAssistLvUpListViewItem__set_Name(
         CommandAssistLvUpListViewItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
 {
   this->fields._Name_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._Name_k__BackingField);
+  sub_1C2D434(&this->fields._Name_k__BackingField);
 }

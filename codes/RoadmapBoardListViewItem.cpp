@@ -1,4 +1,4 @@
-void __fastcall RoadmapBoardListViewItem___ctor(
+void RoadmapBoardListViewItem___ctor(
         RoadmapBoardListViewItem_o *this,
         int32_t index,
         int32_t tabGroup,
@@ -8,20 +8,20 @@ void __fastcall RoadmapBoardListViewItem___ctor(
         System_String_o *spriteName,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   this->fields._TabGroup_k__BackingField = tabGroup;
   this->fields._GroupIndex_k__BackingField = groupIndex;
   this->fields._BoardId_k__BackingField = boardId;
   this->fields._Atlas_k__BackingField = atlas;
-  sub_1BCAF9C(&this->fields._Atlas_k__BackingField);
+  sub_1C2D434(&this->fields._Atlas_k__BackingField);
   this->fields._SpriteName_k__BackingField = spriteName;
-  sub_1BCAF9C(&this->fields._SpriteName_k__BackingField);
-  this->fields._BoardPrefab_k__BackingField = 0LL;
-  sub_1BCAF9C(&this->fields._BoardPrefab_k__BackingField);
+  sub_1C2D434(&this->fields._SpriteName_k__BackingField);
+  this->fields._BoardPrefab_k__BackingField = 0;
+  sub_1C2D434(&this->fields._BoardPrefab_k__BackingField);
 }
 
 
-void __fastcall RoadmapBoardListViewItem___ctor_30933788(
+void RoadmapBoardListViewItem___ctor_31338776(
         RoadmapBoardListViewItem_o *this,
         int32_t index,
         int32_t tabGroup,
@@ -30,30 +30,30 @@ void __fastcall RoadmapBoardListViewItem___ctor_30933788(
         UnityEngine_GameObject_o *boardPrefab,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   this->fields._TabGroup_k__BackingField = tabGroup;
   this->fields._GroupIndex_k__BackingField = groupIndex;
   this->fields._BoardId_k__BackingField = boardId;
   this->fields._BoardPrefab_k__BackingField = boardPrefab;
-  sub_1BCAF9C(&this->fields._BoardPrefab_k__BackingField);
-  this->fields._Atlas_k__BackingField = 0LL;
-  sub_1BCAF9C(&this->fields._Atlas_k__BackingField);
+  sub_1C2D434(&this->fields._BoardPrefab_k__BackingField);
+  this->fields._Atlas_k__BackingField = 0;
+  sub_1C2D434(&this->fields._Atlas_k__BackingField);
 }
 
 
-UIAtlas_o *__fastcall RoadmapBoardListViewItem__get_Atlas(RoadmapBoardListViewItem_o *this, const MethodInfo *method)
+UIAtlas_o *RoadmapBoardListViewItem__get_Atlas(RoadmapBoardListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._Atlas_k__BackingField;
 }
 
 
-int32_t __fastcall RoadmapBoardListViewItem__get_BoardId(RoadmapBoardListViewItem_o *this, const MethodInfo *method)
+int32_t RoadmapBoardListViewItem__get_BoardId(RoadmapBoardListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._BoardId_k__BackingField;
 }
 
 
-UnityEngine_GameObject_o *__fastcall RoadmapBoardListViewItem__get_BoardPrefab(
+UnityEngine_GameObject_o *RoadmapBoardListViewItem__get_BoardPrefab(
         RoadmapBoardListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -61,56 +61,48 @@ UnityEngine_GameObject_o *__fastcall RoadmapBoardListViewItem__get_BoardPrefab(
 }
 
 
-int32_t __fastcall RoadmapBoardListViewItem__get_GroupIndex(RoadmapBoardListViewItem_o *this, const MethodInfo *method)
+int32_t RoadmapBoardListViewItem__get_GroupIndex(RoadmapBoardListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._GroupIndex_k__BackingField;
 }
 
 
-System_String_o *__fastcall RoadmapBoardListViewItem__get_SpriteName(
-        RoadmapBoardListViewItem_o *this,
-        const MethodInfo *method)
+System_String_o *RoadmapBoardListViewItem__get_SpriteName(RoadmapBoardListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._SpriteName_k__BackingField;
 }
 
 
-int32_t __fastcall RoadmapBoardListViewItem__get_TabGroup(RoadmapBoardListViewItem_o *this, const MethodInfo *method)
+int32_t RoadmapBoardListViewItem__get_TabGroup(RoadmapBoardListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._TabGroup_k__BackingField;
 }
 
 
-void __fastcall RoadmapBoardListViewItem__set_Atlas(
-        RoadmapBoardListViewItem_o *this,
-        UIAtlas_o *value,
-        const MethodInfo *method)
+void RoadmapBoardListViewItem__set_Atlas(RoadmapBoardListViewItem_o *this, UIAtlas_o *value, const MethodInfo *method)
 {
   this->fields._Atlas_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._Atlas_k__BackingField);
+  sub_1C2D434(&this->fields._Atlas_k__BackingField);
 }
 
 
-void __fastcall RoadmapBoardListViewItem__set_BoardId(
-        RoadmapBoardListViewItem_o *this,
-        int32_t value,
-        const MethodInfo *method)
+void RoadmapBoardListViewItem__set_BoardId(RoadmapBoardListViewItem_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._BoardId_k__BackingField = value;
 }
 
 
-void __fastcall RoadmapBoardListViewItem__set_BoardPrefab(
+void RoadmapBoardListViewItem__set_BoardPrefab(
         RoadmapBoardListViewItem_o *this,
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
 {
   this->fields._BoardPrefab_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._BoardPrefab_k__BackingField);
+  sub_1C2D434(&this->fields._BoardPrefab_k__BackingField);
 }
 
 
-void __fastcall RoadmapBoardListViewItem__set_GroupIndex(
+void RoadmapBoardListViewItem__set_GroupIndex(
         RoadmapBoardListViewItem_o *this,
         int32_t value,
         const MethodInfo *method)
@@ -119,20 +111,17 @@ void __fastcall RoadmapBoardListViewItem__set_GroupIndex(
 }
 
 
-void __fastcall RoadmapBoardListViewItem__set_SpriteName(
+void RoadmapBoardListViewItem__set_SpriteName(
         RoadmapBoardListViewItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
 {
   this->fields._SpriteName_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._SpriteName_k__BackingField);
+  sub_1C2D434(&this->fields._SpriteName_k__BackingField);
 }
 
 
-void __fastcall RoadmapBoardListViewItem__set_TabGroup(
-        RoadmapBoardListViewItem_o *this,
-        int32_t value,
-        const MethodInfo *method)
+void RoadmapBoardListViewItem__set_TabGroup(RoadmapBoardListViewItem_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._TabGroup_k__BackingField = value;
 }

@@ -1,51 +1,49 @@
-void __fastcall WarBoardUserWallData___ctor(WarBoardUserWallData_o *this, const MethodInfo *method)
+void WarBoardUserWallData___ctor(WarBoardUserWallData_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-WarBoardUserWallData_o *__fastcall WarBoardUserWallData__FromJson(System_String_o *json, const MethodInfo *method)
+WarBoardUserWallData_o *WarBoardUserWallData__FromJson(System_String_o *json, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  Il2CppObject *v5; // x19
+  Il2CppObject *v3; // x19
   WarBoardUserWallData_o *result; // x0
-  __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x8
+  __int64 v5; // x1
+  __int64 v6; // x2
+  __int64 v7; // x8
 
-  if ( (byte_4B1A13D & 1) == 0 )
+  if ( (byte_4C24EC1 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_JsonManager_DeserializeArray_WarBoardUserWallData___, method);
-    sub_1BCAFF8(&JsonManager_TypeInfo, v3);
-    sub_1BCAFF8(&StringLiteral_15881/*"[{0}]"*/, v4);
-    byte_4B1A13D = 1;
+    sub_1C2D490(&Method_JsonManager_DeserializeArray_WarBoardUserWallData___);
+    sub_1C2D490(&JsonManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_16013/*"[{0}]"*/);
+    byte_4C24EC1 = 1;
   }
-  v5 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_15881/*"[{0}]"*/, (Il2CppObject *)json, 0LL);
+  v3 = (Il2CppObject *)System_String__Format((System_String_o *)StringLiteral_16013/*"[{0}]"*/, (Il2CppObject *)json, 0);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   result = (WarBoardUserWallData_o *)JsonManager__DeserializeArray_object_(
-                                       v5,
-                                       (const MethodInfo_3086694 *)Method_JsonManager_DeserializeArray_WarBoardUserWallData___);
+                                       v3,
+                                       (const MethodInfo_313DDBC *)Method_JsonManager_DeserializeArray_WarBoardUserWallData___);
   if ( result )
   {
-    v9 = *(_QWORD *)&result->fields.squareIndex;
-    if ( v9 )
+    v7 = *(_QWORD *)&result->fields.squareIndex;
+    if ( v7 )
     {
-      if ( !(_DWORD)v9 )
-        sub_1BCB25C(result, v7, v8);
+      if ( !(_DWORD)v7 )
+        sub_1C2D6F4(result, v5, v6);
       return (WarBoardUserWallData_o *)result[1].klass;
     }
     else
     {
-      return 0LL;
+      return 0;
     }
   }
   return result;
 }
 
 
-void __fastcall WarBoardUserWallData__SetSaveData(
+void WarBoardUserWallData__SetSaveData(
         WarBoardUserWallData_o *this,
         WarBoardWallData_SaveData_o *saveData,
         const MethodInfo *method)
@@ -53,7 +51,7 @@ void __fastcall WarBoardUserWallData__SetSaveData(
   int breakPoint; // w8
 
   if ( !saveData )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   breakPoint = saveData->fields.breakPoint;
   this->fields.defeatPoint = breakPoint;
   if ( breakPoint >= 1 )
@@ -61,14 +59,14 @@ void __fastcall WarBoardUserWallData__SetSaveData(
 }
 
 
-System_String_o *__fastcall WarBoardUserWallData__ToJson(WarBoardUserWallData_o *this, const MethodInfo *method)
+System_String_o *WarBoardUserWallData__ToJson(WarBoardUserWallData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1A13C & 1) == 0 )
+  if ( (byte_4C24EC0 & 1) == 0 )
   {
-    sub_1BCAFF8(&JsonManager_TypeInfo, method);
-    byte_4B1A13C = 1;
+    sub_1C2D490(&JsonManager_TypeInfo);
+    byte_4C24EC0 = 1;
   }
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  return JsonManager__toJson((Il2CppObject *)this, 0, 0, 0LL);
+  return JsonManager__toJson((Il2CppObject *)this, 0, 0, 0);
 }

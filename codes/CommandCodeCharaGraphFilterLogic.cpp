@@ -1,25 +1,24 @@
-void __fastcall CommandCodeCharaGraphFilterLogic___ctor(
-        CommandCodeCharaGraphFilterLogic_o *this,
-        const MethodInfo *method)
+void CommandCodeCharaGraphFilterLogic___ctor(CommandCodeCharaGraphFilterLogic_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall CommandCodeCharaGraphFilterLogic__IsMatchAllFilter(
+bool CommandCodeCharaGraphFilterLogic__IsMatchAllFilter(
         CommandCodeCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
 
-  if ( (((__int64 (__fastcall *)(CommandCodeCharaGraphFilterLogic_o *, Il2CppMethodPointer))this->klass->vtable._5_IsMatchRarityFilter.method)(
+  if ( (((__int64 (__fastcall *)(CommandCodeCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._5_IsMatchRarityFilter.methodPtr)(
           this,
-          this->klass->vtable._6_IsMatchSelectedItemFilter.methodPtr) & 1) != 0
+          this->klass->vtable._5_IsMatchRarityFilter.method)
+      & 1) != 0
     && CommandCodeCharaGraphFilterLogic__IsMatchCommandCodeCategoryFilter(this, v3) )
   {
-    return ((__int64 (__fastcall *)(CommandCodeCharaGraphFilterLogic_o *, void *))this->klass->vtable._6_IsMatchSelectedItemFilter.method)(
+    return ((__int64 (__fastcall *)(CommandCodeCharaGraphFilterLogic_o *, const MethodInfo *))this->klass->vtable._6_IsMatchSelectedItemFilter.methodPtr)(
              this,
-             this->klass[1]._1.image);
+             this->klass->vtable._6_IsMatchSelectedItemFilter.method);
   }
   else
   {
@@ -28,7 +27,7 @@ bool __fastcall CommandCodeCharaGraphFilterLogic__IsMatchAllFilter(
 }
 
 
-bool __fastcall CommandCodeCharaGraphFilterLogic__IsMatchCommandCodeCategoryFilter(
+bool CommandCodeCharaGraphFilterLogic__IsMatchCommandCodeCategoryFilter(
         CommandCodeCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
@@ -38,20 +37,20 @@ bool __fastcall CommandCodeCharaGraphFilterLogic__IsMatchCommandCodeCategoryFilt
   sort = this->fields.sort;
   if ( !sort )
     goto LABEL_6;
-  if ( ListViewSort__CheckSvtEquipEffectFilterDefaultAll((ListViewSort_o *)sort, 0LL) )
+  if ( ListViewSort__CheckSvtEquipEffectFilterDefaultAll((ListViewSort_o *)sort, 0) )
     return 1;
   sort = CommandCodeCharaGraphFilterLogic__get_CommandCodeListViewItem(this, v4);
   if ( !sort )
 LABEL_6:
-    sub_1BCB254(sort, method);
+    sub_1C2D6EC(sort, method);
   return ServantEquipEffectFilterController__IsMatchEffectCategory(
-           *((System_Int32_array **)sort + 30),
+           *((System_Int32_array **)sort + 31),
            this->fields.sort,
-           0LL);
+           0);
 }
 
 
-CharaGraphCommandCodeListViewItem_o *__fastcall CommandCodeCharaGraphFilterLogic__get_CommandCodeListViewItem(
+CharaGraphCommandCodeListViewItem_o *CommandCodeCharaGraphFilterLogic__get_CommandCodeListViewItem(
         CommandCodeCharaGraphFilterLogic_o *this,
         const MethodInfo *method)
 {
@@ -59,15 +58,15 @@ CharaGraphCommandCodeListViewItem_o *__fastcall CommandCodeCharaGraphFilterLogic
   const MethodInfo *v3; // x3
   CGThumbnailListItem_o *p_listViewItem; // x0
   CharaGraphCommandCodeListViewItem_o *listViewItem; // x19
-  __int64 methodPtr_low; // x9
+  __int64 naturalAligment; // x9
   struct CharaGraphListViewItemBase_o *item; // x1
   CommandCodeCharaGraphFilterLogic_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4B1B7F7 & 1) == 0 )
+  if ( (byte_4C26599 & 1) == 0 )
   {
-    sub_1BCAFF8(&CharaGraphCommandCodeListViewItem_TypeInfo, method);
-    byte_4B1B7F7 = 1;
+    sub_1C2D490(&CharaGraphCommandCodeListViewItem_TypeInfo);
+    byte_4C26599 = 1;
   }
   p_listViewItem = (CGThumbnailListItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -75,15 +74,15 @@ CharaGraphCommandCodeListViewItem_o *__fastcall CommandCodeCharaGraphFilterLogic
     return listViewItem;
   listViewItem = (CharaGraphCommandCodeListViewItem_o *)this->fields.item;
   if ( !listViewItem
-    || (methodPtr_low = LOBYTE(CharaGraphCommandCodeListViewItem_TypeInfo->vtable._0_Equals.methodPtr),
-        LOBYTE(listViewItem->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low)
-    && (CharaGraphCommandCodeListViewItem_c *)listViewItem->klass->_2.typeHierarchy[methodPtr_low - 1] == CharaGraphCommandCodeListViewItem_TypeInfo )
+    || (naturalAligment = CharaGraphCommandCodeListViewItem_TypeInfo->_2.naturalAligment,
+        listViewItem->klass->_2.naturalAligment >= (unsigned int)naturalAligment)
+    && (CharaGraphCommandCodeListViewItem_c *)listViewItem->klass->_2.typeHierarchy[naturalAligment - 1] == CharaGraphCommandCodeListViewItem_TypeInfo )
   {
     item = this->fields.item;
     p_listViewItem->klass = (CGThumbnailListItem_c *)listViewItem;
-    sub_1BCAF9C(p_listViewItem, (int32_t)item, v2, v3);
+    sub_1C2D434(p_listViewItem, (int32_t)item, v2, v3);
     return listViewItem;
   }
-  sub_1BCB514(this->fields.item);
+  sub_1C2D9AC(this->fields.item);
   return (CharaGraphCommandCodeListViewItem_o *)CommandCodeCharaGraphFilterLogic__IsMatchAllFilter(v10, v11);
 }

@@ -1,4 +1,4 @@
-void __fastcall ClassBoardReleaseRequestData___ctor(
+void ClassBoardReleaseRequestData___ctor(
         ClassBoardReleaseRequestData_o this,
         int32_t classSquareId,
         int32_t squareId,

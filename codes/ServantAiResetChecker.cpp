@@ -1,4 +1,4 @@
-void __fastcall ServantAiResetChecker___ctor(
+void ServantAiResetChecker___ctor(
         ServantAiResetChecker_o *this,
         BattleServantData_o *svtData,
         const MethodInfo *method)
@@ -6,33 +6,33 @@ void __fastcall ServantAiResetChecker___ctor(
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.svtData = svtData;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)svtData, v5, v6);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)svtData, v5, v6);
 }
 
 
-bool __fastcall ServantAiResetChecker__IsDead(ServantAiResetChecker_o *this, const MethodInfo *method)
+bool ServantAiResetChecker__IsDead(ServantAiResetChecker_o *this, const MethodInfo *method)
 {
   BattleServantData_o *svtData; // x0
 
   svtData = this->fields.svtData;
   if ( !svtData )
-    sub_1BCB254(0LL, method);
-  return !BattleServantData__isAlive(svtData, 0, 0LL);
+    sub_1C2D6EC(0, method);
+  return !BattleServantData__isAlive(svtData, 0, 0);
 }
 
 
-int32_t __fastcall ServantAiResetChecker__get_AiResetTiming(ServantAiResetChecker_o *this, const MethodInfo *method)
+int32_t ServantAiResetChecker__get_AiResetTiming(ServantAiResetChecker_o *this, const MethodInfo *method)
 {
   struct BattleServantData_o *svtData; // x8
   BattleDeckServantData_o *deckSvt; // x0
 
   svtData = this->fields.svtData;
   if ( !svtData )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   deckSvt = svtData->fields.deckSvt;
   if ( deckSvt )
-    LODWORD(deckSvt) = BattleDeckServantData__GetAiResetTiming(deckSvt, 0, 0LL);
+    LODWORD(deckSvt) = BattleDeckServantData__GetAiResetTiming(deckSvt, 0, 0);
   return (int)deckSvt;
 }

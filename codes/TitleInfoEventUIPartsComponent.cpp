@@ -1,41 +1,33 @@
-void __fastcall TitleInfoEventUIPartsComponent___ctor(TitleInfoEventUIPartsComponent_o *this, const MethodInfo *method)
+void TitleInfoEventUIPartsComponent___ctor(TitleInfoEventUIPartsComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall TitleInfoEventUIPartsComponent__UpdateDisp(
-        TitleInfoEventUIPartsComponent_o *this,
-        const MethodInfo *method)
+void TitleInfoEventUIPartsComponent__UpdateDisp(TitleInfoEventUIPartsComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   DataManager_o *Instance; // x0
-  __int64 v5; // x1
+  __int64 v4; // x1
   bool IsOpen; // w20
 
-  if ( (byte_4B1B0E0 & 1) == 0 )
+  if ( (byte_4C25E6E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_CommonReleaseMaster___, method);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4B1B0E0 = 1;
+    sub_1C2D490(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C25E6E = 1;
   }
   if ( this->fields.commonReleaseId >= 1 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                         Instance,
-                                        (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0LL
-      || (IsOpen = CommonReleaseMaster__IsOpen(
-                     (CommonReleaseMaster_o *)Instance,
-                     this->fields.commonReleaseId,
-                     0LL,
-                     0,
-                     0LL),
-          (Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
+                                        (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0
+      || (IsOpen = CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, this->fields.commonReleaseId, 0, 0, 0),
+          (Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
     {
-      sub_1BCB254(Instance, v5);
+      sub_1C2D6EC(Instance, v4);
     }
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, IsOpen, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, IsOpen, 0);
   }
 }

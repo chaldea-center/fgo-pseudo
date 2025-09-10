@@ -1,29 +1,29 @@
-void __fastcall BattlePointEntity___ctor(BattlePointEntity_o *this, const MethodInfo *method)
+void BattlePointEntity___ctor(BattlePointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C185 & 1) == 0 )
+  if ( (byte_4C26F29 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1C185 = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C26F29 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall BattlePointEntity__CreatePrimaryKey(BattlePointEntity_o *this, const MethodInfo *method)
+int32_t BattlePointEntity__CreatePrimaryKey(BattlePointEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-bool __fastcall BattlePointEntity__HasFlag(BattlePointEntity_o *this, int32_t flagType, const MethodInfo *method)
+bool BattlePointEntity__HasFlag(BattlePointEntity_o *this, int32_t flagType, const MethodInfo *method)
 {
   return (flagType & ~this->fields.flag) == 0;
 }
 
 
-bool __fastcall BattlePointEntity__IsEnableToAddBattlePoint(
+bool BattlePointEntity__IsEnableToAddBattlePoint(
         BattlePointEntity_o *this,
         BattleServantData_o *svtData,
         const MethodInfo *method)
@@ -31,12 +31,12 @@ bool __fastcall BattlePointEntity__IsEnableToAddBattlePoint(
   if ( (this->fields.flag & 1) == 0 )
     return 1;
   if ( !svtData )
-    sub_1BCB254(this, 0LL);
-  return !BattleServantData__IsFollwerSupport(svtData, 0LL);
+    sub_1C2D6EC(this, 0);
+  return !BattleServantData__IsFollwerSupport(svtData, 0);
 }
 
 
-bool __fastcall BattlePointEntity__IsHideBattlePointGauge(
+bool BattlePointEntity__IsHideBattlePointGauge(
         BattlePointEntity_o *this,
         BattleServantData_o *svtData,
         const MethodInfo *method)
@@ -48,8 +48,8 @@ bool __fastcall BattlePointEntity__IsHideBattlePointGauge(
   if ( (this->fields.flag & 2) != 0 )
     return 1;
   if ( !svtData )
-    sub_1BCB254(this, 0LL);
-  BattlePointData = BattleServantData__GetBattlePointData(svtData, this->fields.id, 0LL);
+    sub_1C2D6EC(this, 0);
+  BattlePointData = BattleServantData__GetBattlePointData(svtData, this->fields.id, 0);
   if ( BattlePointData )
     IsEnableToAddValue_k__BackingField = BattlePointData->fields._IsEnableToAddValue_k__BackingField;
   else
@@ -58,12 +58,12 @@ bool __fastcall BattlePointEntity__IsHideBattlePointGauge(
   if ( (flag & 4) != 0 )
     return !IsEnableToAddValue_k__BackingField;
   if ( (flag & 8) != 0 )
-    return !IsEnableToAddValue_k__BackingField & BattleServantData__IsFollwerSupport(svtData, 0LL);
+    return !IsEnableToAddValue_k__BackingField & BattleServantData__IsFollwerSupport(svtData, 0);
   return 0;
 }
 
 
-bool __fastcall BattlePointEntity__IsHideGaugeAllTime(BattlePointEntity_o *this, const MethodInfo *method)
+bool BattlePointEntity__IsHideGaugeAllTime(BattlePointEntity_o *this, const MethodInfo *method)
 {
   return (LOBYTE(this->fields.flag) >> 1) & 1;
 }

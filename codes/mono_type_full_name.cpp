@@ -12,19 +12,18 @@ __int64 __fastcall mono_type_full_name(
         int a11,
         void *a12)
 {
-  _BYTE *v12; // x0
+  char *v12; // x0
   __int64 v13; // x19
-  char v15; // [xsp+8h] [xbp-28h]
-  _BYTE v16[7]; // [xsp+9h] [xbp-27h] BYREF
-  void *v17; // [xsp+18h] [xbp-18h]
+  void *v15[2]; // [xsp+8h] [xbp-28h] BYREF
+  void *v16; // [xsp+18h] [xbp-18h]
 
-  sub_1BFEED8(a1, 2LL);
-  if ( (v15 & 1) != 0 )
-    v12 = v17;
+  sub_1C61538(v15, a1, 2);
+  if ( ((__int64)v15[0] & 1) != 0 )
+    v12 = (char *)v16;
   else
-    v12 = v16;
-  v13 = sub_1BA7960(v12);
-  if ( (v15 & 1) != 0 )
-    operator delete(v17);
+    v12 = (char *)v15 + 1;
+  v13 = sub_1C09DF8(v12);
+  if ( ((__int64)v15[0] & 1) != 0 )
+    operator delete(v16);
   return v13;
 }

@@ -1,68 +1,67 @@
-void __fastcall FGO_color0anim___ctor(FGO_color0anim_o *this, const MethodInfo *method)
+void FGO_color0anim___ctor(FGO_color0anim_o *this, const MethodInfo *method)
 {
   __asm { FMOV            V0.4S, #1.0 }
   this->fields.customColor = _Q0;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall FGO_color0anim__Start(FGO_color0anim_o *this, const MethodInfo *method)
+void FGO_color0anim__Start(FGO_color0anim_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Component_object; // x0
   struct UnityEngine_Renderer_o **p_renderer; // x20
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  __int64 v8; // x1
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  __int64 v7; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4B1B2F6 & 1) == 0 )
+  if ( (byte_4C26087 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_Renderer___, method);
-    sub_1BCAFF8(&StringLiteral_16408/*"_customColor0"*/, v3);
-    byte_4B1B2F6 = 1;
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1C2D490(&StringLiteral_16540/*"_customColor0"*/);
+    byte_4C26087 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
   p_renderer = &this->fields._renderer;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._renderer, (int32_t)Component_object, v6, v7);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._renderer, (int32_t)Component_object, v5, v6);
   renderer = this->fields._renderer;
   if ( !renderer
-    || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL
+    || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0
     || (UnityEngine_Material__EnableKeyword(
           (UnityEngine_Material_o *)renderer,
-          (System_String_o *)StringLiteral_16408/*"_customColor0"*/,
-          0LL),
-        (renderer = *p_renderer) == 0LL)
-    || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
+          (System_String_o *)StringLiteral_16540/*"_customColor0"*/,
+          0),
+        (renderer = *p_renderer) == 0)
+    || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0 )
   {
-    sub_1BCB254(renderer, v8);
+    sub_1C2D6EC(renderer, v7);
   }
   UnityEngine_Material__SetColor(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16408/*"_customColor0"*/,
+    (System_String_o *)StringLiteral_16540/*"_customColor0"*/,
     this->fields.customColor,
-    0LL);
+    0);
 }
 
 
-void __fastcall FGO_color0anim__Update(FGO_color0anim_o *this, const MethodInfo *method)
+void FGO_color0anim__Update(FGO_color0anim_o *this, const MethodInfo *method)
 {
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4B1B2F7 & 1) == 0 )
+  if ( (byte_4C26088 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_16408/*"_customColor0"*/, method);
-    byte_4B1B2F7 = 1;
+    sub_1C2D490(&StringLiteral_16540/*"_customColor0"*/);
+    byte_4C26088 = 1;
   }
   renderer = this->fields._renderer;
-  if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0LL)) == 0LL )
-    sub_1BCB254(renderer, method);
+  if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0 )
+    sub_1C2D6EC(renderer, method);
   UnityEngine_Material__SetColor(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16408/*"_customColor0"*/,
+    (System_String_o *)StringLiteral_16540/*"_customColor0"*/,
     this->fields.customColor,
-    0LL);
+    0);
 }

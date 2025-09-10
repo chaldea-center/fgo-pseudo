@@ -1,16 +1,16 @@
-void __fastcall LimitUpResultInfoComponent___ctor(LimitUpResultInfoComponent_o *this, const MethodInfo *method)
+void LimitUpResultInfoComponent___ctor(LimitUpResultInfoComponent_o *this, const MethodInfo *method)
 {
-  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall LimitUpResultInfoComponent__Awake(LimitUpResultInfoComponent_o *this, const MethodInfo *method)
+void LimitUpResultInfoComponent__Awake(LimitUpResultInfoComponent_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall LimitUpResultInfoComponent__Open(
+void LimitUpResultInfoComponent__Open(
         LimitUpResultInfoComponent_o *this,
         UnityEngine_Transform_o *parent,
         const MethodInfo *method)
@@ -23,83 +23,82 @@ void __fastcall LimitUpResultInfoComponent__Open(
   UnityEngine_Transform_o *v10; // x20
   UnityEngine_Transform_o *v11; // x20
 
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  GameObjectExtensions__SetParent(gameObject, (UnityEngine_Component_o *)parent, 0LL);
-  transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  GameObjectExtensions__SetParent(gameObject, (UnityEngine_Component_o *)parent, 0);
+  transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   v8 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4B16191 )
+  if ( !byte_4C20DA1 )
   {
-    transform = (UnityEngine_GameObject_o *)sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v7);
-    byte_4B16191 = 1;
+    transform = (UnityEngine_GameObject_o *)sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA1 = 1;
   }
   if ( !v8 )
     goto LABEL_15;
-  UnityEngine_Transform__set_position(v8, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-  transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  UnityEngine_Transform__set_position(v8, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+  transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   v9 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4B16191 )
+  if ( !byte_4C20DA1 )
   {
-    transform = (UnityEngine_GameObject_o *)sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v7);
-    byte_4B16191 = 1;
+    transform = (UnityEngine_GameObject_o *)sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA1 = 1;
   }
   if ( !v9 )
     goto LABEL_15;
-  UnityEngine_Transform__set_localPosition(v9, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-  transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  UnityEngine_Transform__set_localPosition(v9, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+  transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   v10 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4B16191 )
+  if ( !byte_4C20DA1 )
   {
-    transform = (UnityEngine_GameObject_o *)sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v7);
-    byte_4B16191 = 1;
+    transform = (UnityEngine_GameObject_o *)sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA1 = 1;
   }
   if ( !v10 )
     goto LABEL_15;
-  UnityEngine_Transform__set_eulerAngles(v10, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0LL);
-  transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  UnityEngine_Transform__set_eulerAngles(v10, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+  transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   v11 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4B16196 )
+  if ( !byte_4C20DA6 )
   {
-    transform = (UnityEngine_GameObject_o *)sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v7);
-    byte_4B16196 = 1;
+    transform = (UnityEngine_GameObject_o *)sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA6 = 1;
   }
   if ( !v11
-    || (UnityEngine_Transform__set_localScale(v11, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL),
-        (transform = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
+    || (UnityEngine_Transform__set_localScale(v11, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
+        (transform = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_15:
-    sub_1BCB254(transform, v7);
+    sub_1C2D6EC(transform, v7);
   }
-  UnityEngine_GameObject__SetActive(transform, 1, 0LL);
+  UnityEngine_GameObject__SetActive(transform, 1, 0);
 }
 
 
-void __fastcall LimitUpResultInfoComponent__Setup(
+void LimitUpResultInfoComponent__Setup(
         LimitUpResultInfoComponent_o *this,
         System_String_o *title,
         System_String_o *detail,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
   UILabel_o *titleLabel; // x0
   UISprite_o *lineSprite; // x19
 
-  if ( (byte_4B20420 & 1) == 0 )
+  if ( (byte_4C2B32E & 1) == 0 )
   {
-    sub_1BCAFF8(&AtlasManager_TypeInfo, title);
-    sub_1BCAFF8(&StringLiteral_21057/*"line_whiteAlpha"*/, v7);
-    byte_4B20420 = 1;
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_21234/*"line_whiteAlpha"*/);
+    byte_4C2B32E = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, title, 0LL), (titleLabel = this->fields.detailLabel) == 0LL)
-    || (WrapControlText__textAdjust(titleLabel, detail, titleLabel->fields.mFontSize, 0, 0LL),
-        (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
+    || (UILabel__set_text(titleLabel, title, 0), (titleLabel = this->fields.detailLabel) == 0)
+    || (WrapControlText__textAdjust(titleLabel, detail, titleLabel->fields.mFontSize, 0, 0),
+        (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1BCB254(titleLabel, title);
+    sub_1C2D6EC(titleLabel, title);
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   lineSprite = this->fields.lineSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(lineSprite, (System_String_o *)StringLiteral_21057/*"line_whiteAlpha"*/, 0LL);
+  AtlasManager__SetEventUI(lineSprite, (System_String_o *)StringLiteral_21234/*"line_whiteAlpha"*/, 0);
 }

@@ -1,30 +1,27 @@
-void __fastcall BoxGachaHistoryEntity___ctor(BoxGachaHistoryEntity_o *this, const MethodInfo *method)
+void BoxGachaHistoryEntity___ctor(BoxGachaHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C1F8 & 1) == 0 )
+  if ( (byte_4C26F9F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1C1F8 = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C26F9F = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall BoxGachaHistoryEntity__CreatePrimaryKey(BoxGachaHistoryEntity_o *this, const MethodInfo *method)
+int32_t BoxGachaHistoryEntity__CreatePrimaryKey(BoxGachaHistoryEntity_o *this, const MethodInfo *method)
 {
   return this->fields.boxGachaId;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall BoxGachaHistoryEntity__getDrawNum(
-        BoxGachaHistoryEntity_o *this,
-        int32_t no,
-        const MethodInfo *method)
+int32_t BoxGachaHistoryEntity__getDrawNum(BoxGachaHistoryEntity_o *this, int32_t no, const MethodInfo *method)
 {
   struct System_Int32_array *numbers; // x8
-  __int64 v4; // x9
+  il2cpp_array_size_t max_length; // x9
   int32_t v5; // w21
   BoxGachaHistoryEntity_o *v6; // x19
   unsigned __int64 v8; // x22
@@ -33,29 +30,29 @@ int32_t __fastcall BoxGachaHistoryEntity__getDrawNum(
   numbers = this->fields.numbers;
   if ( !numbers )
     goto LABEL_10;
-  v4 = *(_QWORD *)&numbers->max_length;
+  max_length = numbers->max_length;
   v5 = 0;
-  if ( v4 && (int)v4 >= 1 )
+  if ( max_length && (int)max_length >= 1 )
   {
     v6 = this;
     v5 = 0;
-    v8 = 0LL;
+    v8 = 0;
     for ( i = 32; ; i += 4 )
     {
-      if ( v8 >= (unsigned int)v4 )
-        sub_1BCB25C(this, *(_QWORD *)&no, method);
-      this = (BoxGachaHistoryEntity_o *)System_Int32__Equals_63958964((_DWORD)numbers + i, no, 0LL);
+      if ( v8 >= (unsigned int)max_length )
+        sub_1C2D6F4(this, *(_QWORD *)&no, method);
+      this = (BoxGachaHistoryEntity_o *)System_Int32__Equals_64968544((_DWORD)numbers + i, no, 0);
       numbers = v6->fields.numbers;
       if ( !numbers )
         break;
-      LODWORD(v4) = numbers->max_length;
+      LODWORD(max_length) = numbers->max_length;
       ++v8;
       v5 += (unsigned __int8)this & 1;
-      if ( (__int64)v8 >= (int)v4 )
+      if ( (__int64)v8 >= (int)max_length )
         return v5;
     }
 LABEL_10:
-    sub_1BCB254(this, *(_QWORD *)&no);
+    sub_1C2D6EC(this, *(_QWORD *)&no);
   }
   return v5;
 }

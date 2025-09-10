@@ -1,43 +1,40 @@
-void __fastcall EventUiReleaseEntity___ctor(EventUiReleaseEntity_o *this, const MethodInfo *method)
+void EventUiReleaseEntity___ctor(EventUiReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C73D & 1) == 0 )
+  if ( (byte_4C274EE & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1C73D = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C274EE = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
-  *(_QWORD *)&this->fields.eventUiId = 0LL;
-  *(_QWORD *)&this->fields.idx = 0LL;
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+  *(_QWORD *)&this->fields.eventUiId = 0;
+  *(_QWORD *)&this->fields.idx = 0;
   this->fields.condNum = 0;
-  *(_QWORD *)&this->fields.condType = 0LL;
+  *(_QWORD *)&this->fields.condType = 0;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall EventUiReleaseEntity__CreatePK(
+System_String_o *EventUiReleaseEntity__CreatePK(
         int32_t eventUiId,
         int32_t priority,
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4B1C73E & 1) == 0 )
+  if ( (byte_4C274EF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
-    byte_4B1C73E = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C274EF = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventUiId,
            priority,
            idx,
-           (const MethodInfo_30190BC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30CCF68 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
-System_String_o *__fastcall EventUiReleaseEntity__CreatePrimaryKey(
-        EventUiReleaseEntity_o *this,
-        const MethodInfo *method)
+System_String_o *EventUiReleaseEntity__CreatePrimaryKey(EventUiReleaseEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 

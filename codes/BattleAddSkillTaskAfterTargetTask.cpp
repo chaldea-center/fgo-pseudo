@@ -1,38 +1,31 @@
-void __fastcall BattleAddSkillTaskAfterTargetTask___ctor(
-        BattleAddSkillTaskAfterTargetTask_o *this,
-        const MethodInfo *method)
+void BattleAddSkillTaskAfterTargetTask___ctor(BattleAddSkillTaskAfterTargetTask_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall BattleAddSkillTaskAfterTargetTask__PrevAddTask(
+void BattleAddSkillTaskAfterTargetTask__PrevAddTask(
         BattleAddSkillTaskAfterTargetTask_o *this,
         System_Collections_Generic_List_BattleLogicTask__o *taskList,
         BattleLogic_o *logic,
         BattleAddSkillTaskAroundTargetTask_Argument_o *arg,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
+  __int64 v7; // x0
   __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x0
-  __int64 v11; // x1
-  _BOOL8 v12; // x0
-  __int64 v13; // x1
-  System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-38h] BYREF
+  _BOOL8 v9; // x0
+  __int64 v10; // x1
+  System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4B1F3A7 & 1) == 0 )
+  if ( (byte_4C2A242 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__Dispose__, taskList);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__MoveNext__, v7);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__get_Current__, v8);
-    this = (BattleAddSkillTaskAfterTargetTask_o *)sub_1BCAFF8(
-                                                    &Method_System_Collections_Generic_List_BattleLogicTask__GetEnumerator__,
-                                                    v9);
-    byte_4B1F3A7 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__get_Current__);
+    this = (BattleAddSkillTaskAfterTargetTask_o *)sub_1C2D490(&Method_System_Collections_Generic_List_BattleLogicTask__GetEnumerator__);
+    byte_4C2A242 = 1;
   }
-  memset(&v14, 0, sizeof(v14));
+  memset(&v11, 0, sizeof(v11));
   BattleAddSkillTaskAroundTargetTask__PrevAddTask(
     (BattleAddSkillTaskAroundTargetTask_o *)this,
     taskList,
@@ -40,23 +33,23 @@ void __fastcall BattleAddSkillTaskAfterTargetTask__PrevAddTask(
     arg,
     method);
   if ( !taskList )
-    sub_1BCB254(v10, v11);
+    sub_1C2D6EC(v7, v8);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v14,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     (System_Collections_Generic_List_object__o *)taskList,
-    (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_BattleLogicTask__GetEnumerator__);
+    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_BattleLogicTask__GetEnumerator__);
   while ( 1 )
   {
-    v12 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v14,
-            (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__MoveNext__);
-    if ( !v12 )
+    v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+           &v11,
+           (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__MoveNext__);
+    if ( !v9 )
       break;
-    if ( !v14.fields._current )
-      sub_1BCB254(v12, v13);
-    BYTE3(v14.fields._current[14].monitor) = 1;
+    if ( !v11.fields._current )
+      sub_1C2D6EC(v9, v10);
+    *((_BYTE *)&v11.fields._current->klass + (unsigned __int64)&dword_E8 + 3) = 1;
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v14,
-    (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__Dispose__);
+    &v11,
+    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_BattleLogicTask__Dispose__);
 }

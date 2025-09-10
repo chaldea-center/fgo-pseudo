@@ -1,19 +1,19 @@
-void __fastcall TotalEventRaceMaster___ctor(TotalEventRaceMaster_o *this, const MethodInfo *method)
+void TotalEventRaceMaster___ctor(TotalEventRaceMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D19B & 1) == 0 )
+  if ( (byte_4C27F8F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_TotalEventRaceMaster__TotalEventRaceEntity__string___ctor__, method);
-    byte_4B1D19B = 1;
+    sub_1C2D490(&Method_DataMasterBase_TotalEventRaceMaster__TotalEventRaceEntity__string___ctor__);
+    byte_4C27F8F = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     225,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_TotalEventRaceMaster__TotalEventRaceEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_TotalEventRaceMaster__TotalEventRaceEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-TotalEventRaceEntity_o *__fastcall TotalEventRaceMaster__GetEntity(
+TotalEventRaceEntity_o *TotalEventRaceMaster__GetEntity(
         TotalEventRaceMaster_o *this,
         int32_t eventId,
         int32_t termId,
@@ -22,85 +22,71 @@ TotalEventRaceEntity_o *__fastcall TotalEventRaceMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1D199 & 1) == 0 )
+  if ( (byte_4C27F8D & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_TotalEventRaceMaster__TotalEventRaceEntity__string__GetEntity__,
-      *(_QWORD *)&eventId);
-    byte_4B1D199 = 1;
+    sub_1C2D490(&Method_DataMasterBase_TotalEventRaceMaster__TotalEventRaceEntity__string__GetEntity__);
+    byte_4C27F8D = 1;
   }
   PK = (Il2CppObject *)TotalEventRaceEntity__CreatePK(eventId, termId, groupId, *(const MethodInfo **)&groupId);
   return (TotalEventRaceEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_32CC8B8 *)Method_DataMasterBase_TotalEventRaceMaster__TotalEventRaceEntity__string__GetEntity__);
+                                     (const MethodInfo_338C850 *)Method_DataMasterBase_TotalEventRaceMaster__TotalEventRaceEntity__string__GetEntity__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-TotalEventRaceEntity_array *__fastcall TotalEventRaceMaster__GetTargetTermRaceEntityList(
+TotalEventRaceEntity_array *TotalEventRaceMaster__GetTargetTermRaceEntityList(
         TotalEventRaceMaster_o *this,
         int32_t eventId,
         int32_t term,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  System_Collections_Generic_List_object__o *v16; // x19
-  Il2CppClass *v17; // x1
+  System_Collections_Generic_List_object__o *v7; // x19
+  Il2CppClass *v8; // x1
   void *list; // x0
   int32_t Count; // w0
-  int32_t v20; // w23
-  int32_t v21; // w24
+  int32_t v11; // w23
+  int32_t v12; // w24
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  struct System_Object_array *items; // x8
+  _QWORD *v16; // x9
+  __int64 size; // x10
+  Il2CppClass **v18; // x0
+  System_Comparison_T__o *v19; // x20
+  Il2CppObject *v20; // x21
+  struct TotalEventRaceMaster___c_StaticFields *static_fields; // x0
   int32_t v22; // w2
   const MethodInfo *v23; // x3
-  struct System_Object_array *items; // x8
-  _QWORD *v25; // x9
-  __int64 size; // x10
-  Il2CppClass **v27; // x0
-  System_Comparison_T__o *v28; // x20
-  Il2CppObject *v29; // x21
-  struct TotalEventRaceMaster___c_StaticFields *static_fields; // x0
-  int32_t v31; // w2
-  const MethodInfo *v32; // x3
 
-  if ( (byte_4B1D19C & 1) == 0 )
+  if ( (byte_4C27F90 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_System_Collections_ObjectModel_Collection_TotalEventRaceEntity__get_Count__,
-      *(_QWORD *)&eventId);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_TotalEventRaceEntity__get_Item__, v7);
-    sub_1BCAFF8(&System_Comparison_TotalEventRaceEntity__TypeInfo, v8);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_TotalEventRaceEntity__Add__, v9);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_TotalEventRaceEntity__Sort__, v10);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_TotalEventRaceEntity__ToArray__, v11);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_TotalEventRaceEntity___ctor__, v12);
-    sub_1BCAFF8(&System_Collections_Generic_List_TotalEventRaceEntity__TypeInfo, v13);
-    sub_1BCAFF8(&Method_TotalEventRaceMaster___c__GetTargetTermRaceEntityList_b__3_0__, v14);
-    sub_1BCAFF8(&TotalEventRaceMaster___c_TypeInfo, v15);
-    byte_4B1D19C = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_TotalEventRaceEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_TotalEventRaceEntity__get_Item__);
+    sub_1C2D490(&System_Comparison_TotalEventRaceEntity__TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_List_TotalEventRaceEntity__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_TotalEventRaceEntity__Sort__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_TotalEventRaceEntity__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_TotalEventRaceEntity___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_TotalEventRaceEntity__TypeInfo);
+    sub_1C2D490(&Method_TotalEventRaceMaster___c__GetTargetTermRaceEntityList_b__3_0__);
+    sub_1C2D490(&TotalEventRaceMaster___c_TypeInfo);
+    byte_4C27F90 = 1;
   }
-  v16 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_TotalEventRaceEntity__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_TotalEventRaceEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v16,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_TotalEventRaceEntity___ctor__);
+    v7,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_TotalEventRaceEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_24;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_TotalEventRaceEntity__get_Count__);
+            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_TotalEventRaceEntity__get_Count__);
   if ( Count >= 1 )
   {
-    v20 = Count;
-    v21 = 0;
+    v11 = Count;
+    v12 = 0;
     while ( 1 )
     {
       list = this->fields.list;
@@ -108,41 +94,41 @@ TotalEventRaceEntity_array *__fastcall TotalEventRaceMaster__GetTargetTermRaceEn
         break;
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
-               v21,
-               (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_TotalEventRaceEntity__get_Item__);
+               v12,
+               (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_TotalEventRaceEntity__get_Item__);
       if ( !list )
         break;
-      v17 = (Il2CppClass *)list;
+      v8 = (Il2CppClass *)list;
       if ( *((_DWORD *)list + 4) == eventId && *((_DWORD *)list + 5) == term )
       {
-        if ( !v16 )
+        if ( !v7 )
           break;
-        items = v16->fields._items;
-        v25 = Method_System_Collections_Generic_List_TotalEventRaceEntity__Add__;
-        ++v16->fields._version;
+        items = v7->fields._items;
+        v16 = Method_System_Collections_Generic_List_TotalEventRaceEntity__Add__;
+        ++v7->fields._version;
         if ( !items )
           break;
-        size = v16->fields._size;
-        if ( (unsigned int)size >= items->max_length )
+        size = v7->fields._size;
+        if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v16,
+            v7,
             (Il2CppObject *)list,
-            *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
         }
         else
         {
-          v27 = &items->obj.klass + size;
-          v16->fields._size = size + 1;
-          v27[4] = v17;
-          sub_1BCAF9C((CGThumbnailListItem_o *)(v27 + 4), (int32_t)v17, v22, v23);
+          v18 = &items->obj.klass + size;
+          v7->fields._size = size + 1;
+          v18[4] = v8;
+          sub_1C2D434((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v8, v13, v14);
         }
       }
-      if ( v20 == ++v21 )
+      if ( v11 == ++v12 )
         goto LABEL_16;
     }
 LABEL_24:
-    sub_1BCB254(list, v17);
+    sub_1C2D6EC(list, v8);
   }
 LABEL_16:
   list = TotalEventRaceMaster___c_TypeInfo;
@@ -151,38 +137,34 @@ LABEL_16:
     j_il2cpp_runtime_class_init_0(TotalEventRaceMaster___c_TypeInfo);
     list = TotalEventRaceMaster___c_TypeInfo;
   }
-  v28 = *(System_Comparison_T__o **)(*((_QWORD *)list + 23) + 8LL);
-  if ( !v28 )
+  v19 = *(System_Comparison_T__o **)(*((_QWORD *)list + 23) + 8LL);
+  if ( !v19 )
   {
     if ( !*((_DWORD *)list + 56) )
     {
       j_il2cpp_runtime_class_init_0(list);
       list = TotalEventRaceMaster___c_TypeInfo;
     }
-    v29 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v28 = (System_Comparison_T__o *)sub_1BCB244(System_Comparison_TotalEventRaceEntity__TypeInfo);
-    System_Comparison_object____ctor(
-      v28,
-      v29,
-      Method_TotalEventRaceMaster___c__GetTargetTermRaceEntityList_b__3_0__,
-      0LL);
+    v20 = (Il2CppObject *)**((_QWORD **)list + 23);
+    v19 = (System_Comparison_T__o *)sub_1C2D6DC(System_Comparison_TotalEventRaceEntity__TypeInfo);
+    System_Comparison_object____ctor(v19, v20, Method_TotalEventRaceMaster___c__GetTargetTermRaceEntityList_b__3_0__, 0);
     static_fields = TotalEventRaceMaster___c_TypeInfo->static_fields;
-    static_fields->__9__3_0 = (struct System_Comparison_TotalEventRaceEntity__o *)v28;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)v28, v31, v32);
+    static_fields->__9__3_0 = (struct System_Comparison_TotalEventRaceEntity__o *)v19;
+    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)v19, v22, v23);
   }
-  if ( !v16 )
+  if ( !v7 )
     goto LABEL_24;
-  System_Collections_Generic_List_object___Sort_57390740(
-    v16,
-    v28,
-    (const MethodInfo_36BB694 *)Method_System_Collections_Generic_List_TotalEventRaceEntity__Sort__);
+  System_Collections_Generic_List_object___Sort_58242632(
+    v7,
+    v19,
+    (const MethodInfo_378B648 *)Method_System_Collections_Generic_List_TotalEventRaceEntity__Sort__);
   return (TotalEventRaceEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                         v16,
-                                         (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_TotalEventRaceEntity__ToArray__);
+                                         v7,
+                                         (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_TotalEventRaceEntity__ToArray__);
 }
 
 
-int64_t __fastcall TotalEventRaceMaster__GetTotalPoint(
+int64_t TotalEventRaceMaster__GetTotalPoint(
         TotalEventRaceMaster_o *this,
         int32_t eventId,
         int32_t termId,
@@ -195,21 +177,21 @@ int64_t __fastcall TotalEventRaceMaster__GetTotalPoint(
   int64_t result; // x0
   TotalEventRaceEntity_o *entity; // [xsp+8h] [xbp-8h] BYREF
 
-  entity = 0LL;
+  entity = 0;
   v7 = TotalEventRaceMaster__TryGetEntity(this, &entity, eventId, termId, groupId, v5);
-  result = 0LL;
+  result = 0;
   if ( v7 )
   {
     if ( !entity )
-      sub_1BCB254(0LL, v6);
-    return entity->fields.totalPoint;
+      sub_1C2D6EC(0, v6);
+    return *(__int64 *)((char *)&qword_20 + (_QWORD)entity);
   }
   return result;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall TotalEventRaceMaster__TryGetEntity(
+bool TotalEventRaceMaster__TryGetEntity(
         TotalEventRaceMaster_o *this,
         TotalEventRaceEntity_o **entity,
         int32_t eventId,
@@ -219,52 +201,51 @@ bool __fastcall TotalEventRaceMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1D19A & 1) == 0 )
+  if ( (byte_4C27F8E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_TotalEventRaceMaster__TotalEventRaceEntity__string__TryGetEntity__, entity);
-    byte_4B1D19A = 1;
+    sub_1C2D490(&Method_DataMasterBase_TotalEventRaceMaster__TotalEventRaceEntity__string__TryGetEntity__);
+    byte_4C27F8E = 1;
   }
   PK = (Il2CppObject *)TotalEventRaceEntity__CreatePK(eventId, termId, groupId, *(const MethodInfo **)&termId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_TotalEventRaceMaster__TotalEventRaceEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_TotalEventRaceMaster__TotalEventRaceEntity__string__TryGetEntity__);
 }
 
 
-void __fastcall TotalEventRaceMaster___c___cctor(const MethodInfo *method)
+void TotalEventRaceMaster___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  const MethodInfo *v4; // x3
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
 
-  if ( (byte_4B1D19D & 1) == 0 )
+  if ( (byte_4C27F91 & 1) == 0 )
   {
-    sub_1BCAFF8(&TotalEventRaceMaster___c_TypeInfo, v1);
-    byte_4B1D19D = 1;
+    sub_1C2D490(&TotalEventRaceMaster___c_TypeInfo);
+    byte_4C27F91 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BCB244(TotalEventRaceMaster___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  TotalEventRaceMaster___c_TypeInfo->static_fields->__9 = (struct TotalEventRaceMaster___c_o *)v2;
-  sub_1BCAF9C((CGThumbnailListItem_o *)TotalEventRaceMaster___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  v1 = (Il2CppObject *)sub_1C2D6DC(TotalEventRaceMaster___c_TypeInfo);
+  System_Object___ctor(v1, 0);
+  TotalEventRaceMaster___c_TypeInfo->static_fields->__9 = (struct TotalEventRaceMaster___c_o *)v1;
+  sub_1C2D434((CGThumbnailListItem_o *)TotalEventRaceMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
-void __fastcall TotalEventRaceMaster___c___ctor(TotalEventRaceMaster___c_o *this, const MethodInfo *method)
+void TotalEventRaceMaster___c___ctor(TotalEventRaceMaster___c_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-int32_t __fastcall TotalEventRaceMaster___c___GetTargetTermRaceEntityList_b__3_0(
+int32_t TotalEventRaceMaster___c___GetTargetTermRaceEntityList_b__3_0(
         TotalEventRaceMaster___c_o *this,
         TotalEventRaceEntity_o *a,
         TotalEventRaceEntity_o *b,
         const MethodInfo *method)
 {
   if ( !a || !b )
-    sub_1BCB254(this, a);
+    sub_1C2D6EC(this, a);
   return a->fields.groupId - b->fields.groupId;
 }

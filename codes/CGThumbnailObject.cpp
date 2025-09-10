@@ -1,17 +1,17 @@
-void __fastcall CGThumbnailObject___ctor(CGThumbnailObject_o *this, const MethodInfo *method)
+void CGThumbnailObject___ctor(CGThumbnailObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B17593 & 1) == 0 )
+  if ( (byte_4C222C2 & 1) == 0 )
   {
-    sub_1BCAFF8(&ListViewObject_TypeInfo, method);
-    byte_4B17593 = 1;
+    sub_1C2D490(&ListViewObject_TypeInfo);
+    byte_4C222C2 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
-  ListViewObject___ctor((ListViewObject_o *)this, 0LL);
+  ListViewObject___ctor((ListViewObject_o *)this, 0);
 }
 
 
-void __fastcall CGThumbnailObject__Awake(CGThumbnailObject_o *this, const MethodInfo *method)
+void CGThumbnailObject__Awake(CGThumbnailObject_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
@@ -19,73 +19,70 @@ void __fastcall CGThumbnailObject__Awake(CGThumbnailObject_o *this, const Method
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B1758E & 1) == 0 )
+  if ( (byte_4C222BD & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_CGThumbnailListItemDraw___, method);
-    byte_4B1758E = 1;
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_CGThumbnailListItemDraw___);
+    byte_4C222BD = 1;
   }
-  ListViewObject__Awake((ListViewObject_o *)this, 0LL);
+  ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BCB254(0LL, v3);
+    sub_1C2D6EC(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_CGThumbnailListItemDraw___);
+                       (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_CGThumbnailListItemDraw___);
   this->fields.itemDraw = (struct CGThumbnailListItemDraw_o *)Component_object;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
-CGThumbnailListItem_o *__fastcall CGThumbnailObject__GetItem(CGThumbnailObject_o *this, const MethodInfo *method)
+CGThumbnailListItem_o *CGThumbnailObject__GetItem(CGThumbnailObject_o *this, const MethodInfo *method)
 {
   struct ListViewItem_o *linkItem; // x8
-  __int64 methodPtr_low; // x11
+  __int64 naturalAligment; // x11
 
-  if ( (byte_4B1758F & 1) == 0 )
+  if ( (byte_4C222BE & 1) == 0 )
   {
-    sub_1BCAFF8(&CGThumbnailListItem_TypeInfo, method);
-    byte_4B1758F = 1;
+    sub_1C2D490(&CGThumbnailListItem_TypeInfo);
+    byte_4C222BE = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
-    return 0LL;
-  methodPtr_low = LOBYTE(CGThumbnailListItem_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low )
-    return 0LL;
-  if ( (CGThumbnailListItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] == CGThumbnailListItem_TypeInfo )
+    return 0;
+  naturalAligment = CGThumbnailListItem_TypeInfo->_2.naturalAligment;
+  if ( linkItem->klass->_2.naturalAligment < (unsigned int)naturalAligment )
+    return 0;
+  if ( (CGThumbnailListItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] == CGThumbnailListItem_TypeInfo )
     return (CGThumbnailListItem_o *)this->fields.linkItem;
-  return 0LL;
+  return 0;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall CGThumbnailObject__Init(
+void CGThumbnailObject__Init(
         CGThumbnailObject_o *this,
         int32_t initMode,
         int32_t scale,
         System_Action_string__string__o *updateItemFunc,
         const MethodInfo *method)
 {
-  unsigned int v7; // w20
   struct ListViewItem_o *linkItem; // x25
   int32_t dispMode; // w24
   int32_t state; // w22
-  __int64 methodPtr_low; // x10
+  __int64 naturalAligment; // x10
   UnityEngine_Transform_o *transform; // x0
   __int64 v14; // x1
   const MethodInfo *v15; // x1
   int32_t v16; // w8
 
-  v7 = initMode;
-  if ( (byte_4B17590 & 1) == 0 )
+  if ( (byte_4C222BF & 1) == 0 )
   {
-    sub_1BCAFF8(&CGThumbnailListItem_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B17590 = 1;
+    sub_1C2D490(&CGThumbnailListItem_TypeInfo);
+    byte_4C222BF = 1;
   }
   this->fields.updateItemAction = updateItemFunc;
   linkItem = this->fields.linkItem;
   dispMode = this->fields.dispMode;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields.updateItemAction,
     (int32_t)updateItemFunc,
     scale,
@@ -93,35 +90,35 @@ void __fastcall CGThumbnailObject__Init(
   state = this->fields.state;
   this->fields.scaleType = scale;
   if ( linkItem
-    && (methodPtr_low = LOBYTE(CGThumbnailListItem_TypeInfo->vtable._0_Equals.methodPtr),
-        LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
+    && (naturalAligment = CGThumbnailListItem_TypeInfo->_2.naturalAligment,
+        linkItem->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
   {
-    if ( (CGThumbnailListItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] != CGThumbnailListItem_TypeInfo )
-      v7 = 0;
+    if ( (CGThumbnailListItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] != CGThumbnailListItem_TypeInfo )
+      initMode = 0;
   }
   else
   {
-    v7 = 0;
+    initMode = 0;
   }
-  ListViewObject__SetVisible((ListViewObject_o *)this, v7 != 0, 0LL);
-  ((void (__fastcall *)(CGThumbnailObject_o *, bool, Il2CppMethodPointer))this->klass->vtable._9_SetInput.method)(
+  ListViewObject__SetVisible((ListViewObject_o *)this, initMode != 0, 0);
+  ((void (__fastcall *)(CGThumbnailObject_o *, bool, const MethodInfo *))this->klass->vtable._9_SetInput.methodPtr)(
     this,
-    v7 == 2,
-    this->klass->vtable._10_Invalidation.methodPtr);
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+    initMode == 2,
+    this->klass->vtable._9_SetInput.method);
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
-        (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
+    || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
+        (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1BCB254(transform, v14);
+    sub_1C2D6EC(transform, v14);
   }
-  UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
-  if ( v7 < 2 )
+  UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
+  if ( (unsigned int)initMode < 2 )
   {
     v16 = 1;
     goto LABEL_15;
   }
-  if ( v7 == 3 )
+  if ( initMode == 3 )
   {
     this->fields.dispMode = 1;
     this->fields.state = 1;
@@ -129,12 +126,12 @@ LABEL_20:
     CGThumbnailObject__SetupDisp(this, v15);
     return;
   }
-  if ( v7 == 2 )
+  if ( initMode == 2 )
   {
     v16 = 3;
-    v7 = 1;
+    initMode = 1;
 LABEL_15:
-    this->fields.dispMode = v7;
+    this->fields.dispMode = initMode;
     this->fields.state = v16;
   }
   if ( !state || dispMode != this->fields.dispMode )
@@ -142,131 +139,124 @@ LABEL_15:
 }
 
 
-void __fastcall CGThumbnailObject__InitItem(CGThumbnailObject_o *this, const MethodInfo *method)
+void CGThumbnailObject__InitItem(CGThumbnailObject_o *this, const MethodInfo *method)
 {
   this->fields.state = 0;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall CGThumbnailObject__SetInput(CGThumbnailObject_o *this, bool isInput, const MethodInfo *method)
+void CGThumbnailObject__SetInput(CGThumbnailObject_o *this, bool isInput, const MethodInfo *method)
 {
-  __int64 v5; // x1
   UnityEngine_Object_o *itemDraw; // x21
-  const MethodInfo *v7; // x3
+  const MethodInfo *v6; // x3
   struct ListViewItem_o *linkItem; // x8
-  __int64 methodPtr_low; // x11
-  struct ListViewItem_o *v10; // x1
-  CGThumbnailListItemDraw_o *v11; // x0
+  __int64 naturalAligment; // x11
+  struct ListViewItem_o *v9; // x1
+  CGThumbnailListItemDraw_o *v10; // x0
 
-  if ( (byte_4B17592 & 1) == 0 )
+  if ( (byte_4C222C1 & 1) == 0 )
   {
-    sub_1BCAFF8(&CGThumbnailListItem_TypeInfo, isInput);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B17592 = 1;
+    sub_1C2D490(&CGThumbnailListItem_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C222C1 = 1;
   }
-  ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0LL);
+  ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
     linkItem = this->fields.linkItem;
     if ( linkItem
-      && (methodPtr_low = LOBYTE(CGThumbnailListItem_TypeInfo->vtable._0_Equals.methodPtr),
-          LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
+      && (naturalAligment = CGThumbnailListItem_TypeInfo->_2.naturalAligment,
+          linkItem->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
     {
-      if ( (CGThumbnailListItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] == CGThumbnailListItem_TypeInfo )
-        v10 = this->fields.linkItem;
+      if ( (CGThumbnailListItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] == CGThumbnailListItem_TypeInfo )
+        v9 = this->fields.linkItem;
       else
-        v10 = 0LL;
+        v9 = 0;
     }
     else
     {
-      v10 = 0LL;
+      v9 = 0;
     }
-    v11 = this->fields.itemDraw;
-    if ( !v11 )
-      sub_1BCB254(0LL, v10);
-    CGThumbnailListItemDraw__SetInput(v11, (CGThumbnailListItem_o *)v10, isInput, v7);
+    v10 = this->fields.itemDraw;
+    if ( !v10 )
+      sub_1C2D6EC(0, v9);
+    CGThumbnailListItemDraw__SetInput(v10, (CGThumbnailListItem_o *)v9, isInput, v6);
   }
 }
 
 
-void __fastcall CGThumbnailObject__SetItem(
+void CGThumbnailObject__SetItem(
         CGThumbnailObject_o *this,
         ListViewItem_o *item,
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_42963052((ListViewObject_o *)this, item, seed, 0LL);
+  ListViewObject__SetItem_43593652((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
 
-void __fastcall CGThumbnailObject__SetItem_32408692(
-        CGThumbnailObject_o *this,
-        ListViewItem_o *item,
-        const MethodInfo *method)
+void CGThumbnailObject__SetItem_32929888(CGThumbnailObject_o *this, ListViewItem_o *item, const MethodInfo *method)
 {
-  ListViewObject__SetItem((ListViewObject_o *)this, item, 0LL);
+  ListViewObject__SetItem((ListViewObject_o *)this, item, 0);
   this->fields.state = 0;
 }
 
 
-void __fastcall CGThumbnailObject__SetupDisp(CGThumbnailObject_o *this, const MethodInfo *method)
+void CGThumbnailObject__SetupDisp(CGThumbnailObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   Il2CppObject **linkItem; // x20
-  __int64 methodPtr_low; // x10
-  bool v7; // w1
+  __int64 naturalAligment; // x10
+  bool v5; // w1
   UnityEngine_Object_o *itemDraw; // x21
-  CGThumbnailListItemDraw_o *v9; // x0
-  __int64 v10; // x1
-  struct CGThumbnailListItemDraw_o *v11; // x8
-  int32_t v12; // w3
-  const MethodInfo *v13; // x4
+  CGThumbnailListItemDraw_o *v7; // x0
+  __int64 v8; // x1
+  struct CGThumbnailListItemDraw_o *v9; // x8
+  int32_t v10; // w3
+  const MethodInfo *v11; // x4
 
-  if ( (byte_4B17591 & 1) == 0 )
+  if ( (byte_4C222C0 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_ActionExtensions_Call_string__string___, method);
-    sub_1BCAFF8(&CGThumbnailListItem_TypeInfo, v3);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
-    byte_4B17591 = 1;
+    sub_1C2D490(&Method_ActionExtensions_Call_string__string___);
+    sub_1C2D490(&CGThumbnailListItem_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C222C0 = 1;
   }
   linkItem = (Il2CppObject **)this->fields.linkItem;
   if ( !linkItem )
     goto LABEL_7;
-  methodPtr_low = LOBYTE(CGThumbnailListItem_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( LOBYTE((*linkItem)[19].klass) < (unsigned int)methodPtr_low
-    || *((CGThumbnailListItem_c **)(*linkItem)[12].monitor + methodPtr_low - 1) != CGThumbnailListItem_TypeInfo )
+  naturalAligment = CGThumbnailListItem_TypeInfo->_2.naturalAligment;
+  if ( LOBYTE((*linkItem)[19].klass) < (unsigned int)naturalAligment
+    || *((CGThumbnailListItem_c **)(*linkItem)[12].monitor + naturalAligment - 1) != CGThumbnailListItem_TypeInfo )
   {
-    linkItem = 0LL;
+    linkItem = 0;
 LABEL_7:
-    v7 = 0;
+    v5 = 0;
     goto LABEL_8;
   }
-  v7 = this->fields.dispMode != 0;
+  v5 = this->fields.dispMode != 0;
 LABEL_8:
-  ListViewObject__SetVisible((ListViewObject_o *)this, v7, 0LL);
+  ListViewObject__SetVisible((ListViewObject_o *)this, v5, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v9 = (CGThumbnailListItemDraw_o *)UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL);
-  if ( ((unsigned __int8)v9 & 1) != 0 )
+  v7 = (CGThumbnailListItemDraw_o *)UnityEngine_Object__op_Inequality(itemDraw, 0, 0);
+  if ( ((unsigned __int8)v7 & 1) != 0 )
   {
     if ( !linkItem
-      || (v11 = this->fields.itemDraw) == 0LL
+      || (v9 = this->fields.itemDraw) == 0
       || (ActionExtensions__Call_object__object_(
             (System_Action_T1__T2__o *)this->fields.updateItemAction,
-            linkItem[16],
-            (Il2CppObject *)v11->fields._LoadedTexturePath_k__BackingField,
-            (const MethodInfo_2F6A4E0 *)Method_ActionExtensions_Call_string__string___),
-          (v9 = this->fields.itemDraw) == 0LL) )
+            linkItem[17],
+            (Il2CppObject *)v9->fields._LoadedTexturePath_k__BackingField,
+            (const MethodInfo_301B634 *)Method_ActionExtensions_Call_string__string___),
+          (v7 = this->fields.itemDraw) == 0) )
     {
-      sub_1BCB254(v9, v10);
+      sub_1C2D6EC(v7, v8);
     }
-    CGThumbnailListItemDraw__SetItem(v9, (CGThumbnailListItem_o *)linkItem, this->fields.scaleType, v12, v13);
+    CGThumbnailListItemDraw__SetItem(v7, (CGThumbnailListItem_o *)linkItem, this->fields.scaleType, v10, v11);
   }
 }

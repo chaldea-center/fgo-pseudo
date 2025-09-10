@@ -1,34 +1,33 @@
-void __fastcall WarBoardCommonMiniPopup___ctor(WarBoardCommonMiniPopup_o *this, const MethodInfo *method)
+void WarBoardCommonMiniPopup___ctor(WarBoardCommonMiniPopup_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x0
-  __int64 v5; // x1
-  __int64 v6; // x2
-  const MethodInfo *v7; // x3
-  int v8; // w8
+  __int64 v3; // x0
+  __int64 v4; // x1
+  __int64 v5; // x2
+  const MethodInfo *v6; // x3
+  int v7; // w8
 
-  if ( (byte_4B1A244 & 1) == 0 )
+  if ( (byte_4C24FC8 & 1) == 0 )
   {
-    sub_1BCAFF8(&WarBoardCommonMiniPopup_LineLayout___TypeInfo, method);
-    sub_1BCAFF8(&WarBoardInfoPopupBase_TypeInfo, v3);
-    byte_4B1A244 = 1;
+    sub_1C2D490(&WarBoardCommonMiniPopup_LineLayout___TypeInfo);
+    sub_1C2D490(&WarBoardInfoPopupBase_TypeInfo);
+    byte_4C24FC8 = 1;
   }
-  v4 = sub_1BCB0A0(WarBoardCommonMiniPopup_LineLayout___TypeInfo, 2LL);
-  if ( !v4 )
-    sub_1BCB254(0LL, v5);
-  v8 = *(_DWORD *)(v4 + 24);
-  if ( !v8 || (*(_QWORD *)(v4 + 32) = 0xC1B0000042080000LL, v8 == 1) )
-    sub_1BCB25C(v4, v4, v6);
-  *(_QWORD *)(v4 + 40) = 0xC208000041E80000LL;
-  this->fields.lineLayouts = (struct WarBoardCommonMiniPopup_LineLayout_array *)v4;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.lineLayouts, v4, v6, v7);
+  v3 = sub_1C2D538(WarBoardCommonMiniPopup_LineLayout___TypeInfo, 2);
+  if ( !v3 )
+    sub_1C2D6EC(0, v4);
+  v7 = *(_DWORD *)(v3 + 24);
+  if ( !v7 || (*(_QWORD *)(v3 + 32) = 0xC1B0000042080000LL, v7 == 1) )
+    sub_1C2D6F4(v3, v3, v5);
+  *(_QWORD *)(v3 + 40) = 0xC208000041E80000LL;
+  this->fields.lineLayouts = (struct WarBoardCommonMiniPopup_LineLayout_array *)v3;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.lineLayouts, v3, v5, v6);
   if ( !WarBoardInfoPopupBase_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarBoardInfoPopupBase_TypeInfo);
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall WarBoardCommonMiniPopup__ClosePopup(
+void WarBoardCommonMiniPopup__ClosePopup(
         WarBoardCommonMiniPopup_o *this,
         System_Action_o *hideCallback,
         const MethodInfo *method)
@@ -42,18 +41,18 @@ void __fastcall WarBoardCommonMiniPopup__ClosePopup(
   System_Action_c *v11; // x1
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B1A243 & 1) == 0 )
+  if ( (byte_4C24FC7 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, hideCallback);
-    byte_4B1A243 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    byte_4C24FC7 = 1;
   }
-  this->fields.hideCompleteCallback = 0LL;
+  this->fields.hideCompleteCallback = 0;
   p_hideCompleteCallback = &this->fields.hideCompleteCallback;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.hideCompleteCallback, 0, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.hideCompleteCallback, 0, (int32_t)method, v3);
   v7 = System_Delegate__Combine(
          (System_Delegate_o *)this->fields.hideCompleteCallback,
          (System_Delegate_o *)hideCallback,
-         0LL);
+         0);
   v10 = v7;
   if ( !v7 )
     goto LABEL_7;
@@ -61,68 +60,65 @@ void __fastcall WarBoardCommonMiniPopup__ClosePopup(
   if ( (System_Action_c *)v7->klass != System_Action_TypeInfo
     || (*p_hideCompleteCallback = (struct System_Action_o *)v7, (System_Action_c *)v7->klass != v11) )
   {
-    sub_1BCB514(v7);
+    sub_1C2D9AC(v7);
 LABEL_7:
     *p_hideCompleteCallback = (struct System_Action_o *)v10;
   }
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.hideCompleteCallback, (int32_t)v10, v8, v9);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.hideCompleteCallback, (int32_t)v10, v8, v9);
   WarBoardInfoPopupBase__Hide((WarBoardInfoPopupBase_o *)this, v12);
 }
 
 
-int32_t __fastcall WarBoardCommonMiniPopup__GetLineCount(
+int32_t WarBoardCommonMiniPopup__GetLineCount(
         WarBoardCommonMiniPopup_o *this,
         System_String_o *message,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  WarBoardCommonMiniPopup___c_c *v7; // x0
+  WarBoardCommonMiniPopup___c_c *v4; // x0
   System_Func_char__bool__o *_9__11_0; // x20
-  Il2CppObject *v9; // x21
+  Il2CppObject *v6; // x21
   struct WarBoardCommonMiniPopup___c_StaticFields *static_fields; // x0
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
 
-  if ( (byte_4B1A23F & 1) == 0 )
+  if ( (byte_4C24FC3 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Count_char___, message);
-    sub_1BCAFF8(&System_Func_char__bool__TypeInfo, v4);
-    sub_1BCAFF8(&Method_WarBoardCommonMiniPopup___c__GetLineCount_b__11_0__, v5);
-    sub_1BCAFF8(&WarBoardCommonMiniPopup___c_TypeInfo, v6);
-    byte_4B1A23F = 1;
+    sub_1C2D490(&Method_System_Linq_Enumerable_Count_char___);
+    sub_1C2D490(&System_Func_char__bool__TypeInfo);
+    sub_1C2D490(&Method_WarBoardCommonMiniPopup___c__GetLineCount_b__11_0__);
+    sub_1C2D490(&WarBoardCommonMiniPopup___c_TypeInfo);
+    byte_4C24FC3 = 1;
   }
-  v7 = WarBoardCommonMiniPopup___c_TypeInfo;
+  v4 = WarBoardCommonMiniPopup___c_TypeInfo;
   if ( !WarBoardCommonMiniPopup___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarBoardCommonMiniPopup___c_TypeInfo);
-    v7 = WarBoardCommonMiniPopup___c_TypeInfo;
+    v4 = WarBoardCommonMiniPopup___c_TypeInfo;
   }
-  _9__11_0 = v7->static_fields->__9__11_0;
+  _9__11_0 = v4->static_fields->__9__11_0;
   if ( !_9__11_0 )
   {
-    if ( !v7->_2.cctor_finished )
+    if ( !v4->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v7);
-      v7 = WarBoardCommonMiniPopup___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v4);
+      v4 = WarBoardCommonMiniPopup___c_TypeInfo;
     }
-    v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__11_0 = (System_Func_char__bool__o *)sub_1BCB244(System_Func_char__bool__TypeInfo);
-    System_Func_char__bool____ctor(_9__11_0, v9, Method_WarBoardCommonMiniPopup___c__GetLineCount_b__11_0__, 0LL);
+    v6 = (Il2CppObject *)v4->static_fields->__9;
+    _9__11_0 = (System_Func_char__bool__o *)sub_1C2D6DC(System_Func_char__bool__TypeInfo);
+    System_Func_char__bool____ctor(_9__11_0, v6, Method_WarBoardCommonMiniPopup___c__GetLineCount_b__11_0__, 0);
     static_fields = WarBoardCommonMiniPopup___c_TypeInfo->static_fields;
     static_fields->__9__11_0 = _9__11_0;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v11, v12);
+    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v8, v9);
   }
   return System_Linq_Enumerable__Count_char_(
            (System_Collections_Generic_IEnumerable_TSource__o *)message,
            (System_Func_TSource__bool__o *)_9__11_0,
-           (const MethodInfo_30379B8 *)Method_System_Linq_Enumerable_Count_char___)
+           (const MethodInfo_30EF83C *)Method_System_Linq_Enumerable_Count_char___)
        + 1;
 }
 
 
-WarBoardCommonMiniPopup_LineLayout_o __fastcall WarBoardCommonMiniPopup__GetLineLayout(
+WarBoardCommonMiniPopup_LineLayout_o WarBoardCommonMiniPopup__GetLineLayout(
         WarBoardCommonMiniPopup_o *this,
         System_String_o *message,
         const MethodInfo *method)
@@ -131,7 +127,7 @@ WarBoardCommonMiniPopup_LineLayout_o __fastcall WarBoardCommonMiniPopup__GetLine
   __int64 v5; // x1
   __int64 v6; // x2
   struct WarBoardCommonMiniPopup_LineLayout_array *lineLayouts; // x8
-  __int64 v8; // x9
+  il2cpp_array_size_t max_length; // x9
   unsigned int v9; // w10
   __int64 v10; // x9
   float *v11; // x8
@@ -142,20 +138,20 @@ WarBoardCommonMiniPopup_LineLayout_o __fastcall WarBoardCommonMiniPopup__GetLine
   LineCount = WarBoardCommonMiniPopup__GetLineCount(this, message, method);
   lineLayouts = this->fields.lineLayouts;
   if ( !lineLayouts )
-    sub_1BCB254(LineCount, v5);
-  v8 = *(_QWORD *)&lineLayouts->max_length;
+    sub_1C2D6EC(LineCount, v5);
+  max_length = lineLayouts->max_length;
   v9 = LineCount - 1;
-  if ( (int)LineCount - 1 >= (int)v8 )
+  if ( (int)LineCount - 1 >= (int)max_length )
   {
-    if ( (_DWORD)v8 )
+    if ( (_DWORD)max_length )
     {
-      v10 = (int)v8 - 1;
+      v10 = (int)max_length - 1;
       goto LABEL_7;
     }
 LABEL_9:
-    sub_1BCB25C(LineCount, v5, v6);
+    sub_1C2D6F4(LineCount, v5, v6);
   }
-  if ( v9 >= (unsigned int)v8 )
+  if ( v9 >= (unsigned int)max_length )
     goto LABEL_9;
   v10 = (int)v9;
 LABEL_7:
@@ -168,7 +164,7 @@ LABEL_7:
 }
 
 
-void __fastcall WarBoardCommonMiniPopup__Initialize(WarBoardCommonMiniPopup_o *this, const MethodInfo *method)
+void WarBoardCommonMiniPopup__Initialize(WarBoardCommonMiniPopup_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
   UISkinSprite_o *windowBase; // x0
@@ -176,21 +172,21 @@ void __fastcall WarBoardCommonMiniPopup__Initialize(WarBoardCommonMiniPopup_o *t
   WarBoardInfoPopupBase__Initialize((WarBoardInfoPopupBase_o *)this, method);
   windowBase = this->fields.windowBase;
   if ( !windowBase )
-    sub_1BCB254(0LL, v3);
-  UISkinSprite__setupSprite(windowBase, 0, 0LL);
+    sub_1C2D6EC(0, v3);
+  UISkinSprite__setupSprite(windowBase, 0, 0);
 }
 
 
-void __fastcall WarBoardCommonMiniPopup__OnClickClose(WarBoardCommonMiniPopup_o *this, const MethodInfo *method)
+void WarBoardCommonMiniPopup__OnClickClose(WarBoardCommonMiniPopup_o *this, const MethodInfo *method)
 {
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_bool__o *clickCallback; // x8
 
-  if ( (byte_4B1A242 & 1) == 0 )
+  if ( (byte_4C24FC6 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_WarBoardCommonMiniPopup_OnClickClose__, method);
-    byte_4B1A242 = 1;
+    sub_1C2D490(&Method_WarBoardCommonMiniPopup_OnClickClose__);
+    byte_4C24FC6 = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, method)
     && !this->fields._isShowAnimating_k__BackingField
@@ -198,29 +194,29 @@ void __fastcall WarBoardCommonMiniPopup__OnClickClose(WarBoardCommonMiniPopup_o 
   {
     v3 = Method_WarBoardCommonMiniPopup_OnClickClose__;
     if ( (*((_BYTE *)Method_WarBoardCommonMiniPopup_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BCB010(Method_WarBoardCommonMiniPopup_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_WarBoardCommonMiniPopup_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))clickCallback->fields.m_target)(
-        clickCallback->fields.original_method_info,
-        1LL,
-        *(_QWORD *)&clickCallback->fields.extra_arg);
+      ((void (__fastcall *)(intptr_t, __int64, intptr_t))clickCallback->fields.invoke_impl)(
+        clickCallback->fields.method_code,
+        1,
+        clickCallback->fields.method);
   }
 }
 
 
-void __fastcall WarBoardCommonMiniPopup__OnClickNo(WarBoardCommonMiniPopup_o *this, const MethodInfo *method)
+void WarBoardCommonMiniPopup__OnClickNo(WarBoardCommonMiniPopup_o *this, const MethodInfo *method)
 {
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_bool__o *clickCallback; // x8
 
-  if ( (byte_4B1A241 & 1) == 0 )
+  if ( (byte_4C24FC5 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_WarBoardCommonMiniPopup_OnClickNo__, method);
-    byte_4B1A241 = 1;
+    sub_1C2D490(&Method_WarBoardCommonMiniPopup_OnClickNo__);
+    byte_4C24FC5 = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, method)
     && !this->fields._isShowAnimating_k__BackingField
@@ -228,29 +224,29 @@ void __fastcall WarBoardCommonMiniPopup__OnClickNo(WarBoardCommonMiniPopup_o *th
   {
     v3 = Method_WarBoardCommonMiniPopup_OnClickNo__;
     if ( (*((_BYTE *)Method_WarBoardCommonMiniPopup_OnClickNo__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BCB010(Method_WarBoardCommonMiniPopup_OnClickNo__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_WarBoardCommonMiniPopup_OnClickNo__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))clickCallback->fields.m_target)(
-        clickCallback->fields.original_method_info,
-        0LL,
-        *(_QWORD *)&clickCallback->fields.extra_arg);
+      ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))clickCallback->fields.invoke_impl)(
+        clickCallback->fields.method_code,
+        0,
+        clickCallback->fields.method);
   }
 }
 
 
-void __fastcall WarBoardCommonMiniPopup__OnClickYes(WarBoardCommonMiniPopup_o *this, const MethodInfo *method)
+void WarBoardCommonMiniPopup__OnClickYes(WarBoardCommonMiniPopup_o *this, const MethodInfo *method)
 {
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_bool__o *clickCallback; // x8
 
-  if ( (byte_4B1A240 & 1) == 0 )
+  if ( (byte_4C24FC4 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_WarBoardCommonMiniPopup_OnClickYes__, method);
-    byte_4B1A240 = 1;
+    sub_1C2D490(&Method_WarBoardCommonMiniPopup_OnClickYes__);
+    byte_4C24FC4 = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, method)
     && !this->fields._isShowAnimating_k__BackingField
@@ -258,21 +254,20 @@ void __fastcall WarBoardCommonMiniPopup__OnClickYes(WarBoardCommonMiniPopup_o *t
   {
     v3 = Method_WarBoardCommonMiniPopup_OnClickYes__;
     if ( (*((_BYTE *)Method_WarBoardCommonMiniPopup_OnClickYes__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BCB010(Method_WarBoardCommonMiniPopup_OnClickYes__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_WarBoardCommonMiniPopup_OnClickYes__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))clickCallback->fields.m_target)(
-        clickCallback->fields.original_method_info,
-        1LL,
-        *(_QWORD *)&clickCallback->fields.extra_arg);
+      ((void (__fastcall *)(intptr_t, __int64, intptr_t))clickCallback->fields.invoke_impl)(
+        clickCallback->fields.method_code,
+        1,
+        clickCallback->fields.method);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall WarBoardCommonMiniPopup__OpenConfirmPopup(
+void WarBoardCommonMiniPopup__OpenConfirmPopup(
         WarBoardCommonMiniPopup_o *this,
         System_Action_bool__o *clickCallback,
         System_String_o *message,
@@ -284,20 +279,18 @@ void __fastcall WarBoardCommonMiniPopup__OpenConfirmPopup(
   WarBoardCommonMiniPopup_LineLayout_o v11; // x1
   WarBoardCommonMiniPopup_LineLayout_o LineLayout; // kr00_8
   UnityEngine_GameObject_o *noticeButtonRoot; // x0
-  float v14; // s0
-  float v15; // s2
-  float v16; // s10
-  float v17; // s11
-  float v18; // s0
-  float v19; // s2
-  float v20; // s9
-  float v21; // s10
-  const MethodInfo *v22; // x1
-  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s10
+  float z; // s11
+  float v16; // s9
+  float v17; // s10
+  const MethodInfo *v18; // x1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.clickCallback = clickCallback;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields.clickCallback,
     (int32_t)clickCallback,
     (int32_t)message,
@@ -306,74 +299,69 @@ void __fastcall WarBoardCommonMiniPopup__OpenConfirmPopup(
   noticeButtonRoot = this->fields.noticeButtonRoot;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  UnityEngine_GameObject__SetActive(noticeButtonRoot, 0, 0LL);
+  UnityEngine_GameObject__SetActive(noticeButtonRoot, 0, 0);
   noticeButtonRoot = this->fields.cofirmButtonRoot;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  UnityEngine_GameObject__SetActive(noticeButtonRoot, 1, 0LL);
+  UnityEngine_GameObject__SetActive(noticeButtonRoot, 1, 0);
   noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.messgeLabel;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  UILabel__set_text((UILabel_o *)noticeButtonRoot, message, 0LL);
+  UILabel__set_text((UILabel_o *)noticeButtonRoot, message, 0);
   noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.messgeLabel;
   if ( !noticeButtonRoot )
     goto LABEL_15;
   noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)noticeButtonRoot,
-                                                   0LL);
+                                                   0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  *(UnityEngine_Vector3_o *)&v14 = UnityEngine_Transform__get_localPosition(
-                                     (UnityEngine_Transform_o *)noticeButtonRoot,
-                                     0LL);
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, 0);
   noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.messgeLabel;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v16 = v14;
-  v17 = v15;
+  x = localPosition.fields.x;
+  z = localPosition.fields.z;
   noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)noticeButtonRoot,
-                                                   0LL);
+                                                   0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v23.fields.x = v16;
-  v23.fields.y = LineLayout.fields.MessagePosY;
-  v23.fields.z = v17;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v23, 0LL);
+  v20.fields.x = x;
+  v20.fields.y = LineLayout.fields.MessagePosY;
+  v20.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v20, 0);
   noticeButtonRoot = this->fields.cofirmButtonRoot;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0LL);
+  noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  *(UnityEngine_Vector3_o *)&v18 = UnityEngine_Transform__get_localPosition(
-                                     (UnityEngine_Transform_o *)noticeButtonRoot,
-                                     0LL);
+  v21 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, 0);
   noticeButtonRoot = this->fields.cofirmButtonRoot;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v20 = v18;
-  v21 = v19;
-  noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0LL);
+  v16 = v21.fields.x;
+  v17 = v21.fields.z;
+  noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0);
   if ( !noticeButtonRoot
-    || (v24.fields.x = v20,
-        v24.fields.y = LineLayout.fields.ButtonRootPosY,
-        v24.fields.z = v21,
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v24, 0LL),
-        (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.yesButtonLabel) == 0LL)
-    || (UILabel__set_text((UILabel_o *)noticeButtonRoot, yesButton, 0LL),
-        (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.noButtonLabel) == 0LL) )
+    || (v22.fields.x = v16,
+        v22.fields.y = LineLayout.fields.ButtonRootPosY,
+        v22.fields.z = v17,
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v22, 0),
+        (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.yesButtonLabel) == 0)
+    || (UILabel__set_text((UILabel_o *)noticeButtonRoot, yesButton, 0),
+        (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.noButtonLabel) == 0) )
   {
 LABEL_15:
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1BCB254)(noticeButtonRoot, v11);
+    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C2D6EC)(noticeButtonRoot, v11);
   }
-  UILabel__set_text((UILabel_o *)noticeButtonRoot, noButton, 0LL);
-  WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v22);
+  UILabel__set_text((UILabel_o *)noticeButtonRoot, noButton, 0);
+  WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v18);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall WarBoardCommonMiniPopup__OpenNoticePopup(
+void WarBoardCommonMiniPopup__OpenNoticePopup(
         WarBoardCommonMiniPopup_o *this,
         System_Action_bool__o *clickCallback,
         System_String_o *message,
@@ -384,20 +372,18 @@ void __fastcall WarBoardCommonMiniPopup__OpenNoticePopup(
   WarBoardCommonMiniPopup_LineLayout_o v9; // x1
   WarBoardCommonMiniPopup_LineLayout_o LineLayout; // kr00_8
   UnityEngine_GameObject_o *noticeButtonRoot; // x0
-  float v12; // s0
-  float v13; // s2
-  float v14; // s10
-  float v15; // s11
-  float v16; // s0
-  float v17; // s2
-  float v18; // s9
-  float v19; // s10
-  const MethodInfo *v20; // x1
-  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  float x; // s10
+  float z; // s11
+  float v14; // s9
+  float v15; // s10
+  const MethodInfo *v16; // x1
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.clickCallback = clickCallback;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields.clickCallback,
     (int32_t)clickCallback,
     (int32_t)message,
@@ -406,100 +392,95 @@ void __fastcall WarBoardCommonMiniPopup__OpenNoticePopup(
   noticeButtonRoot = this->fields.noticeButtonRoot;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  UnityEngine_GameObject__SetActive(noticeButtonRoot, 1, 0LL);
+  UnityEngine_GameObject__SetActive(noticeButtonRoot, 1, 0);
   noticeButtonRoot = this->fields.cofirmButtonRoot;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  UnityEngine_GameObject__SetActive(noticeButtonRoot, 0, 0LL);
+  UnityEngine_GameObject__SetActive(noticeButtonRoot, 0, 0);
   noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.messgeLabel;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  UILabel__set_text((UILabel_o *)noticeButtonRoot, message, 0LL);
+  UILabel__set_text((UILabel_o *)noticeButtonRoot, message, 0);
   noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.messgeLabel;
   if ( !noticeButtonRoot )
     goto LABEL_15;
   noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)noticeButtonRoot,
-                                                   0LL);
+                                                   0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  *(UnityEngine_Vector3_o *)&v12 = UnityEngine_Transform__get_localPosition(
-                                     (UnityEngine_Transform_o *)noticeButtonRoot,
-                                     0LL);
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, 0);
   noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.messgeLabel;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v14 = v12;
-  v15 = v13;
+  x = localPosition.fields.x;
+  z = localPosition.fields.z;
   noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)noticeButtonRoot,
-                                                   0LL);
+                                                   0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v21.fields.x = v14;
-  v21.fields.y = LineLayout.fields.MessagePosY;
-  v21.fields.z = v15;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v21, 0LL);
+  v18.fields.x = x;
+  v18.fields.y = LineLayout.fields.MessagePosY;
+  v18.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v18, 0);
   noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.messgeLabel;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  UILabel__set_text((UILabel_o *)noticeButtonRoot, message, 0LL);
+  UILabel__set_text((UILabel_o *)noticeButtonRoot, message, 0);
   noticeButtonRoot = this->fields.noticeButtonRoot;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0LL);
+  noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  *(UnityEngine_Vector3_o *)&v16 = UnityEngine_Transform__get_localPosition(
-                                     (UnityEngine_Transform_o *)noticeButtonRoot,
-                                     0LL);
+  v19 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, 0);
   noticeButtonRoot = this->fields.noticeButtonRoot;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v18 = v16;
-  v19 = v17;
-  noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0LL);
+  v14 = v19.fields.x;
+  v15 = v19.fields.z;
+  noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0);
   if ( !noticeButtonRoot
-    || (v22.fields.x = v18,
-        v22.fields.y = LineLayout.fields.ButtonRootPosY,
-        v22.fields.z = v19,
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v22, 0LL),
-        (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.closeButtonLabel) == 0LL) )
+    || (v20.fields.x = v14,
+        v20.fields.y = LineLayout.fields.ButtonRootPosY,
+        v20.fields.z = v15,
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v20, 0),
+        (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.closeButtonLabel) == 0) )
   {
 LABEL_15:
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1BCB254)(noticeButtonRoot, v9);
+    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C2D6EC)(noticeButtonRoot, v9);
   }
-  UILabel__set_text((UILabel_o *)noticeButtonRoot, closeButton, 0LL);
-  WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v20);
+  UILabel__set_text((UILabel_o *)noticeButtonRoot, closeButton, 0);
+  WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v16);
 }
 
 
-void __fastcall WarBoardCommonMiniPopup___c___cctor(const MethodInfo *method)
+void WarBoardCommonMiniPopup___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  const MethodInfo *v4; // x3
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
 
-  if ( (byte_4B1A245 & 1) == 0 )
+  if ( (byte_4C24FC9 & 1) == 0 )
   {
-    sub_1BCAFF8(&WarBoardCommonMiniPopup___c_TypeInfo, v1);
-    byte_4B1A245 = 1;
+    sub_1C2D490(&WarBoardCommonMiniPopup___c_TypeInfo);
+    byte_4C24FC9 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BCB244(WarBoardCommonMiniPopup___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  WarBoardCommonMiniPopup___c_TypeInfo->static_fields->__9 = (struct WarBoardCommonMiniPopup___c_o *)v2;
-  sub_1BCAF9C((CGThumbnailListItem_o *)WarBoardCommonMiniPopup___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  v1 = (Il2CppObject *)sub_1C2D6DC(WarBoardCommonMiniPopup___c_TypeInfo);
+  System_Object___ctor(v1, 0);
+  WarBoardCommonMiniPopup___c_TypeInfo->static_fields->__9 = (struct WarBoardCommonMiniPopup___c_o *)v1;
+  sub_1C2D434((CGThumbnailListItem_o *)WarBoardCommonMiniPopup___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
-void __fastcall WarBoardCommonMiniPopup___c___ctor(WarBoardCommonMiniPopup___c_o *this, const MethodInfo *method)
+void WarBoardCommonMiniPopup___c___ctor(WarBoardCommonMiniPopup___c_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall WarBoardCommonMiniPopup___c___GetLineCount_b__11_0(
+bool WarBoardCommonMiniPopup___c___GetLineCount_b__11_0(
         WarBoardCommonMiniPopup___c_o *this,
         uint16_t x,
         const MethodInfo *method)

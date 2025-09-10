@@ -1,32 +1,30 @@
-void __fastcall ReleaseAssetStorageWhenDestroy___ctor(ReleaseAssetStorageWhenDestroy_o *this, const MethodInfo *method)
+void ReleaseAssetStorageWhenDestroy___ctor(ReleaseAssetStorageWhenDestroy_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall ReleaseAssetStorageWhenDestroy__OnDestroy(
-        ReleaseAssetStorageWhenDestroy_o *this,
-        const MethodInfo *method)
+void ReleaseAssetStorageWhenDestroy__OnDestroy(ReleaseAssetStorageWhenDestroy_o *this, const MethodInfo *method)
 {
   System_String_o *assetName; // x19
 
-  if ( (byte_4B167E1 & 1) == 0 )
+  if ( (byte_4C213F7 & 1) == 0 )
   {
-    sub_1BCAFF8(&AssetManager_TypeInfo, method);
-    byte_4B167E1 = 1;
+    sub_1C2D490(&AssetManager_TypeInfo);
+    byte_4C213F7 = 1;
   }
   assetName = this->fields.assetName;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAssetStorage(assetName, 0LL);
+  AssetManager__releaseAssetStorage(assetName, 0);
 }
 
 
-void __fastcall ReleaseAssetStorageWhenDestroy__Setup(
+void ReleaseAssetStorageWhenDestroy__Setup(
         ReleaseAssetStorageWhenDestroy_o *this,
         System_String_o *assetName,
         const MethodInfo *method)
 {
   this->fields.assetName = assetName;
-  sub_1BCAF9C(&this->fields.assetName);
+  sub_1C2D434(&this->fields.assetName);
 }

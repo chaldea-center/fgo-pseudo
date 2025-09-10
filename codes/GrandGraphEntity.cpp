@@ -1,17 +1,17 @@
-void __fastcall GrandGraphEntity___ctor(GrandGraphEntity_o *this, const MethodInfo *method)
+void GrandGraphEntity___ctor(GrandGraphEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C858 & 1) == 0 )
+  if ( (byte_4C2760F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1C858 = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C2760F = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-bool __fastcall GrandGraphEntity__CanSelectToGrand(
+bool GrandGraphEntity__CanSelectToGrand(
         GrandGraphEntity_o *this,
         UserServantEntity_o *userServantEntity,
         const MethodInfo *method)
@@ -24,13 +24,13 @@ bool __fastcall GrandGraphEntity__CanSelectToGrand(
   bool v10; // cc
 
   v4 = this;
-  if ( (byte_4B1C857 & 1) == 0 )
+  if ( (byte_4C2760E & 1) == 0 )
   {
-    this = (GrandGraphEntity_o *)sub_1BCAFF8(&BalanceConfig_TypeInfo, userServantEntity);
-    byte_4B1C857 = 1;
+    this = (GrandGraphEntity_o *)sub_1C2D490(&BalanceConfig_TypeInfo);
+    byte_4C2760E = 1;
   }
   if ( !userServantEntity )
-    sub_1BCB254(this, userServantEntity);
+    sub_1C2D6EC(this, userServantEntity);
   if ( userServantEntity->fields.lv < v4->fields.condSvtLv )
     return 0;
   v6 = 0;
@@ -46,7 +46,7 @@ bool __fastcall GrandGraphEntity__CanSelectToGrand(
     SvtSkillListMax = v7->static_fields->SvtSkillListMax;
     if ( v8 >= SvtSkillListMax )
       break;
-    v10 = UserServantEntity__getSkillLevel(userServantEntity, v8, 0LL) < v4->fields.condSkillLv;
+    v10 = UserServantEntity__getSkillLevel(userServantEntity, v8, 0) < v4->fields.condSkillLv;
     v6 = v8 + 1;
   }
   while ( !v10 );
@@ -54,27 +54,27 @@ bool __fastcall GrandGraphEntity__CanSelectToGrand(
 }
 
 
-int32_t __fastcall GrandGraphEntity__CreatePrimaryKey(GrandGraphEntity_o *this, const MethodInfo *method)
+int32_t GrandGraphEntity__CreatePrimaryKey(GrandGraphEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-bool __fastcall GrandGraphEntity__IsOpen(GrandGraphEntity_o *this, const MethodInfo *method)
+bool GrandGraphEntity__IsOpen(GrandGraphEntity_o *this, const MethodInfo *method)
 {
   int32_t condTargetId; // w20
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4B1C856 & 1) == 0 )
+  if ( (byte_4C2760D & 1) == 0 )
   {
-    sub_1BCAFF8(&CondType_TypeInfo, method);
-    byte_4B1C856 = 1;
+    sub_1C2D490(&CondType_TypeInfo);
+    byte_4C2760D = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;
   condNum = this->fields.condNum;
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__IsOpen(condType, condTargetId, condNum, 0, 0LL, 0LL);
+  return CondType__IsOpen(condType, condTargetId, condNum, 0, 0, 0);
 }

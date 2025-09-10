@@ -1,90 +1,85 @@
-void __fastcall SelectBonusConfirmDialog___ctor(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
+void SelectBonusConfirmDialog___ctor(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B16822 & 1) == 0 )
+  if ( (byte_4C21438 & 1) == 0 )
   {
-    sub_1BCAFF8(&BaseDialog_TypeInfo, method);
-    byte_4B16822 = 1;
+    sub_1C2D490(&BaseDialog_TypeInfo);
+    byte_4C21438 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
-  BaseDialog___ctor((BaseDialog_o *)this, 0LL);
+  BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
 
-void __fastcall SelectBonusConfirmDialog__Awake(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
+void SelectBonusConfirmDialog__Awake(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
 {
-  BaseDialog__Awake((BaseDialog_o *)this, 0LL);
+  BaseDialog__Awake((BaseDialog_o *)this, 0);
 }
 
 
-void __fastcall SelectBonusConfirmDialog__CheckSerializeFieldAssertion(
-        SelectBonusConfirmDialog_o *this,
-        const MethodInfo *method)
+void SelectBonusConfirmDialog__CheckSerializeFieldAssertion(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall SelectBonusConfirmDialog__Close(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
+void SelectBonusConfirmDialog__Close(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
-  SelectBonusConfirmDialog__Close_30954136(this, 0LL, v2);
+  SelectBonusConfirmDialog__Close_31359124(this, 0, v2);
 }
 
 
-void __fastcall SelectBonusConfirmDialog__Close_30954136(
+void SelectBonusConfirmDialog__Close_31359124(
         SelectBonusConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  System_Action_o *v6; // x20
+  System_Action_o *v5; // x20
 
-  if ( (byte_4B1681F & 1) == 0 )
+  if ( (byte_4C21435 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, callback);
-    sub_1BCAFF8(&Method_SelectBonusConfirmDialog_EndClose__, v5);
-    byte_4B1681F = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_SelectBonusConfirmDialog_EndClose__);
+    byte_4C21435 = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1BCAF9C(&this->fields.closeEndFunc);
+  sub_1C2D434(&this->fields.closeEndFunc);
   this->fields.state = 3;
-  v6 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v6, (Il2CppObject *)this, Method_SelectBonusConfirmDialog_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v6, 0LL);
+  v5 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_SelectBonusConfirmDialog_EndClose__, 0);
+  BaseDialog__Close((BaseDialog_o *)this, v5, 0);
 }
 
 
-void __fastcall SelectBonusConfirmDialog__EndClose(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
+void SelectBonusConfirmDialog__EndClose(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
 {
   struct System_Action_o **p_closeEndFunc; // x19
   struct System_Action_o *v4; // x20
   struct System_Action_o *closeEndFunc; // t1
 
   this->fields.state = 0;
-  BaseDialog__Init((BaseDialog_o *)this, 0LL);
+  BaseDialog__Init((BaseDialog_o *)this, 0);
   closeEndFunc = this->fields.closeEndFunc;
   p_closeEndFunc = &this->fields.closeEndFunc;
   v4 = closeEndFunc;
   if ( closeEndFunc )
   {
-    *p_closeEndFunc = 0LL;
-    sub_1BCAF9C(p_closeEndFunc);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v4->fields.m_target)(
-      v4->fields.original_method_info,
-      *(_QWORD *)&v4->fields.extra_arg);
+    *p_closeEndFunc = 0;
+    sub_1C2D434(p_closeEndFunc);
+    ((void (__fastcall *)(intptr_t, intptr_t))v4->fields.invoke_impl)(v4->fields.method_code, v4->fields.method);
   }
 }
 
 
-void __fastcall SelectBonusConfirmDialog__EndOpen(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
+void SelectBonusConfirmDialog__EndOpen(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
 {
   this->fields.state = 2;
 }
 
 
-void __fastcall SelectBonusConfirmDialog__ExecClickedFunc(
+void SelectBonusConfirmDialog__ExecClickedFunc(
         SelectBonusConfirmDialog_o *this,
         int32_t result,
         const MethodInfo *method)
@@ -95,72 +90,69 @@ void __fastcall SelectBonusConfirmDialog__ExecClickedFunc(
   p_clickedFunc = &this->fields.clickedFunc;
   clickedFunc = this->fields.clickedFunc;
   if ( clickedFunc )
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, _QWORD))clickedFunc->fields.m_target)(
-      clickedFunc->fields.original_method_info,
+    ((void (__fastcall *)(intptr_t, int32_t, intptr_t))clickedFunc->fields.invoke_impl)(
+      clickedFunc->fields.method_code,
       result,
-      *(_QWORD *)&clickedFunc->fields.extra_arg);
-  *p_clickedFunc = 0LL;
-  sub_1BCAF9C(p_clickedFunc);
+      clickedFunc->fields.method);
+  *p_clickedFunc = 0;
+  sub_1C2D434(p_clickedFunc);
 }
 
 
-void __fastcall SelectBonusConfirmDialog__Init(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
+void SelectBonusConfirmDialog__Init(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
 {
   this->fields.state = 0;
-  BaseDialog__Init((BaseDialog_o *)this, 0LL);
+  BaseDialog__Init((BaseDialog_o *)this, 0);
 }
 
 
-void __fastcall SelectBonusConfirmDialog__OnClickBackToChoice(
-        SelectBonusConfirmDialog_o *this,
-        const MethodInfo *method)
+void SelectBonusConfirmDialog__OnClickBackToChoice(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
 {
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4B16821 & 1) == 0 )
+  if ( (byte_4C21437 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SelectBonusConfirmDialog_OnClickBackToChoice__, method);
-    byte_4B16821 = 1;
+    sub_1C2D490(&Method_SelectBonusConfirmDialog_OnClickBackToChoice__);
+    byte_4C21437 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_SelectBonusConfirmDialog_OnClickBackToChoice__;
     if ( (*((_BYTE *)Method_SelectBonusConfirmDialog_OnClickBackToChoice__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BCB010(Method_SelectBonusConfirmDialog_OnClickBackToChoice__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_SelectBonusConfirmDialog_OnClickBackToChoice__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     SelectBonusConfirmDialog__ExecClickedFunc(this, 0, v5);
   }
 }
 
 
-void __fastcall SelectBonusConfirmDialog__OnClickOk(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
+void SelectBonusConfirmDialog__OnClickOk(SelectBonusConfirmDialog_o *this, const MethodInfo *method)
 {
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4B16820 & 1) == 0 )
+  if ( (byte_4C21436 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SelectBonusConfirmDialog_OnClickOk__, method);
-    byte_4B16820 = 1;
+    sub_1C2D490(&Method_SelectBonusConfirmDialog_OnClickOk__);
+    byte_4C21436 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_SelectBonusConfirmDialog_OnClickOk__;
     if ( (*((_BYTE *)Method_SelectBonusConfirmDialog_OnClickOk__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BCB010(Method_SelectBonusConfirmDialog_OnClickOk__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_SelectBonusConfirmDialog_OnClickOk__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     SelectBonusConfirmDialog__ExecClickedFunc(this, 1, v5);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall SelectBonusConfirmDialog__Open(
+void SelectBonusConfirmDialog__Open(
         SelectBonusConfirmDialog_o *this,
         int32_t selectedIndex,
         int32_t type,
@@ -168,33 +160,32 @@ void __fastcall SelectBonusConfirmDialog__Open(
         SelectBonusConfirmDialog_CallbackFunc_o *func,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v13; // x1
-  __int64 v14; // x2
-  __int64 v15; // x3
+  __int64 v12; // x1
+  __int64 v13; // x2
+  __int64 v14; // x3
   struct SelectBonusConfirmDialog_ViewInfoContainer_array *switchingPartList; // x23
   int max_length; // w8
-  unsigned int v18; // w24
-  SelectBonusConfirmDialog_ViewInfoContainer_o *v19; // x8
+  unsigned int v17; // w24
+  SelectBonusConfirmDialog_ViewInfoContainer_o *v18; // x8
   struct SelectBonusConfirmDialog_ViewInfo_array *switchingPart; // x25
-  int v21; // w8
-  unsigned int v22; // w26
-  SelectBonusConfirmDialog_ViewInfo_o *v23; // x8
-  System_Action_o *v24; // x20
+  int v20; // w8
+  unsigned int v21; // w26
+  SelectBonusConfirmDialog_ViewInfo_o *v22; // x8
+  System_Action_o *v23; // x20
 
-  if ( (byte_4B1681E & 1) == 0 )
+  if ( (byte_4C21434 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&selectedIndex);
-    sub_1BCAFF8(&Method_SelectBonusConfirmDialog_EndOpen__, v11);
-    byte_4B1681E = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_SelectBonusConfirmDialog_EndOpen__);
+    byte_4C21434 = 1;
   }
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_19;
-  UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
+  UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.clickedFunc = func;
-  gameObject = (UnityEngine_GameObject_o *)sub_1BCAF9C(&this->fields.clickedFunc);
+  gameObject = (UnityEngine_GameObject_o *)sub_1C2D434(&this->fields.clickedFunc);
   switchingPartList = this->fields.switchingPartList;
   this->fields.state = 1;
   if ( !switchingPartList )
@@ -202,56 +193,56 @@ void __fastcall SelectBonusConfirmDialog__Open(
   max_length = switchingPartList->max_length;
   if ( max_length >= 1 )
   {
-    v18 = 0;
+    v17 = 0;
     while ( 1 )
     {
-      if ( v18 >= max_length )
+      if ( v17 >= max_length )
         goto LABEL_20;
-      v19 = switchingPartList->m_Items[v18];
-      if ( !v19 )
+      v18 = switchingPartList->m_Items[v17];
+      if ( !v18 )
         goto LABEL_19;
-      switchingPart = v19->fields.switchingPart;
+      switchingPart = v18->fields.switchingPart;
       if ( !switchingPart )
         goto LABEL_19;
-      v21 = switchingPart->max_length;
-      if ( v21 >= 1 )
+      v20 = switchingPart->max_length;
+      if ( v20 >= 1 )
         break;
 LABEL_16:
       max_length = switchingPartList->max_length;
-      if ( (int)++v18 >= max_length )
+      if ( (int)++v17 >= max_length )
         goto LABEL_17;
     }
-    v22 = 0;
-    while ( v22 < v21 )
+    v21 = 0;
+    while ( v21 < v20 )
     {
-      v23 = switchingPart->m_Items[v22];
-      if ( !v23 )
+      v22 = switchingPart->m_Items[v21];
+      if ( !v22 )
         goto LABEL_19;
-      gameObject = v23->fields.switchingObject;
+      gameObject = v22->fields.switchingObject;
       if ( !gameObject )
         goto LABEL_19;
-      UnityEngine_GameObject__SetActive(gameObject, v23->fields.index == selectedIndex, 0LL);
-      v21 = switchingPart->max_length;
-      if ( (int)++v22 >= v21 )
+      UnityEngine_GameObject__SetActive(gameObject, v22->fields.index == selectedIndex, 0);
+      v20 = switchingPart->max_length;
+      if ( (int)++v21 >= v20 )
         goto LABEL_16;
     }
 LABEL_20:
-    sub_1BCB25C(gameObject, v13, v14, v15);
+    sub_1C2D6F4(gameObject, v12, v13, v14);
   }
 LABEL_17:
   gameObject = (UnityEngine_GameObject_o *)this->fields.itemIconComponent;
   if ( !gameObject )
 LABEL_19:
-    sub_1BCB254(gameObject, v13);
-  ItemIconComponent__SetGift_40107980((ItemIconComponent_o *)gameObject, type, objectId, -1, 0, 0LL);
-  BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 0, 0LL);
-  v24 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v24, (Il2CppObject *)this, Method_SelectBonusConfirmDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v24, 0, 0LL);
+    sub_1C2D6EC(gameObject, v12);
+  ItemIconComponent__SetGift_40700316((ItemIconComponent_o *)gameObject, type, objectId, -1, 0, 0);
+  BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 0, 0);
+  v23 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v23, (Il2CppObject *)this, Method_SelectBonusConfirmDialog_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v23, 0, 0);
 }
 
 
-void __fastcall SelectBonusConfirmDialog__add_clickedFunc(
+void SelectBonusConfirmDialog__add_clickedFunc(
         SelectBonusConfirmDialog_o *this,
         SelectBonusConfirmDialog_CallbackFunc_o *value,
         const MethodInfo *method)
@@ -266,34 +257,34 @@ void __fastcall SelectBonusConfirmDialog__add_clickedFunc(
   SelectBonusConfirmDialog_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B1681C & 1) == 0 )
+  if ( (byte_4C21432 & 1) == 0 )
   {
-    sub_1BCAFF8(&SelectBonusConfirmDialog_CallbackFunc_TypeInfo, value);
-    byte_4B1681C = 1;
+    sub_1C2D490(&SelectBonusConfirmDialog_CallbackFunc_TypeInfo);
+    byte_4C21432 = 1;
   }
   clickedFunc = this->fields.clickedFunc;
   p_clickedFunc = &this->fields.clickedFunc;
   v6 = (System_Delegate_o *)clickedFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0LL);
+    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0);
     if ( v8 )
     {
       if ( (SelectBonusConfirmDialog_CallbackFunc_c *)v8->klass != SelectBonusConfirmDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C05088(p_clickedFunc, v8, v6);
+    v9 = sub_1C676E8(p_clickedFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (SelectBonusConfirmDialog_o *)sub_1BCB514(v8);
+  v11 = (SelectBonusConfirmDialog_o *)sub_1C2D9AC(v8);
   SelectBonusConfirmDialog__remove_clickedFunc(v11, v12, v13);
 }
 
 
-void __fastcall SelectBonusConfirmDialog__remove_clickedFunc(
+void SelectBonusConfirmDialog__remove_clickedFunc(
         SelectBonusConfirmDialog_o *this,
         SelectBonusConfirmDialog_CallbackFunc_o *value,
         const MethodInfo *method)
@@ -307,132 +298,126 @@ void __fastcall SelectBonusConfirmDialog__remove_clickedFunc(
   SelectBonusConfirmDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B1681D & 1) == 0 )
+  if ( (byte_4C21433 & 1) == 0 )
   {
-    sub_1BCAFF8(&SelectBonusConfirmDialog_CallbackFunc_TypeInfo, value);
-    byte_4B1681D = 1;
+    sub_1C2D490(&SelectBonusConfirmDialog_CallbackFunc_TypeInfo);
+    byte_4C21433 = 1;
   }
   clickedFunc = this->fields.clickedFunc;
   p_clickedFunc = &this->fields.clickedFunc;
   v6 = (System_Delegate_o *)clickedFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0LL);
+    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0);
     if ( v8 )
     {
       if ( (SelectBonusConfirmDialog_CallbackFunc_c *)v8->klass != SelectBonusConfirmDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C05088(p_clickedFunc, v8, v6);
+    v9 = sub_1C676E8(p_clickedFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (SelectBonusConfirmDialog_o *)sub_1BCB514(v8);
+  v11 = (SelectBonusConfirmDialog_o *)sub_1C2D9AC(v8);
   SelectBonusConfirmDialog__CheckSerializeFieldAssertion(v11, v12);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall SelectBonusConfirmDialog_CallbackFunc___ctor(
+void SelectBonusConfirmDialog_CallbackFunc___ctor(
         SelectBonusConfirmDialog_CallbackFunc_o *this,
         Il2CppObject *object,
         intptr_t method,
         const MethodInfo *a4)
 {
-  __int64 v4; // x8
-  __int64 v6; // x21
+  intptr_t v4; // x8
   int v8; // w22
-  struct System_Reflection_MethodInfo_o *v9; // x9
+  Il2CppObject *m_target; // x9
   __int64 v10; // x0
 
-  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
-  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v6 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v4;
-  *(_QWORD *)&this->fields.method = object;
-  sub_1BCAF9C(&this->fields.method);
-  v8 = *(unsigned __int8 *)(v6 + 82);
-  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BCB0B8(v6) & 1) == 0 )
+  v4 = *(_QWORD *)(method + 8);
+  this->fields.method = method;
+  this->fields.method_ptr = v4;
+  this->fields.m_target = object;
+  sub_1C2D434(&this->fields.m_target);
+  v8 = *(unsigned __int8 *)(method + 82);
+  this->fields.method_code = (intptr_t)this;
+  if ( (sub_1C2D550(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1BCB270(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BCB120(v10, 0LL);
+      v10 = sub_1C2D708(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C2D5B8(v10, 0);
     }
     goto LABEL_5;
   }
   if ( v8 != 1 )
   {
 LABEL_5:
-    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
-    this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-    this->fields.original_method_info = v9;
+    m_target = this->fields.m_target;
+    this->fields.invoke_impl = this->fields.method_ptr;
+    this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A0C884;
+  this->fields.invoke_impl = (intptr_t)sub_1A690E4;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A0C83C;
+  this->fields.extra_arg = (intptr_t)sub_1A6909C;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_IAsyncResult_o *__fastcall SelectBonusConfirmDialog_CallbackFunc__BeginInvoke(
+System_IAsyncResult_o *SelectBonusConfirmDialog_CallbackFunc__BeginInvoke(
         SelectBonusConfirmDialog_CallbackFunc_o *this,
         int32_t result,
         System_AsyncCallback_o *callback,
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v9[2]; // [xsp+8h] [xbp-48h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = result;
-  if ( (byte_4B16823 & 1) == 0 )
+  if ( (byte_4C21439 & 1) == 0 )
   {
-    sub_1BCAFF8(&SelectBonusConfirmDialog_ResultClicked_TypeInfo, *(_QWORD *)&result);
-    byte_4B16823 = 1;
+    sub_1C2D490(&SelectBonusConfirmDialog_ResultClicked_TypeInfo);
+    byte_4C21439 = 1;
   }
-  v9[1] = 0LL;
+  v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(SelectBonusConfirmDialog_ResultClicked_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1BCAFAC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C2D444(this, v9, callback, object);
 }
 
 
-void __fastcall SelectBonusConfirmDialog_CallbackFunc__EndInvoke(
+void SelectBonusConfirmDialog_CallbackFunc__EndInvoke(
         SelectBonusConfirmDialog_CallbackFunc_o *this,
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BCAFB0(result, 0LL, method);
+  sub_1C2D448(result, 0, method);
 }
 
 
-void __fastcall SelectBonusConfirmDialog_CallbackFunc__Invoke(
+void SelectBonusConfirmDialog_CallbackFunc__Invoke(
         SelectBonusConfirmDialog_CallbackFunc_o *this,
         int32_t result,
         const MethodInfo *method)
 {
-  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, _QWORD))this->fields.m_target)(
-    this->fields.original_method_info,
+  ((void (__fastcall *)(intptr_t, int32_t, intptr_t))this->fields.invoke_impl)(
+    this->fields.method_code,
     result,
-    *(_QWORD *)&this->fields.extra_arg);
+    this->fields.method);
 }
 
 
-void __fastcall SelectBonusConfirmDialog_ViewInfo___ctor(
-        SelectBonusConfirmDialog_ViewInfo_o *this,
-        const MethodInfo *method)
+void SelectBonusConfirmDialog_ViewInfo___ctor(SelectBonusConfirmDialog_ViewInfo_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall SelectBonusConfirmDialog_ViewInfoContainer___ctor(
+void SelectBonusConfirmDialog_ViewInfoContainer___ctor(
         SelectBonusConfirmDialog_ViewInfoContainer_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }

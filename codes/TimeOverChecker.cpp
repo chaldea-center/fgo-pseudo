@@ -1,53 +1,41 @@
-void __fastcall TimeOverChecker___ctor(
+void TimeOverChecker___ctor(
         TimeOverChecker_o *this,
         System_Action_o *onFinish,
         UnityEngine_MonoBehaviour_o *monoBehaviour,
         const MethodInfo *method)
 {
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.monoBehaviour = monoBehaviour;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)monoBehaviour, v7, v8);
+  sub_1C2D434(&this->fields);
   this->fields.onFinish = onFinish;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.onFinish, (int32_t)onFinish, v9, v10);
+  sub_1C2D434(&this->fields.onFinish);
 }
 
 
-System_Collections_IEnumerator_o *__fastcall TimeOverChecker__CheckTimeOver(
-        TimeOverChecker_o *this,
-        const MethodInfo *method)
+System_Collections_IEnumerator_o *TimeOverChecker__CheckTimeOver(TimeOverChecker_o *this, const MethodInfo *method)
 {
   __int64 v3; // x20
-  int32_t v4; // w2
-  const MethodInfo *v5; // x3
 
-  if ( (byte_4B206CA & 1) == 0 )
+  if ( (byte_4C21486 & 1) == 0 )
   {
-    sub_1BCAFF8(&TimeOverChecker__CheckTimeOver_d__7_TypeInfo, method);
-    byte_4B206CA = 1;
+    sub_1C2D490(&TimeOverChecker__CheckTimeOver_d__7_TypeInfo);
+    byte_4C21486 = 1;
   }
-  v3 = sub_1BCB244(TimeOverChecker__CheckTimeOver_d__7_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  v3 = sub_1C2D6DC(TimeOverChecker__CheckTimeOver_d__7_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C2D434(v3 + 32);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
 
-void __fastcall TimeOverChecker__Start(TimeOverChecker_o *this, int64_t finishedAt, const MethodInfo *method)
+void TimeOverChecker__Start(TimeOverChecker_o *this, int64_t finishedAt, const MethodInfo *method)
 {
   __int64 v4; // x1
   System_Collections_IEnumerator_o *monoBehaviour; // x0
   const MethodInfo *v6; // x1
   UnityEngine_MonoBehaviour_o *v7; // x20
-  struct UnityEngine_Coroutine_o *started; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
 
   this->fields.finishedAt = finishedAt;
   TimeOverChecker__Stop(this, (const MethodInfo *)finishedAt);
@@ -56,81 +44,72 @@ void __fastcall TimeOverChecker__Start(TimeOverChecker_o *this, int64_t finished
     monoBehaviour = (System_Collections_IEnumerator_o *)this->fields.monoBehaviour;
     if ( !monoBehaviour )
       goto LABEL_7;
-    if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)monoBehaviour, 0LL) )
+    if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)monoBehaviour, 0) )
     {
       v7 = this->fields.monoBehaviour;
       monoBehaviour = TimeOverChecker__CheckTimeOver(this, v6);
       if ( v7 )
       {
-        started = UnityEngine_MonoBehaviour__StartCoroutine_70121648(v7, monoBehaviour, 0LL);
-        this->fields.coroutine = started;
-        sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.coroutine, (int32_t)started, v9, v10);
+        this->fields.coroutine = UnityEngine_MonoBehaviour__StartCoroutine_71149276(v7, monoBehaviour, 0);
+        sub_1C2D434(&this->fields.coroutine);
         return;
       }
 LABEL_7:
-      sub_1BCB254(monoBehaviour, v4);
+      sub_1C2D6EC(monoBehaviour, v4);
     }
   }
 }
 
 
-void __fastcall TimeOverChecker__Stop(TimeOverChecker_o *this, const MethodInfo *method)
+void TimeOverChecker__Stop(TimeOverChecker_o *this, const MethodInfo *method)
 {
   UnityEngine_Coroutine_o *coroutine; // x1
-  CGThumbnailListItem_o *p_coroutine; // x19
+  struct UnityEngine_Coroutine_o **p_coroutine; // x19
   UnityEngine_MonoBehaviour_o *monoBehaviour; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
 
-  p_coroutine = (CGThumbnailListItem_o *)&this->fields.coroutine;
+  p_coroutine = &this->fields.coroutine;
   coroutine = this->fields.coroutine;
   if ( coroutine )
   {
     monoBehaviour = this->fields.monoBehaviour;
     if ( !monoBehaviour )
-      sub_1BCB254(0LL, coroutine);
-    UnityEngine_MonoBehaviour__StopCoroutine_70122268(monoBehaviour, coroutine, 0LL);
-    p_coroutine->klass = 0LL;
-    sub_1BCAF9C(p_coroutine, 0, v5, v6);
+      sub_1C2D6EC(0, coroutine);
+    UnityEngine_MonoBehaviour__StopCoroutine_71149896(monoBehaviour, coroutine, 0);
+    *p_coroutine = 0;
+    sub_1C2D434(p_coroutine);
   }
 }
 
 
-void __fastcall TimeOverChecker__CheckTimeOver_d__7___ctor(
+void TimeOverChecker__CheckTimeOver_d__7___ctor(
         TimeOverChecker__CheckTimeOver_d__7_o *this,
         int32_t 1__state,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.__1__state = 1__state;
 }
 
 
-bool __fastcall TimeOverChecker__CheckTimeOver_d__7__MoveNext(
+bool TimeOverChecker__CheckTimeOver_d__7__MoveNext(
         TimeOverChecker__CheckTimeOver_d__7_o *this,
         const MethodInfo *method)
 {
   TimeOverChecker__CheckTimeOver_d__7_o *v2; // x19
-  __int64 v3; // x1
   int32_t _1__state; // w8
   struct TimeOverChecker_o *_4__this; // x21
-  UnityEngine_WaitForSeconds_o *v6; // x20
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  UnityEngine_WaitForSeconds_o *v5; // x20
   __int64 finishedAt; // x20
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
   struct System_Action_o *onFinish; // x8
   bool result; // w0
-  Il2CppObject *waitTime_5__2; // x1
-  CGThumbnailListItem_o *p__2__current; // x19
+  Il2CppObject **p__2__current; // x19
 
   v2 = this;
-  if ( (byte_4B206CB & 1) == 0 )
+  if ( (byte_4C21487 & 1) == 0 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
-    this = (TimeOverChecker__CheckTimeOver_d__7_o *)sub_1BCAFF8(&UnityEngine_WaitForSeconds_TypeInfo, v3);
-    byte_4B206CB = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    this = (TimeOverChecker__CheckTimeOver_d__7_o *)sub_1C2D490(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4C21487 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -149,39 +128,38 @@ bool __fastcall TimeOverChecker__CheckTimeOver_d__7__MoveNext(
       goto LABEL_16;
     if ( !_4__this->fields.onFinish )
       return 0;
-    v6 = (UnityEngine_WaitForSeconds_o *)sub_1BCB244(UnityEngine_WaitForSeconds_TypeInfo);
-    UnityEngine_WaitForSeconds___ctor(v6, 1.0, 0LL);
-    v2->fields._waitTime_5__2 = v6;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&v2->fields._waitTime_5__2, (int32_t)v6, v7, v8);
+    v5 = (UnityEngine_WaitForSeconds_o *)sub_1C2D6DC(UnityEngine_WaitForSeconds_TypeInfo);
+    UnityEngine_WaitForSeconds___ctor(v5, 1.0, 0);
+    v2->fields._waitTime_5__2 = v5;
+    sub_1C2D434(&v2->fields._waitTime_5__2);
   }
   finishedAt = _4__this->fields.finishedAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  this = (TimeOverChecker__CheckTimeOver_d__7_o *)NetworkManager__getTime(0LL);
+  this = (TimeOverChecker__CheckTimeOver_d__7_o *)NetworkManager__getTime(0);
   if ( finishedAt < (__int64)this )
   {
     onFinish = _4__this->fields.onFinish;
     if ( onFinish )
     {
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))onFinish->fields.m_target)(
-        onFinish->fields.original_method_info,
-        *(_QWORD *)&onFinish->fields.extra_arg);
+      ((void (__fastcall *)(intptr_t, intptr_t))onFinish->fields.invoke_impl)(
+        onFinish->fields.method_code,
+        onFinish->fields.method);
       return 0;
     }
 LABEL_16:
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   }
-  waitTime_5__2 = (Il2CppObject *)v2->fields._waitTime_5__2;
-  v2->fields.__2__current = waitTime_5__2;
-  p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-  sub_1BCAF9C(p__2__current, (int32_t)waitTime_5__2, v10, v11);
+  v2->fields.__2__current = (Il2CppObject *)v2->fields._waitTime_5__2;
+  p__2__current = &v2->fields.__2__current;
+  sub_1C2D434(p__2__current);
   result = 1;
-  LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+  *((_DWORD *)p__2__current - 2) = 1;
   return result;
 }
 
 
-Il2CppObject *__fastcall TimeOverChecker__CheckTimeOver_d__7__System_Collections_Generic_IEnumerator_System_Object__get_Current(
+Il2CppObject *TimeOverChecker__CheckTimeOver_d__7__System_Collections_Generic_IEnumerator_System_Object__get_Current(
         TimeOverChecker__CheckTimeOver_d__7_o *this,
         const MethodInfo *method)
 {
@@ -189,7 +167,7 @@ Il2CppObject *__fastcall TimeOverChecker__CheckTimeOver_d__7__System_Collections
 }
 
 
-void __fastcall __noreturn TimeOverChecker__CheckTimeOver_d__7__System_Collections_IEnumerator_Reset(
+void __noreturn TimeOverChecker__CheckTimeOver_d__7__System_Collections_IEnumerator_Reset(
         TimeOverChecker__CheckTimeOver_d__7_o *this,
         const MethodInfo *method)
 {
@@ -197,15 +175,15 @@ void __fastcall __noreturn TimeOverChecker__CheckTimeOver_d__7__System_Collectio
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BCB00C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BCB244(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BCB00C(&Method_TimeOverChecker__CheckTimeOver_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1BCB120(v3, v4);
+  v2 = sub_1C2D4A4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C2D6DC(v2);
+  System_NotSupportedException___ctor(v3, 0);
+  v4 = sub_1C2D4A4(&Method_TimeOverChecker__CheckTimeOver_d__7_System_Collections_IEnumerator_Reset__);
+  sub_1C2D5B8(v3, v4);
 }
 
 
-Il2CppObject *__fastcall TimeOverChecker__CheckTimeOver_d__7__System_Collections_IEnumerator_get_Current(
+Il2CppObject *TimeOverChecker__CheckTimeOver_d__7__System_Collections_IEnumerator_get_Current(
         TimeOverChecker__CheckTimeOver_d__7_o *this,
         const MethodInfo *method)
 {
@@ -213,7 +191,7 @@ Il2CppObject *__fastcall TimeOverChecker__CheckTimeOver_d__7__System_Collections
 }
 
 
-void __fastcall TimeOverChecker__CheckTimeOver_d__7__System_IDisposable_Dispose(
+void TimeOverChecker__CheckTimeOver_d__7__System_IDisposable_Dispose(
         TimeOverChecker__CheckTimeOver_d__7_o *this,
         const MethodInfo *method)
 {

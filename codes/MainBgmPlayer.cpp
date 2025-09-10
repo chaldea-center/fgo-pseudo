@@ -1,41 +1,40 @@
-void __fastcall MainBgmPlayer___ctor(MainBgmPlayer_o *this, const MethodInfo *method)
+void MainBgmPlayer___ctor(MainBgmPlayer_o *this, const MethodInfo *method)
 {
   this->fields.bgmFadeTime = -1.0;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-BgmPlayArgs_o *__fastcall MainBgmPlayer__ExportPlayArgs(MainBgmPlayer_o *this, const MethodInfo *method)
+BgmPlayArgs_o *MainBgmPlayer__ExportPlayArgs(MainBgmPlayer_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   System_String_o *bgmName; // x19
   float bgmVolume; // s0
+  System_Nullable_float__o p_volume; // x0
   const MethodInfo *v6; // x1
   int32_t PlayTime; // w21
   BgmPlayArgs_o *v8; // x0
-  BgmPlayArgs_o *v9; // x20
-  const MethodInfo *v10; // x4
+  System_Nullable_float__o v9; // x2
+  BgmPlayArgs_o *v10; // x20
+  const MethodInfo *v11; // x4
   System_Nullable_float__o volume; // [xsp+8h] [xbp-28h] BYREF
-  System_Nullable_float__o p_volume; // 0:x0.8
-  System_Nullable_float__o v14; // 0:x2.8
 
-  if ( (byte_4B1BBA4 & 1) == 0 )
+  if ( (byte_4C2693B & 1) == 0 )
   {
-    sub_1BCAFF8(&MainBgmPlayArgs_TypeInfo, method);
-    sub_1BCAFF8(&Method_System_Nullable_float___ctor__, v3);
-    byte_4B1BBA4 = 1;
+    sub_1C2D490(&MainBgmPlayArgs_TypeInfo);
+    sub_1C2D490(&Method_System_Nullable_float___ctor__);
+    byte_4C2693B = 1;
   }
   bgmName = this->fields.bgmName;
   if ( !bgmName )
-    return 0LL;
+    return 0;
   bgmVolume = this->fields.bgmVolume;
   p_volume = (System_Nullable_float__o)&volume;
-  volume = 0LL;
-  System_Nullable_float____ctor(p_volume, bgmVolume, (const MethodInfo_37DB04C *)Method_System_Nullable_float___ctor__);
+  volume = 0;
+  System_Nullable_float____ctor(p_volume, bgmVolume, (const MethodInfo_38B1A04 *)Method_System_Nullable_float___ctor__);
   PlayTime = BgmPlayerBase__get_PlayTime((BgmPlayerBase_o *)this, v6);
-  v8 = (BgmPlayArgs_o *)sub_1BCB244(MainBgmPlayArgs_TypeInfo);
-  v14 = volume;
-  v9 = v8;
-  BgmPlayArgs___ctor(v8, bgmName, v14, 0.0, PlayTime, v10);
-  return v9;
+  v8 = (BgmPlayArgs_o *)sub_1C2D6DC(MainBgmPlayArgs_TypeInfo);
+  v9 = volume;
+  v10 = v8;
+  BgmPlayArgs___ctor(v8, bgmName, v9, 0.0, PlayTime, v11);
+  return v10;
 }

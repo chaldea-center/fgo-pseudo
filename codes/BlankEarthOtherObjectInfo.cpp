@@ -1,22 +1,22 @@
-void __fastcall BlankEarthOtherObjectInfo___ctor(BlankEarthOtherObjectInfo_o *this, const MethodInfo *method)
+void BlankEarthOtherObjectInfo___ctor(BlankEarthOtherObjectInfo_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-int32_t __fastcall BlankEarthOtherObjectInfo__get_ObjectId(BlankEarthOtherObjectInfo_o *this, const MethodInfo *method)
+int32_t BlankEarthOtherObjectInfo__get_ObjectId(BlankEarthOtherObjectInfo_o *this, const MethodInfo *method)
 {
   return this->fields._ObjectId_k__BackingField;
 }
 
 
-int32_t __fastcall BlankEarthOtherObjectInfo__get_dispType(BlankEarthOtherObjectInfo_o *this, const MethodInfo *method)
+int32_t BlankEarthOtherObjectInfo__get_dispType(BlankEarthOtherObjectInfo_o *this, const MethodInfo *method)
 {
   return this->fields._dispType_k__BackingField;
 }
 
 
-void __fastcall BlankEarthOtherObjectInfo__set_ObjectId(
+void BlankEarthOtherObjectInfo__set_ObjectId(
         BlankEarthOtherObjectInfo_o *this,
         int32_t value,
         const MethodInfo *method)
@@ -25,7 +25,7 @@ void __fastcall BlankEarthOtherObjectInfo__set_ObjectId(
 }
 
 
-void __fastcall BlankEarthOtherObjectInfo__set_dispType(
+void BlankEarthOtherObjectInfo__set_dispType(
         BlankEarthOtherObjectInfo_o *this,
         int32_t value,
         const MethodInfo *method)

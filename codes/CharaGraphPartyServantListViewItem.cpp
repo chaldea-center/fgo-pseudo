@@ -1,5 +1,4 @@
-// local variable allocation has failed, the output may be wrong!
-void __fastcall CharaGraphPartyServantListViewItem___ctor(
+void CharaGraphPartyServantListViewItem___ctor(
         CharaGraphPartyServantListViewItem_o *this,
         int32_t index,
         CharaGraphListViewPatternBase_o *listViewPattern,
@@ -7,20 +6,19 @@ void __fastcall CharaGraphPartyServantListViewItem___ctor(
         System_Int64_array *partyUserServantList,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x0
-  __int64 v13; // x1
+  __int64 v11; // x0
+  __int64 v12; // x1
   struct UserServantEntity_o *UserServantEntity_k__BackingField; // x8
-  __int128 v15; // q1
-  int64_t v16; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+0h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+20h] [xbp-60h]
+  __int128 v14; // q1
+  int64_t v15; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v16; // [xsp+0h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+20h] [xbp-60h]
 
-  if ( (byte_4B1B82C & 1) == 0 )
+  if ( (byte_4C265CE & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Array_IndexOf_long___, *(_QWORD *)&index);
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v11);
-    byte_4B1B82C = 1;
+    sub_1C2D490(&Method_System_Array_IndexOf_long___);
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C265CE = 1;
   }
   CharaGraphServantListViewItem___ctor(
     (CharaGraphServantListViewItem_o *)this,
@@ -30,22 +28,22 @@ void __fastcall CharaGraphPartyServantListViewItem___ctor(
     (const MethodInfo *)partyUserServantList);
   UserServantEntity_k__BackingField = this->fields._UserServantEntity_k__BackingField;
   if ( !UserServantEntity_k__BackingField )
-    sub_1BCB254(v12, v13);
-  v15 = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.fakeValue;
-  *(_OWORD *)&v18.fields.currentCryptoKey = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v18.fields.fakeValue = v15;
+    sub_1C2D6EC(v11, v12);
+  v14 = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.fakeValue;
+  *(_OWORD *)&v17.fields.currentCryptoKey = *(_OWORD *)&UserServantEntity_k__BackingField->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v17.fields.fakeValue = v14;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v17 = v18;
-  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v17, 0LL);
+  v16 = v17;
+  v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48831392(&v16, 0);
   this->fields._PartyIndex_k__BackingField = System_Array__IndexOf_long_(
                                                partyUserServantList,
-                                               v16,
-                                               (const MethodInfo_3119148 *)Method_System_Array_IndexOf_long___);
+                                               v15,
+                                               (const MethodInfo_31D5AE0 *)Method_System_Array_IndexOf_long___);
 }
 
 
-bool __fastcall CharaGraphPartyServantListViewItem__get_IsParty(
+bool CharaGraphPartyServantListViewItem__get_IsParty(
         CharaGraphPartyServantListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -53,7 +51,7 @@ bool __fastcall CharaGraphPartyServantListViewItem__get_IsParty(
 }
 
 
-int32_t __fastcall CharaGraphPartyServantListViewItem__get_PartyIndex(
+int32_t CharaGraphPartyServantListViewItem__get_PartyIndex(
         CharaGraphPartyServantListViewItem_o *this,
         const MethodInfo *method)
 {

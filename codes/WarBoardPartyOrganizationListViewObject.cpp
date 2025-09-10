@@ -1,12 +1,12 @@
-void __fastcall WarBoardPartyOrganizationListViewObject___ctor(
+void WarBoardPartyOrganizationListViewObject___ctor(
         WarBoardPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-PartyOrganizationListViewItem_o *__fastcall WarBoardPartyOrganizationListViewObject__GetItem(
+PartyOrganizationListViewItem_o *WarBoardPartyOrganizationListViewObject__GetItem(
         WarBoardPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -14,7 +14,7 @@ PartyOrganizationListViewItem_o *__fastcall WarBoardPartyOrganizationListViewObj
 }
 
 
-void __fastcall WarBoardPartyOrganizationListViewObject__Init(
+void WarBoardPartyOrganizationListViewObject__Init(
         WarBoardPartyOrganizationListViewObject_o *this,
         WarBoardPartyOrganizationMenu_OnTapPartyMemberEvent_o *onTapEvent,
         const MethodInfo *method)
@@ -25,27 +25,27 @@ void __fastcall WarBoardPartyOrganizationListViewObject__Init(
   const MethodInfo *v8; // x3
   WarBoardPartyOrganizationListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4B1A1C5 & 1) == 0 )
+  if ( (byte_4C24F49 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, onTapEvent);
-    byte_4B1A1C5 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C24F49 = 1;
   }
   this->fields.onTapEvent = onTapEvent;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, (int32_t)method, v3);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_1BCB254(0LL, v7);
+      sub_1C2D6EC(0, v7);
     WarBoardPartyOrganizationListViewItemDraw__SetItem(v9, this->fields.listViewItem, 3, v8);
   }
 }
 
 
-void __fastcall WarBoardPartyOrganizationListViewObject__OnLongTapServant(
+void WarBoardPartyOrganizationListViewObject__OnLongTapServant(
         WarBoardPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -55,17 +55,17 @@ void __fastcall WarBoardPartyOrganizationListViewObject__OnLongTapServant(
   {
     onTapEvent = this->fields.onTapEvent;
     if ( onTapEvent )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, struct PartyOrganizationListViewItem_o *, _QWORD, __int64, _QWORD))onTapEvent->fields.m_target)(
-        onTapEvent->fields.original_method_info,
+      ((void (__fastcall *)(intptr_t, struct PartyOrganizationListViewItem_o *, _QWORD, __int64, intptr_t))onTapEvent->fields.invoke_impl)(
+        onTapEvent->fields.method_code,
         this->fields.listViewItem,
-        0LL,
-        1LL,
-        *(_QWORD *)&onTapEvent->fields.extra_arg);
+        0,
+        1,
+        onTapEvent->fields.method);
   }
 }
 
 
-void __fastcall WarBoardPartyOrganizationListViewObject__OnLongTapServantEquip(
+void WarBoardPartyOrganizationListViewObject__OnLongTapServantEquip(
         WarBoardPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -75,17 +75,17 @@ void __fastcall WarBoardPartyOrganizationListViewObject__OnLongTapServantEquip(
   {
     onTapEvent = this->fields.onTapEvent;
     if ( onTapEvent )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, struct PartyOrganizationListViewItem_o *, __int64, __int64, _QWORD))onTapEvent->fields.m_target)(
-        onTapEvent->fields.original_method_info,
+      ((void (__fastcall *)(intptr_t, struct PartyOrganizationListViewItem_o *, __int64, __int64, intptr_t))onTapEvent->fields.invoke_impl)(
+        onTapEvent->fields.method_code,
         this->fields.listViewItem,
-        1LL,
-        1LL,
-        *(_QWORD *)&onTapEvent->fields.extra_arg);
+        1,
+        1,
+        onTapEvent->fields.method);
   }
 }
 
 
-void __fastcall WarBoardPartyOrganizationListViewObject__OnTapEvent(
+void WarBoardPartyOrganizationListViewObject__OnTapEvent(
         WarBoardPartyOrganizationListViewObject_o *this,
         bool isServantEquip,
         bool isLongTap,
@@ -97,17 +97,17 @@ void __fastcall WarBoardPartyOrganizationListViewObject__OnTapEvent(
   {
     onTapEvent = this->fields.onTapEvent;
     if ( onTapEvent )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, struct PartyOrganizationListViewItem_o *, bool, bool, _QWORD))onTapEvent->fields.m_target)(
-        onTapEvent->fields.original_method_info,
+      ((void (__fastcall *)(intptr_t, struct PartyOrganizationListViewItem_o *, bool, bool, intptr_t))onTapEvent->fields.invoke_impl)(
+        onTapEvent->fields.method_code,
         this->fields.listViewItem,
         isServantEquip,
         isLongTap,
-        *(_QWORD *)&onTapEvent->fields.extra_arg);
+        onTapEvent->fields.method);
   }
 }
 
 
-void __fastcall WarBoardPartyOrganizationListViewObject__OnTapServant(
+void WarBoardPartyOrganizationListViewObject__OnTapServant(
         WarBoardPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -117,17 +117,17 @@ void __fastcall WarBoardPartyOrganizationListViewObject__OnTapServant(
   {
     onTapEvent = this->fields.onTapEvent;
     if ( onTapEvent )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, struct PartyOrganizationListViewItem_o *, _QWORD, _QWORD, _QWORD))onTapEvent->fields.m_target)(
-        onTapEvent->fields.original_method_info,
+      ((void (__fastcall *)(intptr_t, struct PartyOrganizationListViewItem_o *, _QWORD, _QWORD, intptr_t))onTapEvent->fields.invoke_impl)(
+        onTapEvent->fields.method_code,
         this->fields.listViewItem,
-        0LL,
-        0LL,
-        *(_QWORD *)&onTapEvent->fields.extra_arg);
+        0,
+        0,
+        onTapEvent->fields.method);
   }
 }
 
 
-void __fastcall WarBoardPartyOrganizationListViewObject__OnTapServantEquip(
+void WarBoardPartyOrganizationListViewObject__OnTapServantEquip(
         WarBoardPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -137,17 +137,17 @@ void __fastcall WarBoardPartyOrganizationListViewObject__OnTapServantEquip(
   {
     onTapEvent = this->fields.onTapEvent;
     if ( onTapEvent )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, struct PartyOrganizationListViewItem_o *, __int64, _QWORD, _QWORD))onTapEvent->fields.m_target)(
-        onTapEvent->fields.original_method_info,
+      ((void (__fastcall *)(intptr_t, struct PartyOrganizationListViewItem_o *, __int64, _QWORD, intptr_t))onTapEvent->fields.invoke_impl)(
+        onTapEvent->fields.method_code,
         this->fields.listViewItem,
-        1LL,
-        0LL,
-        *(_QWORD *)&onTapEvent->fields.extra_arg);
+        1,
+        0,
+        onTapEvent->fields.method);
   }
 }
 
 
-void __fastcall WarBoardPartyOrganizationListViewObject__SetInput(
+void WarBoardPartyOrganizationListViewObject__SetInput(
         WarBoardPartyOrganizationListViewObject_o *this,
         bool isEnableInput,
         const MethodInfo *method)
@@ -156,7 +156,7 @@ void __fastcall WarBoardPartyOrganizationListViewObject__SetInput(
 }
 
 
-void __fastcall WarBoardPartyOrganizationListViewObject__SetItem(
+void WarBoardPartyOrganizationListViewObject__SetItem(
         WarBoardPartyOrganizationListViewObject_o *this,
         PartyOrganizationListViewItem_o *item,
         const MethodInfo *method)
@@ -164,5 +164,5 @@ void __fastcall WarBoardPartyOrganizationListViewObject__SetItem(
   const MethodInfo *v3; // x3
 
   this->fields.listViewItem = item;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)method, v3);
 }

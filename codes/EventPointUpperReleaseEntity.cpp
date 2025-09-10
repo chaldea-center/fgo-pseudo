@@ -1,39 +1,38 @@
-void __fastcall EventPointUpperReleaseEntity___ctor(EventPointUpperReleaseEntity_o *this, const MethodInfo *method)
+void EventPointUpperReleaseEntity___ctor(EventPointUpperReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C5B1 & 1) == 0 )
+  if ( (byte_4C2735F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1C5B1 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C2735F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall EventPointUpperReleaseEntity__CreatePK(
+System_String_o *EventPointUpperReleaseEntity__CreatePK(
         int32_t version,
         int32_t eventPointUpperId,
         int32_t priority,
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4B1C5B0 & 1) == 0 )
+  if ( (byte_4C2735E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&eventPointUpperId);
-    byte_4B1C5B0 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_4C2735E = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            version,
            eventPointUpperId,
            priority,
            idx,
-           (const MethodInfo_301957C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_30CD428 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
-System_String_o *__fastcall EventPointUpperReleaseEntity__CreatePrimaryKey(
+System_String_o *EventPointUpperReleaseEntity__CreatePrimaryKey(
         EventPointUpperReleaseEntity_o *this,
         const MethodInfo *method)
 {
@@ -48,9 +47,7 @@ System_String_o *__fastcall EventPointUpperReleaseEntity__CreatePrimaryKey(
 }
 
 
-int32_t __fastcall EventPointUpperReleaseEntity__get_CondType(
-        EventPointUpperReleaseEntity_o *this,
-        const MethodInfo *method)
+int32_t EventPointUpperReleaseEntity__get_CondType(EventPointUpperReleaseEntity_o *this, const MethodInfo *method)
 {
   return this->fields.condType;
 }

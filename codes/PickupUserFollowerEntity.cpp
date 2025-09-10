@@ -1,26 +1,24 @@
-void __fastcall PickupUserFollowerEntity___ctor(PickupUserFollowerEntity_o *this, const MethodInfo *method)
+void PickupUserFollowerEntity___ctor(PickupUserFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CAAC & 1) == 0 )
+  if ( (byte_4C2787F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_long___ctor__, method);
-    byte_4B1CAAC = 1;
+    sub_1C2D490(&Method_DataEntityBase_long___ctor__);
+    byte_4C2787F = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_32C5964 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_33858FC *)Method_DataEntityBase_long___ctor__);
 }
 
 
-int64_t __fastcall PickupUserFollowerEntity__CreatePrimaryKey(
-        PickupUserFollowerEntity_o *this,
-        const MethodInfo *method)
+int64_t PickupUserFollowerEntity__CreatePrimaryKey(PickupUserFollowerEntity_o *this, const MethodInfo *method)
 {
   return this->fields.userId;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-FollowerInfo_o *__fastcall PickupUserFollowerEntity__getFollowerInfo(
+FollowerInfo_o *PickupUserFollowerEntity__getFollowerInfo(
         PickupUserFollowerEntity_o *this,
         int64_t followerId,
         int32_t followerType,
@@ -33,26 +31,26 @@ FollowerInfo_o *__fastcall PickupUserFollowerEntity__getFollowerInfo(
 
   followerInfo = this->fields.followerInfo;
   if ( !followerInfo )
-    return 0LL;
+    return 0;
   max_length = followerInfo->max_length;
   if ( max_length < 1 )
-    return 0LL;
-  v6 = 0LL;
+    return 0;
+  v6 = 0;
   m_Items = followerInfo->m_Items;
   while ( 1 )
   {
     if ( (unsigned int)v6 >= max_length )
-      sub_1BCB25C(this, followerId, *(_QWORD *)&followerType);
+      sub_1C2D6F4(this, followerId, *(_QWORD *)&followerType);
     this = (PickupUserFollowerEntity_o *)m_Items[v6];
     if ( !this )
-      sub_1BCB254(0LL, followerId);
+      sub_1C2D6EC(0, followerId);
     if ( this->fields.followerInfo == (struct FollowerInfo_array *)followerId
       && (followerType == -1 || HIDWORD(this->fields.expireAt) == followerType) )
     {
       break;
     }
     if ( (int)++v6 >= max_length )
-      return 0LL;
+      return 0;
   }
   return (FollowerInfo_o *)this;
 }

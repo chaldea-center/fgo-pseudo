@@ -1,37 +1,31 @@
-void __fastcall UserServantAppendPassiveSkillEntity___ctor(
-        UserServantAppendPassiveSkillEntity_o *this,
-        const MethodInfo *method)
+void UserServantAppendPassiveSkillEntity___ctor(UserServantAppendPassiveSkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D41F & 1) == 0 )
+  if ( (byte_4C28219 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D41F = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C28219 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall UserServantAppendPassiveSkillEntity__CreatePK(
-        int64_t userId,
-        int32_t svtId,
-        const MethodInfo *method)
+System_String_o *UserServantAppendPassiveSkillEntity__CreatePK(int64_t userId, int32_t svtId, const MethodInfo *method)
 {
-  if ( (byte_4B1D41E & 1) == 0 )
+  if ( (byte_4C28218 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&svtId);
-    byte_4B1D41E = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4C28218 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            svtId,
-           (const MethodInfo_3018D34 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_30CCBE0 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
-System_String_o *__fastcall UserServantAppendPassiveSkillEntity__CreatePrimaryKey(
+System_String_o *UserServantAppendPassiveSkillEntity__CreatePrimaryKey(
         UserServantAppendPassiveSkillEntity_o *this,
         const MethodInfo *method)
 {
@@ -41,7 +35,7 @@ System_String_o *__fastcall UserServantAppendPassiveSkillEntity__CreatePrimaryKe
 }
 
 
-int32_t __fastcall UserServantAppendPassiveSkillEntity__GetExchangeNum(
+int32_t UserServantAppendPassiveSkillEntity__GetExchangeNum(
         UserServantAppendPassiveSkillEntity_o *this,
         const MethodInfo *method)
 {
@@ -49,17 +43,17 @@ int32_t __fastcall UserServantAppendPassiveSkillEntity__GetExchangeNum(
 }
 
 
-int32_t __fastcall UserServantAppendPassiveSkillEntity__GetRemainingExchangeNum(
+int32_t UserServantAppendPassiveSkillEntity__GetRemainingExchangeNum(
         UserServantAppendPassiveSkillEntity_o *this,
         const MethodInfo *method)
 {
   BalanceConfig_c *v3; // x0
   int32_t exchangeNum; // w19
 
-  if ( (byte_4B1D41D & 1) == 0 )
+  if ( (byte_4C28217 & 1) == 0 )
   {
-    sub_1BCAFF8(&BalanceConfig_TypeInfo, method);
-    byte_4B1D41D = 1;
+    sub_1C2D490(&BalanceConfig_TypeInfo);
+    byte_4C28217 = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   exchangeNum = this->fields.exchangeNum;
@@ -72,7 +66,7 @@ int32_t __fastcall UserServantAppendPassiveSkillEntity__GetRemainingExchangeNum(
 }
 
 
-int32_t __fastcall UserServantAppendPassiveSkillEntity__GetSvtId(
+int32_t UserServantAppendPassiveSkillEntity__GetSvtId(
         UserServantAppendPassiveSkillEntity_o *this,
         const MethodInfo *method)
 {
@@ -80,7 +74,7 @@ int32_t __fastcall UserServantAppendPassiveSkillEntity__GetSvtId(
 }
 
 
-System_Int32_array *__fastcall UserServantAppendPassiveSkillEntity__GetUnlockNums(
+System_Int32_array *UserServantAppendPassiveSkillEntity__GetUnlockNums(
         UserServantAppendPassiveSkillEntity_o *this,
         const MethodInfo *method)
 {
@@ -88,7 +82,7 @@ System_Int32_array *__fastcall UserServantAppendPassiveSkillEntity__GetUnlockNum
 }
 
 
-int64_t __fastcall UserServantAppendPassiveSkillEntity__GetUserId(
+int64_t UserServantAppendPassiveSkillEntity__GetUserId(
         UserServantAppendPassiveSkillEntity_o *this,
         const MethodInfo *method)
 {

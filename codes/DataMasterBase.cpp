@@ -1,77 +1,73 @@
-// local variable allocation has failed, the output may be wrong!
-void __fastcall DataMasterBase___ctor(DataMasterBase_o *this, int32_t kind, const MethodInfo *method)
+void DataMasterBase___ctor(DataMasterBase_o *this, int32_t kind, const MethodInfo *method)
 {
   struct System_String_o *Name; // x0
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B1C0D7 & 1) == 0 )
+  if ( (byte_4C26E7B & 1) == 0 )
   {
-    sub_1BCAFF8(&DataNameKind_TypeInfo, *(_QWORD *)&kind);
-    byte_4B1C0D7 = 1;
+    sub_1C2D490(&DataNameKind_TypeInfo);
+    byte_4C26E7B = 1;
   }
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._MasterKind_k__BackingField = kind;
   if ( !DataNameKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataNameKind_TypeInfo);
-  Name = DataNameKind__GetName(kind, 0LL);
+  Name = DataNameKind__GetName(kind, 0);
   this->fields._MasterName_k__BackingField = Name;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._MasterName_k__BackingField, (int32_t)Name, v6, v7);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._MasterName_k__BackingField, (int32_t)Name, v6, v7);
 }
 
 
-int32_t __fastcall DataMasterBase__GetRegisteredKind_object_(const MethodInfo_301ACA0 *method)
+int32_t DataMasterBase__GetRegisteredKind_object_(const MethodInfo_30CEB4C *method)
 {
   long double v1; // q0
-  const MethodInfo_301ACA0_RGCTXs *rgctx_data; // x8
+  const MethodInfo_30CEB4C_RGCTXs *rgctx_data; // x8
   __int64 _1_DataMasterBase_Registration_TMaster; // x0
 
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C1B4B8();
+    sub_1C7DC00();
     rgctx_data = method->rgctx_data;
   }
   _1_DataMasterBase_Registration_TMaster = (__int64)rgctx_data->_1_DataMasterBase_Registration_TMaster_;
   if ( (*(_BYTE *)(_1_DataMasterBase_Registration_TMaster + 309) & 1) == 0 )
-    _1_DataMasterBase_Registration_TMaster = sub_1C1B45C(v1);
+    _1_DataMasterBase_Registration_TMaster = sub_1C7DBA4(v1);
   return **(_DWORD **)(_1_DataMasterBase_Registration_TMaster + 184);
 }
 
 
-System_String_o *__fastcall DataMasterBase__GetRegisteredName_object_(const MethodInfo_301ACD8 *method)
+System_String_o *DataMasterBase__GetRegisteredName_object_(const MethodInfo_30CEB84 *method)
 {
   long double v1; // q0
-  const MethodInfo_301ACD8_RGCTXs *rgctx_data; // x8
+  const MethodInfo_30CEB84_RGCTXs *rgctx_data; // x8
   __int64 _1_DataMasterBase_Registration_TMaster; // x0
 
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C1B4B8();
+    sub_1C7DC00();
     rgctx_data = method->rgctx_data;
   }
   _1_DataMasterBase_Registration_TMaster = (__int64)rgctx_data->_1_DataMasterBase_Registration_TMaster_;
   if ( (*(_BYTE *)(_1_DataMasterBase_Registration_TMaster + 309) & 1) == 0 )
-    _1_DataMasterBase_Registration_TMaster = sub_1C1B45C(v1);
+    _1_DataMasterBase_Registration_TMaster = sub_1C7DBA4(v1);
   return *(System_String_o **)(*(_QWORD *)(_1_DataMasterBase_Registration_TMaster + 184) + 8LL);
 }
 
 
-bool __fastcall DataMasterBase__Modified(DataMasterBase_o *this, int32_t revision, const MethodInfo *method)
+bool DataMasterBase__Modified(DataMasterBase_o *this, int32_t revision, const MethodInfo *method)
 {
   return this->fields.revision != revision;
 }
 
 
-void __fastcall DataMasterBase__RegisterKindAndName_object_(
-        int32_t kind,
-        System_String_o *name,
-        const MethodInfo_301AD10 *method)
+void DataMasterBase__RegisterKindAndName_object_(int32_t kind, System_String_o *name, const MethodInfo_30CEBBC *method)
 {
   const MethodInfo *v3; // x3
   long double v4; // q0
-  const MethodInfo_301AD10_RGCTXs *rgctx_data; // x8
+  const MethodInfo_30CEBBC_RGCTXs *rgctx_data; // x8
   __int64 _1_DataMasterBase_Registration_TMaster; // x0
   Il2CppClass *v10; // x0
   Il2CppClass *v11; // x0
@@ -79,168 +75,164 @@ void __fastcall DataMasterBase__RegisterKindAndName_object_(
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C1B4B8();
+    sub_1C7DC00();
     rgctx_data = method->rgctx_data;
   }
   _1_DataMasterBase_Registration_TMaster = (__int64)rgctx_data->_1_DataMasterBase_Registration_TMaster_;
   if ( (*(_BYTE *)(_1_DataMasterBase_Registration_TMaster + 309) & 1) == 0 )
-    _1_DataMasterBase_Registration_TMaster = sub_1C1B45C(v4);
+    _1_DataMasterBase_Registration_TMaster = sub_1C7DBA4(v4);
   **(_DWORD **)(_1_DataMasterBase_Registration_TMaster + 184) = kind;
   v10 = method->rgctx_data->_1_DataMasterBase_Registration_TMaster_;
-  if ( (BYTE5(v10->vtable[0].methodPtr) & 1) == 0 )
-    v10 = (Il2CppClass *)sub_1C1B45C(v4);
+  if ( (*(&v10->_2.bitflags2 + 2) & 1) == 0 )
+    v10 = (Il2CppClass *)sub_1C7DBA4(v4);
   *((_QWORD *)v10->static_fields + 1) = name;
   v11 = method->rgctx_data->_1_DataMasterBase_Registration_TMaster_;
-  if ( (BYTE5(v11->vtable[0].methodPtr) & 1) == 0 )
-    v11 = (Il2CppClass *)sub_1C1B45C(v4);
-  sub_1BCAF9C((CGThumbnailListItem_o *)((char *)v11->static_fields + 8), (int32_t)name, (int32_t)method, v3);
+  if ( (*(&v11->_2.bitflags2 + 2) & 1) == 0 )
+    v11 = (Il2CppClass *)sub_1C7DBA4(v4);
+  sub_1C2D434((CGThumbnailListItem_o *)((char *)v11->static_fields + 8), (int32_t)name, (int32_t)method, v3);
 }
 
 
-int32_t __fastcall DataMasterBase__Revision(DataMasterBase_o *this, const MethodInfo *method)
+int32_t DataMasterBase__Revision(DataMasterBase_o *this, const MethodInfo *method)
 {
   return this->fields.revision;
 }
 
 
-int32_t __fastcall DataMasterBase__get_MasterKind(DataMasterBase_o *this, const MethodInfo *method)
+int32_t DataMasterBase__get_MasterKind(DataMasterBase_o *this, const MethodInfo *method)
 {
   return this->fields._MasterKind_k__BackingField;
 }
 
 
-System_String_o *__fastcall DataMasterBase__get_MasterName(DataMasterBase_o *this, const MethodInfo *method)
+System_String_o *DataMasterBase__get_MasterName(DataMasterBase_o *this, const MethodInfo *method)
 {
   return this->fields._MasterName_k__BackingField;
 }
 
 
-bool __fastcall DataMasterBase__preProcess(DataMasterBase_o *this, const MethodInfo *method)
+bool DataMasterBase__preProcess(DataMasterBase_o *this, const MethodInfo *method)
 {
   return 0;
 }
 
 
-void __fastcall DataMasterBase__set_MasterKind(DataMasterBase_o *this, int32_t value, const MethodInfo *method)
+void DataMasterBase__set_MasterKind(DataMasterBase_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._MasterKind_k__BackingField = value;
 }
 
 
-void __fastcall DataMasterBase__set_MasterName(
-        DataMasterBase_o *this,
-        System_String_o *value,
-        const MethodInfo *method)
+void DataMasterBase__set_MasterName(DataMasterBase_o *this, System_String_o *value, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
 
   this->fields._MasterName_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._MasterName_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._MasterName_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall DataMasterBase___c__DisplayClass23_0_object__object____Il2CppFullySharedGenericType____ctor(
+void DataMasterBase___c__DisplayClass23_0_object__object____Il2CppFullySharedGenericType____ctor(
         DataMasterBase___c__DisplayClass23_0_TMaster__TEntity__PKType__o *this,
-        const MethodInfo_31E4D3C *method)
+        const MethodInfo_329E154 *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall DataMasterBase___c__DisplayClass23_0_object__object____Il2CppFullySharedGenericType____RemoveEntity_b__0(
+bool DataMasterBase___c__DisplayClass23_0_object__object____Il2CppFullySharedGenericType____RemoveEntity_b__0(
         DataMasterBase___c__DisplayClass23_0_TMaster__TEntity__PKType__o *this,
         Il2CppObject *item,
-        const MethodInfo_31E4D44 *method)
+        const MethodInfo_329E15C *method)
 {
   System_String_o *v4; // x0
 
   if ( !item )
-    sub_1BCB254(this, 0LL);
-  v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo_31E4D44 *))item->klass->vtable[4].method)(
+    sub_1C2D6EC(this, 0);
+  v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *, const MethodInfo_329E15C *))item->klass->vtable[4].methodPtr)(
                             item,
-                            item->klass->vtable[5].methodPtr,
+                            item->klass->vtable[4].method,
                             method);
-  return System_String__op_Equality(v4, this->fields.targetPrimaryKey, 0LL);
+  return System_String__op_Equality(v4, this->fields.targetPrimaryKey, 0);
 }
 
 
-void __fastcall DataMasterBase___c__DisplayClass23_0_object__object__int____ctor(
+void DataMasterBase___c__DisplayClass23_0_object__object__int____ctor(
         DataMasterBase___c__DisplayClass23_0_TMaster__TEntity__PKType__o *this,
-        const MethodInfo_31E4C88 *method)
+        const MethodInfo_329E0A0 *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall DataMasterBase___c__DisplayClass23_0_object__object__int____RemoveEntity_b__0(
+bool DataMasterBase___c__DisplayClass23_0_object__object__int____RemoveEntity_b__0(
         DataMasterBase___c__DisplayClass23_0_TMaster__TEntity__PKType__o *this,
         Il2CppObject *item,
-        const MethodInfo_31E4C90 *method)
+        const MethodInfo_329E0A8 *method)
 {
   System_String_o *v4; // x0
 
   if ( !item )
-    sub_1BCB254(this, 0LL);
-  v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo_31E4C90 *))item->klass->vtable[4].method)(
+    sub_1C2D6EC(this, 0);
+  v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *, const MethodInfo_329E0A8 *))item->klass->vtable[4].methodPtr)(
                             item,
-                            item->klass->vtable[5].methodPtr,
+                            item->klass->vtable[4].method,
                             method);
-  return System_String__op_Equality(v4, this->fields.targetPrimaryKey, 0LL);
+  return System_String__op_Equality(v4, this->fields.targetPrimaryKey, 0);
 }
 
 
-void __fastcall DataMasterBase___c__DisplayClass23_0_object__object__long____ctor(
+void DataMasterBase___c__DisplayClass23_0_object__object__long____ctor(
         DataMasterBase___c__DisplayClass23_0_TMaster__TEntity__PKType__o *this,
-        const MethodInfo_31E4CC4 *method)
+        const MethodInfo_329E0DC *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall DataMasterBase___c__DisplayClass23_0_object__object__long____RemoveEntity_b__0(
+bool DataMasterBase___c__DisplayClass23_0_object__object__long____RemoveEntity_b__0(
         DataMasterBase___c__DisplayClass23_0_TMaster__TEntity__PKType__o *this,
         Il2CppObject *item,
-        const MethodInfo_31E4CCC *method)
+        const MethodInfo_329E0E4 *method)
 {
   System_String_o *v4; // x0
 
   if ( !item )
-    sub_1BCB254(this, 0LL);
-  v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo_31E4CCC *))item->klass->vtable[4].method)(
+    sub_1C2D6EC(this, 0);
+  v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *, const MethodInfo_329E0E4 *))item->klass->vtable[4].methodPtr)(
                             item,
-                            item->klass->vtable[5].methodPtr,
+                            item->klass->vtable[4].method,
                             method);
-  return System_String__op_Equality(v4, this->fields.targetPrimaryKey, 0LL);
+  return System_String__op_Equality(v4, this->fields.targetPrimaryKey, 0);
 }
 
 
-void __fastcall DataMasterBase___c__DisplayClass23_0_object__object__object____ctor(
+void DataMasterBase___c__DisplayClass23_0_object__object__object____ctor(
         DataMasterBase___c__DisplayClass23_0_TMaster__TEntity__PKType__o *this,
-        const MethodInfo_31E4D00 *method)
+        const MethodInfo_329E118 *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall DataMasterBase___c__DisplayClass23_0_object__object__object____RemoveEntity_b__0(
+bool DataMasterBase___c__DisplayClass23_0_object__object__object____RemoveEntity_b__0(
         DataMasterBase___c__DisplayClass23_0_TMaster__TEntity__PKType__o *this,
         Il2CppObject *item,
-        const MethodInfo_31E4D08 *method)
+        const MethodInfo_329E120 *method)
 {
   System_String_o *v4; // x0
 
   if ( !item )
-    sub_1BCB254(this, 0LL);
-  v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, const MethodInfo_31E4D08 *))item->klass->vtable[4].method)(
+    sub_1C2D6EC(this, 0);
+  v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *, const MethodInfo_329E120 *))item->klass->vtable[4].methodPtr)(
                             item,
-                            item->klass->vtable[5].methodPtr,
+                            item->klass->vtable[4].method,
                             method);
-  return System_String__op_Equality(v4, this->fields.targetPrimaryKey, 0LL);
+  return System_String__op_Equality(v4, this->fields.targetPrimaryKey, 0);
 }
 
 
-void __fastcall DataMasterBase___c_object__object____Il2CppFullySharedGenericType____cctor(
-        const MethodInfo_31E0590 *method)
+void DataMasterBase___c_object__object____Il2CppFullySharedGenericType____cctor(const MethodInfo_32999A8 *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
@@ -259,11 +251,11 @@ void __fastcall DataMasterBase___c_object__object____Il2CppFullySharedGenericTyp
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C1B45C();
+    klass = sub_1C7DBA4();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C1B45C();
-  v4 = sub_1BCB244(v3);
+    v3 = sub_1C7DBA4();
+  v4 = sub_1C2D6DC(v3);
   v5 = (__int64)method->klass;
   v6 = v4;
   v7 = *(_WORD *)(v5 + 309);
@@ -273,58 +265,58 @@ void __fastcall DataMasterBase___c_object__object____Il2CppFullySharedGenericTyp
   }
   else
   {
-    v8 = sub_1C1B45C();
+    v8 = sub_1C7DBA4();
     v5 = (__int64)method->klass;
     v7 = *(_WORD *)(v5 + 309);
   }
   v9 = **(void (__fastcall ***)(__int64, _QWORD))(*(_QWORD *)(v8 + 192) + 8LL);
   if ( (v7 & 1) == 0 )
-    v5 = sub_1C1B45C();
+    v5 = sub_1C7DBA4();
   v9(v6, *(_QWORD *)(*(_QWORD *)(v5 + 192) + 8LL));
   v12 = (__int64)method->klass;
   if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-    v12 = sub_1C1B45C();
+    v12 = sub_1C7DBA4();
   v13 = *(_QWORD *)(*(_QWORD *)(v12 + 192) + 16LL);
   if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-    v13 = sub_1C1B45C();
+    v13 = sub_1C7DBA4();
   **(_QWORD **)(v13 + 184) = v6;
   v14 = (__int64)method->klass;
   if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-    v14 = sub_1C1B45C();
+    v14 = sub_1C7DBA4();
   v15 = *(_QWORD *)(*(_QWORD *)(v14 + 192) + 16LL);
   if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
-    v15 = sub_1C1B45C();
-  sub_1BCAF9C(*(CGThumbnailListItem_o **)(v15 + 184), v6, v10, v11);
+    v15 = sub_1C7DBA4();
+  sub_1C2D434(*(CGThumbnailListItem_o **)(v15 + 184), v6, v10, v11);
 }
 
 
-void __fastcall DataMasterBase___c_object__object____Il2CppFullySharedGenericType____ctor(
+void DataMasterBase___c_object__object____Il2CppFullySharedGenericType____ctor(
         DataMasterBase___c_TMaster__TEntity__PKType__o *this,
-        const MethodInfo_31E0684 *method)
+        const MethodInfo_3299A9C *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall DataMasterBase___c_object__object____Il2CppFullySharedGenericType____abstractGetListForThread_b__14_0(
+void DataMasterBase___c_object__object____Il2CppFullySharedGenericType____abstractGetListForThread_b__14_0(
         DataMasterBase___c_TMaster__TEntity__PKType__o *this,
         Il2CppObject *_,
-        const MethodInfo_31E068C *method)
+        const MethodInfo_3299AA4 *method)
 {
   ;
 }
 
 
-void __fastcall DataMasterBase___c_object__object____Il2CppFullySharedGenericType____abstractGetListForThread_b__14_1(
+void DataMasterBase___c_object__object____Il2CppFullySharedGenericType____abstractGetListForThread_b__14_1(
         DataMasterBase___c_TMaster__TEntity__PKType__o *this,
         Il2CppObject *_,
-        const MethodInfo_31E0690 *method)
+        const MethodInfo_3299AA8 *method)
 {
   ;
 }
 
 
-void __fastcall DataMasterBase___c_object__object__int____cctor(const MethodInfo_31E032C *method)
+void DataMasterBase___c_object__object__int____cctor(const MethodInfo_3299744 *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
@@ -338,58 +330,58 @@ void __fastcall DataMasterBase___c_object__object__int____cctor(const MethodInfo
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C1B45C();
+    klass = sub_1C7DBA4();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C1B45C();
-  v4 = (Il2CppObject *)sub_1BCB244(v3);
-  if ( (BYTE5(method->klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_1C1B45C();
-  System_Object___ctor(v4, 0LL);
+    v3 = sub_1C7DBA4();
+  v4 = (Il2CppObject *)sub_1C2D6DC(v3);
+  if ( (*(&method->klass->_2.bitflags2 + 2) & 1) == 0 )
+    sub_1C7DBA4();
+  System_Object___ctor(v4, 0);
   v7 = (__int64)method->klass;
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C1B45C();
+    v7 = sub_1C7DBA4();
   v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C1B45C();
+    v8 = sub_1C7DBA4();
   **(_QWORD **)(v8 + 184) = v4;
   v9 = (__int64)method->klass;
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C1B45C();
+    v9 = sub_1C7DBA4();
   v10 = *(_QWORD *)(*(_QWORD *)(v9 + 192) + 16LL);
   if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C1B45C();
-  sub_1BCAF9C(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
+    v10 = sub_1C7DBA4();
+  sub_1C2D434(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
 }
 
 
-void __fastcall DataMasterBase___c_object__object__int____ctor(
+void DataMasterBase___c_object__object__int____ctor(
         DataMasterBase___c_TMaster__TEntity__PKType__o *this,
-        const MethodInfo_31E03E8 *method)
+        const MethodInfo_3299800 *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall DataMasterBase___c_object__object__int____abstractGetListForThread_b__14_0(
+void DataMasterBase___c_object__object__int____abstractGetListForThread_b__14_0(
         DataMasterBase___c_TMaster__TEntity__PKType__o *this,
         Il2CppObject *_,
-        const MethodInfo_31E03F0 *method)
+        const MethodInfo_3299808 *method)
 {
   ;
 }
 
 
-void __fastcall DataMasterBase___c_object__object__int____abstractGetListForThread_b__14_1(
+void DataMasterBase___c_object__object__int____abstractGetListForThread_b__14_1(
         DataMasterBase___c_TMaster__TEntity__PKType__o *this,
         Il2CppObject *_,
-        const MethodInfo_31E03F4 *method)
+        const MethodInfo_329980C *method)
 {
   ;
 }
 
 
-void __fastcall DataMasterBase___c_object__object__long____cctor(const MethodInfo_31E03F8 *method)
+void DataMasterBase___c_object__object__long____cctor(const MethodInfo_3299810 *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
@@ -403,58 +395,58 @@ void __fastcall DataMasterBase___c_object__object__long____cctor(const MethodInf
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C1B45C();
+    klass = sub_1C7DBA4();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C1B45C();
-  v4 = (Il2CppObject *)sub_1BCB244(v3);
-  if ( (BYTE5(method->klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_1C1B45C();
-  System_Object___ctor(v4, 0LL);
+    v3 = sub_1C7DBA4();
+  v4 = (Il2CppObject *)sub_1C2D6DC(v3);
+  if ( (*(&method->klass->_2.bitflags2 + 2) & 1) == 0 )
+    sub_1C7DBA4();
+  System_Object___ctor(v4, 0);
   v7 = (__int64)method->klass;
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C1B45C();
+    v7 = sub_1C7DBA4();
   v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C1B45C();
+    v8 = sub_1C7DBA4();
   **(_QWORD **)(v8 + 184) = v4;
   v9 = (__int64)method->klass;
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C1B45C();
+    v9 = sub_1C7DBA4();
   v10 = *(_QWORD *)(*(_QWORD *)(v9 + 192) + 16LL);
   if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C1B45C();
-  sub_1BCAF9C(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
+    v10 = sub_1C7DBA4();
+  sub_1C2D434(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
 }
 
 
-void __fastcall DataMasterBase___c_object__object__long____ctor(
+void DataMasterBase___c_object__object__long____ctor(
         DataMasterBase___c_TMaster__TEntity__PKType__o *this,
-        const MethodInfo_31E04B4 *method)
+        const MethodInfo_32998CC *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall DataMasterBase___c_object__object__long____abstractGetListForThread_b__14_0(
+void DataMasterBase___c_object__object__long____abstractGetListForThread_b__14_0(
         DataMasterBase___c_TMaster__TEntity__PKType__o *this,
         Il2CppObject *_,
-        const MethodInfo_31E04BC *method)
+        const MethodInfo_32998D4 *method)
 {
   ;
 }
 
 
-void __fastcall DataMasterBase___c_object__object__long____abstractGetListForThread_b__14_1(
+void DataMasterBase___c_object__object__long____abstractGetListForThread_b__14_1(
         DataMasterBase___c_TMaster__TEntity__PKType__o *this,
         Il2CppObject *_,
-        const MethodInfo_31E04C0 *method)
+        const MethodInfo_32998D8 *method)
 {
   ;
 }
 
 
-void __fastcall DataMasterBase___c_object__object__object____cctor(const MethodInfo_31E04C4 *method)
+void DataMasterBase___c_object__object__object____cctor(const MethodInfo_32998DC *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
@@ -468,52 +460,52 @@ void __fastcall DataMasterBase___c_object__object__object____cctor(const MethodI
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C1B45C();
+    klass = sub_1C7DBA4();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C1B45C();
-  v4 = (Il2CppObject *)sub_1BCB244(v3);
-  if ( (BYTE5(method->klass->vtable._0_Equals.methodPtr) & 1) == 0 )
-    sub_1C1B45C();
-  System_Object___ctor(v4, 0LL);
+    v3 = sub_1C7DBA4();
+  v4 = (Il2CppObject *)sub_1C2D6DC(v3);
+  if ( (*(&method->klass->_2.bitflags2 + 2) & 1) == 0 )
+    sub_1C7DBA4();
+  System_Object___ctor(v4, 0);
   v7 = (__int64)method->klass;
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C1B45C();
+    v7 = sub_1C7DBA4();
   v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C1B45C();
+    v8 = sub_1C7DBA4();
   **(_QWORD **)(v8 + 184) = v4;
   v9 = (__int64)method->klass;
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C1B45C();
+    v9 = sub_1C7DBA4();
   v10 = *(_QWORD *)(*(_QWORD *)(v9 + 192) + 16LL);
   if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C1B45C();
-  sub_1BCAF9C(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
+    v10 = sub_1C7DBA4();
+  sub_1C2D434(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
 }
 
 
-void __fastcall DataMasterBase___c_object__object__object____ctor(
+void DataMasterBase___c_object__object__object____ctor(
         DataMasterBase___c_TMaster__TEntity__PKType__o *this,
-        const MethodInfo_31E0580 *method)
+        const MethodInfo_3299998 *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall DataMasterBase___c_object__object__object____abstractGetListForThread_b__14_0(
+void DataMasterBase___c_object__object__object____abstractGetListForThread_b__14_0(
         DataMasterBase___c_TMaster__TEntity__PKType__o *this,
         Il2CppObject *_,
-        const MethodInfo_31E0588 *method)
+        const MethodInfo_32999A0 *method)
 {
   ;
 }
 
 
-void __fastcall DataMasterBase___c_object__object__object____abstractGetListForThread_b__14_1(
+void DataMasterBase___c_object__object__object____abstractGetListForThread_b__14_1(
         DataMasterBase___c_TMaster__TEntity__PKType__o *this,
         Il2CppObject *_,
-        const MethodInfo_31E058C *method)
+        const MethodInfo_32999A4 *method)
 {
   ;
 }

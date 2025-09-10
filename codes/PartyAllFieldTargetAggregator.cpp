@@ -1,10 +1,10 @@
-void __fastcall PartyAllFieldTargetAggregator___ctor(PartyAllFieldTargetAggregator_o *this, const MethodInfo *method)
+void PartyAllFieldTargetAggregator___ctor(PartyAllFieldTargetAggregator_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-System_Int32_array *__fastcall PartyAllFieldTargetAggregator__GetCandidate(
+System_Int32_array *PartyAllFieldTargetAggregator__GetCandidate(
         PartyAllFieldTargetAggregator_o *this,
         const MethodInfo *method)
 {
@@ -15,18 +15,18 @@ System_Int32_array *__fastcall PartyAllFieldTargetAggregator__GetCandidate(
 
   args = this->fields.args;
   if ( !args
-    || (v3 = this, (this = (PartyAllFieldTargetAggregator_o *)args->fields._battleData_k__BackingField) == 0LL)
+    || (v3 = this, (this = (PartyAllFieldTargetAggregator_o *)args->fields._battleData_k__BackingField) == 0)
     || (this = (PartyAllFieldTargetAggregator_o *)BattleData__isEnemyID(
                                                     (BattleData_o *)this,
                                                     args->fields._actorId_k__BackingField,
-                                                    0LL),
-        (v4 = v3->fields.args) == 0LL)
-    || (v5 = (char)this, (this = (PartyAllFieldTargetAggregator_o *)v4->fields._battleData_k__BackingField) == 0LL) )
+                                                    0),
+        (v4 = v3->fields.args) == 0)
+    || (v5 = (char)this, (this = (PartyAllFieldTargetAggregator_o *)v4->fields._battleData_k__BackingField) == 0) )
   {
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   }
   if ( (v5 & 1) != 0 )
-    return BattleData__getFieldEnemyServantIDList((BattleData_o *)this, 0, 0LL);
+    return BattleData__getFieldEnemyServantIDList((BattleData_o *)this, 0, 0);
   else
-    return BattleData__getFieldPlayerServantIDList((BattleData_o *)this, 0LL, 0LL);
+    return BattleData__getFieldPlayerServantIDList((BattleData_o *)this, 0, 0);
 }

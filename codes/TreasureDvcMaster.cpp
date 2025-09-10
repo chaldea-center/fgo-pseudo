@@ -1,57 +1,54 @@
-void __fastcall TreasureDvcMaster___ctor(TreasureDvcMaster_o *this, const MethodInfo *method)
+void TreasureDvcMaster___ctor(TreasureDvcMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D1FA & 1) == 0 )
+  if ( (byte_4C27FEF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int___ctor__, method);
-    byte_4B1D1FA = 1;
+    sub_1C2D490(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int___ctor__);
+    byte_4C27FEF = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     6,
-    (const MethodInfo_32C5ADC *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int___ctor__);
+    (const MethodInfo_3385A74 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-TreasureDvcEntity_o *__fastcall TreasureDvcMaster__GetEntityCheckServantOverwrite(
+TreasureDvcEntity_o *TreasureDvcMaster__GetEntityCheckServantOverwrite(
         TreasureDvcMaster_o *this,
         int32_t svtId,
         int32_t treasureDeviceId,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
   Il2CppObject *Instance; // x0
-  __int64 v10; // x1
+  __int64 v8; // x1
   int32_t ServantOverwriteTreasureDeviceId; // w0
-  int32_t v12; // w1
+  int32_t v10; // w1
 
-  if ( (byte_4B1D1FB & 1) == 0 )
+  if ( (byte_4C27FF0 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_ServantOverwriteMaster___, *(_QWORD *)&svtId);
-    sub_1BCAFF8(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__, v7);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    byte_4B1D1FB = 1;
+    sub_1C2D490(&Method_DataManager_GetMasterData_ServantOverwriteMaster___);
+    sub_1C2D490(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C27FF0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ServantOverwriteMaster___)) == 0LL )
+                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ServantOverwriteMaster___)) == 0 )
   {
-    sub_1BCB254(Instance, v10);
+    sub_1C2D6EC(Instance, v8);
   }
   ServantOverwriteTreasureDeviceId = ServantOverwriteMaster__GetServantOverwriteTreasureDeviceId(
                                        (ServantOverwriteMaster_o *)Instance,
                                        svtId,
                                        1,
-                                       0LL);
+                                       0);
   if ( ServantOverwriteTreasureDeviceId )
-    v12 = ServantOverwriteTreasureDeviceId;
+    v10 = ServantOverwriteTreasureDeviceId;
   else
-    v12 = treasureDeviceId;
+    v10 = treasureDeviceId;
   return (TreasureDvcEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-                                  v12,
-                                  (const MethodInfo_32C7E00 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+                                  v10,
+                                  (const MethodInfo_3387D98 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
 }

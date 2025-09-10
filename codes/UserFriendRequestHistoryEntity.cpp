@@ -1,17 +1,17 @@
-void __fastcall UserFriendRequestHistoryEntity___ctor(UserFriendRequestHistoryEntity_o *this, const MethodInfo *method)
+void UserFriendRequestHistoryEntity___ctor(UserFriendRequestHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D35F & 1) == 0 )
+  if ( (byte_4C28156 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1D35F = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C28156 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall UserFriendRequestHistoryEntity__CreatePrimaryKey(
+int32_t UserFriendRequestHistoryEntity__CreatePrimaryKey(
         UserFriendRequestHistoryEntity_o *this,
         const MethodInfo *method)
 {
@@ -19,7 +19,7 @@ int32_t __fastcall UserFriendRequestHistoryEntity__CreatePrimaryKey(
 }
 
 
-int64_t __fastcall UserFriendRequestHistoryEntity__getOtherUserId(
+int64_t UserFriendRequestHistoryEntity__getOtherUserId(
         UserFriendRequestHistoryEntity_o *this,
         const MethodInfo *method)
 {
@@ -27,18 +27,18 @@ int64_t __fastcall UserFriendRequestHistoryEntity__getOtherUserId(
   NetworkManager_c *v4; // x0
   __int64 v5; // x8
 
-  if ( (byte_4B1D35E & 1) == 0 )
+  if ( (byte_4C28155 & 1) == 0 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
-    byte_4B1D35E = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    byte_4C28155 = 1;
   }
   userId = this->fields.userId;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B165D1 )
+  if ( !byte_4C211E1 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
-    byte_4B165D1 = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    byte_4C211E1 = 1;
   }
   v4 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -46,8 +46,8 @@ int64_t __fastcall UserFriendRequestHistoryEntity__getOtherUserId(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     v4 = NetworkManager_TypeInfo;
   }
-  v5 = 32LL;
+  v5 = 32;
   if ( userId != v4->static_fields->userIdNumber )
-    v5 = 24LL;
+    v5 = 24;
   return *(int64_t *)((char *)&this->klass + v5);
 }

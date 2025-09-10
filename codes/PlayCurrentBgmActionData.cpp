@@ -1,29 +1,29 @@
-void __fastcall PlayCurrentBgmActionData__ExecAction(
+void PlayCurrentBgmActionData__ExecAction(
         PlayCurrentBgmActionData_o *this,
         BattlePerformance_o *perf,
         const MethodInfo *method)
 {
   UnityEngine_Object_o *logic; // x19
 
-  if ( (byte_4B1EA4B & 1) == 0 )
+  if ( (byte_4C2987E & 1) == 0 )
   {
-    this = (PlayCurrentBgmActionData_o *)sub_1BCAFF8(&UnityEngine_Object_TypeInfo, perf);
-    byte_4B1EA4B = 1;
+    this = (PlayCurrentBgmActionData_o *)sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2987E = 1;
   }
   if ( !perf )
     goto LABEL_10;
   logic = (UnityEngine_Object_o *)perf->fields.logic;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  this = (PlayCurrentBgmActionData_o *)UnityEngine_Object__op_Inequality(logic, 0LL, 0LL);
+  this = (PlayCurrentBgmActionData_o *)UnityEngine_Object__op_Inequality(logic, 0, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
     if ( logic )
     {
-      BattleLogic__PlayLoadCurrentBgm((BattleLogic_o *)logic, 0LL, 0.0, 0LL);
+      BattleLogic__PlayLoadCurrentBgm((BattleLogic_o *)logic, 0, 0.0, 0);
       return;
     }
 LABEL_10:
-    sub_1BCB254(this, perf);
+    sub_1C2D6EC(this, perf);
   }
 }

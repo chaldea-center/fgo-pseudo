@@ -1,34 +1,34 @@
-void __fastcall WarboardBattleFieldEnvironmentData___ctor(
+void WarboardBattleFieldEnvironmentData___ctor(
         WarboardBattleFieldEnvironmentData_o *this,
         BattleData_o *data,
         const MethodInfo *method)
 {
-  BattleFieldEnvironmentData___ctor((BattleFieldEnvironmentData_o *)this, data, 0LL);
+  BattleFieldEnvironmentData___ctor((BattleFieldEnvironmentData_o *)this, data, 0);
 }
 
 
-BattleFieldEnvironmentData_BGMData_o *__fastcall WarboardBattleFieldEnvironmentData__AddBGM(
+BattleFieldEnvironmentData_BGMData_o *WarboardBattleFieldEnvironmentData__AddBGM(
         WarboardBattleFieldEnvironmentData_o *this,
         Generator_BGM_o *bgmGenerator,
         int32_t grantType,
         AddBgmArgument_o *arg,
         const MethodInfo *method)
 {
-  return 0LL;
+  return 0;
 }
 
 
-BattleFieldEnvironmentData_BackgroundData_o *__fastcall WarboardBattleFieldEnvironmentData__AddBackground(
+BattleFieldEnvironmentData_BackgroundData_o *WarboardBattleFieldEnvironmentData__AddBackground(
         WarboardBattleFieldEnvironmentData_o *this,
         Generator_Background_o *bgGenerator,
         int32_t grantType,
         const MethodInfo *method)
 {
-  return 0LL;
+  return 0;
 }
 
 
-System_Int32_array *__fastcall WarboardBattleFieldEnvironmentData__GetFieldIndividuality(
+System_Int32_array *WarboardBattleFieldEnvironmentData__GetFieldIndividuality(
         WarboardBattleFieldEnvironmentData_o *this,
         System_Int32_array *addIndiv,
         bool exceptDelTarget,
@@ -38,19 +38,19 @@ System_Int32_array *__fastcall WarboardBattleFieldEnvironmentData__GetFieldIndiv
 
   QuestPhaseIndividuality = BattleFieldEnvironmentData__GetQuestPhaseIndividuality(
                               (BattleFieldEnvironmentData_o *)this,
-                              0LL);
+                              0);
   return BattleFieldEnvironmentData__GetCommonFieldIndividuality(
            (BattleFieldEnvironmentData_o *)this,
            QuestPhaseIndividuality,
            addIndiv,
            exceptDelTarget,
-           0LL);
+           0);
 }
 
 
-BattleFieldEnvironmentData_BGMData_o *__fastcall WarboardBattleFieldEnvironmentData__RemoveAfterResetBGM(
+BattleFieldEnvironmentData_BGMData_o *WarboardBattleFieldEnvironmentData__RemoveAfterResetBGM(
         WarboardBattleFieldEnvironmentData_o *this,
         const MethodInfo *method)
 {
-  return 0LL;
+  return 0;
 }

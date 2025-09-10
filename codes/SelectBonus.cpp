@@ -1,4 +1,4 @@
-void __fastcall SelectBonus___ctor(
+void SelectBonus___ctor(
         SelectBonus_o *this,
         int32_t gachaBonusId,
         int32_t slot,
@@ -6,7 +6,7 @@ void __fastcall SelectBonus___ctor(
         int32_t giftId,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.gachaBonusId = gachaBonusId;
   this->fields.slot = slot;
   this->fields.type = type;
@@ -14,7 +14,7 @@ void __fastcall SelectBonus___ctor(
 }
 
 
-void __fastcall SelectBonus___ctor_34640744(SelectBonus_o *this, const MethodInfo *method)
+void SelectBonus___ctor_35194996(SelectBonus_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }

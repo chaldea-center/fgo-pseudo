@@ -1,56 +1,51 @@
-void __fastcall BattleConcatLabelMessageComponent___ctor(
-        BattleConcatLabelMessageComponent_o *this,
-        const MethodInfo *method)
+void BattleConcatLabelMessageComponent___ctor(BattleConcatLabelMessageComponent_o *this, const MethodInfo *method)
 {
   *(_QWORD *)&this->fields.bgResizeTarget = 0x40000000003LL;
-  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BattleConcatLabelMessageComponent__Adjust(
-        BattleConcatLabelMessageComponent_o *this,
-        const MethodInfo *method)
+void BattleConcatLabelMessageComponent__Adjust(BattleConcatLabelMessageComponent_o *this, const MethodInfo *method)
 {
   float x; // s9
   float y; // s8
   const MethodInfo *v5; // x1
   __int64 v6; // x1
   UnityEngine_Component_o *bgSprite; // x0
-  float v8; // s0
-  float v9; // s1
-  float v10; // s10
-  float v11; // s11
-  UnityEngine_Vector2_o v12; // x2
+  float v8; // s10
+  float v9; // s11
+  UnityEngine_Vector2_o v10; // x2
   UnityEngine_Vector2_o pivotOffset; // kr00_8
-  struct UISprite_o *v14; // x9
+  struct UISprite_o *v12; // x9
   struct WrapLineMessage_array *battleMessages; // x19
   int max_length; // w8
-  unsigned int v17; // w20
-  float v18; // s1
-  float v19; // s0
-  int v20; // s2
-  UnityEngine_Vector2_o v21; // 0:s0.4,4:s1.4
+  unsigned int v15; // w20
+  float v16; // s1
+  float v17; // s0 OVERLAPPED
+  int v18; // s2
+  UnityEngine_Vector2_o v19; // 0:s0.4,4:s1.4
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  v21 = BattleConcatLabelMessageComponent__ResizeLabel(this, method);
-  x = v21.fields.x;
-  y = v21.fields.y;
-  BattleConcatLabelMessageComponent__ResizeBg(this, v21, v5);
+  v19 = BattleConcatLabelMessageComponent__ResizeLabel(this, method);
+  x = v19.fields.x;
+  y = v19.fields.y;
+  BattleConcatLabelMessageComponent__ResizeBg(this, v19, v5);
   bgSprite = (UnityEngine_Component_o *)this->fields.bgSprite;
   if ( !bgSprite )
     goto LABEL_12;
-  bgSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(bgSprite, 0LL);
+  bgSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(bgSprite, 0);
   if ( !bgSprite )
     goto LABEL_12;
-  *(UnityEngine_Vector3_o *)&v8 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)bgSprite, 0LL);
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)bgSprite, 0);
   bgSprite = (UnityEngine_Component_o *)this->fields.bgSprite;
   if ( !bgSprite )
     goto LABEL_12;
-  v10 = v8;
-  v11 = v9;
-  pivotOffset = UIWidget__get_pivotOffset((UIWidget_o *)bgSprite, 0LL);
-  v14 = this->fields.bgSprite;
-  if ( !v14 )
+  v8 = localPosition.fields.x;
+  v9 = localPosition.fields.y;
+  pivotOffset = UIWidget__get_pivotOffset((UIWidget_o *)bgSprite, 0);
+  v12 = this->fields.bgSprite;
+  if ( !v12 )
     goto LABEL_12;
   battleMessages = this->fields.battleMessages;
   if ( !battleMessages )
@@ -58,80 +53,78 @@ void __fastcall BattleConcatLabelMessageComponent__Adjust(
   max_length = battleMessages->max_length;
   if ( max_length >= 1 )
   {
-    v17 = 0;
-    v18 = (float)(v11 + (float)((float)(1.0 - pivotOffset.fields.y) * (float)v14->fields.mHeight))
-        - (float)((float)((float)v14->fields.mHeight - y) * 0.5);
-    v19 = (float)(v10 + (float)((float)((float)v14->fields.mWidth - x) * 0.5))
-        - (float)(pivotOffset.fields.x * (float)v14->fields.mWidth);
-    v20 = 0;
+    v15 = 0;
+    v16 = (float)(v9 + (float)((float)(1.0 - pivotOffset.fields.y) * (float)v12->fields.mHeight))
+        - (float)((float)((float)v12->fields.mHeight - y) * 0.5);
+    v17 = (float)(v8 + (float)((float)((float)v12->fields.mWidth - x) * 0.5))
+        - (float)(pivotOffset.fields.x * (float)v12->fields.mWidth);
+    v18 = 0;
     while ( 1 )
     {
-      if ( v17 >= max_length )
-        sub_1BCB25C(bgSprite, v6, v12);
-      bgSprite = (UnityEngine_Component_o *)battleMessages->m_Items[v17];
+      if ( v15 >= max_length )
+        sub_1C2D6F4(bgSprite, v6, v10);
+      bgSprite = (UnityEngine_Component_o *)battleMessages->m_Items[v15];
       if ( !bgSprite )
         break;
-      *(UnityEngine_Vector3_o *)&v19 = WrapLineMessage__SetOffsetMessage(
+      *(UnityEngine_Vector3_o *)&v17 = WrapLineMessage__SetOffsetMessage(
                                          (WrapLineMessage_o *)bgSprite,
-                                         *(UnityEngine_Vector3_o *)&v19,
-                                         0LL);
+                                         *(UnityEngine_Vector3_o *)&v17,
+                                         0);
       max_length = battleMessages->max_length;
-      if ( (int)++v17 >= max_length )
+      if ( (int)++v15 >= max_length )
         return;
     }
 LABEL_12:
-    sub_1BCB254(bgSprite, v6);
+    sub_1C2D6EC(bgSprite, v6);
   }
 }
 
 
-WrapLineMessage_o *__fastcall BattleConcatLabelMessageComponent__CreateMessage(
+WrapLineMessage_o *BattleConcatLabelMessageComponent__CreateMessage(
         BattleConcatLabelMessageComponent_o *this,
         System_String_o *text,
         int32_t wrapWidth,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
   UnityEngine_GameObject_o *Object; // x0
-  __int64 v10; // x1
-  WrapLineMessage_o *v11; // x21
+  __int64 v8; // x1
+  WrapLineMessage_o *v9; // x21
 
-  if ( (byte_4B1F7FC & 1) == 0 )
+  if ( (byte_4C2A6A9 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_WrapLineMessage___, text);
-    sub_1BCAFF8(&StringLiteral_43/*"\n"*/, v7);
-    sub_1BCAFF8(&StringLiteral_15865/*"[r]"*/, v8);
-    byte_4B1F7FC = 1;
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_WrapLineMessage___);
+    sub_1C2D490(&StringLiteral_43/*"\n"*/);
+    sub_1C2D490(&StringLiteral_15997/*"[r]"*/);
+    byte_4C2A6A9 = 1;
   }
   Object = BaseMonoBehaviour__createObject(
              (BaseMonoBehaviour_o *)this,
              this->fields.wrapMessagePrefab,
              this->fields.dispMessageRoot,
-             0LL,
-             0LL);
+             0,
+             0);
   if ( !Object
     || (Object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                Object,
-                                               (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_WrapLineMessage___),
+                                               (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_WrapLineMessage___),
         !text)
-    || (v11 = (WrapLineMessage_o *)Object,
-        Object = (UnityEngine_GameObject_o *)System_String__Replace_62496972(
+    || (v9 = (WrapLineMessage_o *)Object,
+        Object = (UnityEngine_GameObject_o *)System_String__Replace_63504412(
                                                text,
                                                (System_String_o *)StringLiteral_43/*"\n"*/,
-                                               (System_String_o *)StringLiteral_15865/*"[r]"*/,
-                                               0LL),
-        !v11) )
+                                               (System_String_o *)StringLiteral_15997/*"[r]"*/,
+                                               0),
+        !v9) )
   {
-    sub_1BCB254(Object, v10);
+    sub_1C2D6EC(Object, v8);
   }
-  WrapLineMessage__Init(v11, (System_String_o *)Object, 0LL);
-  WrapLineMessage__UpdateWrapWidth(v11, (float)wrapWidth, 0LL);
-  return v11;
+  WrapLineMessage__Init(v9, (System_String_o *)Object, 0);
+  WrapLineMessage__UpdateWrapWidth(v9, (float)wrapWidth, 0);
+  return v9;
 }
 
 
-UnityEngine_Vector2_o __fastcall BattleConcatLabelMessageComponent__GetPrintedLabelSize(
+UnityEngine_Vector2_o BattleConcatLabelMessageComponent__GetPrintedLabelSize(
         BattleConcatLabelMessageComponent_o *this,
         const MethodInfo *method)
 {
@@ -149,10 +142,10 @@ UnityEngine_Vector2_o __fastcall BattleConcatLabelMessageComponent__GetPrintedLa
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   v3 = this;
-  if ( !byte_4B1608A )
+  if ( !byte_4C20C9A )
   {
-    this = (BattleConcatLabelMessageComponent_o *)sub_1BCAFF8(&UnityEngine_Vector2_TypeInfo, method);
-    byte_4B1608A = 1;
+    this = (BattleConcatLabelMessageComponent_o *)sub_1C2D490(&UnityEngine_Vector2_TypeInfo);
+    byte_4C20C9A = 1;
   }
   battleMessages = v3->fields.battleMessages;
   if ( !battleMessages )
@@ -167,11 +160,11 @@ UnityEngine_Vector2_o __fastcall BattleConcatLabelMessageComponent__GetPrintedLa
     while ( 1 )
     {
       if ( v9 >= (unsigned int)max_length )
-        sub_1BCB25C(this, method, v2);
+        sub_1C2D6F4(this, method, v2);
       this = (BattleConcatLabelMessageComponent_o *)battleMessages->m_Items[v9];
       if ( !this )
         break;
-      PrintedSize = ScriptLineMessage__GetPrintedSize((ScriptLineMessage_o *)this, 0LL);
+      PrintedSize = ScriptLineMessage__GetPrintedSize((ScriptLineMessage_o *)this, 0);
       max_length = battleMessages->max_length;
       ++v9;
       if ( PrintedSize.fields.y > y )
@@ -181,7 +174,7 @@ UnityEngine_Vector2_o __fastcall BattleConcatLabelMessageComponent__GetPrintedLa
         goto LABEL_11;
     }
 LABEL_13:
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   }
 LABEL_11:
   v11 = x;
@@ -192,199 +185,184 @@ LABEL_11:
 }
 
 
-void __fastcall BattleConcatLabelMessageComponent__OnDestroy(
-        BattleConcatLabelMessageComponent_o *this,
-        const MethodInfo *method)
+void BattleConcatLabelMessageComponent__OnDestroy(BattleConcatLabelMessageComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  BattleConcatLabelMessageComponent___c_c *v6; // x0
+  BattleConcatLabelMessageComponent___c_c *v3; // x0
   System_Collections_Generic_IEnumerable_T__o *battleMessages; // x19
   System_Action_object__o *_9__16_0; // x20
-  Il2CppObject *v9; // x21
+  Il2CppObject *v6; // x21
   struct BattleConcatLabelMessageComponent___c_StaticFields *static_fields; // x0
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
 
-  if ( (byte_4B1F7FE & 1) == 0 )
+  if ( (byte_4C2A6AB & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_WrapLineMessage__TypeInfo, method);
-    sub_1BCAFF8(&Method_BasicHelper_ForEach_WrapLineMessage___, v3);
-    sub_1BCAFF8(&Method_BattleConcatLabelMessageComponent___c__OnDestroy_b__16_0__, v4);
-    sub_1BCAFF8(&BattleConcatLabelMessageComponent___c_TypeInfo, v5);
-    byte_4B1F7FE = 1;
+    sub_1C2D490(&System_Action_WrapLineMessage__TypeInfo);
+    sub_1C2D490(&Method_BasicHelper_ForEach_WrapLineMessage___);
+    sub_1C2D490(&Method_BattleConcatLabelMessageComponent___c__OnDestroy_b__16_0__);
+    sub_1C2D490(&BattleConcatLabelMessageComponent___c_TypeInfo);
+    byte_4C2A6AB = 1;
   }
-  v6 = BattleConcatLabelMessageComponent___c_TypeInfo;
+  v3 = BattleConcatLabelMessageComponent___c_TypeInfo;
   battleMessages = (System_Collections_Generic_IEnumerable_T__o *)this->fields.battleMessages;
   if ( !BattleConcatLabelMessageComponent___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleConcatLabelMessageComponent___c_TypeInfo);
-    v6 = BattleConcatLabelMessageComponent___c_TypeInfo;
+    v3 = BattleConcatLabelMessageComponent___c_TypeInfo;
   }
-  _9__16_0 = (System_Action_object__o *)v6->static_fields->__9__16_0;
+  _9__16_0 = (System_Action_object__o *)v3->static_fields->__9__16_0;
   if ( !_9__16_0 )
   {
-    if ( !v6->_2.cctor_finished )
+    if ( !v3->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v6);
-      v6 = BattleConcatLabelMessageComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v3);
+      v3 = BattleConcatLabelMessageComponent___c_TypeInfo;
     }
-    v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__16_0 = (System_Action_object__o *)sub_1BCB244(System_Action_WrapLineMessage__TypeInfo);
-    System_Action_object____ctor(_9__16_0, v9, Method_BattleConcatLabelMessageComponent___c__OnDestroy_b__16_0__, 0LL);
+    v6 = (Il2CppObject *)v3->static_fields->__9;
+    _9__16_0 = (System_Action_object__o *)sub_1C2D6DC(System_Action_WrapLineMessage__TypeInfo);
+    System_Action_object____ctor(_9__16_0, v6, Method_BattleConcatLabelMessageComponent___c__OnDestroy_b__16_0__, 0);
     static_fields = BattleConcatLabelMessageComponent___c_TypeInfo->static_fields;
     static_fields->__9__16_0 = (struct System_Action_WrapLineMessage__o *)_9__16_0;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__16_0, (int32_t)_9__16_0, v11, v12);
+    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__16_0, (int32_t)_9__16_0, v8, v9);
   }
   BasicHelper__ForEach_object_(
     battleMessages,
     (System_Action_T__o *)_9__16_0,
-    (const MethodInfo_3006B3C *)Method_BasicHelper_ForEach_WrapLineMessage___);
+    (const MethodInfo_30BA910 *)Method_BasicHelper_ForEach_WrapLineMessage___);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BattleConcatLabelMessageComponent__ResizeBg(
+void BattleConcatLabelMessageComponent__ResizeBg(
         BattleConcatLabelMessageComponent_o *this,
         UnityEngine_Vector2_o printedLabelSize,
         const MethodInfo *method)
 {
   int32_t bgResizeTarget; // w8
-  float v4; // s1
-  float v5; // s8
+  float y; // s8
   UIWidget_o *bgSprite; // x20
-  __int64 v8; // x0
-  __int64 v9; // x1
-  float y; // s0
-  UIWidget_o *v11; // x19
+  __int64 v7; // x0
+  __int64 v8; // x1
+  float v9; // s0
+  UIWidget_o *v10; // x19
 
   bgResizeTarget = this->fields.bgResizeTarget;
-  v5 = v4;
+  y = printedLabelSize.fields.y;
   if ( (bgResizeTarget & 1) != 0 )
   {
     bgSprite = (UIWidget_o *)this->fields.bgSprite;
-    v8 = BattleUtility__FloorToInt(
+    v7 = BattleUtility__FloorToInt(
            printedLabelSize.fields.x + (float)(this->fields.paddingLabel.fields.x + this->fields.paddingLabel.fields.x),
-           0LL);
+           0);
     if ( !bgSprite )
       goto LABEL_7;
-    UIWidget__set_width(bgSprite, v8, 0LL);
+    UIWidget__set_width(bgSprite, v7, 0);
     bgResizeTarget = this->fields.bgResizeTarget;
   }
   if ( (bgResizeTarget & 2) == 0 )
     return;
-  y = this->fields.paddingLabel.fields.y;
-  v11 = (UIWidget_o *)this->fields.bgSprite;
-  v8 = BattleUtility__FloorToInt(v5 + (float)(y + y), 0LL);
-  if ( !v11 )
+  v9 = this->fields.paddingLabel.fields.y;
+  v10 = (UIWidget_o *)this->fields.bgSprite;
+  v7 = BattleUtility__FloorToInt(y + (float)(v9 + v9), 0);
+  if ( !v10 )
 LABEL_7:
-    sub_1BCB254(v8, v9);
-  UIWidget__set_height(v11, v8, 0LL);
+    sub_1C2D6EC(v7, v8);
+  UIWidget__set_height(v10, v7, 0);
 }
 
 
-UnityEngine_Vector2_o __fastcall BattleConcatLabelMessageComponent__ResizeLabel(
+UnityEngine_Vector2_o BattleConcatLabelMessageComponent__ResizeLabel(
         BattleConcatLabelMessageComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  BattleConcatLabelMessageComponent___c_c *v11; // x0
+  BattleConcatLabelMessageComponent___c_c *v3; // x0
   System_Collections_Generic_IEnumerable_TSource__o *battleMessages; // x20
   System_Func_object__bool__o *_9__13_0; // x21
-  Il2CppObject *v14; // x22
+  Il2CppObject *v6; // x22
   struct BattleConcatLabelMessageComponent___c_StaticFields *static_fields; // x0
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
-  System_Object_array *v19; // x20
-  const MethodInfo *v20; // x1
-  __int64 v21; // x21
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
+  System_Object_array *v11; // x20
+  const MethodInfo *v12; // x1
+  __int64 v13; // x21
   int32_t maxLabelWidth; // w22
-  const MethodInfo *v23; // x1
-  UnityEngine_Vector2_o v24; // x0
-  UnityEngine_Vector2_o v25; // x1
-  float v26; // s0
-  System_Action_object__o *v27; // x22
+  const MethodInfo *v15; // x1
+  UnityEngine_Vector2_o v16; // x0
+  UnityEngine_Vector2_o v17; // x1
+  float v18; // s0
+  System_Action_object__o *v19; // x22
   float x; // s0
   float y; // s1
   UnityEngine_Vector2_o PrintedLabelSize; // kr00_8
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
-  if ( (byte_4B1F7FD & 1) == 0 )
+  if ( (byte_4C2A6AA & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_WrapLineMessage__TypeInfo, method);
-    sub_1BCAFF8(&Method_BasicHelper_ForEach_WrapLineMessage___, v3);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_WrapLineMessage___, v4);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Where_WrapLineMessage___, v5);
-    sub_1BCAFF8(&System_Func_WrapLineMessage__bool__TypeInfo, v6);
-    sub_1BCAFF8(&Method_BattleConcatLabelMessageComponent___c__ResizeLabel_b__13_0__, v7);
-    sub_1BCAFF8(&Method_BattleConcatLabelMessageComponent___c__DisplayClass13_0__ResizeLabel_b__1__, v8);
-    sub_1BCAFF8(&BattleConcatLabelMessageComponent___c__DisplayClass13_0_TypeInfo, v9);
-    sub_1BCAFF8(&BattleConcatLabelMessageComponent___c_TypeInfo, v10);
-    byte_4B1F7FD = 1;
+    sub_1C2D490(&System_Action_WrapLineMessage__TypeInfo);
+    sub_1C2D490(&Method_BasicHelper_ForEach_WrapLineMessage___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_ToArray_WrapLineMessage___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Where_WrapLineMessage___);
+    sub_1C2D490(&System_Func_WrapLineMessage__bool__TypeInfo);
+    sub_1C2D490(&Method_BattleConcatLabelMessageComponent___c__ResizeLabel_b__13_0__);
+    sub_1C2D490(&Method_BattleConcatLabelMessageComponent___c__DisplayClass13_0__ResizeLabel_b__1__);
+    sub_1C2D490(&BattleConcatLabelMessageComponent___c__DisplayClass13_0_TypeInfo);
+    sub_1C2D490(&BattleConcatLabelMessageComponent___c_TypeInfo);
+    byte_4C2A6AA = 1;
   }
-  v11 = BattleConcatLabelMessageComponent___c_TypeInfo;
+  v3 = BattleConcatLabelMessageComponent___c_TypeInfo;
   battleMessages = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.battleMessages;
   if ( !BattleConcatLabelMessageComponent___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleConcatLabelMessageComponent___c_TypeInfo);
-    v11 = BattleConcatLabelMessageComponent___c_TypeInfo;
+    v3 = BattleConcatLabelMessageComponent___c_TypeInfo;
   }
-  _9__13_0 = (System_Func_object__bool__o *)v11->static_fields->__9__13_0;
+  _9__13_0 = (System_Func_object__bool__o *)v3->static_fields->__9__13_0;
   if ( !_9__13_0 )
   {
-    if ( !v11->_2.cctor_finished )
+    if ( !v3->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v11);
-      v11 = BattleConcatLabelMessageComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v3);
+      v3 = BattleConcatLabelMessageComponent___c_TypeInfo;
     }
-    v14 = (Il2CppObject *)v11->static_fields->__9;
-    _9__13_0 = (System_Func_object__bool__o *)sub_1BCB244(System_Func_WrapLineMessage__bool__TypeInfo);
+    v6 = (Il2CppObject *)v3->static_fields->__9;
+    _9__13_0 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_WrapLineMessage__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__13_0,
-      v14,
+      v6,
       Method_BattleConcatLabelMessageComponent___c__ResizeLabel_b__13_0__,
-      0LL);
+      0);
     static_fields = BattleConcatLabelMessageComponent___c_TypeInfo->static_fields;
     static_fields->__9__13_0 = (struct System_Func_WrapLineMessage__bool__o *)_9__13_0;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v16, v17);
+    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v8, v9);
   }
-  v18 = System_Linq_Enumerable__Where_object_(
+  v10 = System_Linq_Enumerable__Where_object_(
           battleMessages,
           (System_Func_TSource__bool__o *)_9__13_0,
-          (const MethodInfo_305DC88 *)Method_System_Linq_Enumerable_Where_WrapLineMessage___);
-  v19 = System_Linq_Enumerable__ToArray_object_(
-          v18,
-          (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_WrapLineMessage___);
-  if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v19, 0LL) )
+          (const MethodInfo_3115108 *)Method_System_Linq_Enumerable_Where_WrapLineMessage___);
+  v11 = System_Linq_Enumerable__ToArray_object_(
+          v10,
+          (const MethodInfo_310DFEC *)Method_System_Linq_Enumerable_ToArray_WrapLineMessage___);
+  if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v11, 0) )
   {
-    v21 = sub_1BCB244(BattleConcatLabelMessageComponent___c__DisplayClass13_0_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v21, 0LL);
+    v13 = sub_1C2D6DC(BattleConcatLabelMessageComponent___c__DisplayClass13_0_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v13, 0);
     maxLabelWidth = this->fields.maxLabelWidth;
-    LODWORD(v26) = *(_QWORD *)&BattleConcatLabelMessageComponent__GetPrintedLabelSize(this, v23);
-    if ( !v19 || !v21 )
-      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1BCB254)(v24, v25);
-    *(float *)(v21 + 16) = (float)((float)maxLabelWidth - v26) / (float)(int)v19->max_length;
-    v27 = (System_Action_object__o *)sub_1BCB244(System_Action_WrapLineMessage__TypeInfo);
+    LODWORD(v18) = *(_QWORD *)&BattleConcatLabelMessageComponent__GetPrintedLabelSize(this, v15);
+    if ( !v11 || !v13 )
+      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C2D6EC)(v16, v17);
+    *(float *)(v13 + 16) = (float)((float)maxLabelWidth - v18) / (float)SLODWORD(v11->max_length);
+    v19 = (System_Action_object__o *)sub_1C2D6DC(System_Action_WrapLineMessage__TypeInfo);
     System_Action_object____ctor(
-      v27,
-      (Il2CppObject *)v21,
+      v19,
+      (Il2CppObject *)v13,
       Method_BattleConcatLabelMessageComponent___c__DisplayClass13_0__ResizeLabel_b__1__,
-      0LL);
+      0);
     BasicHelper__ForEach_object_(
-      (System_Collections_Generic_IEnumerable_T__o *)v19,
-      (System_Action_T__o *)v27,
-      (const MethodInfo_3006B3C *)Method_BasicHelper_ForEach_WrapLineMessage___);
+      (System_Collections_Generic_IEnumerable_T__o *)v11,
+      (System_Action_T__o *)v19,
+      (const MethodInfo_30BA910 *)Method_BasicHelper_ForEach_WrapLineMessage___);
   }
-  PrintedLabelSize = BattleConcatLabelMessageComponent__GetPrintedLabelSize(this, v20);
+  PrintedLabelSize = BattleConcatLabelMessageComponent__GetPrintedLabelSize(this, v12);
   y = PrintedLabelSize.fields.y;
   x = PrintedLabelSize.fields.x;
   result.fields.y = y;
@@ -393,69 +371,65 @@ UnityEngine_Vector2_o __fastcall BattleConcatLabelMessageComponent__ResizeLabel(
 }
 
 
-void __fastcall BattleConcatLabelMessageComponent__SetTexts(
+void BattleConcatLabelMessageComponent__SetTexts(
         BattleConcatLabelMessageComponent_o *this,
         System_String_array *texts,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x21
+  __int64 v5; // x21
   _BOOL8 IsNullOrEmpty; // x0
-  __int64 v11; // x1
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  System_Func_object__object__o *v14; // x22
-  System_Collections_Generic_IEnumerable_TSource__o *v15; // x0
-  System_Object_array *v16; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  const MethodInfo *v19; // x1
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  System_Func_object__object__o *v10; // x22
+  System_Collections_Generic_IEnumerable_TSource__o *v11; // x0
+  System_Object_array *v12; // x0
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  const MethodInfo *v15; // x1
 
-  if ( (byte_4B1F7FB & 1) == 0 )
+  if ( (byte_4C2A6A8 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Select_string__WrapLineMessage___, texts);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_WrapLineMessage___, v5);
-    sub_1BCAFF8(&System_Func_string__WrapLineMessage__TypeInfo, v6);
-    sub_1BCAFF8(&Method_BattleConcatLabelMessageComponent___c__DisplayClass10_0__SetTexts_b__0__, v7);
-    sub_1BCAFF8(&BattleConcatLabelMessageComponent___c__DisplayClass10_0_TypeInfo, v8);
-    byte_4B1F7FB = 1;
+    sub_1C2D490(&Method_System_Linq_Enumerable_Select_string__WrapLineMessage___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_ToArray_WrapLineMessage___);
+    sub_1C2D490(&System_Func_string__WrapLineMessage__TypeInfo);
+    sub_1C2D490(&Method_BattleConcatLabelMessageComponent___c__DisplayClass10_0__SetTexts_b__0__);
+    sub_1C2D490(&BattleConcatLabelMessageComponent___c__DisplayClass10_0_TypeInfo);
+    byte_4C2A6A8 = 1;
   }
-  v9 = sub_1BCB244(BattleConcatLabelMessageComponent___c__DisplayClass10_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v9, 0LL);
-  if ( !v9 )
+  v5 = sub_1C2D6DC(BattleConcatLabelMessageComponent___c__DisplayClass10_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
+  if ( !v5 )
     goto LABEL_7;
-  *(_QWORD *)(v9 + 16) = this;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v9 + 16), (int32_t)this, v12, v13);
-  IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)texts, 0LL);
+  *(_QWORD *)(v5 + 16) = this;
+  sub_1C2D434((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)texts, 0);
   if ( IsNullOrEmpty )
     return;
   if ( !texts )
 LABEL_7:
-    sub_1BCB254(IsNullOrEmpty, v11);
-  *(_DWORD *)(v9 + 24) = this->fields.maxLabelWidth / (signed int)texts->max_length;
-  v14 = (System_Func_object__object__o *)sub_1BCB244(System_Func_string__WrapLineMessage__TypeInfo);
+    sub_1C2D6EC(IsNullOrEmpty, v7);
+  *(_DWORD *)(v5 + 24) = this->fields.maxLabelWidth / SLODWORD(texts->max_length);
+  v10 = (System_Func_object__object__o *)sub_1C2D6DC(System_Func_string__WrapLineMessage__TypeInfo);
   System_Func_object__object____ctor(
-    v14,
-    (Il2CppObject *)v9,
+    v10,
+    (Il2CppObject *)v5,
     Method_BattleConcatLabelMessageComponent___c__DisplayClass10_0__SetTexts_b__0__,
-    0LL);
-  v15 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
+    0);
+  v11 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)texts,
-                                                               (System_Func_TSource__TResult__o *)v14,
-                                                               (const MethodInfo_304EFCC *)Method_System_Linq_Enumerable_Select_string__WrapLineMessage___);
-  v16 = System_Linq_Enumerable__ToArray_object_(
-          v15,
-          (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_WrapLineMessage___);
-  this->fields.battleMessages = (struct WrapLineMessage_array *)v16;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.battleMessages, (int32_t)v16, v17, v18);
-  BattleConcatLabelMessageComponent__Adjust(this, v19);
+                                                               (System_Func_TSource__TResult__o *)v10,
+                                                               (const MethodInfo_310501C *)Method_System_Linq_Enumerable_Select_string__WrapLineMessage___);
+  v12 = System_Linq_Enumerable__ToArray_object_(
+          v11,
+          (const MethodInfo_310DFEC *)Method_System_Linq_Enumerable_ToArray_WrapLineMessage___);
+  this->fields.battleMessages = (struct WrapLineMessage_array *)v12;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.battleMessages, (int32_t)v12, v13, v14);
+  BattleConcatLabelMessageComponent__Adjust(this, v15);
 }
 
 
-int32_t __fastcall BattleConcatLabelMessageComponent__get_MaxLabelWidth(
+int32_t BattleConcatLabelMessageComponent__get_MaxLabelWidth(
         BattleConcatLabelMessageComponent_o *this,
         const MethodInfo *method)
 {
@@ -463,70 +437,69 @@ int32_t __fastcall BattleConcatLabelMessageComponent__get_MaxLabelWidth(
 }
 
 
-void __fastcall BattleConcatLabelMessageComponent___c___cctor(const MethodInfo *method)
+void BattleConcatLabelMessageComponent___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  const MethodInfo *v4; // x3
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
 
-  if ( (byte_4B1F7FF & 1) == 0 )
+  if ( (byte_4C2A6AC & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleConcatLabelMessageComponent___c_TypeInfo, v1);
-    byte_4B1F7FF = 1;
+    sub_1C2D490(&BattleConcatLabelMessageComponent___c_TypeInfo);
+    byte_4C2A6AC = 1;
   }
-  v2 = (Il2CppObject *)sub_1BCB244(BattleConcatLabelMessageComponent___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  BattleConcatLabelMessageComponent___c_TypeInfo->static_fields->__9 = (struct BattleConcatLabelMessageComponent___c_o *)v2;
-  sub_1BCAF9C(
+  v1 = (Il2CppObject *)sub_1C2D6DC(BattleConcatLabelMessageComponent___c_TypeInfo);
+  System_Object___ctor(v1, 0);
+  BattleConcatLabelMessageComponent___c_TypeInfo->static_fields->__9 = (struct BattleConcatLabelMessageComponent___c_o *)v1;
+  sub_1C2D434(
     (CGThumbnailListItem_o *)BattleConcatLabelMessageComponent___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+    (int32_t)v1,
+    v2,
+    v3);
 }
 
 
-void __fastcall BattleConcatLabelMessageComponent___c___ctor(
+void BattleConcatLabelMessageComponent___c___ctor(
         BattleConcatLabelMessageComponent___c_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall BattleConcatLabelMessageComponent___c___OnDestroy_b__16_0(
+void BattleConcatLabelMessageComponent___c___OnDestroy_b__16_0(
         BattleConcatLabelMessageComponent___c_o *this,
         WrapLineMessage_o *message,
         const MethodInfo *method)
 {
   if ( !message )
-    sub_1BCB254(this, 0LL);
-  ((void (__fastcall *)(WrapLineMessage_o *, Il2CppMethodPointer))message->klass->vtable._4_Quit.method)(
+    sub_1C2D6EC(this, 0);
+  ((void (__fastcall *)(WrapLineMessage_o *, const MethodInfo *))message->klass->vtable._4_Quit.methodPtr)(
     message,
-    message->klass->vtable._5_AfterParseEachChar.methodPtr);
+    message->klass->vtable._4_Quit.method);
 }
 
 
-bool __fastcall BattleConcatLabelMessageComponent___c___ResizeLabel_b__13_0(
+bool BattleConcatLabelMessageComponent___c___ResizeLabel_b__13_0(
         BattleConcatLabelMessageComponent___c_o *this,
         WrapLineMessage_o *message,
         const MethodInfo *method)
 {
   if ( !message )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   return message->fields._IsWrapWidth_k__BackingField;
 }
 
 
-void __fastcall BattleConcatLabelMessageComponent___c__DisplayClass10_0___ctor(
+void BattleConcatLabelMessageComponent___c__DisplayClass10_0___ctor(
         BattleConcatLabelMessageComponent___c__DisplayClass10_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-WrapLineMessage_o *__fastcall BattleConcatLabelMessageComponent___c__DisplayClass10_0___SetTexts_b__0(
+WrapLineMessage_o *BattleConcatLabelMessageComponent___c__DisplayClass10_0___SetTexts_b__0(
         BattleConcatLabelMessageComponent___c__DisplayClass10_0_o *this,
         System_String_o *text,
         const MethodInfo *method)
@@ -534,20 +507,20 @@ WrapLineMessage_o *__fastcall BattleConcatLabelMessageComponent___c__DisplayClas
   const MethodInfo *v3; // x3
 
   if ( !this->fields.__4__this )
-    sub_1BCB254(this, text);
+    sub_1C2D6EC(this, text);
   return BattleConcatLabelMessageComponent__CreateMessage(this->fields.__4__this, text, this->fields.wrapWidth, v3);
 }
 
 
-void __fastcall BattleConcatLabelMessageComponent___c__DisplayClass13_0___ctor(
+void BattleConcatLabelMessageComponent___c__DisplayClass13_0___ctor(
         BattleConcatLabelMessageComponent___c__DisplayClass13_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall BattleConcatLabelMessageComponent___c__DisplayClass13_0___ResizeLabel_b__1(
+void BattleConcatLabelMessageComponent___c__DisplayClass13_0___ResizeLabel_b__1(
         BattleConcatLabelMessageComponent___c__DisplayClass13_0_o *this,
         WrapLineMessage_o *message,
         const MethodInfo *method)
@@ -555,7 +528,7 @@ void __fastcall BattleConcatLabelMessageComponent___c__DisplayClass13_0___Resize
   float x; // s0
 
   if ( !message )
-    sub_1BCB254(this, 0LL);
-  x = ScriptLineMessage__GetPrintedSize((ScriptLineMessage_o *)message, 0LL).fields.x;
-  WrapLineMessage__UpdateWrapWidth(message, x + this->fields.addWidth, 0LL);
+    sub_1C2D6EC(this, 0);
+  x = ScriptLineMessage__GetPrintedSize((ScriptLineMessage_o *)message, 0).fields.x;
+  WrapLineMessage__UpdateWrapWidth(message, x + this->fields.addWidth, 0);
 }

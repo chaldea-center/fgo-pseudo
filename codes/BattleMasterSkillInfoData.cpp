@@ -1,19 +1,17 @@
-void __fastcall BattleMasterSkillInfoData___ctor(BattleMasterSkillInfoData_o *this, const MethodInfo *method)
+void BattleMasterSkillInfoData___ctor(BattleMasterSkillInfoData_o *this, const MethodInfo *method)
 {
   this->fields.itemImageId = -1;
-  *(_QWORD *)&this->fields.cutInId = -1LL;
-  *(_QWORD *)&this->fields.commonReleaseCondId = -1LL;
+  *(_QWORD *)&this->fields.cutInId = -1;
+  *(_QWORD *)&this->fields.commonReleaseCondId = -1;
   this->fields._SelectAddIndex_k__BackingField = -1;
   this->fields.canExecSkill = 1;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-BaseMotionSkip_o *__fastcall BattleMasterSkillInfoData__MakeSkillSkip(
-        BattleMasterSkillInfoData_o *this,
-        const MethodInfo *method)
+BaseMotionSkip_o *BattleMasterSkillInfoData__MakeSkillSkip(BattleMasterSkillInfoData_o *this, const MethodInfo *method)
 {
-  return (BaseMotionSkip_o *)((__int64 (__fastcall *)(BattleMasterSkillInfoData_o *, void *))this->klass->vtable._15_CommonMakeSkillSkip.method)(
+  return (BaseMotionSkip_o *)((__int64 (__fastcall *)(BattleMasterSkillInfoData_o *, const MethodInfo *))this->klass->vtable._17_CommonMakeSkillSkip.methodPtr)(
                                this,
-                               this->klass[1]._1.image);
+                               this->klass->vtable._17_CommonMakeSkillSkip.method);
 }

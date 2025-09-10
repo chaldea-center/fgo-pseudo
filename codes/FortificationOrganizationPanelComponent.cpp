@@ -1,13 +1,13 @@
-void __fastcall FortificationOrganizationPanelComponent___ctor(
+void FortificationOrganizationPanelComponent___ctor(
         FortificationOrganizationPanelComponent_o *this,
         const MethodInfo *method)
 {
   MapZoom_c *v3; // x0
 
-  if ( (byte_4B169E3 & 1) == 0 )
+  if ( (byte_4C216E1 & 1) == 0 )
   {
-    sub_1BCAFF8(&MapZoom_TypeInfo, method);
-    byte_4B169E3 = 1;
+    sub_1C2D490(&MapZoom_TypeInfo);
+    byte_4C216E1 = 1;
   }
   v3 = MapZoom_TypeInfo;
   if ( !MapZoom_TypeInfo->_2.cctor_finished )
@@ -16,11 +16,11 @@ void __fastcall FortificationOrganizationPanelComponent___ctor(
     v3 = MapZoom_TypeInfo;
   }
   this->fields.zoomSize = v3->static_fields->ZOOM_DEFAULT;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall FortificationOrganizationPanelComponent__ActivationTouchFlag(
+void FortificationOrganizationPanelComponent__ActivationTouchFlag(
         FortificationOrganizationPanelComponent_o *this,
         const MethodInfo *method)
 {
@@ -28,7 +28,7 @@ void __fastcall FortificationOrganizationPanelComponent__ActivationTouchFlag(
 }
 
 
-void __fastcall FortificationOrganizationPanelComponent__Awake(
+void FortificationOrganizationPanelComponent__Awake(
         FortificationOrganizationPanelComponent_o *this,
         const MethodInfo *method)
 {
@@ -36,7 +36,7 @@ void __fastcall FortificationOrganizationPanelComponent__Awake(
 }
 
 
-void __fastcall FortificationOrganizationPanelComponent__Close(
+void FortificationOrganizationPanelComponent__Close(
         FortificationOrganizationPanelComponent_o *this,
         const MethodInfo *method)
 {
@@ -47,24 +47,24 @@ void __fastcall FortificationOrganizationPanelComponent__Close(
   struct MapCamera_o *v7; // x8
   const MethodInfo *v8; // x2
 
-  UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0);
   orgCamera = this->fields.orgCamera;
   this->fields.isTouchEnabled = 0;
   if ( !orgCamera
-    || (mZoom = orgCamera->fields.mZoom) == 0LL
-    || (MapZoom__Stop(mZoom, 1, 0LL), (v6 = this->fields.orgCamera) == 0LL)
-    || (mZoom = (MapZoom_o *)v6->fields.mScrl) == 0LL
-    || (MapScroll__Stop((MapScroll_o *)mZoom, 1, 0LL), (v7 = this->fields.orgCamera) == 0LL)
-    || (mZoom = v7->fields.mZoom) == 0LL )
+    || (mZoom = orgCamera->fields.mZoom) == 0
+    || (MapZoom__Stop(mZoom, 1, 0), (v6 = this->fields.orgCamera) == 0)
+    || (mZoom = (MapZoom_o *)v6->fields.mScrl) == 0
+    || (MapScroll__Stop((MapScroll_o *)mZoom, 1, 0), (v7 = this->fields.orgCamera) == 0)
+    || (mZoom = v7->fields.mZoom) == 0 )
   {
-    sub_1BCB254(mZoom, v4);
+    sub_1C2D6EC(mZoom, v4);
   }
-  this->fields.zoomSize = MapZoom__GetZoomSize(mZoom, 0LL);
+  this->fields.zoomSize = MapZoom__GetZoomSize(mZoom, 0);
   FortificationOrganizationPanelComponent__SetActiveForOrgObj(this, 0, v8);
 }
 
 
-bool __fastcall FortificationOrganizationPanelComponent__IsMapTouchEnabled(
+bool FortificationOrganizationPanelComponent__IsMapTouchEnabled(
         FortificationOrganizationPanelComponent_o *this,
         const MethodInfo *method)
 {
@@ -72,13 +72,12 @@ bool __fastcall FortificationOrganizationPanelComponent__IsMapTouchEnabled(
 
   isTouchEnabled = this->fields.isTouchEnabled;
   if ( isTouchEnabled )
-    return !MainMenuBar__get_IsEnableOutSideCollider(0LL);
+    return !MainMenuBar__get_IsEnableOutSideCollider(0);
   return isTouchEnabled;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall FortificationOrganizationPanelComponent__Open(
+void FortificationOrganizationPanelComponent__Open(
         FortificationOrganizationPanelComponent_o *this,
         int32_t eventId,
         UnityEngine_Texture2D_o *orgBgTexture,
@@ -88,75 +87,69 @@ void __fastcall FortificationOrganizationPanelComponent__Open(
         UnityEngine_Camera_o *mainCamera,
         const MethodInfo *method)
 {
-  __int64 v14; // x1
   struct MapCamera_o **p_orgCamera; // x20
-  const MethodInfo *v16; // x2
-  __int64 v17; // x1
+  const MethodInfo *v15; // x2
+  __int64 v16; // x1
   MapCamera_o *organizationBg; // x0
-  __int64 v19; // x1
-  CTouch_c *v20; // x0
+  CTouch_c *v18; // x0
   struct CTouch_StaticFields *static_fields; // x0
 
-  if ( (byte_4B169E2 & 1) == 0 )
+  if ( (byte_4C216E0 & 1) == 0 )
   {
-    sub_1BCAFF8(&CTouch_TypeInfo, *(_QWORD *)&eventId);
-    sub_1BCAFF8(&StringLiteral_2116/*"ActivationTouchFlag"*/, v14);
-    byte_4B169E2 = 1;
+    sub_1C2D490(&CTouch_TypeInfo);
+    sub_1C2D490(&StringLiteral_2126/*"ActivationTouchFlag"*/);
+    byte_4C216E0 = 1;
   }
   this->fields.mainPanel = mainPanel;
-  sub_1BCAF9C(&this->fields.mainPanel);
+  sub_1C2D434(&this->fields.mainPanel);
   this->fields.eventRoot = eventRoot;
-  sub_1BCAF9C(&this->fields.eventRoot);
+  sub_1C2D434(&this->fields.eventRoot);
   this->fields.orgCamera = orgCamera;
   p_orgCamera = &this->fields.orgCamera;
-  sub_1BCAF9C(&this->fields.orgCamera);
-  FortificationOrganizationPanelComponent__SetActiveForOrgObj(this, 1, v16);
+  sub_1C2D434(&this->fields.orgCamera);
+  FortificationOrganizationPanelComponent__SetActiveForOrgObj(this, 1, v15);
   organizationBg = (MapCamera_o *)this->fields.organizationBg;
   if ( !organizationBg )
     goto LABEL_16;
-  ((void (__fastcall *)(MapCamera_o *, UnityEngine_Texture2D_o *, const char *))organizationBg->klass[2]._1.gc_desc)(
+  ((void (__fastcall *)(MapCamera_o *, UnityEngine_Texture2D_o *, void *))organizationBg->klass[1].vtable._3_ToString.method)(
     organizationBg,
     orgBgTexture,
-    organizationBg->klass[2]._1.name);
+    organizationBg->klass[2]._1.image);
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-  CTouch__init(0LL);
-  if ( !byte_4B16AE1 )
+  CTouch__init(0);
+  if ( !byte_4C217DF )
   {
-    sub_1BCAFF8(&CTouch_TypeInfo, v19);
-    byte_4B16AE1 = 1;
+    sub_1C2D490(&CTouch_TypeInfo);
+    byte_4C217DF = 1;
   }
-  v20 = CTouch_TypeInfo;
+  v18 = CTouch_TypeInfo;
   if ( !CTouch_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-    v20 = CTouch_TypeInfo;
+    v18 = CTouch_TypeInfo;
   }
-  static_fields = v20->static_fields;
+  static_fields = v18->static_fields;
   static_fields->mScreenCam = mainCamera;
-  sub_1BCAF9C(&static_fields->mScreenCam);
+  sub_1C2D434(&static_fields->mScreenCam);
   organizationBg = *p_orgCamera;
   if ( !*p_orgCamera
-    || (MapCamera__Init(organizationBg, 0LL), (organizationBg = *p_orgCamera) == 0LL)
-    || (MapCamera__SetMapBg(organizationBg, this->fields.organizationBg, 0LL),
-        (organizationBg = this->fields.orgCamera) == 0LL)
-    || (MapCamera__SetEnable(organizationBg, 1, 0LL), !*p_orgCamera)
-    || (organizationBg = (MapCamera_o *)(*p_orgCamera)->fields.mZoom) == 0LL )
+    || (MapCamera__Init(organizationBg, 0), (organizationBg = *p_orgCamera) == 0)
+    || (MapCamera__SetMapBg(organizationBg, this->fields.organizationBg, 0),
+        (organizationBg = this->fields.orgCamera) == 0)
+    || (MapCamera__SetEnable(organizationBg, 1, 0), !*p_orgCamera)
+    || (organizationBg = (MapCamera_o *)(*p_orgCamera)->fields.mZoom) == 0 )
   {
 LABEL_16:
-    sub_1BCB254(organizationBg, v17);
+    sub_1C2D6EC(organizationBg, v16);
   }
-  MapZoom__SetZoomSize((MapZoom_o *)organizationBg, this->fields.zoomSize, 1, 0, 0LL);
-  UnityEngine_MonoBehaviour__Invoke(
-    (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_2116/*"ActivationTouchFlag"*/,
-    0.05,
-    0LL);
+  MapZoom__SetZoomSize((MapZoom_o *)organizationBg, this->fields.zoomSize, 1, 0, 0);
+  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_2126/*"ActivationTouchFlag"*/, 0.05, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall FortificationOrganizationPanelComponent__SetActiveForOrgObj(
+void FortificationOrganizationPanelComponent__SetActiveForOrgObj(
         FortificationOrganizationPanelComponent_o *this,
         bool isActive,
         const MethodInfo *method)
@@ -168,23 +161,23 @@ void __fastcall FortificationOrganizationPanelComponent__SetActiveForOrgObj(
   if ( !mainPanel )
     goto LABEL_7;
   v5 = !isActive;
-  UnityEngine_GameObject__SetActive(mainPanel, v5, 0LL);
+  UnityEngine_GameObject__SetActive(mainPanel, v5, 0);
   mainPanel = this->fields.eventRoot;
   if ( !mainPanel
-    || (UnityEngine_GameObject__SetActive(mainPanel, v5, 0LL),
-        (mainPanel = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL)) == 0LL)
-    || (UnityEngine_GameObject__SetActive(mainPanel, isActive, 0LL),
-        (mainPanel = (UnityEngine_GameObject_o *)this->fields.orgCamera) == 0LL)
-    || (mainPanel = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)mainPanel, 0LL)) == 0LL )
+    || (UnityEngine_GameObject__SetActive(mainPanel, v5, 0),
+        (mainPanel = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0)
+    || (UnityEngine_GameObject__SetActive(mainPanel, isActive, 0),
+        (mainPanel = (UnityEngine_GameObject_o *)this->fields.orgCamera) == 0)
+    || (mainPanel = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)mainPanel, 0)) == 0 )
   {
 LABEL_7:
-    sub_1BCB254(mainPanel, isActive);
+    sub_1C2D6EC(mainPanel, isActive);
   }
-  UnityEngine_GameObject__SetActive(mainPanel, isActive, 0LL);
+  UnityEngine_GameObject__SetActive(mainPanel, isActive, 0);
 }
 
 
-void __fastcall FortificationOrganizationPanelComponent__Update(
+void FortificationOrganizationPanelComponent__Update(
         FortificationOrganizationPanelComponent_o *this,
         const MethodInfo *method)
 {
@@ -193,22 +186,22 @@ void __fastcall FortificationOrganizationPanelComponent__Update(
   _BOOL4 isTouchEnabled; // w8
   MapCamera_o *orgCamera; // x19
 
-  if ( (byte_4B169E1 & 1) == 0 )
+  if ( (byte_4C216DF & 1) == 0 )
   {
-    sub_1BCAFF8(&CTouch_TypeInfo, method);
-    byte_4B169E1 = 1;
+    sub_1C2D490(&CTouch_TypeInfo);
+    byte_4C216DF = 1;
   }
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
-  CTouch__process(0LL);
+  CTouch__process(0);
   isTouchEnabled = this->fields.isTouchEnabled;
   orgCamera = this->fields.orgCamera;
   if ( isTouchEnabled )
   {
-    IsEnableOutSideCollider = MainMenuBar__get_IsEnableOutSideCollider(0LL);
+    IsEnableOutSideCollider = MainMenuBar__get_IsEnableOutSideCollider(0);
     LOBYTE(isTouchEnabled) = !IsEnableOutSideCollider;
   }
   if ( !orgCamera )
-    sub_1BCB254(IsEnableOutSideCollider, v4);
-  MapCamera__Process(orgCamera, isTouchEnabled, 0LL);
+    sub_1C2D6EC(IsEnableOutSideCollider, v4);
+  MapCamera__Process(orgCamera, isTouchEnabled, 0);
 }

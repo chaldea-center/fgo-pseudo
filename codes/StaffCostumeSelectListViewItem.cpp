@@ -1,4 +1,4 @@
-void __fastcall StaffCostumeSelectListViewItem___ctor(
+void StaffCostumeSelectListViewItem___ctor(
         StaffCostumeSelectListViewItem_o *this,
         int32_t index,
         StaffPhotoCostumeEntity_o *costumeEntity,
@@ -14,19 +14,19 @@ void __fastcall StaffCostumeSelectListViewItem___ctor(
   const MethodInfo *v15; // x3
   int32_t idx; // w8
 
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   this->fields._StaffPhotoCostumeEntity_k__BackingField = costumeEntity;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._StaffPhotoCostumeEntity_k__BackingField,
     (int32_t)costumeEntity,
     v10,
     v11);
   if ( !costumeEntity )
-    sub_1BCB254(v12, v13);
+    sub_1C2D6EC(v12, v13);
   idx = costumeEntity->fields.idx;
   this->fields._PhotoCampaignAtlas_k__BackingField = photoCampaignAtlas;
   this->fields._IsSelected_k__BackingField = idx == selectedCostumeIdx;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._PhotoCampaignAtlas_k__BackingField,
     (int32_t)photoCampaignAtlas,
     v14,
@@ -34,7 +34,7 @@ void __fastcall StaffCostumeSelectListViewItem___ctor(
 }
 
 
-void __fastcall StaffCostumeSelectListViewItem__ModifyItem(
+void StaffCostumeSelectListViewItem__ModifyItem(
         StaffCostumeSelectListViewItem_o *this,
         int32_t selectedCostumeIdx,
         const MethodInfo *method)
@@ -43,12 +43,12 @@ void __fastcall StaffCostumeSelectListViewItem__ModifyItem(
 
   StaffPhotoCostumeEntity_k__BackingField = this->fields._StaffPhotoCostumeEntity_k__BackingField;
   if ( !StaffPhotoCostumeEntity_k__BackingField )
-    sub_1BCB254(this, selectedCostumeIdx);
+    sub_1C2D6EC(this, selectedCostumeIdx);
   this->fields._IsSelected_k__BackingField = StaffPhotoCostumeEntity_k__BackingField->fields.idx == selectedCostumeIdx;
 }
 
 
-bool __fastcall StaffCostumeSelectListViewItem__SetSortValue(
+bool StaffCostumeSelectListViewItem__SetSortValue(
         StaffCostumeSelectListViewItem_o *this,
         ListViewSort_o *sort,
         const MethodInfo *method)
@@ -58,22 +58,20 @@ bool __fastcall StaffCostumeSelectListViewItem__SetSortValue(
 
   StaffPhotoCostumeEntity_k__BackingField = this->fields._StaffPhotoCostumeEntity_k__BackingField;
   if ( !StaffPhotoCostumeEntity_k__BackingField )
-    sub_1BCB254(this, sort);
+    sub_1C2D6EC(this, sort);
   result = 1;
   this->fields.sortValue1 = StaffPhotoCostumeEntity_k__BackingField->fields.dispOrder;
   return result;
 }
 
 
-bool __fastcall StaffCostumeSelectListViewItem__get_IsSelected(
-        StaffCostumeSelectListViewItem_o *this,
-        const MethodInfo *method)
+bool StaffCostumeSelectListViewItem__get_IsSelected(StaffCostumeSelectListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._IsSelected_k__BackingField;
 }
 
 
-UIAtlas_o *__fastcall StaffCostumeSelectListViewItem__get_PhotoCampaignAtlas(
+UIAtlas_o *StaffCostumeSelectListViewItem__get_PhotoCampaignAtlas(
         StaffCostumeSelectListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -81,7 +79,7 @@ UIAtlas_o *__fastcall StaffCostumeSelectListViewItem__get_PhotoCampaignAtlas(
 }
 
 
-StaffPhotoCostumeEntity_o *__fastcall StaffCostumeSelectListViewItem__get_StaffPhotoCostumeEntity(
+StaffPhotoCostumeEntity_o *StaffCostumeSelectListViewItem__get_StaffPhotoCostumeEntity(
         StaffCostumeSelectListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -89,7 +87,7 @@ StaffPhotoCostumeEntity_o *__fastcall StaffCostumeSelectListViewItem__get_StaffP
 }
 
 
-void __fastcall StaffCostumeSelectListViewItem__set_IsSelected(
+void StaffCostumeSelectListViewItem__set_IsSelected(
         StaffCostumeSelectListViewItem_o *this,
         bool value,
         const MethodInfo *method)

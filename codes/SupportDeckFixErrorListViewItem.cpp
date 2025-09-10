@@ -1,4 +1,4 @@
-void __fastcall SupportDeckFixErrorListViewItem___ctor(
+void SupportDeckFixErrorListViewItem___ctor(
         SupportDeckFixErrorListViewItem_o *this,
         System_String_o *message,
         int32_t index,
@@ -7,13 +7,13 @@ void __fastcall SupportDeckFixErrorListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   this->fields.message = message;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.message, (int32_t)message, v6, v7);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.message, (int32_t)message, v6, v7);
 }
 
 
-System_String_o *__fastcall SupportDeckFixErrorListViewItem__GetMessage(
+System_String_o *SupportDeckFixErrorListViewItem__GetMessage(
         SupportDeckFixErrorListViewItem_o *this,
         const MethodInfo *method)
 {

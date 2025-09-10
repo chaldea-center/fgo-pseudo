@@ -1,16 +1,16 @@
-bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
+bool EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
 {
   bool result; // w0
   int v4; // w9
 
-  if ( (byte_4B1B90B & 1) == 0 )
+  if ( (byte_4C266AD & 1) == 0 )
   {
-    sub_1BCAFF8(&char_TypeInfo, method);
-    byte_4B1B90B = 1;
+    sub_1C2D490(&char_TypeInfo);
+    byte_4C266AD = 1;
   }
   if ( !char_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(char_TypeInfo);
-  if ( System_Char__IsSurrogate(ch, 0LL) )
+  if ( System_Char__IsSurrogate(ch, 0) )
     return 1;
   result = 1;
   if ( ch > 0x26BCu )
@@ -219,7 +219,7 @@ bool __fastcall EmojiUtility__IsEmojiChar(uint16_t ch, const MethodInfo *method)
 
 
 // local variable allocation has failed, the output may be wrong!
-uint16_t __fastcall EmojiUtility__ValidateNameText(
+uint16_t EmojiUtility__ValidateNameText(
         System_String_o *text,
         int32_t charIndex,
         uint16_t addedChar,

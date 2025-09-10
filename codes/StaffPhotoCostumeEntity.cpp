@@ -1,37 +1,31 @@
-void __fastcall StaffPhotoCostumeEntity___ctor(StaffPhotoCostumeEntity_o *this, const MethodInfo *method)
+void StaffPhotoCostumeEntity___ctor(StaffPhotoCostumeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D0F1 & 1) == 0 )
+  if ( (byte_4C27EE0 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D0F1 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C27EE0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall StaffPhotoCostumeEntity__CreatePK(
-        int32_t staffPhotoId,
-        int32_t idx,
-        const MethodInfo *method)
+System_String_o *StaffPhotoCostumeEntity__CreatePK(int32_t staffPhotoId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4B1D0F0 & 1) == 0 )
+  if ( (byte_4C27EDF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
-    byte_4B1D0F0 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C27EDF = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            staffPhotoId,
            idx,
-           (const MethodInfo_3018C2C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
-System_String_o *__fastcall StaffPhotoCostumeEntity__CreatePrimaryKey(
-        StaffPhotoCostumeEntity_o *this,
-        const MethodInfo *method)
+System_String_o *StaffPhotoCostumeEntity__CreatePrimaryKey(StaffPhotoCostumeEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
@@ -39,139 +33,134 @@ System_String_o *__fastcall StaffPhotoCostumeEntity__CreatePrimaryKey(
 }
 
 
-System_Int32_array *__fastcall StaffPhotoCostumeEntity__GetExtendOffset(
+System_Int32_array *StaffPhotoCostumeEntity__GetExtendOffset(
         StaffPhotoCostumeEntity_o *this,
         System_String_o *key,
         System_Int32_array *defaultValue,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *extendData; // x0
-  __int64 v13; // x1
-  struct System_Collections_Generic_Dictionary_string__object__o *v14; // x0
+  __int64 v8; // x1
+  struct System_Collections_Generic_Dictionary_string__object__o *v9; // x0
   Il2CppObject *Item; // x0
-  __int64 methodPtr_low; // x10
-  System_Collections_Generic_List_object__c *v17; // x9
-  System_Collections_Generic_List_object__o *v18; // x20
-  Il2CppObject *v19; // x21
-  __int64 v20; // x2
-  Il2CppObject *v21; // x0
+  __int64 naturalAligment; // x10
+  System_Collections_Generic_List_object__c *v12; // x9
+  System_Collections_Generic_List_object__o *v13; // x20
+  Il2CppObject *v14; // x21
+  __int64 v15; // x2
+  Il2CppObject *v16; // x0
 
-  if ( (byte_4B1D0EC & 1) == 0 )
+  if ( (byte_4C27EDB & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Convert_TypeInfo, key);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, v7);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v8);
-    sub_1BCAFF8(&int___TypeInfo, v9);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_object__get_Item__, v10);
-    sub_1BCAFF8(&System_Collections_Generic_List_object__TypeInfo, v11);
-    byte_4B1D0EC = 1;
+    sub_1C2D490(&System_Convert_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C2D490(&int___TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_List_object__get_Item__);
+    sub_1C2D490(&System_Collections_Generic_List_object__TypeInfo);
+    byte_4C27EDB = 1;
   }
   if ( !defaultValue )
-    defaultValue = (System_Int32_array *)sub_1BCB0A0(int___TypeInfo, 2LL);
+    defaultValue = (System_Int32_array *)sub_1C2D538(int___TypeInfo, 2);
   extendData = this->fields.extendData;
   if ( extendData
     && System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)extendData,
          (Il2CppObject *)key,
-         (const MethodInfo_3385F6C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (const MethodInfo_344A51C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
-    v14 = this->fields.extendData;
-    if ( !v14 )
+    v9 = this->fields.extendData;
+    if ( !v9 )
       goto LABEL_22;
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
-             (System_Collections_Generic_Dictionary_object__object__o *)v14,
+             (System_Collections_Generic_Dictionary_object__object__o *)v9,
              (Il2CppObject *)key,
-             (const MethodInfo_3385CF8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (const MethodInfo_344A2A8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       return defaultValue;
-    methodPtr_low = LOBYTE(System_Collections_Generic_List_object__TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(Item->klass->vtable[0].methodPtr) < (unsigned int)methodPtr_low )
+    naturalAligment = System_Collections_Generic_List_object__TypeInfo->_2.naturalAligment;
+    if ( Item->klass->_2.naturalAligment < (unsigned int)naturalAligment )
       return defaultValue;
-    v17 = (System_Collections_Generic_List_object__c *)Item->klass->_2.typeHierarchy[methodPtr_low - 1];
-    v18 = v17 == System_Collections_Generic_List_object__TypeInfo
+    v12 = (System_Collections_Generic_List_object__c *)Item->klass->_2.typeHierarchy[naturalAligment - 1];
+    v13 = v12 == System_Collections_Generic_List_object__TypeInfo
         ? (System_Collections_Generic_List_object__o *)Item
         : 0LL;
-    if ( v17 != System_Collections_Generic_List_object__TypeInfo )
+    if ( v12 != System_Collections_Generic_List_object__TypeInfo )
       return defaultValue;
-    v14 = (struct System_Collections_Generic_Dictionary_string__object__o *)sub_1BCB0A0(int___TypeInfo, 2LL);
-    if ( !v18 )
+    v9 = (struct System_Collections_Generic_Dictionary_string__object__o *)sub_1C2D538(int___TypeInfo, 2);
+    if ( !v13 )
       goto LABEL_22;
-    defaultValue = (System_Int32_array *)v14;
-    v19 = System_Collections_Generic_List_object___get_Item(
-            v18,
+    defaultValue = (System_Int32_array *)v9;
+    v14 = System_Collections_Generic_List_object___get_Item(
+            v13,
             0,
-            (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_object__get_Item__);
+            (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_object__get_Item__);
     if ( !System_Convert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-    v14 = (struct System_Collections_Generic_Dictionary_string__object__o *)System_Convert__ToInt32(v19, 0LL);
+    v9 = (struct System_Collections_Generic_Dictionary_string__object__o *)System_Convert__ToInt32(v14, 0);
     if ( !defaultValue )
 LABEL_22:
-      sub_1BCB254(v14, v13);
-    if ( !defaultValue->max_length
-      || (defaultValue->m_Items[1] = (int)v14,
-          v21 = System_Collections_Generic_List_object___get_Item(
-                  v18,
+      sub_1C2D6EC(v9, v8);
+    if ( !LODWORD(defaultValue->max_length)
+      || (defaultValue->m_Items[0] = (int)v9,
+          v16 = System_Collections_Generic_List_object___get_Item(
+                  v13,
                   1,
-                  (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_object__get_Item__),
-          v14 = (struct System_Collections_Generic_Dictionary_string__object__o *)System_Convert__ToInt32(v21, 0LL),
-          defaultValue->max_length <= 1) )
+                  (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_object__get_Item__),
+          v9 = (struct System_Collections_Generic_Dictionary_string__object__o *)System_Convert__ToInt32(v16, 0),
+          LODWORD(defaultValue->max_length) <= 1) )
     {
-      sub_1BCB25C(v14, v13, v20);
+      sub_1C2D6F4(v9, v8, v15);
     }
-    defaultValue->m_Items[2] = (int)v14;
+    defaultValue->m_Items[1] = (int)v9;
   }
   return defaultValue;
 }
 
 
-System_Int32_array *__fastcall StaffPhotoCostumeEntity__GetPhotoPositionCenter(
+System_Int32_array *StaffPhotoCostumeEntity__GetPhotoPositionCenter(
         StaffPhotoCostumeEntity_o *this,
         System_Int32_array *defaultValue,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4B1D0ED & 1) == 0 )
+  if ( (byte_4C27EDC & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_22533/*"positionCenter"*/, defaultValue);
-    byte_4B1D0ED = 1;
+    sub_1C2D490(&StringLiteral_22720/*"positionCenter"*/);
+    byte_4C27EDC = 1;
   }
-  return StaffPhotoCostumeEntity__GetExtendOffset(this, (System_String_o *)StringLiteral_22533/*"positionCenter"*/, defaultValue, v3);
+  return StaffPhotoCostumeEntity__GetExtendOffset(this, (System_String_o *)StringLiteral_22720/*"positionCenter"*/, defaultValue, v3);
 }
 
 
-System_Int32_array *__fastcall StaffPhotoCostumeEntity__GetPhotoPositionLeft(
+System_Int32_array *StaffPhotoCostumeEntity__GetPhotoPositionLeft(
         StaffPhotoCostumeEntity_o *this,
         System_Int32_array *defaultValue,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4B1D0EF & 1) == 0 )
+  if ( (byte_4C27EDE & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_22536/*"positionLeft"*/, defaultValue);
-    byte_4B1D0EF = 1;
+    sub_1C2D490(&StringLiteral_22723/*"positionLeft"*/);
+    byte_4C27EDE = 1;
   }
-  return StaffPhotoCostumeEntity__GetExtendOffset(this, (System_String_o *)StringLiteral_22536/*"positionLeft"*/, defaultValue, v3);
+  return StaffPhotoCostumeEntity__GetExtendOffset(this, (System_String_o *)StringLiteral_22723/*"positionLeft"*/, defaultValue, v3);
 }
 
 
-System_Int32_array *__fastcall StaffPhotoCostumeEntity__GetPhotoPositionRight(
+System_Int32_array *StaffPhotoCostumeEntity__GetPhotoPositionRight(
         StaffPhotoCostumeEntity_o *this,
         System_Int32_array *defaultValue,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4B1D0EE & 1) == 0 )
+  if ( (byte_4C27EDD & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_22537/*"positionRight"*/, defaultValue);
-    byte_4B1D0EE = 1;
+    sub_1C2D490(&StringLiteral_22724/*"positionRight"*/);
+    byte_4C27EDD = 1;
   }
-  return StaffPhotoCostumeEntity__GetExtendOffset(this, (System_String_o *)StringLiteral_22537/*"positionRight"*/, defaultValue, v3);
+  return StaffPhotoCostumeEntity__GetExtendOffset(this, (System_String_o *)StringLiteral_22724/*"positionRight"*/, defaultValue, v3);
 }

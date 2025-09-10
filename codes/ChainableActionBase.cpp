@@ -1,4 +1,4 @@
-void __fastcall ChainableActionBase___ctor(ChainableActionBase_o *this, const MethodInfo *method)
+void ChainableActionBase___ctor(ChainableActionBase_o *this, const MethodInfo *method)
 {
   ChainableActionBase_o *v2; // x19
   int32_t v3; // w2
@@ -7,35 +7,35 @@ void __fastcall ChainableActionBase___ctor(ChainableActionBase_o *this, const Me
   const MethodInfo *v6; // x3
 
   v2 = this;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
-  v2->fields.endCallback = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v2->fields, 0, v3, v4);
-  v2->fields.nextAction = 0LL;
+  System_Object___ctor((Il2CppObject *)this, 0);
+  v2->fields.endCallback = 0;
+  sub_1C2D434((CGThumbnailListItem_o *)&v2->fields, 0, v3, v4);
+  v2->fields.nextAction = 0;
   v2 = (ChainableActionBase_o *)((char *)v2 + 24);
-  sub_1BCAF9C((CGThumbnailListItem_o *)v2, 0, v5, v6);
+  sub_1C2D434((CGThumbnailListItem_o *)v2, 0, v5, v6);
   LOBYTE(v2->monitor) = 0;
 }
 
 
-void __fastcall ChainableActionBase__End(ChainableActionBase_o *this, const MethodInfo *method)
+void ChainableActionBase__End(ChainableActionBase_o *this, const MethodInfo *method)
 {
   struct System_Action_o *endCallback; // x8
   struct System_Action_o *nextAction; // x8
 
   endCallback = this->fields.endCallback;
   if ( endCallback )
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))endCallback->fields.m_target)(
-      endCallback->fields.original_method_info,
-      *(_QWORD *)&endCallback->fields.extra_arg);
+    ((void (__fastcall *)(intptr_t, intptr_t))endCallback->fields.invoke_impl)(
+      endCallback->fields.method_code,
+      endCallback->fields.method);
   nextAction = this->fields.nextAction;
   if ( nextAction )
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))nextAction->fields.m_target)(
-      nextAction->fields.original_method_info,
-      *(_QWORD *)&nextAction->fields.extra_arg);
+    ((void (__fastcall *)(intptr_t, intptr_t))nextAction->fields.invoke_impl)(
+      nextAction->fields.method_code,
+      nextAction->fields.method);
 }
 
 
-void __fastcall ChainableActionBase__Execute(ChainableActionBase_o *this, const MethodInfo *method)
+void ChainableActionBase__Execute(ChainableActionBase_o *this, const MethodInfo *method)
 {
   ChainableActionBase_c *klass; // x8
 
@@ -43,20 +43,20 @@ void __fastcall ChainableActionBase__Execute(ChainableActionBase_o *this, const 
   {
     klass = this->klass;
     this->fields._IsExecuted_k__BackingField = 1;
-    ((void (__fastcall *)(ChainableActionBase_o *, Il2CppMethodPointer))klass->vtable._4_unknown.method)(
+    ((void (__fastcall *)(ChainableActionBase_o *, const MethodInfo *))klass->vtable._4_unknown.methodPtr)(
       this,
-      klass->vtable._5_End.methodPtr);
+      klass->vtable._4_unknown.method);
   }
 }
 
 
-ChainableActionBase_o *__fastcall ChainableActionBase__Final(
+ChainableActionBase_o *ChainableActionBase__Final(
         ChainableActionBase_o *this,
         System_Action_array *endCallbacks,
         const MethodInfo *method)
 {
   ChainableActionBase_o *v4; // x20
-  __int64 v5; // x8
+  il2cpp_array_size_t max_length; // x8
   unsigned __int64 v6; // x22
   System_Delegate_o **p_fields; // x21
   System_Delegate_o *v8; // x0
@@ -65,52 +65,52 @@ ChainableActionBase_o *__fastcall ChainableActionBase__Final(
   System_Action_c *v11; // x1
 
   v4 = this;
-  if ( (byte_4B20A1E & 1) == 0 )
+  if ( (byte_4C2B883 & 1) == 0 )
   {
-    this = (ChainableActionBase_o *)sub_1BCAFF8(&System_Action_TypeInfo, endCallbacks);
-    byte_4B20A1E = 1;
+    this = (ChainableActionBase_o *)sub_1C2D490(&System_Action_TypeInfo);
+    byte_4C2B883 = 1;
   }
   if ( !v4->fields._IsExecuted_k__BackingField )
   {
     if ( !endCallbacks )
-      sub_1BCB254(this, endCallbacks);
-    v5 = *(_QWORD *)&endCallbacks->max_length;
-    if ( (int)v5 >= 1 )
+      sub_1C2D6EC(this, endCallbacks);
+    max_length = endCallbacks->max_length;
+    if ( (int)max_length >= 1 )
     {
-      v6 = 0LL;
+      v6 = 0;
       p_fields = (System_Delegate_o **)&v4->fields;
       do
       {
-        if ( v6 >= (unsigned int)v5 )
+        if ( v6 >= (unsigned int)max_length )
           goto LABEL_16;
-        v8 = System_Delegate__Combine(*p_fields, (System_Delegate_o *)endCallbacks->m_Items[v6], 0LL);
+        v8 = System_Delegate__Combine(*p_fields, (System_Delegate_o *)endCallbacks->m_Items[v6], 0);
         if ( v8 )
         {
           v11 = System_Action_TypeInfo;
           if ( (System_Action_c *)v8->klass != System_Action_TypeInfo
             || (*p_fields = v8, (System_Action_c *)v8->klass != v11) )
           {
-            sub_1BCB514(v8);
+            sub_1C2D9AC(v8);
 LABEL_16:
-            sub_1BCB25C(this, endCallbacks, method);
+            sub_1C2D6F4(this, endCallbacks, method);
           }
         }
         else
         {
-          *p_fields = 0LL;
+          *p_fields = 0;
         }
-        sub_1BCAF9C((CGThumbnailListItem_o *)&v4->fields, (int32_t)v8, v9, v10);
-        LODWORD(v5) = endCallbacks->max_length;
+        sub_1C2D434((CGThumbnailListItem_o *)&v4->fields, (int32_t)v8, v9, v10);
+        LODWORD(max_length) = endCallbacks->max_length;
         ++v6;
       }
-      while ( (__int64)v6 < (int)v5 );
+      while ( (__int64)v6 < (int)max_length );
     }
   }
   return v4;
 }
 
 
-void __fastcall ChainableActionBase__SetNextAction(
+void ChainableActionBase__SetNextAction(
         ChainableActionBase_o *this,
         System_Action_o *nextAction,
         const MethodInfo *method)
@@ -118,17 +118,17 @@ void __fastcall ChainableActionBase__SetNextAction(
   const MethodInfo *v3; // x3
 
   this->fields.nextAction = nextAction;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.nextAction, (int32_t)nextAction, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.nextAction, (int32_t)nextAction, (int32_t)method, v3);
 }
 
 
-bool __fastcall ChainableActionBase__get_IsExecuted(ChainableActionBase_o *this, const MethodInfo *method)
+bool ChainableActionBase__get_IsExecuted(ChainableActionBase_o *this, const MethodInfo *method)
 {
   return this->fields._IsExecuted_k__BackingField;
 }
 
 
-void __fastcall ChainableActionBase__set_IsExecuted(ChainableActionBase_o *this, bool value, const MethodInfo *method)
+void ChainableActionBase__set_IsExecuted(ChainableActionBase_o *this, bool value, const MethodInfo *method)
 {
   this->fields._IsExecuted_k__BackingField = value;
 }

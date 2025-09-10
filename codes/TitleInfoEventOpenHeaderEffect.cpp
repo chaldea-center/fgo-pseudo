@@ -1,76 +1,70 @@
-void __fastcall TitleInfoEventOpenHeaderEffect___ctor(TitleInfoEventOpenHeaderEffect_o *this, const MethodInfo *method)
+void TitleInfoEventOpenHeaderEffect___ctor(TitleInfoEventOpenHeaderEffect_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1A7DB & 1) == 0 )
+  if ( (byte_4C253AE & 1) == 0 )
   {
-    sub_1BCAFF8(&CommonEffectComponent_TypeInfo, method);
-    byte_4B1A7DB = 1;
+    sub_1C2D490(&CommonEffectComponent_TypeInfo);
+    byte_4C253AE = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
-  CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0LL);
+  CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0);
 }
 
 
-void __fastcall TitleInfoEventOpenHeaderEffect__animEndFunc(
-        TitleInfoEventOpenHeaderEffect_o *this,
-        const MethodInfo *method)
+void TitleInfoEventOpenHeaderEffect__animEndFunc(TitleInfoEventOpenHeaderEffect_o *this, const MethodInfo *method)
 {
   System_Action_o *animEndCallback; // x0
 
   animEndCallback = this->fields.animEndCallback;
   if ( animEndCallback )
-    ActionExtensions__Call(animEndCallback, 0LL);
+    ActionExtensions__Call(animEndCallback, 0);
 }
 
 
-void __fastcall TitleInfoEventOpenHeaderEffect__changeUIFunc(
-        TitleInfoEventOpenHeaderEffect_o *this,
-        const MethodInfo *method)
+void TitleInfoEventOpenHeaderEffect__changeUIFunc(TitleInfoEventOpenHeaderEffect_o *this, const MethodInfo *method)
 {
   System_Action_o *changeUiCallback; // x0
 
   changeUiCallback = this->fields.changeUiCallback;
   if ( changeUiCallback )
-    ActionExtensions__Call(changeUiCallback, 0LL);
+    ActionExtensions__Call(changeUiCallback, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall TitleInfoEventOpenHeaderEffect__setup(
+void TitleInfoEventOpenHeaderEffect__setup(
         TitleInfoEventOpenHeaderEffect_o *this,
         int32_t eventId,
         System_Action_o *changeUiCallback,
         System_Action_o *endCallback,
         const MethodInfo *method)
 {
-  __int64 v8; // x1
-  System_String_o *v9; // x0
-  struct System_String_o *v10; // x0
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  int32_t v17; // [xsp+Ch] [xbp-34h] BYREF
+  System_String_o *v8; // x0
+  struct System_String_o *v9; // x0
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  int32_t v16; // [xsp+Ch] [xbp-34h] BYREF
 
-  v17 = eventId;
-  if ( (byte_4B1A7DA & 1) == 0 )
+  v16 = eventId;
+  if ( (byte_4C253AD & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_16400/*"_anim"*/, *(_QWORD *)&eventId);
-    sub_1BCAFF8(&StringLiteral_18681/*"ef_mapnamechange_"*/, v8);
-    byte_4B1A7DA = 1;
+    sub_1C2D490(&StringLiteral_16532/*"_anim"*/);
+    sub_1C2D490(&StringLiteral_18834/*"ef_mapnamechange_"*/);
+    byte_4C253AD = 1;
   }
-  v9 = System_Int32__ToString((int32_t)&v17, 0LL);
-  v10 = System_String__Concat_62488672(
-          (System_String_o *)StringLiteral_18681/*"ef_mapnamechange_"*/,
-          v9,
-          (System_String_o *)StringLiteral_16400/*"_anim"*/,
-          0LL);
-  this->fields.baseName = v10;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.baseName, (int32_t)v10, v11, v12);
+  v8 = System_Int32__ToString((int32_t)&v16, 0);
+  v9 = System_String__Concat_63496112(
+         (System_String_o *)StringLiteral_18834/*"ef_mapnamechange_"*/,
+         v8,
+         (System_String_o *)StringLiteral_16532/*"_anim"*/,
+         0);
+  this->fields.baseName = v9;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.baseName, (int32_t)v9, v10, v11);
   this->fields.changeUiCallback = changeUiCallback;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.changeUiCallback, (int32_t)changeUiCallback, v13, v14);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.changeUiCallback, (int32_t)changeUiCallback, v12, v13);
   this->fields.animEndCallback = endCallback;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.animEndCallback, (int32_t)endCallback, v15, v16);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.animEndCallback, (int32_t)endCallback, v14, v15);
 }

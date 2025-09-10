@@ -1,4 +1,4 @@
-void __fastcall SelectImageLimitListViewItem___ctor(
+void SelectImageLimitListViewItem___ctor(
         SelectImageLimitListViewItem_o *this,
         int32_t index,
         int32_t svtId,
@@ -6,20 +6,20 @@ void __fastcall SelectImageLimitListViewItem___ctor(
         int32_t selectedImageId,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   this->fields.svtId = svtId;
   this->fields.limitCount = limitCount;
   this->fields.isSelected = limitCount == selectedImageId;
 }
 
 
-void __fastcall SelectImageLimitListViewItem__Finalize(SelectImageLimitListViewItem_o *this, const MethodInfo *method)
+void SelectImageLimitListViewItem__Finalize(SelectImageLimitListViewItem_o *this, const MethodInfo *method)
 {
-  ListViewItem__Finalize((ListViewItem_o *)this, 0LL);
+  ListViewItem__Finalize((ListViewItem_o *)this, 0);
 }
 
 
-void __fastcall SelectImageLimitListViewItem__ModifyItem(
+void SelectImageLimitListViewItem__ModifyItem(
         SelectImageLimitListViewItem_o *this,
         int32_t selectedImageId,
         const MethodInfo *method)
@@ -28,7 +28,7 @@ void __fastcall SelectImageLimitListViewItem__ModifyItem(
 }
 
 
-bool __fastcall SelectImageLimitListViewItem__SetSortValue(
+bool SelectImageLimitListViewItem__SetSortValue(
         SelectImageLimitListViewItem_o *this,
         ListViewSort_o *sort,
         const MethodInfo *method)
@@ -43,25 +43,19 @@ bool __fastcall SelectImageLimitListViewItem__SetSortValue(
 }
 
 
-bool __fastcall SelectImageLimitListViewItem__get_IsSelected(
-        SelectImageLimitListViewItem_o *this,
-        const MethodInfo *method)
+bool SelectImageLimitListViewItem__get_IsSelected(SelectImageLimitListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields.isSelected;
 }
 
 
-int32_t __fastcall SelectImageLimitListViewItem__get_LimitCount(
-        SelectImageLimitListViewItem_o *this,
-        const MethodInfo *method)
+int32_t SelectImageLimitListViewItem__get_LimitCount(SelectImageLimitListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields.limitCount;
 }
 
 
-int32_t __fastcall SelectImageLimitListViewItem__get_SvtId(
-        SelectImageLimitListViewItem_o *this,
-        const MethodInfo *method)
+int32_t SelectImageLimitListViewItem__get_SvtId(SelectImageLimitListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields.svtId;
 }

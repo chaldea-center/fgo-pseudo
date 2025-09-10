@@ -1,55 +1,54 @@
-void __fastcall BattleServantSnapShotShiftServant___ctor(
+void BattleServantSnapShotShiftServant___ctor(
         BattleServantSnapShotShiftServant_o *this,
         BattleServantData_o *svtData,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   BattleBuffData_o *BuffData; // x0
-  __int64 v7; // x1
-  __int64 v8; // x21
-  __int64 v9; // x22
-  System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *v10; // x0
-  System_Object_array *v11; // x0
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
+  __int64 v6; // x1
+  __int64 v7; // x21
+  __int64 v8; // x22
+  System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__o *v9; // x0
+  System_Object_array *v10; // x0
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
-  if ( (byte_4B1F323 & 1) == 0 )
+  if ( (byte_4C2A1B0 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___, svtData);
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v5);
-    byte_4B1F323 = 1;
+    sub_1C2D490(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C2A1B0 = 1;
   }
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   if ( !svtData )
     goto LABEL_8;
   this->fields._UniqueId_k__BackingField = svtData->fields.uniqueId;
-  v9 = *(_QWORD *)&svtData->fields.svtId.fields.currentCryptoKey;
-  v8 = *(_QWORD *)&svtData->fields.svtId.fields.fakeValue;
+  v8 = *(_QWORD *)&svtData->fields.svtId.fields.currentCryptoKey;
+  v7 = *(_QWORD *)&svtData->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v14.fields.currentCryptoKey = v9;
-  *(_QWORD *)&v14.fields.fakeValue = v8;
-  this->fields._SvtId_k__BackingField = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v14, 0LL);
+  *(_QWORD *)&v13.fields.currentCryptoKey = v8;
+  *(_QWORD *)&v13.fields.fakeValue = v7;
+  this->fields._SvtId_k__BackingField = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v13, 0);
   this->fields._TransformSvtId_k__BackingField = svtData->fields.transformSvtId;
   *(_QWORD *)&this->fields._TreasuredvcId_k__BackingField = *(_QWORD *)&svtData->fields.treasuredvcId;
-  this->fields._DispLimitCount_k__BackingField = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(
+  this->fields._DispLimitCount_k__BackingField = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(
                                                    svtData->fields._dispLimitCount_k__BackingField,
-                                                   0LL);
-  this->fields._ResultHp_k__BackingField = ((__int64 (__fastcall *)(BattleServantData_o *, Il2CppMethodPointer))svtData->klass->vtable._13_get_resultHp.method)(
+                                                   0);
+  this->fields._ResultHp_k__BackingField = ((__int64 (__fastcall *)(BattleServantData_o *, const MethodInfo *))svtData->klass->vtable._13_get_resultHp.methodPtr)(
                                              svtData,
-                                             svtData->klass->vtable._14_set_resultHp.methodPtr);
+                                             svtData->klass->vtable._13_get_resultHp.method);
   this->fields._BaseMaxHp_k__BackingField = svtData->fields.maxhp;
-  this->fields._MaxHp_k__BackingField = BattleServantData__getMaxHp(svtData, 0LL);
+  this->fields._MaxHp_k__BackingField = BattleServantData__getMaxHp(svtData, 0);
   this->fields._MaxTpTurn_k__BackingField = svtData->fields.maxtpturn;
-  BuffData = BattleServantData__get_BuffData(svtData, 0LL);
+  BuffData = BattleServantData__get_BuffData(svtData, 0);
   if ( !BuffData )
 LABEL_8:
-    sub_1BCB254(BuffData, v7);
-  v10 = BattleBuffData__AllBuffEnumerable(BuffData, 0LL);
-  v11 = System_Linq_Enumerable__ToArray_object_(
-          (System_Collections_Generic_IEnumerable_TSource__o *)v10,
-          (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
-  this->fields._BuffArray_k__BackingField = (struct BattleBuffData_BuffData_array *)v11;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._BuffArray_k__BackingField, (int32_t)v11, v12, v13);
+    sub_1C2D6EC(BuffData, v6);
+  v9 = BattleBuffData__AllBuffEnumerable(BuffData, 0);
+  v10 = System_Linq_Enumerable__ToArray_object_(
+          (System_Collections_Generic_IEnumerable_TSource__o *)v9,
+          (const MethodInfo_310DFEC *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+  this->fields._BuffArray_k__BackingField = (struct BattleBuffData_BuffData_array *)v10;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._BuffArray_k__BackingField, (int32_t)v10, v11, v12);
 }

@@ -1,49 +1,45 @@
-void __fastcall WarBoardAPITurnEndRequestTask___ctor(
+void WarBoardAPITurnEndRequestTask___ctor(
         WarBoardAPITurnEndRequestTask_o *this,
         NetworkManager_ResultCallbackFunc_o *resultCallback,
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_37462896((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, method);
+  WarBoardAPIRequestTask___ctor_38043512((WarBoardAPIRequestTask_o *)this, resultCallback, onStartBeginRequest, method);
 }
 
 
-void __fastcall WarBoardAPITurnEndRequestTask__SetRequest(
-        WarBoardAPITurnEndRequestTask_o *this,
-        const MethodInfo *method)
+void WarBoardAPITurnEndRequestTask__SetRequest(WarBoardAPITurnEndRequestTask_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   Il2CppObject *Instance; // x0
-  __int64 v6; // x1
+  __int64 v4; // x1
   WarBoardData_o *monitor; // x20
-  WarBoardTurnEndRequest_o *v8; // x21
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  WarBoardTurnEndRequest_o *v6; // x21
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
 
-  if ( (byte_4B1A1DA & 1) == 0 )
+  if ( (byte_4C24F5E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_NetworkManager_getRequest_WarBoardTurnEndRequest___, method);
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v3);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, v4);
-    byte_4B1A1DA = 1;
+    sub_1C2D490(&Method_NetworkManager_getRequest_WarBoardTurnEndRequest___);
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4C24F5E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   monitor = (WarBoardData_o *)Instance[27].monitor;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = NetworkManager__getRequest_object_(
-               0LL,
-               (const MethodInfo_30A28E4 *)Method_NetworkManager_getRequest_WarBoardTurnEndRequest___);
+               0,
+               (const MethodInfo_31599E8 *)Method_NetworkManager_getRequest_WarBoardTurnEndRequest___);
   if ( !monitor
-    || (v8 = (WarBoardTurnEndRequest_o *)Instance, Instance = (Il2CppObject *)WarBoardData__get_id(monitor, 0LL), !v8) )
+    || (v6 = (WarBoardTurnEndRequest_o *)Instance, Instance = (Il2CppObject *)WarBoardData__get_id(monitor, 0), !v6) )
   {
 LABEL_9:
-    sub_1BCB254(Instance, v6);
+    sub_1C2D6EC(Instance, v4);
   }
-  WarBoardTurnEndRequest__beginRequest(v8, (int32_t)Instance, monitor, 0LL);
-  this->fields.request = (struct RequestBase_o *)v8;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.request, (int32_t)v8, v9, v10);
+  WarBoardTurnEndRequest__beginRequest(v6, (int32_t)Instance, monitor, 0);
+  this->fields.request = (struct RequestBase_o *)v6;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.request, (int32_t)v6, v7, v8);
 }

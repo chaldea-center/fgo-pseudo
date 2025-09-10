@@ -1,13 +1,13 @@
-void __fastcall ItemTransitionType___ctor(ItemTransitionType_o *this, const MethodInfo *method)
+void ItemTransitionType___ctor(ItemTransitionType_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-int32_t __fastcall ItemTransitionType__GetSortPriority(int32_t type, const MethodInfo *method)
+int32_t ItemTransitionType__GetSortPriority(int32_t type, const MethodInfo *method)
 {
   if ( (unsigned int)(type - 1) > 0x11 )
     return 0x7FFFFFFF;
   else
-    return dword_C1C038[type - 1];
+    return dword_C433DC[type - 1];
 }

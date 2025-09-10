@@ -1,25 +1,23 @@
-void __fastcall BlankEarthShortcutButtonListViewItemDraw___cctor(const MethodInfo *method)
+void BlankEarthShortcutButtonListViewItemDraw___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4B18DF1 & 1) == 0 )
+  if ( (byte_4C23B55 & 1) == 0 )
   {
-    sub_1BCAFF8(&BlankEarthShortcutButtonListViewItemDraw_TypeInfo, v1);
-    byte_4B18DF1 = 1;
+    sub_1C2D490(&BlankEarthShortcutButtonListViewItemDraw_TypeInfo);
+    byte_4C23B55 = 1;
   }
   BlankEarthShortcutButtonListViewItemDraw_TypeInfo->static_fields->NAME_LABEL_MAX_WIDTH = 115;
 }
 
 
-void __fastcall BlankEarthShortcutButtonListViewItemDraw___ctor(
+void BlankEarthShortcutButtonListViewItemDraw___ctor(
         BlankEarthShortcutButtonListViewItemDraw_o *this,
         const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-float __fastcall BlankEarthShortcutButtonListViewItemDraw__GetButtonWidth(
+float BlankEarthShortcutButtonListViewItemDraw__GetButtonWidth(
         BlankEarthShortcutButtonListViewItemDraw_o *this,
         const MethodInfo *method)
 {
@@ -29,435 +27,407 @@ float __fastcall BlankEarthShortcutButtonListViewItemDraw__GetButtonWidth(
   float result; // s0
   struct UISprite_o *v7; // x8
 
-  if ( (byte_4B18DEF & 1) == 0 )
+  if ( (byte_4C23B53 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B18DEF = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C23B53 = 1;
   }
   bgSprite = (UnityEngine_Object_o *)this->fields.bgSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v4 = UnityEngine_Object__op_Inequality(bgSprite, 0LL, 0LL);
+  v4 = UnityEngine_Object__op_Inequality(bgSprite, 0, 0);
   result = 0.0;
   if ( v4 )
   {
     v7 = this->fields.bgSprite;
     if ( !v7 )
-      sub_1BCB254(v4, v5);
+      sub_1C2D6EC(v4, v5);
     return (float)v7->fields.mWidth;
   }
   return result;
 }
 
 
-void __fastcall BlankEarthShortcutButtonListViewItemDraw__OnClickButton(
+void BlankEarthShortcutButtonListViewItemDraw__OnClickButton(
         BlankEarthShortcutButtonListViewItemDraw_o *this,
         const MethodInfo *method)
 {
-  ActionExtensions__Call(this->fields.onClickAction, 0LL);
+  ActionExtensions__Call(this->fields.onClickAction, 0);
 }
 
 
-void __fastcall BlankEarthShortcutButtonListViewItemDraw__SetItem(
+void BlankEarthShortcutButtonListViewItemDraw__SetItem(
         BlankEarthShortcutButtonListViewItemDraw_o *this,
         BlankEarthShortcutButtonListViewItem_o *item,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  __int64 v26; // x1
   __int64 bgSprite; // x0
-  __int64 v28; // x1
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
   struct System_Action_o *OnClickAction_k__BackingField; // x1
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x0
   struct UISprite_o **p_bgSprite; // x21
-  int32_t v35; // w2
-  const MethodInfo *v36; // x3
-  WarReleaseEntity_o *v37; // x22
-  char v38; // w24
-  _BOOL8 v39; // x0
-  __int64 v40; // x1
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  char v16; // w24
+  _BOOL8 v17; // x0
+  __int64 v18; // x1
   Il2CppObject *current; // x27
   struct BlankEarthSpotNavimenuEntity_o *blankEarthSpotNavimenuEntity_k__BackingField; // x8
   Il2CppObject *Master_object; // x0
-  __int64 v44; // x1
+  __int64 v22; // x1
   WarReleaseEntity_o *OpenEntity; // x0
-  __int64 v46; // x1
-  Il2CppObject *ComponentInParent_object__50403632; // x0
+  Il2CppObject *ComponentInParent_object__51140572; // x0
   struct BlankEarthShortcutUIButton_o **p_shortcutButton; // x22
-  int32_t v49; // w2
-  const MethodInfo *v50; // x3
-  int32_t v51; // w2
-  const MethodInfo *v52; // x3
+  int32_t v26; // w2
+  const MethodInfo *v27; // x3
+  int32_t v28; // w2
+  const MethodInfo *v29; // x3
   struct System_Action_o *onClickAction; // x1
-  UnityEngine_Object_o *v54; // x23
-  System_Collections_Generic_List_object__o *v55; // x23
-  int32_t v56; // w2
-  const MethodInfo *v57; // x3
+  UnityEngine_Object_o *v31; // x23
+  System_Collections_Generic_List_object__o *v32; // x23
+  int32_t v33; // w2
+  const MethodInfo *v34; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v59; // x9
+  _QWORD *v36; // x9
   __int64 size; // x10
-  __int64 v61; // x1
-  Il2CppClass **v62; // x0
-  int32_t v63; // w2
-  const MethodInfo *v64; // x3
-  struct System_Object_array *v65; // x8
-  _QWORD *v66; // x9
-  __int64 v67; // x10
-  __int64 v68; // x1
-  Il2CppClass **v69; // x0
-  int32_t v70; // w2
-  const MethodInfo *v71; // x3
-  struct System_Object_array *v72; // x8
-  _QWORD *v73; // x9
-  __int64 v74; // x10
-  __int64 v75; // x1
-  Il2CppClass **v76; // x0
-  int32_t v77; // w2
-  const MethodInfo *v78; // x3
-  struct System_Object_array *v79; // x8
-  _QWORD *v80; // x9
-  __int64 v81; // x10
-  __int64 v82; // x1
-  Il2CppClass **v83; // x0
-  int32_t v84; // w2
-  const MethodInfo *v85; // x3
-  struct System_Object_array *v86; // x8
-  _QWORD *v87; // x9
-  __int64 v88; // x10
-  __int64 v89; // x1
-  Il2CppClass **v90; // x0
-  struct BlankEarthShortcutUIButton_o *v91; // x21
-  int32_t v92; // w2
-  const MethodInfo *v93; // x3
-  struct BlankEarthShortcutUIButton_o *v94; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v95; // x0
+  __int64 v38; // x1
+  Il2CppClass **v39; // x0
+  int32_t v40; // w2
+  const MethodInfo *v41; // x3
+  struct System_Object_array *v42; // x8
+  _QWORD *v43; // x9
+  __int64 v44; // x10
+  __int64 v45; // x1
+  Il2CppClass **v46; // x0
+  int32_t v47; // w2
+  const MethodInfo *v48; // x3
+  struct System_Object_array *v49; // x8
+  _QWORD *v50; // x9
+  __int64 v51; // x10
+  __int64 v52; // x1
+  Il2CppClass **v53; // x0
+  int32_t v54; // w2
+  const MethodInfo *v55; // x3
+  struct System_Object_array *v56; // x8
+  _QWORD *v57; // x9
+  __int64 v58; // x10
+  __int64 v59; // x1
+  Il2CppClass **v60; // x0
+  int32_t v61; // w2
+  const MethodInfo *v62; // x3
+  struct System_Object_array *v63; // x8
+  _QWORD *v64; // x9
+  __int64 v65; // x10
+  __int64 v66; // x1
+  Il2CppClass **v67; // x0
+  struct BlankEarthShortcutUIButton_o *v68; // x21
+  int32_t v69; // w2
+  const MethodInfo *v70; // x3
+  struct BlankEarthShortcutUIButton_o *v71; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v72; // x0
   UILabel_o *nameLabelUp; // x22
-  System_Collections_Generic_List_object__o *v97; // x21
-  UILabel_o *v98; // x22
+  System_Collections_Generic_List_object__o *v74; // x21
+  UILabel_o *v75; // x22
   UILabel_o *nameLabelBottom; // x22
   UILabel_o *nameLabelMiddle; // x21
-  System_String_o *v101; // x0
-  System_String_o *v102; // x0
+  System_String_o *v78; // x0
+  System_String_o *v79; // x0
   UnityEngine_Object_o *IconAtlas_k__BackingField; // x22
-  System_String_o *v104; // x21
-  UIAtlas_o *v105; // x22
-  const MethodInfo *v106; // x3
-  System_Collections_Generic_List_Enumerator_object__o v107; // [xsp+0h] [xbp-A0h] BYREF
+  System_String_o *v81; // x21
+  UIAtlas_o *v82; // x22
+  const MethodInfo *v83; // x3
+  System_Collections_Generic_List_Enumerator_object__o v84; // [xsp+0h] [xbp-A0h] BYREF
   int32_t IconId_k__BackingField; // [xsp+1Ch] [xbp-84h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v109; // [xsp+20h] [xbp-80h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v86; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B18DED & 1) == 0 )
+  if ( (byte_4C23B51 & 1) == 0 )
   {
-    sub_1BCAFF8(&BlankEarthShortcutButtonListViewItemDraw_TypeInfo, item);
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponentInParent_BlankEarthShortcutUIButton___, v6);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_WarMaster___, v7);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_WarReleaseMaster___, v8);
-    sub_1BCAFF8(&DataManager_TypeInfo, v9);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToList_string___, v10);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_WarEntity__Dispose__, v11);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_WarEntity__MoveNext__, v12);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_WarEntity__get_Current__, v13);
-    sub_1BCAFF8(&Method_GameObjectExtensions_SafeGetComponent_UISprite___, v14);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__Add__, v15);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_WarEntity__GetEnumerator__, v16);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__ToArray__, v17);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject___ctor__, v18);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_string__get_Item__, v19);
-    sub_1BCAFF8(&System_Collections_Generic_List_GameObject__TypeInfo, v20);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v21);
-    sub_1BCAFF8(&UICommonButtonColor_TypeInfo, v22);
-    sub_1BCAFF8(&StringLiteral_43/*"\n"*/, v23);
-    sub_1BCAFF8(&StringLiteral_87/*"\r\n"*/, v24);
-    sub_1BCAFF8(&StringLiteral_17373/*"btn_shortcut"*/, v25);
-    sub_1BCAFF8(&StringLiteral_19046/*"event_logo_shortcut_"*/, v26);
-    byte_4B18DED = 1;
+    sub_1C2D490(&BlankEarthShortcutButtonListViewItemDraw_TypeInfo);
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponentInParent_BlankEarthShortcutUIButton___);
+    sub_1C2D490(&Method_DataManager_GetMaster_WarMaster___);
+    sub_1C2D490(&Method_DataManager_GetMaster_WarReleaseMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_System_Linq_Enumerable_ToList_string___);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_WarEntity__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_WarEntity__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_WarEntity__get_Current__);
+    sub_1C2D490(&Method_GameObjectExtensions_SafeGetComponent_UISprite___);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_WarEntity__GetEnumerator__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C2D490(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&UICommonButtonColor_TypeInfo);
+    sub_1C2D490(&StringLiteral_43/*"\n"*/);
+    sub_1C2D490(&StringLiteral_87/*"\r\n"*/);
+    sub_1C2D490(&StringLiteral_17511/*"btn_shortcut"*/);
+    sub_1C2D490(&StringLiteral_19204/*"event_logo_shortcut_"*/);
+    byte_4C23B51 = 1;
   }
-  memset(&v109, 0, sizeof(v109));
+  memset(&v86, 0, sizeof(v86));
   IconId_k__BackingField = 0;
   this->fields.listViewItem = item;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)method, v3);
   if ( !item )
-    goto LABEL_104;
+    goto LABEL_101;
   OnClickAction_k__BackingField = item->fields._OnClickAction_k__BackingField;
   this->fields.onClickAction = OnClickAction_k__BackingField;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.onClickAction, (int32_t)OnClickAction_k__BackingField, v29, v30);
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.onClickAction, (int32_t)OnClickAction_k__BackingField, v8, v9);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_30701F8 *)Method_GameObjectExtensions_SafeGetComponent_UISprite___);
+                       (const MethodInfo_31279B8 *)Method_GameObjectExtensions_SafeGetComponent_UISprite___);
   this->fields.bgSprite = (struct UISprite_o *)Component_object;
   p_bgSprite = &this->fields.bgSprite;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.bgSprite, (int32_t)Component_object, v35, v36);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.bgSprite, (int32_t)Component_object, v14, v15);
   bgSprite = (__int64)this->fields.bgSprite;
   if ( !bgSprite )
-    goto LABEL_104;
-  UISprite__set_atlas((UISprite_o *)bgSprite, item->fields._CommonUiAtlas_k__BackingField, 0LL);
+    goto LABEL_101;
+  UISprite__set_atlas((UISprite_o *)bgSprite, item->fields._CommonUiAtlas_k__BackingField, 0);
   bgSprite = (__int64)*p_bgSprite;
   if ( !*p_bgSprite )
-    goto LABEL_104;
-  UISprite__set_spriteName((UISprite_o *)bgSprite, (System_String_o *)StringLiteral_17373/*"btn_shortcut"*/, 0LL);
+    goto LABEL_101;
+  UISprite__set_spriteName((UISprite_o *)bgSprite, (System_String_o *)StringLiteral_17511/*"btn_shortcut"*/, 0);
   bgSprite = (__int64)*p_bgSprite;
   if ( !*p_bgSprite )
-    goto LABEL_104;
+    goto LABEL_101;
   (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)bgSprite + 840LL))(
     bgSprite,
     *(_QWORD *)(*(_QWORD *)bgSprite + 848LL));
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  bgSprite = (__int64)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_WarMaster___);
+  bgSprite = (__int64)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_WarMaster___);
   if ( !bgSprite )
-    goto LABEL_104;
-  bgSprite = (__int64)WarMaster__GetEntityList((WarMaster_o *)bgSprite, 0LL);
+    goto LABEL_101;
+  bgSprite = (__int64)WarMaster__GetEntityList((WarMaster_o *)bgSprite, 0);
   if ( !bgSprite )
-    goto LABEL_104;
+    goto LABEL_101;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v107,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v84,
     (System_Collections_Generic_List_object__o *)bgSprite,
-    (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_WarEntity__GetEnumerator__);
-  v37 = 0LL;
-  v38 = 0;
-  v109 = v107;
+    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_WarEntity__GetEnumerator__);
+  v16 = 0;
+  v86 = v84;
   while ( 1 )
   {
-    v39 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v109,
-            (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_WarEntity__MoveNext__);
-    if ( !v39 )
+    v17 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v86,
+            (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_WarEntity__MoveNext__);
+    if ( !v17 )
       break;
-    current = v109.fields._current;
-    if ( !v109.fields._current )
-      sub_1BCB254(v39, v40);
+    current = v86.fields._current;
+    if ( !v86.fields._current )
+      sub_1C2D6EC(v17, v18);
     blankEarthSpotNavimenuEntity_k__BackingField = item->fields._blankEarthSpotNavimenuEntity_k__BackingField;
     if ( !blankEarthSpotNavimenuEntity_k__BackingField )
-      sub_1BCB254(v39, v40);
-    if ( HIDWORD(v109.fields._current[7].monitor) == blankEarthSpotNavimenuEntity_k__BackingField->fields.blankEarthSpotId )
+      sub_1C2D6EC(v17, v18);
+    if ( HIDWORD(v86.fields._current[7].monitor) == blankEarthSpotNavimenuEntity_k__BackingField->fields.blankEarthSpotId )
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_WarReleaseMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_WarReleaseMaster___);
       if ( !Master_object )
-        sub_1BCB254(0LL, v44);
-      OpenEntity = WarReleaseMaster__GetOpenEntity((WarReleaseMaster_o *)Master_object, (int32_t)current[1].klass, 0LL);
-      if ( OpenEntity )
-        v37 = OpenEntity;
+        sub_1C2D6EC(0, v22);
+      OpenEntity = WarReleaseMaster__GetOpenEntity((WarReleaseMaster_o *)Master_object, (int32_t)current[1].klass, 0);
       if ( OpenEntity )
       {
-        if ( !v37 )
-          sub_1BCB254(OpenEntity, v46);
-        if ( WarReleaseEntity__IsClose(v37, 0LL) )
-          v38 = 1;
+        if ( WarReleaseEntity__IsClose(OpenEntity, 0) )
+          v16 = 1;
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v109,
-    (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_WarEntity__Dispose__);
-  ComponentInParent_object__50403632 = UnityEngine_Component__GetComponentInParent_object__50403632(
+    &v86,
+    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_WarEntity__Dispose__);
+  ComponentInParent_object__51140572 = UnityEngine_Component__GetComponentInParent_object__51140572(
                                          (UnityEngine_Component_o *)this,
-                                         (const MethodInfo_3011930 *)Method_UnityEngine_Component_GetComponentInParent_BlankEarthShortcutUIButton___);
-  this->fields.shortcutButton = (struct BlankEarthShortcutUIButton_o *)ComponentInParent_object__50403632;
+                                         (const MethodInfo_30C57DC *)Method_UnityEngine_Component_GetComponentInParent_BlankEarthShortcutUIButton___);
+  this->fields.shortcutButton = (struct BlankEarthShortcutUIButton_o *)ComponentInParent_object__51140572;
   p_shortcutButton = &this->fields.shortcutButton;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields.shortcutButton,
-    (int32_t)ComponentInParent_object__50403632,
-    v49,
-    v50);
+    (int32_t)ComponentInParent_object__51140572,
+    v26,
+    v27);
   bgSprite = (__int64)this->fields.shortcutButton;
   if ( !bgSprite )
-    goto LABEL_104;
+    goto LABEL_101;
   onClickAction = this->fields.onClickAction;
   *(_QWORD *)(bgSprite + 112) = onClickAction;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(bgSprite + 112), (int32_t)onClickAction, v51, v52);
-  v54 = (UnityEngine_Object_o *)*p_shortcutButton;
+  sub_1C2D434((CGThumbnailListItem_o *)(bgSprite + 112), (int32_t)onClickAction, v28, v29);
+  v31 = (UnityEngine_Object_o *)*p_shortcutButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v54, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v31, 0, 0) )
   {
-    if ( (v38 & 1) == 0 )
+    if ( (v16 & 1) == 0 )
     {
-      v55 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_GameObject__TypeInfo);
+      v32 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_GameObject__TypeInfo);
       System_Collections_Generic_List_object____ctor(
-        v55,
-        (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+        v32,
+        (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_GameObject___ctor__);
       bgSprite = (__int64)*p_bgSprite;
       if ( !*p_bgSprite )
-        goto LABEL_104;
-      bgSprite = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)bgSprite, 0LL);
-      if ( !v55 )
-        goto LABEL_104;
-      items = v55->fields._items;
-      v59 = Method_System_Collections_Generic_List_GameObject__Add__;
-      ++v55->fields._version;
+        goto LABEL_101;
+      bgSprite = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)bgSprite, 0);
+      if ( !v32 )
+        goto LABEL_101;
+      items = v32->fields._items;
+      v36 = Method_System_Collections_Generic_List_GameObject__Add__;
+      ++v32->fields._version;
       if ( !items )
-        goto LABEL_104;
-      size = v55->fields._size;
-      v61 = bgSprite;
-      if ( (unsigned int)size >= items->max_length )
+        goto LABEL_101;
+      size = v32->fields._size;
+      v38 = bgSprite;
+      if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v55,
+          v32,
           (Il2CppObject *)bgSprite,
-          *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v59[4] + 192LL) + 112LL));
+          *(const MethodInfo_3789B84 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
       }
       else
       {
-        v62 = &items->obj.klass + size;
-        v55->fields._size = size + 1;
-        v62[4] = (Il2CppClass *)v61;
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v62 + 4), v61, v56, v57);
+        v39 = &items->obj.klass + size;
+        v32->fields._size = size + 1;
+        v39[4] = (Il2CppClass *)v38;
+        sub_1C2D434((CGThumbnailListItem_o *)(v39 + 4), v38, v33, v34);
       }
       bgSprite = (__int64)this->fields.iconSprite;
       if ( !bgSprite )
-        goto LABEL_104;
-      bgSprite = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)bgSprite, 0LL);
-      v65 = v55->fields._items;
-      v66 = Method_System_Collections_Generic_List_GameObject__Add__;
-      ++v55->fields._version;
-      if ( !v65 )
-        goto LABEL_104;
-      v67 = v55->fields._size;
-      v68 = bgSprite;
-      if ( (unsigned int)v67 >= v65->max_length )
+        goto LABEL_101;
+      bgSprite = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)bgSprite, 0);
+      v42 = v32->fields._items;
+      v43 = Method_System_Collections_Generic_List_GameObject__Add__;
+      ++v32->fields._version;
+      if ( !v42 )
+        goto LABEL_101;
+      v44 = v32->fields._size;
+      v45 = bgSprite;
+      if ( (unsigned int)v44 >= LODWORD(v42->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v55,
+          v32,
           (Il2CppObject *)bgSprite,
-          *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v66[4] + 192LL) + 112LL));
+          *(const MethodInfo_3789B84 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
       }
       else
       {
-        v69 = &v65->obj.klass + v67;
-        v55->fields._size = v67 + 1;
-        v69[4] = (Il2CppClass *)v68;
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v69 + 4), v68, v63, v64);
+        v46 = &v42->obj.klass + v44;
+        v32->fields._size = v44 + 1;
+        v46[4] = (Il2CppClass *)v45;
+        sub_1C2D434((CGThumbnailListItem_o *)(v46 + 4), v45, v40, v41);
       }
       bgSprite = (__int64)this->fields.nameLabelUp;
       if ( !bgSprite )
-        goto LABEL_104;
-      bgSprite = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)bgSprite, 0LL);
-      v72 = v55->fields._items;
-      v73 = Method_System_Collections_Generic_List_GameObject__Add__;
-      ++v55->fields._version;
-      if ( !v72 )
-        goto LABEL_104;
-      v74 = v55->fields._size;
-      v75 = bgSprite;
-      if ( (unsigned int)v74 >= v72->max_length )
+        goto LABEL_101;
+      bgSprite = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)bgSprite, 0);
+      v49 = v32->fields._items;
+      v50 = Method_System_Collections_Generic_List_GameObject__Add__;
+      ++v32->fields._version;
+      if ( !v49 )
+        goto LABEL_101;
+      v51 = v32->fields._size;
+      v52 = bgSprite;
+      if ( (unsigned int)v51 >= LODWORD(v49->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v55,
+          v32,
           (Il2CppObject *)bgSprite,
-          *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
+          *(const MethodInfo_3789B84 **)(*(_QWORD *)(v50[4] + 192LL) + 112LL));
       }
       else
       {
-        v76 = &v72->obj.klass + v74;
-        v55->fields._size = v74 + 1;
-        v76[4] = (Il2CppClass *)v75;
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v76 + 4), v75, v70, v71);
+        v53 = &v49->obj.klass + v51;
+        v32->fields._size = v51 + 1;
+        v53[4] = (Il2CppClass *)v52;
+        sub_1C2D434((CGThumbnailListItem_o *)(v53 + 4), v52, v47, v48);
       }
       bgSprite = (__int64)this->fields.nameLabelBottom;
       if ( !bgSprite )
-        goto LABEL_104;
-      bgSprite = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)bgSprite, 0LL);
-      v79 = v55->fields._items;
-      v80 = Method_System_Collections_Generic_List_GameObject__Add__;
-      ++v55->fields._version;
-      if ( !v79 )
-        goto LABEL_104;
-      v81 = v55->fields._size;
-      v82 = bgSprite;
-      if ( (unsigned int)v81 >= v79->max_length )
+        goto LABEL_101;
+      bgSprite = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)bgSprite, 0);
+      v56 = v32->fields._items;
+      v57 = Method_System_Collections_Generic_List_GameObject__Add__;
+      ++v32->fields._version;
+      if ( !v56 )
+        goto LABEL_101;
+      v58 = v32->fields._size;
+      v59 = bgSprite;
+      if ( (unsigned int)v58 >= LODWORD(v56->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v55,
+          v32,
           (Il2CppObject *)bgSprite,
-          *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v80[4] + 192LL) + 112LL));
+          *(const MethodInfo_3789B84 **)(*(_QWORD *)(v57[4] + 192LL) + 112LL));
       }
       else
       {
-        v83 = &v79->obj.klass + v81;
-        v55->fields._size = v81 + 1;
-        v83[4] = (Il2CppClass *)v82;
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v83 + 4), v82, v77, v78);
+        v60 = &v56->obj.klass + v58;
+        v32->fields._size = v58 + 1;
+        v60[4] = (Il2CppClass *)v59;
+        sub_1C2D434((CGThumbnailListItem_o *)(v60 + 4), v59, v54, v55);
       }
       bgSprite = (__int64)this->fields.nameLabelMiddle;
       if ( !bgSprite )
-        goto LABEL_104;
-      bgSprite = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)bgSprite, 0LL);
-      v86 = v55->fields._items;
-      v87 = Method_System_Collections_Generic_List_GameObject__Add__;
-      ++v55->fields._version;
-      if ( !v86 )
-        goto LABEL_104;
-      v88 = v55->fields._size;
-      v89 = bgSprite;
-      if ( (unsigned int)v88 >= v86->max_length )
+        goto LABEL_101;
+      bgSprite = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)bgSprite, 0);
+      v63 = v32->fields._items;
+      v64 = Method_System_Collections_Generic_List_GameObject__Add__;
+      ++v32->fields._version;
+      if ( !v63 )
+        goto LABEL_101;
+      v65 = v32->fields._size;
+      v66 = bgSprite;
+      if ( (unsigned int)v65 >= LODWORD(v63->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v55,
+          v32,
           (Il2CppObject *)bgSprite,
-          *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v87[4] + 192LL) + 112LL));
+          *(const MethodInfo_3789B84 **)(*(_QWORD *)(v64[4] + 192LL) + 112LL));
       }
       else
       {
-        v90 = &v86->obj.klass + v88;
-        v55->fields._size = v88 + 1;
-        v90[4] = (Il2CppClass *)v89;
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v90 + 4), v89, v84, v85);
+        v67 = &v63->obj.klass + v65;
+        v32->fields._size = v65 + 1;
+        v67[4] = (Il2CppClass *)v66;
+        sub_1C2D434((CGThumbnailListItem_o *)(v67 + 4), v66, v61, v62);
       }
-      v91 = *p_shortcutButton;
+      v68 = *p_shortcutButton;
       bgSprite = (__int64)System_Collections_Generic_List_object___ToArray(
-                            v55,
-                            (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_GameObject__ToArray__);
-      if ( !v91 )
-        goto LABEL_104;
-      v91->fields.tweenTargets = (struct UnityEngine_GameObject_array *)bgSprite;
-      sub_1BCAF9C((CGThumbnailListItem_o *)&v91->fields.tweenTargets, bgSprite, v92, v93);
+                            v32,
+                            (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_GameObject__ToArray__);
+      if ( !v68 )
+        goto LABEL_101;
+      v68->fields.tweenTargets = (struct UnityEngine_GameObject_array *)bgSprite;
+      sub_1C2D434((CGThumbnailListItem_o *)&v68->fields.tweenTargets, bgSprite, v69, v70);
     }
-    v94 = *p_shortcutButton;
+    v71 = *p_shortcutButton;
     bgSprite = (__int64)UICommonButtonColor_TypeInfo;
     if ( !UICommonButtonColor_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(UICommonButtonColor_TypeInfo);
       bgSprite = (__int64)UICommonButtonColor_TypeInfo;
     }
-    if ( !v94 )
-      goto LABEL_104;
-    v94->fields.specifyDisabledColor = *(struct UnityEngine_Color_o *)*(_QWORD *)(bgSprite + 184);
+    if ( !v71 )
+      goto LABEL_101;
+    v71->fields.specifyDisabledColor = *(struct UnityEngine_Color_o *)*(_QWORD *)(bgSprite + 184);
   }
   bgSprite = (__int64)item->fields._Name_k__BackingField;
   if ( !bgSprite )
-    goto LABEL_104;
-  if ( !System_String__Contains((System_String_o *)bgSprite, (System_String_o *)StringLiteral_43/*"\n"*/, 0LL) )
+    goto LABEL_101;
+  if ( !System_String__Contains((System_String_o *)bgSprite, (System_String_o *)StringLiteral_43/*"\n"*/, 0) )
   {
     bgSprite = (__int64)this->fields.nameLabelMiddle;
     if ( bgSprite )
     {
-      UILabel__set_text((UILabel_o *)bgSprite, item->fields._Name_k__BackingField, 0LL);
+      UILabel__set_text((UILabel_o *)bgSprite, item->fields._Name_k__BackingField, 0);
       bgSprite = (__int64)this->fields.nameLabelMiddle;
       if ( bgSprite )
       {
@@ -469,160 +439,159 @@ void __fastcall BlankEarthShortcutButtonListViewItemDraw__SetItem(
         if ( !BlankEarthShortcutButtonListViewItemDraw_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(BlankEarthShortcutButtonListViewItemDraw_TypeInfo);
         if ( nameLabelMiddle )
-          goto LABEL_81;
+          goto LABEL_78;
       }
     }
-LABEL_104:
-    sub_1BCB254(bgSprite, v28);
+LABEL_101:
+    sub_1C2D6EC(bgSprite, v7);
   }
   bgSprite = (__int64)item->fields._Name_k__BackingField;
   if ( !bgSprite )
-    goto LABEL_104;
-  bgSprite = (__int64)System_String__Replace_62496972(
+    goto LABEL_101;
+  bgSprite = (__int64)System_String__Replace_63504412(
                         (System_String_o *)bgSprite,
                         (System_String_o *)StringLiteral_87/*"\r\n"*/,
                         (System_String_o *)StringLiteral_43/*"\n"*/,
-                        0LL);
+                        0);
   if ( !bgSprite )
-    goto LABEL_104;
-  v95 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(
+    goto LABEL_101;
+  v72 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(
                                                                (System_String_o *)bgSprite,
                                                                0xAu,
                                                                0,
-                                                               0LL);
+                                                               0);
   bgSprite = (__int64)System_Linq_Enumerable__ToList_object_(
-                        v95,
-                        (const MethodInfo_305BB58 *)Method_System_Linq_Enumerable_ToList_string___);
+                        v72,
+                        (const MethodInfo_3112C88 *)Method_System_Linq_Enumerable_ToList_string___);
   if ( !bgSprite )
-    goto LABEL_104;
+    goto LABEL_101;
   nameLabelUp = this->fields.nameLabelUp;
-  v97 = (System_Collections_Generic_List_object__o *)bgSprite;
+  v74 = (System_Collections_Generic_List_object__o *)bgSprite;
   bgSprite = (__int64)System_Collections_Generic_List_object___get_Item(
                         (System_Collections_Generic_List_object__o *)bgSprite,
                         0,
-                        (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_string__get_Item__);
+                        (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_string__get_Item__);
   if ( !nameLabelUp )
-    goto LABEL_104;
-  UILabel__set_text(nameLabelUp, (System_String_o *)bgSprite, 0LL);
+    goto LABEL_101;
+  UILabel__set_text(nameLabelUp, (System_String_o *)bgSprite, 0);
   bgSprite = (__int64)this->fields.nameLabelUp;
   if ( !bgSprite )
-    goto LABEL_104;
+    goto LABEL_101;
   (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)bgSprite + 840LL))(
     bgSprite,
     *(_QWORD *)(*(_QWORD *)bgSprite + 848LL));
   bgSprite = (__int64)BlankEarthShortcutButtonListViewItemDraw_TypeInfo;
-  v98 = this->fields.nameLabelUp;
+  v75 = this->fields.nameLabelUp;
   if ( !BlankEarthShortcutButtonListViewItemDraw_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BlankEarthShortcutButtonListViewItemDraw_TypeInfo);
-  if ( !v98 )
-    goto LABEL_104;
+  if ( !v75 )
+    goto LABEL_101;
   UILabel__SetCondensedScale(
-    v98,
+    v75,
     BlankEarthShortcutButtonListViewItemDraw_TypeInfo->static_fields->NAME_LABEL_MAX_WIDTH,
     0,
-    0LL);
+    0);
   nameLabelBottom = this->fields.nameLabelBottom;
   bgSprite = (__int64)System_Collections_Generic_List_object___get_Item(
-                        v97,
+                        v74,
                         1,
-                        (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_string__get_Item__);
+                        (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_string__get_Item__);
   if ( !nameLabelBottom )
-    goto LABEL_104;
-  UILabel__set_text(nameLabelBottom, (System_String_o *)bgSprite, 0LL);
+    goto LABEL_101;
+  UILabel__set_text(nameLabelBottom, (System_String_o *)bgSprite, 0);
   bgSprite = (__int64)this->fields.nameLabelBottom;
   if ( !bgSprite )
-    goto LABEL_104;
+    goto LABEL_101;
   bgSprite = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)bgSprite + 840LL))(
                bgSprite,
                *(_QWORD *)(*(_QWORD *)bgSprite + 848LL));
   nameLabelMiddle = this->fields.nameLabelBottom;
   if ( !nameLabelMiddle )
-    goto LABEL_104;
-LABEL_81:
+    goto LABEL_101;
+LABEL_78:
   UILabel__SetCondensedScale(
     nameLabelMiddle,
     BlankEarthShortcutButtonListViewItemDraw_TypeInfo->static_fields->NAME_LABEL_MAX_WIDTH,
     0,
-    0LL);
+    0);
   IconId_k__BackingField = item->fields._IconId_k__BackingField;
-  v101 = System_Int32__ToString((int32_t)&IconId_k__BackingField, 0LL);
-  v102 = System_String__Concat_62450424((System_String_o *)StringLiteral_19046/*"event_logo_shortcut_"*/, v101, 0LL);
+  v78 = System_Int32__ToString((int32_t)&IconId_k__BackingField, 0);
+  v79 = System_String__Concat_63457864((System_String_o *)StringLiteral_19204/*"event_logo_shortcut_"*/, v78, 0);
   IconAtlas_k__BackingField = (UnityEngine_Object_o *)item->fields._IconAtlas_k__BackingField;
-  v104 = v102;
+  v81 = v79;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  bgSprite = UnityEngine_Object__op_Inequality(IconAtlas_k__BackingField, 0LL, 0LL);
+  bgSprite = UnityEngine_Object__op_Inequality(IconAtlas_k__BackingField, 0, 0);
   if ( (bgSprite & 1) != 0 )
   {
-    v105 = item->fields._IconAtlas_k__BackingField;
-    if ( !v105 )
-      goto LABEL_104;
-    if ( UIAtlas__GetSprite(item->fields._IconAtlas_k__BackingField, v104, 0LL) )
+    v82 = item->fields._IconAtlas_k__BackingField;
+    if ( !v82 )
+      goto LABEL_101;
+    if ( UIAtlas__GetSprite(item->fields._IconAtlas_k__BackingField, v81, 0) )
     {
       bgSprite = (__int64)this->fields.iconSprite;
       if ( !bgSprite )
-        goto LABEL_104;
-      UISprite__set_atlas((UISprite_o *)bgSprite, v105, 0LL);
+        goto LABEL_101;
+      UISprite__set_atlas((UISprite_o *)bgSprite, v82, 0);
       bgSprite = (__int64)this->fields.iconSprite;
       if ( !bgSprite )
-        goto LABEL_104;
-      UISprite__set_spriteName((UISprite_o *)bgSprite, v104, 0LL);
+        goto LABEL_101;
+      UISprite__set_spriteName((UISprite_o *)bgSprite, v81, 0);
     }
   }
   bgSprite = (__int64)this->fields.iconSprite;
   if ( !bgSprite )
-    goto LABEL_104;
+    goto LABEL_101;
   (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)bgSprite + 840LL))(
     bgSprite,
     *(_QWORD *)(*(_QWORD *)bgSprite + 848LL));
-  if ( (v38 & 1) != 0 )
+  if ( (v16 & 1) != 0 )
   {
     bgSprite = (__int64)this->fields.bgSprite;
     if ( !bgSprite )
-      goto LABEL_104;
-    UIWidget__set_color((UIWidget_o *)bgSprite, this->fields.closeWarShortCutBtnColor, 0LL);
+      goto LABEL_101;
+    UIWidget__set_color((UIWidget_o *)bgSprite, this->fields.closeWarShortCutBtnColor, 0);
     bgSprite = (__int64)this->fields.iconSprite;
     if ( !bgSprite )
-      goto LABEL_104;
-    UIWidget__set_color((UIWidget_o *)bgSprite, this->fields.closeWarShortCutBtnColor, 0LL);
+      goto LABEL_101;
+    UIWidget__set_color((UIWidget_o *)bgSprite, this->fields.closeWarShortCutBtnColor, 0);
     bgSprite = (__int64)this->fields.nameLabelUp;
     if ( !bgSprite )
-      goto LABEL_104;
-    UIWidget__set_color((UIWidget_o *)bgSprite, this->fields.closeWarShortCutBtnColor, 0LL);
+      goto LABEL_101;
+    UIWidget__set_color((UIWidget_o *)bgSprite, this->fields.closeWarShortCutBtnColor, 0);
     bgSprite = (__int64)this->fields.nameLabelBottom;
     if ( !bgSprite )
-      goto LABEL_104;
-    UIWidget__set_color((UIWidget_o *)bgSprite, this->fields.closeWarShortCutBtnColor, 0LL);
+      goto LABEL_101;
+    UIWidget__set_color((UIWidget_o *)bgSprite, this->fields.closeWarShortCutBtnColor, 0);
     bgSprite = (__int64)this->fields.nameLabelMiddle;
     if ( !bgSprite )
-      goto LABEL_104;
-    UIWidget__set_color((UIWidget_o *)bgSprite, this->fields.closeWarShortCutBtnColor, 0LL);
+      goto LABEL_101;
+    UIWidget__set_color((UIWidget_o *)bgSprite, this->fields.closeWarShortCutBtnColor, 0);
     bgSprite = (__int64)this->fields.nameLabelUp;
     if ( !bgSprite )
-      goto LABEL_104;
-    UILabel__set_effectColor((UILabel_o *)bgSprite, this->fields.closeWarShortCutBtnOutlineColor, 0LL);
+      goto LABEL_101;
+    UILabel__set_effectColor((UILabel_o *)bgSprite, this->fields.closeWarShortCutBtnOutlineColor, 0);
     bgSprite = (__int64)this->fields.nameLabelBottom;
     if ( !bgSprite )
-      goto LABEL_104;
-    UILabel__set_effectColor((UILabel_o *)bgSprite, this->fields.closeWarShortCutBtnOutlineColor, 0LL);
+      goto LABEL_101;
+    UILabel__set_effectColor((UILabel_o *)bgSprite, this->fields.closeWarShortCutBtnOutlineColor, 0);
     bgSprite = (__int64)this->fields.nameLabelMiddle;
     if ( !bgSprite )
-      goto LABEL_104;
-    UILabel__set_effectColor((UILabel_o *)bgSprite, this->fields.closeWarShortCutBtnOutlineColor, 0LL);
+      goto LABEL_101;
+    UILabel__set_effectColor((UILabel_o *)bgSprite, this->fields.closeWarShortCutBtnOutlineColor, 0);
   }
   bgSprite = (__int64)this->fields.optionComponent;
   if ( !bgSprite )
-    goto LABEL_104;
+    goto LABEL_101;
   BlankEarthShortcutButtonOptionComponent__SetUpOptionInfo(
     (BlankEarthShortcutButtonOptionComponent_o *)bgSprite,
     item->fields._blankEarthSpotNavimenuEntity_k__BackingField,
     1,
-    v106);
+    v83);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BlankEarthShortcutButtonListViewItemDraw__SetShortcutButtonEnable(
+void BlankEarthShortcutButtonListViewItemDraw__SetShortcutButtonEnable(
         BlankEarthShortcutButtonListViewItemDraw_o *this,
         bool isEnable,
         const MethodInfo *method)
@@ -632,25 +601,25 @@ void __fastcall BlankEarthShortcutButtonListViewItemDraw__SetShortcutButtonEnabl
   struct BlankEarthShortcutUIButton_o *v7; // x0
   _BOOL4 isLongPress; // w8
 
-  if ( (byte_4B18DF0 & 1) == 0 )
+  if ( (byte_4C23B54 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, isEnable);
-    byte_4B18DF0 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C23B54 = 1;
   }
   shortcutButton = (UnityEngine_Object_o *)this->fields.shortcutButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality(shortcutButton, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Equality(shortcutButton, 0, 0) )
   {
     v7 = this->fields.shortcutButton;
     if ( !v7 )
-      sub_1BCB254(0LL, v6);
+      sub_1C2D6EC(0, v6);
     if ( isEnable )
     {
       isLongPress = v7->fields.isLongPress;
       v7->fields.waitState = 1;
       if ( !isLongPress )
-        UICommonButton__SetButtonEnable((UICommonButton_o *)v7, 1, 1, 0LL);
+        UICommonButton__SetButtonEnable((UICommonButton_o *)v7, 1, 1, 0);
     }
     else
     {
@@ -660,7 +629,7 @@ void __fastcall BlankEarthShortcutButtonListViewItemDraw__SetShortcutButtonEnabl
 }
 
 
-void __fastcall BlankEarthShortcutButtonListViewItemDraw__Update(
+void BlankEarthShortcutButtonListViewItemDraw__Update(
         BlankEarthShortcutButtonListViewItemDraw_o *this,
         const MethodInfo *method)
 {
@@ -671,15 +640,15 @@ void __fastcall BlankEarthShortcutButtonListViewItemDraw__Update(
   const MethodInfo *v7; // x3
   struct BlankEarthShortcutButtonListViewItem_o *listViewItem; // x8
 
-  if ( (byte_4B18DEE & 1) == 0 )
+  if ( (byte_4C23B52 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B18DEE = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C23B52 = 1;
   }
   optionComponent = (UnityEngine_Object_o *)this->fields.optionComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(optionComponent, 0LL, 0LL) && this->fields.listViewItem )
+  if ( UnityEngine_Object__op_Inequality(optionComponent, 0, 0) && this->fields.listViewItem )
   {
     v6 = this->fields.optionComponent;
     if ( !v6 )
@@ -705,7 +674,7 @@ void __fastcall BlankEarthShortcutButtonListViewItemDraw__Update(
         }
       }
 LABEL_13:
-      sub_1BCB254(v6, v4);
+      sub_1C2D6EC(v6, v4);
     }
   }
 }

@@ -1,4 +1,4 @@
-void __fastcall SubmarineSilhouetteData___ctor(
+void SubmarineSilhouetteData___ctor(
         SubmarineSilhouetteData_o *this,
         SubmarineSpotInfo_o *spotInfo,
         const MethodInfo *method)
@@ -15,7 +15,7 @@ void __fastcall SubmarineSilhouetteData___ctor(
   struct EventPanelSpotEntity_o *v14; // x8
   struct System_Int32_array_array *enemySizeIdxListJson; // x1
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   if ( !spotInfo )
     goto LABEL_6;
   SpotEntity_k__BackingField = spotInfo->fields._SpotEntity_k__BackingField;
@@ -28,19 +28,19 @@ void __fastcall SubmarineSilhouetteData___ctor(
     || (this->fields._ObjectId_k__BackingField = EventPanelSpotEntity_k__BackingField->fields.objectId,
         objectQuestIds = EventPanelSpotEntity_k__BackingField->fields.objectQuestIds,
         this->fields._ObjectQuestIds_k__BackingField = objectQuestIds,
-        sub_1BCAF9C(
+        sub_1C2D434(
           (CGThumbnailListItem_o *)&this->fields._ObjectQuestIds_k__BackingField,
           (int32_t)objectQuestIds,
           v7,
           v8),
-        (v14 = spotInfo->fields._EventPanelSpotEntity_k__BackingField) == 0LL) )
+        (v14 = spotInfo->fields._EventPanelSpotEntity_k__BackingField) == 0) )
   {
 LABEL_6:
-    sub_1BCB254(v5, v6);
+    sub_1C2D6EC(v5, v6);
   }
   enemySizeIdxListJson = v14->fields.enemySizeIdxListJson;
   this->fields._EnemySizeIdx_k__BackingField = enemySizeIdxListJson;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._EnemySizeIdx_k__BackingField,
     (int32_t)enemySizeIdxListJson,
     v12,
@@ -48,27 +48,26 @@ LABEL_6:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-bool __fastcall SubmarineSilhouetteData__HasClearCondQuestId(
+bool SubmarineSilhouetteData__HasClearCondQuestId(
         SubmarineSilhouetteData_o *this,
         int32_t questId,
         const MethodInfo *method)
 {
   struct System_Int32_array *ObjectQuestIds_k__BackingField; // x0
 
-  if ( (byte_4B18F15 & 1) == 0 )
+  if ( (byte_4C23C79 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Array_IndexOf_int___, *(_QWORD *)&questId);
-    byte_4B18F15 = 1;
+    sub_1C2D490(&Method_System_Array_IndexOf_int___);
+    byte_4C23C79 = 1;
   }
   ObjectQuestIds_k__BackingField = this->fields._ObjectQuestIds_k__BackingField;
   if ( ObjectQuestIds_k__BackingField )
   {
-    if ( ObjectQuestIds_k__BackingField->max_length )
+    if ( LODWORD(ObjectQuestIds_k__BackingField->max_length) )
       LOBYTE(ObjectQuestIds_k__BackingField) = System_Array__IndexOf_int_(
                                                  ObjectQuestIds_k__BackingField,
                                                  questId,
-                                                 (const MethodInfo_3119038 *)Method_System_Array_IndexOf_int___) >= 0;
+                                                 (const MethodInfo_31D59D0 *)Method_System_Array_IndexOf_int___) >= 0;
     else
       LOBYTE(ObjectQuestIds_k__BackingField) = 0;
   }
@@ -76,13 +75,13 @@ bool __fastcall SubmarineSilhouetteData__HasClearCondQuestId(
 }
 
 
-bool __fastcall SubmarineSilhouetteData__get_Alive(SubmarineSilhouetteData_o *this, const MethodInfo *method)
+bool SubmarineSilhouetteData__get_Alive(SubmarineSilhouetteData_o *this, const MethodInfo *method)
 {
   return this->fields._Alive_k__BackingField;
 }
 
 
-System_Int32_array_array *__fastcall SubmarineSilhouetteData__get_EnemySizeIdx(
+System_Int32_array_array *SubmarineSilhouetteData__get_EnemySizeIdx(
         SubmarineSilhouetteData_o *this,
         const MethodInfo *method)
 {
@@ -90,39 +89,37 @@ System_Int32_array_array *__fastcall SubmarineSilhouetteData__get_EnemySizeIdx(
 }
 
 
-bool __fastcall SubmarineSilhouetteData__get_HasEnemySize(SubmarineSilhouetteData_o *this, const MethodInfo *method)
+bool SubmarineSilhouetteData__get_HasEnemySize(SubmarineSilhouetteData_o *this, const MethodInfo *method)
 {
   struct System_Int32_array_array *EnemySizeIdx_k__BackingField; // x8
 
   EnemySizeIdx_k__BackingField = this->fields._EnemySizeIdx_k__BackingField;
-  return EnemySizeIdx_k__BackingField && EnemySizeIdx_k__BackingField->max_length != 0;
+  return EnemySizeIdx_k__BackingField && LODWORD(EnemySizeIdx_k__BackingField->max_length) != 0;
 }
 
 
-bool __fastcall SubmarineSilhouetteData__get_HasObjectQuestIds(
-        SubmarineSilhouetteData_o *this,
-        const MethodInfo *method)
+bool SubmarineSilhouetteData__get_HasObjectQuestIds(SubmarineSilhouetteData_o *this, const MethodInfo *method)
 {
   struct System_Int32_array *ObjectQuestIds_k__BackingField; // x8
 
   ObjectQuestIds_k__BackingField = this->fields._ObjectQuestIds_k__BackingField;
-  return ObjectQuestIds_k__BackingField && ObjectQuestIds_k__BackingField->max_length != 0;
+  return ObjectQuestIds_k__BackingField && LODWORD(ObjectQuestIds_k__BackingField->max_length) != 0;
 }
 
 
-bool __fastcall SubmarineSilhouetteData__get_IsOnPanel(SubmarineSilhouetteData_o *this, const MethodInfo *method)
+bool SubmarineSilhouetteData__get_IsOnPanel(SubmarineSilhouetteData_o *this, const MethodInfo *method)
 {
   return this->fields._PanelId_k__BackingField > 0;
 }
 
 
-int32_t __fastcall SubmarineSilhouetteData__get_ObjectId(SubmarineSilhouetteData_o *this, const MethodInfo *method)
+int32_t SubmarineSilhouetteData__get_ObjectId(SubmarineSilhouetteData_o *this, const MethodInfo *method)
 {
   return this->fields._ObjectId_k__BackingField;
 }
 
 
-System_Int32_array *__fastcall SubmarineSilhouetteData__get_ObjectQuestIds(
+System_Int32_array *SubmarineSilhouetteData__get_ObjectQuestIds(
         SubmarineSilhouetteData_o *this,
         const MethodInfo *method)
 {
@@ -130,28 +127,25 @@ System_Int32_array *__fastcall SubmarineSilhouetteData__get_ObjectQuestIds(
 }
 
 
-int32_t __fastcall SubmarineSilhouetteData__get_PanelId(SubmarineSilhouetteData_o *this, const MethodInfo *method)
+int32_t SubmarineSilhouetteData__get_PanelId(SubmarineSilhouetteData_o *this, const MethodInfo *method)
 {
   return this->fields._PanelId_k__BackingField;
 }
 
 
-int32_t __fastcall SubmarineSilhouetteData__get_SpotId(SubmarineSilhouetteData_o *this, const MethodInfo *method)
+int32_t SubmarineSilhouetteData__get_SpotId(SubmarineSilhouetteData_o *this, const MethodInfo *method)
 {
   return this->fields._SpotId_k__BackingField;
 }
 
 
-void __fastcall SubmarineSilhouetteData__set_Alive(
-        SubmarineSilhouetteData_o *this,
-        bool value,
-        const MethodInfo *method)
+void SubmarineSilhouetteData__set_Alive(SubmarineSilhouetteData_o *this, bool value, const MethodInfo *method)
 {
   this->fields._Alive_k__BackingField = value;
 }
 
 
-void __fastcall SubmarineSilhouetteData__set_EnemySizeIdx(
+void SubmarineSilhouetteData__set_EnemySizeIdx(
         SubmarineSilhouetteData_o *this,
         System_Int32_array_array *value,
         const MethodInfo *method)
@@ -159,20 +153,17 @@ void __fastcall SubmarineSilhouetteData__set_EnemySizeIdx(
   const MethodInfo *v3; // x3
 
   this->fields._EnemySizeIdx_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._EnemySizeIdx_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._EnemySizeIdx_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall SubmarineSilhouetteData__set_ObjectId(
-        SubmarineSilhouetteData_o *this,
-        int32_t value,
-        const MethodInfo *method)
+void SubmarineSilhouetteData__set_ObjectId(SubmarineSilhouetteData_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._ObjectId_k__BackingField = value;
 }
 
 
-void __fastcall SubmarineSilhouetteData__set_ObjectQuestIds(
+void SubmarineSilhouetteData__set_ObjectQuestIds(
         SubmarineSilhouetteData_o *this,
         System_Int32_array *value,
         const MethodInfo *method)
@@ -180,7 +171,7 @@ void __fastcall SubmarineSilhouetteData__set_ObjectQuestIds(
   const MethodInfo *v3; // x3
 
   this->fields._ObjectQuestIds_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._ObjectQuestIds_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -188,19 +179,13 @@ void __fastcall SubmarineSilhouetteData__set_ObjectQuestIds(
 }
 
 
-void __fastcall SubmarineSilhouetteData__set_PanelId(
-        SubmarineSilhouetteData_o *this,
-        int32_t value,
-        const MethodInfo *method)
+void SubmarineSilhouetteData__set_PanelId(SubmarineSilhouetteData_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._PanelId_k__BackingField = value;
 }
 
 
-void __fastcall SubmarineSilhouetteData__set_SpotId(
-        SubmarineSilhouetteData_o *this,
-        int32_t value,
-        const MethodInfo *method)
+void SubmarineSilhouetteData__set_SpotId(SubmarineSilhouetteData_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._SpotId_k__BackingField = value;
 }

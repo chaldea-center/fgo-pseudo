@@ -1,10 +1,10 @@
-void __fastcall ClassBoardResourceContents___ctor(ClassBoardResourceContents_o *this, const MethodInfo *method)
+void ClassBoardResourceContents___ctor(ClassBoardResourceContents_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall ClassBoardResourceContents__SetBoardUIAtlas(
+void ClassBoardResourceContents__SetBoardUIAtlas(
         ClassBoardResourceContents_o *this,
         AtlasManagerUnit_o *boardUiAtlasManagerUnit,
         const MethodInfo *method)
@@ -12,7 +12,7 @@ void __fastcall ClassBoardResourceContents__SetBoardUIAtlas(
   const MethodInfo *v3; // x3
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)boardUiAtlasManagerUnit,
     (int32_t)method,
@@ -20,7 +20,7 @@ void __fastcall ClassBoardResourceContents__SetBoardUIAtlas(
 }
 
 
-void __fastcall ClassBoardResourceContents__SetContents(
+void ClassBoardResourceContents__SetContents(
         ClassBoardResourceContents_o *this,
         ClassBoardSquare_o *square,
         ClassBoardLine_o *line,
@@ -36,17 +36,17 @@ void __fastcall ClassBoardResourceContents__SetContents(
   const MethodInfo *v15; // x3
 
   this->fields._Square_k__BackingField = square;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)square, (int32_t)line, (const MethodInfo *)lockAsset);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)square, (int32_t)line, (const MethodInfo *)lockAsset);
   this->fields._Line_k__BackingField = line;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Line_k__BackingField, (int32_t)line, v10, v11);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Line_k__BackingField, (int32_t)line, v10, v11);
   this->fields._Lock_k__BackingField = lockAsset;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Lock_k__BackingField, (int32_t)lockAsset, v12, v13);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Lock_k__BackingField, (int32_t)lockAsset, v12, v13);
   this->fields._Blank_k__BackingField = blank;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Blank_k__BackingField, (int32_t)blank, v14, v15);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Blank_k__BackingField, (int32_t)blank, v14, v15);
 }
 
 
-void __fastcall ClassBoardResourceContents__SetContentsBgModel(
+void ClassBoardResourceContents__SetContentsBgModel(
         ClassBoardResourceContents_o *this,
         ClassBoardBackground_o *bgModel,
         const MethodInfo *method)
@@ -54,11 +54,11 @@ void __fastcall ClassBoardResourceContents__SetContentsBgModel(
   const MethodInfo *v3; // x3
 
   this->fields._BgModel_k__BackingField = bgModel;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._BgModel_k__BackingField, (int32_t)bgModel, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._BgModel_k__BackingField, (int32_t)bgModel, (int32_t)method, v3);
 }
 
 
-void __fastcall ClassBoardResourceContents__SetContentsBoardSelectView(
+void ClassBoardResourceContents__SetContentsBoardSelectView(
         ClassBoardResourceContents_o *this,
         UnityEngine_GameObject_o *boardSelectViewPrefab,
         const MethodInfo *method)
@@ -66,7 +66,7 @@ void __fastcall ClassBoardResourceContents__SetContentsBoardSelectView(
   const MethodInfo *v3; // x3
 
   this->fields._BoardSelectViewPrefab_k__BackingField = boardSelectViewPrefab;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (int32_t)boardSelectViewPrefab,
     (int32_t)method,
@@ -74,7 +74,7 @@ void __fastcall ClassBoardResourceContents__SetContentsBoardSelectView(
 }
 
 
-void __fastcall ClassBoardResourceContents__SetContentsDialog(
+void ClassBoardResourceContents__SetContentsDialog(
         ClassBoardResourceContents_o *this,
         ClassBoardDisableOpenDialog_o *classBoardDisableOpenDialog,
         ClassBoardSquareOpenConfirmDialog_o *classBoardSquareOpenConfirmDialog,
@@ -93,31 +93,31 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
   const MethodInfo *v19; // x3
 
   this->fields._DisableOpenDialog_k__BackingField = classBoardDisableOpenDialog;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
     (int32_t)classBoardDisableOpenDialog,
     (int32_t)classBoardSquareOpenConfirmDialog,
     (const MethodInfo *)classBoardLockOpenConfirmDialog);
   this->fields._SquareOpenConfirmDialog_k__BackingField = classBoardSquareOpenConfirmDialog;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (int32_t)classBoardSquareOpenConfirmDialog,
     v12,
     v13);
   this->fields._LockOpenConfirmDialog_k__BackingField = classBoardLockOpenConfirmDialog;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (int32_t)classBoardLockOpenConfirmDialog,
     v14,
     v15);
   this->fields._LockReleaseConditionDialog_k__BackingField = classBoardLockReleaseConditionDialog;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (int32_t)classBoardLockReleaseConditionDialog,
     v16,
     v17);
   this->fields._SquareDetailDialog_k__BackingField = classBoardSquareDetailDialog;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (int32_t)classBoardSquareDetailDialog,
     v18,
@@ -125,7 +125,7 @@ void __fastcall ClassBoardResourceContents__SetContentsDialog(
 }
 
 
-void __fastcall ClassBoardResourceContents__SetContentsFigure(
+void ClassBoardResourceContents__SetContentsFigure(
         ClassBoardResourceContents_o *this,
         ClassBoardFigureController_o *figureController,
         const MethodInfo *method)
@@ -133,7 +133,7 @@ void __fastcall ClassBoardResourceContents__SetContentsFigure(
   const MethodInfo *v3; // x3
 
   this->fields._FigureController_k__BackingField = figureController;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._FigureController_k__BackingField,
     (int32_t)figureController,
     (int32_t)method,
@@ -141,7 +141,7 @@ void __fastcall ClassBoardResourceContents__SetContentsFigure(
 }
 
 
-void __fastcall ClassBoardResourceContents__SetContentsForwardIconAnimObject(
+void ClassBoardResourceContents__SetContentsForwardIconAnimObject(
         ClassBoardResourceContents_o *this,
         UnityEngine_GameObject_o *prefab,
         const MethodInfo *method)
@@ -149,7 +149,7 @@ void __fastcall ClassBoardResourceContents__SetContentsForwardIconAnimObject(
   const MethodInfo *v3; // x3
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = prefab;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (int32_t)prefab,
     (int32_t)method,
@@ -157,7 +157,7 @@ void __fastcall ClassBoardResourceContents__SetContentsForwardIconAnimObject(
 }
 
 
-void __fastcall ClassBoardResourceContents__SetContentsFullReleaseEffect(
+void ClassBoardResourceContents__SetContentsFullReleaseEffect(
         ClassBoardResourceContents_o *this,
         ClassBoardFullReleaseEffectComponent_o *fullReleaseEffectComponent,
         ClassBoardFullReleaseEffectComponent_o *grandFullReleaseEffectComponent,
@@ -167,13 +167,13 @@ void __fastcall ClassBoardResourceContents__SetContentsFullReleaseEffect(
   const MethodInfo *v7; // x3
 
   this->fields._FullReleaseEffectComponent_k__BackingField = fullReleaseEffectComponent;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._FullReleaseEffectComponent_k__BackingField,
     (int32_t)fullReleaseEffectComponent,
     (int32_t)grandFullReleaseEffectComponent,
     method);
   this->fields._GrandFullReleaseEffectComponent_k__BackingField = grandFullReleaseEffectComponent;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._GrandFullReleaseEffectComponent_k__BackingField,
     (int32_t)grandFullReleaseEffectComponent,
     v6,
@@ -181,7 +181,7 @@ void __fastcall ClassBoardResourceContents__SetContentsFullReleaseEffect(
 }
 
 
-void __fastcall ClassBoardResourceContents__SetContentsGrandBgModel(
+void ClassBoardResourceContents__SetContentsGrandBgModel(
         ClassBoardResourceContents_o *this,
         ClassBoardBackground_o *grandBgModel,
         const MethodInfo *method)
@@ -189,7 +189,7 @@ void __fastcall ClassBoardResourceContents__SetContentsGrandBgModel(
   const MethodInfo *v3; // x3
 
   this->fields._GrandBgModel_k__BackingField = grandBgModel;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._GrandBgModel_k__BackingField,
     (int32_t)grandBgModel,
     (int32_t)method,
@@ -197,7 +197,7 @@ void __fastcall ClassBoardResourceContents__SetContentsGrandBgModel(
 }
 
 
-void __fastcall ClassBoardResourceContents__SetContentsGrandBoardDialog(
+void ClassBoardResourceContents__SetContentsGrandBoardDialog(
         ClassBoardResourceContents_o *this,
         ClassBoardQuestOpenConfirmDialog_o *classBoardQuestOpenConfirmDialog,
         const MethodInfo *method)
@@ -205,7 +205,7 @@ void __fastcall ClassBoardResourceContents__SetContentsGrandBoardDialog(
   const MethodInfo *v3; // x3
 
   this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField = classBoardQuestOpenConfirmDialog;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField,
     (int32_t)classBoardQuestOpenConfirmDialog,
     (int32_t)method,
@@ -213,7 +213,7 @@ void __fastcall ClassBoardResourceContents__SetContentsGrandBoardDialog(
 }
 
 
-void __fastcall ClassBoardResourceContents__SetContentsGrandGraph(
+void ClassBoardResourceContents__SetContentsGrandGraph(
         ClassBoardResourceContents_o *this,
         AtlasManagerUnit_o *grandGraphAtlasManagerUnit,
         const MethodInfo *method)
@@ -221,7 +221,7 @@ void __fastcall ClassBoardResourceContents__SetContentsGrandGraph(
   const MethodInfo *v3; // x3
 
   this->fields._GrandGraphAtlasManagerUnit_k__BackingField = grandGraphAtlasManagerUnit;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._GrandGraphAtlasManagerUnit_k__BackingField,
     (int32_t)grandGraphAtlasManagerUnit,
     (int32_t)method,
@@ -229,7 +229,7 @@ void __fastcall ClassBoardResourceContents__SetContentsGrandGraph(
 }
 
 
-void __fastcall ClassBoardResourceContents__SetContentsUI(
+void ClassBoardResourceContents__SetContentsUI(
         ClassBoardResourceContents_o *this,
         ClassBoardUIController_o *uiController,
         AtlasManagerUnit_o *boardUiAtlasManagerUnit,
@@ -245,25 +245,25 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
   const MethodInfo *v15; // x3
 
   this->fields._BoardUiController_k__BackingField = uiController;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._BoardUiController_k__BackingField,
     (int32_t)uiController,
     (int32_t)boardUiAtlasManagerUnit,
     (const MethodInfo *)iconAtlasManagerUnit);
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)boardUiAtlasManagerUnit,
     v10,
     v11);
   this->fields._IconAtlasManagerUnit_k__BackingField = iconAtlasManagerUnit;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (int32_t)iconAtlasManagerUnit,
     v12,
     v13);
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = classUiAtlasManagerUnit;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (int32_t)classUiAtlasManagerUnit,
     v14,
@@ -271,7 +271,7 @@ void __fastcall ClassBoardResourceContents__SetContentsUI(
 }
 
 
-void __fastcall ClassBoardResourceContents__SetGrandContents(
+void ClassBoardResourceContents__SetGrandContents(
         ClassBoardResourceContents_o *this,
         ClassBoardSquare_o *square,
         ClassBoardLine_o *line,
@@ -287,21 +287,21 @@ void __fastcall ClassBoardResourceContents__SetGrandContents(
   const MethodInfo *v15; // x3
 
   this->fields._GrandSquare_k__BackingField = square;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._GrandSquare_k__BackingField,
     (int32_t)square,
     (int32_t)line,
     (const MethodInfo *)lockAsset);
   this->fields._GrandLine_k__BackingField = line;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._GrandLine_k__BackingField, (int32_t)line, v10, v11);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._GrandLine_k__BackingField, (int32_t)line, v10, v11);
   this->fields._GrandLock_k__BackingField = lockAsset;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._GrandLock_k__BackingField, (int32_t)lockAsset, v12, v13);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._GrandLock_k__BackingField, (int32_t)lockAsset, v12, v13);
   this->fields._GrandBlank_k__BackingField = blank;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._GrandBlank_k__BackingField, (int32_t)blank, v14, v15);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._GrandBlank_k__BackingField, (int32_t)blank, v14, v15);
 }
 
 
-ClassBoardBackground_o *__fastcall ClassBoardResourceContents__get_BgModel(
+ClassBoardBackground_o *ClassBoardResourceContents__get_BgModel(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -309,15 +309,13 @@ ClassBoardBackground_o *__fastcall ClassBoardResourceContents__get_BgModel(
 }
 
 
-ClassBoardBlank_o *__fastcall ClassBoardResourceContents__get_Blank(
-        ClassBoardResourceContents_o *this,
-        const MethodInfo *method)
+ClassBoardBlank_o *ClassBoardResourceContents__get_Blank(ClassBoardResourceContents_o *this, const MethodInfo *method)
 {
   return this->fields._Blank_k__BackingField;
 }
 
 
-UnityEngine_GameObject_o *__fastcall ClassBoardResourceContents__get_BoardSelectViewPrefab(
+UnityEngine_GameObject_o *ClassBoardResourceContents__get_BoardSelectViewPrefab(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -325,7 +323,7 @@ UnityEngine_GameObject_o *__fastcall ClassBoardResourceContents__get_BoardSelect
 }
 
 
-AtlasManagerUnit_o *__fastcall ClassBoardResourceContents__get_BoardUiAtlasManagerUnit(
+AtlasManagerUnit_o *ClassBoardResourceContents__get_BoardUiAtlasManagerUnit(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -333,7 +331,7 @@ AtlasManagerUnit_o *__fastcall ClassBoardResourceContents__get_BoardUiAtlasManag
 }
 
 
-ClassBoardUIController_o *__fastcall ClassBoardResourceContents__get_BoardUiController(
+ClassBoardUIController_o *ClassBoardResourceContents__get_BoardUiController(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -341,7 +339,7 @@ ClassBoardUIController_o *__fastcall ClassBoardResourceContents__get_BoardUiCont
 }
 
 
-ClassBoardQuestOpenConfirmDialog_o *__fastcall ClassBoardResourceContents__get_ClassBoardQuestOpenConfirmDialog(
+ClassBoardQuestOpenConfirmDialog_o *ClassBoardResourceContents__get_ClassBoardQuestOpenConfirmDialog(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -349,7 +347,7 @@ ClassBoardQuestOpenConfirmDialog_o *__fastcall ClassBoardResourceContents__get_C
 }
 
 
-AtlasManagerUnit_o *__fastcall ClassBoardResourceContents__get_ClassUiAtlasManagerUnit(
+AtlasManagerUnit_o *ClassBoardResourceContents__get_ClassUiAtlasManagerUnit(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -357,7 +355,7 @@ AtlasManagerUnit_o *__fastcall ClassBoardResourceContents__get_ClassUiAtlasManag
 }
 
 
-ClassBoardDisableOpenDialog_o *__fastcall ClassBoardResourceContents__get_DisableOpenDialog(
+ClassBoardDisableOpenDialog_o *ClassBoardResourceContents__get_DisableOpenDialog(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -365,7 +363,7 @@ ClassBoardDisableOpenDialog_o *__fastcall ClassBoardResourceContents__get_Disabl
 }
 
 
-ClassBoardFigureController_o *__fastcall ClassBoardResourceContents__get_FigureController(
+ClassBoardFigureController_o *ClassBoardResourceContents__get_FigureController(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -373,7 +371,7 @@ ClassBoardFigureController_o *__fastcall ClassBoardResourceContents__get_FigureC
 }
 
 
-UnityEngine_GameObject_o *__fastcall ClassBoardResourceContents__get_ForwardIconAnimObjectPrefab(
+UnityEngine_GameObject_o *ClassBoardResourceContents__get_ForwardIconAnimObjectPrefab(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -381,7 +379,7 @@ UnityEngine_GameObject_o *__fastcall ClassBoardResourceContents__get_ForwardIcon
 }
 
 
-ClassBoardFullReleaseEffectComponent_o *__fastcall ClassBoardResourceContents__get_FullReleaseEffectComponent(
+ClassBoardFullReleaseEffectComponent_o *ClassBoardResourceContents__get_FullReleaseEffectComponent(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -389,7 +387,7 @@ ClassBoardFullReleaseEffectComponent_o *__fastcall ClassBoardResourceContents__g
 }
 
 
-ClassBoardBackground_o *__fastcall ClassBoardResourceContents__get_GrandBgModel(
+ClassBoardBackground_o *ClassBoardResourceContents__get_GrandBgModel(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -397,7 +395,7 @@ ClassBoardBackground_o *__fastcall ClassBoardResourceContents__get_GrandBgModel(
 }
 
 
-ClassBoardBlank_o *__fastcall ClassBoardResourceContents__get_GrandBlank(
+ClassBoardBlank_o *ClassBoardResourceContents__get_GrandBlank(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -405,7 +403,7 @@ ClassBoardBlank_o *__fastcall ClassBoardResourceContents__get_GrandBlank(
 }
 
 
-ClassBoardFullReleaseEffectComponent_o *__fastcall ClassBoardResourceContents__get_GrandFullReleaseEffectComponent(
+ClassBoardFullReleaseEffectComponent_o *ClassBoardResourceContents__get_GrandFullReleaseEffectComponent(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -413,7 +411,7 @@ ClassBoardFullReleaseEffectComponent_o *__fastcall ClassBoardResourceContents__g
 }
 
 
-AtlasManagerUnit_o *__fastcall ClassBoardResourceContents__get_GrandGraphAtlasManagerUnit(
+AtlasManagerUnit_o *ClassBoardResourceContents__get_GrandGraphAtlasManagerUnit(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -421,7 +419,7 @@ AtlasManagerUnit_o *__fastcall ClassBoardResourceContents__get_GrandGraphAtlasMa
 }
 
 
-ClassBoardLine_o *__fastcall ClassBoardResourceContents__get_GrandLine(
+ClassBoardLine_o *ClassBoardResourceContents__get_GrandLine(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -429,7 +427,7 @@ ClassBoardLine_o *__fastcall ClassBoardResourceContents__get_GrandLine(
 }
 
 
-ClassBoardLock_o *__fastcall ClassBoardResourceContents__get_GrandLock(
+ClassBoardLock_o *ClassBoardResourceContents__get_GrandLock(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -437,7 +435,7 @@ ClassBoardLock_o *__fastcall ClassBoardResourceContents__get_GrandLock(
 }
 
 
-ClassBoardSquare_o *__fastcall ClassBoardResourceContents__get_GrandSquare(
+ClassBoardSquare_o *ClassBoardResourceContents__get_GrandSquare(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -445,7 +443,7 @@ ClassBoardSquare_o *__fastcall ClassBoardResourceContents__get_GrandSquare(
 }
 
 
-AtlasManagerUnit_o *__fastcall ClassBoardResourceContents__get_IconAtlasManagerUnit(
+AtlasManagerUnit_o *ClassBoardResourceContents__get_IconAtlasManagerUnit(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -453,23 +451,19 @@ AtlasManagerUnit_o *__fastcall ClassBoardResourceContents__get_IconAtlasManagerU
 }
 
 
-ClassBoardLine_o *__fastcall ClassBoardResourceContents__get_Line(
-        ClassBoardResourceContents_o *this,
-        const MethodInfo *method)
+ClassBoardLine_o *ClassBoardResourceContents__get_Line(ClassBoardResourceContents_o *this, const MethodInfo *method)
 {
   return this->fields._Line_k__BackingField;
 }
 
 
-ClassBoardLock_o *__fastcall ClassBoardResourceContents__get_Lock(
-        ClassBoardResourceContents_o *this,
-        const MethodInfo *method)
+ClassBoardLock_o *ClassBoardResourceContents__get_Lock(ClassBoardResourceContents_o *this, const MethodInfo *method)
 {
   return this->fields._Lock_k__BackingField;
 }
 
 
-ClassBoardLockOpenConfirmDialog_o *__fastcall ClassBoardResourceContents__get_LockOpenConfirmDialog(
+ClassBoardLockOpenConfirmDialog_o *ClassBoardResourceContents__get_LockOpenConfirmDialog(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -477,7 +471,7 @@ ClassBoardLockOpenConfirmDialog_o *__fastcall ClassBoardResourceContents__get_Lo
 }
 
 
-ClassBoardLockReleaseConditionDialog_o *__fastcall ClassBoardResourceContents__get_LockReleaseConditionDialog(
+ClassBoardLockReleaseConditionDialog_o *ClassBoardResourceContents__get_LockReleaseConditionDialog(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -485,7 +479,7 @@ ClassBoardLockReleaseConditionDialog_o *__fastcall ClassBoardResourceContents__g
 }
 
 
-ClassBoardSquare_o *__fastcall ClassBoardResourceContents__get_Square(
+ClassBoardSquare_o *ClassBoardResourceContents__get_Square(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -493,7 +487,7 @@ ClassBoardSquare_o *__fastcall ClassBoardResourceContents__get_Square(
 }
 
 
-ClassBoardSquareDetailDialog_o *__fastcall ClassBoardResourceContents__get_SquareDetailDialog(
+ClassBoardSquareDetailDialog_o *ClassBoardResourceContents__get_SquareDetailDialog(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -501,7 +495,7 @@ ClassBoardSquareDetailDialog_o *__fastcall ClassBoardResourceContents__get_Squar
 }
 
 
-ClassBoardSquareOpenConfirmDialog_o *__fastcall ClassBoardResourceContents__get_SquareOpenConfirmDialog(
+ClassBoardSquareOpenConfirmDialog_o *ClassBoardResourceContents__get_SquareOpenConfirmDialog(
         ClassBoardResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -509,7 +503,7 @@ ClassBoardSquareOpenConfirmDialog_o *__fastcall ClassBoardResourceContents__get_
 }
 
 
-void __fastcall ClassBoardResourceContents__set_BgModel(
+void ClassBoardResourceContents__set_BgModel(
         ClassBoardResourceContents_o *this,
         ClassBoardBackground_o *value,
         const MethodInfo *method)
@@ -517,11 +511,11 @@ void __fastcall ClassBoardResourceContents__set_BgModel(
   const MethodInfo *v3; // x3
 
   this->fields._BgModel_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._BgModel_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._BgModel_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ClassBoardResourceContents__set_Blank(
+void ClassBoardResourceContents__set_Blank(
         ClassBoardResourceContents_o *this,
         ClassBoardBlank_o *value,
         const MethodInfo *method)
@@ -529,11 +523,11 @@ void __fastcall ClassBoardResourceContents__set_Blank(
   const MethodInfo *v3; // x3
 
   this->fields._Blank_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Blank_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Blank_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ClassBoardResourceContents__set_BoardSelectViewPrefab(
+void ClassBoardResourceContents__set_BoardSelectViewPrefab(
         ClassBoardResourceContents_o *this,
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
@@ -541,7 +535,7 @@ void __fastcall ClassBoardResourceContents__set_BoardSelectViewPrefab(
   const MethodInfo *v3; // x3
 
   this->fields._BoardSelectViewPrefab_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -549,7 +543,7 @@ void __fastcall ClassBoardResourceContents__set_BoardSelectViewPrefab(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_BoardUiAtlasManagerUnit(
+void ClassBoardResourceContents__set_BoardUiAtlasManagerUnit(
         ClassBoardResourceContents_o *this,
         AtlasManagerUnit_o *value,
         const MethodInfo *method)
@@ -557,7 +551,7 @@ void __fastcall ClassBoardResourceContents__set_BoardUiAtlasManagerUnit(
   const MethodInfo *v3; // x3
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -565,7 +559,7 @@ void __fastcall ClassBoardResourceContents__set_BoardUiAtlasManagerUnit(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_BoardUiController(
+void ClassBoardResourceContents__set_BoardUiController(
         ClassBoardResourceContents_o *this,
         ClassBoardUIController_o *value,
         const MethodInfo *method)
@@ -573,7 +567,7 @@ void __fastcall ClassBoardResourceContents__set_BoardUiController(
   const MethodInfo *v3; // x3
 
   this->fields._BoardUiController_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._BoardUiController_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -581,7 +575,7 @@ void __fastcall ClassBoardResourceContents__set_BoardUiController(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_ClassBoardQuestOpenConfirmDialog(
+void ClassBoardResourceContents__set_ClassBoardQuestOpenConfirmDialog(
         ClassBoardResourceContents_o *this,
         ClassBoardQuestOpenConfirmDialog_o *value,
         const MethodInfo *method)
@@ -589,7 +583,7 @@ void __fastcall ClassBoardResourceContents__set_ClassBoardQuestOpenConfirmDialog
   const MethodInfo *v3; // x3
 
   this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -597,7 +591,7 @@ void __fastcall ClassBoardResourceContents__set_ClassBoardQuestOpenConfirmDialog
 }
 
 
-void __fastcall ClassBoardResourceContents__set_ClassUiAtlasManagerUnit(
+void ClassBoardResourceContents__set_ClassUiAtlasManagerUnit(
         ClassBoardResourceContents_o *this,
         AtlasManagerUnit_o *value,
         const MethodInfo *method)
@@ -605,7 +599,7 @@ void __fastcall ClassBoardResourceContents__set_ClassUiAtlasManagerUnit(
   const MethodInfo *v3; // x3
 
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -613,7 +607,7 @@ void __fastcall ClassBoardResourceContents__set_ClassUiAtlasManagerUnit(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_DisableOpenDialog(
+void ClassBoardResourceContents__set_DisableOpenDialog(
         ClassBoardResourceContents_o *this,
         ClassBoardDisableOpenDialog_o *value,
         const MethodInfo *method)
@@ -621,7 +615,7 @@ void __fastcall ClassBoardResourceContents__set_DisableOpenDialog(
   const MethodInfo *v3; // x3
 
   this->fields._DisableOpenDialog_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -629,7 +623,7 @@ void __fastcall ClassBoardResourceContents__set_DisableOpenDialog(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_FigureController(
+void ClassBoardResourceContents__set_FigureController(
         ClassBoardResourceContents_o *this,
         ClassBoardFigureController_o *value,
         const MethodInfo *method)
@@ -637,7 +631,7 @@ void __fastcall ClassBoardResourceContents__set_FigureController(
   const MethodInfo *v3; // x3
 
   this->fields._FigureController_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._FigureController_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -645,7 +639,7 @@ void __fastcall ClassBoardResourceContents__set_FigureController(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_ForwardIconAnimObjectPrefab(
+void ClassBoardResourceContents__set_ForwardIconAnimObjectPrefab(
         ClassBoardResourceContents_o *this,
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
@@ -653,7 +647,7 @@ void __fastcall ClassBoardResourceContents__set_ForwardIconAnimObjectPrefab(
   const MethodInfo *v3; // x3
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -661,7 +655,7 @@ void __fastcall ClassBoardResourceContents__set_ForwardIconAnimObjectPrefab(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_FullReleaseEffectComponent(
+void ClassBoardResourceContents__set_FullReleaseEffectComponent(
         ClassBoardResourceContents_o *this,
         ClassBoardFullReleaseEffectComponent_o *value,
         const MethodInfo *method)
@@ -669,7 +663,7 @@ void __fastcall ClassBoardResourceContents__set_FullReleaseEffectComponent(
   const MethodInfo *v3; // x3
 
   this->fields._FullReleaseEffectComponent_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._FullReleaseEffectComponent_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -677,7 +671,7 @@ void __fastcall ClassBoardResourceContents__set_FullReleaseEffectComponent(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_GrandBgModel(
+void ClassBoardResourceContents__set_GrandBgModel(
         ClassBoardResourceContents_o *this,
         ClassBoardBackground_o *value,
         const MethodInfo *method)
@@ -685,11 +679,11 @@ void __fastcall ClassBoardResourceContents__set_GrandBgModel(
   const MethodInfo *v3; // x3
 
   this->fields._GrandBgModel_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._GrandBgModel_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._GrandBgModel_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ClassBoardResourceContents__set_GrandBlank(
+void ClassBoardResourceContents__set_GrandBlank(
         ClassBoardResourceContents_o *this,
         ClassBoardBlank_o *value,
         const MethodInfo *method)
@@ -697,11 +691,11 @@ void __fastcall ClassBoardResourceContents__set_GrandBlank(
   const MethodInfo *v3; // x3
 
   this->fields._GrandBlank_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._GrandBlank_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._GrandBlank_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ClassBoardResourceContents__set_GrandFullReleaseEffectComponent(
+void ClassBoardResourceContents__set_GrandFullReleaseEffectComponent(
         ClassBoardResourceContents_o *this,
         ClassBoardFullReleaseEffectComponent_o *value,
         const MethodInfo *method)
@@ -709,7 +703,7 @@ void __fastcall ClassBoardResourceContents__set_GrandFullReleaseEffectComponent(
   const MethodInfo *v3; // x3
 
   this->fields._GrandFullReleaseEffectComponent_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._GrandFullReleaseEffectComponent_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -717,7 +711,7 @@ void __fastcall ClassBoardResourceContents__set_GrandFullReleaseEffectComponent(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_GrandGraphAtlasManagerUnit(
+void ClassBoardResourceContents__set_GrandGraphAtlasManagerUnit(
         ClassBoardResourceContents_o *this,
         AtlasManagerUnit_o *value,
         const MethodInfo *method)
@@ -725,7 +719,7 @@ void __fastcall ClassBoardResourceContents__set_GrandGraphAtlasManagerUnit(
   const MethodInfo *v3; // x3
 
   this->fields._GrandGraphAtlasManagerUnit_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._GrandGraphAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -733,7 +727,7 @@ void __fastcall ClassBoardResourceContents__set_GrandGraphAtlasManagerUnit(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_GrandLine(
+void ClassBoardResourceContents__set_GrandLine(
         ClassBoardResourceContents_o *this,
         ClassBoardLine_o *value,
         const MethodInfo *method)
@@ -741,11 +735,11 @@ void __fastcall ClassBoardResourceContents__set_GrandLine(
   const MethodInfo *v3; // x3
 
   this->fields._GrandLine_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._GrandLine_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._GrandLine_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ClassBoardResourceContents__set_GrandLock(
+void ClassBoardResourceContents__set_GrandLock(
         ClassBoardResourceContents_o *this,
         ClassBoardLock_o *value,
         const MethodInfo *method)
@@ -753,11 +747,11 @@ void __fastcall ClassBoardResourceContents__set_GrandLock(
   const MethodInfo *v3; // x3
 
   this->fields._GrandLock_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._GrandLock_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._GrandLock_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ClassBoardResourceContents__set_GrandSquare(
+void ClassBoardResourceContents__set_GrandSquare(
         ClassBoardResourceContents_o *this,
         ClassBoardSquare_o *value,
         const MethodInfo *method)
@@ -765,11 +759,11 @@ void __fastcall ClassBoardResourceContents__set_GrandSquare(
   const MethodInfo *v3; // x3
 
   this->fields._GrandSquare_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._GrandSquare_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._GrandSquare_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ClassBoardResourceContents__set_IconAtlasManagerUnit(
+void ClassBoardResourceContents__set_IconAtlasManagerUnit(
         ClassBoardResourceContents_o *this,
         AtlasManagerUnit_o *value,
         const MethodInfo *method)
@@ -777,7 +771,7 @@ void __fastcall ClassBoardResourceContents__set_IconAtlasManagerUnit(
   const MethodInfo *v3; // x3
 
   this->fields._IconAtlasManagerUnit_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -785,7 +779,7 @@ void __fastcall ClassBoardResourceContents__set_IconAtlasManagerUnit(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_Line(
+void ClassBoardResourceContents__set_Line(
         ClassBoardResourceContents_o *this,
         ClassBoardLine_o *value,
         const MethodInfo *method)
@@ -793,11 +787,11 @@ void __fastcall ClassBoardResourceContents__set_Line(
   const MethodInfo *v3; // x3
 
   this->fields._Line_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Line_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Line_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ClassBoardResourceContents__set_Lock(
+void ClassBoardResourceContents__set_Lock(
         ClassBoardResourceContents_o *this,
         ClassBoardLock_o *value,
         const MethodInfo *method)
@@ -805,11 +799,11 @@ void __fastcall ClassBoardResourceContents__set_Lock(
   const MethodInfo *v3; // x3
 
   this->fields._Lock_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Lock_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Lock_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ClassBoardResourceContents__set_LockOpenConfirmDialog(
+void ClassBoardResourceContents__set_LockOpenConfirmDialog(
         ClassBoardResourceContents_o *this,
         ClassBoardLockOpenConfirmDialog_o *value,
         const MethodInfo *method)
@@ -817,7 +811,7 @@ void __fastcall ClassBoardResourceContents__set_LockOpenConfirmDialog(
   const MethodInfo *v3; // x3
 
   this->fields._LockOpenConfirmDialog_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -825,7 +819,7 @@ void __fastcall ClassBoardResourceContents__set_LockOpenConfirmDialog(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_LockReleaseConditionDialog(
+void ClassBoardResourceContents__set_LockReleaseConditionDialog(
         ClassBoardResourceContents_o *this,
         ClassBoardLockReleaseConditionDialog_o *value,
         const MethodInfo *method)
@@ -833,7 +827,7 @@ void __fastcall ClassBoardResourceContents__set_LockReleaseConditionDialog(
   const MethodInfo *v3; // x3
 
   this->fields._LockReleaseConditionDialog_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -841,7 +835,7 @@ void __fastcall ClassBoardResourceContents__set_LockReleaseConditionDialog(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_Square(
+void ClassBoardResourceContents__set_Square(
         ClassBoardResourceContents_o *this,
         ClassBoardSquare_o *value,
         const MethodInfo *method)
@@ -849,11 +843,11 @@ void __fastcall ClassBoardResourceContents__set_Square(
   const MethodInfo *v3; // x3
 
   this->fields._Square_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ClassBoardResourceContents__set_SquareDetailDialog(
+void ClassBoardResourceContents__set_SquareDetailDialog(
         ClassBoardResourceContents_o *this,
         ClassBoardSquareDetailDialog_o *value,
         const MethodInfo *method)
@@ -861,7 +855,7 @@ void __fastcall ClassBoardResourceContents__set_SquareDetailDialog(
   const MethodInfo *v3; // x3
 
   this->fields._SquareDetailDialog_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -869,7 +863,7 @@ void __fastcall ClassBoardResourceContents__set_SquareDetailDialog(
 }
 
 
-void __fastcall ClassBoardResourceContents__set_SquareOpenConfirmDialog(
+void ClassBoardResourceContents__set_SquareOpenConfirmDialog(
         ClassBoardResourceContents_o *this,
         ClassBoardSquareOpenConfirmDialog_o *value,
         const MethodInfo *method)
@@ -877,7 +871,7 @@ void __fastcall ClassBoardResourceContents__set_SquareOpenConfirmDialog(
   const MethodInfo *v3; // x3
 
   this->fields._SquareOpenConfirmDialog_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,

@@ -1,12 +1,10 @@
-void __fastcall SwitchActiveBaseConditionComponent___ctor(
-        SwitchActiveBaseConditionComponent_o *this,
-        const MethodInfo *method)
+void SwitchActiveBaseConditionComponent___ctor(SwitchActiveBaseConditionComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-bool __fastcall SwitchActiveBaseConditionComponent__IsSatisfyCond(
+bool SwitchActiveBaseConditionComponent__IsSatisfyCond(
         SwitchActiveBaseConditionComponent_o *this,
         BattleData_o *data,
         const MethodInfo *method)
@@ -15,7 +13,7 @@ bool __fastcall SwitchActiveBaseConditionComponent__IsSatisfyCond(
 }
 
 
-bool __fastcall SwitchActiveBaseConditionComponent__IsTimingBeforeTreasureDevice(
+bool SwitchActiveBaseConditionComponent__IsTimingBeforeTreasureDevice(
         SwitchActiveBaseConditionComponent_o *this,
         const MethodInfo *method)
 {
@@ -23,7 +21,7 @@ bool __fastcall SwitchActiveBaseConditionComponent__IsTimingBeforeTreasureDevice
 }
 
 
-void __fastcall SwitchActiveBaseConditionComponent__SwitchActive(
+void SwitchActiveBaseConditionComponent__SwitchActive(
         SwitchActiveBaseConditionComponent_o *this,
         BattleData_o *data,
         const MethodInfo *method)
@@ -32,22 +30,22 @@ void __fastcall SwitchActiveBaseConditionComponent__SwitchActive(
   __int64 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B1FB48 & 1) == 0 )
+  if ( (byte_4C2AA2F & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, data);
-    byte_4B1FB48 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2AA2F = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)data, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)data, 0, 0) )
   {
-    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-    v6 = ((__int64 (__fastcall *)(SwitchActiveBaseConditionComponent_o *, BattleData_o *, void *))this->klass->vtable._4_IsSatisfyCond.method)(
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    v6 = ((__int64 (__fastcall *)(SwitchActiveBaseConditionComponent_o *, BattleData_o *, const MethodInfo *))this->klass->vtable._4_IsSatisfyCond.methodPtr)(
            this,
            data,
-           this->klass[1]._1.image);
+           this->klass->vtable._4_IsSatisfyCond.method);
     if ( !gameObject )
-      sub_1BCB254(v6, v7);
-    UnityEngine_GameObject__SetActive(gameObject, v6 & 1, 0LL);
+      sub_1C2D6EC(v6, v7);
+    UnityEngine_GameObject__SetActive(gameObject, v6 & 1, 0);
   }
 }

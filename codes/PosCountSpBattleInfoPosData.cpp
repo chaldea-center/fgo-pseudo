@@ -1,12 +1,12 @@
-void __fastcall PosCountSpBattleInfoPosData___ctor(PosCountSpBattleInfoPosData_o *this, const MethodInfo *method)
+void PosCountSpBattleInfoPosData___ctor(PosCountSpBattleInfoPosData_o *this, const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.existsFrontRowSkipPos.fields.x = xmmword_BE22C0;
-  *(_QWORD *)&this->fields.onlyBackRowSkipPos.fields.y = 1127153664LL;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  *(_OWORD *)&this->fields.existsFrontRowSkipPos.fields.x = xmmword_C09950;
+  *(_QWORD *)&this->fields.onlyBackRowSkipPos.fields.y = 1127153664;
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-UnityEngine_Vector3_o __fastcall PosCountSpBattleInfoPosData__get_SkillSkipTrLocalPos(
+UnityEngine_Vector3_o PosCountSpBattleInfoPosData__get_SkillSkipTrLocalPos(
         PosCountSpBattleInfoPosData_o *this,
         const MethodInfo *method)
 {
@@ -22,20 +22,21 @@ UnityEngine_Vector3_o __fastcall PosCountSpBattleInfoPosData__get_SkillSkipTrLoc
 
   Perf_k__BackingField = this->fields._Perf_k__BackingField;
   if ( !Perf_k__BackingField
-    || (Perf_k__BackingField = (BattlePerformance_o *)BattlePerformance__get_EnemyPerf(Perf_k__BackingField, 0LL)) == 0LL )
+    || (Perf_k__BackingField = (BattlePerformance_o *)BattlePerformance__get_EnemyPerf(Perf_k__BackingField, 0)) == 0 )
   {
-    sub_1BCB254(Perf_k__BackingField, method);
+    sub_1C2D6EC(Perf_k__BackingField, method);
   }
-  exists = BattlePerformanceEnemy__ExistsFrontRow((BattlePerformanceEnemy_o *)Perf_k__BackingField, 0LL);
-  v5 = 36LL;
-  v6 = 40LL;
+  exists = BattlePerformanceEnemy__ExistsFrontRow((BattlePerformanceEnemy_o *)Perf_k__BackingField, 0);
+  v5 = 36;
+  v6 = 40;
   if ( exists )
-    v5 = 24LL;
-  v7 = 44LL;
+    v5 = 24;
+  v7 = 44;
   if ( exists )
-    v6 = 28LL;
-  if ( exists )
-    v7 = 32LL;
+  {
+    v6 = 28;
+    v7 = 32;
+  }
   v8 = *(float *)((char *)&this->klass + v7);
   v9 = *(float *)((char *)&this->klass + v6);
   v10 = *(float *)((char *)&this->klass + v5);

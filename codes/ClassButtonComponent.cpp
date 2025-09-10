@@ -1,57 +1,57 @@
-void __fastcall ClassButtonComponent___ctor(ClassButtonComponent_o *this, const MethodInfo *method)
+void ClassButtonComponent___ctor(ClassButtonComponent_o *this, const MethodInfo *method)
 {
-  UICommonButton___ctor((UICommonButton_o *)this, 0LL);
+  UICommonButton___ctor((UICommonButton_o *)this, 0);
 }
 
 
-void __fastcall ClassButtonComponent__Awake(ClassButtonComponent_o *this, const MethodInfo *method)
+void ClassButtonComponent__Awake(ClassButtonComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Color_o v3; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_4B1B8ED & 1) == 0 )
+  if ( (byte_4C2668F & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_409/*"#606060"*/, method);
-    byte_4B1B8ED = 1;
+    sub_1C2D490(&StringLiteral_411/*"#606060"*/);
+    byte_4C2668F = 1;
   }
   v3 = (UnityEngine_Color_o)0LL;
-  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_409/*"#606060"*/, &v3, 0LL);
+  UnityEngine_ColorUtility__TryParseHtmlString((System_String_o *)StringLiteral_411/*"#606060"*/, &v3, 0);
   this->fields.specifyDisabledColor = v3;
 }
 
 
-void __fastcall ClassButtonComponent__OnEnable(ClassButtonComponent_o *this, const MethodInfo *method)
+void ClassButtonComponent__OnEnable(ClassButtonComponent_o *this, const MethodInfo *method)
 {
   if ( this->fields.isUse )
-    UICommonButton__OnEnable((UICommonButton_o *)this, 0LL);
+    UICommonButton__OnEnable((UICommonButton_o *)this, 0);
   else
-    UICommonButton__SetButtonEnable((UICommonButton_o *)this, 0, 1, 0LL);
+    UICommonButton__SetButtonEnable((UICommonButton_o *)this, 0, 1, 0);
 }
 
 
-void __fastcall ClassButtonComponent__OnSelectButton(ClassButtonComponent_o *this, const MethodInfo *method)
+void ClassButtonComponent__OnSelectButton(ClassButtonComponent_o *this, const MethodInfo *method)
 {
   struct ClassButtonComponent_CallbackFunc_o *callbackFunc; // x8
 
   callbackFunc = this->fields.callbackFunc;
   if ( callbackFunc )
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))callbackFunc->fields.m_target)(
-      callbackFunc->fields.original_method_info,
+    ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))callbackFunc->fields.invoke_impl)(
+      callbackFunc->fields.method_code,
       (unsigned int)this->fields.classPos,
-      *(_QWORD *)&callbackFunc->fields.extra_arg);
+      callbackFunc->fields.method);
 }
 
 
-void __fastcall ClassButtonComponent__SetUse(ClassButtonComponent_o *this, bool use, const MethodInfo *method)
+void ClassButtonComponent__SetUse(ClassButtonComponent_o *this, bool use, const MethodInfo *method)
 {
   bool v3; // w1
 
   v3 = use;
   this->fields.isUse = v3;
-  UICommonButton__SetButtonEnable((UICommonButton_o *)this, v3, 1, 0LL);
+  UICommonButton__SetButtonEnable((UICommonButton_o *)this, v3, 1, 0);
 }
 
 
-void __fastcall ClassButtonComponent__add_callbackFunc(
+void ClassButtonComponent__add_callbackFunc(
         ClassButtonComponent_o *this,
         ClassButtonComponent_CallbackFunc_o *value,
         const MethodInfo *method)
@@ -66,40 +66,40 @@ void __fastcall ClassButtonComponent__add_callbackFunc(
   ClassButtonComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B1B8EB & 1) == 0 )
+  if ( (byte_4C2668D & 1) == 0 )
   {
-    sub_1BCAFF8(&ClassButtonComponent_CallbackFunc_TypeInfo, value);
-    byte_4B1B8EB = 1;
+    sub_1C2D490(&ClassButtonComponent_CallbackFunc_TypeInfo);
+    byte_4C2668D = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
   v6 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0LL);
+    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0);
     if ( v8 )
     {
       if ( (ClassButtonComponent_CallbackFunc_c *)v8->klass != ClassButtonComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C05088(p_callbackFunc, v8, v6);
+    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BCB514(v8);
+  sub_1C2D9AC(v8);
   ClassButtonComponent__remove_callbackFunc(v11, v12, v13);
 }
 
 
-int32_t __fastcall ClassButtonComponent__get_ClassPos(ClassButtonComponent_o *this, const MethodInfo *method)
+int32_t ClassButtonComponent__get_ClassPos(ClassButtonComponent_o *this, const MethodInfo *method)
 {
   return this->fields.classPos;
 }
 
 
-void __fastcall ClassButtonComponent__remove_callbackFunc(
+void ClassButtonComponent__remove_callbackFunc(
         ClassButtonComponent_o *this,
         ClassButtonComponent_CallbackFunc_o *value,
         const MethodInfo *method)
@@ -113,34 +113,34 @@ void __fastcall ClassButtonComponent__remove_callbackFunc(
   ClassButtonComponent_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B1B8EC & 1) == 0 )
+  if ( (byte_4C2668E & 1) == 0 )
   {
-    sub_1BCAFF8(&ClassButtonComponent_CallbackFunc_TypeInfo, value);
-    byte_4B1B8EC = 1;
+    sub_1C2D490(&ClassButtonComponent_CallbackFunc_TypeInfo);
+    byte_4C2668E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
   v6 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0LL);
+    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0);
     if ( v8 )
     {
       if ( (ClassButtonComponent_CallbackFunc_c *)v8->klass != ClassButtonComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C05088(p_callbackFunc, v8, v6);
+    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BCB514(v8);
+  sub_1C2D9AC(v8);
   ClassButtonComponent__Awake(v11, v12);
 }
 
 
-void __fastcall ClassButtonComponent__setClassPos(
+void ClassButtonComponent__setClassPos(
         ClassButtonComponent_o *this,
         int32_t classPos,
         ClassButtonComponent_CallbackFunc_o *callback,
@@ -151,93 +151,89 @@ void __fastcall ClassButtonComponent__setClassPos(
   this->fields.callbackFunc = callback;
   p_callbackFunc = &this->fields.callbackFunc;
   *((_DWORD *)p_callbackFunc - 2) = classPos;
-  sub_1BCAF9C((CGThumbnailListItem_o *)p_callbackFunc, (int32_t)callback, (int32_t)callback, method);
+  sub_1C2D434((CGThumbnailListItem_o *)p_callbackFunc, (int32_t)callback, (int32_t)callback, method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall ClassButtonComponent_CallbackFunc___ctor(
+void ClassButtonComponent_CallbackFunc___ctor(
         ClassButtonComponent_CallbackFunc_o *this,
         Il2CppObject *object,
         intptr_t method,
         const MethodInfo *a4)
 {
-  __int64 v4; // x8
-  __int64 v6; // x21
+  intptr_t v4; // x8
   int v8; // w22
-  struct System_Reflection_MethodInfo_o *v9; // x9
+  Il2CppObject *m_target; // x9
   __int64 v10; // x0
 
-  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
-  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v6 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v4;
-  *(_QWORD *)&this->fields.method = object;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(v6 + 82);
-  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BCB0B8(v6) & 1) == 0 )
+  v4 = *(_QWORD *)(method + 8);
+  this->fields.method = method;
+  this->fields.method_ptr = v4;
+  this->fields.m_target = object;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  v8 = *(unsigned __int8 *)(method + 82);
+  this->fields.method_code = (intptr_t)this;
+  if ( (sub_1C2D550(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1BCB270(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BCB120(v10, 0LL);
+      v10 = sub_1C2D708(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C2D5B8(v10, 0);
     }
     goto LABEL_5;
   }
   if ( v8 != 1 )
   {
 LABEL_5:
-    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
-    this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-    this->fields.original_method_info = v9;
+    m_target = this->fields.m_target;
+    this->fields.invoke_impl = this->fields.method_ptr;
+    this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A154D0;
+  this->fields.invoke_impl = (intptr_t)sub_1A71DF8;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A15488;
+  this->fields.extra_arg = (intptr_t)sub_1A71DB0;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_IAsyncResult_o *__fastcall ClassButtonComponent_CallbackFunc__BeginInvoke(
+System_IAsyncResult_o *ClassButtonComponent_CallbackFunc__BeginInvoke(
         ClassButtonComponent_CallbackFunc_o *this,
         int32_t classPos,
         System_AsyncCallback_o *callback,
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v9[2]; // [xsp+8h] [xbp-48h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = classPos;
-  if ( (byte_4B1B8EE & 1) == 0 )
+  if ( (byte_4C26690 & 1) == 0 )
   {
-    sub_1BCAFF8(&int_TypeInfo, *(_QWORD *)&classPos);
-    byte_4B1B8EE = 1;
+    sub_1C2D490(&int_TypeInfo);
+    byte_4C26690 = 1;
   }
-  v9[1] = 0LL;
+  v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1BCAFAC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C2D444(this, v9, callback, object);
 }
 
 
-void __fastcall ClassButtonComponent_CallbackFunc__EndInvoke(
+void ClassButtonComponent_CallbackFunc__EndInvoke(
         ClassButtonComponent_CallbackFunc_o *this,
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BCAFB0(result, 0LL, method);
+  sub_1C2D448(result, 0, method);
 }
 
 
-void __fastcall ClassButtonComponent_CallbackFunc__Invoke(
+void ClassButtonComponent_CallbackFunc__Invoke(
         ClassButtonComponent_CallbackFunc_o *this,
         int32_t classPos,
         const MethodInfo *method)
 {
-  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, _QWORD))this->fields.m_target)(
-    this->fields.original_method_info,
+  ((void (__fastcall *)(intptr_t, int32_t, intptr_t))this->fields.invoke_impl)(
+    this->fields.method_code,
     classPos,
-    *(_QWORD *)&this->fields.extra_arg);
+    this->fields.method);
 }

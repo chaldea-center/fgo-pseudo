@@ -1,10 +1,10 @@
-void __fastcall PartTabPrefab___ctor(PartTabPrefab_o *this, const MethodInfo *method)
+void PartTabPrefab___ctor(PartTabPrefab_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall PartTabPrefab__Awake(PartTabPrefab_o *this, const MethodInfo *method)
+void PartTabPrefab__Awake(PartTabPrefab_o *this, const MethodInfo *method)
 {
   ;
 }

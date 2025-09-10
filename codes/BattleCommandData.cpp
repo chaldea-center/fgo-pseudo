@@ -1,47 +1,44 @@
-void __fastcall BattleCommandData___cctor(const MethodInfo *method)
+void BattleCommandData___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4B1F310 & 1) == 0 )
+  if ( (byte_4C2A19C & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleCommandData_TypeInfo, v1);
-    byte_4B1F310 = 1;
+    sub_1C2D490(&BattleCommandData_TypeInfo);
+    byte_4C2A19C = 1;
   }
   BattleCommandData_TypeInfo->static_fields->PASS_STAR_DENOMINATOR = 100;
 }
 
 
-void __fastcall BattleCommandData___ctor(BattleCommandData_o *this, const MethodInfo *method)
+void BattleCommandData___ctor(BattleCommandData_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_Dictionary_int__object__o *v4; // x20
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  System_Collections_Generic_Dictionary_int__object__o *v3; // x20
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4B1F300 & 1) == 0 )
+  if ( (byte_4C2A18B & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus___ctor__, method);
-    sub_1BCAFF8(&System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__TypeInfo, v3);
-    byte_4B1F300 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus___ctor__);
+    sub_1C2D490(&System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__TypeInfo);
+    byte_4C2A18B = 1;
   }
   this->fields._loadsvtLimit = -1;
-  this->fields.userCommandCodeId = -1LL;
+  this->fields.userCommandCodeId = -1;
   this->fields.commandCodeId = -1;
   this->fields.servantCardIdsIndex = -1;
   this->fields.commandAssistId = -1;
-  *(_QWORD *)&this->fields.selectedType = -1LL;
-  v4 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BCB244(System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__TypeInfo);
+  *(_QWORD *)&this->fields.selectedType = -1;
+  this->fields.overwriteRateDataIndex = -1;
+  v3 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C2D6DC(System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
-    v4,
-    (const MethodInfo_3320910 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus___ctor__);
-  this->fields.criticalStoreDict = (struct System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__o *)v4;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.criticalStoreDict, (int32_t)v4, v5, v6);
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+    v3,
+    (const MethodInfo_33E08A8 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus___ctor__);
+  this->fields.criticalStoreDict = (struct System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__o *)v3;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.criticalStoreDict, (int32_t)v3, v4, v5);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BattleCommandData___ctor_45632924(
+void BattleCommandData___ctor_46333400(
         BattleCommandData_o *this,
         int32_t type,
         int32_t svtId,
@@ -50,34 +47,33 @@ void __fastcall BattleCommandData___ctor_45632924(
         int32_t cardIndex,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
-  __int64 v14; // x1
-  System_Collections_Generic_Dictionary_int__object__o *v15; // x25
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  BattleDataDefine_c *v18; // x0
+  System_Collections_Generic_Dictionary_int__object__o *v13; // x25
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  BattleDataDefine_c *v16; // x0
   int32_t CRITICAL_HIT_RANDOM_MAX; // w8
 
-  if ( (byte_4B1F301 & 1) == 0 )
+  if ( (byte_4C2A18C & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleDataDefine_TypeInfo, *(_QWORD *)&type);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus___ctor__, v13);
-    sub_1BCAFF8(&System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__TypeInfo, v14);
-    byte_4B1F301 = 1;
+    sub_1C2D490(&BattleDataDefine_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus___ctor__);
+    sub_1C2D490(&System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__TypeInfo);
+    byte_4C2A18C = 1;
   }
   this->fields._loadsvtLimit = -1;
-  this->fields.userCommandCodeId = -1LL;
+  this->fields.userCommandCodeId = -1;
   this->fields.commandCodeId = -1;
   this->fields.servantCardIdsIndex = -1;
   this->fields.commandAssistId = -1;
-  *(_QWORD *)&this->fields.selectedType = -1LL;
-  v15 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BCB244(System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__TypeInfo);
+  *(_QWORD *)&this->fields.selectedType = -1;
+  this->fields.overwriteRateDataIndex = -1;
+  v13 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C2D6DC(System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
-    v15,
-    (const MethodInfo_3320910 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus___ctor__);
-  this->fields.criticalStoreDict = (struct System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__o *)v15;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.criticalStoreDict, (int32_t)v15, v16, v17);
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+    v13,
+    (const MethodInfo_33E08A8 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus___ctor__);
+  this->fields.criticalStoreDict = (struct System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__o *)v13;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.criticalStoreDict, (int32_t)v13, v14, v15);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._type = type;
   this->fields.svtId = svtId;
   this->fields.imageSvtId = imageSvtId;
@@ -85,56 +81,56 @@ void __fastcall BattleCommandData___ctor_45632924(
   this->fields.attri = 0;
   this->fields.starcount = 0;
   this->fields.critical = 0;
-  this->fields.userCommandCodeId = -1LL;
-  *(_QWORD *)&this->fields.commandAssistId = 0LL;
-  *(_OWORD *)&this->fields._loadsvtLimit = xmmword_BE1F00;
+  this->fields.userCommandCodeId = -1;
+  *(_QWORD *)&this->fields.commandAssistId = 0;
+  *(_OWORD *)&this->fields._loadsvtLimit = xmmword_C09560;
   this->fields.commandCardParam = 0;
-  v18 = BattleDataDefine_TypeInfo;
+  v16 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
-    v18 = BattleDataDefine_TypeInfo;
+    v16 = BattleDataDefine_TypeInfo;
   }
-  CRITICAL_HIT_RANDOM_MAX = v18->static_fields->CRITICAL_HIT_RANDOM_MAX;
+  CRITICAL_HIT_RANDOM_MAX = v16->static_fields->CRITICAL_HIT_RANDOM_MAX;
   this->fields.servantCardIdsIndex = cardIndex;
   this->fields.criticalHitValue = CRITICAL_HIT_RANDOM_MAX;
 }
 
 
-void __fastcall BattleCommandData___ctor_45633244(
+void BattleCommandData___ctor_46333724(
         BattleCommandData_o *this,
         BattleCommandData_o *command,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  System_Collections_Generic_Dictionary_int__object__o *v6; // x21
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x1
+  System_Collections_Generic_Dictionary_int__object__o *v5; // x21
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  const MethodInfo *v8; // x1
   int32_t loadsvtLimit; // w8
 
-  if ( (byte_4B1F302 & 1) == 0 )
+  if ( (byte_4C2A18D & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus___ctor__, command);
-    sub_1BCAFF8(&System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__TypeInfo, v5);
-    byte_4B1F302 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus___ctor__);
+    sub_1C2D490(&System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__TypeInfo);
+    byte_4C2A18D = 1;
   }
   this->fields._loadsvtLimit = -1;
-  this->fields.userCommandCodeId = -1LL;
+  this->fields.userCommandCodeId = -1;
   this->fields.commandCodeId = -1;
   this->fields.servantCardIdsIndex = -1;
   this->fields.commandAssistId = -1;
-  *(_QWORD *)&this->fields.selectedType = -1LL;
-  v6 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1BCB244(System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__TypeInfo);
+  *(_QWORD *)&this->fields.selectedType = -1;
+  this->fields.overwriteRateDataIndex = -1;
+  v5 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C2D6DC(System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
-    v6,
-    (const MethodInfo_3320910 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus___ctor__);
-  this->fields.criticalStoreDict = (struct System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__o *)v6;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.criticalStoreDict, (int32_t)v6, v7, v8);
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+    v5,
+    (const MethodInfo_33E08A8 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus___ctor__);
+  this->fields.criticalStoreDict = (struct System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__o *)v5;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.criticalStoreDict, (int32_t)v5, v6, v7);
+  System_Object___ctor((Il2CppObject *)this, 0);
   if ( command )
   {
-    this->fields._type = BattleCommandData__get_type(command, v9);
+    this->fields._type = BattleCommandData__get_type(command, v8);
     this->fields.imageSvtId = command->fields.imageSvtId;
     *(_QWORD *)&this->fields.svtId = *(_QWORD *)&command->fields.svtId;
     loadsvtLimit = command->fields._loadsvtLimit;
@@ -154,67 +150,136 @@ void __fastcall BattleCommandData___ctor_45633244(
 }
 
 
-void __fastcall BattleCommandData__ClearCommandCode(BattleCommandData_o *this, const MethodInfo *method)
+void BattleCommandData__ClearCommandCode(BattleCommandData_o *this, const MethodInfo *method)
 {
-  this->fields.userCommandCodeId = -1LL;
+  this->fields.userCommandCodeId = -1;
   this->fields.commandCodeId = -1;
 }
 
 
-float __fastcall BattleCommandData__GetAttackNpRate(BattleCommandData_o *this, const MethodInfo *method)
+BattleBuffData_ShowBuffData_array *BattleCommandData__GetAtkShowBuffData(
+        BattleCommandData_o *this,
+        const MethodInfo *method)
+{
+  System_Collections_Generic_List_object__o *v3; // x19
+  const MethodInfo *v4; // x1
+  ServantCardAddEntity_o *ServantCardAddEntity; // x0
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  struct System_Object_array *items; // x8
+  _QWORD *v10; // x9
+  __int64 size; // x10
+  ServantCardAddEntity_o *v12; // x1
+  Il2CppClass **v13; // x0
+
+  if ( (byte_4C2A19B & 1) == 0 )
+  {
+    sub_1C2D490(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo);
+    byte_4C2A19B = 1;
+  }
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_BattleBuffData_ShowBuffData__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v3,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData___ctor__);
+  ServantCardAddEntity = BattleCommandData__get_ServantCardAddEntity(this, v4);
+  if ( !ServantCardAddEntity
+    || (ServantCardAddEntity = (ServantCardAddEntity_o *)ServantCardAddEntity__GetOverwritesShowBuffData(
+                                                           ServantCardAddEntity,
+                                                           this->fields.overwriteRateDataIndex,
+                                                           0)) == 0 )
+  {
+    if ( v3 )
+      return (BattleBuffData_ShowBuffData_array *)System_Collections_Generic_List_object___ToArray(
+                                                    v3,
+                                                    (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__ToArray__);
+LABEL_10:
+    sub_1C2D6EC(ServantCardAddEntity, v6);
+  }
+  if ( !v3 )
+    goto LABEL_10;
+  items = v3->fields._items;
+  v10 = Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__Add__;
+  ++v3->fields._version;
+  if ( !items )
+    goto LABEL_10;
+  size = v3->fields._size;
+  v12 = ServantCardAddEntity;
+  if ( (unsigned int)size >= LODWORD(items->max_length) )
+  {
+    System_Collections_Generic_List_object___AddWithResize(
+      v3,
+      (Il2CppObject *)ServantCardAddEntity,
+      *(const MethodInfo_3789B84 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v13 = &items->obj.klass + size;
+    v3->fields._size = size + 1;
+    v13[4] = (Il2CppClass *)v12;
+    sub_1C2D434((CGThumbnailListItem_o *)(v13 + 4), (int32_t)v12, v7, v8);
+  }
+  return (BattleBuffData_ShowBuffData_array *)System_Collections_Generic_List_object___ToArray(
+                                                v3,
+                                                (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_BattleBuffData_ShowBuffData__ToArray__);
+}
+
+
+float BattleCommandData__GetAttackNpRate(BattleCommandData_o *this, const MethodInfo *method)
 {
   ServantCardAddEntity_o *ServantCardAddEntity; // x0
 
   ServantCardAddEntity = BattleCommandData__get_ServantCardAddEntity(this, method);
   if ( ServantCardAddEntity )
-    return ServantCardAddEntity__GetAttackNpRate(ServantCardAddEntity, 0LL);
+    return ServantCardAddEntity__GetAttackNpRate(ServantCardAddEntity, this->fields.overwriteRateDataIndex, 0);
   else
     return 1.0;
 }
 
 
-int32_t __fastcall BattleCommandData__GetChangeTypeByTransform(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__GetChangeTypeByTransform(BattleCommandData_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x8
+  __int64 v3; // x8
   int32_t svtId; // w20
-  int32_t v7; // w21
+  int32_t v5; // w21
   int32_t LimitImageIndex; // w20
   Il2CppObject *Master_object; // x0
-  __int64 v10; // x1
+  __int64 v8; // x1
 
-  if ( (byte_4B1F308 & 1) == 0 )
+  if ( (byte_4C2A193 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantTransformMaster___, method);
-    sub_1BCAFF8(&DataManager_TypeInfo, v3);
-    sub_1BCAFF8(&ServantAssetLoadManager_TypeInfo, v4);
-    byte_4B1F308 = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_ServantTransformMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&ServantAssetLoadManager_TypeInfo);
+    byte_4C2A193 = 1;
   }
   if ( this->fields._loadsvtLimit == -1 )
-    v5 = 24LL;
+    v3 = 24;
   else
-    v5 = 36LL;
+    v3 = 36;
   svtId = this->fields.svtId;
-  v7 = *(_DWORD *)((char *)&this->klass + v5);
+  v5 = *(_DWORD *)((char *)&this->klass + v3);
   if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
-  LimitImageIndex = ServantAssetLoadManager__GetLimitImageIndex(svtId, v7, 1, 0LL);
+  LimitImageIndex = ServantAssetLoadManager__GetLimitImageIndex(svtId, v5, 1, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantTransformMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ServantTransformMaster___);
   if ( !Master_object )
-    sub_1BCB254(0LL, v10);
+    sub_1C2D6EC(0, v8);
   return ServantTransformMaster__GetCommandCardTypeChange(
            (ServantTransformMaster_o *)Master_object,
            this->fields.svtId,
            LimitImageIndex,
            this->fields.servantCardIdsIndex,
-           0LL);
+           0);
 }
 
 
-BattleBuffData_BuffData_o *__fastcall BattleCommandData__GetCommandCardTypeChangeBuff(
+BattleBuffData_BuffData_o *BattleCommandData__GetCommandCardTypeChangeBuff(
         BattleCommandData_o *this,
         const MethodInfo *method)
 {
@@ -222,12 +287,12 @@ BattleBuffData_BuffData_o *__fastcall BattleCommandData__GetCommandCardTypeChang
 
   result = (BattleBuffData_BuffData_o *)this->fields.battleBuffData;
   if ( result )
-    return BattleBuffData__GetCommandCardTypeChangeBuff((BattleBuffData_o *)result, 0LL);
+    return BattleBuffData__GetCommandCardTypeChangeBuff((BattleBuffData_o *)result, 0);
   return result;
 }
 
 
-BattleBuffData_BuffData_array *__fastcall BattleCommandData__GetCommandCodeBuffArray(
+BattleBuffData_BuffData_array *BattleCommandData__GetCommandCodeBuffArray(
         BattleCommandData_o *this,
         const MethodInfo *method)
 {
@@ -235,82 +300,82 @@ BattleBuffData_BuffData_array *__fastcall BattleCommandData__GetCommandCodeBuffA
 
   result = (BattleBuffData_BuffData_array *)this->fields.battleBuffData;
   if ( result )
-    return BattleBuffData__GetAllConnectedCommandCardBuff((BattleBuffData_o *)result, 0LL);
+    return BattleBuffData__GetAllConnectedCommandCardBuff((BattleBuffData_o *)result, 0);
   return result;
 }
 
 
-float __fastcall BattleCommandData__GetDefenseNpRate(BattleCommandData_o *this, const MethodInfo *method)
+float BattleCommandData__GetDefenseNpRate(BattleCommandData_o *this, const MethodInfo *method)
 {
   ServantCardAddEntity_o *ServantCardAddEntity; // x0
 
   ServantCardAddEntity = BattleCommandData__get_ServantCardAddEntity(this, method);
   if ( ServantCardAddEntity )
-    return ServantCardAddEntity__GetDefenseNpRate(ServantCardAddEntity, 0LL);
+    return ServantCardAddEntity__GetDefenseNpRate(ServantCardAddEntity, this->fields.overwriteRateDataIndex, 0);
   else
     return 1.0;
 }
 
 
-float __fastcall BattleCommandData__GetDropStarRate(BattleCommandData_o *this, const MethodInfo *method)
+float BattleCommandData__GetDropStarRate(BattleCommandData_o *this, const MethodInfo *method)
 {
   ServantCardAddEntity_o *ServantCardAddEntity; // x0
 
   ServantCardAddEntity = BattleCommandData__get_ServantCardAddEntity(this, method);
   if ( ServantCardAddEntity )
-    return ServantCardAddEntity__GetDropStarRate(ServantCardAddEntity, 0LL);
+    return ServantCardAddEntity__GetDropStarRate(ServantCardAddEntity, this->fields.overwriteRateDataIndex, 0);
   else
     return 1.0;
 }
 
 
-int32_t __fastcall BattleCommandData__GetImageServantId(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__GetImageServantId(BattleCommandData_o *this, const MethodInfo *method)
 {
   __int64 v2; // x8
 
-  v2 = 92LL;
+  v2 = 92;
   if ( this->fields.imageSvtId <= 0 )
-    v2 = 20LL;
+    v2 = 20;
   return *(_DWORD *)((char *)&this->klass + v2);
 }
 
 
-float __fastcall BattleCommandData__GetNormalAttackDamageRate(BattleCommandData_o *this, const MethodInfo *method)
+float BattleCommandData__GetNormalAttackDamageRate(BattleCommandData_o *this, const MethodInfo *method)
 {
   ServantCardAddEntity_o *ServantCardAddEntity; // x0
 
   ServantCardAddEntity = BattleCommandData__get_ServantCardAddEntity(this, method);
   if ( ServantCardAddEntity )
-    return ServantCardAddEntity__GetDamageRate(ServantCardAddEntity, 0LL);
+    return ServantCardAddEntity__GetDamageRate(ServantCardAddEntity, this->fields.overwriteRateDataIndex, 0);
   else
     return 1.0;
 }
 
 
-int32_t __fastcall BattleCommandData__GetOriginalType(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__GetOriginalType(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields._type;
 }
 
 
-int32_t __fastcall BattleCommandData__GetOverwriteSvtCardType(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__GetOverwriteSvtCardType(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.overwriteSvtCardType;
 }
 
 
-bool __fastcall BattleCommandData__IsAllAttack(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__IsAllAttack(BattleCommandData_o *this, const MethodInfo *method)
 {
   ServantCardEntity_o *ServantCardEntity; // x0
 
   ServantCardEntity = BattleCommandData__get_ServantCardEntity(this, method);
   if ( ServantCardEntity )
-    LOBYTE(ServantCardEntity) = ServantCardEntity__IsAttackType(ServantCardEntity, 2, 0LL);
+    LOBYTE(ServantCardEntity) = ServantCardEntity__IsAttackType(ServantCardEntity, 2, 0);
   return (char)ServantCardEntity;
 }
 
 
-bool __fastcall BattleCommandData__IsCommandCardTypeChanged(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__IsCommandCardTypeChanged(BattleCommandData_o *this, const MethodInfo *method)
 {
   int32_t type; // w19
 
@@ -321,38 +386,38 @@ bool __fastcall BattleCommandData__IsCommandCardTypeChanged(BattleCommandData_o 
 }
 
 
-bool __fastcall BattleCommandData__IsEnableCommandAssist(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__IsEnableCommandAssist(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.commandAssistId > 0;
 }
 
 
-bool __fastcall BattleCommandData__IsEnableCommandCode(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__IsEnableCommandCode(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.userCommandCodeId > 0;
 }
 
 
-bool __fastcall BattleCommandData__IsForceAttackFunctionTargetAll(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__IsForceAttackFunctionTargetAll(BattleCommandData_o *this, const MethodInfo *method)
 {
   ServantCardAddEntity_o *ServantCardAddEntity; // x0
 
   ServantCardAddEntity = BattleCommandData__get_ServantCardAddEntity(this, method);
   if ( ServantCardAddEntity )
-    LOBYTE(ServantCardAddEntity) = ServantCardAddEntity__IsForceAttackFunctionTargetAll(ServantCardAddEntity, 0LL);
+    LOBYTE(ServantCardAddEntity) = ServantCardAddEntity__IsForceAttackFunctionTargetAll(ServantCardAddEntity, 0);
   return (char)ServantCardAddEntity;
 }
 
 
-bool __fastcall BattleCommandData__LotteryPlayerSideCritical(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__LotteryPlayerSideCritical(BattleCommandData_o *this, const MethodInfo *method)
 {
   BattleDataDefine_c *v3; // x0
   bool result; // w0
 
-  if ( (byte_4B1F309 & 1) == 0 )
+  if ( (byte_4C2A194 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleDataDefine_TypeInfo, method);
-    byte_4B1F309 = 1;
+    sub_1C2D490(&BattleDataDefine_TypeInfo);
+    byte_4C2A194 = 1;
   }
   v3 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
@@ -360,66 +425,64 @@ bool __fastcall BattleCommandData__LotteryPlayerSideCritical(BattleCommandData_o
     j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
     v3 = BattleDataDefine_TypeInfo;
   }
-  result = this->fields.starcount > BattleRandom__getNext(v3->static_fields->CRITICAL_HIT_RANDOM_MAX, 0LL);
+  result = this->fields.starcount > BattleRandom__getNext(v3->static_fields->CRITICAL_HIT_RANDOM_MAX, 0);
   this->fields.critical = result;
   return result;
 }
 
 
-void __fastcall BattleCommandData__ResetCriticalStoreDict(BattleCommandData_o *this, const MethodInfo *method)
+void BattleCommandData__ResetCriticalStoreDict(BattleCommandData_o *this, const MethodInfo *method)
 {
   struct System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__o *criticalStoreDict; // x0
 
-  if ( (byte_4B1F30D & 1) == 0 )
+  if ( (byte_4C2A198 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__Clear__, method);
-    byte_4B1F30D = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__Clear__);
+    byte_4C2A198 = 1;
   }
   criticalStoreDict = this->fields.criticalStoreDict;
   if ( !criticalStoreDict )
-    sub_1BCB254(0LL, method);
+    sub_1C2D6EC(0, method);
   System_Collections_Generic_Dictionary_int__object___Clear(
     (System_Collections_Generic_Dictionary_int__object__o *)criticalStoreDict,
-    (const MethodInfo_332146C *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__Clear__);
+    (const MethodInfo_33E1404 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__Clear__);
 }
 
 
-void __fastcall BattleCommandData__ResetNotRelatedParamsOnExtraAttack(
-        BattleCommandData_o *this,
-        const MethodInfo *method)
+void BattleCommandData__ResetNotRelatedParamsOnExtraAttack(BattleCommandData_o *this, const MethodInfo *method)
 {
   this->fields.commandAssistId = 0;
-  this->fields.userCommandCodeId = -1LL;
+  this->fields.userCommandCodeId = -1;
   *(_QWORD *)&this->fields.commandCodeId = 0xFFFFFFFFLL;
   this->fields.servantCardIdsIndex = -1;
 }
 
 
-void __fastcall BattleCommandData__ResetOverwriteSvtCardType(BattleCommandData_o *this, const MethodInfo *method)
+void BattleCommandData__ResetOverwriteSvtCardType(BattleCommandData_o *this, const MethodInfo *method)
 {
   this->fields.overwriteSvtCardType = -1;
 }
 
 
-void __fastcall BattleCommandData__ResetPassStar(BattleCommandData_o *this, const MethodInfo *method)
+void BattleCommandData__ResetPassStar(BattleCommandData_o *this, const MethodInfo *method)
 {
   this->fields.passStarCount = 0;
 }
 
 
-void __fastcall BattleCommandData__ResetSelectedType(BattleCommandData_o *this, const MethodInfo *method)
+void BattleCommandData__ResetSelectedType(BattleCommandData_o *this, const MethodInfo *method)
 {
   this->fields.selectedType = -1;
 }
 
 
-void __fastcall BattleCommandData__ResetServantCardIdsIndex(BattleCommandData_o *this, const MethodInfo *method)
+void BattleCommandData__ResetServantCardIdsIndex(BattleCommandData_o *this, const MethodInfo *method)
 {
   this->fields.servantCardIdsIndex = -1;
 }
 
 
-void __fastcall BattleCommandData__SetBattleBuffData(
+void BattleCommandData__SetBattleBuffData(
         BattleCommandData_o *this,
         BattleBuffData_o *setData,
         const MethodInfo *method)
@@ -427,25 +490,25 @@ void __fastcall BattleCommandData__SetBattleBuffData(
   const MethodInfo *v3; // x3
 
   this->fields.battleBuffData = setData;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.battleBuffData, (int32_t)setData, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.battleBuffData, (int32_t)setData, (int32_t)method, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BattleCommandData__SetCommandCardParam(
+void BattleCommandData__SetCommandCardParam(
         BattleCommandData_o *this,
         System_Int32_array *commandCodeParams,
         int32_t index,
         const MethodInfo *method)
 {
-  il2cpp_array_size_t max_length; // w8
+  int32_t max_length; // w8
   int32_t v5; // w8
 
-  if ( commandCodeParams && (max_length = commandCodeParams->max_length, (int)max_length > index) )
+  if ( commandCodeParams && (max_length = commandCodeParams->max_length, max_length > index) )
   {
-    if ( max_length <= index )
-      sub_1BCB25C(this, commandCodeParams, *(_QWORD *)&index);
-    v5 = commandCodeParams->m_Items[index + 1];
+    if ( max_length <= (unsigned int)index )
+      sub_1C2D6F4(this, commandCodeParams, *(_QWORD *)&index);
+    v5 = commandCodeParams->m_Items[index];
   }
   else
   {
@@ -455,18 +518,14 @@ void __fastcall BattleCommandData__SetCommandCardParam(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BattleCommandData__SetCriticalDecisionType(
-        BattleCommandData_o *this,
-        int32_t type,
-        const MethodInfo *method)
+void BattleCommandData__SetCriticalDecisionType(BattleCommandData_o *this, int32_t type, const MethodInfo *method)
 {
   BattleDataDefine_c *v5; // x0
 
-  if ( (byte_4B1F30C & 1) == 0 )
+  if ( (byte_4C2A197 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleDataDefine_TypeInfo, *(_QWORD *)&type);
-    byte_4B1F30C = 1;
+    sub_1C2D490(&BattleDataDefine_TypeInfo);
+    byte_4C2A197 = 1;
   }
   this->fields.execCriticalDecisionType = type;
   v5 = BattleDataDefine_TypeInfo;
@@ -475,28 +534,48 @@ void __fastcall BattleCommandData__SetCriticalDecisionType(
     j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
     v5 = BattleDataDefine_TypeInfo;
   }
-  this->fields.criticalHitValue = BattleRandom__getNext(v5->static_fields->CRITICAL_HIT_RANDOM_MAX, 0LL);
+  this->fields.criticalHitValue = BattleRandom__getNext(v5->static_fields->CRITICAL_HIT_RANDOM_MAX, 0);
 }
 
 
-void __fastcall BattleCommandData__SetOverwriteSvtCardType(
-        BattleCommandData_o *this,
-        int32_t cardId,
-        const MethodInfo *method)
+void BattleCommandData__SetOverwriteRatesIndex(BattleCommandData_o *this, const MethodInfo *method)
+{
+  ServantCardAddEntity_o *ServantCardAddEntity; // x0
+  __int64 v4; // x1
+  __int64 OverwriteRatesIndex; // x0
+
+  ServantCardAddEntity = BattleCommandData__get_ServantCardAddEntity(this, method);
+  if ( !ServantCardAddEntity )
+  {
+    OverwriteRatesIndex = 0xFFFFFFFFLL;
+    if ( this )
+      goto LABEL_3;
+LABEL_5:
+    sub_1C2D6EC(OverwriteRatesIndex, v4);
+  }
+  OverwriteRatesIndex = ServantCardAddEntity__GetOverwriteRatesIndex(ServantCardAddEntity, this, 0);
+  if ( !this )
+    goto LABEL_5;
+LABEL_3:
+  this->fields.overwriteRateDataIndex = OverwriteRatesIndex;
+}
+
+
+void BattleCommandData__SetOverwriteSvtCardType(BattleCommandData_o *this, int32_t cardId, const MethodInfo *method)
 {
   if ( this->fields.treasureDvc <= 0 )
     this->fields.overwriteSvtCardType = cardId;
 }
 
 
-void __fastcall BattleCommandData__SetSelectedType(BattleCommandData_o *this, const MethodInfo *method)
+void BattleCommandData__SetSelectedType(BattleCommandData_o *this, const MethodInfo *method)
 {
   if ( this->fields.treasureDvc <= 0 )
     this->fields.selectedType = BattleCommandData__get_type(this, method);
 }
 
 
-bool __fastcall BattleCommandData__TryGetPositionDamageRate(
+bool BattleCommandData__TryGetPositionDamageRate(
         BattleCommandData_o *this,
         float *positionDamageRate,
         BattleData_o *data,
@@ -504,112 +583,109 @@ bool __fastcall BattleCommandData__TryGetPositionDamageRate(
         BattleServantData_o *target,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
   ServantCardAddEntity_o *ServantCardAddEntity; // x0
-  float v15; // s8
-  ServantCardAddEntity_o *v16; // x22
+  float v12; // s8
+  ServantCardAddEntity_o *v13; // x22
   System_Int32_array *IsSlidePositionDamageRates; // x0
-  __int64 v18; // x1
+  __int64 v15; // x1
   System_Int32_array *AliveFieldSvtIdArray; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v20; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v21; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v22; // x0
-  __int64 v23; // x2
-  __int64 v24; // x9
-  int32_t v25; // w2
+  System_Collections_Generic_IEnumerable_TSource__o *v17; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v19; // x0
+  __int64 v20; // x2
+  il2cpp_array_size_t max_length; // x9
+  int32_t v22; // w2
   System_Int32_array *positionDamageRates; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4B1F30F & 1) == 0 )
+  if ( (byte_4C2A19A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Array_IndexOf_int___, positionDamageRate);
-    sub_1BCAFF8(&Method_BasicHelper_IndexValue_int____76920464, v11);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Reverse_int___, v12);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_int___, v13);
-    byte_4B1F30F = 1;
+    sub_1C2D490(&Method_System_Array_IndexOf_int___);
+    sub_1C2D490(&Method_BasicHelper_IndexValue_int____77999320);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Reverse_int___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_ToArray_int___);
+    byte_4C2A19A = 1;
   }
-  positionDamageRates = 0LL;
+  positionDamageRates = 0;
   ServantCardAddEntity = BattleCommandData__get_ServantCardAddEntity(this, (const MethodInfo *)positionDamageRate);
-  v15 = 1.0;
+  v12 = 1.0;
   if ( ServantCardAddEntity )
   {
-    v16 = ServantCardAddEntity;
-    if ( !ServantCardAddEntity__TryGetPositionDamageRates(ServantCardAddEntity, &positionDamageRates, 0LL) )
+    v13 = ServantCardAddEntity;
+    if ( !ServantCardAddEntity__TryGetPositionDamageRates(ServantCardAddEntity, &positionDamageRates, 0) )
     {
       LOBYTE(ServantCardAddEntity) = 0;
       goto LABEL_22;
     }
-    IsSlidePositionDamageRates = (System_Int32_array *)ServantCardAddEntity__IsSlidePositionDamageRates(v16, 0LL);
+    IsSlidePositionDamageRates = (System_Int32_array *)ServantCardAddEntity__IsSlidePositionDamageRates(v13, 0);
     if ( ((unsigned __int8)IsSlidePositionDamageRates & 1) != 0 )
     {
       if ( !actor || !data )
         goto LABEL_23;
-      AliveFieldSvtIdArray = BattleData__getAliveFieldSvtIdArray(data, actor->fields.uniqueId, 0, 0LL, 0, 0LL);
+      AliveFieldSvtIdArray = BattleData__getAliveFieldSvtIdArray(data, actor->fields.uniqueId, 0, 0, 0, 0);
     }
     else
     {
       if ( !target || !data )
         goto LABEL_23;
-      AliveFieldSvtIdArray = BattleData__getEntryIdArray(data, target->fields.isEnemy, 0LL);
+      AliveFieldSvtIdArray = BattleData__getEntryIdArray(data, target->fields.isEnemy, 0);
     }
-    v20 = (System_Collections_Generic_IEnumerable_TSource__o *)AliveFieldSvtIdArray;
-    IsSlidePositionDamageRates = (System_Int32_array *)ServantCardAddEntity__GetPositionDamageRatesSlideType(v16, 0LL);
+    v17 = (System_Collections_Generic_IEnumerable_TSource__o *)AliveFieldSvtIdArray;
+    IsSlidePositionDamageRates = (System_Int32_array *)ServantCardAddEntity__GetPositionDamageRatesSlideType(v13, 0);
     if ( (_DWORD)IsSlidePositionDamageRates == 2 )
     {
-      v21 = System_Linq_Enumerable__Reverse_int_(
-              v20,
-              (const MethodInfo_30471DC *)Method_System_Linq_Enumerable_Reverse_int___);
-      v20 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_int_(
-                                                                   v21,
-                                                                   (const MethodInfo_305712C *)Method_System_Linq_Enumerable_ToArray_int___);
-      v22 = System_Linq_Enumerable__Reverse_int_(
+      v18 = System_Linq_Enumerable__Reverse_int_(
+              v17,
+              (const MethodInfo_30FF138 *)Method_System_Linq_Enumerable_Reverse_int___);
+      v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_int_(
+                                                                   v18,
+                                                                   (const MethodInfo_310DE54 *)Method_System_Linq_Enumerable_ToArray_int___);
+      v19 = System_Linq_Enumerable__Reverse_int_(
               (System_Collections_Generic_IEnumerable_TSource__o *)positionDamageRates,
-              (const MethodInfo_30471DC *)Method_System_Linq_Enumerable_Reverse_int___);
+              (const MethodInfo_30FF138 *)Method_System_Linq_Enumerable_Reverse_int___);
       IsSlidePositionDamageRates = System_Linq_Enumerable__ToArray_int_(
-                                     v22,
-                                     (const MethodInfo_305712C *)Method_System_Linq_Enumerable_ToArray_int___);
+                                     v19,
+                                     (const MethodInfo_310DE54 *)Method_System_Linq_Enumerable_ToArray_int___);
       positionDamageRates = IsSlidePositionDamageRates;
     }
     if ( target )
     {
       IsSlidePositionDamageRates = (System_Int32_array *)System_Array__IndexOf_int_(
-                                                           (System_Int32_array *)v20,
+                                                           (System_Int32_array *)v17,
                                                            target->fields.uniqueId,
-                                                           (const MethodInfo_3119038 *)Method_System_Array_IndexOf_int___);
+                                                           (const MethodInfo_31D59D0 *)Method_System_Array_IndexOf_int___);
       if ( positionDamageRates )
       {
-        v24 = *(_QWORD *)&positionDamageRates->max_length;
-        if ( v24 )
+        max_length = positionDamageRates->max_length;
+        if ( max_length )
         {
-          if ( !(_DWORD)v24 )
-            sub_1BCB25C(IsSlidePositionDamageRates, (unsigned int)IsSlidePositionDamageRates, v23);
-          v25 = *(int32_t *)((char *)&positionDamageRates->m_Items[1] + (((v24 << 32) - 0x100000000LL) >> 30));
+          if ( !(_DWORD)max_length )
+            sub_1C2D6F4(IsSlidePositionDamageRates, (unsigned int)IsSlidePositionDamageRates, v20);
+          v22 = *(int32_t *)((char *)positionDamageRates->m_Items + ((__int64)((max_length << 32) - 0x100000000LL) >> 30));
         }
         else
         {
-          v25 = 1000;
+          v22 = 1000;
         }
-        v15 = (float)BasicHelper__IndexValue_int_(
+        v12 = (float)BasicHelper__IndexValue_int_(
                        positionDamageRates,
                        (int32_t)IsSlidePositionDamageRates,
-                       v25,
-                       (const MethodInfo_3009038 *)Method_BasicHelper_IndexValue_int____76920464)
+                       v22,
+                       (const MethodInfo_30BCE0C *)Method_BasicHelper_IndexValue_int____77999320)
             / 1000.0;
         LOBYTE(ServantCardAddEntity) = 1;
         goto LABEL_22;
       }
     }
 LABEL_23:
-    sub_1BCB254(IsSlidePositionDamageRates, v18);
+    sub_1C2D6EC(IsSlidePositionDamageRates, v15);
   }
 LABEL_22:
-  *positionDamageRate = v15;
+  *positionDamageRate = v12;
   return (char)ServantCardAddEntity;
 }
 
 
-void __fastcall BattleCommandData__UpdateCommandType(
+void BattleCommandData__UpdateCommandType(
         BattleCommandData_o *this,
         BattleServantData_o *svtData,
         const MethodInfo *method)
@@ -624,18 +700,18 @@ void __fastcall BattleCommandData__UpdateCommandType(
     if ( (_DWORD)type == 10 && this->fields.critical )
       this->fields._type = 11;
     if ( !svtData )
-      sub_1BCB254(type, v6);
+      sub_1C2D6EC(type, v6);
     if ( svtData->fields.isEnemy )
     {
       v7 = BattleCommandData__get_type(this, v6);
-      BattleServantData__SetEnemyOverwriteCardType(svtData, v7, this, 0LL);
-      BattleServantData__SetOverwriteSvtCardType(svtData, this, 0LL);
+      BattleServantData__SetEnemyOverwriteCardType(svtData, v7, this, 0);
+      BattleServantData__SetOverwriteSvtCardType(svtData, this, 0);
     }
   }
 }
 
 
-void __fastcall BattleCommandData__UpdateCritical(
+void BattleCommandData__UpdateCritical(
         BattleCommandData_o *this,
         BattleServantData_o *actSvt,
         BattleServantData_o *optSvt,
@@ -643,30 +719,25 @@ void __fastcall BattleCommandData__UpdateCritical(
         const MethodInfo *method)
 {
   BattleCommandData_o *v8; // x19
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   int32_t uniqueId; // w20
   System_Collections_Generic_Dictionary_int__object__o *criticalStoreDict; // x24
   char type; // w8
-  Il2CppObject *v15; // x25
+  Il2CppObject *v12; // x25
   int32_t criticalRate; // w21
-  int32_t v17; // w0
+  int32_t v14; // w0
   int32_t criticalHitValue; // w8
-  bool v19; // w8
+  bool v16; // w8
   Il2CppObject *Item; // x20
-  const MethodInfo *v21; // x1
+  const MethodInfo *v18; // x1
 
   v8 = this;
-  if ( (byte_4B1F30E & 1) == 0 )
+  if ( (byte_4C2A199 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleCommandData_CriticalStatus_TypeInfo, actSvt);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__ContainsKey__, v9);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__, v10);
-    this = (BattleCommandData_o *)sub_1BCAFF8(
-                                    &Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__set_Item__,
-                                    v11);
-    byte_4B1F30E = 1;
+    sub_1C2D490(&BattleCommandData_CriticalStatus_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__ContainsKey__);
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__);
+    this = (BattleCommandData_o *)sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__set_Item__);
+    byte_4C2A199 = 1;
   }
   if ( !optSvt )
     goto LABEL_37;
@@ -677,7 +748,7 @@ void __fastcall BattleCommandData__UpdateCritical(
   this = (BattleCommandData_o *)System_Collections_Generic_Dictionary_int__object___ContainsKey(
                                   (System_Collections_Generic_Dictionary_int__object__o *)this,
                                   uniqueId,
-                                  (const MethodInfo_33214D8 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__ContainsKey__);
+                                  (const MethodInfo_33E1470 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__ContainsKey__);
   criticalStoreDict = (System_Collections_Generic_Dictionary_int__object__o *)v8->fields.criticalStoreDict;
   if ( ((unsigned __int8)this & 1) != 0 )
   {
@@ -686,7 +757,7 @@ void __fastcall BattleCommandData__UpdateCritical(
       this = (BattleCommandData_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                       (System_Collections_Generic_Dictionary_int__object__o *)v8->fields.criticalStoreDict,
                                       uniqueId,
-                                      (const MethodInfo_3321244 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__);
+                                      (const MethodInfo_33E11DC *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__);
       if ( this )
       {
         type = this->fields._type;
@@ -697,7 +768,7 @@ void __fastcall BattleCommandData__UpdateCritical(
           this = (BattleCommandData_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                           (System_Collections_Generic_Dictionary_int__object__o *)this,
                                           uniqueId,
-                                          (const MethodInfo_3321244 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__);
+                                          (const MethodInfo_33E11DC *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__);
           if ( this )
           {
             v8->fields.isCriticalMiss = BYTE1(this->fields._type);
@@ -707,17 +778,17 @@ void __fastcall BattleCommandData__UpdateCritical(
       }
     }
 LABEL_37:
-    sub_1BCB254(this, actSvt);
+    sub_1C2D6EC(this, actSvt);
   }
-  v15 = (Il2CppObject *)sub_1BCB244(BattleCommandData_CriticalStatus_TypeInfo);
-  System_Object___ctor(v15, 0LL);
+  v12 = (Il2CppObject *)sub_1C2D6DC(BattleCommandData_CriticalStatus_TypeInfo);
+  System_Object___ctor(v12, 0);
   if ( !criticalStoreDict )
     goto LABEL_37;
   System_Collections_Generic_Dictionary_int__object___set_Item(
     criticalStoreDict,
     uniqueId,
-    v15,
-    (const MethodInfo_33212D0 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__set_Item__);
+    v12,
+    (const MethodInfo_33E1268 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__set_Item__);
   if ( !actSvt )
     goto LABEL_37;
   if ( actSvt->fields.isEnemy )
@@ -728,10 +799,10 @@ LABEL_37:
         return;
       case 1:
         criticalRate = actSvt->fields.criticalRate;
-        v17 = BattleServantData__getCriticalRate(actSvt, v8, optSvt, 0LL);
+        v14 = BattleServantData__getCriticalRate(actSvt, v8, optSvt, 0);
         criticalHitValue = v8->fields.criticalHitValue;
-        v8->fields.critical = criticalHitValue < v17;
-        if ( criticalHitValue < criticalRate && v17 < criticalRate && criticalHitValue >= v17 )
+        v8->fields.critical = criticalHitValue < v14;
+        if ( criticalHitValue < criticalRate && v14 < criticalRate && criticalHitValue >= v14 )
           v8->fields.isCriticalMiss = 1;
         goto LABEL_28;
       case 2:
@@ -748,7 +819,7 @@ LABEL_28:
         this = (BattleCommandData_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                         (System_Collections_Generic_Dictionary_int__object__o *)this,
                                         uniqueId,
-                                        (const MethodInfo_3321244 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__);
+                                        (const MethodInfo_33E11DC *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__);
         if ( !this )
           goto LABEL_37;
         LOBYTE(this->fields._type) = v8->fields.critical;
@@ -758,7 +829,7 @@ LABEL_28:
         this = (BattleCommandData_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                         (System_Collections_Generic_Dictionary_int__object__o *)this,
                                         uniqueId,
-                                        (const MethodInfo_3321244 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__);
+                                        (const MethodInfo_33E11DC *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__);
         if ( !this )
           goto LABEL_37;
         BYTE1(this->fields._type) = v8->fields.isCriticalMiss;
@@ -772,9 +843,9 @@ LABEL_28:
     {
       if ( !data )
         goto LABEL_37;
-      if ( BattleData__isTutorial(data, 0LL) )
+      if ( BattleData__isTutorial(data, 0) )
       {
-        if ( BattleData__IsTutorialCriticalEnabled(data, 0LL) )
+        if ( BattleData__IsTutorialCriticalEnabled(data, 0) )
         {
           this = (BattleCommandData_o *)v8->fields.criticalStoreDict;
           if ( !this )
@@ -782,12 +853,12 @@ LABEL_28:
           this = (BattleCommandData_o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                           (System_Collections_Generic_Dictionary_int__object__o *)this,
                                           uniqueId,
-                                          (const MethodInfo_3321244 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__);
-          v19 = v8->fields.starcount > 0;
-          v8->fields.critical = v19;
+                                          (const MethodInfo_33E11DC *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__);
+          v16 = v8->fields.starcount > 0;
+          v8->fields.critical = v16;
           if ( !this )
             goto LABEL_37;
-          LOBYTE(this->fields._type) = v19;
+          LOBYTE(this->fields._type) = v16;
         }
       }
       else
@@ -798,8 +869,8 @@ LABEL_28:
         Item = System_Collections_Generic_Dictionary_int__object___get_Item(
                  (System_Collections_Generic_Dictionary_int__object__o *)this,
                  uniqueId,
-                 (const MethodInfo_3321244 *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__);
-        this = (BattleCommandData_o *)BattleCommandData__LotteryPlayerSideCritical(v8, v21);
+                 (const MethodInfo_33E11DC *)Method_System_Collections_Generic_Dictionary_int__BattleCommandData_CriticalStatus__get_Item__);
+        this = (BattleCommandData_o *)BattleCommandData__LotteryPlayerSideCritical(v8, v18);
         if ( !Item )
           goto LABEL_37;
         LOBYTE(Item[1].klass) = (unsigned __int8)this & 1;
@@ -809,56 +880,51 @@ LABEL_28:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BattleCommandData__addCriticalPoint(
+void BattleCommandData__addCriticalPoint(
         BattleCommandData_o *this,
         int32_t count,
         bool addToPassStar,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
   int32_t starcount; // w22
-  int32_t v9; // w8
-  int32_t v10; // w23
-  int32_t v11; // w8
+  int32_t v8; // w8
+  int32_t v9; // w23
+  int32_t v10; // w8
 
-  if ( (byte_4B1F30B & 1) == 0 )
+  if ( (byte_4C2A196 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_10273/*"PER_SAME_COMMAND"*/, *(_QWORD *)&count);
-    sub_1BCAFF8(&StringLiteral_5783/*"EXTRA_CRITICAL_RATE"*/, v7);
-    byte_4B1F30B = 1;
+    sub_1C2D490(&StringLiteral_10346/*"PER_SAME_COMMAND"*/);
+    sub_1C2D490(&StringLiteral_5820/*"EXTRA_CRITICAL_RATE"*/);
+    byte_4C2A196 = 1;
   }
   starcount = this->fields.starcount;
   ++this->fields.starBonus;
-  if ( ConstantMaster__getValue((System_String_o *)StringLiteral_10273/*"PER_SAME_COMMAND"*/, 0LL) <= this->fields.starBonus )
+  if ( ConstantMaster__getValue((System_String_o *)StringLiteral_10346/*"PER_SAME_COMMAND"*/, 0) <= this->fields.starBonus )
   {
     this->fields.starBonus = 0;
-    v10 = this->fields.starcount;
-    v9 = ConstantMaster__getValue((System_String_o *)StringLiteral_5783/*"EXTRA_CRITICAL_RATE"*/, 0LL) + v10;
+    v9 = this->fields.starcount;
+    v8 = ConstantMaster__getValue((System_String_o *)StringLiteral_5820/*"EXTRA_CRITICAL_RATE"*/, 0) + v9;
   }
   else
   {
-    v9 = this->fields.starcount;
+    v8 = this->fields.starcount;
   }
-  v11 = v9 + count;
-  if ( v11 >= 1000 )
-    v11 = 1000;
-  this->fields.starcount = v11;
+  v10 = v8 + count;
+  if ( v10 >= 1000 )
+    v10 = 1000;
+  this->fields.starcount = v10;
   if ( addToPassStar )
-    this->fields.passStarCount += v11 - starcount;
+    this->fields.passStarCount += v10 - starcount;
 }
 
 
-bool __fastcall BattleCommandData__checkCriticalMax(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__checkCriticalMax(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.starcount > 999;
 }
 
 
-bool __fastcall BattleCommandData__checkCriticalRate(
-        BattleCommandData_o *this,
-        int32_t count,
-        const MethodInfo *method)
+bool BattleCommandData__checkCriticalRate(BattleCommandData_o *this, int32_t count, const MethodInfo *method)
 {
   bool v3; // w8
 
@@ -868,7 +934,7 @@ bool __fastcall BattleCommandData__checkCriticalRate(
 }
 
 
-bool __fastcall BattleCommandData__checkCriticalRate_45635296(
+bool BattleCommandData__checkCriticalRate_46335804(
         BattleCommandData_o *this,
         int32_t rate,
         int32_t count,
@@ -879,63 +945,61 @@ bool __fastcall BattleCommandData__checkCriticalRate_45635296(
 }
 
 
-bool __fastcall BattleCommandData__checkCriticalZero(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__checkCriticalZero(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.starcount < 1;
 }
 
 
-bool __fastcall BattleCommandData__checkLastAttack(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__checkLastAttack(BattleCommandData_o *this, const MethodInfo *method)
 {
   return BattleCommandData__isAddAttack(this, method)
       || this->fields.actionIndex == 2 && (!this->fields.sameflg || this->fields.samecount != 3);
 }
 
 
-int32_t __fastcall BattleCommandData__getAttri(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__getAttri(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.attri;
 }
 
 
-int32_t __fastcall BattleCommandData__getChainBonus(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__getChainBonus(BattleCommandData_o *this, const MethodInfo *method)
 {
   return 100 * this->fields.chainCount;
 }
 
 
-int32_t __fastcall BattleCommandData__getCriticalPoint(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__getCriticalPoint(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.starcount / 10;
 }
 
 
-int32_t __fastcall BattleCommandData__getFollowerType(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__getFollowerType(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.follower;
 }
 
 
-System_Int32_array *__fastcall BattleCommandData__getIndividualities(
-        BattleCommandData_o *this,
-        const MethodInfo *method)
+System_Int32_array *BattleCommandData__getIndividualities(BattleCommandData_o *this, const MethodInfo *method)
 {
   int32_t type; // w0
 
   type = BattleCommandData__get_type(this, method);
-  return CardMaster__getIndividualities(type, this->fields.actionIndex, 0LL);
+  return CardMaster__getIndividualities(type, this->fields.actionIndex, 0);
 }
 
 
-int32_t __fastcall BattleCommandData__getPassStarCount(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__getPassStarCount(BattleCommandData_o *this, const MethodInfo *method)
 {
   BattleCommandData_c *v3; // x0
   int32_t passStarCount; // w19
 
-  if ( (byte_4B1F30A & 1) == 0 )
+  if ( (byte_4C2A195 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleCommandData_TypeInfo, method);
-    byte_4B1F30A = 1;
+    sub_1C2D490(&BattleCommandData_TypeInfo);
+    byte_4C2A195 = 1;
   }
   v3 = BattleCommandData_TypeInfo;
   passStarCount = this->fields.passStarCount;
@@ -948,156 +1012,164 @@ int32_t __fastcall BattleCommandData__getPassStarCount(BattleCommandData_o *this
 }
 
 
-int32_t __fastcall BattleCommandData__getServantId(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__getServantId(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.svtId;
 }
 
 
-int32_t __fastcall BattleCommandData__getServantLimitCount(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__getServantLimitCount(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.svtlimit;
 }
 
 
-int32_t __fastcall BattleCommandData__getUniqueId(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__getUniqueId(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.uniqueId;
 }
 
 
-int32_t __fastcall BattleCommandData__get_ActionIndex(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__get_ActionIndex(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.actionIndex;
 }
 
 
-int32_t __fastcall BattleCommandData__get_AddAtk(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__get_AddAtk(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.addAtk;
 }
 
 
-int32_t __fastcall BattleCommandData__get_AddCritical(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__get_AddCritical(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.addCritical;
 }
 
 
-int32_t __fastcall BattleCommandData__get_AddTdGauge(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__get_AddTdGauge(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.addTdGauge;
 }
 
 
-int32_t __fastcall BattleCommandData__get_ChainCount(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__get_ChainCount(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.chainCount;
 }
 
 
-bool __fastcall BattleCommandData__get_IsChainError(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__get_FlashType(BattleCommandData_o *this, const MethodInfo *method)
+{
+  return this->fields._FlashType_k__BackingField;
+}
+
+
+bool BattleCommandData__get_IsChainError(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields._IsChainError_k__BackingField;
 }
 
 
-bool __fastcall BattleCommandData__get_IsMighty(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__get_IsMighty(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields._IsMighty_k__BackingField;
 }
 
 
-ServantCardAddEntity_o *__fastcall BattleCommandData__get_ServantCardAddEntity(
+ServantCardAddEntity_o *BattleCommandData__get_ServantCardAddEntity(
         BattleCommandData_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Master_object; // x0
-  const MethodInfo *v5; // x1
+  const MethodInfo *v4; // x1
   int32_t overwriteSvtCardType; // w3
   int32_t svtId; // w20
-  ServantCardAddMaster_o *v8; // x21
+  ServantCardAddMaster_o *v7; // x21
   ServantCardAddEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B1F2FF & 1) == 0 )
+  if ( (byte_4C2A18A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantCardAddMaster___, method);
-    sub_1BCAFF8(&DataManager_TypeInfo, v3);
-    byte_4B1F2FF = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_ServantCardAddMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    byte_4C2A18A = 1;
   }
-  entity = 0LL;
+  entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantCardAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ServantCardAddMaster___);
   overwriteSvtCardType = this->fields.overwriteSvtCardType;
   svtId = this->fields.svtId;
-  v8 = (ServantCardAddMaster_o *)Master_object;
+  v7 = (ServantCardAddMaster_o *)Master_object;
   if ( overwriteSvtCardType == -1 )
   {
-    Master_object = (Il2CppObject *)BattleCommandData__get_type(this, v5);
+    Master_object = (Il2CppObject *)BattleCommandData__get_type(this, v4);
     overwriteSvtCardType = (int)Master_object;
   }
-  if ( !v8 )
-    sub_1BCB254(Master_object, v5);
-  if ( ServantCardAddMaster__TryGetEntity(v8, &entity, svtId, overwriteSvtCardType, 0LL) )
+  if ( !v7 )
+    sub_1C2D6EC(Master_object, v4);
+  if ( ServantCardAddMaster__TryGetEntity(v7, &entity, svtId, overwriteSvtCardType, 0) )
     return entity;
   else
-    return 0LL;
+    return 0;
 }
 
 
-ServantCardEntity_o *__fastcall BattleCommandData__get_ServantCardEntity(
-        BattleCommandData_o *this,
-        const MethodInfo *method)
+ServantCardEntity_o *BattleCommandData__get_ServantCardEntity(BattleCommandData_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Master_object; // x0
-  const MethodInfo *v5; // x1
+  const MethodInfo *v4; // x1
   int32_t overwriteSvtCardType; // w3
   int32_t svtId; // w20
-  ServantCardMaster_o *v8; // x21
+  ServantCardMaster_o *v7; // x21
   ServantCardEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B1F2FE & 1) == 0 )
+  if ( (byte_4C2A189 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantCardMaster___, method);
-    sub_1BCAFF8(&DataManager_TypeInfo, v3);
-    byte_4B1F2FE = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_ServantCardMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    byte_4C2A189 = 1;
   }
-  entity = 0LL;
+  entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantCardMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ServantCardMaster___);
   overwriteSvtCardType = this->fields.overwriteSvtCardType;
   svtId = this->fields.svtId;
-  v8 = (ServantCardMaster_o *)Master_object;
+  v7 = (ServantCardMaster_o *)Master_object;
   if ( overwriteSvtCardType == -1 )
   {
-    Master_object = (Il2CppObject *)BattleCommandData__get_type(this, v5);
+    Master_object = (Il2CppObject *)BattleCommandData__get_type(this, v4);
     overwriteSvtCardType = (int)Master_object;
   }
-  if ( !v8 )
-    sub_1BCB254(Master_object, v5);
-  if ( ServantCardMaster__TryGetEntity(v8, &entity, svtId, overwriteSvtCardType, 0LL) )
+  if ( !v7 )
+    sub_1C2D6EC(Master_object, v4);
+  if ( ServantCardMaster__TryGetEntity(v7, &entity, svtId, overwriteSvtCardType, 0) )
     return entity;
   else
-    return 0LL;
+    return 0;
 }
 
 
-int32_t __fastcall BattleCommandData__get_loadSvtLimit(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__get_TargetNum(BattleCommandData_o *this, const MethodInfo *method)
+{
+  return this->fields._TargetNum_k__BackingField;
+}
+
+
+int32_t BattleCommandData__get_loadSvtLimit(BattleCommandData_o *this, const MethodInfo *method)
 {
   __int64 v2; // x8
 
-  v2 = 24LL;
+  v2 = 24;
   if ( this->fields._loadsvtLimit != -1 )
-    v2 = 36LL;
+    v2 = 36;
   return *(_DWORD *)((char *)&this->klass + v2);
 }
 
 
-int32_t __fastcall BattleCommandData__get_type(BattleCommandData_o *this, const MethodInfo *method)
+int32_t BattleCommandData__get_type(BattleCommandData_o *this, const MethodInfo *method)
 {
   BattleBuffData_o *battleBuffData; // x0
   BattleBuffData_BuffData_o *v4; // x0
@@ -1108,7 +1180,7 @@ int32_t __fastcall BattleCommandData__get_type(BattleCommandData_o *this, const 
   {
     if ( this->fields.treasureDvc > 0 )
       return this->fields._type;
-    v4 = BattleBuffData__GetCommandCardTypeChangeBuff(battleBuffData, 0LL);
+    v4 = BattleBuffData__GetCommandCardTypeChangeBuff(battleBuffData, 0);
     if ( v4 )
       return v4->fields.param;
     result = this->fields.selectedType;
@@ -1125,151 +1197,148 @@ int32_t __fastcall BattleCommandData__get_type(BattleCommandData_o *this, const 
 }
 
 
-bool __fastcall BattleCommandData__isAddAttack(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__isAddAttack(BattleCommandData_o *this, const MethodInfo *method)
 {
   int32_t type; // w19
 
-  if ( (byte_4B1F306 & 1) == 0 )
+  if ( (byte_4C2A191 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleCommand_TypeInfo, method);
-    byte_4B1F306 = 1;
+    sub_1C2D490(&BattleCommand_TypeInfo);
+    byte_4C2A191 = 1;
   }
   type = BattleCommandData__get_type(this, method);
   if ( !BattleCommand_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo);
-  return BattleCommand__isADDATTACK(type, 0LL);
+  return BattleCommand__isADDATTACK(type, 0);
 }
 
 
-bool __fastcall BattleCommandData__isArts(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__isArts(BattleCommandData_o *this, const MethodInfo *method)
 {
   int32_t type; // w19
 
-  if ( (byte_4B1F303 & 1) == 0 )
+  if ( (byte_4C2A18E & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleCommand_TypeInfo, method);
-    byte_4B1F303 = 1;
+    sub_1C2D490(&BattleCommand_TypeInfo);
+    byte_4C2A18E = 1;
   }
   type = BattleCommandData__get_type(this, method);
   if ( !BattleCommand_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo);
-  return BattleCommand__isARTS(type, 0LL);
+  return BattleCommand__isARTS(type, 0);
 }
 
 
-bool __fastcall BattleCommandData__isBlank(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__isBlank(BattleCommandData_o *this, const MethodInfo *method)
 {
   int32_t type; // w19
 
-  if ( (byte_4B1F307 & 1) == 0 )
+  if ( (byte_4C2A192 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleCommand_TypeInfo, method);
-    byte_4B1F307 = 1;
+    sub_1C2D490(&BattleCommand_TypeInfo);
+    byte_4C2A192 = 1;
   }
   type = BattleCommandData__get_type(this, method);
   if ( !BattleCommand_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo);
-  return BattleCommand__isBLANK(type, 0LL);
+  return BattleCommand__isBLANK(type, 0);
 }
 
 
-bool __fastcall BattleCommandData__isBuster(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__isBuster(BattleCommandData_o *this, const MethodInfo *method)
 {
   int32_t type; // w19
 
-  if ( (byte_4B1F304 & 1) == 0 )
+  if ( (byte_4C2A18F & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleCommand_TypeInfo, method);
-    byte_4B1F304 = 1;
+    sub_1C2D490(&BattleCommand_TypeInfo);
+    byte_4C2A18F = 1;
   }
   type = BattleCommandData__get_type(this, method);
   if ( !BattleCommand_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo);
-  return BattleCommand__isBUSTER(type, 0LL);
+  return BattleCommand__isBUSTER(type, 0);
 }
 
 
-bool __fastcall BattleCommandData__isBusterChain(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__isBusterChain(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.flash && BattleCommandData__isBuster(this, method);
 }
 
 
-bool __fastcall BattleCommandData__isCritical(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__isCritical(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.critical;
 }
 
 
-bool __fastcall BattleCommandData__isFlash(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__isFlash(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.flash;
 }
 
 
-bool __fastcall BattleCommandData__isGrand(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__isGrand(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.sameflg && this->fields.samecount == 3 && this->fields.flash;
 }
 
 
-bool __fastcall BattleCommandData__isPair(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__isPair(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.sameflg && this->fields.samecount == 2;
 }
 
 
-bool __fastcall BattleCommandData__isQuick(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__isQuick(BattleCommandData_o *this, const MethodInfo *method)
 {
   int32_t type; // w19
 
-  if ( (byte_4B1F305 & 1) == 0 )
+  if ( (byte_4C2A190 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleCommand_TypeInfo, method);
-    byte_4B1F305 = 1;
+    sub_1C2D490(&BattleCommand_TypeInfo);
+    byte_4C2A190 = 1;
   }
   type = BattleCommandData__get_type(this, method);
   if ( !BattleCommand_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleCommand_TypeInfo);
-  return BattleCommand__isQUICK(type, 0LL);
+  return BattleCommand__isQUICK(type, 0);
 }
 
 
-bool __fastcall BattleCommandData__isSingle(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__isSingle(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.sameflg && this->fields.samecount == 3 && !this->fields.flash;
 }
 
 
-bool __fastcall BattleCommandData__isThree(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__isThree(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.sameflg && this->fields.samecount == 3;
 }
 
 
-bool __fastcall BattleCommandData__isTreasureDvc(BattleCommandData_o *this, const MethodInfo *method)
+bool BattleCommandData__isTreasureDvc(BattleCommandData_o *this, const MethodInfo *method)
 {
   return this->fields.treasureDvc > 0;
 }
 
 
-void __fastcall BattleCommandData__removeCriticalPoint(
-        BattleCommandData_o *this,
-        int32_t count,
-        const MethodInfo *method)
+void BattleCommandData__removeCriticalPoint(BattleCommandData_o *this, int32_t count, const MethodInfo *method)
 {
   this->fields.starcount = (this->fields.starcount - count) & ~((this->fields.starcount - count) >> 31);
 }
 
 
-void __fastcall BattleCommandData__resetCriticalPoint(BattleCommandData_o *this, const MethodInfo *method)
+void BattleCommandData__resetCriticalPoint(BattleCommandData_o *this, const MethodInfo *method)
 {
   this->fields.starcount = 0;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BattleCommandData__setCombo(
+void BattleCommandData__setCombo(
         BattleCommandData_o *this,
         BattleComboData_o *combo,
         int32_t index,
@@ -1284,16 +1353,16 @@ void __fastcall BattleCommandData__setCombo(
     || (flash = combo->fields.flash,
         this->fields.actionIndex = index,
         this->fields.flash = flash,
-        (sameflg = combo->fields.sameflg) == 0LL) )
+        (sameflg = combo->fields.sameflg) == 0) )
   {
-    sub_1BCB254(this, combo);
+    sub_1C2D6EC(this, combo);
   }
   max_length = sameflg->max_length;
   if ( max_length > index )
   {
     if ( max_length <= (unsigned int)index )
-      sub_1BCB25C(this, combo, *(_QWORD *)&index);
-    this->fields.sameflg = sameflg->m_Items[index + 4];
+      sub_1C2D6F4(this, combo, *(_QWORD *)&index);
+    this->fields.sameflg = sameflg->m_Items[index];
   }
   this->fields.samecount = combo->fields.samecount;
   this->fields.addAtk = combo->fields.addAtk;
@@ -1304,16 +1373,17 @@ void __fastcall BattleCommandData__setCombo(
     BattleCommandData__addCriticalPoint(this, combo->fields.addCriticalRate, 0, method);
   this->fields._IsMighty_k__BackingField = combo->fields.isMighty;
   this->fields._IsChainError_k__BackingField = combo->fields.chainError;
+  this->fields._FlashType_k__BackingField = combo->fields.flashtype;
 }
 
 
-void __fastcall BattleCommandData__setFollowerType(BattleCommandData_o *this, int32_t type, const MethodInfo *method)
+void BattleCommandData__setFollowerType(BattleCommandData_o *this, int32_t type, const MethodInfo *method)
 {
   this->fields.follower = type;
 }
 
 
-void __fastcall BattleCommandData__setTypeAddAttack(BattleCommandData_o *this, const MethodInfo *method)
+void BattleCommandData__setTypeAddAttack(BattleCommandData_o *this, const MethodInfo *method)
 {
   this->fields.treasureDvc = 0;
   this->fields.starcount = 0;
@@ -1321,59 +1391,67 @@ void __fastcall BattleCommandData__setTypeAddAttack(BattleCommandData_o *this, c
 }
 
 
-void __fastcall BattleCommandData__set_ActionIndex(BattleCommandData_o *this, int32_t value, const MethodInfo *method)
+void BattleCommandData__set_ActionIndex(BattleCommandData_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields.actionIndex = value;
 }
 
 
-void __fastcall BattleCommandData__set_ChainCount(BattleCommandData_o *this, int32_t value, const MethodInfo *method)
+void BattleCommandData__set_ChainCount(BattleCommandData_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields.chainCount = value;
 }
 
 
-void __fastcall BattleCommandData__set_IsChainError(BattleCommandData_o *this, bool value, const MethodInfo *method)
+void BattleCommandData__set_FlashType(BattleCommandData_o *this, int32_t value, const MethodInfo *method)
+{
+  this->fields._FlashType_k__BackingField = value;
+}
+
+
+void BattleCommandData__set_IsChainError(BattleCommandData_o *this, bool value, const MethodInfo *method)
 {
   this->fields._IsChainError_k__BackingField = value;
 }
 
 
-void __fastcall BattleCommandData__set_IsMighty(BattleCommandData_o *this, bool value, const MethodInfo *method)
+void BattleCommandData__set_IsMighty(BattleCommandData_o *this, bool value, const MethodInfo *method)
 {
   this->fields._IsMighty_k__BackingField = value;
 }
 
 
-void __fastcall BattleCommandData__set_loadSvtLimit(BattleCommandData_o *this, int32_t value, const MethodInfo *method)
+void BattleCommandData__set_TargetNum(BattleCommandData_o *this, int32_t value, const MethodInfo *method)
+{
+  this->fields._TargetNum_k__BackingField = value;
+}
+
+
+void BattleCommandData__set_loadSvtLimit(BattleCommandData_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._loadsvtLimit = value;
 }
 
 
-void __fastcall BattleCommandData__set_type(BattleCommandData_o *this, int32_t value, const MethodInfo *method)
+void BattleCommandData__set_type(BattleCommandData_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._type = value;
 }
 
 
-void __fastcall BattleCommandData_CriticalStatus___ctor(
-        BattleCommandData_CriticalStatus_o *this,
-        const MethodInfo *method)
+void BattleCommandData_CriticalStatus___ctor(BattleCommandData_CriticalStatus_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall BattleCommandData_CriticalStatus__get_Critical(
-        BattleCommandData_CriticalStatus_o *this,
-        const MethodInfo *method)
+bool BattleCommandData_CriticalStatus__get_Critical(BattleCommandData_CriticalStatus_o *this, const MethodInfo *method)
 {
   return this->fields._Critical_k__BackingField;
 }
 
 
-bool __fastcall BattleCommandData_CriticalStatus__get_IsCriticalMiss(
+bool BattleCommandData_CriticalStatus__get_IsCriticalMiss(
         BattleCommandData_CriticalStatus_o *this,
         const MethodInfo *method)
 {
@@ -1381,7 +1459,7 @@ bool __fastcall BattleCommandData_CriticalStatus__get_IsCriticalMiss(
 }
 
 
-void __fastcall BattleCommandData_CriticalStatus__set_Critical(
+void BattleCommandData_CriticalStatus__set_Critical(
         BattleCommandData_CriticalStatus_o *this,
         bool value,
         const MethodInfo *method)
@@ -1390,7 +1468,7 @@ void __fastcall BattleCommandData_CriticalStatus__set_Critical(
 }
 
 
-void __fastcall BattleCommandData_CriticalStatus__set_IsCriticalMiss(
+void BattleCommandData_CriticalStatus__set_IsCriticalMiss(
         BattleCommandData_CriticalStatus_o *this,
         bool value,
         const MethodInfo *method)

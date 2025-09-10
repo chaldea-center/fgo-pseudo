@@ -1,73 +1,64 @@
-void __fastcall RecommendedConfigSaveData___cctor(const MethodInfo *method)
+void RecommendedConfigSaveData___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  __int64 v4; // x1
+  int32_t v1; // w2
+  const MethodInfo *v2; // x3
 
-  if ( (byte_4B202B5 & 1) == 0 )
+  if ( (byte_4C2B1C0 & 1) == 0 )
   {
-    sub_1BCAFF8(&RecommendedConfigSaveData_TypeInfo, v1);
-    sub_1BCAFF8(&StringLiteral_10915/*"RECOMENDED_CONFIG_NORMAL"*/, v4);
-    byte_4B202B5 = 1;
+    sub_1C2D490(&RecommendedConfigSaveData_TypeInfo);
+    sub_1C2D490(&StringLiteral_10990/*"RECOMENDED_CONFIG_NORMAL"*/);
+    byte_4C2B1C0 = 1;
   }
-  RecommendedConfigSaveData_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_10915/*"RECOMENDED_CONFIG_NORMAL"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)RecommendedConfigSaveData_TypeInfo->static_fields, StringLiteral_10915/*"RECOMENDED_CONFIG_NORMAL"*/, v2, v3);
+  RecommendedConfigSaveData_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_10990/*"RECOMENDED_CONFIG_NORMAL"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)RecommendedConfigSaveData_TypeInfo->static_fields, StringLiteral_10990/*"RECOMENDED_CONFIG_NORMAL"*/, v1, v2);
 }
 
 
-void __fastcall RecommendedConfigSaveData___ctor(RecommendedConfigSaveData_o *this, const MethodInfo *method)
+void RecommendedConfigSaveData___ctor(RecommendedConfigSaveData_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_List_int__o *v4; // x20
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  System_Collections_Generic_List_int__o *v3; // x20
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
+  System_Collections_Generic_List_int__o *v6; // x20
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
 
-  if ( (byte_4B202B4 & 1) == 0 )
+  if ( (byte_4C2B1BF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int___ctor__, method);
-    sub_1BCAFF8(&System_Collections_Generic_List_int__TypeInfo, v3);
-    byte_4B202B4 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C2B1BF = 1;
   }
-  v4 = (System_Collections_Generic_List_int__o *)sub_1BCB244(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C2D6DC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v4,
-    (const MethodInfo_369C358 *)Method_System_Collections_Generic_List_int___ctor__);
-  this->fields.selectRarityList = v4;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.selectRarityList, (int32_t)v4, v5, v6);
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+    v3,
+    (const MethodInfo_376C30C *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.selectClassTypeList = v3;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_List_int__o *)sub_1C2D6DC(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor(
+    v6,
+    (const MethodInfo_376C30C *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.selectRarityList = v6;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.selectRarityList, (int32_t)v6, v7, v8);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall RecommendedConfigSaveData__CanNotSelect(RecommendedConfigSaveData_o *this, const MethodInfo *method)
+bool RecommendedConfigSaveData__IsAutoSetOn(RecommendedConfigSaveData_o *this, const MethodInfo *method)
 {
-  struct System_Collections_Generic_List_int__o *selectRarityList; // x8
-
-  if ( (byte_4B202B3 & 1) == 0 )
-  {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__get_Count__, method);
-    byte_4B202B3 = 1;
-  }
-  return this->fields.selectClass == -1
-      || (selectRarityList = this->fields.selectRarityList) == 0LL
-      || selectRarityList->fields._size == 0;
+  return this->fields.isAutoSet != 0;
 }
 
 
-bool __fastcall RecommendedConfigSaveData__IsAll(RecommendedConfigSaveData_o *this, const MethodInfo *method)
-{
-  return this->fields.selectClass == 1;
-}
-
-
-bool __fastcall RecommendedConfigSaveData__IsExist(RecommendedConfigSaveData_o *this, const MethodInfo *method)
+bool RecommendedConfigSaveData__IsExist(RecommendedConfigSaveData_o *this, const MethodInfo *method)
 {
   RecommendedConfigSaveData_c *v2; // x0
 
-  if ( (byte_4B202B0 & 1) == 0 )
+  if ( (byte_4C2B1BC & 1) == 0 )
   {
-    sub_1BCAFF8(&RecommendedConfigSaveData_TypeInfo, method);
-    byte_4B202B0 = 1;
+    sub_1C2D490(&RecommendedConfigSaveData_TypeInfo);
+    byte_4C2B1BC = 1;
   }
   v2 = RecommendedConfigSaveData_TypeInfo;
   if ( !RecommendedConfigSaveData_TypeInfo->_2.cctor_finished )
@@ -75,49 +66,35 @@ bool __fastcall RecommendedConfigSaveData__IsExist(RecommendedConfigSaveData_o *
     j_il2cpp_runtime_class_init_0(RecommendedConfigSaveData_TypeInfo);
     v2 = RecommendedConfigSaveData_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__HasKey(v2->static_fields->SAVE_KEY, 0LL);
+  return UnityEngine_PlayerPrefs__HasKey(v2->static_fields->SAVE_KEY, 0);
 }
 
 
-bool __fastcall RecommendedConfigSaveData__IsMix(RecommendedConfigSaveData_o *this, const MethodInfo *method)
+RecommendedConfigSaveData_o *RecommendedConfigSaveData__LoadConfigSaveData(const MethodInfo *method)
 {
-  return this->fields.selectClass == 0;
-}
+  RecommendedConfigSaveData_c *v1; // x0
+  System_String_o *String_71122516; // x0
 
-
-bool __fastcall RecommendedConfigSaveData__IsTargetOnly(RecommendedConfigSaveData_o *this, const MethodInfo *method)
-{
-  return this->fields.selectClass == 2;
-}
-
-
-RecommendedConfigSaveData_o *__fastcall RecommendedConfigSaveData__LoadConfigSaveData(const MethodInfo *method)
-{
-  __int64 v1; // x1
-  __int64 v2; // x1
-  RecommendedConfigSaveData_c *v3; // x0
-  System_String_o *String_70094888; // x0
-
-  if ( (byte_4B202B1 & 1) == 0 )
+  if ( (byte_4C2B1BD & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_JsonUtility_FromJson_RecommendedConfigSaveData___, v1);
-    sub_1BCAFF8(&RecommendedConfigSaveData_TypeInfo, v2);
-    byte_4B202B1 = 1;
+    sub_1C2D490(&Method_UnityEngine_JsonUtility_FromJson_RecommendedConfigSaveData___);
+    sub_1C2D490(&RecommendedConfigSaveData_TypeInfo);
+    byte_4C2B1BD = 1;
   }
-  v3 = RecommendedConfigSaveData_TypeInfo;
+  v1 = RecommendedConfigSaveData_TypeInfo;
   if ( !RecommendedConfigSaveData_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(RecommendedConfigSaveData_TypeInfo);
-    v3 = RecommendedConfigSaveData_TypeInfo;
+    v1 = RecommendedConfigSaveData_TypeInfo;
   }
-  String_70094888 = UnityEngine_PlayerPrefs__GetString_70094888(v3->static_fields->SAVE_KEY, 0LL);
+  String_71122516 = UnityEngine_PlayerPrefs__GetString_71122516(v1->static_fields->SAVE_KEY, 0);
   return (RecommendedConfigSaveData_o *)UnityEngine_JsonUtility__FromJson_object_(
-                                          String_70094888,
-                                          (const MethodInfo_3087540 *)Method_UnityEngine_JsonUtility_FromJson_RecommendedConfigSaveData___);
+                                          String_71122516,
+                                          (const MethodInfo_313EC68 *)Method_UnityEngine_JsonUtility_FromJson_RecommendedConfigSaveData___);
 }
 
 
-void __fastcall RecommendedConfigSaveData__SaveConfig(
+void RecommendedConfigSaveData__SaveConfig(
         RecommendedConfigSaveData_o *this,
         RecommendedConfigSaveData_o *saveData,
         const MethodInfo *method)
@@ -126,12 +103,12 @@ void __fastcall RecommendedConfigSaveData__SaveConfig(
   RecommendedConfigSaveData_c *v5; // x8
   System_String_o *v6; // x19
 
-  if ( (byte_4B202B2 & 1) == 0 )
+  if ( (byte_4C2B1BE & 1) == 0 )
   {
-    sub_1BCAFF8(&RecommendedConfigSaveData_TypeInfo, saveData);
-    byte_4B202B2 = 1;
+    sub_1C2D490(&RecommendedConfigSaveData_TypeInfo);
+    byte_4C2B1BE = 1;
   }
-  v4 = UnityEngine_JsonUtility__ToJson((Il2CppObject *)saveData, 0LL);
+  v4 = UnityEngine_JsonUtility__ToJson((Il2CppObject *)saveData, 0);
   v5 = RecommendedConfigSaveData_TypeInfo;
   v6 = v4;
   if ( !RecommendedConfigSaveData_TypeInfo->_2.cctor_finished )
@@ -139,5 +116,5 @@ void __fastcall RecommendedConfigSaveData__SaveConfig(
     j_il2cpp_runtime_class_init_0(RecommendedConfigSaveData_TypeInfo);
     v5 = RecommendedConfigSaveData_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetString(v5->static_fields->SAVE_KEY, v6, 0LL);
+  UnityEngine_PlayerPrefs__SetString(v5->static_fields->SAVE_KEY, v6, 0);
 }

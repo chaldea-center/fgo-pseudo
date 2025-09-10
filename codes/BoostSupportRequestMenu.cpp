@@ -1,25 +1,22 @@
-void __fastcall BoostSupportRequestMenu___cctor(const MethodInfo *method)
+void BoostSupportRequestMenu___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-
-  if ( (byte_4B16569 & 1) == 0 )
+  if ( (byte_4C21179 & 1) == 0 )
   {
-    sub_1BCAFF8(&BoostSupportRequestMenu_TypeInfo, v1);
-    sub_1BCAFF8(&StringLiteral_10921/*"RECOMMENDED_ICON"*/, v2);
-    byte_4B16569 = 1;
+    sub_1C2D490(&BoostSupportRequestMenu_TypeInfo);
+    sub_1C2D490(&StringLiteral_11001/*"RECOMMENDED_ICON"*/);
+    byte_4C21179 = 1;
   }
-  BoostSupportRequestMenu_TypeInfo->static_fields->RECOMMENDED_ICON = (struct System_String_o *)StringLiteral_10921/*"RECOMMENDED_ICON"*/;
-  sub_1BCAF9C(BoostSupportRequestMenu_TypeInfo->static_fields);
+  BoostSupportRequestMenu_TypeInfo->static_fields->RECOMMENDED_ICON = (struct System_String_o *)StringLiteral_11001/*"RECOMMENDED_ICON"*/;
+  sub_1C2D434(BoostSupportRequestMenu_TypeInfo->static_fields);
 }
 
 
-void __fastcall BoostSupportRequestMenu___ctor(BoostSupportRequestMenu_o *this, const MethodInfo *method)
+void BoostSupportRequestMenu___ctor(BoostSupportRequestMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B16568 & 1) == 0 )
+  if ( (byte_4C21178 & 1) == 0 )
   {
-    sub_1BCAFF8(&BaseDialog_TypeInfo, method);
-    byte_4B16568 = 1;
+    sub_1C2D490(&BaseDialog_TypeInfo);
+    byte_4C21178 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -27,85 +24,78 @@ void __fastcall BoostSupportRequestMenu___ctor(BoostSupportRequestMenu_o *this, 
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BoostSupportRequestMenu__Callback(
+void BoostSupportRequestMenu__Callback(
         BoostSupportRequestMenu_o *this,
         int32_t result,
         int32_t index,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v7; // x22
+  __int64 v8; // x0
   __int64 v9; // x1
-  __int64 v10; // x22
-  __int64 v11; // x0
-  __int64 v12; // x1
   _BOOL4 isBoostItemUseConfirm; // w19
-  System_Action_o *v14; // x19
+  System_Action_o *v11; // x19
 
-  if ( (byte_4B16561 & 1) == 0 )
+  if ( (byte_4C21171 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&result);
-    sub_1BCAFF8(&OptionManager_TypeInfo, v7);
-    sub_1BCAFF8(&Method_BoostSupportRequestMenu___c__DisplayClass26_0__Callback_b__0__, v8);
-    sub_1BCAFF8(&BoostSupportRequestMenu___c__DisplayClass26_0_TypeInfo, v9);
-    byte_4B16561 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&OptionManager_TypeInfo);
+    sub_1C2D490(&Method_BoostSupportRequestMenu___c__DisplayClass26_0__Callback_b__0__);
+    sub_1C2D490(&BoostSupportRequestMenu___c__DisplayClass26_0_TypeInfo);
+    byte_4C21171 = 1;
   }
-  v10 = sub_1BCB244(BoostSupportRequestMenu___c__DisplayClass26_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v10, 0LL);
-  if ( !v10 )
-    sub_1BCB254(v11, v12);
-  *(_QWORD *)(v10 + 16) = this;
-  sub_1BCAF9C(v10 + 16);
-  *(_DWORD *)(v10 + 24) = result;
-  *(_DWORD *)(v10 + 28) = index;
+  v7 = sub_1C2D6DC(BoostSupportRequestMenu___c__DisplayClass26_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0);
+  if ( !v7 )
+    sub_1C2D6EC(v8, v9);
+  *(_QWORD *)(v7 + 16) = this;
+  sub_1C2D434(v7 + 16);
+  *(_DWORD *)(v7 + 24) = result;
+  *(_DWORD *)(v7 + 28) = index;
   isBoostItemUseConfirm = this->fields.isBoostItemUseConfirm;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  OptionManager__SetBoostItemUseConfirm(isBoostItemUseConfirm, 0LL);
-  v14 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
+  OptionManager__SetBoostItemUseConfirm(isBoostItemUseConfirm, 0);
+  v11 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v14,
-    (Il2CppObject *)v10,
+    v11,
+    (Il2CppObject *)v7,
     Method_BoostSupportRequestMenu___c__DisplayClass26_0__Callback_b__0__,
-    0LL);
-  OptionManager__SaveData(v14, 0LL);
+    0);
+  OptionManager__SaveData(v11, 0);
 }
 
 
-void __fastcall BoostSupportRequestMenu__CheckSerializeFieldAssertion(
-        BoostSupportRequestMenu_o *this,
-        const MethodInfo *method)
+void BoostSupportRequestMenu__CheckSerializeFieldAssertion(BoostSupportRequestMenu_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall BoostSupportRequestMenu__Close(
+void BoostSupportRequestMenu__Close(
         BoostSupportRequestMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  System_Action_o *v6; // x20
-  const MethodInfo *v7; // x2
+  System_Action_o *v5; // x20
+  const MethodInfo *v6; // x2
 
-  if ( (byte_4B16562 & 1) == 0 )
+  if ( (byte_4C21172 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, callback);
-    sub_1BCAFF8(&Method_BoostSupportRequestMenu_EndClose__, v5);
-    byte_4B16562 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_BoostSupportRequestMenu_EndClose__);
+    byte_4C21172 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1BCAF9C(&this->fields.closeCallbackFunc);
+  sub_1C2D434(&this->fields.closeCallbackFunc);
   this->fields.state = 4;
-  v6 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v6, (Il2CppObject *)this, Method_BoostSupportRequestMenu_EndClose__, 0LL);
-  BaseDialog__Close((BaseDialog_o *)this, v6, v7);
+  v5 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_BoostSupportRequestMenu_EndClose__, 0);
+  BaseDialog__Close((BaseDialog_o *)this, v5, v6);
 }
 
 
-void __fastcall BoostSupportRequestMenu__EndClose(BoostSupportRequestMenu_o *this, const MethodInfo *method)
+void BoostSupportRequestMenu__EndClose(BoostSupportRequestMenu_o *this, const MethodInfo *method)
 {
   struct System_Action_o **p_closeCallbackFunc; // x19
   struct System_Action_o *v4; // x20
@@ -117,22 +107,20 @@ void __fastcall BoostSupportRequestMenu__EndClose(BoostSupportRequestMenu_o *thi
   v4 = closeCallbackFunc;
   if ( closeCallbackFunc )
   {
-    *p_closeCallbackFunc = 0LL;
-    sub_1BCAF9C(p_closeCallbackFunc);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v4->fields.m_target)(
-      v4->fields.original_method_info,
-      *(_QWORD *)&v4->fields.extra_arg);
+    *p_closeCallbackFunc = 0;
+    sub_1C2D434(p_closeCallbackFunc);
+    ((void (__fastcall *)(intptr_t, intptr_t))v4->fields.invoke_impl)(v4->fields.method_code, v4->fields.method);
   }
 }
 
 
-void __fastcall BoostSupportRequestMenu__EndOpen(BoostSupportRequestMenu_o *this, const MethodInfo *method)
+void BoostSupportRequestMenu__EndOpen(BoostSupportRequestMenu_o *this, const MethodInfo *method)
 {
   this->fields.state = 2;
 }
 
 
-BoostSupportRequsetItemListViewItem_o *__fastcall BoostSupportRequestMenu__GetItem(
+BoostSupportRequsetItemListViewItem_o *BoostSupportRequestMenu__GetItem(
         BoostSupportRequestMenu_o *this,
         int32_t index,
         const MethodInfo *method)
@@ -141,154 +129,149 @@ BoostSupportRequsetItemListViewItem_o *__fastcall BoostSupportRequestMenu__GetIt
 
   itemListViewManager = this->fields.itemListViewManager;
   if ( !itemListViewManager )
-    sub_1BCB254(0LL, index);
+    sub_1C2D6EC(0, index);
   return BoostSupportRequestItemListViewManager__GetItem(itemListViewManager, index, method);
 }
 
 
-void __fastcall BoostSupportRequestMenu__Init(BoostSupportRequestMenu_o *this, const MethodInfo *method)
+void BoostSupportRequestMenu__Init(BoostSupportRequestMenu_o *this, const MethodInfo *method)
 {
   ListViewManager_o *itemListViewManager; // x0
   const MethodInfo *v4; // x1
 
   itemListViewManager = (ListViewManager_o *)this->fields.itemListViewManager;
   if ( !itemListViewManager )
-    sub_1BCB254(0LL, method);
-  ListViewManager__DestroyList(itemListViewManager, 0LL);
+    sub_1C2D6EC(0, method);
+  ListViewManager__DestroyList(itemListViewManager, 0);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, v4);
 }
 
 
-void __fastcall BoostSupportRequestMenu__OnClickCancel(BoostSupportRequestMenu_o *this, const MethodInfo *method)
+void BoostSupportRequestMenu__OnClickCancel(BoostSupportRequestMenu_o *this, const MethodInfo *method)
 {
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B16563 & 1) == 0 )
+  if ( (byte_4C21173 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_BoostSupportRequestMenu_OnClickCancel__, method);
-    byte_4B16563 = 1;
+    sub_1C2D490(&Method_BoostSupportRequestMenu_OnClickCancel__);
+    byte_4C21173 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_BoostSupportRequestMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_BoostSupportRequestMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BCB010();
-    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8();
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     this->fields.state = 3;
     BoostSupportRequestMenu__Callback(this, 0, -1, v5);
   }
 }
 
 
-void __fastcall BoostSupportRequestMenu__OnClickDecide(BoostSupportRequestMenu_o *this, const MethodInfo *method)
+void BoostSupportRequestMenu__OnClickDecide(BoostSupportRequestMenu_o *this, const MethodInfo *method)
 {
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B16564 & 1) == 0 )
+  if ( (byte_4C21174 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_BoostSupportRequestMenu_OnClickDecide__, method);
-    byte_4B16564 = 1;
+    sub_1C2D490(&Method_BoostSupportRequestMenu_OnClickDecide__);
+    byte_4C21174 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_BoostSupportRequestMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_BoostSupportRequestMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1BCB010();
-    v4 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v3, v3[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8();
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     this->fields.state = 3;
     BoostSupportRequestMenu__Callback(this, 1, -1, v5);
   }
 }
 
 
-void __fastcall BoostSupportRequestMenu__OnClickSetupConfirm(BoostSupportRequestMenu_o *this, const MethodInfo *method)
+void BoostSupportRequestMenu__OnClickSetupConfirm(BoostSupportRequestMenu_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  _QWORD *v5; // x0
-  System_Reflection_MethodBase_o *v6; // x0
-  __int64 v7; // x1
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  __int64 v5; // x1
   _BOOL4 isBoostItemUseConfirm; // w8
   UISprite_o *setupConfirmSprite; // x0
-  __int64 *v10; // x8
+  __int64 *v8; // x8
 
-  if ( (byte_4B16566 & 1) == 0 )
+  if ( (byte_4C21176 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_BoostSupportRequestMenu_OnClickSetupConfirm__, method);
-    sub_1BCAFF8(&StringLiteral_17363/*"btn_on"*/, v3);
-    sub_1BCAFF8(&StringLiteral_17362/*"btn_off"*/, v4);
-    byte_4B16566 = 1;
+    sub_1C2D490(&Method_BoostSupportRequestMenu_OnClickSetupConfirm__);
+    sub_1C2D490(&StringLiteral_17501/*"btn_on"*/);
+    sub_1C2D490(&StringLiteral_17500/*"btn_off"*/);
+    byte_4C21176 = 1;
   }
   if ( this->fields.state == 2 )
   {
-    v5 = Method_BoostSupportRequestMenu_OnClickSetupConfirm__;
+    v3 = Method_BoostSupportRequestMenu_OnClickSetupConfirm__;
     if ( (*((_BYTE *)Method_BoostSupportRequestMenu_OnClickSetupConfirm__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1BCB010();
-    v6 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v5, v5[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8();
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     isBoostItemUseConfirm = this->fields.isBoostItemUseConfirm;
     setupConfirmSprite = this->fields.setupConfirmSprite;
     this->fields.isBoostItemUseConfirm = !isBoostItemUseConfirm;
     if ( !setupConfirmSprite )
-      sub_1BCB254(0LL, v7);
+      sub_1C2D6EC(0, v5);
     if ( isBoostItemUseConfirm )
-      v10 = &StringLiteral_17362/*"btn_off"*/;
+      v8 = &StringLiteral_17500/*"btn_off"*/;
     else
-      v10 = &StringLiteral_17363/*"btn_on"*/;
-    UISprite__set_spriteName(setupConfirmSprite, (System_String_o *)*v10, 0LL);
+      v8 = &StringLiteral_17501/*"btn_on"*/;
+    UISprite__set_spriteName(setupConfirmSprite, (System_String_o *)*v8, 0);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BoostSupportRequestMenu__OnSelectItem(
+void BoostSupportRequestMenu__OnSelectItem(
         BoostSupportRequestMenu_o *this,
         int32_t kind,
         int32_t n,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   BoostSupportRequestItemListViewManager_o *itemListViewManager; // x0
   BoostSupportRequsetItemListViewItem_o *Item; // x20
-  _QWORD *v12; // x0
-  System_Reflection_MethodBase_o *v13; // x0
+  _QWORD *v9; // x0
+  System_Reflection_MethodBase_o *v10; // x0
   BoostEntity_o *boostEntity; // x20
-  CommonUI_o *v15; // x21
-  BoostFunctionUtility_CallbackFunc_o *v16; // x22
-  _QWORD *v17; // x0
-  System_Reflection_MethodBase_o *v18; // x0
-  _QWORD *v19; // x0
-  System_Reflection_MethodBase_o *v20; // x0
-  const MethodInfo *v21; // x3
+  CommonUI_o *v12; // x21
+  BoostFunctionUtility_CallbackFunc_o *v13; // x22
+  _QWORD *v14; // x0
+  System_Reflection_MethodBase_o *v15; // x0
+  _QWORD *v16; // x0
+  System_Reflection_MethodBase_o *v17; // x0
+  const MethodInfo *v18; // x3
   int32_t id; // w2
-  BoostSupportRequestMenu_o *v23; // x0
-  int32_t v24; // w1
-  _QWORD *v25; // x0
-  System_Reflection_MethodBase_o *v26; // x0
-  struct BoostEntity_o *v27; // x8
+  BoostSupportRequestMenu_o *v20; // x0
+  int32_t v21; // w1
+  _QWORD *v22; // x0
+  System_Reflection_MethodBase_o *v23; // x0
+  struct BoostEntity_o *v24; // x8
 
-  if ( (byte_4B16565 & 1) == 0 )
+  if ( (byte_4C21175 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_BoostSupportRequestMenu_Callback__, *(_QWORD *)&kind);
-    sub_1BCAFF8(&Method_BoostSupportRequestMenu_OnSelectItem__, v7);
-    sub_1BCAFF8(&BoostFunctionUtility_CallbackFunc_TypeInfo, v8);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    byte_4B16565 = 1;
+    sub_1C2D490(&Method_BoostSupportRequestMenu_Callback__);
+    sub_1C2D490(&Method_BoostSupportRequestMenu_OnSelectItem__);
+    sub_1C2D490(&BoostFunctionUtility_CallbackFunc_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C21175 = 1;
   }
   if ( this->fields.state == 2 )
   {
-    if ( (n & 0x80000000) != 0 )
+    if ( n < 0 )
     {
-      Item = 0LL;
+      Item = 0;
     }
     else
     {
@@ -299,11 +282,11 @@ void __fastcall BoostSupportRequestMenu__OnSelectItem(
     }
     if ( kind == 3 )
     {
-      v17 = Method_BoostSupportRequestMenu_OnSelectItem__;
+      v14 = Method_BoostSupportRequestMenu_OnSelectItem__;
       if ( (*((_BYTE *)Method_BoostSupportRequestMenu_OnSelectItem__ + 83) & 2) != 0 )
-        v17 = (_QWORD *)sub_1BCB010();
-      v18 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v17, v17[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v18, 2, 0, 0LL);
+        v14 = (_QWORD *)sub_1C2D4A8();
+      v15 = (System_Reflection_MethodBase_o *)sub_1C2D474(v14, v14[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v15, 2, 0, 0);
     }
     else
     {
@@ -314,68 +297,67 @@ void __fastcall BoostSupportRequestMenu__OnSelectItem(
           itemListViewManager = (BoostSupportRequestItemListViewManager_o *)this->fields.setupConfirmSprite;
           if ( !itemListViewManager )
             goto LABEL_33;
-          if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)itemListViewManager, 0LL) )
+          if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)itemListViewManager, 0) )
           {
-            v12 = Method_BoostSupportRequestMenu_OnSelectItem__;
+            v9 = Method_BoostSupportRequestMenu_OnSelectItem__;
             if ( (*((_BYTE *)Method_BoostSupportRequestMenu_OnSelectItem__ + 83) & 2) != 0 )
-              v12 = (_QWORD *)sub_1BCB010();
-            v13 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v12, v12[4]);
-            OverwriteAssetSoundName__PlaySystemSe(v13, 0, 0, 0LL);
-            itemListViewManager = (BoostSupportRequestItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+              v9 = (_QWORD *)sub_1C2D4A8();
+            v10 = (System_Reflection_MethodBase_o *)sub_1C2D474(v9, v9[4]);
+            OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
+            itemListViewManager = (BoostSupportRequestItemListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
             if ( Item )
             {
               boostEntity = Item->fields.boostEntity;
-              v15 = (CommonUI_o *)itemListViewManager;
-              v16 = (BoostFunctionUtility_CallbackFunc_o *)sub_1BCB244(BoostFunctionUtility_CallbackFunc_TypeInfo);
+              v12 = (CommonUI_o *)itemListViewManager;
+              v13 = (BoostFunctionUtility_CallbackFunc_o *)sub_1C2D6DC(BoostFunctionUtility_CallbackFunc_TypeInfo);
               BoostFunctionUtility_CallbackFunc___ctor(
-                v16,
+                v13,
                 (Il2CppObject *)this,
                 Method_BoostSupportRequestMenu_Callback__,
-                0LL);
-              if ( v15 )
+                0);
+              if ( v12 )
               {
-                CommonUI__OpenBoostSupportRequestReconfirmationMenu(v15, boostEntity, v16, 0LL);
+                CommonUI__OpenBoostSupportRequestReconfirmationMenu(v12, boostEntity, v13, 0);
                 return;
               }
             }
 LABEL_33:
-            sub_1BCB254(itemListViewManager, *(_QWORD *)&kind);
+            sub_1C2D6EC(itemListViewManager, *(_QWORD *)&kind);
           }
         }
-        v25 = Method_BoostSupportRequestMenu_OnSelectItem__;
+        v22 = Method_BoostSupportRequestMenu_OnSelectItem__;
         if ( (*((_BYTE *)Method_BoostSupportRequestMenu_OnSelectItem__ + 83) & 2) != 0 )
-          v25 = (_QWORD *)sub_1BCB010();
-        v26 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v25, v25[4]);
-        OverwriteAssetSoundName__PlaySystemSe(v26, 8, 0, 0LL);
+          v22 = (_QWORD *)sub_1C2D4A8();
+        v23 = (System_Reflection_MethodBase_o *)sub_1C2D474(v22, v22[4]);
+        OverwriteAssetSoundName__PlaySystemSe(v23, 8, 0, 0);
         if ( !Item )
           goto LABEL_33;
-        v27 = Item->fields.boostEntity;
-        if ( v27 )
-          id = v27->fields.id;
+        v24 = Item->fields.boostEntity;
+        if ( v24 )
+          id = v24->fields.id;
         else
           id = 0;
-        v24 = 2;
-        v23 = this;
+        v21 = 2;
+        v20 = this;
       }
       else
       {
-        v19 = Method_BoostSupportRequestMenu_OnSelectItem__;
+        v16 = Method_BoostSupportRequestMenu_OnSelectItem__;
         if ( (*((_BYTE *)Method_BoostSupportRequestMenu_OnSelectItem__ + 83) & 2) != 0 )
-          v19 = (_QWORD *)sub_1BCB010();
-        v20 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v19, v19[4]);
-        OverwriteAssetSoundName__PlaySystemSe(v20, 1, 0, 0LL);
+          v16 = (_QWORD *)sub_1C2D4A8();
+        v17 = (System_Reflection_MethodBase_o *)sub_1C2D474(v16, v16[4]);
+        OverwriteAssetSoundName__PlaySystemSe(v17, 1, 0, 0);
         id = -1;
-        v23 = this;
-        v24 = 0;
+        v20 = this;
+        v21 = 0;
       }
-      BoostSupportRequestMenu__Callback(v23, v24, id, v21);
+      BoostSupportRequestMenu__Callback(v20, v21, id, v18);
     }
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BoostSupportRequestMenu__Open(
+void BoostSupportRequestMenu__Open(
         BoostSupportRequestMenu_o *this,
         int32_t questId,
         int32_t questPhase,
@@ -383,653 +365,610 @@ void __fastcall BoostSupportRequestMenu__Open(
         bool isRetryBattle,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  __int64 v26; // x1
-  __int64 v27; // x1
-  __int64 v28; // x1
-  __int64 v29; // x1
-  __int64 v30; // x1
-  __int64 v31; // x1
-  __int64 v32; // x1
-  __int64 v33; // x1
-  __int64 v34; // x1
-  __int64 v35; // x1
-  __int64 v36; // x1
-  __int64 v37; // x1
-  __int64 v38; // x1
-  __int64 v39; // x1
-  __int64 v40; // x1
-  __int64 v41; // x1
-  __int64 v42; // x1
-  __int64 v43; // x1
-  __int64 v44; // x1
-  __int64 v45; // x1
-  __int64 v46; // x1
   void *Master_object; // x0
-  __int64 v48; // x1
+  __int64 v12; // x1
   UILabel_o *titleLabel; // x21
   int32_t ScriptIntParam; // w1
+  System_Nullable_int__o v15; // x0
   struct System_Collections_Generic_List_T__o *list; // x8
-  System_String_o *v52; // x0
-  System_String_o *v53; // x0
+  System_Nullable_int__o v17; // x0
+  System_String_o *v18; // x0
+  System_String_o *v19; // x0
   UILabel_o *titleDetailLabel; // x21
-  System_String_o *v55; // x24
-  bool v56; // w25
-  System_String_o *v57; // x0
+  System_String_o *v21; // x24
+  bool v22; // w25
+  System_String_o *v23; // x0
   UILabel_o *useConfirmOptionLabel; // x21
   UILabel_o *decideLabel; // x21
   UILabel_o *cancelLabel; // x21
   QuestPhaseEntity_o *ScriptIntArrayParam; // x21
-  BoostSupportRequestMenu_c *v62; // x0
+  BoostSupportRequestMenu_c *v28; // x0
   BoostSupportRequestMenu_o *SupportRequestAllowed; // x0
-  const MethodInfo *v64; // x3
-  BoostEntity_array *v65; // x22
-  System_Collections_Generic_List_int__o *v66; // x23
-  __int64 v67; // x2
-  __int64 v68; // x3
+  const MethodInfo *v30; // x3
+  BoostEntity_array *v31; // x22
+  System_Collections_Generic_List_int__o *v32; // x23
+  __int64 v33; // x2
+  __int64 v34; // x3
   int max_length; // w8
-  unsigned int v70; // w19
-  BoostEntity_o *v71; // x24
-  int v72; // w8
-  void *v73; // x24
-  unsigned int v74; // w26
-  __int64 v75; // x27
+  unsigned int v36; // w19
+  BoostEntity_o *v37; // x24
+  int v38; // w8
+  void *v39; // x24
+  unsigned int v40; // w26
+  __int64 v41; // x27
   struct System_Int32_array *items; // x8
-  _QWORD *v77; // x9
+  _QWORD *v43; // x9
   __int64 size; // x10
   struct UserItemEntity_array **p_mUsrItemEntityList; // x25
-  int32_t v80; // w26
-  struct UserItemEntity_array *v81; // x20
-  __int64 v82; // x1
-  Il2CppObject *v83; // x27
-  NetworkManager_c *v84; // x0
+  int32_t v46; // w26
+  struct UserItemEntity_array *v47; // x20
+  Il2CppObject *v48; // x27
+  NetworkManager_c *v49; // x0
   int64_t userIdNumber; // x28
   __int64 Item; // x0
-  __int64 v87; // x1
+  __int64 v52; // x1
   UserItemEntity_o *EntityDefinitely; // x0
-  __int64 v89; // x1
-  __int64 v90; // x2
-  __int64 v91; // x3
-  UserItemEntity_o *v92; // x27
-  Il2CppClass **v93; // x0
-  const MethodInfo *v94; // x4
+  __int64 v54; // x1
+  __int64 v55; // x2
+  __int64 v56; // x3
+  UserItemEntity_o *v57; // x27
+  Il2CppClass **v58; // x0
+  const MethodInfo *v59; // x4
   struct EventItemComponent_array *eventItemIconList; // x8
-  EventItemComponent_o *v96; // x24
-  struct EventItemComponent_array *v97; // x8
-  EventItemComponent_o *v98; // x24
-  struct EventItemComponent_array *v99; // x8
-  EventItemComponent_o *v100; // x24
+  EventItemComponent_o *v61; // x24
+  struct EventItemComponent_array *v62; // x8
+  EventItemComponent_o *v63; // x24
+  struct EventItemComponent_array *v64; // x8
+  EventItemComponent_o *v65; // x24
   BoostSupportRequestItemListViewManager_o *itemListViewManager; // x21
-  BoostSupportRequestItemListViewManager_CallbackFunc_o *v102; // x22
-  const MethodInfo *v103; // x3
-  const MethodInfo *v104; // x2
-  __int64 *v105; // x8
-  _QWORD *v106; // x0
-  System_Reflection_MethodBase_o *v107; // x0
-  System_Action_o *v108; // x20
-  const MethodInfo *v109; // x3
-  __int64 v110; // x0
-  BoostSupportRequestMenu_o *v111; // [xsp+0h] [xbp-C0h]
-  System_Collections_Generic_List_Enumerator_int__o v112; // [xsp+18h] [xbp-A8h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v113; // [xsp+30h] [xbp-90h] BYREF
-  struct System_Collections_Generic_List_T__o *v114; // [xsp+50h] [xbp-70h] BYREF
+  BoostSupportRequestItemListViewManager_CallbackFunc_o *v67; // x22
+  const MethodInfo *v68; // x3
+  const MethodInfo *v69; // x2
+  __int64 *v70; // x8
+  _QWORD *v71; // x0
+  System_Reflection_MethodBase_o *v72; // x0
+  System_Action_o *v73; // x20
+  const MethodInfo *v74; // x3
+  __int64 v75; // x0
+  BoostSupportRequestMenu_o *v76; // [xsp+0h] [xbp-C0h]
+  System_Collections_Generic_List_Enumerator_int__o v77; // [xsp+18h] [xbp-A8h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v78; // [xsp+30h] [xbp-90h] BYREF
+  struct System_Collections_Generic_List_T__o *v79; // [xsp+50h] [xbp-70h] BYREF
   QuestPhaseEntity_o *entity; // [xsp+58h] [xbp-68h] BYREF
-  System_Nullable_int__o v116; // 0:x0.8
-  System_Nullable_int__o v117; // 0:x0.8
 
-  if ( (byte_4B1655F & 1) == 0 )
+  if ( (byte_4C2116F & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&questId);
-    sub_1BCAFF8(&Method_BoostSupportRequestMenu_EndOpen__, v11);
-    sub_1BCAFF8(&Method_BoostSupportRequestMenu_OnSelectItem__, v12);
-    sub_1BCAFF8(&Method_BoostSupportRequestMenu_Open__, v13);
-    sub_1BCAFF8(&BoostSupportRequestMenu_TypeInfo, v14);
-    sub_1BCAFF8(&BoostSupportRequestItemListViewManager_CallbackFunc_TypeInfo, v15);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_CommonConsumeMaster___, v16);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_QuestPhaseMaster___, v17);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_UserItemMaster___, v18);
-    sub_1BCAFF8(&DataManager_TypeInfo, v19);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__, v20);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__, v21);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__, v22);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__Add__, v23);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__Contains__, v24);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__GetEnumerator__, v25);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int___ctor__, v26);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__get_Count__, v27);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__get_Item__, v28);
-    sub_1BCAFF8(&System_Collections_Generic_List_int__TypeInfo, v29);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v30);
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v31);
-    sub_1BCAFF8(&Method_System_Nullable_int__ToString__, v32);
-    sub_1BCAFF8(&Method_System_Nullable_int___ctor__, v33);
-    sub_1BCAFF8(&OptionManager_TypeInfo, v34);
-    sub_1BCAFF8(&Method_SingletonTemplate_BoostFunctionUtility__get_Instance__, v35);
-    sub_1BCAFF8(&UserItemEntity___TypeInfo, v36);
-    sub_1BCAFF8(&StringLiteral_2954/*"BOOST_SUPPORT_REQUEST_USE_DETAIL_SUPPORT_REQUEST"*/, v37);
-    sub_1BCAFF8(&StringLiteral_17363/*"btn_on"*/, v38);
-    sub_1BCAFF8(&StringLiteral_2955/*"BOOST_SUPPORT_REQUEST_USE_DETAIL_SUPPORT_REQUEST_"*/, v39);
-    sub_1BCAFF8(&StringLiteral_3650/*"COMMON_CONFIRM_CLOSE"*/, v40);
-    sub_1BCAFF8(&StringLiteral_2961/*"BOOST_SUPPORT_REQUEST_USE_TITLE_SUPPORT_REQUEST"*/, v41);
-    sub_1BCAFF8(&StringLiteral_17195/*"boostDialogSubtitleId"*/, v42);
-    sub_1BCAFF8(&StringLiteral_2953/*"BOOST_SUPPORT_REQUEST_USE_DECIDE"*/, v43);
-    sub_1BCAFF8(&StringLiteral_17194/*"boostDialogOnOffButtonHide"*/, v44);
-    sub_1BCAFF8(&StringLiteral_2957/*"BOOST_SUPPORT_REQUEST_USE_OPTION_SUPPORT_REQUEST"*/, v45);
-    sub_1BCAFF8(&StringLiteral_17362/*"btn_off"*/, v46);
-    byte_4B1655F = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_BoostSupportRequestMenu_EndOpen__);
+    sub_1C2D490(&Method_BoostSupportRequestMenu_OnSelectItem__);
+    sub_1C2D490(&Method_BoostSupportRequestMenu_Open__);
+    sub_1C2D490(&BoostSupportRequestMenu_TypeInfo);
+    sub_1C2D490(&BoostSupportRequestItemListViewManager_CallbackFunc_TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMaster_CommonConsumeMaster___);
+    sub_1C2D490(&Method_DataManager_GetMaster_QuestPhaseMaster___);
+    sub_1C2D490(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C2D490(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&Method_System_Nullable_int__ToString__);
+    sub_1C2D490(&Method_System_Nullable_int___ctor__);
+    sub_1C2D490(&OptionManager_TypeInfo);
+    sub_1C2D490(&Method_SingletonTemplate_BoostFunctionUtility__get_Instance__);
+    sub_1C2D490(&UserItemEntity___TypeInfo);
+    sub_1C2D490(&StringLiteral_2970/*"BOOST_SUPPORT_REQUEST_USE_DETAIL_SUPPORT_REQUEST"*/);
+    sub_1C2D490(&StringLiteral_17501/*"btn_on"*/);
+    sub_1C2D490(&StringLiteral_2971/*"BOOST_SUPPORT_REQUEST_USE_DETAIL_SUPPORT_REQUEST_"*/);
+    sub_1C2D490(&StringLiteral_3678/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C2D490(&StringLiteral_2977/*"BOOST_SUPPORT_REQUEST_USE_TITLE_SUPPORT_REQUEST"*/);
+    sub_1C2D490(&StringLiteral_17329/*"boostDialogSubtitleId"*/);
+    sub_1C2D490(&StringLiteral_2969/*"BOOST_SUPPORT_REQUEST_USE_DECIDE"*/);
+    sub_1C2D490(&StringLiteral_17328/*"boostDialogOnOffButtonHide"*/);
+    sub_1C2D490(&StringLiteral_2973/*"BOOST_SUPPORT_REQUEST_USE_OPTION_SUPPORT_REQUEST"*/);
+    sub_1C2D490(&StringLiteral_17500/*"btn_off"*/);
+    byte_4C2116F = 1;
   }
-  v114 = 0LL;
-  entity = 0LL;
-  memset(&v113, 0, sizeof(v113));
+  v79 = 0;
+  entity = 0;
+  memset(&v78, 0, sizeof(v78));
   this->fields.callbackFunc = callback;
-  sub_1BCAF9C(&this->fields.callbackFunc);
+  sub_1C2D434(&this->fields.callbackFunc);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
-  this->fields.isBoostItemUseConfirm = OptionManager__GetBoostItemUseConfirm(0LL);
+  this->fields.isBoostItemUseConfirm = OptionManager__GetBoostItemUseConfirm(0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_QuestPhaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_QuestPhaseMaster___);
   if ( !Master_object )
     goto LABEL_102;
-  QuestPhaseMaster__TryGetEntity((QuestPhaseMaster_o *)Master_object, &entity, questId, questPhase, 0LL);
+  QuestPhaseMaster__TryGetEntity((QuestPhaseMaster_o *)Master_object, &entity, questId, questPhase, 0);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_2961/*"BOOST_SUPPORT_REQUEST_USE_TITLE_SUPPORT_REQUEST"*/, 0LL);
+  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_2977/*"BOOST_SUPPORT_REQUEST_USE_TITLE_SUPPORT_REQUEST"*/, 0);
   if ( !titleLabel )
     goto LABEL_102;
-  UILabel__set_text(titleLabel, (System_String_o *)Master_object, 0LL);
+  UILabel__set_text(titleLabel, (System_String_o *)Master_object, 0);
   if ( entity )
   {
-    ScriptIntParam = QuestPhaseEntity__getScriptIntParam(entity, (System_String_o *)StringLiteral_17195/*"boostDialogSubtitleId"*/, 0, 0LL);
-    v116 = (System_Nullable_int__o)&v112;
-    v112.fields._list = 0LL;
-    System_Nullable_int____ctor(v116, ScriptIntParam, (const MethodInfo_37D8E28 *)Method_System_Nullable_int___ctor__);
-    list = v112.fields._list;
+    ScriptIntParam = QuestPhaseEntity__getScriptIntParam(entity, (System_String_o *)StringLiteral_17329/*"boostDialogSubtitleId"*/, 0, 0);
+    v15 = (System_Nullable_int__o)&v77;
+    v77.fields._list = 0;
+    System_Nullable_int____ctor(v15, ScriptIntParam, (const MethodInfo_38AF304 *)Method_System_Nullable_int___ctor__);
+    list = v77.fields._list;
   }
   else
   {
-    list = 0LL;
+    list = 0;
   }
-  v117 = (System_Nullable_int__o)&v114;
-  v114 = list;
-  v52 = System_Nullable_int___ToString(v117, (const MethodInfo_37D8F38 *)Method_System_Nullable_int__ToString__);
-  v53 = System_String__Concat_62450424((System_String_o *)StringLiteral_2955/*"BOOST_SUPPORT_REQUEST_USE_DETAIL_SUPPORT_REQUEST_"*/, v52, 0LL);
+  v17 = (System_Nullable_int__o)&v79;
+  v79 = list;
+  v18 = System_Nullable_int___ToString(v17, (const MethodInfo_38AF414 *)Method_System_Nullable_int__ToString__);
+  v19 = System_String__Concat_63457864((System_String_o *)StringLiteral_2971/*"BOOST_SUPPORT_REQUEST_USE_DETAIL_SUPPORT_REQUEST_"*/, v18, 0);
   titleDetailLabel = this->fields.titleDetailLabel;
-  v55 = v53;
+  v21 = v19;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v56 = LocalizationManager__ContainsKey(v55, 0LL);
+  v22 = LocalizationManager__ContainsKey(v21, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v57 = v56 ? v55 : (System_String_o *)StringLiteral_2954/*"BOOST_SUPPORT_REQUEST_USE_DETAIL_SUPPORT_REQUEST"*/;
-  Master_object = LocalizationManager__Get(v57, 0LL);
+  v23 = v22 ? v21 : (System_String_o *)StringLiteral_2970/*"BOOST_SUPPORT_REQUEST_USE_DETAIL_SUPPORT_REQUEST"*/;
+  Master_object = LocalizationManager__Get(v23, 0);
   if ( !titleDetailLabel )
     goto LABEL_102;
-  UILabel__set_text(titleDetailLabel, (System_String_o *)Master_object, 0LL);
+  UILabel__set_text(titleDetailLabel, (System_String_o *)Master_object, 0);
   useConfirmOptionLabel = this->fields.useConfirmOptionLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_2957/*"BOOST_SUPPORT_REQUEST_USE_OPTION_SUPPORT_REQUEST"*/, 0LL);
+  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_2973/*"BOOST_SUPPORT_REQUEST_USE_OPTION_SUPPORT_REQUEST"*/, 0);
   if ( !useConfirmOptionLabel )
     goto LABEL_102;
-  UILabel__set_text(useConfirmOptionLabel, (System_String_o *)Master_object, 0LL);
+  UILabel__set_text(useConfirmOptionLabel, (System_String_o *)Master_object, 0);
   decideLabel = this->fields.decideLabel;
-  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_2953/*"BOOST_SUPPORT_REQUEST_USE_DECIDE"*/, 0LL);
+  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_2969/*"BOOST_SUPPORT_REQUEST_USE_DECIDE"*/, 0);
   if ( !decideLabel )
     goto LABEL_102;
-  UILabel__set_text(decideLabel, (System_String_o *)Master_object, 0LL);
+  UILabel__set_text(decideLabel, (System_String_o *)Master_object, 0);
   cancelLabel = this->fields.cancelLabel;
-  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_3650/*"COMMON_CONFIRM_CLOSE"*/, 0LL);
+  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !cancelLabel )
     goto LABEL_102;
-  UILabel__set_text(cancelLabel, (System_String_o *)Master_object, 0LL);
+  UILabel__set_text(cancelLabel, (System_String_o *)Master_object, 0);
   ScriptIntArrayParam = entity;
   if ( entity )
   {
-    v62 = BoostSupportRequestMenu_TypeInfo;
+    v28 = BoostSupportRequestMenu_TypeInfo;
     if ( !BoostSupportRequestMenu_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BoostSupportRequestMenu_TypeInfo);
-      v62 = BoostSupportRequestMenu_TypeInfo;
+      v28 = BoostSupportRequestMenu_TypeInfo;
     }
     ScriptIntArrayParam = (QuestPhaseEntity_o *)QuestPhaseEntity__getScriptIntArrayParam(
                                                   ScriptIntArrayParam,
-                                                  v62->static_fields->RECOMMENDED_ICON,
-                                                  0LL,
-                                                  0LL);
+                                                  v28->static_fields->RECOMMENDED_ICON,
+                                                  0,
+                                                  0);
   }
-  Master_object = SingletonTemplate_object___get_Instance((const MethodInfo_38F8EF8 *)Method_SingletonTemplate_BoostFunctionUtility__get_Instance__);
+  Master_object = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_BoostFunctionUtility__get_Instance__);
   if ( !Master_object )
     goto LABEL_102;
   SupportRequestAllowed = (BoostSupportRequestMenu_o *)BoostFunctionUtility__GetSupportRequestAllowed(
                                                          (BoostFunctionUtility_o *)Master_object,
                                                          questId,
                                                          questPhase,
-                                                         0LL);
-  v65 = BoostSupportRequestMenu__RearrangesRecommendedBoostFirst(
+                                                         0);
+  v31 = BoostSupportRequestMenu__RearrangesRecommendedBoostFirst(
           SupportRequestAllowed,
           (BoostEntity_array *)SupportRequestAllowed,
           (System_Int32_array *)ScriptIntArrayParam,
-          v64);
-  v66 = (System_Collections_Generic_List_int__o *)sub_1BCB244(System_Collections_Generic_List_int__TypeInfo);
+          v30);
+  v32 = (System_Collections_Generic_List_int__o *)sub_1C2D6DC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v66,
-    (const MethodInfo_369C358 *)Method_System_Collections_Generic_List_int___ctor__);
-  if ( !v65 )
+    v32,
+    (const MethodInfo_376C30C *)Method_System_Collections_Generic_List_int___ctor__);
+  if ( !v31 )
     goto LABEL_102;
-  max_length = v65->max_length;
+  max_length = v31->max_length;
   if ( max_length >= 1 )
   {
-    v70 = 0;
+    v36 = 0;
     while ( 1 )
     {
-      if ( v70 >= max_length )
+      if ( v36 >= max_length )
         goto LABEL_103;
-      v71 = v65->m_Items[v70];
-      if ( !v71 )
+      v37 = v31->m_Items[v36];
+      if ( !v37 )
         goto LABEL_102;
-      if ( v71->fields.commonConsumeId )
+      if ( v37->fields.commonConsumeId )
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_CommonConsumeMaster___);
         if ( !Master_object )
           goto LABEL_102;
         Master_object = CommonConsumeMaster__GetIdEntityList(
                           (CommonConsumeMaster_o *)Master_object,
-                          v71->fields.commonConsumeId,
-                          0LL);
+                          v37->fields.commonConsumeId,
+                          0);
         if ( !Master_object )
           goto LABEL_102;
-        v72 = *((_DWORD *)Master_object + 6);
-        v73 = Master_object;
-        if ( v72 >= 1 )
+        v38 = *((_DWORD *)Master_object + 6);
+        v39 = Master_object;
+        if ( v38 >= 1 )
           break;
       }
 LABEL_54:
-      max_length = v65->max_length;
-      if ( (int)++v70 >= max_length )
+      max_length = v31->max_length;
+      if ( (int)++v36 >= max_length )
         goto LABEL_55;
     }
-    v74 = 0;
-    while ( v74 < v72 )
+    v40 = 0;
+    while ( v40 < v38 )
     {
-      v75 = *((_QWORD *)v73 + (int)v74 + 4);
-      if ( !v75 )
+      v41 = *((_QWORD *)v39 + (int)v40 + 4);
+      if ( !v41 )
         goto LABEL_102;
-      if ( *(_DWORD *)(v75 + 24) == 1 )
+      if ( *(_DWORD *)(v41 + 24) == 1 )
       {
-        if ( !v66 )
+        if ( !v32 )
           goto LABEL_102;
         Master_object = (void *)System_Collections_Generic_List_int___Contains(
-                                  v66,
-                                  *(_DWORD *)(v75 + 28),
-                                  (const MethodInfo_369CF24 *)Method_System_Collections_Generic_List_int__Contains__);
+                                  v32,
+                                  *(_DWORD *)(v41 + 28),
+                                  (const MethodInfo_376CED8 *)Method_System_Collections_Generic_List_int__Contains__);
         if ( ((unsigned __int8)Master_object & 1) == 0 )
         {
-          v48 = *(unsigned int *)(v75 + 28);
-          items = v66->fields._items;
-          v77 = Method_System_Collections_Generic_List_int__Add__;
-          ++v66->fields._version;
+          v12 = *(unsigned int *)(v41 + 28);
+          items = v32->fields._items;
+          v43 = Method_System_Collections_Generic_List_int__Add__;
+          ++v32->fields._version;
           if ( !items )
             goto LABEL_102;
-          size = v66->fields._size;
-          if ( (unsigned int)size >= items->max_length )
+          size = v32->fields._size;
+          if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_int___AddWithResize(
-              v66,
-              v48,
-              *(const MethodInfo_369CBAC **)(*(_QWORD *)(v77[4] + 192LL) + 112LL));
+              v32,
+              v12,
+              *(const MethodInfo_376CB60 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
           }
           else
           {
-            v66->fields._size = size + 1;
-            items->m_Items[size + 1] = v48;
+            v32->fields._size = size + 1;
+            items->m_Items[size] = v12;
           }
         }
       }
-      v72 = *((_DWORD *)v73 + 6);
-      if ( (int)++v74 >= v72 )
+      v38 = *((_DWORD *)v39 + 6);
+      if ( (int)++v40 >= v38 )
         goto LABEL_54;
     }
 LABEL_103:
-    sub_1BCB25C(Master_object, v48, v67, v68);
+    sub_1C2D6F4(Master_object, v12, v33, v34);
   }
 LABEL_55:
-  if ( !v66 )
+  if ( !v32 )
     goto LABEL_102;
   Master_object = this->fields.eventItemsInfoBase;
   if ( !Master_object )
     goto LABEL_102;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v66->fields._size > 0, 0LL);
-  this->fields.mUsrItemEntityList = (struct UserItemEntity_array *)sub_1BCB0A0(
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v32->fields._size > 0, 0);
+  this->fields.mUsrItemEntityList = (struct UserItemEntity_array *)sub_1C2D538(
                                                                      UserItemEntity___TypeInfo,
-                                                                     (unsigned int)v66->fields._size);
+                                                                     (unsigned int)v32->fields._size);
   p_mUsrItemEntityList = &this->fields.mUsrItemEntityList;
-  v111 = this;
-  sub_1BCAF9C(&this->fields.mUsrItemEntityList);
+  v76 = this;
+  sub_1C2D434(&this->fields.mUsrItemEntityList);
   System_Collections_Generic_List_int___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v112,
-    v66,
-    (const MethodInfo_369D680 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  v80 = 0;
-  v113 = v112;
+    (System_Collections_Generic_List_Enumerator_T__o *)&v77,
+    v32,
+    (const MethodInfo_376D634 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  v46 = 0;
+  v78 = v77;
   while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
-            &v113,
-            (const MethodInfo_344B704 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            &v78,
+            (const MethodInfo_35106F0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
-    v81 = *p_mUsrItemEntityList;
+    v47 = *p_mUsrItemEntityList;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    v83 = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_UserItemMaster___);
+    v48 = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserItemMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4B165D1 )
+    if ( !byte_4C211E1 )
     {
-      sub_1BCAFF8(&NetworkManager_TypeInfo, v82);
-      byte_4B165D1 = 1;
+      sub_1C2D490(&NetworkManager_TypeInfo);
+      byte_4C211E1 = 1;
     }
-    v84 = NetworkManager_TypeInfo;
+    v49 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v84 = NetworkManager_TypeInfo;
+      v49 = NetworkManager_TypeInfo;
     }
-    userIdNumber = v84->static_fields->userIdNumber;
+    userIdNumber = v49->static_fields->userIdNumber;
     Item = System_Collections_Generic_List_int___get_Item(
-             v66,
-             v80,
-             (const MethodInfo_369C8BC *)Method_System_Collections_Generic_List_int__get_Item__);
-    if ( !v83 )
-      sub_1BCB254(Item, v87);
-    EntityDefinitely = UserItemMaster__GetEntityDefinitely((UserItemMaster_o *)v83, userIdNumber, Item, 0LL);
-    if ( !v81 )
-      sub_1BCB254(EntityDefinitely, v89);
-    v92 = EntityDefinitely;
+             v32,
+             v46,
+             (const MethodInfo_376C870 *)Method_System_Collections_Generic_List_int__get_Item__);
+    if ( !v48 )
+      sub_1C2D6EC(Item, v52);
+    EntityDefinitely = UserItemMaster__GetEntityDefinitely((UserItemMaster_o *)v48, userIdNumber, Item, 0);
+    if ( !v47 )
+      sub_1C2D6EC(EntityDefinitely, v54);
+    v57 = EntityDefinitely;
     if ( EntityDefinitely )
     {
-      EntityDefinitely = (UserItemEntity_o *)sub_1BCB134(EntityDefinitely, v81->obj.klass->_1.element_class);
+      EntityDefinitely = (UserItemEntity_o *)sub_1C2D5CC(EntityDefinitely, v47->obj.klass->_1.element_class);
       if ( !EntityDefinitely )
       {
-        v110 = sub_1BCB278();
-        sub_1BCB120(v110, 0LL);
+        v75 = sub_1C2D710();
+        sub_1C2D5B8(v75, 0);
       }
     }
-    if ( v80 >= v81->max_length )
-      sub_1BCB25C(EntityDefinitely, v89, v90, v91);
-    v93 = &v81->obj.klass + v80;
-    v93[4] = (Il2CppClass *)v92;
-    sub_1BCAF9C(v93 + 4);
-    ++v80;
+    if ( (unsigned int)v46 >= LODWORD(v47->max_length) )
+      sub_1C2D6F4(EntityDefinitely, v54, v55, v56);
+    v58 = &v47->obj.klass + v46;
+    v58[4] = (Il2CppClass *)v57;
+    sub_1C2D434(v58 + 4);
+    ++v46;
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
-    &v113,
-    (const MethodInfo_344B700 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-  if ( v66->fields._size >= 1 )
+    &v78,
+    (const MethodInfo_35106EC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+  if ( v32->fields._size >= 1 )
   {
-    eventItemIconList = v111->fields.eventItemIconList;
+    eventItemIconList = v76->fields.eventItemIconList;
     if ( !eventItemIconList )
       goto LABEL_102;
-    if ( !eventItemIconList->max_length )
+    if ( !LODWORD(eventItemIconList->max_length) )
       goto LABEL_103;
-    v96 = eventItemIconList->m_Items[0];
+    v61 = eventItemIconList->m_Items[0];
     Master_object = (void *)System_Collections_Generic_List_int___get_Item(
-                              v66,
+                              v32,
                               0,
-                              (const MethodInfo_369C8BC *)Method_System_Collections_Generic_List_int__get_Item__);
-    if ( !v96 )
+                              (const MethodInfo_376C870 *)Method_System_Collections_Generic_List_int__get_Item__);
+    if ( !v61 )
       goto LABEL_102;
-    EventItemComponent__Set(v96, (int32_t)Master_object, 0LL);
-    if ( v66->fields._size >= 2 )
+    EventItemComponent__Set(v61, (int32_t)Master_object, 0);
+    if ( v32->fields._size >= 2 )
     {
-      v97 = v111->fields.eventItemIconList;
-      if ( !v97 )
+      v62 = v76->fields.eventItemIconList;
+      if ( !v62 )
         goto LABEL_102;
-      if ( v97->max_length <= 1 )
+      if ( LODWORD(v62->max_length) <= 1 )
         goto LABEL_103;
-      v98 = v97->m_Items[1];
+      v63 = v62->m_Items[1];
       Master_object = (void *)System_Collections_Generic_List_int___get_Item(
-                                v66,
+                                v32,
                                 1,
-                                (const MethodInfo_369C8BC *)Method_System_Collections_Generic_List_int__get_Item__);
-      if ( !v98 )
+                                (const MethodInfo_376C870 *)Method_System_Collections_Generic_List_int__get_Item__);
+      if ( !v63 )
         goto LABEL_102;
-      EventItemComponent__Set(v98, (int32_t)Master_object, 0LL);
-      if ( v66->fields._size >= 3 )
+      EventItemComponent__Set(v63, (int32_t)Master_object, 0);
+      if ( v32->fields._size >= 3 )
       {
-        v99 = v111->fields.eventItemIconList;
-        if ( !v99 )
+        v64 = v76->fields.eventItemIconList;
+        if ( !v64 )
           goto LABEL_102;
-        if ( v99->max_length <= 2 )
+        if ( LODWORD(v64->max_length) <= 2 )
           goto LABEL_103;
-        v100 = v99->m_Items[2];
+        v65 = v64->m_Items[2];
         Master_object = (void *)System_Collections_Generic_List_int___get_Item(
-                                  v66,
+                                  v32,
                                   2,
-                                  (const MethodInfo_369C8BC *)Method_System_Collections_Generic_List_int__get_Item__);
-        if ( !v100 )
+                                  (const MethodInfo_376C870 *)Method_System_Collections_Generic_List_int__get_Item__);
+        if ( !v65 )
           goto LABEL_102;
-        EventItemComponent__Set(v100, (int32_t)Master_object, 0LL);
+        EventItemComponent__Set(v65, (int32_t)Master_object, 0);
       }
     }
   }
-  Master_object = v111->fields.itemListViewManager;
+  Master_object = v76->fields.itemListViewManager;
   if ( !Master_object )
     goto LABEL_102;
   BoostSupportRequestItemListViewManager__CreateList(
     (BoostSupportRequestItemListViewManager_o *)Master_object,
-    v65,
+    v31,
     (System_Int32_array *)ScriptIntArrayParam,
-    v111->fields.mUsrItemEntityList,
-    v94);
-  itemListViewManager = v111->fields.itemListViewManager;
-  v102 = (BoostSupportRequestItemListViewManager_CallbackFunc_o *)sub_1BCB244(BoostSupportRequestItemListViewManager_CallbackFunc_TypeInfo);
+    v76->fields.mUsrItemEntityList,
+    v59);
+  itemListViewManager = v76->fields.itemListViewManager;
+  v67 = (BoostSupportRequestItemListViewManager_CallbackFunc_o *)sub_1C2D6DC(BoostSupportRequestItemListViewManager_CallbackFunc_TypeInfo);
   BoostSupportRequestItemListViewManager_CallbackFunc___ctor(
-    v102,
-    (Il2CppObject *)v111,
+    v67,
+    (Il2CppObject *)v76,
     (intptr_t)Method_BoostSupportRequestMenu_OnSelectItem__,
-    v103);
+    v68);
   if ( !itemListViewManager )
     goto LABEL_102;
-  BoostSupportRequestItemListViewManager__SetCallBack(itemListViewManager, v102, v104);
-  Master_object = v111->fields.setupConfirmSprite;
+  BoostSupportRequestItemListViewManager__SetCallBack(itemListViewManager, v67, v69);
+  Master_object = v76->fields.setupConfirmSprite;
   if ( !Master_object )
     goto LABEL_102;
-  v105 = &StringLiteral_17362/*"btn_off"*/;
-  if ( v111->fields.isBoostItemUseConfirm )
-    v105 = &StringLiteral_17363/*"btn_on"*/;
-  UISprite__set_spriteName((UISprite_o *)Master_object, (System_String_o *)*v105, 0LL);
-  if ( entity && QuestPhaseEntity__getScriptIntParam(entity, (System_String_o *)StringLiteral_17194/*"boostDialogOnOffButtonHide"*/, -1, 0LL) == 1 )
+  v70 = &StringLiteral_17500/*"btn_off"*/;
+  if ( v76->fields.isBoostItemUseConfirm )
+    v70 = &StringLiteral_17501/*"btn_on"*/;
+  UISprite__set_spriteName((UISprite_o *)Master_object, (System_String_o *)*v70, 0);
+  if ( entity && QuestPhaseEntity__getScriptIntParam(entity, (System_String_o *)StringLiteral_17328/*"boostDialogOnOffButtonHide"*/, -1, 0) == 1 )
   {
-    Master_object = v111->fields.setupConfirmSprite;
+    Master_object = v76->fields.setupConfirmSprite;
     if ( !Master_object )
       goto LABEL_102;
-    Master_object = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0LL);
+    Master_object = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0);
     if ( !Master_object )
       goto LABEL_102;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 0, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 0, 0);
   }
   if ( !isRetryBattle )
   {
-    v106 = Method_BoostSupportRequestMenu_Open__;
+    v71 = Method_BoostSupportRequestMenu_Open__;
     if ( (*((_BYTE *)Method_BoostSupportRequestMenu_Open__ + 83) & 2) != 0 )
-      v106 = (_QWORD *)sub_1BCB010();
-    v107 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v106, v106[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v107, 0, 0, 0LL);
+      v71 = (_QWORD *)sub_1C2D4A8();
+    v72 = (System_Reflection_MethodBase_o *)sub_1C2D474(v71, v71[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v72, 0, 0, 0);
   }
-  Master_object = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v111, 0LL);
+  Master_object = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v76, 0);
   if ( !Master_object )
 LABEL_102:
-    sub_1BCB254(Master_object, v48);
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 1, 0LL);
-  v111->fields.state = 1;
-  v108 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v108, (Il2CppObject *)v111, Method_BoostSupportRequestMenu_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)v111, v108, 0, v109);
+    sub_1C2D6EC(Master_object, v12);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 1, 0);
+  v76->fields.state = 1;
+  v73 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v73, (Il2CppObject *)v76, Method_BoostSupportRequestMenu_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)v76, v73, 0, v74);
 }
 
 
-BoostEntity_array *__fastcall BoostSupportRequestMenu__RearrangesRecommendedBoostFirst(
+BoostEntity_array *BoostSupportRequestMenu__RearrangesRecommendedBoostFirst(
         BoostSupportRequestMenu_o *this,
         BoostEntity_array *boostEntityList,
         System_Int32_array *recommendedBoostIds,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
+  System_Collections_Generic_List_object__o *v6; // x21
+  System_Collections_Generic_List_object__o *v7; // x22
+  __int64 v8; // x0
   __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  System_Collections_Generic_List_object__o *v12; // x21
-  System_Collections_Generic_List_object__o *v13; // x22
-  __int64 v14; // x0
-  __int64 v15; // x1
-  __int64 v16; // x2
-  __int64 v17; // x3
-  __int64 v18; // x24
-  __int64 v19; // x25
-  BoostEntity_o *v20; // x23
+  __int64 v10; // x2
+  __int64 v11; // x3
+  __int64 v12; // x24
+  __int64 v13; // x25
+  BoostEntity_o *v14; // x23
   struct System_Object_array *items; // x8
-  _QWORD *v22; // x9
+  _QWORD *v16; // x9
   __int64 size; // x10
-  Il2CppClass **v24; // x0
-  struct System_Object_array *v25; // x8
-  _QWORD *v26; // x9
-  __int64 v27; // x10
-  __int64 v28; // x8
-  System_Collections_Generic_List_object__o *v29; // x0
-  System_Collections_Generic_List_object__o *v31; // x0
+  Il2CppClass **v18; // x0
+  struct System_Object_array *v19; // x8
+  _QWORD *v20; // x9
+  __int64 v21; // x10
+  __int64 v22; // x8
+  System_Collections_Generic_List_object__o *v23; // x0
+  System_Collections_Generic_List_object__o *v25; // x0
 
-  if ( (byte_4B16560 & 1) == 0 )
+  if ( (byte_4C21170 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Contains_int___, boostEntityList);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity__AddRange__, v6);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity__Add__, v7);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity__ToArray__, v8);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity___ctor__, v9);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity__get_Count__, v10);
-    sub_1BCAFF8(&System_Collections_Generic_List_BoostEntity__TypeInfo, v11);
-    byte_4B16560 = 1;
+    sub_1C2D490(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity__AddRange__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity___ctor__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity__get_Count__);
+    sub_1C2D490(&System_Collections_Generic_List_BoostEntity__TypeInfo);
+    byte_4C21170 = 1;
   }
-  v12 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_BoostEntity__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_BoostEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v12,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_BoostEntity___ctor__);
-  v13 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_BoostEntity__TypeInfo);
+    v6,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_BoostEntity___ctor__);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_BoostEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v13,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_BoostEntity___ctor__);
+    v7,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_BoostEntity___ctor__);
   if ( !boostEntityList )
     goto LABEL_32;
-  if ( !recommendedBoostIds || !*(_QWORD *)&recommendedBoostIds->max_length )
+  if ( !recommendedBoostIds || !recommendedBoostIds->max_length )
     return boostEntityList;
-  if ( (int)*(_QWORD *)&boostEntityList->max_length >= 1 )
+  if ( (int)boostEntityList->max_length >= 1 )
   {
-    v18 = 0LL;
-    v19 = (unsigned int)*(_QWORD *)&boostEntityList->max_length - 1LL;
+    v12 = 0;
+    v13 = (unsigned int)boostEntityList->max_length - 1LL;
     while ( 1 )
     {
-      v20 = boostEntityList->m_Items[v18];
-      if ( !v20 )
+      v14 = boostEntityList->m_Items[v12];
+      if ( !v14 )
         goto LABEL_22;
-      v14 = System_Linq_Enumerable__Contains_int_(
-              (System_Collections_Generic_IEnumerable_TSource__o *)recommendedBoostIds,
-              v20->fields.id,
-              (const MethodInfo_3033A7C *)Method_System_Linq_Enumerable_Contains_int___);
-      if ( (v14 & 1) != 0 )
+      v8 = System_Linq_Enumerable__Contains_int_(
+             (System_Collections_Generic_IEnumerable_TSource__o *)recommendedBoostIds,
+             v14->fields.id,
+             (const MethodInfo_30EB900 *)Method_System_Linq_Enumerable_Contains_int___);
+      if ( (v8 & 1) != 0 )
       {
-        if ( !v13 )
+        if ( !v7 )
           goto LABEL_32;
-        items = v13->fields._items;
-        v22 = Method_System_Collections_Generic_List_BoostEntity__Add__;
-        ++v13->fields._version;
+        items = v7->fields._items;
+        v16 = Method_System_Collections_Generic_List_BoostEntity__Add__;
+        ++v7->fields._version;
         if ( !items )
           goto LABEL_32;
-        size = v13->fields._size;
-        if ( (unsigned int)size < items->max_length )
+        size = v7->fields._size;
+        if ( (unsigned int)size < LODWORD(items->max_length) )
         {
-          v24 = &items->obj.klass + size;
-          v13->fields._size = size + 1;
+          v18 = &items->obj.klass + size;
+          v7->fields._size = size + 1;
 LABEL_18:
-          v24[4] = (Il2CppClass *)v20;
-          v14 = sub_1BCAF9C(v24 + 4);
+          v18[4] = (Il2CppClass *)v14;
+          v8 = sub_1C2D434(v18 + 4);
           goto LABEL_22;
         }
-        v28 = v22[4];
-        v29 = v13;
+        v22 = v16[4];
+        v23 = v7;
       }
       else
       {
-        if ( !v12 )
+        if ( !v6 )
           goto LABEL_32;
-        v25 = v12->fields._items;
-        v26 = Method_System_Collections_Generic_List_BoostEntity__Add__;
-        ++v12->fields._version;
-        if ( !v25 )
+        v19 = v6->fields._items;
+        v20 = Method_System_Collections_Generic_List_BoostEntity__Add__;
+        ++v6->fields._version;
+        if ( !v19 )
           goto LABEL_32;
-        v27 = v12->fields._size;
-        if ( (unsigned int)v27 < v25->max_length )
+        v21 = v6->fields._size;
+        if ( (unsigned int)v21 < LODWORD(v19->max_length) )
         {
-          v24 = &v25->obj.klass + v27;
-          v12->fields._size = v27 + 1;
+          v18 = &v19->obj.klass + v21;
+          v6->fields._size = v21 + 1;
           goto LABEL_18;
         }
-        v28 = v26[4];
-        v29 = v12;
+        v22 = v20[4];
+        v23 = v6;
       }
       System_Collections_Generic_List_object___AddWithResize(
-        v29,
-        (Il2CppObject *)v20,
-        *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v28 + 192) + 112LL));
+        v23,
+        (Il2CppObject *)v14,
+        *(const MethodInfo_3789B84 **)(*(_QWORD *)(v22 + 192) + 112LL));
 LABEL_22:
-      if ( v19 == v18 )
+      if ( v13 == v12 )
         break;
-      if ( ++v18 >= (unsigned __int64)boostEntityList->max_length )
-        sub_1BCB25C(v14, v15, v16, v17);
+      if ( ++v12 >= (unsigned __int64)LODWORD(boostEntityList->max_length) )
+        sub_1C2D6F4(v8, v9, v10, v11);
     }
   }
-  if ( !v13 )
+  if ( !v7 )
     goto LABEL_32;
-  if ( v13->fields._size < 1 )
+  if ( v7->fields._size < 1 )
   {
-    if ( v12 )
+    if ( v6 )
     {
-      v31 = v12;
+      v25 = v6;
       return (BoostEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                    v31,
-                                    (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BoostEntity__ToArray__);
+                                    v25,
+                                    (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_BoostEntity__ToArray__);
     }
 LABEL_32:
-    sub_1BCB254(v14, v15);
+    sub_1C2D6EC(v8, v9);
   }
   System_Collections_Generic_List_object___AddRange(
-    v13,
-    (System_Collections_Generic_IEnumerable_T__o *)v12,
-    (const MethodInfo_36B9DDC *)Method_System_Collections_Generic_List_BoostEntity__AddRange__);
-  v31 = v13;
+    v7,
+    (System_Collections_Generic_IEnumerable_T__o *)v6,
+    (const MethodInfo_3789D90 *)Method_System_Collections_Generic_List_BoostEntity__AddRange__);
+  v25 = v7;
   return (BoostEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                v31,
-                                (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BoostEntity__ToArray__);
+                                v25,
+                                (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_BoostEntity__ToArray__);
 }
 
 
-void __fastcall BoostSupportRequestMenu__add_callbackFunc(
+void BoostSupportRequestMenu__add_callbackFunc(
         BoostSupportRequestMenu_o *this,
         BoostFunctionUtility_CallbackFunc_o *value,
         const MethodInfo *method)
@@ -1044,34 +983,34 @@ void __fastcall BoostSupportRequestMenu__add_callbackFunc(
   BoostFunctionUtility_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B1655D & 1) == 0 )
+  if ( (byte_4C2116D & 1) == 0 )
   {
-    sub_1BCAFF8(&BoostFunctionUtility_CallbackFunc_TypeInfo, value);
-    byte_4B1655D = 1;
+    sub_1C2D490(&BoostFunctionUtility_CallbackFunc_TypeInfo);
+    byte_4C2116D = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
   v6 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0LL);
+    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0);
     if ( v8 )
     {
       if ( (BoostFunctionUtility_CallbackFunc_c *)v8->klass != BoostFunctionUtility_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C05088(p_callbackFunc, v8, v6);
+    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (BoostSupportRequestMenu_o *)sub_1BCB514(v8);
+  v11 = (BoostSupportRequestMenu_o *)sub_1C2D9AC(v8);
   BoostSupportRequestMenu__remove_callbackFunc(v11, v12, v13);
 }
 
 
-UnityEngine_GameObject_o *__fastcall BoostSupportRequestMenu__get_closeBtnObject(
+UnityEngine_GameObject_o *BoostSupportRequestMenu__get_closeBtnObject(
         BoostSupportRequestMenu_o *this,
         const MethodInfo *method)
 {
@@ -1079,23 +1018,23 @@ UnityEngine_GameObject_o *__fastcall BoostSupportRequestMenu__get_closeBtnObject
   bool v4; // w8
   UnityEngine_GameObject_o *result; // x0
 
-  if ( (byte_4B16567 & 1) == 0 )
+  if ( (byte_4C21177 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B16567 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C21177 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v4 = UnityEngine_Object__op_Equality(closeButton, 0LL, 0LL);
-  result = 0LL;
+  v4 = UnityEngine_Object__op_Equality(closeButton, 0, 0);
+  result = 0;
   if ( !v4 )
     return this->fields.closeButton;
   return result;
 }
 
 
-void __fastcall BoostSupportRequestMenu__remove_callbackFunc(
+void BoostSupportRequestMenu__remove_callbackFunc(
         BoostSupportRequestMenu_o *this,
         BoostFunctionUtility_CallbackFunc_o *value,
         const MethodInfo *method)
@@ -1110,42 +1049,42 @@ void __fastcall BoostSupportRequestMenu__remove_callbackFunc(
   int32_t v12; // w1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B1655E & 1) == 0 )
+  if ( (byte_4C2116E & 1) == 0 )
   {
-    sub_1BCAFF8(&BoostFunctionUtility_CallbackFunc_TypeInfo, value);
-    byte_4B1655E = 1;
+    sub_1C2D490(&BoostFunctionUtility_CallbackFunc_TypeInfo);
+    byte_4C2116E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
   v6 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0LL);
+    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0);
     if ( v8 )
     {
       if ( (BoostFunctionUtility_CallbackFunc_c *)v8->klass != BoostFunctionUtility_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C05088(p_callbackFunc, v8, v6);
+    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (BoostSupportRequestMenu_o *)sub_1BCB514(v8);
+  v11 = (BoostSupportRequestMenu_o *)sub_1C2D9AC(v8);
   BoostSupportRequestMenu__GetItem(v11, v12, v13);
 }
 
 
-void __fastcall BoostSupportRequestMenu___c__DisplayClass26_0___ctor(
+void BoostSupportRequestMenu___c__DisplayClass26_0___ctor(
         BoostSupportRequestMenu___c__DisplayClass26_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall BoostSupportRequestMenu___c__DisplayClass26_0___Callback_b__0(
+void BoostSupportRequestMenu___c__DisplayClass26_0___Callback_b__0(
         BoostSupportRequestMenu___c__DisplayClass26_0_o *this,
         const MethodInfo *method)
 {
@@ -1156,16 +1095,16 @@ void __fastcall BoostSupportRequestMenu___c__DisplayClass26_0___Callback_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1BCB254(0LL, method);
+    sub_1C2D6EC(0, method);
   callbackFunc = _4__this->fields.callbackFunc;
   p_callbackFunc = &_4__this->fields.callbackFunc;
   v5 = callbackFunc;
-  *p_callbackFunc = 0LL;
-  sub_1BCAF9C(p_callbackFunc);
+  *p_callbackFunc = 0;
+  sub_1C2D434(p_callbackFunc);
   if ( callbackFunc )
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD, _QWORD))v5->fields.m_target)(
-      v5->fields.original_method_info,
+    ((void (__fastcall *)(intptr_t, _QWORD, _QWORD, intptr_t))v5->fields.invoke_impl)(
+      v5->fields.method_code,
       (unsigned int)this->fields.result,
       (unsigned int)this->fields.index,
-      *(_QWORD *)&v5->fields.extra_arg);
+      v5->fields.method);
 }

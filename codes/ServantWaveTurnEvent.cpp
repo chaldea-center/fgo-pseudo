@@ -1,28 +1,28 @@
-void __fastcall ServantWaveTurnEvent___ctor(ServantWaveTurnEvent_o *this, BattleData_o *data, const MethodInfo *method)
+void ServantWaveTurnEvent___ctor(ServantWaveTurnEvent_o *this, BattleData_o *data, const MethodInfo *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   if ( !data )
-    sub_1BCB254(v5, v6);
+    sub_1C2D6EC(v5, v6);
   this->fields = *(ServantWaveTurnEvent_Fields *)&data->fields.wavecount;
 }
 
 
-void __fastcall ServantWaveTurnEvent___ctor_46007468(
+void ServantWaveTurnEvent___ctor_46725876(
         ServantWaveTurnEvent_o *this,
         int32_t wave,
         int32_t turn,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Wave_k__BackingField = wave;
   this->fields._Turn_k__BackingField = turn;
 }
 
 
-ServantWaveTurnEvent_SaveData_o *__fastcall ServantWaveTurnEvent__ExportSaveData(
+ServantWaveTurnEvent_SaveData_o *ServantWaveTurnEvent__ExportSaveData(
         ServantWaveTurnEvent_o *this,
         const MethodInfo *method)
 {
@@ -31,18 +31,18 @@ ServantWaveTurnEvent_SaveData_o *__fastcall ServantWaveTurnEvent__ExportSaveData
   __int64 v5; // x1
   ServantWaveTurnEvent_SaveData_o *result; // x0
 
-  if ( (byte_4B1F5B9 & 1) == 0 )
+  if ( (byte_4C2A461 & 1) == 0 )
   {
-    sub_1BCAFF8(&ServantWaveTurnEvent_SaveData_TypeInfo, method);
-    byte_4B1F5B9 = 1;
+    sub_1C2D490(&ServantWaveTurnEvent_SaveData_TypeInfo);
+    byte_4C2A461 = 1;
   }
-  v3 = sub_1BCB244(ServantWaveTurnEvent_SaveData_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
-  v4 = ((__int64 (__fastcall *)(ServantWaveTurnEvent_o *, Il2CppMethodPointer))this->klass->vtable._4_unknown.method)(
+  v3 = sub_1C2D6DC(ServantWaveTurnEvent_SaveData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0);
+  v4 = ((__int64 (__fastcall *)(ServantWaveTurnEvent_o *, const MethodInfo *))this->klass->vtable._4_unknown.methodPtr)(
          this,
-         this->klass->vtable._5_ExportSaveData.methodPtr);
+         this->klass->vtable._4_unknown.method);
   if ( !v3 )
-    sub_1BCB254(v4, v5);
+    sub_1C2D6EC(v4, v5);
   *(_DWORD *)(v3 + 16) = v4;
   result = (ServantWaveTurnEvent_SaveData_o *)v3;
   *(ServantWaveTurnEvent_Fields *)(v3 + 20) = this->fields;
@@ -50,31 +50,31 @@ ServantWaveTurnEvent_SaveData_o *__fastcall ServantWaveTurnEvent__ExportSaveData
 }
 
 
-int32_t __fastcall ServantWaveTurnEvent__get_Turn(ServantWaveTurnEvent_o *this, const MethodInfo *method)
+int32_t ServantWaveTurnEvent__get_Turn(ServantWaveTurnEvent_o *this, const MethodInfo *method)
 {
   return this->fields._Turn_k__BackingField;
 }
 
 
-int32_t __fastcall ServantWaveTurnEvent__get_Wave(ServantWaveTurnEvent_o *this, const MethodInfo *method)
+int32_t ServantWaveTurnEvent__get_Wave(ServantWaveTurnEvent_o *this, const MethodInfo *method)
 {
   return this->fields._Wave_k__BackingField;
 }
 
 
-void __fastcall ServantWaveTurnEvent__set_Turn(ServantWaveTurnEvent_o *this, int32_t value, const MethodInfo *method)
+void ServantWaveTurnEvent__set_Turn(ServantWaveTurnEvent_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._Turn_k__BackingField = value;
 }
 
 
-void __fastcall ServantWaveTurnEvent__set_Wave(ServantWaveTurnEvent_o *this, int32_t value, const MethodInfo *method)
+void ServantWaveTurnEvent__set_Wave(ServantWaveTurnEvent_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._Wave_k__BackingField = value;
 }
 
 
-void __fastcall ServantWaveTurnEvent_SaveData___ctor(ServantWaveTurnEvent_SaveData_o *this, const MethodInfo *method)
+void ServantWaveTurnEvent_SaveData___ctor(ServantWaveTurnEvent_SaveData_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }

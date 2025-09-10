@@ -1,13 +1,13 @@
-void __fastcall FGOStandFigureMColor___ctor(FGOStandFigureMColor_o *this, const MethodInfo *method)
+void FGOStandFigureMColor___ctor(FGOStandFigureMColor_o *this, const MethodInfo *method)
 {
   __asm { FMOV            V1.4S, #1.0 }
   this->fields.color = _Q1;
-  this->fields.backupColor = (struct UnityEngine_Color_o)xmmword_BE34F0;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  this->fields.backupColor = (struct UnityEngine_Color_o)xmmword_C0ABD0;
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall FGOStandFigureMColor__OnUpdate(FGOStandFigureMColor_o *this, const MethodInfo *method)
+void FGOStandFigureMColor__OnUpdate(FGOStandFigureMColor_o *this, const MethodInfo *method)
 {
   __int64 v2; // x2
   float32x2_t v3; // d0
@@ -36,18 +36,15 @@ void __fastcall FGOStandFigureMColor__OnUpdate(FGOStandFigureMColor_o *this, con
       max_length = renderers->max_length;
       if ( max_length >= 1 )
       {
-        v10 = 0LL;
+        v10 = 0;
         do
         {
           if ( (unsigned int)v10 >= max_length )
-            sub_1BCB25C(this, method, v2);
+            sub_1C2D6F4(this, method, v2);
           material = (UnityEngine_Renderer_o *)renderers->m_Items[v10];
-          if ( !material
-            || (material = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(material, 0LL)) == 0LL )
-          {
-            sub_1BCB254(material, method);
-          }
-          UnityEngine_Material__set_color((UnityEngine_Material_o *)material, this->fields.color, 0LL);
+          if ( !material || (material = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(material, 0)) == 0 )
+            sub_1C2D6EC(material, method);
+          UnityEngine_Material__set_color((UnityEngine_Material_o *)material, this->fields.color, 0);
           max_length = renderers->max_length;
           ++v10;
         }
@@ -58,7 +55,7 @@ void __fastcall FGOStandFigureMColor__OnUpdate(FGOStandFigureMColor_o *this, con
 }
 
 
-void __fastcall FGOStandFigureMColor__Start(FGOStandFigureMColor_o *this, const MethodInfo *method)
+void FGOStandFigureMColor__Start(FGOStandFigureMColor_o *this, const MethodInfo *method)
 {
   this->fields.backupColor = this->fields.color;
 }

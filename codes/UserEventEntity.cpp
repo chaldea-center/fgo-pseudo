@@ -1,55 +1,54 @@
-void __fastcall UserEventEntity___ctor(UserEventEntity_o *this, const MethodInfo *method)
+void UserEventEntity___ctor(UserEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D2AA & 1) == 0 )
+  if ( (byte_4C280A1 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D2AA = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C280A1 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void __fastcall UserEventEntity___ctor_42174984(
+void UserEventEntity___ctor_42802256(
         UserEventEntity_o *this,
         int64_t userId,
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_4B1D2AB & 1) == 0 )
+  if ( (byte_4C280A2 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, userId);
-    byte_4B1D2AB = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C280A2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.eventId = eventId;
-  this->fields.updatedAt = 0LL;
-  *(_QWORD *)&this->fields.tutorial = 0LL;
-  *(_QWORD *)&this->fields.value = 0LL;
+  this->fields.updatedAt = 0;
+  *(_QWORD *)&this->fields.tutorial = 0;
+  *(_QWORD *)&this->fields.value = 0;
   HIDWORD(this->fields.tutorial2) = 0;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall UserEventEntity__CreatePK(int64_t userId, int32_t eventId, const MethodInfo *method)
+System_String_o *UserEventEntity__CreatePK(int64_t userId, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_4B1D2A9 & 1) == 0 )
+  if ( (byte_4C280A0 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&eventId);
-    byte_4B1D2A9 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4C280A0 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            eventId,
-           (const MethodInfo_3018D34 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_30CCBE0 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
-System_String_o *__fastcall UserEventEntity__CreatePrimaryKey(UserEventEntity_o *this, const MethodInfo *method)
+System_String_o *UserEventEntity__CreatePrimaryKey(UserEventEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
@@ -57,34 +56,31 @@ System_String_o *__fastcall UserEventEntity__CreatePrimaryKey(UserEventEntity_o 
 }
 
 
-bool __fastcall UserEventEntity__getEventFlag(UserEventEntity_o *this, int32_t flagId, const MethodInfo *method)
+bool UserEventEntity__getEventFlag(UserEventEntity_o *this, int32_t flagId, const MethodInfo *method)
 {
   return ((unsigned int)this->fields.flag >> flagId) & 1;
 }
 
 
-bool __fastcall UserEventEntity__getEventFlag_42175176(
-        UserEventEntity_o *this,
-        int32_t flagId,
-        const MethodInfo *method)
+bool UserEventEntity__getEventFlag_42802448(UserEventEntity_o *this, int32_t flagId, const MethodInfo *method)
 {
   return ((unsigned int)this->fields.flag >> flagId) & 1;
 }
 
 
-bool __fastcall UserEventEntity__getEventFlag_42175192(UserEventEntity_o *this, int32_t flag, const MethodInfo *method)
+bool UserEventEntity__getEventFlag_42802464(UserEventEntity_o *this, int32_t flag, const MethodInfo *method)
 {
   return (this->fields.flag & flag) != 0;
 }
 
 
-bool __fastcall UserEventEntity__getScriptFlag(UserEventEntity_o *this, int32_t flagId, const MethodInfo *method)
+bool UserEventEntity__getScriptFlag(UserEventEntity_o *this, int32_t flagId, const MethodInfo *method)
 {
   return ((unsigned int)this->fields.scriptFlag >> flagId) & 1;
 }
 
 
-bool __fastcall UserEventEntity__getTutorialFlag(UserEventEntity_o *this, int32_t flagId, const MethodInfo *method)
+bool UserEventEntity__getTutorialFlag(UserEventEntity_o *this, int32_t flagId, const MethodInfo *method)
 {
   if ( (unsigned int)(flagId - 1) <= 0x3F )
   {
@@ -102,7 +98,7 @@ bool __fastcall UserEventEntity__getTutorialFlag(UserEventEntity_o *this, int32_
 }
 
 
-int64_t __fastcall UserEventEntity__getUpdatedAt(UserEventEntity_o *this, const MethodInfo *method)
+int64_t UserEventEntity__getUpdatedAt(UserEventEntity_o *this, const MethodInfo *method)
 {
   return this->fields.updatedAt;
 }

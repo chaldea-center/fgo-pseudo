@@ -1,10 +1,10 @@
-void __fastcall WarBoardRatingBase___ctor(WarBoardRatingBase_o *this, const MethodInfo *method)
+void WarBoardRatingBase___ctor(WarBoardRatingBase_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall WarBoardRatingBase__DebugLog(
+void WarBoardRatingBase__DebugLog(
         WarBoardRatingBase_o *this,
         WarBoardSquareData_o *calcSquare,
         WarBoardSquareData_o *targetSquare,
@@ -14,18 +14,18 @@ void __fastcall WarBoardRatingBase__DebugLog(
 }
 
 
-int32_t __fastcall WarBoardRatingBase__GetId(WarBoardRatingBase_o *this, const MethodInfo *method)
+int32_t WarBoardRatingBase__GetId(WarBoardRatingBase_o *this, const MethodInfo *method)
 {
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   return ratingBase->fields.id;
 }
 
 
-float __fastcall WarBoardRatingBase__GetRatingBase(
+float WarBoardRatingBase__GetRatingBase(
         WarBoardRatingBase_o *this,
         int32_t forceId,
         WarBoardSquareData_o *calcSquare,
@@ -38,18 +38,18 @@ float __fastcall WarBoardRatingBase__GetRatingBase(
 }
 
 
-int32_t __fastcall WarBoardRatingBase__GetViewpoint(WarBoardRatingBase_o *this, const MethodInfo *method)
+int32_t WarBoardRatingBase__GetViewpoint(WarBoardRatingBase_o *this, const MethodInfo *method)
 {
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   return ratingBase->fields.viewPoint;
 }
 
 
-void __fastcall WarBoardRatingBase__Init(
+void WarBoardRatingBase__Init(
         WarBoardRatingBase_o *this,
         WarBoardRatingBaseEntity_o *ratingBase,
         const MethodInfo *method)
@@ -57,27 +57,27 @@ void __fastcall WarBoardRatingBase__Init(
   const MethodInfo *v3; // x3
 
   this->fields.ratingBase = ratingBase;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)ratingBase, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)ratingBase, (int32_t)method, v3);
 }
 
 
-int32_t __fastcall WarBoardRatingBase__get_adjustmentValueA1(WarBoardRatingBase_o *this, const MethodInfo *method)
+int32_t WarBoardRatingBase__get_adjustmentValueA1(WarBoardRatingBase_o *this, const MethodInfo *method)
 {
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   return ratingBase->fields.adjustmentValueA1;
 }
 
 
-int32_t __fastcall WarBoardRatingBase__get_adjustmentValueB(WarBoardRatingBase_o *this, const MethodInfo *method)
+int32_t WarBoardRatingBase__get_adjustmentValueB(WarBoardRatingBase_o *this, const MethodInfo *method)
 {
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   return ratingBase->fields.adjustmentValueB;
 }

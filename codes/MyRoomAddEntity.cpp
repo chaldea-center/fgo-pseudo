@@ -1,37 +1,32 @@
-void __fastcall MyRoomAddEntity___ctor(MyRoomAddEntity_o *this, const MethodInfo *method)
+void MyRoomAddEntity___ctor(MyRoomAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CA1E & 1) == 0 )
+  if ( (byte_4C277ED & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1CA1E = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C277ED = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall MyRoomAddEntity__CreatePK(
-        int32_t id,
-        int32_t type,
-        int32_t priority,
-        const MethodInfo *method)
+System_String_o *MyRoomAddEntity__CreatePK(int32_t id, int32_t type, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4B1CA1C & 1) == 0 )
+  if ( (byte_4C277EB & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&type);
-    byte_4B1CA1C = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C277EB = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            type,
            priority,
-           (const MethodInfo_30190BC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30CCF68 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
-System_String_o *__fastcall MyRoomAddEntity__CreatePrimaryKey(MyRoomAddEntity_o *this, const MethodInfo *method)
+System_String_o *MyRoomAddEntity__CreatePrimaryKey(MyRoomAddEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
@@ -39,12 +34,12 @@ System_String_o *__fastcall MyRoomAddEntity__CreatePrimaryKey(MyRoomAddEntity_o 
 }
 
 
-int64_t __fastcall MyRoomAddEntity__GetScheduleUpdateAt(MyRoomAddEntity_o *this, const MethodInfo *method)
+int64_t MyRoomAddEntity__GetScheduleUpdateAt(MyRoomAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CA1D & 1) == 0 )
+  if ( (byte_4C277EC & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_22994/*"scheduleUpdateAt"*/, method);
-    byte_4B1CA1D = 1;
+    sub_1C2D490(&StringLiteral_23182/*"scheduleUpdateAt"*/);
+    byte_4C277EC = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22994/*"scheduleUpdateAt"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23182/*"scheduleUpdateAt"*/, 0, 0);
 }

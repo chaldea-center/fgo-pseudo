@@ -1,95 +1,91 @@
-void __fastcall EventInfoCooltimeNoticeButton___ctor(EventInfoCooltimeNoticeButton_o *this, const MethodInfo *method)
+void EventInfoCooltimeNoticeButton___ctor(EventInfoCooltimeNoticeButton_o *this, const MethodInfo *method)
 {
   this->fields.POSITION.fields.z = 0.0;
   *(_QWORD *)&this->fields.POSITION.fields.x = 0x433F000043DA0000LL;
-  EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0LL);
+  EventInfoUIBase___ctor((EventInfoUIBase_o *)this, 0);
 }
 
 
-void __fastcall EventInfoCooltimeNoticeButton__Initialization(
+void EventInfoCooltimeNoticeButton__Initialization(
         EventInfoCooltimeNoticeButton_o *this,
         EventUiEntity_o *entity,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Object_o *bgSprite; // x20
-  UISprite_o *v8; // x20
-  __int64 v9; // x1
-  struct UISprite_o *v10; // x0
+  UISprite_o *v6; // x20
+  __int64 v7; // x1
+  struct UISprite_o *v8; // x0
   UnityEngine_Object_o *buttonSprite; // x20
-  UISprite_o *v12; // x20
-  const MethodInfo *v13; // x1
+  UISprite_o *v10; // x20
+  const MethodInfo *v11; // x1
 
-  if ( (byte_4B1D9AD & 1) == 0 )
+  if ( (byte_4C28796 & 1) == 0 )
   {
-    sub_1BCAFF8(&AtlasManager_TypeInfo, entity);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
-    sub_1BCAFF8(&StringLiteral_1435/*"80341001"*/, v5);
-    byte_4B1D9AD = 1;
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_1443/*"80341001"*/);
+    byte_4C28796 = 1;
   }
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  GameObjectExtensions__SetLocalPosition(gameObject, this->fields.POSITION, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  GameObjectExtensions__SetLocalPosition(gameObject, this->fields.POSITION, 0);
   bgSprite = (UnityEngine_Object_o *)this->fields.bgSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(bgSprite, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(bgSprite, 0, 0) )
   {
-    v8 = this->fields.bgSprite;
+    v6 = this->fields.bgSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI(v8, (System_String_o *)StringLiteral_1435/*"80341001"*/, 0LL);
-    v10 = this->fields.bgSprite;
-    if ( !v10 )
-      sub_1BCB254(0LL, v9);
-    ((void (__fastcall *)(struct UISprite_o *, Il2CppMethodPointer))v10->klass->vtable._33_MakePixelPerfect.method)(
-      v10,
-      v10->klass->vtable._34_get_minWidth.methodPtr);
+    AtlasManager__SetEventUI(v6, (System_String_o *)StringLiteral_1443/*"80341001"*/, 0);
+    v8 = this->fields.bgSprite;
+    if ( !v8 )
+      sub_1C2D6EC(0, v7);
+    ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v8->klass->vtable._33_MakePixelPerfect.methodPtr)(
+      v8,
+      v8->klass->vtable._33_MakePixelPerfect.method);
   }
   buttonSprite = (UnityEngine_Object_o *)this->fields.buttonSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(buttonSprite, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(buttonSprite, 0, 0) )
   {
-    v12 = this->fields.buttonSprite;
+    v10 = this->fields.buttonSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetCommon(v12, 0LL);
+    AtlasManager__SetCommon(v10, 0);
   }
-  this->fields.isButtonOn = EventRewardSaveData__GetCooltimeNotification(0LL);
-  EventInfoCooltimeNoticeButton__UpdateButtonDisp(this, v13);
+  this->fields.isButtonOn = EventRewardSaveData__GetCooltimeNotification(0);
+  EventInfoCooltimeNoticeButton__UpdateButtonDisp(this, v11);
 }
 
 
-void __fastcall EventInfoCooltimeNoticeButton__OnClickButton(
-        EventInfoCooltimeNoticeButton_o *this,
-        const MethodInfo *method)
+void EventInfoCooltimeNoticeButton__OnClickButton(EventInfoCooltimeNoticeButton_o *this, const MethodInfo *method)
 {
-  _BOOL4 isButtonOn; // w20
+  int32_t isButtonOn; // w20
   _QWORD *v4; // x0
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4B1D9AF & 1) == 0 )
+  if ( (byte_4C28798 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_EventInfoCooltimeNoticeButton_OnClickButton__, method);
-    byte_4B1D9AF = 1;
+    sub_1C2D490(&Method_EventInfoCooltimeNoticeButton_OnClickButton__);
+    byte_4C28798 = 1;
   }
   isButtonOn = this->fields.isButtonOn;
-  this->fields.isButtonOn = !isButtonOn;
+  this->fields.isButtonOn = isButtonOn ^ 1;
   v4 = Method_EventInfoCooltimeNoticeButton_OnClickButton__;
   if ( (*((_BYTE *)Method_EventInfoCooltimeNoticeButton_OnClickButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1BCB010(Method_EventInfoCooltimeNoticeButton_OnClickButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v4, v4[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v5, isButtonOn, 0, 0LL);
-  EventRewardSaveData__SetCooltimeNotification(this->fields.isButtonOn, 0LL);
+    v4 = (_QWORD *)sub_1C2D4A8(Method_EventInfoCooltimeNoticeButton_OnClickButton__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C2D474(v4, v4[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v5, isButtonOn, 0, 0);
+  EventRewardSaveData__SetCooltimeNotification(this->fields.isButtonOn, 0);
   EventInfoCooltimeNoticeButton__UpdateButtonDisp(this, v6);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall EventInfoCooltimeNoticeButton__SetDispActive(
+void EventInfoCooltimeNoticeButton__SetDispActive(
         EventInfoCooltimeNoticeButton_o *this,
         bool isActive,
         const MethodInfo *method)
@@ -98,37 +94,34 @@ void __fastcall EventInfoCooltimeNoticeButton__SetDispActive(
 
   bgSprite = (UnityEngine_Component_o *)this->fields.bgSprite;
   if ( !bgSprite
-    || (bgSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bgSprite, 0LL)) == 0LL
-    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bgSprite, isActive, 0LL),
-        (bgSprite = (UnityEngine_Component_o *)this->fields.noticeButton) == 0LL)
-    || (bgSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bgSprite, 0LL)) == 0LL )
+    || (bgSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bgSprite, 0)) == 0
+    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bgSprite, isActive, 0),
+        (bgSprite = (UnityEngine_Component_o *)this->fields.noticeButton) == 0)
+    || (bgSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bgSprite, 0)) == 0 )
   {
-    sub_1BCB254(bgSprite, isActive);
+    sub_1C2D6EC(bgSprite, isActive);
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bgSprite, isActive, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bgSprite, isActive, 0);
 }
 
 
-void __fastcall EventInfoCooltimeNoticeButton__UpdateButtonDisp(
-        EventInfoCooltimeNoticeButton_o *this,
-        const MethodInfo *method)
+void EventInfoCooltimeNoticeButton__UpdateButtonDisp(EventInfoCooltimeNoticeButton_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UIButton_o *noticeButton; // x0
-  __int64 *v5; // x8
+  __int64 *v4; // x8
 
-  if ( (byte_4B1D9AE & 1) == 0 )
+  if ( (byte_4C28797 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_17363/*"btn_on"*/, method);
-    sub_1BCAFF8(&StringLiteral_17362/*"btn_off"*/, v3);
-    byte_4B1D9AE = 1;
+    sub_1C2D490(&StringLiteral_17501/*"btn_on"*/);
+    sub_1C2D490(&StringLiteral_17500/*"btn_off"*/);
+    byte_4C28797 = 1;
   }
   noticeButton = this->fields.noticeButton;
   if ( !noticeButton )
-    sub_1BCB254(0LL, method);
+    sub_1C2D6EC(0, method);
   if ( this->fields.isButtonOn )
-    v5 = &StringLiteral_17363/*"btn_on"*/;
+    v4 = &StringLiteral_17501/*"btn_on"*/;
   else
-    v5 = &StringLiteral_17362/*"btn_off"*/;
-  UIButton__set_normalSprite(noticeButton, (System_String_o *)*v5, 0LL);
+    v4 = &StringLiteral_17500/*"btn_off"*/;
+  UIButton__set_normalSprite(noticeButton, (System_String_o *)*v4, 0);
 }

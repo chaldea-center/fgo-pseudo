@@ -1,27 +1,27 @@
-void __fastcall GrandQuestClassBoardClassIconController___ctor(
+void GrandQuestClassBoardClassIconController___ctor(
         GrandQuestClassBoardClassIconController_o *this,
         const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall GrandQuestClassBoardClassIconController__LateUpdate(
+void GrandQuestClassBoardClassIconController__LateUpdate(
         GrandQuestClassBoardClassIconController_o *this,
         const MethodInfo *method)
 {
-  __int64 transform; // x0
+  UnityEngine_Transform_o *transform; // x0
   __int64 v3; // x1
   UnityEngine_Transform_o *v4; // x19
 
-  transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
-  v4 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4B16197 )
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  v4 = transform;
+  if ( !byte_4C20DA7 )
   {
-    transform = sub_1BCAFF8(&UnityEngine_Quaternion_TypeInfo, v3);
-    byte_4B16197 = 1;
+    transform = (UnityEngine_Transform_o *)sub_1C2D490(&UnityEngine_Quaternion_TypeInfo);
+    byte_4C20DA7 = 1;
   }
   if ( !v4 )
-    sub_1BCB254(transform, v3);
-  UnityEngine_Transform__set_rotation(v4, UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion, 0LL);
+    sub_1C2D6EC(transform, v3);
+  UnityEngine_Transform__set_rotation(v4, UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion, 0);
 }

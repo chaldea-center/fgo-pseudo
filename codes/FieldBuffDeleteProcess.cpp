@@ -1,10 +1,10 @@
-void __fastcall FieldBuffDeleteProcess___ctor(FieldBuffDeleteProcess_o *this, const MethodInfo *method)
+void FieldBuffDeleteProcess___ctor(FieldBuffDeleteProcess_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall FieldBuffDeleteProcess__Init(
+void FieldBuffDeleteProcess__Init(
         FieldBuffDeleteProcess_o *this,
         BattleFieldEnvironmentData_o *fieldEnvData,
         const MethodInfo *method)
@@ -12,11 +12,11 @@ void __fastcall FieldBuffDeleteProcess__Init(
   const MethodInfo *v3; // x3
 
   this->fields._FieldEnvData_k__BackingField = fieldEnvData;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)fieldEnvData, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)fieldEnvData, (int32_t)method, v3);
 }
 
 
-BattleFieldEnvironmentData_o *__fastcall FieldBuffDeleteProcess__get_FieldEnvData(
+BattleFieldEnvironmentData_o *FieldBuffDeleteProcess__get_FieldEnvData(
         FieldBuffDeleteProcess_o *this,
         const MethodInfo *method)
 {
@@ -24,7 +24,7 @@ BattleFieldEnvironmentData_o *__fastcall FieldBuffDeleteProcess__get_FieldEnvDat
 }
 
 
-void __fastcall FieldBuffDeleteProcess__set_FieldEnvData(
+void FieldBuffDeleteProcess__set_FieldEnvData(
         FieldBuffDeleteProcess_o *this,
         BattleFieldEnvironmentData_o *value,
         const MethodInfo *method)
@@ -32,5 +32,5 @@ void __fastcall FieldBuffDeleteProcess__set_FieldEnvData(
   const MethodInfo *v3; // x3
 
   this->fields._FieldEnvData_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }

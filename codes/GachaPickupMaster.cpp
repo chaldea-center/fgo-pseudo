@@ -1,19 +1,19 @@
-void __fastcall GachaPickupMaster___ctor(GachaPickupMaster_o *this, const MethodInfo *method)
+void GachaPickupMaster___ctor(GachaPickupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D764 & 1) == 0 )
+  if ( (byte_4C28568 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_GachaPickupMaster__GachaPickupEntity__string___ctor__, method);
-    byte_4B1D764 = 1;
+    sub_1C2D490(&Method_DataMasterBase_GachaPickupMaster__GachaPickupEntity__string___ctor__);
+    byte_4C28568 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     40,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_GachaPickupMaster__GachaPickupEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_GachaPickupMaster__GachaPickupEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-GachaPickupEntity_o *__fastcall GachaPickupMaster__GetEntity(
+GachaPickupEntity_o *GachaPickupMaster__GetEntity(
         GachaPickupMaster_o *this,
         int32_t id,
         int32_t type,
@@ -22,21 +22,21 @@ GachaPickupEntity_o *__fastcall GachaPickupMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1D765 & 1) == 0 )
+  if ( (byte_4C28569 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_GachaPickupMaster__GachaPickupEntity__string__GetEntity__, *(_QWORD *)&id);
-    byte_4B1D765 = 1;
+    sub_1C2D490(&Method_DataMasterBase_GachaPickupMaster__GachaPickupEntity__string__GetEntity__);
+    byte_4C28569 = 1;
   }
   PK = (Il2CppObject *)GachaPickupEntity__CreatePK(id, type, giftId, *(const MethodInfo **)&giftId);
   return (GachaPickupEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   PK,
-                                  (const MethodInfo_32CC8B8 *)Method_DataMasterBase_GachaPickupMaster__GachaPickupEntity__string__GetEntity__);
+                                  (const MethodInfo_338C850 *)Method_DataMasterBase_GachaPickupMaster__GachaPickupEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall GachaPickupMaster__TryGetEntity(
+bool GachaPickupMaster__TryGetEntity(
         GachaPickupMaster_o *this,
         GachaPickupEntity_o **entity,
         int32_t id,
@@ -46,15 +46,15 @@ bool __fastcall GachaPickupMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1D766 & 1) == 0 )
+  if ( (byte_4C2856A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_GachaPickupMaster__GachaPickupEntity__string__TryGetEntity__, entity);
-    byte_4B1D766 = 1;
+    sub_1C2D490(&Method_DataMasterBase_GachaPickupMaster__GachaPickupEntity__string__TryGetEntity__);
+    byte_4C2856A = 1;
   }
   PK = (Il2CppObject *)GachaPickupEntity__CreatePK(id, type, giftId, *(const MethodInfo **)&type);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_GachaPickupMaster__GachaPickupEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_GachaPickupMaster__GachaPickupEntity__string__TryGetEntity__);
 }

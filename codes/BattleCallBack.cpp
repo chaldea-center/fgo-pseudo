@@ -1,22 +1,22 @@
-void __fastcall BattleCallBack___ctor(BattleCallBack_o *this, System_Action_o *callBack, const MethodInfo *method)
+void BattleCallBack___ctor(BattleCallBack_o *this, System_Action_o *callBack, const MethodInfo *method)
 {
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.callBack = callBack;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)callBack, v5, v6);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)callBack, v5, v6);
 }
 
 
-void __fastcall BattleCallBack__call(BattleCallBack_o *this, const MethodInfo *method)
+void BattleCallBack__call(BattleCallBack_o *this, const MethodInfo *method)
 {
   struct System_Action_o *callBack; // x8
 
   callBack = this->fields.callBack;
   if ( !callBack )
-    sub_1BCB254(this, method);
-  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callBack->fields.m_target)(
-    callBack->fields.original_method_info,
-    *(_QWORD *)&callBack->fields.extra_arg);
+    sub_1C2D6EC(this, method);
+  ((void (__fastcall *)(intptr_t, intptr_t))callBack->fields.invoke_impl)(
+    callBack->fields.method_code,
+    callBack->fields.method);
 }

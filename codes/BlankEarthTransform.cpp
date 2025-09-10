@@ -1,5 +1,5 @@
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BlankEarthTransform___ctor(
+void BlankEarthTransform___ctor(
         BlankEarthTransform_o *this,
         UnityEngine_Quaternion_o blankEarthRot,
         UnityEngine_Quaternion_o earthRootRot,
@@ -29,7 +29,7 @@ void __fastcall BlankEarthTransform___ctor(
   v10 = blankEarthRot.fields.w;
   v11 = blankEarthRot.fields.z;
   v12 = blankEarthRot.fields.y;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.blankEarthRotation.fields.x = x;
   this->fields.blankEarthRotation.fields.y = v12;
   this->fields.blankEarthRotation.fields.z = v11;

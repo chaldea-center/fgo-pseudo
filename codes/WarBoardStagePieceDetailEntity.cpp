@@ -1,19 +1,19 @@
-void __fastcall WarBoardStagePieceDetailEntity___ctor(WarBoardStagePieceDetailEntity_o *this, const MethodInfo *method)
+void WarBoardStagePieceDetailEntity___ctor(WarBoardStagePieceDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D6D5 & 1) == 0 )
+  if ( (byte_4C284D9 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D6D5 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C284D9 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
-  *(_QWORD *)&this->fields.stageId = 0LL;
-  *(_QWORD *)&this->fields.groupId = 0LL;
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+  *(_QWORD *)&this->fields.stageId = 0;
+  *(_QWORD *)&this->fields.groupId = 0;
 }
 
 
-void __fastcall WarBoardStagePieceDetailEntity___ctor_42470704(
+void WarBoardStagePieceDetailEntity___ctor_43101684(
         WarBoardStagePieceDetailEntity_o *this,
         WarBoardStagePieceDetailEntity_o *cSrc,
         const MethodInfo *method)
@@ -21,43 +21,42 @@ void __fastcall WarBoardStagePieceDetailEntity___ctor_42470704(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4B1D6D6 & 1) == 0 )
+  if ( (byte_4C284DA & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, cSrc);
-    byte_4B1D6D6 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C284DA = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
   if ( !cSrc )
-    sub_1BCB254(v5, v6);
+    sub_1C2D6EC(v5, v6);
   *(_OWORD *)&this->fields.stageId = *(_OWORD *)&cSrc->fields.stageId;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall WarBoardStagePieceDetailEntity__CreatePK(
+System_String_o *WarBoardStagePieceDetailEntity__CreatePK(
         int32_t stageId,
         int32_t forceId,
         int32_t groupId,
         int32_t pieceIndex,
         const MethodInfo *method)
 {
-  if ( (byte_4B1D6D4 & 1) == 0 )
+  if ( (byte_4C284D8 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&forceId);
-    byte_4B1D6D4 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_4C284D8 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            stageId,
            forceId,
            groupId,
            pieceIndex,
-           (const MethodInfo_301957C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_30CD428 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
-System_String_o *__fastcall WarBoardStagePieceDetailEntity__CreatePrimaryKey(
+System_String_o *WarBoardStagePieceDetailEntity__CreatePrimaryKey(
         WarBoardStagePieceDetailEntity_o *this,
         const MethodInfo *method)
 {
@@ -72,127 +71,125 @@ System_String_o *__fastcall WarBoardStagePieceDetailEntity__CreatePrimaryKey(
 }
 
 
-int32_t __fastcall WarBoardStagePieceDetailEntity__GetDeadEffectType(
+int32_t WarBoardStagePieceDetailEntity__GetDeadEffectType(
         WarBoardStagePieceDetailEntity_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B1D6DE & 1) == 0 )
+  if ( (byte_4C284E2 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18354/*"deadEffect"*/, method);
-    byte_4B1D6DE = 1;
+    sub_1C2D490(&StringLiteral_18502/*"deadEffect"*/);
+    byte_4C284E2 = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_18354/*"deadEffect"*/, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_18502/*"deadEffect"*/, 0, v2);
 }
 
 
-int32_t __fastcall WarBoardStagePieceDetailEntity__GetDispLimitCnt(
+int32_t WarBoardStagePieceDetailEntity__GetDispLimitCnt(
         WarBoardStagePieceDetailEntity_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B1D6E1 & 1) == 0 )
+  if ( (byte_4C284E5 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18486/*"dispLimitCount"*/, method);
-    byte_4B1D6E1 = 1;
+    sub_1C2D490(&StringLiteral_18636/*"dispLimitCount"*/);
+    byte_4C284E5 = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_18486/*"dispLimitCount"*/, -1, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_18636/*"dispLimitCount"*/, -1, v2);
 }
 
 
-int32_t __fastcall WarBoardStagePieceDetailEntity__GetImageSvtId(
+int32_t WarBoardStagePieceDetailEntity__GetImageSvtId(WarBoardStagePieceDetailEntity_o *this, const MethodInfo *method)
+{
+  const MethodInfo *v2; // x3
+
+  if ( (byte_4C284E6 & 1) == 0 )
+  {
+    sub_1C2D490(&StringLiteral_20276/*"imageSvtId"*/);
+    byte_4C284E6 = 1;
+  }
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20276/*"imageSvtId"*/, 0, v2);
+}
+
+
+int32_t WarBoardStagePieceDetailEntity__GetMoveAfterAttackType(
         WarBoardStagePieceDetailEntity_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B1D6E2 & 1) == 0 )
+  if ( (byte_4C284E3 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_20110/*"imageSvtId"*/, method);
-    byte_4B1D6E2 = 1;
+    sub_1C2D490(&StringLiteral_22225/*"noMoveAfterAttack"*/);
+    byte_4C284E3 = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20110/*"imageSvtId"*/, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22225/*"noMoveAfterAttack"*/, 0, v2);
 }
 
 
-int32_t __fastcall WarBoardStagePieceDetailEntity__GetMoveAfterAttackType(
+int32_t WarBoardStagePieceDetailEntity__GetMovedAfterDefendType(
         WarBoardStagePieceDetailEntity_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B1D6DF & 1) == 0 )
+  if ( (byte_4C284E4 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_22045/*"noMoveAfterAttack"*/, method);
-    byte_4B1D6DF = 1;
+    sub_1C2D490(&StringLiteral_22228/*"noMovedAfterDefend"*/);
+    byte_4C284E4 = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22045/*"noMoveAfterAttack"*/, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22228/*"noMovedAfterDefend"*/, 0, v2);
 }
 
 
-int32_t __fastcall WarBoardStagePieceDetailEntity__GetMovedAfterDefendType(
+int32_t WarBoardStagePieceDetailEntity__GetOverwriteAttackCost(
         WarBoardStagePieceDetailEntity_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B1D6E0 & 1) == 0 )
+  if ( (byte_4C284E0 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_22048/*"noMovedAfterDefend"*/, method);
-    byte_4B1D6E0 = 1;
+    sub_1C2D490(&StringLiteral_22510/*"overwriteAttackCost"*/);
+    byte_4C284E0 = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22048/*"noMovedAfterDefend"*/, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22510/*"overwriteAttackCost"*/, -1, v2);
 }
 
 
-int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteAttackCost(
+int32_t WarBoardStagePieceDetailEntity__GetOverwriteBaseActionPoint(
         WarBoardStagePieceDetailEntity_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B1D6DC & 1) == 0 )
+  if ( (byte_4C284DF & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_22329/*"overwriteAttackCost"*/, method);
-    byte_4B1D6DC = 1;
+    sub_1C2D490(&StringLiteral_22512/*"overwriteBaseActionPoint"*/);
+    byte_4C284DF = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22329/*"overwriteAttackCost"*/, -1, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22512/*"overwriteBaseActionPoint"*/, -1, v2);
 }
 
 
-int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteBaseActionPoint(
+int32_t WarBoardStagePieceDetailEntity__GetOverwriteMoveCost(
         WarBoardStagePieceDetailEntity_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B1D6DB & 1) == 0 )
+  if ( (byte_4C284E1 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_22331/*"overwriteBaseActionPoint"*/, method);
-    byte_4B1D6DB = 1;
+    sub_1C2D490(&StringLiteral_22546/*"overwriteMoveCost"*/);
+    byte_4C284E1 = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22331/*"overwriteBaseActionPoint"*/, -1, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22546/*"overwriteMoveCost"*/, -1, v2);
 }
 
 
-int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteMoveCost(
-        WarBoardStagePieceDetailEntity_o *this,
-        const MethodInfo *method)
-{
-  const MethodInfo *v2; // x3
-
-  if ( (byte_4B1D6DD & 1) == 0 )
-  {
-    sub_1BCAFF8(&StringLiteral_22361/*"overwriteMoveCost"*/, method);
-    byte_4B1D6DD = 1;
-  }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22361/*"overwriteMoveCost"*/, -1, v2);
-}
-
-
-int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteValue(
+int32_t WarBoardStagePieceDetailEntity__GetOverwriteValue(
         WarBoardStagePieceDetailEntity_o *this,
         System_String_o *key,
         const MethodInfo *method)
@@ -203,22 +200,22 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteValue(
 }
 
 
-int32_t __fastcall WarBoardStagePieceDetailEntity__GetOverwriteWallAttackCost(
+int32_t WarBoardStagePieceDetailEntity__GetOverwriteWallAttackCost(
         WarBoardStagePieceDetailEntity_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B1D6DA & 1) == 0 )
+  if ( (byte_4C284DE & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_22387/*"overwriteWallAttackCost"*/, method);
-    byte_4B1D6DA = 1;
+    sub_1C2D490(&StringLiteral_22574/*"overwriteWallAttackCost"*/);
+    byte_4C284DE = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22387/*"overwriteWallAttackCost"*/, -1, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_22574/*"overwriteWallAttackCost"*/, -1, v2);
 }
 
 
-bool __fastcall WarBoardStagePieceDetailEntity__HasFlag(
+bool WarBoardStagePieceDetailEntity__HasFlag(
         WarBoardStagePieceDetailEntity_o *this,
         int32_t targetFlag,
         const MethodInfo *method)
@@ -227,31 +224,27 @@ bool __fastcall WarBoardStagePieceDetailEntity__HasFlag(
 }
 
 
-bool __fastcall WarBoardStagePieceDetailEntity__IsNotIncludeWin(
-        WarBoardStagePieceDetailEntity_o *this,
-        const MethodInfo *method)
+bool WarBoardStagePieceDetailEntity__IsNotIncludeWin(WarBoardStagePieceDetailEntity_o *this, const MethodInfo *method)
 {
   return this->fields.flag & 1;
 }
 
 
-int32_t __fastcall WarBoardStagePieceDetailEntity__getRoleType(
-        WarBoardStagePieceDetailEntity_o *this,
-        const MethodInfo *method)
+int32_t WarBoardStagePieceDetailEntity__getRoleType(WarBoardStagePieceDetailEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B1D6D9 & 1) == 0 )
+  if ( (byte_4C284DD & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_24529/*"warBoardSvtDetail"*/, method);
-    byte_4B1D6D9 = 1;
+    sub_1C2D490(&StringLiteral_24723/*"warBoardSvtDetail"*/);
+    byte_4C284DD = 1;
   }
-  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_24529/*"warBoardSvtDetail"*/, 0, v2);
+  return WarBoardStagePieceDetailEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_24723/*"warBoardSvtDetail"*/, 0, v2);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall WarBoardStagePieceDetailEntity__getScriptIntParam(
+int32_t WarBoardStagePieceDetailEntity__getScriptIntParam(
         WarBoardStagePieceDetailEntity_o *this,
         System_String_o *key,
         int32_t defVal,
@@ -266,22 +259,22 @@ int32_t __fastcall WarBoardStagePieceDetailEntity__getScriptIntParam(
   const MethodInfo *v13; // x2
 
   v4 = defVal;
-  if ( (byte_4B1D6D7 & 1) == 0 )
+  if ( (byte_4C284DB & 1) == 0 )
   {
-    sub_1BCAFF8(&long_TypeInfo, key);
-    byte_4B1D6D7 = 1;
+    sub_1C2D490(&long_TypeInfo);
+    byte_4C284DB = 1;
   }
   ScriptObj = WarBoardStagePieceDetailEntity__getScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
-  sub_1BCB514(ScriptObj);
+  sub_1C2D9AC(ScriptObj);
   return (unsigned int)WarBoardStagePieceDetailEntity__getScriptObj(v11, v12, v13);
 }
 
 
-Il2CppObject *__fastcall WarBoardStagePieceDetailEntity__getScriptObj(
+Il2CppObject *WarBoardStagePieceDetailEntity__getScriptObj(
         WarBoardStagePieceDetailEntity_o *this,
         System_String_o *key,
         const MethodInfo *method)
@@ -289,26 +282,26 @@ Il2CppObject *__fastcall WarBoardStagePieceDetailEntity__getScriptObj(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B1D6D8 & 1) == 0 )
+  if ( (byte_4C284DC & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__, key);
-    byte_4B1D6D8 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_4C284DC = 1;
   }
   result = (Il2CppObject *)this->fields.script;
   if ( result )
   {
-    value = 0LL;
+    value = 0;
     if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_3387584 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_344BB34 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }
     else
     {
-      return 0LL;
+      return 0;
     }
   }
   return result;

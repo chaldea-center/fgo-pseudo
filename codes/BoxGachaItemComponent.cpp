@@ -1,30 +1,30 @@
-void __fastcall BoxGachaItemComponent___ctor(BoxGachaItemComponent_o *this, const MethodInfo *method)
+void BoxGachaItemComponent___ctor(BoxGachaItemComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall BoxGachaItemComponent__Clear(BoxGachaItemComponent_o *this, const MethodInfo *method)
+void BoxGachaItemComponent__Clear(BoxGachaItemComponent_o *this, const MethodInfo *method)
 {
   ItemIconComponent_o *itemIcon; // x0
 
-  if ( (byte_4B169EB & 1) == 0 )
+  if ( (byte_4C216E9 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1/*""*/, method);
-    byte_4B169EB = 1;
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C216E9 = 1;
   }
   itemIcon = this->fields.itemIcon;
   if ( !itemIcon
-    || (ItemIconComponent__Clear(itemIcon, 0LL), (itemIcon = (ItemIconComponent_o *)this->fields.dataLabel) == 0LL) )
+    || (ItemIconComponent__Clear(itemIcon, 0), (itemIcon = (ItemIconComponent_o *)this->fields.dataLabel) == 0) )
   {
-    sub_1BCB254(itemIcon, method);
+    sub_1C2D6EC(itemIcon, method);
   }
-  UILabel__set_text((UILabel_o *)itemIcon, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  UILabel__set_text((UILabel_o *)itemIcon, (System_String_o *)StringLiteral_1/*""*/, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BoxGachaItemComponent__Set(
+void BoxGachaItemComponent__Set(
         BoxGachaItemComponent_o *this,
         int32_t itemId,
         int32_t payNum,
@@ -33,10 +33,10 @@ void __fastcall BoxGachaItemComponent__Set(
   ItemIconComponent_o *itemIcon; // x0
   UILabel_o *dataLabel; // x20
 
-  if ( (byte_4B169EC & 1) == 0 )
+  if ( (byte_4C216EA & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, *(_QWORD *)&itemId);
-    byte_4B169EC = 1;
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    byte_4C216EA = 1;
   }
   if ( itemId < 1 )
   {
@@ -47,14 +47,14 @@ void __fastcall BoxGachaItemComponent__Set(
     itemIcon = this->fields.itemIcon;
     if ( !itemIcon )
       goto LABEL_10;
-    ItemIconComponent__SetItem(itemIcon, itemId, -1, 1, 0LL);
+    ItemIconComponent__SetItem(itemIcon, itemId, -1, 1, 0);
     dataLabel = this->fields.dataLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    itemIcon = (ItemIconComponent_o *)LocalizationManager__GetNumberFormat(payNum, 0LL);
+    itemIcon = (ItemIconComponent_o *)LocalizationManager__GetNumberFormat(payNum, 0);
     if ( !dataLabel )
 LABEL_10:
-      sub_1BCB254(itemIcon, *(_QWORD *)&itemId);
-    UILabel__set_text(dataLabel, (System_String_o *)itemIcon, 0LL);
+      sub_1C2D6EC(itemIcon, *(_QWORD *)&itemId);
+    UILabel__set_text(dataLabel, (System_String_o *)itemIcon, 0);
   }
 }

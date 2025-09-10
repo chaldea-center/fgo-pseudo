@@ -7,7 +7,7 @@ __int64 __fastcall mono_method_get_param_names(__int64 a1, __int64 a2)
   result = il2cpp_method_get_param_count_0();
   if ( (_DWORD)result )
   {
-    v5 = 0LL;
+    v5 = 0;
     v6 = (unsigned int)result;
     do
     {

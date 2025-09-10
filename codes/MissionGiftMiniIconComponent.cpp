@@ -1,10 +1,10 @@
-void __fastcall MissionGiftMiniIconComponent___ctor(MissionGiftMiniIconComponent_o *this, const MethodInfo *method)
+void MissionGiftMiniIconComponent___ctor(MissionGiftMiniIconComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall MissionGiftMiniIconComponent__SetMiniIcon(
+void MissionGiftMiniIconComponent__SetMiniIcon(
         MissionGiftMiniIconComponent_o *this,
         GiftEntity_o *entity,
         const MethodInfo *method)
@@ -16,19 +16,19 @@ void __fastcall MissionGiftMiniIconComponent__SetMiniIcon(
   {
     if ( miniIcon )
     {
-      ItemIconComponent__SetGift_40107980(
+      ItemIconComponent__SetGift_40700316(
         miniIcon,
         entity->fields.type,
         entity->fields.objectId,
         entity->fields.num,
         0,
-        0LL);
+        0);
       return;
     }
 LABEL_6:
-    sub_1BCB254(miniIcon, entity);
+    sub_1C2D6EC(miniIcon, entity);
   }
   if ( !miniIcon )
     goto LABEL_6;
-  ItemIconComponent__Clear(miniIcon, 0LL);
+  ItemIconComponent__Clear(miniIcon, 0);
 }

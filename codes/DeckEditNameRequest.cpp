@@ -1,81 +1,76 @@
-void __fastcall DeckEditNameRequest___ctor(DeckEditNameRequest_o *this, const MethodInfo *method)
+void DeckEditNameRequest___ctor(DeckEditNameRequest_o *this, const MethodInfo *method)
 {
-  RequestBase___ctor((RequestBase_o *)this, 0LL);
+  RequestBase___ctor((RequestBase_o *)this, 0);
 }
 
 
-void __fastcall DeckEditNameRequest__beginRequest(
+void DeckEditNameRequest__beginRequest(
         DeckEditNameRequest_o *this,
         int64_t deckId,
         System_String_o *deckName,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-
-  if ( (byte_4B1DF96 & 1) == 0 )
+  if ( (byte_4C28DA8 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18370/*"deckId"*/, deckId);
-    sub_1BCAFF8(&StringLiteral_18372/*"deckName"*/, v7);
-    byte_4B1DF96 = 1;
+    sub_1C2D490(&StringLiteral_18518/*"deckId"*/);
+    sub_1C2D490(&StringLiteral_18520/*"deckName"*/);
+    byte_4C28DA8 = 1;
   }
-  RequestBase__addField_43346700((RequestBase_o *)this, (System_String_o *)StringLiteral_18370/*"deckId"*/, deckId, 0LL);
-  RequestBase__addField_43348616((RequestBase_o *)this, (System_String_o *)StringLiteral_18372/*"deckName"*/, deckName, 0LL);
-  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
+  RequestBase__addField_44008608((RequestBase_o *)this, (System_String_o *)StringLiteral_18518/*"deckId"*/, deckId, 0);
+  RequestBase__addField_44009064((RequestBase_o *)this, (System_String_o *)StringLiteral_18520/*"deckName"*/, deckName, 0);
+  RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
 
-System_String_o *__fastcall DeckEditNameRequest__getMockData(DeckEditNameRequest_o *this, const MethodInfo *method)
+System_String_o *DeckEditNameRequest__getMockData(DeckEditNameRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1DF95 & 1) == 0 )
+  if ( (byte_4C28DA7 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1/*""*/, method);
-    byte_4B1DF95 = 1;
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C28DA7 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
-System_String_o *__fastcall DeckEditNameRequest__getURL(DeckEditNameRequest_o *this, const MethodInfo *method)
+System_String_o *DeckEditNameRequest__getURL(DeckEditNameRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B1DF94 & 1) == 0 )
+  if ( (byte_4C28DA6 & 1) == 0 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_18368/*"deck/editName"*/, v2);
-    byte_4B1DF94 = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_18516/*"deck/editName"*/);
+    byte_4C28DA6 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_18368/*"deck/editName"*/, 0LL);
+  BaseUrl = NetworkManager__getBaseUrl(1, 0);
+  return System_String__Concat_63457864(BaseUrl, (System_String_o *)StringLiteral_18516/*"deck/editName"*/, 0);
 }
 
 
-void __fastcall DeckEditNameRequest__requestCompleted(
+void DeckEditNameRequest__requestCompleted(
         DeckEditNameRequest_o *this,
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  __int64 *v8; // x8
+  ResponseData_o *v5; // x0
+  __int64 *v6; // x8
 
-  if ( (byte_4B1DF97 & 1) == 0 )
+  if ( (byte_4C28DA9 & 1) == 0 )
   {
-    sub_1BCAFF8(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1BCAFF8(&StringLiteral_22181/*"ok"*/, v5);
-    sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v6);
-    byte_4B1DF97 = 1;
+    sub_1C2D490(&ResponseCommandKind_TypeInfo);
+    sub_1C2D490(&StringLiteral_22362/*"ok"*/);
+    sub_1C2D490(&StringLiteral_22195/*"ng"*/);
+    byte_4C28DA9 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(53, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_43347888(v7, 0LL) )
-    v8 = &StringLiteral_22181/*"ok"*/;
+  v5 = ResponseCommandKind__SearchData(53, responseList, 0);
+  if ( v5 && ResponseData__checkError_44004292(v5, 0) )
+    v6 = &StringLiteral_22362/*"ok"*/;
   else
-    v8 = &StringLiteral_22015/*"ng"*/;
-  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
+    v6 = &StringLiteral_22195/*"ng"*/;
+  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0);
 }

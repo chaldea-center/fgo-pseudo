@@ -1,17 +1,17 @@
-bool __fastcall AiEntity__IsNoBackStepNpc(AiEntity_o *this, const MethodInfo *method)
+bool AiEntity__IsNoBackStepNpc(AiEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4B1C0F2 & 1) == 0 )
+  if ( (byte_4C26E96 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_9431/*"NoBackStepNpc"*/, method);
-    byte_4B1C0F2 = 1;
+    sub_1C2D490(&StringLiteral_9500/*"NoBackStepNpc"*/);
+    byte_4C26E96 = 1;
   }
-  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_9431/*"NoBackStepNpc"*/, -1, v2) == 1;
+  return AiBaseEntity__getScriptIntParam((AiBaseEntity_o *)this, (System_String_o *)StringLiteral_9500/*"NoBackStepNpc"*/, -1, v2) == 1;
 }
 
 
-bool __fastcall AiEntity__isTiming(
+bool AiEntity__isTiming(
         AiEntity_o *this,
         int32_t state,
         int32_t actcnt,
@@ -28,7 +28,7 @@ bool __fastcall AiEntity__isTiming(
   switch ( state )
   {
     case 1:
-      return Ai__Check(-1, this->fields.actNum, 0LL) || this->fields.actNum == actcnt;
+      return Ai__Check(-1, this->fields.actNum, 0) || this->fields.actNum == actcnt;
     case 2:
       actNum = this->fields.actNum;
       v8 = -6;
@@ -102,13 +102,13 @@ bool __fastcall AiEntity__isTiming(
       actNum = this->fields.actNum;
       v8 = -18;
 LABEL_22:
-      result = Ai__Check(v8, actNum, 0LL);
+      result = Ai__Check(v8, actNum, 0);
       break;
     case 24:
       v9 = this->fields.actNum;
       v10 = -19;
 LABEL_24:
-      result = Ai__CheckPriority(v10, v9, timingPriority, 0LL);
+      result = Ai__CheckPriority(v10, v9, timingPriority, 0);
       break;
     default:
       return result;

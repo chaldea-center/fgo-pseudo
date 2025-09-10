@@ -1,36 +1,35 @@
-BgmPlayArgs_o *__fastcall MainBgmPlayArgs__Clone(MainBgmPlayArgs_o *this, const MethodInfo *method)
+BgmPlayArgs_o *MainBgmPlayArgs__Clone(MainBgmPlayArgs_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   float Volume_k__BackingField; // s0
   System_String_o *BgmName_k__BackingField; // x20
+  System_Nullable_float__o p_volume; // x0
   float FadeTime_k__BackingField; // s8
   int64_t StartTime_k__BackingField; // x19
   BgmPlayArgs_o *v8; // x0
-  BgmPlayArgs_o *v9; // x21
-  const MethodInfo *v10; // x4
+  System_Nullable_float__o v9; // x2
+  BgmPlayArgs_o *v10; // x21
+  const MethodInfo *v11; // x4
   System_Nullable_float__o volume; // [xsp+8h] [xbp-38h] BYREF
-  System_Nullable_float__o p_volume; // 0:x0.8
-  System_Nullable_float__o v14; // 0:x2.8
 
-  if ( (byte_4B1BB98 & 1) == 0 )
+  if ( (byte_4C2692F & 1) == 0 )
   {
-    sub_1BCAFF8(&MainBgmPlayArgs_TypeInfo, method);
-    sub_1BCAFF8(&Method_System_Nullable_float___ctor__, v3);
-    byte_4B1BB98 = 1;
+    sub_1C2D490(&MainBgmPlayArgs_TypeInfo);
+    sub_1C2D490(&Method_System_Nullable_float___ctor__);
+    byte_4C2692F = 1;
   }
   Volume_k__BackingField = this->fields._Volume_k__BackingField;
   BgmName_k__BackingField = this->fields._BgmName_k__BackingField;
   p_volume = (System_Nullable_float__o)&volume;
-  volume = 0LL;
+  volume = 0;
   System_Nullable_float____ctor(
     p_volume,
     Volume_k__BackingField,
-    (const MethodInfo_37DB04C *)Method_System_Nullable_float___ctor__);
+    (const MethodInfo_38B1A04 *)Method_System_Nullable_float___ctor__);
   FadeTime_k__BackingField = this->fields._FadeTime_k__BackingField;
   StartTime_k__BackingField = this->fields._StartTime_k__BackingField;
-  v8 = (BgmPlayArgs_o *)sub_1BCB244(MainBgmPlayArgs_TypeInfo);
-  v14 = volume;
-  v9 = v8;
-  BgmPlayArgs___ctor(v8, BgmName_k__BackingField, v14, FadeTime_k__BackingField, StartTime_k__BackingField, v10);
-  return v9;
+  v8 = (BgmPlayArgs_o *)sub_1C2D6DC(MainBgmPlayArgs_TypeInfo);
+  v9 = volume;
+  v10 = v8;
+  BgmPlayArgs___ctor(v8, BgmName_k__BackingField, v9, FadeTime_k__BackingField, StartTime_k__BackingField, v11);
+  return v10;
 }

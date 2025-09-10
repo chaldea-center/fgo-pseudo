@@ -1,13 +1,10 @@
-void __fastcall CharaGraphListMenuServantMission___ctor(
-        CharaGraphListMenuServantMission_o *this,
-        const MethodInfo *method)
+void CharaGraphListMenuServantMission___ctor(CharaGraphListMenuServantMission_o *this, const MethodInfo *method)
 {
-  CharaGraphListMenuBase___ctor((CharaGraphListMenuBase_o *)this, 0LL);
+  CharaGraphListMenuBase___ctor((CharaGraphListMenuBase_o *)this, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-CharaGraphListViewPatternBase_o *__fastcall CharaGraphListMenuServantMission__CreateListViewPattern(
+CharaGraphListViewPatternBase_o *CharaGraphListMenuServantMission__CreateListViewPattern(
         CharaGraphListMenuServantMission_o *this,
         int32_t kind,
         EventUpValSetupInfo_o *setupInfo,
@@ -23,42 +20,42 @@ CharaGraphListViewPatternBase_o *__fastcall CharaGraphListMenuServantMission__Cr
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4B18608 & 1) == 0 )
+  if ( (byte_4C2335E & 1) == 0 )
   {
-    sub_1BCAFF8(&CharaGraphListViewPatternServantMission_TypeInfo, *(_QWORD *)&kind);
-    byte_4B18608 = 1;
+    sub_1C2D490(&CharaGraphListViewPatternServantMission_TypeInfo);
+    byte_4C2335E = 1;
   }
-  v6 = sub_1BCB244(CharaGraphListViewPatternServantMission_TypeInfo);
-  CharaGraphListViewPatternServantCollection___ctor((CharaGraphListViewPatternServantCollection_o *)v6, 0LL);
+  v6 = sub_1C2D6DC(CharaGraphListViewPatternServantMission_TypeInfo);
+  CharaGraphListViewPatternServantCollection___ctor((CharaGraphListViewPatternServantCollection_o *)v6, 0);
   if ( !v6
     || (SortOwner_k__BackingField = this->fields._SortOwner_k__BackingField,
         *(_QWORD *)(v6 + 16) = SortOwner_k__BackingField,
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v6 + 16), (int32_t)SortOwner_k__BackingField, v9, v10),
+        sub_1C2D434((CGThumbnailListItem_o *)(v6 + 16), (int32_t)SortOwner_k__BackingField, v9, v10),
         RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField,
         *(_QWORD *)(v6 + 24) = RootInfo_k__BackingField,
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v6 + 24), (int32_t)RootInfo_k__BackingField, v13, v14),
-        (v7 = this->fields._SortOwner_k__BackingField) == 0LL) )
+        sub_1C2D434((CGThumbnailListItem_o *)(v6 + 24), (int32_t)RootInfo_k__BackingField, v13, v14),
+        (v7 = this->fields._SortOwner_k__BackingField) == 0) )
   {
-    sub_1BCB254(v7, v8);
+    sub_1C2D6EC(v7, v8);
   }
-  CharaGraphSortOwnerBase__SwitchCurrentViewSortUnit(v7, kind, 0LL);
+  CharaGraphSortOwnerBase__SwitchCurrentViewSortUnit(v7, kind, 0);
   return (CharaGraphListViewPatternBase_o *)v6;
 }
 
 
-void __fastcall CharaGraphListMenuServantMission__Init(
+void CharaGraphListMenuServantMission__Init(
         CharaGraphListMenuServantMission_o *this,
         int32_t defaultTabKind,
         const MethodInfo *method)
 {
-  CharaGraphListMenuBase__Init((CharaGraphListMenuBase_o *)this, 3, 0LL);
+  CharaGraphListMenuBase__Init((CharaGraphListMenuBase_o *)this, 3, 0);
 }
 
 
-void __fastcall CharaGraphListMenuServantMission__OnSelectServantAtKindMain(
+void CharaGraphListMenuServantMission__OnSelectServantAtKindMain(
         CharaGraphListMenuServantMission_o *this,
         CharaGraphListViewItemBase_o *item,
         const MethodInfo *method)
 {
-  CharaGraphListMenuBase__ToInputState((CharaGraphListMenuBase_o *)this, 0, 0LL);
+  CharaGraphListMenuBase__ToInputState((CharaGraphListMenuBase_o *)this, 0, 0);
 }

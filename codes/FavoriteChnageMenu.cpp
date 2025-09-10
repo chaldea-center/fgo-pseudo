@@ -1,11 +1,11 @@
-void __fastcall FavoriteChnageMenu___ctor(FavoriteChnageMenu_o *this, const MethodInfo *method)
+void FavoriteChnageMenu___ctor(FavoriteChnageMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B17558 & 1) == 0 )
+  if ( (byte_4C22287 & 1) == 0 )
   {
-    sub_1BCAFF8(&BaseMenu_TypeInfo, method);
-    byte_4B17558 = 1;
+    sub_1C2D490(&BaseMenu_TypeInfo);
+    byte_4C22287 = 1;
   }
   if ( !BaseMenu_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseMenu_TypeInfo);
-  BaseMenu___ctor((BaseMenu_o *)this, 0LL);
+  BaseMenu___ctor((BaseMenu_o *)this, 0);
 }

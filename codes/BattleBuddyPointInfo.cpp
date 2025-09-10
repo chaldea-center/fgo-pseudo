@@ -1,4 +1,4 @@
-void __fastcall BattleBuddyPointInfo___ctor(BattleBuddyPointInfo_o *this, const MethodInfo *method)
+void BattleBuddyPointInfo___ctor(BattleBuddyPointInfo_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }

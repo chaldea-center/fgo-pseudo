@@ -1,300 +1,280 @@
-void __fastcall EventInfoConquestGetComponent___cctor(const MethodInfo *method)
+void EventInfoConquestGetComponent___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  __int64 v4; // x1
+  int32_t v1; // w2
+  const MethodInfo *v2; // x3
 
-  if ( (byte_4B1C97F & 1) == 0 )
+  if ( (byte_4C2773D & 1) == 0 )
   {
-    sub_1BCAFF8(&EventInfoConquestGetComponent_TypeInfo, v1);
-    sub_1BCAFF8(&StringLiteral_21383/*"military_production_bg"*/, v4);
-    byte_4B1C97F = 1;
+    sub_1C2D490(&EventInfoConquestGetComponent_TypeInfo);
+    sub_1C2D490(&StringLiteral_21560/*"military_production_bg"*/);
+    byte_4C2773D = 1;
   }
-  EventInfoConquestGetComponent_TypeInfo->static_fields->EVENT_CONQUEST_GET_BG = (struct System_String_o *)StringLiteral_21383/*"military_production_bg"*/;
-  sub_1BCAF9C(
+  EventInfoConquestGetComponent_TypeInfo->static_fields->EVENT_CONQUEST_GET_BG = (struct System_String_o *)StringLiteral_21560/*"military_production_bg"*/;
+  sub_1C2D434(
     (CGThumbnailListItem_o *)EventInfoConquestGetComponent_TypeInfo->static_fields,
-    StringLiteral_21383/*"military_production_bg"*/,
-    v2,
-    v3);
+    StringLiteral_21560/*"military_production_bg"*/,
+    v1,
+    v2);
 }
 
 
-void __fastcall EventInfoConquestGetComponent___ctor(EventInfoConquestGetComponent_o *this, const MethodInfo *method)
+void EventInfoConquestGetComponent___ctor(EventInfoConquestGetComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall EventInfoConquestGetComponent__Open(
+void EventInfoConquestGetComponent__Open(
         EventInfoConquestGetComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x19
+  __int64 v5; // x19
   UnityEngine_Component_o *gameObject; // x0
-  __int64 v22; // x1
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  int32_t v25; // w2
-  const MethodInfo *v26; // x3
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
   UnityEngine_Object_o *dialog; // x22
-  TerminalPramsManager_c *v28; // x0
+  TerminalPramsManager_c *v13; // x0
   UISprite_o *backSprite; // x22
-  EventInfoConquestGetComponent_c *v30; // x0
+  EventInfoConquestGetComponent_c *v15; // x0
   System_String_o *EVENT_CONQUEST_GET_BG; // x23
-  System_Collections_Generic_List_object__o *v32; // x22
-  void **v33; // x21
-  int32_t v34; // w2
-  const MethodInfo *v35; // x3
-  __int64 v36; // x2
-  __int64 v37; // x23
-  int v38; // w8
-  unsigned int v39; // w24
-  __int64 v40; // x27
-  __int64 v41; // x22
-  int32_t v42; // w2
-  const MethodInfo *v43; // x3
-  int v44; // w8
-  __int64 v45; // x8
-  _QWORD *v46; // x9
+  System_Collections_Generic_List_object__o *v17; // x22
+  void **v18; // x21
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  __int64 v21; // x2
+  __int64 v22; // x23
+  int v23; // w8
+  unsigned int v24; // w24
+  __int64 v25; // x27
+  __int64 v26; // x22
+  int32_t v27; // w2
+  const MethodInfo *v28; // x3
+  int v29; // w8
+  intptr_t m_CachedPtr; // x8
+  _QWORD *v31; // x9
   __int64 klass_low; // x10
-  __int64 v48; // x8
-  System_String_o *v49; // x0
-  int32_t v50; // w2
-  const MethodInfo *v51; // x3
-  System_String_o *v52; // x0
-  int32_t v53; // w2
-  const MethodInfo *v54; // x3
+  intptr_t v33; // x8
+  System_String_o *v34; // x0
+  int32_t v35; // w2
+  const MethodInfo *v36; // x3
+  System_String_o *v37; // x0
+  int32_t v38; // w2
+  const MethodInfo *v39; // x3
   Il2CppObject *Instance; // x20
-  AvalonSceneManager_c *v56; // x8
+  AvalonSceneManager_c *v41; // x8
   float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v58; // x21
+  System_Action_o *v43; // x21
 
-  if ( (byte_4B1C97E & 1) == 0 )
+  if ( (byte_4C2773C & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, callback);
-    sub_1BCAFF8(&AtlasManager_TypeInfo, v5);
-    sub_1BCAFF8(&AvalonSceneManager_TypeInfo, v6);
-    sub_1BCAFF8(&EventInfoConquestGetComponent_TypeInfo, v7);
-    sub_1BCAFF8(&GiftEntity_TypeInfo, v8);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GiftEntity__Add__, v9);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GiftEntity___ctor__, v10);
-    sub_1BCAFF8(&System_Collections_Generic_List_GiftEntity__TypeInfo, v11);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v12);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v13);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v14);
-    sub_1BCAFF8(&TerminalPramsManager_TypeInfo, v15);
-    sub_1BCAFF8(&Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__0__, v16);
-    sub_1BCAFF8(&EventInfoConquestGetComponent___c__DisplayClass3_0_TypeInfo, v17);
-    sub_1BCAFF8(&StringLiteral_5520/*"EVENT_CONQUEST_GET_MESSAGE"*/, v18);
-    sub_1BCAFF8(&StringLiteral_5521/*"EVENT_CONQUEST_GET_TITLE"*/, v19);
-    byte_4B1C97E = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&AvalonSceneManager_TypeInfo);
+    sub_1C2D490(&EventInfoConquestGetComponent_TypeInfo);
+    sub_1C2D490(&GiftEntity_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GiftEntity__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GiftEntity___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_GiftEntity__TypeInfo);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C2D490(&TerminalPramsManager_TypeInfo);
+    sub_1C2D490(&Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__0__);
+    sub_1C2D490(&EventInfoConquestGetComponent___c__DisplayClass3_0_TypeInfo);
+    sub_1C2D490(&StringLiteral_5557/*"EVENT_CONQUEST_GET_MESSAGE"*/);
+    sub_1C2D490(&StringLiteral_5558/*"EVENT_CONQUEST_GET_TITLE"*/);
+    byte_4C2773C = 1;
   }
-  v20 = sub_1BCB244(EventInfoConquestGetComponent___c__DisplayClass3_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v20, 0LL);
-  if ( !v20 )
+  v5 = sub_1C2D6DC(EventInfoConquestGetComponent___c__DisplayClass3_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
+  if ( !v5 )
     goto LABEL_39;
-  *(_QWORD *)(v20 + 16) = this;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v20 + 16), (int32_t)this, v23, v24);
-  *(_QWORD *)(v20 + 48) = callback;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v20 + 48), (int32_t)callback, v25, v26);
+  *(_QWORD *)(v5 + 16) = this;
+  sub_1C2D434((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  *(_QWORD *)(v5 + 48) = callback;
+  sub_1C2D434((CGThumbnailListItem_o *)(v5 + 48), (int32_t)callback, v10, v11);
   dialog = (UnityEngine_Object_o *)this->fields.dialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(dialog, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(dialog, 0, 0) )
     goto LABEL_38;
-  v28 = TerminalPramsManager_TypeInfo;
+  v13 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v28 = TerminalPramsManager_TypeInfo;
+    v13 = TerminalPramsManager_TypeInfo;
   }
-  if ( !v28->static_fields->eventConquestInfos )
+  if ( !v13->static_fields->eventConquestInfos )
     goto LABEL_38;
   backSprite = this->fields.backSprite;
-  v30 = EventInfoConquestGetComponent_TypeInfo;
+  v15 = EventInfoConquestGetComponent_TypeInfo;
   if ( !EventInfoConquestGetComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventInfoConquestGetComponent_TypeInfo);
-    v30 = EventInfoConquestGetComponent_TypeInfo;
+    v15 = EventInfoConquestGetComponent_TypeInfo;
   }
-  EVENT_CONQUEST_GET_BG = v30->static_fields->EVENT_CONQUEST_GET_BG;
+  EVENT_CONQUEST_GET_BG = v15->static_fields->EVENT_CONQUEST_GET_BG;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(backSprite, EVENT_CONQUEST_GET_BG, 0LL);
+  AtlasManager__SetEventUI(backSprite, EVENT_CONQUEST_GET_BG, 0);
   gameObject = (UnityEngine_Component_o *)this->fields.backSprite;
   if ( !gameObject )
     goto LABEL_39;
-  ((void (__fastcall *)(UnityEngine_Component_o *, void *))gameObject->klass[2]._1.typeMetadataHandle)(
+  ((void (__fastcall *)(UnityEngine_Component_o *, void *))gameObject->klass[2]._1.parent)(
     gameObject,
-    gameObject->klass[2]._1.interopData);
+    gameObject->klass[2]._1.generic_class);
   gameObject = (UnityEngine_Component_o *)this->fields.backSprite;
   if ( !gameObject )
     goto LABEL_39;
-  gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+  gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0);
   if ( !gameObject )
     goto LABEL_39;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
-  v32 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_GiftEntity__TypeInfo);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
+  v17 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_GiftEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v32,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
-  *(_QWORD *)(v20 + 24) = v32;
-  v33 = (void **)(v20 + 24);
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v20 + 24), (int32_t)v32, v34, v35);
+    v17,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_GiftEntity___ctor__);
+  *(_QWORD *)(v5 + 24) = v17;
+  v18 = (void **)(v5 + 24);
+  sub_1C2D434((CGThumbnailListItem_o *)(v5 + 24), (int32_t)v17, v19, v20);
   gameObject = (UnityEngine_Component_o *)TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
     gameObject = (UnityEngine_Component_o *)TerminalPramsManager_TypeInfo;
   }
-  v37 = *(_QWORD *)(*(_QWORD *)&gameObject[7].fields.m_CachedPtr + 672LL);
-  if ( !v37 )
+  v22 = *(_QWORD *)(gameObject[7].fields.m_CachedPtr + 672);
+  if ( !v22 )
     goto LABEL_39;
-  v38 = *(_DWORD *)(v37 + 24);
-  if ( v38 >= 1 )
+  v23 = *(_DWORD *)(v22 + 24);
+  if ( v23 >= 1 )
   {
-    v39 = 0;
+    v24 = 0;
     while ( 1 )
     {
-      if ( v39 >= v38 )
-        sub_1BCB25C(gameObject, v22, v36);
-      v40 = *(_QWORD *)(v37 + 8LL * (int)v39 + 32);
-      v41 = sub_1BCB244(GiftEntity_TypeInfo);
-      GiftEntity___ctor((GiftEntity_o *)v41, 0LL);
-      if ( !v41 )
+      if ( v24 >= v23 )
+        sub_1C2D6F4(gameObject, v7, v21);
+      v25 = *(_QWORD *)(v22 + 8LL * (int)v24 + 32);
+      v26 = sub_1C2D6DC(GiftEntity_TypeInfo);
+      GiftEntity___ctor((GiftEntity_o *)v26, 0);
+      if ( !v26 )
         break;
-      *(_DWORD *)(v41 + 16) = 0;
-      if ( !v40 )
+      *(_DWORD *)(v26 + 16) = 0;
+      if ( !v25 )
         break;
-      *(_QWORD *)(v41 + 20) = *(_QWORD *)(v40 + 16);
-      v44 = *(_DWORD *)(v40 + 28);
-      *(_QWORD *)(v41 + 32) = 0LL;
-      *(_DWORD *)(v41 + 28) = v44;
-      gameObject = (UnityEngine_Component_o *)*v33;
-      if ( !*v33 )
+      *(_QWORD *)(v26 + 20) = *(_QWORD *)(v25 + 16);
+      v29 = *(_DWORD *)(v25 + 28);
+      *(_QWORD *)(v26 + 32) = 0;
+      *(_DWORD *)(v26 + 28) = v29;
+      gameObject = (UnityEngine_Component_o *)*v18;
+      if ( !*v18 )
         break;
-      v45 = *(_QWORD *)&gameObject->fields.m_CachedPtr;
-      v46 = Method_System_Collections_Generic_List_GiftEntity__Add__;
+      m_CachedPtr = gameObject->fields.m_CachedPtr;
+      v31 = Method_System_Collections_Generic_List_GiftEntity__Add__;
       ++HIDWORD(gameObject[1].klass);
-      if ( !v45 )
+      if ( !m_CachedPtr )
         break;
       klass_low = SLODWORD(gameObject[1].klass);
-      if ( (unsigned int)klass_low >= *(_DWORD *)(v45 + 24) )
+      if ( (unsigned int)klass_low >= *(_DWORD *)(m_CachedPtr + 24) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)gameObject,
-          (Il2CppObject *)v41,
-          *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
+          (Il2CppObject *)v26,
+          *(const MethodInfo_3789B84 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
       }
       else
       {
-        v48 = v45 + 8 * klass_low;
+        v33 = m_CachedPtr + 8 * klass_low;
         LODWORD(gameObject[1].klass) = klass_low + 1;
-        *(_QWORD *)(v48 + 32) = v41;
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v48 + 32), v41, v42, v43);
+        *(_QWORD *)(v33 + 32) = v26;
+        sub_1C2D434((CGThumbnailListItem_o *)(v33 + 32), v26, v27, v28);
       }
-      v38 = *(_DWORD *)(v37 + 24);
-      if ( (int)++v39 >= v38 )
+      v23 = *(_DWORD *)(v22 + 24);
+      if ( (int)++v24 >= v23 )
         goto LABEL_31;
     }
 LABEL_39:
-    sub_1BCB254(gameObject, v22);
+    sub_1C2D6EC(gameObject, v7);
   }
 LABEL_31:
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_5521/*"EVENT_CONQUEST_GET_TITLE"*/, 0LL);
-  *(_QWORD *)(v20 + 32) = v49;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v20 + 32), (int32_t)v49, v50, v51);
-  v52 = LocalizationManager__Get((System_String_o *)StringLiteral_5520/*"EVENT_CONQUEST_GET_MESSAGE"*/, 0LL);
-  *(_QWORD *)(v20 + 40) = v52;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v20 + 40), (int32_t)v52, v53, v54);
-  if ( *(_QWORD *)(v20 + 40) )
+  v34 = LocalizationManager__Get((System_String_o *)StringLiteral_5558/*"EVENT_CONQUEST_GET_TITLE"*/, 0);
+  *(_QWORD *)(v5 + 32) = v34;
+  sub_1C2D434((CGThumbnailListItem_o *)(v5 + 32), (int32_t)v34, v35, v36);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_5557/*"EVENT_CONQUEST_GET_MESSAGE"*/, 0);
+  *(_QWORD *)(v5 + 40) = v37;
+  sub_1C2D434((CGThumbnailListItem_o *)(v5 + 40), (int32_t)v37, v38, v39);
+  if ( *(_QWORD *)(v5 + 40) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v56 = AvalonSceneManager_TypeInfo;
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v41 = AvalonSceneManager_TypeInfo;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-      v56 = AvalonSceneManager_TypeInfo;
+      v41 = AvalonSceneManager_TypeInfo;
     }
-    DEFAULT_FADE_TIME = v56->static_fields->DEFAULT_FADE_TIME;
-    v58 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
+    DEFAULT_FADE_TIME = v41->static_fields->DEFAULT_FADE_TIME;
+    v43 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
     System_Action___ctor(
-      v58,
-      (Il2CppObject *)v20,
+      v43,
+      (Il2CppObject *)v5,
       (intptr_t)Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__0__,
-      0LL);
+      0);
     if ( !Instance )
       goto LABEL_39;
-    CommonUI__maskFadein((CommonUI_o *)Instance, DEFAULT_FADE_TIME, v58, 0LL);
+    CommonUI__maskFadein((CommonUI_o *)Instance, DEFAULT_FADE_TIME, v43, 0);
   }
   else
   {
 LABEL_38:
-    ActionExtensions__Call(*(System_Action_o **)(v20 + 48), 0LL);
+    ActionExtensions__Call(*(System_Action_o **)(v5 + 48), 0);
   }
 }
 
 
-void __fastcall EventInfoConquestGetComponent___c__DisplayClass3_0___ctor(
+void EventInfoConquestGetComponent___c__DisplayClass3_0___ctor(
         EventInfoConquestGetComponent___c__DisplayClass3_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall EventInfoConquestGetComponent___c__DisplayClass3_0___Open_b__0(
+void EventInfoConquestGetComponent___c__DisplayClass3_0___Open_b__0(
         EventInfoConquestGetComponent___c__DisplayClass3_0_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  _QWORD *v6; // x0
-  System_Reflection_MethodBase_o *v7; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
   System_Collections_Generic_List_object__o *giftList; // x0
-  __int64 v9; // x1
+  __int64 v6; // x1
   struct EventInfoConquestGetComponent_o *_4__this; // x8
   EventConquestGetDialog_o *dialog; // x20
   EventConquestGetDialog_ClickDelegate_o *_9__1; // x24
-  GiftEntity_array *v13; // x23
+  GiftEntity_array *v10; // x23
   System_String_o *title; // x21
   System_String_o *message; // x22
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
 
-  if ( (byte_4B1C980 & 1) == 0 )
+  if ( (byte_4C2773E & 1) == 0 )
   {
-    sub_1BCAFF8(&EventConquestGetDialog_ClickDelegate_TypeInfo, method);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GiftEntity__ToArray__, v3);
-    sub_1BCAFF8(&Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__0__, v4);
-    sub_1BCAFF8(&Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__1__, v5);
-    byte_4B1C980 = 1;
+    sub_1C2D490(&EventConquestGetDialog_ClickDelegate_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GiftEntity__ToArray__);
+    sub_1C2D490(&Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__0__);
+    sub_1C2D490(&Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__1__);
+    byte_4C2773E = 1;
   }
-  v6 = Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__0__;
+  v3 = Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__0__;
   if ( (*((_BYTE *)Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__0__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1BCB010(Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__0__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v6, v6[4]);
-  OverwriteAssetSoundName__PlayCommonSe(v7, 29, 0, 0LL);
+    v3 = (_QWORD *)sub_1C2D4A8(Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__0__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+  OverwriteAssetSoundName__PlayCommonSe(v4, 29, 0, 0);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_11;
@@ -304,49 +284,46 @@ void __fastcall EventInfoConquestGetComponent___c__DisplayClass3_0___Open_b__0(
   dialog = _4__this->fields.dialog;
   giftList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___ToArray(
                                                             giftList,
-                                                            (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_GiftEntity__ToArray__);
+                                                            (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_GiftEntity__ToArray__);
   _9__1 = this->fields.__9__1;
-  v13 = (GiftEntity_array *)giftList;
+  v10 = (GiftEntity_array *)giftList;
   title = this->fields.title;
   message = this->fields.message;
   if ( !_9__1 )
   {
-    _9__1 = (EventConquestGetDialog_ClickDelegate_o *)sub_1BCB244(EventConquestGetDialog_ClickDelegate_TypeInfo);
+    _9__1 = (EventConquestGetDialog_ClickDelegate_o *)sub_1C2D6DC(EventConquestGetDialog_ClickDelegate_TypeInfo);
     EventConquestGetDialog_ClickDelegate___ctor(
       _9__1,
       (Il2CppObject *)this,
       Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__1__,
-      0LL);
+      0);
     this->fields.__9__1 = _9__1;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v16, v17);
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v13, v14);
   }
   if ( !dialog )
 LABEL_11:
-    sub_1BCB254(giftList, v9);
-  EventConquestGetDialog__Open(dialog, v13, title, message, _9__1, 0LL);
+    sub_1C2D6EC(giftList, v6);
+  EventConquestGetDialog__Open(dialog, v10, title, message, _9__1, 0);
 }
 
 
-void __fastcall EventInfoConquestGetComponent___c__DisplayClass3_0___Open_b__1(
+void EventInfoConquestGetComponent___c__DisplayClass3_0___Open_b__1(
         EventInfoConquestGetComponent___c__DisplayClass3_0_o *this,
         const MethodInfo *method)
 {
   EventInfoConquestGetComponent___c__DisplayClass3_0_o *v2; // x19
-  __int64 v3; // x1
   struct EventInfoConquestGetComponent_o *_4__this; // x8
   EventConquestGetDialog_o *dialog; // x20
   System_Action_o *_9__2; // x22
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
   v2 = this;
-  if ( (byte_4B1C981 & 1) == 0 )
+  if ( (byte_4C2773F & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, method);
-    this = (EventInfoConquestGetComponent___c__DisplayClass3_0_o *)sub_1BCAFF8(
-                                                                     &Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__2__,
-                                                                     v3);
-    byte_4B1C981 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    this = (EventInfoConquestGetComponent___c__DisplayClass3_0_o *)sub_1C2D490(&Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__2__);
+    byte_4C2773F = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -355,74 +332,71 @@ void __fastcall EventInfoConquestGetComponent___c__DisplayClass3_0___Open_b__1(
   _9__2 = v2->fields.__9__2;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)v2,
       Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__2__,
-      0LL);
+      0);
     v2->fields.__9__2 = _9__2;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&v2->fields.__9__2, (int32_t)_9__2, v7, v8);
+    sub_1C2D434((CGThumbnailListItem_o *)&v2->fields.__9__2, (int32_t)_9__2, v6, v7);
   }
   if ( !dialog )
 LABEL_8:
-    sub_1BCB254(this, method);
-  EventConquestGetDialog__Close_48056000(dialog, _9__2, 0LL);
+    sub_1C2D6EC(this, method);
+  EventConquestGetDialog__Close_31417632(dialog, _9__2, 0);
 }
 
 
-void __fastcall EventInfoConquestGetComponent___c__DisplayClass3_0___Open_b__2(
+void EventInfoConquestGetComponent___c__DisplayClass3_0___Open_b__2(
         EventInfoConquestGetComponent___c__DisplayClass3_0_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   Il2CppObject *Instance; // x0
-  __int64 v7; // x1
-  AvalonSceneManager_c *v8; // x8
-  CommonUI_o *v9; // x20
+  __int64 v4; // x1
+  AvalonSceneManager_c *v5; // x8
+  CommonUI_o *v6; // x20
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *_9__3; // x21
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4B1C982 & 1) == 0 )
+  if ( (byte_4C27740 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, method);
-    sub_1BCAFF8(&AvalonSceneManager_TypeInfo, v3);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1BCAFF8(&Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__3__, v5);
-    byte_4B1C982 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&AvalonSceneManager_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C2D490(&Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__3__);
+    byte_4C27740 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v8 = AvalonSceneManager_TypeInfo;
-  v9 = (CommonUI_o *)Instance;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v5 = AvalonSceneManager_TypeInfo;
+  v6 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-    v8 = AvalonSceneManager_TypeInfo;
+    v5 = AvalonSceneManager_TypeInfo;
   }
-  DEFAULT_FADE_TIME = v8->static_fields->DEFAULT_FADE_TIME;
+  DEFAULT_FADE_TIME = v5->static_fields->DEFAULT_FADE_TIME;
   _9__3 = this->fields.__9__3;
   if ( !_9__3 )
   {
-    _9__3 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
+    _9__3 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__3,
       (Il2CppObject *)this,
       Method_EventInfoConquestGetComponent___c__DisplayClass3_0__Open_b__3__,
-      0LL);
+      0);
     this->fields.__9__3 = _9__3;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.__9__3, (int32_t)_9__3, v12, v13);
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.__9__3, (int32_t)_9__3, v9, v10);
   }
-  if ( !v9 )
-    sub_1BCB254(Instance, v7);
-  CommonUI__maskFadeout(v9, 1, DEFAULT_FADE_TIME, _9__3, 0LL);
+  if ( !v6 )
+    sub_1C2D6EC(Instance, v4);
+  CommonUI__maskFadeout(v6, 1, DEFAULT_FADE_TIME, _9__3, 0);
 }
 
 
-void __fastcall EventInfoConquestGetComponent___c__DisplayClass3_0___Open_b__3(
+void EventInfoConquestGetComponent___c__DisplayClass3_0___Open_b__3(
         EventInfoConquestGetComponent___c__DisplayClass3_0_o *this,
         const MethodInfo *method)
 {
@@ -431,13 +405,13 @@ void __fastcall EventInfoConquestGetComponent___c__DisplayClass3_0___Open_b__3(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this
-    || (v3 = this, (this = (EventInfoConquestGetComponent___c__DisplayClass3_0_o *)_4__this->fields.backSprite) == 0LL)
+    || (v3 = this, (this = (EventInfoConquestGetComponent___c__DisplayClass3_0_o *)_4__this->fields.backSprite) == 0)
     || (this = (EventInfoConquestGetComponent___c__DisplayClass3_0_o *)UnityEngine_Component__get_gameObject(
                                                                          (UnityEngine_Component_o *)this,
-                                                                         0LL)) == 0LL )
+                                                                         0)) == 0 )
   {
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
-  ActionExtensions__Call(v3->fields.callback, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
+  ActionExtensions__Call(v3->fields.callback, 0);
 }

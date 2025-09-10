@@ -1,13 +1,13 @@
-void __fastcall TerminalTransitionInfo___ctor(TerminalTransitionInfo_o *this, const MethodInfo *method)
+void TerminalTransitionInfo___ctor(TerminalTransitionInfo_o *this, const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   TerminalTransitionInfo__Init(this, v3);
 }
 
 
-void __fastcall TerminalTransitionInfo__Init(TerminalTransitionInfo_o *this, const MethodInfo *method)
+void TerminalTransitionInfo__Init(TerminalTransitionInfo_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
   const MethodInfo *v3; // x3
@@ -18,25 +18,25 @@ void __fastcall TerminalTransitionInfo__Init(TerminalTransitionInfo_o *this, con
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4B19812 & 1) == 0 )
+  if ( (byte_4C24595 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1/*""*/, method);
-    byte_4B19812 = 1;
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C24595 = 1;
   }
   this->fields.missionId = 0;
-  this->fields.beforeActionVals = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.beforeActionVals, 0, v2, v3);
-  this->fields.afterActionVals = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.afterActionVals, 0, v5, v6);
-  v7 = (int)StringLiteral_1/*""*/;
+  this->fields.beforeActionVals = 0;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.beforeActionVals, 0, v2, v3);
+  this->fields.afterActionVals = 0;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.afterActionVals, 0, v5, v6);
+  v7 = StringLiteral_1/*""*/;
   this->fields.voiceAssetName = (struct System_String_o *)StringLiteral_1/*""*/;
   p_voiceAssetName = &this->fields.voiceAssetName;
-  sub_1BCAF9C((CGThumbnailListItem_o *)p_voiceAssetName, v7, v9, v10);
+  sub_1C2D434((CGThumbnailListItem_o *)p_voiceAssetName, v7, v9, v10);
   *((_DWORD *)p_voiceAssetName + 2) = 0;
 }
 
 
-void __fastcall TerminalTransitionInfo__SetParameters(
+void TerminalTransitionInfo__SetParameters(
         TerminalTransitionInfo_o *this,
         TerminalTransitionInfo_o *info,
         const MethodInfo *method)
@@ -45,9 +45,9 @@ void __fastcall TerminalTransitionInfo__SetParameters(
   struct System_String_o *voiceAssetName; // x1
 
   if ( !info )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   this->fields.missionId = info->fields.missionId;
   voiceAssetName = info->fields.voiceAssetName;
   this->fields.voiceAssetName = voiceAssetName;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.voiceAssetName, (int32_t)voiceAssetName, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.voiceAssetName, (int32_t)voiceAssetName, (int32_t)method, v3);
 }

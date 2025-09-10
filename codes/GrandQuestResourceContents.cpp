@@ -1,20 +1,20 @@
-void __fastcall GrandQuestResourceContents___ctor(GrandQuestResourceContents_o *this, const MethodInfo *method)
+void GrandQuestResourceContents___ctor(GrandQuestResourceContents_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall GrandQuestResourceContents__SetBoardUIAtlas(
+void GrandQuestResourceContents__SetBoardUIAtlas(
         GrandQuestResourceContents_o *this,
         AtlasManagerUnit_o *boardUiAtlasManagerUnit,
         const MethodInfo *method)
 {
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1BCAF9C(&this->fields);
+  sub_1C2D434(&this->fields);
 }
 
 
-AtlasManagerUnit_o *__fastcall GrandQuestResourceContents__get_BoardUiAtlasManagerUnit(
+AtlasManagerUnit_o *GrandQuestResourceContents__get_BoardUiAtlasManagerUnit(
         GrandQuestResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -22,7 +22,7 @@ AtlasManagerUnit_o *__fastcall GrandQuestResourceContents__get_BoardUiAtlasManag
 }
 
 
-GrandQuestFolderBoardComponent_o *__fastcall GrandQuestResourceContents__get_GrandQuestFolderBoardPrefab(
+GrandQuestFolderBoardComponent_o *GrandQuestResourceContents__get_GrandQuestFolderBoardPrefab(
         GrandQuestResourceContents_o *this,
         const MethodInfo *method)
 {
@@ -30,21 +30,21 @@ GrandQuestFolderBoardComponent_o *__fastcall GrandQuestResourceContents__get_Gra
 }
 
 
-void __fastcall GrandQuestResourceContents__set_BoardUiAtlasManagerUnit(
+void GrandQuestResourceContents__set_BoardUiAtlasManagerUnit(
         GrandQuestResourceContents_o *this,
         AtlasManagerUnit_o *value,
         const MethodInfo *method)
 {
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = value;
-  sub_1BCAF9C(&this->fields);
+  sub_1C2D434(&this->fields);
 }
 
 
-void __fastcall GrandQuestResourceContents__set_GrandQuestFolderBoardPrefab(
+void GrandQuestResourceContents__set_GrandQuestFolderBoardPrefab(
         GrandQuestResourceContents_o *this,
         GrandQuestFolderBoardComponent_o *value,
         const MethodInfo *method)
 {
   this->fields._GrandQuestFolderBoardPrefab_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._GrandQuestFolderBoardPrefab_k__BackingField);
+  sub_1C2D434(&this->fields._GrandQuestFolderBoardPrefab_k__BackingField);
 }

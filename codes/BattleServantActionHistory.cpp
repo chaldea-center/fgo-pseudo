@@ -1,4 +1,4 @@
-void __fastcall BattleServantActionHistory___ctor(
+void BattleServantActionHistory___ctor(
         BattleServantActionHistory_o *this,
         int32_t type,
         int32_t in_targetUniqueID,
@@ -9,7 +9,7 @@ void __fastcall BattleServantActionHistory___ctor(
   bool v10; // w23
 
   v10 = isOpponent;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.actType = type;
   this->fields.targetUniqueId = in_targetUniqueID;
   this->fields.waveCount = wavecount;
@@ -18,7 +18,7 @@ void __fastcall BattleServantActionHistory___ctor(
 }
 
 
-void __fastcall BattleServantActionHistory___ctor_45409868(
+void BattleServantActionHistory___ctor_46104964(
         BattleServantActionHistory_o *this,
         BattleServantActionHistory_SaveData_o *save,
         const MethodInfo *method)
@@ -26,9 +26,9 @@ void __fastcall BattleServantActionHistory___ctor_45409868(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   if ( !save )
-    sub_1BCB254(v5, v6);
+    sub_1C2D6EC(v5, v6);
   *(_QWORD *)&this->fields.actType = *(_QWORD *)&save->fields.actType;
   this->fields.waveCount = save->fields.waveCount;
   this->fields.isOpponent = save->fields.isOpponent;
@@ -36,7 +36,7 @@ void __fastcall BattleServantActionHistory___ctor_45409868(
 }
 
 
-BattleServantActionHistory_SaveData_o *__fastcall BattleServantActionHistory__GetSaveData(
+BattleServantActionHistory_SaveData_o *BattleServantActionHistory__GetSaveData(
         BattleServantActionHistory_o *this,
         const MethodInfo *method)
 {
@@ -45,15 +45,15 @@ BattleServantActionHistory_SaveData_o *__fastcall BattleServantActionHistory__Ge
   __int64 v5; // x1
   BattleServantActionHistory_SaveData_o *result; // x0
 
-  if ( (byte_4B1F125 & 1) == 0 )
+  if ( (byte_4C29FA7 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleServantActionHistory_SaveData_TypeInfo, method);
-    byte_4B1F125 = 1;
+    sub_1C2D490(&BattleServantActionHistory_SaveData_TypeInfo);
+    byte_4C29FA7 = 1;
   }
-  v3 = sub_1BCB244(BattleServantActionHistory_SaveData_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  v3 = sub_1C2D6DC(BattleServantActionHistory_SaveData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
-    sub_1BCB254(v4, v5);
+    sub_1C2D6EC(v4, v5);
   result = (BattleServantActionHistory_SaveData_o *)v3;
   *(_QWORD *)(v3 + 16) = *(_QWORD *)&this->fields.actType;
   *(_DWORD *)(v3 + 24) = this->fields.waveCount;
@@ -63,29 +63,25 @@ BattleServantActionHistory_SaveData_o *__fastcall BattleServantActionHistory__Ge
 }
 
 
-bool __fastcall BattleServantActionHistory__IsAttackDamage(
-        BattleServantActionHistory_o *this,
-        const MethodInfo *method)
+bool BattleServantActionHistory__IsAttackDamage(BattleServantActionHistory_o *this, const MethodInfo *method)
 {
   return (unsigned int)(this->fields.actType - 1) < 2;
 }
 
 
-bool __fastcall BattleServantActionHistory__IsOpponent(BattleServantActionHistory_o *this, const MethodInfo *method)
+bool BattleServantActionHistory__IsOpponent(BattleServantActionHistory_o *this, const MethodInfo *method)
 {
   return this->fields.isOpponent;
 }
 
 
-int32_t __fastcall BattleServantActionHistory__getReactionTarget(
-        BattleServantActionHistory_o *this,
-        const MethodInfo *method)
+int32_t BattleServantActionHistory__getReactionTarget(BattleServantActionHistory_o *this, const MethodInfo *method)
 {
   return this->fields.targetUniqueId;
 }
 
 
-bool __fastcall BattleServantActionHistory__isDamage(BattleServantActionHistory_o *this, const MethodInfo *method)
+bool BattleServantActionHistory__isDamage(BattleServantActionHistory_o *this, const MethodInfo *method)
 {
   unsigned int v2; // w8
   _BOOL4 v3; // w0
@@ -99,9 +95,7 @@ bool __fastcall BattleServantActionHistory__isDamage(BattleServantActionHistory_
 }
 
 
-void __fastcall BattleServantActionHistory_SaveData___ctor(
-        BattleServantActionHistory_SaveData_o *this,
-        const MethodInfo *method)
+void BattleServantActionHistory_SaveData___ctor(BattleServantActionHistory_SaveData_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }

@@ -1,17 +1,17 @@
-void __fastcall ServantSkillAddEntity___ctor(ServantSkillAddEntity_o *this, const MethodInfo *method)
+void ServantSkillAddEntity___ctor(ServantSkillAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CF12 & 1) == 0 )
+  if ( (byte_4C27CFD & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1CF12 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C27CFD = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-UnityEngine_Color_o __fastcall ServantSkillAddEntity__ConvertColorFromString(
+UnityEngine_Color_o ServantSkillAddEntity__ConvertColorFromString(
         ServantSkillAddEntity_o *this,
         System_String_o *colorCode,
         const MethodInfo *method)
@@ -23,14 +23,14 @@ UnityEngine_Color_o __fastcall ServantSkillAddEntity__ConvertColorFromString(
   float v8; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B1CF10 & 1) == 0 )
+  if ( (byte_4C27CFB & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Convert_TypeInfo, colorCode);
-    byte_4B1CF10 = 1;
+    sub_1C2D490(&System_Convert_TypeInfo);
+    byte_4C27CFB = 1;
   }
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v4 = System_Convert__ToInt32_63546160(colorCode, 16, 0LL);
+  v4 = System_Convert__ToInt32_64555740(colorCode, 16, 0);
   v5 = (float)BYTE2(v4) / 255.0;
   v6 = (float)BYTE1(v4) / 255.0;
   v7 = (float)(unsigned __int8)v4 / 255.0;
@@ -43,29 +43,26 @@ UnityEngine_Color_o __fastcall ServantSkillAddEntity__ConvertColorFromString(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall ServantSkillAddEntity__CreatePK(
+System_String_o *ServantSkillAddEntity__CreatePK(
         int32_t svtId,
         int32_t num,
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CF11 & 1) == 0 )
+  if ( (byte_4C27CFC & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&num);
-    byte_4B1CF11 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C27CFC = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            num,
            priority,
-           (const MethodInfo_30190BC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30CCF68 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
-System_String_o *__fastcall ServantSkillAddEntity__CreatePrimaryKey(
-        ServantSkillAddEntity_o *this,
-        const MethodInfo *method)
+System_String_o *ServantSkillAddEntity__CreatePrimaryKey(ServantSkillAddEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
@@ -73,39 +70,36 @@ System_String_o *__fastcall ServantSkillAddEntity__CreatePrimaryKey(
 }
 
 
-int32_t __fastcall ServantSkillAddEntity__GetBaseSkillId(ServantSkillAddEntity_o *this, const MethodInfo *method)
+int32_t ServantSkillAddEntity__GetBaseSkillId(ServantSkillAddEntity_o *this, const MethodInfo *method)
 {
   __int64 v2; // x2
   struct System_Int32_array *skillIds; // x8
-  __int64 v4; // x9
+  il2cpp_array_size_t max_length; // x9
 
   skillIds = this->fields.skillIds;
   if ( !skillIds )
     return 0;
-  v4 = *(_QWORD *)&skillIds->max_length;
-  if ( !v4 )
+  max_length = skillIds->max_length;
+  if ( !max_length )
     return 0;
-  if ( !(_DWORD)v4 )
-    sub_1BCB25C(this, method, v2);
-  return skillIds->m_Items[1];
+  if ( !(_DWORD)max_length )
+    sub_1C2D6F4(this, method, v2);
+  return skillIds->m_Items[0];
 }
 
 
-int32_t __fastcall ServantSkillAddEntity__GetCondIgnoreSealedLimitCount(
-        ServantSkillAddEntity_o *this,
-        const MethodInfo *method)
+int32_t ServantSkillAddEntity__GetCondIgnoreSealedLimitCount(ServantSkillAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CF0B & 1) == 0 )
+  if ( (byte_4C27CF6 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18051/*"condIgnoreSealedLimitCount"*/, method);
-    byte_4B1CF0B = 1;
+    sub_1C2D490(&StringLiteral_18198/*"condIgnoreSealedLimitCount"*/);
+    byte_4C27CF6 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18051/*"condIgnoreSealedLimitCount"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18198/*"condIgnoreSealedLimitCount"*/, 0, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-UnityEngine_Color_o __fastcall ServantSkillAddEntity__GetCondLabelColor(
+UnityEngine_Color_o ServantSkillAddEntity__GetCondLabelColor(
         ServantSkillAddEntity_o *this,
         UnityEngine_Color_o defaultColor,
         const MethodInfo *method)
@@ -128,13 +122,13 @@ UnityEngine_Color_o __fastcall ServantSkillAddEntity__GetCondLabelColor(
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4B1CF0E & 1) == 0 )
+  if ( (byte_4C27CF9 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18052/*"condLabelColor"*/, method);
-    byte_4B1CF0E = 1;
+    sub_1C2D490(&StringLiteral_18199/*"condLabelColor"*/);
+    byte_4C27CF9 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18052/*"condLabelColor"*/, 0LL, 0LL);
-  IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0LL);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18199/*"condLabelColor"*/, 0, 0);
+  IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0);
   if ( !IsNullOrEmpty )
   {
     v15 = ServantSkillAddEntity__ConvertColorFromString((ServantSkillAddEntity_o *)IsNullOrEmpty, StringValue, v10);
@@ -155,8 +149,7 @@ UnityEngine_Color_o __fastcall ServantSkillAddEntity__GetCondLabelColor(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-UnityEngine_Color_o __fastcall ServantSkillAddEntity__GetCondSpriteColor(
+UnityEngine_Color_o ServantSkillAddEntity__GetCondSpriteColor(
         ServantSkillAddEntity_o *this,
         UnityEngine_Color_o defaultColor,
         const MethodInfo *method)
@@ -179,13 +172,13 @@ UnityEngine_Color_o __fastcall ServantSkillAddEntity__GetCondSpriteColor(
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4B1CF0F & 1) == 0 )
+  if ( (byte_4C27CFA & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18054/*"condSpriteColor"*/, method);
-    byte_4B1CF0F = 1;
+    sub_1C2D490(&StringLiteral_18201/*"condSpriteColor"*/);
+    byte_4C27CFA = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18054/*"condSpriteColor"*/, 0LL, 0LL);
-  IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0LL);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18201/*"condSpriteColor"*/, 0, 0);
+  IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0);
   if ( !IsNullOrEmpty )
   {
     v15 = ServantSkillAddEntity__ConvertColorFromString((ServantSkillAddEntity_o *)IsNullOrEmpty, StringValue, v10);
@@ -206,45 +199,45 @@ UnityEngine_Color_o __fastcall ServantSkillAddEntity__GetCondSpriteColor(
 }
 
 
-System_Int32_array *__fastcall ServantSkillAddEntity__GetEnableDispOnBattleConfirmDialog(
+System_Int32_array *ServantSkillAddEntity__GetEnableDispOnBattleConfirmDialog(
         ServantSkillAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CF0C & 1) == 0 )
+  if ( (byte_4C27CF7 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18827/*"enableDispOnBattleConfirmDialog"*/, method);
-    byte_4B1CF0C = 1;
+    sub_1C2D490(&StringLiteral_18980/*"enableDispOnBattleConfirmDialog"*/);
+    byte_4C27CF7 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18827/*"enableDispOnBattleConfirmDialog"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18980/*"enableDispOnBattleConfirmDialog"*/, 0, 0);
 }
 
 
-int32_t __fastcall ServantSkillAddEntity__GetExchangedSkillId(ServantSkillAddEntity_o *this, const MethodInfo *method)
+int32_t ServantSkillAddEntity__GetExchangedSkillId(ServantSkillAddEntity_o *this, const MethodInfo *method)
 {
   struct System_Int32_array *skillIds; // x8
 
   skillIds = this->fields.skillIds;
-  if ( skillIds && (int)skillIds->max_length >= 2 )
-    return skillIds->m_Items[2];
+  if ( skillIds && SLODWORD(skillIds->max_length) >= 2 )
+    return skillIds->m_Items[1];
   else
     return 0;
 }
 
 
-bool __fastcall ServantSkillAddEntity__HasKeyEnableDispOnBattleConfirmDialog(
+bool ServantSkillAddEntity__HasKeyEnableDispOnBattleConfirmDialog(
         ServantSkillAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CF0D & 1) == 0 )
+  if ( (byte_4C27CF8 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18827/*"enableDispOnBattleConfirmDialog"*/, method);
-    byte_4B1CF0D = 1;
+    sub_1C2D490(&StringLiteral_18980/*"enableDispOnBattleConfirmDialog"*/);
+    byte_4C27CF8 = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_18827/*"enableDispOnBattleConfirmDialog"*/, 0LL);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_18980/*"enableDispOnBattleConfirmDialog"*/, 0);
 }
 
 
-bool __fastcall ServantSkillAddEntity__IsCheckCommonRelease(
+bool ServantSkillAddEntity__IsCheckCommonRelease(
         ServantSkillAddEntity_o *this,
         int32_t dispLimitCount,
         const MethodInfo *method)
@@ -257,5 +250,5 @@ bool __fastcall ServantSkillAddEntity__IsCheckCommonRelease(
            commonReleaseId,
            this->fields.svtId,
            dispLimitCount,
-           0LL);
+           0);
 }

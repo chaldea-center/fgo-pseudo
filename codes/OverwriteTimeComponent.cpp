@@ -1,118 +1,108 @@
-void __fastcall OverwriteTimeComponent___ctor(OverwriteTimeComponent_o *this, const MethodInfo *method)
+void OverwriteTimeComponent___ctor(OverwriteTimeComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall OverwriteTimeComponent__Awake(OverwriteTimeComponent_o *this, const MethodInfo *method)
+void OverwriteTimeComponent__Awake(OverwriteTimeComponent_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall OverwriteTimeComponent__SetTime(OverwriteTimeComponent_o *this, int64_t time, const MethodInfo *method)
+void OverwriteTimeComponent__SetTime(OverwriteTimeComponent_o *this, int64_t time, const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  System_IFormatProvider_o *CultureInfo_63660148; // x21
+  System_IFormatProvider_o *CultureInfo_64669728; // x21
   UILabel_o *monthNum; // x22
+  System_DateTime_o v7; // x0
   System_String_o *remain; // x0
-  __int64 v18; // x1
-  UILabel_o *v19; // x22
+  __int64 v9; // x1
+  UILabel_o *v10; // x22
   UILabel_o *dayNum; // x22
+  System_DateTime_o v12; // x0
   UILabel_o *day; // x22
   UILabel_o *week; // x22
-  System_String_o *v23; // x0
+  System_DateTime_o v15; // x0
+  System_String_o *v16; // x0
   UILabel_o *minutes; // x21
-  System_String_o *v25; // x22
-  Il2CppObject *v26; // x0
+  System_String_o *v18; // x22
+  Il2CppObject *v19; // x0
   int32_t Month; // [xsp+4h] [xbp-4Ch] BYREF
   uint64_t dateData; // [xsp+8h] [xbp-48h] BYREF
-  System_DateTime_o v29; // 0:x0.8
-  System_DateTime_o v30; // 0:x0.8
-  System_DateTime_o v31; // 0:x0.8
 
-  if ( (byte_4B189A5 & 1) == 0 )
+  if ( (byte_4C236FD & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Globalization_CultureInfo_TypeInfo, time);
-    sub_1BCAFF8(&System_DateTime_TypeInfo, v5);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v6);
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v7);
-    sub_1BCAFF8(&StringLiteral_20851/*"ja-JP"*/, v8);
-    sub_1BCAFF8(&StringLiteral_18344/*"ddd"*/, v9);
-    sub_1BCAFF8(&StringLiteral_649/*"("*/, v10);
-    sub_1BCAFF8(&StringLiteral_13326/*"TIME_STR_DAYS"*/, v11);
-    sub_1BCAFF8(&StringLiteral_754/*")"*/, v12);
-    sub_1BCAFF8(&StringLiteral_6858/*"GACHA_OVERWRITE_TIME_MESSAGE"*/, v13);
-    sub_1BCAFF8(&StringLiteral_13329/*"TIME_STR_MONTH"*/, v14);
-    byte_4B189A5 = 1;
+    sub_1C2D490(&System_Globalization_CultureInfo_TypeInfo);
+    sub_1C2D490(&System_DateTime_TypeInfo);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_21028/*"ja-JP"*/);
+    sub_1C2D490(&StringLiteral_18492/*"ddd"*/);
+    sub_1C2D490(&StringLiteral_654/*"("*/);
+    sub_1C2D490(&StringLiteral_13438/*"TIME_STR_DAYS"*/);
+    sub_1C2D490(&StringLiteral_759/*")"*/);
+    sub_1C2D490(&StringLiteral_6905/*"GACHA_OVERWRITE_TIME_MESSAGE"*/);
+    sub_1C2D490(&StringLiteral_13441/*"TIME_STR_MONTH"*/);
+    byte_4C236FD = 1;
   }
   Month = 0;
   if ( !System_Globalization_CultureInfo_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Globalization_CultureInfo_TypeInfo);
-  CultureInfo_63660148 = (System_IFormatProvider_o *)System_Globalization_CultureInfo__GetCultureInfo_63660148(
-                                                       (System_String_o *)StringLiteral_20851/*"ja-JP"*/,
-                                                       0LL);
+  CultureInfo_64669728 = (System_IFormatProvider_o *)System_Globalization_CultureInfo__GetCultureInfo_64669728(
+                                                       (System_String_o *)StringLiteral_21028/*"ja-JP"*/,
+                                                       0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  dateData = NetworkManager__getServerDateTime_40543292(time, 0LL).fields._dateData;
+  dateData = NetworkManager__getServerDateTime_41146052(time, 0).fields._dateData;
   monthNum = this->fields.monthNum;
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
-  v29.fields._dateData = (uint64_t)&dateData;
-  Month = System_DateTime__get_Month(v29, 0LL);
-  remain = System_Int32__ToString((int32_t)&Month, 0LL);
+  v7.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Month(v7, 0);
+  remain = System_Int32__ToString((int32_t)&Month, 0);
   if ( !monthNum )
     goto LABEL_20;
-  UILabel__set_text(monthNum, remain, 0LL);
-  v19 = this->fields.month;
+  UILabel__set_text(monthNum, remain, 0);
+  v10 = this->fields.month;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  remain = LocalizationManager__Get((System_String_o *)StringLiteral_13329/*"TIME_STR_MONTH"*/, 0LL);
-  if ( !v19 )
+  remain = LocalizationManager__Get((System_String_o *)StringLiteral_13441/*"TIME_STR_MONTH"*/, 0);
+  if ( !v10 )
     goto LABEL_20;
-  UILabel__set_text(v19, remain, 0LL);
+  UILabel__set_text(v10, remain, 0);
   dayNum = this->fields.dayNum;
-  v30.fields._dateData = (uint64_t)&dateData;
-  Month = System_DateTime__get_Day(v30, 0LL);
-  remain = System_Int32__ToString((int32_t)&Month, 0LL);
+  v12.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Day(v12, 0);
+  remain = System_Int32__ToString((int32_t)&Month, 0);
   if ( !dayNum )
     goto LABEL_20;
-  UILabel__set_text(dayNum, remain, 0LL);
+  UILabel__set_text(dayNum, remain, 0);
   day = this->fields.day;
-  remain = LocalizationManager__Get((System_String_o *)StringLiteral_13326/*"TIME_STR_DAYS"*/, 0LL);
+  remain = LocalizationManager__Get((System_String_o *)StringLiteral_13438/*"TIME_STR_DAYS"*/, 0);
   if ( !day )
     goto LABEL_20;
-  UILabel__set_text(day, remain, 0LL);
+  UILabel__set_text(day, remain, 0);
   week = this->fields.week;
-  v31.fields._dateData = (uint64_t)&dateData;
-  v23 = System_DateTime__ToString_63849040(v31, (System_String_o *)StringLiteral_18344/*"ddd"*/, CultureInfo_63660148, 0LL);
-  remain = System_String__Concat_62488672(
-             (System_String_o *)StringLiteral_649/*"("*/,
-             v23,
-             (System_String_o *)StringLiteral_754/*")"*/,
-             0LL);
+  v15.fields._dateData = (uint64_t)&dateData;
+  v16 = System_DateTime__ToString_64858620(v15, (System_String_o *)StringLiteral_18492/*"ddd"*/, CultureInfo_64669728, 0);
+  remain = System_String__Concat_63496112(
+             (System_String_o *)StringLiteral_654/*"("*/,
+             v16,
+             (System_String_o *)StringLiteral_759/*")"*/,
+             0);
   if ( !week )
     goto LABEL_20;
-  UILabel__set_text(week, remain, 0LL);
+  UILabel__set_text(week, remain, 0);
   minutes = this->fields.minutes;
-  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_6858/*"GACHA_OVERWRITE_TIME_MESSAGE"*/, 0LL);
-  v26 = (Il2CppObject *)LocalizationManager__GetTime(time, 0LL);
-  remain = System_String__Format(v25, v26, 0LL);
+  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_6905/*"GACHA_OVERWRITE_TIME_MESSAGE"*/, 0);
+  v19 = (Il2CppObject *)LocalizationManager__GetTime(time, 0);
+  remain = System_String__Format(v18, v19, 0);
   if ( !minutes
-    || (UILabel__set_text(minutes, remain, 0LL), (remain = (System_String_o *)this->fields.remain) == 0LL)
-    || (remain = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)remain, 0LL)) == 0LL )
+    || (UILabel__set_text(minutes, remain, 0), (remain = (System_String_o *)this->fields.remain) == 0)
+    || (remain = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)remain, 0)) == 0 )
   {
 LABEL_20:
-    sub_1BCB254(remain, v18);
+    sub_1C2D6EC(remain, v9);
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)remain, 0, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)remain, 0, 0);
 }

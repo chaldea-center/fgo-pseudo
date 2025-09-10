@@ -1,39 +1,37 @@
-void __fastcall MapZoom___cctor(const MethodInfo *method)
+void MapZoom___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
   struct MapZoom_StaticFields *static_fields; // x8
 
-  if ( (byte_4B190EF & 1) == 0 )
+  if ( (byte_4C23E55 & 1) == 0 )
   {
-    sub_1BCAFF8(&MapZoom_TypeInfo, v1);
-    byte_4B190EF = 1;
+    sub_1C2D490(&MapZoom_TypeInfo);
+    byte_4C23E55 = 1;
   }
   static_fields = MapZoom_TypeInfo->static_fields;
-  *(_OWORD *)&static_fields->ZOOM_DEFAULT = xmmword_BE2B00;
+  *(_OWORD *)&static_fields->ZOOM_DEFAULT = xmmword_C0A1B0;
   static_fields->ZOOM_MARGIN = 0.2;
 }
 
 
-void __fastcall MapZoom___ctor(MapZoom_o *this, const MethodInfo *method)
+void MapZoom___ctor(MapZoom_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-float __fastcall MapZoom__CalcZoomByPinch(MapZoom_o *this, const MethodInfo *method)
+float MapZoom__CalcZoomByPinch(MapZoom_o *this, const MethodInfo *method)
 {
   struct MapTouchDetector_o *touchDetector; // x8
   MapZoom_o *v3; // x19
   float TouchInterval; // s0
   struct MapTouchDetector_o *v5; // x8
   float v6; // s8
-  __int64 v7; // x1
-  float v8; // s0
+  float v7; // s0
   float startMTgt; // s10
-  float v10; // s9
-  MapZoom_c *v11; // x0
+  float v9; // s9
+  MapZoom_c *v10; // x0
   float mZoomMargin; // s2
-  float v13; // s1
+  float v12; // s1
   float result; // s0
 
   touchDetector = this->fields.touchDetector;
@@ -44,42 +42,42 @@ float __fastcall MapZoom__CalcZoomByPinch(MapZoom_o *this, const MethodInfo *met
     return this->fields.startMTgt;
   this = (MapZoom_o *)touchDetector->fields._StartTouchInfo_k__BackingField;
   if ( !this
-    || (TouchInterval = TouchDetectorBase_TouchInfo__get_TouchInterval((TouchDetectorBase_TouchInfo_o *)this, 0LL),
-        (v5 = v3->fields.touchDetector) == 0LL)
-    || (this = (MapZoom_o *)v5->fields._CurrentTouchInfo_k__BackingField) == 0LL )
+    || (TouchInterval = TouchDetectorBase_TouchInfo__get_TouchInterval((TouchDetectorBase_TouchInfo_o *)this, 0),
+        (v5 = v3->fields.touchDetector) == 0)
+    || (this = (MapZoom_o *)v5->fields._CurrentTouchInfo_k__BackingField) == 0 )
   {
 LABEL_16:
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   }
   v6 = TouchInterval;
-  v8 = TouchDetectorBase_TouchInfo__get_TouchInterval((TouchDetectorBase_TouchInfo_o *)this, 0LL);
+  v7 = TouchDetectorBase_TouchInfo__get_TouchInterval((TouchDetectorBase_TouchInfo_o *)this, 0);
   startMTgt = v3->fields.startMTgt;
-  v10 = v8;
-  if ( !byte_4B19129 )
+  v9 = v7;
+  if ( !byte_4C23E8F )
   {
-    sub_1BCAFF8(&MapZoom_TypeInfo, v7);
-    byte_4B19129 = 1;
+    sub_1C2D490(&MapZoom_TypeInfo);
+    byte_4C23E8F = 1;
   }
-  v11 = MapZoom_TypeInfo;
+  v10 = MapZoom_TypeInfo;
   if ( !MapZoom_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MapZoom_TypeInfo);
-    v11 = MapZoom_TypeInfo;
+    v10 = MapZoom_TypeInfo;
   }
   mZoomMargin = v3->fields.mZoomMargin;
-  v13 = (float)(v6 * startMTgt) / v10;
-  result = v11->static_fields->ZOOM_MIN - mZoomMargin;
-  if ( v13 >= result )
+  v12 = (float)(v6 * startMTgt) / v9;
+  result = v10->static_fields->ZOOM_MIN - mZoomMargin;
+  if ( v12 >= result )
   {
     result = mZoomMargin + v3->fields.mZoomMax;
-    if ( v13 <= result )
-      return (float)(v6 * startMTgt) / v10;
+    if ( v12 <= result )
+      return (float)(v6 * startMTgt) / v9;
   }
   return result;
 }
 
 
-float __fastcall MapZoom__GetZoomRate(MapZoom_o *this, const MethodInfo *method)
+float MapZoom__GetZoomRate(MapZoom_o *this, const MethodInfo *method)
 {
   UnityEngine_Camera_o *mCamera; // x0
   float orthographicSize; // s0
@@ -88,15 +86,15 @@ float __fastcall MapZoom__GetZoomRate(MapZoom_o *this, const MethodInfo *method)
   float mZoomMax; // s0
   float ZOOM_MIN; // s1
 
-  if ( (byte_4B190ED & 1) == 0 )
+  if ( (byte_4C23E53 & 1) == 0 )
   {
-    sub_1BCAFF8(&MapZoom_TypeInfo, method);
-    byte_4B190ED = 1;
+    sub_1C2D490(&MapZoom_TypeInfo);
+    byte_4C23E53 = 1;
   }
   mCamera = this->fields.mCamera;
   if ( !mCamera )
-    sub_1BCB254(0LL, method);
-  orthographicSize = UnityEngine_Camera__get_orthographicSize(mCamera, 0LL);
+    sub_1C2D6EC(0, method);
+  orthographicSize = UnityEngine_Camera__get_orthographicSize(mCamera, 0);
   v5 = MapZoom_TypeInfo;
   v6 = orthographicSize;
   if ( !MapZoom_TypeInfo->_2.cctor_finished )
@@ -114,114 +112,107 @@ float __fastcall MapZoom__GetZoomRate(MapZoom_o *this, const MethodInfo *method)
 }
 
 
-float __fastcall MapZoom__GetZoomSize(MapZoom_o *this, const MethodInfo *method)
+float MapZoom__GetZoomSize(MapZoom_o *this, const MethodInfo *method)
 {
   UnityEngine_Camera_o *mCamera; // x0
 
   mCamera = this->fields.mCamera;
   if ( !mCamera )
-    sub_1BCB254(0LL, method);
-  return UnityEngine_Camera__get_orthographicSize(mCamera, 0LL);
+    sub_1C2D6EC(0, method);
+  return UnityEngine_Camera__get_orthographicSize(mCamera, 0);
 }
 
 
-void __fastcall MapZoom__Init(
-        MapZoom_o *this,
-        MapCamera_o *mc,
-        MapTouchDetector_o *touchDetector,
-        const MethodInfo *method)
+void MapZoom__Init(MapZoom_o *this, MapCamera_o *mc, MapTouchDetector_o *touchDetector, const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   UnityEngine_Object_o *mCamera; // x23
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  __int64 v15; // x0
-  __int64 v16; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  __int64 v12; // x0
+  __int64 v13; // x1
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  struct UnityEngine_Camera_o *v16; // x1
   int32_t v17; // w2
   const MethodInfo *v18; // x3
-  struct UnityEngine_Camera_o *v19; // x1
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  struct MapTouchDetector_o *v22; // x20
+  struct MapTouchDetector_o *v19; // x20
   CGThumbnailListItem_o *p_OnChangeTouchCount_k__BackingField; // x20
   System_Delegate_o *OnChangeTouchCount_k__BackingField; // t1
-  System_Action_int__int__o *v25; // x22
-  System_Delegate_o *v26; // x0
-  int32_t v27; // w2
+  System_Action_int__int__o *v22; // x22
+  System_Delegate_o *v23; // x0
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
+  System_Delegate_o *v26; // x21
+  __int64 v27; // x1
   const MethodInfo *v28; // x3
-  System_Delegate_o *v29; // x21
-  __int64 v30; // x1
-  const MethodInfo *v31; // x3
-  MapZoom_c *v32; // x0
+  MapZoom_c *v29; // x0
 
-  if ( (byte_4B190E9 & 1) == 0 )
+  if ( (byte_4C23E4F & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_int__int__TypeInfo, mc);
-    sub_1BCAFF8(&Method_MapZoom__Init_b__44_0__, v7);
-    sub_1BCAFF8(&MapZoom_TypeInfo, v8);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v9);
-    byte_4B190E9 = 1;
+    sub_1C2D490(&System_Action_int__int__TypeInfo);
+    sub_1C2D490(&Method_MapZoom__Init_b__44_0__);
+    sub_1C2D490(&MapZoom_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C23E4F = 1;
   }
   mCamera = (UnityEngine_Object_o *)this->fields.mCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(mCamera, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(mCamera, 0, 0) )
   {
-    this->fields.mMapCamera = 0LL;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.mMapCamera, 0, v11, v12);
-    this->fields.touchDetector = 0LL;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.touchDetector, 0, v13, v14);
+    this->fields.mMapCamera = 0;
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.mMapCamera, 0, v8, v9);
+    this->fields.touchDetector = 0;
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.touchDetector, 0, v10, v11);
   }
   this->fields.mMapCamera = mc;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.mMapCamera, (int32_t)mc, v11, v12);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.mMapCamera, (int32_t)mc, v8, v9);
   if ( !mc
-    || (v19 = mc->fields.mCamera,
-        this->fields.mCamera = v19,
-        sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.mCamera, (int32_t)v19, v17, v18),
+    || (v16 = mc->fields.mCamera,
+        this->fields.mCamera = v16,
+        sub_1C2D434((CGThumbnailListItem_o *)&this->fields.mCamera, (int32_t)v16, v14, v15),
         this->fields.touchDetector = touchDetector,
-        sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.touchDetector, (int32_t)touchDetector, v20, v21),
-        (v22 = this->fields.touchDetector) == 0LL) )
+        sub_1C2D434((CGThumbnailListItem_o *)&this->fields.touchDetector, (int32_t)touchDetector, v17, v18),
+        (v19 = this->fields.touchDetector) == 0) )
   {
-    sub_1BCB254(v15, v16);
+    sub_1C2D6EC(v12, v13);
   }
-  OnChangeTouchCount_k__BackingField = (System_Delegate_o *)v22->fields._OnChangeTouchCount_k__BackingField;
-  p_OnChangeTouchCount_k__BackingField = (CGThumbnailListItem_o *)&v22->fields._OnChangeTouchCount_k__BackingField;
-  v25 = (System_Action_int__int__o *)sub_1BCB244(System_Action_int__int__TypeInfo);
-  System_Action_int__int____ctor(v25, (Il2CppObject *)this, Method_MapZoom__Init_b__44_0__, 0LL);
-  v26 = System_Delegate__Combine(OnChangeTouchCount_k__BackingField, (System_Delegate_o *)v25, 0LL);
-  if ( v26 )
+  OnChangeTouchCount_k__BackingField = (System_Delegate_o *)v19->fields._OnChangeTouchCount_k__BackingField;
+  p_OnChangeTouchCount_k__BackingField = (CGThumbnailListItem_o *)&v19->fields._OnChangeTouchCount_k__BackingField;
+  v22 = (System_Action_int__int__o *)sub_1C2D6DC(System_Action_int__int__TypeInfo);
+  System_Action_int__int____ctor(v22, (Il2CppObject *)this, Method_MapZoom__Init_b__44_0__, 0);
+  v23 = System_Delegate__Combine(OnChangeTouchCount_k__BackingField, (System_Delegate_o *)v22, 0);
+  if ( v23 )
   {
-    v29 = v26;
-    v30 = sub_1BCB134(v26, System_Action_int__int__TypeInfo);
-    if ( v30 )
+    v26 = v23;
+    v27 = sub_1C2D5CC(v23, System_Action_int__int__TypeInfo);
+    if ( v27 )
       goto LABEL_13;
-    sub_1BCB514(v29);
+    sub_1C2D9AC(v26);
   }
-  v30 = 0LL;
+  v27 = 0;
 LABEL_13:
-  p_OnChangeTouchCount_k__BackingField->klass = (CGThumbnailListItem_c *)v30;
-  sub_1BCAF9C(p_OnChangeTouchCount_k__BackingField, v30, v27, v28);
-  v32 = MapZoom_TypeInfo;
+  p_OnChangeTouchCount_k__BackingField->klass = (CGThumbnailListItem_c *)v27;
+  sub_1C2D434(p_OnChangeTouchCount_k__BackingField, v27, v24, v25);
+  v29 = MapZoom_TypeInfo;
   if ( !MapZoom_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MapZoom_TypeInfo);
-    v32 = MapZoom_TypeInfo;
+    v29 = MapZoom_TypeInfo;
   }
-  MapZoom__SetZoomSize(this, v32->static_fields->ZOOM_MIN, 1, 0, v31);
+  MapZoom__SetZoomSize(this, v29->static_fields->ZOOM_MIN, 1, 0, v28);
 }
 
 
-bool __fastcall MapZoom__IsStop(MapZoom_o *this, const MethodInfo *method)
+bool MapZoom__IsStop(MapZoom_o *this, const MethodInfo *method)
 {
   return this->fields.mSpd == 0.0;
 }
 
 
-void __fastcall MapZoom__Limit(MapZoom_o *this, float spd_rate, const MethodInfo *method)
+void MapZoom__Limit(MapZoom_o *this, float spd_rate, const MethodInfo *method)
 {
   float mTgt; // s9
   MapZoom_c *v6; // x0
@@ -229,10 +220,10 @@ void __fastcall MapZoom__Limit(MapZoom_o *this, float spd_rate, const MethodInfo
   float v8; // s0
   float mZoomMax; // s1
 
-  if ( (byte_4B190EB & 1) == 0 )
+  if ( (byte_4C23E51 & 1) == 0 )
   {
-    sub_1BCAFF8(&MapZoom_TypeInfo, method);
-    byte_4B190EB = 1;
+    sub_1C2D490(&MapZoom_TypeInfo);
+    byte_4C23E51 = 1;
   }
   if ( !this->fields._IsZoomMaxFit_k__BackingField )
   {
@@ -265,49 +256,47 @@ void __fastcall MapZoom__Limit(MapZoom_o *this, float spd_rate, const MethodInfo
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall MapZoom__MouseScrollWheel(MapZoom_o *this, const MethodInfo *method)
+void MapZoom__MouseScrollWheel(MapZoom_o *this, const MethodInfo *method)
 {
-  float v3; // s0
-  float v4; // s1
-  float v5; // s9
-  float v6; // s8
+  float x; // s9
+  float y; // s8
   int32_t width; // w0
   float Axis; // s0
-  float v9; // s1
+  float v7; // s1
+  UnityEngine_Vector3_o mousePosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B190EE & 1) == 0 )
+  if ( (byte_4C23E54 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_9096/*"Mouse ScrollWheel"*/, method);
-    byte_4B190EE = 1;
+    sub_1C2D490(&StringLiteral_9160/*"Mouse ScrollWheel"*/);
+    byte_4C23E54 = 1;
   }
-  *(UnityEngine_Vector3_o *)&v3 = UnityEngine_Input__get_mousePosition(0LL);
-  if ( v3 >= 0.0 )
+  mousePosition = UnityEngine_Input__get_mousePosition(0);
+  if ( mousePosition.fields.x >= 0.0 )
   {
-    v5 = v3;
-    v6 = v4;
-    width = UnityEngine_Screen__get_width(0LL);
-    if ( v6 >= 0.0 && v5 <= (float)width && v6 <= (float)UnityEngine_Screen__get_height(0LL) )
+    x = mousePosition.fields.x;
+    y = mousePosition.fields.y;
+    width = UnityEngine_Screen__get_width(0);
+    if ( y >= 0.0 && x <= (float)width && y <= (float)UnityEngine_Screen__get_height(0) )
     {
-      Axis = UnityEngine_Input__GetAxis((System_String_o *)StringLiteral_9096/*"Mouse ScrollWheel"*/, 0LL);
+      Axis = UnityEngine_Input__GetAxis((System_String_o *)StringLiteral_9160/*"Mouse ScrollWheel"*/, 0);
       if ( Axis <= 0.0 )
       {
-        v9 = 0.25;
+        v7 = 0.25;
         if ( Axis >= 0.0 )
-          v9 = Axis;
+          v7 = Axis;
       }
       else
       {
-        v9 = -0.25;
+        v7 = -0.25;
         this->fields._IsZoomMaxFit_k__BackingField = 0;
       }
-      this->fields.mTgt = v9 + this->fields.mTgt;
+      this->fields.mTgt = v7 + this->fields.mTgt;
     }
   }
 }
 
 
-void __fastcall MapZoom__Process(MapZoom_o *this, const MethodInfo *method)
+void MapZoom__Process(MapZoom_o *this, const MethodInfo *method)
 {
   UnityEngine_Camera_o *mCamera; // x0
   float orthographicSize; // s8
@@ -334,21 +323,21 @@ void __fastcall MapZoom__Process(MapZoom_o *this, const MethodInfo *method)
   float mSpd; // s8
   float v26; // s0
 
-  if ( (byte_4B190EA & 1) == 0 )
+  if ( (byte_4C23E50 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Math_TypeInfo, method);
-    byte_4B190EA = 1;
+    sub_1C2D490(&System_Math_TypeInfo);
+    byte_4C23E50 = 1;
   }
   mCamera = this->fields.mCamera;
   if ( !mCamera )
     goto LABEL_29;
-  orthographicSize = UnityEngine_Camera__get_orthographicSize(mCamera, 0LL);
+  orthographicSize = UnityEngine_Camera__get_orthographicSize(mCamera, 0);
   mAutoZmDuration = this->fields.mAutoZmDuration;
   this->fields.mIsAutoZoom = 0;
   if ( mAutoZmDuration > 0.0 )
   {
     mAutoZmTime = this->fields.mAutoZmTime;
-    deltaTime = UnityEngine_Time__get_deltaTime(0LL);
+    deltaTime = UnityEngine_Time__get_deltaTime(0);
     v8 = this->fields.mAutoZmDuration;
     this->fields.mAutoZmTime = mAutoZmTime + deltaTime;
     if ( (float)(mAutoZmTime + deltaTime) >= v8 )
@@ -356,16 +345,16 @@ void __fastcall MapZoom__Process(MapZoom_o *this, const MethodInfo *method)
       mAutoZmEndAct = this->fields.mAutoZmEndAct;
       mAutoZmEdVal = this->fields.mAutoZmEdVal;
       this->fields.mAutoZmDuration = 0.0;
-      ActionExtensions__Call(mAutoZmEndAct, 0LL);
+      ActionExtensions__Call(mAutoZmEndAct, 0);
     }
     else
     {
-      mAutoZmEdVal = Easing__Func_48248356(
+      mAutoZmEdVal = Easing__Func_48951048(
                        this->fields.mAutoZmStVal,
                        this->fields.mAutoZmEdVal,
                        (float)(mAutoZmTime + deltaTime) / v8,
                        this->fields.mAutoZmEaseType,
-                       0LL);
+                       0);
     }
     MapZoom__SetZoomSize(this, mAutoZmEdVal, 0, 0, v9);
     this->fields.mIsAutoZoom = 1;
@@ -374,7 +363,7 @@ void __fastcall MapZoom__Process(MapZoom_o *this, const MethodInfo *method)
   mCamera = (UnityEngine_Camera_o *)this->fields.touchDetector;
   if ( !mCamera )
     goto LABEL_29;
-  CurrentTouchCount = TouchDetectorBase__get_CurrentTouchCount((TouchDetectorBase_o *)mCamera, 0LL);
+  CurrentTouchCount = TouchDetectorBase__get_CurrentTouchCount((TouchDetectorBase_o *)mCamera, 0);
   if ( CurrentTouchCount <= 1 )
   {
     MapZoom__Limit(this, 0.45, v12);
@@ -399,7 +388,7 @@ void __fastcall MapZoom__Process(MapZoom_o *this, const MethodInfo *method)
     if ( !mCamera )
       goto LABEL_29;
     mScrl = (float32x2_t *)mMapCamera->fields.mScrl;
-    TouchCenter = TouchDetectorBase_TouchInfo__get_TouchCenter((TouchDetectorBase_TouchInfo_o *)mCamera, 0LL);
+    TouchCenter = TouchDetectorBase_TouchInfo__get_TouchCenter((TouchDetectorBase_TouchInfo_o *)mCamera, 0);
     v20.n64_u32[0] = LODWORD(TouchCenter.fields.x);
     if ( !mScrl )
       goto LABEL_29;
@@ -427,18 +416,18 @@ void __fastcall MapZoom__Process(MapZoom_o *this, const MethodInfo *method)
   }
   if ( !this->fields.touchDetector )
 LABEL_29:
-    sub_1BCB254(mCamera, method);
+    sub_1C2D6EC(mCamera, method);
 }
 
 
-void __fastcall MapZoom__ResetZoomMaxFlag(MapZoom_o *this, const MethodInfo *method)
+void MapZoom__ResetZoomMaxFlag(MapZoom_o *this, const MethodInfo *method)
 {
   *(_WORD *)&this->fields._IsZoomMaxFit_k__BackingField = 0;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall MapZoom__SetZoomRate(MapZoom_o *this, float rate, bool xBaseUse, const MethodInfo *method)
+void MapZoom__SetZoomRate(MapZoom_o *this, float rate, bool xBaseUse, const MethodInfo *method)
 {
   MapZoom_c *v7; // x0
   struct MapZoom_StaticFields *static_fields; // x8
@@ -446,10 +435,10 @@ void __fastcall MapZoom__SetZoomRate(MapZoom_o *this, float rate, bool xBaseUse,
   float mZoomMax; // s0
   float ZOOM_MIN; // s1
 
-  if ( (byte_4B190E8 & 1) == 0 )
+  if ( (byte_4C23E4E & 1) == 0 )
   {
-    sub_1BCAFF8(&MapZoom_TypeInfo, xBaseUse);
-    byte_4B190E8 = 1;
+    sub_1C2D490(&MapZoom_TypeInfo);
+    byte_4C23E4E = 1;
   }
   v7 = MapZoom_TypeInfo;
   if ( !MapZoom_TypeInfo->_2.cctor_finished )
@@ -458,11 +447,11 @@ void __fastcall MapZoom__SetZoomRate(MapZoom_o *this, float rate, bool xBaseUse,
     v7 = MapZoom_TypeInfo;
   }
   if ( !this )
-    sub_1BCB254(v7, xBaseUse);
+    sub_1C2D6EC(v7, xBaseUse);
   static_fields = v7->static_fields;
-  v9 = 12LL;
+  v9 = 12;
   if ( xBaseUse )
-    v9 = 8LL;
+    v9 = 8;
   mZoomMax = *(float *)((char *)&static_fields->ZOOM_DEFAULT + v9) * rate;
   this->fields.mZoomMax = mZoomMax;
   if ( !v7->_2.cctor_finished )
@@ -479,7 +468,7 @@ void __fastcall MapZoom__SetZoomRate(MapZoom_o *this, float rate, bool xBaseUse,
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall MapZoom__SetZoomSize(
+void MapZoom__SetZoomSize(
         MapZoom_o *this,
         float size,
         bool is_tgt_update,
@@ -492,10 +481,10 @@ void __fastcall MapZoom__SetZoomSize(
   float v12; // s1
   UnityEngine_Camera_o *mCamera; // x0
 
-  if ( (byte_4B190EC & 1) == 0 )
+  if ( (byte_4C23E52 & 1) == 0 )
   {
-    sub_1BCAFF8(&MapZoom_TypeInfo, is_tgt_update);
-    byte_4B190EC = 1;
+    sub_1C2D490(&MapZoom_TypeInfo);
+    byte_4C23E52 = 1;
   }
   v9 = MapZoom_TypeInfo;
   if ( !MapZoom_TypeInfo->_2.cctor_finished )
@@ -520,18 +509,18 @@ void __fastcall MapZoom__SetZoomSize(
   mCamera = this->fields.mCamera;
   if ( !mCamera )
     goto LABEL_15;
-  UnityEngine_Camera__set_orthographicSize(mCamera, v11, 0LL);
+  UnityEngine_Camera__set_orthographicSize(mCamera, v11, 0);
   if ( !is_tgt_update )
     return;
   mCamera = this->fields.mCamera;
   if ( !mCamera )
 LABEL_15:
-    sub_1BCB254(mCamera, is_tgt_update);
-  this->fields.mTgt = UnityEngine_Camera__get_orthographicSize(mCamera, 0LL);
+    sub_1C2D6EC(mCamera, is_tgt_update);
+  this->fields.mTgt = UnityEngine_Camera__get_orthographicSize(mCamera, 0);
 }
 
 
-void __fastcall MapZoom__StartAutoZoom(
+void MapZoom__StartAutoZoom(
         MapZoom_o *this,
         float zoom,
         float sec,
@@ -551,20 +540,20 @@ void __fastcall MapZoom__StartAutoZoom(
   this->fields.mAutoZmTime = 0.0;
   this->fields.mAutoZmDuration = sec;
   if ( !mCamera )
-    sub_1BCB254(0LL, easeType);
-  orthographicSize = UnityEngine_Camera__get_orthographicSize(mCamera, 0LL);
+    sub_1C2D6EC(0, easeType);
+  orthographicSize = UnityEngine_Camera__get_orthographicSize(mCamera, 0);
   this->fields.mAutoZmEndAct = endAct;
   p_mAutoZmEndAct = &this->fields.mAutoZmEndAct;
   *((float *)p_mAutoZmEndAct - 6) = orthographicSize;
   *((float *)p_mAutoZmEndAct - 5) = zoom;
   *((_DWORD *)p_mAutoZmEndAct - 2) = easeType;
-  sub_1BCAF9C((CGThumbnailListItem_o *)p_mAutoZmEndAct, (int32_t)endAct, v13, v14);
+  sub_1C2D434((CGThumbnailListItem_o *)p_mAutoZmEndAct, (int32_t)endAct, v13, v14);
   *((_BYTE *)p_mAutoZmEndAct + 8) = 1;
   *((_BYTE *)p_mAutoZmEndAct - 28) = 0;
 }
 
 
-void __fastcall MapZoom__Stop(MapZoom_o *this, bool is_force, const MethodInfo *method)
+void MapZoom__Stop(MapZoom_o *this, bool is_force, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
 
@@ -574,74 +563,70 @@ void __fastcall MapZoom__Stop(MapZoom_o *this, bool is_force, const MethodInfo *
 }
 
 
-void __fastcall MapZoom__UnInit(MapZoom_o *this, const MethodInfo *method)
+void MapZoom__UnInit(MapZoom_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
   const MethodInfo *v3; // x3
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  this->fields.mMapCamera = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.mMapCamera, 0, v2, v3);
-  this->fields.touchDetector = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.touchDetector, 0, v5, v6);
+  this->fields.mMapCamera = 0;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.mMapCamera, 0, v2, v3);
+  this->fields.touchDetector = 0;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.touchDetector, 0, v5, v6);
 }
 
 
-void __fastcall MapZoom___Init_b__44_0(
-        MapZoom_o *this,
-        int32_t oldTouchCount,
-        int32_t newTouchCount,
-        const MethodInfo *method)
+void MapZoom___Init_b__44_0(MapZoom_o *this, int32_t oldTouchCount, int32_t newTouchCount, const MethodInfo *method)
 {
   this->fields.startMTgt = this->fields.mTgt;
 }
 
 
-bool __fastcall MapZoom__get_IsAutoZoom(MapZoom_o *this, const MethodInfo *method)
+bool MapZoom__get_IsAutoZoom(MapZoom_o *this, const MethodInfo *method)
 {
   return this->fields.mIsAutoZoom;
 }
 
 
-bool __fastcall MapZoom__get_IsZoomMaxFit(MapZoom_o *this, const MethodInfo *method)
+bool MapZoom__get_IsZoomMaxFit(MapZoom_o *this, const MethodInfo *method)
 {
   return this->fields._IsZoomMaxFit_k__BackingField;
 }
 
 
-bool __fastcall MapZoom__get_IsZoomMaxFitPosFix(MapZoom_o *this, const MethodInfo *method)
+bool MapZoom__get_IsZoomMaxFitPosFix(MapZoom_o *this, const MethodInfo *method)
 {
   return this->fields._IsZoomMaxFitPosFix_k__BackingField;
 }
 
 
-float __fastcall MapZoom__get_UserTotalZoomAmount(MapZoom_o *this, const MethodInfo *method)
+float MapZoom__get_UserTotalZoomAmount(MapZoom_o *this, const MethodInfo *method)
 {
   return this->fields._UserTotalZoomAmount_k__BackingField;
 }
 
 
-float __fastcall MapZoom__get_ZoomMargin(MapZoom_o *this, const MethodInfo *method)
+float MapZoom__get_ZoomMargin(MapZoom_o *this, const MethodInfo *method)
 {
   return this->fields.mZoomMargin;
 }
 
 
-float __fastcall MapZoom__get_ZoomMax(MapZoom_o *this, const MethodInfo *method)
+float MapZoom__get_ZoomMax(MapZoom_o *this, const MethodInfo *method)
 {
   return this->fields.mZoomMax;
 }
 
 
-float __fastcall MapZoom__get_ZoomMin(MapZoom_o *this, const MethodInfo *method)
+float MapZoom__get_ZoomMin(MapZoom_o *this, const MethodInfo *method)
 {
   MapZoom_c *v2; // x0
 
-  if ( (byte_4B190E7 & 1) == 0 )
+  if ( (byte_4C23E4D & 1) == 0 )
   {
-    sub_1BCAFF8(&MapZoom_TypeInfo, method);
-    byte_4B190E7 = 1;
+    sub_1C2D490(&MapZoom_TypeInfo);
+    byte_4C23E4D = 1;
   }
   v2 = MapZoom_TypeInfo;
   if ( !MapZoom_TypeInfo->_2.cctor_finished )
@@ -653,19 +638,19 @@ float __fastcall MapZoom__get_ZoomMin(MapZoom_o *this, const MethodInfo *method)
 }
 
 
-void __fastcall MapZoom__set_IsZoomMaxFit(MapZoom_o *this, bool value, const MethodInfo *method)
+void MapZoom__set_IsZoomMaxFit(MapZoom_o *this, bool value, const MethodInfo *method)
 {
   this->fields._IsZoomMaxFit_k__BackingField = value;
 }
 
 
-void __fastcall MapZoom__set_IsZoomMaxFitPosFix(MapZoom_o *this, bool value, const MethodInfo *method)
+void MapZoom__set_IsZoomMaxFitPosFix(MapZoom_o *this, bool value, const MethodInfo *method)
 {
   this->fields._IsZoomMaxFitPosFix_k__BackingField = value;
 }
 
 
-void __fastcall MapZoom__set_UserTotalZoomAmount(MapZoom_o *this, float value, const MethodInfo *method)
+void MapZoom__set_UserTotalZoomAmount(MapZoom_o *this, float value, const MethodInfo *method)
 {
   this->fields._UserTotalZoomAmount_k__BackingField = value;
 }

@@ -1,12 +1,6 @@
-void __fastcall ObjectDomain___ctor(
-        ObjectDomain_o *this,
-        float x,
-        float y,
-        float width,
-        float height,
-        const MethodInfo *method)
+void ObjectDomain___ctor(ObjectDomain_o *this, float x, float y, float width, float height, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._X_k__BackingField = x;
   this->fields._Y_k__BackingField = y;
   this->fields._Width_k__BackingField = width;
@@ -14,43 +8,43 @@ void __fastcall ObjectDomain___ctor(
 }
 
 
-void __fastcall ObjectDomain___ctor_35249644(ObjectDomain_o *this, ObjectDomain_o *domain, const MethodInfo *method)
+void ObjectDomain___ctor_35811112(ObjectDomain_o *this, ObjectDomain_o *domain, const MethodInfo *method)
 {
   ObjectDomain_Fields fields; // [xsp+0h] [xbp-20h]
 
   if ( !domain )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   fields = domain->fields;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields = fields;
 }
 
 
-float __fastcall ObjectDomain__get_Height(ObjectDomain_o *this, const MethodInfo *method)
+float ObjectDomain__get_Height(ObjectDomain_o *this, const MethodInfo *method)
 {
   return this->fields._Height_k__BackingField;
 }
 
 
-float __fastcall ObjectDomain__get_Width(ObjectDomain_o *this, const MethodInfo *method)
+float ObjectDomain__get_Width(ObjectDomain_o *this, const MethodInfo *method)
 {
   return this->fields._Width_k__BackingField;
 }
 
 
-float __fastcall ObjectDomain__get_X(ObjectDomain_o *this, const MethodInfo *method)
+float ObjectDomain__get_X(ObjectDomain_o *this, const MethodInfo *method)
 {
   return this->fields._X_k__BackingField;
 }
 
 
-float __fastcall ObjectDomain__get_Y(ObjectDomain_o *this, const MethodInfo *method)
+float ObjectDomain__get_Y(ObjectDomain_o *this, const MethodInfo *method)
 {
   return this->fields._Y_k__BackingField;
 }
 
 
-UnityEngine_Vector3_o __fastcall ObjectDomain__get_center(ObjectDomain_o *this, const MethodInfo *method)
+UnityEngine_Vector3_o ObjectDomain__get_center(ObjectDomain_o *this, const MethodInfo *method)
 {
   unsigned __int64 v2; // d0
   float v3; // s1
@@ -69,25 +63,25 @@ UnityEngine_Vector3_o __fastcall ObjectDomain__get_center(ObjectDomain_o *this, 
 }
 
 
-void __fastcall ObjectDomain__set_Height(ObjectDomain_o *this, float value, const MethodInfo *method)
+void ObjectDomain__set_Height(ObjectDomain_o *this, float value, const MethodInfo *method)
 {
   this->fields._Height_k__BackingField = value;
 }
 
 
-void __fastcall ObjectDomain__set_Width(ObjectDomain_o *this, float value, const MethodInfo *method)
+void ObjectDomain__set_Width(ObjectDomain_o *this, float value, const MethodInfo *method)
 {
   this->fields._Width_k__BackingField = value;
 }
 
 
-void __fastcall ObjectDomain__set_X(ObjectDomain_o *this, float value, const MethodInfo *method)
+void ObjectDomain__set_X(ObjectDomain_o *this, float value, const MethodInfo *method)
 {
   this->fields._X_k__BackingField = value;
 }
 
 
-void __fastcall ObjectDomain__set_Y(ObjectDomain_o *this, float value, const MethodInfo *method)
+void ObjectDomain__set_Y(ObjectDomain_o *this, float value, const MethodInfo *method)
 {
   this->fields._Y_k__BackingField = value;
 }

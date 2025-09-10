@@ -1,4 +1,4 @@
-void __fastcall SubmarineSelectScannerListViewItem___ctor(
+void SubmarineSelectScannerListViewItem___ctor(
         SubmarineSelectScannerListViewItem_o *this,
         int32_t index,
         int32_t eventId,
@@ -13,18 +13,18 @@ void __fastcall SubmarineSelectScannerListViewItem___ctor(
   const MethodInfo *v15; // x3
 
   v13 = this;
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   v13->fields._name_k__BackingField = name;
-  v13 = (SubmarineSelectScannerListViewItem_o *)((char *)v13 + 128);
+  v13 = (SubmarineSelectScannerListViewItem_o *)((char *)v13 + 136);
   LODWORD(v13[-1].fields._consumeItemDetail_k__BackingField) = eventId;
   HIDWORD(v13[-1].fields._consumeItemDetail_k__BackingField) = scanId;
   *(_DWORD *)&v13[-1].fields._enabled_k__BackingField = iconImageId;
-  sub_1BCAF9C((CGThumbnailListItem_o *)v13, (int32_t)name, v14, v15);
+  sub_1C2D434((CGThumbnailListItem_o *)v13, (int32_t)name, v14, v15);
   LOBYTE(v13->fields.selectNum) = enabled;
 }
 
 
-System_String_o *__fastcall SubmarineSelectScannerListViewItem__get_consumeItemDetail(
+System_String_o *SubmarineSelectScannerListViewItem__get_consumeItemDetail(
         SubmarineSelectScannerListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -32,7 +32,7 @@ System_String_o *__fastcall SubmarineSelectScannerListViewItem__get_consumeItemD
 }
 
 
-bool __fastcall SubmarineSelectScannerListViewItem__get_enabled(
+bool SubmarineSelectScannerListViewItem__get_enabled(
         SubmarineSelectScannerListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -40,7 +40,7 @@ bool __fastcall SubmarineSelectScannerListViewItem__get_enabled(
 }
 
 
-int32_t __fastcall SubmarineSelectScannerListViewItem__get_eventId(
+int32_t SubmarineSelectScannerListViewItem__get_eventId(
         SubmarineSelectScannerListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -48,7 +48,7 @@ int32_t __fastcall SubmarineSelectScannerListViewItem__get_eventId(
 }
 
 
-int32_t __fastcall SubmarineSelectScannerListViewItem__get_iconImageId(
+int32_t SubmarineSelectScannerListViewItem__get_iconImageId(
         SubmarineSelectScannerListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -56,7 +56,7 @@ int32_t __fastcall SubmarineSelectScannerListViewItem__get_iconImageId(
 }
 
 
-System_String_o *__fastcall SubmarineSelectScannerListViewItem__get_name(
+System_String_o *SubmarineSelectScannerListViewItem__get_name(
         SubmarineSelectScannerListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -64,7 +64,7 @@ System_String_o *__fastcall SubmarineSelectScannerListViewItem__get_name(
 }
 
 
-int32_t __fastcall SubmarineSelectScannerListViewItem__get_scanId(
+int32_t SubmarineSelectScannerListViewItem__get_scanId(
         SubmarineSelectScannerListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -72,7 +72,7 @@ int32_t __fastcall SubmarineSelectScannerListViewItem__get_scanId(
 }
 
 
-void __fastcall SubmarineSelectScannerListViewItem__set_consumeItemDetail(
+void SubmarineSelectScannerListViewItem__set_consumeItemDetail(
         SubmarineSelectScannerListViewItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
@@ -80,7 +80,7 @@ void __fastcall SubmarineSelectScannerListViewItem__set_consumeItemDetail(
   const MethodInfo *v3; // x3
 
   this->fields._consumeItemDetail_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._consumeItemDetail_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -88,7 +88,7 @@ void __fastcall SubmarineSelectScannerListViewItem__set_consumeItemDetail(
 }
 
 
-void __fastcall SubmarineSelectScannerListViewItem__set_enabled(
+void SubmarineSelectScannerListViewItem__set_enabled(
         SubmarineSelectScannerListViewItem_o *this,
         bool value,
         const MethodInfo *method)
@@ -97,7 +97,7 @@ void __fastcall SubmarineSelectScannerListViewItem__set_enabled(
 }
 
 
-void __fastcall SubmarineSelectScannerListViewItem__set_eventId(
+void SubmarineSelectScannerListViewItem__set_eventId(
         SubmarineSelectScannerListViewItem_o *this,
         int32_t value,
         const MethodInfo *method)
@@ -106,7 +106,7 @@ void __fastcall SubmarineSelectScannerListViewItem__set_eventId(
 }
 
 
-void __fastcall SubmarineSelectScannerListViewItem__set_iconImageId(
+void SubmarineSelectScannerListViewItem__set_iconImageId(
         SubmarineSelectScannerListViewItem_o *this,
         int32_t value,
         const MethodInfo *method)
@@ -115,7 +115,7 @@ void __fastcall SubmarineSelectScannerListViewItem__set_iconImageId(
 }
 
 
-void __fastcall SubmarineSelectScannerListViewItem__set_name(
+void SubmarineSelectScannerListViewItem__set_name(
         SubmarineSelectScannerListViewItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
@@ -123,11 +123,11 @@ void __fastcall SubmarineSelectScannerListViewItem__set_name(
   const MethodInfo *v3; // x3
 
   this->fields._name_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._name_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._name_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall SubmarineSelectScannerListViewItem__set_scanId(
+void SubmarineSelectScannerListViewItem__set_scanId(
         SubmarineSelectScannerListViewItem_o *this,
         int32_t value,
         const MethodInfo *method)

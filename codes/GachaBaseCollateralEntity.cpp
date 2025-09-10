@@ -1,39 +1,38 @@
-void __fastcall GachaBaseCollateralEntity___ctor(GachaBaseCollateralEntity_o *this, const MethodInfo *method)
+void GachaBaseCollateralEntity___ctor(GachaBaseCollateralEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D75D & 1) == 0 )
+  if ( (byte_4C28561 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D75D = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C28561 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall GachaBaseCollateralEntity__CreatePK(
+System_String_o *GachaBaseCollateralEntity__CreatePK(
         int32_t gachaId,
         int32_t type,
         int32_t giftId,
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4B1D75C & 1) == 0 )
+  if ( (byte_4C28560 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___, *(_QWORD *)&type);
-    byte_4B1D75C = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_4C28560 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            gachaId,
            type,
            giftId,
            idx,
-           (const MethodInfo_301957C *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_30CD428 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
-System_String_o *__fastcall GachaBaseCollateralEntity__CreatePrimaryKey(
+System_String_o *GachaBaseCollateralEntity__CreatePrimaryKey(
         GachaBaseCollateralEntity_o *this,
         const MethodInfo *method)
 {

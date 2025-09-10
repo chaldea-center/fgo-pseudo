@@ -1,17 +1,17 @@
-void __fastcall ClassStatisticsInfo___ctor(ClassStatisticsInfo_o *this, const MethodInfo *method)
+void ClassStatisticsInfo___ctor(ClassStatisticsInfo_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall ClassStatisticsInfo___ctor_40762248(
+void ClassStatisticsInfo___ctor_41365988(
         ClassStatisticsInfo_o *this,
         int32_t classId,
         int32_t type,
         int64_t typeVal,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.classId = classId;
   this->fields.type = type;
   this->fields.typeVal = typeVal;

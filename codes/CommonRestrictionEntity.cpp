@@ -1,57 +1,52 @@
-void __fastcall CommonRestrictionEntity___ctor(CommonRestrictionEntity_o *this, const MethodInfo *method)
+void CommonRestrictionEntity___ctor(CommonRestrictionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C336 & 1) == 0 )
+  if ( (byte_4C270E1 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1C336 = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C270E1 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall CommonRestrictionEntity__CreatePrimaryKey(CommonRestrictionEntity_o *this, const MethodInfo *method)
+int32_t CommonRestrictionEntity__CreatePrimaryKey(CommonRestrictionEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-bool __fastcall CommonRestrictionEntity__IsIncludedSvt(
+bool CommonRestrictionEntity__IsIncludedSvt(
         CommonRestrictionEntity_o *this,
         int32_t baseSvtId,
         const MethodInfo *method)
 {
-  if ( (byte_4B1C335 & 1) == 0 )
+  if ( (byte_4C270E0 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Array_IndexOf_int___, *(_QWORD *)&baseSvtId);
-    byte_4B1C335 = 1;
+    sub_1C2D490(&Method_System_Array_IndexOf_int___);
+    byte_4C270E0 = 1;
   }
   return System_Array__IndexOf_int_(
            this->fields.targetSvtIds,
            baseSvtId,
-           (const MethodInfo_3119038 *)Method_System_Array_IndexOf_int___) >= 0;
+           (const MethodInfo_31D59D0 *)Method_System_Array_IndexOf_int___) >= 0;
 }
 
 
-int32_t __fastcall CommonRestrictionEntity__getId(CommonRestrictionEntity_o *this, const MethodInfo *method)
+int32_t CommonRestrictionEntity__getId(CommonRestrictionEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-System_String_o *__fastcall CommonRestrictionEntity__getMessage(
-        CommonRestrictionEntity_o *this,
-        const MethodInfo *method)
+System_String_o *CommonRestrictionEntity__getMessage(CommonRestrictionEntity_o *this, const MethodInfo *method)
 {
   return this->fields.message;
 }
 
 
-System_Int32_array *__fastcall CommonRestrictionEntity__getTargetSvtIds(
-        CommonRestrictionEntity_o *this,
-        const MethodInfo *method)
+System_Int32_array *CommonRestrictionEntity__getTargetSvtIds(CommonRestrictionEntity_o *this, const MethodInfo *method)
 {
   return this->fields.targetSvtIds;
 }

@@ -1,4 +1,4 @@
-void __fastcall PartyOrganizationEventPointListViewItem___ctor(
+void PartyOrganizationEventPointListViewItem___ctor(
         PartyOrganizationEventPointListViewItem_o *this,
         int32_t index,
         System_String_o *titleName,
@@ -12,15 +12,15 @@ void __fastcall PartyOrganizationEventPointListViewItem___ctor(
 
   v9 = isFollower;
   this->fields.displayValueType = 1;
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   this->fields.titleName = titleName;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.titleName, (int32_t)titleName, v10, v11);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.titleName, (int32_t)titleName, v10, v11);
   this->fields.isFollower = v9;
   this->fields.displayValueType = displayValueType;
 }
 
 
-void __fastcall PartyOrganizationEventPointListViewItem___ctor_33470776(
+void PartyOrganizationEventPointListViewItem___ctor_33997072(
         PartyOrganizationEventPointListViewItem_o *this,
         int32_t index,
         EventMargeItemUpValInfo_o *margeItemInfo,
@@ -31,59 +31,57 @@ void __fastcall PartyOrganizationEventPointListViewItem___ctor_33470776(
   const MethodInfo *v9; // x3
 
   this->fields.displayValueType = 1;
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   this->fields.margeItemInfo = margeItemInfo;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.margeItemInfo, (int32_t)margeItemInfo, v8, v9);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.margeItemInfo, (int32_t)margeItemInfo, v8, v9);
   this->fields.displayValueType = displayValueType;
 }
 
 
-void __fastcall PartyOrganizationEventPointListViewItem__Finalize(
+void PartyOrganizationEventPointListViewItem__Finalize(
         PartyOrganizationEventPointListViewItem_o *this,
         const MethodInfo *method)
 {
-  ListViewItem__Finalize((ListViewItem_o *)this, 0LL);
+  ListViewItem__Finalize((ListViewItem_o *)this, 0);
 }
 
 
-System_String_o *__fastcall PartyOrganizationEventPointListViewItem__GetDataString(
+System_String_o *PartyOrganizationEventPointListViewItem__GetDataString(
         PartyOrganizationEventPointListViewItem_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   EventMargeItemUpValInfo_o *margeItemInfo; // x0
   System_String_o *EventUpString; // x19
-  __int64 v7; // x1
-  EventMargeItemUpValInfo_o *v9; // x0
+  __int64 v5; // x1
+  EventMargeItemUpValInfo_o *v7; // x0
   System_String_o *ColorString; // x20
-  System_String_o *v11; // x2
+  System_String_o *v9; // x2
 
-  if ( (byte_4B17FD2 & 1) == 0 )
+  if ( (byte_4C22D0E & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v3);
-    sub_1BCAFF8(&StringLiteral_10155/*"PARTY_ORGANIZATION_EVENT_MEMBER_OFFSET"*/, v4);
-    byte_4B17FD2 = 1;
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    sub_1C2D490(&StringLiteral_10226/*"PARTY_ORGANIZATION_EVENT_MEMBER_OFFSET"*/);
+    byte_4C22D0E = 1;
   }
   margeItemInfo = this->fields.margeItemInfo;
   if ( !margeItemInfo )
     return (System_String_o *)StringLiteral_1/*""*/;
-  EventUpString = EventMargeItemUpValInfo__GetEventUpString(margeItemInfo, 0LL);
-  if ( System_String__IsNullOrEmpty(EventUpString, 0LL) )
+  EventUpString = EventMargeItemUpValInfo__GetEventUpString(margeItemInfo, 0);
+  if ( System_String__IsNullOrEmpty(EventUpString, 0) )
     return (System_String_o *)StringLiteral_1/*""*/;
-  v9 = this->fields.margeItemInfo;
-  if ( !v9 )
-    sub_1BCB254(0LL, v7);
-  ColorString = EventMargeItemUpValInfo__GetColorString(v9, 0LL);
+  v7 = this->fields.margeItemInfo;
+  if ( !v7 )
+    sub_1C2D6EC(0, v5);
+  ColorString = EventMargeItemUpValInfo__GetColorString(v7, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_10155/*"PARTY_ORGANIZATION_EVENT_MEMBER_OFFSET"*/, 0LL);
-  return System_String__Concat_62488672(ColorString, EventUpString, v11, 0LL);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_10226/*"PARTY_ORGANIZATION_EVENT_MEMBER_OFFSET"*/, 0);
+  return System_String__Concat_63496112(ColorString, EventUpString, v9, 0);
 }
 
 
-int32_t __fastcall PartyOrganizationEventPointListViewItem__GetDisplayValueType(
+int32_t PartyOrganizationEventPointListViewItem__GetDisplayValueType(
         PartyOrganizationEventPointListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -91,87 +89,83 @@ int32_t __fastcall PartyOrganizationEventPointListViewItem__GetDisplayValueType(
 }
 
 
-System_String_o *__fastcall PartyOrganizationEventPointListViewItem__GetTitleString(
+System_String_o *PartyOrganizationEventPointListViewItem__GetTitleString(
         PartyOrganizationEventPointListViewItem_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  System_String_o **v7; // x8
-  System_String_o *v8; // x20
-  System_String_o *v9; // x0
+  System_String_o **v3; // x8
+  System_String_o *v4; // x20
+  System_String_o *v5; // x0
   EventMargeItemUpValInfo_o *margeItemInfo; // x0
   System_String_o *ColorString; // x0
-  __int64 v13; // x1
-  System_String_o *v14; // x20
+  __int64 v9; // x1
+  System_String_o *v10; // x20
   System_String_o *NameTitleString; // x0
-  System_String_o *v16; // x20
-  Il2CppObject *v17; // x21
-  Il2CppObject *v18; // x22
+  System_String_o *v12; // x20
+  Il2CppObject *v13; // x21
+  Il2CppObject *v14; // x22
   Il2CppObject *TargetString; // x0
-  System_String_o *v20; // x0
+  System_String_o *v16; // x0
   int32_t displayValueType; // w8
-  System_String_o *v22; // x19
-  System_String_o *v23; // x1
+  System_String_o *v18; // x19
+  System_String_o *v19; // x1
 
-  if ( (byte_4B17FD1 & 1) == 0 )
+  if ( (byte_4C22D0D & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_10157/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/, v3);
-    sub_1BCAFF8(&StringLiteral_10159/*"PARTY_ORGANIZATION_EVENT_PARTY_SUM"*/, v4);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v5);
-    sub_1BCAFF8(&StringLiteral_10150/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/, v6);
-    byte_4B17FD1 = 1;
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_10228/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/);
+    sub_1C2D490(&StringLiteral_10230/*"PARTY_ORGANIZATION_EVENT_PARTY_SUM"*/);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    sub_1C2D490(&StringLiteral_10221/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/);
+    byte_4C22D0D = 1;
   }
   if ( this->fields.titleName )
   {
     if ( this->fields.isFollower )
-      v7 = (System_String_o **)&StringLiteral_10157/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/;
+      v3 = (System_String_o **)&StringLiteral_10228/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/;
     else
-      v7 = (System_String_o **)&StringLiteral_10150/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/;
-    v8 = *v7;
+      v3 = (System_String_o **)&StringLiteral_10221/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/;
+    v4 = *v3;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v9 = LocalizationManager__Get(v8, 0LL);
-    return System_String__Format(v9, (Il2CppObject *)this->fields.titleName, 0LL);
+    v5 = LocalizationManager__Get(v4, 0);
+    return System_String__Format(v5, (Il2CppObject *)this->fields.titleName, 0);
   }
   margeItemInfo = this->fields.margeItemInfo;
   if ( !margeItemInfo )
     return (System_String_o *)StringLiteral_1/*""*/;
-  ColorString = EventMargeItemUpValInfo__GetColorString(margeItemInfo, 0LL);
+  ColorString = EventMargeItemUpValInfo__GetColorString(margeItemInfo, 0);
   if ( !this->fields.margeItemInfo
-    || (v14 = ColorString,
-        NameTitleString = EventMargeItemUpValInfo__GetNameTitleString(this->fields.margeItemInfo, 0LL),
-        ColorString = System_String__Concat_62450424(v14, NameTitleString, 0LL),
+    || (v10 = ColorString,
+        NameTitleString = EventMargeItemUpValInfo__GetNameTitleString(this->fields.margeItemInfo, 0),
+        ColorString = System_String__Concat_63457864(v10, NameTitleString, 0),
         !this->fields.margeItemInfo)
-    || (v16 = ColorString,
-        ColorString = EventMargeItemUpValInfo__GetItemName(this->fields.margeItemInfo, 0LL),
+    || (v12 = ColorString,
+        ColorString = EventMargeItemUpValInfo__GetItemName(this->fields.margeItemInfo, 0),
         !this->fields.margeItemInfo)
-    || (v17 = (Il2CppObject *)ColorString,
-        ColorString = EventMargeItemUpValInfo__GetServantName(this->fields.margeItemInfo, 0LL),
+    || (v13 = (Il2CppObject *)ColorString,
+        ColorString = EventMargeItemUpValInfo__GetServantName(this->fields.margeItemInfo, 0),
         !this->fields.margeItemInfo) )
   {
-    sub_1BCB254(ColorString, v13);
+    sub_1C2D6EC(ColorString, v9);
   }
-  v18 = (Il2CppObject *)ColorString;
-  TargetString = (Il2CppObject *)EventMargeItemUpValInfo__GetTargetString(this->fields.margeItemInfo, 0LL);
-  v20 = System_String__Format_62491784(v16, v17, v18, TargetString, 0LL);
+  v14 = (Il2CppObject *)ColorString;
+  TargetString = (Il2CppObject *)EventMargeItemUpValInfo__GetTargetString(this->fields.margeItemInfo, 0);
+  v16 = System_String__Format_63499224(v12, v13, v14, TargetString, 0);
   displayValueType = this->fields.displayValueType;
-  v22 = v20;
+  v18 = v16;
   if ( displayValueType )
-    return v22;
+    return v18;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_10159/*"PARTY_ORGANIZATION_EVENT_PARTY_SUM"*/, 0LL);
-  return System_String__Concat_62450424(v22, v23, 0LL);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_10230/*"PARTY_ORGANIZATION_EVENT_PARTY_SUM"*/, 0);
+  return System_String__Concat_63457864(v18, v19, 0);
 }
 
 
-bool __fastcall PartyOrganizationEventPointListViewItem__IsTitle(
+bool PartyOrganizationEventPointListViewItem__IsTitle(
         PartyOrganizationEventPointListViewItem_o *this,
         const MethodInfo *method)
 {
-  return this->fields.titleName != 0LL;
+  return this->fields.titleName != 0;
 }

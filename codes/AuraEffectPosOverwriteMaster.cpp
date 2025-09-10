@@ -1,21 +1,19 @@
-void __fastcall AuraEffectPosOverwriteMaster___ctor(AuraEffectPosOverwriteMaster_o *this, const MethodInfo *method)
+void AuraEffectPosOverwriteMaster___ctor(AuraEffectPosOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C136 & 1) == 0 )
+  if ( (byte_4C26EDA & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__,
-      method);
-    byte_4B1C136 = 1;
+    sub_1C2D490(&Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__);
+    byte_4C26EDA = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     247,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-AuraEffectPosOverwriteEntity_o *__fastcall AuraEffectPosOverwriteMaster__GetEntity(
+AuraEffectPosOverwriteEntity_o *AuraEffectPosOverwriteMaster__GetEntity(
         AuraEffectPosOverwriteMaster_o *this,
         int32_t auraEffectId,
         int32_t svtId,
@@ -24,12 +22,10 @@ AuraEffectPosOverwriteEntity_o *__fastcall AuraEffectPosOverwriteMaster__GetEnti
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1C134 & 1) == 0 )
+  if ( (byte_4C26ED8 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__,
-      *(_QWORD *)&auraEffectId);
-    byte_4B1C134 = 1;
+    sub_1C2D490(&Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__);
+    byte_4C26ED8 = 1;
   }
   PK = (Il2CppObject *)AuraEffectPosOverwriteEntity__CreatePK(
                          auraEffectId,
@@ -39,11 +35,11 @@ AuraEffectPosOverwriteEntity_o *__fastcall AuraEffectPosOverwriteMaster__GetEnti
   return (AuraEffectPosOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              PK,
-                                             (const MethodInfo_32CC8B8 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__);
+                                             (const MethodInfo_338C850 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__GetEntity__);
 }
 
 
-bool __fastcall AuraEffectPosOverwriteMaster__IsExistAuraPosOverwriteSettings(
+bool AuraEffectPosOverwriteMaster__IsExistAuraPosOverwriteSettings(
         int32_t svtId,
         int32_t limitCount,
         int32_t effectId,
@@ -51,13 +47,13 @@ bool __fastcall AuraEffectPosOverwriteMaster__IsExistAuraPosOverwriteSettings(
         const MethodInfo *method)
 {
   if ( !ent )
-    sub_1BCB254(svtId, limitCount);
+    sub_1C2D6EC(svtId, limitCount);
   return ent->fields.auraEffectId == effectId && ent->fields.svtId == svtId && ent->fields.svtLimitCount == limitCount;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall AuraEffectPosOverwriteMaster__TryGetEntity(
+bool AuraEffectPosOverwriteMaster__TryGetEntity(
         AuraEffectPosOverwriteMaster_o *this,
         AuraEffectPosOverwriteEntity_o **entity,
         int32_t auraEffectId,
@@ -67,12 +63,10 @@ bool __fastcall AuraEffectPosOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1C135 & 1) == 0 )
+  if ( (byte_4C26ED9 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__,
-      entity);
-    byte_4B1C135 = 1;
+    sub_1C2D490(&Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__);
+    byte_4C26ED9 = 1;
   }
   PK = (Il2CppObject *)AuraEffectPosOverwriteEntity__CreatePK(
                          auraEffectId,
@@ -83,5 +77,5 @@ bool __fastcall AuraEffectPosOverwriteMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_AuraEffectPosOverwriteMaster__AuraEffectPosOverwriteEntity__string__TryGetEntity__);
 }

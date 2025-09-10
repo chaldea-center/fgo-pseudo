@@ -1,37 +1,36 @@
-void __fastcall UserEventFortificationEntity___ctor(UserEventFortificationEntity_o *this, const MethodInfo *method)
+void UserEventFortificationEntity___ctor(UserEventFortificationEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D2B6 & 1) == 0 )
+  if ( (byte_4C280AD & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D2B6 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C280AD = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall UserEventFortificationEntity__CreatePK(
+System_String_o *UserEventFortificationEntity__CreatePK(
         int64_t userId,
         int32_t eventId,
         int32_t fortificationIdx,
         const MethodInfo *method)
 {
-  if ( (byte_4B1D2B5 & 1) == 0 )
+  if ( (byte_4C280AC & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&eventId);
-    byte_4B1D2B5 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4C280AC = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            eventId,
            fortificationIdx,
-           (const MethodInfo_3019278 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_30CD124 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
-System_String_o *__fastcall UserEventFortificationEntity__CreatePrimaryKey(
+System_String_o *UserEventFortificationEntity__CreatePrimaryKey(
         UserEventFortificationEntity_o *this,
         const MethodInfo *method)
 {

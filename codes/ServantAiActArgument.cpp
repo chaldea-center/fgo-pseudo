@@ -1,5 +1,5 @@
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantAiActArgument___ctor(
+void ServantAiActArgument___ctor(
         ServantAiActArgument_o *this,
         AiActEntity_o *aiActEnt,
         AiBaseEntity_o *aiEnt,
@@ -16,12 +16,12 @@ void __fastcall ServantAiActArgument___ctor(
   BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, procState, *(const MethodInfo **)&procState);
   v9->fields._SvtData_k__BackingField = svtData;
   v9 = (ServantAiActArgument_o *)((char *)v9 + 40);
-  sub_1BCAF9C((CGThumbnailListItem_o *)v9, (int32_t)svtData, v10, v11);
+  sub_1C2D434((CGThumbnailListItem_o *)v9, (int32_t)svtData, v10, v11);
   LOBYTE(v9->monitor) = isNoMessage;
 }
 
 
-void __fastcall ServantAiActArgument__InitCommonTask(
+void ServantAiActArgument__InitCommonTask(
         ServantAiActArgument_o *this,
         BaseAiActBattleLogicTask_o *task,
         const MethodInfo *method)
@@ -39,56 +39,51 @@ void __fastcall ServantAiActArgument__InitCommonTask(
       goto LABEL_10;
     infoText = AiEnt_k__BackingField->fields.infoText;
     task->fields.motionMessage = infoText;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&task->fields.motionMessage, (int32_t)infoText, (int32_t)method, v3);
+    sub_1C2D434((CGThumbnailListItem_o *)&task->fields.motionMessage, (int32_t)infoText, (int32_t)method, v3);
   }
   this = (ServantAiActArgument_o *)v4->fields._AiEnt_k__BackingField;
   if ( !this )
     goto LABEL_10;
-  this = (ServantAiActArgument_o *)AiBaseEntity__IsForcedActionSpeedAnyTime((AiBaseEntity_o *)this, 0LL);
+  this = (ServantAiActArgument_o *)AiBaseEntity__IsForcedActionSpeedAnyTime((AiBaseEntity_o *)this, 0);
   if ( ((unsigned __int8)this & 1) == 0 )
     return;
   if ( !task )
 LABEL_10:
-    sub_1BCB254(this, task);
+    sub_1C2D6EC(this, task);
   task->fields.isForcedSpeedOne = 1;
 }
 
 
-bool __fastcall ServantAiActArgument__get_IsNoMessage(ServantAiActArgument_o *this, const MethodInfo *method)
+bool ServantAiActArgument__get_IsNoMessage(ServantAiActArgument_o *this, const MethodInfo *method)
 {
   return this->fields._IsNoMessage_k__BackingField;
 }
 
 
-BattleServantData_o *__fastcall ServantAiActArgument__get_SvtData(
-        ServantAiActArgument_o *this,
-        const MethodInfo *method)
+BattleServantData_o *ServantAiActArgument__get_SvtData(ServantAiActArgument_o *this, const MethodInfo *method)
 {
   return this->fields._SvtData_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAiActArgument__get_UniqueId(ServantAiActArgument_o *this, const MethodInfo *method)
+int32_t ServantAiActArgument__get_UniqueId(ServantAiActArgument_o *this, const MethodInfo *method)
 {
   struct BattleServantData_o *SvtData_k__BackingField; // x8
 
   SvtData_k__BackingField = this->fields._SvtData_k__BackingField;
   if ( !SvtData_k__BackingField )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   return SvtData_k__BackingField->fields.uniqueId;
 }
 
 
-void __fastcall ServantAiActArgument__set_IsNoMessage(
-        ServantAiActArgument_o *this,
-        bool value,
-        const MethodInfo *method)
+void ServantAiActArgument__set_IsNoMessage(ServantAiActArgument_o *this, bool value, const MethodInfo *method)
 {
   this->fields._IsNoMessage_k__BackingField = value;
 }
 
 
-void __fastcall ServantAiActArgument__set_SvtData(
+void ServantAiActArgument__set_SvtData(
         ServantAiActArgument_o *this,
         BattleServantData_o *value,
         const MethodInfo *method)
@@ -96,5 +91,5 @@ void __fastcall ServantAiActArgument__set_SvtData(
   const MethodInfo *v3; // x3
 
   this->fields._SvtData_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._SvtData_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._SvtData_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

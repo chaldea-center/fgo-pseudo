@@ -1,10 +1,10 @@
-void __fastcall ForceCreateComboStartSkillTask___ctor(ForceCreateComboStartSkillTask_o *this, const MethodInfo *method)
+void ForceCreateComboStartSkillTask___ctor(ForceCreateComboStartSkillTask_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall ForceCreateComboStartSkillTask__IsCreatable(
+bool ForceCreateComboStartSkillTask__IsCreatable(
         ForceCreateComboStartSkillTask_o *this,
         BattleLogic_o *logic,
         BattleAddSkillTaskAroundTargetTask_Argument_o *arg,

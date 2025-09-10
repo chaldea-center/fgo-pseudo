@@ -1,77 +1,68 @@
-void __fastcall BattleInterruptionRequest___ctor(BattleInterruptionRequest_o *this, const MethodInfo *method)
+void BattleInterruptionRequest___ctor(BattleInterruptionRequest_o *this, const MethodInfo *method)
 {
-  RequestBase___ctor((RequestBase_o *)this, 0LL);
+  RequestBase___ctor((RequestBase_o *)this, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BattleInterruptionRequest__beginRequest(
+void BattleInterruptionRequest__beginRequest(
         BattleInterruptionRequest_o *this,
         int32_t questId,
         int32_t phase,
         int32_t restartWave,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-
-  if ( (byte_4B1DEE8 & 1) == 0 )
+  if ( (byte_4C28CFA & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_22473/*"phase"*/, *(_QWORD *)&questId);
-    sub_1BCAFF8(&StringLiteral_22654/*"questId"*/, v9);
-    sub_1BCAFF8(&StringLiteral_22864/*"restartWave"*/, v10);
-    byte_4B1DEE8 = 1;
+    sub_1C2D490(&StringLiteral_22660/*"phase"*/);
+    sub_1C2D490(&StringLiteral_22840/*"questId"*/);
+    sub_1C2D490(&StringLiteral_23050/*"restartWave"*/);
+    byte_4C28CFA = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22654/*"questId"*/, questId, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22473/*"phase"*/, phase, 0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22864/*"restartWave"*/, restartWave, 0LL);
-  RequestBase__beginRequest((RequestBase_o *)this, 0LL);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22840/*"questId"*/, questId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22660/*"phase"*/, phase, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23050/*"restartWave"*/, restartWave, 0);
+  RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
 
-System_String_o *__fastcall BattleInterruptionRequest__getURL(
-        BattleInterruptionRequest_o *this,
-        const MethodInfo *method)
+System_String_o *BattleInterruptionRequest__getURL(BattleInterruptionRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B1DEE7 & 1) == 0 )
+  if ( (byte_4C28CF9 & 1) == 0 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_16916/*"battle/interruption"*/, v2);
-    byte_4B1DEE7 = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_17049/*"battle/interruption"*/);
+    byte_4C28CF9 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_16916/*"battle/interruption"*/, 0LL);
+  BaseUrl = NetworkManager__getBaseUrl(1, 0);
+  return System_String__Concat_63457864(BaseUrl, (System_String_o *)StringLiteral_17049/*"battle/interruption"*/, 0);
 }
 
 
-void __fastcall BattleInterruptionRequest__requestCompleted(
+void BattleInterruptionRequest__requestCompleted(
         BattleInterruptionRequest_o *this,
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  __int64 *v8; // x8
+  ResponseData_o *v5; // x0
+  __int64 *v6; // x8
 
-  if ( (byte_4B1DEE9 & 1) == 0 )
+  if ( (byte_4C28CFB & 1) == 0 )
   {
-    sub_1BCAFF8(&ResponseCommandKind_TypeInfo, responseList);
-    sub_1BCAFF8(&StringLiteral_22181/*"ok"*/, v5);
-    sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v6);
-    byte_4B1DEE9 = 1;
+    sub_1C2D490(&ResponseCommandKind_TypeInfo);
+    sub_1C2D490(&StringLiteral_22362/*"ok"*/);
+    sub_1C2D490(&StringLiteral_22195/*"ng"*/);
+    byte_4C28CFB = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(128, responseList, 0LL);
-  if ( v7 && ResponseData__checkError_43347888(v7, 0LL) )
-    v8 = &StringLiteral_22181/*"ok"*/;
+  v5 = ResponseCommandKind__SearchData(128, responseList, 0);
+  if ( v5 && ResponseData__checkError_44004292(v5, 0) )
+    v6 = &StringLiteral_22362/*"ok"*/;
   else
-    v8 = &StringLiteral_22015/*"ng"*/;
-  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v8, 0LL);
+    v6 = &StringLiteral_22195/*"ng"*/;
+  RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0);
 }

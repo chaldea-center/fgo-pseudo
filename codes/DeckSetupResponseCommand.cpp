@@ -1,21 +1,21 @@
-void __fastcall DeckSetupResponseCommand___ctor(DeckSetupResponseCommand_o *this, const MethodInfo *method)
+void DeckSetupResponseCommand___ctor(DeckSetupResponseCommand_o *this, const MethodInfo *method)
 {
-  ResponseCommandBase___ctor((ResponseCommandBase_o *)this, 0LL);
+  ResponseCommandBase___ctor((ResponseCommandBase_o *)this, 0);
 }
 
 
-int32_t __fastcall DeckSetupResponseCommand__ExecuteResponse(
+int32_t DeckSetupResponseCommand__ExecuteResponse(
         DeckSetupResponseCommand_o *this,
         ResponseData_o *data,
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1BCB254(this, 0LL);
-  return data->fields.success == 0LL;
+    sub_1C2D6EC(this, 0);
+  return data->fields.success == 0;
 }
 
 
-int32_t __fastcall DeckSetupResponseCommand__GetKind(DeckSetupResponseCommand_o *this, const MethodInfo *method)
+int32_t DeckSetupResponseCommand__GetKind(DeckSetupResponseCommand_o *this, const MethodInfo *method)
 {
   return 7;
 }

@@ -1,19 +1,19 @@
-void __fastcall ServantCommentAddMaster___ctor(ServantCommentAddMaster_o *this, const MethodInfo *method)
+void ServantCommentAddMaster___ctor(ServantCommentAddMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CD68 & 1) == 0 )
+  if ( (byte_4C27B46 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_ServantCommentAddMaster__ServantCommentAddEntity__string___ctor__, method);
-    byte_4B1CD68 = 1;
+    sub_1C2D490(&Method_DataMasterBase_ServantCommentAddMaster__ServantCommentAddEntity__string___ctor__);
+    byte_4C27B46 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     186,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_ServantCommentAddMaster__ServantCommentAddEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_ServantCommentAddMaster__ServantCommentAddEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall ServantCommentAddMaster__GetConditionString(
+System_String_o *ServantCommentAddMaster__GetConditionString(
         ServantCommentAddMaster_o *this,
         System_String_o *textType,
         System_String_o *textType2,
@@ -23,42 +23,39 @@ System_String_o *__fastcall ServantCommentAddMaster__GetConditionString(
         int32_t oldFriendShipRank,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  System_String_o *v16; // x22
+  System_String_o *v13; // x22
   ServantCommentAddEntity_o *EntitiyList; // x0
-  __int64 v18; // x1
-  const MethodInfo *v19; // x2
-  __int64 v20; // x8
-  ServantCommentAddEntity_o *v21; // x23
-  int v22; // w20
-  int v23; // w29
-  __int64 v24; // x20
-  int v25; // w28
+  __int64 v15; // x1
+  const MethodInfo *v16; // x2
+  __int64 v17; // x8
+  ServantCommentAddEntity_o *v18; // x23
+  int v19; // w20
+  int v20; // w29
+  __int64 v21; // x20
+  int v22; // w28
   int32_t *p_condType; // x25
-  __int64 v27; // x24
-  const MethodInfo *v28; // x5
-  int32_t *v29; // x19
-  int32_t v30; // w26
-  int32_t v31; // w27
-  System_Int32_array *v32; // x25
-  int32_t v33; // w24
-  int v34; // w21
-  System_String_o *v35; // x28
+  __int64 v24; // x24
+  const MethodInfo *v25; // x5
+  int32_t *v26; // x19
+  int32_t v27; // w26
+  int32_t v28; // w27
+  System_Int32_array *v29; // x25
+  int32_t v30; // w24
+  int v31; // w21
+  System_String_o *v32; // x28
   System_String_o *ConditionText; // x24
-  System_String_o *v37; // x0
-  int32_t v39; // [xsp+Ch] [xbp-74h]
+  System_String_o *v34; // x0
+  int32_t v36; // [xsp+Ch] [xbp-74h]
 
-  if ( (byte_4B1CD6B & 1) == 0 )
+  if ( (byte_4C27B49 & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, textType);
-    sub_1BCAFF8(&ServantCommentEntity_TypeInfo, v13);
-    sub_1BCAFF8(&StringLiteral_3687/*"COND_TYPE_AND_FLAVOR2"*/, v14);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v15);
-    byte_4B1CD6B = 1;
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&ServantCommentEntity_TypeInfo);
+    sub_1C2D490(&StringLiteral_3715/*"COND_TYPE_AND_FLAVOR2"*/);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C27B49 = 1;
   }
-  v16 = (System_String_o *)StringLiteral_1/*""*/;
+  v13 = (System_String_o *)StringLiteral_1/*""*/;
   EntitiyList = (ServantCommentAddEntity_o *)ServantCommentAddMaster__GetEntitiyList(
                                                this,
                                                svtId,
@@ -67,91 +64,91 @@ System_String_o *__fastcall ServantCommentAddMaster__GetConditionString(
                                                *(const MethodInfo **)&id);
   if ( !EntitiyList )
 LABEL_30:
-    sub_1BCB254(EntitiyList, v18);
-  v20 = *(_QWORD *)&EntitiyList->fields.priority;
-  v21 = EntitiyList;
-  if ( (int)v20 >= 1 )
+    sub_1C2D6EC(EntitiyList, v15);
+  v17 = *(_QWORD *)&EntitiyList->fields.priority;
+  v18 = EntitiyList;
+  if ( (int)v17 >= 1 )
   {
-    v22 = 0;
-    v23 = 0;
-    while ( v22 < (unsigned int)v20 )
+    v19 = 0;
+    v20 = 0;
+    while ( v19 < (unsigned int)v17 )
     {
-      EntitiyList = (ServantCommentAddEntity_o *)*((_QWORD *)&v21->fields.condType + v22);
+      EntitiyList = (ServantCommentAddEntity_o *)*((_QWORD *)&v18->fields.condType + v19);
       if ( !EntitiyList )
         goto LABEL_30;
-      EntitiyList = (ServantCommentAddEntity_o *)ServantCommentAddEntity__IsOpen(EntitiyList, oldFriendShipRank, v19);
-      v20 = *(_QWORD *)&v21->fields.priority;
-      ++v22;
-      v23 += ((unsigned __int8)EntitiyList & 1) == 0;
-      if ( v22 >= (int)v20 )
+      EntitiyList = (ServantCommentAddEntity_o *)ServantCommentAddEntity__IsOpen(EntitiyList, oldFriendShipRank, v16);
+      v17 = *(_QWORD *)&v18->fields.priority;
+      ++v19;
+      v20 += ((unsigned __int8)EntitiyList & 1) == 0;
+      if ( v19 >= (int)v17 )
         goto LABEL_11;
     }
 LABEL_29:
-    sub_1BCB25C(EntitiyList, v18, v19);
+    sub_1C2D6F4(EntitiyList, v15, v16);
   }
-  v23 = 0;
+  v20 = 0;
 LABEL_11:
-  if ( (int)v20 >= 1 )
+  if ( (int)v17 >= 1 )
   {
-    v24 = 0LL;
-    v25 = 0;
-    p_condType = &v21->fields.condType;
-    v39 = oldFriendShipRank;
-    while ( (unsigned int)v24 < (unsigned int)v20 )
+    v21 = 0;
+    v22 = 0;
+    p_condType = &v18->fields.condType;
+    v36 = oldFriendShipRank;
+    while ( (unsigned int)v21 < (unsigned int)v17 )
     {
-      v27 = *(_QWORD *)&p_condType[2 * v24];
-      if ( !v27 )
+      v24 = *(_QWORD *)&p_condType[2 * v21];
+      if ( !v24 )
         goto LABEL_30;
       EntitiyList = (ServantCommentAddEntity_o *)ServantCommentAddEntity__IsOpen(
-                                                   *(ServantCommentAddEntity_o **)&p_condType[2 * v24],
+                                                   *(ServantCommentAddEntity_o **)&p_condType[2 * v21],
                                                    oldFriendShipRank,
-                                                   v19);
+                                                   v16);
       if ( ((unsigned __int8)EntitiyList & 1) == 0 )
       {
-        v29 = p_condType;
-        v31 = *(_DWORD *)(v27 + 32);
-        v30 = *(_DWORD *)(v27 + 36);
-        v32 = *(System_Int32_array **)(v27 + 40);
-        v33 = *(_DWORD *)(v27 + 48);
-        v34 = v25 + 1;
-        if ( v25 + 1 == v23 )
-          v35 = textType;
+        v26 = p_condType;
+        v28 = *(_DWORD *)(v24 + 32);
+        v27 = *(_DWORD *)(v24 + 36);
+        v29 = *(System_Int32_array **)(v24 + 40);
+        v30 = *(_DWORD *)(v24 + 48);
+        v31 = v22 + 1;
+        if ( v22 + 1 == v20 )
+          v32 = textType;
         else
-          v35 = textType2;
+          v32 = textType2;
         if ( !ServantCommentEntity_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(ServantCommentEntity_TypeInfo);
-        ConditionText = ServantCommentEntity__GetConditionText(v35, v31, v30, v32, v33, v28);
-        if ( System_String__IsNullOrEmpty(v16, 0LL) )
+        ConditionText = ServantCommentEntity__GetConditionText(v32, v28, v27, v29, v30, v25);
+        if ( System_String__IsNullOrEmpty(v13, 0) )
         {
-          p_condType = v29;
-          oldFriendShipRank = v39;
-          v25 = v34;
+          p_condType = v26;
+          oldFriendShipRank = v36;
+          v22 = v31;
         }
         else
         {
-          p_condType = v29;
-          v25 = v34;
+          p_condType = v26;
+          v22 = v31;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v37 = LocalizationManager__Get((System_String_o *)StringLiteral_3687/*"COND_TYPE_AND_FLAVOR2"*/, 0LL);
-          oldFriendShipRank = v39;
-          v16 = System_String__Concat_62450424(v16, v37, 0LL);
+          v34 = LocalizationManager__Get((System_String_o *)StringLiteral_3715/*"COND_TYPE_AND_FLAVOR2"*/, 0);
+          oldFriendShipRank = v36;
+          v13 = System_String__Concat_63457864(v13, v34, 0);
         }
-        EntitiyList = (ServantCommentAddEntity_o *)System_String__Concat_62450424(v16, ConditionText, 0LL);
-        v16 = (System_String_o *)EntitiyList;
+        EntitiyList = (ServantCommentAddEntity_o *)System_String__Concat_63457864(v13, ConditionText, 0);
+        v13 = (System_String_o *)EntitiyList;
       }
-      LODWORD(v20) = v21->fields.priority;
-      if ( (int)++v24 >= (int)v20 )
-        return v16;
+      LODWORD(v17) = v18->fields.priority;
+      if ( (int)++v21 >= (int)v17 )
+        return v13;
     }
     goto LABEL_29;
   }
-  return v16;
+  return v13;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-ServantCommentAddEntity_array *__fastcall ServantCommentAddMaster__GetEntitiyList(
+ServantCommentAddEntity_array *ServantCommentAddMaster__GetEntitiyList(
         ServantCommentAddMaster_o *this,
         int32_t svtId,
         int32_t id,
@@ -159,48 +156,41 @@ ServantCommentAddEntity_array *__fastcall ServantCommentAddMaster__GetEntitiyLis
         const MethodInfo *method)
 {
   int32_t v7; // w21
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t Count; // w23
-  System_Collections_Generic_List_object__o *v16; // x24
-  int32_t v17; // w25
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  System_Collections_Generic_List_object__o *v11; // x24
+  int32_t v12; // w25
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v21; // x9
+  _QWORD *v16; // x9
   __int64 size; // x10
-  Il2CppClass **v23; // x0
+  Il2CppClass **v18; // x0
 
   v7 = svtId;
-  if ( (byte_4B1CD69 & 1) == 0 )
+  if ( (byte_4C27B47 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Count__,
-      *(_QWORD *)&svtId);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Item__, v9);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ServantCommentAddEntity__Add__, v10);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ServantCommentAddEntity__ToArray__, v11);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ServantCommentAddEntity___ctor__, v12);
-    sub_1BCAFF8(&System_Collections_Generic_List_ServantCommentAddEntity__TypeInfo, v13);
-    byte_4B1CD69 = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Item__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_ServantCommentAddEntity__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_ServantCommentAddEntity__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_ServantCommentAddEntity___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_ServantCommentAddEntity__TypeInfo);
+    byte_4C27B47 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_19;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Count__);
-  v16 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_ServantCommentAddEntity__TypeInfo);
+            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Count__);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_ServantCommentAddEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v16,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_ServantCommentAddEntity___ctor__);
+    v11,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_ServantCommentAddEntity___ctor__);
   if ( Count >= 1 )
   {
-    v17 = 0;
+    v12 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -208,8 +198,8 @@ ServantCommentAddEntity_array *__fastcall ServantCommentAddMaster__GetEntitiyLis
         break;
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
-                                                                 v17,
-                                                                 (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Item__);
+                                                                 v12,
+                                                                 (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Item__);
       if ( list )
       {
         *(_QWORD *)&svtId = list;
@@ -217,47 +207,47 @@ ServantCommentAddEntity_array *__fastcall ServantCommentAddMaster__GetEntitiyLis
           && HIDWORD(list->fields.items) == id
           && LODWORD(list[1].klass) == priority )
         {
-          if ( !v16 )
+          if ( !v11 )
             break;
-          items = v16->fields._items;
-          v21 = Method_System_Collections_Generic_List_ServantCommentAddEntity__Add__;
-          ++v16->fields._version;
+          items = v11->fields._items;
+          v16 = Method_System_Collections_Generic_List_ServantCommentAddEntity__Add__;
+          ++v11->fields._version;
           if ( !items )
             break;
-          size = v16->fields._size;
-          if ( (unsigned int)size >= items->max_length )
+          size = v11->fields._size;
+          if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
-              v16,
+              v11,
               (Il2CppObject *)list,
-              *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+              *(const MethodInfo_3789B84 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
           }
           else
           {
-            v23 = &items->obj.klass + size;
-            v16->fields._size = size + 1;
-            v23[4] = *(Il2CppClass **)&svtId;
-            sub_1BCAF9C((CGThumbnailListItem_o *)(v23 + 4), svtId, v18, v19);
+            v18 = &items->obj.klass + size;
+            v11->fields._size = size + 1;
+            v18[4] = *(Il2CppClass **)&svtId;
+            sub_1C2D434((CGThumbnailListItem_o *)(v18 + 4), svtId, v13, v14);
           }
         }
       }
-      if ( Count == ++v17 )
+      if ( Count == ++v12 )
         goto LABEL_17;
     }
 LABEL_19:
-    sub_1BCB254(list, *(_QWORD *)&svtId);
+    sub_1C2D6EC(list, *(_QWORD *)&svtId);
   }
 LABEL_17:
-  if ( !v16 )
+  if ( !v11 )
     goto LABEL_19;
   return (ServantCommentAddEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                            v16,
-                                            (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_ServantCommentAddEntity__ToArray__);
+                                            v11,
+                                            (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_ServantCommentAddEntity__ToArray__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-ServantCommentAddEntity_o *__fastcall ServantCommentAddMaster__GetEntity(
+ServantCommentAddEntity_o *ServantCommentAddMaster__GetEntity(
         ServantCommentAddMaster_o *this,
         int32_t svtId,
         int32_t id,
@@ -267,23 +257,21 @@ ServantCommentAddEntity_o *__fastcall ServantCommentAddMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1CD66 & 1) == 0 )
+  if ( (byte_4C27B44 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_ServantCommentAddMaster__ServantCommentAddEntity__string__GetEntity__,
-      *(_QWORD *)&svtId);
-    byte_4B1CD66 = 1;
+    sub_1C2D490(&Method_DataMasterBase_ServantCommentAddMaster__ServantCommentAddEntity__string__GetEntity__);
+    byte_4C27B44 = 1;
   }
   PK = (Il2CppObject *)ServantCommentAddEntity__CreatePK(svtId, id, priority, idx, *(const MethodInfo **)&idx);
   return (ServantCommentAddEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                         PK,
-                                        (const MethodInfo_32CC8B8 *)Method_DataMasterBase_ServantCommentAddMaster__ServantCommentAddEntity__string__GetEntity__);
+                                        (const MethodInfo_338C850 *)Method_DataMasterBase_ServantCommentAddMaster__ServantCommentAddEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall ServantCommentAddMaster__IsEntityListCondContain(
+bool ServantCommentAddMaster__IsEntityListCondContain(
         ServantCommentAddMaster_o *this,
         int32_t svtId,
         int32_t id,
@@ -291,33 +279,30 @@ bool __fastcall ServantCommentAddMaster__IsEntityListCondContain(
         int32_t condType,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t Count; // w0
-  int32_t v14; // w24
-  int32_t v15; // w25
-  bool v16; // w27
+  int32_t v13; // w24
+  int32_t v14; // w25
+  bool v15; // w27
   Il2CppObject *Item; // x0
 
-  if ( (byte_4B1CD6A & 1) == 0 )
+  if ( (byte_4C27B48 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Count__,
-      *(_QWORD *)&svtId);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Item__, v11);
-    byte_4B1CD6A = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Item__);
+    byte_4C27B48 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_16;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Count__);
+            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Count__);
   if ( Count >= 1 )
   {
-    v14 = Count;
-    v15 = 0;
-    v16 = 1;
+    v13 = Count;
+    v14 = 0;
+    v15 = 1;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -325,29 +310,29 @@ bool __fastcall ServantCommentAddMaster__IsEntityListCondContain(
         break;
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
-               v15,
-               (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Item__);
+               v14,
+               (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_ServantCommentAddEntity__get_Item__);
       if ( !Item
         || LODWORD(Item[1].klass) != svtId
         || HIDWORD(Item[1].klass) != id
         || LODWORD(Item[1].monitor) != priority
         || LODWORD(Item[2].klass) != condType )
       {
-        v16 = ++v15 < v14;
-        if ( v14 != v15 )
+        v15 = ++v14 < v13;
+        if ( v13 != v14 )
           continue;
       }
-      return v16;
+      return v15;
     }
 LABEL_16:
-    sub_1BCB254(list, *(_QWORD *)&svtId);
+    sub_1C2D6EC(list, *(_QWORD *)&svtId);
   }
   return 0;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall ServantCommentAddMaster__IsOnlyOpenQuestCond(
+bool ServantCommentAddMaster__IsOnlyOpenQuestCond(
         ServantCommentAddMaster_o *this,
         int32_t svtId,
         int32_t id,
@@ -378,7 +363,7 @@ bool __fastcall ServantCommentAddMaster__IsOnlyOpenQuestCond(
     while ( 1 )
     {
       if ( v18 >= (unsigned int)max_length )
-        sub_1BCB25C(EntitiyList, v12, v13);
+        sub_1C2D6F4(EntitiyList, v12, v13);
       EntitiyList = (ServantCommentAddEntity_array *)v16->m_Items[v18];
       if ( !EntitiyList )
         break;
@@ -398,14 +383,14 @@ bool __fastcall ServantCommentAddMaster__IsOnlyOpenQuestCond(
       return v17;
     }
 LABEL_11:
-    sub_1BCB254(EntitiyList, v12);
+    sub_1C2D6EC(EntitiyList, v12);
   }
   return v17;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall ServantCommentAddMaster__IsOpen(
+bool ServantCommentAddMaster__IsOpen(
         ServantCommentAddMaster_o *this,
         int32_t svtId,
         int32_t id,
@@ -438,7 +423,7 @@ bool __fastcall ServantCommentAddMaster__IsOpen(
     while ( 1 )
     {
       if ( v13 >= (unsigned int)max_length )
-        sub_1BCB25C(EntitiyList, v8, v9);
+        sub_1C2D6F4(EntitiyList, v8, v9);
       EntitiyList = (ServantCommentAddEntity_array *)v11->m_Items[v13];
       if ( !EntitiyList )
         break;
@@ -456,14 +441,14 @@ bool __fastcall ServantCommentAddMaster__IsOpen(
       return !v12;
     }
 LABEL_10:
-    sub_1BCB254(EntitiyList, v8);
+    sub_1C2D6EC(EntitiyList, v8);
   }
   return !v12;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall ServantCommentAddMaster__TryGetEntity(
+bool ServantCommentAddMaster__TryGetEntity(
         ServantCommentAddMaster_o *this,
         ServantCommentAddEntity_o **entity,
         int32_t svtId,
@@ -474,15 +459,15 @@ bool __fastcall ServantCommentAddMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1CD67 & 1) == 0 )
+  if ( (byte_4C27B45 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_ServantCommentAddMaster__ServantCommentAddEntity__string__TryGetEntity__, entity);
-    byte_4B1CD67 = 1;
+    sub_1C2D490(&Method_DataMasterBase_ServantCommentAddMaster__ServantCommentAddEntity__string__TryGetEntity__);
+    byte_4C27B45 = 1;
   }
   PK = (Il2CppObject *)ServantCommentAddEntity__CreatePK(svtId, id, priority, idx, *(const MethodInfo **)&priority);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_ServantCommentAddMaster__ServantCommentAddEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_ServantCommentAddMaster__ServantCommentAddEntity__string__TryGetEntity__);
 }

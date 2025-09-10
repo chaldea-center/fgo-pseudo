@@ -1,110 +1,99 @@
-void __fastcall MasterMissionReceiveResultDialog___ctor(
-        MasterMissionReceiveResultDialog_o *this,
-        const MethodInfo *method)
+void MasterMissionReceiveResultDialog___ctor(MasterMissionReceiveResultDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1F727 & 1) == 0 )
+  if ( (byte_4C2A507 & 1) == 0 )
   {
-    sub_1BCAFF8(&BaseDialog_TypeInfo, method);
-    byte_4B1F727 = 1;
+    sub_1C2D490(&BaseDialog_TypeInfo);
+    byte_4C2A507 = 1;
   }
   this->fields.state = 1;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
-  BaseDialog___ctor((BaseDialog_o *)this, 0LL);
+  BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
 
-void __fastcall MasterMissionReceiveResultDialog__Init(
-        MasterMissionReceiveResultDialog_o *this,
-        const MethodInfo *method)
+void MasterMissionReceiveResultDialog__Init(MasterMissionReceiveResultDialog_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   ListViewManager_o *receiveResultListViewManager; // x0
   UILabel_o *titleLabel; // x20
   UILabel_o *subTitleLabel; // x20
   UILabel_o *closeLabel; // x20
 
-  if ( (byte_4B1F724 & 1) == 0 )
+  if ( (byte_4C2A504 & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_8494/*"MASTER_MISSION_RECEIVE_RESULT_DLG_TITLE"*/, v3);
-    sub_1BCAFF8(&StringLiteral_3650/*"COMMON_CONFIRM_CLOSE"*/, v4);
-    sub_1BCAFF8(&StringLiteral_8493/*"MASTER_MISSION_RECEIVE_RESULT_DLG_MSG"*/, v5);
-    byte_4B1F724 = 1;
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_8558/*"MASTER_MISSION_RECEIVE_RESULT_DLG_TITLE"*/);
+    sub_1C2D490(&StringLiteral_3678/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C2D490(&StringLiteral_8557/*"MASTER_MISSION_RECEIVE_RESULT_DLG_MSG"*/);
+    byte_4C2A504 = 1;
   }
-  BaseDialog__Init((BaseDialog_o *)this, 0LL);
+  BaseDialog__Init((BaseDialog_o *)this, 0);
   receiveResultListViewManager = (ListViewManager_o *)this->fields.receiveResultListViewManager;
   if ( !receiveResultListViewManager )
     goto LABEL_10;
-  ListViewManager__DestroyList(receiveResultListViewManager, 0LL);
+  ListViewManager__DestroyList(receiveResultListViewManager, 0);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  receiveResultListViewManager = (ListViewManager_o *)LocalizationManager__Get(
-                                                        (System_String_o *)StringLiteral_8494/*"MASTER_MISSION_RECEIVE_RESULT_DLG_TITLE"*/,
-                                                        0LL);
+  receiveResultListViewManager = (ListViewManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8558/*"MASTER_MISSION_RECEIVE_RESULT_DLG_TITLE"*/, 0);
   if ( !titleLabel
-    || (UILabel__set_text(titleLabel, (System_String_o *)receiveResultListViewManager, 0LL),
+    || (UILabel__set_text(titleLabel, (System_String_o *)receiveResultListViewManager, 0),
         subTitleLabel = this->fields.subTitleLabel,
         receiveResultListViewManager = (ListViewManager_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_8493/*"MASTER_MISSION_RECEIVE_RESULT_DLG_MSG"*/,
-                                                              0LL),
+                                                              (System_String_o *)StringLiteral_8557/*"MASTER_MISSION_RECEIVE_RESULT_DLG_MSG"*/,
+                                                              0),
         !subTitleLabel)
-    || (UILabel__set_text(subTitleLabel, (System_String_o *)receiveResultListViewManager, 0LL),
+    || (UILabel__set_text(subTitleLabel, (System_String_o *)receiveResultListViewManager, 0),
         closeLabel = this->fields.closeLabel,
         receiveResultListViewManager = (ListViewManager_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3650/*"COMMON_CONFIRM_CLOSE"*/,
-                                                              0LL),
+                                                              (System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_CLOSE"*/,
+                                                              0),
         !closeLabel) )
   {
 LABEL_10:
-    sub_1BCB254(receiveResultListViewManager, v6);
+    sub_1C2D6EC(receiveResultListViewManager, v3);
   }
-  UILabel__set_text(closeLabel, (System_String_o *)receiveResultListViewManager, 0LL);
+  UILabel__set_text(closeLabel, (System_String_o *)receiveResultListViewManager, 0);
   this->fields.state = 1;
 }
 
 
-void __fastcall MasterMissionReceiveResultDialog__OnClickCloseButton(
+void MasterMissionReceiveResultDialog__OnClickCloseButton(
         MasterMissionReceiveResultDialog_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  _QWORD *v5; // x0
-  System_Reflection_MethodBase_o *v6; // x0
-  System_Action_o *v7; // x20
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  System_Action_o *v5; // x20
 
-  if ( (byte_4B1F725 & 1) == 0 )
+  if ( (byte_4C2A505 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, method);
-    sub_1BCAFF8(&Method_MasterMissionReceiveResultDialog_OnClickCloseButton__, v3);
-    sub_1BCAFF8(&Method_MasterMissionReceiveResultDialog__OnClickCloseButton_b__9_0__, v4);
-    byte_4B1F725 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_MasterMissionReceiveResultDialog_OnClickCloseButton__);
+    sub_1C2D490(&Method_MasterMissionReceiveResultDialog__OnClickCloseButton_b__9_0__);
+    byte_4C2A505 = 1;
   }
   if ( !this->fields.state )
   {
-    v5 = Method_MasterMissionReceiveResultDialog_OnClickCloseButton__;
+    v3 = Method_MasterMissionReceiveResultDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_MasterMissionReceiveResultDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1BCB010(Method_MasterMissionReceiveResultDialog_OnClickCloseButton__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v5, v5[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_MasterMissionReceiveResultDialog_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     this->fields.state = 1;
-    v7 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
     System_Action___ctor(
-      v7,
+      v5,
       (Il2CppObject *)this,
       Method_MasterMissionReceiveResultDialog__OnClickCloseButton_b__9_0__,
-      0LL);
-    BaseDialog__Close((BaseDialog_o *)this, v7, 0LL);
+      0);
+    BaseDialog__Close((BaseDialog_o *)this, v5, 0);
   }
 }
 
 
-void __fastcall MasterMissionReceiveResultDialog__Open(
+void MasterMissionReceiveResultDialog__Open(
         MasterMissionReceiveResultDialog_o *this,
         System_Int32_array *receiveMissionIds,
         System_Action_o *action,
@@ -118,24 +107,24 @@ void __fastcall MasterMissionReceiveResultDialog__Open(
   MasterMissionReceiveResultListViewManager_o *v11; // x0
 
   v6 = (BaseDialog_o *)this;
-  ((void (__fastcall *)(MasterMissionReceiveResultDialog_o *, void *, System_Action_o *, const MethodInfo *))this->klass->vtable._7_Init.method)(
+  ((void (__fastcall *)(MasterMissionReceiveResultDialog_o *, const MethodInfo *, System_Action_o *, const MethodInfo *))this->klass->vtable._7_Init.methodPtr)(
     this,
-    this->klass[1]._1.image,
+    this->klass->vtable._7_Init.method,
     action,
     method);
-  BaseDialog__Open(v6, 0LL, 0, 0LL);
+  BaseDialog__Open(v6, 0, 0, 0);
   v6[1].fields.basePanelList = (struct UIPanel_array *)action;
   v6 = (BaseDialog_o *)((char *)v6 + 144);
-  sub_1BCAF9C((CGThumbnailListItem_o *)v6, (int32_t)action, v7, v8);
+  sub_1C2D434((CGThumbnailListItem_o *)v6, (int32_t)action, v7, v8);
   v11 = *(MasterMissionReceiveResultListViewManager_o **)&v6[-1].fields.baseState;
   LODWORD(v6[-1].fields._closeBtnObject) = 0;
   if ( !v11 )
-    sub_1BCB254(0LL, v9);
+    sub_1C2D6EC(0, v9);
   MasterMissionReceiveResultListViewManager__CreateList(v11, receiveMissionIds, v10);
 }
 
 
-void __fastcall MasterMissionReceiveResultDialog___OnClickCloseButton_b__9_0(
+void MasterMissionReceiveResultDialog___OnClickCloseButton_b__9_0(
         MasterMissionReceiveResultDialog_o *this,
         const MethodInfo *method)
 {
@@ -143,23 +132,23 @@ void __fastcall MasterMissionReceiveResultDialog___OnClickCloseButton_b__9_0(
 
   closeAction = this->fields.closeAction;
   if ( closeAction )
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))closeAction->fields.m_target)(
-      closeAction->fields.original_method_info,
-      *(_QWORD *)&closeAction->fields.extra_arg);
-  ((void (__fastcall *)(MasterMissionReceiveResultDialog_o *, void *))this->klass->vtable._7_Init.method)(
+    ((void (__fastcall *)(intptr_t, intptr_t))closeAction->fields.invoke_impl)(
+      closeAction->fields.method_code,
+      closeAction->fields.method);
+  ((void (__fastcall *)(MasterMissionReceiveResultDialog_o *, const MethodInfo *))this->klass->vtable._7_Init.methodPtr)(
     this,
-    this->klass[1]._1.image);
+    this->klass->vtable._7_Init.method);
 }
 
 
-System_String_o *__fastcall MasterMissionReceiveResultDialog__get_closeBtnPath(
+System_String_o *MasterMissionReceiveResultDialog__get_closeBtnPath(
         MasterMissionReceiveResultDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1F726 & 1) == 0 )
+  if ( (byte_4C2A506 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_15509/*"Window/CloseButton"*/, method);
-    byte_4B1F726 = 1;
+    sub_1C2D490(&StringLiteral_15640/*"Window/CloseButton"*/);
+    byte_4C2A506 = 1;
   }
-  return (System_String_o *)StringLiteral_15509/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_15640/*"Window/CloseButton"*/;
 }

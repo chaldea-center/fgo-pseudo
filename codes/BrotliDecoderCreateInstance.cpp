@@ -9,10 +9,10 @@ void *__fastcall BrotliDecoderCreateInstance(unsigned __int64 a1, unsigned __int
   v6 = (a1 | a2) != 0;
   if ( a1 | a2 )
   {
-    result = 0LL;
+    result = 0;
     if ( !a1 || !a2 )
       return result;
-    v8 = (void *)((__int64 (__fastcall *)(__int64, __int64))a1)(a3, 5152LL);
+    v8 = (void *)((__int64 (__fastcall *)(__int64, __int64))a1)(a3, 5152);
   }
   else
   {
@@ -20,21 +20,21 @@ void *__fastcall BrotliDecoderCreateInstance(unsigned __int64 a1, unsigned __int
   }
   v9 = v8;
   if ( !v8 )
-    return 0LL;
-  v10 = sub_1BCBBC0(v8, a1, a2, a3);
+    return 0;
+  v10 = sub_1C2E058(v8, a1, a2, a3);
   result = v9;
   if ( v10 )
     return result;
   if ( !v6 )
   {
     free(v9);
-    return 0LL;
+    return 0;
   }
-  result = 0LL;
+  result = 0;
   if ( a1 && a2 )
   {
     ((void (__fastcall *)(__int64, void *))a2)(a3, v9);
-    return 0LL;
+    return 0;
   }
   return result;
 }

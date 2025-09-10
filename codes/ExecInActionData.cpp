@@ -1,12 +1,12 @@
-void __fastcall ExecInActionData___ctor(ExecInActionData_o *this, const MethodInfo *method)
+void ExecInActionData___ctor(ExecInActionData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1EA4A & 1) == 0 )
+  if ( (byte_4C2987D & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleActionData_TypeInfo, method);
-    byte_4B1EA4A = 1;
+    sub_1C2D490(&BattleActionData_TypeInfo);
+    byte_4C2987D = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
-  BattleActionData___ctor((BattleActionData_o *)this, 0LL);
+  BattleActionData___ctor((BattleActionData_o *)this, method);
   this->fields.state = 8;
 }

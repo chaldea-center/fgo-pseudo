@@ -1,18 +1,18 @@
-void __fastcall CardEffectComponent___ctor(CardEffectComponent_o *this, const MethodInfo *method)
+void CardEffectComponent___ctor(CardEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1F19D & 1) == 0 )
+  if ( (byte_4C2A023 & 1) == 0 )
   {
-    sub_1BCAFF8(&EffectComponent_TypeInfo, method);
-    byte_4B1F19D = 1;
+    sub_1C2D490(&EffectComponent_TypeInfo);
+    byte_4C2A023 = 1;
   }
   if ( !EffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EffectComponent_TypeInfo);
-  EffectComponent___ctor((EffectComponent_o *)this, 0LL);
+  EffectComponent___ctor((EffectComponent_o *)this, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall CardEffectComponent__SetCardEffectDepth(
+void CardEffectComponent__SetCardEffectDepth(
         CardEffectComponent_o *this,
         int32_t onBaseDepth,
         int32_t underBaseDepth,
@@ -42,19 +42,19 @@ void __fastcall CardEffectComponent__SetCardEffectDepth(
       this = (CardEffectComponent_o *)onCardEffectArray->m_Items[v8];
       if ( !this )
         goto LABEL_15;
-      UIWidget__set_depth((UIWidget_o *)this, v9, 0LL);
+      UIWidget__set_depth((UIWidget_o *)this, v9, 0);
       max_length = onCardEffectArray->max_length;
       if ( (int)++v8 >= max_length )
         goto LABEL_7;
     }
 LABEL_14:
-    sub_1BCB25C(this, *(_QWORD *)&onBaseDepth, *(_QWORD *)&underBaseDepth);
+    sub_1C2D6F4(this, *(_QWORD *)&onBaseDepth, *(_QWORD *)&underBaseDepth);
   }
 LABEL_7:
   underCardEffectArray = v7->fields.underCardEffectArray;
   if ( !underCardEffectArray )
 LABEL_15:
-    sub_1BCB254(this, *(_QWORD *)&onBaseDepth);
+    sub_1C2D6EC(this, *(_QWORD *)&onBaseDepth);
   v11 = underCardEffectArray->max_length;
   if ( v11 >= 1 )
   {
@@ -65,7 +65,7 @@ LABEL_15:
       this = (CardEffectComponent_o *)underCardEffectArray->m_Items[v12];
       if ( !this )
         goto LABEL_15;
-      UIWidget__set_depth((UIWidget_o *)this, v13, 0LL);
+      UIWidget__set_depth((UIWidget_o *)this, v13, 0);
       v11 = underCardEffectArray->max_length;
       if ( (int)++v12 >= v11 )
         return;

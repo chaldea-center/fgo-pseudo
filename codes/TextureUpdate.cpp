@@ -1,35 +1,35 @@
-void __fastcall TextureUpdate___ctor(TextureUpdate_o *this, const MethodInfo *method)
+void TextureUpdate___ctor(TextureUpdate_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall TextureUpdate__Start(TextureUpdate_o *this, const MethodInfo *method)
+void TextureUpdate__Start(TextureUpdate_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall TextureUpdate__Update(TextureUpdate_o *this, const MethodInfo *method)
+void TextureUpdate__Update(TextureUpdate_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
   __int64 v4; // x1
   UnityEngine_Behaviour_o *v5; // x19
 
-  if ( (byte_4B1E50D & 1) == 0 )
+  if ( (byte_4C29324 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_UITexture___, method);
-    byte_4B1E50D = 1;
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_UITexture___);
+    byte_4C29324 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_UITexture___);
+                       (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_UITexture___);
   if ( !Component_object )
-    sub_1BCB254(0LL, v4);
+    sub_1C2D6EC(0, v4);
   v5 = (UnityEngine_Behaviour_o *)Component_object;
-  ((void (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))Component_object->klass->vtable[30].method)(
+  ((void (__fastcall *)(Il2CppObject *, const MethodInfo *))Component_object->klass->vtable[30].methodPtr)(
     Component_object,
-    Component_object->klass->vtable[31].methodPtr);
-  UnityEngine_Behaviour__set_enabled(v5, 0, 0LL);
-  UnityEngine_Behaviour__set_enabled(v5, 1, 0LL);
+    Component_object->klass->vtable[30].method);
+  UnityEngine_Behaviour__set_enabled(v5, 0, 0);
+  UnityEngine_Behaviour__set_enabled(v5, 1, 0);
 }

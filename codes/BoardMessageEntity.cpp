@@ -1,23 +1,23 @@
-void __fastcall BoardMessageEntity___ctor(BoardMessageEntity_o *this, const MethodInfo *method)
+void BoardMessageEntity___ctor(BoardMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C1DA & 1) == 0 )
+  if ( (byte_4C26F81 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1C1DA = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C26F81 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall BoardMessageEntity__CreatePrimaryKey(BoardMessageEntity_o *this, const MethodInfo *method)
+int32_t BoardMessageEntity__CreatePrimaryKey(BoardMessageEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-BoardMessageEntity_TimeData_array *__fastcall BoardMessageEntity__GetScriptData(
+BoardMessageEntity_TimeData_array *BoardMessageEntity__GetScriptData(
         BoardMessageEntity_o *this,
         const MethodInfo *method)
 {
@@ -25,13 +25,13 @@ BoardMessageEntity_TimeData_array *__fastcall BoardMessageEntity__GetScriptData(
 }
 
 
-BoardMessageEntity_TimeData_o *__fastcall BoardMessageEntity__GetScriptDataCondCheck(
+BoardMessageEntity_TimeData_o *BoardMessageEntity__GetScriptDataCondCheck(
         BoardMessageEntity_o *this,
         int64_t nowTime,
         const MethodInfo *method)
 {
   struct BoardMessageEntity_TimeData_array *script; // x8
-  __int64 v4; // x9
+  il2cpp_array_size_t max_length; // x9
   unsigned int v5; // w10
   unsigned int v6; // w11
   __int64 v7; // x12
@@ -42,11 +42,11 @@ BoardMessageEntity_TimeData_o *__fastcall BoardMessageEntity__GetScriptDataCondC
 
   script = this->fields.script;
   if ( !script )
-    return 0LL;
-  v4 = *(_QWORD *)&script->max_length;
-  if ( !v4 )
-    return 0LL;
-  if ( (int)v4 < 1 )
+    return 0;
+  max_length = script->max_length;
+  if ( !max_length )
+    return 0;
+  if ( (int)max_length < 1 )
   {
     v5 = 0;
   }
@@ -59,7 +59,7 @@ BoardMessageEntity_TimeData_o *__fastcall BoardMessageEntity__GetScriptDataCondC
     {
       v8 = script->m_Items[v6];
       if ( !v8 )
-        sub_1BCB254(this, nowTime);
+        sub_1C2D6EC(this, nowTime);
       v9 = nowTime - v8->fields.startTime;
       v10 = v9 >= 0;
       v11 = v9 < v7;
@@ -69,15 +69,15 @@ BoardMessageEntity_TimeData_o *__fastcall BoardMessageEntity__GetScriptDataCondC
       if ( v10 && v11 )
         v7 = v9;
     }
-    while ( (_DWORD)v4 != v6 );
+    while ( (_DWORD)max_length != v6 );
   }
-  if ( v5 >= (unsigned int)v4 )
-    sub_1BCB25C(this, nowTime, method);
+  if ( v5 >= (unsigned int)max_length )
+    sub_1C2D6F4(this, nowTime, method);
   return script->m_Items[v5];
 }
 
 
-void __fastcall BoardMessageEntity_TimeData___ctor(BoardMessageEntity_TimeData_o *this, const MethodInfo *method)
+void BoardMessageEntity_TimeData___ctor(BoardMessageEntity_TimeData_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }

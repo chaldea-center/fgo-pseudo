@@ -1,45 +1,43 @@
-void __fastcall UICounterLabel___ctor(UICounterLabel_o *this, const MethodInfo *method)
+void UICounterLabel___ctor(UICounterLabel_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-System_Collections_IEnumerator_o *__fastcall UICounterLabel__ExecAnimation(
-        UICounterLabel_o *this,
-        const MethodInfo *method)
+System_Collections_IEnumerator_o *UICounterLabel__ExecAnimation(UICounterLabel_o *this, const MethodInfo *method)
 {
   __int64 v3; // x20
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B1BB0E & 1) == 0 )
+  if ( (byte_4C268A5 & 1) == 0 )
   {
-    sub_1BCAFF8(&UICounterLabel__ExecAnimation_d__16_TypeInfo, method);
-    byte_4B1BB0E = 1;
+    sub_1C2D490(&UICounterLabel__ExecAnimation_d__16_TypeInfo);
+    byte_4C268A5 = 1;
   }
-  v3 = sub_1BCB244(UICounterLabel__ExecAnimation_d__16_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  v3 = sub_1C2D6DC(UICounterLabel__ExecAnimation_d__16_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C2D434((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
 
-void __fastcall UICounterLabel__PlayAnimation(UICounterLabel_o *this, const MethodInfo *method)
+void UICounterLabel__PlayAnimation(UICounterLabel_o *this, const MethodInfo *method)
 {
   System_Collections_IEnumerator_o *v3; // x1
 
   if ( this->fields._AddCount_k__BackingField )
   {
     v3 = UICounterLabel__ExecAnimation(this, method);
-    UnityEngine_MonoBehaviour__StartCoroutine_70121648((UnityEngine_MonoBehaviour_o *)this, v3, 0LL);
+    UnityEngine_MonoBehaviour__StartCoroutine_71149276((UnityEngine_MonoBehaviour_o *)this, v3, 0);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall UICounterLabel__SetCountLabel(UICounterLabel_o *this, int32_t count, const MethodInfo *method)
+void UICounterLabel__SetCountLabel(UICounterLabel_o *this, int32_t count, const MethodInfo *method)
 {
   UICounterLabel_o *v4; // x19
   UILabel_o *countLabel; // x21
@@ -55,43 +53,43 @@ void __fastcall UICounterLabel__SetCountLabel(UICounterLabel_o *this, int32_t co
 
   v4 = this;
   v14 = count;
-  if ( (byte_4B1BB0F & 1) == 0 )
+  if ( (byte_4C268A6 & 1) == 0 )
   {
-    this = (UICounterLabel_o *)sub_1BCAFF8(&int_TypeInfo, *(_QWORD *)&count);
-    byte_4B1BB0F = 1;
+    this = (UICounterLabel_o *)sub_1C2D490(&int_TypeInfo);
+    byte_4C268A6 = 1;
   }
   countLabel = v4->fields.countLabel;
   if ( !countLabel )
     goto LABEL_11;
   mWidth = countLabel->fields.mWidth;
-  if ( System_String__IsNullOrEmpty(v4->fields.format, 0LL) )
+  if ( System_String__IsNullOrEmpty(v4->fields.format, 0) )
   {
-    v10 = System_Int32__ToString((int32_t)&v14, 0LL);
+    v10 = System_Int32__ToString((int32_t)&v14, 0);
   }
   else
   {
     format = v4->fields.format;
     v13 = count;
     v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13, v7, v8, v9);
-    v10 = System_String__Format(format, v12, 0LL);
+    v10 = System_String__Format(format, v12, 0);
   }
-  UILabel__set_text(countLabel, v10, 0LL);
+  UILabel__set_text(countLabel, v10, 0);
   if ( v4->fields.isFixedWidth )
   {
     this = (UICounterLabel_o *)v4->fields.countLabel;
     if ( this )
     {
-      UILabel__SetCondensedScale((UILabel_o *)this, mWidth, 0, 0LL);
+      UILabel__SetCondensedScale((UILabel_o *)this, mWidth, 0, 0);
       return;
     }
 LABEL_11:
-    sub_1BCB254(this, *(_QWORD *)&count);
+    sub_1C2D6EC(this, *(_QWORD *)&count);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall UICounterLabel__Setup(
+void UICounterLabel__Setup(
         UICounterLabel_o *this,
         int32_t count,
         float animTime,
@@ -107,7 +105,7 @@ void __fastcall UICounterLabel__Setup(
   this->fields._MainCount_k__BackingField = count;
   v7 = isFixedWidth;
   this->fields.animTime = animTime;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields.format,
     (int32_t)format,
     (int32_t)format,
@@ -116,47 +114,47 @@ void __fastcall UICounterLabel__Setup(
 }
 
 
-int32_t __fastcall UICounterLabel__get_AddCount(UICounterLabel_o *this, const MethodInfo *method)
+int32_t UICounterLabel__get_AddCount(UICounterLabel_o *this, const MethodInfo *method)
 {
   return this->fields._AddCount_k__BackingField;
 }
 
 
-bool __fastcall UICounterLabel__get_IsAnimFinished(UICounterLabel_o *this, const MethodInfo *method)
+bool UICounterLabel__get_IsAnimFinished(UICounterLabel_o *this, const MethodInfo *method)
 {
   return this->fields._AddCount_k__BackingField == 0;
 }
 
 
-int32_t __fastcall UICounterLabel__get_MainCount(UICounterLabel_o *this, const MethodInfo *method)
+int32_t UICounterLabel__get_MainCount(UICounterLabel_o *this, const MethodInfo *method)
 {
   return this->fields._MainCount_k__BackingField;
 }
 
 
-void __fastcall UICounterLabel__set_AddCount(UICounterLabel_o *this, int32_t value, const MethodInfo *method)
+void UICounterLabel__set_AddCount(UICounterLabel_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._AddCount_k__BackingField = value;
 }
 
 
-void __fastcall UICounterLabel__set_MainCount(UICounterLabel_o *this, int32_t value, const MethodInfo *method)
+void UICounterLabel__set_MainCount(UICounterLabel_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._MainCount_k__BackingField = value;
 }
 
 
-void __fastcall UICounterLabel__ExecAnimation_d__16___ctor(
+void UICounterLabel__ExecAnimation_d__16___ctor(
         UICounterLabel__ExecAnimation_d__16_o *this,
         int32_t 1__state,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.__1__state = 1__state;
 }
 
 
-bool __fastcall UICounterLabel__ExecAnimation_d__16__MoveNext(
+bool UICounterLabel__ExecAnimation_d__16__MoveNext(
         UICounterLabel__ExecAnimation_d__16_o *this,
         const MethodInfo *method)
 {
@@ -179,10 +177,10 @@ bool __fastcall UICounterLabel__ExecAnimation_d__16__MoveNext(
   int32_t v18; // w19
 
   v2 = this;
-  if ( (byte_4B1BB10 & 1) == 0 )
+  if ( (byte_4C268A7 & 1) == 0 )
   {
-    this = (UICounterLabel__ExecAnimation_d__16_o *)sub_1BCAFF8(&UnityEngine_Application_TypeInfo, method);
-    byte_4B1BB10 = 1;
+    this = (UICounterLabel__ExecAnimation_d__16_o *)sub_1C2D490(&UnityEngine_Application_TypeInfo);
+    byte_4C268A7 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -200,18 +198,18 @@ bool __fastcall UICounterLabel__ExecAnimation_d__16__MoveNext(
     v2->fields.__1__state = -1;
     if ( !_4__this )
 LABEL_22:
-      sub_1BCB254(this, method);
+      sub_1C2D6EC(this, method);
     AddCount_k__BackingField = _4__this->fields._AddCount_k__BackingField;
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
     v6 = 0;
     v2->fields._add_5__2 = (float)AddCount_k__BackingField
-                         / (float)(_4__this->fields.animTime * (float)UnityEngine_Application__get_targetFrameRate(0LL));
+                         / (float)(_4__this->fields.animTime * (float)UnityEngine_Application__get_targetFrameRate(0));
     v2->fields._i_5__3 = 0;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-  this = (UICounterLabel__ExecAnimation_d__16_o *)UnityEngine_Application__get_targetFrameRate(0LL);
+  this = (UICounterLabel__ExecAnimation_d__16_o *)UnityEngine_Application__get_targetFrameRate(0);
   if ( !_4__this )
     goto LABEL_22;
   v9 = _4__this->fields.animTime * (float)(int)this;
@@ -235,9 +233,9 @@ LABEL_22:
     else
       v13 = (int)v12;
     UICounterLabel__SetCountLabel(_4__this, v13 + MainCount_k__BackingField, v8);
-    v2->fields.__2__current = 0LL;
+    v2->fields.__2__current = 0;
     p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-    sub_1BCAF9C(p__2__current, 0, v15, v16);
+    sub_1C2D434(p__2__current, 0, v15, v16);
     result = 1;
     LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
   }
@@ -245,7 +243,7 @@ LABEL_22:
 }
 
 
-Il2CppObject *__fastcall UICounterLabel__ExecAnimation_d__16__System_Collections_Generic_IEnumerator_System_Object__get_Current(
+Il2CppObject *UICounterLabel__ExecAnimation_d__16__System_Collections_Generic_IEnumerator_System_Object__get_Current(
         UICounterLabel__ExecAnimation_d__16_o *this,
         const MethodInfo *method)
 {
@@ -253,7 +251,7 @@ Il2CppObject *__fastcall UICounterLabel__ExecAnimation_d__16__System_Collections
 }
 
 
-void __fastcall __noreturn UICounterLabel__ExecAnimation_d__16__System_Collections_IEnumerator_Reset(
+void __noreturn UICounterLabel__ExecAnimation_d__16__System_Collections_IEnumerator_Reset(
         UICounterLabel__ExecAnimation_d__16_o *this,
         const MethodInfo *method)
 {
@@ -261,15 +259,15 @@ void __fastcall __noreturn UICounterLabel__ExecAnimation_d__16__System_Collectio
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BCB00C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BCB244(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BCB00C(&Method_UICounterLabel__ExecAnimation_d__16_System_Collections_IEnumerator_Reset__);
-  sub_1BCB120(v3, v4);
+  v2 = sub_1C2D4A4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C2D6DC(v2);
+  System_NotSupportedException___ctor(v3, 0);
+  v4 = sub_1C2D4A4(&Method_UICounterLabel__ExecAnimation_d__16_System_Collections_IEnumerator_Reset__);
+  sub_1C2D5B8(v3, v4);
 }
 
 
-Il2CppObject *__fastcall UICounterLabel__ExecAnimation_d__16__System_Collections_IEnumerator_get_Current(
+Il2CppObject *UICounterLabel__ExecAnimation_d__16__System_Collections_IEnumerator_get_Current(
         UICounterLabel__ExecAnimation_d__16_o *this,
         const MethodInfo *method)
 {
@@ -277,7 +275,7 @@ Il2CppObject *__fastcall UICounterLabel__ExecAnimation_d__16__System_Collections
 }
 
 
-void __fastcall UICounterLabel__ExecAnimation_d__16__System_IDisposable_Dispose(
+void UICounterLabel__ExecAnimation_d__16__System_IDisposable_Dispose(
         UICounterLabel__ExecAnimation_d__16_o *this,
         const MethodInfo *method)
 {

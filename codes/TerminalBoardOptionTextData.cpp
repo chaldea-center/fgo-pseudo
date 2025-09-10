@@ -1,4 +1,4 @@
-void __fastcall TerminalBoardOptionTextData___ctor(
+void TerminalBoardOptionTextData___ctor(
         TerminalBoardOptionTextData_o *this,
         System_String_o *forwardText,
         System_String_o *behindTextFormat,
@@ -15,43 +15,43 @@ void __fastcall TerminalBoardOptionTextData___ctor(
   const MethodInfo *v16; // x3
 
   v12 = this;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   v12->fields._ForwardText_k__BackingField = forwardText;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v12->fields, (int32_t)forwardText, v13, v14);
+  sub_1C2D434((CGThumbnailListItem_o *)&v12->fields, (int32_t)forwardText, v13, v14);
   v12->fields._BehindTextFormat_k__BackingField = behindTextFormat;
   v12 = (TerminalBoardOptionTextData_o *)((char *)v12 + 32);
-  sub_1BCAF9C((CGThumbnailListItem_o *)v12, (int32_t)behindTextFormat, v15, v16);
+  sub_1C2D434((CGThumbnailListItem_o *)v12, (int32_t)behindTextFormat, v15, v16);
   LODWORD(v12->monitor) = itemImageId;
   HIDWORD(v12->monitor) = alignment;
 }
 
 
-void __fastcall TerminalBoardOptionTextData__SetParamsToBehindText(
+void TerminalBoardOptionTextData__SetParamsToBehindText(
         TerminalBoardOptionTextData_o *this,
         System_Object_array *args,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
-  __int64 v6; // x9
+  il2cpp_array_size_t max_length; // x9
   struct System_String_o *BehindTextFormat_k__BackingField; // x1
   struct System_String_o *v8; // x0
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
   if ( !args )
-    sub_1BCB254(this, 0LL);
-  v6 = *(_QWORD *)&args->max_length;
+    sub_1C2D6EC(this, 0);
+  max_length = args->max_length;
   BehindTextFormat_k__BackingField = this->fields._BehindTextFormat_k__BackingField;
-  if ( v6 )
+  if ( max_length )
   {
-    v8 = System_String__Format_62491852(this->fields._BehindTextFormat_k__BackingField, args, 0LL);
+    v8 = System_String__Format_63499292(this->fields._BehindTextFormat_k__BackingField, args, 0);
     this->fields._BehindText_k__BackingField = v8;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._BehindText_k__BackingField, (int32_t)v8, v9, v10);
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields._BehindText_k__BackingField, (int32_t)v8, v9, v10);
   }
   else
   {
     this->fields._BehindText_k__BackingField = BehindTextFormat_k__BackingField;
-    sub_1BCAF9C(
+    sub_1C2D434(
       (CGThumbnailListItem_o *)&this->fields._BehindText_k__BackingField,
       (int32_t)BehindTextFormat_k__BackingField,
       (int32_t)method,
@@ -60,15 +60,13 @@ void __fastcall TerminalBoardOptionTextData__SetParamsToBehindText(
 }
 
 
-int32_t __fastcall TerminalBoardOptionTextData__get_Alignment(
-        TerminalBoardOptionTextData_o *this,
-        const MethodInfo *method)
+int32_t TerminalBoardOptionTextData__get_Alignment(TerminalBoardOptionTextData_o *this, const MethodInfo *method)
 {
   return this->fields._Alignment_k__BackingField;
 }
 
 
-System_String_o *__fastcall TerminalBoardOptionTextData__get_BehindText(
+System_String_o *TerminalBoardOptionTextData__get_BehindText(
         TerminalBoardOptionTextData_o *this,
         const MethodInfo *method)
 {
@@ -76,7 +74,7 @@ System_String_o *__fastcall TerminalBoardOptionTextData__get_BehindText(
 }
 
 
-System_String_o *__fastcall TerminalBoardOptionTextData__get_BehindTextFormat(
+System_String_o *TerminalBoardOptionTextData__get_BehindTextFormat(
         TerminalBoardOptionTextData_o *this,
         const MethodInfo *method)
 {
@@ -84,7 +82,7 @@ System_String_o *__fastcall TerminalBoardOptionTextData__get_BehindTextFormat(
 }
 
 
-System_String_o *__fastcall TerminalBoardOptionTextData__get_ForwardText(
+System_String_o *TerminalBoardOptionTextData__get_ForwardText(
         TerminalBoardOptionTextData_o *this,
         const MethodInfo *method)
 {
@@ -92,21 +90,19 @@ System_String_o *__fastcall TerminalBoardOptionTextData__get_ForwardText(
 }
 
 
-bool __fastcall TerminalBoardOptionTextData__get_IsLeft(TerminalBoardOptionTextData_o *this, const MethodInfo *method)
+bool TerminalBoardOptionTextData__get_IsLeft(TerminalBoardOptionTextData_o *this, const MethodInfo *method)
 {
   return this->fields._Alignment_k__BackingField == 1;
 }
 
 
-int32_t __fastcall TerminalBoardOptionTextData__get_ItemImageId(
-        TerminalBoardOptionTextData_o *this,
-        const MethodInfo *method)
+int32_t TerminalBoardOptionTextData__get_ItemImageId(TerminalBoardOptionTextData_o *this, const MethodInfo *method)
 {
   return this->fields._ItemImageId_k__BackingField;
 }
 
 
-void __fastcall TerminalBoardOptionTextData__set_BehindText(
+void TerminalBoardOptionTextData__set_BehindText(
         TerminalBoardOptionTextData_o *this,
         System_String_o *value,
         const MethodInfo *method)
@@ -114,11 +110,11 @@ void __fastcall TerminalBoardOptionTextData__set_BehindText(
   const MethodInfo *v3; // x3
 
   this->fields._BehindText_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._BehindText_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._BehindText_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall TerminalBoardOptionTextData__set_BehindTextFormat(
+void TerminalBoardOptionTextData__set_BehindTextFormat(
         TerminalBoardOptionTextData_o *this,
         System_String_o *value,
         const MethodInfo *method)
@@ -126,7 +122,7 @@ void __fastcall TerminalBoardOptionTextData__set_BehindTextFormat(
   const MethodInfo *v3; // x3
 
   this->fields._BehindTextFormat_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._BehindTextFormat_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -134,7 +130,7 @@ void __fastcall TerminalBoardOptionTextData__set_BehindTextFormat(
 }
 
 
-void __fastcall TerminalBoardOptionTextData__set_ForwardText(
+void TerminalBoardOptionTextData__set_ForwardText(
         TerminalBoardOptionTextData_o *this,
         System_String_o *value,
         const MethodInfo *method)
@@ -142,11 +138,11 @@ void __fastcall TerminalBoardOptionTextData__set_ForwardText(
   const MethodInfo *v3; // x3
 
   this->fields._ForwardText_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall TerminalBoardOptionTextData__set_ItemImageId(
+void TerminalBoardOptionTextData__set_ItemImageId(
         TerminalBoardOptionTextData_o *this,
         int32_t value,
         const MethodInfo *method)

@@ -1,4 +1,4 @@
-bool __fastcall ShiftBeforeServantAiTask__IsActable(
+bool ShiftBeforeServantAiTask__IsActable(
         ShiftBeforeServantAiTask_o *this,
         BattleLogic_o *logic,
         const MethodInfo *method)
@@ -7,6 +7,6 @@ bool __fastcall ShiftBeforeServantAiTask__IsActable(
 
   svtData = this->fields.svtData;
   if ( !svtData )
-    sub_1BCB254(0LL, logic);
-  return BattleServantData__isAlive(svtData, 0, 0LL);
+    sub_1C2D6EC(0, logic);
+  return BattleServantData__isAlive(svtData, 0, 0);
 }

@@ -1,67 +1,67 @@
-void __fastcall SendEventToFsm___ctor(SendEventToFsm_o *this, const MethodInfo *method)
+void SendEventToFsm___ctor(SendEventToFsm_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
   const MethodInfo *v3; // x3
   int32_t v5; // w1
 
-  if ( (byte_4B1B9D1 & 1) == 0 )
+  if ( (byte_4C26776 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_22070/*"none"*/, method);
-    byte_4B1B9D1 = 1;
+    sub_1C2D490(&StringLiteral_22250/*"none"*/);
+    byte_4C26776 = 1;
   }
-  v5 = StringLiteral_22070/*"none"*/;
-  this->fields.sendEvent = (struct System_String_o *)StringLiteral_22070/*"none"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.sendEvent, v5, v2, v3);
-  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
+  v5 = StringLiteral_22250/*"none"*/;
+  this->fields.sendEvent = (struct System_String_o *)StringLiteral_22250/*"none"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.sendEvent, v5, v2, v3);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall SendEventToFsm__OnClick(SendEventToFsm_o *this, const MethodInfo *method)
+void SendEventToFsm__OnClick(SendEventToFsm_o *this, const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
 
-  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0LL) && !this->fields.trigger )
+  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) && !this->fields.trigger )
     SendEventToFsm__Send(this, v3);
 }
 
 
-void __fastcall SendEventToFsm__OnDoubleClick(SendEventToFsm_o *this, const MethodInfo *method)
+void SendEventToFsm__OnDoubleClick(SendEventToFsm_o *this, const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
 
-  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0LL) && this->fields.trigger == 5 )
+  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) && this->fields.trigger == 5 )
     SendEventToFsm__Send(this, v3);
 }
 
 
-void __fastcall SendEventToFsm__OnEnable(SendEventToFsm_o *this, const MethodInfo *method)
+void SendEventToFsm__OnEnable(SendEventToFsm_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x20
   bool IsHighlighted; // w1
   const MethodInfo *v5; // x2
 
-  if ( (byte_4B1B9CE & 1) == 0 )
+  if ( (byte_4C26773 & 1) == 0 )
   {
-    sub_1BCAFF8(&UICamera_TypeInfo, method);
-    byte_4B1B9CE = 1;
+    sub_1C2D490(&UICamera_TypeInfo);
+    byte_4C26773 = 1;
   }
   if ( this->fields.mStarted )
   {
-    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UICamera_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-    IsHighlighted = UICamera__IsHighlighted(gameObject, 0LL);
+    IsHighlighted = UICamera__IsHighlighted(gameObject, 0);
     SendEventToFsm__OnHover(this, IsHighlighted, v5);
   }
 }
 
 
-void __fastcall SendEventToFsm__OnHover(SendEventToFsm_o *this, bool isOver, const MethodInfo *method)
+void SendEventToFsm__OnHover(SendEventToFsm_o *this, bool isOver, const MethodInfo *method)
 {
   const MethodInfo *v5; // x1
   int32_t trigger; // w8
 
-  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0LL) )
+  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     trigger = this->fields.trigger;
     if ( isOver )
@@ -78,12 +78,12 @@ LABEL_6:
 }
 
 
-void __fastcall SendEventToFsm__OnPress(SendEventToFsm_o *this, bool isPressed, const MethodInfo *method)
+void SendEventToFsm__OnPress(SendEventToFsm_o *this, bool isPressed, const MethodInfo *method)
 {
   const MethodInfo *v5; // x1
   int32_t trigger; // w8
 
-  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0LL) )
+  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     trigger = this->fields.trigger;
     if ( isPressed )
@@ -100,18 +100,17 @@ LABEL_6:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall SendEventToFsm__OnSelect(SendEventToFsm_o *this, bool isSelected, const MethodInfo *method)
+void SendEventToFsm__OnSelect(SendEventToFsm_o *this, bool isSelected, const MethodInfo *method)
 {
   const MethodInfo *v5; // x2
   UICamera_c *v6; // x0
 
-  if ( (byte_4B1B9CF & 1) == 0 )
+  if ( (byte_4C26774 & 1) == 0 )
   {
-    sub_1BCAFF8(&UICamera_TypeInfo, isSelected);
-    byte_4B1B9CF = 1;
+    sub_1C2D490(&UICamera_TypeInfo);
+    byte_4C26774 = 1;
   }
-  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0LL) )
+  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     if ( !isSelected )
       goto LABEL_8;
@@ -128,31 +127,31 @@ LABEL_8:
 }
 
 
-void __fastcall SendEventToFsm__Send(SendEventToFsm_o *this, const MethodInfo *method)
+void SendEventToFsm__Send(SendEventToFsm_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *targetFSM; // x20
   __int64 v4; // x1
   PlayMakerFSM_o *v5; // x0
 
-  if ( (byte_4B1B9D0 & 1) == 0 )
+  if ( (byte_4C26775 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1B9D0 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C26775 = 1;
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(targetFSM, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(targetFSM, 0, 0) )
   {
     v5 = this->fields.targetFSM;
     if ( !v5 )
-      sub_1BCB254(0LL, v4);
-    PlayMakerFSM__SendEvent(v5, this->fields.sendEvent, 0LL);
+      sub_1C2D6EC(0, v4);
+    PlayMakerFSM__SendEvent(v5, this->fields.sendEvent, 0);
   }
 }
 
 
-void __fastcall SendEventToFsm__Start(SendEventToFsm_o *this, const MethodInfo *method)
+void SendEventToFsm__Start(SendEventToFsm_o *this, const MethodInfo *method)
 {
   this->fields.mStarted = 1;
 }

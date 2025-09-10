@@ -1,4 +1,4 @@
-void __fastcall CombineHelpListViewItem___ctor(
+void CombineHelpListViewItem___ctor(
         CombineHelpListViewItem_o *this,
         int32_t index,
         CombineHelpInfo_o *info,
@@ -12,82 +12,76 @@ void __fastcall CombineHelpListViewItem___ctor(
 
   v6 = this;
   v7 = isUse;
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   v6->fields.info = info;
-  v6 = (CombineHelpListViewItem_o *)((char *)v6 + 112);
-  sub_1BCAF9C((CGThumbnailListItem_o *)v6, (int32_t)info, v8, v9);
+  v6 = (CombineHelpListViewItem_o *)((char *)v6 + 120);
+  sub_1C2D434((CGThumbnailListItem_o *)v6, (int32_t)info, v8, v9);
   LOBYTE(v6->monitor) = v7;
 }
 
 
-System_String_o *__fastcall CombineHelpListViewItem__get_ImageName(
-        CombineHelpListViewItem_o *this,
-        const MethodInfo *method)
+System_String_o *CombineHelpListViewItem__get_ImageName(CombineHelpListViewItem_o *this, const MethodInfo *method)
 {
   struct CombineHelpInfo_o *info; // x8
 
   info = this->fields.info;
   if ( !info )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   return info->fields.imageName;
 }
 
 
-CombineHelpInfo_o *__fastcall CombineHelpListViewItem__get_Info(
-        CombineHelpListViewItem_o *this,
-        const MethodInfo *method)
+CombineHelpInfo_o *CombineHelpListViewItem__get_Info(CombineHelpListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields.info;
 }
 
 
-System_String_o *__fastcall CombineHelpListViewItem__get_InfoText(
-        CombineHelpListViewItem_o *this,
-        const MethodInfo *method)
+System_String_o *CombineHelpListViewItem__get_InfoText(CombineHelpListViewItem_o *this, const MethodInfo *method)
 {
   CombineHelpListViewItem_o *v2; // x19
   struct CombineHelpInfo_o *info; // x8
   System_String_o *textCode; // x19
 
   v2 = this;
-  if ( (byte_4B20318 & 1) == 0 )
+  if ( (byte_4C2B226 & 1) == 0 )
   {
-    this = (CombineHelpListViewItem_o *)sub_1BCAFF8(&LocalizationManager_TypeInfo, method);
-    byte_4B20318 = 1;
+    this = (CombineHelpListViewItem_o *)sub_1C2D490(&LocalizationManager_TypeInfo);
+    byte_4C2B226 = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   textCode = info->fields.textCode;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get(textCode, 0LL);
+  return LocalizationManager__Get(textCode, 0);
 }
 
 
-bool __fastcall CombineHelpListViewItem__get_IsUse(CombineHelpListViewItem_o *this, const MethodInfo *method)
+bool CombineHelpListViewItem__get_IsUse(CombineHelpListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields.isUse;
 }
 
 
-int32_t __fastcall CombineHelpListViewItem__get_Kind(CombineHelpListViewItem_o *this, const MethodInfo *method)
+int32_t CombineHelpListViewItem__get_Kind(CombineHelpListViewItem_o *this, const MethodInfo *method)
 {
   struct CombineHelpInfo_o *info; // x8
 
   info = this->fields.info;
   if ( !info )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   return info->fields.kind;
 }
 
 
-int32_t __fastcall CombineHelpListViewItem__get_LineCnt(CombineHelpListViewItem_o *this, const MethodInfo *method)
+int32_t CombineHelpListViewItem__get_LineCnt(CombineHelpListViewItem_o *this, const MethodInfo *method)
 {
   struct CombineHelpInfo_o *info; // x8
 
   info = this->fields.info;
   if ( !info )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   return info->fields.line;
 }

@@ -1,5 +1,5 @@
 // local variable allocation has failed, the output may be wrong!
-UnityEngine_Vector3_o __fastcall Easing__Func(
+UnityEngine_Vector3_o Easing__Func(
         UnityEngine_Vector3_o from,
         UnityEngine_Vector3_o to,
         float t,
@@ -41,20 +41,18 @@ UnityEngine_Vector3_o __fastcall Easing__Func(
   float32x2_t v37; // d2
   float v38; // s3
   float v39; // s0
-  float v40; // s2
+  float v40; // s0
   float v41; // s0
-  float v42; // s0
+  float32x2_t v42; // d1
   float v43; // s2
-  float32x2_t v44; // d1
+  float v44; // s0
   float v45; // s2
-  float v46; // s0
-  float v47; // s2
-  float v48; // s1
-  float v49; // s0
+  float v46; // s1
+  float v47; // s0
+  unsigned __int64 v48; // [xsp+0h] [xbp-30h]
+  unsigned __int64 v49; // [xsp+0h] [xbp-30h]
   unsigned __int64 v50; // [xsp+0h] [xbp-30h]
   unsigned __int64 v51; // [xsp+0h] [xbp-30h]
-  unsigned __int64 v52; // [xsp+0h] [xbp-30h]
-  unsigned __int64 v53; // [xsp+0h] [xbp-30h]
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
   v5.n64_u64[0] = *(unsigned __int64 *)&from.fields.x;
@@ -108,9 +106,9 @@ LABEL_47:
         v23 = v9 * 0.5;
         goto LABEL_19;
       }
-      v44.n64_u64[0] = vmul_f32(v8, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v45 = v9 * 0.5;
-      v46 = (float)((float)(v14 + -2.0) * (float)((float)(v14 + -2.0) * (float)(v14 + -2.0))) + 2.0;
+      v42.n64_u64[0] = vmul_f32(v8, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+      v43 = v9 * 0.5;
+      v44 = (float)((float)(v14 + -2.0) * (float)((float)(v14 + -2.0) * (float)(v14 + -2.0))) + 2.0;
       goto LABEL_45;
     case 7:
       v24.n64_u64[0] = vmul_n_f32(v8, t).n64_u64[0];
@@ -128,9 +126,9 @@ LABEL_47:
         v27 = v9 * 0.5;
         goto LABEL_18;
       }
-      v44.n64_u64[0] = vmul_f32(v8, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v45 = v9 * 0.5;
-      v46 = 2.0
+      v42.n64_u64[0] = vmul_f32(v8, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+      v43 = v9 * 0.5;
+      v44 = 2.0
           - (float)((float)(v14 + -2.0)
                   * (float)((float)(v14 + -2.0) * (float)((float)(v14 + -2.0) * (float)(v14 + -2.0))));
       goto LABEL_45;
@@ -148,7 +146,7 @@ LABEL_34:
       v11 = v13 * t;
 LABEL_35:
       v5.n64_u64[0] = vadd_f32(v5, v10).n64_u64[0];
-      z = v40 + v11;
+      z = from.fields.z + v11;
       goto LABEL_52;
     case 11:
       v19 = t + -1.0;
@@ -161,15 +159,15 @@ LABEL_15:
       v14 = t + t;
       if ( (float)(t + t) >= 1.0 )
       {
-        v44.n64_u64[0] = vmul_f32(v8, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-        v45 = v9 * 0.5;
-        v46 = (float)((float)(v14 + -2.0)
+        v42.n64_u64[0] = vmul_f32(v8, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+        v43 = v9 * 0.5;
+        v44 = (float)((float)(v14 + -2.0)
                     * (float)((float)(v14 + -2.0)
                             * (float)((float)(v14 + -2.0) * (float)((float)(v14 + -2.0) * (float)(v14 + -2.0)))))
             + 2.0;
 LABEL_45:
-        v29.n64_u64[0] = vmul_n_f32(v44, v46).n64_u64[0];
-        v30 = v45 * v46;
+        v29.n64_u64[0] = vmul_n_f32(v42, v44).n64_u64[0];
+        v30 = v43 * v44;
       }
       else
       {
@@ -189,53 +187,53 @@ LABEL_51:
       v5.n64_u64[0] = vadd_f32(v5, v29).n64_u64[0];
       z = z + v30;
 LABEL_52:
-      v47 = z;
-      v48 = v5.n64_f32[1];
-      v49 = v5.n64_f32[0];
-      result.fields.z = v47;
-      result.fields.y = v48;
-      result.fields.x = v49;
+      v45 = z;
+      v46 = v5.n64_f32[1];
+      v47 = v5.n64_f32[0];
+      result.fields.z = v45;
+      result.fields.y = v46;
+      result.fields.x = v47;
       return result;
     case 13:
-      v50 = *(_QWORD *)&from.fields.x;
+      v48 = *(_QWORD *)&from.fields.x;
       v31 = cosf(t * 1.5708);
-      v5.n64_u64[0] = v50;
+      v5.n64_u64[0] = v48;
       v29.n64_u64[0] = vsub_f32(v8, vmul_n_f32(v8, v31)).n64_u64[0];
       v30 = v9 - (float)(v9 * v31);
       goto LABEL_51;
     case 14:
-      v51 = *(_QWORD *)&from.fields.x;
+      v49 = *(_QWORD *)&from.fields.x;
       v32 = sinf(t * 1.5708);
       goto LABEL_39;
     case 15:
       v8.n64_u64[0] = vmul_f32(v8, (float32x2_t)0xBF000000BF000000LL).n64_u64[0];
       v9 = v9 * -0.5;
-      v52 = *(_QWORD *)&from.fields.x;
+      v50 = *(_QWORD *)&from.fields.x;
       v28 = cosf(t * 3.1416);
-      v5.n64_u64[0] = v52;
+      v5.n64_u64[0] = v50;
       v20 = -1.0;
 LABEL_24:
       v32 = v28 + v20;
       goto LABEL_50;
     case 16:
       v33 = (float)(t + -1.0) * 10.0;
-      v51 = v5.n64_u64[0];
+      v49 = v5.n64_u64[0];
       goto LABEL_38;
     case 17:
-      v53 = *(_QWORD *)&from.fields.x;
+      v51 = *(_QWORD *)&from.fields.x;
       v34 = exp2f(t * -10.0);
-      v5.n64_u64[0] = v53;
+      v5.n64_u64[0] = v51;
       v35 = 1.0;
       goto LABEL_49;
     case 18:
-      v41 = t + t;
-      v51 = v5.n64_u64[0];
+      v40 = t + t;
+      v49 = v5.n64_u64[0];
       if ( (float)(t + t) >= 1.0 )
       {
         v8.n64_u64[0] = vmul_f32(v8, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
         v9 = v9 * 0.5;
-        v34 = exp2f((float)(v41 + -1.0) * -10.0);
-        v5.n64_u64[0] = v51;
+        v34 = exp2f((float)(v40 + -1.0) * -10.0);
+        v5.n64_u64[0] = v49;
         v35 = 2.0;
 LABEL_49:
         v32 = v35 - v34;
@@ -244,20 +242,20 @@ LABEL_49:
       {
         v8.n64_u64[0] = vmul_f32(v8, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
         v9 = v9 * 0.5;
-        v33 = (float)(v41 + -1.0) * 10.0;
+        v33 = (float)(v40 + -1.0) * 10.0;
 LABEL_38:
         v32 = exp2f(v33);
 LABEL_39:
-        v5.n64_u64[0] = v51;
+        v5.n64_u64[0] = v49;
       }
 LABEL_50:
       v29.n64_u64[0] = vmul_n_f32(v8, v32).n64_u64[0];
       v30 = v9 * v32;
       goto LABEL_51;
     case 19:
-      v42 = sqrtf(1.0 - (float)(t * t)) + -1.0;
-      v5.n64_u64[0] = vsub_f32(v5, vmul_n_f32(v8, v42)).n64_u64[0];
-      z = v43 - (float)(v9 * v42);
+      v41 = sqrtf(1.0 - (float)(t * t)) + -1.0;
+      v5.n64_u64[0] = vsub_f32(v5, vmul_n_f32(v8, v41)).n64_u64[0];
+      z = from.fields.z - (float)(v9 * v41);
       goto LABEL_52;
     case 20:
       v32 = sqrtf(1.0 - (float)((float)(t + -1.0) * (float)(t + -1.0)));
@@ -284,7 +282,7 @@ LABEL_50:
 
 
 // local variable allocation has failed, the output may be wrong!
-UnityEngine_Color_o __fastcall Easing__Func_48247244(
+UnityEngine_Color_o Easing__Func_48949936(
         UnityEngine_Color_o from,
         UnityEngine_Color_o to,
         float t,
@@ -319,50 +317,38 @@ UnityEngine_Color_o __fastcall Easing__Func_48247244(
   float32x2_t v30; // d1
   float32x2_t v31; // d2
   float32x2_t v32; // d0
-  unsigned int v33; // s2
-  unsigned int v34; // s3
+  float v33; // s0
+  float32x2_t v34; // d1
   float v35; // s0
-  float32x2_t v36; // d1
-  unsigned int v37; // s2
-  unsigned int v38; // s3
-  unsigned int v39; // s2
-  unsigned int v40; // s3
-  float v41; // s0
+  float v36; // s0
+  float v37; // s0
+  float v38; // s0
+  float v39; // s1
+  float v40; // s1
+  float32x2_t v41; // d4
   float v42; // s0
-  float v43; // s0
-  unsigned int v44; // s2
-  unsigned int v45; // s3
-  unsigned int v46; // s2
-  unsigned int v47; // s3
-  float v48; // s0
-  float v49; // s1
-  float v50; // s1
-  float32x2_t v51; // d4
-  float v52; // s0
-  unsigned int v53; // s2
-  unsigned int v54; // s3
-  float32x2_t v55; // d0
-  float v56; // s0
-  float v57; // s3
-  float v58; // s4
-  float v59; // s0
-  float v60; // s1
-  float v61; // s3
-  float v62; // s0
-  float v63; // s2
-  unsigned __int64 v64; // [xsp+0h] [xbp-40h]
-  unsigned __int64 v65; // [xsp+0h] [xbp-40h]
-  unsigned __int64 v66; // [xsp+0h] [xbp-40h]
-  unsigned __int64 v67; // [xsp+0h] [xbp-40h]
-  unsigned __int64 v68; // [xsp+10h] [xbp-30h]
-  unsigned __int64 v69; // [xsp+10h] [xbp-30h]
-  unsigned __int64 v70; // [xsp+10h] [xbp-30h]
-  unsigned __int64 v71; // [xsp+10h] [xbp-30h]
+  float32x2_t v43; // d0
+  float v44; // s0
+  float v45; // s3
+  float v46; // s4
+  float v47; // s0
+  float v48; // s1
+  float v49; // s3
+  float v50; // s0
+  float v51; // s2
+  unsigned __int64 v52; // [xsp+0h] [xbp-40h]
+  unsigned __int64 v53; // [xsp+0h] [xbp-40h]
+  unsigned __int64 v54; // [xsp+0h] [xbp-40h]
+  unsigned __int64 v55; // [xsp+0h] [xbp-40h]
+  unsigned __int64 v56; // [xsp+10h] [xbp-30h]
+  unsigned __int64 v57; // [xsp+10h] [xbp-30h]
+  unsigned __int64 v58; // [xsp+10h] [xbp-30h]
+  unsigned __int64 v59; // [xsp+10h] [xbp-30h]
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v5.n64_u64[0] = *(unsigned __int64 *)&from.fields.b;
   v6.n64_u64[0] = *(unsigned __int64 *)&from.fields.r;
-  from.fields.r = t;
+  v7 = t;
   g = to.fields.g;
   a = to.fields.a;
   v10.n64_u64[0] = vsub_f32(*(float32x2_t *)&to.fields.r, v6).n64_u64[0];
@@ -388,7 +374,7 @@ UnityEngine_Color_o __fastcall Easing__Func_48247244(
         v19.n64_u64[0] = vmul_f32(v11, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
         goto LABEL_19;
       }
-      v51.n64_u64[0] = vmul_f32(v10, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+      v41.n64_u64[0] = vmul_f32(v10, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
       v14.n64_u64[0] = vmul_f32(v11, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
       v15 = (float)((float)(v17 + -1.0) * (float)((float)(v17 + -1.0) + -2.0)) + -1.0;
       goto LABEL_39;
@@ -409,11 +395,11 @@ UnityEngine_Color_o __fastcall Easing__Func_48247244(
         v26.n64_u64[0] = vmul_f32(v11, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
         goto LABEL_18;
       }
-      v56 = v17 + -2.0;
-      v57 = 2.0;
+      v44 = v17 + -2.0;
+      v45 = 2.0;
       v12.n64_u64[0] = vmul_f32(v10, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
       v13.n64_u64[0] = vmul_f32(v11, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v58 = v56 * v56;
+      v46 = v44 * v44;
       goto LABEL_45;
     case 7:
       v27.n64_u64[0] = vmul_n_f32(v10, t).n64_u64[0];
@@ -472,127 +458,127 @@ LABEL_19:
         v6.n64_u64[0] = vadd_f32(v6, v31).n64_u64[0];
         goto LABEL_52;
       }
-      v56 = v17 + -2.0;
-      v57 = 2.0;
+      v44 = v17 + -2.0;
+      v45 = 2.0;
       v12.n64_u64[0] = vmul_f32(v10, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
       v13.n64_u64[0] = vmul_f32(v11, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v58 = v56 * (float)(v56 * (float)(v56 * v56));
+      v46 = v44 * (float)(v44 * (float)(v44 * v44));
 LABEL_45:
-      v7 = (float)(v56 * v58) + v57;
+      v7 = (float)(v44 * v46) + v45;
 LABEL_46:
-      v36.n64_u64[0] = vmul_n_f32(v12, v7).n64_u64[0];
+      v34.n64_u64[0] = vmul_n_f32(v12, v7).n64_u64[0];
       v32.n64_u64[0] = vmul_n_f32(v13, v7).n64_u64[0];
       goto LABEL_51;
     case 13:
-      v64 = v6.n64_u64[0];
-      v68 = __PAIR64__(v34, v33);
-      v35 = cosf(t * 1.5708);
-      v6.n64_u64[0] = v64;
-      v5.n64_u64[0] = v68;
-      v36.n64_u64[0] = vsub_f32(v10, vmul_n_f32(v10, v35)).n64_u64[0];
-      v32.n64_u64[0] = vsub_f32(v11, vmul_n_f32(v11, v35)).n64_u64[0];
+      v52 = v6.n64_u64[0];
+      v56 = *(_QWORD *)&from.fields.b;
+      v33 = cosf(t * 1.5708);
+      v6.n64_u64[0] = v52;
+      v5.n64_u64[0] = v56;
+      v34.n64_u64[0] = vsub_f32(v10, vmul_n_f32(v10, v33)).n64_u64[0];
+      v32.n64_u64[0] = vsub_f32(v11, vmul_n_f32(v11, v33)).n64_u64[0];
       goto LABEL_51;
     case 14:
-      v65 = v6.n64_u64[0];
-      v69 = __PAIR64__(v38, v37);
+      v53 = v6.n64_u64[0];
+      v57 = *(_QWORD *)&from.fields.b;
       v7 = sinf(t * 1.5708);
       goto LABEL_35;
     case 15:
       v10.n64_u64[0] = vmul_f32(v10, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
       v11.n64_u64[0] = vmul_f32(v11, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-      v66 = v6.n64_u64[0];
-      v70 = __PAIR64__(v40, v39);
-      v41 = cosf(t * 3.1416);
-      v6.n64_u64[0] = v66;
-      v5.n64_u64[0] = v70;
-      v42 = v41 + -1.0;
+      v54 = v6.n64_u64[0];
+      v58 = *(_QWORD *)&from.fields.b;
+      v35 = cosf(t * 3.1416);
+      v6.n64_u64[0] = v54;
+      v5.n64_u64[0] = v58;
+      v36 = v35 + -1.0;
       goto LABEL_37;
     case 16:
-      v43 = (float)(t + -1.0) * 10.0;
-      v65 = v6.n64_u64[0];
-      v69 = __PAIR64__(v45, v44);
+      v37 = (float)(t + -1.0) * 10.0;
+      v53 = v6.n64_u64[0];
+      v57 = *(_QWORD *)&from.fields.b;
       goto LABEL_34;
     case 17:
-      v67 = v6.n64_u64[0];
-      v71 = __PAIR64__(v47, v46);
-      v48 = exp2f(t * -10.0);
-      v6.n64_u64[0] = v67;
-      v5.n64_u64[0] = v71;
-      v49 = 1.0;
+      v55 = v6.n64_u64[0];
+      v59 = *(_QWORD *)&from.fields.b;
+      v38 = exp2f(t * -10.0);
+      v6.n64_u64[0] = v55;
+      v5.n64_u64[0] = v59;
+      v39 = 1.0;
       goto LABEL_49;
     case 18:
-      v52 = t + t;
-      v65 = v6.n64_u64[0];
-      v69 = __PAIR64__(v54, v53);
+      v42 = t + t;
+      v53 = v6.n64_u64[0];
+      v57 = *(_QWORD *)&from.fields.b;
       if ( (float)(t + t) >= 1.0 )
       {
         v10.n64_u64[0] = vmul_f32(v10, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
         v11.n64_u64[0] = vmul_f32(v11, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-        v48 = exp2f((float)(v52 + -1.0) * -10.0);
-        v6.n64_u64[0] = v65;
-        v5.n64_u64[0] = v69;
-        v49 = 2.0;
+        v38 = exp2f((float)(v42 + -1.0) * -10.0);
+        v6.n64_u64[0] = v53;
+        v5.n64_u64[0] = v57;
+        v39 = 2.0;
 LABEL_49:
-        v7 = v49 - v48;
+        v7 = v39 - v38;
       }
       else
       {
         v10.n64_u64[0] = vmul_f32(v10, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
         v11.n64_u64[0] = vmul_f32(v11, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-        v43 = (float)(v52 + -1.0) * 10.0;
+        v37 = (float)(v42 + -1.0) * 10.0;
 LABEL_34:
-        v7 = exp2f(v43);
+        v7 = exp2f(v37);
 LABEL_35:
-        v6.n64_u64[0] = v65;
-        v5.n64_u64[0] = v69;
+        v6.n64_u64[0] = v53;
+        v5.n64_u64[0] = v57;
       }
       goto LABEL_50;
     case 19:
-      v42 = sqrtf(1.0 - (float)(t * t)) + -1.0;
+      v36 = sqrtf(1.0 - (float)(t * t)) + -1.0;
 LABEL_37:
-      v16.n64_u64[0] = vmul_n_f32(v10, v42).n64_u64[0];
-      v55.n64_u64[0] = vmul_n_f32(v11, v42).n64_u64[0];
+      v16.n64_u64[0] = vmul_n_f32(v10, v36).n64_u64[0];
+      v43.n64_u64[0] = vmul_n_f32(v11, v36).n64_u64[0];
       goto LABEL_41;
     case 20:
       v7 = sqrtf(1.0 - (float)((float)(t + -1.0) * (float)(t + -1.0)));
 LABEL_50:
-      v36.n64_u64[0] = vmul_n_f32(v10, v7).n64_u64[0];
+      v34.n64_u64[0] = vmul_n_f32(v10, v7).n64_u64[0];
       v32.n64_u64[0] = vmul_n_f32(v11, v7).n64_u64[0];
       goto LABEL_51;
     case 21:
-      v50 = t + t;
+      v40 = t + t;
       if ( (float)(t + t) >= 1.0 )
       {
-        v59 = sqrtf(1.0 - (float)((float)(v50 + -2.0) * (float)(v50 + -2.0))) + 1.0;
-        v36.n64_u64[0] = vmul_n_f32(vmul_f32(v10, (float32x2_t)0x3F0000003F000000LL), v59).n64_u64[0];
-        v32.n64_u64[0] = vmul_n_f32(vmul_f32(v11, (float32x2_t)0x3F0000003F000000LL), v59).n64_u64[0];
+        v47 = sqrtf(1.0 - (float)((float)(v40 + -2.0) * (float)(v40 + -2.0))) + 1.0;
+        v34.n64_u64[0] = vmul_n_f32(vmul_f32(v10, (float32x2_t)0x3F0000003F000000LL), v47).n64_u64[0];
+        v32.n64_u64[0] = vmul_n_f32(vmul_f32(v11, (float32x2_t)0x3F0000003F000000LL), v47).n64_u64[0];
 LABEL_51:
-        v6.n64_u64[0] = vadd_f32(v6, v36).n64_u64[0];
+        v6.n64_u64[0] = vadd_f32(v6, v34).n64_u64[0];
 LABEL_52:
         v5.n64_u64[0] = vadd_f32(v5, v32).n64_u64[0];
       }
       else
       {
-        v51.n64_u64[0] = vmul_f32(v10, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
+        v41.n64_u64[0] = vmul_f32(v10, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
         v14.n64_u64[0] = vmul_f32(v11, (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-        v15 = sqrtf(1.0 - (float)(v50 * v50)) + -1.0;
+        v15 = sqrtf(1.0 - (float)(v40 * v40)) + -1.0;
 LABEL_39:
-        v16.n64_u64[0] = vmul_n_f32(v51, v15).n64_u64[0];
+        v16.n64_u64[0] = vmul_n_f32(v41, v15).n64_u64[0];
 LABEL_40:
-        v55.n64_u64[0] = vmul_n_f32(v14, v15).n64_u64[0];
+        v43.n64_u64[0] = vmul_n_f32(v14, v15).n64_u64[0];
 LABEL_41:
         v6.n64_u64[0] = vsub_f32(v6, v16).n64_u64[0];
-        v5.n64_u64[0] = vsub_f32(v5, v55).n64_u64[0];
+        v5.n64_u64[0] = vsub_f32(v5, v43).n64_u64[0];
       }
 LABEL_53:
-      v60 = v6.n64_f32[1];
-      v61 = v5.n64_f32[1];
-      v62 = v6.n64_f32[0];
-      v63 = v5.n64_f32[0];
-      result.fields.a = v61;
-      result.fields.b = v63;
-      result.fields.g = v60;
-      result.fields.r = v62;
+      v48 = v6.n64_f32[1];
+      v49 = v5.n64_f32[1];
+      v50 = v6.n64_f32[0];
+      v51 = v5.n64_f32[0];
+      result.fields.a = v49;
+      result.fields.b = v51;
+      result.fields.g = v48;
+      result.fields.r = v50;
       return result;
     default:
       goto LABEL_53;
@@ -600,7 +586,7 @@ LABEL_53:
 }
 
 
-float __fastcall Easing__Func_48248356(float from, float to, float t, int32_t type, const MethodInfo *method)
+float Easing__Func_48951048(float from, float to, float t, int32_t type, const MethodInfo *method)
 {
   float v5; // s8
   float v6; // s9

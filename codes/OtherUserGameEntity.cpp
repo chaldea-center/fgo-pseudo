@@ -1,24 +1,24 @@
-void __fastcall OtherUserGameEntity___ctor(OtherUserGameEntity_o *this, const MethodInfo *method)
+void OtherUserGameEntity___ctor(OtherUserGameEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CA96 & 1) == 0 )
+  if ( (byte_4C27869 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_long___ctor__, method);
-    byte_4B1CA96 = 1;
+    sub_1C2D490(&Method_DataEntityBase_long___ctor__);
+    byte_4C27869 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_32C5964 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_33858FC *)Method_DataEntityBase_long___ctor__);
 }
 
 
-int64_t __fastcall OtherUserGameEntity__CreatePrimaryKey(OtherUserGameEntity_o *this, const MethodInfo *method)
+int64_t OtherUserGameEntity__CreatePrimaryKey(OtherUserGameEntity_o *this, const MethodInfo *method)
 {
   return this->fields.userId;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall OtherUserGameEntity__GetAppendSkillInfo(
+void OtherUserGameEntity__GetAppendSkillInfo(
         OtherUserGameEntity_o *this,
         SkillInfo_array **skillInfoList,
         int32_t classPos,
@@ -27,21 +27,20 @@ void __fastcall OtherUserGameEntity__GetAppendSkillInfo(
         int32_t followerGrandGraphId,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
   ServantLeaderInfo_o *ServantLeaderInfoByReturnType; // x0
-  __int64 v15; // x1
+  __int64 v14; // x1
   __int64 userId; // x8
   ServantLeaderInfo_o **p_classId; // x9
-  BalanceConfig_c *v18; // x0
-  SkillInfo_array *v19; // x0
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
+  BalanceConfig_c *v17; // x0
+  SkillInfo_array *v18; // x0
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
 
-  if ( (byte_4B1CA95 & 1) == 0 )
+  if ( (byte_4C27868 & 1) == 0 )
   {
-    sub_1BCAFF8(&BalanceConfig_TypeInfo, skillInfoList);
-    sub_1BCAFF8(&SkillInfo___TypeInfo, v13);
-    byte_4B1CA95 = 1;
+    sub_1C2D490(&BalanceConfig_TypeInfo);
+    sub_1C2D490(&SkillInfo___TypeInfo);
+    byte_4C27868 = 1;
   }
   ServantLeaderInfoByReturnType = (ServantLeaderInfo_o *)OtherUserGameEntity__GetServantLeaderInfoByReturnType(
                                                            this,
@@ -49,7 +48,7 @@ void __fastcall OtherUserGameEntity__GetAppendSkillInfo(
                                                            *(const MethodInfo **)&classPos);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_22:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v15);
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v14);
   if ( (int)ServantLeaderInfoByReturnType->fields.userId >= 1 )
   {
     userId = (unsigned int)ServantLeaderInfoByReturnType->fields.userId;
@@ -82,7 +81,7 @@ LABEL_9:
             && ServantLeaderInfoByReturnType->fields.userSvtId )
           {
 LABEL_21:
-            ServantLeaderInfo__GetAppendPassiveSkillInfo_42632436(ServantLeaderInfoByReturnType, skillInfoList, 0, 0LL);
+            ServantLeaderInfo__GetAppendPassiveSkillInfo_43263964(ServantLeaderInfoByReturnType, skillInfoList, 0, 0);
             return;
           }
         }
@@ -92,21 +91,21 @@ LABEL_21:
     }
     while ( userId );
   }
-  v18 = BalanceConfig_TypeInfo;
+  v17 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v18 = BalanceConfig_TypeInfo;
+    v17 = BalanceConfig_TypeInfo;
   }
-  v19 = (SkillInfo_array *)sub_1BCB0A0(
+  v18 = (SkillInfo_array *)sub_1C2D538(
                              SkillInfo___TypeInfo,
-                             (unsigned int)v18->static_fields->SvtAppendPassiveSkillListMax);
-  *skillInfoList = v19;
-  sub_1BCAF9C((CGThumbnailListItem_o *)skillInfoList, (int32_t)v19, v20, v21);
+                             (unsigned int)v17->static_fields->SvtAppendPassiveSkillListMax);
+  *skillInfoList = v18;
+  sub_1C2D434((CGThumbnailListItem_o *)skillInfoList, (int32_t)v18, v19, v20);
 }
 
 
-int32_t __fastcall OtherUserGameEntity__GetAtkBoostValue(
+int32_t OtherUserGameEntity__GetAtkBoostValue(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -126,106 +125,94 @@ int32_t __fastcall OtherUserGameEntity__GetAtkBoostValue(
                         followerGrandGraphId,
                         v6);
   if ( ServantLeaderInfo )
-    LODWORD(ServantLeaderInfo) = ServantLeaderInfo__get_AtkBoostValue(ServantLeaderInfo, 0LL);
+    LODWORD(ServantLeaderInfo) = ServantLeaderInfo__get_AtkBoostValue(ServantLeaderInfo, 0);
   return (int)ServantLeaderInfo;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-EquipTargetInfo_o *__fastcall OtherUserGameEntity__GetEquipInfo(
+EquipTargetInfo_o *OtherUserGameEntity__GetEquipInfo(
         OtherUserGameEntity_o *this,
         int32_t index,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v5; // x21
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x21
-  __int64 v14; // x0
-  __int64 v15; // x1
   System_Collections_Generic_IEnumerable_TSource__o *userRecommendSupportHash; // x19
-  System_Func_object__bool__o *v17; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
-  OtherUserGameEntity___c_c *v19; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v20; // x19
+  System_Func_object__bool__o *v9; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
+  OtherUserGameEntity___c_c *v11; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v12; // x19
   System_Func_object__object__o *_9__49_1; // x20
-  Il2CppObject *v22; // x21
+  Il2CppObject *v14; // x21
   struct OtherUserGameEntity___c_StaticFields *static_fields; // x0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v26; // x0
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
 
-  if ( (byte_4B1CA94 & 1) == 0 )
+  if ( (byte_4C27867 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_FirstOrDefault_EquipTargetInfo___, *(_QWORD *)&index);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__EquipTargetInfo___, v5);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___, v6);
-    sub_1BCAFF8(&System_Func_UserRecommendSupportInfo__EquipTargetInfo__TypeInfo, v7);
-    sub_1BCAFF8(&System_Func_UserRecommendSupportInfo__bool__TypeInfo, v8);
-    sub_1BCAFF8(&Method_OtherUserGameEntity___c__GetEquipInfo_b__49_1__, v9);
-    sub_1BCAFF8(&Method_OtherUserGameEntity___c__DisplayClass49_0__GetEquipInfo_b__0__, v10);
-    sub_1BCAFF8(&OtherUserGameEntity___c__DisplayClass49_0_TypeInfo, v11);
-    sub_1BCAFF8(&OtherUserGameEntity___c_TypeInfo, v12);
-    byte_4B1CA94 = 1;
+    sub_1C2D490(&Method_System_Linq_Enumerable_FirstOrDefault_EquipTargetInfo___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__EquipTargetInfo___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___);
+    sub_1C2D490(&System_Func_UserRecommendSupportInfo__EquipTargetInfo__TypeInfo);
+    sub_1C2D490(&System_Func_UserRecommendSupportInfo__bool__TypeInfo);
+    sub_1C2D490(&Method_OtherUserGameEntity___c__GetEquipInfo_b__49_1__);
+    sub_1C2D490(&Method_OtherUserGameEntity___c__DisplayClass49_0__GetEquipInfo_b__0__);
+    sub_1C2D490(&OtherUserGameEntity___c__DisplayClass49_0_TypeInfo);
+    sub_1C2D490(&OtherUserGameEntity___c_TypeInfo);
+    byte_4C27867 = 1;
   }
-  v13 = sub_1BCB244(OtherUserGameEntity___c__DisplayClass49_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v13, 0LL);
-  if ( !v13 )
-    sub_1BCB254(v14, v15);
-  *(_DWORD *)(v13 + 16) = index;
+  v5 = sub_1C2D6DC(OtherUserGameEntity___c__DisplayClass49_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
+  if ( !v5 )
+    sub_1C2D6EC(v6, v7);
+  *(_DWORD *)(v5 + 16) = index;
   userRecommendSupportHash = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.userRecommendSupportHash;
-  v17 = (System_Func_object__bool__o *)sub_1BCB244(System_Func_UserRecommendSupportInfo__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_UserRecommendSupportInfo__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v17,
-    (Il2CppObject *)v13,
+    v9,
+    (Il2CppObject *)v5,
     Method_OtherUserGameEntity___c__DisplayClass49_0__GetEquipInfo_b__0__,
-    0LL);
-  v18 = System_Linq_Enumerable__Where_object_(
+    0);
+  v10 = System_Linq_Enumerable__Where_object_(
           userRecommendSupportHash,
-          (System_Func_TSource__bool__o *)v17,
-          (const MethodInfo_305DC88 *)Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___);
-  v19 = OtherUserGameEntity___c_TypeInfo;
-  v20 = v18;
+          (System_Func_TSource__bool__o *)v9,
+          (const MethodInfo_3115108 *)Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___);
+  v11 = OtherUserGameEntity___c_TypeInfo;
+  v12 = v10;
   if ( !OtherUserGameEntity___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OtherUserGameEntity___c_TypeInfo);
-    v19 = OtherUserGameEntity___c_TypeInfo;
+    v11 = OtherUserGameEntity___c_TypeInfo;
   }
-  _9__49_1 = (System_Func_object__object__o *)v19->static_fields->__9__49_1;
+  _9__49_1 = (System_Func_object__object__o *)v11->static_fields->__9__49_1;
   if ( !_9__49_1 )
   {
-    if ( !v19->_2.cctor_finished )
+    if ( !v11->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v19);
-      v19 = OtherUserGameEntity___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v11);
+      v11 = OtherUserGameEntity___c_TypeInfo;
     }
-    v22 = (Il2CppObject *)v19->static_fields->__9;
-    _9__49_1 = (System_Func_object__object__o *)sub_1BCB244(System_Func_UserRecommendSupportInfo__EquipTargetInfo__TypeInfo);
-    System_Func_object__object____ctor(_9__49_1, v22, Method_OtherUserGameEntity___c__GetEquipInfo_b__49_1__, 0LL);
+    v14 = (Il2CppObject *)v11->static_fields->__9;
+    _9__49_1 = (System_Func_object__object__o *)sub_1C2D6DC(System_Func_UserRecommendSupportInfo__EquipTargetInfo__TypeInfo);
+    System_Func_object__object____ctor(_9__49_1, v14, Method_OtherUserGameEntity___c__GetEquipInfo_b__49_1__, 0);
     static_fields = OtherUserGameEntity___c_TypeInfo->static_fields;
     static_fields->__9__49_1 = (struct System_Func_UserRecommendSupportInfo__EquipTargetInfo__o *)_9__49_1;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__49_1, (int32_t)_9__49_1, v24, v25);
+    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__49_1, (int32_t)_9__49_1, v16, v17);
   }
-  v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
-                                                               v20,
+  v18 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
+                                                               v12,
                                                                (System_Func_TSource__TResult__o *)_9__49_1,
-                                                               (const MethodInfo_304EFCC *)Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__EquipTargetInfo___);
+                                                               (const MethodInfo_310501C *)Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__EquipTargetInfo___);
   return (EquipTargetInfo_o *)System_Linq_Enumerable__FirstOrDefault_object_(
-                                v26,
-                                (const MethodInfo_303F1D0 *)Method_System_Linq_Enumerable_FirstOrDefault_EquipTargetInfo___);
+                                v18,
+                                (const MethodInfo_30F7054 *)Method_System_Linq_Enumerable_FirstOrDefault_EquipTargetInfo___);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__GetEquipSvtId(
-        OtherUserGameEntity_o *this,
-        int32_t index,
-        const MethodInfo *method)
+int32_t OtherUserGameEntity__GetEquipSvtId(OtherUserGameEntity_o *this, int32_t index, const MethodInfo *method)
 {
   OtherUserGameEntity_o *v4; // x20
   struct UserRecommendSupportInfo_array *userRecommendSupportHash; // x21
@@ -237,12 +224,10 @@ int32_t __fastcall OtherUserGameEntity__GetEquipSvtId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v12; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4B1CA90 & 1) == 0 )
+  if ( (byte_4C27863 & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_1BCAFF8(
-                                      &CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
-                                      *(_QWORD *)&index);
-    byte_4B1CA90 = 1;
+    this = (OtherUserGameEntity_o *)sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C27863 = 1;
   }
   userRecommendSupportHash = v4->fields.userRecommendSupportHash;
   if ( !userRecommendSupportHash )
@@ -254,13 +239,13 @@ int32_t __fastcall OtherUserGameEntity__GetEquipSvtId(
   while ( 1 )
   {
     if ( v7 >= max_length )
-      sub_1BCB25C(this, *(_QWORD *)&index, method);
+      sub_1C2D6F4(this, *(_QWORD *)&index, method);
     v8 = userRecommendSupportHash->m_Items[v7];
     if ( !v8 )
       goto LABEL_17;
     if ( v8->fields.idx == index )
     {
-      this = (OtherUserGameEntity_o *)UserRecommendSupportInfo__GetEquipTarget(v8, 0LL);
+      this = (OtherUserGameEntity_o *)UserRecommendSupportInfo__GetEquipTarget(v8, 0);
       if ( this )
         break;
     }
@@ -268,25 +253,22 @@ int32_t __fastcall OtherUserGameEntity__GetEquipSvtId(
     if ( (int)++v7 >= max_length )
       return 0;
   }
-  this = (OtherUserGameEntity_o *)UserRecommendSupportInfo__GetEquipTarget(v8, 0LL);
+  this = (OtherUserGameEntity_o *)UserRecommendSupportInfo__GetEquipTarget(v8, 0);
   if ( !this )
 LABEL_17:
-    sub_1BCB254(this, *(_QWORD *)&index);
+    sub_1C2D6EC(this, *(_QWORD *)&index);
   message = this->fields.message;
   pushUserSvtId = this->fields.pushUserSvtId;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v12.fields.currentCryptoKey = message;
   *(_QWORD *)&v12.fields.fakeValue = pushUserSvtId;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v12, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v12, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int64_t __fastcall OtherUserGameEntity__GetEquipUserSvtId(
-        OtherUserGameEntity_o *this,
-        int32_t index,
-        const MethodInfo *method)
+int64_t OtherUserGameEntity__GetEquipUserSvtId(OtherUserGameEntity_o *this, int32_t index, const MethodInfo *method)
 {
   OtherUserGameEntity_o *v4; // x20
   struct UserRecommendSupportInfo_array *userRecommendSupportHash; // x21
@@ -298,52 +280,50 @@ int64_t __fastcall OtherUserGameEntity__GetEquipUserSvtId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v12; // [xsp+20h] [xbp-50h]
 
   v4 = this;
-  if ( (byte_4B1CA8E & 1) == 0 )
+  if ( (byte_4C27861 & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_1BCAFF8(
-                                      &CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo,
-                                      *(_QWORD *)&index);
-    byte_4B1CA8E = 1;
+    this = (OtherUserGameEntity_o *)sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C27861 = 1;
   }
   userRecommendSupportHash = v4->fields.userRecommendSupportHash;
   if ( !userRecommendSupportHash )
     goto LABEL_18;
   max_length = userRecommendSupportHash->max_length;
   if ( max_length < 1 )
-    return 0LL;
+    return 0;
   v7 = 0;
   while ( 1 )
   {
     if ( v7 >= max_length )
-      sub_1BCB25C(this, *(_QWORD *)&index, method);
+      sub_1C2D6F4(this, *(_QWORD *)&index, method);
     v8 = userRecommendSupportHash->m_Items[v7];
     if ( !v8 )
       goto LABEL_18;
     if ( v8->fields.idx == index )
     {
-      this = (OtherUserGameEntity_o *)UserRecommendSupportInfo__GetEquipTarget(v8, 0LL);
+      this = (OtherUserGameEntity_o *)UserRecommendSupportInfo__GetEquipTarget(v8, 0);
       if ( this )
         break;
     }
     max_length = userRecommendSupportHash->max_length;
     if ( (int)++v7 >= max_length )
-      return 0LL;
+      return 0;
   }
-  this = (OtherUserGameEntity_o *)UserRecommendSupportInfo__GetEquipTarget(v8, 0LL);
+  this = (OtherUserGameEntity_o *)UserRecommendSupportInfo__GetEquipTarget(v8, 0);
   if ( !this )
 LABEL_18:
-    sub_1BCB254(this, *(_QWORD *)&index);
+    sub_1C2D6EC(this, *(_QWORD *)&index);
   v10 = *(_OWORD *)&this->fields.friendCode;
   *(_OWORD *)&v12.fields.currentCryptoKey = *(_OWORD *)&this->fields.userName;
   *(_OWORD *)&v12.fields.fakeValue = v10;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v11 = v12;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v11, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48831392(&v11, 0);
 }
 
 
-int32_t __fastcall OtherUserGameEntity__GetHpBoostValue(
+int32_t OtherUserGameEntity__GetHpBoostValue(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -363,13 +343,13 @@ int32_t __fastcall OtherUserGameEntity__GetHpBoostValue(
                         followerGrandGraphId,
                         v6);
   if ( ServantLeaderInfo )
-    LODWORD(ServantLeaderInfo) = ServantLeaderInfo__get_HpBoostValue(ServantLeaderInfo, 0LL);
+    LODWORD(ServantLeaderInfo) = ServantLeaderInfo__get_HpBoostValue(ServantLeaderInfo, 0);
   return (int)ServantLeaderInfo;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_Int32_array *__fastcall OtherUserGameEntity__GetRecommendSupportMessageIds(
+System_Int32_array *OtherUserGameEntity__GetRecommendSupportMessageIds(
         OtherUserGameEntity_o *this,
         int32_t index,
         const MethodInfo *method)
@@ -381,68 +361,65 @@ System_Int32_array *__fastcall OtherUserGameEntity__GetRecommendSupportMessageId
   UserRecommendSupportInfo_o *v8; // x11
 
   v4 = this;
-  if ( (byte_4B1CA91 & 1) == 0 )
+  if ( (byte_4C27864 & 1) == 0 )
   {
-    this = (OtherUserGameEntity_o *)sub_1BCAFF8(&int___TypeInfo, *(_QWORD *)&index);
-    byte_4B1CA91 = 1;
+    this = (OtherUserGameEntity_o *)sub_1C2D490(&int___TypeInfo);
+    byte_4C27864 = 1;
   }
   userRecommendSupportHash = v4->fields.userRecommendSupportHash;
   if ( !userRecommendSupportHash )
 LABEL_13:
-    sub_1BCB254(this, *(_QWORD *)&index);
+    sub_1C2D6EC(this, *(_QWORD *)&index);
   max_length = userRecommendSupportHash->max_length;
   if ( max_length < 1 )
-    return (System_Int32_array *)sub_1BCB0A0(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1C2D538(int___TypeInfo, 0);
   v7 = 0;
   while ( 1 )
   {
     if ( max_length == v7 )
-      sub_1BCB25C(this, *(_QWORD *)&index, method);
+      sub_1C2D6F4(this, *(_QWORD *)&index, method);
     v8 = userRecommendSupportHash->m_Items[v7];
     if ( !v8 )
       goto LABEL_13;
     if ( v8->fields.idx == index )
       return v8->fields.adviceMessageIds;
     if ( max_length == ++v7 )
-      return (System_Int32_array *)sub_1BCB0A0(int___TypeInfo, 0LL);
+      return (System_Int32_array *)sub_1C2D538(int___TypeInfo, 0);
   }
 }
 
 
-int32_t __fastcall OtherUserGameEntity__GetReturnTypeByQuestId(int32_t questId, const MethodInfo *method)
+int32_t OtherUserGameEntity__GetReturnTypeByQuestId(int32_t questId, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   Il2CppObject *Instance; // x0
-  __int64 v6; // x1
+  __int64 v4; // x1
   Il2CppObject *Entity; // x0
-  const MethodInfo *v8; // x1
+  const MethodInfo *v6; // x1
 
-  if ( (byte_4B1CA88 & 1) == 0 )
+  if ( (byte_4C2785B & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_QuestMaster___, method);
-    sub_1BCAFF8(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v3);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    byte_4B1CA88 = 1;
+    sub_1C2D490(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1C2D490(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C2785B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_QuestMaster___)) == 0LL )
+                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_QuestMaster___)) == 0 )
   {
-    sub_1BCB254(Instance, v6);
+    sub_1C2D6EC(Instance, v4);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              questId,
-             (const MethodInfo_32C7E00 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
-  return Entity && QuestEntity__IsNeedUseEventQuestSupport((QuestEntity_o *)Entity, v8);
+             (const MethodInfo_3387D98 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+  return Entity && QuestEntity__IsNeedUseEventQuestSupport((QuestEntity_o *)Entity, v6);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-ServantLeaderInfo_array *__fastcall OtherUserGameEntity__GetServantLeaderInfoByReturnType(
+ServantLeaderInfo_array *OtherUserGameEntity__GetServantLeaderInfoByReturnType(
         OtherUserGameEntity_o *this,
         int32_t returnSupportServantType,
         const MethodInfo *method)
@@ -452,10 +429,10 @@ ServantLeaderInfo_array *__fastcall OtherUserGameEntity__GetServantLeaderInfoByR
   Il2CppObject *v8; // x0
   int32_t v9; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B1CA89 & 1) == 0 )
+  if ( (byte_4C2785C & 1) == 0 )
   {
-    sub_1BCAFF8(&OtherUserGameEntity_ReturnSupportServantType_TypeInfo, *(_QWORD *)&returnSupportServantType);
-    byte_4B1CA89 = 1;
+    sub_1C2D490(&OtherUserGameEntity_ReturnSupportServantType_TypeInfo);
+    byte_4C2785C = 1;
   }
   if ( returnSupportServantType == 2 )
     return this->fields.userSvtGrandHash;
@@ -470,13 +447,13 @@ ServantLeaderInfo_array *__fastcall OtherUserGameEntity__GetServantLeaderInfoByR
                            method,
                            v3,
                            v4);
-    PrivateImplementationDetails___ThrowSwitchExpressionException(v8, 0LL);
+    PrivateImplementationDetails___ThrowSwitchExpressionException(v8, 0);
   }
   return this->fields.userSvtLeaderHash;
 }
 
 
-UserRecommendSupportInfo_array *__fastcall OtherUserGameEntity__GetUserRecommendSupportInfo(
+UserRecommendSupportInfo_array *OtherUserGameEntity__GetUserRecommendSupportInfo(
         OtherUserGameEntity_o *this,
         const MethodInfo *method)
 {
@@ -484,97 +461,85 @@ UserRecommendSupportInfo_array *__fastcall OtherUserGameEntity__GetUserRecommend
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-int64_t __fastcall OtherUserGameEntity__GetUserSvtId(
-        OtherUserGameEntity_o *this,
-        int32_t index,
-        const MethodInfo *method)
+int64_t OtherUserGameEntity__GetUserSvtId(OtherUserGameEntity_o *this, int32_t index, const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v5; // x21
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x21
-  __int64 v14; // x0
-  __int64 v15; // x1
   System_Collections_Generic_IEnumerable_TSource__o *userRecommendSupportHash; // x19
-  System_Func_object__bool__o *v17; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
-  OtherUserGameEntity___c_c *v19; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v20; // x19
-  System_Func_T__TResult__o *_9__22_1; // x20
-  Il2CppObject *v22; // x21
+  System_Func_object__bool__o *v9; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
+  OtherUserGameEntity___c_c *v11; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v12; // x19
+  System_Func_object__long__o *_9__22_1; // x20
+  Il2CppObject *v14; // x21
   struct OtherUserGameEntity___c_StaticFields *static_fields; // x0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v26; // x0
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
 
-  if ( (byte_4B1CA8B & 1) == 0 )
+  if ( (byte_4C2785E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_FirstOrDefault_long___, *(_QWORD *)&index);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__long___, v5);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___, v6);
-    sub_1BCAFF8(&System_Func_UserRecommendSupportInfo__bool__TypeInfo, v7);
-    sub_1BCAFF8(&System_Func_UserRecommendSupportInfo__long__TypeInfo, v8);
-    sub_1BCAFF8(&Method_OtherUserGameEntity___c__GetUserSvtId_b__22_1__, v9);
-    sub_1BCAFF8(&Method_OtherUserGameEntity___c__DisplayClass22_0__GetUserSvtId_b__0__, v10);
-    sub_1BCAFF8(&OtherUserGameEntity___c__DisplayClass22_0_TypeInfo, v11);
-    sub_1BCAFF8(&OtherUserGameEntity___c_TypeInfo, v12);
-    byte_4B1CA8B = 1;
+    sub_1C2D490(&Method_System_Linq_Enumerable_FirstOrDefault_long___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__long___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___);
+    sub_1C2D490(&System_Func_UserRecommendSupportInfo__bool__TypeInfo);
+    sub_1C2D490(&System_Func_UserRecommendSupportInfo__long__TypeInfo);
+    sub_1C2D490(&Method_OtherUserGameEntity___c__GetUserSvtId_b__22_1__);
+    sub_1C2D490(&Method_OtherUserGameEntity___c__DisplayClass22_0__GetUserSvtId_b__0__);
+    sub_1C2D490(&OtherUserGameEntity___c__DisplayClass22_0_TypeInfo);
+    sub_1C2D490(&OtherUserGameEntity___c_TypeInfo);
+    byte_4C2785E = 1;
   }
-  v13 = sub_1BCB244(OtherUserGameEntity___c__DisplayClass22_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v13, 0LL);
-  if ( !v13 )
-    sub_1BCB254(v14, v15);
-  *(_DWORD *)(v13 + 16) = index;
+  v5 = sub_1C2D6DC(OtherUserGameEntity___c__DisplayClass22_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
+  if ( !v5 )
+    sub_1C2D6EC(v6, v7);
+  *(_DWORD *)(v5 + 16) = index;
   userRecommendSupportHash = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.userRecommendSupportHash;
-  v17 = (System_Func_object__bool__o *)sub_1BCB244(System_Func_UserRecommendSupportInfo__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_UserRecommendSupportInfo__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v17,
-    (Il2CppObject *)v13,
+    v9,
+    (Il2CppObject *)v5,
     Method_OtherUserGameEntity___c__DisplayClass22_0__GetUserSvtId_b__0__,
-    0LL);
-  v18 = System_Linq_Enumerable__Where_object_(
+    0);
+  v10 = System_Linq_Enumerable__Where_object_(
           userRecommendSupportHash,
-          (System_Func_TSource__bool__o *)v17,
-          (const MethodInfo_305DC88 *)Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___);
-  v19 = OtherUserGameEntity___c_TypeInfo;
-  v20 = v18;
+          (System_Func_TSource__bool__o *)v9,
+          (const MethodInfo_3115108 *)Method_System_Linq_Enumerable_Where_UserRecommendSupportInfo___);
+  v11 = OtherUserGameEntity___c_TypeInfo;
+  v12 = v10;
   if ( !OtherUserGameEntity___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(OtherUserGameEntity___c_TypeInfo);
-    v19 = OtherUserGameEntity___c_TypeInfo;
+    v11 = OtherUserGameEntity___c_TypeInfo;
   }
-  _9__22_1 = (System_Func_T__TResult__o *)v19->static_fields->__9__22_1;
+  _9__22_1 = (System_Func_object__long__o *)v11->static_fields->__9__22_1;
   if ( !_9__22_1 )
   {
-    if ( !v19->_2.cctor_finished )
+    if ( !v11->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v19);
-      v19 = OtherUserGameEntity___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v11);
+      v11 = OtherUserGameEntity___c_TypeInfo;
     }
-    v22 = (Il2CppObject *)v19->static_fields->__9;
-    _9__22_1 = (System_Func_T__TResult__o *)sub_1BCB244(System_Func_UserRecommendSupportInfo__long__TypeInfo);
-    System_Func_object__long____ctor(_9__22_1, v22, Method_OtherUserGameEntity___c__GetUserSvtId_b__22_1__, 0LL);
+    v14 = (Il2CppObject *)v11->static_fields->__9;
+    _9__22_1 = (System_Func_object__long__o *)sub_1C2D6DC(System_Func_UserRecommendSupportInfo__long__TypeInfo);
+    System_Func_object__long____ctor(_9__22_1, v14, Method_OtherUserGameEntity___c__GetUserSvtId_b__22_1__, 0);
     static_fields = OtherUserGameEntity___c_TypeInfo->static_fields;
     static_fields->__9__22_1 = (struct System_Func_UserRecommendSupportInfo__long__o *)_9__22_1;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__22_1, (int32_t)_9__22_1, v24, v25);
+    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__22_1, (int32_t)_9__22_1, v16, v17);
   }
-  v26 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__long_(
-                                                               v20,
+  v18 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__long_(
+                                                               v12,
                                                                (System_Func_TSource__TResult__o *)_9__22_1,
-                                                               (const MethodInfo_304ECD8 *)Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__long___);
+                                                               (const MethodInfo_3104D28 *)Method_System_Linq_Enumerable_Select_UserRecommendSupportInfo__long___);
   return System_Linq_Enumerable__FirstOrDefault_long_(
-           v26,
-           (const MethodInfo_303ED88 *)Method_System_Linq_Enumerable_FirstOrDefault_long___);
+           v18,
+           (const MethodInfo_30F6C0C *)Method_System_Linq_Enumerable_FirstOrDefault_long___);
 }
 
 
-bool __fastcall OtherUserGameEntity__IsSameSupportDeck(OtherUserGameEntity_o *this, const MethodInfo *method)
+bool OtherUserGameEntity__IsSameSupportDeck(OtherUserGameEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x6
   int32_t v4; // w20
@@ -601,10 +566,10 @@ bool __fastcall OtherUserGameEntity__IsSameSupportDeck(OtherUserGameEntity_o *th
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v26; // [xsp+60h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v27; // [xsp+80h] [xbp-60h]
 
-  if ( (byte_4B1CA8A & 1) == 0 )
+  if ( (byte_4C2785D & 1) == 0 )
   {
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
-    byte_4B1CA8A = 1;
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C2785D = 1;
   }
   v4 = 0;
   while ( 1 )
@@ -617,7 +582,7 @@ bool __fastcall OtherUserGameEntity__IsSameSupportDeck(OtherUserGameEntity_o *th
       v5 = ServantLeaderInfo->fields.userSvtId == 0;
     if ( v8 )
     {
-      v11 = *(_QWORD *)(v8 + 40) == 0LL;
+      v11 = *(_QWORD *)(v8 + 40) == 0;
       if ( !v5 )
         goto LABEL_13;
     }
@@ -650,7 +615,7 @@ LABEL_17:
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v26 = v27;
-    v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v26, 0LL);
+    v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48831392(&v26, 0);
     v14 = v8 == 0;
     if ( v10 )
       goto LABEL_23;
@@ -678,7 +643,7 @@ LABEL_23:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v25 = v27;
-  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v25, 0LL);
+  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48831392(&v25, 0);
   v17 = v8 == 0;
   if ( v14 )
     goto LABEL_29;
@@ -696,21 +661,21 @@ LABEL_30:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v24 = v27;
-  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v24, 0LL);
+  v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48831392(&v24, 0);
   if ( !v10 || (v20 = *(_QWORD *)(v10 + 144)) == 0 )
 LABEL_41:
-    sub_1BCB254(v8, v9);
+    sub_1C2D6EC(v8, v9);
   v21 = *(_OWORD *)(v20 + 40);
   *(_OWORD *)&v23.fields.currentCryptoKey = *(_OWORD *)(v20 + 24);
   *(_OWORD *)&v23.fields.fakeValue = v21;
-  if ( v8 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v23, 0LL) )
+  if ( v8 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48831392(&v23, 0) )
     goto LABEL_38;
   return 0;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__getAdjustAtk(
+int32_t OtherUserGameEntity__getAdjustAtk(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -720,7 +685,7 @@ int32_t __fastcall OtherUserGameEntity__getAdjustAtk(
 {
   ServantLeaderInfo_array *ServantLeaderInfoByReturnType; // x0
   __int64 v11; // x1
-  __int64 v12; // x9
+  il2cpp_array_size_t max_length; // x9
   ServantLeaderInfo_array *v13; // x8
   ServantLeaderInfo_o **i; // x8
   ServantLeaderInfo_o *v15; // x10
@@ -731,13 +696,13 @@ int32_t __fastcall OtherUserGameEntity__getAdjustAtk(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_19:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v11);
-  v12 = *(_QWORD *)&ServantLeaderInfoByReturnType->max_length;
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v11);
+  max_length = ServantLeaderInfoByReturnType->max_length;
   v13 = ServantLeaderInfoByReturnType;
-  ServantLeaderInfoByReturnType = 0LL;
-  if ( (int)v12 >= 1 )
+  ServantLeaderInfoByReturnType = 0;
+  if ( (int)max_length >= 1 )
   {
-    v12 = (unsigned int)v12;
+    max_length = (unsigned int)max_length;
     for ( i = v13->m_Items; ; ++i )
     {
       v15 = *i;
@@ -767,7 +732,7 @@ LABEL_17:
           }
         }
       }
-      if ( !--v12 )
+      if ( !--max_length )
       {
         LODWORD(ServantLeaderInfoByReturnType) = 0;
         return (int)ServantLeaderInfoByReturnType;
@@ -779,7 +744,7 @@ LABEL_17:
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__getAdjustHp(
+int32_t OtherUserGameEntity__getAdjustHp(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -789,7 +754,7 @@ int32_t __fastcall OtherUserGameEntity__getAdjustHp(
 {
   ServantLeaderInfo_array *ServantLeaderInfoByReturnType; // x0
   __int64 v11; // x1
-  __int64 v12; // x9
+  il2cpp_array_size_t max_length; // x9
   ServantLeaderInfo_array *v13; // x8
   ServantLeaderInfo_o **i; // x8
   ServantLeaderInfo_o *v15; // x10
@@ -800,13 +765,13 @@ int32_t __fastcall OtherUserGameEntity__getAdjustHp(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_19:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v11);
-  v12 = *(_QWORD *)&ServantLeaderInfoByReturnType->max_length;
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v11);
+  max_length = ServantLeaderInfoByReturnType->max_length;
   v13 = ServantLeaderInfoByReturnType;
-  ServantLeaderInfoByReturnType = 0LL;
-  if ( (int)v12 >= 1 )
+  ServantLeaderInfoByReturnType = 0;
+  if ( (int)max_length >= 1 )
   {
-    v12 = (unsigned int)v12;
+    max_length = (unsigned int)max_length;
     for ( i = v13->m_Items; ; ++i )
     {
       v15 = *i;
@@ -836,7 +801,7 @@ LABEL_17:
           }
         }
       }
-      if ( !--v12 )
+      if ( !--max_length )
       {
         LODWORD(ServantLeaderInfoByReturnType) = 0;
         return (int)ServantLeaderInfoByReturnType;
@@ -848,7 +813,7 @@ LABEL_17:
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__getAtk(
+int32_t OtherUserGameEntity__getAtk(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -858,7 +823,7 @@ int32_t __fastcall OtherUserGameEntity__getAtk(
 {
   ServantLeaderInfo_array *ServantLeaderInfoByReturnType; // x0
   __int64 v11; // x1
-  __int64 v12; // x9
+  il2cpp_array_size_t max_length; // x9
   ServantLeaderInfo_array *v13; // x8
   ServantLeaderInfo_o **i; // x8
   ServantLeaderInfo_o *v15; // x10
@@ -869,13 +834,13 @@ int32_t __fastcall OtherUserGameEntity__getAtk(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_19:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v11);
-  v12 = *(_QWORD *)&ServantLeaderInfoByReturnType->max_length;
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v11);
+  max_length = ServantLeaderInfoByReturnType->max_length;
   v13 = ServantLeaderInfoByReturnType;
-  ServantLeaderInfoByReturnType = 0LL;
-  if ( (int)v12 >= 1 )
+  ServantLeaderInfoByReturnType = 0;
+  if ( (int)max_length >= 1 )
   {
-    v12 = (unsigned int)v12;
+    max_length = (unsigned int)max_length;
     for ( i = v13->m_Items; ; ++i )
     {
       v15 = *i;
@@ -905,7 +870,7 @@ LABEL_17:
           }
         }
       }
-      if ( !--v12 )
+      if ( !--max_length )
       {
         LODWORD(ServantLeaderInfoByReturnType) = 0;
         return (int)ServantLeaderInfoByReturnType;
@@ -917,7 +882,7 @@ LABEL_17:
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__getEquipAtk(
+int32_t OtherUserGameEntity__getEquipAtk(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -927,7 +892,7 @@ int32_t __fastcall OtherUserGameEntity__getEquipAtk(
 {
   ServantLeaderInfo_array *ServantLeaderInfoByReturnType; // x0
   __int64 v11; // x1
-  __int64 v12; // x9
+  il2cpp_array_size_t max_length; // x9
   ServantLeaderInfo_array *v13; // x8
   ServantLeaderInfo_o **i; // x8
   ServantLeaderInfo_o *v15; // x10
@@ -940,13 +905,13 @@ int32_t __fastcall OtherUserGameEntity__getEquipAtk(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_22:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v11);
-  v12 = *(_QWORD *)&ServantLeaderInfoByReturnType->max_length;
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v11);
+  max_length = ServantLeaderInfoByReturnType->max_length;
   v13 = ServantLeaderInfoByReturnType;
-  ServantLeaderInfoByReturnType = 0LL;
-  if ( (int)v12 < 1 )
+  ServantLeaderInfoByReturnType = 0;
+  if ( (int)max_length < 1 )
     return (int)ServantLeaderInfoByReturnType;
-  v12 = (unsigned int)v12;
+  max_length = (unsigned int)max_length;
   for ( i = v13->m_Items; ; ++i )
   {
     v15 = *i;
@@ -974,7 +939,7 @@ LABEL_22:
       }
     }
 LABEL_16:
-    if ( !--v12 )
+    if ( !--max_length )
     {
       LODWORD(ServantLeaderInfoByReturnType) = 0;
       return (int)ServantLeaderInfoByReturnType;
@@ -993,7 +958,7 @@ LABEL_16:
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__getEquipExp(
+int32_t OtherUserGameEntity__getEquipExp(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -1002,7 +967,7 @@ int32_t __fastcall OtherUserGameEntity__getEquipExp(
 {
   ServantLeaderInfo_array *ServantLeaderInfoByReturnType; // x0
   __int64 v9; // x1
-  __int64 v10; // x9
+  il2cpp_array_size_t max_length; // x9
   ServantLeaderInfo_array *v11; // x8
   ServantLeaderInfo_o **m_Items; // x8
   ServantLeaderInfo_o *v13; // x10
@@ -1015,12 +980,12 @@ int32_t __fastcall OtherUserGameEntity__getEquipExp(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
     goto LABEL_19;
-  v10 = *(_QWORD *)&ServantLeaderInfoByReturnType->max_length;
+  max_length = ServantLeaderInfoByReturnType->max_length;
   v11 = ServantLeaderInfoByReturnType;
-  ServantLeaderInfoByReturnType = 0LL;
-  if ( (int)v10 < 1 )
+  ServantLeaderInfoByReturnType = 0;
+  if ( (int)max_length < 1 )
     return (int)ServantLeaderInfoByReturnType;
-  v10 = (unsigned int)v10;
+  max_length = (unsigned int)max_length;
   m_Items = v11->m_Items;
   do
   {
@@ -1038,7 +1003,7 @@ int32_t __fastcall OtherUserGameEntity__getEquipExp(
           return (int)ServantLeaderInfoByReturnType;
         }
 LABEL_19:
-        sub_1BCB254(ServantLeaderInfoByReturnType, v9);
+        sub_1C2D6EC(ServantLeaderInfoByReturnType, v9);
       }
     }
     else
@@ -1058,17 +1023,17 @@ LABEL_19:
         }
       }
     }
-    --v10;
+    --max_length;
     ++m_Items;
   }
-  while ( v10 );
+  while ( max_length );
   LODWORD(ServantLeaderInfoByReturnType) = 0;
   return (int)ServantLeaderInfoByReturnType;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__getEquipHp(
+int32_t OtherUserGameEntity__getEquipHp(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -1078,7 +1043,7 @@ int32_t __fastcall OtherUserGameEntity__getEquipHp(
 {
   ServantLeaderInfo_array *ServantLeaderInfoByReturnType; // x0
   __int64 v11; // x1
-  __int64 v12; // x9
+  il2cpp_array_size_t max_length; // x9
   ServantLeaderInfo_array *v13; // x8
   ServantLeaderInfo_o **i; // x8
   ServantLeaderInfo_o *v15; // x10
@@ -1091,13 +1056,13 @@ int32_t __fastcall OtherUserGameEntity__getEquipHp(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_22:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v11);
-  v12 = *(_QWORD *)&ServantLeaderInfoByReturnType->max_length;
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v11);
+  max_length = ServantLeaderInfoByReturnType->max_length;
   v13 = ServantLeaderInfoByReturnType;
-  ServantLeaderInfoByReturnType = 0LL;
-  if ( (int)v12 < 1 )
+  ServantLeaderInfoByReturnType = 0;
+  if ( (int)max_length < 1 )
     return (int)ServantLeaderInfoByReturnType;
-  v12 = (unsigned int)v12;
+  max_length = (unsigned int)max_length;
   for ( i = v13->m_Items; ; ++i )
   {
     v15 = *i;
@@ -1125,7 +1090,7 @@ LABEL_22:
       }
     }
 LABEL_16:
-    if ( !--v12 )
+    if ( !--max_length )
     {
       LODWORD(ServantLeaderInfoByReturnType) = 0;
       return (int)ServantLeaderInfoByReturnType;
@@ -1144,7 +1109,7 @@ LABEL_16:
 
 
 // local variable allocation has failed, the output may be wrong!
-EquipTargetInfo_o *__fastcall OtherUserGameEntity__getEquipInfo(
+EquipTargetInfo_o *OtherUserGameEntity__getEquipInfo(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -1156,7 +1121,7 @@ EquipTargetInfo_o *__fastcall OtherUserGameEntity__getEquipInfo(
   ServantLeaderInfo_array *ServantLeaderInfoByReturnType; // x0
   __int64 v13; // x1
   __int64 v14; // x2
-  __int64 v15; // x8
+  il2cpp_array_size_t max_length; // x8
   ServantLeaderInfo_array *v16; // x24
   unsigned __int64 v17; // x26
   ServantLeaderInfo_o **m_Items; // x27
@@ -1168,16 +1133,16 @@ EquipTargetInfo_o *__fastcall OtherUserGameEntity__getEquipInfo(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_24:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v13);
-  v15 = *(_QWORD *)&ServantLeaderInfoByReturnType->max_length;
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v13);
+  max_length = ServantLeaderInfoByReturnType->max_length;
   v16 = ServantLeaderInfoByReturnType;
-  if ( (int)v15 < 1 )
-    return 0LL;
-  v17 = 0LL;
+  if ( (int)max_length < 1 )
+    return 0;
+  v17 = 0;
   while ( 1 )
   {
-    if ( v17 >= (unsigned int)v15 )
-      sub_1BCB25C(ServantLeaderInfoByReturnType, v13, v14);
+    if ( v17 >= (unsigned int)max_length )
+      sub_1C2D6F4(ServantLeaderInfoByReturnType, v13, v14);
     m_Items = v16->m_Items;
     v19 = v16->m_Items[v17];
     if ( supportDeckId >= 1 )
@@ -1193,7 +1158,7 @@ LABEL_24:
       goto LABEL_24;
     if ( v19->fields.userSvtId && v19->fields.grandGraphId == followerGrandGraphId )
     {
-      ServantLeaderInfo__SetSkillChangeInfo(m_Items[v17], 0LL);
+      ServantLeaderInfo__SetSkillChangeInfo(m_Items[v17], 0);
       switch ( index )
       {
         case 2:
@@ -1205,21 +1170,21 @@ LABEL_24:
       }
     }
 LABEL_18:
-    LODWORD(v15) = v16->max_length;
-    if ( (__int64)++v17 >= (int)v15 )
-      return 0LL;
+    LODWORD(max_length) = v16->max_length;
+    if ( (__int64)++v17 >= (int)max_length )
+      return 0;
   }
   if ( !v19 )
     goto LABEL_24;
   if ( v19->fields.classId != classPos )
     goto LABEL_18;
-  ServantLeaderInfo__SetEquipImagePartsGroupIdxs(m_Items[v17], 0LL);
+  ServantLeaderInfo__SetEquipImagePartsGroupIdxs(m_Items[v17], 0);
   return v19->fields.equipTarget1;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__getEquipSvtId(
+int32_t OtherUserGameEntity__getEquipSvtId(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -1229,7 +1194,7 @@ int32_t __fastcall OtherUserGameEntity__getEquipSvtId(
 {
   ServantLeaderInfo_array *ServantLeaderInfoByReturnType; // x0
   __int64 v12; // x1
-  __int64 v13; // x8
+  __int64 max_length; // x8
   ServantLeaderInfo_o **i; // x9
   ServantLeaderInfo_o *v15; // x10
   struct EquipTargetInfo_o *v16; // x10
@@ -1239,10 +1204,10 @@ int32_t __fastcall OtherUserGameEntity__getEquipSvtId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_c *v21; // x0
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
 
-  if ( (byte_4B1CA8F & 1) == 0 )
+  if ( (byte_4C27862 & 1) == 0 )
   {
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, *(_QWORD *)&classPos);
-    byte_4B1CA8F = 1;
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C27862 = 1;
   }
   ServantLeaderInfoByReturnType = OtherUserGameEntity__GetServantLeaderInfoByReturnType(
                                     this,
@@ -1250,9 +1215,9 @@ int32_t __fastcall OtherUserGameEntity__getEquipSvtId(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
     goto LABEL_25;
-  if ( (int)*(_QWORD *)&ServantLeaderInfoByReturnType->max_length < 1 )
+  if ( (int)ServantLeaderInfoByReturnType->max_length < 1 )
     return 0;
-  v13 = (unsigned int)*(_QWORD *)&ServantLeaderInfoByReturnType->max_length;
+  max_length = (unsigned int)ServantLeaderInfoByReturnType->max_length;
   for ( i = ServantLeaderInfoByReturnType->m_Items; ; ++i )
   {
     v15 = *i;
@@ -1280,10 +1245,10 @@ int32_t __fastcall OtherUserGameEntity__getEquipSvtId(
         goto LABEL_22;
       }
 LABEL_25:
-      sub_1BCB254(ServantLeaderInfoByReturnType, v12);
+      sub_1C2D6EC(ServantLeaderInfoByReturnType, v12);
     }
 LABEL_17:
-    if ( !--v13 )
+    if ( !--max_length )
       return 0;
   }
   if ( !v15 )
@@ -1302,12 +1267,12 @@ LABEL_21:
 LABEL_22:
   *(_QWORD *)&v22.fields.currentCryptoKey = v20;
   *(_QWORD *)&v22.fields.fakeValue = v19;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v22, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v22, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int64_t __fastcall OtherUserGameEntity__getEquipUserSvtId(
+int64_t OtherUserGameEntity__getEquipUserSvtId(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -1324,17 +1289,17 @@ int64_t __fastcall OtherUserGameEntity__getEquipUserSvtId(
   __int64 v17; // x10
   __int64 v18; // x8
   __int128 v19; // q1
-  __int128 *v20; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *v20; // x0
   __int128 v21; // q1
-  __int128 v22[2]; // [xsp+0h] [xbp-A0h] BYREF
-  __int128 v23[2]; // [xsp+20h] [xbp-80h] BYREF
+  _OWORD v22[2]; // [xsp+0h] [xbp-A0h] BYREF
+  _OWORD v23[2]; // [xsp+20h] [xbp-80h] BYREF
   __int128 v24; // [xsp+40h] [xbp-60h]
   __int128 v25; // [xsp+50h] [xbp-50h]
 
-  if ( (byte_4B1CA8D & 1) == 0 )
+  if ( (byte_4C27860 & 1) == 0 )
   {
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, *(_QWORD *)&classPos);
-    byte_4B1CA8D = 1;
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C27860 = 1;
   }
   result = (int64_t)OtherUserGameEntity__GetServantLeaderInfoByReturnType(
                       this,
@@ -1344,7 +1309,7 @@ int64_t __fastcall OtherUserGameEntity__getEquipUserSvtId(
     goto LABEL_28;
   v13 = *(_QWORD *)(result + 24);
   v14 = result;
-  result = 0LL;
+  result = 0;
   if ( (int)v13 < 1 )
     return result;
   v13 = (unsigned int)v13;
@@ -1372,19 +1337,17 @@ int64_t __fastcall OtherUserGameEntity__getEquipUserSvtId(
         v25 = v19;
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-        v20 = v23;
+        v20 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)v23;
         v23[0] = v24;
         v23[1] = v25;
-        return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(
-                 (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)v20,
-                 0LL);
+        return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48831392(v20, 0);
       }
 LABEL_28:
-      sub_1BCB254(result, v12);
+      sub_1C2D6EC(result, v12);
     }
 LABEL_17:
     if ( !--v13 )
-      return 0LL;
+      return 0;
   }
   if ( !v16 )
     goto LABEL_28;
@@ -1398,17 +1361,15 @@ LABEL_17:
   v25 = v21;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v20 = v22;
+  v20 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)v22;
   v22[0] = v24;
   v22[1] = v25;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(
-           (CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o *)v20,
-           0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48831392(v20, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__getHp(
+int32_t OtherUserGameEntity__getHp(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -1418,7 +1379,7 @@ int32_t __fastcall OtherUserGameEntity__getHp(
 {
   ServantLeaderInfo_array *ServantLeaderInfoByReturnType; // x0
   __int64 v11; // x1
-  __int64 v12; // x9
+  il2cpp_array_size_t max_length; // x9
   ServantLeaderInfo_array *v13; // x8
   ServantLeaderInfo_o **i; // x8
   ServantLeaderInfo_o *v15; // x10
@@ -1429,13 +1390,13 @@ int32_t __fastcall OtherUserGameEntity__getHp(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_19:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v11);
-  v12 = *(_QWORD *)&ServantLeaderInfoByReturnType->max_length;
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v11);
+  max_length = ServantLeaderInfoByReturnType->max_length;
   v13 = ServantLeaderInfoByReturnType;
-  ServantLeaderInfoByReturnType = 0LL;
-  if ( (int)v12 >= 1 )
+  ServantLeaderInfoByReturnType = 0;
+  if ( (int)max_length >= 1 )
   {
-    v12 = (unsigned int)v12;
+    max_length = (unsigned int)max_length;
     for ( i = v13->m_Items; ; ++i )
     {
       v15 = *i;
@@ -1465,7 +1426,7 @@ LABEL_17:
           }
         }
       }
-      if ( !--v12 )
+      if ( !--max_length )
       {
         LODWORD(ServantLeaderInfoByReturnType) = 0;
         return (int)ServantLeaderInfoByReturnType;
@@ -1477,7 +1438,7 @@ LABEL_17:
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__getLimitCount(
+int32_t OtherUserGameEntity__getLimitCount(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -1486,7 +1447,7 @@ int32_t __fastcall OtherUserGameEntity__getLimitCount(
 {
   ServantLeaderInfo_array *ServantLeaderInfoByReturnType; // x0
   __int64 v9; // x1
-  __int64 v10; // x9
+  il2cpp_array_size_t max_length; // x9
   ServantLeaderInfo_array *v11; // x8
   ServantLeaderInfo_o **i; // x8
   ServantLeaderInfo_o *v13; // x10
@@ -1497,13 +1458,13 @@ int32_t __fastcall OtherUserGameEntity__getLimitCount(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_16:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v9);
-  v10 = *(_QWORD *)&ServantLeaderInfoByReturnType->max_length;
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v9);
+  max_length = ServantLeaderInfoByReturnType->max_length;
   v11 = ServantLeaderInfoByReturnType;
-  ServantLeaderInfoByReturnType = 0LL;
-  if ( (int)v10 >= 1 )
+  ServantLeaderInfoByReturnType = 0;
+  if ( (int)max_length >= 1 )
   {
-    v10 = (unsigned int)v10;
+    max_length = (unsigned int)max_length;
     for ( i = v11->m_Items; ; ++i )
     {
       v13 = *i;
@@ -1525,7 +1486,7 @@ LABEL_14:
           return (int)ServantLeaderInfoByReturnType;
         }
       }
-      if ( !--v10 )
+      if ( !--max_length )
       {
         LODWORD(ServantLeaderInfoByReturnType) = 0;
         return (int)ServantLeaderInfoByReturnType;
@@ -1537,7 +1498,7 @@ LABEL_14:
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__getLv(
+int32_t OtherUserGameEntity__getLv(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -1547,7 +1508,7 @@ int32_t __fastcall OtherUserGameEntity__getLv(
 {
   ServantLeaderInfo_array *ServantLeaderInfoByReturnType; // x0
   __int64 v11; // x1
-  __int64 v12; // x9
+  il2cpp_array_size_t max_length; // x9
   ServantLeaderInfo_array *v13; // x8
   ServantLeaderInfo_o **i; // x8
   ServantLeaderInfo_o *v15; // x10
@@ -1558,13 +1519,13 @@ int32_t __fastcall OtherUserGameEntity__getLv(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_19:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v11);
-  v12 = *(_QWORD *)&ServantLeaderInfoByReturnType->max_length;
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v11);
+  max_length = ServantLeaderInfoByReturnType->max_length;
   v13 = ServantLeaderInfoByReturnType;
-  ServantLeaderInfoByReturnType = 0LL;
-  if ( (int)v12 >= 1 )
+  ServantLeaderInfoByReturnType = 0;
+  if ( (int)max_length >= 1 )
   {
-    v12 = (unsigned int)v12;
+    max_length = (unsigned int)max_length;
     for ( i = v13->m_Items; ; ++i )
     {
       v15 = *i;
@@ -1594,7 +1555,7 @@ LABEL_17:
           }
         }
       }
-      if ( !--v12 )
+      if ( !--max_length )
       {
         LODWORD(ServantLeaderInfoByReturnType) = 0;
         return (int)ServantLeaderInfoByReturnType;
@@ -1606,7 +1567,7 @@ LABEL_17:
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__getMaxLv(
+int32_t OtherUserGameEntity__getMaxLv(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -1625,7 +1586,7 @@ int32_t __fastcall OtherUserGameEntity__getMaxLv(
                                                            *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_18:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v11);
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v11);
   if ( (int)ServantLeaderInfoByReturnType->fields.userId < 1 )
     return 0;
   userId = (unsigned int)ServantLeaderInfoByReturnType->fields.userId;
@@ -1646,7 +1607,7 @@ LABEL_18:
     if ( ServantLeaderInfoByReturnType->fields.userSvtId
       && ServantLeaderInfoByReturnType->fields.grandGraphId == followerGrandGraphId )
     {
-      return ServantLeaderInfo__getLevelMax(ServantLeaderInfoByReturnType, 0LL);
+      return ServantLeaderInfo__getLevelMax(ServantLeaderInfoByReturnType, 0);
     }
 LABEL_15:
     if ( !--userId )
@@ -1656,12 +1617,12 @@ LABEL_15:
     goto LABEL_18;
   if ( ServantLeaderInfoByReturnType->fields.classId != classPos || !ServantLeaderInfoByReturnType->fields.userSvtId )
     goto LABEL_15;
-  return ServantLeaderInfo__getLevelMax(ServantLeaderInfoByReturnType, 0LL);
+  return ServantLeaderInfo__getLevelMax(ServantLeaderInfoByReturnType, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-ServantLeaderInfo_o *__fastcall OtherUserGameEntity__getServantLeaderInfo(
+ServantLeaderInfo_o *OtherUserGameEntity__getServantLeaderInfo(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         bool isExist,
@@ -1682,10 +1643,10 @@ ServantLeaderInfo_o *__fastcall OtherUserGameEntity__getServantLeaderInfo(
                                     (const MethodInfo *)isExist);
   if ( !result )
 LABEL_18:
-    sub_1BCB254(result, v13);
+    sub_1C2D6EC(result, v13);
   userId = result->fields.userId;
   v15 = result;
-  result = 0LL;
+  result = 0;
   if ( (int)userId >= 1 )
   {
     userId = (unsigned int)userId;
@@ -1715,14 +1676,14 @@ LABEL_18:
       ++p_classId;
     }
     while ( userId );
-    return 0LL;
+    return 0;
   }
   return result;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_Int32_array *__fastcall OtherUserGameEntity__getSkillIdList(
+System_Int32_array *OtherUserGameEntity__getSkillIdList(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -1740,9 +1701,9 @@ System_Int32_array *__fastcall OtherUserGameEntity__getSkillIdList(
                                                            *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_15:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v9);
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v9);
   if ( (int)ServantLeaderInfoByReturnType->fields.userId < 1 )
-    return 0LL;
+    return 0;
   userId = (unsigned int)ServantLeaderInfoByReturnType->fields.userId;
   for ( i = (ServantLeaderInfo_o **)&ServantLeaderInfoByReturnType->fields.classId; ; ++i )
   {
@@ -1754,22 +1715,22 @@ LABEL_15:
     if ( ServantLeaderInfoByReturnType->fields.userSvtId
       && ServantLeaderInfoByReturnType->fields.grandGraphId == followerGrandGraphId )
     {
-      return ServantLeaderInfo__getSkillIdList(ServantLeaderInfoByReturnType, 0LL);
+      return ServantLeaderInfo__getSkillIdList(ServantLeaderInfoByReturnType, 0);
     }
 LABEL_12:
     if ( !--userId )
-      return 0LL;
+      return 0;
   }
   if ( !ServantLeaderInfoByReturnType )
     goto LABEL_15;
   if ( ServantLeaderInfoByReturnType->fields.classId != classPos || !ServantLeaderInfoByReturnType->fields.userSvtId )
     goto LABEL_12;
-  return ServantLeaderInfo__getSkillIdList(ServantLeaderInfoByReturnType, 0LL);
+  return ServantLeaderInfo__getSkillIdList(ServantLeaderInfoByReturnType, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall OtherUserGameEntity__getSkillInfo(
+void OtherUserGameEntity__getSkillInfo(
         OtherUserGameEntity_o *this,
         SkillInfo_array **skillInfoList,
         int32_t classPos,
@@ -1778,21 +1739,20 @@ void __fastcall OtherUserGameEntity__getSkillInfo(
         int32_t followerGrandGraphId,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
   ServantLeaderInfo_o *ServantLeaderInfoByReturnType; // x0
-  __int64 v15; // x1
+  __int64 v14; // x1
   __int64 userId; // x8
   ServantLeaderInfo_o **p_classId; // x9
-  BalanceConfig_c *v18; // x0
-  SkillInfo_array *v19; // x0
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
+  BalanceConfig_c *v17; // x0
+  SkillInfo_array *v18; // x0
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
 
-  if ( (byte_4B1CA92 & 1) == 0 )
+  if ( (byte_4C27865 & 1) == 0 )
   {
-    sub_1BCAFF8(&BalanceConfig_TypeInfo, skillInfoList);
-    sub_1BCAFF8(&SkillInfo___TypeInfo, v13);
-    byte_4B1CA92 = 1;
+    sub_1C2D490(&BalanceConfig_TypeInfo);
+    sub_1C2D490(&SkillInfo___TypeInfo);
+    byte_4C27865 = 1;
   }
   ServantLeaderInfoByReturnType = (ServantLeaderInfo_o *)OtherUserGameEntity__GetServantLeaderInfoByReturnType(
                                                            this,
@@ -1800,7 +1760,7 @@ void __fastcall OtherUserGameEntity__getSkillInfo(
                                                            *(const MethodInfo **)&classPos);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_22:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v15);
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v14);
   if ( (int)ServantLeaderInfoByReturnType->fields.userId >= 1 )
   {
     userId = (unsigned int)ServantLeaderInfoByReturnType->fields.userId;
@@ -1833,7 +1793,7 @@ LABEL_9:
             && ServantLeaderInfoByReturnType->fields.userSvtId )
           {
 LABEL_21:
-            ServantLeaderInfo__getSkillInfo(ServantLeaderInfoByReturnType, skillInfoList, 0LL);
+            ServantLeaderInfo__getSkillInfo(ServantLeaderInfoByReturnType, skillInfoList, 0);
             return;
           }
         }
@@ -1843,20 +1803,20 @@ LABEL_21:
     }
     while ( userId );
   }
-  v18 = BalanceConfig_TypeInfo;
+  v17 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v18 = BalanceConfig_TypeInfo;
+    v17 = BalanceConfig_TypeInfo;
   }
-  v19 = (SkillInfo_array *)sub_1BCB0A0(SkillInfo___TypeInfo, (unsigned int)v18->static_fields->SvtSkillListMax);
-  *skillInfoList = v19;
-  sub_1BCAF9C((CGThumbnailListItem_o *)skillInfoList, (int32_t)v19, v20, v21);
+  v18 = (SkillInfo_array *)sub_1C2D538(SkillInfo___TypeInfo, (unsigned int)v17->static_fields->SvtSkillListMax);
+  *skillInfoList = v18;
+  sub_1C2D434((CGThumbnailListItem_o *)skillInfoList, (int32_t)v18, v19, v20);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_Int32_array *__fastcall OtherUserGameEntity__getSkillLevelList(
+System_Int32_array *OtherUserGameEntity__getSkillLevelList(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -1874,9 +1834,9 @@ System_Int32_array *__fastcall OtherUserGameEntity__getSkillLevelList(
                                                            *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_15:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v9);
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v9);
   if ( (int)ServantLeaderInfoByReturnType->fields.userId < 1 )
-    return 0LL;
+    return 0;
   userId = (unsigned int)ServantLeaderInfoByReturnType->fields.userId;
   for ( i = (ServantLeaderInfo_o **)&ServantLeaderInfoByReturnType->fields.classId; ; ++i )
   {
@@ -1888,22 +1848,22 @@ LABEL_15:
     if ( ServantLeaderInfoByReturnType->fields.userSvtId
       && ServantLeaderInfoByReturnType->fields.grandGraphId == followerGrandGraphId )
     {
-      return ServantLeaderInfo__getSkillLevelList(ServantLeaderInfoByReturnType, 0LL);
+      return ServantLeaderInfo__getSkillLevelList(ServantLeaderInfoByReturnType, 0);
     }
 LABEL_12:
     if ( !--userId )
-      return 0LL;
+      return 0;
   }
   if ( !ServantLeaderInfoByReturnType )
     goto LABEL_15;
   if ( ServantLeaderInfoByReturnType->fields.classId != classPos || !ServantLeaderInfoByReturnType->fields.userSvtId )
     goto LABEL_12;
-  return ServantLeaderInfo__getSkillLevelList(ServantLeaderInfoByReturnType, 0LL);
+  return ServantLeaderInfo__getSkillLevelList(ServantLeaderInfoByReturnType, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__getSvtId(
+int32_t OtherUserGameEntity__getSvtId(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -1913,17 +1873,17 @@ int32_t __fastcall OtherUserGameEntity__getSvtId(
 {
   ServantLeaderInfo_array *ServantLeaderInfoByReturnType; // x0
   __int64 v12; // x1
-  __int64 v13; // x8
+  __int64 max_length; // x8
   ServantLeaderInfo_o **i; // x9
   ServantLeaderInfo_o *v15; // x10
   __int64 v17; // x19
   __int64 v18; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
 
-  if ( (byte_4B1CA8C & 1) == 0 )
+  if ( (byte_4C2785F & 1) == 0 )
   {
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, *(_QWORD *)&classPos);
-    byte_4B1CA8C = 1;
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C2785F = 1;
   }
   ServantLeaderInfoByReturnType = OtherUserGameEntity__GetServantLeaderInfoByReturnType(
                                     this,
@@ -1931,10 +1891,10 @@ int32_t __fastcall OtherUserGameEntity__getSvtId(
                                     *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_22:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v12);
-  if ( (int)*(_QWORD *)&ServantLeaderInfoByReturnType->max_length < 1 )
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v12);
+  if ( (int)ServantLeaderInfoByReturnType->max_length < 1 )
     return 0;
-  v13 = (unsigned int)*(_QWORD *)&ServantLeaderInfoByReturnType->max_length;
+  max_length = (unsigned int)ServantLeaderInfoByReturnType->max_length;
   for ( i = ServantLeaderInfoByReturnType->m_Items; ; ++i )
   {
     v15 = *i;
@@ -1952,7 +1912,7 @@ LABEL_22:
     if ( v15->fields.userSvtId && v15->fields.grandGraphId == followerGrandGraphId )
       goto LABEL_19;
 LABEL_17:
-    if ( !--v13 )
+    if ( !--max_length )
       return 0;
   }
   if ( !v15 )
@@ -1966,12 +1926,12 @@ LABEL_19:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v19.fields.currentCryptoKey = v18;
   *(_QWORD *)&v19.fields.fakeValue = v17;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v19, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v19, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo(
+bool OtherUserGameEntity__getTreasureDeviceInfo(
         OtherUserGameEntity_o *this,
         TreasureDvcInfo_o **tdInfo,
         int32_t classPos,
@@ -1988,10 +1948,10 @@ bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo(
   int32_t v18; // w2
   const MethodInfo *v19; // x3
 
-  if ( (byte_4B1CA93 & 1) == 0 )
+  if ( (byte_4C27866 & 1) == 0 )
   {
-    sub_1BCAFF8(&TreasureDvcInfo_TypeInfo, tdInfo);
-    byte_4B1CA93 = 1;
+    sub_1C2D490(&TreasureDvcInfo_TypeInfo);
+    byte_4C27866 = 1;
   }
   ServantLeaderInfoByReturnType = (ServantLeaderInfo_o *)OtherUserGameEntity__GetServantLeaderInfoByReturnType(
                                                            this,
@@ -1999,14 +1959,14 @@ bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo(
                                                            *(const MethodInfo **)&classPos);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_20:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v14);
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v14);
   if ( (int)ServantLeaderInfoByReturnType->fields.userId < 1 )
   {
 LABEL_18:
-    v17 = (TreasureDvcInfo_o *)sub_1BCB244(TreasureDvcInfo_TypeInfo);
-    TreasureDvcInfo___ctor(v17, 0LL);
+    v17 = (TreasureDvcInfo_o *)sub_1C2D6DC(TreasureDvcInfo_TypeInfo);
+    TreasureDvcInfo___ctor(v17, 0);
     *tdInfo = v17;
-    sub_1BCAF9C((CGThumbnailListItem_o *)tdInfo, (int32_t)v17, v18, v19);
+    sub_1C2D434((CGThumbnailListItem_o *)tdInfo, (int32_t)v17, v18, v19);
     return 0;
   }
   userId = (unsigned int)ServantLeaderInfoByReturnType->fields.userId;
@@ -2028,7 +1988,7 @@ LABEL_18:
     if ( ServantLeaderInfoByReturnType->fields.userSvtId
       && ServantLeaderInfoByReturnType->fields.grandGraphId == followerGrandGraphId )
     {
-      return ServantLeaderInfo__getTreasureDeviceInfo(ServantLeaderInfoByReturnType, tdInfo, 0LL);
+      return ServantLeaderInfo__getTreasureDeviceInfo(ServantLeaderInfoByReturnType, tdInfo, 0);
     }
 LABEL_17:
     --userId;
@@ -2040,11 +2000,11 @@ LABEL_17:
     goto LABEL_20;
   if ( ServantLeaderInfoByReturnType->fields.classId != classPos || !ServantLeaderInfoByReturnType->fields.userSvtId )
     goto LABEL_17;
-  return ServantLeaderInfo__getTreasureDeviceInfo(ServantLeaderInfoByReturnType, tdInfo, 0LL);
+  return ServantLeaderInfo__getTreasureDeviceInfo(ServantLeaderInfoByReturnType, tdInfo, 0);
 }
 
 
-bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo_41593696(
+bool OtherUserGameEntity__getTreasureDeviceInfo_42208972(
         OtherUserGameEntity_o *this,
         int32_t *tdLv,
         int32_t *tdMaxLv,
@@ -2064,7 +2024,7 @@ bool __fastcall OtherUserGameEntity__getTreasureDeviceInfo_41593696(
                                                            (const MethodInfo *)tdMaxLv);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_15:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v13);
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v13);
   if ( (int)ServantLeaderInfoByReturnType->fields.userId < 1 )
   {
 LABEL_13:
@@ -2084,7 +2044,7 @@ LABEL_13:
     if ( ServantLeaderInfoByReturnType->fields.userSvtId
       && ServantLeaderInfoByReturnType->fields.grandGraphId == followerGrandGraphId )
     {
-      return ServantLeaderInfo__getTreasureDeviceInfo_42622768(ServantLeaderInfoByReturnType, tdLv, tdMaxLv, 0LL);
+      return ServantLeaderInfo__getTreasureDeviceInfo_43254296(ServantLeaderInfoByReturnType, tdLv, tdMaxLv, 0);
     }
 LABEL_12:
     --userId;
@@ -2096,12 +2056,12 @@ LABEL_12:
     goto LABEL_15;
   if ( ServantLeaderInfoByReturnType->fields.classId != classPos || !ServantLeaderInfoByReturnType->fields.userSvtId )
     goto LABEL_12;
-  return ServantLeaderInfo__getTreasureDeviceInfo_42622768(ServantLeaderInfoByReturnType, tdLv, tdMaxLv, 0LL);
+  return ServantLeaderInfo__getTreasureDeviceInfo_43254296(ServantLeaderInfoByReturnType, tdLv, tdMaxLv, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall OtherUserGameEntity__getTreasureDeviceLevelIcon(
+int32_t OtherUserGameEntity__getTreasureDeviceLevelIcon(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -2120,7 +2080,7 @@ int32_t __fastcall OtherUserGameEntity__getTreasureDeviceLevelIcon(
                                                            *(const MethodInfo **)&returnSupportServantType);
   if ( !ServantLeaderInfoByReturnType )
 LABEL_18:
-    sub_1BCB254(ServantLeaderInfoByReturnType, v11);
+    sub_1C2D6EC(ServantLeaderInfoByReturnType, v11);
   if ( (int)ServantLeaderInfoByReturnType->fields.userId < 1 )
     return 0;
   userId = (unsigned int)ServantLeaderInfoByReturnType->fields.userId;
@@ -2141,7 +2101,7 @@ LABEL_18:
     if ( ServantLeaderInfoByReturnType->fields.userSvtId
       && ServantLeaderInfoByReturnType->fields.grandGraphId == followerGrandGraphId )
     {
-      return ServantLeaderInfo__getTreasureDeviceLevelIcon(ServantLeaderInfoByReturnType, 0LL);
+      return ServantLeaderInfo__getTreasureDeviceLevelIcon(ServantLeaderInfoByReturnType, 0);
     }
 LABEL_15:
     if ( !--userId )
@@ -2151,15 +2111,12 @@ LABEL_15:
     goto LABEL_18;
   if ( ServantLeaderInfoByReturnType->fields.classId != classPos || !ServantLeaderInfoByReturnType->fields.userSvtId )
     goto LABEL_15;
-  return ServantLeaderInfo__getTreasureDeviceLevelIcon(ServantLeaderInfoByReturnType, 0LL);
+  return ServantLeaderInfo__getTreasureDeviceLevelIcon(ServantLeaderInfoByReturnType, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int64_t __fastcall OtherUserGameEntity__getUpdatedAt(
-        OtherUserGameEntity_o *this,
-        int32_t classPos,
-        const MethodInfo *method)
+int64_t OtherUserGameEntity__getUpdatedAt(OtherUserGameEntity_o *this, int32_t classPos, const MethodInfo *method)
 {
   struct ServantLeaderInfo_array *userSvtLeaderHash; // x8
   ServantLeaderInfo_o *v4; // x8
@@ -2167,18 +2124,18 @@ int64_t __fastcall OtherUserGameEntity__getUpdatedAt(
   userSvtLeaderHash = this->fields.userSvtLeaderHash;
   if ( !userSvtLeaderHash )
     goto LABEL_5;
-  if ( !userSvtLeaderHash->max_length )
-    sub_1BCB25C(this, *(_QWORD *)&classPos, method);
+  if ( !LODWORD(userSvtLeaderHash->max_length) )
+    sub_1C2D6F4(this, *(_QWORD *)&classPos, method);
   v4 = userSvtLeaderHash->m_Items[0];
   if ( !v4 )
 LABEL_5:
-    sub_1BCB254(this, classPos);
+    sub_1C2D6EC(this, classPos);
   return v4->fields.updatedAt;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int64_t __fastcall OtherUserGameEntity__getUserSvtId(
+int64_t OtherUserGameEntity__getUserSvtId(
         OtherUserGameEntity_o *this,
         int32_t classPos,
         int32_t returnSupportServantType,
@@ -2198,10 +2155,10 @@ int64_t __fastcall OtherUserGameEntity__getUserSvtId(
                       *(const MethodInfo **)&returnSupportServantType);
   if ( !result )
 LABEL_15:
-    sub_1BCB254(result, v9);
+    sub_1C2D6EC(result, v9);
   v10 = *(_QWORD *)(result + 24);
   v11 = result;
-  result = 0LL;
+  result = 0;
   if ( (int)v10 >= 1 )
   {
     v10 = (unsigned int)v10;
@@ -2224,93 +2181,92 @@ LABEL_15:
           return *(_QWORD *)(v13 + 40);
       }
       if ( !--v10 )
-        return 0LL;
+        return 0;
     }
   }
   return result;
 }
 
 
-void __fastcall OtherUserGameEntity___c___cctor(const MethodInfo *method)
+void OtherUserGameEntity___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  const MethodInfo *v4; // x3
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
 
-  if ( (byte_4B1CA97 & 1) == 0 )
+  if ( (byte_4C2786A & 1) == 0 )
   {
-    sub_1BCAFF8(&OtherUserGameEntity___c_TypeInfo, v1);
-    byte_4B1CA97 = 1;
+    sub_1C2D490(&OtherUserGameEntity___c_TypeInfo);
+    byte_4C2786A = 1;
   }
-  v2 = (Il2CppObject *)sub_1BCB244(OtherUserGameEntity___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  OtherUserGameEntity___c_TypeInfo->static_fields->__9 = (struct OtherUserGameEntity___c_o *)v2;
-  sub_1BCAF9C((CGThumbnailListItem_o *)OtherUserGameEntity___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  v1 = (Il2CppObject *)sub_1C2D6DC(OtherUserGameEntity___c_TypeInfo);
+  System_Object___ctor(v1, 0);
+  OtherUserGameEntity___c_TypeInfo->static_fields->__9 = (struct OtherUserGameEntity___c_o *)v1;
+  sub_1C2D434((CGThumbnailListItem_o *)OtherUserGameEntity___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
-void __fastcall OtherUserGameEntity___c___ctor(OtherUserGameEntity___c_o *this, const MethodInfo *method)
+void OtherUserGameEntity___c___ctor(OtherUserGameEntity___c_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-EquipTargetInfo_o *__fastcall OtherUserGameEntity___c___GetEquipInfo_b__49_1(
+EquipTargetInfo_o *OtherUserGameEntity___c___GetEquipInfo_b__49_1(
         OtherUserGameEntity___c_o *this,
         UserRecommendSupportInfo_o *info,
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1BCB254(this, 0LL);
-  return UserRecommendSupportInfo__GetEquipTarget(info, 0LL);
+    sub_1C2D6EC(this, 0);
+  return UserRecommendSupportInfo__GetEquipTarget(info, 0);
 }
 
 
-int64_t __fastcall OtherUserGameEntity___c___GetUserSvtId_b__22_1(
+int64_t OtherUserGameEntity___c___GetUserSvtId_b__22_1(
         OtherUserGameEntity___c_o *this,
         UserRecommendSupportInfo_o *info,
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1BCB254(this, 0LL);
-  return UserRecommendSupportInfo__GetUserServantId(info, 0LL);
+    sub_1C2D6EC(this, 0);
+  return UserRecommendSupportInfo__GetUserServantId(info, 0);
 }
 
 
-void __fastcall OtherUserGameEntity___c__DisplayClass22_0___ctor(
+void OtherUserGameEntity___c__DisplayClass22_0___ctor(
         OtherUserGameEntity___c__DisplayClass22_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall OtherUserGameEntity___c__DisplayClass22_0___GetUserSvtId_b__0(
+bool OtherUserGameEntity___c__DisplayClass22_0___GetUserSvtId_b__0(
         OtherUserGameEntity___c__DisplayClass22_0_o *this,
         UserRecommendSupportInfo_o *info,
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   return info->fields.idx == this->fields.index;
 }
 
 
-void __fastcall OtherUserGameEntity___c__DisplayClass49_0___ctor(
+void OtherUserGameEntity___c__DisplayClass49_0___ctor(
         OtherUserGameEntity___c__DisplayClass49_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall OtherUserGameEntity___c__DisplayClass49_0___GetEquipInfo_b__0(
+bool OtherUserGameEntity___c__DisplayClass49_0___GetEquipInfo_b__0(
         OtherUserGameEntity___c__DisplayClass49_0_o *this,
         UserRecommendSupportInfo_o *info,
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   return info->fields.idx == this->fields.index;
 }

@@ -1,4 +1,4 @@
-void __fastcall SupportSelectListViewItem___ctor(
+void SupportSelectListViewItem___ctor(
         SupportSelectListViewItem_o *this,
         int32_t index,
         SupportServantData_o *supportServantData,
@@ -10,15 +10,15 @@ void __fastcall SupportSelectListViewItem___ctor(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   this->fields.supportServantData = supportServantData;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.supportServantData, (int32_t)supportServantData, v8, v9);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.supportServantData, (int32_t)supportServantData, v8, v9);
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventFriendPoints, (int32_t)friendPointCampaigns, v10, v11);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.eventFriendPoints, (int32_t)friendPointCampaigns, v10, v11);
 }
 
 
-void __fastcall SupportSelectListViewItem__ResetEventCampaign(
+void SupportSelectListViewItem__ResetEventCampaign(
         SupportSelectListViewItem_o *this,
         EventCampaignEntity_array *friendPointCampaigns,
         const MethodInfo *method)
@@ -26,7 +26,7 @@ void __fastcall SupportSelectListViewItem__ResetEventCampaign(
   const MethodInfo *v3; // x3
 
   this->fields.eventFriendPoints = friendPointCampaigns;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields.eventFriendPoints,
     (int32_t)friendPointCampaigns,
     (int32_t)method,
@@ -34,20 +34,18 @@ void __fastcall SupportSelectListViewItem__ResetEventCampaign(
 }
 
 
-System_String_o *__fastcall SupportSelectListViewItem__get_DeckName(
-        SupportSelectListViewItem_o *this,
-        const MethodInfo *method)
+System_String_o *SupportSelectListViewItem__get_DeckName(SupportSelectListViewItem_o *this, const MethodInfo *method)
 {
   struct SupportServantData_o *supportServantData; // x8
 
   supportServantData = this->fields.supportServantData;
   if ( !supportServantData )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   return supportServantData->fields._deckName_k__BackingField;
 }
 
 
-SupportSelectListViewObject_o *__fastcall SupportSelectListViewItem__get_listObj(
+SupportSelectListViewObject_o *SupportSelectListViewItem__get_listObj(
         SupportSelectListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -55,7 +53,7 @@ SupportSelectListViewObject_o *__fastcall SupportSelectListViewItem__get_listObj
 }
 
 
-void __fastcall SupportSelectListViewItem__set_listObj(
+void SupportSelectListViewItem__set_listObj(
         SupportSelectListViewItem_o *this,
         SupportSelectListViewObject_o *value,
         const MethodInfo *method)
@@ -63,11 +61,11 @@ void __fastcall SupportSelectListViewItem__set_listObj(
   const MethodInfo *v3; // x3
 
   this->fields._listObj_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._listObj_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._listObj_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall SupportSelectListViewItem__setuplistObj(
+void SupportSelectListViewItem__setuplistObj(
         SupportSelectListViewItem_o *this,
         SupportSelectListViewObject_o *obj,
         const MethodInfo *method)
@@ -79,9 +77,9 @@ void __fastcall SupportSelectListViewItem__setuplistObj(
 
   this->fields._listObj_k__BackingField = obj;
   p_listObj_k__BackingField = &this->fields._listObj_k__BackingField;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._listObj_k__BackingField, (int32_t)obj, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._listObj_k__BackingField, (int32_t)obj, (int32_t)method, v3);
   if ( !*p_listObj_k__BackingField )
-    sub_1BCB254(0LL, v6);
+    sub_1C2D6EC(0, v6);
   SupportSelectListViewObject__Init(
     *p_listObj_k__BackingField,
     this->fields.supportServantData,

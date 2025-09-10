@@ -1,20 +1,20 @@
-void __fastcall EventEquipSkillPartsQuestExplanationDialogBoardItem___ctor(
+void EventEquipSkillPartsQuestExplanationDialogBoardItem___ctor(
         EventEquipSkillPartsQuestExplanationDialogBoardItem_o *this,
         int32_t skillId,
         System_String_o *name,
         System_String_o *detail,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._SkillId_k__BackingField = skillId;
   this->fields._Name_k__BackingField = name;
-  sub_1BCAF9C(&this->fields._Name_k__BackingField);
+  sub_1C2D434(&this->fields._Name_k__BackingField);
   this->fields._Detail_k__BackingField = detail;
-  sub_1BCAF9C(&this->fields._Detail_k__BackingField);
+  sub_1C2D434(&this->fields._Detail_k__BackingField);
 }
 
 
-System_String_o *__fastcall EventEquipSkillPartsQuestExplanationDialogBoardItem__get_Detail(
+System_String_o *EventEquipSkillPartsQuestExplanationDialogBoardItem__get_Detail(
         EventEquipSkillPartsQuestExplanationDialogBoardItem_o *this,
         const MethodInfo *method)
 {
@@ -22,7 +22,7 @@ System_String_o *__fastcall EventEquipSkillPartsQuestExplanationDialogBoardItem_
 }
 
 
-System_String_o *__fastcall EventEquipSkillPartsQuestExplanationDialogBoardItem__get_Name(
+System_String_o *EventEquipSkillPartsQuestExplanationDialogBoardItem__get_Name(
         EventEquipSkillPartsQuestExplanationDialogBoardItem_o *this,
         const MethodInfo *method)
 {
@@ -30,7 +30,7 @@ System_String_o *__fastcall EventEquipSkillPartsQuestExplanationDialogBoardItem_
 }
 
 
-int32_t __fastcall EventEquipSkillPartsQuestExplanationDialogBoardItem__get_SkillId(
+int32_t EventEquipSkillPartsQuestExplanationDialogBoardItem__get_SkillId(
         EventEquipSkillPartsQuestExplanationDialogBoardItem_o *this,
         const MethodInfo *method)
 {

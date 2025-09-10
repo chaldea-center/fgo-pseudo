@@ -1,4 +1,4 @@
-void __fastcall SelectedUserSvtCoin___ctor(
+void SelectedUserSvtCoin___ctor(
         SelectedUserSvtCoin_o *this,
         CoinRoomCoinIconObject_o *iconObject,
         int32_t num,
@@ -9,73 +9,73 @@ void __fastcall SelectedUserSvtCoin___ctor(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
   struct ListViewItem_o *linkItem; // x22
-  __int64 methodPtr_low; // x9
+  __int64 naturalAligment; // x9
   SelectedUserSvtCoin_Fields *p_fields; // x20
   __int64 v14; // x0
   __int64 v15; // x1
 
-  if ( (byte_4B2010F & 1) == 0 )
+  if ( (byte_4C2AF17 & 1) == 0 )
   {
-    sub_1BCAFF8(&CoinRoomCoinIconItem_TypeInfo, iconObject);
-    byte_4B2010F = 1;
+    sub_1C2D490(&CoinRoomCoinIconItem_TypeInfo);
+    byte_4C2AF17 = 1;
   }
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   if ( !iconObject )
 LABEL_9:
-    sub_1BCB254(v7, v8);
+    sub_1C2D6EC(v7, v8);
   linkItem = iconObject->fields.linkItem;
   if ( !linkItem )
   {
     this->fields.iconObject = iconObject;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)iconObject, v9, v10);
-    sub_1BCB254(v14, v15);
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)iconObject, v9, v10);
+    sub_1C2D6EC(v14, v15);
   }
-  methodPtr_low = LOBYTE(CoinRoomCoinIconItem_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( LOBYTE(linkItem->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
-    || (CoinRoomCoinIconItem_c *)linkItem->klass->_2.typeHierarchy[methodPtr_low - 1] != CoinRoomCoinIconItem_TypeInfo )
+  naturalAligment = CoinRoomCoinIconItem_TypeInfo->_2.naturalAligment;
+  if ( linkItem->klass->_2.naturalAligment < (unsigned int)naturalAligment
+    || (CoinRoomCoinIconItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] != CoinRoomCoinIconItem_TypeInfo )
   {
-    sub_1BCB514(iconObject->fields.linkItem);
+    sub_1C2D9AC(iconObject->fields.linkItem);
     goto LABEL_9;
   }
   this->fields.iconObject = iconObject;
   p_fields = &this->fields;
-  sub_1BCAF9C((CGThumbnailListItem_o *)p_fields, (int32_t)iconObject, v9, v10);
+  sub_1C2D434((CGThumbnailListItem_o *)p_fields, (int32_t)iconObject, v9, v10);
   p_fields->_itemId_k__BackingField = HIDWORD(linkItem[1].klass);
   p_fields->_num_k__BackingField = num;
 }
 
 
-bool __fastcall SelectedUserSvtCoin__get_isConfirm(SelectedUserSvtCoin_o *this, const MethodInfo *method)
+bool SelectedUserSvtCoin__get_isConfirm(SelectedUserSvtCoin_o *this, const MethodInfo *method)
 {
   return this->fields._isConfirm_k__BackingField;
 }
 
 
-int32_t __fastcall SelectedUserSvtCoin__get_itemId(SelectedUserSvtCoin_o *this, const MethodInfo *method)
+int32_t SelectedUserSvtCoin__get_itemId(SelectedUserSvtCoin_o *this, const MethodInfo *method)
 {
   return this->fields._itemId_k__BackingField;
 }
 
 
-int32_t __fastcall SelectedUserSvtCoin__get_num(SelectedUserSvtCoin_o *this, const MethodInfo *method)
+int32_t SelectedUserSvtCoin__get_num(SelectedUserSvtCoin_o *this, const MethodInfo *method)
 {
   return this->fields._num_k__BackingField;
 }
 
 
-void __fastcall SelectedUserSvtCoin__set_isConfirm(SelectedUserSvtCoin_o *this, bool value, const MethodInfo *method)
+void SelectedUserSvtCoin__set_isConfirm(SelectedUserSvtCoin_o *this, bool value, const MethodInfo *method)
 {
   this->fields._isConfirm_k__BackingField = value;
 }
 
 
-void __fastcall SelectedUserSvtCoin__set_itemId(SelectedUserSvtCoin_o *this, int32_t value, const MethodInfo *method)
+void SelectedUserSvtCoin__set_itemId(SelectedUserSvtCoin_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._itemId_k__BackingField = value;
 }
 
 
-void __fastcall SelectedUserSvtCoin__set_num(SelectedUserSvtCoin_o *this, int32_t value, const MethodInfo *method)
+void SelectedUserSvtCoin__set_num(SelectedUserSvtCoin_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._num_k__BackingField = value;
 }

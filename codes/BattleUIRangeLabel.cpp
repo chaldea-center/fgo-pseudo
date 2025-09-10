@@ -1,14 +1,14 @@
-void __fastcall BattleUIRangeLabel___ctor(BattleUIRangeLabel_o *this, const MethodInfo *method)
+void BattleUIRangeLabel___ctor(BattleUIRangeLabel_o *this, const MethodInfo *method)
 {
   this->fields.isFirst = 1;
-  *(_OWORD *)&this->fields.adjustmentX = xmmword_BE31C0;
-  *(_OWORD *)&this->fields.recoverX = xmmword_BE1BC0;
+  *(_OWORD *)&this->fields.adjustmentX = xmmword_C0A890;
+  *(_OWORD *)&this->fields.recoverX = xmmword_C091D0;
   *(_QWORD *)&this->fields.noDamageRecoverX = 0x4040000040A00000LL;
-  UIRangeLabel___ctor((UIRangeLabel_o *)this, 0LL);
+  UIRangeLabel___ctor((UIRangeLabel_o *)this, 0);
 }
 
 
-void __fastcall BattleUIRangeLabel__AddDepthLabelEachHitIndex(
+void BattleUIRangeLabel__AddDepthLabelEachHitIndex(
         BattleUIRangeLabel_o *this,
         int32_t hitIndex,
         const MethodInfo *method)
@@ -17,23 +17,20 @@ void __fastcall BattleUIRangeLabel__AddDepthLabelEachHitIndex(
 }
 
 
-void __fastcall BattleUIRangeLabel__AddLabelDepth(
-        BattleUIRangeLabel_o *this,
-        int32_t addDepth,
-        const MethodInfo *method)
+void BattleUIRangeLabel__AddLabelDepth(BattleUIRangeLabel_o *this, int32_t addDepth, const MethodInfo *method)
 {
   UIWidget_o *textLabel; // x0
   const MethodInfo *v5; // x1
 
   textLabel = (UIWidget_o *)this->fields.textLabel;
   if ( !textLabel )
-    sub_1BCB254(0LL, addDepth);
-  UIWidget__set_depth(textLabel, textLabel->fields.mDepth + addDepth, 0LL);
+    sub_1C2D6EC(0, addDepth);
+  UIWidget__set_depth(textLabel, textLabel->fields.mDepth + addDepth, 0);
   BattleUIRangeLabel__UpdateResetLineDepth(this, v5);
 }
 
 
-void __fastcall BattleUIRangeLabel__AdjustResetLine(BattleUIRangeLabel_o *this, const MethodInfo *method)
+void BattleUIRangeLabel__AdjustResetLine(BattleUIRangeLabel_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *resetLineSprite; // x20
   const MethodInfo *v4; // x1
@@ -43,46 +40,46 @@ void __fastcall BattleUIRangeLabel__AdjustResetLine(BattleUIRangeLabel_o *this, 
   float LabelPrintedWidth; // s0
   int32_t v9; // w1
 
-  if ( (byte_4B1F17A & 1) == 0 )
+  if ( (byte_4C2A000 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1F17A = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2A000 = 1;
   }
   resetLineSprite = (UnityEngine_Object_o *)this->fields.resetLineSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(resetLineSprite, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(resetLineSprite, 0, 0) )
   {
     v5 = (UIWidget_o *)this->fields.resetLineSprite;
     LabelPrintedWidth = BattleUIRangeLabel__GetLabelPrintedWidth(this, v4);
     if ( !v5 )
-      sub_1BCB254(v6, v7);
+      sub_1C2D6EC(v6, v7);
     if ( LabelPrintedWidth == INFINITY )
       v9 = -2147483628;
     else
       v9 = (int)LabelPrintedWidth + 20;
-    UIWidget__set_width(v5, v9, 0LL);
+    UIWidget__set_width(v5, v9, 0);
   }
 }
 
 
-void __fastcall BattleUIRangeLabel__Awake(BattleUIRangeLabel_o *this, const MethodInfo *method)
+void BattleUIRangeLabel__Awake(BattleUIRangeLabel_o *this, const MethodInfo *method)
 {
   UnityEngine_Component_o *textLabel; // x0
 
   textLabel = (UnityEngine_Component_o *)this->fields.textLabel;
   if ( !textLabel
     || (this->fields.saveDepth = (int32_t)textLabel[7].monitor,
-        (textLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(textLabel, 0LL)) == 0LL) )
+        (textLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(textLabel, 0)) == 0) )
   {
-    sub_1BCB254(textLabel, method);
+    sub_1C2D6EC(textLabel, method);
   }
-  this->fields.saveAdjust = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)textLabel, 0LL);
+  this->fields.saveAdjust = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)textLabel, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BattleUIRangeLabel__CondensedScaleLabel(
+void BattleUIRangeLabel__CondensedScaleLabel(
         BattleUIRangeLabel_o *this,
         int32_t width,
         int32_t fixedScale,
@@ -97,28 +94,26 @@ void __fastcall BattleUIRangeLabel__CondensedScaleLabel(
   textLabel = (UnityEngine_Component_o *)this->fields.textLabel;
   if ( !textLabel )
     goto LABEL_13;
-  textLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(textLabel, 0LL);
+  textLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(textLabel, 0);
   if ( !textLabel )
     goto LABEL_13;
-  textLabel = (UnityEngine_Component_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)textLabel, 0LL);
+  textLabel = (UnityEngine_Component_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)textLabel, 0);
   if ( !textLabel )
     goto LABEL_13;
-  textLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(textLabel, 0LL);
+  textLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(textLabel, 0);
   if ( !textLabel )
     goto LABEL_13;
-  textLabel = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
-                                           (UnityEngine_GameObject_o *)textLabel,
-                                           0LL);
+  textLabel = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)textLabel, 0);
   v8 = (UnityEngine_Transform_o *)textLabel;
-  if ( !byte_4B16196 )
+  if ( !byte_4C20DA6 )
   {
-    textLabel = (UnityEngine_Component_o *)sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&width);
-    byte_4B16196 = 1;
+    textLabel = (UnityEngine_Component_o *)sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA6 = 1;
   }
   if ( !v8 )
 LABEL_13:
-    sub_1BCB254(textLabel, *(_QWORD *)&width);
-  UnityEngine_Transform__set_localScale(v8, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0LL);
+    sub_1C2D6EC(textLabel, *(_QWORD *)&width);
+  UnityEngine_Transform__set_localScale(v8, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
   if ( width >= 1 && fixedScale >= 1 )
   {
     v10 = (float)((float)fixedScale / 1000.0) * BattleUIRangeLabel__GetLabelPrintedWidth(this, v9);
@@ -127,95 +122,89 @@ LABEL_13:
       v11.fields.x = (float)width / v10;
       v11.fields.y = 1.0;
       v11.fields.z = 1.0;
-      UnityEngine_Transform__set_localScale(v8, v11, 0LL);
+      UnityEngine_Transform__set_localScale(v8, v11, 0);
     }
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BattleUIRangeLabel__DisplayResetLine(
-        BattleUIRangeLabel_o *this,
-        bool isDisplay,
-        const MethodInfo *method)
+void BattleUIRangeLabel__DisplayResetLine(BattleUIRangeLabel_o *this, bool isDisplay, const MethodInfo *method)
 {
   UnityEngine_Object_o *resetLineSprite; // x21
   __int64 v6; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4B1F17C & 1) == 0 )
+  if ( (byte_4C2A002 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, isDisplay);
-    byte_4B1F17C = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2A002 = 1;
   }
   resetLineSprite = (UnityEngine_Object_o *)this->fields.resetLineSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(resetLineSprite, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(resetLineSprite, 0, 0) )
   {
     gameObject = (UnityEngine_Component_o *)this->fields.resetLineSprite;
     if ( !gameObject
-      || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL)) == 0LL )
+      || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
     {
-      sub_1BCB254(gameObject, v6);
+      sub_1C2D6EC(gameObject, v6);
     }
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, isDisplay, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, isDisplay, 0);
   }
 }
 
 
-float __fastcall BattleUIRangeLabel__GetLabelPrintedWidth(BattleUIRangeLabel_o *this, const MethodInfo *method)
+float BattleUIRangeLabel__GetLabelPrintedWidth(BattleUIRangeLabel_o *this, const MethodInfo *method)
 {
   UILabel_o *textLabel; // x0
   float result; // s0
 
   textLabel = this->fields.textLabel;
   if ( !textLabel )
-    sub_1BCB254(0LL, method);
-  LODWORD(result) = *(_QWORD *)&UILabel__get_printedSize(textLabel, 0LL);
+    sub_1C2D6EC(0, method);
+  LODWORD(result) = *(_QWORD *)&UILabel__get_printedSize(textLabel, 0);
   return result;
 }
 
 
-int32_t __fastcall BattleUIRangeLabel__GetTextLength(BattleUIRangeLabel_o *this, const MethodInfo *method)
+int32_t BattleUIRangeLabel__GetTextLength(BattleUIRangeLabel_o *this, const MethodInfo *method)
 {
   struct UILabel_o *textLabel; // x8
   struct System_String_o *mText; // x8
 
   textLabel = this->fields.textLabel;
-  if ( !textLabel || (mText = textLabel->fields.mText) == 0LL )
-    sub_1BCB254(this, method);
+  if ( !textLabel || (mText = textLabel->fields.mText) == 0 )
+    sub_1C2D6EC(this, method);
   return mText->fields._stringLength;
 }
 
 
-void __fastcall BattleUIRangeLabel__OnDisable(BattleUIRangeLabel_o *this, const MethodInfo *method)
+void BattleUIRangeLabel__OnDisable(BattleUIRangeLabel_o *this, const MethodInfo *method)
 {
   BattleUIRangeLabel_o *v2; // x19
-  __int64 v3; // x1
-  __int64 v4; // x1
   struct UILabel_o *textLabel; // x20
-  const MethodInfo *v6; // x1
-  float32x2_t v7; // d1
-  int32x2_t v8; // d1
-  float32x2_t v9; // d0
-  int32x2_t v10; // d0
-  const MethodInfo *v11; // x2
-  float32x2_t v12; // d0
-  int32x2_t v13; // d0
-  float32x2_t v14; // d1
-  int32x2_t v15; // d1
-  const MethodInfo *v16; // x2
+  const MethodInfo *v4; // x1
+  float32x2_t v5; // d1
+  int32x2_t v6; // d1
+  float32x2_t v7; // d0
+  int32x2_t v8; // d0
+  const MethodInfo *v9; // x2
+  float32x2_t v10; // d0
+  int32x2_t v11; // d0
+  float32x2_t v12; // d1
+  int32x2_t v13; // d1
+  const MethodInfo *v14; // x2
   UnityEngine_Color_o Value; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_4B1F17E & 1) == 0 )
+  if ( (byte_4C2A004 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Nullable_Color__GetValueOrDefault__, method);
-    sub_1BCAFF8(&Method_System_Nullable_Color__get_HasValue__, v3);
-    this = (BattleUIRangeLabel_o *)sub_1BCAFF8(&Method_System_Nullable_Color__get_Value__, v4);
-    byte_4B1F17E = 1;
+    sub_1C2D490(&Method_System_Nullable_Color__GetValueOrDefault__);
+    sub_1C2D490(&Method_System_Nullable_Color__get_HasValue__);
+    this = (BattleUIRangeLabel_o *)sub_1C2D490(&Method_System_Nullable_Color__get_Value__);
+    byte_4C2A004 = 1;
   }
   textLabel = v2->fields.textLabel;
   if ( !textLabel )
@@ -223,28 +212,28 @@ void __fastcall BattleUIRangeLabel__OnDisable(BattleUIRangeLabel_o *this, const 
   method = (const MethodInfo *)(unsigned int)v2->fields.saveDepth;
   if ( textLabel->fields.mDepth != (_DWORD)method )
   {
-    UIWidget__set_depth((UIWidget_o *)v2->fields.textLabel, (int32_t)method, 0LL);
-    BattleUIRangeLabel__UpdateResetLineDepth(v2, v6);
+    UIWidget__set_depth((UIWidget_o *)v2->fields.textLabel, (int32_t)method, 0);
+    BattleUIRangeLabel__UpdateResetLineDepth(v2, v4);
     textLabel = v2->fields.textLabel;
     if ( !textLabel )
       goto LABEL_15;
   }
   if ( v2->fields.saveColor.fields.hasValue )
   {
-    v7.n64_u64[0] = vsub_f32(
+    v5.n64_u64[0] = vsub_f32(
                       *(float32x2_t *)&textLabel->fields.mColor.fields.r,
                       *(float32x2_t *)&v2->fields.saveColor.fields.value.fields.r).n64_u64[0];
-    v8.n64_u64[0] = vmul_f32(v7, v7).n64_u64[0];
-    v9.n64_u64[0] = vsub_f32(
+    v6.n64_u64[0] = vmul_f32(v5, v5).n64_u64[0];
+    v7.n64_u64[0] = vsub_f32(
                       *(float32x2_t *)&textLabel->fields.mColor.fields.b,
                       *(float32x2_t *)&v2->fields.saveColor.fields.value.fields.b).n64_u64[0];
-    v10.n64_u64[0] = vmul_f32(v9, v9).n64_u64[0];
-    if ( vadd_f32(vdup_lane_s32(v10, 1), vadd_f32(v10, vadd_f32(vdup_lane_s32(v8, 1), v8))).n64_f32[0] >= 1.0e-10 )
+    v8.n64_u64[0] = vmul_f32(v7, v7).n64_u64[0];
+    if ( vadd_f32(vdup_lane_s32(v8, 1), vadd_f32(v8, vadd_f32(vdup_lane_s32(v6, 1), v6))).n64_f32[0] >= 1.0e-10 )
     {
       Value = System_Nullable_Color___get_Value(
                 &v2->fields.saveColor,
-                (const MethodInfo_37D6380 *)Method_System_Nullable_Color__get_Value__);
-      BattleUIRangeLabel__UpdateRgbColor(v2, textLabel, Value, v11);
+                (const MethodInfo_38AC85C *)Method_System_Nullable_Color__get_Value__);
+      BattleUIRangeLabel__UpdateRgbColor(v2, textLabel, Value, v9);
       textLabel = v2->fields.textLabel;
       if ( !textLabel )
         goto LABEL_15;
@@ -252,41 +241,41 @@ void __fastcall BattleUIRangeLabel__OnDisable(BattleUIRangeLabel_o *this, const 
   }
   if ( v2->fields.saveEffectColor.fields.hasValue )
   {
-    v12.n64_u64[0] = vsub_f32(
+    v10.n64_u64[0] = vsub_f32(
                        *(float32x2_t *)&textLabel->fields.mEffectColor.fields.r,
                        *(float32x2_t *)&v2->fields.saveEffectColor.fields.value.fields.r).n64_u64[0];
-    v13.n64_u64[0] = vmul_f32(v12, v12).n64_u64[0];
-    v14.n64_u64[0] = vsub_f32(
+    v11.n64_u64[0] = vmul_f32(v10, v10).n64_u64[0];
+    v12.n64_u64[0] = vsub_f32(
                        *(float32x2_t *)&textLabel->fields.mEffectColor.fields.b,
                        *(float32x2_t *)&v2->fields.saveEffectColor.fields.value.fields.b).n64_u64[0];
-    v15.n64_u64[0] = vmul_f32(v14, v14).n64_u64[0];
-    if ( vadd_f32(vdup_lane_s32(v15, 1), vadd_f32(v15, vadd_f32(vdup_lane_s32(v13, 1), v13))).n64_f32[0] >= 1.0e-10 )
+    v13.n64_u64[0] = vmul_f32(v12, v12).n64_u64[0];
+    if ( vadd_f32(vdup_lane_s32(v13, 1), vadd_f32(v13, vadd_f32(vdup_lane_s32(v11, 1), v11))).n64_f32[0] >= 1.0e-10 )
     {
-      v18 = System_Nullable_Color___get_Value(
+      v16 = System_Nullable_Color___get_Value(
               &v2->fields.saveEffectColor,
-              (const MethodInfo_37D6380 *)Method_System_Nullable_Color__get_Value__);
-      UILabel__set_effectColor(textLabel, v18, 0LL);
+              (const MethodInfo_38AC85C *)Method_System_Nullable_Color__get_Value__);
+      UILabel__set_effectColor(textLabel, v16, 0);
     }
   }
   this = (BattleUIRangeLabel_o *)v2->fields.iconSprite;
   v2->fields.isFirst = 1;
-  if ( !this || (this = (BattleUIRangeLabel_o *)UIRect__get_cachedTransform((UIRect_o *)this, 0LL)) == 0LL )
+  if ( !this || (this = (BattleUIRangeLabel_o *)UIRect__get_cachedTransform((UIRect_o *)this, 0)) == 0 )
 LABEL_15:
-    sub_1BCB254(this, method);
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v2->fields.savePosValue, 0LL);
-  BattleUIRangeLabel__DisplayResetLine(v2, 0, v16);
+    sub_1C2D6EC(this, method);
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v2->fields.savePosValue, 0);
+  BattleUIRangeLabel__DisplayResetLine(v2, 0, v14);
 }
 
 
-void __fastcall BattleUIRangeLabel__ParentHasChanged(BattleUIRangeLabel_o *this, const MethodInfo *method)
+void BattleUIRangeLabel__ParentHasChanged(BattleUIRangeLabel_o *this, const MethodInfo *method)
 {
   void *textLabel; // x0
   UnityEngine_Object_o *resetLineSprite; // x20
 
-  if ( (byte_4B1F178 & 1) == 0 )
+  if ( (byte_4C29FFE & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1F178 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C29FFE = 1;
   }
   textLabel = this->fields.textLabel;
   if ( !textLabel )
@@ -297,7 +286,7 @@ void __fastcall BattleUIRangeLabel__ParentHasChanged(BattleUIRangeLabel_o *this,
   resetLineSprite = (UnityEngine_Object_o *)this->fields.resetLineSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(resetLineSprite, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(resetLineSprite, 0, 0) )
   {
     textLabel = this->fields.resetLineSprite;
     if ( textLabel )
@@ -308,13 +297,13 @@ void __fastcall BattleUIRangeLabel__ParentHasChanged(BattleUIRangeLabel_o *this,
       return;
     }
 LABEL_10:
-    sub_1BCB254(textLabel, method);
+    sub_1C2D6EC(textLabel, method);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BattleUIRangeLabel__SetAdjustLabelOffset(
+void BattleUIRangeLabel__SetAdjustLabelOffset(
         BattleUIRangeLabel_o *this,
         System_String_o *text,
         System_String_o *iconName,
@@ -340,30 +329,30 @@ void __fastcall BattleUIRangeLabel__SetAdjustLabelOffset(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B1F179 & 1) == 0 )
+  if ( (byte_4C29FFF & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1/*""*/, text);
-    byte_4B1F179 = 1;
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C29FFF = 1;
   }
-  UIRangeLabel__Set((UIRangeLabel_o *)this, text, iconName, isIconPixelPerfect, damageCritical, 0, 0LL);
+  UIRangeLabel__Set((UIRangeLabel_o *)this, text, iconName, isIconPixelPerfect, damageCritical, 0, 0);
   if ( this->fields.isFirst )
   {
     iconSprite = (UnityEngine_Component_o *)this->fields.iconSprite;
     this->fields.isFirst = 0;
     if ( !iconSprite )
       goto LABEL_35;
-    iconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(iconSprite, 0LL);
+    iconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(iconSprite, 0);
     if ( !iconSprite )
       goto LABEL_35;
-    this->fields.savePosValue = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)iconSprite, 0LL);
+    this->fields.savePosValue = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)iconSprite, 0);
   }
   iconSprite = (UnityEngine_Component_o *)this->fields.textLabel;
   if ( !iconSprite )
     goto LABEL_35;
-  iconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(iconSprite, 0LL);
+  iconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(iconSprite, 0);
   if ( !iconSprite )
     goto LABEL_35;
-  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)iconSprite, 0LL);
+  localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)iconSprite, 0);
   if ( (float)((float)((float)(localPosition.fields.z - this->fields.saveAdjust.fields.z)
                      * (float)(localPosition.fields.z - this->fields.saveAdjust.fields.z))
              + (float)((float)((float)(localPosition.fields.x - this->fields.saveAdjust.fields.x)
@@ -374,10 +363,10 @@ void __fastcall BattleUIRangeLabel__SetAdjustLabelOffset(
     iconSprite = (UnityEngine_Component_o *)this->fields.textLabel;
     if ( !iconSprite )
       goto LABEL_35;
-    iconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(iconSprite, 0LL);
+    iconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(iconSprite, 0);
     if ( !iconSprite )
       goto LABEL_35;
-    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)iconSprite, this->fields.saveAdjust, 0LL);
+    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)iconSprite, this->fields.saveAdjust, 0);
   }
   if ( adjustment )
   {
@@ -422,44 +411,44 @@ LABEL_24:
     iconSprite = (UnityEngine_Component_o *)this->fields.textLabel;
     if ( iconSprite )
     {
-      iconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(iconSprite, 0LL);
+      iconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(iconSprite, 0);
       if ( iconSprite )
       {
         v23 = (UnityEngine_Transform_o *)iconSprite;
-        v30 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)iconSprite, 0LL);
+        v30 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)iconSprite, 0);
         v30.fields.x = (float)(v19 + 0.0) + v30.fields.x;
         v30.fields.y = (float)(v20 + 0.0) + v30.fields.y;
         v30.fields.z = v30.fields.z + 0.0;
-        UnityEngine_Transform__set_localPosition(v23, v30, 0LL);
+        UnityEngine_Transform__set_localPosition(v23, v30, 0);
         goto LABEL_27;
       }
     }
 LABEL_35:
-    sub_1BCB254(iconSprite, v17);
+    sub_1C2D6EC(iconSprite, v17);
   }
 LABEL_27:
   iconSprite = (UnityEngine_Component_o *)this->fields.iconSprite;
   if ( !iconSprite )
     goto LABEL_35;
-  iconSprite = (UnityEngine_Component_o *)UIRect__get_cachedTransform((UIRect_o *)iconSprite, 0LL);
+  iconSprite = (UnityEngine_Component_o *)UIRect__get_cachedTransform((UIRect_o *)iconSprite, 0);
   if ( !iconSprite )
     goto LABEL_35;
-  UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)iconSprite, 0LL);
+  UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)iconSprite, 0);
   iconSprite = (UnityEngine_Component_o *)this->fields.iconSprite;
   if ( !iconSprite )
     goto LABEL_35;
-  iconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(iconSprite, 0LL);
+  iconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(iconSprite, 0);
   if ( !text )
     goto LABEL_35;
   v24 = (UnityEngine_GameObject_o *)iconSprite;
-  iconSprite = (UnityEngine_Component_o *)System_String__Equals_62485728(text, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  iconSprite = (UnityEngine_Component_o *)System_String__Equals_63493168(text, (System_String_o *)StringLiteral_1/*""*/, 0);
   if ( !v24 )
     goto LABEL_35;
-  UnityEngine_GameObject__SetActive(v24, ((unsigned __int8)iconSprite & 1) == 0, 0LL);
+  UnityEngine_GameObject__SetActive(v24, ((unsigned __int8)iconSprite & 1) == 0, 0);
   iconSprite = (UnityEngine_Component_o *)this->fields.iconSprite;
   if ( !iconSprite )
     goto LABEL_35;
-  iconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(iconSprite, 0LL);
+  iconSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(iconSprite, 0);
   if ( !iconSprite )
     goto LABEL_35;
   v25 = this->fields.savePosValue.fields.z + this->fields.spriteOffset.fields.z;
@@ -470,47 +459,45 @@ LABEL_27:
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)iconSprite,
     *(UnityEngine_Vector3_o *)(&v25 - 2),
-    0LL);
+    0);
   BattleUIRangeLabel__AdjustResetLine(this, v28);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BattleUIRangeLabel__SetPopupParam(
+void BattleUIRangeLabel__SetPopupParam(
         BattleUIRangeLabel_o *this,
         BattleActionData_BuffData_o *buffData,
         const MethodInfo *method)
 {
   BattleUIRangeLabel_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
   struct UILabel_o *textLabel; // x8
+  __int128 v6; // q0
+  struct UILabel_o *v7; // x8
   __int128 v8; // q0
-  struct UILabel_o *v9; // x8
-  __int128 v10; // q0
-  UILabel_o *v11; // x23
-  float v12; // s3
-  float v13; // s0
-  float v14; // s1
-  float v15; // s2
-  const MethodInfo *v16; // x2
-  UILabel_o *v17; // x22
-  float v18; // s3
-  float v19; // s0
-  float v20; // s1
-  float v21; // s2
-  const MethodInfo *v22; // x2
-  System_Nullable_Color__o v23; // [xsp+8h] [xbp-48h] BYREF
+  UILabel_o *v9; // x23
+  float v10; // s3
+  float v11; // s0 OVERLAPPED
+  float v12; // s1
+  float v13; // s2
+  const MethodInfo *v14; // x2
+  UILabel_o *v15; // x22
+  float v16; // s3
+  float v17; // s0 OVERLAPPED
+  float v18; // s1
+  float v19; // s2
+  const MethodInfo *v20; // x2
+  System_Nullable_Color__o v21; // [xsp+8h] [xbp-48h] BYREF
   UnityEngine_Color_o mColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o mEffectColor; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = this;
-  if ( (byte_4B1F17D & 1) == 0 )
+  if ( (byte_4C2A003 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Nullable_Color___ctor__, buffData);
-    sub_1BCAFF8(&Method_System_Nullable_Color__get_HasValue__, v5);
-    this = (BattleUIRangeLabel_o *)sub_1BCAFF8(&Method_System_Nullable_Color__get_Value__, v6);
-    byte_4B1F17D = 1;
+    sub_1C2D490(&Method_System_Nullable_Color___ctor__);
+    sub_1C2D490(&Method_System_Nullable_Color__get_HasValue__);
+    this = (BattleUIRangeLabel_o *)sub_1C2D490(&Method_System_Nullable_Color__get_Value__);
+    byte_4C2A003 = 1;
   }
   if ( !v4->fields.saveColor.fields.hasValue )
   {
@@ -518,93 +505,92 @@ void __fastcall BattleUIRangeLabel__SetPopupParam(
     if ( !textLabel )
       goto LABEL_15;
     mColor = textLabel->fields.mColor;
-    memset(&v23, 0, sizeof(v23));
-    System_Nullable_Color____ctor(&v23, mColor, (const MethodInfo_37D6364 *)Method_System_Nullable_Color___ctor__);
-    v8 = *(_OWORD *)&v23.fields.hasValue;
-    v4->fields.saveColor.fields.value.fields.a = v23.fields.value.fields.a;
-    *(_OWORD *)&v4->fields.saveColor.fields.hasValue = v8;
+    memset(&v21, 0, sizeof(v21));
+    System_Nullable_Color____ctor(&v21, mColor, (const MethodInfo_38AC840 *)Method_System_Nullable_Color___ctor__);
+    v6 = *(_OWORD *)&v21.fields.hasValue;
+    v4->fields.saveColor.fields.value.fields.a = v21.fields.value.fields.a;
+    *(_OWORD *)&v4->fields.saveColor.fields.hasValue = v6;
   }
   if ( !v4->fields.saveEffectColor.fields.hasValue )
   {
-    v9 = v4->fields.textLabel;
-    if ( !v9 )
+    v7 = v4->fields.textLabel;
+    if ( !v7 )
       goto LABEL_15;
-    mEffectColor = v9->fields.mEffectColor;
-    memset(&v23, 0, sizeof(v23));
-    System_Nullable_Color____ctor(&v23, mEffectColor, (const MethodInfo_37D6364 *)Method_System_Nullable_Color___ctor__);
-    v10 = *(_OWORD *)&v23.fields.hasValue;
-    v4->fields.saveEffectColor.fields.value.fields.a = v23.fields.value.fields.a;
-    *(_OWORD *)&v4->fields.saveEffectColor.fields.hasValue = v10;
+    mEffectColor = v7->fields.mEffectColor;
+    memset(&v21, 0, sizeof(v21));
+    System_Nullable_Color____ctor(&v21, mEffectColor, (const MethodInfo_38AC840 *)Method_System_Nullable_Color___ctor__);
+    v8 = *(_OWORD *)&v21.fields.hasValue;
+    v4->fields.saveEffectColor.fields.value.fields.a = v21.fields.value.fields.a;
+    *(_OWORD *)&v4->fields.saveEffectColor.fields.hasValue = v8;
   }
   if ( !buffData )
 LABEL_15:
-    sub_1BCB254(this, buffData);
-  v11 = v4->fields.textLabel;
+    sub_1C2D6EC(this, buffData);
+  v9 = v4->fields.textLabel;
   if ( buffData->fields.isGrayDisp )
   {
-    v12 = 1.0;
+    v10 = 1.0;
+    v11 = 0.5;
+    v12 = 0.5;
     v13 = 0.5;
-    v14 = 0.5;
-    v15 = 0.5;
-    if ( v11 )
+    if ( v9 )
       goto LABEL_12;
     goto LABEL_15;
   }
-  *(UnityEngine_Color_o *)&v13 = System_Nullable_Color___get_Value(
+  *(UnityEngine_Color_o *)&v11 = System_Nullable_Color___get_Value(
                                    &v4->fields.saveEffectColor,
-                                   (const MethodInfo_37D6380 *)Method_System_Nullable_Color__get_Value__);
-  if ( !v11 )
+                                   (const MethodInfo_38AC85C *)Method_System_Nullable_Color__get_Value__);
+  if ( !v9 )
     goto LABEL_15;
 LABEL_12:
-  UILabel__set_effectColor(v11, *(UnityEngine_Color_o *)&v13, 0LL);
-  v17 = v4->fields.textLabel;
+  UILabel__set_effectColor(v9, *(UnityEngine_Color_o *)&v11, 0);
+  v15 = v4->fields.textLabel;
   if ( buffData->fields.isGrayDisp )
   {
-    v18 = 1.0;
+    v16 = 1.0;
+    v17 = 0.5;
+    v18 = 0.5;
     v19 = 0.5;
-    v20 = 0.5;
-    v21 = 0.5;
   }
   else
   {
-    *(UnityEngine_Color_o *)&v19 = System_Nullable_Color___get_Value(
+    *(UnityEngine_Color_o *)&v17 = System_Nullable_Color___get_Value(
                                      &v4->fields.saveColor,
-                                     (const MethodInfo_37D6380 *)Method_System_Nullable_Color__get_Value__);
+                                     (const MethodInfo_38AC85C *)Method_System_Nullable_Color__get_Value__);
   }
-  BattleUIRangeLabel__UpdateRgbColor(v4, v17, *(UnityEngine_Color_o *)&v19, v16);
+  BattleUIRangeLabel__UpdateRgbColor(v4, v15, *(UnityEngine_Color_o *)&v17, v14);
   if ( buffData->fields.isGrayDisp )
-    BattleUIRangeLabel__AddLabelDepth(v4, -2, v22);
+    BattleUIRangeLabel__AddLabelDepth(v4, -2, v20);
 }
 
 
-void __fastcall BattleUIRangeLabel__UpdateResetLineDepth(BattleUIRangeLabel_o *this, const MethodInfo *method)
+void BattleUIRangeLabel__UpdateResetLineDepth(BattleUIRangeLabel_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *resetLineSprite; // x20
   struct UISprite_o *v4; // x0
   __int64 v5; // x1
   struct UILabel_o *textLabel; // x8
 
-  if ( (byte_4B1F17B & 1) == 0 )
+  if ( (byte_4C2A001 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1F17B = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2A001 = 1;
   }
   resetLineSprite = (UnityEngine_Object_o *)this->fields.resetLineSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v4 = (struct UISprite_o *)UnityEngine_Object__op_Inequality(resetLineSprite, 0LL, 0LL);
+  v4 = (struct UISprite_o *)UnityEngine_Object__op_Inequality(resetLineSprite, 0, 0);
   if ( ((unsigned __int8)v4 & 1) != 0 )
   {
     textLabel = this->fields.textLabel;
-    if ( !textLabel || (v4 = this->fields.resetLineSprite) == 0LL )
-      sub_1BCB254(v4, v5);
-    UIWidget__set_depth((UIWidget_o *)v4, textLabel->fields.mDepth + 5, 0LL);
+    if ( !textLabel || (v4 = this->fields.resetLineSprite) == 0 )
+      sub_1C2D6EC(v4, v5);
+    UIWidget__set_depth((UIWidget_o *)v4, textLabel->fields.mDepth + 5, 0);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BattleUIRangeLabel__UpdateRgbColor(
+void BattleUIRangeLabel__UpdateRgbColor(
         BattleUIRangeLabel_o *this,
         UILabel_o *label,
         UnityEngine_Color_o overwriteColor,
@@ -626,9 +612,9 @@ void __fastcall BattleUIRangeLabel__UpdateRgbColor(
   b = overwriteColor.fields.b;
   g = overwriteColor.fields.g;
   r = overwriteColor.fields.r;
-  ((void (__fastcall *)(UILabel_o *, Il2CppMethodPointer, const MethodInfo *))label->klass->vtable._7_get_alpha.method)(
+  ((void (__fastcall *)(UILabel_o *, const MethodInfo *, const MethodInfo *))label->klass->vtable._7_get_alpha.methodPtr)(
     label,
-    label->klass->vtable._8_set_alpha.methodPtr,
+    label->klass->vtable._7_get_alpha.method,
     method);
   this = (BattleUIRangeLabel_o *)v4->fields.textLabel;
   if ( !this
@@ -637,14 +623,14 @@ void __fastcall BattleUIRangeLabel__UpdateRgbColor(
         v11.fields.g = g,
         v11.fields.b = b,
         v11.fields.a = a,
-        UIWidget__set_color((UIWidget_o *)this, v11, 0LL),
-        (this = (BattleUIRangeLabel_o *)v4->fields.textLabel) == 0LL) )
+        UIWidget__set_color((UIWidget_o *)this, v11, 0),
+        (this = (BattleUIRangeLabel_o *)v4->fields.textLabel) == 0) )
   {
 LABEL_5:
-    sub_1BCB254(this, label);
+    sub_1C2D6EC(this, label);
   }
-  ((void (__fastcall *)(BattleUIRangeLabel_o *, Il2CppClass *, long double))this->klass[1]._1.castClass)(
+  ((void (__fastcall *)(BattleUIRangeLabel_o *, Il2CppClass *, long double))this->klass[1]._1.element_class)(
     this,
-    this->klass[1]._1.declaringType,
+    this->klass[1]._1.castClass,
     v10);
 }

@@ -1,12 +1,12 @@
-void __fastcall ServantStatusListViewItemDrawTerminal___ctor(
+void ServantStatusListViewItemDrawTerminal___ctor(
         ServantStatusListViewItemDrawTerminal_o *this,
         const MethodInfo *method)
 {
-  ServantStatusListViewItemDraw___ctor((ServantStatusListViewItemDraw_o *)this, 0LL);
+  ServantStatusListViewItemDraw___ctor((ServantStatusListViewItemDraw_o *)this, 0);
 }
 
 
-int32_t __fastcall ServantStatusListViewItemDrawTerminal__GetKind(
+int32_t ServantStatusListViewItemDrawTerminal__GetKind(
         ServantStatusListViewItemDrawTerminal_o *this,
         const MethodInfo *method)
 {

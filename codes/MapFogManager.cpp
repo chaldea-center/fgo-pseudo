@@ -1,97 +1,90 @@
-void __fastcall MapFogManager___ctor(MapFogManager_o *this, const MethodInfo *method)
+void MapFogManager___ctor(MapFogManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  System_Collections_Generic_List_object__o *v5; // x20
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  System_Collections_Generic_List_object__o *v3; // x20
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4B190A9 & 1) == 0 )
+  if ( (byte_4C23E0F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_MapFogData___ctor__, method);
-    sub_1BCAFF8(&System_Collections_Generic_List_MapFogData__TypeInfo, v3);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_MapFogManager___ctor__, v4);
-    byte_4B190A9 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_MapFogData___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_MapFogData__TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_MapFogManager___ctor__);
+    byte_4C23E0F = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_MapFogData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_MapFogData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v5,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_MapFogData___ctor__);
-  this->fields.fogList = (struct System_Collections_Generic_List_MapFogData__o *)v5;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.fogList, (int32_t)v5, v6, v7);
+    v3,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_MapFogData___ctor__);
+  this->fields.fogList = (struct System_Collections_Generic_List_MapFogData__o *)v3;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.fogList, (int32_t)v3, v4, v5);
   __asm { FMOV            V0.4S, #1.0 }
   this->fields.fogColor = _Q0;
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_38F8EF0 *)Method_SingletonMonoBehaviour_MapFogManager___ctor__);
+    (const MethodInfo_39D40E4 *)Method_SingletonMonoBehaviour_MapFogManager___ctor__);
 }
 
 
-void __fastcall MapFogManager__ApplyColor(MapFogManager_o *this, const MethodInfo *method)
+void MapFogManager__ApplyColor(MapFogManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   System_Collections_Generic_List_object__o *fogList; // x0
-  const MethodInfo *v8; // x1
+  const MethodInfo *v4; // x1
   Il2CppObject *current; // x20
-  const MethodInfo *v10; // x1
-  const MethodInfo *v11; // x1
-  System_Nullable_Color__o v12; // [xsp+0h] [xbp-60h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+18h] [xbp-48h] BYREF
+  const MethodInfo *v6; // x1
+  const MethodInfo *v7; // x1
+  System_Nullable_Color__o v8; // [xsp+0h] [xbp-60h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4B190A8 & 1) == 0 )
+  if ( (byte_4C23E0E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_MapFogData__Dispose__, method);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_MapFogData__MoveNext__, v3);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_MapFogData__get_Current__, v4);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_MapFogData__GetEnumerator__, v5);
-    sub_1BCAFF8(&Method_System_Nullable_Color__get_HasValue__, v6);
-    byte_4B190A8 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_MapFogData__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_MapFogData__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_MapFogData__get_Current__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_MapFogData__GetEnumerator__);
+    sub_1C2D490(&Method_System_Nullable_Color__get_HasValue__);
+    byte_4C23E0E = 1;
   }
-  memset(&v13, 0, sizeof(v13));
+  memset(&v9, 0, sizeof(v9));
   fogList = (System_Collections_Generic_List_object__o *)this->fields.fogList;
   if ( !fogList )
-    sub_1BCB254(0LL, method);
+    sub_1C2D6EC(0, method);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v13,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v9,
     fogList,
-    (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_MapFogData__GetEnumerator__);
+    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_MapFogData__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v13,
-            (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_MapFogData__MoveNext__) )
+            &v9,
+            (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_MapFogData__MoveNext__) )
   {
-    current = v13.fields._current;
-    if ( v13.fields._current && MapFogData__get_HasRenderer((MapFogData_o *)v13.fields._current, v8) )
+    current = v9.fields._current;
+    if ( v9.fields._current && MapFogData__get_HasRenderer((MapFogData_o *)v9.fields._current, v4) )
     {
-      MapFogData__get_Color(&v12, (MapFogData_o *)current, v10);
-      if ( v12.fields.hasValue )
-        MapFogData__ApplyColor((MapFogData_o *)current, this->fields.fogColor, v11);
+      MapFogData__get_Color(&v8, (MapFogData_o *)current, v6);
+      if ( v8.fields.hasValue )
+        MapFogData__ApplyColor((MapFogData_o *)current, this->fields.fogColor, v7);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v13,
-    (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_MapFogData__Dispose__);
+    &v9,
+    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_MapFogData__Dispose__);
 }
 
 
-void __fastcall MapFogManager__Attach(MapFogManager_o *this, MapFogData_o *fogData, const MethodInfo *method)
+void MapFogManager__Attach(MapFogManager_o *this, MapFogData_o *fogData, const MethodInfo *method)
 {
-  __int64 v5; // x1
   System_Collections_Generic_List_object__o *fogList; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v10; // x9
+  _QWORD *v9; // x9
   __int64 size; // x10
-  Il2CppClass **v12; // x8
+  Il2CppClass **v11; // x8
 
-  if ( (byte_4B190A6 & 1) == 0 )
+  if ( (byte_4C23E0C & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_MapFogData__Add__, fogData);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_MapFogData__Contains__, v5);
-    byte_4B190A6 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_MapFogData__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_MapFogData__Contains__);
+    byte_4C23E0C = 1;
   }
   fogList = (System_Collections_Generic_List_object__o *)this->fields.fogList;
   if ( !fogList )
@@ -99,52 +92,52 @@ void __fastcall MapFogManager__Attach(MapFogManager_o *this, MapFogData_o *fogDa
   fogList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___Contains(
                                                            fogList,
                                                            (Il2CppObject *)fogData,
-                                                           (const MethodInfo_36B9F60 *)Method_System_Collections_Generic_List_MapFogData__Contains__);
+                                                           (const MethodInfo_3789F14 *)Method_System_Collections_Generic_List_MapFogData__Contains__);
   if ( ((unsigned __int8)fogList & 1) != 0 )
     return;
   if ( !fogData
     || (MapFogData__ApplyColor(fogData, this->fields.fogColor, (const MethodInfo *)fogData),
-        (fogList = (System_Collections_Generic_List_object__o *)this->fields.fogList) == 0LL)
+        (fogList = (System_Collections_Generic_List_object__o *)this->fields.fogList) == 0)
     || (items = fogList->fields._items,
-        v10 = Method_System_Collections_Generic_List_MapFogData__Add__,
+        v9 = Method_System_Collections_Generic_List_MapFogData__Add__,
         ++fogList->fields._version,
         !items) )
   {
 LABEL_11:
-    sub_1BCB254(fogList, fogData);
+    sub_1C2D6EC(fogList, fogData);
   }
   size = fogList->fields._size;
-  if ( (unsigned int)size >= items->max_length )
+  if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       fogList,
       (Il2CppObject *)fogData,
-      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_3789B84 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
   }
   else
   {
-    v12 = &items->obj.klass + size;
+    v11 = &items->obj.klass + size;
     fogList->fields._size = size + 1;
-    v12[4] = (Il2CppClass *)fogData;
-    sub_1BCAF9C((CGThumbnailListItem_o *)(v12 + 4), (int32_t)fogData, v7, v8);
+    v11[4] = (Il2CppClass *)fogData;
+    sub_1C2D434((CGThumbnailListItem_o *)(v11 + 4), (int32_t)fogData, v6, v7);
   }
 }
 
 
-void __fastcall MapFogManager__Detach(MapFogManager_o *this, MapFogData_o *fogData, const MethodInfo *method)
+void MapFogManager__Detach(MapFogManager_o *this, MapFogData_o *fogData, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *fogList; // x0
 
-  if ( (byte_4B190A7 & 1) == 0 )
+  if ( (byte_4C23E0D & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_MapFogData__Remove__, fogData);
-    byte_4B190A7 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_MapFogData__Remove__);
+    byte_4C23E0D = 1;
   }
   fogList = (System_Collections_Generic_List_object__o *)this->fields.fogList;
   if ( !fogList )
-    sub_1BCB254(0LL, fogData);
+    sub_1C2D6EC(0, fogData);
   System_Collections_Generic_List_object___Remove(
     fogList,
     (Il2CppObject *)fogData,
-    (const MethodInfo_36BB0F8 *)Method_System_Collections_Generic_List_MapFogData__Remove__);
+    (const MethodInfo_378B0AC *)Method_System_Collections_Generic_List_MapFogData__Remove__);
 }

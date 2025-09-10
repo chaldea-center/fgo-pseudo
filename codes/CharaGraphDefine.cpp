@@ -1,4 +1,4 @@
-void __fastcall CharaGraphDefine_CharaGraphItemBulkModifyArgs___ctor(
+void CharaGraphDefine_CharaGraphItemBulkModifyArgs___ctor(
         CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *this,
         bool isResetSwap,
         const MethodInfo *method)
@@ -6,12 +6,12 @@ void __fastcall CharaGraphDefine_CharaGraphItemBulkModifyArgs___ctor(
   bool v3; // w20
 
   v3 = isResetSwap;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._IsResetSwap_k__BackingField = v3;
 }
 
 
-bool __fastcall CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_IsResetSwap(
+bool CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_IsResetSwap(
         CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *this,
         const MethodInfo *method)
 {
@@ -19,7 +19,7 @@ bool __fastcall CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_IsResetSwap(
 }
 
 
-UserGameEntity_o *__fastcall CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_UserGameEntity(
+UserGameEntity_o *CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_UserGameEntity(
         CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *this,
         const MethodInfo *method)
 {
@@ -32,23 +32,21 @@ UserGameEntity_o *__fastcall CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_
   userGameEntity = this->fields.userGameEntity;
   if ( !userGameEntity )
   {
-    userGameEntity = UserGameMaster__getSelfUserGame(0LL);
+    userGameEntity = UserGameMaster__getSelfUserGame(0);
     p_userGameEntity->klass = (CGThumbnailListItem_c *)userGameEntity;
-    sub_1BCAF9C(p_userGameEntity, (int32_t)userGameEntity, v4, v5);
+    sub_1C2D434(p_userGameEntity, (int32_t)userGameEntity, v4, v5);
   }
   return userGameEntity;
 }
 
 
-void __fastcall CharaGraphDefine_CharaGraphRootInfo___ctor(
-        CharaGraphDefine_CharaGraphRootInfo_o *this,
-        const MethodInfo *method)
+void CharaGraphDefine_CharaGraphRootInfo___ctor(CharaGraphDefine_CharaGraphRootInfo_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-int32_t __fastcall CharaGraphDefine_CharaGraphRootInfo__get_ModeKind(
+int32_t CharaGraphDefine_CharaGraphRootInfo__get_ModeKind(
         CharaGraphDefine_CharaGraphRootInfo_o *this,
         const MethodInfo *method)
 {
@@ -56,7 +54,7 @@ int32_t __fastcall CharaGraphDefine_CharaGraphRootInfo__get_ModeKind(
 }
 
 
-void __fastcall CharaGraphDefine_CharaGraphRootInfo__set_ModeKind(
+void CharaGraphDefine_CharaGraphRootInfo__set_ModeKind(
         CharaGraphDefine_CharaGraphRootInfo_o *this,
         int32_t value,
         const MethodInfo *method)

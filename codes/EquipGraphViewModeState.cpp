@@ -1,4 +1,4 @@
-void __fastcall EquipGraphViewModeState___ctor(EquipGraphViewModeState_o *this, const MethodInfo *method)
+void EquipGraphViewModeState___ctor(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
   this->fields._topbtn_k__BackingField = 1;
   this->fields._btmbtn_k__BackingField = 1;
@@ -8,23 +8,22 @@ void __fastcall EquipGraphViewModeState___ctor(EquipGraphViewModeState_o *this, 
   this->fields._namebtn_k__BackingField = 1;
   this->fields._allbtn_k__BackingField = 1;
   this->fields.AutoPlayInterval = 5.0;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o *this, const MethodInfo *method)
+void EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   int32_t AutoPlayMode; // w8
-  UnityEngine_Object_o *v5; // x20
+  UnityEngine_Object_o *v4; // x20
   UIEquipGraphV_o *uiEquipGraphV; // x0
-  int32_t v7; // w1
+  int32_t v6; // w1
 
-  if ( (byte_4B19A9D & 1) == 0 )
+  if ( (byte_4C24821 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_2486/*"AutoPlayView"*/, v3);
-    byte_4B19A9D = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_2498/*"AutoPlayView"*/);
+    byte_4C24821 = 1;
   }
   AutoPlayMode = this->fields.AutoPlayMode;
   if ( AutoPlayMode == 2 )
@@ -33,11 +32,11 @@ void __fastcall EquipGraphViewModeState__AutoPlayView(EquipGraphViewModeState_o 
     this->fields.AutoPlayMode = 3;
     if ( uiEquipGraphV )
     {
-      v7 = 1;
+      v6 = 1;
       goto LABEL_14;
     }
 LABEL_21:
-    sub_1BCB254(uiEquipGraphV, method);
+    sub_1C2D6EC(uiEquipGraphV, method);
   }
   if ( AutoPlayMode == 1 )
   {
@@ -46,7 +45,7 @@ LABEL_21:
     this->fields._rotbtn_k__BackingField = 0;
     if ( uiEquipGraphV )
     {
-      UIEquipGraphV__SetRotateButton(uiEquipGraphV, 0, 0LL);
+      UIEquipGraphV__SetRotateButton(uiEquipGraphV, 0, 0);
       goto LABEL_17;
     }
     goto LABEL_21;
@@ -56,33 +55,33 @@ LABEL_21:
     uiEquipGraphV = (UIEquipGraphV_o *)this->fields.scriptManager;
     if ( !uiEquipGraphV )
       goto LABEL_21;
-    ScriptManager__OnClickFowardView((ScriptManager_o *)uiEquipGraphV, 0LL);
+    ScriptManager__OnClickFowardView((ScriptManager_o *)uiEquipGraphV, 0);
   }
   else
   {
     this->fields.AutoPlayMode = 1;
     this->fields._rotbtn_k__BackingField = 1;
-    v5 = (UnityEngine_Object_o *)this->fields.uiEquipGraphV;
+    v4 = (UnityEngine_Object_o *)this->fields.uiEquipGraphV;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality(v5, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Inequality(v4, 0, 0) )
     {
       uiEquipGraphV = this->fields.uiEquipGraphV;
       if ( uiEquipGraphV )
       {
-        UIEquipGraphV__SetRotateButton(uiEquipGraphV, 0, 0LL);
+        UIEquipGraphV__SetRotateButton(uiEquipGraphV, 0, 0);
         uiEquipGraphV = this->fields.uiEquipGraphV;
         if ( uiEquipGraphV )
         {
-          v7 = 2;
+          v6 = 2;
 LABEL_14:
-          UIEquipGraphV__SetAllButton(uiEquipGraphV, v7, 0LL);
+          UIEquipGraphV__SetAllButton(uiEquipGraphV, v6, 0);
 LABEL_17:
           UnityEngine_MonoBehaviour__Invoke(
             (UnityEngine_MonoBehaviour_o *)this,
-            (System_String_o *)StringLiteral_2486/*"AutoPlayView"*/,
+            (System_String_o *)StringLiteral_2498/*"AutoPlayView"*/,
             this->fields.AutoPlayInterval,
-            0LL);
+            0);
           return;
         }
       }
@@ -92,25 +91,25 @@ LABEL_17:
 }
 
 
-void __fastcall EquipGraphViewModeState__Awake(EquipGraphViewModeState_o *this, const MethodInfo *method)
+void EquipGraphViewModeState__Awake(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall EquipGraphViewModeState__FowardView(EquipGraphViewModeState_o *this, const MethodInfo *method)
+void EquipGraphViewModeState__FowardView(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
   ScriptManager_o *scriptManager; // x0
 
   scriptManager = this->fields.scriptManager;
   if ( !scriptManager )
-    sub_1BCB254(0LL, method);
-  ScriptManager__OnClickFowardView(scriptManager, 0LL);
+    sub_1C2D6EC(0, method);
+  ScriptManager__OnClickFowardView(scriptManager, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall EquipGraphViewModeState__OnClickAutoPlayButton(
+void EquipGraphViewModeState__OnClickAutoPlayButton(
         EquipGraphViewModeState_o *this,
         bool isSetting,
         const MethodInfo *method)
@@ -125,38 +124,38 @@ void __fastcall EquipGraphViewModeState__OnClickAutoPlayButton(
     goto LABEL_9;
   if ( this->fields._autobtn_k__BackingField )
   {
-    UnityEngine_Behaviour__set_enabled(autoPlaySprite, 1, 0LL);
+    UnityEngine_Behaviour__set_enabled(autoPlaySprite, 1, 0);
     autoPlaySprite = (UnityEngine_Behaviour_o *)this->fields.quickAutoPlaySprite;
     this->fields._quickAutobtn_k__BackingField = 0;
     if ( autoPlaySprite )
     {
-      UnityEngine_Behaviour__set_enabled(autoPlaySprite, 0, 0LL);
+      UnityEngine_Behaviour__set_enabled(autoPlaySprite, 0, 0);
       this->fields.AutoPlayMode = 0;
-      UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0LL);
+      UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0);
       EquipGraphViewModeState__AutoPlayView(this, v5);
       return;
     }
 LABEL_9:
-    sub_1BCB254(autoPlaySprite, isSetting);
+    sub_1C2D6EC(autoPlaySprite, isSetting);
   }
-  UnityEngine_Behaviour__set_enabled(autoPlaySprite, 0, 0LL);
+  UnityEngine_Behaviour__set_enabled(autoPlaySprite, 0, 0);
   if ( !this->fields._quickAutobtn_k__BackingField )
-    UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0LL);
+    UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall EquipGraphViewModeState__OnClickQuickAutoPlayButton(
+void EquipGraphViewModeState__OnClickQuickAutoPlayButton(
         EquipGraphViewModeState_o *this,
         bool isSetting,
         const MethodInfo *method)
 {
   UnityEngine_Behaviour_o *quickAutoPlaySprite; // x0
 
-  if ( (byte_4B19A9C & 1) == 0 )
+  if ( (byte_4C24820 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_6799/*"FowardView"*/, isSetting);
-    byte_4B19A9C = 1;
+    sub_1C2D490(&StringLiteral_6846/*"FowardView"*/);
+    byte_4C24820 = 1;
   }
   if ( !isSetting )
     this->fields._quickAutobtn_k__BackingField ^= 1u;
@@ -165,174 +164,144 @@ void __fastcall EquipGraphViewModeState__OnClickQuickAutoPlayButton(
     goto LABEL_11;
   if ( this->fields._quickAutobtn_k__BackingField )
   {
-    UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 1, 0LL);
+    UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 1, 0);
     quickAutoPlaySprite = (UnityEngine_Behaviour_o *)this->fields.autoPlaySprite;
     this->fields._autobtn_k__BackingField = 0;
     if ( quickAutoPlaySprite )
     {
-      UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 0, 0LL);
-      UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0LL);
+      UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 0, 0);
+      UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0);
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_6799/*"FowardView"*/,
+        (System_String_o *)StringLiteral_6846/*"FowardView"*/,
         this->fields.AutoPlayInterval,
-        0LL);
+        0);
       return;
     }
 LABEL_11:
-    sub_1BCB254(quickAutoPlaySprite, isSetting);
+    sub_1C2D6EC(quickAutoPlaySprite, isSetting);
   }
-  UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 0, 0LL);
+  UnityEngine_Behaviour__set_enabled(quickAutoPlaySprite, 0, 0);
   if ( !this->fields._autobtn_k__BackingField )
-    UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0LL);
+    UnityEngine_MonoBehaviour__CancelInvoke((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-bool __fastcall EquipGraphViewModeState__get_allbtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
+bool EquipGraphViewModeState__get_allbtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
   return this->fields._allbtn_k__BackingField;
 }
 
 
-bool __fastcall EquipGraphViewModeState__get_atkbtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
+bool EquipGraphViewModeState__get_atkbtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
   return this->fields._atkbtn_k__BackingField;
 }
 
 
-bool __fastcall EquipGraphViewModeState__get_autobtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
+bool EquipGraphViewModeState__get_autobtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
   return this->fields._autobtn_k__BackingField;
 }
 
 
-bool __fastcall EquipGraphViewModeState__get_btmbtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
+bool EquipGraphViewModeState__get_btmbtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
   return this->fields._btmbtn_k__BackingField;
 }
 
 
-bool __fastcall EquipGraphViewModeState__get_hpbtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
+bool EquipGraphViewModeState__get_hpbtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
   return this->fields._hpbtn_k__BackingField;
 }
 
 
-bool __fastcall EquipGraphViewModeState__get_namebtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
+bool EquipGraphViewModeState__get_namebtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
   return this->fields._namebtn_k__BackingField;
 }
 
 
-bool __fastcall EquipGraphViewModeState__get_quickAutobtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
+bool EquipGraphViewModeState__get_quickAutobtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
   return this->fields._quickAutobtn_k__BackingField;
 }
 
 
-bool __fastcall EquipGraphViewModeState__get_rarebtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
+bool EquipGraphViewModeState__get_rarebtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
   return this->fields._rarebtn_k__BackingField;
 }
 
 
-bool __fastcall EquipGraphViewModeState__get_rotbtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
+bool EquipGraphViewModeState__get_rotbtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
   return this->fields._rotbtn_k__BackingField;
 }
 
 
-bool __fastcall EquipGraphViewModeState__get_topbtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
+bool EquipGraphViewModeState__get_topbtn(EquipGraphViewModeState_o *this, const MethodInfo *method)
 {
   return this->fields._topbtn_k__BackingField;
 }
 
 
-void __fastcall EquipGraphViewModeState__set_allbtn(
-        EquipGraphViewModeState_o *this,
-        bool value,
-        const MethodInfo *method)
+void EquipGraphViewModeState__set_allbtn(EquipGraphViewModeState_o *this, bool value, const MethodInfo *method)
 {
   this->fields._allbtn_k__BackingField = value;
 }
 
 
-void __fastcall EquipGraphViewModeState__set_atkbtn(
-        EquipGraphViewModeState_o *this,
-        bool value,
-        const MethodInfo *method)
+void EquipGraphViewModeState__set_atkbtn(EquipGraphViewModeState_o *this, bool value, const MethodInfo *method)
 {
   this->fields._atkbtn_k__BackingField = value;
 }
 
 
-void __fastcall EquipGraphViewModeState__set_autobtn(
-        EquipGraphViewModeState_o *this,
-        bool value,
-        const MethodInfo *method)
+void EquipGraphViewModeState__set_autobtn(EquipGraphViewModeState_o *this, bool value, const MethodInfo *method)
 {
   this->fields._autobtn_k__BackingField = value;
 }
 
 
-void __fastcall EquipGraphViewModeState__set_btmbtn(
-        EquipGraphViewModeState_o *this,
-        bool value,
-        const MethodInfo *method)
+void EquipGraphViewModeState__set_btmbtn(EquipGraphViewModeState_o *this, bool value, const MethodInfo *method)
 {
   this->fields._btmbtn_k__BackingField = value;
 }
 
 
-void __fastcall EquipGraphViewModeState__set_hpbtn(
-        EquipGraphViewModeState_o *this,
-        bool value,
-        const MethodInfo *method)
+void EquipGraphViewModeState__set_hpbtn(EquipGraphViewModeState_o *this, bool value, const MethodInfo *method)
 {
   this->fields._hpbtn_k__BackingField = value;
 }
 
 
-void __fastcall EquipGraphViewModeState__set_namebtn(
-        EquipGraphViewModeState_o *this,
-        bool value,
-        const MethodInfo *method)
+void EquipGraphViewModeState__set_namebtn(EquipGraphViewModeState_o *this, bool value, const MethodInfo *method)
 {
   this->fields._namebtn_k__BackingField = value;
 }
 
 
-void __fastcall EquipGraphViewModeState__set_quickAutobtn(
-        EquipGraphViewModeState_o *this,
-        bool value,
-        const MethodInfo *method)
+void EquipGraphViewModeState__set_quickAutobtn(EquipGraphViewModeState_o *this, bool value, const MethodInfo *method)
 {
   this->fields._quickAutobtn_k__BackingField = value;
 }
 
 
-void __fastcall EquipGraphViewModeState__set_rarebtn(
-        EquipGraphViewModeState_o *this,
-        bool value,
-        const MethodInfo *method)
+void EquipGraphViewModeState__set_rarebtn(EquipGraphViewModeState_o *this, bool value, const MethodInfo *method)
 {
   this->fields._rarebtn_k__BackingField = value;
 }
 
 
-void __fastcall EquipGraphViewModeState__set_rotbtn(
-        EquipGraphViewModeState_o *this,
-        bool value,
-        const MethodInfo *method)
+void EquipGraphViewModeState__set_rotbtn(EquipGraphViewModeState_o *this, bool value, const MethodInfo *method)
 {
   this->fields._rotbtn_k__BackingField = value;
 }
 
 
-void __fastcall EquipGraphViewModeState__set_topbtn(
-        EquipGraphViewModeState_o *this,
-        bool value,
-        const MethodInfo *method)
+void EquipGraphViewModeState__set_topbtn(EquipGraphViewModeState_o *this, bool value, const MethodInfo *method)
 {
   this->fields._topbtn_k__BackingField = value;
 }

@@ -1,4 +1,4 @@
-void __fastcall CreateActionDataLogicTask___ctor(CreateActionDataLogicTask_o *this, const MethodInfo *method)
+void CreateActionDataLogicTask___ctor(CreateActionDataLogicTask_o *this, const MethodInfo *method)
 {
   BattleLogicTask___ctor((BattleLogicTask_o *)this, method);
   this->fields.actiontype = 71;

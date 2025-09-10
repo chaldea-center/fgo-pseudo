@@ -1,21 +1,17 @@
-void __fastcall EventHeelPortraitListViewItemDraw___ctor(
-        EventHeelPortraitListViewItemDraw_o *this,
-        const MethodInfo *method)
+void EventHeelPortraitListViewItemDraw___ctor(EventHeelPortraitListViewItemDraw_o *this, const MethodInfo *method)
 {
   this->fields.ICON_SCALE = 0.75;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall EventHeelPortraitListViewItemDraw__Awake(
-        EventHeelPortraitListViewItemDraw_o *this,
-        const MethodInfo *method)
+void EventHeelPortraitListViewItemDraw__Awake(EventHeelPortraitListViewItemDraw_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall EventHeelPortraitListViewItemDraw__ClearNewImgSprite(
+void EventHeelPortraitListViewItemDraw__ClearNewImgSprite(
         EventHeelPortraitListViewItemDraw_o *this,
         const MethodInfo *method)
 {
@@ -23,36 +19,33 @@ void __fastcall EventHeelPortraitListViewItemDraw__ClearNewImgSprite(
 
   newImgSprite = this->fields.newImgSprite;
   if ( !newImgSprite )
-    sub_1BCB254(0LL, method);
-  ShiningIconComponent__Clear(newImgSprite, 0LL);
+    sub_1C2D6EC(0, method);
+  ShiningIconComponent__Clear(newImgSprite, 0);
 }
 
 
-void __fastcall EventHeelPortraitListViewItemDraw__SetItem(
+void EventHeelPortraitListViewItemDraw__SetItem(
         EventHeelPortraitListViewItemDraw_o *this,
         EventHeelPortraitListViewItem_o *item,
         const MethodInfo *method)
 {
   EventHeelPortraitListViewItemDraw_o *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   struct HeelPortraitEntity_o *Entity_k__BackingField; // x8
   int32_t imageId; // w21
-  EventHeelPortraitListViewItemDraw_o *v10; // x21
-  struct HeelPortraitEntity_o *v11; // x8
+  EventHeelPortraitListViewItemDraw_o *v7; // x21
+  struct HeelPortraitEntity_o *v8; // x8
   int32_t eventId; // w22
   UISprite_o *heelPortraitSprite; // x23
-  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4B16B78 & 1) == 0 )
+  if ( (byte_4C21877 & 1) == 0 )
   {
-    sub_1BCAFF8(&AtlasManager_TypeInfo, item);
-    sub_1BCAFF8(&System_Convert_TypeInfo, v5);
-    sub_1BCAFF8(&StringLiteral_22530/*"portrait_unknown"*/, v6);
-    this = (EventHeelPortraitListViewItemDraw_o *)sub_1BCAFF8(&StringLiteral_19994/*"icon_common_new01"*/, v7);
-    byte_4B16B78 = 1;
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&System_Convert_TypeInfo);
+    sub_1C2D490(&StringLiteral_22717/*"portrait_unknown"*/);
+    this = (EventHeelPortraitListViewItemDraw_o *)sub_1C2D490(&StringLiteral_20159/*"icon_common_new01"*/);
+    byte_4C21877 = 1;
   }
   if ( !item )
     goto LABEL_21;
@@ -64,28 +57,28 @@ void __fastcall EventHeelPortraitListViewItemDraw__SetItem(
     imageId = Entity_k__BackingField->fields.imageId;
     if ( !System_Convert_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-    this = (EventHeelPortraitListViewItemDraw_o *)System_Convert__ToString_63544936(imageId, 0LL);
-    v10 = this;
+    this = (EventHeelPortraitListViewItemDraw_o *)System_Convert__ToString_64554516(imageId, 0);
+    v7 = this;
   }
   else
   {
-    v10 = (EventHeelPortraitListViewItemDraw_o *)StringLiteral_22530/*"portrait_unknown"*/;
+    v7 = (EventHeelPortraitListViewItemDraw_o *)StringLiteral_22717/*"portrait_unknown"*/;
   }
-  v11 = item->fields._Entity_k__BackingField;
-  if ( !v11 )
+  v8 = item->fields._Entity_k__BackingField;
+  if ( !v8 )
 LABEL_21:
-    sub_1BCB254(this, item);
-  eventId = v11->fields.eventId;
+    sub_1C2D6EC(this, item);
+  eventId = v8->fields.eventId;
   heelPortraitSprite = v4->fields.heelPortraitSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_39794720(eventId, heelPortraitSprite, (System_String_o *)v10, 0LL);
+  AtlasManager__SetEventUI_40385372(eventId, heelPortraitSprite, (System_String_o *)v7, 0);
   if ( !item->fields._isHavePortrait_k__BackingField || item->fields._isDispDetailDialog_k__BackingField )
   {
     this = (EventHeelPortraitListViewItemDraw_o *)v4->fields.newImgSprite;
     if ( this )
     {
-      ShiningIconComponent__Clear((ShiningIconComponent_o *)this, 0LL);
+      ShiningIconComponent__Clear((ShiningIconComponent_o *)this, 0);
       return;
     }
     goto LABEL_21;
@@ -93,17 +86,15 @@ LABEL_21:
   this = (EventHeelPortraitListViewItemDraw_o *)v4->fields.newImgSprite;
   if ( !this )
     goto LABEL_21;
-  ShiningIconComponent__Set_40201960((ShiningIconComponent_o *)this, (System_String_o *)StringLiteral_19994/*"icon_common_new01"*/, 0LL);
+  ShiningIconComponent__Set_40795472((ShiningIconComponent_o *)this, (System_String_o *)StringLiteral_20159/*"icon_common_new01"*/, 0);
   this = (EventHeelPortraitListViewItemDraw_o *)v4->fields.newImgSprite;
   if ( !this )
     goto LABEL_21;
-  this = (EventHeelPortraitListViewItemDraw_o *)UnityEngine_Component__get_transform(
-                                                  (UnityEngine_Component_o *)this,
-                                                  0LL);
+  this = (EventHeelPortraitListViewItemDraw_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !this )
     goto LABEL_21;
-  v14.fields.x = v4->fields.ICON_SCALE;
-  v14.fields.y = v14.fields.x;
-  v14.fields.z = v14.fields.x;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v14, 0LL);
+  v11.fields.x = v4->fields.ICON_SCALE;
+  v11.fields.y = v11.fields.x;
+  v11.fields.z = v11.fields.x;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v11, 0);
 }

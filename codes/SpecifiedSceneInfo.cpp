@@ -1,26 +1,26 @@
-void __fastcall SpecifiedSceneInfo___ctor(SpecifiedSceneInfo_o *this, const MethodInfo *method)
+void SpecifiedSceneInfo___ctor(SpecifiedSceneInfo_o *this, const MethodInfo *method)
 {
   SpecifiedSceneInfo_o *v2; // x19
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
   v2 = this;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
-  v2->fields.nextSceneParam = 0LL;
+  System_Object___ctor((Il2CppObject *)this, 0);
+  v2->fields.nextSceneParam = 0;
   v2 = (SpecifiedSceneInfo_o *)((char *)v2 + 24);
-  v2[-1].fields.nextSceneParam = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)v2, 0, v3, v4);
+  v2[-1].fields.nextSceneParam = 0;
+  sub_1C2D434((CGThumbnailListItem_o *)v2, 0, v3, v4);
 }
 
 
-void __fastcall SpecifiedSceneInfo__InitParameter(SpecifiedSceneInfo_o *this, const MethodInfo *method)
+void SpecifiedSceneInfo__InitParameter(SpecifiedSceneInfo_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
   const MethodInfo *v3; // x3
   struct System_String_array **p_nextSceneParam; // x0
 
-  this->fields.nextSceneParam = 0LL;
+  this->fields.nextSceneParam = 0;
   p_nextSceneParam = &this->fields.nextSceneParam;
-  *(p_nextSceneParam - 1) = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)p_nextSceneParam, 0, v2, v3);
+  *(p_nextSceneParam - 1) = 0;
+  sub_1C2D434((CGThumbnailListItem_o *)p_nextSceneParam, 0, v2, v3);
 }

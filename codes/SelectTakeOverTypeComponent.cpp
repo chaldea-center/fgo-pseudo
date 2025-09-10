@@ -1,42 +1,38 @@
-void __fastcall SelectTakeOverTypeComponent___ctor(SelectTakeOverTypeComponent_o *this, const MethodInfo *method)
+void SelectTakeOverTypeComponent___ctor(SelectTakeOverTypeComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall SelectTakeOverTypeComponent__Awake(SelectTakeOverTypeComponent_o *this, const MethodInfo *method)
+void SelectTakeOverTypeComponent__Awake(SelectTakeOverTypeComponent_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall SelectTakeOverTypeComponent__SetupTitleImg(
-        SelectTakeOverTypeComponent_o *this,
-        const MethodInfo *method)
+void SelectTakeOverTypeComponent__SetupTitleImg(SelectTakeOverTypeComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   UISprite_o *titleImg; // x0
-  __int64 *v6; // x8
+  __int64 *v4; // x8
 
-  if ( (byte_4B19CF3 & 1) == 0 )
+  if ( (byte_4C24A77 & 1) == 0 )
   {
-    sub_1BCAFF8(&SelectTakeOverTypeComponent_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_20429/*"img_txt_account"*/, v3);
-    sub_1BCAFF8(&StringLiteral_20430/*"img_txt_account_overwrite"*/, v4);
-    byte_4B19CF3 = 1;
+    sub_1C2D490(&SelectTakeOverTypeComponent_TypeInfo);
+    sub_1C2D490(&StringLiteral_20600/*"img_txt_account"*/);
+    sub_1C2D490(&StringLiteral_20601/*"img_txt_account_overwrite"*/);
+    byte_4C24A77 = 1;
   }
   titleImg = this->fields.titleImg;
   if ( !titleImg
     || (!SelectTakeOverTypeComponent_TypeInfo->static_fields->isOverride
-      ? (v6 = &StringLiteral_20429/*"img_txt_account"*/)
-      : (v6 = &StringLiteral_20430/*"img_txt_account_overwrite"*/),
-        UISprite__set_spriteName(titleImg, (System_String_o *)*v6, 0LL),
-        (titleImg = this->fields.titleImg) == 0LL) )
+      ? (v4 = &StringLiteral_20600/*"img_txt_account"*/)
+      : (v4 = &StringLiteral_20601/*"img_txt_account_overwrite"*/),
+        UISprite__set_spriteName(titleImg, (System_String_o *)*v4, 0),
+        (titleImg = this->fields.titleImg) == 0) )
   {
-    sub_1BCB254(titleImg, method);
+    sub_1C2D6EC(titleImg, method);
   }
-  ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))titleImg->klass->vtable._33_MakePixelPerfect.method)(
+  ((void (__fastcall *)(UISprite_o *, const MethodInfo *))titleImg->klass->vtable._33_MakePixelPerfect.methodPtr)(
     titleImg,
-    titleImg->klass->vtable._34_get_minWidth.methodPtr);
+    titleImg->klass->vtable._33_MakePixelPerfect.method);
 }

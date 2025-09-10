@@ -1,60 +1,59 @@
-void __fastcall GalleryEntity___ctor(GalleryEntity_o *this, const MethodInfo *method)
+void GalleryEntity___ctor(GalleryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C810 & 1) == 0 )
+  if ( (byte_4C275C9 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1C810 = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C275C9 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall GalleryEntity__CreatePrimaryKey(GalleryEntity_o *this, const MethodInfo *method)
+int32_t GalleryEntity__CreatePrimaryKey(GalleryEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-System_Collections_Generic_List_GalleryResourceEntity__o *__fastcall GalleryEntity__GetEnableGalleryResourceEntityList(
+System_Collections_Generic_List_GalleryResourceEntity__o *GalleryEntity__GetEnableGalleryResourceEntityList(
         GalleryEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v5; // x1
-  const MethodInfo *v6; // x2
+  __int64 v4; // x1
+  const MethodInfo *v5; // x2
 
-  if ( (byte_4B1C80E & 1) == 0 )
+  if ( (byte_4C275C7 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_GalleryResourceMaster___, method);
-    sub_1BCAFF8(&DataManager_TypeInfo, v3);
-    byte_4B1C80E = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_GalleryResourceMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    byte_4C275C7 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_GalleryResourceMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_GalleryResourceMaster___);
   if ( !Master_object )
-    sub_1BCB254(0LL, v5);
+    sub_1C2D6EC(0, v4);
   return GalleryResourceMaster__GetEnableGalleryResourceEntityListByGalleryId(
            (GalleryResourceMaster_o *)Master_object,
            this->fields.id,
-           v6);
+           v5);
 }
 
 
-bool __fastcall GalleryEntity__IsEnableGallery(GalleryEntity_o *this, const MethodInfo *method)
+bool GalleryEntity__IsEnableGallery(GalleryEntity_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_GalleryResourceEntity__o *EnableGalleryResourceEntityList; // x0
 
-  if ( (byte_4B1C80F & 1) == 0 )
+  if ( (byte_4C275C8 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Any_GalleryResourceEntity___, method);
-    byte_4B1C80F = 1;
+    sub_1C2D490(&Method_System_Linq_Enumerable_Any_GalleryResourceEntity___);
+    byte_4C275C8 = 1;
   }
   EnableGalleryResourceEntityList = GalleryEntity__GetEnableGalleryResourceEntityList(this, method);
   return System_Linq_Enumerable__Any_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)EnableGalleryResourceEntityList,
-           (const MethodInfo_302661C *)Method_System_Linq_Enumerable_Any_GalleryResourceEntity___);
+           (const MethodInfo_30DA4C8 *)Method_System_Linq_Enumerable_Any_GalleryResourceEntity___);
 }

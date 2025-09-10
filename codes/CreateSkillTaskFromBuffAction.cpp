@@ -1,10 +1,10 @@
-void __fastcall CreateSkillTaskFromBuffAction___ctor(CreateSkillTaskFromBuffAction_o *this, const MethodInfo *method)
+void CreateSkillTaskFromBuffAction___ctor(CreateSkillTaskFromBuffAction_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-BattleLogicTask_array *__fastcall CreateSkillTaskFromBuffAction__CreateTaskArray(
+BattleLogicTask_array *CreateSkillTaskFromBuffAction__CreateTaskArray(
         CreateSkillTaskFromBuffAction_o *this,
         BattleLogic_o *logic,
         BattleAddSkillTaskAroundTargetTask_Argument_o *arg,
@@ -21,28 +21,28 @@ BattleLogicTask_array *__fastcall CreateSkillTaskFromBuffAction__CreateTaskArray
   __int64 v16; // x0
   __int64 v17; // x0
 
-  if ( (byte_4B1F3AD & 1) == 0 )
+  if ( (byte_4C2A248 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Array_Empty_BattleLogicTask___, logic);
-    byte_4B1F3AD = 1;
+    sub_1C2D490(&Method_System_Array_Empty_BattleLogicTask___);
+    byte_4C2A248 = 1;
   }
-  v7 = ((__int64 (__fastcall *)(CreateSkillTaskFromBuffAction_o *, BattleLogic_o *, BattleAddSkillTaskAroundTargetTask_Argument_o *, void *))this->klass->vtable._5_IsCreatable.method)(
+  v7 = ((__int64 (__fastcall *)(CreateSkillTaskFromBuffAction_o *, BattleLogic_o *, BattleAddSkillTaskAroundTargetTask_Argument_o *, const MethodInfo *))this->klass->vtable._5_IsCreatable.methodPtr)(
          this,
          logic,
          arg,
-         this->klass[1]._1.image);
+         this->klass->vtable._5_IsCreatable.method);
   if ( (v7 & 1) != 0 )
   {
     if ( !arg
       || (ActSvt_k__BackingField = arg->fields._ActSvt_k__BackingField,
           TargetSvt_k__BackingField = arg->fields._TargetSvt_k__BackingField,
           Command_k__BackingField = arg->fields._Command_k__BackingField,
-          v7 = ((__int64 (__fastcall *)(CreateSkillTaskFromBuffAction_o *, Il2CppMethodPointer))this->klass->vtable._4_get_TargetActs.method)(
+          v7 = ((__int64 (__fastcall *)(CreateSkillTaskFromBuffAction_o *, const MethodInfo *))this->klass->vtable._4_get_TargetActs.methodPtr)(
                  this,
-                 this->klass->vtable._5_IsCreatable.methodPtr),
+                 this->klass->vtable._4_get_TargetActs.method),
           !logic) )
     {
-      sub_1BCB254(v7, v8);
+      sub_1C2D6EC(v7, v8);
     }
     return BattleLogic__GetTargetBuffFunctionTaskArray(
              logic,
@@ -50,7 +50,7 @@ BattleLogicTask_array *__fastcall CreateSkillTaskFromBuffAction__CreateTaskArray
              TargetSvt_k__BackingField,
              Command_k__BackingField,
              (BuffList_ACTION_array *)v7,
-             0LL);
+             0);
   }
   else
   {
@@ -58,23 +58,23 @@ BattleLogicTask_array *__fastcall CreateSkillTaskFromBuffAction__CreateTaskArray
     v15 = *((_QWORD *)Method_System_Array_Empty_BattleLogicTask___ + 7);
     if ( !v15 )
     {
-      sub_1C1B4B8(Method_System_Array_Empty_BattleLogicTask___);
+      sub_1C7DC00(Method_System_Array_Empty_BattleLogicTask___);
       v15 = v14[7];
     }
     v16 = *(_QWORD *)(v15 + 16);
     if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
-      v16 = sub_1C1B45C(inited);
+      v16 = sub_1C7DBA4(inited);
     if ( !*(_DWORD *)(v16 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v16);
     v17 = *(_QWORD *)(v14[7] + 16LL);
     if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-      v17 = sub_1C1B45C(inited);
+      v17 = sub_1C7DBA4(inited);
     return **(BattleLogicTask_array ***)(v17 + 184);
   }
 }
 
 
-bool __fastcall CreateSkillTaskFromBuffAction__IsCreatable(
+bool CreateSkillTaskFromBuffAction__IsCreatable(
         CreateSkillTaskFromBuffAction_o *this,
         BattleLogic_o *logic,
         BattleAddSkillTaskAroundTargetTask_Argument_o *arg,
@@ -82,16 +82,16 @@ bool __fastcall CreateSkillTaskFromBuffAction__IsCreatable(
 {
   System_Collections_ICollection_o *v4; // x0
 
-  v4 = (System_Collections_ICollection_o *)((__int64 (__fastcall *)(CreateSkillTaskFromBuffAction_o *, Il2CppMethodPointer, BattleAddSkillTaskAroundTargetTask_Argument_o *, const MethodInfo *))this->klass->vtable._4_get_TargetActs.method)(
+  v4 = (System_Collections_ICollection_o *)((__int64 (__fastcall *)(CreateSkillTaskFromBuffAction_o *, const MethodInfo *, BattleAddSkillTaskAroundTargetTask_Argument_o *, const MethodInfo *))this->klass->vtable._4_get_TargetActs.methodPtr)(
                                              this,
-                                             this->klass->vtable._5_IsCreatable.methodPtr,
+                                             this->klass->vtable._4_get_TargetActs.method,
                                              arg,
                                              method);
-  return !BasicHelper__IsNullOrEmpty(v4, 0LL);
+  return !BasicHelper__IsNullOrEmpty(v4, 0);
 }
 
 
-BuffList_ACTION_array *__fastcall CreateSkillTaskFromBuffAction__get_TargetActs(
+BuffList_ACTION_array *CreateSkillTaskFromBuffAction__get_TargetActs(
         CreateSkillTaskFromBuffAction_o *this,
         const MethodInfo *method)
 {
@@ -101,25 +101,25 @@ BuffList_ACTION_array *__fastcall CreateSkillTaskFromBuffAction__get_TargetActs(
   __int64 v5; // x0
   __int64 v6; // x0
 
-  if ( (byte_4B1F3AC & 1) == 0 )
+  if ( (byte_4C2A247 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Array_Empty_BuffList_ACTION___, method);
-    byte_4B1F3AC = 1;
+    sub_1C2D490(&Method_System_Array_Empty_BuffList_ACTION___);
+    byte_4C2A247 = 1;
   }
   v3 = Method_System_Array_Empty_BuffList_ACTION___;
   v4 = *((_QWORD *)Method_System_Array_Empty_BuffList_ACTION___ + 7);
   if ( !v4 )
   {
-    sub_1C1B4B8(Method_System_Array_Empty_BuffList_ACTION___);
+    sub_1C7DC00(Method_System_Array_Empty_BuffList_ACTION___);
     v4 = v3[7];
   }
   v5 = *(_QWORD *)(v4 + 16);
   if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1C1B45C(inited);
+    v5 = sub_1C7DBA4(inited);
   if ( !*(_DWORD *)(v5 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v5);
   v6 = *(_QWORD *)(v3[7] + 16LL);
   if ( (*(_BYTE *)(v6 + 309) & 1) == 0 )
-    v6 = sub_1C1B45C(inited);
+    v6 = sub_1C7DBA4(inited);
   return **(BuffList_ACTION_array ***)(v6 + 184);
 }

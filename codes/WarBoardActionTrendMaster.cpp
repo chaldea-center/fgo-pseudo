@@ -1,165 +1,155 @@
-void __fastcall WarBoardActionTrendMaster___ctor(WarBoardActionTrendMaster_o *this, const MethodInfo *method)
+void WarBoardActionTrendMaster___ctor(WarBoardActionTrendMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D601 & 1) == 0 )
+  if ( (byte_4C28404 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_WarBoardActionTrendMaster__WarBoardActionTrendEntity__int___ctor__, method);
-    byte_4B1D601 = 1;
+    sub_1C2D490(&Method_DataMasterBase_WarBoardActionTrendMaster__WarBoardActionTrendEntity__int___ctor__);
+    byte_4C28404 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     330,
-    (const MethodInfo_32C5ADC *)Method_DataMasterBase_WarBoardActionTrendMaster__WarBoardActionTrendEntity__int___ctor__);
+    (const MethodInfo_3385A74 *)Method_DataMasterBase_WarBoardActionTrendMaster__WarBoardActionTrendEntity__int___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-WarBoardActionTrendEntity_o *__fastcall WarBoardActionTrendMaster__ConvertFromFutureEntity(
+WarBoardActionTrendEntity_o *WarBoardActionTrendMaster__ConvertFromFutureEntity(
         int32_t futureTrendId,
         WarBoardFutureActionTrendMaster_o *futureTrendMaster,
         WarBoardActionTrendEntity_o *baseTrendEntity,
         const MethodInfo *method)
 {
   int32_t v6; // w21
-  __int64 v7; // x1
   WarBoardActionTrendEntity_o *result; // x0
-  WarBoardActionTrendEntity_o *v9; // x20
-  WarBoardActionTrendEntity_o *v10; // x21
-  const MethodInfo *v11; // x3
+  WarBoardActionTrendEntity_o *v8; // x20
+  WarBoardActionTrendEntity_o *v9; // x21
+  const MethodInfo *v10; // x3
 
   v6 = futureTrendId;
-  if ( (byte_4B1D603 & 1) == 0 )
+  if ( (byte_4C28406 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_WarBoardFutureActionTrendMaster__WarBoardFutureActionTrendEntity__int__GetEntity__,
-      futureTrendMaster);
-    *(_QWORD *)&futureTrendId = sub_1BCAFF8(&WarBoardActionTrendEntity_TypeInfo, v7);
-    byte_4B1D603 = 1;
+    sub_1C2D490(&Method_DataMasterBase_WarBoardFutureActionTrendMaster__WarBoardFutureActionTrendEntity__int__GetEntity__);
+    *(_QWORD *)&futureTrendId = sub_1C2D490(&WarBoardActionTrendEntity_TypeInfo);
+    byte_4C28406 = 1;
   }
   if ( !futureTrendMaster )
-    sub_1BCB254(*(_QWORD *)&futureTrendId, futureTrendMaster);
+    sub_1C2D6EC(*(_QWORD *)&futureTrendId, futureTrendMaster);
   result = (WarBoardActionTrendEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                             (DataMasterBase_TMaster__TEntity__PKType__o *)futureTrendMaster,
                                             v6,
-                                            (const MethodInfo_32C7E00 *)Method_DataMasterBase_WarBoardFutureActionTrendMaster__WarBoardFutureActionTrendEntity__int__GetEntity__);
+                                            (const MethodInfo_3387D98 *)Method_DataMasterBase_WarBoardFutureActionTrendMaster__WarBoardFutureActionTrendEntity__int__GetEntity__);
   if ( result )
   {
-    v9 = result;
-    v10 = (WarBoardActionTrendEntity_o *)sub_1BCB244(WarBoardActionTrendEntity_TypeInfo);
-    WarBoardActionTrendEntity___ctor_42433820(v10, (WarBoardFutureActionTrendEntity_o *)v9, baseTrendEntity, v11);
-    return v10;
+    v8 = result;
+    v9 = (WarBoardActionTrendEntity_o *)sub_1C2D6DC(WarBoardActionTrendEntity_TypeInfo);
+    WarBoardActionTrendEntity___ctor_43064960(v9, (WarBoardFutureActionTrendEntity_o *)v8, baseTrendEntity, v10);
+    return v9;
   }
   return result;
 }
 
 
-WarBoardActionTrendEntity_array *__fastcall WarBoardActionTrendMaster__GetFutureActionTrendEntityArray(
+WarBoardActionTrendEntity_array *WarBoardActionTrendMaster__GetFutureActionTrendEntityArray(
         WarBoardActionTrendMaster_o *this,
         WarBoardActionTrendEntity_o *baseTrendEntity,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
+  __int64 v4; // x19
+  __int64 v5; // x0
   __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x19
-  __int64 v12; // x0
-  __int64 v13; // x1
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  __int64 v16; // x8
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  __int64 v9; // x8
   long double inited; // q0
-  _QWORD *v18; // x19
-  __int64 v19; // x8
-  __int64 v20; // x0
-  __int64 v21; // x0
+  _QWORD *v11; // x19
+  __int64 v12; // x8
+  __int64 v13; // x0
+  __int64 v14; // x0
   Il2CppObject *Master_object; // x0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  __int64 v26; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v27; // x20
-  System_Func_T__TResult__o *v28; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v29; // x0
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  __int64 v19; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v20; // x20
+  System_Func_T__TResult__o *v21; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v22; // x0
 
-  if ( (byte_4B1D602 & 1) == 0 )
+  if ( (byte_4C28405 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Array_Empty_WarBoardActionTrendEntity___, baseTrendEntity);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_WarBoardFutureActionTrendMaster___, v4);
-    sub_1BCAFF8(&DataManager_TypeInfo, v5);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Select_int__WarBoardActionTrendEntity___, v6);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToArray_WarBoardActionTrendEntity___, v7);
-    sub_1BCAFF8(&System_Func_int__WarBoardActionTrendEntity__TypeInfo, v8);
-    sub_1BCAFF8(&Method_WarBoardActionTrendMaster___c__DisplayClass1_0__GetFutureActionTrendEntityArray_b__0__, v9);
-    sub_1BCAFF8(&WarBoardActionTrendMaster___c__DisplayClass1_0_TypeInfo, v10);
-    byte_4B1D602 = 1;
+    sub_1C2D490(&Method_System_Array_Empty_WarBoardActionTrendEntity___);
+    sub_1C2D490(&Method_DataManager_GetMaster_WarBoardFutureActionTrendMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Select_int__WarBoardActionTrendEntity___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_ToArray_WarBoardActionTrendEntity___);
+    sub_1C2D490(&System_Func_int__WarBoardActionTrendEntity__TypeInfo);
+    sub_1C2D490(&Method_WarBoardActionTrendMaster___c__DisplayClass1_0__GetFutureActionTrendEntityArray_b__0__);
+    sub_1C2D490(&WarBoardActionTrendMaster___c__DisplayClass1_0_TypeInfo);
+    byte_4C28405 = 1;
   }
-  v11 = sub_1BCB244(WarBoardActionTrendMaster___c__DisplayClass1_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v11, 0LL);
-  if ( !v11 )
+  v4 = sub_1C2D6DC(WarBoardActionTrendMaster___c__DisplayClass1_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v4, 0);
+  if ( !v4 )
     goto LABEL_19;
-  *(_QWORD *)(v11 + 24) = baseTrendEntity;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v11 + 24), (int32_t)baseTrendEntity, v14, v15);
-  v16 = *(_QWORD *)(v11 + 24);
-  if ( !v16 )
+  *(_QWORD *)(v4 + 24) = baseTrendEntity;
+  sub_1C2D434((CGThumbnailListItem_o *)(v4 + 24), (int32_t)baseTrendEntity, v7, v8);
+  v9 = *(_QWORD *)(v4 + 24);
+  if ( !v9 )
     goto LABEL_19;
-  if ( !BasicHelper__IsNullOrEmpty(*(System_Collections_ICollection_o **)(v16 + 56), 0LL) )
+  if ( !BasicHelper__IsNullOrEmpty(*(System_Collections_ICollection_o **)(v9 + 56), 0) )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_WarBoardFutureActionTrendMaster___);
-    *(_QWORD *)(v11 + 16) = Master_object;
-    sub_1BCAF9C((CGThumbnailListItem_o *)(v11 + 16), (int32_t)Master_object, v24, v25);
-    v26 = *(_QWORD *)(v11 + 24);
-    if ( v26 )
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_WarBoardFutureActionTrendMaster___);
+    *(_QWORD *)(v4 + 16) = Master_object;
+    sub_1C2D434((CGThumbnailListItem_o *)(v4 + 16), (int32_t)Master_object, v17, v18);
+    v19 = *(_QWORD *)(v4 + 24);
+    if ( v19 )
     {
-      v27 = *(System_Collections_Generic_IEnumerable_TSource__o **)(v26 + 56);
-      v28 = (System_Func_T__TResult__o *)sub_1BCB244(System_Func_int__WarBoardActionTrendEntity__TypeInfo);
+      v20 = *(System_Collections_Generic_IEnumerable_TSource__o **)(v19 + 56);
+      v21 = (System_Func_T__TResult__o *)sub_1C2D6DC(System_Func_int__WarBoardActionTrendEntity__TypeInfo);
       System_Func_int__object____ctor(
-        v28,
-        (Il2CppObject *)v11,
+        v21,
+        (Il2CppObject *)v4,
         Method_WarBoardActionTrendMaster___c__DisplayClass1_0__GetFutureActionTrendEntityArray_b__0__,
-        0LL);
-      v29 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__object_(
-                                                                   v27,
-                                                                   (System_Func_TSource__TResult__o *)v28,
-                                                                   (const MethodInfo_304C604 *)Method_System_Linq_Enumerable_Select_int__WarBoardActionTrendEntity___);
+        0);
+      v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__object_(
+                                                                   v20,
+                                                                   (System_Func_TSource__TResult__o *)v21,
+                                                                   (const MethodInfo_3102360 *)Method_System_Linq_Enumerable_Select_int__WarBoardActionTrendEntity___);
       return (WarBoardActionTrendEntity_array *)System_Linq_Enumerable__ToArray_object_(
-                                                  v29,
-                                                  (const MethodInfo_30572C4 *)Method_System_Linq_Enumerable_ToArray_WarBoardActionTrendEntity___);
+                                                  v22,
+                                                  (const MethodInfo_310DFEC *)Method_System_Linq_Enumerable_ToArray_WarBoardActionTrendEntity___);
     }
 LABEL_19:
-    sub_1BCB254(v12, v13);
+    sub_1C2D6EC(v5, v6);
   }
-  v18 = Method_System_Array_Empty_WarBoardActionTrendEntity___;
-  v19 = *((_QWORD *)Method_System_Array_Empty_WarBoardActionTrendEntity___ + 7);
-  if ( !v19 )
+  v11 = Method_System_Array_Empty_WarBoardActionTrendEntity___;
+  v12 = *((_QWORD *)Method_System_Array_Empty_WarBoardActionTrendEntity___ + 7);
+  if ( !v12 )
   {
-    sub_1C1B4B8(Method_System_Array_Empty_WarBoardActionTrendEntity___);
-    v19 = v18[7];
+    sub_1C7DC00(Method_System_Array_Empty_WarBoardActionTrendEntity___);
+    v12 = v11[7];
   }
-  v20 = *(_QWORD *)(v19 + 16);
-  if ( (*(_BYTE *)(v20 + 309) & 1) == 0 )
-    v20 = sub_1C1B45C(inited);
-  if ( !*(_DWORD *)(v20 + 224) )
-    inited = j_il2cpp_runtime_class_init_0(v20);
-  v21 = *(_QWORD *)(v18[7] + 16LL);
-  if ( (*(_BYTE *)(v21 + 309) & 1) == 0 )
-    v21 = sub_1C1B45C(inited);
-  return **(WarBoardActionTrendEntity_array ***)(v21 + 184);
+  v13 = *(_QWORD *)(v12 + 16);
+  if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
+    v13 = sub_1C7DBA4(inited);
+  if ( !*(_DWORD *)(v13 + 224) )
+    inited = j_il2cpp_runtime_class_init_0(v13);
+  v14 = *(_QWORD *)(v11[7] + 16LL);
+  if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
+    v14 = sub_1C7DBA4(inited);
+  return **(WarBoardActionTrendEntity_array ***)(v14 + 184);
 }
 
 
-void __fastcall WarBoardActionTrendMaster___c__DisplayClass1_0___ctor(
+void WarBoardActionTrendMaster___c__DisplayClass1_0___ctor(
         WarBoardActionTrendMaster___c__DisplayClass1_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-WarBoardActionTrendEntity_o *__fastcall WarBoardActionTrendMaster___c__DisplayClass1_0___GetFutureActionTrendEntityArray_b__0(
+WarBoardActionTrendEntity_o *WarBoardActionTrendMaster___c__DisplayClass1_0___GetFutureActionTrendEntityArray_b__0(
         WarBoardActionTrendMaster___c__DisplayClass1_0_o *this,
         int32_t x,
         const MethodInfo *method)

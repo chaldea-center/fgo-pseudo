@@ -1,106 +1,106 @@
-void __fastcall ShiningIconComponent___ctor(ShiningIconComponent_o *this, const MethodInfo *method)
+void ShiningIconComponent___ctor(ShiningIconComponent_o *this, const MethodInfo *method)
 {
-  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall ShiningIconComponent__Awake(ShiningIconComponent_o *this, const MethodInfo *method)
+void ShiningIconComponent__Awake(ShiningIconComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Behaviour_o *widget; // x0
 
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
-    sub_1BCB254(0LL, method);
-  UnityEngine_Behaviour__set_enabled(widget, 0, 0LL);
+    sub_1C2D6EC(0, method);
+  UnityEngine_Behaviour__set_enabled(widget, 0, 0);
 }
 
 
-void __fastcall ShiningIconComponent__Clear(ShiningIconComponent_o *this, const MethodInfo *method)
+void ShiningIconComponent__Clear(ShiningIconComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Behaviour_o *widget; // x0
 
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
     goto LABEL_6;
-  if ( UnityEngine_Behaviour__get_enabled(widget, 0LL) )
+  if ( UnityEngine_Behaviour__get_enabled(widget, 0) )
   {
     widget = (UnityEngine_Behaviour_o *)this->fields.widget;
     if ( widget )
     {
-      UnityEngine_Behaviour__set_enabled(widget, 0, 0LL);
+      UnityEngine_Behaviour__set_enabled(widget, 0, 0);
       return;
     }
 LABEL_6:
-    sub_1BCB254(widget, method);
+    sub_1C2D6EC(widget, method);
   }
 }
 
 
-void __fastcall ShiningIconComponent__Set(ShiningIconComponent_o *this, const MethodInfo *method)
+void ShiningIconComponent__Set(ShiningIconComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Behaviour_o *widget; // x0
 
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
     goto LABEL_5;
-  if ( UnityEngine_Behaviour__get_enabled(widget, 0LL) )
+  if ( UnityEngine_Behaviour__get_enabled(widget, 0) )
     return;
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
 LABEL_5:
-    sub_1BCB254(widget, method);
-  UnityEngine_Behaviour__set_enabled(widget, 1, 0LL);
+    sub_1C2D6EC(widget, method);
+  UnityEngine_Behaviour__set_enabled(widget, 1, 0);
 }
 
 
-void __fastcall ShiningIconComponent__Set_40201960(
+void ShiningIconComponent__Set_40795472(
         ShiningIconComponent_o *this,
         System_String_o *spriteName,
         const MethodInfo *method)
 {
   UnityEngine_Behaviour_o *widget; // x0
   struct UIWidget_o *v6; // x20
-  __int64 methodPtr_low; // x10
+  __int64 naturalAligment; // x10
 
-  if ( (byte_4B1BA20 & 1) == 0 )
+  if ( (byte_4C267C7 & 1) == 0 )
   {
-    sub_1BCAFF8(&UISprite_TypeInfo, spriteName);
-    byte_4B1BA20 = 1;
+    sub_1C2D490(&UISprite_TypeInfo);
+    byte_4C267C7 = 1;
   }
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
     goto LABEL_13;
-  if ( !UnityEngine_Behaviour__get_enabled(widget, 0LL) )
+  if ( !UnityEngine_Behaviour__get_enabled(widget, 0) )
   {
     widget = (UnityEngine_Behaviour_o *)this->fields.widget;
     if ( widget )
     {
-      UnityEngine_Behaviour__set_enabled(widget, 1, 0LL);
+      UnityEngine_Behaviour__set_enabled(widget, 1, 0);
       goto LABEL_7;
     }
 LABEL_13:
-    sub_1BCB254(widget, spriteName);
+    sub_1C2D6EC(widget, spriteName);
   }
 LABEL_7:
   v6 = this->fields.widget;
   if ( v6 )
   {
-    methodPtr_low = LOBYTE(UISprite_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(v6->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low
-      && (UISprite_c *)v6->klass->_2.typeHierarchy[methodPtr_low - 1] == UISprite_TypeInfo )
+    naturalAligment = UISprite_TypeInfo->_2.naturalAligment;
+    if ( v6->klass->_2.naturalAligment >= (unsigned int)naturalAligment
+      && (UISprite_c *)v6->klass->_2.typeHierarchy[naturalAligment - 1] == UISprite_TypeInfo )
     {
-      UISprite__set_spriteName((UISprite_o *)v6, spriteName, 0LL);
+      UISprite__set_spriteName((UISprite_o *)v6, spriteName, 0);
       if ( spriteName )
-        ((void (__fastcall *)(struct UIWidget_o *, Il2CppMethodPointer))v6->klass->vtable._33_MakePixelPerfect.method)(
+        ((void (__fastcall *)(struct UIWidget_o *, const MethodInfo *))v6->klass->vtable._33_MakePixelPerfect.methodPtr)(
           v6,
-          v6->klass->vtable._34_get_minWidth.methodPtr);
+          v6->klass->vtable._33_MakePixelPerfect.method);
     }
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ShiningIconComponent__Set_40206624(ShiningIconComponent_o *this, bool isDisp, const MethodInfo *method)
+void ShiningIconComponent__Set_40800416(ShiningIconComponent_o *this, bool isDisp, const MethodInfo *method)
 {
   if ( isDisp )
     ShiningIconComponent__Set(this, (const MethodInfo *)isDisp);

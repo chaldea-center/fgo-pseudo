@@ -1,275 +1,260 @@
-void __fastcall BoostFunctionUtility___ctor(BoostFunctionUtility_o *this, const MethodInfo *method)
+void BoostFunctionUtility___ctor(BoostFunctionUtility_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B17DCA & 1) == 0 )
+  if ( (byte_4C22B02 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonTemplate_BoostFunctionUtility___ctor__, method);
-    byte_4B17DCA = 1;
+    sub_1C2D490(&Method_SingletonTemplate_BoostFunctionUtility___ctor__);
+    byte_4C22B02 = 1;
   }
   SingletonTemplate_object____ctor(
     (SingletonTemplate_CLASS__o *)this,
-    (const MethodInfo_38F8FF0 *)Method_SingletonTemplate_BoostFunctionUtility___ctor__);
+    (const MethodInfo_39D41E4 *)Method_SingletonTemplate_BoostFunctionUtility___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-BoostEntity_array *__fastcall BoostFunctionUtility__GetSupportRequestAllowed(
+BoostEntity_array *BoostFunctionUtility__GetSupportRequestAllowed(
         BoostFunctionUtility_o *this,
         int32_t questId,
         int32_t questPhase,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  System_Collections_Generic_List_object__o *v18; // x19
+  System_Collections_Generic_List_object__o *v6; // x19
   void *Instance; // x0
-  __int64 v20; // x1
+  __int64 v8; // x1
   QuestPhaseEntity_o *Entity; // x20
-  __int64 v22; // x2
-  int v23; // w8
-  void *v24; // x21
-  unsigned int v25; // w26
-  __int64 v26; // x22
-  System_Int32_array *v27; // x23
-  __int64 v28; // x1
+  __int64 v10; // x2
+  int v11; // w8
+  void *v12; // x21
+  unsigned int v13; // w26
+  __int64 v14; // x22
+  System_Int32_array *v15; // x23
+  __int64 v16; // x1
   System_Int32_array *QuestTargetValues; // x0
   _BOOL8 IsMatchIndividuality; // x0
-  __int64 v31; // x1
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
+  __int64 v19; // x1
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v35; // x9
+  _QWORD *v23; // x9
   __int64 size; // x10
-  Il2CppClass **v37; // x0
-  System_Collections_Generic_List_Enumerator_object__o v39; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v40; // [xsp+20h] [xbp-80h] BYREF
+  Il2CppClass **v25; // x0
+  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v28; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B17DC8 & 1) == 0 )
+  if ( (byte_4C22B00 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_BoostMaster___, *(_QWORD *)&questId);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_FunctionMaster___, v6);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_QuestPhaseMaster___, v7);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_SkillLvMaster___, v8);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_FunctionEntity__Dispose__, v9);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_FunctionEntity__MoveNext__, v10);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_FunctionEntity__get_Current__, v11);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity__Add__, v12);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_FunctionEntity__GetEnumerator__, v13);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity__ToArray__, v14);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity___ctor__, v15);
-    sub_1BCAFF8(&System_Collections_Generic_List_BoostEntity__TypeInfo, v16);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    byte_4B17DC8 = 1;
+    sub_1C2D490(&Method_DataManager_GetMasterData_BoostMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_FunctionMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_SkillLvMaster___);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_FunctionEntity__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_FunctionEntity__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_FunctionEntity__get_Current__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_FunctionEntity__GetEnumerator__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_BoostEntity__TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C22B00 = 1;
   }
-  memset(&v40, 0, sizeof(v40));
-  v18 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_BoostEntity__TypeInfo);
+  memset(&v28, 0, sizeof(v28));
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_BoostEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v18,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_BoostEntity___ctor__);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    v6,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_BoostEntity___ctor__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_36;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+               (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
   if ( !Instance )
     goto LABEL_36;
-  Entity = QuestPhaseMaster__GetEntity((QuestPhaseMaster_o *)Instance, questId, questPhase, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Entity = QuestPhaseMaster__GetEntity((QuestPhaseMaster_o *)Instance, questId, questPhase, 0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_36;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_BoostMaster___);
+               (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_BoostMaster___);
   if ( !Instance )
     goto LABEL_36;
-  Instance = BoostMaster__GetAvailableEntities((BoostMaster_o *)Instance, 0LL);
+  Instance = BoostMaster__GetAvailableEntities((BoostMaster_o *)Instance, 0);
   if ( !Instance )
     goto LABEL_36;
-  v23 = *((_DWORD *)Instance + 6);
-  v24 = Instance;
-  if ( v23 >= 1 )
+  v11 = *((_DWORD *)Instance + 6);
+  v12 = Instance;
+  if ( v11 >= 1 )
   {
-    v25 = 0;
+    v13 = 0;
     while ( 1 )
     {
-      if ( v25 >= v23 )
-        sub_1BCB25C(Instance, v20, v22);
-      v26 = *((_QWORD *)v24 + (int)v25 + 4);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      if ( v13 >= v11 )
+        sub_1C2D6F4(Instance, v8, v10);
+      v14 = *((_QWORD *)v12 + (int)v13 + 4);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         break;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_SkillLvMaster___);
-      if ( !v26 )
+                   (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_SkillLvMaster___);
+      if ( !v14 )
         break;
       if ( !Instance )
         break;
-      Instance = SkillLvMaster__GetEntity((SkillLvMaster_o *)Instance, *(_DWORD *)(v26 + 24), 1, 0LL);
+      Instance = SkillLvMaster__GetEntity((SkillLvMaster_o *)Instance, *(_DWORD *)(v14 + 24), 1, 0);
       if ( !Instance )
         break;
-      v27 = (System_Int32_array *)*((_QWORD *)Instance + 4);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      v15 = (System_Int32_array *)*((_QWORD *)Instance + 4);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         break;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_FunctionMaster___);
+                   (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_FunctionMaster___);
       if ( !Instance )
         break;
-      Instance = FunctionMaster__GetFunctionEntitiesByIds((FunctionMaster_o *)Instance, v27, 0LL);
+      Instance = FunctionMaster__GetFunctionEntitiesByIds((FunctionMaster_o *)Instance, v15, 0);
       if ( !Instance )
         break;
       System_Collections_Generic_List_object___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v39,
+        (System_Collections_Generic_List_Enumerator_T__o *)&v27,
         (System_Collections_Generic_List_object__o *)Instance,
-        (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_FunctionEntity__GetEnumerator__);
-      v40 = v39;
+        (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_FunctionEntity__GetEnumerator__);
+      v28 = v27;
       while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-                &v40,
-                (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_FunctionEntity__MoveNext__) )
+                &v28,
+                (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_FunctionEntity__MoveNext__) )
       {
-        if ( !v40.fields._current )
-          sub_1BCB254(0LL, v28);
-        QuestTargetValues = FunctionEntity__getQuestTargetValues((FunctionEntity_o *)v40.fields._current, 0LL);
+        if ( !v28.fields._current )
+          sub_1C2D6EC(0, v16);
+        QuestTargetValues = FunctionEntity__getQuestTargetValues((FunctionEntity_o *)v28.fields._current, 0);
         if ( !Entity )
-          sub_1BCB254(QuestTargetValues, QuestTargetValues);
-        IsMatchIndividuality = QuestPhaseEntity__IsMatchIndividuality(Entity, QuestTargetValues, 0LL);
+          sub_1C2D6EC(QuestTargetValues, QuestTargetValues);
+        IsMatchIndividuality = QuestPhaseEntity__IsMatchIndividuality(Entity, QuestTargetValues, 0);
         if ( IsMatchIndividuality )
         {
-          if ( !v18 )
-            sub_1BCB254(IsMatchIndividuality, v31);
-          items = v18->fields._items;
-          v35 = Method_System_Collections_Generic_List_BoostEntity__Add__;
-          ++v18->fields._version;
+          if ( !v6 )
+            sub_1C2D6EC(IsMatchIndividuality, v19);
+          items = v6->fields._items;
+          v23 = Method_System_Collections_Generic_List_BoostEntity__Add__;
+          ++v6->fields._version;
           if ( !items )
-            sub_1BCB254(IsMatchIndividuality, v31);
-          size = v18->fields._size;
-          if ( (unsigned int)size >= items->max_length )
+            sub_1C2D6EC(IsMatchIndividuality, v19);
+          size = v6->fields._size;
+          if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
-              v18,
-              (Il2CppObject *)v26,
-              *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+              v6,
+              (Il2CppObject *)v14,
+              *(const MethodInfo_3789B84 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
           }
           else
           {
-            v37 = &items->obj.klass + size;
-            v18->fields._size = size + 1;
-            v37[4] = (Il2CppClass *)v26;
-            sub_1BCAF9C((CGThumbnailListItem_o *)(v37 + 4), v26, v32, v33);
+            v25 = &items->obj.klass + size;
+            v6->fields._size = size + 1;
+            v25[4] = (Il2CppClass *)v14;
+            sub_1C2D434((CGThumbnailListItem_o *)(v25 + 4), v14, v20, v21);
           }
           break;
         }
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v40,
-        (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_FunctionEntity__Dispose__);
-      v23 = *((_DWORD *)v24 + 6);
-      if ( (int)++v25 >= v23 )
+        &v28,
+        (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_FunctionEntity__Dispose__);
+      v11 = *((_DWORD *)v12 + 6);
+      if ( (int)++v13 >= v11 )
         goto LABEL_34;
     }
 LABEL_36:
-    sub_1BCB254(Instance, v20);
+    sub_1C2D6EC(Instance, v8);
   }
 LABEL_34:
-  if ( !v18 )
+  if ( !v6 )
     goto LABEL_36;
   return (BoostEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                v18,
-                                (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BoostEntity__ToArray__);
+                                v6,
+                                (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_BoostEntity__ToArray__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-bool __fastcall BoostFunctionUtility__IsDisplayBoostSupportRequest(
+bool BoostFunctionUtility__IsDisplayBoostSupportRequest(
         BoostFunctionUtility_o *this,
         int32_t questId,
         int32_t questPhase,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
   BoostEntity_array *SupportRequestAllowed; // x19
   Il2CppObject *Master_object; // x0
-  __int64 v9; // x1
-  __int64 v10; // x2
+  __int64 v8; // x1
+  __int64 v9; // x2
   int max_length; // w8
-  bool v12; // w22
-  CommonReleaseMaster_o *v13; // x20
-  int v14; // w23
-  BoostEntity_o *v15; // x21
+  bool v11; // w22
+  CommonReleaseMaster_o *v12; // x20
+  int v13; // w23
+  BoostEntity_o *v14; // x21
   bool IsOpen; // w0
   int32_t hideCommonReleaseId; // w1
-  bool v18; // w21
+  bool v17; // w21
 
-  if ( (byte_4B17DC9 & 1) == 0 )
+  if ( (byte_4C22B01 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_CommonReleaseMaster___, *(_QWORD *)&questId);
-    this = (BoostFunctionUtility_o *)sub_1BCAFF8(&DataManager_TypeInfo, v6);
-    byte_4B17DC9 = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    this = (BoostFunctionUtility_o *)sub_1C2D490(&DataManager_TypeInfo);
+    byte_4C22B01 = 1;
   }
   SupportRequestAllowed = BoostFunctionUtility__GetSupportRequestAllowed(this, questId, questPhase, method);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !SupportRequestAllowed )
     goto LABEL_15;
   max_length = SupportRequestAllowed->max_length;
-  v12 = max_length > 0;
+  v11 = max_length > 0;
   if ( max_length >= 1 )
   {
-    v13 = (CommonReleaseMaster_o *)Master_object;
-    v14 = 0;
+    v12 = (CommonReleaseMaster_o *)Master_object;
+    v13 = 0;
     while ( 1 )
     {
-      if ( v14 >= (unsigned int)max_length )
-        sub_1BCB25C(Master_object, v9, v10);
-      v15 = SupportRequestAllowed->m_Items[v14];
-      if ( !v15 || !v13 )
+      if ( v13 >= (unsigned int)max_length )
+        sub_1C2D6F4(Master_object, v8, v9);
+      v14 = SupportRequestAllowed->m_Items[v13];
+      if ( !v14 || !v12 )
         break;
-      IsOpen = CommonReleaseMaster__IsOpen(v13, v15->fields.commonReleaseId, 0LL, 0, 0LL);
-      hideCommonReleaseId = v15->fields.hideCommonReleaseId;
-      v18 = IsOpen;
-      Master_object = (Il2CppObject *)CommonReleaseMaster__IsOpen(v13, hideCommonReleaseId, 0LL, 0, 0LL);
-      if ( ((unsigned __int8)Master_object & 1) != 0 || !v18 )
+      IsOpen = CommonReleaseMaster__IsOpen(v12, v14->fields.commonReleaseId, 0, 0, 0);
+      hideCommonReleaseId = v14->fields.hideCommonReleaseId;
+      v17 = IsOpen;
+      Master_object = (Il2CppObject *)CommonReleaseMaster__IsOpen(v12, hideCommonReleaseId, 0, 0, 0);
+      if ( ((unsigned __int8)Master_object & 1) != 0 || !v17 )
       {
         max_length = SupportRequestAllowed->max_length;
-        v12 = ++v14 < max_length;
-        if ( v14 < max_length )
+        v11 = ++v13 < max_length;
+        if ( v13 < max_length )
           continue;
       }
-      return v12;
+      return v11;
     }
 LABEL_15:
-    sub_1BCB254(Master_object, v9);
+    sub_1C2D6EC(Master_object, v8);
   }
-  return v12;
+  return v11;
 }
 
 
-bool __fastcall BoostFunctionUtility__IsEnoughUserItem(
+bool BoostFunctionUtility__IsEnoughUserItem(
         BoostFunctionUtility_o *this,
         CommonConsumeEntity_o *commonConsumeEntity,
         UserItemEntity_array *userItemEntityList,
         const MethodInfo *method)
 {
-  signed int max_length; // w8
+  int max_length; // w8
   int v5; // w9
   UserItemEntity_o *v6; // x10
 
   if ( !userItemEntityList )
 LABEL_11:
-    sub_1BCB254(this, commonConsumeEntity);
+    sub_1C2D6EC(this, commonConsumeEntity);
   max_length = userItemEntityList->max_length;
   if ( max_length < 1 )
     return 0;
@@ -277,7 +262,7 @@ LABEL_11:
   while ( 1 )
   {
     if ( max_length == v5 )
-      sub_1BCB25C(this, commonConsumeEntity, userItemEntityList);
+      sub_1C2D6F4(this, commonConsumeEntity, userItemEntityList);
     if ( !commonConsumeEntity )
       goto LABEL_11;
     v6 = userItemEntityList->m_Items[v5];
@@ -291,52 +276,49 @@ LABEL_11:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BoostFunctionUtility_CallbackFunc___ctor(
+void BoostFunctionUtility_CallbackFunc___ctor(
         BoostFunctionUtility_CallbackFunc_o *this,
         Il2CppObject *object,
         intptr_t method,
         const MethodInfo *a4)
 {
-  __int64 v4; // x8
-  __int64 v6; // x21
+  intptr_t v4; // x8
   int v8; // w22
-  struct System_Reflection_MethodInfo_o *v9; // x9
+  Il2CppObject *m_target; // x9
   __int64 v10; // x0
 
-  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
-  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v6 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v4;
-  *(_QWORD *)&this->fields.method = object;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(v6 + 82);
-  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BCB0B8(v6) & 1) == 0 )
+  v4 = *(_QWORD *)(method + 8);
+  this->fields.method = method;
+  this->fields.method_ptr = v4;
+  this->fields.m_target = object;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  v8 = *(unsigned __int8 *)(method + 82);
+  this->fields.method_code = (intptr_t)this;
+  if ( (sub_1C2D550(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1BCB270(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BCB120(v10, 0LL);
+      v10 = sub_1C2D708(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C2D5B8(v10, 0);
     }
     goto LABEL_5;
   }
   if ( v8 != 2 )
   {
 LABEL_5:
-    v9 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
-    this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-    this->fields.original_method_info = v9;
+    m_target = this->fields.m_target;
+    this->fields.invoke_impl = this->fields.method_ptr;
+    this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.m_target = (Il2CppObject *)sub_1A0F16C;
+  this->fields.invoke_impl = (intptr_t)sub_1A6BA84;
 LABEL_6:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A0F114;
+  this->fields.extra_arg = (intptr_t)sub_1A6BA2C;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_IAsyncResult_o *__fastcall BoostFunctionUtility_CallbackFunc__BeginInvoke(
+System_IAsyncResult_o *BoostFunctionUtility_CallbackFunc__BeginInvoke(
         BoostFunctionUtility_CallbackFunc_o *this,
         int32_t result,
         int32_t index,
@@ -344,52 +326,51 @@ System_IAsyncResult_o *__fastcall BoostFunctionUtility_CallbackFunc__BeginInvoke
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x2
-  __int64 v11; // x3
-  __int64 v12; // x4
-  __int64 v14[3]; // [xsp+8h] [xbp-58h] BYREF
-  int32_t v15; // [xsp+28h] [xbp-38h] BYREF
-  int32_t v16; // [xsp+2Ch] [xbp-34h] BYREF
+  __int64 v9; // x2
+  __int64 v10; // x3
+  __int64 v11; // x4
+  _QWORD v13[3]; // [xsp+8h] [xbp-58h] BYREF
+  int32_t v14; // [xsp+28h] [xbp-38h] BYREF
+  int32_t v15; // [xsp+2Ch] [xbp-34h] BYREF
 
-  v15 = index;
-  v16 = result;
-  if ( (byte_4B17DCB & 1) == 0 )
+  v14 = index;
+  v15 = result;
+  if ( (byte_4C22B03 & 1) == 0 )
   {
-    sub_1BCAFF8(&BoostFunctionUtility_BoostResultKind_TypeInfo, *(_QWORD *)&result);
-    sub_1BCAFF8(&int_TypeInfo, v9);
-    byte_4B17DCB = 1;
+    sub_1C2D490(&BoostFunctionUtility_BoostResultKind_TypeInfo);
+    sub_1C2D490(&int_TypeInfo);
+    byte_4C22B03 = 1;
   }
-  v14[2] = 0LL;
-  v14[0] = j_il2cpp_value_box_0(
+  v13[2] = 0;
+  v13[0] = j_il2cpp_value_box_0(
              BoostFunctionUtility_BoostResultKind_TypeInfo,
-             &v16,
+             &v15,
              *(_QWORD *)&index,
              callback,
              object);
-  v14[1] = j_il2cpp_value_box_0(int_TypeInfo, &v15, v10, v11, v12);
-  return (System_IAsyncResult_o *)sub_1BCAFAC(this, v14, callback, object);
+  v13[1] = j_il2cpp_value_box_0(int_TypeInfo, &v14, v9, v10, v11);
+  return (System_IAsyncResult_o *)sub_1C2D444(this, v13, callback, object);
 }
 
 
-void __fastcall BoostFunctionUtility_CallbackFunc__EndInvoke(
+void BoostFunctionUtility_CallbackFunc__EndInvoke(
         BoostFunctionUtility_CallbackFunc_o *this,
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1BCAFB0(result, 0LL, method);
+  sub_1C2D448(result, 0, method);
 }
 
 
-void __fastcall BoostFunctionUtility_CallbackFunc__Invoke(
+void BoostFunctionUtility_CallbackFunc__Invoke(
         BoostFunctionUtility_CallbackFunc_o *this,
         int32_t result,
         int32_t index,
         const MethodInfo *method)
 {
-  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, int32_t, int32_t, _QWORD))this->fields.m_target)(
-    this->fields.original_method_info,
+  ((void (__fastcall *)(intptr_t, int32_t, int32_t, intptr_t))this->fields.invoke_impl)(
+    this->fields.method_code,
     result,
     index,
-    *(_QWORD *)&this->fields.extra_arg);
+    this->fields.method);
 }

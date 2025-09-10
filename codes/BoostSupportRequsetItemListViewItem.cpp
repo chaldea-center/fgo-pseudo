@@ -1,5 +1,4 @@
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BoostSupportRequsetItemListViewItem___ctor(
+void BoostSupportRequsetItemListViewItem___ctor(
         BoostSupportRequsetItemListViewItem_o *this,
         int32_t index,
         BoostEntity_o *boostEntity,
@@ -7,69 +6,66 @@ void __fastcall BoostSupportRequsetItemListViewItem___ctor(
         System_Int32_array *recommendedBoostIds,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v15; // x1
-  CommonReleaseMaster_o *v16; // x22
-  bool v17; // w0
+  __int64 v12; // x1
+  CommonReleaseMaster_o *v13; // x22
+  bool v14; // w0
 
-  if ( (byte_4B16574 & 1) == 0 )
+  if ( (byte_4C21184 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_CommonConsumeMaster___, *(_QWORD *)&index);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_CommonReleaseMaster___, v11);
-    sub_1BCAFF8(&DataManager_TypeInfo, v12);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Contains_int___, v13);
-    byte_4B16574 = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_CommonConsumeMaster___);
+    sub_1C2D490(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Contains_int___);
+    byte_4C21184 = 1;
   }
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   this->fields.boostEntity = boostEntity;
-  sub_1BCAF9C(&this->fields.boostEntity);
+  sub_1C2D434(&this->fields.boostEntity);
   this->fields.usrItemEntityList = usrItemEntityList;
-  sub_1BCAF9C(&this->fields.usrItemEntityList);
+  sub_1C2D434(&this->fields.usrItemEntityList);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_CommonConsumeMaster___);
   if ( !boostEntity
     || !Master_object
     || (this->fields.commonConsumeEntity = CommonConsumeMaster__GetIdEntityList(
                                              (CommonConsumeMaster_o *)Master_object,
                                              boostEntity->fields.commonConsumeId,
-                                             0LL),
-        sub_1BCAF9C(&this->fields.commonConsumeEntity),
-        (Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_CommonReleaseMaster___)) == 0LL) )
+                                             0),
+        sub_1C2D434(&this->fields.commonConsumeEntity),
+        (Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_CommonReleaseMaster___)) == 0) )
   {
-    sub_1BCB254(Master_object, v15);
+    sub_1C2D6EC(Master_object, v12);
   }
-  v16 = (CommonReleaseMaster_o *)Master_object;
+  v13 = (CommonReleaseMaster_o *)Master_object;
   this->fields.isRelease = CommonReleaseMaster__IsOpen(
                              (CommonReleaseMaster_o *)Master_object,
                              boostEntity->fields.commonReleaseId,
-                             0LL,
                              0,
-                             0LL);
+                             0,
+                             0);
   if ( recommendedBoostIds )
-    v17 = System_Linq_Enumerable__Contains_int_(
+    v14 = System_Linq_Enumerable__Contains_int_(
             (System_Collections_Generic_IEnumerable_TSource__o *)recommendedBoostIds,
             boostEntity->fields.id,
-            (const MethodInfo_3033A7C *)Method_System_Linq_Enumerable_Contains_int___);
+            (const MethodInfo_30EB900 *)Method_System_Linq_Enumerable_Contains_int___);
   else
-    v17 = 0;
-  this->fields.isRecommended = v17;
-  this->fields.isHide = CommonReleaseMaster__IsOpen(v16, boostEntity->fields.hideCommonReleaseId, 0LL, 0, 0LL);
+    v14 = 0;
+  this->fields.isRecommended = v14;
+  this->fields.isHide = CommonReleaseMaster__IsOpen(v13, boostEntity->fields.hideCommonReleaseId, 0, 0, 0);
 }
 
 
-void __fastcall BoostSupportRequsetItemListViewItem__Finalize(
+void BoostSupportRequsetItemListViewItem__Finalize(
         BoostSupportRequsetItemListViewItem_o *this,
         const MethodInfo *method)
 {
-  ListViewItem__Finalize((ListViewItem_o *)this, 0LL);
+  ListViewItem__Finalize((ListViewItem_o *)this, 0);
 }
 
 
-BoostEntity_o *__fastcall BoostSupportRequsetItemListViewItem__get_BoostEntity(
+BoostEntity_o *BoostSupportRequsetItemListViewItem__get_BoostEntity(
         BoostSupportRequsetItemListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -77,7 +73,7 @@ BoostEntity_o *__fastcall BoostSupportRequsetItemListViewItem__get_BoostEntity(
 }
 
 
-CommonConsumeEntity_array *__fastcall BoostSupportRequsetItemListViewItem__get_ConsumeList(
+CommonConsumeEntity_array *BoostSupportRequsetItemListViewItem__get_ConsumeList(
         BoostSupportRequsetItemListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -85,7 +81,7 @@ CommonConsumeEntity_array *__fastcall BoostSupportRequsetItemListViewItem__get_C
 }
 
 
-int32_t __fastcall BoostSupportRequsetItemListViewItem__get_Image_id(
+int32_t BoostSupportRequsetItemListViewItem__get_Image_id(
         BoostSupportRequsetItemListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -99,7 +95,7 @@ int32_t __fastcall BoostSupportRequsetItemListViewItem__get_Image_id(
 }
 
 
-bool __fastcall BoostSupportRequsetItemListViewItem__get_IsHide(
+bool BoostSupportRequsetItemListViewItem__get_IsHide(
         BoostSupportRequsetItemListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -107,7 +103,7 @@ bool __fastcall BoostSupportRequsetItemListViewItem__get_IsHide(
 }
 
 
-bool __fastcall BoostSupportRequsetItemListViewItem__get_IsRecommended(
+bool BoostSupportRequsetItemListViewItem__get_IsRecommended(
         BoostSupportRequsetItemListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -115,7 +111,7 @@ bool __fastcall BoostSupportRequsetItemListViewItem__get_IsRecommended(
 }
 
 
-bool __fastcall BoostSupportRequsetItemListViewItem__get_IsRelease(
+bool BoostSupportRequsetItemListViewItem__get_IsRelease(
         BoostSupportRequsetItemListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -123,7 +119,7 @@ bool __fastcall BoostSupportRequsetItemListViewItem__get_IsRelease(
 }
 
 
-int32_t __fastcall BoostSupportRequsetItemListViewItem__get_ItemId(
+int32_t BoostSupportRequsetItemListViewItem__get_ItemId(
         BoostSupportRequsetItemListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -137,7 +133,7 @@ int32_t __fastcall BoostSupportRequsetItemListViewItem__get_ItemId(
 }
 
 
-int32_t __fastcall BoostSupportRequsetItemListViewItem__get_Skill_id(
+int32_t BoostSupportRequsetItemListViewItem__get_Skill_id(
         BoostSupportRequsetItemListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -151,7 +147,7 @@ int32_t __fastcall BoostSupportRequsetItemListViewItem__get_Skill_id(
 }
 
 
-UserItemEntity_array *__fastcall BoostSupportRequsetItemListViewItem__get_UserItemEntityList(
+UserItemEntity_array *BoostSupportRequsetItemListViewItem__get_UserItemEntityList(
         BoostSupportRequsetItemListViewItem_o *this,
         const MethodInfo *method)
 {

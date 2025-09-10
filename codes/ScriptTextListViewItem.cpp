@@ -1,44 +1,40 @@
-// local variable allocation has failed, the output may be wrong!
-void __fastcall ScriptTextListViewItem___ctor(
+void ScriptTextListViewItem___ctor(
         ScriptTextListViewItem_o *this,
         int32_t index,
         System_String_o *lineText,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x2
-  __int64 v9; // x3
-  __int64 v10; // x4
-  Il2CppObject *v11; // x0
-  struct System_String_o *v12; // x0
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  int v15; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v7; // x2
+  __int64 v8; // x3
+  __int64 v9; // x4
+  Il2CppObject *v10; // x0
+  struct System_String_o *v11; // x0
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  int v14; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B19BA9 & 1) == 0 )
+  if ( (byte_4C2492D & 1) == 0 )
   {
-    sub_1BCAFF8(&int_TypeInfo, *(_QWORD *)&index);
-    sub_1BCAFF8(&StringLiteral_15879/*"[{0:D4}] {1}"*/, v7);
-    byte_4B19BA9 = 1;
+    sub_1C2D490(&int_TypeInfo);
+    sub_1C2D490(&StringLiteral_16011/*"[{0:D4}] {1}"*/);
+    byte_4C2492D = 1;
   }
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
-  v15 = index + 1;
-  v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15, v8, v9, v10);
-  v12 = System_String__Format_62491716((System_String_o *)StringLiteral_15879/*"[{0:D4}] {1}"*/, v11, (Il2CppObject *)lineText, 0LL);
-  this->fields.lineText = v12;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.lineText, (int32_t)v12, v13, v14);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
+  v14 = index + 1;
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14, v7, v8, v9);
+  v11 = System_String__Format_63499156((System_String_o *)StringLiteral_16011/*"[{0:D4}] {1}"*/, v10, (Il2CppObject *)lineText, 0);
+  this->fields.lineText = v11;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.lineText, (int32_t)v11, v12, v13);
 }
 
 
-void __fastcall ScriptTextListViewItem__Finalize(ScriptTextListViewItem_o *this, const MethodInfo *method)
+void ScriptTextListViewItem__Finalize(ScriptTextListViewItem_o *this, const MethodInfo *method)
 {
-  ListViewItem__Finalize((ListViewItem_o *)this, 0LL);
+  ListViewItem__Finalize((ListViewItem_o *)this, 0);
 }
 
 
-System_String_o *__fastcall ScriptTextListViewItem__get_LineText(
-        ScriptTextListViewItem_o *this,
-        const MethodInfo *method)
+System_String_o *ScriptTextListViewItem__get_LineText(ScriptTextListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields.lineText;
 }

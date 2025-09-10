@@ -1,45 +1,44 @@
-void __fastcall GachaDetailMaster___ctor(GachaDetailMaster_o *this, const MethodInfo *method)
+void GachaDetailMaster___ctor(GachaDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C7CC & 1) == 0 )
+  if ( (byte_4C27582 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int___ctor__, method);
-    byte_4B1C7CC = 1;
+    sub_1C2D490(&Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int___ctor__);
+    byte_4C27582 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     192,
-    (const MethodInfo_32C5ADC *)Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int___ctor__);
+    (const MethodInfo_3385A74 *)Method_DataMasterBase_GachaDetailMaster__GachaDetailEntity__int___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-GachaDetailEntity_o *__fastcall GachaDetailMaster__GetGachaDetailEntity(
+GachaDetailEntity_o *GachaDetailMaster__GetGachaDetailEntity(
         GachaDetailMaster_o *this,
         int32_t gachaID,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   GachaDetailEntity_o *result; // x0
   int32_t Count; // w0
-  int32_t v8; // w21
-  int32_t v9; // w22
+  int32_t v7; // w21
+  int32_t v8; // w22
 
-  if ( (byte_4B1C7CD & 1) == 0 )
+  if ( (byte_4C27583 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_GachaDetailEntity__get_Count__, *(_QWORD *)&gachaID);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_GachaDetailEntity__get_Item__, v5);
-    byte_4B1C7CD = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_GachaDetailEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_GachaDetailEntity__get_Item__);
+    byte_4C27583 = 1;
   }
   result = (GachaDetailEntity_o *)this->fields.list;
   if ( !result )
     goto LABEL_12;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)result,
-            (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_GachaDetailEntity__get_Count__);
+            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_GachaDetailEntity__get_Count__);
   if ( Count >= 1 )
   {
-    v8 = Count;
-    v9 = 0;
+    v7 = Count;
+    v8 = 0;
     while ( 1 )
     {
       result = (GachaDetailEntity_o *)this->fields.list;
@@ -47,17 +46,17 @@ GachaDetailEntity_o *__fastcall GachaDetailMaster__GetGachaDetailEntity(
         break;
       result = (GachaDetailEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                         (System_Collections_ObjectModel_Collection_T__o *)result,
-                                        v9,
-                                        (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_GachaDetailEntity__get_Item__);
+                                        v8,
+                                        (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_GachaDetailEntity__get_Item__);
       if ( !result )
         break;
       if ( result->fields.gachaId == gachaID )
         return result;
-      if ( v8 == ++v9 )
-        return 0LL;
+      if ( v7 == ++v8 )
+        return 0;
     }
 LABEL_12:
-    sub_1BCB254(result, *(_QWORD *)&gachaID);
+    sub_1C2D6EC(result, *(_QWORD *)&gachaID);
   }
-  return 0LL;
+  return 0;
 }

@@ -1,17 +1,17 @@
-void __fastcall UserEventServantFatigueEntity___ctor(UserEventServantFatigueEntity_o *this, const MethodInfo *method)
+void UserEventServantFatigueEntity___ctor(UserEventServantFatigueEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D313 & 1) == 0 )
+  if ( (byte_4C2810A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1D313 = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C2810A = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall UserEventServantFatigueEntity__CreatePrimaryKey(
+int32_t UserEventServantFatigueEntity__CreatePrimaryKey(
         UserEventServantFatigueEntity_o *this,
         const MethodInfo *method)
 {

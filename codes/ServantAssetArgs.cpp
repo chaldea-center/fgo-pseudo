@@ -1,7 +1,4 @@
-void __fastcall ServantAssetArgs___ctor(
-        ServantAssetArgs_o *this,
-        BattleServantData_o *svtData,
-        const MethodInfo *method)
+void ServantAssetArgs___ctor(ServantAssetArgs_o *this, BattleServantData_o *svtData, const MethodInfo *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
@@ -16,36 +13,36 @@ void __fastcall ServantAssetArgs___ctor(
   const MethodInfo *v15; // x3
   const MethodInfo *v16; // x2
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   if ( !svtData )
-    sub_1BCB254(v5, v6);
-  this->fields._SvtId_k__BackingField = BattleServantData__getSvtId(svtData, 0LL);
-  this->fields._CommandImageSvtId_k__BackingField = BattleServantData__GetCommandImageSvtId(svtData, 0LL);
-  this->fields._DispImageSvtId_k__BackingField = BattleServantData__GetDispImageSvtId(svtData, 0LL);
-  this->fields._DispLimitCount_k__BackingField = BattleServantData__getDispLimitCount(svtData, 1, 0LL);
-  this->fields._Weapon_k__BackingField = BattleServantData__getWeaponGroup(svtData, 0, 0LL);
-  this->fields._WeaponEffectId_k__BackingField = BattleServantData__getWeaponGroup(svtData, 1, 0LL);
-  this->fields._EffectFolder_k__BackingField = BattleServantData__getEffectFolder(svtData, 0LL);
-  this->fields._CameraId_k__BackingField = BattleServantData__getCameraActionId(svtData, 0LL);
+    sub_1C2D6EC(v5, v6);
+  this->fields._SvtId_k__BackingField = BattleServantData__getSvtId(svtData, 0);
+  this->fields._CommandImageSvtId_k__BackingField = BattleServantData__GetCommandImageSvtId(svtData, 0);
+  this->fields._DispImageSvtId_k__BackingField = BattleServantData__GetDispImageSvtId(svtData, 0);
+  this->fields._DispLimitCount_k__BackingField = BattleServantData__getDispLimitCount(svtData, 1, 0);
+  this->fields._Weapon_k__BackingField = BattleServantData__getWeaponGroup(svtData, 0, 0);
+  this->fields._WeaponEffectId_k__BackingField = BattleServantData__getWeaponGroup(svtData, 1, 0);
+  this->fields._EffectFolder_k__BackingField = BattleServantData__getEffectFolder(svtData, 0);
+  this->fields._CameraId_k__BackingField = BattleServantData__getCameraActionId(svtData, 0);
   this->fields._UniqueId_k__BackingField = svtData->fields.uniqueId;
   this->fields._OverwriteSvtVoiceId_k__BackingField = svtData->fields.overwriteSvtVoiceId;
-  this->fields._AppearanceId_k__BackingField = BattleServantData__getAppearanceId(svtData, 0LL);
-  CommandCodeIds = BattleServantData__GetCommandCodeIds(svtData, 0LL);
+  this->fields._AppearanceId_k__BackingField = BattleServantData__getAppearanceId(svtData, 0);
+  CommandCodeIds = BattleServantData__GetCommandCodeIds(svtData, 0);
   this->fields._CommandCodeIds_k__BackingField = CommandCodeIds;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._CommandCodeIds_k__BackingField, (int32_t)CommandCodeIds, v8, v9);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._CommandCodeIds_k__BackingField, (int32_t)CommandCodeIds, v8, v9);
   skillInfoList = svtData->fields.skillInfoList;
   this->fields._skillList_k__BackingField = skillInfoList;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._skillList_k__BackingField, (int32_t)skillInfoList, v11, v12);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._skillList_k__BackingField, (int32_t)skillInfoList, v11, v12);
   deckSvt = svtData->fields.deckSvt;
   this->fields._deckSvt_k__BackingField = deckSvt;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._deckSvt_k__BackingField, (int32_t)deckSvt, v14, v15);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._deckSvt_k__BackingField, (int32_t)deckSvt, v14, v15);
   this->fields._DisplayType_k__BackingField = svtData->fields.displayType;
-  this->fields._LoadActorLimitCount_k__BackingField = BattleServantData__GetLoadActorLimitCount(svtData, 0LL);
+  this->fields._LoadActorLimitCount_k__BackingField = BattleServantData__GetLoadActorLimitCount(svtData, 0);
   ServantAssetArgs__SetBattlePointId(this, svtData, v16);
 }
 
 
-void __fastcall ServantAssetArgs___ctor_45659692(
+void ServantAssetArgs___ctor_46362464(
         ServantAssetArgs_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -56,7 +53,7 @@ void __fastcall ServantAssetArgs___ctor_45659692(
 {
   const MethodInfo *v13; // x2
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._SvtId_k__BackingField = svtId;
   this->fields._CommandImageSvtId_k__BackingField = svtId;
   this->fields._DispImageSvtId_k__BackingField = svtId;
@@ -65,283 +62,276 @@ void __fastcall ServantAssetArgs___ctor_45659692(
   this->fields._AppearanceId_k__BackingField = appearanceId;
   this->fields._Weapon_k__BackingField = weapon;
   this->fields._LoadActorLimitCount_k__BackingField = limitCount;
-  ServantAssetArgs__SetBattlePointId(this, 0LL, v13);
+  ServantAssetArgs__SetBattlePointId(this, 0, v13);
 }
 
 
-System_String_o *__fastcall ServantAssetArgs__GenerateUniqueKey(System_String_array *para, const MethodInfo *method)
+System_String_o *ServantAssetArgs__GenerateUniqueKey(System_String_array *para, const MethodInfo *method)
 {
-  if ( (byte_4B1F359 & 1) == 0 )
+  if ( (byte_4C2A1EA & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_15973/*"_"*/, method);
-    byte_4B1F359 = 1;
+    sub_1C2D490(&StringLiteral_16105/*"_"*/);
+    byte_4C2A1EA = 1;
   }
-  return System_String__Join((System_String_o *)StringLiteral_15973/*"_"*/, para, 0LL);
+  return System_String__Join((System_String_o *)StringLiteral_16105/*"_"*/, para, 0);
 }
 
 
-void __fastcall ServantAssetArgs__SetBattlePointId(
+void ServantAssetArgs__SetBattlePointId(
         ServantAssetArgs_o *this,
         BattleServantData_o *svtData,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   Il2CppObject *Master_object; // x22
   ServantBattlePointMaster_o *BattlePointEntities; // x0
-  __int64 v14; // x1
+  __int64 v7; // x1
   ServantBattlePointMaster_c *klass; // x8
-  ServantBattlePointMaster_o *v16; // x19
-  __int64 v17; // x9
+  ServantBattlePointMaster_o *v9; // x19
+  __int64 v10; // x9
   int32_t *p_offset; // x10
-  __int64 v19; // x0
-  __int64 v20; // x1
-  __int64 v21; // x19
-  __int64 v22; // x8
-  __int64 v23; // x9
-  int *v24; // x10
-  __int64 v25; // x0
-  __int64 v26; // x8
-  __int64 v27; // x9
-  int *v28; // x10
-  __int64 v29; // x0
-  __int64 v30; // x0
-  __int64 v31; // x1
-  __int64 v32; // x1
+  __int64 v12; // x0
+  __int64 v13; // x1
+  __int64 v14; // x19
+  __int64 v15; // x8
+  __int64 v16; // x9
+  int *v17; // x10
+  __int64 v18; // x0
+  __int64 v19; // x8
+  __int64 v20; // x9
+  int *v21; // x10
+  __int64 v22; // x0
+  __int64 v23; // x0
+  __int64 v24; // x1
+  __int64 v25; // x1
   _BOOL8 IsHideBattlePointGauge; // x0
-  __int64 v34; // x1
-  __int64 v35; // x8
-  __int64 v36; // x9
-  int *v37; // x10
-  __int64 v38; // x0
+  __int64 v27; // x1
+  __int64 v28; // x8
+  __int64 v29; // x9
+  int *v30; // x10
+  __int64 v31; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4B1F358 & 1) == 0 )
+  if ( (byte_4C2A1E9 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_BattlePointMaster___, svtData);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantBattlePointMaster___, v5);
-    sub_1BCAFF8(&DataManager_TypeInfo, v6);
-    sub_1BCAFF8(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__TryGetEntity__, v7);
-    sub_1BCAFF8(&System_IDisposable_TypeInfo, v8);
-    sub_1BCAFF8(&System_Collections_Generic_IEnumerable_ServantBattlePointEntity__TypeInfo, v9);
-    sub_1BCAFF8(&System_Collections_Generic_IEnumerator_ServantBattlePointEntity__TypeInfo, v10);
-    sub_1BCAFF8(&System_Collections_IEnumerator_TypeInfo, v11);
-    byte_4B1F358 = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_BattlePointMaster___);
+    sub_1C2D490(&Method_DataManager_GetMaster_ServantBattlePointMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__TryGetEntity__);
+    sub_1C2D490(&System_IDisposable_TypeInfo);
+    sub_1C2D490(&System_Collections_Generic_IEnumerable_ServantBattlePointEntity__TypeInfo);
+    sub_1C2D490(&System_Collections_Generic_IEnumerator_ServantBattlePointEntity__TypeInfo);
+    sub_1C2D490(&System_Collections_IEnumerator_TypeInfo);
+    byte_4C2A1E9 = 1;
   }
-  entity = 0LL;
+  entity = 0;
   if ( svtData && !svtData->fields.isEnemy )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_BattlePointMaster___);
-    BattlePointEntities = (ServantBattlePointMaster_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantBattlePointMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_BattlePointMaster___);
+    BattlePointEntities = (ServantBattlePointMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ServantBattlePointMaster___);
     if ( !BattlePointEntities
       || (BattlePointEntities = (ServantBattlePointMaster_o *)ServantBattlePointMaster__GetBattlePointEntities(
                                                                 BattlePointEntities,
                                                                 this->fields._SvtId_k__BackingField,
-                                                                0LL)) == 0LL )
+                                                                0)) == 0 )
     {
-      sub_1BCB254(BattlePointEntities, v14);
+      sub_1C2D6EC(BattlePointEntities, v7);
     }
     klass = BattlePointEntities->klass;
-    v16 = BattlePointEntities;
-    v17 = *(unsigned __int16 *)(&BattlePointEntities->klass->_2.bitflags2 + 3);
-    if ( *(_WORD *)(&BattlePointEntities->klass->_2.bitflags2 + 3) )
+    v9 = BattlePointEntities;
+    v10 = *(unsigned __int16 *)&BattlePointEntities->klass->_2.rank;
+    if ( *(_WORD *)&BattlePointEntities->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_Generic_IEnumerable_ServantBattlePointEntity__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_ServantBattlePointEntity__TypeInfo )
       {
-        --v17;
+        --v10;
         p_offset += 4;
-        if ( !v17 )
+        if ( !v10 )
           goto LABEL_13;
       }
-      v19 = (__int64)(&klass->vtable._0_Equals.method + 2 * *p_offset);
+      v12 = (__int64)&klass->vtable + 16 * *p_offset;
     }
     else
     {
 LABEL_13:
-      v19 = sub_1C1B560(
+      v12 = sub_1C7DCA8(
               BattlePointEntities,
               System_Collections_Generic_IEnumerable_ServantBattlePointEntity__TypeInfo,
-              0LL);
+              0);
     }
-    v21 = (*(__int64 (__fastcall **)(ServantBattlePointMaster_o *, _QWORD))v19)(v16, *(_QWORD *)(v19 + 8));
-    if ( !v21 )
-      sub_1BCB254(0LL, v20);
+    v14 = (*(__int64 (__fastcall **)(ServantBattlePointMaster_o *, _QWORD))v12)(v9, *(_QWORD *)(v12 + 8));
+    if ( !v14 )
+      sub_1C2D6EC(0, v13);
     while ( 1 )
     {
-      v22 = *(_QWORD *)v21;
-      v23 = *(unsigned __int16 *)(*(_QWORD *)v21 + 302LL);
-      if ( *(_WORD *)(*(_QWORD *)v21 + 302LL) )
+      v15 = *(_QWORD *)v14;
+      v16 = *(unsigned __int16 *)(*(_QWORD *)v14 + 302LL);
+      if ( *(_WORD *)(*(_QWORD *)v14 + 302LL) )
       {
-        v24 = (int *)(*(_QWORD *)(v22 + 176) + 8LL);
-        while ( *((System_Collections_IEnumerator_c **)v24 - 1) != System_Collections_IEnumerator_TypeInfo )
+        v17 = (int *)(*(_QWORD *)(v15 + 176) + 8LL);
+        while ( *((System_Collections_IEnumerator_c **)v17 - 1) != System_Collections_IEnumerator_TypeInfo )
         {
-          --v23;
-          v24 += 4;
-          if ( !v23 )
+          --v16;
+          v17 += 4;
+          if ( !v16 )
             goto LABEL_20;
         }
-        v25 = v22 + 16LL * *v24 + 312;
+        v18 = v15 + 16LL * *v17 + 312;
       }
       else
       {
 LABEL_20:
-        v25 = sub_1C1B560(v21, System_Collections_IEnumerator_TypeInfo, 0LL);
+        v18 = sub_1C7DCA8(v14, System_Collections_IEnumerator_TypeInfo, 0);
       }
-      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v25)(v21, *(_QWORD *)(v25 + 8)) & 1) == 0 )
+      if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v18)(v14, *(_QWORD *)(v18 + 8)) & 1) == 0 )
         break;
-      v26 = *(_QWORD *)v21;
-      v27 = *(unsigned __int16 *)(*(_QWORD *)v21 + 302LL);
-      if ( *(_WORD *)(*(_QWORD *)v21 + 302LL) )
+      v19 = *(_QWORD *)v14;
+      v20 = *(unsigned __int16 *)(*(_QWORD *)v14 + 302LL);
+      if ( *(_WORD *)(*(_QWORD *)v14 + 302LL) )
       {
-        v28 = (int *)(*(_QWORD *)(v26 + 176) + 8LL);
-        while ( *((System_Collections_Generic_IEnumerator_ServantBattlePointEntity__c **)v28 - 1) != System_Collections_Generic_IEnumerator_ServantBattlePointEntity__TypeInfo )
+        v21 = (int *)(*(_QWORD *)(v19 + 176) + 8LL);
+        while ( *((System_Collections_Generic_IEnumerator_ServantBattlePointEntity__c **)v21 - 1) != System_Collections_Generic_IEnumerator_ServantBattlePointEntity__TypeInfo )
         {
-          --v27;
-          v28 += 4;
-          if ( !v27 )
+          --v20;
+          v21 += 4;
+          if ( !v20 )
             goto LABEL_27;
         }
-        v29 = v26 + 16LL * *v28 + 312;
+        v22 = v19 + 16LL * *v21 + 312;
       }
       else
       {
 LABEL_27:
-        v29 = sub_1C1B560(v21, System_Collections_Generic_IEnumerator_ServantBattlePointEntity__TypeInfo, 0LL);
+        v22 = sub_1C7DCA8(v14, System_Collections_Generic_IEnumerator_ServantBattlePointEntity__TypeInfo, 0);
       }
-      v30 = (*(__int64 (__fastcall **)(__int64, _QWORD))v29)(v21, *(_QWORD *)(v29 + 8));
-      if ( !v30 )
-        sub_1BCB254(0LL, v31);
+      v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v14, *(_QWORD *)(v22 + 8));
+      if ( !v23 )
+        sub_1C2D6EC(0, v24);
       if ( !Master_object )
-        sub_1BCB254(v30, v31);
+        sub_1C2D6EC(v23, v24);
       if ( DataMasterBase_object__object__int___TryGetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              &entity,
-             *(_DWORD *)(v30 + 20),
-             (const MethodInfo_32C7E4C *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__TryGetEntity__) )
+             *(_DWORD *)(v23 + 20),
+             (const MethodInfo_3387DE4 *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__TryGetEntity__) )
       {
         if ( !entity )
-          sub_1BCB254(0LL, v32);
-        IsHideBattlePointGauge = BattlePointEntity__IsHideBattlePointGauge((BattlePointEntity_o *)entity, svtData, 0LL);
+          sub_1C2D6EC(0, v25);
+        IsHideBattlePointGauge = BattlePointEntity__IsHideBattlePointGauge((BattlePointEntity_o *)entity, svtData, 0);
         if ( !IsHideBattlePointGauge )
         {
           if ( !entity )
-            sub_1BCB254(IsHideBattlePointGauge, v34);
+            sub_1C2D6EC(IsHideBattlePointGauge, v27);
           this->fields._BattlePointId_k__BackingField = (int32_t)entity[1].klass;
           break;
         }
       }
     }
-    v35 = *(_QWORD *)v21;
-    v36 = *(unsigned __int16 *)(*(_QWORD *)v21 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v21 + 302LL) )
+    v28 = *(_QWORD *)v14;
+    v29 = *(unsigned __int16 *)(*(_QWORD *)v14 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v14 + 302LL) )
     {
-      v37 = (int *)(*(_QWORD *)(v35 + 176) + 8LL);
-      while ( *((System_IDisposable_c **)v37 - 1) != System_IDisposable_TypeInfo )
+      v30 = (int *)(*(_QWORD *)(v28 + 176) + 8LL);
+      while ( *((System_IDisposable_c **)v30 - 1) != System_IDisposable_TypeInfo )
       {
-        --v36;
-        v37 += 4;
-        if ( !v36 )
+        --v29;
+        v30 += 4;
+        if ( !v29 )
           goto LABEL_40;
       }
-      v38 = v35 + 16LL * *v37 + 312;
+      v31 = v28 + 16LL * *v30 + 312;
     }
     else
     {
 LABEL_40:
-      v38 = sub_1C1B560(v21, System_IDisposable_TypeInfo, 0LL);
+      v31 = sub_1C7DCA8(v14, System_IDisposable_TypeInfo, 0);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v38)(v21, *(_QWORD *)(v38 + 8));
+    (*(void (__fastcall **)(__int64, _QWORD))v31)(v14, *(_QWORD *)(v31 + 8));
   }
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_AppearanceId(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_AppearanceId(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._AppearanceId_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_BattlePointId(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_BattlePointId(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._BattlePointId_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_CameraId(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_CameraId(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._CameraId_k__BackingField;
 }
 
 
-System_Int32_array *__fastcall ServantAssetArgs__get_CommandCodeIds(ServantAssetArgs_o *this, const MethodInfo *method)
+System_Int32_array *ServantAssetArgs__get_CommandCodeIds(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._CommandCodeIds_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_CommandImageSvtId(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_CommandImageSvtId(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._CommandImageSvtId_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_DispImageSvtId(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_DispImageSvtId(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._DispImageSvtId_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_DispLimitCount(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_DispLimitCount(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._DispLimitCount_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_DisplayType(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_DisplayType(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._DisplayType_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_EffectFolder(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_EffectFolder(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._EffectFolder_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_LoadActorLimitCount(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_LoadActorLimitCount(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._LoadActorLimitCount_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_OverwriteSvtVoiceId(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_OverwriteSvtVoiceId(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._OverwriteSvtVoiceId_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_SvtId(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_SvtId(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._SvtId_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_UniqueId(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_UniqueId(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._UniqueId_k__BackingField;
 }
 
 
-System_String_o *__fastcall ServantAssetArgs__get_UniqueKey(ServantAssetArgs_o *this, const MethodInfo *method)
+System_String_o *ServantAssetArgs__get_UniqueKey(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   System_String_o **p_uniqueKey; // x19
   __int64 v4; // x21
@@ -360,88 +350,88 @@ System_String_o *__fastcall ServantAssetArgs__get_UniqueKey(ServantAssetArgs_o *
   const MethodInfo *v17; // x3
   int32_t SvtId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4B1F357 & 1) == 0 )
+  if ( (byte_4C2A1E8 & 1) == 0 )
   {
-    sub_1BCAFF8(&string___TypeInfo, method);
-    byte_4B1F357 = 1;
+    sub_1C2D490(&string___TypeInfo);
+    byte_4C2A1E8 = 1;
   }
   p_uniqueKey = &this->fields.uniqueKey;
-  if ( System_String__IsNullOrEmpty(this->fields.uniqueKey, 0LL) )
+  if ( System_String__IsNullOrEmpty(this->fields.uniqueKey, 0) )
   {
-    v4 = sub_1BCB0A0(string___TypeInfo, 6LL);
+    v4 = sub_1C2D538(string___TypeInfo, 6);
     SvtId_k__BackingField = this->fields._SvtId_k__BackingField;
-    v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
+    v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0);
     if ( !v4 )
-      sub_1BCB254(v5, v6);
+      sub_1C2D6EC(v5, v6);
     if ( !*(_DWORD *)(v4 + 24) )
       goto LABEL_13;
     *(_QWORD *)(v4 + 32) = v5;
-    sub_1BCAF9C((CGThumbnailListItem_o *)(v4 + 32), (int32_t)v5, v7, v8);
+    sub_1C2D434((CGThumbnailListItem_o *)(v4 + 32), (int32_t)v5, v7, v8);
     SvtId_k__BackingField = this->fields._CommandImageSvtId_k__BackingField;
-    v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
+    v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0);
     if ( *(_DWORD *)(v4 + 24) <= 1u )
       goto LABEL_13;
     *(_QWORD *)(v4 + 40) = v5;
-    sub_1BCAF9C((CGThumbnailListItem_o *)(v4 + 40), (int32_t)v5, v7, v9);
+    sub_1C2D434((CGThumbnailListItem_o *)(v4 + 40), (int32_t)v5, v7, v9);
     SvtId_k__BackingField = this->fields._DispImageSvtId_k__BackingField;
-    v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
+    v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0);
     if ( *(_DWORD *)(v4 + 24) <= 2u )
       goto LABEL_13;
     *(_QWORD *)(v4 + 48) = v5;
-    sub_1BCAF9C((CGThumbnailListItem_o *)(v4 + 48), (int32_t)v5, v7, v10);
+    sub_1C2D434((CGThumbnailListItem_o *)(v4 + 48), (int32_t)v5, v7, v10);
     SvtId_k__BackingField = this->fields._DispLimitCount_k__BackingField;
-    v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
+    v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0);
     if ( *(_DWORD *)(v4 + 24) <= 3u )
       goto LABEL_13;
     *(_QWORD *)(v4 + 56) = v5;
-    sub_1BCAF9C((CGThumbnailListItem_o *)(v4 + 56), (int32_t)v5, v7, v11);
+    sub_1C2D434((CGThumbnailListItem_o *)(v4 + 56), (int32_t)v5, v7, v11);
     SvtId_k__BackingField = this->fields._OverwriteSvtVoiceId_k__BackingField;
-    v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL);
+    v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0);
     if ( *(_DWORD *)(v4 + 24) <= 4u
       || (*(_QWORD *)(v4 + 64) = v5,
-          sub_1BCAF9C((CGThumbnailListItem_o *)(v4 + 64), (int32_t)v5, v7, v12),
+          sub_1C2D434((CGThumbnailListItem_o *)(v4 + 64), (int32_t)v5, v7, v12),
           SvtId_k__BackingField = this->fields._AppearanceId_k__BackingField,
-          v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0LL),
+          v5 = System_Int32__ToString((int32_t)&SvtId_k__BackingField, 0),
           *(_DWORD *)(v4 + 24) <= 5u) )
     {
 LABEL_13:
-      sub_1BCB25C(v5, v6, v7);
+      sub_1C2D6F4(v5, v6, v7);
     }
     *(_QWORD *)(v4 + 72) = v5;
-    sub_1BCAF9C((CGThumbnailListItem_o *)(v4 + 72), (int32_t)v5, v7, v13);
+    sub_1C2D434((CGThumbnailListItem_o *)(v4 + 72), (int32_t)v5, v7, v13);
     UniqueKey = ServantAssetArgs__GenerateUniqueKey((System_String_array *)v4, v14);
     *p_uniqueKey = UniqueKey;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.uniqueKey, (int32_t)UniqueKey, v16, v17);
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.uniqueKey, (int32_t)UniqueKey, v16, v17);
   }
   return *p_uniqueKey;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_UnloadCount(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_UnloadCount(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._UnloadCount_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_Weapon(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_Weapon(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._Weapon_k__BackingField;
 }
 
 
-int32_t __fastcall ServantAssetArgs__get_WeaponEffectId(ServantAssetArgs_o *this, const MethodInfo *method)
+int32_t ServantAssetArgs__get_WeaponEffectId(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._WeaponEffectId_k__BackingField;
 }
 
 
-BattleDeckServantData_o *__fastcall ServantAssetArgs__get_deckSvt(ServantAssetArgs_o *this, const MethodInfo *method)
+BattleDeckServantData_o *ServantAssetArgs__get_deckSvt(ServantAssetArgs_o *this, const MethodInfo *method)
 {
   return this->fields._deckSvt_k__BackingField;
 }
 
 
-System_Collections_Generic_List_BattleSkillInfoData__o *__fastcall ServantAssetArgs__get_skillList(
+System_Collections_Generic_List_BattleSkillInfoData__o *ServantAssetArgs__get_skillList(
         ServantAssetArgs_o *this,
         const MethodInfo *method)
 {
@@ -449,25 +439,25 @@ System_Collections_Generic_List_BattleSkillInfoData__o *__fastcall ServantAssetA
 }
 
 
-void __fastcall ServantAssetArgs__set_AppearanceId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
+void ServantAssetArgs__set_AppearanceId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._AppearanceId_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_BattlePointId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
+void ServantAssetArgs__set_BattlePointId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._BattlePointId_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_CameraId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
+void ServantAssetArgs__set_CameraId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._CameraId_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_CommandCodeIds(
+void ServantAssetArgs__set_CommandCodeIds(
         ServantAssetArgs_o *this,
         System_Int32_array *value,
         const MethodInfo *method)
@@ -475,7 +465,7 @@ void __fastcall ServantAssetArgs__set_CommandCodeIds(
   const MethodInfo *v3; // x3
 
   this->fields._CommandCodeIds_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._CommandCodeIds_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -483,100 +473,88 @@ void __fastcall ServantAssetArgs__set_CommandCodeIds(
 }
 
 
-void __fastcall ServantAssetArgs__set_CommandImageSvtId(
-        ServantAssetArgs_o *this,
-        int32_t value,
-        const MethodInfo *method)
+void ServantAssetArgs__set_CommandImageSvtId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._CommandImageSvtId_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_DispImageSvtId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
+void ServantAssetArgs__set_DispImageSvtId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._DispImageSvtId_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_DispLimitCount(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
+void ServantAssetArgs__set_DispLimitCount(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._DispLimitCount_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_DisplayType(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
+void ServantAssetArgs__set_DisplayType(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._DisplayType_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_EffectFolder(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
+void ServantAssetArgs__set_EffectFolder(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._EffectFolder_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_LoadActorLimitCount(
-        ServantAssetArgs_o *this,
-        int32_t value,
-        const MethodInfo *method)
+void ServantAssetArgs__set_LoadActorLimitCount(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._LoadActorLimitCount_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_OverwriteSvtVoiceId(
-        ServantAssetArgs_o *this,
-        int32_t value,
-        const MethodInfo *method)
+void ServantAssetArgs__set_OverwriteSvtVoiceId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._OverwriteSvtVoiceId_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_SvtId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
+void ServantAssetArgs__set_SvtId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._SvtId_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_UniqueId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
+void ServantAssetArgs__set_UniqueId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._UniqueId_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_UnloadCount(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
+void ServantAssetArgs__set_UnloadCount(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._UnloadCount_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_Weapon(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
+void ServantAssetArgs__set_Weapon(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._Weapon_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_WeaponEffectId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
+void ServantAssetArgs__set_WeaponEffectId(ServantAssetArgs_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._WeaponEffectId_k__BackingField = value;
 }
 
 
-void __fastcall ServantAssetArgs__set_deckSvt(
-        ServantAssetArgs_o *this,
-        BattleDeckServantData_o *value,
-        const MethodInfo *method)
+void ServantAssetArgs__set_deckSvt(ServantAssetArgs_o *this, BattleDeckServantData_o *value, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
 
   this->fields._deckSvt_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._deckSvt_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._deckSvt_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ServantAssetArgs__set_skillList(
+void ServantAssetArgs__set_skillList(
         ServantAssetArgs_o *this,
         System_Collections_Generic_List_BattleSkillInfoData__o *value,
         const MethodInfo *method)
@@ -584,5 +562,5 @@ void __fastcall ServantAssetArgs__set_skillList(
   const MethodInfo *v3; // x3
 
   this->fields._skillList_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._skillList_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._skillList_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

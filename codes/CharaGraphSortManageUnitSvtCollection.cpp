@@ -1,47 +1,47 @@
-void __fastcall CharaGraphSortManageUnitSvtCollection___ctor(
+void CharaGraphSortManageUnitSvtCollection___ctor(
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-CharaGraphFilterLogicBase_o *__fastcall CharaGraphSortManageUnitSvtCollection__CreateFilterLogic(
+CharaGraphFilterLogicBase_o *CharaGraphSortManageUnitSvtCollection__CreateFilterLogic(
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
   Il2CppObject *v2; // x19
 
-  if ( (byte_4B1B881 & 1) == 0 )
+  if ( (byte_4C26623 & 1) == 0 )
   {
-    sub_1BCAFF8(&ServantCollectionCharaGraphFilterLogic_TypeInfo, method);
-    byte_4B1B881 = 1;
+    sub_1C2D490(&ServantCollectionCharaGraphFilterLogic_TypeInfo);
+    byte_4C26623 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BCB244(ServantCollectionCharaGraphFilterLogic_TypeInfo);
-  System_Object___ctor(v2, 0LL);
+  v2 = (Il2CppObject *)sub_1C2D6DC(ServantCollectionCharaGraphFilterLogic_TypeInfo);
+  System_Object___ctor(v2, 0);
   return (CharaGraphFilterLogicBase_o *)v2;
 }
 
 
-CharaGraphSortLogicBase_o *__fastcall CharaGraphSortManageUnitSvtCollection__CreateSortLogic(
+CharaGraphSortLogicBase_o *CharaGraphSortManageUnitSvtCollection__CreateSortLogic(
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
   CharaGraphSortLogicBase_o *v2; // x19
   const MethodInfo *v3; // x1
 
-  if ( (byte_4B1B880 & 1) == 0 )
+  if ( (byte_4C26622 & 1) == 0 )
   {
-    sub_1BCAFF8(&ServantCollectionCharaGraphSortLogic_TypeInfo, method);
-    byte_4B1B880 = 1;
+    sub_1C2D490(&ServantCollectionCharaGraphSortLogic_TypeInfo);
+    byte_4C26622 = 1;
   }
-  v2 = (CharaGraphSortLogicBase_o *)sub_1BCB244(ServantCollectionCharaGraphSortLogic_TypeInfo);
+  v2 = (CharaGraphSortLogicBase_o *)sub_1C2D6DC(ServantCollectionCharaGraphSortLogic_TypeInfo);
   CharaGraphSortLogicBase___ctor(v2, v3);
   return v2;
 }
 
 
-int32_t __fastcall CharaGraphSortManageUnitSvtCollection__get_FilterKind(
+int32_t CharaGraphSortManageUnitSvtCollection__get_FilterKind(
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
@@ -49,7 +49,7 @@ int32_t __fastcall CharaGraphSortManageUnitSvtCollection__get_FilterKind(
 }
 
 
-int32_t __fastcall CharaGraphSortManageUnitSvtCollection__get_ListKind(
+int32_t CharaGraphSortManageUnitSvtCollection__get_ListKind(
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
@@ -57,7 +57,7 @@ int32_t __fastcall CharaGraphSortManageUnitSvtCollection__get_ListKind(
 }
 
 
-int32_t __fastcall CharaGraphSortManageUnitSvtCollection__get_ListViewSortKind(
+int32_t CharaGraphSortManageUnitSvtCollection__get_ListViewSortKind(
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
@@ -65,7 +65,7 @@ int32_t __fastcall CharaGraphSortManageUnitSvtCollection__get_ListViewSortKind(
 }
 
 
-int32_t __fastcall CharaGraphSortManageUnitSvtCollection__get_SortKind(
+int32_t CharaGraphSortManageUnitSvtCollection__get_SortKind(
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
@@ -73,14 +73,14 @@ int32_t __fastcall CharaGraphSortManageUnitSvtCollection__get_SortKind(
 }
 
 
-System_String_o *__fastcall CharaGraphSortManageUnitSvtCollection__get_SortSaveKeySuffix(
+System_String_o *CharaGraphSortManageUnitSvtCollection__get_SortSaveKeySuffix(
         CharaGraphSortManageUnitSvtCollection_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1B87F & 1) == 0 )
+  if ( (byte_4C26621 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1412/*"5"*/, method);
-    byte_4B1B87F = 1;
+    sub_1C2D490(&StringLiteral_1420/*"5"*/);
+    byte_4C26621 = 1;
   }
-  return (System_String_o *)StringLiteral_1412/*"5"*/;
+  return (System_String_o *)StringLiteral_1420/*"5"*/;
 }

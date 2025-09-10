@@ -1,111 +1,103 @@
-void __fastcall FadeInfo___ctor(FadeInfo_o *this, const MethodInfo *method)
+void FadeInfo___ctor(FadeInfo_o *this, const MethodInfo *method)
 {
   this->fields.baseScale = 0.6;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall FadeInfo__OnGUI(FadeInfo_o *this, const MethodInfo *method)
+void FadeInfo__OnGUI(FadeInfo_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  FadeLogger_c *v11; // x0
+  FadeLogger_c *v3; // x0
   System_String_o *FadeLog; // x0
-  System_String_o *v13; // x19
-  float v14; // s10
-  System_String_o *v15; // x0
-  __int64 v16; // x1
-  __int64 v17; // x2
-  const MethodInfo *v18; // x3
-  System_String_o *v19; // x20
-  int32_t v20; // w1
-  const MethodInfo *v21; // x3
-  const MethodInfo *v22; // x3
-  int32_t v23; // w1
-  const MethodInfo *v24; // x3
-  const MethodInfo *v25; // x3
-  int32_t v26; // w1
-  System_String_o *v27; // x0
-  float v28; // [xsp+Ch] [xbp-44h] BYREF
-  UnityEngine_Rect_o v29; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Rect_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  System_String_o *v5; // x19
+  float v6; // s10
+  System_String_o *v7; // x0
+  __int64 v8; // x1
+  __int64 v9; // x2
+  const MethodInfo *v10; // x3
+  System_String_o *v11; // x20
+  int32_t v12; // w1
+  const MethodInfo *v13; // x3
+  const MethodInfo *v14; // x3
+  int32_t v15; // w1
+  const MethodInfo *v16; // x3
+  const MethodInfo *v17; // x3
+  int32_t v18; // w1
+  System_String_o *v19; // x0
+  float v20; // [xsp+Ch] [xbp-44h] BYREF
+  UnityEngine_Rect_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B1B943 & 1) == 0 )
+  if ( (byte_4C266E5 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Application_TypeInfo, method);
-    sub_1BCAFF8(&FadeLogger_TypeInfo, v3);
-    sub_1BCAFF8(&UnityEngine_GUI_TypeInfo, v4);
-    sub_1BCAFF8(&string___TypeInfo, v5);
-    sub_1BCAFF8(&StringLiteral_1715/*"<size="*/, v6);
-    sub_1BCAFF8(&StringLiteral_15787/*"[FADE]\n"*/, v7);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v8);
-    sub_1BCAFF8(&StringLiteral_1518/*"</size>"*/, v9);
-    sub_1BCAFF8(&StringLiteral_1741/*">"*/, v10);
-    byte_4B1B943 = 1;
+    sub_1C2D490(&UnityEngine_Application_TypeInfo);
+    sub_1C2D490(&FadeLogger_TypeInfo);
+    sub_1C2D490(&UnityEngine_GUI_TypeInfo);
+    sub_1C2D490(&string___TypeInfo);
+    sub_1C2D490(&StringLiteral_1723/*"<size="*/);
+    sub_1C2D490(&StringLiteral_15918/*"[FADE]\n"*/);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    sub_1C2D490(&StringLiteral_1526/*"</size>"*/);
+    sub_1C2D490(&StringLiteral_1749/*">"*/);
+    byte_4C266E5 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-  if ( UnityEngine_Application__get_isPlaying(0LL) )
+  if ( UnityEngine_Application__get_isPlaying(0) )
   {
-    v11 = FadeLogger_TypeInfo;
+    v3 = FadeLogger_TypeInfo;
     if ( !FadeLogger_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(FadeLogger_TypeInfo);
-    FadeLog = FadeLogger__GetFadeLog((const MethodInfo *)v11);
-    v13 = System_String__Concat_62450424((System_String_o *)StringLiteral_15787/*"[FADE]\n"*/, FadeLog, 0LL);
-    v14 = this->fields.baseScale * (float)((float)UnityEngine_Screen__get_width(0LL) * 0.00097656);
+    FadeLog = FadeLogger__GetFadeLog((const MethodInfo *)v3);
+    v5 = System_String__Concat_63457864((System_String_o *)StringLiteral_15918/*"[FADE]\n"*/, FadeLog, 0);
+    v6 = this->fields.baseScale * (float)((float)UnityEngine_Screen__get_width(0) * 0.00097656);
     if ( !UnityEngine_GUI_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_GUI_TypeInfo);
-    v29.fields.m_XMin = 5.0;
-    v29.fields.m_YMin = 5.0;
-    v29.fields.m_Width = v14 * 660.0;
-    v29.fields.m_Height = v14 * 825.0;
-    UnityEngine_GUI__Box(v29, (System_String_o *)StringLiteral_1/*""*/, 0LL);
-    v15 = (System_String_o *)sub_1BCB0A0(string___TypeInfo, 5LL);
-    if ( !v15 )
-      sub_1BCB254(0LL, v16);
-    v19 = v15;
-    if ( !LODWORD(v15[1].klass) )
+    v21.fields.m_XMin = 5.0;
+    v21.fields.m_YMin = 5.0;
+    v21.fields.m_Width = v6 * 660.0;
+    v21.fields.m_Height = v6 * 825.0;
+    UnityEngine_GUI__Box(v21, (System_String_o *)StringLiteral_1/*""*/, 0);
+    v7 = (System_String_o *)sub_1C2D538(string___TypeInfo, 5);
+    if ( !v7 )
+      sub_1C2D6EC(0, v8);
+    v11 = v7;
+    if ( !LODWORD(v7[1].klass) )
       goto LABEL_18;
-    v20 = StringLiteral_1715/*"<size="*/;
-    v15[1].monitor = (void *)StringLiteral_1715/*"<size="*/;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&v15[1].monitor, v20, v17, v18);
-    v28 = v14 * 18.0;
-    v15 = System_Single__ToString(v14 * 18.0, (const MethodInfo *)&v28);
-    if ( LODWORD(v19[1].klass) <= 1
-      || (v19[1].fields = (System_String_Fields)v15,
-          sub_1BCAF9C((CGThumbnailListItem_o *)&v19[1].fields, (int32_t)v15, v17, v21),
-          LODWORD(v19[1].klass) <= 2)
-      || (v23 = StringLiteral_1741/*">"*/,
-          v19[2].klass = (System_String_c *)StringLiteral_1741/*">"*/,
-          sub_1BCAF9C((CGThumbnailListItem_o *)&v19[2], v23, v17, v22),
-          LODWORD(v19[1].klass) <= 3)
-      || (v19[2].monitor = v13,
-          sub_1BCAF9C((CGThumbnailListItem_o *)&v19[2].monitor, (int32_t)v13, v17, v24),
-          LODWORD(v19[1].klass) <= 4) )
+    v12 = StringLiteral_1723/*"<size="*/;
+    v7[1].monitor = (void *)StringLiteral_1723/*"<size="*/;
+    sub_1C2D434((CGThumbnailListItem_o *)&v7[1].monitor, v12, v9, v10);
+    v20 = v6 * 18.0;
+    v7 = System_Single__ToString(v6 * 18.0, (const MethodInfo *)&v20);
+    if ( LODWORD(v11[1].klass) <= 1
+      || (v11[1].fields = (System_String_Fields)v7,
+          sub_1C2D434((CGThumbnailListItem_o *)&v11[1].fields, (int32_t)v7, v9, v13),
+          LODWORD(v11[1].klass) <= 2)
+      || (v15 = StringLiteral_1749/*">"*/,
+          v11[2].klass = (System_String_c *)StringLiteral_1749/*">"*/,
+          sub_1C2D434((CGThumbnailListItem_o *)&v11[2], v15, v9, v14),
+          LODWORD(v11[1].klass) <= 3)
+      || (v11[2].monitor = v5,
+          sub_1C2D434((CGThumbnailListItem_o *)&v11[2].monitor, (int32_t)v5, v9, v16),
+          LODWORD(v11[1].klass) <= 4) )
     {
 LABEL_18:
-      sub_1BCB25C(v15, v16, v17);
+      sub_1C2D6F4(v7, v8, v9);
     }
-    v26 = StringLiteral_1518/*"</size>"*/;
-    v19[2].fields = (System_String_Fields)StringLiteral_1518/*"</size>"*/;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&v19[2].fields, v26, v17, v25);
-    v27 = System_String__Concat_62490940((System_String_array *)v19, 0LL);
-    v30.fields.m_XMin = 10.0;
-    v30.fields.m_YMin = 5.0;
-    v30.fields.m_Width = v14 * 800.0;
-    v30.fields.m_Height = v14 * 825.0;
-    UnityEngine_GUI__Label(v30, v27, 0LL);
+    v18 = StringLiteral_1526/*"</size>"*/;
+    v11[2].fields = (System_String_Fields)StringLiteral_1526/*"</size>"*/;
+    sub_1C2D434((CGThumbnailListItem_o *)&v11[2].fields, v18, v9, v17);
+    v19 = System_String__Concat_63498380((System_String_array *)v11, 0);
+    v22.fields.m_XMin = 10.0;
+    v22.fields.m_YMin = 5.0;
+    v22.fields.m_Width = v6 * 800.0;
+    v22.fields.m_Height = v6 * 825.0;
+    UnityEngine_GUI__Label(v22, v19, 0);
   }
 }
 
 
-void __fastcall FadeInfo__SetScaleSoundInfo(FadeInfo_o *this, float scale, const MethodInfo *method)
+void FadeInfo__SetScaleSoundInfo(FadeInfo_o *this, float scale, const MethodInfo *method)
 {
   this->fields.baseScale = scale;
 }

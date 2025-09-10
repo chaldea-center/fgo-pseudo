@@ -1,10 +1,10 @@
-void __fastcall WrapLineMessage___ctor(WrapLineMessage_o *this, const MethodInfo *method)
+void WrapLineMessage___ctor(WrapLineMessage_o *this, const MethodInfo *method)
 {
-  ScriptLineMessage___ctor((ScriptLineMessage_o *)this, 0LL);
+  ScriptLineMessage___ctor((ScriptLineMessage_o *)this, 0);
 }
 
 
-void __fastcall WrapLineMessage__AfterParseEachChar(
+void WrapLineMessage__AfterParseEachChar(
         WrapLineMessage_o *this,
         System_Text_StringBuilder_o *tempTxt,
         ScriptLineMessage_ProcAddLabel_o *addLabel,
@@ -16,23 +16,23 @@ void __fastcall WrapLineMessage__AfterParseEachChar(
 
   if ( WrapLineMessage__IsWrapTextSize(this, tempTxt, (const MethodInfo *)addLabel) )
   {
-    v7 = BasicHelper__SubstringLast(tempTxt, 1, 0LL);
+    v7 = BasicHelper__SubstringLast(tempTxt, 1, 0);
     if ( !addLabel
       || (v9 = v7,
-          ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))addLabel->fields.m_target)(
-            addLabel->fields.original_method_info,
-            *(_QWORD *)&addLabel->fields.extra_arg),
-          ScriptLineMessage__ReturnText((ScriptLineMessage_o *)this, 0LL),
+          ((void (__fastcall *)(intptr_t, intptr_t))addLabel->fields.invoke_impl)(
+            addLabel->fields.method_code,
+            addLabel->fields.method),
+          ScriptLineMessage__ReturnText((ScriptLineMessage_o *)this, 0),
           !tempTxt) )
     {
-      sub_1BCB254(v7, v8);
+      sub_1C2D6EC(v7, v8);
     }
-    System_Text_StringBuilder__Append_62534368(tempTxt, v9, 0LL);
+    System_Text_StringBuilder__Append_63542928(tempTxt, v9, 0);
   }
 }
 
 
-UILabel_o *__fastcall WrapLineMessage__GetWrapCheckLabel(WrapLineMessage_o *this, const MethodInfo *method)
+UILabel_o *WrapLineMessage__GetWrapCheckLabel(WrapLineMessage_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *wrapCheckLabel; // x21
   struct UILabel_o *MainLabel; // x0
@@ -41,41 +41,41 @@ UILabel_o *__fastcall WrapLineMessage__GetWrapCheckLabel(WrapLineMessage_o *this
   __int64 v7; // x1
   UILabel_o *v8; // x0
 
-  if ( (byte_4B1FB54 & 1) == 0 )
+  if ( (byte_4C2AA3B & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1FB54 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2AA3B = 1;
   }
   wrapCheckLabel = (UnityEngine_Object_o *)this->fields._wrapCheckLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(wrapCheckLabel, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(wrapCheckLabel, 0, 0) )
   {
-    ScriptLineMessage__Init((ScriptLineMessage_o *)this, 0LL);
-    MainLabel = ScriptLineMessage__FetchMainLabel((ScriptLineMessage_o *)this, 0LL);
+    ScriptLineMessage__Init((ScriptLineMessage_o *)this, 0);
+    MainLabel = ScriptLineMessage__FetchMainLabel((ScriptLineMessage_o *)this, 0);
     this->fields._wrapCheckLabel = MainLabel;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._wrapCheckLabel, (int32_t)MainLabel, v5, v6);
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields._wrapCheckLabel, (int32_t)MainLabel, v5, v6);
     v8 = this->fields._wrapCheckLabel;
     if ( !v8 )
-      sub_1BCB254(0LL, v7);
-    UILabel__set_fontSize(v8, this->fields.fontSize, 0LL);
+      sub_1C2D6EC(0, v7);
+    UILabel__set_fontSize(v8, this->fields.fontSize, 0);
   }
   return this->fields._wrapCheckLabel;
 }
 
 
-void __fastcall WrapLineMessage__Init(WrapLineMessage_o *this, System_String_o *text, const MethodInfo *method)
+void WrapLineMessage__Init(WrapLineMessage_o *this, System_String_o *text, const MethodInfo *method)
 {
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  ScriptLineMessage__Init((ScriptLineMessage_o *)this, 0LL);
+  ScriptLineMessage__Init((ScriptLineMessage_o *)this, 0);
   this->fields.originalText = text;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.originalText, (int32_t)text, v5, v6);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.originalText, (int32_t)text, v5, v6);
 }
 
 
-bool __fastcall WrapLineMessage__IsWrapTextSize(
+bool WrapLineMessage__IsWrapTextSize(
         WrapLineMessage_o *this,
         System_Text_StringBuilder_o *tempTxt,
         const MethodInfo *method)
@@ -99,7 +99,7 @@ bool __fastcall WrapLineMessage__IsWrapTextSize(
   x = this->fields.dispPosition.fields.x;
   v6 = this->fields.startPosition.fields.x;
   v7 = this;
-  Length = System_Text_StringBuilder__get_Length(tempTxt, 0LL);
+  Length = System_Text_StringBuilder__get_Length(tempTxt, 0);
   this = (WrapLineMessage_o *)WrapLineMessage__GetWrapCheckLabel(v7, v9);
   if ( !this )
     goto LABEL_10;
@@ -107,17 +107,17 @@ bool __fastcall WrapLineMessage__IsWrapTextSize(
   if ( v10 >= (float)(LODWORD(this[1].fields.imageStock) * Length) )
     return 0;
   v11 = WrapLineMessage__GetWrapCheckLabel(v7, (const MethodInfo *)tempTxt);
-  this = (WrapLineMessage_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, Il2CppMethodPointer))tempTxt->klass->vtable._3_ToString.method)(
+  this = (WrapLineMessage_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))tempTxt->klass->vtable._3_ToString.methodPtr)(
                                 tempTxt,
-                                tempTxt->klass->vtable._4_System_Runtime_Serialization_ISerializable_GetObjectData.methodPtr);
+                                tempTxt->klass->vtable._3_ToString.method);
   if ( !v11
-    || (UILabel__set_text(v11, (System_String_o *)this, 0LL),
-        (this = (WrapLineMessage_o *)WrapLineMessage__GetWrapCheckLabel(v7, v12)) == 0LL) )
+    || (UILabel__set_text(v11, (System_String_o *)this, 0),
+        (this = (WrapLineMessage_o *)WrapLineMessage__GetWrapCheckLabel(v7, v12)) == 0) )
   {
 LABEL_10:
-    sub_1BCB254(this, tempTxt);
+    sub_1C2D6EC(this, tempTxt);
   }
-  if ( v10 < UILabel__get_printedSize((UILabel_o *)this, 0LL).fields.x )
+  if ( v10 < UILabel__get_printedSize((UILabel_o *)this, 0).fields.x )
   {
     result = 1;
     v7->fields._IsWrapWidth_k__BackingField = 1;
@@ -127,27 +127,24 @@ LABEL_10:
 }
 
 
-void __fastcall WrapLineMessage__PreProcSetRubyLabel(
-        WrapLineMessage_o *this,
-        System_String_o *mainText,
-        const MethodInfo *method)
+void WrapLineMessage__PreProcSetRubyLabel(WrapLineMessage_o *this, System_String_o *mainText, const MethodInfo *method)
 {
   System_Text_StringBuilder_o *v5; // x21
   const MethodInfo *v6; // x2
 
-  if ( (byte_4B1FB53 & 1) == 0 )
+  if ( (byte_4C2AA3A & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Text_StringBuilder_TypeInfo, mainText);
-    byte_4B1FB53 = 1;
+    sub_1C2D490(&System_Text_StringBuilder_TypeInfo);
+    byte_4C2AA3A = 1;
   }
-  v5 = (System_Text_StringBuilder_o *)sub_1BCB244(System_Text_StringBuilder_TypeInfo);
-  System_Text_StringBuilder___ctor_62528192(v5, mainText, 0LL);
+  v5 = (System_Text_StringBuilder_o *)sub_1C2D6DC(System_Text_StringBuilder_TypeInfo);
+  System_Text_StringBuilder___ctor_63536752(v5, mainText, 0);
   if ( WrapLineMessage__IsWrapTextSize(this, v5, v6) )
-    ScriptLineMessage__ReturnText((ScriptLineMessage_o *)this, 0LL);
+    ScriptLineMessage__ReturnText((ScriptLineMessage_o *)this, 0);
 }
 
 
-void __fastcall WrapLineMessage__Quit(WrapLineMessage_o *this, const MethodInfo *method)
+void WrapLineMessage__Quit(WrapLineMessage_o *this, const MethodInfo *method)
 {
   UnityEngine_Component_o **p_wrapCheckLabel; // x20
   UnityEngine_Object_o *wrapCheckLabel; // x21
@@ -156,32 +153,31 @@ void __fastcall WrapLineMessage__Quit(WrapLineMessage_o *this, const MethodInfo 
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4B1FB52 & 1) == 0 )
+  if ( (byte_4C2AA39 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1FB52 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2AA39 = 1;
   }
   p_wrapCheckLabel = (UnityEngine_Component_o **)&this->fields._wrapCheckLabel;
   wrapCheckLabel = (UnityEngine_Object_o *)this->fields._wrapCheckLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(wrapCheckLabel, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(wrapCheckLabel, 0, 0) )
   {
     if ( !*p_wrapCheckLabel )
-      sub_1BCB254(0LL, v5);
-    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_wrapCheckLabel, 0LL);
+      sub_1C2D6EC(0, v5);
+    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_wrapCheckLabel, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(gameObject, 0LL);
-    *p_wrapCheckLabel = 0LL;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._wrapCheckLabel, 0, v7, v8);
+    UnityEngine_Object__Destroy_71163704(gameObject, 0);
+    *p_wrapCheckLabel = 0;
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields._wrapCheckLabel, 0, v7, v8);
   }
-  ScriptLineMessage__Quit((ScriptLineMessage_o *)this, 0LL);
+  ScriptLineMessage__Quit((ScriptLineMessage_o *)this, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-UnityEngine_Vector3_o __fastcall WrapLineMessage__SetOffsetMessage(
+UnityEngine_Vector3_o WrapLineMessage__SetOffsetMessage(
         WrapLineMessage_o *this,
         UnityEngine_Vector3_o pos,
         const MethodInfo *method)
@@ -201,24 +197,24 @@ UnityEngine_Vector3_o __fastcall WrapLineMessage__SetOffsetMessage(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4B1FB51 & 1) == 0 )
+  if ( (byte_4C2AA38 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1FB51 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2AA38 = 1;
   }
   messageOffset = (UnityEngine_Object_o *)this->fields.messageOffset;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(messageOffset, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(messageOffset, 0, 0) )
   {
     v9 = this->fields.messageOffset;
     if ( !v9 )
-      sub_1BCB254(0LL, v8);
+      sub_1C2D6EC(0, v8);
     v13.fields.x = x;
     v13.fields.y = y;
     v13.fields.z = z;
-    UnityEngine_Transform__set_localPosition(v9, v13, 0LL);
-    x = x + ScriptLineMessage__GetPrintedSize((ScriptLineMessage_o *)this, 0LL).fields.x;
+    UnityEngine_Transform__set_localPosition(v9, v13, 0);
+    x = x + ScriptLineMessage__GetPrintedSize((ScriptLineMessage_o *)this, 0).fields.x;
   }
   v10 = y;
   v11 = z;
@@ -230,7 +226,7 @@ UnityEngine_Vector3_o __fastcall WrapLineMessage__SetOffsetMessage(
 }
 
 
-void __fastcall WrapLineMessage__SetText(
+void WrapLineMessage__SetText(
         WrapLineMessage_o *this,
         System_String_o *text,
         System_String_o *color,
@@ -243,27 +239,27 @@ void __fastcall WrapLineMessage__SetText(
   UILabel_o *v14; // x0
   __int64 v15; // x1
 
-  if ( (byte_4B1FB50 & 1) == 0 )
+  if ( (byte_4C2AA37 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1/*""*/, text);
-    byte_4B1FB50 = 1;
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C2AA37 = 1;
   }
   this->fields._IsWrapWidth_k__BackingField = 0;
   this->fields.originalText = text;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields.originalText,
     (int32_t)text,
     (int32_t)color,
     (const MethodInfo *)font);
-  ScriptLineMessage__SetText((ScriptLineMessage_o *)this, text, color, font, removeUserNameColorCode, isTalkName, 0LL);
+  ScriptLineMessage__SetText((ScriptLineMessage_o *)this, text, color, font, removeUserNameColorCode, isTalkName, 0);
   v14 = WrapLineMessage__GetWrapCheckLabel(this, v13);
   if ( !v14 )
-    sub_1BCB254(0LL, v15);
-  UILabel__set_text(v14, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+    sub_1C2D6EC(0, v15);
+  UILabel__set_text(v14, (System_String_o *)StringLiteral_1/*""*/, 0);
 }
 
 
-void __fastcall WrapLineMessage__UpdateWrapWidth(WrapLineMessage_o *this, float width, const MethodInfo *method)
+void WrapLineMessage__UpdateWrapWidth(WrapLineMessage_o *this, float width, const MethodInfo *method)
 {
   UILabel_o *v4; // x0
   __int64 v5; // x1
@@ -272,34 +268,34 @@ void __fastcall WrapLineMessage__UpdateWrapWidth(WrapLineMessage_o *this, float 
   this->fields.wrapWidth = width;
   v4 = WrapLineMessage__GetWrapCheckLabel(this, method);
   if ( !v4 )
-    sub_1BCB254(0LL, v5);
-  UILabel__set_fontSize(v4, this->fields.fontSize, 0LL);
-  if ( !System_String__IsNullOrEmpty(this->fields.originalText, 0LL) )
-    ((void (__fastcall *)(WrapLineMessage_o *, struct System_String_o *, _QWORD, _QWORD, _QWORD, _QWORD, void *))this->klass->vtable._7_SetText.method)(
+    sub_1C2D6EC(0, v5);
+  UILabel__set_fontSize(v4, this->fields.fontSize, 0);
+  if ( !System_String__IsNullOrEmpty(this->fields.originalText, 0) )
+    ((void (__fastcall *)(WrapLineMessage_o *, struct System_String_o *, _QWORD, _QWORD, _QWORD, _QWORD, const MethodInfo *))this->klass->vtable._7_SetText.methodPtr)(
       this,
       this->fields.originalText,
-      0LL,
-      0LL,
-      0LL,
-      0LL,
-      this->klass[1]._1.image);
+      0,
+      0,
+      0,
+      0,
+      this->klass->vtable._7_SetText.method);
 }
 
 
-bool __fastcall WrapLineMessage__get_IsWrapWidth(WrapLineMessage_o *this, const MethodInfo *method)
+bool WrapLineMessage__get_IsWrapWidth(WrapLineMessage_o *this, const MethodInfo *method)
 {
   return this->fields._IsWrapWidth_k__BackingField;
 }
 
 
 // attributes: thunk
-UILabel_o *__fastcall WrapLineMessage__get_WrapCheckLabel(WrapLineMessage_o *this, const MethodInfo *method)
+UILabel_o *WrapLineMessage__get_WrapCheckLabel(WrapLineMessage_o *this, const MethodInfo *method)
 {
   return WrapLineMessage__GetWrapCheckLabel(this, method);
 }
 
 
-void __fastcall WrapLineMessage__set_IsWrapWidth(WrapLineMessage_o *this, bool value, const MethodInfo *method)
+void WrapLineMessage__set_IsWrapWidth(WrapLineMessage_o *this, bool value, const MethodInfo *method)
 {
   this->fields._IsWrapWidth_k__BackingField = value;
 }

@@ -1,4 +1,4 @@
-void __fastcall PlayFieldMotionBattleLogicTask___ctor(
+void PlayFieldMotionBattleLogicTask___ctor(
         PlayFieldMotionBattleLogicTask_o *this,
         System_String_o *motionName,
         bool isForcedSpeedOne,
@@ -15,6 +15,6 @@ void __fastcall PlayFieldMotionBattleLogicTask___ctor(
   v5->fields.motionName = motionName;
   v5 = (PlayFieldMotionBattleLogicTask_o *)((char *)v5 + 120);
   *(_DWORD *)&v5[-1].fields.isNoCriticalOnAttack = 44;
-  sub_1BCAF9C((CGThumbnailListItem_o *)v5, (int32_t)motionName, v7, v8);
+  sub_1C2D434((CGThumbnailListItem_o *)v5, (int32_t)motionName, v7, v8);
   LOBYTE(v5->fields.combo) = v6;
 }

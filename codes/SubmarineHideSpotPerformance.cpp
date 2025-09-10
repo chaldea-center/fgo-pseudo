@@ -1,4 +1,4 @@
-void __fastcall SubmarineHideSpotPerformance___ctor(
+void SubmarineHideSpotPerformance___ctor(
         SubmarineHideSpotPerformance_o *this,
         SrcSpotBasePrefab_o *spot,
         const MethodInfo *method)
@@ -6,13 +6,13 @@ void __fastcall SubmarineHideSpotPerformance___ctor(
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  SchedulerTaskBase___ctor((SchedulerTaskBase_o *)this, 0LL);
+  SchedulerTaskBase___ctor((SchedulerTaskBase_o *)this, 0);
   this->fields.spot = spot;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.spot, (int32_t)spot, v5, v6);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.spot, (int32_t)spot, v5, v6);
 }
 
 
-System_Collections_IEnumerator_o *__fastcall SubmarineHideSpotPerformance__Execute(
+System_Collections_IEnumerator_o *SubmarineHideSpotPerformance__Execute(
         SubmarineHideSpotPerformance_o *this,
         const MethodInfo *method)
 {
@@ -20,105 +20,98 @@ System_Collections_IEnumerator_o *__fastcall SubmarineHideSpotPerformance__Execu
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4B18F49 & 1) == 0 )
+  if ( (byte_4C23CAD & 1) == 0 )
   {
-    sub_1BCAFF8(&SubmarineHideSpotPerformance__Execute_d__4_TypeInfo, method);
-    byte_4B18F49 = 1;
+    sub_1C2D490(&SubmarineHideSpotPerformance__Execute_d__4_TypeInfo);
+    byte_4C23CAD = 1;
   }
-  v3 = sub_1BCB244(SubmarineHideSpotPerformance__Execute_d__4_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0LL);
+  v3 = sub_1C2D6DC(SubmarineHideSpotPerformance__Execute_d__4_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C2D434((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
 
-void __fastcall SubmarineHideSpotPerformance__OnStart(SubmarineHideSpotPerformance_o *this, const MethodInfo *method)
+void SubmarineHideSpotPerformance__OnStart(SubmarineHideSpotPerformance_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   SrcSpotBasePrefab_o *spot; // x20
-  System_Action_o *v5; // x21
-  __int64 v6; // x0
-  __int64 v7; // x1
+  System_Action_o *v4; // x21
+  __int64 v5; // x0
+  __int64 v6; // x1
 
-  if ( (byte_4B18F48 & 1) == 0 )
+  if ( (byte_4C23CAC & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, method);
-    sub_1BCAFF8(&Method_SubmarineHideSpotPerformance__OnStart_b__3_0__, v3);
-    byte_4B18F48 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_SubmarineHideSpotPerformance__OnStart_b__3_0__);
+    byte_4C23CAC = 1;
   }
-  SchedulerTaskBase__OnStart((SchedulerTaskBase_o *)this, 0LL);
+  SchedulerTaskBase__OnStart((SchedulerTaskBase_o *)this, 0);
   this->fields.spotAnimFinished = 0;
   spot = this->fields.spot;
-  v5 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_SubmarineHideSpotPerformance__OnStart_b__3_0__, 0LL);
+  v4 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v4, (Il2CppObject *)this, Method_SubmarineHideSpotPerformance__OnStart_b__3_0__, 0);
   if ( !spot )
-    sub_1BCB254(v6, v7);
-  SrcSpotBasePrefab__SetState(spot, 2, v5, 0LL);
+    sub_1C2D6EC(v5, v6);
+  SrcSpotBasePrefab__SetState(spot, 2, v4, 0);
 }
 
 
-bool __fastcall SubmarineHideSpotPerformance___Execute_b__4_0(
-        SubmarineHideSpotPerformance_o *this,
-        const MethodInfo *method)
+bool SubmarineHideSpotPerformance___Execute_b__4_0(SubmarineHideSpotPerformance_o *this, const MethodInfo *method)
 {
   return this->fields.spotAnimFinished;
 }
 
 
-void __fastcall SubmarineHideSpotPerformance___OnStart_b__3_0(
-        SubmarineHideSpotPerformance_o *this,
-        const MethodInfo *method)
+void SubmarineHideSpotPerformance___OnStart_b__3_0(SubmarineHideSpotPerformance_o *this, const MethodInfo *method)
 {
   struct SrcSpotBasePrefab_o *spot; // x8
   struct MapControl_SpotInfo_o *mMapCtrl_SpotInfo; // x8
 
   spot = this->fields.spot;
-  if ( !spot || (mMapCtrl_SpotInfo = spot->fields.mMapCtrl_SpotInfo) == 0LL )
-    sub_1BCB254(this, method);
+  if ( !spot || (mMapCtrl_SpotInfo = spot->fields.mMapCtrl_SpotInfo) == 0 )
+    sub_1C2D6EC(this, method);
   mMapCtrl_SpotInfo->fields.dispType = 0;
   this->fields.spotAnimFinished = 1;
 }
 
 
-void __fastcall SubmarineHideSpotPerformance__Execute_d__4___ctor(
+void SubmarineHideSpotPerformance__Execute_d__4___ctor(
         SubmarineHideSpotPerformance__Execute_d__4_o *this,
         int32_t 1__state,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.__1__state = 1__state;
 }
 
 
-bool __fastcall SubmarineHideSpotPerformance__Execute_d__4__MoveNext(
+bool SubmarineHideSpotPerformance__Execute_d__4__MoveNext(
         SubmarineHideSpotPerformance__Execute_d__4_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   int32_t _1__state; // w8
   bool result; // w0
   Il2CppObject *_4__this; // x20
-  System_Func_bool__o *v8; // x21
-  UnityEngine_WaitUntil_o *v9; // x20
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w8
+  System_Func_bool__o *v6; // x21
+  UnityEngine_WaitUntil_o *v7; // x20
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int32_t v10; // w8
 
-  if ( (byte_4B18F4A & 1) == 0 )
+  if ( (byte_4C23CAE & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Func_bool__TypeInfo, method);
-    sub_1BCAFF8(&Method_SubmarineHideSpotPerformance__Execute_b__4_0__, v3);
-    sub_1BCAFF8(&UnityEngine_WaitUntil_TypeInfo, v4);
-    byte_4B18F4A = 1;
+    sub_1C2D490(&System_Func_bool__TypeInfo);
+    sub_1C2D490(&Method_SubmarineHideSpotPerformance__Execute_b__4_0__);
+    sub_1C2D490(&UnityEngine_WaitUntil_TypeInfo);
+    byte_4C23CAE = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
   if ( _1__state == 1 )
   {
-    v12 = -1;
+    v10 = -1;
   }
   else
   {
@@ -126,21 +119,21 @@ bool __fastcall SubmarineHideSpotPerformance__Execute_d__4__MoveNext(
       return result;
     this->fields.__1__state = -1;
     _4__this = (Il2CppObject *)this->fields.__4__this;
-    v8 = (System_Func_bool__o *)sub_1BCB244(System_Func_bool__TypeInfo);
-    System_Func_bool____ctor(v8, _4__this, Method_SubmarineHideSpotPerformance__Execute_b__4_0__, 0LL);
-    v9 = (UnityEngine_WaitUntil_o *)sub_1BCB244(UnityEngine_WaitUntil_TypeInfo);
-    UnityEngine_WaitUntil___ctor(v9, v8, 0LL);
-    this->fields.__2__current = (Il2CppObject *)v9;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v9, v10, v11);
-    v12 = 1;
+    v6 = (System_Func_bool__o *)sub_1C2D6DC(System_Func_bool__TypeInfo);
+    System_Func_bool____ctor(v6, _4__this, Method_SubmarineHideSpotPerformance__Execute_b__4_0__, 0);
+    v7 = (UnityEngine_WaitUntil_o *)sub_1C2D6DC(UnityEngine_WaitUntil_TypeInfo);
+    UnityEngine_WaitUntil___ctor(v7, v6, 0);
+    this->fields.__2__current = (Il2CppObject *)v7;
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9);
+    v10 = 1;
     result = 1;
   }
-  this->fields.__1__state = v12;
+  this->fields.__1__state = v10;
   return result;
 }
 
 
-Il2CppObject *__fastcall SubmarineHideSpotPerformance__Execute_d__4__System_Collections_Generic_IEnumerator_System_Object__get_Current(
+Il2CppObject *SubmarineHideSpotPerformance__Execute_d__4__System_Collections_Generic_IEnumerator_System_Object__get_Current(
         SubmarineHideSpotPerformance__Execute_d__4_o *this,
         const MethodInfo *method)
 {
@@ -148,7 +141,7 @@ Il2CppObject *__fastcall SubmarineHideSpotPerformance__Execute_d__4__System_Coll
 }
 
 
-void __fastcall __noreturn SubmarineHideSpotPerformance__Execute_d__4__System_Collections_IEnumerator_Reset(
+void __noreturn SubmarineHideSpotPerformance__Execute_d__4__System_Collections_IEnumerator_Reset(
         SubmarineHideSpotPerformance__Execute_d__4_o *this,
         const MethodInfo *method)
 {
@@ -156,15 +149,15 @@ void __fastcall __noreturn SubmarineHideSpotPerformance__Execute_d__4__System_Co
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BCB00C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BCB244(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BCB00C(&Method_SubmarineHideSpotPerformance__Execute_d__4_System_Collections_IEnumerator_Reset__);
-  sub_1BCB120(v3, v4);
+  v2 = sub_1C2D4A4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C2D6DC(v2);
+  System_NotSupportedException___ctor(v3, 0);
+  v4 = sub_1C2D4A4(&Method_SubmarineHideSpotPerformance__Execute_d__4_System_Collections_IEnumerator_Reset__);
+  sub_1C2D5B8(v3, v4);
 }
 
 
-Il2CppObject *__fastcall SubmarineHideSpotPerformance__Execute_d__4__System_Collections_IEnumerator_get_Current(
+Il2CppObject *SubmarineHideSpotPerformance__Execute_d__4__System_Collections_IEnumerator_get_Current(
         SubmarineHideSpotPerformance__Execute_d__4_o *this,
         const MethodInfo *method)
 {
@@ -172,7 +165,7 @@ Il2CppObject *__fastcall SubmarineHideSpotPerformance__Execute_d__4__System_Coll
 }
 
 
-void __fastcall SubmarineHideSpotPerformance__Execute_d__4__System_IDisposable_Dispose(
+void SubmarineHideSpotPerformance__Execute_d__4__System_IDisposable_Dispose(
         SubmarineHideSpotPerformance__Execute_d__4_o *this,
         const MethodInfo *method)
 {

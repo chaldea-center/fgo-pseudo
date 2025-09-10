@@ -1,10 +1,10 @@
-void __fastcall UserRecommendSupportInfo___ctor(UserRecommendSupportInfo_o *this, const MethodInfo *method)
+void UserRecommendSupportInfo___ctor(UserRecommendSupportInfo_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall UserRecommendSupportInfo__ChangeLimitCountBySpoilerProtection(
+void UserRecommendSupportInfo__ChangeLimitCountBySpoilerProtection(
         UserRecommendSupportInfo_o *this,
         const MethodInfo *method)
 {
@@ -17,25 +17,23 @@ void __fastcall UserRecommendSupportInfo__ChangeLimitCountBySpoilerProtection(
 
 
 // positive sp value has been detected, the output may be wrong!
-void __fastcall UserRecommendSupportInfo__Finalize(UserRecommendSupportInfo_o *this, const MethodInfo *method)
+void UserRecommendSupportInfo__Finalize(UserRecommendSupportInfo_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
   const MethodInfo *v3; // x3
-  struct ServantLeaderInfo_o *userSvtLeaderInfo; // x0
+  CGThumbnailListItem_o *userSvtLeaderInfo; // x0
 
-  userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
+  userSvtLeaderInfo = (CGThumbnailListItem_o *)this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
   {
-    userSvtLeaderInfo->fields.equipTarget1 = 0LL;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&userSvtLeaderInfo->fields.equipTarget1, 0, v2, v3);
+    userSvtLeaderInfo[1].klass = 0;
+    sub_1C2D434(userSvtLeaderInfo + 1, 0, v2, v3);
   }
-  System_Object__Finalize((Il2CppObject *)this, 0LL);
+  System_Object__Finalize((Il2CppObject *)this, 0);
 }
 
 
-EquipTargetInfo_o *__fastcall UserRecommendSupportInfo__GetEquipTarget(
-        UserRecommendSupportInfo_o *this,
-        const MethodInfo *method)
+EquipTargetInfo_o *UserRecommendSupportInfo__GetEquipTarget(UserRecommendSupportInfo_o *this, const MethodInfo *method)
 {
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
 
@@ -43,11 +41,11 @@ EquipTargetInfo_o *__fastcall UserRecommendSupportInfo__GetEquipTarget(
   if ( userSvtLeaderInfo )
     return userSvtLeaderInfo->fields.equipTarget1;
   else
-    return 0LL;
+    return 0;
 }
 
 
-int32_t __fastcall UserRecommendSupportInfo__GetExceedCount(UserRecommendSupportInfo_o *this, const MethodInfo *method)
+int32_t UserRecommendSupportInfo__GetExceedCount(UserRecommendSupportInfo_o *this, const MethodInfo *method)
 {
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
 
@@ -59,7 +57,7 @@ int32_t __fastcall UserRecommendSupportInfo__GetExceedCount(UserRecommendSupport
 }
 
 
-int32_t __fastcall UserRecommendSupportInfo__GetFriendNpNameDispLimitCount(
+int32_t UserRecommendSupportInfo__GetFriendNpNameDispLimitCount(
         UserRecommendSupportInfo_o *this,
         const MethodInfo *method)
 {
@@ -73,9 +71,7 @@ int32_t __fastcall UserRecommendSupportInfo__GetFriendNpNameDispLimitCount(
 }
 
 
-int32_t __fastcall UserRecommendSupportInfo__GetIconLimitCount(
-        UserRecommendSupportInfo_o *this,
-        const MethodInfo *method)
+int32_t UserRecommendSupportInfo__GetIconLimitCount(UserRecommendSupportInfo_o *this, const MethodInfo *method)
 {
   ServantLeaderInfo_o *userSvtLeaderInfo; // x0
 
@@ -87,7 +83,7 @@ int32_t __fastcall UserRecommendSupportInfo__GetIconLimitCount(
 }
 
 
-int32_t __fastcall UserRecommendSupportInfo__GetLimitCount(UserRecommendSupportInfo_o *this, const MethodInfo *method)
+int32_t UserRecommendSupportInfo__GetLimitCount(UserRecommendSupportInfo_o *this, const MethodInfo *method)
 {
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
 
@@ -99,7 +95,7 @@ int32_t __fastcall UserRecommendSupportInfo__GetLimitCount(UserRecommendSupportI
 }
 
 
-int32_t __fastcall UserRecommendSupportInfo__GetLv(UserRecommendSupportInfo_o *this, const MethodInfo *method)
+int32_t UserRecommendSupportInfo__GetLv(UserRecommendSupportInfo_o *this, const MethodInfo *method)
 {
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
 
@@ -111,16 +107,16 @@ int32_t __fastcall UserRecommendSupportInfo__GetLv(UserRecommendSupportInfo_o *t
 }
 
 
-System_String_o *__fastcall UserRecommendSupportInfo__GetOverWriteServantName(
+System_String_o *UserRecommendSupportInfo__GetOverWriteServantName(
         UserRecommendSupportInfo_o *this,
         const MethodInfo *method)
 {
   System_String_o *userSvtLeaderInfo; // x9
 
-  if ( (byte_4B1D950 & 1) == 0 )
+  if ( (byte_4C28756 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1/*""*/, method);
-    byte_4B1D950 = 1;
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C28756 = 1;
   }
   userSvtLeaderInfo = (System_String_o *)this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
@@ -132,29 +128,29 @@ System_String_o *__fastcall UserRecommendSupportInfo__GetOverWriteServantName(
 }
 
 
-System_Int32_array *__fastcall UserRecommendSupportInfo__GetRandomLimitCountTargets(
+System_Int32_array *UserRecommendSupportInfo__GetRandomLimitCountTargets(
         UserRecommendSupportInfo_o *this,
         const MethodInfo *method)
 {
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
   System_Int32_array *result; // x0
 
-  if ( (byte_4B1D952 & 1) == 0 )
+  if ( (byte_4C28758 & 1) == 0 )
   {
-    sub_1BCAFF8(&int___TypeInfo, method);
-    byte_4B1D952 = 1;
+    sub_1C2D490(&int___TypeInfo);
+    byte_4C28758 = 1;
   }
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( !userSvtLeaderInfo )
-    return (System_Int32_array *)sub_1BCB0A0(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1C2D538(int___TypeInfo, 0);
   result = userSvtLeaderInfo->fields.randomLimitCountTargets;
   if ( !result )
-    return (System_Int32_array *)sub_1BCB0A0(int___TypeInfo, 0LL);
+    return (System_Int32_array *)sub_1C2D538(int___TypeInfo, 0);
   return result;
 }
 
 
-int32_t __fastcall UserRecommendSupportInfo__GetServantId(UserRecommendSupportInfo_o *this, const MethodInfo *method)
+int32_t UserRecommendSupportInfo__GetServantId(UserRecommendSupportInfo_o *this, const MethodInfo *method)
 {
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
   __int64 v4; // x19
@@ -162,10 +158,10 @@ int32_t __fastcall UserRecommendSupportInfo__GetServantId(UserRecommendSupportIn
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v6; // kr00_16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v8; // 0:x0.16
 
-  if ( (byte_4B1D94F & 1) == 0 )
+  if ( (byte_4C28755 & 1) == 0 )
   {
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    byte_4B1D94F = 1;
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C28755 = 1;
   }
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
@@ -177,19 +173,19 @@ int32_t __fastcall UserRecommendSupportInfo__GetServantId(UserRecommendSupportIn
   {
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(0, 0LL);
-    v5 = *(_QWORD *)&v6.fields.fakeValue;
+    v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit(0, 0);
     v4 = *(_QWORD *)&v6.fields.currentCryptoKey;
+    v5 = *(_QWORD *)&v6.fields.fakeValue;
   }
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v8.fields.currentCryptoKey = v4;
   *(_QWORD *)&v8.fields.fakeValue = v5;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v8, 0LL);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v8, 0);
 }
 
 
-bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo(
+bool UserRecommendSupportInfo__GetTreasureDeviceInfo(
         UserRecommendSupportInfo_o *this,
         TreasureDvcInfo_o **tdInfo,
         const MethodInfo *method)
@@ -201,15 +197,15 @@ bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo(
   const MethodInfo *v9; // x2
   ServantLeaderInfo_o *userSvtLeaderInfo; // x0
 
-  if ( (byte_4B1D951 & 1) == 0 )
+  if ( (byte_4C28757 & 1) == 0 )
   {
-    sub_1BCAFF8(&TreasureDvcInfo_TypeInfo, tdInfo);
-    byte_4B1D951 = 1;
+    sub_1C2D490(&TreasureDvcInfo_TypeInfo);
+    byte_4C28757 = 1;
   }
-  v5 = (TreasureDvcInfo_o *)sub_1BCB244(TreasureDvcInfo_TypeInfo);
+  v5 = (TreasureDvcInfo_o *)sub_1C2D6DC(TreasureDvcInfo_TypeInfo);
   TreasureDvcInfo___ctor(v5, v6);
   *tdInfo = v5;
-  sub_1BCAF9C((CGThumbnailListItem_o *)tdInfo, (int32_t)v5, v7, v8);
+  sub_1C2D434((CGThumbnailListItem_o *)tdInfo, (int32_t)v5, v7, v8);
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
     LOBYTE(userSvtLeaderInfo) = ServantLeaderInfo__getTreasureDeviceInfo(userSvtLeaderInfo, tdInfo, v9);
@@ -217,7 +213,7 @@ bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo(
 }
 
 
-bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo_42685796(
+bool UserRecommendSupportInfo__GetTreasureDeviceInfo_43317648(
         UserRecommendSupportInfo_o *this,
         int32_t *tdLv,
         int32_t *tdMaxLv,
@@ -229,7 +225,7 @@ bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo_42685796(
   *tdMaxLv = 1;
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
-    LOBYTE(userSvtLeaderInfo) = ServantLeaderInfo__getTreasureDeviceInfo_42622768(
+    LOBYTE(userSvtLeaderInfo) = ServantLeaderInfo__getTreasureDeviceInfo_43254296(
                                   userSvtLeaderInfo,
                                   tdLv,
                                   tdMaxLv,
@@ -238,7 +234,7 @@ bool __fastcall UserRecommendSupportInfo__GetTreasureDeviceInfo_42685796(
 }
 
 
-int32_t __fastcall UserRecommendSupportInfo__GetTreasureDeviceLevelIcon(
+int32_t UserRecommendSupportInfo__GetTreasureDeviceLevelIcon(
         UserRecommendSupportInfo_o *this,
         const MethodInfo *method)
 {
@@ -251,9 +247,7 @@ int32_t __fastcall UserRecommendSupportInfo__GetTreasureDeviceLevelIcon(
 }
 
 
-int64_t __fastcall UserRecommendSupportInfo__GetUserServantId(
-        UserRecommendSupportInfo_o *this,
-        const MethodInfo *method)
+int64_t UserRecommendSupportInfo__GetUserServantId(UserRecommendSupportInfo_o *this, const MethodInfo *method)
 {
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
 
@@ -261,5 +255,5 @@ int64_t __fastcall UserRecommendSupportInfo__GetUserServantId(
   if ( userSvtLeaderInfo )
     return userSvtLeaderInfo->fields.userSvtId;
   else
-    return 0LL;
+    return 0;
 }

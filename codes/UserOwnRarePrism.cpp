@@ -1,4 +1,4 @@
-void __fastcall UserOwnRarePrism___ctor(
+void UserOwnRarePrism___ctor(
         UserOwnRarePrism_o *this,
         ItemEntity_o *itemEntity,
         UserGameEntity_o *userGameEntity,
@@ -9,10 +9,10 @@ void __fastcall UserOwnRarePrism___ctor(
   __int64 v9; // x0
   __int64 v10; // x1
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._ItemEntity_k__BackingField, (int32_t)itemEntity, v7, v8);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._ItemEntity_k__BackingField, (int32_t)itemEntity, v7, v8);
   if ( !userGameEntity )
-    sub_1BCB254(v9, v10);
+    sub_1C2D6EC(v9, v10);
   this->fields._Num_k__BackingField = userGameEntity->fields.rarePri;
 }

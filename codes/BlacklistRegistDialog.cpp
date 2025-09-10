@@ -1,10 +1,10 @@
-void __fastcall BlacklistRegistDialog___ctor(BlacklistRegistDialog_o *this, const MethodInfo *method)
+void BlacklistRegistDialog___ctor(BlacklistRegistDialog_o *this, const MethodInfo *method)
 {
-  CommonConfirmDialog___ctor((CommonConfirmDialog_o *)this, 0LL);
+  CommonConfirmDialog___ctor((CommonConfirmDialog_o *)this, 0);
 }
 
 
-void __fastcall BlacklistRegistDialog__Open(
+void BlacklistRegistDialog__Open(
         BlacklistRegistDialog_o *this,
         System_String_o *title,
         System_String_o *message_main,
@@ -14,132 +14,126 @@ void __fastcall BlacklistRegistDialog__Open(
         int32_t fontsize_sub,
         const MethodInfo *method)
 {
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
   UnityEngine_Object_o *titleLabel; // x25
-  __int64 v22; // x1
-  UILabel_o *v23; // x0
-  System_String_o *v24; // x1
+  __int64 v16; // x1
+  UILabel_o *v17; // x0
+  System_String_o *v18; // x1
   UnityEngine_Object_o *messageLabel; // x24
-  System_String_o *v26; // x1
+  System_String_o *v20; // x1
   UnityEngine_Object_o *messageLabel_sub; // x22
-  System_String_o *v28; // x1
+  System_String_o *v22; // x1
   UnityEngine_Object_o *buttonDecideLabel; // x20
-  UILabel_o *v30; // x20
+  UILabel_o *v24; // x20
   UnityEngine_Object_o *buttonCancelLabel; // x20
-  UILabel_o *v32; // x20
-  System_Action_o *v33; // x20
+  UILabel_o *v26; // x20
+  System_Action_o *v27; // x20
 
-  if ( (byte_4B17496 & 1) == 0 )
+  if ( (byte_4C221C5 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, title);
-    sub_1BCAFF8(&Method_CommonConfirmDialog_EndOpen__, v15);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v16);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v17);
-    sub_1BCAFF8(&StringLiteral_3653/*"COMMON_CONFIRM_NO"*/, v18);
-    sub_1BCAFF8(&StringLiteral_3658/*"COMMON_CONFIRM_YES"*/, v19);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v20);
-    byte_4B17496 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_CommonConfirmDialog_EndOpen__);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_3681/*"COMMON_CONFIRM_NO"*/);
+    sub_1C2D490(&StringLiteral_3686/*"COMMON_CONFIRM_YES"*/);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C221C5 = 1;
   }
   this->fields.clickFunc = func;
-  sub_1BCAF9C(&this->fields.clickFunc);
+  sub_1C2D434(&this->fields.clickFunc);
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(titleLabel, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(titleLabel, 0, 0) )
   {
-    v23 = this->fields.titleLabel;
-    if ( !v23 )
+    v17 = this->fields.titleLabel;
+    if ( !v17 )
       goto LABEL_48;
     if ( title )
-      v24 = title;
+      v18 = title;
     else
-      v24 = (System_String_o *)StringLiteral_1/*""*/;
-    UILabel__set_text(v23, v24, 0LL);
+      v18 = (System_String_o *)StringLiteral_1/*""*/;
+    UILabel__set_text(v17, v18, 0);
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(messageLabel, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(messageLabel, 0, 0) )
   {
     if ( fontsize_main )
     {
-      v23 = this->fields.messageLabel;
-      if ( !v23 )
+      v17 = this->fields.messageLabel;
+      if ( !v17 )
         goto LABEL_48;
-      UILabel__set_fontSize(v23, fontsize_main, 0LL);
+      UILabel__set_fontSize(v17, fontsize_main, 0);
     }
-    v23 = this->fields.messageLabel;
-    if ( !v23 )
+    v17 = this->fields.messageLabel;
+    if ( !v17 )
       goto LABEL_48;
     if ( message_main )
-      v26 = message_main;
+      v20 = message_main;
     else
-      v26 = (System_String_o *)StringLiteral_1/*""*/;
-    WrapControlText__textAdjust(v23, v26, v23->fields.mFontSize, 0, 0LL);
+      v20 = (System_String_o *)StringLiteral_1/*""*/;
+    WrapControlText__textAdjust(v17, v20, v17->fields.mFontSize, 0, 0);
   }
   messageLabel_sub = (UnityEngine_Object_o *)this->fields.messageLabel_sub;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(messageLabel_sub, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(messageLabel_sub, 0, 0) )
   {
     if ( fontsize_sub )
     {
-      v23 = this->fields.messageLabel_sub;
-      if ( !v23 )
+      v17 = this->fields.messageLabel_sub;
+      if ( !v17 )
         goto LABEL_48;
-      UILabel__set_fontSize(v23, fontsize_sub, 0LL);
+      UILabel__set_fontSize(v17, fontsize_sub, 0);
     }
-    v23 = this->fields.messageLabel_sub;
-    if ( v23 )
+    v17 = this->fields.messageLabel_sub;
+    if ( v17 )
     {
       if ( message_sub )
-        v28 = message_sub;
+        v22 = message_sub;
       else
-        v28 = (System_String_o *)StringLiteral_1/*""*/;
-      WrapControlText__textAdjust(v23, v28, v23->fields.mFontSize, 0, 0LL);
+        v22 = (System_String_o *)StringLiteral_1/*""*/;
+      WrapControlText__textAdjust(v17, v22, v17->fields.mFontSize, 0, 0);
       goto LABEL_33;
     }
 LABEL_48:
-    sub_1BCB254(v23, v22);
+    sub_1C2D6EC(v17, v16);
   }
 LABEL_33:
   buttonDecideLabel = (UnityEngine_Object_o *)this->fields.buttonDecideLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(buttonDecideLabel, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(buttonDecideLabel, 0, 0) )
   {
-    v30 = this->fields.buttonDecideLabel;
+    v24 = this->fields.buttonDecideLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v23 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3658/*"COMMON_CONFIRM_YES"*/, 0LL);
-    if ( !v30 )
+    v17 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3686/*"COMMON_CONFIRM_YES"*/, 0);
+    if ( !v24 )
       goto LABEL_48;
-    UILabel__set_text(v30, (System_String_o *)v23, 0LL);
+    UILabel__set_text(v24, (System_String_o *)v17, 0);
   }
   buttonCancelLabel = (UnityEngine_Object_o *)this->fields.buttonCancelLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(buttonCancelLabel, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(buttonCancelLabel, 0, 0) )
   {
-    v32 = this->fields.buttonCancelLabel;
+    v26 = this->fields.buttonCancelLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v23 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3653/*"COMMON_CONFIRM_NO"*/, 0LL);
-    if ( v32 )
+    v17 = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_NO"*/, 0);
+    if ( v26 )
     {
-      UILabel__set_text(v32, (System_String_o *)v23, 0LL);
+      UILabel__set_text(v26, (System_String_o *)v17, 0);
       goto LABEL_47;
     }
     goto LABEL_48;
   }
 LABEL_47:
   *(_WORD *)&this->fields.isButtonEnable = 256;
-  v33 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v33, (Il2CppObject *)this, Method_CommonConfirmDialog_EndOpen__, 0LL);
-  BaseDialog__Open((BaseDialog_o *)this, v33, 0, 0LL);
+  v27 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v27, (Il2CppObject *)this, Method_CommonConfirmDialog_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v27, 0, 0);
 }

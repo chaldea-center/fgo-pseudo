@@ -1,4 +1,4 @@
-void __fastcall CombineListItemInfo___ctor(
+void CombineListItemInfo___ctor(
         CombineListItemInfo_o *this,
         int32_t kind,
         int32_t type,
@@ -11,11 +11,11 @@ void __fastcall CombineListItemInfo___ctor(
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.kind = kind;
   this->fields.type = type;
   this->fields.spriteName = spriteName;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.spriteName, (int32_t)spriteName, v11, v12);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.spriteName, (int32_t)spriteName, v11, v12);
   this->fields.eventData = eventData;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.eventData, (int32_t)eventData, v13, v14);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.eventData, (int32_t)eventData, v13, v14);
 }

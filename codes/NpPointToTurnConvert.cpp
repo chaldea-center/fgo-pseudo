@@ -1,13 +1,10 @@
-void __fastcall NpPointToTurnConvert___ctor(NpPointToTurnConvert_o *this, const MethodInfo *method)
+void NpPointToTurnConvert___ctor(NpPointToTurnConvert_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-float __fastcall NpPointToTurnConvert__PointToTurn(
-        NpPointToTurnConvert_o *this,
-        int32_t point,
-        const MethodInfo *method)
+float NpPointToTurnConvert__PointToTurn(NpPointToTurnConvert_o *this, int32_t point, const MethodInfo *method)
 {
   if ( point < 1 )
     return 0.0;
@@ -16,14 +13,14 @@ float __fastcall NpPointToTurnConvert__PointToTurn(
 }
 
 
-float __fastcall NpPointToTurnConvert__get_Denominator(NpPointToTurnConvert_o *this, const MethodInfo *method)
+float NpPointToTurnConvert__get_Denominator(NpPointToTurnConvert_o *this, const MethodInfo *method)
 {
   BattleDataDefine_c *v2; // x0
 
-  if ( (byte_4B1F4E1 & 1) == 0 )
+  if ( (byte_4C2A386 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleDataDefine_TypeInfo, method);
-    byte_4B1F4E1 = 1;
+    sub_1C2D490(&BattleDataDefine_TypeInfo);
+    byte_4C2A386 = 1;
   }
   v2 = BattleDataDefine_TypeInfo;
   if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )

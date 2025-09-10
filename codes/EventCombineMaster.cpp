@@ -1,19 +1,19 @@
-void __fastcall EventCombineMaster___ctor(EventCombineMaster_o *this, const MethodInfo *method)
+void EventCombineMaster___ctor(EventCombineMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C429 & 1) == 0 )
+  if ( (byte_4C271D5 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_EventCombineMaster__EventCombineEntity__string___ctor__, method);
-    byte_4B1C429 = 1;
+    sub_1C2D490(&Method_DataMasterBase_EventCombineMaster__EventCombineEntity__string___ctor__);
+    byte_4C271D5 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     90,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_EventCombineMaster__EventCombineEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_EventCombineMaster__EventCombineEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-EventCombineEntity_o *__fastcall EventCombineMaster__GetEntity(
+EventCombineEntity_o *EventCombineMaster__GetEntity(
         EventCombineMaster_o *this,
         int32_t id,
         int32_t target,
@@ -21,50 +21,47 @@ EventCombineEntity_o *__fastcall EventCombineMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1C427 & 1) == 0 )
+  if ( (byte_4C271D3 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_EventCombineMaster__EventCombineEntity__string__GetEntity__, *(_QWORD *)&id);
-    byte_4B1C427 = 1;
+    sub_1C2D490(&Method_DataMasterBase_EventCombineMaster__EventCombineEntity__string__GetEntity__);
+    byte_4C271D3 = 1;
   }
   PK = (Il2CppObject *)EventCombineEntity__CreatePK(id, target, *(const MethodInfo **)&target);
   return (EventCombineEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                    PK,
-                                   (const MethodInfo_32CC8B8 *)Method_DataMasterBase_EventCombineMaster__EventCombineEntity__string__GetEntity__);
+                                   (const MethodInfo_338C850 *)Method_DataMasterBase_EventCombineMaster__EventCombineEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-EventCombineEntity_o *__fastcall EventCombineMaster__GetTargetEntitiyList(
+EventCombineEntity_o *EventCombineMaster__GetTargetEntitiyList(
         EventCombineMaster_o *this,
         int32_t targetType,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t Count; // w0
-  int32_t v8; // w21
-  int32_t v9; // w22
+  int32_t v7; // w21
+  int32_t v8; // w22
   EventCombineEntity_o *result; // x0
 
-  if ( (byte_4B1C42A & 1) == 0 )
+  if ( (byte_4C271D6 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_System_Collections_ObjectModel_Collection_EventCombineEntity__get_Count__,
-      *(_QWORD *)&targetType);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_EventCombineEntity__get_Item__, v5);
-    byte_4B1C42A = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_EventCombineEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_EventCombineEntity__get_Item__);
+    byte_4C271D6 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_13;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_EventCombineEntity__get_Count__);
+            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_EventCombineEntity__get_Count__);
   if ( Count >= 1 )
   {
-    v8 = Count;
-    v9 = 0;
+    v7 = Count;
+    v8 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -72,22 +69,22 @@ EventCombineEntity_o *__fastcall EventCombineMaster__GetTargetEntitiyList(
         break;
       result = (EventCombineEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                          list,
-                                         v9,
-                                         (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_EventCombineEntity__get_Item__);
+                                         v8,
+                                         (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_EventCombineEntity__get_Item__);
       if ( result && (targetType < 1 || result->fields.target == targetType) )
         return result;
-      if ( v8 == ++v9 )
-        return 0LL;
+      if ( v7 == ++v8 )
+        return 0;
     }
 LABEL_13:
-    sub_1BCB254(list, *(_QWORD *)&targetType);
+    sub_1C2D6EC(list, *(_QWORD *)&targetType);
   }
-  return 0LL;
+  return 0;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall EventCombineMaster__TryGetEntity(
+bool EventCombineMaster__TryGetEntity(
         EventCombineMaster_o *this,
         EventCombineEntity_o **entity,
         int32_t id,
@@ -96,15 +93,15 @@ bool __fastcall EventCombineMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1C428 & 1) == 0 )
+  if ( (byte_4C271D4 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_EventCombineMaster__EventCombineEntity__string__TryGetEntity__, entity);
-    byte_4B1C428 = 1;
+    sub_1C2D490(&Method_DataMasterBase_EventCombineMaster__EventCombineEntity__string__TryGetEntity__);
+    byte_4C271D4 = 1;
   }
   PK = (Il2CppObject *)EventCombineEntity__CreatePK(id, target, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_EventCombineMaster__EventCombineEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_EventCombineMaster__EventCombineEntity__string__TryGetEntity__);
 }

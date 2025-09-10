@@ -1,50 +1,48 @@
-void __fastcall EventUiValueEntity___ctor(EventUiValueEntity_o *this, const MethodInfo *method)
+void EventUiValueEntity___ctor(EventUiValueEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  int32_t v4; // w1
+  int32_t v3; // w1
   struct System_String_o **p_value; // x19
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
-  if ( (byte_4B1C743 & 1) == 0 )
+  if ( (byte_4C274F4 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v3);
-    byte_4B1C743 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C274F4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
-  *(_QWORD *)&this->fields.id = 0LL;
-  v4 = (int)StringLiteral_1/*""*/;
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+  *(_QWORD *)&this->fields.id = 0;
+  v3 = StringLiteral_1/*""*/;
   this->fields.value = (struct System_String_o *)StringLiteral_1/*""*/;
   p_value = &this->fields.value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)p_value, v4, v6, v7);
+  sub_1C2D434((CGThumbnailListItem_o *)p_value, v3, v5, v6);
   *((_DWORD *)p_value + 2) = 0;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall EventUiValueEntity__CreatePK(
+System_String_o *EventUiValueEntity__CreatePK(
         int32_t id,
         int32_t type,
         System_String_o *value,
         const MethodInfo *method)
 {
-  if ( (byte_4B1C744 & 1) == 0 )
+  if ( (byte_4C274F5 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long__long__string___, *(_QWORD *)&type);
-    byte_4B1C744 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+    byte_4C274F5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long__object_(
            id,
            type,
            (Il2CppObject *)value,
-           (const MethodInfo_301930C *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+           (const MethodInfo_30CD1B8 *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
 }
 
 
-System_String_o *__fastcall EventUiValueEntity__CreatePrimaryKey(EventUiValueEntity_o *this, const MethodInfo *method)
+System_String_o *EventUiValueEntity__CreatePrimaryKey(EventUiValueEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 

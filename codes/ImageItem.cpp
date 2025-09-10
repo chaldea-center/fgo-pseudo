@@ -1,16 +1,16 @@
-void __fastcall ImageItem___ctor(ImageItem_o *this, const MethodInfo *method)
+void ImageItem___ctor(ImageItem_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall ImageItem__IsTreasure(int32_t id, const MethodInfo *method)
+bool ImageItem__IsTreasure(int32_t id, const MethodInfo *method)
 {
   return (unsigned int)(id - 1) < 3;
 }
 
 
-bool __fastcall ImageItem__IsTreasure_39620468(int32_t id, const MethodInfo *method)
+bool ImageItem__IsTreasure_40208916(int32_t id, const MethodInfo *method)
 {
   return (unsigned int)(id - 1) < 3;
 }

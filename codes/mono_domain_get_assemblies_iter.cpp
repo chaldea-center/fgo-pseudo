@@ -9,8 +9,8 @@ __int64 __fastcall mono_domain_get_assemblies_iter(__int64 a1, __int64 **a2)
   __int64 v9; // x8
 
   if ( !a2 )
-    return 0LL;
-  v3 = sub_1C213F8();
+    return 0;
+  v3 = sub_1C83C7C();
   v4 = *a2;
   v5 = (__int64 *)v3;
   if ( *a2 )
@@ -20,8 +20,8 @@ __int64 __fastcall mono_domain_get_assemblies_iter(__int64 a1, __int64 **a2)
     if ( v6 == *(_QWORD *)(v3 + 8) )
     {
       operator delete(v4);
-      result = 0LL;
-      *a2 = 0LL;
+      result = 0;
+      *a2 = 0;
     }
     else
     {
@@ -30,7 +30,7 @@ __int64 __fastcall mono_domain_get_assemblies_iter(__int64 a1, __int64 **a2)
   }
   else
   {
-    v8 = (__int64 *)operator new(8uLL);
+    v8 = (__int64 *)operator new(8u);
     v9 = *v5;
     *v8 = *v5;
     *a2 = v8;

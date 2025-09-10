@@ -1,4 +1,4 @@
-void __fastcall BattleLogicServantAiTask___ctor(
+void BattleLogicServantAiTask___ctor(
         BattleLogicServantAiTask_o *this,
         int32_t procState,
         BattleServantData_o *svtData,
@@ -16,19 +16,19 @@ void __fastcall BattleLogicServantAiTask___ctor(
   BattleLogicServantTask___ctor((BattleLogicServantTask_o *)this, 59, svtData, (const MethodInfo *)logic);
   this->fields.procState = procState;
   this->fields.svtData = svtData;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.svtData, (int32_t)svtData, v9, v10);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.svtData, (int32_t)svtData, v9, v10);
   if ( !svtData )
-    sub_1BCB254(v11, v12);
-  v13 = (struct BattleLogicServantAi_o *)((__int64 (__fastcall *)(BattleServantData_o *, BattleLogic_o *, Il2CppMethodPointer))svtData->klass->vtable._20_GetLogicServantAi.method)(
+    sub_1C2D6EC(v11, v12);
+  v13 = (struct BattleLogicServantAi_o *)((__int64 (__fastcall *)(BattleServantData_o *, BattleLogic_o *, const MethodInfo *))svtData->klass->vtable._20_GetLogicServantAi.methodPtr)(
                                            svtData,
                                            logic,
-                                           svtData->klass->vtable._21_getThisTurnActCount.methodPtr);
+                                           svtData->klass->vtable._20_GetLogicServantAi.method);
   this->fields.logicAi = v13;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.logicAi, (int32_t)v13, v14, v15);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.logicAi, (int32_t)v13, v14, v15);
 }
 
 
-bool __fastcall BattleLogicServantAiTask__IsActable(
+bool BattleLogicServantAiTask__IsActable(
         BattleLogicServantAiTask_o *this,
         BattleLogic_o *logic,
         const MethodInfo *method)
@@ -37,7 +37,7 @@ bool __fastcall BattleLogicServantAiTask__IsActable(
 }
 
 
-BattleLogicTask_array *__fastcall BattleLogicServantAiTask__MakeActionTask(
+BattleLogicTask_array *BattleLogicServantAiTask__MakeActionTask(
         BattleLogicServantAiTask_o *this,
         BattleLogic_o *logic,
         const MethodInfo *method)
@@ -45,24 +45,25 @@ BattleLogicTask_array *__fastcall BattleLogicServantAiTask__MakeActionTask(
   __int64 v5; // x1
   BattleLogicServantAi_o *logicAi; // x0
 
-  if ( (byte_4B1F5AC & 1) == 0 )
+  if ( (byte_4C2A454 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleLogicTask___TypeInfo, logic);
-    byte_4B1F5AC = 1;
+    sub_1C2D490(&BattleLogicTask___TypeInfo);
+    byte_4C2A454 = 1;
   }
-  if ( (((__int64 (__fastcall *)(BattleLogicServantAiTask_o *, BattleLogic_o *, void *))this->klass->vtable._10_IsActable.method)(
+  if ( (((__int64 (__fastcall *)(BattleLogicServantAiTask_o *, BattleLogic_o *, const MethodInfo *))this->klass->vtable._10_IsActable.methodPtr)(
           this,
           logic,
-          this->klass[1]._1.image) & 1) == 0 )
-    return (BattleLogicTask_array *)sub_1BCB0A0(BattleLogicTask___TypeInfo, 0LL);
+          this->klass->vtable._10_IsActable.method)
+      & 1) == 0 )
+    return (BattleLogicTask_array *)sub_1C2D538(BattleLogicTask___TypeInfo, 0);
   logicAi = this->fields.logicAi;
   if ( !logicAi )
-    sub_1BCB254(0LL, v5);
+    sub_1C2D6EC(0, v5);
   return BattleLogicServantAi__TaskAiTargetAct(
            logicAi,
            this->fields.svtData,
            this->fields.procState,
            this->fields._AiTimingPriority_k__BackingField,
            0,
-           0LL);
+           0);
 }

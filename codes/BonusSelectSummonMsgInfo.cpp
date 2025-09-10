@@ -1,135 +1,125 @@
-void __fastcall BonusSelectSummonMsgInfo___cctor(const MethodInfo *method)
+void BonusSelectSummonMsgInfo___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4B18949 & 1) == 0 )
+  if ( (byte_4C236A1 & 1) == 0 )
   {
-    sub_1BCAFF8(&BonusSelectSummonMsgInfo_TypeInfo, v1);
-    byte_4B18949 = 1;
+    sub_1C2D490(&BonusSelectSummonMsgInfo_TypeInfo);
+    byte_4C236A1 = 1;
   }
   LODWORD(BonusSelectSummonMsgInfo_TypeInfo->static_fields->BONUS_SELECT_MESSAGE_LABEL_Y) = (struct BonusSelectSummonMsgInfo_StaticFields)-1029963776;
 }
 
 
-void __fastcall BonusSelectSummonMsgInfo___ctor(BonusSelectSummonMsgInfo_o *this, const MethodInfo *method)
+void BonusSelectSummonMsgInfo___ctor(BonusSelectSummonMsgInfo_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_List_object__o *v4; // x20
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  System_Collections_Generic_List_object__o *v3; // x20
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4B18948 & 1) == 0 )
+  if ( (byte_4C236A0 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject___ctor__, method);
-    sub_1BCAFF8(&System_Collections_Generic_List_GameObject__TypeInfo, v3);
-    byte_4B18948 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4C236A0 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v4,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_GameObject___ctor__);
-  this->fields.menberList = (struct System_Collections_Generic_List_GameObject__o *)v4;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.menberList, (int32_t)v4, v5, v6);
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+    v3,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+  this->fields.menberList = (struct System_Collections_Generic_List_GameObject__o *)v3;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.menberList, (int32_t)v3, v4, v5);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall BonusSelectSummonMsgInfo__CheckAssert(BonusSelectSummonMsgInfo_o *this, const MethodInfo *method)
+void BonusSelectSummonMsgInfo__CheckAssert(BonusSelectSummonMsgInfo_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall BonusSelectSummonMsgInfo__Init(BonusSelectSummonMsgInfo_o *this, const MethodInfo *method)
+void BonusSelectSummonMsgInfo__Init(BonusSelectSummonMsgInfo_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   UILabel_o *titleLabel; // x0
-  const MethodInfo *v10; // x1
+  const MethodInfo *v4; // x1
   Il2CppObject *current; // x20
-  System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-48h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v6; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4B18944 & 1) == 0 )
+  if ( (byte_4C2369C & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__get_Count__, v6);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BCAFF8(&string_TypeInfo, v8);
-    byte_4B18944 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&string_TypeInfo);
+    byte_4C2369C = 1;
   }
-  memset(&v12, 0, sizeof(v12));
+  memset(&v6, 0, sizeof(v6));
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
     goto LABEL_15;
-  UILabel__set_text(titleLabel, string_TypeInfo->static_fields->Empty, 0LL);
+  UILabel__set_text(titleLabel, string_TypeInfo->static_fields->Empty, 0);
   titleLabel = this->fields.selectInfoLabel;
   if ( !titleLabel )
     goto LABEL_15;
-  UILabel__set_text(titleLabel, string_TypeInfo->static_fields->Empty, 0LL);
-  BonusSelectSummonMsgInfo__InitMsgLabel(this, v10);
+  UILabel__set_text(titleLabel, string_TypeInfo->static_fields->Empty, 0);
+  BonusSelectSummonMsgInfo__InitMsgLabel(this, v4);
   titleLabel = (UILabel_o *)this->fields.menberList;
   if ( !titleLabel )
     goto LABEL_15;
   if ( SLODWORD(titleLabel->fields.m_CancellationTokenSource) >= 1 )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v12,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v6,
       (System_Collections_Generic_List_object__o *)titleLabel,
-      (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+      (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v12,
-              (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+              &v6,
+              (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
     {
-      current = v12.fields._current;
+      current = v6.fields._current;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_70136076((UnityEngine_Object_o *)current, 0LL);
+      UnityEngine_Object__Destroy_71163704((UnityEngine_Object_o *)current, 0);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v12,
-      (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+      &v6,
+      (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   }
-  titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !titleLabel )
 LABEL_15:
-    sub_1BCB254(titleLabel, method);
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0LL);
+    sub_1C2D6EC(titleLabel, method);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
 }
 
 
-void __fastcall BonusSelectSummonMsgInfo__InitMsgLabel(BonusSelectSummonMsgInfo_o *this, const MethodInfo *method)
+void BonusSelectSummonMsgInfo__InitMsgLabel(BonusSelectSummonMsgInfo_o *this, const MethodInfo *method)
 {
   UILabel_o *msgLabelSplitTop; // x0
 
-  if ( (byte_4B18947 & 1) == 0 )
+  if ( (byte_4C2369F & 1) == 0 )
   {
-    sub_1BCAFF8(&string_TypeInfo, method);
-    byte_4B18947 = 1;
+    sub_1C2D490(&string_TypeInfo);
+    byte_4C2369F = 1;
   }
   msgLabelSplitTop = this->fields.msgLabelSplitTop;
   if ( !msgLabelSplitTop
-    || (UILabel__set_text(msgLabelSplitTop, string_TypeInfo->static_fields->Empty, 0LL),
-        (msgLabelSplitTop = this->fields.msgLabelSplitCenter) == 0LL)
-    || (UILabel__set_text(msgLabelSplitTop, string_TypeInfo->static_fields->Empty, 0LL),
-        (msgLabelSplitTop = this->fields.msgLabelSplitLow) == 0LL)
-    || (UILabel__set_text(msgLabelSplitTop, string_TypeInfo->static_fields->Empty, 0LL),
-        (msgLabelSplitTop = this->fields.msgLabel) == 0LL) )
+    || (UILabel__set_text(msgLabelSplitTop, string_TypeInfo->static_fields->Empty, 0),
+        (msgLabelSplitTop = this->fields.msgLabelSplitCenter) == 0)
+    || (UILabel__set_text(msgLabelSplitTop, string_TypeInfo->static_fields->Empty, 0),
+        (msgLabelSplitTop = this->fields.msgLabelSplitLow) == 0)
+    || (UILabel__set_text(msgLabelSplitTop, string_TypeInfo->static_fields->Empty, 0),
+        (msgLabelSplitTop = this->fields.msgLabel) == 0) )
   {
-    sub_1BCB254(msgLabelSplitTop, method);
+    sub_1C2D6EC(msgLabelSplitTop, method);
   }
-  UILabel__set_text(msgLabelSplitTop, string_TypeInfo->static_fields->Empty, 0LL);
+  UILabel__set_text(msgLabelSplitTop, string_TypeInfo->static_fields->Empty, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BonusSelectSummonMsgInfo__SetBase(
+void BonusSelectSummonMsgInfo__SetBase(
         BonusSelectSummonMsgInfo_o *this,
         int32_t gachaId,
         System_String_o *title,
@@ -137,183 +127,174 @@ void __fastcall BonusSelectSummonMsgInfo__SetBase(
         BonusSelectSummonAssetManager_o *assetManager,
         const MethodInfo *method)
 {
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v21; // x1
+  const MethodInfo *v12; // x1
   UILabel_o *selectInfoLabel; // x23
-  const MethodInfo *v23; // x1
+  const MethodInfo *v14; // x1
   Il2CppObject *Master_object; // x21
-  __int64 v25; // x2
-  __int64 v26; // x25
-  int v27; // w8
-  DataMasterBase_TMaster__TEntity__PKType__o *v28; // x22
-  __int64 v29; // x26
-  __int64 v30; // x28
+  __int64 v16; // x2
+  __int64 v17; // x25
+  int v18; // w8
+  DataMasterBase_TMaster__TEntity__PKType__o *v19; // x22
+  __int64 v20; // x26
+  __int64 v21; // x28
   Il2CppObject *MsgInfoMenberPrefab_k__BackingField; // x23
   UnityEngine_Transform_o *transform; // x24
-  Il2CppObject *v33; // x23
-  BonusSelectSummonMsgInfoMenber_o *v34; // x24
-  const MethodInfo *v35; // x2
+  Il2CppObject *v24; // x23
+  BonusSelectSummonMsgInfoMenber_o *v25; // x24
+  const MethodInfo *v26; // x2
   Il2CppObject *Entity; // x1
-  int32_t v37; // w2
-  const MethodInfo *v38; // x3
-  __int64 v39; // x8
-  _QWORD *v40; // x9
+  int32_t v28; // w2
+  const MethodInfo *v29; // x3
+  intptr_t m_CachedPtr; // x8
+  _QWORD *v31; // x9
   __int64 klass_low; // x10
-  __int64 v42; // x8
-  __int64 v43; // [xsp+8h] [xbp-68h] BYREF
+  intptr_t v33; // x8
+  __int64 v34; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4B18946 & 1) == 0 )
+  if ( (byte_4C2369E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_GiftMaster___, *(_QWORD *)&gachaId);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantMaster___, v11);
-    sub_1BCAFF8(&DataManager_TypeInfo, v12);
-    sub_1BCAFF8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v13);
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfoMenber___, v14);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__Add__, v15);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v16);
-    sub_1BCAFF8(&Method_UnityEngine_Object_Instantiate_GameObject____77001424, v17);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v18);
-    sub_1BCAFF8(&StringLiteral_3702/*"CONFIRM_BONUS_SELECT_SUMMON_INFO"*/, v19);
-    byte_4B18946 = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_1C2D490(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfoMenber___);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&Method_UnityEngine_Object_Instantiate_GameObject____78081576);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_3730/*"CONFIRM_BONUS_SELECT_SUMMON_INFO"*/);
+    byte_4C2369E = 1;
   }
-  v43 = 0LL;
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  v34 = 0;
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_38;
-  UnityEngine_GameObject__SetActive(gameObject, 1, 0LL);
+  UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.titleLabel;
   if ( !gameObject )
     goto LABEL_38;
-  UILabel__set_text((UILabel_o *)gameObject, title, 0LL);
+  UILabel__set_text((UILabel_o *)gameObject, title, 0);
   selectInfoLabel = this->fields.selectInfoLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3702/*"CONFIRM_BONUS_SELECT_SUMMON_INFO"*/, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3730/*"CONFIRM_BONUS_SELECT_SUMMON_INFO"*/, 0);
   if ( !selectInfoLabel )
     goto LABEL_38;
-  UILabel__set_text(selectInfoLabel, (System_String_o *)gameObject, 0LL);
+  UILabel__set_text(selectInfoLabel, (System_String_o *)gameObject, 0);
   if ( !tryGetBonusSelectData )
     goto LABEL_38;
-  if ( (((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64 *, _QWORD, _QWORD))tryGetBonusSelectData->fields.m_target)(
-          tryGetBonusSelectData->fields.original_method_info,
-          &v43,
+  if ( (((__int64 (__fastcall *)(intptr_t, __int64 *, _QWORD, intptr_t))tryGetBonusSelectData->fields.invoke_impl)(
+          tryGetBonusSelectData->fields.method_code,
+          &v34,
           (unsigned int)gachaId,
-          *(_QWORD *)&tryGetBonusSelectData->fields.extra_arg) & 1) != 0 )
+          tryGetBonusSelectData->fields.method)
+      & 1) != 0 )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_GiftMaster___);
-    gameObject = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantMaster___);
-    if ( !v43 )
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_GiftMaster___);
+    gameObject = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ServantMaster___);
+    if ( !v34 )
       goto LABEL_38;
-    v26 = *(_QWORD *)(v43 + 24);
-    if ( v26 )
+    v17 = *(_QWORD *)(v34 + 24);
+    if ( v17 )
     {
-      v27 = *(_DWORD *)(v26 + 24);
-      if ( v27 >= 1 )
+      v18 = *(_DWORD *)(v17 + 24);
+      if ( v18 >= 1 )
       {
-        v28 = (DataMasterBase_TMaster__TEntity__PKType__o *)gameObject;
-        v29 = 0LL;
+        v19 = (DataMasterBase_TMaster__TEntity__PKType__o *)gameObject;
+        v20 = 0;
         while ( 1 )
         {
-          if ( (unsigned int)v29 >= v27 )
-            sub_1BCB25C(gameObject, v21, v25);
+          if ( (unsigned int)v20 >= v18 )
+            sub_1C2D6F4(gameObject, v12, v16);
           if ( !assetManager )
             break;
           gameObject = (UnityEngine_GameObject_o *)this->fields.grid;
           if ( !gameObject )
             break;
-          v30 = *(_QWORD *)(v26 + 32 + 8 * v29);
+          v21 = *(_QWORD *)(v17 + 32 + 8 * v20);
           MsgInfoMenberPrefab_k__BackingField = (Il2CppObject *)assetManager->fields._MsgInfoMenberPrefab_k__BackingField;
-          transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0LL);
+          transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__51002592(
+          gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__51752420(
                                                      MsgInfoMenberPrefab_k__BackingField,
                                                      transform,
-                                                     (const MethodInfo_30A3CE0 *)Method_UnityEngine_Object_Instantiate_GameObject____77001424);
+                                                     (const MethodInfo_315ADE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78081576);
           if ( !gameObject )
             break;
-          v33 = (Il2CppObject *)gameObject;
+          v24 = (Il2CppObject *)gameObject;
           gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      gameObject,
-                                                     (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfoMenber___);
+                                                     (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_BonusSelectSummonMsgInfoMenber___);
           if ( !gameObject )
             break;
-          v34 = (BonusSelectSummonMsgInfoMenber_o *)gameObject;
-          BonusSelectSummonMsgInfoMenber__Init((BonusSelectSummonMsgInfoMenber_o *)gameObject, v21);
-          if ( !v30 || !Master_object )
+          v25 = (BonusSelectSummonMsgInfoMenber_o *)gameObject;
+          BonusSelectSummonMsgInfoMenber__Init((BonusSelectSummonMsgInfoMenber_o *)gameObject, v12);
+          if ( !v21 || !Master_object )
             break;
           gameObject = (UnityEngine_GameObject_o *)GiftMaster__getDataById(
                                                      (GiftMaster_o *)Master_object,
-                                                     *(_DWORD *)(v30 + 28),
-                                                     0LL);
+                                                     *(_DWORD *)(v21 + 28),
+                                                     0);
           if ( gameObject )
           {
-            if ( !v28 )
+            if ( !v19 )
               break;
             Entity = DataMasterBase_object__object__int___GetEntity(
-                       v28,
+                       v19,
                        (int32_t)gameObject[1].klass,
-                       (const MethodInfo_32C7E00 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                       (const MethodInfo_3387D98 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
           }
           else
           {
-            Entity = 0LL;
+            Entity = 0;
           }
-          BonusSelectSummonMsgInfoMenber__Set(v34, (ServantEntity_o *)Entity, v35);
+          BonusSelectSummonMsgInfoMenber__Set(v25, (ServantEntity_o *)Entity, v26);
           gameObject = (UnityEngine_GameObject_o *)this->fields.menberList;
           if ( !gameObject )
             break;
-          v39 = *(_QWORD *)&gameObject->fields.m_CachedPtr;
-          v40 = Method_System_Collections_Generic_List_GameObject__Add__;
+          m_CachedPtr = gameObject->fields.m_CachedPtr;
+          v31 = Method_System_Collections_Generic_List_GameObject__Add__;
           ++HIDWORD(gameObject[1].klass);
-          if ( !v39 )
+          if ( !m_CachedPtr )
             break;
           klass_low = SLODWORD(gameObject[1].klass);
-          if ( (unsigned int)klass_low >= *(_DWORD *)(v39 + 24) )
+          if ( (unsigned int)klass_low >= *(_DWORD *)(m_CachedPtr + 24) )
           {
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)gameObject,
-              v33,
-              *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+              v24,
+              *(const MethodInfo_3789B84 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
           }
           else
           {
-            v42 = v39 + 8 * klass_low;
+            v33 = m_CachedPtr + 8 * klass_low;
             LODWORD(gameObject[1].klass) = klass_low + 1;
-            *(_QWORD *)(v42 + 32) = v33;
-            sub_1BCAF9C((CGThumbnailListItem_o *)(v42 + 32), (int32_t)v33, v37, v38);
+            *(_QWORD *)(v33 + 32) = v24;
+            sub_1C2D434((CGThumbnailListItem_o *)(v33 + 32), (int32_t)v24, v28, v29);
           }
-          v27 = *(_DWORD *)(v26 + 24);
-          if ( (int)++v29 >= v27 )
+          v18 = *(_DWORD *)(v17 + 24);
+          if ( (int)++v20 >= v18 )
             goto LABEL_35;
         }
 LABEL_38:
-        sub_1BCB254(gameObject, v21);
+        sub_1C2D6EC(gameObject, v12);
       }
     }
 LABEL_35:
     gameObject = (UnityEngine_GameObject_o *)this->fields.grid;
     if ( !gameObject )
       goto LABEL_38;
-    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)gameObject, 1, 0LL);
+    UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)gameObject, 1, 0);
   }
-  BonusSelectSummonMsgInfo__InitMsgLabel(this, v23);
+  BonusSelectSummonMsgInfo__InitMsgLabel(this, v14);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BonusSelectSummonMsgInfo__SetBonusSelectBuyStoneDialog(
+void BonusSelectSummonMsgInfo__SetBonusSelectBuyStoneDialog(
         BonusSelectSummonMsgInfo_o *this,
         int32_t gachaId,
         System_String_o *title,
@@ -328,10 +309,10 @@ void __fastcall BonusSelectSummonMsgInfo__SetBonusSelectBuyStoneDialog(
   BonusSelectSummonMsgInfo_c *v16; // x8
   UnityEngine_GameObject_o *v17; // x19
 
-  if ( (byte_4B18945 & 1) == 0 )
+  if ( (byte_4C2369D & 1) == 0 )
   {
-    sub_1BCAFF8(&BonusSelectSummonMsgInfo_TypeInfo, *(_QWORD *)&gachaId);
-    byte_4B18945 = 1;
+    sub_1C2D490(&BonusSelectSummonMsgInfo_TypeInfo);
+    byte_4C2369D = 1;
   }
   BonusSelectSummonMsgInfo__SetBase(
     this,
@@ -341,9 +322,9 @@ void __fastcall BonusSelectSummonMsgInfo__SetBonusSelectBuyStoneDialog(
     assetManager,
     (const MethodInfo *)assetManager);
   msgLabel = this->fields.msgLabel;
-  if ( !msgLabel || (UILabel__set_text(msgLabel, msg, 0LL), (msgLabel = this->fields.msgLabel) == 0LL) )
-    sub_1BCB254(msgLabel, v13);
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)msgLabel, 0LL);
+  if ( !msgLabel || (UILabel__set_text(msgLabel, msg, 0), (msgLabel = this->fields.msgLabel) == 0) )
+    sub_1C2D6EC(msgLabel, v13);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)msgLabel, 0);
   v16 = BonusSelectSummonMsgInfo_TypeInfo;
   v17 = gameObject;
   if ( !BonusSelectSummonMsgInfo_TypeInfo->_2.cctor_finished )
@@ -351,11 +332,11 @@ void __fastcall BonusSelectSummonMsgInfo__SetBonusSelectBuyStoneDialog(
     j_il2cpp_runtime_class_init_0(BonusSelectSummonMsgInfo_TypeInfo);
     v16 = BonusSelectSummonMsgInfo_TypeInfo;
   }
-  GameObjectExtensions__SetLocalPositionY(v17, v16->static_fields->BONUS_SELECT_MESSAGE_LABEL_Y, 0LL);
+  GameObjectExtensions__SetLocalPositionY(v17, v16->static_fields->BONUS_SELECT_MESSAGE_LABEL_Y, 0);
 }
 
 
-void __fastcall BonusSelectSummonMsgInfo__SetCautionDlg(
+void BonusSelectSummonMsgInfo__SetCautionDlg(
         BonusSelectSummonMsgInfo_o *this,
         int32_t gachaId,
         System_String_o *title,
@@ -376,12 +357,12 @@ void __fastcall BonusSelectSummonMsgInfo__SetCautionDlg(
     (const MethodInfo *)assetManager);
   msgLabel = this->fields.msgLabel;
   if ( !msgLabel )
-    sub_1BCB254(0LL, v9);
-  UILabel__set_text(msgLabel, msg, 0LL);
+    sub_1C2D6EC(0, v9);
+  UILabel__set_text(msgLabel, msg, 0);
 }
 
 
-void __fastcall BonusSelectSummonMsgInfo__SetConfirmDlg(
+void BonusSelectSummonMsgInfo__SetConfirmDlg(
         BonusSelectSummonMsgInfo_o *this,
         int32_t gachaId,
         System_String_o *title,
@@ -404,67 +385,64 @@ void __fastcall BonusSelectSummonMsgInfo__SetConfirmDlg(
     (const MethodInfo *)msgLow);
   msgLabelSplitTop = this->fields.msgLabelSplitTop;
   if ( !msgLabelSplitTop
-    || (UILabel__set_text(msgLabelSplitTop, msgTop, 0LL), (msgLabelSplitTop = this->fields.msgLabelSplitCenter) == 0LL)
-    || (UILabel__set_text(msgLabelSplitTop, msgCenter, 0LL), (msgLabelSplitTop = this->fields.msgLabelSplitLow) == 0LL) )
+    || (UILabel__set_text(msgLabelSplitTop, msgTop, 0), (msgLabelSplitTop = this->fields.msgLabelSplitCenter) == 0)
+    || (UILabel__set_text(msgLabelSplitTop, msgCenter, 0), (msgLabelSplitTop = this->fields.msgLabelSplitLow) == 0) )
   {
-    sub_1BCB254(msgLabelSplitTop, v13);
+    sub_1C2D6EC(msgLabelSplitTop, v13);
   }
-  UILabel__set_text(msgLabelSplitTop, msgLow, 0LL);
+  UILabel__set_text(msgLabelSplitTop, msgLow, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BonusSelectSummonMsgInfo_TryGetBonusSelectData___ctor(
+void BonusSelectSummonMsgInfo_TryGetBonusSelectData___ctor(
         BonusSelectSummonMsgInfo_TryGetBonusSelectData_o *this,
         Il2CppObject *object,
         intptr_t method,
         const MethodInfo *a4)
 {
-  __int64 v4; // x8
-  __int64 v6; // x21
+  intptr_t v4; // x8
   int v8; // w22
-  Il2CppObject *v9; // x8
-  struct System_Reflection_MethodInfo_o *v10; // x9
+  __int64 (__fastcall *v9)(); // x8
+  Il2CppObject *m_target; // x9
   __int64 v11; // x0
 
-  v4 = *(_QWORD *)(*(_QWORD *)&method + 8LL);
-  *(_QWORD *)&this->fields.extra_arg = *(_QWORD *)&method;
-  v6 = *(_QWORD *)&method;
-  *(_QWORD *)&this->fields.method_ptr = v4;
-  *(_QWORD *)&this->fields.method = object;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.method, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(v6 + 82);
-  this->fields.original_method_info = (struct System_Reflection_MethodInfo_o *)this;
-  if ( (sub_1BCB0B8(v6) & 1) == 0 )
+  v4 = *(_QWORD *)(method + 8);
+  this->fields.method = method;
+  this->fields.method_ptr = v4;
+  this->fields.m_target = object;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  v8 = *(unsigned __int8 *)(method + 82);
+  this->fields.method_code = (intptr_t)this;
+  if ( (sub_1C2D550(method) & 1) == 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = (Il2CppObject *)sub_1A10F7C;
+      v9 = sub_1A6D8A4;
       goto LABEL_6;
     }
     if ( !object )
     {
-      v11 = sub_1BCB270(0LL, "Delegate to an instance method cannot have null 'this'.");
-      sub_1BCB120(v11, 0LL);
+      v11 = sub_1C2D708(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C2D5B8(v11, 0);
     }
 LABEL_8:
-    v10 = *(struct System_Reflection_MethodInfo_o **)&this->fields.method;
-    this->fields.m_target = *(Il2CppObject **)&this->fields.method_ptr;
-    this->fields.original_method_info = v10;
+    m_target = this->fields.m_target;
+    this->fields.invoke_impl = this->fields.method_ptr;
+    this->fields.method_code = (intptr_t)m_target;
     goto LABEL_9;
   }
   if ( v8 != 2 )
     goto LABEL_8;
-  v9 = (Il2CppObject *)sub_1A10FA0;
+  v9 = sub_1A6D8C8;
 LABEL_6:
-  this->fields.m_target = v9;
+  this->fields.invoke_impl = (intptr_t)v9;
 LABEL_9:
-  this->fields.method_info = (struct System_Reflection_MethodInfo_o *)sub_1A10F18;
+  this->fields.extra_arg = (intptr_t)sub_1A6D840;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_IAsyncResult_o *__fastcall BonusSelectSummonMsgInfo_TryGetBonusSelectData__BeginInvoke(
+System_IAsyncResult_o *BonusSelectSummonMsgInfo_TryGetBonusSelectData__BeginInvoke(
         BonusSelectSummonMsgInfo_TryGetBonusSelectData_o *this,
         SelectBonusData_o **data,
         int32_t gachaId,
@@ -478,20 +456,20 @@ System_IAsyncResult_o *__fastcall BonusSelectSummonMsgInfo_TryGetBonusSelectData
   int32_t v14; // [xsp+2Ch] [xbp-34h] BYREF
 
   v14 = gachaId;
-  if ( (byte_4B1894A & 1) == 0 )
+  if ( (byte_4C236A2 & 1) == 0 )
   {
-    sub_1BCAFF8(&int_TypeInfo, data);
-    byte_4B1894A = 1;
+    sub_1C2D490(&int_TypeInfo);
+    byte_4C236A2 = 1;
   }
-  v12 = 0LL;
-  v13 = 0LL;
+  v12 = 0;
+  v13 = 0;
   v11 = *data;
   v12 = j_il2cpp_value_box_0(int_TypeInfo, &v14, *(_QWORD *)&gachaId, callback, object);
-  return (System_IAsyncResult_o *)sub_1BCAFAC(this, &v11, callback, object);
+  return (System_IAsyncResult_o *)sub_1C2D444(this, &v11, callback, object);
 }
 
 
-bool __fastcall BonusSelectSummonMsgInfo_TryGetBonusSelectData__EndInvoke(
+bool BonusSelectSummonMsgInfo_TryGetBonusSelectData__EndInvoke(
         BonusSelectSummonMsgInfo_TryGetBonusSelectData_o *this,
         SelectBonusData_o **data,
         System_IAsyncResult_o *result,
@@ -501,21 +479,21 @@ bool __fastcall BonusSelectSummonMsgInfo_TryGetBonusSelectData__EndInvoke(
   SelectBonusData_o **v6; // [xsp+8h] [xbp-8h] BYREF
 
   v6 = data;
-  if ( !sub_1BCAFB0(result, &v6, result) )
-    sub_1BCB254(0LL, v4);
+  if ( !sub_1C2D448(result, &v6, result) )
+    sub_1C2D6EC(0, v4);
   return *(_BYTE *)j_il2cpp_object_unbox_0();
 }
 
 
-bool __fastcall BonusSelectSummonMsgInfo_TryGetBonusSelectData__Invoke(
+bool BonusSelectSummonMsgInfo_TryGetBonusSelectData__Invoke(
         BonusSelectSummonMsgInfo_TryGetBonusSelectData_o *this,
         SelectBonusData_o **data,
         int32_t gachaId,
         const MethodInfo *method)
 {
-  return ((__int64 (__fastcall *)(struct System_Reflection_MethodInfo_o *, SelectBonusData_o **, int32_t, _QWORD))this->fields.m_target)(
-           this->fields.original_method_info,
+  return ((__int64 (__fastcall *)(intptr_t, SelectBonusData_o **, int32_t, intptr_t))this->fields.invoke_impl)(
+           this->fields.method_code,
            data,
            gachaId,
-           *(_QWORD *)&this->fields.extra_arg);
+           this->fields.method);
 }

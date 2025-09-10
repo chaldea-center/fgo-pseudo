@@ -1,10 +1,10 @@
-void __fastcall BattleCommonSettings___ctor(BattleCommonSettings_o *this, const MethodInfo *method)
+void BattleCommonSettings___ctor(BattleCommonSettings_o *this, const MethodInfo *method)
 {
-  UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0LL);
+  UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0);
 }
 
 
-BattleCommonSettings_ShiftIconAdjustment_array *__fastcall BattleCommonSettings__get_ShiftIconAdjustmentArray(
+BattleCommonSettings_ShiftIconAdjustment_array *BattleCommonSettings__get_ShiftIconAdjustmentArray(
         BattleCommonSettings_o *this,
         const MethodInfo *method)
 {
@@ -12,15 +12,15 @@ BattleCommonSettings_ShiftIconAdjustment_array *__fastcall BattleCommonSettings_
 }
 
 
-void __fastcall BattleCommonSettings_ShiftIconAdjustment___ctor(
+void BattleCommonSettings_ShiftIconAdjustment___ctor(
         BattleCommonSettings_ShiftIconAdjustment_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-System_String_o *__fastcall BattleCommonSettings_ShiftIconAdjustment__get_SpriteName(
+System_String_o *BattleCommonSettings_ShiftIconAdjustment__get_SpriteName(
         BattleCommonSettings_ShiftIconAdjustment_o *this,
         const MethodInfo *method)
 {
@@ -33,9 +33,9 @@ System_String_o *__fastcall BattleCommonSettings_ShiftIconAdjustment__get_Sprite
   spriteName = this->fields.spriteName;
   if ( !spriteName )
   {
-    spriteName = BattleServantHpShiftComponent__GetShiftIconName(this->fields.ImageType, this->fields.ImageNo, 0LL);
+    spriteName = BattleServantHpShiftComponent__GetShiftIconName(this->fields.ImageType, this->fields.ImageNo, 0);
     this->fields.spriteName = spriteName;
-    sub_1BCAF9C((CGThumbnailListItem_o *)p_spriteName, (int32_t)spriteName, v5, v6);
+    sub_1C2D434((CGThumbnailListItem_o *)p_spriteName, (int32_t)spriteName, v5, v6);
   }
   return spriteName;
 }

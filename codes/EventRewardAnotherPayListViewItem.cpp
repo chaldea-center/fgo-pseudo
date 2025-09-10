@@ -1,5 +1,4 @@
-// local variable allocation has failed, the output may be wrong!
-void __fastcall EventRewardAnotherPayListViewItem___ctor(
+void EventRewardAnotherPayListViewItem___ctor(
         EventRewardAnotherPayListViewItem_o *this,
         int32_t index,
         int32_t eventId,
@@ -8,36 +7,34 @@ void __fastcall EventRewardAnotherPayListViewItem___ctor(
         int32_t sortPriority,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
-  __int64 v14; // x1
   Il2CppObject *Master_object; // x0
-  UserItemMaster_o *v16; // x22
-  __int64 v17; // x1
+  UserItemMaster_o *v14; // x22
+  __int64 v15; // x1
   _QWORD *p_image; // x0
-  int v19; // w8
+  int v17; // w8
 
-  if ( (byte_4B16E18 & 1) == 0 )
+  if ( (byte_4C21B18 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_UserItemMaster___, *(_QWORD *)&index);
-    sub_1BCAFF8(&DataManager_TypeInfo, v13);
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v14);
-    byte_4B16E18 = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    byte_4C21B18 = 1;
   }
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserItemMaster___);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  v16 = (UserItemMaster_o *)Master_object;
+  v14 = (UserItemMaster_o *)Master_object;
   this->fields._EventId_k__BackingField = eventId;
-  sub_1BCAF9C(&this->fields._ItemEntity_k__BackingField);
+  sub_1C2D434(&this->fields._ItemEntity_k__BackingField);
   this->fields._IsAnotherPay_k__BackingField = isAnotherPay;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B165D1 )
+  if ( !byte_4C211E1 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v17);
-    byte_4B165D1 = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    byte_4C211E1 = 1;
   }
   p_image = &NetworkManager_TypeInfo->_1.image;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -46,18 +43,18 @@ void __fastcall EventRewardAnotherPayListViewItem___ctor(
     p_image = &NetworkManager_TypeInfo->_1.image;
   }
   if ( !itemEntity
-    || !v16
-    || (p_image = UserItemMaster__GetEntityDefinitely(v16, *(_QWORD *)(p_image[23] + 64LL), itemEntity->fields.id, 0LL)) == 0LL )
+    || !v14
+    || (p_image = UserItemMaster__GetEntityDefinitely(v14, *(_QWORD *)(p_image[23] + 64LL), itemEntity->fields.id, 0)) == 0 )
   {
-    sub_1BCB254(p_image, v17);
+    sub_1C2D6EC(p_image, v15);
   }
-  v19 = *((_DWORD *)p_image + 7);
+  v17 = *((_DWORD *)p_image + 7);
   this->fields.priority = sortPriority;
-  this->fields._IsExchangeable_k__BackingField = v19 > 0;
+  this->fields._IsExchangeable_k__BackingField = v17 > 0;
 }
 
 
-bool __fastcall EventRewardAnotherPayListViewItem__SetSortValue(
+bool EventRewardAnotherPayListViewItem__SetSortValue(
         EventRewardAnotherPayListViewItem_o *this,
         ListViewSort_o *sort,
         const MethodInfo *method)
@@ -72,16 +69,16 @@ bool __fastcall EventRewardAnotherPayListViewItem__SetSortValue(
   *(_WORD *)&this->fields.isTermination = 0;
   this->fields.sortValue1 = priority;
   if ( IsExchangeable_k__BackingField )
-    v6 = 10LL;
+    v6 = 10;
   else
-    v6 = 0LL;
+    v6 = 0;
   result = 1;
   this->fields.sortValue0 = v6;
   return result;
 }
 
 
-int32_t __fastcall EventRewardAnotherPayListViewItem__get_EventId(
+int32_t EventRewardAnotherPayListViewItem__get_EventId(
         EventRewardAnotherPayListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -89,7 +86,7 @@ int32_t __fastcall EventRewardAnotherPayListViewItem__get_EventId(
 }
 
 
-bool __fastcall EventRewardAnotherPayListViewItem__get_IsAnotherPay(
+bool EventRewardAnotherPayListViewItem__get_IsAnotherPay(
         EventRewardAnotherPayListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -97,7 +94,7 @@ bool __fastcall EventRewardAnotherPayListViewItem__get_IsAnotherPay(
 }
 
 
-bool __fastcall EventRewardAnotherPayListViewItem__get_IsExchangeable(
+bool EventRewardAnotherPayListViewItem__get_IsExchangeable(
         EventRewardAnotherPayListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -105,7 +102,7 @@ bool __fastcall EventRewardAnotherPayListViewItem__get_IsExchangeable(
 }
 
 
-ItemEntity_o *__fastcall EventRewardAnotherPayListViewItem__get_ItemEntity(
+ItemEntity_o *EventRewardAnotherPayListViewItem__get_ItemEntity(
         EventRewardAnotherPayListViewItem_o *this,
         const MethodInfo *method)
 {

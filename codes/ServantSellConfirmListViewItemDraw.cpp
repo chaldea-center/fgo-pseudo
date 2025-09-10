@@ -1,91 +1,108 @@
-void __fastcall ServantSellConfirmListViewItemDraw___ctor(
-        ServantSellConfirmListViewItemDraw_o *this,
-        const MethodInfo *method)
+void ServantSellConfirmListViewItemDraw___ctor(ServantSellConfirmListViewItemDraw_o *this, const MethodInfo *method)
 {
-  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
 
-int32_t __fastcall ServantSellConfirmListViewItemDraw__GetDispMode(int32_t initMode, const MethodInfo *method)
+void ServantSellConfirmListViewItemDraw__Awake(ServantSellConfirmListViewItemDraw_o *this, const MethodInfo *method)
+{
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+  struct UISprite_o *maskSprite; // x8
+  struct UIAtlas_o *mAtlas; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  struct UISprite_o *v9; // x8
+  struct System_String_o *mSpriteName; // x1
+
+  maskSprite = this->fields.maskSprite;
+  if ( maskSprite )
+    mAtlas = maskSprite->fields.mAtlas;
+  else
+    mAtlas = 0;
+  this->fields.defaultMaskAtlas = mAtlas;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.defaultMaskAtlas, (int32_t)mAtlas, v2, v3);
+  v9 = this->fields.maskSprite;
+  if ( v9 )
+    mSpriteName = v9->fields.mSpriteName;
+  else
+    mSpriteName = 0;
+  this->fields.defaultMaskName = mSpriteName;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.defaultMaskName, (int32_t)mSpriteName, v7, v8);
+}
+
+
+int32_t ServantSellConfirmListViewItemDraw__GetDispMode(int32_t initMode, const MethodInfo *method)
 {
   if ( (unsigned int)(initMode - 1) > 2 )
     return 0;
   else
-    return dword_C1ACA4[initMode - 1];
+    return dword_C42004[initMode - 1];
 }
 
 
-System_String_o *__fastcall ServantSellConfirmListViewItemDraw__GetStatusText(
+System_String_o *ServantSellConfirmListViewItemDraw__GetStatusText(
         ServantSellConfirmListViewItemDraw_o *this,
         ServantSellConfirmListViewItem_o *item,
         bool isServant,
         bool isCommandCode,
         const MethodInfo *method)
 {
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
   UserServantEntity_o *UserServantEntity_k__BackingField; // x0
-  __int64 *v18; // x8
+  __int64 *v9; // x8
 
-  if ( (byte_4B186F4 & 1) == 0 )
+  if ( (byte_4C2344A & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, item);
-    sub_1BCAFF8(&StringLiteral_11434/*"SELECT_LOCK"*/, v8);
-    sub_1BCAFF8(&StringLiteral_11425/*"SELECT_FAVORITE"*/, v9);
-    sub_1BCAFF8(&StringLiteral_12405/*"SUPPORT_MEMBER"*/, v10);
-    sub_1BCAFF8(&StringLiteral_11417/*"SELECT_CANNOT"*/, v11);
-    sub_1BCAFF8(&StringLiteral_11418/*"SELECT_CHOICE"*/, v12);
-    sub_1BCAFF8(&StringLiteral_11448/*"SELECT_SERVANT_EVENT_JOIN"*/, v13);
-    sub_1BCAFF8(&StringLiteral_11444/*"SELECT_PARTY"*/, v14);
-    sub_1BCAFF8(&StringLiteral_9245/*"NOT_SELECT_EQUIPED"*/, v15);
-    this = (ServantSellConfirmListViewItemDraw_o *)sub_1BCAFF8(&StringLiteral_1/*""*/, v16);
-    byte_4B186F4 = 1;
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_11532/*"SELECT_LOCK"*/);
+    sub_1C2D490(&StringLiteral_11521/*"SELECT_FAVORITE"*/);
+    sub_1C2D490(&StringLiteral_12508/*"SUPPORT_MEMBER"*/);
+    sub_1C2D490(&StringLiteral_11514/*"SELECT_CANNOT"*/);
+    sub_1C2D490(&StringLiteral_11515/*"SELECT_CHOICE"*/);
+    sub_1C2D490(&StringLiteral_11546/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    sub_1C2D490(&StringLiteral_11542/*"SELECT_PARTY"*/);
+    sub_1C2D490(&StringLiteral_9310/*"NOT_SELECT_EQUIPED"*/);
+    this = (ServantSellConfirmListViewItemDraw_o *)sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C2344A = 1;
   }
   if ( !isServant )
   {
     if ( item )
       goto LABEL_16;
 LABEL_11:
-    sub_1BCB254(this, item);
+    sub_1C2D6EC(this, item);
   }
   if ( !item )
     goto LABEL_11;
   UserServantEntity_k__BackingField = item->fields._UserServantEntity_k__BackingField;
-  if ( UserServantEntity_k__BackingField && UserServantEntity__IsEventJoin(UserServantEntity_k__BackingField, 0LL) )
+  if ( UserServantEntity_k__BackingField && UserServantEntity__IsEventJoin(UserServantEntity_k__BackingField, 0) )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v18 = &StringLiteral_11448/*"SELECT_SERVANT_EVENT_JOIN"*/;
-    return LocalizationManager__Get((System_String_o *)*v18, 0LL);
+    v9 = &StringLiteral_11546/*"SELECT_SERVANT_EVENT_JOIN"*/;
+    return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
   if ( item->fields.attribute )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v18 = &StringLiteral_11417/*"SELECT_CANNOT"*/;
-    return LocalizationManager__Get((System_String_o *)*v18, 0LL);
+    v9 = &StringLiteral_11514/*"SELECT_CANNOT"*/;
+    return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
 LABEL_16:
   if ( item->fields._IsChoice_k__BackingField )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v18 = &StringLiteral_11418/*"SELECT_CHOICE"*/;
-    return LocalizationManager__Get((System_String_o *)*v18, 0LL);
+    v9 = &StringLiteral_11515/*"SELECT_CHOICE"*/;
+    return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
   if ( item->fields._IsLock_k__BackingField )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v18 = &StringLiteral_11434/*"SELECT_LOCK"*/;
-    return LocalizationManager__Get((System_String_o *)*v18, 0LL);
+    v9 = &StringLiteral_11532/*"SELECT_LOCK"*/;
+    return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
   if ( isServant )
   {
@@ -93,73 +110,71 @@ LABEL_16:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v18 = &StringLiteral_11425/*"SELECT_FAVORITE"*/;
-      return LocalizationManager__Get((System_String_o *)*v18, 0LL);
+      v9 = &StringLiteral_11521/*"SELECT_FAVORITE"*/;
+      return LocalizationManager__Get((System_String_o *)*v9, 0);
     }
     if ( item->fields._IsParty_k__BackingField )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v18 = &StringLiteral_11444/*"SELECT_PARTY"*/;
-      return LocalizationManager__Get((System_String_o *)*v18, 0LL);
+      v9 = &StringLiteral_11542/*"SELECT_PARTY"*/;
+      return LocalizationManager__Get((System_String_o *)*v9, 0);
     }
     if ( item->fields._IsUseSupportServant_k__BackingField )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v18 = &StringLiteral_12405/*"SUPPORT_MEMBER"*/;
-      return LocalizationManager__Get((System_String_o *)*v18, 0LL);
+      v9 = &StringLiteral_12508/*"SUPPORT_MEMBER"*/;
+      return LocalizationManager__Get((System_String_o *)*v9, 0);
     }
   }
   if ( isCommandCode && item->fields._IsCommandCodeEquipped_k__BackingField )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v18 = &StringLiteral_9245/*"NOT_SELECT_EQUIPED"*/;
-    return LocalizationManager__Get((System_String_o *)*v18, 0LL);
+    v9 = &StringLiteral_9310/*"NOT_SELECT_EQUIPED"*/;
+    return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
 
 
-void __fastcall ServantSellConfirmListViewItemDraw__SetDisp(
+void ServantSellConfirmListViewItemDraw__SetDisp(
         ServantSellConfirmListViewItemDraw_o *this,
         ServantSellConfirmListViewItem_o *item,
         bool isSelectEnable,
         const MethodInfo *method)
 {
   ServantSellConfirmListViewItemDraw_o *v6; // x20
-  __int64 v7; // x1
-  __int64 v8; // x1
   _BOOL8 IsSelect; // x0
-  const MethodInfo *v10; // x3
+  const MethodInfo *v8; // x3
   UISprite_o *lockSprite; // x1
-  ServantSellConfirmListViewItemDraw_o *v12; // x0
-  const MethodInfo *v13; // x3
+  ServantSellConfirmListViewItemDraw_o *v10; // x0
+  const MethodInfo *v11; // x3
   _BOOL8 CanNotSelect; // x0
-  const MethodInfo *v15; // x3
+  const MethodInfo *v13; // x3
   UISprite_o *maskSprite; // x1
-  bool v17; // w2
-  ServantSellConfirmListViewItemDraw_o *v18; // x0
-  const MethodInfo *v19; // x3
-  UISprite_o *v20; // x22
-  const MethodInfo *v21; // x1
+  bool v15; // w2
+  ServantSellConfirmListViewItemDraw_o *v16; // x0
+  const MethodInfo *v17; // x3
+  UISprite_o *v18; // x22
+  const MethodInfo *v19; // x1
   UnityEngine_Object_o *materialTdSprite; // x21
-  _BOOL8 v23; // x0
-  const MethodInfo *v24; // x3
-  UISprite_o *v25; // x21
+  _BOOL8 v21; // x0
+  const MethodInfo *v22; // x3
+  UISprite_o *v23; // x21
 
   v6 = this;
-  if ( (byte_4B186F6 & 1) == 0 )
+  if ( (byte_4C2344C & 1) == 0 )
   {
-    sub_1BCAFF8(&AtlasManager_TypeInfo, item);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v7);
-    this = (ServantSellConfirmListViewItemDraw_o *)sub_1BCAFF8(&StringLiteral_22902/*"ribbon_noblephantasmup_01"*/, v8);
-    byte_4B186F6 = 1;
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    this = (ServantSellConfirmListViewItemDraw_o *)sub_1C2D490(&StringLiteral_23090/*"ribbon_noblephantasmup_01"*/);
+    byte_4C2344C = 1;
   }
   if ( !item )
     goto LABEL_20;
-  IsSelect = ListViewItem__get_IsSelect((ListViewItem_o *)item, 0LL);
+  IsSelect = ListViewItem__get_IsSelect((ListViewItem_o *)item, 0);
   lockSprite = v6->fields.lockSprite;
   if ( item->fields._IsCommandCode_k__BackingField )
   {
@@ -167,10 +182,10 @@ void __fastcall ServantSellConfirmListViewItemDraw__SetDisp(
       (ServantSellConfirmListViewItemDraw_o *)IsSelect,
       lockSprite,
       0,
-      v10);
-    ServantSellConfirmListViewItemDraw__SetSpriteActive(v12, v6->fields.choiceSprite, 0, v13);
+      v8);
+    ServantSellConfirmListViewItemDraw__SetSpriteActive(v10, v6->fields.choiceSprite, 0, v11);
     maskSprite = v6->fields.maskSprite;
-    v17 = 0;
+    v15 = 0;
   }
   else
   {
@@ -178,60 +193,60 @@ void __fastcall ServantSellConfirmListViewItemDraw__SetDisp(
       (ServantSellConfirmListViewItemDraw_o *)IsSelect,
       lockSprite,
       item->fields._IsSwapLock_k__BackingField != item->fields._IsLock_k__BackingField,
-      v10);
+      v8);
     ServantSellConfirmListViewItemDraw__SetSpriteActive(
-      v18,
+      v16,
       v6->fields.choiceSprite,
       item->fields._IsSwapChoice_k__BackingField != item->fields._IsChoice_k__BackingField,
-      v19);
-    v20 = v6->fields.maskSprite;
-    CanNotSelect = ServantSellConfirmListViewItem__get_IsCanNotSelect(item, v21);
+      v17);
+    v18 = v6->fields.maskSprite;
+    CanNotSelect = ServantSellConfirmListViewItem__get_IsCanNotSelect(item, v19);
     if ( !CanNotSelect && !isSelectEnable )
-      CanNotSelect = !ListViewItem__get_IsSelect((ListViewItem_o *)item, 0LL);
-    v17 = CanNotSelect;
-    maskSprite = v20;
+      CanNotSelect = !ListViewItem__get_IsSelect((ListViewItem_o *)item, 0);
+    v15 = CanNotSelect;
+    maskSprite = v18;
   }
   ServantSellConfirmListViewItemDraw__SetSpriteActive(
     (ServantSellConfirmListViewItemDraw_o *)CanNotSelect,
     maskSprite,
-    v17,
-    v15);
+    v15,
+    v13);
   materialTdSprite = (UnityEngine_Object_o *)v6->fields.materialTdSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v23 = UnityEngine_Object__op_Inequality(materialTdSprite, 0LL, 0LL);
-  if ( v23 )
+  v21 = UnityEngine_Object__op_Inequality(materialTdSprite, 0, 0);
+  if ( v21 )
   {
     ServantSellConfirmListViewItemDraw__SetSpriteActive(
-      (ServantSellConfirmListViewItemDraw_o *)v23,
+      (ServantSellConfirmListViewItemDraw_o *)v21,
       v6->fields.materialTdSprite,
       item->fields._IsMaterialTdSvt_k__BackingField,
-      v24);
+      v22);
     if ( item->fields._IsMaterialTdSvt_k__BackingField )
     {
-      v25 = v6->fields.materialTdSprite;
+      v23 = v6->fields.materialTdSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventSprite(v25, (System_String_o *)StringLiteral_22902/*"ribbon_noblephantasmup_01"*/, 0LL);
+      AtlasManager__SetEventSprite(v23, (System_String_o *)StringLiteral_23090/*"ribbon_noblephantasmup_01"*/, 0);
     }
   }
   this = (ServantSellConfirmListViewItemDraw_o *)v6->fields.dragSelect;
   if ( !this
-    || (DragSelectComponent__setOverHundredNumCondensedScale((DragSelectComponent_o *)this, -1, 0LL),
-        (this = (ServantSellConfirmListViewItemDraw_o *)v6->fields.dragSelect) == 0LL) )
+    || (DragSelectComponent__setOverHundredNumCondensedScale((DragSelectComponent_o *)this, -1, 0),
+        (this = (ServantSellConfirmListViewItemDraw_o *)v6->fields.dragSelect) == 0) )
   {
 LABEL_20:
-    sub_1BCB254(this, item);
+    sub_1C2D6EC(this, item);
   }
   DragSelectComponent__Set(
     (DragSelectComponent_o *)this,
     item->fields.selectNum,
     item->fields._DragSelectNum_k__BackingField,
-    0LL);
+    0);
 }
 
 
-void __fastcall ServantSellConfirmListViewItemDraw__SetInput(
+void ServantSellConfirmListViewItemDraw__SetInput(
         ServantSellConfirmListViewItemDraw_o *this,
         ServantSellConfirmListViewItem_o *item,
         bool isSelectEnable,
@@ -242,31 +257,31 @@ void __fastcall ServantSellConfirmListViewItemDraw__SetInput(
   const MethodInfo *v9; // x3
   struct UICommonButton_o *v10; // x0
 
-  if ( (byte_4B186F5 & 1) == 0 )
+  if ( (byte_4C2344B & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, item);
-    byte_4B186F5 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2344B = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(baseButton, 0, 0) )
   {
     v10 = this->fields.baseButton;
     if ( !v10
-      || (((void (__fastcall *)(struct UICommonButton_o *, __int64, Il2CppMethodPointer))v10->klass->vtable._5_set_isEnabled.method)(
+      || (((void (__fastcall *)(struct UICommonButton_o *, __int64, const MethodInfo *))v10->klass->vtable._5_set_isEnabled.methodPtr)(
             v10,
-            1LL,
-            v10->klass->vtable._6_OnInit.methodPtr),
-          (v10 = this->fields.baseButton) == 0LL) )
+            1,
+            v10->klass->vtable._5_set_isEnabled.method),
+          (v10 = this->fields.baseButton) == 0) )
     {
-      sub_1BCB254(v10, v8);
+      sub_1C2D6EC(v10, v8);
     }
-    ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, Il2CppMethodPointer))v10->klass->vtable._14_SetState.method)(
+    ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, const MethodInfo *))v10->klass->vtable._14_SetState.methodPtr)(
       v10,
-      0LL,
-      1LL,
-      v10->klass->vtable._15_OnPress.methodPtr);
+      0,
+      1,
+      v10->klass->vtable._14_SetState.method);
   }
   if ( item )
     ServantSellConfirmListViewItemDraw__SetDisp(this, item, isSelectEnable, v9);
@@ -274,7 +289,7 @@ void __fastcall ServantSellConfirmListViewItemDraw__SetInput(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantSellConfirmListViewItemDraw__SetItem(
+void ServantSellConfirmListViewItemDraw__SetItem(
         ServantSellConfirmListViewItemDraw_o *this,
         ServantSellConfirmListViewItem_o *item,
         int32_t dispMode,
@@ -284,19 +299,19 @@ void __fastcall ServantSellConfirmListViewItemDraw__SetItem(
 {
   struct UserServantEntity_o *UserServantEntity_k__BackingField; // x24
   struct UserCommandCodeEntity_o *UserCommandCodeEntity_k__BackingField; // x25
-  UnityEngine_Object_o *partyIcon; // x23
-  _BOOL8 v14; // x0
-  const MethodInfo *v15; // x3
-  FlashingIconComponent_o *v16; // x0
   _BOOL8 IsParty_k__BackingField; // x1
+  ServantFaceIconComponent_o *servantFaceIcon; // x0
+  UnityEngine_Object_o *partyIcon; // x23
+  _BOOL8 v16; // x0
+  const MethodInfo *v17; // x3
   UnityEngine_Object_o *baseButton; // x23
   const MethodInfo *v19; // x3
   const MethodInfo *v20; // x5
 
-  if ( (byte_4B186F0 & 1) == 0 )
+  if ( (byte_4C23446 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, item);
-    byte_4B186F0 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C23446 = 1;
   }
   if ( item )
   {
@@ -309,64 +324,73 @@ void __fastcall ServantSellConfirmListViewItemDraw__SetItem(
         ServantSellConfirmListViewItemDraw__SetServantFaceIcon(
           this,
           item,
-          UserServantEntity_k__BackingField != 0LL,
-          UserCommandCodeEntity_k__BackingField != 0LL,
+          UserServantEntity_k__BackingField != 0,
+          UserCommandCodeEntity_k__BackingField != 0,
           *(const MethodInfo **)&modeKind);
+        servantFaceIcon = this->fields.servantFaceIcon;
+        if ( !servantFaceIcon )
+          goto LABEL_25;
+        ServantFaceIconComponent__SetGrandFaceMaskSpriteCommonAtlas(
+          servantFaceIcon,
+          this->fields.maskSprite,
+          this->fields.defaultMaskName,
+          this->fields.defaultMaskAtlas,
+          0);
         partyIcon = (UnityEngine_Object_o *)this->fields.partyIcon;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v14 = UnityEngine_Object__op_Inequality(partyIcon, 0LL, 0LL);
-        if ( v14 )
+        v16 = UnityEngine_Object__op_Inequality(partyIcon, 0, 0);
+        if ( v16 )
         {
-          v16 = this->fields.partyIcon;
+          servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.partyIcon;
           if ( UserServantEntity_k__BackingField && !item->fields._IsUse_k__BackingField )
           {
             IsParty_k__BackingField = item->fields._IsParty_k__BackingField;
-            if ( !v16 )
-              goto LABEL_24;
+            if ( !servantFaceIcon )
+              goto LABEL_25;
           }
           else
           {
-            IsParty_k__BackingField = 0LL;
-            if ( !v16 )
-              goto LABEL_24;
+            IsParty_k__BackingField = 0;
+            if ( !servantFaceIcon )
+              goto LABEL_25;
           }
-          FlashingIconComponent__Set_40087648(v16, IsParty_k__BackingField, 0LL);
+          FlashingIconComponent__Set_40679456((FlashingIconComponent_o *)servantFaceIcon, IsParty_k__BackingField, 0);
         }
         ServantSellConfirmListViewItemDraw__SetSpriteActive(
-          (ServantSellConfirmListViewItemDraw_o *)v14,
+          (ServantSellConfirmListViewItemDraw_o *)v16,
           this->fields.useSprite,
           item->fields._IsUse_k__BackingField,
-          v15);
+          v17);
         baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        if ( UnityEngine_Object__op_Inequality(baseButton, 0LL, 0LL) )
+        if ( UnityEngine_Object__op_Inequality(baseButton, 0, 0) )
         {
-          v16 = (FlashingIconComponent_o *)this->fields.baseButton;
-          if ( !v16
-            || (((void (__fastcall *)(FlashingIconComponent_o *, __int64, void *))v16->klass[1]._1.namespaze)(
-                  v16,
-                  1LL,
-                  v16->klass[1]._1.byval_arg.data),
-                (v16 = (FlashingIconComponent_o *)this->fields.baseButton) == 0LL) )
+          servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.baseButton;
+          if ( !servantFaceIcon
+            || (((void (__fastcall *)(ServantFaceIconComponent_o *, __int64, const MethodInfo *))servantFaceIcon->klass->vtable._5_UpdateAlpha.methodPtr)(
+                  servantFaceIcon,
+                  1,
+                  servantFaceIcon->klass->vtable._5_UpdateAlpha.method),
+                (servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.baseButton) == 0) )
           {
-LABEL_24:
-            sub_1BCB254(v16, IsParty_k__BackingField);
+LABEL_25:
+            sub_1C2D6EC(servantFaceIcon, IsParty_k__BackingField);
           }
-          ((void (__fastcall *)(FlashingIconComponent_o *, _QWORD, __int64, Il2CppRuntimeInterfaceOffsetPair *))v16->klass[1]._1.implementedInterfaces)(
-            v16,
-            0LL,
-            1LL,
-            v16->klass[1]._1.interfaceOffsets);
+          ((void (__fastcall *)(ServantFaceIconComponent_o *, _QWORD, __int64, void *))servantFaceIcon->klass[1]._1.fields)(
+            servantFaceIcon,
+            0,
+            1,
+            servantFaceIcon->klass[1]._1.events);
         }
         ServantSellConfirmListViewItemDraw__SetDisp(this, item, isSelectEnable, v19);
         ServantSellConfirmListViewItemDraw__SetWarningText(
           this,
           item,
           modeKind,
-          UserServantEntity_k__BackingField != 0LL,
-          UserCommandCodeEntity_k__BackingField != 0LL,
+          UserServantEntity_k__BackingField != 0,
+          UserCommandCodeEntity_k__BackingField != 0,
           v20);
       }
     }
@@ -374,7 +398,7 @@ LABEL_24:
 }
 
 
-void __fastcall ServantSellConfirmListViewItemDraw__SetLabelText(
+void ServantSellConfirmListViewItemDraw__SetLabelText(
         ServantSellConfirmListViewItemDraw_o *this,
         UILabel_o *label,
         System_String_o *text,
@@ -383,24 +407,24 @@ void __fastcall ServantSellConfirmListViewItemDraw__SetLabelText(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B186F2 & 1) == 0 )
+  if ( (byte_4C23448 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, label);
-    byte_4B186F2 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C23448 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)label, 0LL, 0LL);
+  v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)label, 0, 0);
   if ( !v6 )
   {
     if ( !label )
-      sub_1BCB254(v6, v7);
-    UILabel__set_text(label, text, 0LL);
+      sub_1C2D6EC(v6, v7);
+    UILabel__set_text(label, text, 0);
   }
 }
 
 
-void __fastcall ServantSellConfirmListViewItemDraw__SetServantFaceIcon(
+void ServantSellConfirmListViewItemDraw__SetServantFaceIcon(
         ServantSellConfirmListViewItemDraw_o *this,
         ServantSellConfirmListViewItem_o *item,
         bool isServant,
@@ -414,17 +438,17 @@ void __fastcall ServantSellConfirmListViewItemDraw__SetServantFaceIcon(
       this = (ServantSellConfirmListViewItemDraw_o *)this->fields.servantFaceIcon;
       if ( this )
       {
-        ServantFaceIconComponent__Set_40190236(
+        ServantFaceIconComponent__Set_40783748(
           (ServantFaceIconComponent_o *)this,
           item->fields._UserServantEntity_k__BackingField,
           item->fields.iconLabelInfo1,
           item->fields.iconLabelInfo2,
-          0LL);
+          0);
         return;
       }
     }
 LABEL_10:
-    sub_1BCB254(this, item);
+    sub_1C2D6EC(this, item);
   }
   if ( isCommandCode )
   {
@@ -433,17 +457,17 @@ LABEL_10:
     this = (ServantSellConfirmListViewItemDraw_o *)this->fields.servantFaceIcon;
     if ( !this )
       goto LABEL_10;
-    ServantFaceIconComponent__Set_40197680(
+    ServantFaceIconComponent__Set_40791192(
       (ServantFaceIconComponent_o *)this,
       item->fields._UserCommandCodeEntity_k__BackingField,
       item->fields.iconLabelInfo1,
       item->fields.iconLabelInfo2,
-      0LL);
+      0);
   }
 }
 
 
-void __fastcall ServantSellConfirmListViewItemDraw__SetSpriteActive(
+void ServantSellConfirmListViewItemDraw__SetSpriteActive(
         ServantSellConfirmListViewItemDraw_o *this,
         UISprite_o *sprite,
         bool isActive,
@@ -452,25 +476,25 @@ void __fastcall ServantSellConfirmListViewItemDraw__SetSpriteActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B186F1 & 1) == 0 )
+  if ( (byte_4C23447 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, sprite);
-    byte_4B186F1 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C23447 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)sprite, 0LL, 0LL);
+  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)sprite, 0, 0);
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
-    if ( !sprite || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0LL)) == 0LL )
-      sub_1BCB254(gameObject, v7);
-    UnityEngine_GameObject__SetActive(gameObject, isActive, 0LL);
+    if ( !sprite || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0)) == 0 )
+      sub_1C2D6EC(gameObject, v7);
+    UnityEngine_GameObject__SetActive(gameObject, isActive, 0);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantSellConfirmListViewItemDraw__SetWarningText(
+void ServantSellConfirmListViewItemDraw__SetWarningText(
         ServantSellConfirmListViewItemDraw_o *this,
         ServantSellConfirmListViewItem_o *item,
         int32_t modeKind,
@@ -479,18 +503,17 @@ void __fastcall ServantSellConfirmListViewItemDraw__SetWarningText(
         const MethodInfo *method)
 {
   ServantSellConfirmListViewItemDraw_o *v10; // x19
-  __int64 v11; // x1
   UserServantEntity_o *UserServantEntity_k__BackingField; // x0
-  UILabel_o *v13; // x19
+  UILabel_o *v12; // x19
   UILabel_o *warningLabel; // x1
-  ServantSellConfirmListViewItemDraw_o *v15; // x2
+  ServantSellConfirmListViewItemDraw_o *v14; // x2
 
   v10 = this;
-  if ( (byte_4B186F3 & 1) == 0 )
+  if ( (byte_4C23449 & 1) == 0 )
   {
-    sub_1BCAFF8(&TutorialFlag_TypeInfo, item);
-    this = (ServantSellConfirmListViewItemDraw_o *)sub_1BCAFF8(&StringLiteral_1/*""*/, v11);
-    byte_4B186F3 = 1;
+    sub_1C2D490(&TutorialFlag_TypeInfo);
+    this = (ServantSellConfirmListViewItemDraw_o *)sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C23449 = 1;
   }
   if ( !item )
     goto LABEL_17;
@@ -498,17 +521,17 @@ void __fastcall ServantSellConfirmListViewItemDraw__SetWarningText(
   {
 LABEL_15:
     warningLabel = v10->fields.warningLabel;
-    v15 = (ServantSellConfirmListViewItemDraw_o *)StringLiteral_1/*""*/;
+    v14 = (ServantSellConfirmListViewItemDraw_o *)StringLiteral_1/*""*/;
     goto LABEL_16;
   }
   if ( (unsigned int)(modeKind - 1) <= 1 )
   {
     UserServantEntity_k__BackingField = item->fields._UserServantEntity_k__BackingField;
-    if ( !UserServantEntity_k__BackingField || !UserServantEntity__IsHeroine(UserServantEntity_k__BackingField, 0LL) )
+    if ( !UserServantEntity_k__BackingField || !UserServantEntity__IsHeroine(UserServantEntity_k__BackingField, 0) )
       goto LABEL_12;
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    this = (ServantSellConfirmListViewItemDraw_o *)TutorialFlag__Get_39617644(126, 0LL);
+    this = (ServantSellConfirmListViewItemDraw_o *)TutorialFlag__Get_40206092(126, 0);
     if ( ((unsigned __int8)this & 1) == 0 )
     {
 LABEL_12:
@@ -517,30 +540,30 @@ LABEL_12:
       {
         this = (ServantSellConfirmListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
                                                          (UnityEngine_Component_o *)this,
-                                                         0LL);
+                                                         0);
         if ( this )
         {
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
           goto LABEL_15;
         }
       }
 LABEL_17:
-      sub_1BCB254(this, item);
+      sub_1C2D6EC(this, item);
     }
   }
-  v13 = v10->fields.warningLabel;
+  v12 = v10->fields.warningLabel;
   this = (ServantSellConfirmListViewItemDraw_o *)ServantSellConfirmListViewItemDraw__GetStatusText(
                                                    this,
                                                    item,
                                                    isServant,
                                                    isCommandCode,
                                                    (const MethodInfo *)isCommandCode);
-  warningLabel = v13;
-  v15 = this;
+  warningLabel = v12;
+  v14 = this;
 LABEL_16:
   ServantSellConfirmListViewItemDraw__SetLabelText(
     this,
     warningLabel,
-    (System_String_o *)v15,
+    (System_String_o *)v14,
     (const MethodInfo *)isServant);
 }

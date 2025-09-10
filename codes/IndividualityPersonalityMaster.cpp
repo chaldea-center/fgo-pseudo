@@ -1,242 +1,226 @@
-void __fastcall IndividualityPersonalityMaster___ctor(IndividualityPersonalityMaster_o *this, const MethodInfo *method)
+void IndividualityPersonalityMaster___ctor(IndividualityPersonalityMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C88B & 1) == 0 )
+  if ( (byte_4C27643 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_IndividualityPersonalityMaster__IndividualityPersonalityEntity__int___ctor__,
-      method);
-    byte_4B1C88B = 1;
+    sub_1C2D490(&Method_DataMasterBase_IndividualityPersonalityMaster__IndividualityPersonalityEntity__int___ctor__);
+    byte_4C27643 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     484,
-    (const MethodInfo_32C5ADC *)Method_DataMasterBase_IndividualityPersonalityMaster__IndividualityPersonalityEntity__int___ctor__);
+    (const MethodInfo_3385A74 *)Method_DataMasterBase_IndividualityPersonalityMaster__IndividualityPersonalityEntity__int___ctor__);
 }
 
 
-int32_t __fastcall IndividualityPersonalityMaster__GetPersonalityValue(
+int32_t IndividualityPersonalityMaster__GetPersonalityValue(
         IndividualityPersonalityMaster_o *this,
         System_Int32_array *individuality,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  __int64 v13; // x1
+  __int64 v6; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v16; // x9
+  __int64 v9; // x9
   int32_t *p_offset; // x10
-  __int64 p_method; // x0
-  System_Collections_Generic_IEnumerator_T__c *v19; // x8
-  __int64 v20; // x9
-  int32_t *v21; // x10
-  __int64 v22; // x0
-  _QWORD *v23; // x0
-  __int64 v24; // x1
-  _QWORD *v25; // x21
-  __int64 methodPtr_low; // x10
-  __int64 v27; // x22
-  System_Func_int__bool__o *v28; // x23
-  int32_t v29; // w21
-  System_Collections_Generic_IEnumerator_T__c *v30; // x8
-  __int64 v31; // x9
-  int32_t *v32; // x10
-  __int64 v33; // x0
+  __int64 v11; // x0
+  System_Collections_Generic_IEnumerator_T__c *v12; // x8
+  __int64 v13; // x9
+  int32_t *v14; // x10
+  __int64 v15; // x0
+  _QWORD *v16; // x0
+  __int64 v17; // x1
+  _QWORD *v18; // x21
+  __int64 naturalAligment; // x10
+  __int64 v20; // x22
+  System_Func_int__bool__o *v21; // x23
+  int32_t v22; // w21
+  System_Collections_Generic_IEnumerator_T__c *v23; // x8
+  __int64 v24; // x9
+  int32_t *v25; // x10
+  __int64 v26; // x0
 
-  if ( (byte_4B1C889 & 1) == 0 )
+  if ( (byte_4C27641 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_System_Collections_ObjectModel_Collection_IndividualityPersonalityEntity__GetEnumerator__,
-      individuality);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_All_int___, v5);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Contains_int___, v6);
-    sub_1BCAFF8(&System_Func_int__bool__TypeInfo, v7);
-    sub_1BCAFF8(&System_IDisposable_TypeInfo, v8);
-    sub_1BCAFF8(&System_Collections_Generic_IEnumerator_IndividualityPersonalityEntity__TypeInfo, v9);
-    sub_1BCAFF8(&System_Collections_IEnumerator_TypeInfo, v10);
-    sub_1BCAFF8(&IndividualityPersonalityEntity_TypeInfo, v11);
-    byte_4B1C889 = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_IndividualityPersonalityEntity__GetEnumerator__);
+    sub_1C2D490(&Method_System_Linq_Enumerable_All_int___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C2D490(&System_Func_int__bool__TypeInfo);
+    sub_1C2D490(&System_IDisposable_TypeInfo);
+    sub_1C2D490(&System_Collections_Generic_IEnumerator_IndividualityPersonalityEntity__TypeInfo);
+    sub_1C2D490(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C2D490(&IndividualityPersonalityEntity_TypeInfo);
+    byte_4C27641 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1BCB254(0LL, individuality);
+    sub_1C2D6EC(0, individuality);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_3263BC0 *)Method_System_Collections_ObjectModel_Collection_IndividualityPersonalityEntity__GetEnumerator__);
+                 (const MethodInfo_33217E0 *)Method_System_Collections_ObjectModel_Collection_IndividualityPersonalityEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1BCB254(0LL, v13);
+    sub_1C2D6EC(0, v6);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v16 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
-    if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
+    v9 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+    if ( *(_WORD *)&Enumerator->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v16;
+        --v9;
         p_offset += 4;
-        if ( !v16 )
+        if ( !v9 )
           goto LABEL_9;
       }
-      p_method = (__int64)&klass->vtable[*p_offset].method;
+      v11 = (__int64)&klass->vtable[*p_offset];
     }
     else
     {
 LABEL_9:
-      p_method = sub_1C1B560(Enumerator, System_Collections_IEnumerator_TypeInfo, 0LL);
+      v11 = sub_1C7DCA8(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))p_method)(
+    if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v11)(
             Enumerator,
-            *(_QWORD *)(p_method + 8)) & 1) == 0 )
+            *(_QWORD *)(v11 + 8))
+        & 1) == 0 )
       break;
-    v19 = Enumerator->klass;
-    v20 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
-    if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
+    v12 = Enumerator->klass;
+    v13 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+    if ( *(_WORD *)&Enumerator->klass->_2.rank )
     {
-      v21 = &v19->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_IndividualityPersonalityEntity__c **)v21 - 1) != System_Collections_Generic_IEnumerator_IndividualityPersonalityEntity__TypeInfo )
+      v14 = &v12->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_IndividualityPersonalityEntity__c **)v14 - 1) != System_Collections_Generic_IEnumerator_IndividualityPersonalityEntity__TypeInfo )
       {
-        --v20;
-        v21 += 4;
-        if ( !v20 )
+        --v13;
+        v14 += 4;
+        if ( !v13 )
           goto LABEL_16;
       }
-      v22 = (__int64)&v19->vtable[*v21].method;
+      v15 = (__int64)&v12->vtable[*v14];
     }
     else
     {
 LABEL_16:
-      v22 = sub_1C1B560(
-              Enumerator,
-              System_Collections_Generic_IEnumerator_IndividualityPersonalityEntity__TypeInfo,
-              0LL);
+      v15 = sub_1C7DCA8(Enumerator, System_Collections_Generic_IEnumerator_IndividualityPersonalityEntity__TypeInfo, 0);
     }
-    v23 = (_QWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(
+    v16 = (_QWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v15)(
                       Enumerator,
-                      *(_QWORD *)(v22 + 8));
-    v25 = v23;
-    if ( v23 )
+                      *(_QWORD *)(v15 + 8));
+    v18 = v16;
+    if ( v16 )
     {
-      methodPtr_low = LOBYTE(IndividualityPersonalityEntity_TypeInfo->vtable._0_Equals.methodPtr);
-      if ( *(unsigned __int8 *)(*v23 + 304LL) >= (unsigned int)methodPtr_low
-        && *(IndividualityPersonalityEntity_c **)(*(_QWORD *)(*v23 + 200LL) + 8 * methodPtr_low - 8) == IndividualityPersonalityEntity_TypeInfo )
+      naturalAligment = IndividualityPersonalityEntity_TypeInfo->_2.naturalAligment;
+      if ( *(unsigned __int8 *)(*v16 + 304LL) >= (unsigned int)naturalAligment
+        && *(IndividualityPersonalityEntity_c **)(*(_QWORD *)(*v16 + 200LL) + 8 * naturalAligment - 8) == IndividualityPersonalityEntity_TypeInfo )
       {
-        v27 = v23[3];
-        if ( !v27 )
-          sub_1BCB254(v23, v24);
+        v20 = v16[3];
+        if ( !v20 )
+          sub_1C2D6EC(v16, v17);
         if ( !individuality )
-          sub_1BCB254(v23, v24);
-        if ( *(_DWORD *)(v27 + 24) == individuality->max_length )
+          sub_1C2D6EC(v16, v17);
+        if ( *(_DWORD *)(v20 + 24) == LODWORD(individuality->max_length) )
         {
-          v28 = (System_Func_int__bool__o *)sub_1BCB244(System_Func_int__bool__TypeInfo);
-          System_Func_int__bool____ctor(v28, &individuality->obj, Method_System_Linq_Enumerable_Contains_int___, 0LL);
+          v21 = (System_Func_int__bool__o *)sub_1C2D6DC(System_Func_int__bool__TypeInfo);
+          System_Func_int__bool____ctor(v21, &individuality->obj, Method_System_Linq_Enumerable_Contains_int___, 0);
           if ( System_Linq_Enumerable__All_int_(
-                 (System_Collections_Generic_IEnumerable_TSource__o *)v27,
-                 (System_Func_TSource__bool__o *)v28,
-                 (const MethodInfo_30248FC *)Method_System_Linq_Enumerable_All_int___) )
+                 (System_Collections_Generic_IEnumerable_TSource__o *)v20,
+                 (System_Func_TSource__bool__o *)v21,
+                 (const MethodInfo_30D87A8 *)Method_System_Linq_Enumerable_All_int___) )
           {
-            v29 = *((_DWORD *)v25 + 5);
+            v22 = *((_DWORD *)v18 + 5);
             goto LABEL_27;
           }
         }
       }
     }
   }
-  v29 = -1;
+  v22 = -1;
 LABEL_27:
-  v30 = Enumerator->klass;
-  v31 = *(unsigned __int16 *)(&Enumerator->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&Enumerator->klass->_2.bitflags2 + 3) )
+  v23 = Enumerator->klass;
+  v24 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+  if ( *(_WORD *)&Enumerator->klass->_2.rank )
   {
-    v32 = &v30->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v32 - 1) != System_IDisposable_TypeInfo )
+    v25 = &v23->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v25 - 1) != System_IDisposable_TypeInfo )
     {
-      --v31;
-      v32 += 4;
-      if ( !v31 )
+      --v24;
+      v25 += 4;
+      if ( !v24 )
         goto LABEL_31;
     }
-    v33 = (__int64)&v30->vtable[*v32].method;
+    v26 = (__int64)&v23->vtable[*v25];
   }
   else
   {
 LABEL_31:
-    v33 = sub_1C1B560(Enumerator, System_IDisposable_TypeInfo, 0LL);
+    v26 = sub_1C7DCA8(Enumerator, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v33)(Enumerator, *(_QWORD *)(v33 + 8));
-  return v29;
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v26)(Enumerator, *(_QWORD *)(v26 + 8));
+  return v22;
 }
 
 
-bool __fastcall IndividualityPersonalityMaster__TryGetEntityByPersonalityValue(
+bool IndividualityPersonalityMaster__TryGetEntityByPersonalityValue(
         IndividualityPersonalityMaster_o *this,
         IndividualityPersonalityEntity_o **entity,
         int32_t personalityValue,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
+  __int64 v7; // x22
+  __int64 v8; // x0
   __int64 v9; // x1
-  __int64 v10; // x22
-  __int64 v11; // x0
-  __int64 v12; // x1
   struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x20
-  System_Func_object__bool__o *v14; // x21
-  Il2CppObject *v15; // x0
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  System_Func_object__bool__o *v11; // x21
+  Il2CppObject *v12; // x0
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
 
-  if ( (byte_4B1C88A & 1) == 0 )
+  if ( (byte_4C27642 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_FirstOrDefault_IndividualityPersonalityEntity___, entity);
-    sub_1BCAFF8(&System_Func_IndividualityPersonalityEntity__bool__TypeInfo, v7);
-    sub_1BCAFF8(&Method_IndividualityPersonalityMaster___c__DisplayClass1_0__TryGetEntityByPersonalityValue_b__0__, v8);
-    sub_1BCAFF8(&IndividualityPersonalityMaster___c__DisplayClass1_0_TypeInfo, v9);
-    byte_4B1C88A = 1;
+    sub_1C2D490(&Method_System_Linq_Enumerable_FirstOrDefault_IndividualityPersonalityEntity___);
+    sub_1C2D490(&System_Func_IndividualityPersonalityEntity__bool__TypeInfo);
+    sub_1C2D490(&Method_IndividualityPersonalityMaster___c__DisplayClass1_0__TryGetEntityByPersonalityValue_b__0__);
+    sub_1C2D490(&IndividualityPersonalityMaster___c__DisplayClass1_0_TypeInfo);
+    byte_4C27642 = 1;
   }
-  v10 = sub_1BCB244(IndividualityPersonalityMaster___c__DisplayClass1_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v10, 0LL);
-  if ( !v10 )
-    sub_1BCB254(v11, v12);
-  *(_DWORD *)(v10 + 16) = personalityValue;
+  v7 = sub_1C2D6DC(IndividualityPersonalityMaster___c__DisplayClass1_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0);
+  if ( !v7 )
+    sub_1C2D6EC(v8, v9);
+  *(_DWORD *)(v7 + 16) = personalityValue;
   list = this->fields.list;
-  v14 = (System_Func_object__bool__o *)sub_1BCB244(System_Func_IndividualityPersonalityEntity__bool__TypeInfo);
+  v11 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_IndividualityPersonalityEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v14,
-    (Il2CppObject *)v10,
+    v11,
+    (Il2CppObject *)v7,
     Method_IndividualityPersonalityMaster___c__DisplayClass1_0__TryGetEntityByPersonalityValue_b__0__,
-    0LL);
-  v15 = System_Linq_Enumerable__FirstOrDefault_object__50595188(
+    0);
+  v12 = System_Linq_Enumerable__FirstOrDefault_object__51348472(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
-          (System_Func_TSource__bool__o *)v14,
-          (const MethodInfo_3040574 *)Method_System_Linq_Enumerable_FirstOrDefault_IndividualityPersonalityEntity___);
-  *entity = (IndividualityPersonalityEntity_o *)v15;
-  sub_1BCAF9C((CGThumbnailListItem_o *)entity, (int32_t)v15, v16, v17);
-  return *entity != 0LL;
+          (System_Func_TSource__bool__o *)v11,
+          (const MethodInfo_30F83F8 *)Method_System_Linq_Enumerable_FirstOrDefault_IndividualityPersonalityEntity___);
+  *entity = (IndividualityPersonalityEntity_o *)v12;
+  sub_1C2D434((CGThumbnailListItem_o *)entity, (int32_t)v12, v13, v14);
+  return *entity != 0;
 }
 
 
-void __fastcall IndividualityPersonalityMaster___c__DisplayClass1_0___ctor(
+void IndividualityPersonalityMaster___c__DisplayClass1_0___ctor(
         IndividualityPersonalityMaster___c__DisplayClass1_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall IndividualityPersonalityMaster___c__DisplayClass1_0___TryGetEntityByPersonalityValue_b__0(
+bool IndividualityPersonalityMaster___c__DisplayClass1_0___TryGetEntityByPersonalityValue_b__0(
         IndividualityPersonalityMaster___c__DisplayClass1_0_o *this,
         IndividualityPersonalityEntity_o *e,
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   return e->fields.personalityValue == this->fields.personalityValue;
 }

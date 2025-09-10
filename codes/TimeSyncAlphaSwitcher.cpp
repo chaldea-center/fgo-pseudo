@@ -1,28 +1,28 @@
-void __fastcall TimeSyncAlphaSwitcher___ctor(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
+void TimeSyncAlphaSwitcher___ctor(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
 {
   this->fields.toggleNum = 1;
   this->fields.toggleFreqRate = 2.0;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall TimeSyncAlphaSwitcher__Clear(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
+void TimeSyncAlphaSwitcher__Clear(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
 {
   struct UIWidget_o *widget; // x0
 
   widget = this->fields.widget;
-  *(_QWORD *)&this->fields.toggleNum = 1LL;
+  *(_QWORD *)&this->fields.toggleNum = 1;
   if ( !widget )
-    sub_1BCB254(0LL, method);
-  ((void (__fastcall *)(struct UIWidget_o *, Il2CppMethodPointer, float))widget->klass->vtable._8_set_alpha.method)(
+    sub_1C2D6EC(0, method);
+  ((void (__fastcall *)(struct UIWidget_o *, const MethodInfo *, float))widget->klass->vtable._8_set_alpha.methodPtr)(
     widget,
-    widget->klass->vtable._9_CalculateFinalAlpha.methodPtr,
+    widget->klass->vtable._8_set_alpha.method,
     1.0);
-  *(_QWORD *)&this->fields._firstFreqCount_k__BackingField = 0LL;
+  *(_QWORD *)&this->fields._firstFreqCount_k__BackingField = 0;
 }
 
 
-void __fastcall TimeSyncAlphaSwitcher__SetAlphaBlink(
+void TimeSyncAlphaSwitcher__SetAlphaBlink(
         TimeSyncAlphaSwitcher_o *this,
         int32_t num,
         int32_t index,
@@ -52,19 +52,19 @@ void __fastcall TimeSyncAlphaSwitcher__SetAlphaBlink(
 
 
 // attributes: thunk
-void __fastcall TimeSyncAlphaSwitcher__Update(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
+void TimeSyncAlphaSwitcher__Update(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
 {
   TimeSyncAlphaSwitcher__UpdateAlpha(this, method);
 }
 
 
-void __fastcall TimeSyncAlphaSwitcher__UpdateAlpha(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
+void TimeSyncAlphaSwitcher__UpdateAlpha(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
   long double v4; // q0
   int32_t firstFreqCount_k__BackingField; // w8
   struct UIWidget_o *v6; // x0
-  void (__fastcall *v7)(long double); // x2
+  void (__fastcall *methodPtr)(long double); // x2
   UnityEngine_AnimationCurve_o *alphaCurve; // x20
   float time; // s0
   float v10; // s8
@@ -78,28 +78,28 @@ void __fastcall TimeSyncAlphaSwitcher__UpdateAlpha(TimeSyncAlphaSwitcher_o *this
 
   if ( this->fields.toggleNum >= 2 )
   {
-    *(float *)&v4 = UnityEngine_Time__get_time(0LL);
+    *(float *)&v4 = UnityEngine_Time__get_time(0);
     firstFreqCount_k__BackingField = this->fields._firstFreqCount_k__BackingField;
     if ( *(float *)&v4 >= (float)((float)((float)firstFreqCount_k__BackingField + 0.5)
                                 * (float)(this->fields.toggleFreqRate * 3.1416)) )
     {
       alphaCurve = this->fields.alphaCurve;
-      time = UnityEngine_Time__get_time(0LL);
+      time = UnityEngine_Time__get_time(0);
       if ( alphaCurve )
       {
         v10 = this->fields.toggleFreqRate * 3.1416;
         v11 = fmodf(time, v10);
-        v12 = UnityEngine_AnimationCurve__Evaluate(alphaCurve, v11 / v10, 0LL);
+        v12 = UnityEngine_AnimationCurve__Evaluate(alphaCurve, v11 / v10, 0);
         widget = this->fields.widget;
         v14 = v12;
-        *(float *)&v4 = UnityEngine_Time__get_time(0LL);
+        *(float *)&v4 = UnityEngine_Time__get_time(0);
         if ( widget )
         {
           v15 = *(float *)&v4 / (float)(this->fields.toggleFreqRate * 3.1416);
           v16 = (int)v15;
           if ( v15 == INFINITY )
             v16 = 0x80000000;
-          v7 = (void (__fastcall *)(long double))widget->klass->vtable._8_set_alpha.method;
+          methodPtr = (void (__fastcall *)(long double))widget->klass->vtable._8_set_alpha.methodPtr;
           v17 = 0.0;
           if ( v16 % this->fields.toggleNum == this->fields.toggleIndex )
             v17 = 1.0;
@@ -114,31 +114,31 @@ void __fastcall TimeSyncAlphaSwitcher__UpdateAlpha(TimeSyncAlphaSwitcher_o *this
       if ( v6 )
       {
         LODWORD(v4) = 0;
-        v7 = (void (__fastcall *)(long double))v6->klass->vtable._8_set_alpha.method;
+        methodPtr = (void (__fastcall *)(long double))v6->klass->vtable._8_set_alpha.methodPtr;
         if ( this->fields.toggleIndex == firstFreqCount_k__BackingField % this->fields.toggleNum )
           *(float *)&v4 = 1.0;
 LABEL_15:
-        v7(v4);
+        methodPtr(v4);
         return;
       }
     }
-    sub_1BCB254(v6, v3);
+    sub_1C2D6EC(v6, v3);
   }
 }
 
 
-bool __fastcall TimeSyncAlphaSwitcher__get_IsAlphaBlink(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
+bool TimeSyncAlphaSwitcher__get_IsAlphaBlink(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
 {
   return this->fields.toggleNum > 1;
 }
 
 
-int32_t __fastcall TimeSyncAlphaSwitcher__get_Remainder(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
+int32_t TimeSyncAlphaSwitcher__get_Remainder(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
 {
   float v3; // s0
   int v4; // w9
 
-  v3 = UnityEngine_Time__get_time(0LL) / (float)(this->fields.toggleFreqRate * 3.1416);
+  v3 = UnityEngine_Time__get_time(0) / (float)(this->fields.toggleFreqRate * 3.1416);
   v4 = (int)v3;
   if ( v3 == INFINITY )
     v4 = 0x80000000;
@@ -146,37 +146,31 @@ int32_t __fastcall TimeSyncAlphaSwitcher__get_Remainder(TimeSyncAlphaSwitcher_o 
 }
 
 
-float __fastcall TimeSyncAlphaSwitcher__get_SyncReferenceTime(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
+float TimeSyncAlphaSwitcher__get_SyncReferenceTime(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
 {
   return this->fields._SyncReferenceTime_k__BackingField;
 }
 
 
-float __fastcall TimeSyncAlphaSwitcher__get_TimePerFreq(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
+float TimeSyncAlphaSwitcher__get_TimePerFreq(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
 {
   return this->fields.toggleFreqRate * 3.1416;
 }
 
 
-int32_t __fastcall TimeSyncAlphaSwitcher__get_firstFreqCount(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
+int32_t TimeSyncAlphaSwitcher__get_firstFreqCount(TimeSyncAlphaSwitcher_o *this, const MethodInfo *method)
 {
   return this->fields._firstFreqCount_k__BackingField;
 }
 
 
-void __fastcall TimeSyncAlphaSwitcher__set_SyncReferenceTime(
-        TimeSyncAlphaSwitcher_o *this,
-        float value,
-        const MethodInfo *method)
+void TimeSyncAlphaSwitcher__set_SyncReferenceTime(TimeSyncAlphaSwitcher_o *this, float value, const MethodInfo *method)
 {
   this->fields._SyncReferenceTime_k__BackingField = value;
 }
 
 
-void __fastcall TimeSyncAlphaSwitcher__set_firstFreqCount(
-        TimeSyncAlphaSwitcher_o *this,
-        int32_t value,
-        const MethodInfo *method)
+void TimeSyncAlphaSwitcher__set_firstFreqCount(TimeSyncAlphaSwitcher_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._firstFreqCount_k__BackingField = value;
 }

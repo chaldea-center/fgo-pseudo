@@ -1,77 +1,72 @@
-// local variable allocation has failed, the output may be wrong!
-void __fastcall PresentBoxNotificationListViewItem___ctor(
+void PresentBoxNotificationListViewItem___ctor(
         PresentBoxNotificationListViewItem_o *this,
         int32_t index,
         UserPresentBoxEntity_o *e,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   _QWORD *p_itemEntity; // x20
   Il2CppObject *Instance; // x0
-  __int64 v13; // x1
+  __int64 v9; // x1
   int32_t giftType; // w8
 
-  if ( (byte_4B1677C & 1) == 0 )
+  if ( (byte_4C21392 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_ItemMaster___, *(_QWORD *)&index);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_ServantMaster___, v7);
-    sub_1BCAFF8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v8);
-    sub_1BCAFF8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__, v9);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    byte_4B1677C = 1;
+    sub_1C2D490(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C2D490(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1C2D490(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C21392 = 1;
   }
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   this->fields.entity = e;
-  sub_1BCAF9C(&this->fields.entity);
-  this->fields.itemEntity = 0LL;
+  sub_1C2D434(&this->fields.entity);
+  this->fields.itemEntity = 0;
   p_itemEntity = &this->fields.itemEntity;
-  sub_1BCAF9C(&this->fields.itemEntity);
-  this->fields.svtEntity = 0LL;
-  Instance = (Il2CppObject *)sub_1BCAF9C(&this->fields.svtEntity);
+  sub_1C2D434(&this->fields.itemEntity);
+  this->fields.svtEntity = 0;
+  Instance = (Il2CppObject *)sub_1C2D434(&this->fields.svtEntity);
   if ( !e )
     goto LABEL_15;
-  UserPresentBoxEntity__GetInfo(e, &this->fields.presentName, &this->fields.presentCount, 0LL);
+  UserPresentBoxEntity__GetInfo(e, &this->fields.presentName, &this->fields.presentCount, 0);
   giftType = e->fields.giftType;
   if ( (unsigned int)(giftType - 6) < 2 || giftType == 1 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ServantMaster___);
+                   (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( Instance )
       {
         p_itemEntity = &this->fields.svtEntity;
         this->fields.svtEntity = (struct ServantEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                                              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                                              e->fields.objectId,
-                                                             (const MethodInfo_32C7E00 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                                                             (const MethodInfo_3387D98 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
         goto LABEL_13;
       }
     }
 LABEL_15:
-    sub_1BCB254(Instance, v13);
+    sub_1C2D6EC(Instance, v9);
   }
   if ( giftType == 2 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Instance )
     {
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ItemMaster___);
+                   (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ItemMaster___);
       if ( Instance )
       {
         *p_itemEntity = DataMasterBase_object__object__int___GetEntity(
                           (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                           e->fields.objectId,
-                          (const MethodInfo_32C7E00 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                          (const MethodInfo_3387D98 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
 LABEL_13:
-        sub_1BCAF9C(p_itemEntity);
+        sub_1C2D434(p_itemEntity);
         return;
       }
     }
@@ -80,28 +75,26 @@ LABEL_13:
 }
 
 
-void __fastcall PresentBoxNotificationListViewItem__Finalize(
-        PresentBoxNotificationListViewItem_o *this,
-        const MethodInfo *method)
+void PresentBoxNotificationListViewItem__Finalize(PresentBoxNotificationListViewItem_o *this, const MethodInfo *method)
 {
-  ListViewItem__Finalize((ListViewItem_o *)this, 0LL);
+  ListViewItem__Finalize((ListViewItem_o *)this, 0);
 }
 
 
-System_String_o *__fastcall PresentBoxNotificationListViewItem__ToString(
+System_String_o *PresentBoxNotificationListViewItem__ToString(
         PresentBoxNotificationListViewItem_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1677D & 1) == 0 )
+  if ( (byte_4C21393 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_10645/*"Present "*/, method);
-    byte_4B1677D = 1;
+    sub_1C2D490(&StringLiteral_10720/*"Present "*/);
+    byte_4C21393 = 1;
   }
-  return System_String__Concat_62450424((System_String_o *)StringLiteral_10645/*"Present "*/, this->fields.presentName, 0LL);
+  return System_String__Concat_63457864((System_String_o *)StringLiteral_10720/*"Present "*/, this->fields.presentName, 0);
 }
 
 
-System_String_o *__fastcall PresentBoxNotificationListViewItem__get_CountText(
+System_String_o *PresentBoxNotificationListViewItem__get_CountText(
         PresentBoxNotificationListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -109,7 +102,7 @@ System_String_o *__fastcall PresentBoxNotificationListViewItem__get_CountText(
 }
 
 
-int32_t __fastcall PresentBoxNotificationListViewItem__get_GiftType(
+int32_t PresentBoxNotificationListViewItem__get_GiftType(
         PresentBoxNotificationListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -123,7 +116,7 @@ int32_t __fastcall PresentBoxNotificationListViewItem__get_GiftType(
 }
 
 
-ItemEntity_o *__fastcall PresentBoxNotificationListViewItem__get_Item(
+ItemEntity_o *PresentBoxNotificationListViewItem__get_Item(
         PresentBoxNotificationListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -131,7 +124,7 @@ ItemEntity_o *__fastcall PresentBoxNotificationListViewItem__get_Item(
 }
 
 
-System_String_o *__fastcall PresentBoxNotificationListViewItem__get_NameText(
+System_String_o *PresentBoxNotificationListViewItem__get_NameText(
         PresentBoxNotificationListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -139,7 +132,7 @@ System_String_o *__fastcall PresentBoxNotificationListViewItem__get_NameText(
 }
 
 
-int32_t __fastcall PresentBoxNotificationListViewItem__get_ObjactId(
+int32_t PresentBoxNotificationListViewItem__get_ObjactId(
         PresentBoxNotificationListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -153,7 +146,7 @@ int32_t __fastcall PresentBoxNotificationListViewItem__get_ObjactId(
 }
 
 
-ServantEntity_o *__fastcall PresentBoxNotificationListViewItem__get_Servant(
+ServantEntity_o *PresentBoxNotificationListViewItem__get_Servant(
         PresentBoxNotificationListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -161,7 +154,7 @@ ServantEntity_o *__fastcall PresentBoxNotificationListViewItem__get_Servant(
 }
 
 
-UserPresentBoxEntity_o *__fastcall PresentBoxNotificationListViewItem__get_UserPresentBox(
+UserPresentBoxEntity_o *PresentBoxNotificationListViewItem__get_UserPresentBox(
         PresentBoxNotificationListViewItem_o *this,
         const MethodInfo *method)
 {

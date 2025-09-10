@@ -1,12 +1,12 @@
-void __fastcall PartyOrganizationUIDragDropListViewSurface___ctor(
+void PartyOrganizationUIDragDropListViewSurface___ctor(
         PartyOrganizationUIDragDropListViewSurface_o *this,
         const MethodInfo *method)
 {
-  UIDragDropListViewSurface___ctor((UIDragDropListViewSurface_o *)this, 0LL);
+  UIDragDropListViewSurface___ctor((UIDragDropListViewSurface_o *)this, 0);
 }
 
 
-PartyOrganizationListViewDropObject_o *__fastcall PartyOrganizationUIDragDropListViewSurface__get_DropObject(
+PartyOrganizationListViewDropObject_o *PartyOrganizationUIDragDropListViewSurface__get_DropObject(
         PartyOrganizationUIDragDropListViewSurface_o *this,
         const MethodInfo *method)
 {

@@ -1,69 +1,62 @@
-void __fastcall GalleryResourceMaster___ctor(GalleryResourceMaster_o *this, const MethodInfo *method)
+void GalleryResourceMaster___ctor(GalleryResourceMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C820 & 1) == 0 )
+  if ( (byte_4C275D9 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string___ctor__, method);
-    byte_4B1C820 = 1;
+    sub_1C2D490(&Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string___ctor__);
+    byte_4C275D9 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     543,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_Collections_Generic_List_GalleryResourceEntity__o *__fastcall GalleryResourceMaster__GetEnableGalleryResourceEntityListByGalleryId(
+System_Collections_Generic_List_GalleryResourceEntity__o *GalleryResourceMaster__GetEnableGalleryResourceEntityListByGalleryId(
         GalleryResourceMaster_o *this,
         int32_t galleryId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v5; // x21
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x21
-  __int64 v10; // x0
-  __int64 v11; // x1
   struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x19
-  System_Func_object__bool__o *v13; // x20
-  System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
+  System_Func_object__bool__o *v9; // x20
+  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
 
-  if ( (byte_4B1C81F & 1) == 0 )
+  if ( (byte_4C275D8 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___, *(_QWORD *)&galleryId);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Where_GalleryResourceEntity___, v5);
-    sub_1BCAFF8(&System_Func_GalleryResourceEntity__bool__TypeInfo, v6);
-    sub_1BCAFF8(
-      &Method_GalleryResourceMaster___c__DisplayClass0_0__GetEnableGalleryResourceEntityListByGalleryId_b__0__,
-      v7);
-    sub_1BCAFF8(&GalleryResourceMaster___c__DisplayClass0_0_TypeInfo, v8);
-    byte_4B1C81F = 1;
+    sub_1C2D490(&Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Where_GalleryResourceEntity___);
+    sub_1C2D490(&System_Func_GalleryResourceEntity__bool__TypeInfo);
+    sub_1C2D490(&Method_GalleryResourceMaster___c__DisplayClass0_0__GetEnableGalleryResourceEntityListByGalleryId_b__0__);
+    sub_1C2D490(&GalleryResourceMaster___c__DisplayClass0_0_TypeInfo);
+    byte_4C275D8 = 1;
   }
-  v9 = sub_1BCB244(GalleryResourceMaster___c__DisplayClass0_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v9, 0LL);
-  if ( !v9 )
-    sub_1BCB254(v10, v11);
-  *(_DWORD *)(v9 + 16) = galleryId;
+  v5 = sub_1C2D6DC(GalleryResourceMaster___c__DisplayClass0_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
+  if ( !v5 )
+    sub_1C2D6EC(v6, v7);
+  *(_DWORD *)(v5 + 16) = galleryId;
   list = this->fields.list;
-  v13 = (System_Func_object__bool__o *)sub_1BCB244(System_Func_GalleryResourceEntity__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_GalleryResourceEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v13,
-    (Il2CppObject *)v9,
+    v9,
+    (Il2CppObject *)v5,
     Method_GalleryResourceMaster___c__DisplayClass0_0__GetEnableGalleryResourceEntityListByGalleryId_b__0__,
-    0LL);
-  v14 = System_Linq_Enumerable__Where_object_(
+    0);
+  v10 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
-          (System_Func_TSource__bool__o *)v13,
-          (const MethodInfo_305DC88 *)Method_System_Linq_Enumerable_Where_GalleryResourceEntity___);
+          (System_Func_TSource__bool__o *)v9,
+          (const MethodInfo_3115108 *)Method_System_Linq_Enumerable_Where_GalleryResourceEntity___);
   return (System_Collections_Generic_List_GalleryResourceEntity__o *)System_Linq_Enumerable__ToList_object_(
-                                                                       v14,
-                                                                       (const MethodInfo_305BB58 *)Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___);
+                                                                       v10,
+                                                                       (const MethodInfo_3112C88 *)Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-GalleryResourceEntity_o *__fastcall GalleryResourceMaster__GetEntity(
+GalleryResourceEntity_o *GalleryResourceMaster__GetEntity(
         GalleryResourceMaster_o *this,
         int32_t galleryId,
         int32_t idx,
@@ -71,23 +64,21 @@ GalleryResourceEntity_o *__fastcall GalleryResourceMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1C821 & 1) == 0 )
+  if ( (byte_4C275DA & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__GetEntity__,
-      *(_QWORD *)&galleryId);
-    byte_4B1C821 = 1;
+    sub_1C2D490(&Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__GetEntity__);
+    byte_4C275DA = 1;
   }
   PK = (Il2CppObject *)GalleryResourceEntity__CreatePK(galleryId, idx, *(const MethodInfo **)&idx);
   return (GalleryResourceEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_32CC8B8 *)Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__GetEntity__);
+                                      (const MethodInfo_338C850 *)Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall GalleryResourceMaster__TryGetEntity(
+bool GalleryResourceMaster__TryGetEntity(
         GalleryResourceMaster_o *this,
         GalleryResourceEntity_o **entity,
         int32_t galleryId,
@@ -96,29 +87,29 @@ bool __fastcall GalleryResourceMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1C822 & 1) == 0 )
+  if ( (byte_4C275DB & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__TryGetEntity__, entity);
-    byte_4B1C822 = 1;
+    sub_1C2D490(&Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__TryGetEntity__);
+    byte_4C275DB = 1;
   }
   PK = (Il2CppObject *)GalleryResourceEntity__CreatePK(galleryId, idx, *(const MethodInfo **)&galleryId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__TryGetEntity__);
 }
 
 
-void __fastcall GalleryResourceMaster___c__DisplayClass0_0___ctor(
+void GalleryResourceMaster___c__DisplayClass0_0___ctor(
         GalleryResourceMaster___c__DisplayClass0_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall GalleryResourceMaster___c__DisplayClass0_0___GetEnableGalleryResourceEntityListByGalleryId_b__0(
+bool GalleryResourceMaster___c__DisplayClass0_0___GetEnableGalleryResourceEntityListByGalleryId_b__0(
         GalleryResourceMaster___c__DisplayClass0_0_o *this,
         GalleryResourceEntity_o *entity,
         const MethodInfo *method)
@@ -129,13 +120,13 @@ bool __fastcall GalleryResourceMaster___c__DisplayClass0_0___GetEnableGalleryRes
   int64_t condNum; // x19
 
   v4 = this;
-  if ( (byte_4B1C823 & 1) == 0 )
+  if ( (byte_4C275DC & 1) == 0 )
   {
-    this = (GalleryResourceMaster___c__DisplayClass0_0_o *)sub_1BCAFF8(&CondType_TypeInfo, entity);
-    byte_4B1C823 = 1;
+    this = (GalleryResourceMaster___c__DisplayClass0_0_o *)sub_1C2D490(&CondType_TypeInfo);
+    byte_4C275DC = 1;
   }
   if ( !entity )
-    sub_1BCB254(this, entity);
+    sub_1C2D6EC(this, entity);
   if ( entity->fields.galleryId != v4->fields.galleryId )
     return 0;
   condType = entity->fields.condType;
@@ -143,5 +134,5 @@ bool __fastcall GalleryResourceMaster___c__DisplayClass0_0___GetEnableGalleryRes
   condNum = entity->fields.condNum;
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__IsOpen(condType, condId, condNum, 0, 0LL, 0LL);
+  return CondType__IsOpen(condType, condId, condNum, 0, 0, 0);
 }

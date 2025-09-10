@@ -1,4 +1,4 @@
-void __fastcall CharaGraphServantListViewItem___ctor(
+void CharaGraphServantListViewItem___ctor(
         CharaGraphServantListViewItem_o *this,
         int32_t index,
         CharaGraphListViewPatternBase_o *listViewPattern,
@@ -19,10 +19,10 @@ void __fastcall CharaGraphServantListViewItem___ctor(
     method);
   UserServantEntity_k__BackingField = this->fields._UserServantEntity_k__BackingField;
   if ( !UserServantEntity_k__BackingField )
-    sub_1BCB254(0LL, v6);
-  OverwriteStatus = UserServantEntity__GetOverwriteStatus(UserServantEntity_k__BackingField, 0LL, 0LL);
+    sub_1C2D6EC(0, v6);
+  OverwriteStatus = UserServantEntity__GetOverwriteStatus(UserServantEntity_k__BackingField, 0, 0);
   this->fields._OverwriteStatus_k__BackingField = OverwriteStatus;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._OverwriteStatus_k__BackingField,
     (int32_t)OverwriteStatus,
     v9,
@@ -30,7 +30,7 @@ void __fastcall CharaGraphServantListViewItem___ctor(
 }
 
 
-void __fastcall CharaGraphServantListViewItem__UpdateProperties(
+void CharaGraphServantListViewItem__UpdateProperties(
         CharaGraphServantListViewItem_o *this,
         CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *args,
         const MethodInfo *method)
@@ -44,53 +44,47 @@ void __fastcall CharaGraphServantListViewItem__UpdateProperties(
   CharaGraphServantListViewItemBase__UpdateProperties((CharaGraphServantListViewItemBase_o *)this, args, method);
   UserServantEntity_k__BackingField = this->fields._UserServantEntity_k__BackingField;
   if ( !UserServantEntity_k__BackingField )
-    sub_1BCB254(0LL, v4);
-  OverwriteStatus = UserServantEntity__GetOverwriteStatus(UserServantEntity_k__BackingField, 0LL, 0LL);
+    sub_1C2D6EC(0, v4);
+  OverwriteStatus = UserServantEntity__GetOverwriteStatus(UserServantEntity_k__BackingField, 0, 0);
   this->fields._OverwriteStatus_k__BackingField = OverwriteStatus;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._OverwriteStatus_k__BackingField, (int32_t)OverwriteStatus, v7, v8);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._OverwriteStatus_k__BackingField, (int32_t)OverwriteStatus, v7, v8);
 }
 
 
-int32_t __fastcall CharaGraphServantListViewItem__get_Atk(
-        CharaGraphServantListViewItem_o *this,
-        const MethodInfo *method)
+int32_t CharaGraphServantListViewItem__get_Atk(CharaGraphServantListViewItem_o *this, const MethodInfo *method)
 {
   struct ServantOverwriteStatus_o *OverwriteStatus_k__BackingField; // x8
 
   OverwriteStatus_k__BackingField = this->fields._OverwriteStatus_k__BackingField;
   if ( !OverwriteStatus_k__BackingField )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   return OverwriteStatus_k__BackingField->fields._Atk_k__BackingField;
 }
 
 
-int32_t __fastcall CharaGraphServantListViewItem__get_Cost(
-        CharaGraphServantListViewItem_o *this,
-        const MethodInfo *method)
+int32_t CharaGraphServantListViewItem__get_Cost(CharaGraphServantListViewItem_o *this, const MethodInfo *method)
 {
   struct ServantOverwriteStatus_o *OverwriteStatus_k__BackingField; // x8
 
   OverwriteStatus_k__BackingField = this->fields._OverwriteStatus_k__BackingField;
   if ( !OverwriteStatus_k__BackingField )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   return OverwriteStatus_k__BackingField->fields._Cost_k__BackingField;
 }
 
 
-int32_t __fastcall CharaGraphServantListViewItem__get_Hp(
-        CharaGraphServantListViewItem_o *this,
-        const MethodInfo *method)
+int32_t CharaGraphServantListViewItem__get_Hp(CharaGraphServantListViewItem_o *this, const MethodInfo *method)
 {
   struct ServantOverwriteStatus_o *OverwriteStatus_k__BackingField; // x8
 
   OverwriteStatus_k__BackingField = this->fields._OverwriteStatus_k__BackingField;
   if ( !OverwriteStatus_k__BackingField )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   return OverwriteStatus_k__BackingField->fields._Hp_k__BackingField;
 }
 
 
-ServantOverwriteStatus_o *__fastcall CharaGraphServantListViewItem__get_OverwriteStatus(
+ServantOverwriteStatus_o *CharaGraphServantListViewItem__get_OverwriteStatus(
         CharaGraphServantListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -98,20 +92,18 @@ ServantOverwriteStatus_o *__fastcall CharaGraphServantListViewItem__get_Overwrit
 }
 
 
-int32_t __fastcall CharaGraphServantListViewItem__get_Rarity(
-        CharaGraphServantListViewItem_o *this,
-        const MethodInfo *method)
+int32_t CharaGraphServantListViewItem__get_Rarity(CharaGraphServantListViewItem_o *this, const MethodInfo *method)
 {
   struct ServantOverwriteStatus_o *OverwriteStatus_k__BackingField; // x8
 
   OverwriteStatus_k__BackingField = this->fields._OverwriteStatus_k__BackingField;
   if ( !OverwriteStatus_k__BackingField )
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   return OverwriteStatus_k__BackingField->fields._Rarity_k__BackingField;
 }
 
 
-void __fastcall CharaGraphServantListViewItem__set_OverwriteStatus(
+void CharaGraphServantListViewItem__set_OverwriteStatus(
         CharaGraphServantListViewItem_o *this,
         ServantOverwriteStatus_o *value,
         const MethodInfo *method)
@@ -119,7 +111,7 @@ void __fastcall CharaGraphServantListViewItem__set_OverwriteStatus(
   const MethodInfo *v3; // x3
 
   this->fields._OverwriteStatus_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._OverwriteStatus_k__BackingField,
     (int32_t)value,
     (int32_t)method,

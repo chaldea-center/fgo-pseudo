@@ -1,59 +1,59 @@
-void __fastcall NewsEntity___ctor(NewsEntity_o *this, const MethodInfo *method)
+void NewsEntity___ctor(NewsEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CA35 & 1) == 0 )
+  if ( (byte_4C27804 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1CA35 = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C27804 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall NewsEntity__CreatePrimaryKey(NewsEntity_o *this, const MethodInfo *method)
+int32_t NewsEntity__CreatePrimaryKey(NewsEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-System_String_o *__fastcall NewsEntity__getDetail(NewsEntity_o *this, const MethodInfo *method)
+System_String_o *NewsEntity__getDetail(NewsEntity_o *this, const MethodInfo *method)
 {
   return this->fields.detail;
 }
 
 
-int64_t __fastcall NewsEntity__getFinishedAt(NewsEntity_o *this, const MethodInfo *method)
+int64_t NewsEntity__getFinishedAt(NewsEntity_o *this, const MethodInfo *method)
 {
   return this->fields.finishedAt;
 }
 
 
-int32_t __fastcall NewsEntity__getId(NewsEntity_o *this, const MethodInfo *method)
+int32_t NewsEntity__getId(NewsEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-int64_t __fastcall NewsEntity__getNoticeAt(NewsEntity_o *this, const MethodInfo *method)
+int64_t NewsEntity__getNoticeAt(NewsEntity_o *this, const MethodInfo *method)
 {
   return this->fields.noticeAt;
 }
 
 
-int32_t __fastcall NewsEntity__getPriority(NewsEntity_o *this, const MethodInfo *method)
+int32_t NewsEntity__getPriority(NewsEntity_o *this, const MethodInfo *method)
 {
   return this->fields.priority;
 }
 
 
-System_String_o *__fastcall NewsEntity__getTitle(NewsEntity_o *this, const MethodInfo *method)
+System_String_o *NewsEntity__getTitle(NewsEntity_o *this, const MethodInfo *method)
 {
   return this->fields.title;
 }
 
 
-int32_t __fastcall NewsEntity__getType(NewsEntity_o *this, const MethodInfo *method)
+int32_t NewsEntity__getType(NewsEntity_o *this, const MethodInfo *method)
 {
   return this->fields.type;
 }

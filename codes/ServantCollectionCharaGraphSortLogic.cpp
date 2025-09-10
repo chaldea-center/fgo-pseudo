@@ -1,4 +1,4 @@
-void __fastcall ServantCollectionCharaGraphSortLogic__SetSortValueLocal(
+void ServantCollectionCharaGraphSortLogic__SetSortValueLocal(
         ServantCollectionCharaGraphSortLogic_o *this,
         const MethodInfo *method)
 {
@@ -23,22 +23,22 @@ void __fastcall ServantCollectionCharaGraphSortLogic__SetSortValueLocal(
     ListViewItem = ServantCollectionCharaGraphSortLogic__get_ListViewItem(this, v4);
     if ( ListViewItem )
     {
-      SvtId_k__BackingField = ((__int64 (__fastcall *)(CharaGraphServantCollectionListViewItem_o *, Il2CppMethodPointer))ListViewItem->klass->vtable._9_get_Rarity.method)(
+      SvtId_k__BackingField = ((__int64 (__fastcall *)(CharaGraphServantCollectionListViewItem_o *, const MethodInfo *))ListViewItem->klass->vtable._9_get_Rarity.methodPtr)(
                                 ListViewItem,
-                                ListViewItem->klass->vtable._10_ModifyLocal.methodPtr);
+                                ListViewItem->klass->vtable._9_get_Rarity.method);
       goto LABEL_13;
     }
 LABEL_15:
-    sub_1BCB254(ListViewItem, v4);
+    sub_1C2D6EC(ListViewItem, v4);
   }
   if ( sortKind == 8 )
   {
     ListViewItem = ServantCollectionCharaGraphSortLogic__get_ListViewItem(this, v4);
     if ( ListViewItem )
     {
-      SvtId_k__BackingField = -((__int64 (__fastcall *)(CharaGraphServantCollectionListViewItem_o *, Il2CppMethodPointer))ListViewItem->klass->vtable._8_get_SortPriority.method)(
+      SvtId_k__BackingField = -((int (__fastcall *)(CharaGraphServantCollectionListViewItem_o *, const MethodInfo *))ListViewItem->klass->vtable._8_get_SortPriority.methodPtr)(
                                  ListViewItem,
-                                 ListViewItem->klass->vtable._9_get_Rarity.methodPtr);
+                                 ListViewItem->klass->vtable._8_get_SortPriority.method);
       goto LABEL_13;
     }
     goto LABEL_15;
@@ -54,7 +54,7 @@ LABEL_13:
 }
 
 
-CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGraphSortLogic__get_ListViewItem(
+CharaGraphServantCollectionListViewItem_o *ServantCollectionCharaGraphSortLogic__get_ListViewItem(
         ServantCollectionCharaGraphSortLogic_o *this,
         const MethodInfo *method)
 {
@@ -62,16 +62,16 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
   const MethodInfo *v3; // x3
   CGThumbnailListItem_o *p_listViewItem; // x0
   CharaGraphServantCollectionListViewItem_o *listViewItem; // x19
-  __int64 methodPtr_low; // x9
+  __int64 naturalAligment; // x9
   struct CharaGraphListViewItemBase_o *item; // x1
   CharaGraphServantCollectionListViewItem_o *result; // x0
   ServantCollectionCharaGraphSortLogic_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4B1B897 & 1) == 0 )
+  if ( (byte_4C26639 & 1) == 0 )
   {
-    sub_1BCAFF8(&CharaGraphServantCollectionListViewItem_TypeInfo, method);
-    byte_4B1B897 = 1;
+    sub_1C2D490(&CharaGraphServantCollectionListViewItem_TypeInfo);
+    byte_4C26639 = 1;
   }
   p_listViewItem = (CGThumbnailListItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -79,16 +79,16 @@ CharaGraphServantCollectionListViewItem_o *__fastcall ServantCollectionCharaGrap
     return listViewItem;
   listViewItem = (CharaGraphServantCollectionListViewItem_o *)this->fields.item;
   if ( !listViewItem
-    || (methodPtr_low = LOBYTE(CharaGraphServantCollectionListViewItem_TypeInfo->vtable._0_Equals.methodPtr),
-        LOBYTE(listViewItem->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low)
-    && (CharaGraphServantCollectionListViewItem_c *)listViewItem->klass->_2.typeHierarchy[methodPtr_low - 1] == CharaGraphServantCollectionListViewItem_TypeInfo )
+    || (naturalAligment = CharaGraphServantCollectionListViewItem_TypeInfo->_2.naturalAligment,
+        listViewItem->klass->_2.naturalAligment >= (unsigned int)naturalAligment)
+    && (CharaGraphServantCollectionListViewItem_c *)listViewItem->klass->_2.typeHierarchy[naturalAligment - 1] == CharaGraphServantCollectionListViewItem_TypeInfo )
   {
     item = this->fields.item;
     p_listViewItem->klass = (CGThumbnailListItem_c *)listViewItem;
-    sub_1BCAF9C(p_listViewItem, (int32_t)item, v2, v3);
+    sub_1C2D434(p_listViewItem, (int32_t)item, v2, v3);
     return listViewItem;
   }
-  sub_1BCB514(this->fields.item);
+  sub_1C2D9AC(this->fields.item);
   ServantCollectionCharaGraphSortLogic__SetSortValueLocal(v10, v11);
   return result;
 }

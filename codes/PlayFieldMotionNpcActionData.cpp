@@ -1,22 +1,22 @@
 // local variable allocation has failed, the output may be wrong!
-void __fastcall PlayFieldMotionNpcActionData___ctor(
+void PlayFieldMotionNpcActionData___ctor(
         PlayFieldMotionNpcActionData_o *this,
         int32_t targetId,
         const MethodInfo *method)
 {
-  if ( (byte_4B1EA44 & 1) == 0 )
+  if ( (byte_4C29877 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleActionData_TypeInfo, *(_QWORD *)&targetId);
-    byte_4B1EA44 = 1;
+    sub_1C2D490(&BattleActionData_TypeInfo);
+    byte_4C29877 = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
-  BattleActionData___ctor((BattleActionData_o *)this, 0LL);
+  BattleActionData___ctor((BattleActionData_o *)this, *(const MethodInfo **)&targetId);
   this->fields.targetId = targetId;
 }
 
 
-void __fastcall PlayFieldMotionNpcActionData__PreActionProcess(
+void PlayFieldMotionNpcActionData__PreActionProcess(
         PlayFieldMotionNpcActionData_o *this,
         BattleData_o *data,
         const MethodInfo *method)
@@ -28,22 +28,22 @@ void __fastcall PlayFieldMotionNpcActionData__PreActionProcess(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4B1EA45 & 1) == 0 )
+  if ( (byte_4C29878 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, data);
-    byte_4B1EA45 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C29878 = 1;
   }
-  BattleActionData__PreActionProcess((BattleActionData_o *)this, data, 0LL);
+  BattleActionData__PreActionProcess((BattleActionData_o *)this, data, method);
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  perf = (BattlePerformance_o *)UnityEngine_Object__op_Equality(targetObject, 0LL, 0LL);
+  perf = (BattlePerformance_o *)UnityEngine_Object__op_Equality(targetObject, 0, 0);
   if ( ((unsigned __int8)perf & 1) != 0 )
   {
-    if ( !data || (perf = data->fields.perf) == 0LL )
-      sub_1BCB254(perf, v7);
-    ServantGameObject = BattlePerformance__getServantGameObject(perf, this->fields.targetId, 0LL);
+    if ( !data || (perf = data->fields.perf) == 0 )
+      sub_1C2D6EC(perf, v7);
+    ServantGameObject = BattlePerformance__getServantGameObject(perf, this->fields.targetId, 0);
     this->fields.targetObject = ServantGameObject;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.targetObject, (int32_t)ServantGameObject, v9, v10);
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.targetObject, (int32_t)ServantGameObject, v9, v10);
   }
 }

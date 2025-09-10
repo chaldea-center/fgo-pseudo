@@ -1,10 +1,10 @@
-void __fastcall FollowObjectPositionComponent___ctor(FollowObjectPositionComponent_o *this, const MethodInfo *method)
+void FollowObjectPositionComponent___ctor(FollowObjectPositionComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall FollowObjectPositionComponent__SetObj(
+void FollowObjectPositionComponent__SetObj(
         FollowObjectPositionComponent_o *this,
         UnityEngine_GameObject_o *obj,
         bool IsInversion,
@@ -16,63 +16,60 @@ void __fastcall FollowObjectPositionComponent__SetObj(
   this->fields.TargetObj = obj;
   p_TargetObj = &this->fields.TargetObj;
   v5 = IsInversion;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.TargetObj, (int32_t)obj, IsInversion, method);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.TargetObj, (int32_t)obj, IsInversion, method);
   *((_BYTE *)p_TargetObj + 8) = v5;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this, const MethodInfo *method)
+void FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *TargetObj; // x19
   _BOOL4 IsInversion; // w21
   UnityEngine_Transform_o *transform; // x0
   __int64 v6; // x1
   UnityEngine_Transform_o *v7; // x19
-  float v8; // s1
-  int v9; // s2
-  float v10; // s0
-  float v11; // s8
-  float v12; // s1
-  float v13; // s0
+  float x; // s8
+  float v9; // s0
+  UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B1B94C & 1) == 0 )
+  if ( (byte_4C266EE & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1B94C = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C266EE = 1;
   }
   TargetObj = (UnityEngine_Object_o *)this->fields.TargetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality(TargetObj, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Equality(TargetObj, 0, 0) )
   {
     IsInversion = this->fields.IsInversion;
-    transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+    transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( this->fields.TargetObj )
     {
       v7 = transform;
-      transform = UnityEngine_GameObject__get_transform(this->fields.TargetObj, 0LL);
+      transform = UnityEngine_GameObject__get_transform(this->fields.TargetObj, 0);
       if ( transform )
       {
-        *(UnityEngine_Vector3_o *)(&v8 - 1) = UnityEngine_Transform__get_localPosition(transform, 0LL);
-        v11 = v10;
+        localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
+        x = localPosition.fields.x;
         if ( IsInversion )
         {
           transform = (UnityEngine_Transform_o *)this->fields.TargetObj;
           if ( transform )
           {
-            transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0LL);
+            transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
             if ( transform )
             {
-              *(UnityEngine_Vector3_o *)(&v12 - 1) = UnityEngine_Transform__get_localPosition(transform, 0LL);
+              v11 = UnityEngine_Transform__get_localPosition(transform, 0);
               if ( v7 )
               {
-                v8 = -v12;
-                v11 = -v11;
-                v9 = 0;
+                localPosition.fields.y = -v11.fields.y;
+                x = -x;
+                localPosition.fields.z = 0.0;
 LABEL_14:
-                v13 = v11;
-                UnityEngine_Transform__set_localPosition(v7, *(UnityEngine_Vector3_o *)(&v8 - 1), 0LL);
+                v9 = x;
+                UnityEngine_Transform__set_localPosition(v7, localPosition, 0);
                 return;
               }
             }
@@ -84,6 +81,6 @@ LABEL_14:
         }
       }
     }
-    sub_1BCB254(transform, v6);
+    sub_1C2D6EC(transform, v6);
   }
 }

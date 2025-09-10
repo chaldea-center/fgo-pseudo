@@ -1,10 +1,10 @@
-bool __fastcall Ai__Check(int32_t actNum, int32_t num, const MethodInfo *method)
+bool Ai__Check(int32_t actNum, int32_t num, const MethodInfo *method)
 {
   return actNum == num;
 }
 
 
-bool __fastcall Ai__CheckPriority(int32_t actNum, int32_t num, int32_t priority, const MethodInfo *method)
+bool Ai__CheckPriority(int32_t actNum, int32_t num, int32_t priority, const MethodInfo *method)
 {
   int32_t v4; // w8
 
@@ -20,25 +20,25 @@ bool __fastcall Ai__CheckPriority(int32_t actNum, int32_t num, int32_t priority,
 }
 
 
-int32_t __fastcall Ai__getChangeThinking(System_Int32_array *avals, const MethodInfo *method)
+int32_t Ai__getChangeThinking(System_Int32_array *avals, const MethodInfo *method)
 {
   if ( avals )
   {
-    if ( (int)avals->max_length < 1 )
+    if ( SLODWORD(avals->max_length) < 1 )
       LODWORD(avals) = 0;
     else
-      LODWORD(avals) = avals->m_Items[1];
+      LODWORD(avals) = avals->m_Items[0];
   }
   return (int)avals;
 }
 
 
-int32_t __fastcall Ai__getCond(int32_t intype, const MethodInfo *method)
+int32_t Ai__getCond(int32_t intype, const MethodInfo *method)
 {
-  if ( (byte_4B1B313 & 1) == 0 )
+  if ( (byte_4C260A4 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Math_TypeInfo, method);
-    byte_4B1B313 = 1;
+    sub_1C2D490(&System_Math_TypeInfo);
+    byte_4C260A4 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -49,7 +49,7 @@ int32_t __fastcall Ai__getCond(int32_t intype, const MethodInfo *method)
 }
 
 
-bool __fastcall Ai__getReversal(int32_t intype, const MethodInfo *method)
+bool Ai__getReversal(int32_t intype, const MethodInfo *method)
 {
   return (unsigned int)intype >> 31;
 }

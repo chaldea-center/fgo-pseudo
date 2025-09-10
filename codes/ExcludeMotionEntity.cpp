@@ -1,18 +1,17 @@
-void __fastcall ExcludeMotionEntity___ctor(ExcludeMotionEntity_o *this, const MethodInfo *method)
+void ExcludeMotionEntity___ctor(ExcludeMotionEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C760 & 1) == 0 )
+  if ( (byte_4C27511 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1C760 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C27511 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall ExcludeMotionEntity__CreatePK(
+System_String_o *ExcludeMotionEntity__CreatePK(
         int32_t targetIdType,
         int32_t targetId,
         int32_t targetSvtType,
@@ -20,10 +19,10 @@ System_String_o *__fastcall ExcludeMotionEntity__CreatePK(
         int32_t weaponGroup,
         const MethodInfo *method)
 {
-  if ( (byte_4B1C75E & 1) == 0 )
+  if ( (byte_4C2750F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int__string__int___, *(_QWORD *)&targetId);
-    byte_4B1C75E = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int__string__int___);
+    byte_4C2750F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__object__int_(
            targetIdType,
@@ -31,13 +30,11 @@ System_String_o *__fastcall ExcludeMotionEntity__CreatePK(
            targetSvtType,
            (Il2CppObject *)stateName,
            weaponGroup,
-           (const MethodInfo_3019C18 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__string__int___);
+           (const MethodInfo_30CDAC4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__string__int___);
 }
 
 
-System_String_o *__fastcall ExcludeMotionEntity__CreatePrimaryKey(
-        ExcludeMotionEntity_o *this,
-        const MethodInfo *method)
+System_String_o *ExcludeMotionEntity__CreatePrimaryKey(ExcludeMotionEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x5
 
@@ -51,78 +48,84 @@ System_String_o *__fastcall ExcludeMotionEntity__CreatePrimaryKey(
 }
 
 
-int32_t __fastcall ExcludeMotionEntity__GetTargetSvtType(BattleServantData_o *svtData, const MethodInfo *method)
+int32_t ExcludeMotionEntity__GetTargetSvtType(BattleServantData_o *svtData, const MethodInfo *method)
 {
+  __int64 v2; // x0
+
   if ( !svtData )
-    sub_1BCB254(0LL, method);
+    sub_1C2D6EC(0, method);
   if ( svtData->fields.isEnemy )
-    return (unsigned int)&dword_0 + 1;
-  if ( BattleServantData__IsNpc(svtData, 0LL) )
-    return 2;
-  return 3;
+  {
+    return (int)&dword_0 + 1;
+  }
+  else if ( BattleServantData__IsNpc(svtData, 0) )
+  {
+    LODWORD(v2) = 2;
+  }
+  else
+  {
+    LODWORD(v2) = 3;
+  }
+  return v2;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-bool __fastcall ExcludeMotionEntity__IsSatisfyPhaseCond(
+bool ExcludeMotionEntity__IsSatisfyPhaseCond(
         ExcludeMotionEntity_o *this,
         int32_t currentPhase,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  __int64 v5; // x21
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x21
-  __int64 v9; // x0
-  __int64 v10; // x1
   struct System_Int32_array *phases; // x20
-  System_Func_int__bool__o *v12; // x19
+  System_Func_int__bool__o *v9; // x19
 
-  if ( (byte_4B1C75F & 1) == 0 )
+  if ( (byte_4C27510 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_BasicHelper_Any_int____76918080, *(_QWORD *)&currentPhase);
-    sub_1BCAFF8(&System_Func_int__bool__TypeInfo, v5);
-    sub_1BCAFF8(&Method_ExcludeMotionEntity___c__DisplayClass12_0__IsSatisfyPhaseCond_b__0__, v6);
-    sub_1BCAFF8(&ExcludeMotionEntity___c__DisplayClass12_0_TypeInfo, v7);
-    byte_4B1C75F = 1;
+    sub_1C2D490(&Method_BasicHelper_Any_int____77996856);
+    sub_1C2D490(&System_Func_int__bool__TypeInfo);
+    sub_1C2D490(&Method_ExcludeMotionEntity___c__DisplayClass12_0__IsSatisfyPhaseCond_b__0__);
+    sub_1C2D490(&ExcludeMotionEntity___c__DisplayClass12_0_TypeInfo);
+    byte_4C27510 = 1;
   }
-  v8 = sub_1BCB244(ExcludeMotionEntity___c__DisplayClass12_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
+  v5 = sub_1C2D6DC(ExcludeMotionEntity___c__DisplayClass12_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
   phases = this->fields.phases;
   if ( !phases )
     goto LABEL_8;
-  if ( *(_QWORD *)&phases->max_length )
+  if ( phases->max_length )
   {
-    if ( v8 )
+    if ( v5 )
     {
-      *(_DWORD *)(v8 + 16) = currentPhase + 1;
-      v12 = (System_Func_int__bool__o *)sub_1BCB244(System_Func_int__bool__TypeInfo);
+      *(_DWORD *)(v5 + 16) = currentPhase + 1;
+      v9 = (System_Func_int__bool__o *)sub_1C2D6DC(System_Func_int__bool__TypeInfo);
       System_Func_int__bool____ctor(
-        v12,
-        (Il2CppObject *)v8,
+        v9,
+        (Il2CppObject *)v5,
         Method_ExcludeMotionEntity___c__DisplayClass12_0__IsSatisfyPhaseCond_b__0__,
-        0LL);
-      return BasicHelper__Any_int__50347164(
+        0);
+      return BasicHelper__Any_int__51083888(
                phases,
-               (System_Func_T__bool__o *)v12,
-               (const MethodInfo_3003C9C *)Method_BasicHelper_Any_int____76918080);
+               (System_Func_T__bool__o *)v9,
+               (const MethodInfo_30B7A70 *)Method_BasicHelper_Any_int____77996856);
     }
 LABEL_8:
-    sub_1BCB254(v9, v10);
+    sub_1C2D6EC(v6, v7);
   }
   return 1;
 }
 
 
-void __fastcall ExcludeMotionEntity___c__DisplayClass12_0___ctor(
+void ExcludeMotionEntity___c__DisplayClass12_0___ctor(
         ExcludeMotionEntity___c__DisplayClass12_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall ExcludeMotionEntity___c__DisplayClass12_0___IsSatisfyPhaseCond_b__0(
+bool ExcludeMotionEntity___c__DisplayClass12_0___IsSatisfyPhaseCond_b__0(
         ExcludeMotionEntity___c__DisplayClass12_0_o *this,
         int32_t x,
         const MethodInfo *method)

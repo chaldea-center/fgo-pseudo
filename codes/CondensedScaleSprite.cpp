@@ -1,11 +1,11 @@
-void __fastcall CondensedScaleSprite___ctor(CondensedScaleSprite_o *this, const MethodInfo *method)
+void CondensedScaleSprite___ctor(CondensedScaleSprite_o *this, const MethodInfo *method)
 {
   this->fields.autoUpdate = 1;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall CondensedScaleSprite__Awake(CondensedScaleSprite_o *this, const MethodInfo *method)
+void CondensedScaleSprite__Awake(CondensedScaleSprite_o *this, const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
 
@@ -15,7 +15,7 @@ void __fastcall CondensedScaleSprite__Awake(CondensedScaleSprite_o *this, const 
 }
 
 
-float __fastcall CondensedScaleSprite__GetAfterAdjustWidth(CondensedScaleSprite_o *this, const MethodInfo *method)
+float CondensedScaleSprite__GetAfterAdjustWidth(CondensedScaleSprite_o *this, const MethodInfo *method)
 {
   UISprite_o *UISprite; // x0
   const MethodInfo *v4; // x1
@@ -29,9 +29,9 @@ float __fastcall CondensedScaleSprite__GetAfterAdjustWidth(CondensedScaleSprite_
   if ( !uiLabel
     || (mWidth = uiLabel->fields.mWidth,
         maxLabelWidth = this->fields.maxLabelWidth,
-        (UISprite = CondensedScaleSprite__get_UISprite(this, v4)) == 0LL) )
+        (UISprite = CondensedScaleSprite__get_UISprite(this, v4)) == 0) )
   {
-    sub_1BCB254(UISprite, v4);
+    sub_1C2D6EC(UISprite, v4);
   }
   if ( mWidth <= maxLabelWidth )
     v8 = mWidth;
@@ -41,7 +41,7 @@ float __fastcall CondensedScaleSprite__GetAfterAdjustWidth(CondensedScaleSprite_
 }
 
 
-float __fastcall CondensedScaleSprite__GetCondensedRatio(CondensedScaleSprite_o *this, const MethodInfo *method)
+float CondensedScaleSprite__GetCondensedRatio(CondensedScaleSprite_o *this, const MethodInfo *method)
 {
   __int64 v3; // x0
   const MethodInfo *v4; // x1
@@ -58,8 +58,8 @@ float __fastcall CondensedScaleSprite__GetCondensedRatio(CondensedScaleSprite_o 
   if ( maxLabelWidth >= 1 )
   {
     uiLabel = this->fields.uiLabel;
-    if ( !uiLabel || (mText = uiLabel->fields.mText) == 0LL )
-      sub_1BCB254(v3, v4);
+    if ( !uiLabel || (mText = uiLabel->fields.mText) == 0 )
+      sub_1C2D6EC(v3, v4);
     if ( mText->fields._stringLength >= 1 && maxLabelWidth < uiLabel->fields.mWidth )
     {
       SpriteAndLabelWidth = CondensedScaleSprite__GetSpriteAndLabelWidth(this, v4);
@@ -71,7 +71,7 @@ float __fastcall CondensedScaleSprite__GetCondensedRatio(CondensedScaleSprite_o 
 }
 
 
-float __fastcall CondensedScaleSprite__GetSpriteAndLabelWidth(CondensedScaleSprite_o *this, const MethodInfo *method)
+float CondensedScaleSprite__GetSpriteAndLabelWidth(CondensedScaleSprite_o *this, const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
   UISprite_o *UISprite; // x0
@@ -80,13 +80,13 @@ float __fastcall CondensedScaleSprite__GetSpriteAndLabelWidth(CondensedScaleSpri
 
   CondensedScaleSprite__Init(this, method);
   UISprite = CondensedScaleSprite__get_UISprite(this, v3);
-  if ( !UISprite || (uiLabel = this->fields.uiLabel) == 0LL )
-    sub_1BCB254(UISprite, v5);
+  if ( !UISprite || (uiLabel = this->fields.uiLabel) == 0 )
+    sub_1C2D6EC(UISprite, v5);
   return this->fields.displayAreaAdjustValue + (float)(uiLabel->fields.mWidth + UISprite->fields.mWidth);
 }
 
 
-void __fastcall CondensedScaleSprite__Init(CondensedScaleSprite_o *this, const MethodInfo *method)
+void CondensedScaleSprite__Init(CondensedScaleSprite_o *this, const MethodInfo *method)
 {
   UILabel_o *uiLabel; // x0
   struct UILabel_o *v4; // x8
@@ -96,7 +96,7 @@ void __fastcall CondensedScaleSprite__Init(CondensedScaleSprite_o *this, const M
     uiLabel = this->fields.uiLabel;
     if ( uiLabel )
     {
-      UILabel__set_overflowMethod(uiLabel, 2, 0LL);
+      UILabel__set_overflowMethod(uiLabel, 2, 0);
       if ( this->fields.maxLabelWidth > 0 )
       {
 LABEL_6:
@@ -110,12 +110,12 @@ LABEL_6:
         goto LABEL_6;
       }
     }
-    sub_1BCB254(uiLabel, method);
+    sub_1C2D6EC(uiLabel, method);
   }
 }
 
 
-void __fastcall CondensedScaleSprite__SetCondensedScale(CondensedScaleSprite_o *this, const MethodInfo *method)
+void CondensedScaleSprite__SetCondensedScale(CondensedScaleSprite_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
   const MethodInfo *v3; // x3
@@ -132,21 +132,21 @@ void __fastcall CondensedScaleSprite__SetCondensedScale(CondensedScaleSprite_o *
     || (mText = uiLabel->fields.mText,
         v6 = this,
         this->fields.previousText = mText,
-        sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.previousText, (int32_t)mText, v2, v3),
+        sub_1C2D434((CGThumbnailListItem_o *)&this->fields.previousText, (int32_t)mText, v2, v3),
         CondensedRatio = CondensedScaleSprite__GetCondensedRatio(v6, v7),
-        (this = (CondensedScaleSprite_o *)CondensedScaleSprite__get_UISprite(v6, v9)) == 0LL)
-    || (this = (CondensedScaleSprite_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL )
+        (this = (CondensedScaleSprite_o *)CondensedScaleSprite__get_UISprite(v6, v9)) == 0)
+    || (this = (CondensedScaleSprite_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0 )
   {
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   }
   v10.fields.y = 1.0;
   v10.fields.z = 1.0;
   v10.fields.x = CondensedRatio;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v10, 0LL);
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v10, 0);
 }
 
 
-void __fastcall CondensedScaleSprite__Update(CondensedScaleSprite_o *this, const MethodInfo *method)
+void CondensedScaleSprite__Update(CondensedScaleSprite_o *this, const MethodInfo *method)
 {
   struct UILabel_o *uiLabel; // x8
   const MethodInfo *v4; // x1
@@ -155,37 +155,36 @@ void __fastcall CondensedScaleSprite__Update(CondensedScaleSprite_o *this, const
   {
     uiLabel = this->fields.uiLabel;
     if ( !uiLabel )
-      sub_1BCB254(this, method);
-    if ( System_String__op_Inequality(this->fields.previousText, uiLabel->fields.mText, 0LL) )
+      sub_1C2D6EC(this, method);
+    if ( System_String__op_Inequality(this->fields.previousText, uiLabel->fields.mText, 0) )
       CondensedScaleSprite__SetCondensedScale(this, v4);
   }
 }
 
 
-UISprite_o *__fastcall CondensedScaleSprite__get_UISprite(CondensedScaleSprite_o *this, const MethodInfo *method)
+UISprite_o *CondensedScaleSprite__get_UISprite(CondensedScaleSprite_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *uiSprite; // x21
   Il2CppObject *Component_object; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
-  if ( (byte_4B1DBA4 & 1) == 0 )
+  if ( (byte_4C289B2 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_UISprite___, method);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B1DBA4 = 1;
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C289B2 = 1;
   }
   uiSprite = (UnityEngine_Object_o *)this->fields.uiSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(uiSprite, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(uiSprite, 0, 0) )
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                         (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_UISprite___);
     this->fields.uiSprite = (struct UISprite_o *)Component_object;
-    sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.uiSprite, (int32_t)Component_object, v6, v7);
+    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.uiSprite, (int32_t)Component_object, v5, v6);
   }
   return this->fields.uiSprite;
 }

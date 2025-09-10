@@ -1,38 +1,30 @@
-void __fastcall EventPointGaugeEffectAction___ctor(EventPointGaugeEffectAction_o *this, const MethodInfo *method)
+void EventPointGaugeEffectAction___ctor(EventPointGaugeEffectAction_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall EventPointGaugeEffectAction__OnPlayGaugeBarAnime(
-        EventPointGaugeEffectAction_o *this,
-        const MethodInfo *method)
+void EventPointGaugeEffectAction__OnPlayGaugeBarAnime(EventPointGaugeEffectAction_o *this, const MethodInfo *method)
 {
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  CGThumbnailListItem_o *p_gaugeStartAction; // x0
-  struct System_Action_o *v5; // x19
+  struct System_Action_o **p_gaugeStartAction; // x0
+  struct System_Action_o *v3; // x19
   struct System_Action_o *gaugeStartAction; // t1
 
   gaugeStartAction = this->fields.gaugeStartAction;
-  p_gaugeStartAction = (CGThumbnailListItem_o *)&this->fields.gaugeStartAction;
-  v5 = gaugeStartAction;
-  p_gaugeStartAction->klass = 0LL;
-  sub_1BCAF9C(p_gaugeStartAction, 0, v2, v3);
+  p_gaugeStartAction = &this->fields.gaugeStartAction;
+  v3 = gaugeStartAction;
+  *p_gaugeStartAction = 0;
+  sub_1C2D434(p_gaugeStartAction);
   if ( gaugeStartAction )
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
-      v5->fields.original_method_info,
-      *(_QWORD *)&v5->fields.extra_arg);
+    ((void (__fastcall *)(intptr_t, intptr_t))v3->fields.invoke_impl)(v3->fields.method_code, v3->fields.method);
 }
 
 
-void __fastcall EventPointGaugeEffectAction__Setup(
+void EventPointGaugeEffectAction__Setup(
         EventPointGaugeEffectAction_o *this,
         System_Action_o *gaugeStartAct,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-
   this->fields.gaugeStartAction = gaugeStartAct;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.gaugeStartAction, (int32_t)gaugeStartAct, (int32_t)method, v3);
+  sub_1C2D434(&this->fields.gaugeStartAction);
 }

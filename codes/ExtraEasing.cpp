@@ -1,127 +1,113 @@
-System_Func_float__float__float__float__o *__fastcall ExtraEasing__AsymptoticSeriesFloat(
+System_Func_float__float__float__float__o *ExtraEasing__AsymptoticSeriesFloat(
         float asymptoticSpeed,
         float powerRate,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v6; // x1
+  __int64 v5; // x19
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x19
-  __int64 v9; // x0
-  __int64 v10; // x1
-  const MethodInfo *v11; // x2
-  System_Func_float__float__float__float__o *v12; // x20
+  const MethodInfo *v8; // x2
+  System_Func_float__float__float__float__o *v9; // x20
 
-  if ( (byte_4B20A4F & 1) == 0 )
+  if ( (byte_4C2B8B4 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Func_float__float__float__float__TypeInfo, v3);
-    sub_1BCAFF8(&Method_ExtraEasing___c__DisplayClass1_0__AsymptoticSeriesFloat_g__EasingFunc_0__, v6);
-    sub_1BCAFF8(&ExtraEasing___c__DisplayClass1_0_TypeInfo, v7);
-    byte_4B20A4F = 1;
+    sub_1C2D490(&System_Func_float__float__float__float__TypeInfo);
+    sub_1C2D490(&Method_ExtraEasing___c__DisplayClass1_0__AsymptoticSeriesFloat_g__EasingFunc_0__);
+    sub_1C2D490(&ExtraEasing___c__DisplayClass1_0_TypeInfo);
+    byte_4C2B8B4 = 1;
   }
-  v8 = sub_1BCB244(ExtraEasing___c__DisplayClass1_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
-  if ( !v8 )
-    sub_1BCB254(v9, v10);
-  *(float *)(v8 + 16) = asymptoticSpeed;
-  *(float *)(v8 + 20) = powerRate;
-  ExtraEasing__ValidateAsymptoticParams((float *)(v8 + 16), (float *)(v8 + 20), v11);
-  v12 = (System_Func_float__float__float__float__o *)sub_1BCB244(System_Func_float__float__float__float__TypeInfo);
+  v5 = sub_1C2D6DC(ExtraEasing___c__DisplayClass1_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
+  if ( !v5 )
+    sub_1C2D6EC(v6, v7);
+  *(float *)(v5 + 16) = asymptoticSpeed;
+  *(float *)(v5 + 20) = powerRate;
+  ExtraEasing__ValidateAsymptoticParams((float *)(v5 + 16), (float *)(v5 + 20), v8);
+  v9 = (System_Func_float__float__float__float__o *)sub_1C2D6DC(System_Func_float__float__float__float__TypeInfo);
   System_Func_float__float__float__float____ctor(
-    v12,
-    (Il2CppObject *)v8,
+    v9,
+    (Il2CppObject *)v5,
     Method_ExtraEasing___c__DisplayClass1_0__AsymptoticSeriesFloat_g__EasingFunc_0__,
-    0LL);
-  return v12;
+    0);
+  return v9;
 }
 
 
-System_Func_Vector3__Vector3__float__Vector3__o *__fastcall ExtraEasing__AsymptoticSeriesVector3(
+System_Func_Vector3__Vector3__float__Vector3__o *ExtraEasing__AsymptoticSeriesVector3(
         float asymptoticSpeed,
         float powerRate,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v6; // x1
+  __int64 v5; // x19
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x19
-  __int64 v9; // x0
-  __int64 v10; // x1
-  const MethodInfo *v11; // x2
-  System_Func_Vector3__Vector3__float__Vector3__o *v12; // x20
+  const MethodInfo *v8; // x2
+  System_Func_Vector3__Vector3__float__Vector3__o *v9; // x20
 
-  if ( (byte_4B20A4E & 1) == 0 )
+  if ( (byte_4C2B8B3 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Func_Vector3__Vector3__float__Vector3__TypeInfo, v3);
-    sub_1BCAFF8(&Method_ExtraEasing___c__DisplayClass0_0__AsymptoticSeriesVector3_g__EasingFunc_0__, v6);
-    sub_1BCAFF8(&ExtraEasing___c__DisplayClass0_0_TypeInfo, v7);
-    byte_4B20A4E = 1;
+    sub_1C2D490(&System_Func_Vector3__Vector3__float__Vector3__TypeInfo);
+    sub_1C2D490(&Method_ExtraEasing___c__DisplayClass0_0__AsymptoticSeriesVector3_g__EasingFunc_0__);
+    sub_1C2D490(&ExtraEasing___c__DisplayClass0_0_TypeInfo);
+    byte_4C2B8B3 = 1;
   }
-  v8 = sub_1BCB244(ExtraEasing___c__DisplayClass0_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v8, 0LL);
-  if ( !v8 )
-    sub_1BCB254(v9, v10);
-  *(float *)(v8 + 16) = asymptoticSpeed;
-  *(float *)(v8 + 20) = powerRate;
-  ExtraEasing__ValidateAsymptoticParams((float *)(v8 + 16), (float *)(v8 + 20), v11);
-  v12 = (System_Func_Vector3__Vector3__float__Vector3__o *)sub_1BCB244(System_Func_Vector3__Vector3__float__Vector3__TypeInfo);
+  v5 = sub_1C2D6DC(ExtraEasing___c__DisplayClass0_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
+  if ( !v5 )
+    sub_1C2D6EC(v6, v7);
+  *(float *)(v5 + 16) = asymptoticSpeed;
+  *(float *)(v5 + 20) = powerRate;
+  ExtraEasing__ValidateAsymptoticParams((float *)(v5 + 16), (float *)(v5 + 20), v8);
+  v9 = (System_Func_Vector3__Vector3__float__Vector3__o *)sub_1C2D6DC(System_Func_Vector3__Vector3__float__Vector3__TypeInfo);
   System_Func_Vector3__Vector3__float__Vector3____ctor(
-    v12,
-    (Il2CppObject *)v8,
+    v9,
+    (Il2CppObject *)v5,
     Method_ExtraEasing___c__DisplayClass0_0__AsymptoticSeriesVector3_g__EasingFunc_0__,
-    0LL);
-  return v12;
+    0);
+  return v9;
 }
 
 
-void __fastcall ExtraEasing__ValidateAsymptoticParams(
-        float *asymptoticSpeed,
-        float *powerRate,
-        const MethodInfo *method)
+void ExtraEasing__ValidateAsymptoticParams(float *asymptoticSpeed, float *powerRate, const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  float v7; // s1
-  float v8; // s0
+  float v5; // s1
+  float v6; // s0
 
-  if ( (byte_4B20A50 & 1) == 0 )
+  if ( (byte_4C2B8B5 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Debug_TypeInfo, powerRate);
-    sub_1BCAFF8(&StringLiteral_16786/*"asymptoticSpeed should be defined on 0～1"*/, v5);
-    sub_1BCAFF8(&StringLiteral_22541/*"powerRate should be defined on non negative"*/, v6);
-    byte_4B20A50 = 1;
+    sub_1C2D490(&UnityEngine_Debug_TypeInfo);
+    sub_1C2D490(&StringLiteral_16919/*"asymptoticSpeed should be defined on 0～1"*/);
+    sub_1C2D490(&StringLiteral_22728/*"powerRate should be defined on non negative"*/);
+    byte_4C2B8B5 = 1;
   }
   if ( *asymptoticSpeed < 0.0 || *asymptoticSpeed > 1.0 )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_16786/*"asymptoticSpeed should be defined on 0～1"*/, 0LL);
-    v7 = fminf(*asymptoticSpeed, 1.0);
-    v8 = 0.0;
+    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_16919/*"asymptoticSpeed should be defined on 0～1"*/, 0);
+    v5 = fminf(*asymptoticSpeed, 1.0);
+    v6 = 0.0;
     if ( *asymptoticSpeed >= 0.0 )
-      v8 = v7;
-    *asymptoticSpeed = v8;
+      v6 = v5;
+    *asymptoticSpeed = v6;
   }
   if ( *powerRate < 0.0 )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_22541/*"powerRate should be defined on non negative"*/, 0LL);
+    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_22728/*"powerRate should be defined on non negative"*/, 0);
     *powerRate = 0.0;
   }
 }
 
 
-void __fastcall ExtraEasing___c__DisplayClass0_0___ctor(
-        ExtraEasing___c__DisplayClass0_0_o *this,
-        const MethodInfo *method)
+void ExtraEasing___c__DisplayClass0_0___ctor(ExtraEasing___c__DisplayClass0_0_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-UnityEngine_Vector3_o __fastcall ExtraEasing___c__DisplayClass0_0___AsymptoticSeriesVector3_g__EasingFunc_0(
+UnityEngine_Vector3_o ExtraEasing___c__DisplayClass0_0___AsymptoticSeriesVector3_g__EasingFunc_0(
         ExtraEasing___c__DisplayClass0_0_o *this,
         UnityEngine_Vector3_o from,
         UnityEngine_Vector3_o to,
@@ -161,15 +147,13 @@ UnityEngine_Vector3_o __fastcall ExtraEasing___c__DisplayClass0_0___AsymptoticSe
 }
 
 
-void __fastcall ExtraEasing___c__DisplayClass1_0___ctor(
-        ExtraEasing___c__DisplayClass1_0_o *this,
-        const MethodInfo *method)
+void ExtraEasing___c__DisplayClass1_0___ctor(ExtraEasing___c__DisplayClass1_0_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-float __fastcall ExtraEasing___c__DisplayClass1_0___AsymptoticSeriesFloat_g__EasingFunc_0(
+float ExtraEasing___c__DisplayClass1_0___AsymptoticSeriesFloat_g__EasingFunc_0(
         ExtraEasing___c__DisplayClass1_0_o *this,
         float from,
         float to,

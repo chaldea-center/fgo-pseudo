@@ -1,66 +1,62 @@
-void __fastcall AllFieldTargetAggregator___ctor(AllFieldTargetAggregator_o *this, const MethodInfo *method)
+void AllFieldTargetAggregator___ctor(AllFieldTargetAggregator_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-System_Int32_array *__fastcall AllFieldTargetAggregator__GetCandidate(
-        AllFieldTargetAggregator_o *this,
-        const MethodInfo *method)
+System_Int32_array *AllFieldTargetAggregator__GetCandidate(AllFieldTargetAggregator_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  System_Collections_Generic_List_int__o *v6; // x20
+  System_Collections_Generic_List_int__o *v3; // x20
   System_Collections_Generic_IEnumerable_T__o *IsOpponentTargetOnly; // x0
-  const MethodInfo *v8; // x1
+  const MethodInfo *v5; // x1
   struct TargetAggregator_Args_o *args; // x8
   BattleData_o *battleData_k__BackingField; // x21
-  struct TargetAggregator_Args_o *v11; // x8
+  struct TargetAggregator_Args_o *v8; // x8
   System_Collections_Generic_IEnumerable_T__o *FieldPlayerServantIDList; // x0
 
-  if ( (byte_4B1F5C2 & 1) == 0 )
+  if ( (byte_4C2A46A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__AddRange__, method);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int__ToArray__, v3);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_int___ctor__, v4);
-    sub_1BCAFF8(&System_Collections_Generic_List_int__TypeInfo, v5);
-    byte_4B1F5C2 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__AddRange__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4C2A46A = 1;
   }
-  v6 = (System_Collections_Generic_List_int__o *)sub_1BCB244(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C2D6DC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v6,
-    (const MethodInfo_369C358 *)Method_System_Collections_Generic_List_int___ctor__);
+    v3,
+    (const MethodInfo_376C30C *)Method_System_Collections_Generic_List_int___ctor__);
   args = this->fields.args;
   if ( !args
     || (battleData_k__BackingField = args->fields._battleData_k__BackingField,
         IsOpponentTargetOnly = (System_Collections_Generic_IEnumerable_T__o *)TargetAggregator__get_IsOpponentTargetOnly(
                                                                                 (TargetAggregator_o *)this,
-                                                                                v8),
+                                                                                v5),
         !battleData_k__BackingField)
     || (IsOpponentTargetOnly = (System_Collections_Generic_IEnumerable_T__o *)BattleData__getFieldEnemyServantIDList(
                                                                                 battleData_k__BackingField,
-                                                                                (unsigned __int8)IsOpponentTargetOnly & 1,
-                                                                                0LL),
-        !v6)
+                                                                                (unsigned __int8)IsOpponentTargetOnly
+                                                                              & 1,
+                                                                                0),
+        !v3)
     || (System_Collections_Generic_List_int___AddRange(
-          v6,
+          v3,
           IsOpponentTargetOnly,
-          (const MethodInfo_369CDB8 *)Method_System_Collections_Generic_List_int__AddRange__),
-        (v11 = this->fields.args) == 0LL)
-    || (IsOpponentTargetOnly = (System_Collections_Generic_IEnumerable_T__o *)v11->fields._battleData_k__BackingField) == 0LL )
+          (const MethodInfo_376CD6C *)Method_System_Collections_Generic_List_int__AddRange__),
+        (v8 = this->fields.args) == 0)
+    || (IsOpponentTargetOnly = (System_Collections_Generic_IEnumerable_T__o *)v8->fields._battleData_k__BackingField) == 0 )
   {
-    sub_1BCB254(IsOpponentTargetOnly, v8);
+    sub_1C2D6EC(IsOpponentTargetOnly, v5);
   }
   FieldPlayerServantIDList = (System_Collections_Generic_IEnumerable_T__o *)BattleData__getFieldPlayerServantIDList(
                                                                               (BattleData_o *)IsOpponentTargetOnly,
-                                                                              0LL,
-                                                                              0LL);
+                                                                              0,
+                                                                              0);
   System_Collections_Generic_List_int___AddRange(
-    v6,
+    v3,
     FieldPlayerServantIDList,
-    (const MethodInfo_369CDB8 *)Method_System_Collections_Generic_List_int__AddRange__);
+    (const MethodInfo_376CD6C *)Method_System_Collections_Generic_List_int__AddRange__);
   return System_Collections_Generic_List_int___ToArray(
-           v6,
-           (const MethodInfo_369E664 *)Method_System_Collections_Generic_List_int__ToArray__);
+           v3,
+           (const MethodInfo_376E618 *)Method_System_Collections_Generic_List_int__ToArray__);
 }

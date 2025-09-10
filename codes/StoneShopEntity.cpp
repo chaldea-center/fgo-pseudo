@@ -1,121 +1,114 @@
-void __fastcall StoneShopEntity___ctor(StoneShopEntity_o *this, const MethodInfo *method)
+void StoneShopEntity___ctor(StoneShopEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D151 & 1) == 0 )
+  if ( (byte_4C27F45 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1D151 = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C27F45 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall StoneShopEntity__CreatePrimaryKey(StoneShopEntity_o *this, const MethodInfo *method)
+int32_t StoneShopEntity__CreatePrimaryKey(StoneShopEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-System_String_o *__fastcall StoneShopEntity__GetCountText(StoneShopEntity_o *this, const MethodInfo *method)
+System_String_o *StoneShopEntity__GetCountText(StoneShopEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D150 & 1) == 0 )
+  if ( (byte_4C27F44 & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, method);
-    byte_4B1D150 = 1;
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    byte_4C27F44 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__GetCountInfo(1, 0LL);
+  return LocalizationManager__GetCountInfo(1, 0);
 }
 
 
-int32_t __fastcall StoneShopEntity__GetPrice(StoneShopEntity_o *this, const MethodInfo *method)
+int32_t StoneShopEntity__GetPrice(StoneShopEntity_o *this, const MethodInfo *method)
 {
   return this->fields.price;
 }
 
 
-int32_t __fastcall StoneShopEntity__GetPriceIcon(StoneShopEntity_o *this, const MethodInfo *method)
+int32_t StoneShopEntity__GetPriceIcon(StoneShopEntity_o *this, const MethodInfo *method)
 {
   return 22;
 }
 
 
-int32_t __fastcall StoneShopEntity__GetPriceUnitIcon(StoneShopEntity_o *this, const MethodInfo *method)
+int32_t StoneShopEntity__GetPriceUnitIcon(StoneShopEntity_o *this, const MethodInfo *method)
 {
   return 12;
 }
 
 
-bool __fastcall StoneShopEntity__IsClosed(StoneShopEntity_o *this, int64_t nowTime, const MethodInfo *method)
+bool StoneShopEntity__IsClosed(StoneShopEntity_o *this, int64_t nowTime, const MethodInfo *method)
 {
-  int64_t Time; // x20
   int64_t closedAt; // x8
 
-  Time = nowTime;
-  if ( (byte_4B1D14F & 1) == 0 )
+  if ( (byte_4C27F43 & 1) == 0 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, nowTime);
-    byte_4B1D14F = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    byte_4C27F43 = 1;
   }
-  if ( !Time )
+  if ( !nowTime )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    Time = NetworkManager__getTime(0LL);
+    nowTime = NetworkManager__getTime(0);
   }
   closedAt = this->fields.closedAt;
-  return (_DWORD)closedAt && Time > closedAt;
+  return (_DWORD)closedAt && nowTime > closedAt;
 }
 
 
-bool __fastcall StoneShopEntity__IsEnable(StoneShopEntity_o *this, int64_t nowTime, const MethodInfo *method)
+bool StoneShopEntity__IsEnable(StoneShopEntity_o *this, int64_t nowTime, const MethodInfo *method)
 {
-  int64_t Time; // x20
   int64_t closedAt; // x8
   bool result; // w0
 
-  Time = nowTime;
-  if ( (byte_4B1D14D & 1) == 0 )
+  if ( (byte_4C27F41 & 1) == 0 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, nowTime);
-    byte_4B1D14D = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    byte_4C27F41 = 1;
   }
-  if ( !Time )
+  if ( !nowTime )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    Time = NetworkManager__getTime(0LL);
+    nowTime = NetworkManager__getTime(0);
   }
-  if ( Time < this->fields.openedAt )
+  if ( nowTime < this->fields.openedAt )
     return 0;
   closedAt = this->fields.closedAt;
   result = 1;
   if ( (_DWORD)closedAt )
   {
-    if ( Time > closedAt )
+    if ( nowTime > closedAt )
       return 0;
   }
   return result;
 }
 
 
-bool __fastcall StoneShopEntity__IsOpened(StoneShopEntity_o *this, int64_t nowTime, const MethodInfo *method)
+bool StoneShopEntity__IsOpened(StoneShopEntity_o *this, int64_t nowTime, const MethodInfo *method)
 {
-  int64_t Time; // x20
-
-  Time = nowTime;
-  if ( (byte_4B1D14E & 1) == 0 )
+  if ( (byte_4C27F42 & 1) == 0 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, nowTime);
-    byte_4B1D14E = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    byte_4C27F42 = 1;
   }
-  if ( !Time )
+  if ( !nowTime )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    Time = NetworkManager__getTime(0LL);
+    nowTime = NetworkManager__getTime(0);
   }
-  return Time >= this->fields.openedAt;
+  return nowTime >= this->fields.openedAt;
 }

@@ -1,12 +1,12 @@
-void __fastcall CommandCodeSkillInfo___ctor(CommandCodeSkillInfo_o *this, const MethodInfo *method)
+void CommandCodeSkillInfo___ctor(CommandCodeSkillInfo_o *this, const MethodInfo *method)
 {
   this->fields.DetailObjHeight = 25.0;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall CommandCodeSkillInfo__Set(
+void CommandCodeSkillInfo__Set(
         CommandCodeSkillInfo_o *this,
         int32_t commandCodeId,
         int32_t skillId,
@@ -15,124 +15,115 @@ void __fastcall CommandCodeSkillInfo__Set(
         bool isFirst,
         const MethodInfo *method)
 {
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
   void *Instance; // x0
-  __int64 v22; // x1
+  __int64 v13; // x1
   Il2CppObject *Entity; // x0
-  Il2CppObject *v24; // x22
+  Il2CppObject *v15; // x22
   struct UITexture_o **p_CommandCodeIcon; // x25
   UISprite_o *commandCodeIconBg; // x26
   int32_t klass; // w27
-  UITexture_o *v28; // x26
-  UnityEngine_Object_o *Manager__loadCommandCodeTexture_39897312; // x23
-  int32_t v30; // w2
-  const MethodInfo *v31; // x3
+  UITexture_o *v19; // x26
+  UnityEngine_Object_o *Manager__loadCommandCodeTexture_40488656; // x23
+  int32_t v21; // w2
+  const MethodInfo *v22; // x3
   UISprite_o *RaritySpr; // x23
-  System_String_o *v33; // x0
+  System_String_o *v24; // x0
   UILabel_o *CommandCodeName; // x23
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v35; // x22
-  const MethodInfo *v36; // x2
-  UnityEngine_Transform_o *v37; // x22
-  unsigned int localPosition; // s0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v26; // x22
+  const MethodInfo *v27; // x2
+  UnityEngine_Transform_o *v28; // x22
+  unsigned int localPosition; // s0 OVERLAPPED
   float DetailObjHeight; // s1
-  int v40; // s2
+  int v31; // s2
 
-  if ( (byte_4B1B8F9 & 1) == 0 )
+  if ( (byte_4C2669B & 1) == 0 )
   {
-    sub_1BCAFF8(&AtlasManager_TypeInfo, *(_QWORD *)&commandCodeId);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_CommandCodeMaster___, v12);
-    sub_1BCAFF8(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__, v13);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v14);
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v15);
-    sub_1BCAFF8(&ServantAssetLoadManager_TypeInfo, v16);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v17);
-    sub_1BCAFF8(&StringLiteral_22755/*"rarity"*/, v18);
-    sub_1BCAFF8(&StringLiteral_15974/*"_0"*/, v19);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v20);
-    byte_4B1B8F9 = 1;
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMasterData_CommandCodeMaster___);
+    sub_1C2D490(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
+    sub_1C2D490(&ServantAssetLoadManager_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C2D490(&StringLiteral_22941/*"rarity"*/);
+    sub_1C2D490(&StringLiteral_16106/*"_0"*/);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C2669B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_36;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+               (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
   if ( !Instance )
     goto LABEL_36;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              commandCodeId,
-             (const MethodInfo_32C7E00 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+             (const MethodInfo_3387D98 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
   if ( Entity )
   {
-    v24 = Entity;
+    v15 = Entity;
     Instance = this->fields.commandCodeIconBg;
     if ( !Instance )
       goto LABEL_36;
-    UISprite__set_spriteName((UISprite_o *)Instance, 0LL, 0LL);
+    UISprite__set_spriteName((UISprite_o *)Instance, 0, 0);
     p_CommandCodeIcon = &this->fields.CommandCodeIcon;
     Instance = this->fields.CommandCodeIcon;
     if ( !Instance )
       goto LABEL_36;
     (*(void (__fastcall **)(void *, _QWORD, _QWORD))(*(_QWORD *)Instance + 744LL))(
       Instance,
-      0LL,
+      0,
       *(_QWORD *)(*(_QWORD *)Instance + 752LL));
     Instance = this->fields.NameBg;
     if ( !Instance )
       goto LABEL_36;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0);
     Instance = this->fields.CommandCodeName;
     if ( !Instance )
       goto LABEL_36;
-    UILabel__set_text((UILabel_o *)Instance, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+    UILabel__set_text((UILabel_o *)Instance, (System_String_o *)StringLiteral_1/*""*/, 0);
     if ( isFirst )
     {
       commandCodeIconBg = this->fields.commandCodeIconBg;
-      klass = (int32_t)v24[4].klass;
+      klass = (int32_t)v15[4].klass;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetCommandCodeBaseIcon(commandCodeIconBg, klass, 0LL);
-      v28 = *p_CommandCodeIcon;
+      AtlasManager__SetCommandCodeBaseIcon(commandCodeIconBg, klass, 0);
+      v19 = *p_CommandCodeIcon;
       if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
-      Manager__loadCommandCodeTexture_39897312 = (UnityEngine_Object_o *)ServantAssetLoadManager__loadCommandCodeTexture_39897312(
-                                                                           v28,
+      Manager__loadCommandCodeTexture_40488656 = (UnityEngine_Object_o *)ServantAssetLoadManager__loadCommandCodeTexture_40488656(
+                                                                           v19,
                                                                            commandCodeId,
-                                                                           0LL);
+                                                                           0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality(Manager__loadCommandCodeTexture_39897312, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Inequality(Manager__loadCommandCodeTexture_40488656, 0, 0) )
       {
-        *p_CommandCodeIcon = (struct UITexture_o *)Manager__loadCommandCodeTexture_39897312;
-        sub_1BCAF9C(
+        *p_CommandCodeIcon = (struct UITexture_o *)Manager__loadCommandCodeTexture_40488656;
+        sub_1C2D434(
           (CGThumbnailListItem_o *)&this->fields.CommandCodeIcon,
-          (int32_t)Manager__loadCommandCodeTexture_39897312,
-          v30,
-          v31);
+          (int32_t)Manager__loadCommandCodeTexture_40488656,
+          v21,
+          v22);
       }
       Instance = this->fields.NameBg;
       if ( !Instance )
         goto LABEL_36;
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0LL);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
       RaritySpr = this->fields.RaritySpr;
-      v33 = System_Int32__ToString((int)v24 + 64, 0LL);
-      Instance = System_String__Concat_62488672(
-                   (System_String_o *)StringLiteral_22755/*"rarity"*/,
-                   v33,
-                   (System_String_o *)StringLiteral_15974/*"_0"*/,
-                   0LL);
+      v24 = System_Int32__ToString((int)v15 + 64, 0);
+      Instance = System_String__Concat_63496112(
+                   (System_String_o *)StringLiteral_22941/*"rarity"*/,
+                   v24,
+                   (System_String_o *)StringLiteral_16106/*"_0"*/,
+                   0);
       if ( !RaritySpr )
         goto LABEL_36;
-      UISprite__set_spriteName(RaritySpr, (System_String_o *)Instance, 0LL);
+      UISprite__set_spriteName(RaritySpr, (System_String_o *)Instance, 0);
       Instance = this->fields.RaritySpr;
       if ( !Instance )
         goto LABEL_36;
@@ -140,51 +131,51 @@ void __fastcall CommandCodeSkillInfo__Set(
         Instance,
         *(_QWORD *)(*(_QWORD *)Instance + 848LL));
       CommandCodeName = this->fields.CommandCodeName;
-      v35 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *)v24[3].klass;
+      v26 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *)v15[3].klass;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_48161020(v35, 0LL);
+      Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_48863712(v26, 0);
       if ( !CommandCodeName )
         goto LABEL_36;
-      UILabel__set_text(CommandCodeName, (System_String_o *)Instance, 0LL);
-      CommonFunction__ScalingLabelWidth(this->fields.CommandCodeName, 320, v36);
+      UILabel__set_text(CommandCodeName, (System_String_o *)Instance, 0);
+      CommonFunction__ScalingLabelWidth(this->fields.CommandCodeName, 320, v27);
     }
     else
     {
       Instance = this->fields.DetailObj;
       if ( !Instance )
         goto LABEL_36;
-      Instance = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Instance, 0LL);
+      Instance = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Instance, 0);
       if ( !this->fields.DetailObj )
         goto LABEL_36;
-      v37 = (UnityEngine_Transform_o *)Instance;
-      Instance = UnityEngine_GameObject__get_transform(this->fields.DetailObj, 0LL);
+      v28 = (UnityEngine_Transform_o *)Instance;
+      Instance = UnityEngine_GameObject__get_transform(this->fields.DetailObj, 0);
       if ( !Instance )
         goto LABEL_36;
-      localPosition = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Instance, 0LL);
-      if ( !v37 )
+      localPosition = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Instance, 0);
+      if ( !v28 )
         goto LABEL_36;
       DetailObjHeight = this->fields.DetailObjHeight;
-      v40 = 0;
-      UnityEngine_Transform__set_localPosition(v37, *(UnityEngine_Vector3_o *)&localPosition, 0LL);
+      v31 = 0;
+      UnityEngine_Transform__set_localPosition(v28, *(UnityEngine_Vector3_o *)&localPosition, 0);
     }
     Instance = this->fields.SkillIconComp;
     if ( Instance )
     {
-      SkillIconComponent__Clear((SkillIconComponent_o *)Instance, 0LL);
+      SkillIconComponent__Clear((SkillIconComponent_o *)Instance, 0);
       Instance = this->fields.SkillIconComp;
       if ( Instance )
       {
-        SkillIconComponent__Set((SkillIconComponent_o *)Instance, skillId, 0LL);
+        SkillIconComponent__Set((SkillIconComponent_o *)Instance, skillId, 0);
         Instance = this->fields.SkillDetail;
         if ( Instance )
         {
-          WrapControlText__textAdjust((UILabel_o *)Instance, skillDetail, *((_DWORD *)Instance + 106), 0, 0LL);
+          WrapControlText__textAdjust((UILabel_o *)Instance, skillDetail, *((_DWORD *)Instance + 106), 0, 0);
           return;
         }
       }
     }
 LABEL_36:
-    sub_1BCB254(Instance, v22);
+    sub_1C2D6EC(Instance, v13);
   }
 }

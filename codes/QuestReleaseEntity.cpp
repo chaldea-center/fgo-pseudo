@@ -1,39 +1,38 @@
-void __fastcall QuestReleaseEntity___ctor(QuestReleaseEntity_o *this, const MethodInfo *method)
+void QuestReleaseEntity___ctor(QuestReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CC26 & 1) == 0 )
+  if ( (byte_4C279FF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1CC26 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C279FF = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall QuestReleaseEntity__CreatePK(
+System_String_o *QuestReleaseEntity__CreatePK(
         int32_t questId,
         int32_t type,
         int32_t targetId,
         int64_t value,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CC25 & 1) == 0 )
+  if ( (byte_4C279FE & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___, *(_QWORD *)&type);
-    byte_4B1CC25 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+    byte_4C279FE = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__long_(
            questId,
            type,
            targetId,
            value,
-           (const MethodInfo_3019618 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
+           (const MethodInfo_30CD4C4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__long___);
 }
 
 
-System_String_o *__fastcall QuestReleaseEntity__CreatePrimaryKey(QuestReleaseEntity_o *this, const MethodInfo *method)
+System_String_o *QuestReleaseEntity__CreatePrimaryKey(QuestReleaseEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x4
 
@@ -46,43 +45,43 @@ System_String_o *__fastcall QuestReleaseEntity__CreatePrimaryKey(QuestReleaseEnt
 }
 
 
-int32_t __fastcall QuestReleaseEntity__getClosedMessageId(QuestReleaseEntity_o *this, const MethodInfo *method)
+int32_t QuestReleaseEntity__getClosedMessageId(QuestReleaseEntity_o *this, const MethodInfo *method)
 {
   return this->fields.closedMessageId;
 }
 
 
-int32_t __fastcall QuestReleaseEntity__getImagePriority(QuestReleaseEntity_o *this, const MethodInfo *method)
+int32_t QuestReleaseEntity__getImagePriority(QuestReleaseEntity_o *this, const MethodInfo *method)
 {
   return this->fields.imagePriority;
 }
 
 
-int32_t __fastcall QuestReleaseEntity__getQuestId(QuestReleaseEntity_o *this, const MethodInfo *method)
+int32_t QuestReleaseEntity__getQuestId(QuestReleaseEntity_o *this, const MethodInfo *method)
 {
   return this->fields.questId;
 }
 
 
-int32_t __fastcall QuestReleaseEntity__getTargetId(QuestReleaseEntity_o *this, const MethodInfo *method)
+int32_t QuestReleaseEntity__getTargetId(QuestReleaseEntity_o *this, const MethodInfo *method)
 {
   return this->fields.targetId;
 }
 
 
-int32_t __fastcall QuestReleaseEntity__getType(QuestReleaseEntity_o *this, const MethodInfo *method)
+int32_t QuestReleaseEntity__getType(QuestReleaseEntity_o *this, const MethodInfo *method)
 {
   return this->fields.type;
 }
 
 
-int64_t __fastcall QuestReleaseEntity__getValue(QuestReleaseEntity_o *this, const MethodInfo *method)
+int64_t QuestReleaseEntity__getValue(QuestReleaseEntity_o *this, const MethodInfo *method)
 {
   return this->fields.value;
 }
 
 
-int32_t __fastcall QuestReleaseEntity__getValueInt(QuestReleaseEntity_o *this, const MethodInfo *method)
+int32_t QuestReleaseEntity__getValueInt(QuestReleaseEntity_o *this, const MethodInfo *method)
 {
   return this->fields.value;
 }

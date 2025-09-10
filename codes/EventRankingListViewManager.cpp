@@ -1,12 +1,11 @@
-void __fastcall EventRankingListViewManager___cctor(const MethodInfo *method)
+void EventRankingListViewManager___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
   struct EventRankingListViewManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4B16BCE & 1) == 0 )
+  if ( (byte_4C218CD & 1) == 0 )
   {
-    sub_1BCAFF8(&EventRankingListViewManager_TypeInfo, v1);
-    byte_4B16BCE = 1;
+    sub_1C2D490(&EventRankingListViewManager_TypeInfo);
+    byte_4C218CD = 1;
   }
   static_fields = EventRankingListViewManager_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->ALPHA_ANIMATION_SPD = 0x404000003F000000LL;
@@ -14,44 +13,41 @@ void __fastcall EventRankingListViewManager___cctor(const MethodInfo *method)
 }
 
 
-void __fastcall EventRankingListViewManager___ctor(EventRankingListViewManager_o *this, const MethodInfo *method)
+void EventRankingListViewManager___ctor(EventRankingListViewManager_o *this, const MethodInfo *method)
 {
-  ListViewManager___ctor((ListViewManager_o *)this, 0LL);
+  ListViewManager___ctor((ListViewManager_o *)this, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall EventRankingListViewManager__CloseItemDetail(
+void EventRankingListViewManager__CloseItemDetail(
         EventRankingListViewManager_o *this,
         bool isDecide,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  _QWORD *v4; // x0
-  System_Reflection_MethodBase_o *v5; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
   Il2CppObject *Instance; // x0
-  __int64 v7; // x1
+  __int64 v6; // x1
 
-  if ( (byte_4B16BCA & 1) == 0 )
+  if ( (byte_4C218C9 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_EventRankingListViewManager_CloseItemDetail__, isDecide);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v3);
-    byte_4B16BCA = 1;
+    sub_1C2D490(&Method_EventRankingListViewManager_CloseItemDetail__);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C218C9 = 1;
   }
-  v4 = Method_EventRankingListViewManager_CloseItemDetail__;
+  v3 = Method_EventRankingListViewManager_CloseItemDetail__;
   if ( (*((_BYTE *)Method_EventRankingListViewManager_CloseItemDetail__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1BCB010(Method_EventRankingListViewManager_CloseItemDetail__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v4, v4[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v3 = (_QWORD *)sub_1C2D4A8(Method_EventRankingListViewManager_CloseItemDetail__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1BCB254(0LL, v7);
-  CommonUI__CloseItemDetailDialog((CommonUI_o *)Instance, 0LL);
+    sub_1C2D6EC(0, v6);
+  CommonUI__CloseItemDetailDialog((CommonUI_o *)Instance, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall EventRankingListViewManager__CloseSvtDetail(
+void EventRankingListViewManager__CloseSvtDetail(
         EventRankingListViewManager_o *this,
         bool isDecide,
         const MethodInfo *method)
@@ -59,20 +55,19 @@ void __fastcall EventRankingListViewManager__CloseSvtDetail(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4B16BCB & 1) == 0 )
+  if ( (byte_4C218CA & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    byte_4B16BCB = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C218CA = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1BCB254(0LL, v4);
-  CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, 0LL, 0LL);
+    sub_1C2D6EC(0, v4);
+  CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, 0, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall EventRankingListViewManager__CreateList(
+void EventRankingListViewManager__CreateList(
         EventRankingListViewManager_o *this,
         int32_t eventId,
         int32_t round,
@@ -80,390 +75,362 @@ void __fastcall EventRankingListViewManager__CreateList(
         System_Int64_array *userSupportPoints,
         const MethodInfo *method)
 {
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  __int64 v23; // x1
-  __int64 v24; // x1
-  __int64 v25; // x1
-  __int64 v26; // x1
   __int64 Instance; // x0
-  __int64 v28; // x1
+  __int64 v9; // x1
   TotalEventRaceEntity_array *TargetTermRaceEntityList; // x0
   EventPointGroupEntity_array *EntityList; // x27
-  EventRaceMaster_o *v31; // x26
+  EventRaceMaster_o *v12; // x26
   EventRaceEntity_o *Entity; // x28
-  System_Collections_Generic_List_object__o *v33; // x24
-  System_Collections_Generic_List_object__o *v34; // x25
-  __int64 v35; // x2
-  signed int v36; // w20
-  signed int i; // w29
-  il2cpp_array_size_t v38; // w20
-  EventRankingRoundItemInfo_o *v39; // x22
+  System_Collections_Generic_List_object__o *v14; // x24
+  System_Collections_Generic_List_object__o *v15; // x25
+  __int64 v16; // x2
+  int v17; // w20
+  int i; // w29
+  unsigned int v19; // w20
+  EventRankingRoundItemInfo_o *v20; // x22
   struct System_Int32_array *giftIds; // x8
-  Il2CppClass **v41; // x21
-  Il2CppClass *v42; // x8
-  char *v43; // x21
-  Il2CppClass *v44; // t1
-  __int64 v45; // x8
-  int32_t v46; // w3
+  Il2CppClass **v22; // x21
+  Il2CppClass *v23; // x8
+  char *v24; // x21
+  Il2CppClass *v25; // t1
+  __int64 v26; // x8
+  int32_t v27; // w3
   struct System_Int64_array *goalPoints; // x8
-  TotalEventRaceEntity_o *v48; // x8
+  TotalEventRaceEntity_o *v29; // x8
   struct System_Object_array *items; // x8
-  _QWORD *v50; // x9
+  _QWORD *v31; // x9
   __int64 size; // x10
-  Il2CppClass **v52; // x0
-  struct System_Object_array *v53; // x8
-  _QWORD *v54; // x9
-  __int64 v55; // x10
-  __int64 v56; // x8
-  System_Collections_Generic_List_object__o *v57; // x0
-  System_Comparison_T__o *v58; // x19
-  EventRankingListViewManager___c_c *v59; // x0
+  Il2CppClass **v33; // x0
+  struct System_Object_array *v34; // x8
+  _QWORD *v35; // x9
+  __int64 v36; // x10
+  __int64 v37; // x8
+  System_Collections_Generic_List_object__o *v38; // x0
+  System_Comparison_T__o *v39; // x19
+  EventRankingListViewManager___c_c *v40; // x0
   System_Comparison_T__o *_9__19_0; // x19
-  Il2CppObject *v61; // x21
+  Il2CppObject *v42; // x21
   struct EventRankingListViewManager___c_StaticFields *static_fields; // x0
-  int32_t v63; // w19
+  int32_t v44; // w19
   Il2CppObject *Item; // x25
-  EventRankingListViewItem_o *v65; // x22
-  const MethodInfo *v66; // x6
-  __int64 v67; // x8
-  _QWORD *v68; // x9
-  __int64 v69; // x10
-  __int64 v70; // x8
-  char v71; // [xsp+Ch] [xbp-94h]
-  Il2CppObject *v72; // [xsp+10h] [xbp-90h]
+  EventRankingListViewItem_o *v46; // x22
+  const MethodInfo *v47; // x6
+  __int64 v48; // x8
+  _QWORD *v49; // x9
+  __int64 v50; // x10
+  __int64 v51; // x8
+  char v52; // [xsp+Ch] [xbp-94h]
+  Il2CppObject *v53; // [xsp+10h] [xbp-90h]
   EventRaceResultMaster_o *MasterData_object; // [xsp+18h] [xbp-88h]
-  signed int v74; // [xsp+20h] [xbp-80h]
-  TotalEventRaceEntity_array *v76; // [xsp+28h] [xbp-78h]
+  int v55; // [xsp+20h] [xbp-80h]
+  TotalEventRaceEntity_array *v57; // [xsp+28h] [xbp-78h]
   int max_length; // [xsp+38h] [xbp-68h]
 
-  if ( (byte_4B16BC2 & 1) == 0 )
+  if ( (byte_4C218C1 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Comparison_EventRankingRoundItemInfo__TypeInfo, *(_QWORD *)&eventId);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_EventPointGroupMaster___, v8);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_EventRaceMaster___, v9);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_EventRaceResultMaster___, v10);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_EventScriptMaster___, v11);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_TotalEventRaceMaster___, v12);
-    sub_1BCAFF8(&EventRankingListViewItem_TypeInfo, v13);
-    sub_1BCAFF8(&Method_EventRankingListViewManager_GoalTimeSort__, v14);
-    sub_1BCAFF8(&EventRankingRoundItemInfo_TypeInfo, v15);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingRoundItemInfo__AddRange__, v16);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingRoundItemInfo__Add__, v17);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ListViewItem__Add__, v18);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingRoundItemInfo__Sort__, v19);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingRoundItemInfo___ctor__, v20);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingRoundItemInfo__get_Count__, v21);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingRoundItemInfo__get_Item__, v22);
-    sub_1BCAFF8(&System_Collections_Generic_List_EventRankingRoundItemInfo__TypeInfo, v23);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v24);
-    sub_1BCAFF8(&Method_EventRankingListViewManager___c__CreateList_b__19_0__, v25);
-    sub_1BCAFF8(&EventRankingListViewManager___c_TypeInfo, v26);
-    byte_4B16BC2 = 1;
+    sub_1C2D490(&System_Comparison_EventRankingRoundItemInfo__TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_EventRaceMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_EventRaceResultMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_EventScriptMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_TotalEventRaceMaster___);
+    sub_1C2D490(&EventRankingListViewItem_TypeInfo);
+    sub_1C2D490(&Method_EventRankingListViewManager_GoalTimeSort__);
+    sub_1C2D490(&EventRankingRoundItemInfo_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingRoundItemInfo__AddRange__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingRoundItemInfo__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingRoundItemInfo__Sort__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingRoundItemInfo___ctor__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingRoundItemInfo__get_Count__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingRoundItemInfo__get_Item__);
+    sub_1C2D490(&System_Collections_Generic_List_EventRankingRoundItemInfo__TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C2D490(&Method_EventRankingListViewManager___c__CreateList_b__19_0__);
+    sub_1C2D490(&EventRankingListViewManager___c_TypeInfo);
+    byte_4C218C1 = 1;
   }
-  ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_77;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_TotalEventRaceMaster___);
+                        (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_TotalEventRaceMaster___);
   if ( !Instance )
     goto LABEL_77;
   TargetTermRaceEntityList = TotalEventRaceMaster__GetTargetTermRaceEntityList(
                                (TotalEventRaceMaster_o *)Instance,
                                eventId,
                                round,
-                               0LL);
+                               0);
   if ( TargetTermRaceEntityList )
   {
-    v76 = TargetTermRaceEntityList;
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    v57 = TargetTermRaceEntityList;
+    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_77;
     Instance = (__int64)DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+                          (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
     if ( !Instance )
       goto LABEL_77;
-    EntityList = EventPointGroupMaster__getEntityList((EventPointGroupMaster_o *)Instance, eventId, 0LL);
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    EntityList = EventPointGroupMaster__getEntityList((EventPointGroupMaster_o *)Instance, eventId, 0);
+    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_77;
-    v72 = (Il2CppObject *)this;
+    v53 = (Il2CppObject *)this;
     Instance = (__int64)DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                          (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventRaceMaster___);
     if ( !Instance )
       goto LABEL_77;
-    v31 = (EventRaceMaster_o *)Instance;
-    Entity = EventRaceMaster__GetEntity((EventRaceMaster_o *)Instance, eventId, round, 0LL);
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    v12 = (EventRaceMaster_o *)Instance;
+    Entity = EventRaceMaster__GetEntity((EventRaceMaster_o *)Instance, eventId, round, 0);
+    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_77;
     MasterData_object = (EventRaceResultMaster_o *)DataManager__GetMasterData_object_(
                                                      (DataManager_o *)Instance,
-                                                     (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
-    max_length = v76->max_length;
-    v33 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventRankingRoundItemInfo__TypeInfo);
+                                                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
+    max_length = v57->max_length;
+    v14 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_EventRankingRoundItemInfo__TypeInfo);
     System_Collections_Generic_List_object____ctor(
-      v33,
-      (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventRankingRoundItemInfo___ctor__);
-    v34 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventRankingRoundItemInfo__TypeInfo);
+      v14,
+      (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_EventRankingRoundItemInfo___ctor__);
+    v15 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_EventRankingRoundItemInfo__TypeInfo);
     System_Collections_Generic_List_object____ctor(
-      v34,
-      (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventRankingRoundItemInfo___ctor__);
+      v15,
+      (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_EventRankingRoundItemInfo___ctor__);
     if ( !userSupportPoints )
       goto LABEL_77;
-    v36 = userSupportPoints->max_length;
-    if ( v36 < 1 )
+    v17 = userSupportPoints->max_length;
+    if ( v17 < 1 )
     {
       i = 0;
     }
     else
     {
-      for ( i = 0; i != v36; ++i )
+      for ( i = 0; i != v17; ++i )
       {
-        if ( v36 == i )
+        if ( v17 == i )
 LABEL_78:
-          sub_1BCB25C(Instance, v28, v35);
+          sub_1C2D6F4(Instance, v9, v16);
         if ( userSupportPoints->m_Items[i] > 0 )
           break;
       }
     }
-    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_77;
-    v74 = v36;
+    v55 = v17;
     Instance = (__int64)DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_EventScriptMaster___);
+                          (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventScriptMaster___);
     if ( !Instance )
       goto LABEL_77;
-    Instance = EventScriptMaster__IsRaceResultFlagged((EventScriptMaster_o *)Instance, eventId, round, 0LL);
-    v71 = Instance;
+    Instance = EventScriptMaster__IsRaceResultFlagged((EventScriptMaster_o *)Instance, eventId, round, 0);
+    v52 = Instance;
     if ( max_length >= 1 )
     {
-      v38 = 0;
+      v19 = 0;
       do
       {
-        v39 = (EventRankingRoundItemInfo_o *)sub_1BCB244(EventRankingRoundItemInfo_TypeInfo);
-        EventRankingRoundItemInfo___ctor(v39, 0LL);
-        if ( !v39 )
+        v20 = (EventRankingRoundItemInfo_o *)sub_1C2D6DC(EventRankingRoundItemInfo_TypeInfo);
+        EventRankingRoundItemInfo___ctor(v20, 0);
+        if ( !v20 )
           goto LABEL_77;
-        v39->fields.eventId = eventId;
+        v20->fields.eventId = eventId;
         if ( !Entity )
           goto LABEL_77;
         giftIds = Entity->fields.giftIds;
         if ( !giftIds )
           goto LABEL_77;
-        if ( v38 >= giftIds->max_length )
+        if ( v19 >= LODWORD(giftIds->max_length) )
           goto LABEL_78;
-        v39->fields.rewardItemId = giftIds->m_Items[v38 + 1];
+        v20->fields.rewardItemId = giftIds->m_Items[v19];
         if ( !EntityList )
           goto LABEL_77;
-        if ( v38 >= EntityList->max_length )
+        if ( v19 >= LODWORD(EntityList->max_length) )
           goto LABEL_78;
-        v41 = &EntityList->obj.klass + (int)v38;
-        v44 = v41[4];
-        v43 = (char *)(v41 + 4);
-        v42 = v44;
-        if ( !v44 )
+        v22 = &EntityList->obj.klass + (int)v19;
+        v25 = v22[4];
+        v24 = (char *)(v22 + 4);
+        v23 = v25;
+        if ( !v25 )
           goto LABEL_77;
-        v39->fields.teamName = (struct System_String_o *)v42->_1.namespaze;
-        Instance = sub_1BCAF9C(&v39->fields.teamName);
-        if ( v38 >= EntityList->max_length )
+        v20->fields.teamName = (struct System_String_o *)v23->_1.namespaze;
+        Instance = sub_1C2D434(&v20->fields.teamName);
+        if ( v19 >= LODWORD(EntityList->max_length) )
           goto LABEL_78;
-        v45 = *(_QWORD *)v43;
-        if ( !*(_QWORD *)v43 )
+        v26 = *(_QWORD *)v24;
+        if ( !*(_QWORD *)v24 )
           goto LABEL_77;
-        v46 = *(_DWORD *)(v45 + 20);
-        v39->fields.groupId = v46;
-        v39->fields.groupIconImageId = *(_DWORD *)(v45 + 32);
-        if ( v38 >= userSupportPoints->max_length )
+        v27 = *(_DWORD *)(v26 + 20);
+        v20->fields.groupId = v27;
+        v20->fields.groupIconImageId = *(_DWORD *)(v26 + 32);
+        if ( v19 >= LODWORD(userSupportPoints->max_length) )
           goto LABEL_78;
-        v39->fields.supportPoint = userSupportPoints->m_Items[v38];
+        v20->fields.supportPoint = userSupportPoints->m_Items[v19];
         goalPoints = Entity->fields.goalPoints;
         if ( !goalPoints )
           goto LABEL_77;
-        if ( v38 >= goalPoints->max_length )
+        if ( v19 >= LODWORD(goalPoints->max_length) )
           goto LABEL_78;
-        v39->fields.goalPoint = goalPoints->m_Items[v38];
-        if ( v38 >= v76->max_length )
+        v20->fields.goalPoint = goalPoints->m_Items[v19];
+        if ( v19 >= LODWORD(v57->max_length) )
           goto LABEL_78;
-        v48 = v76->m_Items[v38];
-        if ( !v48 )
+        v29 = v57->m_Items[v19];
+        if ( !v29 )
           goto LABEL_77;
         Instance = (__int64)MasterData_object;
-        v39->fields.nowPoint = v48->fields.totalPoint;
-        v39->fields.mostSupportGroupId = mostSupportGroupId;
+        v20->fields.nowPoint = v29->fields.totalPoint;
+        v20->fields.mostSupportGroupId = mostSupportGroupId;
         if ( !MasterData_object )
           goto LABEL_77;
-        Instance = EventRaceResultMaster__GetTargetGoalTime(MasterData_object, eventId, round, v46, 0LL);
-        v39->fields.goalTime = Instance;
-        if ( v38 >= EntityList->max_length )
+        Instance = EventRaceResultMaster__GetTargetGoalTime(MasterData_object, eventId, round, v27, 0);
+        v20->fields.goalTime = Instance;
+        if ( v19 >= LODWORD(EntityList->max_length) )
           goto LABEL_78;
-        if ( !*(_QWORD *)v43 )
+        if ( !*(_QWORD *)v24 )
           goto LABEL_77;
-        v39->fields.goalRate = EventRaceMaster__GetGoalRate(
-                                 v31,
-                                 eventId,
-                                 round,
-                                 *(_DWORD *)(*(_QWORD *)v43 + 20LL),
-                                 0LL);
-        Instance = EventRankingRoundItemInfo__get_IsGoal(v39, 0LL);
+        v20->fields.goalRate = EventRaceMaster__GetGoalRate(v12, eventId, round, *(_DWORD *)(*(_QWORD *)v24 + 20LL), 0);
+        Instance = EventRankingRoundItemInfo__get_IsGoal(v20, 0);
         if ( (Instance & 1) != 0 )
         {
-          if ( !v33 )
+          if ( !v14 )
             goto LABEL_77;
-          items = v33->fields._items;
-          v50 = Method_System_Collections_Generic_List_EventRankingRoundItemInfo__Add__;
-          ++v33->fields._version;
+          items = v14->fields._items;
+          v31 = Method_System_Collections_Generic_List_EventRankingRoundItemInfo__Add__;
+          ++v14->fields._version;
           if ( !items )
             goto LABEL_77;
-          size = v33->fields._size;
-          if ( (unsigned int)size >= items->max_length )
+          size = v14->fields._size;
+          if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
-            v56 = v50[4];
-            v57 = v33;
+            v37 = v31[4];
+            v38 = v14;
 LABEL_53:
             System_Collections_Generic_List_object___AddWithResize(
-              v57,
-              (Il2CppObject *)v39,
-              *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v56 + 192) + 112LL));
+              v38,
+              (Il2CppObject *)v20,
+              *(const MethodInfo_3789B84 **)(*(_QWORD *)(v37 + 192) + 112LL));
             continue;
           }
-          v52 = &items->obj.klass + size;
-          v33->fields._size = size + 1;
+          v33 = &items->obj.klass + size;
+          v14->fields._size = size + 1;
         }
         else
         {
+          if ( !v15 )
+            goto LABEL_77;
+          v34 = v15->fields._items;
+          v35 = Method_System_Collections_Generic_List_EventRankingRoundItemInfo__Add__;
+          ++v15->fields._version;
           if ( !v34 )
             goto LABEL_77;
-          v53 = v34->fields._items;
-          v54 = Method_System_Collections_Generic_List_EventRankingRoundItemInfo__Add__;
-          ++v34->fields._version;
-          if ( !v53 )
-            goto LABEL_77;
-          v55 = v34->fields._size;
-          if ( (unsigned int)v55 >= v53->max_length )
+          v36 = v15->fields._size;
+          if ( (unsigned int)v36 >= LODWORD(v34->max_length) )
           {
-            v56 = v54[4];
-            v57 = v34;
+            v37 = v35[4];
+            v38 = v15;
             goto LABEL_53;
           }
-          v52 = &v53->obj.klass + v55;
-          v34->fields._size = v55 + 1;
+          v33 = &v34->obj.klass + v36;
+          v15->fields._size = v36 + 1;
         }
-        v52[4] = (Il2CppClass *)v39;
-        Instance = sub_1BCAF9C(v52 + 4);
+        v33[4] = (Il2CppClass *)v20;
+        Instance = sub_1C2D434(v33 + 4);
       }
-      while ( max_length != ++v38 );
+      while ( max_length != ++v19 );
     }
-    if ( v33 && v33->fields._size >= 2 )
+    if ( v14 && v14->fields._size >= 2 )
     {
-      v58 = (System_Comparison_T__o *)sub_1BCB244(System_Comparison_EventRankingRoundItemInfo__TypeInfo);
-      System_Comparison_object____ctor(v58, v72, Method_EventRankingListViewManager_GoalTimeSort__, 0LL);
-      System_Collections_Generic_List_object___Sort_57390740(
-        v33,
-        v58,
-        (const MethodInfo_36BB694 *)Method_System_Collections_Generic_List_EventRankingRoundItemInfo__Sort__);
+      v39 = (System_Comparison_T__o *)sub_1C2D6DC(System_Comparison_EventRankingRoundItemInfo__TypeInfo);
+      System_Comparison_object____ctor(v39, v53, Method_EventRankingListViewManager_GoalTimeSort__, 0);
+      System_Collections_Generic_List_object___Sort_58242632(
+        v14,
+        v39,
+        (const MethodInfo_378B648 *)Method_System_Collections_Generic_List_EventRankingRoundItemInfo__Sort__);
     }
-    if ( v34 && v34->fields._size >= 2 )
+    if ( v15 && v15->fields._size >= 2 )
     {
-      v59 = EventRankingListViewManager___c_TypeInfo;
+      v40 = EventRankingListViewManager___c_TypeInfo;
       if ( !EventRankingListViewManager___c_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(EventRankingListViewManager___c_TypeInfo);
-        v59 = EventRankingListViewManager___c_TypeInfo;
+        v40 = EventRankingListViewManager___c_TypeInfo;
       }
-      _9__19_0 = (System_Comparison_T__o *)v59->static_fields->__9__19_0;
+      _9__19_0 = (System_Comparison_T__o *)v40->static_fields->__9__19_0;
       if ( !_9__19_0 )
       {
-        if ( !v59->_2.cctor_finished )
+        if ( !v40->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v59);
-          v59 = EventRankingListViewManager___c_TypeInfo;
+          j_il2cpp_runtime_class_init_0(v40);
+          v40 = EventRankingListViewManager___c_TypeInfo;
         }
-        v61 = (Il2CppObject *)v59->static_fields->__9;
-        _9__19_0 = (System_Comparison_T__o *)sub_1BCB244(System_Comparison_EventRankingRoundItemInfo__TypeInfo);
-        System_Comparison_object____ctor(
-          _9__19_0,
-          v61,
-          Method_EventRankingListViewManager___c__CreateList_b__19_0__,
-          0LL);
+        v42 = (Il2CppObject *)v40->static_fields->__9;
+        _9__19_0 = (System_Comparison_T__o *)sub_1C2D6DC(System_Comparison_EventRankingRoundItemInfo__TypeInfo);
+        System_Comparison_object____ctor(_9__19_0, v42, Method_EventRankingListViewManager___c__CreateList_b__19_0__, 0);
         static_fields = EventRankingListViewManager___c_TypeInfo->static_fields;
         static_fields->__9__19_0 = (struct System_Comparison_EventRankingRoundItemInfo__o *)_9__19_0;
-        sub_1BCAF9C(&static_fields->__9__19_0);
+        sub_1C2D434(&static_fields->__9__19_0);
       }
-      System_Collections_Generic_List_object___Sort_57390740(
-        v34,
+      System_Collections_Generic_List_object___Sort_58242632(
+        v15,
         _9__19_0,
-        (const MethodInfo_36BB694 *)Method_System_Collections_Generic_List_EventRankingRoundItemInfo__Sort__);
+        (const MethodInfo_378B648 *)Method_System_Collections_Generic_List_EventRankingRoundItemInfo__Sort__);
     }
-    if ( !v33 )
+    if ( !v14 )
 LABEL_77:
-      sub_1BCB254(Instance, v28);
+      sub_1C2D6EC(Instance, v9);
     System_Collections_Generic_List_object___AddRange(
-      v33,
-      (System_Collections_Generic_IEnumerable_T__o *)v34,
-      (const MethodInfo_36B9DDC *)Method_System_Collections_Generic_List_EventRankingRoundItemInfo__AddRange__);
+      v14,
+      (System_Collections_Generic_IEnumerable_T__o *)v15,
+      (const MethodInfo_3789D90 *)Method_System_Collections_Generic_List_EventRankingRoundItemInfo__AddRange__);
     if ( max_length >= 1 )
     {
-      v63 = 0;
+      v44 = 0;
       do
       {
         Item = System_Collections_Generic_List_object___get_Item(
-                 v33,
-                 v63++,
-                 (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_EventRankingRoundItemInfo__get_Item__);
-        v65 = (EventRankingListViewItem_o *)sub_1BCB244(EventRankingListViewItem_TypeInfo);
-        EventRankingListViewItem___ctor(v65, (EventRankingRoundItemInfo_o *)Item, v63, i < v74, v71 & 1, round, v66);
-        Instance = (__int64)v72[12].klass;
+                 v14,
+                 v44++,
+                 (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_EventRankingRoundItemInfo__get_Item__);
+        v46 = (EventRankingListViewItem_o *)sub_1C2D6DC(EventRankingListViewItem_TypeInfo);
+        EventRankingListViewItem___ctor(v46, (EventRankingRoundItemInfo_o *)Item, v44, i < v55, v52 & 1, round, v47);
+        Instance = (__int64)v53[12].klass;
         if ( !Instance )
           goto LABEL_77;
-        v67 = *(_QWORD *)(Instance + 16);
-        v68 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+        v48 = *(_QWORD *)(Instance + 16);
+        v49 = Method_System_Collections_Generic_List_ListViewItem__Add__;
         ++*(_DWORD *)(Instance + 28);
-        if ( !v67 )
+        if ( !v48 )
           goto LABEL_77;
-        v69 = *(int *)(Instance + 24);
-        if ( (unsigned int)v69 >= *(_DWORD *)(v67 + 24) )
+        v50 = *(int *)(Instance + 24);
+        if ( (unsigned int)v50 >= *(_DWORD *)(v48 + 24) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)Instance,
-            (Il2CppObject *)v65,
-            *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v68[4] + 192LL) + 112LL));
+            (Il2CppObject *)v46,
+            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
         }
         else
         {
-          v70 = v67 + 8 * v69;
-          *(_DWORD *)(Instance + 24) = v69 + 1;
-          *(_QWORD *)(v70 + 32) = v65;
-          sub_1BCAF9C(v70 + 32);
+          v51 = v48 + 8 * v50;
+          *(_DWORD *)(Instance + 24) = v50 + 1;
+          *(_QWORD *)(v51 + 32) = v46;
+          sub_1C2D434(v51 + 32);
         }
       }
-      while ( max_length != v63 );
+      while ( max_length != v44 );
     }
-    ListViewManager__SortItem((ListViewManager_o *)v72, -1, 0, -1, 0LL);
+    ListViewManager__SortItem((ListViewManager_o *)v53, -1, 0, -1, 0);
   }
 }
 
 
-int32_t __fastcall EventRankingListViewManager__GetAlphaAnimCnt(
+int32_t EventRankingListViewManager__GetAlphaAnimCnt(
         EventRankingListViewManager_o *this,
         int32_t length,
         const MethodInfo *method)
@@ -472,21 +439,19 @@ int32_t __fastcall EventRankingListViewManager__GetAlphaAnimCnt(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-EventRankingListViewItem_o *__fastcall EventRankingListViewManager__GetItem(
+EventRankingListViewItem_o *EventRankingListViewManager__GetItem(
         EventRankingListViewManager_o *this,
         int32_t index,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   EventRankingListViewItem_o *result; // x0
-  __int64 methodPtr_low; // x10
+  __int64 naturalAligment; // x10
 
-  if ( (byte_4B16BC3 & 1) == 0 )
+  if ( (byte_4C218C2 & 1) == 0 )
   {
-    sub_1BCAFF8(&EventRankingListViewItem_TypeInfo, *(_QWORD *)&index);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ListViewItem__get_Item__, v5);
-    byte_4B16BC3 = 1;
+    sub_1C2D490(&EventRankingListViewItem_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    byte_4C218C2 = 1;
   }
   result = (EventRankingListViewItem_o *)this->fields.itemList;
   if ( result )
@@ -494,18 +459,18 @@ EventRankingListViewItem_o *__fastcall EventRankingListViewManager__GetItem(
     result = (EventRankingListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                              (System_Collections_Generic_List_object__o *)result,
                                              index,
-                                             (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                             (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( result )
     {
-      methodPtr_low = LOBYTE(EventRankingListViewItem_TypeInfo->vtable._0_Equals.methodPtr);
-      if ( LOBYTE(result->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low )
+      naturalAligment = EventRankingListViewItem_TypeInfo->_2.naturalAligment;
+      if ( result->klass->_2.naturalAligment >= (unsigned int)naturalAligment )
       {
-        if ( (EventRankingListViewItem_c *)result->klass->_2.typeHierarchy[methodPtr_low - 1] != EventRankingListViewItem_TypeInfo )
-          return 0LL;
+        if ( (EventRankingListViewItem_c *)result->klass->_2.typeHierarchy[naturalAligment - 1] != EventRankingListViewItem_TypeInfo )
+          return 0;
       }
       else
       {
-        return 0LL;
+        return 0;
       }
     }
   }
@@ -513,7 +478,7 @@ EventRankingListViewItem_o *__fastcall EventRankingListViewManager__GetItem(
 }
 
 
-int32_t __fastcall EventRankingListViewManager__GoalTimeSort(
+int32_t EventRankingListViewManager__GoalTimeSort(
         EventRankingListViewManager_o *this,
         EventRankingRoundItemInfo_o *x,
         EventRankingRoundItemInfo_o *y,
@@ -523,7 +488,7 @@ int32_t __fastcall EventRankingListViewManager__GoalTimeSort(
   int64_t v5; // x9
 
   if ( !x || !y )
-    sub_1BCB254(this, x);
+    sub_1C2D6EC(this, x);
   goalTime = x->fields.goalTime;
   v5 = y->fields.goalTime;
   if ( goalTime > v5 )
@@ -534,21 +499,18 @@ int32_t __fastcall EventRankingListViewManager__GoalTimeSort(
 }
 
 
-void __fastcall EventRankingListViewManager__OnChangeAlphaAnim(
-        EventRankingListViewManager_o *this,
-        const MethodInfo *method)
+void EventRankingListViewManager__OnChangeAlphaAnim(EventRankingListViewManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   System_Collections_Generic_List_object__o *ObjectList; // x0
-  const MethodInfo *v5; // x1
+  const MethodInfo *v4; // x1
   int size; // w21
-  int32_t v7; // w20
+  int32_t v6; // w20
 
-  if ( (byte_4B16BCD & 1) == 0 )
+  if ( (byte_4C218CC & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingListViewObject__get_Count__, method);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingListViewObject__get_Item__, v3);
-    byte_4B16BCD = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingListViewObject__get_Count__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingListViewObject__get_Item__);
+    byte_4C218CC = 1;
   }
   ObjectList = (System_Collections_Generic_List_object__o *)EventRankingListViewManager__get_ObjectList(this, method);
   if ( !ObjectList )
@@ -556,85 +518,76 @@ void __fastcall EventRankingListViewManager__OnChangeAlphaAnim(
   size = ObjectList->fields._size;
   if ( size >= 1 )
   {
-    v7 = 0;
+    v6 = 0;
     while ( 1 )
     {
-      ObjectList = (System_Collections_Generic_List_object__o *)EventRankingListViewManager__get_ObjectList(this, v5);
+      ObjectList = (System_Collections_Generic_List_object__o *)EventRankingListViewManager__get_ObjectList(this, v4);
       if ( !ObjectList )
         break;
       ObjectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                   ObjectList,
-                                                                  v7,
-                                                                  (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_EventRankingListViewObject__get_Item__);
+                                                                  v6,
+                                                                  (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_EventRankingListViewObject__get_Item__);
       if ( !ObjectList )
         break;
-      EventRankingListViewObject__OnChangeAlphaAnim((EventRankingListViewObject_o *)ObjectList, v5);
-      if ( size == ++v7 )
+      EventRankingListViewObject__OnChangeAlphaAnim((EventRankingListViewObject_o *)ObjectList, v4);
+      if ( size == ++v6 )
         return;
     }
 LABEL_10:
-    sub_1BCB254(ObjectList, v5);
+    sub_1C2D6EC(ObjectList, v4);
   }
 }
 
 
-void __fastcall EventRankingListViewManager__OnClickListView(
+void EventRankingListViewManager__OnClickListView(
         EventRankingListViewManager_o *this,
         ListViewObject_o *obj,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  _QWORD *v14; // x0
-  System_Reflection_MethodBase_o *v15; // x0
+  _QWORD *v5; // x0
+  System_Reflection_MethodBase_o *v6; // x0
   DataManager_o *Item; // x0
-  __int64 v17; // x1
-  __int64 methodPtr_low; // x9
-  __int64 v19; // x2
-  struct System_Exception_o *writeMasterDataThreadException; // x8
-  unsigned int message; // w9
-  int v22; // w10
+  __int64 v8; // x1
+  __int64 naturalAligment; // x9
+  __int64 v10; // x2
+  DataManager_c *klass; // x8
+  unsigned int namespaze; // w9
+  int v13; // w10
   GiftEntity_o *data; // x20
   int32_t type; // w8
   Il2CppObject *Entity; // x20
-  Il2CppObject *v26; // x21
-  ItemDetailInfoComponent_CallbackFunc_o *v27; // x22
+  Il2CppObject *v17; // x21
+  ItemDetailInfoComponent_CallbackFunc_o *v18; // x22
   Il2CppObject *Instance; // x21
-  ServantStatusDialog_EndDelegate_o *v29; // x22
+  ServantStatusDialog_EndDelegate_o *v20; // x22
 
-  if ( (byte_4B16BC9 & 1) == 0 )
+  if ( (byte_4C218C8 & 1) == 0 )
   {
-    sub_1BCAFF8(&ItemDetailInfoComponent_CallbackFunc_TypeInfo, obj);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_ItemMaster___, v5);
-    sub_1BCAFF8(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__, v6);
-    sub_1BCAFF8(&ServantStatusDialog_EndDelegate_TypeInfo, v7);
-    sub_1BCAFF8(&Method_EventRankingListViewManager_CloseItemDetail__, v8);
-    sub_1BCAFF8(&Method_EventRankingListViewManager_CloseSvtDetail__, v9);
-    sub_1BCAFF8(&Method_EventRankingListViewManager_OnClickListView__, v10);
-    sub_1BCAFF8(&EventRankingListViewObject_TypeInfo, v11);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v13);
-    byte_4B16BC9 = 1;
+    sub_1C2D490(&ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1C2D490(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1C2D490(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_1C2D490(&Method_EventRankingListViewManager_CloseItemDetail__);
+    sub_1C2D490(&Method_EventRankingListViewManager_CloseSvtDetail__);
+    sub_1C2D490(&Method_EventRankingListViewManager_OnClickListView__);
+    sub_1C2D490(&EventRankingListViewObject_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C218C8 = 1;
   }
-  v14 = Method_EventRankingListViewManager_OnClickListView__;
+  v5 = Method_EventRankingListViewManager_OnClickListView__;
   if ( (*((_BYTE *)Method_EventRankingListViewManager_OnClickListView__ + 83) & 2) != 0 )
-    v14 = (_QWORD *)sub_1BCB010(Method_EventRankingListViewManager_OnClickListView__);
-  v15 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v14, v14[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v15, 0, 0, 0LL);
+    v5 = (_QWORD *)sub_1C2D4A8(Method_EventRankingListViewManager_OnClickListView__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C2D474(v5, v5[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
   if ( !obj )
     goto LABEL_24;
-  methodPtr_low = LOBYTE(EventRankingListViewObject_TypeInfo->vtable._0_Equals.methodPtr);
-  if ( LOBYTE(obj->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low
-    || (EventRankingListViewObject_c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != EventRankingListViewObject_TypeInfo )
+  naturalAligment = EventRankingListViewObject_TypeInfo->_2.naturalAligment;
+  if ( obj->klass->_2.naturalAligment < (unsigned int)naturalAligment
+    || (EventRankingListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != EventRankingListViewObject_TypeInfo )
   {
-    Item = (DataManager_o *)sub_1BCB514(obj);
+    Item = (DataManager_o *)sub_1C2D9AC(obj);
     goto LABEL_26;
   }
   Item = (DataManager_o *)EventRankingListViewObject__GetItem(
@@ -642,74 +595,74 @@ void __fastcall EventRankingListViewManager__OnClickListView(
                             (const MethodInfo *)EventRankingListViewObject_TypeInfo);
   if ( !Item )
     goto LABEL_24;
-  writeMasterDataThreadException = Item->fields.writeMasterDataThreadException;
-  if ( !writeMasterDataThreadException )
+  klass = Item[1].klass;
+  if ( !klass )
     goto LABEL_24;
-  message = (unsigned int)writeMasterDataThreadException->fields._message;
-  if ( message != 1 )
+  namespaze = (unsigned int)klass->_1.namespaze;
+  if ( namespaze != 1 )
   {
-    v22 = this->fields.alphaAnimCnt % (int)message;
-    if ( v22 < message )
+    v13 = this->fields.alphaAnimCnt % (int)namespaze;
+    if ( v13 < namespaze )
     {
-      writeMasterDataThreadException = (struct System_Exception_o *)((char *)writeMasterDataThreadException + 8 * v22);
+      klass = (DataManager_c *)((char *)klass + 8 * v13);
       goto LABEL_13;
     }
 LABEL_26:
-    sub_1BCB25C(Item, v17, v19);
+    sub_1C2D6F4(Item, v8, v10);
   }
 LABEL_13:
-  data = (GiftEntity_o *)writeMasterDataThreadException->fields._data;
+  data = (GiftEntity_o *)klass->_1.byval_arg.data;
   if ( !data )
     goto LABEL_24;
   type = data->fields.type;
   if ( (unsigned int)(type - 6) < 2 || type == 1 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v29 = (ServantStatusDialog_EndDelegate_o *)sub_1BCB244(ServantStatusDialog_EndDelegate_TypeInfo);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v20 = (ServantStatusDialog_EndDelegate_o *)sub_1C2D6DC(ServantStatusDialog_EndDelegate_TypeInfo);
     ServantStatusDialog_EndDelegate___ctor(
-      v29,
+      v20,
       (Il2CppObject *)this,
       Method_EventRankingListViewManager_CloseSvtDetail__,
-      0LL);
+      0);
     if ( !Instance )
       goto LABEL_24;
-    CommonUI__OpenServantStatusDialog_30777632((CommonUI_o *)Instance, 7, data, v29, 0LL);
+    CommonUI__OpenServantStatusDialog_31181524((CommonUI_o *)Instance, 7, data, v20, 0);
   }
   else if ( type == 2 )
   {
-    Item = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Item = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Item )
     {
       Item = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Item,
-                                (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ItemMaster___);
       if ( Item )
       {
         Entity = DataMasterBase_object__object__int___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)Item,
                    data->fields.objectId,
-                   (const MethodInfo_32C7E00 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-        v26 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-        v27 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1BCB244(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
+                   (const MethodInfo_3387D98 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+        v17 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v18 = (ItemDetailInfoComponent_CallbackFunc_o *)sub_1C2D6DC(ItemDetailInfoComponent_CallbackFunc_TypeInfo);
         ItemDetailInfoComponent_CallbackFunc___ctor(
-          v27,
+          v18,
           (Il2CppObject *)this,
           (intptr_t)Method_EventRankingListViewManager_CloseItemDetail__,
-          0LL);
-        if ( v26 )
+          0);
+        if ( v17 )
         {
-          CommonUI__OpenItemDetailDialog((CommonUI_o *)v26, (ItemEntity_o *)Entity, v27, 50, 0LL);
+          CommonUI__OpenItemDetailDialog((CommonUI_o *)v17, (ItemEntity_o *)Entity, v18, 50, 0);
           return;
         }
       }
     }
 LABEL_24:
-    sub_1BCB254(Item, v17);
+    sub_1C2D6EC(Item, v8);
   }
 }
 
 
-void __fastcall EventRankingListViewManager__OnMoveEnd(EventRankingListViewManager_o *this, const MethodInfo *method)
+void EventRankingListViewManager__OnMoveEnd(EventRankingListViewManager_o *this, const MethodInfo *method)
 {
   int32_t callbackCount; // w8
   bool v4; // vf
@@ -720,10 +673,10 @@ void __fastcall EventRankingListViewManager__OnMoveEnd(EventRankingListViewManag
   UnityEngine_Object_o *scrollBar; // x20
   struct System_Action_o *callbackFunc2; // x20
 
-  if ( (byte_4B16BC8 & 1) == 0 )
+  if ( (byte_4C218C7 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B16BC8 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C218C7 = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -736,199 +689,189 @@ void __fastcall EventRankingListViewManager__OnMoveEnd(EventRankingListViewManag
       scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality(scrollView, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Inequality(scrollView, 0, 0) )
       {
         gameObject = (UnityEngine_Component_o *)this->fields.scrollView;
         if ( !gameObject )
           goto LABEL_20;
-        ((void (__fastcall *)(UnityEngine_Component_o *, __int64, Il2CppClass *))gameObject->klass[1]._1.castClass)(
+        ((void (__fastcall *)(UnityEngine_Component_o *, __int64, Il2CppClass *))gameObject->klass[1]._1.element_class)(
           gameObject,
-          1LL,
-          gameObject->klass[1]._1.declaringType);
+          1,
+          gameObject->klass[1]._1.castClass);
       }
       if ( this->fields.initMode != 1 )
         goto LABEL_18;
       scrollBar = (UnityEngine_Object_o *)this->fields.scrollBar;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( !UnityEngine_Object__op_Inequality(scrollBar, 0LL, 0LL) )
+      if ( !UnityEngine_Object__op_Inequality(scrollBar, 0, 0) )
         goto LABEL_18;
       gameObject = (UnityEngine_Component_o *)this->fields.scrollBar;
       if ( gameObject )
       {
-        gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL);
+        gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0);
         if ( gameObject )
         {
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0LL);
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
 LABEL_18:
           callbackFunc2 = this->fields.callbackFunc2;
-          this->fields.callbackFunc2 = 0LL;
-          sub_1BCAF9C(&this->fields.callbackFunc2);
+          this->fields.callbackFunc2 = 0;
+          sub_1C2D434(&this->fields.callbackFunc2);
           if ( callbackFunc2 )
-            ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))callbackFunc2->fields.m_target)(
-              callbackFunc2->fields.original_method_info,
-              *(_QWORD *)&callbackFunc2->fields.extra_arg);
+            ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc2->fields.invoke_impl)(
+              callbackFunc2->fields.method_code,
+              callbackFunc2->fields.method);
           return;
         }
       }
 LABEL_20:
-      sub_1BCB254(gameObject, v7);
+      sub_1C2D6EC(gameObject, v7);
     }
   }
 }
 
 
-void __fastcall EventRankingListViewManager__RequestInto(EventRankingListViewManager_o *this, const MethodInfo *method)
+void EventRankingListViewManager__RequestInto(EventRankingListViewManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  const MethodInfo *v7; // x1
+  const MethodInfo *v3; // x1
   System_Collections_Generic_List_EventRankingListViewObject__o *ObjectList; // x0
-  __int64 v9; // x1
+  __int64 v5; // x1
   int32_t size; // w24
-  System_Collections_Generic_List_object__o *v11; // x20
-  int v12; // w25
+  System_Collections_Generic_List_object__o *v7; // x20
+  int v8; // w25
   int32_t i; // w21
   Il2CppObject *Item; // x22
-  System_Action_o *v15; // x23
-  const MethodInfo *v16; // x3
+  System_Action_o *v11; // x23
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4B16BC7 & 1) == 0 )
+  if ( (byte_4C218C6 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, method);
-    sub_1BCAFF8(&Method_EventRankingListViewManager_OnMoveEnd__, v3);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingListViewObject__get_Count__, v4);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingListViewObject__get_Item__, v5);
-    sub_1BCAFF8(&StringLiteral_9865/*"OnMoveEnd"*/, v6);
-    byte_4B16BC7 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_EventRankingListViewManager_OnMoveEnd__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingListViewObject__get_Count__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingListViewObject__get_Item__);
+    sub_1C2D490(&StringLiteral_9936/*"OnMoveEnd"*/);
+    byte_4C218C6 = 1;
   }
-  ListViewManager__ClippingItems((ListViewManager_o *)this, 1, 0, 0LL);
-  ListViewManager__DragMaskStart((ListViewManager_o *)this, 0LL);
-  ObjectList = EventRankingListViewManager__get_ObjectList(this, v7);
+  ListViewManager__ClippingItems((ListViewManager_o *)this, 1, 0, 0);
+  ListViewManager__DragMaskStart((ListViewManager_o *)this, 0);
+  ObjectList = EventRankingListViewManager__get_ObjectList(this, v3);
   if ( !ObjectList )
 LABEL_13:
-    sub_1BCB254(ObjectList, v9);
+    sub_1C2D6EC(ObjectList, v5);
   size = ObjectList->fields._size;
-  v11 = (System_Collections_Generic_List_object__o *)ObjectList;
+  v7 = (System_Collections_Generic_List_object__o *)ObjectList;
   this->fields.callbackCount = size;
   if ( size < 1 )
     goto LABEL_12;
-  v12 = 0;
+  v8 = 0;
   for ( i = 0; i != size; ++i )
   {
     Item = System_Collections_Generic_List_object___get_Item(
-             v11,
+             v7,
              i,
-             (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_EventRankingListViewObject__get_Item__);
-    if ( ListViewManager__ClippingItem((ListViewManager_o *)this, (ListViewObject_o *)Item, 0LL) )
+             (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_EventRankingListViewObject__get_Item__);
+    if ( ListViewManager__ClippingItem((ListViewManager_o *)this, (ListViewObject_o *)Item, 0) )
     {
-      v15 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-      System_Action___ctor(v15, (Il2CppObject *)this, Method_EventRankingListViewManager_OnMoveEnd__, 0LL);
+      v11 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+      System_Action___ctor(v11, (Il2CppObject *)this, Method_EventRankingListViewManager_OnMoveEnd__, 0);
       if ( !Item )
         goto LABEL_13;
-      ++v12;
-      EventRankingListViewObject__Init_31318636(
+      ++v8;
+      EventRankingListViewObject__Init_31815704(
         (EventRankingListViewObject_o *)Item,
         4,
-        v15,
+        v11,
         this->fields.listInDelay,
-        v16);
+        v12);
     }
     else
     {
       --this->fields.callbackCount;
     }
   }
-  if ( !v12 )
+  if ( !v8 )
   {
 LABEL_12:
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9865/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9936/*"OnMoveEnd"*/,
       this->fields.listInDelay + 0.5,
-      0LL);
+      0);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall EventRankingListViewManager__RequestListObject(
+void EventRankingListViewManager__RequestListObject(
         EventRankingListViewManager_o *this,
         int32_t mode,
         float delay,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   System_Collections_Generic_List_EventRankingListViewObject__o *ObjectList; // x0
-  __int64 v12; // x1
+  __int64 v8; // x1
   int32_t size; // w25
-  System_Collections_Generic_List_object__o *v14; // x21
-  int32_t v15; // w22
+  System_Collections_Generic_List_object__o *v10; // x21
+  int32_t v11; // w22
   Il2CppObject *Item; // x23
-  System_Action_o *v17; // x24
-  const MethodInfo *v18; // x3
+  System_Action_o *v13; // x24
+  const MethodInfo *v14; // x3
 
-  if ( (byte_4B16BC6 & 1) == 0 )
+  if ( (byte_4C218C5 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&mode);
-    sub_1BCAFF8(&Method_EventRankingListViewManager_OnMoveEnd__, v7);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingListViewObject__get_Count__, v8);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingListViewObject__get_Item__, v9);
-    sub_1BCAFF8(&StringLiteral_9865/*"OnMoveEnd"*/, v10);
-    byte_4B16BC6 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_EventRankingListViewManager_OnMoveEnd__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingListViewObject__get_Count__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingListViewObject__get_Item__);
+    sub_1C2D490(&StringLiteral_9936/*"OnMoveEnd"*/);
+    byte_4C218C5 = 1;
   }
   ObjectList = EventRankingListViewManager__get_ObjectList(this, *(const MethodInfo **)&mode);
   if ( !ObjectList )
     goto LABEL_10;
   size = ObjectList->fields._size;
-  v14 = (System_Collections_Generic_List_object__o *)ObjectList;
+  v10 = (System_Collections_Generic_List_object__o *)ObjectList;
   if ( size >= 1 )
   {
-    v15 = 0;
+    v11 = 0;
     this->fields.callbackCount = size;
     while ( 1 )
     {
       Item = System_Collections_Generic_List_object___get_Item(
-               v14,
-               v15,
-               (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_EventRankingListViewObject__get_Item__);
-      v17 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-      System_Action___ctor(v17, (Il2CppObject *)this, Method_EventRankingListViewManager_OnMoveEnd__, 0LL);
+               v10,
+               v11,
+               (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_EventRankingListViewObject__get_Item__);
+      v13 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+      System_Action___ctor(v13, (Il2CppObject *)this, Method_EventRankingListViewManager_OnMoveEnd__, 0);
       if ( !Item )
         break;
-      EventRankingListViewObject__Init_31318116((EventRankingListViewObject_o *)Item, mode, v17, v18);
-      if ( size == ++v15 )
+      EventRankingListViewObject__Init_31815184((EventRankingListViewObject_o *)Item, mode, v13, v14);
+      if ( size == ++v11 )
         return;
     }
 LABEL_10:
-    sub_1BCB254(ObjectList, v12);
+    sub_1C2D6EC(ObjectList, v8);
   }
   this->fields.callbackCount = 1;
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_9865/*"OnMoveEnd"*/,
+    (System_String_o *)StringLiteral_9936/*"OnMoveEnd"*/,
     delay,
-    0LL);
+    0);
 }
 
 
-void __fastcall EventRankingListViewManager__ResetAlphaAnimTime(
-        EventRankingListViewManager_o *this,
-        const MethodInfo *method)
+void EventRankingListViewManager__ResetAlphaAnimTime(EventRankingListViewManager_o *this, const MethodInfo *method)
 {
   __asm { FMOV            V0.2S, #1.0 }
   *(_QWORD *)&this->fields.alphaAnimNow = _D0;
-  this->fields.alphaAnimTimeOld = UnityEngine_Time__get_realtimeSinceStartup(0LL);
+  this->fields.alphaAnimTimeOld = UnityEngine_Time__get_realtimeSinceStartup(0);
 }
 
 
-void __fastcall EventRankingListViewManager__SetMode(
+void EventRankingListViewManager__SetMode(
         EventRankingListViewManager_o *this,
         int32_t mode,
         System_Action_o *callback,
@@ -937,69 +880,67 @@ void __fastcall EventRankingListViewManager__SetMode(
   const MethodInfo *v6; // x2
 
   this->fields.callbackFunc2 = callback;
-  sub_1BCAF9C(&this->fields.callbackFunc2);
-  EventRankingListViewManager__SetMode_31317392(this, mode, v6);
+  sub_1C2D434(&this->fields.callbackFunc2);
+  EventRankingListViewManager__SetMode_31814460(this, mode, v6);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall EventRankingListViewManager__SetMode_31317392(
+void EventRankingListViewManager__SetMode_31814460(
         EventRankingListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  const MethodInfo *v6; // x2
-  int32_t v7; // w1
+  const MethodInfo *v5; // x2
+  int32_t v6; // w1
   UnityEngine_Object_o *scrollBar; // x20
-  __int64 v9; // x1
+  __int64 v8; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4B16BC5 & 1) == 0 )
+  if ( (byte_4C218C4 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&mode);
-    sub_1BCAFF8(&StringLiteral_11242/*"RequestInto"*/, v5);
-    byte_4B16BC5 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_11339/*"RequestInto"*/);
+    byte_4C218C4 = 1;
   }
   this->fields.initMode = mode;
-  this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0LL);
-  ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 3, 0LL);
+  this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0);
+  ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 3, 0);
   switch ( mode )
   {
     case 1:
-      ListViewManager__DragMaskStart((ListViewManager_o *)this, 0LL);
+      ListViewManager__DragMaskStart((ListViewManager_o *)this, 0);
       scrollBar = (UnityEngine_Object_o *)this->fields.scrollBar;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality(scrollBar, 0LL, 0LL) )
+      if ( UnityEngine_Object__op_Inequality(scrollBar, 0, 0) )
       {
         gameObject = (UnityEngine_Component_o *)this->fields.scrollBar;
         if ( !gameObject
-          || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0LL)) == 0LL )
+          || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
         {
-          sub_1BCB254(gameObject, v9);
+          sub_1C2D6EC(gameObject, v8);
         }
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0LL);
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
       }
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_11242/*"RequestInto"*/,
+        (System_String_o *)StringLiteral_11339/*"RequestInto"*/,
         0.0,
-        0LL);
+        0);
       break;
     case 3:
-      v7 = 3;
+      v6 = 3;
       goto LABEL_15;
     case 2:
-      v7 = 2;
+      v6 = 2;
 LABEL_15:
-      EventRankingListViewManager__RequestListObject(this, v7, 0.0, v6);
+      EventRankingListViewManager__RequestListObject(this, v6, 0.0, v5);
       break;
   }
 }
 
 
-void __fastcall EventRankingListViewManager__SetMode_31317696(
+void EventRankingListViewManager__SetMode_31814764(
         EventRankingListViewManager_o *this,
         int32_t mode,
         float delay,
@@ -1010,52 +951,52 @@ void __fastcall EventRankingListViewManager__SetMode_31317696(
 
   this->fields.listInDelay = delay;
   this->fields.callbackFunc2 = callback;
-  sub_1BCAF9C(&this->fields.callbackFunc2);
-  EventRankingListViewManager__SetMode_31317392(this, mode, v7);
+  sub_1C2D434(&this->fields.callbackFunc2);
+  EventRankingListViewManager__SetMode_31814460(this, mode, v7);
 }
 
 
-void __fastcall EventRankingListViewManager__SetObjectItem(
+void EventRankingListViewManager__SetObjectItem(
         EventRankingListViewManager_o *this,
         ListViewObject_o *obj,
         ListViewItem_o *item,
         const MethodInfo *method)
 {
   EventRankingListViewManager_o *v5; // x20
-  __int64 methodPtr_low; // x10
+  __int64 naturalAligment; // x10
   int32_t v7; // w1
 
   v5 = this;
-  if ( (byte_4B16BC4 & 1) == 0 )
+  if ( (byte_4C218C3 & 1) == 0 )
   {
-    this = (EventRankingListViewManager_o *)sub_1BCAFF8(&EventRankingListViewObject_TypeInfo, obj);
-    byte_4B16BC4 = 1;
+    this = (EventRankingListViewManager_o *)sub_1C2D490(&EventRankingListViewObject_TypeInfo);
+    byte_4C218C3 = 1;
   }
   if ( !obj
-    || (methodPtr_low = LOBYTE(EventRankingListViewObject_TypeInfo->vtable._0_Equals.methodPtr),
-        LOBYTE(obj->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
-    || (EventRankingListViewObject_c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != EventRankingListViewObject_TypeInfo )
+    || (naturalAligment = EventRankingListViewObject_TypeInfo->_2.naturalAligment,
+        obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
+    || (EventRankingListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != EventRankingListViewObject_TypeInfo )
   {
-    sub_1BCB254(this, obj);
+    sub_1C2D6EC(this, obj);
   }
   if ( v5->fields.initMode == 3 )
     v7 = 3;
   else
     v7 = 2;
-  EventRankingListViewObject__Init_31317264((EventRankingListViewObject_o *)obj, v7, (const MethodInfo *)item);
+  EventRankingListViewObject__Init_31814332((EventRankingListViewObject_o *)obj, v7, (const MethodInfo *)item);
 }
 
 
-void __fastcall EventRankingListViewManager__Update(EventRankingListViewManager_o *this, const MethodInfo *method)
+void EventRankingListViewManager__Update(EventRankingListViewManager_o *this, const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
 
-  ListViewManager__Update((ListViewManager_o *)this, 0LL);
+  ListViewManager__Update((ListViewManager_o *)this, 0);
   EventRankingListViewManager__UpdateAnim(this, v3);
 }
 
 
-void __fastcall EventRankingListViewManager__UpdateAnim(EventRankingListViewManager_o *this, const MethodInfo *method)
+void EventRankingListViewManager__UpdateAnim(EventRankingListViewManager_o *this, const MethodInfo *method)
 {
   EventRankingListViewManager_c *v3; // x0
   float alphaAnimNow; // s8
@@ -1068,10 +1009,10 @@ void __fastcall EventRankingListViewManager__UpdateAnim(EventRankingListViewMana
   int32_t ALPHA_ANIM_COUNT_RESET_VAL; // w8
   int32_t v12; // w21
 
-  if ( (byte_4B16BCC & 1) == 0 )
+  if ( (byte_4C218CB & 1) == 0 )
   {
-    sub_1BCAFF8(&EventRankingListViewManager_TypeInfo, method);
-    byte_4B16BCC = 1;
+    sub_1C2D490(&EventRankingListViewManager_TypeInfo);
+    byte_4C218CB = 1;
   }
   v3 = EventRankingListViewManager_TypeInfo;
   alphaAnimNow = this->fields.alphaAnimNow;
@@ -1083,15 +1024,15 @@ void __fastcall EventRankingListViewManager__UpdateAnim(EventRankingListViewMana
   }
   this->fields.alphaAnimNow = alphaAnimNow
                             + (float)((float)(alphaAnimTgt - alphaAnimNow) * v3->static_fields->ALPHA_ANIMATION_SPD);
-  if ( (float)(UnityEngine_Time__get_realtimeSinceStartup(0LL) - this->fields.alphaAnimTimeOld) >= EventRankingListViewManager_TypeInfo->static_fields->ALPHA_ANIMATION_INTERVAL )
+  if ( (float)(UnityEngine_Time__get_realtimeSinceStartup(0) - this->fields.alphaAnimTimeOld) >= EventRankingListViewManager_TypeInfo->static_fields->ALPHA_ANIMATION_INTERVAL )
   {
     this->fields.alphaAnimTgt = 0.0;
-    this->fields.alphaAnimTimeOld = UnityEngine_Time__get_realtimeSinceStartup(0LL);
+    this->fields.alphaAnimTimeOld = UnityEngine_Time__get_realtimeSinceStartup(0);
   }
   if ( this->fields.alphaAnimTgt <= 0.0 && this->fields.alphaAnimNow <= 0.01 )
   {
     *(_QWORD *)&this->fields.alphaAnimNow = 0x3F80000000000000LL;
-    realtimeSinceStartup = UnityEngine_Time__get_realtimeSinceStartup(0LL);
+    realtimeSinceStartup = UnityEngine_Time__get_realtimeSinceStartup(0);
     alphaAnimCnt = this->fields.alphaAnimCnt;
     this->fields.alphaAnimTimeOld = realtimeSinceStartup;
     v9 = alphaAnimCnt + 1;
@@ -1118,7 +1059,7 @@ void __fastcall EventRankingListViewManager__UpdateAnim(EventRankingListViewMana
 }
 
 
-void __fastcall EventRankingListViewManager__add_callbackFunc2(
+void EventRankingListViewManager__add_callbackFunc2(
         EventRankingListViewManager_o *this,
         System_Action_o *value,
         const MethodInfo *method)
@@ -1132,255 +1073,241 @@ void __fastcall EventRankingListViewManager__add_callbackFunc2(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4B16BBE & 1) == 0 )
+  if ( (byte_4C218BD & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, value);
-    byte_4B16BBE = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    byte_4C218BD = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
   p_callbackFunc2 = &this->fields.callbackFunc2;
   while ( 1 )
   {
-    v7 = System_Delegate__Combine(callbackFunc2, (System_Delegate_o *)value, 0LL);
+    v7 = System_Delegate__Combine(callbackFunc2, (System_Delegate_o *)value, 0);
     if ( v7 )
     {
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C05088(p_callbackFunc2, v7, callbackFunc2);
+    v8 = sub_1C676E8(p_callbackFunc2, v7, callbackFunc2);
     v9 = callbackFunc2 == (System_Delegate_o *)v8;
     callbackFunc2 = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (EventRankingListViewManager_o *)sub_1BCB514(v7);
+  v10 = (EventRankingListViewManager_o *)sub_1C2D9AC(v7);
   EventRankingListViewManager__remove_callbackFunc2(v10, v11, v12);
 }
 
 
-float __fastcall EventRankingListViewManager__get_AlphaAnimNow(
-        EventRankingListViewManager_o *this,
-        const MethodInfo *method)
+float EventRankingListViewManager__get_AlphaAnimNow(EventRankingListViewManager_o *this, const MethodInfo *method)
 {
   return this->fields.alphaAnimNow;
 }
 
 
-System_Collections_Generic_List_EventRankingListViewObject__o *__fastcall EventRankingListViewManager__get_ClippingObjectList(
+System_Collections_Generic_List_EventRankingListViewObject__o *EventRankingListViewManager__get_ClippingObjectList(
         EventRankingListViewManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  System_Collections_Generic_List_object__o *v9; // x20
-  const MethodInfo *v10; // x1
+  System_Collections_Generic_List_object__o *v3; // x20
+  const MethodInfo *v4; // x1
   System_Collections_Generic_List_object__o *objectList; // x0
   int size; // w23
-  int32_t v13; // w21
+  int32_t v7; // w21
   Il2CppObject *Item; // x22
-  Il2CppObject *v15; // x22
+  Il2CppObject *v9; // x22
   struct System_Object_array *items; // x8
-  _QWORD *v17; // x9
-  __int64 v18; // x10
-  Il2CppClass **v19; // x0
+  _QWORD *v11; // x9
+  __int64 v12; // x10
+  Il2CppClass **v13; // x0
 
-  if ( (byte_4B16BC1 & 1) == 0 )
+  if ( (byte_4C218C0 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___, method);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingListViewObject__Add__, v3);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingListViewObject___ctor__, v4);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__get_Item__, v6);
-    sub_1BCAFF8(&System_Collections_Generic_List_EventRankingListViewObject__TypeInfo, v7);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v8);
-    byte_4B16BC1 = 1;
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingListViewObject__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingListViewObject___ctor__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_1C2D490(&System_Collections_Generic_List_EventRankingListViewObject__TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C218C0 = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventRankingListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_EventRankingListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v9,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventRankingListViewObject___ctor__);
+    v3,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_EventRankingListViewObject___ctor__);
   objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
   if ( !objectList )
     goto LABEL_21;
   size = objectList->fields._size;
   if ( size >= 1 )
   {
-    v13 = 0;
+    v7 = 0;
     do
     {
       Item = System_Collections_Generic_List_object___get_Item(
                objectList,
-               v13,
-               (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+               v7,
+               (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       objectList = (System_Collections_Generic_List_object__o *)UnityEngine_Object__op_Inequality(
                                                                   (UnityEngine_Object_o *)Item,
-                                                                  0LL,
-                                                                  0LL);
+                                                                  0,
+                                                                  0);
       if ( ((unsigned __int8)objectList & 1) != 0 )
       {
         if ( !Item )
           break;
         objectList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                     (UnityEngine_GameObject_o *)Item,
-                                                                    (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___);
+                                                                    (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___);
         if ( !objectList )
           break;
-        v15 = (Il2CppObject *)objectList;
+        v9 = (Il2CppObject *)objectList;
         objectList = (System_Collections_Generic_List_object__o *)EventRankingListViewObject__GetItem(
                                                                     (EventRankingListViewObject_o *)objectList,
-                                                                    v10);
+                                                                    v4);
         if ( !objectList )
           break;
-        v10 = (const MethodInfo *)objectList;
-        if ( !LOBYTE(objectList[2].monitor)
-          || (objectList = (System_Collections_Generic_List_object__o *)ListViewManager__ClippingItem_42948252(
+        v4 = (const MethodInfo *)objectList;
+        if ( !LOBYTE(objectList[2].fields._items)
+          || (objectList = (System_Collections_Generic_List_object__o *)ListViewManager__ClippingItem_43582756(
                                                                           (ListViewManager_o *)this,
                                                                           (ListViewItem_o *)objectList,
-                                                                          0LL),
+                                                                          0),
               ((unsigned __int8)objectList & 1) != 0) )
         {
-          if ( !v9 )
+          if ( !v3 )
             break;
-          items = v9->fields._items;
-          v17 = Method_System_Collections_Generic_List_EventRankingListViewObject__Add__;
-          ++v9->fields._version;
+          items = v3->fields._items;
+          v11 = Method_System_Collections_Generic_List_EventRankingListViewObject__Add__;
+          ++v3->fields._version;
           if ( !items )
             break;
-          v18 = v9->fields._size;
-          if ( (unsigned int)v18 >= items->max_length )
+          v12 = v3->fields._size;
+          if ( (unsigned int)v12 >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
+              v3,
               v9,
-              v15,
-              *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+              *(const MethodInfo_3789B84 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
           }
           else
           {
-            v19 = &items->obj.klass + v18;
-            v9->fields._size = v18 + 1;
-            v19[4] = (Il2CppClass *)v15;
-            sub_1BCAF9C(v19 + 4);
+            v13 = &items->obj.klass + v12;
+            v3->fields._size = v12 + 1;
+            v13[4] = (Il2CppClass *)v9;
+            sub_1C2D434(v13 + 4);
           }
         }
       }
-      if ( size == ++v13 )
-        return (System_Collections_Generic_List_EventRankingListViewObject__o *)v9;
+      if ( size == ++v7 )
+        return (System_Collections_Generic_List_EventRankingListViewObject__o *)v3;
       objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
     }
     while ( objectList );
 LABEL_21:
-    sub_1BCB254(objectList, v10);
+    sub_1C2D6EC(objectList, v4);
   }
-  return (System_Collections_Generic_List_EventRankingListViewObject__o *)v9;
+  return (System_Collections_Generic_List_EventRankingListViewObject__o *)v3;
 }
 
 
-System_Collections_Generic_List_EventRankingListViewObject__o *__fastcall EventRankingListViewManager__get_ObjectList(
+System_Collections_Generic_List_EventRankingListViewObject__o *EventRankingListViewManager__get_ObjectList(
         EventRankingListViewManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  System_Collections_Generic_List_object__o *v3; // x20
   __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  System_Collections_Generic_List_object__o *v9; // x20
-  __int64 v10; // x1
   System_Collections_Generic_List_object__o *objectList; // x0
   int size; // w23
-  int32_t v13; // w21
+  int32_t v7; // w21
   Il2CppObject *Item; // x22
   struct System_Object_array *items; // x8
-  _QWORD *v16; // x9
-  __int64 v17; // x10
-  System_Collections_Generic_List_object__o *v18; // x1
-  Il2CppClass **v19; // x0
+  _QWORD *v10; // x9
+  __int64 v11; // x10
+  System_Collections_Generic_List_object__o *v12; // x1
+  Il2CppClass **v13; // x0
 
-  if ( (byte_4B16BC0 & 1) == 0 )
+  if ( (byte_4C218BF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___, method);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingListViewObject__Add__, v3);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventRankingListViewObject___ctor__, v4);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__get_Count__, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__get_Item__, v6);
-    sub_1BCAFF8(&System_Collections_Generic_List_EventRankingListViewObject__TypeInfo, v7);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v8);
-    byte_4B16BC0 = 1;
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingListViewObject__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventRankingListViewObject___ctor__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_1C2D490(&System_Collections_Generic_List_EventRankingListViewObject__TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C218BF = 1;
   }
-  v9 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventRankingListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_EventRankingListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v9,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventRankingListViewObject___ctor__);
+    v3,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_EventRankingListViewObject___ctor__);
   objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
   if ( !objectList )
     goto LABEL_17;
   size = objectList->fields._size;
   if ( size >= 1 )
   {
-    v13 = 0;
+    v7 = 0;
     do
     {
       Item = System_Collections_Generic_List_object___get_Item(
                objectList,
-               v13,
-               (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+               v7,
+               (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       objectList = (System_Collections_Generic_List_object__o *)UnityEngine_Object__op_Inequality(
                                                                   (UnityEngine_Object_o *)Item,
-                                                                  0LL,
-                                                                  0LL);
+                                                                  0,
+                                                                  0);
       if ( ((unsigned __int8)objectList & 1) != 0 )
       {
         if ( !Item )
           break;
         objectList = (System_Collections_Generic_List_object__o *)UnityEngine_GameObject__GetComponent_object_(
                                                                     (UnityEngine_GameObject_o *)Item,
-                                                                    (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___);
-        if ( !v9 )
+                                                                    (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_EventRankingListViewObject___);
+        if ( !v3 )
           break;
-        items = v9->fields._items;
-        v16 = Method_System_Collections_Generic_List_EventRankingListViewObject__Add__;
-        ++v9->fields._version;
+        items = v3->fields._items;
+        v10 = Method_System_Collections_Generic_List_EventRankingListViewObject__Add__;
+        ++v3->fields._version;
         if ( !items )
           break;
-        v17 = v9->fields._size;
-        v18 = objectList;
-        if ( (unsigned int)v17 >= items->max_length )
+        v11 = v3->fields._size;
+        v12 = objectList;
+        if ( (unsigned int)v11 >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v9,
+            v3,
             (Il2CppObject *)objectList,
-            *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
         }
         else
         {
-          v19 = &items->obj.klass + v17;
-          v9->fields._size = v17 + 1;
-          v19[4] = (Il2CppClass *)v18;
-          sub_1BCAF9C(v19 + 4);
+          v13 = &items->obj.klass + v11;
+          v3->fields._size = v11 + 1;
+          v13[4] = (Il2CppClass *)v12;
+          sub_1C2D434(v13 + 4);
         }
       }
-      if ( size == ++v13 )
-        return (System_Collections_Generic_List_EventRankingListViewObject__o *)v9;
+      if ( size == ++v7 )
+        return (System_Collections_Generic_List_EventRankingListViewObject__o *)v3;
       objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
     }
     while ( objectList );
 LABEL_17:
-    sub_1BCB254(objectList, v10);
+    sub_1C2D6EC(objectList, v4);
   }
-  return (System_Collections_Generic_List_EventRankingListViewObject__o *)v9;
+  return (System_Collections_Generic_List_EventRankingListViewObject__o *)v3;
 }
 
 
-void __fastcall EventRankingListViewManager__remove_callbackFunc2(
+void EventRankingListViewManager__remove_callbackFunc2(
         EventRankingListViewManager_o *this,
         System_Action_o *value,
         const MethodInfo *method)
@@ -1393,58 +1320,55 @@ void __fastcall EventRankingListViewManager__remove_callbackFunc2(
   EventRankingListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4B16BBF & 1) == 0 )
+  if ( (byte_4C218BE & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, value);
-    byte_4B16BBF = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    byte_4C218BE = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
   p_callbackFunc2 = &this->fields.callbackFunc2;
   while ( 1 )
   {
-    v7 = System_Delegate__Remove(callbackFunc2, (System_Delegate_o *)value, 0LL);
+    v7 = System_Delegate__Remove(callbackFunc2, (System_Delegate_o *)value, 0);
     if ( v7 )
     {
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C05088(p_callbackFunc2, v7, callbackFunc2);
+    v8 = sub_1C676E8(p_callbackFunc2, v7, callbackFunc2);
     v9 = callbackFunc2 == (System_Delegate_o *)v8;
     callbackFunc2 = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (EventRankingListViewManager_o *)sub_1BCB514(v7);
+  v10 = (EventRankingListViewManager_o *)sub_1C2D9AC(v7);
   EventRankingListViewManager__Update(v10, v11);
 }
 
 
-void __fastcall EventRankingListViewManager___c___cctor(const MethodInfo *method)
+void EventRankingListViewManager___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
+  Il2CppObject *v1; // x19
 
-  if ( (byte_4B16BCF & 1) == 0 )
+  if ( (byte_4C218CE & 1) == 0 )
   {
-    sub_1BCAFF8(&EventRankingListViewManager___c_TypeInfo, v1);
-    byte_4B16BCF = 1;
+    sub_1C2D490(&EventRankingListViewManager___c_TypeInfo);
+    byte_4C218CE = 1;
   }
-  v2 = (Il2CppObject *)sub_1BCB244(EventRankingListViewManager___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  EventRankingListViewManager___c_TypeInfo->static_fields->__9 = (struct EventRankingListViewManager___c_o *)v2;
-  sub_1BCAF9C(EventRankingListViewManager___c_TypeInfo->static_fields);
+  v1 = (Il2CppObject *)sub_1C2D6DC(EventRankingListViewManager___c_TypeInfo);
+  System_Object___ctor(v1, 0);
+  EventRankingListViewManager___c_TypeInfo->static_fields->__9 = (struct EventRankingListViewManager___c_o *)v1;
+  sub_1C2D434(EventRankingListViewManager___c_TypeInfo->static_fields);
 }
 
 
-void __fastcall EventRankingListViewManager___c___ctor(
-        EventRankingListViewManager___c_o *this,
-        const MethodInfo *method)
+void EventRankingListViewManager___c___ctor(EventRankingListViewManager___c_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-int32_t __fastcall EventRankingListViewManager___c___CreateList_b__19_0(
+int32_t EventRankingListViewManager___c___CreateList_b__19_0(
         EventRankingListViewManager___c_o *this,
         EventRankingRoundItemInfo_o *a,
         EventRankingRoundItemInfo_o *b,
@@ -1453,6 +1377,6 @@ int32_t __fastcall EventRankingListViewManager___c___CreateList_b__19_0(
   float v4; // s1
 
   if ( !b || !a )
-    sub_1BCB254(this, a);
-  return System_Single__CompareTo_64043872(a->fields.goalRate, v4, (const MethodInfo *)&b->fields.goalRate);
+    sub_1C2D6EC(this, a);
+  return System_Single__CompareTo_65053240(a->fields.goalRate, v4, (const MethodInfo *)&b->fields.goalRate);
 }

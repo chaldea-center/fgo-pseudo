@@ -1,12 +1,10 @@
-void __fastcall SwitchParameterDisplayComponent___ctor(
-        SwitchParameterDisplayComponent_o *this,
-        const MethodInfo *method)
+void SwitchParameterDisplayComponent___ctor(SwitchParameterDisplayComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-bool __fastcall SwitchParameterDisplayComponent__ParameterChange(
+bool SwitchParameterDisplayComponent__ParameterChange(
         SwitchParameterDisplayComponent_o *this,
         int32_t count,
         const MethodInfo *method)
@@ -15,7 +13,7 @@ bool __fastcall SwitchParameterDisplayComponent__ParameterChange(
 }
 
 
-bool __fastcall SwitchParameterDisplayComponent__UpdateAlpha(
+bool SwitchParameterDisplayComponent__UpdateAlpha(
         SwitchParameterDisplayComponent_o *this,
         float alpha,
         const MethodInfo *method)

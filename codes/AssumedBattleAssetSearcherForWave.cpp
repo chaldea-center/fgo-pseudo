@@ -1,21 +1,20 @@
-AssumedBattleAssetSearcherForWave_o *__fastcall AssumedBattleAssetSearcherForWave__Create(const MethodInfo *method)
+AssumedBattleAssetSearcherForWave_o *AssumedBattleAssetSearcherForWave__Create(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  AssumedBattleAssetSearcherBase_o *v2; // x19
-  const MethodInfo *v3; // x1
+  AssumedBattleAssetSearcherBase_o *v1; // x19
+  const MethodInfo *v2; // x1
 
-  if ( (byte_4B1E948 & 1) == 0 )
+  if ( (byte_4C2977A & 1) == 0 )
   {
-    sub_1BCAFF8(&AssumedBattleAssetSearcherForWave_TypeInfo, v1);
-    byte_4B1E948 = 1;
+    sub_1C2D490(&AssumedBattleAssetSearcherForWave_TypeInfo);
+    byte_4C2977A = 1;
   }
-  v2 = (AssumedBattleAssetSearcherBase_o *)sub_1BCB244(AssumedBattleAssetSearcherForWave_TypeInfo);
-  AssumedBattleAssetSearcherBase___ctor(v2, v3);
-  return (AssumedBattleAssetSearcherForWave_o *)v2;
+  v1 = (AssumedBattleAssetSearcherBase_o *)sub_1C2D6DC(AssumedBattleAssetSearcherForWave_TypeInfo);
+  AssumedBattleAssetSearcherBase___ctor(v1, v2);
+  return (AssumedBattleAssetSearcherForWave_o *)v1;
 }
 
 
-AssumedBattleAssetLoadManager_AnalyzedResultParam_o *__fastcall AssumedBattleAssetSearcherForWave__Search(
+AssumedBattleAssetLoadManager_AnalyzedResultParam_o *AssumedBattleAssetSearcherForWave__Search(
         AssumedBattleAssetSearcherForWave_o *this,
         const MethodInfo *method)
 {
@@ -28,22 +27,20 @@ AssumedBattleAssetLoadManager_AnalyzedResultParam_o *__fastcall AssumedBattleAss
   const MethodInfo *v8; // x2
 
   v2 = this;
-  if ( (byte_4B1E947 & 1) == 0 )
+  if ( (byte_4C29779 & 1) == 0 )
   {
-    this = (AssumedBattleAssetSearcherForWave_o *)sub_1BCAFF8(
-                                                    &AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo,
-                                                    method);
-    byte_4B1E947 = 1;
+    this = (AssumedBattleAssetSearcherForWave_o *)sub_1C2D490(&AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
+    byte_4C29779 = 1;
   }
   manager = v2->fields.manager;
   if ( !manager
-    || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0LL
-    || (this = (AssumedBattleAssetSearcherForWave_o *)Perf_k__BackingField->fields.data) == 0LL )
+    || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0
+    || (this = (AssumedBattleAssetSearcherForWave_o *)Perf_k__BackingField->fields.data) == 0 )
   {
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   }
-  StageEntity = BattleData__getStageEntity((BattleData_o *)this, 0LL);
-  v6 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1BCB244(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
+  StageEntity = BattleData__getStageEntity((BattleData_o *)this, 0);
+  v6 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1C2D6DC(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
   AssumedBattleAssetLoadManager_AnalyzedResultParam___ctor(v6, v7);
   AssumedEffectExtractLogic__FromStage(StageEntity, v6, v8);
   return v6;

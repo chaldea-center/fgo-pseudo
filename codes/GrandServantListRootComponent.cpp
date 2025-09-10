@@ -1,10 +1,10 @@
-void __fastcall GrandServantListRootComponent___ctor(GrandServantListRootComponent_o *this, const MethodInfo *method)
+void GrandServantListRootComponent___ctor(GrandServantListRootComponent_o *this, const MethodInfo *method)
 {
-  SceneRootComponent___ctor((SceneRootComponent_o *)this, 0LL);
+  SceneRootComponent___ctor((SceneRootComponent_o *)this, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent__DecideActionSendMessageMenuDecide(
+void GrandServantListRootComponent__DecideActionSendMessageMenuDecide(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
@@ -12,945 +12,1503 @@ void __fastcall GrandServantListRootComponent__DecideActionSendMessageMenuDecide
   __int64 v4; // x1
   const MethodInfo *v5; // x1
 
-  if ( (byte_4B173EA & 1) == 0 )
+  if ( (byte_4C2210C & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, method);
-    byte_4B173EA = 1;
+    sub_1C2D490(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    byte_4C2210C = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_38F8EF8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
-    sub_1BCB254(0LL, v4);
-  MissionNotifyManager__EndPause((MissionNotifyManager_o *)Instance, 0LL);
+    sub_1C2D6EC(0, v4);
+  MissionNotifyManager__EndPause((MissionNotifyManager_o *)Instance, 0);
   GrandServantListRootComponent__SendMessageMenuDecide(this, v5);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantListRootComponent__EndShowEquip(
+void GrandServantListRootComponent__EndShowEquip(
         GrandServantListRootComponent_o *this,
         bool isModify,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
   Il2CppObject *Instance; // x20
-  System_Action_o *v7; // x21
-  __int64 v8; // x0
-  __int64 v9; // x1
+  System_Action_o *v5; // x21
+  __int64 v6; // x0
+  __int64 v7; // x1
 
-  if ( (byte_4B173E6 & 1) == 0 )
+  if ( (byte_4C22108 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, isModify);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_SendMessageCloseStatus__, v4);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_4B173E6 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_SendMessageCloseStatus__);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C22108 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v7 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_GrandServantListRootComponent_SendMessageCloseStatus__, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v5 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_GrandServantListRootComponent_SendMessageCloseStatus__, 0);
   if ( !Instance )
-    sub_1BCB254(v8, v9);
-  CommonUI__CloseServantEquipStatusDialog((CommonUI_o *)Instance, v7, 0LL);
+    sub_1C2D6EC(v6, v7);
+  CommonUI__CloseServantEquipStatusDialog((CommonUI_o *)Instance, v5, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantListRootComponent__EndShowServant(
+void GrandServantListRootComponent__EndShowServant(
         GrandServantListRootComponent_o *this,
         bool isModify,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
   Il2CppObject *Instance; // x20
-  System_Action_o *v7; // x21
-  __int64 v8; // x0
-  __int64 v9; // x1
+  System_Action_o *v5; // x21
+  __int64 v6; // x0
+  __int64 v7; // x1
 
-  if ( (byte_4B173E4 & 1) == 0 )
+  if ( (byte_4C22106 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, isModify);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_SendMessageCloseStatus__, v4);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v5);
-    byte_4B173E4 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_SendMessageCloseStatus__);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C22106 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v7 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_GrandServantListRootComponent_SendMessageCloseStatus__, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v5 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v5, (Il2CppObject *)this, Method_GrandServantListRootComponent_SendMessageCloseStatus__, 0);
   if ( !Instance )
-    sub_1BCB254(v8, v9);
-  CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v7, 0LL);
+    sub_1C2D6EC(v6, v7);
+  CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v5, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantListRootComponent__EndShowServantWithQuest(
+void GrandServantListRootComponent__EndShowServantWithQuest(
         GrandServantListRootComponent_o *this,
         bool isModify,
         int32_t questId,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   Il2CppObject *Instance; // x0
-  __int64 v12; // x1
-  GrandServantListRootComponent___c_c *v13; // x8
-  CommonUI_o *v14; // x19
-  System_Action_o *_9__37_0; // x20
-  Il2CppObject *v16; // x21
+  __int64 v8; // x1
+  GrandServantListRootComponent___c_c *v9; // x8
+  CommonUI_o *v10; // x19
+  System_Action_o *_9__43_0; // x20
+  Il2CppObject *v12; // x21
   struct GrandServantListRootComponent___c_StaticFields *static_fields; // x0
-  GrandServantListData_o *v18; // x21
-  const MethodInfo *v19; // x1
-  const MethodInfo *v20; // x2
+  GrandServantListData_o *v14; // x21
+  const MethodInfo *v15; // x1
   struct GrandServantListMenu_o *listMenu; // x8
 
-  if ( (byte_4B173E5 & 1) == 0 )
+  if ( (byte_4C22107 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, isModify);
-    sub_1BCAFF8(&GrandServantListData_TypeInfo, v7);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v8);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent___c__EndShowServantWithQuest_b__37_0__, v9);
-    sub_1BCAFF8(&GrandServantListRootComponent___c_TypeInfo, v10);
-    byte_4B173E5 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&GrandServantListData_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__EndShowServantWithQuest_b__43_0__);
+    sub_1C2D490(&GrandServantListRootComponent___c_TypeInfo);
+    byte_4C22107 = 1;
   }
   if ( questId >= 1 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v13 = GrandServantListRootComponent___c_TypeInfo;
-    v14 = (CommonUI_o *)Instance;
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v9 = GrandServantListRootComponent___c_TypeInfo;
+    v10 = (CommonUI_o *)Instance;
     if ( !GrandServantListRootComponent___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(GrandServantListRootComponent___c_TypeInfo);
-      v13 = GrandServantListRootComponent___c_TypeInfo;
+      v9 = GrandServantListRootComponent___c_TypeInfo;
     }
-    _9__37_0 = v13->static_fields->__9__37_0;
-    if ( !_9__37_0 )
+    _9__43_0 = v9->static_fields->__9__43_0;
+    if ( !_9__43_0 )
     {
-      if ( !v13->_2.cctor_finished )
+      if ( !v9->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v13);
-        v13 = GrandServantListRootComponent___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v9);
+        v9 = GrandServantListRootComponent___c_TypeInfo;
       }
-      v16 = (Il2CppObject *)v13->static_fields->__9;
-      _9__37_0 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
+      v12 = (Il2CppObject *)v9->static_fields->__9;
+      _9__43_0 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
       System_Action___ctor(
-        _9__37_0,
-        v16,
-        Method_GrandServantListRootComponent___c__EndShowServantWithQuest_b__37_0__,
-        0LL);
+        _9__43_0,
+        v12,
+        Method_GrandServantListRootComponent___c__EndShowServantWithQuest_b__43_0__,
+        0);
       static_fields = GrandServantListRootComponent___c_TypeInfo->static_fields;
-      static_fields->__9__37_0 = _9__37_0;
-      Instance = (Il2CppObject *)sub_1BCAF9C(&static_fields->__9__37_0);
+      static_fields->__9__43_0 = _9__43_0;
+      Instance = (Il2CppObject *)sub_1C2D434(&static_fields->__9__43_0);
     }
-    if ( v14 )
+    if ( v10 )
     {
-      CommonUI__CloseServantStatusDialog(v14, _9__37_0, 0LL);
+      CommonUI__CloseServantStatusDialog(v10, _9__43_0, 0);
       return;
     }
 LABEL_17:
-    sub_1BCB254(Instance, v12);
+    sub_1C2D6EC(Instance, v8);
   }
   if ( isModify )
   {
-    v18 = (GrandServantListData_o *)sub_1BCB244(GrandServantListData_TypeInfo);
-    GrandServantListData___ctor(v18, v19);
-    this->fields.grandServantListData = v18;
-    Instance = (Il2CppObject *)sub_1BCAF9C(&this->fields.grandServantListData);
+    v14 = (GrandServantListData_o *)sub_1C2D6DC(GrandServantListData_TypeInfo);
+    GrandServantListData___ctor(v14, v15);
+    this->fields.grandServantListData = v14;
+    Instance = (Il2CppObject *)sub_1C2D434(&this->fields.grandServantListData);
     listMenu = this->fields.listMenu;
     if ( !listMenu )
       goto LABEL_17;
     Instance = (Il2CppObject *)listMenu->fields.menu;
     if ( !Instance )
       goto LABEL_17;
-    GrandServantListMenuLayout__UpdateView(
-      (GrandServantListMenuLayout_o *)Instance,
+    ((void (__fastcall *)(Il2CppObject *, struct GrandServantListData_o *, const MethodInfo *))Instance->klass->vtable[6].methodPtr)(
+      Instance,
       this->fields.grandServantListData,
-      v20);
+      Instance->klass->vtable[6].method);
   }
   GrandServantListRootComponent__EndShowServant(this, 0, *(const MethodInfo **)&questId);
 }
 
 
+void GrandServantListRootComponent__ForceChangeSceneFromGrandScore(
+        GrandServantListRootComponent_o *this,
+        const MethodInfo *method)
+{
+  SceneJumpInfo_o *v3; // x19
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
+  SceneJumpInfo_o *sceneJumpInfo; // x20
+
+  if ( (byte_4C220F4 & 1) == 0 )
+  {
+    sub_1C2D490(&SceneJumpInfo_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C220F4 = 1;
+  }
+  v3 = (SceneJumpInfo_o *)sub_1C2D6DC(SceneJumpInfo_TypeInfo);
+  SceneJumpInfo___ctor_41257388(v3, (System_String_o *)StringLiteral_1/*""*/, 9, 0);
+  if ( !v3 )
+    goto LABEL_8;
+  SceneJumpInfo__SetReturnNowScene(v3, 0);
+  sceneJumpInfo = this->fields.sceneJumpInfo;
+  if ( !sceneJumpInfo )
+  {
+    sceneJumpInfo = (SceneJumpInfo_o *)sub_1C2D6DC(SceneJumpInfo_TypeInfo);
+    SceneJumpInfo___ctor(sceneJumpInfo, 0);
+  }
+  v3->fields.backSceneJumpInfo = sceneJumpInfo;
+  sub_1C2D434(&v3->fields.backSceneJumpInfo);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  if ( !Instance )
+LABEL_8:
+    sub_1C2D6EC(Instance, v5);
+  AvalonSceneManager__changeScene((AvalonSceneManager_o *)Instance, 91, 1, (Il2CppObject *)v3, 0);
+}
+
+
 // local variable allocation has failed, the output may be wrong!
-Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall GrandServantListRootComponent__InstantiateAssetObject___Il2CppFullySharedGenericType_(
+Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o GrandServantListRootComponent__InstantiateAssetObject___Il2CppFullySharedGenericType_(
         GrandServantListRootComponent_o *this,
         System_String_o *objectName,
-        const MethodInfo_30707D4 *method)
+        const MethodInfo_3127F94 *method)
 {
   __int64 v3; // x3
   __int64 v4; // x20
   __int64 v7; // x8
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x21
+  size_t v9; // x21
   AssetData_o *AssetStorage; // x0
-  __int64 v15; // x1
-  Il2CppObject *v16; // x23
+  __int64 v11; // x1
+  Il2CppObject *v12; // x23
   UnityEngine_Transform_o *transform; // x24
-  AssetData_o *v18; // x2
-  __int64 *v19; // x1
-  __int64 v20; // x0
-  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v21; // x0 OVERLAPPED
-  void *v22; // x1
-  __int64 v23[2]; // [xsp+0h] [xbp-10h] BYREF
+  AssetData_o *v14; // x2
+  __int64 *v15; // x1
+  __int64 v16; // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v17; // x0
+  void *v18; // x1
+  _QWORD v19[2]; // [xsp+0h] [xbp-10h] BYREF
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
 
   v4 = v3;
-  v23[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  v19[1] = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
   v7 = *(_QWORD *)(v3 + 56);
   if ( !v7 )
   {
-    sub_1BCAFF8(&Method_AssetData_GetObject_GameObject____76915336, objectName);
-    sub_1BCAFF8(&AssetManager_TypeInfo, v9);
-    sub_1BCAFF8(&Method_UnityEngine_Object_Instantiate_GameObject____77001424, v10);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v11);
-    sub_1BCAFF8(&StringLiteral_7094/*"GrandServantList"*/, v12);
+    sub_1C2D490(&Method_AssetData_GetObject_GameObject____77994080);
+    sub_1C2D490(&AssetManager_TypeInfo);
+    sub_1C2D490(&Method_UnityEngine_Object_Instantiate_GameObject____78081576);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_7154/*"GrandServantList"*/);
     v7 = *(_QWORD *)(v4 + 56);
     if ( !v7 )
     {
-      sub_1C1B4B8();
+      sub_1C7DC00();
       v7 = *(_QWORD *)(v4 + 56);
     }
   }
-  v13 = *(unsigned int *)(*(_QWORD *)(v7 + 8) + 252LL);
+  v9 = *(unsigned int *)(*(_QWORD *)(v7 + 8) + 252LL);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_7094/*"GrandServantList"*/, 0LL);
+  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_7154/*"GrandServantList"*/, 0);
   if ( !AssetStorage )
     goto LABEL_12;
-  AssetStorage = (AssetData_o *)AssetData__GetObject_object__50315216(
+  AssetStorage = (AssetData_o *)AssetData__GetObject_object__51051712(
                                   AssetStorage,
                                   objectName,
-                                  (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
+                                  (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080);
   if ( !this->fields.uiRoot )
     goto LABEL_12;
-  v16 = (Il2CppObject *)AssetStorage;
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this->fields.uiRoot, 0LL);
+  v12 = (Il2CppObject *)AssetStorage;
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this->fields.uiRoot, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  AssetStorage = (AssetData_o *)UnityEngine_Object__Instantiate_object__51002592(
-                                  v16,
+  AssetStorage = (AssetData_o *)UnityEngine_Object__Instantiate_object__51752420(
+                                  v12,
                                   transform,
-                                  (const MethodInfo_30A3CE0 *)Method_UnityEngine_Object_Instantiate_GameObject____77001424);
+                                  (const MethodInfo_315ADE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78081576);
   if ( !AssetStorage )
 LABEL_12:
-    sub_1BCB254(AssetStorage, v15);
-  v18 = AssetStorage;
-  v19 = **(__int64 ***)(v4 + 56);
-  v20 = *v19;
-  v23[0] = (__int64)v23 - ((v13 + 15) & 0x1FFFFFFF0LL);
-  ((void (__fastcall *)(__int64, __int64 *, AssetData_o *, __int64 *, __int64))v19[2])(v20, v19, v18, v23, v23[0]);
-  v21 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+    sub_1C2D6EC(AssetStorage, v11);
+  v14 = AssetStorage;
+  v15 = **(__int64 ***)(v4 + 56);
+  v16 = *v15;
+  v19[0] = (char *)v19 - ((v9 + 15) & 0x1FFFFFFF0LL);
+  ((void (__fastcall *)(__int64, __int64 *, AssetData_o *, _QWORD *, _QWORD))v15[2])(v16, v15, v14, v19, v19[0]);
+  v17 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
                                                                     (void *)method,
-                                                                    (char *)v23 - ((v13 + 15) & 0x1FFFFFFF0LL),
-                                                                    v13);
-  result.monitor = v22;
-  result.klass = v21;
+                                                                    (char *)v19 - ((v9 + 15) & 0x1FFFFFFF0LL),
+                                                                    v9);
+  result.monitor = v18;
+  result.klass = v17;
   return result;
 }
 
 
-Il2CppObject *__fastcall GrandServantListRootComponent__InstantiateAssetObject_object_(
+Il2CppObject *GrandServantListRootComponent__InstantiateAssetObject_object_(
         GrandServantListRootComponent_o *this,
         System_String_o *objectName,
-        const MethodInfo_30706BC *method)
+        const MethodInfo_3127E7C *method)
 {
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   AssetData_o *AssetStorage; // x0
-  __int64 v11; // x1
+  __int64 v7; // x1
   UnityEngine_Component_o *uiRoot; // x8
-  Il2CppObject *v13; // x20
+  Il2CppObject *v9; // x20
   UnityEngine_Transform_o *transform; // x21
 
   if ( !method->rgctx_data )
   {
-    sub_1BCAFF8(&Method_AssetData_GetObject_GameObject____76915336, objectName);
-    sub_1BCAFF8(&AssetManager_TypeInfo, v6);
-    sub_1BCAFF8(&Method_UnityEngine_Object_Instantiate_GameObject____77001424, v7);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v8);
-    sub_1BCAFF8(&StringLiteral_7094/*"GrandServantList"*/, v9);
+    sub_1C2D490(&Method_AssetData_GetObject_GameObject____77994080);
+    sub_1C2D490(&AssetManager_TypeInfo);
+    sub_1C2D490(&Method_UnityEngine_Object_Instantiate_GameObject____78081576);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_7154/*"GrandServantList"*/);
     if ( !method->rgctx_data )
-      sub_1C1B4B8();
+      sub_1C7DC00();
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_7094/*"GrandServantList"*/, 0LL);
+  AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_7154/*"GrandServantList"*/, 0);
   if ( !AssetStorage )
     goto LABEL_12;
-  AssetStorage = (AssetData_o *)AssetData__GetObject_object__50315216(
+  AssetStorage = (AssetData_o *)AssetData__GetObject_object__51051712(
                                   AssetStorage,
                                   objectName,
-                                  (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
+                                  (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080);
   uiRoot = (UnityEngine_Component_o *)this->fields.uiRoot;
   if ( !uiRoot )
     goto LABEL_12;
-  v13 = (Il2CppObject *)AssetStorage;
-  transform = UnityEngine_Component__get_transform(uiRoot, 0LL);
+  v9 = (Il2CppObject *)AssetStorage;
+  transform = UnityEngine_Component__get_transform(uiRoot, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  AssetStorage = (AssetData_o *)UnityEngine_Object__Instantiate_object__51002592(
-                                  v13,
+  AssetStorage = (AssetData_o *)UnityEngine_Object__Instantiate_object__51752420(
+                                  v9,
                                   transform,
-                                  (const MethodInfo_30A3CE0 *)Method_UnityEngine_Object_Instantiate_GameObject____77001424);
+                                  (const MethodInfo_315ADE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78081576);
   if ( !AssetStorage )
 LABEL_12:
-    sub_1BCB254(AssetStorage, v11);
+    sub_1C2D6EC(AssetStorage, v7);
   return UnityEngine_GameObject__GetComponent_object_(
            (UnityEngine_GameObject_o *)AssetStorage,
-           (const MethodInfo_306E710 *)method->rgctx_data->_0_UnityEngine_GameObject_GetComponent_T_);
+           (const MethodInfo_3125ED0 *)method->rgctx_data->_0_UnityEngine_GameObject_GetComponent_T_);
 }
 
 
-void __fastcall GrandServantListRootComponent__OnClickBack(
+bool GrandServantListRootComponent__IsForceChangeSceneFromGrandScore(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  _QWORD *v6; // x0
-  System_Reflection_MethodBase_o *v7; // x0
+  ClassBoardRootComponent_c *v2; // x0
+
+  if ( (byte_4C220F3 & 1) == 0 )
+  {
+    sub_1C2D490(&ClassBoardRootComponent_TypeInfo);
+    byte_4C220F3 = 1;
+  }
+  v2 = ClassBoardRootComponent_TypeInfo;
+  if ( !ClassBoardRootComponent_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(ClassBoardRootComponent_TypeInfo);
+    v2 = ClassBoardRootComponent_TypeInfo;
+  }
+  return EventTutorialMaster__CheckShouldPlayOpenTypeNoneEventTutorial(
+           v2->static_fields->U_MEDAL_CREATE_EVENT_ID,
+           96,
+           0);
+}
+
+
+void GrandServantListRootComponent__OnClickBack(GrandServantListRootComponent_o *this, const MethodInfo *method)
+{
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
   struct SceneJumpInfo_o *sceneJumpInfo; // x8
-  Il2CppObject *Instance; // x0
-  __int64 v10; // x1
-  int32_t v11; // w1
-  struct SceneJumpInfo_o *v12; // x8
+  Il2CppObject *IsNullOrEmpty; // x0
+  __int64 v7; // x1
+  struct SupportInfoJump_o *supportInfoJump; // x0
+  Il2CppObject *v9; // x2
+  struct SceneJumpInfo_o *v10; // x8
   System_String_o *returnSceneName; // x20
   System_String_o *SceneName; // x0
-  __int64 v15; // x1
-  TerminalPramsManager_c *v16; // x0
-  struct SceneJumpInfo_o *v17; // x8
+  TerminalPramsManager_c *v13; // x0
+  int32_t v14; // w1
+  struct SceneJumpInfo_o *v15; // x8
 
-  if ( (byte_4B173D5 & 1) == 0 )
+  if ( (byte_4C220F5 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_OnClickBack__, method);
-    sub_1BCAFF8(&SceneList_TypeInfo, v3);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v4);
-    sub_1BCAFF8(&TerminalPramsManager_TypeInfo, v5);
-    byte_4B173D5 = 1;
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnClickBack__);
+    sub_1C2D490(&SceneList_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C2D490(&TerminalPramsManager_TypeInfo);
+    byte_4C220F5 = 1;
   }
-  v6 = Method_GrandServantListRootComponent_OnClickBack__;
+  v3 = Method_GrandServantListRootComponent_OnClickBack__;
   if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnClickBack__ + 83) & 2) != 0 )
-    v6 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnClickBack__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v6, v6[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0, 0LL);
+    v3 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnClickBack__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   sceneJumpInfo = this->fields.sceneJumpInfo;
-  if ( !sceneJumpInfo
-    || (Instance = (Il2CppObject *)System_String__IsNullOrEmpty(sceneJumpInfo->fields.returnSceneName, 0LL),
-        ((unsigned __int8)Instance & 1) != 0) )
+  if ( sceneJumpInfo )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    if ( Instance )
+    IsNullOrEmpty = (Il2CppObject *)System_String__IsNullOrEmpty(sceneJumpInfo->fields.returnSceneName, 0);
+    if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
     {
-      if ( AvalonSceneManager__popScene((AvalonSceneManager_o *)Instance, 1, 0LL, 0LL) )
-        return;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      if ( Instance )
+      v10 = this->fields.sceneJumpInfo;
+      if ( !v10 )
+        goto LABEL_32;
+      returnSceneName = v10->fields.returnSceneName;
+      if ( !SceneList_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
+      SceneName = SceneList__getSceneName(34, 0);
+      if ( !System_String__op_Equality(returnSceneName, SceneName, 0) )
       {
-        v11 = 39;
-LABEL_23:
-        AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, v11, 1, 0LL, 0LL);
+        IsNullOrEmpty = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+        v15 = this->fields.sceneJumpInfo;
+        if ( !v15 || !IsNullOrEmpty )
+          goto LABEL_32;
+        AvalonSceneManager__transitionScene_40937920(
+          (AvalonSceneManager_o *)IsNullOrEmpty,
+          v15->fields.returnSceneName,
+          1,
+          (Il2CppObject *)v15->fields.backSceneJumpInfo,
+          0);
         return;
       }
+      if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+      if ( !byte_4C21ACD )
+      {
+        sub_1C2D490(&TerminalPramsManager_TypeInfo);
+        byte_4C21ACD = 1;
+      }
+      v13 = TerminalPramsManager_TypeInfo;
+      if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+        v13 = TerminalPramsManager_TypeInfo;
+      }
+      v13->static_fields->_IsAutoResume_k__BackingField = 1;
+      IsNullOrEmpty = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      if ( !IsNullOrEmpty )
+        goto LABEL_32;
+      v14 = 34;
+LABEL_31:
+      AvalonSceneManager__transitionScene((AvalonSceneManager_o *)IsNullOrEmpty, v14, 1, 0, 0);
+      return;
     }
-    goto LABEL_27;
   }
-  v12 = this->fields.sceneJumpInfo;
-  if ( !v12 )
-    goto LABEL_27;
-  returnSceneName = v12->fields.returnSceneName;
-  if ( !SceneList_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
-  SceneName = SceneList__getSceneName(34, 0LL);
-  if ( System_String__op_Equality(returnSceneName, SceneName, 0LL) )
+  supportInfoJump = this->fields.supportInfoJump;
+  if ( !supportInfoJump )
   {
-    if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4B16DCD )
-    {
-      sub_1BCAFF8(&TerminalPramsManager_TypeInfo, v15);
-      byte_4B16DCD = 1;
-    }
-    v16 = TerminalPramsManager_TypeInfo;
-    if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      v16 = TerminalPramsManager_TypeInfo;
-    }
-    v16->static_fields->_IsAutoResume_k__BackingField = 1;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    if ( Instance )
-    {
-      v11 = 34;
-      goto LABEL_23;
-    }
-LABEL_27:
-    sub_1BCB254(Instance, v10);
+    IsNullOrEmpty = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    if ( !IsNullOrEmpty )
+      goto LABEL_32;
+    if ( AvalonSceneManager__popScene((AvalonSceneManager_o *)IsNullOrEmpty, 1, 0, 0) )
+      return;
+    IsNullOrEmpty = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    if ( !IsNullOrEmpty )
+      goto LABEL_32;
+    v14 = 39;
+    goto LABEL_31;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-  v17 = this->fields.sceneJumpInfo;
-  if ( !v17 || !Instance )
-    goto LABEL_27;
-  AvalonSceneManager__transitionScene_40339144(
-    (AvalonSceneManager_o *)Instance,
-    v17->fields.returnSceneName,
-    1,
-    (Il2CppObject *)v17->fields.backSceneJumpInfo,
-    0LL);
+  v9 = (Il2CppObject *)this->fields.supportInfoJump;
+  supportInfoJump->fields.selectClassId = -1;
+  if ( !SupportInfoJump__ReturnScene(supportInfoJump, 1, v9, 0) )
+  {
+    IsNullOrEmpty = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    if ( IsNullOrEmpty )
+    {
+      AvalonSceneManager__popScene(
+        (AvalonSceneManager_o *)IsNullOrEmpty,
+        1,
+        (Il2CppObject *)this->fields.supportInfoJump,
+        0);
+      return;
+    }
+LABEL_32:
+    sub_1C2D6EC(IsNullOrEmpty, v7);
+  }
 }
 
 
-void __fastcall GrandServantListRootComponent__OnClickHelpBtn(
+void GrandServantListRootComponent__OnClickHelpBtn(GrandServantListRootComponent_o *this, const MethodInfo *method)
+{
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  void *v5; // x0
+  __int64 v6; // x1
+  __int64 v7; // x2
+  GrandServantListRootComponent___c_c *v8; // x8
+  System_Action_Action__array *v9; // x20
+  System_Action_object__o *_9__49_0; // x21
+  Il2CppObject *v11; // x22
+  struct GrandServantListRootComponent___c_StaticFields *static_fields; // x0
+  System_Action_object__o *v13; // x21
+  Il2CppObject *v14; // x22
+  struct GrandServantListRootComponent___c_StaticFields *v15; // x0
+  ActionChain_o *v16; // x21
+  __int64 v17; // x20
+  System_Action_o *v18; // x22
+
+  if ( (byte_4C2210D & 1) == 0 )
+  {
+    sub_1C2D490(&ActionChain_TypeInfo);
+    sub_1C2D490(&System_Action___TypeInfo);
+    sub_1C2D490(&System_Action_Action____TypeInfo);
+    sub_1C2D490(&System_Action_Action__TypeInfo);
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnClickHelpBtn__);
+    sub_1C2D490(&Method_GrandServantListRootComponent_SendMessageMenuCancel__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__OnClickHelpBtn_b__49_0__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__OnClickHelpBtn_b__49_1__);
+    sub_1C2D490(&GrandServantListRootComponent___c_TypeInfo);
+    byte_4C2210D = 1;
+  }
+  v3 = Method_GrandServantListRootComponent_OnClickHelpBtn__;
+  if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnClickHelpBtn__ + 83) & 2) != 0 )
+    v3 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnClickHelpBtn__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
+  v5 = (void *)sub_1C2D538(System_Action_Action____TypeInfo, 2);
+  v8 = GrandServantListRootComponent___c_TypeInfo;
+  v9 = (System_Action_Action__array *)v5;
+  if ( !GrandServantListRootComponent___c_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(GrandServantListRootComponent___c_TypeInfo);
+    v8 = GrandServantListRootComponent___c_TypeInfo;
+  }
+  _9__49_0 = (System_Action_object__o *)v8->static_fields->__9__49_0;
+  if ( !_9__49_0 )
+  {
+    if ( !v8->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(v8);
+      v8 = GrandServantListRootComponent___c_TypeInfo;
+    }
+    v11 = (Il2CppObject *)v8->static_fields->__9;
+    _9__49_0 = (System_Action_object__o *)sub_1C2D6DC(System_Action_Action__TypeInfo);
+    System_Action_object____ctor(_9__49_0, v11, Method_GrandServantListRootComponent___c__OnClickHelpBtn_b__49_0__, 0);
+    static_fields = GrandServantListRootComponent___c_TypeInfo->static_fields;
+    static_fields->__9__49_0 = (struct System_Action_Action__o *)_9__49_0;
+    v5 = (void *)sub_1C2D434(&static_fields->__9__49_0);
+  }
+  if ( !v9 )
+    goto LABEL_25;
+  if ( !LODWORD(v9->max_length) )
+    goto LABEL_26;
+  v9->m_Items[0] = (System_Action_Action__o *)_9__49_0;
+  sub_1C2D434(v9->m_Items);
+  v5 = GrandServantListRootComponent___c_TypeInfo;
+  if ( !GrandServantListRootComponent___c_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(GrandServantListRootComponent___c_TypeInfo);
+    v5 = GrandServantListRootComponent___c_TypeInfo;
+  }
+  v13 = *(System_Action_object__o **)(*((_QWORD *)v5 + 23) + 80LL);
+  if ( !v13 )
+  {
+    if ( !*((_DWORD *)v5 + 56) )
+    {
+      j_il2cpp_runtime_class_init_0(v5);
+      v5 = GrandServantListRootComponent___c_TypeInfo;
+    }
+    v14 = (Il2CppObject *)**((_QWORD **)v5 + 23);
+    v13 = (System_Action_object__o *)sub_1C2D6DC(System_Action_Action__TypeInfo);
+    System_Action_object____ctor(v13, v14, Method_GrandServantListRootComponent___c__OnClickHelpBtn_b__49_1__, 0);
+    v15 = GrandServantListRootComponent___c_TypeInfo->static_fields;
+    v15->__9__49_1 = (struct System_Action_Action__o *)v13;
+    v5 = (void *)sub_1C2D434(&v15->__9__49_1);
+  }
+  if ( LODWORD(v9->max_length) <= 1 )
+    goto LABEL_26;
+  v9->m_Items[1] = (System_Action_Action__o *)v13;
+  sub_1C2D434(&v9->m_Items[1]);
+  v16 = (ActionChain_o *)sub_1C2D6DC(ActionChain_TypeInfo);
+  ActionChain___ctor_48937944(v16, v9, 0);
+  v17 = sub_1C2D538(System_Action___TypeInfo, 1);
+  v18 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v18, (Il2CppObject *)this, Method_GrandServantListRootComponent_SendMessageMenuCancel__, 0);
+  if ( !v17 )
+    goto LABEL_25;
+  if ( !*(_DWORD *)(v17 + 24) )
+LABEL_26:
+    sub_1C2D6F4(v5, v6, v7);
+  *(_QWORD *)(v17 + 32) = v18;
+  v5 = (void *)sub_1C2D434(v17 + 32);
+  if ( !v16 || (v5 = ChainableActionBase__Final((ChainableActionBase_o *)v16, (System_Action_array *)v17, 0)) == 0 )
+LABEL_25:
+    sub_1C2D6EC(v5, v6);
+  ChainableActionBase__Execute((ChainableActionBase_o *)v5, 0);
+}
+
+
+void GrandServantListRootComponent__OnClickSupportButton(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  Il2CppObject *Instance; // x0
+  __int64 v6; // x1
+
+  if ( (byte_4C220F6 & 1) == 0 )
+  {
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnClickSupportButton__);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C220F6 = 1;
+  }
+  v3 = Method_GrandServantListRootComponent_OnClickSupportButton__;
+  if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnClickSupportButton__ + 83) & 2) != 0 )
+    v3 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnClickSupportButton__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
+  if ( this->fields.supportInfoJump )
+  {
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    if ( !Instance )
+      sub_1C2D6EC(0, v6);
+    AvalonSceneManager__changeScene(
+      (AvalonSceneManager_o *)Instance,
+      60,
+      1,
+      (Il2CppObject *)this->fields.supportInfoJump,
+      0);
+  }
+}
+
+
+void GrandServantListRootComponent__OnInit(GrandServantListRootComponent_o *this, const MethodInfo *method)
+{
+  struct SupportInfoJump_o *supportInfoJump; // x8
+  FollowerInfo_o *followerInfo; // x21
+  bool IsUseGrandSupport_k__BackingField; // w22
+  GrandServantListData_o *v6; // x20
+  const MethodInfo *v7; // x3
+  System_String_o *MainBgmName; // x20
+  GrandServantListRootComponent_o *v9; // x0
+  const MethodInfo *v10; // x1
+  GrandServantListData_o *v11; // x21
+  const MethodInfo *v12; // x1
+  struct GrandServantListData_o **p_QuestData_k__BackingField; // x20
+  OtherUserGameEntity_o *otherUserGameEntity; // x21
+  const MethodInfo *v15; // x2
+  GrandServantListMenu_o *listMenu; // x0
+  const MethodInfo *v17; // x1
+  struct SupportInfoJump_o *v18; // x8
+  struct GrandServantListData_o *grandServantListData; // x20
+  EventUpValSetupInfo_o *eventSetupInfo; // x22
+  QuestRestrictionInfo_o *questRestrictionInfo; // x23
+  GrandServantListQuestData_o *v22; // x21
+  const MethodInfo *v23; // x3
+  const MethodInfo *v24; // x3
+  struct GrandServantListData_o *v25; // x8
+  struct GrandServantListMenu_o *v26; // x8
+  struct GrandServantListData_o *v27; // x8
+  int Kind_k__BackingField; // w8
+  const MethodInfo *v29; // x1
+  __int64 *v30; // x8
+
+  if ( (byte_4C220F2 & 1) == 0 )
+  {
+    sub_1C2D490(&BgmManager_TypeInfo);
+    sub_1C2D490(&GrandServantListData_TypeInfo);
+    sub_1C2D490(&GrandServantListQuestData_TypeInfo);
+    sub_1C2D490(&SoundManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_12329/*"START_OTHER_VIEW"*/);
+    sub_1C2D490(&StringLiteral_12340/*"START_SUPPORT_SELECT"*/);
+    sub_1C2D490(&StringLiteral_12318/*"START_FORMATION"*/);
+    byte_4C220F2 = 1;
+  }
+  supportInfoJump = this->fields.supportInfoJump;
+  if ( supportInfoJump )
+  {
+    if ( supportInfoJump->fields.isSelect )
+    {
+      followerInfo = supportInfoJump->fields.followerInfo;
+      IsUseGrandSupport_k__BackingField = supportInfoJump->fields._IsUseGrandSupport_k__BackingField;
+      v6 = (GrandServantListData_o *)sub_1C2D6DC(GrandServantListData_TypeInfo);
+      GrandServantListData___ctor_32745400(v6, followerInfo, IsUseGrandSupport_k__BackingField, v7);
+    }
+    else
+    {
+      otherUserGameEntity = supportInfoJump->fields.otherUserGameEntity;
+      v6 = (GrandServantListData_o *)sub_1C2D6DC(GrandServantListData_TypeInfo);
+      GrandServantListData___ctor_32746312(v6, otherUserGameEntity, v15);
+    }
+    this->fields.grandServantListData = v6;
+    listMenu = (GrandServantListMenu_o *)sub_1C2D434(&this->fields.grandServantListData);
+    v18 = this->fields.supportInfoJump;
+    if ( !v18
+      || (grandServantListData = this->fields.grandServantListData,
+          eventSetupInfo = v18->fields.eventSetupInfo,
+          questRestrictionInfo = v18->fields.questRestrictionInfo,
+          v22 = (GrandServantListQuestData_o *)sub_1C2D6DC(GrandServantListQuestData_TypeInfo),
+          GrandServantListQuestData___ctor(v22, eventSetupInfo, questRestrictionInfo, v23),
+          !grandServantListData) )
+    {
+LABEL_32:
+      sub_1C2D6EC(listMenu, v17);
+    }
+    grandServantListData->fields._QuestData_k__BackingField = v22;
+    p_QuestData_k__BackingField = (struct GrandServantListData_o **)&grandServantListData->fields._QuestData_k__BackingField;
+  }
+  else
+  {
+    if ( !BgmManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
+    MainBgmName = BgmManager__GetMainBgmName(0, 0);
+    if ( !SoundManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
+    SoundManager__playBgm(MainBgmName, 0);
+    if ( !GrandServantListRootComponent__IsForceChangeSceneFromGrandScore(v9, v10) )
+      EventTutorialMaster__CheckTutorial(0, 101, 0, 0, 0, 0, 0, 0);
+    v11 = (GrandServantListData_o *)sub_1C2D6DC(GrandServantListData_TypeInfo);
+    GrandServantListData___ctor(v11, v12);
+    this->fields.grandServantListData = v11;
+    p_QuestData_k__BackingField = &this->fields.grandServantListData;
+  }
+  listMenu = (GrandServantListMenu_o *)sub_1C2D434(p_QuestData_k__BackingField);
+  v25 = this->fields.grandServantListData;
+  if ( !v25 )
+    goto LABEL_32;
+  listMenu = this->fields.listMenu;
+  if ( !listMenu )
+    goto LABEL_32;
+  GrandServantListMenu__Initialize(listMenu, this->fields.myFSM, v25->fields._Kind_k__BackingField, v24);
+  v26 = this->fields.listMenu;
+  if ( !v26 )
+    goto LABEL_32;
+  listMenu = (GrandServantListMenu_o *)v26->fields.menu;
+  if ( !listMenu )
+    goto LABEL_32;
+  listMenu = (GrandServantListMenu_o *)((__int64 (__fastcall *)(GrandServantListMenu_o *, struct GrandServantListData_o *, _QWORD))listMenu->klass[1]._1.byval_arg.data)(
+                                         listMenu,
+                                         this->fields.grandServantListData,
+                                         *(_QWORD *)&listMenu->klass[1]._1.byval_arg.bits);
+  v27 = this->fields.grandServantListData;
+  if ( !v27 )
+    goto LABEL_32;
+  Kind_k__BackingField = v27->fields._Kind_k__BackingField;
+  switch ( Kind_k__BackingField )
+  {
+    case 2:
+      v30 = &StringLiteral_12329/*"START_OTHER_VIEW"*/;
+LABEL_31:
+      SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)*v30, 0);
+      return;
+    case 1:
+      v30 = &StringLiteral_12340/*"START_SUPPORT_SELECT"*/;
+      goto LABEL_31;
+    case 0:
+      if ( GrandServantListRootComponent__IsForceChangeSceneFromGrandScore(
+             (GrandServantListRootComponent_o *)listMenu,
+             v17) )
+      {
+        GrandServantListRootComponent__ForceChangeSceneFromGrandScore(this, v29);
+        return;
+      }
+      v30 = &StringLiteral_12318/*"START_FORMATION"*/;
+      goto LABEL_31;
+  }
+}
+
+
+void GrandServantListRootComponent__OnSelectConfirmGrandServantResetDialog(
+        GrandServantListRootComponent_o *this,
+        int32_t result,
+        const MethodInfo *method)
+{
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
-  System_Action_o *v7; // x20
-
-  if ( (byte_4B173EB & 1) == 0 )
-  {
-    sub_1BCAFF8(&System_Action_TypeInfo, method);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_OnClickHelpBtn__, v3);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_SendMessageMenuCancel__, v4);
-    byte_4B173EB = 1;
-  }
-  v5 = Method_GrandServantListRootComponent_OnClickHelpBtn__;
-  if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnClickHelpBtn__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnClickHelpBtn__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v5, v5[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
-  v7 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_GrandServantListRootComponent_SendMessageMenuCancel__, 0LL);
-  EventTutorialMaster__ShowTutorialWithoutCheck(-1, 100, v7, 1, 0LL);
-}
-
-
-void __fastcall GrandServantListRootComponent__OnInit(GrandServantListRootComponent_o *this, const MethodInfo *method)
-{
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  System_String_o *MainBgmName; // x20
-  __int64 v7; // x1
-  const MethodInfo *v8; // x2
-  GrandServantListMenu_o *listMenu; // x0
-  GrandServantListData_o *v10; // x21
-  const MethodInfo *v11; // x1
-  const MethodInfo *v12; // x2
-  struct GrandServantListMenu_o *v13; // x8
-
-  if ( (byte_4B173D4 & 1) == 0 )
-  {
-    sub_1BCAFF8(&BgmManager_TypeInfo, method);
-    sub_1BCAFF8(&GrandServantListData_TypeInfo, v3);
-    sub_1BCAFF8(&SoundManager_TypeInfo, v4);
-    sub_1BCAFF8(&StringLiteral_12220/*"START_FORMATION"*/, v5);
-    byte_4B173D4 = 1;
-  }
-  if ( !BgmManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  MainBgmName = BgmManager__GetMainBgmName(0, 0LL);
-  if ( !SoundManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-  SoundManager__playBgm(MainBgmName, 0LL);
-  listMenu = this->fields.listMenu;
-  if ( !listMenu
-    || (GrandServantListMenu__Initialize(listMenu, this->fields.myFSM, v8),
-        v10 = (GrandServantListData_o *)sub_1BCB244(GrandServantListData_TypeInfo),
-        GrandServantListData___ctor(v10, v11),
-        this->fields.grandServantListData = v10,
-        listMenu = (GrandServantListMenu_o *)sub_1BCAF9C(&this->fields.grandServantListData),
-        (v13 = this->fields.listMenu) == 0LL)
-    || (listMenu = (GrandServantListMenu_o *)v13->fields.menu) == 0LL )
-  {
-    sub_1BCB254(listMenu, v7);
-  }
-  GrandServantListMenuLayout__UpdateView(
-    (GrandServantListMenuLayout_o *)listMenu,
-    this->fields.grandServantListData,
-    v12);
-  SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_12220/*"START_FORMATION"*/, 0LL);
-}
-
-
-// local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantListRootComponent__OnSelectConfirmGrandServantResetDialog(
-        GrandServantListRootComponent_o *this,
-        int32_t result,
-        const MethodInfo *method)
-{
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  _QWORD *v8; // x0
-  System_Reflection_MethodBase_o *v9; // x0
   BaseDialog_o *confirmGrandServantResetDialog; // x20
-  System_Action_o *v11; // x0
-  __int64 *v12; // x8
-  _QWORD *v13; // x0
-  System_Reflection_MethodBase_o *v14; // x0
-  System_Action_o *v15; // x21
-  __int64 v16; // x0
-  __int64 v17; // x1
+  System_Action_o *v8; // x0
+  intptr_t *v9; // x8
+  _QWORD *v10; // x0
+  System_Reflection_MethodBase_o *v11; // x0
+  System_Action_o *v12; // x21
+  __int64 v13; // x0
+  __int64 v14; // x1
 
-  if ( (byte_4B173E1 & 1) == 0 )
+  if ( (byte_4C22103 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&result);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__, v5);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OnSelectConfirmGrandServantResetDialog_b__33_0__, v6);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OnSelectConfirmGrandServantResetDialog_b__33_1__, v7);
-    byte_4B173E1 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OnSelectConfirmGrandServantResetDialog_b__39_0__);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OnSelectConfirmGrandServantResetDialog_b__39_1__);
+    byte_4C22103 = 1;
   }
   if ( result == 1 )
   {
-    v13 = Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__;
+    v10 = Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__;
     if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__ + 83) & 2) != 0 )
-      v13 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__);
-    v14 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v13, v13[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v14, 1, 0, 0LL);
+      v10 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__);
+    v11 = (System_Reflection_MethodBase_o *)sub_1C2D474(v10, v10[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v11, 1, 0, 0);
     confirmGrandServantResetDialog = (BaseDialog_o *)this->fields.confirmGrandServantResetDialog;
-    v11 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-    v12 = &Method_GrandServantListRootComponent__OnSelectConfirmGrandServantResetDialog_b__33_1__;
+    v8 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    v9 = &Method_GrandServantListRootComponent__OnSelectConfirmGrandServantResetDialog_b__39_1__;
   }
   else
   {
     if ( result )
       return;
-    v8 = Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__;
+    v5 = Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__;
     if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__);
-    v9 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v8, v8[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v9, 8, 0, 0LL);
+      v5 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C2D474(v5, v5[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0, 0);
     confirmGrandServantResetDialog = (BaseDialog_o *)this->fields.confirmGrandServantResetDialog;
-    v11 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-    v12 = &Method_GrandServantListRootComponent__OnSelectConfirmGrandServantResetDialog_b__33_0__;
+    v8 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    v9 = &Method_GrandServantListRootComponent__OnSelectConfirmGrandServantResetDialog_b__39_0__;
   }
-  v15 = v11;
-  System_Action___ctor(v11, (Il2CppObject *)this, *v12, 0LL);
+  v12 = v8;
+  System_Action___ctor(v8, (Il2CppObject *)this, *v9, 0);
   if ( !confirmGrandServantResetDialog )
-    sub_1BCB254(v16, v17);
-  BaseDialog__SafeClose(confirmGrandServantResetDialog, v15, 0LL);
+    sub_1C2D6EC(v13, v14);
+  BaseDialog__SafeClose(confirmGrandServantResetDialog, v12, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantListRootComponent__OnSelectConfirmUseGrandServantResetItemDialog(
+void GrandServantListRootComponent__OnSelectConfirmUseGrandServantResetItemDialog(
         GrandServantListRootComponent_o *this,
         int32_t result,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  _QWORD *v8; // x0
-  System_Reflection_MethodBase_o *v9; // x0
+  _QWORD *v5; // x0
+  System_Reflection_MethodBase_o *v6; // x0
   BaseDialog_o *confirmUseGrandServantResetItemDialog; // x20
-  System_Action_o *v11; // x0
-  __int64 *v12; // x8
-  _QWORD *v13; // x0
-  System_Reflection_MethodBase_o *v14; // x0
-  System_Action_o *v15; // x21
-  __int64 v16; // x0
-  __int64 v17; // x1
+  System_Action_o *v8; // x0
+  intptr_t *v9; // x8
+  _QWORD *v10; // x0
+  System_Reflection_MethodBase_o *v11; // x0
+  System_Action_o *v12; // x21
+  __int64 v13; // x0
+  __int64 v14; // x1
 
-  if ( (byte_4B173DF & 1) == 0 )
+  if ( (byte_4C22101 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&result);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__, v5);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OnSelectConfirmUseGrandServantResetItemDialog_b__31_0__, v6);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OnSelectConfirmUseGrandServantResetItemDialog_b__31_1__, v7);
-    byte_4B173DF = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OnSelectConfirmUseGrandServantResetItemDialog_b__37_0__);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OnSelectConfirmUseGrandServantResetItemDialog_b__37_1__);
+    byte_4C22101 = 1;
   }
   if ( result == 1 )
   {
-    v13 = Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__;
+    v10 = Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__;
     if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__ + 83) & 2) != 0 )
-      v13 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__);
-    v14 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v13, v13[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v14, 1, 0, 0LL);
+      v10 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__);
+    v11 = (System_Reflection_MethodBase_o *)sub_1C2D474(v10, v10[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v11, 1, 0, 0);
     confirmUseGrandServantResetItemDialog = (BaseDialog_o *)this->fields.confirmUseGrandServantResetItemDialog;
-    v11 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-    v12 = &Method_GrandServantListRootComponent__OnSelectConfirmUseGrandServantResetItemDialog_b__31_1__;
+    v8 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    v9 = &Method_GrandServantListRootComponent__OnSelectConfirmUseGrandServantResetItemDialog_b__37_1__;
   }
   else
   {
     if ( result )
       return;
-    v8 = Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__;
+    v5 = Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__;
     if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__);
-    v9 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v8, v8[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0LL);
+      v5 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C2D474(v5, v5[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
     confirmUseGrandServantResetItemDialog = (BaseDialog_o *)this->fields.confirmUseGrandServantResetItemDialog;
-    v11 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-    v12 = &Method_GrandServantListRootComponent__OnSelectConfirmUseGrandServantResetItemDialog_b__31_0__;
+    v8 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    v9 = &Method_GrandServantListRootComponent__OnSelectConfirmUseGrandServantResetItemDialog_b__37_0__;
   }
-  v15 = v11;
-  System_Action___ctor(v11, (Il2CppObject *)this, *v12, 0LL);
+  v12 = v8;
+  System_Action___ctor(v8, (Il2CppObject *)this, *v9, 0);
   if ( !confirmUseGrandServantResetItemDialog )
-    sub_1BCB254(v16, v17);
-  BaseDialog__SafeClose(confirmUseGrandServantResetItemDialog, v15, 0LL);
+    sub_1C2D6EC(v13, v14);
+  BaseDialog__SafeClose(confirmUseGrandServantResetItemDialog, v12, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantListRootComponent__OnSelectEditEquip(
+void GrandServantListRootComponent__OnSelectEditEquip(
         GrandServantListRootComponent_o *this,
-        int32_t parentClassBoardBaseId,
+        int32_t grandGraphId,
         int32_t equipIndex,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
   GrandServantListData_o *grandServantListData; // x0
-  GrandServantListSlotData_o *v14; // x21
+  GrandServantListSlotData_o *v8; // x21
   UnityEngine_Object_o *grandEquipGraphListMenu; // x23
-  _QWORD *v16; // x0
-  System_Reflection_MethodBase_o *v17; // x0
-  GrandEquipGraphListMenu_o *v18; // x22
-  System_Action_bool__o *v19; // x23
-  const MethodInfo *v20; // x4
-  _QWORD *v21; // x0
-  System_Reflection_MethodBase_o *v22; // x0
-  const MethodInfo *v23; // x1
+  _QWORD *v10; // x0
+  System_Reflection_MethodBase_o *v11; // x0
+  GrandEquipGraphListMenu_o *v12; // x22
+  System_Action_bool__o *v13; // x23
+  const MethodInfo *v14; // x4
+  _QWORD *v15; // x0
+  System_Reflection_MethodBase_o *v16; // x0
+  const MethodInfo *v17; // x1
 
-  if ( (byte_4B173E3 & 1) == 0 )
+  if ( (byte_4C22105 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_bool__TypeInfo, *(_QWORD *)&parentClassBoardBaseId);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_InstantiateAssetObject_GrandEquipGraphListMenu___, v7);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_OnSelectEditEquip__, v8);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OnSelectEditEquip_b__35_0__, v9);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v10);
-    sub_1BCAFF8(&StringLiteral_7085/*"GrandEquipGraphListMenu"*/, v11);
-    sub_1BCAFF8(&StringLiteral_12234/*"START_SELECT_EQUIP"*/, v12);
-    byte_4B173E3 = 1;
+    sub_1C2D490(&System_Action_bool__TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_InstantiateAssetObject_GrandEquipGraphListMenu___);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnSelectEditEquip__);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OnSelectEditEquip_b__41_0__);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_7143/*"GrandEquipGraphListMenu"*/);
+    sub_1C2D490(&StringLiteral_12333/*"START_SELECT_EQUIP"*/);
+    byte_4C22105 = 1;
   }
   grandServantListData = this->fields.grandServantListData;
   if ( !grandServantListData )
     goto LABEL_18;
   grandServantListData = (GrandServantListData_o *)GrandServantListData__GetSlotData(
                                                      grandServantListData,
-                                                     parentClassBoardBaseId,
+                                                     grandGraphId,
                                                      *(const MethodInfo **)&equipIndex);
   if ( !grandServantListData )
     goto LABEL_18;
-  v14 = (GrandServantListSlotData_o *)grandServantListData;
-  if ( grandServantListData[1].klass )
+  v8 = (GrandServantListSlotData_o *)grandServantListData;
+  if ( grandServantListData->fields._QuestData_k__BackingField )
   {
-    SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_12234/*"START_SELECT_EQUIP"*/, 0LL);
+    SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_12333/*"START_SELECT_EQUIP"*/, 0);
     grandEquipGraphListMenu = (UnityEngine_Object_o *)this->fields.grandEquipGraphListMenu;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Equality(grandEquipGraphListMenu, 0LL, 0LL) )
+    if ( UnityEngine_Object__op_Equality(grandEquipGraphListMenu, 0, 0) )
     {
       this->fields.grandEquipGraphListMenu = (struct GrandEquipGraphListMenu_o *)GrandServantListRootComponent__InstantiateAssetObject_object_(
                                                                                    this,
-                                                                                   (System_String_o *)StringLiteral_7085/*"GrandEquipGraphListMenu"*/,
-                                                                                   (const MethodInfo_30706BC *)Method_GrandServantListRootComponent_InstantiateAssetObject_GrandEquipGraphListMenu___);
-      sub_1BCAF9C(&this->fields.grandEquipGraphListMenu);
+                                                                                   (System_String_o *)StringLiteral_7143/*"GrandEquipGraphListMenu"*/,
+                                                                                   (const MethodInfo_3127E7C *)Method_GrandServantListRootComponent_InstantiateAssetObject_GrandEquipGraphListMenu___);
+      sub_1C2D434(&this->fields.grandEquipGraphListMenu);
       grandServantListData = (GrandServantListData_o *)this->fields.grandEquipGraphListMenu;
       if ( !grandServantListData )
         goto LABEL_18;
       GrandEquipGraphListMenu__Init(
         (GrandEquipGraphListMenu_o *)grandServantListData,
-        *(const MethodInfo **)&parentClassBoardBaseId);
+        *(const MethodInfo **)&grandGraphId);
     }
-    v16 = Method_GrandServantListRootComponent_OnSelectEditEquip__;
+    v10 = Method_GrandServantListRootComponent_OnSelectEditEquip__;
     if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectEditEquip__ + 83) & 2) != 0 )
-      v16 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectEditEquip__);
-    v17 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v16, v16[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v17, 0, 0, 0LL);
-    v18 = this->fields.grandEquipGraphListMenu;
-    v19 = (System_Action_bool__o *)sub_1BCB244(System_Action_bool__TypeInfo);
+      v10 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectEditEquip__);
+    v11 = (System_Reflection_MethodBase_o *)sub_1C2D474(v10, v10[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0, 0);
+    v12 = this->fields.grandEquipGraphListMenu;
+    v13 = (System_Action_bool__o *)sub_1C2D6DC(System_Action_bool__TypeInfo);
     System_Action_bool____ctor(
-      v19,
+      v13,
       (Il2CppObject *)this,
-      Method_GrandServantListRootComponent__OnSelectEditEquip_b__35_0__,
-      0LL);
-    if ( v18 )
+      Method_GrandServantListRootComponent__OnSelectEditEquip_b__41_0__,
+      0);
+    if ( v12 )
     {
-      GrandEquipGraphListMenu__Open(v18, v14, equipIndex, v19, v20);
+      GrandEquipGraphListMenu__Open(v12, v8, equipIndex, v13, v14);
       return;
     }
 LABEL_18:
-    sub_1BCB254(grandServantListData, *(_QWORD *)&parentClassBoardBaseId);
+    sub_1C2D6EC(grandServantListData, *(_QWORD *)&grandGraphId);
   }
-  v21 = Method_GrandServantListRootComponent_OnSelectEditEquip__;
+  v15 = Method_GrandServantListRootComponent_OnSelectEditEquip__;
   if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectEditEquip__ + 83) & 2) != 0 )
-    v21 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectEditEquip__);
-  v22 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v21, v21[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v22, 2, 0, 0LL);
-  GrandServantListRootComponent__SendMessageMenuCancel(this, v23);
+    v15 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectEditEquip__);
+  v16 = (System_Reflection_MethodBase_o *)sub_1C2D474(v15, v15[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v16, 2, 0, 0);
+  GrandServantListRootComponent__SendMessageMenuCancel(this, v17);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantListRootComponent__OnSelectEditServant(
+void GrandServantListRootComponent__OnSelectEditServant(
         GrandServantListRootComponent_o *this,
-        int32_t parentClassBoardBaseId,
+        int32_t grandGraphId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  Il2CppObject *v5; // x21
+  __int64 grandServantListData; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  Il2CppObject *v15; // x21
-  GrandServantListData_o *grandServantListData; // x0
-  __int64 v17; // x1
-  const MethodInfo *v18; // x2
-  _QWORD *monitor; // x8
-  _QWORD *v20; // x0
-  System_Reflection_MethodBase_o *v21; // x0
-  const MethodInfo *v22; // x1
-  _QWORD *v23; // x0
-  System_Reflection_MethodBase_o *v24; // x0
-  const MethodInfo *v25; // x1
-  Il2CppObject *v26; // x20
-  void **p_monitor; // x22
-  __int64 v28; // x8
-  _QWORD *v29; // x0
-  System_Reflection_MethodBase_o *v30; // x0
-  Il2CppObject *Instance; // x19
-  AvalonSceneManager_c *v32; // x8
-  float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v34; // x21
-  _QWORD *v35; // x0
-  System_Reflection_MethodBase_o *v36; // x0
-  __int64 v37; // x8
-  int32_t v38; // w20
-  System_Action_o *v39; // x21
-  GrandServantListRootComponent_o *v40; // x0
-  const MethodInfo *v41; // x3
+  const MethodInfo *v8; // x2
+  Il2CppObject *v9; // x20
+  Il2CppClass *klass; // x8
+  _QWORD *v11; // x0
+  const char *namespaze; // x23
+  System_Reflection_MethodBase_o *v13; // x0
+  const MethodInfo *v14; // x1
+  _QWORD *v15; // x0
+  System_Reflection_MethodBase_o *v16; // x0
+  const MethodInfo *v17; // x1
+  System_Collections_Generic_IEnumerable_TSource__o *OrganizationList; // x22
+  System_Func_object__object__o *v19; // x23
+  System_Collections_Generic_IEnumerable_TSource__o *v20; // x22
+  GrandServantListRootComponent___c_c *v21; // x8
+  System_Func_object__bool__o *_9__28_1; // x23
+  Il2CppObject *v23; // x24
+  struct GrandServantListRootComponent___c_StaticFields *static_fields; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v25; // x0
+  System_Collections_Generic_List_TSource__o *v26; // x0
+  GrandServantListRootComponent___c_c *v27; // x8
+  System_Collections_Generic_List_T__o *v28; // x22
+  System_Func_object__bool__o *_9__28_2; // x23
+  Il2CppObject *v30; // x24
+  struct GrandServantListRootComponent___c_StaticFields *v31; // x0
+  const MethodInfo *v32; // x3
+  Il2CppObject *v33; // x20
+  GrandServantListRootComponent___c_c *v34; // x0
+  System_Func_object__int__o *_9__28_3; // x21
+  Il2CppObject *v36; // x23
+  struct GrandServantListRootComponent___c_StaticFields *v37; // x0
+  System_Collections_Generic_IEnumerable_IGrouping_TKey__TSource___o *v38; // x0
+  GrandServantListRootComponent___c_c *v39; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v40; // x21
+  System_Func_object__int__o *_9__28_4; // x22
+  Il2CppObject *v42; // x23
+  struct GrandServantListRootComponent___c_StaticFields *v43; // x0
+  System_Func_object__object__o *_9__28_5; // x23
+  Il2CppObject *v45; // x24
+  struct GrandServantListRootComponent___c_StaticFields *v46; // x0
+  System_Collections_Generic_Dictionary_int__object__o *v47; // x21
+  Il2CppObject *Item; // x1
+  int32_t bits; // w20
+  System_Action_o *v50; // x21
+  GrandServantListRootComponent_o *v51; // x0
+  const MethodInfo *v52; // x3
+  Il2CppObject *v53; // x1
+  System_Collections_Generic_List_T__o *monitor; // x21
+  GrandServantListRootComponent___c_c *v55; // x0
+  System_Func_object__bool__o *_9__28_6; // x23
+  Il2CppObject *v57; // x24
+  struct GrandServantListRootComponent___c_StaticFields *v58; // x0
+  Il2CppClass *v59; // x22
+  GrandServantListRootComponent___c_c *v60; // x0
+  System_Func_object__bool__o *_9__28_7; // x23
+  Il2CppObject *v62; // x24
+  struct GrandServantListRootComponent___c_StaticFields *v63; // x0
+  GrandServantExtraBranchDialog_o *v64; // x19
+  GrandServantExtraBranchDialog_CallbackFunc_o *v65; // x23
+  const MethodInfo *v66; // x3
+  const MethodInfo *v67; // x4
 
-  if ( (byte_4B173D8 & 1) == 0 )
+  if ( (byte_4C220F9 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&parentClassBoardBaseId);
-    sub_1BCAFF8(&AvalonSceneManager_TypeInfo, v5);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_InstantiateAssetObject_SelectGrandServantComponent___, v6);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_OnSelectEditServant__, v7);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_SendMessageMenuCancel__, v8);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v9);
-    sub_1BCAFF8(&GrandServantListRootComponent___c__DisplayClass23_0_TypeInfo, v10);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent___c__DisplayClass23_1__OnSelectEditServant_b__2__, v11);
-    sub_1BCAFF8(&GrandServantListRootComponent___c__DisplayClass23_1_TypeInfo, v12);
-    sub_1BCAFF8(&StringLiteral_12562/*"SelectGrandServantComponent"*/, v13);
-    sub_1BCAFF8(&StringLiteral_12235/*"START_SELECT_GRAND"*/, v14);
-    byte_4B173D8 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_BasicHelper_Any_SelectGrandServantInfo___);
+    sub_1C2D490(&GrandServantExtraBranchDialog_CallbackFunc_TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__List_SelectGrandServantInfo___ContainsKey__);
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__List_SelectGrandServantInfo___get_Item__);
+    sub_1C2D490(&Method_System_Linq_Enumerable_GroupBy_SelectGrandServantInfo__int___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Select_UserServantEntity__SelectGrandServantInfo___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_ToDictionary_IGrouping_int__SelectGrandServantInfo___int__List_SelectGrandServantInfo____);
+    sub_1C2D490(&Method_System_Linq_Enumerable_ToList_SelectGrandServantInfo___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Where_SelectGrandServantInfo___);
+    sub_1C2D490(&System_Func_IGrouping_int__SelectGrandServantInfo___int__TypeInfo);
+    sub_1C2D490(&System_Func_UserServantEntity__SelectGrandServantInfo__TypeInfo);
+    sub_1C2D490(&System_Func_SelectGrandServantInfo__bool__TypeInfo);
+    sub_1C2D490(&System_Func_IGrouping_int__SelectGrandServantInfo___List_SelectGrandServantInfo___TypeInfo);
+    sub_1C2D490(&System_Func_SelectGrandServantInfo__int__TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_InstantiateAssetObject_GrandServantExtraBranchDialog___);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnSelectEditServant__);
+    sub_1C2D490(&Method_GrandServantListRootComponent_SendMessageMenuCancel__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_SelectGrandServantInfo__get_Item__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_1__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_2__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_3__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_4__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_5__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_6__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_7__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__DisplayClass28_0__OnSelectEditServant_b__0__);
+    sub_1C2D490(&GrandServantListRootComponent___c__DisplayClass28_0_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__8__);
+    sub_1C2D490(&GrandServantListRootComponent___c__DisplayClass28_1_TypeInfo);
+    sub_1C2D490(&GrandServantListRootComponent___c_TypeInfo);
+    sub_1C2D490(&StringLiteral_7153/*"GrandServantExtraBranchDialog"*/);
+    byte_4C220F9 = 1;
   }
-  v15 = (Il2CppObject *)sub_1BCB244(GrandServantListRootComponent___c__DisplayClass23_0_TypeInfo);
-  System_Object___ctor(v15, 0LL);
-  if ( !v15 )
-    goto LABEL_29;
-  v15[1].klass = (Il2CppClass *)this;
-  sub_1BCAF9C(&v15[1]);
-  grandServantListData = this->fields.grandServantListData;
+  v5 = (Il2CppObject *)sub_1C2D6DC(GrandServantListRootComponent___c__DisplayClass28_0_TypeInfo);
+  System_Object___ctor(v5, 0);
+  if ( !v5 )
+    goto LABEL_82;
+  v5[1].monitor = this;
+  sub_1C2D434(&v5[1].monitor);
+  grandServantListData = (__int64)this->fields.grandServantListData;
   if ( !grandServantListData )
-    goto LABEL_29;
-  v15[1].monitor = GrandServantListData__GetSlotData(grandServantListData, parentClassBoardBaseId, v18);
-  grandServantListData = (GrandServantListData_o *)sub_1BCAF9C(&v15[1].monitor);
-  monitor = v15[1].monitor;
-  if ( !monitor )
-    goto LABEL_29;
-  if ( *((_BYTE *)monitor + 16) )
+    goto LABEL_82;
+  v5[1].klass = (Il2CppClass *)GrandServantListData__GetSlotData(
+                                 (GrandServantListData_o *)grandServantListData,
+                                 grandGraphId,
+                                 v8);
+  v9 = v5 + 1;
+  grandServantListData = sub_1C2D434(&v5[1]);
+  klass = v5[1].klass;
+  if ( !klass )
+    goto LABEL_82;
+  if ( LOBYTE(klass->_1.name) )
   {
-    if ( monitor[3] )
+    v11 = Method_GrandServantListRootComponent_OnSelectEditServant__;
+    namespaze = klass->_1.namespaze;
+    if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectEditServant__ + 83) & 2) != 0 )
+      v11 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectEditServant__);
+    v13 = (System_Reflection_MethodBase_o *)sub_1C2D474(v11, v11[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v13, 0, 0, 0);
+    if ( namespaze )
     {
-      v20 = Method_GrandServantListRootComponent_OnSelectEditServant__;
-      if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectEditServant__ + 83) & 2) != 0 )
-        v20 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectEditServant__);
-      v21 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v20, v20[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v21, 0, 0, 0LL);
-      this->fields.lastSelectedParentClassBoardBaseId = parentClassBoardBaseId;
-      GrandServantListRootComponent__OpenGrandServantListMenuBranchDialog(this, v22);
+      this->fields.lastSelectedGrandGraphId = grandGraphId;
+      GrandServantListRootComponent__OpenGrandServantListMenuBranchDialog(this, v14);
       return;
     }
-    v26 = (Il2CppObject *)sub_1BCB244(GrandServantListRootComponent___c__DisplayClass23_1_TypeInfo);
-    System_Object___ctor(v26, 0LL);
-    if ( v26 )
+    if ( !DataManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+    grandServantListData = (__int64)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserServantMaster___);
+    if ( grandServantListData )
     {
-      v26[1].monitor = v15;
-      p_monitor = &v26[1].monitor;
-      grandServantListData = (GrandServantListData_o *)sub_1BCAF9C(&v26[1].monitor);
-      if ( v26[1].monitor )
+      OrganizationList = (System_Collections_Generic_IEnumerable_TSource__o *)UserServantMaster__getOrganizationList(
+                                                                                (UserServantMaster_o *)grandServantListData,
+                                                                                0);
+      v19 = (System_Func_object__object__o *)sub_1C2D6DC(System_Func_UserServantEntity__SelectGrandServantInfo__TypeInfo);
+      System_Func_object__object____ctor(
+        v19,
+        v5,
+        Method_GrandServantListRootComponent___c__DisplayClass28_0__OnSelectEditServant_b__0__,
+        0);
+      v20 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
+                                                                   OrganizationList,
+                                                                   (System_Func_TSource__TResult__o *)v19,
+                                                                   (const MethodInfo_310501C *)Method_System_Linq_Enumerable_Select_UserServantEntity__SelectGrandServantInfo___);
+      v21 = GrandServantListRootComponent___c_TypeInfo;
+      if ( !GrandServantListRootComponent___c_TypeInfo->_2.cctor_finished )
       {
-        v28 = *((_QWORD *)v26[1].monitor + 3);
+        j_il2cpp_runtime_class_init_0(GrandServantListRootComponent___c_TypeInfo);
+        v21 = GrandServantListRootComponent___c_TypeInfo;
+      }
+      _9__28_1 = (System_Func_object__bool__o *)v21->static_fields->__9__28_1;
+      if ( !_9__28_1 )
+      {
+        if ( !v21->_2.cctor_finished )
+        {
+          j_il2cpp_runtime_class_init_0(v21);
+          v21 = GrandServantListRootComponent___c_TypeInfo;
+        }
+        v23 = (Il2CppObject *)v21->static_fields->__9;
+        _9__28_1 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_SelectGrandServantInfo__bool__TypeInfo);
+        System_Func_object__bool____ctor(
+          _9__28_1,
+          v23,
+          Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_1__,
+          0);
+        static_fields = GrandServantListRootComponent___c_TypeInfo->static_fields;
+        static_fields->__9__28_1 = (struct System_Func_SelectGrandServantInfo__bool__o *)_9__28_1;
+        sub_1C2D434(&static_fields->__9__28_1);
+      }
+      v25 = System_Linq_Enumerable__Where_object_(
+              v20,
+              (System_Func_TSource__bool__o *)_9__28_1,
+              (const MethodInfo_3115108 *)Method_System_Linq_Enumerable_Where_SelectGrandServantInfo___);
+      v26 = System_Linq_Enumerable__ToList_object_(
+              v25,
+              (const MethodInfo_3112C88 *)Method_System_Linq_Enumerable_ToList_SelectGrandServantInfo___);
+      v27 = GrandServantListRootComponent___c_TypeInfo;
+      v28 = (System_Collections_Generic_List_T__o *)v26;
+      if ( !GrandServantListRootComponent___c_TypeInfo->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(GrandServantListRootComponent___c_TypeInfo);
+        v27 = GrandServantListRootComponent___c_TypeInfo;
+      }
+      _9__28_2 = (System_Func_object__bool__o *)v27->static_fields->__9__28_2;
+      if ( !_9__28_2 )
+      {
+        if ( !v27->_2.cctor_finished )
+        {
+          j_il2cpp_runtime_class_init_0(v27);
+          v27 = GrandServantListRootComponent___c_TypeInfo;
+        }
+        v30 = (Il2CppObject *)v27->static_fields->__9;
+        _9__28_2 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_SelectGrandServantInfo__bool__TypeInfo);
+        System_Func_object__bool____ctor(
+          _9__28_2,
+          v30,
+          Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_2__,
+          0);
+        v31 = GrandServantListRootComponent___c_TypeInfo->static_fields;
+        v31->__9__28_2 = (struct System_Func_SelectGrandServantInfo__bool__o *)_9__28_2;
+        sub_1C2D434(&v31->__9__28_2);
+      }
+      grandServantListData = BasicHelper__Any_object_(
+                               v28,
+                               (System_Func_T__bool__o *)_9__28_2,
+                               (const MethodInfo_30B7CF0 *)Method_BasicHelper_Any_SelectGrandServantInfo___);
+      if ( (grandServantListData & 1) != 0 )
+      {
         if ( v28 )
         {
-          if ( *(_BYTE *)(v28 + 17) )
+          grandServantListData = (__int64)System_Collections_Generic_List_object___get_Item(
+                                            (System_Collections_Generic_List_object__o *)v28,
+                                            0,
+                                            (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_SelectGrandServantInfo__get_Item__);
+          if ( grandServantListData )
           {
-            SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_12235/*"START_SELECT_GRAND"*/, 0LL);
-            v29 = Method_GrandServantListRootComponent_OnSelectEditServant__;
-            if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectEditServant__ + 83) & 2) != 0 )
-              v29 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectEditServant__);
-            v30 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v29, v29[4]);
-            OverwriteAssetSoundName__PlaySystemSe(v30, 0, 0, 0LL);
-            v26[1].klass = (Il2CppClass *)GrandServantListRootComponent__InstantiateAssetObject_object_(
-                                            this,
-                                            (System_String_o *)StringLiteral_12562/*"SelectGrandServantComponent"*/,
-                                            (const MethodInfo_30706BC *)Method_GrandServantListRootComponent_InstantiateAssetObject_SelectGrandServantComponent___);
-            sub_1BCAF9C(&v26[1]);
-            Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-            v32 = AvalonSceneManager_TypeInfo;
-            if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
+            if ( *(_DWORD *)(grandServantListData + 32) )
             {
-              j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-              v32 = AvalonSceneManager_TypeInfo;
-            }
-            DEFAULT_FADE_TIME = v32->static_fields->DEFAULT_FADE_TIME;
-            v34 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-            System_Action___ctor(
-              v34,
-              v26,
-              Method_GrandServantListRootComponent___c__DisplayClass23_1__OnSelectEditServant_b__2__,
-              0LL);
-            if ( Instance )
-            {
-              CommonUI__maskFadeout((CommonUI_o *)Instance, 2, DEFAULT_FADE_TIME, v34, 0LL);
-              return;
-            }
-          }
-          else
-          {
-            v35 = Method_GrandServantListRootComponent_OnSelectEditServant__;
-            if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectEditServant__ + 83) & 2) != 0 )
-              v35 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectEditServant__);
-            v36 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v35, v35[4]);
-            OverwriteAssetSoundName__PlaySystemSe(v36, 0, 0, 0LL);
-            if ( *p_monitor )
-            {
-              v37 = *((_QWORD *)*p_monitor + 3);
-              if ( v37 )
+              v33 = (Il2CppObject *)sub_1C2D6DC(GrandServantListRootComponent___c__DisplayClass28_1_TypeInfo);
+              System_Object___ctor(v33, 0);
+              if ( v33 )
               {
-                v38 = *(_DWORD *)(v37 + 44);
-                v39 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-                System_Action___ctor(
-                  v39,
-                  (Il2CppObject *)this,
-                  Method_GrandServantListRootComponent_SendMessageMenuCancel__,
-                  0LL);
-                GrandServantListRootComponent__OpenCannotSelectGrandDialog(v40, v38, v39, v41);
-                return;
+                v33[2].monitor = v5;
+                sub_1C2D434(&v33[2].monitor);
+                v34 = GrandServantListRootComponent___c_TypeInfo;
+                if ( !GrandServantListRootComponent___c_TypeInfo->_2.cctor_finished )
+                {
+                  j_il2cpp_runtime_class_init_0(GrandServantListRootComponent___c_TypeInfo);
+                  v34 = GrandServantListRootComponent___c_TypeInfo;
+                }
+                _9__28_3 = (System_Func_object__int__o *)v34->static_fields->__9__28_3;
+                if ( !_9__28_3 )
+                {
+                  if ( !v34->_2.cctor_finished )
+                  {
+                    j_il2cpp_runtime_class_init_0(v34);
+                    v34 = GrandServantListRootComponent___c_TypeInfo;
+                  }
+                  v36 = (Il2CppObject *)v34->static_fields->__9;
+                  _9__28_3 = (System_Func_object__int__o *)sub_1C2D6DC(System_Func_SelectGrandServantInfo__int__TypeInfo);
+                  System_Func_object__int____ctor(
+                    _9__28_3,
+                    v36,
+                    Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_3__,
+                    0);
+                  v37 = GrandServantListRootComponent___c_TypeInfo->static_fields;
+                  v37->__9__28_3 = (struct System_Func_SelectGrandServantInfo__int__o *)_9__28_3;
+                  sub_1C2D434(&v37->__9__28_3);
+                }
+                v38 = System_Linq_Enumerable__GroupBy_object__int_(
+                        (System_Collections_Generic_IEnumerable_TSource__o *)v28,
+                        (System_Func_TSource__TKey__o *)_9__28_3,
+                        (const MethodInfo_30F8D28 *)Method_System_Linq_Enumerable_GroupBy_SelectGrandServantInfo__int___);
+                v39 = GrandServantListRootComponent___c_TypeInfo;
+                v40 = (System_Collections_Generic_IEnumerable_TSource__o *)v38;
+                if ( !GrandServantListRootComponent___c_TypeInfo->_2.cctor_finished )
+                {
+                  j_il2cpp_runtime_class_init_0(GrandServantListRootComponent___c_TypeInfo);
+                  v39 = GrandServantListRootComponent___c_TypeInfo;
+                }
+                _9__28_4 = (System_Func_object__int__o *)v39->static_fields->__9__28_4;
+                if ( !_9__28_4 )
+                {
+                  if ( !v39->_2.cctor_finished )
+                  {
+                    j_il2cpp_runtime_class_init_0(v39);
+                    v39 = GrandServantListRootComponent___c_TypeInfo;
+                  }
+                  v42 = (Il2CppObject *)v39->static_fields->__9;
+                  _9__28_4 = (System_Func_object__int__o *)sub_1C2D6DC(System_Func_IGrouping_int__SelectGrandServantInfo___int__TypeInfo);
+                  System_Func_object__int____ctor(
+                    _9__28_4,
+                    v42,
+                    Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_4__,
+                    0);
+                  v43 = GrandServantListRootComponent___c_TypeInfo->static_fields;
+                  v43->__9__28_4 = (struct System_Func_IGrouping_int__SelectGrandServantInfo___int__o *)_9__28_4;
+                  sub_1C2D434(&v43->__9__28_4);
+                  v39 = GrandServantListRootComponent___c_TypeInfo;
+                }
+                if ( !v39->_2.cctor_finished )
+                {
+                  j_il2cpp_runtime_class_init_0(v39);
+                  v39 = GrandServantListRootComponent___c_TypeInfo;
+                }
+                _9__28_5 = (System_Func_object__object__o *)v39->static_fields->__9__28_5;
+                if ( !_9__28_5 )
+                {
+                  if ( !v39->_2.cctor_finished )
+                  {
+                    j_il2cpp_runtime_class_init_0(v39);
+                    v39 = GrandServantListRootComponent___c_TypeInfo;
+                  }
+                  v45 = (Il2CppObject *)v39->static_fields->__9;
+                  _9__28_5 = (System_Func_object__object__o *)sub_1C2D6DC(System_Func_IGrouping_int__SelectGrandServantInfo___List_SelectGrandServantInfo___TypeInfo);
+                  System_Func_object__object____ctor(
+                    _9__28_5,
+                    v45,
+                    Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_5__,
+                    0);
+                  v46 = GrandServantListRootComponent___c_TypeInfo->static_fields;
+                  v46->__9__28_5 = (struct System_Func_IGrouping_int__SelectGrandServantInfo___List_SelectGrandServantInfo___o *)_9__28_5;
+                  sub_1C2D434(&v46->__9__28_5);
+                }
+                grandServantListData = (__int64)System_Linq_Enumerable__ToDictionary_object__int__object_(
+                                                  v40,
+                                                  (System_Func_TSource__TKey__o *)_9__28_4,
+                                                  (System_Func_TSource__TElement__o *)_9__28_5,
+                                                  (const MethodInfo_310E904 *)Method_System_Linq_Enumerable_ToDictionary_IGrouping_int__SelectGrandServantInfo___int__List_SelectGrandServantInfo____);
+                if ( grandServantListData )
+                {
+                  v47 = (System_Collections_Generic_Dictionary_int__object__o *)grandServantListData;
+                  if ( System_Collections_Generic_Dictionary_int__object___ContainsKey(
+                         (System_Collections_Generic_Dictionary_int__object__o *)grandServantListData,
+                         1,
+                         (const MethodInfo_33E1470 *)Method_System_Collections_Generic_Dictionary_int__List_SelectGrandServantInfo___ContainsKey__) )
+                  {
+                    Item = System_Collections_Generic_Dictionary_int__object___get_Item(
+                             v47,
+                             1,
+                             (const MethodInfo_33E11DC *)Method_System_Collections_Generic_Dictionary_int__List_SelectGrandServantInfo___get_Item__);
+                  }
+                  else
+                  {
+                    Item = 0;
+                  }
+                  v33[1].monitor = Item;
+                  sub_1C2D434(&v33[1].monitor);
+                  if ( System_Collections_Generic_Dictionary_int__object___ContainsKey(
+                         v47,
+                         2,
+                         (const MethodInfo_33E1470 *)Method_System_Collections_Generic_Dictionary_int__List_SelectGrandServantInfo___ContainsKey__) )
+                  {
+                    v53 = System_Collections_Generic_Dictionary_int__object___get_Item(
+                            v47,
+                            2,
+                            (const MethodInfo_33E11DC *)Method_System_Collections_Generic_Dictionary_int__List_SelectGrandServantInfo___get_Item__);
+                  }
+                  else
+                  {
+                    v53 = 0;
+                  }
+                  v33[2].klass = (Il2CppClass *)v53;
+                  sub_1C2D434(&v33[2]);
+                  monitor = (System_Collections_Generic_List_T__o *)v33[1].monitor;
+                  if ( monitor )
+                  {
+                    v55 = GrandServantListRootComponent___c_TypeInfo;
+                    if ( !GrandServantListRootComponent___c_TypeInfo->_2.cctor_finished )
+                    {
+                      j_il2cpp_runtime_class_init_0(GrandServantListRootComponent___c_TypeInfo);
+                      v55 = GrandServantListRootComponent___c_TypeInfo;
+                    }
+                    _9__28_6 = (System_Func_object__bool__o *)v55->static_fields->__9__28_6;
+                    if ( !_9__28_6 )
+                    {
+                      if ( !v55->_2.cctor_finished )
+                      {
+                        j_il2cpp_runtime_class_init_0(v55);
+                        v55 = GrandServantListRootComponent___c_TypeInfo;
+                      }
+                      v57 = (Il2CppObject *)v55->static_fields->__9;
+                      _9__28_6 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_SelectGrandServantInfo__bool__TypeInfo);
+                      System_Func_object__bool____ctor(
+                        _9__28_6,
+                        v57,
+                        Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_6__,
+                        0);
+                      v58 = GrandServantListRootComponent___c_TypeInfo->static_fields;
+                      v58->__9__28_6 = (struct System_Func_SelectGrandServantInfo__bool__o *)_9__28_6;
+                      sub_1C2D434(&v58->__9__28_6);
+                    }
+                    LOBYTE(monitor) = BasicHelper__Any_object_(
+                                        monitor,
+                                        (System_Func_T__bool__o *)_9__28_6,
+                                        (const MethodInfo_30B7CF0 *)Method_BasicHelper_Any_SelectGrandServantInfo___);
+                  }
+                  v59 = v33[2].klass;
+                  if ( v59 )
+                  {
+                    v60 = GrandServantListRootComponent___c_TypeInfo;
+                    if ( !GrandServantListRootComponent___c_TypeInfo->_2.cctor_finished )
+                    {
+                      j_il2cpp_runtime_class_init_0(GrandServantListRootComponent___c_TypeInfo);
+                      v60 = GrandServantListRootComponent___c_TypeInfo;
+                    }
+                    _9__28_7 = (System_Func_object__bool__o *)v60->static_fields->__9__28_7;
+                    if ( !_9__28_7 )
+                    {
+                      if ( !v60->_2.cctor_finished )
+                      {
+                        j_il2cpp_runtime_class_init_0(v60);
+                        v60 = GrandServantListRootComponent___c_TypeInfo;
+                      }
+                      v62 = (Il2CppObject *)v60->static_fields->__9;
+                      _9__28_7 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_SelectGrandServantInfo__bool__TypeInfo);
+                      System_Func_object__bool____ctor(
+                        _9__28_7,
+                        v62,
+                        Method_GrandServantListRootComponent___c__OnSelectEditServant_b__28_7__,
+                        0);
+                      v63 = GrandServantListRootComponent___c_TypeInfo->static_fields;
+                      v63->__9__28_7 = (struct System_Func_SelectGrandServantInfo__bool__o *)_9__28_7;
+                      sub_1C2D434(&v63->__9__28_7);
+                    }
+                    LOBYTE(v59) = BasicHelper__Any_object_(
+                                    (System_Collections_Generic_List_T__o *)v59,
+                                    (System_Func_T__bool__o *)_9__28_7,
+                                    (const MethodInfo_30B7CF0 *)Method_BasicHelper_Any_SelectGrandServantInfo___);
+                  }
+                  v33[1].klass = (Il2CppClass *)GrandServantListRootComponent__InstantiateAssetObject_object_(
+                                                  this,
+                                                  (System_String_o *)StringLiteral_7153/*"GrandServantExtraBranchDialog"*/,
+                                                  (const MethodInfo_3127E7C *)Method_GrandServantListRootComponent_InstantiateAssetObject_GrandServantExtraBranchDialog___);
+                  sub_1C2D434(&v33[1]);
+                  grandServantListData = (__int64)v33[1].klass;
+                  if ( grandServantListData )
+                  {
+                    BaseDialog__Init((BaseDialog_o *)grandServantListData, 0);
+                    v64 = (GrandServantExtraBranchDialog_o *)v33[1].klass;
+                    v65 = (GrandServantExtraBranchDialog_CallbackFunc_o *)sub_1C2D6DC(GrandServantExtraBranchDialog_CallbackFunc_TypeInfo);
+                    GrandServantExtraBranchDialog_CallbackFunc___ctor(
+                      v65,
+                      v33,
+                      (intptr_t)Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__8__,
+                      v66);
+                    if ( v64 )
+                    {
+                      GrandServantExtraBranchDialog__Open(
+                        v64,
+                        (unsigned __int8)monitor & 1,
+                        (unsigned __int8)v59 & 1,
+                        v65,
+                        v67);
+                      return;
+                    }
+                  }
+                }
               }
+            }
+            else if ( v9->klass )
+            {
+              GrandServantListRootComponent__StartSelectGrandServant(
+                this,
+                (GrandGraphEntity_o *)v9->klass->_1.this_arg.data,
+                (System_Collections_Generic_List_SelectGrandServantInfo__o *)v28,
+                v32);
+              return;
             }
           }
         }
       }
+      else if ( v9->klass )
+      {
+        bits = v9->klass->_1.byval_arg.bits;
+        v50 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+        System_Action___ctor(v50, (Il2CppObject *)this, Method_GrandServantListRootComponent_SendMessageMenuCancel__, 0);
+        GrandServantListRootComponent__OpenCannotSelectGrandDialog(v51, bits, v50, v52);
+        return;
+      }
     }
-LABEL_29:
-    sub_1BCB254(grandServantListData, v17);
+LABEL_82:
+    sub_1C2D6EC(grandServantListData, v7);
   }
-  v23 = Method_GrandServantListRootComponent_OnSelectEditServant__;
+  v15 = Method_GrandServantListRootComponent_OnSelectEditServant__;
   if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectEditServant__ + 83) & 2) != 0 )
-    v23 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectEditServant__);
-  v24 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v23, v23[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v24, 2, 0, 0LL);
-  GrandServantListRootComponent__SendMessageMenuCancel(this, v25);
+    v15 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectEditServant__);
+  v16 = (System_Reflection_MethodBase_o *)sub_1C2D474(v15, v15[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v16, 2, 0, 0);
+  GrandServantListRootComponent__SendMessageMenuCancel(this, v17);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog(
+void GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog(
         GrandServantListRootComponent_o *this,
         int32_t result,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
+  _QWORD *v5; // x0
+  System_Reflection_MethodBase_o *v6; // x0
+  BaseDialog_o *grandServantListMenuBranchDialog; // x20
+  System_Action_o *v8; // x0
+  intptr_t *v9; // x8
   _QWORD *v10; // x0
   System_Reflection_MethodBase_o *v11; // x0
-  BaseDialog_o *grandServantListMenuBranchDialog; // x20
-  System_Action_o *v13; // x0
-  __int64 *v14; // x8
-  _QWORD *v15; // x0
-  System_Reflection_MethodBase_o *v16; // x0
-  _QWORD *v17; // x0
-  System_Reflection_MethodBase_o *v18; // x0
-  _QWORD *v19; // x0
-  System_Reflection_MethodBase_o *v20; // x0
-  System_Action_o *v21; // x21
-  __int64 v22; // x0
-  __int64 v23; // x1
+  _QWORD *v12; // x0
+  System_Reflection_MethodBase_o *v13; // x0
+  _QWORD *v14; // x0
+  System_Reflection_MethodBase_o *v15; // x0
+  System_Action_o *v16; // x21
+  __int64 v17; // x0
+  __int64 v18; // x1
 
-  if ( (byte_4B173DC & 1) == 0 )
+  if ( (byte_4C220FE & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, *(_QWORD *)&result);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__, v5);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__28_0__, v6);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__28_1__, v7);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__28_2__, v8);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__28_3__, v9);
-    byte_4B173DC = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__34_0__);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__34_1__);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__34_2__);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__34_3__);
+    byte_4C220FE = 1;
   }
   switch ( result )
   {
     case 0:
-      v10 = Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__;
+      v5 = Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__;
       if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__ + 83) & 2) != 0 )
-        v10 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__);
-      v11 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v10, v10[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0, 0LL);
+        v5 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__);
+      v6 = (System_Reflection_MethodBase_o *)sub_1C2D474(v5, v5[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
       grandServantListMenuBranchDialog = (BaseDialog_o *)this->fields.grandServantListMenuBranchDialog;
-      v13 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-      v14 = &Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__28_0__;
+      v8 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+      v9 = &Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__34_0__;
       goto LABEL_16;
     case 1:
-      v15 = Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__;
+      v10 = Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__;
       if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__ + 83) & 2) != 0 )
-        v15 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__);
-      v16 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v15, v15[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v16, 0, 0, 0LL);
+        v10 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__);
+      v11 = (System_Reflection_MethodBase_o *)sub_1C2D474(v10, v10[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0, 0);
       grandServantListMenuBranchDialog = (BaseDialog_o *)this->fields.grandServantListMenuBranchDialog;
-      v13 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-      v14 = &Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__28_1__;
+      v8 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+      v9 = &Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__34_1__;
       goto LABEL_16;
     case 2:
-      v17 = Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__;
+      v12 = Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__;
       if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__ + 83) & 2) != 0 )
-        v17 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__);
-      v18 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v17, v17[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v18, 0, 0, 0LL);
+        v12 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__);
+      v13 = (System_Reflection_MethodBase_o *)sub_1C2D474(v12, v12[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v13, 0, 0, 0);
       grandServantListMenuBranchDialog = (BaseDialog_o *)this->fields.grandServantListMenuBranchDialog;
-      v13 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-      v14 = &Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__28_2__;
+      v8 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+      v9 = &Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__34_2__;
       goto LABEL_16;
     case 3:
-      v19 = Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__;
+      v14 = Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__;
       if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__ + 83) & 2) != 0 )
-        v19 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__);
-      v20 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v19, v19[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v20, 1, 0, 0LL);
+        v14 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__);
+      v15 = (System_Reflection_MethodBase_o *)sub_1C2D474(v14, v14[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v15, 1, 0, 0);
       grandServantListMenuBranchDialog = (BaseDialog_o *)this->fields.grandServantListMenuBranchDialog;
-      v13 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-      v14 = &Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__28_3__;
+      v8 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+      v9 = &Method_GrandServantListRootComponent__OnSelectGrandServantListMenuBranchDialog_b__34_3__;
 LABEL_16:
-      v21 = v13;
-      System_Action___ctor(v13, (Il2CppObject *)this, *v14, 0LL);
+      v16 = v8;
+      System_Action___ctor(v8, (Il2CppObject *)this, *v9, 0);
       if ( !grandServantListMenuBranchDialog )
-        sub_1BCB254(v22, v23);
-      BaseDialog__SafeClose(grandServantListMenuBranchDialog, v21, 0LL);
+        sub_1C2D6EC(v17, v18);
+      BaseDialog__SafeClose(grandServantListMenuBranchDialog, v16, 0);
       break;
     default:
       return;
@@ -959,292 +1517,634 @@ LABEL_16:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantListRootComponent__OnSelectOpenEquipStatus(
+void GrandServantListRootComponent__OnSelectOpenEquipStatus(
         GrandServantListRootComponent_o *this,
-        int32_t parentClassBoardBaseId,
+        int32_t grandGraphId,
         int32_t equipIndex,
         bool isLongPress,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
   GrandServantListData_o *grandServantListData; // x0
-  __int64 v14; // x2
-  _DWORD *monitor; // x8
-  GrandServantListData_o *v16; // x21
-  int32_t v17; // w9
-  _QWORD *v18; // x0
-  System_Reflection_MethodBase_o *v19; // x0
-  _QWORD *v20; // x8
-  __int64 v21; // x22
-  bool v22; // w20
-  _QWORD *v23; // x0
-  System_Reflection_MethodBase_o *v24; // x0
-  __int128 v25; // q1
-  CommonUI_o *v26; // x21
-  int64_t v27; // x22
-  ServantStatusDialog_EndDelegate_o *v28; // x23
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v29; // [xsp+0h] [xbp-70h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v30; // [xsp+20h] [xbp-50h]
+  __int64 v10; // x2
+  __int64 v11; // x8
+  GrandServantListData_o *v12; // x21
+  int32_t v13; // w9
+  _QWORD *v14; // x0
+  System_Reflection_MethodBase_o *v15; // x0
+  struct GrandServantListQuestData_o *QuestData_k__BackingField; // x8
+  __int64 v17; // x22
+  bool v18; // w20
+  _QWORD *v19; // x0
+  System_Reflection_MethodBase_o *v20; // x0
+  __int128 v21; // q1
+  CommonUI_o *v22; // x21
+  int64_t v23; // x22
+  ServantStatusDialog_EndDelegate_o *v24; // x23
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v25; // [xsp+0h] [xbp-70h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v26; // [xsp+20h] [xbp-50h]
 
-  if ( (byte_4B173D7 & 1) == 0 )
+  if ( (byte_4C220F8 & 1) == 0 )
   {
-    sub_1BCAFF8(&ServantStatusDialog_EndDelegate_TypeInfo, *(_QWORD *)&parentClassBoardBaseId);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_EndShowEquip__, v9);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_OnSelectOpenEquipStatus__, v10);
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v11);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v12);
-    byte_4B173D7 = 1;
+    sub_1C2D490(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_EndShowEquip__);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnSelectOpenEquipStatus__);
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C220F8 = 1;
   }
   grandServantListData = this->fields.grandServantListData;
   if ( !grandServantListData )
     goto LABEL_26;
   grandServantListData = (GrandServantListData_o *)GrandServantListData__GetSlotData(
                                                      grandServantListData,
-                                                     parentClassBoardBaseId,
+                                                     grandGraphId,
                                                      *(const MethodInfo **)&equipIndex);
   if ( !grandServantListData )
     goto LABEL_26;
-  monitor = grandServantListData[1].monitor;
-  v16 = grandServantListData;
-  if ( monitor )
+  v11 = *(_QWORD *)&grandServantListData->fields._IsOtherUserData_k__BackingField;
+  v12 = grandServantListData;
+  if ( v11 )
   {
-    v17 = monitor[6];
-    if ( v17 > equipIndex )
+    v13 = *(_DWORD *)(v11 + 24);
+    if ( v13 > equipIndex )
     {
-      if ( v17 <= (unsigned int)equipIndex )
+      if ( v13 <= (unsigned int)equipIndex )
         goto LABEL_27;
-      if ( *(_QWORD *)&monitor[2 * equipIndex + 8] )
+      if ( *(_QWORD *)(v11 + 8LL * equipIndex + 32) )
       {
-        v18 = Method_GrandServantListRootComponent_OnSelectOpenEquipStatus__;
+        v14 = Method_GrandServantListRootComponent_OnSelectOpenEquipStatus__;
         if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectOpenEquipStatus__ + 83) & 2) != 0 )
-          v18 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectOpenEquipStatus__);
-        v19 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v18, v18[4]);
-        OverwriteAssetSoundName__PlaySystemSe(v19, 0, 0, 0LL);
-        v20 = v16[2].monitor;
-        if ( !v20 )
+          v14 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectOpenEquipStatus__);
+        v15 = (System_Reflection_MethodBase_o *)sub_1C2D474(v14, v14[4]);
+        OverwriteAssetSoundName__PlaySystemSe(v15, 0, 0, 0);
+        QuestData_k__BackingField = v12[1].fields._QuestData_k__BackingField;
+        if ( !QuestData_k__BackingField )
           goto LABEL_26;
-        if ( *((_DWORD *)v20 + 6) > (unsigned int)equipIndex )
+        if ( LODWORD(QuestData_k__BackingField->fields._QuestRestriction_k__BackingField) > equipIndex )
         {
-          v21 = v20[equipIndex + 4];
-          v22 = equipIndex == 1 && SHIDWORD(v16[2].fields.slotDataList) > 0;
-          grandServantListData = (GrandServantListData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-          if ( v21 )
+          v17 = *((_QWORD *)&QuestData_k__BackingField[1].klass + equipIndex);
+          v18 = equipIndex == 1 && *(_DWORD *)(&v12[1].fields._Kind_k__BackingField + 3) > 0;
+          grandServantListData = (GrandServantListData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          if ( v17 )
           {
-            v25 = *(_OWORD *)(v21 + 32);
-            v26 = (CommonUI_o *)grandServantListData;
-            *(_OWORD *)&v30.fields.currentCryptoKey = *(_OWORD *)(v21 + 16);
-            *(_OWORD *)&v30.fields.fakeValue = v25;
+            v21 = *(_OWORD *)(v17 + 32);
+            v22 = (CommonUI_o *)grandServantListData;
+            *(_OWORD *)&v26.fields.currentCryptoKey = *(_OWORD *)(v17 + 16);
+            *(_OWORD *)&v26.fields.fakeValue = v21;
             if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-            v29 = v30;
-            v27 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v29, 0LL);
-            v28 = (ServantStatusDialog_EndDelegate_o *)sub_1BCB244(ServantStatusDialog_EndDelegate_TypeInfo);
+            v25 = v26;
+            v23 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48831392(&v25, 0);
+            v24 = (ServantStatusDialog_EndDelegate_o *)sub_1C2D6DC(ServantStatusDialog_EndDelegate_TypeInfo);
             ServantStatusDialog_EndDelegate___ctor(
-              v28,
+              v24,
               (Il2CppObject *)this,
               Method_GrandServantListRootComponent_EndShowEquip__,
-              0LL);
-            if ( v26 )
+              0);
+            if ( v22 )
             {
-              CommonUI__OpenServantEquipStatusDialog(v26, 11, v27, 1, v28, 0LL, v22, 0LL);
+              CommonUI__OpenServantEquipStatusDialog(v22, 11, v23, 1, v24, 0, v18, 0);
               return;
             }
           }
 LABEL_26:
-          sub_1BCB254(grandServantListData, *(_QWORD *)&parentClassBoardBaseId);
+          sub_1C2D6EC(grandServantListData, *(_QWORD *)&grandGraphId);
         }
 LABEL_27:
-        sub_1BCB25C(grandServantListData, *(_QWORD *)&parentClassBoardBaseId, v14);
+        sub_1C2D6F4(grandServantListData, *(_QWORD *)&grandGraphId, v10);
       }
     }
   }
   if ( !isLongPress )
   {
-    v23 = Method_GrandServantListRootComponent_OnSelectOpenEquipStatus__;
+    v19 = Method_GrandServantListRootComponent_OnSelectOpenEquipStatus__;
     if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectOpenEquipStatus__ + 83) & 2) != 0 )
-      v23 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectOpenEquipStatus__);
-    v24 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v23, v23[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v24, 2, 0, 0LL);
+      v19 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectOpenEquipStatus__);
+    v20 = (System_Reflection_MethodBase_o *)sub_1C2D474(v19, v19[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v20, 2, 0, 0);
   }
-  GrandServantListRootComponent__SendMessageCloseStatus(this, *(const MethodInfo **)&parentClassBoardBaseId);
+  GrandServantListRootComponent__SendMessageCloseStatus(this, *(const MethodInfo **)&grandGraphId);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantListRootComponent__OnSelectOpenServantStatus(
+void GrandServantListRootComponent__OnSelectOpenEquipStatusForSupportOrOther(
         GrandServantListRootComponent_o *this,
-        int32_t parentClassBoardBaseId,
+        int32_t grandGraphId,
+        int32_t equipIndex,
         bool isLongPress,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   GrandServantListData_o *grandServantListData; // x0
+  __int64 v10; // x2
+  __int64 v11; // x8
   GrandServantListData_o *v12; // x21
-  _QWORD *v13; // x0
-  System_Reflection_MethodBase_o *v14; // x0
-  GrandServantListData_c *klass; // x8
-  Il2CppType byval_arg; // q1
-  CommonUI_o *v17; // x20
-  int64_t v18; // x21
-  ServantStatusDialog_FormationEndDelegate_o *v19; // x22
-  _QWORD *v20; // x0
-  System_Reflection_MethodBase_o *v21; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v22; // [xsp+0h] [xbp-70h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+20h] [xbp-50h]
+  int32_t v13; // w9
+  _QWORD *v14; // x0
+  System_Reflection_MethodBase_o *v15; // x0
+  struct SupportInfoJump_o *supportInfoJump; // x8
+  int32_t v17; // w22
+  _QWORD *v18; // x0
+  System_Reflection_MethodBase_o *v19; // x0
+  ServantLeaderInfo_o *klass; // x8
+  CommonUI_o *v21; // x21
+  EquipTargetInfo_o *EquipTargetInfoByEquipIdx; // x20
+  ServantStatusDialog_EndDelegate_o *v23; // x23
 
-  if ( (byte_4B173D6 & 1) == 0 )
+  if ( (byte_4C22110 & 1) == 0 )
   {
-    sub_1BCAFF8(&ServantStatusDialog_FormationEndDelegate_TypeInfo, *(_QWORD *)&parentClassBoardBaseId);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_EndShowServantWithQuest__, v7);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_OnSelectOpenServantStatus__, v8);
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, v9);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v10);
-    byte_4B173D6 = 1;
+    sub_1C2D490(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_EndShowEquip__);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnSelectOpenEquipStatusForSupportOrOther__);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C22110 = 1;
+  }
+  grandServantListData = this->fields.grandServantListData;
+  if ( !grandServantListData )
+    goto LABEL_24;
+  grandServantListData = (GrandServantListData_o *)GrandServantListData__GetSlotData(
+                                                     grandServantListData,
+                                                     grandGraphId,
+                                                     *(const MethodInfo **)&equipIndex);
+  if ( !grandServantListData )
+    goto LABEL_24;
+  v11 = *(_QWORD *)&grandServantListData->fields._IsOtherUserData_k__BackingField;
+  v12 = grandServantListData;
+  if ( v11 )
+  {
+    v13 = *(_DWORD *)(v11 + 24);
+    if ( v13 > equipIndex )
+    {
+      if ( v13 <= (unsigned int)equipIndex )
+        sub_1C2D6F4(grandServantListData, *(_QWORD *)&grandGraphId, v10);
+      if ( *(_QWORD *)(v11 + 8LL * equipIndex + 32) )
+      {
+        v14 = Method_GrandServantListRootComponent_OnSelectOpenEquipStatusForSupportOrOther__;
+        if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectOpenEquipStatusForSupportOrOther__ + 83) & 2) != 0 )
+          v14 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectOpenEquipStatusForSupportOrOther__);
+        v15 = (System_Reflection_MethodBase_o *)sub_1C2D474(v14, v14[4]);
+        OverwriteAssetSoundName__PlaySystemSe(v15, 0, 0, 0);
+        supportInfoJump = this->fields.supportInfoJump;
+        if ( supportInfoJump && supportInfoJump->fields.kind == 3 )
+          v17 = 13;
+        else
+          v17 = 14;
+        grandServantListData = (GrandServantListData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        klass = (ServantLeaderInfo_o *)v12[2].klass;
+        if ( klass )
+        {
+          v21 = (CommonUI_o *)grandServantListData;
+          EquipTargetInfoByEquipIdx = ServantLeaderInfo__GetEquipTargetInfoByEquipIdx(klass, equipIndex, 0);
+          v23 = (ServantStatusDialog_EndDelegate_o *)sub_1C2D6DC(ServantStatusDialog_EndDelegate_TypeInfo);
+          ServantStatusDialog_EndDelegate___ctor(
+            v23,
+            (Il2CppObject *)this,
+            Method_GrandServantListRootComponent_EndShowEquip__,
+            0);
+          if ( v21 )
+          {
+            CommonUI__OpenServantEquipStatusDialog_31183144(v21, v17, EquipTargetInfoByEquipIdx, v23, 0, 0);
+            return;
+          }
+        }
+LABEL_24:
+        sub_1C2D6EC(grandServantListData, *(_QWORD *)&grandGraphId);
+      }
+    }
+  }
+  if ( !isLongPress )
+  {
+    v18 = Method_GrandServantListRootComponent_OnSelectOpenEquipStatusForSupportOrOther__;
+    if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectOpenEquipStatusForSupportOrOther__ + 83) & 2) != 0 )
+      v18 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectOpenEquipStatusForSupportOrOther__);
+    v19 = (System_Reflection_MethodBase_o *)sub_1C2D474(v18, v18[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v19, 2, 0, 0);
+  }
+  GrandServantListRootComponent__SendMessageCloseStatus(this, *(const MethodInfo **)&grandGraphId);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+void GrandServantListRootComponent__OnSelectOpenServantStatus(
+        GrandServantListRootComponent_o *this,
+        int32_t grandGraphId,
+        bool isLongPress,
+        const MethodInfo *method)
+{
+  GrandServantListData_o *grandServantListData; // x0
+  GrandServantListData_o *v8; // x21
+  _QWORD *v9; // x0
+  System_Reflection_MethodBase_o *v10; // x0
+  struct System_Collections_Generic_List_GrandServantListSlotData__o *slotDataList; // x8
+  __int128 v12; // q1
+  CommonUI_o *v13; // x20
+  int64_t v14; // x21
+  ServantStatusDialog_FormationEndDelegate_o *v15; // x22
+  _QWORD *v16; // x0
+  System_Reflection_MethodBase_o *v17; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v18; // [xsp+0h] [xbp-70h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v19; // [xsp+20h] [xbp-50h]
+
+  if ( (byte_4C220F7 & 1) == 0 )
+  {
+    sub_1C2D490(&ServantStatusDialog_FormationEndDelegate_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_EndShowServantWithQuest__);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnSelectOpenServantStatus__);
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C220F7 = 1;
   }
   grandServantListData = this->fields.grandServantListData;
   if ( !grandServantListData )
     goto LABEL_18;
   grandServantListData = (GrandServantListData_o *)GrandServantListData__GetSlotData(
                                                      grandServantListData,
-                                                     parentClassBoardBaseId,
+                                                     grandGraphId,
                                                      (const MethodInfo *)isLongPress);
   if ( !grandServantListData )
     goto LABEL_18;
-  v12 = grandServantListData;
-  if ( grandServantListData[1].klass )
+  v8 = grandServantListData;
+  if ( grandServantListData->fields._QuestData_k__BackingField )
   {
-    v13 = Method_GrandServantListRootComponent_OnSelectOpenServantStatus__;
+    v9 = Method_GrandServantListRootComponent_OnSelectOpenServantStatus__;
     if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectOpenServantStatus__ + 83) & 2) != 0 )
-      v13 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectOpenServantStatus__);
-    v14 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v13, v13[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v14, 0, 0, 0LL);
-    grandServantListData = (GrandServantListData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    klass = v12[2].klass;
-    if ( klass )
+      v9 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectOpenServantStatus__);
+    v10 = (System_Reflection_MethodBase_o *)sub_1C2D474(v9, v9[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
+    grandServantListData = (GrandServantListData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    slotDataList = v8[1].fields.slotDataList;
+    if ( slotDataList )
     {
-      byval_arg = klass->_1.byval_arg;
-      v17 = (CommonUI_o *)grandServantListData;
-      *(_OWORD *)&v23.fields.currentCryptoKey = *(_OWORD *)&klass->_1.name;
-      *(Il2CppType *)&v23.fields.fakeValue = byval_arg;
+      v12 = *(_OWORD *)&slotDataList->fields._syncRoot;
+      v13 = (CommonUI_o *)grandServantListData;
+      *(_OWORD *)&v19.fields.currentCryptoKey = *(_OWORD *)&slotDataList->fields._items;
+      *(_OWORD *)&v19.fields.fakeValue = v12;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-      v22 = v23;
-      v18 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v22, 0LL);
-      v19 = (ServantStatusDialog_FormationEndDelegate_o *)sub_1BCB244(ServantStatusDialog_FormationEndDelegate_TypeInfo);
+      v18 = v19;
+      v14 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48831392(&v18, 0);
+      v15 = (ServantStatusDialog_FormationEndDelegate_o *)sub_1C2D6DC(ServantStatusDialog_FormationEndDelegate_TypeInfo);
       ServantStatusDialog_FormationEndDelegate___ctor(
-        v19,
+        v15,
         (Il2CppObject *)this,
         Method_GrandServantListRootComponent_EndShowServantWithQuest__,
-        0LL);
-      if ( v17 )
+        0);
+      if ( v13 )
       {
-        CommonUI__OpenServantStatusDialog_30773452(v17, 1, v18, v19, 0LL, 0LL);
+        CommonUI__OpenServantStatusDialog_31177344(v13, 1, v14, v15, 0, 0);
         return;
       }
     }
 LABEL_18:
-    sub_1BCB254(grandServantListData, *(_QWORD *)&parentClassBoardBaseId);
+    sub_1C2D6EC(grandServantListData, *(_QWORD *)&grandGraphId);
   }
   if ( !isLongPress )
   {
-    v20 = Method_GrandServantListRootComponent_OnSelectOpenServantStatus__;
+    v16 = Method_GrandServantListRootComponent_OnSelectOpenServantStatus__;
     if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectOpenServantStatus__ + 83) & 2) != 0 )
-      v20 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent_OnSelectOpenServantStatus__);
-    v21 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v20, v20[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v21, 2, 0, 0LL);
+      v16 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectOpenServantStatus__);
+    v17 = (System_Reflection_MethodBase_o *)sub_1C2D474(v16, v16[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v17, 2, 0, 0);
   }
-  GrandServantListRootComponent__SendMessageCloseStatus(this, *(const MethodInfo **)&parentClassBoardBaseId);
+  GrandServantListRootComponent__SendMessageCloseStatus(this, *(const MethodInfo **)&grandGraphId);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantListRootComponent__OpenCannotSelectGrandDialog(
+void GrandServantListRootComponent__OnSelectOpenServantStatusForSupportOrOther(
+        GrandServantListRootComponent_o *this,
+        int32_t grandGraphId,
+        bool isLongPress,
+        const MethodInfo *method)
+{
+  GrandServantListData_o *grandServantListData; // x0
+  GrandServantListData_o *v8; // x20
+  _QWORD *v9; // x0
+  System_Reflection_MethodBase_o *v10; // x0
+  struct SupportInfoJump_o *supportInfoJump; // x8
+  int32_t v12; // w21
+  Il2CppObject *Instance; // x0
+  ServantLeaderInfo_o *klass; // x20
+  CommonUI_o *v15; // x22
+  ServantStatusDialog_EndDelegate_o *v16; // x23
+  _QWORD *v17; // x0
+  System_Reflection_MethodBase_o *v18; // x0
+
+  if ( (byte_4C2210F & 1) == 0 )
+  {
+    sub_1C2D490(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_EndShowServant__);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnSelectOpenServantStatusForSupportOrOther__);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C2210F = 1;
+  }
+  grandServantListData = this->fields.grandServantListData;
+  if ( !grandServantListData )
+    goto LABEL_19;
+  grandServantListData = (GrandServantListData_o *)GrandServantListData__GetSlotData(
+                                                     grandServantListData,
+                                                     grandGraphId,
+                                                     (const MethodInfo *)isLongPress);
+  if ( !grandServantListData )
+    goto LABEL_19;
+  v8 = grandServantListData;
+  if ( grandServantListData->fields._QuestData_k__BackingField )
+  {
+    v9 = Method_GrandServantListRootComponent_OnSelectOpenServantStatusForSupportOrOther__;
+    if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectOpenServantStatusForSupportOrOther__ + 83) & 2) != 0 )
+      v9 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectOpenServantStatusForSupportOrOther__);
+    v10 = (System_Reflection_MethodBase_o *)sub_1C2D474(v9, v9[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
+    supportInfoJump = this->fields.supportInfoJump;
+    if ( supportInfoJump && supportInfoJump->fields.kind == 3 )
+      v12 = 4;
+    else
+      v12 = 5;
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    klass = (ServantLeaderInfo_o *)v8[2].klass;
+    v15 = (CommonUI_o *)Instance;
+    v16 = (ServantStatusDialog_EndDelegate_o *)sub_1C2D6DC(ServantStatusDialog_EndDelegate_TypeInfo);
+    ServantStatusDialog_EndDelegate___ctor(
+      v16,
+      (Il2CppObject *)this,
+      Method_GrandServantListRootComponent_EndShowServant__,
+      0);
+    if ( v15 )
+    {
+      CommonUI__OpenServantStatusDialog_31180036(v15, v12, klass, v16, 0);
+      return;
+    }
+LABEL_19:
+    sub_1C2D6EC(grandServantListData, *(_QWORD *)&grandGraphId);
+  }
+  if ( !isLongPress )
+  {
+    v17 = Method_GrandServantListRootComponent_OnSelectOpenServantStatusForSupportOrOther__;
+    if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectOpenServantStatusForSupportOrOther__ + 83) & 2) != 0 )
+      v17 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectOpenServantStatusForSupportOrOther__);
+    v18 = (System_Reflection_MethodBase_o *)sub_1C2D474(v17, v17[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v18, 2, 0, 0);
+  }
+  GrandServantListRootComponent__SendMessageCloseStatus(this, *(const MethodInfo **)&grandGraphId);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+void GrandServantListRootComponent__OnSelectSupportServant(
+        GrandServantListRootComponent_o *this,
+        int32_t grandGraphId,
+        const MethodInfo *method)
+{
+  void *grandServantListData; // x0
+  struct GrandServantListData_o *v6; // x8
+  struct GrandServantListQuestData_o *QuestData_k__BackingField; // x8
+  __int64 v8; // x20
+  QuestRestrictionInfo_o *QuestRestriction_k__BackingField; // x21
+  __int64 v10; // x22
+  __int64 v11; // x23
+  int v12; // w22
+  int32_t v13; // w22
+  __int64 v14; // x23
+  __int64 v15; // x24
+  int32_t v16; // w0
+  int32_t v17; // w23
+  int32_t v18; // w24
+  int32_t DispLimitCount; // w0
+  Il2CppObject *Instance; // x21
+  System_Action_o *v21; // x22
+  _QWORD *v22; // x0
+  System_Reflection_MethodBase_o *v23; // x0
+  struct SupportInfoJump_o *supportInfoJump; // x2
+  _QWORD *v25; // x0
+  System_Reflection_MethodBase_o *v26; // x0
+  const MethodInfo *v27; // x1
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v28; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v29; // 0:x0.16
+
+  if ( (byte_4C2210E & 1) == 0 )
+  {
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMaster_ServantClassMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnSelectSupportServant__);
+    sub_1C2D490(&Method_GrandServantListRootComponent_SendMessageMenuCancel__);
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C2D490(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_4C2210E = 1;
+  }
+  grandServantListData = this->fields.grandServantListData;
+  if ( !grandServantListData )
+    goto LABEL_40;
+  grandServantListData = GrandServantListData__GetSlotData(
+                           (GrandServantListData_o *)grandServantListData,
+                           grandGraphId,
+                           method);
+  v6 = this->fields.grandServantListData;
+  if ( !v6 )
+    goto LABEL_40;
+  if ( v6->fields._Kind_k__BackingField == 1 && v6->fields._IsOtherUserData_k__BackingField )
+  {
+    if ( !grandServantListData )
+      goto LABEL_40;
+    if ( *((_QWORD *)grandServantListData + 3) )
+    {
+      QuestData_k__BackingField = v6->fields._QuestData_k__BackingField;
+      if ( !QuestData_k__BackingField )
+        goto LABEL_40;
+      v8 = *((_QWORD *)grandServantListData + 10);
+      if ( v8 )
+      {
+        QuestRestriction_k__BackingField = QuestData_k__BackingField->fields._QuestRestriction_k__BackingField;
+        v11 = *(_QWORD *)(v8 + 48);
+        v10 = *(_QWORD *)(v8 + 56);
+        if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+        *(_QWORD *)&v28.fields.currentCryptoKey = v11;
+        *(_QWORD *)&v28.fields.fakeValue = v10;
+        if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v28, 0) )
+        {
+          if ( !ServantLeaderInfo__getQuestRestriction((ServantLeaderInfo_o *)v8, QuestRestriction_k__BackingField, 0)
+            && !ServantLeaderInfo__IsSlotRestriction((ServantLeaderInfo_o *)v8, QuestRestriction_k__BackingField, 0) )
+          {
+            grandServantListData = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+            if ( !grandServantListData )
+              goto LABEL_40;
+            v12 = *((_DWORD *)grandServantListData + 14);
+            grandServantListData = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+            if ( !grandServantListData )
+              goto LABEL_40;
+            if ( v12 < 1 )
+              goto LABEL_43;
+            if ( !QuestRestriction_k__BackingField )
+              goto LABEL_40;
+            v13 = *((_DWORD *)grandServantListData + 15);
+            if ( !QuestRestrictionInfo__IsMyServantOrNpcRestriction_43206784(QuestRestriction_k__BackingField, v13, 0) )
+              goto LABEL_43;
+            v15 = *(_QWORD *)(v8 + 48);
+            v14 = *(_QWORD *)(v8 + 56);
+            if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
+              j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+            *(_QWORD *)&v29.fields.currentCryptoKey = v15;
+            *(_QWORD *)&v29.fields.fakeValue = v14;
+            v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v29, 0);
+            v17 = *(_DWORD *)(v8 + 64);
+            v18 = v16;
+            DispLimitCount = ServantLeaderInfo__getDispLimitCount((ServantLeaderInfo_o *)v8, 0);
+            if ( !QuestRestrictionInfo__IsRestrictionServantIndividuality(
+                    QuestRestriction_k__BackingField,
+                    v18,
+                    v17,
+                    DispLimitCount,
+                    v13,
+                    1,
+                    0) )
+            {
+LABEL_43:
+              if ( this->fields.supportInfoJump )
+              {
+                Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+                v21 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+                System_Action___ctor(
+                  v21,
+                  (Il2CppObject *)this,
+                  Method_GrandServantListRootComponent_SendMessageMenuCancel__,
+                  0);
+                if ( Instance )
+                {
+                  if ( PartyOrganizationUtility__OpenQuestUseItemExpiredDialog(
+                         (PartyOrganizationUtility_o *)Instance,
+                         v21,
+                         0) )
+                  {
+                    return;
+                  }
+                  v22 = Method_GrandServantListRootComponent_OnSelectSupportServant__;
+                  if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectSupportServant__ + 83) & 2) != 0 )
+                    v22 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectSupportServant__);
+                  v23 = (System_Reflection_MethodBase_o *)sub_1C2D474(v22, v22[4]);
+                  OverwriteAssetSoundName__PlaySystemSe(v23, 0, 0, 0);
+                  if ( !DataManager_TypeInfo->_2.cctor_finished )
+                    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+                  grandServantListData = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ServantClassMaster___);
+                  if ( grandServantListData )
+                  {
+                    grandServantListData = (void *)ServantClassMaster__GetSupportGroupByGrandGraphId(
+                                                     (ServantClassMaster_o *)grandServantListData,
+                                                     *(_DWORD *)(v8 + 268),
+                                                     0);
+                    supportInfoJump = this->fields.supportInfoJump;
+                    if ( supportInfoJump )
+                    {
+                      supportInfoJump->fields.selectClassId = (int)grandServantListData;
+                      supportInfoJump->fields._SelectGrandGraphId_k__BackingField = *(_DWORD *)(v8 + 268);
+                      supportInfoJump->fields.selectDeckId = *(_DWORD *)(v8 + 16);
+                      if ( SupportInfoJump__ReturnScene(supportInfoJump, 1, (Il2CppObject *)supportInfoJump, 0) )
+                        return;
+                      grandServantListData = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+                      if ( grandServantListData )
+                      {
+                        AvalonSceneManager__popScene(
+                          (AvalonSceneManager_o *)grandServantListData,
+                          1,
+                          (Il2CppObject *)this->fields.supportInfoJump,
+                          0);
+                        return;
+                      }
+                    }
+                  }
+                }
+LABEL_40:
+                sub_1C2D6EC(grandServantListData, *(_QWORD *)&grandGraphId);
+              }
+            }
+          }
+        }
+      }
+    }
+    v25 = Method_GrandServantListRootComponent_OnSelectSupportServant__;
+    if ( (*((_BYTE *)Method_GrandServantListRootComponent_OnSelectSupportServant__ + 83) & 2) != 0 )
+      v25 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent_OnSelectSupportServant__);
+    v26 = (System_Reflection_MethodBase_o *)sub_1C2D474(v25, v25[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v26, 2, 0, 0);
+    GrandServantListRootComponent__SendMessageMenuCancel(this, v27);
+  }
+}
+
+
+void GrandServantListRootComponent__OpenCannotSelectGrandDialog(
         GrandServantListRootComponent_o *this,
         int32_t grandGraphId,
         System_Action_o *func,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
   DataMasterBase_TMaster__TEntity__PKType__o *Master_object; // x0
-  __int64 v15; // x1
+  __int64 v7; // x1
   Il2CppObject *Entity; // x21
-  System_String_o *v17; // x20
-  System_String_o *v18; // x22
-  __int64 v19; // x2
-  __int64 v20; // x3
-  __int64 v21; // x4
-  Il2CppObject *v22; // x23
-  __int64 v23; // x2
-  __int64 v24; // x3
-  __int64 v25; // x4
-  Il2CppObject *v26; // x0
-  System_String_o *v27; // x21
+  System_String_o *v9; // x20
+  System_String_o *v10; // x22
+  __int64 v11; // x2
+  __int64 v12; // x3
+  __int64 v13; // x4
+  Il2CppObject *v14; // x23
+  __int64 v15; // x2
+  __int64 v16; // x3
+  __int64 v17; // x4
+  Il2CppObject *v18; // x0
+  System_String_o *v19; // x21
   Il2CppObject *Instance; // x22
+  System_Nullable_float__o p_messagePosY; // x0
   System_Nullable_float__o messagePosY; // [xsp+38h] [xbp-58h] BYREF
   int monitor; // [xsp+48h] [xbp-48h] BYREF
   int klass_high; // [xsp+4Ch] [xbp-44h] BYREF
-  System_Nullable_float__o p_messagePosY; // 0:x0.8
 
-  if ( (byte_4B173D9 & 1) == 0 )
+  if ( (byte_4C220FA & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_GrandGraphMaster___, *(_QWORD *)&grandGraphId);
-    sub_1BCAFF8(&DataManager_TypeInfo, v6);
-    sub_1BCAFF8(&Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__GetEntity__, v7);
-    sub_1BCAFF8(&int_TypeInfo, v8);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v9);
-    sub_1BCAFF8(&Method_System_Nullable_float___ctor__, v10);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v11);
-    sub_1BCAFF8(&StringLiteral_3260/*"CANNOT_SELECT_GRAND_DIALOG_MESSAGE"*/, v12);
-    sub_1BCAFF8(&StringLiteral_3261/*"CANNOT_SELECT_GRAND_DIALOG_TITLE"*/, v13);
-    byte_4B173D9 = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_GrandGraphMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__GetEntity__);
+    sub_1C2D490(&int_TypeInfo);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&Method_System_Nullable_float___ctor__);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C2D490(&StringLiteral_3283/*"CANNOT_SELECT_GRAND_DIALOG_MESSAGE"*/);
+    sub_1C2D490(&StringLiteral_3284/*"CANNOT_SELECT_GRAND_DIALOG_TITLE"*/);
+    byte_4C220FA = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_GrandGraphMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_GrandGraphMaster___);
   if ( !Master_object )
     goto LABEL_11;
   Entity = DataMasterBase_object__object__int___GetEntity(
              Master_object,
              grandGraphId,
-             (const MethodInfo_32C7E00 *)Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__GetEntity__);
+             (const MethodInfo_3387D98 *)Method_DataMasterBase_GrandGraphMaster__GrandGraphEntity__int__GetEntity__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)LocalizationManager__Get(
-                                                                  (System_String_o *)StringLiteral_3261/*"CANNOT_SELECT_GRAND_DIALOG_TITLE"*/,
-                                                                  0LL);
+                                                                  (System_String_o *)StringLiteral_3284/*"CANNOT_SELECT_GRAND_DIALOG_TITLE"*/,
+                                                                  0);
   if ( !Entity )
     goto LABEL_11;
-  v17 = System_String__Format((System_String_o *)Master_object, (Il2CppObject *)Entity[2].klass, 0LL);
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3260/*"CANNOT_SELECT_GRAND_DIALOG_MESSAGE"*/, 0LL);
+  v9 = System_String__Format((System_String_o *)Master_object, (Il2CppObject *)Entity[2].klass, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_3283/*"CANNOT_SELECT_GRAND_DIALOG_MESSAGE"*/, 0);
   klass_high = HIDWORD(Entity[3].klass);
-  v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &klass_high, v19, v20, v21);
+  v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &klass_high, v11, v12, v13);
   monitor = (int)Entity[3].monitor;
-  v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &monitor, v23, v24, v25);
-  v27 = System_String__Format_62491716(v18, v22, v26, 0LL);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &monitor, v15, v16, v17);
+  v19 = System_String__Format_63499156(v10, v14, v18, 0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   p_messagePosY = (System_Nullable_float__o)&messagePosY;
-  messagePosY = 0LL;
-  System_Nullable_float____ctor(p_messagePosY, 26.0, (const MethodInfo_37DB04C *)Method_System_Nullable_float___ctor__);
+  messagePosY = 0;
+  System_Nullable_float____ctor(p_messagePosY, 26.0, (const MethodInfo_38B1A04 *)Method_System_Nullable_float___ctor__);
   if ( !Instance )
 LABEL_11:
-    sub_1BCB254(Master_object, v15);
+    sub_1C2D6EC(Master_object, v7);
   CommonUI__OpenNotificationDialog(
     (CommonUI_o *)Instance,
-    v17,
-    v27,
+    v9,
+    v19,
     func,
     -1,
     0,
@@ -1257,872 +2157,935 @@ LABEL_11:
     messagePosY,
     0.0,
     1,
-    0LL);
+    0);
 }
 
 
-void __fastcall GrandServantListRootComponent__OpenChangeGrandSameServantListMenu(
+void GrandServantListRootComponent__OpenChangeGrandSameServantListMenu(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   UnityEngine_Object_o *changeGrandSameServantListMenu; // x21
-  __int64 v8; // x1
-  const MethodInfo *v9; // x2
+  __int64 v4; // x1
+  const MethodInfo *v5; // x2
   GrandServantListData_o *grandServantListData; // x0
   GrandServantListSlotData_o *SlotData; // x0
-  ChangeGrandSameServantListMenu_o *v12; // x20
-  GrandServantListSlotData_o *v13; // x21
-  System_Action_bool__o *v14; // x22
-  const MethodInfo *v15; // x3
+  ChangeGrandSameServantListMenu_o *v8; // x20
+  GrandServantListSlotData_o *v9; // x21
+  System_Action_bool__o *v10; // x22
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4B173DE & 1) == 0 )
+  if ( (byte_4C22100 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_bool__TypeInfo, method);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_InstantiateAssetObject_ChangeGrandSameServantListMenu___, v3);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OpenChangeGrandSameServantListMenu_b__30_0__, v4);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BCAFF8(&StringLiteral_4328/*"ChangeGrandSameServantListMenu"*/, v6);
-    byte_4B173DE = 1;
+    sub_1C2D490(&System_Action_bool__TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_InstantiateAssetObject_ChangeGrandSameServantListMenu___);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OpenChangeGrandSameServantListMenu_b__36_0__);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_4357/*"ChangeGrandSameServantListMenu"*/);
+    byte_4C22100 = 1;
   }
   changeGrandSameServantListMenu = (UnityEngine_Object_o *)this->fields.changeGrandSameServantListMenu;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(changeGrandSameServantListMenu, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(changeGrandSameServantListMenu, 0, 0) )
   {
     this->fields.changeGrandSameServantListMenu = (struct ChangeGrandSameServantListMenu_o *)GrandServantListRootComponent__InstantiateAssetObject_object_(
                                                                                                this,
-                                                                                               (System_String_o *)StringLiteral_4328/*"ChangeGrandSameServantListMenu"*/,
-                                                                                               (const MethodInfo_30706BC *)Method_GrandServantListRootComponent_InstantiateAssetObject_ChangeGrandSameServantListMenu___);
-    sub_1BCAF9C(&this->fields.changeGrandSameServantListMenu);
+                                                                                               (System_String_o *)StringLiteral_4357/*"ChangeGrandSameServantListMenu"*/,
+                                                                                               (const MethodInfo_3127E7C *)Method_GrandServantListRootComponent_InstantiateAssetObject_ChangeGrandSameServantListMenu___);
+    sub_1C2D434(&this->fields.changeGrandSameServantListMenu);
     grandServantListData = (GrandServantListData_o *)this->fields.changeGrandSameServantListMenu;
     if ( !grandServantListData )
       goto LABEL_11;
-    ((void (__fastcall *)(GrandServantListData_o *, _QWORD, void *))grandServantListData->klass[1]._1.namespaze)(
+    ((void (__fastcall *)(GrandServantListData_o *, _QWORD, const char *))grandServantListData->klass[1]._1.name)(
       grandServantListData,
-      0LL,
-      grandServantListData->klass[1]._1.byval_arg.data);
+      0,
+      grandServantListData->klass[1]._1.namespaze);
   }
   grandServantListData = this->fields.grandServantListData;
   if ( !grandServantListData
-    || (SlotData = GrandServantListData__GetSlotData(
-                     grandServantListData,
-                     this->fields.lastSelectedParentClassBoardBaseId,
-                     v9),
-        v12 = this->fields.changeGrandSameServantListMenu,
-        v13 = SlotData,
-        v14 = (System_Action_bool__o *)sub_1BCB244(System_Action_bool__TypeInfo),
+    || (SlotData = GrandServantListData__GetSlotData(grandServantListData, this->fields.lastSelectedGrandGraphId, v5),
+        v8 = this->fields.changeGrandSameServantListMenu,
+        v9 = SlotData,
+        v10 = (System_Action_bool__o *)sub_1C2D6DC(System_Action_bool__TypeInfo),
         System_Action_bool____ctor(
-          v14,
+          v10,
           (Il2CppObject *)this,
-          Method_GrandServantListRootComponent__OpenChangeGrandSameServantListMenu_b__30_0__,
-          0LL),
-        !v12) )
+          Method_GrandServantListRootComponent__OpenChangeGrandSameServantListMenu_b__36_0__,
+          0),
+        !v8) )
   {
 LABEL_11:
-    sub_1BCB254(grandServantListData, v8);
+    sub_1C2D6EC(grandServantListData, v4);
   }
-  ChangeGrandSameServantListMenu__Open(v12, v13, v14, v15);
+  ChangeGrandSameServantListMenu__Open(v8, v9, v10, v11);
 }
 
 
-void __fastcall GrandServantListRootComponent__OpenConfirmGrandServantResetDialog(
+void GrandServantListRootComponent__OpenConfirmGrandServantResetDialog(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   struct ConfirmGrandServantResetDialog_o **p_confirmGrandServantResetDialog; // x20
   UnityEngine_Object_o *confirmGrandServantResetDialog; // x21
-  const MethodInfo *v9; // x1
+  const MethodInfo *v5; // x1
   ConfirmGrandServantResetDialog_o *grandServantListData; // x0
-  const MethodInfo *v11; // x2
-  UserServantEntity_o *baseWindow; // x21
-  ConfirmGrandServantResetDialog_o *v13; // x20
-  ConfirmGrandServantResetDialog_CallbackFunc_o *v14; // x22
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x3
+  const MethodInfo *v7; // x2
+  GrandGraphEntity_o *baseWindow; // x21
+  UserServantEntity_o *maskSprite; // x22
+  ConfirmGrandServantResetDialog_o *v10; // x20
+  ConfirmGrandServantResetDialog_CallbackFunc_o *v11; // x23
+  const MethodInfo *v12; // x3
+  const MethodInfo *v13; // x4
 
-  if ( (byte_4B173E0 & 1) == 0 )
+  if ( (byte_4C22102 & 1) == 0 )
   {
-    sub_1BCAFF8(&ConfirmGrandServantResetDialog_CallbackFunc_TypeInfo, method);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_InstantiateAssetObject_ConfirmGrandServantResetDialog___, v3);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__, v4);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BCAFF8(&StringLiteral_4607/*"ConfirmGrandServantResetDialog"*/, v6);
-    byte_4B173E0 = 1;
+    sub_1C2D490(&ConfirmGrandServantResetDialog_CallbackFunc_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_InstantiateAssetObject_ConfirmGrandServantResetDialog___);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_4637/*"ConfirmGrandServantResetDialog"*/);
+    byte_4C22102 = 1;
   }
   p_confirmGrandServantResetDialog = &this->fields.confirmGrandServantResetDialog;
   confirmGrandServantResetDialog = (UnityEngine_Object_o *)this->fields.confirmGrandServantResetDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(confirmGrandServantResetDialog, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(confirmGrandServantResetDialog, 0, 0) )
   {
     this->fields.confirmGrandServantResetDialog = (struct ConfirmGrandServantResetDialog_o *)GrandServantListRootComponent__InstantiateAssetObject_object_(
                                                                                                this,
-                                                                                               (System_String_o *)StringLiteral_4607/*"ConfirmGrandServantResetDialog"*/,
-                                                                                               (const MethodInfo_30706BC *)Method_GrandServantListRootComponent_InstantiateAssetObject_ConfirmGrandServantResetDialog___);
-    sub_1BCAF9C(&this->fields.confirmGrandServantResetDialog);
+                                                                                               (System_String_o *)StringLiteral_4637/*"ConfirmGrandServantResetDialog"*/,
+                                                                                               (const MethodInfo_3127E7C *)Method_GrandServantListRootComponent_InstantiateAssetObject_ConfirmGrandServantResetDialog___);
+    sub_1C2D434(&this->fields.confirmGrandServantResetDialog);
   }
   grandServantListData = *p_confirmGrandServantResetDialog;
-  if ( !*p_confirmGrandServantResetDialog
-    || (ConfirmGrandServantResetDialog__Init(grandServantListData, v9),
-        (grandServantListData = (ConfirmGrandServantResetDialog_o *)this->fields.grandServantListData) == 0LL)
+  if ( !*p_confirmGrandServantResetDialog )
+    goto LABEL_12;
+  ConfirmGrandServantResetDialog__Init(grandServantListData, v5);
+  grandServantListData = (ConfirmGrandServantResetDialog_o *)this->fields.grandServantListData;
+  if ( !grandServantListData
     || (grandServantListData = (ConfirmGrandServantResetDialog_o *)GrandServantListData__GetSlotData(
                                                                      (GrandServantListData_o *)grandServantListData,
-                                                                     this->fields.lastSelectedParentClassBoardBaseId,
-                                                                     v11)) == 0LL
-    || (baseWindow = (UserServantEntity_o *)grandServantListData->fields.baseWindow,
-        v13 = this->fields.confirmGrandServantResetDialog,
-        v14 = (ConfirmGrandServantResetDialog_CallbackFunc_o *)sub_1BCB244(ConfirmGrandServantResetDialog_CallbackFunc_TypeInfo),
+                                                                     this->fields.lastSelectedGrandGraphId,
+                                                                     v7)) == 0
+    || (baseWindow = (GrandGraphEntity_o *)grandServantListData->fields.baseWindow,
+        maskSprite = (UserServantEntity_o *)grandServantListData->fields.maskSprite,
+        v10 = this->fields.confirmGrandServantResetDialog,
+        v11 = (ConfirmGrandServantResetDialog_CallbackFunc_o *)sub_1C2D6DC(ConfirmGrandServantResetDialog_CallbackFunc_TypeInfo),
         ConfirmGrandServantResetDialog_CallbackFunc___ctor(
-          v14,
+          v11,
           (Il2CppObject *)this,
           (intptr_t)Method_GrandServantListRootComponent_OnSelectConfirmGrandServantResetDialog__,
-          v15),
-        !v13) )
+          v12),
+        !v10) )
   {
-    sub_1BCB254(grandServantListData, v9);
+LABEL_12:
+    sub_1C2D6EC(grandServantListData, v5);
   }
-  ConfirmGrandServantResetDialog__Open(v13, baseWindow, v14, v16);
+  ConfirmGrandServantResetDialog__Open(v10, baseWindow, maskSprite, v11, v13);
 }
 
 
-void __fastcall GrandServantListRootComponent__OpenConfirmUseGrandServantResetItemDialog(
+void GrandServantListRootComponent__OpenConfirmUseGrandServantResetItemDialog(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   struct ConfirmUseGrandServantResetItemDialog_o **p_confirmUseGrandServantResetItemDialog; // x20
   UnityEngine_Object_o *confirmUseGrandServantResetItemDialog; // x21
-  __int64 v9; // x1
+  __int64 v5; // x1
   BaseDialog_o *grandServantListData; // x0
-  const MethodInfo *v11; // x2
-  UserServantEntity_o *baseWindow; // x21
-  ConfirmUseGrandServantResetItemDialog_o *v13; // x20
-  ConfirmUseGrandServantResetItemDialog_CallbackFunc_o *v14; // x22
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x3
+  const MethodInfo *v7; // x2
+  GrandGraphEntity_o *baseWindow; // x21
+  UserServantEntity_o *maskSprite; // x22
+  ConfirmUseGrandServantResetItemDialog_o *v10; // x20
+  ConfirmUseGrandServantResetItemDialog_CallbackFunc_o *v11; // x23
+  const MethodInfo *v12; // x3
+  const MethodInfo *v13; // x4
 
-  if ( (byte_4B173DD & 1) == 0 )
+  if ( (byte_4C220FF & 1) == 0 )
   {
-    sub_1BCAFF8(&ConfirmUseGrandServantResetItemDialog_CallbackFunc_TypeInfo, method);
-    sub_1BCAFF8(
-      &Method_GrandServantListRootComponent_InstantiateAssetObject_ConfirmUseGrandServantResetItemDialog___,
-      v3);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__, v4);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BCAFF8(&StringLiteral_4608/*"ConfirmUseGrandServantResetItemDialog"*/, v6);
-    byte_4B173DD = 1;
+    sub_1C2D490(&ConfirmUseGrandServantResetItemDialog_CallbackFunc_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_InstantiateAssetObject_ConfirmUseGrandServantResetItemDialog___);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_4638/*"ConfirmUseGrandServantResetItemDialog"*/);
+    byte_4C220FF = 1;
   }
   p_confirmUseGrandServantResetItemDialog = &this->fields.confirmUseGrandServantResetItemDialog;
   confirmUseGrandServantResetItemDialog = (UnityEngine_Object_o *)this->fields.confirmUseGrandServantResetItemDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(confirmUseGrandServantResetItemDialog, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(confirmUseGrandServantResetItemDialog, 0, 0) )
   {
-    this->fields.confirmUseGrandServantResetItemDialog = (struct ConfirmUseGrandServantResetItemDialog_o *)GrandServantListRootComponent__InstantiateAssetObject_object_(this, (System_String_o *)StringLiteral_4608/*"ConfirmUseGrandServantResetItemDialog"*/, (const MethodInfo_30706BC *)Method_GrandServantListRootComponent_InstantiateAssetObject_ConfirmUseGrandServantResetItemDialog___);
-    sub_1BCAF9C(&this->fields.confirmUseGrandServantResetItemDialog);
+    this->fields.confirmUseGrandServantResetItemDialog = (struct ConfirmUseGrandServantResetItemDialog_o *)GrandServantListRootComponent__InstantiateAssetObject_object_(this, (System_String_o *)StringLiteral_4638/*"ConfirmUseGrandServantResetItemDialog"*/, (const MethodInfo_3127E7C *)Method_GrandServantListRootComponent_InstantiateAssetObject_ConfirmUseGrandServantResetItemDialog___);
+    sub_1C2D434(&this->fields.confirmUseGrandServantResetItemDialog);
   }
   grandServantListData = (BaseDialog_o *)*p_confirmUseGrandServantResetItemDialog;
-  if ( !*p_confirmUseGrandServantResetItemDialog
-    || (BaseDialog__Init(grandServantListData, 0LL),
-        (grandServantListData = (BaseDialog_o *)this->fields.grandServantListData) == 0LL)
+  if ( !*p_confirmUseGrandServantResetItemDialog )
+    goto LABEL_12;
+  BaseDialog__Init(grandServantListData, 0);
+  grandServantListData = (BaseDialog_o *)this->fields.grandServantListData;
+  if ( !grandServantListData
     || (grandServantListData = (BaseDialog_o *)GrandServantListData__GetSlotData(
                                                  (GrandServantListData_o *)grandServantListData,
-                                                 this->fields.lastSelectedParentClassBoardBaseId,
-                                                 v11)) == 0LL
-    || (baseWindow = (UserServantEntity_o *)grandServantListData->fields.baseWindow,
-        v13 = this->fields.confirmUseGrandServantResetItemDialog,
-        v14 = (ConfirmUseGrandServantResetItemDialog_CallbackFunc_o *)sub_1BCB244(ConfirmUseGrandServantResetItemDialog_CallbackFunc_TypeInfo),
+                                                 this->fields.lastSelectedGrandGraphId,
+                                                 v7)) == 0
+    || (baseWindow = (GrandGraphEntity_o *)grandServantListData->fields.baseWindow,
+        maskSprite = (UserServantEntity_o *)grandServantListData->fields.maskSprite,
+        v10 = this->fields.confirmUseGrandServantResetItemDialog,
+        v11 = (ConfirmUseGrandServantResetItemDialog_CallbackFunc_o *)sub_1C2D6DC(ConfirmUseGrandServantResetItemDialog_CallbackFunc_TypeInfo),
         ConfirmUseGrandServantResetItemDialog_CallbackFunc___ctor(
-          v14,
+          v11,
           (Il2CppObject *)this,
           (intptr_t)Method_GrandServantListRootComponent_OnSelectConfirmUseGrandServantResetItemDialog__,
-          v15),
-        !v13) )
+          v12),
+        !v10) )
   {
-    sub_1BCB254(grandServantListData, v9);
+LABEL_12:
+    sub_1C2D6EC(grandServantListData, v5);
   }
-  ConfirmUseGrandServantResetItemDialog__Open(v13, baseWindow, v14, v16);
+  ConfirmUseGrandServantResetItemDialog__Open(v10, baseWindow, maskSprite, v11, v13);
 }
 
 
-void __fastcall GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog(
+void GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog(
         GrandServantListRootComponent_o *this,
+        GrandGraphEntity_o *grandGraphEntity,
         UserServantEntity_o *userServantEntity,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  struct ConfirmedGrandServantSelectDialog_o **p_confirmedGrandServantSelectDialog; // x21
-  UnityEngine_Object_o *confirmedGrandServantSelectDialog; // x22
-  __int64 v11; // x1
-  BaseDialog_o *v12; // x0
-  ConfirmedGrandServantSelectDialog_o *v13; // x21
-  ConfirmedGrandServantSelectDialog_CallbackFunc_o *v14; // x22
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x3
+  struct ConfirmedGrandServantSelectDialog_o **p_confirmedGrandServantSelectDialog; // x22
+  UnityEngine_Object_o *confirmedGrandServantSelectDialog; // x23
+  __int64 v9; // x1
+  BaseDialog_o *v10; // x0
+  ConfirmedGrandServantSelectDialog_o *v11; // x22
+  ConfirmedGrandServantSelectDialog_CallbackFunc_o *v12; // x23
+  const MethodInfo *v13; // x3
+  const MethodInfo *v14; // x4
 
-  if ( (byte_4B173DA & 1) == 0 )
+  if ( (byte_4C220FC & 1) == 0 )
   {
-    sub_1BCAFF8(&ConfirmedGrandServantSelectDialog_CallbackFunc_TypeInfo, userServantEntity);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_InstantiateAssetObject_ConfirmedGrandServantSelectDialog___, v5);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog_b__25_0__, v6);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BCAFF8(&StringLiteral_4618/*"ConfirmedGrandServantSelectDialog"*/, v8);
-    byte_4B173DA = 1;
+    sub_1C2D490(&ConfirmedGrandServantSelectDialog_CallbackFunc_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_InstantiateAssetObject_ConfirmedGrandServantSelectDialog___);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog_b__31_0__);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_4648/*"ConfirmedGrandServantSelectDialog"*/);
+    byte_4C220FC = 1;
   }
   p_confirmedGrandServantSelectDialog = &this->fields.confirmedGrandServantSelectDialog;
   confirmedGrandServantSelectDialog = (UnityEngine_Object_o *)this->fields.confirmedGrandServantSelectDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(confirmedGrandServantSelectDialog, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(confirmedGrandServantSelectDialog, 0, 0) )
   {
     this->fields.confirmedGrandServantSelectDialog = (struct ConfirmedGrandServantSelectDialog_o *)GrandServantListRootComponent__InstantiateAssetObject_object_(
                                                                                                      this,
-                                                                                                     (System_String_o *)StringLiteral_4618/*"ConfirmedGrandServantSelectDialog"*/,
-                                                                                                     (const MethodInfo_30706BC *)Method_GrandServantListRootComponent_InstantiateAssetObject_ConfirmedGrandServantSelectDialog___);
-    sub_1BCAF9C(&this->fields.confirmedGrandServantSelectDialog);
+                                                                                                     (System_String_o *)StringLiteral_4648/*"ConfirmedGrandServantSelectDialog"*/,
+                                                                                                     (const MethodInfo_3127E7C *)Method_GrandServantListRootComponent_InstantiateAssetObject_ConfirmedGrandServantSelectDialog___);
+    sub_1C2D434(&this->fields.confirmedGrandServantSelectDialog);
   }
-  v12 = (BaseDialog_o *)*p_confirmedGrandServantSelectDialog;
+  v10 = (BaseDialog_o *)*p_confirmedGrandServantSelectDialog;
   if ( !*p_confirmedGrandServantSelectDialog
-    || (BaseDialog__Init(v12, 0LL),
-        v13 = this->fields.confirmedGrandServantSelectDialog,
-        v14 = (ConfirmedGrandServantSelectDialog_CallbackFunc_o *)sub_1BCB244(ConfirmedGrandServantSelectDialog_CallbackFunc_TypeInfo),
+    || (BaseDialog__Init(v10, 0),
+        v11 = this->fields.confirmedGrandServantSelectDialog,
+        v12 = (ConfirmedGrandServantSelectDialog_CallbackFunc_o *)sub_1C2D6DC(ConfirmedGrandServantSelectDialog_CallbackFunc_TypeInfo),
         ConfirmedGrandServantSelectDialog_CallbackFunc___ctor(
-          v14,
+          v12,
           (Il2CppObject *)this,
-          (intptr_t)Method_GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog_b__25_0__,
-          v15),
-        !v13) )
+          (intptr_t)Method_GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog_b__31_0__,
+          v13),
+        !v11) )
   {
-    sub_1BCB254(v12, v11);
+    sub_1C2D6EC(v10, v9);
   }
-  ConfirmedGrandServantSelectDialog__Open(v13, userServantEntity, v14, v16);
+  ConfirmedGrandServantSelectDialog__Open(v11, grandGraphEntity, userServantEntity, v12, v14);
 }
 
 
-void __fastcall GrandServantListRootComponent__OpenGrandServantListMenuBranchDialog(
+void GrandServantListRootComponent__OpenGrandServantListMenuBranchDialog(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   struct GrandServantListMenuBranchDialog_o **p_grandServantListMenuBranchDialog; // x20
   UnityEngine_Object_o *grandServantListMenuBranchDialog; // x21
-  __int64 v9; // x1
+  __int64 v5; // x1
   BaseDialog_o *grandServantListData; // x0
-  const MethodInfo *v11; // x2
-  UserServantEntity_o *baseWindow; // x21
-  GrandServantListMenuBranchDialog_o *v13; // x20
-  GrandServantListMenuBranchDialog_CallbackFunc_o *v14; // x22
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x3
+  const MethodInfo *v7; // x2
+  GrandGraphEntity_o *baseWindow; // x21
+  UserServantEntity_o *maskSprite; // x22
+  GrandServantListMenuBranchDialog_o *v10; // x20
+  GrandServantListMenuBranchDialog_CallbackFunc_o *v11; // x23
+  const MethodInfo *v12; // x3
+  const MethodInfo *v13; // x4
 
-  if ( (byte_4B173DB & 1) == 0 )
+  if ( (byte_4C220FD & 1) == 0 )
   {
-    sub_1BCAFF8(&GrandServantListMenuBranchDialog_CallbackFunc_TypeInfo, method);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_InstantiateAssetObject_GrandServantListMenuBranchDialog___, v3);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__, v4);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BCAFF8(&StringLiteral_7095/*"GrandServantListMenuBranchDialog"*/, v6);
-    byte_4B173DB = 1;
+    sub_1C2D490(&GrandServantListMenuBranchDialog_CallbackFunc_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_InstantiateAssetObject_GrandServantListMenuBranchDialog___);
+    sub_1C2D490(&Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_7155/*"GrandServantListMenuBranchDialog"*/);
+    byte_4C220FD = 1;
   }
   p_grandServantListMenuBranchDialog = &this->fields.grandServantListMenuBranchDialog;
   grandServantListMenuBranchDialog = (UnityEngine_Object_o *)this->fields.grandServantListMenuBranchDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(grandServantListMenuBranchDialog, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(grandServantListMenuBranchDialog, 0, 0) )
   {
     this->fields.grandServantListMenuBranchDialog = (struct GrandServantListMenuBranchDialog_o *)GrandServantListRootComponent__InstantiateAssetObject_object_(
                                                                                                    this,
-                                                                                                   (System_String_o *)StringLiteral_7095/*"GrandServantListMenuBranchDialog"*/,
-                                                                                                   (const MethodInfo_30706BC *)Method_GrandServantListRootComponent_InstantiateAssetObject_GrandServantListMenuBranchDialog___);
-    sub_1BCAF9C(&this->fields.grandServantListMenuBranchDialog);
+                                                                                                   (System_String_o *)StringLiteral_7155/*"GrandServantListMenuBranchDialog"*/,
+                                                                                                   (const MethodInfo_3127E7C *)Method_GrandServantListRootComponent_InstantiateAssetObject_GrandServantListMenuBranchDialog___);
+    sub_1C2D434(&this->fields.grandServantListMenuBranchDialog);
   }
   grandServantListData = (BaseDialog_o *)*p_grandServantListMenuBranchDialog;
-  if ( !*p_grandServantListMenuBranchDialog
-    || (BaseDialog__Init(grandServantListData, 0LL),
-        (grandServantListData = (BaseDialog_o *)this->fields.grandServantListData) == 0LL)
+  if ( !*p_grandServantListMenuBranchDialog )
+    goto LABEL_12;
+  BaseDialog__Init(grandServantListData, 0);
+  grandServantListData = (BaseDialog_o *)this->fields.grandServantListData;
+  if ( !grandServantListData
     || (grandServantListData = (BaseDialog_o *)GrandServantListData__GetSlotData(
                                                  (GrandServantListData_o *)grandServantListData,
-                                                 this->fields.lastSelectedParentClassBoardBaseId,
-                                                 v11)) == 0LL
-    || (baseWindow = (UserServantEntity_o *)grandServantListData->fields.baseWindow,
-        v13 = this->fields.grandServantListMenuBranchDialog,
-        v14 = (GrandServantListMenuBranchDialog_CallbackFunc_o *)sub_1BCB244(GrandServantListMenuBranchDialog_CallbackFunc_TypeInfo),
+                                                 this->fields.lastSelectedGrandGraphId,
+                                                 v7)) == 0
+    || (baseWindow = (GrandGraphEntity_o *)grandServantListData->fields.baseWindow,
+        maskSprite = (UserServantEntity_o *)grandServantListData->fields.maskSprite,
+        v10 = this->fields.grandServantListMenuBranchDialog,
+        v11 = (GrandServantListMenuBranchDialog_CallbackFunc_o *)sub_1C2D6DC(GrandServantListMenuBranchDialog_CallbackFunc_TypeInfo),
         GrandServantListMenuBranchDialog_CallbackFunc___ctor(
-          v14,
+          v11,
           (Il2CppObject *)this,
           (intptr_t)Method_GrandServantListRootComponent_OnSelectGrandServantListMenuBranchDialog__,
-          v15),
-        !v13) )
+          v12),
+        !v10) )
   {
-    sub_1BCB254(grandServantListData, v9);
+LABEL_12:
+    sub_1C2D6EC(grandServantListData, v5);
   }
-  GrandServantListMenuBranchDialog__Open(v13, baseWindow, v14, v16);
+  GrandServantListMenuBranchDialog__Open(v10, baseWindow, maskSprite, v11, v13);
 }
 
 
-void __fastcall GrandServantListRootComponent__OpenGrandServantResetDialog(
+void GrandServantListRootComponent__OpenGrandServantResetDialog(
         GrandServantListRootComponent_o *this,
+        GrandGraphEntity_o *grandGraphEntity,
         UserServantEntity_o *userServantEntity,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  struct GrandServantResetDialog_o **p_grandServantResetDialog; // x21
-  UnityEngine_Object_o *grandServantResetDialog; // x22
-  __int64 v11; // x1
-  BaseDialog_o *v12; // x0
-  GrandServantResetDialog_o *v13; // x21
-  GrandServantResetDialog_CallbackFunc_o *v14; // x22
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x3
+  struct GrandServantResetDialog_o **p_grandServantResetDialog; // x22
+  UnityEngine_Object_o *grandServantResetDialog; // x23
+  __int64 v9; // x1
+  BaseDialog_o *v10; // x0
+  GrandServantResetDialog_o *v11; // x22
+  GrandServantResetDialog_CallbackFunc_o *v12; // x23
+  const MethodInfo *v13; // x4
 
-  if ( (byte_4B173E2 & 1) == 0 )
+  if ( (byte_4C22104 & 1) == 0 )
   {
-    sub_1BCAFF8(&GrandServantResetDialog_CallbackFunc_TypeInfo, userServantEntity);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_InstantiateAssetObject_GrandServantResetDialog___, v5);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OpenGrandServantResetDialog_b__34_0__, v6);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v7);
-    sub_1BCAFF8(&StringLiteral_7098/*"GrandServantResetDialog"*/, v8);
-    byte_4B173E2 = 1;
+    sub_1C2D490(&GrandServantResetDialog_CallbackFunc_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_InstantiateAssetObject_GrandServantResetDialog___);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OpenGrandServantResetDialog_b__40_0__);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&StringLiteral_7159/*"GrandServantResetDialog"*/);
+    byte_4C22104 = 1;
   }
   p_grandServantResetDialog = &this->fields.grandServantResetDialog;
   grandServantResetDialog = (UnityEngine_Object_o *)this->fields.grandServantResetDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(grandServantResetDialog, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Equality(grandServantResetDialog, 0, 0) )
   {
     this->fields.grandServantResetDialog = (struct GrandServantResetDialog_o *)GrandServantListRootComponent__InstantiateAssetObject_object_(
                                                                                  this,
-                                                                                 (System_String_o *)StringLiteral_7098/*"GrandServantResetDialog"*/,
-                                                                                 (const MethodInfo_30706BC *)Method_GrandServantListRootComponent_InstantiateAssetObject_GrandServantResetDialog___);
-    sub_1BCAF9C(&this->fields.grandServantResetDialog);
+                                                                                 (System_String_o *)StringLiteral_7159/*"GrandServantResetDialog"*/,
+                                                                                 (const MethodInfo_3127E7C *)Method_GrandServantListRootComponent_InstantiateAssetObject_GrandServantResetDialog___);
+    sub_1C2D434(&this->fields.grandServantResetDialog);
   }
-  v12 = (BaseDialog_o *)*p_grandServantResetDialog;
+  v10 = (BaseDialog_o *)*p_grandServantResetDialog;
   if ( !*p_grandServantResetDialog
-    || (BaseDialog__Init(v12, 0LL),
-        v13 = this->fields.grandServantResetDialog,
-        v14 = (GrandServantResetDialog_CallbackFunc_o *)sub_1BCB244(GrandServantResetDialog_CallbackFunc_TypeInfo),
+    || (BaseDialog__Init(v10, 0),
+        v11 = this->fields.grandServantResetDialog,
+        v12 = (GrandServantResetDialog_CallbackFunc_o *)sub_1C2D6DC(GrandServantResetDialog_CallbackFunc_TypeInfo),
         GrandServantResetDialog_CallbackFunc___ctor(
-          v14,
+          v12,
           (Il2CppObject *)this,
-          (intptr_t)Method_GrandServantListRootComponent__OpenGrandServantResetDialog_b__34_0__,
-          v15),
-        !v13) )
+          (intptr_t)Method_GrandServantListRootComponent__OpenGrandServantResetDialog_b__40_0__,
+          0),
+        !v11) )
   {
-    sub_1BCB254(v12, v11);
+    sub_1C2D6EC(v10, v9);
   }
-  GrandServantResetDialog__Open(v13, userServantEntity, v14, v16);
+  GrandServantResetDialog__Open(v11, grandGraphEntity, userServantEntity, v12, v13);
 }
 
 
-void __fastcall GrandServantListRootComponent__SendMessageCloseStatus(
+void GrandServantListRootComponent__SendMessageCloseStatus(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B173E7 & 1) == 0 )
+  if ( (byte_4C22109 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_3486/*"CLOSE_STATUS"*/, method);
-    byte_4B173E7 = 1;
+    sub_1C2D490(&StringLiteral_3514/*"CLOSE_STATUS"*/);
+    byte_4C22109 = 1;
   }
-  SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_3486/*"CLOSE_STATUS"*/, 0LL);
+  SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_3514/*"CLOSE_STATUS"*/, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent__SendMessageMenuCancel(
+void GrandServantListRootComponent__SendMessageMenuCancel(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B173E8 & 1) == 0 )
+  if ( (byte_4C2210A & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_8571/*"MENU_CANCEL"*/, method);
-    byte_4B173E8 = 1;
+    sub_1C2D490(&StringLiteral_8635/*"MENU_CANCEL"*/);
+    byte_4C2210A = 1;
   }
-  SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_8571/*"MENU_CANCEL"*/, 0LL);
+  SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_8635/*"MENU_CANCEL"*/, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent__SendMessageMenuDecide(
+void GrandServantListRootComponent__SendMessageMenuDecide(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B173E9 & 1) == 0 )
+  if ( (byte_4C2210B & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_8572/*"MENU_DECIDE"*/, method);
-    byte_4B173E9 = 1;
+    sub_1C2D490(&StringLiteral_8636/*"MENU_DECIDE"*/);
+    byte_4C2210B = 1;
   }
-  SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_8572/*"MENU_DECIDE"*/, 0LL);
+  SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_8636/*"MENU_DECIDE"*/, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent___OnSelectConfirmGrandServantResetDialog_b__33_0(
+void GrandServantListRootComponent__StartSelectGrandServant(
         GrandServantListRootComponent_o *this,
+        GrandGraphEntity_o *grandGraphEntity,
+        System_Collections_Generic_List_SelectGrandServantInfo__o *servantInfos,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   Il2CppObject *v7; // x20
-  GrandServantListData_o *grandServantListData; // x0
+  __int64 v8; // x0
   __int64 v9; // x1
-  const MethodInfo *v10; // x2
-  Il2CppObject *v11; // x19
-  NetworkManager_ResultCallbackFunc_o *v12; // x21
+  Il2CppObject *Instance; // x0
+  AvalonSceneManager_c *v11; // x8
+  CommonUI_o *v12; // x19
+  float DEFAULT_FADE_TIME; // s8
+  System_Action_o *v14; // x21
 
-  if ( (byte_4B173F4 & 1) == 0 )
+  if ( (byte_4C220FB & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_NetworkManager_getRequest_SetupGrandServantRequest___, method);
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v3);
-    sub_1BCAFF8(&NetworkManager_ResultCallbackFunc_TypeInfo, v4);
-    sub_1BCAFF8(
-      &Method_GrandServantListRootComponent___c__DisplayClass33_0__OnSelectConfirmGrandServantResetDialog_b__2__,
-      v5);
-    sub_1BCAFF8(&GrandServantListRootComponent___c__DisplayClass33_0_TypeInfo, v6);
-    byte_4B173F4 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&AvalonSceneManager_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_InstantiateAssetObject_SelectGrandServantComponent___);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__DisplayClass30_0__StartSelectGrandServant_b__2__);
+    sub_1C2D490(&GrandServantListRootComponent___c__DisplayClass30_0_TypeInfo);
+    sub_1C2D490(&StringLiteral_12671/*"SelectGrandServantComponent"*/);
+    sub_1C2D490(&StringLiteral_12334/*"START_SELECT_GRAND"*/);
+    byte_4C220FB = 1;
   }
-  v7 = (Il2CppObject *)sub_1BCB244(GrandServantListRootComponent___c__DisplayClass33_0_TypeInfo);
-  System_Object___ctor(v7, 0LL);
+  v7 = (Il2CppObject *)sub_1C2D6DC(GrandServantListRootComponent___c__DisplayClass30_0_TypeInfo);
+  System_Object___ctor(v7, 0);
   if ( !v7 )
+    goto LABEL_8;
+  v7[1].klass = (Il2CppClass *)this;
+  sub_1C2D434(&v7[1]);
+  v7[1].monitor = grandGraphEntity;
+  sub_1C2D434(&v7[1].monitor);
+  v7[2].monitor = servantInfos;
+  sub_1C2D434(&v7[2].monitor);
+  SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_12334/*"START_SELECT_GRAND"*/, 0);
+  v7[2].klass = (Il2CppClass *)GrandServantListRootComponent__InstantiateAssetObject_object_(
+                                 this,
+                                 (System_String_o *)StringLiteral_12671/*"SelectGrandServantComponent"*/,
+                                 (const MethodInfo_3127E7C *)Method_GrandServantListRootComponent_InstantiateAssetObject_SelectGrandServantComponent___);
+  sub_1C2D434(&v7[2]);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v11 = AvalonSceneManager_TypeInfo;
+  v12 = (CommonUI_o *)Instance;
+  if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
+    v11 = AvalonSceneManager_TypeInfo;
+  }
+  DEFAULT_FADE_TIME = v11->static_fields->DEFAULT_FADE_TIME;
+  v14 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(
+    v14,
+    v7,
+    Method_GrandServantListRootComponent___c__DisplayClass30_0__StartSelectGrandServant_b__2__,
+    0);
+  if ( !v12 )
+LABEL_8:
+    sub_1C2D6EC(v8, v9);
+  CommonUI__maskFadeout(v12, 2, DEFAULT_FADE_TIME, v14, 0);
+}
+
+
+void GrandServantListRootComponent___OnSelectConfirmGrandServantResetDialog_b__39_0(
+        GrandServantListRootComponent_o *this,
+        const MethodInfo *method)
+{
+  Il2CppObject *v3; // x20
+  GrandServantListData_o *grandServantListData; // x0
+  __int64 v5; // x1
+  const MethodInfo *v6; // x2
+  Il2CppObject *v7; // x19
+  NetworkManager_ResultCallbackFunc_o *v8; // x21
+
+  if ( (byte_4C22119 & 1) == 0 )
+  {
+    sub_1C2D490(&Method_NetworkManager_getRequest_SetupGrandServantRequest___);
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__DisplayClass39_0__OnSelectConfirmGrandServantResetDialog_b__2__);
+    sub_1C2D490(&GrandServantListRootComponent___c__DisplayClass39_0_TypeInfo);
+    byte_4C22119 = 1;
+  }
+  v3 = (Il2CppObject *)sub_1C2D6DC(GrandServantListRootComponent___c__DisplayClass39_0_TypeInfo);
+  System_Object___ctor(v3, 0);
+  if ( !v3 )
     goto LABEL_10;
-  v7[1].monitor = this;
-  sub_1BCAF9C(&v7[1].monitor);
+  v3[1].monitor = this;
+  sub_1C2D434(&v3[1].monitor);
   grandServantListData = this->fields.grandServantListData;
   if ( !grandServantListData )
     goto LABEL_10;
-  v7[1].klass = (Il2CppClass *)GrandServantListData__GetSlotData(
+  v3[1].klass = (Il2CppClass *)GrandServantListData__GetSlotData(
                                  grandServantListData,
-                                 this->fields.lastSelectedParentClassBoardBaseId,
-                                 v10);
-  v11 = v7 + 1;
-  sub_1BCAF9C(&v7[1]);
-  v12 = (NetworkManager_ResultCallbackFunc_o *)sub_1BCB244(NetworkManager_ResultCallbackFunc_TypeInfo);
+                                 this->fields.lastSelectedGrandGraphId,
+                                 v6);
+  v7 = v3 + 1;
+  sub_1C2D434(&v3[1]);
+  v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1C2D6DC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
-    v12,
-    v7,
-    Method_GrandServantListRootComponent___c__DisplayClass33_0__OnSelectConfirmGrandServantResetDialog_b__2__,
-    0LL);
+    v8,
+    v3,
+    Method_GrandServantListRootComponent___c__DisplayClass39_0__OnSelectConfirmGrandServantResetDialog_b__2__,
+    0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   grandServantListData = (GrandServantListData_o *)NetworkManager__getRequest_object_(
-                                                     v12,
-                                                     (const MethodInfo_30A28E4 *)Method_NetworkManager_getRequest_SetupGrandServantRequest___);
-  if ( !v11->klass || !grandServantListData )
+                                                     v8,
+                                                     (const MethodInfo_31599E8 *)Method_NetworkManager_getRequest_SetupGrandServantRequest___);
+  if ( !v7->klass || !grandServantListData )
 LABEL_10:
-    sub_1BCB254(grandServantListData, v9);
+    sub_1C2D6EC(grandServantListData, v5);
   SetupGrandServantRequest__beginRequest(
     (SetupGrandServantRequest_o *)grandServantListData,
-    *(&v11->klass->_1.byval_arg.bits + 1),
-    0LL,
-    0LL);
+    v7->klass->_1.byval_arg.bits,
+    0,
+    0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantListRootComponent___OnSelectEditEquip_b__35_0(
+void GrandServantListRootComponent___OnSelectEditEquip_b__41_0(
         GrandServantListRootComponent_o *this,
         bool isDecide,
         const MethodInfo *method)
 {
   GrandServantListData_o *v5; // x21
   const MethodInfo *v6; // x1
-  GrandServantListMenuLayout_o *menu; // x0
+  __int64 menu; // x0
   __int64 v8; // x1
-  const MethodInfo *v9; // x2
   struct GrandServantListMenu_o *listMenu; // x8
 
-  if ( (byte_4B173F6 & 1) == 0 )
+  if ( (byte_4C2211B & 1) == 0 )
   {
-    sub_1BCAFF8(&GrandServantListData_TypeInfo, isDecide);
-    byte_4B173F6 = 1;
+    sub_1C2D490(&GrandServantListData_TypeInfo);
+    byte_4C2211B = 1;
   }
   if ( isDecide )
   {
-    v5 = (GrandServantListData_o *)sub_1BCB244(GrandServantListData_TypeInfo);
+    v5 = (GrandServantListData_o *)sub_1C2D6DC(GrandServantListData_TypeInfo);
     GrandServantListData___ctor(v5, v6);
     this->fields.grandServantListData = v5;
-    menu = (GrandServantListMenuLayout_o *)sub_1BCAF9C(&this->fields.grandServantListData);
+    menu = sub_1C2D434(&this->fields.grandServantListData);
     listMenu = this->fields.listMenu;
-    if ( !listMenu || (menu = listMenu->fields.menu) == 0LL )
-      sub_1BCB254(menu, v8);
-    GrandServantListMenuLayout__UpdateView(menu, this->fields.grandServantListData, v9);
+    if ( !listMenu || (menu = (__int64)listMenu->fields.menu) == 0 )
+      sub_1C2D6EC(menu, v8);
+    (*(void (__fastcall **)(__int64, struct GrandServantListData_o *, _QWORD))(*(_QWORD *)menu + 408LL))(
+      menu,
+      this->fields.grandServantListData,
+      *(_QWORD *)(*(_QWORD *)menu + 416LL));
   }
   GrandServantListRootComponent__SendMessageMenuDecide(this, (const MethodInfo *)isDecide);
 }
 
 
-void __fastcall GrandServantListRootComponent___OnSelectGrandServantListMenuBranchDialog_b__28_0(
+void GrandServantListRootComponent___OnSelectGrandServantListMenuBranchDialog_b__34_0(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_4B173F0 & 1) == 0 )
+  if ( (byte_4C22115 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_12232/*"START_RESET_GRAND"*/, method);
-    byte_4B173F0 = 1;
+    sub_1C2D490(&StringLiteral_12331/*"START_RESET_GRAND"*/);
+    byte_4C22115 = 1;
   }
-  SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_12232/*"START_RESET_GRAND"*/, 0LL);
+  SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_12331/*"START_RESET_GRAND"*/, 0);
   GrandServantListRootComponent__OpenConfirmUseGrandServantResetItemDialog(this, v3);
 }
 
 
-void __fastcall GrandServantListRootComponent___OnSelectGrandServantListMenuBranchDialog_b__28_1(
+void GrandServantListRootComponent___OnSelectGrandServantListMenuBranchDialog_b__34_1(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B173F1 & 1) == 0 )
+  if ( (byte_4C22116 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_12236/*"START_SELECT_SERVANT"*/, method);
-    byte_4B173F1 = 1;
+    sub_1C2D490(&StringLiteral_12335/*"START_SELECT_SERVANT"*/);
+    byte_4C22116 = 1;
   }
   GrandServantListRootComponent__OpenChangeGrandSameServantListMenu(this, method);
-  SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_12236/*"START_SELECT_SERVANT"*/, 0LL);
+  SceneRootComponent__sendMessage((SceneRootComponent_o *)this, (System_String_o *)StringLiteral_12335/*"START_SELECT_SERVANT"*/, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent___OnSelectGrandServantListMenuBranchDialog_b__28_2(
+void GrandServantListRootComponent___OnSelectGrandServantListMenuBranchDialog_b__34_2(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x1
   GrandServantListData_o *grandServantListData; // x0
+  int32_t ParentClassBoardBaseId; // w0
   struct SceneJumpInfo_o *sceneJumpInfo; // x8
-  GrandServantListData_o *v8; // x20
-  System_String_o *returnSceneName; // x21
+  int32_t v7; // w21
+  System_String_o *returnSceneName; // x20
   System_String_o *SceneName; // x0
-  struct SceneJumpInfo_o *v11; // x8
+  struct SceneJumpInfo_o *v10; // x8
   struct SceneJumpInfo_o *backSceneJumpInfo; // x19
-  Il2CppObject *v13; // x3
-  int32_t slotDataList; // w21
-  SceneJumpInfo_o *v15; // x20
-  struct SceneJumpInfo_o *v16; // x19
+  Il2CppObject *v12; // x3
+  SceneJumpInfo_o *v13; // x20
+  SceneJumpInfo_o *v14; // x19
 
-  if ( (byte_4B173F2 & 1) == 0 )
+  if ( (byte_4C22117 & 1) == 0 )
   {
-    sub_1BCAFF8(&SceneJumpInfo_TypeInfo, method);
-    sub_1BCAFF8(&SceneList_TypeInfo, v4);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v5);
-    byte_4B173F2 = 1;
+    sub_1C2D490(&SceneJumpInfo_TypeInfo);
+    sub_1C2D490(&SceneList_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C22117 = 1;
   }
   grandServantListData = this->fields.grandServantListData;
   if ( !grandServantListData )
-    goto LABEL_20;
+    goto LABEL_19;
   grandServantListData = (GrandServantListData_o *)GrandServantListData__GetSlotData(
                                                      grandServantListData,
-                                                     this->fields.lastSelectedParentClassBoardBaseId,
+                                                     this->fields.lastSelectedGrandGraphId,
                                                      v2);
+  if ( !grandServantListData )
+    goto LABEL_19;
+  ParentClassBoardBaseId = GrandServantListSlotData__GetParentClassBoardBaseId(
+                             (GrandServantListSlotData_o *)grandServantListData,
+                             method);
   sceneJumpInfo = this->fields.sceneJumpInfo;
-  v8 = grandServantListData;
+  v7 = ParentClassBoardBaseId;
   if ( !sceneJumpInfo )
-    goto LABEL_23;
+    goto LABEL_13;
   returnSceneName = sceneJumpInfo->fields.returnSceneName;
   if ( !SceneList_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SceneList_TypeInfo);
-  SceneName = SceneList__getSceneName(91, 0LL);
-  grandServantListData = (GrandServantListData_o *)System_String__op_Equality(returnSceneName, SceneName, 0LL);
+  SceneName = SceneList__getSceneName(91, 0);
+  grandServantListData = (GrandServantListData_o *)System_String__op_Equality(returnSceneName, SceneName, 0);
   if ( ((unsigned __int8)grandServantListData & 1) == 0 )
   {
-LABEL_23:
-    if ( v8 )
+LABEL_13:
+    v13 = (SceneJumpInfo_o *)sub_1C2D6DC(SceneJumpInfo_TypeInfo);
+    SceneJumpInfo___ctor_41257348(v13, v7, 0);
+    if ( v13 )
     {
-      slotDataList = (int32_t)v8[1].fields.slotDataList;
-      v15 = (SceneJumpInfo_o *)sub_1BCB244(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_40654588(v15, slotDataList, 0LL);
-      if ( v15 )
+      SceneJumpInfo__SetReturnNowScene(v13, 0);
+      v14 = this->fields.sceneJumpInfo;
+      if ( !v14 )
       {
-        SceneJumpInfo__SetReturnNowScene(v15, 0LL);
-        v16 = this->fields.sceneJumpInfo;
-        if ( v16
-          || (v16 = (struct SceneJumpInfo_o *)sub_1BCB244(SceneJumpInfo_TypeInfo), SceneJumpInfo___ctor(v16, 0LL), v16) )
-        {
-          v16->fields.id = 0;
-          v15->fields.backSceneJumpInfo = v16;
-          sub_1BCAF9C(&v15->fields.backSceneJumpInfo);
-          grandServantListData = (GrandServantListData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-          if ( grandServantListData )
-          {
-            v13 = (Il2CppObject *)v15;
-            goto LABEL_19;
-          }
-        }
+        v14 = (SceneJumpInfo_o *)sub_1C2D6DC(SceneJumpInfo_TypeInfo);
+        SceneJumpInfo___ctor(v14, 0);
+      }
+      v13->fields.backSceneJumpInfo = v14;
+      sub_1C2D434(&v13->fields.backSceneJumpInfo);
+      grandServantListData = (GrandServantListData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      if ( grandServantListData )
+      {
+        v12 = (Il2CppObject *)v13;
+        goto LABEL_18;
       }
     }
-LABEL_20:
-    sub_1BCB254(grandServantListData, method);
-  }
-  v11 = this->fields.sceneJumpInfo;
-  if ( !v11 )
-    goto LABEL_20;
-  if ( !v8 )
-    goto LABEL_20;
-  backSceneJumpInfo = v11->fields.backSceneJumpInfo;
-  if ( !backSceneJumpInfo )
-    goto LABEL_20;
-  backSceneJumpInfo->fields.id = (int32_t)v8[1].fields.slotDataList;
-  grandServantListData = (GrandServantListData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-  if ( !grandServantListData )
-    goto LABEL_20;
-  v13 = (Il2CppObject *)backSceneJumpInfo;
 LABEL_19:
-  AvalonSceneManager__changeScene((AvalonSceneManager_o *)grandServantListData, 91, 1, v13, 0LL);
+    sub_1C2D6EC(grandServantListData, method);
+  }
+  v10 = this->fields.sceneJumpInfo;
+  if ( !v10 )
+    goto LABEL_19;
+  backSceneJumpInfo = v10->fields.backSceneJumpInfo;
+  if ( !backSceneJumpInfo )
+    goto LABEL_19;
+  backSceneJumpInfo->fields.id = v7;
+  grandServantListData = (GrandServantListData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  if ( !grandServantListData )
+    goto LABEL_19;
+  v12 = (Il2CppObject *)backSceneJumpInfo;
+LABEL_18:
+  AvalonSceneManager__changeScene((AvalonSceneManager_o *)grandServantListData, 91, 1, v12, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantListRootComponent___OpenChangeGrandSameServantListMenu_b__30_0(
+void GrandServantListRootComponent___OpenChangeGrandSameServantListMenu_b__36_0(
         GrandServantListRootComponent_o *this,
         bool isDecide,
         const MethodInfo *method)
 {
   GrandServantListData_o *v4; // x21
   const MethodInfo *v5; // x1
-  GrandServantListMenuLayout_o *menu; // x0
+  __int64 menu; // x0
   __int64 v7; // x1
-  const MethodInfo *v8; // x2
   struct GrandServantListMenu_o *listMenu; // x8
-  const MethodInfo *v10; // x1
+  const MethodInfo *v9; // x1
 
-  if ( (byte_4B173F3 & 1) == 0 )
+  if ( (byte_4C22118 & 1) == 0 )
   {
-    sub_1BCAFF8(&GrandServantListData_TypeInfo, isDecide);
-    byte_4B173F3 = 1;
+    sub_1C2D490(&GrandServantListData_TypeInfo);
+    byte_4C22118 = 1;
   }
-  v4 = (GrandServantListData_o *)sub_1BCB244(GrandServantListData_TypeInfo);
+  v4 = (GrandServantListData_o *)sub_1C2D6DC(GrandServantListData_TypeInfo);
   GrandServantListData___ctor(v4, v5);
   this->fields.grandServantListData = v4;
-  menu = (GrandServantListMenuLayout_o *)sub_1BCAF9C(&this->fields.grandServantListData);
+  menu = sub_1C2D434(&this->fields.grandServantListData);
   listMenu = this->fields.listMenu;
-  if ( !listMenu || (menu = listMenu->fields.menu) == 0LL )
-    sub_1BCB254(menu, v7);
-  GrandServantListMenuLayout__UpdateView(menu, this->fields.grandServantListData, v8);
-  GrandServantListRootComponent__SendMessageMenuDecide(this, v10);
+  if ( !listMenu || (menu = (__int64)listMenu->fields.menu) == 0 )
+    sub_1C2D6EC(menu, v7);
+  (*(void (__fastcall **)(__int64, struct GrandServantListData_o *, _QWORD))(*(_QWORD *)menu + 408LL))(
+    menu,
+    this->fields.grandServantListData,
+    *(_QWORD *)(*(_QWORD *)menu + 416LL));
+  GrandServantListRootComponent__SendMessageMenuDecide(this, v9);
 }
 
 
-void __fastcall GrandServantListRootComponent___OpenConfirmedGrandServantSelectDialog_b__25_0(
+void GrandServantListRootComponent___OpenConfirmedGrandServantSelectDialog_b__31_0(
         GrandServantListRootComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  _QWORD *v5; // x0
-  System_Reflection_MethodBase_o *v6; // x0
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
   BaseDialog_o *confirmedGrandServantSelectDialog; // x20
-  System_Action_o *v8; // x21
-  __int64 v9; // x0
-  __int64 v10; // x1
+  System_Action_o *v6; // x21
+  __int64 v7; // x0
+  __int64 v8; // x1
 
-  if ( (byte_4B173EF & 1) == 0 )
+  if ( (byte_4C22114 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, method);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_DecideActionSendMessageMenuDecide__, v3);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog_b__25_0__, v4);
-    byte_4B173EF = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_DecideActionSendMessageMenuDecide__);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog_b__31_0__);
+    byte_4C22114 = 1;
   }
-  v5 = Method_GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog_b__25_0__;
-  if ( (*((_BYTE *)Method_GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog_b__25_0__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog_b__25_0__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v5, v5[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
+  v3 = Method_GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog_b__31_0__;
+  if ( (*((_BYTE *)Method_GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog_b__31_0__ + 83) & 2) != 0 )
+    v3 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog_b__31_0__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   confirmedGrandServantSelectDialog = (BaseDialog_o *)this->fields.confirmedGrandServantSelectDialog;
-  v8 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v8,
-    (Il2CppObject *)this,
-    Method_GrandServantListRootComponent_DecideActionSendMessageMenuDecide__,
-    0LL);
-  if ( !confirmedGrandServantSelectDialog )
-    sub_1BCB254(v9, v10);
-  BaseDialog__SafeClose(confirmedGrandServantSelectDialog, v8, 0LL);
-}
-
-
-void __fastcall GrandServantListRootComponent___OpenGrandServantResetDialog_b__34_0(
-        GrandServantListRootComponent_o *this,
-        const MethodInfo *method)
-{
-  __int64 v3; // x1
-  __int64 v4; // x1
-  _QWORD *v5; // x0
-  System_Reflection_MethodBase_o *v6; // x0
-  BaseDialog_o *grandServantResetDialog; // x20
-  System_Action_o *v8; // x21
-  __int64 v9; // x0
-  __int64 v10; // x1
-
-  if ( (byte_4B173F5 & 1) == 0 )
-  {
-    sub_1BCAFF8(&System_Action_TypeInfo, method);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_SendMessageMenuDecide__, v3);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__OpenGrandServantResetDialog_b__34_0__, v4);
-    byte_4B173F5 = 1;
-  }
-  v5 = Method_GrandServantListRootComponent__OpenGrandServantResetDialog_b__34_0__;
-  if ( (*((_BYTE *)Method_GrandServantListRootComponent__OpenGrandServantResetDialog_b__34_0__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1BCB010(Method_GrandServantListRootComponent__OpenGrandServantResetDialog_b__34_0__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v5, v5[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0LL);
-  grandServantResetDialog = (BaseDialog_o *)this->fields.grandServantResetDialog;
-  v8 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v8, (Il2CppObject *)this, Method_GrandServantListRootComponent_SendMessageMenuDecide__, 0LL);
-  if ( !grandServantResetDialog )
-    sub_1BCB254(v9, v10);
-  BaseDialog__SafeClose(grandServantResetDialog, v8, 0LL);
-}
-
-
-void __fastcall GrandServantListRootComponent___beginStartUp_b__17_0(
-        GrandServantListRootComponent_o *this,
-        const MethodInfo *method)
-{
-  __int64 v3; // x1
-  __int64 v4; // x1
-  System_Action_o *v5; // x20
-
-  if ( (byte_4B173EC & 1) == 0 )
-  {
-    sub_1BCAFF8(&System_Action_TypeInfo, method);
-    sub_1BCAFF8(&AtlasManager_TypeInfo, v3);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__beginStartUp_b__17_1__, v4);
-    byte_4B173EC = 1;
-  }
-  v5 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v5, (Il2CppObject *)this, Method_GrandServantListRootComponent__beginStartUp_b__17_1__, 0LL);
-  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadUISkin(v5, 1, 1, 0LL);
-}
-
-
-void __fastcall GrandServantListRootComponent___beginStartUp_b__17_1(
-        GrandServantListRootComponent_o *this,
-        const MethodInfo *method)
-{
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  AssetLoader_LoadEndDataHandler_o *v6; // x20
-
-  if ( (byte_4B173ED & 1) == 0 )
-  {
-    sub_1BCAFF8(&AssetManager_TypeInfo, method);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__beginStartUp_b__17_2__, v3);
-    sub_1BCAFF8(&AssetLoader_LoadEndDataHandler_TypeInfo, v4);
-    sub_1BCAFF8(&StringLiteral_7094/*"GrandServantList"*/, v5);
-    byte_4B173ED = 1;
-  }
-  v6 = (AssetLoader_LoadEndDataHandler_o *)sub_1BCB244(AssetLoader_LoadEndDataHandler_TypeInfo);
-  AssetLoader_LoadEndDataHandler___ctor(
     v6,
     (Il2CppObject *)this,
-    Method_GrandServantListRootComponent__beginStartUp_b__17_2__,
-    0LL);
-  if ( !AssetManager_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_7094/*"GrandServantList"*/, v6, 1, 0LL);
+    Method_GrandServantListRootComponent_DecideActionSendMessageMenuDecide__,
+    0);
+  if ( !confirmedGrandServantSelectDialog )
+    sub_1C2D6EC(v7, v8);
+  BaseDialog__SafeClose(confirmedGrandServantSelectDialog, v6, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent___beginStartUp_b__17_2(
+void GrandServantListRootComponent___OpenGrandServantResetDialog_b__40_0(
+        GrandServantListRootComponent_o *this,
+        const MethodInfo *method)
+{
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  BaseDialog_o *grandServantResetDialog; // x20
+  System_Action_o *v6; // x21
+  __int64 v7; // x0
+  __int64 v8; // x1
+
+  if ( (byte_4C2211A & 1) == 0 )
+  {
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_SendMessageMenuDecide__);
+    sub_1C2D490(&Method_GrandServantListRootComponent__OpenGrandServantResetDialog_b__40_0__);
+    byte_4C2211A = 1;
+  }
+  v3 = Method_GrandServantListRootComponent__OpenGrandServantResetDialog_b__40_0__;
+  if ( (*((_BYTE *)Method_GrandServantListRootComponent__OpenGrandServantResetDialog_b__40_0__ + 83) & 2) != 0 )
+    v3 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent__OpenGrandServantResetDialog_b__40_0__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
+  grandServantResetDialog = (BaseDialog_o *)this->fields.grandServantResetDialog;
+  v6 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v6, (Il2CppObject *)this, Method_GrandServantListRootComponent_SendMessageMenuDecide__, 0);
+  if ( !grandServantResetDialog )
+    sub_1C2D6EC(v7, v8);
+  BaseDialog__SafeClose(grandServantResetDialog, v6, 0);
+}
+
+
+void GrandServantListRootComponent___beginStartUp_b__19_0(
+        GrandServantListRootComponent_o *this,
+        const MethodInfo *method)
+{
+  System_Action_o *v3; // x20
+
+  if ( (byte_4C22111 & 1) == 0 )
+  {
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent__beginStartUp_b__19_1__);
+    byte_4C22111 = 1;
+  }
+  v3 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v3, (Il2CppObject *)this, Method_GrandServantListRootComponent__beginStartUp_b__19_1__, 0);
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  AtlasManager__LoadUISkin(v3, 1, 1, 0);
+}
+
+
+void GrandServantListRootComponent___beginStartUp_b__19_1(
+        GrandServantListRootComponent_o *this,
+        const MethodInfo *method)
+{
+  AssetLoader_LoadEndDataHandler_o *v3; // x20
+
+  if ( (byte_4C22112 & 1) == 0 )
+  {
+    sub_1C2D490(&AssetManager_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent__beginStartUp_b__19_2__);
+    sub_1C2D490(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C2D490(&StringLiteral_7154/*"GrandServantList"*/);
+    byte_4C22112 = 1;
+  }
+  if ( !AssetManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
+  AssetManager__SetAssetBundleUnload((System_String_o *)StringLiteral_7154/*"GrandServantList"*/, 0);
+  v3 = (AssetLoader_LoadEndDataHandler_o *)sub_1C2D6DC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  AssetLoader_LoadEndDataHandler___ctor(
+    v3,
+    (Il2CppObject *)this,
+    Method_GrandServantListRootComponent__beginStartUp_b__19_2__,
+    0);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_7154/*"GrandServantList"*/, v3, 1, 0);
+}
+
+
+void GrandServantListRootComponent___beginStartUp_b__19_2(
         GrandServantListRootComponent_o *this,
         AssetData_o *_,
         const MethodInfo *method)
 {
   __int64 v4; // x1
-  __int64 v5; // x1
   TitleInfoControl_o *titleInfo; // x0
+  PlayMakerFSM_o *myFSM; // x1
+  bool v7; // w1
+  UISprite_o *backgroundSprite; // x20
 
-  if ( (byte_4B173EE & 1) == 0 )
+  if ( (byte_4C22113 & 1) == 0 )
   {
-    sub_1BCAFF8(&AtlasManager_TypeInfo, _);
-    sub_1BCAFF8(&StringLiteral_20229/*"img_grand_servant_list_bg01"*/, v4);
-    byte_4B173EE = 1;
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_20400/*"img_grand_servant_list_bg01"*/);
+    byte_4C22113 = 1;
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__CacheGrandServantListAtlas(0LL);
+  AtlasManager__CacheGrandServantListAtlas(0);
   titleInfo = this->fields.titleInfo;
-  if ( !titleInfo
-    || (TitleInfoControl__setTitleInfo_39037524(titleInfo, this->fields.myFSM, 2, 96, 1, 0LL),
-        (titleInfo = this->fields.titleInfo) == 0LL)
-    || (titleInfo = (TitleInfoControl_o *)UnityEngine_Component__get_gameObject(
-                                            (UnityEngine_Component_o *)titleInfo,
-                                            0LL)) == 0LL
-    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleInfo, 1, 0LL),
-        (titleInfo = this->fields.titleInfo) == 0LL) )
+  if ( !titleInfo )
+    goto LABEL_18;
+  myFSM = this->fields.myFSM;
+  if ( this->fields.supportInfoJump )
   {
-    sub_1BCB254(titleInfo, v5);
+    TitleInfoControl__setTitleInfo_39624304(titleInfo, myFSM, 2, 98, 1, 0);
+    titleInfo = this->fields.titleInfo;
+    if ( titleInfo )
+    {
+      titleInfo = (TitleInfoControl_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleInfo, 0);
+      if ( titleInfo )
+      {
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleInfo, 1, 0);
+        titleInfo = this->fields.titleInfo;
+        if ( titleInfo )
+        {
+          v7 = 0;
+          goto LABEL_15;
+        }
+      }
+    }
+LABEL_18:
+    sub_1C2D6EC(titleInfo, v4);
   }
-  TitleInfoControl__SetHelpBtn(titleInfo, 1, 0LL);
-  AtlasManager__SetGrandServantListImage(this->fields.backgroundSprite, (System_String_o *)StringLiteral_20229/*"img_grand_servant_list_bg01"*/, 0LL);
-  SceneRootComponent__beginStartUp_40656696((SceneRootComponent_o *)this, 0LL);
+  TitleInfoControl__setTitleInfo_39624304(titleInfo, myFSM, 2, 96, 1, 0);
+  titleInfo = this->fields.titleInfo;
+  if ( !titleInfo )
+    goto LABEL_18;
+  titleInfo = (TitleInfoControl_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleInfo, 0);
+  if ( !titleInfo )
+    goto LABEL_18;
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleInfo, 1, 0);
+  titleInfo = this->fields.titleInfo;
+  if ( !titleInfo )
+    goto LABEL_18;
+  v7 = 1;
+LABEL_15:
+  TitleInfoControl__SetHelpBtn(titleInfo, v7, 0);
+  backgroundSprite = this->fields.backgroundSprite;
+  if ( !AtlasManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
+  AtlasManager__SetGrandServantListImage(backgroundSprite, (System_String_o *)StringLiteral_20400/*"img_grand_servant_list_bg01"*/, 0);
+  SceneRootComponent__beginStartUp_41259456((SceneRootComponent_o *)this, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent__beginFinish(
-        GrandServantListRootComponent_o *this,
-        const MethodInfo *method)
+void GrandServantListRootComponent__beginFinish(GrandServantListRootComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   GrandServantListMenu_o *listMenu; // x0
   struct GrandServantListMenuBranchDialog_o **p_grandServantListMenuBranchDialog; // x20
   UnityEngine_Object_o *grandServantListMenuBranchDialog; // x21
   UnityEngine_Object_o *gameObject; // x21
   struct ConfirmUseGrandServantResetItemDialog_o **p_confirmUseGrandServantResetItemDialog; // x20
   UnityEngine_Object_o *confirmUseGrandServantResetItemDialog; // x21
-  UnityEngine_Object_o *v13; // x21
+  UnityEngine_Object_o *v9; // x21
   struct ConfirmedGrandServantSelectDialog_o **p_confirmedGrandServantSelectDialog; // x20
   UnityEngine_Object_o *confirmedGrandServantSelectDialog; // x21
-  UnityEngine_Object_o *v16; // x21
+  UnityEngine_Object_o *v12; // x21
   struct ConfirmGrandServantResetDialog_o **p_confirmGrandServantResetDialog; // x20
   UnityEngine_Object_o *confirmGrandServantResetDialog; // x21
-  UnityEngine_Object_o *v19; // x21
+  UnityEngine_Object_o *v15; // x21
   struct GrandServantResetDialog_o **p_grandServantResetDialog; // x20
   UnityEngine_Object_o *grandServantResetDialog; // x21
-  UnityEngine_Object_o *v22; // x21
+  UnityEngine_Object_o *v18; // x21
   struct GrandEquipGraphListMenu_o **p_grandEquipGraphListMenu; // x20
   UnityEngine_Object_o *grandEquipGraphListMenu; // x21
-  UnityEngine_Object_o *v25; // x21
+  UnityEngine_Object_o *v21; // x21
   struct ChangeGrandSameServantListMenu_o **p_changeGrandSameServantListMenu; // x20
   UnityEngine_Object_o *changeGrandSameServantListMenu; // x21
-  UnityEngine_Object_o *v28; // x21
+  UnityEngine_Object_o *v24; // x21
   struct SelectGrandServantComponent_o **p_selectGrandServantComponent; // x19
-  UnityEngine_Object_o *v30; // x20
+  UnityEngine_Object_o *v26; // x20
   struct SelectGrandServantComponent_o *selectGrandServantComponent; // t1
-  UnityEngine_Object_o *v32; // x20
+  UnityEngine_Object_o *v28; // x20
 
-  if ( (byte_4B173D3 & 1) == 0 )
+  if ( (byte_4C220F1 & 1) == 0 )
   {
-    sub_1BCAFF8(&AssetManager_TypeInfo, method);
-    sub_1BCAFF8(&AtlasManager_TypeInfo, v3);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__, v5);
-    sub_1BCAFF8(&StringLiteral_7094/*"GrandServantList"*/, v6);
-    byte_4B173D3 = 1;
+    sub_1C2D490(&AssetManager_TypeInfo);
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    sub_1C2D490(&StringLiteral_7154/*"GrandServantList"*/);
+    byte_4C220F1 = 1;
   }
   listMenu = this->fields.listMenu;
   if ( !listMenu )
@@ -2132,319 +3095,773 @@ void __fastcall GrandServantListRootComponent__beginFinish(
   grandServantListMenuBranchDialog = (UnityEngine_Object_o *)this->fields.grandServantListMenuBranchDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(grandServantListMenuBranchDialog, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(grandServantListMenuBranchDialog, 0, 0) )
   {
     listMenu = (GrandServantListMenu_o *)*p_grandServantListMenuBranchDialog;
     if ( !*p_grandServantListMenuBranchDialog )
       goto LABEL_66;
-    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0LL);
+    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(gameObject, 0LL);
-    *p_grandServantListMenuBranchDialog = 0LL;
-    sub_1BCAF9C(&this->fields.grandServantListMenuBranchDialog);
+    UnityEngine_Object__Destroy_71163704(gameObject, 0);
+    *p_grandServantListMenuBranchDialog = 0;
+    sub_1C2D434(&this->fields.grandServantListMenuBranchDialog);
   }
   p_confirmUseGrandServantResetItemDialog = &this->fields.confirmUseGrandServantResetItemDialog;
   confirmUseGrandServantResetItemDialog = (UnityEngine_Object_o *)this->fields.confirmUseGrandServantResetItemDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(confirmUseGrandServantResetItemDialog, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(confirmUseGrandServantResetItemDialog, 0, 0) )
   {
     listMenu = (GrandServantListMenu_o *)*p_confirmUseGrandServantResetItemDialog;
     if ( !*p_confirmUseGrandServantResetItemDialog )
       goto LABEL_66;
-    v13 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0LL);
+    v9 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(v13, 0LL);
-    *p_confirmUseGrandServantResetItemDialog = 0LL;
-    sub_1BCAF9C(&this->fields.confirmUseGrandServantResetItemDialog);
+    UnityEngine_Object__Destroy_71163704(v9, 0);
+    *p_confirmUseGrandServantResetItemDialog = 0;
+    sub_1C2D434(&this->fields.confirmUseGrandServantResetItemDialog);
   }
   p_confirmedGrandServantSelectDialog = &this->fields.confirmedGrandServantSelectDialog;
   confirmedGrandServantSelectDialog = (UnityEngine_Object_o *)this->fields.confirmedGrandServantSelectDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(confirmedGrandServantSelectDialog, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(confirmedGrandServantSelectDialog, 0, 0) )
   {
     listMenu = (GrandServantListMenu_o *)*p_confirmedGrandServantSelectDialog;
     if ( !*p_confirmedGrandServantSelectDialog )
       goto LABEL_66;
-    v16 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0LL);
+    v12 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(v16, 0LL);
-    *p_confirmedGrandServantSelectDialog = 0LL;
-    sub_1BCAF9C(&this->fields.confirmedGrandServantSelectDialog);
+    UnityEngine_Object__Destroy_71163704(v12, 0);
+    *p_confirmedGrandServantSelectDialog = 0;
+    sub_1C2D434(&this->fields.confirmedGrandServantSelectDialog);
   }
   p_confirmGrandServantResetDialog = &this->fields.confirmGrandServantResetDialog;
   confirmGrandServantResetDialog = (UnityEngine_Object_o *)this->fields.confirmGrandServantResetDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(confirmGrandServantResetDialog, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(confirmGrandServantResetDialog, 0, 0) )
   {
     listMenu = (GrandServantListMenu_o *)*p_confirmGrandServantResetDialog;
     if ( !*p_confirmGrandServantResetDialog )
       goto LABEL_66;
-    v19 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0LL);
+    v15 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(v19, 0LL);
-    *p_confirmGrandServantResetDialog = 0LL;
-    sub_1BCAF9C(&this->fields.confirmGrandServantResetDialog);
+    UnityEngine_Object__Destroy_71163704(v15, 0);
+    *p_confirmGrandServantResetDialog = 0;
+    sub_1C2D434(&this->fields.confirmGrandServantResetDialog);
   }
   p_grandServantResetDialog = &this->fields.grandServantResetDialog;
   grandServantResetDialog = (UnityEngine_Object_o *)this->fields.grandServantResetDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(grandServantResetDialog, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(grandServantResetDialog, 0, 0) )
   {
     listMenu = (GrandServantListMenu_o *)*p_grandServantResetDialog;
     if ( !*p_grandServantResetDialog )
       goto LABEL_66;
-    v22 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0LL);
+    v18 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(v22, 0LL);
-    *p_grandServantResetDialog = 0LL;
-    sub_1BCAF9C(&this->fields.grandServantResetDialog);
+    UnityEngine_Object__Destroy_71163704(v18, 0);
+    *p_grandServantResetDialog = 0;
+    sub_1C2D434(&this->fields.grandServantResetDialog);
   }
   p_grandEquipGraphListMenu = &this->fields.grandEquipGraphListMenu;
   grandEquipGraphListMenu = (UnityEngine_Object_o *)this->fields.grandEquipGraphListMenu;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(grandEquipGraphListMenu, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(grandEquipGraphListMenu, 0, 0) )
   {
     listMenu = (GrandServantListMenu_o *)*p_grandEquipGraphListMenu;
     if ( !*p_grandEquipGraphListMenu )
       goto LABEL_66;
-    v25 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0LL);
+    v21 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(v25, 0LL);
-    *p_grandEquipGraphListMenu = 0LL;
-    sub_1BCAF9C(&this->fields.grandEquipGraphListMenu);
+    UnityEngine_Object__Destroy_71163704(v21, 0);
+    *p_grandEquipGraphListMenu = 0;
+    sub_1C2D434(&this->fields.grandEquipGraphListMenu);
   }
   p_changeGrandSameServantListMenu = &this->fields.changeGrandSameServantListMenu;
   changeGrandSameServantListMenu = (UnityEngine_Object_o *)this->fields.changeGrandSameServantListMenu;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(changeGrandSameServantListMenu, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(changeGrandSameServantListMenu, 0, 0) )
   {
     listMenu = (GrandServantListMenu_o *)*p_changeGrandSameServantListMenu;
     if ( !*p_changeGrandSameServantListMenu )
       goto LABEL_66;
-    v28 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0LL);
+    v24 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(v28, 0LL);
-    *p_changeGrandSameServantListMenu = 0LL;
-    sub_1BCAF9C(&this->fields.changeGrandSameServantListMenu);
+    UnityEngine_Object__Destroy_71163704(v24, 0);
+    *p_changeGrandSameServantListMenu = 0;
+    sub_1C2D434(&this->fields.changeGrandSameServantListMenu);
   }
   selectGrandServantComponent = this->fields.selectGrandServantComponent;
   p_selectGrandServantComponent = &this->fields.selectGrandServantComponent;
-  v30 = (UnityEngine_Object_o *)selectGrandServantComponent;
+  v26 = (UnityEngine_Object_o *)selectGrandServantComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v30, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v26, 0, 0) )
   {
     listMenu = (GrandServantListMenu_o *)*p_selectGrandServantComponent;
     if ( !*p_selectGrandServantComponent )
       goto LABEL_66;
-    v32 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0LL);
+    v28 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)listMenu, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(v32, 0LL);
-    *p_selectGrandServantComponent = 0LL;
-    sub_1BCAF9C(p_selectGrandServantComponent);
+    UnityEngine_Object__Destroy_71163704(v28, 0);
+    *p_selectGrandServantComponent = 0;
+    sub_1C2D434(p_selectGrandServantComponent);
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__ClearCachedGrandServantListAtlas(0LL);
+  AtlasManager__ClearCachedGrandServantListAtlas(0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAssetStorage((System_String_o *)StringLiteral_7094/*"GrandServantList"*/, 0LL);
-  listMenu = (GrandServantListMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+  AssetManager__releaseAssetStorage((System_String_o *)StringLiteral_7154/*"GrandServantList"*/, 0);
+  listMenu = (GrandServantListMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
   if ( !listMenu )
 LABEL_66:
-    sub_1BCB254(listMenu, method);
-  AtlasManager__ReleaseUISkin((AtlasManager_o *)listMenu, 2, 0, 0LL);
+    sub_1C2D6EC(listMenu, method);
+  AtlasManager__ReleaseUISkin((AtlasManager_o *)listMenu, 2, 0, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent__beginInitialize(
-        GrandServantListRootComponent_o *this,
-        const MethodInfo *method)
+void GrandServantListRootComponent__beginInitialize(GrandServantListRootComponent_o *this, const MethodInfo *method)
 {
   AvalonSceneManager_o *Instance; // x0
   __int64 v4; // x1
   UnityEngine_Vector3_o v5; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B173D1 & 1) == 0 )
+  if ( (byte_4C220EF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B173D1 = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C220EF = 1;
   }
-  SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0LL);
-  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0);
+  Instance = (AvalonSceneManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance
-    || (AvalonSceneManager__endInitialize(Instance, (SceneRootComponent_o *)this, 0LL),
-        (Instance = (AvalonSceneManager_o *)this->fields.titleInfo) == 0LL) )
+    || (AvalonSceneManager__endInitialize(Instance, (SceneRootComponent_o *)this, 0),
+        (Instance = (AvalonSceneManager_o *)this->fields.titleInfo) == 0) )
   {
-    sub_1BCB254(Instance, v4);
+    sub_1C2D6EC(Instance, v4);
   }
   v5.fields.y = -511.0;
   v5.fields.x = -14.0;
   v5.fields.z = 0.0;
-  TitleInfoControl__SetHelpBtnPos((TitleInfoControl_o *)Instance, v5, 0LL);
+  TitleInfoControl__SetHelpBtnPos((TitleInfoControl_o *)Instance, v5, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent__beginStartUp(
+void GrandServantListRootComponent__beginStartUp(
         GrandServantListRootComponent_o *this,
         Il2CppObject *data,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 methodPtr_low; // x9
+  __int64 naturalAligment; // x9
+  Il2CppObject *v6; // x10
+  struct SupportInfoJump_o **p_supportInfoJump; // x0
+  __int64 v8; // x9
   Il2CppObject *v9; // x10
-  struct SceneJumpInfo_o **p_sceneJumpInfo; // x0
-  __int64 v11; // x1
+  __int64 v10; // x1
   UnityEngine_Component_o *titleInfo; // x0
-  System_Action_o *v13; // x20
+  System_Action_o *v12; // x20
 
-  if ( (byte_4B173D2 & 1) == 0 )
+  if ( (byte_4C220F0 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, data);
-    sub_1BCAFF8(&AtlasManager_TypeInfo, v5);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent__beginStartUp_b__17_0__, v6);
-    sub_1BCAFF8(&SceneJumpInfo_TypeInfo, v7);
-    byte_4B173D2 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent__beginStartUp_b__19_0__);
+    sub_1C2D490(&SceneJumpInfo_TypeInfo);
+    sub_1C2D490(&SupportInfoJump_TypeInfo);
+    byte_4C220F0 = 1;
   }
   if ( data )
   {
-    methodPtr_low = LOBYTE(SceneJumpInfo_TypeInfo->vtable._0_Equals.methodPtr);
-    if ( LOBYTE(data->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low )
+    naturalAligment = SceneJumpInfo_TypeInfo->_2.naturalAligment;
+    if ( data->klass->_2.naturalAligment >= (unsigned int)naturalAligment )
     {
-      if ( (SceneJumpInfo_c *)data->klass->_2.typeHierarchy[methodPtr_low - 1] == SceneJumpInfo_TypeInfo )
-        v9 = data;
+      if ( (SceneJumpInfo_c *)data->klass->_2.typeHierarchy[naturalAligment - 1] == SceneJumpInfo_TypeInfo )
+        v6 = data;
       else
-        v9 = 0LL;
+        v6 = 0;
     }
     else
     {
-      v9 = 0LL;
+      v6 = 0;
     }
-    this->fields.sceneJumpInfo = (struct SceneJumpInfo_o *)v9;
-    p_sceneJumpInfo = &this->fields.sceneJumpInfo;
+    this->fields.sceneJumpInfo = (struct SceneJumpInfo_o *)v6;
+    sub_1C2D434(&this->fields.sceneJumpInfo);
+    v8 = SupportInfoJump_TypeInfo->_2.naturalAligment;
+    if ( data->klass->_2.naturalAligment >= (unsigned int)v8 )
+    {
+      if ( (SupportInfoJump_c *)data->klass->_2.typeHierarchy[v8 - 1] == SupportInfoJump_TypeInfo )
+        v9 = data;
+      else
+        v9 = 0;
+    }
+    else
+    {
+      v9 = 0;
+    }
+    this->fields.supportInfoJump = (struct SupportInfoJump_o *)v9;
+    p_supportInfoJump = &this->fields.supportInfoJump;
   }
   else
   {
-    this->fields.sceneJumpInfo = 0LL;
-    p_sceneJumpInfo = &this->fields.sceneJumpInfo;
+    this->fields.sceneJumpInfo = 0;
+    sub_1C2D434(&this->fields.sceneJumpInfo);
+    this->fields.supportInfoJump = 0;
+    p_supportInfoJump = &this->fields.supportInfoJump;
   }
-  sub_1BCAF9C(p_sceneJumpInfo);
+  sub_1C2D434(p_supportInfoJump);
   titleInfo = (UnityEngine_Component_o *)this->fields.titleInfo;
-  if ( !titleInfo
-    || (titleInfo = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(titleInfo, 0LL)) == 0LL )
-  {
-    sub_1BCB254(titleInfo, v11);
-  }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleInfo, 0, 0LL);
-  v13 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v13, (Il2CppObject *)this, Method_GrandServantListRootComponent__beginStartUp_b__17_0__, 0LL);
+  if ( !titleInfo || (titleInfo = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(titleInfo, 0)) == 0 )
+    sub_1C2D6EC(titleInfo, v10);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleInfo, 0, 0);
+  v12 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v12, (Il2CppObject *)this, Method_GrandServantListRootComponent__beginStartUp_b__19_0__, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadUISkin(v13, 2, 1, 0LL);
+  AtlasManager__LoadUISkin(v12, 2, 1, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent___c___cctor(const MethodInfo *method)
+void GrandServantListRootComponent___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
+  Il2CppObject *v1; // x19
 
-  if ( (byte_4B173F7 & 1) == 0 )
+  if ( (byte_4C2211C & 1) == 0 )
   {
-    sub_1BCAFF8(&GrandServantListRootComponent___c_TypeInfo, v1);
-    byte_4B173F7 = 1;
+    sub_1C2D490(&GrandServantListRootComponent___c_TypeInfo);
+    byte_4C2211C = 1;
   }
-  v2 = (Il2CppObject *)sub_1BCB244(GrandServantListRootComponent___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  GrandServantListRootComponent___c_TypeInfo->static_fields->__9 = (struct GrandServantListRootComponent___c_o *)v2;
-  sub_1BCAF9C(GrandServantListRootComponent___c_TypeInfo->static_fields);
+  v1 = (Il2CppObject *)sub_1C2D6DC(GrandServantListRootComponent___c_TypeInfo);
+  System_Object___ctor(v1, 0);
+  GrandServantListRootComponent___c_TypeInfo->static_fields->__9 = (struct GrandServantListRootComponent___c_o *)v1;
+  sub_1C2D434(GrandServantListRootComponent___c_TypeInfo->static_fields);
 }
 
 
-void __fastcall GrandServantListRootComponent___c___ctor(
-        GrandServantListRootComponent___c_o *this,
-        const MethodInfo *method)
+void GrandServantListRootComponent___c___ctor(GrandServantListRootComponent___c_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent___c___EndShowServantWithQuest_b__37_0(
+void GrandServantListRootComponent___c___EndShowServantWithQuest_b__43_0(
         GrandServantListRootComponent___c_o *this,
         const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4B173F8 & 1) == 0 )
+  if ( (byte_4C2211F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, method);
-    byte_4B173F8 = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C2211F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1BCB254(0LL, v3);
-  AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 34, 1, 0LL, 0LL);
+    sub_1C2D6EC(0, v3);
+  AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 34, 1, 0, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent___c__DisplayClass23_0___ctor(
-        GrandServantListRootComponent___c__DisplayClass23_0_o *this,
+void GrandServantListRootComponent___c___OnClickHelpBtn_b__49_0(
+        GrandServantListRootComponent___c_o *this,
+        System_Action_o *action,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  EventTutorialMaster__ShowTutorialWithoutCheck(-1, 100, action, 1, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent___c__DisplayClass23_0___OnSelectEditServant_b__3(
-        GrandServantListRootComponent___c__DisplayClass23_0_o *this,
+void GrandServantListRootComponent___c___OnClickHelpBtn_b__49_1(
+        GrandServantListRootComponent___c_o *this,
+        System_Action_o *action,
+        const MethodInfo *method)
+{
+  EventTutorialMaster__ShowTutorialWithoutCheck_41941800(-1, 101, action, 0, 0, 0, 0, 0);
+}
+
+
+bool GrandServantListRootComponent___c___OnSelectEditServant_b__28_1(
+        GrandServantListRootComponent___c_o *this,
+        SelectGrandServantInfo_o *e,
+        const MethodInfo *method)
+{
+  if ( !e )
+    sub_1C2D6EC(this, 0);
+  return e->fields._IsValid_k__BackingField;
+}
+
+
+bool GrandServantListRootComponent___c___OnSelectEditServant_b__28_2(
+        GrandServantListRootComponent___c_o *this,
+        SelectGrandServantInfo_o *e,
+        const MethodInfo *method)
+{
+  if ( !e )
+    sub_1C2D6EC(this, 0);
+  return e->fields._CanSelectToGrand_k__BackingField;
+}
+
+
+int32_t GrandServantListRootComponent___c___OnSelectEditServant_b__28_3(
+        GrandServantListRootComponent___c_o *this,
+        SelectGrandServantInfo_o *e,
+        const MethodInfo *method)
+{
+  if ( !e )
+    sub_1C2D6EC(this, 0);
+  return e->fields._ExtraGroupNo_k__BackingField;
+}
+
+
+int32_t GrandServantListRootComponent___c___OnSelectEditServant_b__28_4(
+        GrandServantListRootComponent___c_o *this,
+        System_Linq_IGrouping_int__SelectGrandServantInfo__o *g,
+        const MethodInfo *method)
+{
+  System_Linq_IGrouping_int__SelectGrandServantInfo__c *klass; // x8
+  __int64 v5; // x9
+  int32_t *p_offset; // x10
+  __int64 v7; // x0
+
+  if ( (byte_4C2211D & 1) == 0 )
+  {
+    this = (GrandServantListRootComponent___c_o *)sub_1C2D490(&System_Linq_IGrouping_int__SelectGrandServantInfo__TypeInfo);
+    byte_4C2211D = 1;
+  }
+  if ( !g )
+    sub_1C2D6EC(this, g);
+  klass = g->klass;
+  v5 = *(unsigned __int16 *)&g->klass->_2.rank;
+  if ( *(_WORD *)&g->klass->_2.rank )
+  {
+    p_offset = &klass->_1.interfaceOffsets->offset;
+    while ( *((System_Linq_IGrouping_int__SelectGrandServantInfo__c **)p_offset - 1) != System_Linq_IGrouping_int__SelectGrandServantInfo__TypeInfo )
+    {
+      --v5;
+      p_offset += 4;
+      if ( !v5 )
+        goto LABEL_8;
+    }
+    v7 = (__int64)&klass->vtable[*p_offset];
+  }
+  else
+  {
+LABEL_8:
+    v7 = sub_1C7DCA8(g, System_Linq_IGrouping_int__SelectGrandServantInfo__TypeInfo, 0);
+  }
+  return (*(__int64 (__fastcall **)(System_Linq_IGrouping_int__SelectGrandServantInfo__o *, _QWORD))v7)(
+           g,
+           *(_QWORD *)(v7 + 8));
+}
+
+
+System_Collections_Generic_List_SelectGrandServantInfo__o *GrandServantListRootComponent___c___OnSelectEditServant_b__28_5(
+        GrandServantListRootComponent___c_o *this,
+        System_Linq_IGrouping_int__SelectGrandServantInfo__o *g,
+        const MethodInfo *method)
+{
+  if ( (byte_4C2211E & 1) == 0 )
+  {
+    sub_1C2D490(&Method_System_Linq_Enumerable_ToList_SelectGrandServantInfo___);
+    byte_4C2211E = 1;
+  }
+  return (System_Collections_Generic_List_SelectGrandServantInfo__o *)System_Linq_Enumerable__ToList_object_(
+                                                                        (System_Collections_Generic_IEnumerable_TSource__o *)g,
+                                                                        (const MethodInfo_3112C88 *)Method_System_Linq_Enumerable_ToList_SelectGrandServantInfo___);
+}
+
+
+bool GrandServantListRootComponent___c___OnSelectEditServant_b__28_6(
+        GrandServantListRootComponent___c_o *this,
+        SelectGrandServantInfo_o *e,
+        const MethodInfo *method)
+{
+  if ( !e )
+    sub_1C2D6EC(this, 0);
+  return e->fields._CanSelectToGrand_k__BackingField;
+}
+
+
+bool GrandServantListRootComponent___c___OnSelectEditServant_b__28_7(
+        GrandServantListRootComponent___c_o *this,
+        SelectGrandServantInfo_o *e,
+        const MethodInfo *method)
+{
+  if ( !e )
+    sub_1C2D6EC(this, 0);
+  return e->fields._CanSelectToGrand_k__BackingField;
+}
+
+
+void GrandServantListRootComponent___c__DisplayClass28_0___ctor(
+        GrandServantListRootComponent___c__DisplayClass28_0_o *this,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0);
+}
+
+
+SelectGrandServantInfo_o *GrandServantListRootComponent___c__DisplayClass28_0___OnSelectEditServant_b__0(
+        GrandServantListRootComponent___c__DisplayClass28_0_o *this,
+        UserServantEntity_o *e,
+        const MethodInfo *method)
+{
+  GrandServantListRootComponent___c__DisplayClass28_0_o *v4; // x20
+  struct GrandServantListSlotData_o *slotData; // x8
+  GrandGraphEntity_o *GrandGraphEntity_k__BackingField; // x20
+  SelectGrandServantInfo_o *v7; // x21
+
+  v4 = this;
+  if ( (byte_4C22120 & 1) == 0 )
+  {
+    this = (GrandServantListRootComponent___c__DisplayClass28_0_o *)sub_1C2D490(&SelectGrandServantInfo_TypeInfo);
+    byte_4C22120 = 1;
+  }
+  slotData = v4->fields.slotData;
+  if ( !slotData )
+    sub_1C2D6EC(this, e);
+  GrandGraphEntity_k__BackingField = slotData->fields._GrandGraphEntity_k__BackingField;
+  v7 = (SelectGrandServantInfo_o *)sub_1C2D6DC(SelectGrandServantInfo_TypeInfo);
+  SelectGrandServantInfo___ctor(v7, GrandGraphEntity_k__BackingField, e, 0);
+  return v7;
+}
+
+
+void GrandServantListRootComponent___c__DisplayClass28_1___ctor(
+        GrandServantListRootComponent___c__DisplayClass28_1_o *this,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0);
+}
+
+
+void GrandServantListRootComponent___c__DisplayClass28_1___OnSelectEditServant_b__10(
+        GrandServantListRootComponent___c__DisplayClass28_1_o *this,
+        const MethodInfo *method)
+{
+  UnityEngine_Object_o *dialog; // x20
+  GrandServantListRootComponent_o *_4__this; // x0
+  __int64 v5; // x1
+  const MethodInfo *v6; // x3
+  struct GrandServantListRootComponent___c__DisplayClass28_0_o *CS___8__locals1; // x9
+  struct GrandServantListSlotData_o *slotData; // x8
+
+  if ( (byte_4C22123 & 1) == 0 )
+  {
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C22123 = 1;
+  }
+  dialog = (UnityEngine_Object_o *)this->fields.dialog;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  UnityEngine_Object__Destroy_71163704(dialog, 0);
+  CS___8__locals1 = this->fields.CS___8__locals1;
+  if ( !CS___8__locals1
+    || (slotData = CS___8__locals1->fields.slotData) == 0
+    || (_4__this = CS___8__locals1->fields.__4__this) == 0 )
+  {
+    sub_1C2D6EC(_4__this, v5);
+  }
+  GrandServantListRootComponent__StartSelectGrandServant(
+    _4__this,
+    slotData->fields._GrandGraphEntity_k__BackingField,
+    this->fields.ex2ServantInfos,
+    v6);
+}
+
+
+void GrandServantListRootComponent___c__DisplayClass28_1___OnSelectEditServant_b__11(
+        GrandServantListRootComponent___c__DisplayClass28_1_o *this,
+        const MethodInfo *method)
+{
+  UnityEngine_Object_o *dialog; // x20
+  GrandServantListRootComponent_o *_4__this; // x0
+  const MethodInfo *v5; // x1
+  struct GrandServantListRootComponent___c__DisplayClass28_0_o *CS___8__locals1; // x8
+
+  if ( (byte_4C22124 & 1) == 0 )
+  {
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C22124 = 1;
+  }
+  dialog = (UnityEngine_Object_o *)this->fields.dialog;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  UnityEngine_Object__Destroy_71163704(dialog, 0);
+  CS___8__locals1 = this->fields.CS___8__locals1;
+  if ( !CS___8__locals1 || (_4__this = CS___8__locals1->fields.__4__this) == 0 )
+    sub_1C2D6EC(_4__this, v5);
+  GrandServantListRootComponent__SendMessageMenuCancel(_4__this, v5);
+}
+
+
+void GrandServantListRootComponent___c__DisplayClass28_1___OnSelectEditServant_b__8(
+        GrandServantListRootComponent___c__DisplayClass28_1_o *this,
+        int32_t res,
+        const MethodInfo *method)
+{
+  _QWORD *v5; // x0
+  System_Reflection_MethodBase_o *v6; // x0
+  __int64 v7; // x0
+  __int64 v8; // x1
+  System_Action_o *_9__11; // x21
+  struct System_Action_o **p__9__11; // x22
+  BaseDialog_o *dialog; // x20
+  _QWORD *v12; // x0
+  System_Reflection_MethodBase_o *v13; // x0
+  _QWORD *v14; // x0
+  System_Reflection_MethodBase_o *v15; // x0
+
+  if ( (byte_4C22121 & 1) == 0 )
+  {
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__10__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__11__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__8__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__9__);
+    byte_4C22121 = 1;
+  }
+  if ( res == 2 )
+  {
+    v12 = Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__8__;
+    if ( (*((_BYTE *)Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__8__ + 83) & 2) != 0 )
+      v12 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__8__);
+    v13 = (System_Reflection_MethodBase_o *)sub_1C2D474(v12, v12[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v13, 1, 0, 0);
+    p__9__11 = &this->fields.__9__11;
+    _9__11 = this->fields.__9__11;
+    dialog = (BaseDialog_o *)this->fields.dialog;
+    if ( _9__11 )
+      goto LABEL_19;
+    _9__11 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    System_Action___ctor(
+      _9__11,
+      (Il2CppObject *)this,
+      Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__11__,
+      0);
+    this->fields.__9__11 = _9__11;
+    goto LABEL_18;
+  }
+  if ( res == 1 )
+  {
+    v14 = Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__8__;
+    if ( (*((_BYTE *)Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__8__ + 83) & 2) != 0 )
+      v14 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__8__);
+    v15 = (System_Reflection_MethodBase_o *)sub_1C2D474(v14, v14[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v15, 0, 0, 0);
+    p__9__11 = &this->fields.__9__10;
+    _9__11 = this->fields.__9__10;
+    dialog = (BaseDialog_o *)this->fields.dialog;
+    if ( _9__11 )
+      goto LABEL_19;
+    _9__11 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    System_Action___ctor(
+      _9__11,
+      (Il2CppObject *)this,
+      Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__10__,
+      0);
+    this->fields.__9__10 = _9__11;
+    goto LABEL_18;
+  }
+  if ( res )
+    return;
+  v5 = Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__8__;
+  if ( (*((_BYTE *)Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__8__ + 83) & 2) != 0 )
+    v5 = (_QWORD *)sub_1C2D4A8(Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__8__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C2D474(v5, v5[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
+  p__9__11 = &this->fields.__9__9;
+  _9__11 = this->fields.__9__9;
+  dialog = (BaseDialog_o *)this->fields.dialog;
+  if ( !_9__11 )
+  {
+    _9__11 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    System_Action___ctor(
+      _9__11,
+      (Il2CppObject *)this,
+      Method_GrandServantListRootComponent___c__DisplayClass28_1__OnSelectEditServant_b__9__,
+      0);
+    this->fields.__9__9 = _9__11;
+LABEL_18:
+    v7 = sub_1C2D434(p__9__11);
+  }
+LABEL_19:
+  if ( !dialog )
+    sub_1C2D6EC(v7, v8);
+  BaseDialog__SafeClose(dialog, _9__11, 0);
+}
+
+
+void GrandServantListRootComponent___c__DisplayClass28_1___OnSelectEditServant_b__9(
+        GrandServantListRootComponent___c__DisplayClass28_1_o *this,
+        const MethodInfo *method)
+{
+  UnityEngine_Object_o *dialog; // x20
+  GrandServantListRootComponent_o *_4__this; // x0
+  __int64 v5; // x1
+  const MethodInfo *v6; // x3
+  struct GrandServantListRootComponent___c__DisplayClass28_0_o *CS___8__locals1; // x9
+  struct GrandServantListSlotData_o *slotData; // x8
+
+  if ( (byte_4C22122 & 1) == 0 )
+  {
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C22122 = 1;
+  }
+  dialog = (UnityEngine_Object_o *)this->fields.dialog;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  UnityEngine_Object__Destroy_71163704(dialog, 0);
+  CS___8__locals1 = this->fields.CS___8__locals1;
+  if ( !CS___8__locals1
+    || (slotData = CS___8__locals1->fields.slotData) == 0
+    || (_4__this = CS___8__locals1->fields.__4__this) == 0 )
+  {
+    sub_1C2D6EC(_4__this, v5);
+  }
+  GrandServantListRootComponent__StartSelectGrandServant(
+    _4__this,
+    slotData->fields._GrandGraphEntity_k__BackingField,
+    this->fields.ex1ServantInfos,
+    v6);
+}
+
+
+void GrandServantListRootComponent___c__DisplayClass30_0___ctor(
+        GrandServantListRootComponent___c__DisplayClass30_0_o *this,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0);
+}
+
+
+void GrandServantListRootComponent___c__DisplayClass30_0___StartSelectGrandServant_b__2(
+        GrandServantListRootComponent___c__DisplayClass30_0_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
-  GrandServantListRootComponent___c__DisplayClass23_0_o *v3; // x19
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
+  GrandServantListRootComponent___c__DisplayClass30_0_o *v3; // x19
   struct GrandServantListRootComponent_o *_4__this; // x8
   struct GrandServantListMenu_o *listMenu; // x8
-  struct GrandServantListRootComponent_o *v10; // x8
-  UnityEngine_Object_o *gameObject; // x20
-  Il2CppObject *Instance; // x0
-  AvalonSceneManager_c *v13; // x8
-  CommonUI_o *v14; // x20
-  Il2CppObject *v15; // x22
-  float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v17; // x21
-  struct GrandServantListRootComponent_o *v18; // x8
+  struct GrandServantListRootComponent_o *v6; // x20
+  struct GrandServantListRootComponent_o *v7; // x8
+  SelectGrandServantComponent_o *selectGrandServantComponent; // x20
+  GrandGraphEntity_o *grandGraphEntity; // x21
+  System_Collections_Generic_List_SelectGrandServantInfo__o *servantInfos; // x22
+  System_Action_o *v11; // x23
+  System_Action_object__o *v12; // x24
+  struct GrandServantListRootComponent_o *v13; // x8
+  struct GrandServantListRootComponent_o *v14; // x8
 
   v3 = this;
-  if ( (byte_4B173FA & 1) == 0 )
+  if ( (byte_4C22128 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, method);
-    sub_1BCAFF8(&AvalonSceneManager_TypeInfo, v4);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent_SendMessageMenuDecide__, v5);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v6);
-    this = (GrandServantListRootComponent___c__DisplayClass23_0_o *)sub_1BCAFF8(
-                                                                      &Method_SingletonMonoBehaviour_CommonUI__get_Instance__,
-                                                                      v7);
-    byte_4B173FA = 1;
+    sub_1C2D490(&System_Action_UserServantEntity__TypeInfo);
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_SelectGrandServantComponent___);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__DisplayClass30_0__StartSelectGrandServant_g__BackAction_0__);
+    this = (GrandServantListRootComponent___c__DisplayClass30_0_o *)sub_1C2D490(&Method_GrandServantListRootComponent___c__DisplayClass30_0__StartSelectGrandServant_g__DecideAction_1__);
+    byte_4C22128 = 1;
+  }
+  _4__this = v3->fields.__4__this;
+  if ( !_4__this )
+    goto LABEL_14;
+  listMenu = _4__this->fields.listMenu;
+  if ( !listMenu )
+    goto LABEL_14;
+  this = (GrandServantListRootComponent___c__DisplayClass30_0_o *)listMenu->fields.menu;
+  if ( !this )
+    goto LABEL_14;
+  GrandServantListMenuLayout__SetItemSlotActive((GrandServantListMenuLayout_o *)this, 0, v2);
+  this = (GrandServantListRootComponent___c__DisplayClass30_0_o *)v3->fields.selectGrandServant;
+  if ( !this )
+    goto LABEL_14;
+  v6 = v3->fields.__4__this;
+  this = (GrandServantListRootComponent___c__DisplayClass30_0_o *)UnityEngine_Component__GetComponent_object_(
+                                                                    (UnityEngine_Component_o *)this,
+                                                                    (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_SelectGrandServantComponent___);
+  if ( !v6 )
+    goto LABEL_14;
+  v6->fields.selectGrandServantComponent = (struct SelectGrandServantComponent_o *)this;
+  this = (GrandServantListRootComponent___c__DisplayClass30_0_o *)sub_1C2D434(&v6->fields.selectGrandServantComponent);
+  v7 = v3->fields.__4__this;
+  if ( !v7 )
+    goto LABEL_14;
+  selectGrandServantComponent = v7->fields.selectGrandServantComponent;
+  grandGraphEntity = v3->fields.grandGraphEntity;
+  servantInfos = v3->fields.servantInfos;
+  v11 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(
+    v11,
+    (Il2CppObject *)v3,
+    Method_GrandServantListRootComponent___c__DisplayClass30_0__StartSelectGrandServant_g__BackAction_0__,
+    0);
+  v12 = (System_Action_object__o *)sub_1C2D6DC(System_Action_UserServantEntity__TypeInfo);
+  System_Action_object____ctor(
+    v12,
+    (Il2CppObject *)v3,
+    Method_GrandServantListRootComponent___c__DisplayClass30_0__StartSelectGrandServant_g__DecideAction_1__,
+    0);
+  if ( !selectGrandServantComponent
+    || (SelectGrandServantComponent__SetUp(
+          selectGrandServantComponent,
+          grandGraphEntity,
+          servantInfos,
+          v11,
+          (System_Action_UserServantEntity__o *)v12,
+          0),
+        (v13 = v3->fields.__4__this) == 0)
+    || (BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v13->fields.selectGrandServantComponent, 1, 0),
+        (v14 = v3->fields.__4__this) == 0)
+    || (this = (GrandServantListRootComponent___c__DisplayClass30_0_o *)v14->fields.titleInfo) == 0 )
+  {
+LABEL_14:
+    sub_1C2D6EC(this, method);
+  }
+  TitleInfoControl__SetHelpBtn((TitleInfoControl_o *)this, 0, 0);
+}
+
+
+void GrandServantListRootComponent___c__DisplayClass30_0___StartSelectGrandServant_b__3(
+        GrandServantListRootComponent___c__DisplayClass30_0_o *this,
+        const MethodInfo *method)
+{
+  const MethodInfo *v2; // x2
+  GrandServantListRootComponent___c__DisplayClass30_0_o *v3; // x19
+  struct GrandServantListRootComponent_o *_4__this; // x8
+  struct GrandServantListMenu_o *listMenu; // x8
+  struct GrandServantListRootComponent_o *v6; // x8
+  UnityEngine_Object_o *gameObject; // x20
+  Il2CppObject *Instance; // x0
+  AvalonSceneManager_c *v9; // x8
+  CommonUI_o *v10; // x20
+  Il2CppObject *v11; // x22
+  float DEFAULT_FADE_TIME; // s8
+  System_Action_o *v13; // x21
+  struct GrandServantListRootComponent_o *v14; // x8
+
+  v3 = this;
+  if ( (byte_4C22126 & 1) == 0 )
+  {
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&AvalonSceneManager_TypeInfo);
+    sub_1C2D490(&Method_GrandServantListRootComponent_SendMessageMenuDecide__);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    this = (GrandServantListRootComponent___c__DisplayClass30_0_o *)sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C22126 = 1;
   }
   _4__this = v3->fields.__4__this;
   if ( !_4__this )
@@ -2452,484 +3869,355 @@ void __fastcall GrandServantListRootComponent___c__DisplayClass23_0___OnSelectEd
   listMenu = _4__this->fields.listMenu;
   if ( !listMenu )
     goto LABEL_17;
-  this = (GrandServantListRootComponent___c__DisplayClass23_0_o *)listMenu->fields.menu;
+  this = (GrandServantListRootComponent___c__DisplayClass30_0_o *)listMenu->fields.menu;
   if ( !this )
     goto LABEL_17;
   GrandServantListMenuLayout__SetItemSlotActive((GrandServantListMenuLayout_o *)this, 1, v2);
-  v10 = v3->fields.__4__this;
-  if ( !v10 )
+  v6 = v3->fields.__4__this;
+  if ( !v6 )
     goto LABEL_17;
-  this = (GrandServantListRootComponent___c__DisplayClass23_0_o *)v10->fields.selectGrandServantComponent;
+  this = (GrandServantListRootComponent___c__DisplayClass30_0_o *)v6->fields.selectGrandServantComponent;
   if ( !this )
     goto LABEL_17;
-  gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_70136076(gameObject, 0LL);
-  this = (GrandServantListRootComponent___c__DisplayClass23_0_o *)v3->fields.__4__this;
+  UnityEngine_Object__Destroy_71163704(gameObject, 0);
+  this = (GrandServantListRootComponent___c__DisplayClass30_0_o *)v3->fields.__4__this;
   if ( !this )
     goto LABEL_17;
-  this[5].monitor = 0LL;
-  sub_1BCAF9C(&this[5].monitor);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v13 = AvalonSceneManager_TypeInfo;
-  v14 = (CommonUI_o *)Instance;
+  this[3].fields.selectGrandServant = 0;
+  sub_1C2D434(&this[3].fields.selectGrandServant);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v9 = AvalonSceneManager_TypeInfo;
+  v10 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-    v13 = AvalonSceneManager_TypeInfo;
+    v9 = AvalonSceneManager_TypeInfo;
   }
-  v15 = (Il2CppObject *)v3->fields.__4__this;
-  DEFAULT_FADE_TIME = v13->static_fields->DEFAULT_FADE_TIME;
-  v17 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v17, v15, Method_GrandServantListRootComponent_SendMessageMenuDecide__, 0LL);
-  if ( !v14
-    || (this = (GrandServantListRootComponent___c__DisplayClass23_0_o *)CommonUI__maskFadein(
-                                                                          v14,
+  v11 = (Il2CppObject *)v3->fields.__4__this;
+  DEFAULT_FADE_TIME = v9->static_fields->DEFAULT_FADE_TIME;
+  v13 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v13, v11, Method_GrandServantListRootComponent_SendMessageMenuDecide__, 0);
+  if ( !v10
+    || (this = (GrandServantListRootComponent___c__DisplayClass30_0_o *)CommonUI__maskFadein(
+                                                                          v10,
                                                                           DEFAULT_FADE_TIME,
-                                                                          v17,
-                                                                          0LL),
-        (v18 = v3->fields.__4__this) == 0LL)
-    || (this = (GrandServantListRootComponent___c__DisplayClass23_0_o *)v18->fields.titleInfo) == 0LL )
+                                                                          v13,
+                                                                          0),
+        (v14 = v3->fields.__4__this) == 0)
+    || (this = (GrandServantListRootComponent___c__DisplayClass30_0_o *)v14->fields.titleInfo) == 0 )
   {
 LABEL_17:
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   }
-  TitleInfoControl__SetHelpBtn((TitleInfoControl_o *)this, 1, 0LL);
+  TitleInfoControl__SetHelpBtn((TitleInfoControl_o *)this, 1, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent___c__DisplayClass23_0___OnSelectEditServant_g__BackAction_0(
-        GrandServantListRootComponent___c__DisplayClass23_0_o *this,
+void GrandServantListRootComponent___c__DisplayClass30_0___StartSelectGrandServant_g__BackAction_0(
+        GrandServantListRootComponent___c__DisplayClass30_0_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
   Il2CppObject *Instance; // x0
-  AvalonSceneManager_c *v7; // x8
-  CommonUI_o *v8; // x20
+  AvalonSceneManager_c *v4; // x8
+  CommonUI_o *v5; // x20
   float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v10; // x21
-  __int64 v11; // x0
-  __int64 v12; // x1
+  System_Action_o *v7; // x21
+  __int64 v8; // x0
+  __int64 v9; // x1
 
-  if ( (byte_4B173F9 & 1) == 0 )
+  if ( (byte_4C22125 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, method);
-    sub_1BCAFF8(&AvalonSceneManager_TypeInfo, v3);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v4);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent___c__DisplayClass23_0__OnSelectEditServant_b__3__, v5);
-    byte_4B173F9 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&AvalonSceneManager_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__DisplayClass30_0__StartSelectGrandServant_b__3__);
+    byte_4C22125 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v7 = AvalonSceneManager_TypeInfo;
-  v8 = (CommonUI_o *)Instance;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v4 = AvalonSceneManager_TypeInfo;
+  v5 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-    v7 = AvalonSceneManager_TypeInfo;
+    v4 = AvalonSceneManager_TypeInfo;
   }
-  DEFAULT_FADE_TIME = v7->static_fields->DEFAULT_FADE_TIME;
-  v10 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
+  DEFAULT_FADE_TIME = v4->static_fields->DEFAULT_FADE_TIME;
+  v7 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v10,
+    v7,
     (Il2CppObject *)this,
-    Method_GrandServantListRootComponent___c__DisplayClass23_0__OnSelectEditServant_b__3__,
-    0LL);
-  if ( !v8 )
-    sub_1BCB254(v11, v12);
-  CommonUI__maskFadeout(v8, 2, DEFAULT_FADE_TIME, v10, 0LL);
+    Method_GrandServantListRootComponent___c__DisplayClass30_0__StartSelectGrandServant_b__3__,
+    0);
+  if ( !v5 )
+    sub_1C2D6EC(v8, v9);
+  CommonUI__maskFadeout(v5, 2, DEFAULT_FADE_TIME, v7, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent___c__DisplayClass23_0___OnSelectEditServant_g__DecideAction_1(
-        GrandServantListRootComponent___c__DisplayClass23_0_o *this,
+void GrandServantListRootComponent___c__DisplayClass30_0___StartSelectGrandServant_g__DecideAction_1(
+        GrandServantListRootComponent___c__DisplayClass30_0_o *this,
         UserServantEntity_o *servantEntity,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  Il2CppObject *v5; // x20
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  Il2CppObject *v9; // x20
-  __int64 v10; // x0
-  __int64 v11; // x1
   Il2CppObject *Instance; // x0
-  AvalonSceneManager_c *v13; // x8
-  CommonUI_o *v14; // x19
+  AvalonSceneManager_c *v9; // x8
+  CommonUI_o *v10; // x19
   float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v16; // x21
+  System_Action_o *v12; // x21
 
-  if ( (byte_4B173FB & 1) == 0 )
+  if ( (byte_4C22127 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, servantEntity);
-    sub_1BCAFF8(&AvalonSceneManager_TypeInfo, v5);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent___c__DisplayClass23_2__OnSelectEditServant_b__4__, v7);
-    sub_1BCAFF8(&GrandServantListRootComponent___c__DisplayClass23_2_TypeInfo, v8);
-    byte_4B173FB = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&AvalonSceneManager_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C2D490(&Method_GrandServantListRootComponent___c__DisplayClass30_1__StartSelectGrandServant_b__4__);
+    sub_1C2D490(&GrandServantListRootComponent___c__DisplayClass30_1_TypeInfo);
+    byte_4C22127 = 1;
   }
-  v9 = (Il2CppObject *)sub_1BCB244(GrandServantListRootComponent___c__DisplayClass23_2_TypeInfo);
-  System_Object___ctor(v9, 0LL);
-  if ( !v9 )
+  v5 = (Il2CppObject *)sub_1C2D6DC(GrandServantListRootComponent___c__DisplayClass30_1_TypeInfo);
+  System_Object___ctor(v5, 0);
+  if ( !v5 )
     goto LABEL_8;
-  v9[1].monitor = this;
-  sub_1BCAF9C(&v9[1].monitor);
-  v9[1].klass = (Il2CppClass *)servantEntity;
-  sub_1BCAF9C(&v9[1]);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v13 = AvalonSceneManager_TypeInfo;
-  v14 = (CommonUI_o *)Instance;
+  v5[1].monitor = this;
+  sub_1C2D434(&v5[1].monitor);
+  v5[1].klass = (Il2CppClass *)servantEntity;
+  sub_1C2D434(&v5[1]);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v9 = AvalonSceneManager_TypeInfo;
+  v10 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-    v13 = AvalonSceneManager_TypeInfo;
+    v9 = AvalonSceneManager_TypeInfo;
   }
-  DEFAULT_FADE_TIME = v13->static_fields->DEFAULT_FADE_TIME;
-  v16 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
+  DEFAULT_FADE_TIME = v9->static_fields->DEFAULT_FADE_TIME;
+  v12 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v16,
-    v9,
-    Method_GrandServantListRootComponent___c__DisplayClass23_2__OnSelectEditServant_b__4__,
-    0LL);
-  if ( !v14 )
+    v12,
+    v5,
+    Method_GrandServantListRootComponent___c__DisplayClass30_1__StartSelectGrandServant_b__4__,
+    0);
+  if ( !v10 )
 LABEL_8:
-    sub_1BCB254(v10, v11);
-  CommonUI__maskFadeout(v14, 2, DEFAULT_FADE_TIME, v16, 0LL);
+    sub_1C2D6EC(v6, v7);
+  CommonUI__maskFadeout(v10, 2, DEFAULT_FADE_TIME, v12, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent___c__DisplayClass23_1___ctor(
-        GrandServantListRootComponent___c__DisplayClass23_1_o *this,
+void GrandServantListRootComponent___c__DisplayClass30_1___ctor(
+        GrandServantListRootComponent___c__DisplayClass30_1_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent___c__DisplayClass23_1___OnSelectEditServant_b__2(
-        GrandServantListRootComponent___c__DisplayClass23_1_o *this,
-        const MethodInfo *method)
-{
-  const MethodInfo *v2; // x2
-  GrandServantListRootComponent___c__DisplayClass23_1_o *v3; // x19
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  struct GrandServantListRootComponent___c__DisplayClass23_0_o *CS___8__locals1; // x8
-  struct GrandServantListRootComponent_o *_4__this; // x8
-  struct GrandServantListMenu_o *listMenu; // x8
-  struct GrandServantListRootComponent___c__DisplayClass23_0_o *v11; // x8
-  struct GrandServantListRootComponent_o *v12; // x20
-  Il2CppObject *v13; // x23
-  Il2CppClass *klass; // x8
-  _DWORD *monitor; // x9
-  SelectGrandServantComponent_o *implementedInterfaces; // x20
-  int32_t v17; // w21
-  System_Action_o *v18; // x22
-  Il2CppObject *v19; // x24
-  System_Action_object__o *v20; // x23
-  struct GrandServantListRootComponent___c__DisplayClass23_0_o *v21; // x8
-  struct GrandServantListRootComponent_o *v22; // x8
-  struct GrandServantListRootComponent___c__DisplayClass23_0_o *v23; // x8
-  struct GrandServantListRootComponent_o *v24; // x8
-
-  v3 = this;
-  if ( (byte_4B173FC & 1) == 0 )
-  {
-    sub_1BCAFF8(&System_Action_UserServantEntity__TypeInfo, method);
-    sub_1BCAFF8(&System_Action_TypeInfo, v4);
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_SelectGrandServantComponent___, v5);
-    sub_1BCAFF8(&Method_GrandServantListRootComponent___c__DisplayClass23_0__OnSelectEditServant_g__BackAction_0__, v6);
-    this = (GrandServantListRootComponent___c__DisplayClass23_1_o *)sub_1BCAFF8(
-                                                                      &Method_GrandServantListRootComponent___c__DisplayClass23_0__OnSelectEditServant_g__DecideAction_1__,
-                                                                      v7);
-    byte_4B173FC = 1;
-  }
-  CS___8__locals1 = v3->fields.CS___8__locals1;
-  if ( !CS___8__locals1 )
-    goto LABEL_20;
-  _4__this = CS___8__locals1->fields.__4__this;
-  if ( !_4__this )
-    goto LABEL_20;
-  listMenu = _4__this->fields.listMenu;
-  if ( !listMenu )
-    goto LABEL_20;
-  this = (GrandServantListRootComponent___c__DisplayClass23_1_o *)listMenu->fields.menu;
-  if ( !this )
-    goto LABEL_20;
-  GrandServantListMenuLayout__SetItemSlotActive((GrandServantListMenuLayout_o *)this, 0, v2);
-  v11 = v3->fields.CS___8__locals1;
-  if ( !v11 )
-    goto LABEL_20;
-  this = (GrandServantListRootComponent___c__DisplayClass23_1_o *)v3->fields.selectGrandServant;
-  if ( !this )
-    goto LABEL_20;
-  v12 = v11->fields.__4__this;
-  this = (GrandServantListRootComponent___c__DisplayClass23_1_o *)UnityEngine_Component__GetComponent_object_(
-                                                                    (UnityEngine_Component_o *)this,
-                                                                    (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_SelectGrandServantComponent___);
-  if ( !v12 )
-    goto LABEL_20;
-  v12->fields.selectGrandServantComponent = (struct SelectGrandServantComponent_o *)this;
-  this = (GrandServantListRootComponent___c__DisplayClass23_1_o *)sub_1BCAF9C(&v12->fields.selectGrandServantComponent);
-  v13 = (Il2CppObject *)v3->fields.CS___8__locals1;
-  if ( !v13 )
-    goto LABEL_20;
-  klass = v13[1].klass;
-  if ( !klass )
-    goto LABEL_20;
-  monitor = v13[1].monitor;
-  if ( !monitor )
-    goto LABEL_20;
-  implementedInterfaces = (SelectGrandServantComponent_o *)klass->_1.implementedInterfaces;
-  v17 = monitor[11];
-  v18 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(
-    v18,
-    v13,
-    Method_GrandServantListRootComponent___c__DisplayClass23_0__OnSelectEditServant_g__BackAction_0__,
-    0LL);
-  v19 = (Il2CppObject *)v3->fields.CS___8__locals1;
-  v20 = (System_Action_object__o *)sub_1BCB244(System_Action_UserServantEntity__TypeInfo);
-  System_Action_object____ctor(
-    v20,
-    v19,
-    Method_GrandServantListRootComponent___c__DisplayClass23_0__OnSelectEditServant_g__DecideAction_1__,
-    0LL);
-  if ( !implementedInterfaces
-    || (SelectGrandServantComponent__SetUp(
-          implementedInterfaces,
-          v17,
-          v18,
-          (System_Action_UserServantEntity__o *)v20,
-          0LL),
-        (v21 = v3->fields.CS___8__locals1) == 0LL)
-    || (v22 = v21->fields.__4__this) == 0LL
-    || (BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v22->fields.selectGrandServantComponent, 1, 0LL),
-        (v23 = v3->fields.CS___8__locals1) == 0LL)
-    || (v24 = v23->fields.__4__this) == 0LL
-    || (this = (GrandServantListRootComponent___c__DisplayClass23_1_o *)v24->fields.titleInfo) == 0LL )
-  {
-LABEL_20:
-    sub_1BCB254(this, method);
-  }
-  TitleInfoControl__SetHelpBtn((TitleInfoControl_o *)this, 0, 0LL);
-}
-
-
-void __fastcall GrandServantListRootComponent___c__DisplayClass23_2___ctor(
-        GrandServantListRootComponent___c__DisplayClass23_2_o *this,
-        const MethodInfo *method)
-{
-  System_Object___ctor((Il2CppObject *)this, 0LL);
-}
-
-
-void __fastcall GrandServantListRootComponent___c__DisplayClass23_2___OnSelectEditServant_b__4(
-        GrandServantListRootComponent___c__DisplayClass23_2_o *this,
+void GrandServantListRootComponent___c__DisplayClass30_1___StartSelectGrandServant_b__4(
+        GrandServantListRootComponent___c__DisplayClass30_1_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
   Il2CppObject *v3; // x19
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   _QWORD *monitor; // x8
-  __int64 v9; // x8
-  __int64 v10; // x8
-  _QWORD *v11; // x8
-  __int64 v12; // x8
+  __int64 v5; // x8
+  __int64 v6; // x8
+  _QWORD *v7; // x8
+  __int64 v8; // x8
   UnityEngine_Object_o *gameObject; // x20
-  void *v14; // x8
+  void *v10; // x8
+  _QWORD *v11; // x8
+  __int64 v12; // x20
+  GrandServantListData_o *v13; // x21
+  const MethodInfo *v14; // x1
   _QWORD *v15; // x8
-  __int64 v16; // x20
-  GrandServantListData_o *v17; // x21
-  const MethodInfo *v18; // x1
-  const MethodInfo *v19; // x2
-  _QWORD *v20; // x8
-  __int64 v21; // x8
-  __int64 v22; // x9
-  _QWORD *v23; // x8
-  __int64 v24; // x8
+  __int64 v16; // x8
+  __int64 v17; // x9
+  _QWORD *v18; // x8
+  __int64 v19; // x8
   System_Action_o *klass; // x21
-  CommonUI_o *v26; // x20
+  CommonUI_o *v21; // x20
 
   v3 = (Il2CppObject *)this;
-  if ( (byte_4B173FD & 1) == 0 )
+  if ( (byte_4C22129 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, method);
-    sub_1BCAFF8(&GrandServantListData_TypeInfo, v4);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v6);
-    this = (GrandServantListRootComponent___c__DisplayClass23_2_o *)sub_1BCAFF8(
-                                                                      &Method_GrandServantListRootComponent___c__DisplayClass23_2__OnSelectEditServant_b__5__,
-                                                                      v7);
-    byte_4B173FD = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&GrandServantListData_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (GrandServantListRootComponent___c__DisplayClass30_1_o *)sub_1C2D490(&Method_GrandServantListRootComponent___c__DisplayClass30_1__StartSelectGrandServant_b__5__);
+    byte_4C22129 = 1;
   }
   monitor = v3[1].monitor;
   if ( !monitor )
     goto LABEL_27;
-  v9 = monitor[2];
-  if ( !v9 )
+  v5 = monitor[2];
+  if ( !v5 )
     goto LABEL_27;
-  v10 = *(_QWORD *)(v9 + 80);
-  if ( !v10 )
+  v6 = *(_QWORD *)(v5 + 80);
+  if ( !v6 )
     goto LABEL_27;
-  this = *(GrandServantListRootComponent___c__DisplayClass23_2_o **)(v10 + 40);
+  this = *(GrandServantListRootComponent___c__DisplayClass30_1_o **)(v6 + 40);
   if ( !this )
     goto LABEL_27;
   GrandServantListMenuLayout__SetItemSlotActive((GrandServantListMenuLayout_o *)this, 1, v2);
+  v7 = v3[1].monitor;
+  if ( !v7 )
+    goto LABEL_27;
+  v8 = v7[2];
+  if ( !v8 )
+    goto LABEL_27;
+  this = *(GrandServantListRootComponent___c__DisplayClass30_1_o **)(v8 + 176);
+  if ( !this )
+    goto LABEL_27;
+  gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  UnityEngine_Object__Destroy_71163704(gameObject, 0);
+  v10 = v3[1].monitor;
+  if ( !v10 )
+    goto LABEL_27;
+  this = (GrandServantListRootComponent___c__DisplayClass30_1_o *)*((_QWORD *)v10 + 2);
+  if ( !this )
+    goto LABEL_27;
+  this[4].fields.servantEntity = 0;
+  this = (GrandServantListRootComponent___c__DisplayClass30_1_o *)sub_1C2D434(&this[4].fields);
   v11 = v3[1].monitor;
   if ( !v11 )
     goto LABEL_27;
   v12 = v11[2];
+  v13 = (GrandServantListData_o *)sub_1C2D6DC(GrandServantListData_TypeInfo);
+  GrandServantListData___ctor(v13, v14);
   if ( !v12 )
     goto LABEL_27;
-  this = *(GrandServantListRootComponent___c__DisplayClass23_2_o **)(v12 + 168);
-  if ( !this )
-    goto LABEL_27;
-  gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_70136076(gameObject, 0LL);
-  v14 = v3[1].monitor;
-  if ( !v14 )
-    goto LABEL_27;
-  this = (GrandServantListRootComponent___c__DisplayClass23_2_o *)*((_QWORD *)v14 + 2);
-  if ( !this )
-    goto LABEL_27;
-  this[4].monitor = 0LL;
-  this = (GrandServantListRootComponent___c__DisplayClass23_2_o *)sub_1BCAF9C(&this[4].monitor);
+  *(_QWORD *)(v12 + 152) = v13;
+  this = (GrandServantListRootComponent___c__DisplayClass30_1_o *)sub_1C2D434(v12 + 152);
   v15 = v3[1].monitor;
   if ( !v15 )
     goto LABEL_27;
   v16 = v15[2];
-  v17 = (GrandServantListData_o *)sub_1BCB244(GrandServantListData_TypeInfo);
-  GrandServantListData___ctor(v17, v18);
   if ( !v16 )
     goto LABEL_27;
-  *(_QWORD *)(v16 + 144) = v17;
-  this = (GrandServantListRootComponent___c__DisplayClass23_2_o *)sub_1BCAF9C(v16 + 144);
-  v20 = v3[1].monitor;
-  if ( !v20 )
+  v17 = *(_QWORD *)(v16 + 80);
+  if ( !v17 )
     goto LABEL_27;
-  v21 = v20[2];
-  if ( !v21 )
-    goto LABEL_27;
-  v22 = *(_QWORD *)(v21 + 80);
-  if ( !v22 )
-    goto LABEL_27;
-  this = *(GrandServantListRootComponent___c__DisplayClass23_2_o **)(v22 + 40);
+  this = *(GrandServantListRootComponent___c__DisplayClass30_1_o **)(v17 + 40);
   if ( !this )
     goto LABEL_27;
-  GrandServantListMenuLayout__UpdateView(
-    (GrandServantListMenuLayout_o *)this,
-    *(GrandServantListData_o **)(v21 + 144),
-    v19);
-  v23 = v3[1].monitor;
-  if ( !v23 )
+  this = (GrandServantListRootComponent___c__DisplayClass30_1_o *)((__int64 (__fastcall *)(GrandServantListRootComponent___c__DisplayClass30_1_o *, _QWORD, _QWORD))this->klass[1]._1.byval_arg.data)(
+                                                                    this,
+                                                                    *(_QWORD *)(v16 + 152),
+                                                                    *(_QWORD *)&this->klass[1]._1.byval_arg.bits);
+  v18 = v3[1].monitor;
+  if ( !v18 )
     goto LABEL_27;
-  v24 = v23[2];
-  if ( !v24 )
+  v19 = v18[2];
+  if ( !v19 )
     goto LABEL_27;
-  this = *(GrandServantListRootComponent___c__DisplayClass23_2_o **)(v24 + 64);
+  this = *(GrandServantListRootComponent___c__DisplayClass30_1_o **)(v19 + 64);
   if ( !this )
     goto LABEL_27;
-  TitleInfoControl__SetHelpBtn((TitleInfoControl_o *)this, 1, 0LL);
-  this = (GrandServantListRootComponent___c__DisplayClass23_2_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  TitleInfoControl__SetHelpBtn((TitleInfoControl_o *)this, 1, 0);
+  this = (GrandServantListRootComponent___c__DisplayClass30_1_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   klass = (System_Action_o *)v3[2].klass;
-  v26 = (CommonUI_o *)this;
+  v21 = (CommonUI_o *)this;
   if ( !klass )
   {
-    klass = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
+    klass = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
     System_Action___ctor(
       klass,
       v3,
-      Method_GrandServantListRootComponent___c__DisplayClass23_2__OnSelectEditServant_b__5__,
-      0LL);
+      Method_GrandServantListRootComponent___c__DisplayClass30_1__StartSelectGrandServant_b__5__,
+      0);
     v3[2].klass = (Il2CppClass *)klass;
-    this = (GrandServantListRootComponent___c__DisplayClass23_2_o *)sub_1BCAF9C(&v3[2]);
+    this = (GrandServantListRootComponent___c__DisplayClass30_1_o *)sub_1C2D434(&v3[2]);
   }
-  if ( !v26 )
+  if ( !v21 )
 LABEL_27:
-    sub_1BCB254(this, method);
-  CommonUI__maskFadein(v26, 1.0, klass, 0LL);
+    sub_1C2D6EC(this, method);
+  CommonUI__maskFadein(v21, 1.0, klass, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent___c__DisplayClass23_2___OnSelectEditServant_b__5(
-        GrandServantListRootComponent___c__DisplayClass23_2_o *this,
+void GrandServantListRootComponent___c__DisplayClass30_1___StartSelectGrandServant_b__5(
+        GrandServantListRootComponent___c__DisplayClass30_1_o *this,
         const MethodInfo *method)
 {
-  const MethodInfo *v2; // x2
-  struct GrandServantListRootComponent___c__DisplayClass23_0_o *CS___8__locals2; // x8
-  GrandServantListRootComponent_o *_4__this; // x8
+  const MethodInfo *v2; // x3
+  struct GrandServantListRootComponent___c__DisplayClass30_0_o *CS___8__locals1; // x9
 
-  CS___8__locals2 = this->fields.CS___8__locals2;
-  if ( !CS___8__locals2 || (_4__this = CS___8__locals2->fields.__4__this) == 0LL )
-    sub_1BCB254(this, method);
-  GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog(_4__this, this->fields.servantEntity, v2);
+  CS___8__locals1 = this->fields.CS___8__locals1;
+  if ( !CS___8__locals1 || !CS___8__locals1->fields.__4__this )
+    sub_1C2D6EC(this, method);
+  GrandServantListRootComponent__OpenConfirmedGrandServantSelectDialog(
+    CS___8__locals1->fields.__4__this,
+    CS___8__locals1->fields.grandGraphEntity,
+    this->fields.servantEntity,
+    v2);
 }
 
 
-void __fastcall GrandServantListRootComponent___c__DisplayClass33_0___ctor(
-        GrandServantListRootComponent___c__DisplayClass33_0_o *this,
+void GrandServantListRootComponent___c__DisplayClass39_0___ctor(
+        GrandServantListRootComponent___c__DisplayClass39_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall GrandServantListRootComponent___c__DisplayClass33_0___OnSelectConfirmGrandServantResetDialog_b__2(
-        GrandServantListRootComponent___c__DisplayClass33_0_o *this,
+void GrandServantListRootComponent___c__DisplayClass39_0___OnSelectConfirmGrandServantResetDialog_b__2(
+        GrandServantListRootComponent___c__DisplayClass39_0_o *this,
         System_String_o *res,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   struct GrandServantListRootComponent_o *_4__this; // x20
-  GrandServantListData_o *v7; // x21
-  const MethodInfo *v8; // x1
-  GrandServantListMenuLayout_o *menu; // x0
-  __int64 v10; // x1
-  const MethodInfo *v11; // x2
-  struct GrandServantListRootComponent_o *v12; // x8
+  GrandServantListData_o *v6; // x21
+  const MethodInfo *v7; // x1
+  GrandServantListRootComponent_o *menu; // x0
+  __int64 v9; // x1
+  struct GrandServantListRootComponent_o *v10; // x8
   struct GrandServantListMenu_o *listMenu; // x9
-  const MethodInfo *v14; // x2
+  const MethodInfo *v12; // x3
   struct GrandServantListSlotData_o *slotData; // x8
 
-  if ( (byte_4B173FE & 1) == 0 )
+  if ( (byte_4C2212A & 1) == 0 )
   {
-    sub_1BCAFF8(&GrandServantListData_TypeInfo, res);
-    sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v5);
-    byte_4B173FE = 1;
+    sub_1C2D490(&GrandServantListData_TypeInfo);
+    sub_1C2D490(&StringLiteral_22195/*"ng"*/);
+    byte_4C2212A = 1;
   }
-  if ( !System_String__op_Equality(res, (System_String_o *)StringLiteral_22015/*"ng"*/, 0LL) )
+  if ( !System_String__op_Equality(res, (System_String_o *)StringLiteral_22195/*"ng"*/, 0) )
   {
     _4__this = this->fields.__4__this;
-    v7 = (GrandServantListData_o *)sub_1BCB244(GrandServantListData_TypeInfo);
-    GrandServantListData___ctor(v7, v8);
+    v6 = (GrandServantListData_o *)sub_1C2D6DC(GrandServantListData_TypeInfo);
+    GrandServantListData___ctor(v6, v7);
     if ( !_4__this )
       goto LABEL_11;
-    _4__this->fields.grandServantListData = v7;
-    menu = (GrandServantListMenuLayout_o *)sub_1BCAF9C(&_4__this->fields.grandServantListData);
-    v12 = this->fields.__4__this;
-    if ( !v12
-      || (listMenu = v12->fields.listMenu) == 0LL
-      || (menu = listMenu->fields.menu) == 0LL
-      || (GrandServantListMenuLayout__UpdateView(menu, v12->fields.grandServantListData, v11),
-          (slotData = this->fields.slotData) == 0LL)
-      || (menu = (GrandServantListMenuLayout_o *)this->fields.__4__this) == 0LL )
+    _4__this->fields.grandServantListData = v6;
+    menu = (GrandServantListRootComponent_o *)sub_1C2D434(&_4__this->fields.grandServantListData);
+    v10 = this->fields.__4__this;
+    if ( !v10
+      || (listMenu = v10->fields.listMenu) == 0
+      || (menu = (GrandServantListRootComponent_o *)listMenu->fields.menu) == 0
+      || (menu = (GrandServantListRootComponent_o *)((__int64 (__fastcall *)(GrandServantListRootComponent_o *, struct GrandServantListData_o *, const MethodInfo *))menu->klass->vtable._6_beginStartUp.methodPtr)(
+                                                      menu,
+                                                      v10->fields.grandServantListData,
+                                                      menu->klass->vtable._6_beginStartUp.method),
+          (slotData = this->fields.slotData) == 0)
+      || (menu = this->fields.__4__this) == 0 )
     {
 LABEL_11:
-      sub_1BCB254(menu, v10);
+      sub_1C2D6EC(menu, v9);
     }
     GrandServantListRootComponent__OpenGrandServantResetDialog(
-      (GrandServantListRootComponent_o *)menu,
+      menu,
+      slotData->fields._GrandGraphEntity_k__BackingField,
       slotData->fields._UserServantEntity_k__BackingField,
-      v14);
+      v12);
   }
 }

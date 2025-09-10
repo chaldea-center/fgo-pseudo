@@ -1,19 +1,17 @@
-void __fastcall RestrictionMessageEntity___ctor(RestrictionMessageEntity_o *this, const MethodInfo *method)
+void RestrictionMessageEntity___ctor(RestrictionMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D795 & 1) == 0 )
+  if ( (byte_4C28599 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1D795 = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C28599 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall RestrictionMessageEntity__CreatePrimaryKey(
-        RestrictionMessageEntity_o *this,
-        const MethodInfo *method)
+int32_t RestrictionMessageEntity__CreatePrimaryKey(RestrictionMessageEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }

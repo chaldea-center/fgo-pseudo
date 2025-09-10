@@ -1,23 +1,19 @@
-void __fastcall UserEventMissionCondDetailMaster___ctor(
-        UserEventMissionCondDetailMaster_o *this,
-        const MethodInfo *method)
+void UserEventMissionCondDetailMaster___ctor(UserEventMissionCondDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D2D5 & 1) == 0 )
+  if ( (byte_4C280CC & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string___ctor__,
-      method);
-    byte_4B1D2D5 = 1;
+    sub_1C2D490(&Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string___ctor__);
+    byte_4C280CC = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     147,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-UserEventMissionCondDetailEntity_o *__fastcall UserEventMissionCondDetailMaster__GetEntity(
+UserEventMissionCondDetailEntity_o *UserEventMissionCondDetailMaster__GetEntity(
         UserEventMissionCondDetailMaster_o *this,
         int64_t userId,
         int32_t conditionDetailId,
@@ -25,12 +21,10 @@ UserEventMissionCondDetailEntity_o *__fastcall UserEventMissionCondDetailMaster_
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1D2D3 & 1) == 0 )
+  if ( (byte_4C280CA & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__GetEntity__,
-      userId);
-    byte_4B1D2D3 = 1;
+    sub_1C2D490(&Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__GetEntity__);
+    byte_4C280CA = 1;
   }
   PK = (Il2CppObject *)UserEventMissionCondDetailEntity__CreatePK(
                          userId,
@@ -39,11 +33,11 @@ UserEventMissionCondDetailEntity_o *__fastcall UserEventMissionCondDetailMaster_
   return (UserEventMissionCondDetailEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                  PK,
-                                                 (const MethodInfo_32CC8B8 *)Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__GetEntity__);
+                                                 (const MethodInfo_338C850 *)Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__GetEntity__);
 }
 
 
-bool __fastcall UserEventMissionCondDetailMaster__TryGetEntity(
+bool UserEventMissionCondDetailMaster__TryGetEntity(
         UserEventMissionCondDetailMaster_o *this,
         UserEventMissionCondDetailEntity_o **entity,
         int64_t userId,
@@ -52,17 +46,15 @@ bool __fastcall UserEventMissionCondDetailMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1D2D4 & 1) == 0 )
+  if ( (byte_4C280CB & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__TryGetEntity__,
-      entity);
-    byte_4B1D2D4 = 1;
+    sub_1C2D490(&Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__TryGetEntity__);
+    byte_4C280CB = 1;
   }
   PK = (Il2CppObject *)UserEventMissionCondDetailEntity__CreatePK(userId, conditionDetailId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_UserEventMissionCondDetailMaster__UserEventMissionCondDetailEntity__string__TryGetEntity__);
 }

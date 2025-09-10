@@ -1,11 +1,10 @@
-void __fastcall DragSelectComponent___ctor(DragSelectComponent_o *this, const MethodInfo *method)
+void DragSelectComponent___ctor(DragSelectComponent_o *this, const MethodInfo *method)
 {
-  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall DragSelectComponent__Set(
+void DragSelectComponent__Set(
         DragSelectComponent_o *this,
         int32_t selectNum,
         int32_t dragSelectNum,
@@ -21,53 +20,53 @@ void __fastcall DragSelectComponent__Set(
   int32_t condensedWidth; // w1
   int v15; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B1B90A & 1) == 0 )
+  if ( (byte_4C266AC & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&selectNum);
-    byte_4B1B90A = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C266AC = 1;
   }
   v15 = 0;
   dragSelectObject = (UnityEngine_Object_o *)this->fields.dragSelectObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(dragSelectObject, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(dragSelectObject, 0, 0) )
   {
     v9 = this->fields.dragSelectObject;
     if ( !v9 )
       goto LABEL_28;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, dragSelectNum > 0, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, dragSelectNum > 0, 0);
   }
   dragSeletBase = (UnityEngine_Object_o *)this->fields.dragSeletBase;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(dragSeletBase, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(dragSeletBase, 0, 0) )
   {
     v9 = this->fields.dragSeletBase;
     if ( !v9 )
       goto LABEL_28;
-    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, dragSelectNum >= 0, 0LL);
+    UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, dragSelectNum >= 0, 0);
   }
   selectObject = (UnityEngine_Object_o *)this->fields.selectObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(selectObject, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(selectObject, 0, 0) )
   {
     v9 = this->fields.selectObject;
     if ( v9 )
     {
-      if ( (selectNum & 0x80000000) != 0 )
+      if ( selectNum < 0 )
       {
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 0, 0LL);
+        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 0, 0);
         return;
       }
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 1, 0LL);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v9, 1, 0);
       selectTextLabel = this->fields.selectTextLabel;
       v13 = selectNum + 1;
       v15 = v13;
-      v9 = System_Int32__ToString((int32_t)&v15, 0LL);
+      v9 = System_Int32__ToString((int32_t)&v15, 0);
       if ( selectTextLabel )
       {
-        UILabel__set_text(selectTextLabel, (System_String_o *)v9, 0LL);
+        UILabel__set_text(selectTextLabel, (System_String_o *)v9, 0);
         if ( !this->fields.isCondensedScale )
           return;
         v9 = this->fields.selectTextLabel;
@@ -83,18 +82,18 @@ void __fastcall DragSelectComponent__Set(
         {
           condensedWidth = *((_DWORD *)v9 + 42);
 LABEL_26:
-          UILabel__SetCondensedScale((UILabel_o *)v9, condensedWidth, 0, 0LL);
+          UILabel__SetCondensedScale((UILabel_o *)v9, condensedWidth, 0, 0);
           return;
         }
       }
     }
 LABEL_28:
-    sub_1BCB254(v9, v8);
+    sub_1C2D6EC(v9, v8);
   }
 }
 
 
-void __fastcall DragSelectComponent__setOverHundredNumCondensedScale(
+void DragSelectComponent__setOverHundredNumCondensedScale(
         DragSelectComponent_o *this,
         int32_t width,
         const MethodInfo *method)

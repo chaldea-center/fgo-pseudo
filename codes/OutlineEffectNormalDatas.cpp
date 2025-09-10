@@ -1,4 +1,4 @@
-void __fastcall OutlineEffectNormalDatas___ctor(OutlineEffectNormalDatas_o *this, const MethodInfo *method)
+void OutlineEffectNormalDatas___ctor(OutlineEffectNormalDatas_o *this, const MethodInfo *method)
 {
-  UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0LL);
+  UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0);
 }

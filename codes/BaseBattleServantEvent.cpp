@@ -1,10 +1,10 @@
-void __fastcall BaseBattleServantEvent___ctor(BaseBattleServantEvent_o *this, const MethodInfo *method)
+void BaseBattleServantEvent___ctor(BaseBattleServantEvent_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall BaseBattleServantEvent__AddPartySkill(
+void BaseBattleServantEvent__AddPartySkill(
         BaseBattleServantEvent_o *this,
         BattleServantData_o *svtData,
         BattleInfoData_o *battleInfoData,
@@ -14,7 +14,7 @@ void __fastcall BaseBattleServantEvent__AddPartySkill(
 }
 
 
-void __fastcall BaseBattleServantEvent__AddSpecialPassive(
+void BaseBattleServantEvent__AddSpecialPassive(
         BaseBattleServantEvent_o *this,
         BattleServantData_o *svtData,
         const MethodInfo *method)
@@ -23,7 +23,7 @@ void __fastcall BaseBattleServantEvent__AddSpecialPassive(
 }
 
 
-bool __fastcall BaseBattleServantEvent__IsApplyPassive(
+bool BaseBattleServantEvent__IsApplyPassive(
         BaseBattleServantEvent_o *this,
         int32_t type,
         BattleServantData_o *svtData,

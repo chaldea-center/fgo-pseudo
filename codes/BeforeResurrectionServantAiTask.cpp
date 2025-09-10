@@ -1,4 +1,4 @@
-void __fastcall BeforeResurrectionServantAiTask___ctor(
+void BeforeResurrectionServantAiTask___ctor(
         BeforeResurrectionServantAiTask_o *this,
         BattleServantData_o *svtData,
         BattleLogic_o *logic,
@@ -10,14 +10,14 @@ void __fastcall BeforeResurrectionServantAiTask___ctor(
 }
 
 
-bool __fastcall BeforeResurrectionServantAiTask__IsActable(
+bool BeforeResurrectionServantAiTask__IsActable(
         BeforeResurrectionServantAiTask_o *this,
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
   BattleLogicReaction_o *logicReaction; // x8
 
-  if ( !logic || (logicReaction = logic->fields.logicReaction) == 0LL )
-    sub_1BCB254(this, logic);
-  return BattleLogicReaction__CheckExecutableResurrection(logicReaction, this->fields.svtData, 0LL);
+  if ( !logic || (logicReaction = logic->fields.logicReaction) == 0 )
+    sub_1C2D6EC(this, logic);
+  return BattleLogicReaction__CheckExecutableResurrection(logicReaction, this->fields.svtData, 0);
 }

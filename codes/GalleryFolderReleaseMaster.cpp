@@ -1,64 +1,60 @@
-void __fastcall GalleryFolderReleaseMaster___ctor(GalleryFolderReleaseMaster_o *this, const MethodInfo *method)
+void GalleryFolderReleaseMaster___ctor(GalleryFolderReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C812 & 1) == 0 )
+  if ( (byte_4C275CB & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int___ctor__, method);
-    byte_4B1C812 = 1;
+    sub_1C2D490(&Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int___ctor__);
+    byte_4C275CB = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     545,
-    (const MethodInfo_32C5ADC *)Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int___ctor__);
+    (const MethodInfo_3385A74 *)Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-bool __fastcall GalleryFolderReleaseMaster__IsDisplayGalleryWar(
+bool GalleryFolderReleaseMaster__IsDisplayGalleryWar(
         GalleryFolderReleaseMaster_o *this,
         int32_t warId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v9; // x1
-  int32_t monitor; // w19
-  int32_t klass_high; // w21
-  int64_t monitor_high; // x20
-  const MethodInfo *v14; // x2
+  __int64 v6; // x1
+  int32_t v7; // w19
+  int32_t v8; // w21
+  int64_t v9; // x20
+  const MethodInfo *v11; // x2
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B1C811 & 1) == 0 )
+  if ( (byte_4C275CA & 1) == 0 )
   {
-    sub_1BCAFF8(&CondType_TypeInfo, *(_QWORD *)&warId);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_GalleryMaster___, v5);
-    sub_1BCAFF8(&DataManager_TypeInfo, v6);
-    sub_1BCAFF8(&Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int__TryGetEntity__, v7);
-    byte_4B1C811 = 1;
+    sub_1C2D490(&CondType_TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMaster_GalleryMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int__TryGetEntity__);
+    byte_4C275CA = 1;
   }
-  entity = 0LL;
+  entity = 0;
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     &entity,
                                     warId,
-                                    (const MethodInfo_32C7E4C *)Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int__TryGetEntity__);
+                                    (const MethodInfo_3387DE4 *)Method_DataMasterBase_GalleryFolderReleaseMaster__GalleryFolderReleaseEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_GalleryMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_GalleryMaster___);
     if ( Master_object )
-      return GalleryMaster__HasEnableGalleryWar((GalleryMaster_o *)Master_object, warId, v14);
+      return GalleryMaster__HasEnableGalleryWar((GalleryMaster_o *)Master_object, warId, v11);
 LABEL_13:
-    sub_1BCB254(Master_object, v9);
+    sub_1C2D6EC(Master_object, v6);
   }
   if ( !entity )
     goto LABEL_13;
-  klass_high = HIDWORD(entity[1].klass);
-  monitor = (int32_t)entity[1].monitor;
-  monitor_high = SHIDWORD(entity[1].monitor);
+  v8 = *(int *)((char *)&dword_14 + (_QWORD)entity);
+  v7 = *(int *)((char *)&dword_14 + (_QWORD)entity + 4);
+  v9 = *(int *)((char *)&off_18 + (_QWORD)entity + 4);
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__IsOpen(klass_high, monitor, monitor_high, 0, 0LL, 0LL);
+  return CondType__IsOpen(v8, v7, v9, 0, 0, 0);
 }

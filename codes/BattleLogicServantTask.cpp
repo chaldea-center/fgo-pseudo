@@ -1,5 +1,5 @@
 // local variable allocation has failed, the output may be wrong!
-void __fastcall BattleLogicServantTask___ctor(
+void BattleLogicServantTask___ctor(
         BattleLogicServantTask_o *this,
         int32_t actionType,
         BattleServantData_o *svtData,
@@ -13,7 +13,7 @@ void __fastcall BattleLogicServantTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, *(const MethodInfo **)&actionType);
   this->fields.actiontype = actionType;
   if ( !svtData )
-    sub_1BCB254(v7, v8);
+    sub_1C2D6EC(v7, v8);
   if ( svtData->fields.isEnemy )
     v10 = 3;
   else

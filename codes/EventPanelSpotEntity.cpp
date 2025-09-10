@@ -1,65 +1,65 @@
-void __fastcall EventPanelSpotEntity___ctor(EventPanelSpotEntity_o *this, const MethodInfo *method)
+void EventPanelSpotEntity___ctor(EventPanelSpotEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C57D & 1) == 0 )
+  if ( (byte_4C2732B & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1C57D = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C2732B = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall EventPanelSpotEntity__CreatePrimaryKey(EventPanelSpotEntity_o *this, const MethodInfo *method)
+int32_t EventPanelSpotEntity__CreatePrimaryKey(EventPanelSpotEntity_o *this, const MethodInfo *method)
 {
   return this->fields.spotId;
 }
 
 
-bool __fastcall EventPanelSpotEntity__HasEnemySize(EventPanelSpotEntity_o *this, const MethodInfo *method)
+bool EventPanelSpotEntity__HasEnemySize(EventPanelSpotEntity_o *this, const MethodInfo *method)
 {
   struct System_Int32_array_array *enemySizeIdxListJson; // x8
 
   enemySizeIdxListJson = this->fields.enemySizeIdxListJson;
-  return enemySizeIdxListJson && enemySizeIdxListJson->max_length != 0;
+  return enemySizeIdxListJson && LODWORD(enemySizeIdxListJson->max_length) != 0;
 }
 
 
-bool __fastcall EventPanelSpotEntity__HasObject(EventPanelSpotEntity_o *this, const MethodInfo *method)
+bool EventPanelSpotEntity__HasObject(EventPanelSpotEntity_o *this, const MethodInfo *method)
 {
   return this->fields.objectId > 0;
 }
 
 
-bool __fastcall EventPanelSpotEntity__HasObjectQuestIds(EventPanelSpotEntity_o *this, const MethodInfo *method)
+bool EventPanelSpotEntity__HasObjectQuestIds(EventPanelSpotEntity_o *this, const MethodInfo *method)
 {
   struct System_Int32_array *objectQuestIds; // x8
 
   objectQuestIds = this->fields.objectQuestIds;
-  return objectQuestIds && objectQuestIds->max_length != 0;
+  return objectQuestIds && LODWORD(objectQuestIds->max_length) != 0;
 }
 
 
-bool __fastcall EventPanelSpotEntity__IsCrossLineSpot(EventPanelSpotEntity_o *this, const MethodInfo *method)
+bool EventPanelSpotEntity__IsCrossLineSpot(EventPanelSpotEntity_o *this, const MethodInfo *method)
 {
   return this->fields.type == 3;
 }
 
 
-bool __fastcall EventPanelSpotEntity__IsNormalSpot(EventPanelSpotEntity_o *this, const MethodInfo *method)
+bool EventPanelSpotEntity__IsNormalSpot(EventPanelSpotEntity_o *this, const MethodInfo *method)
 {
   return this->fields.type == 1;
 }
 
 
-bool __fastcall EventPanelSpotEntity__IsRandomSpot(EventPanelSpotEntity_o *this, const MethodInfo *method)
+bool EventPanelSpotEntity__IsRandomSpot(EventPanelSpotEntity_o *this, const MethodInfo *method)
 {
   return this->fields.type == 2;
 }
 
 
-int32_t __fastcall EventPanelSpotEntity__get_eventPanelSpotType(EventPanelSpotEntity_o *this, const MethodInfo *method)
+int32_t EventPanelSpotEntity__get_eventPanelSpotType(EventPanelSpotEntity_o *this, const MethodInfo *method)
 {
   return this->fields.type;
 }

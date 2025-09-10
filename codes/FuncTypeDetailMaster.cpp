@@ -1,70 +1,68 @@
-void __fastcall FuncTypeDetailMaster___ctor(FuncTypeDetailMaster_o *this, const MethodInfo *method)
+void FuncTypeDetailMaster___ctor(FuncTypeDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C799 & 1) == 0 )
+  if ( (byte_4C2754A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int___ctor__, method);
-    byte_4B1C799 = 1;
+    sub_1C2D490(&Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int___ctor__);
+    byte_4C2754A = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     446,
-    (const MethodInfo_32C5ADC *)Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int___ctor__);
+    (const MethodInfo_3385A74 *)Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_Int32_array *__fastcall FuncTypeDetailMaster__GetIndividuality(
+System_Int32_array *FuncTypeDetailMaster__GetIndividuality(
         FuncTypeDetailMaster_o *this,
         int32_t funcType,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  _BOOL8 v6; // x0
-  __int64 v7; // x1
+  _BOOL8 v5; // x0
+  __int64 v6; // x1
   long double inited; // q0
   System_Int32_array *result; // x0
-  _QWORD *v10; // x19
-  __int64 v11; // x8
+  _QWORD *v9; // x19
+  __int64 v10; // x8
+  __int64 v11; // x0
   __int64 v12; // x0
-  __int64 v13; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4B1C798 & 1) == 0 )
+  if ( (byte_4C27549 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Array_Empty_int___, *(_QWORD *)&funcType);
-    sub_1BCAFF8(&Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int__TryGetEntity__, v5);
-    byte_4B1C798 = 1;
+    sub_1C2D490(&Method_System_Array_Empty_int___);
+    sub_1C2D490(&Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int__TryGetEntity__);
+    byte_4C27549 = 1;
   }
-  entity = 0LL;
-  v6 = DataMasterBase_object__object__int___TryGetEntity(
+  entity = 0;
+  v5 = DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          funcType,
-         (const MethodInfo_32C7E4C *)Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int__TryGetEntity__);
-  if ( !v6 )
+         (const MethodInfo_3387DE4 *)Method_DataMasterBase_FuncTypeDetailMaster__FuncTypeDetailEntity__int__TryGetEntity__);
+  if ( !v5 )
     goto LABEL_6;
   if ( !entity )
-    sub_1BCB254(v6, v7);
-  result = (System_Int32_array *)entity[1].monitor;
+    sub_1C2D6EC(v5, v6);
+  result = *(System_Int32_array **)((char *)&off_18 + (_QWORD)entity);
   if ( !result )
   {
 LABEL_6:
-    v10 = Method_System_Array_Empty_int___;
-    v11 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
-    if ( !v11 )
+    v9 = Method_System_Array_Empty_int___;
+    v10 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
+    if ( !v10 )
     {
-      sub_1C1B4B8(Method_System_Array_Empty_int___);
-      v11 = v10[7];
+      sub_1C7DC00(Method_System_Array_Empty_int___);
+      v10 = v9[7];
     }
-    v12 = *(_QWORD *)(v11 + 16);
+    v11 = *(_QWORD *)(v10 + 16);
+    if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
+      v11 = sub_1C7DBA4(inited);
+    if ( !*(_DWORD *)(v11 + 224) )
+      inited = j_il2cpp_runtime_class_init_0(v11);
+    v12 = *(_QWORD *)(v9[7] + 16LL);
     if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-      v12 = sub_1C1B45C(inited);
-    if ( !*(_DWORD *)(v12 + 224) )
-      inited = j_il2cpp_runtime_class_init_0(v12);
-    v13 = *(_QWORD *)(v10[7] + 16LL);
-    if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-      v13 = sub_1C1B45C(inited);
-    return **(System_Int32_array ***)(v13 + 184);
+      v12 = sub_1C7DBA4(inited);
+    return **(System_Int32_array ***)(v12 + 184);
   }
   return result;
 }

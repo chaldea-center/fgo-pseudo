@@ -1,66 +1,60 @@
-void __fastcall VoiceReleaseMaster___ctor(VoiceReleaseMaster_o *this, const MethodInfo *method)
+void VoiceReleaseMaster___ctor(VoiceReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D5D6 & 1) == 0 )
+  if ( (byte_4C283D9 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_VoiceReleaseMaster__VoiceReleaseEntity__string___ctor__, method);
-    byte_4B1D5D6 = 1;
+    sub_1C2D490(&Method_DataMasterBase_VoiceReleaseMaster__VoiceReleaseEntity__string___ctor__);
+    byte_4C283D9 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     173,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_VoiceReleaseMaster__VoiceReleaseEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_VoiceReleaseMaster__VoiceReleaseEntity__string___ctor__);
 }
 
 
-VoiceReleaseEntity_array *__fastcall VoiceReleaseMaster__GetEntitiyList(
+VoiceReleaseEntity_array *VoiceReleaseMaster__GetEntitiyList(
         VoiceReleaseMaster_o *this,
         System_String_o *voiceId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t Count; // w21
-  System_Collections_Generic_List_object__o *v13; // x22
-  int32_t v14; // w23
-  Il2CppObject *v15; // x24
+  System_Collections_Generic_List_object__o *v7; // x22
+  int32_t v8; // w23
+  Il2CppObject *v9; // x24
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *items; // x25
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v17; // x0
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  struct System_Object_array *v20; // x8
-  _QWORD *v21; // x9
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *v11; // x0
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  struct System_Object_array *v14; // x8
+  _QWORD *v15; // x9
   __int64 size; // x10
-  Il2CppClass **v23; // x0
+  Il2CppClass **v17; // x0
 
-  if ( (byte_4B1D5D7 & 1) == 0 )
+  if ( (byte_4C283DA & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_VoiceReleaseEntity__get_Count__, voiceId);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_VoiceReleaseEntity__get_Item__, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_VoiceReleaseEntity__Add__, v6);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_VoiceReleaseEntity__ToArray__, v7);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_VoiceReleaseEntity___ctor__, v8);
-    sub_1BCAFF8(&System_Collections_Generic_List_VoiceReleaseEntity__TypeInfo, v9);
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v10);
-    byte_4B1D5D7 = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_VoiceReleaseEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_VoiceReleaseEntity__get_Item__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_VoiceReleaseEntity__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_VoiceReleaseEntity__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_VoiceReleaseEntity___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_VoiceReleaseEntity__TypeInfo);
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
+    byte_4C283DA = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_19;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_VoiceReleaseEntity__get_Count__);
-  v13 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_VoiceReleaseEntity__TypeInfo);
+            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_VoiceReleaseEntity__get_Count__);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_VoiceReleaseEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v13,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_VoiceReleaseEntity___ctor__);
+    v7,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_VoiceReleaseEntity___ctor__);
   if ( Count >= 1 )
   {
-    v14 = 0;
+    v8 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -68,62 +62,62 @@ VoiceReleaseEntity_array *__fastcall VoiceReleaseMaster__GetEntitiyList(
         break;
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
-                                                                 v14,
-                                                                 (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_VoiceReleaseEntity__get_Item__);
+                                                                 v8,
+                                                                 (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_VoiceReleaseEntity__get_Item__);
       if ( list )
       {
-        v15 = (Il2CppObject *)list;
+        v9 = (Il2CppObject *)list;
         items = (CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *)list->fields.items;
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-        v17 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit(voiceId, 0LL);
+        v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit(voiceId, 0);
         list = (System_Collections_ObjectModel_Collection_T__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Equality(
                                                                    items,
-                                                                   v17,
-                                                                   0LL);
+                                                                   v11,
+                                                                   0);
         if ( ((unsigned __int8)list & 1) != 0 )
         {
-          if ( !v13 )
+          if ( !v7 )
             break;
-          v20 = v13->fields._items;
-          v21 = Method_System_Collections_Generic_List_VoiceReleaseEntity__Add__;
-          ++v13->fields._version;
-          if ( !v20 )
+          v14 = v7->fields._items;
+          v15 = Method_System_Collections_Generic_List_VoiceReleaseEntity__Add__;
+          ++v7->fields._version;
+          if ( !v14 )
             break;
-          size = v13->fields._size;
-          if ( (unsigned int)size >= v20->max_length )
+          size = v7->fields._size;
+          if ( (unsigned int)size >= LODWORD(v14->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
-              v13,
-              v15,
-              *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+              v7,
+              v9,
+              *(const MethodInfo_3789B84 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
           }
           else
           {
-            v23 = &v20->obj.klass + size;
-            v13->fields._size = size + 1;
-            v23[4] = (Il2CppClass *)v15;
-            sub_1BCAF9C((CGThumbnailListItem_o *)(v23 + 4), (int32_t)v15, v18, v19);
+            v17 = &v14->obj.klass + size;
+            v7->fields._size = size + 1;
+            v17[4] = (Il2CppClass *)v9;
+            sub_1C2D434((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v9, v12, v13);
           }
         }
       }
-      if ( Count == ++v14 )
+      if ( Count == ++v8 )
         goto LABEL_17;
     }
 LABEL_19:
-    sub_1BCB254(list, voiceId);
+    sub_1C2D6EC(list, voiceId);
   }
 LABEL_17:
-  if ( !v13 )
+  if ( !v7 )
     goto LABEL_19;
   return (VoiceReleaseEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                       v13,
-                                       (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_VoiceReleaseEntity__ToArray__);
+                                       v7,
+                                       (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_VoiceReleaseEntity__ToArray__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall VoiceReleaseMaster__IsCondEnable(
+bool VoiceReleaseMaster__IsCondEnable(
         VoiceReleaseMaster_o *this,
         System_String_o *voiceId,
         int32_t svtId,
@@ -132,7 +126,7 @@ bool __fastcall VoiceReleaseMaster__IsCondEnable(
   VoiceReleaseEntity_array *EntitiyList; // x0
   __int64 v6; // x1
   const MethodInfo *v7; // x2
-  __int64 v8; // x21
+  il2cpp_array_size_t max_length; // x21
   VoiceReleaseEntity_array *v9; // x20
   int v10; // w23
   bool v11; // w22
@@ -141,9 +135,9 @@ bool __fastcall VoiceReleaseMaster__IsCondEnable(
   EntitiyList = VoiceReleaseMaster__GetEntitiyList(this, voiceId, *(const MethodInfo **)&svtId);
   if ( !EntitiyList )
     goto LABEL_12;
-  v8 = *(_QWORD *)&EntitiyList->max_length;
+  max_length = EntitiyList->max_length;
   v9 = EntitiyList;
-  if ( (int)v8 >= 1 )
+  if ( (int)max_length >= 1 )
   {
     v10 = 1;
     v11 = 1;
@@ -155,14 +149,14 @@ bool __fastcall VoiceReleaseMaster__IsCondEnable(
       IsCondEnable = VoiceReleaseEntity__IsCondEnable((VoiceReleaseEntity_o *)EntitiyList, svtId, v7);
       if ( !IsCondEnable )
         return !v11;
-      v11 = v10 < (int)v8;
-      if ( (_DWORD)v8 == v10 )
+      v11 = v10 < (int)max_length;
+      if ( (_DWORD)max_length == v10 )
         return !v11;
-      if ( v10++ >= v9->max_length )
-        sub_1BCB25C(IsCondEnable, v6, v7);
+      if ( (unsigned int)v10++ >= LODWORD(v9->max_length) )
+        sub_1C2D6F4(IsCondEnable, v6, v7);
     }
 LABEL_12:
-    sub_1BCB254(EntitiyList, v6);
+    sub_1C2D6EC(EntitiyList, v6);
   }
   v11 = 0;
   return !v11;

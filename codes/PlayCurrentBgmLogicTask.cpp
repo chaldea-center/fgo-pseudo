@@ -1,4 +1,4 @@
-void __fastcall PlayCurrentBgmLogicTask___ctor(PlayCurrentBgmLogicTask_o *this, const MethodInfo *method)
+void PlayCurrentBgmLogicTask___ctor(PlayCurrentBgmLogicTask_o *this, const MethodInfo *method)
 {
   BattleLogicTask___ctor((BattleLogicTask_o *)this, method);
   this->fields.actiontype = 71;
@@ -6,19 +6,19 @@ void __fastcall PlayCurrentBgmLogicTask___ctor(PlayCurrentBgmLogicTask_o *this, 
 }
 
 
-BattleActionData_o *__fastcall PlayCurrentBgmLogicTask__MakeActionData(
+BattleActionData_o *PlayCurrentBgmLogicTask__MakeActionData(
         PlayCurrentBgmLogicTask_o *this,
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
   PlayCurrentBgmActionData_o *v3; // x19
 
-  if ( (byte_4B1F5A6 & 1) == 0 )
+  if ( (byte_4C2A44E & 1) == 0 )
   {
-    sub_1BCAFF8(&PlayCurrentBgmActionData_TypeInfo, logic);
-    byte_4B1F5A6 = 1;
+    sub_1C2D490(&PlayCurrentBgmActionData_TypeInfo);
+    byte_4C2A44E = 1;
   }
-  v3 = (PlayCurrentBgmActionData_o *)sub_1BCB244(PlayCurrentBgmActionData_TypeInfo);
-  PlayCurrentBgmActionData___ctor(v3, 0LL);
+  v3 = (PlayCurrentBgmActionData_o *)sub_1C2D6DC(PlayCurrentBgmActionData_TypeInfo);
+  PlayCurrentBgmActionData___ctor(v3, 0);
   return (BattleActionData_o *)v3;
 }

@@ -1,23 +1,21 @@
-void __fastcall CharaGraphSortOwnerGrandEquipBond___ctor(
-        CharaGraphSortOwnerGrandEquipBond_o *this,
-        const MethodInfo *method)
+void CharaGraphSortOwnerGrandEquipBond___ctor(CharaGraphSortOwnerGrandEquipBond_o *this, const MethodInfo *method)
 {
   CharaGraphSortManageUnitServantEquip_o *v3; // x20
 
-  if ( (byte_4B173A3 & 1) == 0 )
+  if ( (byte_4C220AC & 1) == 0 )
   {
-    sub_1BCAFF8(&CharaGraphSortManageUnitGrandEquip_TypeInfo, method);
-    byte_4B173A3 = 1;
+    sub_1C2D490(&CharaGraphSortManageUnitGrandEquip_TypeInfo);
+    byte_4C220AC = 1;
   }
-  v3 = (CharaGraphSortManageUnitServantEquip_o *)sub_1BCB244(CharaGraphSortManageUnitGrandEquip_TypeInfo);
-  CharaGraphSortManageUnitServantEquip___ctor(v3, 0LL);
+  v3 = (CharaGraphSortManageUnitServantEquip_o *)sub_1C2D6DC(CharaGraphSortManageUnitGrandEquip_TypeInfo);
+  CharaGraphSortManageUnitServantEquip___ctor(v3, 0);
   this->fields._ServantEquipSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
-  sub_1BCAF9C(&this->fields._ServantEquipSortManageUnit_k__BackingField);
-  CharaGraphSortOwnerBase___ctor((CharaGraphSortOwnerBase_o *)this, 0LL);
+  sub_1C2D434(&this->fields._ServantEquipSortManageUnit_k__BackingField);
+  CharaGraphSortOwnerBase___ctor((CharaGraphSortOwnerBase_o *)this, 0);
 }
 
 
-CharaGraphSortManageUnitBase_o *__fastcall CharaGraphSortOwnerGrandEquipBond__get_ServantEquipSortManageUnit(
+CharaGraphSortManageUnitBase_o *CharaGraphSortOwnerGrandEquipBond__get_ServantEquipSortManageUnit(
         CharaGraphSortOwnerGrandEquipBond_o *this,
         const MethodInfo *method)
 {
@@ -25,24 +23,24 @@ CharaGraphSortManageUnitBase_o *__fastcall CharaGraphSortOwnerGrandEquipBond__ge
 }
 
 
-System_String_o *__fastcall CharaGraphSortOwnerGrandEquipBond__get_SortSaveKeyPrefix(
+System_String_o *CharaGraphSortOwnerGrandEquipBond__get_SortSaveKeyPrefix(
         CharaGraphSortOwnerGrandEquipBond_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B173A2 & 1) == 0 )
+  if ( (byte_4C220AB & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_4355/*"CharaGraphSort_GrandEquip_Bond"*/, method);
-    byte_4B173A2 = 1;
+    sub_1C2D490(&StringLiteral_4384/*"CharaGraphSort_GrandEquip_Bond"*/);
+    byte_4C220AB = 1;
   }
-  return (System_String_o *)StringLiteral_4355/*"CharaGraphSort_GrandEquip_Bond"*/;
+  return (System_String_o *)StringLiteral_4384/*"CharaGraphSort_GrandEquip_Bond"*/;
 }
 
 
-void __fastcall CharaGraphSortOwnerGrandEquipBond__set_ServantEquipSortManageUnit(
+void CharaGraphSortOwnerGrandEquipBond__set_ServantEquipSortManageUnit(
         CharaGraphSortOwnerGrandEquipBond_o *this,
         CharaGraphSortManageUnitBase_o *value,
         const MethodInfo *method)
 {
   this->fields._ServantEquipSortManageUnit_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._ServantEquipSortManageUnit_k__BackingField);
+  sub_1C2D434(&this->fields._ServantEquipSortManageUnit_k__BackingField);
 }

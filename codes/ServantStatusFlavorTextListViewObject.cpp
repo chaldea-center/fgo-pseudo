@@ -1,12 +1,12 @@
-void __fastcall ServantStatusFlavorTextListViewObject___ctor(
+void ServantStatusFlavorTextListViewObject___ctor(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__Awake(
+void ServantStatusFlavorTextListViewObject__Awake(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -16,24 +16,24 @@ void __fastcall ServantStatusFlavorTextListViewObject__Awake(
   const MethodInfo *v6; // x3
   const MethodInfo *v7; // x1
 
-  if ( (byte_4B18C36 & 1) == 0 )
+  if ( (byte_4C23820 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_ServantStatusFlavorTextListViewItemDraw___, method);
-    byte_4B18C36 = 1;
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_ServantStatusFlavorTextListViewItemDraw___);
+    byte_4C23820 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1BCB254(0LL, method);
+    sub_1C2D6EC(0, method);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusFlavorTextListViewItemDraw___);
+                       (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusFlavorTextListViewItemDraw___);
   this->fields.itemDraw = (struct ServantStatusFlavorTextListViewItemDraw_o *)Component_object;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
   ServantStatusFlavorTextListViewObject__SetBaseTransform(this, v7);
 }
 
 
-int32_t __fastcall ServantStatusFlavorTextListViewObject__GetKind(
+int32_t ServantStatusFlavorTextListViewObject__GetKind(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -41,78 +41,75 @@ int32_t __fastcall ServantStatusFlavorTextListViewObject__GetKind(
   __int64 v4; // x1
   struct ServantStatusFlavorTextListViewItemDraw_o *v5; // x0
 
-  if ( (byte_4B18C37 & 1) == 0 )
+  if ( (byte_4C23821 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B18C37 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C23821 = 1;
   }
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
     return 0;
   v5 = this->fields.itemDraw;
   if ( !v5 )
-    sub_1BCB254(0LL, v4);
-  return ((__int64 (__fastcall *)(struct ServantStatusFlavorTextListViewItemDraw_o *, Il2CppMethodPointer))v5->klass->vtable._4_GetKind.method)(
+    sub_1C2D6EC(0, v4);
+  return ((__int64 (__fastcall *)(struct ServantStatusFlavorTextListViewItemDraw_o *, const MethodInfo *))v5->klass->vtable._4_GetKind.methodPtr)(
            v5,
-           v5->klass->vtable._5_SetItem.methodPtr);
+           v5->klass->vtable._4_GetKind.method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-int32_t __fastcall ServantStatusFlavorTextListViewObject__GetSize(
+int32_t ServantStatusFlavorTextListViewObject__GetSize(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   Il2CppObject *Component_object; // x0
-  __int64 methodPtr_low; // x10
-  UnityEngine_Object_o *v7; // x19
-  _BOOL8 v8; // x0
-  __int64 v9; // x1
-  float v10; // s1
+  __int64 naturalAligment; // x10
+  UnityEngine_Object_o *v5; // x19
+  _BOOL8 v6; // x0
+  __int64 v7; // x1
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B18C38 & 1) == 0 )
+  if ( (byte_4C23822 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_BoxCollider_TypeInfo, method);
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_Collider___, v3);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
-    byte_4B18C38 = 1;
+    sub_1C2D490(&UnityEngine_BoxCollider_TypeInfo);
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C23822 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( Component_object
-    && (methodPtr_low = LOBYTE(UnityEngine_BoxCollider_TypeInfo->vtable._0_Equals.methodPtr),
-        LOBYTE(Component_object->klass->vtable[0].methodPtr) >= (unsigned int)methodPtr_low) )
+    && (naturalAligment = UnityEngine_BoxCollider_TypeInfo->_2.naturalAligment,
+        Component_object->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
   {
-    if ( (UnityEngine_BoxCollider_c *)Component_object->klass->_2.typeHierarchy[methodPtr_low - 1] == UnityEngine_BoxCollider_TypeInfo )
-      v7 = (UnityEngine_Object_o *)Component_object;
+    if ( (UnityEngine_BoxCollider_c *)Component_object->klass->_2.typeHierarchy[naturalAligment - 1] == UnityEngine_BoxCollider_TypeInfo )
+      v5 = (UnityEngine_Object_o *)Component_object;
     else
-      v7 = 0LL;
+      v5 = 0;
   }
   else
   {
-    v7 = 0LL;
+    v5 = 0;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v8 = UnityEngine_Object__op_Inequality(v7, 0LL, 0LL);
-  if ( !v8 )
+  v6 = UnityEngine_Object__op_Inequality(v5, 0, 0);
+  if ( !v6 )
     return 0;
-  if ( !v7 )
-    sub_1BCB254(v8, v9);
-  *(UnityEngine_Vector3_o *)(&v10 - 1) = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v7, 0LL);
-  if ( v10 == INFINITY )
+  if ( !v5 )
+    sub_1C2D6EC(v6, v7);
+  size = UnityEngine_BoxCollider__get_size((UnityEngine_BoxCollider_o *)v5, 0);
+  if ( size.fields.y == INFINITY )
     return 0x80000000;
   else
-    return (int)v10;
+    return (int)size.fields.y;
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__HideNew(
+void ServantStatusFlavorTextListViewObject__HideNew(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -120,14 +117,14 @@ void __fastcall ServantStatusFlavorTextListViewObject__HideNew(
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1BCB254(0LL, method);
-  ((void (__fastcall *)(struct ServantStatusFlavorTextListViewItemDraw_o *, void *))itemDraw->klass->vtable._9_HideNew.method)(
+    sub_1C2D6EC(0, method);
+  ((void (__fastcall *)(struct ServantStatusFlavorTextListViewItemDraw_o *, const MethodInfo *))itemDraw->klass->vtable._9_HideNew.methodPtr)(
     itemDraw,
-    itemDraw->klass[1]._1.image);
+    itemDraw->klass->vtable._9_HideNew.method);
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__Init(
+void ServantStatusFlavorTextListViewObject__Init(
         ServantStatusFlavorTextListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -149,69 +146,67 @@ void __fastcall ServantStatusFlavorTextListViewObject__Init(
 
   ServantStatusFlavorTextListViewObject__SetVisible(this, initMode != 0, (const MethodInfo *)callbackFunc);
   ServantStatusFlavorTextListViewObject__SetInput(this, initMode == 3, v9);
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0LL),
-        (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
+    || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
+        (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1BCB254(transform, v11);
+    sub_1C2D6EC(transform, v11);
   }
-  UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0LL);
+  UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v13, v14);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v13, v14);
   if ( (unsigned int)initMode <= 3 )
   {
-    v16 = dword_BE1740[initMode];
-    this->fields.dispMode = *((_DWORD *)&xmmword_BE2380 + initMode);
+    v16 = dword_C08D30[initMode];
+    this->fields.dispMode = *((_DWORD *)&xmmword_C09A10 + initMode);
     this->fields.state = v16;
   }
   ServantStatusFlavorTextListViewObject__SetupDisp(this, v15);
   v19 = this->fields.callbackFunc;
   if ( v19 )
   {
-    p_callbackFunc->klass = 0LL;
-    sub_1BCAF9C(p_callbackFunc, 0, v17, v18);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v19->fields.m_target)(
-      v19->fields.original_method_info,
-      *(_QWORD *)&v19->fields.extra_arg);
+    p_callbackFunc->klass = 0;
+    sub_1C2D434(p_callbackFunc, 0, v17, v18);
+    ((void (__fastcall *)(intptr_t, intptr_t))v19->fields.invoke_impl)(v19->fields.method_code, v19->fields.method);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusFlavorTextListViewObject__Init_34926248(
+void ServantStatusFlavorTextListViewObject__Init_35320908(
         ServantStatusFlavorTextListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
   float v4; // s0
-  int v5; // s1
+  int v5; // s1 OVERLAPPED
 
-  if ( !byte_4B16191 )
+  if ( !byte_4C20DA1 )
   {
-    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B16191 = 1;
+    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA1 = 1;
   }
-  ServantStatusFlavorTextListViewObject__Init(this, initMode, 0LL, v4, *(UnityEngine_Vector3_o *)&v5, v3);
+  ServantStatusFlavorTextListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusFlavorTextListViewObject__Init_34927580(
+void ServantStatusFlavorTextListViewObject__Init_35322240(
         ServantStatusFlavorTextListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         float delay,
         const MethodInfo *method)
 {
-  int v5; // s1
+  int v5; // s1 OVERLAPPED
 
-  if ( !byte_4B16191 )
+  if ( !byte_4C20DA1 )
   {
-    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B16191 = 1;
+    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA1 = 1;
   }
   ServantStatusFlavorTextListViewObject__Init(
     this,
@@ -224,61 +219,61 @@ void __fastcall ServantStatusFlavorTextListViewObject__Init_34927580(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusFlavorTextListViewObject__Init_34927664(
+void ServantStatusFlavorTextListViewObject__Init_35322324(
         ServantStatusFlavorTextListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
         const MethodInfo *method)
 {
   float v4; // s0
-  int v5; // s1
+  int v5; // s1 OVERLAPPED
 
-  if ( !byte_4B16191 )
+  if ( !byte_4C20DA1 )
   {
-    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, *(_QWORD *)&initMode);
-    byte_4B16191 = 1;
+    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA1 = 1;
   }
   ServantStatusFlavorTextListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__OnClick(
+void ServantStatusFlavorTextListViewObject__OnClick(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4B18C3C & 1) == 0 )
+  if ( (byte_4C23826 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_9772/*"OnClickListView"*/, method);
-    byte_4B18C3C = 1;
+    sub_1C2D490(&StringLiteral_9843/*"OnClickListView"*/);
+    byte_4C23826 = 1;
   }
   manager = (UnityEngine_Component_o *)this->fields.manager;
   if ( !manager )
-    sub_1BCB254(0LL, method);
-  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9772/*"OnClickListView"*/, (Il2CppObject *)this, 0LL);
+    sub_1C2D6EC(0, method);
+  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9843/*"OnClickListView"*/, (Il2CppObject *)this, 0);
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__OnClickVoice(
+void ServantStatusFlavorTextListViewObject__OnClickVoice(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4B18C3D & 1) == 0 )
+  if ( (byte_4C23827 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_9783/*"OnClickListViewVoice"*/, method);
-    byte_4B18C3D = 1;
+    sub_1C2D490(&StringLiteral_9854/*"OnClickListViewVoice"*/);
+    byte_4C23827 = 1;
   }
   manager = (UnityEngine_Component_o *)this->fields.manager;
   if ( !manager )
-    sub_1BCB254(0LL, method);
-  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9783/*"OnClickListViewVoice"*/, (Il2CppObject *)this, 0LL);
+    sub_1C2D6EC(0, method);
+  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9854/*"OnClickListViewVoice"*/, (Il2CppObject *)this, 0);
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__OnDestroy(
+void ServantStatusFlavorTextListViewObject__OnDestroy(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -286,7 +281,7 @@ void __fastcall ServantStatusFlavorTextListViewObject__OnDestroy(
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__SetBaseTransform(
+void ServantStatusFlavorTextListViewObject__SetBaseTransform(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -296,22 +291,22 @@ void __fastcall ServantStatusFlavorTextListViewObject__SetBaseTransform(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (parent = UnityEngine_Transform__get_parent(transform, 0LL),
+    || (parent = UnityEngine_Transform__get_parent(transform, 0),
         this->fields.baseParent = parent,
-        sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.baseParent, (int32_t)parent, v6, v7),
-        (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL)
-    || (this->fields.basePosition = UnityEngine_Transform__get_localPosition(transform, 0LL),
-        (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL)) == 0LL) )
+        sub_1C2D434((CGThumbnailListItem_o *)&this->fields.baseParent, (int32_t)parent, v6, v7),
+        (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0)
+    || (this->fields.basePosition = UnityEngine_Transform__get_localPosition(transform, 0),
+        (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1BCB254(transform, v4);
+    sub_1C2D6EC(transform, v4);
   }
-  this->fields.baseScale = UnityEngine_Transform__get_localScale(transform, 0LL);
+  this->fields.baseScale = UnityEngine_Transform__get_localScale(transform, 0);
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__SetCondTitle(
+void ServantStatusFlavorTextListViewObject__SetCondTitle(
         ServantStatusFlavorTextListViewObject_o *this,
         System_String_o *title,
         const MethodInfo *method)
@@ -319,20 +314,20 @@ void __fastcall ServantStatusFlavorTextListViewObject__SetCondTitle(
   __int64 v5; // x1
   struct ServantStatusFlavorTextListViewItemDraw_o *itemDraw; // x0
 
-  if ( !System_String__IsNullOrEmpty(title, 0LL) )
+  if ( !System_String__IsNullOrEmpty(title, 0) )
   {
     itemDraw = this->fields.itemDraw;
     if ( !itemDraw )
-      sub_1BCB254(0LL, v5);
-    ((void (__fastcall *)(struct ServantStatusFlavorTextListViewItemDraw_o *, System_String_o *, Il2CppMethodPointer))itemDraw->klass->vtable._6_SetCondTitle.method)(
+      sub_1C2D6EC(0, v5);
+    ((void (__fastcall *)(struct ServantStatusFlavorTextListViewItemDraw_o *, System_String_o *, const MethodInfo *))itemDraw->klass->vtable._6_SetCondTitle.methodPtr)(
       itemDraw,
       title,
-      itemDraw->klass->vtable._7_SetCvName.methodPtr);
+      itemDraw->klass->vtable._6_SetCondTitle.method);
   }
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__SetCvName(
+void ServantStatusFlavorTextListViewObject__SetCvName(
         ServantStatusFlavorTextListViewObject_o *this,
         System_String_o *cvName,
         const MethodInfo *method)
@@ -340,53 +335,51 @@ void __fastcall ServantStatusFlavorTextListViewObject__SetCvName(
   __int64 v5; // x1
   struct ServantStatusFlavorTextListViewItemDraw_o *itemDraw; // x0
 
-  if ( !System_String__IsNullOrEmpty(cvName, 0LL) )
+  if ( !System_String__IsNullOrEmpty(cvName, 0) )
   {
     itemDraw = this->fields.itemDraw;
     if ( !itemDraw )
-      sub_1BCB254(0LL, v5);
-    ((void (__fastcall *)(struct ServantStatusFlavorTextListViewItemDraw_o *, System_String_o *, Il2CppMethodPointer))itemDraw->klass->vtable._7_SetCvName.method)(
+      sub_1C2D6EC(0, v5);
+    ((void (__fastcall *)(struct ServantStatusFlavorTextListViewItemDraw_o *, System_String_o *, const MethodInfo *))itemDraw->klass->vtable._7_SetCvName.methodPtr)(
       itemDraw,
       cvName,
-      itemDraw->klass->vtable._8_UpdateParameter.methodPtr);
+      itemDraw->klass->vtable._7_SetCvName.method);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusFlavorTextListViewObject__SetInput(
+void ServantStatusFlavorTextListViewObject__SetInput(
         ServantStatusFlavorTextListViewObject_o *this,
         bool isInput,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   Il2CppObject *Component_object; // x20
-  _BOOL8 v7; // x0
-  __int64 v8; // x1
+  _BOOL8 v6; // x0
+  __int64 v7; // x1
 
-  if ( (byte_4B18C3A & 1) == 0 )
+  if ( (byte_4C23824 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_Collider___, isInput);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B18C3A = 1;
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C23824 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
-  if ( v7 )
+  v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
+  if ( v6 )
   {
     if ( !Component_object )
-      sub_1BCB254(v7, v8);
-    UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0LL);
+      sub_1C2D6EC(v6, v7);
+    UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusFlavorTextListViewObject__SetItem(
+void ServantStatusFlavorTextListViewObject__SetItem(
         ServantStatusFlavorTextListViewObject_o *this,
         ServantStatusListViewItem_o *item,
         int32_t id,
@@ -405,18 +398,18 @@ void __fastcall ServantStatusFlavorTextListViewObject__SetItem(
   this->fields.mainInfo = item;
   v12 = isOpen;
   v13 = isNew;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.mainInfo, (int32_t)item, id, (const MethodInfo *)isOpen);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.mainInfo, (int32_t)item, id, (const MethodInfo *)isOpen);
   this->fields.id = id;
   this->fields.isOpen = v12;
   this->fields.isNew = v13;
   this->fields.messageData = text;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.messageData, (int32_t)text, v14, v15);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.messageData, (int32_t)text, v14, v15);
   this->fields.profileNum = profileNum;
-  ServantStatusFlavorTextListViewObject__Init_34926248(this, 2, v16);
+  ServantStatusFlavorTextListViewObject__Init_35320908(this, 2, v16);
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__SetManager(
+void ServantStatusFlavorTextListViewObject__SetManager(
         ServantStatusFlavorTextListViewObject_o *this,
         ServantStatusFlavorTextListViewManager_o *manager,
         const MethodInfo *method)
@@ -427,14 +420,13 @@ void __fastcall ServantStatusFlavorTextListViewObject__SetManager(
 
   this->fields.manager = manager;
   p_manager = &this->fields.manager;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.manager, (int32_t)manager, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.manager, (int32_t)manager, (int32_t)method, v3);
   if ( !*((_DWORD *)p_manager + 12) )
-    ServantStatusFlavorTextListViewObject__Init_34926248(this, 2, v6);
+    ServantStatusFlavorTextListViewObject__Init_35320908(this, 2, v6);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusFlavorTextListViewObject__SetTransform(
+void ServantStatusFlavorTextListViewObject__SetTransform(
         ServantStatusFlavorTextListViewObject_o *this,
         UnityEngine_Vector3_o position,
         const MethodInfo *method)
@@ -449,21 +441,20 @@ void __fastcall ServantStatusFlavorTextListViewObject__SetTransform(
   z = position.fields.z;
   y = position.fields.y;
   x = position.fields.x;
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_1BCB254(0LL, v8);
+    sub_1C2D6EC(0, v8);
   v9.fields.x = x;
   v9.fields.y = y;
   v9.fields.z = z;
-  UnityEngine_Transform__set_position(transform, v9, 0LL);
+  UnityEngine_Transform__set_position(transform, v9, 0);
   this->fields.basePosition.fields.x = x;
   this->fields.basePosition.fields.y = y;
   this->fields.basePosition.fields.z = z;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall ServantStatusFlavorTextListViewObject__SetVisible(
+void ServantStatusFlavorTextListViewObject__SetVisible(
         ServantStatusFlavorTextListViewObject_o *this,
         bool isVisible,
         const MethodInfo *method)
@@ -472,25 +463,25 @@ void __fastcall ServantStatusFlavorTextListViewObject__SetVisible(
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4B18C39 & 1) == 0 )
+  if ( (byte_4C23823 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, isVisible);
-    byte_4B18C39 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C23823 = 1;
   }
   dispObject = (UnityEngine_Object_o *)this->fields.dispObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(dispObject, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(dispObject, 0, 0) )
   {
     v7 = this->fields.dispObject;
     if ( !v7 )
-      sub_1BCB254(0LL, v6);
-    UnityEngine_GameObject__SetActive(v7, isVisible, 0LL);
+      sub_1C2D6EC(0, v6);
+    UnityEngine_GameObject__SetActive(v7, isVisible, 0);
   }
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__SetupDisp(
+void ServantStatusFlavorTextListViewObject__SetupDisp(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -499,21 +490,21 @@ void __fastcall ServantStatusFlavorTextListViewObject__SetupDisp(
   __int64 v5; // x1
   struct ServantStatusFlavorTextListViewItemDraw_o *v6; // x0
 
-  if ( (byte_4B18C3B & 1) == 0 )
+  if ( (byte_4C23825 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B18C3B = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C23825 = 1;
   }
   ServantStatusFlavorTextListViewObject__SetVisible(this, this->fields.dispMode != 0, v2);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(itemDraw, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
     v6 = this->fields.itemDraw;
     if ( !v6 )
-      sub_1BCB254(0LL, v5);
-    ((void (__fastcall *)(struct ServantStatusFlavorTextListViewItemDraw_o *, struct ServantStatusListViewItem_o *, bool, bool, struct System_String_o *, _QWORD, _QWORD, Il2CppMethodPointer))v6->klass->vtable._5_SetItem.method)(
+      sub_1C2D6EC(0, v5);
+    ((void (__fastcall *)(struct ServantStatusFlavorTextListViewItemDraw_o *, struct ServantStatusListViewItem_o *, bool, bool, struct System_String_o *, _QWORD, _QWORD, const MethodInfo *))v6->klass->vtable._5_SetItem.methodPtr)(
       v6,
       this->fields.mainInfo,
       this->fields.isOpen,
@@ -521,12 +512,12 @@ void __fastcall ServantStatusFlavorTextListViewObject__SetupDisp(
       this->fields.messageData,
       (unsigned int)this->fields.profileNum,
       (unsigned int)this->fields.dispMode,
-      v6->klass->vtable._6_SetCondTitle.methodPtr);
+      v6->klass->vtable._5_SetItem.method);
   }
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__UpdateParameter(
+void ServantStatusFlavorTextListViewObject__UpdateParameter(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -534,15 +525,15 @@ void __fastcall ServantStatusFlavorTextListViewObject__UpdateParameter(
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1BCB254(0LL, method);
-  ((void (__fastcall *)(struct ServantStatusFlavorTextListViewItemDraw_o *, struct ServantStatusListViewItem_o *, Il2CppMethodPointer))itemDraw->klass->vtable._8_UpdateParameter.method)(
+    sub_1C2D6EC(0, method);
+  ((void (__fastcall *)(struct ServantStatusFlavorTextListViewItemDraw_o *, struct ServantStatusListViewItem_o *, const MethodInfo *))itemDraw->klass->vtable._8_UpdateParameter.methodPtr)(
     itemDraw,
     this->fields.mainInfo,
-    itemDraw->klass->vtable._9_HideNew.methodPtr);
+    itemDraw->klass->vtable._8_UpdateParameter.method);
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__add_callbackFunc(
+void ServantStatusFlavorTextListViewObject__add_callbackFunc(
         ServantStatusFlavorTextListViewObject_o *this,
         System_Action_o *value,
         const MethodInfo *method)
@@ -557,34 +548,34 @@ void __fastcall ServantStatusFlavorTextListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4B18C34 & 1) == 0 )
+  if ( (byte_4C2381E & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, value);
-    byte_4B18C34 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    byte_4C2381E = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
   v6 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0LL);
+    v8 = System_Delegate__Combine(v6, (System_Delegate_o *)value, 0);
     if ( v8 )
     {
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C05088(p_callbackFunc, v8, v6);
+    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BCB514(v8);
+  sub_1C2D9AC(v8);
   ServantStatusFlavorTextListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
 
-UnityEngine_Vector3_o __fastcall ServantStatusFlavorTextListViewObject__get_BottomPosition(
+UnityEngine_Vector3_o ServantStatusFlavorTextListViewObject__get_BottomPosition(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -609,7 +600,7 @@ UnityEngine_Vector3_o __fastcall ServantStatusFlavorTextListViewObject__get_Bott
 }
 
 
-int32_t __fastcall ServantStatusFlavorTextListViewObject__get_Id(
+int32_t ServantStatusFlavorTextListViewObject__get_Id(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -617,7 +608,7 @@ int32_t __fastcall ServantStatusFlavorTextListViewObject__get_Id(
 }
 
 
-bool __fastcall ServantStatusFlavorTextListViewObject__get_IsBusy(
+bool ServantStatusFlavorTextListViewObject__get_IsBusy(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -625,7 +616,7 @@ bool __fastcall ServantStatusFlavorTextListViewObject__get_IsBusy(
 }
 
 
-bool __fastcall ServantStatusFlavorTextListViewObject__get_IsNew(
+bool ServantStatusFlavorTextListViewObject__get_IsNew(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -633,86 +624,84 @@ bool __fastcall ServantStatusFlavorTextListViewObject__get_IsNew(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-UnityEngine_Vector3_o __fastcall ServantStatusFlavorTextListViewObject__get_ProfileLastLinePosition(
+UnityEngine_Vector3_o ServantStatusFlavorTextListViewObject__get_ProfileLastLinePosition(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   float x; // s8
   float y; // s10
   float z; // s9
   int32_t Size; // w0
   struct ServantStatusFlavorTextListViewItemDraw_o *itemDraw; // x8
-  int v9; // w20
-  __int64 methodPtr_low; // x11
-  UnityEngine_Object_o *v11; // x21
-  _BOOL8 v12; // x0
-  const MethodInfo *v13; // x1
-  float v14; // s10
-  float v15; // s1
+  int v8; // w20
+  __int64 naturalAligment; // x11
+  UnityEngine_Object_o *v10; // x21
+  _BOOL8 v11; // x0
+  const MethodInfo *v12; // x1
+  float v13; // s10
   UnityEngine_Object_c *klass; // x8
-  float v17; // s1
-  float v18; // s0
-  float v19; // s2
+  float v15; // s1
+  float v16; // s0
+  float v17; // s2
+  UnityEngine_Vector3_o MessageLabelPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B18C33 & 1) == 0 )
+  if ( (byte_4C2381D & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    sub_1BCAFF8(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo, v3);
-    byte_4B18C33 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&ServantStatusFlavorTextListViewItemDrawText2_TypeInfo);
+    byte_4C2381D = 1;
   }
   x = this->fields.basePosition.fields.x;
   y = this->fields.basePosition.fields.y;
   z = this->fields.basePosition.fields.z;
   Size = ServantStatusFlavorTextListViewObject__GetSize(this, method);
   itemDraw = this->fields.itemDraw;
-  v9 = Size;
+  v8 = Size;
   if ( itemDraw
-    && (methodPtr_low = LOBYTE(ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->vtable._0_Equals.methodPtr),
-        LOBYTE(itemDraw->klass->vtable._0_Equals.methodPtr) >= (unsigned int)methodPtr_low) )
+    && (naturalAligment = ServantStatusFlavorTextListViewItemDrawText2_TypeInfo->_2.naturalAligment,
+        itemDraw->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
   {
-    if ( (ServantStatusFlavorTextListViewItemDrawText2_c *)itemDraw->klass->_2.typeHierarchy[methodPtr_low - 1] == ServantStatusFlavorTextListViewItemDrawText2_TypeInfo )
-      v11 = (UnityEngine_Object_o *)this->fields.itemDraw;
+    if ( (ServantStatusFlavorTextListViewItemDrawText2_c *)itemDraw->klass->_2.typeHierarchy[naturalAligment - 1] == ServantStatusFlavorTextListViewItemDrawText2_TypeInfo )
+      v10 = (UnityEngine_Object_o *)this->fields.itemDraw;
     else
-      v11 = 0LL;
+      v10 = 0;
   }
   else
   {
-    v11 = 0LL;
+    v10 = 0;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v12 = UnityEngine_Object__op_Inequality(v11, 0LL, 0LL);
-  if ( v12 )
+  v11 = UnityEngine_Object__op_Inequality(v10, 0, 0);
+  if ( v11 )
   {
-    if ( !v11
-      || (v14 = this->fields.basePosition.fields.y,
-          *(UnityEngine_Vector3_o *)(&v15 - 1) = ServantStatusFlavorTextListViewItemDrawText2__get_MessageLabelPosition(
-                                                   (ServantStatusFlavorTextListViewItemDrawText2_o *)v11,
-                                                   v13),
-          (klass = v11[3].klass) == 0LL) )
+    if ( !v10
+      || (v13 = this->fields.basePosition.fields.y,
+          MessageLabelPosition = ServantStatusFlavorTextListViewItemDrawText2__get_MessageLabelPosition(
+                                   (ServantStatusFlavorTextListViewItemDrawText2_o *)v10,
+                                   v12),
+          (klass = v10[3].klass) == 0) )
     {
-      sub_1BCB254(v12, v13);
+      sub_1C2D6EC(v11, v12);
     }
-    v17 = (float)((float)(v14 + v15) - (float)SHIDWORD(klass->_1.implementedInterfaces))
-        + (float)(int)klass[1]._1.this_arg.bits;
+    v15 = (float)((float)(v13 + MessageLabelPosition.fields.y) - (float)SHIDWORD(klass->_1.implementedInterfaces))
+        + (float)SLODWORD(klass[1]._1.this_arg.data);
   }
   else
   {
-    v17 = y + (float)((float)v9 * -0.5);
+    v15 = y + (float)((float)v8 * -0.5);
   }
-  v18 = x;
-  v19 = z;
-  result.fields.z = v19;
-  result.fields.y = v17;
-  result.fields.x = v18;
+  v16 = x;
+  v17 = z;
+  result.fields.z = v17;
+  result.fields.y = v15;
+  result.fields.x = v16;
   return result;
 }
 
 
-UnityEngine_Vector3_o __fastcall ServantStatusFlavorTextListViewObject__get_TopPosition(
+UnityEngine_Vector3_o ServantStatusFlavorTextListViewObject__get_TopPosition(
         ServantStatusFlavorTextListViewObject_o *this,
         const MethodInfo *method)
 {
@@ -744,7 +733,7 @@ UnityEngine_Vector3_o __fastcall ServantStatusFlavorTextListViewObject__get_TopP
 }
 
 
-void __fastcall ServantStatusFlavorTextListViewObject__remove_callbackFunc(
+void ServantStatusFlavorTextListViewObject__remove_callbackFunc(
         ServantStatusFlavorTextListViewObject_o *this,
         System_Action_o *value,
         const MethodInfo *method)
@@ -758,28 +747,28 @@ void __fastcall ServantStatusFlavorTextListViewObject__remove_callbackFunc(
   ServantStatusFlavorTextListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4B18C35 & 1) == 0 )
+  if ( (byte_4C2381F & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, value);
-    byte_4B18C35 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    byte_4C2381F = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
   v6 = (System_Delegate_o *)callbackFunc;
   while ( 1 )
   {
-    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0LL);
+    v8 = System_Delegate__Remove(v6, (System_Delegate_o *)value, 0);
     if ( v8 )
     {
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C05088(p_callbackFunc, v8, v6);
+    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1BCB514(v8);
+  sub_1C2D9AC(v8);
   ServantStatusFlavorTextListViewObject__Awake(v11, v12);
 }

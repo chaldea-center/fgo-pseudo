@@ -1,54 +1,49 @@
-void __fastcall OtherUserGameMaster___ctor(OtherUserGameMaster_o *this, const MethodInfo *method)
+void OtherUserGameMaster___ctor(OtherUserGameMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CA98 & 1) == 0 )
+  if ( (byte_4C2786B & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_OtherUserGameMaster__OtherUserGameEntity__long___ctor__, method);
-    byte_4B1CA98 = 1;
+    sub_1C2D490(&Method_DataMasterBase_OtherUserGameMaster__OtherUserGameEntity__long___ctor__);
+    byte_4C2786B = 1;
   }
   DataMasterBase_object__object__long____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     68,
-    (const MethodInfo_32C8038 *)Method_DataMasterBase_OtherUserGameMaster__OtherUserGameEntity__long___ctor__);
+    (const MethodInfo_3387FD0 *)Method_DataMasterBase_OtherUserGameMaster__OtherUserGameEntity__long___ctor__);
 }
 
 
-OtherUserGameEntity_array *__fastcall OtherUserGameMaster__GetFriendCodeList(
+OtherUserGameEntity_array *OtherUserGameMaster__GetFriendCodeList(
         OtherUserGameMaster_o *this,
         System_String_o *friendCode,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  System_Collections_Generic_List_object__o *v10; // x21
+  System_Collections_Generic_List_object__o *v5; // x21
   void *list; // x0
-  __int64 v12; // x1
-  int v13; // w22
-  int32_t v14; // w23
-  Il2CppObject *v15; // x24
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  __int64 v7; // x1
+  int v8; // w22
+  int32_t v9; // w23
+  Il2CppObject *v10; // x24
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v19; // x9
+  _QWORD *v14; // x9
   __int64 size; // x10
-  Il2CppClass **v21; // x0
+  Il2CppClass **v16; // x0
 
-  if ( (byte_4B1CA99 & 1) == 0 )
+  if ( (byte_4C2786C & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Count__, friendCode);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Item__, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_OtherUserGameEntity__Add__, v6);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_OtherUserGameEntity__ToArray__, v7);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_OtherUserGameEntity___ctor__, v8);
-    sub_1BCAFF8(&System_Collections_Generic_List_OtherUserGameEntity__TypeInfo, v9);
-    byte_4B1CA99 = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Item__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_OtherUserGameEntity__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_OtherUserGameEntity__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_OtherUserGameEntity___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_OtherUserGameEntity__TypeInfo);
+    byte_4C2786C = 1;
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_OtherUserGameEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_OtherUserGameEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v10,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_OtherUserGameEntity___ctor__);
+    v5,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_OtherUserGameEntity___ctor__);
   if ( friendCode )
   {
     list = this->fields.list;
@@ -56,11 +51,11 @@ OtherUserGameEntity_array *__fastcall OtherUserGameMaster__GetFriendCodeList(
       goto LABEL_18;
     list = (void *)System_Collections_ObjectModel_Collection_object___get_Count(
                      (System_Collections_ObjectModel_Collection_T__o *)list,
-                     (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Count__);
+                     (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Count__);
     if ( (int)list >= 1 )
     {
-      v13 = (int)list;
-      v14 = 0;
+      v8 = (int)list;
+      v9 = 0;
       while ( 1 )
       {
         list = this->fields.list;
@@ -68,102 +63,95 @@ OtherUserGameEntity_array *__fastcall OtherUserGameMaster__GetFriendCodeList(
           break;
         list = System_Collections_ObjectModel_Collection_object___get_Item(
                  (System_Collections_ObjectModel_Collection_T__o *)list,
-                 v14,
-                 (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Item__);
+                 v9,
+                 (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Item__);
         if ( list )
         {
-          v15 = (Il2CppObject *)list;
-          list = (void *)System_String__Equals_62485728(friendCode, *((System_String_o **)list + 5), 0LL);
+          v10 = (Il2CppObject *)list;
+          list = (void *)System_String__Equals_63493168(friendCode, *((System_String_o **)list + 5), 0);
           if ( ((unsigned __int8)list & 1) != 0 )
           {
-            if ( !v10 )
+            if ( !v5 )
               break;
-            items = v10->fields._items;
-            v19 = Method_System_Collections_Generic_List_OtherUserGameEntity__Add__;
-            ++v10->fields._version;
+            items = v5->fields._items;
+            v14 = Method_System_Collections_Generic_List_OtherUserGameEntity__Add__;
+            ++v5->fields._version;
             if ( !items )
               break;
-            size = v10->fields._size;
-            if ( (unsigned int)size >= items->max_length )
+            size = v5->fields._size;
+            if ( (unsigned int)size >= LODWORD(items->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
+                v5,
                 v10,
-                v15,
-                *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+                *(const MethodInfo_3789B84 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
             }
             else
             {
-              v21 = &items->obj.klass + size;
-              v10->fields._size = size + 1;
-              v21[4] = (Il2CppClass *)v15;
-              sub_1BCAF9C((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v15, v16, v17);
+              v16 = &items->obj.klass + size;
+              v5->fields._size = size + 1;
+              v16[4] = (Il2CppClass *)v10;
+              sub_1C2D434((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v10, v11, v12);
             }
           }
         }
-        if ( v13 == ++v14 )
+        if ( v8 == ++v9 )
           goto LABEL_16;
       }
 LABEL_18:
-      sub_1BCB254(list, v12);
+      sub_1C2D6EC(list, v7);
     }
   }
 LABEL_16:
-  if ( !v10 )
+  if ( !v5 )
     goto LABEL_18;
   return (OtherUserGameEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                        v10,
-                                        (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_OtherUserGameEntity__ToArray__);
+                                        v5,
+                                        (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_OtherUserGameEntity__ToArray__);
 }
 
 
-void __fastcall OtherUserGameMaster__continueDeviceOtherUser(OtherUserGameMaster_o *this, const MethodInfo *method)
+void OtherUserGameMaster__continueDeviceOtherUser(OtherUserGameMaster_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  System_Collections_Generic_List_long__o *v3; // x20
   __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  System_Collections_Generic_List_long__o *v10; // x20
-  __int64 v11; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t Count; // w21
-  int32_t v14; // w22
+  int32_t v7; // w22
   int64_t klass; // x23
   struct System_Int64_array *items; // x8
-  _QWORD *v17; // x9
+  _QWORD *v10; // x9
   __int64 size; // x10
-  System_Int64_array *v19; // x19
+  System_Int64_array *v12; // x19
 
-  if ( (byte_4B1CA9A & 1) == 0 )
+  if ( (byte_4C2786D & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Count__, method);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Item__, v3);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_long__Add__, v4);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_long__ToArray__, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_long___ctor__, v6);
-    sub_1BCAFF8(&System_Collections_Generic_List_long__TypeInfo, v7);
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v8);
-    sub_1BCAFF8(&OtherUserNewManager_TypeInfo, v9);
-    byte_4B1CA9A = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Item__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_long__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_long__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_long__TypeInfo);
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&OtherUserNewManager_TypeInfo);
+    byte_4C2786D = 1;
   }
-  v10 = (System_Collections_Generic_List_long__o *)sub_1BCB244(System_Collections_Generic_List_long__TypeInfo);
+  v3 = (System_Collections_Generic_List_long__o *)sub_1C2D6DC(System_Collections_Generic_List_long__TypeInfo);
   System_Collections_Generic_List_long____ctor(
-    v10,
-    (const MethodInfo_36A13B0 *)Method_System_Collections_Generic_List_long___ctor__);
+    v3,
+    (const MethodInfo_3771364 *)Method_System_Collections_Generic_List_long___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_25;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Count__);
+            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Count__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4B165D1 )
+  if ( !byte_4C211E1 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v11);
-    byte_4B165D1 = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    byte_4C211E1 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -173,7 +161,7 @@ void __fastcall OtherUserGameMaster__continueDeviceOtherUser(OtherUserGameMaster
   }
   if ( Count >= 1 )
   {
-    v14 = 0;
+    v7 = 0;
     klass = (int64_t)list[7].fields.items[4].klass;
     while ( 1 )
     {
@@ -182,44 +170,44 @@ void __fastcall OtherUserGameMaster__continueDeviceOtherUser(OtherUserGameMaster
         break;
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
-                                                                 v14,
-                                                                 (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Item__);
+                                                                 v7,
+                                                                 (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_OtherUserGameEntity__get_Item__);
       if ( list && list->fields.items == (struct System_Collections_Generic_IList_T__o *)klass )
       {
-        if ( !v10 )
+        if ( !v3 )
           break;
-        items = v10->fields._items;
-        v17 = Method_System_Collections_Generic_List_long__Add__;
-        ++v10->fields._version;
+        items = v3->fields._items;
+        v10 = Method_System_Collections_Generic_List_long__Add__;
+        ++v3->fields._version;
         if ( !items )
           break;
-        size = v10->fields._size;
-        if ( (unsigned int)size >= items->max_length )
+        size = v3->fields._size;
+        if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_long___AddWithResize(
-            v10,
+            v3,
             klass,
-            *(const MethodInfo_36A1C04 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+            *(const MethodInfo_3771BB8 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
         }
         else
         {
-          v10->fields._size = size + 1;
+          v3->fields._size = size + 1;
           items->m_Items[size] = klass;
         }
       }
-      if ( Count == ++v14 )
+      if ( Count == ++v7 )
         goto LABEL_21;
     }
 LABEL_25:
-    sub_1BCB254(list, v11);
+    sub_1C2D6EC(list, v4);
   }
 LABEL_21:
-  if ( !v10 )
+  if ( !v3 )
     goto LABEL_25;
-  v19 = System_Collections_Generic_List_long___ToArray(
-          v10,
-          (const MethodInfo_36A36BC *)Method_System_Collections_Generic_List_long__ToArray__);
+  v12 = System_Collections_Generic_List_long___ToArray(
+          v3,
+          (const MethodInfo_3773670 *)Method_System_Collections_Generic_List_long__ToArray__);
   if ( !OtherUserNewManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OtherUserNewManager_TypeInfo);
-  OtherUserNewManager__SetOld_42523332(v19, 0LL);
+  OtherUserNewManager__SetOld_43154428(v12, 0);
 }

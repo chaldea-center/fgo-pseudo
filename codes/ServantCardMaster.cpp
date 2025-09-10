@@ -1,19 +1,19 @@
-void __fastcall ServantCardMaster___ctor(ServantCardMaster_o *this, const MethodInfo *method)
+void ServantCardMaster___ctor(ServantCardMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CD36 & 1) == 0 )
+  if ( (byte_4C27B12 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string___ctor__, method);
-    byte_4B1CD36 = 1;
+    sub_1C2D490(&Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string___ctor__);
+    byte_4C27B12 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     11,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-ServantCardEntity_o *__fastcall ServantCardMaster__GetEntity(
+ServantCardEntity_o *ServantCardMaster__GetEntity(
         ServantCardMaster_o *this,
         int32_t svtId,
         int32_t cardId,
@@ -21,21 +21,21 @@ ServantCardEntity_o *__fastcall ServantCardMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1CD34 & 1) == 0 )
+  if ( (byte_4C27B10 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__GetEntity__, *(_QWORD *)&svtId);
-    byte_4B1CD34 = 1;
+    sub_1C2D490(&Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__GetEntity__);
+    byte_4C27B10 = 1;
   }
   PK = (Il2CppObject *)ServantCardEntity__CreatePK(svtId, cardId, *(const MethodInfo **)&cardId);
   return (ServantCardEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   PK,
-                                  (const MethodInfo_32CC8B8 *)Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__GetEntity__);
+                                  (const MethodInfo_338C850 *)Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall ServantCardMaster__TryGetEntity(
+bool ServantCardMaster__TryGetEntity(
         ServantCardMaster_o *this,
         ServantCardEntity_o **entity,
         int32_t svtId,
@@ -44,15 +44,15 @@ bool __fastcall ServantCardMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1CD35 & 1) == 0 )
+  if ( (byte_4C27B11 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__TryGetEntity__, entity);
-    byte_4B1CD35 = 1;
+    sub_1C2D490(&Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__TryGetEntity__);
+    byte_4C27B11 = 1;
   }
   PK = (Il2CppObject *)ServantCardEntity__CreatePK(svtId, cardId, *(const MethodInfo **)&svtId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_ServantCardMaster__ServantCardEntity__string__TryGetEntity__);
 }

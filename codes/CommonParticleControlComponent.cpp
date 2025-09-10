@@ -1,12 +1,10 @@
-void __fastcall CommonParticleControlComponent___ctor(CommonParticleControlComponent_o *this, const MethodInfo *method)
+void CommonParticleControlComponent___ctor(CommonParticleControlComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall CommonParticleControlComponent__Update(
-        CommonParticleControlComponent_o *this,
-        const MethodInfo *method)
+void CommonParticleControlComponent__Update(CommonParticleControlComponent_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
   CommonParticleControlComponent_o *v3; // x19
@@ -14,12 +12,10 @@ void __fastcall CommonParticleControlComponent__Update(
   int32_t v5; // w20
 
   v3 = this;
-  if ( (byte_4B1DB58 & 1) == 0 )
+  if ( (byte_4C28966 & 1) == 0 )
   {
-    this = (CommonParticleControlComponent_o *)sub_1BCAFF8(
-                                                 &Method_System_Collections_Generic_List_ParticleSystem__get_Count__,
-                                                 method);
-    byte_4B1DB58 = 1;
+    this = (CommonParticleControlComponent_o *)sub_1C2D490(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__);
+    byte_4C28966 = 1;
   }
   particleParent = v3->fields.particleParent;
   if ( !particleParent )
@@ -35,15 +31,15 @@ void __fastcall CommonParticleControlComponent__Update(
     if ( !particleParent )
       goto LABEL_8;
   }
-  this = (CommonParticleControlComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v3, 0LL);
+  this = (CommonParticleControlComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v3, 0);
   if ( !this )
 LABEL_8:
-    sub_1BCB254(this, method);
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0LL);
+    sub_1C2D6EC(this, method);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }
 
 
-void __fastcall CommonParticleControlComponent__init(
+void CommonParticleControlComponent__init(
         CommonParticleControlComponent_o *this,
         int32_t layer,
         const MethodInfo *method)
@@ -52,29 +48,28 @@ void __fastcall CommonParticleControlComponent__init(
   __int64 v6; // x1
   const MethodInfo *v7; // x2
 
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1BCB254(0LL, v6);
-  UnityEngine_GameObject__SetActive(gameObject, 0, 0LL);
+    sub_1C2D6EC(0, v6);
+  UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   CommonParticleControlComponent__setupLayer(this, layer, v7);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall CommonParticleControlComponent__isAlive(
+bool CommonParticleControlComponent__isAlive(
         CommonParticleControlComponent_o *this,
         int32_t idx,
         bool withChildren,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
   System_Collections_Generic_List_object__o *particleParent; // x0
 
-  if ( (byte_4B1DB5C & 1) == 0 )
+  if ( (byte_4C2896A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__, *(_QWORD *)&idx);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__, v7);
-    byte_4B1DB5C = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
+    byte_4C2896A = 1;
   }
   particleParent = (System_Collections_Generic_List_object__o *)this->fields.particleParent;
   if ( !particleParent )
@@ -84,49 +79,48 @@ bool __fastcall CommonParticleControlComponent__isAlive(
     particleParent = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     particleParent,
                                                                     idx,
-                                                                    (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
+                                                                    (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
     if ( particleParent )
-      return UnityEngine_ParticleSystem__IsAlive((UnityEngine_ParticleSystem_o *)particleParent, withChildren, 0LL);
+      return UnityEngine_ParticleSystem__IsAlive((UnityEngine_ParticleSystem_o *)particleParent, withChildren, 0);
 LABEL_8:
-    sub_1BCB254(particleParent, *(_QWORD *)&idx);
+    sub_1C2D6EC(particleParent, *(_QWORD *)&idx);
   }
   return 0;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall CommonParticleControlComponent__particleAllStop(
+void CommonParticleControlComponent__particleAllStop(
         CommonParticleControlComponent_o *this,
         bool withChildren,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   System_Collections_Generic_List_object__o *particleParent; // x0
-  int32_t v7; // w20
-  bool v8; // w21
+  int32_t v6; // w20
+  bool v7; // w21
 
-  if ( (byte_4B1DB5A & 1) == 0 )
+  if ( (byte_4C28968 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__, withChildren);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__, v5);
-    byte_4B1DB5A = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
+    byte_4C28968 = 1;
   }
   particleParent = (System_Collections_Generic_List_object__o *)this->fields.particleParent;
   if ( !particleParent )
     goto LABEL_11;
-  v7 = 0;
-  v8 = withChildren;
-  while ( v7 < particleParent->fields._size )
+  v6 = 0;
+  v7 = withChildren;
+  while ( v6 < particleParent->fields._size )
   {
     particleParent = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     particleParent,
-                                                                    v7,
-                                                                    (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
+                                                                    v6,
+                                                                    (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
     if ( particleParent )
     {
-      UnityEngine_ParticleSystem__Stop_70419764((UnityEngine_ParticleSystem_o *)particleParent, v8, 0LL);
+      UnityEngine_ParticleSystem__Stop_71447392((UnityEngine_ParticleSystem_o *)particleParent, v7, 0);
       particleParent = (System_Collections_Generic_List_object__o *)this->fields.particleParent;
-      ++v7;
+      ++v6;
       if ( particleParent )
         continue;
     }
@@ -134,53 +128,51 @@ void __fastcall CommonParticleControlComponent__particleAllStop(
   }
   particleParent = (System_Collections_Generic_List_object__o *)UnityEngine_Component__get_gameObject(
                                                                   (UnityEngine_Component_o *)this,
-                                                                  0LL);
+                                                                  0);
   if ( !particleParent )
 LABEL_11:
-    sub_1BCB254(particleParent, withChildren);
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)particleParent, 0, 0LL);
+    sub_1C2D6EC(particleParent, withChildren);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)particleParent, 0, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall CommonParticleControlComponent__particleStart(
+void CommonParticleControlComponent__particleStart(
         CommonParticleControlComponent_o *this,
         bool withChildren,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v7; // x1
-  int32_t v8; // w21
-  bool v9; // w20
+  __int64 v6; // x1
+  int32_t v7; // w21
+  bool v8; // w20
 
-  if ( (byte_4B1DB59 & 1) == 0 )
+  if ( (byte_4C28967 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__, withChildren);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__, v5);
-    byte_4B1DB59 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
+    byte_4C28967 = 1;
   }
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
-    || (UnityEngine_GameObject__SetActive(gameObject, 1, 0LL),
-        (gameObject = (UnityEngine_GameObject_o *)this->fields.particleParent) == 0LL) )
+    || (UnityEngine_GameObject__SetActive(gameObject, 1, 0),
+        (gameObject = (UnityEngine_GameObject_o *)this->fields.particleParent) == 0) )
   {
 LABEL_9:
-    sub_1BCB254(gameObject, v7);
+    sub_1C2D6EC(gameObject, v6);
   }
-  v8 = 0;
-  v9 = withChildren;
-  while ( v8 < SLODWORD(gameObject[1].klass) )
+  v7 = 0;
+  v8 = withChildren;
+  while ( v7 < SLODWORD(gameObject[1].klass) )
   {
     gameObject = (UnityEngine_GameObject_o *)System_Collections_Generic_List_object___get_Item(
                                                (System_Collections_Generic_List_object__o *)gameObject,
-                                               v8,
-                                               (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
+                                               v7,
+                                               (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
     if ( gameObject )
     {
-      UnityEngine_ParticleSystem__Play((UnityEngine_ParticleSystem_o *)gameObject, v9, 0LL);
+      UnityEngine_ParticleSystem__Play((UnityEngine_ParticleSystem_o *)gameObject, v8, 0);
       gameObject = (UnityEngine_GameObject_o *)this->fields.particleParent;
-      ++v8;
+      ++v7;
       if ( gameObject )
         continue;
     }
@@ -190,20 +182,19 @@ LABEL_9:
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall CommonParticleControlComponent__particleStop(
+void CommonParticleControlComponent__particleStop(
         CommonParticleControlComponent_o *this,
         int32_t idx,
         bool withChildren,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
   System_Collections_Generic_List_object__o *particleParent; // x0
 
-  if ( (byte_4B1DB5B & 1) == 0 )
+  if ( (byte_4C28969 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__, *(_QWORD *)&idx);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__, v7);
-    byte_4B1DB5B = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_ParticleSystem__get_Count__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
+    byte_4C28969 = 1;
   }
   particleParent = (System_Collections_Generic_List_object__o *)this->fields.particleParent;
   if ( !particleParent )
@@ -213,19 +204,19 @@ void __fastcall CommonParticleControlComponent__particleStop(
     particleParent = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     particleParent,
                                                                     idx,
-                                                                    (const MethodInfo_36B9900 *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
+                                                                    (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_ParticleSystem__get_Item__);
     if ( particleParent )
     {
-      UnityEngine_ParticleSystem__Stop_70419764((UnityEngine_ParticleSystem_o *)particleParent, withChildren, 0LL);
+      UnityEngine_ParticleSystem__Stop_71447392((UnityEngine_ParticleSystem_o *)particleParent, withChildren, 0);
       return;
     }
 LABEL_8:
-    sub_1BCB254(particleParent, *(_QWORD *)&idx);
+    sub_1C2D6EC(particleParent, *(_QWORD *)&idx);
   }
 }
 
 
-void __fastcall CommonParticleControlComponent__setupLayer(
+void CommonParticleControlComponent__setupLayer(
         CommonParticleControlComponent_o *this,
         int32_t layer,
         const MethodInfo *method)
@@ -238,12 +229,12 @@ void __fastcall CommonParticleControlComponent__setupLayer(
   void *v10; // x20
   unsigned int v11; // w21
 
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_10;
-  UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)gameObject, layer, 0LL);
-  v7 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  gameObject = GameObjectExtensions__GetChildren(v7, 1, 0LL);
+  UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)gameObject, layer, 0);
+  v7 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  gameObject = GameObjectExtensions__GetChildren(v7, 1, 0);
   if ( !gameObject )
     goto LABEL_10;
   v9 = *((_DWORD *)gameObject + 6);
@@ -254,16 +245,16 @@ void __fastcall CommonParticleControlComponent__setupLayer(
     while ( 1 )
     {
       if ( v11 >= v9 )
-        sub_1BCB25C(gameObject, v6, v8);
+        sub_1C2D6F4(gameObject, v6, v8);
       gameObject = (void *)*((_QWORD *)v10 + (int)v11 + 4);
       if ( !gameObject )
         break;
-      UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)gameObject, layer, 0LL);
+      UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)gameObject, layer, 0);
       v9 = *((_DWORD *)v10 + 6);
       if ( (int)++v11 >= v9 )
         return;
     }
 LABEL_10:
-    sub_1BCB254(gameObject, v6);
+    sub_1C2D6EC(gameObject, v6);
   }
 }

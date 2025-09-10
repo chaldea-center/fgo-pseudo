@@ -1,130 +1,112 @@
-void __fastcall UserGachaMaster___cctor(const MethodInfo *method)
+void UserGachaMaster___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4B1D37C & 1) == 0 )
+  if ( (byte_4C28174 & 1) == 0 )
   {
-    sub_1BCAFF8(&UserGachaMaster_TypeInfo, v1);
-    byte_4B1D37C = 1;
+    sub_1C2D490(&UserGachaMaster_TypeInfo);
+    byte_4C28174 = 1;
   }
-  UserGachaMaster_TypeInfo->static_fields->ONEDAY_SECOND = 86400LL;
+  UserGachaMaster_TypeInfo->static_fields->ONEDAY_SECOND = 86400;
 }
 
 
-void __fastcall UserGachaMaster___ctor(UserGachaMaster_o *this, const MethodInfo *method)
+void UserGachaMaster___ctor(UserGachaMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D379 & 1) == 0 )
+  if ( (byte_4C28170 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_UserGachaMaster__UserGachaEntity__string___ctor__, method);
-    byte_4B1D379 = 1;
+    sub_1C2D490(&Method_DataMasterBase_UserGachaMaster__UserGachaEntity__string___ctor__);
+    byte_4C28170 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     34,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_UserGachaMaster__UserGachaEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_UserGachaMaster__UserGachaEntity__string___ctor__);
 }
 
 
-bool __fastcall UserGachaMaster__CheckFriendPointMultipleFreeCampaignAvailable(
+bool UserGachaMaster__CheckFriendPointMultipleFreeCampaignAvailable(
         int32_t gachaId,
         int32_t *remainNum,
         int32_t *maxNum,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
   int64_t Master_object; // x0
-  __int64 v24; // x1
+  __int64 v8; // x1
   UserGameEntity_o *SelfUserGame; // x23
   Il2CppObject *MasterData_object; // x25
-  Il2CppObject *v27; // x22
-  const MethodInfo *v28; // x4
-  int64_t v29; // x24
+  Il2CppObject *v11; // x22
+  const MethodInfo *v12; // x4
+  int64_t v13; // x24
   int64_t freeDrawAt; // x25
-  BalanceConfig_c *v31; // x0
-  __int64 v32; // x28
-  uint64_t v33; // x23
-  int v34; // w23
+  BalanceConfig_c *v15; // x0
+  __int64 v16; // x28
+  System_DateTime_o v17; // x0
+  uint64_t v18; // x23
+  System_DateTime_o v19; // x0
+  System_DateTime_o v20; // x1
+  System_DateTime_o v21; // x0
+  System_TimeSpan_o v22; // x0
+  int v23; // w23
   System_Collections_Generic_List_object__o *FriendPointSummonMultipleFreeCampaign; // x0
-  _BOOL8 v36; // x0
-  __int64 v37; // x1
-  char v38; // w8
-  BalanceConfig_c *v39; // x8
+  _BOOL8 v25; // x0
+  __int64 v26; // x1
+  char v27; // w8
+  BalanceConfig_c *v28; // x8
   __int64 DailyFreeGachaResetTime; // x24
   int64_t TodayStartTime; // x21
-  UserGachaMaster_c *v42; // x0
-  const MethodInfo *v43; // x3
-  UserFriendPointGachaFreeDrawCampaignLogMaster_o *v44; // x22
-  int32_t v45; // w9
-  System_Collections_Generic_List_Enumerator_object__o v47; // [xsp+8h] [xbp-B8h] BYREF
+  System_DateTime_o v31; // x0
+  System_DateTime_o v32; // x0
+  UserGachaMaster_c *v33; // x0
+  const MethodInfo *v34; // x3
+  UserFriendPointGachaFreeDrawCampaignLogMaster_o *v35; // x22
+  int32_t v36; // w9
+  System_Collections_Generic_List_Enumerator_object__o v38; // [xsp+8h] [xbp-B8h] BYREF
   System_Collections_Generic_List_Enumerator_object__o i; // [xsp+20h] [xbp-A0h] BYREF
-  uint64_t v49; // [xsp+38h] [xbp-88h] BYREF
+  uint64_t v40; // [xsp+38h] [xbp-88h] BYREF
   int64_t ticks; // [xsp+40h] [xbp-80h] BYREF
-  uint64_t v51; // [xsp+48h] [xbp-78h] BYREF
+  uint64_t v42; // [xsp+48h] [xbp-78h] BYREF
   uint64_t dateData; // [xsp+50h] [xbp-70h] BYREF
-  UserGachaEntity_o *v53; // [xsp+58h] [xbp-68h] BYREF
+  UserGachaEntity_o *v44; // [xsp+58h] [xbp-68h] BYREF
   Il2CppObject *entity; // [xsp+68h] [xbp-58h] BYREF
-  System_DateTime_o v55; // 0:x0.8
-  System_DateTime_o v56; // 0:x0.8
-  System_DateTime_o v57; // 0:x0.8
-  System_TimeSpan_o v58; // 0:x0.8
-  System_DateTime_o v59; // 0:x0.8
-  System_DateTime_o v60; // 0:x0.8
-  System_DateTime_o v61; // 0:x1.8
 
-  if ( (byte_4B1D37B & 1) == 0 )
+  if ( (byte_4C28172 & 1) == 0 )
   {
-    sub_1BCAFF8(&BalanceConfig_TypeInfo, remainNum);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_EventCampaignMaster___, v7);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_UserFriendPointGachaFreeDrawCampaignLogMaster___, v8);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_UserGachaMaster___, v9);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_GachaMaster___, v10);
-    sub_1BCAFF8(&DataManager_TypeInfo, v11);
-    sub_1BCAFF8(&Method_DataMasterBase_GachaMaster__GachaEntity__int__TryGetEntity__, v12);
-    sub_1BCAFF8(&System_DateTime_TypeInfo, v13);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__Dispose__, v14);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__MoveNext__, v15);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__get_Current__, v16);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventCampaignEntity__GetEnumerator__, v17);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventCampaignEntity__get_Count__, v18);
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v19);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v20);
-    sub_1BCAFF8(&System_TimeSpan_TypeInfo, v21);
-    sub_1BCAFF8(&UserGachaMaster_TypeInfo, v22);
-    byte_4B1D37B = 1;
+    sub_1C2D490(&BalanceConfig_TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMasterData_EventCampaignMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_UserFriendPointGachaFreeDrawCampaignLogMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_UserGachaMaster___);
+    sub_1C2D490(&Method_DataManager_GetMaster_GachaMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_DataMasterBase_GachaMaster__GachaEntity__int__TryGetEntity__);
+    sub_1C2D490(&System_DateTime_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__get_Current__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventCampaignEntity__GetEnumerator__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventCampaignEntity__get_Count__);
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C2D490(&System_TimeSpan_TypeInfo);
+    sub_1C2D490(&UserGachaMaster_TypeInfo);
+    byte_4C28172 = 1;
   }
-  entity = 0LL;
-  dateData = 0LL;
-  v53 = 0LL;
-  ticks = 0LL;
-  v51 = 0LL;
-  v49 = 0LL;
+  entity = 0;
+  dateData = 0;
+  v44 = 0;
+  ticks = 0;
+  v42 = 0;
+  v40 = 0;
   memset(&i, 0, sizeof(i));
   *maxNum = 1;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_GachaMaster___);
+  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_GachaMaster___);
   if ( !Master_object )
     goto LABEL_57;
   Master_object = DataMasterBase_object__object__int___TryGetEntity(
                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                     &entity,
                     gachaId,
-                    (const MethodInfo_32C7E4C *)Method_DataMasterBase_GachaMaster__GachaEntity__int__TryGetEntity__);
+                    (const MethodInfo_3387DE4 *)Method_DataMasterBase_GachaMaster__GachaEntity__int__TryGetEntity__);
   if ( (Master_object & 1) != 0 )
   {
     if ( !entity )
@@ -133,157 +115,157 @@ bool __fastcall UserGachaMaster__CheckFriendPointMultipleFreeCampaignAvailable(
       *maxNum = 0;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame((const MethodInfo *)Master_object);
-  Master_object = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Master_object = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_57;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Master_object,
-                        (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_UserGachaMaster___);
-  Master_object = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_UserGachaMaster___);
+  Master_object = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_57;
-  v27 = DataManager__GetMasterData_object_(
+  v11 = DataManager__GetMasterData_object_(
           (DataManager_o *)Master_object,
-          (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
+          (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  Master_object = NetworkManager__getTime(0LL);
+  Master_object = NetworkManager__getTime(0);
   if ( !SelfUserGame || !MasterData_object )
     goto LABEL_57;
-  v29 = Master_object;
+  v13 = Master_object;
   Master_object = UserGachaMaster__TryGetEntity(
                     (UserGachaMaster_o *)MasterData_object,
-                    &v53,
+                    &v44,
                     SelfUserGame->fields.userId,
                     gachaId,
-                    v28);
+                    v12);
   if ( (Master_object & 1) != 0 )
   {
-    if ( !v53 )
+    if ( !v44 )
       goto LABEL_57;
-    freeDrawAt = v53->fields.freeDrawAt;
-    v31 = BalanceConfig_TypeInfo;
+    freeDrawAt = v44->fields.freeDrawAt;
+    v15 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v31 = BalanceConfig_TypeInfo;
+      v15 = BalanceConfig_TypeInfo;
     }
-    v32 = 3600 * (24 - v31->static_fields->DailyFreeGachaResetTime);
+    v16 = 3600 * (24 - v15->static_fields->DailyFreeGachaResetTime);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    dateData = NetworkManager__getServerDateTime_40543292(freeDrawAt + v32, 0LL).fields._dateData;
-    v51 = NetworkManager__getServerDateTime_40543292(v29 + v32, 0LL).fields._dateData;
+    dateData = NetworkManager__getServerDateTime_41146052(freeDrawAt + v16, 0).fields._dateData;
+    v42 = NetworkManager__getServerDateTime_41146052(v13 + v16, 0).fields._dateData;
     if ( !System_DateTime_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
-    v55.fields._dateData = (uint64_t)&v51;
-    v33 = System_DateTime__get_Date(v55, 0LL).fields._dateData;
-    v56.fields._dateData = (uint64_t)&dateData;
-    v61.fields._dateData = System_DateTime__get_Date(v56, 0LL).fields._dateData;
-    v57.fields._dateData = v33;
-    ticks = System_DateTime__op_Subtraction_63851636(v57, v61, 0LL).fields._ticks;
+    v17.fields._dateData = (uint64_t)&v42;
+    v18 = System_DateTime__get_Date(v17, 0).fields._dateData;
+    v19.fields._dateData = (uint64_t)&dateData;
+    v20.fields._dateData = System_DateTime__get_Date(v19, 0).fields._dateData;
+    v21.fields._dateData = v18;
+    ticks = System_DateTime__op_Subtraction_64861216(v21, v20, 0).fields._ticks;
     if ( !System_TimeSpan_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo);
-    v58.fields._ticks = (int64_t)&ticks;
-    Master_object = System_TimeSpan__get_Days(v58, 0LL);
-    v34 = (int)Master_object < 1;
+    v22.fields._ticks = (int64_t)&ticks;
+    Master_object = System_TimeSpan__get_Days(v22, 0);
+    v23 = (int)Master_object < 1;
   }
   else
   {
-    v34 = 0;
+    v23 = 0;
   }
-  if ( !v27 )
+  if ( !v11 )
 LABEL_57:
-    sub_1BCB254(Master_object, v24);
+    sub_1C2D6EC(Master_object, v8);
   FriendPointSummonMultipleFreeCampaign = (System_Collections_Generic_List_object__o *)EventCampaignMaster__GetFriendPointSummonMultipleFreeCampaign(
-                                                                                         (EventCampaignMaster_o *)v27,
+                                                                                         (EventCampaignMaster_o *)v11,
                                                                                          gachaId,
-                                                                                         0LL);
+                                                                                         0);
   if ( FriendPointSummonMultipleFreeCampaign && FriendPointSummonMultipleFreeCampaign->fields._size >= 1 )
   {
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v47,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v38,
       FriendPointSummonMultipleFreeCampaign,
-      (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_EventCampaignEntity__GetEnumerator__);
-    for ( i = v47; ; *maxNum += LODWORD(i.fields._current[3].klass) )
+      (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_EventCampaignEntity__GetEnumerator__);
+    for ( i = v38; ; *maxNum += LODWORD(i.fields._current[3].klass) )
     {
-      v36 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+      v25 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &i,
-              (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__MoveNext__);
-      if ( !v36 )
+              (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__MoveNext__);
+      if ( !v25 )
         break;
       if ( !i.fields._current )
-        sub_1BCB254(v36, v37);
+        sub_1C2D6EC(v25, v26);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &i,
-      (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__Dispose__);
+      (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__Dispose__);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v49 = NetworkManager__getServerDateTime(0LL).fields._dateData;
-    v39 = BalanceConfig_TypeInfo;
+    v40 = NetworkManager__getServerDateTime(0).fields._dateData;
+    v28 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v39 = BalanceConfig_TypeInfo;
+      v28 = BalanceConfig_TypeInfo;
     }
-    DailyFreeGachaResetTime = v39->static_fields->DailyFreeGachaResetTime;
-    TodayStartTime = NetworkManager__getTodayStartTime(0LL);
+    DailyFreeGachaResetTime = v28->static_fields->DailyFreeGachaResetTime;
+    TodayStartTime = NetworkManager__getTodayStartTime(0);
     if ( (_DWORD)DailyFreeGachaResetTime )
     {
       if ( !System_DateTime_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
-      v59.fields._dateData = (uint64_t)&v49;
-      if ( (System_DateTime__get_Hour(v59, 0LL) & 0x80000000) == 0 )
+      v31.fields._dateData = (uint64_t)&v40;
+      if ( (System_DateTime__get_Hour(v31, 0) & 0x80000000) == 0 )
       {
         if ( !System_DateTime_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
-        v60.fields._dateData = (uint64_t)&v49;
-        if ( (int)DailyFreeGachaResetTime > System_DateTime__get_Hour(v60, 0LL) )
+        v32.fields._dateData = (uint64_t)&v40;
+        if ( (int)DailyFreeGachaResetTime > System_DateTime__get_Hour(v32, 0) )
         {
-          v42 = UserGachaMaster_TypeInfo;
+          v33 = UserGachaMaster_TypeInfo;
           if ( !UserGachaMaster_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(UserGachaMaster_TypeInfo);
-            v42 = UserGachaMaster_TypeInfo;
+            v33 = UserGachaMaster_TypeInfo;
           }
-          TodayStartTime -= v42->static_fields->ONEDAY_SECOND;
+          TodayStartTime -= v33->static_fields->ONEDAY_SECOND;
         }
       }
     }
-    Master_object = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Master_object = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( Master_object )
     {
       Master_object = (int64_t)DataManager__GetMasterData_object_(
                                  (DataManager_o *)Master_object,
-                                 (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_UserFriendPointGachaFreeDrawCampaignLogMaster___);
-      v44 = (UserFriendPointGachaFreeDrawCampaignLogMaster_o *)Master_object;
+                                 (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_UserFriendPointGachaFreeDrawCampaignLogMaster___);
+      v35 = (UserFriendPointGachaFreeDrawCampaignLogMaster_o *)Master_object;
       if ( !UserGachaMaster_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UserGachaMaster_TypeInfo);
-      if ( v44 )
+      if ( v35 )
       {
-        v34 += UserFriendPointGachaFreeDrawCampaignLogMaster__GetDrawLogNum(
-                 v44,
+        v23 += UserFriendPointGachaFreeDrawCampaignLogMaster__GetDrawLogNum(
+                 v35,
                  TodayStartTime + 3600 * DailyFreeGachaResetTime,
                  UserGachaMaster_TypeInfo->static_fields->ONEDAY_SECOND
                + TodayStartTime
                + 3600 * DailyFreeGachaResetTime,
-                 v43);
-        v38 = 1;
+                 v34);
+        v27 = 1;
         goto LABEL_55;
       }
     }
     goto LABEL_57;
   }
-  v38 = 0;
+  v27 = 0;
 LABEL_55:
-  v45 = *maxNum - v34;
-  *remainNum = v45;
-  return v38 & (v45 > 0);
+  v36 = *maxNum - v23;
+  *remainNum = v36;
+  return v27 & (v36 > 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-UserGachaEntity_o *__fastcall UserGachaMaster__GetEntity(
+UserGachaEntity_o *UserGachaMaster__GetEntity(
         UserGachaMaster_o *this,
         int64_t userId,
         int32_t gachaId,
@@ -291,20 +273,117 @@ UserGachaEntity_o *__fastcall UserGachaMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1D377 & 1) == 0 )
+  if ( (byte_4C2816E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_UserGachaMaster__UserGachaEntity__string__GetEntity__, userId);
-    byte_4B1D377 = 1;
+    sub_1C2D490(&Method_DataMasterBase_UserGachaMaster__UserGachaEntity__string__GetEntity__);
+    byte_4C2816E = 1;
   }
   PK = (Il2CppObject *)UserGachaEntity__CreatePK(userId, gachaId, *(const MethodInfo **)&gachaId);
   return (UserGachaEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                 PK,
-                                (const MethodInfo_32CC8B8 *)Method_DataMasterBase_UserGachaMaster__UserGachaEntity__string__GetEntity__);
+                                (const MethodInfo_338C850 *)Method_DataMasterBase_UserGachaMaster__UserGachaEntity__string__GetEntity__);
 }
 
 
-bool __fastcall UserGachaMaster__TryGetEntity(
+bool UserGachaMaster__IsOneTimeFreeCampaignActive(int32_t gachaId, const MethodInfo *method)
+{
+  int64_t Master_object; // x0
+  __int64 v4; // x1
+  UserGameEntity_o *SelfUserGame; // x21
+  Il2CppObject *v6; // x22
+  const MethodInfo *v7; // x4
+  int64_t v8; // x20
+  int64_t freeDrawAt; // x21
+  BalanceConfig_c *v10; // x0
+  __int64 v11; // x22
+  System_DateTime_o v12; // x0
+  uint64_t v13; // x19
+  System_DateTime_o v14; // x0
+  System_DateTime_o v15; // x1
+  System_DateTime_o v16; // x0
+  uint64_t dateData; // [xsp+8h] [xbp-48h] BYREF
+  UserGachaEntity_o *v20; // [xsp+10h] [xbp-40h] BYREF
+  Il2CppObject *entity; // [xsp+18h] [xbp-38h] BYREF
+
+  if ( (byte_4C28173 & 1) == 0 )
+  {
+    sub_1C2D490(&BalanceConfig_TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMaster_GachaMaster___);
+    sub_1C2D490(&Method_DataManager_GetMaster_GachaStoryAdjustMaster___);
+    sub_1C2D490(&Method_DataManager_GetMaster_UserGachaMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_DataMasterBase_GachaMaster__GachaEntity__int__TryGetEntity__);
+    sub_1C2D490(&System_DateTime_TypeInfo);
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    byte_4C28173 = 1;
+  }
+  v20 = 0;
+  entity = 0;
+  dateData = 0;
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_GachaStoryAdjustMaster___);
+  if ( !Master_object )
+    goto LABEL_31;
+  if ( !GachaStoryAdjustMaster__IsGachaIdAdjusted((GachaStoryAdjustMaster_o *)Master_object, gachaId, 0) )
+    return 0;
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_GachaMaster___);
+  if ( !Master_object )
+    goto LABEL_31;
+  Master_object = DataMasterBase_object__object__int___TryGetEntity(
+                    (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
+                    &entity,
+                    gachaId,
+                    (const MethodInfo_3387DE4 *)Method_DataMasterBase_GachaMaster__GachaEntity__int__TryGetEntity__);
+  if ( (Master_object & 1) == 0 )
+    return 0;
+  if ( !entity )
+    goto LABEL_31;
+  if ( !LODWORD(entity[5].monitor) )
+    return 0;
+  SelfUserGame = UserGameMaster__getSelfUserGame((const MethodInfo *)Master_object);
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+  v6 = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserGachaMaster___);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  Master_object = NetworkManager__getTime(0);
+  if ( !SelfUserGame || !v6 )
+    goto LABEL_31;
+  v8 = Master_object;
+  Master_object = UserGachaMaster__TryGetEntity((UserGachaMaster_o *)v6, &v20, SelfUserGame->fields.userId, gachaId, v7);
+  if ( (Master_object & 1) == 0 )
+    return 1;
+  if ( !v20 )
+LABEL_31:
+    sub_1C2D6EC(Master_object, v4);
+  freeDrawAt = v20->fields.freeDrawAt;
+  v10 = BalanceConfig_TypeInfo;
+  if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
+    v10 = BalanceConfig_TypeInfo;
+  }
+  v11 = 3600 * (24 - v10->static_fields->GachaDailyMaxDrawNumResetAt);
+  if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+  dateData = NetworkManager__getServerDateTime_41146052(v8 + v11, 0).fields._dateData;
+  if ( !System_DateTime_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
+  v12.fields._dateData = (uint64_t)&dateData;
+  v13 = System_DateTime__get_Date(v12, 0).fields._dateData;
+  dateData = NetworkManager__getServerDateTime_41146052(freeDrawAt + v11, 0).fields._dateData;
+  v14.fields._dateData = (uint64_t)&dateData;
+  v15.fields._dateData = System_DateTime__get_Date(v14, 0).fields._dateData;
+  v16.fields._dateData = v13;
+  return System_DateTime__op_Inequality(v16, v15, 0);
+}
+
+
+bool UserGachaMaster__TryGetEntity(
         UserGachaMaster_o *this,
         UserGachaEntity_o **entity,
         int64_t userId,
@@ -313,51 +392,47 @@ bool __fastcall UserGachaMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1D378 & 1) == 0 )
+  if ( (byte_4C2816F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_UserGachaMaster__UserGachaEntity__string__TryGetEntity__, entity);
-    byte_4B1D378 = 1;
+    sub_1C2D490(&Method_DataMasterBase_UserGachaMaster__UserGachaEntity__string__TryGetEntity__);
+    byte_4C2816F = 1;
   }
   PK = (Il2CppObject *)UserGachaEntity__CreatePK(userId, gachaId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_UserGachaMaster__UserGachaEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_UserGachaMaster__UserGachaEntity__string__TryGetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall UserGachaMaster__checkIsDrawGroupSummon(
-        UserGachaMaster_o *this,
-        int32_t gachaId,
-        const MethodInfo *method)
+bool UserGachaMaster__checkIsDrawGroupSummon(UserGachaMaster_o *this, int32_t gachaId, const MethodInfo *method)
 {
-  __int64 v5; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
   int32_t Count; // w0
-  int32_t v8; // w21
-  int32_t v9; // w22
-  bool v10; // w24
+  int32_t v7; // w21
+  int32_t v8; // w22
+  bool v9; // w24
   Il2CppObject *Item; // x0
 
-  if ( (byte_4B1D37A & 1) == 0 )
+  if ( (byte_4C28171 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_UserGachaEntity__get_Count__, *(_QWORD *)&gachaId);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_UserGachaEntity__get_Item__, v5);
-    byte_4B1D37A = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_UserGachaEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_UserGachaEntity__get_Item__);
+    byte_4C28171 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_14;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_UserGachaEntity__get_Count__);
+            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_UserGachaEntity__get_Count__);
   if ( Count >= 1 )
   {
-    v8 = Count;
-    v9 = 0;
-    v10 = 1;
+    v7 = Count;
+    v8 = 0;
+    v9 = 1;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -365,18 +440,18 @@ bool __fastcall UserGachaMaster__checkIsDrawGroupSummon(
         break;
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
-               v9,
-               (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_UserGachaEntity__get_Item__);
+               v8,
+               (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_UserGachaEntity__get_Item__);
       if ( !Item || LODWORD(Item[1].monitor) != gachaId || SHIDWORD(Item[1].monitor) <= 0 )
       {
-        v10 = ++v9 < v8;
-        if ( v8 != v9 )
+        v9 = ++v8 < v7;
+        if ( v7 != v8 )
           continue;
       }
-      return v10;
+      return v9;
     }
 LABEL_14:
-    sub_1BCB254(list, *(_QWORD *)&gachaId);
+    sub_1C2D6EC(list, *(_QWORD *)&gachaId);
   }
   return 0;
 }

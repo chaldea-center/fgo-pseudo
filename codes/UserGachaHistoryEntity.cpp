@@ -1,34 +1,31 @@
-void __fastcall UserGachaHistoryEntity___ctor(UserGachaHistoryEntity_o *this, const MethodInfo *method)
+void UserGachaHistoryEntity___ctor(UserGachaHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D372 & 1) == 0 )
+  if ( (byte_4C28169 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D372 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C28169 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall UserGachaHistoryEntity__CreatePK(int64_t userId, int32_t gachaId, const MethodInfo *method)
+System_String_o *UserGachaHistoryEntity__CreatePK(int64_t userId, int32_t gachaId, const MethodInfo *method)
 {
-  if ( (byte_4B1D371 & 1) == 0 )
+  if ( (byte_4C28168 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long__int___, *(_QWORD *)&gachaId);
-    byte_4B1D371 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4C28168 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            gachaId,
-           (const MethodInfo_3018D34 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_30CCBE0 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
-System_String_o *__fastcall UserGachaHistoryEntity__CreatePrimaryKey(
-        UserGachaHistoryEntity_o *this,
-        const MethodInfo *method)
+System_String_o *UserGachaHistoryEntity__CreatePrimaryKey(UserGachaHistoryEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
@@ -36,7 +33,7 @@ System_String_o *__fastcall UserGachaHistoryEntity__CreatePrimaryKey(
 }
 
 
-System_String_o *__fastcall UserGachaHistoryEntity__ToString(UserGachaHistoryEntity_o *this, const MethodInfo *method)
+System_String_o *UserGachaHistoryEntity__ToString(UserGachaHistoryEntity_o *this, const MethodInfo *method)
 {
   GiftName_GiftNameBase_o *v2; // x0
   __int64 v3; // x1
@@ -45,14 +42,14 @@ System_String_o *__fastcall UserGachaHistoryEntity__ToString(UserGachaHistoryEnt
          this->fields.giftType,
          this->fields.objectId,
          this->fields.num,
-         0LL);
+         0);
   if ( !v2 )
-    sub_1BCB254(0LL, v3);
+    sub_1C2D6EC(0, v3);
   return v2->fields.name;
 }
 
 
-System_String_o *__fastcall UserGachaHistoryEntity__get_CreatedAtToString(
+System_String_o *UserGachaHistoryEntity__get_CreatedAtToString(
         UserGachaHistoryEntity_o *this,
         const MethodInfo *method)
 {
@@ -62,58 +59,72 @@ System_String_o *__fastcall UserGachaHistoryEntity__get_CreatedAtToString(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4B1D36F & 1) == 0 )
+  if ( (byte_4C28166 & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, method);
-    byte_4B1D36F = 1;
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    byte_4C28166 = 1;
   }
   p_createdAtString = (CGThumbnailListItem_o *)&this->fields.createdAtString;
-  if ( System_String__IsNullOrEmpty(this->fields.createdAtString, 0LL) )
+  if ( System_String__IsNullOrEmpty(this->fields.createdAtString, 0) )
   {
     createdAt = this->fields.createdAt;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    DateTime = LocalizationManager__GetDateTime(createdAt, 0LL);
+    DateTime = LocalizationManager__GetDateTime(createdAt, 0);
     p_createdAtString->klass = (CGThumbnailListItem_c *)DateTime;
-    sub_1BCAF9C(p_createdAtString, (int32_t)DateTime, v6, v7);
+    sub_1C2D434(p_createdAtString, (int32_t)DateTime, v6, v7);
   }
   return (System_String_o *)p_createdAtString->klass;
 }
 
 
-System_String_o *__fastcall UserGachaHistoryEntity__get_TitleToString(
-        UserGachaHistoryEntity_o *this,
-        const MethodInfo *method)
+System_String_o *UserGachaHistoryEntity__get_TitleToString(UserGachaHistoryEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  CGThumbnailListItem_o *p_titleString; // x19
-  int32_t gachaExtraGiftBonusType; // w21
-  System_String_o **v7; // x8
-  System_String_o *v8; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  System_String_o **p_titleString; // x19
+  System_String_o *v4; // x0
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  int32_t gachaExtraGiftBonusType; // w8
+  System_String_o *v8; // x1
+  __int64 *v9; // x8
 
-  if ( (byte_4B1D370 & 1) == 0 )
+  if ( (byte_4C28167 & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_12326/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, v3);
-    sub_1BCAFF8(&StringLiteral_12340/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/, v4);
-    byte_4B1D370 = 1;
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_12416/*"SUMMON_BONUS_ITEM_GIFTS_FREE"*/);
+    sub_1C2D490(&StringLiteral_12427/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/);
+    sub_1C2D490(&StringLiteral_12441/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/);
+    byte_4C28167 = 1;
   }
-  p_titleString = (CGThumbnailListItem_o *)&this->fields.titleString;
-  if ( System_String__IsNullOrEmpty(this->fields.titleString, 0LL) )
+  p_titleString = &this->fields.titleString;
+  if ( System_String__IsNullOrEmpty(this->fields.titleString, 0) )
   {
-    gachaExtraGiftBonusType = this->fields.gachaExtraGiftBonusType;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    if ( gachaExtraGiftBonusType == 2 )
-      v7 = (System_String_o **)&StringLiteral_12340/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
+    v4 = LocalizationManager__Get((System_String_o *)StringLiteral_12427/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, 0);
+    gachaExtraGiftBonusType = this->fields.gachaExtraGiftBonusType;
+    if ( gachaExtraGiftBonusType == 3 )
+    {
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      v9 = &StringLiteral_12416/*"SUMMON_BONUS_ITEM_GIFTS_FREE"*/;
+    }
     else
-      v7 = (System_String_o **)&StringLiteral_12326/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/;
-    v8 = LocalizationManager__Get(*v7, 0LL);
-    p_titleString->klass = (CGThumbnailListItem_c *)v8;
-    sub_1BCAF9C(p_titleString, (int32_t)v8, v9, v10);
+    {
+      v8 = v4;
+      if ( gachaExtraGiftBonusType != 2 )
+      {
+LABEL_15:
+        *p_titleString = v8;
+        sub_1C2D434((CGThumbnailListItem_o *)&this->fields.titleString, (int32_t)v8, v5, v6);
+        return *p_titleString;
+      }
+      if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+      v9 = &StringLiteral_12441/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
+    }
+    v8 = LocalizationManager__Get((System_String_o *)*v9, 0);
+    goto LABEL_15;
   }
-  return (System_String_o *)p_titleString->klass;
+  return *p_titleString;
 }

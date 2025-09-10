@@ -1,41 +1,39 @@
-int32_t __fastcall MissionNotifyResponseCommand__ExecuteResponse(
+void MissionNotifyResponseCommand___ctor(MissionNotifyResponseCommand_o *this, const MethodInfo *method)
+{
+  ResponseCommandBase___ctor((ResponseCommandBase_o *)this, 0);
+}
+
+
+int32_t MissionNotifyResponseCommand__ExecuteResponse(
         MissionNotifyResponseCommand_o *this,
         ResponseData_o *data,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *success; // x19
   Il2CppObject *Item; // x20
-  __int64 v14; // x2
+  __int64 v6; // x2
   struct System_String_o *nid; // x8
-  MissionNotifyResponseCommand_o *v16; // x20
-  unsigned __int64 v17; // x23
-  MissionNotifyDispInfo_o *v18; // x21
-  Il2CppObject *v19; // x19
-  struct System_String_o *v20; // x8
-  MissionNotifyResponseCommand_o *v21; // x19
-  unsigned __int64 v22; // x21
-  ClearRandomMissionInfo_o *v23; // x20
+  MissionNotifyResponseCommand_o *v8; // x20
+  unsigned __int64 v9; // x23
+  MissionNotifyDispInfo_o *v10; // x21
+  Il2CppObject *v11; // x19
+  struct System_String_o *v12; // x8
+  MissionNotifyResponseCommand_o *v13; // x19
+  unsigned __int64 v14; // x21
+  ClearRandomMissionInfo_o *v15; // x20
 
-  if ( (byte_4B1E01B & 1) == 0 )
+  if ( (byte_4C28E2C & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__, data);
-    sub_1BCAFF8(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__, v4);
-    sub_1BCAFF8(&EventRandomMissionClearManager_TypeInfo, v5);
-    sub_1BCAFF8(&Method_JsonManager_DeserializeArray_ClearRandomMissionInfo___, v6);
-    sub_1BCAFF8(&Method_JsonManager_DeserializeArray_MissionNotifyDispInfo___, v7);
-    sub_1BCAFF8(&JsonManager_TypeInfo, v8);
-    sub_1BCAFF8(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__, v9);
-    sub_1BCAFF8(&StringLiteral_17853/*"clearRandomMissions"*/, v10);
-    this = (MissionNotifyResponseCommand_o *)sub_1BCAFF8(&StringLiteral_18983/*"eventMissionAnnounce"*/, v11);
-    byte_4B1E01B = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C2D490(&EventRandomMissionClearManager_TypeInfo);
+    sub_1C2D490(&Method_JsonManager_DeserializeArray_ClearRandomMissionInfo___);
+    sub_1C2D490(&Method_JsonManager_DeserializeArray_MissionNotifyDispInfo___);
+    sub_1C2D490(&JsonManager_TypeInfo);
+    sub_1C2D490(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    sub_1C2D490(&StringLiteral_17999/*"clearRandomMissions"*/);
+    this = (MissionNotifyResponseCommand_o *)sub_1C2D490(&StringLiteral_19139/*"eventMissionAnnounce"*/);
+    byte_4C28E2C = 1;
   }
   if ( !data )
     goto LABEL_29;
@@ -44,71 +42,71 @@ int32_t __fastcall MissionNotifyResponseCommand__ExecuteResponse(
     return 0;
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)success,
-         (Il2CppObject *)StringLiteral_18983/*"eventMissionAnnounce"*/,
-         (const MethodInfo_3385F6C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_19139/*"eventMissionAnnounce"*/,
+         (const MethodInfo_344A51C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)success,
-             (Il2CppObject *)StringLiteral_18983/*"eventMissionAnnounce"*/,
-             (const MethodInfo_3385CF8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_19139/*"eventMissionAnnounce"*/,
+             (const MethodInfo_344A2A8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     this = (MissionNotifyResponseCommand_o *)JsonManager__DeserializeArray_object_(
                                                Item,
-                                               (const MethodInfo_3086694 *)Method_JsonManager_DeserializeArray_MissionNotifyDispInfo___);
+                                               (const MethodInfo_313DDBC *)Method_JsonManager_DeserializeArray_MissionNotifyDispInfo___);
     if ( !this )
       goto LABEL_29;
     nid = this->fields.nid;
-    v16 = this;
+    v8 = this;
     if ( (int)nid >= 1 )
     {
-      v17 = 0LL;
-      while ( v17 < (unsigned int)nid )
+      v9 = 0;
+      while ( v9 < (unsigned int)nid )
       {
-        v18 = (MissionNotifyDispInfo_o *)*((_QWORD *)&v16->fields.success + v17);
-        this = (MissionNotifyResponseCommand_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38F8EF8 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+        v10 = (MissionNotifyDispInfo_o *)*((_QWORD *)&v8->fields.success + v9);
+        this = (MissionNotifyResponseCommand_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
         if ( !this )
           goto LABEL_29;
-        MissionNotifyManager__RequestDisp((MissionNotifyManager_o *)this, v18, 0LL);
-        LODWORD(nid) = v16->fields.nid;
-        if ( (__int64)++v17 >= (int)nid )
+        MissionNotifyManager__RequestDisp((MissionNotifyManager_o *)this, v10, 0);
+        LODWORD(nid) = v8->fields.nid;
+        if ( (__int64)++v9 >= (int)nid )
           goto LABEL_14;
       }
 LABEL_28:
-      sub_1BCB25C(this, data, v14);
+      sub_1C2D6F4(this, data, v6);
     }
   }
 LABEL_14:
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)success,
-          (Il2CppObject *)StringLiteral_17853/*"clearRandomMissions"*/,
-          (const MethodInfo_3385F6C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_17999/*"clearRandomMissions"*/,
+          (const MethodInfo_344A51C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
     return 0;
-  v19 = System_Collections_Generic_Dictionary_object__object___get_Item(
+  v11 = System_Collections_Generic_Dictionary_object__object___get_Item(
           (System_Collections_Generic_Dictionary_object__object__o *)success,
-          (Il2CppObject *)StringLiteral_17853/*"clearRandomMissions"*/,
-          (const MethodInfo_3385CF8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+          (Il2CppObject *)StringLiteral_17999/*"clearRandomMissions"*/,
+          (const MethodInfo_344A2A8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   this = (MissionNotifyResponseCommand_o *)JsonManager__DeserializeArray_object_(
-                                             v19,
-                                             (const MethodInfo_3086694 *)Method_JsonManager_DeserializeArray_ClearRandomMissionInfo___);
+                                             v11,
+                                             (const MethodInfo_313DDBC *)Method_JsonManager_DeserializeArray_ClearRandomMissionInfo___);
   if ( !this )
 LABEL_29:
-    sub_1BCB254(this, data);
-  v20 = this->fields.nid;
-  v21 = this;
-  if ( (int)v20 >= 1 )
+    sub_1C2D6EC(this, data);
+  v12 = this->fields.nid;
+  v13 = this;
+  if ( (int)v12 >= 1 )
   {
-    v22 = 0LL;
-    while ( v22 < (unsigned int)v20 )
+    v14 = 0;
+    while ( v14 < (unsigned int)v12 )
     {
-      v23 = (ClearRandomMissionInfo_o *)*((_QWORD *)&v21->fields.success + v22);
+      v15 = (ClearRandomMissionInfo_o *)*((_QWORD *)&v13->fields.success + v14);
       if ( !EventRandomMissionClearManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventRandomMissionClearManager_TypeInfo);
-      EventRandomMissionClearManager__AddClearRandomMissionInfo(v23, 0LL);
-      LODWORD(v20) = v21->fields.nid;
-      if ( (__int64)++v22 >= (int)v20 )
+      EventRandomMissionClearManager__AddClearRandomMissionInfo(v15, 0);
+      LODWORD(v12) = v13->fields.nid;
+      if ( (__int64)++v14 >= (int)v12 )
         goto LABEL_24;
     }
     goto LABEL_28;
@@ -116,14 +114,12 @@ LABEL_29:
 LABEL_24:
   if ( !EventRandomMissionClearManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventRandomMissionClearManager_TypeInfo);
-  EventRandomMissionClearManager__WriteData(0LL);
+  EventRandomMissionClearManager__WriteData(0);
   return 0;
 }
 
 
-int32_t __fastcall MissionNotifyResponseCommand__GetKind(
-        MissionNotifyResponseCommand_o *this,
-        const MethodInfo *method)
+int32_t MissionNotifyResponseCommand__GetKind(MissionNotifyResponseCommand_o *this, const MethodInfo *method)
 {
   return 49;
 }

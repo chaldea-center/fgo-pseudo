@@ -1,37 +1,36 @@
-void __fastcall EventCooltimeRewardEntity___ctor(EventCooltimeRewardEntity_o *this, const MethodInfo *method)
+void EventCooltimeRewardEntity___ctor(EventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C444 & 1) == 0 )
+  if ( (byte_4C271F0 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1C444 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C271F0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall EventCooltimeRewardEntity__CreatePK(
+System_String_o *EventCooltimeRewardEntity__CreatePK(
         int32_t eventId,
         int32_t spotId,
         int32_t lv,
         const MethodInfo *method)
 {
-  if ( (byte_4B1C440 & 1) == 0 )
+  if ( (byte_4C271EC & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&spotId);
-    byte_4B1C440 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C271EC = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            spotId,
            lv,
-           (const MethodInfo_30190BC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30CCF68 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
-System_String_o *__fastcall EventCooltimeRewardEntity__CreatePrimaryKey(
+System_String_o *EventCooltimeRewardEntity__CreatePrimaryKey(
         EventCooltimeRewardEntity_o *this,
         const MethodInfo *method)
 {
@@ -41,38 +40,33 @@ System_String_o *__fastcall EventCooltimeRewardEntity__CreatePrimaryKey(
 }
 
 
-bool __fastcall EventCooltimeRewardEntity__DoesMakeGiftsEverySecond(
-        EventCooltimeRewardEntity_o *this,
-        const MethodInfo *method)
+bool EventCooltimeRewardEntity__DoesMakeGiftsEverySecond(EventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
   return this->fields.cooltime < this->fields.upperLimitGiftNum;
 }
 
 
-GiftEntity_o *__fastcall EventCooltimeRewardEntity__GetGiftEntity(
-        EventCooltimeRewardEntity_o *this,
-        const MethodInfo *method)
+GiftEntity_o *EventCooltimeRewardEntity__GetGiftEntity(EventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v5; // x1
+  __int64 v4; // x1
 
-  if ( (byte_4B1C443 & 1) == 0 )
+  if ( (byte_4C271EF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_GiftMaster___, method);
-    sub_1BCAFF8(&DataManager_TypeInfo, v3);
-    byte_4B1C443 = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    byte_4C271EF = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_GiftMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_GiftMaster___);
   if ( !Master_object )
-    sub_1BCB254(0LL, v5);
-  return GiftMaster__getDataById((GiftMaster_o *)Master_object, this->fields.giftId, 0LL);
+    sub_1C2D6EC(0, v4);
+  return GiftMaster__getDataById((GiftMaster_o *)Master_object, this->fields.giftId, 0);
 }
 
 
-EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *__fastcall EventCooltimeRewardEntity__GetGiftMakingVelocityInfo(
+EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *EventCooltimeRewardEntity__GetGiftMakingVelocityInfo(
         EventCooltimeRewardEntity_o *this,
         const MethodInfo *method)
 {
@@ -82,15 +76,15 @@ EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *__fastcall EventCooltimeRewa
   int v6; // w8
   int v7; // w9
 
-  if ( (byte_4B1C441 & 1) == 0 )
+  if ( (byte_4C271ED & 1) == 0 )
   {
-    sub_1BCAFF8(&EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo, method);
-    byte_4B1C441 = 1;
+    sub_1C2D490(&EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo);
+    byte_4C271ED = 1;
   }
   cooltime = this->fields.cooltime;
   upperLimitGiftNum = this->fields.upperLimitGiftNum;
-  v5 = sub_1BCB244(EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0LL);
+  v5 = sub_1C2D6DC(EventCooltimeRewardEntity_GiftMakingVelocityInfo_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
   if ( cooltime >= upperLimitGiftNum )
   {
     v7 = cooltime / upperLimitGiftNum;
@@ -107,9 +101,7 @@ EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *__fastcall EventCooltimeRewa
 }
 
 
-int32_t __fastcall EventCooltimeRewardEntity__GetRewardUnitTime(
-        EventCooltimeRewardEntity_o *this,
-        const MethodInfo *method)
+int32_t EventCooltimeRewardEntity__GetRewardUnitTime(EventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
   int32_t upperLimitGiftNum; // w8
 
@@ -121,37 +113,36 @@ int32_t __fastcall EventCooltimeRewardEntity__GetRewardUnitTime(
 }
 
 
-bool __fastcall EventCooltimeRewardEntity__IsOpen(EventCooltimeRewardEntity_o *this, const MethodInfo *method)
+bool EventCooltimeRewardEntity__IsOpen(EventCooltimeRewardEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v5; // x1
+  __int64 v4; // x1
 
-  if ( (byte_4B1C442 & 1) == 0 )
+  if ( (byte_4C271EE & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_CommonReleaseMaster___, method);
-    sub_1BCAFF8(&DataManager_TypeInfo, v3);
-    byte_4B1C442 = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    byte_4C271EE = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   if ( !Master_object )
-    sub_1BCB254(0LL, v5);
-  return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Master_object, this->fields.commonReleaseId, 0LL, 0, 0LL);
+    sub_1C2D6EC(0, v4);
+  return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Master_object, this->fields.commonReleaseId, 0, 0, 0);
 }
 
 
-void __fastcall EventCooltimeRewardEntity_GiftMakingVelocityInfo___ctor(
+void EventCooltimeRewardEntity_GiftMakingVelocityInfo___ctor(
         EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *this,
         int32_t coolTime,
         int32_t upperLimitGiftNum,
         const MethodInfo *method)
 {
-  int v7; // w8
-  int v8; // w9
+  int32_t v7; // w8
+  int32_t v8; // w9
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   if ( coolTime >= upperLimitGiftNum )
   {
     v8 = coolTime / upperLimitGiftNum;
@@ -167,7 +158,7 @@ void __fastcall EventCooltimeRewardEntity_GiftMakingVelocityInfo___ctor(
 }
 
 
-int32_t __fastcall EventCooltimeRewardEntity_GiftMakingVelocityInfo__get_GiftNum(
+int32_t EventCooltimeRewardEntity_GiftMakingVelocityInfo__get_GiftNum(
         EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *this,
         const MethodInfo *method)
 {
@@ -175,7 +166,7 @@ int32_t __fastcall EventCooltimeRewardEntity_GiftMakingVelocityInfo__get_GiftNum
 }
 
 
-int32_t __fastcall EventCooltimeRewardEntity_GiftMakingVelocityInfo__get_UnitTime(
+int32_t EventCooltimeRewardEntity_GiftMakingVelocityInfo__get_UnitTime(
         EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *this,
         const MethodInfo *method)
 {
@@ -183,7 +174,7 @@ int32_t __fastcall EventCooltimeRewardEntity_GiftMakingVelocityInfo__get_UnitTim
 }
 
 
-void __fastcall EventCooltimeRewardEntity_GiftMakingVelocityInfo__set_GiftNum(
+void EventCooltimeRewardEntity_GiftMakingVelocityInfo__set_GiftNum(
         EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *this,
         int32_t value,
         const MethodInfo *method)
@@ -192,7 +183,7 @@ void __fastcall EventCooltimeRewardEntity_GiftMakingVelocityInfo__set_GiftNum(
 }
 
 
-void __fastcall EventCooltimeRewardEntity_GiftMakingVelocityInfo__set_UnitTime(
+void EventCooltimeRewardEntity_GiftMakingVelocityInfo__set_UnitTime(
         EventCooltimeRewardEntity_GiftMakingVelocityInfo_o *this,
         int32_t value,
         const MethodInfo *method)

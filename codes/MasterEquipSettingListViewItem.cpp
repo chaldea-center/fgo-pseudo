@@ -1,4 +1,4 @@
-void __fastcall MasterEquipSettingListViewItem___ctor(
+void MasterEquipSettingListViewItem___ctor(
         MasterEquipSettingListViewItem_o *this,
         int32_t index,
         int32_t equipId,
@@ -14,18 +14,18 @@ void __fastcall MasterEquipSettingListViewItem___ctor(
   const MethodInfo *v15; // x3
 
   v11 = this;
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   v11->fields._EquipId_k__BackingField = equipId;
   v11->fields._EquipTexture_k__BackingField = equipTexture;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v11->fields._EquipTexture_k__BackingField, (int32_t)equipTexture, v12, v13);
+  sub_1C2D434((CGThumbnailListItem_o *)&v11->fields._EquipTexture_k__BackingField, (int32_t)equipTexture, v12, v13);
   v11->fields._ShortName_k__BackingField = shortName;
-  v11 = (MasterEquipSettingListViewItem_o *)((char *)v11 + 128);
-  sub_1BCAF9C((CGThumbnailListItem_o *)v11, (int32_t)shortName, v14, v15);
+  v11 = (MasterEquipSettingListViewItem_o *)((char *)v11 + 136);
+  sub_1C2D434((CGThumbnailListItem_o *)v11, (int32_t)shortName, v14, v15);
   LOBYTE(v11->monitor) = equipId == selectedImageId;
 }
 
 
-void __fastcall MasterEquipSettingListViewItem__ModifyItem(
+void MasterEquipSettingListViewItem__ModifyItem(
         MasterEquipSettingListViewItem_o *this,
         int32_t selectedImageId,
         const MethodInfo *method)
@@ -34,7 +34,7 @@ void __fastcall MasterEquipSettingListViewItem__ModifyItem(
 }
 
 
-void __fastcall MasterEquipSettingListViewItem__ModifyItemTexture(
+void MasterEquipSettingListViewItem__ModifyItemTexture(
         MasterEquipSettingListViewItem_o *this,
         UnityEngine_Texture2D_o *texture,
         const MethodInfo *method)
@@ -42,7 +42,7 @@ void __fastcall MasterEquipSettingListViewItem__ModifyItemTexture(
   const MethodInfo *v3; // x3
 
   this->fields._EquipTexture_k__BackingField = texture;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._EquipTexture_k__BackingField,
     (int32_t)texture,
     (int32_t)method,
@@ -50,7 +50,7 @@ void __fastcall MasterEquipSettingListViewItem__ModifyItemTexture(
 }
 
 
-bool __fastcall MasterEquipSettingListViewItem__SetSortValue(
+bool MasterEquipSettingListViewItem__SetSortValue(
         MasterEquipSettingListViewItem_o *this,
         ListViewSort_o *sort,
         const MethodInfo *method)
@@ -65,15 +65,13 @@ bool __fastcall MasterEquipSettingListViewItem__SetSortValue(
 }
 
 
-int32_t __fastcall MasterEquipSettingListViewItem__get_EquipId(
-        MasterEquipSettingListViewItem_o *this,
-        const MethodInfo *method)
+int32_t MasterEquipSettingListViewItem__get_EquipId(MasterEquipSettingListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._EquipId_k__BackingField;
 }
 
 
-UnityEngine_Texture2D_o *__fastcall MasterEquipSettingListViewItem__get_EquipTexture(
+UnityEngine_Texture2D_o *MasterEquipSettingListViewItem__get_EquipTexture(
         MasterEquipSettingListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -81,15 +79,13 @@ UnityEngine_Texture2D_o *__fastcall MasterEquipSettingListViewItem__get_EquipTex
 }
 
 
-bool __fastcall MasterEquipSettingListViewItem__get_IsSelected(
-        MasterEquipSettingListViewItem_o *this,
-        const MethodInfo *method)
+bool MasterEquipSettingListViewItem__get_IsSelected(MasterEquipSettingListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._IsSelected_k__BackingField;
 }
 
 
-System_String_o *__fastcall MasterEquipSettingListViewItem__get_ShortName(
+System_String_o *MasterEquipSettingListViewItem__get_ShortName(
         MasterEquipSettingListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -97,7 +93,7 @@ System_String_o *__fastcall MasterEquipSettingListViewItem__get_ShortName(
 }
 
 
-void __fastcall MasterEquipSettingListViewItem__set_EquipTexture(
+void MasterEquipSettingListViewItem__set_EquipTexture(
         MasterEquipSettingListViewItem_o *this,
         UnityEngine_Texture2D_o *value,
         const MethodInfo *method)
@@ -105,11 +101,11 @@ void __fastcall MasterEquipSettingListViewItem__set_EquipTexture(
   const MethodInfo *v3; // x3
 
   this->fields._EquipTexture_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._EquipTexture_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._EquipTexture_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall MasterEquipSettingListViewItem__set_IsSelected(
+void MasterEquipSettingListViewItem__set_IsSelected(
         MasterEquipSettingListViewItem_o *this,
         bool value,
         const MethodInfo *method)

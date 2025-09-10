@@ -1,58 +1,151 @@
-void __fastcall ClassBoardFigureController___ctor(ClassBoardFigureController_o *this, const MethodInfo *method)
+void ClassBoardFigureController___ctor(ClassBoardFigureController_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  System_Collections_Generic_List_object__o *v7; // x20
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w1
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  int32_t v16; // w1
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  System_Collections_Generic_List_object__o *v3; // x20
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
+  int32_t v6; // w1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  int32_t v9; // w1
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  int32_t v12; // w1
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
 
-  if ( (byte_4B1FDE0 & 1) == 0 )
+  if ( (byte_4C2ACDC & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_StandFigureCollect___ctor__, method);
-    sub_1BCAFF8(&System_Collections_Generic_List_StandFigureCollect__TypeInfo, v3);
-    sub_1BCAFF8(&StringLiteral_17390/*"btn_to_grand_servant_select"*/, v4);
-    sub_1BCAFF8(&StringLiteral_20304/*"img_plus"*/, v5);
-    sub_1BCAFF8(&StringLiteral_20408/*"img_text_base"*/, v6);
-    byte_4B1FDE0 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_List_StandFigureCollect____ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_List_StandFigureCollect___TypeInfo);
+    sub_1C2D490(&StringLiteral_17529/*"btn_to_grand_servant_select"*/);
+    sub_1C2D490(&StringLiteral_20475/*"img_plus"*/);
+    sub_1C2D490(&StringLiteral_20579/*"img_text_base"*/);
+    byte_4C2ACDC = 1;
   }
   this->fields.svtScale = 10.0;
-  v7 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
+  *(_QWORD *)&this->fields.svtDisplayTime = 4489188110499840000LL;
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_List_StandFigureCollect___TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v7,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
-  this->fields.figureCollectList = (struct System_Collections_Generic_List_StandFigureCollect__o *)v7;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.figureCollectList, (int32_t)v7, v8, v9);
-  v10 = StringLiteral_17390/*"btn_to_grand_servant_select"*/;
-  this->fields.selectServantSpriteName = (struct System_String_o *)StringLiteral_17390/*"btn_to_grand_servant_select"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.selectServantSpriteName, v10, v11, v12);
-  v13 = StringLiteral_20304/*"img_plus"*/;
-  this->fields.selectServantPlusSpriteName = (struct System_String_o *)StringLiteral_20304/*"img_plus"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.selectServantPlusSpriteName, v13, v14, v15);
-  v16 = StringLiteral_20408/*"img_text_base"*/;
-  this->fields.selectServantTxtBaseSpriteName = (struct System_String_o *)StringLiteral_20408/*"img_text_base"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.selectServantTxtBaseSpriteName, v16, v17, v18);
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+    v3,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_List_StandFigureCollect____ctor__);
+  this->fields.figureCollectList = (struct System_Collections_Generic_List_List_StandFigureCollect___o *)v3;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.figureCollectList, (int32_t)v3, v4, v5);
+  v6 = StringLiteral_17529/*"btn_to_grand_servant_select"*/;
+  this->fields.selectServantSpriteName = (struct System_String_o *)StringLiteral_17529/*"btn_to_grand_servant_select"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.selectServantSpriteName, v6, v7, v8);
+  v9 = StringLiteral_20475/*"img_plus"*/;
+  this->fields.selectServantPlusSpriteName = (struct System_String_o *)StringLiteral_20475/*"img_plus"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.selectServantPlusSpriteName, v9, v10, v11);
+  v12 = StringLiteral_20579/*"img_text_base"*/;
+  this->fields.selectServantTxtBaseSpriteName = (struct System_String_o *)StringLiteral_20579/*"img_text_base"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.selectServantTxtBaseSpriteName, v12, v13, v14);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall ClassBoardFigureController__Awake(ClassBoardFigureController_o *this, const MethodInfo *method)
+void ClassBoardFigureController__Awake(ClassBoardFigureController_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall ClassBoardFigureController__OnClickToGrandServantList(
+// local variable allocation has failed, the output may be wrong!
+void ClassBoardFigureController__ChangeDispServantFigure(
+        ClassBoardFigureController_o *this,
+        int32_t index,
+        const MethodInfo *method)
+{
+  System_Collections_Generic_List_object__o *figureCollectList; // x0
+  _BOOL8 v6; // x0
+  __int64 v7; // x1
+  UIStandFigureR_o *monitor; // x0
+  _BOOL8 v9; // x0
+  __int64 v10; // x1
+  UIStandFigureR_o *v11; // x0
+  System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+20h] [xbp-60h] BYREF
+
+  if ( (byte_4C2ACD6 & 1) == 0 )
+  {
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_List_StandFigureCollect___get_Count__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_List_StandFigureCollect___get_Item__);
+    byte_4C2ACD6 = 1;
+  }
+  memset(&v13, 0, sizeof(v13));
+  figureCollectList = (System_Collections_Generic_List_object__o *)this->fields.figureCollectList;
+  if ( !figureCollectList )
+    goto LABEL_24;
+  if ( figureCollectList->fields._size <= index )
+    return;
+  figureCollectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
+                                                                     figureCollectList,
+                                                                     this->fields.currentSvtIndex,
+                                                                     (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_List_StandFigureCollect___get_Item__);
+  if ( !figureCollectList )
+    goto LABEL_24;
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v12,
+    figureCollectList,
+    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+  v13 = v12;
+  while ( 1 )
+  {
+    v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+           &v13,
+           (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    if ( !v6 )
+      break;
+    if ( !v13.fields._current )
+      sub_1C2D6EC(v6, v7);
+    monitor = (UIStandFigureR_o *)v13.fields._current[1].monitor;
+    if ( !monitor )
+      sub_1C2D6EC(0, v7);
+    UIStandFigureR__SetAlpha(monitor, 0.0, 0);
+  }
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v13,
+    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+  figureCollectList = (System_Collections_Generic_List_object__o *)this->fields.figureCollectList;
+  if ( !figureCollectList
+    || (figureCollectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
+                                                                           figureCollectList,
+                                                                           index,
+                                                                           (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_List_StandFigureCollect___get_Item__)) == 0 )
+  {
+LABEL_24:
+    sub_1C2D6EC(figureCollectList, *(_QWORD *)&index);
+  }
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v12,
+    figureCollectList,
+    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+  v13 = v12;
+  while ( 1 )
+  {
+    v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+           &v13,
+           (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    if ( !v9 )
+      break;
+    if ( !v13.fields._current )
+      sub_1C2D6EC(v9, v10);
+    v11 = (UIStandFigureR_o *)v13.fields._current[1].monitor;
+    if ( !v11 )
+      sub_1C2D6EC(0, v10);
+    UIStandFigureR__SetAlpha(v11, 1.0, 0);
+  }
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v13,
+    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+  this->fields.currentSvtIndex = index;
+}
+
+
+void ClassBoardFigureController__OnClickToGrandServantList(
         ClassBoardFigureController_o *this,
         const MethodInfo *method)
 {
@@ -60,27 +153,53 @@ void __fastcall ClassBoardFigureController__OnClickToGrandServantList(
   _QWORD *v4; // x0
   System_Reflection_MethodBase_o *v5; // x0
 
-  if ( (byte_4B1FDDF & 1) == 0 )
+  if ( (byte_4C2ACDB & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_ClassBoardFigureController_OnClickToGrandServantList__, method);
-    byte_4B1FDDF = 1;
+    sub_1C2D490(&Method_ClassBoardFigureController_OnClickToGrandServantList__);
+    byte_4C2ACDB = 1;
   }
   classBoardController = this->fields.classBoardController;
   if ( !classBoardController )
-    sub_1BCB254(0LL, method);
-  if ( ClassBoardController__IsTouchEnableUi(classBoardController, method) )
+    sub_1C2D6EC(0, method);
+  if ( ClassBoardController__IsTouchEnableUi(classBoardController, 0) )
   {
     v4 = Method_ClassBoardFigureController_OnClickToGrandServantList__;
     if ( (*((_BYTE *)Method_ClassBoardFigureController_OnClickToGrandServantList__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1BCB010(Method_ClassBoardFigureController_OnClickToGrandServantList__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v4, v4[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0LL);
-    ActionExtensions__Call(this->fields.onClickToGrandServantList, 0LL);
+      v4 = (_QWORD *)sub_1C2D4A8(Method_ClassBoardFigureController_OnClickToGrandServantList__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C2D474(v4, v4[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
+    ActionExtensions__Call(this->fields.onClickToGrandServantList, 0);
   }
 }
 
 
-void __fastcall ClassBoardFigureController__SetOnClickToGrandServantList(
+System_Collections_IEnumerator_o *ClassBoardFigureController__PlaySwitchServantAnimationCoroutine(
+        ClassBoardFigureController_o *this,
+        float startAlpha,
+        float endAlpha,
+        const MethodInfo *method)
+{
+  __int64 v7; // x20
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+
+  if ( (byte_4C2ACD9 & 1) == 0 )
+  {
+    sub_1C2D490(&ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_TypeInfo);
+    byte_4C2ACD9 = 1;
+  }
+  v7 = sub_1C2D6DC(ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0);
+  *(_DWORD *)(v7 + 16) = 0;
+  *(_QWORD *)(v7 + 32) = this;
+  sub_1C2D434((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v8, v9);
+  *(float *)(v7 + 40) = endAlpha;
+  *(float *)(v7 + 44) = startAlpha;
+  return (System_Collections_IEnumerator_o *)v7;
+}
+
+
+void ClassBoardFigureController__SetOnClickToGrandServantList(
         ClassBoardFigureController_o *this,
         System_Action_o *action,
         const MethodInfo *method)
@@ -88,78 +207,72 @@ void __fastcall ClassBoardFigureController__SetOnClickToGrandServantList(
   const MethodInfo *v3; // x3
 
   this->fields.onClickToGrandServantList = action;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.onClickToGrandServantList, (int32_t)action, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.onClickToGrandServantList, (int32_t)action, (int32_t)method, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ClassBoardFigureController__SetServantSelectObj(
+void ClassBoardFigureController__SetServantSelectObj(
         ClassBoardFigureController_o *this,
         int32_t baseId,
         bool isDispMessage,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   UnityEngine_GameObject_o *svtBase; // x0
-  GrandGraphEntity_o *EntityByClassBoardBaseId; // x0
-  GrandGraphEntity_o *v12; // x20
+  System_String_o *ParentClassNameByBaseClassId; // x0
   UILabel_o *grandServantChoiceMessage; // x19
-  System_String_o *v14; // x0
+  Il2CppObject *v10; // x20
+  System_String_o *v11; // x0
 
-  if ( (byte_4B1FDDE & 1) == 0 )
+  if ( (byte_4C2ACDA & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_GrandGraphMaster___, *(_QWORD *)&baseId);
-    sub_1BCAFF8(&DataManager_TypeInfo, v7);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v8);
-    sub_1BCAFF8(&StringLiteral_3344/*"CLASS_BOARD_CHOICE_GRAND_SERVANT_MSG"*/, v9);
-    byte_4B1FDDE = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_3370/*"CLASS_BOARD_CHOICE_GRAND_SERVANT_MSG"*/);
+    byte_4C2ACDA = 1;
   }
   svtBase = this->fields.svtBase;
   if ( !svtBase )
-    goto LABEL_17;
-  svtBase = UnityEngine_GameObject__get_gameObject(svtBase, 0LL);
+    goto LABEL_15;
+  svtBase = UnityEngine_GameObject__get_gameObject(svtBase, 0);
   if ( !svtBase )
-    goto LABEL_17;
-  UnityEngine_GameObject__SetActive(svtBase, 0, 0LL);
+    goto LABEL_15;
+  UnityEngine_GameObject__SetActive(svtBase, 0, 0);
   svtBase = this->fields.servantSelectParentObj;
   if ( !svtBase )
-    goto LABEL_17;
-  svtBase = UnityEngine_GameObject__get_gameObject(svtBase, 0LL);
+    goto LABEL_15;
+  svtBase = UnityEngine_GameObject__get_gameObject(svtBase, 0);
   if ( !svtBase )
-    goto LABEL_17;
-  UnityEngine_GameObject__SetActive(svtBase, 1, 0LL);
+    goto LABEL_15;
+  UnityEngine_GameObject__SetActive(svtBase, 1, 0);
   svtBase = this->fields.grandServantChoiceMessageObj;
   if ( !svtBase )
-    goto LABEL_17;
-  UnityEngine_GameObject__SetActive(svtBase, isDispMessage, 0LL);
+    goto LABEL_15;
+  UnityEngine_GameObject__SetActive(svtBase, isDispMessage, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  svtBase = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_GrandGraphMaster___);
+  svtBase = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !svtBase )
-    goto LABEL_17;
-  EntityByClassBoardBaseId = GrandGraphMaster__GetEntityByClassBoardBaseId((GrandGraphMaster_o *)svtBase, baseId, 0LL);
-  if ( EntityByClassBoardBaseId )
-  {
-    v12 = EntityByClassBoardBaseId;
-    grandServantChoiceMessage = this->fields.grandServantChoiceMessage;
-    if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3344/*"CLASS_BOARD_CHOICE_GRAND_SERVANT_MSG"*/, 0LL);
-    svtBase = (UnityEngine_GameObject_o *)System_String__Format(v14, (Il2CppObject *)v12->fields.nameShort, 0LL);
-    if ( grandServantChoiceMessage )
-    {
-      UILabel__set_text(grandServantChoiceMessage, (System_String_o *)svtBase, 0LL);
-      return;
-    }
-LABEL_17:
-    sub_1BCB254(svtBase, *(_QWORD *)&baseId);
-  }
+    goto LABEL_15;
+  ParentClassNameByBaseClassId = ClassBoardBaseMaster__GetParentClassNameByBaseClassId(
+                                   (ClassBoardBaseMaster_o *)svtBase,
+                                   baseId,
+                                   0);
+  grandServantChoiceMessage = this->fields.grandServantChoiceMessage;
+  v10 = (Il2CppObject *)ParentClassNameByBaseClassId;
+  if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3370/*"CLASS_BOARD_CHOICE_GRAND_SERVANT_MSG"*/, 0);
+  svtBase = (UnityEngine_GameObject_o *)System_String__Format(v11, v10, 0);
+  if ( !grandServantChoiceMessage )
+LABEL_15:
+    sub_1C2D6EC(svtBase, *(_QWORD *)&baseId);
+  UILabel__set_text(grandServantChoiceMessage, (System_String_o *)svtBase, 0);
 }
 
 
-void __fastcall ClassBoardFigureController__SetServantSelectSprite(
+void ClassBoardFigureController__SetServantSelectSprite(
         ClassBoardFigureController_o *this,
         AtlasManagerUnit_o *atlasManagerUnit,
         const MethodInfo *method)
@@ -172,432 +285,505 @@ void __fastcall ClassBoardFigureController__SetServantSelectSprite(
           atlasManagerUnit,
           this->fields.servantSelectSprite,
           this->fields.selectServantSpriteName,
-          0LL),
+          0),
         AtlasManagerUnit__SetUI(
           atlasManagerUnit,
           v4->fields.servantSelectPlusSprite,
           v4->fields.selectServantPlusSpriteName,
-          0LL),
+          0),
         AtlasManagerUnit__SetUI(
           atlasManagerUnit,
           v4->fields.servantSelectTxtBaseSprite,
           v4->fields.selectServantTxtBaseSpriteName,
-          0LL),
-        (this = (ClassBoardFigureController_o *)v4->fields.servantSelectSprite) == 0LL) )
+          0),
+        (this = (ClassBoardFigureController_o *)v4->fields.servantSelectSprite) == 0) )
   {
-    sub_1BCB254(this, atlasManagerUnit);
+    sub_1C2D6EC(this, atlasManagerUnit);
   }
-  ((void (__fastcall *)(ClassBoardFigureController_o *, void *))this->klass[2]._1.typeMetadataHandle)(
+  ((void (__fastcall *)(ClassBoardFigureController_o *, void *))this->klass[2]._1.parent)(
     this,
-    this->klass[2]._1.interopData);
+    this->klass[2]._1.generic_class);
 }
 
 
-void __fastcall ClassBoardFigureController__SetSvtFigure(
+void ClassBoardFigureController__SetSvtFigure(
         ClassBoardFigureController_o *this,
-        int64_t userSvtId,
-        System_Action_o *setupEndCallBack,
+        System_Collections_Generic_List_long__o *userSvtIds,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
   UnityEngine_GameObject_o *svtBase; // x0
-  Il2CppObject *Master_object; // x22
-  SvtMultiPortraitMaster_o *v24; // x21
-  void *monitor; // x20
-  Il2CppClass *klass; // x23
-  int32_t v27; // w20
-  int32_t v28; // w20
-  int32_t v29; // w23
+  char v6; // w20
+  const MethodInfo *v7; // x3
+  System_Collections_Generic_List_Enumerator_T__o v8; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v9; // [xsp+20h] [xbp-50h] BYREF
+
+  if ( (byte_4C2ACD4 & 1) == 0 )
+  {
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_long__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_long__get_Current__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_long__GetEnumerator__);
+    byte_4C2ACD4 = 1;
+  }
+  memset(&v9, 0, sizeof(v9));
+  svtBase = this->fields.svtBase;
+  if ( !svtBase
+    || (svtBase = UnityEngine_GameObject__get_gameObject(svtBase, 0)) == 0
+    || (UnityEngine_GameObject__SetActive(svtBase, 1, 0), (svtBase = this->fields.servantSelectParentObj) == 0)
+    || (UnityEngine_GameObject__SetActive(svtBase, 0, 0), !userSvtIds) )
+  {
+    sub_1C2D6EC(svtBase, userSvtIds);
+  }
+  System_Collections_Generic_List_long___GetEnumerator(
+    &v8,
+    userSvtIds,
+    (const MethodInfo_377268C *)Method_System_Collections_Generic_List_long__GetEnumerator__);
+  v6 = 1;
+  v9 = v8;
+  while ( System_Collections_Generic_List_Enumerator_long___MoveNext(
+            &v9,
+            (const MethodInfo_35119C8 *)Method_System_Collections_Generic_List_Enumerator_long__MoveNext__) )
+  {
+    ClassBoardFigureController__SetSvtFigure_47688300(this, (int64_t)v9.fields._current, v6 & 1, v7);
+    v6 = 0;
+  }
+  System_Collections_Generic_List_Enumerator_long___Dispose(
+    &v9,
+    (const MethodInfo_35119C4 *)Method_System_Collections_Generic_List_Enumerator_long__Dispose__);
+}
+
+
+void ClassBoardFigureController__SetSvtFigure_47688300(
+        ClassBoardFigureController_o *this,
+        int64_t userSvtId,
+        bool isShow,
+        const MethodInfo *method)
+{
+  DataMasterBase_TMaster__TEntity__PKType__o *Master_object; // x0
+  __int64 v8; // x1
+  Il2CppObject *v9; // x23
+  SvtMultiPortraitMaster_o *v10; // x22
+  void *monitor; // x21
+  Il2CppClass *klass; // x24
+  int32_t v13; // w21
+  int32_t v14; // w21
+  int32_t v15; // w24
   int32_t FigureLimitCount; // w0
-  int v31; // w22
-  BalanceConfig_c *v32; // x8
-  DataMasterBase_TMaster__TEntity__PKType__o *v33; // x22
-  void *v34; // x23
-  Il2CppClass *v35; // x24
-  void *v36; // x22
-  Il2CppClass *v37; // x23
-  int32_t v38; // w0
-  int32_t v39; // w22
-  int32_t v40; // w23
-  void *v41; // x22
-  Il2CppClass *v42; // x23
-  System_Collections_Generic_IEnumerable_TSource__o *v43; // x22
-  int32_t SvtId; // w21
-  _BOOL8 v45; // x0
-  __int64 v46; // x1
-  SvtMultiPortraitEntity_o *current; // x22
-  CGThumbnailListItem_o *PrefabForImageId; // x0
-  __int64 v49; // x1
-  int32_t v50; // w2
-  const MethodInfo *v51; // x3
-  UnityEngine_Component_o *v52; // x23
+  int v17; // w23
+  BalanceConfig_c *v18; // x8
+  DataMasterBase_TMaster__TEntity__PKType__o *v19; // x23
+  void *v20; // x24
+  Il2CppClass *v21; // x25
+  void *v22; // x23
+  Il2CppClass *v23; // x24
+  int32_t v24; // w0
+  int32_t v25; // w23
+  int32_t v26; // w24
+  void *v27; // x23
+  Il2CppClass *v28; // x24
+  System_Collections_Generic_IEnumerable_TSource__o *v29; // x24
+  int32_t SvtId; // w23
+  System_Collections_Generic_List_object__o *v31; // x22
+  _BOOL8 v32; // x0
+  __int64 v33; // x1
+  SvtMultiPortraitEntity_o *current; // x24
+  UIStandFigureR_o *PrefabForImageId; // x0
+  __int64 v36; // x1
+  int32_t v37; // w2
+  const MethodInfo *v38; // x3
+  UnityEngine_Component_o *v39; // x25
   struct System_Int32_array *commonPosition; // x8
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v55; // x1
-  __int64 v56; // x2
-  struct System_Int32_array *v57; // x8
-  il2cpp_array_size_t max_length; // w9
+  __int64 v42; // x1
+  __int64 v43; // x2
+  struct System_Int32_array *v44; // x8
+  int max_length; // w9
   UnityEngine_Transform_o *transform; // x0
-  __int64 v60; // x1
-  System_Collections_Generic_List_object__o *v61; // x24
-  StandFigureCollect_o *v62; // x25
-  __int64 v63; // x0
-  __int64 v64; // x1
-  int32_t v65; // w2
-  const MethodInfo *v66; // x3
-  struct System_Object_array *v67; // x8
-  _QWORD *v68; // x9
-  __int64 v69; // x10
-  Il2CppClass **v70; // x0
-  UIStandFigureR_o *v71; // x21
-  System_Collections_Generic_List_object__o *figureCollectList; // x19
-  StandFigureCollect_o *v73; // x20
-  int32_t v74; // w2
-  const MethodInfo *v75; // x3
+  __int64 v47; // x1
+  StandFigureCollect_o *v48; // x26
+  __int64 v49; // x0
+  __int64 v50; // x1
+  int32_t v51; // w2
+  const MethodInfo *v52; // x3
+  struct System_Object_array *v53; // x8
+  _QWORD *v54; // x9
+  __int64 v55; // x10
+  Il2CppClass **v56; // x0
+  int32_t v57; // w2
+  const MethodInfo *v58; // x3
+  UIStandFigureR_o *v59; // x21
+  StandFigureCollect_o *v60; // x20
+  int32_t v61; // w2
+  const MethodInfo *v62; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v77; // x9
+  _QWORD *v64; // x9
   __int64 size; // x10
-  Il2CppClass **v79; // x0
-  System_Collections_Generic_List_Enumerator_object__o v80; // [xsp+18h] [xbp-A8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v81; // [xsp+30h] [xbp-90h] BYREF
-  int32_t value[2]; // [xsp+50h] [xbp-70h] BYREF
-  Il2CppObject *v83; // [xsp+58h] [xbp-68h] BYREF
-  Il2CppObject *entity; // [xsp+68h] [xbp-58h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v85; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v86; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v87; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v88; // 0:x0.16
-  UnityEngine_Vector3_o v89; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v90; // 0:s0.4,4:s1.4,8:s2.4
+  Il2CppClass **v66; // x0
+  __int64 v67; // x8
+  _QWORD *v68; // x9
+  __int64 MasterName_k__BackingField_low; // x10
+  __int64 v70; // x8
+  System_Collections_Generic_List_Enumerator_object__o v71; // [xsp+18h] [xbp-A8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v72; // [xsp+30h] [xbp-90h] BYREF
+  int32_t value[2]; // [xsp+48h] [xbp-78h] BYREF
+  Il2CppObject *v74; // [xsp+50h] [xbp-70h] BYREF
+  Il2CppObject *entity; // [xsp+58h] [xbp-68h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v76; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v77; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v78; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v79; // 0:x0.16
+  UnityEngine_Vector3_o v80; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v81; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B1FDDD & 1) == 0 )
+  if ( (byte_4C2ACD5 & 1) == 0 )
   {
-    sub_1BCAFF8(&BalanceConfig_TypeInfo, userSvtId);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantLimitImageMaster___, v6);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_ServantMaster___, v7);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_SvtMultiPortraitMaster___, v8);
-    sub_1BCAFF8(&Method_DataManager_GetMaster_UserServantMaster___, v9);
-    sub_1BCAFF8(&DataManager_TypeInfo, v10);
-    sub_1BCAFF8(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__, v11);
-    sub_1BCAFF8(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__, v12);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___, v13);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__, v14);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__, v15);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__, v16);
-    sub_1BCAFF8(&ImageLimitCount_TypeInfo, v17);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_StandFigureCollect__Add__, v18);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__, v19);
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, v20);
-    sub_1BCAFF8(&StandFigureCollect_TypeInfo, v21);
-    byte_4B1FDDD = 1;
+    sub_1C2D490(&BalanceConfig_TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_1C2D490(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C2D490(&Method_DataManager_GetMaster_SvtMultiPortraitMaster___);
+    sub_1C2D490(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C2D490(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__);
+    sub_1C2D490(&ImageLimitCount_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_List_StandFigureCollect__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_List_StandFigureCollect___Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_StandFigureCollect__TypeInfo);
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C2D490(&StandFigureCollect_TypeInfo);
+    byte_4C2ACD5 = 1;
   }
-  entity = 0LL;
-  *(_QWORD *)value = 0LL;
-  v83 = 0LL;
-  memset(&v81, 0, sizeof(v81));
-  svtBase = this->fields.svtBase;
-  if ( !svtBase )
-    goto LABEL_78;
-  svtBase = UnityEngine_GameObject__get_gameObject(svtBase, 0LL);
-  if ( !svtBase )
-    goto LABEL_78;
-  UnityEngine_GameObject__SetActive(svtBase, 1, 0LL);
-  svtBase = this->fields.servantSelectParentObj;
-  if ( !svtBase )
-    goto LABEL_78;
-  UnityEngine_GameObject__SetActive(svtBase, 0, 0LL);
+  v74 = 0;
+  entity = 0;
+  *(_QWORD *)value = 0;
+  memset(&v72, 0, sizeof(v72));
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  svtBase = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_UserServantMaster___);
-  if ( !svtBase )
-    goto LABEL_78;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserServantMaster___);
+  if ( !Master_object )
+    goto LABEL_84;
   if ( !DataMasterBase_object__object__long___TryGetEntity(
-          (DataMasterBase_TMaster__TEntity__PKType__o *)svtBase,
+          Master_object,
           &entity,
           userSvtId,
-          (const MethodInfo_32CA3A8 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
+          (const MethodInfo_338A340 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__) )
     return;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
-  svtBase = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_SvtMultiPortraitMaster___);
+  v9 = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_SvtMultiPortraitMaster___);
   if ( !entity )
-    goto LABEL_78;
-  v24 = (SvtMultiPortraitMaster_o *)svtBase;
+    goto LABEL_84;
+  v10 = (SvtMultiPortraitMaster_o *)Master_object;
   klass = entity[5].klass;
   monitor = entity[5].monitor;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v85.fields.currentCryptoKey = klass;
-  *(_QWORD *)&v85.fields.fakeValue = monitor;
-  svtBase = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v85, 0LL);
+  *(_QWORD *)&v76.fields.currentCryptoKey = klass;
+  *(_QWORD *)&v76.fields.fakeValue = monitor;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(
+                                                                  v76,
+                                                                  0);
   if ( !entity )
-    goto LABEL_78;
-  v27 = (int)svtBase;
-  svtBase = (UnityEngine_GameObject_o *)UserServantEntity__getFigureImageLimitCount(
-                                          (UserServantEntity_o *)entity,
-                                          0,
-                                          0LL);
-  if ( !Master_object )
-    goto LABEL_78;
-  svtBase = (UnityEngine_GameObject_o *)ServantLimitImageMaster__GetServantImageLimitSealAfter(
-                                          (ServantLimitImageMaster_o *)Master_object,
-                                          v27,
-                                          (int32_t)svtBase,
-                                          0LL);
+    goto LABEL_84;
+  v13 = (int)Master_object;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UserServantEntity__getFigureImageLimitCount(
+                                                                  (UserServantEntity_o *)entity,
+                                                                  0,
+                                                                  0);
+  if ( !v9 )
+    goto LABEL_84;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)ServantLimitImageMaster__GetServantImageLimitSealAfter(
+                                                                  (ServantLimitImageMaster_o *)v9,
+                                                                  v13,
+                                                                  (int32_t)Master_object,
+                                                                  0);
   if ( !entity )
-    goto LABEL_78;
-  v28 = (int)svtBase;
-  svtBase = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(
-                                          (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)entity[5],
-                                          0LL);
+    goto LABEL_84;
+  v14 = (int)Master_object;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(
+                                                                  (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)entity[5],
+                                                                  0);
   if ( !entity )
-    goto LABEL_78;
-  v29 = (int)svtBase;
-  FigureLimitCount = UserServantEntity__getFigureLimitCount((UserServantEntity_o *)entity, 0, 0LL);
-  svtBase = (UnityEngine_GameObject_o *)ServantLimitImageMaster__GetServantLimitCountSealAfter(
-                                          (ServantLimitImageMaster_o *)Master_object,
-                                          v29,
-                                          FigureLimitCount,
-                                          0LL);
-  v31 = (int)svtBase;
-  v32 = BalanceConfig_TypeInfo;
+    goto LABEL_84;
+  v15 = (int)Master_object;
+  FigureLimitCount = UserServantEntity__getFigureLimitCount((UserServantEntity_o *)entity, 0, 0);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)ServantLimitImageMaster__GetServantLimitCountSealAfter(
+                                                                  (ServantLimitImageMaster_o *)v9,
+                                                                  v15,
+                                                                  FigureLimitCount,
+                                                                  0);
+  v17 = (int)Master_object;
+  v18 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v32 = BalanceConfig_TypeInfo;
+    v18 = BalanceConfig_TypeInfo;
   }
-  if ( v31 == v32->static_fields->ServantLimitMax )
+  if ( v17 == v18->static_fields->ServantLimitMax )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    svtBase = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ServantMaster___);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ServantMaster___);
     if ( !entity )
-      goto LABEL_78;
-    v33 = (DataMasterBase_TMaster__TEntity__PKType__o *)svtBase;
-    v35 = entity[5].klass;
-    v34 = entity[5].monitor;
+      goto LABEL_84;
+    v19 = Master_object;
+    v21 = entity[5].klass;
+    v20 = entity[5].monitor;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v86.fields.currentCryptoKey = v35;
-    *(_QWORD *)&v86.fields.fakeValue = v34;
-    svtBase = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v86, 0LL);
-    if ( !v33 )
-      goto LABEL_78;
-    svtBase = (UnityEngine_GameObject_o *)DataMasterBase_object__object__int___TryGetEntity(
-                                            v33,
-                                            &v83,
-                                            (int32_t)svtBase,
-                                            (const MethodInfo_32C7E4C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    if ( ((unsigned __int8)svtBase & 1) != 0 )
+    *(_QWORD *)&v77.fields.currentCryptoKey = v21;
+    *(_QWORD *)&v77.fields.fakeValue = v20;
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(
+                                                                    v77,
+                                                                    0);
+    if ( !v19 )
+      goto LABEL_84;
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___TryGetEntity(
+                                                                    v19,
+                                                                    &v74,
+                                                                    (int32_t)Master_object,
+                                                                    (const MethodInfo_3387DE4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    if ( ((unsigned __int8)Master_object & 1) != 0 )
     {
-      svtBase = (UnityEngine_GameObject_o *)v83;
-      if ( !v83 )
-        goto LABEL_78;
-      svtBase = (UnityEngine_GameObject_o *)ServantEntity__IsContainOverwriteGrandGraphImageLimitCount(
-                                              (ServantEntity_o *)v83,
-                                              &value[1],
-                                              0LL);
-      if ( ((unsigned __int8)svtBase & 1) != 0 )
+      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)v74;
+      if ( !v74 )
+        goto LABEL_84;
+      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)ServantEntity__IsContainOverwriteGrandGraphImageLimitCount(
+                                                                      (ServantEntity_o *)v74,
+                                                                      &value[1],
+                                                                      0);
+      if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
         if ( !entity )
-          goto LABEL_78;
-        v37 = entity[5].klass;
-        v36 = entity[5].monitor;
+          goto LABEL_84;
+        v23 = entity[5].klass;
+        v22 = entity[5].monitor;
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-        *(_QWORD *)&v87.fields.currentCryptoKey = v37;
-        *(_QWORD *)&v87.fields.fakeValue = v36;
-        v38 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v87, 0LL);
-        v39 = value[1];
-        v40 = v38;
+        *(_QWORD *)&v78.fields.currentCryptoKey = v23;
+        *(_QWORD *)&v78.fields.fakeValue = v22;
+        v24 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v78, 0);
+        v25 = value[1];
+        v26 = v24;
         if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
-        svtBase = (UnityEngine_GameObject_o *)ImageLimitCount__TryGetGrandImageLimitCount(v40, v39, value, 0LL);
-        if ( ((unsigned __int8)svtBase & 1) != 0 )
-          v28 = value[0];
+        Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)ImageLimitCount__TryGetGrandImageLimitCount(
+                                                                        v26,
+                                                                        v25,
+                                                                        value,
+                                                                        0);
+        if ( ((unsigned __int8)Master_object & 1) != 0 )
+          v14 = value[0];
       }
     }
   }
   if ( !entity )
-    goto LABEL_78;
-  v42 = entity[5].klass;
-  v41 = entity[5].monitor;
+    goto LABEL_84;
+  v28 = entity[5].klass;
+  v27 = entity[5].monitor;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v88.fields.currentCryptoKey = v42;
-  *(_QWORD *)&v88.fields.fakeValue = v41;
-  svtBase = (UnityEngine_GameObject_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v88, 0LL);
-  if ( !v24 )
-    goto LABEL_78;
-  svtBase = (UnityEngine_GameObject_o *)SvtMultiPortraitMaster__GetEntityListOrderBy(v24, (int32_t)svtBase, v28, 0, 0LL);
+  *(_QWORD *)&v79.fields.currentCryptoKey = v28;
+  *(_QWORD *)&v79.fields.fakeValue = v27;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(
+                                                                  v79,
+                                                                  0);
+  if ( !v10 )
+    goto LABEL_84;
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SvtMultiPortraitMaster__GetEntityListOrderBy(
+                                                                  v10,
+                                                                  (int32_t)Master_object,
+                                                                  v14,
+                                                                  0,
+                                                                  0);
   if ( !entity )
-    goto LABEL_78;
-  v43 = (System_Collections_Generic_IEnumerable_TSource__o *)svtBase;
-  SvtId = UserServantEntity__getSvtId((UserServantEntity_o *)entity, 0LL);
-  if ( !v43
+    goto LABEL_84;
+  v29 = (System_Collections_Generic_IEnumerable_TSource__o *)Master_object;
+  SvtId = UserServantEntity__getSvtId((UserServantEntity_o *)entity, 0);
+  v31 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v31,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
+  if ( !v29
     || !System_Linq_Enumerable__Any_object_(
-          v43,
-          (const MethodInfo_302661C *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___) )
+          v29,
+          (const MethodInfo_30DA4C8 *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___) )
   {
-    svtBase = (UnityEngine_GameObject_o *)StandFigureManager__CreateRenderPrefab_39863448(
-                                            this->fields.svtBase,
-                                            SvtId,
-                                            v28,
-                                            9,
-                                            0,
-                                            1,
-                                            0LL,
-                                            0,
-                                            -1,
-                                            0LL,
-                                            0LL);
-    if ( svtBase )
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)StandFigureManager__CreateRenderPrefab_40454792(
+                                                                    this->fields.svtBase,
+                                                                    SvtId,
+                                                                    v14,
+                                                                    9,
+                                                                    0,
+                                                                    1,
+                                                                    0,
+                                                                    0,
+                                                                    -1,
+                                                                    0,
+                                                                    0);
+    if ( Master_object )
     {
-      v71 = (UIStandFigureR_o *)svtBase;
-      svtBase = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
-                                              (UnityEngine_Component_o *)svtBase,
-                                              0LL);
-      if ( svtBase )
+      v59 = (UIStandFigureR_o *)Master_object;
+      Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_Component__get_transform(
+                                                                      (UnityEngine_Component_o *)Master_object,
+                                                                      0);
+      if ( Master_object )
       {
-        v90.fields.x = this->fields.svtScale;
-        v90.fields.y = v90.fields.x;
-        v90.fields.z = v90.fields.x;
-        UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)svtBase, v90, 0LL);
-        figureCollectList = (System_Collections_Generic_List_object__o *)this->fields.figureCollectList;
-        v73 = (StandFigureCollect_o *)sub_1BCB244(StandFigureCollect_TypeInfo);
-        StandFigureCollect___ctor(v73, 0LL, v71, 0LL);
-        if ( figureCollectList )
+        v81.fields.x = this->fields.svtScale;
+        v81.fields.y = v81.fields.x;
+        v81.fields.z = v81.fields.x;
+        UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)Master_object, v81, 0);
+        if ( !isShow )
+          UIStandFigureR__SetAlpha(v59, 0.0, 0);
+        v60 = (StandFigureCollect_o *)sub_1C2D6DC(StandFigureCollect_TypeInfo);
+        StandFigureCollect___ctor(v60, 0, v59, 0);
+        if ( v31 )
         {
-          items = figureCollectList->fields._items;
-          v77 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
-          ++figureCollectList->fields._version;
+          items = v31->fields._items;
+          v64 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
+          ++v31->fields._version;
           if ( items )
           {
-            size = figureCollectList->fields._size;
-            if ( (unsigned int)size >= items->max_length )
+            size = v31->fields._size;
+            if ( (unsigned int)size >= LODWORD(items->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
-                figureCollectList,
-                (Il2CppObject *)v73,
-                *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v77[4] + 192LL) + 112LL));
+                v31,
+                (Il2CppObject *)v60,
+                *(const MethodInfo_3789B84 **)(*(_QWORD *)(v64[4] + 192LL) + 112LL));
             }
             else
             {
-              v79 = &items->obj.klass + size;
-              figureCollectList->fields._size = size + 1;
-              v79[4] = (Il2CppClass *)v73;
-              sub_1BCAF9C((CGThumbnailListItem_o *)(v79 + 4), (int32_t)v73, v74, v75);
+              v66 = &items->obj.klass + size;
+              v31->fields._size = size + 1;
+              v66[4] = (Il2CppClass *)v60;
+              sub_1C2D434((CGThumbnailListItem_o *)(v66 + 4), (int32_t)v60, v61, v62);
             }
-            return;
+            goto LABEL_78;
           }
         }
       }
     }
-LABEL_78:
-    sub_1BCB254(svtBase, userSvtId);
+LABEL_84:
+    sub_1C2D6EC(Master_object, v8);
   }
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v80,
-    (System_Collections_Generic_List_object__o *)v43,
-    (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
-  v81 = v80;
+    (System_Collections_Generic_List_Enumerator_T__o *)&v71,
+    (System_Collections_Generic_List_object__o *)v29,
+    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
+  v72 = v71;
   while ( 1 )
   {
-    v45 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v81,
-            (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
-    if ( !v45 )
+    v32 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v72,
+            (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
+    if ( !v32 )
       break;
-    current = (SvtMultiPortraitEntity_o *)v81.fields._current;
-    if ( !v81.fields._current )
-      sub_1BCB254(v45, v46);
-    PrefabForImageId = (CGThumbnailListItem_o *)StandFigureManager__CreatePrefabForImageId(
-                                                  this->fields.svtBase,
-                                                  (int32_t)v81.fields._current[2].klass,
-                                                  9,
-                                                  0,
-                                                  HIDWORD(v81.fields._current[2].klass) + 1,
-                                                  0LL,
-                                                  0,
-                                                  -1,
-                                                  0LL,
-                                                  0LL);
-    v52 = (UnityEngine_Component_o *)PrefabForImageId;
+    current = (SvtMultiPortraitEntity_o *)v72.fields._current;
+    if ( !v72.fields._current )
+      sub_1C2D6EC(v32, v33);
+    PrefabForImageId = StandFigureManager__CreatePrefabForImageId(
+                         this->fields.svtBase,
+                         (int32_t)v72.fields._current[2].klass,
+                         9,
+                         0,
+                         HIDWORD(v72.fields._current[2].klass) + 1,
+                         0,
+                         0,
+                         -1,
+                         0,
+                         0);
+    v39 = (UnityEngine_Component_o *)PrefabForImageId;
     if ( !PrefabForImageId )
-      sub_1BCB254(0LL, v49);
-    PrefabForImageId[1].klass = (CGThumbnailListItem_c *)current;
-    sub_1BCAF9C(PrefabForImageId + 1, (int32_t)current, v50, v51);
+      sub_1C2D6EC(0, v36);
+    PrefabForImageId->fields.svtMultiPortraitEntity = current;
+    sub_1C2D434((CGThumbnailListItem_o *)&PrefabForImageId->fields.svtMultiPortraitEntity, (int32_t)current, v37, v38);
     commonPosition = current->fields.commonPosition;
-    if ( commonPosition && (int)commonPosition->max_length >= 2 )
+    if ( commonPosition && SLODWORD(commonPosition->max_length) >= 2 )
     {
-      gameObject = UnityEngine_Component__get_gameObject(v52, 0LL);
-      v57 = current->fields.commonPosition;
-      if ( !v57 )
-        sub_1BCB254(gameObject, v55);
-      max_length = v57->max_length;
+      gameObject = UnityEngine_Component__get_gameObject(v39, 0);
+      v44 = current->fields.commonPosition;
+      if ( !v44 )
+        sub_1C2D6EC(gameObject, v42);
+      max_length = v44->max_length;
       if ( max_length == 1 )
-        sub_1BCB25C(gameObject, v55, v56);
+        sub_1C2D6F4(gameObject, v42, v43);
       if ( !max_length )
-        sub_1BCB25C(gameObject, v55, v56);
-      GameObjectExtensions__AddLocalPosition_35357784(gameObject, (float)v57->m_Items[1], (float)v57->m_Items[2], 0LL);
+        sub_1C2D6F4(gameObject, v42, v43);
+      GameObjectExtensions__AddLocalPosition_35919432(gameObject, (float)v44->m_Items[0], (float)v44->m_Items[1], 0);
     }
-    transform = UnityEngine_Component__get_transform(v52, 0LL);
+    transform = UnityEngine_Component__get_transform(v39, 0);
     if ( !transform )
-      sub_1BCB254(0LL, v60);
-    v89.fields.x = this->fields.svtScale;
-    v89.fields.y = v89.fields.x;
-    v89.fields.z = v89.fields.x;
-    UnityEngine_Transform__set_localScale(transform, v89, 0LL);
-    v61 = (System_Collections_Generic_List_object__o *)this->fields.figureCollectList;
-    v62 = (StandFigureCollect_o *)sub_1BCB244(StandFigureCollect_TypeInfo);
-    StandFigureCollect___ctor(v62, current, (UIStandFigureR_o *)v52, 0LL);
-    if ( !v61 )
-      sub_1BCB254(v63, v64);
-    v67 = v61->fields._items;
-    v68 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
-    ++v61->fields._version;
-    if ( !v67 )
-      sub_1BCB254(v63, v64);
-    v69 = v61->fields._size;
-    if ( (unsigned int)v69 >= v67->max_length )
+      sub_1C2D6EC(0, v47);
+    v80.fields.x = this->fields.svtScale;
+    v80.fields.y = v80.fields.x;
+    v80.fields.z = v80.fields.x;
+    UnityEngine_Transform__set_localScale(transform, v80, 0);
+    if ( !isShow )
+      UIStandFigureR__SetAlpha((UIStandFigureR_o *)v39, 0.0, 0);
+    v48 = (StandFigureCollect_o *)sub_1C2D6DC(StandFigureCollect_TypeInfo);
+    StandFigureCollect___ctor(v48, current, (UIStandFigureR_o *)v39, 0);
+    if ( !v31 )
+      sub_1C2D6EC(v49, v50);
+    v53 = v31->fields._items;
+    v54 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
+    ++v31->fields._version;
+    if ( !v53 )
+      sub_1C2D6EC(v49, v50);
+    v55 = v31->fields._size;
+    if ( (unsigned int)v55 >= LODWORD(v53->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v61,
-        (Il2CppObject *)v62,
-        *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v68[4] + 192LL) + 112LL));
+        v31,
+        (Il2CppObject *)v48,
+        *(const MethodInfo_3789B84 **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
     }
     else
     {
-      v70 = &v67->obj.klass + v69;
-      v61->fields._size = v69 + 1;
-      v70[4] = (Il2CppClass *)v62;
-      sub_1BCAF9C((CGThumbnailListItem_o *)(v70 + 4), (int32_t)v62, v65, v66);
+      v56 = &v53->obj.klass + v55;
+      v31->fields._size = v55 + 1;
+      v56[4] = (Il2CppClass *)v48;
+      sub_1C2D434((CGThumbnailListItem_o *)(v56 + 4), (int32_t)v48, v51, v52);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v81,
-    (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+    &v72,
+    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+LABEL_78:
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.figureCollectList;
+  if ( !Master_object )
+    goto LABEL_84;
+  v67 = *(_QWORD *)&Master_object->fields._MasterKind_k__BackingField;
+  v68 = Method_System_Collections_Generic_List_List_StandFigureCollect___Add__;
+  ++HIDWORD(Master_object->fields._MasterName_k__BackingField);
+  if ( !v67 )
+    goto LABEL_84;
+  MasterName_k__BackingField_low = SLODWORD(Master_object->fields._MasterName_k__BackingField);
+  if ( (unsigned int)MasterName_k__BackingField_low >= *(_DWORD *)(v67 + 24) )
+  {
+    System_Collections_Generic_List_object___AddWithResize(
+      (System_Collections_Generic_List_object__o *)Master_object,
+      (Il2CppObject *)v31,
+      *(const MethodInfo_3789B84 **)(*(_QWORD *)(v68[4] + 192LL) + 112LL));
+  }
+  else
+  {
+    v70 = v67 + 8 * MasterName_k__BackingField_low;
+    LODWORD(Master_object->fields._MasterName_k__BackingField) = MasterName_k__BackingField_low + 1;
+    *(_QWORD *)(v70 + 32) = v31;
+    sub_1C2D434((CGThumbnailListItem_o *)(v70 + 32), (int32_t)v31, v57, v58);
+  }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall ClassBoardFigureController__SetUIPanelAlpha(
+void ClassBoardFigureController__SetUIPanelAlpha(
         ClassBoardFigureController_o *this,
         float alpha,
         const MethodInfo *method)
@@ -606,15 +792,15 @@ void __fastcall ClassBoardFigureController__SetUIPanelAlpha(
 
   svtPanel = this->fields.svtPanel;
   if ( !svtPanel )
-    sub_1BCB254(0LL, method);
-  ((void (__fastcall *)(struct UIPanel_o *, Il2CppMethodPointer, long double))svtPanel->klass->vtable._8_set_alpha.method)(
+    sub_1C2D6EC(0, method);
+  ((void (__fastcall *)(struct UIPanel_o *, const MethodInfo *, float))svtPanel->klass->vtable._8_set_alpha.methodPtr)(
     svtPanel,
-    svtPanel->klass->vtable._9_CalculateFinalAlpha.methodPtr,
-    *(long double *)&alpha);
+    svtPanel->klass->vtable._8_set_alpha.method,
+    alpha);
 }
 
 
-void __fastcall ClassBoardFigureController__Setup(
+void ClassBoardFigureController__Setup(
         ClassBoardFigureController_o *this,
         ClassBoardController_o *controller,
         const MethodInfo *method)
@@ -622,5 +808,368 @@ void __fastcall ClassBoardFigureController__Setup(
   const MethodInfo *v3; // x3
 
   this->fields.classBoardController = controller;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.classBoardController, (int32_t)controller, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.classBoardController, (int32_t)controller, (int32_t)method, v3);
+}
+
+
+void ClassBoardFigureController__StartSwitchServantCoroutine(
+        ClassBoardFigureController_o *this,
+        const MethodInfo *method)
+{
+  ClassBoardFigureController_o *v2; // x19
+  struct System_Collections_Generic_List_List_StandFigureCollect___o *figureCollectList; // x8
+  System_Collections_IEnumerator_o *v4; // x1
+
+  v2 = this;
+  if ( (byte_4C2ACD7 & 1) == 0 )
+  {
+    this = (ClassBoardFigureController_o *)sub_1C2D490(&Method_System_Collections_Generic_List_List_StandFigureCollect___get_Count__);
+    byte_4C2ACD7 = 1;
+  }
+  figureCollectList = v2->fields.figureCollectList;
+  if ( !figureCollectList )
+    sub_1C2D6EC(this, method);
+  if ( figureCollectList->fields._size >= 2 )
+  {
+    v4 = ClassBoardFigureController__SwitchServantCoroutine(v2, method);
+    UnityEngine_MonoBehaviour__StartCoroutine_71149276((UnityEngine_MonoBehaviour_o *)v2, v4, 0);
+  }
+}
+
+
+System_Collections_IEnumerator_o *ClassBoardFigureController__SwitchServantCoroutine(
+        ClassBoardFigureController_o *this,
+        const MethodInfo *method)
+{
+  __int64 v3; // x20
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
+
+  if ( (byte_4C2ACD8 & 1) == 0 )
+  {
+    sub_1C2D490(&ClassBoardFigureController__SwitchServantCoroutine_d__25_TypeInfo);
+    byte_4C2ACD8 = 1;
+  }
+  v3 = sub_1C2D6DC(ClassBoardFigureController__SwitchServantCoroutine_d__25_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0);
+  *(_DWORD *)(v3 + 16) = 0;
+  *(_QWORD *)(v3 + 32) = this;
+  sub_1C2D434((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  return (System_Collections_IEnumerator_o *)v3;
+}
+
+
+void ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26___ctor(
+        ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_o *this,
+        int32_t 1__state,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0);
+  this->fields.__1__state = 1__state;
+}
+
+
+bool ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26__MoveNext(
+        ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_o *this,
+        const MethodInfo *method)
+{
+  ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_o *v2; // x19
+  int32_t _1__state; // w8
+  struct ClassBoardFigureController_o *_4__this; // x21
+  Il2CppObject *Item; // x0
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  float v8; // s0
+  float currentTime_5__2; // s8
+  float svtSwitchAnimationTime; // s1
+  float v11; // s8
+  _BOOL8 v12; // x0
+  __int64 v13; // x1
+  UIStandFigureR_o *v14; // x0
+  _BOOL8 v15; // x0
+  __int64 v16; // x1
+  UIStandFigureR_o *monitor; // x0
+  CGThumbnailListItem_o *p__2__current; // x19
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  bool result; // w0
+  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-68h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-50h] BYREF
+
+  v2 = this;
+  if ( (byte_4C2ACDD & 1) == 0 )
+  {
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    this = (ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_o *)sub_1C2D490(&Method_System_Collections_Generic_List_List_StandFigureCollect___get_Item__);
+    byte_4C2ACDD = 1;
+  }
+  memset(&v23, 0, sizeof(v23));
+  _1__state = v2->fields.__1__state;
+  _4__this = v2->fields.__4__this;
+  if ( _1__state == 1 )
+  {
+    currentTime_5__2 = v2->fields._currentTime_5__2;
+    v2->fields.__1__state = -1;
+    v8 = currentTime_5__2 + UnityEngine_Time__get_deltaTime(0);
+    v2->fields._currentTime_5__2 = v8;
+    if ( !_4__this )
+      goto LABEL_29;
+  }
+  else
+  {
+    if ( _1__state )
+      return 0;
+    v2->fields.__1__state = -1;
+    v2->fields._currentTime_5__2 = 0.0;
+    if ( !_4__this
+      || (this = (ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_o *)_4__this->fields.figureCollectList) == 0 )
+    {
+LABEL_29:
+      sub_1C2D6EC(this, method);
+    }
+    Item = System_Collections_Generic_List_object___get_Item(
+             (System_Collections_Generic_List_object__o *)this,
+             _4__this->fields.currentSvtIndex,
+             (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_List_StandFigureCollect___get_Item__);
+    v2->fields._targets_5__3 = (struct System_Collections_Generic_List_StandFigureCollect__o *)Item;
+    sub_1C2D434((CGThumbnailListItem_o *)&v2->fields._targets_5__3, (int32_t)Item, v6, v7);
+    v8 = v2->fields._currentTime_5__2;
+  }
+  svtSwitchAnimationTime = _4__this->fields.svtSwitchAnimationTime;
+  if ( v8 >= svtSwitchAnimationTime )
+  {
+    this = (ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_o *)v2->fields._targets_5__3;
+    if ( this )
+    {
+      System_Collections_Generic_List_object___GetEnumerator(
+        (System_Collections_Generic_List_Enumerator_T__o *)&v22,
+        (System_Collections_Generic_List_object__o *)this,
+        (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+      v23 = v22;
+      while ( 1 )
+      {
+        v15 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                &v23,
+                (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+        if ( !v15 )
+          break;
+        if ( !v23.fields._current )
+          sub_1C2D6EC(v15, v16);
+        monitor = (UIStandFigureR_o *)v23.fields._current[1].monitor;
+        if ( !monitor )
+          sub_1C2D6EC(0, v16);
+        UIStandFigureR__SetAlpha(monitor, v2->fields.endAlpha, 0);
+      }
+      System_Collections_Generic_List_Enumerator_object___Dispose(
+        &v23,
+        (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+      return 0;
+    }
+    goto LABEL_29;
+  }
+  this = (ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_o *)v2->fields._targets_5__3;
+  if ( !this )
+    goto LABEL_29;
+  v11 = v2->fields.startAlpha
+      + (float)((float)(v8 / svtSwitchAnimationTime) * (float)(v2->fields.endAlpha - v2->fields.startAlpha));
+  System_Collections_Generic_List_object___GetEnumerator(
+    (System_Collections_Generic_List_Enumerator_T__o *)&v22,
+    (System_Collections_Generic_List_object__o *)this,
+    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+  v23 = v22;
+  while ( 1 )
+  {
+    v12 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v23,
+            (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    if ( !v12 )
+      break;
+    if ( !v23.fields._current )
+      sub_1C2D6EC(v12, v13);
+    v14 = (UIStandFigureR_o *)v23.fields._current[1].monitor;
+    if ( !v14 )
+      sub_1C2D6EC(0, v13);
+    UIStandFigureR__SetAlpha(v14, v11, 0);
+  }
+  System_Collections_Generic_List_Enumerator_object___Dispose(
+    &v23,
+    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+  v2->fields.__2__current = 0;
+  p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
+  sub_1C2D434(p__2__current, 0, v19, v20);
+  result = 1;
+  LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+  return result;
+}
+
+
+Il2CppObject *ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26__System_Collections_Generic_IEnumerator_System_Object__get_Current(
+        ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_o *this,
+        const MethodInfo *method)
+{
+  return this->fields.__2__current;
+}
+
+
+void __noreturn ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26__System_Collections_IEnumerator_Reset(
+        ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_o *this,
+        const MethodInfo *method)
+{
+  __int64 v2; // x0
+  System_NotSupportedException_o *v3; // x19
+  __int64 v4; // x0
+
+  v2 = sub_1C2D4A4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C2D6DC(v2);
+  System_NotSupportedException___ctor(v3, 0);
+  v4 = sub_1C2D4A4(&Method_ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_System_Collections_IEnumerator_Reset__);
+  sub_1C2D5B8(v3, v4);
+}
+
+
+Il2CppObject *ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26__System_Collections_IEnumerator_get_Current(
+        ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_o *this,
+        const MethodInfo *method)
+{
+  return this->fields.__2__current;
+}
+
+
+void ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26__System_IDisposable_Dispose(
+        ClassBoardFigureController__PlaySwitchServantAnimationCoroutine_d__26_o *this,
+        const MethodInfo *method)
+{
+  ;
+}
+
+
+void ClassBoardFigureController__SwitchServantCoroutine_d__25___ctor(
+        ClassBoardFigureController__SwitchServantCoroutine_d__25_o *this,
+        int32_t 1__state,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0);
+  this->fields.__1__state = 1__state;
+}
+
+
+bool ClassBoardFigureController__SwitchServantCoroutine_d__25__MoveNext(
+        ClassBoardFigureController__SwitchServantCoroutine_d__25_o *this,
+        const MethodInfo *method)
+{
+  struct ClassBoardFigureController_o *_4__this; // x0
+  float svtDisplayTime; // s8
+  UnityEngine_WaitForSeconds_o *v5; // x20
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  Il2CppObject **p__2__current; // x0
+  int32_t v9; // w21
+  bool result; // w0
+  Il2CppObject *v11; // x0
+  struct System_Collections_Generic_List_List_StandFigureCollect___o *figureCollectList; // x9
+  int v13; // w8
+  Il2CppObject *v14; // x0
+
+  if ( (byte_4C2ACDE & 1) == 0 )
+  {
+    sub_1C2D490(&Method_System_Collections_Generic_List_List_StandFigureCollect___get_Count__);
+    sub_1C2D490(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4C2ACDE = 1;
+  }
+  _4__this = this->fields.__4__this;
+  switch ( this->fields.__1__state )
+  {
+    case 0:
+    case 3:
+      this->fields.__1__state = -1;
+      if ( !_4__this )
+        goto LABEL_16;
+      svtDisplayTime = _4__this->fields.svtDisplayTime;
+      v5 = (UnityEngine_WaitForSeconds_o *)sub_1C2D6DC(UnityEngine_WaitForSeconds_TypeInfo);
+      UnityEngine_WaitForSeconds___ctor(v5, svtDisplayTime, 0);
+      this->fields.__2__current = (Il2CppObject *)v5;
+      p__2__current = &this->fields.__2__current;
+      v9 = 1;
+      goto LABEL_14;
+    case 1:
+      this->fields.__1__state = -1;
+      if ( !_4__this )
+        goto LABEL_16;
+      v11 = (Il2CppObject *)ClassBoardFigureController__PlaySwitchServantAnimationCoroutine(_4__this, 1.0, 0.0, method);
+      LODWORD(v5) = (_DWORD)v11;
+      this->fields.__2__current = v11;
+      p__2__current = &this->fields.__2__current;
+      v9 = 2;
+      goto LABEL_14;
+    case 2:
+      this->fields.__1__state = -1;
+      if ( !_4__this
+        || (figureCollectList = _4__this->fields.figureCollectList,
+            v13 = _4__this->fields.currentSvtIndex + 1,
+            _4__this->fields.currentSvtIndex = v13,
+            !figureCollectList) )
+      {
+LABEL_16:
+        sub_1C2D6EC(_4__this, method);
+      }
+      if ( v13 >= figureCollectList->fields._size )
+        _4__this->fields.currentSvtIndex = 0;
+      v14 = (Il2CppObject *)ClassBoardFigureController__PlaySwitchServantAnimationCoroutine(_4__this, 0.0, 1.0, method);
+      LODWORD(v5) = (_DWORD)v14;
+      this->fields.__2__current = v14;
+      p__2__current = &this->fields.__2__current;
+      v9 = 3;
+LABEL_14:
+      sub_1C2D434((CGThumbnailListItem_o *)p__2__current, (int32_t)v5, v6, v7);
+      result = 1;
+      this->fields.__1__state = v9;
+      break;
+    default:
+      result = 0;
+      break;
+  }
+  return result;
+}
+
+
+Il2CppObject *ClassBoardFigureController__SwitchServantCoroutine_d__25__System_Collections_Generic_IEnumerator_System_Object__get_Current(
+        ClassBoardFigureController__SwitchServantCoroutine_d__25_o *this,
+        const MethodInfo *method)
+{
+  return this->fields.__2__current;
+}
+
+
+void __noreturn ClassBoardFigureController__SwitchServantCoroutine_d__25__System_Collections_IEnumerator_Reset(
+        ClassBoardFigureController__SwitchServantCoroutine_d__25_o *this,
+        const MethodInfo *method)
+{
+  __int64 v2; // x0
+  System_NotSupportedException_o *v3; // x19
+  __int64 v4; // x0
+
+  v2 = sub_1C2D4A4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C2D6DC(v2);
+  System_NotSupportedException___ctor(v3, 0);
+  v4 = sub_1C2D4A4(&Method_ClassBoardFigureController__SwitchServantCoroutine_d__25_System_Collections_IEnumerator_Reset__);
+  sub_1C2D5B8(v3, v4);
+}
+
+
+Il2CppObject *ClassBoardFigureController__SwitchServantCoroutine_d__25__System_Collections_IEnumerator_get_Current(
+        ClassBoardFigureController__SwitchServantCoroutine_d__25_o *this,
+        const MethodInfo *method)
+{
+  return this->fields.__2__current;
+}
+
+
+void ClassBoardFigureController__SwitchServantCoroutine_d__25__System_IDisposable_Dispose(
+        ClassBoardFigureController__SwitchServantCoroutine_d__25_o *this,
+        const MethodInfo *method)
+{
+  ;
 }

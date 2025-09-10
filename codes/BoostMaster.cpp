@@ -1,61 +1,56 @@
-void __fastcall BoostMaster___ctor(BoostMaster_o *this, const MethodInfo *method)
+void BoostMaster___ctor(BoostMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C1E9 & 1) == 0 )
+  if ( (byte_4C26F90 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_BoostMaster__BoostEntity__int___ctor__, method);
-    byte_4B1C1E9 = 1;
+    sub_1C2D490(&Method_DataMasterBase_BoostMaster__BoostEntity__int___ctor__);
+    byte_4C26F90 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     324,
-    (const MethodInfo_32C5ADC *)Method_DataMasterBase_BoostMaster__BoostEntity__int___ctor__);
+    (const MethodInfo_3385A74 *)Method_DataMasterBase_BoostMaster__BoostEntity__int___ctor__);
 }
 
 
-BoostEntity_array *__fastcall BoostMaster__GetAvailableEntities(BoostMaster_o *this, const MethodInfo *method)
+BoostEntity_array *BoostMaster__GetAvailableEntities(BoostMaster_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  System_Collections_Generic_List_object__o *v8; // x20
-  const MethodInfo *v9; // x1
+  System_Collections_Generic_List_object__o *v3; // x20
+  const MethodInfo *v4; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  int v11; // w21
-  int32_t v12; // w22
-  Il2CppObject *v13; // x23
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int v6; // w21
+  int32_t v7; // w22
+  Il2CppObject *v8; // x23
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v17; // x9
+  _QWORD *v12; // x9
   __int64 size; // x10
-  Il2CppClass **v19; // x0
+  Il2CppClass **v14; // x0
 
-  if ( (byte_4B1C1E7 & 1) == 0 )
+  if ( (byte_4C26F8E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Count__, method);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Item__, v3);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity__Add__, v4);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity__ToArray__, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity___ctor__, v6);
-    sub_1BCAFF8(&System_Collections_Generic_List_BoostEntity__TypeInfo, v7);
-    byte_4B1C1E7 = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Item__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_BoostEntity__TypeInfo);
+    byte_4C26F8E = 1;
   }
-  v8 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_BoostEntity__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_BoostEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v8,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_BoostEntity___ctor__);
+    v3,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_BoostEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_17;
   list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                              list,
-                                                             (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Count__);
+                                                             (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Count__);
   if ( (int)list >= 1 )
   {
-    v11 = (int)list;
-    v12 = 0;
+    v6 = (int)list;
+    v7 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -63,195 +58,186 @@ BoostEntity_array *__fastcall BoostMaster__GetAvailableEntities(BoostMaster_o *t
         break;
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
-                                                                 v12,
-                                                                 (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Item__);
+                                                                 v7,
+                                                                 (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Item__);
       if ( list )
       {
-        v13 = (Il2CppObject *)list;
-        list = (System_Collections_ObjectModel_Collection_T__o *)BoostEntity__IsValidPeriod((BoostEntity_o *)list, v9);
+        v8 = (Il2CppObject *)list;
+        list = (System_Collections_ObjectModel_Collection_T__o *)BoostEntity__IsValidPeriod((BoostEntity_o *)list, v4);
         if ( ((unsigned __int8)list & 1) != 0 )
         {
-          if ( !v8 )
+          if ( !v3 )
             break;
-          items = v8->fields._items;
-          v17 = Method_System_Collections_Generic_List_BoostEntity__Add__;
-          ++v8->fields._version;
+          items = v3->fields._items;
+          v12 = Method_System_Collections_Generic_List_BoostEntity__Add__;
+          ++v3->fields._version;
           if ( !items )
             break;
-          size = v8->fields._size;
-          if ( (unsigned int)size >= items->max_length )
+          size = v3->fields._size;
+          if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
+              v3,
               v8,
-              v13,
-              *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+              *(const MethodInfo_3789B84 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
           }
           else
           {
-            v19 = &items->obj.klass + size;
-            v8->fields._size = size + 1;
-            v19[4] = (Il2CppClass *)v13;
-            sub_1BCAF9C((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v13, v14, v15);
+            v14 = &items->obj.klass + size;
+            v3->fields._size = size + 1;
+            v14[4] = (Il2CppClass *)v8;
+            sub_1C2D434((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v8, v9, v10);
           }
         }
       }
-      if ( v11 == ++v12 )
+      if ( v6 == ++v7 )
         goto LABEL_15;
     }
 LABEL_17:
-    sub_1BCB254(list, v9);
+    sub_1C2D6EC(list, v4);
   }
 LABEL_15:
-  if ( !v8 )
+  if ( !v3 )
     goto LABEL_17;
   return (BoostEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                v8,
-                                (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BoostEntity__ToArray__);
+                                v3,
+                                (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_BoostEntity__ToArray__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-BoostEntity_array *__fastcall BoostMaster__GetBoostListRecommendFirst(
+BoostEntity_array *BoostMaster__GetBoostListRecommendFirst(
         BoostMaster_o *this,
         int32_t RecommendedBoostId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
+  System_Collections_Generic_List_object__o *v5; // x19
   __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  System_Collections_Generic_List_object__o *v11; // x19
-  __int64 v12; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  int v14; // w23
-  Il2CppObject *v15; // x22
+  int v8; // w23
+  Il2CppObject *v9; // x22
   int32_t i; // w24
-  Il2CppObject *v17; // x29
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  Il2CppObject *v11; // x29
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v21; // x9
+  _QWORD *v15; // x9
   __int64 size; // x10
-  Il2CppClass **v23; // x0
-  System_Collections_Generic_List_object__o *v24; // x20
-  int32_t v25; // w2
-  const MethodInfo *v26; // x3
-  struct System_Object_array *v27; // x8
-  _QWORD *v28; // x9
-  __int64 v29; // x10
-  Il2CppClass **v30; // x0
+  Il2CppClass **v17; // x0
+  System_Collections_Generic_List_object__o *v18; // x20
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  struct System_Object_array *v21; // x8
+  _QWORD *v22; // x9
+  __int64 v23; // x10
+  Il2CppClass **v24; // x0
 
-  if ( (byte_4B1C1E8 & 1) == 0 )
+  if ( (byte_4C26F8F & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Count__,
-      *(_QWORD *)&RecommendedBoostId);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Item__, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity__AddRange__, v6);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity__Add__, v7);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity__ToArray__, v8);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BoostEntity___ctor__, v9);
-    sub_1BCAFF8(&System_Collections_Generic_List_BoostEntity__TypeInfo, v10);
-    byte_4B1C1E8 = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Item__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity__AddRange__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BoostEntity___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_BoostEntity__TypeInfo);
+    byte_4C26F8F = 1;
   }
-  v11 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_BoostEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_BoostEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v11,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_BoostEntity___ctor__);
+    v5,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_BoostEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_22;
   list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                              list,
-                                                             (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Count__);
+                                                             (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Count__);
   if ( (int)list < 1 )
   {
 LABEL_21:
-    if ( v11 )
+    if ( v5 )
       return (BoostEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                    v11,
-                                    (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BoostEntity__ToArray__);
+                                    v5,
+                                    (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_BoostEntity__ToArray__);
 LABEL_22:
-    sub_1BCB254(list, v12);
+    sub_1C2D6EC(list, v6);
   }
-  v14 = (int)list;
-  v15 = 0LL;
-  for ( i = 0; i != v14; ++i )
+  v8 = (int)list;
+  v9 = 0;
+  for ( i = 0; i != v8; ++i )
   {
     list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
     if ( !list )
       goto LABEL_22;
-    v17 = v15;
+    v11 = v9;
     list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                list,
                                                                i,
-                                                               (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Item__);
+                                                               (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_BoostEntity__get_Item__);
     if ( list )
     {
-      v15 = (Il2CppObject *)list;
+      v9 = (Il2CppObject *)list;
       if ( LODWORD(list->fields.items) == RecommendedBoostId )
         continue;
-      if ( !v11 )
+      if ( !v5 )
         goto LABEL_22;
-      items = v11->fields._items;
-      v21 = Method_System_Collections_Generic_List_BoostEntity__Add__;
-      ++v11->fields._version;
+      items = v5->fields._items;
+      v15 = Method_System_Collections_Generic_List_BoostEntity__Add__;
+      ++v5->fields._version;
       if ( !items )
         goto LABEL_22;
-      size = v11->fields._size;
-      if ( (unsigned int)size >= items->max_length )
+      size = v5->fields._size;
+      if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v11,
+          v5,
           (Il2CppObject *)list,
-          *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+          *(const MethodInfo_3789B84 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
       }
       else
       {
-        v23 = &items->obj.klass + size;
-        v11->fields._size = size + 1;
-        v23[4] = (Il2CppClass *)v15;
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v23 + 4), (int32_t)v15, v18, v19);
+        v17 = &items->obj.klass + size;
+        v5->fields._size = size + 1;
+        v17[4] = (Il2CppClass *)v9;
+        sub_1C2D434((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v9, v12, v13);
       }
     }
-    v15 = v17;
+    v9 = v11;
   }
-  if ( !v15 )
+  if ( !v9 )
     goto LABEL_21;
-  v24 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_BoostEntity__TypeInfo);
+  v18 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_BoostEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v24,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_BoostEntity___ctor__);
-  if ( !v24 )
+    v18,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_BoostEntity___ctor__);
+  if ( !v18 )
     goto LABEL_22;
-  v27 = v24->fields._items;
-  v28 = Method_System_Collections_Generic_List_BoostEntity__Add__;
-  ++v24->fields._version;
-  if ( !v27 )
+  v21 = v18->fields._items;
+  v22 = Method_System_Collections_Generic_List_BoostEntity__Add__;
+  ++v18->fields._version;
+  if ( !v21 )
     goto LABEL_22;
-  v29 = v24->fields._size;
-  if ( (unsigned int)v29 >= v27->max_length )
+  v23 = v18->fields._size;
+  if ( (unsigned int)v23 >= LODWORD(v21->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v24,
-      v15,
-      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+      v18,
+      v9,
+      *(const MethodInfo_3789B84 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
   }
   else
   {
-    v30 = &v27->obj.klass + v29;
-    v24->fields._size = v29 + 1;
-    v30[4] = (Il2CppClass *)v15;
-    sub_1BCAF9C((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v15, v25, v26);
+    v24 = &v21->obj.klass + v23;
+    v18->fields._size = v23 + 1;
+    v24[4] = (Il2CppClass *)v9;
+    sub_1C2D434((CGThumbnailListItem_o *)(v24 + 4), (int32_t)v9, v19, v20);
   }
   System_Collections_Generic_List_object___AddRange(
-    v24,
-    (System_Collections_Generic_IEnumerable_T__o *)v11,
-    (const MethodInfo_36B9DDC *)Method_System_Collections_Generic_List_BoostEntity__AddRange__);
-  v11 = v24;
+    v18,
+    (System_Collections_Generic_IEnumerable_T__o *)v5,
+    (const MethodInfo_3789D90 *)Method_System_Collections_Generic_List_BoostEntity__AddRange__);
+  v5 = v18;
   return (BoostEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                v11,
-                                (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BoostEntity__ToArray__);
+                                v5,
+                                (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_BoostEntity__ToArray__);
 }

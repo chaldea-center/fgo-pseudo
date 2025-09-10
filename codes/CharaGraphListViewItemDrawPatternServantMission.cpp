@@ -1,14 +1,14 @@
-void __fastcall CharaGraphListViewItemDrawPatternServantMission___ctor(
+void CharaGraphListViewItemDrawPatternServantMission___ctor(
         CharaGraphListViewItemDrawPatternServantMission_o *this,
         const MethodInfo *method)
 {
   CharaGraphListViewItemDrawPatternServantCollection___ctor(
     (CharaGraphListViewItemDrawPatternServantCollection_o *)this,
-    0LL);
+    0);
 }
 
 
-void __fastcall CharaGraphListViewItemDrawPatternServantMission__SetupAccessories(
+void CharaGraphListViewItemDrawPatternServantMission__SetupAccessories(
         CharaGraphListViewItemDrawPatternServantMission_o *this,
         CharaGraphListViewItemDraw_o *itemDraw,
         CharaGraphListViewItemBase_o *item,
@@ -21,8 +21,8 @@ void __fastcall CharaGraphListViewItemDrawPatternServantMission__SetupAccessorie
     (CharaGraphListViewItemDrawPatternDefault_o *)this,
     itemDraw,
     item,
-    0LL);
-  if ( !itemDraw || (servantFaceIcon = itemDraw->fields.servantFaceIcon) == 0LL )
-    sub_1BCB254(servantFaceIcon, v6);
-  ServantFaceIconComponent__ClearShiningIcon(servantFaceIcon, 0LL);
+    0);
+  if ( !itemDraw || (servantFaceIcon = itemDraw->fields.servantFaceIcon) == 0 )
+    sub_1C2D6EC(servantFaceIcon, v6);
+  ServantFaceIconComponent__ClearShiningIcon(servantFaceIcon, 0);
 }

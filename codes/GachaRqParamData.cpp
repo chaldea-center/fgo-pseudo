@@ -1,10 +1,10 @@
-void __fastcall GachaRqParamData___ctor(GachaRqParamData_o *this, const MethodInfo *method)
+void GachaRqParamData___ctor(GachaRqParamData_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall GachaRqParamData___ctor_34615744(
+void GachaRqParamData___ctor_35169976(
         GachaRqParamData_o *this,
         int32_t gachaType,
         int32_t gachaId,
@@ -26,7 +26,7 @@ void __fastcall GachaRqParamData___ctor_34615744(
   const MethodInfo *v23; // x3
 
   v19 = this;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   v19->fields.gachaType = gachaType;
   v19->fields.gachaId = gachaId;
   v19->fields.warId = warId;
@@ -36,9 +36,9 @@ void __fastcall GachaRqParamData___ctor_34615744(
   v19->fields.shopIdIdx = shopIdIdx;
   v19->fields.gachaSubId = gachaSubId;
   v19->fields.storyAdjustIds = storyAdjustIds;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v19->fields.storyAdjustIds, (int32_t)storyAdjustIds, v20, v21);
+  sub_1C2D434((CGThumbnailListItem_o *)&v19->fields.storyAdjustIds, (int32_t)storyAdjustIds, v20, v21);
   v19->fields.selectBonusList = selectBonusList;
   v19 = (GachaRqParamData_o *)((char *)v19 + 64);
   LOBYTE(v19[-1].fields.selectBonusList) = isAppendSummon;
-  sub_1BCAF9C((CGThumbnailListItem_o *)v19, (int32_t)selectBonusList, v22, v23);
+  sub_1C2D434((CGThumbnailListItem_o *)v19, (int32_t)selectBonusList, v22, v23);
 }

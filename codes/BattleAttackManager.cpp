@@ -1,138 +1,130 @@
-void __fastcall BattleAttackManager___ctor(BattleAttackManager_o *this, const MethodInfo *method)
+void BattleAttackManager___ctor(BattleAttackManager_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  System_Collections_Generic_List_object__o *v4; // x20
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  System_Collections_Generic_List_object__o *v3; // x20
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
-  if ( (byte_4B1EA5E & 1) == 0 )
+  if ( (byte_4C29891 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleAttack___ctor__, method);
-    sub_1BCAFF8(&System_Collections_Generic_List_BattleAttack__TypeInfo, v3);
-    byte_4B1EA5E = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_BattleAttack___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_BattleAttack__TypeInfo);
+    byte_4C29891 = 1;
   }
-  v4 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_BattleAttack__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_BattleAttack__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v4,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_BattleAttack___ctor__);
-  this->fields.attackList = (struct System_Collections_Generic_List_BattleAttack__o *)v4;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.attackList, (int32_t)v4, v5, v6);
-  System_Object___ctor((Il2CppObject *)this, 0LL);
-  ((void (__fastcall *)(BattleAttackManager_o *, Il2CppMethodPointer))this->klass->vtable._7_InitTurn.method)(
+    v3,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_BattleAttack___ctor__);
+  this->fields.attackList = (struct System_Collections_Generic_List_BattleAttack__o *)v3;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.attackList, (int32_t)v3, v4, v5);
+  System_Object___ctor((Il2CppObject *)this, 0);
+  ((void (__fastcall *)(BattleAttackManager_o *, const MethodInfo *))this->klass->vtable._7_InitTurn.methodPtr)(
     this,
-    this->klass->vtable._8_GetSaveData.methodPtr);
+    this->klass->vtable._7_InitTurn.method);
 }
 
 
-void __fastcall BattleAttackManager__AfterLoadQuest(
-        BattleAttackManager_o *this,
-        BattleData_o *data,
-        const MethodInfo *method)
+void BattleAttackManager__AfterLoadQuest(BattleAttackManager_o *this, BattleData_o *data, const MethodInfo *method)
 {
   ;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall BattleAttackManager__GetLogicType(
-        BattleAttackManager_o *this,
-        int32_t index,
-        const MethodInfo *method)
+int32_t BattleAttackManager__GetLogicType(BattleAttackManager_o *this, int32_t index, const MethodInfo *method)
 {
   const MethodInfo *v5; // x1
   BattleAttack_o *Current; // x0
   __int64 v7; // x1
 
-  if ( (byte_4B1EA60 & 1) == 0 )
+  if ( (byte_4C29893 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_BasicHelper_IndexValue_BattleLogic_LOGICTYPE___, *(_QWORD *)&index);
-    byte_4B1EA60 = 1;
+    sub_1C2D490(&Method_BasicHelper_IndexValue_BattleLogic_LOGICTYPE___);
+    byte_4C29893 = 1;
   }
   if ( !BattleAttackManager__get_Current(this, *(const MethodInfo **)&index) )
     return 78;
   Current = BattleAttackManager__get_Current(this, v5);
   if ( !Current )
-    sub_1BCB254(0LL, v7);
+    sub_1C2D6EC(0, v7);
   return BasicHelper__IndexValue_Int32Enum_(
            (System_Int32Enum_array *)Current->fields._LogicArray_k__BackingField,
            index,
            78,
-           (const MethodInfo_300906C *)Method_BasicHelper_IndexValue_BattleLogic_LOGICTYPE___);
+           (const MethodInfo_30BCE40 *)Method_BasicHelper_IndexValue_BattleLogic_LOGICTYPE___);
 }
 
 
-void __fastcall BattleAttackManager__GetSaveData(
+void BattleAttackManager__GetSaveData(
         BattleAttackManager_o *this,
         BattleData_SaveData_o *save,
         const MethodInfo *method)
 {
   if ( !save )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   save->fields.attackIndex = this->fields.attackIndex;
 }
 
 
-BattleAttackManager_o *__fastcall BattleAttackManager__Init(
+BattleAttackManager_o *BattleAttackManager__Init(
         BattleAttackManager_o *this,
         BattleLogic_LOGICTYPE_array *allLogicArray,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
   System_Collections_Generic_List_object__o *attackList; // x20
-  BattleAttack_o *v7; // x21
-  const MethodInfo *v8; // x2
-  __int64 v9; // x0
-  __int64 v10; // x1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  BattleAttack_o *v6; // x21
+  const MethodInfo *v7; // x2
+  __int64 v8; // x0
+  __int64 v9; // x1
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v14; // x9
+  _QWORD *v13; // x9
   __int64 size; // x10
-  Il2CppClass **v16; // x0
+  Il2CppClass **v15; // x0
 
-  if ( (byte_4B1EA5F & 1) == 0 )
+  if ( (byte_4C29892 & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleAttackPlayer_TypeInfo, allLogicArray);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleAttack__Add__, v5);
-    byte_4B1EA5F = 1;
+    sub_1C2D490(&BattleAttackPlayer_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BattleAttack__Add__);
+    byte_4C29892 = 1;
   }
   attackList = (System_Collections_Generic_List_object__o *)this->fields.attackList;
-  v7 = (BattleAttack_o *)sub_1BCB244(BattleAttackPlayer_TypeInfo);
-  BattleAttack___ctor(v7, allLogicArray, v8);
+  v6 = (BattleAttack_o *)sub_1C2D6DC(BattleAttackPlayer_TypeInfo);
+  BattleAttack___ctor(v6, allLogicArray, v7);
   if ( !attackList
     || (items = attackList->fields._items,
-        v14 = Method_System_Collections_Generic_List_BattleAttack__Add__,
+        v13 = Method_System_Collections_Generic_List_BattleAttack__Add__,
         ++attackList->fields._version,
         !items) )
   {
-    sub_1BCB254(v9, v10);
+    sub_1C2D6EC(v8, v9);
   }
   size = attackList->fields._size;
-  if ( (unsigned int)size >= items->max_length )
+  if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       attackList,
-      (Il2CppObject *)v7,
-      *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      (Il2CppObject *)v6,
+      *(const MethodInfo_3789B84 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
   }
   else
   {
-    v16 = &items->obj.klass + size;
+    v15 = &items->obj.klass + size;
     attackList->fields._size = size + 1;
-    v16[4] = (Il2CppClass *)v7;
-    sub_1BCAF9C((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v7, v11, v12);
+    v15[4] = (Il2CppClass *)v6;
+    sub_1C2D434((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v6, v10, v11);
   }
   return this;
 }
 
 
-void __fastcall BattleAttackManager__InitTurn(BattleAttackManager_o *this, const MethodInfo *method)
+void BattleAttackManager__InitTurn(BattleAttackManager_o *this, const MethodInfo *method)
 {
   this->fields._IsTurnEnd_k__BackingField = 0;
 }
 
 
-bool __fastcall BattleAttackManager__IsEnemyTurnAfterBuffTurnProgress(
+bool BattleAttackManager__IsEnemyTurnAfterBuffTurnProgress(
         BattleAttackManager_o *this,
         int32_t logicIndex,
         const MethodInfo *method)
@@ -144,7 +136,7 @@ bool __fastcall BattleAttackManager__IsEnemyTurnAfterBuffTurnProgress(
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall BattleAttackManager__IsLogicIndexBetweenAndNotIncludeEnd(
+bool BattleAttackManager__IsLogicIndexBetweenAndNotIncludeEnd(
         BattleAttackManager_o *this,
         int32_t logicIndex,
         int32_t startType,
@@ -158,10 +150,10 @@ bool __fastcall BattleAttackManager__IsLogicIndexBetweenAndNotIncludeEnd(
   int32_t v13; // w22
   const MethodInfo *v14; // x1
 
-  if ( (byte_4B1EA62 & 1) == 0 )
+  if ( (byte_4C29895 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Array_IndexOf_BattleLogic_LOGICTYPE___, *(_QWORD *)&logicIndex);
-    byte_4B1EA62 = 1;
+    sub_1C2D490(&Method_System_Array_IndexOf_BattleLogic_LOGICTYPE___);
+    byte_4C29895 = 1;
   }
   Current = BattleAttackManager__get_Current(this, *(const MethodInfo **)&logicIndex);
   if ( !Current || !Current->fields._LogicArray_k__BackingField )
@@ -171,23 +163,21 @@ bool __fastcall BattleAttackManager__IsLogicIndexBetweenAndNotIncludeEnd(
     || (v13 = System_Array__IndexOf_Int32Enum_(
                 (System_Int32Enum_array *)v11->fields._LogicArray_k__BackingField,
                 startType,
-                (const MethodInfo_31190C0 *)Method_System_Array_IndexOf_BattleLogic_LOGICTYPE___),
-        (v11 = BattleAttackManager__get_Current(this, v14)) == 0LL) )
+                (const MethodInfo_31D5A58 *)Method_System_Array_IndexOf_BattleLogic_LOGICTYPE___),
+        (v11 = BattleAttackManager__get_Current(this, v14)) == 0) )
   {
-    sub_1BCB254(v11, v12);
+    sub_1C2D6EC(v11, v12);
   }
-  return (v13 <= logicIndex) & (System_Array__IndexOf_Int32Enum_(
-                                  (System_Int32Enum_array *)v11->fields._LogicArray_k__BackingField,
-                                  endType,
-                                  (const MethodInfo_31190C0 *)Method_System_Array_IndexOf_BattleLogic_LOGICTYPE___) > logicIndex);
+  return (v13 <= logicIndex)
+       & (System_Array__IndexOf_Int32Enum_(
+            (System_Int32Enum_array *)v11->fields._LogicArray_k__BackingField,
+            endType,
+            (const MethodInfo_31D5A58 *)Method_System_Array_IndexOf_BattleLogic_LOGICTYPE___) > logicIndex);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall BattleAttackManager__IsNextActionAttacked(
-        BattleAttackManager_o *this,
-        bool isEnemy,
-        const MethodInfo *method)
+bool BattleAttackManager__IsNextActionAttacked(BattleAttackManager_o *this, bool isEnemy, const MethodInfo *method)
 {
   BattleAttack_o *Current; // x0
   const MethodInfo *v6; // x1
@@ -198,14 +188,14 @@ bool __fastcall BattleAttackManager__IsNextActionAttacked(
   {
     Current = BattleAttackManager__get_Current(this, v6);
     if ( !Current )
-      sub_1BCB254(0LL, v7);
+      sub_1C2D6EC(0, v7);
     LODWORD(Current) = ((unsigned int)Current->fields._AttackedInAction_k__BackingField >> isEnemy) & 1;
   }
   return (char)Current;
 }
 
 
-bool __fastcall BattleAttackManager__IsPlayerTurnAfterBuffTurnProgress(
+bool BattleAttackManager__IsPlayerTurnAfterBuffTurnProgress(
         BattleAttackManager_o *this,
         int32_t logicIndex,
         const MethodInfo *method)
@@ -217,10 +207,7 @@ bool __fastcall BattleAttackManager__IsPlayerTurnAfterBuffTurnProgress(
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall BattleAttackManager__IsPrevActionAttacked(
-        BattleAttackManager_o *this,
-        bool isEnemy,
-        const MethodInfo *method)
+bool BattleAttackManager__IsPrevActionAttacked(BattleAttackManager_o *this, bool isEnemy, const MethodInfo *method)
 {
   BattleAttack_o *Previous; // x0
   const MethodInfo *v6; // x1
@@ -231,69 +218,68 @@ bool __fastcall BattleAttackManager__IsPrevActionAttacked(
   {
     Previous = BattleAttackManager__get_Previous(this, v6);
     if ( !Previous )
-      sub_1BCB254(0LL, v7);
+      sub_1C2D6EC(0, v7);
     LODWORD(Previous) = ((unsigned int)Previous->fields._AttackedInAction_k__BackingField >> isEnemy) & 1;
   }
   return (char)Previous;
 }
 
 
-BattleAttackManager_o *__fastcall BattleAttackManager__Make(
+BattleAttackManager_o *BattleAttackManager__Make(
         bool isPrecedingPlayer,
         BattleLogic_LOGICTYPE_array *allLogicArray,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  _QWORD *v6; // x8
-  BattleAttackManager_o *v7; // x20
-  const MethodInfo *v8; // x1
-  __int64 v9; // x0
-  __int64 v10; // x1
+  _QWORD *v5; // x8
+  BattleAttackManager_o *v6; // x20
+  const MethodInfo *v7; // x1
+  __int64 v8; // x0
+  __int64 v9; // x1
 
-  if ( (byte_4B1EA5B & 1) == 0 )
+  if ( (byte_4C2988E & 1) == 0 )
   {
-    sub_1BCAFF8(&EnemyFirstAttackManager_TypeInfo, allLogicArray);
-    sub_1BCAFF8(&PlayerFirstAttackManager_TypeInfo, v5);
-    byte_4B1EA5B = 1;
+    sub_1C2D490(&EnemyFirstAttackManager_TypeInfo);
+    sub_1C2D490(&PlayerFirstAttackManager_TypeInfo);
+    byte_4C2988E = 1;
   }
   if ( isPrecedingPlayer )
-    v6 = &PlayerFirstAttackManager_TypeInfo;
+    v5 = &PlayerFirstAttackManager_TypeInfo;
   else
-    v6 = &EnemyFirstAttackManager_TypeInfo;
-  v7 = (BattleAttackManager_o *)sub_1BCB244(*v6);
-  BattleAttackManager___ctor(v7, v8);
-  if ( !v7 )
-    sub_1BCB254(v9, v10);
-  return (BattleAttackManager_o *)((__int64 (__fastcall *)(BattleAttackManager_o *, BattleLogic_LOGICTYPE_array *, Il2CppMethodPointer))v7->klass->vtable._5_Init.method)(
-                                    v7,
+    v5 = &EnemyFirstAttackManager_TypeInfo;
+  v6 = (BattleAttackManager_o *)sub_1C2D6DC(*v5);
+  BattleAttackManager___ctor(v6, v7);
+  if ( !v6 )
+    sub_1C2D6EC(v8, v9);
+  return (BattleAttackManager_o *)((__int64 (__fastcall *)(BattleAttackManager_o *, BattleLogic_LOGICTYPE_array *, const MethodInfo *))v6->klass->vtable._5_Init.methodPtr)(
+                                    v6,
                                     allLogicArray,
-                                    v7->klass->vtable._6_Reset.methodPtr);
+                                    v6->klass->vtable._5_Init.method);
 }
 
 
-void __fastcall BattleAttackManager__Next(BattleAttackManager_o *this, const MethodInfo *method)
+void BattleAttackManager__Next(BattleAttackManager_o *this, const MethodInfo *method)
 {
   _BOOL4 IsTurnEnd_k__BackingField; // w9
 
   IsTurnEnd_k__BackingField = this->fields._IsTurnEnd_k__BackingField;
   ++this->fields.attackIndex;
   if ( IsTurnEnd_k__BackingField )
-    ((void (__fastcall *)(BattleAttackManager_o *, Il2CppMethodPointer))this->klass->vtable._6_Reset.method)(
+    ((void (__fastcall *)(BattleAttackManager_o *, const MethodInfo *))this->klass->vtable._6_Reset.methodPtr)(
       this,
-      this->klass->vtable._7_InitTurn.methodPtr);
+      this->klass->vtable._6_Reset.method);
 }
 
 
-int32_t __fastcall BattleAttackManager__PrevIndex(BattleAttackManager_o *this, const MethodInfo *method)
+int32_t BattleAttackManager__PrevIndex(BattleAttackManager_o *this, const MethodInfo *method)
 {
   int32_t attackIndex; // w8
   __int64 v4; // x0
   struct System_Collections_Generic_List_BattleAttack__o *attackList; // x8
 
-  if ( (byte_4B1EA61 & 1) == 0 )
+  if ( (byte_4C29894 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleAttack__get_Count__, method);
-    byte_4B1EA61 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_BattleAttack__get_Count__);
+    byte_4C29894 = 1;
   }
   attackIndex = this->fields.attackIndex;
   v4 = (unsigned int)(attackIndex - 1);
@@ -301,68 +287,64 @@ int32_t __fastcall BattleAttackManager__PrevIndex(BattleAttackManager_o *this, c
   {
     attackList = this->fields.attackList;
     if ( !attackList )
-      sub_1BCB254(v4, method);
+      sub_1C2D6EC(v4, method);
     LODWORD(v4) = attackList->fields._size - 1;
   }
   return v4;
 }
 
 
-void __fastcall BattleAttackManager__PrevProcTactical(
-        BattleAttackManager_o *this,
-        BattleData_o *data,
-        const MethodInfo *method)
+void BattleAttackManager__PrevProcTactical(BattleAttackManager_o *this, BattleData_o *data, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall BattleAttackManager__Reset(BattleAttackManager_o *this, const MethodInfo *method)
+void BattleAttackManager__Reset(BattleAttackManager_o *this, const MethodInfo *method)
 {
   this->fields.attackIndex = 0;
 }
 
 
-void __fastcall BattleAttackManager__SetEndActionAttack(
-        BattleAttackManager_o *this,
-        bool isPlayer,
-        const MethodInfo *method)
+void BattleAttackManager__SetEndActionAttack(BattleAttackManager_o *this, bool isPlayer, const MethodInfo *method)
 {
-  if ( ((((__int64 (__fastcall *)(BattleAttackManager_o *, Il2CppMethodPointer, const MethodInfo *))this->klass->vtable._4_get_IsTurnLastAttackPlayer.method)(
+  if ( ((((unsigned int (__fastcall *)(BattleAttackManager_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._4_get_IsTurnLastAttackPlayer.methodPtr)(
            this,
-           this->klass->vtable._5_Init.methodPtr,
-           method) ^ isPlayer) & 1) == 0 )
+           this->klass->vtable._4_get_IsTurnLastAttackPlayer.method,
+           method)
+       ^ isPlayer)
+      & 1) == 0 )
     this->fields._IsTurnEnd_k__BackingField = 1;
 }
 
 
-void __fastcall BattleAttackManager__SetSaveData(
+void BattleAttackManager__SetSaveData(
         BattleAttackManager_o *this,
         BattleData_SaveData_o *save,
         const MethodInfo *method)
 {
   if ( !save )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   this->fields.attackIndex = save->fields.attackIndex;
 }
 
 
-BattleAttack_o *__fastcall BattleAttackManager__get_Current(BattleAttackManager_o *this, const MethodInfo *method)
+BattleAttack_o *BattleAttackManager__get_Current(BattleAttackManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1EA5C & 1) == 0 )
+  if ( (byte_4C2988F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_BasicHelper_IndexValue_BattleAttack___, method);
-    byte_4B1EA5C = 1;
+    sub_1C2D490(&Method_BasicHelper_IndexValue_BattleAttack___);
+    byte_4C2988F = 1;
   }
-  return (BattleAttack_o *)BasicHelper__IndexValue_object__50368672(
+  return (BattleAttack_o *)BasicHelper__IndexValue_object__51105396(
                              (System_Collections_Generic_List_T__o *)this->fields.attackList,
                              this->fields.attackIndex,
-                             0LL,
-                             (const MethodInfo_30090A0 *)Method_BasicHelper_IndexValue_BattleAttack___);
+                             0,
+                             (const MethodInfo_30BCE74 *)Method_BasicHelper_IndexValue_BattleAttack___);
 }
 
 
-bool __fastcall BattleAttackManager__get_IsEnemyAttack(BattleAttackManager_o *this, const MethodInfo *method)
+bool BattleAttackManager__get_IsEnemyAttack(BattleAttackManager_o *this, const MethodInfo *method)
 {
   BattleAttack_o *Current; // x0
   const MethodInfo *v4; // x1
@@ -374,54 +356,54 @@ bool __fastcall BattleAttackManager__get_IsEnemyAttack(BattleAttackManager_o *th
   {
     v5 = BattleAttackManager__get_Current(this, v4);
     if ( !v5 )
-      sub_1BCB254(0LL, v6);
-    LOBYTE(Current) = ((__int64 (__fastcall *)(BattleAttack_o *, const char *))v5->klass[1]._1.gc_desc)(
+      sub_1C2D6EC(0, v6);
+    LOBYTE(Current) = ((__int64 (__fastcall *)(BattleAttack_o *, void *))v5->klass[1]._1.image)(
                         v5,
-                        v5->klass[1]._1.name);
+                        v5->klass[1]._1.gc_desc);
   }
   return (char)Current;
 }
 
 
-bool __fastcall BattleAttackManager__get_IsTurnEnd(BattleAttackManager_o *this, const MethodInfo *method)
+bool BattleAttackManager__get_IsTurnEnd(BattleAttackManager_o *this, const MethodInfo *method)
 {
   return this->fields._IsTurnEnd_k__BackingField;
 }
 
 
-bool __fastcall BattleAttackManager__get_IsTurnLastAttackPlayer(BattleAttackManager_o *this, const MethodInfo *method)
+bool BattleAttackManager__get_IsTurnLastAttackPlayer(BattleAttackManager_o *this, const MethodInfo *method)
 {
   return 0;
 }
 
 
-bool __fastcall BattleAttackManager__get_IsTurnStart(BattleAttackManager_o *this, const MethodInfo *method)
+bool BattleAttackManager__get_IsTurnStart(BattleAttackManager_o *this, const MethodInfo *method)
 {
   return this->fields.attackIndex == 0;
 }
 
 
-BattleAttack_o *__fastcall BattleAttackManager__get_Previous(BattleAttackManager_o *this, const MethodInfo *method)
+BattleAttack_o *BattleAttackManager__get_Previous(BattleAttackManager_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_T__o *attackList; // x20
   int32_t Index; // w1
 
-  if ( (byte_4B1EA5D & 1) == 0 )
+  if ( (byte_4C29890 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_BasicHelper_IndexValue_BattleAttack___, method);
-    byte_4B1EA5D = 1;
+    sub_1C2D490(&Method_BasicHelper_IndexValue_BattleAttack___);
+    byte_4C29890 = 1;
   }
   attackList = (System_Collections_Generic_List_T__o *)this->fields.attackList;
   Index = BattleAttackManager__PrevIndex(this, method);
-  return (BattleAttack_o *)BasicHelper__IndexValue_object__50368672(
+  return (BattleAttack_o *)BasicHelper__IndexValue_object__51105396(
                              attackList,
                              Index,
-                             0LL,
-                             (const MethodInfo_30090A0 *)Method_BasicHelper_IndexValue_BattleAttack___);
+                             0,
+                             (const MethodInfo_30BCE74 *)Method_BasicHelper_IndexValue_BattleAttack___);
 }
 
 
-void __fastcall BattleAttackManager__set_IsTurnEnd(BattleAttackManager_o *this, bool value, const MethodInfo *method)
+void BattleAttackManager__set_IsTurnEnd(BattleAttackManager_o *this, bool value, const MethodInfo *method)
 {
   this->fields._IsTurnEnd_k__BackingField = value;
 }

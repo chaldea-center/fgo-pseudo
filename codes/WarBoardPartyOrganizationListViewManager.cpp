@@ -1,12 +1,12 @@
-void __fastcall WarBoardPartyOrganizationListViewManager___ctor(
+void WarBoardPartyOrganizationListViewManager___ctor(
         WarBoardPartyOrganizationListViewManager_o *this,
         const MethodInfo *method)
 {
-  ListViewManager___ctor((ListViewManager_o *)this, 0LL);
+  ListViewManager___ctor((ListViewManager_o *)this, 0);
 }
 
 
-void __fastcall WarBoardPartyOrganizationListViewManager__CreateList(
+void WarBoardPartyOrganizationListViewManager__CreateList(
         WarBoardPartyOrganizationListViewManager_o *this,
         WarBoardPartyListViewItem_array *memberItemList,
         WarBoardPartyOrganizationMenu_OnTapPartyMemberEvent_o *onTapMember,
@@ -16,7 +16,7 @@ void __fastcall WarBoardPartyOrganizationListViewManager__CreateList(
   Il2CppObject *v8; // x1
   __int64 v9; // x2
   const MethodInfo *v10; // x3
-  __int64 v11; // x8
+  il2cpp_array_size_t max_length; // x8
   unsigned __int64 v12; // x21
   System_Collections_Generic_List_object__o *itemList; // x0
   struct System_Object_array *items; // x8
@@ -25,24 +25,24 @@ void __fastcall WarBoardPartyOrganizationListViewManager__CreateList(
   Il2CppClass **v17; // x8
   const MethodInfo *v18; // x2
 
-  if ( (byte_4B1A1C0 & 1) == 0 )
+  if ( (byte_4C24F44 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ListViewItem__Add__, memberItemList);
-    byte_4B1A1C0 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    byte_4C24F44 = 1;
   }
   this->fields.onTapMember = onTapMember;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.onTapMember, (int32_t)onTapMember, (int32_t)onTapMember, method);
-  ListViewManager__CreateList((ListViewManager_o *)this, 0, 0LL);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.onTapMember, (int32_t)onTapMember, (int32_t)onTapMember, method);
+  ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   if ( memberItemList )
   {
-    v11 = *(_QWORD *)&memberItemList->max_length;
-    if ( (int)v11 >= 1 )
+    max_length = memberItemList->max_length;
+    if ( (int)max_length >= 1 )
     {
-      v12 = 0LL;
+      v12 = 0;
       do
       {
-        if ( v12 >= (unsigned int)v11 )
-          sub_1BCB25C(v7, v8, v9);
+        if ( v12 >= (unsigned int)max_length )
+          sub_1C2D6F4(v7, v8, v9);
         itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
         if ( !itemList
           || (v8 = (Il2CppObject *)memberItemList->m_Items[v12],
@@ -51,156 +51,148 @@ void __fastcall WarBoardPartyOrganizationListViewManager__CreateList(
               ++itemList->fields._version,
               !items) )
         {
-          sub_1BCB254(itemList, v8);
+          sub_1C2D6EC(itemList, v8);
         }
         size = itemList->fields._size;
-        if ( (unsigned int)size >= items->max_length )
+        if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
             v8,
-            *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
         }
         else
         {
           v17 = &items->obj.klass + size;
           itemList->fields._size = size + 1;
           v17[4] = (Il2CppClass *)v8;
-          sub_1BCAF9C((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v8, v9, v10);
+          sub_1C2D434((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v8, v9, v10);
         }
-        LODWORD(v11) = memberItemList->max_length;
+        LODWORD(max_length) = memberItemList->max_length;
         ++v12;
       }
-      while ( (__int64)v12 < (int)v11 );
+      while ( (__int64)v12 < (int)max_length );
     }
   }
-  ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0LL);
+  ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
   WarBoardPartyOrganizationListViewManager__SetEnableScroll(this, 0, v18);
 }
 
 
-void __fastcall WarBoardPartyOrganizationListViewManager__DestroyList(
+void WarBoardPartyOrganizationListViewManager__DestroyList(
         WarBoardPartyOrganizationListViewManager_o *this,
         const MethodInfo *method)
 {
   int32_t v3; // w2
   const MethodInfo *v4; // x3
 
-  ListViewManager__DestroyList((ListViewManager_o *)this, 0LL);
-  this->fields.onTapMember = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.onTapMember, 0, v3, v4);
+  ListViewManager__DestroyList((ListViewManager_o *)this, 0);
+  this->fields.onTapMember = 0;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.onTapMember, 0, v3, v4);
 }
 
 
-System_Collections_Generic_List_WarBoardPartyListViewObject__o *__fastcall WarBoardPartyOrganizationListViewManager__GetObjectList(
+System_Collections_Generic_List_WarBoardPartyListViewObject__o *WarBoardPartyOrganizationListViewManager__GetObjectList(
         WarBoardPartyOrganizationListViewManager_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
+  System_Collections_Generic_List_object__o *v3; // x19
   __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  System_Collections_Generic_List_object__o *v11; // x19
-  __int64 v12; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x20
-  _BOOL8 v15; // x0
-  __int64 v16; // x1
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
   Il2CppObject *Component_object; // x20
-  _BOOL8 v18; // x0
-  __int64 v19; // x1
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
+  _BOOL8 v10; // x0
+  __int64 v11; // x1
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v23; // x9
+  _QWORD *v15; // x9
   __int64 size; // x10
-  Il2CppClass **v25; // x0
-  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v28; // [xsp+20h] [xbp-60h] BYREF
+  Il2CppClass **v17; // x0
+  System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4B1A1C4 & 1) == 0 )
+  if ( (byte_4C24F48 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__, method);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__, v3);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__, v4);
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_WarBoardPartyListViewObject___, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_WarBoardPartyListViewObject__Add__, v6);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__, v7);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_WarBoardPartyListViewObject___ctor__, v8);
-    sub_1BCAFF8(&System_Collections_Generic_List_WarBoardPartyListViewObject__TypeInfo, v9);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v10);
-    byte_4B1A1C4 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_WarBoardPartyListViewObject___);
+    sub_1C2D490(&Method_System_Collections_Generic_List_WarBoardPartyListViewObject__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_WarBoardPartyListViewObject___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_WarBoardPartyListViewObject__TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C24F48 = 1;
   }
-  memset(&v28, 0, sizeof(v28));
-  v11 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_WarBoardPartyListViewObject__TypeInfo);
+  memset(&v20, 0, sizeof(v20));
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_WarBoardPartyListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v11,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_WarBoardPartyListViewObject___ctor__);
+    v3,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_WarBoardPartyListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1BCB254(0LL, v12);
+    sub_1C2D6EC(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v27,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v19,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v28 = v27;
+    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v20 = v19;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v28,
-            (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v20,
+            (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v28.fields._current;
+    current = v20.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v15 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0LL, 0LL);
-    if ( v15 )
+    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0);
+    if ( v7 )
     {
       if ( !current )
-        sub_1BCB254(v15, v16);
+        sub_1C2D6EC(v7, v8);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_WarBoardPartyListViewObject___);
+                           (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_WarBoardPartyListViewObject___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v18 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL);
-      if ( v18 )
+      v10 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
+      if ( v10 )
       {
-        if ( !v11 )
-          sub_1BCB254(v18, v19);
-        items = v11->fields._items;
-        v23 = Method_System_Collections_Generic_List_WarBoardPartyListViewObject__Add__;
-        ++v11->fields._version;
+        if ( !v3 )
+          sub_1C2D6EC(v10, v11);
+        items = v3->fields._items;
+        v15 = Method_System_Collections_Generic_List_WarBoardPartyListViewObject__Add__;
+        ++v3->fields._version;
         if ( !items )
-          sub_1BCB254(v18, v19);
-        size = v11->fields._size;
-        if ( (unsigned int)size >= items->max_length )
+          sub_1C2D6EC(v10, v11);
+        size = v3->fields._size;
+        if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v11,
+            v3,
             Component_object,
-            *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
         }
         else
         {
-          v25 = &items->obj.klass + size;
-          v11->fields._size = size + 1;
-          v25[4] = (Il2CppClass *)Component_object;
-          sub_1BCAF9C((CGThumbnailListItem_o *)(v25 + 4), (int32_t)Component_object, v20, v21);
+          v17 = &items->obj.klass + size;
+          v3->fields._size = size + 1;
+          v17[4] = (Il2CppClass *)Component_object;
+          sub_1C2D434((CGThumbnailListItem_o *)(v17 + 4), (int32_t)Component_object, v12, v13);
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v28,
-    (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-  return (System_Collections_Generic_List_WarBoardPartyListViewObject__o *)v11;
+    &v20,
+    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+  return (System_Collections_Generic_List_WarBoardPartyListViewObject__o *)v3;
 }
 
 
-void __fastcall WarBoardPartyOrganizationListViewManager__OnClickListView(
+void WarBoardPartyOrganizationListViewManager__OnClickListView(
         WarBoardPartyOrganizationListViewManager_o *this,
         ListViewObject_o *obj,
         const MethodInfo *method)
@@ -210,61 +202,55 @@ void __fastcall WarBoardPartyOrganizationListViewManager__OnClickListView(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall WarBoardPartyOrganizationListViewManager__RequestListObject(
+void WarBoardPartyOrganizationListViewManager__RequestListObject(
         WarBoardPartyOrganizationListViewManager_o *this,
         int32_t mode,
         WarBoardPartyOrganizationMenu_OnTapPartyMemberEvent_o *onTapMember,
         const MethodInfo *method)
 {
-  __int64 v6; // x1
+  System_Collections_Generic_List_object__o *ObjectList; // x0
   __int64 v7; // x1
   __int64 v8; // x1
-  System_Collections_Generic_List_object__o *ObjectList; // x0
-  __int64 v10; // x1
-  __int64 v11; // x1
-  const MethodInfo *v12; // x3
-  System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-48h] BYREF
+  const MethodInfo *v9; // x3
+  System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4B1A1C2 & 1) == 0 )
+  if ( (byte_4C24F46 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_System_Collections_Generic_List_Enumerator_WarBoardPartyListViewObject__Dispose__,
-      *(_QWORD *)&mode);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_WarBoardPartyListViewObject__MoveNext__, v6);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_WarBoardPartyListViewObject__get_Current__, v7);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_WarBoardPartyListViewObject__GetEnumerator__, v8);
-    byte_4B1A1C2 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_WarBoardPartyListViewObject__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_WarBoardPartyListViewObject__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_WarBoardPartyListViewObject__get_Current__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_WarBoardPartyListViewObject__GetEnumerator__);
+    byte_4C24F46 = 1;
   }
-  memset(&v13, 0, sizeof(v13));
+  memset(&v10, 0, sizeof(v10));
   ObjectList = (System_Collections_Generic_List_object__o *)WarBoardPartyOrganizationListViewManager__GetObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1BCB254(0LL, v10);
+    sub_1C2D6EC(0, v7);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v13,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v10,
     ObjectList,
-    (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_WarBoardPartyListViewObject__GetEnumerator__);
+    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_WarBoardPartyListViewObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v13,
-            (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_WarBoardPartyListViewObject__MoveNext__) )
+            &v10,
+            (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_WarBoardPartyListViewObject__MoveNext__) )
   {
-    if ( !v13.fields._current )
-      sub_1BCB254(0LL, v11);
+    if ( !v10.fields._current )
+      sub_1C2D6EC(0, v8);
     WarBoardPartyListViewObject__Init(
-      (WarBoardPartyListViewObject_o *)v13.fields._current,
+      (WarBoardPartyListViewObject_o *)v10.fields._current,
       mode,
       this->fields.onTapMember,
-      v12);
+      v9);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v13,
-    (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_WarBoardPartyListViewObject__Dispose__);
+    &v10,
+    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_WarBoardPartyListViewObject__Dispose__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall WarBoardPartyOrganizationListViewManager__SetEnableScroll(
+void WarBoardPartyOrganizationListViewManager__SetEnableScroll(
         WarBoardPartyOrganizationListViewManager_o *this,
         bool isEnable,
         const MethodInfo *method)
@@ -273,25 +259,25 @@ void __fastcall WarBoardPartyOrganizationListViewManager__SetEnableScroll(
   __int64 v6; // x1
   UnityEngine_Behaviour_o *v7; // x0
 
-  if ( (byte_4B1A1C1 & 1) == 0 )
+  if ( (byte_4C24F45 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, isEnable);
-    byte_4B1A1C1 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C24F45 = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(scrollView, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(scrollView, 0, 0) )
   {
     v7 = (UnityEngine_Behaviour_o *)this->fields.scrollView;
     if ( !v7 )
-      sub_1BCB254(0LL, v6);
-    UnityEngine_Behaviour__set_enabled(v7, isEnable, 0LL);
+      sub_1C2D6EC(0, v6);
+    UnityEngine_Behaviour__set_enabled(v7, isEnable, 0);
   }
 }
 
 
-void __fastcall WarBoardPartyOrganizationListViewManager__SetMode(
+void WarBoardPartyOrganizationListViewManager__SetMode(
         WarBoardPartyOrganizationListViewManager_o *this,
         int32_t mode,
         WarBoardPartyOrganizationMenu_OnTapPartyMemberEvent_o *onTapMember,
@@ -305,32 +291,32 @@ void __fastcall WarBoardPartyOrganizationListViewManager__SetMode(
     WarBoardPartyOrganizationListViewManager__RequestListObject(this, v4, onTapMember, method);
   scrollView = this->fields.scrollView;
   if ( !scrollView )
-    sub_1BCB254(0LL, v4);
-  UIScrollView__UpdatePosition(scrollView, 0LL);
+    sub_1C2D6EC(0, v4);
+  UIScrollView__UpdatePosition(scrollView, 0);
 }
 
 
-void __fastcall WarBoardPartyOrganizationListViewManager__SetObjectItem(
+void WarBoardPartyOrganizationListViewManager__SetObjectItem(
         WarBoardPartyOrganizationListViewManager_o *this,
         ListViewObject_o *obj,
         ListViewItem_o *item,
         const MethodInfo *method)
 {
   WarBoardPartyOrganizationListViewManager_o *v5; // x20
-  __int64 methodPtr_low; // x10
+  __int64 naturalAligment; // x10
 
   v5 = this;
-  if ( (byte_4B1A1C3 & 1) == 0 )
+  if ( (byte_4C24F47 & 1) == 0 )
   {
-    this = (WarBoardPartyOrganizationListViewManager_o *)sub_1BCAFF8(&WarBoardPartyListViewObject_TypeInfo, obj);
-    byte_4B1A1C3 = 1;
+    this = (WarBoardPartyOrganizationListViewManager_o *)sub_1C2D490(&WarBoardPartyListViewObject_TypeInfo);
+    byte_4C24F47 = 1;
   }
   if ( !obj
-    || (methodPtr_low = LOBYTE(WarBoardPartyListViewObject_TypeInfo->vtable._0_Equals.methodPtr),
-        LOBYTE(obj->klass->vtable._0_Equals.methodPtr) < (unsigned int)methodPtr_low)
-    || (WarBoardPartyListViewObject_c *)obj->klass->_2.typeHierarchy[methodPtr_low - 1] != WarBoardPartyListViewObject_TypeInfo )
+    || (naturalAligment = WarBoardPartyListViewObject_TypeInfo->_2.naturalAligment,
+        obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
+    || (WarBoardPartyListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != WarBoardPartyListViewObject_TypeInfo )
   {
-    sub_1BCB254(this, obj);
+    sub_1C2D6EC(this, obj);
   }
   WarBoardPartyListViewObject__Init((WarBoardPartyListViewObject_o *)obj, 0, v5->fields.onTapMember, method);
 }

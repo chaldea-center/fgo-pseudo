@@ -1,4 +1,4 @@
-bool __fastcall AliveServantExistReactTaskCreator__IsCreatable(
+bool AliveServantExistReactTaskCreator__IsCreatable(
         AliveServantExistReactTaskCreator_o *this,
         BattleLogic_o *logic,
         BattleServantData_o *svtData,
@@ -17,11 +17,11 @@ bool __fastcall AliveServantExistReactTaskCreator__IsCreatable(
   if ( !IsCreatable )
     return 0;
   if ( !svtData )
-    sub_1BCB254(IsCreatable, v10);
-  return ((__int64 (__fastcall *)(BattleServantData_o *, BattleLogic_o *, _QWORD, _QWORD, Il2CppMethodPointer))svtData->klass->vtable._19_ExistAiThinking.method)(
+    sub_1C2D6EC(IsCreatable, v10);
+  return ((__int64 (__fastcall *)(BattleServantData_o *, BattleLogic_o *, _QWORD, _QWORD, const MethodInfo *))svtData->klass->vtable._19_ExistAiThinking.methodPtr)(
            svtData,
            logic,
            (unsigned int)this->fields._ProcState_k__BackingField,
            (unsigned int)priority,
-           svtData->klass->vtable._20_GetLogicServantAi.methodPtr);
+           svtData->klass->vtable._19_ExistAiThinking.method);
 }

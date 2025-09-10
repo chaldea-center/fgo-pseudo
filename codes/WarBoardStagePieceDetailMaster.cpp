@@ -1,21 +1,19 @@
-void __fastcall WarBoardStagePieceDetailMaster___ctor(WarBoardStagePieceDetailMaster_o *this, const MethodInfo *method)
+void WarBoardStagePieceDetailMaster___ctor(WarBoardStagePieceDetailMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D6E5 & 1) == 0 )
+  if ( (byte_4C284E9 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string___ctor__,
-      method);
-    byte_4B1D6E5 = 1;
+    sub_1C2D490(&Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string___ctor__);
+    byte_4C284E9 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     368,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-WarBoardStagePieceDetailEntity_o *__fastcall WarBoardStagePieceDetailMaster__GetEntity(
+WarBoardStagePieceDetailEntity_o *WarBoardStagePieceDetailMaster__GetEntity(
         WarBoardStagePieceDetailMaster_o *this,
         int32_t stageId,
         int32_t forceId,
@@ -25,12 +23,10 @@ WarBoardStagePieceDetailEntity_o *__fastcall WarBoardStagePieceDetailMaster__Get
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1D6E3 & 1) == 0 )
+  if ( (byte_4C284E7 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__GetEntity__,
-      *(_QWORD *)&stageId);
-    byte_4B1D6E3 = 1;
+    sub_1C2D490(&Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__GetEntity__);
+    byte_4C284E7 = 1;
   }
   PK = (Il2CppObject *)WarBoardStagePieceDetailEntity__CreatePK(
                          stageId,
@@ -41,12 +37,12 @@ WarBoardStagePieceDetailEntity_o *__fastcall WarBoardStagePieceDetailMaster__Get
   return (WarBoardStagePieceDetailEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                PK,
-                                               (const MethodInfo_32CC8B8 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__GetEntity__);
+                                               (const MethodInfo_338C850 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall WarBoardStagePieceDetailMaster__TryGetEntity(
+bool WarBoardStagePieceDetailMaster__TryGetEntity(
         WarBoardStagePieceDetailMaster_o *this,
         WarBoardStagePieceDetailEntity_o **entity,
         int32_t stageId,
@@ -57,12 +53,10 @@ bool __fastcall WarBoardStagePieceDetailMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1D6E4 & 1) == 0 )
+  if ( (byte_4C284E8 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__TryGetEntity__,
-      entity);
-    byte_4B1D6E4 = 1;
+    sub_1C2D490(&Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__TryGetEntity__);
+    byte_4C284E8 = 1;
   }
   PK = (Il2CppObject *)WarBoardStagePieceDetailEntity__CreatePK(
                          stageId,
@@ -74,5 +68,5 @@ bool __fastcall WarBoardStagePieceDetailMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_WarBoardStagePieceDetailMaster__WarBoardStagePieceDetailEntity__string__TryGetEntity__);
 }

@@ -1,105 +1,101 @@
-void __fastcall UserDeleteReservationEntity___cctor(const MethodInfo *method)
+void UserDeleteReservationEntity___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  __int64 v4; // x1
+  int32_t v1; // w2
+  const MethodInfo *v2; // x3
 
-  if ( (byte_4B1D261 & 1) == 0 )
+  if ( (byte_4C28056 & 1) == 0 )
   {
-    sub_1BCAFF8(&UserDeleteReservationEntity_TypeInfo, v1);
-    sub_1BCAFF8(&StringLiteral_15104/*"UserDeleteFlag"*/, v4);
-    byte_4B1D261 = 1;
+    sub_1C2D490(&UserDeleteReservationEntity_TypeInfo);
+    sub_1C2D490(&StringLiteral_15223/*"UserDeleteFlag"*/);
+    byte_4C28056 = 1;
   }
-  UserDeleteReservationEntity_TypeInfo->static_fields->UserDeleteFlag = (struct System_String_o *)StringLiteral_15104/*"UserDeleteFlag"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)UserDeleteReservationEntity_TypeInfo->static_fields, StringLiteral_15104/*"UserDeleteFlag"*/, v2, v3);
+  UserDeleteReservationEntity_TypeInfo->static_fields->UserDeleteFlag = (struct System_String_o *)StringLiteral_15223/*"UserDeleteFlag"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)UserDeleteReservationEntity_TypeInfo->static_fields, StringLiteral_15223/*"UserDeleteFlag"*/, v1, v2);
 }
 
 
-void __fastcall UserDeleteReservationEntity___ctor(UserDeleteReservationEntity_o *this, const MethodInfo *method)
+void UserDeleteReservationEntity___ctor(UserDeleteReservationEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D260 & 1) == 0 )
+  if ( (byte_4C28055 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D260 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C28055 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-System_String_o *__fastcall UserDeleteReservationEntity__CreatePK(int64_t userId, const MethodInfo *method)
+System_String_o *UserDeleteReservationEntity__CreatePK(int64_t userId, const MethodInfo *method)
 {
-  if ( (byte_4B1D25D & 1) == 0 )
+  if ( (byte_4C28052 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long___, method);
-    byte_4B1D25D = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long___);
+    byte_4C28052 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long_(
            userId,
-           (const MethodInfo_3018AFC *)Method_DataEntityBase_CreateMultiplePK_long___);
+           (const MethodInfo_30CC9A8 *)Method_DataEntityBase_CreateMultiplePK_long___);
 }
 
 
-System_String_o *__fastcall UserDeleteReservationEntity__CreatePrimaryKey(
+System_String_o *UserDeleteReservationEntity__CreatePrimaryKey(
         UserDeleteReservationEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int128 v4; // q0
-  const MethodInfo *v5; // x1
-  int64_t v6; // x19
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v8; // [xsp+0h] [xbp-60h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v9; // [xsp+20h] [xbp-40h]
+  __int128 v3; // q0
+  const MethodInfo *v4; // x1
+  int64_t v5; // x19
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+0h] [xbp-60h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v8; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_4B1D25C & 1) == 0 )
+  if ( (byte_4C28051 & 1) == 0 )
   {
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo, method);
-    sub_1BCAFF8(&UserDeleteReservationEntity_TypeInfo, v3);
-    byte_4B1D25C = 1;
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C2D490(&UserDeleteReservationEntity_TypeInfo);
+    byte_4C28051 = 1;
   }
-  v4 = *(_OWORD *)&this->fields.userId.fields.fakeValue;
-  *(_OWORD *)&v9.fields.currentCryptoKey = *(_OWORD *)&this->fields.userId.fields.currentCryptoKey;
-  *(_OWORD *)&v9.fields.fakeValue = v4;
+  v3 = *(_OWORD *)&this->fields.userId.fields.fakeValue;
+  *(_OWORD *)&v8.fields.currentCryptoKey = *(_OWORD *)&this->fields.userId.fields.currentCryptoKey;
+  *(_OWORD *)&v8.fields.fakeValue = v3;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v8 = v9;
-  v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48128700(&v8, 0LL);
+  v7 = v8;
+  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48831392(&v7, 0);
   if ( !UserDeleteReservationEntity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UserDeleteReservationEntity_TypeInfo);
-  return UserDeleteReservationEntity__CreatePK(v6, v5);
+  return UserDeleteReservationEntity__CreatePK(v5, v4);
 }
 
 
-bool __fastcall UserDeleteReservationEntity__IsUserDeleteFlag(const MethodInfo *method)
+bool UserDeleteReservationEntity__IsUserDeleteFlag(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  UserDeleteReservationEntity_c *v2; // x0
+  UserDeleteReservationEntity_c *v1; // x0
 
-  if ( (byte_4B1D25F & 1) == 0 )
+  if ( (byte_4C28054 & 1) == 0 )
   {
-    sub_1BCAFF8(&UserDeleteReservationEntity_TypeInfo, v1);
-    byte_4B1D25F = 1;
+    sub_1C2D490(&UserDeleteReservationEntity_TypeInfo);
+    byte_4C28054 = 1;
   }
-  v2 = UserDeleteReservationEntity_TypeInfo;
+  v1 = UserDeleteReservationEntity_TypeInfo;
   if ( !UserDeleteReservationEntity_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserDeleteReservationEntity_TypeInfo);
-    v2 = UserDeleteReservationEntity_TypeInfo;
+    v1 = UserDeleteReservationEntity_TypeInfo;
   }
-  return UnityEngine_PlayerPrefs__GetInt(v2->static_fields->UserDeleteFlag, 0, 0LL) == 1;
+  return UnityEngine_PlayerPrefs__GetInt(v1->static_fields->UserDeleteFlag, 0, 0) == 1;
 }
 
 
-void __fastcall UserDeleteReservationEntity__SetUserDeleteFlag(bool flag, const MethodInfo *method)
+void UserDeleteReservationEntity__SetUserDeleteFlag(bool flag, const MethodInfo *method)
 {
   UserDeleteReservationEntity_c *v3; // x0
 
-  if ( (byte_4B1D25E & 1) == 0 )
+  if ( (byte_4C28053 & 1) == 0 )
   {
-    sub_1BCAFF8(&UserDeleteReservationEntity_TypeInfo, method);
-    byte_4B1D25E = 1;
+    sub_1C2D490(&UserDeleteReservationEntity_TypeInfo);
+    byte_4C28053 = 1;
   }
   v3 = UserDeleteReservationEntity_TypeInfo;
   if ( !UserDeleteReservationEntity_TypeInfo->_2.cctor_finished )
@@ -107,6 +103,6 @@ void __fastcall UserDeleteReservationEntity__SetUserDeleteFlag(bool flag, const 
     j_il2cpp_runtime_class_init_0(UserDeleteReservationEntity_TypeInfo);
     v3 = UserDeleteReservationEntity_TypeInfo;
   }
-  UnityEngine_PlayerPrefs__SetInt(v3->static_fields->UserDeleteFlag, flag, 0LL);
-  UnityEngine_PlayerPrefs__Save(0LL);
+  UnityEngine_PlayerPrefs__SetInt(v3->static_fields->UserDeleteFlag, flag, 0);
+  UnityEngine_PlayerPrefs__Save(0);
 }

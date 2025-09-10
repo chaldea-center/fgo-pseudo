@@ -1,17 +1,17 @@
-void __fastcall ServantTreasureDeviceAddEntity___ctor(ServantTreasureDeviceAddEntity_o *this, const MethodInfo *method)
+void ServantTreasureDeviceAddEntity___ctor(ServantTreasureDeviceAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CF4F & 1) == 0 )
+  if ( (byte_4C27D3A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1CF4F = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C27D3A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-UnityEngine_Color_o __fastcall ServantTreasureDeviceAddEntity__ConvertColorFromString(
+UnityEngine_Color_o ServantTreasureDeviceAddEntity__ConvertColorFromString(
         ServantTreasureDeviceAddEntity_o *this,
         System_String_o *colorCode,
         const MethodInfo *method)
@@ -23,14 +23,14 @@ UnityEngine_Color_o __fastcall ServantTreasureDeviceAddEntity__ConvertColorFromS
   float v8; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B1CF4D & 1) == 0 )
+  if ( (byte_4C27D38 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Convert_TypeInfo, colorCode);
-    byte_4B1CF4D = 1;
+    sub_1C2D490(&System_Convert_TypeInfo);
+    byte_4C27D38 = 1;
   }
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v4 = System_Convert__ToInt32_63546160(colorCode, 16, 0LL);
+  v4 = System_Convert__ToInt32_64555740(colorCode, 16, 0);
   v5 = (float)BYTE2(v4) / 255.0;
   v6 = (float)BYTE1(v4) / 255.0;
   v7 = (float)(unsigned __int8)v4 / 255.0;
@@ -43,27 +43,26 @@ UnityEngine_Color_o __fastcall ServantTreasureDeviceAddEntity__ConvertColorFromS
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall ServantTreasureDeviceAddEntity__CreatePK(
+System_String_o *ServantTreasureDeviceAddEntity__CreatePK(
         int32_t svtId,
         int32_t num,
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CF4E & 1) == 0 )
+  if ( (byte_4C27D39 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&num);
-    byte_4B1CF4E = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C27D39 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            num,
            priority,
-           (const MethodInfo_30190BC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30CCF68 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
-System_String_o *__fastcall ServantTreasureDeviceAddEntity__CreatePrimaryKey(
+System_String_o *ServantTreasureDeviceAddEntity__CreatePrimaryKey(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
@@ -73,41 +72,40 @@ System_String_o *__fastcall ServantTreasureDeviceAddEntity__CreatePrimaryKey(
 }
 
 
-int32_t __fastcall ServantTreasureDeviceAddEntity__GetBaseTreasureDeviceId(
+int32_t ServantTreasureDeviceAddEntity__GetBaseTreasureDeviceId(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
   __int64 v2; // x2
   struct System_Int32_array *treasureDeviceIds; // x8
-  __int64 v4; // x9
+  il2cpp_array_size_t max_length; // x9
 
   treasureDeviceIds = this->fields.treasureDeviceIds;
   if ( !treasureDeviceIds )
     return 0;
-  v4 = *(_QWORD *)&treasureDeviceIds->max_length;
-  if ( !v4 )
+  max_length = treasureDeviceIds->max_length;
+  if ( !max_length )
     return 0;
-  if ( !(_DWORD)v4 )
-    sub_1BCB25C(this, method, v2);
-  return treasureDeviceIds->m_Items[1];
+  if ( !(_DWORD)max_length )
+    sub_1C2D6F4(this, method, v2);
+  return treasureDeviceIds->m_Items[0];
 }
 
 
-int32_t __fastcall ServantTreasureDeviceAddEntity__GetCondIgnoreSealedLimitCount(
+int32_t ServantTreasureDeviceAddEntity__GetCondIgnoreSealedLimitCount(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CF48 & 1) == 0 )
+  if ( (byte_4C27D33 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18051/*"condIgnoreSealedLimitCount"*/, method);
-    byte_4B1CF48 = 1;
+    sub_1C2D490(&StringLiteral_18198/*"condIgnoreSealedLimitCount"*/);
+    byte_4C27D33 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18051/*"condIgnoreSealedLimitCount"*/, 0, 0LL);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18198/*"condIgnoreSealedLimitCount"*/, 0, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-UnityEngine_Color_o __fastcall ServantTreasureDeviceAddEntity__GetCondLabelColor(
+UnityEngine_Color_o ServantTreasureDeviceAddEntity__GetCondLabelColor(
         ServantTreasureDeviceAddEntity_o *this,
         UnityEngine_Color_o defaultColor,
         const MethodInfo *method)
@@ -130,13 +128,13 @@ UnityEngine_Color_o __fastcall ServantTreasureDeviceAddEntity__GetCondLabelColor
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4B1CF4B & 1) == 0 )
+  if ( (byte_4C27D36 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18052/*"condLabelColor"*/, method);
-    byte_4B1CF4B = 1;
+    sub_1C2D490(&StringLiteral_18199/*"condLabelColor"*/);
+    byte_4C27D36 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18052/*"condLabelColor"*/, 0LL, 0LL);
-  IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0LL);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18199/*"condLabelColor"*/, 0, 0);
+  IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0);
   if ( !IsNullOrEmpty )
   {
     v15 = ServantTreasureDeviceAddEntity__ConvertColorFromString(
@@ -160,8 +158,7 @@ UnityEngine_Color_o __fastcall ServantTreasureDeviceAddEntity__GetCondLabelColor
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-UnityEngine_Color_o __fastcall ServantTreasureDeviceAddEntity__GetCondSpriteColor(
+UnityEngine_Color_o ServantTreasureDeviceAddEntity__GetCondSpriteColor(
         ServantTreasureDeviceAddEntity_o *this,
         UnityEngine_Color_o defaultColor,
         const MethodInfo *method)
@@ -184,13 +181,13 @@ UnityEngine_Color_o __fastcall ServantTreasureDeviceAddEntity__GetCondSpriteColo
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4B1CF4C & 1) == 0 )
+  if ( (byte_4C27D37 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18054/*"condSpriteColor"*/, method);
-    byte_4B1CF4C = 1;
+    sub_1C2D490(&StringLiteral_18201/*"condSpriteColor"*/);
+    byte_4C27D37 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18054/*"condSpriteColor"*/, 0LL, 0LL);
-  IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0LL);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18201/*"condSpriteColor"*/, 0, 0);
+  IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0);
   if ( !IsNullOrEmpty )
   {
     v15 = ServantTreasureDeviceAddEntity__ConvertColorFromString(
@@ -214,73 +211,73 @@ UnityEngine_Color_o __fastcall ServantTreasureDeviceAddEntity__GetCondSpriteColo
 }
 
 
-System_Int32_array *__fastcall ServantTreasureDeviceAddEntity__GetDispMaskTreasureDevices(
+System_Int32_array *ServantTreasureDeviceAddEntity__GetDispMaskTreasureDevices(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CF46 & 1) == 0 )
+  if ( (byte_4C27D31 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18487/*"dispMaskTreasureDevices"*/, method);
-    byte_4B1CF46 = 1;
+    sub_1C2D490(&StringLiteral_18637/*"dispMaskTreasureDevices"*/);
+    byte_4C27D31 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18487/*"dispMaskTreasureDevices"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18637/*"dispMaskTreasureDevices"*/, 0, 0);
 }
 
 
-System_Int32_array *__fastcall ServantTreasureDeviceAddEntity__GetEnableDispOnBattleConfirmDialog(
+System_Int32_array *ServantTreasureDeviceAddEntity__GetEnableDispOnBattleConfirmDialog(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CF49 & 1) == 0 )
+  if ( (byte_4C27D34 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18827/*"enableDispOnBattleConfirmDialog"*/, method);
-    byte_4B1CF49 = 1;
+    sub_1C2D490(&StringLiteral_18980/*"enableDispOnBattleConfirmDialog"*/);
+    byte_4C27D34 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18827/*"enableDispOnBattleConfirmDialog"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18980/*"enableDispOnBattleConfirmDialog"*/, 0, 0);
 }
 
 
-int32_t __fastcall ServantTreasureDeviceAddEntity__GetExchangedTreasureDeviceId(
+int32_t ServantTreasureDeviceAddEntity__GetExchangedTreasureDeviceId(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
   struct System_Int32_array *treasureDeviceIds; // x8
 
   treasureDeviceIds = this->fields.treasureDeviceIds;
-  if ( treasureDeviceIds && (int)treasureDeviceIds->max_length >= 2 )
-    return treasureDeviceIds->m_Items[2];
+  if ( treasureDeviceIds && SLODWORD(treasureDeviceIds->max_length) >= 2 )
+    return treasureDeviceIds->m_Items[1];
   else
     return 0;
 }
 
 
-System_Int32_array *__fastcall ServantTreasureDeviceAddEntity__GetFixedCardLimitCounts(
+System_Int32_array *ServantTreasureDeviceAddEntity__GetFixedCardLimitCounts(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CF47 & 1) == 0 )
+  if ( (byte_4C27D32 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_19301/*"fixedCardLimitCounts"*/, method);
-    byte_4B1CF47 = 1;
+    sub_1C2D490(&StringLiteral_19459/*"fixedCardLimitCounts"*/);
+    byte_4C27D32 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_19301/*"fixedCardLimitCounts"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_19459/*"fixedCardLimitCounts"*/, 0, 0);
 }
 
 
-bool __fastcall ServantTreasureDeviceAddEntity__HasKeyEnableDispOnBattleConfirmDialog(
+bool ServantTreasureDeviceAddEntity__HasKeyEnableDispOnBattleConfirmDialog(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CF4A & 1) == 0 )
+  if ( (byte_4C27D35 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_18827/*"enableDispOnBattleConfirmDialog"*/, method);
-    byte_4B1CF4A = 1;
+    sub_1C2D490(&StringLiteral_18980/*"enableDispOnBattleConfirmDialog"*/);
+    byte_4C27D35 = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_18827/*"enableDispOnBattleConfirmDialog"*/, 0LL);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_18980/*"enableDispOnBattleConfirmDialog"*/, 0);
 }
 
 
-bool __fastcall ServantTreasureDeviceAddEntity__IsCheckCommonRelease(
+bool ServantTreasureDeviceAddEntity__IsCheckCommonRelease(
         ServantTreasureDeviceAddEntity_o *this,
         int32_t dispLimitCount,
         const MethodInfo *method)
@@ -293,5 +290,5 @@ bool __fastcall ServantTreasureDeviceAddEntity__IsCheckCommonRelease(
            commonReleaseId,
            this->fields.svtId,
            dispLimitCount,
-           0LL);
+           0);
 }

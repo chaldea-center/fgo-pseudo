@@ -1,21 +1,19 @@
-void __fastcall StatusEffectPosOverwriteMaster___ctor(StatusEffectPosOverwriteMaster_o *this, const MethodInfo *method)
+void StatusEffectPosOverwriteMaster___ctor(StatusEffectPosOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D14C & 1) == 0 )
+  if ( (byte_4C27F40 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__,
-      method);
-    byte_4B1D14C = 1;
+    sub_1C2D490(&Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__);
+    byte_4C27F40 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     307,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-StatusEffectPosOverwriteEntity_o *__fastcall StatusEffectPosOverwriteMaster__GetEntity(
+StatusEffectPosOverwriteEntity_o *StatusEffectPosOverwriteMaster__GetEntity(
         StatusEffectPosOverwriteMaster_o *this,
         int32_t statusEffectId,
         int32_t svtId,
@@ -24,12 +22,10 @@ StatusEffectPosOverwriteEntity_o *__fastcall StatusEffectPosOverwriteMaster__Get
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1D14A & 1) == 0 )
+  if ( (byte_4C27F3E & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__,
-      *(_QWORD *)&statusEffectId);
-    byte_4B1D14A = 1;
+    sub_1C2D490(&Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__);
+    byte_4C27F3E = 1;
   }
   PK = (Il2CppObject *)StatusEffectPosOverwriteEntity__CreatePK(
                          statusEffectId,
@@ -39,12 +35,12 @@ StatusEffectPosOverwriteEntity_o *__fastcall StatusEffectPosOverwriteMaster__Get
   return (StatusEffectPosOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                PK,
-                                               (const MethodInfo_32CC8B8 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__);
+                                               (const MethodInfo_338C850 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall StatusEffectPosOverwriteMaster__TryGetEntity(
+bool StatusEffectPosOverwriteMaster__TryGetEntity(
         StatusEffectPosOverwriteMaster_o *this,
         StatusEffectPosOverwriteEntity_o **entity,
         int32_t statusEffectId,
@@ -54,12 +50,10 @@ bool __fastcall StatusEffectPosOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1D14B & 1) == 0 )
+  if ( (byte_4C27F3F & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__,
-      entity);
-    byte_4B1D14B = 1;
+    sub_1C2D490(&Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__);
+    byte_4C27F3F = 1;
   }
   PK = (Il2CppObject *)StatusEffectPosOverwriteEntity__CreatePK(
                          statusEffectId,
@@ -70,5 +64,5 @@ bool __fastcall StatusEffectPosOverwriteMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_StatusEffectPosOverwriteMaster__StatusEffectPosOverwriteEntity__string__TryGetEntity__);
 }

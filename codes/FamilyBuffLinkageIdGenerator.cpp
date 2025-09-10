@@ -1,4 +1,4 @@
-void __fastcall FamilyBuffLinkageIdGenerator___ctor(
+void FamilyBuffLinkageIdGenerator___ctor(
         FamilyBuffLinkageIdGenerator_o *this,
         BattleServantData_o *servantData,
         const MethodInfo *method)
@@ -6,14 +6,14 @@ void __fastcall FamilyBuffLinkageIdGenerator___ctor(
   BattleBuffData_o *BuffData; // x0
   __int64 v6; // x1
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
-  if ( !servantData || (BuffData = BattleServantData__get_BuffData(servantData, 0LL)) == 0LL )
-    sub_1BCB254(BuffData, v6);
-  this->fields.current = BattleBuffData__GetFamilyLinkageIdMax(BuffData, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
+  if ( !servantData || (BuffData = BattleServantData__get_BuffData(servantData, 0)) == 0 )
+    sub_1C2D6EC(BuffData, v6);
+  this->fields.current = BattleBuffData__GetFamilyLinkageIdMax(BuffData, 0);
 }
 
 
-int32_t __fastcall FamilyBuffLinkageIdGenerator__Next(FamilyBuffLinkageIdGenerator_o *this, const MethodInfo *method)
+int32_t FamilyBuffLinkageIdGenerator__Next(FamilyBuffLinkageIdGenerator_o *this, const MethodInfo *method)
 {
   int32_t v2; // w8
 

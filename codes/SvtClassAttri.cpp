@@ -1,35 +1,33 @@
-void __fastcall SvtClassAttri___cctor(const MethodInfo *method)
+void SvtClassAttri___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-
-  if ( (byte_4B1B473 & 1) == 0 )
+  if ( (byte_4C2620E & 1) == 0 )
   {
-    sub_1BCAFF8(&SvtClassAttri_TypeInfo, v1);
-    byte_4B1B473 = 1;
+    sub_1C2D490(&SvtClassAttri_TypeInfo);
+    byte_4C2620E = 1;
   }
   SvtClassAttri_TypeInfo->static_fields->MAX_EXP_UP_RARITY = 5;
 }
 
 
-void __fastcall SvtClassAttri___ctor(SvtClassAttri_o *this, const MethodInfo *method)
+void SvtClassAttri___ctor(SvtClassAttri_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall SvtClassAttri__IsExtraClass(int32_t classId, const MethodInfo *method)
+bool SvtClassAttri__IsExtraClass(int32_t classId, const MethodInfo *method)
 {
   return (unsigned int)(classId - 1) > 6;
 }
 
 
-bool __fastcall SvtClassAttri__IsExtraClass1(int32_t classId, const MethodInfo *method)
+bool SvtClassAttri__IsExtraClass1(int32_t classId, const MethodInfo *method)
 {
-  return (classId | 2) == 11 || classId == 23;
+  return (classId | 2) == 0xB || classId == 23;
 }
 
 
-bool __fastcall SvtClassAttri__IsExtraClass2(int32_t classId, const MethodInfo *method)
+bool SvtClassAttri__IsExtraClass2(int32_t classId, const MethodInfo *method)
 {
   bool result; // w0
 
@@ -47,38 +45,36 @@ bool __fastcall SvtClassAttri__IsExtraClass2(int32_t classId, const MethodInfo *
 }
 
 
-int32_t __fastcall SvtClassAttri__getClassId(int32_t type, const MethodInfo *method)
+int32_t SvtClassAttri__getClassId(int32_t type, const MethodInfo *method)
 {
   return type;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-float __fastcall SvtClassAttri__getMagnification(int32_t attack, int32_t defense, const MethodInfo *method)
+float SvtClassAttri__getMagnification(int32_t attack, int32_t defense, const MethodInfo *method)
 {
-  __int64 v5; // x1
   Il2CppObject *Instance; // x0
-  __int64 v7; // x1
-  ServantClassMaster_o *v8; // x21
+  __int64 v6; // x1
+  ServantClassMaster_o *v7; // x21
   int32_t RelationId; // w20
-  int32_t v10; // w1
+  int32_t v9; // w1
 
-  if ( (byte_4B1B472 & 1) == 0 )
+  if ( (byte_4C2620D & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_ServantClassMaster___, *(_QWORD *)&defense);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v5);
-    byte_4B1B472 = 1;
+    sub_1C2D490(&Method_DataManager_GetMasterData_ServantClassMaster___);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C2620D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0LL )
+                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0 )
   {
-    sub_1BCB254(Instance, v7);
+    sub_1C2D6EC(Instance, v6);
   }
-  v8 = (ServantClassMaster_o *)Instance;
-  RelationId = ServantClassMaster__getRelationId((ServantClassMaster_o *)Instance, attack, 0LL);
-  v10 = ServantClassMaster__getRelationId(v8, defense, 0LL);
-  return ClassRelationMaster__getRate(RelationId, v10, 0LL);
+  v7 = (ServantClassMaster_o *)Instance;
+  RelationId = ServantClassMaster__getRelationId((ServantClassMaster_o *)Instance, attack, 0);
+  v9 = ServantClassMaster__getRelationId(v7, defense, 0);
+  return ClassRelationMaster__getRate(RelationId, v9, 0);
 }

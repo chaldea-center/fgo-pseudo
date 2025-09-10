@@ -1,4 +1,4 @@
-void __fastcall BattleMotionSkipManager___ctor(
+void BattleMotionSkipManager___ctor(
         BattleMotionSkipManager_o *this,
         BattlePerformance_o *perf,
         const MethodInfo *method)
@@ -9,22 +9,22 @@ void __fastcall BattleMotionSkipManager___ctor(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4B1EF4A & 1) == 0 )
+  if ( (byte_4C29DC2 & 1) == 0 )
   {
-    sub_1BCAFF8(&BaseMotionSkip_TypeInfo, perf);
-    byte_4B1EF4A = 1;
+    sub_1C2D490(&BaseMotionSkip_TypeInfo);
+    byte_4C29DC2 = 1;
   }
-  v5 = (Il2CppObject *)sub_1BCB244(BaseMotionSkip_TypeInfo);
-  System_Object___ctor(v5, 0LL);
+  v5 = (Il2CppObject *)sub_1C2D6DC(BaseMotionSkip_TypeInfo);
+  System_Object___ctor(v5, 0);
   this->fields.defaultMotionSkip = (struct BaseMotionSkip_o *)v5;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)v5, v6, v7);
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)v5, v6, v7);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Perf_k__BackingField = perf;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Perf_k__BackingField, (int32_t)perf, v8, v9);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Perf_k__BackingField, (int32_t)perf, v8, v9);
 }
 
 
-void __fastcall BattleMotionSkipManager__ReleaseMotionSkip(BattleMotionSkipManager_o *this, const MethodInfo *method)
+void BattleMotionSkipManager__ReleaseMotionSkip(BattleMotionSkipManager_o *this, const MethodInfo *method)
 {
   struct BaseMotionSkip_o *mainMotionSkip; // x0
   CGThumbnailListItem_o *p_mainMotionSkip; // x19
@@ -37,17 +37,17 @@ void __fastcall BattleMotionSkipManager__ReleaseMotionSkip(BattleMotionSkipManag
   {
     mainMotionSkip = this->fields.defaultMotionSkip;
     if ( !mainMotionSkip )
-      sub_1BCB254(0LL, method);
+      sub_1C2D6EC(0, method);
   }
-  ((void (__fastcall *)(struct BaseMotionSkip_o *, Il2CppMethodPointer))mainMotionSkip->klass->vtable._7_Release.method)(
+  ((void (__fastcall *)(struct BaseMotionSkip_o *, const MethodInfo *))mainMotionSkip->klass->vtable._7_Release.methodPtr)(
     mainMotionSkip,
-    mainMotionSkip->klass->vtable._8_ResetSkipTimeScale.methodPtr);
-  p_mainMotionSkip->klass = 0LL;
-  sub_1BCAF9C(p_mainMotionSkip, 0, v5, v6);
+    mainMotionSkip->klass->vtable._7_Release.method);
+  p_mainMotionSkip->klass = 0;
+  sub_1C2D434(p_mainMotionSkip, 0, v5, v6);
 }
 
 
-void __fastcall BattleMotionSkipManager__SetMotionSkip(
+void BattleMotionSkipManager__SetMotionSkip(
         BattleMotionSkipManager_o *this,
         BattleSkillInfoData_o *skillInfo,
         const MethodInfo *method)
@@ -60,26 +60,24 @@ void __fastcall BattleMotionSkipManager__SetMotionSkip(
 
   BattleMotionSkipManager__ReleaseMotionSkip(this, (const MethodInfo *)skillInfo);
   if ( !skillInfo
-    || (v7 = (struct BaseMotionSkip_o *)((__int64 (__fastcall *)(BattleSkillInfoData_o *, Il2CppMethodPointer))skillInfo->klass->vtable._14_MakeSkillSkip.method)(
+    || (v7 = (struct BaseMotionSkip_o *)((__int64 (__fastcall *)(BattleSkillInfoData_o *, const MethodInfo *))skillInfo->klass->vtable._16_MakeSkillSkip.methodPtr)(
                                           skillInfo,
-                                          skillInfo->klass->vtable._15_CommonMakeSkillSkip.methodPtr),
+                                          skillInfo->klass->vtable._16_MakeSkillSkip.method),
         this->fields.mainMotionSkip = v7,
-        sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.mainMotionSkip, (int32_t)v7, v8, v9),
-        (mainMotionSkip = this->fields.mainMotionSkip) == 0LL)
-    && (mainMotionSkip = this->fields.defaultMotionSkip) == 0LL )
+        sub_1C2D434((CGThumbnailListItem_o *)&this->fields.mainMotionSkip, (int32_t)v7, v8, v9),
+        (mainMotionSkip = this->fields.mainMotionSkip) == 0)
+    && (mainMotionSkip = this->fields.defaultMotionSkip) == 0 )
   {
-    sub_1BCB254(mainMotionSkip, v6);
+    sub_1C2D6EC(mainMotionSkip, v6);
   }
-  ((void (__fastcall *)(struct BaseMotionSkip_o *, BattleMotionSkipManager_o *, Il2CppMethodPointer))mainMotionSkip->klass->vtable._6_Init.method)(
+  ((void (__fastcall *)(struct BaseMotionSkip_o *, BattleMotionSkipManager_o *, const MethodInfo *))mainMotionSkip->klass->vtable._6_Init.methodPtr)(
     mainMotionSkip,
     this,
-    mainMotionSkip->klass->vtable._7_Release.methodPtr);
+    mainMotionSkip->klass->vtable._6_Init.method);
 }
 
 
-BaseMotionSkip_o *__fastcall BattleMotionSkipManager__get_Current(
-        BattleMotionSkipManager_o *this,
-        const MethodInfo *method)
+BaseMotionSkip_o *BattleMotionSkipManager__get_Current(BattleMotionSkipManager_o *this, const MethodInfo *method)
 {
   BaseMotionSkip_o *result; // x0
 
@@ -90,15 +88,13 @@ BaseMotionSkip_o *__fastcall BattleMotionSkipManager__get_Current(
 }
 
 
-BattlePerformance_o *__fastcall BattleMotionSkipManager__get_Perf(
-        BattleMotionSkipManager_o *this,
-        const MethodInfo *method)
+BattlePerformance_o *BattleMotionSkipManager__get_Perf(BattleMotionSkipManager_o *this, const MethodInfo *method)
 {
   return this->fields._Perf_k__BackingField;
 }
 
 
-void __fastcall BattleMotionSkipManager__set_Current(
+void BattleMotionSkipManager__set_Current(
         BattleMotionSkipManager_o *this,
         BaseMotionSkip_o *value,
         const MethodInfo *method)
@@ -106,11 +102,11 @@ void __fastcall BattleMotionSkipManager__set_Current(
   const MethodInfo *v3; // x3
 
   this->fields.mainMotionSkip = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.mainMotionSkip, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.mainMotionSkip, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall BattleMotionSkipManager__set_Perf(
+void BattleMotionSkipManager__set_Perf(
         BattleMotionSkipManager_o *this,
         BattlePerformance_o *value,
         const MethodInfo *method)
@@ -118,5 +114,5 @@ void __fastcall BattleMotionSkipManager__set_Perf(
   const MethodInfo *v3; // x3
 
   this->fields._Perf_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Perf_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Perf_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

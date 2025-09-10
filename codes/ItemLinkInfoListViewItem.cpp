@@ -1,8 +1,4 @@
-// local variable allocation has failed, the output may be wrong!
-void __fastcall ItemLinkInfoListViewItem___ctor(
-        ItemLinkInfoListViewItem_o *this,
-        int32_t index,
-        const MethodInfo *method)
+void ItemLinkInfoListViewItem___ctor(ItemLinkInfoListViewItem_o *this, int32_t index, const MethodInfo *method)
 {
   int32_t v5; // w1
   int32_t v6; // w2
@@ -21,39 +17,39 @@ void __fastcall ItemLinkInfoListViewItem___ctor(
   int32_t v19; // w2
   const MethodInfo *v20; // x3
 
-  if ( (byte_4B1EE74 & 1) == 0 )
+  if ( (byte_4C29BF8 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_1/*""*/, *(_QWORD *)&index);
-    byte_4B1EE74 = 1;
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C29BF8 = 1;
   }
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
-  v5 = (int)StringLiteral_1/*""*/;
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
+  v5 = StringLiteral_1/*""*/;
   this->fields._IconName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._IconName_k__BackingField, v5, v6, v7);
-  v8 = (int)StringLiteral_1/*""*/;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._IconName_k__BackingField, v5, v6, v7);
+  v8 = StringLiteral_1/*""*/;
   this->fields._Name_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, v8, v9, v10);
-  this->fields._ItemEnt_k__BackingField = 0LL;
-  *(_QWORD *)&this->fields._TargetId_k__BackingField = 0LL;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, v8, v9, v10);
+  this->fields._ItemEnt_k__BackingField = 0;
+  *(_QWORD *)&this->fields._TargetId_k__BackingField = 0;
   this->fields._ItemDropEfficiencyPriority_k__BackingField = 0;
   *(int32_t *)((char *)&this->fields._ItemDropEfficiencyPriority_k__BackingField + 3) = 0;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._ItemEnt_k__BackingField, 0, v11, v12);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._ItemEnt_k__BackingField, 0, v11, v12);
   this->fields._ItemNeedNum_k__BackingField = 0;
   this->fields._IsItemGetInfoList_k__BackingField = 0;
-  v13 = (int)StringLiteral_1/*""*/;
+  v13 = StringLiteral_1/*""*/;
   this->fields._ClosedMessage_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._ClosedMessage_k__BackingField, v13, v14, v15);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._ClosedMessage_k__BackingField, v13, v14, v15);
   this->fields._Type_k__BackingField = 0;
-  this->fields._LinkAction_k__BackingField = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._LinkAction_k__BackingField, 0, v16, v17);
+  this->fields._LinkAction_k__BackingField = 0;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._LinkAction_k__BackingField, 0, v16, v17);
   this->fields._IsFirst_k__BackingField = 0;
-  v18 = (int)StringLiteral_1/*""*/;
+  v18 = StringLiteral_1/*""*/;
   this->fields._TransitionParam_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._TransitionParam_k__BackingField, v18, v19, v20);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._TransitionParam_k__BackingField, v18, v19, v20);
 }
 
 
-System_String_o *__fastcall ItemLinkInfoListViewItem__get_ClosedMessage(
+System_String_o *ItemLinkInfoListViewItem__get_ClosedMessage(
         ItemLinkInfoListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -61,49 +57,43 @@ System_String_o *__fastcall ItemLinkInfoListViewItem__get_ClosedMessage(
 }
 
 
-System_String_o *__fastcall ItemLinkInfoListViewItem__get_IconName(
-        ItemLinkInfoListViewItem_o *this,
-        const MethodInfo *method)
+System_String_o *ItemLinkInfoListViewItem__get_IconName(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._IconName_k__BackingField;
 }
 
 
-bool __fastcall ItemLinkInfoListViewItem__get_IsFirst(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
+bool ItemLinkInfoListViewItem__get_IsFirst(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._IsFirst_k__BackingField;
 }
 
 
-bool __fastcall ItemLinkInfoListViewItem__get_IsItemGetInfoList(
-        ItemLinkInfoListViewItem_o *this,
-        const MethodInfo *method)
+bool ItemLinkInfoListViewItem__get_IsItemGetInfoList(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._IsItemGetInfoList_k__BackingField;
 }
 
 
-bool __fastcall ItemLinkInfoListViewItem__get_IsLocked(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
+bool ItemLinkInfoListViewItem__get_IsLocked(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._IsLocked_k__BackingField;
 }
 
 
-bool __fastcall ItemLinkInfoListViewItem__get_IsNotDisplayQuestInfo(
-        ItemLinkInfoListViewItem_o *this,
-        const MethodInfo *method)
+bool ItemLinkInfoListViewItem__get_IsNotDisplayQuestInfo(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._IsNotDisplayQuestInfo_k__BackingField;
 }
 
 
-bool __fastcall ItemLinkInfoListViewItem__get_IsRecommend(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
+bool ItemLinkInfoListViewItem__get_IsRecommend(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._IsRecommend_k__BackingField;
 }
 
 
-int32_t __fastcall ItemLinkInfoListViewItem__get_ItemDropEfficiencyPriority(
+int32_t ItemLinkInfoListViewItem__get_ItemDropEfficiencyPriority(
         ItemLinkInfoListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -111,15 +101,13 @@ int32_t __fastcall ItemLinkInfoListViewItem__get_ItemDropEfficiencyPriority(
 }
 
 
-ItemEntity_o *__fastcall ItemLinkInfoListViewItem__get_ItemEnt(
-        ItemLinkInfoListViewItem_o *this,
-        const MethodInfo *method)
+ItemEntity_o *ItemLinkInfoListViewItem__get_ItemEnt(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._ItemEnt_k__BackingField;
 }
 
 
-int32_t __fastcall ItemLinkInfoListViewItem__get_ItemId(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
+int32_t ItemLinkInfoListViewItem__get_ItemId(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   struct ItemEntity_o *ItemEnt_k__BackingField; // x8
 
@@ -131,45 +119,37 @@ int32_t __fastcall ItemLinkInfoListViewItem__get_ItemId(ItemLinkInfoListViewItem
 }
 
 
-int32_t __fastcall ItemLinkInfoListViewItem__get_ItemNeedNum(
-        ItemLinkInfoListViewItem_o *this,
-        const MethodInfo *method)
+int32_t ItemLinkInfoListViewItem__get_ItemNeedNum(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._ItemNeedNum_k__BackingField;
 }
 
 
-System_Action_o *__fastcall ItemLinkInfoListViewItem__get_LinkAction(
-        ItemLinkInfoListViewItem_o *this,
-        const MethodInfo *method)
+System_Action_o *ItemLinkInfoListViewItem__get_LinkAction(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._LinkAction_k__BackingField;
 }
 
 
-System_String_o *__fastcall ItemLinkInfoListViewItem__get_Name(
-        ItemLinkInfoListViewItem_o *this,
-        const MethodInfo *method)
+System_String_o *ItemLinkInfoListViewItem__get_Name(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._Name_k__BackingField;
 }
 
 
-int32_t __fastcall ItemLinkInfoListViewItem__get_TargetId(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
+int32_t ItemLinkInfoListViewItem__get_TargetId(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._TargetId_k__BackingField;
 }
 
 
-int32_t __fastcall ItemLinkInfoListViewItem__get_TargetValueType(
-        ItemLinkInfoListViewItem_o *this,
-        const MethodInfo *method)
+int32_t ItemLinkInfoListViewItem__get_TargetValueType(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._TargetValueType_k__BackingField;
 }
 
 
-System_String_o *__fastcall ItemLinkInfoListViewItem__get_TransitionParam(
+System_String_o *ItemLinkInfoListViewItem__get_TransitionParam(
         ItemLinkInfoListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -177,13 +157,13 @@ System_String_o *__fastcall ItemLinkInfoListViewItem__get_TransitionParam(
 }
 
 
-int32_t __fastcall ItemLinkInfoListViewItem__get_Type(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
+int32_t ItemLinkInfoListViewItem__get_Type(ItemLinkInfoListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._Type_k__BackingField;
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_ClosedMessage(
+void ItemLinkInfoListViewItem__set_ClosedMessage(
         ItemLinkInfoListViewItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
@@ -191,7 +171,7 @@ void __fastcall ItemLinkInfoListViewItem__set_ClosedMessage(
   const MethodInfo *v3; // x3
 
   this->fields._ClosedMessage_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._ClosedMessage_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -199,7 +179,7 @@ void __fastcall ItemLinkInfoListViewItem__set_ClosedMessage(
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_IconName(
+void ItemLinkInfoListViewItem__set_IconName(
         ItemLinkInfoListViewItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
@@ -207,20 +187,17 @@ void __fastcall ItemLinkInfoListViewItem__set_IconName(
   const MethodInfo *v3; // x3
 
   this->fields._IconName_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._IconName_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._IconName_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_IsFirst(
-        ItemLinkInfoListViewItem_o *this,
-        bool value,
-        const MethodInfo *method)
+void ItemLinkInfoListViewItem__set_IsFirst(ItemLinkInfoListViewItem_o *this, bool value, const MethodInfo *method)
 {
   this->fields._IsFirst_k__BackingField = value;
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_IsItemGetInfoList(
+void ItemLinkInfoListViewItem__set_IsItemGetInfoList(
         ItemLinkInfoListViewItem_o *this,
         bool value,
         const MethodInfo *method)
@@ -229,16 +206,13 @@ void __fastcall ItemLinkInfoListViewItem__set_IsItemGetInfoList(
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_IsLocked(
-        ItemLinkInfoListViewItem_o *this,
-        bool value,
-        const MethodInfo *method)
+void ItemLinkInfoListViewItem__set_IsLocked(ItemLinkInfoListViewItem_o *this, bool value, const MethodInfo *method)
 {
   this->fields._IsLocked_k__BackingField = value;
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_IsNotDisplayQuestInfo(
+void ItemLinkInfoListViewItem__set_IsNotDisplayQuestInfo(
         ItemLinkInfoListViewItem_o *this,
         bool value,
         const MethodInfo *method)
@@ -247,16 +221,13 @@ void __fastcall ItemLinkInfoListViewItem__set_IsNotDisplayQuestInfo(
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_IsRecommend(
-        ItemLinkInfoListViewItem_o *this,
-        bool value,
-        const MethodInfo *method)
+void ItemLinkInfoListViewItem__set_IsRecommend(ItemLinkInfoListViewItem_o *this, bool value, const MethodInfo *method)
 {
   this->fields._IsRecommend_k__BackingField = value;
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_ItemDropEfficiencyPriority(
+void ItemLinkInfoListViewItem__set_ItemDropEfficiencyPriority(
         ItemLinkInfoListViewItem_o *this,
         int32_t value,
         const MethodInfo *method)
@@ -265,7 +236,7 @@ void __fastcall ItemLinkInfoListViewItem__set_ItemDropEfficiencyPriority(
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_ItemEnt(
+void ItemLinkInfoListViewItem__set_ItemEnt(
         ItemLinkInfoListViewItem_o *this,
         ItemEntity_o *value,
         const MethodInfo *method)
@@ -273,11 +244,11 @@ void __fastcall ItemLinkInfoListViewItem__set_ItemEnt(
   const MethodInfo *v3; // x3
 
   this->fields._ItemEnt_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._ItemEnt_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._ItemEnt_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_ItemNeedNum(
+void ItemLinkInfoListViewItem__set_ItemNeedNum(
         ItemLinkInfoListViewItem_o *this,
         int32_t value,
         const MethodInfo *method)
@@ -286,7 +257,7 @@ void __fastcall ItemLinkInfoListViewItem__set_ItemNeedNum(
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_LinkAction(
+void ItemLinkInfoListViewItem__set_LinkAction(
         ItemLinkInfoListViewItem_o *this,
         System_Action_o *value,
         const MethodInfo *method)
@@ -294,11 +265,11 @@ void __fastcall ItemLinkInfoListViewItem__set_LinkAction(
   const MethodInfo *v3; // x3
 
   this->fields._LinkAction_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._LinkAction_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._LinkAction_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_Name(
+void ItemLinkInfoListViewItem__set_Name(
         ItemLinkInfoListViewItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
@@ -306,20 +277,17 @@ void __fastcall ItemLinkInfoListViewItem__set_Name(
   const MethodInfo *v3; // x3
 
   this->fields._Name_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_TargetId(
-        ItemLinkInfoListViewItem_o *this,
-        int32_t value,
-        const MethodInfo *method)
+void ItemLinkInfoListViewItem__set_TargetId(ItemLinkInfoListViewItem_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._TargetId_k__BackingField = value;
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_TargetValueType(
+void ItemLinkInfoListViewItem__set_TargetValueType(
         ItemLinkInfoListViewItem_o *this,
         int32_t value,
         const MethodInfo *method)
@@ -328,7 +296,7 @@ void __fastcall ItemLinkInfoListViewItem__set_TargetValueType(
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_TransitionParam(
+void ItemLinkInfoListViewItem__set_TransitionParam(
         ItemLinkInfoListViewItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
@@ -336,7 +304,7 @@ void __fastcall ItemLinkInfoListViewItem__set_TransitionParam(
   const MethodInfo *v3; // x3
 
   this->fields._TransitionParam_k__BackingField = value;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._TransitionParam_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -344,10 +312,7 @@ void __fastcall ItemLinkInfoListViewItem__set_TransitionParam(
 }
 
 
-void __fastcall ItemLinkInfoListViewItem__set_Type(
-        ItemLinkInfoListViewItem_o *this,
-        int32_t value,
-        const MethodInfo *method)
+void ItemLinkInfoListViewItem__set_Type(ItemLinkInfoListViewItem_o *this, int32_t value, const MethodInfo *method)
 {
   this->fields._Type_k__BackingField = value;
 }

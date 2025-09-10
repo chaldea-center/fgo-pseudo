@@ -1,34 +1,31 @@
-void __fastcall WarBoardStageBossEntity___ctor(WarBoardStageBossEntity_o *this, const MethodInfo *method)
+void WarBoardStageBossEntity___ctor(WarBoardStageBossEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D6B0 & 1) == 0 )
+  if ( (byte_4C284B3 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D6B0 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C284B3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall WarBoardStageBossEntity__CreatePK(int32_t stageId, int32_t idx, const MethodInfo *method)
+System_String_o *WarBoardStageBossEntity__CreatePK(int32_t stageId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4B1D6AF & 1) == 0 )
+  if ( (byte_4C284B2 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&idx);
-    byte_4B1D6AF = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C284B2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            stageId,
            idx,
-           (const MethodInfo_3018C2C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
-System_String_o *__fastcall WarBoardStageBossEntity__CreatePrimaryKey(
-        WarBoardStageBossEntity_o *this,
-        const MethodInfo *method)
+System_String_o *WarBoardStageBossEntity__CreatePrimaryKey(WarBoardStageBossEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
@@ -36,26 +33,25 @@ System_String_o *__fastcall WarBoardStageBossEntity__CreatePrimaryKey(
 }
 
 
-System_String_array *__fastcall WarBoardStageBossEntity__GetTextEffectColors(
+System_String_array *WarBoardStageBossEntity__GetTextEffectColors(
         WarBoardStageBossEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   System_String_o *StringValue; // x19
   _BOOL8 IsNullOrEmpty; // x0
-  __int64 v6; // x1
+  __int64 v5; // x1
 
-  if ( (byte_4B1D6AE & 1) == 0 )
+  if ( (byte_4C284B1 & 1) == 0 )
   {
-    sub_1BCAFF8(&string___TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_23834/*"text_effect_colors"*/, v3);
-    byte_4B1D6AE = 1;
+    sub_1C2D490(&string___TypeInfo);
+    sub_1C2D490(&StringLiteral_24028/*"text_effect_colors"*/);
+    byte_4C284B1 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_23834/*"text_effect_colors"*/, 0LL, 0LL);
-  IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0LL);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_24028/*"text_effect_colors"*/, 0, 0);
+  IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0);
   if ( IsNullOrEmpty )
-    return (System_String_array *)sub_1BCB0A0(string___TypeInfo, 0LL);
+    return (System_String_array *)sub_1C2D538(string___TypeInfo, 0);
   if ( !StringValue )
-    sub_1BCB254(IsNullOrEmpty, v6);
-  return System_String__Split(StringValue, 0x2Cu, 0, 0LL);
+    sub_1C2D6EC(IsNullOrEmpty, v5);
+  return System_String__Split(StringValue, 0x2Cu, 0, 0);
 }

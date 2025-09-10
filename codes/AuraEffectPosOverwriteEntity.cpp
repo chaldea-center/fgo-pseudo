@@ -1,37 +1,36 @@
-void __fastcall AuraEffectPosOverwriteEntity___ctor(AuraEffectPosOverwriteEntity_o *this, const MethodInfo *method)
+void AuraEffectPosOverwriteEntity___ctor(AuraEffectPosOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C133 & 1) == 0 )
+  if ( (byte_4C26ED7 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1C133 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C26ED7 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall AuraEffectPosOverwriteEntity__CreatePK(
+System_String_o *AuraEffectPosOverwriteEntity__CreatePK(
         int32_t auraEffectId,
         int32_t svtId,
         int32_t svtLimitCount,
         const MethodInfo *method)
 {
-  if ( (byte_4B1C132 & 1) == 0 )
+  if ( (byte_4C26ED6 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&svtId);
-    byte_4B1C132 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C26ED6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            auraEffectId,
            svtId,
            svtLimitCount,
-           (const MethodInfo_30190BC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30CCF68 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
-System_String_o *__fastcall AuraEffectPosOverwriteEntity__CreatePrimaryKey(
+System_String_o *AuraEffectPosOverwriteEntity__CreatePrimaryKey(
         AuraEffectPosOverwriteEntity_o *this,
         const MethodInfo *method)
 {
@@ -45,7 +44,7 @@ System_String_o *__fastcall AuraEffectPosOverwriteEntity__CreatePrimaryKey(
 }
 
 
-UnityEngine_Vector3_o __fastcall AuraEffectPosOverwriteEntity__GetOffset(
+UnityEngine_Vector3_o AuraEffectPosOverwriteEntity__GetOffset(
         AuraEffectPosOverwriteEntity_o *this,
         const MethodInfo *method)
 {
@@ -64,7 +63,7 @@ UnityEngine_Vector3_o __fastcall AuraEffectPosOverwriteEntity__GetOffset(
 }
 
 
-UnityEngine_Vector3_o __fastcall AuraEffectPosOverwriteEntity__GetRotation(
+UnityEngine_Vector3_o AuraEffectPosOverwriteEntity__GetRotation(
         AuraEffectPosOverwriteEntity_o *this,
         const MethodInfo *method)
 {

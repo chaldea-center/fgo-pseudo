@@ -1,53 +1,47 @@
-void __fastcall SoundPlayerOpenEffectComponent___ctor(SoundPlayerOpenEffectComponent_o *this, const MethodInfo *method)
+void SoundPlayerOpenEffectComponent___ctor(SoundPlayerOpenEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B17D2C & 1) == 0 )
+  if ( (byte_4C22A64 & 1) == 0 )
   {
-    sub_1BCAFF8(&CommonEffectComponent_TypeInfo, method);
-    byte_4B17D2C = 1;
+    sub_1C2D490(&CommonEffectComponent_TypeInfo);
+    byte_4C22A64 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
-  CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0LL);
+  CommonEffectComponent___ctor((CommonEffectComponent_o *)this, 0);
 }
 
 
-void __fastcall SoundPlayerOpenEffectComponent__animEndFunc(
-        SoundPlayerOpenEffectComponent_o *this,
-        const MethodInfo *method)
+void SoundPlayerOpenEffectComponent__animEndFunc(SoundPlayerOpenEffectComponent_o *this, const MethodInfo *method)
 {
   System_Action_o *animEndCallback; // x0
 
   animEndCallback = this->fields.animEndCallback;
   if ( animEndCallback )
-    ActionExtensions__Call(animEndCallback, 0LL);
+    ActionExtensions__Call(animEndCallback, 0);
 }
 
 
-void __fastcall SoundPlayerOpenEffectComponent__changeUIFunc(
-        SoundPlayerOpenEffectComponent_o *this,
-        const MethodInfo *method)
+void SoundPlayerOpenEffectComponent__changeUIFunc(SoundPlayerOpenEffectComponent_o *this, const MethodInfo *method)
 {
   System_Action_o *changeUiCallback; // x0
 
   changeUiCallback = this->fields.changeUiCallback;
   if ( changeUiCallback )
-    ActionExtensions__Call(changeUiCallback, 0LL);
+    ActionExtensions__Call(changeUiCallback, 0);
 }
 
 
-void __fastcall SoundPlayerOpenEffectComponent__playIconAnimFunc(
-        SoundPlayerOpenEffectComponent_o *this,
-        const MethodInfo *method)
+void SoundPlayerOpenEffectComponent__playIconAnimFunc(SoundPlayerOpenEffectComponent_o *this, const MethodInfo *method)
 {
   System_Action_o *playIconAnimCallback; // x0
 
   playIconAnimCallback = this->fields.playIconAnimCallback;
   if ( playIconAnimCallback )
-    ActionExtensions__Call(playIconAnimCallback, 0LL);
+    ActionExtensions__Call(playIconAnimCallback, 0);
 }
 
 
-void __fastcall SoundPlayerOpenEffectComponent__setAnimEndCallback(
+void SoundPlayerOpenEffectComponent__setAnimEndCallback(
         SoundPlayerOpenEffectComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -55,11 +49,11 @@ void __fastcall SoundPlayerOpenEffectComponent__setAnimEndCallback(
   const MethodInfo *v3; // x3
 
   this->fields.animEndCallback = callback;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.animEndCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.animEndCallback, (int32_t)callback, (int32_t)method, v3);
 }
 
 
-void __fastcall SoundPlayerOpenEffectComponent__setChangeUiCallback(
+void SoundPlayerOpenEffectComponent__setChangeUiCallback(
         SoundPlayerOpenEffectComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -67,11 +61,11 @@ void __fastcall SoundPlayerOpenEffectComponent__setChangeUiCallback(
   const MethodInfo *v3; // x3
 
   this->fields.changeUiCallback = callback;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.changeUiCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.changeUiCallback, (int32_t)callback, (int32_t)method, v3);
 }
 
 
-void __fastcall SoundPlayerOpenEffectComponent__setPlayIconAnimCallBack(
+void SoundPlayerOpenEffectComponent__setPlayIconAnimCallBack(
         SoundPlayerOpenEffectComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -79,5 +73,5 @@ void __fastcall SoundPlayerOpenEffectComponent__setPlayIconAnimCallBack(
   const MethodInfo *v3; // x3
 
   this->fields.playIconAnimCallback = callback;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.playIconAnimCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.playIconAnimCallback, (int32_t)callback, (int32_t)method, v3);
 }

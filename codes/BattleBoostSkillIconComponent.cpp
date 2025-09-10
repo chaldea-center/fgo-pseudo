@@ -1,63 +1,58 @@
-void __fastcall BattleBoostSkillIconComponent___ctor(BattleBoostSkillIconComponent_o *this, const MethodInfo *method)
+void BattleBoostSkillIconComponent___ctor(BattleBoostSkillIconComponent_o *this, const MethodInfo *method)
 {
-  BattleServantSkillIConComponent___ctor((BattleServantSkillIConComponent_o *)this, 0LL);
+  BattleServantSkillIConComponent___ctor((BattleServantSkillIConComponent_o *)this, 0);
 }
 
 
-void __fastcall BattleBoostSkillIconComponent__OnClickIcon(
-        BattleBoostSkillIconComponent_o *this,
-        const MethodInfo *method)
+void BattleBoostSkillIconComponent__OnClickIcon(BattleBoostSkillIconComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *target; // x20
-  __int64 v5; // x1
+  __int64 v4; // x1
   UnityEngine_GameObject_o *Component_object; // x0
 
-  if ( (byte_4B1F7F1 & 1) == 0 )
+  if ( (byte_4C2A69E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___, method);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B1F7F1 = 1;
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2A69E = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(target, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(target, 0, 0) )
   {
     Component_object = this->fields.target;
     if ( !Component_object
       || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            Component_object,
-                                                           (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___)) == 0LL )
+                                                           (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_BattlePerformanceMaster___)) == 0 )
     {
-      sub_1BCB254(Component_object, v5);
+      sub_1C2D6EC(Component_object, v4);
     }
     BattlePerformanceMaster__clickBoostSkillIcon(
       (BattlePerformanceMaster_o *)Component_object,
       this->fields.skillInfo,
-      0LL);
+      0);
   }
 }
 
 
-void __fastcall BattleBoostSkillIconComponent__procFlash(
-        BattleBoostSkillIconComponent_o *this,
-        const MethodInfo *method)
+void BattleBoostSkillIconComponent__procFlash(BattleBoostSkillIconComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *flashEffect; // x0
   UnityEngine_Object_o *v4; // x19
 
-  if ( (byte_4B1F7F2 & 1) == 0 )
+  if ( (byte_4C2A69F & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1F7F2 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2A69F = 1;
   }
   flashEffect = this->fields.flashEffect;
   if ( !flashEffect )
-    sub_1BCB254(0LL, method);
-  UnityEngine_GameObject__SetActive(flashEffect, 1, 0LL);
+    sub_1C2D6EC(0, method);
+  UnityEngine_GameObject__SetActive(flashEffect, 1, 0);
   v4 = (UnityEngine_Object_o *)this->fields.flashEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy(v4, 3.0, 0LL);
+  UnityEngine_Object__Destroy(v4, 3.0, 0);
 }

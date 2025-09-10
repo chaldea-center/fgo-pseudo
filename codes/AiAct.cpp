@@ -1,34 +1,34 @@
-bool __fastcall AiAct__Check(int32_t type, int32_t intype, const MethodInfo *method)
+bool AiAct__Check(int32_t type, int32_t intype, const MethodInfo *method)
 {
   return type == intype;
 }
 
 
-int32_t __fastcall AiAct__getInt(int32_t type, const MethodInfo *method)
+int32_t AiAct__getInt(int32_t type, const MethodInfo *method)
 {
   return type;
 }
 
 
-int32_t __fastcall AiAct__getType(int32_t intype, const MethodInfo *method)
+int32_t AiAct__getType(int32_t intype, const MethodInfo *method)
 {
   return intype;
 }
 
 
-bool __fastcall AiAct__isAttackArts(int32_t type, const MethodInfo *method)
+bool AiAct__isAttackArts(int32_t type, const MethodInfo *method)
 {
   return type == 14 || type == 17;
 }
 
 
-bool __fastcall AiAct__isAttackBuster(int32_t type, const MethodInfo *method)
+bool AiAct__isAttackBuster(int32_t type, const MethodInfo *method)
 {
   return type == 15 || type == 18;
 }
 
 
-bool __fastcall AiAct__isAttackCritical(int32_t type, const MethodInfo *method)
+bool AiAct__isAttackCritical(int32_t type, const MethodInfo *method)
 {
   _BOOL4 v2; // w0
 
@@ -40,13 +40,13 @@ bool __fastcall AiAct__isAttackCritical(int32_t type, const MethodInfo *method)
 }
 
 
-bool __fastcall AiAct__isAttackQuick(int32_t type, const MethodInfo *method)
+bool AiAct__isAttackQuick(int32_t type, const MethodInfo *method)
 {
   return type == 16 || type == 19;
 }
 
 
-bool __fastcall AiAct__isAttackType(int32_t type, const MethodInfo *method)
+bool AiAct__isAttackType(int32_t type, const MethodInfo *method)
 {
   _BOOL4 v2; // w0
 
@@ -58,7 +58,7 @@ bool __fastcall AiAct__isAttackType(int32_t type, const MethodInfo *method)
 }
 
 
-bool __fastcall AiAct__isSkillType(int32_t type, const MethodInfo *method)
+bool AiAct__isSkillType(int32_t type, const MethodInfo *method)
 {
   _BOOL4 v2; // w0
 
@@ -70,13 +70,13 @@ bool __fastcall AiAct__isSkillType(int32_t type, const MethodInfo *method)
 }
 
 
-bool __fastcall AiAct__isThinkEnd(int32_t intype, const MethodInfo *method)
+bool AiAct__isThinkEnd(int32_t intype, const MethodInfo *method)
 {
   return intype != 99;
 }
 
 
-bool __fastcall AiAct__isThinkEnd_39473240(int32_t type, const MethodInfo *method)
+bool AiAct__isThinkEnd_40058480(int32_t type, const MethodInfo *method)
 {
   return type != 99;
 }

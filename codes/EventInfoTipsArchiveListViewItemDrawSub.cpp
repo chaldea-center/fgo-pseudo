@@ -1,4 +1,4 @@
-void __fastcall EventInfoTipsArchiveListViewItemDrawSub___ctor(
+void EventInfoTipsArchiveListViewItemDrawSub___ctor(
         EventInfoTipsArchiveListViewItemDrawSub_o *this,
         const MethodInfo *method)
 {
@@ -8,56 +8,54 @@ void __fastcall EventInfoTipsArchiveListViewItemDrawSub___ctor(
   *((_QWORD *)&v2 + 1) = 0x6200000062LL;
   *(_OWORD *)&this->fields.power = v2;
   *(_QWORD *)&this->fields.luck = 0x6200000062LL;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-int32_t __fastcall EventInfoTipsArchiveListViewItemDrawSub__GetHeight(
+int32_t EventInfoTipsArchiveListViewItemDrawSub__GetHeight(
         EventInfoTipsArchiveListViewItemDrawSub_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_Object_o *frameCollider; // x20
-  __int64 v5; // x1
-  UnityEngine_BoxCollider_o *v6; // x0
-  float v7; // s1
-  EventInfoTipsArchiveListViewItemDraw_c *v9; // x0
+  __int64 v4; // x1
+  UnityEngine_BoxCollider_o *v5; // x0
+  EventInfoTipsArchiveListViewItemDraw_c *v7; // x0
+  UnityEngine_Vector3_o size; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B1E3D0 & 1) == 0 )
+  if ( (byte_4C2911A & 1) == 0 )
   {
-    sub_1BCAFF8(&EventInfoTipsArchiveListViewItemDraw_TypeInfo, method);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B1E3D0 = 1;
+    sub_1C2D490(&EventInfoTipsArchiveListViewItemDraw_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2911A = 1;
   }
   frameCollider = (UnityEngine_Object_o *)this->fields.frameCollider;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(frameCollider, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(frameCollider, 0, 0) )
   {
-    v6 = this->fields.frameCollider;
-    if ( !v6 )
-      sub_1BCB254(0LL, v5);
-    *(UnityEngine_Vector3_o *)(&v7 - 1) = UnityEngine_BoxCollider__get_size(v6, 0LL);
-    if ( v7 == INFINITY )
+    v5 = this->fields.frameCollider;
+    if ( !v5 )
+      sub_1C2D6EC(0, v4);
+    size = UnityEngine_BoxCollider__get_size(v5, 0);
+    if ( size.fields.y == INFINITY )
       return 0x80000000;
     else
-      return (int)v7;
+      return (int)size.fields.y;
   }
   else
   {
-    v9 = EventInfoTipsArchiveListViewItemDraw_TypeInfo;
+    v7 = EventInfoTipsArchiveListViewItemDraw_TypeInfo;
     if ( !EventInfoTipsArchiveListViewItemDraw_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventInfoTipsArchiveListViewItemDraw_TypeInfo);
-      v9 = EventInfoTipsArchiveListViewItemDraw_TypeInfo;
+      v7 = EventInfoTipsArchiveListViewItemDraw_TypeInfo;
     }
-    return v9->static_fields->DEFAULT_FRAME_SIZE_HEIGHT;
+    return v7->static_fields->DEFAULT_FRAME_SIZE_HEIGHT;
   }
 }
 
 
-void __fastcall EventInfoTipsArchiveListViewItemDrawSub__OnDestroy(
+void EventInfoTipsArchiveListViewItemDrawSub__OnDestroy(
         EventInfoTipsArchiveListViewItemDrawSub_o *this,
         const MethodInfo *method)
 {
@@ -68,29 +66,29 @@ void __fastcall EventInfoTipsArchiveListViewItemDrawSub__OnDestroy(
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4B1E3CD & 1) == 0 )
+  if ( (byte_4C29117 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1E3CD = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C29117 = 1;
   }
   parameterObject = this->fields.parameterObject;
   p_parameterObject = (CGThumbnailListItem_o *)&this->fields.parameterObject;
   v4 = (UnityEngine_Object_o *)parameterObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v4, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(v4, 0, 0) )
   {
     klass = (UnityEngine_Object_o *)p_parameterObject->klass;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(klass, 0LL);
-    p_parameterObject->klass = 0LL;
-    sub_1BCAF9C(p_parameterObject, 0, v7, v8);
+    UnityEngine_Object__Destroy_71163704(klass, 0);
+    p_parameterObject->klass = 0;
+    sub_1C2D434(p_parameterObject, 0, v7, v8);
   }
 }
 
 
-void __fastcall EventInfoTipsArchiveListViewItemDrawSub__Setup(
+void EventInfoTipsArchiveListViewItemDrawSub__Setup(
         EventInfoTipsArchiveListViewItemDrawSub_o *this,
         EventInfoTipsArchiveListViewItem_o *item,
         const MethodInfo *method)
@@ -102,38 +100,38 @@ void __fastcall EventInfoTipsArchiveListViewItemDrawSub__Setup(
   __int64 v9; // x2
   struct EventInfoTipsArchiveListViewItemDrawSub_ImageInfo_array *imageInfoList; // x8
   unsigned __int64 v11; // x22
-  unsigned __int64 max_length; // x9
+  unsigned __int64 max_length_low; // x9
   EventInfoTipsArchiveListViewItemDrawSub_ImageInfo_o *v13; // x24
   UnityEngine_Object_o *Sprite; // x21
   const MethodInfo *v15; // x3
 
-  if ( (byte_4B1E3CE & 1) == 0 )
+  if ( (byte_4C29118 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, item);
-    byte_4B1E3CE = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C29118 = 1;
   }
   this->fields.viewItem = item;
   p_viewItem = &this->fields.viewItem;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.viewItem, (int32_t)item, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.viewItem, (int32_t)item, (int32_t)method, v3);
   imageInfoList = this->fields.imageInfoList;
   if ( !imageInfoList )
 LABEL_14:
-    sub_1BCB254(v7, v8);
-  v11 = 0LL;
+    sub_1C2D6EC(v7, v8);
+  v11 = 0;
   while ( 1 )
   {
-    max_length = imageInfoList->max_length;
-    if ( (__int64)v11 >= (int)max_length )
+    max_length_low = LODWORD(imageInfoList->max_length);
+    if ( (__int64)v11 >= (int)max_length_low )
       break;
-    if ( v11 >= max_length )
-      sub_1BCB25C(v7, v8, v9);
+    if ( v11 >= max_length_low )
+      sub_1C2D6F4(v7, v8, v9);
     v13 = imageInfoList->m_Items[v11];
     if ( v13 )
     {
       Sprite = (UnityEngine_Object_o *)v13->fields.Sprite;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v7 = (EventInfoTipsArchiveListViewItem_o *)UnityEngine_Object__op_Equality(Sprite, 0LL, 0LL);
+      v7 = (EventInfoTipsArchiveListViewItem_o *)UnityEngine_Object__op_Equality(Sprite, 0, 0);
       if ( ((unsigned __int8)v7 & 1) == 0 )
       {
         v7 = *p_viewItem;
@@ -155,40 +153,38 @@ LABEL_14:
 }
 
 
-void __fastcall EventInfoTipsArchiveListViewItemDrawSub__SetupParameterBoard(
+void EventInfoTipsArchiveListViewItemDrawSub__SetupParameterBoard(
         EventInfoTipsArchiveListViewItemDrawSub_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   UnityEngine_Object_o *parameterParent; // x20
   UnityEngine_Object_o **p_parameterObject; // x20
   UnityEngine_Object_o *parameterObject; // x21
   UnityEngine_GameObject_o *Component_object; // x0
-  __int64 v9; // x1
+  __int64 v7; // x1
   struct EventInfoTipsArchiveListViewItem_o *viewItem; // x8
   Il2CppObject *parameterBasePrefab; // x21
-  Il2CppObject *v12; // x0
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  Il2CppObject *v10; // x0
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4B1E3CF & 1) == 0 )
+  if ( (byte_4C29119 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterComponent___, method);
-    sub_1BCAFF8(&Method_UnityEngine_Object_Instantiate_GameObject___, v3);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
-    byte_4B1E3CF = 1;
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterComponent___);
+    sub_1C2D490(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C29119 = 1;
   }
   parameterParent = (UnityEngine_Object_o *)this->fields.parameterParent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality(parameterParent, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Equality(parameterParent, 0, 0) )
   {
     p_parameterObject = (UnityEngine_Object_o **)&this->fields.parameterObject;
     parameterObject = (UnityEngine_Object_o *)this->fields.parameterObject;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    Component_object = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(parameterObject, 0LL, 0LL);
+    Component_object = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(parameterObject, 0, 0);
     if ( ((unsigned __int8)Component_object & 1) == 0 )
     {
       viewItem = this->fields.viewItem;
@@ -197,20 +193,20 @@ void __fastcall EventInfoTipsArchiveListViewItemDrawSub__SetupParameterBoard(
         parameterBasePrefab = (Il2CppObject *)viewItem->fields.parameterBasePrefab;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        v12 = UnityEngine_Object__Instantiate_object_(
+        v10 = UnityEngine_Object__Instantiate_object_(
                 parameterBasePrefab,
-                (const MethodInfo_30A3BB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-        *p_parameterObject = (UnityEngine_Object_o *)v12;
-        sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.parameterObject, (int32_t)v12, v13, v14);
-        if ( UnityEngine_Object__op_Equality(*p_parameterObject, 0LL, 0LL) )
+                (const MethodInfo_315ACB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+        *p_parameterObject = (UnityEngine_Object_o *)v10;
+        sub_1C2D434((CGThumbnailListItem_o *)&this->fields.parameterObject, (int32_t)v10, v11, v12);
+        if ( UnityEngine_Object__op_Equality(*p_parameterObject, 0, 0) )
           return;
-        GameObjectExtensions__SafeSetParent_35362640(this->fields.parameterObject, this->fields.parameterParent, 0LL);
+        GameObjectExtensions__SafeSetParent_35924288(this->fields.parameterObject, this->fields.parameterParent, 0);
         Component_object = this->fields.parameterObject;
         if ( Component_object )
         {
           Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            Component_object,
-                                                           (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterComponent___);
+                                                           (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_ServantStatusParameterComponent___);
           if ( Component_object )
           {
             ServantStatusParameterComponent__Setup(
@@ -221,18 +217,18 @@ void __fastcall EventInfoTipsArchiveListViewItemDrawSub__SetupParameterBoard(
               this->fields.magic,
               this->fields.luck,
               this->fields.np,
-              0LL);
+              0);
             return;
           }
         }
       }
-      sub_1BCB254(Component_object, v9);
+      sub_1C2D6EC(Component_object, v7);
     }
   }
 }
 
 
-UnityEngine_BoxCollider_o *__fastcall EventInfoTipsArchiveListViewItemDrawSub__get_FrameCollider(
+UnityEngine_BoxCollider_o *EventInfoTipsArchiveListViewItemDrawSub__get_FrameCollider(
         EventInfoTipsArchiveListViewItemDrawSub_o *this,
         const MethodInfo *method)
 {
@@ -240,9 +236,9 @@ UnityEngine_BoxCollider_o *__fastcall EventInfoTipsArchiveListViewItemDrawSub__g
 }
 
 
-void __fastcall EventInfoTipsArchiveListViewItemDrawSub_ImageInfo___ctor(
+void EventInfoTipsArchiveListViewItemDrawSub_ImageInfo___ctor(
         EventInfoTipsArchiveListViewItemDrawSub_ImageInfo_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }

@@ -1,94 +1,75 @@
-// local variable allocation has failed, the output may be wrong!
-void __fastcall PreparePurchaseByBankRequest__beginRequest(
+void PreparePurchaseByBankRequest___ctor(PreparePurchaseByBankRequest_o *this, const MethodInfo *method)
+{
+  RequestBase___ctor((RequestBase_o *)this, 0);
+}
+
+
+void PreparePurchaseByBankRequest__beginRequest(
         PreparePurchaseByBankRequest_o *this,
         int32_t shopId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  const MethodInfo *v6; // x3
-  const MethodInfo *v7; // x1
-
-  if ( (byte_4B1E028 & 1) == 0 )
+  if ( (byte_4C28E39 & 1) == 0 )
   {
-    sub_1BCAFF8(&PurchaseBehaviour_TypeInfo, *(_QWORD *)&shopId);
-    sub_1BCAFF8(&StringLiteral_16883/*"bankShopId"*/, v5);
-    byte_4B1E028 = 1;
+    sub_1C2D490(&PurchaseBehaviour_TypeInfo);
+    sub_1C2D490(&StringLiteral_17016/*"bankShopId"*/);
+    byte_4C28E39 = 1;
   }
   if ( !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(PurchaseBehaviour_TypeInfo);
-  PurchaseBehaviour__AddPreparePurchaseShopIdsToPlayerPrefs(shopId, 0LL);
-  UnityEngine_PlayerPrefs__Save(0LL);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16883/*"bankShopId"*/, shopId, v6);
-  RequestBase__beginRequest((RequestBase_o *)this, v7);
+  PurchaseBehaviour__AddPreparePurchaseShopIdsToPlayerPrefs(shopId, 0);
+  UnityEngine_PlayerPrefs__Save(0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17016/*"bankShopId"*/, shopId, 0);
+  RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
 
-System_String_o *__fastcall PreparePurchaseByBankRequest__getURL(
-        PreparePurchaseByBankRequest_o *this,
-        const MethodInfo *method)
+System_String_o *PreparePurchaseByBankRequest__getURL(PreparePurchaseByBankRequest_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x1
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4B1E027 & 1) == 0 )
+  if ( (byte_4C28E38 & 1) == 0 )
   {
-    sub_1BCAFF8(&NetworkManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_23229/*"shop/preparePurchaseByBank"*/, v2);
-    byte_4B1E027 = 1;
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_23417/*"shop/preparePurchaseByBank"*/);
+    byte_4C28E38 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  BaseUrl = NetworkManager__getBaseUrl(1, 0LL);
-  return System_String__Concat_62450424(BaseUrl, (System_String_o *)StringLiteral_23229/*"shop/preparePurchaseByBank"*/, 0LL);
+  BaseUrl = NetworkManager__getBaseUrl(1, 0);
+  return System_String__Concat_63457864(BaseUrl, (System_String_o *)StringLiteral_23417/*"shop/preparePurchaseByBank"*/, 0);
 }
 
 
-void __fastcall PreparePurchaseByBankRequest__requestCompleted(
+void PreparePurchaseByBankRequest__requestCompleted(
         PreparePurchaseByBankRequest_o *this,
         ResponseData_array *responseList,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  ResponseData_o *v7; // x0
-  const MethodInfo *v8; // x2
-  ResponseData_o *v9; // x20
+  ResponseData_o *v5; // x0
+  ResponseData_o *v6; // x20
   Il2CppObject *success; // x20
-  System_String_o *v11; // x0
-  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  struct NetworkManager_ResultCallbackFunc_o *v13; // x8
+  System_String_o *v8; // x1
 
-  if ( (byte_4B1E029 & 1) == 0 )
+  if ( (byte_4C28E3A & 1) == 0 )
   {
-    sub_1BCAFF8(&JsonManager_TypeInfo, responseList);
-    sub_1BCAFF8(&ResponseCommandKind_TypeInfo, v5);
-    sub_1BCAFF8(&StringLiteral_22015/*"ng"*/, v6);
-    byte_4B1E029 = 1;
+    sub_1C2D490(&JsonManager_TypeInfo);
+    sub_1C2D490(&ResponseCommandKind_TypeInfo);
+    sub_1C2D490(&StringLiteral_22195/*"ng"*/);
+    byte_4C28E3A = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
-  v7 = ResponseCommandKind__SearchData(131, responseList, 0LL);
-  if ( v7
-    && (v9 = v7, ResponseData__checkError(v7, v7->fields.resCode, v8))
-    && (success = (Il2CppObject *)v9->fields.success) != 0LL )
+  v5 = ResponseCommandKind__SearchData(131, responseList, 0);
+  if ( v5 && (v6 = v5, ResponseData__checkError_44004292(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v11 = JsonManager__toJson(success, 0, 0, 0LL);
-    CallBack = this->fields.CallBack;
-    if ( CallBack )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, System_String_o *, _QWORD))CallBack->fields.m_target)(
-        CallBack->fields.original_method_info,
-        v11,
-        *(_QWORD *)&CallBack->fields.extra_arg);
+    v8 = JsonManager__toJson(success, 0, 0, 0);
   }
   else
   {
-    v13 = this->fields.CallBack;
-    if ( v13 )
-      ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, __int64, _QWORD))v13->fields.m_target)(
-        v13->fields.original_method_info,
-        StringLiteral_22015/*"ng"*/,
-        *(_QWORD *)&v13->fields.extra_arg);
+    v8 = (System_String_o *)StringLiteral_22195/*"ng"*/;
   }
+  RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

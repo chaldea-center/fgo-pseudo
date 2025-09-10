@@ -1,12 +1,12 @@
-void __fastcall RecommendSupportMessageSelectListViewItemDraw___ctor(
+void RecommendSupportMessageSelectListViewItemDraw___ctor(
         RecommendSupportMessageSelectListViewItemDraw_o *this,
         const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall RecommendSupportMessageSelectListViewItemDraw__Awake(
+void RecommendSupportMessageSelectListViewItemDraw__Awake(
         RecommendSupportMessageSelectListViewItemDraw_o *this,
         const MethodInfo *method)
 {
@@ -14,7 +14,7 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__Awake(
 }
 
 
-void __fastcall RecommendSupportMessageSelectListViewItemDraw__ClearItem(
+void RecommendSupportMessageSelectListViewItemDraw__ClearItem(
         RecommendSupportMessageSelectListViewItemDraw_o *this,
         const MethodInfo *method)
 {
@@ -24,41 +24,36 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__ClearItem(
 }
 
 
-void __fastcall RecommendSupportMessageSelectListViewItemDraw__Init(
+void RecommendSupportMessageSelectListViewItemDraw__Init(
         RecommendSupportMessageSelectListViewItemDraw_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
   __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
   UICommonButton_o *button; // x0
   UISprite_o *frameSprite; // x19
 
-  if ( (byte_4B18477 & 1) == 0 )
+  if ( (byte_4C231CD & 1) == 0 )
   {
-    sub_1BCAFF8(&AtlasManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_20224/*"img_frameselect"*/, v4);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v5);
-    byte_4B18477 = 1;
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_20395/*"img_frameselect"*/);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C231CD = 1;
   }
   RecommendSupportMessageSelectListViewItemDraw__SetButtonState(this, 0, 0, v2);
   button = this->fields.button;
-  if ( !button
-    || (UICommonButton__SetEnable(button, 1, 0LL), (button = (UICommonButton_o *)this->fields.wordLabel) == 0LL) )
-  {
-    sub_1BCB254(button, v6);
-  }
-  UILabel__set_text((UILabel_o *)button, (System_String_o *)StringLiteral_1/*""*/, 0LL);
+  if ( !button || (UICommonButton__SetEnable(button, 1, 0), (button = (UICommonButton_o *)this->fields.wordLabel) == 0) )
+    sub_1C2D6EC(button, v4);
+  UILabel__set_text((UILabel_o *)button, (System_String_o *)StringLiteral_1/*""*/, 0);
   frameSprite = this->fields.frameSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetPartyOrganizationImage(frameSprite, (System_String_o *)StringLiteral_20224/*"img_frameselect"*/, 0LL);
+  AtlasManager__SetPartyOrganizationImage(frameSprite, (System_String_o *)StringLiteral_20395/*"img_frameselect"*/, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetButtonState(
+void RecommendSupportMessageSelectListViewItemDraw__SetButtonState(
         RecommendSupportMessageSelectListViewItemDraw_o *this,
         bool isUse,
         bool isSelectLimit,
@@ -76,14 +71,14 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetButtonState(
     goto LABEL_11;
   if ( isUse )
   {
-    UICommonButton__SetEnable(button, 1, 0LL);
+    UICommonButton__SetEnable(button, 1, 0);
     v7 = 1;
     v8 = this;
     goto LABEL_8;
   }
   if ( !isSelectLimit )
   {
-    UICommonButton__SetEnable(button, 1, 0LL);
+    UICommonButton__SetEnable(button, 1, 0);
     v8 = this;
     v7 = 0;
 LABEL_8:
@@ -95,21 +90,21 @@ LABEL_8:
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1BCB254(button, isUse);
+    sub_1C2D6EC(button, isUse);
   }
-  UICommonButton__SetEnable(button, 0, 0LL);
+  UICommonButton__SetEnable(button, 0, 0);
   RecommendSupportMessageSelectListViewItemDraw__SetHighlight(this, 0, v9);
   button = (UICommonButton_o *)this->fields.mask;
   if ( !button )
     goto LABEL_11;
   v10 = 1;
 LABEL_10:
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)button, v10, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)button, v10, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetHighlight(
+void RecommendSupportMessageSelectListViewItemDraw__SetHighlight(
         RecommendSupportMessageSelectListViewItemDraw_o *this,
         bool isActive,
         const MethodInfo *method)
@@ -118,15 +113,15 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetHighlight(
 
   frameSprite = (UnityEngine_Component_o *)this->fields.frameSprite;
   if ( !frameSprite
-    || (frameSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(frameSprite, 0LL)) == 0LL )
+    || (frameSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(frameSprite, 0)) == 0 )
   {
-    sub_1BCB254(frameSprite, isActive);
+    sub_1C2D6EC(frameSprite, isActive);
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)frameSprite, isActive, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)frameSprite, isActive, 0);
 }
 
 
-void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetInput(
+void RecommendSupportMessageSelectListViewItemDraw__SetInput(
         RecommendSupportMessageSelectListViewItemDraw_o *this,
         RecommendSupportMessageSelectListViewItem_o *item,
         bool isInput,
@@ -140,10 +135,10 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetInput(
   if ( item )
   {
     IsUse_k__BackingField = item->fields._IsUse_k__BackingField;
-    if ( !byte_4B184C5 )
+    if ( !byte_4C2328B )
     {
-      sub_1BCAFF8(&RecommendSupportMessageSelectDialog_TypeInfo, item);
-      byte_4B184C5 = 1;
+      sub_1C2D490(&RecommendSupportMessageSelectDialog_TypeInfo);
+      byte_4C2328B = 1;
     }
     RecommendSupportMessageSelectListViewItemDraw__SetButtonState(
       this,
@@ -151,14 +146,14 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetInput(
       RecommendSupportMessageSelectDialog_TypeInfo->static_fields->_IsSelectLimit_k__BackingField,
       method);
     RecommendAdviceMessageEntity_k__BackingField = item->fields._RecommendAdviceMessageEntity_k__BackingField;
-    if ( !RecommendAdviceMessageEntity_k__BackingField || (wordLabel = this->fields.wordLabel) == 0LL )
-      sub_1BCB254(wordLabel, v8);
-    UILabel__set_text(wordLabel, RecommendAdviceMessageEntity_k__BackingField->fields.message, 0LL);
+    if ( !RecommendAdviceMessageEntity_k__BackingField || (wordLabel = this->fields.wordLabel) == 0 )
+      sub_1C2D6EC(wordLabel, v8);
+    UILabel__set_text(wordLabel, RecommendAdviceMessageEntity_k__BackingField->fields.message, 0);
   }
 }
 
 
-void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetItem(
+void RecommendSupportMessageSelectListViewItemDraw__SetItem(
         RecommendSupportMessageSelectListViewItemDraw_o *this,
         RecommendSupportMessageSelectListViewItem_o *item,
         const MethodInfo *method)
@@ -172,10 +167,10 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetItem(
   if ( item )
   {
     IsUse_k__BackingField = item->fields._IsUse_k__BackingField;
-    if ( !byte_4B184C5 )
+    if ( !byte_4C2328B )
     {
-      sub_1BCAFF8(&RecommendSupportMessageSelectDialog_TypeInfo, item);
-      byte_4B184C5 = 1;
+      sub_1C2D490(&RecommendSupportMessageSelectDialog_TypeInfo);
+      byte_4C2328B = 1;
     }
     RecommendSupportMessageSelectListViewItemDraw__SetButtonState(
       this,
@@ -183,14 +178,14 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetItem(
       RecommendSupportMessageSelectDialog_TypeInfo->static_fields->_IsSelectLimit_k__BackingField,
       v3);
     RecommendAdviceMessageEntity_k__BackingField = item->fields._RecommendAdviceMessageEntity_k__BackingField;
-    if ( !RecommendAdviceMessageEntity_k__BackingField || (wordLabel = this->fields.wordLabel) == 0LL )
-      sub_1BCB254(wordLabel, v8);
-    UILabel__set_text(wordLabel, RecommendAdviceMessageEntity_k__BackingField->fields.message, 0LL);
+    if ( !RecommendAdviceMessageEntity_k__BackingField || (wordLabel = this->fields.wordLabel) == 0 )
+      sub_1C2D6EC(wordLabel, v8);
+    UILabel__set_text(wordLabel, RecommendAdviceMessageEntity_k__BackingField->fields.message, 0);
   }
 }
 
 
-void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetMask(
+void RecommendSupportMessageSelectListViewItemDraw__SetMask(
         RecommendSupportMessageSelectListViewItemDraw_o *this,
         bool isActive,
         const MethodInfo *method)
@@ -199,6 +194,6 @@ void __fastcall RecommendSupportMessageSelectListViewItemDraw__SetMask(
 
   mask = this->fields.mask;
   if ( !mask )
-    sub_1BCB254(0LL, isActive);
-  UnityEngine_GameObject__SetActive(mask, isActive, 0LL);
+    sub_1C2D6EC(0, isActive);
+  UnityEngine_GameObject__SetActive(mask, isActive, 0);
 }

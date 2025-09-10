@@ -1,36 +1,34 @@
-void __fastcall WarBoardEventEntity___ctor(WarBoardEventEntity_o *this, const MethodInfo *method)
+void WarBoardEventEntity___ctor(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D61C & 1) == 0 )
+  if ( (byte_4C2841F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1D61C = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C2841F = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall WarBoardEventEntity__CreatePrimaryKey(WarBoardEventEntity_o *this, const MethodInfo *method)
+int32_t WarBoardEventEntity__CreatePrimaryKey(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-System_Int32_array *__fastcall WarBoardEventEntity__GetSquareIndicesToAdd(
-        WarBoardEventEntity_o *this,
-        const MethodInfo *method)
+System_Int32_array *WarBoardEventEntity__GetSquareIndicesToAdd(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D619 & 1) == 0 )
+  if ( (byte_4C2841C & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_16545/*"addSquareIndex"*/, method);
-    byte_4B1D619 = 1;
+    sub_1C2D490(&StringLiteral_16678/*"addSquareIndex"*/);
+    byte_4C2841C = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16545/*"addSquareIndex"*/, 0LL, 0LL);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_16678/*"addSquareIndex"*/, 0, 0);
 }
 
 
-bool __fastcall WarBoardEventEntity__IsCorrectEntity(WarBoardEventEntity_o *this, const MethodInfo *method)
+bool WarBoardEventEntity__IsCorrectEntity(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
   struct System_Int32_array *warBoardEventScriptIds; // x8
   int max_length; // w8
@@ -46,7 +44,7 @@ bool __fastcall WarBoardEventEntity__IsCorrectEntity(WarBoardEventEntity_o *this
   warBoardCommonReleaseIds = this->fields.warBoardCommonReleaseIds;
   if ( !warBoardCommonReleaseIds )
 LABEL_7:
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   v5 = warBoardCommonReleaseIds->max_length;
   if ( v5 >= 1 )
     return max_length == v5;
@@ -54,38 +52,38 @@ LABEL_7:
 }
 
 
-bool __fastcall WarBoardEventEntity__IsIncludeInvolvedAttacker(WarBoardEventEntity_o *this, const MethodInfo *method)
+bool WarBoardEventEntity__IsIncludeInvolvedAttacker(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D61A & 1) == 0 )
+  if ( (byte_4C2841D & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_20559/*"includeInvolvedAttacker"*/, method);
-    byte_4B1D61A = 1;
+    sub_1C2D490(&StringLiteral_20731/*"includeInvolvedAttacker"*/);
+    byte_4C2841D = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20559/*"includeInvolvedAttacker"*/, 0, 0LL) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20731/*"includeInvolvedAttacker"*/, 0, 0) == 1;
 }
 
 
-bool __fastcall WarBoardEventEntity__IsIncludeInvolvedDefender(WarBoardEventEntity_o *this, const MethodInfo *method)
+bool WarBoardEventEntity__IsIncludeInvolvedDefender(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D61B & 1) == 0 )
+  if ( (byte_4C2841E & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_20560/*"includeInvolvedDefender"*/, method);
-    byte_4B1D61B = 1;
+    sub_1C2D490(&StringLiteral_20732/*"includeInvolvedDefender"*/);
+    byte_4C2841E = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20560/*"includeInvolvedDefender"*/, 0, 0LL) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20732/*"includeInvolvedDefender"*/, 0, 0) == 1;
 }
 
 
-bool __fastcall WarBoardEventEntity__IsOpenEventTiming(
+bool WarBoardEventEntity__IsOpenEventTiming(
         WarBoardEventEntity_o *this,
         System_Int32_array *vals,
         const MethodInfo *method)
 {
-  return WarBoardEventTiming__IsOpen(this->fields.eventTiming, this->fields.eventTimingVals, vals, this, 0LL);
+  return WarBoardEventTiming__IsOpen(this->fields.eventTiming, this->fields.eventTimingVals, vals, this, 0);
 }
 
 
-bool __fastcall WarBoardEventEntity__IsPlayableEvent(WarBoardEventEntity_o *this, const MethodInfo *method)
+bool WarBoardEventEntity__IsPlayableEvent(WarBoardEventEntity_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
@@ -94,15 +92,15 @@ bool __fastcall WarBoardEventEntity__IsPlayableEvent(WarBoardEventEntity_o *this
   int32_t frequencyType; // w8
   int32_t latestPlayedTurn_k__BackingField; // w19
 
-  if ( (byte_4B1D618 & 1) == 0 )
+  if ( (byte_4C2841B & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__, method);
-    byte_4B1D618 = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4C2841B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-  if ( !Instance || (monitor = (WarBoardData_o *)Instance[27].monitor) == 0LL )
-    sub_1BCB254(Instance, v4);
-  PlayedEventData = WarBoardData__GetPlayedEventData((WarBoardData_o *)Instance[27].monitor, this->fields.id, 0LL);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  if ( !Instance || (monitor = (WarBoardData_o *)Instance[27].monitor) == 0 )
+    sub_1C2D6EC(Instance, v4);
+  PlayedEventData = WarBoardData__GetPlayedEventData((WarBoardData_o *)Instance[27].monitor, this->fields.id, 0);
   if ( !PlayedEventData )
     return 1;
   frequencyType = this->fields.frequencyType;
@@ -111,5 +109,5 @@ bool __fastcall WarBoardEventEntity__IsPlayableEvent(WarBoardEventEntity_o *this
   if ( frequencyType != 3 )
     return 0;
   latestPlayedTurn_k__BackingField = PlayedEventData->fields._latestPlayedTurn_k__BackingField;
-  return latestPlayedTurn_k__BackingField != WarBoardData__get_TurnCount(monitor, 0LL);
+  return latestPlayedTurn_k__BackingField != WarBoardData__get_TurnCount(monitor, 0);
 }

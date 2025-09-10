@@ -1,46 +1,43 @@
-void __fastcall GrandQuestRootComponent___cctor(const MethodInfo *method)
+void GrandQuestRootComponent___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  __int64 v2; // x1
-  __int64 v3; // x1
   struct GrandQuestRootComponent_StaticFields *static_fields; // x0
-  struct GrandQuestRootComponent_StaticFields *v5; // x0
+  struct GrandQuestRootComponent_StaticFields *v2; // x0
 
-  if ( (byte_4B17344 & 1) == 0 )
+  if ( (byte_4C22049 & 1) == 0 )
   {
-    sub_1BCAFF8(&GrandQuestRootComponent_TypeInfo, v1);
-    sub_1BCAFF8(&StringLiteral_20984/*"latestFocusGrandWar"*/, v2);
-    sub_1BCAFF8(&StringLiteral_20981/*"lastClearGrandWar"*/, v3);
-    byte_4B17344 = 1;
+    sub_1C2D490(&GrandQuestRootComponent_TypeInfo);
+    sub_1C2D490(&StringLiteral_21161/*"latestFocusGrandWar"*/);
+    sub_1C2D490(&StringLiteral_21158/*"lastClearGrandWar"*/);
+    byte_4C22049 = 1;
   }
   static_fields = GrandQuestRootComponent_TypeInfo->static_fields;
   static_fields->GrandFadeTime = 0.66667;
-  static_fields->SAVE_KEY_LAST_CLEAR_GRAND_WAR = (struct System_String_o *)StringLiteral_20981/*"lastClearGrandWar"*/;
-  sub_1BCAF9C(&static_fields->SAVE_KEY_LAST_CLEAR_GRAND_WAR);
-  v5 = GrandQuestRootComponent_TypeInfo->static_fields;
-  v5->SAVE_KEY_LATEST_FOCUS_GRAND_WAR = (struct System_String_o *)StringLiteral_20984/*"latestFocusGrandWar"*/;
-  sub_1BCAF9C(&v5->SAVE_KEY_LATEST_FOCUS_GRAND_WAR);
+  static_fields->SAVE_KEY_LAST_CLEAR_GRAND_WAR = (struct System_String_o *)StringLiteral_21158/*"lastClearGrandWar"*/;
+  sub_1C2D434(&static_fields->SAVE_KEY_LAST_CLEAR_GRAND_WAR);
+  v2 = GrandQuestRootComponent_TypeInfo->static_fields;
+  v2->SAVE_KEY_LATEST_FOCUS_GRAND_WAR = (struct System_String_o *)StringLiteral_21161/*"latestFocusGrandWar"*/;
+  sub_1C2D434(&v2->SAVE_KEY_LATEST_FOCUS_GRAND_WAR);
 }
 
 
-void __fastcall GrandQuestRootComponent___ctor(GrandQuestRootComponent_o *this, const MethodInfo *method)
+void GrandQuestRootComponent___ctor(GrandQuestRootComponent_o *this, const MethodInfo *method)
 {
   GrandQuestViewSwitcher_o *v3; // x20
 
-  if ( (byte_4B17343 & 1) == 0 )
+  if ( (byte_4C22048 & 1) == 0 )
   {
-    sub_1BCAFF8(&GrandQuestViewSwitcher_TypeInfo, method);
-    byte_4B17343 = 1;
+    sub_1C2D490(&GrandQuestViewSwitcher_TypeInfo);
+    byte_4C22048 = 1;
   }
-  v3 = (GrandQuestViewSwitcher_o *)sub_1BCB244(GrandQuestViewSwitcher_TypeInfo);
-  GrandQuestViewSwitcher___ctor(v3, 0LL);
+  v3 = (GrandQuestViewSwitcher_o *)sub_1C2D6DC(GrandQuestViewSwitcher_TypeInfo);
+  GrandQuestViewSwitcher___ctor(v3, 0);
   this->fields.viewSwitcher = v3;
-  sub_1BCAF9C(&this->fields.viewSwitcher);
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  sub_1C2D434(&this->fields.viewSwitcher);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall GrandQuestRootComponent__BackToClassSelectView(
+void GrandQuestRootComponent__BackToClassSelectView(
         GrandQuestRootComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -48,76 +45,72 @@ void __fastcall GrandQuestRootComponent__BackToClassSelectView(
   __int64 v5; // x1
   GrandQuestViewSwitcher_o *viewSwitcher; // x0
 
-  if ( (byte_4B1733B & 1) == 0 )
+  if ( (byte_4C22040 & 1) == 0 )
   {
-    sub_1BCAFF8(&TerminalPramsManager_TypeInfo, callback);
-    byte_4B1733B = 1;
+    sub_1C2D490(&TerminalPramsManager_TypeInfo);
+    byte_4C22040 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  TerminalPramsManager__PlaySystemSE(1, 0LL);
+  TerminalPramsManager__PlaySystemSE(1, 0);
   viewSwitcher = this->fields.viewSwitcher;
   if ( !viewSwitcher )
-    sub_1BCB254(0LL, v5);
-  GrandQuestViewSwitcher__BackToClassSelect(viewSwitcher, callback, 0LL);
+    sub_1C2D6EC(0, v5);
+  GrandQuestViewSwitcher__BackToClassSelect(viewSwitcher, callback, 0);
 }
 
 
-void __fastcall GrandQuestRootComponent__CreateClassBoard(GrandQuestRootComponent_o *this, const MethodInfo *method)
+void GrandQuestRootComponent__CreateClassBoard(GrandQuestRootComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   struct GrandQuestClassBoardController_o **p_classBoardController; // x19
   UnityEngine_Object_o *classBoardController; // x21
-  const MethodInfo *v7; // x1
+  const MethodInfo *v5; // x1
   GrandQuestResourceCatalogAssetBundle_o *resourceCatalog; // x0
   Il2CppObject *ClassBoardPrefab; // x21
   UnityEngine_Transform_o *transform; // x20
 
-  if ( (byte_4B17339 & 1) == 0 )
+  if ( (byte_4C2203E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_GrandQuestClassBoardController___, method);
-    sub_1BCAFF8(&Method_UnityEngine_Object_Instantiate_GameObject____77001424, v3);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v4);
-    byte_4B17339 = 1;
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_GrandQuestClassBoardController___);
+    sub_1C2D490(&Method_UnityEngine_Object_Instantiate_GameObject____78081576);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2203E = 1;
   }
   p_classBoardController = &this->fields.classBoardController;
   classBoardController = (UnityEngine_Object_o *)this->fields.classBoardController;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Inequality(classBoardController, 0LL, 0LL) )
+  if ( !UnityEngine_Object__op_Inequality(classBoardController, 0, 0) )
   {
     resourceCatalog = this->fields.resourceCatalog;
     if ( !resourceCatalog )
       goto LABEL_11;
-    ClassBoardPrefab = (Il2CppObject *)GrandQuestResourceCatalogAssetBundle__GetClassBoardPrefab(resourceCatalog, v7);
-    transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+    ClassBoardPrefab = (Il2CppObject *)GrandQuestResourceCatalogAssetBundle__GetClassBoardPrefab(resourceCatalog, v5);
+    transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    resourceCatalog = (GrandQuestResourceCatalogAssetBundle_o *)UnityEngine_Object__Instantiate_object__51002592(
+    resourceCatalog = (GrandQuestResourceCatalogAssetBundle_o *)UnityEngine_Object__Instantiate_object__51752420(
                                                                   ClassBoardPrefab,
                                                                   transform,
-                                                                  (const MethodInfo_30A3CE0 *)Method_UnityEngine_Object_Instantiate_GameObject____77001424);
+                                                                  (const MethodInfo_315ADE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78081576);
     if ( !resourceCatalog )
 LABEL_11:
-      sub_1BCB254(resourceCatalog, v7);
+      sub_1C2D6EC(resourceCatalog, v5);
     *p_classBoardController = (struct GrandQuestClassBoardController_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                            (UnityEngine_GameObject_o *)resourceCatalog,
-                                                                           (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_GrandQuestClassBoardController___);
-    sub_1BCAF9C(p_classBoardController);
+                                                                           (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_GrandQuestClassBoardController___);
+    sub_1C2D434(p_classBoardController);
   }
 }
 
 
-void __fastcall GrandQuestRootComponent__ExecuteInitEndCallback(
-        GrandQuestRootComponent_o *this,
-        const MethodInfo *method)
+void GrandQuestRootComponent__ExecuteInitEndCallback(GrandQuestRootComponent_o *this, const MethodInfo *method)
 {
-  ActionExtensions__Call(this->fields.initEndCallback, 0LL);
+  ActionExtensions__Call(this->fields.initEndCallback, 0);
 }
 
 
-void __fastcall GrandQuestRootComponent__ExitGrandQuestArea(GrandQuestRootComponent_o *this, const MethodInfo *method)
+void GrandQuestRootComponent__ExitGrandQuestArea(GrandQuestRootComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *grandQuestBackground; // x20
   const MethodInfo *v4; // x1
@@ -126,22 +119,20 @@ void __fastcall GrandQuestRootComponent__ExitGrandQuestArea(GrandQuestRootCompon
   UnityEngine_Object_o *levelSelectController; // x20
   struct GrandQuestLevelSelectController_o *v8; // x8
   UnityEngine_Object_o *svtController; // x20
-  struct GrandQuestSvtController_o *v10; // x20
-  const MethodInfo *v11; // x1
   struct GrandQuestClassBoardController_o **p_classBoardController; // x20
   UnityEngine_Object_o *classBoardController; // x21
   UnityEngine_Object_o *gameObject; // x21
   struct GrandQuestResourceCatalogAssetBundle_o *resourceCatalog; // x8
 
-  if ( (byte_4B1733C & 1) == 0 )
+  if ( (byte_4C22041 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1733C = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C22041 = 1;
   }
   grandQuestBackground = (UnityEngine_Object_o *)this->fields.grandQuestBackground;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(grandQuestBackground, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(grandQuestBackground, 0, 0) )
   {
     assetStorageLoadWrapper = this->fields.grandQuestBackground;
     if ( !assetStorageLoadWrapper )
@@ -151,7 +142,7 @@ void __fastcall GrandQuestRootComponent__ExitGrandQuestArea(GrandQuestRootCompon
   classSelectController = (UnityEngine_Object_o *)this->fields.classSelectController;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(classSelectController, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(classSelectController, 0, 0) )
   {
     assetStorageLoadWrapper = (GrandQuestBackground_o *)this->fields.classSelectController;
     if ( !assetStorageLoadWrapper )
@@ -161,7 +152,7 @@ void __fastcall GrandQuestRootComponent__ExitGrandQuestArea(GrandQuestRootCompon
   levelSelectController = (UnityEngine_Object_o *)this->fields.levelSelectController;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  assetStorageLoadWrapper = (GrandQuestBackground_o *)UnityEngine_Object__op_Inequality(levelSelectController, 0LL, 0LL);
+  assetStorageLoadWrapper = (GrandQuestBackground_o *)UnityEngine_Object__op_Inequality(levelSelectController, 0, 0);
   if ( ((unsigned __int8)assetStorageLoadWrapper & 1) != 0 )
   {
     v8 = this->fields.levelSelectController;
@@ -172,24 +163,18 @@ void __fastcall GrandQuestRootComponent__ExitGrandQuestArea(GrandQuestRootCompon
   svtController = (UnityEngine_Object_o *)this->fields.svtController;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  assetStorageLoadWrapper = (GrandQuestBackground_o *)UnityEngine_Object__op_Inequality(svtController, 0LL, 0LL);
-  if ( ((unsigned __int8)assetStorageLoadWrapper & 1) != 0 )
+  if ( UnityEngine_Object__op_Inequality(svtController, 0, 0) )
   {
-    v10 = this->fields.svtController;
-    if ( !v10 )
+    assetStorageLoadWrapper = (GrandQuestBackground_o *)this->fields.svtController;
+    if ( !assetStorageLoadWrapper )
       goto LABEL_36;
-    v10->fields.currentViewType = 0;
-    v10->fields.currentWarId = -1;
-    v10->fields.blankEarthSpotEntity = 0LL;
-    sub_1BCAF9C(&v10->fields.blankEarthSpotEntity);
-    GrandQuestSvtController__ClearFigure(v10, v11);
-    v10->fields.initialized = 0;
+    GrandQuestSvtController__Quit((GrandQuestSvtController_o *)assetStorageLoadWrapper, 0);
   }
   p_classBoardController = &this->fields.classBoardController;
   classBoardController = (UnityEngine_Object_o *)this->fields.classBoardController;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(classBoardController, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(classBoardController, 0, 0) )
   {
     assetStorageLoadWrapper = (GrandQuestBackground_o *)*p_classBoardController;
     if ( !*p_classBoardController )
@@ -200,12 +185,12 @@ void __fastcall GrandQuestRootComponent__ExitGrandQuestArea(GrandQuestRootCompon
       goto LABEL_36;
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                            (UnityEngine_Component_o *)assetStorageLoadWrapper,
-                                           0LL);
+                                           0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(gameObject, 0LL);
-    *p_classBoardController = 0LL;
-    sub_1BCAF9C(&this->fields.classBoardController);
+    UnityEngine_Object__Destroy_71163704(gameObject, 0);
+    *p_classBoardController = 0;
+    sub_1C2D434(&this->fields.classBoardController);
   }
   resourceCatalog = this->fields.resourceCatalog;
   if ( resourceCatalog )
@@ -213,203 +198,182 @@ void __fastcall GrandQuestRootComponent__ExitGrandQuestArea(GrandQuestRootCompon
     assetStorageLoadWrapper = (GrandQuestBackground_o *)resourceCatalog->fields.assetStorageLoadWrapper;
     if ( !assetStorageLoadWrapper )
       goto LABEL_36;
-    AssetStorageLoadWrapper__ReleaseAll((AssetStorageLoadWrapper_o *)assetStorageLoadWrapper, 0LL);
+    AssetStorageLoadWrapper__ReleaseAll((AssetStorageLoadWrapper_o *)assetStorageLoadWrapper, 0);
   }
   assetStorageLoadWrapper = (GrandQuestBackground_o *)UnityEngine_Component__get_gameObject(
                                                         (UnityEngine_Component_o *)this,
-                                                        0LL);
+                                                        0);
   if ( !assetStorageLoadWrapper )
 LABEL_36:
-    sub_1BCB254(assetStorageLoadWrapper, v4);
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)assetStorageLoadWrapper, 0, 0LL);
+    sub_1C2D6EC(assetStorageLoadWrapper, v4);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)assetStorageLoadWrapper, 0, 0);
 }
 
 
-System_Collections_Generic_List_MapControl_WarInfo__o *__fastcall GrandQuestRootComponent__GetGrandWarInfoList(
+System_Collections_Generic_List_MapControl_WarInfo__o *GrandQuestRootComponent__GetGrandWarInfoList(
         GrandQuestRootComponent_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x1
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  System_Collections_Generic_List_object__o *v13; // x19
+  System_Collections_Generic_List_object__o *v2; // x19
   Il2CppObject *Instance; // x0
-  __int64 v15; // x1
-  WarEntity_o *v16; // x27
-  _BOOL8 v17; // x0
-  __int64 v18; // x1
+  __int64 v4; // x1
+  _BOOL8 v5; // x0
+  __int64 v6; // x1
   Il2CppObject *current; // x20
   WarEntity_o *Mine; // x0
-  __int64 v21; // x1
   int32_t parentWarId; // w1
+  System_Nullable_int__o v10; // x0
   struct System_Collections_Generic_List_T__o *list; // x28
-  BalanceConfig_c *v24; // x0
-  Il2CppObject *v25; // x0
-  __int64 v26; // x1
+  BalanceConfig_c *v12; // x0
+  Il2CppObject *v13; // x0
+  __int64 v14; // x1
   _BOOL8 IsActiveWar; // x0
-  __int64 v28; // x1
+  __int64 v16; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v30; // x9
+  _QWORD *v18; // x9
   __int64 size; // x10
-  Il2CppClass **v32; // x0
-  System_Collections_Generic_List_Enumerator_object__o v34; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v35; // [xsp+20h] [xbp-80h] BYREF
-  System_Nullable_int__o v36; // 0:x0.8
+  Il2CppClass **v20; // x0
+  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4B1733F & 1) == 0 )
+  if ( (byte_4C22044 & 1) == 0 )
   {
-    sub_1BCAFF8(&BalanceConfig_TypeInfo, method);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__, v2);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__, v3);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__, v4);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_MapControl_WarInfo__Add__, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__, v6);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_MapControl_WarInfo___ctor__, v7);
-    sub_1BCAFF8(&System_Collections_Generic_List_MapControl_WarInfo__TypeInfo, v8);
-    sub_1BCAFF8(&Method_System_Nullable_int__GetValueOrDefault__, v9);
-    sub_1BCAFF8(&Method_System_Nullable_int___ctor__, v10);
-    sub_1BCAFF8(&Method_System_Nullable_int__get_HasValue__, v11);
-    sub_1BCAFF8(&Method_SingletonTemplate_QuestTree__get_Instance__, v12);
-    byte_4B1733F = 1;
+    sub_1C2D490(&BalanceConfig_TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__get_Current__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_MapControl_WarInfo__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_MapControl_WarInfo___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_MapControl_WarInfo__TypeInfo);
+    sub_1C2D490(&Method_System_Nullable_int__GetValueOrDefault__);
+    sub_1C2D490(&Method_System_Nullable_int___ctor__);
+    sub_1C2D490(&Method_System_Nullable_int__get_HasValue__);
+    sub_1C2D490(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    byte_4C22044 = 1;
   }
-  memset(&v35, 0, sizeof(v35));
-  v13 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_MapControl_WarInfo__TypeInfo);
+  memset(&v23, 0, sizeof(v23));
+  v2 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_MapControl_WarInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v13,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_MapControl_WarInfo___ctor__);
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_38F8EF8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
-  if ( !Instance || (Instance = (Il2CppObject *)Instance[4].klass) == 0LL )
-    sub_1BCB254(Instance, v15);
+    v2,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_MapControl_WarInfo___ctor__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  if ( !Instance || (Instance = (Il2CppObject *)Instance[4].klass) == 0 )
+    sub_1C2D6EC(Instance, v4);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v34,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v22,
     (System_Collections_Generic_List_object__o *)Instance,
-    (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
-  v16 = 0LL;
-  v35 = v34;
+    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_MapControl_WarInfo__GetEnumerator__);
+  v23 = v22;
   while ( 1 )
   {
-    v17 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v35,
-            (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
-    if ( !v17 )
+    v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+           &v23,
+           (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__MoveNext__);
+    if ( !v5 )
       break;
-    current = v35.fields._current;
-    if ( !v35.fields._current )
-      sub_1BCB254(v17, v18);
-    Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)v35.fields._current, 0LL);
-    if ( Mine )
-      v16 = Mine;
+    current = v23.fields._current;
+    if ( !v23.fields._current )
+      sub_1C2D6EC(v5, v6);
+    Mine = MapControl_WarInfo__GetMine((MapControl_WarInfo_o *)v23.fields._current, 0);
     if ( Mine )
     {
-      if ( !v16 )
-        sub_1BCB254(Mine, v21);
-      parentWarId = v16->fields.parentWarId;
-      v34.fields._list = 0LL;
-      v36 = (System_Nullable_int__o)&v34;
-      System_Nullable_int____ctor(v36, parentWarId, (const MethodInfo_37D8E28 *)Method_System_Nullable_int___ctor__);
-      list = v34.fields._list;
+      parentWarId = Mine->fields.parentWarId;
+      v22.fields._list = 0;
+      v10 = (System_Nullable_int__o)&v22;
+      System_Nullable_int____ctor(v10, parentWarId, (const MethodInfo_38AF304 *)Method_System_Nullable_int___ctor__);
+      list = v22.fields._list;
     }
     else
     {
-      list = 0LL;
+      list = 0;
     }
-    v24 = BalanceConfig_TypeInfo;
+    v12 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v24 = BalanceConfig_TypeInfo;
+      v12 = BalanceConfig_TypeInfo;
     }
-    if ( (_BYTE)list && v24->static_fields->GrandBoardWarId == HIDWORD(list) )
+    if ( (_BYTE)list && v12->static_fields->GrandBoardWarId == HIDWORD(list) )
     {
-      v25 = SingletonTemplate_object___get_Instance((const MethodInfo_38F8EF8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
-      if ( !v25 )
-        sub_1BCB254(0LL, v26);
-      IsActiveWar = QuestTree__IsActiveWar((QuestTree_o *)v25, HIDWORD(current[1].klass), 0LL);
+      v13 = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_QuestTree__get_Instance__);
+      if ( !v13 )
+        sub_1C2D6EC(0, v14);
+      IsActiveWar = QuestTree__IsActiveWar((QuestTree_o *)v13, HIDWORD(current[1].klass), 0);
       if ( IsActiveWar )
       {
-        if ( !v13 )
-          sub_1BCB254(IsActiveWar, v28);
-        items = v13->fields._items;
-        v30 = Method_System_Collections_Generic_List_MapControl_WarInfo__Add__;
-        ++v13->fields._version;
+        if ( !v2 )
+          sub_1C2D6EC(IsActiveWar, v16);
+        items = v2->fields._items;
+        v18 = Method_System_Collections_Generic_List_MapControl_WarInfo__Add__;
+        ++v2->fields._version;
         if ( !items )
-          sub_1BCB254(IsActiveWar, v28);
-        size = v13->fields._size;
-        if ( (unsigned int)size >= items->max_length )
+          sub_1C2D6EC(IsActiveWar, v16);
+        size = v2->fields._size;
+        if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v13,
+            v2,
             current,
-            *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
         else
         {
-          v32 = &items->obj.klass + size;
-          v13->fields._size = size + 1;
-          v32[4] = (Il2CppClass *)current;
-          sub_1BCAF9C(v32 + 4);
+          v20 = &items->obj.klass + size;
+          v2->fields._size = size + 1;
+          v20[4] = (Il2CppClass *)current;
+          sub_1C2D434(v20 + 4);
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v35,
-    (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
-  return (System_Collections_Generic_List_MapControl_WarInfo__o *)v13;
+    &v23,
+    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_MapControl_WarInfo__Dispose__);
+  return (System_Collections_Generic_List_MapControl_WarInfo__o *)v2;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-BlankEarthSpotEntity_o *__fastcall GrandQuestRootComponent__GetSpotEntityByWarId(
+BlankEarthSpotEntity_o *GrandQuestRootComponent__GetSpotEntityByWarId(
         GrandQuestRootComponent_o *this,
         int32_t warId,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
   BlankEarthSpotEntity_o *result; // x0
-  __int64 v7; // x1
-  BlankEarthSpotEntity_array *v8; // x19
-  __int64 v9; // x2
-  bool v10; // w8
+  __int64 v5; // x1
+  BlankEarthSpotEntity_array *v6; // x19
+  __int64 v7; // x2
+  bool v8; // w8
 
-  if ( (byte_4B17340 & 1) == 0 )
+  if ( (byte_4C22045 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_BlankEarthSpotMaster___, *(_QWORD *)&warId);
-    sub_1BCAFF8(&DataManager_TypeInfo, v4);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_Any_BlankEarthSpotEntity___, v5);
-    byte_4B17340 = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_BlankEarthSpotMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_System_Linq_Enumerable_Any_BlankEarthSpotEntity___);
+    byte_4C22045 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  result = (BlankEarthSpotEntity_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_BlankEarthSpotMaster___);
+  result = (BlankEarthSpotEntity_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_BlankEarthSpotMaster___);
   if ( !result )
     goto LABEL_11;
-  v8 = BlankEarthSpotMaster__GetByWarId((BlankEarthSpotMaster_o *)result, warId, 0LL);
-  v10 = System_Linq_Enumerable__Any_object_(
-          (System_Collections_Generic_IEnumerable_TSource__o *)v8,
-          (const MethodInfo_302661C *)Method_System_Linq_Enumerable_Any_BlankEarthSpotEntity___);
-  result = 0LL;
-  if ( !v10 )
-    return result;
+  v6 = BlankEarthSpotMaster__GetByWarId((BlankEarthSpotMaster_o *)result, warId, 0);
+  v8 = System_Linq_Enumerable__Any_object_(
+         (System_Collections_Generic_IEnumerable_TSource__o *)v6,
+         (const MethodInfo_30DA4C8 *)Method_System_Linq_Enumerable_Any_BlankEarthSpotEntity___);
+  result = 0;
   if ( !v8 )
+    return result;
+  if ( !v6 )
 LABEL_11:
-    sub_1BCB254(result, v7);
-  if ( !v8->max_length )
-    sub_1BCB25C(0LL, v7, v9);
-  return v8->m_Items[0];
+    sub_1C2D6EC(result, v5);
+  if ( !LODWORD(v6->max_length) )
+    sub_1C2D6F4(0, v5, v7);
+  return v6->m_Items[0];
 }
 
 
-int32_t __fastcall GrandQuestRootComponent__GetViewType(GrandQuestRootComponent_o *this, const MethodInfo *method)
+int32_t GrandQuestRootComponent__GetViewType(GrandQuestRootComponent_o *this, const MethodInfo *method)
 {
   struct GrandQuestViewSwitcher_o *viewSwitcher; // x8
 
@@ -421,7 +385,7 @@ int32_t __fastcall GrandQuestRootComponent__GetViewType(GrandQuestRootComponent_
 }
 
 
-void __fastcall GrandQuestRootComponent__Init(
+void GrandQuestRootComponent__Init(
         GrandQuestRootComponent_o *this,
         TerminalSceneComponent_o *terminalScene,
         ScrTerminalListTop_o *scrTerminalList,
@@ -429,43 +393,37 @@ void __fastcall GrandQuestRootComponent__Init(
         const MethodInfo *method)
 {
   __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
   Il2CppObject *Instance; // x24
   _QWORD *p_image; // x0
-  int v18; // w24
-  BalanceConfig_c *v19; // x0
-  TerminalPramsManager_c *v20; // x0
-  __int64 v21; // x24
-  TerminalPramsManager_c *v22; // x0
-  GrandQuestResourceCatalogAssetBundle_o *v23; // x20
-  const MethodInfo *v24; // x1
+  int v12; // w24
+  BalanceConfig_c *v13; // x0
+  TerminalPramsManager_c *v14; // x0
+  GrandQuestRootComponent_ResumeInfo_o *v15; // x24
+  TerminalPramsManager_c *v16; // x0
+  GrandQuestResourceCatalogAssetBundle_o *v17; // x20
+  const MethodInfo *v18; // x1
   GrandQuestViewSwitcher_o *viewSwitcher; // x20
-  System_Action_o *v26; // x21
+  System_Action_o *v20; // x21
 
-  if ( (byte_4B17338 & 1) == 0 )
+  if ( (byte_4C2203D & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, terminalScene);
-    sub_1BCAFF8(&BalanceConfig_TypeInfo, v9);
-    sub_1BCAFF8(&GrandQuestResourceCatalogAssetBundle_TypeInfo, v10);
-    sub_1BCAFF8(&Method_GrandQuestRootComponent__Init_b__47_0__, v11);
-    sub_1BCAFF8(&GrandQuestRootComponent_ResumeInfo_TypeInfo, v12);
-    sub_1BCAFF8(&Method_SingletonTemplate_QuestTree__get_Instance__, v13);
-    sub_1BCAFF8(&TerminalPramsManager_TypeInfo, v14);
-    byte_4B17338 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&BalanceConfig_TypeInfo);
+    sub_1C2D490(&GrandQuestResourceCatalogAssetBundle_TypeInfo);
+    sub_1C2D490(&Method_GrandQuestRootComponent__Init_b__47_0__);
+    sub_1C2D490(&GrandQuestRootComponent_ResumeInfo_TypeInfo);
+    sub_1C2D490(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1C2D490(&TerminalPramsManager_TypeInfo);
+    byte_4C2203D = 1;
   }
   this->fields.isTouchButton = 0;
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_38F8EF8 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4B169E0 )
+  if ( !byte_4C216DE )
   {
-    sub_1BCAFF8(&TerminalPramsManager_TypeInfo, v15);
-    byte_4B169E0 = 1;
+    sub_1C2D490(&TerminalPramsManager_TypeInfo);
+    byte_4C216DE = 1;
   }
   p_image = &TerminalPramsManager_TypeInfo->_1.image;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -475,276 +433,208 @@ void __fastcall GrandQuestRootComponent__Init(
   }
   if ( !Instance )
     goto LABEL_39;
-  p_image = QuestTree__mfGetWarEntityByWarID((QuestTree_o *)Instance, *(_DWORD *)(p_image[23] + 4LL), 0LL);
+  p_image = QuestTree__mfGetWarEntityByWarID((QuestTree_o *)Instance, *(_DWORD *)(p_image[23] + 4LL), 0);
   if ( !p_image )
     goto LABEL_39;
-  v18 = *((_DWORD *)p_image + 14);
-  v19 = BalanceConfig_TypeInfo;
+  v12 = *((_DWORD *)p_image + 14);
+  v13 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v19 = BalanceConfig_TypeInfo;
+    v13 = BalanceConfig_TypeInfo;
   }
-  if ( v18 == v19->static_fields->GrandBoardWarId )
+  if ( v12 == v13->static_fields->GrandBoardWarId )
     goto LABEL_21;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4B17352 )
+  if ( !byte_4C2204A )
   {
-    sub_1BCAFF8(&TerminalPramsManager_TypeInfo, v15);
-    byte_4B17352 = 1;
+    sub_1C2D490(&TerminalPramsManager_TypeInfo);
+    byte_4C2204A = 1;
   }
-  v20 = TerminalPramsManager_TypeInfo;
+  v14 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v20 = TerminalPramsManager_TypeInfo;
+    v14 = TerminalPramsManager_TypeInfo;
   }
-  if ( v20->static_fields->_IsMoveToGrandQuestClassSelect_k__BackingField )
+  if ( v14->static_fields->_IsMoveToGrandQuestClassSelect_k__BackingField )
   {
 LABEL_21:
-    v21 = sub_1BCB244(GrandQuestRootComponent_ResumeInfo_TypeInfo);
-    System_Object___ctor((Il2CppObject *)v21, 0LL);
-    if ( !v21 )
+    v15 = (GrandQuestRootComponent_ResumeInfo_o *)sub_1C2D6DC(GrandQuestRootComponent_ResumeInfo_TypeInfo);
+    GrandQuestRootComponent_ResumeInfo___ctor(v15, 0);
+    if ( !v15 )
       goto LABEL_39;
-    *(_BYTE *)(v21 + 16) = 1;
+    v15->fields._IsResume_k__BackingField = 1;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4B169E0 )
+    if ( !byte_4C216DE )
     {
-      sub_1BCAFF8(&TerminalPramsManager_TypeInfo, v15);
-      byte_4B169E0 = 1;
+      sub_1C2D490(&TerminalPramsManager_TypeInfo);
+      byte_4C216DE = 1;
     }
-    v22 = TerminalPramsManager_TypeInfo;
+    v16 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      v22 = TerminalPramsManager_TypeInfo;
+      v16 = TerminalPramsManager_TypeInfo;
     }
-    *(_DWORD *)(v21 + 20) = v22->static_fields->_WarId_k__BackingField;
-    if ( !byte_4B1684E )
+    v15->fields._WarId_k__BackingField = v16->static_fields->_WarId_k__BackingField;
+    if ( !byte_4C21464 )
     {
-      sub_1BCAFF8(&TerminalPramsManager_TypeInfo, v15);
-      v22 = TerminalPramsManager_TypeInfo;
-      byte_4B1684E = 1;
+      sub_1C2D490(&TerminalPramsManager_TypeInfo);
+      v16 = TerminalPramsManager_TypeInfo;
+      byte_4C21464 = 1;
     }
-    if ( !v22->_2.cctor_finished )
+    if ( !v16->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v22);
-      v22 = TerminalPramsManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v16);
+      v16 = TerminalPramsManager_TypeInfo;
     }
-    *(_DWORD *)(v21 + 24) = v22->static_fields->_QuestId_k__BackingField;
-    if ( !byte_4B17352 )
+    v15->fields._QuestId_k__BackingField = v16->static_fields->_QuestId_k__BackingField;
+    if ( !byte_4C2204A )
     {
-      sub_1BCAFF8(&TerminalPramsManager_TypeInfo, v15);
-      v22 = TerminalPramsManager_TypeInfo;
-      byte_4B17352 = 1;
+      sub_1C2D490(&TerminalPramsManager_TypeInfo);
+      v16 = TerminalPramsManager_TypeInfo;
+      byte_4C2204A = 1;
     }
-    if ( !v22->_2.cctor_finished )
+    if ( !v16->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v22);
-      v22 = TerminalPramsManager_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v16);
+      v16 = TerminalPramsManager_TypeInfo;
     }
-    *(_BYTE *)(v21 + 28) = v22->static_fields->_IsMoveToGrandQuestClassSelect_k__BackingField;
-    this->fields._GrandResumeInfo_k__BackingField = (struct GrandQuestRootComponent_ResumeInfo_o *)v21;
-    sub_1BCAF9C(&this->fields._GrandResumeInfo_k__BackingField);
+    v15->fields._IsDirectTransitionToClassSelect_k__BackingField = v16->static_fields->_IsMoveToGrandQuestClassSelect_k__BackingField;
+    this->fields._GrandResumeInfo_k__BackingField = v15;
+    sub_1C2D434(&this->fields._GrandResumeInfo_k__BackingField);
   }
   this->fields.initEndCallback = endCallback;
-  sub_1BCAF9C(&this->fields.initEndCallback);
+  sub_1C2D434(&this->fields.initEndCallback);
   this->fields.mTerminalScene = terminalScene;
-  sub_1BCAF9C(&this->fields.mTerminalScene);
+  sub_1C2D434(&this->fields.mTerminalScene);
   this->fields.mTerminalListTop = scrTerminalList;
-  sub_1BCAF9C(&this->fields.mTerminalListTop);
-  v23 = (GrandQuestResourceCatalogAssetBundle_o *)sub_1BCB244(GrandQuestResourceCatalogAssetBundle_TypeInfo);
-  GrandQuestResourceCatalogAssetBundle___ctor(v23, v24);
-  this->fields.resourceCatalog = v23;
-  sub_1BCAF9C(&this->fields.resourceCatalog);
+  sub_1C2D434(&this->fields.mTerminalListTop);
+  v17 = (GrandQuestResourceCatalogAssetBundle_o *)sub_1C2D6DC(GrandQuestResourceCatalogAssetBundle_TypeInfo);
+  GrandQuestResourceCatalogAssetBundle___ctor(v17, v18);
+  this->fields.resourceCatalog = v17;
+  sub_1C2D434(&this->fields.resourceCatalog);
   viewSwitcher = this->fields.viewSwitcher;
-  v26 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v26, (Il2CppObject *)this, Method_GrandQuestRootComponent__Init_b__47_0__, 0LL);
+  v20 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v20, (Il2CppObject *)this, Method_GrandQuestRootComponent__Init_b__47_0__, 0);
   if ( !viewSwitcher )
 LABEL_39:
-    sub_1BCB254(p_image, v15);
-  GrandQuestViewSwitcher__Init(viewSwitcher, this, v26, 0LL);
+    sub_1C2D6EC(p_image, v9);
+  GrandQuestViewSwitcher__Init(viewSwitcher, this, v20, 0);
 }
 
 
-void __fastcall GrandQuestRootComponent__LateUpdate(GrandQuestRootComponent_o *this, const MethodInfo *method)
+void GrandQuestRootComponent__LateUpdate(GrandQuestRootComponent_o *this, const MethodInfo *method)
 {
   GrandQuestViewSwitcher_o *viewSwitcher; // x0
 
   viewSwitcher = this->fields.viewSwitcher;
   if ( !viewSwitcher )
-    sub_1BCB254(0LL, method);
-  GrandQuestViewSwitcher__LateUpdate(viewSwitcher, 0LL);
+    sub_1C2D6EC(0, method);
+  GrandQuestViewSwitcher__LateUpdate(viewSwitcher, 0);
 }
 
 
-void __fastcall GrandQuestRootComponent__OnClickGrandClassDisableMask(
-        GrandQuestRootComponent_o *this,
-        const MethodInfo *method)
+void GrandQuestRootComponent__OnClickGrandClassDisableMask(GrandQuestRootComponent_o *this, const MethodInfo *method)
 {
   _QWORD *v2; // x0
   System_Reflection_MethodBase_o *v3; // x0
 
-  if ( (byte_4B17342 & 1) == 0 )
+  if ( (byte_4C22047 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_GrandQuestRootComponent_OnClickGrandClassDisableMask__, method);
-    byte_4B17342 = 1;
+    sub_1C2D490(&Method_GrandQuestRootComponent_OnClickGrandClassDisableMask__);
+    byte_4C22047 = 1;
   }
   v2 = Method_GrandQuestRootComponent_OnClickGrandClassDisableMask__;
   if ( (*((_BYTE *)Method_GrandQuestRootComponent_OnClickGrandClassDisableMask__ + 83) & 2) != 0 )
-    v2 = (_QWORD *)sub_1BCB010(Method_GrandQuestRootComponent_OnClickGrandClassDisableMask__);
-  v3 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v2, v2[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v3, 2, 0, 0LL);
+    v2 = (_QWORD *)sub_1C2D4A8(Method_GrandQuestRootComponent_OnClickGrandClassDisableMask__);
+  v3 = (System_Reflection_MethodBase_o *)sub_1C2D474(v2, v2[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v3, 2, 0, 0);
 }
 
 
-void __fastcall GrandQuestRootComponent__OnClickGrandClassScore(
-        GrandQuestRootComponent_o *this,
-        const MethodInfo *method)
+void GrandQuestRootComponent__OnClickGrandClassScore(GrandQuestRootComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
   __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  _QWORD *v8; // x0
-  System_Reflection_MethodBase_o *v9; // x0
-  __int64 v10; // x1
   GrandQuestViewSwitcher_o *viewSwitcher; // x0
-  int32_t CurrentClassId; // w19
-  int32_t ClassBoardBaseId; // w20
-  SceneJumpInfo_o *v14; // x19
+  int32_t CurrentClassId; // w20
+  SceneJumpInfo_o *v8; // x19
 
-  if ( (byte_4B1733D & 1) == 0 )
+  if ( (byte_4C22042 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_ClassBoardClassMaster___, method);
-    sub_1BCAFF8(&DataManager_TypeInfo, v3);
-    sub_1BCAFF8(&Method_GrandQuestRootComponent_OnClickGrandClassScore__, v4);
-    sub_1BCAFF8(&SceneJumpInfo_TypeInfo, v5);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v7);
-    byte_4B1733D = 1;
+    sub_1C2D490(&Method_GrandQuestRootComponent_OnClickGrandClassScore__);
+    sub_1C2D490(&SceneJumpInfo_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C22042 = 1;
   }
   if ( !this->fields.isTouchButton )
   {
     this->fields.isTouchButton = 1;
-    v8 = Method_GrandQuestRootComponent_OnClickGrandClassScore__;
+    v3 = Method_GrandQuestRootComponent_OnClickGrandClassScore__;
     if ( (*((_BYTE *)Method_GrandQuestRootComponent_OnClickGrandClassScore__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1BCB010(Method_GrandQuestRootComponent_OnClickGrandClassScore__);
-    v9 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v8, v8[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0LL);
+      v3 = (_QWORD *)sub_1C2D4A8(Method_GrandQuestRootComponent_OnClickGrandClassScore__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     viewSwitcher = this->fields.viewSwitcher;
-    if ( !viewSwitcher )
-      goto LABEL_13;
-    CurrentClassId = GrandQuestViewSwitcher__GetCurrentClassId(viewSwitcher, 0LL);
-    if ( !DataManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    viewSwitcher = (GrandQuestViewSwitcher_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
     if ( !viewSwitcher
-      || (ClassBoardBaseId = ClassBoardClassMaster__GetClassBoardBaseId(
-                               (ClassBoardClassMaster_o *)viewSwitcher,
-                               CurrentClassId,
-                               0LL),
-          v14 = (SceneJumpInfo_o *)sub_1BCB244(SceneJumpInfo_TypeInfo),
-          SceneJumpInfo___ctor_40654688(v14, (System_String_o *)StringLiteral_1/*""*/, ClassBoardBaseId, 0, 0LL),
-          !v14)
-      || (SceneJumpInfo__SetReturnNowScene(v14, 0LL),
-          (viewSwitcher = (GrandQuestViewSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0LL) )
+      || (CurrentClassId = GrandQuestViewSwitcher__GetCurrentClassId(viewSwitcher, 0),
+          v8 = (SceneJumpInfo_o *)sub_1C2D6DC(SceneJumpInfo_TypeInfo),
+          SceneJumpInfo___ctor_41257448(v8, (System_String_o *)StringLiteral_1/*""*/, CurrentClassId, 0, 0),
+          !v8)
+      || (SceneJumpInfo__SetReturnNowScene(v8, 0),
+          (viewSwitcher = (GrandQuestViewSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0) )
     {
-LABEL_13:
-      sub_1BCB254(viewSwitcher, v10);
+      sub_1C2D6EC(viewSwitcher, v5);
     }
-    AvalonSceneManager__transitionScene((AvalonSceneManager_o *)viewSwitcher, 91, 1, (Il2CppObject *)v14, 0LL);
+    AvalonSceneManager__transitionScene((AvalonSceneManager_o *)viewSwitcher, 91, 1, (Il2CppObject *)v8, 0);
   }
 }
 
 
-void __fastcall GrandQuestRootComponent__OnClickGrandServantList(
-        GrandQuestRootComponent_o *this,
-        const MethodInfo *method)
+void GrandQuestRootComponent__OnClickGrandServantList(GrandQuestRootComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  _QWORD *v7; // x0
-  System_Reflection_MethodBase_o *v8; // x0
-  __int64 v9; // x1
-  GrandQuestViewSwitcher_o *viewSwitcher; // x0
-  int32_t CurrentClassId; // w19
-  int32_t grandGraphId; // w20
-  SceneJumpInfo_o *v13; // x19
-  GrandGraphDetailEntity_o *entity; // [xsp+8h] [xbp-18h] BYREF
+  _QWORD *v3; // x0
+  System_Reflection_MethodBase_o *v4; // x0
+  SceneJumpInfo_o *v5; // x19
+  Il2CppObject *Instance; // x0
+  __int64 v7; // x1
 
-  if ( (byte_4B1733E & 1) == 0 )
+  if ( (byte_4C22043 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_GrandGraphDetailMaster___, method);
-    sub_1BCAFF8(&DataManager_TypeInfo, v3);
-    sub_1BCAFF8(&Method_GrandQuestRootComponent_OnClickGrandServantList__, v4);
-    sub_1BCAFF8(&SceneJumpInfo_TypeInfo, v5);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__, v6);
-    byte_4B1733E = 1;
+    sub_1C2D490(&Method_GrandQuestRootComponent_OnClickGrandServantList__);
+    sub_1C2D490(&SceneJumpInfo_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4C22043 = 1;
   }
-  entity = 0LL;
   if ( !this->fields.isTouchButton )
   {
     this->fields.isTouchButton = 1;
-    v7 = Method_GrandQuestRootComponent_OnClickGrandServantList__;
+    v3 = Method_GrandQuestRootComponent_OnClickGrandServantList__;
     if ( (*((_BYTE *)Method_GrandQuestRootComponent_OnClickGrandServantList__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1BCB010(Method_GrandQuestRootComponent_OnClickGrandServantList__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1BCAFDC(v7, v7[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0LL);
-    viewSwitcher = this->fields.viewSwitcher;
-    if ( viewSwitcher )
+      v3 = (_QWORD *)sub_1C2D4A8(Method_GrandQuestRootComponent_OnClickGrandServantList__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
+    v5 = (SceneJumpInfo_o *)sub_1C2D6DC(SceneJumpInfo_TypeInfo);
+    SceneJumpInfo___ctor(v5, 0);
+    if ( !v5
+      || (SceneJumpInfo__SetReturnNowScene(v5, 0),
+          (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__)) == 0) )
     {
-      CurrentClassId = GrandQuestViewSwitcher__GetCurrentClassId(viewSwitcher, 0LL);
-      if ( !DataManager_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      viewSwitcher = (GrandQuestViewSwitcher_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_GrandGraphDetailMaster___);
-      if ( viewSwitcher )
-      {
-        viewSwitcher = (GrandQuestViewSwitcher_o *)GrandGraphDetailMaster__TryGetEntityByBaseClassId(
-                                                     (GrandGraphDetailMaster_o *)viewSwitcher,
-                                                     &entity,
-                                                     CurrentClassId,
-                                                     0LL);
-        if ( ((unsigned __int8)viewSwitcher & 1) != 0 )
-        {
-          if ( !entity )
-            goto LABEL_18;
-          grandGraphId = entity->fields.grandGraphId;
-        }
-        else
-        {
-          grandGraphId = 0;
-        }
-        v13 = (SceneJumpInfo_o *)sub_1BCB244(SceneJumpInfo_TypeInfo);
-        SceneJumpInfo___ctor_40654588(v13, grandGraphId, 0LL);
-        if ( v13 )
-        {
-          SceneJumpInfo__SetReturnNowScene(v13, 0LL);
-          viewSwitcher = (GrandQuestViewSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-          if ( viewSwitcher )
-          {
-            AvalonSceneManager__transitionScene((AvalonSceneManager_o *)viewSwitcher, 43, 1, (Il2CppObject *)v13, 0LL);
-            return;
-          }
-        }
-      }
+      sub_1C2D6EC(Instance, v7);
     }
-LABEL_18:
-    sub_1BCB254(viewSwitcher, v9);
+    AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 43, 1, (Il2CppObject *)v5, 0);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall GrandQuestRootComponent__SetButtonActive(
-        GrandQuestRootComponent_o *this,
-        bool isActive,
-        const MethodInfo *method)
+void GrandQuestRootComponent__SetButtonActive(GrandQuestRootComponent_o *this, bool isActive, const MethodInfo *method)
 {
   UnityEngine_Component_o *grandClassScoreButton; // x0
 
@@ -752,21 +642,21 @@ void __fastcall GrandQuestRootComponent__SetButtonActive(
   if ( !grandClassScoreButton
     || (grandClassScoreButton = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
                                                              grandClassScoreButton,
-                                                             0LL)) == 0LL
-    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)grandClassScoreButton, isActive, 0LL),
-        (grandClassScoreButton = (UnityEngine_Component_o *)this->fields.grandServantListButton) == 0LL)
+                                                             0)) == 0
+    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)grandClassScoreButton, isActive, 0),
+        (grandClassScoreButton = (UnityEngine_Component_o *)this->fields.grandServantListButton) == 0)
     || (grandClassScoreButton = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
                                                              grandClassScoreButton,
-                                                             0LL)) == 0LL )
+                                                             0)) == 0 )
   {
-    sub_1BCB254(grandClassScoreButton, isActive);
+    sub_1C2D6EC(grandClassScoreButton, isActive);
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)grandClassScoreButton, isActive, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)grandClassScoreButton, isActive, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall GrandQuestRootComponent__SetButtonEnabled(
+void GrandQuestRootComponent__SetButtonEnabled(
         GrandQuestRootComponent_o *this,
         bool isEnabled,
         const MethodInfo *method)
@@ -777,20 +667,17 @@ void __fastcall GrandQuestRootComponent__SetButtonEnabled(
   grandClassScoreButton = (UnityEngine_Behaviour_o *)this->fields.grandClassScoreButton;
   if ( !grandClassScoreButton
     || (v5 = isEnabled,
-        UnityEngine_Behaviour__set_enabled(grandClassScoreButton, isEnabled, 0LL),
-        (grandClassScoreButton = (UnityEngine_Behaviour_o *)this->fields.grandServantListButton) == 0LL) )
+        UnityEngine_Behaviour__set_enabled(grandClassScoreButton, isEnabled, 0),
+        (grandClassScoreButton = (UnityEngine_Behaviour_o *)this->fields.grandServantListButton) == 0) )
   {
-    sub_1BCB254(grandClassScoreButton, isEnabled);
+    sub_1C2D6EC(grandClassScoreButton, isEnabled);
   }
-  UnityEngine_Behaviour__set_enabled(grandClassScoreButton, v5, 0LL);
+  UnityEngine_Behaviour__set_enabled(grandClassScoreButton, v5, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall GrandQuestRootComponent__SetDispServant(
-        GrandQuestRootComponent_o *this,
-        bool disp,
-        const MethodInfo *method)
+void GrandQuestRootComponent__SetDispServant(GrandQuestRootComponent_o *this, bool disp, const MethodInfo *method)
 {
   GrandQuestSvtController_o *svtController; // x0
   bool v5; // w20
@@ -799,16 +686,16 @@ void __fastcall GrandQuestRootComponent__SetDispServant(
   svtController = this->fields.svtController;
   if ( !svtController
     || (v5 = disp,
-        GrandQuestSvtController__SetDispServant(svtController, disp, method),
-        (svtController = (GrandQuestSvtController_o *)this->fields.classBoardController) == 0LL) )
+        GrandQuestSvtController__SetDispServant(svtController, disp, 0),
+        (svtController = (GrandQuestSvtController_o *)this->fields.classBoardController) == 0) )
   {
-    sub_1BCB254(svtController, disp);
+    sub_1C2D6EC(svtController, disp);
   }
   GrandQuestClassBoardController__SetDispEffect((GrandQuestClassBoardController_o *)svtController, v5, v6);
 }
 
 
-void __fastcall GrandQuestRootComponent__SetImage(
+void GrandQuestRootComponent__SetImage(
         GrandQuestRootComponent_o *this,
         UISprite_o *uiSprite,
         System_String_o *spriteName,
@@ -830,184 +717,170 @@ void __fastcall GrandQuestRootComponent__SetImage(
                                                                               BoardUiAtlasManagerUnit_k__BackingField,
                                                                               uiSprite,
                                                                               spriteName,
-                                                                              0LL),
+                                                                              0),
             !uiSprite) )
       {
-        sub_1BCB254(BoardUiAtlasManagerUnit_k__BackingField, uiSprite);
+        sub_1C2D6EC(BoardUiAtlasManagerUnit_k__BackingField, uiSprite);
       }
-      ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))uiSprite->klass->vtable._33_MakePixelPerfect.method)(
+      ((void (__fastcall *)(UISprite_o *, const MethodInfo *))uiSprite->klass->vtable._33_MakePixelPerfect.methodPtr)(
         uiSprite,
-        uiSprite->klass->vtable._34_get_minWidth.methodPtr);
+        uiSprite->klass->vtable._33_MakePixelPerfect.method);
     }
   }
 }
 
 
-void __fastcall GrandQuestRootComponent__StartUp(
-        GrandQuestRootComponent_o *this,
-        Il2CppObject *data,
-        const MethodInfo *method)
+void GrandQuestRootComponent__StartUp(GrandQuestRootComponent_o *this, Il2CppObject *data, const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  const MethodInfo *v10; // x3
+  const MethodInfo *v5; // x3
   GrandQuestViewSwitcher_o *viewSwitcher; // x0
-  __int64 v12; // x1
+  __int64 v7; // x1
   struct UIButton_o *grandClassScoreButton; // x8
   System_Collections_Generic_List_EventDelegate__o *onClick; // x21
-  EventDelegate_Callback_o *v15; // x22
-  const MethodInfo *v16; // x3
+  EventDelegate_Callback_o *v10; // x22
+  const MethodInfo *v11; // x3
   struct UIButton_o *grandServantListButton; // x8
-  System_Collections_Generic_List_EventDelegate__o *v18; // x21
-  EventDelegate_Callback_o *v19; // x22
-  const MethodInfo *v20; // x3
+  System_Collections_Generic_List_EventDelegate__o *v13; // x21
+  EventDelegate_Callback_o *v14; // x22
+  const MethodInfo *v15; // x3
 
-  if ( (byte_4B1733A & 1) == 0 )
+  if ( (byte_4C2203F & 1) == 0 )
   {
-    sub_1BCAFF8(&EventDelegate_Callback_TypeInfo, data);
-    sub_1BCAFF8(&EventDelegate_TypeInfo, v5);
-    sub_1BCAFF8(&Method_GrandQuestRootComponent_OnClickGrandClassScore__, v6);
-    sub_1BCAFF8(&Method_GrandQuestRootComponent_OnClickGrandServantList__, v7);
-    sub_1BCAFF8(&StringLiteral_17346/*"btn_grand_grandclassscore"*/, v8);
-    sub_1BCAFF8(&StringLiteral_17345/*"btn_grand_grandclass"*/, v9);
-    byte_4B1733A = 1;
+    sub_1C2D490(&EventDelegate_Callback_TypeInfo);
+    sub_1C2D490(&EventDelegate_TypeInfo);
+    sub_1C2D490(&Method_GrandQuestRootComponent_OnClickGrandClassScore__);
+    sub_1C2D490(&Method_GrandQuestRootComponent_OnClickGrandServantList__);
+    sub_1C2D490(&StringLiteral_17484/*"btn_grand_grandclassscore"*/);
+    sub_1C2D490(&StringLiteral_17483/*"btn_grand_grandclass"*/);
+    byte_4C2203F = 1;
   }
-  MainMenuBar__setMenuActive(1, 0LL, 0LL);
+  MainMenuBar__setMenuActive(1, 0, 0);
   GrandQuestRootComponent__SetImage(
     this,
     this->fields.grandClassScoreSprite,
-    (System_String_o *)StringLiteral_17346/*"btn_grand_grandclassscore"*/,
-    v10);
+    (System_String_o *)StringLiteral_17484/*"btn_grand_grandclassscore"*/,
+    v5);
   grandClassScoreButton = this->fields.grandClassScoreButton;
   if ( !grandClassScoreButton )
     goto LABEL_9;
   onClick = grandClassScoreButton->fields.onClick;
-  v15 = (EventDelegate_Callback_o *)sub_1BCB244(EventDelegate_Callback_TypeInfo);
+  v10 = (EventDelegate_Callback_o *)sub_1C2D6DC(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(
-    v15,
+    v10,
     (Il2CppObject *)this,
     (intptr_t)Method_GrandQuestRootComponent_OnClickGrandClassScore__,
-    0LL);
+    0);
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Set_48451416(onClick, v15, 0LL);
+  EventDelegate__Set_49155444(onClick, v10, 0);
   GrandQuestRootComponent__SetImage(
     this,
     this->fields.grandServantListSprite,
-    (System_String_o *)StringLiteral_17345/*"btn_grand_grandclass"*/,
-    v16);
+    (System_String_o *)StringLiteral_17483/*"btn_grand_grandclass"*/,
+    v11);
   grandServantListButton = this->fields.grandServantListButton;
   if ( !grandServantListButton
-    || (v18 = grandServantListButton->fields.onClick,
-        v19 = (EventDelegate_Callback_o *)sub_1BCB244(EventDelegate_Callback_TypeInfo),
+    || (v13 = grandServantListButton->fields.onClick,
+        v14 = (EventDelegate_Callback_o *)sub_1C2D6DC(EventDelegate_Callback_TypeInfo),
         EventDelegate_Callback___ctor(
-          v19,
+          v14,
           (Il2CppObject *)this,
           (intptr_t)Method_GrandQuestRootComponent_OnClickGrandServantList__,
-          0LL),
-        EventDelegate__Set_48451416(v18, v19, 0LL),
+          0),
+        EventDelegate__Set_49155444(v13, v14, 0),
         GrandQuestRootComponent__SetImage(
           this,
           this->fields.grandScoreDisableMask,
-          (System_String_o *)StringLiteral_17345/*"btn_grand_grandclass"*/,
-          v20),
-        (viewSwitcher = this->fields.viewSwitcher) == 0LL) )
+          (System_String_o *)StringLiteral_17483/*"btn_grand_grandclass"*/,
+          v15),
+        (viewSwitcher = this->fields.viewSwitcher) == 0) )
   {
 LABEL_9:
-    sub_1BCB254(viewSwitcher, v12);
+    sub_1C2D6EC(viewSwitcher, v7);
   }
-  GrandQuestViewSwitcher__StartUp(viewSwitcher, data, 0LL);
+  GrandQuestViewSwitcher__StartUp(viewSwitcher, data, 0);
 }
 
 
-void __fastcall GrandQuestRootComponent__Update(GrandQuestRootComponent_o *this, const MethodInfo *method)
+void GrandQuestRootComponent__Update(GrandQuestRootComponent_o *this, const MethodInfo *method)
 {
   GrandQuestViewSwitcher_o *viewSwitcher; // x0
 
   viewSwitcher = this->fields.viewSwitcher;
   if ( !viewSwitcher )
-    sub_1BCB254(0LL, method);
-  GrandQuestViewSwitcher__Update(viewSwitcher, 0LL);
+    sub_1C2D6EC(0, method);
+  GrandQuestViewSwitcher__Update(viewSwitcher, 0);
 }
 
 
-void __fastcall GrandQuestRootComponent__UpdateGrandScoreButton(
-        GrandQuestRootComponent_o *this,
-        const MethodInfo *method)
+void GrandQuestRootComponent__UpdateGrandScoreButton(GrandQuestRootComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
+  ClassBoardBaseMaster_o *Master_object; // x0
   __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  GrandGraphMaster_o *Master_object; // x0
-  __int64 v8; // x1
-  GrandGraphMaster_o *v9; // x20
-  GrandGraphEntity_o *EntityByParentClassBoardBaseId; // x0
-  bool v11; // w21
+  ClassBoardBaseMaster_o *v5; // x20
+  ClassBoardBaseEntity_o *GrandClassBoardBaseEntity; // x0
+  bool v7; // w21
   UnityEngine_GameObject_o *gameObject; // x0
   struct UILabel_o *grandScoreDisableMessageLabel; // x20
-  System_String_o *v14; // x1
-  UnityEngine_GameObject_o *v15; // x0
+  System_String_o *v10; // x1
+  UnityEngine_GameObject_o *v11; // x0
 
-  if ( (byte_4B17341 & 1) == 0 )
+  if ( (byte_4C22046 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_GrandGraphMaster___, method);
-    sub_1BCAFF8(&DataManager_TypeInfo, v3);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v4);
-    sub_1BCAFF8(&StringLiteral_6949/*"GRAND_QUEST_TO_GRAND_SCORE_DISABLE_MESSAGE"*/, v5);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v6);
-    byte_4B17341 = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_7000/*"GRAND_QUEST_TO_GRAND_SCORE_DISABLE_MESSAGE"*/);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C22046 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (GrandGraphMaster_o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_GrandGraphMaster___);
+  Master_object = (ClassBoardBaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !this->fields.viewSwitcher )
     goto LABEL_20;
-  v9 = Master_object;
-  Master_object = (GrandGraphMaster_o *)GrandQuestViewSwitcher__GetCurrentClassId(this->fields.viewSwitcher, 0LL);
-  if ( !v9 )
+  v5 = Master_object;
+  Master_object = (ClassBoardBaseMaster_o *)GrandQuestViewSwitcher__GetCurrentClassId(this->fields.viewSwitcher, 0);
+  if ( !v5 )
     goto LABEL_20;
-  EntityByParentClassBoardBaseId = GrandGraphMaster__GetEntityByParentClassBoardBaseId(v9, (int32_t)Master_object, 0LL);
-  v11 = EntityByParentClassBoardBaseId && !GrandGraphEntity__IsOpen(EntityByParentClassBoardBaseId, 0LL);
-  Master_object = (GrandGraphMaster_o *)this->fields.grandScoreDisableMask;
+  GrandClassBoardBaseEntity = ClassBoardBaseMaster__GetGrandClassBoardBaseEntity(v5, (int32_t)Master_object, 0);
+  v7 = !GrandClassBoardBaseEntity || !ClassBoardBaseEntity__IsOpen(GrandClassBoardBaseEntity, 0);
+  Master_object = (ClassBoardBaseMaster_o *)this->fields.grandScoreDisableMask;
   if ( !Master_object )
     goto LABEL_20;
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0LL);
-  if ( v11 )
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0);
+  if ( v7 )
   {
-    GameObjectHelper__SetActiveSafely(gameObject, 1, 0LL);
+    GameObjectHelper__SetActiveSafely(gameObject, 1, 0);
     grandScoreDisableMessageLabel = this->fields.grandScoreDisableMessageLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Master_object = (GrandGraphMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6949/*"GRAND_QUEST_TO_GRAND_SCORE_DISABLE_MESSAGE"*/, 0LL);
+    Master_object = (ClassBoardBaseMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_7000/*"GRAND_QUEST_TO_GRAND_SCORE_DISABLE_MESSAGE"*/, 0);
     if ( grandScoreDisableMessageLabel )
     {
-      v14 = (System_String_o *)Master_object;
-      Master_object = (GrandGraphMaster_o *)grandScoreDisableMessageLabel;
+      v10 = (System_String_o *)Master_object;
+      Master_object = (ClassBoardBaseMaster_o *)grandScoreDisableMessageLabel;
       goto LABEL_18;
     }
 LABEL_20:
-    sub_1BCB254(Master_object, v8);
+    sub_1C2D6EC(Master_object, v4);
   }
-  GameObjectHelper__SetActiveSafely(gameObject, 0, 0LL);
-  Master_object = (GrandGraphMaster_o *)this->fields.grandScoreDisableMessageLabel;
+  GameObjectHelper__SetActiveSafely(gameObject, 0, 0);
+  Master_object = (ClassBoardBaseMaster_o *)this->fields.grandScoreDisableMessageLabel;
   if ( !Master_object )
     goto LABEL_20;
-  v14 = (System_String_o *)StringLiteral_1/*""*/;
+  v10 = (System_String_o *)StringLiteral_1/*""*/;
 LABEL_18:
-  UILabel__set_text((UILabel_o *)Master_object, v14, 0LL);
-  Master_object = (GrandGraphMaster_o *)this->fields.grandScoreDisableMessageLabel;
+  UILabel__set_text((UILabel_o *)Master_object, v10, 0);
+  Master_object = (ClassBoardBaseMaster_o *)this->fields.grandScoreDisableMessageLabel;
   if ( !Master_object )
     goto LABEL_20;
-  v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0LL);
-  GameObjectHelper__SetActiveSafely(v15, v11, 0LL);
+  v11 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0);
+  GameObjectHelper__SetActiveSafely(v11, v7, 0);
 }
 
 
-void __fastcall GrandQuestRootComponent___Init_b__47_0(GrandQuestRootComponent_o *this, const MethodInfo *method)
+void GrandQuestRootComponent___Init_b__47_0(GrandQuestRootComponent_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
@@ -1015,7 +888,7 @@ void __fastcall GrandQuestRootComponent___Init_b__47_0(GrandQuestRootComponent_o
 }
 
 
-GrandQuestClassBoardController_o *__fastcall GrandQuestRootComponent__get_ClassBoardController(
+GrandQuestClassBoardController_o *GrandQuestRootComponent__get_ClassBoardController(
         GrandQuestRootComponent_o *this,
         const MethodInfo *method)
 {
@@ -1023,7 +896,7 @@ GrandQuestClassBoardController_o *__fastcall GrandQuestRootComponent__get_ClassB
 }
 
 
-GrandQuestClassSelectController_o *__fastcall GrandQuestRootComponent__get_ClassSelectController(
+GrandQuestClassSelectController_o *GrandQuestRootComponent__get_ClassSelectController(
         GrandQuestRootComponent_o *this,
         const MethodInfo *method)
 {
@@ -1031,7 +904,7 @@ GrandQuestClassSelectController_o *__fastcall GrandQuestRootComponent__get_Class
 }
 
 
-UnityEngine_GameObject_o *__fastcall GrandQuestRootComponent__get_GrandQuest(
+UnityEngine_GameObject_o *GrandQuestRootComponent__get_GrandQuest(
         GrandQuestRootComponent_o *this,
         const MethodInfo *method)
 {
@@ -1039,7 +912,7 @@ UnityEngine_GameObject_o *__fastcall GrandQuestRootComponent__get_GrandQuest(
 }
 
 
-GrandQuestBackground_o *__fastcall GrandQuestRootComponent__get_GrandQuestBackground(
+GrandQuestBackground_o *GrandQuestRootComponent__get_GrandQuestBackground(
         GrandQuestRootComponent_o *this,
         const MethodInfo *method)
 {
@@ -1047,7 +920,7 @@ GrandQuestBackground_o *__fastcall GrandQuestRootComponent__get_GrandQuestBackgr
 }
 
 
-GrandQuestRootComponent_ResumeInfo_o *__fastcall GrandQuestRootComponent__get_GrandResumeInfo(
+GrandQuestRootComponent_ResumeInfo_o *GrandQuestRootComponent__get_GrandResumeInfo(
         GrandQuestRootComponent_o *this,
         const MethodInfo *method)
 {
@@ -1055,7 +928,7 @@ GrandQuestRootComponent_ResumeInfo_o *__fastcall GrandQuestRootComponent__get_Gr
 }
 
 
-GrandQuestLevelSelectController_o *__fastcall GrandQuestRootComponent__get_LevelSelectController(
+GrandQuestLevelSelectController_o *GrandQuestRootComponent__get_LevelSelectController(
         GrandQuestRootComponent_o *this,
         const MethodInfo *method)
 {
@@ -1063,7 +936,7 @@ GrandQuestLevelSelectController_o *__fastcall GrandQuestRootComponent__get_Level
 }
 
 
-GrandQuestResourceCatalogAssetBundle_o *__fastcall GrandQuestRootComponent__get_ResourceCatalog(
+GrandQuestResourceCatalogAssetBundle_o *GrandQuestRootComponent__get_ResourceCatalog(
         GrandQuestRootComponent_o *this,
         const MethodInfo *method)
 {
@@ -1071,7 +944,7 @@ GrandQuestResourceCatalogAssetBundle_o *__fastcall GrandQuestRootComponent__get_
 }
 
 
-GrandQuestSvtController_o *__fastcall GrandQuestRootComponent__get_SvtController(
+GrandQuestSvtController_o *GrandQuestRootComponent__get_SvtController(
         GrandQuestRootComponent_o *this,
         const MethodInfo *method)
 {
@@ -1079,7 +952,7 @@ GrandQuestSvtController_o *__fastcall GrandQuestRootComponent__get_SvtController
 }
 
 
-ScrTerminalListTop_o *__fastcall GrandQuestRootComponent__get_TerminalList(
+ScrTerminalListTop_o *GrandQuestRootComponent__get_TerminalList(
         GrandQuestRootComponent_o *this,
         const MethodInfo *method)
 {
@@ -1087,7 +960,7 @@ ScrTerminalListTop_o *__fastcall GrandQuestRootComponent__get_TerminalList(
 }
 
 
-TerminalSceneComponent_o *__fastcall GrandQuestRootComponent__get_TerminalScene(
+TerminalSceneComponent_o *GrandQuestRootComponent__get_TerminalScene(
         GrandQuestRootComponent_o *this,
         const MethodInfo *method)
 {
@@ -1095,7 +968,7 @@ TerminalSceneComponent_o *__fastcall GrandQuestRootComponent__get_TerminalScene(
 }
 
 
-GrandQuestViewSwitcher_o *__fastcall GrandQuestRootComponent__get_ViewSwitcher(
+GrandQuestViewSwitcher_o *GrandQuestRootComponent__get_ViewSwitcher(
         GrandQuestRootComponent_o *this,
         const MethodInfo *method)
 {
@@ -1103,25 +976,23 @@ GrandQuestViewSwitcher_o *__fastcall GrandQuestRootComponent__get_ViewSwitcher(
 }
 
 
-void __fastcall GrandQuestRootComponent__set_GrandResumeInfo(
+void GrandQuestRootComponent__set_GrandResumeInfo(
         GrandQuestRootComponent_o *this,
         GrandQuestRootComponent_ResumeInfo_o *value,
         const MethodInfo *method)
 {
   this->fields._GrandResumeInfo_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._GrandResumeInfo_k__BackingField);
+  sub_1C2D434(&this->fields._GrandResumeInfo_k__BackingField);
 }
 
 
-void __fastcall GrandQuestRootComponent_ResumeInfo___ctor(
-        GrandQuestRootComponent_ResumeInfo_o *this,
-        const MethodInfo *method)
+void GrandQuestRootComponent_ResumeInfo___ctor(GrandQuestRootComponent_ResumeInfo_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-bool __fastcall GrandQuestRootComponent_ResumeInfo__get_IsDirectTransitionToClassSelect(
+bool GrandQuestRootComponent_ResumeInfo__get_IsDirectTransitionToClassSelect(
         GrandQuestRootComponent_ResumeInfo_o *this,
         const MethodInfo *method)
 {
@@ -1129,7 +1000,7 @@ bool __fastcall GrandQuestRootComponent_ResumeInfo__get_IsDirectTransitionToClas
 }
 
 
-bool __fastcall GrandQuestRootComponent_ResumeInfo__get_IsResume(
+bool GrandQuestRootComponent_ResumeInfo__get_IsResume(
         GrandQuestRootComponent_ResumeInfo_o *this,
         const MethodInfo *method)
 {
@@ -1137,7 +1008,7 @@ bool __fastcall GrandQuestRootComponent_ResumeInfo__get_IsResume(
 }
 
 
-int32_t __fastcall GrandQuestRootComponent_ResumeInfo__get_QuestId(
+int32_t GrandQuestRootComponent_ResumeInfo__get_QuestId(
         GrandQuestRootComponent_ResumeInfo_o *this,
         const MethodInfo *method)
 {
@@ -1145,7 +1016,7 @@ int32_t __fastcall GrandQuestRootComponent_ResumeInfo__get_QuestId(
 }
 
 
-int32_t __fastcall GrandQuestRootComponent_ResumeInfo__get_WarId(
+int32_t GrandQuestRootComponent_ResumeInfo__get_WarId(
         GrandQuestRootComponent_ResumeInfo_o *this,
         const MethodInfo *method)
 {
@@ -1153,7 +1024,7 @@ int32_t __fastcall GrandQuestRootComponent_ResumeInfo__get_WarId(
 }
 
 
-void __fastcall GrandQuestRootComponent_ResumeInfo__set_IsDirectTransitionToClassSelect(
+void GrandQuestRootComponent_ResumeInfo__set_IsDirectTransitionToClassSelect(
         GrandQuestRootComponent_ResumeInfo_o *this,
         bool value,
         const MethodInfo *method)
@@ -1162,7 +1033,7 @@ void __fastcall GrandQuestRootComponent_ResumeInfo__set_IsDirectTransitionToClas
 }
 
 
-void __fastcall GrandQuestRootComponent_ResumeInfo__set_IsResume(
+void GrandQuestRootComponent_ResumeInfo__set_IsResume(
         GrandQuestRootComponent_ResumeInfo_o *this,
         bool value,
         const MethodInfo *method)
@@ -1171,7 +1042,7 @@ void __fastcall GrandQuestRootComponent_ResumeInfo__set_IsResume(
 }
 
 
-void __fastcall GrandQuestRootComponent_ResumeInfo__set_QuestId(
+void GrandQuestRootComponent_ResumeInfo__set_QuestId(
         GrandQuestRootComponent_ResumeInfo_o *this,
         int32_t value,
         const MethodInfo *method)
@@ -1180,7 +1051,7 @@ void __fastcall GrandQuestRootComponent_ResumeInfo__set_QuestId(
 }
 
 
-void __fastcall GrandQuestRootComponent_ResumeInfo__set_WarId(
+void GrandQuestRootComponent_ResumeInfo__set_WarId(
         GrandQuestRootComponent_ResumeInfo_o *this,
         int32_t value,
         const MethodInfo *method)

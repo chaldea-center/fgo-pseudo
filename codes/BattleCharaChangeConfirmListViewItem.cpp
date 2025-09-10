@@ -1,4 +1,4 @@
-void __fastcall BattleCharaChangeConfirmListViewItem___ctor(
+void BattleCharaChangeConfirmListViewItem___ctor(
         BattleCharaChangeConfirmListViewItem_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -11,17 +11,17 @@ void __fastcall BattleCharaChangeConfirmListViewItem___ctor(
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._SvtId_k__BackingField = svtId;
   this->fields._LimitCount_k__BackingField = limitCount;
   this->fields._NowData_k__BackingField = nowData;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._NowData_k__BackingField, (int32_t)nowData, v11, v12);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._NowData_k__BackingField, (int32_t)nowData, v11, v12);
   this->fields._NextData_k__BackingField = nextData;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._NextData_k__BackingField, (int32_t)nextData, v13, v14);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._NextData_k__BackingField, (int32_t)nextData, v13, v14);
 }
 
 
-int32_t __fastcall BattleCharaChangeConfirmListViewItem__get_LimitCount(
+int32_t BattleCharaChangeConfirmListViewItem__get_LimitCount(
         BattleCharaChangeConfirmListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -29,7 +29,7 @@ int32_t __fastcall BattleCharaChangeConfirmListViewItem__get_LimitCount(
 }
 
 
-BattleCharaChangeConfirmListViewItem_DispLimitCountData_o *__fastcall BattleCharaChangeConfirmListViewItem__get_NextData(
+BattleCharaChangeConfirmListViewItem_DispLimitCountData_o *BattleCharaChangeConfirmListViewItem__get_NextData(
         BattleCharaChangeConfirmListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -37,7 +37,7 @@ BattleCharaChangeConfirmListViewItem_DispLimitCountData_o *__fastcall BattleChar
 }
 
 
-BattleCharaChangeConfirmListViewItem_DispLimitCountData_o *__fastcall BattleCharaChangeConfirmListViewItem__get_NowData(
+BattleCharaChangeConfirmListViewItem_DispLimitCountData_o *BattleCharaChangeConfirmListViewItem__get_NowData(
         BattleCharaChangeConfirmListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -45,7 +45,7 @@ BattleCharaChangeConfirmListViewItem_DispLimitCountData_o *__fastcall BattleChar
 }
 
 
-int32_t __fastcall BattleCharaChangeConfirmListViewItem__get_SvtId(
+int32_t BattleCharaChangeConfirmListViewItem__get_SvtId(
         BattleCharaChangeConfirmListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -53,7 +53,7 @@ int32_t __fastcall BattleCharaChangeConfirmListViewItem__get_SvtId(
 }
 
 
-void __fastcall BattleCharaChangeConfirmListViewItem_DispLimitCountData___ctor(
+void BattleCharaChangeConfirmListViewItem_DispLimitCountData___ctor(
         BattleCharaChangeConfirmListViewItem_DispLimitCountData_o *this,
         int32_t dispLimitCount,
         TreasureDvcInfo_o *tdInfo,
@@ -71,16 +71,16 @@ void __fastcall BattleCharaChangeConfirmListViewItem_DispLimitCountData___ctor(
   int32_t v19; // w2
   const MethodInfo *v20; // x3
 
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._DispLimitCount_k__BackingField = dispLimitCount;
   this->fields._TreasureDeviceInfo_k__BackingField = tdInfo;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._TreasureDeviceInfo_k__BackingField, (int32_t)tdInfo, v13, v14);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._TreasureDeviceInfo_k__BackingField, (int32_t)tdInfo, v13, v14);
   this->fields._SkillInfoArray_k__BackingField = skillInfoArray;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._SkillInfoArray_k__BackingField, (int32_t)skillInfoArray, v15, v16);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._SkillInfoArray_k__BackingField, (int32_t)skillInfoArray, v15, v16);
   this->fields._Status_k__BackingField = status;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Status_k__BackingField, (int32_t)status, v17, v18);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Status_k__BackingField, (int32_t)status, v17, v18);
   this->fields._ClassPassiveSkillArray_k__BackingField = classSkillArray;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._ClassPassiveSkillArray_k__BackingField,
     (int32_t)classSkillArray,
     v19,
@@ -88,7 +88,7 @@ void __fastcall BattleCharaChangeConfirmListViewItem_DispLimitCountData___ctor(
 }
 
 
-System_Int32_array *__fastcall BattleCharaChangeConfirmListViewItem_DispLimitCountData__get_ClassPassiveSkillArray(
+System_Int32_array *BattleCharaChangeConfirmListViewItem_DispLimitCountData__get_ClassPassiveSkillArray(
         BattleCharaChangeConfirmListViewItem_DispLimitCountData_o *this,
         const MethodInfo *method)
 {
@@ -96,7 +96,7 @@ System_Int32_array *__fastcall BattleCharaChangeConfirmListViewItem_DispLimitCou
 }
 
 
-int32_t __fastcall BattleCharaChangeConfirmListViewItem_DispLimitCountData__get_DispLimitCount(
+int32_t BattleCharaChangeConfirmListViewItem_DispLimitCountData__get_DispLimitCount(
         BattleCharaChangeConfirmListViewItem_DispLimitCountData_o *this,
         const MethodInfo *method)
 {
@@ -104,7 +104,7 @@ int32_t __fastcall BattleCharaChangeConfirmListViewItem_DispLimitCountData__get_
 }
 
 
-SkillInfo_array *__fastcall BattleCharaChangeConfirmListViewItem_DispLimitCountData__get_SkillInfoArray(
+SkillInfo_array *BattleCharaChangeConfirmListViewItem_DispLimitCountData__get_SkillInfoArray(
         BattleCharaChangeConfirmListViewItem_DispLimitCountData_o *this,
         const MethodInfo *method)
 {
@@ -112,7 +112,7 @@ SkillInfo_array *__fastcall BattleCharaChangeConfirmListViewItem_DispLimitCountD
 }
 
 
-ServantOverwriteStatus_o *__fastcall BattleCharaChangeConfirmListViewItem_DispLimitCountData__get_Status(
+ServantOverwriteStatus_o *BattleCharaChangeConfirmListViewItem_DispLimitCountData__get_Status(
         BattleCharaChangeConfirmListViewItem_DispLimitCountData_o *this,
         const MethodInfo *method)
 {
@@ -120,7 +120,7 @@ ServantOverwriteStatus_o *__fastcall BattleCharaChangeConfirmListViewItem_DispLi
 }
 
 
-TreasureDvcInfo_o *__fastcall BattleCharaChangeConfirmListViewItem_DispLimitCountData__get_TreasureDeviceInfo(
+TreasureDvcInfo_o *BattleCharaChangeConfirmListViewItem_DispLimitCountData__get_TreasureDeviceInfo(
         BattleCharaChangeConfirmListViewItem_DispLimitCountData_o *this,
         const MethodInfo *method)
 {

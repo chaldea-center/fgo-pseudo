@@ -1,12 +1,12 @@
-void __fastcall SupportSelectUIDragDropListViewSurface___ctor(
+void SupportSelectUIDragDropListViewSurface___ctor(
         SupportSelectUIDragDropListViewSurface_o *this,
         const MethodInfo *method)
 {
-  UIDragDropListViewSurface___ctor((UIDragDropListViewSurface_o *)this, 0LL);
+  UIDragDropListViewSurface___ctor((UIDragDropListViewSurface_o *)this, 0);
 }
 
 
-SupportSelectListViewDropObject_o *__fastcall SupportSelectUIDragDropListViewSurface__get_DropObject(
+SupportSelectListViewDropObject_o *SupportSelectUIDragDropListViewSurface__get_DropObject(
         SupportSelectUIDragDropListViewSurface_o *this,
         const MethodInfo *method)
 {
@@ -14,7 +14,7 @@ SupportSelectListViewDropObject_o *__fastcall SupportSelectUIDragDropListViewSur
 }
 
 
-void __fastcall SupportSelectUIDragDropListViewSurface__set_DropObject(
+void SupportSelectUIDragDropListViewSurface__set_DropObject(
         SupportSelectUIDragDropListViewSurface_o *this,
         SupportSelectListViewDropObject_o *value,
         const MethodInfo *method)
@@ -22,5 +22,5 @@ void __fastcall SupportSelectUIDragDropListViewSurface__set_DropObject(
   const MethodInfo *v3; // x3
 
   this->fields.dropObject = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.dropObject, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.dropObject, (int32_t)value, (int32_t)method, v3);
 }

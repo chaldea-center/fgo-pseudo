@@ -1,10 +1,10 @@
-void __fastcall RetryConfirmItem___ctor(RetryConfirmItem_o *this, const MethodInfo *method)
+void RetryConfirmItem___ctor(RetryConfirmItem_o *this, const MethodInfo *method)
 {
-  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this, const MethodInfo *method)
+void RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this, const MethodInfo *method)
 {
   UnityEngine_Component_o *useAmount; // x0
   struct UILabel_o *possessionAmount; // x8
@@ -20,7 +20,7 @@ void __fastcall RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this,
   useAmount = (UnityEngine_Component_o *)this->fields.useAmount;
   if ( !useAmount )
     goto LABEL_15;
-  if ( *((_DWORD *)&useAmount[19].fields + 1) == 2 )
+  if ( HIDWORD(useAmount[19].fields.m_CachedPtr) == 2 )
   {
     possessionAmount = this->fields.possessionAmount;
     if ( !possessionAmount )
@@ -32,32 +32,32 @@ void __fastcall RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this,
         klass = (int32_t)useAmount[7].klass;
       else
         klass = mWidth;
-      useAmount = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(useAmount, 0LL);
+      useAmount = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(useAmount, 0);
       if ( this->fields.useName )
       {
         v7 = (UnityEngine_GameObject_o *)useAmount;
         useAmount = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
                                                  (UnityEngine_Component_o *)this->fields.useName,
-                                                 0LL);
+                                                 0);
         if ( useAmount )
         {
           v8 = klass - 1;
-          v9 = COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)useAmount, 0LL));
-          GameObjectExtensions__SetLocalPositionX(v7, v9 + (float)v8, 0LL);
+          v9 = COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)useAmount, 0));
+          GameObjectExtensions__SetLocalPositionX(v7, v9 + (float)v8, 0);
           useAmount = (UnityEngine_Component_o *)this->fields.possessionAmount;
           if ( useAmount )
           {
-            useAmount = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(useAmount, 0LL);
+            useAmount = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(useAmount, 0);
             if ( this->fields.possessionName )
             {
               v10 = (UnityEngine_GameObject_o *)useAmount;
               useAmount = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(
                                                        (UnityEngine_Component_o *)this->fields.possessionName,
-                                                       0LL);
+                                                       0);
               if ( useAmount )
               {
-                v11 = COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)useAmount, 0LL));
-                GameObjectExtensions__SetLocalPositionX(v10, v11 + (float)v8, 0LL);
+                v11 = COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)useAmount, 0));
+                GameObjectExtensions__SetLocalPositionX(v10, v11 + (float)v8, 0);
                 RetryConfirmItem__CenteringWholeLabelHorizontal(this, v12);
                 return;
               }
@@ -66,13 +66,13 @@ void __fastcall RetryConfirmItem__CenteringAmountLabel(RetryConfirmItem_o *this,
         }
       }
 LABEL_15:
-      sub_1BCB254(useAmount, method);
+      sub_1C2D6EC(useAmount, method);
     }
   }
 }
 
 
-void __fastcall RetryConfirmItem__CenteringWholeLabelHorizontal(RetryConfirmItem_o *this, const MethodInfo *method)
+void RetryConfirmItem__CenteringWholeLabelHorizontal(RetryConfirmItem_o *this, const MethodInfo *method)
 {
   struct UILabel_o *useName; // x8
   struct UILabel_o *possessionName; // x9
@@ -110,29 +110,28 @@ void __fastcall RetryConfirmItem__CenteringWholeLabelHorizontal(RetryConfirmItem
         useAmount = (int)this[2].fields.useAmount,
         v8 = possessionName->fields.mWidth,
         v9 = possessionAmount->fields.mWidth,
-        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL),
-        LocalPositionX = GameObjectExtensions__GetLocalPositionX(gameObject, 0LL),
-        (this = (RetryConfirmItem_o *)v4->fields.possessionAmount) == 0LL) )
+        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0),
+        LocalPositionX = GameObjectExtensions__GetLocalPositionX(gameObject, 0),
+        (this = (RetryConfirmItem_o *)v4->fields.possessionAmount) == 0) )
   {
 LABEL_15:
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   }
   v12 = LocalPositionX;
   if ( useAmount + mWidth >= v9 + v8 )
     v13 = useAmount + mWidth;
   else
     v13 = v9 + v8;
-  v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v15 = GameObjectExtensions__GetLocalPositionX(v14, 0LL);
+  v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v15 = GameObjectExtensions__GetLocalPositionX(v14, 0);
   if ( v12 < v15 )
     v12 = v15;
-  v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4, 0LL);
-  GameObjectExtensions__SetLocalPositionX(v16, (float)((float)v13 * 0.5) - v12, 0LL);
+  v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4, 0);
+  GameObjectExtensions__SetLocalPositionX(v16, (float)((float)v13 * 0.5) - v12, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_Collections_IEnumerator_o *__fastcall RetryConfirmItem__SetCondensedScalePossessionAmount(
+System_Collections_IEnumerator_o *RetryConfirmItem__SetCondensedScalePossessionAmount(
         RetryConfirmItem_o *this,
         bool isDispUseItemUI,
         const MethodInfo *method)
@@ -142,33 +141,33 @@ System_Collections_IEnumerator_o *__fastcall RetryConfirmItem__SetCondensedScale
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4B1FC95 & 1) == 0 )
+  if ( (byte_4C2AB7D & 1) == 0 )
   {
-    sub_1BCAFF8(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo, isDispUseItemUI);
-    byte_4B1FC95 = 1;
+    sub_1C2D490(&RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
+    byte_4C2AB7D = 1;
   }
   v5 = isDispUseItemUI;
-  v6 = sub_1BCB244(RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v6, 0LL);
+  v6 = sub_1C2D6DC(RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v6, 0);
   *(_DWORD *)(v6 + 16) = 0;
   *(_QWORD *)(v6 + 32) = this;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v6 + 32), (int32_t)this, v7, v8);
+  sub_1C2D434((CGThumbnailListItem_o *)(v6 + 32), (int32_t)this, v7, v8);
   *(_BYTE *)(v6 + 40) = v5;
   return (System_Collections_IEnumerator_o *)v6;
 }
 
 
-void __fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__8___ctor(
+void RetryConfirmItem__SetCondensedScalePossessionAmount_d__8___ctor(
         RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_o *this,
         int32_t 1__state,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.__1__state = 1__state;
 }
 
 
-bool __fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__MoveNext(
+bool RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__MoveNext(
         RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_o *this,
         const MethodInfo *method)
 {
@@ -198,7 +197,7 @@ bool __fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__MoveNe
     if ( !this )
       goto LABEL_14;
     if ( SLODWORD(this[3].fields.__2__current) > (int)method )
-      UILabel__SetCondensedScale((UILabel_o *)this, (int32_t)method, 0, 0LL);
+      UILabel__SetCondensedScale((UILabel_o *)this, (int32_t)method, 0, 0);
   }
   else if ( !_1__state )
   {
@@ -208,23 +207,23 @@ bool __fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__MoveNe
       this = (RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_o *)_4__this->fields.possessionAmount;
       if ( this )
       {
-        UILabel__set_overflowMethod((UILabel_o *)this, 2, 0LL);
-        v4->fields.__2__current = 0LL;
+        UILabel__set_overflowMethod((UILabel_o *)this, 2, 0);
+        v4->fields.__2__current = 0;
         p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1BCAF9C(p__2__current, 0, v6, v7);
+        sub_1C2D434(p__2__current, 0, v6, v7);
         result = 1;
         LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
         return result;
       }
     }
 LABEL_14:
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   }
   return 0;
 }
 
 
-Il2CppObject *__fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__System_Collections_Generic_IEnumerator_System_Object__get_Current(
+Il2CppObject *RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__System_Collections_Generic_IEnumerator_System_Object__get_Current(
         RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_o *this,
         const MethodInfo *method)
 {
@@ -232,7 +231,7 @@ Il2CppObject *__fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__
 }
 
 
-void __fastcall __noreturn RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__System_Collections_IEnumerator_Reset(
+void __noreturn RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__System_Collections_IEnumerator_Reset(
         RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_o *this,
         const MethodInfo *method)
 {
@@ -240,15 +239,15 @@ void __fastcall __noreturn RetryConfirmItem__SetCondensedScalePossessionAmount_d
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1BCB00C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1BCB244(v2);
-  System_NotSupportedException___ctor(v3, 0LL);
-  v4 = sub_1BCB00C(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_System_Collections_IEnumerator_Reset__);
-  sub_1BCB120(v3, v4);
+  v2 = sub_1C2D4A4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C2D6DC(v2);
+  System_NotSupportedException___ctor(v3, 0);
+  v4 = sub_1C2D4A4(&Method_RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_System_Collections_IEnumerator_Reset__);
+  sub_1C2D5B8(v3, v4);
 }
 
 
-Il2CppObject *__fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__System_Collections_IEnumerator_get_Current(
+Il2CppObject *RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__System_Collections_IEnumerator_get_Current(
         RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_o *this,
         const MethodInfo *method)
 {
@@ -256,7 +255,7 @@ Il2CppObject *__fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__
 }
 
 
-void __fastcall RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__System_IDisposable_Dispose(
+void RetryConfirmItem__SetCondensedScalePossessionAmount_d__8__System_IDisposable_Dispose(
         RetryConfirmItem__SetCondensedScalePossessionAmount_d__8_o *this,
         const MethodInfo *method)
 {

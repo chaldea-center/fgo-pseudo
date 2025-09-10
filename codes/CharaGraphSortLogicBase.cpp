@@ -1,4 +1,4 @@
-void __fastcall CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
+void CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   struct IconLabelInfo_o *v3; // x0
   int32_t v4; // w2
@@ -10,56 +10,55 @@ void __fastcall CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, 
 
   v3 = CharaGraphSortLogicBase__ClearedIcon((const MethodInfo *)this);
   this->fields._IconInfo1_k__BackingField = v3;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)v3, v4, v5);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)v3, v4, v5);
   v7 = CharaGraphSortLogicBase__ClearedIcon(v6);
   this->fields._IconInfo2_k__BackingField = v7;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v7, v8, v9);
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v7, v8, v9);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-IconLabelInfo_o *__fastcall CharaGraphSortLogicBase__ClearedIcon(const MethodInfo *method)
+IconLabelInfo_o *CharaGraphSortLogicBase__ClearedIcon(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  IconLabelInfo_o *v2; // x19
-  __int64 v3; // x0
-  __int64 v4; // x1
+  IconLabelInfo_o *v1; // x19
+  __int64 v2; // x0
+  __int64 v3; // x1
 
-  if ( (byte_4B1B891 & 1) == 0 )
+  if ( (byte_4C26633 & 1) == 0 )
   {
-    sub_1BCAFF8(&IconLabelInfo_TypeInfo, v1);
-    byte_4B1B891 = 1;
+    sub_1C2D490(&IconLabelInfo_TypeInfo);
+    byte_4C26633 = 1;
   }
-  v2 = (IconLabelInfo_o *)sub_1BCB244(IconLabelInfo_TypeInfo);
-  IconLabelInfo___ctor(v2, 0LL);
-  if ( !v2 )
-    sub_1BCB254(v3, v4);
-  IconLabelInfo__Clear(v2, 0LL);
-  return v2;
+  v1 = (IconLabelInfo_o *)sub_1C2D6DC(IconLabelInfo_TypeInfo);
+  IconLabelInfo___ctor(v1, 0);
+  if ( !v1 )
+    sub_1C2D6EC(v2, v3);
+  IconLabelInfo__Clear(v1, 0);
+  return v1;
 }
 
 
-void __fastcall CharaGraphSortLogicBase__InitSortValue(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
+void CharaGraphSortLogicBase__InitSortValue(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   IconLabelInfo_o *IconInfo1_k__BackingField; // x0
 
   IconInfo1_k__BackingField = this->fields._IconInfo1_k__BackingField;
   *(_OWORD *)&this->fields._SortValue0_k__BackingField = 0u;
-  this->fields._SortValue1_k__BackingField = -1LL;
-  this->fields._SortValue1B_k__BackingField = 0LL;
+  this->fields._SortValue1_k__BackingField = -1;
+  this->fields._SortValue1B_k__BackingField = 0;
   *(_OWORD *)&this->fields._SortValue2_k__BackingField = 0u;
-  this->fields._AmountSortValue_k__BackingField = -1LL;
+  this->fields._AmountSortValue_k__BackingField = -1;
   if ( !IconInfo1_k__BackingField
-    || (IconLabelInfo__Clear(IconInfo1_k__BackingField, 0LL),
-        (IconInfo1_k__BackingField = this->fields._IconInfo2_k__BackingField) == 0LL) )
+    || (IconLabelInfo__Clear(IconInfo1_k__BackingField, 0),
+        (IconInfo1_k__BackingField = this->fields._IconInfo2_k__BackingField) == 0) )
   {
-    sub_1BCB254(IconInfo1_k__BackingField, method);
+    sub_1C2D6EC(IconInfo1_k__BackingField, method);
   }
-  IconLabelInfo__Clear(IconInfo1_k__BackingField, 0LL);
+  IconLabelInfo__Clear(IconInfo1_k__BackingField, 0);
 }
 
 
-void __fastcall CharaGraphSortLogicBase__SetListViewItem(
+void CharaGraphSortLogicBase__SetListViewItem(
         CharaGraphSortLogicBase_o *this,
         CharaGraphListViewItemBase_o *inputItem,
         const MethodInfo *method)
@@ -67,11 +66,11 @@ void __fastcall CharaGraphSortLogicBase__SetListViewItem(
   const MethodInfo *v3; // x3
 
   this->fields.item = inputItem;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.item, (int32_t)inputItem, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.item, (int32_t)inputItem, (int32_t)method, v3);
 }
 
 
-void __fastcall CharaGraphSortLogicBase__SetListViewSort(
+void CharaGraphSortLogicBase__SetListViewSort(
         CharaGraphSortLogicBase_o *this,
         ListViewSort_o *inputSort,
         const MethodInfo *method)
@@ -79,20 +78,20 @@ void __fastcall CharaGraphSortLogicBase__SetListViewSort(
   const MethodInfo *v3; // x3
 
   this->fields.sort = inputSort;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3);
 }
 
 
-void __fastcall CharaGraphSortLogicBase__SetSortValue(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
+void CharaGraphSortLogicBase__SetSortValue(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   CharaGraphSortLogicBase__InitSortValue(this, method);
-  ((void (__fastcall *)(CharaGraphSortLogicBase_o *, void *))this->klass->vtable._4_SetSortValueLocal.method)(
+  ((void (__fastcall *)(CharaGraphSortLogicBase_o *, const MethodInfo *))this->klass->vtable._4_SetSortValueLocal.methodPtr)(
     this,
-    this->klass[1]._1.image);
+    this->klass->vtable._4_SetSortValueLocal.method);
 }
 
 
-void __fastcall CharaGraphSortLogicBase__SetSortValueLocal(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
+void CharaGraphSortLogicBase__SetSortValueLocal(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   struct CharaGraphListViewItemBase_o *item; // x8
   struct ListViewSort_o *sort; // x8
@@ -105,73 +104,73 @@ void __fastcall CharaGraphSortLogicBase__SetSortValueLocal(CharaGraphSortLogicBa
   sort = this->fields.sort;
   if ( !sort )
 LABEL_7:
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   if ( sort->fields.isChoiceSort )
-    this->fields._SortValue0_k__BackingField = 10LL;
+    this->fields._SortValue0_k__BackingField = 10;
 }
 
 
-int64_t __fastcall CharaGraphSortLogicBase__get_AmountSortValue(
-        CharaGraphSortLogicBase_o *this,
-        const MethodInfo *method)
+int64_t CharaGraphSortLogicBase__get_AmountSortValue(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   return this->fields._AmountSortValue_k__BackingField;
 }
 
 
-IconLabelInfo_o *__fastcall CharaGraphSortLogicBase__get_IconInfo1(
-        CharaGraphSortLogicBase_o *this,
-        const MethodInfo *method)
+IconLabelInfo_o *CharaGraphSortLogicBase__get_IconInfo1(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   return this->fields._IconInfo1_k__BackingField;
 }
 
 
-IconLabelInfo_o *__fastcall CharaGraphSortLogicBase__get_IconInfo2(
-        CharaGraphSortLogicBase_o *this,
-        const MethodInfo *method)
+IconLabelInfo_o *CharaGraphSortLogicBase__get_IconInfo2(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   return this->fields._IconInfo2_k__BackingField;
 }
 
 
-int64_t __fastcall CharaGraphSortLogicBase__get_SortValue0(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
+int64_t CharaGraphSortLogicBase__get_SortValue0(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   return this->fields._SortValue0_k__BackingField;
 }
 
 
-int64_t __fastcall CharaGraphSortLogicBase__get_SortValue0B(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
+int64_t CharaGraphSortLogicBase__get_SortValue0B(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   return this->fields._SortValue0B_k__BackingField;
 }
 
 
-int64_t __fastcall CharaGraphSortLogicBase__get_SortValue1(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
+int64_t CharaGraphSortLogicBase__get_SortValue1(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   return this->fields._SortValue1_k__BackingField;
 }
 
 
-int64_t __fastcall CharaGraphSortLogicBase__get_SortValue1B(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
+int64_t CharaGraphSortLogicBase__get_SortValue1B(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   return this->fields._SortValue1B_k__BackingField;
 }
 
 
-int64_t __fastcall CharaGraphSortLogicBase__get_SortValue2(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
+int64_t CharaGraphSortLogicBase__get_SortValue2(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   return this->fields._SortValue2_k__BackingField;
 }
 
 
-int64_t __fastcall CharaGraphSortLogicBase__get_SortValue2B(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
+int64_t CharaGraphSortLogicBase__get_SortValue2B(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
 {
   return this->fields._SortValue2B_k__BackingField;
 }
 
 
-void __fastcall CharaGraphSortLogicBase__set_AmountSortValue(
+int64_t CharaGraphSortLogicBase__get_SortValueLast(CharaGraphSortLogicBase_o *this, const MethodInfo *method)
+{
+  return this->fields._SortValueLast_k__BackingField;
+}
+
+
+void CharaGraphSortLogicBase__set_AmountSortValue(
         CharaGraphSortLogicBase_o *this,
         int64_t value,
         const MethodInfo *method)
@@ -180,7 +179,7 @@ void __fastcall CharaGraphSortLogicBase__set_AmountSortValue(
 }
 
 
-void __fastcall CharaGraphSortLogicBase__set_IconInfo1(
+void CharaGraphSortLogicBase__set_IconInfo1(
         CharaGraphSortLogicBase_o *this,
         IconLabelInfo_o *value,
         const MethodInfo *method)
@@ -188,11 +187,11 @@ void __fastcall CharaGraphSortLogicBase__set_IconInfo1(
   const MethodInfo *v3; // x3
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall CharaGraphSortLogicBase__set_IconInfo2(
+void CharaGraphSortLogicBase__set_IconInfo2(
         CharaGraphSortLogicBase_o *this,
         IconLabelInfo_o *value,
         const MethodInfo *method)
@@ -200,59 +199,50 @@ void __fastcall CharaGraphSortLogicBase__set_IconInfo2(
   const MethodInfo *v3; // x3
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-void __fastcall CharaGraphSortLogicBase__set_SortValue0(
-        CharaGraphSortLogicBase_o *this,
-        int64_t value,
-        const MethodInfo *method)
+void CharaGraphSortLogicBase__set_SortValue0(CharaGraphSortLogicBase_o *this, int64_t value, const MethodInfo *method)
 {
   this->fields._SortValue0_k__BackingField = value;
 }
 
 
-void __fastcall CharaGraphSortLogicBase__set_SortValue0B(
-        CharaGraphSortLogicBase_o *this,
-        int64_t value,
-        const MethodInfo *method)
+void CharaGraphSortLogicBase__set_SortValue0B(CharaGraphSortLogicBase_o *this, int64_t value, const MethodInfo *method)
 {
   this->fields._SortValue0B_k__BackingField = value;
 }
 
 
-void __fastcall CharaGraphSortLogicBase__set_SortValue1(
-        CharaGraphSortLogicBase_o *this,
-        int64_t value,
-        const MethodInfo *method)
+void CharaGraphSortLogicBase__set_SortValue1(CharaGraphSortLogicBase_o *this, int64_t value, const MethodInfo *method)
 {
   this->fields._SortValue1_k__BackingField = value;
 }
 
 
-void __fastcall CharaGraphSortLogicBase__set_SortValue1B(
-        CharaGraphSortLogicBase_o *this,
-        int64_t value,
-        const MethodInfo *method)
+void CharaGraphSortLogicBase__set_SortValue1B(CharaGraphSortLogicBase_o *this, int64_t value, const MethodInfo *method)
 {
   this->fields._SortValue1B_k__BackingField = value;
 }
 
 
-void __fastcall CharaGraphSortLogicBase__set_SortValue2(
-        CharaGraphSortLogicBase_o *this,
-        int64_t value,
-        const MethodInfo *method)
+void CharaGraphSortLogicBase__set_SortValue2(CharaGraphSortLogicBase_o *this, int64_t value, const MethodInfo *method)
 {
   this->fields._SortValue2_k__BackingField = value;
 }
 
 
-void __fastcall CharaGraphSortLogicBase__set_SortValue2B(
+void CharaGraphSortLogicBase__set_SortValue2B(CharaGraphSortLogicBase_o *this, int64_t value, const MethodInfo *method)
+{
+  this->fields._SortValue2B_k__BackingField = value;
+}
+
+
+void CharaGraphSortLogicBase__set_SortValueLast(
         CharaGraphSortLogicBase_o *this,
         int64_t value,
         const MethodInfo *method)
 {
-  this->fields._SortValue2B_k__BackingField = value;
+  this->fields._SortValueLast_k__BackingField = value;
 }

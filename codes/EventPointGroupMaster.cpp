@@ -1,19 +1,19 @@
-void __fastcall EventPointGroupMaster___ctor(EventPointGroupMaster_o *this, const MethodInfo *method)
+void EventPointGroupMaster___ctor(EventPointGroupMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C5A1 & 1) == 0 )
+  if ( (byte_4C2734F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string___ctor__, method);
-    byte_4B1C5A1 = 1;
+    sub_1C2D490(&Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string___ctor__);
+    byte_4C2734F = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     156,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-EventPointGroupEntity_o *__fastcall EventPointGroupMaster__GetEntity(
+EventPointGroupEntity_o *EventPointGroupMaster__GetEntity(
         EventPointGroupMaster_o *this,
         int32_t eventId,
         int32_t groupId,
@@ -21,23 +21,21 @@ EventPointGroupEntity_o *__fastcall EventPointGroupMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1C59F & 1) == 0 )
+  if ( (byte_4C2734D & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__GetEntity__,
-      *(_QWORD *)&eventId);
-    byte_4B1C59F = 1;
+    sub_1C2D490(&Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__GetEntity__);
+    byte_4C2734D = 1;
   }
   PK = (Il2CppObject *)EventPointGroupEntity__CreatePK(eventId, groupId, *(const MethodInfo **)&groupId);
   return (EventPointGroupEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_32CC8B8 *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__GetEntity__);
+                                      (const MethodInfo_338C850 *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_Int32_array *__fastcall EventPointGroupMaster__GetTermedIconIds(
+System_Int32_array *EventPointGroupMaster__GetTermedIconIds(
         EventPointGroupMaster_o *this,
         int32_t eventId,
         int32_t termId,
@@ -45,82 +43,86 @@ System_Int32_array *__fastcall EventPointGroupMaster__GetTermedIconIds(
         const MethodInfo *method)
 {
   EventPointGroupMaster_o *v8; // x22
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x2
-  const MethodInfo *v12; // x4
-  __int64 v13; // x8
-  System_Int32_array *v14; // x23
-  unsigned __int64 v15; // x24
+  __int64 v9; // x2
+  const MethodInfo *v10; // x4
+  il2cpp_array_size_t max_length; // x8
+  EventPointGroupMaster_o *v12; // x23
+  unsigned __int64 v13; // x24
   int32_t iconId; // w8
-  const MethodInfo *v17; // x5
+  const MethodInfo *v15; // x5
   EventPointGroupEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
   v8 = this;
-  if ( (byte_4B1C5A4 & 1) == 0 )
+  if ( (byte_4C27352 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_EventPointGroupAddMaster___, *(_QWORD *)&eventId);
-    sub_1BCAFF8(&int___TypeInfo, v9);
-    this = (EventPointGroupMaster_o *)sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v10);
-    byte_4B1C5A4 = 1;
+    sub_1C2D490(&Method_DataManager_GetMasterData_EventPointGroupAddMaster___);
+    sub_1C2D490(&int___TypeInfo);
+    this = (EventPointGroupMaster_o *)sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C27352 = 1;
   }
-  entity = 0LL;
+  entity = 0;
   if ( !groupIds )
     goto LABEL_20;
-  this = (EventPointGroupMaster_o *)sub_1BCB0A0(int___TypeInfo, groupIds->max_length);
-  v13 = *(_QWORD *)&groupIds->max_length;
-  v14 = (System_Int32_array *)this;
-  if ( (int)v13 >= 1 )
+  this = (EventPointGroupMaster_o *)sub_1C2D538(int___TypeInfo, LODWORD(groupIds->max_length));
+  max_length = groupIds->max_length;
+  v12 = this;
+  if ( (int)max_length >= 1 )
   {
-    v15 = 0LL;
-    while ( v15 < (unsigned int)v13 )
+    v13 = 0;
+    while ( v13 < (unsigned int)max_length )
     {
       this = (EventPointGroupMaster_o *)EventPointGroupMaster__TryGetEntity(
                                           v8,
                                           &entity,
                                           eventId,
-                                          groupIds->m_Items[v15 + 1],
-                                          v12);
+                                          groupIds->m_Items[v13],
+                                          v10);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
-        if ( !entity || !v14 )
+        if ( !entity || !v12 )
           goto LABEL_20;
-        if ( v15 >= v14->max_length )
+        if ( v13 >= LODWORD(v12->fields._MasterName_k__BackingField) )
           break;
         iconId = entity->fields.iconId;
       }
       else
       {
-        if ( !v14 )
+        if ( !v12 )
           goto LABEL_20;
-        if ( v15 >= v14->max_length )
+        if ( v13 >= LODWORD(v12->fields._MasterName_k__BackingField) )
           break;
         iconId = 0;
       }
-      v14->m_Items[v15 + 1] = iconId;
-      LODWORD(v13) = groupIds->max_length;
-      if ( (__int64)++v15 >= (int)v13 )
+      *(&v12->fields.revision + v13) = iconId;
+      LODWORD(max_length) = groupIds->max_length;
+      if ( (__int64)++v13 >= (int)max_length )
         goto LABEL_16;
     }
-    sub_1BCB25C(this, *(_QWORD *)&eventId, v11);
+    sub_1C2D6F4(this, *(_QWORD *)&eventId, v9);
   }
 LABEL_16:
-  this = (EventPointGroupMaster_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (EventPointGroupMaster_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this
     || (this = (EventPointGroupMaster_o *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)this,
-                                            (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_EventPointGroupAddMaster___)) == 0LL )
+                                            (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventPointGroupAddMaster___)) == 0 )
   {
 LABEL_20:
-    sub_1BCB254(this, *(_QWORD *)&eventId);
+    sub_1C2D6EC(this, *(_QWORD *)&eventId);
   }
-  EventPointGroupAddMaster__GetTermedIconIds((EventPointGroupAddMaster_o *)this, eventId, termId, groupIds, v14, v17);
-  return v14;
+  EventPointGroupAddMaster__GetTermedIconIds(
+    (EventPointGroupAddMaster_o *)this,
+    eventId,
+    termId,
+    groupIds,
+    (System_Int32_array *)v12,
+    v15);
+  return (System_Int32_array *)v12;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall EventPointGroupMaster__TryGetEntity(
+bool EventPointGroupMaster__TryGetEntity(
         EventPointGroupMaster_o *this,
         EventPointGroupEntity_o **entity,
         int32_t eventId,
@@ -129,109 +131,97 @@ bool __fastcall EventPointGroupMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1C5A0 & 1) == 0 )
+  if ( (byte_4C2734E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__TryGetEntity__, entity);
-    byte_4B1C5A0 = 1;
+    sub_1C2D490(&Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__TryGetEntity__);
+    byte_4C2734E = 1;
   }
   PK = (Il2CppObject *)EventPointGroupEntity__CreatePK(eventId, groupId, *(const MethodInfo **)&eventId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__TryGetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-EventPointGroupEntity_o *__fastcall EventPointGroupMaster__getEntity(
+EventPointGroupEntity_o *EventPointGroupMaster__getEntity(
         EventPointGroupMaster_o *this,
         int32_t event_id,
         int32_t group_id,
         const MethodInfo *method)
 {
   __int64 v4; // x4
-  __int64 v8; // x1
-  __int64 v9; // x1
-  Il2CppObject *v10; // x21
-  __int64 v11; // x2
-  __int64 v12; // x3
-  __int64 v13; // x4
-  Il2CppObject *v14; // x0
-  System_String_o *v15; // x0
-  int32_t v17; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v18; // [xsp+Ch] [xbp-44h] BYREF
+  Il2CppObject *v8; // x21
+  __int64 v9; // x2
+  __int64 v10; // x3
+  __int64 v11; // x4
+  Il2CppObject *v12; // x0
+  System_String_o *v13; // x0
+  int32_t v15; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v16; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4B1C5A2 & 1) == 0 )
+  if ( (byte_4C27350 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__getEntityFromKey__,
-      *(_QWORD *)&event_id);
-    sub_1BCAFF8(&int_TypeInfo, v8);
-    sub_1BCAFF8(&StringLiteral_1448/*":"*/, v9);
-    byte_4B1C5A2 = 1;
+    sub_1C2D490(&Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__getEntityFromKey__);
+    sub_1C2D490(&int_TypeInfo);
+    sub_1C2D490(&StringLiteral_1456/*":"*/);
+    byte_4C27350 = 1;
   }
-  v18 = event_id;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18, *(_QWORD *)&group_id, method, v4);
-  v17 = group_id;
-  v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17, v11, v12, v13);
-  v15 = System_String__Concat_62488424(v10, (Il2CppObject *)StringLiteral_1448/*":"*/, v14, 0LL);
+  v16 = event_id;
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, *(_QWORD *)&group_id, method, v4);
+  v15 = group_id;
+  v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15, v9, v10, v11);
+  v13 = System_String__Concat_63495864(v8, (Il2CppObject *)StringLiteral_1456/*":"*/, v12, 0);
   return (EventPointGroupEntity_o *)DataMasterBase_object__object__object___getEntityFromKey(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-                                      v15,
-                                      (const MethodInfo_32CBC40 *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__getEntityFromKey__);
+                                      v13,
+                                      (const MethodInfo_338BBD8 *)Method_DataMasterBase_EventPointGroupMaster__EventPointGroupEntity__string__getEntityFromKey__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-EventPointGroupEntity_array *__fastcall EventPointGroupMaster__getEntityList(
+EventPointGroupEntity_array *EventPointGroupMaster__getEntityList(
         EventPointGroupMaster_o *this,
         int32_t eventId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  System_Collections_Generic_List_object__o *v10; // x21
-  System_Collections_ObjectModel_Collection_T__o *v11; // x1
+  System_Collections_Generic_List_object__o *v5; // x21
+  System_Collections_ObjectModel_Collection_T__o *v6; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  int v13; // w22
-  int32_t v14; // w23
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int v8; // w22
+  int32_t v9; // w23
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v18; // x9
+  _QWORD *v13; // x9
   __int64 size; // x10
-  Il2CppClass **v20; // x0
+  Il2CppClass **v15; // x0
 
-  if ( (byte_4B1C5A3 & 1) == 0 )
+  if ( (byte_4C27351 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_System_Collections_ObjectModel_Collection_EventPointGroupEntity__get_Count__,
-      *(_QWORD *)&eventId);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_EventPointGroupEntity__get_Item__, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventPointGroupEntity__Add__, v6);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventPointGroupEntity__ToArray__, v7);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_EventPointGroupEntity___ctor__, v8);
-    sub_1BCAFF8(&System_Collections_Generic_List_EventPointGroupEntity__TypeInfo, v9);
-    byte_4B1C5A3 = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_EventPointGroupEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_EventPointGroupEntity__get_Item__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventPointGroupEntity__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventPointGroupEntity__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_EventPointGroupEntity___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_EventPointGroupEntity__TypeInfo);
+    byte_4C27351 = 1;
   }
-  v10 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_EventPointGroupEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_EventPointGroupEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v10,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_EventPointGroupEntity___ctor__);
+    v5,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_EventPointGroupEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_17;
   list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                              list,
-                                                             (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_EventPointGroupEntity__get_Count__);
+                                                             (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_EventPointGroupEntity__get_Count__);
   if ( (int)list >= 1 )
   {
-    v13 = (int)list;
-    v14 = 0;
+    v8 = (int)list;
+    v9 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -239,52 +229,52 @@ EventPointGroupEntity_array *__fastcall EventPointGroupMaster__getEntityList(
         break;
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
-                                                                 v14,
-                                                                 (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_EventPointGroupEntity__get_Item__);
+                                                                 v9,
+                                                                 (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_EventPointGroupEntity__get_Item__);
       if ( !list )
         break;
-      v11 = list;
+      v6 = list;
       if ( LODWORD(list->fields.items) == eventId )
       {
-        if ( !v10 )
+        if ( !v5 )
           break;
-        items = v10->fields._items;
-        v18 = Method_System_Collections_Generic_List_EventPointGroupEntity__Add__;
-        ++v10->fields._version;
+        items = v5->fields._items;
+        v13 = Method_System_Collections_Generic_List_EventPointGroupEntity__Add__;
+        ++v5->fields._version;
         if ( !items )
           break;
-        size = v10->fields._size;
-        if ( (unsigned int)size >= items->max_length )
+        size = v5->fields._size;
+        if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v10,
+            v5,
             (Il2CppObject *)list,
-            *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
         }
         else
         {
-          v20 = &items->obj.klass + size;
-          v10->fields._size = size + 1;
-          v20[4] = (Il2CppClass *)v11;
-          sub_1BCAF9C((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v11, v15, v16);
+          v15 = &items->obj.klass + size;
+          v5->fields._size = size + 1;
+          v15[4] = (Il2CppClass *)v6;
+          sub_1C2D434((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v6, v10, v11);
         }
       }
-      if ( v13 == ++v14 )
+      if ( v8 == ++v9 )
         goto LABEL_15;
     }
 LABEL_17:
-    sub_1BCB254(list, v11);
+    sub_1C2D6EC(list, v6);
   }
 LABEL_15:
-  if ( !v10 )
+  if ( !v5 )
     goto LABEL_17;
   return (EventPointGroupEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                          v10,
-                                          (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_EventPointGroupEntity__ToArray__);
+                                          v5,
+                                          (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_EventPointGroupEntity__ToArray__);
 }
 
 
-int32_t __fastcall EventPointGroupMaster__getEventJoinGroupNum(
+int32_t EventPointGroupMaster__getEventJoinGroupNum(
         EventPointGroupMaster_o *this,
         int32_t eventId,
         const MethodInfo *method)
@@ -294,6 +284,6 @@ int32_t __fastcall EventPointGroupMaster__getEventJoinGroupNum(
 
   EntityList = EventPointGroupMaster__getEntityList(this, eventId, method);
   if ( !EntityList )
-    sub_1BCB254(0LL, v4);
+    sub_1C2D6EC(0, v4);
   return EntityList->max_length;
 }

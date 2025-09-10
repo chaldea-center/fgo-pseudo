@@ -1,50 +1,43 @@
-void __fastcall LocalNotificationServiceAndroid___ctor(
-        LocalNotificationServiceAndroid_o *this,
-        const MethodInfo *method)
+void LocalNotificationServiceAndroid___ctor(LocalNotificationServiceAndroid_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  System_String_o **v8; // x8
-  System_String_o *v9; // x19
+  System_String_o **v3; // x8
+  System_String_o *v4; // x19
   Il2CppObject *Instance; // x0
-  __int64 v11; // x1
-  const MethodInfo *v12; // x5
+  __int64 v6; // x1
+  const MethodInfo *v7; // x5
 
-  if ( (byte_4B1DEBF & 1) == 0 )
+  if ( (byte_4C28CD1 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Application_TypeInfo, method);
-    sub_1BCAFF8(&Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__, v3);
-    sub_1BCAFF8(&StringLiteral_6592/*"Fate/Grand Order"*/, v4);
-    sub_1BCAFF8(&StringLiteral_2176/*"All notifications"*/, v5);
-    sub_1BCAFF8(&StringLiteral_25239/*"全ての通知"*/, v6);
-    sub_1BCAFF8(&StringLiteral_3306/*"CHANNEL_ALL"*/, v7);
-    byte_4B1DEBF = 1;
+    sub_1C2D490(&UnityEngine_Application_TypeInfo);
+    sub_1C2D490(&Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
+    sub_1C2D490(&StringLiteral_6638/*"Fate/Grand Order"*/);
+    sub_1C2D490(&StringLiteral_2186/*"All notifications"*/);
+    sub_1C2D490(&StringLiteral_25437/*"全ての通知"*/);
+    sub_1C2D490(&StringLiteral_3329/*"CHANNEL_ALL"*/);
+    byte_4C28CD1 = 1;
   }
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-  if ( UnityEngine_Application__get_systemLanguage(0LL) == 22 )
-    v8 = (System_String_o **)&StringLiteral_25239/*"全ての通知"*/;
+  if ( UnityEngine_Application__get_systemLanguage(0) == 22 )
+    v3 = (System_String_o **)&StringLiteral_25437/*"全ての通知"*/;
   else
-    v8 = (System_String_o **)&StringLiteral_2176/*"All notifications"*/;
-  v9 = *v8;
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_38F8EF8 *)Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
+    v3 = (System_String_o **)&StringLiteral_2186/*"All notifications"*/;
+  v4 = *v3;
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
   if ( !Instance )
-    sub_1BCB254(0LL, v11);
+    sub_1C2D6EC(0, v6);
   LocalNotificationManagerAndroid__SetNotificationChannelParam(
     (LocalNotificationManagerAndroid_o *)Instance,
-    (System_String_o *)StringLiteral_3306/*"CHANNEL_ALL"*/,
-    v9,
-    v9,
-    (System_String_o *)StringLiteral_6592/*"Fate/Grand Order"*/,
-    v12);
+    (System_String_o *)StringLiteral_3329/*"CHANNEL_ALL"*/,
+    v4,
+    v4,
+    (System_String_o *)StringLiteral_6638/*"Fate/Grand Order"*/,
+    v7);
 }
 
 
-void __fastcall LocalNotificationServiceAndroid__Cancel(
+void LocalNotificationServiceAndroid__Cancel(
         LocalNotificationServiceAndroid_o *this,
         System_String_o *key,
         const MethodInfo *method)
@@ -53,38 +46,36 @@ void __fastcall LocalNotificationServiceAndroid__Cancel(
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4B1DEC1 & 1) == 0 )
+  if ( (byte_4C28CD3 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__, key);
-    byte_4B1DEC1 = 1;
+    sub_1C2D490(&Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
+    byte_4C28CD3 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_38F8EF8 *)Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
   if ( !Instance )
-    sub_1BCB254(0LL, v5);
+    sub_1C2D6EC(0, v5);
   LocalNotificationManagerAndroid__Cancel((LocalNotificationManagerAndroid_o *)Instance, key, v6);
 }
 
 
-void __fastcall LocalNotificationServiceAndroid__CancelAll(
-        LocalNotificationServiceAndroid_o *this,
-        const MethodInfo *method)
+void LocalNotificationServiceAndroid__CancelAll(LocalNotificationServiceAndroid_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
   const MethodInfo *v3; // x1
 
-  if ( (byte_4B1DEC2 & 1) == 0 )
+  if ( (byte_4C28CD4 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__, method);
-    byte_4B1DEC2 = 1;
+    sub_1C2D490(&Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
+    byte_4C28CD4 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_38F8EF8 *)Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
   if ( !Instance )
-    sub_1BCB254(0LL, v3);
+    sub_1C2D6EC(0, v3);
   LocalNotificationManagerAndroid__CancelAll((LocalNotificationManagerAndroid_o *)Instance, v3);
 }
 
 
-void __fastcall LocalNotificationServiceAndroid__Schedule(
+void LocalNotificationServiceAndroid__Schedule(
         LocalNotificationServiceAndroid_o *this,
         System_String_o *key,
         System_String_o *message,
@@ -95,14 +86,14 @@ void __fastcall LocalNotificationServiceAndroid__Schedule(
   __int64 v9; // x1
   const MethodInfo *v10; // x4
 
-  if ( (byte_4B1DEC0 & 1) == 0 )
+  if ( (byte_4C28CD2 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__, key);
-    byte_4B1DEC0 = 1;
+    sub_1C2D490(&Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
+    byte_4C28CD2 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_38F8EF8 *)Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_LocalNotificationManagerAndroid__get_Instance__);
   if ( !Instance )
-    sub_1BCB254(0LL, v9);
+    sub_1C2D6EC(0, v9);
   LocalNotificationManagerAndroid__Schedule(
     (LocalNotificationManagerAndroid_o *)Instance,
     key,

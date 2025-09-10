@@ -1,12 +1,12 @@
-void __fastcall ScriptMessageWindow___ctor(ScriptMessageWindow_o *this, const MethodInfo *method)
+void ScriptMessageWindow___ctor(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.talkNameBackBaseWidth = xmmword_BE18B0;
+  *(_OWORD *)&this->fields.talkNameBackBaseWidth = xmmword_C08EB0;
   this->fields.defaultWindowDispCenter = (struct UnityEngine_Vector2_o)0xC35A000000000000LL;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall ScriptMessageWindow__AddChildMessageScroll(
+void ScriptMessageWindow__AddChildMessageScroll(
         ScriptMessageWindow_o *this,
         UnityEngine_Transform_o *child,
         const MethodInfo *method)
@@ -17,138 +17,128 @@ void __fastcall ScriptMessageWindow__AddChildMessageScroll(
 
   if ( !child
     || (v4 = this,
-        UnityEngine_Transform__SetParent_70159336(child, this->fields.messageScroll, 0, 0LL),
-        this = (ScriptMessageWindow_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)child, 0LL),
-        (messageScroll = (UnityEngine_Component_o *)v4->fields.messageScroll) == 0LL)
-    || (v6 = this, (this = (ScriptMessageWindow_o *)UnityEngine_Component__get_gameObject(messageScroll, 0LL)) == 0LL)
-    || (this = (ScriptMessageWindow_o *)UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)this, 0LL), !v6) )
+        UnityEngine_Transform__SetParent_71186964(child, this->fields.messageScroll, 0, 0),
+        this = (ScriptMessageWindow_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)child, 0),
+        (messageScroll = (UnityEngine_Component_o *)v4->fields.messageScroll) == 0)
+    || (v6 = this, (this = (ScriptMessageWindow_o *)UnityEngine_Component__get_gameObject(messageScroll, 0)) == 0)
+    || (this = (ScriptMessageWindow_o *)UnityEngine_GameObject__get_layer((UnityEngine_GameObject_o *)this, 0), !v6) )
   {
-    sub_1BCB254(this, child);
+    sub_1C2D6EC(this, child);
   }
-  UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)v6, (int32_t)this, 0LL);
+  UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)v6, (int32_t)this, 0);
 }
 
 
-void __fastcall ScriptMessageWindow__CopyTouchComponents(
+void ScriptMessageWindow__CopyTouchComponents(
         ScriptMessageWindow_o *this,
         ScriptMessageWindow_o *src,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
   UnityEngine_Component_o *messageBackBase; // x0
-  UnityEngine_Component_o *v9; // x21
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  UnityEngine_Component_o *v6; // x21
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
   void *monitor; // x1
-  UnityEngine_Component_o *v13; // x8
-  UnityEngine_Component_o *v14; // x19
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  void *v17; // x1
+  UnityEngine_Component_o *v10; // x8
+  UnityEngine_Component_o *v11; // x19
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  void *v14; // x1
 
-  if ( (byte_4B1E4A8 & 1) == 0 )
+  if ( (byte_4C292BF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_AddComponent_ScriptMessageGestureReciver___, src);
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_AddComponent_UITouchPressMarge___, v5);
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_ScriptMessageGestureReciver___, v6);
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_UITouchPressMarge___, v7);
-    byte_4B1E4A8 = 1;
+    sub_1C2D490(&Method_UnityEngine_GameObject_AddComponent_ScriptMessageGestureReciver___);
+    sub_1C2D490(&Method_UnityEngine_GameObject_AddComponent_UITouchPressMarge___);
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_ScriptMessageGestureReciver___);
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_UITouchPressMarge___);
+    byte_4C292BF = 1;
   }
   messageBackBase = (UnityEngine_Component_o *)this->fields.messageBackBase;
   if ( !messageBackBase )
     goto LABEL_17;
-  messageBackBase = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(messageBackBase, 0LL);
+  messageBackBase = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(messageBackBase, 0);
   if ( !messageBackBase )
     goto LABEL_17;
   messageBackBase = (UnityEngine_Component_o *)UnityEngine_GameObject__AddComponent_object_(
                                                  (UnityEngine_GameObject_o *)messageBackBase,
-                                                 (const MethodInfo_306E628 *)Method_UnityEngine_GameObject_AddComponent_ScriptMessageGestureReciver___);
+                                                 (const MethodInfo_3125DE8 *)Method_UnityEngine_GameObject_AddComponent_ScriptMessageGestureReciver___);
   if ( !src )
     goto LABEL_17;
-  v9 = messageBackBase;
+  v6 = messageBackBase;
   messageBackBase = (UnityEngine_Component_o *)src->fields.messageBackBase;
   if ( !messageBackBase )
     goto LABEL_17;
-  messageBackBase = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(messageBackBase, 0LL);
+  messageBackBase = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(messageBackBase, 0);
   if ( !messageBackBase )
     goto LABEL_17;
   messageBackBase = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                  (UnityEngine_GameObject_o *)messageBackBase,
-                                                 (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_ScriptMessageGestureReciver___);
+                                                 (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_ScriptMessageGestureReciver___);
   if ( !messageBackBase )
     goto LABEL_17;
-  if ( !v9 )
+  if ( !v6 )
     goto LABEL_17;
   monitor = messageBackBase[1].monitor;
-  v9[1].monitor = monitor;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v9[1].monitor, (int32_t)monitor, v10, v11);
+  v6[1].monitor = monitor;
+  sub_1C2D434((CGThumbnailListItem_o *)&v6[1].monitor, (int32_t)monitor, v7, v8);
   messageBackBase = (UnityEngine_Component_o *)this->fields.messageBackBase;
   if ( !messageBackBase
-    || (messageBackBase = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(messageBackBase, 0LL)) == 0LL
+    || (messageBackBase = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(messageBackBase, 0)) == 0
     || (messageBackBase = (UnityEngine_Component_o *)UnityEngine_GameObject__AddComponent_object_(
                                                        (UnityEngine_GameObject_o *)messageBackBase,
-                                                       (const MethodInfo_306E628 *)Method_UnityEngine_GameObject_AddComponent_UITouchPressMarge___),
-        (v13 = (UnityEngine_Component_o *)src->fields.messageBackBase) == 0LL)
-    || (v14 = messageBackBase,
-        (messageBackBase = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(v13, 0LL)) == 0LL)
+                                                       (const MethodInfo_3125DE8 *)Method_UnityEngine_GameObject_AddComponent_UITouchPressMarge___),
+        (v10 = (UnityEngine_Component_o *)src->fields.messageBackBase) == 0)
+    || (v11 = messageBackBase,
+        (messageBackBase = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(v10, 0)) == 0)
     || (messageBackBase = (UnityEngine_Component_o *)UnityEngine_GameObject__GetComponent_object_(
                                                        (UnityEngine_GameObject_o *)messageBackBase,
-                                                       (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_UITouchPressMarge___)) == 0LL
-    || !v14 )
+                                                       (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_UITouchPressMarge___)) == 0
+    || !v11 )
   {
 LABEL_17:
-    sub_1BCB254(messageBackBase, src);
+    sub_1C2D6EC(messageBackBase, src);
   }
-  v17 = messageBackBase[1].monitor;
-  v14[1].monitor = v17;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v14[1].monitor, (int32_t)v17, v15, v16);
+  v14 = messageBackBase[1].monitor;
+  v11[1].monitor = v14;
+  sub_1C2D434((CGThumbnailListItem_o *)&v11[1].monitor, (int32_t)v14, v12, v13);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ScriptMessageWindow__SetEnabledCollider(
-        ScriptMessageWindow_o *this,
-        bool isEnable,
-        const MethodInfo *method)
+void ScriptMessageWindow__SetEnabledCollider(ScriptMessageWindow_o *this, bool isEnable, const MethodInfo *method)
 {
-  __int64 v5; // x1
   struct UIWidget_o *messageBackBase; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4B1E4A9 & 1) == 0 )
+  if ( (byte_4C292C0 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_Component_GetComponent_BoxCollider___, isEnable);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    byte_4B1E4A9 = 1;
+    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_BoxCollider___);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C292C0 = 1;
   }
   messageBackBase = this->fields.messageBackBase;
   if ( !messageBackBase )
     goto LABEL_9;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)messageBackBase,
-                       (const MethodInfo_3011274 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
+                       (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_BoxCollider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  messageBackBase = (struct UIWidget_o *)UnityEngine_Object__op_Equality(
-                                           (UnityEngine_Object_o *)Component_object,
-                                           0LL,
-                                           0LL);
+  messageBackBase = (struct UIWidget_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( ((unsigned __int8)messageBackBase & 1) == 0 )
   {
     if ( Component_object )
     {
-      UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isEnable, 0LL);
+      UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isEnable, 0);
       return;
     }
 LABEL_9:
-    sub_1BCB254(messageBackBase, isEnable);
+    sub_1C2D6EC(messageBackBase, isEnable);
   }
 }
 
 
-UnityEngine_Vector2_o __fastcall ScriptMessageWindow__get_DefaultWindowDispCenter(
+UnityEngine_Vector2_o ScriptMessageWindow__get_DefaultWindowDispCenter(
         ScriptMessageWindow_o *this,
         const MethodInfo *method)
 {
@@ -164,7 +154,7 @@ UnityEngine_Vector2_o __fastcall ScriptMessageWindow__get_DefaultWindowDispCente
 }
 
 
-UnityEngine_Vector2_o __fastcall ScriptMessageWindow__get_DefaultWindowDispSize(
+UnityEngine_Vector2_o ScriptMessageWindow__get_DefaultWindowDispSize(
         ScriptMessageWindow_o *this,
         const MethodInfo *method)
 {
@@ -180,81 +170,73 @@ UnityEngine_Vector2_o __fastcall ScriptMessageWindow__get_DefaultWindowDispSize(
 }
 
 
-UIPanel_o *__fastcall ScriptMessageWindow__get_DispPanel(ScriptMessageWindow_o *this, const MethodInfo *method)
+UIPanel_o *ScriptMessageWindow__get_DispPanel(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
   return this->fields.dispPanel;
 }
 
 
-System_String_o *__fastcall ScriptMessageWindow__get_ImageSuffix(ScriptMessageWindow_o *this, const MethodInfo *method)
+System_String_o *ScriptMessageWindow__get_ImageSuffix(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
   return this->fields.imageSuffix;
 }
 
 
-UILabel_o *__fastcall ScriptMessageWindow__get_MessageMainLabel(ScriptMessageWindow_o *this, const MethodInfo *method)
+UILabel_o *ScriptMessageWindow__get_MessageMainLabel(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
   return this->fields.messageMainLabel;
 }
 
 
-UILabel_o *__fastcall ScriptMessageWindow__get_MessageRubyLabel(ScriptMessageWindow_o *this, const MethodInfo *method)
+UILabel_o *ScriptMessageWindow__get_MessageRubyLabel(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
   return this->fields.messageRubyLabel;
 }
 
 
-UnityEngine_Transform_o *__fastcall ScriptMessageWindow__get_MessageScroll(
-        ScriptMessageWindow_o *this,
-        const MethodInfo *method)
+UnityEngine_Transform_o *ScriptMessageWindow__get_MessageScroll(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
   return this->fields.messageScroll;
 }
 
 
-UISprite_o *__fastcall ScriptMessageWindow__get_MessageWindowBack(
-        ScriptMessageWindow_o *this,
-        const MethodInfo *method)
+UISprite_o *ScriptMessageWindow__get_MessageWindowBack(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
   return this->fields.messageWindowBack;
 }
 
 
-UISprite_o *__fastcall ScriptMessageWindow__get_TalkNameBack(ScriptMessageWindow_o *this, const MethodInfo *method)
+UISprite_o *ScriptMessageWindow__get_TalkNameBack(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
   return this->fields.talkNameBack;
 }
 
 
-int32_t __fastcall ScriptMessageWindow__get_TalkNameBackBaseWidth(
-        ScriptMessageWindow_o *this,
-        const MethodInfo *method)
+int32_t ScriptMessageWindow__get_TalkNameBackBaseWidth(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
   return this->fields.talkNameBackBaseWidth;
 }
 
 
-int32_t __fastcall ScriptMessageWindow__get_TalkNameBackDefaultWidth(
-        ScriptMessageWindow_o *this,
-        const MethodInfo *method)
+int32_t ScriptMessageWindow__get_TalkNameBackDefaultWidth(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
   return this->fields.talkNameBackDefaultWidth;
 }
 
 
-UISprite_o *__fastcall ScriptMessageWindow__get_TalkNameIcon(ScriptMessageWindow_o *this, const MethodInfo *method)
+UISprite_o *ScriptMessageWindow__get_TalkNameIcon(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
   return this->fields.talkNameIcon;
 }
 
 
-UILabel_o *__fastcall ScriptMessageWindow__get_TalkNameMainLabel(ScriptMessageWindow_o *this, const MethodInfo *method)
+UILabel_o *ScriptMessageWindow__get_TalkNameMainLabel(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
   return this->fields.talkNameMainLabel;
 }
 
 
-UnityEngine_Transform_o *__fastcall ScriptMessageWindow__get_TalkNameMessageRoot(
+UnityEngine_Transform_o *ScriptMessageWindow__get_TalkNameMessageRoot(
         ScriptMessageWindow_o *this,
         const MethodInfo *method)
 {
@@ -262,7 +244,7 @@ UnityEngine_Transform_o *__fastcall ScriptMessageWindow__get_TalkNameMessageRoot
 }
 
 
-UnityEngine_GameObject_o *__fastcall ScriptMessageWindow__get_TalkNameRootObject(
+UnityEngine_GameObject_o *ScriptMessageWindow__get_TalkNameRootObject(
         ScriptMessageWindow_o *this,
         const MethodInfo *method)
 {
@@ -270,7 +252,7 @@ UnityEngine_GameObject_o *__fastcall ScriptMessageWindow__get_TalkNameRootObject
 }
 
 
-UILabel_o *__fastcall ScriptMessageWindow__get_TalkNameRubyLabel(ScriptMessageWindow_o *this, const MethodInfo *method)
+UILabel_o *ScriptMessageWindow__get_TalkNameRubyLabel(ScriptMessageWindow_o *this, const MethodInfo *method)
 {
   return this->fields.talkNameRubyLabel;
 }

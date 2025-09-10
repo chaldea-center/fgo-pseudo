@@ -1,17 +1,17 @@
-void __fastcall MoveObject___ctor(MoveObject_o *this, const MethodInfo *method)
+void MoveObject___ctor(MoveObject_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall MoveObject__Awake(MoveObject_o *this, const MethodInfo *method)
+void MoveObject__Awake(MoveObject_o *this, const MethodInfo *method)
 {
   this->fields.mIsMoving = 0;
   this->fields.mIsSkip = 0;
 }
 
 
-UnityEngine_Vector3_o __fastcall MoveObject__Now(MoveObject_o *this, const MethodInfo *method)
+UnityEngine_Vector3_o MoveObject__Now(MoveObject_o *this, const MethodInfo *method)
 {
   float x; // s0
   float y; // s1
@@ -28,18 +28,17 @@ UnityEngine_Vector3_o __fastcall MoveObject__Now(MoveObject_o *this, const Metho
 }
 
 
-void __fastcall MoveObject__Pause(MoveObject_o *this, const MethodInfo *method)
+void MoveObject__Pause(MoveObject_o *this, const MethodInfo *method)
 {
   if ( !this->fields.mIsPause )
   {
     this->fields.mIsPause = 1;
-    this->fields.mPauseStartTime = UnityEngine_Time__get_time(0LL);
+    this->fields.mPauseStartTime = UnityEngine_Time__get_time(0);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall MoveObject__Play(
+void MoveObject__Play(
         MoveObject_o *this,
         UnityEngine_Vector3_o from,
         UnityEngine_Vector3_o to,
@@ -67,65 +66,65 @@ void __fastcall MoveObject__Play(
     v14 = 0.0001;
   else
     v14 = sec;
-  this->fields.mStartTime = UnityEngine_Time__get_time(0LL);
+  this->fields.mStartTime = UnityEngine_Time__get_time(0);
   this->fields.mTime = v14;
   this->fields.mEndAct = endAct;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.mEndAct, (int32_t)endAct, v15, v16);
-  v20 = Easing__Func(this->fields.mFrom, this->fields.mTo, 0.0001, this->fields.mEasingType, 0LL);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.mEndAct, (int32_t)endAct, v15, v16);
+  v20 = Easing__Func(this->fields.mFrom, this->fields.mTo, 0.0001, this->fields.mEasingType, 0);
   this->fields.mProcessAct = procAct;
   this->fields.mNow = v20;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.mProcessAct, (int32_t)procAct, v17, v18);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.mProcessAct, (int32_t)procAct, v17, v18);
   this->fields.mEasingType = easingType;
   mProcessAct = this->fields.mProcessAct;
   this->fields.mDelay = delay;
   this->fields.mIsSkip = 0;
-  ActionExtensions__Call(mProcessAct, 0LL);
+  ActionExtensions__Call(mProcessAct, 0);
 }
 
 
-void __fastcall MoveObject__Resume(MoveObject_o *this, const MethodInfo *method)
+void MoveObject__Resume(MoveObject_o *this, const MethodInfo *method)
 {
   if ( this->fields.mIsPause )
   {
     this->fields.mIsPause = 0;
     this->fields.mStartTime = this->fields.mStartTime
-                            + (float)(UnityEngine_Time__get_time(0LL) - this->fields.mPauseStartTime);
+                            + (float)(UnityEngine_Time__get_time(0) - this->fields.mPauseStartTime);
   }
 }
 
 
-void __fastcall MoveObject__SetPause(MoveObject_o *this, bool isPause, const MethodInfo *method)
+void MoveObject__SetPause(MoveObject_o *this, bool isPause, const MethodInfo *method)
 {
   if ( isPause )
   {
     if ( !this->fields.mIsPause )
     {
       this->fields.mIsPause = 1;
-      this->fields.mPauseStartTime = UnityEngine_Time__get_time(0LL);
+      this->fields.mPauseStartTime = UnityEngine_Time__get_time(0);
     }
   }
   else if ( this->fields.mIsPause )
   {
     this->fields.mIsPause = 0;
     this->fields.mStartTime = this->fields.mStartTime
-                            + (float)(UnityEngine_Time__get_time(0LL) - this->fields.mPauseStartTime);
+                            + (float)(UnityEngine_Time__get_time(0) - this->fields.mPauseStartTime);
   }
 }
 
 
-void __fastcall MoveObject__Skip(MoveObject_o *this, const MethodInfo *method)
+void MoveObject__Skip(MoveObject_o *this, const MethodInfo *method)
 {
   this->fields.mIsSkip = 1;
 }
 
 
-void __fastcall MoveObject__Stop(MoveObject_o *this, const MethodInfo *method)
+void MoveObject__Stop(MoveObject_o *this, const MethodInfo *method)
 {
   this->fields.mIsMoving = 0;
 }
 
 
-void __fastcall MoveObject__Update(MoveObject_o *this, const MethodInfo *method)
+void MoveObject__Update(MoveObject_o *this, const MethodInfo *method)
 {
   float mStartTime; // s8
   float mDelay; // s9
@@ -142,9 +141,9 @@ void __fastcall MoveObject__Update(MoveObject_o *this, const MethodInfo *method)
     if ( this->fields.mIsSkip
       || (mStartTime = this->fields.mStartTime,
           mDelay = this->fields.mDelay,
-          (float)(mStartTime + mDelay) <= UnityEngine_Time__get_time(0LL)) )
+          (float)(mStartTime + mDelay) <= UnityEngine_Time__get_time(0)) )
     {
-      v5 = (float)(UnityEngine_Time__get_time(0LL) - (float)(this->fields.mStartTime + this->fields.mDelay))
+      v5 = (float)(UnityEngine_Time__get_time(0) - (float)(this->fields.mStartTime + this->fields.mDelay))
          / this->fields.mTime;
       v6 = v5 < 0.0;
       v7 = fminf(v5, 1.0);
@@ -154,28 +153,28 @@ void __fastcall MoveObject__Update(MoveObject_o *this, const MethodInfo *method)
         v8 = 1.0;
       else
         v8 = v7;
-      v11 = Easing__Func(this->fields.mFrom, this->fields.mTo, v8, this->fields.mEasingType, 0LL);
+      v11 = Easing__Func(this->fields.mFrom, this->fields.mTo, v8, this->fields.mEasingType, 0);
       mProcessAct = this->fields.mProcessAct;
       this->fields.mNow = v11;
       if ( mProcessAct )
-        ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))mProcessAct->fields.m_target)(
-          mProcessAct->fields.original_method_info,
-          *(_QWORD *)&mProcessAct->fields.extra_arg);
+        ((void (__fastcall *)(intptr_t, intptr_t))mProcessAct->fields.invoke_impl)(
+          mProcessAct->fields.method_code,
+          mProcessAct->fields.method);
       if ( v8 >= 1.0 )
       {
         mEndAct = this->fields.mEndAct;
         this->fields.mIsMoving = 0;
         if ( mEndAct )
-          ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))mEndAct->fields.m_target)(
-            mEndAct->fields.original_method_info,
-            *(_QWORD *)&mEndAct->fields.extra_arg);
+          ((void (__fastcall *)(intptr_t, intptr_t))mEndAct->fields.invoke_impl)(
+            mEndAct->fields.method_code,
+            mEndAct->fields.method);
       }
     }
   }
 }
 
 
-bool __fastcall MoveObject__get_IsMoving(MoveObject_o *this, const MethodInfo *method)
+bool MoveObject__get_IsMoving(MoveObject_o *this, const MethodInfo *method)
 {
   return this->fields.mIsMoving;
 }

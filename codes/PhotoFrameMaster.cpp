@@ -1,19 +1,18 @@
-void __fastcall PhotoFrameMaster___ctor(PhotoFrameMaster_o *this, const MethodInfo *method)
+void PhotoFrameMaster___ctor(PhotoFrameMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D784 & 1) == 0 )
+  if ( (byte_4C28588 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string___ctor__, method);
-    byte_4B1D784 = 1;
+    sub_1C2D490(&Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string___ctor__);
+    byte_4C28588 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     490,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-PhotoFrameEntity_o *__fastcall PhotoFrameMaster__GetEntity(
+PhotoFrameEntity_o *PhotoFrameMaster__GetEntity(
         PhotoFrameMaster_o *this,
         int32_t id,
         int32_t priority,
@@ -23,20 +22,20 @@ PhotoFrameEntity_o *__fastcall PhotoFrameMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1D785 & 1) == 0 )
+  if ( (byte_4C28589 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string__GetEntity__, *(_QWORD *)&id);
-    byte_4B1D785 = 1;
+    sub_1C2D490(&Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string__GetEntity__);
+    byte_4C28589 = 1;
   }
   PK = (Il2CppObject *)PhotoFrameEntity__CreatePK(id, priority, spriteName, name, (const MethodInfo *)name);
   return (PhotoFrameEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                  PK,
-                                 (const MethodInfo_32CC8B8 *)Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string__GetEntity__);
+                                 (const MethodInfo_338C850 *)Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string__GetEntity__);
 }
 
 
-bool __fastcall PhotoFrameMaster__TryGetEntity(
+bool PhotoFrameMaster__TryGetEntity(
         PhotoFrameMaster_o *this,
         PhotoFrameEntity_o **entity,
         int32_t id,
@@ -47,15 +46,15 @@ bool __fastcall PhotoFrameMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1D786 & 1) == 0 )
+  if ( (byte_4C2858A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string__TryGetEntity__, entity);
-    byte_4B1D786 = 1;
+    sub_1C2D490(&Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string__TryGetEntity__);
+    byte_4C2858A = 1;
   }
   PK = (Il2CppObject *)PhotoFrameEntity__CreatePK(id, priority, spriteName, name, (const MethodInfo *)spriteName);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string__TryGetEntity__);
 }

@@ -1,39 +1,36 @@
-void __fastcall NpcFollowerReleaseEntity___ctor(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
+void NpcFollowerReleaseEntity___ctor(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CA58 & 1) == 0 )
+  if ( (byte_4C27827 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1CA58 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C27827 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall NpcFollowerReleaseEntity__CreatePK(
+System_String_o *NpcFollowerReleaseEntity__CreatePK(
         int64_t id,
         int32_t questId,
         int32_t questPhase,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CA56 & 1) == 0 )
+  if ( (byte_4C27825 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long__int__int___, *(_QWORD *)&questId);
-    byte_4B1CA56 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4C27825 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            id,
            questId,
            questPhase,
-           (const MethodInfo_3019278 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_30CD124 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
-System_String_o *__fastcall NpcFollowerReleaseEntity__CreatePrimaryKey(
-        NpcFollowerReleaseEntity_o *this,
-        const MethodInfo *method)
+System_String_o *NpcFollowerReleaseEntity__CreatePrimaryKey(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
@@ -41,27 +38,27 @@ System_String_o *__fastcall NpcFollowerReleaseEntity__CreatePrimaryKey(
 }
 
 
-int32_t __fastcall NpcFollowerReleaseEntity__GetCondType(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
+int32_t NpcFollowerReleaseEntity__GetCondType(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
 {
   return this->fields.condType;
 }
 
 
-bool __fastcall NpcFollowerReleaseEntity__IsEnable(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
+bool NpcFollowerReleaseEntity__IsEnable(NpcFollowerReleaseEntity_o *this, const MethodInfo *method)
 {
   int32_t condTargetId; // w20
   int32_t condType; // w21
   int64_t condValue; // x19
 
-  if ( (byte_4B1CA57 & 1) == 0 )
+  if ( (byte_4C27826 & 1) == 0 )
   {
-    sub_1BCAFF8(&CondType_TypeInfo, method);
-    byte_4B1CA57 = 1;
+    sub_1C2D490(&CondType_TypeInfo);
+    byte_4C27826 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;
   condValue = this->fields.condValue;
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__IsOpen(condType, condTargetId, condValue, 0, 0LL, 0LL);
+  return CondType__IsOpen(condType, condTargetId, condValue, 0, 0, 0);
 }

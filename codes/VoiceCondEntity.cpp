@@ -1,18 +1,17 @@
-void __fastcall VoiceCondEntity___ctor(VoiceCondEntity_o *this, const MethodInfo *method)
+void VoiceCondEntity___ctor(VoiceCondEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D5A8 & 1) == 0 )
+  if ( (byte_4C283AB & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D5A8 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C283AB = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall VoiceCondEntity__CreatePK(
+System_String_o *VoiceCondEntity__CreatePK(
         int32_t svtId,
         int32_t voicePrefix,
         System_String_o *voiceId,
@@ -21,12 +20,10 @@ System_String_o *__fastcall VoiceCondEntity__CreatePK(
         int32_t condGroup,
         const MethodInfo *method)
 {
-  if ( (byte_4B1D5A6 & 1) == 0 )
+  if ( (byte_4C283A9 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataEntityBase_CreateMultiplePK_long__long__string__long__long__long___,
-      *(_QWORD *)&voicePrefix);
-    byte_4B1D5A6 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__long__string__long__long__long___);
+    byte_4C283A9 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long__object__long__long__long_(
            svtId,
@@ -35,71 +32,63 @@ System_String_o *__fastcall VoiceCondEntity__CreatePK(
            condType,
            targetId,
            condGroup,
-           (const MethodInfo_3019F5C *)Method_DataEntityBase_CreateMultiplePK_long__long__string__long__long__long___);
+           (const MethodInfo_30CDE08 *)Method_DataEntityBase_CreateMultiplePK_long__long__string__long__long__long___);
 }
 
 
-System_String_o *__fastcall VoiceCondEntity__CreatePrimaryKey(VoiceCondEntity_o *this, const MethodInfo *method)
+System_String_o *VoiceCondEntity__CreatePrimaryKey(VoiceCondEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x20
-  __int64 v5; // x21
-  int32_t v6; // w0
+  __int64 v3; // x20
+  __int64 v4; // x21
+  int32_t v5; // w0
   int32_t voicePrefix; // w20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredString_o *voiceId; // x22
-  int32_t v9; // w21
-  System_String_o *v10; // x0
-  const MethodInfo *v11; // x6
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
+  int32_t v8; // w21
+  System_String_o *v9; // x0
+  const MethodInfo *v10; // x6
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v12; // 0:x0.16
 
-  if ( (byte_4B1D5A5 & 1) == 0 )
+  if ( (byte_4C283A8 & 1) == 0 )
   {
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo, method);
-    sub_1BCAFF8(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo, v3);
-    byte_4B1D5A5 = 1;
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
+    byte_4C283A8 = 1;
   }
-  v5 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
-  v4 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
+  v4 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
+  v3 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v13.fields.currentCryptoKey = v5;
-  *(_QWORD *)&v13.fields.fakeValue = v4;
-  v6 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(v13, 0LL);
+  *(_QWORD *)&v12.fields.currentCryptoKey = v4;
+  *(_QWORD *)&v12.fields.fakeValue = v3;
+  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v12, 0);
   voicePrefix = this->fields.voicePrefix;
   voiceId = this->fields.voiceId;
-  v9 = v6;
+  v8 = v5;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-  v10 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_48161020(voiceId, 0LL);
+  v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_48863712(voiceId, 0);
   return VoiceCondEntity__CreatePK(
-           v9,
+           v8,
            voicePrefix,
-           v10,
+           v9,
            this->fields.condType,
            this->fields.targetId,
            this->fields.condGroup,
-           v11);
+           v10);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-bool __fastcall VoiceCondEntity__IsEnable(
-        VoiceCondEntity_o *this,
-        int32_t svtId,
-        int32_t voicePrefix,
-        const MethodInfo *method)
+bool VoiceCondEntity__IsEnable(VoiceCondEntity_o *this, int32_t svtId, int32_t voicePrefix, const MethodInfo *method)
 {
-  int32_t targetId; // w19
   int32_t v7; // w8
   int32_t condType; // w21
   int64_t condValue; // x20
   int32_t v11; // w0
 
-  targetId = svtId;
-  if ( (byte_4B1D5A7 & 1) == 0 )
+  if ( (byte_4C283AA & 1) == 0 )
   {
-    sub_1BCAFF8(&CondType_TypeInfo, *(_QWORD *)&svtId);
-    byte_4B1D5A7 = 1;
+    sub_1C2D490(&CondType_TypeInfo);
+    byte_4C283AA = 1;
   }
   v7 = this->fields.voicePrefix;
   if ( (v7 & 0x80000000) == 0 && v7 != voicePrefix )
@@ -114,11 +103,11 @@ bool __fastcall VoiceCondEntity__IsEnable(
   }
   else
   {
-    targetId = this->fields.targetId;
+    svtId = this->fields.targetId;
     condValue = this->fields.condValue;
     if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
     v11 = condType;
   }
-  return CondType__IsOpen(v11, targetId, condValue, 0, 0LL, 0LL);
+  return CondType__IsOpen(v11, svtId, condValue, 0, 0, 0);
 }

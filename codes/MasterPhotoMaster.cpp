@@ -1,19 +1,19 @@
-void __fastcall MasterPhotoMaster___ctor(MasterPhotoMaster_o *this, const MethodInfo *method)
+void MasterPhotoMaster___ctor(MasterPhotoMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D777 & 1) == 0 )
+  if ( (byte_4C2857B & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string___ctor__, method);
-    byte_4B1D777 = 1;
+    sub_1C2D490(&Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string___ctor__);
+    byte_4C2857B = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     489,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-MasterPhotoEntity_o *__fastcall MasterPhotoMaster__GetEntity(
+MasterPhotoEntity_o *MasterPhotoMaster__GetEntity(
         MasterPhotoMaster_o *this,
         int32_t equipId,
         int32_t type,
@@ -22,21 +22,21 @@ MasterPhotoEntity_o *__fastcall MasterPhotoMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1D778 & 1) == 0 )
+  if ( (byte_4C2857C & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__GetEntity__, *(_QWORD *)&equipId);
-    byte_4B1D778 = 1;
+    sub_1C2D490(&Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__GetEntity__);
+    byte_4C2857C = 1;
   }
   PK = (Il2CppObject *)MasterPhotoEntity__CreatePK(equipId, type, position, *(const MethodInfo **)&position);
   return (MasterPhotoEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   PK,
-                                  (const MethodInfo_32CC8B8 *)Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__GetEntity__);
+                                  (const MethodInfo_338C850 *)Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall MasterPhotoMaster__TryGetEntity(
+bool MasterPhotoMaster__TryGetEntity(
         MasterPhotoMaster_o *this,
         MasterPhotoEntity_o **entity,
         int32_t equipId,
@@ -46,15 +46,15 @@ bool __fastcall MasterPhotoMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1D779 & 1) == 0 )
+  if ( (byte_4C2857D & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__TryGetEntity__, entity);
-    byte_4B1D779 = 1;
+    sub_1C2D490(&Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__TryGetEntity__);
+    byte_4C2857D = 1;
   }
   PK = (Il2CppObject *)MasterPhotoEntity__CreatePK(equipId, type, position, *(const MethodInfo **)&type);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_MasterPhotoMaster__MasterPhotoEntity__string__TryGetEntity__);
 }

@@ -1,37 +1,36 @@
-void __fastcall BlankEarthGimmickAddEntity___ctor(BlankEarthGimmickAddEntity_o *this, const MethodInfo *method)
+void BlankEarthGimmickAddEntity___ctor(BlankEarthGimmickAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C1A6 & 1) == 0 )
+  if ( (byte_4C26F4A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1C1A6 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C26F4A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall BlankEarthGimmickAddEntity__CreatePK(
+System_String_o *BlankEarthGimmickAddEntity__CreatePK(
         int32_t blankEarthSpotId,
         int32_t priority,
         int32_t overwriteType,
         const MethodInfo *method)
 {
-  if ( (byte_4B1C1A4 & 1) == 0 )
+  if ( (byte_4C26F48 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int__int___, *(_QWORD *)&priority);
-    byte_4B1C1A4 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C26F48 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            blankEarthSpotId,
            priority,
            overwriteType,
-           (const MethodInfo_30190BC *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30CCF68 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
-System_String_o *__fastcall BlankEarthGimmickAddEntity__CreatePrimaryKey(
+System_String_o *BlankEarthGimmickAddEntity__CreatePrimaryKey(
         BlankEarthGimmickAddEntity_o *this,
         const MethodInfo *method)
 {
@@ -45,16 +44,13 @@ System_String_o *__fastcall BlankEarthGimmickAddEntity__CreatePrimaryKey(
 }
 
 
-int32_t __fastcall BlankEarthGimmickAddEntity__GetCondType(
-        BlankEarthGimmickAddEntity_o *this,
-        const MethodInfo *method)
+int32_t BlankEarthGimmickAddEntity__GetCondType(BlankEarthGimmickAddEntity_o *this, const MethodInfo *method)
 {
   return this->fields.condTargetType;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-bool __fastcall BlankEarthGimmickAddEntity__IsOpen(
+bool BlankEarthGimmickAddEntity__IsOpen(
         BlankEarthGimmickAddEntity_o *this,
         int32_t beforeClearQuestId,
         bool isCheckResetFlag,
@@ -64,10 +60,10 @@ bool __fastcall BlankEarthGimmickAddEntity__IsOpen(
   int32_t condTargetType; // w23
   int64_t condNum; // x21
 
-  if ( (byte_4B1C1A5 & 1) == 0 )
+  if ( (byte_4C26F49 & 1) == 0 )
   {
-    sub_1BCAFF8(&CondType_TypeInfo, *(_QWORD *)&beforeClearQuestId);
-    byte_4B1C1A5 = 1;
+    sub_1C2D490(&CondType_TypeInfo);
+    byte_4C26F49 = 1;
   }
   condTargetType = this->fields.condTargetType;
   condTargetId = this->fields.condTargetId;
@@ -80,5 +76,5 @@ bool __fastcall BlankEarthGimmickAddEntity__IsOpen(
            condNum,
            beforeClearQuestId,
            isCheckResetFlag,
-           0LL);
+           0);
 }

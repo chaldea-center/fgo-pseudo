@@ -1,12 +1,12 @@
-void __fastcall PartyOrganizationEventPointListViewItemDraw___ctor(
+void PartyOrganizationEventPointListViewItemDraw___ctor(
         PartyOrganizationEventPointListViewItemDraw_o *this,
         const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-UnityEngine_Color_o __fastcall PartyOrganizationEventPointListViewItemDraw__GetLabelColor(
+UnityEngine_Color_o PartyOrganizationEventPointListViewItemDraw__GetLabelColor(
         PartyOrganizationEventPointListViewItemDraw_o *this,
         PartyOrganizationEventPointListViewItem_o *item,
         const MethodInfo *method)
@@ -39,7 +39,7 @@ UnityEngine_Color_o __fastcall PartyOrganizationEventPointListViewItemDraw__GetL
 }
 
 
-void __fastcall PartyOrganizationEventPointListViewItemDraw__SetInput(
+void PartyOrganizationEventPointListViewItemDraw__SetInput(
         PartyOrganizationEventPointListViewItemDraw_o *this,
         PartyOrganizationEventPointListViewItem_o *item,
         bool isInput,
@@ -49,7 +49,7 @@ void __fastcall PartyOrganizationEventPointListViewItemDraw__SetInput(
 }
 
 
-void __fastcall PartyOrganizationEventPointListViewItemDraw__SetItem(
+void PartyOrganizationEventPointListViewItemDraw__SetItem(
         PartyOrganizationEventPointListViewItemDraw_o *this,
         PartyOrganizationEventPointListViewItem_o *item,
         int32_t mode,
@@ -79,7 +79,7 @@ void __fastcall PartyOrganizationEventPointListViewItemDraw__SetItem(
       v14.fields.b = 1.0;
       v14.fields.a = 1.0;
       v14.fields.r = v7;
-      UIWidget__set_color(titleLabel, v14, 0LL);
+      UIWidget__set_color(titleLabel, v14, 0);
       titleLabel = (UIWidget_o *)this->fields.dataLabel;
       if ( titleLabel )
       {
@@ -87,34 +87,34 @@ void __fastcall PartyOrganizationEventPointListViewItemDraw__SetItem(
         v15.fields.b = 1.0;
         v15.fields.a = 1.0;
         v15.fields.r = v7;
-        UIWidget__set_color(titleLabel, v15, 0LL);
+        UIWidget__set_color(titleLabel, v15, 0);
         v8 = this->fields.titleLabel;
         titleLabel = (UIWidget_o *)PartyOrganizationEventPointListViewItem__GetTitleString(item, v9);
         if ( v8 )
         {
-          UILabel__set_text(v8, (System_String_o *)titleLabel, 0LL);
+          UILabel__set_text(v8, (System_String_o *)titleLabel, 0);
           titleLabel = (UIWidget_o *)this->fields.titleLabel;
           if ( titleLabel )
           {
             titleName = item->fields.titleName;
-            gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleLabel, 0LL);
+            gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleLabel, 0);
             if ( titleName )
             {
-              GameObjectExtensions__SetLocalPositionX(gameObject, -340.0, 0LL);
+              GameObjectExtensions__SetLocalPositionX(gameObject, -340.0, 0);
             }
             else
             {
-              GameObjectExtensions__SetLocalPositionX(gameObject, -298.0, 0LL);
+              GameObjectExtensions__SetLocalPositionX(gameObject, -298.0, 0);
               titleLabel = (UIWidget_o *)this->fields.titleLabel;
               if ( !titleLabel )
                 goto LABEL_17;
-              UILabel__SetCondensedScale((UILabel_o *)titleLabel, 510, 0, 0LL);
+              UILabel__SetCondensedScale((UILabel_o *)titleLabel, 510, 0, 0);
             }
             dataLabel = this->fields.dataLabel;
             titleLabel = (UIWidget_o *)PartyOrganizationEventPointListViewItem__GetDataString(item, v12);
             if ( dataLabel )
             {
-              UILabel__set_text(dataLabel, (System_String_o *)titleLabel, 0LL);
+              UILabel__set_text(dataLabel, (System_String_o *)titleLabel, 0);
               return;
             }
           }
@@ -122,6 +122,6 @@ void __fastcall PartyOrganizationEventPointListViewItemDraw__SetItem(
       }
     }
 LABEL_17:
-    sub_1BCB254(titleLabel, item);
+    sub_1C2D6EC(titleLabel, item);
   }
 }

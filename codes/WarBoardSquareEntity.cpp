@@ -1,37 +1,31 @@
-void __fastcall WarBoardSquareEntity___ctor(WarBoardSquareEntity_o *this, const MethodInfo *method)
+void WarBoardSquareEntity___ctor(WarBoardSquareEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D6A3 & 1) == 0 )
+  if ( (byte_4C284A6 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D6A3 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C284A6 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall WarBoardSquareEntity__CreatePK(
-        int32_t warBoardId,
-        int32_t squareIndex,
-        const MethodInfo *method)
+System_String_o *WarBoardSquareEntity__CreatePK(int32_t warBoardId, int32_t squareIndex, const MethodInfo *method)
 {
-  if ( (byte_4B1D6A2 & 1) == 0 )
+  if ( (byte_4C284A5 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&squareIndex);
-    byte_4B1D6A2 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C284A5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            warBoardId,
            squareIndex,
-           (const MethodInfo_3018C2C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
-System_String_o *__fastcall WarBoardSquareEntity__CreatePrimaryKey(
-        WarBoardSquareEntity_o *this,
-        const MethodInfo *method)
+System_String_o *WarBoardSquareEntity__CreatePrimaryKey(WarBoardSquareEntity_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
@@ -39,46 +33,33 @@ System_String_o *__fastcall WarBoardSquareEntity__CreatePrimaryKey(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-UnityEngine_Vector3_o __fastcall WarBoardSquareEntity__GetPosition(
-        WarBoardSquareEntity_o *this,
-        const MethodInfo *method)
+UnityEngine_Vector3_o WarBoardSquareEntity__GetPosition(WarBoardSquareEntity_o *this, const MethodInfo *method)
 {
-  const MethodInfo_37DD510 *v2; // x2
-  __int64 v4; // x1
-  __int64 v5; // x1
-  float v6; // s0
-  float v7; // s1
-  float v8; // s2
-  struct System_Nullable_Vector3__o v9; // [xsp+0h] [xbp-30h] BYREF
-  System_Nullable_Vector3__o v10; // 0:x0.16
-  System_Nullable_Vector3__o v11; // 0:x0.16
-  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
+  const MethodInfo_38B3EC8 *v2; // x2
+  struct System_Nullable_Vector3__o v4; // [xsp+0h] [xbp-30h] BYREF
+  System_Nullable_Vector3__o v5; // 0:x0.16
+  System_Nullable_Vector3__o v6; // 0:x0.16
+  UnityEngine_Vector3_o v7; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B1D6A1 & 1) == 0 )
+  if ( (byte_4C284A4 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Nullable_Vector3___ctor__, method);
-    sub_1BCAFF8(&Method_System_Nullable_Vector3__get_HasValue__, v4);
-    sub_1BCAFF8(&Method_System_Nullable_Vector3__get_Value__, v5);
-    byte_4B1D6A1 = 1;
+    sub_1C2D490(&Method_System_Nullable_Vector3___ctor__);
+    sub_1C2D490(&Method_System_Nullable_Vector3__get_HasValue__);
+    sub_1C2D490(&Method_System_Nullable_Vector3__get_Value__);
+    byte_4C284A4 = 1;
   }
   if ( !this->fields.position.fields.hasValue )
   {
-    *(_QWORD *)&v10.fields.hasValue = &v9;
-    v12.fields.x = (float)this->fields.positionX;
-    *(_QWORD *)&v10.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
-    v12.fields.y = (float)-this->fields.positionY;
-    v12.fields.z = 0.0;
-    v9 = (struct System_Nullable_Vector3__o)0LL;
-    System_Nullable_Vector3____ctor(v10, v12, v2);
-    this->fields.position = v9;
+    *(_QWORD *)&v5.fields.hasValue = &v4;
+    v7.fields.x = (float)this->fields.positionX;
+    *(_QWORD *)&v5.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
+    v7.fields.y = (float)-this->fields.positionY;
+    v7.fields.z = 0.0;
+    v4 = (struct System_Nullable_Vector3__o)0LL;
+    System_Nullable_Vector3____ctor(v5, v7, v2);
+    this->fields.position = v4;
   }
-  *(_QWORD *)&v11.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
-  *(_QWORD *)&v11.fields.hasValue = &this->fields;
-  *(UnityEngine_Vector3_o *)&v6 = System_Nullable_Vector3___get_Value(v11, (const MethodInfo_37DD52C *)v2);
-  result.fields.z = v8;
-  result.fields.y = v7;
-  result.fields.x = v6;
-  return result;
+  *(_QWORD *)&v6.fields.value.fields.y = Method_System_Nullable_Vector3__get_Value__;
+  *(_QWORD *)&v6.fields.hasValue = &this->fields;
+  return System_Nullable_Vector3___get_Value(v6, (const MethodInfo_38B3EE4 *)v2);
 }

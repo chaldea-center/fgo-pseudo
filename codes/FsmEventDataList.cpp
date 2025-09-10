@@ -1,34 +1,31 @@
-void __fastcall FsmEventDataList___ctor(FsmEventDataList_o *this, const MethodInfo *method)
+void FsmEventDataList___ctor(FsmEventDataList_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall FsmEventDataList__Finalize(FsmEventDataList_o *this, const MethodInfo *method)
+void FsmEventDataList__Finalize(FsmEventDataList_o *this, const MethodInfo *method)
 {
-  System_Object__Finalize((Il2CppObject *)this, 0LL);
+  System_Object__Finalize((Il2CppObject *)this, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-FsmEventData_o *__fastcall FsmEventDataList__Get(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
+FsmEventData_o *FsmEventDataList__Get(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
 {
   struct FsmEventData_array *eventDataList; // x8
 
   eventDataList = this->fields.eventDataList;
   if ( !eventDataList )
-    sub_1BCB254(this, index);
-  if ( eventDataList->max_length <= index )
-    sub_1BCB25C(this, *(_QWORD *)&index, method);
+    sub_1C2D6EC(this, index);
+  if ( LODWORD(eventDataList->max_length) <= index )
+    sub_1C2D6F4(this, *(_QWORD *)&index, method);
   return eventDataList->m_Items[index];
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall FsmEventDataList__GetEventData(
-        FsmEventDataList_o *this,
-        int32_t index,
-        const MethodInfo *method)
+System_String_o *FsmEventDataList__GetEventData(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
 {
   struct FsmEventData_array *eventDataList; // x8
   FsmEventData_o *v4; // x8
@@ -36,21 +33,18 @@ System_String_o *__fastcall FsmEventDataList__GetEventData(
   eventDataList = this->fields.eventDataList;
   if ( !eventDataList )
     goto LABEL_5;
-  if ( eventDataList->max_length <= index )
-    sub_1BCB25C(this, *(_QWORD *)&index, method);
+  if ( LODWORD(eventDataList->max_length) <= index )
+    sub_1C2D6F4(this, *(_QWORD *)&index, method);
   v4 = eventDataList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1BCB254(this, index);
+    sub_1C2D6EC(this, index);
   return v4->fields.eventData;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall FsmEventDataList__GetTitle(
-        FsmEventDataList_o *this,
-        int32_t index,
-        const MethodInfo *method)
+System_String_o *FsmEventDataList__GetTitle(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
 {
   struct FsmEventData_array *eventDataList; // x8
   FsmEventData_o *v4; // x8
@@ -58,18 +52,17 @@ System_String_o *__fastcall FsmEventDataList__GetTitle(
   eventDataList = this->fields.eventDataList;
   if ( !eventDataList )
     goto LABEL_5;
-  if ( eventDataList->max_length <= index )
-    sub_1BCB25C(this, *(_QWORD *)&index, method);
+  if ( LODWORD(eventDataList->max_length) <= index )
+    sub_1C2D6F4(this, *(_QWORD *)&index, method);
   v4 = eventDataList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1BCB254(this, index);
+    sub_1C2D6EC(this, index);
   return v4->fields.title;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
+void FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
 {
   UnityEngine_Object_o *targetFSM; // x21
   PlayMakerFSM_o *v6; // x0
@@ -78,32 +71,32 @@ void __fastcall FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t in
   struct FsmEventData_array *eventDataList; // x8
   FsmEventData_o *v10; // x8
 
-  if ( (byte_4B1DBBB & 1) == 0 )
+  if ( (byte_4C289C9 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, *(_QWORD *)&index);
-    byte_4B1DBBB = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C289C9 = 1;
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v6 = (PlayMakerFSM_o *)UnityEngine_Object__op_Inequality(targetFSM, 0LL, 0LL);
+  v6 = (PlayMakerFSM_o *)UnityEngine_Object__op_Inequality(targetFSM, 0, 0);
   if ( ((unsigned __int8)v6 & 1) != 0 )
   {
     eventDataList = this->fields.eventDataList;
     if ( !eventDataList )
       goto LABEL_12;
-    if ( eventDataList->max_length <= index )
-      sub_1BCB25C(v6, v7, v8);
+    if ( LODWORD(eventDataList->max_length) <= index )
+      sub_1C2D6F4(v6, v7, v8);
     v10 = eventDataList->m_Items[index];
-    if ( !v10 || (v6 = this->fields.targetFSM) == 0LL )
+    if ( !v10 || (v6 = this->fields.targetFSM) == 0 )
 LABEL_12:
-      sub_1BCB254(v6, v7);
-    PlayMakerFSM__SendEvent(v6, v10->fields.eventData, 0LL);
+      sub_1C2D6EC(v6, v7);
+    PlayMakerFSM__SendEvent(v6, v10->fields.eventData, 0);
   }
 }
 
 
-int32_t __fastcall FsmEventDataList__get_Length(FsmEventDataList_o *this, const MethodInfo *method)
+int32_t FsmEventDataList__get_Length(FsmEventDataList_o *this, const MethodInfo *method)
 {
   struct FsmEventData_array *eventDataList; // x8
 
@@ -115,110 +108,105 @@ int32_t __fastcall FsmEventDataList__get_Length(FsmEventDataList_o *this, const 
 }
 
 
-PlayMakerFSM_o *__fastcall FsmEventDataList__get_TargetFSM(FsmEventDataList_o *this, const MethodInfo *method)
+PlayMakerFSM_o *FsmEventDataList__get_TargetFSM(FsmEventDataList_o *this, const MethodInfo *method)
 {
   return this->fields.targetFSM;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall FsmEventDataList__set_Length(FsmEventDataList_o *this, int32_t value, const MethodInfo *method)
+void FsmEventDataList__set_Length(FsmEventDataList_o *this, int32_t value, const MethodInfo *method)
 {
-  __int64 v5; // x1
-  struct FsmEventData_array *v6; // x8
+  struct FsmEventData_array *v5; // x8
   CGThumbnailListItem_o *p_eventDataList; // x19
   struct FsmEventData_array *eventDataList; // t1
-  signed int max_length; // w22
-  __int64 v10; // x0
-  __int64 v11; // x1
-  __int64 v12; // x2
-  const MethodInfo *v13; // x3
-  unsigned int *v14; // x20
-  unsigned __int64 v15; // x23
-  signed __int64 v16; // x24
-  __int64 v17; // x25
-  CGThumbnailListItem_o *v18; // x21
+  int max_length; // w22
+  __int64 v9; // x0
+  __int64 v10; // x1
+  __int64 v11; // x2
+  const MethodInfo *v12; // x3
+  unsigned int *v13; // x20
+  unsigned __int64 v14; // x23
+  signed __int64 v15; // x24
+  __int64 v16; // x25
+  CGThumbnailListItem_o *v17; // x21
   CGThumbnailListItem_c *klass; // x8
-  FsmEventData_o *v20; // x22
-  const MethodInfo *v21; // x1
-  __int64 v22; // x0
+  FsmEventData_o *v19; // x22
+  const MethodInfo *v20; // x1
+  __int64 v21; // x0
 
-  if ( (byte_4B1DBBA & 1) == 0 )
+  if ( (byte_4C289C8 & 1) == 0 )
   {
-    sub_1BCAFF8(&FsmEventData___TypeInfo, *(_QWORD *)&value);
-    sub_1BCAFF8(&FsmEventData_TypeInfo, v5);
-    byte_4B1DBBA = 1;
+    sub_1C2D490(&FsmEventData___TypeInfo);
+    sub_1C2D490(&FsmEventData_TypeInfo);
+    byte_4C289C8 = 1;
   }
   eventDataList = this->fields.eventDataList;
   p_eventDataList = (CGThumbnailListItem_o *)&this->fields.eventDataList;
-  v6 = eventDataList;
+  v5 = eventDataList;
   if ( eventDataList )
-    max_length = v6->max_length;
+    max_length = v5->max_length;
   else
     max_length = 0;
   if ( max_length != value )
   {
-    v10 = sub_1BCB0A0(FsmEventData___TypeInfo, (unsigned int)value);
-    v14 = (unsigned int *)v10;
+    v9 = sub_1C2D538(FsmEventData___TypeInfo, (unsigned int)value);
+    v13 = (unsigned int *)v9;
     if ( value >= 1 )
     {
-      v15 = 0LL;
-      v16 = max_length;
-      v17 = (unsigned int)value;
-      v18 = (CGThumbnailListItem_o *)(v10 + 32);
+      v14 = 0;
+      v15 = max_length;
+      v16 = (unsigned int)value;
+      v17 = (CGThumbnailListItem_o *)(v9 + 32);
       do
       {
-        if ( (__int64)v15 >= v16 )
+        if ( (__int64)v14 >= v15 )
         {
-          v20 = (FsmEventData_o *)sub_1BCB244(FsmEventData_TypeInfo);
-          FsmEventData___ctor(v20, v21);
-          if ( !v14 )
+          v19 = (FsmEventData_o *)sub_1C2D6DC(FsmEventData_TypeInfo);
+          FsmEventData___ctor(v19, v20);
+          if ( !v13 )
 LABEL_20:
-            sub_1BCB254(v10, v11);
+            sub_1C2D6EC(v9, v10);
         }
         else
         {
           klass = p_eventDataList->klass;
           if ( !p_eventDataList->klass )
             goto LABEL_20;
-          if ( v15 >= LODWORD(klass->_1.namespaze) )
+          if ( v14 >= LODWORD(klass->_1.namespaze) )
 LABEL_21:
-            sub_1BCB25C(v10, v11, v12);
-          if ( !v14 )
+            sub_1C2D6F4(v9, v10, v11);
+          if ( !v13 )
             goto LABEL_20;
-          v20 = (FsmEventData_o *)*((_QWORD *)&klass->_1.byval_arg.data + v15);
+          v19 = (FsmEventData_o *)*((_QWORD *)&klass->_1.byval_arg.data + v14);
         }
-        if ( v20 )
+        if ( v19 )
         {
-          v10 = sub_1BCB134(v20, *(_QWORD *)(*(_QWORD *)v14 + 64LL));
-          if ( !v10 )
+          v9 = sub_1C2D5CC(v19, *(_QWORD *)(*(_QWORD *)v13 + 64LL));
+          if ( !v9 )
           {
-            v22 = sub_1BCB278(0LL);
-            sub_1BCB120(v22, 0LL);
+            v21 = sub_1C2D710(0);
+            sub_1C2D5B8(v21, 0);
           }
         }
-        if ( v15 >= v14[6] )
+        if ( v14 >= v13[6] )
           goto LABEL_21;
-        v18->klass = (CGThumbnailListItem_c *)v20;
-        sub_1BCAF9C(v18, (int32_t)v20, v12, v13);
-        ++v15;
-        v18 = (CGThumbnailListItem_o *)((char *)v18 + 8);
+        v17->klass = (CGThumbnailListItem_c *)v19;
+        sub_1C2D434(v17, (int32_t)v19, v11, v12);
+        ++v14;
+        v17 = (CGThumbnailListItem_o *)((char *)v17 + 8);
       }
-      while ( v17 != v15 );
+      while ( v16 != v14 );
     }
-    p_eventDataList->klass = (CGThumbnailListItem_c *)v14;
-    sub_1BCAF9C(p_eventDataList, (int32_t)v14, v12, v13);
+    p_eventDataList->klass = (CGThumbnailListItem_c *)v13;
+    sub_1C2D434(p_eventDataList, (int32_t)v13, v11, v12);
   }
 }
 
 
-void __fastcall FsmEventDataList__set_TargetFSM(
-        FsmEventDataList_o *this,
-        PlayMakerFSM_o *value,
-        const MethodInfo *method)
+void FsmEventDataList__set_TargetFSM(FsmEventDataList_o *this, PlayMakerFSM_o *value, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
 
   this->fields.targetFSM = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.targetFSM, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.targetFSM, (int32_t)value, (int32_t)method, v3);
 }

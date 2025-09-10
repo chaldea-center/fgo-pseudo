@@ -1,4 +1,4 @@
 __int64 mono_runtime_is_shutting_down()
 {
-  return sub_1C073A0() & 1;
+  return sub_1C69A00() & 1;
 }

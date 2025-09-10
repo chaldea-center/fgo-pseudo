@@ -1,32 +1,32 @@
-void __fastcall OverwriteTreasureDeviceData___ctor(
+void OverwriteTreasureDeviceData___ctor(
         OverwriteTreasureDeviceData_o *this,
         int32_t treasureDeviceId,
         int32_t treasureDeviceLv,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.id = treasureDeviceId;
   this->fields.lv = treasureDeviceLv;
 }
 
 
-void __fastcall OverwriteTreasureDeviceData__Overwrite(
+void OverwriteTreasureDeviceData__Overwrite(
         OverwriteTreasureDeviceData_o *this,
         BattleServantData_o *svtData,
         const MethodInfo *method)
 {
   if ( !svtData )
-    sub_1BCB254(this, 0LL);
-  BattleServantData__OverwriteTreasureDevice(svtData, this->fields.id, this->fields.lv, 0LL);
+    sub_1C2D6EC(this, 0);
+  BattleServantData__OverwriteTreasureDevice(svtData, this->fields.id, this->fields.lv, 0);
 }
 
 
-void __fastcall OverwriteTreasureDeviceData__Reset(
+void OverwriteTreasureDeviceData__Reset(
         OverwriteTreasureDeviceData_o *this,
         BattleServantData_o *svtData,
         const MethodInfo *method)
 {
   if ( !svtData )
-    sub_1BCB254(this, 0LL);
-  BattleServantData__ResetOverwriteTreasureDevice(svtData, 0LL);
+    sub_1C2D6EC(this, 0);
+  BattleServantData__ResetOverwriteTreasureDevice(svtData, 0);
 }

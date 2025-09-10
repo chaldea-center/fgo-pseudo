@@ -1,19 +1,19 @@
-void __fastcall GachaExtraGiftMaster___ctor(GachaExtraGiftMaster_o *this, const MethodInfo *method)
+void GachaExtraGiftMaster___ctor(GachaExtraGiftMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C7D5 & 1) == 0 )
+  if ( (byte_4C2758C & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string___ctor__, method);
-    byte_4B1C7D5 = 1;
+    sub_1C2D490(&Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string___ctor__);
+    byte_4C2758C = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     464,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-GachaExtraGiftEntity_o *__fastcall GachaExtraGiftMaster__GetEntity(
+GachaExtraGiftEntity_o *GachaExtraGiftMaster__GetEntity(
         GachaExtraGiftMaster_o *this,
         int32_t gachaId,
         int32_t idx,
@@ -22,72 +22,61 @@ GachaExtraGiftEntity_o *__fastcall GachaExtraGiftMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1C7D6 & 1) == 0 )
+  if ( (byte_4C2758D & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__GetEntity__,
-      *(_QWORD *)&gachaId);
-    byte_4B1C7D6 = 1;
+    sub_1C2D490(&Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__GetEntity__);
+    byte_4C2758D = 1;
   }
   PK = (Il2CppObject *)GachaExtraGiftEntity__CreatePK(gachaId, idx, giftId, *(const MethodInfo **)&giftId);
   return (GachaExtraGiftEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_32CC8B8 *)Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__GetEntity__);
+                                     (const MethodInfo_338C850 *)Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__GetEntity__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-GachaExtraGiftEntity_array *__fastcall GachaExtraGiftMaster__GetListGachaExtraGift(
+GachaExtraGiftEntity_array *GachaExtraGiftMaster__GetListGachaExtraGift(
         GachaExtraGiftMaster_o *this,
         int32_t gachaId,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  System_Collections_Generic_List_object__o *v11; // x21
-  System_Collections_ObjectModel_Collection_T__o *v12; // x1
+  System_Collections_Generic_List_object__o *v5; // x21
+  System_Collections_ObjectModel_Collection_T__o *v6; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  int v14; // w22
-  int32_t v15; // w23
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int v8; // w22
+  int32_t v9; // w23
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v19; // x9
+  _QWORD *v13; // x9
   __int64 size; // x10
-  Il2CppClass **v21; // x0
+  Il2CppClass **v15; // x0
 
-  if ( (byte_4B1C7D4 & 1) == 0 )
+  if ( (byte_4C2758B & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_System_Collections_ObjectModel_Collection_GachaExtraGiftEntity__get_Count__,
-      *(_QWORD *)&gachaId);
-    sub_1BCAFF8(&Method_System_Collections_ObjectModel_Collection_GachaExtraGiftEntity__get_Item__, v5);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GachaExtraGiftEntity__Add__, v6);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GachaExtraGiftEntity__ToArray__, v7);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GachaExtraGiftEntity___ctor__, v8);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_GachaExtraGiftEntity__get_Count__, v9);
-    sub_1BCAFF8(&System_Collections_Generic_List_GachaExtraGiftEntity__TypeInfo, v10);
-    byte_4B1C7D4 = 1;
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_GachaExtraGiftEntity__get_Count__);
+    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_GachaExtraGiftEntity__get_Item__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GachaExtraGiftEntity__Add__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GachaExtraGiftEntity__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GachaExtraGiftEntity___ctor__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_GachaExtraGiftEntity__get_Count__);
+    sub_1C2D490(&System_Collections_Generic_List_GachaExtraGiftEntity__TypeInfo);
+    byte_4C2758B = 1;
   }
-  v11 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_GachaExtraGiftEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_GachaExtraGiftEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v11,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_GachaExtraGiftEntity___ctor__);
+    v5,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_GachaExtraGiftEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_19;
   list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                              list,
-                                                             (const MethodInfo_32635E8 *)Method_System_Collections_ObjectModel_Collection_GachaExtraGiftEntity__get_Count__);
+                                                             (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_GachaExtraGiftEntity__get_Count__);
   if ( (int)list >= 1 )
   {
-    v14 = (int)list;
-    v15 = 0;
+    v8 = (int)list;
+    v9 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -95,57 +84,57 @@ GachaExtraGiftEntity_array *__fastcall GachaExtraGiftMaster__GetListGachaExtraGi
         break;
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
-                                                                 v15,
-                                                                 (const MethodInfo_3263678 *)Method_System_Collections_ObjectModel_Collection_GachaExtraGiftEntity__get_Item__);
+                                                                 v9,
+                                                                 (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_GachaExtraGiftEntity__get_Item__);
       if ( list )
       {
-        v12 = list;
+        v6 = list;
         if ( LODWORD(list->fields.items) == gachaId )
         {
-          if ( !v11 )
+          if ( !v5 )
             break;
-          items = v11->fields._items;
-          v19 = Method_System_Collections_Generic_List_GachaExtraGiftEntity__Add__;
-          ++v11->fields._version;
+          items = v5->fields._items;
+          v13 = Method_System_Collections_Generic_List_GachaExtraGiftEntity__Add__;
+          ++v5->fields._version;
           if ( !items )
             break;
-          size = v11->fields._size;
-          if ( (unsigned int)size >= items->max_length )
+          size = v5->fields._size;
+          if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
-              v11,
+              v5,
               (Il2CppObject *)list,
-              *(const MethodInfo_36B9BD0 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+              *(const MethodInfo_3789B84 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
           }
           else
           {
-            v21 = &items->obj.klass + size;
-            v11->fields._size = size + 1;
-            v21[4] = (Il2CppClass *)v12;
-            sub_1BCAF9C((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v12, v16, v17);
+            v15 = &items->obj.klass + size;
+            v5->fields._size = size + 1;
+            v15[4] = (Il2CppClass *)v6;
+            sub_1C2D434((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v6, v10, v11);
           }
         }
       }
-      if ( v14 == ++v15 )
+      if ( v8 == ++v9 )
         goto LABEL_15;
     }
 LABEL_19:
-    sub_1BCB254(list, v12);
+    sub_1C2D6EC(list, v6);
   }
 LABEL_15:
-  if ( !v11 )
+  if ( !v5 )
     goto LABEL_19;
-  if ( v11->fields._size )
+  if ( v5->fields._size )
     return (GachaExtraGiftEntity_array *)System_Collections_Generic_List_object___ToArray(
-                                           v11,
-                                           (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_GachaExtraGiftEntity__ToArray__);
+                                           v5,
+                                           (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_GachaExtraGiftEntity__ToArray__);
   else
-    return 0LL;
+    return 0;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall GachaExtraGiftMaster__TryGetEntity(
+bool GachaExtraGiftMaster__TryGetEntity(
         GachaExtraGiftMaster_o *this,
         GachaExtraGiftEntity_o **entity,
         int32_t gachaId,
@@ -155,15 +144,15 @@ bool __fastcall GachaExtraGiftMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1C7D7 & 1) == 0 )
+  if ( (byte_4C2758E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__TryGetEntity__, entity);
-    byte_4B1C7D7 = 1;
+    sub_1C2D490(&Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__TryGetEntity__);
+    byte_4C2758E = 1;
   }
   PK = (Il2CppObject *)GachaExtraGiftEntity__CreatePK(gachaId, idx, giftId, *(const MethodInfo **)&idx);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_GachaExtraGiftMaster__GachaExtraGiftEntity__string__TryGetEntity__);
 }

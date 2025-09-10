@@ -1,34 +1,29 @@
-void __fastcall ClassBoardForwardIconAnimComponent___ctor(
-        ClassBoardForwardIconAnimComponent_o *this,
-        const MethodInfo *method)
+void ClassBoardForwardIconAnimComponent___ctor(ClassBoardForwardIconAnimComponent_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
   const MethodInfo *v3; // x3
-  __int64 v5; // x1
+  int32_t v5; // w1
   int32_t v6; // w1
-  int32_t v7; // w1
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
 
-  if ( (byte_4B1FDE2 & 1) == 0 )
+  if ( (byte_4C2ACE0 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_20163/*"img_class_{0}"*/, method);
-    sub_1BCAFF8(&StringLiteral_17330/*"btn_class"*/, v5);
-    byte_4B1FDE2 = 1;
+    sub_1C2D490(&StringLiteral_20330/*"img_class_{0}"*/);
+    sub_1C2D490(&StringLiteral_17465/*"btn_class"*/);
+    byte_4C2ACE0 = 1;
   }
-  v6 = StringLiteral_20163/*"img_class_{0}"*/;
-  this->fields.spriteNameFormatIcon = (struct System_String_o *)StringLiteral_20163/*"img_class_{0}"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.spriteNameFormatIcon, v6, v2, v3);
-  v7 = StringLiteral_17330/*"btn_class"*/;
-  this->fields.spriteNameButton = (struct System_String_o *)StringLiteral_17330/*"btn_class"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.spriteNameButton, v7, v8, v9);
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  v5 = StringLiteral_20330/*"img_class_{0}"*/;
+  this->fields.spriteNameFormatIcon = (struct System_String_o *)StringLiteral_20330/*"img_class_{0}"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.spriteNameFormatIcon, v5, v2, v3);
+  v6 = StringLiteral_17465/*"btn_class"*/;
+  this->fields.spriteNameButton = (struct System_String_o *)StringLiteral_17465/*"btn_class"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.spriteNameButton, v6, v7, v8);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall ClassBoardForwardIconAnimComponent__PlayAnim(
-        ClassBoardForwardIconAnimComponent_o *this,
-        const MethodInfo *method)
+void ClassBoardForwardIconAnimComponent__PlayAnim(ClassBoardForwardIconAnimComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Animation_o *anim; // x0
   UnityEngine_Animation_o *v4; // x19
@@ -36,139 +31,135 @@ void __fastcall ClassBoardForwardIconAnimComponent__PlayAnim(
 
   anim = this->fields.anim;
   if ( !anim
-    || (UnityEngine_Animation__Rewind(anim, 0LL), (v4 = this->fields.anim) == 0LL)
-    || (anim = (UnityEngine_Animation_o *)UnityEngine_Animation__get_clip(v4, 0LL)) == 0LL )
+    || (UnityEngine_Animation__Rewind(anim, 0), (v4 = this->fields.anim) == 0)
+    || (anim = (UnityEngine_Animation_o *)UnityEngine_Animation__get_clip(v4, 0)) == 0 )
   {
-    sub_1BCB254(anim, method);
+    sub_1C2D6EC(anim, method);
   }
-  name = UnityEngine_Object__get_name((UnityEngine_Object_o *)anim, 0LL);
-  UnityEngine_Animation__Play_69881360(v4, name, 0LL);
+  name = UnityEngine_Object__get_name((UnityEngine_Object_o *)anim, 0);
+  UnityEngine_Animation__Play_70908988(v4, name, 0);
 }
 
 
-void __fastcall ClassBoardForwardIconAnimComponent__Setup(
+void ClassBoardForwardIconAnimComponent__Setup(
         ClassBoardForwardIconAnimComponent_o *this,
         IClassBoardResourceCatalog_o *resourceCatalog,
         int32_t baseId,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   DataMasterBase_TMaster__TEntity__PKType__o *Master_object; // x0
-  __int64 v12; // x1
+  __int64 v8; // x1
   IClassBoardResourceCatalog_c *klass; // x8
-  DataMasterBase_TMaster__TEntity__PKType__o *v14; // x21
-  __int64 v15; // x9
+  DataMasterBase_TMaster__TEntity__PKType__o *v10; // x21
+  __int64 v11; // x9
   int32_t *p_offset; // x10
-  __int64 p_method; // x0
-  __int64 v18; // x2
-  __int64 v19; // x3
-  __int64 v20; // x4
+  __int64 v13; // x0
+  __int64 v14; // x2
+  __int64 v15; // x3
+  __int64 v16; // x4
   AtlasManagerUnit_o *seriazlier; // x22
   UISprite_o *classIconUi; // x23
   System_String_o *spriteNameFormatIcon; // x24
-  Il2CppObject *v24; // x0
-  IClassBoardResourceCatalog_c *v25; // x8
-  __int64 v26; // x9
-  int32_t *v27; // x10
-  __int64 v28; // x0
+  Il2CppObject *v20; // x0
+  IClassBoardResourceCatalog_c *v21; // x8
+  __int64 v22; // x9
+  int32_t *v23; // x10
+  __int64 v24; // x0
   int32_t revision; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4B1FDE1 & 1) == 0 )
+  if ( (byte_4C2ACDF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_ClassBoardBaseMaster___, resourceCatalog);
-    sub_1BCAFF8(&DataManager_TypeInfo, v7);
-    sub_1BCAFF8(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__, v8);
-    sub_1BCAFF8(&IClassBoardResourceCatalog_TypeInfo, v9);
-    sub_1BCAFF8(&int_TypeInfo, v10);
-    byte_4B1FDE1 = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
+    sub_1C2D490(&IClassBoardResourceCatalog_TypeInfo);
+    sub_1C2D490(&int_TypeInfo);
+    byte_4C2ACDF = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_26;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___GetEntity(
                                                                   Master_object,
                                                                   baseId,
-                                                                  (const MethodInfo_32C7E00 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
+                                                                  (const MethodInfo_3387D98 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__GetEntity__);
   if ( !Master_object )
     return;
   if ( !resourceCatalog )
     goto LABEL_26;
   klass = resourceCatalog->klass;
-  v14 = Master_object;
-  v15 = *(unsigned __int16 *)(&resourceCatalog->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&resourceCatalog->klass->_2.bitflags2 + 3) )
+  v10 = Master_object;
+  v11 = *(unsigned __int16 *)&resourceCatalog->klass->_2.rank;
+  if ( *(_WORD *)&resourceCatalog->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((IClassBoardResourceCatalog_c **)p_offset - 1) != IClassBoardResourceCatalog_TypeInfo )
     {
-      --v15;
+      --v11;
       p_offset += 4;
-      if ( !v15 )
+      if ( !v11 )
         goto LABEL_12;
     }
-    p_method = (__int64)&klass->vtable[*p_offset].method;
+    v13 = (__int64)&klass->vtable[*p_offset];
   }
   else
   {
 LABEL_12:
-    p_method = sub_1C1B560(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
+    v13 = sub_1C7DCA8(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0);
   }
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)(*(__int64 (__fastcall **)(IClassBoardResourceCatalog_o *, _QWORD))p_method)(
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)(*(__int64 (__fastcall **)(IClassBoardResourceCatalog_o *, _QWORD))v13)(
                                                                   resourceCatalog,
-                                                                  *(_QWORD *)(p_method + 8));
+                                                                  *(_QWORD *)(v13 + 8));
   if ( !Master_object )
     goto LABEL_26;
   seriazlier = (AtlasManagerUnit_o *)Master_object[2].fields.seriazlier;
   classIconUi = this->fields.classIconUi;
   spriteNameFormatIcon = this->fields.spriteNameFormatIcon;
-  revision = v14->fields.revision;
-  v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &revision, v18, v19, v20);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Format(spriteNameFormatIcon, v24, 0LL);
+  revision = v10->fields.revision;
+  v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &revision, v14, v15, v16);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)System_String__Format(spriteNameFormatIcon, v20, 0);
   if ( !seriazlier )
     goto LABEL_26;
-  AtlasManagerUnit__SetUI(seriazlier, classIconUi, (System_String_o *)Master_object, 0LL);
-  v25 = resourceCatalog->klass;
-  v26 = *(unsigned __int16 *)(&resourceCatalog->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&resourceCatalog->klass->_2.bitflags2 + 3) )
+  AtlasManagerUnit__SetUI(seriazlier, classIconUi, (System_String_o *)Master_object, 0);
+  v21 = resourceCatalog->klass;
+  v22 = *(unsigned __int16 *)&resourceCatalog->klass->_2.rank;
+  if ( *(_WORD *)&resourceCatalog->klass->_2.rank )
   {
-    v27 = &v25->_1.interfaceOffsets->offset;
-    while ( *((IClassBoardResourceCatalog_c **)v27 - 1) != IClassBoardResourceCatalog_TypeInfo )
+    v23 = &v21->_1.interfaceOffsets->offset;
+    while ( *((IClassBoardResourceCatalog_c **)v23 - 1) != IClassBoardResourceCatalog_TypeInfo )
     {
-      --v26;
-      v27 += 4;
-      if ( !v26 )
+      --v22;
+      v23 += 4;
+      if ( !v22 )
         goto LABEL_20;
     }
-    v28 = (__int64)&v25->vtable[*v27].method;
+    v24 = (__int64)&v21->vtable[*v23];
   }
   else
   {
 LABEL_20:
-    v28 = sub_1C1B560(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0LL);
+    v24 = sub_1C7DCA8(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0);
   }
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)(*(__int64 (__fastcall **)(IClassBoardResourceCatalog_o *, _QWORD))v28)(
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)(*(__int64 (__fastcall **)(IClassBoardResourceCatalog_o *, _QWORD))v24)(
                                                                   resourceCatalog,
-                                                                  *(_QWORD *)(v28 + 8));
+                                                                  *(_QWORD *)(v24 + 8));
   if ( !Master_object
-    || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object[2].fields._lookup) == 0LL )
+    || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object[2].fields._lookup) == 0 )
   {
 LABEL_26:
-    sub_1BCB254(Master_object, v12);
+    sub_1C2D6EC(Master_object, v8);
   }
   AtlasManagerUnit__SetUI(
     (AtlasManagerUnit_o *)Master_object,
     this->fields.classButtonUi,
     this->fields.spriteNameButton,
-    0LL);
+    0);
 }
 
 
-void __fastcall ClassBoardForwardIconAnimComponent__Validation(
+void ClassBoardForwardIconAnimComponent__Validation(
         ClassBoardForwardIconAnimComponent_o *this,
         const MethodInfo *method)
 {

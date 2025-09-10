@@ -1,4 +1,4 @@
-void __fastcall UpdateFieldViewBattleLogicTask___ctor(UpdateFieldViewBattleLogicTask_o *this, const MethodInfo *method)
+void UpdateFieldViewBattleLogicTask___ctor(UpdateFieldViewBattleLogicTask_o *this, const MethodInfo *method)
 {
   BattleLogicTask___ctor((BattleLogicTask_o *)this, method);
   this->fields.actiontype = 58;
@@ -6,19 +6,19 @@ void __fastcall UpdateFieldViewBattleLogicTask___ctor(UpdateFieldViewBattleLogic
 }
 
 
-BattleActionData_o *__fastcall UpdateFieldViewBattleLogicTask__MakeActionData(
+BattleActionData_o *UpdateFieldViewBattleLogicTask__MakeActionData(
         UpdateFieldViewBattleLogicTask_o *this,
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
   UpdateFieldViewActionData_o *v3; // x19
 
-  if ( (byte_4B1F5A4 & 1) == 0 )
+  if ( (byte_4C2A44C & 1) == 0 )
   {
-    sub_1BCAFF8(&UpdateFieldViewActionData_TypeInfo, logic);
-    byte_4B1F5A4 = 1;
+    sub_1C2D490(&UpdateFieldViewActionData_TypeInfo);
+    byte_4C2A44C = 1;
   }
-  v3 = (UpdateFieldViewActionData_o *)sub_1BCB244(UpdateFieldViewActionData_TypeInfo);
-  UpdateFieldViewActionData___ctor(v3, 0LL);
+  v3 = (UpdateFieldViewActionData_o *)sub_1C2D6DC(UpdateFieldViewActionData_TypeInfo);
+  UpdateFieldViewActionData___ctor(v3, 0);
   return (BattleActionData_o *)v3;
 }

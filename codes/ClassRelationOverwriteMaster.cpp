@@ -1,21 +1,19 @@
-void __fastcall ClassRelationOverwriteMaster___ctor(ClassRelationOverwriteMaster_o *this, const MethodInfo *method)
+void ClassRelationOverwriteMaster___ctor(ClassRelationOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1C2AD & 1) == 0 )
+  if ( (byte_4C27058 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__,
-      method);
-    byte_4B1C2AD = 1;
+    sub_1C2D490(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
+    byte_4C27058 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     298,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-ClassRelationOverwriteEntity_o *__fastcall ClassRelationOverwriteMaster__GetEntity(
+ClassRelationOverwriteEntity_o *ClassRelationOverwriteMaster__GetEntity(
         ClassRelationOverwriteMaster_o *this,
         int32_t id,
         int32_t atkSide,
@@ -25,12 +23,10 @@ ClassRelationOverwriteEntity_o *__fastcall ClassRelationOverwriteMaster__GetEnti
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1C2AB & 1) == 0 )
+  if ( (byte_4C27056 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__,
-      *(_QWORD *)&id);
-    byte_4B1C2AB = 1;
+    sub_1C2D490(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
+    byte_4C27056 = 1;
   }
   PK = (Il2CppObject *)ClassRelationOverwriteEntity__CreatePK(
                          id,
@@ -41,12 +37,12 @@ ClassRelationOverwriteEntity_o *__fastcall ClassRelationOverwriteMaster__GetEnti
   return (ClassRelationOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              PK,
-                                             (const MethodInfo_32CC8B8 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
+                                             (const MethodInfo_338C850 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall ClassRelationOverwriteMaster__TryGetEntity(
+bool ClassRelationOverwriteMaster__TryGetEntity(
         ClassRelationOverwriteMaster_o *this,
         ClassRelationOverwriteEntity_o **entity,
         int32_t id,
@@ -57,12 +53,10 @@ bool __fastcall ClassRelationOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1C2AC & 1) == 0 )
+  if ( (byte_4C27057 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__,
-      entity);
-    byte_4B1C2AC = 1;
+    sub_1C2D490(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
+    byte_4C27057 = 1;
   }
   PK = (Il2CppObject *)ClassRelationOverwriteEntity__CreatePK(
                          id,
@@ -74,12 +68,12 @@ bool __fastcall ClassRelationOverwriteMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall ClassRelationOverwriteMaster__getEntity(
+bool ClassRelationOverwriteMaster__getEntity(
         ClassRelationOverwriteMaster_o *this,
         ClassRelationOverwriteEntity_o **outEnt,
         int32_t relationId,
@@ -107,16 +101,16 @@ bool __fastcall ClassRelationOverwriteMaster__getEntity(
   int32_t v30; // w2
   int32_t v31; // w3
 
-  if ( (byte_4B1C2AE & 1) == 0 )
+  if ( (byte_4C27059 & 1) == 0 )
   {
-    sub_1BCAFF8(&int___TypeInfo, outEnt);
-    byte_4B1C2AE = 1;
+    sub_1C2D490(&int___TypeInfo);
+    byte_4C27059 = 1;
   }
-  *outEnt = 0LL;
-  sub_1BCAF9C((CGThumbnailListItem_o *)outEnt, 0, relationId, (const MethodInfo *)isAtkSide);
-  Entity = sub_1BCB0A0(int___TypeInfo, 4LL);
+  *outEnt = 0;
+  sub_1C2D434((CGThumbnailListItem_o *)outEnt, 0, relationId, (const MethodInfo *)isAtkSide);
+  Entity = sub_1C2D538(int___TypeInfo, 4);
   if ( !Entity )
-    sub_1BCB254(0LL, v14);
+    sub_1C2D6EC(0, v14);
   v17 = *(_DWORD *)(Entity + 24);
   v18 = (_DWORD *)Entity;
   if ( !v17 )
@@ -161,7 +155,7 @@ bool __fastcall ClassRelationOverwriteMaster__getEntity(
   v29 = v18[6];
   if ( v29 <= 2 || (v18[10] = 0, v29 == 3) )
 LABEL_19:
-    sub_1BCB25C(Entity, v14, v15);
+    sub_1C2D6F4(Entity, v14, v15);
   v30 = v18[8];
   v31 = v18[9];
   v18[11] = 0;

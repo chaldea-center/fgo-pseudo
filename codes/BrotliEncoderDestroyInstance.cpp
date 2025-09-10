@@ -16,28 +16,28 @@ _QWORD *__fastcall BrotliEncoderDestroyInstance(_QWORD *result)
     v2 = result[20];
     v3 = result + 18;
     v9 = (__int64 (__fastcall *)(__int64, _QWORD *))result[19];
-    sub_1BD8F24(result + 18, result[46]);
+    sub_1C3B574(result + 18, result[46]);
     v4 = v1[28];
-    v1[46] = 0LL;
-    sub_1BD8F24(v3, v4);
+    v1[46] = 0;
+    sub_1C3B574(v3, v4);
     v5 = v1[25];
-    v1[28] = 0LL;
-    sub_1BD8F24(v3, v5);
+    v1[28] = 0;
+    sub_1C3B574(v3, v5);
     v6 = v1[47];
-    v1[25] = 0LL;
+    v1[25] = 0;
     if ( v6 )
     {
-      sub_1BD8F24(v3, v6);
-      v1[47] = 0LL;
+      sub_1C3B574(v3, v6);
+      v1[47] = 0;
     }
-    sub_1BD8F24(v3, v1[696]);
+    sub_1C3B574(v3, v1[696]);
     v7 = v1[811];
-    v1[696] = 0LL;
-    sub_1BD8F24(v3, v7);
+    v1[696] = 0;
+    sub_1C3B574(v3, v7);
     v8 = v1[812];
-    v1[811] = 0LL;
-    sub_1BD8F24(v3, v8);
-    v1[812] = 0LL;
+    v1[811] = 0;
+    sub_1C3B574(v3, v8);
+    v1[812] = 0;
     return (_QWORD *)v9(v2, v1);
   }
   return result;

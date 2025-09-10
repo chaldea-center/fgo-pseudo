@@ -1,39 +1,38 @@
-void __fastcall UserEventQuestCooltimeEntity___ctor(UserEventQuestCooltimeEntity_o *this, const MethodInfo *method)
+void UserEventQuestCooltimeEntity___ctor(UserEventQuestCooltimeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D2F4 & 1) == 0 )
+  if ( (byte_4C280EB & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1D2F4 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C280EB = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall UserEventQuestCooltimeEntity__CreatePK(
+System_String_o *UserEventQuestCooltimeEntity__CreatePK(
         int64_t userId,
         int32_t eventId,
         int32_t questId,
         int32_t phase,
         const MethodInfo *method)
 {
-  if ( (byte_4B1D2F1 & 1) == 0 )
+  if ( (byte_4C280E8 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_long__int__int__int___, *(_QWORD *)&eventId);
-    byte_4B1D2F1 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
+    byte_4C280E8 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int__int_(
            userId,
            eventId,
            questId,
            phase,
-           (const MethodInfo_3019750 *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
+           (const MethodInfo_30CD5FC *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
 }
 
 
-System_String_o *__fastcall UserEventQuestCooltimeEntity__CreatePrimaryKey(
+System_String_o *UserEventQuestCooltimeEntity__CreatePrimaryKey(
         UserEventQuestCooltimeEntity_o *this,
         const MethodInfo *method)
 {
@@ -48,107 +47,100 @@ System_String_o *__fastcall UserEventQuestCooltimeEntity__CreatePrimaryKey(
 }
 
 
-EventQuestCooltimeEntity_o *__fastcall UserEventQuestCooltimeEntity__GetMasterEntity(
+EventQuestCooltimeEntity_o *UserEventQuestCooltimeEntity__GetMasterEntity(
         UserEventQuestCooltimeEntity_o *this,
         const MethodInfo *method)
 {
   int v2; // w19
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x20
+  __int64 v3; // x20
   DataManager_o *Instance; // x0
-  __int64 v9; // x1
-  __int64 v10; // x2
+  __int64 v5; // x1
+  __int64 v6; // x2
+  const MethodInfo *v7; // x3
+  const MethodInfo *v8; // x3
+  int32_t v9; // w1
+  const MethodInfo *v10; // x3
   const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x3
-  int32_t v13; // w1
-  const MethodInfo *v14; // x3
-  const MethodInfo *v15; // x3
-  int32_t v16; // w1
-  const MethodInfo *v17; // x3
-  System_String_o *v18; // x19
+  int32_t v12; // w1
+  const MethodInfo *v13; // x3
+  System_String_o *v14; // x19
 
   v2 = (int)this;
-  if ( (byte_4B1D2F2 & 1) == 0 )
+  if ( (byte_4C280E9 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_EventQuestCooltimeMaster___, method);
-    sub_1BCAFF8(
-      &Method_DataMasterBase_EventQuestCooltimeMaster__EventQuestCooltimeEntity__string__getEntityFromKey__,
-      v3);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v4);
-    sub_1BCAFF8(&string___TypeInfo, v5);
-    sub_1BCAFF8(&StringLiteral_1448/*":"*/, v6);
-    byte_4B1D2F2 = 1;
+    sub_1C2D490(&Method_DataManager_GetMasterData_EventQuestCooltimeMaster___);
+    sub_1C2D490(&Method_DataMasterBase_EventQuestCooltimeMaster__EventQuestCooltimeEntity__string__getEntityFromKey__);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C2D490(&string___TypeInfo);
+    sub_1C2D490(&StringLiteral_1456/*":"*/);
+    byte_4C280E9 = 1;
   }
-  v7 = sub_1BCB0A0(string___TypeInfo, 5LL);
-  Instance = (DataManager_o *)System_Int32__ToString(v2 + 24, 0LL);
-  if ( !v7 )
+  v3 = sub_1C2D538(string___TypeInfo, 5);
+  Instance = (DataManager_o *)System_Int32__ToString(v2 + 24, 0);
+  if ( !v3 )
     goto LABEL_13;
-  if ( !*(_DWORD *)(v7 + 24) )
+  if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_12;
-  *(_QWORD *)(v7 + 32) = Instance;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v7 + 32), (int32_t)Instance, v10, v11);
-  if ( *(_DWORD *)(v7 + 24) <= 1u )
+  *(_QWORD *)(v3 + 32) = Instance;
+  sub_1C2D434((CGThumbnailListItem_o *)(v3 + 32), (int32_t)Instance, v6, v7);
+  if ( *(_DWORD *)(v3 + 24) <= 1u )
     goto LABEL_12;
-  v13 = StringLiteral_1448/*":"*/;
-  *(_QWORD *)(v7 + 40) = StringLiteral_1448/*":"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v7 + 40), v13, v10, v12);
-  Instance = (DataManager_o *)System_Int32__ToString(v2 + 28, 0LL);
-  if ( *(_DWORD *)(v7 + 24) <= 2u
-    || (*(_QWORD *)(v7 + 48) = Instance,
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v7 + 48), (int32_t)Instance, v10, v14),
-        *(_DWORD *)(v7 + 24) <= 3u)
-    || (v16 = StringLiteral_1448/*":"*/,
-        *(_QWORD *)(v7 + 56) = StringLiteral_1448/*":"*/,
-        sub_1BCAF9C((CGThumbnailListItem_o *)(v7 + 56), v16, v10, v15),
-        Instance = (DataManager_o *)System_Int32__ToString(v2 + 32, 0LL),
-        *(_DWORD *)(v7 + 24) <= 4u) )
+  v9 = StringLiteral_1456/*":"*/;
+  *(_QWORD *)(v3 + 40) = StringLiteral_1456/*":"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)(v3 + 40), v9, v6, v8);
+  Instance = (DataManager_o *)System_Int32__ToString(v2 + 28, 0);
+  if ( *(_DWORD *)(v3 + 24) <= 2u
+    || (*(_QWORD *)(v3 + 48) = Instance,
+        sub_1C2D434((CGThumbnailListItem_o *)(v3 + 48), (int32_t)Instance, v6, v10),
+        *(_DWORD *)(v3 + 24) <= 3u)
+    || (v12 = StringLiteral_1456/*":"*/,
+        *(_QWORD *)(v3 + 56) = StringLiteral_1456/*":"*/,
+        sub_1C2D434((CGThumbnailListItem_o *)(v3 + 56), v12, v6, v11),
+        Instance = (DataManager_o *)System_Int32__ToString(v2 + 32, 0),
+        *(_DWORD *)(v3 + 24) <= 4u) )
   {
 LABEL_12:
-    sub_1BCB25C(Instance, v9, v10);
+    sub_1C2D6F4(Instance, v5, v6);
   }
-  *(_QWORD *)(v7 + 64) = Instance;
-  sub_1BCAF9C((CGThumbnailListItem_o *)(v7 + 64), (int32_t)Instance, v10, v17);
-  v18 = System_String__Concat_62490940((System_String_array *)v7, 0LL);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  *(_QWORD *)(v3 + 64) = Instance;
+  sub_1C2D434((CGThumbnailListItem_o *)(v3 + 64), (int32_t)Instance, v6, v13);
+  v14 = System_String__Concat_63498380((System_String_array *)v3, 0);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_EventQuestCooltimeMaster___)) == 0LL )
+                                      (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventQuestCooltimeMaster___)) == 0 )
   {
 LABEL_13:
-    sub_1BCB254(Instance, v9);
+    sub_1C2D6EC(Instance, v5);
   }
   return (EventQuestCooltimeEntity_o *)DataMasterBase_object__object__object___getEntityFromKey(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
-                                         v18,
-                                         (const MethodInfo_32CBC40 *)Method_DataMasterBase_EventQuestCooltimeMaster__EventQuestCooltimeEntity__string__getEntityFromKey__);
+                                         v14,
+                                         (const MethodInfo_338BBD8 *)Method_DataMasterBase_EventQuestCooltimeMaster__EventQuestCooltimeEntity__string__getEntityFromKey__);
 }
 
 
-QuestEntity_o *__fastcall UserEventQuestCooltimeEntity__GetQuestEntity(
+QuestEntity_o *UserEventQuestCooltimeEntity__GetQuestEntity(
         UserEventQuestCooltimeEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Instance; // x0
-  __int64 v5; // x1
+  __int64 v4; // x1
 
-  if ( (byte_4B1D2F3 & 1) == 0 )
+  if ( (byte_4C280EA & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_QuestMaster___, method);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v3);
-    byte_4B1D2F3 = 1;
+    sub_1C2D490(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C280EA = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_QuestMaster___)) == 0LL )
+                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_QuestMaster___)) == 0 )
   {
-    sub_1BCB254(Instance, v5);
+    sub_1C2D6EC(Instance, v4);
   }
-  return QuestMaster__getQuestEntity((QuestMaster_o *)Instance, this->fields.questId, 0LL);
+  return QuestMaster__getQuestEntity((QuestMaster_o *)Instance, this->fields.questId, 0);
 }

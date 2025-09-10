@@ -1,12 +1,10 @@
-void __fastcall EventMaskFadeTouchBlockObject___ctor(EventMaskFadeTouchBlockObject_o *this, const MethodInfo *method)
+void EventMaskFadeTouchBlockObject___ctor(EventMaskFadeTouchBlockObject_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall EventMaskFadeTouchBlockObject__OnClickObject(
-        EventMaskFadeTouchBlockObject_o *this,
-        const MethodInfo *method)
+void EventMaskFadeTouchBlockObject__OnClickObject(EventMaskFadeTouchBlockObject_o *this, const MethodInfo *method)
 {
   struct System_Action_o *onClickCallback; // x8
   CGThumbnailListItem_o *p_onClickCallback; // x19
@@ -17,38 +15,36 @@ void __fastcall EventMaskFadeTouchBlockObject__OnClickObject(
   onClickCallback = this->fields.onClickCallback;
   if ( onClickCallback )
   {
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))onClickCallback->fields.m_target)(
-      onClickCallback->fields.original_method_info,
-      *(_QWORD *)&onClickCallback->fields.extra_arg);
-    p_onClickCallback->klass = 0LL;
-    sub_1BCAF9C(p_onClickCallback, 0, v4, v5);
+    ((void (__fastcall *)(intptr_t, intptr_t))onClickCallback->fields.invoke_impl)(
+      onClickCallback->fields.method_code,
+      onClickCallback->fields.method);
+    p_onClickCallback->klass = 0;
+    sub_1C2D434(p_onClickCallback, 0, v4, v5);
   }
 }
 
 
-void __fastcall EventMaskFadeTouchBlockObject__RemoveCallback(
-        EventMaskFadeTouchBlockObject_o *this,
-        const MethodInfo *method)
+void EventMaskFadeTouchBlockObject__RemoveCallback(EventMaskFadeTouchBlockObject_o *this, const MethodInfo *method)
 {
   int32_t v3; // w2
   const MethodInfo *v4; // x3
   CGThumbnailListItem_o *p_onClickCallback; // x19
   struct System_Action_o *onClickCallback; // t1
 
-  if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)this, 0LL) )
+  if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     onClickCallback = this->fields.onClickCallback;
     p_onClickCallback = (CGThumbnailListItem_o *)&this->fields.onClickCallback;
     if ( onClickCallback )
     {
-      p_onClickCallback->klass = 0LL;
-      sub_1BCAF9C(p_onClickCallback, 0, v3, v4);
+      p_onClickCallback->klass = 0;
+      sub_1C2D434(p_onClickCallback, 0, v3, v4);
     }
   }
 }
 
 
-void __fastcall EventMaskFadeTouchBlockObject__SetCallback(
+void EventMaskFadeTouchBlockObject__SetCallback(
         EventMaskFadeTouchBlockObject_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -58,14 +54,14 @@ void __fastcall EventMaskFadeTouchBlockObject__SetCallback(
   CGThumbnailListItem_o *p_onClickCallback; // x20
   struct System_Action_o *onClickCallback; // t1
 
-  if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)this, 0LL) )
+  if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     onClickCallback = this->fields.onClickCallback;
     p_onClickCallback = (CGThumbnailListItem_o *)&this->fields.onClickCallback;
     if ( !onClickCallback )
     {
       p_onClickCallback->klass = (CGThumbnailListItem_c *)callback;
-      sub_1BCAF9C(p_onClickCallback, (int32_t)callback, v5, v6);
+      sub_1C2D434(p_onClickCallback, (int32_t)callback, v5, v6);
     }
   }
 }

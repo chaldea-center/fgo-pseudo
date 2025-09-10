@@ -1,11 +1,11 @@
-void __fastcall FriendshipGaugeSelector___ctor(FriendshipGaugeSelector_o *this, const MethodInfo *method)
+void FriendshipGaugeSelector___ctor(FriendshipGaugeSelector_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-IFriendshipGauge_o *__fastcall FriendshipGaugeSelector__GetGauge(
+IFriendshipGauge_o *FriendshipGaugeSelector__GetGauge(
         FriendshipGaugeSelector_o *this,
         int32_t maxFriendShipRank,
         int32_t friendshipExceedCount,
@@ -18,24 +18,24 @@ IFriendshipGauge_o *__fastcall FriendshipGaugeSelector__GetGauge(
   IFriendshipGauge_c *klass; // x8
   __int64 v11; // x9
   IFriendshipGauge_c **p_offset; // x10
-  __int64 p_method; // x0
+  __int64 v13; // x0
 
   v6 = this;
-  if ( (byte_4B1FC94 & 1) == 0 )
+  if ( (byte_4C2AB7C & 1) == 0 )
   {
-    this = (FriendshipGaugeSelector_o *)sub_1BCAFF8(&IFriendshipGauge_TypeInfo, *(_QWORD *)&maxFriendShipRank);
-    byte_4B1FC94 = 1;
+    this = (FriendshipGaugeSelector_o *)sub_1C2D490(&IFriendshipGauge_TypeInfo);
+    byte_4C2AB7C = 1;
   }
   v7 = friendshipExceedCount + maxFriendShipRank < 11 || friendshipExceedCount == 0;
-  v8 = 32LL;
+  v8 = 32;
   if ( !v7 )
-    v8 = 40LL;
+    v8 = 40;
   v9 = *(IFriendshipGauge_o **)((char *)&v6->klass + v8);
   if ( !v9 )
-    sub_1BCB254(this, *(_QWORD *)&maxFriendShipRank);
+    sub_1C2D6EC(this, *(_QWORD *)&maxFriendShipRank);
   klass = v9->klass;
-  v11 = *(unsigned __int16 *)(&v9->klass->_2.bitflags2 + 3);
-  if ( *(_WORD *)(&v9->klass->_2.bitflags2 + 3) )
+  v11 = *(unsigned __int16 *)&v9->klass->_2.rank;
+  if ( *(_WORD *)&v9->klass->_2.rank )
   {
     p_offset = (IFriendshipGauge_c **)&klass->_1.interfaceOffsets->offset;
     while ( *(p_offset - 1) != IFriendshipGauge_TypeInfo )
@@ -45,13 +45,13 @@ IFriendshipGauge_o *__fastcall FriendshipGaugeSelector__GetGauge(
       if ( !v11 )
         goto LABEL_13;
     }
-    p_method = (__int64)&klass->vtable[*(_DWORD *)p_offset + 5].method;
+    v13 = (__int64)&klass->vtable[*(_DWORD *)p_offset + 5];
   }
   else
   {
 LABEL_13:
-    p_method = sub_1C1B560(v9, IFriendshipGauge_TypeInfo, 5LL);
+    v13 = sub_1C7DCA8(v9, IFriendshipGauge_TypeInfo, 5);
   }
-  (*(void (__fastcall **)(IFriendshipGauge_o *, _QWORD))p_method)(v9, *(_QWORD *)(p_method + 8));
+  (*(void (__fastcall **)(IFriendshipGauge_o *, _QWORD))v13)(v9, *(_QWORD *)(v13 + 8));
   return v9;
 }

@@ -1,14 +1,12 @@
-void __fastcall GrandServantIconComponentNameEffect___ctor(
-        GrandServantIconComponentNameEffect_o *this,
-        const MethodInfo *method)
+void GrandServantIconComponentNameEffect___ctor(GrandServantIconComponentNameEffect_o *this, const MethodInfo *method)
 {
-  this->fields.toColor = (struct UnityEngine_Color_o)xmmword_BE30D0;
-  this->fields.fromColor = (struct UnityEngine_Color_o)xmmword_BE3220;
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  this->fields.toColor = (struct UnityEngine_Color_o)xmmword_C0A7A0;
+  this->fields.fromColor = (struct UnityEngine_Color_o)xmmword_C0A900;
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-float __fastcall GrandServantIconComponentNameEffect__EaseInExpo(
+float GrandServantIconComponentNameEffect__EaseInExpo(
         GrandServantIconComponentNameEffect_o *this,
         float x,
         const MethodInfo *method)
@@ -25,7 +23,7 @@ float __fastcall GrandServantIconComponentNameEffect__EaseInExpo(
 }
 
 
-float __fastcall GrandServantIconComponentNameEffect__EaseOutCirc(
+float GrandServantIconComponentNameEffect__EaseOutCirc(
         GrandServantIconComponentNameEffect_o *this,
         float x,
         const MethodInfo *method)
@@ -42,7 +40,7 @@ float __fastcall GrandServantIconComponentNameEffect__EaseOutCirc(
 }
 
 
-void __fastcall GrandServantIconComponentNameEffect__OnEnable(
+void GrandServantIconComponentNameEffect__OnEnable(
         GrandServantIconComponentNameEffect_o *this,
         const MethodInfo *method)
 {
@@ -51,9 +49,7 @@ void __fastcall GrandServantIconComponentNameEffect__OnEnable(
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall GrandServantIconComponentNameEffect__Update(
-        GrandServantIconComponentNameEffect_o *this,
-        const MethodInfo *method)
+void GrandServantIconComponentNameEffect__Update(GrandServantIconComponentNameEffect_o *this, const MethodInfo *method)
 {
   float t; // s8
   __int64 v4; // x0
@@ -67,7 +63,7 @@ void __fastcall GrandServantIconComponentNameEffect__Update(
   float v12; // s1
   float a; // s1
   float v14; // s3
-  unsigned __int64 v15; // d0
+  unsigned __int64 v15; // d0 OVERLAPPED
   float v16; // s2
   float v17; // s4
   float v18; // s2
@@ -77,7 +73,7 @@ void __fastcall GrandServantIconComponentNameEffect__Update(
   int v22; // s1
 
   t = this->fields.t;
-  deltaTime = UnityEngine_Time__get_deltaTime(0LL);
+  deltaTime = UnityEngine_Time__get_deltaTime(0);
   v7 = -deltaTime;
   texture = (UIWidget_o *)this->fields.texture;
   v9 = vabds_f32(2.0, t);
@@ -88,7 +84,7 @@ void __fastcall GrandServantIconComponentNameEffect__Update(
     v10 = 2.0;
   this->fields.t = v10;
   if ( !texture )
-    sub_1BCB254(v4, v5);
+    sub_1C2D6EC(v4, v5);
   if ( v10 >= 1.0 )
   {
     v18 = 1.0 - (float)(v10 + -1.0);
@@ -129,5 +125,5 @@ void __fastcall GrandServantIconComponentNameEffect__Update(
   }
   v21 = a + (float)(v14 * v17);
   v22 = HIDWORD(v15);
-  UIWidget__set_color(texture, *(UnityEngine_Color_o *)&v15, 0LL);
+  UIWidget__set_color(texture, *(UnityEngine_Color_o *)&v15, 0);
 }

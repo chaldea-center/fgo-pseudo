@@ -1,10 +1,10 @@
-void __fastcall BaseTaskInterruptProcess___ctor(BaseTaskInterruptProcess_o *this, const MethodInfo *method)
+void BaseTaskInterruptProcess___ctor(BaseTaskInterruptProcess_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall BaseTaskInterruptProcess__AfterCreateAction(
+void BaseTaskInterruptProcess__AfterCreateAction(
         BaseTaskInterruptProcess_o *this,
         BattleLogic_o *logic,
         const MethodInfo *method)

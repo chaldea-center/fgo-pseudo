@@ -1,80 +1,76 @@
-void __fastcall NpcServantDisplayTypeDetailEntity___ctor(
-        NpcServantDisplayTypeDetailEntity_o *this,
-        const MethodInfo *method)
+void NpcServantDisplayTypeDetailEntity___ctor(NpcServantDisplayTypeDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CA61 & 1) == 0 )
+  if ( (byte_4C27830 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1CA61 = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C27830 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-System_Nullable_Color__o *__fastcall NpcServantDisplayTypeDetailEntity__ConvertColorFromColorCode(
-        System_Nullable_Color__o *retstr,
+System_Nullable_Color__o *NpcServantDisplayTypeDetailEntity__ConvertColorFromColorCode(
+        System_Nullable_Color__o *__return_ptr retstr,
         System_String_o *colorCode,
         const MethodInfo *method)
 {
   System_String_o *v3; // x20
-  __int64 v5; // x1
   System_Nullable_Color__o *result; // x0
-  UnityEngine_Color_o v7; // [xsp+0h] [xbp-30h] BYREF
-  UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v6; // [xsp+0h] [xbp-30h] BYREF
+  UnityEngine_Color_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = colorCode;
-  if ( (byte_4B1CA5D & 1) == 0 )
+  if ( (byte_4C2782C & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Nullable_Color___ctor__, method);
-    colorCode = (System_String_o *)sub_1BCAFF8(&StringLiteral_368/*"#"*/, v5);
-    byte_4B1CA5D = 1;
+    sub_1C2D490(&Method_System_Nullable_Color___ctor__);
+    colorCode = (System_String_o *)sub_1C2D490(&StringLiteral_370/*"#"*/);
+    byte_4C2782C = 1;
   }
-  *(_QWORD *)&v7.fields.r = 0LL;
-  *(_QWORD *)&v7.fields.b = 0LL;
+  *(_QWORD *)&v6.fields.r = 0;
+  *(_QWORD *)&v6.fields.b = 0;
   if ( !v3 )
-    sub_1BCB254(colorCode, method);
-  if ( !System_String__StartsWith(v3, (System_String_o *)StringLiteral_368/*"#"*/, 0LL) )
-    v3 = System_String__Concat_62450424((System_String_o *)StringLiteral_368/*"#"*/, v3, 0LL);
-  result = (System_Nullable_Color__o *)UnityEngine_ColorUtility__TryParseHtmlString(v3, &v7, 0LL);
+    sub_1C2D6EC(colorCode, method);
+  if ( !System_String__StartsWith(v3, (System_String_o *)StringLiteral_370/*"#"*/, 0) )
+    v3 = System_String__Concat_63457864((System_String_o *)StringLiteral_370/*"#"*/, v3, 0);
+  result = (System_Nullable_Color__o *)UnityEngine_ColorUtility__TryParseHtmlString(v3, &v6, 0);
   if ( ((unsigned __int8)result & 1) != 0 )
   {
-    v8 = v7;
-    *(_QWORD *)&retstr->fields.hasValue = 0LL;
-    *(_QWORD *)&retstr->fields.value.fields.g = 0LL;
+    v7 = v6;
+    *(_QWORD *)&retstr->fields.hasValue = 0;
+    *(_QWORD *)&retstr->fields.value.fields.g = 0;
     retstr->fields.value.fields.a = 0.0;
-    System_Nullable_Color____ctor(retstr, v8, (const MethodInfo_37D6364 *)Method_System_Nullable_Color___ctor__);
+    System_Nullable_Color____ctor(retstr, v7, (const MethodInfo_38AC840 *)Method_System_Nullable_Color___ctor__);
   }
   else
   {
-    *(_QWORD *)&retstr->fields.hasValue = 0LL;
-    *(_QWORD *)&retstr->fields.value.fields.g = 0LL;
+    *(_QWORD *)&retstr->fields.hasValue = 0;
+    *(_QWORD *)&retstr->fields.value.fields.g = 0;
     retstr->fields.value.fields.a = 0.0;
   }
   return result;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall NpcServantDisplayTypeDetailEntity__CreatePK(
+System_String_o *NpcServantDisplayTypeDetailEntity__CreatePK(
         int32_t displayType,
         int32_t colorType,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CA60 & 1) == 0 )
+  if ( (byte_4C2782F & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&colorType);
-    byte_4B1CA60 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C2782F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            displayType,
            colorType,
-           (const MethodInfo_3018C2C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
-System_String_o *__fastcall NpcServantDisplayTypeDetailEntity__CreatePrimaryKey(
+System_String_o *NpcServantDisplayTypeDetailEntity__CreatePrimaryKey(
         NpcServantDisplayTypeDetailEntity_o *this,
         const MethodInfo *method)
 {
@@ -84,38 +80,37 @@ System_String_o *__fastcall NpcServantDisplayTypeDetailEntity__CreatePrimaryKey(
 }
 
 
-UnityEngine_Color_o __fastcall NpcServantDisplayTypeDetailEntity__GetAddColor(
+UnityEngine_Color_o NpcServantDisplayTypeDetailEntity__GetAddColor(
         NpcServantDisplayTypeDetailEntity_o *entity,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   float r; // s8
   float g; // s1
   float b; // s2
   float a; // s3
-  float v8; // s0
-  System_Nullable_Color__o v9; // [xsp+8h] [xbp-38h] BYREF
+  float v7; // s0
+  System_Nullable_Color__o v8; // [xsp+8h] [xbp-38h] BYREF
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B1CA5F & 1) == 0 )
+  if ( (byte_4C2782E & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Nullable_Color__GetValueOrDefault__, method);
-    sub_1BCAFF8(&Method_System_Nullable_Color__get_HasValue__, v3);
-    byte_4B1CA5F = 1;
+    sub_1C2D490(&Method_System_Nullable_Color__GetValueOrDefault__);
+    sub_1C2D490(&Method_System_Nullable_Color__get_HasValue__);
+    byte_4C2782E = 1;
   }
   r = 0.0;
   if ( entity )
   {
-    NpcServantDisplayTypeDetailEntity__ConvertColorFromColorCode(&v9, entity->fields.addColor, method);
+    NpcServantDisplayTypeDetailEntity__ConvertColorFromColorCode(&v8, entity->fields.addColor, method);
     g = 0.0;
     b = 0.0;
     a = 0.0;
-    if ( v9.fields.hasValue )
+    if ( v8.fields.hasValue )
     {
-      r = v9.fields.value.fields.r;
-      g = v9.fields.value.fields.g;
-      b = v9.fields.value.fields.b;
-      a = v9.fields.value.fields.a;
+      r = v8.fields.value.fields.r;
+      g = v8.fields.value.fields.g;
+      b = v8.fields.value.fields.b;
+      a = v8.fields.value.fields.a;
     }
   }
   else
@@ -124,170 +119,158 @@ UnityEngine_Color_o __fastcall NpcServantDisplayTypeDetailEntity__GetAddColor(
     b = 0.0;
     a = 0.0;
   }
-  v8 = r;
+  v7 = r;
   result.fields.a = a;
   result.fields.b = b;
   result.fields.g = g;
-  result.fields.r = v8;
+  result.fields.r = v7;
   return result;
 }
 
 
-System_Collections_Generic_Dictionary_string__Nullable_Color___o *__fastcall NpcServantDisplayTypeDetailEntity__GetEffectColorDetailDict(
+System_Collections_Generic_Dictionary_string__Nullable_Color___o *NpcServantDisplayTypeDetailEntity__GetEffectColorDetailDict(
         NpcServantDisplayTypeDetailEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   System_Collections_Generic_Dictionary_string__Nullable_Color___o *result; // x0
-  Il2CppObject *v12; // x19
-  System_Collections_Generic_Dictionary_string__object__o *Dictionary_40121248; // x0
-  NpcServantDisplayTypeDetailEntity___c_c *v14; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v15; // x19
+  Il2CppObject *v4; // x19
+  System_Collections_Generic_Dictionary_string__object__o *Dictionary_40714692; // x0
+  NpcServantDisplayTypeDetailEntity___c_c *v6; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v7; // x19
   System_Func_T__TResult__o *_9__8_0; // x20
-  Il2CppObject *v17; // x21
+  Il2CppObject *v9; // x21
   struct NpcServantDisplayTypeDetailEntity___c_StaticFields *static_fields; // x0
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
   System_Func_T__TResult__o *_9__8_1; // x21
-  Il2CppObject *v22; // x22
-  struct NpcServantDisplayTypeDetailEntity___c_StaticFields *v23; // x0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
+  Il2CppObject *v14; // x22
+  struct NpcServantDisplayTypeDetailEntity___c_StaticFields *v15; // x0
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
 
-  if ( (byte_4B1CA5C & 1) == 0 )
+  if ( (byte_4C2782B & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_BasicHelper_GetValue_string__object___, method);
-    sub_1BCAFF8(
-      &Method_System_Linq_Enumerable_ToDictionary_KeyValuePair_string__object___string__Nullable_Color____,
-      v3);
-    sub_1BCAFF8(&System_Func_KeyValuePair_string__object___Nullable_Color___TypeInfo, v4);
-    sub_1BCAFF8(&System_Func_KeyValuePair_string__object___string__TypeInfo, v5);
-    sub_1BCAFF8(&JsonManager_TypeInfo, v6);
-    sub_1BCAFF8(&Method_NpcServantDisplayTypeDetailEntity___c__GetEffectColorDetailDict_b__8_0__, v7);
-    sub_1BCAFF8(&Method_NpcServantDisplayTypeDetailEntity___c__GetEffectColorDetailDict_b__8_1__, v8);
-    sub_1BCAFF8(&NpcServantDisplayTypeDetailEntity___c_TypeInfo, v9);
-    sub_1BCAFF8(&StringLiteral_18752/*"effectColorDetail"*/, v10);
-    byte_4B1CA5C = 1;
+    sub_1C2D490(&Method_BasicHelper_GetValue_string__object___);
+    sub_1C2D490(&Method_System_Linq_Enumerable_ToDictionary_KeyValuePair_string__object___string__Nullable_Color____);
+    sub_1C2D490(&System_Func_KeyValuePair_string__object___Nullable_Color___TypeInfo);
+    sub_1C2D490(&System_Func_KeyValuePair_string__object___string__TypeInfo);
+    sub_1C2D490(&JsonManager_TypeInfo);
+    sub_1C2D490(&Method_NpcServantDisplayTypeDetailEntity___c__GetEffectColorDetailDict_b__8_0__);
+    sub_1C2D490(&Method_NpcServantDisplayTypeDetailEntity___c__GetEffectColorDetailDict_b__8_1__);
+    sub_1C2D490(&NpcServantDisplayTypeDetailEntity___c_TypeInfo);
+    sub_1C2D490(&StringLiteral_18905/*"effectColorDetail"*/);
+    byte_4C2782B = 1;
   }
   result = (System_Collections_Generic_Dictionary_string__Nullable_Color___o *)BasicHelper__GetValue_object__object_(
                                                                                  (System_Collections_Generic_Dictionary_K__V__o *)this->fields.script,
-                                                                                 (Il2CppObject *)StringLiteral_18752/*"effectColorDetail"*/,
-                                                                                 0LL,
-                                                                                 (const MethodInfo_3008C9C *)Method_BasicHelper_GetValue_string__object___);
+                                                                                 (Il2CppObject *)StringLiteral_18905/*"effectColorDetail"*/,
+                                                                                 0,
+                                                                                 (const MethodInfo_30BCA70 *)Method_BasicHelper_GetValue_string__object___);
   if ( result )
   {
-    v12 = (Il2CppObject *)result;
+    v4 = (Il2CppObject *)result;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    Dictionary_40121248 = JsonManager__getDictionary_40121248(v12, 0LL);
-    v14 = NpcServantDisplayTypeDetailEntity___c_TypeInfo;
-    v15 = (System_Collections_Generic_IEnumerable_TSource__o *)Dictionary_40121248;
+    Dictionary_40714692 = JsonManager__getDictionary_40714692(v4, 0);
+    v6 = NpcServantDisplayTypeDetailEntity___c_TypeInfo;
+    v7 = (System_Collections_Generic_IEnumerable_TSource__o *)Dictionary_40714692;
     if ( !NpcServantDisplayTypeDetailEntity___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NpcServantDisplayTypeDetailEntity___c_TypeInfo);
-      v14 = NpcServantDisplayTypeDetailEntity___c_TypeInfo;
+      v6 = NpcServantDisplayTypeDetailEntity___c_TypeInfo;
     }
-    _9__8_0 = (System_Func_T__TResult__o *)v14->static_fields->__9__8_0;
+    _9__8_0 = (System_Func_T__TResult__o *)v6->static_fields->__9__8_0;
     if ( !_9__8_0 )
     {
-      if ( !v14->_2.cctor_finished )
+      if ( !v6->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v14);
-        v14 = NpcServantDisplayTypeDetailEntity___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v6);
+        v6 = NpcServantDisplayTypeDetailEntity___c_TypeInfo;
       }
-      v17 = (Il2CppObject *)v14->static_fields->__9;
-      _9__8_0 = (System_Func_T__TResult__o *)sub_1BCB244(System_Func_KeyValuePair_string__object___string__TypeInfo);
+      v9 = (Il2CppObject *)v6->static_fields->__9;
+      _9__8_0 = (System_Func_T__TResult__o *)sub_1C2D6DC(System_Func_KeyValuePair_string__object___string__TypeInfo);
       System_Func_KeyValuePair_object__object___object____ctor(
         _9__8_0,
-        v17,
+        v9,
         Method_NpcServantDisplayTypeDetailEntity___c__GetEffectColorDetailDict_b__8_0__,
-        0LL);
+        0);
       static_fields = NpcServantDisplayTypeDetailEntity___c_TypeInfo->static_fields;
       static_fields->__9__8_0 = (struct System_Func_KeyValuePair_string__object___string__o *)_9__8_0;
-      sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v19, v20);
-      v14 = NpcServantDisplayTypeDetailEntity___c_TypeInfo;
+      sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v11, v12);
+      v6 = NpcServantDisplayTypeDetailEntity___c_TypeInfo;
     }
-    if ( !v14->_2.cctor_finished )
+    if ( !v6->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v14);
-      v14 = NpcServantDisplayTypeDetailEntity___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v6);
+      v6 = NpcServantDisplayTypeDetailEntity___c_TypeInfo;
     }
-    _9__8_1 = (System_Func_T__TResult__o *)v14->static_fields->__9__8_1;
+    _9__8_1 = (System_Func_T__TResult__o *)v6->static_fields->__9__8_1;
     if ( !_9__8_1 )
     {
-      if ( !v14->_2.cctor_finished )
+      if ( !v6->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v14);
-        v14 = NpcServantDisplayTypeDetailEntity___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v6);
+        v6 = NpcServantDisplayTypeDetailEntity___c_TypeInfo;
       }
-      v22 = (Il2CppObject *)v14->static_fields->__9;
-      _9__8_1 = (System_Func_T__TResult__o *)sub_1BCB244(System_Func_KeyValuePair_string__object___Nullable_Color___TypeInfo);
+      v14 = (Il2CppObject *)v6->static_fields->__9;
+      _9__8_1 = (System_Func_T__TResult__o *)sub_1C2D6DC(System_Func_KeyValuePair_string__object___Nullable_Color___TypeInfo);
       System_Func_KeyValuePair_object__object___Nullable_Color_____ctor(
         _9__8_1,
-        v22,
+        v14,
         Method_NpcServantDisplayTypeDetailEntity___c__GetEffectColorDetailDict_b__8_1__,
-        0LL);
-      v23 = NpcServantDisplayTypeDetailEntity___c_TypeInfo->static_fields;
-      v23->__9__8_1 = (struct System_Func_KeyValuePair_string__object___Nullable_Color___o *)_9__8_1;
-      sub_1BCAF9C((CGThumbnailListItem_o *)&v23->__9__8_1, (int32_t)_9__8_1, v24, v25);
+        0);
+      v15 = NpcServantDisplayTypeDetailEntity___c_TypeInfo->static_fields;
+      v15->__9__8_1 = (struct System_Func_KeyValuePair_string__object___Nullable_Color___o *)_9__8_1;
+      sub_1C2D434((CGThumbnailListItem_o *)&v15->__9__8_1, (int32_t)_9__8_1, v16, v17);
     }
     return (System_Collections_Generic_Dictionary_string__Nullable_Color___o *)System_Linq_Enumerable__ToDictionary_KeyValuePair_object__object___object__Nullable_Color__(
-                                                                                 v15,
+                                                                                 v7,
                                                                                  (System_Func_TSource__TKey__o *)_9__8_0,
                                                                                  (System_Func_TSource__TElement__o *)_9__8_1,
-                                                                                 (const MethodInfo_30579E4 *)Method_System_Linq_Enumerable_ToDictionary_KeyValuePair_string__object___string__Nullable_Color____);
+                                                                                 (const MethodInfo_310E70C *)Method_System_Linq_Enumerable_ToDictionary_KeyValuePair_string__object___string__Nullable_Color____);
   }
   return result;
 }
 
 
-UnityEngine_Color_o __fastcall NpcServantDisplayTypeDetailEntity__GetMainColor(
+UnityEngine_Color_o NpcServantDisplayTypeDetailEntity__GetMainColor(
         NpcServantDisplayTypeDetailEntity_o *entity,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
   float r; // s0
   float g; // s1
   float b; // s2
   float a; // s3
-  BattleDataDefine_c *v9; // x0
+  BattleDataDefine_c *v7; // x0
   float *p_OVERWRITE_ATK_RATE_PRIORITY; // x8
-  System_Nullable_Color__o v11; // [xsp+8h] [xbp-38h] BYREF
+  System_Nullable_Color__o v9; // [xsp+8h] [xbp-38h] BYREF
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4B1CA5E & 1) == 0 )
+  if ( (byte_4C2782D & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleDataDefine_TypeInfo, method);
-    sub_1BCAFF8(&Method_System_Nullable_Color__GetValueOrDefault__, v3);
-    sub_1BCAFF8(&Method_System_Nullable_Color__get_HasValue__, v4);
-    byte_4B1CA5E = 1;
+    sub_1C2D490(&BattleDataDefine_TypeInfo);
+    sub_1C2D490(&Method_System_Nullable_Color__GetValueOrDefault__);
+    sub_1C2D490(&Method_System_Nullable_Color__get_HasValue__);
+    byte_4C2782D = 1;
   }
   if ( entity
-    && (NpcServantDisplayTypeDetailEntity__ConvertColorFromColorCode(&v11, entity->fields.mainColor, method),
-        v11.fields.hasValue) )
+    && (NpcServantDisplayTypeDetailEntity__ConvertColorFromColorCode(&v9, entity->fields.mainColor, method),
+        v9.fields.hasValue) )
   {
-    r = v11.fields.value.fields.r;
-    g = v11.fields.value.fields.g;
-    b = v11.fields.value.fields.b;
-    a = v11.fields.value.fields.a;
+    r = v9.fields.value.fields.r;
+    g = v9.fields.value.fields.g;
+    b = v9.fields.value.fields.b;
+    a = v9.fields.value.fields.a;
   }
   else
   {
-    v9 = BattleDataDefine_TypeInfo;
+    v7 = BattleDataDefine_TypeInfo;
     if ( !BattleDataDefine_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BattleDataDefine_TypeInfo);
-      v9 = BattleDataDefine_TypeInfo;
+      v7 = BattleDataDefine_TypeInfo;
     }
-    p_OVERWRITE_ATK_RATE_PRIORITY = (float *)&v9->static_fields->OVERWRITE_ATK_RATE_PRIORITY;
+    p_OVERWRITE_ATK_RATE_PRIORITY = (float *)&v7->static_fields->OVERWRITE_ATK_RATE_PRIORITY;
     r = p_OVERWRITE_ATK_RATE_PRIORITY[14];
     g = p_OVERWRITE_ATK_RATE_PRIORITY[15];
     b = p_OVERWRITE_ATK_RATE_PRIORITY[16];
@@ -301,8 +284,8 @@ UnityEngine_Color_o __fastcall NpcServantDisplayTypeDetailEntity__GetMainColor(
 }
 
 
-System_Nullable_Color__o *__fastcall NpcServantDisplayTypeDetailEntity__get_AddColor(
-        System_Nullable_Color__o *retstr,
+System_Nullable_Color__o *NpcServantDisplayTypeDetailEntity__get_AddColor(
+        System_Nullable_Color__o *__return_ptr retstr,
         NpcServantDisplayTypeDetailEntity_o *this,
         const MethodInfo *method)
 {
@@ -318,8 +301,8 @@ System_Nullable_Color__o *__fastcall NpcServantDisplayTypeDetailEntity__get_AddC
 }
 
 
-System_Nullable_Color__o *__fastcall NpcServantDisplayTypeDetailEntity__get_EffectColor(
-        System_Nullable_Color__o *retstr,
+System_Nullable_Color__o *NpcServantDisplayTypeDetailEntity__get_EffectColor(
+        System_Nullable_Color__o *__return_ptr retstr,
         NpcServantDisplayTypeDetailEntity_o *this,
         const MethodInfo *method)
 {
@@ -335,7 +318,7 @@ System_Nullable_Color__o *__fastcall NpcServantDisplayTypeDetailEntity__get_Effe
 }
 
 
-bool __fastcall NpcServantDisplayTypeDetailEntity__get_IsDefaultEffectId(
+bool NpcServantDisplayTypeDetailEntity__get_IsDefaultEffectId(
         NpcServantDisplayTypeDetailEntity_o *this,
         const MethodInfo *method)
 {
@@ -343,8 +326,8 @@ bool __fastcall NpcServantDisplayTypeDetailEntity__get_IsDefaultEffectId(
 }
 
 
-System_Nullable_Color__o *__fastcall NpcServantDisplayTypeDetailEntity__get_MainColor(
-        System_Nullable_Color__o *retstr,
+System_Nullable_Color__o *NpcServantDisplayTypeDetailEntity__get_MainColor(
+        System_Nullable_Color__o *__return_ptr retstr,
         NpcServantDisplayTypeDetailEntity_o *this,
         const MethodInfo *method)
 {
@@ -360,38 +343,37 @@ System_Nullable_Color__o *__fastcall NpcServantDisplayTypeDetailEntity__get_Main
 }
 
 
-void __fastcall NpcServantDisplayTypeDetailEntity___c___cctor(const MethodInfo *method)
+void NpcServantDisplayTypeDetailEntity___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  const MethodInfo *v4; // x3
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
 
-  if ( (byte_4B1CA62 & 1) == 0 )
+  if ( (byte_4C27831 & 1) == 0 )
   {
-    sub_1BCAFF8(&NpcServantDisplayTypeDetailEntity___c_TypeInfo, v1);
-    byte_4B1CA62 = 1;
+    sub_1C2D490(&NpcServantDisplayTypeDetailEntity___c_TypeInfo);
+    byte_4C27831 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BCB244(NpcServantDisplayTypeDetailEntity___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  NpcServantDisplayTypeDetailEntity___c_TypeInfo->static_fields->__9 = (struct NpcServantDisplayTypeDetailEntity___c_o *)v2;
-  sub_1BCAF9C(
+  v1 = (Il2CppObject *)sub_1C2D6DC(NpcServantDisplayTypeDetailEntity___c_TypeInfo);
+  System_Object___ctor(v1, 0);
+  NpcServantDisplayTypeDetailEntity___c_TypeInfo->static_fields->__9 = (struct NpcServantDisplayTypeDetailEntity___c_o *)v1;
+  sub_1C2D434(
     (CGThumbnailListItem_o *)NpcServantDisplayTypeDetailEntity___c_TypeInfo->static_fields,
-    (int32_t)v2,
-    v3,
-    v4);
+    (int32_t)v1,
+    v2,
+    v3);
 }
 
 
-void __fastcall NpcServantDisplayTypeDetailEntity___c___ctor(
+void NpcServantDisplayTypeDetailEntity___c___ctor(
         NpcServantDisplayTypeDetailEntity___c_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-System_String_o *__fastcall NpcServantDisplayTypeDetailEntity___c___GetEffectColorDetailDict_b__8_0(
+System_String_o *NpcServantDisplayTypeDetailEntity___c___GetEffectColorDetailDict_b__8_0(
         NpcServantDisplayTypeDetailEntity___c_o *this,
         System_Collections_Generic_KeyValuePair_string__object__o x,
         const MethodInfo *method)
@@ -399,17 +381,17 @@ System_String_o *__fastcall NpcServantDisplayTypeDetailEntity___c___GetEffectCol
   System_String_o *key; // x19
 
   key = x.fields.key;
-  if ( (byte_4B1CA63 & 1) == 0 )
+  if ( (byte_4C27832 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__, x.fields.key);
-    byte_4B1CA63 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__);
+    byte_4C27832 = 1;
   }
   return key;
 }
 
 
-System_Nullable_Color__o *__fastcall NpcServantDisplayTypeDetailEntity___c___GetEffectColorDetailDict_b__8_1(
-        System_Nullable_Color__o *retstr,
+System_Nullable_Color__o *NpcServantDisplayTypeDetailEntity___c___GetEffectColorDetailDict_b__8_1(
+        System_Nullable_Color__o *__return_ptr retstr,
         NpcServantDisplayTypeDetailEntity___c_o *this,
         System_Collections_Generic_KeyValuePair_string__object__o x,
         const MethodInfo *method)
@@ -422,18 +404,16 @@ System_Nullable_Color__o *__fastcall NpcServantDisplayTypeDetailEntity___c___Get
   System_Nullable_Color__o v10; // [xsp+8h] [xbp-38h] BYREF
 
   value = x.fields.value;
-  if ( (byte_4B1CA64 & 1) == 0 )
+  if ( (byte_4C27833 & 1) == 0 )
   {
-    this = (NpcServantDisplayTypeDetailEntity___c_o *)sub_1BCAFF8(
-                                                        &Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__,
-                                                        x.fields.key);
-    byte_4B1CA64 = 1;
+    this = (NpcServantDisplayTypeDetailEntity___c_o *)sub_1C2D490(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__);
+    byte_4C27833 = 1;
   }
   if ( !value )
-    sub_1BCB254(this, x.fields.key);
-  v6 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer, Il2CppObject *, const MethodInfo *))value->klass->vtable[3].method)(
+    sub_1C2D6EC(this, x.fields.key);
+  v6 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *, Il2CppObject *, const MethodInfo *))value->klass->vtable[3].methodPtr)(
                             value,
-                            value->klass->vtable[4].methodPtr,
+                            value->klass->vtable[3].method,
                             x.fields.value,
                             method);
   result = NpcServantDisplayTypeDetailEntity__ConvertColorFromColorCode(&v10, v6, v7);

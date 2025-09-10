@@ -1,216 +1,210 @@
-void __fastcall GrandQuestResourceCatalogAssetBundle___ctor(
+void GrandQuestResourceCatalogAssetBundle___ctor(
         GrandQuestResourceCatalogAssetBundle_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  Il2CppObject *v4; // x20
-  AssetStorageLoadWrapper_o *v5; // x20
+  Il2CppObject *v3; // x20
+  AssetStorageLoadWrapper_o *v4; // x20
 
-  if ( (byte_4B17330 & 1) == 0 )
+  if ( (byte_4C22035 & 1) == 0 )
   {
-    sub_1BCAFF8(&AssetStorageLoadWrapper_TypeInfo, method);
-    sub_1BCAFF8(&GrandQuestResourceContents_TypeInfo, v3);
-    byte_4B17330 = 1;
+    sub_1C2D490(&AssetStorageLoadWrapper_TypeInfo);
+    sub_1C2D490(&GrandQuestResourceContents_TypeInfo);
+    byte_4C22035 = 1;
   }
-  System_Object___ctor((Il2CppObject *)this, 0LL);
-  v4 = (Il2CppObject *)sub_1BCB244(GrandQuestResourceContents_TypeInfo);
-  System_Object___ctor(v4, 0LL);
-  this->fields._Contents_k__BackingField = (struct GrandQuestResourceContents_o *)v4;
-  sub_1BCAF9C(&this->fields._Contents_k__BackingField);
-  v5 = (AssetStorageLoadWrapper_o *)sub_1BCB244(AssetStorageLoadWrapper_TypeInfo);
-  AssetStorageLoadWrapper___ctor(v5, 0LL);
-  this->fields.assetStorageLoadWrapper = v5;
-  sub_1BCAF9C(&this->fields);
+  System_Object___ctor((Il2CppObject *)this, 0);
+  v3 = (Il2CppObject *)sub_1C2D6DC(GrandQuestResourceContents_TypeInfo);
+  System_Object___ctor(v3, 0);
+  this->fields._Contents_k__BackingField = (struct GrandQuestResourceContents_o *)v3;
+  sub_1C2D434(&this->fields._Contents_k__BackingField);
+  v4 = (AssetStorageLoadWrapper_o *)sub_1C2D6DC(AssetStorageLoadWrapper_TypeInfo);
+  AssetStorageLoadWrapper___ctor(v4, 0);
+  this->fields.assetStorageLoadWrapper = v4;
+  sub_1C2D434(&this->fields);
 }
 
 
-UnityEngine_GameObject_o *__fastcall GrandQuestResourceCatalogAssetBundle__GetBgEffectPrefab(
+UnityEngine_GameObject_o *GrandQuestResourceCatalogAssetBundle__GetBgEffectPrefab(
         GrandQuestResourceCatalogAssetBundle_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   AssetData_o *effectAssetData; // x0
 
-  if ( (byte_4B17335 & 1) == 0 )
+  if ( (byte_4C2203A & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_AssetData_GetObject_GameObject____76915336, method);
-    sub_1BCAFF8(&StringLiteral_18675/*"ef_grquest_bg"*/, v3);
-    byte_4B17335 = 1;
+    sub_1C2D490(&Method_AssetData_GetObject_GameObject____77994080);
+    sub_1C2D490(&StringLiteral_18828/*"ef_grquest_bg"*/);
+    byte_4C2203A = 1;
   }
   effectAssetData = this->fields.effectAssetData;
   if ( !effectAssetData )
-    sub_1BCB254(0LL, method);
-  return (UnityEngine_GameObject_o *)AssetData__GetObject_object__50315216(
+    sub_1C2D6EC(0, method);
+  return (UnityEngine_GameObject_o *)AssetData__GetObject_object__51051712(
                                        effectAssetData,
-                                       (System_String_o *)StringLiteral_18675/*"ef_grquest_bg"*/,
-                                       (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
+                                       (System_String_o *)StringLiteral_18828/*"ef_grquest_bg"*/,
+                                       (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080);
 }
 
 
-UnityEngine_GameObject_o *__fastcall GrandQuestResourceCatalogAssetBundle__GetClassBoardPrefab(
+UnityEngine_GameObject_o *GrandQuestResourceCatalogAssetBundle__GetClassBoardPrefab(
         GrandQuestResourceCatalogAssetBundle_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   AssetData_o *effectAssetData; // x0
 
-  if ( (byte_4B17333 & 1) == 0 )
+  if ( (byte_4C22038 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_AssetData_GetObject_GameObject____76915336, method);
-    sub_1BCAFF8(&StringLiteral_7087/*"GrandQuestClassBoardPrefab"*/, v3);
-    byte_4B17333 = 1;
+    sub_1C2D490(&Method_AssetData_GetObject_GameObject____77994080);
+    sub_1C2D490(&StringLiteral_7145/*"GrandQuestClassBoardPrefab"*/);
+    byte_4C22038 = 1;
   }
   effectAssetData = this->fields.effectAssetData;
   if ( !effectAssetData )
-    sub_1BCB254(0LL, method);
-  return (UnityEngine_GameObject_o *)AssetData__GetObject_object__50315216(
+    sub_1C2D6EC(0, method);
+  return (UnityEngine_GameObject_o *)AssetData__GetObject_object__51051712(
                                        effectAssetData,
-                                       (System_String_o *)StringLiteral_7087/*"GrandQuestClassBoardPrefab"*/,
-                                       (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
+                                       (System_String_o *)StringLiteral_7145/*"GrandQuestClassBoardPrefab"*/,
+                                       (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080);
 }
 
 
-UnityEngine_GameObject_o *__fastcall GrandQuestResourceCatalogAssetBundle__GetClassServantNamePrefab(
+UnityEngine_GameObject_o *GrandQuestResourceCatalogAssetBundle__GetClassServantNamePrefab(
         GrandQuestResourceCatalogAssetBundle_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   AssetData_o *effectAssetData; // x0
 
-  if ( (byte_4B17334 & 1) == 0 )
+  if ( (byte_4C22039 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_AssetData_GetObject_GameObject____76915336, method);
-    sub_1BCAFF8(&StringLiteral_18676/*"ef_grquest_name"*/, v3);
-    byte_4B17334 = 1;
+    sub_1C2D490(&Method_AssetData_GetObject_GameObject____77994080);
+    sub_1C2D490(&StringLiteral_18829/*"ef_grquest_name"*/);
+    byte_4C22039 = 1;
   }
   effectAssetData = this->fields.effectAssetData;
   if ( !effectAssetData )
-    sub_1BCB254(0LL, method);
-  return (UnityEngine_GameObject_o *)AssetData__GetObject_object__50315216(
+    sub_1C2D6EC(0, method);
+  return (UnityEngine_GameObject_o *)AssetData__GetObject_object__51051712(
                                        effectAssetData,
-                                       (System_String_o *)StringLiteral_18676/*"ef_grquest_name"*/,
-                                       (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
+                                       (System_String_o *)StringLiteral_18829/*"ef_grquest_name"*/,
+                                       (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o __fastcall GrandQuestResourceCatalogAssetBundle__GetObject___Il2CppFullySharedGenericType_(
+Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o GrandQuestResourceCatalogAssetBundle__GetObject___Il2CppFullySharedGenericType_(
         GrandQuestResourceCatalogAssetBundle_o *this,
         AssetData_o *assetData,
         System_String_o *name,
-        const MethodInfo_3070538 *method)
+        const MethodInfo_3127CF8 *method)
 {
   __int64 v4; // x4
   __int64 v5; // x20
   __int64 v8; // x8
-  __int64 v10; // x1
-  __int64 v11; // x21
-  void *v12; // x0
-  __int64 v13; // x1
-  Il2CppObject *Object_object__50315216; // x23
-  __int64 *v15; // x1
-  __int64 v16; // x0
-  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v17; // x0 OVERLAPPED
-  void *v18; // x1
-  __int64 v19[2]; // [xsp+0h] [xbp-10h] BYREF
+  size_t v10; // x21
+  void *v11; // x0
+  __int64 v12; // x1
+  Il2CppObject *Object_object__51051712; // x23
+  __int64 *v14; // x1
+  __int64 v15; // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v16; // x0
+  void *v17; // x1
+  _QWORD v18[2]; // [xsp+0h] [xbp-10h] BYREF
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
 
   v5 = v4;
-  v19[1] = *(_QWORD *)(_ReadStatusReg(ARM64_SYSREG(3, 3, 13, 0, 2)) + 40);
+  v18[1] = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
   v8 = *(_QWORD *)(v4 + 56);
   if ( !v8 )
   {
-    sub_1BCAFF8(&Method_AssetData_GetObject_GameObject____76915336, assetData);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v10);
+    sub_1C2D490(&Method_AssetData_GetObject_GameObject____77994080);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
     v8 = *(_QWORD *)(v5 + 56);
     if ( !v8 )
     {
-      sub_1C1B4B8();
+      sub_1C7DC00();
       v8 = *(_QWORD *)(v5 + 56);
     }
   }
-  v11 = *(unsigned int *)(*(_QWORD *)v8 + 252LL);
-  v12 = memset((char *)v19 - ((v11 + 15) & 0x1FFFFFFF0LL), 0, *(_DWORD *)(*(_QWORD *)v8 + 252LL));
+  v10 = *(unsigned int *)(*(_QWORD *)v8 + 252LL);
+  v11 = memset((char *)v18 - ((v10 + 15) & 0x1FFFFFFF0LL), 0, v10);
   if ( !assetData )
     goto LABEL_12;
-  Object_object__50315216 = AssetData__GetObject_object__50315216(
+  Object_object__51051712 = AssetData__GetObject_object__51051712(
                               assetData,
                               name,
-                              (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
+                              (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v12 = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__50315216, 0LL, 0LL);
-  if ( ((unsigned __int8)v12 & 1) == 0 )
+  v11 = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__51051712, 0, 0);
+  if ( ((unsigned __int8)v11 & 1) == 0 )
   {
-    if ( Object_object__50315216 )
+    if ( Object_object__51051712 )
     {
-      v15 = *(__int64 **)(*(_QWORD *)(v5 + 56) + 8LL);
-      v16 = *v15;
-      v19[0] = (__int64)v19 - ((v11 + 15) & 0x1FFFFFFF0LL);
-      ((void (__fastcall *)(__int64, __int64 *, Il2CppObject *, __int64 *, __int64))v15[2])(
-        v16,
+      v14 = *(__int64 **)(*(_QWORD *)(v5 + 56) + 8LL);
+      v15 = *v14;
+      v18[0] = (char *)v18 - ((v10 + 15) & 0x1FFFFFFF0LL);
+      ((void (__fastcall *)(__int64, __int64 *, Il2CppObject *, _QWORD *, _QWORD))v14[2])(
         v15,
-        Object_object__50315216,
-        v19,
-        v19[0]);
+        v14,
+        Object_object__51051712,
+        v18,
+        v18[0]);
       goto LABEL_11;
     }
 LABEL_12:
-    sub_1BCB254(v12, v13);
+    sub_1C2D6EC(v11, v12);
   }
-  memset((char *)v19 - ((v11 + 15) & 0x1FFFFFFF0LL), 0, v11);
-  memcpy((char *)v19 - ((v11 + 15) & 0x1FFFFFFF0LL), (char *)v19 - ((v11 + 15) & 0x1FFFFFFF0LL), v11);
+  memset((char *)v18 - ((v10 + 15) & 0x1FFFFFFF0LL), 0, v10);
+  memcpy((char *)v18 - ((v10 + 15) & 0x1FFFFFFF0LL), (char *)v18 - ((v10 + 15) & 0x1FFFFFFF0LL), v10);
 LABEL_11:
-  v17 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
+  v16 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(
                                                                     (void *)method,
-                                                                    (char *)v19 - ((v11 + 15) & 0x1FFFFFFF0LL),
-                                                                    v11);
-  result.monitor = v18;
-  result.klass = v17;
+                                                                    (char *)v18 - ((v10 + 15) & 0x1FFFFFFF0LL),
+                                                                    v10);
+  result.monitor = v17;
+  result.klass = v16;
   return result;
 }
 
 
-Il2CppObject *__fastcall GrandQuestResourceCatalogAssetBundle__GetObject_object_(
+Il2CppObject *GrandQuestResourceCatalogAssetBundle__GetObject_object_(
         GrandQuestResourceCatalogAssetBundle_o *this,
         AssetData_o *assetData,
         System_String_o *name,
-        const MethodInfo_3070474 *method)
+        const MethodInfo_3127C34 *method)
 {
-  __int64 v7; // x1
-  Il2CppObject *Object_object__50315216; // x20
+  Il2CppObject *Object_object__51051712; // x20
 
   if ( !method->rgctx_data )
   {
-    sub_1BCAFF8(&Method_AssetData_GetObject_GameObject____76915336, assetData);
-    this = (GrandQuestResourceCatalogAssetBundle_o *)sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v7);
+    sub_1C2D490(&Method_AssetData_GetObject_GameObject____77994080);
+    this = (GrandQuestResourceCatalogAssetBundle_o *)sub_1C2D490(&UnityEngine_Object_TypeInfo);
     if ( !method->rgctx_data )
-      this = (GrandQuestResourceCatalogAssetBundle_o *)sub_1C1B4B8();
+      this = (GrandQuestResourceCatalogAssetBundle_o *)sub_1C7DC00();
   }
   if ( !assetData )
     goto LABEL_11;
-  Object_object__50315216 = AssetData__GetObject_object__50315216(
+  Object_object__51051712 = AssetData__GetObject_object__51051712(
                               assetData,
                               name,
-                              (const MethodInfo_2FFBFD0 *)Method_AssetData_GetObject_GameObject____76915336);
+                              (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (GrandQuestResourceCatalogAssetBundle_o *)UnityEngine_Object__op_Equality(
-                                                     (UnityEngine_Object_o *)Object_object__50315216,
-                                                     0LL,
-                                                     0LL);
+                                                     (UnityEngine_Object_o *)Object_object__51051712,
+                                                     0,
+                                                     0);
   if ( ((unsigned __int8)this & 1) != 0 )
-    return 0LL;
-  if ( !Object_object__50315216 )
+    return 0;
+  if ( !Object_object__51051712 )
 LABEL_11:
-    sub_1BCB254(this, assetData);
+    sub_1C2D6EC(this, assetData);
   return UnityEngine_GameObject__GetComponent_object_(
-           (UnityEngine_GameObject_o *)Object_object__50315216,
-           (const MethodInfo_306E710 *)method->rgctx_data->_1_UnityEngine_GameObject_GetComponent_T_);
+           (UnityEngine_GameObject_o *)Object_object__51051712,
+           (const MethodInfo_3125ED0 *)method->rgctx_data->_1_UnityEngine_GameObject_GetComponent_T_);
 }
 
 
-void __fastcall GrandQuestResourceCatalogAssetBundle__LoadAssetStorage(
+void GrandQuestResourceCatalogAssetBundle__LoadAssetStorage(
         GrandQuestResourceCatalogAssetBundle_o *this,
         System_String_o *assetBundlePath,
         AssetLoader_LoadEndDataHandler_o *loadCallback,
@@ -226,149 +220,139 @@ void __fastcall GrandQuestResourceCatalogAssetBundle__LoadAssetStorage(
                                                            assetBundlePath,
                                                            loadCallback,
                                                            3,
-                                                           0LL);
+                                                           0);
   if ( ((unsigned __int8)assetStorageLoadWrapper & 1) != 0 )
     return;
   if ( !loadCallback )
 LABEL_5:
-    sub_1BCB254(assetStorageLoadWrapper, assetBundlePath);
-  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD, _QWORD))loadCallback->fields.m_target)(
-    loadCallback->fields.original_method_info,
-    0LL,
-    *(_QWORD *)&loadCallback->fields.extra_arg);
+    sub_1C2D6EC(assetStorageLoadWrapper, assetBundlePath);
+  ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))loadCallback->fields.invoke_impl)(
+    loadCallback->fields.method_code,
+    0,
+    loadCallback->fields.method);
 }
 
 
-void __fastcall GrandQuestResourceCatalogAssetBundle__LoadEnd(
+void GrandQuestResourceCatalogAssetBundle__LoadEnd(
         GrandQuestResourceCatalogAssetBundle_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   _QWORD *Object_object; // x0
-  __int64 v5; // x1
+  __int64 v4; // x1
   struct GrandQuestResourceContents_o *Contents_k__BackingField; // x8
-  _QWORD *v7; // x20
+  _QWORD *v6; // x20
   struct System_Action_o *loadEndCallback; // x8
 
-  if ( (byte_4B17336 & 1) == 0 )
+  if ( (byte_4C2203B & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_GrandQuestResourceCatalogAssetBundle_GetObject_GrandQuestFolderBoardComponent___, method);
-    sub_1BCAFF8(&StringLiteral_7088/*"GrandQuestFolderBoardPrefab"*/, v3);
-    byte_4B17336 = 1;
+    sub_1C2D490(&Method_GrandQuestResourceCatalogAssetBundle_GetObject_GrandQuestFolderBoardComponent___);
+    sub_1C2D490(&StringLiteral_7146/*"GrandQuestFolderBoardPrefab"*/);
+    byte_4C2203B = 1;
   }
   Object_object = GrandQuestResourceCatalogAssetBundle__GetObject_object_(
                     this,
                     this->fields.effectAssetData,
-                    (System_String_o *)StringLiteral_7088/*"GrandQuestFolderBoardPrefab"*/,
-                    (const MethodInfo_3070474 *)Method_GrandQuestResourceCatalogAssetBundle_GetObject_GrandQuestFolderBoardComponent___);
+                    (System_String_o *)StringLiteral_7146/*"GrandQuestFolderBoardPrefab"*/,
+                    (const MethodInfo_3127C34 *)Method_GrandQuestResourceCatalogAssetBundle_GetObject_GrandQuestFolderBoardComponent___);
   Contents_k__BackingField = this->fields._Contents_k__BackingField;
   if ( !Contents_k__BackingField
-    || (v7 = Object_object,
+    || (v6 = Object_object,
         Contents_k__BackingField->fields._BoardUiAtlasManagerUnit_k__BackingField = this->fields.boardUiAtlasManagerUnit,
-        sub_1BCAF9C(&Contents_k__BackingField->fields),
-        (Object_object = &this->fields._Contents_k__BackingField->klass) == 0LL)
-    || (Object_object[3] = v7,
-        Object_object = (_QWORD *)sub_1BCAF9C(Object_object + 3),
-        (loadEndCallback = this->fields.loadEndCallback) == 0LL) )
+        sub_1C2D434(&Contents_k__BackingField->fields),
+        (Object_object = &this->fields._Contents_k__BackingField->klass) == 0)
+    || (Object_object[3] = v6,
+        Object_object = (_QWORD *)sub_1C2D434(Object_object + 3),
+        (loadEndCallback = this->fields.loadEndCallback) == 0) )
   {
-    sub_1BCB254(Object_object, v5);
+    sub_1C2D6EC(Object_object, v4);
   }
-  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))loadEndCallback->fields.m_target)(
-    loadEndCallback->fields.original_method_info,
-    *(_QWORD *)&loadEndCallback->fields.extra_arg);
+  ((void (__fastcall *)(intptr_t, intptr_t))loadEndCallback->fields.invoke_impl)(
+    loadEndCallback->fields.method_code,
+    loadEndCallback->fields.method);
 }
 
 
-void __fastcall GrandQuestResourceCatalogAssetBundle__LoadSystemAsset(
+void GrandQuestResourceCatalogAssetBundle__LoadSystemAsset(
         GrandQuestResourceCatalogAssetBundle_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
   AssetStorageLoadWrapper_o *assetStorageLoadWrapper; // x20
-  AtlasManagerUnit_o *v15; // x21
-  System_Action_Action__array *v16; // x20
-  System_Action_object__o *v17; // x21
-  ChainableActionBase_o *v18; // x0
-  __int64 v19; // x1
-  __int64 v20; // x2
-  System_Action_object__o *v21; // x21
-  ChainableActionParallel_o *v22; // x21
-  System_Action_array *v23; // x20
-  System_Action_o *v24; // x22
+  AtlasManagerUnit_o *v6; // x21
+  __int64 v7; // x20
+  System_Action_object__o *v8; // x21
+  ChainableActionBase_o *v9; // x0
+  __int64 v10; // x1
+  __int64 v11; // x2
+  System_Action_object__o *v12; // x21
+  ChainableActionParallel_o *v13; // x21
+  __int64 v14; // x20
+  System_Action_o *v15; // x22
 
-  if ( (byte_4B17331 & 1) == 0 )
+  if ( (byte_4C22036 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action___TypeInfo, callback);
-    sub_1BCAFF8(&System_Action_Action____TypeInfo, v5);
-    sub_1BCAFF8(&System_Action_Action__TypeInfo, v6);
-    sub_1BCAFF8(&System_Action_TypeInfo, v7);
-    sub_1BCAFF8(&AtlasManagerUnit_TypeInfo, v8);
-    sub_1BCAFF8(&ChainableActionParallel_TypeInfo, v9);
-    sub_1BCAFF8(&Method_GrandQuestResourceCatalogAssetBundle_LoadEnd__, v10);
-    sub_1BCAFF8(&Method_GrandQuestResourceCatalogAssetBundle__LoadSystemAsset_b__15_0__, v11);
-    sub_1BCAFF8(&Method_GrandQuestResourceCatalogAssetBundle__LoadSystemAsset_b__15_1__, v12);
-    sub_1BCAFF8(&StringLiteral_7089/*"GrandReleaseQuest"*/, v13);
-    byte_4B17331 = 1;
+    sub_1C2D490(&System_Action___TypeInfo);
+    sub_1C2D490(&System_Action_Action____TypeInfo);
+    sub_1C2D490(&System_Action_Action__TypeInfo);
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&AtlasManagerUnit_TypeInfo);
+    sub_1C2D490(&ChainableActionParallel_TypeInfo);
+    sub_1C2D490(&Method_GrandQuestResourceCatalogAssetBundle_LoadEnd__);
+    sub_1C2D490(&Method_GrandQuestResourceCatalogAssetBundle__LoadSystemAsset_b__15_0__);
+    sub_1C2D490(&Method_GrandQuestResourceCatalogAssetBundle__LoadSystemAsset_b__15_1__);
+    sub_1C2D490(&StringLiteral_7147/*"GrandReleaseQuest"*/);
+    byte_4C22036 = 1;
   }
   this->fields.loadEndCallback = callback;
-  sub_1BCAF9C(&this->fields.loadEndCallback);
+  sub_1C2D434(&this->fields.loadEndCallback);
   assetStorageLoadWrapper = this->fields.assetStorageLoadWrapper;
-  v15 = (AtlasManagerUnit_o *)sub_1BCB244(AtlasManagerUnit_TypeInfo);
-  AtlasManagerUnit___ctor(v15, (System_String_o *)StringLiteral_7089/*"GrandReleaseQuest"*/, assetStorageLoadWrapper, 0LL);
-  this->fields.boardUiAtlasManagerUnit = v15;
-  sub_1BCAF9C(&this->fields.boardUiAtlasManagerUnit);
-  v16 = (System_Action_Action__array *)sub_1BCB0A0(System_Action_Action____TypeInfo, 2LL);
-  v17 = (System_Action_object__o *)sub_1BCB244(System_Action_Action__TypeInfo);
+  v6 = (AtlasManagerUnit_o *)sub_1C2D6DC(AtlasManagerUnit_TypeInfo);
+  AtlasManagerUnit___ctor(v6, (System_String_o *)StringLiteral_7147/*"GrandReleaseQuest"*/, assetStorageLoadWrapper, 0);
+  this->fields.boardUiAtlasManagerUnit = v6;
+  sub_1C2D434(&this->fields.boardUiAtlasManagerUnit);
+  v7 = sub_1C2D538(System_Action_Action____TypeInfo, 2);
+  v8 = (System_Action_object__o *)sub_1C2D6DC(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
-    v17,
+    v8,
     (Il2CppObject *)this,
     Method_GrandQuestResourceCatalogAssetBundle__LoadSystemAsset_b__15_0__,
-    0LL);
-  if ( !v16 )
+    0);
+  if ( !v7 )
     goto LABEL_11;
-  if ( !v16->max_length )
+  if ( !*(_DWORD *)(v7 + 24) )
     goto LABEL_12;
-  v16->m_Items[0] = (System_Action_Action__o *)v17;
-  sub_1BCAF9C(v16->m_Items);
-  v21 = (System_Action_object__o *)sub_1BCB244(System_Action_Action__TypeInfo);
+  *(_QWORD *)(v7 + 32) = v8;
+  sub_1C2D434(v7 + 32);
+  v12 = (System_Action_object__o *)sub_1C2D6DC(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
-    v21,
+    v12,
     (Il2CppObject *)this,
     Method_GrandQuestResourceCatalogAssetBundle__LoadSystemAsset_b__15_1__,
-    0LL);
-  if ( v16->max_length <= 1 )
+    0);
+  if ( *(_DWORD *)(v7 + 24) <= 1u )
     goto LABEL_12;
-  v16->m_Items[1] = (System_Action_Action__o *)v21;
-  sub_1BCAF9C(&v16->m_Items[1]);
-  v22 = (ChainableActionParallel_o *)sub_1BCB244(ChainableActionParallel_TypeInfo);
-  ChainableActionParallel___ctor_48236352(v22, v16, 0LL);
-  v23 = (System_Action_array *)sub_1BCB0A0(System_Action___TypeInfo, 1LL);
-  v24 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
-  System_Action___ctor(v24, (Il2CppObject *)this, Method_GrandQuestResourceCatalogAssetBundle_LoadEnd__, 0LL);
-  if ( !v23 )
+  *(_QWORD *)(v7 + 40) = v12;
+  sub_1C2D434(v7 + 40);
+  v13 = (ChainableActionParallel_o *)sub_1C2D6DC(ChainableActionParallel_TypeInfo);
+  ChainableActionParallel___ctor_48939044(v13, (System_Action_Action__array *)v7, 0);
+  v14 = sub_1C2D538(System_Action___TypeInfo, 1);
+  v15 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  System_Action___ctor(v15, (Il2CppObject *)this, Method_GrandQuestResourceCatalogAssetBundle_LoadEnd__, 0);
+  if ( !v14 )
     goto LABEL_11;
-  if ( !v23->max_length )
+  if ( !*(_DWORD *)(v14 + 24) )
 LABEL_12:
-    sub_1BCB25C(v18, v19, v20);
-  v23->m_Items[0] = v24;
-  v18 = (ChainableActionBase_o *)sub_1BCAF9C(v23->m_Items);
-  if ( !v22 || (v18 = ChainableActionBase__Final((ChainableActionBase_o *)v22, v23, 0LL)) == 0LL )
+    sub_1C2D6F4(v9, v10, v11);
+  *(_QWORD *)(v14 + 32) = v15;
+  v9 = (ChainableActionBase_o *)sub_1C2D434(v14 + 32);
+  if ( !v13 || (v9 = ChainableActionBase__Final((ChainableActionBase_o *)v13, (System_Action_array *)v14, 0)) == 0 )
 LABEL_11:
-    sub_1BCB254(v18, v19);
-  ChainableActionBase__Execute(v18, 0LL);
+    sub_1C2D6EC(v9, v10);
+  ChainableActionBase__Execute(v9, 0);
 }
 
 
-void __fastcall GrandQuestResourceCatalogAssetBundle__ReleaseAll(
+void GrandQuestResourceCatalogAssetBundle__ReleaseAll(
         GrandQuestResourceCatalogAssetBundle_o *this,
         const MethodInfo *method)
 {
@@ -376,69 +360,65 @@ void __fastcall GrandQuestResourceCatalogAssetBundle__ReleaseAll(
 
   assetStorageLoadWrapper = this->fields.assetStorageLoadWrapper;
   if ( !assetStorageLoadWrapper )
-    sub_1BCB254(0LL, method);
-  AssetStorageLoadWrapper__ReleaseAll(assetStorageLoadWrapper, 0LL);
+    sub_1C2D6EC(0, method);
+  AssetStorageLoadWrapper__ReleaseAll(assetStorageLoadWrapper, 0);
 }
 
 
-void __fastcall GrandQuestResourceCatalogAssetBundle__ReloadBoardUIAtlas(
+void GrandQuestResourceCatalogAssetBundle__ReloadBoardUIAtlas(
         GrandQuestResourceCatalogAssetBundle_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  Il2CppObject *v5; // x20
+  __int64 v6; // x0
   __int64 v7; // x1
-  __int64 v8; // x1
-  Il2CppObject *v9; // x20
-  __int64 v10; // x0
-  __int64 v11; // x1
   AtlasManagerUnit_o *boardUiAtlasManagerUnit; // x0
   AssetStorageLoadWrapper_o *assetStorageLoadWrapper; // x22
-  AtlasManagerUnit_o *v14; // x23
-  AtlasManagerUnit_o *v15; // x19
-  System_Action_o *v16; // x21
+  AtlasManagerUnit_o *v10; // x23
+  AtlasManagerUnit_o *v11; // x19
+  System_Action_o *v12; // x21
 
-  if ( (byte_4B17332 & 1) == 0 )
+  if ( (byte_4C22037 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, callback);
-    sub_1BCAFF8(&AtlasManagerUnit_TypeInfo, v5);
-    sub_1BCAFF8(&Method_GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0__ReloadBoardUIAtlas_b__0__, v6);
-    sub_1BCAFF8(&GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0_TypeInfo, v7);
-    sub_1BCAFF8(&StringLiteral_7089/*"GrandReleaseQuest"*/, v8);
-    byte_4B17332 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&AtlasManagerUnit_TypeInfo);
+    sub_1C2D490(&Method_GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0__ReloadBoardUIAtlas_b__0__);
+    sub_1C2D490(&GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0_TypeInfo);
+    sub_1C2D490(&StringLiteral_7147/*"GrandReleaseQuest"*/);
+    byte_4C22037 = 1;
   }
-  v9 = (Il2CppObject *)sub_1BCB244(GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0_TypeInfo);
-  System_Object___ctor(v9, 0LL);
-  if ( !v9 )
+  v5 = (Il2CppObject *)sub_1C2D6DC(GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0_TypeInfo);
+  System_Object___ctor(v5, 0);
+  if ( !v5 )
     goto LABEL_8;
-  v9[1].klass = (Il2CppClass *)this;
-  sub_1BCAF9C(&v9[1]);
-  v9[1].monitor = callback;
-  sub_1BCAF9C(&v9[1].monitor);
+  v5[1].klass = (Il2CppClass *)this;
+  sub_1C2D434(&v5[1]);
+  v5[1].monitor = callback;
+  sub_1C2D434(&v5[1].monitor);
   boardUiAtlasManagerUnit = this->fields.boardUiAtlasManagerUnit;
   if ( boardUiAtlasManagerUnit )
-    AtlasManagerUnit__Release(boardUiAtlasManagerUnit, 0LL);
+    AtlasManagerUnit__Release(boardUiAtlasManagerUnit, 0);
   assetStorageLoadWrapper = this->fields.assetStorageLoadWrapper;
-  v14 = (AtlasManagerUnit_o *)sub_1BCB244(AtlasManagerUnit_TypeInfo);
-  AtlasManagerUnit___ctor(v14, (System_String_o *)StringLiteral_7089/*"GrandReleaseQuest"*/, assetStorageLoadWrapper, 0LL);
-  this->fields.boardUiAtlasManagerUnit = v14;
-  sub_1BCAF9C(&this->fields.boardUiAtlasManagerUnit);
-  v15 = this->fields.boardUiAtlasManagerUnit;
-  v16 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo);
+  v10 = (AtlasManagerUnit_o *)sub_1C2D6DC(AtlasManagerUnit_TypeInfo);
+  AtlasManagerUnit___ctor(v10, (System_String_o *)StringLiteral_7147/*"GrandReleaseQuest"*/, assetStorageLoadWrapper, 0);
+  this->fields.boardUiAtlasManagerUnit = v10;
+  sub_1C2D434(&this->fields.boardUiAtlasManagerUnit);
+  v11 = this->fields.boardUiAtlasManagerUnit;
+  v12 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
   System_Action___ctor(
-    v16,
-    v9,
+    v12,
+    v5,
     Method_GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0__ReloadBoardUIAtlas_b__0__,
-    0LL);
-  if ( !v15 )
+    0);
+  if ( !v11 )
 LABEL_8:
-    sub_1BCB254(v10, v11);
-  AtlasManagerUnit__Load(v15, v16, 1, 0LL);
+    sub_1C2D6EC(v6, v7);
+  AtlasManagerUnit__Load(v11, v12, 1, 0);
 }
 
 
-void __fastcall GrandQuestResourceCatalogAssetBundle__SetSpriteOfUiAtlas(
+void GrandQuestResourceCatalogAssetBundle__SetSpriteOfUiAtlas(
         GrandQuestResourceCatalogAssetBundle_o *this,
         UISprite_o *sprite,
         System_String_o *spriteName,
@@ -448,52 +428,49 @@ void __fastcall GrandQuestResourceCatalogAssetBundle__SetSpriteOfUiAtlas(
 
   boardUiAtlasManagerUnit = this->fields.boardUiAtlasManagerUnit;
   if ( !boardUiAtlasManagerUnit )
-    sub_1BCB254(0LL, sprite);
-  AtlasManagerUnit__SetUI(boardUiAtlasManagerUnit, sprite, spriteName, 0LL);
+    sub_1C2D6EC(0, sprite);
+  AtlasManagerUnit__SetUI(boardUiAtlasManagerUnit, sprite, spriteName, 0);
 }
 
 
-void __fastcall GrandQuestResourceCatalogAssetBundle___LoadSystemAsset_b__15_0(
+void GrandQuestResourceCatalogAssetBundle___LoadSystemAsset_b__15_0(
         GrandQuestResourceCatalogAssetBundle_o *this,
         System_Action_o *f,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
+  Il2CppObject *v5; // x21
+  __int64 v6; // x0
   __int64 v7; // x1
-  Il2CppObject *v8; // x21
-  __int64 v9; // x0
-  __int64 v10; // x1
-  AssetLoader_LoadEndDataHandler_o *v11; // x20
-  const MethodInfo *v12; // x3
+  AssetLoader_LoadEndDataHandler_o *v8; // x20
+  const MethodInfo *v9; // x3
 
-  if ( (byte_4B17337 & 1) == 0 )
+  if ( (byte_4C2203C & 1) == 0 )
   {
-    sub_1BCAFF8(&AssetLoader_LoadEndDataHandler_TypeInfo, f);
-    sub_1BCAFF8(&Method_GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0__LoadSystemAsset_b__2__, v5);
-    sub_1BCAFF8(&GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0_TypeInfo, v6);
-    sub_1BCAFF8(&StringLiteral_7089/*"GrandReleaseQuest"*/, v7);
-    byte_4B17337 = 1;
+    sub_1C2D490(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C2D490(&Method_GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0__LoadSystemAsset_b__2__);
+    sub_1C2D490(&GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0_TypeInfo);
+    sub_1C2D490(&StringLiteral_7147/*"GrandReleaseQuest"*/);
+    byte_4C2203C = 1;
   }
-  v8 = (Il2CppObject *)sub_1BCB244(GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0_TypeInfo);
-  System_Object___ctor(v8, 0LL);
-  if ( !v8 )
-    sub_1BCB254(v9, v10);
-  v8[1].monitor = this;
-  sub_1BCAF9C(&v8[1].monitor);
-  v8[1].klass = (Il2CppClass *)f;
-  sub_1BCAF9C(&v8[1]);
-  v11 = (AssetLoader_LoadEndDataHandler_o *)sub_1BCB244(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C2D6DC(GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0_TypeInfo);
+  System_Object___ctor(v5, 0);
+  if ( !v5 )
+    sub_1C2D6EC(v6, v7);
+  v5[1].monitor = this;
+  sub_1C2D434(&v5[1].monitor);
+  v5[1].klass = (Il2CppClass *)f;
+  sub_1C2D434(&v5[1]);
+  v8 = (AssetLoader_LoadEndDataHandler_o *)sub_1C2D6DC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v11,
     v8,
+    v5,
     Method_GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0__LoadSystemAsset_b__2__,
-    0LL);
-  GrandQuestResourceCatalogAssetBundle__LoadAssetStorage(this, (System_String_o *)StringLiteral_7089/*"GrandReleaseQuest"*/, v11, v12);
+    0);
+  GrandQuestResourceCatalogAssetBundle__LoadAssetStorage(this, (System_String_o *)StringLiteral_7147/*"GrandReleaseQuest"*/, v8, v9);
 }
 
 
-void __fastcall GrandQuestResourceCatalogAssetBundle___LoadSystemAsset_b__15_1(
+void GrandQuestResourceCatalogAssetBundle___LoadSystemAsset_b__15_1(
         GrandQuestResourceCatalogAssetBundle_o *this,
         System_Action_o *f,
         const MethodInfo *method)
@@ -502,12 +479,12 @@ void __fastcall GrandQuestResourceCatalogAssetBundle___LoadSystemAsset_b__15_1(
 
   boardUiAtlasManagerUnit = this->fields.boardUiAtlasManagerUnit;
   if ( !boardUiAtlasManagerUnit )
-    sub_1BCB254(0LL, f);
-  AtlasManagerUnit__Load(boardUiAtlasManagerUnit, f, 3, 0LL);
+    sub_1C2D6EC(0, f);
+  AtlasManagerUnit__Load(boardUiAtlasManagerUnit, f, 3, 0);
 }
 
 
-GrandQuestResourceContents_o *__fastcall GrandQuestResourceCatalogAssetBundle__get_Contents(
+GrandQuestResourceContents_o *GrandQuestResourceCatalogAssetBundle__get_Contents(
         GrandQuestResourceCatalogAssetBundle_o *this,
         const MethodInfo *method)
 {
@@ -515,15 +492,15 @@ GrandQuestResourceContents_o *__fastcall GrandQuestResourceCatalogAssetBundle__g
 }
 
 
-void __fastcall GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0___ctor(
+void GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0___ctor(
         GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0___LoadSystemAsset_b__2(
+void GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0___LoadSystemAsset_b__2(
         GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0_o *this,
         AssetData_o *asset,
         const MethodInfo *method)
@@ -534,26 +511,24 @@ void __fastcall GrandQuestResourceCatalogAssetBundle___c__DisplayClass15_0___Loa
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (_4__this->fields.effectAssetData = asset,
-        _4__this = (struct GrandQuestResourceCatalogAssetBundle_o *)sub_1BCAF9C(&_4__this->fields.effectAssetData),
-        (f = this->fields.f) == 0LL) )
+        _4__this = (struct GrandQuestResourceCatalogAssetBundle_o *)sub_1C2D434(&_4__this->fields.effectAssetData),
+        (f = this->fields.f) == 0) )
   {
-    sub_1BCB254(_4__this, asset);
+    sub_1C2D6EC(_4__this, asset);
   }
-  ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))f->fields.m_target)(
-    f->fields.original_method_info,
-    *(_QWORD *)&f->fields.extra_arg);
+  ((void (__fastcall *)(intptr_t, intptr_t))f->fields.invoke_impl)(f->fields.method_code, f->fields.method);
 }
 
 
-void __fastcall GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0___ctor(
+void GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0___ctor(
         GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0_o *this,
         const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0___ReloadBoardUIAtlas_b__0(
+void GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0___ReloadBoardUIAtlas_b__0(
         GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0_o *this,
         const MethodInfo *method)
 {
@@ -563,11 +538,11 @@ void __fastcall GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0___Rel
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (v3 = this,
-        (this = (GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0_o *)_4__this->fields._Contents_k__BackingField) == 0LL) )
+        (this = (GrandQuestResourceCatalogAssetBundle___c__DisplayClass16_0_o *)_4__this->fields._Contents_k__BackingField) == 0) )
   {
-    sub_1BCB254(this, method);
+    sub_1C2D6EC(this, method);
   }
   this->fields.__4__this = (struct GrandQuestResourceCatalogAssetBundle_o *)_4__this->fields.boardUiAtlasManagerUnit;
-  sub_1BCAF9C(&this->fields);
-  ActionExtensions__Call(v3->fields.callback, 0LL);
+  sub_1C2D434(&this->fields);
+  ActionExtensions__Call(v3->fields.callback, 0);
 }

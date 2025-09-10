@@ -1,44 +1,41 @@
-void __fastcall TitleInfoEventRaidHpComponent___cctor(const MethodInfo *method)
+void TitleInfoEventRaidHpComponent___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  __int64 v4; // x1
-  __int64 v5; // x1
+  int32_t v1; // w2
+  const MethodInfo *v2; // x3
   struct TitleInfoEventRaidHpComponent_StaticFields *static_fields; // x0
-  int32_t v7; // w1
-  int32_t v8; // w1
-  struct TitleInfoEventRaidHpComponent_StaticFields *v9; // x0
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v4; // w1
+  int32_t v5; // w1
+  struct TitleInfoEventRaidHpComponent_StaticFields *v6; // x0
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
 
-  if ( (byte_4B1AE90 & 1) == 0 )
+  if ( (byte_4C25C1E & 1) == 0 )
   {
-    sub_1BCAFF8(&TitleInfoEventRaidHpComponent_TypeInfo, v1);
-    sub_1BCAFF8(&StringLiteral_19073/*"event_raid_ok"*/, v4);
-    sub_1BCAFF8(&StringLiteral_19071/*"event_raid_ng"*/, v5);
-    byte_4B1AE90 = 1;
+    sub_1C2D490(&TitleInfoEventRaidHpComponent_TypeInfo);
+    sub_1C2D490(&StringLiteral_19231/*"event_raid_ok"*/);
+    sub_1C2D490(&StringLiteral_19229/*"event_raid_ng"*/);
+    byte_4C25C1E = 1;
   }
   static_fields = TitleInfoEventRaidHpComponent_TypeInfo->static_fields;
   static_fields->WIDTH = 31.0;
-  v7 = StringLiteral_19073/*"event_raid_ok"*/;
-  static_fields->RESULT_OK_SPNAME = (struct System_String_o *)StringLiteral_19073/*"event_raid_ok"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->RESULT_OK_SPNAME, v7, v2, v3);
-  v8 = StringLiteral_19071/*"event_raid_ng"*/;
-  v9 = TitleInfoEventRaidHpComponent_TypeInfo->static_fields;
-  v9->RESULT_NG_SPNAME = (struct System_String_o *)StringLiteral_19071/*"event_raid_ng"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v9->RESULT_NG_SPNAME, v8, v10, v11);
+  v4 = StringLiteral_19231/*"event_raid_ok"*/;
+  static_fields->RESULT_OK_SPNAME = (struct System_String_o *)StringLiteral_19231/*"event_raid_ok"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)&static_fields->RESULT_OK_SPNAME, v4, v1, v2);
+  v5 = StringLiteral_19229/*"event_raid_ng"*/;
+  v6 = TitleInfoEventRaidHpComponent_TypeInfo->static_fields;
+  v6->RESULT_NG_SPNAME = (struct System_String_o *)StringLiteral_19229/*"event_raid_ng"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)&v6->RESULT_NG_SPNAME, v5, v7, v8);
 }
 
 
-void __fastcall TitleInfoEventRaidHpComponent___ctor(TitleInfoEventRaidHpComponent_o *this, const MethodInfo *method)
+void TitleInfoEventRaidHpComponent___ctor(TitleInfoEventRaidHpComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall TitleInfoEventRaidHpComponent__Setup(
+void TitleInfoEventRaidHpComponent__Setup(
         TitleInfoEventRaidHpComponent_o *this,
         int32_t dispHpType,
         const MethodInfo *method)
@@ -47,18 +44,18 @@ void __fastcall TitleInfoEventRaidHpComponent__Setup(
   UISprite_o *v6; // x20
   System_String_o *RESULT_NG_SPNAME; // x1
 
-  if ( (byte_4B1AE8F & 1) == 0 )
+  if ( (byte_4C25C1D & 1) == 0 )
   {
-    sub_1BCAFF8(&TitleInfoEventRaidHpComponent_TypeInfo, *(_QWORD *)&dispHpType);
-    byte_4B1AE8F = 1;
+    sub_1C2D490(&TitleInfoEventRaidHpComponent_TypeInfo);
+    byte_4C25C1D = 1;
   }
   resultSp = (UnityEngine_Component_o *)this->fields.resultSp;
   if ( !resultSp )
     goto LABEL_22;
-  resultSp = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(resultSp, 0LL);
+  resultSp = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(resultSp, 0);
   if ( !resultSp )
     goto LABEL_22;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)resultSp, 1, 0LL);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)resultSp, 1, 0);
   if ( dispHpType == 2 )
   {
     v6 = this->fields.resultSp;
@@ -78,15 +75,15 @@ void __fastcall TitleInfoEventRaidHpComponent__Setup(
       resultSp = (UnityEngine_Component_o *)this->fields.resultSp;
       if ( resultSp )
       {
-        resultSp = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(resultSp, 0LL);
+        resultSp = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(resultSp, 0);
         if ( resultSp )
         {
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)resultSp, 0, 0LL);
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)resultSp, 0, 0);
           goto LABEL_20;
         }
       }
 LABEL_22:
-      sub_1BCB254(resultSp, *(_QWORD *)&dispHpType);
+      sub_1C2D6EC(resultSp, *(_QWORD *)&dispHpType);
     }
     v6 = this->fields.resultSp;
     resultSp = (UnityEngine_Component_o *)TitleInfoEventRaidHpComponent_TypeInfo;
@@ -96,12 +93,12 @@ LABEL_22:
       goto LABEL_22;
     RESULT_NG_SPNAME = TitleInfoEventRaidHpComponent_TypeInfo->static_fields->RESULT_OK_SPNAME;
   }
-  UISprite__set_spriteName(v6, RESULT_NG_SPNAME, 0LL);
+  UISprite__set_spriteName(v6, RESULT_NG_SPNAME, 0);
 LABEL_20:
   resultSp = (UnityEngine_Component_o *)this->fields.resultSp;
   if ( !resultSp )
     goto LABEL_22;
-  ((void (__fastcall *)(UnityEngine_Component_o *, void *))resultSp->klass[2]._1.typeMetadataHandle)(
+  ((void (__fastcall *)(UnityEngine_Component_o *, void *))resultSp->klass[2]._1.parent)(
     resultSp,
-    resultSp->klass[2]._1.interopData);
+    resultSp->klass[2]._1.generic_class);
 }

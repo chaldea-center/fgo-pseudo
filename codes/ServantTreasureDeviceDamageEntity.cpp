@@ -1,37 +1,34 @@
-void __fastcall ServantTreasureDeviceDamageEntity___ctor(
-        ServantTreasureDeviceDamageEntity_o *this,
-        const MethodInfo *method)
+void ServantTreasureDeviceDamageEntity___ctor(ServantTreasureDeviceDamageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CF5A & 1) == 0 )
+  if ( (byte_4C27D45 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_string___ctor__, method);
-    byte_4B1CF5A = 1;
+    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
+    byte_4C27D45 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_32C5994 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-System_String_o *__fastcall ServantTreasureDeviceDamageEntity__CreatePK(
+System_String_o *ServantTreasureDeviceDamageEntity__CreatePK(
         int32_t svtId,
         int32_t voicePrefix,
         const MethodInfo *method)
 {
-  if ( (byte_4B1CF59 & 1) == 0 )
+  if ( (byte_4C27D44 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_CreateMultiplePK_int__int___, *(_QWORD *)&voicePrefix);
-    byte_4B1CF59 = 1;
+    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C27D44 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            voicePrefix,
-           (const MethodInfo_3018C2C *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
-System_String_o *__fastcall ServantTreasureDeviceDamageEntity__CreatePrimaryKey(
+System_String_o *ServantTreasureDeviceDamageEntity__CreatePrimaryKey(
         ServantTreasureDeviceDamageEntity_o *this,
         const MethodInfo *method)
 {
@@ -42,7 +39,7 @@ System_String_o *__fastcall ServantTreasureDeviceDamageEntity__CreatePrimaryKey(
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t __fastcall ServantTreasureDeviceDamageEntity__getWeight(
+int32_t ServantTreasureDeviceDamageEntity__getWeight(
         ServantTreasureDeviceDamageEntity_o *this,
         int32_t idx,
         const MethodInfo *method)
@@ -65,8 +62,8 @@ int32_t __fastcall ServantTreasureDeviceDamageEntity__getWeight(
       else
       {
         if ( max_length <= (unsigned int)idx )
-          sub_1BCB25C(10LL, *(_QWORD *)&idx, method);
-        return voiceWeights->m_Items[idx + 1];
+          sub_1C2D6F4(10, *(_QWORD *)&idx, method);
+        return voiceWeights->m_Items[idx];
       }
     }
   }

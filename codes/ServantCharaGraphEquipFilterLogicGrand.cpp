@@ -1,21 +1,21 @@
-void __fastcall ServantCharaGraphEquipFilterLogicGrand___ctor(
+void ServantCharaGraphEquipFilterLogicGrand___ctor(
         ServantCharaGraphEquipFilterLogicGrand_o *this,
         const MethodInfo *method)
 {
-  ServantCharaGraphEquipFilterLogic___ctor((ServantCharaGraphEquipFilterLogic_o *)this, 0LL);
+  ServantCharaGraphEquipFilterLogic___ctor((ServantCharaGraphEquipFilterLogic_o *)this, 0);
 }
 
 
-bool __fastcall ServantCharaGraphEquipFilterLogicGrand__IsMatchAllFilter(
+bool ServantCharaGraphEquipFilterLogicGrand__IsMatchAllFilter(
         ServantCharaGraphEquipFilterLogicGrand_o *this,
         const MethodInfo *method)
 {
   CharaGraphServantListViewItemBase_o *ListViewItem; // x0
   __int64 v4; // x1
 
-  ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem((ServantCharaGraphFilterLogic_o *)this, 0LL);
+  ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem((ServantCharaGraphFilterLogic_o *)this, 0);
   if ( !ListViewItem )
-    sub_1BCB254(0LL, v4);
+    sub_1C2D6EC(0, v4);
   return ListViewItem->fields._IsBase_k__BackingField
-      || ServantCharaGraphEquipFilterLogic__IsMatchAllFilter((ServantCharaGraphEquipFilterLogic_o *)this, 0LL);
+      || ServantCharaGraphEquipFilterLogic__IsMatchAllFilter((ServantCharaGraphEquipFilterLogic_o *)this, 0);
 }

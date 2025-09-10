@@ -1,46 +1,42 @@
-void __fastcall CheckEnemyShiftAfterTask___ctor(CheckEnemyShiftAfterTask_o *this, const MethodInfo *method)
+void CheckEnemyShiftAfterTask___ctor(CheckEnemyShiftAfterTask_o *this, const MethodInfo *method)
 {
   BattleLogicTask___ctor((BattleLogicTask_o *)this, method);
   this->fields.actiontype = 68;
 }
 
 
-BattleLogicTask_array *__fastcall CheckEnemyShiftAfterTask__MakeActionTask(
+BattleLogicTask_array *CheckEnemyShiftAfterTask__MakeActionTask(
         CheckEnemyShiftAfterTask_o *this,
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  System_Collections_Generic_List_object__o *v7; // x20
+  System_Collections_Generic_List_object__o *v4; // x20
   BattleLogicReaction_o *logicReaction; // x0
-  __int64 v9; // x1
+  __int64 v6; // x1
 
-  if ( (byte_4B1F558 & 1) == 0 )
+  if ( (byte_4C2A3FE & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__, logic);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__, v4);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__, v5);
-    sub_1BCAFF8(&System_Collections_Generic_List_BattleLogicTask__TypeInfo, v6);
-    byte_4B1F558 = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    sub_1C2D490(&System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+    byte_4C2A3FE = 1;
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_1BCB244(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_BattleLogicTask__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v7,
-    (const MethodInfo_36B939C *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
+    v4,
+    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_BattleLogicTask___ctor__);
   if ( !logic
-    || (logicReaction = logic->fields.logicReaction) == 0LL
-    || (logicReaction = (BattleLogicReaction_o *)BattleLogicReaction__CheckEnemyShiftAfter(logicReaction, 73, 0LL, 0LL),
-        !v7) )
+    || (logicReaction = logic->fields.logicReaction) == 0
+    || (logicReaction = (BattleLogicReaction_o *)BattleLogicReaction__CheckEnemyShiftAfter(logicReaction, 73, 0, 0), !v4) )
   {
-    sub_1BCB254(logicReaction, v9);
+    sub_1C2D6EC(logicReaction, v6);
   }
   System_Collections_Generic_List_object___AddRange(
-    v7,
+    v4,
     (System_Collections_Generic_IEnumerable_T__o *)logicReaction,
-    (const MethodInfo_36B9DDC *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
+    (const MethodInfo_3789D90 *)Method_System_Collections_Generic_List_BattleLogicTask__AddRange__);
   return (BattleLogicTask_array *)System_Collections_Generic_List_object___ToArray(
-                                    v7,
-                                    (const MethodInfo_36BB728 *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
+                                    v4,
+                                    (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_BattleLogicTask__ToArray__);
 }

@@ -1,13 +1,12 @@
-void __fastcall BattleRetireWindowComponent___ctor(BattleRetireWindowComponent_o *this, const MethodInfo *method)
+void BattleRetireWindowComponent___ctor(BattleRetireWindowComponent_o *this, const MethodInfo *method)
 {
   this->fields.messageLabelPosInInterruptionQuest.fields.z = 0.0;
   *(_QWORD *)&this->fields.messageLabelPosInInterruptionQuest.fields.x = 0x41E6666600000000LL;
-  BattleWindowComponent___ctor((BattleWindowComponent_o *)this, 0LL);
+  BattleWindowComponent___ctor((BattleWindowComponent_o *)this, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall BattleRetireWindowComponent__CallbackConfirmDialog(
+void BattleRetireWindowComponent__CallbackConfirmDialog(
         BattleRetireWindowComponent_o *this,
         bool isDecide,
         const MethodInfo *method)
@@ -16,140 +15,133 @@ void __fastcall BattleRetireWindowComponent__CallbackConfirmDialog(
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4B1F9F0 & 1) == 0 )
+  if ( (byte_4C2A8A7 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, isDecide);
-    byte_4B1F9F0 = 1;
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C2A8A7 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
-    || (CommonUI__CloseConfirmDialog(Instance, 0LL), (Instance = (CommonUI_o *)this->fields._data_k__BackingField) == 0LL) )
+    || (CommonUI__CloseConfirmDialog(Instance, 0), (Instance = (CommonUI_o *)this->fields._data_k__BackingField) == 0) )
   {
-    sub_1BCB254(Instance, v5);
+    sub_1C2D6EC(Instance, v5);
   }
-  BattleData__UpdateContinueItemInfo((BattleData_o *)Instance, 0LL);
-  BattleRetireWindowComponent__Open(this, 0LL, v6);
+  BattleData__UpdateContinueItemInfo((BattleData_o *)Instance, 0);
+  BattleRetireWindowComponent__Open(this, 0, v6);
   this->fields.isShowDeadLineDialog = 1;
 }
 
 
-void __fastcall BattleRetireWindowComponent__Open(
+void BattleRetireWindowComponent__Open(
         BattleRetireWindowComponent_o *this,
         BattleWindowComponent_EndCall_o *call,
         const MethodInfo *method)
 {
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
   UnityEngine_GameObject_o *continueItemRoot; // x0
   struct BattleData_o *data_k__BackingField; // x8
   struct BattleEntity_o *battle_ent; // x8
-  QuestEntity_o *v15; // x21
-  UILabel_o *v16; // x21
-  __int64 *v17; // x8
-  struct BattleData_o *v18; // x8
-  const MethodInfo *v19; // x1
+  QuestEntity_o *v8; // x21
+  UILabel_o *v9; // x21
+  __int64 *v10; // x8
+  struct BattleData_o *v11; // x8
+  const MethodInfo *v12; // x1
   UILabel_o *continueCount; // x21
   UISprite_o *continueItemCountSpr; // x21
   int32_t ContinueItemImageId; // w22
   UILabel_o *checkGiveUpLabel; // x21
   int32_t ContinueItemNum; // [xsp+Ch] [xbp-24h] BYREF
+  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B1F9F1 & 1) == 0 )
+  if ( (byte_4C2A8A8 & 1) == 0 )
   {
-    sub_1BCAFF8(&AtlasManager_TypeInfo, call);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_QuestMaster___, v5);
-    sub_1BCAFF8(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__, v6);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v7);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v8);
-    sub_1BCAFF8(&StringLiteral_2829/*"BATTLE_RETIRE_CHECKSTR"*/, v9);
-    sub_1BCAFF8(&StringLiteral_2830/*"BATTLE_RETIRE_CONSUME_COST_CHECKSTR"*/, v10);
-    sub_1BCAFF8(&StringLiteral_1113/*"0"*/, v11);
-    byte_4B1F9F1 = 1;
+    sub_1C2D490(&AtlasManager_TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1C2D490(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C2D490(&StringLiteral_2843/*"BATTLE_RETIRE_CHECKSTR"*/);
+    sub_1C2D490(&StringLiteral_2844/*"BATTLE_RETIRE_CONSUME_COST_CHECKSTR"*/);
+    sub_1C2D490(&StringLiteral_1122/*"0"*/);
+    byte_4C2A8A8 = 1;
   }
   ContinueItemNum = 0;
   continueItemRoot = this->fields.continueItemRoot;
   if ( !continueItemRoot )
     goto LABEL_62;
-  UnityEngine_GameObject__SetActive(continueItemRoot, 0, 0LL);
+  UnityEngine_GameObject__SetActive(continueItemRoot, 0, 0);
   continueItemRoot = (UnityEngine_GameObject_o *)this->fields.continueCount;
   if ( !continueItemRoot )
     goto LABEL_62;
-  UILabel__set_text((UILabel_o *)continueItemRoot, (System_String_o *)StringLiteral_1113/*"0"*/, 0LL);
+  UILabel__set_text((UILabel_o *)continueItemRoot, (System_String_o *)StringLiteral_1122/*"0"*/, 0);
   continueItemRoot = (UnityEngine_GameObject_o *)this->fields.giveUpTitleSpr;
   if ( !continueItemRoot )
     goto LABEL_62;
   continueItemRoot = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)continueItemRoot,
-                                                   0LL);
+                                                   0);
   if ( !continueItemRoot )
     goto LABEL_62;
-  v25.fields.x = 0.0;
-  v25.fields.z = 0.0;
-  v25.fields.y = 77.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)continueItemRoot, v25, 0LL);
+  v18.fields.x = 0.0;
+  v18.fields.z = 0.0;
+  v18.fields.y = 77.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)continueItemRoot, v18, 0);
   continueItemRoot = this->fields.okBtn;
   if ( !continueItemRoot )
     goto LABEL_62;
-  continueItemRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(continueItemRoot, 0LL);
+  continueItemRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(continueItemRoot, 0);
   if ( !continueItemRoot )
     goto LABEL_62;
-  v26.fields.z = 0.0;
-  v26.fields.x = 193.0;
-  v26.fields.y = -72.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)continueItemRoot, v26, 0LL);
+  v19.fields.z = 0.0;
+  v19.fields.x = 193.0;
+  v19.fields.y = -72.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)continueItemRoot, v19, 0);
   continueItemRoot = this->fields.cancelBtn;
   if ( !continueItemRoot )
     goto LABEL_62;
-  continueItemRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(continueItemRoot, 0LL);
+  continueItemRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(continueItemRoot, 0);
   if ( !continueItemRoot )
     goto LABEL_62;
-  v27.fields.z = 0.0;
-  v27.fields.x = -193.0;
-  v27.fields.y = -72.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)continueItemRoot, v27, 0LL);
+  v20.fields.z = 0.0;
+  v20.fields.x = -193.0;
+  v20.fields.y = -72.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)continueItemRoot, v20, 0);
   continueItemRoot = (UnityEngine_GameObject_o *)this->fields.giveUpBg;
   if ( !continueItemRoot )
     goto LABEL_62;
-  UIWidget__set_height((UIWidget_o *)continueItemRoot, 239, 0LL);
+  UIWidget__set_height((UIWidget_o *)continueItemRoot, 239, 0);
   continueItemRoot = (UnityEngine_GameObject_o *)this->fields.continueItemDeadLineLabel;
   if ( !continueItemRoot )
     goto LABEL_62;
-  continueItemRoot = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)continueItemRoot, 0LL);
+  continueItemRoot = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)continueItemRoot, 0);
   if ( !continueItemRoot )
     goto LABEL_62;
-  UnityEngine_GameObject__SetActive(continueItemRoot, 0, 0LL);
+  UnityEngine_GameObject__SetActive(continueItemRoot, 0, 0);
   continueItemRoot = (UnityEngine_GameObject_o *)this->fields.checkGiveUpLabel;
   if ( !continueItemRoot )
     goto LABEL_62;
   continueItemRoot = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)continueItemRoot,
-                                                   0LL);
+                                                   0);
   if ( !continueItemRoot )
     goto LABEL_62;
-  v28.fields.x = 0.0;
-  v28.fields.y = 6.0;
-  v28.fields.z = 0.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)continueItemRoot, v28, 0LL);
+  v21.fields.x = 0.0;
+  v21.fields.y = 6.0;
+  v21.fields.z = 0.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)continueItemRoot, v21, 0);
   this->fields.EnableContinueItem = 0;
-  continueItemRoot = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  continueItemRoot = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !continueItemRoot )
     goto LABEL_62;
   continueItemRoot = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                    (DataManager_o *)continueItemRoot,
-                                                   (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_QuestMaster___);
+                                                   (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_QuestMaster___);
   data_k__BackingField = this->fields._data_k__BackingField;
   if ( !data_k__BackingField )
     goto LABEL_62;
@@ -161,123 +153,123 @@ void __fastcall BattleRetireWindowComponent__Open(
   continueItemRoot = (UnityEngine_GameObject_o *)DataMasterBase_object__object__int___GetEntity(
                                                    (DataMasterBase_TMaster__TEntity__PKType__o *)continueItemRoot,
                                                    battle_ent->fields.questId,
-                                                   (const MethodInfo_32C7E00 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+                                                   (const MethodInfo_3387D98 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
   if ( !this->fields._data_k__BackingField )
     goto LABEL_62;
-  v15 = (QuestEntity_o *)continueItemRoot;
-  continueItemRoot = (UnityEngine_GameObject_o *)BattleData__EnableContinueItem(this->fields._data_k__BackingField, 0LL);
+  v8 = (QuestEntity_o *)continueItemRoot;
+  continueItemRoot = (UnityEngine_GameObject_o *)BattleData__EnableContinueItem(this->fields._data_k__BackingField, 0);
   if ( ((unsigned __int8)continueItemRoot & 1) != 0 )
   {
     continueItemRoot = (UnityEngine_GameObject_o *)this->fields._data_k__BackingField;
     if ( !continueItemRoot )
       goto LABEL_62;
-    continueItemRoot = (UnityEngine_GameObject_o *)BattleData__GetContinueItemNum((BattleData_o *)continueItemRoot, 0LL);
+    continueItemRoot = (UnityEngine_GameObject_o *)BattleData__GetContinueItemNum((BattleData_o *)continueItemRoot, 0);
     if ( (int)continueItemRoot >= 1 )
     {
       continueItemRoot = (UnityEngine_GameObject_o *)this->fields._data_k__BackingField;
       if ( !continueItemRoot )
         goto LABEL_62;
-      continueItemRoot = (UnityEngine_GameObject_o *)BattleData__isNgContinue((BattleData_o *)continueItemRoot, 0LL);
+      continueItemRoot = (UnityEngine_GameObject_o *)BattleData__isNgContinue((BattleData_o *)continueItemRoot, 0);
       if ( ((unsigned __int8)continueItemRoot & 1) == 0 )
       {
         continueItemRoot = this->fields.continueItemRoot;
         if ( continueItemRoot )
         {
-          UnityEngine_GameObject__SetActive(continueItemRoot, 1, 0LL);
+          UnityEngine_GameObject__SetActive(continueItemRoot, 1, 0);
           continueItemRoot = (UnityEngine_GameObject_o *)this->fields._data_k__BackingField;
           if ( continueItemRoot )
           {
             continueCount = this->fields.continueCount;
-            ContinueItemNum = BattleData__GetContinueItemNum((BattleData_o *)continueItemRoot, 0LL);
-            continueItemRoot = (UnityEngine_GameObject_o *)System_Int32__ToString((int32_t)&ContinueItemNum, 0LL);
+            ContinueItemNum = BattleData__GetContinueItemNum((BattleData_o *)continueItemRoot, 0);
+            continueItemRoot = (UnityEngine_GameObject_o *)System_Int32__ToString((int32_t)&ContinueItemNum, 0);
             if ( continueCount )
             {
-              UILabel__set_text(continueCount, (System_String_o *)continueItemRoot, 0LL);
+              UILabel__set_text(continueCount, (System_String_o *)continueItemRoot, 0);
               continueItemRoot = (UnityEngine_GameObject_o *)this->fields._data_k__BackingField;
               if ( continueItemRoot )
               {
                 continueItemCountSpr = this->fields.continueItemCountSpr;
-                ContinueItemImageId = BattleData__GetContinueItemImageId((BattleData_o *)continueItemRoot, 0LL);
+                ContinueItemImageId = BattleData__GetContinueItemImageId((BattleData_o *)continueItemRoot, 0);
                 if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                AtlasManager__SetItem(continueItemCountSpr, ContinueItemImageId, 0LL);
+                AtlasManager__SetItem(continueItemCountSpr, ContinueItemImageId, 0);
                 continueItemRoot = (UnityEngine_GameObject_o *)this->fields.giveUpTitleSpr;
                 if ( continueItemRoot )
                 {
                   continueItemRoot = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                                    (UnityEngine_Component_o *)continueItemRoot,
-                                                                   0LL);
+                                                                   0);
                   if ( continueItemRoot )
                   {
-                    v29.fields.x = 0.0;
-                    v29.fields.z = 0.0;
-                    v29.fields.y = 97.0;
-                    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)continueItemRoot, v29, 0LL);
+                    v22.fields.x = 0.0;
+                    v22.fields.z = 0.0;
+                    v22.fields.y = 97.0;
+                    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)continueItemRoot, v22, 0);
                     continueItemRoot = this->fields.okBtn;
                     if ( continueItemRoot )
                     {
                       continueItemRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(
                                                                        continueItemRoot,
-                                                                       0LL);
+                                                                       0);
                       if ( continueItemRoot )
                       {
-                        v30.fields.z = 0.0;
-                        v30.fields.x = 193.0;
-                        v30.fields.y = -92.0;
-                        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)continueItemRoot, v30, 0LL);
+                        v23.fields.z = 0.0;
+                        v23.fields.x = 193.0;
+                        v23.fields.y = -92.0;
+                        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)continueItemRoot, v23, 0);
                         continueItemRoot = this->fields.cancelBtn;
                         if ( continueItemRoot )
                         {
                           continueItemRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(
                                                                            continueItemRoot,
-                                                                           0LL);
+                                                                           0);
                           if ( continueItemRoot )
                           {
-                            v31.fields.z = 0.0;
-                            v31.fields.x = -193.0;
-                            v31.fields.y = -92.0;
+                            v24.fields.z = 0.0;
+                            v24.fields.x = -193.0;
+                            v24.fields.y = -92.0;
                             UnityEngine_Transform__set_localPosition(
                               (UnityEngine_Transform_o *)continueItemRoot,
-                              v31,
-                              0LL);
+                              v24,
+                              0);
                             continueItemRoot = (UnityEngine_GameObject_o *)this->fields.giveUpBg;
                             if ( continueItemRoot )
                             {
-                              UIWidget__set_height((UIWidget_o *)continueItemRoot, 279, 0LL);
+                              UIWidget__set_height((UIWidget_o *)continueItemRoot, 279, 0);
                               continueItemRoot = (UnityEngine_GameObject_o *)this->fields.checkGiveUpLabel;
                               if ( continueItemRoot )
                               {
                                 continueItemRoot = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                                                  (UnityEngine_Component_o *)continueItemRoot,
-                                                                                 0LL);
+                                                                                 0);
                                 if ( continueItemRoot )
                                 {
-                                  v32.fields.x = 0.0;
-                                  v32.fields.y = 26.0;
-                                  v32.fields.z = 0.0;
+                                  v25.fields.x = 0.0;
+                                  v25.fields.y = 26.0;
+                                  v25.fields.z = 0.0;
                                   UnityEngine_Transform__set_localPosition(
                                     (UnityEngine_Transform_o *)continueItemRoot,
-                                    v32,
-                                    0LL);
+                                    v25,
+                                    0);
                                   this->fields.EnableContinueItem = 1;
                                   checkGiveUpLabel = this->fields.checkGiveUpLabel;
                                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                                   continueItemRoot = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                                   (System_String_o *)StringLiteral_2829/*"BATTLE_RETIRE_CHECKSTR"*/,
-                                                                                   0LL);
+                                                                                   (System_String_o *)StringLiteral_2843/*"BATTLE_RETIRE_CHECKSTR"*/,
+                                                                                   0);
                                   if ( checkGiveUpLabel )
                                   {
-                                    UILabel__set_text(checkGiveUpLabel, (System_String_o *)continueItemRoot, 0LL);
+                                    UILabel__set_text(checkGiveUpLabel, (System_String_o *)continueItemRoot, 0);
                                     continueItemRoot = (UnityEngine_GameObject_o *)this->fields.continueItemDeadLineLabel;
                                     if ( continueItemRoot )
                                     {
                                       continueItemRoot = UnityEngine_Component__get_gameObject(
                                                            (UnityEngine_Component_o *)continueItemRoot,
-                                                           0LL);
+                                                           0);
                                       if ( continueItemRoot )
                                       {
-                                        UnityEngine_GameObject__SetActive(continueItemRoot, 1, 0LL);
+                                        UnityEngine_GameObject__SetActive(continueItemRoot, 1, 0);
                                         goto LABEL_40;
                                       }
                                     }
@@ -299,241 +291,228 @@ void __fastcall BattleRetireWindowComponent__Open(
       }
     }
   }
-  if ( !v15 )
+  if ( !v8 )
     goto LABEL_62;
-  continueItemRoot = (UnityEngine_GameObject_o *)QuestEntity__HasFlag(v15, 0x40000000LL, 0LL);
+  continueItemRoot = (UnityEngine_GameObject_o *)QuestEntity__HasFlag(v8, 0x40000000, 0);
   if ( ((unsigned __int8)continueItemRoot & 1) != 0 )
   {
-    v16 = this->fields.checkGiveUpLabel;
+    v9 = this->fields.checkGiveUpLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v17 = &StringLiteral_2830/*"BATTLE_RETIRE_CONSUME_COST_CHECKSTR"*/;
+    v10 = &StringLiteral_2844/*"BATTLE_RETIRE_CONSUME_COST_CHECKSTR"*/;
     goto LABEL_38;
   }
-  v18 = this->fields._data_k__BackingField;
-  if ( !v18 )
+  v11 = this->fields._data_k__BackingField;
+  if ( !v11 )
     goto LABEL_62;
-  continueItemRoot = (UnityEngine_GameObject_o *)v18->fields.questphase_ent;
+  continueItemRoot = (UnityEngine_GameObject_o *)v11->fields.questphase_ent;
   if ( !continueItemRoot )
     goto LABEL_62;
-  if ( !QuestPhaseEntity__IsInterruptionQuest((QuestPhaseEntity_o *)continueItemRoot, 0LL) )
+  if ( !QuestPhaseEntity__IsInterruptionQuest((QuestPhaseEntity_o *)continueItemRoot, 0) )
   {
-    v16 = this->fields.checkGiveUpLabel;
+    v9 = this->fields.checkGiveUpLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v17 = &StringLiteral_2829/*"BATTLE_RETIRE_CHECKSTR"*/;
+    v10 = &StringLiteral_2843/*"BATTLE_RETIRE_CHECKSTR"*/;
 LABEL_38:
-    continueItemRoot = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v17, 0LL);
-    if ( v16 )
+    continueItemRoot = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)*v10, 0);
+    if ( v9 )
     {
-      UILabel__set_text(v16, (System_String_o *)continueItemRoot, 0LL);
+      UILabel__set_text(v9, (System_String_o *)continueItemRoot, 0);
       goto LABEL_40;
     }
 LABEL_62:
-    sub_1BCB254(continueItemRoot, call);
+    sub_1C2D6EC(continueItemRoot, call);
   }
-  BattleRetireWindowComponent__SetInterruptionQuestUI(this, v19);
+  BattleRetireWindowComponent__SetInterruptionQuestUI(this, v12);
 LABEL_40:
-  BattleWindowComponent__Open((BattleWindowComponent_o *)this, call, 0LL);
+  BattleWindowComponent__Open((BattleWindowComponent_o *)this, call, 0);
 }
 
 
-void __fastcall BattleRetireWindowComponent__SetInterruptionQuestUI(
-        BattleRetireWindowComponent_o *this,
-        const MethodInfo *method)
+void BattleRetireWindowComponent__SetInterruptionQuestUI(BattleRetireWindowComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   UIWidget_o *checkGiveUpLabel; // x0
-  UIWidget_o *v11; // x8
+  UIWidget_o *v4; // x8
   int m_CachedPtr; // w23
-  System_String_o *v13; // x20
-  __int64 v14; // x2
-  __int64 v15; // x3
-  __int64 v16; // x4
-  Il2CppObject *v17; // x0
-  System_String_o *v18; // x0
-  UILabel_o *v19; // x21
+  System_String_o *v6; // x20
+  __int64 v7; // x2
+  __int64 v8; // x3
+  __int64 v9; // x4
+  Il2CppObject *v10; // x0
+  System_String_o *v11; // x0
+  UILabel_o *v12; // x21
   UIRect_o *giveUpBg; // x20
-  struct UISprite_o *v21; // x8
-  struct UISprite_o *v22; // x8
-  struct UISprite_o *v23; // x8
-  struct UISprite_o *v24; // x8
+  struct UISprite_o *v14; // x8
+  struct UISprite_o *v15; // x8
+  struct UISprite_o *v16; // x8
+  struct UISprite_o *v17; // x8
   UIRect_o *Component_object; // x20
-  UIRect_o *v26; // x20
-  int v27; // [xsp+Ch] [xbp-34h] BYREF
+  UIRect_o *v19; // x20
+  int v20; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B1F9F2 & 1) == 0 )
+  if ( (byte_4C2A8A9 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_UISprite___, method);
-    sub_1BCAFF8(&int_TypeInfo, v3);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v4);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BCAFF8(&Method_SingletonTemplate_BattleItemData__get_Instance__, v6);
-    sub_1BCAFF8(&StringLiteral_16484/*"_{0}"*/, v7);
-    sub_1BCAFF8(&StringLiteral_2831/*"BATTLE_RETIRE_INTERRUPTION_BATTLE_ITEM_CHECK_STR"*/, v8);
-    sub_1BCAFF8(&StringLiteral_2832/*"BATTLE_RETIRE_INTERRUPTION_BATTLE_ITEM_CHECK_STR_PARTY"*/, v9);
-    byte_4B1F9F2 = 1;
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1C2D490(&int_TypeInfo);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonTemplate_BattleItemData__get_Instance__);
+    sub_1C2D490(&StringLiteral_16617/*"_{0}"*/);
+    sub_1C2D490(&StringLiteral_2845/*"BATTLE_RETIRE_INTERRUPTION_BATTLE_ITEM_CHECK_STR"*/);
+    sub_1C2D490(&StringLiteral_2846/*"BATTLE_RETIRE_INTERRUPTION_BATTLE_ITEM_CHECK_STR_PARTY"*/);
+    byte_4C2A8A9 = 1;
   }
   checkGiveUpLabel = (UIWidget_o *)this->fields.checkGiveUpLabel;
   if ( !checkGiveUpLabel )
     goto LABEL_49;
-  UIWidget__set_pivot(checkGiveUpLabel, 1, 0LL);
+  UIWidget__set_pivot(checkGiveUpLabel, 1, 0);
   checkGiveUpLabel = (UIWidget_o *)this->fields.checkGiveUpLabel;
   if ( !checkGiveUpLabel )
     goto LABEL_49;
-  UILabel__set_overflowMethod((UILabel_o *)checkGiveUpLabel, 2, 0LL);
+  UILabel__set_overflowMethod((UILabel_o *)checkGiveUpLabel, 2, 0);
   checkGiveUpLabel = (UIWidget_o *)this->fields.checkGiveUpLabel;
   if ( !checkGiveUpLabel )
     goto LABEL_49;
-  checkGiveUpLabel = (UIWidget_o *)UnityEngine_Component__get_transform(
-                                     (UnityEngine_Component_o *)checkGiveUpLabel,
-                                     0LL);
+  checkGiveUpLabel = (UIWidget_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)checkGiveUpLabel, 0);
   if ( !checkGiveUpLabel )
     goto LABEL_49;
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)checkGiveUpLabel,
     this->fields.messageLabelPosInInterruptionQuest,
-    0LL);
-  checkGiveUpLabel = (UIWidget_o *)SingletonTemplate_object___get_Instance((const MethodInfo_38F8EF8 *)Method_SingletonTemplate_BattleItemData__get_Instance__);
+    0);
+  checkGiveUpLabel = (UIWidget_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_BattleItemData__get_Instance__);
   if ( !checkGiveUpLabel )
     goto LABEL_49;
-  v11 = checkGiveUpLabel;
+  v4 = checkGiveUpLabel;
   checkGiveUpLabel = (UIWidget_o *)this->fields._data_k__BackingField;
   if ( !checkGiveUpLabel )
     goto LABEL_49;
-  m_CachedPtr = v11->fields.m_CachedPtr;
-  v13 = (System_String_o *)StringLiteral_2831/*"BATTLE_RETIRE_INTERRUPTION_BATTLE_ITEM_CHECK_STR"*/;
-  if ( BattleData__IsWaveSetupAsOneParty((BattleData_o *)checkGiveUpLabel, 0LL) )
-    v13 = (System_String_o *)StringLiteral_2832/*"BATTLE_RETIRE_INTERRUPTION_BATTLE_ITEM_CHECK_STR_PARTY"*/;
+  m_CachedPtr = v4->fields.m_CachedPtr;
+  v6 = (System_String_o *)StringLiteral_2845/*"BATTLE_RETIRE_INTERRUPTION_BATTLE_ITEM_CHECK_STR"*/;
+  if ( BattleData__IsWaveSetupAsOneParty((BattleData_o *)checkGiveUpLabel, 0) )
+    v6 = (System_String_o *)StringLiteral_2846/*"BATTLE_RETIRE_INTERRUPTION_BATTLE_ITEM_CHECK_STR_PARTY"*/;
   if ( m_CachedPtr >= 1 )
   {
-    v27 = m_CachedPtr;
-    v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27, v14, v15, v16);
-    v18 = System_String__Format((System_String_o *)StringLiteral_16484/*"_{0}"*/, v17, 0LL);
-    v13 = System_String__Concat_62450424((System_String_o *)StringLiteral_2831/*"BATTLE_RETIRE_INTERRUPTION_BATTLE_ITEM_CHECK_STR"*/, v18, 0LL);
+    v20 = m_CachedPtr;
+    v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v20, v7, v8, v9);
+    v11 = System_String__Format((System_String_o *)StringLiteral_16617/*"_{0}"*/, v10, 0);
+    v6 = System_String__Concat_63457864((System_String_o *)StringLiteral_2845/*"BATTLE_RETIRE_INTERRUPTION_BATTLE_ITEM_CHECK_STR"*/, v11, 0);
   }
-  v19 = this->fields.checkGiveUpLabel;
+  v12 = this->fields.checkGiveUpLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  checkGiveUpLabel = (UIWidget_o *)LocalizationManager__Get(v13, 0LL);
-  if ( !v19 )
+  checkGiveUpLabel = (UIWidget_o *)LocalizationManager__Get(v6, 0);
+  if ( !v12 )
     goto LABEL_49;
-  UILabel__set_text(v19, (System_String_o *)checkGiveUpLabel, 0LL);
+  UILabel__set_text(v12, (System_String_o *)checkGiveUpLabel, 0);
   checkGiveUpLabel = (UIWidget_o *)this->fields.checkGiveUpLabel;
   if ( !checkGiveUpLabel )
     goto LABEL_49;
   giveUpBg = (UIRect_o *)this->fields.giveUpBg;
-  checkGiveUpLabel = (UIWidget_o *)UnityEngine_Component__get_gameObject(
-                                     (UnityEngine_Component_o *)checkGiveUpLabel,
-                                     0LL);
+  checkGiveUpLabel = (UIWidget_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)checkGiveUpLabel, 0);
   if ( !giveUpBg )
     goto LABEL_49;
-  UIRect__SetAnchor_48605200(giveUpBg, (UnityEngine_GameObject_o *)checkGiveUpLabel, 0LL);
-  v21 = this->fields.giveUpBg;
-  if ( !v21 )
+  UIRect__SetAnchor_49309228(giveUpBg, (UnityEngine_GameObject_o *)checkGiveUpLabel, 0);
+  v14 = this->fields.giveUpBg;
+  if ( !v14 )
     goto LABEL_49;
-  checkGiveUpLabel = (UIWidget_o *)v21->fields.leftAnchor;
+  checkGiveUpLabel = (UIWidget_o *)v14->fields.leftAnchor;
   if ( !checkGiveUpLabel )
     goto LABEL_49;
-  UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, -107.0, 0LL);
-  v22 = this->fields.giveUpBg;
-  if ( !v22 )
+  UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, -107.0, 0);
+  v15 = this->fields.giveUpBg;
+  if ( !v15 )
     goto LABEL_49;
-  checkGiveUpLabel = (UIWidget_o *)v22->fields.rightAnchor;
+  checkGiveUpLabel = (UIWidget_o *)v15->fields.rightAnchor;
   if ( !checkGiveUpLabel )
     goto LABEL_49;
-  UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 1.0, 107.0, 0LL);
-  v23 = this->fields.giveUpBg;
-  if ( !v23 )
+  UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 1.0, 107.0, 0);
+  v16 = this->fields.giveUpBg;
+  if ( !v16 )
     goto LABEL_49;
-  checkGiveUpLabel = (UIWidget_o *)v23->fields.bottomAnchor;
+  checkGiveUpLabel = (UIWidget_o *)v16->fields.bottomAnchor;
   if ( !checkGiveUpLabel )
     goto LABEL_49;
-  UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, -102.0, 0LL);
-  v24 = this->fields.giveUpBg;
-  if ( !v24 )
+  UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, -102.0, 0);
+  v17 = this->fields.giveUpBg;
+  if ( !v17 )
     goto LABEL_49;
-  checkGiveUpLabel = (UIWidget_o *)v24->fields.topAnchor;
+  checkGiveUpLabel = (UIWidget_o *)v17->fields.topAnchor;
   if ( !checkGiveUpLabel )
     goto LABEL_49;
-  UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 1.0, 90.0, 0LL);
+  UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 1.0, 90.0, 0);
   checkGiveUpLabel = (UIWidget_o *)this->fields.cancelBtn;
   if ( !checkGiveUpLabel )
     goto LABEL_49;
   Component_object = (UIRect_o *)UnityEngine_GameObject__GetComponent_object_(
                                    (UnityEngine_GameObject_o *)checkGiveUpLabel,
-                                   (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                   (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
   {
     checkGiveUpLabel = (UIWidget_o *)this->fields.giveUpBg;
     if ( !checkGiveUpLabel )
       goto LABEL_49;
     checkGiveUpLabel = (UIWidget_o *)UnityEngine_Component__get_gameObject(
                                        (UnityEngine_Component_o *)checkGiveUpLabel,
-                                       0LL);
+                                       0);
     if ( !Component_object )
       goto LABEL_49;
-    UIRect__SetAnchor_48605200(Component_object, (UnityEngine_GameObject_o *)checkGiveUpLabel, 0LL);
+    UIRect__SetAnchor_49309228(Component_object, (UnityEngine_GameObject_o *)checkGiveUpLabel, 0);
     checkGiveUpLabel = (UIWidget_o *)Component_object->fields.leftAnchor;
     if ( !checkGiveUpLabel )
       goto LABEL_49;
-    UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, 113.0, 0LL);
+    UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, 113.0, 0);
     checkGiveUpLabel = (UIWidget_o *)Component_object->fields.rightAnchor;
     if ( !checkGiveUpLabel )
       goto LABEL_49;
-    UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, 383.0, 0LL);
+    UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, 383.0, 0);
     checkGiveUpLabel = (UIWidget_o *)Component_object->fields.bottomAnchor;
     if ( !checkGiveUpLabel )
       goto LABEL_49;
-    UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, 15.0, 0LL);
+    UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, 15.0, 0);
     checkGiveUpLabel = (UIWidget_o *)Component_object->fields.topAnchor;
     if ( !checkGiveUpLabel )
       goto LABEL_49;
-    UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, 81.0, 0LL);
+    UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, 81.0, 0);
   }
   checkGiveUpLabel = (UIWidget_o *)this->fields.okBtn;
   if ( !checkGiveUpLabel )
     goto LABEL_49;
-  v26 = (UIRect_o *)UnityEngine_GameObject__GetComponent_object_(
+  v19 = (UIRect_o *)UnityEngine_GameObject__GetComponent_object_(
                       (UnityEngine_GameObject_o *)checkGiveUpLabel,
-                      (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                      (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v26, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v19, 0, 0) )
   {
     checkGiveUpLabel = (UIWidget_o *)this->fields.giveUpBg;
     if ( checkGiveUpLabel )
     {
       checkGiveUpLabel = (UIWidget_o *)UnityEngine_Component__get_gameObject(
                                          (UnityEngine_Component_o *)checkGiveUpLabel,
-                                         0LL);
-      if ( v26 )
+                                         0);
+      if ( v19 )
       {
-        UIRect__SetAnchor_48605200(v26, (UnityEngine_GameObject_o *)checkGiveUpLabel, 0LL);
-        checkGiveUpLabel = (UIWidget_o *)v26->fields.leftAnchor;
+        UIRect__SetAnchor_49309228(v19, (UnityEngine_GameObject_o *)checkGiveUpLabel, 0);
+        checkGiveUpLabel = (UIWidget_o *)v19->fields.leftAnchor;
         if ( checkGiveUpLabel )
         {
-          UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 1.0, -383.0, 0LL);
-          checkGiveUpLabel = (UIWidget_o *)v26->fields.rightAnchor;
+          UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 1.0, -383.0, 0);
+          checkGiveUpLabel = (UIWidget_o *)v19->fields.rightAnchor;
           if ( checkGiveUpLabel )
           {
-            UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 1.0, -113.0, 0LL);
-            checkGiveUpLabel = (UIWidget_o *)v26->fields.bottomAnchor;
+            UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 1.0, -113.0, 0);
+            checkGiveUpLabel = (UIWidget_o *)v19->fields.bottomAnchor;
             if ( checkGiveUpLabel )
             {
-              UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, 15.0, 0LL);
-              checkGiveUpLabel = (UIWidget_o *)v26->fields.topAnchor;
+              UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, 15.0, 0);
+              checkGiveUpLabel = (UIWidget_o *)v19->fields.topAnchor;
               if ( checkGiveUpLabel )
               {
-                UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, 81.0, 0LL);
+                UIRect_AnchorPoint__Set((UIRect_AnchorPoint_o *)checkGiveUpLabel, 0.0, 81.0, 0);
                 return;
               }
             }
@@ -542,130 +521,120 @@ void __fastcall BattleRetireWindowComponent__SetInterruptionQuestUI(
       }
     }
 LABEL_49:
-    sub_1BCB254(checkGiveUpLabel, method);
+    sub_1C2D6EC(checkGiveUpLabel, method);
   }
 }
 
 
-void __fastcall BattleRetireWindowComponent__Update(BattleRetireWindowComponent_o *this, const MethodInfo *method)
+void BattleRetireWindowComponent__Update(BattleRetireWindowComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
   UnityEngine_Object_o *data_k__BackingField; // x20
   UILabel_o *continueItemDeadLineLabel; // x20
-  System_String_o *v13; // x0
-  __int64 v14; // x1
-  System_String_o *v15; // x21
+  System_String_o *v5; // x0
+  __int64 v6; // x1
+  System_String_o *v7; // x21
   int64_t ContinueDeadLine; // x0
   Il2CppObject *RestTime; // x0
-  int64_t v18; // x20
+  int64_t v10; // x20
   Il2CppObject *Instance; // x20
-  System_String_o *v20; // x21
-  ErrorDialog_ClickDelegate_o *v21; // x22
+  System_String_o *v12; // x21
+  ErrorDialog_ClickDelegate_o *v13; // x22
   System_Nullable_Vector2__o effectDistance; // [xsp+0h] [xbp-50h]
 
-  if ( (byte_4B1F9EF & 1) == 0 )
+  if ( (byte_4C2A8A6 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_BattleRetireWindowComponent_CallbackConfirmDialog__, method);
-    sub_1BCAFF8(&ErrorDialog_ClickDelegate_TypeInfo, v3);
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, v4);
-    sub_1BCAFF8(&NetworkManager_TypeInfo, v5);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v6);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__, v7);
-    sub_1BCAFF8(&StringLiteral_2707/*"BATTLE_CONTINUE_ITEM_GIVEUP"*/, v8);
-    sub_1BCAFF8(&StringLiteral_2706/*"BATTLE_CONTINUE_ITEM_END_TIME"*/, v9);
-    sub_1BCAFF8(&StringLiteral_1/*""*/, v10);
-    byte_4B1F9EF = 1;
+    sub_1C2D490(&Method_BattleRetireWindowComponent_CallbackConfirmDialog__);
+    sub_1C2D490(&ErrorDialog_ClickDelegate_TypeInfo);
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&NetworkManager_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C2D490(&StringLiteral_2720/*"BATTLE_CONTINUE_ITEM_GIVEUP"*/);
+    sub_1C2D490(&StringLiteral_2719/*"BATTLE_CONTINUE_ITEM_END_TIME"*/);
+    sub_1C2D490(&StringLiteral_1/*""*/);
+    byte_4C2A8A6 = 1;
   }
   data_k__BackingField = (UnityEngine_Object_o *)this->fields._data_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Equality(data_k__BackingField, 0LL, 0LL) && this->fields.EnableContinueItem )
+  if ( !UnityEngine_Object__op_Equality(data_k__BackingField, 0, 0) && this->fields.EnableContinueItem )
   {
     continueItemDeadLineLabel = this->fields.continueItemDeadLineLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_2707/*"BATTLE_CONTINUE_ITEM_GIVEUP"*/, 0LL);
+    v5 = LocalizationManager__Get((System_String_o *)StringLiteral_2720/*"BATTLE_CONTINUE_ITEM_GIVEUP"*/, 0);
     if ( !this->fields._data_k__BackingField )
       goto LABEL_21;
-    v15 = v13;
-    ContinueDeadLine = BattleData__GetContinueDeadLine(this->fields._data_k__BackingField, 0LL);
-    RestTime = (Il2CppObject *)LocalizationManager__GetRestTime(ContinueDeadLine, 0LL);
-    v13 = System_String__Format(v15, RestTime, 0LL);
+    v7 = v5;
+    ContinueDeadLine = BattleData__GetContinueDeadLine(this->fields._data_k__BackingField, 0);
+    RestTime = (Il2CppObject *)LocalizationManager__GetRestTime(ContinueDeadLine, 0);
+    v5 = System_String__Format(v7, RestTime, 0);
     if ( !continueItemDeadLineLabel )
       goto LABEL_21;
-    UILabel__set_text(continueItemDeadLineLabel, v13, 0LL);
-    v13 = (System_String_o *)this->fields._data_k__BackingField;
-    if ( !v13 )
+    UILabel__set_text(continueItemDeadLineLabel, v5, 0);
+    v5 = (System_String_o *)this->fields._data_k__BackingField;
+    if ( !v5 )
       goto LABEL_21;
-    v18 = BattleData__GetContinueDeadLine((BattleData_o *)v13, 0LL);
+    v10 = BattleData__GetContinueDeadLine((BattleData_o *)v5, 0);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( v18 < NetworkManager__getTime(0LL) && !this->fields.isShowDeadLineDialog )
+    if ( v10 < NetworkManager__getTime(0) && !this->fields.isShowDeadLineDialog )
     {
       this->fields.isShowDeadLineDialog = 1;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v20 = LocalizationManager__Get((System_String_o *)StringLiteral_2706/*"BATTLE_CONTINUE_ITEM_END_TIME"*/, 0LL);
-      v21 = (ErrorDialog_ClickDelegate_o *)sub_1BCB244(ErrorDialog_ClickDelegate_TypeInfo);
+      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_2719/*"BATTLE_CONTINUE_ITEM_END_TIME"*/, 0);
+      v13 = (ErrorDialog_ClickDelegate_o *)sub_1C2D6DC(ErrorDialog_ClickDelegate_TypeInfo);
       ErrorDialog_ClickDelegate___ctor(
-        v21,
+        v13,
         (Il2CppObject *)this,
         Method_BattleRetireWindowComponent_CallbackConfirmDialog__,
-        0LL);
+        0);
       if ( Instance )
       {
-        *(_QWORD *)&effectDistance.fields.hasValue = 0LL;
+        *(_QWORD *)&effectDistance.fields.hasValue = 0;
         effectDistance.fields.value.fields.y = 0.0;
         CommonUI__OpenWarningDialog(
           (CommonUI_o *)Instance,
           (System_String_o *)StringLiteral_1/*""*/,
-          v20,
-          v21,
+          v12,
+          v13,
           0,
           0,
           -1.0,
           1,
           effectDistance,
-          0LL);
+          0);
         return;
       }
 LABEL_21:
-      sub_1BCB254(v13, v14);
+      sub_1C2D6EC(v5, v6);
     }
   }
 }
 
 
-System_String_o *__fastcall BattleRetireWindowComponent__get_closeBtnPath(
+System_String_o *BattleRetireWindowComponent__get_closeBtnPath(
         BattleRetireWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4B1F9F3 & 1) == 0 )
+  if ( (byte_4C2A8AA & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_17329/*"btn_cancel"*/, method);
-    byte_4B1F9F3 = 1;
+    sub_1C2D490(&StringLiteral_17464/*"btn_cancel"*/);
+    byte_4C2A8AA = 1;
   }
-  return (System_String_o *)StringLiteral_17329/*"btn_cancel"*/;
+  return (System_String_o *)StringLiteral_17464/*"btn_cancel"*/;
 }
 
 
-BattleData_o *__fastcall BattleRetireWindowComponent__get_data(
-        BattleRetireWindowComponent_o *this,
-        const MethodInfo *method)
+BattleData_o *BattleRetireWindowComponent__get_data(BattleRetireWindowComponent_o *this, const MethodInfo *method)
 {
   return this->fields._data_k__BackingField;
 }
 
 
-void __fastcall BattleRetireWindowComponent__set_data(
+void BattleRetireWindowComponent__set_data(
         BattleRetireWindowComponent_o *this,
         BattleData_o *value,
         const MethodInfo *method)
@@ -673,5 +642,5 @@ void __fastcall BattleRetireWindowComponent__set_data(
   const MethodInfo *v3; // x3
 
   this->fields._data_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._data_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._data_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

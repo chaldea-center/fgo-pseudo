@@ -1,14 +1,12 @@
-void __fastcall PosCountNormalBattleInfoPosData___ctor(
-        PosCountNormalBattleInfoPosData_o *this,
-        const MethodInfo *method)
+void PosCountNormalBattleInfoPosData___ctor(PosCountNormalBattleInfoPosData_o *this, const MethodInfo *method)
 {
   this->fields.skipPos.fields.z = 0.0;
   *(_QWORD *)&this->fields.skipPos.fields.x = 0x43070000C3FA0000LL;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-UnityEngine_Vector3_o __fastcall PosCountNormalBattleInfoPosData__get_SkillSkipTrLocalPos(
+UnityEngine_Vector3_o PosCountNormalBattleInfoPosData__get_SkillSkipTrLocalPos(
         PosCountNormalBattleInfoPosData_o *this,
         const MethodInfo *method)
 {

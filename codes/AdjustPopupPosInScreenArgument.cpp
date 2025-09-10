@@ -1,4 +1,4 @@
-void __fastcall AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgument_o *this, const MethodInfo *method)
+void AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgument_o *this, const MethodInfo *method)
 {
   UnityEngine_Vector3_c *v3; // x8
   struct UnityEngine_Vector3_StaticFields *static_fields; // x9
@@ -7,10 +7,10 @@ void __fastcall AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgu
   float v7; // s1
 
   this->fields.IsExec = 1;
-  if ( !byte_4B16191 )
+  if ( !byte_4C20DA1 )
   {
-    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4B16191 = 1;
+    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA1 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -21,12 +21,11 @@ void __fastcall AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgu
   v7 = v6->zeroVector.fields.z;
   *(_QWORD *)&this->fields._AdjustAfterOffset_k__BackingField.fields.x = *(_QWORD *)&v6->zeroVector.fields.x;
   this->fields._AdjustAfterOffset_k__BackingField.fields.z = v7;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall AdjustPopupPosInScreenArgument___ctor_46260864(
+void AdjustPopupPosInScreenArgument___ctor_46981188(
         AdjustPopupPosInScreenArgument_o *this,
         UnityEngine_Vector3_o adjustAfterOffset,
         const MethodInfo *method)
@@ -44,10 +43,10 @@ void __fastcall AdjustPopupPosInScreenArgument___ctor_46260864(
   z = adjustAfterOffset.fields.z;
   y = adjustAfterOffset.fields.y;
   x = adjustAfterOffset.fields.x;
-  if ( !byte_4B16191 )
+  if ( !byte_4C20DA1 )
   {
-    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, method);
-    byte_4B16191 = 1;
+    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    byte_4C20DA1 = 1;
   }
   v7 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -58,15 +57,14 @@ void __fastcall AdjustPopupPosInScreenArgument___ctor_46260864(
   v11 = v10->zeroVector.fields.z;
   *(_QWORD *)&this->fields._AdjustAfterOffset_k__BackingField.fields.x = *(_QWORD *)&v10->zeroVector.fields.x;
   this->fields._AdjustAfterOffset_k__BackingField.fields.z = v11;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._AdjustAfterOffset_k__BackingField.fields.x = x;
   this->fields._AdjustAfterOffset_k__BackingField.fields.y = y;
   this->fields._AdjustAfterOffset_k__BackingField.fields.z = z;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-AdjustPopupPosInScreenArgument_o *__fastcall AdjustPopupPosInScreenArgument__Init(
+AdjustPopupPosInScreenArgument_o *AdjustPopupPosInScreenArgument__Init(
         AdjustPopupPosInScreenArgument_o *this,
         UnityEngine_Camera_o *camera,
         UnityEngine_Vector3_o worldPos,
@@ -81,7 +79,7 @@ AdjustPopupPosInScreenArgument_o *__fastcall AdjustPopupPosInScreenArgument__Ini
   z = worldPos.fields.z;
   y = worldPos.fields.y;
   x = worldPos.fields.x;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)camera, (int32_t)method, v4);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)camera, (int32_t)method, v4);
   this->fields._WorldPos_k__BackingField.fields.x = x;
   this->fields._WorldPos_k__BackingField.fields.y = y;
   this->fields._WorldPos_k__BackingField.fields.z = z;
@@ -89,8 +87,7 @@ AdjustPopupPosInScreenArgument_o *__fastcall AdjustPopupPosInScreenArgument__Ini
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall AdjustPopupPosInScreenArgument__UpdateTargetWorldPos(
+void AdjustPopupPosInScreenArgument__UpdateTargetWorldPos(
         AdjustPopupPosInScreenArgument_o *this,
         UnityEngine_Vector3_o currentWorldPos,
         const MethodInfo *method)
@@ -99,7 +96,7 @@ void __fastcall AdjustPopupPosInScreenArgument__UpdateTargetWorldPos(
 }
 
 
-UnityEngine_Vector3_o __fastcall AdjustPopupPosInScreenArgument__get_AdjustAfterOffset(
+UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_AdjustAfterOffset(
         AdjustPopupPosInScreenArgument_o *this,
         const MethodInfo *method)
 {
@@ -118,7 +115,7 @@ UnityEngine_Vector3_o __fastcall AdjustPopupPosInScreenArgument__get_AdjustAfter
 }
 
 
-UnityEngine_Camera_o *__fastcall AdjustPopupPosInScreenArgument__get_Camera(
+UnityEngine_Camera_o *AdjustPopupPosInScreenArgument__get_Camera(
         AdjustPopupPosInScreenArgument_o *this,
         const MethodInfo *method)
 {
@@ -126,58 +123,42 @@ UnityEngine_Camera_o *__fastcall AdjustPopupPosInScreenArgument__get_Camera(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-UnityEngine_Vector3_o __fastcall AdjustPopupPosInScreenArgument__get_ViewPos(
+UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_ViewPos(
         AdjustPopupPosInScreenArgument_o *this,
         const MethodInfo *method)
 {
   UnityEngine_Object_o *Camera_k__BackingField; // x20
   __int64 v4; // x1
   UnityEngine_Camera_o *v5; // x0
-  float x; // s0
-  float y; // s1
-  float z; // s2
-  struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4B1F7F0 & 1) == 0 )
+  if ( (byte_4C2A69D & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    byte_4B1F7F0 = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C2A69D = 1;
   }
   Camera_k__BackingField = (UnityEngine_Object_o *)this->fields._Camera_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(Camera_k__BackingField, 0LL, 0LL) )
+  if ( UnityEngine_Object__op_Inequality(Camera_k__BackingField, 0, 0) )
   {
     v5 = this->fields._Camera_k__BackingField;
     if ( !v5 )
-      sub_1BCB254(0LL, v4);
-    *(UnityEngine_Vector3_o *)&x = UnityEngine_Camera__WorldToViewportPoint_69942352(
-                                     v5,
-                                     this->fields._WorldPos_k__BackingField,
-                                     0LL);
+      sub_1C2D6EC(0, v4);
+    return UnityEngine_Camera__WorldToViewportPoint_70969980(v5, this->fields._WorldPos_k__BackingField, 0);
   }
   else
   {
-    if ( !byte_4B16191 )
+    if ( !byte_4C20DA1 )
     {
-      sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v4);
-      byte_4B16191 = 1;
+      sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+      byte_4C20DA1 = 1;
     }
-    static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-    x = static_fields->zeroVector.fields.x;
-    y = static_fields->zeroVector.fields.y;
-    z = static_fields->zeroVector.fields.z;
+    return UnityEngine_Vector3_TypeInfo->static_fields->zeroVector;
   }
-  result.fields.z = z;
-  result.fields.y = y;
-  result.fields.x = x;
-  return result;
 }
 
 
-UnityEngine_Vector3_o __fastcall AdjustPopupPosInScreenArgument__get_WorldPos(
+UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_WorldPos(
         AdjustPopupPosInScreenArgument_o *this,
         const MethodInfo *method)
 {
@@ -196,7 +177,7 @@ UnityEngine_Vector3_o __fastcall AdjustPopupPosInScreenArgument__get_WorldPos(
 }
 
 
-void __fastcall AdjustPopupPosInScreenArgument__set_Camera(
+void AdjustPopupPosInScreenArgument__set_Camera(
         AdjustPopupPosInScreenArgument_o *this,
         UnityEngine_Camera_o *value,
         const MethodInfo *method)
@@ -204,12 +185,11 @@ void __fastcall AdjustPopupPosInScreenArgument__set_Camera(
   const MethodInfo *v3; // x3
 
   this->fields._Camera_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall AdjustPopupPosInScreenArgument__set_WorldPos(
+void AdjustPopupPosInScreenArgument__set_WorldPos(
         AdjustPopupPosInScreenArgument_o *this,
         UnityEngine_Vector3_o value,
         const MethodInfo *method)

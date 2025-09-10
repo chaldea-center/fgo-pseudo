@@ -1,5 +1,5 @@
 // local variable allocation has failed, the output may be wrong!
-void __fastcall PlayBackStepLogicTask___ctor(PlayBackStepLogicTask_o *this, int32_t actorId, const MethodInfo *method)
+void PlayBackStepLogicTask___ctor(PlayBackStepLogicTask_o *this, int32_t actorId, const MethodInfo *method)
 {
   BattleLogicTask___ctor((BattleLogicTask_o *)this, *(const MethodInfo **)&actorId);
   this->fields.actiontype = 71;
@@ -8,55 +8,54 @@ void __fastcall PlayBackStepLogicTask___ctor(PlayBackStepLogicTask_o *this, int3
 }
 
 
-BattleActionData_o *__fastcall PlayBackStepLogicTask__MakeActionData(
+BattleActionData_o *PlayBackStepLogicTask__MakeActionData(
         PlayBackStepLogicTask_o *this,
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
   PlayBackStepLogicTask_o *v4; // x20
-  __int64 v5; // x1
   BattleServantData_o *ServantData; // x0
   BattleActionData_o *BackStep; // x20
-  BattleLogicTask_o *v8; // x21
-  const MethodInfo *v9; // x1
+  BattleLogicTask_o *v7; // x21
+  const MethodInfo *v8; // x1
 
   v4 = this;
-  if ( (byte_4B1F5A7 & 1) == 0 )
+  if ( (byte_4C2A44F & 1) == 0 )
   {
-    sub_1BCAFF8(&BattleLogicTask_TypeInfo, logic);
-    this = (PlayBackStepLogicTask_o *)sub_1BCAFF8(&BattlePerformance_TypeInfo, v5);
-    byte_4B1F5A7 = 1;
+    sub_1C2D490(&BattleLogicTask_TypeInfo);
+    this = (PlayBackStepLogicTask_o *)sub_1C2D490(&BattlePerformance_TypeInfo);
+    byte_4C2A44F = 1;
   }
   if ( !logic )
     goto LABEL_15;
   this = (PlayBackStepLogicTask_o *)logic->fields.data;
   if ( !this )
     goto LABEL_15;
-  ServantData = BattleData__getServantData((BattleData_o *)this, v4->fields.backStepActorId, 0LL);
+  ServantData = BattleData__getServantData((BattleData_o *)this, v4->fields.backStepActorId, 0);
   if ( ServantData && !ServantData->fields.isDeadAnime )
   {
     this = (PlayBackStepLogicTask_o *)logic->fields.logicnomal;
     if ( this )
     {
-      BackStep = BattleLogicNomal__createBackStep((BattleLogicNomal_o *)this, v4->fields.backStepActorId, 0LL);
-      v8 = (BattleLogicTask_o *)sub_1BCB244(BattleLogicTask_TypeInfo);
-      BattleLogicTask___ctor(v8, v9);
+      BackStep = BattleLogicNomal__createBackStep((BattleLogicNomal_o *)this, v4->fields.backStepActorId, 0);
+      v7 = (BattleLogicTask_o *)sub_1C2D6DC(BattleLogicTask_TypeInfo);
+      BattleLogicTask___ctor(v7, v8);
       this = (PlayBackStepLogicTask_o *)BattlePerformance_TypeInfo;
       if ( !BattlePerformance_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(BattlePerformance_TypeInfo);
-      if ( v8 )
+      if ( v7 )
       {
-        v8->fields.systemTime = BattlePerformance_TypeInfo->static_fields->AFTER_BACK_STEP_INTERVAL;
-        this = (PlayBackStepLogicTask_o *)BattleLogic__createSystem(logic, v8, 0LL);
+        v7->fields.systemTime = BattlePerformance_TypeInfo->static_fields->AFTER_BACK_STEP_INTERVAL;
+        this = (PlayBackStepLogicTask_o *)BattleLogic__createSystem(logic, v7, 0);
         if ( BackStep )
         {
-          BattleActionData__AddAfterActionData(BackStep, (BattleActionData_o *)this, 0, 0LL);
+          BattleActionData__AddAfterActionData(BackStep, (BattleActionData_o *)this, 0, 0);
           return BackStep;
         }
       }
     }
 LABEL_15:
-    sub_1BCB254(this, logic);
+    sub_1C2D6EC(this, logic);
   }
-  return 0LL;
+  return 0;
 }

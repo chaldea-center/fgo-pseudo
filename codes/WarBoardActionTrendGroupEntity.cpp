@@ -1,17 +1,17 @@
-void __fastcall WarBoardActionTrendGroupEntity___ctor(WarBoardActionTrendGroupEntity_o *this, const MethodInfo *method)
+void WarBoardActionTrendGroupEntity___ctor(WarBoardActionTrendGroupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D5FF & 1) == 0 )
+  if ( (byte_4C28402 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_int___ctor__, method);
-    byte_4B1D5FF = 1;
+    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
+    byte_4C28402 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_32C591C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
 }
 
 
-int32_t __fastcall WarBoardActionTrendGroupEntity__CreatePrimaryKey(
+int32_t WarBoardActionTrendGroupEntity__CreatePrimaryKey(
         WarBoardActionTrendGroupEntity_o *this,
         const MethodInfo *method)
 {

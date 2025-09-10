@@ -1,134 +1,153 @@
-void __fastcall CharaGraphListViewPatternGrandEquipRewardUp___ctor(
+void CharaGraphListViewPatternGrandEquipRewardUp___ctor(
         CharaGraphListViewPatternGrandEquipRewardUp_o *this,
         System_Int64_array *otherEquipUserId,
-        int64_t selectedEquipUserSvtId,
+        GrandServantListSlotData_o *grandSvtSlotData,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
   Il2CppObject *Master_object; // x0
-  __int64 v10; // x1
-  ConstantStrMaster_o *v11; // x20
+  __int64 v8; // x1
+  ConstantStrMaster_o *v9; // x20
   System_Collections_Generic_IEnumerable_TSource__o *RewardUpFuncCategory; // x0
   System_Collections_Generic_IEnumerable_TSource__o *RewardUpIgnoreSvtId; // x0
 
-  if ( (byte_4B173AD & 1) == 0 )
+  if ( (byte_4C220B5 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataManager_GetMaster_ConstantStrMaster___, otherEquipUserId);
-    sub_1BCAFF8(&DataManager_TypeInfo, v7);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_ToHashSet_int___, v8);
-    byte_4B173AD = 1;
+    sub_1C2D490(&Method_DataManager_GetMaster_ConstantStrMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_System_Linq_Enumerable_ToHashSet_int___);
+    byte_4C220B5 = 1;
   }
-  CharaGraphListViewPatternServantEquip___ctor((CharaGraphListViewPatternServantEquip_o *)this, 0LL);
-  this->fields.otherUsedEquipUserSvtId = otherEquipUserId;
-  sub_1BCAF9C(&this->fields.otherUsedEquipUserSvtId);
-  this->fields.selectedEquipUserSvtId = selectedEquipUserSvtId;
+  CharaGraphListViewPatternGrandEquipNormal___ctor(
+    (CharaGraphListViewPatternGrandEquipNormal_o *)this,
+    otherEquipUserId,
+    grandSvtSlotData,
+    method);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_301AA50 *)Method_DataManager_GetMaster_ConstantStrMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ConstantStrMaster___);
   if ( !Master_object )
-    sub_1BCB254(0LL, v10);
-  v11 = (ConstantStrMaster_o *)Master_object;
+    sub_1C2D6EC(0, v8);
+  v9 = (ConstantStrMaster_o *)Master_object;
   RewardUpFuncCategory = (System_Collections_Generic_IEnumerable_TSource__o *)ConstantStrMaster__GetRewardUpFuncCategory(
                                                                                 (ConstantStrMaster_o *)Master_object,
-                                                                                0LL);
+                                                                                0);
   this->fields.rewardUpCategoryList = (struct System_Collections_Generic_HashSet_int__o *)System_Linq_Enumerable__ToHashSet_int_(
                                                                                             RewardUpFuncCategory,
-                                                                                            (const MethodInfo_305B6E8 *)Method_System_Linq_Enumerable_ToHashSet_int___);
-  sub_1BCAF9C(&this->fields.rewardUpCategoryList);
+                                                                                            (const MethodInfo_3112818 *)Method_System_Linq_Enumerable_ToHashSet_int___);
+  sub_1C2D434(&this->fields.rewardUpCategoryList);
   RewardUpIgnoreSvtId = (System_Collections_Generic_IEnumerable_TSource__o *)ConstantStrMaster__GetRewardUpIgnoreSvtId(
-                                                                               v11,
-                                                                               0LL);
+                                                                               v9,
+                                                                               0);
   this->fields.rewardUpIgnoreSvtIdList = (struct System_Collections_Generic_HashSet_int__o *)System_Linq_Enumerable__ToHashSet_int_(
                                                                                                RewardUpIgnoreSvtId,
-                                                                                               (const MethodInfo_305B6E8 *)Method_System_Linq_Enumerable_ToHashSet_int___);
-  sub_1BCAF9C(&this->fields.rewardUpIgnoreSvtIdList);
+                                                                                               (const MethodInfo_3112818 *)Method_System_Linq_Enumerable_ToHashSet_int___);
+  sub_1C2D434(&this->fields.rewardUpIgnoreSvtIdList);
 }
 
 
-bool __fastcall CharaGraphListViewPatternGrandEquipRewardUp__Filter(
+bool CharaGraphListViewPatternGrandEquipRewardUp__Filter(
         CharaGraphListViewPatternGrandEquipRewardUp_o *this,
         UserServantEntity_o *userEquipEntity,
         const MethodInfo *method)
 {
   Il2CppObject *v4; // x19
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   System_Collections_Generic_HashSet_int__o *klass; // x21
-  __int64 v10; // x22
-  __int64 v11; // x23
-  System_Int32_array *EquipCategoryIdList; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v13; // x20
-  System_Func_int__bool__o *v14; // x21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
+  __int64 v6; // x22
+  __int64 v7; // x23
+  Il2CppObject *Master_object; // x0
+  __int64 v9; // x22
+  __int64 v10; // x23
+  ServantSkillMaster_o *v11; // x21
+  ServantSkillEntity_array *ServantSkillList; // x0
+  System_Int32_array *EquipAllCategoryIdList; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v14; // x20
+  System_Func_int__bool__o *v15; // x21
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v17; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // 0:x0.16
 
   v4 = (Il2CppObject *)this;
-  if ( (byte_4B173AE & 1) == 0 )
+  if ( (byte_4C220B6 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_CharaGraphListViewPatternGrandEquipRewardUp__Filter_b__3_0__, userEquipEntity);
-    sub_1BCAFF8(&Method_System_Linq_Enumerable_All_int___, v5);
-    sub_1BCAFF8(&System_Func_int__bool__TypeInfo, v6);
-    sub_1BCAFF8(&Method_System_Collections_Generic_HashSet_int__Contains__, v7);
-    this = (CharaGraphListViewPatternGrandEquipRewardUp_o *)sub_1BCAFF8(
-                                                              &CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo,
-                                                              v8);
-    byte_4B173AE = 1;
+    sub_1C2D490(&Method_CharaGraphListViewPatternGrandEquipRewardUp__Filter_b__3_0__);
+    sub_1C2D490(&Method_DataManager_GetMaster_ServantSkillMaster___);
+    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C2D490(&Method_System_Linq_Enumerable_All_int___);
+    sub_1C2D490(&System_Func_int__bool__TypeInfo);
+    sub_1C2D490(&Method_System_Collections_Generic_HashSet_int__Contains__);
+    this = (CharaGraphListViewPatternGrandEquipRewardUp_o *)sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C220B6 = 1;
   }
   if ( !userEquipEntity )
-    goto LABEL_11;
+    goto LABEL_16;
   klass = (System_Collections_Generic_HashSet_int__o *)v4[5].klass;
-  v11 = *(_QWORD *)&userEquipEntity->fields.svtId.fields.currentCryptoKey;
-  v10 = *(_QWORD *)&userEquipEntity->fields.svtId.fields.fakeValue;
+  v7 = *(_QWORD *)&userEquipEntity->fields.svtId.fields.currentCryptoKey;
+  v6 = *(_QWORD *)&userEquipEntity->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v16.fields.currentCryptoKey = v11;
-  *(_QWORD *)&v16.fields.fakeValue = v10;
-  this = (CharaGraphListViewPatternGrandEquipRewardUp_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48125176(
-                                                            v16,
-                                                            0LL);
+  *(_QWORD *)&v17.fields.currentCryptoKey = v7;
+  *(_QWORD *)&v17.fields.fakeValue = v6;
+  this = (CharaGraphListViewPatternGrandEquipRewardUp_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(
+                                                            v17,
+                                                            0);
   if ( !klass )
-LABEL_11:
-    sub_1BCB254(this, userEquipEntity);
+    goto LABEL_16;
   if ( System_Collections_Generic_HashSet_int___Contains(
          klass,
          (int32_t)this,
-         (const MethodInfo_357130C *)Method_System_Collections_Generic_HashSet_int__Contains__) )
+         (const MethodInfo_363AE74 *)Method_System_Collections_Generic_HashSet_int__Contains__) )
   {
     return 0;
   }
-  EquipCategoryIdList = UserServantEntity__GetEquipCategoryIdList(userEquipEntity, 1, 0LL);
-  if ( !EquipCategoryIdList )
-    return 0;
-  v13 = (System_Collections_Generic_IEnumerable_TSource__o *)EquipCategoryIdList;
-  v14 = (System_Func_int__bool__o *)sub_1BCB244(System_Func_int__bool__TypeInfo);
-  System_Func_int__bool____ctor(v14, v4, Method_CharaGraphListViewPatternGrandEquipRewardUp__Filter_b__3_0__, 0LL);
-  return System_Linq_Enumerable__All_int_(
-           v13,
-           (System_Func_TSource__bool__o *)v14,
-           (const MethodInfo_30248FC *)Method_System_Linq_Enumerable_All_int___);
+  if ( !DataManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ServantSkillMaster___);
+  v10 = *(_QWORD *)&userEquipEntity->fields.svtId.fields.currentCryptoKey;
+  v9 = *(_QWORD *)&userEquipEntity->fields.svtId.fields.fakeValue;
+  v11 = (ServantSkillMaster_o *)Master_object;
+  if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+  *(_QWORD *)&v18.fields.currentCryptoKey = v10;
+  *(_QWORD *)&v18.fields.fakeValue = v9;
+  this = (CharaGraphListViewPatternGrandEquipRewardUp_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(
+                                                            v18,
+                                                            0);
+  if ( !v11 )
+LABEL_16:
+    sub_1C2D6EC(this, userEquipEntity);
+  ServantSkillList = ServantSkillMaster__getServantSkillList(v11, (int32_t)this, 0);
+  EquipAllCategoryIdList = UserServantEntity__GetEquipAllCategoryIdList(userEquipEntity, ServantSkillList, 0);
+  if ( EquipAllCategoryIdList )
+  {
+    v14 = (System_Collections_Generic_IEnumerable_TSource__o *)EquipAllCategoryIdList;
+    v15 = (System_Func_int__bool__o *)sub_1C2D6DC(System_Func_int__bool__TypeInfo);
+    System_Func_int__bool____ctor(v15, v4, Method_CharaGraphListViewPatternGrandEquipRewardUp__Filter_b__3_0__, 0);
+    return System_Linq_Enumerable__All_int_(
+             v14,
+             (System_Func_TSource__bool__o *)v15,
+             (const MethodInfo_30D87A8 *)Method_System_Linq_Enumerable_All_int___);
+  }
+  return 0;
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall CharaGraphListViewPatternGrandEquipRewardUp___Filter_b__3_0(
+bool CharaGraphListViewPatternGrandEquipRewardUp___Filter_b__3_0(
         CharaGraphListViewPatternGrandEquipRewardUp_o *this,
         int32_t x,
         const MethodInfo *method)
 {
   System_Collections_Generic_HashSet_int__o *rewardUpCategoryList; // x0
 
-  if ( (byte_4B173AF & 1) == 0 )
+  if ( (byte_4C220B7 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_System_Collections_Generic_HashSet_int__Contains__, *(_QWORD *)&x);
-    byte_4B173AF = 1;
+    sub_1C2D490(&Method_System_Collections_Generic_HashSet_int__Contains__);
+    byte_4C220B7 = 1;
   }
   rewardUpCategoryList = this->fields.rewardUpCategoryList;
   if ( !rewardUpCategoryList )
-    sub_1BCB254(0LL, *(_QWORD *)&x);
+    sub_1C2D6EC(0, *(_QWORD *)&x);
   return System_Collections_Generic_HashSet_int___Contains(
            rewardUpCategoryList,
            x,
-           (const MethodInfo_357130C *)Method_System_Collections_Generic_HashSet_int__Contains__);
+           (const MethodInfo_363AE74 *)Method_System_Collections_Generic_HashSet_int__Contains__);
 }

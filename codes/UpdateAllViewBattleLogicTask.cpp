@@ -1,4 +1,4 @@
-void __fastcall UpdateAllViewBattleLogicTask___ctor(UpdateAllViewBattleLogicTask_o *this, const MethodInfo *method)
+void UpdateAllViewBattleLogicTask___ctor(UpdateAllViewBattleLogicTask_o *this, const MethodInfo *method)
 {
   BattleLogicTask___ctor((BattleLogicTask_o *)this, method);
   this->fields.actiontype = 58;
@@ -6,19 +6,19 @@ void __fastcall UpdateAllViewBattleLogicTask___ctor(UpdateAllViewBattleLogicTask
 }
 
 
-BattleActionData_o *__fastcall UpdateAllViewBattleLogicTask__MakeActionData(
+BattleActionData_o *UpdateAllViewBattleLogicTask__MakeActionData(
         UpdateAllViewBattleLogicTask_o *this,
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
   UpdateAllViewActionData_o *v3; // x19
 
-  if ( (byte_4B1F5A5 & 1) == 0 )
+  if ( (byte_4C2A44D & 1) == 0 )
   {
-    sub_1BCAFF8(&UpdateAllViewActionData_TypeInfo, logic);
-    byte_4B1F5A5 = 1;
+    sub_1C2D490(&UpdateAllViewActionData_TypeInfo);
+    byte_4C2A44D = 1;
   }
-  v3 = (UpdateAllViewActionData_o *)sub_1BCB244(UpdateAllViewActionData_TypeInfo);
-  UpdateAllViewActionData___ctor(v3, 0LL);
+  v3 = (UpdateAllViewActionData_o *)sub_1C2D6DC(UpdateAllViewActionData_TypeInfo);
+  UpdateAllViewActionData___ctor(v3, 0);
   return (BattleActionData_o *)v3;
 }

@@ -1,4 +1,4 @@
-void __fastcall GalleryFullScreenListViewItem___ctor(
+void GalleryFullScreenListViewItem___ctor(
         GalleryFullScreenListViewItem_o *this,
         int32_t index,
         GalleryResourceEntity_o *galleryResourceEntity,
@@ -9,22 +9,20 @@ void __fastcall GalleryFullScreenListViewItem___ctor(
   __int64 v8; // x0
   __int64 v9; // x1
 
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   this->fields._GalleryResourceEntity_k__BackingField = galleryResourceEntity;
-  sub_1BCAF9C(
+  sub_1C2D434(
     (CGThumbnailListItem_o *)&this->fields._GalleryResourceEntity_k__BackingField,
     (int32_t)galleryResourceEntity,
     v6,
     v7);
   if ( !galleryResourceEntity )
-    sub_1BCB254(v8, v9);
+    sub_1C2D6EC(v8, v9);
   this->fields._CurrentGalleryType_k__BackingField = galleryResourceEntity->fields.galleryType;
 }
 
 
-int32_t __fastcall GalleryFullScreenListViewItem__GetWarId(
-        GalleryFullScreenListViewItem_o *this,
-        const MethodInfo *method)
+int32_t GalleryFullScreenListViewItem__GetWarId(GalleryFullScreenListViewItem_o *this, const MethodInfo *method)
 {
   GalleryResourceEntity_o *GalleryResourceEntity_k__BackingField; // x0
 
@@ -32,20 +30,18 @@ int32_t __fastcall GalleryFullScreenListViewItem__GetWarId(
   if ( GalleryResourceEntity_k__BackingField )
     LODWORD(GalleryResourceEntity_k__BackingField) = GalleryResourceEntity__GetWarId(
                                                        GalleryResourceEntity_k__BackingField,
-                                                       0LL);
+                                                       0);
   return (int)GalleryResourceEntity_k__BackingField;
 }
 
 
-bool __fastcall GalleryFullScreenListViewItem__IsCenterItem(
-        GalleryFullScreenListViewItem_o *this,
-        const MethodInfo *method)
+bool GalleryFullScreenListViewItem__IsCenterItem(GalleryFullScreenListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields.isCenterItem;
 }
 
 
-void __fastcall GalleryFullScreenListViewItem__SetIsCenterItem(
+void GalleryFullScreenListViewItem__SetIsCenterItem(
         GalleryFullScreenListViewItem_o *this,
         bool isCenter,
         const MethodInfo *method)
@@ -54,7 +50,7 @@ void __fastcall GalleryFullScreenListViewItem__SetIsCenterItem(
 }
 
 
-int32_t __fastcall GalleryFullScreenListViewItem__get_CurrentGalleryType(
+int32_t GalleryFullScreenListViewItem__get_CurrentGalleryType(
         GalleryFullScreenListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -62,7 +58,7 @@ int32_t __fastcall GalleryFullScreenListViewItem__get_CurrentGalleryType(
 }
 
 
-GalleryResourceEntity_o *__fastcall GalleryFullScreenListViewItem__get_GalleryResourceEntity(
+GalleryResourceEntity_o *GalleryFullScreenListViewItem__get_GalleryResourceEntity(
         GalleryFullScreenListViewItem_o *this,
         const MethodInfo *method)
 {

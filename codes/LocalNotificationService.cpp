@@ -1,25 +1,22 @@
-void __fastcall LocalNotificationService___ctor(LocalNotificationService_o *this, const MethodInfo *method)
+void LocalNotificationService___ctor(LocalNotificationService_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void __fastcall LocalNotificationService__Cancel(
-        LocalNotificationService_o *this,
-        System_String_o *key,
-        const MethodInfo *method)
+void LocalNotificationService__Cancel(LocalNotificationService_o *this, System_String_o *key, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall LocalNotificationService__CancelAll(LocalNotificationService_o *this, const MethodInfo *method)
+void LocalNotificationService__CancelAll(LocalNotificationService_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-void __fastcall LocalNotificationService__Schedule(
+void LocalNotificationService__Schedule(
         LocalNotificationService_o *this,
         System_String_o *key,
         System_String_o *message,
@@ -30,26 +27,25 @@ void __fastcall LocalNotificationService__Schedule(
 }
 
 
-LocalNotificationService_o *__fastcall LocalNotificationService__getNullObject(const MethodInfo *method)
+LocalNotificationService_o *LocalNotificationService__getNullObject(const MethodInfo *method)
 {
-  __int64 v1; // x1
   LocalNotificationService_o *nullObject; // x8
-  Il2CppObject *v3; // x19
-  int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  Il2CppObject *v2; // x19
+  int32_t v3; // w2
+  const MethodInfo *v4; // x3
 
-  if ( (byte_4B1DEBE & 1) == 0 )
+  if ( (byte_4C28CD0 & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalNotificationService_TypeInfo, v1);
-    byte_4B1DEBE = 1;
+    sub_1C2D490(&LocalNotificationService_TypeInfo);
+    byte_4C28CD0 = 1;
   }
   nullObject = LocalNotificationService_TypeInfo->static_fields->nullObject;
   if ( !nullObject )
   {
-    v3 = (Il2CppObject *)sub_1BCB244(LocalNotificationService_TypeInfo);
-    System_Object___ctor(v3, 0LL);
-    LocalNotificationService_TypeInfo->static_fields->nullObject = (struct LocalNotificationService_o *)v3;
-    sub_1BCAF9C((CGThumbnailListItem_o *)LocalNotificationService_TypeInfo->static_fields, (int32_t)v3, v4, v5);
+    v2 = (Il2CppObject *)sub_1C2D6DC(LocalNotificationService_TypeInfo);
+    System_Object___ctor(v2, 0);
+    LocalNotificationService_TypeInfo->static_fields->nullObject = (struct LocalNotificationService_o *)v2;
+    sub_1C2D434((CGThumbnailListItem_o *)LocalNotificationService_TypeInfo->static_fields, (int32_t)v2, v3, v4);
     return LocalNotificationService_TypeInfo->static_fields->nullObject;
   }
   return nullObject;

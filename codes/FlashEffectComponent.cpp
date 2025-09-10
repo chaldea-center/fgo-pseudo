@@ -1,26 +1,26 @@
-void __fastcall FlashEffectComponent___ctor(FlashEffectComponent_o *this, const MethodInfo *method)
+void FlashEffectComponent___ctor(FlashEffectComponent_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
   const MethodInfo *v3; // x3
   int32_t v5; // w1
 
-  if ( (byte_4B1DB7B & 1) == 0 )
+  if ( (byte_4C28989 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_17817/*"circleIn"*/, method);
-    byte_4B1DB7B = 1;
+    sub_1C2D490(&StringLiteral_17963/*"circleIn"*/);
+    byte_4C28989 = 1;
   }
-  *(_QWORD *)&this->fields.flashColor.fields.r = 0LL;
-  *(_QWORD *)&this->fields.flashColor.fields.b = 0LL;
-  v5 = StringLiteral_17817/*"circleIn"*/;
-  this->fields.wipeName = (struct System_String_o *)StringLiteral_17817/*"circleIn"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.wipeName, v5, v2, v3);
+  *(_QWORD *)&this->fields.flashColor.fields.r = 0;
+  *(_QWORD *)&this->fields.flashColor.fields.b = 0;
+  v5 = StringLiteral_17963/*"circleIn"*/;
+  this->fields.wipeName = (struct System_String_o *)StringLiteral_17963/*"circleIn"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.wipeName, v5, v2, v3);
   __asm { FMOV            V0.4S, #1.0 }
   this->fields.effectColor = _Q0;
-  UITweenRenderer___ctor((UITweenRenderer_o *)this, 0LL);
+  UITweenRenderer___ctor((UITweenRenderer_o *)this, 0);
 }
 
 
-void __fastcall FlashEffectComponent__EffectResume(FlashEffectComponent_o *this, const MethodInfo *method)
+void FlashEffectComponent__EffectResume(FlashEffectComponent_o *this, const MethodInfo *method)
 {
   FlashEffectComponent_c *klass; // x8
   UnityEngine_GameObject_o *gameObject; // x0
@@ -34,94 +34,87 @@ void __fastcall FlashEffectComponent__EffectResume(FlashEffectComponent_o *this,
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4B1DB77 & 1) == 0 )
+  if ( (byte_4C28985 & 1) == 0 )
   {
-    sub_1BCAFF8(&StringLiteral_9824/*"OnEndEffect"*/, method);
-    byte_4B1DB77 = 1;
+    sub_1C2D490(&StringLiteral_9895/*"OnEndEffect"*/);
+    byte_4C28985 = 1;
   }
   klass = this->klass;
   this->fields.isPause = 0;
-  ((void (__fastcall *)(FlashEffectComponent_o *, Il2CppMethodPointer, float))klass->vtable._41_SetTweenVolume.method)(
+  ((void (__fastcall *)(FlashEffectComponent_o *, const MethodInfo *, float))klass->vtable._41_SetTweenVolume.methodPtr)(
     this,
-    klass->vtable._42_GetTweenVolume.methodPtr,
+    klass->vtable._41_SetTweenVolume.method,
     1.2039);
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v5 = TweenRenderVolume__Begin(gameObject, this->fields.duration, 0.0, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v5 = TweenRenderVolume__Begin(gameObject, this->fields.duration, 0.0, 0);
   if ( !v5 )
-    sub_1BCB254(0LL, v6);
+    sub_1C2D6EC(0, v6);
   v7 = v5;
   v5->fields.method = 1;
-  v8 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  v8 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v7->fields.eventReceiver = v8;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v7->fields.eventReceiver, (int32_t)v8, v9, v10);
-  v11 = StringLiteral_9824/*"OnEndEffect"*/;
-  v7->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9824/*"OnEndEffect"*/;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v7->fields.callWhenFinished, v11, v12, v13);
+  sub_1C2D434((CGThumbnailListItem_o *)&v7->fields.eventReceiver, (int32_t)v8, v9, v10);
+  v11 = StringLiteral_9895/*"OnEndEffect"*/;
+  v7->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9895/*"OnEndEffect"*/;
+  sub_1C2D434((CGThumbnailListItem_o *)&v7->fields.callWhenFinished, v11, v12, v13);
 }
 
 
-void __fastcall FlashEffectComponent__EndLoadWipe(
-        FlashEffectComponent_o *this,
-        AssetData_o *data,
-        const MethodInfo *method)
+void FlashEffectComponent__EndLoadWipe(FlashEffectComponent_o *this, AssetData_o *data, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
   AssetData_o *wipeData; // x22
   ExUIMeshRenderer_o *material; // x0
-  const MethodInfo *v12; // x1
+  const MethodInfo *v8; // x1
   Il2CppObject *Object_object; // x0
   ExUIMeshRenderer_o *backFlashMesh; // x21
-  UnityEngine_Texture_o *v15; // x20
-  UnityEngine_Shader_o *v16; // x23
-  UnityEngine_Material_o *v17; // x22
+  UnityEngine_Texture_o *v11; // x20
+  UnityEngine_Shader_o *v12; // x23
+  UnityEngine_Material_o *v13; // x22
   _BOOL4 isPause; // w8
 
-  if ( (byte_4B1DB76 & 1) == 0 )
+  if ( (byte_4C28984 & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_AssetData_GetObject_Texture2D___, data);
-    sub_1BCAFF8(&AssetManager_TypeInfo, v6);
-    sub_1BCAFF8(&UnityEngine_Material_TypeInfo, v7);
-    sub_1BCAFF8(&StringLiteral_16100/*"_Gradation"*/, v8);
-    sub_1BCAFF8(&StringLiteral_4869/*"Custom/BackFlashSheder"*/, v9);
-    byte_4B1DB76 = 1;
+    sub_1C2D490(&Method_AssetData_GetObject_Texture2D___);
+    sub_1C2D490(&AssetManager_TypeInfo);
+    sub_1C2D490(&UnityEngine_Material_TypeInfo);
+    sub_1C2D490(&StringLiteral_16232/*"_Gradation"*/);
+    sub_1C2D490(&StringLiteral_4900/*"Custom/BackFlashSheder"*/);
+    byte_4C28984 = 1;
   }
   wipeData = this->fields.wipeData;
   if ( wipeData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_39722652(wipeData, 0LL);
+    AssetManager__releaseAsset_40313100(wipeData, 0);
   }
   this->fields.wipeData = data;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.wipeData, (int32_t)data, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.wipeData, (int32_t)data, (int32_t)method, v3);
   this->fields.addVolume = 0.2;
   if ( !data )
     goto LABEL_19;
   Object_object = AssetData__GetObject_object_(
                     data,
-                    (const MethodInfo_2FFBEC8 *)Method_AssetData_GetObject_Texture2D___);
+                    (const MethodInfo_30AFBB8 *)Method_AssetData_GetObject_Texture2D___);
   backFlashMesh = this->fields.backFlashMesh;
-  v15 = (UnityEngine_Texture_o *)Object_object;
-  v16 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4869/*"Custom/BackFlashSheder"*/, 0LL);
-  v17 = (UnityEngine_Material_o *)sub_1BCB244(UnityEngine_Material_TypeInfo);
-  UnityEngine_Material___ctor(v17, v16, 0LL);
+  v11 = (UnityEngine_Texture_o *)Object_object;
+  v12 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4900/*"Custom/BackFlashSheder"*/, 0);
+  v13 = (UnityEngine_Material_o *)sub_1C2D6DC(UnityEngine_Material_TypeInfo);
+  UnityEngine_Material___ctor(v13, v12, 0);
   if ( !backFlashMesh )
     goto LABEL_19;
-  ExUIMeshRenderer__set_material(backFlashMesh, v17, 0LL);
+  ExUIMeshRenderer__set_material(backFlashMesh, v13, 0);
   material = this->fields.backFlashMesh;
   if ( !material )
     goto LABEL_19;
-  ExUIMeshRenderer__SetImage(material, v15, 0LL);
+  ExUIMeshRenderer__SetImage(material, v11, 0);
   material = this->fields.backFlashMesh;
   if ( !material )
     goto LABEL_19;
-  ((void (__fastcall *)(ExUIMeshRenderer_o *, Il2CppMethodPointer, float, float, float, float))material->klass->vtable._39_SetTweenColor.method)(
+  ((void (__fastcall *)(ExUIMeshRenderer_o *, const MethodInfo *, float, float, float, float))material->klass->vtable._39_SetTweenColor.methodPtr)(
     material,
-    material->klass->vtable._40_GetTweenColor.methodPtr,
+    material->klass->vtable._39_SetTweenColor.method,
     this->fields.flashColor.fields.r,
     this->fields.flashColor.fields.g,
     this->fields.flashColor.fields.b,
@@ -129,50 +122,44 @@ void __fastcall FlashEffectComponent__EndLoadWipe(
   material = this->fields.backFlashMesh;
   if ( !material )
     goto LABEL_19;
-  material = (ExUIMeshRenderer_o *)ExUIMeshRenderer__get_material(material, 0LL);
+  material = (ExUIMeshRenderer_o *)ExUIMeshRenderer__get_material(material, 0);
   if ( !material )
     goto LABEL_19;
-  if ( !UnityEngine_Material__HasProperty_70002212(
+  if ( !UnityEngine_Material__HasProperty_71029840(
           (UnityEngine_Material_o *)material,
-          (System_String_o *)StringLiteral_16100/*"_Gradation"*/,
-          0LL) )
+          (System_String_o *)StringLiteral_16232/*"_Gradation"*/,
+          0) )
     goto LABEL_17;
   material = this->fields.backFlashMesh;
-  if ( !material || (material = (ExUIMeshRenderer_o *)ExUIMeshRenderer__get_material(material, 0LL)) == 0LL )
+  if ( !material || (material = (ExUIMeshRenderer_o *)ExUIMeshRenderer__get_material(material, 0)) == 0 )
 LABEL_19:
-    sub_1BCB254(material, v12);
-  UnityEngine_Material__SetFloat((UnityEngine_Material_o *)material, (System_String_o *)StringLiteral_16100/*"_Gradation"*/, 0.2, 0LL);
+    sub_1C2D6EC(material, v8);
+  UnityEngine_Material__SetFloat((UnityEngine_Material_o *)material, (System_String_o *)StringLiteral_16232/*"_Gradation"*/, 0.2, 0);
 LABEL_17:
   isPause = this->fields.isPause;
   this->fields.isStart = 1;
   if ( !isPause )
-    FlashEffectComponent__EffectResume(this, v12);
+    FlashEffectComponent__EffectResume(this, v8);
 }
 
 
-void __fastcall FlashEffectComponent__FlashStart(FlashEffectComponent_o *this, const MethodInfo *method)
+void FlashEffectComponent__FlashStart(FlashEffectComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
   _BOOL4 isSkip; // w8
   UnityEngine_Object_o *gameObject; // x19
-  System_String_o *v11; // x20
-  AssetLoader_LoadEndDataHandler_o *v12; // x21
+  System_String_o *v5; // x20
+  AssetLoader_LoadEndDataHandler_o *v6; // x21
 
-  if ( (byte_4B1DB75 & 1) == 0 )
+  if ( (byte_4C28983 & 1) == 0 )
   {
-    sub_1BCAFF8(&AssetManager_TypeInfo, method);
-    sub_1BCAFF8(&Method_FlashEffectComponent_EndLoadWipe__, v3);
-    sub_1BCAFF8(&AssetLoader_LoadEndDataHandler_TypeInfo, v4);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v5);
-    sub_1BCAFF8(&ScriptManager_TypeInfo, v6);
-    sub_1BCAFF8(&StringLiteral_15525/*"Wipe/"*/, v7);
-    sub_1BCAFF8(&StringLiteral_24595/*"white"*/, v8);
-    byte_4B1DB75 = 1;
+    sub_1C2D490(&AssetManager_TypeInfo);
+    sub_1C2D490(&Method_FlashEffectComponent_EndLoadWipe__);
+    sub_1C2D490(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&ScriptManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_15656/*"Wipe/"*/);
+    sub_1C2D490(&StringLiteral_24791/*"white"*/);
+    byte_4C28983 = 1;
   }
   isSkip = this->fields.isSkip;
   this->fields.duration = 5.0;
@@ -180,114 +167,110 @@ void __fastcall FlashEffectComponent__FlashStart(FlashEffectComponent_o *this, c
   {
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-    ScriptManager__Fade((System_String_o *)StringLiteral_24595/*"white"*/, 0, 0.0, 0LL);
-    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+    ScriptManager__Fade((System_String_o *)StringLiteral_24791/*"white"*/, 0, 0.0, 0);
+    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(gameObject, 0LL);
+    UnityEngine_Object__Destroy_71163704(gameObject, 0);
   }
   else
   {
-    v11 = System_String__Concat_62450424((System_String_o *)StringLiteral_15525/*"Wipe/"*/, this->fields.wipeName, 0LL);
-    v12 = (AssetLoader_LoadEndDataHandler_o *)sub_1BCB244(AssetLoader_LoadEndDataHandler_TypeInfo);
-    AssetLoader_LoadEndDataHandler___ctor(v12, (Il2CppObject *)this, Method_FlashEffectComponent_EndLoadWipe__, 0LL);
+    v5 = System_String__Concat_63457864((System_String_o *)StringLiteral_15656/*"Wipe/"*/, this->fields.wipeName, 0);
+    v6 = (AssetLoader_LoadEndDataHandler_o *)sub_1C2D6DC(AssetLoader_LoadEndDataHandler_TypeInfo);
+    AssetLoader_LoadEndDataHandler___ctor(v6, (Il2CppObject *)this, Method_FlashEffectComponent_EndLoadWipe__, 0);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage(v11, v12, 1, 0LL);
+    AssetManager__loadAssetStorage(v5, v6, 1, 0);
   }
 }
 
 
-void __fastcall FlashEffectComponent__OnDestroy(FlashEffectComponent_o *this, const MethodInfo *method)
+void FlashEffectComponent__OnDestroy(FlashEffectComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   ExUIMeshRenderer_o *backFlashMesh; // x0
   CGThumbnailListItem_o *p_wipeData; // x19
   UnityEngine_Object_o *material; // x20
   AssetData_o *klass; // x20
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
 
-  if ( (byte_4B1DB79 & 1) == 0 )
+  if ( (byte_4C28987 & 1) == 0 )
   {
-    sub_1BCAFF8(&AssetManager_TypeInfo, method);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v3);
-    byte_4B1DB79 = 1;
+    sub_1C2D490(&AssetManager_TypeInfo);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    byte_4C28987 = 1;
   }
   if ( this->fields.wipeData )
   {
     backFlashMesh = this->fields.backFlashMesh;
     if ( !backFlashMesh )
-      sub_1BCB254(0LL, method);
+      sub_1C2D6EC(0, method);
     p_wipeData = (CGThumbnailListItem_o *)&this->fields.wipeData;
-    material = (UnityEngine_Object_o *)ExUIMeshRenderer__get_material(backFlashMesh, 0LL);
+    material = (UnityEngine_Object_o *)ExUIMeshRenderer__get_material(backFlashMesh, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_70136076(material, 0LL);
+    UnityEngine_Object__Destroy_71163704(material, 0);
     klass = (AssetData_o *)p_wipeData->klass;
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_39722652(klass, 0LL);
-    p_wipeData->klass = 0LL;
-    sub_1BCAF9C(p_wipeData, 0, v8, v9);
+    AssetManager__releaseAsset_40313100(klass, 0);
+    p_wipeData->klass = 0;
+    sub_1C2D434(p_wipeData, 0, v7, v8);
   }
 }
 
 
-void __fastcall FlashEffectComponent__OnEndEffect(FlashEffectComponent_o *this, const MethodInfo *method)
+void FlashEffectComponent__OnEndEffect(FlashEffectComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-
-  if ( (byte_4B1DB78 & 1) == 0 )
+  if ( (byte_4C28986 & 1) == 0 )
   {
-    sub_1BCAFF8(&ScriptManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_24595/*"white"*/, v3);
-    byte_4B1DB78 = 1;
+    sub_1C2D490(&ScriptManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_24791/*"white"*/);
+    byte_4C28986 = 1;
   }
   if ( !ScriptManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-  ScriptManager__Fade((System_String_o *)StringLiteral_24595/*"white"*/, 0, 1.0, 0LL);
+  ScriptManager__Fade((System_String_o *)StringLiteral_24791/*"white"*/, 0, 1.0, 0);
   this->fields.isWaitEndEffect = 1;
 }
 
 
-void __fastcall FlashEffectComponent__OnUpdate(FlashEffectComponent_o *this, const MethodInfo *method)
+void FlashEffectComponent__OnUpdate(FlashEffectComponent_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   float totalTime; // s8
   float deltaTime; // s0
   _BOOL4 isWaitEndEffect; // w8
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4B1DB7A & 1) == 0 )
+  if ( (byte_4C28988 & 1) == 0 )
   {
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, method);
-    sub_1BCAFF8(&ScriptManager_TypeInfo, v3);
-    byte_4B1DB7A = 1;
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&ScriptManager_TypeInfo);
+    byte_4C28988 = 1;
   }
-  UIWidget__OnUpdate((UIWidget_o *)this, 0LL);
+  UIWidget__OnUpdate((UIWidget_o *)this, 0);
   totalTime = this->fields.totalTime;
-  deltaTime = UnityEngine_Time__get_deltaTime(0LL);
+  deltaTime = UnityEngine_Time__get_deltaTime(0);
   isWaitEndEffect = this->fields.isWaitEndEffect;
   this->fields.totalTime = totalTime + deltaTime;
   if ( isWaitEndEffect )
   {
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
-    if ( !ScriptManager__IsBusyFade(0LL) )
+    if ( !ScriptManager__IsBusyFade(0) )
     {
       this->fields.isWaitEndEffect = 0;
-      gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+      gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_70136076(gameObject, 0LL);
+      UnityEngine_Object__Destroy_71163704(gameObject, 0);
     }
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall FlashEffectComponent__Resume(FlashEffectComponent_o *this, bool isSkip, const MethodInfo *method)
+void FlashEffectComponent__Resume(FlashEffectComponent_o *this, bool isSkip, const MethodInfo *method)
 {
   _BOOL4 isStart; // w8
 
@@ -306,10 +289,7 @@ void __fastcall FlashEffectComponent__Resume(FlashEffectComponent_o *this, bool 
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall FlashEffectComponent__SetTweenColor(
-        FlashEffectComponent_o *this,
-        UnityEngine_Color_o c,
-        const MethodInfo *method)
+void FlashEffectComponent__SetTweenColor(FlashEffectComponent_o *this, UnityEngine_Color_o c, const MethodInfo *method)
 {
   long double v3; // q8
   long double v4; // q9
@@ -320,13 +300,13 @@ void __fastcall FlashEffectComponent__SetTweenColor(
   v3 = *(long double *)&c.fields.a;
   v4 = *(long double *)&c.fields.b;
   v5 = *(long double *)&c.fields.g;
-  UIWidget__set_color((UIWidget_o *)this, c, 0LL);
+  UIWidget__set_color((UIWidget_o *)this, c, 0);
   backFlashMesh = this->fields.backFlashMesh;
   if ( !backFlashMesh )
-    sub_1BCB254(0LL, v8);
-  ((void (__fastcall *)(struct ExUIMeshRenderer_o *, Il2CppMethodPointer, long double, long double, long double, long double))backFlashMesh->klass->vtable._39_SetTweenColor.method)(
+    sub_1C2D6EC(0, v8);
+  ((void (__fastcall *)(struct ExUIMeshRenderer_o *, const MethodInfo *, long double, long double, long double, long double))backFlashMesh->klass->vtable._39_SetTweenColor.methodPtr)(
     backFlashMesh,
-    backFlashMesh->klass->vtable._40_GetTweenColor.methodPtr,
+    backFlashMesh->klass->vtable._39_SetTweenColor.method,
     *(long double *)&c,
     v5,
     v4,
@@ -334,15 +314,15 @@ void __fastcall FlashEffectComponent__SetTweenColor(
 }
 
 
-void __fastcall FlashEffectComponent__SetTweenVolume(FlashEffectComponent_o *this, float v, const MethodInfo *method)
+void FlashEffectComponent__SetTweenVolume(FlashEffectComponent_o *this, float v, const MethodInfo *method)
 {
   struct ExUIMeshRenderer_o *backFlashMesh; // x0
 
   backFlashMesh = this->fields.backFlashMesh;
   this->fields.volume = v;
   if ( !backFlashMesh )
-    sub_1BCB254(0LL, method);
-  ((void (__fastcall *)(struct ExUIMeshRenderer_o *, Il2CppMethodPointer))backFlashMesh->klass->vtable._41_SetTweenVolume.method)(
+    sub_1C2D6EC(0, method);
+  ((void (__fastcall *)(struct ExUIMeshRenderer_o *, const MethodInfo *))backFlashMesh->klass->vtable._41_SetTweenVolume.methodPtr)(
     backFlashMesh,
-    backFlashMesh->klass->vtable._42_GetTweenVolume.methodPtr);
+    backFlashMesh->klass->vtable._41_SetTweenVolume.method);
 }

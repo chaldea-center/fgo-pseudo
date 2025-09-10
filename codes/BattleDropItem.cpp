@@ -1,26 +1,26 @@
-void __fastcall BattleDropItem___ctor(BattleDropItem_o *this, const MethodInfo *method)
+void BattleDropItem___ctor(BattleDropItem_o *this, const MethodInfo *method)
 {
   this->fields.dropUpRate = 1000;
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-DropInfo_o *__fastcall BattleDropItem__GetDropInfo(BattleDropItem_o *this, const MethodInfo *method)
+DropInfo_o *BattleDropItem__GetDropInfo(BattleDropItem_o *this, const MethodInfo *method)
 {
   __int64 v3; // x20
   __int64 v4; // x0
   __int64 v5; // x1
   DropInfo_o *result; // x0
 
-  if ( (byte_4B1ED5E & 1) == 0 )
+  if ( (byte_4C29BBF & 1) == 0 )
   {
-    sub_1BCAFF8(&DropInfo_TypeInfo, method);
-    byte_4B1ED5E = 1;
+    sub_1C2D490(&DropInfo_TypeInfo);
+    byte_4C29BBF = 1;
   }
-  v3 = sub_1BCB244(DropInfo_TypeInfo);
-  DropInfo___ctor((DropInfo_o *)v3, 0LL);
+  v3 = sub_1C2D6DC(DropInfo_TypeInfo);
+  DropInfo___ctor((DropInfo_o *)v3, 0);
   if ( !v3 )
-    sub_1BCB254(v4, v5);
+    sub_1C2D6EC(v4, v5);
   result = (DropInfo_o *)v3;
   *(_QWORD *)(v3 + 16) = *(_QWORD *)&this->fields.type;
   *(int32x2_t *)(v3 + 24) = vrev64_s32(*(int32x2_t *)&this->fields.limitCount);
@@ -32,7 +32,7 @@ DropInfo_o *__fastcall BattleDropItem__GetDropInfo(BattleDropItem_o *this, const
 }
 
 
-int32_t __fastcall BattleDropItem__getBonusAddNum(BattleDropItem_o *this, const MethodInfo *method)
+int32_t BattleDropItem__getBonusAddNum(BattleDropItem_o *this, const MethodInfo *method)
 {
   int32_t originalNum; // w9
   int32_t num; // w8
@@ -48,7 +48,7 @@ int32_t __fastcall BattleDropItem__getBonusAddNum(BattleDropItem_o *this, const 
 }
 
 
-int32_t __fastcall BattleDropItem__getBonusAddNumClamp(BattleDropItem_o *this, const MethodInfo *method)
+int32_t BattleDropItem__getBonusAddNumClamp(BattleDropItem_o *this, const MethodInfo *method)
 {
   int32_t originalNum; // w9
   int32_t num; // w8
@@ -64,7 +64,7 @@ int32_t __fastcall BattleDropItem__getBonusAddNumClamp(BattleDropItem_o *this, c
 }
 
 
-int32_t __fastcall BattleDropItem__getOriginalNum(BattleDropItem_o *this, const MethodInfo *method)
+int32_t BattleDropItem__getOriginalNum(BattleDropItem_o *this, const MethodInfo *method)
 {
   int32_t result; // w0
 
@@ -78,7 +78,7 @@ int32_t __fastcall BattleDropItem__getOriginalNum(BattleDropItem_o *this, const 
 }
 
 
-int32_t __fastcall BattleDropItem__getTotalNum(BattleDropItem_o *this, const MethodInfo *method)
+int32_t BattleDropItem__getTotalNum(BattleDropItem_o *this, const MethodInfo *method)
 {
   int originalNum; // w9
   int32_t num; // w8
@@ -97,13 +97,13 @@ int32_t __fastcall BattleDropItem__getTotalNum(BattleDropItem_o *this, const Met
 }
 
 
-bool __fastcall BattleDropItem__isAutoSellItem(BattleDropItem_o *this, const MethodInfo *method)
+bool BattleDropItem__isAutoSellItem(BattleDropItem_o *this, const MethodInfo *method)
 {
   return this->fields.sellQp > 0 || this->fields.sellMana > 0;
 }
 
 
-bool __fastcall BattleDropItem__isBonusAdd(BattleDropItem_o *this, const MethodInfo *method)
+bool BattleDropItem__isBonusAdd(BattleDropItem_o *this, const MethodInfo *method)
 {
   int32_t originalNum; // w9
   int32_t num; // w8
@@ -119,12 +119,12 @@ bool __fastcall BattleDropItem__isBonusAdd(BattleDropItem_o *this, const MethodI
 }
 
 
-void __fastcall BattleDropItem__setData(BattleDropItem_o *this, DropInfo_o *info, const MethodInfo *method)
+void BattleDropItem__setData(BattleDropItem_o *this, DropInfo_o *info, const MethodInfo *method)
 {
   int32_t num; // w8
 
   if ( !info )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   *(_QWORD *)&this->fields.type = *(_QWORD *)&info->fields.type;
   this->fields.limitCount = info->fields.limitCount;
   num = info->fields.num;
@@ -138,7 +138,7 @@ void __fastcall BattleDropItem__setData(BattleDropItem_o *this, DropInfo_o *info
 }
 
 
-void __fastcall BattleDropItem__setNum(BattleDropItem_o *this, int32_t num, int32_t original, const MethodInfo *method)
+void BattleDropItem__setNum(BattleDropItem_o *this, int32_t num, int32_t original, const MethodInfo *method)
 {
   this->fields.num = num;
   this->fields.originalNum = original;

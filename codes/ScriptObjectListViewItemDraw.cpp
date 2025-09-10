@@ -1,327 +1,319 @@
-void __fastcall ScriptObjectListViewItemDraw___ctor(ScriptObjectListViewItemDraw_o *this, const MethodInfo *method)
+void ScriptObjectListViewItemDraw___ctor(ScriptObjectListViewItemDraw_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void __fastcall ScriptObjectListViewItemDraw__SetItem(
+void ScriptObjectListViewItemDraw__SetItem(
         ScriptObjectListViewItemDraw_o *this,
         ScriptObjectListViewItem_o *item,
         int32_t mode,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
-  __int64 v21; // x1
-  __int64 v22; // x1
-  const MethodInfo *v23; // x1
-  void *baseImageTexture; // x0
-  System_String_o *v25; // x0
-  const MethodInfo *v26; // x1
-  System_Collections_ObjectModel_ObservableCollection_T__o *v27; // x22
-  ScriptObjectListViewItemDraw___c_c *v28; // x0
+  const MethodInfo *v7; // x1
+  UnityEngine_Component_o *baseImageTexture; // x0
+  System_String_o *v9; // x0
+  const MethodInfo *v10; // x1
+  System_Collections_ObjectModel_ObservableCollection_T__o *m_CachedPtr; // x22
+  ScriptObjectListViewItemDraw___c_c *v12; // x0
   System_Converter_TInput__TOutput__o *_9__3_0; // x23
-  Il2CppObject *v30; // x24
+  Il2CppObject *v14; // x24
   struct ScriptObjectListViewItemDraw___c_StaticFields *static_fields; // x0
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
-  System_Collections_Generic_List_object__o *v34; // x23
-  System_String_o **v35; // x22
-  _BOOL8 v36; // x0
-  __int64 v37; // x1
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  System_Collections_Generic_List_object__o *v18; // x23
+  UnityEngine_Component_o *v19; // x22
+  _BOOL8 v20; // x0
+  __int64 v21; // x1
   Il2CppObject *current; // x23
   System_String_o *monitor; // x24
-  System_String_o *v40; // x1
+  System_String_o *v24; // x1
   struct UILabel_o *titleTextLabel; // x23
   System_String_o *TitleText; // x0
-  System_String_o *v43; // x1
-  UILabel_o *v44; // x0
-  struct UILabel_o *v45; // x22
+  System_String_o *v27; // x1
+  UILabel_o *v28; // x0
+  struct UILabel_o *v29; // x22
   Il2CppObject *Component_object; // x21
-  float v47; // s0
-  float v48; // s3
-  float v49; // s1
-  float v50; // s2
-  System_String_o *v51; // x24
-  System_String_o *v52; // x21
-  System_String_o *v53; // x2
-  System_String_o *v54; // x1
-  Il2CppObject *v55; // x23
-  System_String_o *v56; // x3
-  System_Collections_Generic_List_Enumerator_object__o v57; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v58; // [xsp+20h] [xbp-70h] BYREF
+  float v31; // s0 OVERLAPPED
+  float v32; // s3
+  float v33; // s1
+  float v34; // s2
+  System_String_o *v35; // x24
+  System_String_o *v36; // x21
+  System_String_o *v37; // x2
+  System_String_o *v38; // x1
+  Il2CppObject *v39; // x23
+  System_String_o *v40; // x3
+  System_Collections_Generic_List_Enumerator_object__o v41; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v42; // [xsp+20h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+38h] [xbp-58h] BYREF
   int32_t result; // [xsp+4Ch] [xbp-44h] BYREF
 
-  if ( (byte_4B19B6B & 1) == 0 )
+  if ( (byte_4C248EF & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Converter_ShopScriptEntity__ShopScriptEntity__TypeInfo, item);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_QuestMaster___, v7);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_QuestScriptMaster___, v8);
-    sub_1BCAFF8(&Method_DataManager_GetMasterData_ShopScriptMaster___, v9);
-    sub_1BCAFF8(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__, v10);
-    sub_1BCAFF8(&Method_DataMasterBase_ShopScriptMaster__ShopScriptEntity__int__getEntityList__, v11);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_ShopScriptEntity__Dispose__, v12);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_ShopScriptEntity__MoveNext__, v13);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_Enumerator_ShopScriptEntity__get_Current__, v14);
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_TweenColor___, v15);
-    sub_1BCAFF8(&Method_System_Collections_Generic_List_ShopScriptEntity__GetEnumerator__, v16);
-    sub_1BCAFF8(&UnityEngine_Object_TypeInfo, v17);
-    sub_1BCAFF8(&Method_ObservableCollectionExtensions_ConvertAll_ShopScriptEntity__ShopScriptEntity___, v18);
-    sub_1BCAFF8(&Method_SingletonMonoBehaviour_DataManager__get_Instance__, v19);
-    sub_1BCAFF8(&Method_ScriptObjectListViewItemDraw___c__SetItem_b__3_0__, v20);
-    sub_1BCAFF8(&ScriptObjectListViewItemDraw___c_TypeInfo, v21);
-    sub_1BCAFF8(&StringLiteral_113/*" "*/, v22);
-    byte_4B19B6B = 1;
+    sub_1C2D490(&System_Converter_ShopScriptEntity__ShopScriptEntity__TypeInfo);
+    sub_1C2D490(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_QuestScriptMaster___);
+    sub_1C2D490(&Method_DataManager_GetMasterData_ShopScriptMaster___);
+    sub_1C2D490(&Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+    sub_1C2D490(&Method_DataMasterBase_ShopScriptMaster__ShopScriptEntity__int__getEntityList__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_ShopScriptEntity__Dispose__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_ShopScriptEntity__MoveNext__);
+    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_ShopScriptEntity__get_Current__);
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1C2D490(&Method_System_Collections_Generic_List_ShopScriptEntity__GetEnumerator__);
+    sub_1C2D490(&UnityEngine_Object_TypeInfo);
+    sub_1C2D490(&Method_ObservableCollectionExtensions_ConvertAll_ShopScriptEntity__ShopScriptEntity___);
+    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C2D490(&Method_ScriptObjectListViewItemDraw___c__SetItem_b__3_0__);
+    sub_1C2D490(&ScriptObjectListViewItemDraw___c_TypeInfo);
+    sub_1C2D490(&StringLiteral_113/*" "*/);
+    byte_4C248EF = 1;
   }
   result = 0;
-  entity = 0LL;
-  memset(&v58, 0, sizeof(v58));
+  entity = 0;
+  memset(&v42, 0, sizeof(v42));
   if ( item && mode )
   {
     if ( !ScriptObjectListViewItem__get_TitleText(item, (const MethodInfo *)item) )
     {
 LABEL_35:
-      baseImageTexture = this->fields.baseImageTexture;
+      baseImageTexture = (UnityEngine_Component_o *)this->fields.baseImageTexture;
       if ( baseImageTexture )
       {
-        baseImageTexture = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)baseImageTexture, 0LL);
+        baseImageTexture = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(baseImageTexture, 0);
         if ( baseImageTexture )
         {
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)baseImageTexture,
-                               (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                               (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          baseImageTexture = (void *)UnityEngine_Object__op_Inequality(
-                                       (UnityEngine_Object_o *)Component_object,
-                                       0LL,
-                                       0LL);
+          baseImageTexture = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
+                                                          (UnityEngine_Object_o *)Component_object,
+                                                          0,
+                                                          0);
           if ( ((unsigned __int8)baseImageTexture & 1) != 0 )
           {
             if ( !Component_object )
               goto LABEL_53;
-            UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0LL);
+            UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
           }
-          baseImageTexture = this->fields.baseImageTexture;
-          v47 = 1.0;
+          baseImageTexture = (UnityEngine_Component_o *)this->fields.baseImageTexture;
+          v31 = 1.0;
           if ( mode == 1 )
-            v47 = 0.5;
+            v31 = 0.5;
           if ( baseImageTexture )
           {
-            v48 = 1.0;
-            v49 = v47;
-            v50 = v47;
-            UIWidget__set_color((UIWidget_o *)baseImageTexture, *(UnityEngine_Color_o *)&v47, 0LL);
+            v32 = 1.0;
+            v33 = v31;
+            v34 = v31;
+            UIWidget__set_color((UIWidget_o *)baseImageTexture, *(UnityEngine_Color_o *)&v31, 0);
             return;
           }
         }
       }
 LABEL_53:
-      sub_1BCB254(baseImageTexture, v23);
+      sub_1C2D6EC(baseImageTexture, v7);
     }
-    baseImageTexture = ScriptObjectListViewItem__get_TitleText(item, v23);
+    baseImageTexture = (UnityEngine_Component_o *)ScriptObjectListViewItem__get_TitleText(item, v7);
     if ( !baseImageTexture )
       goto LABEL_53;
-    v25 = System_String__Remove_62496164((System_String_o *)baseImageTexture, 8, 0LL);
+    v9 = System_String__Remove_63503604((System_String_o *)baseImageTexture, 8, 0);
     result = 0;
-    System_Int32__TryParse(v25, &result, 0LL);
-    entity = 0LL;
+    System_Int32__TryParse(v9, &result, 0);
+    entity = 0;
     if ( !result )
       goto LABEL_32;
-    baseImageTexture = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    baseImageTexture = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !baseImageTexture )
       goto LABEL_53;
-    baseImageTexture = DataManager__GetMasterData_object_(
-                         (DataManager_o *)baseImageTexture,
-                         (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_ShopScriptMaster___);
+    baseImageTexture = (UnityEngine_Component_o *)DataManager__GetMasterData_object_(
+                                                    (DataManager_o *)baseImageTexture,
+                                                    (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ShopScriptMaster___);
     if ( !baseImageTexture )
       goto LABEL_53;
-    v27 = (System_Collections_ObjectModel_ObservableCollection_T__o *)*((_QWORD *)baseImageTexture + 5);
-    v28 = ScriptObjectListViewItemDraw___c_TypeInfo;
+    m_CachedPtr = (System_Collections_ObjectModel_ObservableCollection_T__o *)baseImageTexture[1].fields.m_CachedPtr;
+    v12 = ScriptObjectListViewItemDraw___c_TypeInfo;
     if ( !ScriptObjectListViewItemDraw___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ScriptObjectListViewItemDraw___c_TypeInfo);
-      v28 = ScriptObjectListViewItemDraw___c_TypeInfo;
+      v12 = ScriptObjectListViewItemDraw___c_TypeInfo;
     }
-    _9__3_0 = (System_Converter_TInput__TOutput__o *)v28->static_fields->__9__3_0;
+    _9__3_0 = (System_Converter_TInput__TOutput__o *)v12->static_fields->__9__3_0;
     if ( !_9__3_0 )
     {
-      if ( !v28->_2.cctor_finished )
+      if ( !v12->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v28);
-        v28 = ScriptObjectListViewItemDraw___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v12);
+        v12 = ScriptObjectListViewItemDraw___c_TypeInfo;
       }
-      v30 = (Il2CppObject *)v28->static_fields->__9;
-      _9__3_0 = (System_Converter_TInput__TOutput__o *)sub_1BCB244(System_Converter_ShopScriptEntity__ShopScriptEntity__TypeInfo);
+      v14 = (Il2CppObject *)v12->static_fields->__9;
+      _9__3_0 = (System_Converter_TInput__TOutput__o *)sub_1C2D6DC(System_Converter_ShopScriptEntity__ShopScriptEntity__TypeInfo);
       System_Converter_object__object____ctor(
         _9__3_0,
-        v30,
+        v14,
         Method_ScriptObjectListViewItemDraw___c__SetItem_b__3_0__,
-        0LL);
+        0);
       static_fields = ScriptObjectListViewItemDraw___c_TypeInfo->static_fields;
       static_fields->__9__3_0 = (struct System_Converter_ShopScriptEntity__ShopScriptEntity__o *)_9__3_0;
-      sub_1BCAF9C((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v32, v33);
+      sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v16, v17);
     }
-    v34 = (System_Collections_Generic_List_object__o *)ObservableCollectionExtensions__ConvertAll_object__object_(
-                                                         v27,
+    v18 = (System_Collections_Generic_List_object__o *)ObservableCollectionExtensions__ConvertAll_object__object_(
+                                                         m_CachedPtr,
                                                          (System_Converter_T__TOutput__o *)_9__3_0,
-                                                         (const MethodInfo_30A4650 *)Method_ObservableCollectionExtensions_ConvertAll_ShopScriptEntity__ShopScriptEntity___);
-    baseImageTexture = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                                                         (const MethodInfo_315B754 *)Method_ObservableCollectionExtensions_ConvertAll_ShopScriptEntity__ShopScriptEntity___);
+    baseImageTexture = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !baseImageTexture )
       goto LABEL_53;
-    baseImageTexture = DataManager__GetMasterData_object_(
-                         (DataManager_o *)baseImageTexture,
-                         (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_QuestMaster___);
+    baseImageTexture = (UnityEngine_Component_o *)DataManager__GetMasterData_object_(
+                                                    (DataManager_o *)baseImageTexture,
+                                                    (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_QuestMaster___);
     if ( !baseImageTexture )
       goto LABEL_53;
     DataMasterBase_object__object__int___TryGetEntity(
       (DataMasterBase_TMaster__TEntity__PKType__o *)baseImageTexture,
       &entity,
       result,
-      (const MethodInfo_32C7E4C *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
-    baseImageTexture = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_38F8AD8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      (const MethodInfo_3387DE4 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__TryGetEntity__);
+    baseImageTexture = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !baseImageTexture )
       goto LABEL_53;
-    baseImageTexture = DataManager__GetMasterData_object_(
-                         (DataManager_o *)baseImageTexture,
-                         (const MethodInfo_301AAA4 *)Method_DataManager_GetMasterData_QuestScriptMaster___);
+    baseImageTexture = (UnityEngine_Component_o *)DataManager__GetMasterData_object_(
+                                                    (DataManager_o *)baseImageTexture,
+                                                    (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_QuestScriptMaster___);
     if ( !baseImageTexture )
       goto LABEL_53;
-    baseImageTexture = QuestScriptMaster__GetEntityFromQuestId((QuestScriptMaster_o *)baseImageTexture, result, 0LL);
-    if ( !v34 )
+    baseImageTexture = (UnityEngine_Component_o *)QuestScriptMaster__GetEntityFromQuestId(
+                                                    (QuestScriptMaster_o *)baseImageTexture,
+                                                    result,
+                                                    0);
+    if ( !v18 )
       goto LABEL_53;
-    v35 = (System_String_o **)baseImageTexture;
+    v19 = baseImageTexture;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v57,
-      v34,
-      (const MethodInfo_36BA6C8 *)Method_System_Collections_Generic_List_ShopScriptEntity__GetEnumerator__);
-    v58 = v57;
+      (System_Collections_Generic_List_Enumerator_T__o *)&v41,
+      v18,
+      (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_ShopScriptEntity__GetEnumerator__);
+    v42 = v41;
     while ( 1 )
     {
-      v36 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v58,
-              (const MethodInfo_344F51C *)Method_System_Collections_Generic_List_Enumerator_ShopScriptEntity__MoveNext__);
-      if ( !v36 )
+      v20 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+              &v42,
+              (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_ShopScriptEntity__MoveNext__);
+      if ( !v20 )
         break;
-      current = v58.fields._current;
-      if ( !v58.fields._current )
-        sub_1BCB254(v36, v37);
-      monitor = (System_String_o *)v58.fields._current[2].monitor;
-      v40 = System_Int32__ToString((int32_t)&result, 0LL);
-      if ( System_String__op_Equality(monitor, v40, 0LL) && current[1].monitor )
+      current = v42.fields._current;
+      if ( !v42.fields._current )
+        sub_1C2D6EC(v20, v21);
+      monitor = (System_String_o *)v42.fields._current[2].monitor;
+      v24 = System_Int32__ToString((int32_t)&result, 0);
+      if ( System_String__op_Equality(monitor, v24, 0) && current[1].monitor )
         goto LABEL_28;
     }
-    current = 0LL;
+    current = 0;
 LABEL_28:
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v58,
-      (const MethodInfo_344F518 *)Method_System_Collections_Generic_List_Enumerator_ShopScriptEntity__Dispose__);
+      &v42,
+      (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_ShopScriptEntity__Dispose__);
     if ( result )
     {
-      if ( v35 )
+      if ( v19 )
       {
         titleTextLabel = this->fields.titleTextLabel;
-        TitleText = ScriptObjectListViewItem__get_TitleText(item, v26);
-        baseImageTexture = System_String__Concat_62488672(TitleText, (System_String_o *)StringLiteral_113/*" "*/, v35[3], 0LL);
+        TitleText = ScriptObjectListViewItem__get_TitleText(item, v10);
+        baseImageTexture = (UnityEngine_Component_o *)System_String__Concat_63496112(
+                                                        TitleText,
+                                                        (System_String_o *)StringLiteral_113/*" "*/,
+                                                        (System_String_o *)v19[1].klass,
+                                                        0);
         if ( !titleTextLabel )
           goto LABEL_53;
-        v43 = (System_String_o *)baseImageTexture;
-        v44 = titleTextLabel;
+        v27 = (System_String_o *)baseImageTexture;
+        v28 = titleTextLabel;
         goto LABEL_34;
       }
       if ( current )
       {
-        v45 = this->fields.titleTextLabel;
-        v51 = ScriptObjectListViewItem__get_TitleText(item, v26);
-        v52 = (System_String_o *)StringLiteral_113/*" "*/;
-        v53 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, Il2CppMethodPointer))current->klass->vtable[3].method)(
+        v29 = this->fields.titleTextLabel;
+        v35 = ScriptObjectListViewItem__get_TitleText(item, v10);
+        v36 = (System_String_o *)StringLiteral_113/*" "*/;
+        v37 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))current->klass->vtable[3].methodPtr)(
                                    current,
-                                   current->klass->vtable[4].methodPtr);
-        baseImageTexture = v51;
-        v54 = v52;
+                                   current->klass->vtable[3].method);
+        baseImageTexture = (UnityEngine_Component_o *)v35;
+        v38 = v36;
       }
       else
       {
-        v55 = entity;
-        v45 = this->fields.titleTextLabel;
-        baseImageTexture = ScriptObjectListViewItem__get_TitleText(item, v26);
-        v56 = (System_String_o *)baseImageTexture;
-        if ( !v55 )
+        v39 = entity;
+        v29 = this->fields.titleTextLabel;
+        baseImageTexture = (UnityEngine_Component_o *)ScriptObjectListViewItem__get_TitleText(item, v10);
+        v40 = (System_String_o *)baseImageTexture;
+        if ( !v39 )
         {
-          if ( !v45 )
+          if ( !v29 )
             goto LABEL_53;
-          v44 = v45;
-          v43 = v56;
+          v28 = v29;
+          v27 = v40;
           goto LABEL_34;
         }
         if ( !entity )
           goto LABEL_53;
-        v53 = (System_String_o *)entity[1].monitor;
-        v54 = (System_String_o *)StringLiteral_113/*" "*/;
+        v37 = (System_String_o *)entity[1].monitor;
+        v38 = (System_String_o *)StringLiteral_113/*" "*/;
       }
-      baseImageTexture = System_String__Concat_62488672((System_String_o *)baseImageTexture, v54, v53, 0LL);
-      if ( !v45 )
+      baseImageTexture = (UnityEngine_Component_o *)System_String__Concat_63496112(
+                                                      (System_String_o *)baseImageTexture,
+                                                      v38,
+                                                      v37,
+                                                      0);
+      if ( !v29 )
         goto LABEL_53;
     }
     else
     {
 LABEL_32:
-      v45 = this->fields.titleTextLabel;
-      baseImageTexture = ScriptObjectListViewItem__get_TitleText(item, v26);
-      if ( !v45 )
+      v29 = this->fields.titleTextLabel;
+      baseImageTexture = (UnityEngine_Component_o *)ScriptObjectListViewItem__get_TitleText(item, v10);
+      if ( !v29 )
         goto LABEL_53;
     }
-    v43 = (System_String_o *)baseImageTexture;
-    v44 = v45;
+    v27 = (System_String_o *)baseImageTexture;
+    v28 = v29;
 LABEL_34:
-    UILabel__set_text(v44, v43, 0LL);
+    UILabel__set_text(v28, v27, 0);
     goto LABEL_35;
   }
 }
 
 
-void __fastcall ScriptObjectListViewItemDraw___c___cctor(const MethodInfo *method)
+void ScriptObjectListViewItemDraw___c___cctor(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  Il2CppObject *v2; // x19
-  int32_t v3; // w2
-  const MethodInfo *v4; // x3
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
 
-  if ( (byte_4B19B6C & 1) == 0 )
+  if ( (byte_4C248F0 & 1) == 0 )
   {
-    sub_1BCAFF8(&ScriptObjectListViewItemDraw___c_TypeInfo, v1);
-    byte_4B19B6C = 1;
+    sub_1C2D490(&ScriptObjectListViewItemDraw___c_TypeInfo);
+    byte_4C248F0 = 1;
   }
-  v2 = (Il2CppObject *)sub_1BCB244(ScriptObjectListViewItemDraw___c_TypeInfo);
-  System_Object___ctor(v2, 0LL);
-  ScriptObjectListViewItemDraw___c_TypeInfo->static_fields->__9 = (struct ScriptObjectListViewItemDraw___c_o *)v2;
-  sub_1BCAF9C((CGThumbnailListItem_o *)ScriptObjectListViewItemDraw___c_TypeInfo->static_fields, (int32_t)v2, v3, v4);
+  v1 = (Il2CppObject *)sub_1C2D6DC(ScriptObjectListViewItemDraw___c_TypeInfo);
+  System_Object___ctor(v1, 0);
+  ScriptObjectListViewItemDraw___c_TypeInfo->static_fields->__9 = (struct ScriptObjectListViewItemDraw___c_o *)v1;
+  sub_1C2D434((CGThumbnailListItem_o *)ScriptObjectListViewItemDraw___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
-void __fastcall ScriptObjectListViewItemDraw___c___ctor(
-        ScriptObjectListViewItemDraw___c_o *this,
-        const MethodInfo *method)
+void ScriptObjectListViewItemDraw___c___ctor(ScriptObjectListViewItemDraw___c_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0LL);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-ShopScriptEntity_o *__fastcall ScriptObjectListViewItemDraw___c___SetItem_b__3_0(
+ShopScriptEntity_o *ScriptObjectListViewItemDraw___c___SetItem_b__3_0(
         ScriptObjectListViewItemDraw___c_o *this,
         ShopScriptEntity_o *entity,
         const MethodInfo *method)

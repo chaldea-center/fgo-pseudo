@@ -1,17 +1,17 @@
-void __fastcall UserPresentHistoryEntity___ctor(UserPresentHistoryEntity_o *this, const MethodInfo *method)
+void UserPresentHistoryEntity___ctor(UserPresentHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1D3D5 & 1) == 0 )
+  if ( (byte_4C281CF & 1) == 0 )
   {
-    sub_1BCAFF8(&Method_DataEntityBase_long___ctor__, method);
-    byte_4B1D3D5 = 1;
+    sub_1C2D490(&Method_DataEntityBase_long___ctor__);
+    byte_4C281CF = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_32C5964 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_33858FC *)Method_DataEntityBase_long___ctor__);
 }
 
 
-int32_t __fastcall UserPresentHistoryEntity__CompareTo(
+int32_t UserPresentHistoryEntity__CompareTo(
         UserPresentHistoryEntity_o *this,
         UserPresentHistoryEntity_o *other,
         const MethodInfo *method)
@@ -55,15 +55,13 @@ int32_t __fastcall UserPresentHistoryEntity__CompareTo(
 }
 
 
-int64_t __fastcall UserPresentHistoryEntity__CreatePrimaryKey(
-        UserPresentHistoryEntity_o *this,
-        const MethodInfo *method)
+int64_t UserPresentHistoryEntity__CreatePrimaryKey(UserPresentHistoryEntity_o *this, const MethodInfo *method)
 {
   return this->fields.id;
 }
 
 
-bool __fastcall UserPresentHistoryEntity__Equals(
+bool UserPresentHistoryEntity__Equals(
         UserPresentHistoryEntity_o *this,
         UserPresentHistoryEntity_o *other,
         const MethodInfo *method)
@@ -78,26 +76,23 @@ bool __fastcall UserPresentHistoryEntity__Equals(
 }
 
 
-System_String_o *__fastcall UserPresentHistoryEntity__ToString(
-        UserPresentHistoryEntity_o *this,
-        const MethodInfo *method)
+System_String_o *UserPresentHistoryEntity__ToString(UserPresentHistoryEntity_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
-  GiftName_GiftNameBase_o *v4; // x19
-  System_String_o *v5; // x0
-  __int64 v6; // x1
+  GiftName_GiftNameBase_o *v3; // x19
+  System_String_o *v4; // x0
+  __int64 v5; // x1
 
-  if ( (byte_4B1D3D4 & 1) == 0 )
+  if ( (byte_4C281CE & 1) == 0 )
   {
-    sub_1BCAFF8(&LocalizationManager_TypeInfo, method);
-    sub_1BCAFF8(&StringLiteral_10375/*"PRESENT_INFO"*/, v3);
-    byte_4B1D3D4 = 1;
+    sub_1C2D490(&LocalizationManager_TypeInfo);
+    sub_1C2D490(&StringLiteral_10449/*"PRESENT_INFO"*/);
+    byte_4C281CE = 1;
   }
-  v4 = GiftName_GiftNameFactory__Create(this->fields.giftType, this->fields.objectId, this->fields.num, 0LL);
+  v3 = GiftName_GiftNameFactory__Create(this->fields.giftType, this->fields.objectId, this->fields.num, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10375/*"PRESENT_INFO"*/, 0LL);
-  if ( !v4 )
-    sub_1BCB254(v5, v6);
-  return System_String__Format_62491716(v5, (Il2CppObject *)v4->fields.name, (Il2CppObject *)v4->fields.count, 0LL);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_10449/*"PRESENT_INFO"*/, 0);
+  if ( !v3 )
+    sub_1C2D6EC(v4, v5);
+  return System_String__Format_63499156(v4, (Il2CppObject *)v3->fields.name, (Il2CppObject *)v3->fields.count, 0);
 }

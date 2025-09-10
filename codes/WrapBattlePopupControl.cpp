@@ -1,4 +1,4 @@
-void __fastcall WrapBattlePopupControl___ctor(
+void WrapBattlePopupControl___ctor(
         WrapBattlePopupControl_o *this,
         BattlePerformance_o *inPerf,
         const MethodInfo *method)
@@ -6,12 +6,12 @@ void __fastcall WrapBattlePopupControl___ctor(
   const MethodInfo *v3; // x3
 
   if ( !inPerf )
-    sub_1BCB254(this, 0LL);
+    sub_1C2D6EC(this, 0);
   WrapBaseBattlePopupControl___ctor((WrapBaseBattlePopupControl_o *)this, inPerf->fields.popupTr, inPerf, v3);
 }
 
 
-UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetAvoidResetDamageObject(
+UnityEngine_GameObject_o *WrapBattlePopupControl__GetAvoidResetDamageObject(
         WrapBattlePopupControl_o *this,
         System_String_o *text,
         const MethodInfo *method)
@@ -23,10 +23,10 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetAvoidResetDamage
   struct BattlePerformance_o *perf; // x8
   struct BattleEffectControl_o *effectcontrol; // x8
 
-  IsNullOrEmpty = System_String__IsNullOrEmpty(text, 0LL);
+  IsNullOrEmpty = System_String__IsNullOrEmpty(text, 0);
   perf = this->fields.perf;
-  if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0LL )
-    sub_1BCB254(IsNullOrEmpty, v6);
+  if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
+    sub_1C2D6EC(IsNullOrEmpty, v6);
   if ( IsNullOrEmpty )
     return WrapBaseBattlePopupControl__CreatePopupObject(
              (WrapBaseBattlePopupControl_o *)this,
@@ -43,7 +43,7 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetAvoidResetDamage
 }
 
 
-UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetAvoidanceObject(
+UnityEngine_GameObject_o *WrapBattlePopupControl__GetAvoidanceObject(
         WrapBattlePopupControl_o *this,
         const MethodInfo *method)
 {
@@ -52,8 +52,8 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetAvoidanceObject(
   struct BattleEffectControl_o *effectcontrol; // x8
 
   perf = this->fields.perf;
-  if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0LL )
-    sub_1BCB254(this, method);
+  if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
+    sub_1C2D6EC(this, method);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields.avoidanceObject,
@@ -62,7 +62,7 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetAvoidanceObject(
 }
 
 
-UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetAvoidanceTextObject(
+UnityEngine_GameObject_o *WrapBattlePopupControl__GetAvoidanceTextObject(
         WrapBattlePopupControl_o *this,
         const MethodInfo *method)
 {
@@ -71,8 +71,8 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetAvoidanceTextObj
   struct BattleEffectControl_o *effectcontrol; // x8
 
   perf = this->fields.perf;
-  if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0LL )
-    sub_1BCB254(this, method);
+  if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
+    sub_1C2D6EC(this, method);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields.avoidanceTextObject,
@@ -81,7 +81,7 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetAvoidanceTextObj
 }
 
 
-UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetBuffTextClassIconObject(
+UnityEngine_GameObject_o *WrapBattlePopupControl__GetBuffTextClassIconObject(
         WrapBattlePopupControl_o *this,
         int32_t color,
         const MethodInfo *method)
@@ -89,13 +89,13 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetBuffTextClassIco
   struct BattlePerformance_o *perf; // x8
 
   perf = this->fields.perf;
-  if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0LL )
-    sub_1BCB254(this, color);
-  return BattleEffectControl__getBuffTextClassIconObject((BattleEffectControl_o *)this, color, 0LL);
+  if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
+    sub_1C2D6EC(this, color);
+  return BattleEffectControl__getBuffTextClassIconObject((BattleEffectControl_o *)this, color, 0);
 }
 
 
-UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetBuffTextObject(
+UnityEngine_GameObject_o *WrapBattlePopupControl__GetBuffTextObject(
         WrapBattlePopupControl_o *this,
         int32_t color,
         const MethodInfo *method)
@@ -103,13 +103,13 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetBuffTextObject(
   struct BattlePerformance_o *perf; // x8
 
   perf = this->fields.perf;
-  if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0LL )
-    sub_1BCB254(this, color);
-  return BattleEffectControl__getBuffTextObject((BattleEffectControl_o *)this, color, 0LL);
+  if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
+    sub_1C2D6EC(this, color);
+  return BattleEffectControl__getBuffTextObject((BattleEffectControl_o *)this, color, 0);
 }
 
 
-UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetDamageObject(
+UnityEngine_GameObject_o *WrapBattlePopupControl__GetDamageObject(
         WrapBattlePopupControl_o *this,
         bool critical,
         bool week,
@@ -119,13 +119,13 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetDamageObject(
   struct BattlePerformance_o *perf; // x8
 
   perf = this->fields.perf;
-  if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0LL )
-    sub_1BCB254(this, critical);
-  return BattleEffectControl__getDamageObject((BattleEffectControl_o *)this, critical, week, resist, 0LL);
+  if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
+    sub_1C2D6EC(this, critical);
+  return BattleEffectControl__getDamageObject((BattleEffectControl_o *)this, critical, week, resist, 0);
 }
 
 
-UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetEffectInstantiateLocal(
+UnityEngine_GameObject_o *WrapBattlePopupControl__GetEffectInstantiateLocal(
         WrapBattlePopupControl_o *this,
         int32_t id,
         const MethodInfo *method)
@@ -133,13 +133,13 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetEffectInstantiat
   struct BattlePerformance_o *perf; // x8
 
   perf = this->fields.perf;
-  if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0LL )
-    sub_1BCB254(this, id);
-  return BattleEffectControl__getEffectInstantiate((BattleEffectControl_o *)this, id, 0LL);
+  if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
+    sub_1C2D6EC(this, id);
+  return BattleEffectControl__getEffectInstantiate((BattleEffectControl_o *)this, id, 0);
 }
 
 
-UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetInvincibleObject(
+UnityEngine_GameObject_o *WrapBattlePopupControl__GetInvincibleObject(
         WrapBattlePopupControl_o *this,
         const MethodInfo *method)
 {
@@ -148,8 +148,8 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetInvincibleObject
   struct BattleEffectControl_o *effectcontrol; // x8
 
   perf = this->fields.perf;
-  if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0LL )
-    sub_1BCB254(this, method);
+  if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
+    sub_1C2D6EC(this, method);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields.invincibleObject,
@@ -158,7 +158,7 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetInvincibleObject
 }
 
 
-UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetSpecialInvincibleObject(
+UnityEngine_GameObject_o *WrapBattlePopupControl__GetSpecialInvincibleObject(
         WrapBattlePopupControl_o *this,
         const MethodInfo *method)
 {
@@ -167,8 +167,8 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetSpecialInvincibl
   struct BattleEffectControl_o *effectcontrol; // x8
 
   perf = this->fields.perf;
-  if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0LL )
-    sub_1BCB254(this, method);
+  if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
+    sub_1C2D6EC(this, method);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields._specialInvincibleObject_k__BackingField,
@@ -177,7 +177,7 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__GetSpecialInvincibl
 }
 
 
-UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__SetBuffIconObject(
+UnityEngine_GameObject_o *WrapBattlePopupControl__SetBuffIconObject(
         WrapBattlePopupControl_o *this,
         BattleBuffData_ShowBuffData_array *buffList,
         const MethodInfo *method)
@@ -185,7 +185,7 @@ UnityEngine_GameObject_o *__fastcall WrapBattlePopupControl__SetBuffIconObject(
   struct BattlePerformance_o *perf; // x8
 
   perf = this->fields.perf;
-  if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0LL )
-    sub_1BCB254(this, buffList);
-  return BattleEffectControl__SetBuffIconObject((BattleEffectControl_o *)this, buffList, 0LL);
+  if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
+    sub_1C2D6EC(this, buffList);
+  return BattleEffectControl__SetBuffIconObject((BattleEffectControl_o *)this, buffList, 0);
 }

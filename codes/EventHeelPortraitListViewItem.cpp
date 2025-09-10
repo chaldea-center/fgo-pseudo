@@ -1,4 +1,4 @@
-void __fastcall EventHeelPortraitListViewItem___ctor(
+void EventHeelPortraitListViewItem___ctor(
         EventHeelPortraitListViewItem_o *this,
         int32_t index,
         HeelPortraitEntity_o *heelPortraitEntity,
@@ -9,16 +9,16 @@ void __fastcall EventHeelPortraitListViewItem___ctor(
   EventHeelPortraitListViewItem_o *v9; // x22
 
   v9 = this;
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   v9->fields._Entity_k__BackingField = heelPortraitEntity;
-  v9 = (EventHeelPortraitListViewItem_o *)((char *)v9 + 112);
-  sub_1BCAF9C(v9);
+  v9 = (EventHeelPortraitListViewItem_o *)((char *)v9 + 120);
+  sub_1C2D434(v9);
   LOBYTE(v9->monitor) = isHavePortrait;
   BYTE1(v9->monitor) = isDispDetailDialog;
 }
 
 
-void __fastcall EventHeelPortraitListViewItem__SetIsDispDetailDialog(
+void EventHeelPortraitListViewItem__SetIsDispDetailDialog(
         EventHeelPortraitListViewItem_o *this,
         bool isDisp,
         const MethodInfo *method)
@@ -27,7 +27,7 @@ void __fastcall EventHeelPortraitListViewItem__SetIsDispDetailDialog(
 }
 
 
-HeelPortraitEntity_o *__fastcall EventHeelPortraitListViewItem__get_Entity(
+HeelPortraitEntity_o *EventHeelPortraitListViewItem__get_Entity(
         EventHeelPortraitListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -35,7 +35,7 @@ HeelPortraitEntity_o *__fastcall EventHeelPortraitListViewItem__get_Entity(
 }
 
 
-bool __fastcall EventHeelPortraitListViewItem__get_isDispDetailDialog(
+bool EventHeelPortraitListViewItem__get_isDispDetailDialog(
         EventHeelPortraitListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -43,25 +43,23 @@ bool __fastcall EventHeelPortraitListViewItem__get_isDispDetailDialog(
 }
 
 
-bool __fastcall EventHeelPortraitListViewItem__get_isHavePortrait(
-        EventHeelPortraitListViewItem_o *this,
-        const MethodInfo *method)
+bool EventHeelPortraitListViewItem__get_isHavePortrait(EventHeelPortraitListViewItem_o *this, const MethodInfo *method)
 {
   return this->fields._isHavePortrait_k__BackingField;
 }
 
 
-void __fastcall EventHeelPortraitListViewItem__set_Entity(
+void EventHeelPortraitListViewItem__set_Entity(
         EventHeelPortraitListViewItem_o *this,
         HeelPortraitEntity_o *value,
         const MethodInfo *method)
 {
   this->fields._Entity_k__BackingField = value;
-  sub_1BCAF9C(&this->fields._Entity_k__BackingField);
+  sub_1C2D434(&this->fields._Entity_k__BackingField);
 }
 
 
-void __fastcall EventHeelPortraitListViewItem__set_isDispDetailDialog(
+void EventHeelPortraitListViewItem__set_isDispDetailDialog(
         EventHeelPortraitListViewItem_o *this,
         bool value,
         const MethodInfo *method)
@@ -70,7 +68,7 @@ void __fastcall EventHeelPortraitListViewItem__set_isDispDetailDialog(
 }
 
 
-void __fastcall EventHeelPortraitListViewItem__set_isHavePortrait(
+void EventHeelPortraitListViewItem__set_isHavePortrait(
         EventHeelPortraitListViewItem_o *this,
         bool value,
         const MethodInfo *method)

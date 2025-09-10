@@ -1,10 +1,10 @@
-void __fastcall GrandQuestFolderBoardItem___ctor(GrandQuestFolderBoardItem_o *this, const MethodInfo *method)
+void GrandQuestFolderBoardItem___ctor(GrandQuestFolderBoardItem_o *this, const MethodInfo *method)
 {
-  ListViewItem___ctor((ListViewItem_o *)this, 0LL);
+  ListViewItem___ctor((ListViewItem_o *)this, 0);
 }
 
 
-void __fastcall GrandQuestFolderBoardItem___ctor_32178856(
+void GrandQuestFolderBoardItem___ctor_32680536(
         GrandQuestFolderBoardItem_o *this,
         int32_t index,
         int32_t bannerId,
@@ -17,46 +17,42 @@ void __fastcall GrandQuestFolderBoardItem___ctor_32178856(
   GrandQuestFolderBoardItem_o *v13; // x24
 
   v13 = this;
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   v13->fields._Name_k__BackingField = boardName;
-  v13 = (GrandQuestFolderBoardItem_o *)((char *)v13 + 120);
+  v13 = (GrandQuestFolderBoardItem_o *)((char *)v13 + 128);
   LODWORD(v13[-1].fields._ListCreatedTime_k__BackingField) = bannerId;
   HIDWORD(v13[-1].fields._ListCreatedTime_k__BackingField) = warId;
-  sub_1BCAF9C(v13);
+  sub_1C2D434(v13);
   LODWORD(v13->monitor) = iconId;
   *(_QWORD *)&v13->fields.selectNum = listCreatedTime;
 }
 
 
-int32_t __fastcall GrandQuestFolderBoardItem__get_BannerId(GrandQuestFolderBoardItem_o *this, const MethodInfo *method)
+int32_t GrandQuestFolderBoardItem__get_BannerId(GrandQuestFolderBoardItem_o *this, const MethodInfo *method)
 {
   return this->fields._BannerId_k__BackingField;
 }
 
 
-int32_t __fastcall GrandQuestFolderBoardItem__get_IconId(GrandQuestFolderBoardItem_o *this, const MethodInfo *method)
+int32_t GrandQuestFolderBoardItem__get_IconId(GrandQuestFolderBoardItem_o *this, const MethodInfo *method)
 {
   return this->fields._IconId_k__BackingField;
 }
 
 
-int64_t __fastcall GrandQuestFolderBoardItem__get_ListCreatedTime(
-        GrandQuestFolderBoardItem_o *this,
-        const MethodInfo *method)
+int64_t GrandQuestFolderBoardItem__get_ListCreatedTime(GrandQuestFolderBoardItem_o *this, const MethodInfo *method)
 {
   return this->fields._ListCreatedTime_k__BackingField;
 }
 
 
-System_String_o *__fastcall GrandQuestFolderBoardItem__get_Name(
-        GrandQuestFolderBoardItem_o *this,
-        const MethodInfo *method)
+System_String_o *GrandQuestFolderBoardItem__get_Name(GrandQuestFolderBoardItem_o *this, const MethodInfo *method)
 {
   return this->fields._Name_k__BackingField;
 }
 
 
-int32_t __fastcall GrandQuestFolderBoardItem__get_WarId(GrandQuestFolderBoardItem_o *this, const MethodInfo *method)
+int32_t GrandQuestFolderBoardItem__get_WarId(GrandQuestFolderBoardItem_o *this, const MethodInfo *method)
 {
   return this->fields._WarId_k__BackingField;
 }

@@ -1,10 +1,10 @@
-void __fastcall SetSelectSvtInfoComponent___ctor(SetSelectSvtInfoComponent_o *this, const MethodInfo *method)
+void SetSelectSvtInfoComponent___ctor(SetSelectSvtInfoComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall SetSelectSvtInfoComponent__setSvtInfo(
+void SetSelectSvtInfoComponent__setSvtInfo(
         SetSelectSvtInfoComponent_o *this,
         int64_t usrSvtId,
         const MethodInfo *method)
@@ -13,11 +13,11 @@ void __fastcall SetSelectSvtInfoComponent__setSvtInfo(
 
   svtFaceInfo = (UnityEngine_Component_o *)this->fields.svtFaceInfo;
   if ( !svtFaceInfo
-    || (svtFaceInfo = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(svtFaceInfo, 0LL)) == 0LL
-    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtFaceInfo, 1, 0LL),
-        (svtFaceInfo = (UnityEngine_Component_o *)this->fields.svtFaceInfo) == 0LL) )
+    || (svtFaceInfo = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(svtFaceInfo, 0)) == 0
+    || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)svtFaceInfo, 1, 0),
+        (svtFaceInfo = (UnityEngine_Component_o *)this->fields.svtFaceInfo) == 0) )
   {
-    sub_1BCB254(svtFaceInfo, usrSvtId);
+    sub_1C2D6EC(svtFaceInfo, usrSvtId);
   }
-  ServantFaceIconComponent__Set_40190024((ServantFaceIconComponent_o *)svtFaceInfo, usrSvtId, 0LL, 0LL, 0LL);
+  ServantFaceIconComponent__Set_40783536((ServantFaceIconComponent_o *)svtFaceInfo, usrSvtId, 0, 0, 0);
 }

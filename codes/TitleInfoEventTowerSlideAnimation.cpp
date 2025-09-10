@@ -1,12 +1,10 @@
-void __fastcall TitleInfoEventTowerSlideAnimation___ctor(
-        TitleInfoEventTowerSlideAnimation_o *this,
-        const MethodInfo *method)
+void TitleInfoEventTowerSlideAnimation___ctor(TitleInfoEventTowerSlideAnimation_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0LL);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall TitleInfoEventTowerSlideAnimation__SetPotision(
+void TitleInfoEventTowerSlideAnimation__SetPotision(
         TitleInfoEventTowerSlideAnimation_o *this,
         const MethodInfo *method)
 {
@@ -14,15 +12,14 @@ void __fastcall TitleInfoEventTowerSlideAnimation__SetPotision(
   __int64 v4; // x1
 
   this->fields.slideOutPosition.fields.y = this->fields.slideInPosition.fields.y;
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_1BCB254(0LL, v4);
-  UnityEngine_Transform__set_localPosition(transform, this->fields.slideOutPosition, 0LL);
+    sub_1C2D6EC(0, v4);
+  UnityEngine_Transform__set_localPosition(transform, this->fields.slideOutPosition, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void __fastcall TitleInfoEventTowerSlideAnimation__StartSlideAnim(
+void TitleInfoEventTowerSlideAnimation__StartSlideAnim(
         TitleInfoEventTowerSlideAnimation_o *this,
         System_Action_o *callback,
         UnityEngine_Vector3_o afterPosition,
@@ -32,284 +29,271 @@ void __fastcall TitleInfoEventTowerSlideAnimation__StartSlideAnim(
   float z; // s8
   float y; // s9
   float x; // s10
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
-  __int64 v17; // x1
-  __int64 v18; // x1
-  __int64 v19; // x1
-  __int64 v20; // x1
   UnityEngine_Transform_o *transform; // x0
-  __int64 v22; // x1
+  __int64 v11; // x1
   UnityEngine_GameObject_o *gameObject; // x20
-  __int64 v24; // x2
-  const MethodInfo *v25; // x3
-  System_Object_array *v26; // x21
-  UnityEngine_GameObject_o *v27; // x0
-  __int64 v28; // x1
-  __int64 v29; // x2
-  __int64 v30; // x3
-  __int64 v31; // x4
-  const MethodInfo *v32; // x3
-  Il2CppObject *v33; // x22
-  const MethodInfo *v34; // x3
-  __int64 v35; // x9
-  __int64 v36; // x2
-  __int64 v37; // x3
-  __int64 v38; // x4
+  __int64 v13; // x2
+  const MethodInfo *v14; // x3
+  System_Object_array *v15; // x21
+  UnityEngine_GameObject_o *v16; // x0
+  __int64 v17; // x1
+  __int64 v18; // x2
+  __int64 v19; // x3
+  __int64 v20; // x4
+  const MethodInfo *v21; // x3
+  Il2CppObject *v22; // x22
+  const MethodInfo *v23; // x3
+  __int64 v24; // x9
+  __int64 v25; // x2
+  __int64 v26; // x3
+  __int64 v27; // x4
+  const MethodInfo *v28; // x3
+  Il2CppObject *v29; // x22
+  const MethodInfo *v30; // x3
+  const MethodInfo *v31; // x3
+  struct System_String_o *easeTypeOut; // x22
+  const MethodInfo *v33; // x3
+  __int64 v34; // x2
+  __int64 v35; // x3
+  __int64 v36; // x4
+  const MethodInfo *v37; // x3
+  Il2CppObject *v38; // x22
   const MethodInfo *v39; // x3
-  Il2CppObject *v40; // x22
+  const MethodInfo *v40; // x3
   const MethodInfo *v41; // x3
   const MethodInfo *v42; // x3
-  struct System_String_o *easeTypeOut; // x22
-  const MethodInfo *v44; // x3
-  __int64 v45; // x2
-  __int64 v46; // x3
-  __int64 v47; // x4
-  const MethodInfo *v48; // x3
-  Il2CppObject *v49; // x22
-  const MethodInfo *v50; // x3
-  const MethodInfo *v51; // x3
-  const MethodInfo *v52; // x3
-  const MethodInfo *v53; // x3
-  Il2CppObject *v54; // x19
-  System_Collections_Hashtable_o *v55; // x0
-  __int64 v56; // x0
-  __int64 v57; // [xsp+0h] [xbp-60h] BYREF
-  float v58; // [xsp+8h] [xbp-58h]
+  Il2CppObject *v43; // x19
+  System_Collections_Hashtable_o *v44; // x0
+  __int64 v45; // x0
+  __int64 v46; // [xsp+0h] [xbp-60h] BYREF
+  float v47; // [xsp+8h] [xbp-58h]
   float slideOutTime; // [xsp+18h] [xbp-48h] BYREF
-  char v60[4]; // [xsp+1Ch] [xbp-44h] BYREF
+  char v49[4]; // [xsp+1Ch] [xbp-44h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   z = afterPosition.fields.z;
   y = afterPosition.fields.y;
   x = afterPosition.fields.x;
-  if ( (byte_4B1AF05 & 1) == 0 )
+  if ( (byte_4C25C93 & 1) == 0 )
   {
-    sub_1BCAFF8(&bool_TypeInfo, callback);
-    sub_1BCAFF8(&object___TypeInfo, v10);
-    sub_1BCAFF8(&float_TypeInfo, v11);
-    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v12);
-    sub_1BCAFF8(&StringLiteral_22216/*"onMoveComplete"*/, v13);
-    sub_1BCAFF8(&StringLiteral_23855/*"time"*/, v14);
-    sub_1BCAFF8(&StringLiteral_22231/*"oncompletetarget"*/, v15);
-    sub_1BCAFF8(&StringLiteral_22532/*"position"*/, v16);
-    sub_1BCAFF8(&StringLiteral_20742/*"isLocal"*/, v17);
-    sub_1BCAFF8(&StringLiteral_18591/*"easeType"*/, v18);
-    sub_1BCAFF8(&StringLiteral_22229/*"oncomplete"*/, v19);
-    sub_1BCAFF8(&iTween_TypeInfo, v20);
-    byte_4B1AF05 = 1;
+    sub_1C2D490(&bool_TypeInfo);
+    sub_1C2D490(&object___TypeInfo);
+    sub_1C2D490(&float_TypeInfo);
+    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    sub_1C2D490(&StringLiteral_22397/*"onMoveComplete"*/);
+    sub_1C2D490(&StringLiteral_24049/*"time"*/);
+    sub_1C2D490(&StringLiteral_22412/*"oncompletetarget"*/);
+    sub_1C2D490(&StringLiteral_22719/*"position"*/);
+    sub_1C2D490(&StringLiteral_20915/*"isLocal"*/);
+    sub_1C2D490(&StringLiteral_18741/*"easeType"*/);
+    sub_1C2D490(&StringLiteral_22410/*"oncomplete"*/);
+    sub_1C2D490(&iTween_TypeInfo);
+    byte_4C25C93 = 1;
   }
   this->fields.endCallback = callback;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields.endCallback, (int32_t)callback, (int32_t)method, v4);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.endCallback, (int32_t)callback, (int32_t)method, v4);
   this->fields.slideInPosition.fields.x = x;
   this->fields.slideInPosition.fields.y = y;
   this->fields.slideInPosition.fields.z = z;
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (localPosition = UnityEngine_Transform__get_localPosition(transform, 0LL),
+    || (localPosition = UnityEngine_Transform__get_localPosition(transform, 0),
         this->fields.slideOutPosition.fields.y = localPosition.fields.y,
-        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL),
-        (transform = (UnityEngine_Transform_o *)sub_1BCB0A0(object___TypeInfo, 12LL)) == 0LL) )
+        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0),
+        (transform = (UnityEngine_Transform_o *)sub_1C2D538(object___TypeInfo, 12)) == 0) )
   {
-    sub_1BCB254(transform, v22);
+    sub_1C2D6EC(transform, v11);
   }
-  v26 = (System_Object_array *)transform;
-  v27 = (UnityEngine_GameObject_o *)StringLiteral_20742/*"isLocal"*/;
-  if ( StringLiteral_20742/*"isLocal"*/ )
+  v15 = (System_Object_array *)transform;
+  v16 = (UnityEngine_GameObject_o *)StringLiteral_20915/*"isLocal"*/;
+  if ( StringLiteral_20915/*"isLocal"*/ )
   {
-    v27 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_20742/*"isLocal"*/, v26->obj.klass->_1.element_class);
-    if ( !v27 )
+    v16 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_20915/*"isLocal"*/, v15->obj.klass->_1.element_class);
+    if ( !v16 )
       goto LABEL_59;
-    v28 = StringLiteral_20742/*"isLocal"*/;
+    v17 = StringLiteral_20915/*"isLocal"*/;
   }
   else
   {
-    v28 = 0LL;
+    v17 = 0;
   }
-  if ( !v26->max_length )
+  if ( !LODWORD(v15->max_length) )
     goto LABEL_58;
-  v26->m_Items[0] = (Il2CppObject *)v28;
-  sub_1BCAF9C((CGThumbnailListItem_o *)v26->m_Items, v28, v24, v25);
-  v60[0] = 1;
-  v27 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(bool_TypeInfo, v60, v29, v30, v31);
-  v33 = (Il2CppObject *)v27;
-  if ( v27 )
+  v15->m_Items[0] = (Il2CppObject *)v17;
+  sub_1C2D434((CGThumbnailListItem_o *)v15->m_Items, v17, v13, v14);
+  v49[0] = 1;
+  v16 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(bool_TypeInfo, v49, v18, v19, v20);
+  v22 = (Il2CppObject *)v16;
+  if ( v16 )
   {
-    v27 = (UnityEngine_GameObject_o *)sub_1BCB134(v27, v26->obj.klass->_1.element_class);
-    if ( !v27 )
+    v16 = (UnityEngine_GameObject_o *)sub_1C2D5CC(v16, v15->obj.klass->_1.element_class);
+    if ( !v16 )
       goto LABEL_59;
   }
-  if ( v26->max_length <= 1 )
+  if ( LODWORD(v15->max_length) <= 1 )
     goto LABEL_58;
-  v26->m_Items[1] = v33;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v26->m_Items[1], (int32_t)v33, v24, v32);
-  v27 = (UnityEngine_GameObject_o *)StringLiteral_22532/*"position"*/;
-  if ( StringLiteral_22532/*"position"*/ )
+  v15->m_Items[1] = v22;
+  sub_1C2D434((CGThumbnailListItem_o *)&v15->m_Items[1], (int32_t)v22, v13, v21);
+  v16 = (UnityEngine_GameObject_o *)StringLiteral_22719/*"position"*/;
+  if ( StringLiteral_22719/*"position"*/ )
   {
-    v27 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_22532/*"position"*/, v26->obj.klass->_1.element_class);
-    if ( !v27 )
+    v16 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_22719/*"position"*/, v15->obj.klass->_1.element_class);
+    if ( !v16 )
       goto LABEL_59;
-    v28 = StringLiteral_22532/*"position"*/;
+    v17 = StringLiteral_22719/*"position"*/;
   }
   else
   {
-    v28 = 0LL;
+    v17 = 0;
   }
-  if ( v26->max_length <= 2 )
+  if ( LODWORD(v15->max_length) <= 2 )
     goto LABEL_58;
-  v26->m_Items[2] = (Il2CppObject *)v28;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v26->m_Items[2], v28, v24, v34);
-  v35 = *(_QWORD *)&this->fields.slideOutPosition.fields.x;
-  v58 = this->fields.slideOutPosition.fields.z;
-  v57 = v35;
-  v27 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &v57, v36, v37, v38);
-  v40 = (Il2CppObject *)v27;
-  if ( v27 )
+  v15->m_Items[2] = (Il2CppObject *)v17;
+  sub_1C2D434((CGThumbnailListItem_o *)&v15->m_Items[2], v17, v13, v23);
+  v24 = *(_QWORD *)&this->fields.slideOutPosition.fields.x;
+  v47 = this->fields.slideOutPosition.fields.z;
+  v46 = v24;
+  v16 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &v46, v25, v26, v27);
+  v29 = (Il2CppObject *)v16;
+  if ( v16 )
   {
-    v27 = (UnityEngine_GameObject_o *)sub_1BCB134(v27, v26->obj.klass->_1.element_class);
-    if ( !v27 )
+    v16 = (UnityEngine_GameObject_o *)sub_1C2D5CC(v16, v15->obj.klass->_1.element_class);
+    if ( !v16 )
       goto LABEL_59;
   }
-  if ( v26->max_length <= 3 )
+  if ( LODWORD(v15->max_length) <= 3 )
     goto LABEL_58;
-  v26->m_Items[3] = v40;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v26->m_Items[3], (int32_t)v40, v24, v39);
-  v27 = (UnityEngine_GameObject_o *)StringLiteral_18591/*"easeType"*/;
-  if ( StringLiteral_18591/*"easeType"*/ )
+  v15->m_Items[3] = v29;
+  sub_1C2D434((CGThumbnailListItem_o *)&v15->m_Items[3], (int32_t)v29, v13, v28);
+  v16 = (UnityEngine_GameObject_o *)StringLiteral_18741/*"easeType"*/;
+  if ( StringLiteral_18741/*"easeType"*/ )
   {
-    v27 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_18591/*"easeType"*/, v26->obj.klass->_1.element_class);
-    if ( !v27 )
+    v16 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_18741/*"easeType"*/, v15->obj.klass->_1.element_class);
+    if ( !v16 )
       goto LABEL_59;
-    v28 = StringLiteral_18591/*"easeType"*/;
+    v17 = StringLiteral_18741/*"easeType"*/;
   }
   else
   {
-    v28 = 0LL;
+    v17 = 0;
   }
-  if ( v26->max_length <= 4 )
+  if ( LODWORD(v15->max_length) <= 4 )
     goto LABEL_58;
-  v26->m_Items[4] = (Il2CppObject *)v28;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v26->m_Items[4], v28, v24, v41);
+  v15->m_Items[4] = (Il2CppObject *)v17;
+  sub_1C2D434((CGThumbnailListItem_o *)&v15->m_Items[4], v17, v13, v30);
   easeTypeOut = this->fields.easeTypeOut;
   if ( easeTypeOut )
   {
-    v27 = (UnityEngine_GameObject_o *)sub_1BCB134(this->fields.easeTypeOut, v26->obj.klass->_1.element_class);
-    if ( !v27 )
+    v16 = (UnityEngine_GameObject_o *)sub_1C2D5CC(this->fields.easeTypeOut, v15->obj.klass->_1.element_class);
+    if ( !v16 )
       goto LABEL_59;
   }
-  if ( v26->max_length <= 5 )
+  if ( LODWORD(v15->max_length) <= 5 )
     goto LABEL_58;
-  v26->m_Items[5] = (Il2CppObject *)easeTypeOut;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v26->m_Items[5], (int32_t)easeTypeOut, v24, v42);
-  v27 = (UnityEngine_GameObject_o *)StringLiteral_23855/*"time"*/;
-  if ( StringLiteral_23855/*"time"*/ )
+  v15->m_Items[5] = (Il2CppObject *)easeTypeOut;
+  sub_1C2D434((CGThumbnailListItem_o *)&v15->m_Items[5], (int32_t)easeTypeOut, v13, v31);
+  v16 = (UnityEngine_GameObject_o *)StringLiteral_24049/*"time"*/;
+  if ( StringLiteral_24049/*"time"*/ )
   {
-    v27 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_23855/*"time"*/, v26->obj.klass->_1.element_class);
-    if ( !v27 )
+    v16 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_24049/*"time"*/, v15->obj.klass->_1.element_class);
+    if ( !v16 )
       goto LABEL_59;
-    v28 = StringLiteral_23855/*"time"*/;
+    v17 = StringLiteral_24049/*"time"*/;
   }
   else
   {
-    v28 = 0LL;
+    v17 = 0;
   }
-  if ( v26->max_length <= 6 )
+  if ( LODWORD(v15->max_length) <= 6 )
     goto LABEL_58;
-  v26->m_Items[6] = (Il2CppObject *)v28;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v26->m_Items[6], v28, v24, v44);
+  v15->m_Items[6] = (Il2CppObject *)v17;
+  sub_1C2D434((CGThumbnailListItem_o *)&v15->m_Items[6], v17, v13, v33);
   slideOutTime = this->fields.slideOutTime;
-  v27 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(float_TypeInfo, &slideOutTime, v45, v46, v47);
-  v49 = (Il2CppObject *)v27;
-  if ( v27 )
+  v16 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(float_TypeInfo, &slideOutTime, v34, v35, v36);
+  v38 = (Il2CppObject *)v16;
+  if ( v16 )
   {
-    v27 = (UnityEngine_GameObject_o *)sub_1BCB134(v27, v26->obj.klass->_1.element_class);
-    if ( !v27 )
+    v16 = (UnityEngine_GameObject_o *)sub_1C2D5CC(v16, v15->obj.klass->_1.element_class);
+    if ( !v16 )
       goto LABEL_59;
   }
-  if ( v26->max_length <= 7 )
+  if ( LODWORD(v15->max_length) <= 7 )
     goto LABEL_58;
-  v26->m_Items[7] = v49;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v26->m_Items[7], (int32_t)v49, v24, v48);
-  v27 = (UnityEngine_GameObject_o *)StringLiteral_22229/*"oncomplete"*/;
-  if ( StringLiteral_22229/*"oncomplete"*/ )
+  v15->m_Items[7] = v38;
+  sub_1C2D434((CGThumbnailListItem_o *)&v15->m_Items[7], (int32_t)v38, v13, v37);
+  v16 = (UnityEngine_GameObject_o *)StringLiteral_22410/*"oncomplete"*/;
+  if ( StringLiteral_22410/*"oncomplete"*/ )
   {
-    v27 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_22229/*"oncomplete"*/, v26->obj.klass->_1.element_class);
-    if ( !v27 )
+    v16 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_22410/*"oncomplete"*/, v15->obj.klass->_1.element_class);
+    if ( !v16 )
       goto LABEL_59;
-    v28 = StringLiteral_22229/*"oncomplete"*/;
+    v17 = StringLiteral_22410/*"oncomplete"*/;
   }
   else
   {
-    v28 = 0LL;
+    v17 = 0;
   }
-  if ( v26->max_length <= 8 )
+  if ( LODWORD(v15->max_length) <= 8 )
     goto LABEL_58;
-  v26->m_Items[8] = (Il2CppObject *)v28;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v26->m_Items[8], v28, v24, v50);
-  v27 = (UnityEngine_GameObject_o *)StringLiteral_22216/*"onMoveComplete"*/;
-  if ( StringLiteral_22216/*"onMoveComplete"*/ )
+  v15->m_Items[8] = (Il2CppObject *)v17;
+  sub_1C2D434((CGThumbnailListItem_o *)&v15->m_Items[8], v17, v13, v39);
+  v16 = (UnityEngine_GameObject_o *)StringLiteral_22397/*"onMoveComplete"*/;
+  if ( StringLiteral_22397/*"onMoveComplete"*/ )
   {
-    v27 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_22216/*"onMoveComplete"*/, v26->obj.klass->_1.element_class);
-    if ( !v27 )
+    v16 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_22397/*"onMoveComplete"*/, v15->obj.klass->_1.element_class);
+    if ( !v16 )
       goto LABEL_59;
-    v28 = StringLiteral_22216/*"onMoveComplete"*/;
+    v17 = StringLiteral_22397/*"onMoveComplete"*/;
   }
   else
   {
-    v28 = 0LL;
+    v17 = 0;
   }
-  if ( v26->max_length <= 9 )
+  if ( LODWORD(v15->max_length) <= 9 )
     goto LABEL_58;
-  v26->m_Items[9] = (Il2CppObject *)v28;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v26->m_Items[9], v28, v24, v51);
-  v27 = (UnityEngine_GameObject_o *)StringLiteral_22231/*"oncompletetarget"*/;
-  if ( StringLiteral_22231/*"oncompletetarget"*/ )
+  v15->m_Items[9] = (Il2CppObject *)v17;
+  sub_1C2D434((CGThumbnailListItem_o *)&v15->m_Items[9], v17, v13, v40);
+  v16 = (UnityEngine_GameObject_o *)StringLiteral_22412/*"oncompletetarget"*/;
+  if ( StringLiteral_22412/*"oncompletetarget"*/ )
   {
-    v27 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_22231/*"oncompletetarget"*/, v26->obj.klass->_1.element_class);
-    if ( !v27 )
+    v16 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_22412/*"oncompletetarget"*/, v15->obj.klass->_1.element_class);
+    if ( !v16 )
       goto LABEL_59;
-    v28 = StringLiteral_22231/*"oncompletetarget"*/;
+    v17 = StringLiteral_22412/*"oncompletetarget"*/;
   }
   else
   {
-    v28 = 0LL;
+    v17 = 0;
   }
-  if ( v26->max_length <= 0xA )
+  if ( LODWORD(v15->max_length) <= 0xA )
     goto LABEL_58;
-  v26->m_Items[10] = (Il2CppObject *)v28;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v26->m_Items[10], v28, v24, v52);
-  v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v54 = (Il2CppObject *)v27;
-  if ( v27 )
+  v15->m_Items[10] = (Il2CppObject *)v17;
+  sub_1C2D434((CGThumbnailListItem_o *)&v15->m_Items[10], v17, v13, v41);
+  v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v43 = (Il2CppObject *)v16;
+  if ( v16 )
   {
-    v27 = (UnityEngine_GameObject_o *)sub_1BCB134(v27, v26->obj.klass->_1.element_class);
-    if ( !v27 )
+    v16 = (UnityEngine_GameObject_o *)sub_1C2D5CC(v16, v15->obj.klass->_1.element_class);
+    if ( !v16 )
     {
 LABEL_59:
-      v56 = sub_1BCB278(v27);
-      sub_1BCB120(v56, 0LL);
+      v45 = sub_1C2D710(v16);
+      sub_1C2D5B8(v45, 0);
     }
   }
-  if ( v26->max_length <= 0xB )
+  if ( LODWORD(v15->max_length) <= 0xB )
 LABEL_58:
-    sub_1BCB25C(v27, v28, v24);
-  v26->m_Items[11] = v54;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v26->m_Items[11], (int32_t)v54, v24, v53);
+    sub_1C2D6F4(v16, v17, v13);
+  v15->m_Items[11] = v43;
+  sub_1C2D434((CGThumbnailListItem_o *)&v15->m_Items[11], (int32_t)v43, v13, v42);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  v55 = iTween__Hash(v26, 0LL);
-  iTween__MoveTo_62087988(gameObject, v55, 0LL);
+  v44 = iTween__Hash(v15, 0);
+  iTween__MoveTo_63095428(gameObject, v44, 0);
 }
 
 
-void __fastcall TitleInfoEventTowerSlideAnimation__onAnimEnd(
-        TitleInfoEventTowerSlideAnimation_o *this,
-        const MethodInfo *method)
+void TitleInfoEventTowerSlideAnimation__onAnimEnd(TitleInfoEventTowerSlideAnimation_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
   const MethodInfo *v3; // x3
@@ -322,305 +306,289 @@ void __fastcall TitleInfoEventTowerSlideAnimation__onAnimEnd(
   v5 = endCallback;
   if ( endCallback )
   {
-    p_endCallback->klass = 0LL;
-    sub_1BCAF9C(p_endCallback, 0, v2, v3);
-    ((void (__fastcall *)(struct System_Reflection_MethodInfo_o *, _QWORD))v5->fields.m_target)(
-      v5->fields.original_method_info,
-      *(_QWORD *)&v5->fields.extra_arg);
+    p_endCallback->klass = 0;
+    sub_1C2D434(p_endCallback, 0, v2, v3);
+    ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
   }
 }
 
 
-void __fastcall TitleInfoEventTowerSlideAnimation__onMoveComplete(
+void TitleInfoEventTowerSlideAnimation__onMoveComplete(
         TitleInfoEventTowerSlideAnimation_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-  __int64 v4; // x1
-  __int64 v5; // x1
-  __int64 v6; // x1
-  __int64 v7; // x1
-  __int64 v8; // x1
-  __int64 v9; // x1
-  __int64 v10; // x1
-  __int64 v11; // x1
-  __int64 v12; // x1
-  __int64 v13; // x1
-  __int64 v14; // x1
-  __int64 v15; // x1
-  __int64 v16; // x1
   UnityEngine_Transform_o *transform; // x0
-  __int64 v18; // x1
+  __int64 v4; // x1
   Il2CppObject *Component_object; // x20
-  System_Action_o *v20; // x21
-  const MethodInfo *v21; // x4
+  System_Action_o *v6; // x21
+  const MethodInfo *v7; // x4
   UnityEngine_GameObject_o *gameObject; // x20
-  __int64 v23; // x2
+  __int64 v9; // x2
+  const MethodInfo *v10; // x3
+  System_Object_array *v11; // x21
+  UnityEngine_GameObject_o *v12; // x0
+  __int64 v13; // x1
+  __int64 v14; // x2
+  __int64 v15; // x3
+  __int64 v16; // x4
+  const MethodInfo *v17; // x3
+  Il2CppObject *v18; // x22
+  const MethodInfo *v19; // x3
+  __int64 v20; // x9
+  __int64 v21; // x2
+  __int64 v22; // x3
+  __int64 v23; // x4
   const MethodInfo *v24; // x3
-  System_Object_array *v25; // x21
-  UnityEngine_GameObject_o *v26; // x0
-  __int64 v27; // x1
-  __int64 v28; // x2
-  __int64 v29; // x3
-  __int64 v30; // x4
-  const MethodInfo *v31; // x3
-  Il2CppObject *v32; // x22
-  const MethodInfo *v33; // x3
-  __int64 v34; // x9
-  __int64 v35; // x2
-  __int64 v36; // x3
-  __int64 v37; // x4
-  const MethodInfo *v38; // x3
-  Il2CppObject *v39; // x22
-  const MethodInfo *v40; // x3
-  const MethodInfo *v41; // x3
+  Il2CppObject *v25; // x22
+  const MethodInfo *v26; // x3
+  const MethodInfo *v27; // x3
   struct System_String_o *easeTypeIn; // x22
-  const MethodInfo *v43; // x3
-  __int64 v44; // x2
-  __int64 v45; // x3
-  __int64 v46; // x4
-  const MethodInfo *v47; // x3
-  Il2CppObject *v48; // x22
-  const MethodInfo *v49; // x3
-  const MethodInfo *v50; // x3
-  const MethodInfo *v51; // x3
-  const MethodInfo *v52; // x3
-  Il2CppObject *v53; // x19
-  System_Collections_Hashtable_o *v54; // x0
-  __int64 v55; // x0
+  const MethodInfo *v29; // x3
+  __int64 v30; // x2
+  __int64 v31; // x3
+  __int64 v32; // x4
+  const MethodInfo *v33; // x3
+  Il2CppObject *v34; // x22
+  const MethodInfo *v35; // x3
+  const MethodInfo *v36; // x3
+  const MethodInfo *v37; // x3
+  const MethodInfo *v38; // x3
+  Il2CppObject *v39; // x19
+  System_Collections_Hashtable_o *v40; // x0
+  __int64 v41; // x0
   float slideInTime; // [xsp+Ch] [xbp-44h] BYREF
-  __int64 v57; // [xsp+10h] [xbp-40h] BYREF
+  __int64 v43; // [xsp+10h] [xbp-40h] BYREF
   float z; // [xsp+18h] [xbp-38h]
-  char v59[4]; // [xsp+1Ch] [xbp-34h] BYREF
+  char v45[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_4B1AF06 & 1) == 0 )
+  if ( (byte_4C25C94 & 1) == 0 )
   {
-    sub_1BCAFF8(&System_Action_TypeInfo, method);
-    sub_1BCAFF8(&bool_TypeInfo, v3);
-    sub_1BCAFF8(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTower___, v4);
-    sub_1BCAFF8(&object___TypeInfo, v5);
-    sub_1BCAFF8(&float_TypeInfo, v6);
-    sub_1BCAFF8(&Method_TitleInfoEventTowerSlideAnimation__onMoveComplete_b__8_0__, v7);
-    sub_1BCAFF8(&UnityEngine_Vector3_TypeInfo, v8);
-    sub_1BCAFF8(&StringLiteral_23855/*"time"*/, v9);
-    sub_1BCAFF8(&StringLiteral_22231/*"oncompletetarget"*/, v10);
-    sub_1BCAFF8(&StringLiteral_22532/*"position"*/, v11);
-    sub_1BCAFF8(&StringLiteral_22192/*"onAnimEnd"*/, v12);
-    sub_1BCAFF8(&StringLiteral_20742/*"isLocal"*/, v13);
-    sub_1BCAFF8(&StringLiteral_18591/*"easeType"*/, v14);
-    sub_1BCAFF8(&StringLiteral_22229/*"oncomplete"*/, v15);
-    sub_1BCAFF8(&iTween_TypeInfo, v16);
-    byte_4B1AF06 = 1;
+    sub_1C2D490(&System_Action_TypeInfo);
+    sub_1C2D490(&bool_TypeInfo);
+    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTower___);
+    sub_1C2D490(&object___TypeInfo);
+    sub_1C2D490(&float_TypeInfo);
+    sub_1C2D490(&Method_TitleInfoEventTowerSlideAnimation__onMoveComplete_b__8_0__);
+    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
+    sub_1C2D490(&StringLiteral_24049/*"time"*/);
+    sub_1C2D490(&StringLiteral_22412/*"oncompletetarget"*/);
+    sub_1C2D490(&StringLiteral_22719/*"position"*/);
+    sub_1C2D490(&StringLiteral_22373/*"onAnimEnd"*/);
+    sub_1C2D490(&StringLiteral_20915/*"isLocal"*/);
+    sub_1C2D490(&StringLiteral_18741/*"easeType"*/);
+    sub_1C2D490(&StringLiteral_22410/*"oncomplete"*/);
+    sub_1C2D490(&iTween_TypeInfo);
+    byte_4C25C94 = 1;
   }
-  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0LL);
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_63;
-  transform = UnityEngine_Transform__get_parent(transform, 0LL);
+  transform = UnityEngine_Transform__get_parent(transform, 0);
   if ( !transform
     || (transform = (UnityEngine_Transform_o *)UnityEngine_Component__get_gameObject(
                                                  (UnityEngine_Component_o *)transform,
-                                                 0LL)) == 0LL
+                                                 0)) == 0
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)transform,
-                             (const MethodInfo_306E710 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTower___),
-        v20 = (System_Action_o *)sub_1BCB244(System_Action_TypeInfo),
+                             (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTower___),
+        v6 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo),
         System_Action___ctor(
-          v20,
+          v6,
           (Il2CppObject *)this,
           Method_TitleInfoEventTowerSlideAnimation__onMoveComplete_b__8_0__,
-          0LL),
+          0),
         !Component_object)
-    || (TitleInfoEventTower__Open((TitleInfoEventTower_o *)Component_object, v20, 0LL, 0, v21),
-        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL),
-        (transform = (UnityEngine_Transform_o *)sub_1BCB0A0(object___TypeInfo, 12LL)) == 0LL) )
+    || (TitleInfoEventTower__Open((TitleInfoEventTower_o *)Component_object, v6, 0, 0, v7),
+        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0),
+        (transform = (UnityEngine_Transform_o *)sub_1C2D538(object___TypeInfo, 12)) == 0) )
   {
 LABEL_63:
-    sub_1BCB254(transform, v18);
+    sub_1C2D6EC(transform, v4);
   }
-  v25 = (System_Object_array *)transform;
-  v26 = (UnityEngine_GameObject_o *)StringLiteral_20742/*"isLocal"*/;
-  if ( StringLiteral_20742/*"isLocal"*/ )
+  v11 = (System_Object_array *)transform;
+  v12 = (UnityEngine_GameObject_o *)StringLiteral_20915/*"isLocal"*/;
+  if ( StringLiteral_20915/*"isLocal"*/ )
   {
-    v26 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_20742/*"isLocal"*/, v25->obj.klass->_1.element_class);
-    if ( !v26 )
+    v12 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_20915/*"isLocal"*/, v11->obj.klass->_1.element_class);
+    if ( !v12 )
       goto LABEL_62;
-    v27 = StringLiteral_20742/*"isLocal"*/;
+    v13 = StringLiteral_20915/*"isLocal"*/;
   }
   else
   {
-    v27 = 0LL;
+    v13 = 0;
   }
-  if ( !v25->max_length )
+  if ( !LODWORD(v11->max_length) )
     goto LABEL_61;
-  v25->m_Items[0] = (Il2CppObject *)v27;
-  sub_1BCAF9C((CGThumbnailListItem_o *)v25->m_Items, v27, v23, v24);
-  v59[0] = 1;
-  v26 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(bool_TypeInfo, v59, v28, v29, v30);
-  v32 = (Il2CppObject *)v26;
-  if ( v26 )
+  v11->m_Items[0] = (Il2CppObject *)v13;
+  sub_1C2D434((CGThumbnailListItem_o *)v11->m_Items, v13, v9, v10);
+  v45[0] = 1;
+  v12 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(bool_TypeInfo, v45, v14, v15, v16);
+  v18 = (Il2CppObject *)v12;
+  if ( v12 )
   {
-    v26 = (UnityEngine_GameObject_o *)sub_1BCB134(v26, v25->obj.klass->_1.element_class);
-    if ( !v26 )
+    v12 = (UnityEngine_GameObject_o *)sub_1C2D5CC(v12, v11->obj.klass->_1.element_class);
+    if ( !v12 )
       goto LABEL_62;
   }
-  if ( v25->max_length <= 1 )
+  if ( LODWORD(v11->max_length) <= 1 )
     goto LABEL_61;
-  v25->m_Items[1] = v32;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v25->m_Items[1], (int32_t)v32, v23, v31);
-  v26 = (UnityEngine_GameObject_o *)StringLiteral_22532/*"position"*/;
-  if ( StringLiteral_22532/*"position"*/ )
+  v11->m_Items[1] = v18;
+  sub_1C2D434((CGThumbnailListItem_o *)&v11->m_Items[1], (int32_t)v18, v9, v17);
+  v12 = (UnityEngine_GameObject_o *)StringLiteral_22719/*"position"*/;
+  if ( StringLiteral_22719/*"position"*/ )
   {
-    v26 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_22532/*"position"*/, v25->obj.klass->_1.element_class);
-    if ( !v26 )
+    v12 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_22719/*"position"*/, v11->obj.klass->_1.element_class);
+    if ( !v12 )
       goto LABEL_62;
-    v27 = StringLiteral_22532/*"position"*/;
+    v13 = StringLiteral_22719/*"position"*/;
   }
   else
   {
-    v27 = 0LL;
+    v13 = 0;
   }
-  if ( v25->max_length <= 2 )
+  if ( LODWORD(v11->max_length) <= 2 )
     goto LABEL_61;
-  v25->m_Items[2] = (Il2CppObject *)v27;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v25->m_Items[2], v27, v23, v33);
-  v34 = *(_QWORD *)&this->fields.slideInPosition.fields.x;
+  v11->m_Items[2] = (Il2CppObject *)v13;
+  sub_1C2D434((CGThumbnailListItem_o *)&v11->m_Items[2], v13, v9, v19);
+  v20 = *(_QWORD *)&this->fields.slideInPosition.fields.x;
   z = this->fields.slideInPosition.fields.z;
-  v57 = v34;
-  v26 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &v57, v35, v36, v37);
-  v39 = (Il2CppObject *)v26;
-  if ( v26 )
+  v43 = v20;
+  v12 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(UnityEngine_Vector3_TypeInfo, &v43, v21, v22, v23);
+  v25 = (Il2CppObject *)v12;
+  if ( v12 )
   {
-    v26 = (UnityEngine_GameObject_o *)sub_1BCB134(v26, v25->obj.klass->_1.element_class);
-    if ( !v26 )
+    v12 = (UnityEngine_GameObject_o *)sub_1C2D5CC(v12, v11->obj.klass->_1.element_class);
+    if ( !v12 )
       goto LABEL_62;
   }
-  if ( v25->max_length <= 3 )
+  if ( LODWORD(v11->max_length) <= 3 )
     goto LABEL_61;
-  v25->m_Items[3] = v39;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v25->m_Items[3], (int32_t)v39, v23, v38);
-  v26 = (UnityEngine_GameObject_o *)StringLiteral_18591/*"easeType"*/;
-  if ( StringLiteral_18591/*"easeType"*/ )
+  v11->m_Items[3] = v25;
+  sub_1C2D434((CGThumbnailListItem_o *)&v11->m_Items[3], (int32_t)v25, v9, v24);
+  v12 = (UnityEngine_GameObject_o *)StringLiteral_18741/*"easeType"*/;
+  if ( StringLiteral_18741/*"easeType"*/ )
   {
-    v26 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_18591/*"easeType"*/, v25->obj.klass->_1.element_class);
-    if ( !v26 )
+    v12 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_18741/*"easeType"*/, v11->obj.klass->_1.element_class);
+    if ( !v12 )
       goto LABEL_62;
-    v27 = StringLiteral_18591/*"easeType"*/;
+    v13 = StringLiteral_18741/*"easeType"*/;
   }
   else
   {
-    v27 = 0LL;
+    v13 = 0;
   }
-  if ( v25->max_length <= 4 )
+  if ( LODWORD(v11->max_length) <= 4 )
     goto LABEL_61;
-  v25->m_Items[4] = (Il2CppObject *)v27;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v25->m_Items[4], v27, v23, v40);
+  v11->m_Items[4] = (Il2CppObject *)v13;
+  sub_1C2D434((CGThumbnailListItem_o *)&v11->m_Items[4], v13, v9, v26);
   easeTypeIn = this->fields.easeTypeIn;
   if ( easeTypeIn )
   {
-    v26 = (UnityEngine_GameObject_o *)sub_1BCB134(this->fields.easeTypeIn, v25->obj.klass->_1.element_class);
-    if ( !v26 )
+    v12 = (UnityEngine_GameObject_o *)sub_1C2D5CC(this->fields.easeTypeIn, v11->obj.klass->_1.element_class);
+    if ( !v12 )
       goto LABEL_62;
   }
-  if ( v25->max_length <= 5 )
+  if ( LODWORD(v11->max_length) <= 5 )
     goto LABEL_61;
-  v25->m_Items[5] = (Il2CppObject *)easeTypeIn;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v25->m_Items[5], (int32_t)easeTypeIn, v23, v41);
-  v26 = (UnityEngine_GameObject_o *)StringLiteral_23855/*"time"*/;
-  if ( StringLiteral_23855/*"time"*/ )
+  v11->m_Items[5] = (Il2CppObject *)easeTypeIn;
+  sub_1C2D434((CGThumbnailListItem_o *)&v11->m_Items[5], (int32_t)easeTypeIn, v9, v27);
+  v12 = (UnityEngine_GameObject_o *)StringLiteral_24049/*"time"*/;
+  if ( StringLiteral_24049/*"time"*/ )
   {
-    v26 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_23855/*"time"*/, v25->obj.klass->_1.element_class);
-    if ( !v26 )
+    v12 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_24049/*"time"*/, v11->obj.klass->_1.element_class);
+    if ( !v12 )
       goto LABEL_62;
-    v27 = StringLiteral_23855/*"time"*/;
+    v13 = StringLiteral_24049/*"time"*/;
   }
   else
   {
-    v27 = 0LL;
+    v13 = 0;
   }
-  if ( v25->max_length <= 6 )
+  if ( LODWORD(v11->max_length) <= 6 )
     goto LABEL_61;
-  v25->m_Items[6] = (Il2CppObject *)v27;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v25->m_Items[6], v27, v23, v43);
+  v11->m_Items[6] = (Il2CppObject *)v13;
+  sub_1C2D434((CGThumbnailListItem_o *)&v11->m_Items[6], v13, v9, v29);
   slideInTime = this->fields.slideInTime;
-  v26 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(float_TypeInfo, &slideInTime, v44, v45, v46);
-  v48 = (Il2CppObject *)v26;
-  if ( v26 )
+  v12 = (UnityEngine_GameObject_o *)j_il2cpp_value_box_0(float_TypeInfo, &slideInTime, v30, v31, v32);
+  v34 = (Il2CppObject *)v12;
+  if ( v12 )
   {
-    v26 = (UnityEngine_GameObject_o *)sub_1BCB134(v26, v25->obj.klass->_1.element_class);
-    if ( !v26 )
+    v12 = (UnityEngine_GameObject_o *)sub_1C2D5CC(v12, v11->obj.klass->_1.element_class);
+    if ( !v12 )
       goto LABEL_62;
   }
-  if ( v25->max_length <= 7 )
+  if ( LODWORD(v11->max_length) <= 7 )
     goto LABEL_61;
-  v25->m_Items[7] = v48;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v25->m_Items[7], (int32_t)v48, v23, v47);
-  v26 = (UnityEngine_GameObject_o *)StringLiteral_22229/*"oncomplete"*/;
-  if ( StringLiteral_22229/*"oncomplete"*/ )
+  v11->m_Items[7] = v34;
+  sub_1C2D434((CGThumbnailListItem_o *)&v11->m_Items[7], (int32_t)v34, v9, v33);
+  v12 = (UnityEngine_GameObject_o *)StringLiteral_22410/*"oncomplete"*/;
+  if ( StringLiteral_22410/*"oncomplete"*/ )
   {
-    v26 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_22229/*"oncomplete"*/, v25->obj.klass->_1.element_class);
-    if ( !v26 )
+    v12 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_22410/*"oncomplete"*/, v11->obj.klass->_1.element_class);
+    if ( !v12 )
       goto LABEL_62;
-    v27 = StringLiteral_22229/*"oncomplete"*/;
+    v13 = StringLiteral_22410/*"oncomplete"*/;
   }
   else
   {
-    v27 = 0LL;
+    v13 = 0;
   }
-  if ( v25->max_length <= 8 )
+  if ( LODWORD(v11->max_length) <= 8 )
     goto LABEL_61;
-  v25->m_Items[8] = (Il2CppObject *)v27;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v25->m_Items[8], v27, v23, v49);
-  v26 = (UnityEngine_GameObject_o *)StringLiteral_22192/*"onAnimEnd"*/;
-  if ( StringLiteral_22192/*"onAnimEnd"*/ )
+  v11->m_Items[8] = (Il2CppObject *)v13;
+  sub_1C2D434((CGThumbnailListItem_o *)&v11->m_Items[8], v13, v9, v35);
+  v12 = (UnityEngine_GameObject_o *)StringLiteral_22373/*"onAnimEnd"*/;
+  if ( StringLiteral_22373/*"onAnimEnd"*/ )
   {
-    v26 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_22192/*"onAnimEnd"*/, v25->obj.klass->_1.element_class);
-    if ( !v26 )
+    v12 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_22373/*"onAnimEnd"*/, v11->obj.klass->_1.element_class);
+    if ( !v12 )
       goto LABEL_62;
-    v27 = StringLiteral_22192/*"onAnimEnd"*/;
+    v13 = StringLiteral_22373/*"onAnimEnd"*/;
   }
   else
   {
-    v27 = 0LL;
+    v13 = 0;
   }
-  if ( v25->max_length <= 9 )
+  if ( LODWORD(v11->max_length) <= 9 )
     goto LABEL_61;
-  v25->m_Items[9] = (Il2CppObject *)v27;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v25->m_Items[9], v27, v23, v50);
-  v26 = (UnityEngine_GameObject_o *)StringLiteral_22231/*"oncompletetarget"*/;
-  if ( StringLiteral_22231/*"oncompletetarget"*/ )
+  v11->m_Items[9] = (Il2CppObject *)v13;
+  sub_1C2D434((CGThumbnailListItem_o *)&v11->m_Items[9], v13, v9, v36);
+  v12 = (UnityEngine_GameObject_o *)StringLiteral_22412/*"oncompletetarget"*/;
+  if ( StringLiteral_22412/*"oncompletetarget"*/ )
   {
-    v26 = (UnityEngine_GameObject_o *)sub_1BCB134(StringLiteral_22231/*"oncompletetarget"*/, v25->obj.klass->_1.element_class);
-    if ( !v26 )
+    v12 = (UnityEngine_GameObject_o *)sub_1C2D5CC(StringLiteral_22412/*"oncompletetarget"*/, v11->obj.klass->_1.element_class);
+    if ( !v12 )
       goto LABEL_62;
-    v27 = StringLiteral_22231/*"oncompletetarget"*/;
+    v13 = StringLiteral_22412/*"oncompletetarget"*/;
   }
   else
   {
-    v27 = 0LL;
+    v13 = 0;
   }
-  if ( v25->max_length <= 0xA )
+  if ( LODWORD(v11->max_length) <= 0xA )
     goto LABEL_61;
-  v25->m_Items[10] = (Il2CppObject *)v27;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v25->m_Items[10], v27, v23, v51);
-  v26 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
-  v53 = (Il2CppObject *)v26;
-  if ( v26 )
+  v11->m_Items[10] = (Il2CppObject *)v13;
+  sub_1C2D434((CGThumbnailListItem_o *)&v11->m_Items[10], v13, v9, v37);
+  v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v39 = (Il2CppObject *)v12;
+  if ( v12 )
   {
-    v26 = (UnityEngine_GameObject_o *)sub_1BCB134(v26, v25->obj.klass->_1.element_class);
-    if ( !v26 )
+    v12 = (UnityEngine_GameObject_o *)sub_1C2D5CC(v12, v11->obj.klass->_1.element_class);
+    if ( !v12 )
     {
 LABEL_62:
-      v55 = sub_1BCB278(v26);
-      sub_1BCB120(v55, 0LL);
+      v41 = sub_1C2D710(v12);
+      sub_1C2D5B8(v41, 0);
     }
   }
-  if ( v25->max_length <= 0xB )
+  if ( LODWORD(v11->max_length) <= 0xB )
 LABEL_61:
-    sub_1BCB25C(v26, v27, v23);
-  v25->m_Items[11] = v53;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&v25->m_Items[11], (int32_t)v53, v23, v52);
+    sub_1C2D6F4(v12, v13, v9);
+  v11->m_Items[11] = v39;
+  sub_1C2D434((CGThumbnailListItem_o *)&v11->m_Items[11], (int32_t)v39, v9, v38);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  v54 = iTween__Hash(v25, 0LL);
-  iTween__MoveTo_62087988(gameObject, v54, 0LL);
+  v40 = iTween__Hash(v11, 0);
+  iTween__MoveTo_63095428(gameObject, v40, 0);
 }

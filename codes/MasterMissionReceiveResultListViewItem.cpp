@@ -1,4 +1,4 @@
-void __fastcall MasterMissionReceiveResultListViewItem___ctor(
+void MasterMissionReceiveResultListViewItem___ctor(
         MasterMissionReceiveResultListViewItem_o *this,
         int32_t index,
         System_String_o *message,
@@ -7,13 +7,13 @@ void __fastcall MasterMissionReceiveResultListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  ListViewItem___ctor_42932312((ListViewItem_o *)this, index, 0LL);
+  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
   this->fields._Message_k__BackingField = message;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)message, v6, v7);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)message, v6, v7);
 }
 
 
-System_String_o *__fastcall MasterMissionReceiveResultListViewItem__get_Message(
+System_String_o *MasterMissionReceiveResultListViewItem__get_Message(
         MasterMissionReceiveResultListViewItem_o *this,
         const MethodInfo *method)
 {
@@ -21,7 +21,7 @@ System_String_o *__fastcall MasterMissionReceiveResultListViewItem__get_Message(
 }
 
 
-void __fastcall MasterMissionReceiveResultListViewItem__set_Message(
+void MasterMissionReceiveResultListViewItem__set_Message(
         MasterMissionReceiveResultListViewItem_o *this,
         System_String_o *value,
         const MethodInfo *method)
@@ -29,5 +29,5 @@ void __fastcall MasterMissionReceiveResultListViewItem__set_Message(
   const MethodInfo *v3; // x3
 
   this->fields._Message_k__BackingField = value;
-  sub_1BCAF9C((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Message_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

@@ -1,23 +1,19 @@
-void __fastcall ServantPassiveSkillReleaseMaster___ctor(
-        ServantPassiveSkillReleaseMaster_o *this,
-        const MethodInfo *method)
+void ServantPassiveSkillReleaseMaster___ctor(ServantPassiveSkillReleaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4B1CEC5 & 1) == 0 )
+  if ( (byte_4C27CB0 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string___ctor__,
-      method);
-    byte_4B1CEC5 = 1;
+    sub_1C2D490(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string___ctor__);
+    byte_4C27CB0 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     253,
-    (const MethodInfo_32CA594 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string___ctor__);
+    (const MethodInfo_338A52C *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string___ctor__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-ServantPassiveSkillReleaseEntity_o *__fastcall ServantPassiveSkillReleaseMaster__GetEntity(
+ServantPassiveSkillReleaseEntity_o *ServantPassiveSkillReleaseMaster__GetEntity(
         ServantPassiveSkillReleaseMaster_o *this,
         int32_t svtId,
         int32_t num,
@@ -27,23 +23,21 @@ ServantPassiveSkillReleaseEntity_o *__fastcall ServantPassiveSkillReleaseMaster_
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4B1CEC3 & 1) == 0 )
+  if ( (byte_4C27CAE & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__GetEntity__,
-      *(_QWORD *)&svtId);
-    byte_4B1CEC3 = 1;
+    sub_1C2D490(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__GetEntity__);
+    byte_4C27CAE = 1;
   }
   PK = (Il2CppObject *)ServantPassiveSkillReleaseEntity__CreatePK(svtId, num, priority, idx, *(const MethodInfo **)&idx);
   return (ServantPassiveSkillReleaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                  (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                  PK,
-                                                 (const MethodInfo_32CC8B8 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__GetEntity__);
+                                                 (const MethodInfo_338C850 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__GetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall ServantPassiveSkillReleaseMaster__TryGetEntity(
+bool ServantPassiveSkillReleaseMaster__TryGetEntity(
         ServantPassiveSkillReleaseMaster_o *this,
         ServantPassiveSkillReleaseEntity_o **entity,
         int32_t svtId,
@@ -54,12 +48,10 @@ bool __fastcall ServantPassiveSkillReleaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4B1CEC4 & 1) == 0 )
+  if ( (byte_4C27CAF & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__TryGetEntity__,
-      entity);
-    byte_4B1CEC4 = 1;
+    sub_1C2D490(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__TryGetEntity__);
+    byte_4C27CAF = 1;
   }
   PK = (Il2CppObject *)ServantPassiveSkillReleaseEntity__CreatePK(
                          svtId,
@@ -71,12 +63,12 @@ bool __fastcall ServantPassiveSkillReleaseMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_32CC904 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__TryGetEntity__);
+           (const MethodInfo_338C89C *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__TryGetEntity__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool __fastcall ServantPassiveSkillReleaseMaster__isUse(
+bool ServantPassiveSkillReleaseMaster__isUse(
         ServantPassiveSkillReleaseMaster_o *this,
         int32_t svtId,
         int32_t num,
@@ -86,93 +78,91 @@ bool __fastcall ServantPassiveSkillReleaseMaster__isUse(
         bool isBaseResult,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
   int32_t condGroup; // w29
-  int32_t v15; // w25
-  bool v16; // w20
+  int32_t v14; // w25
+  bool v15; // w20
   System_String_o *Primarykey; // x26
   __int64 *lookup; // x0
-  __int64 v19; // x1
-  __int64 v20; // x8
-  void *v21; // x27
-  __int64 v22; // x9
-  System_Collections_Generic_IReadOnlyDictionary_string__ServantPassiveSkillReleaseEntity__c **v23; // x10
-  __int64 v24; // x0
-  const MethodInfo *v25; // x3
-  ServantPassiveSkillReleaseEntity_o *v29; // [xsp+8h] [xbp-68h] BYREF
+  __int64 v18; // x1
+  __int64 v19; // x8
+  void *v20; // x27
+  __int64 v21; // x9
+  System_Collections_Generic_IReadOnlyDictionary_string__ServantPassiveSkillReleaseEntity__c **v22; // x10
+  __int64 v23; // x0
+  const MethodInfo *v24; // x3
+  ServantPassiveSkillReleaseEntity_o *v28; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4B1CEC6 & 1) == 0 )
+  if ( (byte_4C27CB1 & 1) == 0 )
   {
-    sub_1BCAFF8(
-      &Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__get_lookup__,
-      *(_QWORD *)&svtId);
-    sub_1BCAFF8(&System_Collections_Generic_IReadOnlyDictionary_string__ServantPassiveSkillReleaseEntity__TypeInfo, v13);
-    byte_4B1CEC6 = 1;
+    sub_1C2D490(&Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__get_lookup__);
+    sub_1C2D490(&System_Collections_Generic_IReadOnlyDictionary_string__ServantPassiveSkillReleaseEntity__TypeInfo);
+    byte_4C27CB1 = 1;
   }
   condGroup = 0;
-  v15 = 1;
-  v29 = 0LL;
+  v14 = 1;
+  v28 = 0;
   while ( 1 )
   {
-    v16 = isBaseResult;
+    v15 = isBaseResult;
     Primarykey = ServantPassiveSkillReleaseEntity__getCreatePrimarykey(
                    svtId,
                    num,
                    priority,
-                   v15,
+                   v14,
                    *(const MethodInfo **)&dispLimitCount);
     lookup = (__int64 *)DataMasterBase_object__object__object___get_lookup(
                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-                          (const MethodInfo_32CA6AC *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__get_lookup__);
+                          (const MethodInfo_338A644 *)Method_DataMasterBase_ServantPassiveSkillReleaseMaster__ServantPassiveSkillReleaseEntity__string__get_lookup__);
     if ( !lookup )
 LABEL_19:
-      sub_1BCB254(lookup, v19);
-    v20 = *lookup;
-    v21 = lookup;
-    v22 = *(unsigned __int16 *)(*lookup + 302);
+      sub_1C2D6EC(lookup, v18);
+    v19 = *lookup;
+    v20 = lookup;
+    v21 = *(unsigned __int16 *)(*lookup + 302);
     if ( *(_WORD *)(*lookup + 302) )
     {
-      v23 = (System_Collections_Generic_IReadOnlyDictionary_string__ServantPassiveSkillReleaseEntity__c **)(*(_QWORD *)(v20 + 176) + 8LL);
-      while ( *(v23 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__ServantPassiveSkillReleaseEntity__TypeInfo )
+      v22 = (System_Collections_Generic_IReadOnlyDictionary_string__ServantPassiveSkillReleaseEntity__c **)(*(_QWORD *)(v19 + 176) + 8LL);
+      while ( *(v22 - 1) != System_Collections_Generic_IReadOnlyDictionary_string__ServantPassiveSkillReleaseEntity__TypeInfo )
       {
-        --v22;
-        v23 += 2;
-        if ( !v22 )
+        --v21;
+        v22 += 2;
+        if ( !v21 )
           goto LABEL_9;
       }
-      v24 = v20 + 16LL * (*(_DWORD *)v23 + 1) + 312;
+      v23 = v19 + 16LL * (*(_DWORD *)v22 + 1) + 312;
     }
     else
     {
 LABEL_9:
-      v24 = sub_1C1B560(
+      v23 = sub_1C7DCA8(
               lookup,
               System_Collections_Generic_IReadOnlyDictionary_string__ServantPassiveSkillReleaseEntity__TypeInfo,
-              1LL);
+              1);
     }
-    if ( ((*(__int64 (__fastcall **)(void *, System_String_o *, ServantPassiveSkillReleaseEntity_o **, _QWORD))v24)(
-            v21,
+    if ( ((*(__int64 (__fastcall **)(void *, System_String_o *, ServantPassiveSkillReleaseEntity_o **, _QWORD))v23)(
+            v20,
             Primarykey,
-            &v29,
-            *(_QWORD *)(v24 + 8)) & 1) == 0 )
-      return v16;
-    lookup = (__int64 *)v29;
-    if ( !v29 )
+            &v28,
+            *(_QWORD *)(v23 + 8))
+        & 1) == 0 )
+      return v15;
+    lookup = (__int64 *)v28;
+    if ( !v28 )
       goto LABEL_19;
-    ++v15;
-    if ( condGroup == v29->fields.condGroup )
+    ++v14;
+    if ( condGroup == v28->fields.condGroup )
     {
       isBaseResult = 0;
-      if ( v16 )
+      if ( v15 )
         goto LABEL_17;
     }
     else
     {
-      condGroup = v29->fields.condGroup;
-      if ( v16 )
-        return v16;
+      condGroup = v28->fields.condGroup;
+      if ( v15 )
+        return v15;
 LABEL_17:
-      isBaseResult = ServantPassiveSkillReleaseEntity__isUse(v29, dispLimitCount, beforeClearQuestId, v25);
+      isBaseResult = ServantPassiveSkillReleaseEntity__isUse(v28, dispLimitCount, beforeClearQuestId, v24);
     }
   }
 }

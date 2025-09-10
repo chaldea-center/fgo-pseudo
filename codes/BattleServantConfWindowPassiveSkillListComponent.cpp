@@ -1,12 +1,12 @@
-void __fastcall BattleServantConfWindowPassiveSkillListComponent___ctor(
+void BattleServantConfWindowPassiveSkillListComponent___ctor(
         BattleServantConfWindowPassiveSkillListComponent_o *this,
         const MethodInfo *method)
 {
-  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0LL);
+  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
 
-void __fastcall BattleServantConfWindowPassiveSkillListComponent__Awake(
+void BattleServantConfWindowPassiveSkillListComponent__Awake(
         BattleServantConfWindowPassiveSkillListComponent_o *this,
         const MethodInfo *method)
 {
@@ -14,7 +14,7 @@ void __fastcall BattleServantConfWindowPassiveSkillListComponent__Awake(
 }
 
 
-float __fastcall BattleServantConfWindowPassiveSkillListComponent__GetSkillOffset(
+float BattleServantConfWindowPassiveSkillListComponent__GetSkillOffset(
         BattleServantConfWindowPassiveSkillListComponent_o *this,
         const MethodInfo *method)
 {
@@ -22,7 +22,7 @@ float __fastcall BattleServantConfWindowPassiveSkillListComponent__GetSkillOffse
 }
 
 
-void __fastcall BattleServantConfWindowPassiveSkillListComponent__InitPositionY(
+void BattleServantConfWindowPassiveSkillListComponent__InitPositionY(
         BattleServantConfWindowPassiveSkillListComponent_o *this,
         float adjustPosY,
         float adjustHeight,
@@ -30,29 +30,29 @@ void __fastcall BattleServantConfWindowPassiveSkillListComponent__InitPositionY(
 {
   UnityEngine_GameObject_o *gameObject; // x0
 
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   GameObjectExtensions__SetLocalPositionY(
     gameObject,
     (float)(this->fields.skillInitPosY + adjustPosY) + adjustHeight,
-    0LL);
+    0);
 }
 
 
-bool __fastcall BattleServantConfWindowPassiveSkillListComponent__IsActive(
+bool BattleServantConfWindowPassiveSkillListComponent__IsActive(
         BattleServantConfWindowPassiveSkillListComponent_o *this,
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v3; // x1
 
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1BCB254(0LL, v3);
-  return UnityEngine_GameObject__get_activeSelf(gameObject, 0LL);
+    sub_1C2D6EC(0, v3);
+  return UnityEngine_GameObject__get_activeSelf(gameObject, 0);
 }
 
 
-void __fastcall BattleServantConfWindowPassiveSkillListComponent__SetActive(
+void BattleServantConfWindowPassiveSkillListComponent__SetActive(
         BattleServantConfWindowPassiveSkillListComponent_o *this,
         bool val,
         const MethodInfo *method)
@@ -60,14 +60,14 @@ void __fastcall BattleServantConfWindowPassiveSkillListComponent__SetActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v5; // x1
 
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0LL);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1BCB254(0LL, v5);
-  UnityEngine_GameObject__SetActive(gameObject, val, 0LL);
+    sub_1C2D6EC(0, v5);
+  UnityEngine_GameObject__SetActive(gameObject, val, 0);
 }
 
 
-void __fastcall BattleServantConfWindowPassiveSkillListComponent__SetSkillInfoObject(
+void BattleServantConfWindowPassiveSkillListComponent__SetSkillInfoObject(
         BattleServantConfWindowPassiveSkillListComponent_o *this,
         System_Int32_array *skillIdArray,
         const MethodInfo *method)
@@ -76,7 +76,7 @@ void __fastcall BattleServantConfWindowPassiveSkillListComponent__SetSkillInfoOb
 }
 
 
-void __fastcall BattleServantConfWindowPassiveSkillListComponent__SetSkillTitle(
+void BattleServantConfWindowPassiveSkillListComponent__SetSkillTitle(
         BattleServantConfWindowPassiveSkillListComponent_o *this,
         UIAtlas_o *uiAtlas,
         System_String_o *spriteName,
@@ -86,12 +86,12 @@ void __fastcall BattleServantConfWindowPassiveSkillListComponent__SetSkillTitle(
 
   skillTitle = this->fields.skillTitle;
   if ( !skillTitle
-    || (UISprite__set_atlas(skillTitle, uiAtlas, 0LL), (skillTitle = this->fields.skillTitle) == 0LL)
-    || (UISprite__set_spriteName(skillTitle, spriteName, 0LL), (skillTitle = this->fields.skillTitle) == 0LL) )
+    || (UISprite__set_atlas(skillTitle, uiAtlas, 0), (skillTitle = this->fields.skillTitle) == 0)
+    || (UISprite__set_spriteName(skillTitle, spriteName, 0), (skillTitle = this->fields.skillTitle) == 0) )
   {
-    sub_1BCB254(skillTitle, uiAtlas);
+    sub_1C2D6EC(skillTitle, uiAtlas);
   }
-  ((void (__fastcall *)(UISprite_o *, Il2CppMethodPointer))skillTitle->klass->vtable._33_MakePixelPerfect.method)(
+  ((void (__fastcall *)(UISprite_o *, const MethodInfo *))skillTitle->klass->vtable._33_MakePixelPerfect.methodPtr)(
     skillTitle,
-    skillTitle->klass->vtable._34_get_minWidth.methodPtr);
+    skillTitle->klass->vtable._33_MakePixelPerfect.method);
 }
