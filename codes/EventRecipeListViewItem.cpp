@@ -8,39 +8,40 @@ void EventRecipeListViewItem___ctor(
 {
   struct EventRecipeEntity_o **p_eventRecipeEntity; // x20
   Il2CppObject *Instance; // x0
-  __int64 v13; // x1
+  struct CommonConsumeEntity_array *SortedEntityList; // x0
   struct EventRecipeEntity_o *v14; // x8
   bool IsOpen; // w0
 
-  if ( (byte_4C218FB & 1) == 0 )
+  if ( (byte_4C31FCA & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_CommonConsumeMaster___);
-    sub_1C2D490(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C218FB = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_CommonConsumeMaster___);
+    sub_1C32C20(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C31FCA = 1;
   }
-  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
   this->fields.eventRecipeEntity = eventRecipeEntity;
   p_eventRecipeEntity = &this->fields.eventRecipeEntity;
-  sub_1C2D434(&this->fields.eventRecipeEntity);
+  sub_1C32BC4(&this->fields.eventRecipeEntity, eventRecipeEntity);
   this->fields.eventRecipeGiftEntity = eventRecipeGiftEntity;
-  sub_1C2D434(&this->fields.eventRecipeGiftEntity);
+  sub_1C32BC4(&this->fields.eventRecipeGiftEntity, eventRecipeGiftEntity);
   this->fields.currentEventId = eventId;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+               (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
   if ( !*p_eventRecipeEntity )
     goto LABEL_14;
   if ( !Instance )
     goto LABEL_14;
-  this->fields.commonConsumeEntity = CommonConsumeMaster__GetSortedEntityList(
-                                       (CommonConsumeMaster_o *)Instance,
-                                       (*p_eventRecipeEntity)->fields.commonConsumeId,
-                                       0);
-  Instance = (Il2CppObject *)sub_1C2D434(&this->fields.commonConsumeEntity);
+  SortedEntityList = CommonConsumeMaster__GetSortedEntityList(
+                       (CommonConsumeMaster_o *)Instance,
+                       (*p_eventRecipeEntity)->fields.commonConsumeId,
+                       0);
+  this->fields.commonConsumeEntity = SortedEntityList;
+  Instance = (Il2CppObject *)sub_1C32BC4(&this->fields.commonConsumeEntity, SortedEntityList);
   v14 = this->fields.eventRecipeEntity;
   if ( !v14 )
     goto LABEL_14;
@@ -49,16 +50,16 @@ void EventRecipeListViewItem___ctor(
     IsOpen = 1;
     goto LABEL_13;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
+                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_CommonReleaseMaster___),
         !*p_eventRecipeEntity)
     || !Instance )
   {
 LABEL_14:
-    sub_1C2D6EC(Instance, v13);
+    sub_1C32E7C(Instance);
   }
   IsOpen = CommonReleaseMaster__IsOpen(
              (CommonReleaseMaster_o *)Instance,
@@ -77,7 +78,7 @@ System_String_o *EventRecipeListViewItem__get_ClosedMessage(EventRecipeListViewI
 
   eventRecipeEntity = this->fields.eventRecipeEntity;
   if ( !eventRecipeEntity )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return eventRecipeEntity->fields.closedMessage;
 }
 
@@ -104,12 +105,12 @@ int32_t EventRecipeListViewItem__get_GetIdx(EventRecipeListViewItem_o *this, con
 
 System_String_o *EventRecipeListViewItem__get_InfoMessage(EventRecipeListViewItem_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C218FC & 1) == 0 )
+  if ( (byte_4C31FCB & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_9269/*"NONE"*/);
-    byte_4C218FC = 1;
+    sub_1C32C20(&StringLiteral_9275/*"NONE"*/);
+    byte_4C31FCB = 1;
   }
-  return (System_String_o *)StringLiteral_9269/*"NONE"*/;
+  return (System_String_o *)StringLiteral_9275/*"NONE"*/;
 }
 
 
@@ -137,7 +138,7 @@ System_String_o *EventRecipeListViewItem__get_NameText(EventRecipeListViewItem_o
 
   eventRecipeEntity = this->fields.eventRecipeEntity;
   if ( !eventRecipeEntity )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return eventRecipeEntity->fields.name;
 }
 
@@ -156,27 +157,26 @@ int32_t EventRecipeListViewItem__get_RecipeId(EventRecipeListViewItem_o *this, c
 
   eventRecipeEntity = this->fields.eventRecipeEntity;
   if ( !eventRecipeEntity )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return eventRecipeEntity->fields.id;
 }
 
 
 int32_t EventRecipeListViewItem__get_TopIconId(EventRecipeListViewItem_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
   struct EventRecipeGiftEntity_array *eventRecipeGiftEntity; // x8
-  EventRecipeGiftEntity_o *v4; // x8
+  EventRecipeGiftEntity_o *v3; // x8
 
   eventRecipeGiftEntity = this->fields.eventRecipeGiftEntity;
   if ( !eventRecipeGiftEntity )
     goto LABEL_5;
   if ( !LODWORD(eventRecipeGiftEntity->max_length) )
-    sub_1C2D6F4(this, method, v2);
-  v4 = eventRecipeGiftEntity->m_Items[0];
-  if ( !v4 )
+    sub_1C32E84(this);
+  v3 = eventRecipeGiftEntity->m_Items[0];
+  if ( !v3 )
 LABEL_5:
-    sub_1C2D6EC(this, method);
-  return v4->fields.topIconId;
+    sub_1C32E7C(this);
+  return v3->fields.topIconId;
 }
 
 
@@ -186,6 +186,6 @@ int32_t EventRecipeListViewItem__get_teaIconId(EventRecipeListViewItem_o *this, 
 
   eventRecipeEntity = this->fields.eventRecipeEntity;
   if ( !eventRecipeEntity )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return eventRecipeEntity->fields.iconId;
 }

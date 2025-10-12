@@ -4,14 +4,14 @@ void SendEventToFsm___ctor(SendEventToFsm_o *this, const MethodInfo *method)
   const MethodInfo *v3; // x3
   int32_t v5; // w1
 
-  if ( (byte_4C26776 & 1) == 0 )
+  if ( (byte_4C36E4E & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_22250/*"none"*/);
-    byte_4C26776 = 1;
+    sub_1C32C20(&StringLiteral_22267/*"none"*/);
+    byte_4C36E4E = 1;
   }
-  v5 = StringLiteral_22250/*"none"*/;
-  this->fields.sendEvent = (struct System_String_o *)StringLiteral_22250/*"none"*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.sendEvent, v5, v2, v3);
+  v5 = StringLiteral_22267/*"none"*/;
+  this->fields.sendEvent = (struct System_String_o *)StringLiteral_22267/*"none"*/;
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.sendEvent, v5, v2, v3);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -40,10 +40,10 @@ void SendEventToFsm__OnEnable(SendEventToFsm_o *this, const MethodInfo *method)
   bool IsHighlighted; // w1
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C26773 & 1) == 0 )
+  if ( (byte_4C36E4B & 1) == 0 )
   {
-    sub_1C2D490(&UICamera_TypeInfo);
-    byte_4C26773 = 1;
+    sub_1C32C20(&UICamera_TypeInfo);
+    byte_4C36E4B = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -105,10 +105,10 @@ void SendEventToFsm__OnSelect(SendEventToFsm_o *this, bool isSelected, const Met
   const MethodInfo *v5; // x2
   UICamera_c *v6; // x0
 
-  if ( (byte_4C26774 & 1) == 0 )
+  if ( (byte_4C36E4C & 1) == 0 )
   {
-    sub_1C2D490(&UICamera_TypeInfo);
-    byte_4C26774 = 1;
+    sub_1C32C20(&UICamera_TypeInfo);
+    byte_4C36E4C = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -130,23 +130,22 @@ LABEL_8:
 void SendEventToFsm__Send(SendEventToFsm_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *targetFSM; // x20
-  __int64 v4; // x1
-  PlayMakerFSM_o *v5; // x0
+  PlayMakerFSM_o *v4; // x0
 
-  if ( (byte_4C26775 & 1) == 0 )
+  if ( (byte_4C36E4D & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C26775 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C36E4D = 1;
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(targetFSM, 0, 0) )
   {
-    v5 = this->fields.targetFSM;
-    if ( !v5 )
-      sub_1C2D6EC(0, v4);
-    PlayMakerFSM__SendEvent(v5, this->fields.sendEvent, 0);
+    v4 = this->fields.targetFSM;
+    if ( !v4 )
+      sub_1C32E7C(0);
+    PlayMakerFSM__SendEvent(v4, this->fields.sendEvent, 0);
   }
 }
 

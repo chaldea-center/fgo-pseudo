@@ -12,18 +12,17 @@ void NP601300meshFS__Update(NP601300meshFS_o *this, const MethodInfo *method)
   float endParentPosZ; // s10
   int v6; // w21
   UnityEngine_Transform_o *transform; // x0
-  __int64 v8; // x1
-  float v9; // s9
-  float v10; // s13
-  float v11; // s11
+  float v8; // s9
+  float v9; // s13
+  float v10; // s11
   float startParentPosZ; // s12
   float z; // s8
-  float v14; // s13
-  float v15; // s9
-  float v16; // s8
+  float v13; // s13
+  float v14; // s9
+  float v15; // s8
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
   width = UnityEngine_Screen__get_width(0);
   height = UnityEngine_Screen__get_height(0);
@@ -35,34 +34,34 @@ void NP601300meshFS__Update(NP601300meshFS_o *this, const MethodInfo *method)
   transform = UnityEngine_Transform__get_parent(transform, 0);
   if ( !transform )
     goto LABEL_11;
-  v9 = (float)width / (float)v6;
-  v10 = (float)(fminf(v9, 2.3333) * 9.0) * 0.0625;
+  v8 = (float)width / (float)v6;
+  v9 = (float)(fminf(v8, 2.3333) * 9.0) * 0.0625;
   localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
   startParentPosZ = this->fields.startParentPosZ;
-  v11 = this->fields.endParentPosZ;
+  v10 = this->fields.endParentPosZ;
   z = localPosition.fields.z;
-  v14 = v9 < 1.7778 ? 0.0 : v10 + -1.0;
+  v13 = v8 < 1.7778 ? 0.0 : v9 + -1.0;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_11;
   transform = UnityEngine_Transform__get_parent(transform, 0);
   if ( !transform )
     goto LABEL_11;
-  LODWORD(v15) = (unsigned int)UnityEngine_Transform__get_localPosition(transform, 0);
+  LODWORD(v14) = (unsigned int)UnityEngine_Transform__get_localPosition(transform, 0);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (v16 = (float)((float)(v14 * (float)(endParentPosZ - z)) / (float)(v11 - startParentPosZ)) + 1.0,
-        v18.fields.x = (float)(1.0 - v16) * v15,
-        v18.fields.y = 0.0,
-        v18.fields.z = 0.0,
-        UnityEngine_Transform__set_localPosition(transform, v18, 0),
+    || (v15 = (float)((float)(v13 * (float)(endParentPosZ - z)) / (float)(v10 - startParentPosZ)) + 1.0,
+        v17.fields.x = (float)(1.0 - v15) * v14,
+        v17.fields.y = 0.0,
+        v17.fields.z = 0.0,
+        UnityEngine_Transform__set_localPosition(transform, v17, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_11:
-    sub_1C2D6EC(transform, v8);
+    sub_1C32E7C(transform);
   }
-  v19.fields.x = v16;
-  v19.fields.z = v16;
-  v19.fields.y = 1.0;
-  UnityEngine_Transform__set_localScale(transform, v19, 0);
+  v18.fields.x = v15;
+  v18.fields.z = v15;
+  v18.fields.y = 1.0;
+  UnityEngine_Transform__set_localScale(transform, v18, 0);
 }

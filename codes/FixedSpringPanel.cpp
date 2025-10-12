@@ -7,20 +7,20 @@ void FixedSpringPanel___ctor(FixedSpringPanel_o *this, const MethodInfo *method)
 
 void FixedSpringPanel__AdvanceTowardsPosition(FixedSpringPanel_o *this, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x1
   float deltaTime; // s0
   UnityEngine_Transform_o *mTrans; // x0
-  float v6; // s10
+  float v5; // s10
   float x; // s8
   float y; // s9
-  float v9; // s10
-  float v10; // s11
+  float v8; // s10
+  float v9; // s11
   float z; // s12
   struct UIScrollView_o *mDrag; // x8
-  float v13; // s14
-  float v14; // s15
-  float v15; // s13
-  int v16; // w21
+  float v12; // s14
+  float v13; // s15
+  float v14; // s13
+  int v15; // w21
+  const MethodInfo *v16; // x1
   UnityEngine_Object_o *v17; // x20
   int32_t v18; // w2
   const MethodInfo *v19; // x3
@@ -33,17 +33,17 @@ void FixedSpringPanel__AdvanceTowardsPosition(FixedSpringPanel_o *this, const Me
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C2B8F6 & 1) == 0 )
+  if ( (byte_4C3BF79 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&SpringPanel_TypeInfo);
-    byte_4C2B8F6 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&SpringPanel_TypeInfo);
+    byte_4C3BF79 = 1;
   }
   deltaTime = RealTime__get_deltaTime(0);
   mTrans = this->fields.mTrans;
   if ( !mTrans )
     goto LABEL_26;
-  v6 = deltaTime;
+  v5 = deltaTime;
   localPosition = UnityEngine_Transform__get_localPosition(mTrans, 0);
   mTrans = this->fields.mTrans;
   if ( !mTrans )
@@ -51,9 +51,9 @@ void FixedSpringPanel__AdvanceTowardsPosition(FixedSpringPanel_o *this, const Me
   x = localPosition.fields.x;
   y = localPosition.fields.y;
   v25 = UnityEngine_Transform__get_localPosition(mTrans, 0);
-  v26 = NGUIMath__SpringLerp_49198828(v25, this->fields.target, this->fields.strength, v6, 0);
-  v9 = v26.fields.x;
-  v10 = v26.fields.y;
+  v26 = NGUIMath__SpringLerp_49258892(v25, this->fields.target, this->fields.strength, v5, 0);
+  v8 = v26.fields.x;
+  v9 = v26.fields.y;
   z = v26.fields.z;
   if ( (float)((float)((float)((float)(v26.fields.x - this->fields.target.fields.x)
                              * (float)(v26.fields.x - this->fields.target.fields.x))
@@ -65,43 +65,43 @@ void FixedSpringPanel__AdvanceTowardsPosition(FixedSpringPanel_o *this, const Me
   mDrag = this->fields.mDrag;
   if ( !mDrag )
     goto LABEL_26;
-  v13 = mDrag->fields.mMomentum.fields.x;
-  v14 = mDrag->fields.mMomentum.fields.y;
-  v15 = mDrag->fields.mMomentum.fields.z;
-  if ( !byte_4C20DA3 )
+  v12 = mDrag->fields.mMomentum.fields.x;
+  v13 = mDrag->fields.mMomentum.fields.y;
+  v14 = mDrag->fields.mMomentum.fields.z;
+  if ( !byte_4C313D3 )
   {
-    sub_1C2D490(&System_Math_TypeInfo);
-    byte_4C20DA3 = 1;
+    sub_1C32C20(&System_Math_TypeInfo);
+    byte_4C313D3 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  if ( sqrtf((float)((float)(v13 * v13) + (float)(v14 * v14)) + (float)(v15 * v15)) >= this->fields.momentumBorder )
+  if ( sqrtf((float)((float)(v12 * v12) + (float)(v13 * v13)) + (float)(v14 * v14)) >= this->fields.momentumBorder )
   {
 LABEL_13:
-    v16 = 0;
+    v15 = 0;
   }
   else
   {
-    v9 = this->fields.target.fields.x;
-    v10 = this->fields.target.fields.y;
+    v8 = this->fields.target.fields.x;
+    v9 = this->fields.target.fields.y;
     z = this->fields.target.fields.z;
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
-    v16 = 1;
+    v15 = 1;
   }
   mTrans = this->fields.mTrans;
   if ( !mTrans
-    || (v27.fields.x = v9,
-        v27.fields.y = v10,
+    || (v27.fields.x = v8,
+        v27.fields.y = v9,
         v27.fields.z = z,
         UnityEngine_Transform__set_localPosition(mTrans, v27, 0),
         (mTrans = (UnityEngine_Transform_o *)this->fields.mPanel) == 0) )
   {
 LABEL_26:
-    sub_1C2D6EC(mTrans, v3);
+    sub_1C32E7C(mTrans);
   }
-  v23.fields.x = *((float *)&mTrans[13].fields.m_CachedPtr + 1) - (float)(v9 - x);
-  v23.fields.y = *(float *)&mTrans[14].klass - (float)(v10 - y);
-  UIPanel__set_clipOffset((UIPanel_o *)mTrans, v23, v3);
+  v23.fields.x = *((float *)&mTrans[13].fields.m_CachedPtr + 1) - (float)(v8 - x);
+  v23.fields.y = *(float *)&mTrans[14].klass - (float)(v9 - y);
+  UIPanel__set_clipOffset((UIPanel_o *)mTrans, v23, v16);
   v17 = (UnityEngine_Object_o *)this->fields.mDrag;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -115,10 +115,10 @@ LABEL_26:
       0,
       *(_QWORD *)&mTrans->klass[1]._1.this_arg.bits);
   }
-  if ( v16 && this->fields.onFinished )
+  if ( v15 && this->fields.onFinished )
   {
     SpringPanel_TypeInfo->static_fields->current = (struct SpringPanel_o *)this;
-    sub_1C2D434((CGThumbnailListItem_o *)SpringPanel_TypeInfo->static_fields, (int32_t)this, v18, v19);
+    sub_1C32BC4((CGThumbnailListItem_o *)SpringPanel_TypeInfo->static_fields, (int32_t)this, v18, v19);
     onFinished = this->fields.onFinished;
     if ( onFinished )
     {
@@ -126,7 +126,7 @@ LABEL_26:
         onFinished->fields.method_code,
         onFinished->fields.method);
       SpringPanel_TypeInfo->static_fields->current = 0;
-      sub_1C2D434((CGThumbnailListItem_o *)SpringPanel_TypeInfo->static_fields, 0, v21, v22);
+      sub_1C32BC4((CGThumbnailListItem_o *)SpringPanel_TypeInfo->static_fields, 0, v21, v22);
       return;
     }
     goto LABEL_26;

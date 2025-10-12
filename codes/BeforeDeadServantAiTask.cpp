@@ -15,9 +15,7 @@ bool BeforeDeadServantAiTask__IsActable(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  BattleLogicReaction_o *logicReaction; // x8
-
-  if ( !logic || (logicReaction = logic->fields.logicReaction) == 0 )
-    sub_1C2D6EC(this, logic);
-  return BattleLogicReaction__CheckExecutableDead(logicReaction, this->fields.svtData, 0);
+  if ( !logic || !logic->fields.logicReaction )
+    sub_1C32E7C(this);
+  return BattleLogicReaction__CheckExecutableDead((BattleLogicReaction_o *)this, this->fields.svtData, method);
 }

@@ -10,21 +10,19 @@ void FsmEventDataList__Finalize(FsmEventDataList_o *this, const MethodInfo *meth
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 FsmEventData_o *FsmEventDataList__Get(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
 {
   struct FsmEventData_array *eventDataList; // x8
 
   eventDataList = this->fields.eventDataList;
   if ( !eventDataList )
-    sub_1C2D6EC(this, index);
+    sub_1C32E7C(this);
   if ( LODWORD(eventDataList->max_length) <= index )
-    sub_1C2D6F4(this, *(_QWORD *)&index, method);
+    sub_1C32E84(this);
   return eventDataList->m_Items[index];
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *FsmEventDataList__GetEventData(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
 {
   struct FsmEventData_array *eventDataList; // x8
@@ -34,16 +32,15 @@ System_String_o *FsmEventDataList__GetEventData(FsmEventDataList_o *this, int32_
   if ( !eventDataList )
     goto LABEL_5;
   if ( LODWORD(eventDataList->max_length) <= index )
-    sub_1C2D6F4(this, *(_QWORD *)&index, method);
+    sub_1C32E84(this);
   v4 = eventDataList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1C2D6EC(this, index);
+    sub_1C32E7C(this);
   return v4->fields.eventData;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_o *FsmEventDataList__GetTitle(FsmEventDataList_o *this, int32_t index, const MethodInfo *method)
 {
   struct FsmEventData_array *eventDataList; // x8
@@ -53,11 +50,11 @@ System_String_o *FsmEventDataList__GetTitle(FsmEventDataList_o *this, int32_t in
   if ( !eventDataList )
     goto LABEL_5;
   if ( LODWORD(eventDataList->max_length) <= index )
-    sub_1C2D6F4(this, *(_QWORD *)&index, method);
+    sub_1C32E84(this);
   v4 = eventDataList->m_Items[index];
   if ( !v4 )
 LABEL_5:
-    sub_1C2D6EC(this, index);
+    sub_1C32E7C(this);
   return v4->fields.title;
 }
 
@@ -66,15 +63,13 @@ void FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t index, const 
 {
   UnityEngine_Object_o *targetFSM; // x21
   PlayMakerFSM_o *v6; // x0
-  __int64 v7; // x1
-  __int64 v8; // x2
   struct FsmEventData_array *eventDataList; // x8
-  FsmEventData_o *v10; // x8
+  FsmEventData_o *v8; // x8
 
-  if ( (byte_4C289C9 & 1) == 0 )
+  if ( (byte_4C390D1 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C289C9 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C390D1 = 1;
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -86,12 +81,12 @@ void FsmEventDataList__SendEvent(FsmEventDataList_o *this, int32_t index, const 
     if ( !eventDataList )
       goto LABEL_12;
     if ( LODWORD(eventDataList->max_length) <= index )
-      sub_1C2D6F4(v6, v7, v8);
-    v10 = eventDataList->m_Items[index];
-    if ( !v10 || (v6 = this->fields.targetFSM) == 0 )
+      sub_1C32E84(v6);
+    v8 = eventDataList->m_Items[index];
+    if ( !v8 || (v6 = this->fields.targetFSM) == 0 )
 LABEL_12:
-      sub_1C2D6EC(v6, v7);
-    PlayMakerFSM__SendEvent(v6, v10->fields.eventData, 0);
+      sub_1C32E7C(v6);
+    PlayMakerFSM__SendEvent(v6, v8->fields.eventData, 0);
   }
 }
 
@@ -121,24 +116,23 @@ void FsmEventDataList__set_Length(FsmEventDataList_o *this, int32_t value, const
   struct FsmEventData_array *eventDataList; // t1
   int max_length; // w22
   __int64 v9; // x0
-  __int64 v10; // x1
-  __int64 v11; // x2
-  const MethodInfo *v12; // x3
-  unsigned int *v13; // x20
-  unsigned __int64 v14; // x23
-  signed __int64 v15; // x24
-  __int64 v16; // x25
-  CGThumbnailListItem_o *v17; // x21
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  unsigned int *v12; // x20
+  unsigned __int64 v13; // x23
+  signed __int64 v14; // x24
+  __int64 v15; // x25
+  CGThumbnailListItem_o *v16; // x21
   CGThumbnailListItem_c *klass; // x8
-  FsmEventData_o *v19; // x22
-  const MethodInfo *v20; // x1
-  __int64 v21; // x0
+  FsmEventData_o *v18; // x22
+  const MethodInfo *v19; // x1
+  __int64 v20; // x0
 
-  if ( (byte_4C289C8 & 1) == 0 )
+  if ( (byte_4C390D0 & 1) == 0 )
   {
-    sub_1C2D490(&FsmEventData___TypeInfo);
-    sub_1C2D490(&FsmEventData_TypeInfo);
-    byte_4C289C8 = 1;
+    sub_1C32C20(&FsmEventData___TypeInfo);
+    sub_1C32C20(&FsmEventData_TypeInfo);
+    byte_4C390D0 = 1;
   }
   eventDataList = this->fields.eventDataList;
   p_eventDataList = (CGThumbnailListItem_o *)&this->fields.eventDataList;
@@ -149,56 +143,56 @@ void FsmEventDataList__set_Length(FsmEventDataList_o *this, int32_t value, const
     max_length = 0;
   if ( max_length != value )
   {
-    v9 = sub_1C2D538(FsmEventData___TypeInfo, (unsigned int)value);
-    v13 = (unsigned int *)v9;
+    v9 = sub_1C32CC8(FsmEventData___TypeInfo, (unsigned int)value);
+    v12 = (unsigned int *)v9;
     if ( value >= 1 )
     {
-      v14 = 0;
-      v15 = max_length;
-      v16 = (unsigned int)value;
-      v17 = (CGThumbnailListItem_o *)(v9 + 32);
+      v13 = 0;
+      v14 = max_length;
+      v15 = (unsigned int)value;
+      v16 = (CGThumbnailListItem_o *)(v9 + 32);
       do
       {
-        if ( (__int64)v14 >= v15 )
+        if ( (__int64)v13 >= v14 )
         {
-          v19 = (FsmEventData_o *)sub_1C2D6DC(FsmEventData_TypeInfo);
-          FsmEventData___ctor(v19, v20);
-          if ( !v13 )
+          v18 = (FsmEventData_o *)sub_1C32E6C(FsmEventData_TypeInfo);
+          FsmEventData___ctor(v18, v19);
+          if ( !v12 )
 LABEL_20:
-            sub_1C2D6EC(v9, v10);
+            sub_1C32E7C(v9);
         }
         else
         {
           klass = p_eventDataList->klass;
           if ( !p_eventDataList->klass )
             goto LABEL_20;
-          if ( v14 >= LODWORD(klass->_1.namespaze) )
+          if ( v13 >= LODWORD(klass->_1.namespaze) )
 LABEL_21:
-            sub_1C2D6F4(v9, v10, v11);
-          if ( !v13 )
+            sub_1C32E84(v9);
+          if ( !v12 )
             goto LABEL_20;
-          v19 = (FsmEventData_o *)*((_QWORD *)&klass->_1.byval_arg.data + v14);
+          v18 = (FsmEventData_o *)*((_QWORD *)&klass->_1.byval_arg.data + v13);
         }
-        if ( v19 )
+        if ( v18 )
         {
-          v9 = sub_1C2D5CC(v19, *(_QWORD *)(*(_QWORD *)v13 + 64LL));
+          v9 = sub_1C32D5C(v18, *(_QWORD *)(*(_QWORD *)v12 + 64LL));
           if ( !v9 )
           {
-            v21 = sub_1C2D710(0);
-            sub_1C2D5B8(v21, 0);
+            v20 = sub_1C32EA0(0);
+            sub_1C32D48(v20, 0);
           }
         }
-        if ( v14 >= v13[6] )
+        if ( v13 >= v12[6] )
           goto LABEL_21;
-        v17->klass = (CGThumbnailListItem_c *)v19;
-        sub_1C2D434(v17, (int32_t)v19, v11, v12);
-        ++v14;
-        v17 = (CGThumbnailListItem_o *)((char *)v17 + 8);
+        v16->klass = (CGThumbnailListItem_c *)v18;
+        sub_1C32BC4(v16, (int32_t)v18, v10, v11);
+        ++v13;
+        v16 = (CGThumbnailListItem_o *)((char *)v16 + 8);
       }
-      while ( v16 != v14 );
+      while ( v15 != v13 );
     }
-    p_eventDataList->klass = (CGThumbnailListItem_c *)v13;
-    sub_1C2D434(p_eventDataList, (int32_t)v13, v11, v12);
+    p_eventDataList->klass = (CGThumbnailListItem_c *)v12;
+    sub_1C32BC4(p_eventDataList, (int32_t)v12, v10, v11);
   }
 }
 
@@ -208,5 +202,5 @@ void FsmEventDataList__set_TargetFSM(FsmEventDataList_o *this, PlayMakerFSM_o *v
   const MethodInfo *v3; // x3
 
   this->fields.targetFSM = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.targetFSM, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.targetFSM, (int32_t)value, (int32_t)method, v3);
 }

@@ -10,7 +10,7 @@ int32_t BattleFieldEffectComponent__getAmbientColors(BattleFieldEffectComponent_
 
   ambientlist = this->fields.ambientlist;
   if ( !ambientlist )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return ambientlist->max_length;
 }
 
@@ -21,59 +21,58 @@ System_String_array *BattleFieldEffectComponent__getFieldEffects(
 {
   BattleFieldEffectComponent_o *v2; // x19
   struct UnityEngine_GameObject_array *fieldeffect; // x8
-  __int64 v4; // x2
-  BattleFieldEffectComponent_o *v5; // x20
-  unsigned int v6; // w21
-  struct UnityEngine_GameObject_array *v7; // x8
+  BattleFieldEffectComponent_o *v4; // x20
+  unsigned int v5; // w21
+  struct UnityEngine_GameObject_array *v6; // x8
+  int32_t v7; // w2
   const MethodInfo *v8; // x3
   BattleFieldEffectComponent_o *v9; // x1
   BattleFieldEffectComponent_c **v10; // x0
 
   v2 = this;
-  if ( (byte_4C29D5C & 1) == 0 )
+  if ( (byte_4C3A46E & 1) == 0 )
   {
-    this = (BattleFieldEffectComponent_o *)sub_1C2D490(&string___TypeInfo);
-    byte_4C29D5C = 1;
+    this = (BattleFieldEffectComponent_o *)sub_1C32C20(&string___TypeInfo);
+    byte_4C3A46E = 1;
   }
   fieldeffect = v2->fields.fieldeffect;
   if ( !fieldeffect )
     goto LABEL_13;
-  this = (BattleFieldEffectComponent_o *)sub_1C2D538(string___TypeInfo, LODWORD(fieldeffect->max_length));
+  this = (BattleFieldEffectComponent_o *)sub_1C32CC8(string___TypeInfo, LODWORD(fieldeffect->max_length));
   if ( !this )
     goto LABEL_13;
-  v5 = this;
+  v4 = this;
   if ( SLODWORD(this->fields.m_CancellationTokenSource) >= 1 )
   {
-    v6 = 0;
+    v5 = 0;
     while ( 1 )
     {
-      v7 = v2->fields.fieldeffect;
-      if ( !v7 )
+      v6 = v2->fields.fieldeffect;
+      if ( !v6 )
         break;
-      if ( v6 >= LODWORD(v7->max_length) )
+      if ( v5 >= LODWORD(v6->max_length) )
         goto LABEL_14;
-      this = (BattleFieldEffectComponent_o *)v7->m_Items[v6];
+      this = (BattleFieldEffectComponent_o *)v6->m_Items[v5];
       if ( !this )
         break;
       this = (BattleFieldEffectComponent_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)this, 0);
-      if ( v6 >= LODWORD(v5->fields.m_CancellationTokenSource) )
+      if ( v5 >= LODWORD(v4->fields.m_CancellationTokenSource) )
 LABEL_14:
-        sub_1C2D6F4(this, method, v4);
+        sub_1C32E84(this);
       v9 = this;
-      v10 = &v5->klass + (int)v6;
+      v10 = &v4->klass + (int)v5;
       v10[4] = (BattleFieldEffectComponent_c *)v9;
-      sub_1C2D434((CGThumbnailListItem_o *)(v10 + 4), (int32_t)v9, v4, v8);
-      if ( (signed int)++v6 >= SLODWORD(v5->fields.m_CancellationTokenSource) )
-        return (System_String_array *)v5;
+      sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 4), (int32_t)v9, v7, v8);
+      if ( (signed int)++v5 >= SLODWORD(v4->fields.m_CancellationTokenSource) )
+        return (System_String_array *)v4;
     }
 LABEL_13:
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   }
-  return (System_String_array *)v5;
+  return (System_String_array *)v4;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void BattleFieldEffectComponent__setAmbientColor(
         BattleFieldEffectComponent_o *this,
         int32_t index,
@@ -83,9 +82,9 @@ void BattleFieldEffectComponent__setAmbientColor(
 
   ambientlist = this->fields.ambientlist;
   if ( !ambientlist )
-    sub_1C2D6EC(this, index);
+    sub_1C32E7C(this);
   if ( LODWORD(ambientlist->max_length) <= index )
-    sub_1C2D6F4(this, *(_QWORD *)&index, method);
+    sub_1C32E84(this);
   UnityEngine_RenderSettings__set_ambientLight(ambientlist->m_Items[index], 0);
 }
 
@@ -97,19 +96,17 @@ void BattleFieldEffectComponent__setFieldEffect(
 {
   UnityEngine_Object_o *viewobject; // x22
   _BOOL8 v6; // x0
-  __int64 v7; // x1
-  __int64 v8; // x2
-  UnityEngine_Object_o *v9; // x22
+  UnityEngine_Object_o *v7; // x22
   struct UnityEngine_GameObject_array *fieldeffect; // x8
   int32_t max_length; // w9
   struct UnityEngine_GameObject_o *Object; // x0
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C29D5D & 1) == 0 )
+  if ( (byte_4C3A46F & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C29D5D = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3A46F = 1;
   }
   viewobject = (UnityEngine_Object_o *)this->fields.viewobject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -117,21 +114,21 @@ void BattleFieldEffectComponent__setFieldEffect(
   v6 = UnityEngine_Object__op_Inequality(viewobject, 0, 0);
   if ( v6 )
   {
-    v9 = (UnityEngine_Object_o *)this->fields.viewobject;
+    v7 = (UnityEngine_Object_o *)this->fields.viewobject;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71163704(v9, 0);
+    UnityEngine_Object__Destroy_71223640(v7, 0);
   }
   if ( (index & 0x80000000) == 0 )
   {
     fieldeffect = this->fields.fieldeffect;
     if ( !fieldeffect )
-      sub_1C2D6EC(v6, v7);
+      sub_1C32E7C(v6);
     max_length = fieldeffect->max_length;
     if ( max_length > index )
     {
       if ( max_length <= (unsigned int)index )
-        sub_1C2D6F4(v6, v7, v8);
+        sub_1C32E84(v6);
       Object = BaseMonoBehaviour__createObject(
                  (BaseMonoBehaviour_o *)this,
                  fieldeffect->m_Items[index],
@@ -139,7 +136,7 @@ void BattleFieldEffectComponent__setFieldEffect(
                  0,
                  0);
       this->fields.viewobject = Object;
-      sub_1C2D434((CGThumbnailListItem_o *)&this->fields.viewobject, (int32_t)Object, v13, v14);
+      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.viewobject, (int32_t)Object, v11, v12);
     }
   }
 }

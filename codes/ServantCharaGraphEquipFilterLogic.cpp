@@ -52,7 +52,7 @@ bool ServantCharaGraphEquipFilterLogic__IsMatchEquipCategoryFilter(
   sort = ServantCharaGraphEquipFilterLogic__get_EquipListViewItem(this, v4);
   if ( !sort )
 LABEL_6:
-    sub_1C2D6EC(sort, method);
+    sub_1C32E7C(sort);
   return ServantEquipEffectFilterController__IsMatchEffectCategory(
            *((System_Int32_array **)sort + 37),
            this->fields.sort,
@@ -96,10 +96,10 @@ bool ServantCharaGraphEquipFilterLogic__IsMatchServantEquipCombineStatusFilter(
   const MethodInfo *v9; // x1
   UserServantEntity_o *UserServantEntity_k__BackingField; // x21
 
-  if ( (byte_4C26597 & 1) == 0 )
+  if ( (byte_4C36C6F & 1) == 0 )
   {
-    sub_1C2D490(&FilterKindList_TypeInfo);
-    byte_4C26597 = 1;
+    sub_1C32C20(&FilterKindList_TypeInfo);
+    byte_4C36C6F = 1;
   }
   v4 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
@@ -121,7 +121,7 @@ bool ServantCharaGraphEquipFilterLogic__IsMatchServantEquipCombineStatusFilter(
         (ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem((ServantCharaGraphFilterLogic_o *)this, v9)) == 0)
     || !sort )
   {
-    sub_1C2D6EC(ListViewItem, v9);
+    sub_1C32E7C(ListViewItem);
   }
   return ListViewSort__IsMatchServantEquipCombineStatusFilter(
            sort,
@@ -144,10 +144,10 @@ bool ServantCharaGraphEquipFilterLogic__IsMatchServantEquipHaveStatusFilter(
   const MethodInfo *v9; // x1
   UserServantEntity_o *UserServantEntity_k__BackingField; // x21
 
-  if ( (byte_4C26598 & 1) == 0 )
+  if ( (byte_4C36C70 & 1) == 0 )
   {
-    sub_1C2D490(&FilterKindList_TypeInfo);
-    byte_4C26598 = 1;
+    sub_1C32C20(&FilterKindList_TypeInfo);
+    byte_4C36C70 = 1;
   }
   v4 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
@@ -169,7 +169,7 @@ bool ServantCharaGraphEquipFilterLogic__IsMatchServantEquipHaveStatusFilter(
         (ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem((ServantCharaGraphFilterLogic_o *)this, v9)) == 0)
     || !sort )
   {
-    sub_1C2D6EC(ListViewItem, v9);
+    sub_1C32E7C(ListViewItem);
   }
   return ListViewSort__IsMatchServantEquipHaveStatusFilter(
            sort,
@@ -189,12 +189,11 @@ bool ServantCharaGraphEquipFilterLogic__IsMatchServantEquipTypeFilter(
   const MethodInfo *v5; // x1
   ListViewSort_o *sort; // x20
   CharaGraphServantListViewItemBase_o *ListViewItem; // x0
-  __int64 v9; // x1
 
-  if ( (byte_4C26596 & 1) == 0 )
+  if ( (byte_4C36C6E & 1) == 0 )
   {
-    sub_1C2D490(&FilterKindList_TypeInfo);
-    byte_4C26596 = 1;
+    sub_1C32C20(&FilterKindList_TypeInfo);
+    byte_4C36C6E = 1;
   }
   v4 = FilterKindList_TypeInfo;
   if ( !FilterKindList_TypeInfo->_2.cctor_finished )
@@ -212,7 +211,7 @@ bool ServantCharaGraphEquipFilterLogic__IsMatchServantEquipTypeFilter(
   sort = this->fields.sort;
   ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem((ServantCharaGraphFilterLogic_o *)this, v5);
   if ( !ListViewItem || !sort )
-    sub_1C2D6EC(ListViewItem, v9);
+    sub_1C32E7C(ListViewItem);
   return ListViewSort__IsMatchServantEquipTypeFilter(sort, ListViewItem->fields._ServantEntity_k__BackingField, 0);
 }
 
@@ -254,10 +253,10 @@ CharaGraphEquipListViewItem_o *ServantCharaGraphEquipFilterLogic__get_EquipListV
   ServantCharaGraphEquipFilterLogic_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C26595 & 1) == 0 )
+  if ( (byte_4C36C6D & 1) == 0 )
   {
-    sub_1C2D490(&CharaGraphEquipListViewItem_TypeInfo);
-    byte_4C26595 = 1;
+    sub_1C32C20(&CharaGraphEquipListViewItem_TypeInfo);
+    byte_4C36C6D = 1;
   }
   p_listViewItem = (CGThumbnailListItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -271,9 +270,9 @@ CharaGraphEquipListViewItem_o *ServantCharaGraphEquipFilterLogic__get_EquipListV
   {
     item = this->fields.item;
     p_listViewItem->klass = (CGThumbnailListItem_c *)listViewItem;
-    sub_1C2D434(p_listViewItem, (int32_t)item, v2, v3);
+    sub_1C32BC4(p_listViewItem, (int32_t)item, v2, v3);
     return listViewItem;
   }
-  sub_1C2D9AC(this->fields.item);
+  sub_1C3313C(this->fields.item);
   return (CharaGraphEquipListViewItem_o *)ServantCharaGraphEquipFilterLogic__IsMatchAllFilter(v10, v11);
 }

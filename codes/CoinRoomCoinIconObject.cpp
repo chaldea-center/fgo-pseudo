@@ -1,9 +1,9 @@
 void CoinRoomCoinIconObject___ctor(CoinRoomCoinIconObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2AEEF & 1) == 0 )
+  if ( (byte_4C3B60D & 1) == 0 )
   {
-    sub_1C2D490(&ListViewObject_TypeInfo);
-    byte_4C2AEEF = 1;
+    sub_1C32C20(&ListViewObject_TypeInfo);
+    byte_4C3B60D = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -13,26 +13,25 @@ void CoinRoomCoinIconObject___ctor(CoinRoomCoinIconObject_o *this, const MethodI
 
 void CoinRoomCoinIconObject__Awake(CoinRoomCoinIconObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
 
-  if ( (byte_4C2AEE0 & 1) == 0 )
+  if ( (byte_4C3B5FE & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconDraw___);
-    byte_4C2AEE0 = 1;
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconDraw___);
+    byte_4C3B5FE = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C2D6EC(0, v3);
+    sub_1C32E7C(0);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconDraw___);
+                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconDraw___);
   this->fields.itemDraw = (struct CoinRoomCoinIconDraw_o *)Component_object;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v5, v6);
 }
 
 
@@ -41,30 +40,29 @@ UnityEngine_GameObject_o *CoinRoomCoinIconObject__CreateDragObject(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *DragObject; // x0
-  __int64 v4; // x1
-  UnityEngine_GameObject_o *v5; // x19
-  const MethodInfo *v6; // x3
-  CoinRoomCoinIconObject_o *v7; // x20
-  const MethodInfo *v8; // x1
+  UnityEngine_GameObject_o *v4; // x19
+  const MethodInfo *v5; // x3
+  CoinRoomCoinIconObject_o *v6; // x20
+  const MethodInfo *v7; // x1
 
-  if ( (byte_4C2AEE6 & 1) == 0 )
+  if ( (byte_4C3B604 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconObject___);
-    byte_4C2AEE6 = 1;
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconObject___);
+    byte_4C3B604 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
-    || (v5 = DragObject,
+    || (v4 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconObject___)) == 0) )
+                                                    (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconObject___)) == 0) )
   {
-    sub_1C2D6EC(DragObject, v4);
+    sub_1C32E7C(DragObject);
   }
-  v7 = (CoinRoomCoinIconObject_o *)DragObject;
-  CoinRoomCoinIconObject__Init_47904476((CoinRoomCoinIconObject_o *)DragObject, 2, 0, 0.0, v6);
-  CoinRoomCoinIconObject__SetupDisp(v7, v8);
-  return v5;
+  v6 = (CoinRoomCoinIconObject_o *)DragObject;
+  CoinRoomCoinIconObject__Init_48052396((CoinRoomCoinIconObject_o *)DragObject, 2, 0, 0.0, v5);
+  CoinRoomCoinIconObject__SetupDisp(v6, v7);
+  return v4;
 }
 
 
@@ -90,12 +88,12 @@ void CoinRoomCoinIconObject__EventExitMove(CoinRoomCoinIconObject_o *this, const
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v21; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4C2AEEB & 1) == 0 )
+  if ( (byte_4C3B609 & 1) == 0 )
   {
-    sub_1C2D490(&ListViewObject_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_6208/*"EventExitMove2"*/);
-    byte_4C2AEEB = 1;
+    sub_1C32C20(&ListViewObject_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_6216/*"EventExitMove2"*/);
+    byte_4C3B609 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -136,15 +134,15 @@ void CoinRoomCoinIconObject__EventExitMove(CoinRoomCoinIconObject_o *this, const
     transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v7, v8->static_fields->BASE_MOVE_TIME, v21, 0);
     if ( !transform )
 LABEL_15:
-      sub_1C2D6EC(transform, v4);
+      sub_1C32E7C(transform);
     v12 = transform;
     LODWORD(transform[1].monitor) = 3;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     v12[3].monitor = gameObject;
-    sub_1C2D434((CGThumbnailListItem_o *)&v12[3].monitor, (int32_t)gameObject, v14, v15);
-    v16 = StringLiteral_6208/*"EventExitMove2"*/;
-    v12[3].fields.m_CachedPtr = StringLiteral_6208/*"EventExitMove2"*/;
-    sub_1C2D434((CGThumbnailListItem_o *)&v12[3].fields, v16, v17, v18);
+    sub_1C32BC4((CGThumbnailListItem_o *)&v12[3].monitor, (int32_t)gameObject, v14, v15);
+    v16 = StringLiteral_6216/*"EventExitMove2"*/;
+    v12[3].fields.m_CachedPtr = StringLiteral_6216/*"EventExitMove2"*/;
+    sub_1C32BC4((CGThumbnailListItem_o *)&v12[3].fields, v16, v17, v18);
   }
 }
 
@@ -156,17 +154,17 @@ void CoinRoomCoinIconObject__EventExitMove2(CoinRoomCoinIconObject_o *this, cons
   const MethodInfo *v5; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C2AEEC & 1) == 0 )
+  if ( (byte_4C3B60A & 1) == 0 )
   {
-    sub_1C2D490(&NGUITools_TypeInfo);
-    byte_4C2AEEC = 1;
+    sub_1C32C20(&NGUITools_TypeInfo);
+    byte_4C3B60A = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v4, v5);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v4, v5);
   CoinRoomCoinIconObject__EventMoveEnd(this, v6);
 }
 
@@ -176,17 +174,17 @@ void CoinRoomCoinIconObject__EventExitStart(CoinRoomCoinIconObject_o *this, floa
   struct UnityEngine_GameObject_o *v5; // x0
   int32_t v6; // w2
   const MethodInfo *v7; // x3
-  const MethodInfo *v8; // x1
   UnityEngine_GameObject_o *dragObject; // x0
   Il2CppObject *Component_object; // x20
+  const MethodInfo *v10; // x1
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C2AEEA & 1) == 0 )
+  if ( (byte_4C3B608 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconObject___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_6207/*"EventExitMove"*/);
-    byte_4C2AEEA = 1;
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconObject___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_6215/*"EventExitMove"*/);
+    byte_4C3B608 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -196,13 +194,13 @@ void CoinRoomCoinIconObject__EventExitStart(CoinRoomCoinIconObject_o *this, floa
                                             this,
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v5, v6, v7);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v5, v6, v7);
   dragObject = this->fields.dragObject;
   if ( !dragObject )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dragObject,
-                       (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconObject___);
+                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
@@ -211,16 +209,16 @@ void CoinRoomCoinIconObject__EventExitStart(CoinRoomCoinIconObject_o *this, floa
                                              0);
   if ( ((unsigned __int8)dragObject & 1) != 0 )
   {
-    CoinRoomCoinIconObject__EventMoveEnd(this, v8);
+    CoinRoomCoinIconObject__EventMoveEnd(this, v10);
     return;
   }
   if ( !Component_object )
 LABEL_10:
-    sub_1C2D6EC(dragObject, v8);
-  CoinRoomCoinIconObject__Init_47904476((CoinRoomCoinIconObject_o *)Component_object, 2, 0, 0.0, v11);
+    sub_1C32E7C(dragObject);
+  CoinRoomCoinIconObject__Init_48052396((CoinRoomCoinIconObject_o *)Component_object, 2, 0, 0.0, v11);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6207/*"EventExitMove"*/,
+    (System_String_o *)StringLiteral_6215/*"EventExitMove"*/,
     delay,
     0);
 }
@@ -246,11 +244,11 @@ void CoinRoomCoinIconObject__EventIntoMove(CoinRoomCoinIconObject_o *this, const
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v19; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4C2AEE8 & 1) == 0 )
+  if ( (byte_4C3B606 & 1) == 0 )
   {
-    sub_1C2D490(&ListViewObject_TypeInfo);
-    sub_1C2D490(&StringLiteral_6219/*"EventIntoMove2"*/);
-    byte_4C2AEE8 = 1;
+    sub_1C32C20(&ListViewObject_TypeInfo);
+    sub_1C32C20(&StringLiteral_6227/*"EventIntoMove2"*/);
+    byte_4C3B606 = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -282,15 +280,15 @@ void CoinRoomCoinIconObject__EventIntoMove(CoinRoomCoinIconObject_o *this, const
   dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v6, v5->static_fields->BASE_MOVE_TIME, v19, 0);
   if ( !dragObject )
 LABEL_11:
-    sub_1C2D6EC(dragObject, method);
+    sub_1C32E7C(dragObject);
   v10 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v10[3].monitor = gameObject;
-  sub_1C2D434((CGThumbnailListItem_o *)&v10[3].monitor, (int32_t)gameObject, v12, v13);
-  v14 = StringLiteral_6219/*"EventIntoMove2"*/;
-  v10[3].fields.m_CachedPtr = StringLiteral_6219/*"EventIntoMove2"*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&v10[3].fields, v14, v15, v16);
+  sub_1C32BC4((CGThumbnailListItem_o *)&v10[3].monitor, (int32_t)gameObject, v12, v13);
+  v14 = StringLiteral_6227/*"EventIntoMove2"*/;
+  v10[3].fields.m_CachedPtr = StringLiteral_6227/*"EventIntoMove2"*/;
+  sub_1C32BC4((CGThumbnailListItem_o *)&v10[3].fields, v14, v15, v16);
 }
 
 
@@ -302,10 +300,10 @@ void CoinRoomCoinIconObject__EventIntoMove2(CoinRoomCoinIconObject_o *this, cons
   const MethodInfo *v6; // x3
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C2AEE9 & 1) == 0 )
+  if ( (byte_4C3B607 & 1) == 0 )
   {
-    sub_1C2D490(&NGUITools_TypeInfo);
-    byte_4C2AEE9 = 1;
+    sub_1C32C20(&NGUITools_TypeInfo);
+    byte_4C3B607 = 1;
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, 1, 0);
   this->fields.dispMode = 2;
@@ -315,7 +313,7 @@ void CoinRoomCoinIconObject__EventIntoMove2(CoinRoomCoinIconObject_o *this, cons
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v5, v6);
   CoinRoomCoinIconObject__EventMoveEnd(this, v7);
 }
 
@@ -326,17 +324,16 @@ void CoinRoomCoinIconObject__EventIntoStart(CoinRoomCoinIconObject_o *this, floa
   struct UnityEngine_GameObject_o **p_dragObject; // x20
   int32_t v7; // w2
   const MethodInfo *v8; // x3
-  __int64 v9; // x1
   UnityEngine_GameObject_o *dragObject; // x0
-  const MethodInfo *v11; // x3
+  const MethodInfo *v10; // x3
   UnityEngine_Transform_o *transform; // x20
-  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C2AEE7 & 1) == 0 )
+  if ( (byte_4C3B605 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconObject___);
-    sub_1C2D490(&StringLiteral_6218/*"EventIntoMove"*/);
-    byte_4C2AEE7 = 1;
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconObject___);
+    sub_1C32C20(&StringLiteral_6226/*"EventIntoMove"*/);
+    byte_4C3B605 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -347,27 +344,27 @@ void CoinRoomCoinIconObject__EventIntoStart(CoinRoomCoinIconObject_o *this, floa
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
   p_dragObject = &this->fields.dragObject;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v5, v7, v8);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v5, v7, v8);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconObject___)) == 0
-    || (CoinRoomCoinIconObject__Init_47904476((CoinRoomCoinIconObject_o *)dragObject, 2, 0, 0.0, v11),
+                                                   (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_CoinRoomCoinIconObject___)) == 0
+    || (CoinRoomCoinIconObject__Init_48052396((CoinRoomCoinIconObject_o *)dragObject, 2, 0, 0.0, v10),
         (dragObject = *p_dragObject) == 0)
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0),
         (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0)) == 0)
-    || (v13 = UnityEngine_Transform__TransformPoint_71190304((UnityEngine_Transform_o *)dragObject, 1000.0, 0.0, 0.0, 0),
+    || (v12 = UnityEngine_Transform__TransformPoint_71250240((UnityEngine_Transform_o *)dragObject, 1000.0, 0.0, 0.0, 0),
         !transform) )
   {
-    sub_1C2D6EC(dragObject, v9);
+    sub_1C32E7C(dragObject);
   }
-  UnityEngine_Transform__set_position(transform, v13, 0);
+  UnityEngine_Transform__set_position(transform, v12, 0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6218/*"EventIntoMove"*/,
+    (System_String_o *)StringLiteral_6226/*"EventIntoMove"*/,
     delay,
     0);
 }
@@ -389,7 +386,7 @@ void CoinRoomCoinIconObject__EventMoveEnd(CoinRoomCoinIconObject_o *this, const 
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C2D434(p_callbackFunc, 0, v2, v3);
+    sub_1C32BC4(p_callbackFunc, 0, v2, v3);
     ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
   }
 }
@@ -409,21 +406,20 @@ void CoinRoomCoinIconObject__Init(
   int32_t dispMode; // w22
   int32_t state; // w23
   UnityEngine_Transform_o *transform; // x0
-  __int64 v16; // x1
   CGThumbnailListItem_o *p_callbackFunc; // x21
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  const MethodInfo *v20; // x1
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  int32_t v23; // w9
-  int32_t v24; // w8
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  const MethodInfo *v19; // x1
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  int32_t v22; // w9
+  int32_t v23; // w8
   CGThumbnailListItem_c *klass; // x19
 
-  if ( (byte_4C2AEE2 & 1) == 0 )
+  if ( (byte_4C3B600 & 1) == 0 )
   {
-    sub_1C2D490(&CoinRoomCoinIconItem_TypeInfo);
-    byte_4C2AEE2 = 1;
+    sub_1C32C20(&CoinRoomCoinIconItem_TypeInfo);
+    byte_4C3B600 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -451,29 +447,29 @@ void CoinRoomCoinIconObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C2D6EC(transform, v16);
+    sub_1C32E7C(transform);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v18, v19);
-  v23 = 1;
-  v24 = v12;
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
+  v22 = 1;
+  v23 = v12;
   switch ( v12 )
   {
     case 0:
     case 2:
       goto LABEL_15;
     case 1:
-      v24 = v12;
+      v23 = v12;
       goto LABEL_14;
     case 3:
-      v24 = 2;
+      v23 = 2;
 LABEL_14:
-      v23 = v12;
+      v22 = v12;
 LABEL_15:
-      this->fields.dispMode = v24;
-      this->fields.state = v23;
+      this->fields.dispMode = v23;
+      this->fields.state = v22;
       goto LABEL_16;
     case 4:
       this->fields.dispMode = 2;
@@ -482,23 +478,23 @@ LABEL_15:
     case 5:
       this->fields.dispMode = 0;
       this->fields.state = 2;
-      CoinRoomCoinIconObject__EventIntoStart(this, delay, v20);
+      CoinRoomCoinIconObject__EventIntoStart(this, delay, v19);
       return;
     case 7:
       this->fields.dispMode = 2;
       this->fields.state = 2;
-      CoinRoomCoinIconObject__EventExitStart(this, delay, v20);
+      CoinRoomCoinIconObject__EventExitStart(this, delay, v19);
       return;
     default:
 LABEL_16:
       if ( !state || dispMode != this->fields.dispMode )
 LABEL_20:
-        CoinRoomCoinIconObject__SetupDisp(this, v20);
+        CoinRoomCoinIconObject__SetupDisp(this, v19);
       klass = p_callbackFunc->klass;
       if ( p_callbackFunc->klass )
       {
         p_callbackFunc->klass = 0;
-        sub_1C2D434(p_callbackFunc, 0, v21, v22);
+        sub_1C32BC4(p_callbackFunc, 0, v20, v21);
         ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
           klass->_1.element_class,
           *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -509,7 +505,7 @@ LABEL_20:
 
 
 // local variable allocation has failed, the output may be wrong!
-void CoinRoomCoinIconObject__Init_47904476(
+void CoinRoomCoinIconObject__Init_48052396(
         CoinRoomCoinIconObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -518,10 +514,10 @@ void CoinRoomCoinIconObject__Init_47904476(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C20DA1 )
+  if ( !byte_4C313D1 )
   {
-    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
-    byte_4C20DA1 = 1;
+    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
+    byte_4C313D1 = 1;
   }
   CoinRoomCoinIconObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -543,12 +539,12 @@ void CoinRoomCoinIconObject__OnClickIcon(CoinRoomCoinIconObject_o *this, const M
   System_Reflection_MethodBase_o *v7; // x0
 
   v2 = this;
-  if ( (byte_4C2AEED & 1) == 0 )
+  if ( (byte_4C3B60B & 1) == 0 )
   {
-    sub_1C2D490(&CoinRoomCoinIconItem_TypeInfo);
-    sub_1C2D490(&Method_CoinRoomCoinIconObject_OnClickIcon__);
-    this = (CoinRoomCoinIconObject_o *)sub_1C2D490(&StringLiteral_9837/*"OnClickIcon"*/);
-    byte_4C2AEED = 1;
+    sub_1C32C20(&CoinRoomCoinIconItem_TypeInfo);
+    sub_1C32C20(&Method_CoinRoomCoinIconObject_OnClickIcon__);
+    this = (CoinRoomCoinIconObject_o *)sub_1C32C20(&StringLiteral_9842/*"OnClickIcon"*/);
+    byte_4C3B60B = 1;
   }
   linkItem = (unsigned __int8 *)v2->fields.linkItem;
   if ( linkItem )
@@ -562,8 +558,8 @@ void CoinRoomCoinIconObject__OnClickIcon(CoinRoomCoinIconObject_o *this, const M
     v5 = linkItem[164];
     v6 = Method_CoinRoomCoinIconObject_OnClickIcon__;
     if ( (*((_BYTE *)Method_CoinRoomCoinIconObject_OnClickIcon__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1C2D4A8(Method_CoinRoomCoinIconObject_OnClickIcon__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1C2D474(v6, v6[4]);
+      v6 = (_QWORD *)sub_1C32C38(Method_CoinRoomCoinIconObject_OnClickIcon__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1C32C04(v6, v6[4]);
     if ( v5 )
     {
       OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0);
@@ -572,13 +568,13 @@ void CoinRoomCoinIconObject__OnClickIcon(CoinRoomCoinIconObject_o *this, const M
       {
         UnityEngine_Component__SendMessage(
           (UnityEngine_Component_o *)this,
-          (System_String_o *)StringLiteral_9837/*"OnClickIcon"*/,
+          (System_String_o *)StringLiteral_9842/*"OnClickIcon"*/,
           (Il2CppObject *)v2,
           0);
         return;
       }
 LABEL_13:
-      sub_1C2D6EC(this, method);
+      sub_1C32E7C(this);
     }
     OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0, 0);
   }
@@ -594,11 +590,11 @@ void CoinRoomCoinIconObject__OnDestroy(CoinRoomCoinIconObject_o *this, const Met
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C2AEE1 & 1) == 0 )
+  if ( (byte_4C3B5FF & 1) == 0 )
   {
-    sub_1C2D490(&NGUITools_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2AEE1 = 1;
+    sub_1C32C20(&NGUITools_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3B5FF = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -612,7 +608,7 @@ void CoinRoomCoinIconObject__OnDestroy(CoinRoomCoinIconObject_o *this, const Met
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_1C2D434(p_dragObject, 0, v7, v8);
+    sub_1C32BC4(p_dragObject, 0, v7, v8);
   }
 }
 
@@ -621,26 +617,25 @@ void CoinRoomCoinIconObject__OnPressIcon(CoinRoomCoinIconObject_o *this, const M
 {
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
-  __int64 v5; // x1
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4C2AEEE & 1) == 0 )
+  if ( (byte_4C3B60C & 1) == 0 )
   {
-    sub_1C2D490(&Method_CoinRoomCoinIconObject_OnPressIcon__);
-    sub_1C2D490(&StringLiteral_9941/*"OnPressIcon"*/);
-    byte_4C2AEEE = 1;
+    sub_1C32C20(&Method_CoinRoomCoinIconObject_OnPressIcon__);
+    sub_1C32C20(&StringLiteral_9946/*"OnPressIcon"*/);
+    byte_4C3B60C = 1;
   }
   if ( this->fields.linkItem )
   {
     v3 = Method_CoinRoomCoinIconObject_OnPressIcon__;
     if ( (*((_BYTE *)Method_CoinRoomCoinIconObject_OnPressIcon__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_CoinRoomCoinIconObject_OnPressIcon__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_CoinRoomCoinIconObject_OnPressIcon__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1C2D6EC(0, v5);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9941/*"OnPressIcon"*/, (Il2CppObject *)this, 0);
+      sub_1C32E7C(0);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9946/*"OnPressIcon"*/, (Il2CppObject *)this, 0);
   }
 }
 
@@ -655,11 +650,11 @@ void CoinRoomCoinIconObject__ResetItem(CoinRoomCoinIconObject_o *this, bool isIn
   CoinRoomCoinIconItem_c *v10; // x10
   CoinRoomCoinIconItem_o *v11; // x1
 
-  if ( (byte_4C2AEE4 & 1) == 0 )
+  if ( (byte_4C3B602 & 1) == 0 )
   {
-    sub_1C2D490(&CoinRoomCoinIconItem_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2AEE4 = 1;
+    sub_1C32C20(&CoinRoomCoinIconItem_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3B602 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -684,7 +679,7 @@ void CoinRoomCoinIconObject__ResetItem(CoinRoomCoinIconObject_o *this, bool isIn
                 v11->fields._isTouchEnabled_k__BackingField = 1,
                 (v6 = this->fields.itemDraw) == 0) )
           {
-            sub_1C2D6EC(v6, v11);
+            sub_1C32E7C(v6);
           }
           CoinRoomCoinIconDraw__ResetItem(v6, v11, 0, v7);
         }
@@ -700,7 +695,7 @@ void CoinRoomCoinIconObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_43593652((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_43729388((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
@@ -711,15 +706,14 @@ void CoinRoomCoinIconObject__SetupDisp(CoinRoomCoinIconObject_o *this, const Met
   __int64 naturalAligment; // x10
   bool v5; // w1
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v7; // x1
-  const MethodInfo *v8; // x4
-  CoinRoomCoinIconDraw_o *v9; // x0
+  const MethodInfo *v7; // x4
+  CoinRoomCoinIconDraw_o *v8; // x0
 
-  if ( (byte_4C2AEE3 & 1) == 0 )
+  if ( (byte_4C3B601 & 1) == 0 )
   {
-    sub_1C2D490(&CoinRoomCoinIconItem_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2AEE3 = 1;
+    sub_1C32C20(&CoinRoomCoinIconItem_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3B601 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -741,10 +735,10 @@ LABEL_8:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_1C2D6EC(0, v7);
-    CoinRoomCoinIconDraw__SetItem(v9, (CoinRoomCoinIconItem_o *)linkItem, this->fields.dispMode, 0, v8);
+    v8 = this->fields.itemDraw;
+    if ( !v8 )
+      sub_1C32E7C(0);
+    CoinRoomCoinIconDraw__SetItem(v8, (CoinRoomCoinIconItem_o *)linkItem, this->fields.dispMode, 0, v7);
   }
 }
 
@@ -763,11 +757,11 @@ void CoinRoomCoinIconObject__UpdateItem(
   CoinRoomCoinIconItem_o *v12; // x1
   CoinRoomCoinIconDraw_o *v13; // x0
 
-  if ( (byte_4C2AEE5 & 1) == 0 )
+  if ( (byte_4C3B603 & 1) == 0 )
   {
-    sub_1C2D490(&CoinRoomCoinIconItem_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2AEE5 = 1;
+    sub_1C32C20(&CoinRoomCoinIconItem_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3B603 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -787,7 +781,7 @@ void CoinRoomCoinIconObject__UpdateItem(
         {
           v13 = this->fields.itemDraw;
           if ( !v13 )
-            sub_1C2D6EC(0, v12);
+            sub_1C32E7C(0);
           CoinRoomCoinIconDraw__UpdateItem(v13, v12, num, 0, v8);
         }
       }
@@ -811,10 +805,10 @@ void CoinRoomCoinIconObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C2AEDE & 1) == 0 )
+  if ( (byte_4C3B5FC & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    byte_4C2AEDE = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    byte_4C3B5FC = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -827,13 +821,13 @@ void CoinRoomCoinIconObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
+    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C2D9AC(v8);
+  sub_1C3313C(v8);
   CoinRoomCoinIconObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -852,10 +846,10 @@ void CoinRoomCoinIconObject__remove_callbackFunc(
   CoinRoomCoinIconObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C2AEDF & 1) == 0 )
+  if ( (byte_4C3B5FD & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    byte_4C2AEDF = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    byte_4C3B5FD = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -868,12 +862,12 @@ void CoinRoomCoinIconObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
+    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C2D9AC(v8);
+  sub_1C3313C(v8);
   CoinRoomCoinIconObject__Awake(v11, v12);
 }

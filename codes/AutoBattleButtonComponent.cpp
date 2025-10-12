@@ -7,11 +7,10 @@ void AutoBattleButtonComponent___ctor(AutoBattleButtonComponent_o *this, const M
 void AutoBattleButtonComponent__InitButton(AutoBattleButtonComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v3; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C2D6EC(0, v3);
+    sub_1C32E7C(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 

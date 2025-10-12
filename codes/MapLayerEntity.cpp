@@ -1,27 +1,27 @@
 void MapLayerEntity___ctor(MapLayerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C28573 & 1) == 0 )
+  if ( (byte_4C38C77 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C28573 = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C38C77 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *MapLayerEntity__CreatePK(int32_t mapId, int32_t layer, const MethodInfo *method)
 {
-  if ( (byte_4C28572 & 1) == 0 )
+  if ( (byte_4C38C76 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C28572 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C38C76 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            mapId,
            layer,
-           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

@@ -20,7 +20,7 @@ int32_t WarBoardRatingBase__GetId(WarBoardRatingBase_o *this, const MethodInfo *
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return ratingBase->fields.id;
 }
 
@@ -44,7 +44,7 @@ int32_t WarBoardRatingBase__GetViewpoint(WarBoardRatingBase_o *this, const Metho
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return ratingBase->fields.viewPoint;
 }
 
@@ -57,7 +57,7 @@ void WarBoardRatingBase__Init(
   const MethodInfo *v3; // x3
 
   this->fields.ratingBase = ratingBase;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)ratingBase, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)ratingBase, (int32_t)method, v3);
 }
 
 
@@ -67,7 +67,7 @@ int32_t WarBoardRatingBase__get_adjustmentValueA1(WarBoardRatingBase_o *this, co
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return ratingBase->fields.adjustmentValueA1;
 }
 
@@ -78,6 +78,6 @@ int32_t WarBoardRatingBase__get_adjustmentValueB(WarBoardRatingBase_o *this, con
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return ratingBase->fields.adjustmentValueB;
 }

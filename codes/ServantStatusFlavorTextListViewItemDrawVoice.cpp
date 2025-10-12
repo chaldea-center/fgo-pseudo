@@ -23,7 +23,7 @@ void ServantStatusFlavorTextListViewItemDrawVoice__SetCvName(
 
   cvRangeLabel = this->fields.cvRangeLabel;
   if ( !cvRangeLabel )
-    sub_1C2D6EC(0, cvName);
+    sub_1C32E7C(0);
   UIRangeLabel__Set(cvRangeLabel, cvName, 0, 1, 0, 0, 0);
 }
 
@@ -40,19 +40,18 @@ void ServantStatusFlavorTextListViewItemDrawVoice__SetItem(
 {
   UILabel_o *illustTitleLabel; // x21
   System_String_o *illustRangeLabel; // x0
-  __int64 v13; // x1
   UILabel_o *cvTitleLabel; // x21
-  const MethodInfo *v15; // x4
+  const MethodInfo *v14; // x4
   bool isPlayVoice; // [xsp+4h] [xbp-3Ch] BYREF
   System_String_o *voice; // [xsp+8h] [xbp-38h] BYREF
   System_String_o *illust; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C23803 & 1) == 0 )
+  if ( (byte_4C33DFE & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_11940/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/);
-    sub_1C2D490(&StringLiteral_11939/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/);
-    byte_4C23803 = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_11946/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/);
+    sub_1C32C20(&StringLiteral_11945/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/);
+    byte_4C33DFE = 1;
   }
   illust = 0;
   voice = 0;
@@ -63,21 +62,21 @@ void ServantStatusFlavorTextListViewItemDrawVoice__SetItem(
     illustTitleLabel = this->fields.illustTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    illustRangeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_11940/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/, 0);
+    illustRangeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_11946/*"SERVANT_STATUS_PROFILE_ILLUST_TITLE"*/, 0);
     if ( !illustTitleLabel )
       goto LABEL_13;
     UILabel__set_text(illustTitleLabel, illustRangeLabel, 0);
     cvTitleLabel = this->fields.cvTitleLabel;
-    illustRangeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_11939/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/, 0);
+    illustRangeLabel = LocalizationManager__Get((System_String_o *)StringLiteral_11945/*"SERVANT_STATUS_PROFILE_CV_TITLE"*/, 0);
     if ( !cvTitleLabel
       || (UILabel__set_text(cvTitleLabel, illustRangeLabel, 0),
-          ServantStatusListViewItem__GetVoiceInfo(item, &illust, &voice, &isPlayVoice, v15),
+          ServantStatusListViewItem__GetVoiceInfo(item, &illust, &voice, &isPlayVoice, v14),
           (illustRangeLabel = (System_String_o *)this->fields.illustRangeLabel) == 0)
       || (UIRangeLabel__Set((UIRangeLabel_o *)illustRangeLabel, illust, 0, 1, 0, 0, 0),
           (illustRangeLabel = (System_String_o *)this->fields.cvRangeLabel) == 0) )
     {
 LABEL_13:
-      sub_1C2D6EC(illustRangeLabel, v13);
+      sub_1C32E7C(illustRangeLabel);
     }
     UIRangeLabel__Set((UIRangeLabel_o *)illustRangeLabel, voice, 0, 1, 0, 0, 0);
   }

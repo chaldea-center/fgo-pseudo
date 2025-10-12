@@ -1,9 +1,9 @@
 void SupportSelectEditMenu___ctor(SupportSelectEditMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C23980 & 1) == 0 )
+  if ( (byte_4C34051 & 1) == 0 )
   {
-    sub_1C2D490(&BaseDialog_TypeInfo);
-    byte_4C23980 = 1;
+    sub_1C32C20(&BaseDialog_TypeInfo);
+    byte_4C34051 = 1;
   }
   this->fields.currentState = 2;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -16,14 +16,14 @@ void SupportSelectEditMenu__Close(SupportSelectEditMenu_o *this, const MethodInf
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4C23977 & 1) == 0 )
+  if ( (byte_4C34048 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_SupportSelectEditMenu_OnFinishedClose__);
-    byte_4C23977 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_SupportSelectEditMenu_OnFinishedClose__);
+    byte_4C34048 = 1;
   }
   this->fields.currentState = 2;
-  v3 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_SupportSelectEditMenu_OnFinishedClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v3, 0);
 }
@@ -35,17 +35,17 @@ void SupportSelectEditMenu__OnClickCancel(SupportSelectEditMenu_o *this, const M
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C2397E & 1) == 0 )
+  if ( (byte_4C3404F & 1) == 0 )
   {
-    sub_1C2D490(&Method_SupportSelectEditMenu_OnClickCancel__);
-    byte_4C2397E = 1;
+    sub_1C32C20(&Method_SupportSelectEditMenu_OnClickCancel__);
+    byte_4C3404F = 1;
   }
   if ( this->fields.currentState == 1 )
   {
     v3 = Method_SupportSelectEditMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_SupportSelectEditMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_SupportSelectEditMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_SupportSelectEditMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     SupportSelectEditMenu__Close(this, v5);
   }
@@ -58,17 +58,17 @@ void SupportSelectEditMenu__OnClickChangeName(SupportSelectEditMenu_o *this, con
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectEditMenu_OnClickButtonEvent_o *onClickButton; // x8
 
-  if ( (byte_4C2397D & 1) == 0 )
+  if ( (byte_4C3404E & 1) == 0 )
   {
-    sub_1C2D490(&Method_SupportSelectEditMenu_OnClickChangeName__);
-    byte_4C2397D = 1;
+    sub_1C32C20(&Method_SupportSelectEditMenu_OnClickChangeName__);
+    byte_4C3404E = 1;
   }
   if ( this->fields.currentState == 1 )
   {
     v3 = Method_SupportSelectEditMenu_OnClickChangeName__;
     if ( (*((_BYTE *)Method_SupportSelectEditMenu_OnClickChangeName__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_SupportSelectEditMenu_OnClickChangeName__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_SupportSelectEditMenu_OnClickChangeName__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     onClickButton = this->fields.onClickButton;
     if ( onClickButton )
@@ -86,17 +86,17 @@ void SupportSelectEditMenu__OnClickCopy(SupportSelectEditMenu_o *this, const Met
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectEditMenu_OnClickButtonEvent_o *onClickButton; // x8
 
-  if ( (byte_4C23979 & 1) == 0 )
+  if ( (byte_4C3404A & 1) == 0 )
   {
-    sub_1C2D490(&Method_SupportSelectEditMenu_OnClickCopy__);
-    byte_4C23979 = 1;
+    sub_1C32C20(&Method_SupportSelectEditMenu_OnClickCopy__);
+    byte_4C3404A = 1;
   }
   if ( this->fields.currentState == 1 )
   {
     v3 = Method_SupportSelectEditMenu_OnClickCopy__;
     if ( (*((_BYTE *)Method_SupportSelectEditMenu_OnClickCopy__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_SupportSelectEditMenu_OnClickCopy__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_SupportSelectEditMenu_OnClickCopy__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     onClickButton = this->fields.onClickButton;
     if ( onClickButton )
@@ -114,17 +114,17 @@ void SupportSelectEditMenu__OnClickInitAll(SupportSelectEditMenu_o *this, const 
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectEditMenu_OnClickButtonEvent_o *onClickButton; // x8
 
-  if ( (byte_4C2397B & 1) == 0 )
+  if ( (byte_4C3404C & 1) == 0 )
   {
-    sub_1C2D490(&Method_SupportSelectEditMenu_OnClickInitAll__);
-    byte_4C2397B = 1;
+    sub_1C32C20(&Method_SupportSelectEditMenu_OnClickInitAll__);
+    byte_4C3404C = 1;
   }
   if ( this->fields.currentState == 1 )
   {
     v3 = Method_SupportSelectEditMenu_OnClickInitAll__;
     if ( (*((_BYTE *)Method_SupportSelectEditMenu_OnClickInitAll__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_SupportSelectEditMenu_OnClickInitAll__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_SupportSelectEditMenu_OnClickInitAll__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     onClickButton = this->fields.onClickButton;
     if ( onClickButton )
@@ -142,17 +142,17 @@ void SupportSelectEditMenu__OnClickRemoveAll(SupportSelectEditMenu_o *this, cons
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectEditMenu_OnClickButtonEvent_o *onClickButton; // x8
 
-  if ( (byte_4C2397A & 1) == 0 )
+  if ( (byte_4C3404B & 1) == 0 )
   {
-    sub_1C2D490(&Method_SupportSelectEditMenu_OnClickRemoveAll__);
-    byte_4C2397A = 1;
+    sub_1C32C20(&Method_SupportSelectEditMenu_OnClickRemoveAll__);
+    byte_4C3404B = 1;
   }
   if ( this->fields.currentState == 1 )
   {
     v3 = Method_SupportSelectEditMenu_OnClickRemoveAll__;
     if ( (*((_BYTE *)Method_SupportSelectEditMenu_OnClickRemoveAll__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_SupportSelectEditMenu_OnClickRemoveAll__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_SupportSelectEditMenu_OnClickRemoveAll__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     onClickButton = this->fields.onClickButton;
     if ( onClickButton )
@@ -170,17 +170,17 @@ void SupportSelectEditMenu__OnClickRemoveEquip(SupportSelectEditMenu_o *this, co
   System_Reflection_MethodBase_o *v4; // x0
   struct SupportSelectEditMenu_OnClickButtonEvent_o *onClickButton; // x8
 
-  if ( (byte_4C2397C & 1) == 0 )
+  if ( (byte_4C3404D & 1) == 0 )
   {
-    sub_1C2D490(&Method_SupportSelectEditMenu_OnClickRemoveEquip__);
-    byte_4C2397C = 1;
+    sub_1C32C20(&Method_SupportSelectEditMenu_OnClickRemoveEquip__);
+    byte_4C3404D = 1;
   }
   if ( this->fields.currentState == 1 )
   {
     v3 = Method_SupportSelectEditMenu_OnClickRemoveEquip__;
     if ( (*((_BYTE *)Method_SupportSelectEditMenu_OnClickRemoveEquip__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_SupportSelectEditMenu_OnClickRemoveEquip__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_SupportSelectEditMenu_OnClickRemoveEquip__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     onClickButton = this->fields.onClickButton;
     if ( onClickButton )
@@ -198,7 +198,7 @@ void SupportSelectEditMenu__OnFinishedClose(SupportSelectEditMenu_o *this, const
   const MethodInfo *v3; // x3
 
   this->fields.onClickButton = 0;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.onClickButton, 0, v2, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onClickButton, 0, v2, v3);
 }
 
 
@@ -216,11 +216,11 @@ void SupportSelectEditMenu__Open(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v10; // x1
   UILabel_o *titleLabel; // x22
   UILabel_o *supportNameLabel; // x22
-  System_String_o *v13; // x0
+  System_String_o *v12; // x0
   UILabel_o *messageLabel; // x22
+  __int64 v14; // x1
   SupportSelectEditMenu_o *v15; // x0
   const MethodInfo *v16; // x3
   struct UICommonButton_o *removeAllButton; // x8
@@ -228,38 +228,39 @@ void SupportSelectEditMenu__Open(
   SupportSelectEditMenu_o *v19; // x0
   const MethodInfo *v20; // x3
   bool IsEmpty; // w0
-  SupportSelectEditMenu_o *v22; // x0
-  const MethodInfo *v23; // x3
+  __int64 v22; // x1
+  SupportSelectEditMenu_o *v23; // x0
+  const MethodInfo *v24; // x3
   struct UICommonButton_o *removeEquipButton; // x8
-  __int64 v25; // x1
-  SupportSelectEditMenu_o *v26; // x0
-  const MethodInfo *v27; // x3
-  SupportSelectEditMenu_o *v28; // x0
-  const MethodInfo *v29; // x3
-  SupportSelectEditMenu_o *v30; // x0
-  const MethodInfo *v31; // x3
-  System_Action_o *v32; // x20
+  __int64 v26; // x1
+  SupportSelectEditMenu_o *v27; // x0
+  const MethodInfo *v28; // x3
+  SupportSelectEditMenu_o *v29; // x0
+  const MethodInfo *v30; // x3
+  SupportSelectEditMenu_o *v31; // x0
+  const MethodInfo *v32; // x3
+  System_Action_o *v33; // x20
 
-  if ( (byte_4C23976 & 1) == 0 )
+  if ( (byte_4C34047 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&Method_SupportSelectEditMenu_OnFinishedOpen__);
-    sub_1C2D490(&StringLiteral_12541/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_EQUIP"*/);
-    sub_1C2D490(&StringLiteral_12538/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_COPY"*/);
-    sub_1C2D490(&StringLiteral_12539/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_INIT_ALL"*/);
-    sub_1C2D490(&StringLiteral_12544/*"SUPPORT_SELECT_EDIT_MENU_TITLE"*/);
-    sub_1C2D490(&StringLiteral_12542/*"SUPPORT_SELECT_EDIT_MENU_DECK_NAME"*/);
-    sub_1C2D490(&StringLiteral_12540/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_ALL"*/);
-    sub_1C2D490(&StringLiteral_12537/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_CHANGE_DECK_NAME"*/);
-    sub_1C2D490(&StringLiteral_12536/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_CANCEL"*/);
-    sub_1C2D490(&StringLiteral_12543/*"SUPPORT_SELECT_EDIT_MENU_MESSAGE"*/);
-    byte_4C23976 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&Method_SupportSelectEditMenu_OnFinishedOpen__);
+    sub_1C32C20(&StringLiteral_12544/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_EQUIP"*/);
+    sub_1C32C20(&StringLiteral_12541/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_COPY"*/);
+    sub_1C32C20(&StringLiteral_12542/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_INIT_ALL"*/);
+    sub_1C32C20(&StringLiteral_12547/*"SUPPORT_SELECT_EDIT_MENU_TITLE"*/);
+    sub_1C32C20(&StringLiteral_12545/*"SUPPORT_SELECT_EDIT_MENU_DECK_NAME"*/);
+    sub_1C32C20(&StringLiteral_12543/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_ALL"*/);
+    sub_1C32C20(&StringLiteral_12540/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_CHANGE_DECK_NAME"*/);
+    sub_1C32C20(&StringLiteral_12539/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_CANCEL"*/);
+    sub_1C32C20(&StringLiteral_12546/*"SUPPORT_SELECT_EDIT_MENU_MESSAGE"*/);
+    byte_4C34047 = 1;
   }
   if ( deckData && this->fields.currentState == 2 )
   {
     this->fields.onClickButton = onClickButton;
-    sub_1C2D434(
+    sub_1C32BC4(
       (CGThumbnailListItem_o *)&this->fields.onClickButton,
       (int32_t)onClickButton,
       isEditting,
@@ -271,37 +272,37 @@ void SupportSelectEditMenu__Open(
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12544/*"SUPPORT_SELECT_EDIT_MENU_TITLE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12547/*"SUPPORT_SELECT_EDIT_MENU_TITLE"*/, 0);
     if ( !titleLabel )
       goto LABEL_32;
     UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
     supportNameLabel = this->fields.supportNameLabel;
-    v13 = LocalizationManager__Get((System_String_o *)StringLiteral_12542/*"SUPPORT_SELECT_EDIT_MENU_DECK_NAME"*/, 0);
+    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_12545/*"SUPPORT_SELECT_EDIT_MENU_DECK_NAME"*/, 0);
     gameObject = (UnityEngine_GameObject_o *)System_String__Format(
-                                               v13,
+                                               v12,
                                                (Il2CppObject *)deckData->fields._deckName_k__BackingField,
                                                0);
     if ( !supportNameLabel )
       goto LABEL_32;
     UILabel__set_text(supportNameLabel, (System_String_o *)gameObject, 0);
     messageLabel = this->fields.messageLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12543/*"SUPPORT_SELECT_EDIT_MENU_MESSAGE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12546/*"SUPPORT_SELECT_EDIT_MENU_MESSAGE"*/, 0);
     if ( !messageLabel )
       goto LABEL_32;
     UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0);
     if ( isEditting || SupportServantData__IsEmpty(deckData, 0) )
-      v10 = 3;
+      v14 = 3;
     else
-      v10 = 0;
+      v14 = 0;
     gameObject = (UnityEngine_GameObject_o *)this->fields.copyButton;
     if ( !gameObject )
       goto LABEL_32;
     v15 = (SupportSelectEditMenu_o *)((__int64 (__fastcall *)(UnityEngine_GameObject_o *, __int64, __int64, Il2CppClass **))gameObject->klass[1]._1.nestedTypes)(
                                        gameObject,
-                                       v10,
+                                       v14,
                                        1,
                                        gameObject->klass[1]._1.implementedInterfaces);
-    SupportSelectEditMenu__SetButtonText(v15, this->fields.copyButton, (System_String_o *)StringLiteral_12538/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_COPY"*/, v16);
+    SupportSelectEditMenu__SetButtonText(v15, this->fields.copyButton, (System_String_o *)StringLiteral_12541/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_COPY"*/, v16);
     gameObject = (UnityEngine_GameObject_o *)SupportServantData__IsEmpty(deckData, 0);
     removeAllButton = this->fields.removeAllButton;
     if ( !removeAllButton )
@@ -315,55 +316,55 @@ void SupportSelectEditMenu__Open(
                                        v18,
                                        1,
                                        removeAllButton->klass->vtable._14_SetState.method);
-    SupportSelectEditMenu__SetButtonText(v19, this->fields.removeAllButton, (System_String_o *)StringLiteral_12540/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_ALL"*/, v20);
+    SupportSelectEditMenu__SetButtonText(v19, this->fields.removeAllButton, (System_String_o *)StringLiteral_12543/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_ALL"*/, v20);
     IsEmpty = SupportServantData__IsEmpty(deckData, 0);
-    v10 = 0;
+    v22 = 0;
     if ( IsEmpty )
     {
       if ( SupportServantData__IsDefaultDeckName(deckData, 0) )
-        v10 = 3;
+        v22 = 3;
       else
-        v10 = 0;
+        v22 = 0;
     }
     gameObject = (UnityEngine_GameObject_o *)this->fields.initAllButton;
     if ( !gameObject )
       goto LABEL_32;
-    v22 = (SupportSelectEditMenu_o *)((__int64 (__fastcall *)(UnityEngine_GameObject_o *, __int64, __int64, Il2CppClass **))gameObject->klass[1]._1.nestedTypes)(
+    v23 = (SupportSelectEditMenu_o *)((__int64 (__fastcall *)(UnityEngine_GameObject_o *, __int64, __int64, Il2CppClass **))gameObject->klass[1]._1.nestedTypes)(
                                        gameObject,
-                                       v10,
+                                       v22,
                                        1,
                                        gameObject->klass[1]._1.implementedInterfaces);
-    SupportSelectEditMenu__SetButtonText(v22, this->fields.initAllButton, (System_String_o *)StringLiteral_12539/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_INIT_ALL"*/, v23);
+    SupportSelectEditMenu__SetButtonText(v23, this->fields.initAllButton, (System_String_o *)StringLiteral_12542/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_INIT_ALL"*/, v24);
     gameObject = (UnityEngine_GameObject_o *)SupportServantData__getEquipSum(deckData, 0);
     removeEquipButton = this->fields.removeEquipButton;
     if ( !removeEquipButton )
       goto LABEL_32;
-    v25 = (_DWORD)gameObject ? 0LL : 3LL;
-    v26 = (SupportSelectEditMenu_o *)((__int64 (__fastcall *)(struct UICommonButton_o *, __int64, __int64, const MethodInfo *))removeEquipButton->klass->vtable._14_SetState.methodPtr)(
+    v26 = (_DWORD)gameObject ? 0LL : 3LL;
+    v27 = (SupportSelectEditMenu_o *)((__int64 (__fastcall *)(struct UICommonButton_o *, __int64, __int64, const MethodInfo *))removeEquipButton->klass->vtable._14_SetState.methodPtr)(
                                        this->fields.removeEquipButton,
-                                       v25,
+                                       v26,
                                        1,
                                        removeEquipButton->klass->vtable._14_SetState.method);
     SupportSelectEditMenu__SetButtonText(
-      v26,
+      v27,
       this->fields.removeEquipButton,
-      (System_String_o *)StringLiteral_12541/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_EQUIP"*/,
-      v27);
+      (System_String_o *)StringLiteral_12544/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_EQUIP"*/,
+      v28);
     gameObject = (UnityEngine_GameObject_o *)this->fields.changeNameButton;
     if ( !gameObject )
 LABEL_32:
-      sub_1C2D6EC(gameObject, v10);
-    v28 = (SupportSelectEditMenu_o *)((__int64 (*)(void))gameObject->klass[1]._1.nestedTypes)();
+      sub_1C32E7C(gameObject);
+    v29 = (SupportSelectEditMenu_o *)((__int64 (*)(void))gameObject->klass[1]._1.nestedTypes)();
     SupportSelectEditMenu__SetButtonText(
-      v28,
+      v29,
       this->fields.changeNameButton,
-      (System_String_o *)StringLiteral_12537/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_CHANGE_DECK_NAME"*/,
-      v29);
-    SupportSelectEditMenu__SetButtonText(v30, this->fields.cancelButton, (System_String_o *)StringLiteral_12536/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_CANCEL"*/, v31);
+      (System_String_o *)StringLiteral_12540/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_CHANGE_DECK_NAME"*/,
+      v30);
+    SupportSelectEditMenu__SetButtonText(v31, this->fields.cancelButton, (System_String_o *)StringLiteral_12539/*"SUPPORT_SELECT_EDIT_MENU_BUTTON_CANCEL"*/, v32);
     this->fields.currentState = 0;
-    v32 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
-    System_Action___ctor(v32, (Il2CppObject *)this, Method_SupportSelectEditMenu_OnFinishedOpen__, 0);
-    BaseDialog__Open((BaseDialog_o *)this, v32, 0, 0);
+    v33 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    System_Action___ctor(v33, (Il2CppObject *)this, Method_SupportSelectEditMenu_OnFinishedOpen__, 0);
+    BaseDialog__Open((BaseDialog_o *)this, v33, 0, 0, 0);
   }
 }
 
@@ -374,34 +375,34 @@ void SupportSelectEditMenu__SetButtonText(
         System_String_o *localizationKey,
         const MethodInfo *method)
 {
-  Il2CppObject *ComponentInChildren_object__51139460; // x20
+  Il2CppObject *ComponentInChildren_object__51199524; // x20
 
-  if ( (byte_4C23978 & 1) == 0 )
+  if ( (byte_4C34049 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    this = (SupportSelectEditMenu_o *)sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C23978 = 1;
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    this = (SupportSelectEditMenu_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C34049 = 1;
   }
   if ( !target )
     goto LABEL_12;
-  ComponentInChildren_object__51139460 = UnityEngine_Component__GetComponentInChildren_object__51139460(
+  ComponentInChildren_object__51199524 = UnityEngine_Component__GetComponentInChildren_object__51199524(
                                            (UnityEngine_Component_o *)target,
-                                           (const MethodInfo_30C5384 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
+                                           (const MethodInfo_30D3E24 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)ComponentInChildren_object__51139460, 0, 0) )
+  if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)ComponentInChildren_object__51199524, 0, 0) )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     this = (SupportSelectEditMenu_o *)LocalizationManager__Get(localizationKey, 0);
-    if ( ComponentInChildren_object__51139460 )
+    if ( ComponentInChildren_object__51199524 )
     {
-      UILabel__set_text((UILabel_o *)ComponentInChildren_object__51139460, (System_String_o *)this, 0);
+      UILabel__set_text((UILabel_o *)ComponentInChildren_object__51199524, (System_String_o *)this, 0);
       return;
     }
 LABEL_12:
-    sub_1C2D6EC(this, target);
+    sub_1C32E7C(this);
   }
 }
 
@@ -417,23 +418,22 @@ UnityEngine_GameObject_o *SupportSelectEditMenu__get_closeBtnObject(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *cancelButton; // x20
-  __int64 v4; // x1
-  UnityEngine_Component_o *v6; // x0
+  UnityEngine_Component_o *v5; // x0
 
-  if ( (byte_4C2397F & 1) == 0 )
+  if ( (byte_4C34050 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2397F = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C34050 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(cancelButton, 0, 0) )
     return 0;
-  v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
-  if ( !v6 )
-    sub_1C2D6EC(0, v4);
-  return UnityEngine_Component__get_gameObject(v6, 0);
+  v5 = (UnityEngine_Component_o *)this->fields.cancelButton;
+  if ( !v5 )
+    sub_1C32E7C(0);
+  return UnityEngine_Component__get_gameObject(v5, 0);
 }
 
 
@@ -452,15 +452,15 @@ void SupportSelectEditMenu_OnClickButtonEvent___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C2D550(method) & 1) == 0 )
+  if ( (sub_1C32CE0(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C2D708(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2D5B8(v10, 0);
+      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C32D48(v10, 0);
     }
     goto LABEL_5;
   }
@@ -472,9 +472,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A6E784;
+  this->fields.invoke_impl = (intptr_t)sub_1A73EAC;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A6E73C;
+  this->fields.extra_arg = (intptr_t)sub_1A73E64;
 }
 
 
@@ -485,18 +485,21 @@ System_IAsyncResult_o *SupportSelectEditMenu_OnClickButtonEvent__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
+  __int64 v5; // x5
+  __int64 v6; // x6
+  __int64 v7; // x7
+  _QWORD v12[2]; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v13; // [xsp+1Ch] [xbp-34h] BYREF
 
-  v10 = result;
-  if ( (byte_4C23981 & 1) == 0 )
+  v13 = result;
+  if ( (byte_4C34052 & 1) == 0 )
   {
-    sub_1C2D490(&SupportSelectEditMenu_ResultKind_TypeInfo);
-    byte_4C23981 = 1;
+    sub_1C32C20(&SupportSelectEditMenu_ResultKind_TypeInfo);
+    byte_4C34052 = 1;
   }
-  v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(SupportSelectEditMenu_ResultKind_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C2D444(this, v9, callback, object);
+  v12[1] = 0;
+  v12[0] = j_il2cpp_value_box_0(SupportSelectEditMenu_ResultKind_TypeInfo, &v13, callback, object, method, v5, v6, v7);
+  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
 }
 
 
@@ -505,7 +508,7 @@ void SupportSelectEditMenu_OnClickButtonEvent__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2D448(result, 0, method);
+  sub_1C32BD8(result, 0, method);
 }
 
 

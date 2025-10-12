@@ -3,34 +3,34 @@ void DataAsset___ctor(DataAsset_o *this, System_Byte_array *bytes, const MethodI
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C26437 & 1) == 0 )
+  if ( (byte_4C36B0F & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C26437 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C36B0F = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   UnityEngine_Object___ctor((UnityEngine_Object_o *)this, 0);
   this->fields.byteData = bytes;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.byteData, (int32_t)bytes, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.byteData, (int32_t)bytes, v5, v6);
 }
 
 
-void DataAsset___ctor_40445948(DataAsset_o *this, System_String_o *text, const MethodInfo *method)
+void DataAsset___ctor_40568176(DataAsset_o *this, System_String_o *text, const MethodInfo *method)
 {
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C26438 & 1) == 0 )
+  if ( (byte_4C36B10 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C26438 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C36B10 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   UnityEngine_Object___ctor((UnityEngine_Object_o *)this, 0);
   this->fields.textData = text;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.textData, (int32_t)text, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.textData, (int32_t)text, v5, v6);
 }
 
 

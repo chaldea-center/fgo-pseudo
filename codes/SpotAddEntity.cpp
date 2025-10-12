@@ -1,13 +1,13 @@
 void SpotAddEntity___ctor(SpotAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27EB4 & 1) == 0 )
+  if ( (byte_4C385B7 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C27EB4 = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C385B7 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *SpotAddEntity__CreatePK(
         int32_t overrideType,
         const MethodInfo *method)
 {
-  if ( (byte_4C27EB3 & 1) == 0 )
+  if ( (byte_4C385B6 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C27EB3 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C385B6 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            spotId,
            priority,
            overrideType,
-           (const MethodInfo_30CCF68 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30DBA08 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

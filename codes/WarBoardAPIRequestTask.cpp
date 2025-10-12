@@ -8,83 +8,82 @@ void WarBoardAPIRequestTask___ctor(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
   __int64 v11; // x0
-  __int64 v12; // x1
-  struct RequestBase_o *v13; // x21
+  struct RequestBase_o *v12; // x21
   CGThumbnailListItem_o *p_fields; // x21
   System_Delegate_o *CallBack; // t1
-  NetworkManager_ResultCallbackFunc_o *v16; // x23
-  System_Delegate_o *v17; // x0
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  WarBoardAPIRequestTask_c *v20; // x8
-  NetworkManager_ResultCallbackFunc_c *v21; // x1
-  System_Delegate_o *v22; // t1
-  WarBoardAPIRequestTask_c *v23; // x0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  NetworkManager_ResultCallbackFunc_c *v26; // x1
+  NetworkManager_ResultCallbackFunc_o *v15; // x23
+  System_Delegate_o *v16; // x0
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  WarBoardAPIRequestTask_c *v19; // x8
+  NetworkManager_ResultCallbackFunc_c *v20; // x1
+  System_Delegate_o *v21; // t1
+  WarBoardAPIRequestTask_c *v22; // x0
+  int32_t v23; // w2
+  const MethodInfo *v24; // x3
+  NetworkManager_ResultCallbackFunc_c *v25; // x1
 
-  if ( (byte_4C24F56 & 1) == 0 )
+  if ( (byte_4C3562B & 1) == 0 )
   {
-    sub_1C2D490(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C2D490(&Method_WarBoardAPIRequestTask_requestComplete__);
-    byte_4C24F56 = 1;
+    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C32C20(&Method_WarBoardAPIRequestTask_requestComplete__);
+    byte_4C3562B = 1;
   }
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)request);
   this->fields.request = request;
   this->fields.onStartBeginRequest = onStartBeginRequest;
   this->fields.requestDone = 0;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.request, (int32_t)request, v9, v10);
-  v13 = this->fields.request;
-  if ( !v13 )
-    sub_1C2D6EC(v11, v12);
-  CallBack = (System_Delegate_o *)v13->fields.CallBack;
-  p_fields = (CGThumbnailListItem_o *)&v13->fields;
-  v16 = (NetworkManager_ResultCallbackFunc_o *)sub_1C2D6DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.request, (int32_t)request, v9, v10);
+  v12 = this->fields.request;
+  if ( !v12 )
+    sub_1C32E7C(v11);
+  CallBack = (System_Delegate_o *)v12->fields.CallBack;
+  p_fields = (CGThumbnailListItem_o *)&v12->fields;
+  v15 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
-    v16,
+    v15,
     (Il2CppObject *)this,
     Method_WarBoardAPIRequestTask_requestComplete__,
     0);
-  v17 = System_Delegate__Combine(CallBack, (System_Delegate_o *)v16, 0);
-  v20 = (WarBoardAPIRequestTask_c *)v17;
-  if ( v17 )
+  v16 = System_Delegate__Combine(CallBack, (System_Delegate_o *)v15, 0);
+  v19 = (WarBoardAPIRequestTask_c *)v16;
+  if ( v16 )
   {
-    v21 = NetworkManager_ResultCallbackFunc_TypeInfo;
-    if ( (NetworkManager_ResultCallbackFunc_c *)v17->klass != NetworkManager_ResultCallbackFunc_TypeInfo )
+    v20 = NetworkManager_ResultCallbackFunc_TypeInfo;
+    if ( (NetworkManager_ResultCallbackFunc_c *)v16->klass != NetworkManager_ResultCallbackFunc_TypeInfo )
       goto LABEL_12;
-    p_fields->klass = (CGThumbnailListItem_c *)v17;
-    if ( (NetworkManager_ResultCallbackFunc_c *)v17->klass != v21 )
+    p_fields->klass = (CGThumbnailListItem_c *)v16;
+    if ( (NetworkManager_ResultCallbackFunc_c *)v16->klass != v20 )
       goto LABEL_12;
   }
   else
   {
     p_fields->klass = 0;
   }
-  sub_1C2D434(p_fields, (int32_t)v17, v18, v19);
-  v22 = (System_Delegate_o *)this->fields.resultCallback;
+  sub_1C32BC4(p_fields, (int32_t)v16, v17, v18);
+  v21 = (System_Delegate_o *)this->fields.resultCallback;
   this = (WarBoardAPIRequestTask_o *)((char *)this + 72);
-  v23 = (WarBoardAPIRequestTask_c *)System_Delegate__Combine(v22, (System_Delegate_o *)resultCallback, 0);
-  v20 = v23;
-  if ( !v23 )
+  v22 = (WarBoardAPIRequestTask_c *)System_Delegate__Combine(v21, (System_Delegate_o *)resultCallback, 0);
+  v19 = v22;
+  if ( !v22 )
   {
 LABEL_13:
-    this->klass = v20;
+    this->klass = v19;
     goto LABEL_14;
   }
-  v26 = NetworkManager_ResultCallbackFunc_TypeInfo;
-  if ( v23->_1.image != NetworkManager_ResultCallbackFunc_TypeInfo || (this->klass = v23, v23->_1.image != v26) )
+  v25 = NetworkManager_ResultCallbackFunc_TypeInfo;
+  if ( v22->_1.image != NetworkManager_ResultCallbackFunc_TypeInfo || (this->klass = v22, v22->_1.image != v25) )
   {
 LABEL_12:
-    sub_1C2D9AC(v20);
+    sub_1C3313C(v19);
     goto LABEL_13;
   }
 LABEL_14:
-  sub_1C2D434((CGThumbnailListItem_o *)this, (int32_t)v20, v24, v25);
+  sub_1C32BC4((CGThumbnailListItem_o *)this, (int32_t)v19, v23, v24);
 }
 
 
-void WarBoardAPIRequestTask___ctor_38043512(
+void WarBoardAPIRequestTask___ctor_38162528(
         WarBoardAPIRequestTask_o *this,
         NetworkManager_ResultCallbackFunc_o *resultCallback,
         bool onStartBeginRequest,
@@ -98,10 +97,10 @@ void WarBoardAPIRequestTask___ctor_38043512(
   System_Delegate_o *v12; // x8
   NetworkManager_ResultCallbackFunc_c *v13; // x1
 
-  if ( (byte_4C24F57 & 1) == 0 )
+  if ( (byte_4C3562C & 1) == 0 )
   {
-    sub_1C2D490(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C24F57 = 1;
+    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C3562C = 1;
   }
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)resultCallback);
   v8 = (System_Delegate_o *)this->fields.resultCallback;
@@ -116,11 +115,11 @@ void WarBoardAPIRequestTask___ctor_38043512(
   if ( (NetworkManager_ResultCallbackFunc_c *)v9->klass != NetworkManager_ResultCallbackFunc_TypeInfo
     || (p_resultCallback->klass = (CGThumbnailListItem_c *)v9, (NetworkManager_ResultCallbackFunc_c *)v9->klass != v13) )
   {
-    sub_1C2D9AC(v9);
+    sub_1C3313C(v9);
 LABEL_7:
     p_resultCallback->klass = (CGThumbnailListItem_c *)v12;
   }
-  sub_1C2D434(p_resultCallback, (int32_t)v12, v10, v11);
+  sub_1C32BC4(p_resultCallback, (int32_t)v12, v10, v11);
 }
 
 
@@ -132,16 +131,16 @@ System_Collections_IEnumerator_o *WarBoardAPIRequestTask__Execute(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C24F59 & 1) == 0 )
+  if ( (byte_4C3562E & 1) == 0 )
   {
-    sub_1C2D490(&WarBoardAPIRequestTask__Execute_d__11_TypeInfo);
-    byte_4C24F59 = 1;
+    sub_1C32C20(&WarBoardAPIRequestTask__Execute_d__11_TypeInfo);
+    byte_4C3562E = 1;
   }
-  v3 = sub_1C2D6DC(WarBoardAPIRequestTask__Execute_d__11_TypeInfo);
+  v3 = sub_1C32E6C(WarBoardAPIRequestTask__Execute_d__11_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C2D434((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -150,13 +149,12 @@ void WarBoardAPIRequestTask__OnEnd(WarBoardAPIRequestTask_o *this, const MethodI
 {
   struct NetworkManager_ResultCallbackFunc_o *resultCallback; // x8
   Il2CppObject *Instance; // x0
-  __int64 v5; // x1
   struct WarBoardTaskBase_TaskCallback_o *EndCallback; // x8
 
-  if ( (byte_4C24F5A & 1) == 0 )
+  if ( (byte_4C3562F & 1) == 0 )
   {
-    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C24F5A = 1;
+    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4C3562F = 1;
   }
   resultCallback = this->fields.resultCallback;
   if ( resultCallback )
@@ -166,9 +164,9 @@ void WarBoardAPIRequestTask__OnEnd(WarBoardAPIRequestTask_o *this, const MethodI
       resultCallback->fields.method);
   if ( this->fields.isShowConnect )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_1C2D6EC(0, v5);
+      sub_1C32E7C(0);
     CommonUI__SetConnect((CommonUI_o *)Instance, 0, 0);
   }
   EndCallback = this->fields.EndCallback;
@@ -192,15 +190,14 @@ void WarBoardAPIRequestTask__OnStart(WarBoardAPIRequestTask_o *this, const Metho
   int32_t v10; // w2
   const MethodInfo *v11; // x3
   NetworkManager_ResultCallbackFunc_c *v12; // x1
-  __int64 v13; // x1
   RequestBase_o *Instance; // x0
 
-  if ( (byte_4C24F58 & 1) == 0 )
+  if ( (byte_4C3562D & 1) == 0 )
   {
-    sub_1C2D490(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C2D490(&Method_WarBoardAPIRequestTask_requestComplete__);
-    byte_4C24F58 = 1;
+    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C32C20(&Method_WarBoardAPIRequestTask_requestComplete__);
+    byte_4C3562D = 1;
   }
   StartCallback = this->fields.StartCallback;
   this->fields._isPlaying_k__BackingField = 1;
@@ -216,7 +213,7 @@ void WarBoardAPIRequestTask__OnStart(WarBoardAPIRequestTask_o *this, const Metho
     goto LABEL_10;
   CallBack = (System_Delegate_o *)request->fields.CallBack;
   p_fields = (CGThumbnailListItem_o *)&request->fields;
-  v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1C2D6DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v8 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v8, (Il2CppObject *)this, Method_WarBoardAPIRequestTask_requestComplete__, 0);
   v9 = System_Delegate__Combine(CallBack, (System_Delegate_o *)v8, 0);
   if ( v9 )
@@ -225,7 +222,7 @@ void WarBoardAPIRequestTask__OnStart(WarBoardAPIRequestTask_o *this, const Metho
     if ( (NetworkManager_ResultCallbackFunc_c *)v9->klass != NetworkManager_ResultCallbackFunc_TypeInfo
       || (p_fields->klass = (CGThumbnailListItem_c *)v9, (NetworkManager_ResultCallbackFunc_c *)v9->klass != v12) )
     {
-      v4 = sub_1C2D9AC(v9);
+      v4 = sub_1C3313C(v9);
 LABEL_10:
       ((void (__fastcall *)(WarBoardAPIRequestTask_o *, const MethodInfo *, long double))this->klass->vtable._6_OnEnd.methodPtr)(
         this,
@@ -238,7 +235,7 @@ LABEL_10:
   {
     p_fields->klass = 0;
   }
-  sub_1C2D434(p_fields, (int32_t)v9, v10, v11);
+  sub_1C32BC4(p_fields, (int32_t)v9, v10, v11);
   if ( !this->fields.requestDone )
   {
     Instance = this->fields.request;
@@ -264,14 +261,14 @@ LABEL_10:
         return;
     }
     this->fields.isShowConnect = 1;
-    Instance = (RequestBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (RequestBase_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( Instance )
     {
       CommonUI__SetConnect((CommonUI_o *)Instance, 1, 0);
       return;
     }
 LABEL_22:
-    sub_1C2D6EC(Instance, v13);
+    sub_1C32E7C(Instance);
   }
 }
 
@@ -299,7 +296,7 @@ void WarBoardAPIRequestTask__requestComplete(
   this->fields.responseStr = result;
   p_responseStr = &this->fields.responseStr;
   *((_BYTE *)p_responseStr - 15) = 1;
-  sub_1C2D434((CGThumbnailListItem_o *)p_responseStr, (int32_t)result, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)p_responseStr, (int32_t)result, (int32_t)method, v3);
 }
 
 
@@ -326,12 +323,12 @@ bool WarBoardAPIRequestTask__Execute_d__11__MoveNext(
   const MethodInfo *v9; // x3
   int32_t v10; // w8
 
-  if ( (byte_4C24F5B & 1) == 0 )
+  if ( (byte_4C35630 & 1) == 0 )
   {
-    sub_1C2D490(&System_Func_bool__TypeInfo);
-    sub_1C2D490(&UnityEngine_WaitUntil_TypeInfo);
-    sub_1C2D490(&Method_WarBoardAPIRequestTask__Execute_b__11_0__);
-    byte_4C24F5B = 1;
+    sub_1C32C20(&System_Func_bool__TypeInfo);
+    sub_1C32C20(&UnityEngine_WaitUntil_TypeInfo);
+    sub_1C32C20(&Method_WarBoardAPIRequestTask__Execute_b__11_0__);
+    byte_4C35630 = 1;
   }
   _1__state = this->fields.__1__state;
   result = 0;
@@ -345,12 +342,12 @@ bool WarBoardAPIRequestTask__Execute_d__11__MoveNext(
       return result;
     this->fields.__1__state = -1;
     _4__this = (Il2CppObject *)this->fields.__4__this;
-    v6 = (System_Func_bool__o *)sub_1C2D6DC(System_Func_bool__TypeInfo);
+    v6 = (System_Func_bool__o *)sub_1C32E6C(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(v6, _4__this, Method_WarBoardAPIRequestTask__Execute_b__11_0__, 0);
-    v7 = (UnityEngine_WaitUntil_o *)sub_1C2D6DC(UnityEngine_WaitUntil_TypeInfo);
+    v7 = (UnityEngine_WaitUntil_o *)sub_1C32E6C(UnityEngine_WaitUntil_TypeInfo);
     UnityEngine_WaitUntil___ctor(v7, v6, 0);
     this->fields.__2__current = (Il2CppObject *)v7;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v7, v8, v9);
     v10 = 1;
     result = 1;
   }
@@ -375,11 +372,11 @@ void __noreturn WarBoardAPIRequestTask__Execute_d__11__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C2D4A4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C2D6DC(v2);
+  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C2D4A4(&Method_WarBoardAPIRequestTask__Execute_d__11_System_Collections_IEnumerator_Reset__);
-  sub_1C2D5B8(v3, v4);
+  v4 = sub_1C32C34(&Method_WarBoardAPIRequestTask__Execute_d__11_System_Collections_IEnumerator_Reset__);
+  sub_1C32D48(v3, v4);
 }
 
 

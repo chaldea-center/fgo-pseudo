@@ -6,15 +6,14 @@ bool AssetLoadWrapper__LoadAssetStorage(
         int32_t maxParallelLoad,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
-  const MethodInfo *v10; // x2
+  const MethodInfo *v9; // x2
   bool AssetStorage; // w21
   AssetPathLoadCounter_o *pathCounter; // x0
 
-  if ( (byte_4C26306 & 1) == 0 )
+  if ( (byte_4C369DE & 1) == 0 )
   {
-    sub_1C2D490(&AssetManager_TypeInfo);
-    byte_4C26306 = 1;
+    sub_1C32C20(&AssetManager_TypeInfo);
+    byte_4C369DE = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -27,8 +26,8 @@ bool AssetLoadWrapper__LoadAssetStorage(
   {
     pathCounter = this->fields.pathCounter;
     if ( !pathCounter )
-      sub_1C2D6EC(0, v9);
-    AssetPathLoadCounter__AddCount(pathCounter, path, v10);
+      sub_1C32E7C(0);
+    AssetPathLoadCounter__AddCount(pathCounter, path, v9);
   }
   return AssetStorage;
 }
@@ -36,10 +35,10 @@ bool AssetLoadWrapper__LoadAssetStorage(
 
 void AssetLoadWrapper__Release(AssetLoadWrapper_o *this, System_String_o *path, const MethodInfo *method)
 {
-  if ( (byte_4C26307 & 1) == 0 )
+  if ( (byte_4C369DF & 1) == 0 )
   {
-    sub_1C2D490(&AssetManager_TypeInfo);
-    byte_4C26307 = 1;
+    sub_1C32C20(&AssetManager_TypeInfo);
+    byte_4C369DF = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -49,8 +48,7 @@ void AssetLoadWrapper__Release(AssetLoadWrapper_o *this, System_String_o *path, 
 
 void AssetLoadWrapper__ReleaseAssetStorage(AssetLoadWrapper_o *this, System_String_o *path, const MethodInfo *method)
 {
-  __int64 v5; // x1
-  const MethodInfo *v6; // x2
+  const MethodInfo *v5; // x2
   AssetPathLoadCounter_o *pathCounter; // x0
 
   ((void (__fastcall *)(AssetLoadWrapper_o *, System_String_o *, const MethodInfo *))this->klass->vtable._4_Release.methodPtr)(
@@ -59,6 +57,6 @@ void AssetLoadWrapper__ReleaseAssetStorage(AssetLoadWrapper_o *this, System_Stri
     this->klass->vtable._4_Release.method);
   pathCounter = this->fields.pathCounter;
   if ( !pathCounter )
-    sub_1C2D6EC(0, v5);
-  AssetPathLoadCounter__SubCount(pathCounter, path, v6);
+    sub_1C32E7C(0);
+  AssetPathLoadCounter__SubCount(pathCounter, path, v5);
 }

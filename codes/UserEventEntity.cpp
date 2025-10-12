@@ -1,30 +1,30 @@
 void UserEventEntity___ctor(UserEventEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C280A1 & 1) == 0 )
+  if ( (byte_4C387A4 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C280A1 = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C387A4 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void UserEventEntity___ctor_42802256(
+void UserEventEntity___ctor_42934976(
         UserEventEntity_o *this,
         int64_t userId,
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_4C280A2 & 1) == 0 )
+  if ( (byte_4C387A5 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C280A2 = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C387A5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.eventId = eventId;
   this->fields.updatedAt = 0;
@@ -36,15 +36,15 @@ void UserEventEntity___ctor_42802256(
 
 System_String_o *UserEventEntity__CreatePK(int64_t userId, int32_t eventId, const MethodInfo *method)
 {
-  if ( (byte_4C280A0 & 1) == 0 )
+  if ( (byte_4C387A3 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4C280A0 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4C387A3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            eventId,
-           (const MethodInfo_30CCBE0 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_30DB680 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -62,13 +62,13 @@ bool UserEventEntity__getEventFlag(UserEventEntity_o *this, int32_t flagId, cons
 }
 
 
-bool UserEventEntity__getEventFlag_42802448(UserEventEntity_o *this, int32_t flagId, const MethodInfo *method)
+bool UserEventEntity__getEventFlag_42935168(UserEventEntity_o *this, int32_t flagId, const MethodInfo *method)
 {
   return ((unsigned int)this->fields.flag >> flagId) & 1;
 }
 
 
-bool UserEventEntity__getEventFlag_42802464(UserEventEntity_o *this, int32_t flag, const MethodInfo *method)
+bool UserEventEntity__getEventFlag_42935184(UserEventEntity_o *this, int32_t flag, const MethodInfo *method)
 {
   return (this->fields.flag & flag) != 0;
 }

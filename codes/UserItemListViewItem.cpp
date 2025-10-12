@@ -3,36 +3,35 @@ void UserItemListViewItem___ctor(UserItemListViewItem_o *this, UserItemData_o *u
   int32_t v5; // w2
   const MethodInfo *v6; // x3
   Il2CppObject *Master_object; // x0
-  __int64 v8; // x1
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  int8x16_t v11; // q0
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int8x16_t v10; // q0
   struct System_String_o *name; // x1
   struct ItemEntity_o **p_itemEntity; // x20
 
-  if ( (byte_4C2239E & 1) == 0 )
+  if ( (byte_4C32A6D & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    byte_4C2239E = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    byte_4C32A6D = 1;
   }
   ListViewItem___ctor((ListViewItem_o *)this, 0);
   this->fields.itemData = usrItemData;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.itemData, (int32_t)usrItemData, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.itemData, (int32_t)usrItemData, v5, v6);
   if ( !usrItemData )
     goto LABEL_11;
-  v11 = vuzp1q_s32(
+  v10 = vuzp1q_s32(
           *(int32x4_t *)&usrItemData->fields.type,
           vextq_s8(*(int8x16_t *)&usrItemData->fields.type, *(int8x16_t *)&usrItemData->fields.type, 0xCu));
-  *(int8x16_t *)&this->fields.dispPriority = vextq_s8(v11, v11, 0xCu);
+  *(int8x16_t *)&this->fields.dispPriority = vextq_s8(v10, v10, 0xCu);
   name = usrItemData->fields.name;
   this->fields.itemName = name;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.itemName, (int32_t)name, v9, v10);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.itemName, (int32_t)name, v8, v9);
   this->fields.itemNum = usrItemData->fields.num;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Master_object )
     goto LABEL_11;
   p_itemEntity = &this->fields.itemEntity;
@@ -40,12 +39,12 @@ void UserItemListViewItem___ctor(UserItemListViewItem_o *this, UserItemData_o *u
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     (Il2CppObject **)&this->fields.itemEntity,
                                     this->fields.itemId,
-                                    (const MethodInfo_3387DE4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                                    (const MethodInfo_3396884 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
     return;
   if ( !*p_itemEntity )
 LABEL_11:
-    sub_1C2D6EC(Master_object, v8);
+    sub_1C32E7C(Master_object);
   this->fields.itemLostTime = (*p_itemEntity)->fields.endedAt;
 }
 

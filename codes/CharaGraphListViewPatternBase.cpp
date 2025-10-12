@@ -14,7 +14,7 @@ CharaGraphFilterLogicBase_o *CharaGraphListViewPatternBase__CreateFilterLogic(
   if ( !SortOwner_k__BackingField
     || (this = (CharaGraphListViewPatternBase_o *)SortOwner_k__BackingField->fields._CurrentSortManageUnit_k__BackingField) == 0 )
   {
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   }
   return (CharaGraphFilterLogicBase_o *)((__int64 (__fastcall *)(CharaGraphListViewPatternBase_o *, const MethodInfo *))this->klass->vtable._10_GetItemModifyArgs.methodPtr)(
                                           this,
@@ -32,7 +32,7 @@ CharaGraphSortLogicBase_o *CharaGraphListViewPatternBase__CreateSortLogic(
   if ( !SortOwner_k__BackingField
     || (this = (CharaGraphListViewPatternBase_o *)SortOwner_k__BackingField->fields._CurrentSortManageUnit_k__BackingField) == 0 )
   {
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   }
   return (CharaGraphSortLogicBase_o *)((__int64 (__fastcall *)(CharaGraphListViewPatternBase_o *, const MethodInfo *))this->klass->vtable._9_GetItemDrawPattern.methodPtr)(
                                         this,
@@ -62,12 +62,12 @@ CharaGraphListViewItemDrawPatternBase_o *CharaGraphListViewPatternBase__GetItemD
 {
   Il2CppObject *v2; // x19
 
-  if ( (byte_4C26607 & 1) == 0 )
+  if ( (byte_4C36CDF & 1) == 0 )
   {
-    sub_1C2D490(&CharaGraphListViewItemDrawPatternDefault_TypeInfo);
-    byte_4C26607 = 1;
+    sub_1C32C20(&CharaGraphListViewItemDrawPatternDefault_TypeInfo);
+    byte_4C36CDF = 1;
   }
-  v2 = (Il2CppObject *)sub_1C2D6DC(CharaGraphListViewItemDrawPatternDefault_TypeInfo);
+  v2 = (Il2CppObject *)sub_1C32E6C(CharaGraphListViewItemDrawPatternDefault_TypeInfo);
   System_Object___ctor(v2, 0);
   return (CharaGraphListViewItemDrawPatternBase_o *)v2;
 }
@@ -79,12 +79,12 @@ CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *CharaGraphListViewPatternBase__
 {
   CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *v2; // x19
 
-  if ( (byte_4C26608 & 1) == 0 )
+  if ( (byte_4C36CE0 & 1) == 0 )
   {
-    sub_1C2D490(&CharaGraphDefine_CharaGraphItemBulkModifyArgs_TypeInfo);
-    byte_4C26608 = 1;
+    sub_1C32C20(&CharaGraphDefine_CharaGraphItemBulkModifyArgs_TypeInfo);
+    byte_4C36CE0 = 1;
   }
-  v2 = (CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *)sub_1C2D6DC(CharaGraphDefine_CharaGraphItemBulkModifyArgs_TypeInfo);
+  v2 = (CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *)sub_1C32E6C(CharaGraphDefine_CharaGraphItemBulkModifyArgs_TypeInfo);
   CharaGraphDefine_CharaGraphItemBulkModifyArgs___ctor(v2, 0, 0);
   return v2;
 }
@@ -100,23 +100,23 @@ ListViewSort_o *CharaGraphListViewPatternBase__GetListViewSort(
   if ( !SortOwner_k__BackingField
     || (this = (CharaGraphListViewPatternBase_o *)SortOwner_k__BackingField->fields._CurrentSortManageUnit_k__BackingField) == 0 )
   {
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   }
   return CharaGraphSortManageUnitBase__get_SortInfo((CharaGraphSortManageUnitBase_o *)this, method);
 }
 
 
-Il2CppObject *CharaGraphListViewPatternBase__GetMaster_object_(const MethodInfo_30C20D0 *method)
+Il2CppObject *CharaGraphListViewPatternBase__GetMaster_object_(const MethodInfo_30D0B70 *method)
 {
   if ( !method->rgctx_data )
   {
-    sub_1C2D490(&DataManager_TypeInfo);
+    sub_1C32C20(&DataManager_TypeInfo);
     if ( !method->rgctx_data )
-      sub_1C7DC00(method);
+      sub_1C83390(method);
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  return DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)method->rgctx_data->_0_DataManager_GetMaster_T_);
+  return DataManager__GetMaster_object_((const MethodInfo_30DD39C *)method->rgctx_data->_0_DataManager_GetMaster_T_);
 }
 
 
@@ -161,7 +161,7 @@ int32_t CharaGraphListViewPatternBase__get_FilterKind(CharaGraphListViewPatternB
   if ( !SortOwner_k__BackingField
     || (this = (CharaGraphListViewPatternBase_o *)SortOwner_k__BackingField->fields._CurrentSortManageUnit_k__BackingField) == 0 )
   {
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   }
   return ((__int64 (__fastcall *)(CharaGraphListViewPatternBase_o *, const MethodInfo *))this->klass->vtable._7_get_FilterKind.methodPtr)(
            this,
@@ -186,7 +186,7 @@ CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *CharaGraphListViewPatternBase__
                                                                                      this,
                                                                                      this->klass->vtable._10_GetItemModifyArgs.method);
     this->fields.itemBulkModifyArgs = itemBulkModifyArgs;
-    sub_1C2D434((CGThumbnailListItem_o *)p_itemBulkModifyArgs, (int32_t)itemBulkModifyArgs, v5, v6);
+    sub_1C32BC4((CGThumbnailListItem_o *)p_itemBulkModifyArgs, (int32_t)itemBulkModifyArgs, v5, v6);
   }
   return itemBulkModifyArgs;
 }
@@ -209,7 +209,7 @@ CharaGraphListViewItemDrawPatternBase_o *CharaGraphListViewPatternBase__get_Item
                                                                           this,
                                                                           this->klass->vtable._9_GetItemDrawPattern.method);
     this->fields.itemDrawPattern = itemDrawPattern;
-    sub_1C2D434((CGThumbnailListItem_o *)p_itemDrawPattern, (int32_t)itemDrawPattern, v5, v6);
+    sub_1C32BC4((CGThumbnailListItem_o *)p_itemDrawPattern, (int32_t)itemDrawPattern, v5, v6);
   }
   return itemDrawPattern;
 }
@@ -231,7 +231,7 @@ int32_t CharaGraphListViewPatternBase__get_SortKind(CharaGraphListViewPatternBas
   if ( !SortOwner_k__BackingField
     || (this = (CharaGraphListViewPatternBase_o *)SortOwner_k__BackingField->fields._CurrentSortManageUnit_k__BackingField) == 0 )
   {
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   }
   return ((__int64 (__fastcall *)(CharaGraphListViewPatternBase_o *, const MethodInfo *))this->klass->vtable._8_get_SortKind.methodPtr)(
            this,
@@ -255,7 +255,7 @@ void CharaGraphListViewPatternBase__set_EventValSetupInfo(
   const MethodInfo *v3; // x3
 
   this->fields._EventValSetupInfo_k__BackingField = value;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields._EventValSetupInfo_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -271,7 +271,7 @@ void CharaGraphListViewPatternBase__set_RootInfo(
   const MethodInfo *v3; // x3
 
   this->fields._RootInfo_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._RootInfo_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._RootInfo_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -283,5 +283,5 @@ void CharaGraphListViewPatternBase__set_SortOwner(
   const MethodInfo *v3; // x3
 
   this->fields._SortOwner_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }

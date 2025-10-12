@@ -4,10 +4,10 @@ void QuestBoardListEffectDisappearComponent___ctor(
 {
   QuestBoardListViewItemDraw_c *v3; // x0
 
-  if ( (byte_4C23F4B & 1) == 0 )
+  if ( (byte_4C34664 & 1) == 0 )
   {
-    sub_1C2D490(&QuestBoardListViewItemDraw_TypeInfo);
-    byte_4C23F4B = 1;
+    sub_1C32C20(&QuestBoardListViewItemDraw_TypeInfo);
+    byte_4C34664 = 1;
   }
   this->fields.boardMoveeasingType = 17;
   *(_QWORD *)&this->fields.boardMovingStartTime = 0x3F8000003FD47AE1LL;
@@ -18,6 +18,6 @@ void QuestBoardListEffectDisappearComponent___ctor(
     v3 = QuestBoardListViewItemDraw_TypeInfo;
   }
   this->fields.disappearEffectShiftPosY = (float)v3->static_fields->POS_Y_ITVL_AREA;
-  *(_OWORD *)&this->fields.bgmFadeOutTime = xmmword_C09630;
+  *(_OWORD *)&this->fields.bgmFadeOutTime = xmmword_C0CA00;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }

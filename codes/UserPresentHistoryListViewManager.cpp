@@ -7,188 +7,187 @@ void UserPresentHistoryListViewManager___ctor(UserPresentHistoryListViewManager_
 void UserPresentHistoryListViewManager__CreateList(UserPresentHistoryListViewManager_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  __int64 v4; // x1
   Il2CppObject *MasterData_object; // x0
-  UserPresentHistoryListViewManager___c_c *v6; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v7; // x20
+  UserPresentHistoryListViewManager___c_c *v5; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v6; // x20
   System_Func_T__TResult__o *_9__2_0; // x21
-  Il2CppObject *v9; // x22
+  Il2CppObject *v8; // x22
   struct UserPresentHistoryListViewManager___c_StaticFields *static_fields; // x0
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v13; // x0
-  int32_t v14; // w24
-  int32_t v15; // w20
+  int32_t v10; // w2
+  const MethodInfo *v11; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v12; // x0
+  int32_t v13; // w24
+  int32_t v14; // w20
   Il2CppClass *klass; // x8
   System_Collections_Generic_List_object__o *itemList; // x26
-  System_Collections_Generic_IEnumerable_TSource__o *v18; // x25
-  __int64 v19; // x9
+  System_Collections_Generic_IEnumerable_TSource__o *v17; // x25
+  __int64 v18; // x9
   int32_t *p_offset; // x10
-  __int64 v21; // x0
-  System_DateTime_o v22; // x0
-  System_String_o *v23; // x28
-  __int64 v24; // x27
-  int32_t v25; // w2
-  const MethodInfo *v26; // x3
-  int32_t v27; // w2
-  const MethodInfo *v28; // x3
+  __int64 v20; // x0
+  System_DateTime_o v21; // x0
+  System_String_o *v22; // x28
+  __int64 v23; // x27
+  int32_t v24; // w2
+  const MethodInfo *v25; // x3
+  int32_t v26; // w2
+  const MethodInfo *v27; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v30; // x9
+  _QWORD *v29; // x9
   __int64 size; // x10
-  Il2CppClass **v32; // x0
-  int v33; // w26
+  Il2CppClass **v31; // x0
+  int v32; // w26
   int32_t i; // w27
-  System_Collections_Generic_List_object__o *v35; // x28
-  __int64 v36; // x21
-  __int64 v37; // x29
-  int32_t v38; // w2
-  const MethodInfo *v39; // x3
-  int32_t v40; // w2
-  const MethodInfo *v41; // x3
-  struct System_Object_array *v42; // x8
-  _QWORD *v43; // x9
-  __int64 v44; // x10
-  Il2CppClass **v45; // x0
-  int32_t v46; // w25
-  System_Collections_Generic_List_object__o *v47; // x26
-  __int64 v48; // x27
-  __int64 v49; // x20
-  int32_t v50; // w2
-  const MethodInfo *v51; // x3
-  int32_t v52; // w2
-  const MethodInfo *v53; // x3
-  struct System_Object_array *v54; // x8
-  _QWORD *v55; // x9
-  __int64 v56; // x10
-  Il2CppClass **v57; // x0
+  System_Collections_Generic_List_object__o *v34; // x28
+  __int64 v35; // x21
+  __int64 v36; // x29
+  int32_t v37; // w2
+  const MethodInfo *v38; // x3
+  int32_t v39; // w2
+  const MethodInfo *v40; // x3
+  struct System_Object_array *v41; // x8
+  _QWORD *v42; // x9
+  __int64 v43; // x10
+  Il2CppClass **v44; // x0
+  int32_t v45; // w25
+  System_Collections_Generic_List_object__o *v46; // x26
+  __int64 v47; // x27
+  __int64 v48; // x20
+  int32_t v49; // w2
+  const MethodInfo *v50; // x3
+  int32_t v51; // w2
+  const MethodInfo *v52; // x3
+  struct System_Object_array *v53; // x8
+  _QWORD *v54; // x9
+  __int64 v55; // x10
+  Il2CppClass **v56; // x0
   struct ListViewSort_o *sort; // x8
   System_String_o *format; // [xsp+8h] [xbp-88h]
-  int v60; // [xsp+10h] [xbp-80h]
-  int v61; // [xsp+14h] [xbp-7Ch]
+  int v59; // [xsp+10h] [xbp-80h]
+  int v60; // [xsp+14h] [xbp-7Ch]
   System_Collections_Generic_IEnumerable_TSource__o *source; // [xsp+18h] [xbp-78h]
-  int32_t v63; // [xsp+24h] [xbp-6Ch]
-  __int64 v64; // [xsp+28h] [xbp-68h] BYREF
+  int32_t v62; // [xsp+24h] [xbp-6Ch]
+  __int64 v63; // [xsp+28h] [xbp-68h] BYREF
 
-  if ( (byte_4C26019 & 1) == 0 )
+  if ( (byte_4C366F1 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_UserPresentHistoryMaster___);
-    sub_1C2D490(&System_DateTime_TypeInfo);
-    sub_1C2D490(&Method_System_Linq_Enumerable_Count_IGrouping_DateTime__UserPresentHistoryEntity____);
-    sub_1C2D490(&Method_System_Linq_Enumerable_Count_UserPresentHistoryEntity___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_ElementAt_IGrouping_DateTime__UserPresentHistoryEntity____);
-    sub_1C2D490(&Method_System_Linq_Enumerable_ElementAt_UserPresentHistoryEntity___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_GroupBy_UserPresentHistoryEntity__DateTime___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_ToList_IGrouping_DateTime__UserPresentHistoryEntity____);
-    sub_1C2D490(&System_Func_UserPresentHistoryEntity__DateTime__TypeInfo);
-    sub_1C2D490(&System_Linq_IGrouping_DateTime__UserPresentHistoryEntity__TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C2D490(&Method_UserPresentHistoryListViewManager___c__CreateList_b__2_0__);
-    sub_1C2D490(&UserPresentHistoryListViewManager___c_TypeInfo);
-    sub_1C2D490(&UserPresentHistoryListViewItem_TypeInfo);
-    sub_1C2D490(&StringLiteral_10445/*"PRESENT_HISTORY_DATE_TIME_FORMAT"*/);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C26019 = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_UserPresentHistoryMaster___);
+    sub_1C32C20(&System_DateTime_TypeInfo);
+    sub_1C32C20(&Method_System_Linq_Enumerable_Count_IGrouping_DateTime__UserPresentHistoryEntity____);
+    sub_1C32C20(&Method_System_Linq_Enumerable_Count_UserPresentHistoryEntity___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_ElementAt_IGrouping_DateTime__UserPresentHistoryEntity____);
+    sub_1C32C20(&Method_System_Linq_Enumerable_ElementAt_UserPresentHistoryEntity___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_GroupBy_UserPresentHistoryEntity__DateTime___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_ToList_IGrouping_DateTime__UserPresentHistoryEntity____);
+    sub_1C32C20(&System_Func_UserPresentHistoryEntity__DateTime__TypeInfo);
+    sub_1C32C20(&System_Linq_IGrouping_DateTime__UserPresentHistoryEntity__TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C32C20(&Method_UserPresentHistoryListViewManager___c__CreateList_b__2_0__);
+    sub_1C32C20(&UserPresentHistoryListViewManager___c_TypeInfo);
+    sub_1C32C20(&UserPresentHistoryListViewItem_TypeInfo);
+    sub_1C32C20(&StringLiteral_10451/*"PRESENT_HISTORY_DATE_TIME_FORMAT"*/);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C366F1 = 1;
   }
-  v64 = 0;
+  v63 = 0;
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_48;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_UserPresentHistoryMaster___);
-  v6 = UserPresentHistoryListViewManager___c_TypeInfo;
-  v7 = (System_Collections_Generic_IEnumerable_TSource__o *)MasterData_object;
+                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserPresentHistoryMaster___);
+  v5 = UserPresentHistoryListViewManager___c_TypeInfo;
+  v6 = (System_Collections_Generic_IEnumerable_TSource__o *)MasterData_object;
   if ( !UserPresentHistoryListViewManager___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserPresentHistoryListViewManager___c_TypeInfo);
-    v6 = UserPresentHistoryListViewManager___c_TypeInfo;
+    v5 = UserPresentHistoryListViewManager___c_TypeInfo;
   }
-  _9__2_0 = (System_Func_T__TResult__o *)v6->static_fields->__9__2_0;
+  _9__2_0 = (System_Func_T__TResult__o *)v5->static_fields->__9__2_0;
   if ( !_9__2_0 )
   {
-    if ( !v6->_2.cctor_finished )
+    if ( !v5->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v6);
-      v6 = UserPresentHistoryListViewManager___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v5);
+      v5 = UserPresentHistoryListViewManager___c_TypeInfo;
     }
-    v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__2_0 = (System_Func_T__TResult__o *)sub_1C2D6DC(System_Func_UserPresentHistoryEntity__DateTime__TypeInfo);
+    v8 = (Il2CppObject *)v5->static_fields->__9;
+    _9__2_0 = (System_Func_T__TResult__o *)sub_1C32E6C(System_Func_UserPresentHistoryEntity__DateTime__TypeInfo);
     System_Func_object__DateTime____ctor(
       _9__2_0,
-      v9,
+      v8,
       Method_UserPresentHistoryListViewManager___c__CreateList_b__2_0__,
       0);
     static_fields = UserPresentHistoryListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = (struct System_Func_UserPresentHistoryEntity__DateTime__o *)_9__2_0;
-    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v11, v12);
+    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v10, v11);
   }
-  v13 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__GroupBy_object__DateTime_(
-                                                               v7,
+  v12 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__GroupBy_object__DateTime_(
+                                                               v6,
                                                                (System_Func_TSource__TKey__o *)_9__2_0,
-                                                               (const MethodInfo_30F8C98 *)Method_System_Linq_Enumerable_GroupBy_UserPresentHistoryEntity__DateTime___);
+                                                               (const MethodInfo_3107738 *)Method_System_Linq_Enumerable_GroupBy_UserPresentHistoryEntity__DateTime___);
   source = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToList_object_(
-                                                                  v13,
-                                                                  (const MethodInfo_3112C88 *)Method_System_Linq_Enumerable_ToList_IGrouping_DateTime__UserPresentHistoryEntity____);
+                                                                  v12,
+                                                                  (const MethodInfo_3121728 *)Method_System_Linq_Enumerable_ToList_IGrouping_DateTime__UserPresentHistoryEntity____);
   Instance = (Il2CppObject *)System_Linq_Enumerable__Count_object_(
                                source,
-                               (const MethodInfo_30EECD8 *)Method_System_Linq_Enumerable_Count_IGrouping_DateTime__UserPresentHistoryEntity____);
-  v60 = (int)Instance;
-  v61 = (_DWORD)Instance - 1;
+                               (const MethodInfo_30FD778 *)Method_System_Linq_Enumerable_Count_IGrouping_DateTime__UserPresentHistoryEntity____);
+  v59 = (int)Instance;
+  v60 = (_DWORD)Instance - 1;
   if ( (int)Instance >= 1 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
+    v13 = 0;
     v14 = 0;
-    v15 = 0;
-    format = LocalizationManager__Get((System_String_o *)StringLiteral_10445/*"PRESENT_HISTORY_DATE_TIME_FORMAT"*/, 0);
+    format = LocalizationManager__Get((System_String_o *)StringLiteral_10451/*"PRESENT_HISTORY_DATE_TIME_FORMAT"*/, 0);
     while ( 1 )
     {
       Instance = System_Linq_Enumerable__ElementAt_object_(
                    source,
-                   v15,
-                   (const MethodInfo_30F295C *)Method_System_Linq_Enumerable_ElementAt_IGrouping_DateTime__UserPresentHistoryEntity____);
+                   v14,
+                   (const MethodInfo_31013FC *)Method_System_Linq_Enumerable_ElementAt_IGrouping_DateTime__UserPresentHistoryEntity____);
       if ( !Instance )
         break;
       klass = Instance->klass;
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-      v18 = (System_Collections_Generic_IEnumerable_TSource__o *)Instance;
-      v19 = *(unsigned __int16 *)&Instance->klass->_2.rank;
+      v17 = (System_Collections_Generic_IEnumerable_TSource__o *)Instance;
+      v18 = *(unsigned __int16 *)&Instance->klass->_2.rank;
       if ( *(_WORD *)&Instance->klass->_2.rank )
       {
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_Linq_IGrouping_DateTime__UserPresentHistoryEntity__c **)p_offset - 1) != System_Linq_IGrouping_DateTime__UserPresentHistoryEntity__TypeInfo )
         {
-          --v19;
+          --v18;
           p_offset += 4;
-          if ( !v19 )
+          if ( !v18 )
             goto LABEL_19;
         }
-        v21 = (__int64)&klass->vtable[*p_offset];
+        v20 = (__int64)&klass->vtable[*p_offset];
       }
       else
       {
 LABEL_19:
-        v21 = sub_1C7DCA8(Instance, System_Linq_IGrouping_DateTime__UserPresentHistoryEntity__TypeInfo, 0);
+        v20 = sub_1C83438(Instance, System_Linq_IGrouping_DateTime__UserPresentHistoryEntity__TypeInfo, 0);
       }
-      v63 = v15;
-      v64 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))v21)(
-              v18,
-              *(_QWORD *)(v21 + 8));
+      v62 = v14;
+      v63 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))v20)(
+              v17,
+              *(_QWORD *)(v20 + 8));
       if ( !System_DateTime_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
-      v22.fields._dateData = (uint64_t)&v64;
-      v23 = System_DateTime__ToString_64858404(v22, format, 0);
-      v24 = sub_1C2D6DC(UserPresentHistoryListViewItem_TypeInfo);
-      ListViewItem___ctor_43566844((ListViewItem_o *)v24, v14, 0);
-      *(_QWORD *)(v24 + 120) = v23;
-      sub_1C2D434((CGThumbnailListItem_o *)(v24 + 120), (int32_t)v23, v25, v26);
+      v21.fields._dateData = (uint64_t)&v63;
+      v22 = System_DateTime__ToString_64918340(v21, format, 0);
+      v23 = sub_1C32E6C(UserPresentHistoryListViewItem_TypeInfo);
+      ListViewItem___ctor_43702564((ListViewItem_o *)v23, v13, 0);
+      *(_QWORD *)(v23 + 120) = v22;
+      sub_1C32BC4((CGThumbnailListItem_o *)(v23 + 120), (int32_t)v22, v24, v25);
       if ( !itemList )
         break;
       items = itemList->fields._items;
-      v30 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+      v29 = Method_System_Collections_Generic_List_ListViewItem__Add__;
       ++itemList->fields._version;
       if ( !items )
         break;
@@ -197,104 +196,104 @@ LABEL_19:
       {
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
-          (Il2CppObject *)v24,
-          *(const MethodInfo_3789B84 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+          (Il2CppObject *)v23,
+          *(const MethodInfo_37987BC **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
       }
       else
       {
-        v32 = &items->obj.klass + size;
+        v31 = &items->obj.klass + size;
         itemList->fields._size = size + 1;
-        v32[4] = (Il2CppClass *)v24;
-        sub_1C2D434((CGThumbnailListItem_o *)(v32 + 4), v24, v27, v28);
+        v31[4] = (Il2CppClass *)v23;
+        sub_1C32BC4((CGThumbnailListItem_o *)(v31 + 4), v23, v26, v27);
       }
       Instance = (Il2CppObject *)System_Linq_Enumerable__Count_object_(
-                                   v18,
-                                   (const MethodInfo_30EECD8 *)Method_System_Linq_Enumerable_Count_UserPresentHistoryEntity___);
+                                   v17,
+                                   (const MethodInfo_30FD778 *)Method_System_Linq_Enumerable_Count_UserPresentHistoryEntity___);
       if ( (int)Instance >= 1 )
       {
-        v33 = (int)Instance;
-        for ( i = 0; i != v33; ++i )
+        v32 = (int)Instance;
+        for ( i = 0; i != v32; ++i )
         {
           Instance = System_Linq_Enumerable__ElementAt_object_(
-                       v18,
+                       v17,
                        i,
-                       (const MethodInfo_30F295C *)Method_System_Linq_Enumerable_ElementAt_UserPresentHistoryEntity___);
+                       (const MethodInfo_31013FC *)Method_System_Linq_Enumerable_ElementAt_UserPresentHistoryEntity___);
           if ( !Instance )
             goto LABEL_48;
-          v35 = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-          v36 = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Instance->klass->vtable[3].methodPtr)(
+          v34 = (System_Collections_Generic_List_object__o *)this->fields.itemList;
+          v35 = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Instance->klass->vtable[3].methodPtr)(
                   Instance,
                   Instance->klass->vtable[3].method);
-          v37 = sub_1C2D6DC(UserPresentHistoryListViewItem_TypeInfo);
-          ListViewItem___ctor_43566844((ListViewItem_o *)v37, v14 + i + 1, 0);
-          *(_QWORD *)(v37 + 120) = v36;
-          sub_1C2D434((CGThumbnailListItem_o *)(v37 + 120), v36, v38, v39);
-          if ( !v35 )
+          v36 = sub_1C32E6C(UserPresentHistoryListViewItem_TypeInfo);
+          ListViewItem___ctor_43702564((ListViewItem_o *)v36, v13 + i + 1, 0);
+          *(_QWORD *)(v36 + 120) = v35;
+          sub_1C32BC4((CGThumbnailListItem_o *)(v36 + 120), v35, v37, v38);
+          if ( !v34 )
             goto LABEL_48;
-          v42 = v35->fields._items;
-          v43 = Method_System_Collections_Generic_List_ListViewItem__Add__;
-          ++v35->fields._version;
-          if ( !v42 )
+          v41 = v34->fields._items;
+          v42 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+          ++v34->fields._version;
+          if ( !v41 )
             goto LABEL_48;
-          v44 = v35->fields._size;
-          if ( (unsigned int)v44 >= LODWORD(v42->max_length) )
+          v43 = v34->fields._size;
+          if ( (unsigned int)v43 >= LODWORD(v41->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
-              v35,
-              (Il2CppObject *)v37,
-              *(const MethodInfo_3789B84 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
+              v34,
+              (Il2CppObject *)v36,
+              *(const MethodInfo_37987BC **)(*(_QWORD *)(v42[4] + 192LL) + 112LL));
           }
           else
           {
-            v45 = &v42->obj.klass + v44;
-            v35->fields._size = v44 + 1;
-            v45[4] = (Il2CppClass *)v37;
-            sub_1C2D434((CGThumbnailListItem_o *)(v45 + 4), v37, v40, v41);
+            v44 = &v41->obj.klass + v43;
+            v34->fields._size = v43 + 1;
+            v44[4] = (Il2CppClass *)v36;
+            sub_1C32BC4((CGThumbnailListItem_o *)(v44 + 4), v36, v39, v40);
           }
         }
-        v14 += i;
+        v13 += i;
       }
-      v46 = v14 + 1;
-      if ( v15 != v61 )
+      v45 = v13 + 1;
+      if ( v14 != v60 )
       {
-        v47 = (System_Collections_Generic_List_object__o *)this->fields.itemList;
-        v48 = sub_1C2D6DC(UserPresentHistoryListViewItem_TypeInfo);
-        v49 = StringLiteral_1/*""*/;
-        ListViewItem___ctor_43566844((ListViewItem_o *)v48, v46, 0);
-        *(_QWORD *)(v48 + 120) = v49;
-        sub_1C2D434((CGThumbnailListItem_o *)(v48 + 120), v49, v50, v51);
-        if ( !v47 )
+        v46 = (System_Collections_Generic_List_object__o *)this->fields.itemList;
+        v47 = sub_1C32E6C(UserPresentHistoryListViewItem_TypeInfo);
+        v48 = StringLiteral_1/*""*/;
+        ListViewItem___ctor_43702564((ListViewItem_o *)v47, v45, 0);
+        *(_QWORD *)(v47 + 120) = v48;
+        sub_1C32BC4((CGThumbnailListItem_o *)(v47 + 120), v48, v49, v50);
+        if ( !v46 )
           break;
-        v54 = v47->fields._items;
-        v55 = Method_System_Collections_Generic_List_ListViewItem__Add__;
-        ++v47->fields._version;
-        if ( !v54 )
+        v53 = v46->fields._items;
+        v54 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+        ++v46->fields._version;
+        if ( !v53 )
           break;
-        v56 = v47->fields._size;
-        v46 = v14 + 2;
-        if ( (unsigned int)v56 >= LODWORD(v54->max_length) )
+        v55 = v46->fields._size;
+        v45 = v13 + 2;
+        if ( (unsigned int)v55 >= LODWORD(v53->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v47,
-            (Il2CppObject *)v48,
-            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v55[4] + 192LL) + 112LL));
+            v46,
+            (Il2CppObject *)v47,
+            *(const MethodInfo_37987BC **)(*(_QWORD *)(v54[4] + 192LL) + 112LL));
         }
         else
         {
-          v57 = &v54->obj.klass + v56;
-          v47->fields._size = v56 + 1;
-          v57[4] = (Il2CppClass *)v48;
-          sub_1C2D434((CGThumbnailListItem_o *)(v57 + 4), v48, v52, v53);
+          v56 = &v53->obj.klass + v55;
+          v46->fields._size = v55 + 1;
+          v56[4] = (Il2CppClass *)v47;
+          sub_1C32BC4((CGThumbnailListItem_o *)(v56 + 4), v47, v51, v52);
         }
-        v15 = v63;
+        v14 = v62;
       }
-      ++v15;
-      v14 = v46;
-      if ( v15 == v60 )
+      ++v14;
+      v13 = v45;
+      if ( v14 == v59 )
         goto LABEL_46;
     }
 LABEL_48:
-    sub_1C2D6EC(Instance, v4);
+    sub_1C32E7C(Instance);
   }
 LABEL_46:
   sort = this->fields.sort;
@@ -313,17 +312,17 @@ void UserPresentHistoryListViewManager__SetObjectItem(
 {
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C2601A & 1) == 0 )
+  if ( (byte_4C366F2 & 1) == 0 )
   {
-    this = (UserPresentHistoryListViewManager_o *)sub_1C2D490(&UserPresentHistoryListViewObject_TypeInfo);
-    byte_4C2601A = 1;
+    this = (UserPresentHistoryListViewManager_o *)sub_1C32C20(&UserPresentHistoryListViewObject_TypeInfo);
+    byte_4C366F2 = 1;
   }
   if ( !obj
     || (naturalAligment = UserPresentHistoryListViewObject_TypeInfo->_2.naturalAligment,
         obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (UserPresentHistoryListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != UserPresentHistoryListViewObject_TypeInfo )
   {
-    sub_1C2D6EC(this, obj);
+    sub_1C32E7C(this);
   }
   UserPresentHistoryListViewObject__SetupDisp((UserPresentHistoryListViewObject_o *)obj, (const MethodInfo *)obj);
 }
@@ -334,13 +333,12 @@ float UserPresentHistoryListViewManager__get_ListViewHeight(
         const MethodInfo *method)
 {
   __int64 ItemSum; // x0
-  __int64 v4; // x1
   struct ListViewItemSeed_o *seed; // x8
 
   ItemSum = ListViewManager__get_ItemSum((ListViewManager_o *)this, 0);
   seed = this->fields.seed;
   if ( !seed )
-    sub_1C2D6EC(ItemSum, v4);
+    sub_1C32E7C(ItemSum);
   return seed->fields.arrangementPich.fields.y * (float)(int)ItemSum;
 }
 
@@ -351,15 +349,15 @@ void UserPresentHistoryListViewManager___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C2601B & 1) == 0 )
+  if ( (byte_4C366F3 & 1) == 0 )
   {
-    sub_1C2D490(&UserPresentHistoryListViewManager___c_TypeInfo);
-    byte_4C2601B = 1;
+    sub_1C32C20(&UserPresentHistoryListViewManager___c_TypeInfo);
+    byte_4C366F3 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C2D6DC(UserPresentHistoryListViewManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C32E6C(UserPresentHistoryListViewManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   UserPresentHistoryListViewManager___c_TypeInfo->static_fields->__9 = (struct UserPresentHistoryListViewManager___c_o *)v1;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)UserPresentHistoryListViewManager___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -382,15 +380,15 @@ System_DateTime_o UserPresentHistoryListViewManager___c___CreateList_b__2_0(
 {
   int64_t createdAt; // x19
 
-  if ( (byte_4C2601C & 1) == 0 )
+  if ( (byte_4C366F4 & 1) == 0 )
   {
-    this = (UserPresentHistoryListViewManager___c_o *)sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C2601C = 1;
+    this = (UserPresentHistoryListViewManager___c_o *)sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C366F4 = 1;
   }
   if ( !entity )
-    sub_1C2D6EC(this, entity);
+    sub_1C32E7C(this);
   createdAt = entity->fields.createdAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getServerDateTime_41146052(createdAt, 0);
+  return NetworkManager__getServerDateTime_41267996(createdAt, 0);
 }

@@ -1,14 +1,14 @@
 void ReachedWaveInfoMaster___ctor(ReachedWaveInfoMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27A82 & 1) == 0 )
+  if ( (byte_4C38184 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string___ctor__);
-    byte_4C27A82 = 1;
+    sub_1C32C20(&Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string___ctor__);
+    byte_4C38184 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     541,
-    (const MethodInfo_338A52C *)Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string___ctor__);
+    (const MethodInfo_3398FCC *)Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string___ctor__);
 }
 
 
@@ -20,16 +20,16 @@ ReachedWaveInfoEntity_o *ReachedWaveInfoMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C27A80 & 1) == 0 )
+  if ( (byte_4C38182 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__GetEntity__);
-    byte_4C27A80 = 1;
+    sub_1C32C20(&Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__GetEntity__);
+    byte_4C38182 = 1;
   }
   PK = (Il2CppObject *)ReachedWaveInfoEntity__CreatePK(questId, *(const MethodInfo **)&questId);
   return (ReachedWaveInfoEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_338C850 *)Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__GetEntity__);
+                                      (const MethodInfo_339B2F0 *)Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__GetEntity__);
 }
 
 
@@ -37,60 +37,59 @@ int32_t ReachedWaveInfoMaster__GetReachedWave(ReachedWaveInfoMaster_o *this, int
 {
   const MethodInfo *v3; // x3
   _BOOL8 v6; // x0
-  __int64 v7; // x1
-  int32_t v8; // w19
+  int32_t v7; // w19
+  TerminalPramsManager_c *v8; // x0
   TerminalPramsManager_c *v9; // x0
-  TerminalPramsManager_c *v10; // x0
   ReachedWaveInfoEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C27A83 & 1) == 0 )
+  if ( (byte_4C38185 & 1) == 0 )
   {
-    sub_1C2D490(&TerminalPramsManager_TypeInfo);
-    byte_4C27A83 = 1;
+    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    byte_4C38185 = 1;
   }
   entity = 0;
   v6 = ReachedWaveInfoMaster__TryGetEntity(this, &entity, questId, v3);
   if ( v6 )
   {
     if ( !entity )
-      sub_1C2D6EC(v6, v7);
-    v8 = *(int *)((char *)&dword_14 + (_QWORD)entity);
+      sub_1C32E7C(v6);
+    v7 = *(int *)((char *)&dword_14 + (_QWORD)entity);
   }
   else
   {
-    v8 = 0;
+    v7 = 0;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C24323 )
+  if ( !byte_4C349F7 )
   {
-    sub_1C2D490(&TerminalPramsManager_TypeInfo);
-    byte_4C24323 = 1;
+    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    byte_4C349F7 = 1;
   }
-  v9 = TerminalPramsManager_TypeInfo;
+  v8 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v9 = TerminalPramsManager_TypeInfo;
+    v8 = TerminalPramsManager_TypeInfo;
   }
-  if ( v9->static_fields->_CurrentWaveNum_k__BackingField > v8 )
+  if ( v8->static_fields->_CurrentWaveNum_k__BackingField > v7 )
   {
-    if ( !v9->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(v9);
-    if ( !byte_4C24323 )
+    if ( !v8->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(v8);
+    if ( !byte_4C349F7 )
     {
-      sub_1C2D490(&TerminalPramsManager_TypeInfo);
-      byte_4C24323 = 1;
+      sub_1C32C20(&TerminalPramsManager_TypeInfo);
+      byte_4C349F7 = 1;
     }
-    v10 = TerminalPramsManager_TypeInfo;
+    v9 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      v10 = TerminalPramsManager_TypeInfo;
+      v9 = TerminalPramsManager_TypeInfo;
     }
-    return v10->static_fields->_CurrentWaveNum_k__BackingField;
+    return v9->static_fields->_CurrentWaveNum_k__BackingField;
   }
-  return v8;
+  return v7;
 }
 
 
@@ -102,15 +101,15 @@ bool ReachedWaveInfoMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C27A81 & 1) == 0 )
+  if ( (byte_4C38183 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__TryGetEntity__);
-    byte_4C27A81 = 1;
+    sub_1C32C20(&Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__TryGetEntity__);
+    byte_4C38183 = 1;
   }
   PK = (Il2CppObject *)ReachedWaveInfoEntity__CreatePK(questId, (const MethodInfo *)entity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_338C89C *)Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__TryGetEntity__);
+           (const MethodInfo_339B33C *)Method_DataMasterBase_ReachedWaveInfoMaster__ReachedWaveInfoEntity__string__TryGetEntity__);
 }

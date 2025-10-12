@@ -1,27 +1,27 @@
 void UserAccessaryEntity___ctor(UserAccessaryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27FF9 & 1) == 0 )
+  if ( (byte_4C386FC & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C27FF9 = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C386FC = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserAccessaryEntity__CreatePK(int64_t userId, int32_t accessaryId, const MethodInfo *method)
 {
-  if ( (byte_4C27FF8 & 1) == 0 )
+  if ( (byte_4C386FB & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4C27FF8 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4C386FB = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            accessaryId,
-           (const MethodInfo_30CCBE0 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_30DB680 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

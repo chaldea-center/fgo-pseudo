@@ -7,24 +7,24 @@ void AssumedBattleAssetSearcherBase___ctor(AssumedBattleAssetSearcherBase_o *thi
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C29774 & 1) == 0 )
+  if ( (byte_4C39E80 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_string__TypeInfo);
-    byte_4C29774 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
+    byte_4C39E80 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_string__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.assetPathList = (struct System_Collections_Generic_List_string__o *)v3;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.assetPathList, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_string__TypeInfo);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.assetPathList, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
   this->fields.audioPathList = (struct System_Collections_Generic_List_string__o *)v6;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.audioPathList, (int32_t)v6, v7, v8);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.audioPathList, (int32_t)v6, v7, v8);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -41,10 +41,10 @@ void AssumedBattleAssetSearcherBase__AppendPreloadedAssetPath(
   __int64 size; // x10
   Il2CppClass **v10; // x8
 
-  if ( (byte_4C2976F & 1) == 0 )
+  if ( (byte_4C39E7B & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__Add__);
-    byte_4C2976F = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
+    byte_4C39E7B = 1;
   }
   assetPathList = (System_Collections_Generic_List_object__o *)this->fields.assetPathList;
   if ( !assetPathList
@@ -53,7 +53,7 @@ void AssumedBattleAssetSearcherBase__AppendPreloadedAssetPath(
         ++assetPathList->fields._version,
         !items) )
   {
-    sub_1C2D6EC(assetPathList, path);
+    sub_1C32E7C(assetPathList);
   }
   size = assetPathList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -61,14 +61,14 @@ void AssumedBattleAssetSearcherBase__AppendPreloadedAssetPath(
     System_Collections_Generic_List_object___AddWithResize(
       assetPathList,
       (Il2CppObject *)path,
-      *(const MethodInfo_3789B84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_37987BC **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
   }
   else
   {
     v10 = &items->obj.klass + size;
     assetPathList->fields._size = size + 1;
     v10[4] = (Il2CppClass *)path;
-    sub_1C2D434((CGThumbnailListItem_o *)(v10 + 4), (int32_t)path, (int32_t)method, v3);
+    sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 4), (int32_t)path, (int32_t)method, v3);
   }
 }
 
@@ -85,10 +85,10 @@ void AssumedBattleAssetSearcherBase__AppendPreloadedAudioAssetPath(
   __int64 size; // x10
   Il2CppClass **v10; // x8
 
-  if ( (byte_4C29771 & 1) == 0 )
+  if ( (byte_4C39E7D & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__Add__);
-    byte_4C29771 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
+    byte_4C39E7D = 1;
   }
   audioPathList = (System_Collections_Generic_List_object__o *)this->fields.audioPathList;
   if ( !audioPathList
@@ -97,7 +97,7 @@ void AssumedBattleAssetSearcherBase__AppendPreloadedAudioAssetPath(
         ++audioPathList->fields._version,
         !items) )
   {
-    sub_1C2D6EC(audioPathList, path);
+    sub_1C32E7C(audioPathList);
   }
   size = audioPathList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -105,14 +105,14 @@ void AssumedBattleAssetSearcherBase__AppendPreloadedAudioAssetPath(
     System_Collections_Generic_List_object___AddWithResize(
       audioPathList,
       (Il2CppObject *)path,
-      *(const MethodInfo_3789B84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_37987BC **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
   }
   else
   {
     v10 = &items->obj.klass + size;
     audioPathList->fields._size = size + 1;
     v10[4] = (Il2CppClass *)path;
-    sub_1C2D434((CGThumbnailListItem_o *)(v10 + 4), (int32_t)path, (int32_t)method, v3);
+    sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 4), (int32_t)path, (int32_t)method, v3);
   }
 }
 
@@ -123,17 +123,17 @@ System_String_array *AssumedBattleAssetSearcherBase__GetPreloadedAssetPathsAsArr
 {
   struct System_Collections_Generic_List_string__o *assetPathList; // x0
 
-  if ( (byte_4C29770 & 1) == 0 )
+  if ( (byte_4C39E7C & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__ToArray__);
-    byte_4C29770 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__ToArray__);
+    byte_4C39E7C = 1;
   }
   assetPathList = this->fields.assetPathList;
   if ( !assetPathList )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   (System_Collections_Generic_List_object__o *)assetPathList,
-                                  (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -143,17 +143,17 @@ System_String_array *AssumedBattleAssetSearcherBase__GetPreloadedAudioAssetPaths
 {
   struct System_Collections_Generic_List_string__o *audioPathList; // x0
 
-  if ( (byte_4C29772 & 1) == 0 )
+  if ( (byte_4C39E7E & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__ToArray__);
-    byte_4C29772 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__ToArray__);
+    byte_4C39E7E = 1;
   }
   audioPathList = this->fields.audioPathList;
   if ( !audioPathList )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   (System_Collections_Generic_List_object__o *)audioPathList,
-                                  (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -166,14 +166,14 @@ bool AssumedBattleAssetSearcherBase__HasAnyPreloadedAssetPaths(
   struct System_Collections_Generic_List_string__o *audioPathList; // x9
 
   v2 = this;
-  if ( (byte_4C29773 & 1) == 0 )
+  if ( (byte_4C39E7F & 1) == 0 )
   {
-    this = (AssumedBattleAssetSearcherBase_o *)sub_1C2D490(&Method_System_Collections_Generic_List_string__get_Count__);
-    byte_4C29773 = 1;
+    this = (AssumedBattleAssetSearcherBase_o *)sub_1C32C20(&Method_System_Collections_Generic_List_string__get_Count__);
+    byte_4C39E7F = 1;
   }
   assetPathList = v2->fields.assetPathList;
   if ( !assetPathList || (audioPathList = v2->fields.audioPathList) == 0 )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return audioPathList->fields._size + assetPathList->fields._size > 0;
 }
 
@@ -186,7 +186,7 @@ void AssumedBattleAssetSearcherBase__SetManager(
   const MethodInfo *v3; // x3
 
   this->fields.manager = manager;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.manager, (int32_t)manager, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.manager, (int32_t)manager, (int32_t)method, v3);
 }
 
 

@@ -18,7 +18,7 @@ void MyRoomListItem__EnableBlackOutPanel(MyRoomListItem_o *this, System_String_o
   if ( !blackOutPanel
     || (BlackoutPanelControl__Show(blackOutPanel, 0), (blackOutPanel = this->fields.blackOutPanel) == 0) )
   {
-    sub_1C2D6EC(blackOutPanel, message);
+    sub_1C32E7C(blackOutPanel);
   }
   BlackoutPanelControl__SetTextCenter(blackOutPanel, message, 0);
 }

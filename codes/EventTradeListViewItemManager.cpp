@@ -1,6 +1,6 @@
 void EventTradeListViewItemManager___ctor(EventTradeListViewItemManager_o *this, const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.CURRENT_PICKUP_INFO_BOARD_POS.fields.x = xmmword_C09840;
+  *(_OWORD *)&this->fields.CURRENT_PICKUP_INFO_BOARD_POS.fields.x = xmmword_C0CC20;
   ListViewManager___ctor((ListViewManager_o *)this, 0);
 }
 
@@ -8,25 +8,24 @@ void EventTradeListViewItemManager___ctor(EventTradeListViewItemManager_o *this,
 void EventTradeListViewItemManager__CheckIsSerializeFieldNotNull(Il2CppObject *targetObj, const MethodInfo *method)
 {
   Il2CppObject *v2; // x19
-  __int64 v3; // x2
   int monitor; // w8
-  Il2CppObject *v5; // x20
-  unsigned int v6; // w24
-  System_Reflection_MemberInfo_o *v7; // x21
-  Il2CppType *v8; // x22
-  System_RuntimeTypeHandle_o v9; // x0
+  Il2CppObject *v4; // x20
+  unsigned int v5; // w24
+  System_Reflection_MemberInfo_o *v6; // x21
+  Il2CppType *v7; // x22
+  System_RuntimeTypeHandle_o v8; // x0
   System_Type_o *TypeFromHandle; // x0
-  int v11; // w22
-  __int64 v12; // x23
-  System_RuntimeTypeHandle_o v13; // x0
+  int v10; // w22
+  __int64 v11; // x23
+  System_RuntimeTypeHandle_o v12; // x0
 
   v2 = targetObj;
-  if ( (byte_4C21C74 & 1) == 0 )
+  if ( (byte_4C3240F & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_var);
-    sub_1C2D490(&UnityEngine_SerializeField_var);
-    targetObj = (Il2CppObject *)sub_1C2D490(&System_Type_TypeInfo);
-    byte_4C21C74 = 1;
+    sub_1C32C20(&UnityEngine_Object_var);
+    sub_1C32C20(&UnityEngine_SerializeField_var);
+    targetObj = (Il2CppObject *)sub_1C32C20(&System_Type_TypeInfo);
+    byte_4C3240F = 1;
   }
   if ( !v2 )
     goto LABEL_17;
@@ -40,46 +39,46 @@ void EventTradeListViewItemManager__CheckIsSerializeFieldNotNull(Il2CppObject *t
   if ( !targetObj )
     goto LABEL_17;
   monitor = (int)targetObj[1].monitor;
-  v5 = targetObj;
+  v4 = targetObj;
   if ( monitor >= 1 )
   {
-    v6 = 0;
+    v5 = 0;
     while ( 1 )
     {
-      if ( v6 >= monitor )
-        sub_1C2D6F4(targetObj, method, v3);
-      v7 = (System_Reflection_MemberInfo_o *)*((_QWORD *)&v5[2].klass + (int)v6);
-      v8 = UnityEngine_SerializeField_var;
+      if ( v5 >= monitor )
+        sub_1C32E84(targetObj);
+      v6 = (System_Reflection_MemberInfo_o *)*((_QWORD *)&v4[2].klass + (int)v5);
+      v7 = UnityEngine_SerializeField_var;
       if ( !System_Type_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
-      v9.fields.value = (intptr_t)v8;
-      TypeFromHandle = System_Type__GetTypeFromHandle(v9, 0);
-      targetObj = (Il2CppObject *)System_Reflection_CustomAttributeExtensions__IsDefined(v7, TypeFromHandle, 0);
-      if ( !v7 )
+      v8.fields.value = (intptr_t)v7;
+      TypeFromHandle = System_Type__GetTypeFromHandle(v8, 0);
+      targetObj = (Il2CppObject *)System_Reflection_CustomAttributeExtensions__IsDefined(v6, TypeFromHandle, 0);
+      if ( !v6 )
         break;
-      v11 = (int)targetObj;
-      v12 = ((__int64 (__fastcall *)(System_Reflection_MemberInfo_o *, const char *))v7->klass[1]._1.name)(
-              v7,
-              v7->klass[1]._1.namespaze);
-      v13.fields.value = (intptr_t)UnityEngine_Object_var;
-      targetObj = (Il2CppObject *)System_Type__GetTypeFromHandle(v13, 0);
-      if ( !v12 )
+      v10 = (int)targetObj;
+      v11 = ((__int64 (__fastcall *)(System_Reflection_MemberInfo_o *, const char *))v6->klass[1]._1.name)(
+              v6,
+              v6->klass[1]._1.namespaze);
+      v12.fields.value = (intptr_t)UnityEngine_Object_var;
+      targetObj = (Il2CppObject *)System_Type__GetTypeFromHandle(v12, 0);
+      if ( !v11 )
         break;
-      targetObj = (Il2CppObject *)(*(__int64 (__fastcall **)(__int64, Il2CppObject *, _QWORD))(*(_QWORD *)v12 + 648LL))(
-                                    v12,
+      targetObj = (Il2CppObject *)(*(__int64 (__fastcall **)(__int64, Il2CppObject *, _QWORD))(*(_QWORD *)v11 + 648LL))(
+                                    v11,
                                     targetObj,
-                                    *(_QWORD *)(*(_QWORD *)v12 + 656LL));
-      if ( (v11 & (unsigned int)targetObj & 1) != 0 )
-        targetObj = (Il2CppObject *)((__int64 (__fastcall *)(System_Reflection_MemberInfo_o *, Il2CppObject *, void *))v7->klass[1]._1.properties)(
-                                      v7,
+                                    *(_QWORD *)(*(_QWORD *)v11 + 656LL));
+      if ( (v10 & (unsigned int)targetObj & 1) != 0 )
+        targetObj = (Il2CppObject *)((__int64 (__fastcall *)(System_Reflection_MemberInfo_o *, Il2CppObject *, void *))v6->klass[1]._1.properties)(
+                                      v6,
                                       v2,
-                                      v7->klass[1]._1.methods);
-      monitor = (int)v5[1].monitor;
-      if ( (int)++v6 >= monitor )
+                                      v6->klass[1]._1.methods);
+      monitor = (int)v4[1].monitor;
+      if ( (int)++v5 >= monitor )
         return;
     }
 LABEL_17:
-    sub_1C2D6EC(targetObj, method);
+    sub_1C32E7C(targetObj);
   }
 }
 
@@ -96,28 +95,27 @@ void EventTradeListViewItemManager__CheckOpenQuest(
   CommonUI_o *v10; // x23
   System_Action_o *v11; // x24
   __int64 v12; // x0
-  __int64 v13; // x1
 
-  if ( (byte_4C21C70 & 1) == 0 )
+  if ( (byte_4C3240B & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&EventInfoTradeRankControl_TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager__CheckOpenQuest_b__80_0__);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C21C70 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&EventInfoTradeRankControl_TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager__CheckOpenQuest_b__80_0__);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C3240B = 1;
   }
   currentEventId = this->fields.currentEventId;
   if ( !EventInfoTradeRankControl_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventInfoTradeRankControl_TypeInfo);
   EventInfoTradeRankControl__UpdateOldPoint(currentEventId, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v9 = this->fields.currentEventId;
   v10 = (CommonUI_o *)Instance;
-  v11 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_EventTradeListViewItemManager__CheckOpenQuest_b__80_0__, 0);
   if ( !v10 )
-    sub_1C2D6EC(v12, v13);
+    sub_1C32E7C(v12);
   if ( !CommonUI__CheckOpenQuestByEventPoint(
           v10,
           v9,
@@ -135,32 +133,30 @@ void EventTradeListViewItemManager__CheckOpenQuest(
 void EventTradeListViewItemManager__CreateList(EventTradeListViewItemManager_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *itemList; // x0
-  __int64 v4; // x1
-  __int64 v5; // x2
   struct EventTradeGoodsEntity_array *tradeGoodsEntities; // x25
   int max_length; // w8
-  unsigned int v8; // w26
-  EventTradeGoodsEntity_o *v9; // x21
+  unsigned int v6; // w26
+  EventTradeGoodsEntity_o *v7; // x21
   int32_t id; // w22
   int32_t currentEventId; // w23
-  System_Action_o *v12; // x24
-  EventTradeListViewItem_o *v13; // x20
+  System_Action_o *v10; // x24
+  EventTradeListViewItem_o *v11; // x20
   struct System_Object_array *items; // x8
-  _QWORD *v15; // x9
+  _QWORD *v13; // x9
   __int64 size; // x10
-  Il2CppClass **v17; // x8
-  struct EventTradeGoodsEntity_array *v18; // x8
+  Il2CppClass **v15; // x8
+  struct EventTradeGoodsEntity_array *v16; // x8
   UILabel_o *emptyMessageLabel; // x19
 
-  if ( (byte_4C21C57 & 1) == 0 )
+  if ( (byte_4C323F2 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_UpdateReceiveAllButtonState__);
-    sub_1C2D490(&EventTradeListViewItem_TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_5699/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/);
-    byte_4C21C57 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_UpdateReceiveAllButtonState__);
+    sub_1C32C20(&EventTradeListViewItem_TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_5707/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/);
+    byte_4C323F2 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   tradeGoodsEntities = this->fields.tradeGoodsEntities;
@@ -169,29 +165,29 @@ void EventTradeListViewItemManager__CreateList(EventTradeListViewItemManager_o *
   max_length = tradeGoodsEntities->max_length;
   if ( max_length >= 1 )
   {
-    v8 = 0;
+    v6 = 0;
     while ( 1 )
     {
-      if ( v8 >= max_length )
-        sub_1C2D6F4(itemList, v4, v5);
-      v9 = tradeGoodsEntities->m_Items[v8];
-      if ( !v9 )
+      if ( v6 >= max_length )
+        sub_1C32E84(itemList);
+      v7 = tradeGoodsEntities->m_Items[v6];
+      if ( !v7 )
         break;
-      id = v9->fields.id;
+      id = v7->fields.id;
       currentEventId = this->fields.currentEventId;
-      v12 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+      v10 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
       System_Action___ctor(
-        v12,
+        v10,
         (Il2CppObject *)this,
         Method_EventTradeListViewItemManager_UpdateReceiveAllButtonState__,
         0);
-      v13 = (EventTradeListViewItem_o *)sub_1C2D6DC(EventTradeListViewItem_TypeInfo);
-      EventTradeListViewItem___ctor(v13, id, v9, currentEventId, v12, 0);
+      v11 = (EventTradeListViewItem_o *)sub_1C32E6C(EventTradeListViewItem_TypeInfo);
+      EventTradeListViewItem___ctor(v11, id, v7, currentEventId, v10, 0);
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
       if ( !itemList )
         break;
       items = itemList->fields._items;
-      v15 = Method_System_Collections_Generic_List_ListViewItem__Add__;
+      v13 = Method_System_Collections_Generic_List_ListViewItem__Add__;
       ++itemList->fields._version;
       if ( !items )
         break;
@@ -200,36 +196,36 @@ void EventTradeListViewItemManager__CreateList(EventTradeListViewItemManager_o *
       {
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
-          (Il2CppObject *)v13,
-          *(const MethodInfo_3789B84 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+          (Il2CppObject *)v11,
+          *(const MethodInfo_37987BC **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
       }
       else
       {
-        v17 = &items->obj.klass + size;
+        v15 = &items->obj.klass + size;
         itemList->fields._size = size + 1;
-        v17[4] = (Il2CppClass *)v13;
-        itemList = (System_Collections_Generic_List_object__o *)sub_1C2D434(v17 + 4);
+        v15[4] = (Il2CppClass *)v11;
+        itemList = (System_Collections_Generic_List_object__o *)sub_1C32BC4(v15 + 4, v11);
       }
       max_length = tradeGoodsEntities->max_length;
-      if ( (int)++v8 >= max_length )
+      if ( (int)++v6 >= max_length )
         goto LABEL_14;
     }
 LABEL_20:
-    sub_1C2D6EC(itemList, v4);
+    sub_1C32E7C(itemList);
   }
 LABEL_14:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
   ListViewManager__CheckVerticalScrollBar((ListViewManager_o *)this, 0);
-  v18 = this->fields.tradeGoodsEntities;
-  if ( !v18 )
+  v16 = this->fields.tradeGoodsEntities;
+  if ( !v16 )
     goto LABEL_20;
-  if ( !v18->max_length )
+  if ( !v16->max_length )
   {
     emptyMessageLabel = this->fields.emptyMessageLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     itemList = (System_Collections_Generic_List_object__o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_5699/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/,
+                                                              (System_String_o *)StringLiteral_5707/*"EVENT_REWARD_SHOP_LIST_EMPTY"*/,
                                                               0);
     if ( !emptyMessageLabel )
       goto LABEL_20;
@@ -242,25 +238,24 @@ void EventTradeListViewItemManager__DestroyList(EventTradeListViewItemManager_o 
 {
   EventTradeAssetManager_o *assetManager; // x0
   UnityEngine_Object_o *tradeRewardDialog; // x20
-  __int64 v5; // x1
-  UnityEngine_Component_o *v6; // x0
+  UnityEngine_Component_o *v5; // x0
   UnityEngine_Object_o *gameObject; // x21
   UnityEngine_Object_o *tradePointRewardDialog; // x20
-  UnityEngine_Object_o *v9; // x21
+  UnityEngine_Object_o *v8; // x21
   UnityEngine_Object_o *tradeSweetsNumConfirmDialog; // x20
-  UnityEngine_Object_o *v11; // x21
+  UnityEngine_Object_o *v10; // x21
   UnityEngine_Object_o *tradeSweetsWithdrawalConfirmDialog; // x20
-  UnityEngine_Object_o *v13; // x21
+  UnityEngine_Object_o *v12; // x21
   UnityEngine_Object_o *currentPickupInfoDispControl; // x20
-  UnityEngine_Object_o *v15; // x21
+  UnityEngine_Object_o *v14; // x21
   UnityEngine_Object_o *nextPickupInfoDispControl; // x20
   struct EventTradePickupInfoDispControl_o **p_nextPickupInfoDispControl; // x19
-  UnityEngine_Object_o *v18; // x20
+  UnityEngine_Object_o *v17; // x20
 
-  if ( (byte_4C21C59 & 1) == 0 )
+  if ( (byte_4C323F4 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21C59 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C323F4 = 1;
   }
   ListViewManager__DestroyList((ListViewManager_o *)this, 0);
   assetManager = this->fields.assetManager;
@@ -271,75 +266,75 @@ void EventTradeListViewItemManager__DestroyList(EventTradeListViewItemManager_o 
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(tradeRewardDialog, 0, 0) )
   {
-    v6 = (UnityEngine_Component_o *)this->fields.tradeRewardDialog;
-    if ( !v6 )
+    v5 = (UnityEngine_Component_o *)this->fields.tradeRewardDialog;
+    if ( !v5 )
       goto LABEL_48;
-    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v6, 0);
+    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71163704(gameObject, 0);
+    UnityEngine_Object__Destroy_71223640(gameObject, 0);
     this->fields.tradeRewardDialog = 0;
-    sub_1C2D434(&this->fields.tradeRewardDialog);
+    sub_1C32BC4(&this->fields.tradeRewardDialog, 0);
   }
   tradePointRewardDialog = (UnityEngine_Object_o *)this->fields.tradePointRewardDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(tradePointRewardDialog, 0, 0) )
   {
-    v6 = (UnityEngine_Component_o *)this->fields.tradePointRewardDialog;
-    if ( !v6 )
+    v5 = (UnityEngine_Component_o *)this->fields.tradePointRewardDialog;
+    if ( !v5 )
       goto LABEL_48;
-    v9 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v6, 0);
+    v8 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71163704(v9, 0);
+    UnityEngine_Object__Destroy_71223640(v8, 0);
     this->fields.tradePointRewardDialog = 0;
-    sub_1C2D434(&this->fields.tradePointRewardDialog);
+    sub_1C32BC4(&this->fields.tradePointRewardDialog, 0);
   }
   tradeSweetsNumConfirmDialog = (UnityEngine_Object_o *)this->fields.tradeSweetsNumConfirmDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(tradeSweetsNumConfirmDialog, 0, 0) )
   {
-    v6 = (UnityEngine_Component_o *)this->fields.tradeSweetsNumConfirmDialog;
-    if ( !v6 )
+    v5 = (UnityEngine_Component_o *)this->fields.tradeSweetsNumConfirmDialog;
+    if ( !v5 )
       goto LABEL_48;
-    v11 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v6, 0);
+    v10 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71163704(v11, 0);
+    UnityEngine_Object__Destroy_71223640(v10, 0);
     this->fields.tradeSweetsNumConfirmDialog = 0;
-    sub_1C2D434(&this->fields.tradeSweetsNumConfirmDialog);
+    sub_1C32BC4(&this->fields.tradeSweetsNumConfirmDialog, 0);
   }
   tradeSweetsWithdrawalConfirmDialog = (UnityEngine_Object_o *)this->fields.tradeSweetsWithdrawalConfirmDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(tradeSweetsWithdrawalConfirmDialog, 0, 0) )
   {
-    v6 = (UnityEngine_Component_o *)this->fields.tradeSweetsWithdrawalConfirmDialog;
-    if ( !v6 )
+    v5 = (UnityEngine_Component_o *)this->fields.tradeSweetsWithdrawalConfirmDialog;
+    if ( !v5 )
       goto LABEL_48;
-    v13 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v6, 0);
+    v12 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71163704(v13, 0);
+    UnityEngine_Object__Destroy_71223640(v12, 0);
     this->fields.tradeSweetsWithdrawalConfirmDialog = 0;
-    sub_1C2D434(&this->fields.tradeSweetsWithdrawalConfirmDialog);
+    sub_1C32BC4(&this->fields.tradeSweetsWithdrawalConfirmDialog, 0);
   }
   currentPickupInfoDispControl = (UnityEngine_Object_o *)this->fields.currentPickupInfoDispControl;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(currentPickupInfoDispControl, 0, 0) )
   {
-    v6 = (UnityEngine_Component_o *)this->fields.currentPickupInfoDispControl;
-    if ( !v6 )
+    v5 = (UnityEngine_Component_o *)this->fields.currentPickupInfoDispControl;
+    if ( !v5 )
       goto LABEL_48;
-    v15 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v6, 0);
+    v14 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71163704(v15, 0);
+    UnityEngine_Object__Destroy_71223640(v14, 0);
     this->fields.currentPickupInfoDispControl = 0;
-    sub_1C2D434(&this->fields.currentPickupInfoDispControl);
+    sub_1C32BC4(&this->fields.currentPickupInfoDispControl, 0);
   }
   nextPickupInfoDispControl = (UnityEngine_Object_o *)this->fields.nextPickupInfoDispControl;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -347,19 +342,19 @@ void EventTradeListViewItemManager__DestroyList(EventTradeListViewItemManager_o 
   if ( UnityEngine_Object__op_Inequality(nextPickupInfoDispControl, 0, 0) )
   {
     p_nextPickupInfoDispControl = &this->fields.nextPickupInfoDispControl;
-    v6 = (UnityEngine_Component_o *)*p_nextPickupInfoDispControl;
+    v5 = (UnityEngine_Component_o *)*p_nextPickupInfoDispControl;
     if ( *p_nextPickupInfoDispControl )
     {
-      v18 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v6, 0);
+      v17 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v5, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71163704(v18, 0);
+      UnityEngine_Object__Destroy_71223640(v17, 0);
       *p_nextPickupInfoDispControl = 0;
-      sub_1C2D434(p_nextPickupInfoDispControl);
+      sub_1C32BC4(p_nextPickupInfoDispControl, 0);
       return;
     }
 LABEL_48:
-    sub_1C2D6EC(v6, v5);
+    sub_1C32E7C(v5);
   }
 }
 
@@ -372,36 +367,37 @@ void EventTradeListViewItemManager__DispPickupInfoBoard(
   int64_t Time; // x21
   System_DateTime_o v5; // x0
   System_DateTime_o v6; // x0
-  int64_t Time_41144944; // x0
-  const MethodInfo *v8; // x1
-  int64_t v9; // x22
+  int64_t Time_41266888; // x0
+  int64_t v8; // x22
   bool EntityListTargetTime; // w21
+  const MethodInfo *v10; // x1
   char v11; // w20
-  const MethodInfo *v12; // x4
-  UnityEngine_GameObject_o *v13; // x0
+  const MethodInfo *v12; // x1
+  const MethodInfo *v13; // x4
+  UnityEngine_GameObject_o *v14; // x0
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Object_o *infoPanel; // x20
-  UnityEngine_GameObject_o *v16; // x0
+  UnityEngine_GameObject_o *v17; // x0
   UnityEngine_Object_o *svtIndexPanel; // x20
-  UnityEngine_GameObject_o *v18; // x0
+  UnityEngine_GameObject_o *v19; // x0
   uint64_t dateData; // [xsp+0h] [xbp-40h] BYREF
-  System_Collections_Generic_List_EventTradePickupEntity__o *v20; // [xsp+8h] [xbp-38h] BYREF
+  System_Collections_Generic_List_EventTradePickupEntity__o *v21; // [xsp+8h] [xbp-38h] BYREF
   System_Collections_Generic_List_EventTradePickupEntity__o *pickupEntityList; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C21C7A & 1) == 0 )
+  if ( (byte_4C32415 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_EventTradePickupMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&System_DateTime_TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21C7A = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_EventTradePickupMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&System_DateTime_TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C32415 = 1;
   }
   pickupEntityList = 0;
-  v20 = 0;
+  v21 = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventTradePickupMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradePickupMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0);
@@ -410,65 +406,65 @@ void EventTradeListViewItemManager__DispPickupInfoBoard(
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
   v5.fields._dateData = (uint64_t)&dateData;
   v6.fields._dateData = System_DateTime__AddDays(v5, 1.0, 0).fields._dateData;
-  Time_41144944 = NetworkManager__getTime_41144944(v6, 0);
+  Time_41266888 = NetworkManager__getTime_41266888(v6, 0);
   if ( !Master_object )
     goto LABEL_32;
-  v9 = Time_41144944;
+  v8 = Time_41266888;
   EntityListTargetTime = EventTradePickupMaster__TryGetEntityListTargetTime(
                            (EventTradePickupMaster_o *)Master_object,
                            &pickupEntityList,
                            this->fields.currentEventId,
                            Time,
                            0);
-  Time_41144944 = EventTradePickupMaster__TryGetEntityListTargetTime(
+  Time_41266888 = EventTradePickupMaster__TryGetEntityListTargetTime(
                     (EventTradePickupMaster_o *)Master_object,
-                    &v20,
+                    &v21,
                     this->fields.currentEventId,
-                    v9,
+                    v8,
                     0);
   if ( !this->fields.currentPickupInfoDispControl )
     goto LABEL_32;
-  v11 = Time_41144944;
-  EventTradePickupInfoDispControl__Init(this->fields.currentPickupInfoDispControl, v8);
-  Time_41144944 = (int64_t)this->fields.nextPickupInfoDispControl;
-  if ( !Time_41144944 )
+  v11 = Time_41266888;
+  EventTradePickupInfoDispControl__Init(this->fields.currentPickupInfoDispControl, v10);
+  Time_41266888 = (int64_t)this->fields.nextPickupInfoDispControl;
+  if ( !Time_41266888 )
     goto LABEL_32;
-  EventTradePickupInfoDispControl__Init((EventTradePickupInfoDispControl_o *)Time_41144944, v8);
+  EventTradePickupInfoDispControl__Init((EventTradePickupInfoDispControl_o *)Time_41266888, v12);
   if ( !EntityListTargetTime )
   {
     if ( (v11 & 1) == 0 )
       return;
 LABEL_18:
-    Time_41144944 = (int64_t)this->fields.nextPickupInfoDispControl;
-    if ( !Time_41144944 )
+    Time_41266888 = (int64_t)this->fields.nextPickupInfoDispControl;
+    if ( !Time_41266888 )
       goto LABEL_32;
     EventTradePickupInfoDispControl__SetUi(
-      (EventTradePickupInfoDispControl_o *)Time_41144944,
+      (EventTradePickupInfoDispControl_o *)Time_41266888,
       this->fields.currentEventId,
-      v20,
+      v21,
       0,
-      v12);
-    Time_41144944 = (int64_t)this->fields.nextPickupInfoDispControl;
-    if ( !Time_41144944 )
+      v13);
+    Time_41266888 = (int64_t)this->fields.nextPickupInfoDispControl;
+    if ( !Time_41266888 )
       goto LABEL_32;
-    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_41144944, 0);
-    GameObjectExtensions__SetLocalPosition_35918392(gameObject, this->fields.NEXT_PICKUP_INFO_BOARD_POS, 0);
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_41266888, 0);
+    GameObjectExtensions__SetLocalPosition_36036656(gameObject, this->fields.NEXT_PICKUP_INFO_BOARD_POS, 0);
     goto LABEL_21;
   }
-  Time_41144944 = (int64_t)this->fields.currentPickupInfoDispControl;
-  if ( !Time_41144944 )
+  Time_41266888 = (int64_t)this->fields.currentPickupInfoDispControl;
+  if ( !Time_41266888 )
     goto LABEL_32;
   EventTradePickupInfoDispControl__SetUi(
-    (EventTradePickupInfoDispControl_o *)Time_41144944,
+    (EventTradePickupInfoDispControl_o *)Time_41266888,
     this->fields.currentEventId,
     pickupEntityList,
     1,
-    v12);
-  Time_41144944 = (int64_t)this->fields.currentPickupInfoDispControl;
-  if ( !Time_41144944 )
+    v13);
+  Time_41266888 = (int64_t)this->fields.currentPickupInfoDispControl;
+  if ( !Time_41266888 )
     goto LABEL_32;
-  v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_41144944, 0);
-  GameObjectExtensions__SetLocalPosition_35918392(v13, this->fields.CURRENT_PICKUP_INFO_BOARD_POS, 0);
+  v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_41266888, 0);
+  GameObjectExtensions__SetLocalPosition_36036656(v14, this->fields.CURRENT_PICKUP_INFO_BOARD_POS, 0);
   if ( (v11 & 1) != 0 )
     goto LABEL_18;
 LABEL_21:
@@ -477,26 +473,26 @@ LABEL_21:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(infoPanel, 0, 0) )
   {
-    Time_41144944 = (int64_t)this->fields.infoPanel;
-    if ( !Time_41144944 )
+    Time_41266888 = (int64_t)this->fields.infoPanel;
+    if ( !Time_41266888 )
       goto LABEL_32;
-    v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_41144944, 0);
-    GameObjectExtensions__SetLocalPositionY(v16, -33.0, 0);
+    v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_41266888, 0);
+    GameObjectExtensions__SetLocalPositionY(v17, -33.0, 0);
   }
   svtIndexPanel = (UnityEngine_Object_o *)this->fields.svtIndexPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(svtIndexPanel, 0, 0) )
   {
-    Time_41144944 = (int64_t)this->fields.svtIndexPanel;
-    if ( Time_41144944 )
+    Time_41266888 = (int64_t)this->fields.svtIndexPanel;
+    if ( Time_41266888 )
     {
-      v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_41144944, 0);
-      GameObjectExtensions__SetLocalPositionY(v18, -92.0, 0);
+      v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Time_41266888, 0);
+      GameObjectExtensions__SetLocalPositionY(v19, -92.0, 0);
       return;
     }
 LABEL_32:
-    sub_1C2D6EC(Time_41144944, v8);
+    sub_1C32E7C(Time_41266888);
   }
 }
 
@@ -526,55 +522,51 @@ System_Collections_Generic_List_EventTradeListViewItem__o *EventTradeListViewIte
   int32_t currentEventId; // w21
   EventTradePickupMaster_o *v6; // x22
   int64_t Time; // x0
-  __int64 v8; // x1
-  DataMasterBase_TMaster__TEntity__PKType__o *v9; // x21
-  _BOOL8 v10; // x0
-  __int64 v11; // x1
+  DataMasterBase_TMaster__TEntity__PKType__o *v8; // x21
+  _BOOL8 v9; // x0
   Il2CppObject *Entity; // x0
-  __int64 v13; // x1
-  EventTradeGoodsEntity_o *v14; // x23
+  EventTradeGoodsEntity_o *v11; // x23
   int32_t klass; // w25
-  int32_t v16; // w24
-  System_Action_o *v17; // x26
-  EventTradeListViewItem_o *v18; // x22
-  __int64 v19; // x0
-  __int64 v20; // x1
+  int32_t v13; // w24
+  System_Action_o *v14; // x26
+  EventTradeListViewItem_o *v15; // x22
+  __int64 v16; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v22; // x9
+  _QWORD *v18; // x9
   __int64 size; // x10
-  Il2CppClass **v24; // x0
-  System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+20h] [xbp-80h] BYREF
+  Il2CppClass **v20; // x0
+  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-80h] BYREF
   System_Collections_Generic_List_EventTradePickupEntity__o *pickupEntityList; // [xsp+38h] [xbp-68h] BYREF
 
-  if ( (byte_4C21C58 & 1) == 0 )
+  if ( (byte_4C323F3 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMaster_EventTradeGoodsMaster___);
-    sub_1C2D490(&Method_DataManager_GetMaster_EventTradePickupMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_DataMasterBase_EventTradeGoodsMaster__EventTradeGoodsEntity__int__GetEntity__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_EventTradePickupEntity__Dispose__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_EventTradePickupEntity__MoveNext__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_EventTradePickupEntity__get_Current__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_UpdateReceiveAllButtonState__);
-    sub_1C2D490(&EventTradeListViewItem_TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventTradeListViewItem__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventTradePickupEntity__GetEnumerator__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventTradeListViewItem___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_EventTradeListViewItem__TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C21C58 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeGoodsMaster___);
+    sub_1C32C20(&Method_DataManager_GetMaster_EventTradePickupMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_DataMasterBase_EventTradeGoodsMaster__EventTradeGoodsEntity__int__GetEntity__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventTradePickupEntity__Dispose__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventTradePickupEntity__MoveNext__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventTradePickupEntity__get_Current__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_UpdateReceiveAllButtonState__);
+    sub_1C32C20(&EventTradeListViewItem_TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventTradeListViewItem__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventTradePickupEntity__GetEnumerator__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventTradeListViewItem___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_EventTradeListViewItem__TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C323F3 = 1;
   }
   pickupEntityList = 0;
-  memset(&v27, 0, sizeof(v27));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_EventTradeListViewItem__TypeInfo);
+  memset(&v23, 0, sizeof(v23));
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventTradeListViewItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_EventTradeListViewItem___ctor__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventTradeListViewItem___ctor__);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventTradePickupMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradePickupMaster___);
   currentEventId = this->fields.currentEventId;
   v6 = (EventTradePickupMaster_o *)Master_object;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -586,70 +578,70 @@ System_Collections_Generic_List_EventTradeListViewItem__o *EventTradeListViewIte
     return (System_Collections_Generic_List_EventTradeListViewItem__o *)v3;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Time = (int64_t)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventTradeGoodsMaster___);
+  Time = (int64_t)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeGoodsMaster___);
   if ( !pickupEntityList )
 LABEL_29:
-    sub_1C2D6EC(Time, v8);
-  v9 = (DataMasterBase_TMaster__TEntity__PKType__o *)Time;
+    sub_1C32E7C(Time);
+  v8 = (DataMasterBase_TMaster__TEntity__PKType__o *)Time;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v26,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v22,
     (System_Collections_Generic_List_object__o *)pickupEntityList,
-    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_EventTradePickupEntity__GetEnumerator__);
-  v27 = v26;
+    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_EventTradePickupEntity__GetEnumerator__);
+  v23 = v22;
   while ( 1 )
   {
-    v10 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v27,
-            (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_EventTradePickupEntity__MoveNext__);
-    if ( !v10 )
-      break;
-    if ( !v27.fields._current )
-      sub_1C2D6EC(v10, v11);
+    v9 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+           &v23,
+           (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_EventTradePickupEntity__MoveNext__);
     if ( !v9 )
-      sub_1C2D6EC(v10, v11);
+      break;
+    if ( !v23.fields._current )
+      sub_1C32E7C(v9);
+    if ( !v8 )
+      sub_1C32E7C(v9);
     Entity = DataMasterBase_object__object__int___GetEntity(
-               v9,
-               (int32_t)v27.fields._current[1].klass,
-               (const MethodInfo_3387D98 *)Method_DataMasterBase_EventTradeGoodsMaster__EventTradeGoodsEntity__int__GetEntity__);
-    v14 = (EventTradeGoodsEntity_o *)Entity;
+               v8,
+               (int32_t)v23.fields._current[1].klass,
+               (const MethodInfo_3396838 *)Method_DataMasterBase_EventTradeGoodsMaster__EventTradeGoodsEntity__int__GetEntity__);
+    v11 = (EventTradeGoodsEntity_o *)Entity;
     if ( !Entity )
-      sub_1C2D6EC(0, v13);
+      sub_1C32E7C(0);
     klass = (int32_t)Entity[1].klass;
-    v16 = this->fields.currentEventId;
-    v17 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    v13 = this->fields.currentEventId;
+    v14 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
     System_Action___ctor(
-      v17,
+      v14,
       (Il2CppObject *)this,
       Method_EventTradeListViewItemManager_UpdateReceiveAllButtonState__,
       0);
-    v18 = (EventTradeListViewItem_o *)sub_1C2D6DC(EventTradeListViewItem_TypeInfo);
-    EventTradeListViewItem___ctor(v18, klass, v14, v16, v17, 0);
+    v15 = (EventTradeListViewItem_o *)sub_1C32E6C(EventTradeListViewItem_TypeInfo);
+    EventTradeListViewItem___ctor(v15, klass, v11, v13, v14, 0);
     if ( !v3 )
-      sub_1C2D6EC(v19, v20);
+      sub_1C32E7C(v16);
     items = v3->fields._items;
-    v22 = Method_System_Collections_Generic_List_EventTradeListViewItem__Add__;
+    v18 = Method_System_Collections_Generic_List_EventTradeListViewItem__Add__;
     ++v3->fields._version;
     if ( !items )
-      sub_1C2D6EC(v19, v20);
+      sub_1C32E7C(v16);
     size = v3->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v3,
-        (Il2CppObject *)v18,
-        *(const MethodInfo_3789B84 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+        (Il2CppObject *)v15,
+        *(const MethodInfo_37987BC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
     }
     else
     {
-      v24 = &items->obj.klass + size;
+      v20 = &items->obj.klass + size;
       v3->fields._size = size + 1;
-      v24[4] = (Il2CppClass *)v18;
-      sub_1C2D434(v24 + 4);
+      v20[4] = (Il2CppClass *)v15;
+      sub_1C32BC4(v20 + 4, v15);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v27,
-    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_EventTradePickupEntity__Dispose__);
+    &v23,
+    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_EventTradePickupEntity__Dispose__);
   return (System_Collections_Generic_List_EventTradeListViewItem__o *)v3;
 }
 
@@ -669,12 +661,12 @@ int64_t EventTradeListViewItemManager__GetUpdateTime(EventTradeListViewItemManag
   EventTradeTimeCalculation_c *v12; // x0
   uint64_t dateData; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C21C72 & 1) == 0 )
+  if ( (byte_4C3240D & 1) == 0 )
   {
-    sub_1C2D490(&System_DateTime_TypeInfo);
-    sub_1C2D490(&EventTradeTimeCalculation_TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C21C72 = 1;
+    sub_1C32C20(&System_DateTime_TypeInfo);
+    sub_1C32C20(&EventTradeTimeCalculation_TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C3240D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -724,8 +716,8 @@ void EventTradeListViewItemManager__Init(
         const MethodInfo *method)
 {
   EventTradeGoodsMaster_o *Master_object; // x0
-  __int64 v20; // x1
-  __int64 v21; // x2
+  struct EventTradeGoodsEntity_array *TradeGoodsEntityArray; // x0
+  struct EventTradeStoreEntity_array *OpenTradeStoreEntityArray; // x0
   struct EventTradeGoodsEntity_array *tradeGoodsEntities; // x8
   EventTradeGoodsEntity_o *v23; // x8
   int32_t eventPointItemId; // w8
@@ -736,64 +728,63 @@ void EventTradeListViewItemManager__Init(
   EventTradeAssetManager_o *assetManager; // x21
   System_Action_o *v30; // x22
 
-  if ( (byte_4C21C56 & 1) == 0 )
+  if ( (byte_4C323F1 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMaster_EventTradeGoodsMaster___);
-    sub_1C2D490(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&EventTradeAssetManager_TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager__Init_b__53_0__);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_13482/*"TRADE_EVENT_PUSH_BTN_LABEL"*/);
-    byte_4C21C56 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeGoodsMaster___);
+    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&EventTradeAssetManager_TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager__Init_b__53_0__);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_13485/*"TRADE_EVENT_PUSH_BTN_LABEL"*/);
+    byte_4C323F1 = 1;
   }
   this->fields.svtId = svtId;
   this->fields.currentEventId = eventId;
   this->fields.tradeCallback = tradeCallback;
-  sub_1C2D434(&this->fields.tradeCallback);
+  sub_1C32BC4(&this->fields.tradeCallback, tradeCallback);
   this->fields.rewardDialogCallBack = rewardDialogCallBack;
-  sub_1C2D434(&this->fields.rewardDialogCallBack);
+  sub_1C32BC4(&this->fields.rewardDialogCallBack, rewardDialogCallBack);
   this->fields.playVoiceAction = playVoice;
-  sub_1C2D434(&this->fields.playVoiceAction);
+  sub_1C32BC4(&this->fields.playVoiceAction, playVoice);
   this->fields.presentBoxOverDlg = boxOverDlg;
-  sub_1C2D434(&this->fields.presentBoxOverDlg);
+  sub_1C32BC4(&this->fields.presentBoxOverDlg, boxOverDlg);
   this->fields.boxOverDlgCloseCallBack = boxOverDlgCallBack;
-  sub_1C2D434(&this->fields.boxOverDlgCloseCallBack);
+  sub_1C32BC4(&this->fields.boxOverDlgCloseCallBack, boxOverDlgCallBack);
   this->fields.closeDialogCallBack = closeDialogCallBack;
-  sub_1C2D434(&this->fields.closeDialogCallBack);
+  sub_1C32BC4(&this->fields.closeDialogCallBack, closeDialogCallBack);
   this->fields.maskPanel = maskPanel;
-  sub_1C2D434(&this->fields.maskPanel);
+  sub_1C32BC4(&this->fields.maskPanel, maskPanel);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventTradeGoodsMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventTradeGoodsMaster___);
+  Master_object = (EventTradeGoodsMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeGoodsMaster___);
   if ( !Master_object )
     goto LABEL_19;
-  this->fields.tradeGoodsEntities = EventTradeGoodsMaster__GetTradeGoodsEntityArray(
-                                      Master_object,
-                                      this->fields.currentEventId,
-                                      0);
-  sub_1C2D434(&this->fields.tradeGoodsEntities);
-  Master_object = (EventTradeGoodsMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
+  TradeGoodsEntityArray = EventTradeGoodsMaster__GetTradeGoodsEntityArray(Master_object, this->fields.currentEventId, 0);
+  this->fields.tradeGoodsEntities = TradeGoodsEntityArray;
+  sub_1C32BC4(&this->fields.tradeGoodsEntities, TradeGoodsEntityArray);
+  Master_object = (EventTradeGoodsMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
   if ( !Master_object )
     goto LABEL_19;
-  this->fields.tradeStoreEntities = EventTradeStoreMaster__GetOpenTradeStoreEntityArray(
-                                      (EventTradeStoreMaster_o *)Master_object,
-                                      this->fields.currentEventId,
-                                      0);
-  Master_object = (EventTradeGoodsMaster_o *)sub_1C2D434(&this->fields.tradeStoreEntities);
+  OpenTradeStoreEntityArray = EventTradeStoreMaster__GetOpenTradeStoreEntityArray(
+                                (EventTradeStoreMaster_o *)Master_object,
+                                this->fields.currentEventId,
+                                0);
+  this->fields.tradeStoreEntities = OpenTradeStoreEntityArray;
+  Master_object = (EventTradeGoodsMaster_o *)sub_1C32BC4(&this->fields.tradeStoreEntities, OpenTradeStoreEntityArray);
   tradeGoodsEntities = this->fields.tradeGoodsEntities;
   if ( !tradeGoodsEntities )
     goto LABEL_19;
   if ( !LODWORD(tradeGoodsEntities->max_length) )
-    sub_1C2D6F4(Master_object, v20, v21);
+    sub_1C32E84(Master_object);
   v23 = tradeGoodsEntities->m_Items[0];
   if ( !v23 )
     goto LABEL_19;
   eventPointItemId = v23->fields.eventPointItemId;
   this->fields.selectTradeGoodsEntity = 0;
   this->fields.eventPointItemId = eventPointItemId;
-  sub_1C2D434(&this->fields.selectTradeGoodsEntity);
+  sub_1C32BC4(&this->fields.selectTradeGoodsEntity, 0);
   Master_object = (EventTradeGoodsMaster_o *)this->fields.touchPanel;
   if ( !Master_object )
     goto LABEL_19;
@@ -805,27 +796,27 @@ void EventTradeListViewItemManager__Init(
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, 0, 0);
   if ( !this->fields.assetManager )
   {
-    v25 = (EventTradeAssetManager_o *)sub_1C2D6DC(EventTradeAssetManager_TypeInfo);
+    v25 = (EventTradeAssetManager_o *)sub_1C32E6C(EventTradeAssetManager_TypeInfo);
     EventTradeAssetManager___ctor(v25, 0);
     this->fields.assetManager = v25;
-    sub_1C2D434(&this->fields.assetManager);
+    sub_1C32BC4(&this->fields.assetManager, v25);
   }
   this->fields.isButtonOn = EventRewardSaveData__GetTradeNotification(0);
   EventTradeListViewItemManager__UpdateNoticeButtonDisp(this, v26);
   tradeNoticeLb = this->fields.tradeNoticeLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Master_object = (EventTradeGoodsMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13482/*"TRADE_EVENT_PUSH_BTN_LABEL"*/, 0);
+  Master_object = (EventTradeGoodsMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13485/*"TRADE_EVENT_PUSH_BTN_LABEL"*/, 0);
   if ( !tradeNoticeLb
     || (UILabel__set_text(tradeNoticeLb, (System_String_o *)Master_object, 0),
         EventTradeListViewItemManager__UpdateTradeQuoteLb(this, v28),
         assetManager = this->fields.assetManager,
-        v30 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo),
+        v30 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo),
         System_Action___ctor(v30, (Il2CppObject *)this, Method_EventTradeListViewItemManager__Init_b__53_0__, 0),
         !assetManager) )
   {
 LABEL_19:
-    sub_1C2D6EC(Master_object, v20);
+    sub_1C32E7C(Master_object);
   }
   EventTradeAssetManager__GetAssets(assetManager, eventId, v30, 0);
 }
@@ -835,7 +826,7 @@ bool EventTradeListViewItemManager__IsAlreadyOpenTodayDialog(
         EventTradeListViewItemManager_o *this,
         const MethodInfo *method)
 {
-  System_String_o *String_71122516; // x0
+  System_String_o *String_71182452; // x0
   _BOOL8 v3; // x0
   const MethodInfo *v4; // x1
   int64_t v5; // x20
@@ -846,15 +837,15 @@ bool EventTradeListViewItemManager__IsAlreadyOpenTodayDialog(
   int64_t v11; // x19
   int64_t result; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C21C71 & 1) == 0 )
+  if ( (byte_4C3240C & 1) == 0 )
   {
-    sub_1C2D490(&EventTradeTimeCalculation_TypeInfo);
-    sub_1C2D490(&StringLiteral_14566/*"TradeNotificationDialogOpenTime"*/);
-    byte_4C21C71 = 1;
+    sub_1C32C20(&EventTradeTimeCalculation_TypeInfo);
+    sub_1C32C20(&StringLiteral_14569/*"TradeNotificationDialogOpenTime"*/);
+    byte_4C3240C = 1;
   }
   result = 0;
-  String_71122516 = UnityEngine_PlayerPrefs__GetString_71122516((System_String_o *)StringLiteral_14566/*"TradeNotificationDialogOpenTime"*/, 0);
-  v3 = System_Int64__TryParse(String_71122516, &result, 0);
+  String_71182452 = UnityEngine_PlayerPrefs__GetString_71182452((System_String_o *)StringLiteral_14569/*"TradeNotificationDialogOpenTime"*/, 0);
+  v3 = System_Int64__TryParse(String_71182452, &result, 0);
   if ( v3 )
     v5 = result;
   else
@@ -882,64 +873,63 @@ bool EventTradeListViewItemManager__IsOverPossessionLimit(
 {
   UserGameEntity_o *SelfUserGame; // x20
   __int64 Master_object; // x0
-  __int64 v4; // x1
-  UserServantMaster_o *v5; // x21
-  Il2CppObject *v6; // x19
-  CommonUI_o *v7; // x19
-  int32_t v8; // w21
+  UserServantMaster_o *v4; // x21
+  Il2CppObject *v5; // x19
+  CommonUI_o *v6; // x19
+  int32_t v7; // w21
   int32_t svtKeep; // w20
-  ServantFrameShortDlgComponent_CallbackFunc_o *v10; // x22
-  Il2CppObject *v11; // x23
+  ServantFrameShortDlgComponent_CallbackFunc_o *v9; // x22
+  Il2CppObject *v10; // x23
   struct EventTradeListViewItemManager___c_StaticFields *static_fields; // x0
-  CommonUI_o *v13; // x0
-  int32_t v14; // w1
-  int32_t v15; // w2
-  int32_t v16; // w3
-  CommonUI_o *v17; // x19
-  int32_t v18; // w21
+  CommonUI_o *v12; // x0
+  int32_t v13; // w1
+  int32_t v14; // w2
+  int32_t v15; // w3
+  CommonUI_o *v16; // x19
+  int32_t v17; // w21
   int32_t svtEquipKeep; // w20
-  Il2CppObject *v20; // x23
-  struct EventTradeListViewItemManager___c_StaticFields *v21; // x0
-  bool v22; // w8
+  Il2CppObject *v19; // x23
+  struct EventTradeListViewItemManager___c_StaticFields *v20; // x0
+  bool v21; // w8
   bool result; // w0
   int32_t Count; // w19
-  CommonUI_o *v25; // x21
-  BalanceConfig_c *v26; // x8
-  Il2CppObject *v27; // x23
-  struct EventTradeListViewItemManager___c_StaticFields *v28; // x0
+  CommonUI_o *v24; // x21
+  BalanceConfig_c *v25; // x8
+  Il2CppObject *v26; // x23
+  struct EventTradeListViewItemManager___c_StaticFields *v27; // x0
   int32_t servantEquipSum[2]; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C21C76 & 1) == 0 )
+  if ( (byte_4C32411 & 1) == 0 )
   {
-    sub_1C2D490(&ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMaster_UserCommandCodeMaster___);
-    sub_1C2D490(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__IsOverPossessionLimit_b__86_0__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__IsOverPossessionLimit_b__86_1__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__IsOverPossessionLimit_b__86_4__);
-    sub_1C2D490(&EventTradeListViewItemManager___c_TypeInfo);
-    byte_4C21C76 = 1;
+    sub_1C32C20(&ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMaster_UserCommandCodeMaster___);
+    sub_1C32C20(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__IsOverPossessionLimit_b__86_0__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__IsOverPossessionLimit_b__86_1__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__IsOverPossessionLimit_b__86_4__);
+    sub_1C32C20(&EventTradeListViewItemManager___c_TypeInfo);
+    byte_4C32411 = 1;
   }
   *(_QWORD *)servantEquipSum = 0;
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !Master_object )
     goto LABEL_45;
-  v5 = (UserServantMaster_o *)Master_object;
+  v4 = (UserServantMaster_o *)Master_object;
   UserServantMaster__getCount((UserServantMaster_o *)Master_object, &servantEquipSum[1], servantEquipSum, 1, 0);
-  v6 = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserCommandCodeMaster___);
-  if ( UserServantMaster__CheckServantAdd(v5, 1, 0) )
+  v5 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserCommandCodeMaster___);
+  if ( UserServantMaster__CheckServantAdd(v4, 1, 0) )
   {
-    Master_object = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Master_object = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( SelfUserGame )
     {
-      v7 = (CommonUI_o *)Master_object;
-      v8 = servantEquipSum[1];
+      v6 = (CommonUI_o *)Master_object;
+      v7 = servantEquipSum[1];
       svtKeep = SelfUserGame->fields.svtKeep;
       Master_object = (__int64)EventTradeListViewItemManager___c_TypeInfo;
       if ( !EventTradeListViewItemManager___c_TypeInfo->_2.cctor_finished )
@@ -947,45 +937,45 @@ bool EventTradeListViewItemManager__IsOverPossessionLimit(
         j_il2cpp_runtime_class_init_0(EventTradeListViewItemManager___c_TypeInfo);
         Master_object = (__int64)EventTradeListViewItemManager___c_TypeInfo;
       }
-      v10 = *(ServantFrameShortDlgComponent_CallbackFunc_o **)(*(_QWORD *)(Master_object + 184) + 24LL);
-      if ( !v10 )
+      v9 = *(ServantFrameShortDlgComponent_CallbackFunc_o **)(*(_QWORD *)(Master_object + 184) + 24LL);
+      if ( !v9 )
       {
         if ( !*(_DWORD *)(Master_object + 224) )
         {
           j_il2cpp_runtime_class_init_0(Master_object);
           Master_object = (__int64)EventTradeListViewItemManager___c_TypeInfo;
         }
-        v11 = **(Il2CppObject ***)(Master_object + 184);
-        v10 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1C2D6DC(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
+        v10 = **(Il2CppObject ***)(Master_object + 184);
+        v9 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1C32E6C(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
         ServantFrameShortDlgComponent_CallbackFunc___ctor(
+          v9,
           v10,
-          v11,
           Method_EventTradeListViewItemManager___c__IsOverPossessionLimit_b__86_0__,
           0);
         static_fields = EventTradeListViewItemManager___c_TypeInfo->static_fields;
-        static_fields->__9__86_0 = v10;
-        Master_object = sub_1C2D434(&static_fields->__9__86_0);
+        static_fields->__9__86_0 = v9;
+        Master_object = sub_1C32BC4(&static_fields->__9__86_0, v9);
       }
-      if ( v7 )
+      if ( v6 )
       {
+        v12 = v6;
         v13 = v7;
-        v14 = v8;
-        v15 = svtKeep;
-        v16 = 0;
+        v14 = svtKeep;
+        v15 = 0;
         goto LABEL_42;
       }
     }
 LABEL_45:
-    sub_1C2D6EC(Master_object, v4);
+    sub_1C32E7C(Master_object);
   }
-  Master_object = UserServantMaster__CheckEquipAdd(v5, 1, 1, 0);
+  Master_object = UserServantMaster__CheckEquipAdd(v4, 1, 1, 0);
   if ( (Master_object & 1) != 0 )
   {
-    Master_object = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Master_object = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !SelfUserGame )
       goto LABEL_45;
-    v17 = (CommonUI_o *)Master_object;
-    v18 = servantEquipSum[0];
+    v16 = (CommonUI_o *)Master_object;
+    v17 = servantEquipSum[0];
     svtEquipKeep = SelfUserGame->fields.svtEquipKeep;
     Master_object = (__int64)EventTradeListViewItemManager___c_TypeInfo;
     if ( !EventTradeListViewItemManager___c_TypeInfo->_2.cctor_finished )
@@ -993,91 +983,91 @@ LABEL_45:
       j_il2cpp_runtime_class_init_0(EventTradeListViewItemManager___c_TypeInfo);
       Master_object = (__int64)EventTradeListViewItemManager___c_TypeInfo;
     }
-    v10 = *(ServantFrameShortDlgComponent_CallbackFunc_o **)(*(_QWORD *)(Master_object + 184) + 32LL);
-    if ( !v10 )
+    v9 = *(ServantFrameShortDlgComponent_CallbackFunc_o **)(*(_QWORD *)(Master_object + 184) + 32LL);
+    if ( !v9 )
     {
       if ( !*(_DWORD *)(Master_object + 224) )
       {
         j_il2cpp_runtime_class_init_0(Master_object);
         Master_object = (__int64)EventTradeListViewItemManager___c_TypeInfo;
       }
-      v20 = **(Il2CppObject ***)(Master_object + 184);
-      v10 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1C2D6DC(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
+      v19 = **(Il2CppObject ***)(Master_object + 184);
+      v9 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1C32E6C(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
       ServantFrameShortDlgComponent_CallbackFunc___ctor(
-        v10,
-        v20,
+        v9,
+        v19,
         Method_EventTradeListViewItemManager___c__IsOverPossessionLimit_b__86_1__,
         0);
-      v21 = EventTradeListViewItemManager___c_TypeInfo->static_fields;
-      v21->__9__86_1 = v10;
-      Master_object = sub_1C2D434(&v21->__9__86_1);
+      v20 = EventTradeListViewItemManager___c_TypeInfo->static_fields;
+      v20->__9__86_1 = v9;
+      Master_object = sub_1C32BC4(&v20->__9__86_1, v9);
     }
-    if ( !v17 )
+    if ( !v16 )
       goto LABEL_45;
-    v16 = 1;
+    v15 = 1;
+    v12 = v16;
     v13 = v17;
-    v14 = v18;
   }
   else
   {
-    if ( !v6 )
+    if ( !v5 )
       goto LABEL_45;
-    v22 = UserCommandCodeMaster__CheckCommandCodeAdd((UserCommandCodeMaster_o *)v6, 0, 0);
+    v21 = UserCommandCodeMaster__CheckCommandCodeAdd((UserCommandCodeMaster_o *)v5, 0, 0);
     result = 0;
-    if ( !v22 )
+    if ( !v21 )
       return result;
-    Count = UserCommandCodeMaster__getCount((UserCommandCodeMaster_o *)v6, 0);
-    Master_object = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Count = UserCommandCodeMaster__getCount((UserCommandCodeMaster_o *)v5, 0);
+    Master_object = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !SelfUserGame )
       goto LABEL_45;
-    v25 = (CommonUI_o *)Master_object;
-    if ( !byte_4C2162B )
+    v24 = (CommonUI_o *)Master_object;
+    if ( !byte_4C31CFA )
     {
-      sub_1C2D490(&BalanceConfig_TypeInfo);
-      byte_4C2162B = 1;
+      sub_1C32C20(&BalanceConfig_TypeInfo);
+      byte_4C31CFA = 1;
     }
-    v26 = BalanceConfig_TypeInfo;
+    v25 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v26 = BalanceConfig_TypeInfo;
+      v25 = BalanceConfig_TypeInfo;
     }
     Master_object = (__int64)EventTradeListViewItemManager___c_TypeInfo;
-    svtEquipKeep = v26->static_fields->CommandCodeFrameMax;
+    svtEquipKeep = v25->static_fields->CommandCodeFrameMax;
     if ( !EventTradeListViewItemManager___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(EventTradeListViewItemManager___c_TypeInfo);
       Master_object = (__int64)EventTradeListViewItemManager___c_TypeInfo;
     }
-    v10 = *(ServantFrameShortDlgComponent_CallbackFunc_o **)(*(_QWORD *)(Master_object + 184) + 40LL);
-    if ( !v10 )
+    v9 = *(ServantFrameShortDlgComponent_CallbackFunc_o **)(*(_QWORD *)(Master_object + 184) + 40LL);
+    if ( !v9 )
     {
       if ( !*(_DWORD *)(Master_object + 224) )
       {
         j_il2cpp_runtime_class_init_0(Master_object);
         Master_object = (__int64)EventTradeListViewItemManager___c_TypeInfo;
       }
-      v27 = **(Il2CppObject ***)(Master_object + 184);
-      v10 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1C2D6DC(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
+      v26 = **(Il2CppObject ***)(Master_object + 184);
+      v9 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1C32E6C(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
       ServantFrameShortDlgComponent_CallbackFunc___ctor(
-        v10,
-        v27,
+        v9,
+        v26,
         Method_EventTradeListViewItemManager___c__IsOverPossessionLimit_b__86_4__,
         0);
-      v28 = EventTradeListViewItemManager___c_TypeInfo->static_fields;
-      v28->__9__86_4 = v10;
-      Master_object = sub_1C2D434(&v28->__9__86_4);
+      v27 = EventTradeListViewItemManager___c_TypeInfo->static_fields;
+      v27->__9__86_4 = v9;
+      Master_object = sub_1C32BC4(&v27->__9__86_4, v9);
     }
-    if ( !v25 )
+    if ( !v24 )
       goto LABEL_45;
-    v16 = 2;
-    v13 = v25;
-    v14 = Count;
+    v15 = 2;
+    v12 = v24;
+    v13 = Count;
   }
-  v15 = svtEquipKeep;
+  v14 = svtEquipKeep;
 LABEL_42:
-  CommonUI__OpenSvtFrameShortDlg(v13, v14, v15, v16, 1, v10, 4, 0);
-  Master_object = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+  CommonUI__OpenSvtFrameShortDlg(v12, v13, v14, v15, 1, v9, 4, 0);
+  Master_object = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_45;
   ServantAssetLoadManager__EndRetryTransition((ServantAssetLoadManager_o *)Master_object, 0);
@@ -1101,85 +1091,83 @@ bool EventTradeListViewItemManager__IsOverPresentBoxLimit(
   Il2CppObject *v12; // x22
   struct EventTradeListViewItemManager___c_StaticFields *v13; // x0
   System_Collections_Generic_IEnumerable_TResult__o *v14; // x22
-  __int64 v15; // x1
   Il2CppObject *Master_object; // x20
-  NetworkManager_c *v17; // x0
+  NetworkManager_c *v16; // x0
   UserPresentBoxEntity_array *VaildList; // x20
-  Il2CppObject *v19; // x23
-  System_Collections_Generic_HashSet_int__o *v20; // x21
+  Il2CppObject *v18; // x23
+  System_Collections_Generic_HashSet_int__o *v19; // x21
   System_Collections_Generic_IEnumerable_TResult__c *klass; // x8
-  __int64 v22; // x9
+  __int64 v21; // x9
   int32_t *p_offset; // x10
-  __int64 v24; // x0
-  __int64 v25; // x1
-  __int64 v26; // x22
-  __int64 v27; // x8
-  __int64 v28; // x9
-  int *v29; // x10
-  __int64 v30; // x0
-  __int64 v31; // x8
-  __int64 v32; // x9
-  int *v33; // x10
-  __int64 v34; // x0
-  __int64 v35; // x0
-  __int64 v36; // x1
+  __int64 v23; // x0
+  __int64 v24; // x22
+  __int64 v25; // x8
+  __int64 v26; // x9
+  int *v27; // x10
+  __int64 v28; // x0
+  __int64 v29; // x8
+  __int64 v30; // x9
+  int *v31; // x10
+  __int64 v32; // x0
+  __int64 v33; // x0
   GiftEntity_array *GiftListById; // x24
   _BOOL8 IsNullOrEmpty; // x0
-  __int64 v39; // x1
-  __int64 v40; // x2
   int max_length; // w8
   int i; // w29
-  GiftEntity_o *v43; // x8
-  __int64 v44; // x8
-  __int64 v45; // x9
-  int *v46; // x10
-  __int64 v47; // x0
+  GiftEntity_o *v38; // x8
+  __int64 v39; // x8
+  __int64 v40; // x9
+  int *v41; // x10
+  __int64 v42; // x0
   int32_t count; // w21
-  BalanceConfig_c *v49; // x0
+  BalanceConfig_c *v44; // x0
   int32_t PresentBoxMax; // w23
-  int32_t v51; // w24
-  System_String_o *v52; // x0
-  __int64 v53; // x2
-  __int64 v54; // x3
-  __int64 v55; // x4
-  BalanceConfig_c *v56; // x8
-  System_String_o *v57; // x20
-  Il2CppObject *v58; // x0
-  System_String_o *v59; // x0
+  int32_t v46; // w24
+  System_String_o *v47; // x0
+  __int64 v48; // x2
+  __int64 v49; // x3
+  __int64 v50; // x4
+  __int64 v51; // x5
+  __int64 v52; // x6
+  __int64 v53; // x7
+  BalanceConfig_c *v54; // x8
+  System_String_o *v55; // x20
+  Il2CppObject *v56; // x0
+  System_String_o *v57; // x0
   PresentBoxOverDialog_o *presentBoxOverDlg; // x20
-  System_String_o *v61; // x21
-  PresentBoxOverDialog_ClickDelegate_o *v62; // x22
-  int32_t v64; // [xsp+Ch] [xbp-64h] BYREF
+  System_String_o *v59; // x21
+  PresentBoxOverDialog_ClickDelegate_o *v60; // x22
+  int32_t v62; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C21C77 & 1) == 0 )
+  if ( (byte_4C32412 & 1) == 0 )
   {
-    sub_1C2D490(&BalanceConfig_TypeInfo);
-    sub_1C2D490(&PresentBoxOverDialog_ClickDelegate_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_1C2D490(&Method_DataManager_GetMaster_UserPresentBoxMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_System_Linq_Enumerable_Select_ListViewItem__EventTradeGoodsEntity___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_Where_ListViewItem___);
-    sub_1C2D490(&Method_EventTradeListViewItemManager__IsOverPresentBoxLimit_b__87_2__);
-    sub_1C2D490(&System_Func_ListViewItem__bool__TypeInfo);
-    sub_1C2D490(&System_Func_ListViewItem__EventTradeGoodsEntity__TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_HashSet_int__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_HashSet_int___ctor__);
-    sub_1C2D490(&Method_System_Collections_Generic_HashSet_int__get_Count__);
-    sub_1C2D490(&System_Collections_Generic_HashSet_int__TypeInfo);
-    sub_1C2D490(&System_IDisposable_TypeInfo);
-    sub_1C2D490(&System_Collections_Generic_IEnumerable_EventTradeGoodsEntity__TypeInfo);
-    sub_1C2D490(&System_Collections_Generic_IEnumerator_EventTradeGoodsEntity__TypeInfo);
-    sub_1C2D490(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C2D490(&int_TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__IsOverPresentBoxLimit_b__87_0__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__IsOverPresentBoxLimit_b__87_1__);
-    sub_1C2D490(&EventTradeListViewItemManager___c_TypeInfo);
-    sub_1C2D490(&StringLiteral_13454/*"TRADE_CHECK_PRESENT_NUM_TXT"*/);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C21C77 = 1;
+    sub_1C32C20(&BalanceConfig_TypeInfo);
+    sub_1C32C20(&PresentBoxOverDialog_ClickDelegate_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_1C32C20(&Method_DataManager_GetMaster_UserPresentBoxMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_System_Linq_Enumerable_Select_ListViewItem__EventTradeGoodsEntity___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_Where_ListViewItem___);
+    sub_1C32C20(&Method_EventTradeListViewItemManager__IsOverPresentBoxLimit_b__87_2__);
+    sub_1C32C20(&System_Func_ListViewItem__bool__TypeInfo);
+    sub_1C32C20(&System_Func_ListViewItem__EventTradeGoodsEntity__TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_HashSet_int__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_HashSet_int___ctor__);
+    sub_1C32C20(&Method_System_Collections_Generic_HashSet_int__get_Count__);
+    sub_1C32C20(&System_Collections_Generic_HashSet_int__TypeInfo);
+    sub_1C32C20(&System_IDisposable_TypeInfo);
+    sub_1C32C20(&System_Collections_Generic_IEnumerable_EventTradeGoodsEntity__TypeInfo);
+    sub_1C32C20(&System_Collections_Generic_IEnumerator_EventTradeGoodsEntity__TypeInfo);
+    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C32C20(&int_TypeInfo);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__IsOverPresentBoxLimit_b__87_0__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__IsOverPresentBoxLimit_b__87_1__);
+    sub_1C32C20(&EventTradeListViewItemManager___c_TypeInfo);
+    sub_1C32C20(&StringLiteral_13457/*"TRADE_CHECK_PRESENT_NUM_TXT"*/);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C32412 = 1;
   }
   v3 = EventTradeListViewItemManager___c_TypeInfo;
   itemList = this->fields.itemList;
@@ -1197,7 +1185,7 @@ bool EventTradeListViewItemManager__IsOverPresentBoxLimit(
       v3 = EventTradeListViewItemManager___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__87_0 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_ListViewItem__bool__TypeInfo);
+    _9__87_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_ListViewItem__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__87_0,
       v6,
@@ -1205,12 +1193,12 @@ bool EventTradeListViewItemManager__IsOverPresentBoxLimit(
       0);
     static_fields = EventTradeListViewItemManager___c_TypeInfo->static_fields;
     static_fields->__9__87_0 = (struct System_Func_ListViewItem__bool__o *)_9__87_0;
-    sub_1C2D434(&static_fields->__9__87_0);
+    sub_1C32BC4(&static_fields->__9__87_0, _9__87_0);
   }
   v8 = System_Linq_Enumerable__Where_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)itemList,
          (System_Func_TSource__bool__o *)_9__87_0,
-         (const MethodInfo_3115108 *)Method_System_Linq_Enumerable_Where_ListViewItem___);
+         (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_ListViewItem___);
   v9 = EventTradeListViewItemManager___c_TypeInfo;
   v10 = v8;
   if ( !EventTradeListViewItemManager___c_TypeInfo->_2.cctor_finished )
@@ -1227,7 +1215,7 @@ bool EventTradeListViewItemManager__IsOverPresentBoxLimit(
       v9 = EventTradeListViewItemManager___c_TypeInfo;
     }
     v12 = (Il2CppObject *)v9->static_fields->__9;
-    _9__87_1 = (System_Func_object__object__o *)sub_1C2D6DC(System_Func_ListViewItem__EventTradeGoodsEntity__TypeInfo);
+    _9__87_1 = (System_Func_object__object__o *)sub_1C32E6C(System_Func_ListViewItem__EventTradeGoodsEntity__TypeInfo);
     System_Func_object__object____ctor(
       _9__87_1,
       v12,
@@ -1235,202 +1223,202 @@ bool EventTradeListViewItemManager__IsOverPresentBoxLimit(
       0);
     v13 = EventTradeListViewItemManager___c_TypeInfo->static_fields;
     v13->__9__87_1 = (struct System_Func_ListViewItem__EventTradeGoodsEntity__o *)_9__87_1;
-    sub_1C2D434(&v13->__9__87_1);
+    sub_1C32BC4(&v13->__9__87_1, _9__87_1);
   }
   v14 = System_Linq_Enumerable__Select_object__object_(
           v10,
           (System_Func_TSource__TResult__o *)_9__87_1,
-          (const MethodInfo_310501C *)Method_System_Linq_Enumerable_Select_ListViewItem__EventTradeGoodsEntity___);
+          (const MethodInfo_3113ABC *)Method_System_Linq_Enumerable_Select_ListViewItem__EventTradeGoodsEntity___);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserPresentBoxMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserPresentBoxMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C211E1 )
+  if ( !byte_4C31812 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C211E1 = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C31812 = 1;
   }
-  v17 = NetworkManager_TypeInfo;
+  v16 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v17 = NetworkManager_TypeInfo;
+    v16 = NetworkManager_TypeInfo;
   }
   if ( !Master_object )
     goto LABEL_80;
   VaildList = UserPresentBoxMaster__getVaildList(
                 (UserPresentBoxMaster_o *)Master_object,
-                v17->static_fields->userIdNumber,
+                v16->static_fields->userIdNumber,
                 0);
-  v19 = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_GiftMaster___);
-  v20 = (System_Collections_Generic_HashSet_int__o *)sub_1C2D6DC(System_Collections_Generic_HashSet_int__TypeInfo);
+  v18 = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_GiftMaster___);
+  v19 = (System_Collections_Generic_HashSet_int__o *)sub_1C32E6C(System_Collections_Generic_HashSet_int__TypeInfo);
   System_Collections_Generic_HashSet_int____ctor(
-    v20,
-    (const MethodInfo_363A780 *)Method_System_Collections_Generic_HashSet_int___ctor__);
+    v19,
+    (const MethodInfo_3649220 *)Method_System_Collections_Generic_HashSet_int___ctor__);
   if ( !v14 )
     goto LABEL_80;
   klass = v14->klass;
-  v22 = *(unsigned __int16 *)&v14->klass->_2.rank;
+  v21 = *(unsigned __int16 *)&v14->klass->_2.rank;
   if ( *(_WORD *)&v14->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_EventTradeGoodsEntity__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_EventTradeGoodsEntity__TypeInfo )
     {
-      --v22;
+      --v21;
       p_offset += 4;
-      if ( !v22 )
+      if ( !v21 )
         goto LABEL_29;
     }
-    v24 = (__int64)&klass->vtable[*p_offset];
+    v23 = (__int64)&klass->vtable[*p_offset];
   }
   else
   {
 LABEL_29:
-    v24 = sub_1C7DCA8(v14, System_Collections_Generic_IEnumerable_EventTradeGoodsEntity__TypeInfo, 0);
+    v23 = sub_1C83438(v14, System_Collections_Generic_IEnumerable_EventTradeGoodsEntity__TypeInfo, 0);
   }
-  v26 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TResult__o *, _QWORD))v24)(
+  v24 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TResult__o *, _QWORD))v23)(
           v14,
-          *(_QWORD *)(v24 + 8));
-  if ( !v26 )
-    sub_1C2D6EC(0, v25);
+          *(_QWORD *)(v23 + 8));
+  if ( !v24 )
+    sub_1C32E7C(0);
   while ( 1 )
   {
-    v27 = *(_QWORD *)v26;
-    v28 = *(unsigned __int16 *)(*(_QWORD *)v26 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v26 + 302LL) )
+    v25 = *(_QWORD *)v24;
+    v26 = *(unsigned __int16 *)(*(_QWORD *)v24 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v24 + 302LL) )
     {
-      v29 = (int *)(*(_QWORD *)(v27 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v29 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v27 = (int *)(*(_QWORD *)(v25 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v27 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v28;
-        v29 += 4;
-        if ( !v28 )
+        --v26;
+        v27 += 4;
+        if ( !v26 )
           goto LABEL_36;
       }
-      v30 = v27 + 16LL * *v29 + 312;
+      v28 = v25 + 16LL * *v27 + 312;
     }
     else
     {
 LABEL_36:
-      v30 = sub_1C7DCA8(v26, System_Collections_IEnumerator_TypeInfo, 0);
+      v28 = sub_1C83438(v24, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v30)(v26, *(_QWORD *)(v30 + 8)) & 1) == 0 )
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v28)(v24, *(_QWORD *)(v28 + 8)) & 1) == 0 )
       break;
-    v31 = *(_QWORD *)v26;
-    v32 = *(unsigned __int16 *)(*(_QWORD *)v26 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v26 + 302LL) )
+    v29 = *(_QWORD *)v24;
+    v30 = *(unsigned __int16 *)(*(_QWORD *)v24 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v24 + 302LL) )
     {
-      v33 = (int *)(*(_QWORD *)(v31 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_EventTradeGoodsEntity__c **)v33 - 1) != System_Collections_Generic_IEnumerator_EventTradeGoodsEntity__TypeInfo )
+      v31 = (int *)(*(_QWORD *)(v29 + 176) + 8LL);
+      while ( *((System_Collections_Generic_IEnumerator_EventTradeGoodsEntity__c **)v31 - 1) != System_Collections_Generic_IEnumerator_EventTradeGoodsEntity__TypeInfo )
       {
-        --v32;
-        v33 += 4;
-        if ( !v32 )
+        --v30;
+        v31 += 4;
+        if ( !v30 )
           goto LABEL_43;
       }
-      v34 = v31 + 16LL * *v33 + 312;
+      v32 = v29 + 16LL * *v31 + 312;
     }
     else
     {
 LABEL_43:
-      v34 = sub_1C7DCA8(v26, System_Collections_Generic_IEnumerator_EventTradeGoodsEntity__TypeInfo, 0);
+      v32 = sub_1C83438(v24, System_Collections_Generic_IEnumerator_EventTradeGoodsEntity__TypeInfo, 0);
     }
-    v35 = (*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v26, *(_QWORD *)(v34 + 8));
-    if ( !v35 )
-      sub_1C2D6EC(0, v36);
-    if ( !v19 )
-      sub_1C2D6EC(v35, v36);
-    GiftListById = GiftMaster__GetGiftListById((GiftMaster_o *)v19, *(_DWORD *)(v35 + 44), 0);
+    v33 = (*(__int64 (__fastcall **)(__int64, _QWORD))v32)(v24, *(_QWORD *)(v32 + 8));
+    if ( !v33 )
+      sub_1C32E7C(0);
+    if ( !v18 )
+      sub_1C32E7C(v33);
+    GiftListById = GiftMaster__GetGiftListById((GiftMaster_o *)v18, *(_DWORD *)(v33 + 44), 0);
     IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)GiftListById, 0);
     if ( !IsNullOrEmpty )
     {
       if ( !GiftListById )
-        sub_1C2D6EC(IsNullOrEmpty, v39);
+        sub_1C32E7C(IsNullOrEmpty);
       max_length = GiftListById->max_length;
       if ( max_length >= 1 )
       {
         for ( i = 0; i < max_length; ++i )
         {
           if ( i >= (unsigned int)max_length )
-            sub_1C2D6F4(IsNullOrEmpty, v39, v40);
-          v43 = GiftListById->m_Items[i];
-          if ( !v43 )
-            sub_1C2D6EC(IsNullOrEmpty, v39);
-          if ( !v20 )
-            sub_1C2D6EC(IsNullOrEmpty, v39);
+            sub_1C32E84(IsNullOrEmpty);
+          v38 = GiftListById->m_Items[i];
+          if ( !v38 )
+            sub_1C32E7C(IsNullOrEmpty);
+          if ( !v19 )
+            sub_1C32E7C(IsNullOrEmpty);
           IsNullOrEmpty = System_Collections_Generic_HashSet_int___Add(
-                            v20,
-                            v43->fields.type,
-                            (const MethodInfo_363B984 *)Method_System_Collections_Generic_HashSet_int__Add__);
+                            v19,
+                            v38->fields.type,
+                            (const MethodInfo_364A424 *)Method_System_Collections_Generic_HashSet_int__Add__);
           max_length = GiftListById->max_length;
         }
       }
     }
   }
-  v44 = *(_QWORD *)v26;
-  v45 = *(unsigned __int16 *)(*(_QWORD *)v26 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v26 + 302LL) )
+  v39 = *(_QWORD *)v24;
+  v40 = *(unsigned __int16 *)(*(_QWORD *)v24 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v24 + 302LL) )
   {
-    v46 = (int *)(*(_QWORD *)(v44 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v46 - 1) != System_IDisposable_TypeInfo )
+    v41 = (int *)(*(_QWORD *)(v39 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v41 - 1) != System_IDisposable_TypeInfo )
     {
-      --v45;
-      v46 += 4;
-      if ( !v45 )
+      --v40;
+      v41 += 4;
+      if ( !v40 )
         goto LABEL_60;
     }
-    v47 = v44 + 16LL * *v46 + 312;
+    v42 = v39 + 16LL * *v41 + 312;
   }
   else
   {
 LABEL_60:
-    v47 = sub_1C7DCA8(v26, System_IDisposable_TypeInfo, 0);
+    v42 = sub_1C83438(v24, System_IDisposable_TypeInfo, 0);
   }
-  v17 = (NetworkManager_c *)(*(__int64 (__fastcall **)(__int64, _QWORD))v47)(v26, *(_QWORD *)(v47 + 8));
-  if ( !VaildList || !v20 )
+  v16 = (NetworkManager_c *)(*(__int64 (__fastcall **)(__int64, _QWORD))v42)(v24, *(_QWORD *)(v42 + 8));
+  if ( !VaildList || !v19 )
     goto LABEL_80;
-  count = v20->fields._count;
-  v49 = BalanceConfig_TypeInfo;
+  count = v19->fields._count;
+  v44 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v49 = BalanceConfig_TypeInfo;
+    v44 = BalanceConfig_TypeInfo;
   }
-  PresentBoxMax = v49->static_fields->PresentBoxMax;
-  v51 = count + LODWORD(VaildList->max_length);
-  if ( v51 > PresentBoxMax )
+  PresentBoxMax = v44->static_fields->PresentBoxMax;
+  v46 = count + LODWORD(VaildList->max_length);
+  if ( v46 > PresentBoxMax )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v52 = LocalizationManager__Get((System_String_o *)StringLiteral_13454/*"TRADE_CHECK_PRESENT_NUM_TXT"*/, 0);
-    v56 = BalanceConfig_TypeInfo;
-    v57 = v52;
+    v47 = LocalizationManager__Get((System_String_o *)StringLiteral_13457/*"TRADE_CHECK_PRESENT_NUM_TXT"*/, 0);
+    v54 = BalanceConfig_TypeInfo;
+    v55 = v47;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v56 = BalanceConfig_TypeInfo;
+      v54 = BalanceConfig_TypeInfo;
     }
-    v64 = v56->static_fields->PresentBoxMax;
-    v58 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v64, v53, v54, v55);
-    v59 = System_String__Format(v57, v58, 0);
+    v62 = v54->static_fields->PresentBoxMax;
+    v56 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v62, v48, v49, v50, v51, v52, v53);
+    v57 = System_String__Format(v55, v56, 0);
     presentBoxOverDlg = this->fields.presentBoxOverDlg;
-    v61 = v59;
-    v62 = (PresentBoxOverDialog_ClickDelegate_o *)sub_1C2D6DC(PresentBoxOverDialog_ClickDelegate_TypeInfo);
+    v59 = v57;
+    v60 = (PresentBoxOverDialog_ClickDelegate_o *)sub_1C32E6C(PresentBoxOverDialog_ClickDelegate_TypeInfo);
     PresentBoxOverDialog_ClickDelegate___ctor(
-      v62,
+      v60,
       (Il2CppObject *)this,
       Method_EventTradeListViewItemManager__IsOverPresentBoxLimit_b__87_2__,
       0);
     if ( presentBoxOverDlg )
     {
-      PresentBoxOverDialog__Open(presentBoxOverDlg, (System_String_o *)StringLiteral_1/*""*/, v61, v62, 26, 0);
-      return v51 > PresentBoxMax;
+      PresentBoxOverDialog__Open(presentBoxOverDlg, (System_String_o *)StringLiteral_1/*""*/, v59, v60, 26, 0);
+      return v46 > PresentBoxMax;
     }
 LABEL_80:
-    sub_1C2D6EC(v17, v15);
+    sub_1C32E7C(v16);
   }
-  return v51 > PresentBoxMax;
+  return v46 > PresentBoxMax;
 }
 
 
@@ -1456,10 +1444,10 @@ void EventTradeListViewItemManager__LocateDialogToTradePanel(
   UnityEngine_Transform__SetParent(transform, (UnityEngine_Transform_o *)this, 0);
   this = (EventTradeListViewItemManager_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)dialog, 0);
   v6 = this;
-  if ( !byte_4C20DA6 )
+  if ( !byte_4C313D6 )
   {
-    this = (EventTradeListViewItemManager_o *)sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
-    byte_4C20DA6 = 1;
+    this = (EventTradeListViewItemManager_o *)sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
+    byte_4C313D6 = 1;
   }
   if ( !v6
     || (UnityEngine_Transform__set_localScale(
@@ -1471,7 +1459,7 @@ void EventTradeListViewItemManager__LocateDialogToTradePanel(
                                                      0)) == 0) )
   {
 LABEL_9:
-    sub_1C2D6EC(this, dialog);
+    sub_1C32E7C(this);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }
@@ -1499,14 +1487,14 @@ void EventTradeListViewItemManager__LocateObjectToTradePanel(
   UnityEngine_Transform__SetParent(transform, (UnityEngine_Transform_o *)this, 0);
   this = (EventTradeListViewItemManager_o *)UnityEngine_GameObject__get_transform(obj, 0);
   v6 = this;
-  if ( !byte_4C20DA6 )
+  if ( !byte_4C313D6 )
   {
-    this = (EventTradeListViewItemManager_o *)sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
-    byte_4C20DA6 = 1;
+    this = (EventTradeListViewItemManager_o *)sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
+    byte_4C313D6 = 1;
   }
   if ( !v6 )
 LABEL_8:
-    sub_1C2D6EC(this, obj);
+    sub_1C32E7C(this);
   UnityEngine_Transform__set_localScale(
     (UnityEngine_Transform_o *)v6,
     UnityEngine_Vector3_TypeInfo->static_fields->oneVector,
@@ -1524,15 +1512,15 @@ void EventTradeListViewItemManager__OnClickListView(
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
 
-  if ( (byte_4C21C5D & 1) == 0 )
+  if ( (byte_4C323F8 & 1) == 0 )
   {
-    this = (EventTradeListViewItemManager_o *)sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickListView__);
-    byte_4C21C5D = 1;
+    this = (EventTradeListViewItemManager_o *)sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickListView__);
+    byte_4C323F8 = 1;
   }
   if ( !obj
     || (this = (EventTradeListViewItemManager_o *)EventTradeListViewObject__GetItem(obj, (const MethodInfo *)obj)) == 0 )
   {
-    sub_1C2D6EC(this, obj);
+    sub_1C32E7C(this);
   }
   v4 = (EventTradeListViewItem_o *)this;
   if ( !EventTradeListViewItem__get_IsTrading((EventTradeListViewItem_o *)this, 0)
@@ -1541,8 +1529,8 @@ void EventTradeListViewItemManager__OnClickListView(
   {
     v5 = Method_EventTradeListViewItemManager_OnClickListView__;
     if ( (*((_BYTE *)Method_EventTradeListViewItemManager_OnClickListView__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C2D4A8(Method_EventTradeListViewItemManager_OnClickListView__);
-    v6 = (System_Reflection_MethodBase_o *)sub_1C2D474(v5, v5[4]);
+      v5 = (_QWORD *)sub_1C32C38(Method_EventTradeListViewItemManager_OnClickListView__);
+    v6 = (System_Reflection_MethodBase_o *)sub_1C32C04(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 2, 0, 0);
   }
 }
@@ -1557,17 +1545,17 @@ void EventTradeListViewItemManager__OnClickNoticeButton(
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C21C79 & 1) == 0 )
+  if ( (byte_4C32414 & 1) == 0 )
   {
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickNoticeButton__);
-    byte_4C21C79 = 1;
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickNoticeButton__);
+    byte_4C32414 = 1;
   }
   isButtonOn = this->fields.isButtonOn;
   this->fields.isButtonOn = isButtonOn ^ 1;
   v4 = Method_EventTradeListViewItemManager_OnClickNoticeButton__;
   if ( (*((_BYTE *)Method_EventTradeListViewItemManager_OnClickNoticeButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C2D4A8(Method_EventTradeListViewItemManager_OnClickNoticeButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C2D474(v4, v4[4]);
+    v4 = (_QWORD *)sub_1C32C38(Method_EventTradeListViewItemManager_OnClickNoticeButton__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C32C04(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, isButtonOn, 0, 0);
   EventRewardSaveData__SetTradeNotification(this->fields.isButtonOn, 0);
   EventTradeListViewItemManager__UpdateNoticeButtonDisp(this, v6);
@@ -1578,26 +1566,25 @@ void EventTradeListViewItemManager__OnClickReceiveAll(EventTradeListViewItemMana
 {
   EventTradeListViewItemManager_o *v2; // x19
   const MethodInfo *v3; // x1
-  __int64 v4; // x1
   __int64 maskPanel; // x0
-  NetworkManager_ResultCallbackFunc_o *v6; // x20
+  NetworkManager_ResultCallbackFunc_o *v5; // x20
   Il2CppObject *Request_object; // x0
   long double inited; // q0
   int32_t currentEventId; // w19
-  TradeReceiveRequest_o *v10; // x20
-  _QWORD *v11; // x21
-  __int64 v12; // x8
-  __int64 v13; // x0
+  TradeReceiveRequest_o *v9; // x20
+  _QWORD *v10; // x21
+  __int64 v11; // x8
+  __int64 v12; // x0
 
   v2 = this;
-  if ( (byte_4C21C6A & 1) == 0 )
+  if ( (byte_4C32405 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Array_Empty_int___);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_TradeReceiveResponse__);
-    sub_1C2D490(&Method_NetworkManager_getRequest_TradeReceiveRequest___);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    this = (EventTradeListViewItemManager_o *)sub_1C2D490(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C21C6A = 1;
+    sub_1C32C20(&Method_System_Array_Empty_int___);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_TradeReceiveResponse__);
+    sub_1C32C20(&Method_NetworkManager_getRequest_TradeReceiveRequest___);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    this = (EventTradeListViewItemManager_o *)sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C32405 = 1;
   }
   if ( !EventTradeListViewItemManager__IsOverPossessionLimit(this, method)
     && !EventTradeListViewItemManager__IsOverPresentBoxLimit(v2, v3) )
@@ -1607,39 +1594,39 @@ void EventTradeListViewItemManager__OnClickReceiveAll(EventTradeListViewItemMana
       goto LABEL_19;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 1, 0);
     v2->fields.selectTradeGoodsEntity = 0;
-    sub_1C2D434(&v2->fields.selectTradeGoodsEntity);
-    v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1C2D6DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C32BC4(&v2->fields.selectTradeGoodsEntity, 0);
+    v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
-      v6,
+      v5,
       (Il2CppObject *)v2,
       Method_EventTradeListViewItemManager_TradeReceiveResponse__,
       0);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Request_object = NetworkManager__getRequest_object_(
-                       v6,
-                       (const MethodInfo_31599E8 *)Method_NetworkManager_getRequest_TradeReceiveRequest___);
+                       v5,
+                       (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_TradeReceiveRequest___);
     currentEventId = v2->fields.currentEventId;
-    v10 = (TradeReceiveRequest_o *)Request_object;
-    v11 = Method_System_Array_Empty_int___;
-    v12 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
-    if ( !v12 )
+    v9 = (TradeReceiveRequest_o *)Request_object;
+    v10 = Method_System_Array_Empty_int___;
+    v11 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
+    if ( !v11 )
     {
-      sub_1C7DC00(Method_System_Array_Empty_int___);
-      v12 = v11[7];
+      sub_1C83390(Method_System_Array_Empty_int___);
+      v11 = v10[7];
     }
-    v13 = *(_QWORD *)(v12 + 16);
-    if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-      v13 = sub_1C7DBA4(inited);
-    if ( !*(_DWORD *)(v13 + 224) )
-      inited = j_il2cpp_runtime_class_init_0(v13);
-    maskPanel = *(_QWORD *)(v11[7] + 16LL);
+    v12 = *(_QWORD *)(v11 + 16);
+    if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
+      v12 = sub_1C83334(inited);
+    if ( !*(_DWORD *)(v12 + 224) )
+      inited = j_il2cpp_runtime_class_init_0(v12);
+    maskPanel = *(_QWORD *)(v10[7] + 16LL);
     if ( (*(_BYTE *)(maskPanel + 309) & 1) == 0 )
-      maskPanel = sub_1C7DBA4(inited);
-    if ( !v10 )
+      maskPanel = sub_1C83334(inited);
+    if ( !v9 )
 LABEL_19:
-      sub_1C2D6EC(maskPanel, v4);
-    TradeReceiveRequest__beginRequest(v10, currentEventId, **(System_Int32_array ***)(maskPanel + 184), 0, 0, 0);
+      sub_1C32E7C(maskPanel);
+    TradeReceiveRequest__beginRequest(v9, currentEventId, **(System_Int32_array ***)(maskPanel + 184), 0, 0, 0);
   }
 }
 
@@ -1656,19 +1643,19 @@ void EventTradeListViewItemManager__OnClickReceiveAllButton(
   const MethodInfo *v7; // x1
 
   v2 = this;
-  if ( (byte_4C21C65 & 1) == 0 )
+  if ( (byte_4C32400 & 1) == 0 )
   {
-    this = (EventTradeListViewItemManager_o *)sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickReceiveAllButton__);
-    byte_4C21C65 = 1;
+    this = (EventTradeListViewItemManager_o *)sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickReceiveAllButton__);
+    byte_4C32400 = 1;
   }
   receiveAllButton = v2->fields.receiveAllButton;
   if ( !receiveAllButton )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   mState = receiveAllButton->fields.mState;
   v5 = Method_EventTradeListViewItemManager_OnClickReceiveAllButton__;
   if ( (*((_BYTE *)Method_EventTradeListViewItemManager_OnClickReceiveAllButton__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1C2D4A8(Method_EventTradeListViewItemManager_OnClickReceiveAllButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1C2D474(v5, v5[4]);
+    v5 = (_QWORD *)sub_1C32C38(Method_EventTradeListViewItemManager_OnClickReceiveAllButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C32C04(v5, v5[4]);
   if ( mState == 3 )
   {
     OverwriteAssetSoundName__PlaySystemSe(v6, 2, 0, 0);
@@ -1686,7 +1673,7 @@ void EventTradeListViewItemManager__OnClickReceiveButton(
         EventTradeListViewObject_o *obj,
         const MethodInfo *method)
 {
-  void *maskPanel; // x0
+  UnityEngine_GameObject_o *maskPanel; // x0
   unsigned int displayMode; // w8
   int v7; // w8
   _QWORD *v8; // x0
@@ -1698,20 +1685,21 @@ void EventTradeListViewItemManager__OnClickReceiveButton(
   int32_t CompleteNum; // w21
   const MethodInfo *v15; // x1
   const MethodInfo *v16; // x3
-  __int64 v17; // x8
+  UnityEngine_GameObject_c *klass; // x8
   const MethodInfo *v18; // x1
+  struct EventTradeGoodsEntity_o *monitor; // x1
 
-  if ( (byte_4C21C5F & 1) == 0 )
+  if ( (byte_4C323FA & 1) == 0 )
   {
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickReceiveButton__);
-    sub_1C2D490(&EventTradeTimeCalculation_TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C21C5F = 1;
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickReceiveButton__);
+    sub_1C32C20(&EventTradeTimeCalculation_TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C323FA = 1;
   }
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
     goto LABEL_21;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 1, 0);
+  UnityEngine_GameObject__SetActive(maskPanel, 1, 0);
   if ( !obj )
     goto LABEL_21;
   displayMode = obj->fields.displayMode;
@@ -1724,18 +1712,18 @@ LABEL_18:
       maskPanel = this->fields.maskPanel;
       if ( maskPanel )
       {
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 0, 0);
+        UnityEngine_GameObject__SetActive(maskPanel, 0, 0);
         return;
       }
 LABEL_21:
-      sub_1C2D6EC(maskPanel, obj);
+      sub_1C32E7C(maskPanel);
     }
     if ( (v7 & 0x30) != 0 )
     {
       v8 = Method_EventTradeListViewItemManager_OnClickReceiveButton__;
       if ( (*((_BYTE *)Method_EventTradeListViewItemManager_OnClickReceiveButton__ + 83) & 2) != 0 )
-        v8 = (_QWORD *)sub_1C2D4A8(Method_EventTradeListViewItemManager_OnClickReceiveButton__);
-      v9 = (System_Reflection_MethodBase_o *)sub_1C2D474(v8, v8[4]);
+        v8 = (_QWORD *)sub_1C32C38(Method_EventTradeListViewItemManager_OnClickReceiveButton__);
+      v9 = (System_Reflection_MethodBase_o *)sub_1C32C04(v8, v8[4]);
       OverwriteAssetSoundName__PlaySystemSe(v9, 8, 0, 0);
       Item = EventTradeListViewObject__GetItem(obj, v10);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -1744,18 +1732,19 @@ LABEL_21:
       if ( !EventTradeTimeCalculation_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventTradeTimeCalculation_TypeInfo);
       CompleteNum = EventTradeTimeCalculation__GetCompleteNum(Item, Time, v12);
-      maskPanel = EventTradeListViewObject__GetItem(obj, v15);
+      maskPanel = (UnityEngine_GameObject_o *)EventTradeListViewObject__GetItem(obj, v15);
       if ( !maskPanel )
         goto LABEL_21;
-      v17 = *((_QWORD *)maskPanel + 18);
-      if ( !v17 )
+      klass = maskPanel[6].klass;
+      if ( !klass )
         goto LABEL_21;
-      EventTradeListViewItemManager__OnClickReceiveDecide(this, *(_DWORD *)(v17 + 16), CompleteNum, v16);
-      maskPanel = EventTradeListViewObject__GetItem(obj, v18);
+      EventTradeListViewItemManager__OnClickReceiveDecide(this, (int32_t)klass->_1.name, CompleteNum, v16);
+      maskPanel = (UnityEngine_GameObject_o *)EventTradeListViewObject__GetItem(obj, v18);
       if ( !maskPanel )
         goto LABEL_21;
-      this->fields.selectTradeGoodsEntity = (struct EventTradeGoodsEntity_o *)*((_QWORD *)maskPanel + 16);
-      sub_1C2D434(&this->fields.selectTradeGoodsEntity);
+      monitor = (struct EventTradeGoodsEntity_o *)maskPanel[5].monitor;
+      this->fields.selectTradeGoodsEntity = monitor;
+      sub_1C32BC4(&this->fields.selectTradeGoodsEntity, monitor);
       goto LABEL_18;
     }
   }
@@ -1771,22 +1760,21 @@ void EventTradeListViewItemManager__OnClickReceiveDecide(
 {
   EventTradeListViewItemManager_o *v6; // x21
   const MethodInfo *v7; // x1
-  __int64 v8; // x1
   __int64 maskPanel; // x0
-  NetworkManager_ResultCallbackFunc_o *v10; // x22
+  NetworkManager_ResultCallbackFunc_o *v9; // x22
   Il2CppObject *Request_object; // x0
   int32_t currentEventId; // w21
-  TradeReceiveRequest_o *v13; // x22
+  TradeReceiveRequest_o *v12; // x22
 
   v6 = this;
-  if ( (byte_4C21C69 & 1) == 0 )
+  if ( (byte_4C32404 & 1) == 0 )
   {
-    sub_1C2D490(&Method_EventTradeListViewItemManager_TradeReceiveResponse__);
-    sub_1C2D490(&int___TypeInfo);
-    sub_1C2D490(&Method_NetworkManager_getRequest_TradeReceiveRequest___);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    this = (EventTradeListViewItemManager_o *)sub_1C2D490(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C21C69 = 1;
+    sub_1C32C20(&Method_EventTradeListViewItemManager_TradeReceiveResponse__);
+    sub_1C32C20(&int___TypeInfo);
+    sub_1C32C20(&Method_NetworkManager_getRequest_TradeReceiveRequest___);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    this = (EventTradeListViewItemManager_o *)sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C32404 = 1;
   }
   if ( !EventTradeListViewItemManager__IsOverPossessionLimit(this, *(const MethodInfo **)&storeIdx)
     && !EventTradeListViewItemManager__IsOverPresentBoxLimit(v6, v7) )
@@ -1800,33 +1788,33 @@ void EventTradeListViewItemManager__OnClickReceiveDecide(
         return;
       }
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 1, 0);
-      v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C2D6DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v9 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
-        v10,
+        v9,
         (Il2CppObject *)v6,
         Method_EventTradeListViewItemManager_TradeReceiveResponse__,
         0);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       Request_object = NetworkManager__getRequest_object_(
-                         v10,
-                         (const MethodInfo_31599E8 *)Method_NetworkManager_getRequest_TradeReceiveRequest___);
+                         v9,
+                         (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_TradeReceiveRequest___);
       currentEventId = v6->fields.currentEventId;
-      v13 = (TradeReceiveRequest_o *)Request_object;
-      maskPanel = sub_1C2D538(int___TypeInfo, 1);
+      v12 = (TradeReceiveRequest_o *)Request_object;
+      maskPanel = sub_1C32CC8(int___TypeInfo, 1);
       if ( maskPanel )
       {
         if ( !*(_DWORD *)(maskPanel + 24) )
-          sub_1C2D6F4(maskPanel, v8, maskPanel);
+          sub_1C32E84(maskPanel);
         *(_DWORD *)(maskPanel + 32) = storeIdx;
-        if ( v13 )
+        if ( v12 )
         {
-          TradeReceiveRequest__beginRequest(v13, currentEventId, (System_Int32_array *)maskPanel, receiveNum, 0, 0);
+          TradeReceiveRequest__beginRequest(v12, currentEventId, (System_Int32_array *)maskPanel, receiveNum, 0, 0);
           return;
         }
       }
     }
-    sub_1C2D6EC(maskPanel, v8);
+    sub_1C32E7C(maskPanel);
   }
 }
 
@@ -1836,98 +1824,101 @@ void EventTradeListViewItemManager__OnClickReplenishmentButton(
         EventTradeListViewObject_o *obj,
         const MethodInfo *method)
 {
-  void *maskPanel; // x0
+  UnityEngine_GameObject_o *maskPanel; // x0
+  const MethodInfo *v6; // x1
   unsigned int displayMode; // w8
-  int v7; // w8
+  int v8; // w8
   bool IsRefillable; // w21
-  _QWORD *v9; // x8
-  System_Reflection_MethodBase_o *v10; // x0
-  const MethodInfo *v11; // x2
+  _QWORD *v10; // x8
+  System_Reflection_MethodBase_o *v11; // x0
+  const MethodInfo *v12; // x2
   EventTradeSweetsNumConfirmDialogComponent_o *tradeSweetsNumConfirmDialog; // x21
-  const MethodInfo *v13; // x1
+  const MethodInfo *v14; // x1
   EventTradeListViewItem_o *Item; // x22
-  const MethodInfo *v15; // x1
-  __int64 v16; // x8
-  int32_t v17; // w23
-  System_Action_int__int__int__o *v18; // x24
-  const MethodInfo *v19; // x5
-  const MethodInfo *v20; // x1
+  const MethodInfo *v16; // x1
+  UnityEngine_GameObject_c *klass; // x8
+  int32_t name; // w23
+  System_Action_int__int__int__o *v19; // x24
+  const MethodInfo *v20; // x5
+  const MethodInfo *v21; // x1
+  struct EventTradeGoodsEntity_o *monitor; // x1
 
-  if ( (byte_4C21C60 & 1) == 0 )
+  if ( (byte_4C323FB & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_int__int__int__TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickReplenishmentButton__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickTradeReplenishmentDecide__);
-    byte_4C21C60 = 1;
+    sub_1C32C20(&System_Action_int__int__int__TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickReplenishmentButton__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickTradeReplenishmentDecide__);
+    byte_4C323FB = 1;
   }
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
     goto LABEL_22;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 1, 0);
+  UnityEngine_GameObject__SetActive(maskPanel, 1, 0);
   if ( !obj )
     goto LABEL_22;
   displayMode = obj->fields.displayMode;
   if ( displayMode <= 5 )
   {
-    v7 = 1 << displayMode;
-    if ( (v7 & 0xD) != 0 )
+    v8 = 1 << displayMode;
+    if ( (v8 & 0xD) != 0 )
     {
 LABEL_18:
       maskPanel = this->fields.maskPanel;
       if ( maskPanel )
       {
-        UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 0, 0);
+        UnityEngine_GameObject__SetActive(maskPanel, 0, 0);
         return;
       }
 LABEL_22:
-      sub_1C2D6EC(maskPanel, obj);
+      sub_1C32E7C(maskPanel);
     }
-    if ( (v7 & 0x30) != 0 )
+    if ( (v8 & 0x30) != 0 )
     {
-      maskPanel = EventTradeListViewObject__GetItem(obj, (const MethodInfo *)obj);
+      maskPanel = (UnityEngine_GameObject_o *)EventTradeListViewObject__GetItem(obj, v6);
       if ( !maskPanel )
         goto LABEL_22;
       IsRefillable = EventTradeListViewItem__get_IsRefillable((EventTradeListViewItem_o *)maskPanel, 0);
-      v9 = Method_EventTradeListViewItemManager_OnClickReplenishmentButton__;
+      v10 = Method_EventTradeListViewItemManager_OnClickReplenishmentButton__;
       if ( (*((_BYTE *)Method_EventTradeListViewItemManager_OnClickReplenishmentButton__ + 83) & 2) != 0 )
-        v9 = (_QWORD *)sub_1C2D4A8(Method_EventTradeListViewItemManager_OnClickReplenishmentButton__);
-      v10 = (System_Reflection_MethodBase_o *)sub_1C2D474(v9, v9[4]);
+        v10 = (_QWORD *)sub_1C32C38(Method_EventTradeListViewItemManager_OnClickReplenishmentButton__);
+      v11 = (System_Reflection_MethodBase_o *)sub_1C32C04(v10, v10[4]);
       if ( IsRefillable )
       {
-        OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
-        maskPanel = this->fields.tradeSweetsNumConfirmDialog;
+        OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0, 0);
+        maskPanel = (UnityEngine_GameObject_o *)this->fields.tradeSweetsNumConfirmDialog;
         if ( !maskPanel )
           goto LABEL_22;
         EventTradeSweetsNumConfirmDialogComponent__Init(
           (EventTradeSweetsNumConfirmDialogComponent_o *)maskPanel,
           this->fields.currentEventId,
-          v11);
+          v12);
         tradeSweetsNumConfirmDialog = this->fields.tradeSweetsNumConfirmDialog;
-        Item = EventTradeListViewObject__GetItem(obj, v13);
-        maskPanel = EventTradeListViewObject__GetItem(obj, v15);
+        Item = EventTradeListViewObject__GetItem(obj, v14);
+        maskPanel = (UnityEngine_GameObject_o *)EventTradeListViewObject__GetItem(obj, v16);
         if ( !maskPanel )
           goto LABEL_22;
-        v16 = *((_QWORD *)maskPanel + 18);
-        if ( !v16 )
+        klass = maskPanel[6].klass;
+        if ( !klass )
           goto LABEL_22;
-        v17 = *(_DWORD *)(v16 + 16);
-        v18 = (System_Action_int__int__int__o *)sub_1C2D6DC(System_Action_int__int__int__TypeInfo);
+        name = (int32_t)klass->_1.name;
+        v19 = (System_Action_int__int__int__o *)sub_1C32E6C(System_Action_int__int__int__TypeInfo);
         System_Action_int__int__int____ctor(
-          v18,
+          v19,
           (Il2CppObject *)this,
           Method_EventTradeListViewItemManager_OnClickTradeReplenishmentDecide__,
           0);
         if ( !tradeSweetsNumConfirmDialog )
           goto LABEL_22;
-        EventTradeSweetsNumConfirmDialogComponent__Open(tradeSweetsNumConfirmDialog, Item, v17, v18, 1, v19);
-        maskPanel = EventTradeListViewObject__GetItem(obj, v20);
+        EventTradeSweetsNumConfirmDialogComponent__Open(tradeSweetsNumConfirmDialog, Item, name, v19, 1, v20);
+        maskPanel = (UnityEngine_GameObject_o *)EventTradeListViewObject__GetItem(obj, v21);
         if ( !maskPanel )
           goto LABEL_22;
-        this->fields.selectTradeGoodsEntity = (struct EventTradeGoodsEntity_o *)*((_QWORD *)maskPanel + 16);
-        sub_1C2D434(&this->fields.selectTradeGoodsEntity);
+        monitor = (struct EventTradeGoodsEntity_o *)maskPanel[5].monitor;
+        this->fields.selectTradeGoodsEntity = monitor;
+        sub_1C32BC4(&this->fields.selectTradeGoodsEntity, monitor);
         goto LABEL_18;
       }
-      OverwriteAssetSoundName__PlaySystemSe(v10, 2, 0, 0);
+      OverwriteAssetSoundName__PlaySystemSe(v11, 2, 0, 0);
     }
   }
 }
@@ -1945,13 +1936,13 @@ void EventTradeListViewItemManager__OnClickTradeReplenishmentDecide(
   NetworkManager_ResultCallbackFunc_o *v10; // x23
   struct System_Func_bool__o *closeDialogCallBack; // x8
 
-  if ( (byte_4C21C64 & 1) == 0 )
+  if ( (byte_4C323FF & 1) == 0 )
   {
-    sub_1C2D490(&Method_EventTradeListViewItemManager_TradeReplenishmentResponse__);
-    sub_1C2D490(&Method_NetworkManager_getRequest_TradeStartRequest___);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C21C64 = 1;
+    sub_1C32C20(&Method_EventTradeListViewItemManager_TradeReplenishmentResponse__);
+    sub_1C32C20(&Method_NetworkManager_getRequest_TradeStartRequest___);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C323FF = 1;
   }
   tradeSweetsNumConfirmDialog = this->fields.tradeSweetsNumConfirmDialog;
   if ( !tradeSweetsNumConfirmDialog )
@@ -1963,7 +1954,7 @@ void EventTradeListViewItemManager__OnClickTradeReplenishmentDecide(
   if ( createNum > 0 )
   {
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)tradeSweetsNumConfirmDialog, 1, 0);
-    v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C2D6DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v10,
       (Il2CppObject *)this,
@@ -1973,7 +1964,7 @@ void EventTradeListViewItemManager__OnClickTradeReplenishmentDecide(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     tradeSweetsNumConfirmDialog = (EventTradeSweetsNumConfirmDialogComponent_o *)NetworkManager__getRequest_object_(
                                                                                    v10,
-                                                                                   (const MethodInfo_31599E8 *)Method_NetworkManager_getRequest_TradeStartRequest___);
+                                                                                   (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_TradeStartRequest___);
     if ( tradeSweetsNumConfirmDialog )
     {
       TradeStartRequest__beginRequest(
@@ -1987,7 +1978,7 @@ void EventTradeListViewItemManager__OnClickTradeReplenishmentDecide(
       return;
     }
 LABEL_13:
-    sub_1C2D6EC(tradeSweetsNumConfirmDialog, *(_QWORD *)&storeIdx);
+    sub_1C32E7C(tradeSweetsNumConfirmDialog);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)tradeSweetsNumConfirmDialog, 0, 0);
   closeDialogCallBack = this->fields.closeDialogCallBack;
@@ -2003,94 +1994,97 @@ void EventTradeListViewItemManager__OnClickTradeStartButton(
         EventTradeListViewObject_o *obj,
         const MethodInfo *method)
 {
-  void *maskPanel; // x0
+  UnityEngine_GameObject_o *maskPanel; // x0
+  const MethodInfo *v6; // x1
   unsigned int displayMode; // w8
-  int v7; // w8
+  int v8; // w8
   bool IsBuyAble; // w21
-  _QWORD *v9; // x8
-  System_Reflection_MethodBase_o *v10; // x0
-  const MethodInfo *v11; // x2
+  _QWORD *v10; // x8
+  System_Reflection_MethodBase_o *v11; // x0
   const MethodInfo *v12; // x2
+  const MethodInfo *v13; // x2
   EventTradeSweetsNumConfirmDialogComponent_o *tradeSweetsNumConfirmDialog; // x21
-  const MethodInfo *v14; // x1
+  const MethodInfo *v15; // x1
   EventTradeListViewItem_o *Item; // x0
-  int32_t v16; // w22
-  EventTradeListViewItem_o *v17; // x23
-  System_Action_int__int__int__o *v18; // x24
-  const MethodInfo *v19; // x5
-  const MethodInfo *v20; // x1
+  int32_t v17; // w22
+  EventTradeListViewItem_o *v18; // x23
+  System_Action_int__int__int__o *v19; // x24
+  const MethodInfo *v20; // x5
+  const MethodInfo *v21; // x1
+  struct EventTradeGoodsEntity_o *monitor; // x1
   Il2CppObject *Instance; // x20
-  System_String_o *v22; // x21
-  System_String_o *v23; // x22
-  System_Action_o *v24; // x23
+  System_String_o *v24; // x21
+  System_String_o *v25; // x22
+  System_Action_o *v26; // x23
   int32_t storeIdx; // [xsp+4Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C21C5E & 1) == 0 )
+  if ( (byte_4C323F9 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_int__int__int__TypeInfo);
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickTradeStartButton__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickTradeStartDecide__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager__OnClickTradeStartButton_b__62_0__);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C2D490(&StringLiteral_13472/*"TRADE_EVENT_IMPOSSIBLE_TRADE_NOTIFICATION_DIALOG_TITLE"*/);
-    sub_1C2D490(&StringLiteral_13471/*"TRADE_EVENT_IMPOSSIBLE_TRADE_NOTIFICATION_DIALOG_MESSAGE"*/);
-    byte_4C21C5E = 1;
+    sub_1C32C20(&System_Action_int__int__int__TypeInfo);
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickTradeStartButton__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickTradeStartDecide__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager__OnClickTradeStartButton_b__62_0__);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C32C20(&StringLiteral_13475/*"TRADE_EVENT_IMPOSSIBLE_TRADE_NOTIFICATION_DIALOG_TITLE"*/);
+    sub_1C32C20(&StringLiteral_13474/*"TRADE_EVENT_IMPOSSIBLE_TRADE_NOTIFICATION_DIALOG_MESSAGE"*/);
+    byte_4C323F9 = 1;
   }
   storeIdx = 0;
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
     goto LABEL_25;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 1, 0);
+  UnityEngine_GameObject__SetActive(maskPanel, 1, 0);
   if ( !obj )
     goto LABEL_25;
   displayMode = obj->fields.displayMode;
   if ( displayMode > 5 )
     return;
-  v7 = 1 << displayMode;
-  if ( (v7 & 0x31) == 0 )
+  v8 = 1 << displayMode;
+  if ( (v8 & 0x31) == 0 )
   {
-    if ( (v7 & 0xC) == 0 )
+    if ( (v8 & 0xC) == 0 )
       return;
-    maskPanel = EventTradeListViewObject__GetItem(obj, (const MethodInfo *)obj);
+    maskPanel = (UnityEngine_GameObject_o *)EventTradeListViewObject__GetItem(obj, v6);
     if ( !maskPanel )
       goto LABEL_25;
     IsBuyAble = EventTradeListViewItem__get_IsBuyAble((EventTradeListViewItem_o *)maskPanel, 0);
-    v9 = Method_EventTradeListViewItemManager_OnClickTradeStartButton__;
+    v10 = Method_EventTradeListViewItemManager_OnClickTradeStartButton__;
     if ( (*((_BYTE *)Method_EventTradeListViewItemManager_OnClickTradeStartButton__ + 83) & 2) != 0 )
-      v9 = (_QWORD *)sub_1C2D4A8(Method_EventTradeListViewItemManager_OnClickTradeStartButton__);
-    v10 = (System_Reflection_MethodBase_o *)sub_1C2D474(v9, v9[4]);
+      v10 = (_QWORD *)sub_1C32C38(Method_EventTradeListViewItemManager_OnClickTradeStartButton__);
+    v11 = (System_Reflection_MethodBase_o *)sub_1C32C04(v10, v10[4]);
     if ( IsBuyAble )
     {
-      OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
-      if ( EventTradeListViewItemManager__TryGetAvailableStoreIdx(this, &storeIdx, v11) )
+      OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0, 0);
+      if ( EventTradeListViewItemManager__TryGetAvailableStoreIdx(this, &storeIdx, v12) )
       {
-        maskPanel = this->fields.tradeSweetsNumConfirmDialog;
+        maskPanel = (UnityEngine_GameObject_o *)this->fields.tradeSweetsNumConfirmDialog;
         if ( maskPanel )
         {
           EventTradeSweetsNumConfirmDialogComponent__Init(
             (EventTradeSweetsNumConfirmDialogComponent_o *)maskPanel,
             this->fields.currentEventId,
-            v12);
+            v13);
           tradeSweetsNumConfirmDialog = this->fields.tradeSweetsNumConfirmDialog;
-          Item = EventTradeListViewObject__GetItem(obj, v14);
-          v16 = storeIdx;
-          v17 = Item;
-          v18 = (System_Action_int__int__int__o *)sub_1C2D6DC(System_Action_int__int__int__TypeInfo);
+          Item = EventTradeListViewObject__GetItem(obj, v15);
+          v17 = storeIdx;
+          v18 = Item;
+          v19 = (System_Action_int__int__int__o *)sub_1C32E6C(System_Action_int__int__int__TypeInfo);
           System_Action_int__int__int____ctor(
-            v18,
+            v19,
             (Il2CppObject *)this,
             Method_EventTradeListViewItemManager_OnClickTradeStartDecide__,
             0);
           if ( tradeSweetsNumConfirmDialog )
           {
-            EventTradeSweetsNumConfirmDialogComponent__Open(tradeSweetsNumConfirmDialog, v17, v16, v18, 0, v19);
-            maskPanel = EventTradeListViewObject__GetItem(obj, v20);
+            EventTradeSweetsNumConfirmDialogComponent__Open(tradeSweetsNumConfirmDialog, v18, v17, v19, 0, v20);
+            maskPanel = (UnityEngine_GameObject_o *)EventTradeListViewObject__GetItem(obj, v21);
             if ( maskPanel )
             {
-              this->fields.selectTradeGoodsEntity = (struct EventTradeGoodsEntity_o *)*((_QWORD *)maskPanel + 16);
-              sub_1C2D434(&this->fields.selectTradeGoodsEntity);
+              monitor = (struct EventTradeGoodsEntity_o *)maskPanel[5].monitor;
+              this->fields.selectTradeGoodsEntity = monitor;
+              sub_1C32BC4(&this->fields.selectTradeGoodsEntity, monitor);
               goto LABEL_18;
             }
           }
@@ -2098,24 +2092,24 @@ void EventTradeListViewItemManager__OnClickTradeStartButton(
       }
       else
       {
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v22 = LocalizationManager__Get((System_String_o *)StringLiteral_13472/*"TRADE_EVENT_IMPOSSIBLE_TRADE_NOTIFICATION_DIALOG_TITLE"*/, 0);
-        v23 = LocalizationManager__Get((System_String_o *)StringLiteral_13471/*"TRADE_EVENT_IMPOSSIBLE_TRADE_NOTIFICATION_DIALOG_MESSAGE"*/, 0);
-        v24 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+        v24 = LocalizationManager__Get((System_String_o *)StringLiteral_13475/*"TRADE_EVENT_IMPOSSIBLE_TRADE_NOTIFICATION_DIALOG_TITLE"*/, 0);
+        v25 = LocalizationManager__Get((System_String_o *)StringLiteral_13474/*"TRADE_EVENT_IMPOSSIBLE_TRADE_NOTIFICATION_DIALOG_MESSAGE"*/, 0);
+        v26 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
         System_Action___ctor(
-          v24,
+          v26,
           (Il2CppObject *)this,
           Method_EventTradeListViewItemManager__OnClickTradeStartButton_b__62_0__,
           0);
         if ( Instance )
         {
-          CommonUI__OpenNotificationDialog_31168676(
+          CommonUI__OpenNotificationDialog_31191784(
             (CommonUI_o *)Instance,
-            v22,
-            v23,
             v24,
+            v25,
+            v26,
             13.0,
             -162.5,
             -1,
@@ -2133,15 +2127,15 @@ void EventTradeListViewItemManager__OnClickTradeStartButton(
         }
       }
 LABEL_25:
-      sub_1C2D6EC(maskPanel, obj);
+      sub_1C32E7C(maskPanel);
     }
-    OverwriteAssetSoundName__PlaySystemSe(v10, 2, 0, 0);
+    OverwriteAssetSoundName__PlaySystemSe(v11, 2, 0, 0);
   }
 LABEL_18:
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
     goto LABEL_25;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskPanel, 0, 0);
+  UnityEngine_GameObject__SetActive(maskPanel, 0, 0);
 }
 
 
@@ -2156,13 +2150,13 @@ void EventTradeListViewItemManager__OnClickTradeStartDecide(
   EventTradeSweetsNumConfirmDialogComponent_o *tradeSweetsNumConfirmDialog; // x0
   NetworkManager_ResultCallbackFunc_o *v10; // x23
 
-  if ( (byte_4C21C63 & 1) == 0 )
+  if ( (byte_4C323FE & 1) == 0 )
   {
-    sub_1C2D490(&Method_EventTradeListViewItemManager_TradeStartResponse__);
-    sub_1C2D490(&Method_NetworkManager_getRequest_TradeStartRequest___);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C21C63 = 1;
+    sub_1C32C20(&Method_EventTradeListViewItemManager_TradeStartResponse__);
+    sub_1C32C20(&Method_NetworkManager_getRequest_TradeStartRequest___);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4C323FE = 1;
   }
   tradeSweetsNumConfirmDialog = this->fields.tradeSweetsNumConfirmDialog;
   if ( !tradeSweetsNumConfirmDialog )
@@ -2174,7 +2168,7 @@ void EventTradeListViewItemManager__OnClickTradeStartDecide(
   if ( createNum > 0 )
   {
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)tradeSweetsNumConfirmDialog, 1, 0);
-    v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C2D6DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v10,
       (Il2CppObject *)this,
@@ -2184,7 +2178,7 @@ void EventTradeListViewItemManager__OnClickTradeStartDecide(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     tradeSweetsNumConfirmDialog = (EventTradeSweetsNumConfirmDialogComponent_o *)NetworkManager__getRequest_object_(
                                                                                    v10,
-                                                                                   (const MethodInfo_31599E8 *)Method_NetworkManager_getRequest_TradeStartRequest___);
+                                                                                   (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_TradeStartRequest___);
     if ( tradeSweetsNumConfirmDialog )
     {
       TradeStartRequest__beginRequest(
@@ -2198,7 +2192,7 @@ void EventTradeListViewItemManager__OnClickTradeStartDecide(
       return;
     }
 LABEL_11:
-    sub_1C2D6EC(tradeSweetsNumConfirmDialog, *(_QWORD *)&storeIdx);
+    sub_1C32E7C(tradeSweetsNumConfirmDialog);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)tradeSweetsNumConfirmDialog, 0, 0);
 }
@@ -2211,35 +2205,35 @@ void EventTradeListViewItemManager__OnClickWithdrawalButton(
 {
   Il2CppObject *v5; // x20
   UnityEngine_GameObject_o *maskPanel; // x0
-  const MethodInfo *v7; // x1
   UnityEngine_GameObject_o **p_monitor; // x21
   unsigned int klass; // w8
-  int v10; // w8
-  _QWORD *v11; // x0
-  System_Reflection_MethodBase_o *v12; // x0
-  const MethodInfo *v13; // x2
+  int v9; // w8
+  _QWORD *v10; // x0
+  System_Reflection_MethodBase_o *v11; // x0
+  const MethodInfo *v12; // x2
+  const MethodInfo *v13; // x1
   EventTradeSweetsWithdrawalConfirmDialogComponent_o *tradeSweetsWithdrawalConfirmDialog; // x21
   EventTradeListViewItem_o *Item; // x22
   System_Action_bool__o *v16; // x23
   const MethodInfo *v17; // x3
 
-  if ( (byte_4C21C61 & 1) == 0 )
+  if ( (byte_4C323FC & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_bool__TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickWithdrawalButton__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass65_0__OnClickWithdrawalButton_b__0__);
-    sub_1C2D490(&EventTradeListViewItemManager___c__DisplayClass65_0_TypeInfo);
-    byte_4C21C61 = 1;
+    sub_1C32C20(&System_Action_bool__TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickWithdrawalButton__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass65_0__OnClickWithdrawalButton_b__0__);
+    sub_1C32C20(&EventTradeListViewItemManager___c__DisplayClass65_0_TypeInfo);
+    byte_4C323FC = 1;
   }
-  v5 = (Il2CppObject *)sub_1C2D6DC(EventTradeListViewItemManager___c__DisplayClass65_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C32E6C(EventTradeListViewItemManager___c__DisplayClass65_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_18;
   v5[1].klass = (Il2CppClass *)this;
-  sub_1C2D434(&v5[1]);
+  sub_1C32BC4(&v5[1], this);
   v5[1].monitor = obj;
   p_monitor = (UnityEngine_GameObject_o **)&v5[1].monitor;
-  sub_1C2D434(&v5[1].monitor);
+  sub_1C32BC4(&v5[1].monitor, obj);
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
     goto LABEL_18;
@@ -2249,8 +2243,8 @@ void EventTradeListViewItemManager__OnClickWithdrawalButton(
   klass = (unsigned int)(*p_monitor)[5].klass;
   if ( klass <= 5 )
   {
-    v10 = 1 << klass;
-    if ( (v10 & 0xD) != 0 )
+    v9 = 1 << klass;
+    if ( (v9 & 0xD) != 0 )
     {
 LABEL_15:
       maskPanel = this->fields.maskPanel;
@@ -2260,28 +2254,28 @@ LABEL_15:
         return;
       }
 LABEL_18:
-      sub_1C2D6EC(maskPanel, v7);
+      sub_1C32E7C(maskPanel);
     }
-    if ( (v10 & 0x30) != 0 )
+    if ( (v9 & 0x30) != 0 )
     {
-      v11 = Method_EventTradeListViewItemManager_OnClickWithdrawalButton__;
+      v10 = Method_EventTradeListViewItemManager_OnClickWithdrawalButton__;
       if ( (*((_BYTE *)Method_EventTradeListViewItemManager_OnClickWithdrawalButton__ + 83) & 2) != 0 )
-        v11 = (_QWORD *)sub_1C2D4A8(Method_EventTradeListViewItemManager_OnClickWithdrawalButton__);
-      v12 = (System_Reflection_MethodBase_o *)sub_1C2D474(v11, v11[4]);
-      OverwriteAssetSoundName__PlaySystemSe(v12, 0, 0, 0);
+        v10 = (_QWORD *)sub_1C32C38(Method_EventTradeListViewItemManager_OnClickWithdrawalButton__);
+      v11 = (System_Reflection_MethodBase_o *)sub_1C32C04(v10, v10[4]);
+      OverwriteAssetSoundName__PlaySystemSe(v11, 0, 0, 0);
       maskPanel = (UnityEngine_GameObject_o *)this->fields.tradeSweetsWithdrawalConfirmDialog;
       if ( !maskPanel )
         goto LABEL_18;
       EventTradeSweetsWithdrawalConfirmDialogComponent__Init(
         (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)maskPanel,
         this->fields.currentEventId,
-        v13);
+        v12);
       maskPanel = *p_monitor;
       if ( !*p_monitor )
         goto LABEL_18;
       tradeSweetsWithdrawalConfirmDialog = this->fields.tradeSweetsWithdrawalConfirmDialog;
-      Item = EventTradeListViewObject__GetItem((EventTradeListViewObject_o *)maskPanel, v7);
-      v16 = (System_Action_bool__o *)sub_1C2D6DC(System_Action_bool__TypeInfo);
+      Item = EventTradeListViewObject__GetItem((EventTradeListViewObject_o *)maskPanel, v13);
+      v16 = (System_Action_bool__o *)sub_1C32E6C(System_Action_bool__TypeInfo);
       System_Action_bool____ctor(
         v16,
         v5,
@@ -2303,9 +2297,9 @@ void EventTradeListViewItemManager__OnClickWithdrawalDecide(
 {
   Il2CppObject *v5; // x22
   __int64 tradeSweetsWithdrawalConfirmDialog; // x0
-  const MethodInfo *v7; // x1
   EventTradeListViewItem_o **p_monitor; // x20
-  EventTradeListViewItemManager_o *v9; // x0
+  EventTradeListViewItemManager_o *v8; // x0
+  const MethodInfo *v9; // x1
   const MethodInfo *v10; // x1
   const MethodInfo *v11; // x1
   struct EventTradeSweetsWithdrawalConfirmDialogComponent_o *v12; // x19
@@ -2316,46 +2310,45 @@ void EventTradeListViewItemManager__OnClickWithdrawalDecide(
   Il2CppObject *Request_object; // x0
   int32_t currentEventId; // w19
   TradeReceiveRequest_o *v19; // x21
-  __int64 v20; // x2
-  EventTradeListViewItem_o *v21; // x8
+  EventTradeListViewItem_o *v20; // x8
   struct EventTradeInfo_o *TradeInfo_k__BackingField; // x9
-  System_Int32_array *v23; // x20
+  System_Int32_array *v22; // x20
 
-  if ( (byte_4C21C6B & 1) == 0 )
+  if ( (byte_4C32406 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_bool__TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_WithdrawalResponse__);
-    sub_1C2D490(&int___TypeInfo);
-    sub_1C2D490(&Method_NetworkManager_getRequest_TradeReceiveRequest___);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass75_0__OnClickWithdrawalDecide_b__0__);
-    sub_1C2D490(&EventTradeListViewItemManager___c__DisplayClass75_0_TypeInfo);
-    byte_4C21C6B = 1;
+    sub_1C32C20(&System_Action_bool__TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_WithdrawalResponse__);
+    sub_1C32C20(&int___TypeInfo);
+    sub_1C32C20(&Method_NetworkManager_getRequest_TradeReceiveRequest___);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass75_0__OnClickWithdrawalDecide_b__0__);
+    sub_1C32C20(&EventTradeListViewItemManager___c__DisplayClass75_0_TypeInfo);
+    byte_4C32406 = 1;
   }
-  v5 = (Il2CppObject *)sub_1C2D6DC(EventTradeListViewItemManager___c__DisplayClass75_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C32E6C(EventTradeListViewItemManager___c__DisplayClass75_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_20;
   v5[1].klass = (Il2CppClass *)this;
-  sub_1C2D434(&v5[1]);
+  sub_1C32BC4(&v5[1], this);
   v5[1].monitor = item;
   p_monitor = (EventTradeListViewItem_o **)&v5[1].monitor;
-  v9 = (EventTradeListViewItemManager_o *)sub_1C2D434(&v5[1].monitor);
-  if ( !EventTradeListViewItemManager__IsOverPossessionLimit(v9, v10)
-    && !EventTradeListViewItemManager__IsOverPresentBoxLimit(this, v11) )
+  v8 = (EventTradeListViewItemManager_o *)sub_1C32BC4(&v5[1].monitor, item);
+  if ( !EventTradeListViewItemManager__IsOverPossessionLimit(v8, v9)
+    && !EventTradeListViewItemManager__IsOverPresentBoxLimit(this, v10) )
   {
     tradeSweetsWithdrawalConfirmDialog = (__int64)this->fields.tradeSweetsWithdrawalConfirmDialog;
     if ( tradeSweetsWithdrawalConfirmDialog )
     {
       EventTradeSweetsWithdrawalConfirmDialogComponent__Close(
         (EventTradeSweetsWithdrawalConfirmDialogComponent_o *)tradeSweetsWithdrawalConfirmDialog,
-        v7);
+        v11);
       tradeSweetsWithdrawalConfirmDialog = (__int64)this->fields.maskPanel;
       if ( tradeSweetsWithdrawalConfirmDialog )
       {
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)tradeSweetsWithdrawalConfirmDialog, 1, 0);
-        v16 = (NetworkManager_ResultCallbackFunc_o *)sub_1C2D6DC(NetworkManager_ResultCallbackFunc_TypeInfo);
+        v16 = (NetworkManager_ResultCallbackFunc_o *)sub_1C32E6C(NetworkManager_ResultCallbackFunc_TypeInfo);
         NetworkManager_ResultCallbackFunc___ctor(
           v16,
           (Il2CppObject *)this,
@@ -2365,26 +2358,26 @@ void EventTradeListViewItemManager__OnClickWithdrawalDecide(
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         Request_object = NetworkManager__getRequest_object_(
                            v16,
-                           (const MethodInfo_31599E8 *)Method_NetworkManager_getRequest_TradeReceiveRequest___);
+                           (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_TradeReceiveRequest___);
         currentEventId = this->fields.currentEventId;
         v19 = (TradeReceiveRequest_o *)Request_object;
-        tradeSweetsWithdrawalConfirmDialog = sub_1C2D538(int___TypeInfo, 1);
-        v21 = *p_monitor;
+        tradeSweetsWithdrawalConfirmDialog = sub_1C32CC8(int___TypeInfo, 1);
+        v20 = *p_monitor;
         if ( *p_monitor )
         {
-          TradeInfo_k__BackingField = v21->fields._TradeInfo_k__BackingField;
+          TradeInfo_k__BackingField = v20->fields._TradeInfo_k__BackingField;
           if ( TradeInfo_k__BackingField )
           {
-            v23 = (System_Int32_array *)tradeSweetsWithdrawalConfirmDialog;
+            v22 = (System_Int32_array *)tradeSweetsWithdrawalConfirmDialog;
             if ( tradeSweetsWithdrawalConfirmDialog )
             {
               if ( !*(_DWORD *)(tradeSweetsWithdrawalConfirmDialog + 24) )
-                sub_1C2D6F4(tradeSweetsWithdrawalConfirmDialog, v7, v20);
+                sub_1C32E84(tradeSweetsWithdrawalConfirmDialog);
               *(_DWORD *)(tradeSweetsWithdrawalConfirmDialog + 32) = TradeInfo_k__BackingField->fields.storeIdx;
-              tradeSweetsWithdrawalConfirmDialog = EventTradeListViewItem__get_NowCompleteNum(v21, 0);
+              tradeSweetsWithdrawalConfirmDialog = EventTradeListViewItem__get_NowCompleteNum(v20, 0);
               if ( v19 )
               {
-                TradeReceiveRequest__beginRequest(v19, currentEventId, v23, tradeSweetsWithdrawalConfirmDialog, 1, 0);
+                TradeReceiveRequest__beginRequest(v19, currentEventId, v22, tradeSweetsWithdrawalConfirmDialog, 1, 0);
                 return;
               }
             }
@@ -2393,11 +2386,11 @@ void EventTradeListViewItemManager__OnClickWithdrawalDecide(
       }
     }
 LABEL_20:
-    sub_1C2D6EC(tradeSweetsWithdrawalConfirmDialog, v7);
+    sub_1C32E7C(tradeSweetsWithdrawalConfirmDialog);
   }
   v12 = this->fields.tradeSweetsWithdrawalConfirmDialog;
   monitor = (EventTradeListViewItem_o *)v5[1].monitor;
-  v14 = (System_Action_bool__o *)sub_1C2D6DC(System_Action_bool__TypeInfo);
+  v14 = (System_Action_bool__o *)sub_1C32E6C(System_Action_bool__TypeInfo);
   System_Action_bool____ctor(
     v14,
     v5,
@@ -2419,13 +2412,12 @@ void EventTradeListViewItemManager__OnMoveEnd(EventTradeListViewItemManager_o *t
   bool v4; // vf
   int32_t v5; // w8
   UnityEngine_Object_o *scrollView; // x20
-  __int64 v7; // x1
-  struct UIScrollView_o *v8; // x0
+  struct UIScrollView_o *v7; // x0
 
-  if ( (byte_4C21C5C & 1) == 0 )
+  if ( (byte_4C323F7 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21C5C = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C323F7 = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -2441,13 +2433,13 @@ void EventTradeListViewItemManager__OnMoveEnd(EventTradeListViewItemManager_o *t
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(scrollView, 0, 0) )
       {
-        v8 = this->fields.scrollView;
-        if ( !v8 )
-          sub_1C2D6EC(0, v7);
-        ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v8->klass->vtable._8_UpdateScrollbars.methodPtr)(
-          v8,
+        v7 = this->fields.scrollView;
+        if ( !v7 )
+          sub_1C32E7C(0);
+        ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v7->klass->vtable._8_UpdateScrollbars.methodPtr)(
+          v7,
           1,
-          v8->klass->vtable._8_UpdateScrollbars.method);
+          v7->klass->vtable._8_UpdateScrollbars.method);
       }
     }
   }
@@ -2461,65 +2453,64 @@ void EventTradeListViewItemManager__OpenReconfirmDialog(
 {
   __int64 v5; // x19
   BaseDialog_o *tradeSweetsWithdrawalConfirmDialog; // x0
-  __int64 v7; // x1
-  BaseDialog_o **v8; // x22
+  BaseDialog_o **v7; // x22
   Il2CppObject *Instance; // x20
-  System_String_o *v10; // x21
-  System_String_o *v11; // x22
-  System_String_o *v12; // x23
-  System_String_o *v13; // x24
-  CommonConfirmDialog_ClickDelegate_o *v14; // x25
+  System_String_o *v9; // x21
+  System_String_o *v10; // x22
+  System_String_o *v11; // x23
+  System_String_o *v12; // x24
+  CommonConfirmDialog_ClickDelegate_o *v13; // x25
 
-  if ( (byte_4C21C62 & 1) == 0 )
+  if ( (byte_4C323FD & 1) == 0 )
   {
-    sub_1C2D490(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass66_0__OpenReconfirmDialog_b__0__);
-    sub_1C2D490(&EventTradeListViewItemManager___c__DisplayClass66_0_TypeInfo);
-    sub_1C2D490(&StringLiteral_13505/*"TRADE_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_TITLE"*/);
-    sub_1C2D490(&StringLiteral_3680/*"COMMON_CONFIRM_EXECUTE"*/);
-    sub_1C2D490(&StringLiteral_3677/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C2D490(&StringLiteral_13504/*"TRADE_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_MESSAGE"*/);
-    byte_4C21C62 = 1;
+    sub_1C32C20(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass66_0__OpenReconfirmDialog_b__0__);
+    sub_1C32C20(&EventTradeListViewItemManager___c__DisplayClass66_0_TypeInfo);
+    sub_1C32C20(&StringLiteral_13508/*"TRADE_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_TITLE"*/);
+    sub_1C32C20(&StringLiteral_3687/*"COMMON_CONFIRM_EXECUTE"*/);
+    sub_1C32C20(&StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C32C20(&StringLiteral_13507/*"TRADE_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_MESSAGE"*/);
+    byte_4C323FD = 1;
   }
-  v5 = sub_1C2D6DC(EventTradeListViewItemManager___c__DisplayClass66_0_TypeInfo);
+  v5 = sub_1C32E6C(EventTradeListViewItemManager___c__DisplayClass66_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_12;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C2D434(v5 + 16);
+  sub_1C32BC4(v5 + 16, this);
   *(_QWORD *)(v5 + 24) = item;
-  v8 = (BaseDialog_o **)(v5 + 24);
-  sub_1C2D434(v5 + 24);
+  v7 = (BaseDialog_o **)(v5 + 24);
+  sub_1C32BC4(v5 + 24, item);
   tradeSweetsWithdrawalConfirmDialog = (BaseDialog_o *)this->fields.tradeSweetsWithdrawalConfirmDialog;
   if ( !tradeSweetsWithdrawalConfirmDialog )
     goto LABEL_12;
   if ( !BaseDialog__get_IsBusy(tradeSweetsWithdrawalConfirmDialog, 0) )
     return;
-  tradeSweetsWithdrawalConfirmDialog = *v8;
-  if ( !*v8 )
+  tradeSweetsWithdrawalConfirmDialog = *v7;
+  if ( !*v7 )
     goto LABEL_12;
   *(_DWORD *)(v5 + 32) = EventTradeListViewItem__get_NowCompleteNum(
                            (EventTradeListViewItem_o *)tradeSweetsWithdrawalConfirmDialog,
                            0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_13505/*"TRADE_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_TITLE"*/, 0);
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_13504/*"TRADE_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_MESSAGE"*/, 0);
-  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3680/*"COMMON_CONFIRM_EXECUTE"*/, 0);
-  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_3677/*"COMMON_CONFIRM_CANCEL"*/, 0);
-  v14 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C2D6DC(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_13508/*"TRADE_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_TITLE"*/, 0);
+  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_13507/*"TRADE_EVENT_WITHDRAWAL_RECONFIRMATION_NOTIFICATION_DIALOG_MESSAGE"*/, 0);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_3687/*"COMMON_CONFIRM_EXECUTE"*/, 0);
+  v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  v13 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C32E6C(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
-    v14,
+    v13,
     (Il2CppObject *)v5,
     Method_EventTradeListViewItemManager___c__DisplayClass66_0__OpenReconfirmDialog_b__0__,
     0);
   if ( !Instance )
 LABEL_12:
-    sub_1C2D6EC(tradeSweetsWithdrawalConfirmDialog, v7);
-  CommonUI__OpenConfirmDialog_31167344((CommonUI_o *)Instance, v10, v11, v12, v13, 1, v14, 30, 26, 180.0, 13.0, 0, 0, 0);
+    sub_1C32E7C(tradeSweetsWithdrawalConfirmDialog);
+  CommonUI__OpenConfirmDialog_31190452((CommonUI_o *)Instance, v9, v10, v11, v12, 1, v13, 30, 26, 180.0, 13.0, 0, 0, 0);
 }
 
 
@@ -2531,8 +2522,8 @@ bool EventTradeListViewItemManager__OpenReplenishmentDialog(
   System_Func_object__bool__o *v4; // x21
   Il2CppObject *v5; // x20
   DataMasterBase_TMaster__TEntity__PKType__o *Master_object; // x0
-  const MethodInfo *v7; // x1
   Il2CppObject *Entity; // x21
+  const MethodInfo *v8; // x1
   EventTradeListViewItem_o *v9; // x20
   const MethodInfo *v10; // x2
   struct EventTradeInfo_o *TradeInfo_k__BackingField; // x8
@@ -2542,41 +2533,41 @@ bool EventTradeListViewItemManager__OpenReplenishmentDialog(
   const MethodInfo *v15; // x5
   bool v16; // w19
 
-  if ( (byte_4C21C6F & 1) == 0 )
+  if ( (byte_4C3240A & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_int__int__int__TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMaster_EventMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-    sub_1C2D490(&Method_System_Linq_Enumerable_FirstOrDefault_EventTradeListViewObject___);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickTradeReplenishmentDecide__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager__OpenReplenishmentDialog_b__79_0__);
-    sub_1C2D490(&System_Func_EventTradeListViewObject__bool__TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21C6F = 1;
+    sub_1C32C20(&System_Action_int__int__int__TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMaster_EventMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_EventTradeListViewObject___);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickTradeReplenishmentDecide__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager__OpenReplenishmentDialog_b__79_0__);
+    sub_1C32C20(&System_Func_EventTradeListViewObject__bool__TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3240A = 1;
   }
   if ( !this->fields.selectTradeGoodsEntity )
     return 0;
   ObjectList = EventTradeListViewItemManager__get_ObjectList(this, method);
-  v4 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_EventTradeListViewObject__bool__TypeInfo);
+  v4 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_EventTradeListViewObject__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v4,
     (Il2CppObject *)this,
     Method_EventTradeListViewItemManager__OpenReplenishmentDialog_b__79_0__,
     0);
-  v5 = System_Linq_Enumerable__FirstOrDefault_object__51348472(
+  v5 = System_Linq_Enumerable__FirstOrDefault_object__51408536(
          (System_Collections_Generic_IEnumerable_TSource__o *)ObjectList,
          (System_Func_TSource__bool__o *)v4,
-         (const MethodInfo_30F83F8 *)Method_System_Linq_Enumerable_FirstOrDefault_EventTradeListViewObject___);
+         (const MethodInfo_3106E98 *)Method_System_Linq_Enumerable_FirstOrDefault_EventTradeListViewObject___);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventMaster___);
   if ( !Master_object )
     goto LABEL_22;
   Entity = DataMasterBase_object__object__int___GetEntity(
              Master_object,
              this->fields.currentEventId,
-             (const MethodInfo_3387D98 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+             (const MethodInfo_3396838 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UnityEngine_Object__op_Equality(
@@ -2596,10 +2587,10 @@ bool EventTradeListViewItemManager__OpenReplenishmentDialog(
   if ( !v5
     || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)EventTradeListViewObject__GetItem(
                                                                         (EventTradeListViewObject_o *)v5,
-                                                                        v7)) == 0 )
+                                                                        v8)) == 0 )
   {
 LABEL_22:
-    sub_1C2D6EC(Master_object, v7);
+    sub_1C32E7C(Master_object);
   }
   v9 = (EventTradeListViewItem_o *)Master_object;
   if ( !Master_object[2].klass
@@ -2619,7 +2610,7 @@ LABEL_22:
     goto LABEL_22;
   storeIdx = TradeInfo_k__BackingField->fields.storeIdx;
   tradeSweetsNumConfirmDialog = this->fields.tradeSweetsNumConfirmDialog;
-  v14 = (System_Action_int__int__int__o *)sub_1C2D6DC(System_Action_int__int__int__TypeInfo);
+  v14 = (System_Action_int__int__int__o *)sub_1C32E6C(System_Action_int__int__int__TypeInfo);
   System_Action_int__int__int____ctor(
     v14,
     (Il2CppObject *)this,
@@ -2641,30 +2632,32 @@ void EventTradeListViewItemManager__OpenRewardDialog(
   __int64 v5; // x21
   EventTradeRewardDialogComponent_o *tradeRewardDialog; // x0
   const MethodInfo *v7; // x1
+  const MethodInfo *v8; // x1
+  struct BattleDropItem_array *resultEventRewardInfos; // x1
   struct UserEventPointEntity_array *oldUserEventPoint; // x8
-  EventTradeRewardDialogComponent_o *v9; // x27
+  EventTradeRewardDialogComponent_o *v11; // x27
   int32_t eventPointNum; // w26
   int32_t eventPointItemId; // w25
   int32_t currentEventId; // w24
   BattleDropItem_array *resultTradeRewardInfos; // x23
   EventTradeGoodsEntity_o *selectTradeGoodsEntity; // x19
-  BattleDropItem_array *v15; // x22
+  BattleDropItem_array *v17; // x22
   System_Action_o *closeCallback; // x20
-  const MethodInfo *v17; // [xsp+8h] [xbp-58h]
+  const MethodInfo *v19; // [xsp+8h] [xbp-58h]
 
-  if ( (byte_4C21C6E & 1) == 0 )
+  if ( (byte_4C32409 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__0__);
-    sub_1C2D490(&EventTradeListViewItemManager___c__DisplayClass78_0_TypeInfo);
-    byte_4C21C6E = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__0__);
+    sub_1C32C20(&EventTradeListViewItemManager___c__DisplayClass78_0_TypeInfo);
+    byte_4C32409 = 1;
   }
-  v5 = sub_1C2D6DC(EventTradeListViewItemManager___c__DisplayClass78_0_TypeInfo);
+  v5 = sub_1C32E6C(EventTradeListViewItemManager___c__DisplayClass78_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_14;
   *(_QWORD *)(v5 + 24) = this;
-  sub_1C2D434(v5 + 24);
+  sub_1C32BC4(v5 + 24, this);
   tradeRewardDialog = this->fields.tradeRewardDialog;
   if ( !tradeRewardDialog )
     goto LABEL_14;
@@ -2672,11 +2665,12 @@ void EventTradeListViewItemManager__OpenRewardDialog(
   tradeRewardDialog = (EventTradeRewardDialogComponent_o *)this->fields.tradePointRewardDialog;
   if ( !tradeRewardDialog )
     goto LABEL_14;
-  EventTradePointRewardDialogComponent__Init((EventTradePointRewardDialogComponent_o *)tradeRewardDialog, v7);
+  EventTradePointRewardDialogComponent__Init((EventTradePointRewardDialogComponent_o *)tradeRewardDialog, v8);
   if ( !resData )
     goto LABEL_14;
-  *(_QWORD *)(v5 + 16) = resData->fields.resultEventRewardInfos;
-  tradeRewardDialog = (EventTradeRewardDialogComponent_o *)sub_1C2D434(v5 + 16);
+  resultEventRewardInfos = resData->fields.resultEventRewardInfos;
+  *(_QWORD *)(v5 + 16) = resultEventRewardInfos;
+  tradeRewardDialog = (EventTradeRewardDialogComponent_o *)sub_1C32BC4(v5 + 16, resultEventRewardInfos);
   oldUserEventPoint = resData->fields.oldUserEventPoint;
   if ( oldUserEventPoint )
   {
@@ -2693,33 +2687,33 @@ void EventTradeListViewItemManager__OpenRewardDialog(
     }
   }
   *(_DWORD *)(v5 + 32) = (_DWORD)oldUserEventPoint;
-  v9 = this->fields.tradeRewardDialog;
+  v11 = this->fields.tradeRewardDialog;
   eventPointNum = resData->fields.eventPointNum;
   eventPointItemId = this->fields.eventPointItemId;
   currentEventId = this->fields.currentEventId;
   resultTradeRewardInfos = resData->fields.resultTradeRewardInfos;
   selectTradeGoodsEntity = this->fields.selectTradeGoodsEntity;
-  v15 = *(BattleDropItem_array **)(v5 + 16);
-  closeCallback = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  v17 = *(BattleDropItem_array **)(v5 + 16);
+  closeCallback = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
   System_Action___ctor(
     closeCallback,
     (Il2CppObject *)v5,
     Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__0__,
     0);
-  if ( !v9 )
+  if ( !v11 )
 LABEL_14:
-    sub_1C2D6EC(tradeRewardDialog, v7);
+    sub_1C32E7C(tradeRewardDialog);
   EventTradeRewardDialogComponent__Open(
-    v9,
+    v11,
     eventPointNum,
     eventPointItemId,
     currentEventId,
     resultTradeRewardInfos,
-    v15,
+    v17,
     selectTradeGoodsEntity,
     selectTradeGoodsEntity == 0,
     closeCallback,
-    v17);
+    v19);
 }
 
 
@@ -2730,40 +2724,43 @@ void EventTradeListViewItemManager__OpenSweetsNotificationDialog(
   Il2CppObject *v3; // x20
   int64_t PickupList; // x0
   const MethodInfo *v5; // x1
-  const MethodInfo *v6; // x1
+  System_Object_array *v6; // x0
   void **p_monitor; // x21
   const MethodInfo *v8; // x1
+  System_String_o *v9; // x0
+  const MethodInfo *v10; // x1
   EventTradePopularSweetsNotificationDialogComponent_o *tradePopularSweetsNotificationDialog; // x19
   EventTradeListViewItem_array *monitor; // x21
-  System_Action_o *v11; // x22
-  EventTradeListViewItemManager_o *v12; // x0
-  const MethodInfo *v13; // x1
-  const MethodInfo *v14; // x4
+  System_Action_o *v13; // x22
+  EventTradeListViewItemManager_o *v14; // x0
+  const MethodInfo *v15; // x1
+  const MethodInfo *v16; // x4
   int64_t Time; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C21C73 & 1) == 0 )
+  if ( (byte_4C3240E & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventTradeListViewItem__ToArray__);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass83_0__OpenSweetsNotificationDialog_b__0__);
-    sub_1C2D490(&EventTradeListViewItemManager___c__DisplayClass83_0_TypeInfo);
-    byte_4C21C73 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventTradeListViewItem__ToArray__);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass83_0__OpenSweetsNotificationDialog_b__0__);
+    sub_1C32C20(&EventTradeListViewItemManager___c__DisplayClass83_0_TypeInfo);
+    byte_4C3240E = 1;
   }
-  v3 = (Il2CppObject *)sub_1C2D6DC(EventTradeListViewItemManager___c__DisplayClass83_0_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C32E6C(EventTradeListViewItemManager___c__DisplayClass83_0_TypeInfo);
   System_Object___ctor(v3, 0);
   if ( !v3 )
     goto LABEL_14;
   v3[1].klass = (Il2CppClass *)this;
-  sub_1C2D434(&v3[1]);
-  PickupList = (int64_t)EventTradeListViewItemManager__GetPickupList(this, v6);
+  sub_1C32BC4(&v3[1], this);
+  PickupList = (int64_t)EventTradeListViewItemManager__GetPickupList(this, v5);
   if ( !PickupList )
     goto LABEL_14;
-  v3[1].monitor = System_Collections_Generic_List_object___ToArray(
-                    (System_Collections_Generic_List_object__o *)PickupList,
-                    (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_EventTradeListViewItem__ToArray__);
+  v6 = System_Collections_Generic_List_object___ToArray(
+         (System_Collections_Generic_List_object__o *)PickupList,
+         (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_EventTradeListViewItem__ToArray__);
+  v3[1].monitor = v6;
   p_monitor = &v3[1].monitor;
-  sub_1C2D434(&v3[1].monitor);
+  sub_1C32BC4(&v3[1].monitor, v6);
   PickupList = EventTradeListViewItemManager__IsAlreadyOpenTodayDialog(this, v8);
   if ( (PickupList & 1) != 0 )
     return;
@@ -2774,71 +2771,70 @@ void EventTradeListViewItemManager__OpenSweetsNotificationDialog(
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0);
-  v3[2].klass = (Il2CppClass *)System_Int64__ToString((int64_t)&Time, 0);
-  sub_1C2D434(&v3[2]);
+  v9 = System_Int64__ToString((int64_t)&Time, 0);
+  v3[2].klass = (Il2CppClass *)v9;
+  sub_1C32BC4(&v3[2], v9);
   PickupList = (int64_t)this->fields.tradePopularSweetsNotificationDialog;
   if ( !PickupList
     || (EventTradePopularSweetsNotificationDialogComponent__Init(
           (EventTradePopularSweetsNotificationDialogComponent_o *)PickupList,
-          v5),
+          v10),
         tradePopularSweetsNotificationDialog = this->fields.tradePopularSweetsNotificationDialog,
         monitor = (EventTradeListViewItem_array *)v3[1].monitor,
-        v11 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo),
+        v13 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo),
         System_Action___ctor(
-          v11,
+          v13,
           v3,
           Method_EventTradeListViewItemManager___c__DisplayClass83_0__OpenSweetsNotificationDialog_b__0__,
           0),
-        PickupList = EventTradeListViewItemManager__GetUpdateTime(v12, v13),
+        PickupList = EventTradeListViewItemManager__GetUpdateTime(v14, v15),
         !tradePopularSweetsNotificationDialog) )
   {
 LABEL_14:
-    sub_1C2D6EC(PickupList, v5);
+    sub_1C32E7C(PickupList);
   }
   EventTradePopularSweetsNotificationDialogComponent__Open(
     tradePopularSweetsNotificationDialog,
     monitor,
-    v11,
+    v13,
     PickupList,
-    v14);
+    v16);
 }
 
 
 void EventTradeListViewItemManager__RequestListObject(EventTradeListViewItemManager_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *ObjectList; // x0
-  __int64 v4; // x1
   int32_t size; // w8
   Il2CppObject *current; // x20
-  System_Action_o *v7; // x21
-  __int64 v8; // x0
-  __int64 v9; // x1
-  const MethodInfo *v10; // x3
-  System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-58h] BYREF
+  System_Action_o *v6; // x21
+  __int64 v7; // x0
+  const MethodInfo *v8; // x3
+  System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4C21C5B & 1) == 0 )
+  if ( (byte_4C323F6 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_EventTradeListViewObject__Dispose__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_EventTradeListViewObject__MoveNext__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_EventTradeListViewObject__get_Current__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnMoveEnd__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventTradeListViewObject__GetEnumerator__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventTradeListViewObject__get_Count__);
-    sub_1C2D490(&StringLiteral_9936/*"OnMoveEnd"*/);
-    byte_4C21C5B = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventTradeListViewObject__Dispose__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventTradeListViewObject__MoveNext__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventTradeListViewObject__get_Current__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnMoveEnd__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventTradeListViewObject__GetEnumerator__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventTradeListViewObject__get_Count__);
+    sub_1C32C20(&StringLiteral_9941/*"OnMoveEnd"*/);
+    byte_4C323F6 = 1;
   }
-  memset(&v11, 0, sizeof(v11));
+  memset(&v9, 0, sizeof(v9));
   ObjectList = (System_Collections_Generic_List_object__o *)EventTradeListViewItemManager__get_ObjectList(this, method);
   if ( !ObjectList )
-    sub_1C2D6EC(0, v4);
+    sub_1C32E7C(0);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9936/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9941/*"OnMoveEnd"*/,
       0.0,
       0);
   }
@@ -2846,23 +2842,23 @@ void EventTradeListViewItemManager__RequestListObject(EventTradeListViewItemMana
   {
     this->fields.callbackCount = size;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v11,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v9,
       ObjectList,
-      (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_EventTradeListViewObject__GetEnumerator__);
+      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_EventTradeListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v11,
-              (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_EventTradeListViewObject__MoveNext__) )
+              &v9,
+              (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_EventTradeListViewObject__MoveNext__) )
     {
-      current = v11.fields._current;
-      v7 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
-      System_Action___ctor(v7, (Il2CppObject *)this, Method_EventTradeListViewItemManager_OnMoveEnd__, 0);
+      current = v9.fields._current;
+      v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+      System_Action___ctor(v6, (Il2CppObject *)this, Method_EventTradeListViewItemManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C2D6EC(v8, v9);
-      EventTradeListViewObject__Init_32248864((EventTradeListViewObject_o *)current, 3, v7, v10);
+        sub_1C32E7C(v7);
+      EventTradeListViewObject__Init_32475932((EventTradeListViewObject_o *)current, 3, v6, v8);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v11,
-      (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_EventTradeListViewObject__Dispose__);
+      &v9,
+      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_EventTradeListViewObject__Dispose__);
   }
 }
 
@@ -2885,26 +2881,25 @@ void EventTradeListViewItemManager__SetObjectItem(
   __int64 naturalAligment; // x11
   System_Action_o *v7; // x21
   __int64 v8; // x0
-  __int64 v9; // x1
-  const MethodInfo *v10; // x3
-  System_Action_object__o *v11; // x21
-  System_Action_object__o *v12; // x22
-  System_Action_object__o *v13; // x23
-  System_Action_object__o *v14; // x24
-  const MethodInfo *v15; // x5
+  const MethodInfo *v9; // x3
+  System_Action_object__o *v10; // x21
+  System_Action_object__o *v11; // x22
+  System_Action_object__o *v12; // x23
+  System_Action_object__o *v13; // x24
+  const MethodInfo *v14; // x5
 
-  if ( (byte_4C21C5A & 1) == 0 )
+  if ( (byte_4C323F5 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_EventTradeListViewObject__TypeInfo);
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickReceiveButton__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickReplenishmentButton__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickTradeStartButton__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnClickWithdrawalButton__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager_OnMoveEnd__);
-    sub_1C2D490(&EventTradeListViewObject_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21C5A = 1;
+    sub_1C32C20(&System_Action_EventTradeListViewObject__TypeInfo);
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickReceiveButton__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickReplenishmentButton__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickTradeStartButton__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnClickWithdrawalButton__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager_OnMoveEnd__);
+    sub_1C32C20(&EventTradeListViewObject_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C323F5 = 1;
   }
   if ( obj )
   {
@@ -2923,42 +2918,42 @@ void EventTradeListViewItemManager__SetObjectItem(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)obj, 0, 0) )
   {
-    v7 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_EventTradeListViewItemManager_OnMoveEnd__, 0);
     if ( !obj )
-      sub_1C2D6EC(v8, v9);
-    EventTradeListViewObject__Init_32248864((EventTradeListViewObject_o *)obj, 3, v7, v10);
-    v11 = (System_Action_object__o *)sub_1C2D6DC(System_Action_EventTradeListViewObject__TypeInfo);
+      sub_1C32E7C(v8);
+    EventTradeListViewObject__Init_32475932((EventTradeListViewObject_o *)obj, 3, v7, v9);
+    v10 = (System_Action_object__o *)sub_1C32E6C(System_Action_EventTradeListViewObject__TypeInfo);
     System_Action_object____ctor(
-      v11,
+      v10,
       (Il2CppObject *)this,
       (intptr_t)Method_EventTradeListViewItemManager_OnClickTradeStartButton__,
       0);
-    v12 = (System_Action_object__o *)sub_1C2D6DC(System_Action_EventTradeListViewObject__TypeInfo);
+    v11 = (System_Action_object__o *)sub_1C32E6C(System_Action_EventTradeListViewObject__TypeInfo);
     System_Action_object____ctor(
-      v12,
+      v11,
       (Il2CppObject *)this,
       (intptr_t)Method_EventTradeListViewItemManager_OnClickReceiveButton__,
       0);
-    v13 = (System_Action_object__o *)sub_1C2D6DC(System_Action_EventTradeListViewObject__TypeInfo);
+    v12 = (System_Action_object__o *)sub_1C32E6C(System_Action_EventTradeListViewObject__TypeInfo);
     System_Action_object____ctor(
-      v13,
+      v12,
       (Il2CppObject *)this,
       (intptr_t)Method_EventTradeListViewItemManager_OnClickReplenishmentButton__,
       0);
-    v14 = (System_Action_object__o *)sub_1C2D6DC(System_Action_EventTradeListViewObject__TypeInfo);
+    v13 = (System_Action_object__o *)sub_1C32E6C(System_Action_EventTradeListViewObject__TypeInfo);
     System_Action_object____ctor(
-      v14,
+      v13,
       (Il2CppObject *)this,
       (intptr_t)Method_EventTradeListViewItemManager_OnClickWithdrawalButton__,
       0);
     EventTradeListViewObject__SetOnClickAction(
       (EventTradeListViewObject_o *)obj,
+      (System_Action_EventTradeListViewObject__o *)v10,
       (System_Action_EventTradeListViewObject__o *)v11,
       (System_Action_EventTradeListViewObject__o *)v12,
       (System_Action_EventTradeListViewObject__o *)v13,
-      (System_Action_EventTradeListViewObject__o *)v14,
-      v15);
+      v14);
   }
 }
 
@@ -2970,47 +2965,47 @@ void EventTradeListViewItemManager__SetReceiveAllButton(
   int32_t currentEventId; // w20
   UISprite_o *receiveAllButtonSprite; // x21
   UILabel_o *receiveAllButtonLabel; // x20
-  System_String_o *receiveAllButton; // x0
-  __int64 v7; // x1
+  __int64 receiveAllButton; // x0
   UnityEngine_Object_o *tradeButtonBlinkEffect; // x20
   struct EventTradeAssetManager_o *assetManager; // x8
   Il2CppObject *TradeButtonBlinkEffect_k__BackingField; // x20
   struct UnityEngine_GameObject_o **p_tradeButtonBlinkEffect; // x19
   UnityEngine_Transform_o *transform; // x21
+  Il2CppObject *v12; // x0
   UnityEngine_Transform_o *v13; // x20
 
-  if ( (byte_4C21C55 & 1) == 0 )
+  if ( (byte_4C323F0 & 1) == 0 )
   {
-    sub_1C2D490(&AtlasManager_TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&Method_UnityEngine_Object_Instantiate_GameObject____78081576);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_3351/*"CHECK_TRADE_BUTTON_LABEL"*/);
-    sub_1C2D490(&StringLiteral_17482/*"btn_getreward"*/);
-    byte_4C21C55 = 1;
+    sub_1C32C20(&AtlasManager_TypeInfo);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject____78147088);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_3354/*"CHECK_TRADE_BUTTON_LABEL"*/);
+    sub_1C32C20(&StringLiteral_17486/*"btn_getreward"*/);
+    byte_4C323F0 = 1;
   }
   currentEventId = this->fields.currentEventId;
   receiveAllButtonSprite = this->fields.receiveAllButtonSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_40385372(currentEventId, receiveAllButtonSprite, (System_String_o *)StringLiteral_17482/*"btn_getreward"*/, 0);
+  AtlasManager__SetEventUI_40507600(currentEventId, receiveAllButtonSprite, (System_String_o *)StringLiteral_17486/*"btn_getreward"*/, 0);
   receiveAllButtonLabel = this->fields.receiveAllButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  receiveAllButton = LocalizationManager__Get((System_String_o *)StringLiteral_3351/*"CHECK_TRADE_BUTTON_LABEL"*/, 0);
+  receiveAllButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_3354/*"CHECK_TRADE_BUTTON_LABEL"*/, 0);
   if ( !receiveAllButtonLabel )
     goto LABEL_22;
-  UILabel__set_text(receiveAllButtonLabel, receiveAllButton, 0);
+  UILabel__set_text(receiveAllButtonLabel, (System_String_o *)receiveAllButton, 0);
   tradeButtonBlinkEffect = (UnityEngine_Object_o *)this->fields.tradeButtonBlinkEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  receiveAllButton = (System_String_o *)UnityEngine_Object__op_Equality(tradeButtonBlinkEffect, 0, 0);
-  if ( ((unsigned __int8)receiveAllButton & 1) != 0 )
+  receiveAllButton = UnityEngine_Object__op_Equality(tradeButtonBlinkEffect, 0, 0);
+  if ( (receiveAllButton & 1) != 0 )
   {
     assetManager = this->fields.assetManager;
     if ( assetManager )
     {
-      receiveAllButton = (System_String_o *)this->fields.receiveAllButton;
+      receiveAllButton = (__int64)this->fields.receiveAllButton;
       if ( receiveAllButton )
       {
         TradeButtonBlinkEffect_k__BackingField = (Il2CppObject *)assetManager->fields._TradeButtonBlinkEffect_k__BackingField;
@@ -3018,27 +3013,28 @@ void EventTradeListViewItemManager__SetReceiveAllButton(
         transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)receiveAllButton, 0);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        *p_tradeButtonBlinkEffect = (struct UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object__51752420(
-                                                                         TradeButtonBlinkEffect_k__BackingField,
-                                                                         transform,
-                                                                         (const MethodInfo_315ADE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78081576);
-        sub_1C2D434(p_tradeButtonBlinkEffect);
-        receiveAllButton = (System_String_o *)*p_tradeButtonBlinkEffect;
+        v12 = UnityEngine_Object__Instantiate_object__51812484(
+                TradeButtonBlinkEffect_k__BackingField,
+                transform,
+                (const MethodInfo_3169884 *)Method_UnityEngine_Object_Instantiate_GameObject____78147088);
+        *p_tradeButtonBlinkEffect = (struct UnityEngine_GameObject_o *)v12;
+        sub_1C32BC4(p_tradeButtonBlinkEffect, v12);
+        receiveAllButton = (__int64)*p_tradeButtonBlinkEffect;
         if ( *p_tradeButtonBlinkEffect )
         {
-          receiveAllButton = (System_String_o *)UnityEngine_GameObject__get_transform(
-                                                  (UnityEngine_GameObject_o *)receiveAllButton,
-                                                  0);
+          receiveAllButton = (__int64)UnityEngine_GameObject__get_transform(
+                                        (UnityEngine_GameObject_o *)receiveAllButton,
+                                        0);
           v13 = (UnityEngine_Transform_o *)receiveAllButton;
-          if ( !byte_4C20DA6 )
+          if ( !byte_4C313D6 )
           {
-            receiveAllButton = (System_String_o *)sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
-            byte_4C20DA6 = 1;
+            receiveAllButton = sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
+            byte_4C313D6 = 1;
           }
           if ( v13 )
           {
             UnityEngine_Transform__set_localScale(v13, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-            receiveAllButton = (System_String_o *)*p_tradeButtonBlinkEffect;
+            receiveAllButton = (__int64)*p_tradeButtonBlinkEffect;
             if ( *p_tradeButtonBlinkEffect )
             {
               UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)receiveAllButton, 0, 0);
@@ -3049,7 +3045,7 @@ void EventTradeListViewItemManager__SetReceiveAllButton(
       }
     }
 LABEL_22:
-    sub_1C2D6EC(receiveAllButton, v7);
+    sub_1C32E7C(receiveAllButton);
   }
 }
 
@@ -3058,52 +3054,58 @@ void EventTradeListViewItemManager__SetTradeObject(EventTradeListViewItemManager
 {
   UnityEngine_Object_o *tradeRewardDialog; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v5; // x1
   struct EventTradeAssetManager_o *assetManager; // x8
   Il2CppObject *TradeRewardDialog_k__BackingField; // x20
+  Il2CppObject *Component_object; // x0
   const MethodInfo *v8; // x2
   UnityEngine_Object_o *tradePointRewardDialog; // x20
   struct EventTradeAssetManager_o *v10; // x8
   Il2CppObject *TradePointRewardDialog_k__BackingField; // x20
-  const MethodInfo *v12; // x2
+  Il2CppObject *v12; // x0
+  const MethodInfo *v13; // x2
   UnityEngine_Object_o *tradeSweetsNumConfirmDialog; // x20
-  struct EventTradeAssetManager_o *v14; // x8
+  struct EventTradeAssetManager_o *v15; // x8
   Il2CppObject *TradeSweetsNumConfirmDialog_k__BackingField; // x20
-  const MethodInfo *v16; // x2
+  Il2CppObject *v17; // x0
+  const MethodInfo *v18; // x2
   UnityEngine_Object_o *tradeSweetsWithdrawalConfirmDialog; // x20
-  struct EventTradeAssetManager_o *v18; // x8
+  struct EventTradeAssetManager_o *v20; // x8
   Il2CppObject *TradeSweetsWithdrawalConfirmDialog_k__BackingField; // x20
-  const MethodInfo *v20; // x2
+  Il2CppObject *v22; // x0
+  const MethodInfo *v23; // x2
   UnityEngine_Object_o *tradePopularSweetsNotificationDialog; // x20
-  struct EventTradeAssetManager_o *v22; // x8
+  struct EventTradeAssetManager_o *v25; // x8
   Il2CppObject *TradePopularSweetsNotificationDialog_k__BackingField; // x20
-  const MethodInfo *v24; // x2
+  Il2CppObject *v27; // x0
+  const MethodInfo *v28; // x2
   UnityEngine_Object_o *currentPickupInfoDispControl; // x20
-  struct EventTradeAssetManager_o *v26; // x8
+  struct EventTradeAssetManager_o *v30; // x8
   Il2CppObject *TradePickupInfoBoard_k__BackingField; // x20
   struct EventTradePickupInfoDispControl_o **p_currentPickupInfoDispControl; // x20
-  UnityEngine_GameObject_o *v29; // x0
-  const MethodInfo *v30; // x2
+  Il2CppObject *v33; // x0
+  UnityEngine_GameObject_o *v34; // x0
+  const MethodInfo *v35; // x2
   UnityEngine_Object_o *nextPickupInfoDispControl; // x20
-  struct EventTradeAssetManager_o *v32; // x8
-  Il2CppObject *v33; // x20
+  struct EventTradeAssetManager_o *v37; // x8
+  Il2CppObject *v38; // x20
   struct EventTradePickupInfoDispControl_o **p_nextPickupInfoDispControl; // x20
-  UnityEngine_GameObject_o *v35; // x1
-  const MethodInfo *v36; // x2
+  Il2CppObject *v40; // x0
+  UnityEngine_GameObject_o *v41; // x1
+  const MethodInfo *v42; // x2
 
-  if ( (byte_4C21C54 & 1) == 0 )
+  if ( (byte_4C323EF & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_EventTradePickupInfoDispControl___);
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_EventTradePointRewardDialogComponent___);
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_EventTradePopularSweetsNotificationDialogComponent___);
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_EventTradeRewardDialogComponent___);
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_EventTradeSweetsNumConfirmDialogComponent___);
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_EventTradeSweetsWithdrawalConfirmDialogComponent___);
-    sub_1C2D490(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_9430/*"NextTradePickupInfoBoard"*/);
-    sub_1C2D490(&StringLiteral_4896/*"CurrentTradePickupInfoBoard"*/);
-    byte_4C21C54 = 1;
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventTradePickupInfoDispControl___);
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventTradePointRewardDialogComponent___);
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventTradePopularSweetsNotificationDialogComponent___);
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventTradeRewardDialogComponent___);
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventTradeSweetsNumConfirmDialogComponent___);
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventTradeSweetsWithdrawalConfirmDialogComponent___);
+    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_9436/*"NextTradePickupInfoBoard"*/);
+    sub_1C32C20(&StringLiteral_4904/*"CurrentTradePickupInfoBoard"*/);
+    byte_4C323EF = 1;
   }
   tradeRewardDialog = (UnityEngine_Object_o *)this->fields.tradeRewardDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3119,13 +3121,14 @@ void EventTradeListViewItemManager__SetTradeObject(EventTradeListViewItemManager
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                TradeRewardDialog_k__BackingField,
-                                               (const MethodInfo_315ACB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                               (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !gameObject )
       goto LABEL_66;
-    this->fields.tradeRewardDialog = (struct EventTradeRewardDialogComponent_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                                                   gameObject,
-                                                                                   (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_EventTradeRewardDialogComponent___);
-    sub_1C2D434(&this->fields.tradeRewardDialog);
+    Component_object = UnityEngine_GameObject__GetComponent_object_(
+                         gameObject,
+                         (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventTradeRewardDialogComponent___);
+    this->fields.tradeRewardDialog = (struct EventTradeRewardDialogComponent_o *)Component_object;
+    sub_1C32BC4(&this->fields.tradeRewardDialog, Component_object);
     EventTradeListViewItemManager__LocateDialogToTradePanel(this, (BaseDialog_o *)this->fields.tradeRewardDialog, v8);
   }
   tradePointRewardDialog = (UnityEngine_Object_o *)this->fields.tradePointRewardDialog;
@@ -3142,17 +3145,18 @@ void EventTradeListViewItemManager__SetTradeObject(EventTradeListViewItemManager
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                TradePointRewardDialog_k__BackingField,
-                                               (const MethodInfo_315ACB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                               (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !gameObject )
       goto LABEL_66;
-    this->fields.tradePointRewardDialog = (struct EventTradePointRewardDialogComponent_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                                                             gameObject,
-                                                                                             (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_EventTradePointRewardDialogComponent___);
-    sub_1C2D434(&this->fields.tradePointRewardDialog);
+    v12 = UnityEngine_GameObject__GetComponent_object_(
+            gameObject,
+            (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventTradePointRewardDialogComponent___);
+    this->fields.tradePointRewardDialog = (struct EventTradePointRewardDialogComponent_o *)v12;
+    sub_1C32BC4(&this->fields.tradePointRewardDialog, v12);
     EventTradeListViewItemManager__LocateDialogToTradePanel(
       this,
       (BaseDialog_o *)this->fields.tradePointRewardDialog,
-      v12);
+      v13);
   }
   tradeSweetsNumConfirmDialog = (UnityEngine_Object_o *)this->fields.tradeSweetsNumConfirmDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3160,23 +3164,26 @@ void EventTradeListViewItemManager__SetTradeObject(EventTradeListViewItemManager
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(tradeSweetsNumConfirmDialog, 0, 0);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
-    v14 = this->fields.assetManager;
-    if ( !v14 )
+    v15 = this->fields.assetManager;
+    if ( !v15 )
       goto LABEL_66;
-    TradeSweetsNumConfirmDialog_k__BackingField = (Il2CppObject *)v14->fields._TradeSweetsNumConfirmDialog_k__BackingField;
+    TradeSweetsNumConfirmDialog_k__BackingField = (Il2CppObject *)v15->fields._TradeSweetsNumConfirmDialog_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                TradeSweetsNumConfirmDialog_k__BackingField,
-                                               (const MethodInfo_315ACB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                               (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !gameObject )
       goto LABEL_66;
-    this->fields.tradeSweetsNumConfirmDialog = (struct EventTradeSweetsNumConfirmDialogComponent_o *)UnityEngine_GameObject__GetComponent_object_(gameObject, (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_EventTradeSweetsNumConfirmDialogComponent___);
-    sub_1C2D434(&this->fields.tradeSweetsNumConfirmDialog);
+    v17 = UnityEngine_GameObject__GetComponent_object_(
+            gameObject,
+            (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventTradeSweetsNumConfirmDialogComponent___);
+    this->fields.tradeSweetsNumConfirmDialog = (struct EventTradeSweetsNumConfirmDialogComponent_o *)v17;
+    sub_1C32BC4(&this->fields.tradeSweetsNumConfirmDialog, v17);
     EventTradeListViewItemManager__LocateDialogToTradePanel(
       this,
       (BaseDialog_o *)this->fields.tradeSweetsNumConfirmDialog,
-      v16);
+      v18);
   }
   tradeSweetsWithdrawalConfirmDialog = (UnityEngine_Object_o *)this->fields.tradeSweetsWithdrawalConfirmDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3184,23 +3191,26 @@ void EventTradeListViewItemManager__SetTradeObject(EventTradeListViewItemManager
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(tradeSweetsWithdrawalConfirmDialog, 0, 0);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
-    v18 = this->fields.assetManager;
-    if ( !v18 )
+    v20 = this->fields.assetManager;
+    if ( !v20 )
       goto LABEL_66;
-    TradeSweetsWithdrawalConfirmDialog_k__BackingField = (Il2CppObject *)v18->fields._TradeSweetsWithdrawalConfirmDialog_k__BackingField;
+    TradeSweetsWithdrawalConfirmDialog_k__BackingField = (Il2CppObject *)v20->fields._TradeSweetsWithdrawalConfirmDialog_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                TradeSweetsWithdrawalConfirmDialog_k__BackingField,
-                                               (const MethodInfo_315ACB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                               (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !gameObject )
       goto LABEL_66;
-    this->fields.tradeSweetsWithdrawalConfirmDialog = (struct EventTradeSweetsWithdrawalConfirmDialogComponent_o *)UnityEngine_GameObject__GetComponent_object_(gameObject, (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_EventTradeSweetsWithdrawalConfirmDialogComponent___);
-    sub_1C2D434(&this->fields.tradeSweetsWithdrawalConfirmDialog);
+    v22 = UnityEngine_GameObject__GetComponent_object_(
+            gameObject,
+            (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventTradeSweetsWithdrawalConfirmDialogComponent___);
+    this->fields.tradeSweetsWithdrawalConfirmDialog = (struct EventTradeSweetsWithdrawalConfirmDialogComponent_o *)v22;
+    sub_1C32BC4(&this->fields.tradeSweetsWithdrawalConfirmDialog, v22);
     EventTradeListViewItemManager__LocateDialogToTradePanel(
       this,
       (BaseDialog_o *)this->fields.tradeSweetsWithdrawalConfirmDialog,
-      v20);
+      v23);
   }
   tradePopularSweetsNotificationDialog = (UnityEngine_Object_o *)this->fields.tradePopularSweetsNotificationDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3208,23 +3218,26 @@ void EventTradeListViewItemManager__SetTradeObject(EventTradeListViewItemManager
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(tradePopularSweetsNotificationDialog, 0, 0);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
-    v22 = this->fields.assetManager;
-    if ( !v22 )
+    v25 = this->fields.assetManager;
+    if ( !v25 )
       goto LABEL_66;
-    TradePopularSweetsNotificationDialog_k__BackingField = (Il2CppObject *)v22->fields._TradePopularSweetsNotificationDialog_k__BackingField;
+    TradePopularSweetsNotificationDialog_k__BackingField = (Il2CppObject *)v25->fields._TradePopularSweetsNotificationDialog_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                TradePopularSweetsNotificationDialog_k__BackingField,
-                                               (const MethodInfo_315ACB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                               (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !gameObject )
       goto LABEL_66;
-    this->fields.tradePopularSweetsNotificationDialog = (struct EventTradePopularSweetsNotificationDialogComponent_o *)UnityEngine_GameObject__GetComponent_object_(gameObject, (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_EventTradePopularSweetsNotificationDialogComponent___);
-    sub_1C2D434(&this->fields.tradePopularSweetsNotificationDialog);
+    v27 = UnityEngine_GameObject__GetComponent_object_(
+            gameObject,
+            (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventTradePopularSweetsNotificationDialogComponent___);
+    this->fields.tradePopularSweetsNotificationDialog = (struct EventTradePopularSweetsNotificationDialogComponent_o *)v27;
+    sub_1C32BC4(&this->fields.tradePopularSweetsNotificationDialog, v27);
     EventTradeListViewItemManager__LocateDialogToTradePanel(
       this,
       (BaseDialog_o *)this->fields.tradePopularSweetsNotificationDialog,
-      v24);
+      v28);
   }
   currentPickupInfoDispControl = (UnityEngine_Object_o *)this->fields.currentPickupInfoDispControl;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3232,34 +3245,35 @@ void EventTradeListViewItemManager__SetTradeObject(EventTradeListViewItemManager
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(currentPickupInfoDispControl, 0, 0);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
-    v26 = this->fields.assetManager;
-    if ( !v26 )
+    v30 = this->fields.assetManager;
+    if ( !v30 )
       goto LABEL_66;
-    TradePickupInfoBoard_k__BackingField = (Il2CppObject *)v26->fields._TradePickupInfoBoard_k__BackingField;
+    TradePickupInfoBoard_k__BackingField = (Il2CppObject *)v30->fields._TradePickupInfoBoard_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                                TradePickupInfoBoard_k__BackingField,
-                                               (const MethodInfo_315ACB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                               (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !gameObject )
       goto LABEL_66;
     p_currentPickupInfoDispControl = &this->fields.currentPickupInfoDispControl;
-    this->fields.currentPickupInfoDispControl = (struct EventTradePickupInfoDispControl_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                                                              gameObject,
-                                                                                              (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_EventTradePickupInfoDispControl___);
-    sub_1C2D434(&this->fields.currentPickupInfoDispControl);
+    v33 = UnityEngine_GameObject__GetComponent_object_(
+            gameObject,
+            (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventTradePickupInfoDispControl___);
+    this->fields.currentPickupInfoDispControl = (struct EventTradePickupInfoDispControl_o *)v33;
+    sub_1C32BC4(&this->fields.currentPickupInfoDispControl, v33);
     gameObject = (UnityEngine_GameObject_o *)this->fields.currentPickupInfoDispControl;
     if ( !gameObject )
       goto LABEL_66;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
     if ( !gameObject )
       goto LABEL_66;
-    UnityEngine_Object__set_name((UnityEngine_Object_o *)gameObject, (System_String_o *)StringLiteral_4896/*"CurrentTradePickupInfoBoard"*/, 0);
+    UnityEngine_Object__set_name((UnityEngine_Object_o *)gameObject, (System_String_o *)StringLiteral_4904/*"CurrentTradePickupInfoBoard"*/, 0);
     gameObject = (UnityEngine_GameObject_o *)*p_currentPickupInfoDispControl;
     if ( !*p_currentPickupInfoDispControl )
       goto LABEL_66;
-    v29 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-    EventTradeListViewItemManager__LocateObjectToTradePanel(this, v29, v30);
+    v34 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+    EventTradeListViewItemManager__LocateObjectToTradePanel(this, v34, v35);
   }
   nextPickupInfoDispControl = (UnityEngine_Object_o *)this->fields.nextPickupInfoDispControl;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3267,34 +3281,35 @@ void EventTradeListViewItemManager__SetTradeObject(EventTradeListViewItemManager
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(nextPickupInfoDispControl, 0, 0);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
-    v32 = this->fields.assetManager;
-    if ( v32 )
+    v37 = this->fields.assetManager;
+    if ( v37 )
     {
-      v33 = (Il2CppObject *)v32->fields._TradePickupInfoBoard_k__BackingField;
+      v38 = (Il2CppObject *)v37->fields._TradePickupInfoBoard_k__BackingField;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
-                                                 v33,
-                                                 (const MethodInfo_315ACB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                 v38,
+                                                 (const MethodInfo_3169758 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( gameObject )
       {
         p_nextPickupInfoDispControl = &this->fields.nextPickupInfoDispControl;
-        this->fields.nextPickupInfoDispControl = (struct EventTradePickupInfoDispControl_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                                                               gameObject,
-                                                                                               (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_EventTradePickupInfoDispControl___);
-        sub_1C2D434(&this->fields.nextPickupInfoDispControl);
+        v40 = UnityEngine_GameObject__GetComponent_object_(
+                gameObject,
+                (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventTradePickupInfoDispControl___);
+        this->fields.nextPickupInfoDispControl = (struct EventTradePickupInfoDispControl_o *)v40;
+        sub_1C32BC4(&this->fields.nextPickupInfoDispControl, v40);
         gameObject = (UnityEngine_GameObject_o *)this->fields.nextPickupInfoDispControl;
         if ( gameObject )
         {
           gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
           if ( gameObject )
           {
-            UnityEngine_Object__set_name((UnityEngine_Object_o *)gameObject, (System_String_o *)StringLiteral_9430/*"NextTradePickupInfoBoard"*/, 0);
+            UnityEngine_Object__set_name((UnityEngine_Object_o *)gameObject, (System_String_o *)StringLiteral_9436/*"NextTradePickupInfoBoard"*/, 0);
             gameObject = (UnityEngine_GameObject_o *)*p_nextPickupInfoDispControl;
             if ( *p_nextPickupInfoDispControl )
             {
-              v35 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-              EventTradeListViewItemManager__LocateObjectToTradePanel(this, v35, v36);
+              v41 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+              EventTradeListViewItemManager__LocateObjectToTradePanel(this, v41, v42);
               return;
             }
           }
@@ -3302,7 +3317,7 @@ void EventTradeListViewItemManager__SetTradeObject(EventTradeListViewItemManager
       }
     }
 LABEL_66:
-    sub_1C2D6EC(gameObject, v5);
+    sub_1C32E7C(gameObject);
   }
 }
 
@@ -3314,48 +3329,49 @@ void EventTradeListViewItemManager__TradeReceiveResponse(
 {
   const MethodInfo *v5; // x1
   EventTradeStoreMaster_o *Master_object; // x0
-  __int64 v7; // x1
+  struct EventTradeStoreEntity_array *OpenTradeStoreEntityArray; // x0
   const MethodInfo *v8; // x1
   Il2CppObject *v9; // x20
   EventTradeStoreMaster_o *v10; // x20
   const MethodInfo *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C21C6C & 1) == 0 )
+  if ( (byte_4C32407 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_JsonManager_DeserializeArray_EventTradeListViewItemManager_ResData___);
-    sub_1C2D490(&JsonManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_22195/*"ng"*/);
-    sub_1C2D490(&StringLiteral_15801/*"["*/);
-    sub_1C2D490(&StringLiteral_16055/*"]"*/);
-    byte_4C21C6C = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_JsonManager_DeserializeArray_EventTradeListViewItemManager_ResData___);
+    sub_1C32C20(&JsonManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
+    sub_1C32C20(&StringLiteral_15802/*"["*/);
+    sub_1C32C20(&StringLiteral_16056/*"]"*/);
+    byte_4C32407 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22195/*"ng"*/, 0) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22212/*"ng"*/, 0) )
   {
     EventTradeListViewItemManager__UpdateReceiveAllButtonState(this, v5);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (EventTradeStoreMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    Master_object = (EventTradeStoreMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
     if ( !Master_object )
       goto LABEL_15;
-    this->fields.tradeStoreEntities = EventTradeStoreMaster__GetOpenTradeStoreEntityArray(
-                                        Master_object,
-                                        this->fields.currentEventId,
-                                        0);
-    sub_1C2D434(&this->fields.tradeStoreEntities);
+    OpenTradeStoreEntityArray = EventTradeStoreMaster__GetOpenTradeStoreEntityArray(
+                                  Master_object,
+                                  this->fields.currentEventId,
+                                  0);
+    this->fields.tradeStoreEntities = OpenTradeStoreEntityArray;
+    sub_1C32BC4(&this->fields.tradeStoreEntities, OpenTradeStoreEntityArray);
     EventTradeListViewItemManager__UpdateTradeQuoteLb(this, v8);
-    v9 = (Il2CppObject *)System_String__Concat_63496112(
-                           (System_String_o *)StringLiteral_15801/*"["*/,
+    v9 = (Il2CppObject *)System_String__Concat_63556792(
+                           (System_String_o *)StringLiteral_15802/*"["*/,
                            result,
-                           (System_String_o *)StringLiteral_16055/*"]"*/,
+                           (System_String_o *)StringLiteral_16056/*"]"*/,
                            0);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     Master_object = (EventTradeStoreMaster_o *)JsonManager__DeserializeArray_object_(
                                                  v9,
-                                                 (const MethodInfo_313DDBC *)Method_JsonManager_DeserializeArray_EventTradeListViewItemManager_ResData___);
+                                                 (const MethodInfo_314C85C *)Method_JsonManager_DeserializeArray_EventTradeListViewItemManager_ResData___);
     if ( !this->fields.touchPanel
       || (v10 = Master_object,
           (Master_object = (EventTradeStoreMaster_o *)UnityEngine_Component__get_gameObject(
@@ -3368,10 +3384,10 @@ void EventTradeListViewItemManager__TradeReceiveResponse(
           !v10) )
     {
 LABEL_15:
-      sub_1C2D6EC(Master_object, v7);
+      sub_1C32E7C(Master_object);
     }
     if ( !LODWORD(v10->fields._MasterName_k__BackingField) )
-      sub_1C2D6F4(Master_object, v7, v12);
+      sub_1C32E84(Master_object);
     EventTradeListViewItemManager__OpenRewardDialog(
       this,
       *(EventTradeListViewItemManager_ResData_o **)&v10->fields.revision,
@@ -3388,33 +3404,34 @@ void EventTradeListViewItemManager__TradeReplenishmentResponse(
 {
   const MethodInfo *v5; // x1
   EventTradeStoreMaster_o *Master_object; // x0
-  __int64 v7; // x1
+  struct EventTradeStoreEntity_array *OpenTradeStoreEntityArray; // x0
   const MethodInfo *v8; // x1
   const MethodInfo *v9; // x1
   struct System_Action_int__string____Action__o *playVoiceAction; // x21
   unsigned int svtId; // w20
   struct System_Func_bool__o *closeDialogCallBack; // x8
 
-  if ( (byte_4C21C68 & 1) == 0 )
+  if ( (byte_4C32403 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_22195/*"ng"*/);
-    byte_4C21C68 = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
+    byte_4C32403 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22195/*"ng"*/, 0) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22212/*"ng"*/, 0) )
   {
     EventTradeListViewItemManager__UpdateReceiveAllButtonState(this, v5);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (EventTradeStoreMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    Master_object = (EventTradeStoreMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
     if ( !Master_object )
       goto LABEL_15;
-    this->fields.tradeStoreEntities = EventTradeStoreMaster__GetOpenTradeStoreEntityArray(
-                                        Master_object,
-                                        this->fields.currentEventId,
-                                        0);
-    sub_1C2D434(&this->fields.tradeStoreEntities);
+    OpenTradeStoreEntityArray = EventTradeStoreMaster__GetOpenTradeStoreEntityArray(
+                                  Master_object,
+                                  this->fields.currentEventId,
+                                  0);
+    this->fields.tradeStoreEntities = OpenTradeStoreEntityArray;
+    sub_1C32BC4(&this->fields.tradeStoreEntities, OpenTradeStoreEntityArray);
     EventTradeListViewItemManager__UpdateTradeQuoteLb(this, v8);
     Master_object = (EventTradeStoreMaster_o *)this->fields.touchPanel;
     if ( !Master_object )
@@ -3438,7 +3455,7 @@ void EventTradeListViewItemManager__TradeReplenishmentResponse(
           !playVoiceAction) )
     {
 LABEL_15:
-      sub_1C2D6EC(Master_object, v7);
+      sub_1C32E7C(Master_object);
     }
     ((void (__fastcall *)(intptr_t, _QWORD, EventTradeStoreMaster_o *, _QWORD, intptr_t))playVoiceAction->fields.invoke_impl)(
       playVoiceAction->fields.method_code,
@@ -3463,32 +3480,33 @@ void EventTradeListViewItemManager__TradeStartResponse(
 {
   const MethodInfo *v5; // x1
   EventTradeStoreMaster_o *Master_object; // x0
-  __int64 v7; // x1
+  struct EventTradeStoreEntity_array *OpenTradeStoreEntityArray; // x0
   const MethodInfo *v8; // x1
   const MethodInfo *v9; // x1
   struct System_Action_int__string____Action__o *playVoiceAction; // x21
   unsigned int svtId; // w20
 
-  if ( (byte_4C21C67 & 1) == 0 )
+  if ( (byte_4C32402 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_22195/*"ng"*/);
-    byte_4C21C67 = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
+    byte_4C32402 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22195/*"ng"*/, 0) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22212/*"ng"*/, 0) )
   {
     EventTradeListViewItemManager__UpdateReceiveAllButtonState(this, v5);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (EventTradeStoreMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    Master_object = (EventTradeStoreMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
     if ( !Master_object )
       goto LABEL_13;
-    this->fields.tradeStoreEntities = EventTradeStoreMaster__GetOpenTradeStoreEntityArray(
-                                        Master_object,
-                                        this->fields.currentEventId,
-                                        0);
-    sub_1C2D434(&this->fields.tradeStoreEntities);
+    OpenTradeStoreEntityArray = EventTradeStoreMaster__GetOpenTradeStoreEntityArray(
+                                  Master_object,
+                                  this->fields.currentEventId,
+                                  0);
+    this->fields.tradeStoreEntities = OpenTradeStoreEntityArray;
+    sub_1C32BC4(&this->fields.tradeStoreEntities, OpenTradeStoreEntityArray);
     EventTradeListViewItemManager__UpdateTradeQuoteLb(this, v8);
     Master_object = (EventTradeStoreMaster_o *)this->fields.touchPanel;
     if ( !Master_object )
@@ -3512,7 +3530,7 @@ void EventTradeListViewItemManager__TradeStartResponse(
           !playVoiceAction) )
     {
 LABEL_13:
-      sub_1C2D6EC(Master_object, v7);
+      sub_1C32E7C(Master_object);
     }
     ((void (__fastcall *)(intptr_t, _QWORD, EventTradeStoreMaster_o *, _QWORD, intptr_t))playVoiceAction->fields.invoke_impl)(
       playVoiceAction->fields.method_code,
@@ -3531,37 +3549,36 @@ bool EventTradeListViewItemManager__TryGetAvailableStoreIdx(
         const MethodInfo *method)
 {
   UserEventTradeMaster_o *Master_object; // x0
-  __int64 v6; // x1
-  __int64 v7; // x2
   struct EventTradeStoreEntity_array *tradeStoreEntities; // x24
-  unsigned __int64 v9; // x25
-  Il2CppObject *v10; // x20
-  Il2CppObject *v11; // x21
-  System_Int32_array *v12; // x22
-  System_Func_int__bool__o *v13; // x23
-  struct EventTradeStoreEntity_array *v14; // x8
+  unsigned __int64 v7; // x25
+  Il2CppObject *v8; // x20
+  Il2CppClass *v9; // x1
+  Il2CppObject *v10; // x21
+  System_Int32_array *v11; // x22
+  System_Func_int__bool__o *v12; // x23
+  struct EventTradeStoreEntity_array *v13; // x8
   il2cpp_array_size_t max_length; // x9
-  EventTradeStoreEntity_o *v16; // x8
-  int32_t *v18; // [xsp+8h] [xbp-78h]
+  EventTradeStoreEntity_o *v15; // x8
+  int32_t *v17; // [xsp+8h] [xbp-78h]
   System_Int32_array *usedStoreIdx; // [xsp+10h] [xbp-70h] BYREF
   UserEventTradeEntity_o *entity; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4C21C66 & 1) == 0 )
+  if ( (byte_4C32401 & 1) == 0 )
   {
-    sub_1C2D490(&Method_BasicHelper_Any_int____77996856);
-    sub_1C2D490(&Method_DataManager_GetMaster_UserEventTradeMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&System_Func_int__bool__TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass70_0__TryGetAvailableStoreIdx_b__0__);
-    sub_1C2D490(&EventTradeListViewItemManager___c__DisplayClass70_0_TypeInfo);
-    byte_4C21C66 = 1;
+    sub_1C32C20(&Method_BasicHelper_Any_int____78062168);
+    sub_1C32C20(&Method_DataManager_GetMaster_UserEventTradeMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&System_Func_int__bool__TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass70_0__TryGetAvailableStoreIdx_b__0__);
+    sub_1C32C20(&EventTradeListViewItemManager___c__DisplayClass70_0_TypeInfo);
+    byte_4C32401 = 1;
   }
   usedStoreIdx = 0;
   entity = 0;
   *storeIdx = -1;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserEventTradeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserEventTradeMaster___);
+  Master_object = (UserEventTradeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserEventTradeMaster___);
   if ( !Master_object )
     goto LABEL_26;
   Master_object = (UserEventTradeMaster_o *)UserEventTradeMaster__TryGetEntity(
@@ -3580,58 +3597,59 @@ bool EventTradeListViewItemManager__TryGetAvailableStoreIdx(
       goto LABEL_26;
     if ( SLODWORD(tradeStoreEntities->max_length) >= 1 )
     {
-      v18 = storeIdx;
-      v9 = 0;
+      v17 = storeIdx;
+      v7 = 0;
       while ( 1 )
       {
-        v10 = (Il2CppObject *)sub_1C2D6DC(EventTradeListViewItemManager___c__DisplayClass70_0_TypeInfo);
-        System_Object___ctor(v10, 0);
-        if ( v9 >= LODWORD(tradeStoreEntities->max_length) )
+        v8 = (Il2CppObject *)sub_1C32E6C(EventTradeListViewItemManager___c__DisplayClass70_0_TypeInfo);
+        System_Object___ctor(v8, 0);
+        if ( v7 >= LODWORD(tradeStoreEntities->max_length) )
           goto LABEL_27;
-        if ( !v10 )
+        if ( !v8 )
           goto LABEL_26;
-        v10[1].klass = (Il2CppClass *)tradeStoreEntities->m_Items[v9];
-        v11 = v10 + 1;
-        sub_1C2D434(&v10[1]);
-        v12 = usedStoreIdx;
-        v13 = (System_Func_int__bool__o *)sub_1C2D6DC(System_Func_int__bool__TypeInfo);
+        v9 = (Il2CppClass *)tradeStoreEntities->m_Items[v7];
+        v8[1].klass = v9;
+        v10 = v8 + 1;
+        sub_1C32BC4(&v8[1], v9);
+        v11 = usedStoreIdx;
+        v12 = (System_Func_int__bool__o *)sub_1C32E6C(System_Func_int__bool__TypeInfo);
         System_Func_int__bool____ctor(
-          v13,
-          v10,
+          v12,
+          v8,
           Method_EventTradeListViewItemManager___c__DisplayClass70_0__TryGetAvailableStoreIdx_b__0__,
           0);
-        Master_object = (UserEventTradeMaster_o *)BasicHelper__Any_int__51083888(
-                                                    v12,
-                                                    (System_Func_T__bool__o *)v13,
-                                                    (const MethodInfo_30B7A70 *)Method_BasicHelper_Any_int____77996856);
+        Master_object = (UserEventTradeMaster_o *)BasicHelper__Any_int__51143952(
+                                                    v11,
+                                                    (System_Func_T__bool__o *)v12,
+                                                    (const MethodInfo_30C6510 *)Method_BasicHelper_Any_int____78062168);
         if ( ((unsigned __int8)Master_object & 1) == 0 )
           break;
-        if ( (__int64)++v9 >= SLODWORD(tradeStoreEntities->max_length) )
+        if ( (__int64)++v7 >= SLODWORD(tradeStoreEntities->max_length) )
           return 0;
       }
-      if ( v11->klass )
+      if ( v10->klass )
       {
-        *v18 = HIDWORD(v11->klass->_1.name);
+        *v17 = HIDWORD(v10->klass->_1.name);
         return 1;
       }
 LABEL_26:
-      sub_1C2D6EC(Master_object, v6);
+      sub_1C32E7C(Master_object);
     }
     return 0;
   }
-  v14 = this->fields.tradeStoreEntities;
-  if ( !v14 )
+  v13 = this->fields.tradeStoreEntities;
+  if ( !v13 )
     goto LABEL_26;
-  max_length = v14->max_length;
+  max_length = v13->max_length;
   if ( !max_length )
     return 0;
   if ( !(_DWORD)max_length )
 LABEL_27:
-    sub_1C2D6F4(Master_object, v6, v7);
-  v16 = v14->m_Items[0];
-  if ( !v16 )
+    sub_1C32E84(Master_object);
+  v15 = v13->m_Items[0];
+  if ( !v15 )
     goto LABEL_26;
-  *storeIdx = v16->fields.idx;
+  *storeIdx = v15->fields.idx;
   return 1;
 }
 
@@ -3643,19 +3661,19 @@ void EventTradeListViewItemManager__UpdateNoticeButtonDisp(
   UISprite_o *tradeNoticeBtnSp; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4C21C78 & 1) == 0 )
+  if ( (byte_4C32413 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_17501/*"btn_on"*/);
-    sub_1C2D490(&StringLiteral_17500/*"btn_off"*/);
-    byte_4C21C78 = 1;
+    sub_1C32C20(&StringLiteral_17505/*"btn_on"*/);
+    sub_1C32C20(&StringLiteral_17504/*"btn_off"*/);
+    byte_4C32413 = 1;
   }
   tradeNoticeBtnSp = this->fields.tradeNoticeBtnSp;
   if ( !tradeNoticeBtnSp )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   if ( this->fields.isButtonOn )
-    v4 = &StringLiteral_17501/*"btn_on"*/;
+    v4 = &StringLiteral_17505/*"btn_on"*/;
   else
-    v4 = &StringLiteral_17500/*"btn_off"*/;
+    v4 = &StringLiteral_17504/*"btn_off"*/;
   UISprite__set_spriteName(tradeNoticeBtnSp, (System_String_o *)*v4, 0);
 }
 
@@ -3670,23 +3688,22 @@ void EventTradeListViewItemManager__UpdateReceiveAllButtonState(
   Il2CppObject *v6; // x22
   struct EventTradeListViewItemManager___c_StaticFields *static_fields; // x0
   UIWidget_o *receiveAllButtonLabel; // x0
-  __int64 v9; // x1
-  long double v10; // q0
+  long double v9; // q0
   struct UICommonButton_o *receiveAllButton; // x8
-  char v12; // w20
-  __int64 v13; // x1
-  float v14; // s8
+  char v11; // w20
+  __int64 v12; // x1
+  float v13; // s8
   UnityEngine_Object_o *tradeButtonBlinkEffect; // x21
-  UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C21C75 & 1) == 0 )
+  if ( (byte_4C32410 & 1) == 0 )
   {
-    sub_1C2D490(&Method_BasicHelper_Any_ListViewItem___);
-    sub_1C2D490(&System_Func_ListViewItem__bool__TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__UpdateReceiveAllButtonState_b__85_0__);
-    sub_1C2D490(&EventTradeListViewItemManager___c_TypeInfo);
-    byte_4C21C75 = 1;
+    sub_1C32C20(&Method_BasicHelper_Any_ListViewItem___);
+    sub_1C32C20(&System_Func_ListViewItem__bool__TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__UpdateReceiveAllButtonState_b__85_0__);
+    sub_1C32C20(&EventTradeListViewItemManager___c_TypeInfo);
+    byte_4C32410 = 1;
   }
   v3 = EventTradeListViewItemManager___c_TypeInfo;
   itemList = (System_Collections_Generic_List_T__o *)this->fields.itemList;
@@ -3704,7 +3721,7 @@ void EventTradeListViewItemManager__UpdateReceiveAllButtonState(
       v3 = EventTradeListViewItemManager___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__85_0 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_ListViewItem__bool__TypeInfo);
+    _9__85_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_ListViewItem__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__85_0,
       v6,
@@ -3712,33 +3729,33 @@ void EventTradeListViewItemManager__UpdateReceiveAllButtonState(
       0);
     static_fields = EventTradeListViewItemManager___c_TypeInfo->static_fields;
     static_fields->__9__85_0 = (struct System_Func_ListViewItem__bool__o *)_9__85_0;
-    sub_1C2D434(&static_fields->__9__85_0);
+    sub_1C32BC4(&static_fields->__9__85_0, _9__85_0);
   }
   receiveAllButtonLabel = (UIWidget_o *)BasicHelper__Any_object_(
                                           itemList,
                                           (System_Func_T__bool__o *)_9__85_0,
-                                          (const MethodInfo_30B7CF0 *)Method_BasicHelper_Any_ListViewItem___);
+                                          (const MethodInfo_30C6790 *)Method_BasicHelper_Any_ListViewItem___);
   receiveAllButton = this->fields.receiveAllButton;
   if ( !receiveAllButton )
     goto LABEL_23;
-  v12 = (char)receiveAllButtonLabel;
-  LODWORD(v10) = 0.5;
-  v13 = ((unsigned __int8)receiveAllButtonLabel & 1) != 0 ? 0LL : 3LL;
-  v14 = ((unsigned __int8)receiveAllButtonLabel & 1) != 0 ? 1.0 : 0.5;
+  v11 = (char)receiveAllButtonLabel;
+  LODWORD(v9) = 0.5;
+  v12 = ((unsigned __int8)receiveAllButtonLabel & 1) != 0 ? 0LL : 3LL;
+  v13 = ((unsigned __int8)receiveAllButtonLabel & 1) != 0 ? 1.0 : 0.5;
   ((void (__fastcall *)(struct UICommonButton_o *, __int64, __int64, const MethodInfo *, long double))receiveAllButton->klass->vtable._14_SetState.methodPtr)(
     this->fields.receiveAllButton,
-    v13,
+    v12,
     1,
     receiveAllButton->klass->vtable._14_SetState.method,
-    v10);
+    v9);
   receiveAllButtonLabel = (UIWidget_o *)this->fields.receiveAllButtonLabel;
   if ( !receiveAllButtonLabel )
     goto LABEL_23;
-  v16.fields.a = 1.0;
-  v16.fields.r = v14;
-  v16.fields.g = v14;
-  v16.fields.b = v14;
-  UIWidget__set_color(receiveAllButtonLabel, v16, 0);
+  v15.fields.a = 1.0;
+  v15.fields.r = v13;
+  v15.fields.g = v13;
+  v15.fields.b = v13;
+  UIWidget__set_color(receiveAllButtonLabel, v15, 0);
   tradeButtonBlinkEffect = (UnityEngine_Object_o *)this->fields.tradeButtonBlinkEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -3747,11 +3764,11 @@ void EventTradeListViewItemManager__UpdateReceiveAllButtonState(
     receiveAllButtonLabel = (UIWidget_o *)this->fields.tradeButtonBlinkEffect;
     if ( receiveAllButtonLabel )
     {
-      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)receiveAllButtonLabel, v12 & 1, 0);
+      UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)receiveAllButtonLabel, v11 & 1, 0);
       return;
     }
 LABEL_23:
-    sub_1C2D6EC(receiveAllButtonLabel, v9);
+    sub_1C32E7C(receiveAllButtonLabel);
   }
 }
 
@@ -3770,26 +3787,32 @@ void EventTradeListViewItemManager__UpdateTradeQuoteLb(EventTradeListViewItemMan
   __int64 v11; // x2
   __int64 v12; // x3
   __int64 v13; // x4
-  Il2CppObject *v14; // x21
-  __int64 v15; // x2
-  __int64 v16; // x3
-  __int64 v17; // x4
-  Il2CppObject *v18; // x0
-  int v19; // [xsp+8h] [xbp-48h] BYREF
-  int v20; // [xsp+Ch] [xbp-44h] BYREF
+  __int64 v14; // x5
+  __int64 v15; // x6
+  __int64 v16; // x7
+  Il2CppObject *v17; // x21
+  __int64 v18; // x2
+  __int64 v19; // x3
+  __int64 v20; // x4
+  __int64 v21; // x5
+  __int64 v22; // x6
+  __int64 v23; // x7
+  Il2CppObject *v24; // x0
+  int v25; // [xsp+8h] [xbp-48h] BYREF
+  int v26; // [xsp+Ch] [xbp-44h] BYREF
   System_Int32_array *usedStoreIdx; // [xsp+10h] [xbp-40h] BYREF
   UserEventTradeEntity_o *entity; // [xsp+18h] [xbp-38h] BYREF
 
   v2 = this;
-  if ( (byte_4C21C7B & 1) == 0 )
+  if ( (byte_4C32416 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_UserEventTradeMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&int_TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_13492/*"TRADE_EVENT_TITLE_QUOTA_NOTHING_LABEL"*/);
-    this = (EventTradeListViewItemManager_o *)sub_1C2D490(&StringLiteral_13491/*"TRADE_EVENT_TITLE_QUOTA_LABEL"*/);
-    byte_4C21C7B = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_UserEventTradeMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&int_TypeInfo);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_13495/*"TRADE_EVENT_TITLE_QUOTA_NOTHING_LABEL"*/);
+    this = (EventTradeListViewItemManager_o *)sub_1C32C20(&StringLiteral_13494/*"TRADE_EVENT_TITLE_QUOTA_LABEL"*/);
+    byte_4C32416 = 1;
   }
   usedStoreIdx = 0;
   entity = 0;
@@ -3799,7 +3822,7 @@ void EventTradeListViewItemManager__UpdateTradeQuoteLb(EventTradeListViewItemMan
   max_length = tradeStoreEntities->max_length;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (EventTradeListViewItemManager_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserEventTradeMaster___);
+  this = (EventTradeListViewItemManager_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserEventTradeMaster___);
   if ( !this )
     goto LABEL_20;
   if ( !UserEventTradeMaster__TryGetEntity((UserEventTradeMaster_o *)this, &entity, v2->fields.currentEventId, 0) )
@@ -3820,20 +3843,20 @@ LABEL_12:
     v5 = 0;
   }
   v6 = max_length - v5;
-  v7 = (System_String_o **)(max_length == v5 ? &StringLiteral_13492/*"TRADE_EVENT_TITLE_QUOTA_NOTHING_LABEL"*/ : &StringLiteral_13491/*"TRADE_EVENT_TITLE_QUOTA_LABEL"*/);
+  v7 = (System_String_o **)(max_length == v5 ? &StringLiteral_13495/*"TRADE_EVENT_TITLE_QUOTA_NOTHING_LABEL"*/ : &StringLiteral_13494/*"TRADE_EVENT_TITLE_QUOTA_LABEL"*/);
   v8 = *v7;
   tradeQuotaLb = v2->fields.tradeQuotaLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   v10 = LocalizationManager__Get(v8, 0);
-  v20 = v6;
-  v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v20, v11, v12, v13);
-  v19 = max_length;
-  v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19, v15, v16, v17);
-  this = (EventTradeListViewItemManager_o *)System_String__Format_63499156(v10, v14, v18, 0);
+  v26 = v6;
+  v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, v11, v12, v13, v14, v15, v16);
+  v25 = max_length;
+  v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v18, v19, v20, v21, v22, v23);
+  this = (EventTradeListViewItemManager_o *)System_String__Format_63559836(v10, v17, v24, 0);
   if ( !tradeQuotaLb )
 LABEL_20:
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   UILabel__set_text(tradeQuotaLb, (System_String_o *)this, 0);
 }
 
@@ -3845,49 +3868,51 @@ void EventTradeListViewItemManager__WithdrawalResponse(
 {
   const MethodInfo *v5; // x1
   EventTradeStoreMaster_o *Master_object; // x0
-  EventTradeListViewItemManager_ResData_o *v7; // x1
+  struct EventTradeStoreEntity_array *OpenTradeStoreEntityArray; // x0
   const MethodInfo *v8; // x1
   Il2CppObject *v9; // x20
   EventTradeStoreMaster_o *v10; // x20
   const MethodInfo *v11; // x1
   const MethodInfo *v12; // x2
+  EventTradeListViewItemManager_ResData_o *v13; // x1
   struct BattleDropItem_array *resultTradeRewardInfos; // x8
 
-  if ( (byte_4C21C6D & 1) == 0 )
+  if ( (byte_4C32408 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_JsonManager_DeserializeArray_EventTradeListViewItemManager_ResData___);
-    sub_1C2D490(&JsonManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_22195/*"ng"*/);
-    sub_1C2D490(&StringLiteral_15801/*"["*/);
-    sub_1C2D490(&StringLiteral_16055/*"]"*/);
-    byte_4C21C6D = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_JsonManager_DeserializeArray_EventTradeListViewItemManager_ResData___);
+    sub_1C32C20(&JsonManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
+    sub_1C32C20(&StringLiteral_15802/*"["*/);
+    sub_1C32C20(&StringLiteral_16056/*"]"*/);
+    byte_4C32408 = 1;
   }
-  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22195/*"ng"*/, 0) )
+  if ( !System_String__op_Equality(result, (System_String_o *)StringLiteral_22212/*"ng"*/, 0) )
   {
     EventTradeListViewItemManager__UpdateReceiveAllButtonState(this, v5);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (EventTradeStoreMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
+    Master_object = (EventTradeStoreMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeStoreMaster___);
     if ( !Master_object )
       goto LABEL_19;
-    this->fields.tradeStoreEntities = EventTradeStoreMaster__GetOpenTradeStoreEntityArray(
-                                        Master_object,
-                                        this->fields.currentEventId,
-                                        0);
-    sub_1C2D434(&this->fields.tradeStoreEntities);
+    OpenTradeStoreEntityArray = EventTradeStoreMaster__GetOpenTradeStoreEntityArray(
+                                  Master_object,
+                                  this->fields.currentEventId,
+                                  0);
+    this->fields.tradeStoreEntities = OpenTradeStoreEntityArray;
+    sub_1C32BC4(&this->fields.tradeStoreEntities, OpenTradeStoreEntityArray);
     EventTradeListViewItemManager__UpdateTradeQuoteLb(this, v8);
-    v9 = (Il2CppObject *)System_String__Concat_63496112(
-                           (System_String_o *)StringLiteral_15801/*"["*/,
+    v9 = (Il2CppObject *)System_String__Concat_63556792(
+                           (System_String_o *)StringLiteral_15802/*"["*/,
                            result,
-                           (System_String_o *)StringLiteral_16055/*"]"*/,
+                           (System_String_o *)StringLiteral_16056/*"]"*/,
                            0);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     Master_object = (EventTradeStoreMaster_o *)JsonManager__DeserializeArray_object_(
                                                  v9,
-                                                 (const MethodInfo_313DDBC *)Method_JsonManager_DeserializeArray_EventTradeListViewItemManager_ResData___);
+                                                 (const MethodInfo_314C85C *)Method_JsonManager_DeserializeArray_EventTradeListViewItemManager_ResData___);
     if ( !this->fields.touchPanel )
       goto LABEL_19;
     v10 = Master_object;
@@ -3905,13 +3930,13 @@ void EventTradeListViewItemManager__WithdrawalResponse(
     if ( !v10 )
       goto LABEL_19;
     if ( !LODWORD(v10->fields._MasterName_k__BackingField) )
-      sub_1C2D6F4(Master_object, v7, v12);
-    v7 = *(EventTradeListViewItemManager_ResData_o **)&v10->fields.revision;
-    if ( !v7 || (resultTradeRewardInfos = v7->fields.resultTradeRewardInfos) == 0 )
+      sub_1C32E84(Master_object);
+    v13 = *(EventTradeListViewItemManager_ResData_o **)&v10->fields.revision;
+    if ( !v13 || (resultTradeRewardInfos = v13->fields.resultTradeRewardInfos) == 0 )
 LABEL_19:
-      sub_1C2D6EC(Master_object, v7);
+      sub_1C32E7C(Master_object);
     if ( resultTradeRewardInfos->max_length )
-      EventTradeListViewItemManager__OpenRewardDialog(this, v7, v12);
+      EventTradeListViewItemManager__OpenRewardDialog(this, v13, v12);
     ActionExtensions__Call(this->fields.tradeCallback, 0);
   }
 }
@@ -3958,35 +3983,34 @@ void EventTradeListViewItemManager___IsOverPresentBoxLimit_b__87_2(
 {
   __int64 v5; // x21
   __int64 v6; // x0
-  __int64 v7; // x1
   PresentBoxOverDialog_o *presentBoxOverDlg; // x19
-  System_Action_o *v9; // x20
+  System_Action_o *v8; // x20
 
-  if ( (byte_4C21C7C & 1) == 0 )
+  if ( (byte_4C32417 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass87_0__IsOverPresentBoxLimit_b__3__);
-    sub_1C2D490(&EventTradeListViewItemManager___c__DisplayClass87_0_TypeInfo);
-    byte_4C21C7C = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass87_0__IsOverPresentBoxLimit_b__3__);
+    sub_1C32C20(&EventTradeListViewItemManager___c__DisplayClass87_0_TypeInfo);
+    byte_4C32417 = 1;
   }
-  v5 = sub_1C2D6DC(EventTradeListViewItemManager___c__DisplayClass87_0_TypeInfo);
+  v5 = sub_1C32E6C(EventTradeListViewItemManager___c__DisplayClass87_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 24) = this,
-        sub_1C2D434(v5 + 24),
+        sub_1C32BC4(v5 + 24, this),
         *(_BYTE *)(v5 + 16) = isOpenPresentBox,
         presentBoxOverDlg = this->fields.presentBoxOverDlg,
-        v9 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo),
+        v8 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo),
         System_Action___ctor(
-          v9,
+          v8,
           (Il2CppObject *)v5,
           Method_EventTradeListViewItemManager___c__DisplayClass87_0__IsOverPresentBoxLimit_b__3__,
           0),
         !presentBoxOverDlg) )
   {
-    sub_1C2D6EC(v6, v7);
+    sub_1C32E7C(v6);
   }
-  PresentBoxOverDialog__Close_32153496(presentBoxOverDlg, v9, 0);
+  PresentBoxOverDialog__Close_32266928(presentBoxOverDlg, v8, 0);
 }
 
 
@@ -3998,7 +4022,7 @@ void EventTradeListViewItemManager___OnClickTradeStartButton_b__62_0(
 
   maskPanel = this->fields.maskPanel;
   if ( !maskPanel )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   UnityEngine_GameObject__SetActive(maskPanel, 0, 0);
 }
 
@@ -4018,7 +4042,7 @@ bool EventTradeListViewItemManager___OpenReplenishmentDialog_b__79_0(
     || (dropList = this->fields.dropList) == 0
     || (selectTradeGoodsEntity = v3->fields.selectTradeGoodsEntity) == 0 )
   {
-    sub_1C2D6EC(this, x);
+    sub_1C32E7C(this);
   }
   return LODWORD(dropList->fields._items) == selectTradeGoodsEntity->fields.id;
 }
@@ -4031,87 +4055,86 @@ System_Collections_Generic_List_EventTradeListViewObject__o *EventTradeListViewI
   __int64 v3; // x19
   System_Collections_Generic_List_object__o *v4; // x22
   __int64 v5; // x0
-  __int64 v6; // x1
-  EventTradeListViewItemManager___c_c *v7; // x0
+  EventTradeListViewItemManager___c_c *v6; // x0
   struct System_Collections_Generic_List_GameObject__o *objectList; // x21
   System_Func_object__bool__o *_9__48_0; // x22
-  Il2CppObject *v10; // x23
+  Il2CppObject *v9; // x23
   struct EventTradeListViewItemManager___c_StaticFields *static_fields; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v12; // x0
-  System_Collections_Generic_List_object__o *v13; // x21
-  System_Action_object__o *v14; // x22
+  System_Collections_Generic_IEnumerable_TSource__o *v11; // x0
+  System_Collections_Generic_List_object__o *v12; // x21
+  System_Action_object__o *v13; // x22
 
-  if ( (byte_4C21C53 & 1) == 0 )
+  if ( (byte_4C323EE & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_GameObject__TypeInfo);
-    sub_1C2D490(&Method_System_Linq_Enumerable_ToList_GameObject___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_Where_GameObject___);
-    sub_1C2D490(&System_Func_GameObject__bool__TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject__ForEach__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventTradeListViewObject___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_EventTradeListViewObject__TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__get_ObjectList_b__48_0__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass48_0__get_ObjectList_b__1__);
-    sub_1C2D490(&EventTradeListViewItemManager___c__DisplayClass48_0_TypeInfo);
-    sub_1C2D490(&EventTradeListViewItemManager___c_TypeInfo);
-    byte_4C21C53 = 1;
+    sub_1C32C20(&System_Action_GameObject__TypeInfo);
+    sub_1C32C20(&Method_System_Linq_Enumerable_ToList_GameObject___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_Where_GameObject___);
+    sub_1C32C20(&System_Func_GameObject__bool__TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__ForEach__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventTradeListViewObject___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_EventTradeListViewObject__TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__get_ObjectList_b__48_0__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass48_0__get_ObjectList_b__1__);
+    sub_1C32C20(&EventTradeListViewItemManager___c__DisplayClass48_0_TypeInfo);
+    sub_1C32C20(&EventTradeListViewItemManager___c_TypeInfo);
+    byte_4C323EE = 1;
   }
-  v3 = sub_1C2D6DC(EventTradeListViewItemManager___c__DisplayClass48_0_TypeInfo);
+  v3 = sub_1C32E6C(EventTradeListViewItemManager___c__DisplayClass48_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_EventTradeListViewObject__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventTradeListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_EventTradeListViewObject___ctor__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventTradeListViewObject___ctor__);
   if ( !v3 )
     goto LABEL_12;
   *(_QWORD *)(v3 + 16) = v4;
-  sub_1C2D434(v3 + 16);
-  v7 = EventTradeListViewItemManager___c_TypeInfo;
+  sub_1C32BC4(v3 + 16, v4);
+  v6 = EventTradeListViewItemManager___c_TypeInfo;
   objectList = this->fields.objectList;
   if ( !EventTradeListViewItemManager___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventTradeListViewItemManager___c_TypeInfo);
-    v7 = EventTradeListViewItemManager___c_TypeInfo;
+    v6 = EventTradeListViewItemManager___c_TypeInfo;
   }
-  _9__48_0 = (System_Func_object__bool__o *)v7->static_fields->__9__48_0;
+  _9__48_0 = (System_Func_object__bool__o *)v6->static_fields->__9__48_0;
   if ( !_9__48_0 )
   {
-    if ( !v7->_2.cctor_finished )
+    if ( !v6->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v7);
-      v7 = EventTradeListViewItemManager___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v6);
+      v6 = EventTradeListViewItemManager___c_TypeInfo;
     }
-    v10 = (Il2CppObject *)v7->static_fields->__9;
-    _9__48_0 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_GameObject__bool__TypeInfo);
+    v9 = (Il2CppObject *)v6->static_fields->__9;
+    _9__48_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_GameObject__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__48_0,
-      v10,
+      v9,
       Method_EventTradeListViewItemManager___c__get_ObjectList_b__48_0__,
       0);
     static_fields = EventTradeListViewItemManager___c_TypeInfo->static_fields;
     static_fields->__9__48_0 = (struct System_Func_GameObject__bool__o *)_9__48_0;
-    sub_1C2D434(&static_fields->__9__48_0);
+    sub_1C32BC4(&static_fields->__9__48_0, _9__48_0);
   }
-  v12 = System_Linq_Enumerable__Where_object_(
+  v11 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)objectList,
           (System_Func_TSource__bool__o *)_9__48_0,
-          (const MethodInfo_3115108 *)Method_System_Linq_Enumerable_Where_GameObject___);
-  v13 = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__ToList_object_(
-                                                       v12,
-                                                       (const MethodInfo_3112C88 *)Method_System_Linq_Enumerable_ToList_GameObject___);
-  v14 = (System_Action_object__o *)sub_1C2D6DC(System_Action_GameObject__TypeInfo);
+          (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_GameObject___);
+  v12 = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__ToList_object_(
+                                                       v11,
+                                                       (const MethodInfo_3121728 *)Method_System_Linq_Enumerable_ToList_GameObject___);
+  v13 = (System_Action_object__o *)sub_1C32E6C(System_Action_GameObject__TypeInfo);
   System_Action_object____ctor(
-    v14,
+    v13,
     (Il2CppObject *)v3,
     Method_EventTradeListViewItemManager___c__DisplayClass48_0__get_ObjectList_b__1__,
     0);
-  if ( !v13 )
+  if ( !v12 )
 LABEL_12:
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   System_Collections_Generic_List_object___ForEach(
-    v13,
-    (System_Action_T__o *)v14,
-    (const MethodInfo_378A5C4 *)Method_System_Collections_Generic_List_GameObject__ForEach__);
+    v12,
+    (System_Action_T__o *)v13,
+    (const MethodInfo_37991FC *)Method_System_Collections_Generic_List_GameObject__ForEach__);
   return *(System_Collections_Generic_List_EventTradeListViewObject__o **)(v3 + 16);
 }
 
@@ -4128,15 +4151,15 @@ void EventTradeListViewItemManager___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4C21C7D & 1) == 0 )
+  if ( (byte_4C32418 & 1) == 0 )
   {
-    sub_1C2D490(&EventTradeListViewItemManager___c_TypeInfo);
-    byte_4C21C7D = 1;
+    sub_1C32C20(&EventTradeListViewItemManager___c_TypeInfo);
+    byte_4C32418 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C2D6DC(EventTradeListViewItemManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C32E6C(EventTradeListViewItemManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventTradeListViewItemManager___c_TypeInfo->static_fields->__9 = (struct EventTradeListViewItemManager___c_o *)v1;
-  sub_1C2D434(EventTradeListViewItemManager___c_TypeInfo->static_fields);
+  sub_1C32BC4(EventTradeListViewItemManager___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -4153,34 +4176,33 @@ void EventTradeListViewItemManager___c___IsOverPossessionLimit_b__86_0(
 {
   __int64 v4; // x20
   __int64 v5; // x0
-  __int64 v6; // x1
   Il2CppObject *Instance; // x19
-  System_Action_o *v8; // x21
+  System_Action_o *v7; // x21
 
-  if ( (byte_4C21C80 & 1) == 0 )
+  if ( (byte_4C3241B & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass86_0__IsOverPossessionLimit_b__2__);
-    sub_1C2D490(&EventTradeListViewItemManager___c__DisplayClass86_0_TypeInfo);
-    byte_4C21C80 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass86_0__IsOverPossessionLimit_b__2__);
+    sub_1C32C20(&EventTradeListViewItemManager___c__DisplayClass86_0_TypeInfo);
+    byte_4C3241B = 1;
   }
-  v4 = sub_1C2D6DC(EventTradeListViewItemManager___c__DisplayClass86_0_TypeInfo);
+  v4 = sub_1C32E6C(EventTradeListViewItemManager___c__DisplayClass86_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4
     || (*(_DWORD *)(v4 + 16) = result,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v8 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v7 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo),
         System_Action___ctor(
-          v8,
+          v7,
           (Il2CppObject *)v4,
           Method_EventTradeListViewItemManager___c__DisplayClass86_0__IsOverPossessionLimit_b__2__,
           0),
         !Instance) )
   {
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   }
-  CommonUI__CloseSvtFrameShortDlg((CommonUI_o *)Instance, v8, 0);
+  CommonUI__CloseSvtFrameShortDlg((CommonUI_o *)Instance, v7, 0);
 }
 
 
@@ -4191,34 +4213,33 @@ void EventTradeListViewItemManager___c___IsOverPossessionLimit_b__86_1(
 {
   __int64 v4; // x20
   __int64 v5; // x0
-  __int64 v6; // x1
   Il2CppObject *Instance; // x19
-  System_Action_o *v8; // x21
+  System_Action_o *v7; // x21
 
-  if ( (byte_4C21C81 & 1) == 0 )
+  if ( (byte_4C3241C & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass86_1__IsOverPossessionLimit_b__3__);
-    sub_1C2D490(&EventTradeListViewItemManager___c__DisplayClass86_1_TypeInfo);
-    byte_4C21C81 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass86_1__IsOverPossessionLimit_b__3__);
+    sub_1C32C20(&EventTradeListViewItemManager___c__DisplayClass86_1_TypeInfo);
+    byte_4C3241C = 1;
   }
-  v4 = sub_1C2D6DC(EventTradeListViewItemManager___c__DisplayClass86_1_TypeInfo);
+  v4 = sub_1C32E6C(EventTradeListViewItemManager___c__DisplayClass86_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4
     || (*(_DWORD *)(v4 + 16) = result,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v8 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v7 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo),
         System_Action___ctor(
-          v8,
+          v7,
           (Il2CppObject *)v4,
           Method_EventTradeListViewItemManager___c__DisplayClass86_1__IsOverPossessionLimit_b__3__,
           0),
         !Instance) )
   {
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   }
-  CommonUI__CloseSvtFrameShortDlg((CommonUI_o *)Instance, v8, 0);
+  CommonUI__CloseSvtFrameShortDlg((CommonUI_o *)Instance, v7, 0);
 }
 
 
@@ -4229,34 +4250,33 @@ void EventTradeListViewItemManager___c___IsOverPossessionLimit_b__86_4(
 {
   __int64 v4; // x20
   __int64 v5; // x0
-  __int64 v6; // x1
   Il2CppObject *Instance; // x19
-  System_Action_o *v8; // x21
+  System_Action_o *v7; // x21
 
-  if ( (byte_4C21C82 & 1) == 0 )
+  if ( (byte_4C3241D & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass86_2__IsOverPossessionLimit_b__5__);
-    sub_1C2D490(&EventTradeListViewItemManager___c__DisplayClass86_2_TypeInfo);
-    byte_4C21C82 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass86_2__IsOverPossessionLimit_b__5__);
+    sub_1C32C20(&EventTradeListViewItemManager___c__DisplayClass86_2_TypeInfo);
+    byte_4C3241D = 1;
   }
-  v4 = sub_1C2D6DC(EventTradeListViewItemManager___c__DisplayClass86_2_TypeInfo);
+  v4 = sub_1C32E6C(EventTradeListViewItemManager___c__DisplayClass86_2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4
     || (*(_DWORD *)(v4 + 16) = result,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v8 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v7 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo),
         System_Action___ctor(
-          v8,
+          v7,
           (Il2CppObject *)v4,
           Method_EventTradeListViewItemManager___c__DisplayClass86_2__IsOverPossessionLimit_b__5__,
           0),
         !Instance) )
   {
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   }
-  CommonUI__CloseSvtFrameShortDlg((CommonUI_o *)Instance, v8, 0);
+  CommonUI__CloseSvtFrameShortDlg((CommonUI_o *)Instance, v7, 0);
 }
 
 
@@ -4267,19 +4287,19 @@ bool EventTradeListViewItemManager___c___IsOverPresentBoxLimit_b__87_0(
 {
   __int64 naturalAligment; // x9
 
-  if ( (byte_4C21C83 & 1) == 0 )
+  if ( (byte_4C3241E & 1) == 0 )
   {
-    this = (EventTradeListViewItemManager___c_o *)sub_1C2D490(&EventTradeListViewItem_TypeInfo);
-    byte_4C21C83 = 1;
+    this = (EventTradeListViewItemManager___c_o *)sub_1C32C20(&EventTradeListViewItem_TypeInfo);
+    byte_4C3241E = 1;
   }
   if ( !item )
 LABEL_8:
-    sub_1C2D6EC(this, item);
+    sub_1C32E7C(this);
   naturalAligment = EventTradeListViewItem_TypeInfo->_2.naturalAligment;
   if ( item->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (EventTradeListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] != EventTradeListViewItem_TypeInfo )
   {
-    this = (EventTradeListViewItemManager___c_o *)sub_1C2D9AC(item);
+    this = (EventTradeListViewItemManager___c_o *)sub_1C3313C(item);
     goto LABEL_8;
   }
   return EventTradeListViewItem__get_IsAbleReceiveRewards((EventTradeListViewItem_o *)item, 0);
@@ -4293,19 +4313,19 @@ EventTradeGoodsEntity_o *EventTradeListViewItemManager___c___IsOverPresentBoxLim
 {
   __int64 naturalAligment; // x9
 
-  if ( (byte_4C21C84 & 1) == 0 )
+  if ( (byte_4C3241F & 1) == 0 )
   {
-    this = (EventTradeListViewItemManager___c_o *)sub_1C2D490(&EventTradeListViewItem_TypeInfo);
-    byte_4C21C84 = 1;
+    this = (EventTradeListViewItemManager___c_o *)sub_1C32C20(&EventTradeListViewItem_TypeInfo);
+    byte_4C3241F = 1;
   }
   if ( !item )
 LABEL_8:
-    sub_1C2D6EC(this, item);
+    sub_1C32E7C(this);
   naturalAligment = EventTradeListViewItem_TypeInfo->_2.naturalAligment;
   if ( item->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (EventTradeListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] != EventTradeListViewItem_TypeInfo )
   {
-    this = (EventTradeListViewItemManager___c_o *)sub_1C2D9AC(item);
+    this = (EventTradeListViewItemManager___c_o *)sub_1C3313C(item);
     goto LABEL_8;
   }
   return (EventTradeGoodsEntity_o *)item[1].monitor;
@@ -4319,10 +4339,10 @@ bool EventTradeListViewItemManager___c___UpdateReceiveAllButtonState_b__85_0(
 {
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C21C7F & 1) == 0 )
+  if ( (byte_4C3241A & 1) == 0 )
   {
-    sub_1C2D490(&EventTradeListViewItem_TypeInfo);
-    byte_4C21C7F = 1;
+    sub_1C32C20(&EventTradeListViewItem_TypeInfo);
+    byte_4C3241A = 1;
   }
   if ( !item )
     return 0;
@@ -4343,10 +4363,10 @@ bool EventTradeListViewItemManager___c___get_ObjectList_b__48_0(
         UnityEngine_GameObject_o *go,
         const MethodInfo *method)
 {
-  if ( (byte_4C21C7E & 1) == 0 )
+  if ( (byte_4C32419 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21C7E = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C32419 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -4376,24 +4396,24 @@ void EventTradeListViewItemManager___c__DisplayClass48_0___get_ObjectList_b__1(
   Il2CppClass **v10; // x0
 
   v4 = this;
-  if ( (byte_4C21C85 & 1) == 0 )
+  if ( (byte_4C32420 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_EventTradeListViewObject___);
-    this = (EventTradeListViewItemManager___c__DisplayClass48_0_o *)sub_1C2D490(&Method_System_Collections_Generic_List_EventTradeListViewObject__Add__);
-    byte_4C21C85 = 1;
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_EventTradeListViewObject___);
+    this = (EventTradeListViewItemManager___c__DisplayClass48_0_o *)sub_1C32C20(&Method_System_Collections_Generic_List_EventTradeListViewObject__Add__);
+    byte_4C32420 = 1;
   }
   if ( !go
     || (list = (System_Collections_Generic_List_object__o *)v4->fields.list,
         this = (EventTradeListViewItemManager___c__DisplayClass48_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                           go,
-                                                                          (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_EventTradeListViewObject___),
+                                                                          (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_EventTradeListViewObject___),
         !list)
     || (items = list->fields._items,
         v7 = Method_System_Collections_Generic_List_EventTradeListViewObject__Add__,
         ++list->fields._version,
         !items) )
   {
-    sub_1C2D6EC(this, go);
+    sub_1C32E7C(this);
   }
   size = list->fields._size;
   v9 = this;
@@ -4402,14 +4422,14 @@ void EventTradeListViewItemManager___c__DisplayClass48_0___get_ObjectList_b__1(
     System_Collections_Generic_List_object___AddWithResize(
       list,
       (Il2CppObject *)this,
-      *(const MethodInfo_3789B84 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
+      *(const MethodInfo_37987BC **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
   }
   else
   {
     list->fields._size = size + 1;
     v10 = &items->obj.klass + size;
     v10[4] = (Il2CppClass *)v9;
-    sub_1C2D434(v10 + 4);
+    sub_1C32BC4(v10 + 4, v9);
   }
 }
 
@@ -4447,7 +4467,7 @@ void EventTradeListViewItemManager___c__DisplayClass65_0___OnClickWithdrawalButt
       }
     }
 LABEL_8:
-    sub_1C2D6EC(this, value);
+    sub_1C32E7C(this);
   }
   if ( !_4__this )
     goto LABEL_8;
@@ -4473,36 +4493,35 @@ void EventTradeListViewItemManager___c__DisplayClass66_0___OpenReconfirmDialog_b
 {
   __int64 v5; // x21
   __int64 v6; // x0
-  __int64 v7; // x1
   Il2CppObject *Instance; // x19
-  System_Action_o *v9; // x20
+  System_Action_o *v8; // x20
 
-  if ( (byte_4C21C86 & 1) == 0 )
+  if ( (byte_4C32421 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass66_1__OpenReconfirmDialog_b__1__);
-    sub_1C2D490(&EventTradeListViewItemManager___c__DisplayClass66_1_TypeInfo);
-    byte_4C21C86 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass66_1__OpenReconfirmDialog_b__1__);
+    sub_1C32C20(&EventTradeListViewItemManager___c__DisplayClass66_1_TypeInfo);
+    byte_4C32421 = 1;
   }
-  v5 = sub_1C2D6DC(EventTradeListViewItemManager___c__DisplayClass66_1_TypeInfo);
+  v5 = sub_1C32E6C(EventTradeListViewItemManager___c__DisplayClass66_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 24) = this,
-        sub_1C2D434(v5 + 24),
+        sub_1C32BC4(v5 + 24, this),
         *(_BYTE *)(v5 + 16) = decide,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v9 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v8 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo),
         System_Action___ctor(
-          v9,
+          v8,
           (Il2CppObject *)v5,
           Method_EventTradeListViewItemManager___c__DisplayClass66_1__OpenReconfirmDialog_b__1__,
           0),
         !Instance) )
   {
-    sub_1C2D6EC(v6, v7);
+    sub_1C32E7C(v6);
   }
-  CommonUI__CloseConfirmDialog_31167972((CommonUI_o *)Instance, v9, 0);
+  CommonUI__CloseConfirmDialog_31191080((CommonUI_o *)Instance, v8, 0);
 }
 
 
@@ -4513,7 +4532,7 @@ void EventTradeListViewItemManager___c__DisplayClass66_0___OpenReconfirmDialog_b
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   EventTradeListViewItemManager__OnClickWithdrawalDecide(this->fields.__4__this, this->fields.item, v2);
 }
 
@@ -4534,26 +4553,27 @@ void EventTradeListViewItemManager___c__DisplayClass66_1___OpenReconfirmDialog_b
   struct EventTradeListViewItemManager___c__DisplayClass66_0_o *CS___8__locals1; // x9
   struct EventTradeListViewItemManager_o *_4__this; // x8
   struct EventTradeListViewItem_o *item; // x9
-  struct EventTradeListViewItemManager___c__DisplayClass66_0_o *v6; // x8
+  struct EventTradeGoodsEntity_o *TradeGoodsEntity_k__BackingField; // x1
+  struct EventTradeListViewItemManager___c__DisplayClass66_0_o *v7; // x8
   int32_t oldCompleteNum; // w20
-  const MethodInfo *v8; // x2
-  struct EventTradeListViewItemManager___c__DisplayClass66_0_o *v9; // x8
+  const MethodInfo *v9; // x2
+  struct EventTradeListViewItemManager___c__DisplayClass66_0_o *v10; // x8
   Il2CppObject *Instance; // x21
   System_String_o *Empty; // x20
-  Il2CppObject *v12; // x23
+  Il2CppObject *v13; // x23
   System_Action_o *monitor; // x22
-  EventTradeListViewItemManager___c__DisplayClass66_1_o *v14; // x19
+  EventTradeListViewItemManager___c__DisplayClass66_1_o *v15; // x19
 
   v2 = this;
-  if ( (byte_4C21C87 & 1) == 0 )
+  if ( (byte_4C32422 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C2D490(&string_TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass66_0__OpenReconfirmDialog_b__2__);
-    this = (EventTradeListViewItemManager___c__DisplayClass66_1_o *)sub_1C2D490(&StringLiteral_13490/*"TRADE_EVENT_STATE_CHANGE_NOTIFICATION_DIALOG_MESSAGE"*/);
-    byte_4C21C87 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C32C20(&string_TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass66_0__OpenReconfirmDialog_b__2__);
+    this = (EventTradeListViewItemManager___c__DisplayClass66_1_o *)sub_1C32C20(&StringLiteral_13493/*"TRADE_EVENT_STATE_CHANGE_NOTIFICATION_DIALOG_MESSAGE"*/);
+    byte_4C32422 = 1;
   }
   CS___8__locals1 = v2->fields.CS___8__locals1;
   if ( !CS___8__locals1 )
@@ -4566,65 +4586,68 @@ void EventTradeListViewItemManager___c__DisplayClass66_1___OpenReconfirmDialog_b
       goto LABEL_23;
     if ( !_4__this )
       goto LABEL_23;
-    _4__this->fields.selectTradeGoodsEntity = item->fields._TradeGoodsEntity_k__BackingField;
-    this = (EventTradeListViewItemManager___c__DisplayClass66_1_o *)sub_1C2D434(&_4__this->fields.selectTradeGoodsEntity);
-    v6 = v2->fields.CS___8__locals1;
-    if ( !v6 )
+    TradeGoodsEntity_k__BackingField = item->fields._TradeGoodsEntity_k__BackingField;
+    _4__this->fields.selectTradeGoodsEntity = TradeGoodsEntity_k__BackingField;
+    this = (EventTradeListViewItemManager___c__DisplayClass66_1_o *)sub_1C32BC4(
+                                                                      &_4__this->fields.selectTradeGoodsEntity,
+                                                                      TradeGoodsEntity_k__BackingField);
+    v7 = v2->fields.CS___8__locals1;
+    if ( !v7 )
       goto LABEL_23;
-    this = (EventTradeListViewItemManager___c__DisplayClass66_1_o *)v6->fields.item;
+    this = (EventTradeListViewItemManager___c__DisplayClass66_1_o *)v7->fields.item;
     if ( !this )
       goto LABEL_23;
-    oldCompleteNum = v6->fields.oldCompleteNum;
+    oldCompleteNum = v7->fields.oldCompleteNum;
     this = (EventTradeListViewItemManager___c__DisplayClass66_1_o *)EventTradeListViewItem__get_NowCompleteNum(
                                                                       (EventTradeListViewItem_o *)this,
                                                                       0);
     if ( oldCompleteNum == (_DWORD)this )
     {
-      v9 = v2->fields.CS___8__locals1;
-      if ( v9 )
+      v10 = v2->fields.CS___8__locals1;
+      if ( v10 )
       {
-        this = (EventTradeListViewItemManager___c__DisplayClass66_1_o *)v9->fields.__4__this;
+        this = (EventTradeListViewItemManager___c__DisplayClass66_1_o *)v10->fields.__4__this;
         if ( this )
         {
           EventTradeListViewItemManager__OnClickWithdrawalDecide(
             (EventTradeListViewItemManager_o *)this,
-            v9->fields.item,
-            v8);
+            v10->fields.item,
+            v9);
           return;
         }
       }
 LABEL_23:
-      sub_1C2D6EC(this, method);
+      sub_1C32E7C(this);
     }
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     Empty = string_TypeInfo->static_fields->Empty;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     this = (EventTradeListViewItemManager___c__DisplayClass66_1_o *)LocalizationManager__Get(
-                                                                      (System_String_o *)StringLiteral_13490/*"TRADE_EVENT_STATE_CHANGE_NOTIFICATION_DIALOG_MESSAGE"*/,
+                                                                      (System_String_o *)StringLiteral_13493/*"TRADE_EVENT_STATE_CHANGE_NOTIFICATION_DIALOG_MESSAGE"*/,
                                                                       0);
-    v12 = (Il2CppObject *)v2->fields.CS___8__locals1;
-    if ( !v12 )
+    v13 = (Il2CppObject *)v2->fields.CS___8__locals1;
+    if ( !v13 )
       goto LABEL_23;
-    monitor = (System_Action_o *)v12[2].monitor;
-    v14 = this;
+    monitor = (System_Action_o *)v13[2].monitor;
+    v15 = this;
     if ( !monitor )
     {
-      monitor = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+      monitor = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
       System_Action___ctor(
         monitor,
-        v12,
+        v13,
         Method_EventTradeListViewItemManager___c__DisplayClass66_0__OpenReconfirmDialog_b__2__,
         0);
-      v12[2].monitor = monitor;
-      this = (EventTradeListViewItemManager___c__DisplayClass66_1_o *)sub_1C2D434(&v12[2].monitor);
+      v13[2].monitor = monitor;
+      this = (EventTradeListViewItemManager___c__DisplayClass66_1_o *)sub_1C32BC4(&v13[2].monitor, monitor);
     }
     if ( !Instance )
       goto LABEL_23;
     CommonUI__OpenNotificationDialog(
       (CommonUI_o *)Instance,
       Empty,
-      (System_String_o *)v14,
+      (System_String_o *)v15,
       monitor,
       -1,
       0,
@@ -4670,7 +4693,7 @@ bool EventTradeListViewItemManager___c__DisplayClass70_0___TryGetAvailableStoreI
 
   storeEntity = this->fields.storeEntity;
   if ( !storeEntity )
-    sub_1C2D6EC(this, idx);
+    sub_1C32E7C(this);
   return storeEntity->fields.idx == idx;
 }
 
@@ -4699,7 +4722,7 @@ void EventTradeListViewItemManager___c__DisplayClass75_0___OnClickWithdrawalDeci
       return;
     }
 LABEL_7:
-    sub_1C2D6EC(_4__this, onDecide);
+    sub_1C32E7C(_4__this);
   }
   if ( !_4__this )
     goto LABEL_7;
@@ -4735,12 +4758,12 @@ void EventTradeListViewItemManager___c__DisplayClass78_0___OpenRewardDialog_b__0
   System_Action_o *v12; // x21
 
   v3 = (Il2CppObject *)this;
-  if ( (byte_4C21C88 & 1) == 0 )
+  if ( (byte_4C32423 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__1__);
-    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__2__);
-    byte_4C21C88 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__1__);
+    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__2__);
+    byte_4C32423 = 1;
   }
   klass = (BattleDropItem_array *)v3[1].klass;
   if ( !klass )
@@ -4757,14 +4780,14 @@ void EventTradeListViewItemManager___c__DisplayClass78_0___OpenRewardDialog_b__0
     v10 = (System_Action_o *)v3[3].monitor;
     if ( !v10 )
     {
-      v10 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+      v10 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
       System_Action___ctor(
         v10,
         v3,
         Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__1__,
         0);
       v3[3].monitor = v10;
-      this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C2D434(&v3[3].monitor);
+      this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C32BC4(&v3[3].monitor, v10);
     }
     if ( v6 )
     {
@@ -4772,20 +4795,20 @@ void EventTradeListViewItemManager___c__DisplayClass78_0___OpenRewardDialog_b__0
       return;
     }
 LABEL_14:
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   }
   v11 = *((_QWORD *)monitor + 67);
   v12 = (System_Action_o *)v3[4].monitor;
   if ( !v12 )
   {
-    v12 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    v12 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
     System_Action___ctor(
       v12,
       v3,
       Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__2__,
       0);
     v3[4].monitor = v12;
-    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C2D434(&v3[4].monitor);
+    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C32BC4(&v3[4].monitor, v12);
   }
   if ( !v11 )
     goto LABEL_14;
@@ -4809,11 +4832,11 @@ void EventTradeListViewItemManager___c__DisplayClass78_0___OpenRewardDialog_b__1
   Il2CppClass *v6; // x20
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4C21C89 & 1) == 0 )
+  if ( (byte_4C32424 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__3__);
-    byte_4C21C89 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__3__);
+    byte_4C32424 = 1;
   }
   monitor = v2[1].monitor;
   if ( !monitor )
@@ -4823,18 +4846,18 @@ void EventTradeListViewItemManager___c__DisplayClass78_0___OpenRewardDialog_b__1
   v6 = v2[1].klass;
   if ( !klass )
   {
-    klass = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    klass = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
     System_Action___ctor(
       klass,
       v2,
       Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__3__,
       0);
     v2[3].klass = (Il2CppClass *)klass;
-    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C2D434(&v2[3]);
+    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C32BC4(&v2[3], klass);
   }
   if ( !v4 )
 LABEL_8:
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   (*(void (__fastcall **)(_QWORD, Il2CppClass *, _QWORD, System_Action_o *, _QWORD))(v4 + 24))(
     *(_QWORD *)(v4 + 64),
     v6,
@@ -4855,28 +4878,28 @@ void EventTradeListViewItemManager___c__DisplayClass78_0___OpenRewardDialog_b__2
   int32_t oldEventPoint; // w21
 
   v3 = this;
-  if ( (byte_4C21C8B & 1) == 0 )
+  if ( (byte_4C32426 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__5__);
-    byte_4C21C8B = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__5__);
+    byte_4C32426 = 1;
   }
   _9__5 = v3->fields.__9__5;
   _4__this = v3->fields.__4__this;
   oldEventPoint = v3->fields.oldEventPoint;
   if ( !_9__5 )
   {
-    _9__5 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    _9__5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
     System_Action___ctor(
       _9__5,
       (Il2CppObject *)v3,
       Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__5__,
       0);
     v3->fields.__9__5 = _9__5;
-    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C2D434(&v3->fields.__9__5);
+    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C32BC4(&v3->fields.__9__5, _9__5);
   }
   if ( !_4__this )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   EventTradeListViewItemManager__CheckOpenQuest(_4__this, oldEventPoint, _9__5, v2);
 }
 
@@ -4892,28 +4915,28 @@ void EventTradeListViewItemManager___c__DisplayClass78_0___OpenRewardDialog_b__3
   int32_t oldEventPoint; // w21
 
   v3 = this;
-  if ( (byte_4C21C8A & 1) == 0 )
+  if ( (byte_4C32425 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C2D490(&Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__4__);
-    byte_4C21C8A = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C32C20(&Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__4__);
+    byte_4C32425 = 1;
   }
   _9__4 = v3->fields.__9__4;
   _4__this = v3->fields.__4__this;
   oldEventPoint = v3->fields.oldEventPoint;
   if ( !_9__4 )
   {
-    _9__4 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    _9__4 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
     System_Action___ctor(
       _9__4,
       (Il2CppObject *)v3,
       Method_EventTradeListViewItemManager___c__DisplayClass78_0__OpenRewardDialog_b__4__,
       0);
     v3->fields.__9__4 = _9__4;
-    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C2D434(&v3->fields.__9__4);
+    this = (EventTradeListViewItemManager___c__DisplayClass78_0_o *)sub_1C32BC4(&v3->fields.__9__4, _9__4);
   }
   if ( !_4__this )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   EventTradeListViewItemManager__CheckOpenQuest(_4__this, oldEventPoint, _9__4, v2);
 }
 
@@ -4939,7 +4962,7 @@ void EventTradeListViewItemManager___c__DisplayClass78_0___OpenRewardDialog_b__4
     _4__this = this->fields.__4__this;
     if ( !_4__this )
 LABEL_6:
-      sub_1C2D6EC(_4__this, method);
+      sub_1C32E7C(_4__this);
   }
   EventTradeListViewItemManager__OpenReplenishmentDialog(_4__this, method);
 }
@@ -4966,7 +4989,7 @@ void EventTradeListViewItemManager___c__DisplayClass78_0___OpenRewardDialog_b__5
     _4__this = this->fields.__4__this;
     if ( !_4__this )
 LABEL_6:
-      sub_1C2D6EC(_4__this, method);
+      sub_1C32E7C(_4__this);
   }
   EventTradeListViewItemManager__OpenReplenishmentDialog(_4__this, method);
 }
@@ -4985,32 +5008,30 @@ void EventTradeListViewItemManager___c__DisplayClass83_0___OpenSweetsNotificatio
         const MethodInfo *method)
 {
   EventTradeGoodsMaster_o *Master_object; // x0
-  __int64 v4; // x1
   struct EventTradeListViewItemManager_o *_4__this; // x8
-  __int64 v6; // x2
   long double inited; // q0
   struct EventTradeListViewItem_array *itemList; // x8
-  EventTradeListViewItem_o *v9; // x8
+  EventTradeListViewItem_o *v7; // x8
   EventTradeGoodsMaster_o *klass; // x2
-  _QWORD *v11; // x20
-  __int64 v12; // x8
-  __int64 v13; // x0
-  struct EventTradeListViewItemManager_o *v14; // x8
+  _QWORD *v9; // x20
+  __int64 v10; // x8
+  __int64 v11; // x0
+  struct EventTradeListViewItemManager_o *v12; // x8
   struct System_Action_int__string____Action__o *playVoiceAction; // x9
 
-  if ( (byte_4C21C8C & 1) == 0 )
+  if ( (byte_4C32427 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Array_Empty_string___);
-    sub_1C2D490(&Method_DataManager_GetMaster_EventTradeGoodsMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_14566/*"TradeNotificationDialogOpenTime"*/);
-    byte_4C21C8C = 1;
+    sub_1C32C20(&Method_System_Array_Empty_string___);
+    sub_1C32C20(&Method_DataManager_GetMaster_EventTradeGoodsMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_14569/*"TradeNotificationDialogOpenTime"*/);
+    byte_4C32427 = 1;
   }
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_14566/*"TradeNotificationDialogOpenTime"*/, this->fields.openTime, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_14569/*"TradeNotificationDialogOpenTime"*/, this->fields.openTime, 0);
   UnityEngine_PlayerPrefs__Save(0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventTradeGoodsMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventTradeGoodsMaster___);
+  Master_object = (EventTradeGoodsMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventTradeGoodsMaster___);
   _4__this = this->fields.__4__this;
   if ( !_4__this || !Master_object )
     goto LABEL_26;
@@ -5024,11 +5045,11 @@ void EventTradeListViewItemManager___c__DisplayClass83_0___OpenSweetsNotificatio
     if ( itemList )
     {
       if ( !LODWORD(itemList->max_length) )
-        sub_1C2D6F4(Master_object, v4, v6);
-      v9 = itemList->m_Items[0];
-      if ( v9 )
+        sub_1C32E84(Master_object);
+      v7 = itemList->m_Items[0];
+      if ( v7 )
       {
-        Master_object = (EventTradeGoodsMaster_o *)v9->fields._TradeGoodsEntity_k__BackingField;
+        Master_object = (EventTradeGoodsMaster_o *)v7->fields._TradeGoodsEntity_k__BackingField;
         if ( Master_object )
         {
           Master_object = (EventTradeGoodsMaster_o *)EventTradeGoodsEntity__GetTradePickupVoiceIds(
@@ -5040,34 +5061,34 @@ void EventTradeListViewItemManager___c__DisplayClass83_0___OpenSweetsNotificatio
       }
     }
 LABEL_26:
-    sub_1C2D6EC(Master_object, v4);
+    sub_1C32E7C(Master_object);
   }
-  v11 = Method_System_Array_Empty_string___;
-  v12 = *((_QWORD *)Method_System_Array_Empty_string___ + 7);
-  if ( !v12 )
+  v9 = Method_System_Array_Empty_string___;
+  v10 = *((_QWORD *)Method_System_Array_Empty_string___ + 7);
+  if ( !v10 )
   {
-    sub_1C7DC00(Method_System_Array_Empty_string___);
-    v12 = v11[7];
+    sub_1C83390(Method_System_Array_Empty_string___);
+    v10 = v9[7];
   }
-  v13 = *(_QWORD *)(v12 + 16);
-  if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-    v13 = sub_1C7DBA4(inited);
-  if ( !*(_DWORD *)(v13 + 224) )
-    inited = j_il2cpp_runtime_class_init_0(v13);
-  Master_object = *(EventTradeGoodsMaster_o **)(v11[7] + 16LL);
+  v11 = *(_QWORD *)(v10 + 16);
+  if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
+    v11 = sub_1C83334(inited);
+  if ( !*(_DWORD *)(v11 + 224) )
+    inited = j_il2cpp_runtime_class_init_0(v11);
+  Master_object = *(EventTradeGoodsMaster_o **)(v9[7] + 16LL);
   if ( (*((_BYTE *)&Master_object[4].fields._MasterKind_k__BackingField + 5) & 1) == 0 )
-    Master_object = (EventTradeGoodsMaster_o *)sub_1C7DBA4(inited);
+    Master_object = (EventTradeGoodsMaster_o *)sub_1C83334(inited);
   klass = (EventTradeGoodsMaster_o *)Master_object[2].fields.list->klass;
 LABEL_23:
-  v14 = this->fields.__4__this;
-  if ( !v14 )
+  v12 = this->fields.__4__this;
+  if ( !v12 )
     goto LABEL_26;
-  playVoiceAction = v14->fields.playVoiceAction;
+  playVoiceAction = v12->fields.playVoiceAction;
   if ( !playVoiceAction )
     goto LABEL_26;
   ((void (__fastcall *)(intptr_t, _QWORD, EventTradeGoodsMaster_o *, _QWORD, intptr_t))playVoiceAction->fields.invoke_impl)(
     playVoiceAction->fields.method_code,
-    (unsigned int)v14->fields.svtId,
+    (unsigned int)v12->fields.svtId,
     klass,
     0,
     playVoiceAction->fields.method);
@@ -5090,53 +5111,52 @@ void EventTradeListViewItemManager___c__DisplayClass86_0___IsOverPossessionLimit
   Il2CppObject *Instance; // x19
   SceneJumpInfo_o *v5; // x20
   Il2CppObject *v6; // x0
-  __int64 v7; // x1
-  int32_t v8; // w1
-  Il2CppObject *v9; // x3
+  int32_t v7; // w1
+  Il2CppObject *v8; // x3
 
-  if ( (byte_4C21C8D & 1) == 0 )
+  if ( (byte_4C32428 & 1) == 0 )
   {
-    sub_1C2D490(&SceneJumpInfo_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C2D490(&StringLiteral_12682/*"SellServant"*/);
-    sub_1C2D490(&StringLiteral_12718/*"ServantCombine"*/);
-    byte_4C21C8D = 1;
+    sub_1C32C20(&SceneJumpInfo_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C32C20(&StringLiteral_12686/*"SellServant"*/);
+    sub_1C32C20(&StringLiteral_12722/*"ServantCombine"*/);
+    byte_4C32428 = 1;
   }
   result = this->fields.result;
   switch ( result )
   {
     case 2:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v5 = (SceneJumpInfo_o *)sub_1C2D6DC(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_41257388(v5, (System_String_o *)StringLiteral_12682/*"SellServant"*/, 0, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v5 = (SceneJumpInfo_o *)sub_1C32E6C(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_41379640(v5, (System_String_o *)StringLiteral_12686/*"SellServant"*/, 0, 0);
       if ( Instance )
       {
-        v8 = 22;
+        v7 = 22;
         goto LABEL_10;
       }
 LABEL_15:
-      sub_1C2D6EC(v6, v7);
+      sub_1C32E7C(v6);
     case 1:
-      v6 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v6 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       if ( v6 )
       {
-        v8 = 71;
-        v9 = 0;
+        v7 = 71;
+        v8 = 0;
         goto LABEL_13;
       }
       goto LABEL_15;
     case 0:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v5 = (SceneJumpInfo_o *)sub_1C2D6DC(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_41257300(v5, (System_String_o *)StringLiteral_12718/*"ServantCombine"*/, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v5 = (SceneJumpInfo_o *)sub_1C32E6C(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_41379552(v5, (System_String_o *)StringLiteral_12722/*"ServantCombine"*/, 0);
       if ( Instance )
       {
-        v8 = 32;
+        v7 = 32;
 LABEL_10:
         v6 = Instance;
-        v9 = (Il2CppObject *)v5;
+        v8 = (Il2CppObject *)v5;
 LABEL_13:
-        AvalonSceneManager__transitionScene((AvalonSceneManager_o *)v6, v8, 1, v9, 0);
+        AvalonSceneManager__transitionScene((AvalonSceneManager_o *)v6, v7, 1, v8, 0);
         return;
       }
       goto LABEL_15;
@@ -5160,51 +5180,50 @@ void EventTradeListViewItemManager___c__DisplayClass86_1___IsOverPossessionLimit
   Il2CppObject *Instance; // x19
   SceneJumpInfo_o *v5; // x20
   __int64 v6; // x0
-  __int64 v7; // x1
-  int32_t v8; // w1
+  int32_t v7; // w1
 
-  if ( (byte_4C21C8E & 1) == 0 )
+  if ( (byte_4C32429 & 1) == 0 )
   {
-    sub_1C2D490(&SceneJumpInfo_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C2D490(&StringLiteral_12722/*"ServantEquipList"*/);
-    sub_1C2D490(&StringLiteral_12682/*"SellServant"*/);
-    sub_1C2D490(&StringLiteral_12721/*"ServantEQCombine"*/);
-    byte_4C21C8E = 1;
+    sub_1C32C20(&SceneJumpInfo_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C32C20(&StringLiteral_12726/*"ServantEquipList"*/);
+    sub_1C32C20(&StringLiteral_12686/*"SellServant"*/);
+    sub_1C32C20(&StringLiteral_12725/*"ServantEQCombine"*/);
+    byte_4C32429 = 1;
   }
   result = this->fields.result;
   switch ( result )
   {
     case 2:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v5 = (SceneJumpInfo_o *)sub_1C2D6DC(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_41257388(v5, (System_String_o *)StringLiteral_12682/*"SellServant"*/, 1, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v5 = (SceneJumpInfo_o *)sub_1C32E6C(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_41379640(v5, (System_String_o *)StringLiteral_12686/*"SellServant"*/, 1, 0);
       if ( Instance )
       {
-        v8 = 22;
+        v7 = 22;
         goto LABEL_12;
       }
 LABEL_14:
-      sub_1C2D6EC(v6, v7);
+      sub_1C32E7C(v6);
     case 1:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v5 = (SceneJumpInfo_o *)sub_1C2D6DC(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_41257300(v5, (System_String_o *)StringLiteral_12722/*"ServantEquipList"*/, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v5 = (SceneJumpInfo_o *)sub_1C32E6C(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_41379552(v5, (System_String_o *)StringLiteral_12726/*"ServantEquipList"*/, 0);
       if ( Instance )
       {
-        v8 = 71;
+        v7 = 71;
         goto LABEL_12;
       }
       goto LABEL_14;
     case 0:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v5 = (SceneJumpInfo_o *)sub_1C2D6DC(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_41257300(v5, (System_String_o *)StringLiteral_12721/*"ServantEQCombine"*/, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v5 = (SceneJumpInfo_o *)sub_1C32E6C(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_41379552(v5, (System_String_o *)StringLiteral_12725/*"ServantEQCombine"*/, 0);
       if ( Instance )
       {
-        v8 = 32;
+        v7 = 32;
 LABEL_12:
-        AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, v8, 1, (Il2CppObject *)v5, 0);
+        AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, v7, 1, (Il2CppObject *)v5, 0);
         return;
       }
       goto LABEL_14;
@@ -5227,22 +5246,21 @@ void EventTradeListViewItemManager___c__DisplayClass86_2___IsOverPossessionLimit
   Il2CppObject *Instance; // x19
   SceneJumpInfo_o *v4; // x20
   __int64 v5; // x0
-  __int64 v6; // x1
 
-  if ( (byte_4C21C8F & 1) == 0 )
+  if ( (byte_4C3242A & 1) == 0 )
   {
-    sub_1C2D490(&SceneJumpInfo_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C2D490(&StringLiteral_12682/*"SellServant"*/);
-    byte_4C21C8F = 1;
+    sub_1C32C20(&SceneJumpInfo_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C32C20(&StringLiteral_12686/*"SellServant"*/);
+    byte_4C3242A = 1;
   }
   if ( this->fields.result == 2 )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    v4 = (SceneJumpInfo_o *)sub_1C2D6DC(SceneJumpInfo_TypeInfo);
-    SceneJumpInfo___ctor_41257388(v4, (System_String_o *)StringLiteral_12682/*"SellServant"*/, 2, 0);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    v4 = (SceneJumpInfo_o *)sub_1C32E6C(SceneJumpInfo_TypeInfo);
+    SceneJumpInfo___ctor_41379640(v4, (System_String_o *)StringLiteral_12686/*"SellServant"*/, 2, 0);
     if ( !Instance )
-      sub_1C2D6EC(v5, v6);
+      sub_1C32E7C(v5);
     AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Instance, 22, 1, (Il2CppObject *)v4, 0);
   }
 }
@@ -5267,7 +5285,7 @@ void EventTradeListViewItemManager___c__DisplayClass87_0___IsOverPresentBoxLimit
   {
     _4__this = this->fields.__4__this;
     if ( !_4__this )
-      sub_1C2D6EC(this, method);
+      sub_1C32E7C(this);
     boxOverDlgCloseCallBack = _4__this->fields.boxOverDlgCloseCallBack;
     if ( boxOverDlgCloseCallBack )
       ActionExtensions__Call(boxOverDlgCloseCallBack, 0);

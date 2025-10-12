@@ -21,10 +21,10 @@ void GrandQuestBoardOptionTextComponent__AdjustTextOffset(
   int32_t v11; // w0
   int v12; // w8
 
-  if ( (byte_4C21FE4 & 1) == 0 )
+  if ( (byte_4C326B3 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21FE4 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C326B3 = 1;
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -34,7 +34,7 @@ void GrandQuestBoardOptionTextComponent__AdjustTextOffset(
   {
     data = this->fields.data;
     if ( !data )
-      sub_1C2D6EC(v4, v5);
+      sub_1C32E7C(v4);
     if ( data->fields._Alignment_k__BackingField == 2 )
     {
       BehindLabelWrappedWidth = GrandQuestBoardOptionTextComponent__GetBehindLabelWrappedWidth(this, v5);
@@ -58,24 +58,23 @@ int32_t GrandQuestBoardOptionTextComponent__GetBehindLabelWrappedWidth(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *behindLabel; // x20
-  __int64 v4; // x1
-  struct UILabel_o *v6; // x0
+  struct UILabel_o *v5; // x0
   float FontWidth; // s0
 
-  if ( (byte_4C21FE3 & 1) == 0 )
+  if ( (byte_4C326B2 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21FE3 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C326B2 = 1;
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(behindLabel, 0, 0) )
     return 0;
-  v6 = this->fields.behindLabel;
-  if ( !v6 )
-    sub_1C2D6EC(0, v4);
-  FontWidth = WrapControlText__getFontWidth(v6, v6->fields.mText, v6->fields.mFontSize, 0);
+  v5 = this->fields.behindLabel;
+  if ( !v5 )
+    sub_1C32E7C(0);
+  FontWidth = WrapControlText__getFontWidth(v5, v5->fields.mText, v5->fields.mFontSize, 0);
   if ( FontWidth == INFINITY )
     return 0x80000000;
   else
@@ -109,7 +108,7 @@ float GrandQuestBoardOptionTextComponent__GetBehindTextWidth(
              / (float)(ForwardText_k__BackingField->fields._stringLength + stringLength),
                0.0);
 LABEL_7:
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   }
   return 0.0;
 }
@@ -141,7 +140,7 @@ float GrandQuestBoardOptionTextComponent__GetForwardTextWidth(
              / (float)(BehindText_k__BackingField->fields._stringLength + stringLength),
                0.0);
 LABEL_7:
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   }
   return 0.0;
 }
@@ -181,14 +180,13 @@ void GrandQuestBoardOptionTextComponent__SetBehindText(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *behindLabel; // x21
-  __int64 v6; // x1
   UILabel_o *IsNullOrEmpty; // x0
   UnityEngine_GameObject_o *gameObject; // x20
 
-  if ( (byte_4C21FE6 & 1) == 0 )
+  if ( (byte_4C326B5 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21FE6 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C326B5 = 1;
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -202,7 +200,7 @@ void GrandQuestBoardOptionTextComponent__SetBehindText(
           IsNullOrEmpty = (UILabel_o *)System_String__IsNullOrEmpty(text, 0),
           !gameObject) )
     {
-      sub_1C2D6EC(IsNullOrEmpty, v6);
+      sub_1C32E7C(IsNullOrEmpty);
     }
     UnityEngine_GameObject__SetActive(gameObject, ((unsigned __int8)IsNullOrEmpty & 1) == 0, 0);
   }
@@ -220,21 +218,20 @@ void GrandQuestBoardOptionTextComponent__SetCondensedScale(
   float IconSpaceWidth; // s0
   const MethodInfo *v9; // x1
   __int64 v10; // x0
-  __int64 v11; // x1
   float ForwardTextWidth; // s0
-  int32_t v13; // w1
+  int32_t v12; // w1
   UnityEngine_Object_o *behindLabel; // x21
-  const MethodInfo *v15; // x1
-  UILabel_o *v16; // x21
-  float v17; // s0
-  const MethodInfo *v18; // x1
+  const MethodInfo *v14; // x1
+  UILabel_o *v15; // x21
+  float v16; // s0
+  const MethodInfo *v17; // x1
   float BehindTextWidth; // s0
-  int32_t v20; // w1
+  int32_t v19; // w1
 
-  if ( (byte_4C21FE7 & 1) == 0 )
+  if ( (byte_4C326B6 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21FE7 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C326B6 = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -250,30 +247,30 @@ void GrandQuestBoardOptionTextComponent__SetCondensedScale(
     if ( !v7 )
       goto LABEL_20;
     if ( ForwardTextWidth == INFINITY )
-      v13 = 0x80000000;
+      v12 = 0x80000000;
     else
-      v13 = (int)ForwardTextWidth;
-    UILabel__SetCondensedScale(v7, v13, 0, 0);
+      v12 = (int)ForwardTextWidth;
+    UILabel__SetCondensedScale(v7, v12, 0, 0);
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(behindLabel, 0, 0) )
   {
-    v16 = this->fields.behindLabel;
-    v17 = GrandQuestBoardOptionTextComponent__get_IconSpaceWidth(this, v15);
-    BehindTextWidth = GrandQuestBoardOptionTextComponent__GetBehindTextWidth(this, (float)wholeWidth - v17, v18);
-    if ( v16 )
+    v15 = this->fields.behindLabel;
+    v16 = GrandQuestBoardOptionTextComponent__get_IconSpaceWidth(this, v14);
+    BehindTextWidth = GrandQuestBoardOptionTextComponent__GetBehindTextWidth(this, (float)wholeWidth - v16, v17);
+    if ( v15 )
     {
       if ( BehindTextWidth == INFINITY )
-        v20 = 0x80000000;
+        v19 = 0x80000000;
       else
-        v20 = (int)BehindTextWidth;
-      UILabel__SetCondensedScale(v16, v20, 0, 0);
+        v19 = (int)BehindTextWidth;
+      UILabel__SetCondensedScale(v15, v19, 0, 0);
       return;
     }
 LABEL_20:
-    sub_1C2D6EC(v10, v11);
+    sub_1C32E7C(v10);
   }
 }
 
@@ -284,14 +281,13 @@ void GrandQuestBoardOptionTextComponent__SetForwardText(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *forwardLabel; // x21
-  __int64 v6; // x1
   UILabel_o *IsNullOrEmpty; // x0
   UnityEngine_GameObject_o *gameObject; // x20
 
-  if ( (byte_4C21FE5 & 1) == 0 )
+  if ( (byte_4C326B4 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21FE5 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C326B4 = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -305,7 +301,7 @@ void GrandQuestBoardOptionTextComponent__SetForwardText(
           IsNullOrEmpty = (UILabel_o *)System_String__IsNullOrEmpty(text, 0),
           !gameObject) )
     {
-      sub_1C2D6EC(IsNullOrEmpty, v6);
+      sub_1C32E7C(IsNullOrEmpty);
     }
     UnityEngine_GameObject__SetActive(gameObject, ((unsigned __int8)IsNullOrEmpty & 1) == 0, 0);
   }
@@ -318,21 +314,20 @@ void GrandQuestBoardOptionTextComponent__SetItemIconAtlas(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *itemIconSprite; // x21
-  __int64 v6; // x1
-  BalanceConfig_c *v7; // x0
-  UISprite_o *v8; // x21
+  BalanceConfig_c *v6; // x0
+  UISprite_o *v7; // x21
   int32_t stormPodItemId; // w22
   UISprite_o *gameObject; // x0
-  bool v11; // w1
+  bool v10; // w1
 
-  if ( (byte_4C21FE8 & 1) == 0 )
+  if ( (byte_4C326B7 & 1) == 0 )
   {
-    sub_1C2D490(&AtlasManager_TypeInfo);
-    sub_1C2D490(&BalanceConfig_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_21014/*"item_mini_49"*/);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C21FE8 = 1;
+    sub_1C32C20(&AtlasManager_TypeInfo);
+    sub_1C32C20(&BalanceConfig_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_21026/*"item_mini_49"*/);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C326B7 = 1;
   }
   itemIconSprite = (UnityEngine_Object_o *)this->fields.itemIconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -355,9 +350,9 @@ void GrandQuestBoardOptionTextComponent__SetItemIconAtlas(
             gameObject = (UISprite_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
             if ( gameObject )
             {
-              v11 = 0;
+              v10 = 0;
 LABEL_22:
-              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, v11, 0);
+              UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, v10, 0);
               return;
             }
           }
@@ -366,32 +361,32 @@ LABEL_22:
     }
     else
     {
-      v7 = BalanceConfig_TypeInfo;
+      v6 = BalanceConfig_TypeInfo;
       if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-        v7 = BalanceConfig_TypeInfo;
+        v6 = BalanceConfig_TypeInfo;
       }
-      v8 = this->fields.itemIconSprite;
-      stormPodItemId = v7->static_fields->stormPodItemId;
+      v7 = this->fields.itemIconSprite;
+      stormPodItemId = v6->static_fields->stormPodItemId;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       if ( stormPodItemId == itemImageId )
-        AtlasManager__SetEventSprite(v8, (System_String_o *)StringLiteral_21014/*"item_mini_49"*/, 0);
+        AtlasManager__SetEventSprite(v7, (System_String_o *)StringLiteral_21026/*"item_mini_49"*/, 0);
       else
-        AtlasManager__SetItem(v8, itemImageId, 0);
+        AtlasManager__SetItem(v7, itemImageId, 0);
       gameObject = this->fields.itemIconSprite;
       if ( gameObject )
       {
         gameObject = (UISprite_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
         if ( gameObject )
         {
-          v11 = 1;
+          v10 = 1;
           goto LABEL_22;
         }
       }
     }
-    sub_1C2D6EC(gameObject, v6);
+    sub_1C32E7C(gameObject);
   }
 }
 
@@ -414,57 +409,56 @@ void GrandQuestBoardOptionTextComponent__UpdateUI(
 {
   struct TerminalBoardOptionTextData_o **p_data; // x22
   __int64 v5; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x2
-  __int64 v8; // x8
-  System_String_o *v9; // x21
+  const MethodInfo *v6; // x2
+  __int64 v7; // x8
+  System_String_o *v8; // x21
   struct UILabel_o *behindLabel; // x8
   System_String_o *mText; // x20
-  const MethodInfo *v12; // x2
+  const MethodInfo *v11; // x2
   struct TerminalBoardOptionTextData_o *data; // x8
-  const MethodInfo *v14; // x2
-  struct TerminalBoardOptionTextData_o *v15; // x8
+  const MethodInfo *v13; // x2
+  struct TerminalBoardOptionTextData_o *v14; // x8
   struct UILabel_o *forwardLabel; // x8
-  System_String_o *v17; // x1
-  const MethodInfo *v18; // x2
-  struct UILabel_o *v19; // x8
-  System_String_o *v20; // x1
-  const MethodInfo *v21; // x1
+  System_String_o *v16; // x1
+  const MethodInfo *v17; // x2
+  struct UILabel_o *v18; // x8
+  System_String_o *v19; // x1
+  const MethodInfo *v20; // x1
 
   this->fields.data = textData;
   p_data = &this->fields.data;
-  v5 = sub_1C2D434(&this->fields.data);
-  v8 = (__int64)*(p_data - 3);
-  if ( v8 )
-    v9 = *(System_String_o **)(v8 + 416);
+  v5 = sub_1C32BC4(&this->fields.data, textData);
+  v7 = (__int64)*(p_data - 3);
+  if ( v7 )
+    v8 = *(System_String_o **)(v7 + 416);
   else
-    v9 = 0;
+    v8 = 0;
   behindLabel = this->fields.behindLabel;
   if ( behindLabel )
     mText = behindLabel->fields.mText;
   else
     mText = 0;
   if ( !*p_data
-    || (GrandQuestBoardOptionTextComponent__SetItemIconAtlas(this, (*p_data)->fields._ItemImageId_k__BackingField, v7),
+    || (GrandQuestBoardOptionTextComponent__SetItemIconAtlas(this, (*p_data)->fields._ItemImageId_k__BackingField, v6),
         (data = this->fields.data) == 0)
-    || (GrandQuestBoardOptionTextComponent__SetForwardText(this, data->fields._ForwardText_k__BackingField, v12),
-        (v15 = this->fields.data) == 0) )
+    || (GrandQuestBoardOptionTextComponent__SetForwardText(this, data->fields._ForwardText_k__BackingField, v11),
+        (v14 = this->fields.data) == 0) )
   {
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   }
-  GrandQuestBoardOptionTextComponent__SetBehindText(this, v15->fields._BehindText_k__BackingField, v14);
+  GrandQuestBoardOptionTextComponent__SetBehindText(this, v14->fields._BehindText_k__BackingField, v13);
   forwardLabel = this->fields.forwardLabel;
   if ( forwardLabel )
-    v17 = forwardLabel->fields.mText;
+    v16 = forwardLabel->fields.mText;
   else
-    v17 = 0;
-  if ( System_String__op_Inequality(v9, v17, 0)
-    || ((v19 = this->fields.behindLabel) == 0 ? (v20 = 0) : (v20 = v19->fields.mText),
-        System_String__op_Inequality(mText, v20, 0)) )
+    v16 = 0;
+  if ( System_String__op_Inequality(v8, v16, 0)
+    || ((v18 = this->fields.behindLabel) == 0 ? (v19 = 0) : (v19 = v18->fields.mText),
+        System_String__op_Inequality(mText, v19, 0)) )
   {
-    GrandQuestBoardOptionTextComponent__SetCondensedScale(this, this->fields.textMaxWidth, v18);
+    GrandQuestBoardOptionTextComponent__SetCondensedScale(this, this->fields.textMaxWidth, v17);
   }
-  GrandQuestBoardOptionTextComponent__AdjustTextOffset(this, v21);
+  GrandQuestBoardOptionTextComponent__AdjustTextOffset(this, v20);
 }
 
 
@@ -482,15 +476,14 @@ System_String_o *GrandQuestBoardOptionTextComponent__get_BehindLabelText(
 {
   UnityEngine_Object_o *behindLabel; // x20
   _BOOL8 v4; // x0
-  __int64 v5; // x1
-  struct UILabel_o *v6; // x8
+  struct UILabel_o *v5; // x8
   System_String_o **p_mText; // x8
 
-  if ( (byte_4C21FDD & 1) == 0 )
+  if ( (byte_4C326AC & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C21FDD = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C326AC = 1;
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -498,10 +491,10 @@ System_String_o *GrandQuestBoardOptionTextComponent__get_BehindLabelText(
   v4 = UnityEngine_Object__op_Inequality(behindLabel, 0, 0);
   if ( v4 )
   {
-    v6 = this->fields.behindLabel;
-    if ( !v6 )
-      sub_1C2D6EC(v4, v5);
-    p_mText = &v6->fields.mText;
+    v5 = this->fields.behindLabel;
+    if ( !v5 )
+      sub_1C32E7C(v4);
+    p_mText = &v5->fields.mText;
   }
   else
   {
@@ -517,15 +510,14 @@ System_String_o *GrandQuestBoardOptionTextComponent__get_ForwardLabelText(
 {
   UnityEngine_Object_o *forwardLabel; // x20
   _BOOL8 v4; // x0
-  __int64 v5; // x1
-  struct UILabel_o *v6; // x8
+  struct UILabel_o *v5; // x8
   System_String_o **p_mText; // x8
 
-  if ( (byte_4C21FDC & 1) == 0 )
+  if ( (byte_4C326AB & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C21FDC = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C326AB = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -533,10 +525,10 @@ System_String_o *GrandQuestBoardOptionTextComponent__get_ForwardLabelText(
   v4 = UnityEngine_Object__op_Inequality(forwardLabel, 0, 0);
   if ( v4 )
   {
-    v6 = this->fields.forwardLabel;
-    if ( !v6 )
-      sub_1C2D6EC(v4, v5);
-    p_mText = &v6->fields.mText;
+    v5 = this->fields.forwardLabel;
+    if ( !v5 )
+      sub_1C32E7C(v4);
+    p_mText = &v5->fields.mText;
   }
   else
   {
@@ -552,15 +544,14 @@ float GrandQuestBoardOptionTextComponent__get_IconSpaceWidth(
 {
   UnityEngine_Object_o *itemIconSprite; // x20
   _BOOL8 v4; // x0
-  __int64 v5; // x1
   float result; // s0
   struct TerminalBoardOptionTextData_o *data; // x8
-  struct UISprite_o *v8; // x8
+  struct UISprite_o *v7; // x8
 
-  if ( (byte_4C21FE2 & 1) == 0 )
+  if ( (byte_4C326B1 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21FE2 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C326B1 = 1;
   }
   itemIconSprite = (UnityEngine_Object_o *)this->fields.itemIconSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -574,10 +565,10 @@ float GrandQuestBoardOptionTextComponent__get_IconSpaceWidth(
     {
       if ( data->fields._ItemImageId_k__BackingField >= 1 )
       {
-        v8 = this->fields.itemIconSprite;
-        if ( !v8 )
-          sub_1C2D6EC(v4, v5);
-        return (float)(this->fields.itemIconPaddingLeft + v8->fields.mWidth + this->fields.itemIconPaddingRight);
+        v7 = this->fields.itemIconSprite;
+        if ( !v7 )
+          sub_1C32E7C(v4);
+        return (float)(this->fields.itemIconPaddingLeft + v7->fields.mWidth + this->fields.itemIconPaddingRight);
       }
     }
   }
@@ -599,15 +590,14 @@ void GrandQuestBoardOptionTextComponent__set_Alpha(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *forwardLabel; // x20
-  __int64 v6; // x1
-  void *v7; // x0
+  void *v6; // x0
   UnityEngine_Object_o *behindLabel; // x20
   UnityEngine_Object_o *itemIconSprite; // x20
 
-  if ( (byte_4C21FDE & 1) == 0 )
+  if ( (byte_4C326AD & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21FDE = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C326AD = 1;
   }
   this->fields.alpha = value;
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
@@ -615,12 +605,12 @@ void GrandQuestBoardOptionTextComponent__set_Alpha(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(forwardLabel, 0, 0) )
   {
-    v7 = this->fields.forwardLabel;
-    if ( !v7 )
+    v6 = this->fields.forwardLabel;
+    if ( !v6 )
       goto LABEL_19;
-    (*(void (__fastcall **)(void *, _QWORD, float))(*(_QWORD *)v7 + 440LL))(
-      v7,
-      *(_QWORD *)(*(_QWORD *)v7 + 448LL),
+    (*(void (__fastcall **)(void *, _QWORD, float))(*(_QWORD *)v6 + 440LL))(
+      v6,
+      *(_QWORD *)(*(_QWORD *)v6 + 448LL),
       this->fields.alpha);
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
@@ -628,12 +618,12 @@ void GrandQuestBoardOptionTextComponent__set_Alpha(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(behindLabel, 0, 0) )
   {
-    v7 = this->fields.behindLabel;
-    if ( !v7 )
+    v6 = this->fields.behindLabel;
+    if ( !v6 )
       goto LABEL_19;
-    (*(void (__fastcall **)(void *, _QWORD, float))(*(_QWORD *)v7 + 440LL))(
-      v7,
-      *(_QWORD *)(*(_QWORD *)v7 + 448LL),
+    (*(void (__fastcall **)(void *, _QWORD, float))(*(_QWORD *)v6 + 440LL))(
+      v6,
+      *(_QWORD *)(*(_QWORD *)v6 + 448LL),
       this->fields.alpha);
   }
   itemIconSprite = (UnityEngine_Object_o *)this->fields.itemIconSprite;
@@ -641,17 +631,17 @@ void GrandQuestBoardOptionTextComponent__set_Alpha(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemIconSprite, 0, 0) )
   {
-    v7 = this->fields.itemIconSprite;
-    if ( v7 )
+    v6 = this->fields.itemIconSprite;
+    if ( v6 )
     {
-      (*(void (__fastcall **)(void *, _QWORD, float))(*(_QWORD *)v7 + 440LL))(
-        v7,
-        *(_QWORD *)(*(_QWORD *)v7 + 448LL),
+      (*(void (__fastcall **)(void *, _QWORD, float))(*(_QWORD *)v6 + 440LL))(
+        v6,
+        *(_QWORD *)(*(_QWORD *)v6 + 448LL),
         this->fields.alpha);
       return;
     }
 LABEL_19:
-    sub_1C2D6EC(v7, v6);
+    sub_1C32E7C(v6);
   }
 }
 
@@ -662,38 +652,37 @@ void GrandQuestBoardOptionTextComponent__set_LabelFontSize(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *forwardLabel; // x21
-  __int64 v6; // x1
-  UILabel_o *v7; // x0
+  UILabel_o *v6; // x0
   UnityEngine_Object_o *behindLabel; // x21
 
-  if ( (byte_4C21FE1 & 1) == 0 )
+  if ( (byte_4C326B0 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21FE1 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C326B0 = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(forwardLabel, 0, 0) )
   {
-    v7 = this->fields.forwardLabel;
-    if ( !v7 )
+    v6 = this->fields.forwardLabel;
+    if ( !v6 )
       goto LABEL_14;
-    UILabel__set_fontSize(v7, value, 0);
+    UILabel__set_fontSize(v6, value, 0);
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(behindLabel, 0, 0) )
   {
-    v7 = this->fields.behindLabel;
-    if ( v7 )
+    v6 = this->fields.behindLabel;
+    if ( v6 )
     {
-      UILabel__set_fontSize(v7, value, 0);
+      UILabel__set_fontSize(v6, value, 0);
       return;
     }
 LABEL_14:
-    sub_1C2D6EC(v7, v6);
+    sub_1C32E7C(v6);
   }
 }
 
@@ -708,52 +697,51 @@ void GrandQuestBoardOptionTextComponent__set_LabelGradientBottom(
   float g; // s10
   float r; // s11
   UnityEngine_Object_o *forwardLabel; // x20
-  __int64 v9; // x1
-  UILabel_o *v10; // x0
+  UILabel_o *v9; // x0
   UnityEngine_Object_o *behindLabel; // x20
+  UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = value.fields.a;
   b = value.fields.b;
   g = value.fields.g;
   r = value.fields.r;
-  if ( (byte_4C21FE0 & 1) == 0 )
+  if ( (byte_4C326AF & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21FE0 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C326AF = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(forwardLabel, 0, 0) )
   {
-    v10 = this->fields.forwardLabel;
-    if ( !v10 )
+    v9 = this->fields.forwardLabel;
+    if ( !v9 )
       goto LABEL_14;
-    v12.fields.r = r;
-    v12.fields.g = g;
-    v12.fields.b = b;
-    v12.fields.a = a;
-    UILabel__set_gradientBottom(v10, v12, 0);
+    v11.fields.r = r;
+    v11.fields.g = g;
+    v11.fields.b = b;
+    v11.fields.a = a;
+    UILabel__set_gradientBottom(v9, v11, 0);
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(behindLabel, 0, 0) )
   {
-    v10 = this->fields.behindLabel;
-    if ( v10 )
+    v9 = this->fields.behindLabel;
+    if ( v9 )
     {
-      v13.fields.b = b;
-      v13.fields.a = a;
-      v13.fields.r = r;
-      v13.fields.g = g;
-      UILabel__set_gradientBottom(v10, v13, 0);
+      v12.fields.b = b;
+      v12.fields.a = a;
+      v12.fields.r = r;
+      v12.fields.g = g;
+      UILabel__set_gradientBottom(v9, v12, 0);
       return;
     }
 LABEL_14:
-    sub_1C2D6EC(v10, v9);
+    sub_1C32E7C(v9);
   }
 }
 
@@ -768,52 +756,51 @@ void GrandQuestBoardOptionTextComponent__set_LabelGradientTop(
   float g; // s10
   float r; // s11
   UnityEngine_Object_o *forwardLabel; // x20
-  __int64 v9; // x1
-  UILabel_o *v10; // x0
+  UILabel_o *v9; // x0
   UnityEngine_Object_o *behindLabel; // x20
+  UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = value.fields.a;
   b = value.fields.b;
   g = value.fields.g;
   r = value.fields.r;
-  if ( (byte_4C21FDF & 1) == 0 )
+  if ( (byte_4C326AE & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21FDF = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C326AE = 1;
   }
   forwardLabel = (UnityEngine_Object_o *)this->fields.forwardLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(forwardLabel, 0, 0) )
   {
-    v10 = this->fields.forwardLabel;
-    if ( !v10 )
+    v9 = this->fields.forwardLabel;
+    if ( !v9 )
       goto LABEL_14;
-    v12.fields.r = r;
-    v12.fields.g = g;
-    v12.fields.b = b;
-    v12.fields.a = a;
-    UILabel__set_gradientTop(v10, v12, 0);
+    v11.fields.r = r;
+    v11.fields.g = g;
+    v11.fields.b = b;
+    v11.fields.a = a;
+    UILabel__set_gradientTop(v9, v11, 0);
   }
   behindLabel = (UnityEngine_Object_o *)this->fields.behindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(behindLabel, 0, 0) )
   {
-    v10 = this->fields.behindLabel;
-    if ( v10 )
+    v9 = this->fields.behindLabel;
+    if ( v9 )
     {
-      v13.fields.b = b;
-      v13.fields.a = a;
-      v13.fields.r = r;
-      v13.fields.g = g;
-      UILabel__set_gradientTop(v10, v13, 0);
+      v12.fields.b = b;
+      v12.fields.a = a;
+      v12.fields.r = r;
+      v12.fields.g = g;
+      UILabel__set_gradientTop(v9, v12, 0);
       return;
     }
 LABEL_14:
-    sub_1C2D6EC(v10, v9);
+    sub_1C32E7C(v9);
   }
 }
 

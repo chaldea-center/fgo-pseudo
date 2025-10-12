@@ -12,31 +12,30 @@ CharaGraphListViewPatternBase_o *CharaGraphListMenuServantMission__CreateListVie
 {
   __int64 v6; // x21
   CharaGraphSortOwnerBase_o *v7; // x0
-  __int64 v8; // x1
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
   struct CharaGraphSortOwnerBase_o *SortOwner_k__BackingField; // x1
   struct CharaGraphDefine_CharaGraphRootInfo_o *RootInfo_k__BackingField; // x1
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
 
-  if ( (byte_4C2335E & 1) == 0 )
+  if ( (byte_4C33A2E & 1) == 0 )
   {
-    sub_1C2D490(&CharaGraphListViewPatternServantMission_TypeInfo);
-    byte_4C2335E = 1;
+    sub_1C32C20(&CharaGraphListViewPatternServantMission_TypeInfo);
+    byte_4C33A2E = 1;
   }
-  v6 = sub_1C2D6DC(CharaGraphListViewPatternServantMission_TypeInfo);
+  v6 = sub_1C32E6C(CharaGraphListViewPatternServantMission_TypeInfo);
   CharaGraphListViewPatternServantCollection___ctor((CharaGraphListViewPatternServantCollection_o *)v6, 0);
   if ( !v6
     || (SortOwner_k__BackingField = this->fields._SortOwner_k__BackingField,
         *(_QWORD *)(v6 + 16) = SortOwner_k__BackingField,
-        sub_1C2D434((CGThumbnailListItem_o *)(v6 + 16), (int32_t)SortOwner_k__BackingField, v9, v10),
+        sub_1C32BC4((CGThumbnailListItem_o *)(v6 + 16), (int32_t)SortOwner_k__BackingField, v8, v9),
         RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField,
         *(_QWORD *)(v6 + 24) = RootInfo_k__BackingField,
-        sub_1C2D434((CGThumbnailListItem_o *)(v6 + 24), (int32_t)RootInfo_k__BackingField, v13, v14),
+        sub_1C32BC4((CGThumbnailListItem_o *)(v6 + 24), (int32_t)RootInfo_k__BackingField, v12, v13),
         (v7 = this->fields._SortOwner_k__BackingField) == 0) )
   {
-    sub_1C2D6EC(v7, v8);
+    sub_1C32E7C(v7);
   }
   CharaGraphSortOwnerBase__SwitchCurrentViewSortUnit(v7, kind, 0);
   return (CharaGraphListViewPatternBase_o *)v6;

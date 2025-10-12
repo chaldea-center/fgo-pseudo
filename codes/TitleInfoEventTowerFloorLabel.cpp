@@ -7,23 +7,23 @@ void TitleInfoEventTowerFloorLabel___cctor(const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C25C80 & 1) == 0 )
+  if ( (byte_4C3635A & 1) == 0 )
   {
-    sub_1C2D490(&TitleInfoEventTowerFloorLabel_TypeInfo);
-    sub_1C2D490(&StringLiteral_24120/*"tower_img_floor"*/);
-    sub_1C2D490(&StringLiteral_24121/*"tower_img_floor_clear"*/);
-    byte_4C25C80 = 1;
+    sub_1C32C20(&TitleInfoEventTowerFloorLabel_TypeInfo);
+    sub_1C32C20(&StringLiteral_24138/*"tower_img_floor"*/);
+    sub_1C32C20(&StringLiteral_24139/*"tower_img_floor_clear"*/);
+    byte_4C3635A = 1;
   }
-  TitleInfoEventTowerFloorLabel_TypeInfo->static_fields->SPRITE_NAME_FLOOR_CLEAR = (struct System_String_o *)StringLiteral_24121/*"tower_img_floor_clear"*/;
-  sub_1C2D434(
+  TitleInfoEventTowerFloorLabel_TypeInfo->static_fields->SPRITE_NAME_FLOOR_CLEAR = (struct System_String_o *)StringLiteral_24139/*"tower_img_floor_clear"*/;
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)TitleInfoEventTowerFloorLabel_TypeInfo->static_fields,
-    StringLiteral_24121/*"tower_img_floor_clear"*/,
+    StringLiteral_24139/*"tower_img_floor_clear"*/,
     v1,
     v2);
-  v3 = StringLiteral_24120/*"tower_img_floor"*/;
+  v3 = StringLiteral_24138/*"tower_img_floor"*/;
   static_fields = TitleInfoEventTowerFloorLabel_TypeInfo->static_fields;
-  static_fields->SPRITE_NAME_FLOOR = (struct System_String_o *)StringLiteral_24120/*"tower_img_floor"*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&static_fields->SPRITE_NAME_FLOOR, v3, v5, v6);
+  static_fields->SPRITE_NAME_FLOOR = (struct System_String_o *)StringLiteral_24138/*"tower_img_floor"*/;
+  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->SPRITE_NAME_FLOOR, v3, v5, v6);
 }
 
 
@@ -43,60 +43,58 @@ TitleInfoEventTowerFloorLabel_TowerData_o *TitleInfoEventTowerFloorLabel__GetTow
 {
   __int64 v7; // x22
   __int64 v8; // x0
-  __int64 v9; // x1
   System_Object_array *towerEventInfoList; // x19
-  System_Func_object__bool__o *v11; // x20
+  System_Func_object__bool__o *v10; // x20
   TitleInfoEventTowerFloorLabel_TowerData_o *result; // x0
-  System_Object_array *v13; // x19
-  System_Func_object__bool__o *v14; // x20
+  System_Object_array *v12; // x19
+  System_Func_object__bool__o *v13; // x20
 
-  if ( (byte_4C25C7F & 1) == 0 )
+  if ( (byte_4C36359 & 1) == 0 )
   {
-    sub_1C2D490(&Method_BasicHelper_Find_TitleInfoEventTowerFloorLabel_TowerData___);
-    sub_1C2D490(&Method_BasicHelper_Find_TitleInfoEventTowerFloorLabel_TowerEventInfo___);
-    sub_1C2D490(&System_Func_TitleInfoEventTowerFloorLabel_TowerEventInfo__bool__TypeInfo);
-    sub_1C2D490(&System_Func_TitleInfoEventTowerFloorLabel_TowerData__bool__TypeInfo);
-    sub_1C2D490(&Method_TitleInfoEventTowerFloorLabel___c__DisplayClass11_0__GetTowerData_b__0__);
-    sub_1C2D490(&Method_TitleInfoEventTowerFloorLabel___c__DisplayClass11_0__GetTowerData_b__1__);
-    sub_1C2D490(&TitleInfoEventTowerFloorLabel___c__DisplayClass11_0_TypeInfo);
-    byte_4C25C7F = 1;
+    sub_1C32C20(&Method_BasicHelper_Find_TitleInfoEventTowerFloorLabel_TowerData___);
+    sub_1C32C20(&Method_BasicHelper_Find_TitleInfoEventTowerFloorLabel_TowerEventInfo___);
+    sub_1C32C20(&System_Func_TitleInfoEventTowerFloorLabel_TowerEventInfo__bool__TypeInfo);
+    sub_1C32C20(&System_Func_TitleInfoEventTowerFloorLabel_TowerData__bool__TypeInfo);
+    sub_1C32C20(&Method_TitleInfoEventTowerFloorLabel___c__DisplayClass11_0__GetTowerData_b__0__);
+    sub_1C32C20(&Method_TitleInfoEventTowerFloorLabel___c__DisplayClass11_0__GetTowerData_b__1__);
+    sub_1C32C20(&TitleInfoEventTowerFloorLabel___c__DisplayClass11_0_TypeInfo);
+    byte_4C36359 = 1;
   }
-  v7 = sub_1C2D6DC(TitleInfoEventTowerFloorLabel___c__DisplayClass11_0_TypeInfo);
+  v7 = sub_1C32E6C(TitleInfoEventTowerFloorLabel___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1C2D6EC(v8, v9);
+    sub_1C32E7C(v8);
   *(_DWORD *)(v7 + 16) = eventId;
   *(_DWORD *)(v7 + 20) = towerId;
   towerEventInfoList = (System_Object_array *)this->fields.towerEventInfoList;
-  v11 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_TitleInfoEventTowerFloorLabel_TowerEventInfo__bool__TypeInfo);
+  v10 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_TitleInfoEventTowerFloorLabel_TowerEventInfo__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v11,
+    v10,
     (Il2CppObject *)v7,
     Method_TitleInfoEventTowerFloorLabel___c__DisplayClass11_0__GetTowerData_b__0__,
     0);
   result = (TitleInfoEventTowerFloorLabel_TowerData_o *)BasicHelper__Find_object_(
                                                           towerEventInfoList,
-                                                          (System_Func_T__bool__o *)v11,
-                                                          (const MethodInfo_30B88BC *)Method_BasicHelper_Find_TitleInfoEventTowerFloorLabel_TowerEventInfo___);
+                                                          (System_Func_T__bool__o *)v10,
+                                                          (const MethodInfo_30C735C *)Method_BasicHelper_Find_TitleInfoEventTowerFloorLabel_TowerEventInfo___);
   if ( result )
   {
-    v13 = *(System_Object_array **)&result->fields.InitPosition.fields.y;
-    v14 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_TitleInfoEventTowerFloorLabel_TowerData__bool__TypeInfo);
+    v12 = *(System_Object_array **)&result->fields.InitPosition.fields.y;
+    v13 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_TitleInfoEventTowerFloorLabel_TowerData__bool__TypeInfo);
     System_Func_object__bool____ctor(
-      v14,
+      v13,
       (Il2CppObject *)v7,
       Method_TitleInfoEventTowerFloorLabel___c__DisplayClass11_0__GetTowerData_b__1__,
       0);
     return (TitleInfoEventTowerFloorLabel_TowerData_o *)BasicHelper__Find_object_(
-                                                          v13,
-                                                          (System_Func_T__bool__o *)v14,
-                                                          (const MethodInfo_30B88BC *)Method_BasicHelper_Find_TitleInfoEventTowerFloorLabel_TowerData___);
+                                                          v12,
+                                                          (System_Func_T__bool__o *)v13,
+                                                          (const MethodInfo_30C735C *)Method_BasicHelper_Find_TitleInfoEventTowerFloorLabel_TowerData___);
   }
   return result;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void TitleInfoEventTowerFloorLabel__SetFloorLabel(
         TitleInfoEventTowerFloorLabel_o *this,
         int32_t eventId,
@@ -113,34 +111,37 @@ void TitleInfoEventTowerFloorLabel__SetFloorLabel(
   __int64 v19; // x2
   __int64 v20; // x3
   __int64 v21; // x4
-  Il2CppObject *v22; // x0
-  const MethodInfo *v23; // x3
+  __int64 v22; // x5
+  __int64 v23; // x6
+  __int64 v24; // x7
+  Il2CppObject *v25; // x0
+  const MethodInfo *v26; // x3
   TitleInfoEventTowerFloorLabel_TowerData_o *TowerData; // x0
-  TitleInfoEventTowerFloorLabel_TowerData_o *v25; // x23
-  UnityEngine_GameObject_o *v26; // x0
+  TitleInfoEventTowerFloorLabel_TowerData_o *v28; // x23
+  UnityEngine_GameObject_o *v29; // x0
   float towerFloorInitPosX; // s8
-  UnityEngine_GameObject_o *v28; // x24
-  float v29; // s2
-  UnityEngine_GameObject_o *v30; // x0
-  float v31; // s1
-  UnityEngine_GameObject_o *v32; // x0
-  UnityEngine_GameObject_o *v33; // x23
-  float v34; // s2
+  UnityEngine_GameObject_o *v31; // x24
+  float v32; // s2
+  UnityEngine_GameObject_o *v33; // x0
+  float v34; // s1
+  UnityEngine_GameObject_o *v35; // x0
+  UnityEngine_GameObject_o *v36; // x23
+  float v37; // s2
   Il2CppObject *Component_object; // x0
-  TitleInfoEventTowerFloorLabel_c *v36; // x8
-  UISprite_o *v37; // x19
+  TitleInfoEventTowerFloorLabel_c *v39; // x8
+  UISprite_o *v40; // x19
   System_String_o **p_SPRITE_NAME_FLOOR_CLEAR; // x8
-  System_String_o *v39; // x20
-  int v40; // [xsp+Ch] [xbp-54h] BYREF
+  System_String_o *v42; // x20
+  int v43; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4C25C7E & 1) == 0 )
+  if ( (byte_4C36358 & 1) == 0 )
   {
-    sub_1C2D490(&AtlasManager_TypeInfo);
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1C2D490(&int_TypeInfo);
-    sub_1C2D490(&System_Math_TypeInfo);
-    sub_1C2D490(&TitleInfoEventTowerFloorLabel_TypeInfo);
-    byte_4C25C7E = 1;
+    sub_1C32C20(&AtlasManager_TypeInfo);
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1C32C20(&int_TypeInfo);
+    sub_1C32C20(&System_Math_TypeInfo);
+    sub_1C32C20(&TitleInfoEventTowerFloorLabel_TypeInfo);
+    byte_4C36358 = 1;
   }
   if ( floor >= towerFloorMax )
   {
@@ -180,9 +181,9 @@ void TitleInfoEventTowerFloorLabel__SetFloorLabel(
       goto LABEL_35;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0);
     v18 = this->fields.floorLabel;
-    v40 = floor + 1;
-    v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v40, v19, v20, v21);
-    gameObject = (UnityEngine_GameObject_o *)System_String__Format(floorLabel, v22, 0);
+    v43 = floor + 1;
+    v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v43, v19, v20, v21, v22, v23, v24);
+    gameObject = (UnityEngine_GameObject_o *)System_String__Format(floorLabel, v25, 0);
     if ( !v18 )
       goto LABEL_35;
     UILabel__set_text(v18, (System_String_o *)gameObject, 0);
@@ -197,55 +198,55 @@ void TitleInfoEventTowerFloorLabel__SetFloorLabel(
   }
   else
   {
-    TowerData = TitleInfoEventTowerFloorLabel__GetTowerData(this, eventId, towerId, v23);
+    TowerData = TitleInfoEventTowerFloorLabel__GetTowerData(this, eventId, towerId, v26);
     if ( TowerData )
     {
-      v25 = TowerData;
+      v28 = TowerData;
       *(struct UnityEngine_Vector2_o *)&this->fields.towerFloorInitPosX = TowerData->fields.InitPosition;
-      v26 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      v29 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       towerFloorInitPosX = this->fields.towerFloorInitPosX;
-      v28 = v26;
+      v31 = v29;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-      v29 = (float)System_Math__Min_64982368(floor, towerFloorMax - 1, 0);
-      v30 = v28;
-      v31 = (float)(v25->fields.FloorHeight * v29) + this->fields.towerFloorInitPosY;
+      v32 = (float)System_Math__Min_65042304(floor, towerFloorMax - 1, 0);
+      v33 = v31;
+      v34 = (float)(v28->fields.FloorHeight * v32) + this->fields.towerFloorInitPosY;
     }
     else
     {
-      v32 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      v35 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       towerFloorInitPosX = this->fields.towerFloorInitPosX;
-      v33 = v32;
+      v36 = v35;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-      v34 = (float)System_Math__Min_64982368(floor, towerFloorMax - 1, 0);
-      v30 = v33;
-      v31 = this->fields.towerFloorInitPosY
-          + (float)((float)(this->fields.towerFloorMoveRange * v34) / (float)towerFloorMax);
+      v37 = (float)System_Math__Min_65042304(floor, towerFloorMax - 1, 0);
+      v33 = v36;
+      v34 = this->fields.towerFloorInitPosY
+          + (float)((float)(this->fields.towerFloorMoveRange * v37) / (float)towerFloorMax);
     }
-    GameObjectExtensions__SetLocalPosition_35918496(v30, towerFloorInitPosX, v31, 0);
+    GameObjectExtensions__SetLocalPosition_36036760(v33, towerFloorInitPosX, v34, 0);
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
 LABEL_35:
-    sub_1C2D6EC(gameObject, *(_QWORD *)&eventId);
+    sub_1C32E7C(gameObject);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
-  v36 = TitleInfoEventTowerFloorLabel_TypeInfo;
-  v37 = (UISprite_o *)Component_object;
+                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+  v39 = TitleInfoEventTowerFloorLabel_TypeInfo;
+  v40 = (UISprite_o *)Component_object;
   if ( !TitleInfoEventTowerFloorLabel_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TitleInfoEventTowerFloorLabel_TypeInfo);
-    v36 = TitleInfoEventTowerFloorLabel_TypeInfo;
+    v39 = TitleInfoEventTowerFloorLabel_TypeInfo;
   }
-  p_SPRITE_NAME_FLOOR_CLEAR = &v36->static_fields->SPRITE_NAME_FLOOR_CLEAR;
+  p_SPRITE_NAME_FLOOR_CLEAR = &v39->static_fields->SPRITE_NAME_FLOOR_CLEAR;
   if ( !isTowerClear )
     ++p_SPRITE_NAME_FLOOR_CLEAR;
-  v39 = *p_SPRITE_NAME_FLOOR_CLEAR;
+  v42 = *p_SPRITE_NAME_FLOOR_CLEAR;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI(v37, v39, 0);
+  AtlasManager__SetEventUI(v40, v42, 0);
 }
 
 
@@ -279,7 +280,7 @@ bool TitleInfoEventTowerFloorLabel___c__DisplayClass11_0___GetTowerData_b__0(
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return info->fields.EventId == this->fields.eventId;
 }
 
@@ -290,6 +291,6 @@ bool TitleInfoEventTowerFloorLabel___c__DisplayClass11_0___GetTowerData_b__1(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return data->fields.TowerId == this->fields.towerId;
 }

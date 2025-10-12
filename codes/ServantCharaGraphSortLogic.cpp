@@ -1,35 +1,36 @@
 int64_t ServantCharaGraphSortLogic__GetDefaultSortValue(ServantCharaGraphSortLogic_o *this, const MethodInfo *method)
 {
   CharaGraphServantListViewItemBase_o *ListViewItem; // x0
-  const MethodInfo *v4; // x1
-  __int64 v5; // x19
+  __int64 v4; // x19
+  const MethodInfo *v5; // x1
   const MethodInfo *v6; // x1
   struct ServantEntity_o *ServantEntity_k__BackingField; // x8
   __int64 collectionNo; // x21
+  const MethodInfo *v9; // x1
   struct UserServantEntity_o *UserServantEntity_k__BackingField; // x8
   __int64 lv; // x22
 
   ListViewItem = ServantCharaGraphSortLogic__get_ListViewItem(this, method);
   if ( !ListViewItem )
     goto LABEL_9;
-  v5 = ((unsigned int (__fastcall *)(CharaGraphServantListViewItemBase_o *, const MethodInfo *))ListViewItem->klass->vtable._9_get_Rarity.methodPtr)(
+  v4 = ((unsigned int (__fastcall *)(CharaGraphServantListViewItemBase_o *, const MethodInfo *))ListViewItem->klass->vtable._9_get_Rarity.methodPtr)(
          ListViewItem,
          ListViewItem->klass->vtable._9_get_Rarity.method);
-  ListViewItem = ServantCharaGraphSortLogic__get_ListViewItem(this, v6);
+  ListViewItem = ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
   if ( !ListViewItem
     || (ServantEntity_k__BackingField = ListViewItem->fields._ServantEntity_k__BackingField) == 0
     || (collectionNo = ServantEntity_k__BackingField->fields.collectionNo,
-        (ListViewItem = ServantCharaGraphSortLogic__get_ListViewItem(this, v4)) == 0)
+        (ListViewItem = ServantCharaGraphSortLogic__get_ListViewItem(this, v6)) == 0)
     || (UserServantEntity_k__BackingField = ListViewItem->fields._UserServantEntity_k__BackingField) == 0
     || (lv = UserServantEntity_k__BackingField->fields.lv,
-        (ListViewItem = ServantCharaGraphSortLogic__get_ListViewItem(this, v4)) == 0)
+        (ListViewItem = ServantCharaGraphSortLogic__get_ListViewItem(this, v9)) == 0)
     || (ListViewItem = (CharaGraphServantListViewItemBase_o *)ListViewItem->fields._ServantEntity_k__BackingField) == 0 )
   {
 LABEL_9:
-    sub_1C2D6EC(ListViewItem, v4);
+    sub_1C32E7C(ListViewItem);
   }
   return (collectionNo << 16)
-       | (v5 << 48)
+       | (v4 << 48)
        | (2 * lv)
        | ServantEntity__get_IsServantMaterialTd((ServantEntity_o *)ListViewItem, 0);
 }
@@ -41,7 +42,6 @@ void ServantCharaGraphSortLogic__SetLevelToIcon(
         const MethodInfo *method)
 {
   CharaGraphServantListViewItemBase_o *ListViewItem; // x0
-  __int64 v5; // x1
   int32_t SkillCategoryIdArray_k__BackingField; // w20
 
   ListViewItem = ServantCharaGraphSortLogic__get_ListViewItem(this, (const MethodInfo *)info);
@@ -53,9 +53,9 @@ void ServantCharaGraphSortLogic__SetLevelToIcon(
                                                                 0),
         !info) )
   {
-    sub_1C2D6EC(ListViewItem, v5);
+    sub_1C32E7C(ListViewItem);
   }
-  IconLabelInfo__Set_40696284(info, 2, SkillCategoryIdArray_k__BackingField, (int32_t)ListViewItem, 0, 0, 0, 0, 0, 0);
+  IconLabelInfo__Set_40818388(info, 2, SkillCategoryIdArray_k__BackingField, (int32_t)ListViewItem, 0, 0, 0, 0, 0, 0);
 }
 
 
@@ -65,55 +65,65 @@ void ServantCharaGraphSortLogic__SetSortValueLocal(ServantCharaGraphSortLogic_o 
   __int64 ListViewItem; // x0
   const MethodInfo *v5; // x1
   __int64 v6; // x21
-  __int64 v7; // x20
-  const MethodInfo *v8; // x1
-  __int64 v9; // x22
-  __int64 v10; // x23
-  __int128 v11; // q1
+  const MethodInfo *v7; // x1
+  __int64 v8; // x20
+  const MethodInfo *v9; // x1
+  __int64 v10; // x22
+  __int64 v11; // x23
+  __int128 v12; // q1
+  const MethodInfo *v13; // x1
   struct ListViewSort_o *sort; // x8
-  __int128 v13; // q0
+  __int128 v15; // q0
   IconLabelInfo_o *IconInfo1_k__BackingField; // x8
-  int v15; // w22
-  int64_t v16; // x8
-  int32_t v17; // w2
+  const MethodInfo *v17; // x1
+  int v18; // w22
+  int64_t v19; // x8
+  int32_t v20; // w2
   IconLabelInfo_o *IconInfo2_k__BackingField; // x22
-  int32_t v19; // w23
-  int v20; // w0
-  IconLabelInfo_o *v21; // x22
-  const MethodInfo *v22; // x1
-  int32_t v23; // w23
-  int v24; // w0
-  IconLabelInfo_o *v25; // x22
-  const MethodInfo *v26; // x1
-  int32_t v27; // w23
-  int v28; // w0
-  IconLabelInfo_o *v29; // x21
-  const MethodInfo *v30; // x1
-  IconLabelInfo_o *v31; // x21
-  int32_t v32; // w22
-  int32_t v33; // w3
-  int32_t v34; // w1
+  int32_t v22; // w23
+  int v23; // w0
+  IconLabelInfo_o *v24; // x22
+  const MethodInfo *v25; // x1
+  int32_t v26; // w23
+  int v27; // w0
+  IconLabelInfo_o *v28; // x22
+  const MethodInfo *v29; // x1
+  int32_t v30; // w23
+  int v31; // w0
+  IconLabelInfo_o *v32; // x21
+  const MethodInfo *v33; // x1
+  const MethodInfo *v34; // x1
+  IconLabelInfo_o *v35; // x21
+  const MethodInfo *v36; // x1
+  int32_t v37; // w22
+  int32_t v38; // w3
+  int32_t v39; // w1
   int64_t AmountSortValue_k__BackingField; // x21
   struct ListViewManager_o *manager; // x8
   __int64 naturalAligment; // x11
-  CharaGraphListViewManager_o *v38; // x21
-  const MethodInfo *v39; // x2
+  CharaGraphListViewManager_o *v43; // x21
+  const MethodInfo *v44; // x1
+  const MethodInfo *v45; // x1
+  const MethodInfo *v46; // x1
+  const MethodInfo *v47; // x1
+  const MethodInfo *v48; // x1
+  const MethodInfo *v49; // x2
   struct IconLabelInfo_o **p_IconInfo1_k__BackingField; // x21
-  const MethodInfo *v41; // x2
+  const MethodInfo *v51; // x2
   IconLabelInfo_o **p_IconInfo2_k__BackingField; // x23
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v43; // [xsp+10h] [xbp-A0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v44; // [xsp+30h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v45; // [xsp+50h] [xbp-60h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v53; // [xsp+10h] [xbp-A0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v54; // [xsp+30h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v55; // [xsp+50h] [xbp-60h]
   int32_t tdMaxLv[2]; // [xsp+78h] [xbp-38h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v47; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v57; // 0:x0.16
 
-  if ( (byte_4C26635 & 1) == 0 )
+  if ( (byte_4C36D0D & 1) == 0 )
   {
-    sub_1C2D490(&CharaGraphListViewManager_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C26635 = 1;
+    sub_1C32C20(&CharaGraphListViewManager_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4C36D0D = 1;
   }
   *(_QWORD *)tdMaxLv = 0;
   CharaGraphSortLogicBase__SetSortValueLocal((CharaGraphSortLogicBase_o *)this, method);
@@ -124,34 +134,34 @@ void ServantCharaGraphSortLogic__SetSortValueLocal(ServantCharaGraphSortLogic_o 
   ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
   if ( !ListViewItem )
     goto LABEL_89;
-  v7 = *(_QWORD *)(ListViewItem + 240);
-  ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
+  v8 = *(_QWORD *)(ListViewItem + 240);
+  ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v7);
   if ( !ListViewItem )
     goto LABEL_89;
   this->fields._SortValue1B_k__BackingField = (*(int (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 440LL))(
                                                 ListViewItem,
                                                 *(_QWORD *)(*(_QWORD *)ListViewItem + 448LL));
-  ListViewItem = ServantCharaGraphSortLogic__GetDefaultSortValue(this, v8);
+  ListViewItem = ServantCharaGraphSortLogic__GetDefaultSortValue(this, v9);
   this->fields._SortValue2_k__BackingField = ListViewItem;
-  if ( !v7 )
+  if ( !v8 )
     goto LABEL_89;
-  v10 = *(_QWORD *)(v7 + 16);
-  v9 = *(_QWORD *)(v7 + 24);
+  v11 = *(_QWORD *)(v8 + 16);
+  v10 = *(_QWORD *)(v8 + 24);
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v47.fields.currentCryptoKey = v10;
-  *(_QWORD *)&v47.fields.fakeValue = v9;
-  ListViewItem = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v47, 0);
+  *(_QWORD *)&v57.fields.currentCryptoKey = v11;
+  *(_QWORD *)&v57.fields.fakeValue = v10;
+  ListViewItem = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v57, 0);
   this->fields._SortValue2B_k__BackingField = (int)ListViewItem;
   if ( !v6 )
     goto LABEL_89;
-  v11 = *(_OWORD *)(v6 + 32);
-  *(_OWORD *)&v45.fields.currentCryptoKey = *(_OWORD *)(v6 + 16);
-  *(_OWORD *)&v45.fields.fakeValue = v11;
+  v12 = *(_OWORD *)(v6 + 32);
+  *(_OWORD *)&v55.fields.currentCryptoKey = *(_OWORD *)(v6 + 16);
+  *(_OWORD *)&v55.fields.fakeValue = v12;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v44 = v45;
-  ListViewItem = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48831392(&v44, 0);
+  v54 = v55;
+  ListViewItem = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v54, 0);
   sort = this->fields.sort;
   this->fields._SortValueLast_k__BackingField = ListViewItem;
   if ( !sort )
@@ -164,137 +174,137 @@ void ServantCharaGraphSortLogic__SetSortValueLocal(ServantCharaGraphSortLogic_o 
         this->klass->vtable._5_SortByPartyStatus.method);
       goto LABEL_35;
     case 1:
-      v13 = *(_OWORD *)(v6 + 32);
-      *(_OWORD *)&v45.fields.currentCryptoKey = *(_OWORD *)(v6 + 16);
-      *(_OWORD *)&v45.fields.fakeValue = v13;
+      v15 = *(_OWORD *)(v6 + 32);
+      *(_OWORD *)&v55.fields.currentCryptoKey = *(_OWORD *)(v6 + 16);
+      *(_OWORD *)&v55.fields.fakeValue = v15;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-      v43 = v45;
-      ListViewItem = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48831392(&v43, 0);
+      v53 = v55;
+      ListViewItem = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_48891308(&v53, 0);
       IconInfo1_k__BackingField = this->fields._IconInfo1_k__BackingField;
       this->fields._SortValue1_k__BackingField = ListViewItem;
       if ( !IconInfo1_k__BackingField )
         goto LABEL_89;
       IconLabelInfo__SetTime(IconInfo1_k__BackingField, 49, *(_QWORD *)(v6 + 312), 0, 0, 0, 0);
-      v15 = 0;
+      v18 = 0;
       if ( !UserServantEntity__IsMaterialTd((UserServantEntity_o *)v6, 0) )
         goto LABEL_76;
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v17);
       if ( !ListViewItem )
         goto LABEL_89;
-      v15 = 0;
+      v18 = 0;
       *(_BYTE *)(ListViewItem + 155) = 1;
       goto LABEL_76;
     case 2:
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v13);
       if ( !ListViewItem )
         goto LABEL_89;
-      v16 = (*(int (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 456LL))(
+      v19 = (*(int (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 456LL))(
               ListViewItem,
               *(_QWORD *)(*(_QWORD *)ListViewItem + 464LL));
       goto LABEL_42;
     case 3:
-      v16 = *(int *)(v6 + 256);
+      v19 = *(int *)(v6 + 256);
       goto LABEL_42;
     case 4:
-      UserServantEntity__getTreasureDeviceInfo_42942260((UserServantEntity_o *)v6, &tdMaxLv[1], tdMaxLv, 0);
-      v17 = tdMaxLv[1];
+      UserServantEntity__getTreasureDeviceInfo_43075456((UserServantEntity_o *)v6, &tdMaxLv[1], tdMaxLv, 0);
+      v20 = tdMaxLv[1];
       ListViewItem = (__int64)this->fields._IconInfo1_k__BackingField;
       this->fields._SortValue1_k__BackingField = tdMaxLv[1];
       if ( !ListViewItem )
         goto LABEL_89;
-      IconLabelInfo__Set_40696284((IconLabelInfo_o *)ListViewItem, 33, v17, tdMaxLv[0], 0, 0, 0, 0, 0, 0);
+      IconLabelInfo__Set_40818388((IconLabelInfo_o *)ListViewItem, 33, v20, tdMaxLv[0], 0, 0, 0, 0, 0, 0);
       IconInfo2_k__BackingField = this->fields._IconInfo2_k__BackingField;
-      v19 = *(_DWORD *)(v6 + 256);
+      v22 = *(_DWORD *)(v6 + 256);
       ListViewItem = UserServantEntity__getLevelMax((UserServantEntity_o *)v6, 0);
       if ( !IconInfo2_k__BackingField )
         goto LABEL_89;
-      IconLabelInfo__Set_40696284(IconInfo2_k__BackingField, 2, v19, ListViewItem, 0, 0, 0, 0, 0, 0);
+      IconLabelInfo__Set_40818388(IconInfo2_k__BackingField, 2, v22, ListViewItem, 0, 0, 0, 0, 0, 0);
       goto LABEL_63;
     case 5:
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
-      if ( !ListViewItem )
-        goto LABEL_89;
-      v20 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 536LL))(
-              ListViewItem,
-              *(_QWORD *)(*(_QWORD *)ListViewItem + 544LL));
-      v21 = this->fields._IconInfo1_k__BackingField;
-      this->fields._SortValue1_k__BackingField = v20;
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v22);
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v13);
       if ( !ListViewItem )
         goto LABEL_89;
       v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 536LL))(
               ListViewItem,
               *(_QWORD *)(*(_QWORD *)ListViewItem + 544LL));
-      ListViewItem = UserServantEntity__get_HpBoostValue((UserServantEntity_o *)v6, 0);
-      if ( !v21 )
-        goto LABEL_89;
-      IconLabelInfo__Set_40696284(v21, 3, v23, ListViewItem, 0, 0, 0, 0, 0, 0);
-      goto LABEL_35;
-    case 6:
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
+      v24 = this->fields._IconInfo1_k__BackingField;
+      this->fields._SortValue1_k__BackingField = v23;
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v25);
       if ( !ListViewItem )
         goto LABEL_89;
-      v24 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 552LL))(
+      v26 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 536LL))(
               ListViewItem,
-              *(_QWORD *)(*(_QWORD *)ListViewItem + 560LL));
-      v25 = this->fields._IconInfo1_k__BackingField;
-      this->fields._SortValue1_k__BackingField = v24;
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v26);
+              *(_QWORD *)(*(_QWORD *)ListViewItem + 544LL));
+      ListViewItem = UserServantEntity__get_HpBoostValue((UserServantEntity_o *)v6, 0);
+      if ( !v24 )
+        goto LABEL_89;
+      IconLabelInfo__Set_40818388(v24, 3, v26, ListViewItem, 0, 0, 0, 0, 0, 0);
+      goto LABEL_35;
+    case 6:
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v13);
       if ( !ListViewItem )
         goto LABEL_89;
       v27 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 552LL))(
               ListViewItem,
               *(_QWORD *)(*(_QWORD *)ListViewItem + 560LL));
-      ListViewItem = UserServantEntity__get_AtkBoostValue((UserServantEntity_o *)v6, 0);
-      if ( !v25 )
-        goto LABEL_89;
-      IconLabelInfo__Set_40696284(v25, 5, v27, ListViewItem, 0, 0, 0, 0, 0, 0);
-      goto LABEL_35;
-    case 7:
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
+      v28 = this->fields._IconInfo1_k__BackingField;
+      this->fields._SortValue1_k__BackingField = v27;
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v29);
       if ( !ListViewItem )
         goto LABEL_89;
-      v28 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 520LL))(
+      v30 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 552LL))(
+              ListViewItem,
+              *(_QWORD *)(*(_QWORD *)ListViewItem + 560LL));
+      ListViewItem = UserServantEntity__get_AtkBoostValue((UserServantEntity_o *)v6, 0);
+      if ( !v28 )
+        goto LABEL_89;
+      IconLabelInfo__Set_40818388(v28, 5, v30, ListViewItem, 0, 0, 0, 0, 0, 0);
+      goto LABEL_35;
+    case 7:
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v13);
+      if ( !ListViewItem )
+        goto LABEL_89;
+      v31 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 520LL))(
               ListViewItem,
               *(_QWORD *)(*(_QWORD *)ListViewItem + 528LL));
-      v29 = this->fields._IconInfo1_k__BackingField;
-      this->fields._SortValue1_k__BackingField = v28;
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v30);
+      v32 = this->fields._IconInfo1_k__BackingField;
+      this->fields._SortValue1_k__BackingField = v31;
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v33);
       if ( !ListViewItem )
         goto LABEL_89;
       ListViewItem = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 520LL))(
                        ListViewItem,
                        *(_QWORD *)(*(_QWORD *)ListViewItem + 528LL));
-      if ( !v29 )
+      if ( !v32 )
         goto LABEL_89;
-      IconLabelInfo__Set_40696284(v29, 7, ListViewItem, 0, 0, 0, 0, 0, 0, 0);
+      IconLabelInfo__Set_40818388(v32, 7, ListViewItem, 0, 0, 0, 0, 0, 0, 0);
       goto LABEL_63;
     case 8:
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v13);
       if ( !ListViewItem )
         goto LABEL_89;
-      v16 = (int)-(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 440LL))(
+      v19 = (int)-(*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 440LL))(
                     ListViewItem,
                     *(_QWORD *)(*(_QWORD *)ListViewItem + 448LL));
 LABEL_42:
-      v15 = 0;
+      v18 = 0;
       goto LABEL_75;
     case 0xA:
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v13);
       if ( !ListViewItem )
         goto LABEL_89;
-      v31 = this->fields._IconInfo1_k__BackingField;
+      v35 = this->fields._IconInfo1_k__BackingField;
       this->fields._SortValue1_k__BackingField = *(int *)(ListViewItem + 160);
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v34);
       if ( !ListViewItem )
         goto LABEL_89;
-      v32 = *(_DWORD *)(ListViewItem + 160);
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
-      if ( !ListViewItem || !v31 )
+      v37 = *(_DWORD *)(ListViewItem + 160);
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v36);
+      if ( !ListViewItem || !v35 )
         goto LABEL_89;
-      v33 = *(_DWORD *)(ListViewItem + 164);
-      v34 = 32;
+      v38 = *(_DWORD *)(ListViewItem + 164);
+      v39 = 32;
       goto LABEL_62;
     case 0xE:
       AmountSortValue_k__BackingField = this->fields._AmountSortValue_k__BackingField;
@@ -306,43 +316,43 @@ LABEL_42:
             manager->klass->_2.naturalAligment >= (unsigned int)naturalAligment) )
       {
         if ( (CharaGraphListViewManager_c *)manager->klass->_2.typeHierarchy[naturalAligment - 1] == CharaGraphListViewManager_TypeInfo )
-          v38 = (CharaGraphListViewManager_o *)manager;
+          v43 = (CharaGraphListViewManager_o *)manager;
         else
-          v38 = 0;
+          v43 = 0;
       }
       else
       {
-        v38 = 0;
+        v43 = 0;
       }
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v38, 0, 0) )
+      if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v43, 0, 0) )
       {
 LABEL_35:
-        v15 = 0;
+        v18 = 0;
       }
       else
       {
-        ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
-        if ( !ListViewItem || !v38 )
+        ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v48);
+        if ( !ListViewItem || !v43 )
           goto LABEL_89;
         AmountSortValue_k__BackingField = CharaGraphListViewManager__GetAmountSortValue(
-                                            v38,
+                                            v43,
                                             *(_DWORD *)(ListViewItem + 248),
-                                            v39);
+                                            v49);
         this->fields._AmountSortValue_k__BackingField = AmountSortValue_k__BackingField;
 LABEL_73:
-        ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
+        ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v13);
         if ( !ListViewItem )
           goto LABEL_89;
-        v15 = 0;
-        v16 = ((*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 456LL))(
+        v18 = 0;
+        v19 = ((*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)ListViewItem + 456LL))(
                  ListViewItem,
                  *(_QWORD *)(*(_QWORD *)ListViewItem + 464LL)) << 32)
             + (AmountSortValue_k__BackingField << 48)
-            + *(int *)(v7 + 208);
+            + *(int *)(v8 + 208);
 LABEL_75:
-        this->fields._SortValue1_k__BackingField = v16;
+        this->fields._SortValue1_k__BackingField = v19;
       }
 LABEL_76:
       p_IconInfo1_k__BackingField = &this->fields._IconInfo1_k__BackingField;
@@ -358,11 +368,11 @@ LABEL_76:
         goto LABEL_89;
       if ( IconLabelInfo__IsClear((IconLabelInfo_o *)ListViewItem, 0) )
 LABEL_80:
-        ServantCharaGraphSortLogic__SetLevelToIcon(this, *p_IconInfo2_k__BackingField, v41);
-      if ( v15
-        && (ServantEntity__get_IsExpUp((ServantEntity_o *)v7, 0)
-         || ServantEntity__get_IsStatusUp((ServantEntity_o *)v7, 0)
-         || ServantEntity__get_IsServantMaterialTd((ServantEntity_o *)v7, 0)) )
+        ServantCharaGraphSortLogic__SetLevelToIcon(this, *p_IconInfo2_k__BackingField, v51);
+      if ( v18
+        && (ServantEntity__get_IsExpUp((ServantEntity_o *)v8, 0)
+         || ServantEntity__get_IsStatusUp((ServantEntity_o *)v8, 0)
+         || ServantEntity__get_IsServantMaterialTd((ServantEntity_o *)v8, 0)) )
       {
         ListViewItem = (__int64)*p_IconInfo1_k__BackingField;
         if ( *p_IconInfo1_k__BackingField )
@@ -376,44 +386,44 @@ LABEL_80:
           }
         }
 LABEL_89:
-        sub_1C2D6EC(ListViewItem, v5);
+        sub_1C32E7C(ListViewItem);
       }
       return;
     case 0xF:
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v13);
       if ( !ListViewItem )
         goto LABEL_89;
-      v31 = this->fields._IconInfo1_k__BackingField;
+      v35 = this->fields._IconInfo1_k__BackingField;
       this->fields._SortValue1_k__BackingField = *(int *)(ListViewItem + 168);
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v44);
       if ( !ListViewItem )
         goto LABEL_89;
-      v32 = *(_DWORD *)(ListViewItem + 168);
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
-      if ( !ListViewItem || !v31 )
+      v37 = *(_DWORD *)(ListViewItem + 168);
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v45);
+      if ( !ListViewItem || !v35 )
         goto LABEL_89;
-      v33 = *(_DWORD *)(ListViewItem + 176);
-      v34 = 44;
+      v38 = *(_DWORD *)(ListViewItem + 176);
+      v39 = 44;
       goto LABEL_62;
     case 0x10:
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v13);
       if ( !ListViewItem )
         goto LABEL_89;
-      v31 = this->fields._IconInfo1_k__BackingField;
+      v35 = this->fields._IconInfo1_k__BackingField;
       this->fields._SortValue1_k__BackingField = *(int *)(ListViewItem + 172);
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v46);
       if ( !ListViewItem )
         goto LABEL_89;
-      v32 = *(_DWORD *)(ListViewItem + 172);
-      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v5);
-      if ( !ListViewItem || !v31 )
+      v37 = *(_DWORD *)(ListViewItem + 172);
+      ListViewItem = (__int64)ServantCharaGraphSortLogic__get_ListViewItem(this, v47);
+      if ( !ListViewItem || !v35 )
         goto LABEL_89;
-      v33 = *(_DWORD *)(ListViewItem + 180);
-      v34 = 45;
+      v38 = *(_DWORD *)(ListViewItem + 180);
+      v39 = 45;
 LABEL_62:
-      IconLabelInfo__Set_40696284(v31, v34, v32, v33, 0, 0, 0, 0, 0, 0);
+      IconLabelInfo__Set_40818388(v35, v39, v37, v38, 0, 0, 0, 0, 0, 0);
 LABEL_63:
-      v15 = 1;
+      v18 = 1;
       goto LABEL_76;
     default:
       goto LABEL_35;
@@ -424,14 +434,13 @@ LABEL_63:
 void ServantCharaGraphSortLogic__SortByPartyStatus(ServantCharaGraphSortLogic_o *this, const MethodInfo *method)
 {
   int *ListViewItem; // x0
-  __int64 v4; // x1
   __int64 naturalAligment; // x10
-  int64_t v6; // x8
+  int64_t v5; // x8
 
-  if ( (byte_4C26636 & 1) == 0 )
+  if ( (byte_4C36D0E & 1) == 0 )
   {
-    sub_1C2D490(&CharaGraphPartyServantListViewItem_TypeInfo);
-    byte_4C26636 = 1;
+    sub_1C32C20(&CharaGraphPartyServantListViewItem_TypeInfo);
+    byte_4C36D0E = 1;
   }
   ListViewItem = (int *)ServantCharaGraphSortLogic__get_ListViewItem(this, method);
   if ( ListViewItem )
@@ -443,10 +452,10 @@ void ServantCharaGraphSortLogic__SortByPartyStatus(ServantCharaGraphSortLogic_o 
                                                   - 8) == CharaGraphPartyServantListViewItem_TypeInfo )
     {
       if ( !this )
-        sub_1C2D6EC(ListViewItem, v4);
-      v6 = ListViewItem[76];
-      this->fields._SortValue0_k__BackingField = (int)v6 >= 0;
-      this->fields._SortValue1_k__BackingField = v6;
+        sub_1C32E7C(ListViewItem);
+      v5 = ListViewItem[76];
+      this->fields._SortValue0_k__BackingField = (int)v5 >= 0;
+      this->fields._SortValue1_k__BackingField = v5;
     }
   }
 }
@@ -465,10 +474,10 @@ CharaGraphServantListViewItemBase_o *ServantCharaGraphSortLogic__get_ListViewIte
   ServantCharaGraphSortLogic_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C26634 & 1) == 0 )
+  if ( (byte_4C36D0C & 1) == 0 )
   {
-    sub_1C2D490(&CharaGraphServantListViewItemBase_TypeInfo);
-    byte_4C26634 = 1;
+    sub_1C32C20(&CharaGraphServantListViewItemBase_TypeInfo);
+    byte_4C36D0C = 1;
   }
   p_listViewItem = (CGThumbnailListItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -482,9 +491,9 @@ CharaGraphServantListViewItemBase_o *ServantCharaGraphSortLogic__get_ListViewIte
   {
     item = this->fields.item;
     p_listViewItem->klass = (CGThumbnailListItem_c *)listViewItem;
-    sub_1C2D434(p_listViewItem, (int32_t)item, v2, v3);
+    sub_1C32BC4(p_listViewItem, (int32_t)item, v2, v3);
     return listViewItem;
   }
-  sub_1C2D9AC(this->fields.item);
+  sub_1C3313C(this->fields.item);
   return (CharaGraphServantListViewItemBase_o *)ServantCharaGraphSortLogic__GetDefaultSortValue(v10, v11);
 }

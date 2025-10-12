@@ -10,26 +10,25 @@ void FGO_uv1anim__Start(FGO_uv1anim_o *this, const MethodInfo *method)
   Il2CppObject *Component_object; // x0
   int32_t v4; // w2
   const MethodInfo *v5; // x3
-  __int64 v6; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4C2609C & 1) == 0 )
+  if ( (byte_4C36774 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1C2D490(&StringLiteral_16355/*"_SubTex"*/);
-    byte_4C2609C = 1;
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1C32C20(&StringLiteral_16357/*"_SubTex"*/);
+    byte_4C36774 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._renderer, (int32_t)Component_object, v4, v5);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._renderer, (int32_t)Component_object, v4, v5);
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0 )
-    sub_1C2D6EC(renderer, v6);
+    sub_1C32E7C(renderer);
   UnityEngine_Material__SetTextureOffset(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16355/*"_SubTex"*/,
+    (System_String_o *)StringLiteral_16357/*"_SubTex"*/,
     this->fields.m_Offset,
     0);
 }
@@ -39,17 +38,17 @@ void FGO_uv1anim__Update(FGO_uv1anim_o *this, const MethodInfo *method)
 {
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4C2609D & 1) == 0 )
+  if ( (byte_4C36775 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_16355/*"_SubTex"*/);
-    byte_4C2609D = 1;
+    sub_1C32C20(&StringLiteral_16357/*"_SubTex"*/);
+    byte_4C36775 = 1;
   }
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(renderer, 0)) == 0 )
-    sub_1C2D6EC(renderer, method);
+    sub_1C32E7C(renderer);
   UnityEngine_Material__SetTextureOffset(
     (UnityEngine_Material_o *)renderer,
-    (System_String_o *)StringLiteral_16355/*"_SubTex"*/,
+    (System_String_o *)StringLiteral_16357/*"_SubTex"*/,
     this->fields.m_Offset,
     0);
 }

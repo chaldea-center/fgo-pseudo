@@ -13,38 +13,37 @@ UIPanel_o *PhotoLayerChangeComponent__GetSelfPanel(PhotoLayerChangeComponent_o *
 void PhotoLayerChangeComponent__InitDepth(PhotoLayerChangeComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *selfPanel; // x20
-  __int64 v4; // x1
-  UIPanel_o *v5; // x0
+  UIPanel_o *v4; // x0
   UnityEngine_Object_o *anotherPanel; // x20
 
-  if ( (byte_4C22962 & 1) == 0 )
+  if ( (byte_4C33031 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C22962 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C33031 = 1;
   }
   selfPanel = (UnityEngine_Object_o *)this->fields.selfPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(selfPanel, 0, 0) )
   {
-    v5 = this->fields.selfPanel;
-    if ( !v5 )
+    v4 = this->fields.selfPanel;
+    if ( !v4 )
       goto LABEL_14;
-    UIPanel__set_depth(v5, 16, 0);
+    UIPanel__set_depth(v4, 16, 0);
   }
   anotherPanel = (UnityEngine_Object_o *)this->fields.anotherPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(anotherPanel, 0, 0) )
   {
-    v5 = this->fields.anotherPanel;
-    if ( v5 )
+    v4 = this->fields.anotherPanel;
+    if ( v4 )
     {
-      UIPanel__set_depth(v5, 15, 0);
+      UIPanel__set_depth(v4, 15, 0);
       return;
     }
 LABEL_14:
-    sub_1C2D6EC(v5, v4);
+    sub_1C32E7C(v4);
   }
 }
 
@@ -54,18 +53,17 @@ void PhotoLayerChangeComponent__OnClick(PhotoLayerChangeComponent_o *this, const
   UnityEngine_Object_o *selfPanel; // x20
   UnityEngine_Object_o *anotherPanel; // x20
   struct UIPanel_o *v5; // x0
-  __int64 v6; // x1
-  struct UIPanel_o *v7; // x8
-  struct UIPanel_o *v8; // x9
-  _QWORD *v9; // x0
-  System_Reflection_MethodBase_o *v10; // x0
-  int32_t v11; // w1
+  struct UIPanel_o *v6; // x8
+  struct UIPanel_o *v7; // x9
+  _QWORD *v8; // x0
+  System_Reflection_MethodBase_o *v9; // x0
+  int32_t v10; // w1
 
-  if ( (byte_4C22963 & 1) == 0 )
+  if ( (byte_4C33032 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&Method_PhotoLayerChangeComponent_OnClick__);
-    byte_4C22963 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&Method_PhotoLayerChangeComponent_OnClick__);
+    byte_4C33032 = 1;
   }
   selfPanel = (UnityEngine_Object_o *)this->fields.selfPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -78,39 +76,39 @@ void PhotoLayerChangeComponent__OnClick(PhotoLayerChangeComponent_o *this, const
     v5 = (struct UIPanel_o *)UnityEngine_Object__op_Equality(anotherPanel, 0, 0);
     if ( ((unsigned __int8)v5 & 1) == 0 )
     {
-      v7 = this->fields.selfPanel;
-      if ( v7 )
+      v6 = this->fields.selfPanel;
+      if ( v6 )
       {
-        v8 = this->fields.anotherPanel;
-        if ( v8 )
+        v7 = this->fields.anotherPanel;
+        if ( v7 )
         {
-          if ( v7->fields.mDepth > v8->fields.mDepth )
+          if ( v6->fields.mDepth > v7->fields.mDepth )
             return;
-          v9 = Method_PhotoLayerChangeComponent_OnClick__;
+          v8 = Method_PhotoLayerChangeComponent_OnClick__;
           if ( (*((_BYTE *)Method_PhotoLayerChangeComponent_OnClick__ + 83) & 2) != 0 )
-            v9 = (_QWORD *)sub_1C2D4A8(Method_PhotoLayerChangeComponent_OnClick__);
-          v10 = (System_Reflection_MethodBase_o *)sub_1C2D474(v9, v9[4]);
-          OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
+            v8 = (_QWORD *)sub_1C32C38(Method_PhotoLayerChangeComponent_OnClick__);
+          v9 = (System_Reflection_MethodBase_o *)sub_1C32C04(v8, v8[4]);
+          OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0);
           v5 = this->fields.anotherPanel;
           if ( v5 )
           {
             if ( v5->fields.mDepth >= 16 )
             {
-              v11 = 14;
+              v10 = 14;
               goto LABEL_20;
             }
             v5 = this->fields.selfPanel;
             if ( v5 )
             {
-              v11 = 16;
+              v10 = 16;
 LABEL_20:
-              UIPanel__set_depth(v5, v11, 0);
+              UIPanel__set_depth(v5, v10, 0);
               return;
             }
           }
         }
       }
-      sub_1C2D6EC(v5, v6);
+      sub_1C32E7C(v5);
     }
   }
 }
@@ -124,7 +122,7 @@ void PhotoLayerChangeComponent__SetAnotherPanel(
   const MethodInfo *v3; // x3
 
   this->fields.anotherPanel = another;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.anotherPanel, (int32_t)another, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.anotherPanel, (int32_t)another, (int32_t)method, v3);
 }
 
 
@@ -136,5 +134,5 @@ void PhotoLayerChangeComponent__SetSelfPanel(
   const MethodInfo *v3; // x3
 
   this->fields.selfPanel = self;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.selfPanel, (int32_t)self, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.selfPanel, (int32_t)self, (int32_t)method, v3);
 }

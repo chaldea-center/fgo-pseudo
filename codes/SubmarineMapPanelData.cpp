@@ -4,13 +4,12 @@ void SubmarineMapPanelData___ctor(
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   *(_WORD *)&this->fields._IsOpened_k__BackingField = 0;
   this->fields._IsScannable_k__BackingField = 0;
   if ( !panelDetail )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   *(_QWORD *)&this->fields._HIndex_k__BackingField = *(_QWORD *)&panelDetail->fields.idxX;
   this->fields._PanelId_k__BackingField = panelDetail->fields.id;
   this->fields._CommonReleaseId_k__BackingField = panelDetail->fields.commonReleaseId;
@@ -23,10 +22,10 @@ void SubmarineMapPanelData__OpenPanel(SubmarineMapPanelData_o *this, const Metho
   const MethodInfo *v4; // x1
   SubmarineMapPanelComponent_o *v5; // x0
 
-  if ( (byte_4C23C68 & 1) == 0 )
+  if ( (byte_4C3433C & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C23C68 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3433C = 1;
   }
   this->fields._IsOpened_k__BackingField = 1;
   Component_k__BackingField = (UnityEngine_Object_o *)this->fields._Component_k__BackingField;
@@ -36,7 +35,7 @@ void SubmarineMapPanelData__OpenPanel(SubmarineMapPanelData_o *this, const Metho
   {
     v5 = this->fields._Component_k__BackingField;
     if ( !v5 )
-      sub_1C2D6EC(0, v4);
+      sub_1C32E7C(0);
     SubmarineMapPanelComponent__ShowOpenPanelAnim(v5, v4);
   }
 }
@@ -50,7 +49,7 @@ void SubmarineMapPanelData__SetComponent(
   const MethodInfo *v3; // x3
 
   this->fields._Component_k__BackingField = component;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields._Component_k__BackingField,
     (int32_t)component,
     (int32_t)method,
@@ -65,53 +64,52 @@ void SubmarineMapPanelData__SetPanelClickAction(
 {
   __int64 v5; // x20
   __int64 v6; // x0
-  __int64 v7; // x1
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
   UnityEngine_Object_o *Component_k__BackingField; // x21
-  struct SubmarineMapPanelComponent_o *v13; // x19
-  System_Action_o *v14; // x21
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  struct SubmarineMapPanelComponent_o *v12; // x19
+  System_Action_o *v13; // x21
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
 
-  if ( (byte_4C23C66 & 1) == 0 )
+  if ( (byte_4C3433A & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&Method_SubmarineMapPanelData___c__DisplayClass48_0__SetPanelClickAction_b__0__);
-    sub_1C2D490(&SubmarineMapPanelData___c__DisplayClass48_0_TypeInfo);
-    byte_4C23C66 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&Method_SubmarineMapPanelData___c__DisplayClass48_0__SetPanelClickAction_b__0__);
+    sub_1C32C20(&SubmarineMapPanelData___c__DisplayClass48_0_TypeInfo);
+    byte_4C3433A = 1;
   }
-  v5 = sub_1C2D6DC(SubmarineMapPanelData___c__DisplayClass48_0_TypeInfo);
+  v5 = sub_1C32E6C(SubmarineMapPanelData___c__DisplayClass48_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_10;
   *(_QWORD *)(v5 + 16) = clickAction;
-  sub_1C2D434((CGThumbnailListItem_o *)(v5 + 16), (int32_t)clickAction, v8, v9);
+  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 16), (int32_t)clickAction, v7, v8);
   *(_QWORD *)(v5 + 24) = this;
-  sub_1C2D434((CGThumbnailListItem_o *)(v5 + 24), (int32_t)this, v10, v11);
+  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 24), (int32_t)this, v9, v10);
   Component_k__BackingField = (UnityEngine_Object_o *)this->fields._Component_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(Component_k__BackingField, 0, 0) )
   {
-    v13 = this->fields._Component_k__BackingField;
-    v14 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    v12 = this->fields._Component_k__BackingField;
+    v13 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
     System_Action___ctor(
-      v14,
+      v13,
       (Il2CppObject *)v5,
       Method_SubmarineMapPanelData___c__DisplayClass48_0__SetPanelClickAction_b__0__,
       0);
-    if ( v13 )
+    if ( v12 )
     {
-      v13->fields._OnClickPanel_k__BackingField = v14;
-      sub_1C2D434((CGThumbnailListItem_o *)&v13->fields._OnClickPanel_k__BackingField, (int32_t)v14, v15, v16);
+      v12->fields._OnClickPanel_k__BackingField = v13;
+      sub_1C32BC4((CGThumbnailListItem_o *)&v12->fields._OnClickPanel_k__BackingField, (int32_t)v13, v14, v15);
       return;
     }
 LABEL_10:
-    sub_1C2D6EC(v6, v7);
+    sub_1C32E7C(v6);
   }
 }
 
@@ -119,24 +117,23 @@ LABEL_10:
 void SubmarineMapPanelData__UpdatePanelDisplay(SubmarineMapPanelData_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *Component_k__BackingField; // x20
-  __int64 v4; // x1
-  const MethodInfo *v5; // x2
-  SubmarineMapPanelComponent_o *v6; // x0
+  const MethodInfo *v4; // x2
+  SubmarineMapPanelComponent_o *v5; // x0
 
-  if ( (byte_4C23C67 & 1) == 0 )
+  if ( (byte_4C3433B & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C23C67 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3433B = 1;
   }
   Component_k__BackingField = (UnityEngine_Object_o *)this->fields._Component_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(Component_k__BackingField, 0, 0) )
   {
-    v6 = this->fields._Component_k__BackingField;
-    if ( !v6 )
-      sub_1C2D6EC(0, v4);
-    SubmarineMapPanelComponent__SetClosedPanelVisible(v6, !this->fields._IsOpened_k__BackingField, v5);
+    v5 = this->fields._Component_k__BackingField;
+    if ( !v5 )
+      sub_1C32E7C(0);
+    SubmarineMapPanelComponent__SetClosedPanelVisible(v5, !this->fields._IsOpened_k__BackingField, v4);
   }
 }
 
@@ -246,7 +243,7 @@ void SubmarineMapPanelData__set_Component(
   const MethodInfo *v3; // x3
 
   this->fields._Component_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Component_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._Component_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -313,13 +310,13 @@ void SubmarineMapPanelData___c__DisplayClass48_0___SetPanelClickAction_b__0(
         SubmarineMapPanelData___c__DisplayClass48_0_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C23C69 & 1) == 0 )
+  if ( (byte_4C3433D & 1) == 0 )
   {
-    sub_1C2D490(&Method_ActionExtensions_Call_SubmarineMapPanelData___);
-    byte_4C23C69 = 1;
+    sub_1C32C20(&Method_ActionExtensions_Call_SubmarineMapPanelData___);
+    byte_4C3433D = 1;
   }
   ActionExtensions__Call_object_(
     (System_Action_T__o *)this->fields.clickAction,
     (Il2CppObject *)this->fields.__4__this,
-    (const MethodInfo_301B240 *)Method_ActionExtensions_Call_SubmarineMapPanelData___);
+    (const MethodInfo_3029CE0 *)Method_ActionExtensions_Call_SubmarineMapPanelData___);
 }

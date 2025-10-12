@@ -2,10 +2,10 @@ void BonusSelectSummonPartyOrganizationListViewObject___ctor(
         BonusSelectSummonPartyOrganizationListViewObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C236B3 & 1) == 0 )
+  if ( (byte_4C33D84 & 1) == 0 )
   {
-    sub_1C2D490(&ListViewObject_TypeInfo);
-    byte_4C236B3 = 1;
+    sub_1C32C20(&ListViewObject_TypeInfo);
+    byte_4C33D84 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -29,18 +29,17 @@ void BonusSelectSummonPartyOrganizationListViewObject__Init(
 {
   int32_t v6; // w2
   const MethodInfo *v7; // x3
-  __int64 v8; // x1
-  const MethodInfo *v9; // x3
+  const MethodInfo *v8; // x3
   BonusSelectSummonPartyOrganizationListViewItemDraw_o *itemDraw; // x0
 
   this->fields.listViewItem = item;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)onTapEvent, method);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)onTapEvent, method);
   this->fields.onTapEvent = onTapEvent;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, v6, v7);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, v6, v7);
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1C2D6EC(0, v8);
-  BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v9);
+    sub_1C32E7C(0);
+  BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v8);
   ((void (__fastcall *)(BonusSelectSummonPartyOrganizationListViewObject_o *, __int64, const MethodInfo *))this->klass->vtable._9_SetInput.methodPtr)(
     this,
     1,
@@ -57,7 +56,7 @@ void BonusSelectSummonPartyOrganizationListViewObject__Modfy(
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   BonusSelectSummonPartyOrganizationListViewItemDraw__SetItem(itemDraw, this->fields.listViewItem, 3, v2);
 }
 

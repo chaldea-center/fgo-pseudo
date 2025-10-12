@@ -7,33 +7,32 @@ void ClassBoardValidator__Check(
   __int64 v4; // x9
   int32_t *p_offset; // x10
   __int64 v6; // x0
-  __int64 v7; // x1
-  __int64 v8; // x19
-  __int64 v9; // x8
-  __int64 v10; // x9
-  int *v11; // x10
-  __int64 v12; // x0
-  __int64 v13; // x8
-  __int64 v14; // x9
-  int *v15; // x10
-  __int64 v16; // x0
-  __int64 v17; // x8
-  __int64 v18; // x9
-  int *v19; // x10
-  __int64 v20; // x0
+  __int64 v7; // x19
+  __int64 v8; // x8
+  __int64 v9; // x9
+  int *v10; // x10
+  __int64 v11; // x0
+  __int64 v12; // x8
+  __int64 v13; // x9
+  int *v14; // x10
+  __int64 v15; // x0
+  __int64 v16; // x8
+  __int64 v17; // x9
+  int *v18; // x10
+  __int64 v19; // x0
 
   v2 = squareList;
-  if ( (byte_4C2ADB6 & 1) == 0 )
+  if ( (byte_4C3B592 & 1) == 0 )
   {
-    sub_1C2D490(&ClassBoardSquareModel_TypeInfo);
-    sub_1C2D490(&System_IDisposable_TypeInfo);
-    sub_1C2D490(&System_Collections_Generic_IEnumerable_IClassBoardSquareModel__TypeInfo);
-    sub_1C2D490(&System_Collections_Generic_IEnumerator_IClassBoardSquareModel__TypeInfo);
-    squareList = (System_Collections_Generic_IReadOnlyList_IClassBoardSquareModel__o *)sub_1C2D490(&System_Collections_IEnumerator_TypeInfo);
-    byte_4C2ADB6 = 1;
+    sub_1C32C20(&ClassBoardSquareModel_TypeInfo);
+    sub_1C32C20(&System_IDisposable_TypeInfo);
+    sub_1C32C20(&System_Collections_Generic_IEnumerable_IClassBoardSquareModel__TypeInfo);
+    sub_1C32C20(&System_Collections_Generic_IEnumerator_IClassBoardSquareModel__TypeInfo);
+    squareList = (System_Collections_Generic_IReadOnlyList_IClassBoardSquareModel__o *)sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
+    byte_4C3B592 = 1;
   }
   if ( !v2 )
-    sub_1C2D6EC(squareList, method);
+    sub_1C32E7C(squareList);
   klass = v2->klass;
   v4 = *(unsigned __int16 *)&v2->klass->_2.rank;
   if ( *(_WORD *)&v2->klass->_2.rank )
@@ -51,81 +50,81 @@ void ClassBoardValidator__Check(
   else
   {
 LABEL_8:
-    v6 = sub_1C7DCA8(v2, System_Collections_Generic_IEnumerable_IClassBoardSquareModel__TypeInfo, 0);
+    v6 = sub_1C83438(v2, System_Collections_Generic_IEnumerable_IClassBoardSquareModel__TypeInfo, 0);
   }
-  v8 = (*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyList_IClassBoardSquareModel__o *, _QWORD))v6)(
+  v7 = (*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyList_IClassBoardSquareModel__o *, _QWORD))v6)(
          v2,
          *(_QWORD *)(v6 + 8));
-  if ( !v8 )
-    sub_1C2D6EC(0, v7);
+  if ( !v7 )
+    sub_1C32E7C(0);
   while ( 1 )
   {
-    v9 = *(_QWORD *)v8;
-    v10 = *(unsigned __int16 *)(*(_QWORD *)v8 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v8 + 302LL) )
+    v8 = *(_QWORD *)v7;
+    v9 = *(unsigned __int16 *)(*(_QWORD *)v7 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v7 + 302LL) )
     {
-      v11 = (int *)(*(_QWORD *)(v9 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v11 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v10 = (int *)(*(_QWORD *)(v8 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v10 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v10;
-        v11 += 4;
-        if ( !v10 )
+        --v9;
+        v10 += 4;
+        if ( !v9 )
           goto LABEL_15;
       }
-      v12 = v9 + 16LL * *v11 + 312;
+      v11 = v8 + 16LL * *v10 + 312;
     }
     else
     {
 LABEL_15:
-      v12 = sub_1C7DCA8(v8, System_Collections_IEnumerator_TypeInfo, 0);
+      v11 = sub_1C83438(v7, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v12)(v8, *(_QWORD *)(v12 + 8)) & 1) == 0 )
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v11)(v7, *(_QWORD *)(v11 + 8)) & 1) == 0 )
       break;
-    v13 = *(_QWORD *)v8;
-    v14 = *(unsigned __int16 *)(*(_QWORD *)v8 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v8 + 302LL) )
+    v12 = *(_QWORD *)v7;
+    v13 = *(unsigned __int16 *)(*(_QWORD *)v7 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v7 + 302LL) )
     {
-      v15 = (int *)(*(_QWORD *)(v13 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_IClassBoardSquareModel__c **)v15 - 1) != System_Collections_Generic_IEnumerator_IClassBoardSquareModel__TypeInfo )
+      v14 = (int *)(*(_QWORD *)(v12 + 176) + 8LL);
+      while ( *((System_Collections_Generic_IEnumerator_IClassBoardSquareModel__c **)v14 - 1) != System_Collections_Generic_IEnumerator_IClassBoardSquareModel__TypeInfo )
       {
-        --v14;
-        v15 += 4;
-        if ( !v14 )
+        --v13;
+        v14 += 4;
+        if ( !v13 )
           goto LABEL_22;
       }
-      v16 = v13 + 16LL * *v15 + 312;
+      v15 = v12 + 16LL * *v14 + 312;
     }
     else
     {
 LABEL_22:
-      v16 = sub_1C7DCA8(v8, System_Collections_Generic_IEnumerator_IClassBoardSquareModel__TypeInfo, 0);
+      v15 = sub_1C83438(v7, System_Collections_Generic_IEnumerator_IClassBoardSquareModel__TypeInfo, 0);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v16)(v8, *(_QWORD *)(v16 + 8));
+    (*(void (__fastcall **)(__int64, _QWORD))v15)(v7, *(_QWORD *)(v15 + 8));
   }
-  v17 = *(_QWORD *)v8;
-  v18 = *(unsigned __int16 *)(*(_QWORD *)v8 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v8 + 302LL) )
+  v16 = *(_QWORD *)v7;
+  v17 = *(unsigned __int16 *)(*(_QWORD *)v7 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v7 + 302LL) )
   {
-    v19 = (int *)(*(_QWORD *)(v17 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v19 - 1) != System_IDisposable_TypeInfo )
+    v18 = (int *)(*(_QWORD *)(v16 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v18 - 1) != System_IDisposable_TypeInfo )
     {
-      --v18;
-      v19 += 4;
-      if ( !v18 )
+      --v17;
+      v18 += 4;
+      if ( !v17 )
         goto LABEL_29;
     }
-    v20 = v17 + 16LL * *v19 + 312;
+    v19 = v16 + 16LL * *v18 + 312;
   }
   else
   {
 LABEL_29:
-    v20 = sub_1C7DCA8(v8, System_IDisposable_TypeInfo, 0);
+    v19 = sub_1C83438(v7, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v20)(v8, *(_QWORD *)(v20 + 8));
+  (*(void (__fastcall **)(__int64, _QWORD))v19)(v7, *(_QWORD *)(v19 + 8));
 }
 
 
-void ClassBoardValidator__Check_47776428(
+void ClassBoardValidator__Check_48002772(
         System_Collections_Generic_IReadOnlyList_IClassBoardLineModel__o *lineList,
         const MethodInfo *method)
 {
@@ -134,32 +133,31 @@ void ClassBoardValidator__Check_47776428(
   __int64 v4; // x9
   int32_t *p_offset; // x10
   __int64 v6; // x0
-  __int64 v7; // x1
-  __int64 v8; // x19
-  __int64 v9; // x8
-  __int64 v10; // x9
-  int *v11; // x10
-  __int64 v12; // x0
-  __int64 v13; // x8
-  __int64 v14; // x9
-  int *v15; // x10
-  __int64 v16; // x0
-  __int64 v17; // x8
-  __int64 v18; // x9
-  int *v19; // x10
-  __int64 v20; // x0
+  __int64 v7; // x19
+  __int64 v8; // x8
+  __int64 v9; // x9
+  int *v10; // x10
+  __int64 v11; // x0
+  __int64 v12; // x8
+  __int64 v13; // x9
+  int *v14; // x10
+  __int64 v15; // x0
+  __int64 v16; // x8
+  __int64 v17; // x9
+  int *v18; // x10
+  __int64 v19; // x0
 
   v2 = lineList;
-  if ( (byte_4C2ADB7 & 1) == 0 )
+  if ( (byte_4C3B593 & 1) == 0 )
   {
-    sub_1C2D490(&System_IDisposable_TypeInfo);
-    sub_1C2D490(&System_Collections_Generic_IEnumerable_IClassBoardLineModel__TypeInfo);
-    sub_1C2D490(&System_Collections_Generic_IEnumerator_IClassBoardLineModel__TypeInfo);
-    lineList = (System_Collections_Generic_IReadOnlyList_IClassBoardLineModel__o *)sub_1C2D490(&System_Collections_IEnumerator_TypeInfo);
-    byte_4C2ADB7 = 1;
+    sub_1C32C20(&System_IDisposable_TypeInfo);
+    sub_1C32C20(&System_Collections_Generic_IEnumerable_IClassBoardLineModel__TypeInfo);
+    sub_1C32C20(&System_Collections_Generic_IEnumerator_IClassBoardLineModel__TypeInfo);
+    lineList = (System_Collections_Generic_IReadOnlyList_IClassBoardLineModel__o *)sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
+    byte_4C3B593 = 1;
   }
   if ( !v2 )
-    sub_1C2D6EC(lineList, method);
+    sub_1C32E7C(lineList);
   klass = v2->klass;
   v4 = *(unsigned __int16 *)&v2->klass->_2.rank;
   if ( *(_WORD *)&v2->klass->_2.rank )
@@ -177,75 +175,75 @@ void ClassBoardValidator__Check_47776428(
   else
   {
 LABEL_8:
-    v6 = sub_1C7DCA8(v2, System_Collections_Generic_IEnumerable_IClassBoardLineModel__TypeInfo, 0);
+    v6 = sub_1C83438(v2, System_Collections_Generic_IEnumerable_IClassBoardLineModel__TypeInfo, 0);
   }
-  v8 = (*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyList_IClassBoardLineModel__o *, _QWORD))v6)(
+  v7 = (*(__int64 (__fastcall **)(System_Collections_Generic_IReadOnlyList_IClassBoardLineModel__o *, _QWORD))v6)(
          v2,
          *(_QWORD *)(v6 + 8));
-  if ( !v8 )
-    sub_1C2D6EC(0, v7);
+  if ( !v7 )
+    sub_1C32E7C(0);
   while ( 1 )
   {
-    v9 = *(_QWORD *)v8;
-    v10 = *(unsigned __int16 *)(*(_QWORD *)v8 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v8 + 302LL) )
+    v8 = *(_QWORD *)v7;
+    v9 = *(unsigned __int16 *)(*(_QWORD *)v7 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v7 + 302LL) )
     {
-      v11 = (int *)(*(_QWORD *)(v9 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v11 - 1) != System_Collections_IEnumerator_TypeInfo )
+      v10 = (int *)(*(_QWORD *)(v8 + 176) + 8LL);
+      while ( *((System_Collections_IEnumerator_c **)v10 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v10;
-        v11 += 4;
-        if ( !v10 )
+        --v9;
+        v10 += 4;
+        if ( !v9 )
           goto LABEL_15;
       }
-      v12 = v9 + 16LL * *v11 + 312;
+      v11 = v8 + 16LL * *v10 + 312;
     }
     else
     {
 LABEL_15:
-      v12 = sub_1C7DCA8(v8, System_Collections_IEnumerator_TypeInfo, 0);
+      v11 = sub_1C83438(v7, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v12)(v8, *(_QWORD *)(v12 + 8)) & 1) == 0 )
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v11)(v7, *(_QWORD *)(v11 + 8)) & 1) == 0 )
       break;
-    v13 = *(_QWORD *)v8;
-    v14 = *(unsigned __int16 *)(*(_QWORD *)v8 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v8 + 302LL) )
+    v12 = *(_QWORD *)v7;
+    v13 = *(unsigned __int16 *)(*(_QWORD *)v7 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v7 + 302LL) )
     {
-      v15 = (int *)(*(_QWORD *)(v13 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_IClassBoardLineModel__c **)v15 - 1) != System_Collections_Generic_IEnumerator_IClassBoardLineModel__TypeInfo )
+      v14 = (int *)(*(_QWORD *)(v12 + 176) + 8LL);
+      while ( *((System_Collections_Generic_IEnumerator_IClassBoardLineModel__c **)v14 - 1) != System_Collections_Generic_IEnumerator_IClassBoardLineModel__TypeInfo )
       {
-        --v14;
-        v15 += 4;
-        if ( !v14 )
+        --v13;
+        v14 += 4;
+        if ( !v13 )
           goto LABEL_22;
       }
-      v16 = v13 + 16LL * *v15 + 312;
+      v15 = v12 + 16LL * *v14 + 312;
     }
     else
     {
 LABEL_22:
-      v16 = sub_1C7DCA8(v8, System_Collections_Generic_IEnumerator_IClassBoardLineModel__TypeInfo, 0);
+      v15 = sub_1C83438(v7, System_Collections_Generic_IEnumerator_IClassBoardLineModel__TypeInfo, 0);
     }
-    (*(void (__fastcall **)(__int64, _QWORD))v16)(v8, *(_QWORD *)(v16 + 8));
+    (*(void (__fastcall **)(__int64, _QWORD))v15)(v7, *(_QWORD *)(v15 + 8));
   }
-  v17 = *(_QWORD *)v8;
-  v18 = *(unsigned __int16 *)(*(_QWORD *)v8 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v8 + 302LL) )
+  v16 = *(_QWORD *)v7;
+  v17 = *(unsigned __int16 *)(*(_QWORD *)v7 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v7 + 302LL) )
   {
-    v19 = (int *)(*(_QWORD *)(v17 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v19 - 1) != System_IDisposable_TypeInfo )
+    v18 = (int *)(*(_QWORD *)(v16 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v18 - 1) != System_IDisposable_TypeInfo )
     {
-      --v18;
-      v19 += 4;
-      if ( !v18 )
+      --v17;
+      v18 += 4;
+      if ( !v17 )
         goto LABEL_29;
     }
-    v20 = v17 + 16LL * *v19 + 312;
+    v19 = v16 + 16LL * *v18 + 312;
   }
   else
   {
 LABEL_29:
-    v20 = sub_1C7DCA8(v8, System_IDisposable_TypeInfo, 0);
+    v19 = sub_1C83438(v7, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v20)(v8, *(_QWORD *)(v20 + 8));
+  (*(void (__fastcall **)(__int64, _QWORD))v19)(v7, *(_QWORD *)(v19 + 8));
 }

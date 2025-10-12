@@ -4,7 +4,7 @@ void ClassStatisticsInfo___ctor(ClassStatisticsInfo_o *this, const MethodInfo *m
 }
 
 
-void ClassStatisticsInfo___ctor_41365988(
+void ClassStatisticsInfo___ctor_41488432(
         ClassStatisticsInfo_o *this,
         int32_t classId,
         int32_t type,

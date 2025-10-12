@@ -1,13 +1,13 @@
 void QuestUseItemPickupEntity___ctor(QuestUseItemPickupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27A7B & 1) == 0 )
+  if ( (byte_4C3817D & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
-    byte_4C27A7B = 1;
+    sub_1C32C20(&Method_DataEntityBase_int___ctor__);
+    byte_4C3817D = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3394354 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,10 +19,10 @@ int32_t QuestUseItemPickupEntity__CreatePrimaryKey(QuestUseItemPickupEntity_o *t
 
 bool QuestUseItemPickupEntity__IsOpen(QuestUseItemPickupEntity_o *this, int64_t nowTime, const MethodInfo *method)
 {
-  if ( (byte_4C27A7A & 1) == 0 )
+  if ( (byte_4C3817C & 1) == 0 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C27A7A = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C3817C = 1;
   }
   if ( !nowTime )
   {

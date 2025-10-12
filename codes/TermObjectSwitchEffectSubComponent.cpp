@@ -25,12 +25,12 @@ void TermObjectSwitchEffectSubComponent__RecvParam(
   struct UnityEngine_GameObject_array *v17; // x8
 
   v4 = this;
-  if ( (byte_4C289AF & 1) == 0 )
+  if ( (byte_4C390B7 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_EventRaceMaster___);
-    sub_1C2D490(&RaceResultEffectParam_TypeInfo);
-    this = (TermObjectSwitchEffectSubComponent_o *)sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C289AF = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_EventRaceMaster___);
+    sub_1C32C20(&RaceResultEffectParam_TypeInfo);
+    this = (TermObjectSwitchEffectSubComponent_o *)sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C390B7 = 1;
   }
   if ( param
     && (naturalAligment = RaceResultEffectParam_TypeInfo->_2.naturalAligment,
@@ -59,12 +59,12 @@ void TermObjectSwitchEffectSubComponent__RecvParam(
     goto LABEL_24;
   v11 = *((_DWORD *)monitor + 8);
   v12 = *((_DWORD *)monitor + 10);
-  this = (TermObjectSwitchEffectSubComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (TermObjectSwitchEffectSubComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_31;
   this = (TermObjectSwitchEffectSubComponent_o *)DataManager__GetMasterData_object_(
                                                    (DataManager_o *)this,
-                                                   (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                                                   (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventRaceMaster___);
   if ( !this )
     goto LABEL_31;
   this = (TermObjectSwitchEffectSubComponent_o *)EventRaceMaster__GetTermIndex((EventRaceMaster_o *)this, v11, v12, 0);
@@ -103,7 +103,7 @@ LABEL_24:
           break;
         if ( v16 >= LODWORD(v17->max_length) )
 LABEL_32:
-          sub_1C2D6F4(this, param, method);
+          sub_1C32E84(this);
         this = (TermObjectSwitchEffectSubComponent_o *)v17->m_Items[v16];
         if ( !this )
           break;
@@ -112,7 +112,7 @@ LABEL_32:
           return;
       }
 LABEL_31:
-      sub_1C2D6EC(this, param);
+      sub_1C32E7C(this);
     }
   }
 }

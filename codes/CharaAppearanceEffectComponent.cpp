@@ -14,35 +14,34 @@ void CharaAppearanceEffectComponent__AppearanceStart(
   const MethodInfo *v3; // x3
   long double v4; // q8
   struct UIStandFigureM_o **p_figure; // x20
-  __int64 v8; // x1
   UIStandFigureRender_o *transform; // x0
   UnityEngine_Vector2_o BodySize; // kr00_8
   UnityEngine_Object_o *gameObject; // x19
-  UnityEngine_Object_o *v12; // x21
+  UnityEngine_Object_o *v11; // x21
   UnityEngine_Object_o *subEffectBase; // x20
-  const MethodInfo *v14; // x2
-  float v15; // s8
+  const MethodInfo *v13; // x2
+  float v14; // s8
   float x; // s9
   float y; // s10
-  UnityEngine_GameObject_o *v18; // x20
-  System_String_o *v19; // x21
-  CommonEffectLoadComponent_LoadEndHandler_o *v20; // x22
+  UnityEngine_GameObject_o *v17; // x20
+  System_String_o *v18; // x21
+  CommonEffectLoadComponent_LoadEndHandler_o *v19; // x22
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C288D6 & 1) == 0 )
+  if ( (byte_4C38FDE & 1) == 0 )
   {
-    sub_1C2D490(&Method_CharaAppearanceEffectComponent_EndCreateEffect__);
-    sub_1C2D490(&CommonEffectManager_TypeInfo);
-    sub_1C2D490(&CommonEffectLoadComponent_LoadEndHandler_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_13625/*"Talk/"*/);
-    sub_1C2D490(&StringLiteral_4915/*"Custom/Sprite-ScriptActionFigureErasure"*/);
-    byte_4C288D6 = 1;
+    sub_1C32C20(&Method_CharaAppearanceEffectComponent_EndCreateEffect__);
+    sub_1C32C20(&CommonEffectManager_TypeInfo);
+    sub_1C32C20(&CommonEffectLoadComponent_LoadEndHandler_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_13628/*"Talk/"*/);
+    sub_1C32C20(&StringLiteral_4923/*"Custom/Sprite-ScriptActionFigureErasure"*/);
+    byte_4C38FDE = 1;
   }
   p_figure = &this->fields.figure;
   this->fields.figure = figure;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.figure, (int32_t)figure, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.figure, (int32_t)figure, (int32_t)method, v3);
   if ( this->fields.duration <= 0.0 )
     this->fields.duration = 2.0;
   transform = (UIStandFigureRender_o *)*p_figure;
@@ -54,7 +53,7 @@ void CharaAppearanceEffectComponent__AppearanceStart(
   this->fields.addVolume = 1.2039;
   if ( !transform )
     goto LABEL_32;
-  UIStandFigureRender__SetSharder(transform, (System_String_o *)StringLiteral_4915/*"Custom/Sprite-ScriptActionFigureErasure"*/, 0);
+  UIStandFigureRender__SetSharder(transform, (System_String_o *)StringLiteral_4923/*"Custom/Sprite-ScriptActionFigureErasure"*/, 0);
   transform = (UIStandFigureRender_o *)*p_figure;
   if ( !*p_figure )
     goto LABEL_32;
@@ -73,13 +72,13 @@ void CharaAppearanceEffectComponent__AppearanceStart(
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71163704(gameObject, 0);
+    UnityEngine_Object__Destroy_71223640(gameObject, 0);
     return;
   }
-  v12 = (UnityEngine_Object_o *)*p_figure;
+  v11 = (UnityEngine_Object_o *)*p_figure;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v12, 0, 0) )
+  if ( UnityEngine_Object__op_Inequality(v11, 0, 0) )
   {
     transform = (UIStandFigureRender_o *)*p_figure;
     if ( !*p_figure )
@@ -92,7 +91,7 @@ void CharaAppearanceEffectComponent__AppearanceStart(
   if ( !UnityEngine_Object__op_Inequality(subEffectBase, 0, 0)
     || System_String__IsNullOrEmpty(this->fields.subEffectName, 0) )
   {
-    CharaAppearanceEffectComponent__EndCreateEffect(this, 0, v14);
+    CharaAppearanceEffectComponent__EndCreateEffect(this, 0, v13);
     return;
   }
   transform = (UIStandFigureRender_o *)this->fields.subEffectBase;
@@ -101,7 +100,7 @@ void CharaAppearanceEffectComponent__AppearanceStart(
   transform = (UIStandFigureRender_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
   if ( !transform )
     goto LABEL_32;
-  LODWORD(v15) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
+  LODWORD(v14) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
   transform = (UIStandFigureRender_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
     || (transform = (UIStandFigureRender_o *)UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)transform, 0)) == 0
@@ -114,23 +113,23 @@ void CharaAppearanceEffectComponent__AppearanceStart(
                                                 0)) == 0) )
   {
 LABEL_32:
-    sub_1C2D6EC(transform, v8);
+    sub_1C32E7C(transform);
   }
-  v22.fields.y = -y;
-  v22.fields.x = -x;
-  v22.fields.z = v15;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v22, 0);
-  v18 = this->fields.subEffectBase;
-  v19 = System_String__Concat_63457864((System_String_o *)StringLiteral_13625/*"Talk/"*/, this->fields.subEffectName, 0);
-  v20 = (CommonEffectLoadComponent_LoadEndHandler_o *)sub_1C2D6DC(CommonEffectLoadComponent_LoadEndHandler_TypeInfo);
+  v21.fields.y = -y;
+  v21.fields.x = -x;
+  v21.fields.z = v14;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v21, 0);
+  v17 = this->fields.subEffectBase;
+  v18 = System_String__Concat_63518544((System_String_o *)StringLiteral_13628/*"Talk/"*/, this->fields.subEffectName, 0);
+  v19 = (CommonEffectLoadComponent_LoadEndHandler_o *)sub_1C32E6C(CommonEffectLoadComponent_LoadEndHandler_TypeInfo);
   CommonEffectLoadComponent_LoadEndHandler___ctor(
-    v20,
+    v19,
     (Il2CppObject *)this,
     Method_CharaAppearanceEffectComponent_EndCreateEffect__,
     0);
   if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
-  CommonEffectManager__Create_43515524(v18, v19, v20, 0, 0, 0, 0);
+  CommonEffectManager__Create_43651244(v17, v18, v19, 0, 0, 0, 0);
 }
 
 
@@ -139,19 +138,18 @@ void CharaAppearanceEffectComponent__EffectResume(CharaAppearanceEffectComponent
   CharaAppearanceEffectComponent_c *klass; // x8
   UnityEngine_GameObject_o *gameObject; // x0
   TweenRenderVolume_o *v5; // x0
-  __int64 v6; // x1
-  TweenRenderVolume_o *v7; // x20
-  UnityEngine_GameObject_o *v8; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  int32_t v11; // w1
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  TweenRenderVolume_o *v6; // x20
+  UnityEngine_GameObject_o *v7; // x0
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int32_t v10; // w1
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C288D7 & 1) == 0 )
+  if ( (byte_4C38FDF & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_9895/*"OnEndEffect"*/);
-    byte_4C288D7 = 1;
+    sub_1C32C20(&StringLiteral_9900/*"OnEndEffect"*/);
+    byte_4C38FDF = 1;
   }
   klass = this->klass;
   this->fields.isPause = 0;
@@ -162,15 +160,15 @@ void CharaAppearanceEffectComponent__EffectResume(CharaAppearanceEffectComponent
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v5 = TweenRenderVolume__Begin(gameObject, this->fields.duration, 1.0, 0);
   if ( !v5 )
-    sub_1C2D6EC(0, v6);
-  v7 = v5;
+    sub_1C32E7C(0);
+  v6 = v5;
   v5->fields.method = 1;
-  v8 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v7->fields.eventReceiver = v8;
-  sub_1C2D434((CGThumbnailListItem_o *)&v7->fields.eventReceiver, (int32_t)v8, v9, v10);
-  v11 = StringLiteral_9895/*"OnEndEffect"*/;
-  v7->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9895/*"OnEndEffect"*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&v7->fields.callWhenFinished, v11, v12, v13);
+  v7 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v6->fields.eventReceiver = v7;
+  sub_1C32BC4((CGThumbnailListItem_o *)&v6->fields.eventReceiver, (int32_t)v7, v8, v9);
+  v10 = StringLiteral_9900/*"OnEndEffect"*/;
+  v6->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9900/*"OnEndEffect"*/;
+  sub_1C32BC4((CGThumbnailListItem_o *)&v6->fields.callWhenFinished, v10, v11, v12);
 }
 
 
@@ -184,7 +182,7 @@ void CharaAppearanceEffectComponent__EndCreateEffect(
 
   this->fields.isStart = 1;
   this->fields.childEffect = effect;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.childEffect, (int32_t)effect, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.childEffect, (int32_t)effect, (int32_t)method, v3);
   if ( !this->fields.isPause )
     CharaAppearanceEffectComponent__EffectResume(this, v5);
 }
@@ -193,16 +191,15 @@ void CharaAppearanceEffectComponent__EndCreateEffect(
 void CharaAppearanceEffectComponent__OnDestroy(CharaAppearanceEffectComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *figure; // x20
-  __int64 v4; // x1
   CGThumbnailListItem_o *p_figure; // x19
   UIStandFigureRender_o *klass; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C288D9 & 1) == 0 )
+  if ( (byte_4C38FE1 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C288D9 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C38FE1 = 1;
   }
   figure = (UnityEngine_Object_o *)this->fields.figure;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -214,11 +211,11 @@ void CharaAppearanceEffectComponent__OnDestroy(CharaAppearanceEffectComponent_o 
     if ( !p_figure->klass
       || (UIStandFigureRender__RecoverSharder(klass, 0), (klass = (UIStandFigureRender_o *)p_figure->klass) == 0) )
     {
-      sub_1C2D6EC(klass, v4);
+      sub_1C32E7C(klass);
     }
     UIStandFigureRender__SetAlpha(klass, 1.0, 0);
     p_figure->klass = 0;
-    sub_1C2D434(p_figure, 0, v7, v8);
+    sub_1C32BC4(p_figure, 0, v6, v7);
   }
 }
 
@@ -227,10 +224,10 @@ void CharaAppearanceEffectComponent__OnEndEffect(CharaAppearanceEffectComponent_
 {
   UnityEngine_GameObject_o *subEffectBase; // x20
 
-  if ( (byte_4C288D8 & 1) == 0 )
+  if ( (byte_4C38FE0 & 1) == 0 )
   {
-    sub_1C2D490(&CommonEffectManager_TypeInfo);
-    byte_4C288D8 = 1;
+    sub_1C32C20(&CommonEffectManager_TypeInfo);
+    byte_4C38FE0 = 1;
   }
   subEffectBase = this->fields.subEffectBase;
   if ( !CommonEffectManager_TypeInfo->_2.cctor_finished )
@@ -245,11 +242,11 @@ void CharaAppearanceEffectComponent__OnUpdate(CharaAppearanceEffectComponent_o *
   UnityEngine_GameObject_o *subEffectBase; // x20
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4C288DA & 1) == 0 )
+  if ( (byte_4C38FE2 & 1) == 0 )
   {
-    sub_1C2D490(&CommonEffectManager_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C288DA = 1;
+    sub_1C32C20(&CommonEffectManager_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C38FE2 = 1;
   }
   ProgramEffectComponent__OnUpdate((ProgramEffectComponent_o *)this, 0);
   if ( this->fields.isWaitEndEffect )
@@ -263,7 +260,7 @@ void CharaAppearanceEffectComponent__OnUpdate(CharaAppearanceEffectComponent_o *
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71163704(gameObject, 0);
+      UnityEngine_Object__Destroy_71223640(gameObject, 0);
     }
   }
 }
@@ -300,7 +297,6 @@ void CharaAppearanceEffectComponent__SetTweenColor(
   long double v3; // q8
   long double v4; // q9
   long double v5; // q10
-  __int64 v8; // x1
   struct UIStandFigureM_o *figure; // x0
 
   v3 = *(long double *)&c.fields.a;
@@ -309,7 +305,7 @@ void CharaAppearanceEffectComponent__SetTweenColor(
   UIWidget__set_color((UIWidget_o *)this, c, 0);
   figure = this->fields.figure;
   if ( !figure )
-    sub_1C2D6EC(0, v8);
+    sub_1C32E7C(0);
   ((void (__fastcall *)(struct UIStandFigureM_o *, const MethodInfo *, long double, long double, long double, long double))figure->klass->vtable._39_SetTweenColor.methodPtr)(
     figure,
     figure->klass->vtable._39_SetTweenColor.method,
@@ -334,10 +330,10 @@ void CharaAppearanceEffectComponent__SetTweenVolume(
   const MethodInfo *v11; // x3
   UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C288D5 & 1) == 0 )
+  if ( (byte_4C38FDD & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C288D5 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C38FDD = 1;
   }
   figure = (UIStandFigureRender_o *)this->fields.figure;
   this->fields.volume = v;
@@ -367,7 +363,7 @@ void CharaAppearanceEffectComponent__SetTweenVolume(
         }
       }
 LABEL_17:
-      sub_1C2D6EC(figure, method);
+      sub_1C32E7C(figure);
     }
     klass = (UnityEngine_Object_o *)p_childEffect->klass;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -383,7 +379,7 @@ LABEL_17:
         0,
         figure->klass->vtable._8_set_alpha.method);
       p_childEffect->klass = 0;
-      sub_1C2D434(p_childEffect, 0, v10, v11);
+      sub_1C32BC4(p_childEffect, 0, v10, v11);
     }
   }
 }

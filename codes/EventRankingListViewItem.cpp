@@ -8,24 +8,24 @@ void EventRankingListViewItem___ctor(
         const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  __int64 v14; // x1
-  bool v15; // w23
-  bool v16; // w22
+  bool v14; // w23
+  bool v15; // w22
   bool IsMostSupport; // w0
-  int32_t v18; // w25
-  BalanceConfig_c *v19; // x0
+  int32_t v17; // w25
+  BalanceConfig_c *v18; // x0
   int32_t eventId; // w23
   int32_t groupId; // w22
+  struct GiftEntity_array *GiftListById; // x0
   int32_t imageId; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C218BA & 1) == 0 )
+  if ( (byte_4C31F89 & 1) == 0 )
   {
-    sub_1C2D490(&BalanceConfig_TypeInfo);
-    sub_1C2D490(&CondType_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMasterData_EventPointGroupAddMaster___);
-    sub_1C2D490(&Method_DataManager_GetMasterData_GiftMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C218BA = 1;
+    sub_1C32C20(&BalanceConfig_TypeInfo);
+    sub_1C32C20(&CondType_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMasterData_EventPointGroupAddMaster___);
+    sub_1C32C20(&Method_DataManager_GetMasterData_GiftMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C31F89 = 1;
   }
   imageId = 0;
   ListViewItem___ctor((ListViewItem_o *)this, 0);
@@ -34,36 +34,36 @@ void EventRankingListViewItem___ctor(
   this->fields.groupImageId = 0;
   *(_QWORD *)&this->fields.isGoal = 0;
   this->fields.isJoinTerm = 0;
-  Instance = (Il2CppObject *)sub_1C2D434(&this->fields.itemInfo);
+  Instance = (Il2CppObject *)sub_1C32BC4(&this->fields.itemInfo, info);
   this->fields.ranking = ranking;
   if ( !info )
     goto LABEL_18;
-  v15 = isJoinTerm;
-  v16 = isGetReward;
+  v14 = isJoinTerm;
+  v15 = isGetReward;
   this->fields.isGoal = EventRankingRoundItemInfo__get_IsGoal(info, 0);
   IsMostSupport = EventRankingRoundItemInfo__get_IsMostSupport(info, 0);
   this->fields.isMostSupport = IsMostSupport;
   if ( IsMostSupport )
   {
-    v18 = this->fields.ranking;
-    v19 = BalanceConfig_TypeInfo;
+    v17 = this->fields.ranking;
+    v18 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-      v19 = BalanceConfig_TypeInfo;
+      v18 = BalanceConfig_TypeInfo;
     }
-    if ( v18 >= v19->static_fields->raceRewardRankMax )
+    if ( v17 >= v18->static_fields->raceRewardRankMax )
       this->fields.isDispGetStamp = 1;
   }
-  this->fields.isJoinTerm = v15;
-  this->fields.isGetReward = v16;
+  this->fields.isJoinTerm = v14;
+  this->fields.isGetReward = v15;
   this->fields.groupImageId = info->fields.groupIconImageId;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventPointGroupAddMaster___);
+               (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventPointGroupAddMaster___);
   if ( !Instance )
     goto LABEL_18;
   if ( EventPointGroupAddMaster__IsClearCondChangeImage(
@@ -81,17 +81,18 @@ void EventRankingListViewItem___ctor(
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
   this->fields.isPlayedGoal = CondType__IsEventRaceGoalScriptPlayed(eventId, nowTerm, groupId, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0 )
+                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_GiftMaster___)) == 0 )
   {
 LABEL_18:
-    sub_1C2D6EC(Instance, v14);
+    sub_1C32E7C(Instance);
   }
-  this->fields.giftEntityList = GiftMaster__GetGiftListById((GiftMaster_o *)Instance, info->fields.rewardItemId, 0);
-  sub_1C2D434(&this->fields.giftEntityList);
+  GiftListById = GiftMaster__GetGiftListById((GiftMaster_o *)Instance, info->fields.rewardItemId, 0);
+  this->fields.giftEntityList = GiftListById;
+  sub_1C32BC4(&this->fields.giftEntityList, GiftListById);
 }
 
 
@@ -117,7 +118,7 @@ int32_t EventRankingListViewItem__get_EventId(EventRankingListViewItem_o *this, 
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return itemInfo->fields.eventId;
 }
 
@@ -134,7 +135,7 @@ int32_t EventRankingListViewItem__get_GroupId(EventRankingListViewItem_o *this, 
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return itemInfo->fields.groupId;
 }
 
@@ -151,7 +152,7 @@ System_String_o *EventRankingListViewItem__get_GroupName(EventRankingListViewIte
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return itemInfo->fields.teamName;
 }
 
@@ -204,7 +205,7 @@ int32_t EventRankingListViewItem__get_RewardItemId(EventRankingListViewItem_o *t
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return itemInfo->fields.rewardItemId;
 }
 
@@ -215,6 +216,6 @@ int64_t EventRankingListViewItem__get_SupportPoint(EventRankingListViewItem_o *t
 
   itemInfo = this->fields.itemInfo;
   if ( !itemInfo )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return itemInfo->fields.supportPoint;
 }

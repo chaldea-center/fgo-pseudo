@@ -1,14 +1,14 @@
 void ClassBoardBaseMaster___ctor(ClassBoardBaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27026 & 1) == 0 )
+  if ( (byte_4C3771D & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int___ctor__);
-    byte_4C27026 = 1;
+    sub_1C32C20(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int___ctor__);
+    byte_4C3771D = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     432,
-    (const MethodInfo_3385A74 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int___ctor__);
+    (const MethodInfo_3394514 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int___ctor__);
 }
 
 
@@ -19,34 +19,33 @@ ClassBoardBaseEntity_o *ClassBoardBaseMaster__GetGrandClassBoardBaseEntity(
 {
   __int64 v5; // x21
   __int64 v6; // x0
-  __int64 v7; // x1
   struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x19
-  System_Func_object__bool__o *v9; // x20
+  System_Func_object__bool__o *v8; // x20
 
-  if ( (byte_4C27024 & 1) == 0 )
+  if ( (byte_4C3771B & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Linq_Enumerable_FirstOrDefault_ClassBoardBaseEntity___);
-    sub_1C2D490(&System_Func_ClassBoardBaseEntity__bool__TypeInfo);
-    sub_1C2D490(&Method_ClassBoardBaseMaster___c__DisplayClass0_0__GetGrandClassBoardBaseEntity_b__0__);
-    sub_1C2D490(&ClassBoardBaseMaster___c__DisplayClass0_0_TypeInfo);
-    byte_4C27024 = 1;
+    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_ClassBoardBaseEntity___);
+    sub_1C32C20(&System_Func_ClassBoardBaseEntity__bool__TypeInfo);
+    sub_1C32C20(&Method_ClassBoardBaseMaster___c__DisplayClass0_0__GetGrandClassBoardBaseEntity_b__0__);
+    sub_1C32C20(&ClassBoardBaseMaster___c__DisplayClass0_0_TypeInfo);
+    byte_4C3771B = 1;
   }
-  v5 = sub_1C2D6DC(ClassBoardBaseMaster___c__DisplayClass0_0_TypeInfo);
+  v5 = sub_1C32E6C(ClassBoardBaseMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C2D6EC(v6, v7);
+    sub_1C32E7C(v6);
   *(_DWORD *)(v5 + 16) = parentClassBoardBaseId;
   list = this->fields.list;
-  v9 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_ClassBoardBaseEntity__bool__TypeInfo);
+  v8 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_ClassBoardBaseEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v9,
+    v8,
     (Il2CppObject *)v5,
     Method_ClassBoardBaseMaster___c__DisplayClass0_0__GetGrandClassBoardBaseEntity_b__0__,
     0);
-  return (ClassBoardBaseEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__51348472(
+  return (ClassBoardBaseEntity_o *)System_Linq_Enumerable__FirstOrDefault_object__51408536(
                                      (System_Collections_Generic_IEnumerable_TSource__o *)list,
-                                     (System_Func_TSource__bool__o *)v9,
-                                     (const MethodInfo_30F83F8 *)Method_System_Linq_Enumerable_FirstOrDefault_ClassBoardBaseEntity___);
+                                     (System_Func_TSource__bool__o *)v8,
+                                     (const MethodInfo_3106E98 *)Method_System_Linq_Enumerable_FirstOrDefault_ClassBoardBaseEntity___);
 }
 
 
@@ -56,32 +55,31 @@ System_String_o *ClassBoardBaseMaster__GetParentClassNameByBaseClassId(
         const MethodInfo *method)
 {
   _BOOL8 v5; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x2
-  int32_t v8; // w1
+  const MethodInfo *v6; // x2
+  int32_t v7; // w1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C27025 & 1) == 0 )
+  if ( (byte_4C3771C & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
-    sub_1C2D490(&string_TypeInfo);
-    byte_4C27025 = 1;
+    sub_1C32C20(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+    sub_1C32C20(&string_TypeInfo);
+    byte_4C3771C = 1;
   }
   entity = 0;
   v5 = DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          baseClassId,
-         (const MethodInfo_3387DE4 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+         (const MethodInfo_3396884 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
   if ( !v5 )
     return string_TypeInfo->static_fields->Empty;
   if ( !entity )
-    sub_1C2D6EC(v5, v6);
-  v8 = *(_DWORD *)((char *)&qword_48 + (_QWORD)entity);
-  if ( v8 <= 0 )
+    sub_1C32E7C(v5);
+  v7 = *(_DWORD *)((char *)&qword_48 + (_QWORD)entity);
+  if ( v7 <= 0 )
     return *(System_String_o **)((char *)&off_18 + (_QWORD)entity);
   else
-    return ClassBoardBaseMaster__GetParentClassNameByBaseClassId(this, v8, v7);
+    return ClassBoardBaseMaster__GetParentClassNameByBaseClassId(this, v7, v6);
 }
 
 
@@ -99,6 +97,6 @@ bool ClassBoardBaseMaster___c__DisplayClass0_0___GetGrandClassBoardBaseEntity_b_
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return e->fields.parentClassBoardBaseId == this->fields.parentClassBoardBaseId;
 }

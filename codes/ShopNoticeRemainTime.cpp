@@ -8,7 +8,7 @@ void ShopNoticeRemainTime___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.monoBehaviour = monoBehaviour;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)monoBehaviour, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)monoBehaviour, v5, v6);
 }
 
 
@@ -19,17 +19,17 @@ bool ShopNoticeRemainTime__CheckTimeUp(ShopNoticeRemainTime_o *this, const Metho
   int32_t size; // w24
   int64_t Item; // x21
 
-  if ( (byte_4C235A8 & 1) == 0 )
+  if ( (byte_4C33C78 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_long__get_Count__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_long__get_Item__);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C235A8 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_long__get_Count__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_long__get_Item__);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C33C78 = 1;
   }
   mostRecentTimeLimits = this->fields.mostRecentTimeLimits;
   if ( !mostRecentTimeLimits )
 LABEL_10:
-    sub_1C2D6EC(mostRecentTimeLimits, method);
+    sub_1C32E7C(mostRecentTimeLimits);
   v4 = 0;
   while ( 1 )
   {
@@ -39,7 +39,7 @@ LABEL_10:
     Item = System_Collections_Generic_List_long___get_Item(
              mostRecentTimeLimits,
              v4,
-             (const MethodInfo_37718C8 *)Method_System_Collections_Generic_List_long__get_Item__);
+             (const MethodInfo_3780500 *)Method_System_Collections_Generic_List_long__get_Item__);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     if ( Item < NetworkManager__getTime(0) )
@@ -61,16 +61,16 @@ System_Collections_IEnumerator_o *ShopNoticeRemainTime__ExecuteEverySecondLoop(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C235A7 & 1) == 0 )
+  if ( (byte_4C33C77 & 1) == 0 )
   {
-    sub_1C2D490(&ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_TypeInfo);
-    byte_4C235A7 = 1;
+    sub_1C32C20(&ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_TypeInfo);
+    byte_4C33C77 = 1;
   }
-  v3 = sub_1C2D6DC(ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_TypeInfo);
+  v3 = sub_1C32E6C(ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C2D434((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -83,7 +83,7 @@ void ShopNoticeRemainTime__SetMostRecentTimeLimits(
   const MethodInfo *v3; // x3
 
   this->fields.mostRecentTimeLimits = mostRecentTimeLimits;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields.mostRecentTimeLimits,
     (int32_t)mostRecentTimeLimits,
     (int32_t)method,
@@ -99,7 +99,7 @@ void ShopNoticeRemainTime__SetOnTimeUpAction(
   const MethodInfo *v3; // x3
 
   this->fields.onTimeUpAction = onTimeUpAction;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.onTimeUpAction, (int32_t)onTimeUpAction, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onTimeUpAction, (int32_t)onTimeUpAction, (int32_t)method, v3);
 }
 
 
@@ -108,7 +108,6 @@ void ShopNoticeRemainTime__SetShopNotice(
         ShopNotice_o *shopNotice,
         const MethodInfo *method)
 {
-  ShopNotice_o *v3; // x19
   System_Collections_Generic_List_long__o *klass; // x0
   CGThumbnailListItem_o *p_mostRecentTimeLimits; // x20
   struct System_Collections_Generic_List_long__o *mostRecentTimeLimits; // t1
@@ -116,29 +115,29 @@ void ShopNoticeRemainTime__SetShopNotice(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
   int32_t version; // w8
+  int64_t MostRecentTimeLimit_k__BackingField; // x1
   struct System_Int64_array *items; // x9
-  _QWORD *v13; // x10
+  _QWORD *v14; // x10
 
-  v3 = shopNotice;
-  if ( (byte_4C235A6 & 1) == 0 )
+  if ( (byte_4C33C76 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_long__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_long__Clear__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_long___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_long__TypeInfo);
-    byte_4C235A6 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_long__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_long__Clear__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_long___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_long__TypeInfo);
+    byte_4C33C76 = 1;
   }
   mostRecentTimeLimits = this->fields.mostRecentTimeLimits;
   p_mostRecentTimeLimits = (CGThumbnailListItem_o *)&this->fields.mostRecentTimeLimits;
   klass = mostRecentTimeLimits;
   if ( !mostRecentTimeLimits )
   {
-    v8 = (System_Collections_Generic_List_long__o *)sub_1C2D6DC(System_Collections_Generic_List_long__TypeInfo);
+    v8 = (System_Collections_Generic_List_long__o *)sub_1C32E6C(System_Collections_Generic_List_long__TypeInfo);
     System_Collections_Generic_List_long____ctor(
       v8,
-      (const MethodInfo_3771364 *)Method_System_Collections_Generic_List_long___ctor__);
+      (const MethodInfo_377FF9C *)Method_System_Collections_Generic_List_long___ctor__);
     p_mostRecentTimeLimits->klass = (CGThumbnailListItem_c *)v8;
-    sub_1C2D434(p_mostRecentTimeLimits, (int32_t)v8, v9, v10);
+    sub_1C32BC4(p_mostRecentTimeLimits, (int32_t)v8, v9, v10);
     klass = (System_Collections_Generic_List_long__o *)p_mostRecentTimeLimits->klass;
     if ( !p_mostRecentTimeLimits->klass )
       goto LABEL_10;
@@ -146,27 +145,27 @@ void ShopNoticeRemainTime__SetShopNotice(
   version = klass->fields._version;
   klass->fields._size = 0;
   klass->fields._version = version + 1;
-  if ( !v3
-    || (shopNotice = (ShopNotice_o *)v3->fields._MostRecentTimeLimit_k__BackingField,
+  if ( !shopNotice
+    || (MostRecentTimeLimit_k__BackingField = shopNotice->fields._MostRecentTimeLimit_k__BackingField,
         items = klass->fields._items,
-        v13 = Method_System_Collections_Generic_List_long__Add__,
+        v14 = Method_System_Collections_Generic_List_long__Add__,
         klass->fields._version = version + 2,
         !items) )
   {
 LABEL_10:
-    sub_1C2D6EC(klass, shopNotice);
+    sub_1C32E7C(klass);
   }
   if ( LODWORD(items->max_length) )
   {
     klass->fields._size = 1;
-    items->m_Items[0] = (int64_t)shopNotice;
+    items->m_Items[0] = MostRecentTimeLimit_k__BackingField;
   }
   else
   {
     System_Collections_Generic_List_long___AddWithResize(
       klass,
-      (int64_t)shopNotice,
-      *(const MethodInfo_3771BB8 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      MostRecentTimeLimit_k__BackingField,
+      *(const MethodInfo_37807F0 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
   }
 }
 
@@ -176,20 +175,19 @@ void ShopNoticeRemainTime__Start(ShopNoticeRemainTime_o *this, const MethodInfo 
   UnityEngine_MonoBehaviour_o *monoBehaviour; // x20
   const MethodInfo *v4; // x1
   System_Collections_IEnumerator_o *v5; // x0
-  __int64 v6; // x1
   struct UnityEngine_Coroutine_o *started; // x0
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
 
   ShopNoticeRemainTime__Stop(this, method);
   monoBehaviour = this->fields.monoBehaviour;
   this->fields.isLoop = 1;
   v5 = ShopNoticeRemainTime__ExecuteEverySecondLoop(this, v4);
   if ( !monoBehaviour )
-    sub_1C2D6EC(v5, v6);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_71149276(monoBehaviour, v5, 0);
+    sub_1C32E7C(v5);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_71209212(monoBehaviour, v5, 0);
   this->fields.coroutine = started;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.coroutine, (int32_t)started, v8, v9);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.coroutine, (int32_t)started, v7, v8);
 }
 
 
@@ -208,10 +206,10 @@ void ShopNoticeRemainTime__Stop(ShopNoticeRemainTime_o *this, const MethodInfo *
   {
     monoBehaviour = this->fields.monoBehaviour;
     if ( !monoBehaviour )
-      sub_1C2D6EC(0, coroutine);
-    UnityEngine_MonoBehaviour__StopCoroutine_71149896(monoBehaviour, coroutine, 0);
+      sub_1C32E7C(0);
+    UnityEngine_MonoBehaviour__StopCoroutine_71209832(monoBehaviour, coroutine, 0);
     p_coroutine->klass = 0;
-    sub_1C2D434(p_coroutine, 0, v5, v6);
+    sub_1C32BC4(p_coroutine, 0, v5, v6);
   }
 }
 
@@ -246,25 +244,25 @@ bool ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12__MoveNext(
   bool result; // w0
 
   v2 = this;
-  if ( (byte_4C235A9 & 1) == 0 )
+  if ( (byte_4C33C79 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_long__Clear__);
-    this = (ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_o *)sub_1C2D490(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4C235A9 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_long__Clear__);
+    this = (ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_o *)sub_1C32C20(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4C33C79 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
   if ( !_1__state )
   {
     v2->fields.__1__state = -1;
-    v10 = (UnityEngine_WaitForSeconds_o *)sub_1C2D6DC(UnityEngine_WaitForSeconds_TypeInfo);
+    v10 = (UnityEngine_WaitForSeconds_o *)sub_1C32E6C(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v10, 1.0, 0);
     v2->fields._loopWait_5__2 = v10;
-    sub_1C2D434((CGThumbnailListItem_o *)&v2->fields._loopWait_5__2, (int32_t)v10, v11, v12);
+    sub_1C32BC4((CGThumbnailListItem_o *)&v2->fields._loopWait_5__2, (int32_t)v10, v11, v12);
     if ( _4__this )
       goto LABEL_11;
 LABEL_14:
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   }
   if ( _1__state != 1 )
     return 0;
@@ -291,7 +289,7 @@ LABEL_11:
     loopWait_5__2 = (Il2CppObject *)v2->fields._loopWait_5__2;
     v2->fields.__2__current = loopWait_5__2;
     p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-    sub_1C2D434(p__2__current, (int32_t)loopWait_5__2, v5, v6);
+    sub_1C32BC4(p__2__current, (int32_t)loopWait_5__2, v5, v6);
     result = 1;
     LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
     return result;
@@ -316,11 +314,11 @@ void __noreturn ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12__System_Colle
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C2D4A4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C2D6DC(v2);
+  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C2D4A4(&Method_ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_System_Collections_IEnumerator_Reset__);
-  sub_1C2D5B8(v3, v4);
+  v4 = sub_1C32C34(&Method_ShopNoticeRemainTime__ExecuteEverySecondLoop_d__12_System_Collections_IEnumerator_Reset__);
+  sub_1C32D48(v3, v4);
 }
 
 

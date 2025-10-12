@@ -7,7 +7,7 @@ void StoryGachaAdjustData___ctor(StoryGachaAdjustData_o *this, const MethodInfo 
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.targetEntity = 0;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, 0, v3, v4);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, 0, v3, v4);
   this->fields.adjustIds = 0;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.adjustIds, 0, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.adjustIds, 0, v5, v6);
 }

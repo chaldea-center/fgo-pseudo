@@ -5,7 +5,7 @@ void NpGaugeAbsorbResult___ctor(NpGaugeAbsorbResult_o *this, BaseNpGaugeConvert_
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Convert_k__BackingField = convert;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Convert_k__BackingField, (int32_t)convert, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._Convert_k__BackingField, (int32_t)convert, v5, v6);
 }
 
 
@@ -19,7 +19,7 @@ void NpGaugeAbsorbResult__AddPoint(NpGaugeAbsorbResult_o *this, int32_t point, c
   Convert_k__BackingField = this->fields._Convert_k__BackingField;
   this->fields._Point_k__BackingField = Point_k__BackingField + (float)point;
   if ( !Convert_k__BackingField )
-    sub_1C2D6EC(0, point);
+    sub_1C32E7C(0);
   Turn_k__BackingField = this->fields._Turn_k__BackingField;
   this->fields._Turn_k__BackingField = Turn_k__BackingField
                                      + ((float (__fastcall *)(struct BaseNpGaugeConvert_o *))Convert_k__BackingField->klass->vtable._7_PointToTurn.methodPtr)(Convert_k__BackingField);
@@ -36,7 +36,7 @@ void NpGaugeAbsorbResult__AddTurn(NpGaugeAbsorbResult_o *this, int32_t turn, con
   Convert_k__BackingField = this->fields._Convert_k__BackingField;
   this->fields._Turn_k__BackingField = Turn_k__BackingField + (float)turn;
   if ( !Convert_k__BackingField )
-    sub_1C2D6EC(0, turn);
+    sub_1C32E7C(0);
   Point_k__BackingField = this->fields._Point_k__BackingField;
   this->fields._Point_k__BackingField = Point_k__BackingField
                                       + ((float (__fastcall *)(struct BaseNpGaugeConvert_o *))Convert_k__BackingField->klass->vtable._6_TurnToPoint.methodPtr)(Convert_k__BackingField);
@@ -69,7 +69,7 @@ void NpGaugeAbsorbResult__set_Convert(
   const MethodInfo *v3; // x3
 
   this->fields._Convert_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Convert_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._Convert_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

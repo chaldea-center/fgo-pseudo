@@ -6,22 +6,23 @@ void EventRandomMissionListViewItem___ctor(
         const MethodInfo *method)
 {
   EventMissionEntity_o *eventMissionEnt; // x0
-  __int64 v10; // x1
   int32_t id; // w8
+  __int64 v11; // x1
+  __int64 v12; // x1
   bool isNowMission; // w0
   EventRandomMissionListViewItem_c *klass; // x8
-  struct EventMissionEntity_o *v14; // x8
+  struct EventMissionEntity_o *v15; // x8
 
-  if ( (byte_4C21897 & 1) == 0 )
+  if ( (byte_4C31F66 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C21897 = 1;
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C31F66 = 1;
   }
   MissionListViewItem___ctor((MissionListViewItem_o *)this, 0);
   this->fields.eventRandomMissionEnt = randomMissionEnt;
-  sub_1C2D434(&this->fields.eventRandomMissionEnt);
+  sub_1C32BC4(&this->fields.eventRandomMissionEnt, randomMissionEnt);
   this->fields.eventMissionEnt = missionData;
-  eventMissionEnt = (EventMissionEntity_o *)sub_1C2D434(&this->fields.eventMissionEnt);
+  eventMissionEnt = (EventMissionEntity_o *)sub_1C32BC4(&this->fields.eventMissionEnt, missionData);
   if ( !missionData )
     goto LABEL_9;
   this->fields.currentEventId = missionData->fields.missionTargetId;
@@ -29,13 +30,15 @@ void EventRandomMissionListViewItem___ctor(
   this->fields.isNew = 0;
   this->fields.currentMissionId = id;
   this->fields.dispNo = missionData->fields.dispNo;
+  v11 = StringLiteral_1/*""*/;
   this->fields.condMsg = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434(&this->fields.condMsg);
+  sub_1C32BC4(&this->fields.condMsg, v11);
   this->fields.progVal = 0.0;
   this->fields.targetNum = 0;
   this->fields.progNum = 0;
+  v12 = StringLiteral_1/*""*/;
   this->fields.progTxt = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434(&this->fields.progTxt);
+  sub_1C32BC4(&this->fields.progTxt, v12);
   eventMissionEnt = this->fields.eventMissionEnt;
   *(_QWORD *)&this->fields.progStatus = 0x400000000LL;
   this->fields.bannerGroupId = missionData->fields.bannerGroup;
@@ -48,12 +51,12 @@ void EventRandomMissionListViewItem___ctor(
           this,
           klass->vtable._6_CheckMissionCond.method),
         MissionListViewItem__SetRewardInfo((MissionListViewItem_o *)this, 0),
-        (v14 = this->fields.eventMissionEnt) == 0) )
+        (v15 = this->fields.eventMissionEnt) == 0) )
   {
 LABEL_9:
-    sub_1C2D6EC(eventMissionEnt, v10);
+    sub_1C32E7C(eventMissionEnt);
   }
-  this->fields.sortValue2 = -v14->fields.id;
+  this->fields.sortValue2 = -v15->fields.id;
   MissionListViewItem__CheckEventMissionAdd((MissionListViewItem_o *)this, 0);
   if ( isDmy )
   {
@@ -69,25 +72,22 @@ bool EventRandomMissionListViewItem__ExistClearConditionEntity(
         const MethodInfo *method)
 {
   EventMissionConditionEntity_array *Instance; // x0
-  __int64 v4; // x1
-  __int64 v5; // x2
-  __int64 v6; // x3
   int max_length; // w8
-  int v8; // w9
-  EventMissionConditionEntity_o *v9; // x10
+  int v5; // w9
+  EventMissionConditionEntity_o *v6; // x10
 
-  if ( (byte_4C21899 & 1) == 0 )
+  if ( (byte_4C31F68 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_EventMissionConditionMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C21899 = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_EventMissionConditionMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C31F68 = 1;
   }
-  Instance = (EventMissionConditionEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (EventMissionConditionEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = (EventMissionConditionEntity_array *)DataManager__GetMasterData_object_(
                                                     (DataManager_o *)Instance,
-                                                    (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___);
+                                                    (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___);
   if ( !Instance )
     goto LABEL_15;
   Instance = EventMissionConditionMaster__getMissionCondList(
@@ -100,23 +100,23 @@ bool EventRandomMissionListViewItem__ExistClearConditionEntity(
   max_length = Instance->max_length;
   if ( max_length >= 1 )
   {
-    v8 = 0;
+    v5 = 0;
     while ( 1 )
     {
-      if ( max_length == v8 )
-        sub_1C2D6F4(Instance, v4, v5, v6);
-      v9 = Instance->m_Items[v8];
-      if ( !v9 )
+      if ( max_length == v5 )
+        sub_1C32E84(Instance);
+      v6 = Instance->m_Items[v5];
+      if ( !v6 )
         break;
-      if ( v9->fields.missionProgressType != 4 && max_length != ++v8 )
+      if ( v6->fields.missionProgressType != 4 && max_length != ++v5 )
         continue;
-      return v8 < max_length;
+      return v5 < max_length;
     }
 LABEL_15:
-    sub_1C2D6EC(Instance, v4);
+    sub_1C32E7C(Instance);
   }
-  v8 = 0;
-  return v8 < max_length;
+  v5 = 0;
+  return v5 < max_length;
 }
 
 
@@ -133,13 +133,12 @@ void EventRandomMissionListViewItem__SetGiftData(EventRandomMissionListViewItem_
   GiftEntity_array *giftEnts; // x20
   GiftEntity_o *IconGiftEntity; // x20
   __int64 v5; // x0
-  __int64 v6; // x1
   int32_t num; // w8
 
-  if ( (byte_4C21898 & 1) == 0 )
+  if ( (byte_4C31F67 & 1) == 0 )
   {
-    sub_1C2D490(&MissionInfoMaker_TypeInfo);
-    byte_4C21898 = 1;
+    sub_1C32C20(&MissionInfoMaker_TypeInfo);
+    byte_4C31F67 = 1;
   }
   giftEnts = this->fields.giftEnts;
   if ( giftEnts )
@@ -155,7 +154,7 @@ void EventRandomMissionListViewItem__SetGiftData(EventRandomMissionListViewItem_
       &this->fields.servantCostumeEnt,
       0);
     if ( !IconGiftEntity )
-      sub_1C2D6EC(v5, v6);
+      sub_1C32E7C(v5);
     this->fields.rewardObjectId = IconGiftEntity->fields.objectId;
     num = IconGiftEntity->fields.num;
     if ( num <= 1 )
@@ -197,7 +196,7 @@ LABEL_7:
       goto LABEL_7;
     }
 LABEL_9:
-    sub_1C2D6EC(eventRandomMissionEnt, sort);
+    sub_1C32E7C(eventRandomMissionEnt);
   }
   return (unsigned __int8)eventRandomMissionEnt & 1;
 }
@@ -233,7 +232,7 @@ bool EventRandomMissionListViewItem__get_IsHideReward(EventRandomMissionListView
 
   eventMissionEnt = this->fields.eventMissionEnt;
   if ( !eventMissionEnt )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   v4 = this->fields.progStatus < 2u;
   return v4 & EventMissionEntity__IsHideReward(eventMissionEnt, 0);
 }

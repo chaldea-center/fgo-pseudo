@@ -1,14 +1,14 @@
 void RecoverMaster___ctor(RecoverMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27A96 & 1) == 0 )
+  if ( (byte_4C38198 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_RecoverMaster__RecoverEntity__int___ctor__);
-    byte_4C27A96 = 1;
+    sub_1C32C20(&Method_DataMasterBase_RecoverMaster__RecoverEntity__int___ctor__);
+    byte_4C38198 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     122,
-    (const MethodInfo_3385A74 *)Method_DataMasterBase_RecoverMaster__RecoverEntity__int___ctor__);
+    (const MethodInfo_3394514 *)Method_DataMasterBase_RecoverMaster__RecoverEntity__int___ctor__);
 }
 
 
@@ -18,11 +18,11 @@ System_Collections_Generic_List_RecoverEntity__o *RecoverMaster__getRecvEntityLi
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v5; // x19
-  Il2CppClass *v6; // x1
   void *list; // x0
-  int32_t v8; // w22
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v7; // w22
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  Il2CppClass *v10; // x1
   struct System_Object_array *items; // x8
   _QWORD *v12; // x9
   __int64 size; // x10
@@ -33,41 +33,41 @@ System_Collections_Generic_List_RecoverEntity__o *RecoverMaster__getRecvEntityLi
   int32_t v18; // w2
   const MethodInfo *v19; // x3
 
-  if ( (byte_4C27A97 & 1) == 0 )
+  if ( (byte_4C38199 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_RecoverEntity__get_Count__);
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_RecoverEntity__get_Item__);
-    sub_1C2D490(&System_Comparison_RecoverEntity__TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_RecoverEntity__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_RecoverEntity__Sort__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_RecoverEntity___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_RecoverEntity__TypeInfo);
-    sub_1C2D490(&Method_RecoverMaster___c__getRecvEntityList_b__1_0__);
-    sub_1C2D490(&RecoverMaster___c_TypeInfo);
-    byte_4C27A97 = 1;
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_RecoverEntity__get_Count__);
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_RecoverEntity__get_Item__);
+    sub_1C32C20(&System_Comparison_RecoverEntity__TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_RecoverEntity__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_RecoverEntity__Sort__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_RecoverEntity___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_RecoverEntity__TypeInfo);
+    sub_1C32C20(&Method_RecoverMaster___c__getRecvEntityList_b__1_0__);
+    sub_1C32C20(&RecoverMaster___c_TypeInfo);
+    byte_4C38199 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_RecoverEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_RecoverEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_RecoverEntity___ctor__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_RecoverEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_24;
-  v8 = 0;
-  while ( v8 < System_Collections_ObjectModel_Collection_object___get_Count(
+  v7 = 0;
+  while ( v7 < System_Collections_ObjectModel_Collection_object___get_Count(
                  (System_Collections_ObjectModel_Collection_T__o *)list,
-                 (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_RecoverEntity__get_Count__) )
+                 (const MethodInfo_332FCA8 *)Method_System_Collections_ObjectModel_Collection_RecoverEntity__get_Count__) )
   {
     list = this->fields.list;
     if ( !list )
       goto LABEL_24;
     list = System_Collections_ObjectModel_Collection_object___get_Item(
              (System_Collections_ObjectModel_Collection_T__o *)list,
-             v8,
-             (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_RecoverEntity__get_Item__);
+             v7,
+             (const MethodInfo_332FD38 *)Method_System_Collections_ObjectModel_Collection_RecoverEntity__get_Item__);
     if ( v5 )
     {
-      v6 = (Il2CppClass *)list;
+      v10 = (Il2CppClass *)list;
       if ( !list )
         goto LABEL_24;
       if ( *((_DWORD *)list + 5) == RecoverTarget )
@@ -83,19 +83,19 @@ System_Collections_Generic_List_RecoverEntity__o *RecoverMaster__getRecvEntityLi
           System_Collections_Generic_List_object___AddWithResize(
             v5,
             (Il2CppObject *)list,
-            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+            *(const MethodInfo_37987BC **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
         }
         else
         {
           v14 = &items->obj.klass + size;
           v5->fields._size = size + 1;
-          v14[4] = v6;
-          sub_1C2D434((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v6, v9, v10);
+          v14[4] = v10;
+          sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v10, v8, v9);
         }
       }
     }
     list = this->fields.list;
-    ++v8;
+    ++v7;
     if ( !list )
       goto LABEL_24;
   }
@@ -114,19 +114,19 @@ System_Collections_Generic_List_RecoverEntity__o *RecoverMaster__getRecvEntityLi
       list = RecoverMaster___c_TypeInfo;
     }
     v16 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v15 = (System_Comparison_T__o *)sub_1C2D6DC(System_Comparison_RecoverEntity__TypeInfo);
+    v15 = (System_Comparison_T__o *)sub_1C32E6C(System_Comparison_RecoverEntity__TypeInfo);
     System_Comparison_object____ctor(v15, v16, Method_RecoverMaster___c__getRecvEntityList_b__1_0__, 0);
     static_fields = RecoverMaster___c_TypeInfo->static_fields;
     static_fields->__9__1_0 = (struct System_Comparison_RecoverEntity__o *)v15;
-    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__1_0, (int32_t)v15, v18, v19);
+    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__1_0, (int32_t)v15, v18, v19);
   }
   if ( !v5 )
 LABEL_24:
-    sub_1C2D6EC(list, v6);
-  System_Collections_Generic_List_object___Sort_58242632(
+    sub_1C32E7C(list);
+  System_Collections_Generic_List_object___Sort_58303104(
     v5,
     v15,
-    (const MethodInfo_378B648 *)Method_System_Collections_Generic_List_RecoverEntity__Sort__);
+    (const MethodInfo_379A280 *)Method_System_Collections_Generic_List_RecoverEntity__Sort__);
   return (System_Collections_Generic_List_RecoverEntity__o *)v5;
 }
 
@@ -137,15 +137,15 @@ void RecoverMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C27A98 & 1) == 0 )
+  if ( (byte_4C3819A & 1) == 0 )
   {
-    sub_1C2D490(&RecoverMaster___c_TypeInfo);
-    byte_4C27A98 = 1;
+    sub_1C32C20(&RecoverMaster___c_TypeInfo);
+    byte_4C3819A = 1;
   }
-  v1 = (Il2CppObject *)sub_1C2D6DC(RecoverMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C32E6C(RecoverMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   RecoverMaster___c_TypeInfo->static_fields->__9 = (struct RecoverMaster___c_o *)v1;
-  sub_1C2D434((CGThumbnailListItem_o *)RecoverMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)RecoverMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -162,6 +162,6 @@ int32_t RecoverMaster___c___getRecvEntityList_b__1_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1C2D6EC(this, a);
+    sub_1C32E7C(this);
   return b->fields.priority - a->fields.priority;
 }

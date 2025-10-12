@@ -18,7 +18,7 @@ void LinkableSprite__MakePixelPerfect(LinkableSprite_o *this, const MethodInfo *
         (v4 = this->fields.mUiSprite) == 0)
     || (mUiSprite = this->fields.mCollider) == 0 )
   {
-    sub_1C2D6EC(mUiSprite, method);
+    sub_1C32E7C(mUiSprite);
   }
   v5.fields.y = (float)v4->fields.mHeight;
   v5.fields.x = (float)v4->fields.mWidth;
@@ -27,7 +27,6 @@ void LinkableSprite__MakePixelPerfect(LinkableSprite_o *this, const MethodInfo *
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void LinkableSprite__SetSize(LinkableSprite_o *this, int32_t w, int32_t h, const MethodInfo *method)
 {
   UIWidget_o *mUiSprite; // x0
@@ -38,7 +37,7 @@ void LinkableSprite__SetSize(LinkableSprite_o *this, int32_t w, int32_t h, const
     || (UIWidget__set_width(mUiSprite, w, 0), (mUiSprite = (UIWidget_o *)this->fields.mUiSprite) == 0)
     || (UIWidget__set_height(mUiSprite, h, 0), (mUiSprite = (UIWidget_o *)this->fields.mCollider) == 0) )
   {
-    sub_1C2D6EC(mUiSprite, *(_QWORD *)&w);
+    sub_1C32E7C(mUiSprite);
   }
   v8.fields.y = (float)h;
   v8.fields.x = (float)w;
@@ -54,5 +53,5 @@ void LinkableSprite__SetUp(LinkableSprite_o *this, int32_t lnkType, System_Strin
   this->fields.linkUrl = lnkUrl;
   p_linkUrl = &this->fields.linkUrl;
   *((_DWORD *)p_linkUrl - 2) = lnkType;
-  sub_1C2D434((CGThumbnailListItem_o *)p_linkUrl, (int32_t)lnkUrl, (int32_t)lnkUrl, method);
+  sub_1C32BC4((CGThumbnailListItem_o *)p_linkUrl, (int32_t)lnkUrl, (int32_t)lnkUrl, method);
 }

@@ -1,13 +1,13 @@
 void GachaDetailEntity___ctor(GachaDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2757F & 1) == 0 )
+  if ( (byte_4C37C77 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_int___ctor__);
-    byte_4C2757F = 1;
+    sub_1C32C20(&Method_DataEntityBase_int___ctor__);
+    byte_4C37C77 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_33858B4 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3394354 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -24,18 +24,18 @@ System_String_o *GachaDetailEntity__GetConfirmBonusSelectSummonLowMsg(
   System_Collections_Generic_Dictionary_string__object__o *script; // x19
   System_String_o *v4; // x2
 
-  if ( (byte_4C2757D & 1) == 0 )
+  if ( (byte_4C37C75 & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_3731/*"CONFIRM_BONUS_SELECT_SUMMON_LOW_MSG"*/);
-    sub_1C2D490(&StringLiteral_18206/*"confirmBonusSelectSummonLowMsg"*/);
-    byte_4C2757D = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_3738/*"CONFIRM_BONUS_SELECT_SUMMON_LOW_MSG"*/);
+    sub_1C32C20(&StringLiteral_18210/*"confirmBonusSelectSummonLowMsg"*/);
+    byte_4C37C75 = 1;
   }
   script = this->fields.script;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3731/*"CONFIRM_BONUS_SELECT_SUMMON_LOW_MSG"*/, 0);
-  return EntityScriptUtil__GetStringValue(script, (System_String_o *)StringLiteral_18206/*"confirmBonusSelectSummonLowMsg"*/, v4, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3738/*"CONFIRM_BONUS_SELECT_SUMMON_LOW_MSG"*/, 0);
+  return EntityScriptUtil__GetStringValue(script, (System_String_o *)StringLiteral_18210/*"confirmBonusSelectSummonLowMsg"*/, v4, 0);
 }
 
 
@@ -46,18 +46,18 @@ System_String_o *GachaDetailEntity__GetConfirmBonusSelectSummonTitle(
   System_Collections_Generic_Dictionary_string__object__o *script; // x19
   System_String_o *v4; // x2
 
-  if ( (byte_4C2757C & 1) == 0 )
+  if ( (byte_4C37C74 & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_3734/*"CONFIRM_BONUS_SELECT_SUMMON_TITLE"*/);
-    sub_1C2D490(&StringLiteral_18207/*"confirmBonusSelectSummonTitle"*/);
-    byte_4C2757C = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_3741/*"CONFIRM_BONUS_SELECT_SUMMON_TITLE"*/);
+    sub_1C32C20(&StringLiteral_18211/*"confirmBonusSelectSummonTitle"*/);
+    byte_4C37C74 = 1;
   }
   script = this->fields.script;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3734/*"CONFIRM_BONUS_SELECT_SUMMON_TITLE"*/, 0);
-  return EntityScriptUtil__GetStringValue(script, (System_String_o *)StringLiteral_18207/*"confirmBonusSelectSummonTitle"*/, v4, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_3741/*"CONFIRM_BONUS_SELECT_SUMMON_TITLE"*/, 0);
+  return EntityScriptUtil__GetStringValue(script, (System_String_o *)StringLiteral_18211/*"confirmBonusSelectSummonTitle"*/, v4, 0);
 }
 
 
@@ -78,17 +78,17 @@ int32_t GachaDetailEntity__GetScriptInt(
   const MethodInfo *v14; // x3
 
   v4 = defVal;
-  if ( (byte_4C27577 & 1) == 0 )
+  if ( (byte_4C37C6F & 1) == 0 )
   {
-    sub_1C2D490(&long_TypeInfo);
-    byte_4C27577 = 1;
+    sub_1C32C20(&long_TypeInfo);
+    byte_4C37C6F = 1;
   }
   ScriptObj = GachaDetailEntity__GetScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
-  sub_1C2D9AC(ScriptObj);
+  sub_1C3313C(ScriptObj);
   return (unsigned int)GachaDetailEntity__GetScriptIntArray(v11, v12, v13, v14);
 }
 
@@ -108,16 +108,15 @@ System_Int32_array *GachaDetailEntity__GetScriptIntArray(
   int32_t v13; // w2
   const MethodInfo *v14; // x3
   System_Collections_Generic_List_int__o *v15; // x0
-  __int64 v16; // x1
 
-  if ( (byte_4C27578 & 1) == 0 )
+  if ( (byte_4C37C70 & 1) == 0 )
   {
-    sub_1C2D490(&System_Converter_object__int__TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_object__ConvertAll_int___);
-    sub_1C2D490(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C2D490(&Method_GachaDetailEntity___c__GetScriptIntArray_b__8_0__);
-    sub_1C2D490(&GachaDetailEntity___c_TypeInfo);
-    byte_4C27578 = 1;
+    sub_1C32C20(&System_Converter_object__int__TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_object__ConvertAll_int___);
+    sub_1C32C20(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C32C20(&Method_GachaDetailEntity___c__GetScriptIntArray_b__8_0__);
+    sub_1C32C20(&GachaDetailEntity___c_TypeInfo);
+    byte_4C37C70 = 1;
   }
   ScriptObjList = GachaDetailEntity__GetScriptObjList(this, key, (const MethodInfo *)defVal);
   if ( !ScriptObjList )
@@ -138,21 +137,21 @@ System_Int32_array *GachaDetailEntity__GetScriptIntArray(
       v9 = GachaDetailEntity___c_TypeInfo;
     }
     v11 = (Il2CppObject *)v9->static_fields->__9;
-    _9__8_0 = (System_Converter_object__int__o *)sub_1C2D6DC(System_Converter_object__int__TypeInfo);
+    _9__8_0 = (System_Converter_object__int__o *)sub_1C32E6C(System_Converter_object__int__TypeInfo);
     System_Converter_object__int____ctor(_9__8_0, v11, Method_GachaDetailEntity___c__GetScriptIntArray_b__8_0__, 0);
     static_fields = GachaDetailEntity___c_TypeInfo->static_fields;
     static_fields->__9__8_0 = _9__8_0;
-    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v13, v14);
+    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v13, v14);
   }
   v15 = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_object___ConvertAll_int_(
                                                     v8,
                                                     (System_Converter_T__TOutput__o *)_9__8_0,
-                                                    (const MethodInfo_2FF5E6C *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
+                                                    (const MethodInfo_300490C *)Method_System_Collections_Generic_List_object__ConvertAll_int___);
   if ( !v15 )
-    sub_1C2D6EC(0, v16);
+    sub_1C32E7C(0);
   return System_Collections_Generic_List_int___ToArray(
            v15,
-           (const MethodInfo_376E618 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_377D250 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -164,10 +163,10 @@ Il2CppObject *GachaDetailEntity__GetScriptObj(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C27575 & 1) == 0 )
+  if ( (byte_4C37C6D & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_4C27575 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_4C37C6D = 1;
   }
   result = (Il2CppObject *)this->fields.script;
   if ( result )
@@ -177,7 +176,7 @@ Il2CppObject *GachaDetailEntity__GetScriptObj(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_344BB34 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_345A5D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }
@@ -202,10 +201,10 @@ System_Collections_Generic_List_object__o *GachaDetailEntity__GetScriptObjList(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C27576 & 1) == 0 )
+  if ( (byte_4C37C6E & 1) == 0 )
   {
-    sub_1C2D490(&System_Collections_Generic_List_object__TypeInfo);
-    byte_4C27576 = 1;
+    sub_1C32C20(&System_Collections_Generic_List_object__TypeInfo);
+    byte_4C37C6E = 1;
   }
   result = (System_Collections_Generic_List_object__o *)GachaDetailEntity__GetScriptObj(this, key, method);
   if ( result )
@@ -214,7 +213,7 @@ System_Collections_Generic_List_object__o *GachaDetailEntity__GetScriptObjList(
     if ( result->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (System_Collections_Generic_List_object__c *)result->klass->_2.typeHierarchy[naturalAligment - 1] != System_Collections_Generic_List_object__TypeInfo )
     {
-      sub_1C2D9AC(result);
+      sub_1C3313C(result);
       return (System_Collections_Generic_List_object__o *)GachaDetailEntity__GetScriptInt(v7, v8, v9, v10);
     }
   }
@@ -229,18 +228,18 @@ System_String_o *GachaDetailEntity__GetSummonBonusSelectDialogMessage(
   System_Collections_Generic_Dictionary_string__object__o *script; // x19
   System_String_o *v4; // x2
 
-  if ( (byte_4C2757A & 1) == 0 )
+  if ( (byte_4C37C72 & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_12417/*"SUMMON_BONUS_SELECT_DIALOG_MESSAGE"*/);
-    sub_1C2D490(&StringLiteral_23806/*"summonBonusSelectDialogMessage"*/);
-    byte_4C2757A = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_12420/*"SUMMON_BONUS_SELECT_DIALOG_MESSAGE"*/);
+    sub_1C32C20(&StringLiteral_23824/*"summonBonusSelectDialogMessage"*/);
+    byte_4C37C72 = 1;
   }
   script = this->fields.script;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_12417/*"SUMMON_BONUS_SELECT_DIALOG_MESSAGE"*/, 0);
-  return EntityScriptUtil__GetStringValue(script, (System_String_o *)StringLiteral_23806/*"summonBonusSelectDialogMessage"*/, v4, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_12420/*"SUMMON_BONUS_SELECT_DIALOG_MESSAGE"*/, 0);
+  return EntityScriptUtil__GetStringValue(script, (System_String_o *)StringLiteral_23824/*"summonBonusSelectDialogMessage"*/, v4, 0);
 }
 
 
@@ -251,18 +250,18 @@ System_String_o *GachaDetailEntity__GetSummonBonusSelectMenuGuideMessage(
   System_Collections_Generic_Dictionary_string__object__o *script; // x19
   System_String_o *v4; // x2
 
-  if ( (byte_4C2757B & 1) == 0 )
+  if ( (byte_4C37C73 & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_23807/*"summonBonusSelectMenuGuideMessage"*/);
-    sub_1C2D490(&StringLiteral_12420/*"SUMMON_BONUS_SELECT_MENU_GUIDE_MESSAGE"*/);
-    byte_4C2757B = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_23825/*"summonBonusSelectMenuGuideMessage"*/);
+    sub_1C32C20(&StringLiteral_12423/*"SUMMON_BONUS_SELECT_MENU_GUIDE_MESSAGE"*/);
+    byte_4C37C73 = 1;
   }
   script = this->fields.script;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_12420/*"SUMMON_BONUS_SELECT_MENU_GUIDE_MESSAGE"*/, 0);
-  return EntityScriptUtil__GetStringValue(script, (System_String_o *)StringLiteral_23807/*"summonBonusSelectMenuGuideMessage"*/, v4, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_12423/*"SUMMON_BONUS_SELECT_MENU_GUIDE_MESSAGE"*/, 0);
+  return EntityScriptUtil__GetStringValue(script, (System_String_o *)StringLiteral_23825/*"summonBonusSelectMenuGuideMessage"*/, v4, 0);
 }
 
 
@@ -271,18 +270,18 @@ System_String_o *GachaDetailEntity__GetSummonBonusSelectWarningMsg(GachaDetailEn
   System_Collections_Generic_Dictionary_string__object__o *script; // x19
   System_String_o *v4; // x2
 
-  if ( (byte_4C2757E & 1) == 0 )
+  if ( (byte_4C37C76 & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_23808/*"summonBonusSelectWarningMsg"*/);
-    sub_1C2D490(&StringLiteral_12422/*"SUMMON_BONUS_SELECT_WARNING_MSG"*/);
-    byte_4C2757E = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_23826/*"summonBonusSelectWarningMsg"*/);
+    sub_1C32C20(&StringLiteral_12425/*"SUMMON_BONUS_SELECT_WARNING_MSG"*/);
+    byte_4C37C76 = 1;
   }
   script = this->fields.script;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_12422/*"SUMMON_BONUS_SELECT_WARNING_MSG"*/, 0);
-  return EntityScriptUtil__GetStringValue(script, (System_String_o *)StringLiteral_23808/*"summonBonusSelectWarningMsg"*/, v4, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_12425/*"SUMMON_BONUS_SELECT_WARNING_MSG"*/, 0);
+  return EntityScriptUtil__GetStringValue(script, (System_String_o *)StringLiteral_23826/*"summonBonusSelectWarningMsg"*/, v4, 0);
 }
 
 
@@ -297,36 +296,35 @@ bool GachaDetailEntity__IsPrivilegeSummon(GachaDetailEntity_o *this, int64_t *en
   const MethodInfo *v3; // x3
   int32_t ScriptInt; // w0
   int32_t v7; // w20
-  __int64 v8; // x1
   Il2CppObject *Master_object; // x21
   _QWORD *p_image; // x0
   bool result; // w0
-  int64_t v12; // [xsp+0h] [xbp-40h] BYREF
+  int64_t v11; // [xsp+0h] [xbp-40h] BYREF
   UserPrivilegeEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C27579 & 1) == 0 )
+  if ( (byte_4C37C71 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_UserPrivilegeMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_22761/*"privilegeId"*/);
-    byte_4C27579 = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_UserPrivilegeMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_22778/*"privilegeId"*/);
+    byte_4C37C71 = 1;
   }
-  v12 = 0;
+  v11 = 0;
   entity = 0;
-  ScriptInt = GachaDetailEntity__GetScriptInt(this, (System_String_o *)StringLiteral_22761/*"privilegeId"*/, -1, v3);
+  ScriptInt = GachaDetailEntity__GetScriptInt(this, (System_String_o *)StringLiteral_22778/*"privilegeId"*/, -1, v3);
   if ( (ScriptInt & 0x80000000) == 0 )
   {
     v7 = ScriptInt;
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserPrivilegeMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserPrivilegeMaster___);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C211E1 )
+    if ( !byte_4C31812 )
     {
-      sub_1C2D490(&NetworkManager_TypeInfo);
-      byte_4C211E1 = 1;
+      sub_1C32C20(&NetworkManager_TypeInfo);
+      byte_4C31812 = 1;
     }
     p_image = &NetworkManager_TypeInfo->_1.image;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -346,11 +344,11 @@ bool GachaDetailEntity__IsPrivilegeSummon(GachaDetailEntity_o *this, int64_t *en
       p_image = &entity->klass;
       if ( entity )
       {
-        UserPrivilegeEntity__IsValidPeriod(entity, &v12, endedAt, 0, 0);
+        UserPrivilegeEntity__IsValidPeriod(entity, &v11, endedAt, 0, 0);
         return 1;
       }
 LABEL_18:
-      sub_1C2D6EC(p_image, v8);
+      sub_1C32E7C(p_image);
     }
   }
   result = 0;
@@ -365,15 +363,15 @@ void GachaDetailEntity___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C27580 & 1) == 0 )
+  if ( (byte_4C37C78 & 1) == 0 )
   {
-    sub_1C2D490(&GachaDetailEntity___c_TypeInfo);
-    byte_4C27580 = 1;
+    sub_1C32C20(&GachaDetailEntity___c_TypeInfo);
+    byte_4C37C78 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C2D6DC(GachaDetailEntity___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C32E6C(GachaDetailEntity___c_TypeInfo);
   System_Object___ctor(v1, 0);
   GachaDetailEntity___c_TypeInfo->static_fields->__9 = (struct GachaDetailEntity___c_o *)v1;
-  sub_1C2D434((CGThumbnailListItem_o *)GachaDetailEntity___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)GachaDetailEntity___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -390,10 +388,10 @@ int32_t GachaDetailEntity___c___GetScriptIntArray_b__8_0(
 {
   System_String_o *v4; // x0
 
-  if ( (byte_4C27581 & 1) == 0 )
+  if ( (byte_4C37C79 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C27581 = 1;
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C37C79 = 1;
   }
   if ( x )
     v4 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *, const MethodInfo *))x->klass->vtable[3].methodPtr)(

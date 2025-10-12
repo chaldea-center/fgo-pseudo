@@ -4,7 +4,6 @@ void FriendshipGaugeSelector___ctor(FriendshipGaugeSelector_o *this, const Metho
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 IFriendshipGauge_o *FriendshipGaugeSelector__GetGauge(
         FriendshipGaugeSelector_o *this,
         int32_t maxFriendShipRank,
@@ -21,10 +20,10 @@ IFriendshipGauge_o *FriendshipGaugeSelector__GetGauge(
   __int64 v13; // x0
 
   v6 = this;
-  if ( (byte_4C2AB7C & 1) == 0 )
+  if ( (byte_4C3B29B & 1) == 0 )
   {
-    this = (FriendshipGaugeSelector_o *)sub_1C2D490(&IFriendshipGauge_TypeInfo);
-    byte_4C2AB7C = 1;
+    this = (FriendshipGaugeSelector_o *)sub_1C32C20(&IFriendshipGauge_TypeInfo);
+    byte_4C3B29B = 1;
   }
   v7 = friendshipExceedCount + maxFriendShipRank < 11 || friendshipExceedCount == 0;
   v8 = 32;
@@ -32,7 +31,7 @@ IFriendshipGauge_o *FriendshipGaugeSelector__GetGauge(
     v8 = 40;
   v9 = *(IFriendshipGauge_o **)((char *)&v6->klass + v8);
   if ( !v9 )
-    sub_1C2D6EC(this, *(_QWORD *)&maxFriendShipRank);
+    sub_1C32E7C(this);
   klass = v9->klass;
   v11 = *(unsigned __int16 *)&v9->klass->_2.rank;
   if ( *(_WORD *)&v9->klass->_2.rank )
@@ -50,7 +49,7 @@ IFriendshipGauge_o *FriendshipGaugeSelector__GetGauge(
   else
   {
 LABEL_13:
-    v13 = sub_1C7DCA8(v9, IFriendshipGauge_TypeInfo, 5);
+    v13 = sub_1C83438(v9, IFriendshipGauge_TypeInfo, 5);
   }
   (*(void (__fastcall **)(IFriendshipGauge_o *, _QWORD))v13)(v9, *(_QWORD *)(v13 + 8));
   return v9;

@@ -1,26 +1,26 @@
 void UpdateProfileDialogInfoEntity___ctor(UpdateProfileDialogInfoEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27FF3 & 1) == 0 )
+  if ( (byte_4C386F6 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C27FF3 = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C386F6 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UpdateProfileDialogInfoEntity__CreatePK(int32_t svtId, const MethodInfo *method)
 {
-  if ( (byte_4C27FF2 & 1) == 0 )
+  if ( (byte_4C386F5 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int___);
-    byte_4C27FF2 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int___);
+    byte_4C386F5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int_(
            svtId,
-           (const MethodInfo_30CC96C *)Method_DataEntityBase_CreateMultiplePK_int___);
+           (const MethodInfo_30DB40C *)Method_DataEntityBase_CreateMultiplePK_int___);
 }
 
 
@@ -34,10 +34,10 @@ System_String_o *UpdateProfileDialogInfoEntity__CreatePrimaryKey(
   const MethodInfo *v6; // x1
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v8; // 0:x0.16
 
-  if ( (byte_4C27FF1 & 1) == 0 )
+  if ( (byte_4C386F4 & 1) == 0 )
   {
-    sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C27FF1 = 1;
+    sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C386F4 = 1;
   }
   v4 = *(_QWORD *)&this->fields.svtId.fields.currentCryptoKey;
   v3 = *(_QWORD *)&this->fields.svtId.fields.fakeValue;
@@ -45,6 +45,6 @@ System_String_o *UpdateProfileDialogInfoEntity__CreatePrimaryKey(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v8.fields.currentCryptoKey = v4;
   *(_QWORD *)&v8.fields.fakeValue = v3;
-  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v8, 0);
+  v5 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v8, 0);
   return UpdateProfileDialogInfoEntity__CreatePK(v5, v6);
 }

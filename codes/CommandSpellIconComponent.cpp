@@ -1,31 +1,30 @@
 void CommandSpellIconComponent___ctor(CommandSpellIconComponent_o *this, const MethodInfo *method)
 {
   this->fields.Size.fields.y = 40.0;
-  *(_OWORD *)&this->fields.ImageType = xmmword_C09790;
+  *(_OWORD *)&this->fields.ImageType = xmmword_C0CB70;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
 void CommandSpellIconComponent__Awake(CommandSpellIconComponent_o *this, const MethodInfo *method)
 {
-  Il2CppObject *ComponentInChildren_object__51139460; // x0
+  Il2CppObject *ComponentInChildren_object__51199524; // x0
   int32_t v4; // w2
   const MethodInfo *v5; // x3
   UnityEngine_Object_o *notUseCommandSpellSpr; // x20
-  __int64 v7; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4C2669D & 1) == 0 )
+  if ( (byte_4C36D75 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponentInChildren_UITexture___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2669D = 1;
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponentInChildren_UITexture___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C36D75 = 1;
   }
-  ComponentInChildren_object__51139460 = UnityEngine_Component__GetComponentInChildren_object__51139460(
+  ComponentInChildren_object__51199524 = UnityEngine_Component__GetComponentInChildren_object__51199524(
                                            (UnityEngine_Component_o *)this,
-                                           (const MethodInfo_30C5384 *)Method_UnityEngine_Component_GetComponentInChildren_UITexture___);
-  this->fields.myTexture = (struct UITexture_o *)ComponentInChildren_object__51139460;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.myTexture, (int32_t)ComponentInChildren_object__51139460, v4, v5);
+                                           (const MethodInfo_30D3E24 *)Method_UnityEngine_Component_GetComponentInChildren_UITexture___);
+  this->fields.myTexture = (struct UITexture_o *)ComponentInChildren_object__51199524;
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.myTexture, (int32_t)ComponentInChildren_object__51199524, v4, v5);
   notUseCommandSpellSpr = (UnityEngine_Object_o *)this->fields.notUseCommandSpellSpr;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -35,7 +34,7 @@ void CommandSpellIconComponent__Awake(CommandSpellIconComponent_o *this, const M
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
     {
-      sub_1C2D6EC(gameObject, v7);
+      sub_1C32E7C(gameObject);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   }
@@ -49,13 +48,13 @@ System_String_o *CommandSpellIconComponent__GetSpellImageAssetStorageName(
 {
   System_String_o *SpellImageFileName; // x0
 
-  if ( (byte_4C266A2 & 1) == 0 )
+  if ( (byte_4C36D7A & 1) == 0 )
   {
-    this = (CommandSpellIconComponent_o *)sub_1C2D490(&StringLiteral_4584/*"CommandSpell/"*/);
-    byte_4C266A2 = 1;
+    this = (CommandSpellIconComponent_o *)sub_1C32C20(&StringLiteral_4592/*"CommandSpell/"*/);
+    byte_4C36D7A = 1;
   }
   SpellImageFileName = CommandSpellIconComponent__GetSpellImageFileName(this, tp, method);
-  return System_String__Concat_63457864((System_String_o *)StringLiteral_4584/*"CommandSpell/"*/, SpellImageFileName, 0);
+  return System_String__Concat_63518544((System_String_o *)StringLiteral_4592/*"CommandSpell/"*/, SpellImageFileName, 0);
 }
 
 
@@ -66,21 +65,24 @@ System_String_o *CommandSpellIconComponent__GetSpellImageFileName(
 {
   __int64 v3; // x3
   __int64 v4; // x4
-  Il2CppObject *v6; // x0
-  System_String_o *v7; // x0
-  int32_t v9; // [xsp+Ch] [xbp-34h] BYREF
+  __int64 v5; // x5
+  __int64 v6; // x6
+  __int64 v7; // x7
+  Il2CppObject *v9; // x0
+  System_String_o *v10; // x0
+  int32_t v12; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C266A3 & 1) == 0 )
+  if ( (byte_4C36D7B & 1) == 0 )
   {
-    sub_1C2D490(&int_TypeInfo);
-    sub_1C2D490(&StringLiteral_25037/*"{0:0000}"*/);
-    sub_1C2D490(&StringLiteral_18381/*"cs_"*/);
-    byte_4C266A3 = 1;
+    sub_1C32C20(&int_TypeInfo);
+    sub_1C32C20(&StringLiteral_25055/*"{0:0000}"*/);
+    sub_1C32C20(&StringLiteral_18385/*"cs_"*/);
+    byte_4C36D7B = 1;
   }
-  v9 = tp;
-  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9, method, v3, v4);
-  v7 = System_String__Format((System_String_o *)StringLiteral_25037/*"{0:0000}"*/, v6, 0);
-  return System_String__Concat_63457864((System_String_o *)StringLiteral_18381/*"cs_"*/, v7, 0);
+  v12 = tp;
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, method, v3, v4, v5, v6, v7);
+  v10 = System_String__Format((System_String_o *)StringLiteral_25055/*"{0:0000}"*/, v9, 0);
+  return System_String__Concat_63518544((System_String_o *)StringLiteral_18385/*"cs_"*/, v10, 0);
 }
 
 
@@ -105,20 +107,20 @@ void CommandSpellIconComponent__NotUseCommandSpellDisplay(
   BattleDataDefine_c *v6; // x0
   System_String_o *ASSET_BATTLE_COMMON; // x21
   AssetData_o *AssetStorage; // x0
-  _BOOL8 v9; // x1
   Il2CppObject *Component_object; // x21
-  UnityEngine_GameObject_o *v11; // x20
+  UnityEngine_GameObject_o *v10; // x20
+  bool v11; // w1
 
-  if ( (byte_4C266A7 & 1) == 0 )
+  if ( (byte_4C36D7F & 1) == 0 )
   {
-    sub_1C2D490(&Method_AssetData_GetObject_GameObject____77994080);
-    sub_1C2D490(&AssetManager_TypeInfo);
-    sub_1C2D490(&BattleDataDefine_TypeInfo);
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_18382/*"cs_txt_disable"*/);
-    sub_1C2D490(&StringLiteral_3104/*"BattleAssetUIAtlas"*/);
-    byte_4C266A7 = 1;
+    sub_1C32C20(&Method_AssetData_GetObject_GameObject____78059392);
+    sub_1C32C20(&AssetManager_TypeInfo);
+    sub_1C32C20(&BattleDataDefine_TypeInfo);
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_18386/*"cs_txt_disable"*/);
+    sub_1C32C20(&StringLiteral_3107/*"BattleAssetUIAtlas"*/);
+    byte_4C36D7F = 1;
   }
   notUseCommandSpellSpr = (UnityEngine_Object_o *)this->fields.notUseCommandSpellSpr;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -137,15 +139,15 @@ void CommandSpellIconComponent__NotUseCommandSpellDisplay(
     AssetStorage = AssetManager__getAssetStorage(ASSET_BATTLE_COMMON, 0);
     if ( AssetStorage )
     {
-      AssetStorage = (AssetData_o *)AssetData__GetObject_object__51051712(
+      AssetStorage = (AssetData_o *)AssetData__GetObject_object__51111776(
                                       AssetStorage,
-                                      (System_String_o *)StringLiteral_3104/*"BattleAssetUIAtlas"*/,
-                                      (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080);
+                                      (System_String_o *)StringLiteral_3107/*"BattleAssetUIAtlas"*/,
+                                      (const MethodInfo_30BE760 *)Method_AssetData_GetObject_GameObject____78059392);
       if ( AssetStorage )
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)AssetStorage,
-                             (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                             (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -157,7 +159,7 @@ void CommandSpellIconComponent__NotUseCommandSpellDisplay(
           AssetStorage = (AssetData_o *)this->fields.notUseCommandSpellSpr;
           if ( AssetStorage )
           {
-            UISprite__set_spriteName((UISprite_o *)AssetStorage, (System_String_o *)StringLiteral_18382/*"cs_txt_disable"*/, 0);
+            UISprite__set_spriteName((UISprite_o *)AssetStorage, (System_String_o *)StringLiteral_18386/*"cs_txt_disable"*/, 0);
             AssetStorage = (AssetData_o *)this->fields.notUseCommandSpellSpr;
             if ( AssetStorage )
             {
@@ -172,7 +174,7 @@ void CommandSpellIconComponent__NotUseCommandSpellDisplay(
                                                 0);
                 if ( data )
                 {
-                  v11 = (UnityEngine_GameObject_o *)AssetStorage;
+                  v10 = (UnityEngine_GameObject_o *)AssetStorage;
                   AssetStorage = (AssetData_o *)data->fields.quest_ent;
                   if ( AssetStorage )
                   {
@@ -180,15 +182,15 @@ void CommandSpellIconComponent__NotUseCommandSpellDisplay(
                     if ( ((unsigned __int8)AssetStorage & 1) != 0 )
                     {
                       AssetStorage = (AssetData_o *)BattleData__GetOverwriteCommandSpellIcon(data, 0);
-                      v9 = (_DWORD)AssetStorage != 0;
+                      v11 = (_DWORD)AssetStorage != 0;
                     }
                     else
                     {
-                      v9 = 0;
+                      v11 = 0;
                     }
-                    if ( v11 )
+                    if ( v10 )
                     {
-                      UnityEngine_GameObject__SetActive(v11, v9, 0);
+                      UnityEngine_GameObject__SetActive(v10, v11, 0);
                       return;
                     }
                   }
@@ -199,7 +201,7 @@ void CommandSpellIconComponent__NotUseCommandSpellDisplay(
         }
       }
     }
-    sub_1C2D6EC(AssetStorage, v9);
+    sub_1C32E7C(AssetStorage);
   }
 }
 
@@ -208,25 +210,24 @@ void CommandSpellIconComponent__ReleaseAll(CommandSpellIconComponent_o *this, co
 {
   UnityEngine_Object_o *myTexture; // x20
   _BOOL8 v4; // x0
-  __int64 v5; // x1
-  long double v6; // q0
-  UnityEngine_Object_o *v7; // x21
+  long double v5; // q0
+  UnityEngine_Object_o *v6; // x21
   CGThumbnailListItem_o *p_assetData; // x19
   struct AssetData_o *assetData; // t1
+  __int64 v9; // x0
   __int64 v10; // x0
-  __int64 v11; // x0
-  UnityEngine_Object_o *v12; // x20
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  UnityEngine_Object_o *v11; // x20
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
   AssetData_o *klass; // x20
 
-  if ( (byte_4C2669C & 1) == 0 )
+  if ( (byte_4C36D74 & 1) == 0 )
   {
-    sub_1C2D490(&AssetManager_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_AssetManager__getInstance__);
-    sub_1C2D490(&StringLiteral_16265/*"_MaskTex"*/);
-    byte_4C2669C = 1;
+    sub_1C32C20(&AssetManager_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_AssetManager__getInstance__);
+    sub_1C32C20(&StringLiteral_16267/*"_MaskTex"*/);
+    byte_4C36D74 = 1;
   }
   myTexture = (UnityEngine_Object_o *)this->fields.myTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -236,22 +237,22 @@ void CommandSpellIconComponent__ReleaseAll(CommandSpellIconComponent_o *this, co
     goto LABEL_14;
   if ( !myTexture )
 LABEL_27:
-    sub_1C2D6EC(v4, v5);
-  v7 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UnityEngine_Object_o *, Il2CppMethodPointer))myTexture->klass[1].vtable._0_Equals.method)(
+    sub_1C32E7C(v4);
+  v6 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UnityEngine_Object_o *, Il2CppMethodPointer))myTexture->klass[1].vtable._0_Equals.method)(
                                  myTexture,
                                  myTexture->klass[1].vtable._1_Finalize.methodPtr);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v4 = UnityEngine_Object__op_Equality(v7, 0, 0);
+  v4 = UnityEngine_Object__op_Equality(v6, 0, 0);
   if ( !v4 )
   {
-    if ( v7 )
+    if ( v6 )
     {
-      UnityEngine_Material__set_mainTexture((UnityEngine_Material_o *)v7, 0, 0);
-      UnityEngine_Material__SetTexture((UnityEngine_Material_o *)v7, (System_String_o *)StringLiteral_16265/*"_MaskTex"*/, 0, 0);
+      UnityEngine_Material__set_mainTexture((UnityEngine_Material_o *)v6, 0, 0);
+      UnityEngine_Material__SetTexture((UnityEngine_Material_o *)v6, (System_String_o *)StringLiteral_16267/*"_MaskTex"*/, 0, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71163704(v7, 0);
+      UnityEngine_Object__Destroy_71223640(v6, 0);
       ((void (__fastcall *)(UnityEngine_Object_o *, _QWORD, Il2CppMethodPointer))myTexture->klass[1].vtable._1_Finalize.method)(
         myTexture,
         0,
@@ -261,24 +262,24 @@ LABEL_14:
       p_assetData = (CGThumbnailListItem_o *)&this->fields.assetData;
       if ( assetData )
       {
-        v10 = *((_QWORD *)Method_SingletonMonoBehaviour_AssetManager__getInstance__ + 4);
+        v9 = *((_QWORD *)Method_SingletonMonoBehaviour_AssetManager__getInstance__ + 4);
+        if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
+          v9 = sub_1C83334(v5);
+        v10 = *(_QWORD *)(*(_QWORD *)(v9 + 192) + 16LL);
         if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-          v10 = sub_1C7DBA4(v6);
-        v11 = *(_QWORD *)(*(_QWORD *)(v10 + 192) + 16LL);
-        if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-          v11 = sub_1C7DBA4(v6);
-        v12 = **(UnityEngine_Object_o ***)(v11 + 184);
+          v10 = sub_1C83334(v5);
+        v11 = **(UnityEngine_Object_o ***)(v10 + 184);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        if ( UnityEngine_Object__op_Implicit(v12, 0) )
+        if ( UnityEngine_Object__op_Implicit(v11, 0) )
         {
           klass = (AssetData_o *)p_assetData->klass;
           if ( !AssetManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-          AssetManager__releaseAsset_40313100(klass, 0);
+          AssetManager__releaseAsset_40435328(klass, 0);
         }
         p_assetData->klass = 0;
-        sub_1C2D434(p_assetData, 0, v13, v14);
+        sub_1C32BC4(p_assetData, 0, v12, v13);
       }
       return;
     }
@@ -296,12 +297,12 @@ void CommandSpellIconComponent__SetChangeCmdSpellData(
   const MethodInfo *v6; // x2
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C266A0 & 1) == 0 )
+  if ( (byte_4C36D78 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_8601/*"MAX_COMMAND_SPELL"*/);
-    byte_4C266A0 = 1;
+    sub_1C32C20(&StringLiteral_8607/*"MAX_COMMAND_SPELL"*/);
+    byte_4C36D78 = 1;
   }
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8601/*"MAX_COMMAND_SPELL"*/, 0);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8607/*"MAX_COMMAND_SPELL"*/, 0);
   CommandSpellIconComponent__SetImageType(this, cmdSpellImgId, v6);
   CommandSpellIconComponent__SetRemain(this, Value, v7);
 }
@@ -337,7 +338,7 @@ void CommandSpellIconComponent__SetData(
   const MethodInfo *v7; // x2
 
   if ( !entity )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   v3 = entity;
   SpellImageId = UserGameEntity__get_SpellImageId(entity, 0);
   LODWORD(v3) = UserGameEntity__getCommandSpell(v3, 0);
@@ -362,7 +363,7 @@ void CommandSpellIconComponent__SetDataBattle(
   if ( !entity
     || (v5 = this, this = (CommandSpellIconComponent_o *)UserGameEntity__get_SpellImageIdBattle(entity, 0), !battleData) )
   {
-    sub_1C2D6EC(this, entity);
+    sub_1C32E7C(this);
   }
   v7 = (int)this;
   v8 = BattleData__CheckCurrentTemporaryCommandSpell(battleData, entity, 0);
@@ -378,13 +379,12 @@ void CommandSpellIconComponent__SetDispDisableSp(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *disableSp; // x21
-  __int64 v6; // x1
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4C266A1 & 1) == 0 )
+  if ( (byte_4C36D79 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C266A1 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C36D79 = 1;
   }
   disableSp = (UnityEngine_Object_o *)this->fields.disableSp;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -395,7 +395,7 @@ void CommandSpellIconComponent__SetDispDisableSp(
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
     {
-      sub_1C2D6EC(gameObject, v6);
+      sub_1C32E7C(gameObject);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, isDisp, 0);
   }
@@ -414,15 +414,15 @@ void CommandSpellIconComponent__SetFullData(
   const MethodInfo *v8; // x2
 
   v4 = this;
-  if ( (byte_4C2669F & 1) == 0 )
+  if ( (byte_4C36D77 & 1) == 0 )
   {
-    this = (CommandSpellIconComponent_o *)sub_1C2D490(&StringLiteral_8601/*"MAX_COMMAND_SPELL"*/);
-    byte_4C2669F = 1;
+    this = (CommandSpellIconComponent_o *)sub_1C32C20(&StringLiteral_8607/*"MAX_COMMAND_SPELL"*/);
+    byte_4C36D77 = 1;
   }
   if ( !entity )
-    sub_1C2D6EC(this, entity);
+    sub_1C32E7C(this);
   SpellImageId = UserGameEntity__get_SpellImageId(entity, 0);
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8601/*"MAX_COMMAND_SPELL"*/, 0);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8607/*"MAX_COMMAND_SPELL"*/, 0);
   CommandSpellIconComponent__SetImageType(v4, SpellImageId, v7);
   CommandSpellIconComponent__SetRemain(v4, Value, v8);
 }
@@ -432,48 +432,47 @@ void CommandSpellIconComponent__SetImageType(CommandSpellIconComponent_o *this, 
 {
   __int64 v5; // x20
   __int64 v6; // x0
-  __int64 v7; // x1
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x2
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  const MethodInfo *v9; // x2
   System_String_o *SpellImageAssetStorageName; // x21
-  const MethodInfo *v12; // x1
-  AssetLoader_LoadEndDataHandler_o *v13; // x19
+  const MethodInfo *v11; // x1
+  AssetLoader_LoadEndDataHandler_o *v12; // x19
 
-  if ( (byte_4C266A4 & 1) == 0 )
+  if ( (byte_4C36D7C & 1) == 0 )
   {
-    sub_1C2D490(&AssetManager_TypeInfo);
-    sub_1C2D490(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C2D490(&Method_CommandSpellIconComponent___c__DisplayClass23_0__SetImageType_b__0__);
-    sub_1C2D490(&CommandSpellIconComponent___c__DisplayClass23_0_TypeInfo);
-    byte_4C266A4 = 1;
+    sub_1C32C20(&AssetManager_TypeInfo);
+    sub_1C32C20(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C32C20(&Method_CommandSpellIconComponent___c__DisplayClass23_0__SetImageType_b__0__);
+    sub_1C32C20(&CommandSpellIconComponent___c__DisplayClass23_0_TypeInfo);
+    byte_4C36D7C = 1;
   }
-  v5 = sub_1C2D6DC(CommandSpellIconComponent___c__DisplayClass23_0_TypeInfo);
+  v5 = sub_1C32E6C(CommandSpellIconComponent___c__DisplayClass23_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C2D6EC(v6, v7);
+    sub_1C32E7C(v6);
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C2D434((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v7, v8);
   *(_DWORD *)(v5 + 24) = tp;
   if ( this->fields.ImageTypeOld != tp )
   {
     this->fields.ImageType = tp;
     this->fields.ImageTypeOld = tp;
-    SpellImageAssetStorageName = CommandSpellIconComponent__GetSpellImageAssetStorageName(this, tp, v10);
+    SpellImageAssetStorageName = CommandSpellIconComponent__GetSpellImageAssetStorageName(this, tp, v9);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     if ( AssetManager__isExistAssetStorage(SpellImageAssetStorageName, 0) )
     {
-      CommandSpellIconComponent__ReleaseAll(this, v12);
-      v13 = (AssetLoader_LoadEndDataHandler_o *)sub_1C2D6DC(AssetLoader_LoadEndDataHandler_TypeInfo);
+      CommandSpellIconComponent__ReleaseAll(this, v11);
+      v12 = (AssetLoader_LoadEndDataHandler_o *)sub_1C32E6C(AssetLoader_LoadEndDataHandler_TypeInfo);
       AssetLoader_LoadEndDataHandler___ctor(
-        v13,
+        v12,
         (Il2CppObject *)v5,
         Method_CommandSpellIconComponent___c__DisplayClass23_0__SetImageType_b__0__,
         0);
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__loadAssetStorage(SpellImageAssetStorageName, v13, 1, 0);
+      AssetManager__loadAssetStorage(SpellImageAssetStorageName, v12, 1, 0);
     }
   }
 }
@@ -483,13 +482,12 @@ void CommandSpellIconComponent__SetRemain(CommandSpellIconComponent_o *this, int
 {
   UnityEngine_Object_o *myTexture; // x20
   _BOOL8 v6; // x0
-  __int64 v7; // x1
-  UnityEngine_Rect_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Rect_o v7; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C266A5 & 1) == 0 )
+  if ( (byte_4C36D7D & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C266A5 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C36D7D = 1;
   }
   this->fields.Remain = count;
   myTexture = (UnityEngine_Object_o *)this->fields.myTexture;
@@ -499,12 +497,12 @@ void CommandSpellIconComponent__SetRemain(CommandSpellIconComponent_o *this, int
   if ( v6 )
   {
     if ( !myTexture )
-      sub_1C2D6EC(v6, v7);
-    v8.fields.m_Width = 0.5;
-    v8.fields.m_YMin = (float)(((unsigned int)count >> 1) & 1) * 0.5;
-    v8.fields.m_XMin = (float)((count & 1) == 0) * 0.5;
-    v8.fields.m_Height = 0.5;
-    UITexture__set_uvRect((UITexture_o *)myTexture, v8, 0);
+      sub_1C32E7C(v6);
+    v7.fields.m_Width = 0.5;
+    v7.fields.m_YMin = (float)(((unsigned int)count >> 1) & 1) * 0.5;
+    v7.fields.m_XMin = (float)((count & 1) == 0) * 0.5;
+    v7.fields.m_Height = 0.5;
+    UITexture__set_uvRect((UITexture_o *)myTexture, v7, 0);
   }
 }
 
@@ -529,21 +527,21 @@ bool CommandSpellIconComponent__SetRevocationData(
   int32_t result[2]; // [xsp+8h] [xbp-38h] BYREF
 
   v6 = overwriteImageId;
-  if ( (byte_4C2669E & 1) == 0 )
+  if ( (byte_4C36D76 & 1) == 0 )
   {
-    sub_1C2D490(&AtlasManager_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&TerminalPramsManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_18382/*"cs_txt_disable"*/);
-    byte_4C2669E = 1;
+    sub_1C32C20(&AtlasManager_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_18386/*"cs_txt_disable"*/);
+    byte_4C36D76 = 1;
   }
   *(_QWORD *)result = 0;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4C23DDC )
+  if ( !byte_4C344B0 )
   {
-    sub_1C2D490(&TerminalPramsManager_TypeInfo);
-    byte_4C23DDC = 1;
+    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    byte_4C344B0 = 1;
   }
   v9 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -557,7 +555,7 @@ bool CommandSpellIconComponent__SetRevocationData(
     if ( overwriteSpellCount < 0 )
     {
       if ( !entity )
-        sub_1C2D6EC(v9, entity);
+        sub_1C32E7C(v9);
       result[0] = UserGameEntity__get_SpellImageId(entity, 0);
       v6 = System_Int32__ToString((int32_t)result, 0);
       CommandSpell = UserGameEntity__getCommandSpell(entity, 0);
@@ -571,7 +569,7 @@ bool CommandSpellIconComponent__SetRevocationData(
       v14 = this->fields.disableSp;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventSprite(v14, (System_String_o *)StringLiteral_18382/*"cs_txt_disable"*/, 0);
+      AtlasManager__SetEventSprite(v14, (System_String_o *)StringLiteral_18386/*"cs_txt_disable"*/, 0);
     }
     CommandSpellIconComponent__SetDispDisableSp(this, overwriteSpellCount >= 0, v13);
     result[1] = 0;
@@ -601,7 +599,7 @@ void CommandSpellIconComponent__SetSize(
 
   myTexture = (UIWidget_o *)this->fields.myTexture;
   if ( !myTexture )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   if ( sz.fields.x == INFINITY )
     x = 0x80000000;
   else
@@ -627,24 +625,23 @@ void CommandSpellIconComponent__SetTexture(
   System_String_o *SpellImageFileName; // x0
   UnityEngine_Object_o *myTexture; // x19
   System_String_o *v9; // x22
-  Il2CppObject *Object_object__51051712; // x20
+  Il2CppObject *Object_object__51111776; // x20
   System_String_o *v11; // x0
   Il2CppObject *v12; // x0
-  __int64 v13; // x1
-  UnityEngine_Texture_o *v14; // x21
-  UnityEngine_Object_o *v15; // x22
-  UnityEngine_Shader_o *v16; // x23
+  UnityEngine_Texture_o *v13; // x21
+  UnityEngine_Object_o *v14; // x22
+  UnityEngine_Shader_o *v15; // x23
 
   v6 = this;
-  if ( (byte_4C266A6 & 1) == 0 )
+  if ( (byte_4C36D7E & 1) == 0 )
   {
-    sub_1C2D490(&Method_AssetData_GetObject_Texture2D____77994112);
-    sub_1C2D490(&UnityEngine_Material_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_16531/*"_alpha"*/);
-    sub_1C2D490(&StringLiteral_4932/*"Custom/SpriteWithMask"*/);
-    this = (CommandSpellIconComponent_o *)sub_1C2D490(&StringLiteral_16265/*"_MaskTex"*/);
-    byte_4C266A6 = 1;
+    sub_1C32C20(&Method_AssetData_GetObject_Texture2D____78059424);
+    sub_1C32C20(&UnityEngine_Material_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_16533/*"_alpha"*/);
+    sub_1C32C20(&StringLiteral_4940/*"Custom/SpriteWithMask"*/);
+    this = (CommandSpellIconComponent_o *)sub_1C32C20(&StringLiteral_16267/*"_MaskTex"*/);
+    byte_4C36D7E = 1;
   }
   if ( data )
   {
@@ -655,42 +652,42 @@ void CommandSpellIconComponent__SetTexture(
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(myTexture, 0, 0) )
     {
-      Object_object__51051712 = AssetData__GetObject_object__51051712(
+      Object_object__51111776 = AssetData__GetObject_object__51111776(
                                   data,
                                   v9,
-                                  (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_Texture2D____77994112);
-      v11 = System_String__Concat_63457864(v9, (System_String_o *)StringLiteral_16531/*"_alpha"*/, 0);
-      v12 = AssetData__GetObject_object__51051712(
+                                  (const MethodInfo_30BE760 *)Method_AssetData_GetObject_Texture2D____78059424);
+      v11 = System_String__Concat_63518544(v9, (System_String_o *)StringLiteral_16533/*"_alpha"*/, 0);
+      v12 = AssetData__GetObject_object__51111776(
               data,
               v11,
-              (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_Texture2D____77994112);
+              (const MethodInfo_30BE760 *)Method_AssetData_GetObject_Texture2D____78059424);
       if ( !myTexture )
         goto LABEL_15;
-      v14 = (UnityEngine_Texture_o *)v12;
-      v15 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UnityEngine_Object_o *, Il2CppMethodPointer))myTexture->klass[1].vtable._0_Equals.method)(
+      v13 = (UnityEngine_Texture_o *)v12;
+      v14 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UnityEngine_Object_o *, Il2CppMethodPointer))myTexture->klass[1].vtable._0_Equals.method)(
                                       myTexture,
                                       myTexture->klass[1].vtable._1_Finalize.methodPtr);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v12 = (Il2CppObject *)UnityEngine_Object__op_Equality(v15, 0, 0);
+      v12 = (Il2CppObject *)UnityEngine_Object__op_Equality(v14, 0, 0);
       if ( ((unsigned __int8)v12 & 1) != 0 )
       {
-        v16 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4932/*"Custom/SpriteWithMask"*/, 0);
-        v15 = (UnityEngine_Object_o *)sub_1C2D6DC(UnityEngine_Material_TypeInfo);
-        UnityEngine_Material___ctor((UnityEngine_Material_o *)v15, v16, 0);
+        v15 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4940/*"Custom/SpriteWithMask"*/, 0);
+        v14 = (UnityEngine_Object_o *)sub_1C32E6C(UnityEngine_Material_TypeInfo);
+        UnityEngine_Material___ctor((UnityEngine_Material_o *)v14, v15, 0);
         v12 = (Il2CppObject *)((__int64 (__fastcall *)(UnityEngine_Object_o *, UnityEngine_Object_o *, Il2CppMethodPointer))myTexture->klass[1].vtable._1_Finalize.method)(
                                 myTexture,
-                                v15,
+                                v14,
                                 myTexture->klass[1].vtable._2_GetHashCode.methodPtr);
       }
-      if ( !v15 )
+      if ( !v14 )
 LABEL_15:
-        sub_1C2D6EC(v12, v13);
+        sub_1C32E7C(v12);
       UnityEngine_Material__set_mainTexture(
-        (UnityEngine_Material_o *)v15,
-        (UnityEngine_Texture_o *)Object_object__51051712,
+        (UnityEngine_Material_o *)v14,
+        (UnityEngine_Texture_o *)Object_object__51111776,
         0);
-      UnityEngine_Material__SetTexture((UnityEngine_Material_o *)v15, (System_String_o *)StringLiteral_16265/*"_MaskTex"*/, v14, 0);
+      UnityEngine_Material__SetTexture((UnityEngine_Material_o *)v14, (System_String_o *)StringLiteral_16267/*"_MaskTex"*/, v13, 0);
     }
   }
 }
@@ -716,10 +713,10 @@ void CommandSpellIconComponent___c__DisplayClass23_0___SetImageType_b__0(
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (_4__this->fields.assetData = data,
-        sub_1C2D434((CGThumbnailListItem_o *)&_4__this->fields.assetData, (int32_t)data, (int32_t)method, v3),
+        sub_1C32BC4((CGThumbnailListItem_o *)&_4__this->fields.assetData, (int32_t)data, (int32_t)method, v3),
         (_4__this = this->fields.__4__this) == 0) )
   {
-    sub_1C2D6EC(_4__this, data);
+    sub_1C32E7C(_4__this);
   }
   CommandSpellIconComponent__SetTexture(_4__this, data, this->fields.tp, v7);
 }

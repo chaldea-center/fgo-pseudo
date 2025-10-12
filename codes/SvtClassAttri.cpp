@@ -1,9 +1,9 @@
 void SvtClassAttri___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C2620E & 1) == 0 )
+  if ( (byte_4C368E6 & 1) == 0 )
   {
-    sub_1C2D490(&SvtClassAttri_TypeInfo);
-    byte_4C2620E = 1;
+    sub_1C32C20(&SvtClassAttri_TypeInfo);
+    byte_4C368E6 = 1;
   }
   SvtClassAttri_TypeInfo->static_fields->MAX_EXP_UP_RARITY = 5;
 }
@@ -54,27 +54,26 @@ int32_t SvtClassAttri__getClassId(int32_t type, const MethodInfo *method)
 float SvtClassAttri__getMagnification(int32_t attack, int32_t defense, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  __int64 v6; // x1
-  ServantClassMaster_o *v7; // x21
+  ServantClassMaster_o *v6; // x21
   int32_t RelationId; // w20
-  int32_t v9; // w1
+  int32_t v8; // w1
 
-  if ( (byte_4C2620D & 1) == 0 )
+  if ( (byte_4C368E5 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_ServantClassMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C2620D = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_ServantClassMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C368E5 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0 )
+                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0 )
   {
-    sub_1C2D6EC(Instance, v6);
+    sub_1C32E7C(Instance);
   }
-  v7 = (ServantClassMaster_o *)Instance;
+  v6 = (ServantClassMaster_o *)Instance;
   RelationId = ServantClassMaster__getRelationId((ServantClassMaster_o *)Instance, attack, 0);
-  v9 = ServantClassMaster__getRelationId(v7, defense, 0);
-  return ClassRelationMaster__getRate(RelationId, v9, 0);
+  v8 = ServantClassMaster__getRelationId(v6, defense, 0);
+  return ClassRelationMaster__getRate(RelationId, v8, 0);
 }

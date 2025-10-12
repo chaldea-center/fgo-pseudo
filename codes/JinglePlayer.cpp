@@ -15,7 +15,7 @@ void JinglePlayer__ExecuteCallback(JinglePlayer_o *this, const MethodInfo *metho
   jingleCallbackFunc = this->fields.jingleCallbackFunc;
   p_jingleCallbackFunc = (CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc;
   p_jingleCallbackFunc->klass = 0;
-  sub_1C2D434(p_jingleCallbackFunc, 0, v2, v3);
+  sub_1C32BC4(p_jingleCallbackFunc, 0, v2, v3);
   ActionExtensions__Call(jingleCallbackFunc, 0);
 }
 
@@ -38,7 +38,7 @@ bool JinglePlayer__FadeoutBgm(JinglePlayer_o *this, float fadeoutTime, const Met
   {
     jingleCallbackFunc = this->fields.jingleCallbackFunc;
     this->fields.jingleCallbackFunc = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, 0, v4, v5);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, 0, v4, v5);
     ActionExtensions__Call(jingleCallbackFunc, 0);
   }
   return v6;
@@ -75,29 +75,29 @@ void JinglePlayer__PlayBgm(
   BgmManager_c *v13; // x0
   float v14; // s0
 
-  if ( (byte_4C2693C & 1) == 0 )
+  if ( (byte_4C37013 & 1) == 0 )
   {
-    sub_1C2D490(&BgmManager_TypeInfo);
-    byte_4C2693C = 1;
+    sub_1C32C20(&BgmManager_TypeInfo);
+    byte_4C37013 = 1;
   }
   if ( this->fields.bgmName )
   {
     jingleCallbackFunc = this->fields.jingleCallbackFunc;
     this->fields.jingleCallbackFunc = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, 0, (int32_t)callbackFunc, method);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, 0, (int32_t)callbackFunc, method);
     ActionExtensions__Call(jingleCallbackFunc, 0);
   }
   this->fields.bgmName = name;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.bgmName, (int32_t)name, (int32_t)callbackFunc, method);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.bgmName, (int32_t)name, (int32_t)callbackFunc, method);
   this->fields.jingleCallbackFunc = callbackFunc;
   this->fields.bgmVolume = volume;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, (int32_t)callbackFunc, v10, v11);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, (int32_t)callbackFunc, v10, v11);
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  if ( !byte_4C24714 )
+  if ( !byte_4C34DE8 )
   {
-    sub_1C2D490(&BgmManager_TypeInfo);
-    byte_4C24714 = 1;
+    sub_1C32C20(&BgmManager_TypeInfo);
+    byte_4C34DE8 = 1;
   }
   v13 = BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -122,14 +122,13 @@ void JinglePlayer__Reset(JinglePlayer_o *this, const MethodInfo *method)
   {
     jingleCallbackFunc = this->fields.jingleCallbackFunc;
     this->fields.jingleCallbackFunc = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, 0, v2, v3);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, 0, v2, v3);
     ActionExtensions__Call(jingleCallbackFunc, 0);
   }
   BgmPlayerBase__Reset((BgmPlayerBase_o *)this, method);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void JinglePlayer__SetMute(JinglePlayer_o *this, bool isMute, const MethodInfo *method)
 {
   CriAtomSource_o *bgmPlayer; // x0
@@ -138,10 +137,10 @@ void JinglePlayer__SetMute(JinglePlayer_o *this, bool isMute, const MethodInfo *
   float bgmVolume; // s8
   CriAtomSource_c *klass; // x8
 
-  if ( (byte_4C2693D & 1) == 0 )
+  if ( (byte_4C37014 & 1) == 0 )
   {
-    sub_1C2D490(&BgmManager_TypeInfo);
-    byte_4C2693D = 1;
+    sub_1C32C20(&BgmManager_TypeInfo);
+    byte_4C37014 = 1;
   }
   if ( isMute )
   {
@@ -161,10 +160,10 @@ LABEL_16:
     bgmVolume = this->fields.bgmVolume;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-    if ( !byte_4C22146 )
+    if ( !byte_4C32815 )
     {
-      sub_1C2D490(&BgmManager_TypeInfo);
-      byte_4C22146 = 1;
+      sub_1C32C20(&BgmManager_TypeInfo);
+      byte_4C32815 = 1;
     }
     bgmPlayer = (CriAtomSource_o *)BgmManager_TypeInfo;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -180,7 +179,7 @@ LABEL_16:
       goto LABEL_16;
     }
 LABEL_18:
-    sub_1C2D6EC(bgmPlayer, isMute);
+    sub_1C32E7C(bgmPlayer);
   }
 }
 
@@ -197,7 +196,7 @@ bool JinglePlayer__StopBgm(JinglePlayer_o *this, bool keepPlayArgs, const Method
   {
     jingleCallbackFunc = this->fields.jingleCallbackFunc;
     this->fields.jingleCallbackFunc = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, 0, v4, v5);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, 0, v4, v5);
     ActionExtensions__Call(jingleCallbackFunc, 0);
   }
   return v6;

@@ -1,13 +1,13 @@
 void ServantScriptAddEntity___ctor(ServantScriptAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27CD6 & 1) == 0 )
+  if ( (byte_4C383D8 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_long___ctor__);
-    byte_4C27CD6 = 1;
+    sub_1C32C20(&Method_DataEntityBase_long___ctor__);
+    byte_4C383D8 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_33858FC *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_339439C *)Method_DataEntityBase_long___ctor__);
 }
 
 

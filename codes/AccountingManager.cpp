@@ -7,93 +7,90 @@ void AccountingManager___cctor(const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C26BB8 & 1) == 0 )
+  if ( (byte_4C37290 & 1) == 0 )
   {
-    sub_1C2D490(&AccountingManager_TypeInfo);
-    sub_1C2D490(&PaymentInfo_TypeInfo);
-    byte_4C26BB8 = 1;
+    sub_1C32C20(&AccountingManager_TypeInfo);
+    sub_1C32C20(&PaymentInfo_TypeInfo);
+    byte_4C37290 = 1;
   }
   static_fields = AccountingManager_TypeInfo->static_fields;
   *(_WORD *)&static_fields->isEnableStore = 0;
   static_fields->isRecoverStore = 1;
   static_fields->initializeResult = 0;
   static_fields->initializeStartTime = 0;
-  v2 = (PaymentInfo_o *)sub_1C2D6DC(PaymentInfo_TypeInfo);
+  v2 = (PaymentInfo_o *)sub_1C32E6C(PaymentInfo_TypeInfo);
   PaymentInfo___ctor(v2, v3);
   v4 = AccountingManager_TypeInfo->static_fields;
   v4->paymentInfo = v2;
-  sub_1C2D434((CGThumbnailListItem_o *)&v4->paymentInfo, (int32_t)v2, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&v4->paymentInfo, (int32_t)v2, v5, v6);
 }
 
 
 void AccountingManager___ctor(AccountingManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C26BB7 & 1) == 0 )
+  if ( (byte_4C3728F & 1) == 0 )
   {
-    sub_1C2D490(&Method_SingletonMonoBehaviour_AccountingManager___ctor__);
-    byte_4C26BB7 = 1;
+    sub_1C32C20(&Method_SingletonMonoBehaviour_AccountingManager___ctor__);
+    byte_4C3728F = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_39D40E4 *)Method_SingletonMonoBehaviour_AccountingManager___ctor__);
+    (const MethodInfo_39E2DEC *)Method_SingletonMonoBehaviour_AccountingManager___ctor__);
 }
 
 
 void AccountingManager__AddExtraData(AccountingManager_o *this, System_String_o *value, const MethodInfo *method)
 {
   System_Collections_Generic_Dictionary_string__object__o *Dictionary; // x0
-  __int64 v5; // x1
   struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   Il2CppObject *Instance; // x0
-  __int64 v8; // x1
-  CrashReporter_o *v9; // x20
-  System_String_o *v10; // x0
-  __int64 v11; // x1
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v12; // [xsp+0h] [xbp-60h] BYREF
+  CrashReporter_o *v7; // x20
+  System_String_o *v8; // x0
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v9; // [xsp+0h] [xbp-60h] BYREF
 
-  if ( (byte_4C26BB6 & 1) == 0 )
+  if ( (byte_4C3728E & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__);
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__);
-    sub_1C2D490(&JsonManager_TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__);
-    sub_1C2D490(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    byte_4C26BB6 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__);
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__);
+    sub_1C32C20(&JsonManager_TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__);
+    sub_1C32C20(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    byte_4C3728E = 1;
   }
-  memset(&v12, 0, sizeof(v12));
+  memset(&v9, 0, sizeof(v9));
   if ( !System_String__IsNullOrEmpty(value, 0) )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     Dictionary = JsonManager__getDictionary(value, 0);
     if ( !Dictionary )
-      sub_1C2D6EC(0, v5);
+      sub_1C32E7C(0);
     System_Collections_Generic_Dictionary_object__object___GetEnumerator(
-      &v12,
+      &v9,
       (System_Collections_Generic_Dictionary_object__object__o *)Dictionary,
-      (const MethodInfo_344A758 *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
+      (const MethodInfo_34591F8 *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
     while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
-              &v12,
-              (const MethodInfo_3546DD4 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
+              &v9,
+              (const MethodInfo_3555874 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
     {
-      current = v12.fields._current;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+      current = v9.fields._current;
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
       if ( !current.fields.value )
-        sub_1C2D6EC(Instance, v8);
-      v9 = (CrashReporter_o *)Instance;
-      v10 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))current.fields.value->klass->vtable[3].methodPtr)(
-                                 current.fields.value,
-                                 current.fields.value->klass->vtable[3].method);
-      if ( !v9 )
-        sub_1C2D6EC(v10, v11);
-      CrashReporter__AddCustomKey(v9, (System_String_o *)current.fields.key, v10, 0);
+        sub_1C32E7C(Instance);
+      v7 = (CrashReporter_o *)Instance;
+      v8 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))current.fields.value->klass->vtable[3].methodPtr)(
+                                current.fields.value,
+                                current.fields.value->klass->vtable[3].method);
+      if ( !v7 )
+        sub_1C32E7C(v8);
+      CrashReporter__AddCustomKey(v7, (System_String_o *)current.fields.key, v8, 0);
     }
     System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
-      &v12,
-      (const MethodInfo_3546EF4 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
+      &v9,
+      (const MethodInfo_3555994 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
   }
 }
 
@@ -105,11 +102,11 @@ void AccountingManager__AddExtraDataProductID(AccountingManager_o *this, const M
   AccountingManager_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C26BB5 & 1) == 0 )
+  if ( (byte_4C3728D & 1) == 0 )
   {
-    sub_1C2D490(&AccountingManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_25220/*"{{\"ProductId\":\"{0}\"}}"*/);
-    byte_4C26BB5 = 1;
+    sub_1C32C20(&AccountingManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_25238/*"{{\"ProductId\":\"{0}\"}}"*/);
+    byte_4C3728D = 1;
   }
   v2 = AccountingManager_TypeInfo;
   if ( !AccountingManager_TypeInfo->_2.cctor_finished )
@@ -119,9 +116,9 @@ void AccountingManager__AddExtraDataProductID(AccountingManager_o *this, const M
   }
   paymentInfo = v2->static_fields->paymentInfo;
   if ( !paymentInfo )
-    sub_1C2D6EC(v2, method);
+    sub_1C32E7C(v2);
   v4 = (AccountingManager_o *)System_String__Format(
-                                (System_String_o *)StringLiteral_25220/*"{{\"ProductId\":\"{0}\"}}"*/,
+                                (System_String_o *)StringLiteral_25238/*"{{\"ProductId\":\"{0}\"}}"*/,
                                 (Il2CppObject *)paymentInfo->fields._ProductId_k__BackingField,
                                 0);
   AccountingManager__AddExtraData(v4, (System_String_o *)v4, v5);
@@ -144,7 +141,7 @@ bool AccountingManager__CallbackResult(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C2D434(p_callbackFunc, 0, perMonthAmount, method);
+    sub_1C32BC4(p_callbackFunc, 0, perMonthAmount, method);
     ((void (__fastcall *)(intptr_t, _QWORD, _QWORD, intptr_t))v5->fields.invoke_impl)(
       v5->fields.method_code,
       (unsigned int)result,
@@ -161,10 +158,10 @@ void AccountingManager__ClearAll(const MethodInfo *method)
   System_String_o *PaymentHistoryPath; // x19
   AccountingManager_c *v3; // x0
 
-  if ( (byte_4C26BAC & 1) == 0 )
+  if ( (byte_4C37284 & 1) == 0 )
   {
-    sub_1C2D490(&AccountingManager_TypeInfo);
-    byte_4C26BAC = 1;
+    sub_1C32C20(&AccountingManager_TypeInfo);
+    byte_4C37284 = 1;
   }
   v1 = AccountingManager_TypeInfo;
   if ( !AccountingManager_TypeInfo->_2.cctor_finished )
@@ -181,29 +178,28 @@ void AccountingManager__ClearAll(const MethodInfo *method)
 
 void AccountingManager__ClearPayment(const MethodInfo *method)
 {
-  __int64 v1; // x1
-  const MethodInfo *v2; // x2
-  AccountingManager_c *v3; // x0
+  const MethodInfo *v1; // x2
+  AccountingManager_c *v2; // x0
   PaymentInfo_o *paymentInfo; // x0
-  const MethodInfo *v5; // x0
+  const MethodInfo *v4; // x0
   System_String_o *PaymentFileName; // x19
 
-  if ( (byte_4C26BAD & 1) == 0 )
+  if ( (byte_4C37285 & 1) == 0 )
   {
-    sub_1C2D490(&AccountingManager_TypeInfo);
-    byte_4C26BAD = 1;
+    sub_1C32C20(&AccountingManager_TypeInfo);
+    byte_4C37285 = 1;
   }
-  v3 = AccountingManager_TypeInfo;
+  v2 = AccountingManager_TypeInfo;
   if ( !AccountingManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AccountingManager_TypeInfo);
-    v3 = AccountingManager_TypeInfo;
+    v2 = AccountingManager_TypeInfo;
   }
-  paymentInfo = v3->static_fields->paymentInfo;
+  paymentInfo = v2->static_fields->paymentInfo;
   if ( !paymentInfo )
-    sub_1C2D6EC(0, v1);
-  PaymentInfo__Clear(paymentInfo, 0, v2);
-  PaymentFileName = AccountingManager__GetPaymentFileName(v5);
+    sub_1C32E7C(0);
+  PaymentInfo__Clear(paymentInfo, 0, v1);
+  PaymentFileName = AccountingManager__GetPaymentFileName(v4);
   if ( System_IO_File__Exists(PaymentFileName, 0) )
     System_IO_File__Delete(PaymentFileName, 0);
 }
@@ -214,10 +210,10 @@ void AccountingManager__CreatePaymentHistoryDirectory(const MethodInfo *method)
   AccountingManager_c *v1; // x0
   System_String_o *PaymentHistoryPath; // x19
 
-  if ( (byte_4C26BAB & 1) == 0 )
+  if ( (byte_4C37283 & 1) == 0 )
   {
-    sub_1C2D490(&AccountingManager_TypeInfo);
-    byte_4C26BAB = 1;
+    sub_1C32C20(&AccountingManager_TypeInfo);
+    byte_4C37283 = 1;
   }
   v1 = AccountingManager_TypeInfo;
   if ( !AccountingManager_TypeInfo->_2.cctor_finished )
@@ -233,11 +229,11 @@ void AccountingManager__DeletePayment(AccountingManager_o *this, const MethodInf
   ManagerConfig_c *v2; // x0
   AccountingManager_c *v3; // x0
 
-  if ( (byte_4C26BB2 & 1) == 0 )
+  if ( (byte_4C3728A & 1) == 0 )
   {
-    sub_1C2D490(&AccountingManager_TypeInfo);
-    sub_1C2D490(&ManagerConfig_TypeInfo);
-    byte_4C26BB2 = 1;
+    sub_1C32C20(&AccountingManager_TypeInfo);
+    sub_1C32C20(&ManagerConfig_TypeInfo);
+    byte_4C3728A = 1;
   }
   v2 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -273,32 +269,32 @@ System_String_o *AccountingManager__GetHistoryFileName(System_String_o *name, co
   AccountingManager_c *v3; // x0
   System_String_o *PaymentHistoryPath; // x0
 
-  if ( (byte_4C26BA9 & 1) == 0 )
+  if ( (byte_4C37281 & 1) == 0 )
   {
-    sub_1C2D490(&AccountingManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_1048/*"/"*/);
-    byte_4C26BA9 = 1;
+    sub_1C32C20(&AccountingManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_1048/*"/"*/);
+    byte_4C37281 = 1;
   }
   v3 = AccountingManager_TypeInfo;
   if ( !AccountingManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AccountingManager_TypeInfo);
   PaymentHistoryPath = AccountingManager__GetPaymentHistoryPath((const MethodInfo *)v3);
-  return System_String__Concat_63496112(PaymentHistoryPath, (System_String_o *)StringLiteral_1048/*"/"*/, name, 0);
+  return System_String__Concat_63556792(PaymentHistoryPath, (System_String_o *)StringLiteral_1048/*"/"*/, name, 0);
 }
 
 
-System_String_o *AccountingManager__GetHistoryFileName_41202476(int64_t time, const MethodInfo *method)
+System_String_o *AccountingManager__GetHistoryFileName_41324728(int64_t time, const MethodInfo *method)
 {
   AccountingManager_c *v3; // x0
   System_String_o *PaymentHistoryPath; // x20
-  System_String_o *FileName_40198988; // x2
+  System_String_o *FileName_40321216; // x2
 
-  if ( (byte_4C26BAA & 1) == 0 )
+  if ( (byte_4C37282 & 1) == 0 )
   {
-    sub_1C2D490(&AccountingManager_TypeInfo);
-    sub_1C2D490(&DatFileName_TypeInfo);
-    sub_1C2D490(&StringLiteral_1048/*"/"*/);
-    byte_4C26BAA = 1;
+    sub_1C32C20(&AccountingManager_TypeInfo);
+    sub_1C32C20(&DatFileName_TypeInfo);
+    sub_1C32C20(&StringLiteral_1048/*"/"*/);
+    byte_4C37282 = 1;
   }
   v3 = AccountingManager_TypeInfo;
   if ( !AccountingManager_TypeInfo->_2.cctor_finished )
@@ -306,8 +302,8 @@ System_String_o *AccountingManager__GetHistoryFileName_41202476(int64_t time, co
   PaymentHistoryPath = AccountingManager__GetPaymentHistoryPath((const MethodInfo *)v3);
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
-  FileName_40198988 = DatFileName__getFileName_40198988(22, time, 0);
-  return System_String__Concat_63496112(PaymentHistoryPath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName_40198988, 0);
+  FileName_40321216 = DatFileName__getFileName_40321216(22, time, 0);
+  return System_String__Concat_63556792(PaymentHistoryPath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName_40321216, 0);
 }
 
 
@@ -316,12 +312,12 @@ System_String_o *AccountingManager__GetOldPaymentFileName(const MethodInfo *meth
   System_String_o *temporaryCachePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4C26BA6 & 1) == 0 )
+  if ( (byte_4C3727E & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Application_TypeInfo);
-    sub_1C2D490(&DatFileName_TypeInfo);
-    sub_1C2D490(&StringLiteral_1048/*"/"*/);
-    byte_4C26BA6 = 1;
+    sub_1C32C20(&UnityEngine_Application_TypeInfo);
+    sub_1C32C20(&DatFileName_TypeInfo);
+    sub_1C32C20(&StringLiteral_1048/*"/"*/);
+    byte_4C3727E = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -329,7 +325,7 @@ System_String_o *AccountingManager__GetOldPaymentFileName(const MethodInfo *meth
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(21, 0);
-  return System_String__Concat_63496112(temporaryCachePath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName, 0);
+  return System_String__Concat_63556792(temporaryCachePath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName, 0);
 }
 
 
@@ -338,12 +334,12 @@ System_String_o *AccountingManager__GetPaymentFileName(const MethodInfo *method)
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4C26BA7 & 1) == 0 )
+  if ( (byte_4C3727F & 1) == 0 )
   {
-    sub_1C2D490(&AndroidUtil_TypeInfo);
-    sub_1C2D490(&DatFileName_TypeInfo);
-    sub_1C2D490(&StringLiteral_1048/*"/"*/);
-    byte_4C26BA7 = 1;
+    sub_1C32C20(&AndroidUtil_TypeInfo);
+    sub_1C32C20(&DatFileName_TypeInfo);
+    sub_1C32C20(&StringLiteral_1048/*"/"*/);
+    byte_4C3727F = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -351,7 +347,7 @@ System_String_o *AccountingManager__GetPaymentFileName(const MethodInfo *method)
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(21, 0);
-  return System_String__Concat_63496112(DatFileSavePath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName, 0);
+  return System_String__Concat_63556792(DatFileSavePath, (System_String_o *)StringLiteral_1048/*"/"*/, FileName, 0);
 }
 
 
@@ -363,46 +359,45 @@ System_String_array *AccountingManager__GetPaymentHistoryList(AccountingManager_
   System_String_o *PaymentHistoryPath; // x21
   System_IO_DirectoryInfo_o *v6; // x20
   System_String_o *Files; // x0
-  __int64 v8; // x1
-  __int64 v9; // x2
   int klass; // w8
-  System_String_o *v11; // x20
-  unsigned int v12; // w23
-  System_String_c **v13; // x22
-  System_IO_FileSystemInfo_o **v14; // x22
-  System_IO_FileSystemInfo_o *v15; // t1
-  System_String_o *v16; // x21
-  System_String_o *v17; // x22
-  const MethodInfo *v18; // x3
+  System_String_o *v9; // x20
+  unsigned int v10; // w23
+  System_String_c **v11; // x22
+  System_IO_FileSystemInfo_o **v12; // x22
+  System_IO_FileSystemInfo_o *v13; // t1
+  System_String_o *v14; // x21
+  System_String_o *v15; // x22
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v20; // x9
+  _QWORD *v19; // x9
   __int64 size; // x10
-  Il2CppClass **v22; // x0
+  Il2CppClass **v21; // x0
   uint16_t Chars; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C26BAF & 1) == 0 )
+  if ( (byte_4C37287 & 1) == 0 )
   {
-    sub_1C2D490(&AccountingManager_TypeInfo);
-    sub_1C2D490(&char_TypeInfo);
-    sub_1C2D490(&System_IO_DirectoryInfo_TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C2D490(&StringLiteral_1036/*".meta"*/);
-    byte_4C26BAF = 1;
+    sub_1C32C20(&AccountingManager_TypeInfo);
+    sub_1C32C20(&char_TypeInfo);
+    sub_1C32C20(&System_IO_DirectoryInfo_TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C32C20(&StringLiteral_1036/*".meta"*/);
+    byte_4C37287 = 1;
   }
   v2 = AccountingManager_TypeInfo;
   Chars = 0;
   if ( !AccountingManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AccountingManager_TypeInfo);
   AccountingManager__CreatePaymentHistoryDirectory((const MethodInfo *)v2);
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_string__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
   PaymentHistoryPath = AccountingManager__GetPaymentHistoryPath(v4);
-  v6 = (System_IO_DirectoryInfo_o *)sub_1C2D6DC(System_IO_DirectoryInfo_TypeInfo);
+  v6 = (System_IO_DirectoryInfo_o *)sub_1C32E6C(System_IO_DirectoryInfo_TypeInfo);
   System_IO_DirectoryInfo___ctor(v6, PaymentHistoryPath, 0);
   if ( !v6 )
     goto LABEL_27;
@@ -410,49 +405,49 @@ System_String_array *AccountingManager__GetPaymentHistoryList(AccountingManager_
   if ( !Files )
     goto LABEL_27;
   klass = (int)Files[1].klass;
-  v11 = Files;
+  v9 = Files;
   if ( klass >= 1 )
   {
-    v12 = 0;
+    v10 = 0;
     while ( 1 )
     {
-      if ( v12 >= klass )
+      if ( v10 >= klass )
         goto LABEL_28;
-      v13 = &v11->klass + (int)v12;
-      v15 = (System_IO_FileSystemInfo_o *)v13[4];
-      v14 = (System_IO_FileSystemInfo_o **)(v13 + 4);
-      Files = (System_String_o *)v15;
-      if ( !v15 )
+      v11 = &v9->klass + (int)v10;
+      v13 = (System_IO_FileSystemInfo_o *)v11[4];
+      v12 = (System_IO_FileSystemInfo_o **)(v11 + 4);
+      Files = (System_String_o *)v13;
+      if ( !v13 )
         break;
       Files = (System_String_o *)((__int64 (__fastcall *)(System_String_o *, const MethodInfo *))Files->klass->vtable._9_GetTypeCode.methodPtr)(
                                    Files,
                                    Files->klass->vtable._9_GetTypeCode.method);
-      if ( v12 >= LODWORD(v11[1].klass) )
+      if ( v10 >= LODWORD(v9[1].klass) )
 LABEL_28:
-        sub_1C2D6F4(Files, v8, v9);
-      v16 = Files;
-      Files = (System_String_o *)*v14;
-      if ( !*v14 )
+        sub_1C32E84(Files);
+      v14 = Files;
+      Files = (System_String_o *)*v12;
+      if ( !*v12 )
         break;
       Files = System_IO_FileSystemInfo__get_Extension((System_IO_FileSystemInfo_o *)Files, 0);
-      if ( !v16 )
+      if ( !v14 )
         break;
-      v17 = Files;
-      Chars = System_String__get_Chars(v16, 0, 0);
+      v15 = Files;
+      Chars = System_String__get_Chars(v14, 0, 0);
       if ( !char_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(char_TypeInfo);
-      Files = (System_String_o *)System_Char__Equals_64523020((uint16_t)&Chars, 0x2Eu, 0);
+      Files = (System_String_o *)System_Char__Equals_64582956((uint16_t)&Chars, 0x2Eu, 0);
       if ( ((unsigned __int8)Files & 1) == 0 )
       {
-        if ( !v17 )
+        if ( !v15 )
           break;
-        Files = (System_String_o *)System_String__Equals_63493168(v17, (System_String_o *)StringLiteral_1036/*".meta"*/, 0);
+        Files = (System_String_o *)System_String__Equals_63553848(v15, (System_String_o *)StringLiteral_1036/*".meta"*/, 0);
         if ( ((unsigned __int8)Files & 1) == 0 )
         {
           if ( !v3 )
             break;
           items = v3->fields._items;
-          v20 = Method_System_Collections_Generic_List_string__Add__;
+          v19 = Method_System_Collections_Generic_List_string__Add__;
           ++v3->fields._version;
           if ( !items )
             break;
@@ -461,31 +456,31 @@ LABEL_28:
           {
             System_Collections_Generic_List_object___AddWithResize(
               v3,
-              (Il2CppObject *)v16,
-              *(const MethodInfo_3789B84 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+              (Il2CppObject *)v14,
+              *(const MethodInfo_37987BC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
           }
           else
           {
-            v22 = &items->obj.klass + size;
+            v21 = &items->obj.klass + size;
             v3->fields._size = size + 1;
-            v22[4] = (Il2CppClass *)v16;
-            sub_1C2D434((CGThumbnailListItem_o *)(v22 + 4), (int32_t)v16, v9, v18);
+            v21[4] = (Il2CppClass *)v14;
+            sub_1C32BC4((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v14, v16, v17);
           }
         }
       }
-      klass = (int)v11[1].klass;
-      if ( (int)++v12 >= klass )
+      klass = (int)v9[1].klass;
+      if ( (int)++v10 >= klass )
         goto LABEL_25;
     }
 LABEL_27:
-    sub_1C2D6EC(Files, v8);
+    sub_1C32E7C(Files);
   }
 LABEL_25:
   if ( !v3 )
     goto LABEL_27;
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   v3,
-                                  (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
@@ -494,12 +489,12 @@ System_String_o *AccountingManager__GetPaymentHistoryPath(const MethodInfo *meth
   System_String_o *DatFileSavePath; // x19
   System_String_o *FolderName; // x2
 
-  if ( (byte_4C26BA8 & 1) == 0 )
+  if ( (byte_4C37280 & 1) == 0 )
   {
-    sub_1C2D490(&AndroidUtil_TypeInfo);
-    sub_1C2D490(&CacheFolderName_TypeInfo);
-    sub_1C2D490(&StringLiteral_1048/*"/"*/);
-    byte_4C26BA8 = 1;
+    sub_1C32C20(&AndroidUtil_TypeInfo);
+    sub_1C32C20(&CacheFolderName_TypeInfo);
+    sub_1C32C20(&StringLiteral_1048/*"/"*/);
+    byte_4C37280 = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -507,7 +502,7 @@ System_String_o *AccountingManager__GetPaymentHistoryPath(const MethodInfo *meth
   if ( !CacheFolderName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CacheFolderName_TypeInfo);
   FolderName = CacheFolderName__getFolderName(2, 0);
-  return System_String__Concat_63496112(DatFileSavePath, (System_String_o *)StringLiteral_1048/*"/"*/, FolderName, 0);
+  return System_String__Concat_63556792(DatFileSavePath, (System_String_o *)StringLiteral_1048/*"/"*/, FolderName, 0);
 }
 
 
@@ -515,17 +510,17 @@ void AccountingManager__HistoryPayment(AccountingManager_o *this, System_String_
 {
   ManagerConfig_c *v4; // x0
   AccountingManager_c *v5; // x0
-  System_String_o *HistoryFileName_41202476; // x0
+  System_String_o *HistoryFileName_41324728; // x0
   const MethodInfo *v7; // x1
   struct PaymentInfo_o *paymentInfo; // x8
   const MethodInfo *v9; // x3
   PaymentInfo_o *v10; // x8
 
-  if ( (byte_4C26BB3 & 1) == 0 )
+  if ( (byte_4C3728B & 1) == 0 )
   {
-    sub_1C2D490(&AccountingManager_TypeInfo);
-    sub_1C2D490(&ManagerConfig_TypeInfo);
-    byte_4C26BB3 = 1;
+    sub_1C32C20(&AccountingManager_TypeInfo);
+    sub_1C32C20(&ManagerConfig_TypeInfo);
+    byte_4C3728B = 1;
   }
   v4 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -541,14 +536,14 @@ void AccountingManager__HistoryPayment(AccountingManager_o *this, System_String_
     AccountingManager__CreatePaymentHistoryDirectory((const MethodInfo *)v5);
     paymentInfo = AccountingManager_TypeInfo->static_fields->paymentInfo;
     if ( !paymentInfo
-      || (HistoryFileName_41202476 = AccountingManager__GetHistoryFileName_41202476(
+      || (HistoryFileName_41324728 = AccountingManager__GetHistoryFileName_41324728(
                                        paymentInfo->fields._Time_k__BackingField,
                                        v7),
           (v10 = AccountingManager_TypeInfo->static_fields->paymentInfo) == 0) )
     {
-      sub_1C2D6EC(HistoryFileName_41202476, v7);
+      sub_1C32E7C(HistoryFileName_41324728);
     }
-    PaymentInfo__WriteHistoryFile(v10, HistoryFileName_41202476, state, v9);
+    PaymentInfo__WriteHistoryFile(v10, HistoryFileName_41324728, state, v9);
   }
 }
 
@@ -558,11 +553,11 @@ bool AccountingManager__IsLimitOver(AccountingManager_o *this, int32_t value, co
   ManagerConfig_c *v4; // x0
   int32_t Limit; // w0
 
-  if ( (byte_4C26BB4 & 1) == 0 )
+  if ( (byte_4C3728C & 1) == 0 )
   {
-    sub_1C2D490(&AgeVerificationMenu_TypeInfo);
-    sub_1C2D490(&ManagerConfig_TypeInfo);
-    byte_4C26BB4 = 1;
+    sub_1C32C20(&AgeVerificationMenu_TypeInfo);
+    sub_1C32C20(&ManagerConfig_TypeInfo);
+    byte_4C3728C = 1;
   }
   v4 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -587,21 +582,20 @@ System_String_o *AccountingManager__ReadHistory(System_String_o *name, const Met
   System_IO_Stream_o *v6; // x20
   System_IO_BinaryReader_o *v7; // x19
   __int64 v8; // x0
-  __int64 v9; // x1
+  System_String_o *v9; // x20
   System_String_o *v10; // x20
-  System_String_o *v11; // x20
   System_IO_BinaryReader_c *klass; // x8
-  __int64 v13; // x9
+  __int64 v12; // x9
   int32_t *p_offset; // x10
-  __int64 v15; // x0
+  __int64 v14; // x0
 
-  if ( (byte_4C26BAE & 1) == 0 )
+  if ( (byte_4C37286 & 1) == 0 )
   {
-    sub_1C2D490(&AccountingManager_TypeInfo);
-    sub_1C2D490(&System_IO_BinaryReader_TypeInfo);
-    sub_1C2D490(&CatAndMouseGame_TypeInfo);
-    sub_1C2D490(&System_IDisposable_TypeInfo);
-    byte_4C26BAE = 1;
+    sub_1C32C20(&AccountingManager_TypeInfo);
+    sub_1C32C20(&System_IO_BinaryReader_TypeInfo);
+    sub_1C32C20(&CatAndMouseGame_TypeInfo);
+    sub_1C32C20(&System_IDisposable_TypeInfo);
+    byte_4C37286 = 1;
   }
   v3 = AccountingManager_TypeInfo;
   if ( !AccountingManager_TypeInfo->_2.cctor_finished )
@@ -609,37 +603,37 @@ System_String_o *AccountingManager__ReadHistory(System_String_o *name, const Met
   AccountingManager__CreatePaymentHistoryDirectory((const MethodInfo *)v3);
   HistoryFileName = AccountingManager__GetHistoryFileName(name, v4);
   v6 = (System_IO_Stream_o *)System_IO_File__OpenRead(HistoryFileName, 0);
-  v7 = (System_IO_BinaryReader_o *)sub_1C2D6DC(System_IO_BinaryReader_TypeInfo);
+  v7 = (System_IO_BinaryReader_o *)sub_1C32E6C(System_IO_BinaryReader_TypeInfo);
   System_IO_BinaryReader___ctor(v7, v6, 0);
   if ( !v7 )
-    sub_1C2D6EC(v8, v9);
-  v10 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._22_ReadString.methodPtr)(
-                             v7,
-                             v7->klass->vtable._22_ReadString.method);
+    sub_1C32E7C(v8);
+  v9 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._22_ReadString.methodPtr)(
+                            v7,
+                            v7->klass->vtable._22_ReadString.method);
   if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
-  v11 = CatAndMouseGame__MouseGame1(v10, 0, 0);
+  v10 = CatAndMouseGame__MouseGame1(v9, 0, 0);
   klass = v7->klass;
-  v13 = *(unsigned __int16 *)&v7->klass->_2.rank;
+  v12 = *(unsigned __int16 *)&v7->klass->_2.rank;
   if ( *(_WORD *)&v7->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
     {
-      --v13;
+      --v12;
       p_offset += 4;
-      if ( !v13 )
+      if ( !v12 )
         goto LABEL_12;
     }
-    v15 = (__int64)&klass->vtable + 16 * *p_offset;
+    v14 = (__int64)&klass->vtable + 16 * *p_offset;
   }
   else
   {
 LABEL_12:
-    v15 = sub_1C7DCA8(v7, System_IDisposable_TypeInfo, 0);
+    v14 = sub_1C83438(v7, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v15)(v7, *(_QWORD *)(v15 + 8));
-  return v11;
+  (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v14)(v7, *(_QWORD *)(v14 + 8));
+  return v10;
 }
 
 
@@ -647,7 +641,7 @@ bool AccountingManager__ReadOldPayment(AccountingManager_o *this, const MethodIn
 {
   const MethodInfo *v2; // x2
 
-  return AccountingManager__ReadPayment_41204556(this, 0, v2);
+  return AccountingManager__ReadPayment_41326808(this, 0, v2);
 }
 
 
@@ -655,12 +649,11 @@ bool AccountingManager__ReadPayment(AccountingManager_o *this, const MethodInfo 
 {
   const MethodInfo *v2; // x2
 
-  return AccountingManager__ReadPayment_41204556(this, 1, v2);
+  return AccountingManager__ReadPayment_41326808(this, 1, v2);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-bool AccountingManager__ReadPayment_41204556(AccountingManager_o *this, bool isNewFormat, const MethodInfo *method)
+bool AccountingManager__ReadPayment_41326808(AccountingManager_o *this, bool isNewFormat, const MethodInfo *method)
 {
   ManagerConfig_c *v4; // x0
   AccountingManager_c *v5; // x0
@@ -671,11 +664,11 @@ bool AccountingManager__ReadPayment_41204556(AccountingManager_o *this, bool isN
   PaymentInfo_o *paymentInfo; // x0
   AccountingManager_c *v12; // x0
 
-  if ( (byte_4C26BB0 & 1) == 0 )
+  if ( (byte_4C37288 & 1) == 0 )
   {
-    sub_1C2D490(&AccountingManager_TypeInfo);
-    sub_1C2D490(&ManagerConfig_TypeInfo);
-    byte_4C26BB0 = 1;
+    sub_1C32C20(&AccountingManager_TypeInfo);
+    sub_1C32C20(&ManagerConfig_TypeInfo);
+    byte_4C37288 = 1;
   }
   v4 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -710,7 +703,7 @@ LABEL_11:
   paymentInfo = v9->static_fields->paymentInfo;
   if ( !paymentInfo )
 LABEL_20:
-    sub_1C2D6EC(paymentInfo, isNewFormat);
+    sub_1C32E7C(paymentInfo);
   if ( PaymentInfo__ReadFile(paymentInfo, v8, isNewFormat, v7) )
     return 1;
 LABEL_16:
@@ -749,14 +742,14 @@ void AccountingManager__WritePayment(AccountingManager_o *this, const MethodInfo
   const MethodInfo *v18; // x2
   PaymentInfo_o *v19; // x8
 
-  if ( (byte_4C26BB1 & 1) == 0 )
+  if ( (byte_4C37289 & 1) == 0 )
   {
-    sub_1C2D490(&AccountingManager_TypeInfo);
-    sub_1C2D490(&AgeVerificationMenu_TypeInfo);
-    sub_1C2D490(&ManagerConfig_TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C26BB1 = 1;
+    sub_1C32C20(&AccountingManager_TypeInfo);
+    sub_1C32C20(&AgeVerificationMenu_TypeInfo);
+    sub_1C32C20(&ManagerConfig_TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C37289 = 1;
   }
   v2 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -814,13 +807,13 @@ LABEL_11:
             goto LABEL_31;
           v10 = StringLiteral_1/*""*/;
           *(_QWORD *)(Time + 48) = StringLiteral_1/*""*/;
-          sub_1C2D434((CGThumbnailListItem_o *)(Time + 48), v10, v8, v9);
+          sub_1C32BC4((CGThumbnailListItem_o *)(Time + 48), v10, v8, v9);
           Time = (int64_t)AccountingManager_TypeInfo->static_fields->paymentInfo;
           if ( !Time )
             goto LABEL_31;
           v13 = StringLiteral_1/*""*/;
           *(_QWORD *)(Time + 40) = StringLiteral_1/*""*/;
-          sub_1C2D434((CGThumbnailListItem_o *)(Time + 40), v13, v11, v12);
+          sub_1C32BC4((CGThumbnailListItem_o *)(Time + 40), v13, v11, v12);
           v14 = AccountingManager_TypeInfo->static_fields->paymentInfo;
           if ( !AgeVerificationMenu_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AgeVerificationMenu_TypeInfo);
@@ -833,7 +826,7 @@ LABEL_11:
             goto LABEL_31;
           v17 = StringLiteral_1/*""*/;
           *(_QWORD *)(Time + 64) = StringLiteral_1/*""*/;
-          sub_1C2D434((CGThumbnailListItem_o *)(Time + 64), v17, v15, v16);
+          sub_1C32BC4((CGThumbnailListItem_o *)(Time + 64), v17, v15, v16);
           Time = (int64_t)AccountingManager_TypeInfo;
         }
         if ( !*(_DWORD *)(Time + 224) )
@@ -848,7 +841,7 @@ LABEL_11:
       }
     }
 LABEL_31:
-    sub_1C2D6EC(Time, method);
+    sub_1C32E7C(Time);
   }
 }
 
@@ -868,15 +861,15 @@ void AccountingManager_ResultCallbackfunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C2D550(method) & 1) == 0 )
+  if ( (sub_1C32CE0(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C2D708(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2D5B8(v10, 0);
+      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C32D48(v10, 0);
     }
     goto LABEL_5;
   }
@@ -888,9 +881,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7245C;
+  this->fields.invoke_impl = (intptr_t)sub_1A77B84;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A72404;
+  this->fields.extra_arg = (intptr_t)sub_1A77B2C;
 }
 
 
@@ -903,25 +896,38 @@ System_IAsyncResult_o *AccountingManager_ResultCallbackfunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v9; // x2
-  __int64 v10; // x3
-  __int64 v11; // x4
-  _QWORD v13[3]; // [xsp+8h] [xbp-58h] BYREF
-  int32_t v14; // [xsp+28h] [xbp-38h] BYREF
-  int32_t v15; // [xsp+2Ch] [xbp-34h] BYREF
+  __int64 v6; // x6
+  __int64 v7; // x7
+  __int64 v11; // x2
+  __int64 v12; // x3
+  __int64 v13; // x4
+  __int64 v14; // x5
+  __int64 v15; // x6
+  __int64 v16; // x7
+  _QWORD v18[3]; // [xsp+8h] [xbp-58h] BYREF
+  int32_t v19; // [xsp+28h] [xbp-38h] BYREF
+  int32_t v20; // [xsp+2Ch] [xbp-34h] BYREF
 
-  v14 = perMonthAmount;
-  v15 = result;
-  if ( (byte_4C26BB9 & 1) == 0 )
+  v19 = perMonthAmount;
+  v20 = result;
+  if ( (byte_4C37291 & 1) == 0 )
   {
-    sub_1C2D490(&int_TypeInfo);
-    sub_1C2D490(&AccountingManager_Result_TypeInfo);
-    byte_4C26BB9 = 1;
+    sub_1C32C20(&int_TypeInfo);
+    sub_1C32C20(&AccountingManager_Result_TypeInfo);
+    byte_4C37291 = 1;
   }
-  v13[2] = 0;
-  v13[0] = j_il2cpp_value_box_0(AccountingManager_Result_TypeInfo, &v15, *(_QWORD *)&perMonthAmount, callback, object);
-  v13[1] = j_il2cpp_value_box_0(int_TypeInfo, &v14, v9, v10, v11);
-  return (System_IAsyncResult_o *)sub_1C2D444(this, v13, callback, object);
+  v18[2] = 0;
+  v18[0] = j_il2cpp_value_box_0(
+             AccountingManager_Result_TypeInfo,
+             &v20,
+             *(_QWORD *)&perMonthAmount,
+             callback,
+             object,
+             method,
+             v6,
+             v7);
+  v18[1] = j_il2cpp_value_box_0(int_TypeInfo, &v19, v11, v12, v13, v14, v15, v16);
+  return (System_IAsyncResult_o *)sub_1C32BD4(this, v18, callback, object);
 }
 
 
@@ -930,7 +936,7 @@ void AccountingManager_ResultCallbackfunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2D448(result, 0, method);
+  sub_1C32BD8(result, 0, method);
 }
 
 

@@ -1,9 +1,9 @@
 void TabOpenEffectComponent___ctor(TabOpenEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C21B96 & 1) == 0 )
+  if ( (byte_4C32265 & 1) == 0 )
   {
-    sub_1C2D490(&CommonEffectComponent_TypeInfo);
-    byte_4C21B96 = 1;
+    sub_1C32C20(&CommonEffectComponent_TypeInfo);
+    byte_4C32265 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -36,21 +36,20 @@ void TabOpenEffectComponent__PlayAnimation(TabOpenEffectComponent_o *this, const
   Il2CppObject *Component_object; // x20
   Il2CppObject *v4; // x19
   _BOOL8 v5; // x0
-  __int64 v6; // x1
 
-  if ( (byte_4C21B95 & 1) == 0 )
+  if ( (byte_4C32264 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Animation___);
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21B95 = 1;
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Animation___);
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C32264 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_SimpleAnimation___);
   v4 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Animation___);
+         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v5 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -62,7 +61,7 @@ void TabOpenEffectComponent__PlayAnimation(TabOpenEffectComponent_o *this, const
       return;
     }
 LABEL_14:
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -84,7 +83,7 @@ void TabOpenEffectComponent__SetAnimationEndCallback(
   if ( callback )
   {
     this->fields.animEndCallback = callback;
-    sub_1C2D434(&this->fields.animEndCallback);
+    sub_1C32BC4(&this->fields.animEndCallback, callback);
   }
 }
 
@@ -97,6 +96,6 @@ void TabOpenEffectComponent__SetChangeUICallback(
   if ( callback )
   {
     this->fields.changeUICallback = callback;
-    sub_1C2D434(&this->fields.changeUICallback);
+    sub_1C32BC4(&this->fields.changeUICallback, callback);
   }
 }

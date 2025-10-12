@@ -12,10 +12,10 @@ void EnableComponentBase__Awake(EnableComponentBase_o *this, const MethodInfo *m
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C2681B & 1) == 0 )
+  if ( (byte_4C36EF2 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2681B = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C36EF2 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -24,7 +24,7 @@ void EnableComponentBase__Awake(EnableComponentBase_o *this, const MethodInfo *m
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     this->fields.target = gameObject;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.target, (int32_t)gameObject, v5, v6);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.target, (int32_t)gameObject, v5, v6);
   }
 }
 
@@ -40,14 +40,13 @@ void EnableComponentBase__Refresh(EnableComponentBase_o *this, const MethodInfo 
 {
   UnityEngine_GameObject_o *target; // x19
   __int64 v4; // x0
-  __int64 v5; // x1
 
   target = this->fields.target;
   v4 = ((__int64 (__fastcall *)(EnableComponentBase_o *, void *))this->klass[1]._1.image)(
          this,
          this->klass[1]._1.gc_desc);
   if ( !target )
-    sub_1C2D6EC(v4, v5);
+    sub_1C32E7C(v4);
   UnityEngine_GameObject__SetActive(target, this->fields.visibleIsOpen == (v4 & 1), 0);
 }
 

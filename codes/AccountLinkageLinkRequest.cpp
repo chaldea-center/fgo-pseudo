@@ -9,13 +9,13 @@ void AccountLinkageLinkRequest__beginRequest(
         System_String_o *accountLinkageToken,
         const MethodInfo *method)
 {
-  if ( (byte_4C28CE2 & 1) == 0 )
+  if ( (byte_4C393EB & 1) == 0 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_16645/*"accountLinkageToken"*/);
-    byte_4C28CE2 = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_16647/*"accountLinkageToken"*/);
+    byte_4C393EB = 1;
   }
-  RequestBase__addField_44009064((RequestBase_o *)this, (System_String_o *)StringLiteral_16645/*"accountLinkageToken"*/, accountLinkageToken, 0);
+  RequestBase__addField_44145196((RequestBase_o *)this, (System_String_o *)StringLiteral_16647/*"accountLinkageToken"*/, accountLinkageToken, 0);
   RequestBase__addBaseField((RequestBase_o *)this, 0);
   RequestBase__WriteParameter((RequestBase_o *)this, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -28,16 +28,16 @@ System_String_o *AccountLinkageLinkRequest__getURL(AccountLinkageLinkRequest_o *
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C28CE1 & 1) == 0 )
+  if ( (byte_4C393EA & 1) == 0 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_16642/*"accountLinkageAnx/link"*/);
-    byte_4C28CE1 = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_16644/*"accountLinkageAnx/link"*/);
+    byte_4C393EA = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63457864(BaseUrl, (System_String_o *)StringLiteral_16642/*"accountLinkageAnx/link"*/, 0);
+  return System_String__Concat_63518544(BaseUrl, (System_String_o *)StringLiteral_16644/*"accountLinkageAnx/link"*/, 0);
 }
 
 
@@ -50,23 +50,23 @@ void AccountLinkageLinkRequest__requestCompleted(
   __int64 *v5; // x8
 
   v4 = (RequestBase_o *)this;
-  if ( (byte_4C28CE3 & 1) == 0 )
+  if ( (byte_4C393EC & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_22362/*"ok"*/);
-    this = (AccountLinkageLinkRequest_o *)sub_1C2D490(&StringLiteral_22195/*"ng"*/);
-    byte_4C28CE3 = 1;
+    sub_1C32C20(&StringLiteral_22379/*"ok"*/);
+    this = (AccountLinkageLinkRequest_o *)sub_1C32C20(&StringLiteral_22212/*"ng"*/);
+    byte_4C393EC = 1;
   }
   if ( !responseList )
     goto LABEL_10;
   if ( !LODWORD(responseList->max_length) )
-    sub_1C2D6F4(this, responseList, method);
+    sub_1C32E84(this);
   this = (AccountLinkageLinkRequest_o *)responseList->m_Items[0];
   if ( !this )
 LABEL_10:
-    sub_1C2D6EC(this, responseList);
-  if ( ResponseData__checkError_44004292((ResponseData_o *)this, 0) )
-    v5 = &StringLiteral_22362/*"ok"*/;
+    sub_1C32E7C(this);
+  if ( ResponseData__checkError_44140424((ResponseData_o *)this, 0) )
+    v5 = &StringLiteral_22379/*"ok"*/;
   else
-    v5 = &StringLiteral_22195/*"ng"*/;
+    v5 = &StringLiteral_22212/*"ng"*/;
   RequestBase__completed(v4, (System_String_o *)*v5, 0);
 }

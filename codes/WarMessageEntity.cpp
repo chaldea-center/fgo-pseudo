@@ -7,36 +7,36 @@ void WarMessageEntity___cctor(const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C2852E & 1) == 0 )
+  if ( (byte_4C38C32 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_HashSet_string___ctor__);
-    sub_1C2D490(&System_Collections_Generic_HashSet_string__TypeInfo);
-    sub_1C2D490(&WarMessageEntity_TypeInfo);
-    sub_1C2D490(&StringLiteral_15477/*"WAR_MESSAGE_{0}_{1}"*/);
-    byte_4C2852E = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_HashSet_string___ctor__);
+    sub_1C32C20(&System_Collections_Generic_HashSet_string__TypeInfo);
+    sub_1C32C20(&WarMessageEntity_TypeInfo);
+    sub_1C32C20(&StringLiteral_15478/*"WAR_MESSAGE_{0}_{1}"*/);
+    byte_4C38C32 = 1;
   }
-  WarMessageEntity_TypeInfo->static_fields->SAVE_KEY_FORMAT = (struct System_String_o *)StringLiteral_15477/*"WAR_MESSAGE_{0}_{1}"*/;
-  sub_1C2D434((CGThumbnailListItem_o *)WarMessageEntity_TypeInfo->static_fields, StringLiteral_15477/*"WAR_MESSAGE_{0}_{1}"*/, v1, v2);
-  v3 = (System_Collections_Generic_HashSet_T__o *)sub_1C2D6DC(System_Collections_Generic_HashSet_string__TypeInfo);
+  WarMessageEntity_TypeInfo->static_fields->SAVE_KEY_FORMAT = (struct System_String_o *)StringLiteral_15478/*"WAR_MESSAGE_{0}_{1}"*/;
+  sub_1C32BC4((CGThumbnailListItem_o *)WarMessageEntity_TypeInfo->static_fields, StringLiteral_15478/*"WAR_MESSAGE_{0}_{1}"*/, v1, v2);
+  v3 = (System_Collections_Generic_HashSet_T__o *)sub_1C32E6C(System_Collections_Generic_HashSet_string__TypeInfo);
   System_Collections_Generic_HashSet_object____ctor(
     v3,
-    (const MethodInfo_3640D88 *)Method_System_Collections_Generic_HashSet_string___ctor__);
+    (const MethodInfo_364F828 *)Method_System_Collections_Generic_HashSet_string___ctor__);
   static_fields = WarMessageEntity_TypeInfo->static_fields;
   static_fields->checkList = (struct System_Collections_Generic_HashSet_string__o *)v3;
-  sub_1C2D434((CGThumbnailListItem_o *)&static_fields->checkList, (int32_t)v3, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->checkList, (int32_t)v3, v5, v6);
 }
 
 
 void WarMessageEntity___ctor(WarMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2852D & 1) == 0 )
+  if ( (byte_4C38C31 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C2852D = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C38C31 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -46,10 +46,10 @@ bool WarMessageEntity__CheckCondition(WarMessageEntity_o *this, const MethodInfo
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4C28528 & 1) == 0 )
+  if ( (byte_4C38C2C & 1) == 0 )
   {
-    sub_1C2D490(&CondType_TypeInfo);
-    byte_4C28528 = 1;
+    sub_1C32C20(&CondType_TypeInfo);
+    byte_4C38C2C = 1;
   }
   condType = this->fields.condType;
   condId = this->fields.condId;
@@ -69,13 +69,12 @@ bool WarMessageEntity__CheckFrequencyCondition(WarMessageEntity_o *this, const M
   WarMessageEntity_c *v7; // x0
   System_Collections_Generic_HashSet_T__o *checkList; // x20
   Il2CppObject *v9; // x0
-  __int64 v10; // x1
 
-  if ( (byte_4C28529 & 1) == 0 )
+  if ( (byte_4C38C2D & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_HashSet_string__Contains__);
-    sub_1C2D490(&WarMessageEntity_TypeInfo);
-    byte_4C28529 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_HashSet_string__Contains__);
+    sub_1C32C20(&WarMessageEntity_TypeInfo);
+    byte_4C38C2D = 1;
   }
   v3 = 1;
   switch ( this->fields.frequencyType )
@@ -99,11 +98,11 @@ bool WarMessageEntity__CheckFrequencyCondition(WarMessageEntity_o *this, const M
         checkList = (System_Collections_Generic_HashSet_T__o *)v7->static_fields->checkList;
         v9 = (Il2CppObject *)WarMessageEntity__get_SaveKey(this, v6);
         if ( !checkList )
-          sub_1C2D6EC(v9, v10);
+          sub_1C32E7C(v9);
         return !System_Collections_Generic_HashSet_object___Contains(
                   checkList,
                   v9,
-                  (const MethodInfo_364147C *)Method_System_Collections_Generic_HashSet_string__Contains__);
+                  (const MethodInfo_364FF1C *)Method_System_Collections_Generic_HashSet_string__Contains__);
       }
       else
       {
@@ -127,15 +126,15 @@ bool WarMessageEntity__CheckValid(WarMessageEntity_o *this, const MethodInfo *me
 
 System_String_o *WarMessageEntity__CreatePK(int32_t warId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4C2852C & 1) == 0 )
+  if ( (byte_4C38C30 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C2852C = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C38C30 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            warId,
            idx,
-           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -145,10 +144,10 @@ System_String_o *WarMessageEntity__CreatePrimaryKey(WarMessageEntity_o *this, co
   int32_t idx; // w19
   int32_t warId; // w20
 
-  if ( (byte_4C2852B & 1) == 0 )
+  if ( (byte_4C38C2F & 1) == 0 )
   {
-    sub_1C2D490(&WarMessageEntity_TypeInfo);
-    byte_4C2852B = 1;
+    sub_1C32C20(&WarMessageEntity_TypeInfo);
+    byte_4C38C2F = 1;
   }
   warId = this->fields.warId;
   idx = this->fields.idx;
@@ -161,31 +160,30 @@ System_String_o *WarMessageEntity__CreatePrimaryKey(WarMessageEntity_o *this, co
 bool WarMessageEntity__IsNotClearedStartQuest(WarMessageEntity_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  __int64 v4; // x1
   int klass; // w8
   int32_t warId; // w19
   void *monitor; // x19
 
-  if ( (byte_4C2852A & 1) == 0 )
+  if ( (byte_4C38C2E & 1) == 0 )
   {
-    sub_1C2D490(&CondType_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMasterData_WarMaster___);
-    sub_1C2D490(&Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C2D490(&TerminalPramsManager_TypeInfo);
-    byte_4C2852A = 1;
+    sub_1C32C20(&CondType_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMasterData_WarMaster___);
+    sub_1C32C20(&Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C32C20(&TerminalPramsManager_TypeInfo);
+    byte_4C38C2E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_WarMaster___)) == 0
+                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_WarMaster___)) == 0
     || (Instance = DataMasterBase_object__object__int___GetEntity(
                      (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                      this->fields.warId,
-                     (const MethodInfo_3387D98 *)Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__)) == 0 )
+                     (const MethodInfo_3396838 *)Method_DataMasterBase_WarMaster__WarEntity__int__GetEntity__)) == 0 )
   {
-    sub_1C2D6EC(Instance, v4);
+    sub_1C32E7C(Instance);
   }
   klass = (int)Instance[5].klass;
   if ( klass == 2 )
@@ -193,7 +191,7 @@ bool WarMessageEntity__IsNotClearedStartQuest(WarMessageEntity_o *this, const Me
     monitor = Instance[5].monitor;
     if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return !CondType__IsQuestClear_40102980((int32_t)monitor, -1, 0, 0);
+    return !CondType__IsQuestClear_40225464((int32_t)monitor, -1, 0, 0);
   }
   if ( klass != 1 )
     return 1;
@@ -212,13 +210,12 @@ void WarMessageEntity__Save(WarMessageEntity_o *this, bool isDecided, const Meth
   WarMessageEntity_c *v7; // x0
   System_Collections_Generic_HashSet_T__o *checkList; // x20
   Il2CppObject *SaveKey; // x0
-  __int64 v10; // x1
 
-  if ( (byte_4C28527 & 1) == 0 )
+  if ( (byte_4C38C2B & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_HashSet_string__Add__);
-    sub_1C2D490(&WarMessageEntity_TypeInfo);
-    byte_4C28527 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_HashSet_string__Add__);
+    sub_1C32C20(&WarMessageEntity_TypeInfo);
+    byte_4C38C2B = 1;
   }
   if ( isDecided )
   {
@@ -234,11 +231,11 @@ void WarMessageEntity__Save(WarMessageEntity_o *this, bool isDecided, const Meth
       checkList = (System_Collections_Generic_HashSet_T__o *)v7->static_fields->checkList;
       SaveKey = (Il2CppObject *)WarMessageEntity__get_SaveKey(this, (const MethodInfo *)isDecided);
       if ( !checkList )
-        sub_1C2D6EC(SaveKey, v10);
+        sub_1C32E7C(SaveKey);
       System_Collections_Generic_HashSet_object___Add(
         checkList,
         SaveKey,
-        (const MethodInfo_3641F6C *)Method_System_Collections_Generic_HashSet_string__Add__);
+        (const MethodInfo_3650A0C *)Method_System_Collections_Generic_HashSet_string__Add__);
     }
     else if ( frequencyType == 1 )
     {
@@ -261,32 +258,38 @@ System_String_o *WarMessageEntity__get_SaveKey(WarMessageEntity_o *this, const M
   __int64 v2; // x2
   __int64 v3; // x3
   __int64 v4; // x4
-  WarMessageEntity_c *v6; // x0
+  __int64 v5; // x5
+  __int64 v6; // x6
+  __int64 v7; // x7
+  WarMessageEntity_c *v9; // x0
   System_String_o *SAVE_KEY_FORMAT; // x20
-  Il2CppObject *v8; // x21
-  __int64 v9; // x2
-  __int64 v10; // x3
-  __int64 v11; // x4
-  Il2CppObject *v12; // x0
+  Il2CppObject *v11; // x21
+  __int64 v12; // x2
+  __int64 v13; // x3
+  __int64 v14; // x4
+  __int64 v15; // x5
+  __int64 v16; // x6
+  __int64 v17; // x7
+  Il2CppObject *v18; // x0
   int32_t idx; // [xsp+8h] [xbp-28h] BYREF
   int32_t warId; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C28526 & 1) == 0 )
+  if ( (byte_4C38C2A & 1) == 0 )
   {
-    sub_1C2D490(&int_TypeInfo);
-    sub_1C2D490(&WarMessageEntity_TypeInfo);
-    byte_4C28526 = 1;
+    sub_1C32C20(&int_TypeInfo);
+    sub_1C32C20(&WarMessageEntity_TypeInfo);
+    byte_4C38C2A = 1;
   }
-  v6 = WarMessageEntity_TypeInfo;
+  v9 = WarMessageEntity_TypeInfo;
   if ( !WarMessageEntity_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(WarMessageEntity_TypeInfo);
-    v6 = WarMessageEntity_TypeInfo;
+    v9 = WarMessageEntity_TypeInfo;
   }
-  SAVE_KEY_FORMAT = v6->static_fields->SAVE_KEY_FORMAT;
+  SAVE_KEY_FORMAT = v9->static_fields->SAVE_KEY_FORMAT;
   warId = this->fields.warId;
-  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &warId, v2, v3, v4);
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &warId, v2, v3, v4, v5, v6, v7);
   idx = this->fields.idx;
-  v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &idx, v9, v10, v11);
-  return System_String__Format_63499156(SAVE_KEY_FORMAT, v8, v12, 0);
+  v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &idx, v12, v13, v14, v15, v16, v17);
+  return System_String__Format_63559836(SAVE_KEY_FORMAT, v11, v18, 0);
 }

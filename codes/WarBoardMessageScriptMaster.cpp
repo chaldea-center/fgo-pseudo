@@ -1,14 +1,14 @@
 void WarBoardMessageScriptMaster___ctor(WarBoardMessageScriptMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2846A & 1) == 0 )
+  if ( (byte_4C38B6E & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__);
-    byte_4C2846A = 1;
+    sub_1C32C20(&Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__);
+    byte_4C38B6E = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     421,
-    (const MethodInfo_338A52C *)Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__);
+    (const MethodInfo_3398FCC *)Method_DataMasterBase_WarBoardMessageScriptMaster__WarBoardMessageScriptEntity__string___ctor__);
 }
 
 
@@ -18,117 +18,115 @@ WarBoardMessageScriptEntity_o *WarBoardMessageScriptMaster__GetMessageEntity(
         const MethodInfo *method)
 {
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  __int64 v6; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v9; // x9
+  __int64 v8; // x9
   int32_t *p_offset; // x10
-  __int64 v11; // x0
-  System_Collections_Generic_IEnumerator_T__c *v12; // x8
-  __int64 v13; // x9
-  int32_t *v14; // x10
+  __int64 v10; // x0
+  System_Collections_Generic_IEnumerator_T__c *v11; // x8
+  __int64 v12; // x9
+  int32_t *v13; // x10
+  __int64 v14; // x0
   __int64 v15; // x0
-  __int64 v16; // x0
-  __int64 v17; // x1
-  WarBoardMessageScriptEntity_o *v18; // x21
-  System_Collections_Generic_IEnumerator_T__c *v19; // x8
-  __int64 v20; // x9
-  int32_t *v21; // x10
-  __int64 v22; // x0
+  WarBoardMessageScriptEntity_o *v16; // x21
+  System_Collections_Generic_IEnumerator_T__c *v17; // x8
+  __int64 v18; // x9
+  int32_t *v19; // x10
+  __int64 v20; // x0
 
-  if ( (byte_4C2846B & 1) == 0 )
+  if ( (byte_4C38B6F & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_WarBoardMessageScriptEntity__GetEnumerator__);
-    sub_1C2D490(&System_IDisposable_TypeInfo);
-    sub_1C2D490(&System_Collections_Generic_IEnumerator_WarBoardMessageScriptEntity__TypeInfo);
-    sub_1C2D490(&System_Collections_IEnumerator_TypeInfo);
-    byte_4C2846B = 1;
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_WarBoardMessageScriptEntity__GetEnumerator__);
+    sub_1C32C20(&System_IDisposable_TypeInfo);
+    sub_1C32C20(&System_Collections_Generic_IEnumerator_WarBoardMessageScriptEntity__TypeInfo);
+    sub_1C32C20(&System_Collections_IEnumerator_TypeInfo);
+    byte_4C38B6F = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C2D6EC(0, imageId);
+    sub_1C32E7C(0);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_33217E0 *)Method_System_Collections_ObjectModel_Collection_WarBoardMessageScriptEntity__GetEnumerator__);
+                 (const MethodInfo_3330280 *)Method_System_Collections_ObjectModel_Collection_WarBoardMessageScriptEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C2D6EC(0, v6);
+    sub_1C32E7C(0);
   while ( 1 )
   {
     klass = Enumerator->klass;
-    v9 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+    v8 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
     if ( *(_WORD *)&Enumerator->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
       {
-        --v9;
+        --v8;
         p_offset += 4;
-        if ( !v9 )
+        if ( !v8 )
           goto LABEL_9;
       }
-      v11 = (__int64)&klass->vtable[*p_offset];
+      v10 = (__int64)&klass->vtable[*p_offset];
     }
     else
     {
 LABEL_9:
-      v11 = sub_1C7DCA8(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v10 = sub_1C83438(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
-    if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v11)(
+    if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v10)(
             Enumerator,
-            *(_QWORD *)(v11 + 8))
+            *(_QWORD *)(v10 + 8))
         & 1) == 0 )
       break;
-    v12 = Enumerator->klass;
-    v13 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+    v11 = Enumerator->klass;
+    v12 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
     if ( *(_WORD *)&Enumerator->klass->_2.rank )
     {
-      v14 = &v12->_1.interfaceOffsets->offset;
-      while ( *((System_Collections_Generic_IEnumerator_WarBoardMessageScriptEntity__c **)v14 - 1) != System_Collections_Generic_IEnumerator_WarBoardMessageScriptEntity__TypeInfo )
+      v13 = &v11->_1.interfaceOffsets->offset;
+      while ( *((System_Collections_Generic_IEnumerator_WarBoardMessageScriptEntity__c **)v13 - 1) != System_Collections_Generic_IEnumerator_WarBoardMessageScriptEntity__TypeInfo )
       {
-        --v13;
-        v14 += 4;
-        if ( !v13 )
+        --v12;
+        v13 += 4;
+        if ( !v12 )
           goto LABEL_16;
       }
-      v15 = (__int64)&v12->vtable[*v14];
+      v14 = (__int64)&v11->vtable[*v13];
     }
     else
     {
 LABEL_16:
-      v15 = sub_1C7DCA8(Enumerator, System_Collections_Generic_IEnumerator_WarBoardMessageScriptEntity__TypeInfo, 0);
+      v14 = sub_1C83438(Enumerator, System_Collections_Generic_IEnumerator_WarBoardMessageScriptEntity__TypeInfo, 0);
     }
-    v16 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v15)(
+    v15 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v14)(
             Enumerator,
-            *(_QWORD *)(v15 + 8));
-    v18 = (WarBoardMessageScriptEntity_o *)v16;
-    if ( !v16 )
-      sub_1C2D6EC(0, v17);
+            *(_QWORD *)(v14 + 8));
+    v16 = (WarBoardMessageScriptEntity_o *)v15;
+    if ( !v15 )
+      sub_1C32E7C(0);
     if ( !imageId )
-      sub_1C2D6EC(v16, v17);
-    if ( System_String__Equals_63493168(imageId, *(System_String_o **)(v16 + 16), 0) )
+      sub_1C32E7C(v15);
+    if ( System_String__Equals_63553848(imageId, *(System_String_o **)(v15 + 16), 0) )
       goto LABEL_23;
   }
-  v18 = 0;
+  v16 = 0;
 LABEL_23:
-  v19 = Enumerator->klass;
-  v20 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+  v17 = Enumerator->klass;
+  v18 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
   if ( *(_WORD *)&Enumerator->klass->_2.rank )
   {
-    v21 = &v19->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v21 - 1) != System_IDisposable_TypeInfo )
+    v19 = &v17->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v19 - 1) != System_IDisposable_TypeInfo )
     {
-      --v20;
-      v21 += 4;
-      if ( !v20 )
+      --v18;
+      v19 += 4;
+      if ( !v18 )
         goto LABEL_27;
     }
-    v22 = (__int64)&v19->vtable[*v21];
+    v20 = (__int64)&v17->vtable[*v19];
   }
   else
   {
 LABEL_27:
-    v22 = sub_1C7DCA8(Enumerator, System_IDisposable_TypeInfo, 0);
+    v20 = sub_1C83438(Enumerator, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(Enumerator, *(_QWORD *)(v22 + 8));
-  return v18;
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(Enumerator, *(_QWORD *)(v20 + 8));
+  return v16;
 }

@@ -1,14 +1,14 @@
 void EventBulletinBoardMaster___ctor(EventBulletinBoardMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C271A2 & 1) == 0 )
+  if ( (byte_4C37896 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_EventBulletinBoardMaster__EventBulletinBoardEntity__int___ctor__);
-    byte_4C271A2 = 1;
+    sub_1C32C20(&Method_DataMasterBase_EventBulletinBoardMaster__EventBulletinBoardEntity__int___ctor__);
+    byte_4C37896 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     242,
-    (const MethodInfo_3385A74 *)Method_DataMasterBase_EventBulletinBoardMaster__EventBulletinBoardEntity__int___ctor__);
+    (const MethodInfo_3394514 *)Method_DataMasterBase_EventBulletinBoardMaster__EventBulletinBoardEntity__int___ctor__);
 }
 
 
@@ -19,48 +19,47 @@ System_Collections_Generic_List_EventBulletinBoardEntity__o *EventBulletinBoardM
 {
   System_Collections_Generic_List_object__o *v5; // x21
   EventBulletinBoardReleaseMaster_o *Master_object; // x0
-  __int64 v7; // x1
-  EventBulletinBoardReleaseMaster_o *v8; // x22
-  int v9; // w23
-  int32_t v10; // w24
-  const MethodInfo *v11; // x2
-  Il2CppObject *v12; // x25
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  EventBulletinBoardReleaseMaster_o *v7; // x22
+  int v8; // w23
+  int32_t v9; // w24
+  const MethodInfo *v10; // x2
+  Il2CppObject *v11; // x25
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v16; // x9
+  _QWORD *v15; // x9
   __int64 size; // x10
-  Il2CppClass **v18; // x0
+  Il2CppClass **v17; // x0
 
-  if ( (byte_4C271A3 & 1) == 0 )
+  if ( (byte_4C37897 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Count__);
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Item__);
-    sub_1C2D490(&Method_DataManager_GetMaster_EventBulletinBoardReleaseMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventBulletinBoardEntity__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventBulletinBoardEntity___ctor__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventBulletinBoardEntity__get_Count__);
-    sub_1C2D490(&System_Collections_Generic_List_EventBulletinBoardEntity__TypeInfo);
-    byte_4C271A3 = 1;
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Count__);
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Item__);
+    sub_1C32C20(&Method_DataManager_GetMaster_EventBulletinBoardReleaseMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventBulletinBoardEntity__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventBulletinBoardEntity___ctor__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventBulletinBoardEntity__get_Count__);
+    sub_1C32C20(&System_Collections_Generic_List_EventBulletinBoardEntity__TypeInfo);
+    byte_4C37897 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_EventBulletinBoardEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventBulletinBoardEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_EventBulletinBoardEntity___ctor__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventBulletinBoardEntity___ctor__);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventBulletinBoardReleaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventBulletinBoardReleaseMaster___);
+  Master_object = (EventBulletinBoardReleaseMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventBulletinBoardReleaseMaster___);
   if ( !this->fields.list )
     goto LABEL_23;
-  v8 = Master_object;
+  v7 = Master_object;
   Master_object = (EventBulletinBoardReleaseMaster_o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                          (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-                                                         (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Count__);
+                                                         (const MethodInfo_332FCA8 *)Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Count__);
   if ( (int)Master_object >= 1 )
   {
-    v9 = (int)Master_object;
-    v10 = 0;
+    v8 = (int)Master_object;
+    v9 = 0;
     while ( 1 )
     {
       Master_object = (EventBulletinBoardReleaseMaster_o *)this->fields.list;
@@ -68,25 +67,25 @@ System_Collections_Generic_List_EventBulletinBoardEntity__o *EventBulletinBoardM
         break;
       Master_object = (EventBulletinBoardReleaseMaster_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                              (System_Collections_ObjectModel_Collection_T__o *)Master_object,
-                                                             v10,
-                                                             (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Item__);
+                                                             v9,
+                                                             (const MethodInfo_332FD38 *)Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Item__);
       if ( !Master_object )
         break;
-      v12 = (Il2CppObject *)Master_object;
+      v11 = (Il2CppObject *)Master_object;
       if ( *(&Master_object->fields._MasterKind_k__BackingField + 1) == eventId )
       {
-        if ( !v8 )
+        if ( !v7 )
           break;
         Master_object = (EventBulletinBoardReleaseMaster_o *)EventBulletinBoardReleaseMaster__IsOpen(
-                                                               v8,
+                                                               v7,
                                                                Master_object->fields._MasterKind_k__BackingField,
-                                                               v11);
+                                                               v10);
         if ( ((unsigned __int8)Master_object & 1) != 0 )
         {
           if ( !v5 )
             break;
           items = v5->fields._items;
-          v16 = Method_System_Collections_Generic_List_EventBulletinBoardEntity__Add__;
+          v15 = Method_System_Collections_Generic_List_EventBulletinBoardEntity__Add__;
           ++v5->fields._version;
           if ( !items )
             break;
@@ -95,23 +94,23 @@ System_Collections_Generic_List_EventBulletinBoardEntity__o *EventBulletinBoardM
           {
             System_Collections_Generic_List_object___AddWithResize(
               v5,
-              v12,
-              *(const MethodInfo_3789B84 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+              v11,
+              *(const MethodInfo_37987BC **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
           }
           else
           {
-            v18 = &items->obj.klass + size;
+            v17 = &items->obj.klass + size;
             v5->fields._size = size + 1;
-            v18[4] = (Il2CppClass *)v12;
-            sub_1C2D434((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v12, v13, v14);
+            v17[4] = (Il2CppClass *)v11;
+            sub_1C32BC4((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v11, v12, v13);
           }
         }
       }
-      if ( v9 == ++v10 )
+      if ( v8 == ++v9 )
         goto LABEL_19;
     }
 LABEL_23:
-    sub_1C2D6EC(Master_object, v7);
+    sub_1C32E7C(Master_object);
   }
 LABEL_19:
   if ( !v5 )
@@ -130,55 +129,55 @@ System_Collections_Generic_List_string__o *EventBulletinBoardMaster__GetAvailabl
 {
   System_Collections_Generic_List_object__o *v5; // x21
   void *Instance; // x0
-  Il2CppObject *v7; // x1
-  EventBulletinBoardReleaseMaster_o *v8; // x22
+  EventBulletinBoardReleaseMaster_o *v7; // x22
   int32_t Count; // w0
-  int32_t v10; // w23
-  char v11; // w28
+  int32_t v9; // w23
+  char v10; // w28
   int32_t i; // w24
-  const MethodInfo *v13; // x2
-  void *v14; // x25
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  const MethodInfo *v12; // x2
+  void *v13; // x25
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  Il2CppObject *v16; // x1
   struct System_Object_array *items; // x8
   _QWORD *v18; // x9
   __int64 size; // x10
   Il2CppClass **v20; // x0
 
-  if ( (byte_4C271A4 & 1) == 0 )
+  if ( (byte_4C37898 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Count__);
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Item__);
-    sub_1C2D490(&Method_DataManager_GetMasterData_EventBulletinBoardReleaseMaster___);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C271A4 = 1;
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Count__);
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Item__);
+    sub_1C32C20(&Method_DataManager_GetMasterData_EventBulletinBoardReleaseMaster___);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C37898 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_string__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_string___ctor__);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventBulletinBoardReleaseMaster___),
+                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventBulletinBoardReleaseMaster___),
         !this->fields.list) )
   {
 LABEL_23:
-    sub_1C2D6EC(Instance, v7);
+    sub_1C32E7C(Instance);
   }
-  v8 = (EventBulletinBoardReleaseMaster_o *)Instance;
+  v7 = (EventBulletinBoardReleaseMaster_o *)Instance;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)this->fields.list,
-            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Count__);
+            (const MethodInfo_332FCA8 *)Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Count__);
   if ( Count < 1 )
     return 0;
-  v10 = Count;
-  v11 = 0;
-  for ( i = 0; i != v10; ++i )
+  v9 = Count;
+  v10 = 0;
+  for ( i = 0; i != v9; ++i )
   {
     Instance = this->fields.list;
     if ( !Instance )
@@ -186,20 +185,20 @@ LABEL_23:
     Instance = System_Collections_ObjectModel_Collection_object___get_Item(
                  (System_Collections_ObjectModel_Collection_T__o *)Instance,
                  i,
-                 (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Item__);
+                 (const MethodInfo_332FD38 *)Method_System_Collections_ObjectModel_Collection_EventBulletinBoardEntity__get_Item__);
     if ( !Instance )
       goto LABEL_23;
-    v14 = Instance;
+    v13 = Instance;
     if ( *((_DWORD *)Instance + 5) == eventId )
     {
-      if ( !v8 )
+      if ( !v7 )
         goto LABEL_23;
-      Instance = (void *)EventBulletinBoardReleaseMaster__IsOpen(v8, *((_DWORD *)Instance + 4), v13);
+      Instance = (void *)EventBulletinBoardReleaseMaster__IsOpen(v7, *((_DWORD *)Instance + 4), v12);
       if ( ((unsigned __int8)Instance & 1) != 0 )
       {
         if ( !v5 )
           goto LABEL_23;
-        v7 = (Il2CppObject *)*((_QWORD *)v14 + 3);
+        v16 = (Il2CppObject *)*((_QWORD *)v13 + 3);
         items = v5->fields._items;
         v18 = Method_System_Collections_Generic_List_string__Add__;
         ++v5->fields._version;
@@ -210,21 +209,21 @@ LABEL_23:
         {
           System_Collections_Generic_List_object___AddWithResize(
             v5,
-            v7,
-            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            v16,
+            *(const MethodInfo_37987BC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
         else
         {
           v20 = &items->obj.klass + size;
           v5->fields._size = size + 1;
-          v20[4] = (Il2CppClass *)v7;
-          sub_1C2D434((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v7, v15, v16);
+          v20[4] = (Il2CppClass *)v16;
+          sub_1C32BC4((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v16, v14, v15);
         }
       }
-      v11 = 1;
+      v10 = 1;
     }
   }
-  if ( (v11 & 1) != 0 )
+  if ( (v10 & 1) != 0 )
     return (System_Collections_Generic_List_string__o *)v5;
   else
     return 0;

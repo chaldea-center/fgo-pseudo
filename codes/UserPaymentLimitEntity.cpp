@@ -1,27 +1,27 @@
 void UserPaymentLimitEntity___ctor(UserPaymentLimitEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C285BF & 1) == 0 )
+  if ( (byte_4C38CC3 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C285BF = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C38CC3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserPaymentLimitEntity__CreatePK(int64_t userId, int32_t paymentLimitId, const MethodInfo *method)
 {
-  if ( (byte_4C285BE & 1) == 0 )
+  if ( (byte_4C38CC2 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4C285BE = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4C38CC2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            paymentLimitId,
-           (const MethodInfo_30CCBE0 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_30DB680 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

@@ -1,14 +1,19 @@
 void CriWareDecrypterConfig___ctor(CriWareDecrypterConfig_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C20B85 & 1) == 0 )
+  __int64 v3; // x1
+  __int64 v4; // x1
+
+  if ( (byte_4C311B5 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C20B85 = 1;
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C311B5 = 1;
   }
+  v3 = StringLiteral_1/*""*/;
   this->fields.key = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434(&this->fields);
+  sub_1C32BC4(&this->fields, v3);
+  v4 = StringLiteral_1/*""*/;
   this->fields.authenticationFile = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434(&this->fields.authenticationFile);
+  sub_1C32BC4(&this->fields.authenticationFile, v4);
   *(_WORD *)&this->fields.enableAtomDecryption = 257;
   System_Object___ctor((Il2CppObject *)this, 0);
 }

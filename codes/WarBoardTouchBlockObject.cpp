@@ -13,16 +13,15 @@ bool WarBoardTouchBlockObject__Activate(
   const MethodInfo *v6; // x3
   bool isActiveAndEnabled; // w19
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v9; // x1
 
   isActiveAndEnabled = UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)this, 0);
   if ( !isActiveAndEnabled )
   {
     this->fields.onClickCallback = callback;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.onClickCallback, (int32_t)callback, v5, v6);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onClickCallback, (int32_t)callback, v5, v6);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
-      sub_1C2D6EC(0, v9);
+      sub_1C32E7C(0);
     UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   }
   return !isActiveAndEnabled;
@@ -32,16 +31,15 @@ bool WarBoardTouchBlockObject__Activate(
 void WarBoardTouchBlockObject__Deactivate(WarBoardTouchBlockObject_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v4; // x1
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C2D6EC(0, v4);
+    sub_1C32E7C(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.onClickCallback = 0;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.onClickCallback, 0, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onClickCallback, 0, v4, v5);
 }
 
 
@@ -60,7 +58,7 @@ void WarBoardTouchBlockObject__OnClickObject(WarBoardTouchBlockObject_o *this, c
       onClickCallback->fields.method_code,
       onClickCallback->fields.method);
     p_onClickCallback->klass = 0;
-    sub_1C2D434(p_onClickCallback, 0, v4, v5);
+    sub_1C32BC4(p_onClickCallback, 0, v4, v5);
   }
 }
 
@@ -79,7 +77,7 @@ void WarBoardTouchBlockObject__RemoveCallback(WarBoardTouchBlockObject_o *this, 
     if ( onClickCallback )
     {
       p_onClickCallback->klass = 0;
-      sub_1C2D434(p_onClickCallback, 0, v3, v4);
+      sub_1C32BC4(p_onClickCallback, 0, v3, v4);
     }
   }
 }
@@ -102,7 +100,7 @@ void WarBoardTouchBlockObject__SetCallback(
     if ( !onClickCallback )
     {
       p_onClickCallback->klass = (CGThumbnailListItem_c *)callback;
-      sub_1C2D434(p_onClickCallback, (int32_t)callback, v5, v6);
+      sub_1C32BC4(p_onClickCallback, (int32_t)callback, v5, v6);
     }
   }
 }

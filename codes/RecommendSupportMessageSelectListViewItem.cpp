@@ -10,16 +10,16 @@ void RecommendSupportMessageSelectListViewItem___ctor(
   const MethodInfo *v9; // x1
   struct RecommendAdviceMessageEntity_o *RecommendAdviceMessageEntity_k__BackingField; // x8
 
-  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
   this->fields._RecommendAdviceMessageEntity_k__BackingField = entity;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields._RecommendAdviceMessageEntity_k__BackingField,
     (int32_t)entity,
     v6,
     v7);
   RecommendAdviceMessageEntity_k__BackingField = this->fields._RecommendAdviceMessageEntity_k__BackingField;
   if ( !RecommendAdviceMessageEntity_k__BackingField )
-    sub_1C2D6EC(v8, v9);
+    sub_1C32E7C(v8);
   this->fields._Category_k__BackingField = RecommendAdviceMessageEntity_k__BackingField->fields.category;
   RecommendSupportMessageSelectListViewItem__UpdateProperties(this, v9);
 }
@@ -35,7 +35,7 @@ bool RecommendSupportMessageSelectListViewItem__SetSortValue(
 
   RecommendAdviceMessageEntity_k__BackingField = this->fields._RecommendAdviceMessageEntity_k__BackingField;
   if ( !RecommendAdviceMessageEntity_k__BackingField )
-    sub_1C2D6EC(this, sort);
+    sub_1C32E7C(this);
   result = 1;
   this->fields.sortValue1 = RecommendAdviceMessageEntity_k__BackingField->fields.priority;
   return result;
@@ -47,29 +47,28 @@ void RecommendSupportMessageSelectListViewItem__UpdateProperties(
         const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  __int64 v4; // x1
   struct RecommendAdviceMessageEntity_o *RecommendAdviceMessageEntity_k__BackingField; // x8
 
-  if ( (byte_4C231CC & 1) == 0 )
+  if ( (byte_4C3389C & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C2D490(&Method_RecommendSupportSelectControl_GetDialog_RecommendSupportMessageSelectDialog___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    byte_4C231CC = 1;
+    sub_1C32C20(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C32C20(&Method_RecommendSupportSelectControl_GetDialog_RecommendSupportMessageSelectDialog___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    byte_4C3389C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance
     || (Instance = RecommendSupportSelectControl__GetDialog_object_(
                      (RecommendSupportSelectControl_o *)Instance,
-                     (const MethodInfo_3167E24 *)Method_RecommendSupportSelectControl_GetDialog_RecommendSupportMessageSelectDialog___)) == 0
+                     (const MethodInfo_31768C4 *)Method_RecommendSupportSelectControl_GetDialog_RecommendSupportMessageSelectDialog___)) == 0
     || (RecommendAdviceMessageEntity_k__BackingField = this->fields._RecommendAdviceMessageEntity_k__BackingField) == 0 )
   {
-    sub_1C2D6EC(Instance, v4);
+    sub_1C32E7C(Instance);
   }
   this->fields._IsUse_k__BackingField = System_Linq_Enumerable__Contains_int_(
                                           (System_Collections_Generic_IEnumerable_TSource__o *)Instance[13].klass,
                                           RecommendAdviceMessageEntity_k__BackingField->fields.id,
-                                          (const MethodInfo_30EB900 *)Method_System_Linq_Enumerable_Contains_int___);
+                                          (const MethodInfo_30FA3A0 *)Method_System_Linq_Enumerable_Contains_int___);
 }
 
 
@@ -97,7 +96,7 @@ int32_t RecommendSupportMessageSelectListViewItem__get_ObjectId(
 
   RecommendAdviceMessageEntity_k__BackingField = this->fields._RecommendAdviceMessageEntity_k__BackingField;
   if ( !RecommendAdviceMessageEntity_k__BackingField )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return RecommendAdviceMessageEntity_k__BackingField->fields.id;
 }
 
@@ -136,7 +135,7 @@ void RecommendSupportMessageSelectListViewItem__set_RecommendAdviceMessageEntity
   const MethodInfo *v3; // x3
 
   this->fields._RecommendAdviceMessageEntity_k__BackingField = value;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields._RecommendAdviceMessageEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,

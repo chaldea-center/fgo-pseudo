@@ -22,5 +22,5 @@ void SupportSelectUIDragDropListViewSurface__set_DropObject(
   const MethodInfo *v3; // x3
 
   this->fields.dropObject = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.dropObject, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.dropObject, (int32_t)value, (int32_t)method, v3);
 }

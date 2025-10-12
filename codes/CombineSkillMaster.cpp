@@ -1,14 +1,14 @@
 void CombineSkillMaster___ctor(CombineSkillMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2708B & 1) == 0 )
+  if ( (byte_4C37782 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_CombineSkillMaster__CombineSkillEntity__string___ctor__);
-    byte_4C2708B = 1;
+    sub_1C32C20(&Method_DataMasterBase_CombineSkillMaster__CombineSkillEntity__string___ctor__);
+    byte_4C37782 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     92,
-    (const MethodInfo_338A52C *)Method_DataMasterBase_CombineSkillMaster__CombineSkillEntity__string___ctor__);
+    (const MethodInfo_3398FCC *)Method_DataMasterBase_CombineSkillMaster__CombineSkillEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ CombineSkillEntity_o *CombineSkillMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C27089 & 1) == 0 )
+  if ( (byte_4C37780 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_CombineSkillMaster__CombineSkillEntity__string__GetEntity__);
-    byte_4C27089 = 1;
+    sub_1C32C20(&Method_DataMasterBase_CombineSkillMaster__CombineSkillEntity__string__GetEntity__);
+    byte_4C37780 = 1;
   }
   PK = (Il2CppObject *)CombineSkillEntity__CreatePK(id, skillLv, *(const MethodInfo **)&skillLv);
   return (CombineSkillEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                    PK,
-                                   (const MethodInfo_338C850 *)Method_DataMasterBase_CombineSkillMaster__CombineSkillEntity__string__GetEntity__);
+                                   (const MethodInfo_339B2F0 *)Method_DataMasterBase_CombineSkillMaster__CombineSkillEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool CombineSkillMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C2708A & 1) == 0 )
+  if ( (byte_4C37781 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_CombineSkillMaster__CombineSkillEntity__string__TryGetEntity__);
-    byte_4C2708A = 1;
+    sub_1C32C20(&Method_DataMasterBase_CombineSkillMaster__CombineSkillEntity__string__TryGetEntity__);
+    byte_4C37781 = 1;
   }
   PK = (Il2CppObject *)CombineSkillEntity__CreatePK(id, skillLv, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_338C89C *)Method_DataMasterBase_CombineSkillMaster__CombineSkillEntity__string__TryGetEntity__);
+           (const MethodInfo_339B33C *)Method_DataMasterBase_CombineSkillMaster__CombineSkillEntity__string__TryGetEntity__);
 }

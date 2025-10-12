@@ -1,0 +1,74 @@
+void BackViewListViewItemDraw___ctor(BackViewListViewItemDraw_o *this, const MethodInfo *method)
+{
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
+}
+
+
+// local variable allocation has failed, the output may be wrong!
+void BackViewListViewItemDraw__SetItem(
+        BackViewListViewItemDraw_o *this,
+        BackViewListViewItem_o *item,
+        int32_t mode,
+        const MethodInfo *method)
+{
+  const MethodInfo *v7; // x1
+  UILabel_o *titleTextLabel; // x22
+  System_String_o *TitleText; // x0
+  Il2CppObject *Component_object; // x21
+  float v11; // s0 OVERLAPPED
+  float v12; // s3
+  float v13; // s1
+  float v14; // s2
+
+  if ( (byte_4C34E2F & 1) == 0 )
+  {
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C34E2F = 1;
+  }
+  if ( item && mode )
+  {
+    if ( BackViewListViewItem__get_TitleText(item, (const MethodInfo *)item) )
+    {
+      titleTextLabel = this->fields.titleTextLabel;
+      TitleText = BackViewListViewItem__get_TitleText(item, v7);
+      if ( !titleTextLabel )
+        goto LABEL_20;
+      UILabel__set_text(titleTextLabel, TitleText, 0);
+    }
+    TitleText = (System_String_o *)this->fields.baseImageTexture;
+    if ( TitleText )
+    {
+      TitleText = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)TitleText, 0);
+      if ( TitleText )
+      {
+        Component_object = UnityEngine_GameObject__GetComponent_object_(
+                             (UnityEngine_GameObject_o *)TitleText,
+                             (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+        if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+        TitleText = (System_String_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
+        if ( ((unsigned __int8)TitleText & 1) != 0 )
+        {
+          if ( !Component_object )
+            goto LABEL_20;
+          UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
+        }
+        TitleText = (System_String_o *)this->fields.baseImageTexture;
+        v11 = 1.0;
+        if ( mode == 1 )
+          v11 = 0.5;
+        if ( TitleText )
+        {
+          v12 = 1.0;
+          v13 = v11;
+          v14 = v11;
+          UIWidget__set_color((UIWidget_o *)TitleText, *(UnityEngine_Color_o *)&v11, 0);
+          return;
+        }
+      }
+    }
+LABEL_20:
+    sub_1C32E7C(TitleText);
+  }
+}

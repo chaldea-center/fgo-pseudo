@@ -13,24 +13,23 @@ void CombineUICommonButton__OnClick(CombineUICommonButton_o *this, const MethodI
   int32_t v7; // w2
   const MethodInfo *v8; // x3
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v10; // x1
   void *monitor; // x8
   __int64 naturalAligment; // x10
-  __int64 v13; // x9
-  _QWORD *v14; // x0
-  System_Reflection_MethodBase_o *v15; // x0
-  CombineUICommonButton_o *v16; // x0
-  const MethodInfo *v17; // x1
+  __int64 v12; // x9
+  _QWORD *v13; // x0
+  System_Reflection_MethodBase_o *v14; // x0
+  CombineUICommonButton_o *v15; // x0
+  const MethodInfo *v16; // x1
 
-  if ( (byte_4C2B4E9 & 1) == 0 )
+  if ( (byte_4C3BC08 & 1) == 0 )
   {
-    sub_1C2D490(&CombineRootComponent_TypeInfo);
-    sub_1C2D490(&Method_CombineUICommonButton_OnClick__);
-    sub_1C2D490(&EventDelegate_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C2D490(&UICommonButton_TypeInfo);
-    byte_4C2B4E9 = 1;
+    sub_1C32C20(&CombineRootComponent_TypeInfo);
+    sub_1C32C20(&Method_CombineUICommonButton_OnClick__);
+    sub_1C32C20(&EventDelegate_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C32C20(&UICommonButton_TypeInfo);
+    byte_4C3BC08 = 1;
   }
   if ( this->fields.isPassive && UICommonButtonColor__get_alpha((UICommonButtonColor_o *)this, 0) < 1.0 )
     return;
@@ -45,13 +44,13 @@ void CombineUICommonButton__OnClick(CombineUICommonButton_o *this, const MethodI
       & 1) != 0 )
   {
     UICommonButton_TypeInfo->static_fields->current = (struct UICommonButton_o *)this;
-    sub_1C2D434((CGThumbnailListItem_o *)UICommonButton_TypeInfo->static_fields, (int32_t)this, v4, v5);
+    sub_1C32BC4((CGThumbnailListItem_o *)UICommonButton_TypeInfo->static_fields, (int32_t)this, v4, v5);
     onClick = this->fields.onClick;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49117324(onClick, 0);
+    EventDelegate__Execute_49177388(onClick, 0);
     UICommonButton_TypeInfo->static_fields->current = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)UICommonButton_TypeInfo->static_fields, 0, v7, v8);
+    sub_1C32BC4((CGThumbnailListItem_o *)UICommonButton_TypeInfo->static_fields, 0, v7, v8);
     return;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -59,7 +58,7 @@ void CombineUICommonButton__OnClick(CombineUICommonButton_o *this, const MethodI
     goto LABEL_27;
   if ( !UnityEngine_GameObject__get_activeInHierarchy(gameObject, 0) )
     return;
-  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !gameObject )
     goto LABEL_27;
   monitor = gameObject[1].monitor;
@@ -69,23 +68,23 @@ void CombineUICommonButton__OnClick(CombineUICommonButton_o *this, const MethodI
     || *(CombineRootComponent_c **)(*(_QWORD *)(*(_QWORD *)monitor + 200LL) + 8 * naturalAligment - 8) != CombineRootComponent_TypeInfo )
   {
 LABEL_24:
-    v14 = Method_CombineUICommonButton_OnClick__;
+    v13 = Method_CombineUICommonButton_OnClick__;
     if ( (*((_BYTE *)Method_CombineUICommonButton_OnClick__ + 83) & 2) != 0 )
-      v14 = (_QWORD *)sub_1C2D4A8(Method_CombineUICommonButton_OnClick__);
-    v15 = (System_Reflection_MethodBase_o *)sub_1C2D474(v14, v14[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v15, 2, 0, 0);
+      v13 = (_QWORD *)sub_1C32C38(Method_CombineUICommonButton_OnClick__);
+    v14 = (System_Reflection_MethodBase_o *)sub_1C32C04(v13, v13[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v14, 2, 0, 0);
     return;
   }
-  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !gameObject || (gameObject = (UnityEngine_GameObject_o *)gameObject[1].monitor) == 0 )
 LABEL_27:
-    sub_1C2D6EC(gameObject, v10);
-  v13 = CombineRootComponent_TypeInfo->_2.naturalAligment;
-  if ( gameObject->klass->_2.naturalAligment < (unsigned int)v13
-    || (CombineRootComponent_c *)gameObject->klass->_2.typeHierarchy[v13 - 1] != CombineRootComponent_TypeInfo )
+    sub_1C32E7C(gameObject);
+  v12 = CombineRootComponent_TypeInfo->_2.naturalAligment;
+  if ( gameObject->klass->_2.naturalAligment < (unsigned int)v12
+    || (CombineRootComponent_c *)gameObject->klass->_2.typeHierarchy[v12 - 1] != CombineRootComponent_TypeInfo )
   {
-    sub_1C2D9AC(gameObject);
-    CombineUICommonButton___ctor(v16, v17);
+    sub_1C3313C(gameObject);
+    CombineUICommonButton___ctor(v15, v16);
     return;
   }
   if ( HIDWORD(gameObject[28].monitor) != 5 )

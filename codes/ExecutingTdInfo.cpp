@@ -16,32 +16,31 @@ ExecutingTdInfo_o *ExecutingTdInfo__Create(
         const MethodInfo *method)
 {
   Il2CppObject *Master_object; // x0
-  __int64 v14; // x1
   TreasureDeviceSequenceWeightEntity_o *EntityByDescendingPriority; // x0
   System_Tuple_T1__T2__o *SeqIdAndGroupSeqId; // x0
-  int32_t v17; // w22
+  int32_t v16; // w22
   int32_t RandomSeqIdEachLimit; // w0
-  __int64 v19; // x20
+  __int64 v18; // x20
   int32_t item2; // [xsp+4h] [xbp-5Ch] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-58h] BYREF
   int32_t item1[2]; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4C2A1C0 & 1) == 0 )
+  if ( (byte_4C3A8D3 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_TreasureDeviceSequenceWeightMaster___);
-    sub_1C2D490(&Method_DataManager_GetMaster_TreasureDvcMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__TryGetEntity__);
-    sub_1C2D490(&ExecutingTdInfo_TypeInfo);
-    sub_1C2D490(&Method_System_TupleExtensions_Deconstruct_int__int___);
-    byte_4C2A1C0 = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_TreasureDeviceSequenceWeightMaster___);
+    sub_1C32C20(&Method_DataManager_GetMaster_TreasureDvcMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__TryGetEntity__);
+    sub_1C32C20(&ExecutingTdInfo_TypeInfo);
+    sub_1C32C20(&Method_System_TupleExtensions_Deconstruct_int__int___);
+    byte_4C3A8D3 = 1;
   }
   *(_QWORD *)item1 = 0;
   entity = 0;
   item2 = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_TreasureDeviceSequenceWeightMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_TreasureDeviceSequenceWeightMaster___);
   if ( !Master_object )
     goto LABEL_21;
   EntityByDescendingPriority = TreasureDeviceSequenceWeightMaster__GetEntityByDescendingPriority(
@@ -61,8 +60,8 @@ ExecutingTdInfo_o *ExecutingTdInfo__Create(
       SeqIdAndGroupSeqId,
       item1,
       &item2,
-      (const MethodInfo_3186710 *)Method_System_TupleExtensions_Deconstruct_int__int___);
-    v17 = item2;
+      (const MethodInfo_31951B0 *)Method_System_TupleExtensions_Deconstruct_int__int___);
+    v16 = item2;
     item1[1] = item2;
     if ( item1[0] > 0 )
     {
@@ -72,16 +71,16 @@ ExecutingTdInfo_o *ExecutingTdInfo__Create(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_TreasureDvcMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_TreasureDvcMaster___);
   if ( !Master_object )
     goto LABEL_21;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           tdId,
-          (const MethodInfo_3387DE4 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__TryGetEntity__) )
+          (const MethodInfo_3396884 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__TryGetEntity__) )
   {
-    v17 = 0;
+    v16 = 0;
     goto LABEL_20;
   }
   Master_object = entity;
@@ -90,7 +89,7 @@ ExecutingTdInfo_o *ExecutingTdInfo__Create(
     || (Master_object = (Il2CppObject *)TreasureDvcEntity__IsRandomTD((TreasureDvcEntity_o *)entity, 0), !entity) )
   {
 LABEL_21:
-    sub_1C2D6EC(Master_object, v14);
+    sub_1C32E7C(Master_object);
   }
   if ( ((unsigned __int8)Master_object & 1) != 0 )
     RandomSeqIdEachLimit = TreasureDvcEntity__GetRandomSeqIdEachLimit(
@@ -101,14 +100,14 @@ LABEL_21:
                              0);
   else
     RandomSeqIdEachLimit = TreasureDvcEntity__getSeqId((TreasureDvcEntity_o *)entity, dispLimitCount, 0);
-  v17 = item1[1];
+  v16 = item1[1];
   tdId = RandomSeqIdEachLimit;
 LABEL_20:
-  v19 = sub_1C2D6DC(ExecutingTdInfo_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v19, 0);
-  *(_DWORD *)(v19 + 16) = tdId;
-  *(_DWORD *)(v19 + 20) = v17;
-  return (ExecutingTdInfo_o *)v19;
+  v18 = sub_1C32E6C(ExecutingTdInfo_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v18, 0);
+  *(_DWORD *)(v18 + 16) = tdId;
+  *(_DWORD *)(v18 + 20) = v16;
+  return (ExecutingTdInfo_o *)v18;
 }
 
 
@@ -116,12 +115,12 @@ ExecutingTdInfo_o *ExecutingTdInfo__GetDefault(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4C2A1BF & 1) == 0 )
+  if ( (byte_4C3A8D2 & 1) == 0 )
   {
-    sub_1C2D490(&ExecutingTdInfo_TypeInfo);
-    byte_4C2A1BF = 1;
+    sub_1C32C20(&ExecutingTdInfo_TypeInfo);
+    byte_4C3A8D2 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C2D6DC(ExecutingTdInfo_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C32E6C(ExecutingTdInfo_TypeInfo);
   System_Object___ctor(v1, 0);
   v1[1].klass = 0;
   return (ExecutingTdInfo_o *)v1;

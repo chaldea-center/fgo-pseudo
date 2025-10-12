@@ -1,5 +1,5 @@
 void JNI_OnUnload(JavaVM *vm, void *reserved)
 {
   __android_log_print(4, "IL2CPP", "JNI_OnUnload");
-  qword_4C39650 = 0;
+  qword_4C49CD0 = 0;
 }

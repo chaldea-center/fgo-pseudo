@@ -6,10 +6,10 @@ void MoveAnimationComponent___ctor(MoveAnimationComponent_o *this, const MethodI
   struct UnityEngine_Vector3_StaticFields *v6; // x8
   float v7; // s1
 
-  if ( !byte_4C20DA1 )
+  if ( !byte_4C313D1 )
   {
-    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
-    byte_4C20DA1 = 1;
+    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
+    byte_4C313D1 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -65,11 +65,11 @@ void MoveAnimationComponent__PlayAnimation(
   v10.fields.z = *p_z;
   v10.fields.y = *p_y;
   v10.fields.x = p_endPosition->fields.x;
-  MoveAnimationComponent__PlayAnimation_47864528(this, animationType, v10, v11, onFinish, method);
+  MoveAnimationComponent__PlayAnimation_47946964(this, animationType, v10, v11, onFinish, method);
 }
 
 
-void MoveAnimationComponent__PlayAnimation_47864528(
+void MoveAnimationComponent__PlayAnimation_47946964(
         MoveAnimationComponent_o *this,
         int32_t animationType,
         UnityEngine_Vector3_o fromPosition,
@@ -85,12 +85,11 @@ void MoveAnimationComponent__PlayAnimation_47864528(
   float v12; // s13
   UnityEngine_Object_o *Target; // x22
   UnityEngine_GameObject_o *transform; // x0
-  __int64 v17; // x1
-  UnityEngine_GameObject_o *v18; // x0
-  UnityEngine_Object_o *v19; // x22
+  UnityEngine_GameObject_o *v17; // x0
+  UnityEngine_Object_o *v18; // x22
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v22; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v21; // 0:s1.4,4:s2.4,8:s3.4
 
   z = toPosition.fields.z;
   y = toPosition.fields.y;
@@ -98,10 +97,10 @@ void MoveAnimationComponent__PlayAnimation_47864528(
   v10 = fromPosition.fields.z;
   v11 = fromPosition.fields.y;
   v12 = fromPosition.fields.x;
-  if ( (byte_4C2AE8A & 1) == 0 )
+  if ( (byte_4C3B4FE & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2AE8A = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3B4FE = 1;
   }
   Target = (UnityEngine_Object_o *)TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -111,19 +110,19 @@ void MoveAnimationComponent__PlayAnimation_47864528(
   transform = TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0);
   if ( !transform || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0 )
 LABEL_16:
-    sub_1C2D6EC(transform, v17);
-  v20.fields.x = v12;
-  v20.fields.y = v11;
-  v20.fields.z = v10;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v20, 0);
-  v18 = TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0);
-  v22.fields.x = x;
-  v22.fields.y = y;
-  v22.fields.z = z;
-  v19 = (UnityEngine_Object_o *)TweenPosition__Begin(v18, this->fields.animationTime, v22, 0);
+    sub_1C32E7C(transform);
+  v19.fields.x = v12;
+  v19.fields.y = v11;
+  v19.fields.z = v10;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v19, 0);
+  v17 = TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0);
+  v21.fields.x = x;
+  v21.fields.y = y;
+  v21.fields.z = z;
+  v18 = (UnityEngine_Object_o *)TweenPosition__Begin(v17, this->fields.animationTime, v21, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality(v19, 0, 0) )
+  if ( UnityEngine_Object__op_Equality(v18, 0, 0) )
   {
     transform = TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0);
     if ( transform )
@@ -131,10 +130,10 @@ LABEL_16:
       transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0);
       if ( transform )
       {
-        v21.fields.x = x;
-        v21.fields.y = y;
-        v21.fields.z = z;
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v21, 0);
+        v20.fields.x = x;
+        v20.fields.y = y;
+        v20.fields.z = z;
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v20, 0);
 LABEL_14:
         ActionExtensions__Call(onFinish, 0);
         return;
@@ -142,7 +141,7 @@ LABEL_14:
     }
     goto LABEL_16;
   }
-  TweenAnimationComponent__Setup((TweenAnimationComponent_o *)this, animationType, (UITweener_o *)v19, onFinish, 0);
+  TweenAnimationComponent__Setup((TweenAnimationComponent_o *)this, animationType, (UITweener_o *)v18, onFinish, 0);
 }
 
 
@@ -155,8 +154,7 @@ void MoveAnimationComponent__SetBeginWorldPosition(
   float y; // s9
   float x; // s10
   UnityEngine_GameObject_o *Target; // x0
-  __int64 v8; // x1
-  UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v8; // 0:s0.4,4:s1.4,8:s2.4
 
   z = worldPosition.fields.z;
   y = worldPosition.fields.y;
@@ -164,14 +162,14 @@ void MoveAnimationComponent__SetBeginWorldPosition(
   Target = TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0);
   if ( !Target
     || (Target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(Target, 0)) == 0
-    || (v9.fields.x = x,
-        v9.fields.y = y,
-        v9.fields.z = z,
-        UnityEngine_Transform__set_position((UnityEngine_Transform_o *)Target, v9, 0),
+    || (v8.fields.x = x,
+        v8.fields.y = y,
+        v8.fields.z = z,
+        UnityEngine_Transform__set_position((UnityEngine_Transform_o *)Target, v8, 0),
         (Target = TweenAnimationComponent__get_Target((TweenAnimationComponent_o *)this, 0)) == 0)
     || (Target = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(Target, 0)) == 0 )
   {
-    sub_1C2D6EC(Target, v8);
+    sub_1C32E7C(Target);
   }
   this->fields.beginPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)Target, 0);
 }

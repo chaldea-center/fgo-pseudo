@@ -1,28 +1,30 @@
 void TreasureBoxBulkBuyConfirmMenu___cctor(const MethodInfo *method)
 {
+  __int64 v1; // x1
   struct TreasureBoxBulkBuyConfirmMenu_StaticFields *static_fields; // x0
 
-  if ( (byte_4C21CF2 & 1) == 0 )
+  if ( (byte_4C3248D & 1) == 0 )
   {
-    sub_1C2D490(&TreasureBoxBulkBuyConfirmMenu_TypeInfo);
-    sub_1C2D490(&StringLiteral_17613/*"btn_txt_trade"*/);
-    sub_1C2D490(&StringLiteral_17591/*"btn_txt_sale"*/);
-    byte_4C21CF2 = 1;
+    sub_1C32C20(&TreasureBoxBulkBuyConfirmMenu_TypeInfo);
+    sub_1C32C20(&StringLiteral_17617/*"btn_txt_trade"*/);
+    sub_1C32C20(&StringLiteral_17595/*"btn_txt_sale"*/);
+    byte_4C3248D = 1;
   }
-  TreasureBoxBulkBuyConfirmMenu_TypeInfo->static_fields->DECIED_BTN_NAME_DEFAULT = (struct System_String_o *)StringLiteral_17613/*"btn_txt_trade"*/;
-  sub_1C2D434(TreasureBoxBulkBuyConfirmMenu_TypeInfo->static_fields);
+  TreasureBoxBulkBuyConfirmMenu_TypeInfo->static_fields->DECIED_BTN_NAME_DEFAULT = (struct System_String_o *)StringLiteral_17617/*"btn_txt_trade"*/;
+  sub_1C32BC4(TreasureBoxBulkBuyConfirmMenu_TypeInfo->static_fields, StringLiteral_17617/*"btn_txt_trade"*/);
+  v1 = StringLiteral_17595/*"btn_txt_sale"*/;
   static_fields = TreasureBoxBulkBuyConfirmMenu_TypeInfo->static_fields;
-  static_fields->DECIED_BTN_NAME_LIMIT_MATERIAL = (struct System_String_o *)StringLiteral_17591/*"btn_txt_sale"*/;
-  sub_1C2D434(&static_fields->DECIED_BTN_NAME_LIMIT_MATERIAL);
+  static_fields->DECIED_BTN_NAME_LIMIT_MATERIAL = (struct System_String_o *)StringLiteral_17595/*"btn_txt_sale"*/;
+  sub_1C32BC4(&static_fields->DECIED_BTN_NAME_LIMIT_MATERIAL, v1);
 }
 
 
 void TreasureBoxBulkBuyConfirmMenu___ctor(TreasureBoxBulkBuyConfirmMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C21CF1 & 1) == 0 )
+  if ( (byte_4C3248C & 1) == 0 )
   {
-    sub_1C2D490(&BaseDialog_TypeInfo);
-    byte_4C21CF1 = 1;
+    sub_1C32C20(&BaseDialog_TypeInfo);
+    byte_4C3248C = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -42,7 +44,7 @@ void TreasureBoxBulkBuyConfirmMenu__CallOnClose(TreasureBoxBulkBuyConfirmMenu_o 
   if ( onClose )
   {
     *p_onClose = 0;
-    sub_1C2D434(p_onClose);
+    sub_1C32BC4(p_onClose, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v3->fields.invoke_impl)(v3->fields.method_code, v3->fields.method);
   }
 }
@@ -63,7 +65,7 @@ void TreasureBoxBulkBuyConfirmMenu__CallOnDecide(
   if ( onDecide )
   {
     *p_onDecide = 0;
-    sub_1C2D434(p_onDecide);
+    sub_1C32BC4(p_onDecide, 0);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v4->fields.invoke_impl)(
       v4->fields.method_code,
       (unsigned int)result,
@@ -76,27 +78,27 @@ void TreasureBoxBulkBuyConfirmMenu__Close(TreasureBoxBulkBuyConfirmMenu_o *this,
 {
   const MethodInfo *v2; // x2
 
-  TreasureBoxBulkBuyConfirmMenu__Close_32306256(this, 0, v2);
+  TreasureBoxBulkBuyConfirmMenu__Close_32533348(this, 0, v2);
 }
 
 
-void TreasureBoxBulkBuyConfirmMenu__Close_32306256(
+void TreasureBoxBulkBuyConfirmMenu__Close_32533348(
         TreasureBoxBulkBuyConfirmMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
   System_Action_o *v5; // x20
 
-  if ( (byte_4C21CE9 & 1) == 0 )
+  if ( (byte_4C32484 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_TreasureBoxBulkBuyConfirmMenu_EndClose__);
-    byte_4C21CE9 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_TreasureBoxBulkBuyConfirmMenu_EndClose__);
+    byte_4C32484 = 1;
   }
   this->fields.onClose = callback;
-  sub_1C2D434(&this->fields.onClose);
+  sub_1C32BC4(&this->fields.onClose, callback);
   this->fields.state = 4;
-  v5 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_TreasureBoxBulkBuyConfirmMenu_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v5, 0);
 }
@@ -105,15 +107,14 @@ void TreasureBoxBulkBuyConfirmMenu__Close_32306256(
 void TreasureBoxBulkBuyConfirmMenu__EndClose(TreasureBoxBulkBuyConfirmMenu_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v4; // x1
-  const MethodInfo *v5; // x1
+  const MethodInfo *v4; // x1
 
   TreasureBoxBulkBuyConfirmMenu__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C2D6EC(0, v4);
+    sub_1C32E7C(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
-  TreasureBoxBulkBuyConfirmMenu__CallOnClose(this, v5);
+  TreasureBoxBulkBuyConfirmMenu__CallOnClose(this, v4);
 }
 
 
@@ -129,14 +130,13 @@ int32_t TreasureBoxBulkBuyConfirmMenu__GetItemSliderMax(
         const MethodInfo *method)
 {
   __int64 UserItemBuyableCount; // x0
-  __int64 v5; // x1
   struct TreasureBoxEntity_o *treasureBoxEntity; // x8
   int maxDrawNumOnce; // w8
 
   UserItemBuyableCount = TreasureBoxBulkBuyConfirmMenu__GetUserItemBuyableCount(this, userGameEntity, method);
   treasureBoxEntity = this->fields.treasureBoxEntity;
   if ( !treasureBoxEntity )
-    sub_1C2D6EC(UserItemBuyableCount, v5);
+    sub_1C32E7C(UserItemBuyableCount);
   maxDrawNumOnce = treasureBoxEntity->fields.maxDrawNumOnce;
   if ( (int)UserItemBuyableCount > maxDrawNumOnce && maxDrawNumOnce )
     LODWORD(UserItemBuyableCount) = maxDrawNumOnce;
@@ -150,29 +150,28 @@ int32_t TreasureBoxBulkBuyConfirmMenu__GetUserItemBuyableCount(
         const MethodInfo *method)
 {
   DataManager_o *Instance; // x0
-  __int64 v5; // x1
   Il2CppObject *MasterData_object; // x20
-  int64_t v7; // x21
+  int64_t v6; // x21
 
-  if ( (byte_4C21CE8 & 1) == 0 )
+  if ( (byte_4C32483 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C21CE8 = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C32483 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C211E1 )
+  if ( !byte_4C31812 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C211E1 = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C31812 = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -181,17 +180,17 @@ int32_t TreasureBoxBulkBuyConfirmMenu__GetUserItemBuyableCount(
     Instance = (DataManager_o *)NetworkManager_TypeInfo;
   }
   if ( !this->fields.treasureBoxEntity
-    || (v7 = *(_QWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 64LL),
+    || (v6 = *(_QWORD *)(*(_QWORD *)&Instance[1].fields._DispLog + 64LL),
         Instance = (DataManager_o *)TreasureBoxEntity__get_ConsumeItemId(this->fields.treasureBoxEntity, 0),
         !MasterData_object)
     || (Instance = (DataManager_o *)UserItemMaster__GetEntityDefinitely(
                                       (UserItemMaster_o *)MasterData_object,
-                                      v7,
+                                      v6,
                                       (int32_t)Instance,
                                       0)) == 0 )
   {
 LABEL_14:
-    sub_1C2D6EC(Instance, v5);
+    sub_1C32E7C(Instance);
   }
   return SHIDWORD(Instance->fields.m_CancellationTokenSource) / this->fields.payNum;
 }
@@ -200,15 +199,14 @@ LABEL_14:
 void TreasureBoxBulkBuyConfirmMenu__Init(TreasureBoxBulkBuyConfirmMenu_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v4; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C2D6EC(0, v4);
+    sub_1C32E7C(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.state = 0;
   this->fields.treasureBoxEntity = 0;
-  sub_1C2D434(&this->fields.treasureBoxEntity);
+  sub_1C32BC4(&this->fields.treasureBoxEntity, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
 
@@ -216,37 +214,36 @@ void TreasureBoxBulkBuyConfirmMenu__Init(TreasureBoxBulkBuyConfirmMenu_o *this, 
 bool TreasureBoxBulkBuyConfirmMenu__IsEnable(TreasureBoxBulkBuyConfirmMenu_o *this, const MethodInfo *method)
 {
   DataManager_o *Instance; // x0
-  __int64 v4; // x1
   struct TreasureBoxEntity_o *treasureBoxEntity; // x8
   Il2CppObject *Entity; // x19
 
-  if ( (byte_4C21CEC & 1) == 0 )
+  if ( (byte_4C32487 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C2D490(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C21CEC = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C32C20(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C32487 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventMaster___);
+                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventMaster___);
   treasureBoxEntity = this->fields.treasureBoxEntity;
   if ( !treasureBoxEntity || !Instance )
     goto LABEL_10;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              treasureBoxEntity->fields.eventId,
-             (const MethodInfo_3387D98 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+             (const MethodInfo_3396838 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (DataManager_o *)NetworkManager__getTime(0);
   if ( !Entity )
 LABEL_10:
-    sub_1C2D6EC(Instance, v4);
+    sub_1C32E7C(Instance);
   return (__int64)Instance <= (__int64)Entity[6].monitor;
 }
 
@@ -260,10 +257,10 @@ int64_t TreasureBoxBulkBuyConfirmMenu__ItemMaxOverCheck(
   BalanceConfig_c *v6; // x0
   int64_t UserItemMax; // x8
 
-  if ( (byte_4C21CEF & 1) == 0 )
+  if ( (byte_4C3248A & 1) == 0 )
   {
-    sub_1C2D490(&BalanceConfig_TypeInfo);
-    byte_4C21CEF = 1;
+    sub_1C32C20(&BalanceConfig_TypeInfo);
+    byte_4C3248A = 1;
   }
   v6 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -289,28 +286,27 @@ void TreasureBoxBulkBuyConfirmMenu__OnClickCancel(TreasureBoxBulkBuyConfirmMenu_
 {
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
-  __int64 v5; // x1
   UISliderWithButton_o *itemSlider; // x0
-  const MethodInfo *v7; // x2
+  const MethodInfo *v6; // x2
 
-  if ( (byte_4C21CED & 1) == 0 )
+  if ( (byte_4C32488 & 1) == 0 )
   {
-    sub_1C2D490(&Method_TreasureBoxBulkBuyConfirmMenu_OnClickCancel__);
-    byte_4C21CED = 1;
+    sub_1C32C20(&Method_TreasureBoxBulkBuyConfirmMenu_OnClickCancel__);
+    byte_4C32488 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_TreasureBoxBulkBuyConfirmMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_TreasureBoxBulkBuyConfirmMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_TreasureBoxBulkBuyConfirmMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_TreasureBoxBulkBuyConfirmMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     itemSlider = this->fields.itemSlider;
     if ( !itemSlider )
-      sub_1C2D6EC(0, v5);
+      sub_1C32E7C(0);
     UISliderWithButton__grayMode(itemSlider, 0);
-    TreasureBoxBulkBuyConfirmMenu__Close_32306256(this, 0, v7);
+    TreasureBoxBulkBuyConfirmMenu__Close_32533348(this, 0, v6);
   }
 }
 
@@ -321,18 +317,18 @@ void TreasureBoxBulkBuyConfirmMenu__OnClickDecide(TreasureBoxBulkBuyConfirmMenu_
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C21CEA & 1) == 0 )
+  if ( (byte_4C32485 & 1) == 0 )
   {
-    sub_1C2D490(&Method_TreasureBoxBulkBuyConfirmMenu_OnClickDecide__);
-    byte_4C21CEA = 1;
+    sub_1C32C20(&Method_TreasureBoxBulkBuyConfirmMenu_OnClickDecide__);
+    byte_4C32485 = 1;
   }
   if ( this->fields.state == 2 && !TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(this, method) )
   {
     this->fields.state = 3;
     v3 = Method_TreasureBoxBulkBuyConfirmMenu_OnClickDecide__;
     if ( (*((_BYTE *)Method_TreasureBoxBulkBuyConfirmMenu_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_TreasureBoxBulkBuyConfirmMenu_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_TreasureBoxBulkBuyConfirmMenu_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.decideSe, 0, 0);
     TreasureBoxBulkBuyConfirmMenu__CallOnDecide(this, this->fields.buyCount, v5);
   }
@@ -348,59 +344,57 @@ void TreasureBoxBulkBuyConfirmMenu__Open(
 {
   struct TreasureBoxEntity_o **p_treasureBoxEntity; // x20
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v11; // x1
   Il2CppObject *Component_object; // x21
   UILabel_o *titleLb; // x21
-  __int64 v14; // x2
   _DWORD *monitor; // x8
   EventItemComponent_o *eventTreasureBoxItemInfo; // x20
   struct TreasureBoxEntity_o *treasureBoxEntity; // x8
   UserGameEntity_o *SelfUserGame; // x0
-  const MethodInfo *v19; // x2
+  const MethodInfo *v17; // x2
   int32_t ItemSliderMax; // w0
   int32_t payNum; // w8
   UILabel_o *exchangeDestinationCount; // x20
   TreasureBoxBulkBuyConfirmMenu_o *NumberFormatLong; // x0
-  const MethodInfo *v24; // x3
+  const MethodInfo *v22; // x3
   UILabel_o *warningLabel; // x20
-  TreasureBoxBulkBuyConfirmMenu_o *v26; // x0
-  const MethodInfo *v27; // x3
-  const MethodInfo *v28; // x1
-  const MethodInfo *v29; // x1
+  TreasureBoxBulkBuyConfirmMenu_o *v24; // x0
+  const MethodInfo *v25; // x3
+  const MethodInfo *v26; // x1
+  const MethodInfo *v27; // x1
   UILabel_o *exchangeOrigin; // x20
-  TreasureBoxBulkBuyConfirmMenu_o *v31; // x0
-  const MethodInfo *v32; // x3
+  TreasureBoxBulkBuyConfirmMenu_o *v29; // x0
+  const MethodInfo *v30; // x3
   UILabel_o *exchangeDestination; // x20
-  TreasureBoxBulkBuyConfirmMenu_o *v34; // x0
-  const MethodInfo *v35; // x3
-  System_Action_o *v36; // x20
+  TreasureBoxBulkBuyConfirmMenu_o *v32; // x0
+  const MethodInfo *v33; // x3
+  System_Action_o *v34; // x20
 
-  if ( (byte_4C21CE4 & 1) == 0 )
+  if ( (byte_4C3247F & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&AtlasManager_TypeInfo);
-    sub_1C2D490(&BalanceConfig_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMaster_CommonConsumeMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&Method_TreasureBoxBulkBuyConfirmMenu_EndOpen__);
-    sub_1C2D490(&StringLiteral_13521/*"TREASURE_BOX_USER_EVENT_ITEM"*/);
-    sub_1C2D490(&StringLiteral_24185/*"treasurechest_img_bg"*/);
-    sub_1C2D490(&StringLiteral_24189/*"treasurechest_img_line"*/);
-    sub_1C2D490(&StringLiteral_13520/*"TREASURE_BOX_PAY_EVENT_ITEM"*/);
-    sub_1C2D490(&StringLiteral_24184/*"treasurechest_btn_txt"*/);
-    sub_1C2D490(&StringLiteral_13512/*"TREASURE_BOX_BULK_BUY_TITLE"*/);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C21CE4 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&AtlasManager_TypeInfo);
+    sub_1C32C20(&BalanceConfig_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMaster_CommonConsumeMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&Method_TreasureBoxBulkBuyConfirmMenu_EndOpen__);
+    sub_1C32C20(&StringLiteral_13524/*"TREASURE_BOX_USER_EVENT_ITEM"*/);
+    sub_1C32C20(&StringLiteral_24203/*"treasurechest_img_bg"*/);
+    sub_1C32C20(&StringLiteral_24207/*"treasurechest_img_line"*/);
+    sub_1C32C20(&StringLiteral_13523/*"TREASURE_BOX_PAY_EVENT_ITEM"*/);
+    sub_1C32C20(&StringLiteral_24202/*"treasurechest_btn_txt"*/);
+    sub_1C32C20(&StringLiteral_13515/*"TREASURE_BOX_BULK_BUY_TITLE"*/);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C3247F = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.onDecide = onDecide;
-    sub_1C2D434(&this->fields.onDecide);
+    sub_1C32BC4(&this->fields.onDecide, onDecide);
     this->fields.treasureBoxEntity = treasure;
     p_treasureBoxEntity = &this->fields.treasureBoxEntity;
-    sub_1C2D434(&this->fields.treasureBoxEntity);
+    sub_1C32BC4(&this->fields.treasureBoxEntity, treasure);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
       goto LABEL_26;
@@ -412,22 +406,22 @@ void TreasureBoxBulkBuyConfirmMenu__Open(
       goto LABEL_26;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          gameObject,
-                         (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                         (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI((UISprite_o *)Component_object, (System_String_o *)StringLiteral_24185/*"treasurechest_img_bg"*/, 0);
-    AtlasManager__SetEventUI(this->fields.eventItemRootLine, (System_String_o *)StringLiteral_24189/*"treasurechest_img_line"*/, 0);
-    AtlasManager__SetEventUI(this->fields.decideButtonImg, (System_String_o *)StringLiteral_24184/*"treasurechest_btn_txt"*/, 0);
+    AtlasManager__SetEventUI((UISprite_o *)Component_object, (System_String_o *)StringLiteral_24203/*"treasurechest_img_bg"*/, 0);
+    AtlasManager__SetEventUI(this->fields.eventItemRootLine, (System_String_o *)StringLiteral_24207/*"treasurechest_img_line"*/, 0);
+    AtlasManager__SetEventUI(this->fields.decideButtonImg, (System_String_o *)StringLiteral_24202/*"treasurechest_btn_txt"*/, 0);
     titleLb = this->fields.titleLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13512/*"TREASURE_BOX_BULK_BUY_TITLE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13515/*"TREASURE_BOX_BULK_BUY_TITLE"*/, 0);
     if ( !titleLb )
       goto LABEL_26;
     UILabel__set_text(titleLb, (System_String_o *)gameObject, 0);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+    gameObject = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_CommonConsumeMaster___);
     if ( !*p_treasureBoxEntity )
       goto LABEL_26;
     if ( !gameObject )
@@ -439,7 +433,7 @@ void TreasureBoxBulkBuyConfirmMenu__Open(
     if ( !gameObject )
       goto LABEL_26;
     if ( !LODWORD(gameObject[1].klass) )
-      sub_1C2D6F4(gameObject, v11, v14);
+      sub_1C32E84(gameObject);
     monitor = gameObject[1].monitor;
     if ( !monitor )
       goto LABEL_26;
@@ -460,7 +454,7 @@ void TreasureBoxBulkBuyConfirmMenu__Open(
       goto LABEL_26;
     ItemIconComponent__SetItem((ItemIconComponent_o *)gameObject, treasureBoxEntity->fields.iconId, -1, 1, 0);
     SelfUserGame = UserGameMaster__getSelfUserGame(0);
-    ItemSliderMax = TreasureBoxBulkBuyConfirmMenu__GetItemSliderMax(this, SelfUserGame, v19);
+    ItemSliderMax = TreasureBoxBulkBuyConfirmMenu__GetItemSliderMax(this, SelfUserGame, v17);
     payNum = this->fields.payNum;
     exchangeDestinationCount = this->fields.exchangeDestinationCount;
     this->fields.buyCount = ItemSliderMax;
@@ -471,28 +465,28 @@ void TreasureBoxBulkBuyConfirmMenu__Open(
       NumberFormatLong,
       exchangeDestinationCount,
       (System_String_o *)NumberFormatLong,
-      v24);
+      v22);
     warningLabel = this->fields.warningLabel;
     gameObject = (UnityEngine_GameObject_o *)BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     if ( !warningLabel )
 LABEL_26:
-      sub_1C2D6EC(gameObject, v11);
+      sub_1C32E7C(gameObject);
     UILabel__set_fontSize(warningLabel, BalanceConfig_TypeInfo->static_fields->DefaultFontSize, 0);
-    TreasureBoxBulkBuyConfirmMenu__SetLabelText(v26, this->fields.warningLabel, (System_String_o *)StringLiteral_1/*""*/, v27);
-    TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(this, v28);
-    TreasureBoxBulkBuyConfirmMenu__SetItemSlider(this, v29);
+    TreasureBoxBulkBuyConfirmMenu__SetLabelText(v24, this->fields.warningLabel, (System_String_o *)StringLiteral_1/*""*/, v25);
+    TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(this, v26);
+    TreasureBoxBulkBuyConfirmMenu__SetItemSlider(this, v27);
     exchangeOrigin = this->fields.exchangeOrigin;
-    v31 = (TreasureBoxBulkBuyConfirmMenu_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13520/*"TREASURE_BOX_PAY_EVENT_ITEM"*/, 0);
-    TreasureBoxBulkBuyConfirmMenu__SetLabelText(v31, exchangeOrigin, (System_String_o *)v31, v32);
+    v29 = (TreasureBoxBulkBuyConfirmMenu_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13523/*"TREASURE_BOX_PAY_EVENT_ITEM"*/, 0);
+    TreasureBoxBulkBuyConfirmMenu__SetLabelText(v29, exchangeOrigin, (System_String_o *)v29, v30);
     exchangeDestination = this->fields.exchangeDestination;
-    v34 = (TreasureBoxBulkBuyConfirmMenu_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13521/*"TREASURE_BOX_USER_EVENT_ITEM"*/, 0);
-    TreasureBoxBulkBuyConfirmMenu__SetLabelText(v34, exchangeDestination, (System_String_o *)v34, v35);
+    v32 = (TreasureBoxBulkBuyConfirmMenu_o *)LocalizationManager__Get((System_String_o *)StringLiteral_13524/*"TREASURE_BOX_USER_EVENT_ITEM"*/, 0);
+    TreasureBoxBulkBuyConfirmMenu__SetLabelText(v32, exchangeDestination, (System_String_o *)v32, v33);
     this->fields.state = 1;
-    v36 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
-    System_Action___ctor(v36, (Il2CppObject *)this, Method_TreasureBoxBulkBuyConfirmMenu_EndOpen__, 0);
-    BaseDialog__Open((BaseDialog_o *)this, v36, 0, 0);
+    v34 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    System_Action___ctor(v34, (Il2CppObject *)this, Method_TreasureBoxBulkBuyConfirmMenu_EndOpen__, 0);
+    BaseDialog__Open((BaseDialog_o *)this, v34, 0, 0, 0);
   }
 }
 
@@ -513,7 +507,7 @@ void TreasureBoxBulkBuyConfirmMenu__SetItemSlider(TreasureBoxBulkBuyConfirmMenu_
   itemSlider = this->fields.itemSlider;
   if ( !itemSlider )
 LABEL_7:
-    sub_1C2D6EC(itemSlider, method);
+    sub_1C32E7C(itemSlider);
   UISliderWithButton__init(itemSlider, this->fields.buyCount, buyCount > 1, 1, 0);
 }
 
@@ -525,12 +519,11 @@ void TreasureBoxBulkBuyConfirmMenu__SetLabelActive(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v7; // x1
 
-  if ( (byte_4C21CE5 & 1) == 0 )
+  if ( (byte_4C32480 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21CE5 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C32480 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -538,7 +531,7 @@ void TreasureBoxBulkBuyConfirmMenu__SetLabelActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !label || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)label, 0)) == 0 )
-      sub_1C2D6EC(gameObject, v7);
+      sub_1C32E7C(gameObject);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0);
   }
 }
@@ -551,12 +544,11 @@ void TreasureBoxBulkBuyConfirmMenu__SetLabelText(
         const MethodInfo *method)
 {
   _BOOL8 v6; // x0
-  __int64 v7; // x1
 
-  if ( (byte_4C21CE6 & 1) == 0 )
+  if ( (byte_4C32481 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21CE6 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C32481 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -564,7 +556,7 @@ void TreasureBoxBulkBuyConfirmMenu__SetLabelText(
   if ( !v6 )
   {
     if ( !label )
-      sub_1C2D6EC(v6, v7);
+      sub_1C32E7C(v6);
     WrapControlText__textAdjust(label, text, label->fields.mFontSize, 0, 0);
   }
 }
@@ -580,14 +572,13 @@ bool TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(
   UILabel_o *warningLabel; // x21
   TreasureBoxBulkBuyConfirmMenu_o *v7; // x0
   const MethodInfo *v8; // x3
-  __int64 v9; // x1
   UnityEngine_GameObject_o *decideButton; // x0
 
-  if ( (byte_4C21CEB & 1) == 0 )
+  if ( (byte_4C32486 & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_12060/*"SHOP_BUY_CONFIRM_PERIOD_WARNING"*/);
-    byte_4C21CEB = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_12062/*"SHOP_BUY_CONFIRM_PERIOD_WARNING"*/);
+    byte_4C32486 = 1;
   }
   IsEnable = TreasureBoxBulkBuyConfirmMenu__IsEnable(this, method);
   v5 = IsEnable;
@@ -601,7 +592,7 @@ bool TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(
     warningLabel = this->fields.warningLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = (TreasureBoxBulkBuyConfirmMenu_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12060/*"SHOP_BUY_CONFIRM_PERIOD_WARNING"*/, 0);
+    v7 = (TreasureBoxBulkBuyConfirmMenu_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12062/*"SHOP_BUY_CONFIRM_PERIOD_WARNING"*/, 0);
     TreasureBoxBulkBuyConfirmMenu__SetLabelText(v7, warningLabel, (System_String_o *)v7, v8);
     decideButton = (UnityEngine_GameObject_o *)this->fields.decideButton;
     if ( !decideButton
@@ -612,7 +603,7 @@ bool TreasureBoxBulkBuyConfirmMenu__SetShopNotEnableWarning(
             decideButton->klass[1]._1.implementedInterfaces),
           (decideButton = this->fields.exchangeBase) == 0) )
     {
-      sub_1C2D6EC(decideButton, v9);
+      sub_1C32E7C(decideButton);
     }
     UnityEngine_GameObject__SetActive(decideButton, 0, 0);
   }
@@ -627,12 +618,11 @@ void TreasureBoxBulkBuyConfirmMenu__SetSpriteName(
         const MethodInfo *method)
 {
   _BOOL8 v6; // x0
-  __int64 v7; // x1
 
-  if ( (byte_4C21CE7 & 1) == 0 )
+  if ( (byte_4C32482 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21CE7 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C32482 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -640,7 +630,7 @@ void TreasureBoxBulkBuyConfirmMenu__SetSpriteName(
   if ( !v6 )
   {
     if ( !sprite )
-      sub_1C2D6EC(v6, v7);
+      sub_1C32E7C(v6);
     UISprite__set_spriteName(sprite, spriteName, 0);
   }
 }
@@ -657,7 +647,7 @@ void TreasureBoxBulkBuyConfirmMenu__SetWarningActive(
 
   exchangeBase = this->fields.exchangeBase;
   if ( !exchangeBase )
-    sub_1C2D6EC(0, isActive);
+    sub_1C32E7C(0);
   UnityEngine_GameObject__SetActive(exchangeBase, !isActive, 0);
   TreasureBoxBulkBuyConfirmMenu__SetLabelActive(v6, this->fields.warningLabel, isActive, v7);
 }
@@ -674,17 +664,17 @@ void TreasureBoxBulkBuyConfirmMenu__SliderValueChange(TreasureBoxBulkBuyConfirmM
   TreasureBoxBulkBuyConfirmMenu_o *NumberFormatLong; // x0
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C21CEE & 1) == 0 )
+  if ( (byte_4C32489 & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    byte_4C21CEE = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    byte_4C32489 = 1;
   }
   itemSlider = this->fields.itemSlider;
   if ( !itemSlider
     || (itemSlider = (UISliderWithButton_o *)UISliderWithButton__sliderValueChange(itemSlider, 0),
         (treasureBoxEntity = this->fields.treasureBoxEntity) == 0) )
   {
-    sub_1C2D6EC(itemSlider, method);
+    sub_1C32E7C(itemSlider);
   }
   v6 = TreasureBoxBulkBuyConfirmMenu__ItemMaxOverCheck(
          (TreasureBoxBulkBuyConfirmMenu_o *)itemSlider,
@@ -710,21 +700,20 @@ UnityEngine_GameObject_o *TreasureBoxBulkBuyConfirmMenu__get_closeBtnObject(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *cancelButton; // x20
-  __int64 v4; // x1
-  UnityEngine_Component_o *v6; // x0
+  UnityEngine_Component_o *v5; // x0
 
-  if ( (byte_4C21CF0 & 1) == 0 )
+  if ( (byte_4C3248B & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21CF0 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3248B = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(cancelButton, 0, 0) )
     return 0;
-  v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
-  if ( !v6 )
-    sub_1C2D6EC(0, v4);
-  return UnityEngine_Component__get_gameObject(v6, 0);
+  v5 = (UnityEngine_Component_o *)this->fields.cancelButton;
+  if ( !v5 )
+    sub_1C32E7C(0);
+  return UnityEngine_Component__get_gameObject(v5, 0);
 }

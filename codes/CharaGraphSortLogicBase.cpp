@@ -10,10 +10,10 @@ void CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, const Metho
 
   v3 = CharaGraphSortLogicBase__ClearedIcon((const MethodInfo *)this);
   this->fields._IconInfo1_k__BackingField = v3;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)v3, v4, v5);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)v3, v4, v5);
   v7 = CharaGraphSortLogicBase__ClearedIcon(v6);
   this->fields._IconInfo2_k__BackingField = v7;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v7, v8, v9);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -22,17 +22,16 @@ IconLabelInfo_o *CharaGraphSortLogicBase__ClearedIcon(const MethodInfo *method)
 {
   IconLabelInfo_o *v1; // x19
   __int64 v2; // x0
-  __int64 v3; // x1
 
-  if ( (byte_4C26633 & 1) == 0 )
+  if ( (byte_4C36D0B & 1) == 0 )
   {
-    sub_1C2D490(&IconLabelInfo_TypeInfo);
-    byte_4C26633 = 1;
+    sub_1C32C20(&IconLabelInfo_TypeInfo);
+    byte_4C36D0B = 1;
   }
-  v1 = (IconLabelInfo_o *)sub_1C2D6DC(IconLabelInfo_TypeInfo);
+  v1 = (IconLabelInfo_o *)sub_1C32E6C(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v1, 0);
   if ( !v1 )
-    sub_1C2D6EC(v2, v3);
+    sub_1C32E7C(v2);
   IconLabelInfo__Clear(v1, 0);
   return v1;
 }
@@ -52,7 +51,7 @@ void CharaGraphSortLogicBase__InitSortValue(CharaGraphSortLogicBase_o *this, con
     || (IconLabelInfo__Clear(IconInfo1_k__BackingField, 0),
         (IconInfo1_k__BackingField = this->fields._IconInfo2_k__BackingField) == 0) )
   {
-    sub_1C2D6EC(IconInfo1_k__BackingField, method);
+    sub_1C32E7C(IconInfo1_k__BackingField);
   }
   IconLabelInfo__Clear(IconInfo1_k__BackingField, 0);
 }
@@ -66,7 +65,7 @@ void CharaGraphSortLogicBase__SetListViewItem(
   const MethodInfo *v3; // x3
 
   this->fields.item = inputItem;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.item, (int32_t)inputItem, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.item, (int32_t)inputItem, (int32_t)method, v3);
 }
 
 
@@ -78,7 +77,7 @@ void CharaGraphSortLogicBase__SetListViewSort(
   const MethodInfo *v3; // x3
 
   this->fields.sort = inputSort;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3);
 }
 
 
@@ -104,7 +103,7 @@ void CharaGraphSortLogicBase__SetSortValueLocal(CharaGraphSortLogicBase_o *this,
   sort = this->fields.sort;
   if ( !sort )
 LABEL_7:
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   if ( sort->fields.isChoiceSort )
     this->fields._SortValue0_k__BackingField = 10;
 }
@@ -187,7 +186,7 @@ void CharaGraphSortLogicBase__set_IconInfo1(
   const MethodInfo *v3; // x3
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -199,7 +198,7 @@ void CharaGraphSortLogicBase__set_IconInfo2(
   const MethodInfo *v3; // x3
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

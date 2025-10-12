@@ -4,20 +4,20 @@ void TransformServantInfo___ctor(TransformServantInfo_o *this, const MethodInfo 
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C28709 & 1) == 0 )
+  if ( (byte_4C38E11 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C28709 = 1;
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C38E11 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   *(_QWORD *)&this->fields.svtId = 0;
   v3 = StringLiteral_1/*""*/;
   this->fields.titleText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.titleText, v3, v4, v5);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.titleText, v3, v4, v5);
 }
 
 
-void TransformServantInfo___ctor_43289824(
+void TransformServantInfo___ctor_43424388(
         TransformServantInfo_o *this,
         int32_t svtId,
         int32_t dispLimitCount,
@@ -34,7 +34,7 @@ void TransformServantInfo___ctor_43289824(
   v8 = (TransformServantInfo_o *)((char *)v8 + 24);
   LODWORD(v8[-1].fields.titleText) = svtId;
   HIDWORD(v8[-1].fields.titleText) = dispLimitCount;
-  sub_1C2D434((CGThumbnailListItem_o *)v8, (int32_t)titleText, v9, v10);
+  sub_1C32BC4((CGThumbnailListItem_o *)v8, (int32_t)titleText, v9, v10);
 }
 
 
@@ -47,10 +47,10 @@ int32_t TransformServantInfo__GetDispLimitCount(
   bool v6; // vf
   int32_t svtId; // w20
 
-  if ( (byte_4C2870A & 1) == 0 )
+  if ( (byte_4C38E12 & 1) == 0 )
   {
-    sub_1C2D490(&ImageLimitCount_TypeInfo);
-    byte_4C2870A = 1;
+    sub_1C32C20(&ImageLimitCount_TypeInfo);
+    byte_4C38E12 = 1;
   }
   result = this->fields.dispLimitCount;
   if ( result <= 10 )

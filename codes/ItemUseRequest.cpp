@@ -11,16 +11,16 @@ void ItemUseRequest__beginRequest(
         int32_t eventId,
         const MethodInfo *method)
 {
-  if ( (byte_4C28E2A & 1) == 0 )
+  if ( (byte_4C39533 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_22318/*"num"*/);
-    sub_1C2D490(&StringLiteral_19133/*"eventId"*/);
-    sub_1C2D490(&StringLiteral_24459/*"useItemId"*/);
-    byte_4C28E2A = 1;
+    sub_1C32C20(&StringLiteral_22335/*"num"*/);
+    sub_1C32C20(&StringLiteral_19143/*"eventId"*/);
+    sub_1C32C20(&StringLiteral_24477/*"useItemId"*/);
+    byte_4C39533 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19133/*"eventId"*/, eventId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24459/*"useItemId"*/, itemId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22318/*"num"*/, num, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19143/*"eventId"*/, eventId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24477/*"useItemId"*/, itemId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22335/*"num"*/, num, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -29,16 +29,16 @@ System_String_o *ItemUseRequest__getURL(ItemUseRequest_o *this, const MethodInfo
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C28E29 & 1) == 0 )
+  if ( (byte_4C39532 & 1) == 0 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_21006/*"item/use"*/);
-    byte_4C28E29 = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_21018/*"item/use"*/);
+    byte_4C39532 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63457864(BaseUrl, (System_String_o *)StringLiteral_21006/*"item/use"*/, 0);
+  return System_String__Concat_63518544(BaseUrl, (System_String_o *)StringLiteral_21018/*"item/use"*/, 0);
 }
 
 
@@ -52,17 +52,17 @@ void ItemUseRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_4C28E2B & 1) == 0 )
+  if ( (byte_4C39534 & 1) == 0 )
   {
-    sub_1C2D490(&JsonManager_TypeInfo);
-    sub_1C2D490(&ResponseCommandKind_TypeInfo);
-    sub_1C2D490(&StringLiteral_22195/*"ng"*/);
-    byte_4C28E2B = 1;
+    sub_1C32C20(&JsonManager_TypeInfo);
+    sub_1C32C20(&ResponseCommandKind_TypeInfo);
+    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
+    byte_4C39534 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(44, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44004292(v5, 0)) )
+  if ( v5 && (v6 = v5, ResponseData__checkError_44140424(v5, 0)) )
   {
     success = (Il2CppObject *)v6->fields.success;
     if ( !success )
@@ -73,7 +73,7 @@ void ItemUseRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22195/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22212/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

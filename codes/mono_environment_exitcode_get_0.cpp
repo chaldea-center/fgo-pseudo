@@ -1,4 +1,4 @@
 __int64 mono_environment_exitcode_get_0()
 {
-  return (unsigned int)dword_4C38E48;
+  return (unsigned int)dword_4C494C8;
 }

@@ -15,7 +15,7 @@ void CampaignNoticeObject__Initialize(
   this->fields.onClick = onClick;
   p_onClick = &this->fields.onClick;
   *((_DWORD *)p_onClick - 2) = id;
-  sub_1C2D434((CGThumbnailListItem_o *)p_onClick, (int32_t)onClick, (int32_t)onClick, method);
+  sub_1C32BC4((CGThumbnailListItem_o *)p_onClick, (int32_t)onClick, (int32_t)onClick, method);
 }
 
 
@@ -44,22 +44,21 @@ void CampaignNoticeObject__StartUpdateLimitTime(
   ShopNoticeRemainTimeLabel_o *v10; // x24
   int32_t v11; // w2
   const MethodInfo *v12; // x3
-  __int64 v13; // x1
 
-  if ( (byte_4C23D54 & 1) == 0 )
+  if ( (byte_4C34428 & 1) == 0 )
   {
-    sub_1C2D490(&ShopNoticeRemainTimeLabel_TypeInfo);
-    byte_4C23D54 = 1;
+    sub_1C32C20(&ShopNoticeRemainTimeLabel_TypeInfo);
+    byte_4C34428 = 1;
   }
   p_remainTimeLabelObject = &this->fields.remainTimeLabelObject;
   remainTimeLabelObject = this->fields.remainTimeLabelObject;
   if ( !remainTimeLabelObject )
   {
     campaignRemainingTimeLabel = this->fields.campaignRemainingTimeLabel;
-    v10 = (ShopNoticeRemainTimeLabel_o *)sub_1C2D6DC(ShopNoticeRemainTimeLabel_TypeInfo);
+    v10 = (ShopNoticeRemainTimeLabel_o *)sub_1C32E6C(ShopNoticeRemainTimeLabel_TypeInfo);
     ShopNoticeRemainTimeLabel___ctor(v10, campaignRemainingTimeLabel, monoBehaviour, 0);
     this->fields.remainTimeLabelObject = v10;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.remainTimeLabelObject, (int32_t)v10, v11, v12);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.remainTimeLabelObject, (int32_t)v10, v11, v12);
     remainTimeLabelObject = this->fields.remainTimeLabelObject;
     if ( !remainTimeLabelObject )
       goto LABEL_7;
@@ -68,7 +67,7 @@ void CampaignNoticeObject__StartUpdateLimitTime(
   remainTimeLabelObject = *p_remainTimeLabelObject;
   if ( !*p_remainTimeLabelObject )
 LABEL_7:
-    sub_1C2D6EC(remainTimeLabelObject, v13);
+    sub_1C32E7C(remainTimeLabelObject);
   ShopNoticeRemainTimeLabel__Start(remainTimeLabelObject, 0);
 }
 

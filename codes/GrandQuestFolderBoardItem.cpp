@@ -4,7 +4,7 @@ void GrandQuestFolderBoardItem___ctor(GrandQuestFolderBoardItem_o *this, const M
 }
 
 
-void GrandQuestFolderBoardItem___ctor_32680536(
+void GrandQuestFolderBoardItem___ctor_32794032(
         GrandQuestFolderBoardItem_o *this,
         int32_t index,
         int32_t bannerId,
@@ -17,12 +17,12 @@ void GrandQuestFolderBoardItem___ctor_32680536(
   GrandQuestFolderBoardItem_o *v13; // x24
 
   v13 = this;
-  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
   v13->fields._Name_k__BackingField = boardName;
   v13 = (GrandQuestFolderBoardItem_o *)((char *)v13 + 128);
   LODWORD(v13[-1].fields._ListCreatedTime_k__BackingField) = bannerId;
   HIDWORD(v13[-1].fields._ListCreatedTime_k__BackingField) = warId;
-  sub_1C2D434(v13);
+  sub_1C32BC4(v13, boardName);
   LODWORD(v13->monitor) = iconId;
   *(_QWORD *)&v13->fields.selectNum = listCreatedTime;
 }

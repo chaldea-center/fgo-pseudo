@@ -2,15 +2,15 @@ void CharaGraphSortOwnerGrandSameServant___ctor(CharaGraphSortOwnerGrandSameServ
 {
   CharaGraphSortManageUnitServant_o *v3; // x20
 
-  if ( (byte_4C2207C & 1) == 0 )
+  if ( (byte_4C3274B & 1) == 0 )
   {
-    sub_1C2D490(&CharaGraphSortManageUnitGrandSameServant_TypeInfo);
-    byte_4C2207C = 1;
+    sub_1C32C20(&CharaGraphSortManageUnitGrandSameServant_TypeInfo);
+    byte_4C3274B = 1;
   }
-  v3 = (CharaGraphSortManageUnitServant_o *)sub_1C2D6DC(CharaGraphSortManageUnitGrandSameServant_TypeInfo);
+  v3 = (CharaGraphSortManageUnitServant_o *)sub_1C32E6C(CharaGraphSortManageUnitGrandSameServant_TypeInfo);
   CharaGraphSortManageUnitServant___ctor(v3, 0);
   this->fields._ServantSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
-  sub_1C2D434(&this->fields._ServantSortManageUnit_k__BackingField);
+  sub_1C32BC4(&this->fields._ServantSortManageUnit_k__BackingField, v3);
   CharaGraphSortOwnerBase___ctor((CharaGraphSortOwnerBase_o *)this, 0);
 }
 
@@ -27,12 +27,12 @@ System_String_o *CharaGraphSortOwnerGrandSameServant__get_SortSaveKeyPrefix(
         CharaGraphSortOwnerGrandSameServant_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C2207B & 1) == 0 )
+  if ( (byte_4C3274A & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_4387/*"CharaGraphSort_GrandSameServant"*/);
-    byte_4C2207B = 1;
+    sub_1C32C20(&StringLiteral_4394/*"CharaGraphSort_GrandSameServant"*/);
+    byte_4C3274A = 1;
   }
-  return (System_String_o *)StringLiteral_4387/*"CharaGraphSort_GrandSameServant"*/;
+  return (System_String_o *)StringLiteral_4394/*"CharaGraphSort_GrandSameServant"*/;
 }
 
 
@@ -42,5 +42,5 @@ void CharaGraphSortOwnerGrandSameServant__set_ServantSortManageUnit(
         const MethodInfo *method)
 {
   this->fields._ServantSortManageUnit_k__BackingField = value;
-  sub_1C2D434(&this->fields._ServantSortManageUnit_k__BackingField);
+  sub_1C32BC4(&this->fields._ServantSortManageUnit_k__BackingField, value);
 }

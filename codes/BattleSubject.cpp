@@ -4,18 +4,18 @@ void BattleSubject___ctor(BattleSubject_o *this, const MethodInfo *method)
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C2A49D & 1) == 0 )
+  if ( (byte_4C3AD67 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_BattleObserver___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_BattleObserver__TypeInfo);
-    byte_4C2A49D = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_BattleObserver___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_BattleObserver__TypeInfo);
+    byte_4C3AD67 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_BattleObserver__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BattleObserver__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_BattleObserver___ctor__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BattleObserver___ctor__);
   this->fields.observers = (struct System_Collections_Generic_List_BattleObserver__o *)v3;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -29,10 +29,10 @@ void BattleSubject__Add(BattleSubject_o *this, BattleObserver_o *observer, const
   __int64 size; // x10
   Il2CppClass **v10; // x8
 
-  if ( (byte_4C2A49A & 1) == 0 )
+  if ( (byte_4C3AD64 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_BattleObserver__Add__);
-    byte_4C2A49A = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_BattleObserver__Add__);
+    byte_4C3AD64 = 1;
   }
   if ( observer )
   {
@@ -43,7 +43,7 @@ void BattleSubject__Add(BattleSubject_o *this, BattleObserver_o *observer, const
           ++observers->fields._version,
           !items) )
     {
-      sub_1C2D6EC(observers, observer);
+      sub_1C32E7C(observers);
     }
     size = observers->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -51,14 +51,14 @@ void BattleSubject__Add(BattleSubject_o *this, BattleObserver_o *observer, const
       System_Collections_Generic_List_object___AddWithResize(
         observers,
         (Il2CppObject *)observer,
-        *(const MethodInfo_3789B84 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+        *(const MethodInfo_37987BC **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     }
     else
     {
       v10 = &items->obj.klass + size;
       observers->fields._size = size + 1;
       v10[4] = (Il2CppClass *)observer;
-      sub_1C2D434((CGThumbnailListItem_o *)(v10 + 4), (int32_t)observer, (int32_t)method, v3);
+      sub_1C32BC4((CGThumbnailListItem_o *)(v10 + 4), (int32_t)observer, (int32_t)method, v3);
     }
   }
 }
@@ -69,24 +69,23 @@ void BattleSubject__Notify(BattleSubject_o *this, const MethodInfo *method)
   System_Collections_Generic_List_object__o *observers; // x20
   System_Action_object__o *v4; // x21
   __int64 v5; // x0
-  __int64 v6; // x1
 
-  if ( (byte_4C2A49C & 1) == 0 )
+  if ( (byte_4C3AD66 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_BattleObserver__TypeInfo);
-    sub_1C2D490(&Method_BattleSubject__Notify_b__3_0__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_BattleObserver__ForEach__);
-    byte_4C2A49C = 1;
+    sub_1C32C20(&System_Action_BattleObserver__TypeInfo);
+    sub_1C32C20(&Method_BattleSubject__Notify_b__3_0__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_BattleObserver__ForEach__);
+    byte_4C3AD66 = 1;
   }
   observers = (System_Collections_Generic_List_object__o *)this->fields.observers;
-  v4 = (System_Action_object__o *)sub_1C2D6DC(System_Action_BattleObserver__TypeInfo);
+  v4 = (System_Action_object__o *)sub_1C32E6C(System_Action_BattleObserver__TypeInfo);
   System_Action_object____ctor(v4, (Il2CppObject *)this, Method_BattleSubject__Notify_b__3_0__, 0);
   if ( !observers )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   System_Collections_Generic_List_object___ForEach(
     observers,
     (System_Action_T__o *)v4,
-    (const MethodInfo_378A5C4 *)Method_System_Collections_Generic_List_BattleObserver__ForEach__);
+    (const MethodInfo_37991FC *)Method_System_Collections_Generic_List_BattleObserver__ForEach__);
 }
 
 
@@ -94,20 +93,20 @@ void BattleSubject__Remove(BattleSubject_o *this, BattleObserver_o *observer, co
 {
   System_Collections_Generic_List_object__o *observers; // x0
 
-  if ( (byte_4C2A49B & 1) == 0 )
+  if ( (byte_4C3AD65 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_BattleObserver__Remove__);
-    byte_4C2A49B = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_BattleObserver__Remove__);
+    byte_4C3AD65 = 1;
   }
   if ( observer )
   {
     observers = (System_Collections_Generic_List_object__o *)this->fields.observers;
     if ( !observers )
-      sub_1C2D6EC(0, observer);
+      sub_1C32E7C(0);
     System_Collections_Generic_List_object___Remove(
       observers,
       (Il2CppObject *)observer,
-      (const MethodInfo_378B0AC *)Method_System_Collections_Generic_List_BattleObserver__Remove__);
+      (const MethodInfo_3799CE4 *)Method_System_Collections_Generic_List_BattleObserver__Remove__);
   }
 }
 
@@ -115,7 +114,7 @@ void BattleSubject__Remove(BattleSubject_o *this, BattleObserver_o *observer, co
 void BattleSubject___Notify_b__3_0(BattleSubject_o *this, BattleObserver_o *x, const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   ((void (__fastcall *)(BattleObserver_o *, BattleSubject_o *, void *))x->klass[1]._1.image)(
     x,
     this,

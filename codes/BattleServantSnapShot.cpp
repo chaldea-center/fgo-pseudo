@@ -4,11 +4,10 @@ void BattleServantSnapShot___ctor(
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !svtData )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   this->fields._UniqueId_k__BackingField = svtData->fields.uniqueId;
 }
 
@@ -121,7 +120,7 @@ void BattleServantSnapShot__set_BuffArray(
   const MethodInfo *v3; // x3
 
   this->fields._BuffArray_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._BuffArray_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._BuffArray_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -133,7 +132,7 @@ void BattleServantSnapShot__set_CheckIndividualitiesData(
   const MethodInfo *v3; // x3
 
   this->fields._CheckIndividualitiesData_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 

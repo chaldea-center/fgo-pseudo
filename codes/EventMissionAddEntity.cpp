@@ -1,27 +1,27 @@
 void EventMissionAddEntity___ctor(EventMissionAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C272DA & 1) == 0 )
+  if ( (byte_4C379D0 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C272DA = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C379D0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventMissionAddEntity__CreatePK(int32_t missionId, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4C272D9 & 1) == 0 )
+  if ( (byte_4C379CF & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C272D9 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C379CF = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            missionId,
            priority,
-           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

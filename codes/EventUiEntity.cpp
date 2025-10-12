@@ -1,9 +1,9 @@
 void EventUiEntity___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C274E3 & 1) == 0 )
+  if ( (byte_4C37BD9 & 1) == 0 )
   {
-    sub_1C2D490(&EventUiEntity_TypeInfo);
-    byte_4C274E3 = 1;
+    sub_1C32C20(&EventUiEntity_TypeInfo);
+    byte_4C37BD9 = 1;
   }
   LODWORD(EventUiEntity_TypeInfo->static_fields->EVNET_UI_POSITION_MAGNIFICATION) = (struct EventUiEntity_StaticFields)1008981770;
 }
@@ -15,20 +15,20 @@ void EventUiEntity___ctor(EventUiEntity_o *this, const MethodInfo *method)
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C274E0 & 1) == 0 )
+  if ( (byte_4C37BD6 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C274E0 = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C37BD6 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
   this->fields.spotIds = 0;
   p_spotIds = &this->fields.spotIds;
   *(p_spotIds - 3) = 0;
   *(p_spotIds - 2) = 0;
   *((_DWORD *)p_spotIds - 2) = 0;
-  sub_1C2D434((CGThumbnailListItem_o *)p_spotIds, 0, v4, v5);
+  sub_1C32BC4((CGThumbnailListItem_o *)p_spotIds, 0, v4, v5);
   *(struct System_Int32_array **)((char *)p_spotIds + 20) = 0;
   *(struct System_Int32_array **)((char *)p_spotIds + 12) = 0;
   *((_DWORD *)p_spotIds + 2) = 1;
@@ -38,15 +38,15 @@ void EventUiEntity___ctor(EventUiEntity_o *this, const MethodInfo *method)
 
 System_String_o *EventUiEntity__CreatePK(int32_t id, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4C274E2 & 1) == 0 )
+  if ( (byte_4C37BD8 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C274E2 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C37BD8 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            priority,
-           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -56,10 +56,10 @@ System_String_o *EventUiEntity__CreatePrimaryKey(EventUiEntity_o *this, const Me
   int32_t priority; // w19
   int32_t id; // w20
 
-  if ( (byte_4C274E1 & 1) == 0 )
+  if ( (byte_4C37BD7 & 1) == 0 )
   {
-    sub_1C2D490(&EventUiEntity_TypeInfo);
-    byte_4C274E1 = 1;
+    sub_1C32C20(&EventUiEntity_TypeInfo);
+    byte_4C37BD7 = 1;
   }
   id = this->fields.id;
   priority = this->fields.priority;

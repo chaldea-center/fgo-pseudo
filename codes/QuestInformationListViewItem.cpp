@@ -5,7 +5,7 @@ void QuestInformationListViewItem___ctor(
         int32_t target,
         const MethodInfo *method)
 {
-  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
   this->fields.infoType = 0;
   this->fields.mRewardType = type;
   this->fields.targetId = target;
@@ -14,7 +14,7 @@ void QuestInformationListViewItem___ctor(
 }
 
 
-void QuestInformationListViewItem___ctor_36333384(
+void QuestInformationListViewItem___ctor_36451656(
         QuestInformationListViewItem_o *this,
         int32_t index,
         ViewEnemyEntity_o *viewEnemyEnt,
@@ -32,30 +32,29 @@ void QuestInformationListViewItem___ctor_36333384(
   int32_t v23; // w2
   const MethodInfo *v24; // x3
   NpcServantDisplayTypeDetailMaster_o *Master_object; // x0
-  __int64 v26; // x1
   float b; // s0
   float a; // s1
   float r; // s2
   float g; // s3
-  float v31; // s0
-  float v32; // s1
-  float v33; // s2
-  float v34; // s3
-  System_Nullable_Color__o v36; // [xsp+8h] [xbp-58h] BYREF
+  float v30; // s0
+  float v31; // s1
+  float v32; // s2
+  float v33; // s3
+  System_Nullable_Color__o v35; // [xsp+8h] [xbp-58h] BYREF
   NpcServantDisplayTypeDetailEntity_o *entity; // [xsp+20h] [xbp-40h] BYREF
   QuestInformationListViewItem_MissionTargetState_o missionTargetState; // [xsp+2Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C2404A & 1) == 0 )
+  if ( (byte_4C3471E & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_NpcServantDisplayTypeDetailMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_System_Nullable_Color__GetValueOrDefault__);
-    sub_1C2D490(&Method_System_Nullable_Color__get_HasValue__);
-    byte_4C2404A = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_NpcServantDisplayTypeDetailMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_System_Nullable_Color__GetValueOrDefault__);
+    sub_1C32C20(&Method_System_Nullable_Color__get_HasValue__);
+    byte_4C3471E = 1;
   }
   missionTargetState = 0;
   entity = 0;
-  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
   this->fields.infoType = 1;
   if ( !viewEnemyEnt )
   {
@@ -64,7 +63,7 @@ void QuestInformationListViewItem___ctor_36333384(
     *(_QWORD *)&this->fields.targetId = 0;
     *(_QWORD *)&this->fields.dispType = 0;
     *(_QWORD *)&this->fields.iconId = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.nameText, 0, v9, v10);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.nameText, 0, v9, v10);
     __asm { FMOV            V0.4S, #1.0 }
     *(_QWORD *)&this->fields.weeklyMissionTarget = 0;
     this->fields.mainColor = _Q0;
@@ -78,7 +77,7 @@ void QuestInformationListViewItem___ctor_36333384(
     *(_QWORD *)&this->fields.targetId = 0;
     *(_QWORD *)&this->fields.iconId = 0;
     *(_QWORD *)&this->fields.dispType = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.nameText, 0, v11, v12);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.nameText, 0, v11, v12);
     *(_WORD *)&this->fields.weeklyMissionTarget = 0;
     IsEventMission = missionTargetState.fields.IsEventMission;
     __asm { FMOV            V0.4S, #1.0 }
@@ -99,7 +98,7 @@ LABEL_7:
   this->fields.enemyNameEffectId = ViewEnemyEntity__getEnemyNameEffect(viewEnemyEnt, 0);
   BattleName = ViewEnemyEntity__getBattleName(viewEnemyEnt, 0);
   this->fields.nameText = BattleName;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.nameText, (int32_t)BattleName, v23, v24);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.nameText, (int32_t)BattleName, v23, v24);
   this->fields._IsGrand_k__BackingField = ViewEnemyEntity__IsGrand(viewEnemyEnt, 0);
   this->fields.weeklyMissionTarget = missionTargetState.fields.IsWeeklyMission;
   this->fields.limitMissionTarget = missionTargetState.fields.IsLimitMission;
@@ -108,7 +107,7 @@ LABEL_7:
   this->fields.colorType = ViewEnemyEntity__GetColorType(viewEnemyEnt, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (NpcServantDisplayTypeDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_NpcServantDisplayTypeDetailMaster___);
+  Master_object = (NpcServantDisplayTypeDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_NpcServantDisplayTypeDetailMaster___);
   if ( !Master_object )
     goto LABEL_26;
   if ( !NpcServantDisplayTypeDetailMaster__TryGetEntity(
@@ -127,12 +126,12 @@ LABEL_7:
   Master_object = (NpcServantDisplayTypeDetailMaster_o *)entity;
   if ( !entity )
     goto LABEL_26;
-  NpcServantDisplayTypeDetailEntity__get_MainColor(&v36, entity, 0);
-  b = v36.fields.value.fields.b;
-  a = v36.fields.value.fields.a;
-  r = v36.fields.value.fields.r;
-  g = v36.fields.value.fields.g;
-  if ( !v36.fields.hasValue )
+  NpcServantDisplayTypeDetailEntity__get_MainColor(&v35, entity, 0);
+  b = v35.fields.value.fields.b;
+  a = v35.fields.value.fields.a;
+  r = v35.fields.value.fields.r;
+  g = v35.fields.value.fields.g;
+  if ( !v35.fields.hasValue )
   {
     a = 1.0;
     b = 1.0;
@@ -146,23 +145,23 @@ LABEL_7:
   Master_object = (NpcServantDisplayTypeDetailMaster_o *)entity;
   if ( !entity )
 LABEL_26:
-    sub_1C2D6EC(Master_object, v26);
-  NpcServantDisplayTypeDetailEntity__get_AddColor(&v36, entity, 0);
-  v31 = v36.fields.value.fields.b;
-  v32 = v36.fields.value.fields.a;
-  v33 = v36.fields.value.fields.r;
-  v34 = v36.fields.value.fields.g;
-  if ( !v36.fields.hasValue )
+    sub_1C32E7C(Master_object);
+  NpcServantDisplayTypeDetailEntity__get_AddColor(&v35, entity, 0);
+  v30 = v35.fields.value.fields.b;
+  v31 = v35.fields.value.fields.a;
+  v32 = v35.fields.value.fields.r;
+  v33 = v35.fields.value.fields.g;
+  if ( !v35.fields.hasValue )
   {
-    v32 = 0.0;
     v31 = 0.0;
-    v34 = 0.0;
+    v30 = 0.0;
     v33 = 0.0;
+    v32 = 0.0;
   }
-  this->fields.addColor.fields.r = v33;
-  this->fields.addColor.fields.g = v34;
-  this->fields.addColor.fields.b = v31;
-  this->fields.addColor.fields.a = v32;
+  this->fields.addColor.fields.r = v32;
+  this->fields.addColor.fields.g = v33;
+  this->fields.addColor.fields.b = v30;
+  this->fields.addColor.fields.a = v31;
 LABEL_8:
   if ( this->fields.targetId )
   {

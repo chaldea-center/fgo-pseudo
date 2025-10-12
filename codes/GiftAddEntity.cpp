@@ -1,13 +1,13 @@
 void GiftAddEntity___ctor(GiftAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C275E3 & 1) == 0 )
+  if ( (byte_4C37CDB & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C275E3 = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C37CDB = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,10 +17,10 @@ bool GiftAddEntity__CheckValid(GiftAddEntity_o *this, const MethodInfo *method)
   int32_t condType; // w21
   int64_t targetNum; // x19
 
-  if ( (byte_4C275DE & 1) == 0 )
+  if ( (byte_4C37CD6 & 1) == 0 )
   {
-    sub_1C2D490(&CondType_TypeInfo);
-    byte_4C275DE = 1;
+    sub_1C32C20(&CondType_TypeInfo);
+    byte_4C37CD6 = 1;
   }
   condType = this->fields.condType;
   targetId = this->fields.targetId;
@@ -33,15 +33,15 @@ bool GiftAddEntity__CheckValid(GiftAddEntity_o *this, const MethodInfo *method)
 
 System_String_o *GiftAddEntity__CreatePK(int32_t giftId, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4C275DD & 1) == 0 )
+  if ( (byte_4C37CD5 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C275DD = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C37CD5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            giftId,
            priority,
-           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -60,18 +60,18 @@ System_String_o *GiftAddEntity__GetOverWriteTitleSprite(GiftAddEntity_o *this, c
   GiftAddEntity_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C275E2 & 1) == 0 )
+  if ( (byte_4C37CDA & 1) == 0 )
   {
-    sub_1C2D490(&string_TypeInfo);
-    sub_1C2D490(&StringLiteral_22570/*"overwriteTitleSprite"*/);
-    byte_4C275E2 = 1;
+    sub_1C32C20(&string_TypeInfo);
+    sub_1C32C20(&StringLiteral_22587/*"overwriteTitleSprite"*/);
+    byte_4C37CDA = 1;
   }
-  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_22570/*"overwriteTitleSprite"*/, v2);
+  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_22587/*"overwriteTitleSprite"*/, v2);
   if ( result )
   {
     if ( result->klass != string_TypeInfo )
     {
-      sub_1C2D9AC(result);
+      sub_1C3313C(result);
       GiftAddEntity___ctor(v5, v6);
     }
   }
@@ -86,18 +86,18 @@ System_String_o *GiftAddEntity__GetOverwriteDetailText(GiftAddEntity_o *this, co
   GiftAddEntity_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C275E1 & 1) == 0 )
+  if ( (byte_4C37CD9 & 1) == 0 )
   {
-    sub_1C2D490(&string_TypeInfo);
-    sub_1C2D490(&StringLiteral_22523/*"overwriteDetailText"*/);
-    byte_4C275E1 = 1;
+    sub_1C32C20(&string_TypeInfo);
+    sub_1C32C20(&StringLiteral_22540/*"overwriteDetailText"*/);
+    byte_4C37CD9 = 1;
   }
-  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_22523/*"overwriteDetailText"*/, v2);
+  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_22540/*"overwriteDetailText"*/, v2);
   if ( result )
   {
     if ( result->klass != string_TypeInfo )
     {
-      sub_1C2D9AC(result);
+      sub_1C3313C(result);
       return GiftAddEntity__GetOverWriteTitleSprite(v5, v6);
     }
   }
@@ -112,18 +112,18 @@ System_String_o *GiftAddEntity__GetOverwriteTreasureEffectId(GiftAddEntity_o *th
   GiftAddEntity_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C275E0 & 1) == 0 )
+  if ( (byte_4C37CD8 & 1) == 0 )
   {
-    sub_1C2D490(&string_TypeInfo);
-    sub_1C2D490(&StringLiteral_22572/*"overwriteTreasureEffectId"*/);
-    byte_4C275E0 = 1;
+    sub_1C32C20(&string_TypeInfo);
+    sub_1C32C20(&StringLiteral_22589/*"overwriteTreasureEffectId"*/);
+    byte_4C37CD8 = 1;
   }
-  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_22572/*"overwriteTreasureEffectId"*/, v2);
+  result = (System_String_o *)GiftAddEntity__GetScriptValue(this, (System_String_o *)StringLiteral_22589/*"overwriteTreasureEffectId"*/, v2);
   if ( result )
   {
     if ( result->klass != string_TypeInfo )
     {
-      sub_1C2D9AC(result);
+      sub_1C3313C(result);
       return GiftAddEntity__GetOverwriteDetailText(v5, v6);
     }
   }
@@ -136,10 +136,10 @@ Il2CppObject *GiftAddEntity__GetScriptValue(GiftAddEntity_o *this, System_String
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C275DF & 1) == 0 )
+  if ( (byte_4C37CD7 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_4C275DF = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_4C37CD7 = 1;
   }
   value = 0;
   result = (Il2CppObject *)this->fields.script;
@@ -149,7 +149,7 @@ Il2CppObject *GiftAddEntity__GetScriptValue(GiftAddEntity_o *this, System_String
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_344BB34 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_345A5D4 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }

@@ -13,13 +13,13 @@ void EffectFlipData__Flip(EffectFlipData_o *this, UnityEngine_Transform_o *trEff
   {
     if ( !trEffect )
       goto LABEL_13;
-    UnityEngine_Transform__Rotate_71188380(trEffect, 0.0, 180.0, 0.0, 0);
+    UnityEngine_Transform__Rotate_71248316(trEffect, 0.0, 180.0, 0.0, 0);
   }
   if ( this->fields.scaleX <= 0 && this->fields.scaleZ < 1 )
     return;
   if ( !trEffect )
 LABEL_13:
-    sub_1C2D6EC(this, trEffect);
+    sub_1C32E7C(this);
   localScale = UnityEngine_Transform__get_localScale(trEffect, 0);
   if ( this->fields.scaleX >= 1 )
     localScale.fields.x = -localScale.fields.x;
@@ -48,6 +48,6 @@ void EffectFlipData__OverwriteNodeName(
   {
     parentNodeName = this->fields.parentNodeName;
     *baseNodeName = parentNodeName;
-    sub_1C2D434((CGThumbnailListItem_o *)baseNodeName, (int32_t)parentNodeName, v5, v6);
+    sub_1C32BC4((CGThumbnailListItem_o *)baseNodeName, (int32_t)parentNodeName, v5, v6);
   }
 }

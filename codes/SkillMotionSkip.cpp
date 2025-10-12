@@ -14,7 +14,7 @@ void SkillMotionSkip__MotionStart(SkillMotionSkip_o *this, const MethodInfo *met
   if ( !manager
     || (v3 = (CommonMotionSkip_o *)this, (this = (SkillMotionSkip_o *)manager->fields._Perf_k__BackingField) == 0) )
   {
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   }
   if ( BattlePerformance__IsNowActionNotSkillSkip((BattlePerformance_o *)this, 0) )
     CommonMotionSkip__Release(v3, v4);
@@ -26,7 +26,6 @@ void SkillMotionSkip__MotionStart(SkillMotionSkip_o *this, const MethodInfo *met
 void SkillMotionSkip__Release(SkillMotionSkip_o *this, const MethodInfo *method)
 {
   BattleInformationComponent_o *infoComp; // x0
-  __int64 v4; // x1
   struct BattleMotionSkipManager_o *manager; // x8
   struct BattlePerformance_o *Perf_k__BackingField; // x8
 
@@ -36,7 +35,7 @@ void SkillMotionSkip__Release(SkillMotionSkip_o *this, const MethodInfo *method)
     || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0
     || (infoComp = Perf_k__BackingField->fields.infoComp) == 0 )
   {
-    sub_1C2D6EC(infoComp, v4);
+    sub_1C32E7C(infoComp);
   }
   BattleInformationComponent__DestroyDisplayingMessage(infoComp, 0, 0);
 }
@@ -45,7 +44,6 @@ void SkillMotionSkip__Release(SkillMotionSkip_o *this, const MethodInfo *method)
 void SkillMotionSkip__ResetSkipTimeScale(SkillMotionSkip_o *this, const MethodInfo *method)
 {
   BattleData_o *data; // x0
-  __int64 v4; // x1
   struct BattleMotionSkipManager_o *manager; // x8
   BattlePerformance_o *Perf_k__BackingField; // x19
   float AccelSystemTimeScale; // s0
@@ -60,7 +58,7 @@ void SkillMotionSkip__ResetSkipTimeScale(SkillMotionSkip_o *this, const MethodIn
       || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0
       || (data = Perf_k__BackingField->fields.data) == 0 )
     {
-      sub_1C2D6EC(data, v4);
+      sub_1C32E7C(data);
     }
     AccelSystemTimeScale = BattleData__get_AccelSystemTimeScale(data, 0);
     BattlePerformance__SetTimeScale(Perf_k__BackingField, AccelSystemTimeScale, 0);

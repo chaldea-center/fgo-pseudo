@@ -8,12 +8,12 @@ void CancelConfirmMenu___ctor(CancelConfirmMenu_o *this, const MethodInfo *metho
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C23923 & 1) == 0 )
+  if ( (byte_4C33FF4 & 1) == 0 )
   {
-    sub_1C2D490(&BalanceConfig_TypeInfo);
-    sub_1C2D490(&BaseDialog_TypeInfo);
-    sub_1C2D490(&CancelConfirmItemDraw___TypeInfo);
-    byte_4C23923 = 1;
+    sub_1C32C20(&BalanceConfig_TypeInfo);
+    sub_1C32C20(&BaseDialog_TypeInfo);
+    sub_1C32C20(&CancelConfirmItemDraw___TypeInfo);
+    byte_4C33FF4 = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -21,16 +21,16 @@ void CancelConfirmMenu___ctor(CancelConfirmMenu_o *this, const MethodInfo *metho
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v3 = BalanceConfig_TypeInfo;
   }
-  v4 = (struct CancelConfirmItemDraw_array *)sub_1C2D538(
+  v4 = (struct CancelConfirmItemDraw_array *)sub_1C32CC8(
                                                CancelConfirmItemDraw___TypeInfo,
                                                (unsigned int)v3->static_fields->SupportDeckMemberMax);
   this->fields.currentSupportMemberObjectList = v4;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.currentSupportMemberObjectList, (int32_t)v4, v5, v6);
-  v7 = (struct CancelConfirmItemDraw_array *)sub_1C2D538(
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.currentSupportMemberObjectList, (int32_t)v4, v5, v6);
+  v7 = (struct CancelConfirmItemDraw_array *)sub_1C32CC8(
                                                CancelConfirmItemDraw___TypeInfo,
                                                (unsigned int)BalanceConfig_TypeInfo->static_fields->SupportDeckMemberMax);
   this->fields.oldSupportMemberObjectList = v7;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.oldSupportMemberObjectList, (int32_t)v7, v8, v9);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.oldSupportMemberObjectList, (int32_t)v7, v8, v9);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -50,7 +50,7 @@ void CancelConfirmMenu__Callback(CancelConfirmMenu_o *this, bool result, const M
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C2D434(p_callbackFunc, 0, (int32_t)method, v3);
+    sub_1C32BC4(p_callbackFunc, 0, (int32_t)method, v3);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v5->fields.invoke_impl)(
       v5->fields.method_code,
       result,
@@ -63,25 +63,25 @@ void CancelConfirmMenu__Close(CancelConfirmMenu_o *this, const MethodInfo *metho
 {
   const MethodInfo *v2; // x2
 
-  CancelConfirmMenu__Close_35463928(this, 0, v2);
+  CancelConfirmMenu__Close_35579836(this, 0, v2);
 }
 
 
-void CancelConfirmMenu__Close_35463928(CancelConfirmMenu_o *this, System_Action_o *callback, const MethodInfo *method)
+void CancelConfirmMenu__Close_35579836(CancelConfirmMenu_o *this, System_Action_o *callback, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
   System_Action_o *v6; // x20
 
-  if ( (byte_4C23922 & 1) == 0 )
+  if ( (byte_4C33FF3 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_CancelConfirmMenu_EndClose__);
-    byte_4C23922 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_CancelConfirmMenu_EndClose__);
+    byte_4C33FF3 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
   this->fields.state = 4;
-  v6 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_CancelConfirmMenu_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v6, 0);
 }
@@ -102,7 +102,7 @@ void CancelConfirmMenu__EndClose(CancelConfirmMenu_o *this, const MethodInfo *me
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1C2D434(p_closeCallbackFunc, 0, v3, v4);
+    sub_1C32BC4(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(intptr_t, intptr_t))v6->fields.invoke_impl)(v6->fields.method_code, v6->fields.method);
   }
 }
@@ -118,10 +118,10 @@ void CancelConfirmMenu__Init(CancelConfirmMenu_o *this, const MethodInfo *method
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4C23920 & 1) == 0 )
+  if ( (byte_4C33FF1 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C23920 = 1;
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C33FF1 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -141,7 +141,7 @@ void CancelConfirmMenu__Init(CancelConfirmMenu_o *this, const MethodInfo *method
         (titleLabel = this->fields.cancelLabel) == 0) )
   {
 LABEL_10:
-    sub_1C2D6EC(titleLabel, method);
+    sub_1C32E7C(titleLabel);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.state = 0;
@@ -181,51 +181,49 @@ void CancelConfirmMenu__Open(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v9; // x1
-  const MethodInfo *v10; // x2
+  const MethodInfo *v9; // x2
   Il2CppObject *MasterData_object; // x21
   struct CancelConfirmItemDraw_array *currentSupportMemberObjectList; // x8
-  UnityEngine_GameObject_o *v13; // x22
-  __int64 v14; // x23
+  UnityEngine_GameObject_o *v12; // x22
+  __int64 v13; // x23
   Il2CppObject *Entity; // x24
-  __int64 v16; // x2
-  const MethodInfo *v17; // x3
-  struct CancelConfirmItemDraw_array *v18; // x8
+  const MethodInfo *v15; // x3
+  struct CancelConfirmItemDraw_array *v16; // x8
   struct CancelConfirmItemDraw_array *oldSupportMemberObjectList; // x8
-  __int64 v20; // x23
-  Il2CppObject *v21; // x24
-  const MethodInfo *v22; // x3
-  struct CancelConfirmItemDraw_array *v23; // x8
+  __int64 v18; // x23
+  Il2CppObject *v19; // x24
+  const MethodInfo *v20; // x3
+  struct CancelConfirmItemDraw_array *v21; // x8
   UILabel_o *currentSupportMemberTitleLabel; // x20
   UILabel_o *oldSupportMemberTitleLabel; // x20
   UILabel_o *titleLabel; // x20
   UILabel_o *messageLabel; // x20
   UILabel_o *decideLabel; // x20
   UILabel_o *cancelLabel; // x20
-  UnityEngine_GameObject_o *v30; // x0
-  System_Action_o *v31; // x20
+  UnityEngine_GameObject_o *v28; // x0
+  System_Action_o *v29; // x20
 
-  if ( (byte_4C23921 & 1) == 0 )
+  if ( (byte_4C33FF2 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_CancelConfirmMenu_EndOpen__);
-    sub_1C2D490(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C2D490(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1C2D490(&long___TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C2D490(&StringLiteral_10106/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_DECIDE"*/);
-    sub_1C2D490(&StringLiteral_10105/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_CANCEL"*/);
-    sub_1C2D490(&StringLiteral_12534/*"SUPPORT_SELECT_CURRENT_STATE"*/);
-    sub_1C2D490(&StringLiteral_12557/*"SUPPORT_SELECT_OLD_STATE"*/);
-    sub_1C2D490(&StringLiteral_10107/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_MESSAGE"*/);
-    sub_1C2D490(&StringLiteral_12512/*"SUPPORT_SELECT_CANCEL_DIALOG_TITLE"*/);
-    byte_4C23921 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_CancelConfirmMenu_EndOpen__);
+    sub_1C32C20(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C32C20(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_1C32C20(&long___TypeInfo);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C32C20(&StringLiteral_10111/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_DECIDE"*/);
+    sub_1C32C20(&StringLiteral_10110/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_CANCEL"*/);
+    sub_1C32C20(&StringLiteral_12537/*"SUPPORT_SELECT_CURRENT_STATE"*/);
+    sub_1C32C20(&StringLiteral_12560/*"SUPPORT_SELECT_OLD_STATE"*/);
+    sub_1C32C20(&StringLiteral_10112/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_MESSAGE"*/);
+    sub_1C32C20(&StringLiteral_12515/*"SUPPORT_SELECT_CANCEL_DIALOG_TITLE"*/);
+    byte_4C33FF2 = 1;
   }
   if ( (this->fields.state | 4) == 4 )
   {
     this->fields.callbackFunc = callback;
-    sub_1C2D434(
+    sub_1C32BC4(
       (CGThumbnailListItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)supportServantData,
@@ -234,7 +232,7 @@ void CancelConfirmMenu__Open(
     if ( !gameObject )
       goto LABEL_56;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0);
-    CancelConfirmMenu__SetActiveServantInfo(this, 1, v10);
+    CancelConfirmMenu__SetActiveServantInfo(this, 1, v9);
     gameObject = (UnityEngine_GameObject_o *)this->fields.wideMessageLabel;
     if ( !gameObject )
       goto LABEL_56;
@@ -242,23 +240,23 @@ void CancelConfirmMenu__Open(
     if ( !gameObject )
       goto LABEL_56;
     UnityEngine_GameObject__SetActive(gameObject, 0, 0);
-    gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !gameObject )
       goto LABEL_56;
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)gameObject,
-                          (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_UserServantMaster___);
-    gameObject = (UnityEngine_GameObject_o *)sub_1C2D538(long___TypeInfo, 1);
+                          (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserServantMaster___);
+    gameObject = (UnityEngine_GameObject_o *)sub_1C32CC8(long___TypeInfo, 1);
     currentSupportMemberObjectList = this->fields.currentSupportMemberObjectList;
     if ( !currentSupportMemberObjectList )
       goto LABEL_56;
-    v13 = gameObject;
-    v14 = 0;
-    while ( (int)v14 < SLODWORD(currentSupportMemberObjectList->max_length) )
+    v12 = gameObject;
+    v13 = 0;
+    while ( (int)v13 < SLODWORD(currentSupportMemberObjectList->max_length) )
     {
       if ( !supportServantData )
         goto LABEL_56;
-      gameObject = (UnityEngine_GameObject_o *)SupportServantData__getServant(supportServantData, v14, 0);
+      gameObject = (UnityEngine_GameObject_o *)SupportServantData__getServant(supportServantData, v13, 0);
       if ( gameObject )
       {
         if ( !MasterData_object )
@@ -266,34 +264,34 @@ void CancelConfirmMenu__Open(
         Entity = DataMasterBase_object__object__long___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                    (int64_t)gameObject,
-                   (const MethodInfo_338A2F4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                   (const MethodInfo_3398D94 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
       }
       else
       {
         Entity = 0;
       }
-      gameObject = (UnityEngine_GameObject_o *)SupportServantData__getEquip(supportServantData, v14, 0);
-      if ( v13 )
+      gameObject = (UnityEngine_GameObject_o *)SupportServantData__getEquip(supportServantData, v13, 0);
+      if ( v12 )
       {
-        if ( !LODWORD(v13[1].klass) )
+        if ( !LODWORD(v12[1].klass) )
           goto LABEL_57;
-        v13[1].monitor = gameObject;
-        v18 = this->fields.currentSupportMemberObjectList;
-        if ( v18 )
+        v12[1].monitor = gameObject;
+        v16 = this->fields.currentSupportMemberObjectList;
+        if ( v16 )
         {
-          if ( (unsigned int)v14 >= LODWORD(v18->max_length) )
+          if ( (unsigned int)v13 >= LODWORD(v16->max_length) )
 LABEL_57:
-            sub_1C2D6F4(gameObject, v9, v16);
-          gameObject = (UnityEngine_GameObject_o *)v18->m_Items[v14];
+            sub_1C32E84(gameObject);
+          gameObject = (UnityEngine_GameObject_o *)v16->m_Items[v13];
           if ( gameObject )
           {
             CancelConfirmItemDraw__SetItem(
               (CancelConfirmItemDraw_o *)gameObject,
               (UserServantEntity_o *)Entity,
-              (System_Int64_array *)v13,
-              v17);
+              (System_Int64_array *)v12,
+              v15);
             currentSupportMemberObjectList = this->fields.currentSupportMemberObjectList;
-            ++v14;
+            ++v13;
             if ( currentSupportMemberObjectList )
               continue;
           }
@@ -304,46 +302,46 @@ LABEL_57:
     oldSupportMemberObjectList = this->fields.oldSupportMemberObjectList;
     if ( !oldSupportMemberObjectList )
       goto LABEL_56;
-    v20 = 0;
-    while ( (int)v20 < SLODWORD(oldSupportMemberObjectList->max_length) )
+    v18 = 0;
+    while ( (int)v18 < SLODWORD(oldSupportMemberObjectList->max_length) )
     {
       if ( !supportServantData )
         goto LABEL_56;
-      gameObject = (UnityEngine_GameObject_o *)SupportServantData__getOldServant(supportServantData, v20, 0);
+      gameObject = (UnityEngine_GameObject_o *)SupportServantData__getOldServant(supportServantData, v18, 0);
       if ( gameObject )
       {
         if ( !MasterData_object )
           goto LABEL_56;
-        v21 = DataMasterBase_object__object__long___GetEntity(
+        v19 = DataMasterBase_object__object__long___GetEntity(
                 (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                 (int64_t)gameObject,
-                (const MethodInfo_338A2F4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                (const MethodInfo_3398D94 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
       }
       else
       {
-        v21 = 0;
+        v19 = 0;
       }
-      gameObject = (UnityEngine_GameObject_o *)SupportServantData__getOldEquip(supportServantData, v20, 0);
-      if ( v13 )
+      gameObject = (UnityEngine_GameObject_o *)SupportServantData__getOldEquip(supportServantData, v18, 0);
+      if ( v12 )
       {
-        if ( !LODWORD(v13[1].klass) )
+        if ( !LODWORD(v12[1].klass) )
           goto LABEL_57;
-        v13[1].monitor = gameObject;
-        v23 = this->fields.oldSupportMemberObjectList;
-        if ( v23 )
+        v12[1].monitor = gameObject;
+        v21 = this->fields.oldSupportMemberObjectList;
+        if ( v21 )
         {
-          if ( (unsigned int)v20 >= LODWORD(v23->max_length) )
+          if ( (unsigned int)v18 >= LODWORD(v21->max_length) )
             goto LABEL_57;
-          gameObject = (UnityEngine_GameObject_o *)v23->m_Items[v20];
+          gameObject = (UnityEngine_GameObject_o *)v21->m_Items[v18];
           if ( gameObject )
           {
             CancelConfirmItemDraw__SetItem(
               (CancelConfirmItemDraw_o *)gameObject,
-              (UserServantEntity_o *)v21,
-              (System_Int64_array *)v13,
-              v22);
+              (UserServantEntity_o *)v19,
+              (System_Int64_array *)v12,
+              v20);
             oldSupportMemberObjectList = this->fields.oldSupportMemberObjectList;
-            ++v20;
+            ++v18;
             if ( oldSupportMemberObjectList )
               continue;
           }
@@ -384,12 +382,12 @@ LABEL_57:
     currentSupportMemberTitleLabel = this->fields.currentSupportMemberTitleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12534/*"SUPPORT_SELECT_CURRENT_STATE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12537/*"SUPPORT_SELECT_CURRENT_STATE"*/, 0);
     if ( !currentSupportMemberTitleLabel )
       goto LABEL_56;
     UILabel__set_text(currentSupportMemberTitleLabel, (System_String_o *)gameObject, 0);
     oldSupportMemberTitleLabel = this->fields.oldSupportMemberTitleLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12557/*"SUPPORT_SELECT_OLD_STATE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12560/*"SUPPORT_SELECT_OLD_STATE"*/, 0);
     if ( !oldSupportMemberTitleLabel )
       goto LABEL_56;
     UILabel__set_text(oldSupportMemberTitleLabel, (System_String_o *)gameObject, 0);
@@ -398,39 +396,38 @@ LABEL_57:
       goto LABEL_56;
     UILabel__set_alignment((UILabel_o *)gameObject, 1, 0);
     titleLabel = this->fields.titleLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12512/*"SUPPORT_SELECT_CANCEL_DIALOG_TITLE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12515/*"SUPPORT_SELECT_CANCEL_DIALOG_TITLE"*/, 0);
     if ( !titleLabel )
       goto LABEL_56;
     UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
     messageLabel = this->fields.messageLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10107/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_MESSAGE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10112/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_MESSAGE"*/, 0);
     if ( !messageLabel )
       goto LABEL_56;
     UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0);
     decideLabel = this->fields.decideLabel;
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10106/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_DECIDE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10111/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_DECIDE"*/, 0);
     if ( !decideLabel
       || (UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0),
           cancelLabel = this->fields.cancelLabel,
-          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10105/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_CANCEL"*/, 0),
+          gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10110/*"PARTY_ORGANIZATION_CONFIRM2_CANCEL_CANCEL"*/, 0),
           !cancelLabel)
       || (UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.cancelButton) == 0) )
     {
 LABEL_56:
-      sub_1C2D6EC(gameObject, v9);
+      sub_1C32E7C(gameObject);
     }
-    v30 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
-    AndroidBackKeyManager__AddBackBtn(v30, 0);
+    v28 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+    AndroidBackKeyManager__AddBackBtn(v28, 0);
     this->fields.state = 1;
-    v31 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
-    System_Action___ctor(v31, (Il2CppObject *)this, Method_CancelConfirmMenu_EndOpen__, 0);
-    BaseDialog__Open((BaseDialog_o *)this, v31, 0, 0);
+    v29 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
+    System_Action___ctor(v29, (Il2CppObject *)this, Method_CancelConfirmMenu_EndOpen__, 0);
+    BaseDialog__Open((BaseDialog_o *)this, v29, 0, 0, 0);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void CancelConfirmMenu__SetActiveServantInfo(CancelConfirmMenu_o *this, bool active, const MethodInfo *method)
 {
   UnityEngine_Component_o *messageLabel; // x0
@@ -456,7 +453,7 @@ void CancelConfirmMenu__SetActiveServantInfo(CancelConfirmMenu_o *this, bool act
     || (messageLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(messageLabel, 0)) == 0 )
   {
 LABEL_10:
-    sub_1C2D6EC(messageLabel, active);
+    sub_1C32E7C(messageLabel);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)messageLabel, active, 0);
 }
@@ -477,10 +474,10 @@ void CancelConfirmMenu__add_callbackFunc(
   CancelConfirmMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C2391E & 1) == 0 )
+  if ( (byte_4C33FEF & 1) == 0 )
   {
-    sub_1C2D490(&CancelConfirmMenu_CallbackFunc_TypeInfo);
-    byte_4C2391E = 1;
+    sub_1C32C20(&CancelConfirmMenu_CallbackFunc_TypeInfo);
+    byte_4C33FEF = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -493,13 +490,13 @@ void CancelConfirmMenu__add_callbackFunc(
       if ( (CancelConfirmMenu_CallbackFunc_c *)v8->klass != CancelConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
+    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C2D9AC(v8);
+  sub_1C3313C(v8);
   CancelConfirmMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -518,10 +515,10 @@ void CancelConfirmMenu__remove_callbackFunc(
   CancelConfirmMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C2391F & 1) == 0 )
+  if ( (byte_4C33FF0 & 1) == 0 )
   {
-    sub_1C2D490(&CancelConfirmMenu_CallbackFunc_TypeInfo);
-    byte_4C2391F = 1;
+    sub_1C32C20(&CancelConfirmMenu_CallbackFunc_TypeInfo);
+    byte_4C33FF0 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -534,13 +531,13 @@ void CancelConfirmMenu__remove_callbackFunc(
       if ( (CancelConfirmMenu_CallbackFunc_c *)v8->klass != CancelConfirmMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
+    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C2D9AC(v8);
+  sub_1C3313C(v8);
   CancelConfirmMenu__Init(v11, v12);
 }
 
@@ -560,15 +557,15 @@ void CancelConfirmMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C2D550(method) & 1) == 0 )
+  if ( (sub_1C32CE0(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C2D708(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2D5B8(v10, 0);
+      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C32D48(v10, 0);
     }
     goto LABEL_5;
   }
@@ -580,9 +577,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A6E488;
+  this->fields.invoke_impl = (intptr_t)sub_1A73BB0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A6E440;
+  this->fields.extra_arg = (intptr_t)sub_1A73B68;
 }
 
 
@@ -593,18 +590,21 @@ System_IAsyncResult_o *CancelConfirmMenu_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
-  bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
+  __int64 v5; // x5
+  __int64 v6; // x6
+  __int64 v7; // x7
+  _QWORD v12[2]; // [xsp+8h] [xbp-48h] BYREF
+  bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
-  v10[0] = result;
-  if ( (byte_4C23924 & 1) == 0 )
+  v13[0] = result;
+  if ( (byte_4C33FF5 & 1) == 0 )
   {
-    sub_1C2D490(&bool_TypeInfo);
-    byte_4C23924 = 1;
+    sub_1C32C20(&bool_TypeInfo);
+    byte_4C33FF5 = 1;
   }
-  v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C2D444(this, v9, callback, object);
+  v12[1] = 0;
+  v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
+  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
 }
 
 
@@ -613,7 +613,7 @@ void CancelConfirmMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2D448(result, 0, method);
+  sub_1C32BD8(result, 0, method);
 }
 
 

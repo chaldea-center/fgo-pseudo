@@ -14,7 +14,7 @@ void CombineCommandCardEquipmentComponent__HideStatusInfo(
 
   statusInfoObj = this->fields.statusInfoObj;
   if ( !statusInfoObj )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   UnityEngine_GameObject__SetActive(statusInfoObj, 0, 0);
 }
 
@@ -26,11 +26,10 @@ void CombineCommandCardEquipmentComponent__SetEquippedInfo(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *equippedInfo; // x0
-  const MethodInfo *v7; // x4
 
   equippedInfo = this->fields.equippedInfo;
   if ( !equippedInfo )
-    sub_1C2D6EC(0, DispInfo);
+    sub_1C32E7C(0);
   if ( DispInfo )
   {
     UnityEngine_GameObject__SetActive(equippedInfo, 1, 0);
@@ -39,7 +38,7 @@ void CombineCommandCardEquipmentComponent__SetEquippedInfo(
       this->fields.nameLabel,
       equippedSvtId,
       equippedSvtId > 0,
-      v7);
+      0);
   }
   else
   {
@@ -56,23 +55,22 @@ void CombineCommandCardEquipmentComponent__SetIcon(
         int32_t equippedSvtId,
         const MethodInfo *method)
 {
-  struct UserCommandCodeEntity_o *v9; // x23
   UnityEngine_Component_o *raritySprite; // x0
   int32_t v12; // w2
   const MethodInfo *v13; // x3
   UISprite_o *v14; // x24
   int32_t Rarity; // w23
   UILabel_o *statusInfoLabel; // x23
-  const MethodInfo *v17; // x3
+  System_String_o *v17; // x1
+  const MethodInfo *v18; // x3
 
-  v9 = userCommandCode;
-  if ( (byte_4C2B0FF & 1) == 0 )
+  if ( (byte_4C3B81E & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&Rarity_TypeInfo);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    sub_1C2D490(&StringLiteral_11511/*"SELECTED_COMMAND_CODE"*/);
-    byte_4C2B0FF = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&Rarity_TypeInfo);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    sub_1C32C20(&StringLiteral_11517/*"SELECTED_COMMAND_CODE"*/);
+    byte_4C3B81E = 1;
   }
   raritySprite = (UnityEngine_Component_o *)this->fields.raritySprite;
   if ( !raritySprite )
@@ -80,9 +78,9 @@ void CombineCommandCardEquipmentComponent__SetIcon(
   raritySprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(raritySprite, 0);
   if ( !raritySprite )
     goto LABEL_22;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)raritySprite, v9 != 0, 0);
-  this->fields.userCommandCodeEntity = v9;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.userCommandCodeEntity, (int32_t)v9, v12, v13);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)raritySprite, userCommandCode != 0, 0);
+  this->fields.userCommandCodeEntity = userCommandCode;
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.userCommandCodeEntity, (int32_t)userCommandCode, v12, v13);
   raritySprite = (UnityEngine_Component_o *)this->fields.icon;
   if ( !raritySprite )
     goto LABEL_22;
@@ -96,13 +94,13 @@ void CombineCommandCardEquipmentComponent__SetIcon(
       return;
     }
 LABEL_22:
-    sub_1C2D6EC(raritySprite, userCommandCode);
+    sub_1C32E7C(raritySprite);
   }
-  ServantFaceIconComponent__Set_40791192((ServantFaceIconComponent_o *)raritySprite, v9, 0, 0, 0);
-  if ( !v9 )
+  ServantFaceIconComponent__Set_40913296((ServantFaceIconComponent_o *)raritySprite, userCommandCode, 0, 0, 0);
+  if ( !userCommandCode )
     goto LABEL_22;
   v14 = this->fields.raritySprite;
-  Rarity = UserCommandCodeEntity__GetRarity(v9, 0);
+  Rarity = UserCommandCodeEntity__GetRarity(userCommandCode, 0);
   if ( !Rarity_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
   raritySprite = (UnityEngine_Component_o *)Rarity__getIcon(Rarity, 0);
@@ -118,23 +116,23 @@ LABEL_22:
   statusInfoLabel = this->fields.statusInfoLabel;
   if ( isEquipedCommandCode )
   {
-    userCommandCode = (UserCommandCodeEntity_o *)StringLiteral_1/*""*/;
+    v17 = (System_String_o *)StringLiteral_1/*""*/;
   }
   else
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    raritySprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11511/*"SELECTED_COMMAND_CODE"*/, 0);
-    userCommandCode = (UserCommandCodeEntity_o *)raritySprite;
+    raritySprite = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11517/*"SELECTED_COMMAND_CODE"*/, 0);
+    v17 = (System_String_o *)raritySprite;
   }
   if ( !statusInfoLabel )
     goto LABEL_22;
-  UILabel__set_text(statusInfoLabel, (System_String_o *)userCommandCode, 0);
+  UILabel__set_text(statusInfoLabel, v17, 0);
   raritySprite = (UnityEngine_Component_o *)this->fields.statusInfoObj;
   if ( !raritySprite )
     goto LABEL_22;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)raritySprite, !isEquipedCommandCode, 0);
-  CombineCommandCardEquipmentComponent__SetEquippedInfo(this, DispEquippedInfo, equippedSvtId, v17);
+  CombineCommandCardEquipmentComponent__SetEquippedInfo(this, DispEquippedInfo, equippedSvtId, v18);
 }
 
 
@@ -143,18 +141,17 @@ void CombineCommandCardEquipmentComponent__SetIconNoDispStatus(
         UserCommandCodeEntity_o *userCommandCode,
         const MethodInfo *method)
 {
-  struct UserCommandCodeEntity_o *v3; // x20
   UnityEngine_Component_o *raritySprite; // x0
   int32_t v6; // w2
   const MethodInfo *v7; // x3
-  UISprite_o *v8; // x20
+  UserCommandCodeEntity_o *userCommandCodeEntity; // x1
+  UISprite_o *v9; // x20
   int32_t Rarity; // w21
 
-  v3 = userCommandCode;
-  if ( (byte_4C2B100 & 1) == 0 )
+  if ( (byte_4C3B81F & 1) == 0 )
   {
-    sub_1C2D490(&Rarity_TypeInfo);
-    byte_4C2B100 = 1;
+    sub_1C32C20(&Rarity_TypeInfo);
+    byte_4C3B81F = 1;
   }
   raritySprite = (UnityEngine_Component_o *)this->fields.raritySprite;
   if ( !raritySprite )
@@ -162,27 +159,27 @@ void CombineCommandCardEquipmentComponent__SetIconNoDispStatus(
   raritySprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(raritySprite, 0);
   if ( !raritySprite )
     goto LABEL_15;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)raritySprite, v3 != 0, 0);
-  this->fields.userCommandCodeEntity = v3;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.userCommandCodeEntity, (int32_t)v3, v6, v7);
-  userCommandCode = this->fields.userCommandCodeEntity;
-  if ( userCommandCode )
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)raritySprite, userCommandCode != 0, 0);
+  this->fields.userCommandCodeEntity = userCommandCode;
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.userCommandCodeEntity, (int32_t)userCommandCode, v6, v7);
+  userCommandCodeEntity = this->fields.userCommandCodeEntity;
+  if ( userCommandCodeEntity )
   {
     raritySprite = (UnityEngine_Component_o *)this->fields.icon;
     if ( raritySprite )
     {
-      ServantFaceIconComponent__Set_40791192((ServantFaceIconComponent_o *)raritySprite, userCommandCode, 0, 0, 0);
+      ServantFaceIconComponent__Set_40913296((ServantFaceIconComponent_o *)raritySprite, userCommandCodeEntity, 0, 0, 0);
       raritySprite = (UnityEngine_Component_o *)this->fields.userCommandCodeEntity;
       if ( raritySprite )
       {
-        v8 = this->fields.raritySprite;
+        v9 = this->fields.raritySprite;
         Rarity = UserCommandCodeEntity__GetRarity((UserCommandCodeEntity_o *)raritySprite, 0);
         if ( !Rarity_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
         raritySprite = (UnityEngine_Component_o *)Rarity__getIcon(Rarity, 0);
-        if ( v8 )
+        if ( v9 )
         {
-          UISprite__set_spriteName(v8, (System_String_o *)raritySprite, 0);
+          UISprite__set_spriteName(v9, (System_String_o *)raritySprite, 0);
           raritySprite = (UnityEngine_Component_o *)this->fields.raritySprite;
           if ( raritySprite )
           {
@@ -200,6 +197,6 @@ void CombineCommandCardEquipmentComponent__SetIconNoDispStatus(
       }
     }
 LABEL_15:
-    sub_1C2D6EC(raritySprite, userCommandCode);
+    sub_1C32E7C(raritySprite);
   }
 }

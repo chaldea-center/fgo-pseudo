@@ -4,14 +4,13 @@ void CommandCodeInfo___ctor(CommandCodeInfo_o *this, const MethodInfo *method)
 }
 
 
-void CommandCodeInfo___ctor_46344280(CommandCodeInfo_o *this, CommandCodeInfo_SaveData_o *sv, const MethodInfo *method)
+void CommandCodeInfo___ctor_46485844(CommandCodeInfo_o *this, CommandCodeInfo_SaveData_o *sv, const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !sv )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   this->fields.id = sv->fields.id;
   *(_QWORD *)&this->fields.userId = *(_QWORD *)&sv->fields.userId;
 }
@@ -21,18 +20,17 @@ CommandCodeInfo_SaveData_o *CommandCodeInfo__GetSaveData(CommandCodeInfo_o *this
 {
   Il2CppObject *v3; // x20
   __int64 v4; // x0
-  __int64 v5; // x1
   CommandCodeInfo_SaveData_o *result; // x0
 
-  if ( (byte_4C2A1AD & 1) == 0 )
+  if ( (byte_4C3A8C0 & 1) == 0 )
   {
-    sub_1C2D490(&CommandCodeInfo_SaveData_TypeInfo);
-    byte_4C2A1AD = 1;
+    sub_1C32C20(&CommandCodeInfo_SaveData_TypeInfo);
+    byte_4C3A8C0 = 1;
   }
-  v3 = (Il2CppObject *)sub_1C2D6DC(CommandCodeInfo_SaveData_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C32E6C(CommandCodeInfo_SaveData_TypeInfo);
   System_Object___ctor(v3, 0);
   if ( !v3 )
-    sub_1C2D6EC(v4, v5);
+    sub_1C32E7C(v4);
   result = (CommandCodeInfo_SaveData_o *)v3;
   v3[1].klass = (Il2CppClass *)this->fields.id;
   v3[1].monitor = *(void **)&this->fields.userId;

@@ -7,14 +7,14 @@ void SetupGrandServantRequest__beginRequest(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C28EA9 & 1) == 0 )
+  if ( (byte_4C395B2 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_24564/*"userSvtId"*/);
-    sub_1C2D490(&StringLiteral_19878/*"grandGraphId"*/);
-    byte_4C28EA9 = 1;
+    sub_1C32C20(&StringLiteral_24582/*"userSvtId"*/);
+    sub_1C32C20(&StringLiteral_19890/*"grandGraphId"*/);
+    byte_4C395B2 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19878/*"grandGraphId"*/, grandGraphId, method);
-  RequestBase__addField_44008608((RequestBase_o *)this, (System_String_o *)StringLiteral_24564/*"userSvtId"*/, userSvtId, v7);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19890/*"grandGraphId"*/, grandGraphId, method);
+  RequestBase__addField_44144740((RequestBase_o *)this, (System_String_o *)StringLiteral_24582/*"userSvtId"*/, userSvtId, v7);
   RequestBase__beginRequest((RequestBase_o *)this, v8);
 }
 
@@ -23,16 +23,16 @@ System_String_o *SetupGrandServantRequest__getURL(SetupGrandServantRequest_o *th
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C28EA8 & 1) == 0 )
+  if ( (byte_4C395B1 & 1) == 0 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_19871/*"grand/SetupSvt"*/);
-    byte_4C28EA8 = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_19883/*"grand/SetupSvt"*/);
+    byte_4C395B1 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63457864(BaseUrl, (System_String_o *)StringLiteral_19871/*"grand/SetupSvt"*/, 0);
+  return System_String__Concat_63518544(BaseUrl, (System_String_o *)StringLiteral_19883/*"grand/SetupSvt"*/, 0);
 }
 
 
@@ -49,12 +49,12 @@ void SetupGrandServantRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4C28EAA & 1) == 0 )
+  if ( (byte_4C395B3 & 1) == 0 )
   {
-    sub_1C2D490(&JsonManager_TypeInfo);
-    sub_1C2D490(&ResponseCommandKind_TypeInfo);
-    sub_1C2D490(&StringLiteral_22195/*"ng"*/);
-    byte_4C28EAA = 1;
+    sub_1C32C20(&JsonManager_TypeInfo);
+    sub_1C32C20(&ResponseCommandKind_TypeInfo);
+    sub_1C32C20(&StringLiteral_22212/*"ng"*/);
+    byte_4C395B3 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -78,7 +78,7 @@ void SetupGrandServantRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22195/*"ng"*/,
+        StringLiteral_22212/*"ng"*/,
         v11->fields.method);
   }
 }

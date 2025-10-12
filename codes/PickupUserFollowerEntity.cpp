@@ -1,13 +1,13 @@
 void PickupUserFollowerEntity___ctor(PickupUserFollowerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2787F & 1) == 0 )
+  if ( (byte_4C37F80 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_long___ctor__);
-    byte_4C2787F = 1;
+    sub_1C32C20(&Method_DataEntityBase_long___ctor__);
+    byte_4C37F80 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_33858FC *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_339439C *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -17,7 +17,6 @@ int64_t PickupUserFollowerEntity__CreatePrimaryKey(PickupUserFollowerEntity_o *t
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 FollowerInfo_o *PickupUserFollowerEntity__getFollowerInfo(
         PickupUserFollowerEntity_o *this,
         int64_t followerId,
@@ -40,10 +39,10 @@ FollowerInfo_o *PickupUserFollowerEntity__getFollowerInfo(
   while ( 1 )
   {
     if ( (unsigned int)v6 >= max_length )
-      sub_1C2D6F4(this, followerId, *(_QWORD *)&followerType);
+      sub_1C32E84(this);
     this = (PickupUserFollowerEntity_o *)m_Items[v6];
     if ( !this )
-      sub_1C2D6EC(0, followerId);
+      sub_1C32E7C(0);
     if ( this->fields.followerInfo == (struct FollowerInfo_array *)followerId
       && (followerType == -1 || HIDWORD(this->fields.expireAt) == followerType) )
     {

@@ -10,36 +10,35 @@ float ChangeModelData__GetHeadUpOffsetY(
         const MethodInfo *method)
 {
   Il2CppObject *Master_object; // x0
-  __int64 v6; // x1
   float HeadUpY; // s0
-  System_Nullable_float__o v8; // x0
+  System_Nullable_float__o v7; // x0
   System_Nullable_float__o p_headUpOffsetY; // x0
-  struct System_Nullable_float__o v11; // [xsp+0h] [xbp-30h] BYREF
+  struct System_Nullable_float__o v10; // [xsp+0h] [xbp-30h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C29B2F & 1) == 0 )
+  if ( (byte_4C3A241 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1C2D490(&Method_System_Nullable_float___ctor__);
-    sub_1C2D490(&Method_System_Nullable_float__get_HasValue__);
-    sub_1C2D490(&Method_System_Nullable_float__get_Value__);
-    byte_4C29B2F = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C32C20(&Method_System_Nullable_float___ctor__);
+    sub_1C32C20(&Method_System_Nullable_float__get_HasValue__);
+    sub_1C32C20(&Method_System_Nullable_float__get_Value__);
+    byte_4C3A241 = 1;
   }
   entity = 0;
   if ( !this->fields.headUpOffsetY.fields.hasValue )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ServantMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantMaster___);
     if ( Master_object )
     {
       Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                         &entity,
                                         this->fields.modelId,
-                                        (const MethodInfo_3387DE4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                        (const MethodInfo_3396884 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
         originalSvtEnt = (ServantEntity_o *)entity;
@@ -47,10 +46,10 @@ float ChangeModelData__GetHeadUpOffsetY(
         {
 LABEL_9:
           HeadUpY = ServantEntity__getHeadUpY(originalSvtEnt, 0);
-          v8 = (System_Nullable_float__o)&v11;
-          v11 = 0;
-          System_Nullable_float____ctor(v8, HeadUpY, (const MethodInfo_38B1A04 *)Method_System_Nullable_float___ctor__);
-          this->fields.headUpOffsetY = v11;
+          v7 = (System_Nullable_float__o)&v10;
+          v10 = 0;
+          System_Nullable_float____ctor(v7, HeadUpY, (const MethodInfo_38C063C *)Method_System_Nullable_float___ctor__);
+          this->fields.headUpOffsetY = v10;
           goto LABEL_10;
         }
       }
@@ -59,13 +58,13 @@ LABEL_9:
         goto LABEL_9;
       }
     }
-    sub_1C2D6EC(Master_object, v6);
+    sub_1C32E7C(Master_object);
   }
 LABEL_10:
   p_headUpOffsetY = (System_Nullable_float__o)&this->fields.headUpOffsetY;
   return System_Nullable_float___get_Value(
            p_headUpOffsetY,
-           (const MethodInfo_38B1A1C *)Method_System_Nullable_float__get_Value__);
+           (const MethodInfo_38C0654 *)Method_System_Nullable_float__get_Value__);
 }
 
 
@@ -86,7 +85,7 @@ void ChangeModelData__ResetAfterContinue(
   if ( this->fields.isKeepChangeModelAfterContinue <= 0 )
   {
     if ( !svtData )
-      sub_1C2D6EC(this, 0);
+      sub_1C32E7C(this);
     BattleServantData__ResetChangeModelData(svtData, 0);
   }
 }

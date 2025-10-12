@@ -6,9 +6,9 @@ void GrandServantListQuestData___ctor(
 {
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._EventSetupInfo_k__BackingField = eventSetupInfo;
-  sub_1C2D434(&this->fields);
+  sub_1C32BC4(&this->fields, eventSetupInfo);
   this->fields._QuestRestriction_k__BackingField = questRestriction;
-  sub_1C2D434(&this->fields._QuestRestriction_k__BackingField);
+  sub_1C32BC4(&this->fields._QuestRestriction_k__BackingField, questRestriction);
 }
 
 
@@ -34,7 +34,7 @@ void GrandServantListQuestData__set_EventSetupInfo(
         const MethodInfo *method)
 {
   this->fields._EventSetupInfo_k__BackingField = value;
-  sub_1C2D434(&this->fields);
+  sub_1C32BC4(&this->fields, value);
 }
 
 
@@ -44,5 +44,5 @@ void GrandServantListQuestData__set_QuestRestriction(
         const MethodInfo *method)
 {
   this->fields._QuestRestriction_k__BackingField = value;
-  sub_1C2D434(&this->fields._QuestRestriction_k__BackingField);
+  sub_1C32BC4(&this->fields._QuestRestriction_k__BackingField, value);
 }

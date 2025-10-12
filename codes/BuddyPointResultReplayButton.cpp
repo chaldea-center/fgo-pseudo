@@ -10,46 +10,45 @@ void BuddyPointResultReplayButton__SetBgSprite(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *bgSprite; // x21
-  __int64 v6; // x1
-  struct UISprite_o *v7; // x0
-  UnityEngine_Object_o *v8; // x21
-  UISprite_o *v9; // x21
+  struct UISprite_o *v6; // x0
+  UnityEngine_Object_o *v7; // x21
+  UISprite_o *v8; // x21
 
-  if ( (byte_4C2193A & 1) == 0 )
+  if ( (byte_4C32009 & 1) == 0 )
   {
-    sub_1C2D490(&AtlasManager_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2193A = 1;
+    sub_1C32C20(&AtlasManager_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C32009 = 1;
   }
   bgSprite = (UnityEngine_Object_o *)this->fields.bgSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(bgSprite, 0, 0) )
   {
-    v7 = this->fields.bgSprite;
-    if ( v7 )
+    v6 = this->fields.bgSprite;
+    if ( v6 )
     {
-      v8 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(struct UISprite_o *, const MethodInfo *))v7->klass->vtable._26_get_mainTexture.methodPtr)(
-                                     v7,
-                                     v7->klass->vtable._26_get_mainTexture.method);
+      v7 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(struct UISprite_o *, const MethodInfo *))v6->klass->vtable._26_get_mainTexture.methodPtr)(
+                                     v6,
+                                     v6->klass->vtable._26_get_mainTexture.method);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality(v8, 0, 0) || System_String__IsNullOrEmpty(spriteName, 0) )
+      if ( UnityEngine_Object__op_Inequality(v7, 0, 0) || System_String__IsNullOrEmpty(spriteName, 0) )
         return;
-      v9 = this->fields.bgSprite;
+      v8 = this->fields.bgSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__SetEventUI(v9, spriteName, 0);
-      v7 = this->fields.bgSprite;
-      if ( v7 )
+      AtlasManager__SetEventUI(v8, spriteName, 0);
+      v6 = this->fields.bgSprite;
+      if ( v6 )
       {
-        ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v7->klass->vtable._33_MakePixelPerfect.methodPtr)(
-          v7,
-          v7->klass->vtable._33_MakePixelPerfect.method);
+        ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v6->klass->vtable._33_MakePixelPerfect.methodPtr)(
+          v6,
+          v6->klass->vtable._33_MakePixelPerfect.method);
         return;
       }
     }
-    sub_1C2D6EC(v7, v6);
+    sub_1C32E7C(v6);
   }
 }
 
@@ -61,26 +60,25 @@ void BuddyPointResultReplayButton__Setup(
 {
   UnityEngine_Object_o *button; // x21
   _BOOL8 v6; // x0
-  __int64 v7; // x1
-  const MethodInfo *v8; // x2
-  struct UICommonButton_o *v9; // x8
+  const MethodInfo *v7; // x2
+  struct UICommonButton_o *v8; // x8
   struct System_Collections_Generic_List_EventDelegate__o *onClick; // x9
   int32_t size; // w2
-  int v12; // w10
-  System_Collections_Generic_List_object__o *v13; // x21
-  EventDelegate_o *v14; // x22
+  int v11; // w10
+  System_Collections_Generic_List_object__o *v12; // x21
+  EventDelegate_o *v13; // x22
   struct System_Object_array *items; // x8
-  _QWORD *v16; // x9
-  __int64 v17; // x10
-  Il2CppClass **v18; // x0
+  _QWORD *v15; // x9
+  __int64 v16; // x10
+  Il2CppClass **v17; // x0
 
-  if ( (byte_4C21939 & 1) == 0 )
+  if ( (byte_4C32008 & 1) == 0 )
   {
-    sub_1C2D490(&EventDelegate_TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C21939 = 1;
+    sub_1C32C20(&EventDelegate_TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C32008 = 1;
   }
   button = (UnityEngine_Object_o *)this->fields.button;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -88,50 +86,50 @@ void BuddyPointResultReplayButton__Setup(
   v6 = UnityEngine_Object__op_Inequality(button, 0, 0);
   if ( v6 )
   {
-    v9 = this->fields.button;
-    if ( !v9 )
+    v8 = this->fields.button;
+    if ( !v8 )
       goto LABEL_16;
-    onClick = v9->fields.onClick;
+    onClick = v8->fields.onClick;
     if ( !onClick )
       goto LABEL_16;
     size = onClick->fields._size;
-    v12 = onClick->fields._version + 1;
+    v11 = onClick->fields._version + 1;
     onClick->fields._size = 0;
-    onClick->fields._version = v12;
+    onClick->fields._version = v11;
     if ( size >= 1 )
     {
       System_Array__Clear((System_Array_o *)onClick->fields._items, 0, size, 0);
-      v9 = this->fields.button;
-      if ( !v9 )
+      v8 = this->fields.button;
+      if ( !v8 )
         goto LABEL_16;
     }
-    v13 = (System_Collections_Generic_List_object__o *)v9->fields.onClick;
-    v14 = (EventDelegate_o *)sub_1C2D6DC(EventDelegate_TypeInfo);
-    EventDelegate___ctor_49170772(v14, onClickAction, 0);
-    if ( !v13
-      || (items = v13->fields._items,
-          v16 = Method_System_Collections_Generic_List_EventDelegate__Add__,
-          ++v13->fields._version,
+    v12 = (System_Collections_Generic_List_object__o *)v8->fields.onClick;
+    v13 = (EventDelegate_o *)sub_1C32E6C(EventDelegate_TypeInfo);
+    EventDelegate___ctor_49230836(v13, onClickAction, 0);
+    if ( !v12
+      || (items = v12->fields._items,
+          v15 = Method_System_Collections_Generic_List_EventDelegate__Add__,
+          ++v12->fields._version,
           !items) )
     {
 LABEL_16:
-      sub_1C2D6EC(v6, v7);
+      sub_1C32E7C(v6);
     }
-    v17 = v13->fields._size;
-    if ( (unsigned int)v17 >= LODWORD(items->max_length) )
+    v16 = v12->fields._size;
+    if ( (unsigned int)v16 >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v13,
-        (Il2CppObject *)v14,
-        *(const MethodInfo_3789B84 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+        v12,
+        (Il2CppObject *)v13,
+        *(const MethodInfo_37987BC **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
     }
     else
     {
-      v18 = &items->obj.klass + v17;
-      v13->fields._size = v17 + 1;
-      v18[4] = (Il2CppClass *)v14;
-      sub_1C2D434(v18 + 4);
+      v17 = &items->obj.klass + v16;
+      v12->fields._size = v16 + 1;
+      v17[4] = (Il2CppClass *)v13;
+      sub_1C32BC4(v17 + 4, v13);
     }
   }
-  BuddyPointResultReplayButton__SetBgSprite(this, this->fields.bgSpriteName, v8);
+  BuddyPointResultReplayButton__SetBgSprite(this, this->fields.bgSpriteName, v7);
 }

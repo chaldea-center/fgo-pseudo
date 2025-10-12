@@ -1,27 +1,27 @@
 void EventFortificationEntity___ctor(EventFortificationEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2727D & 1) == 0 )
+  if ( (byte_4C37973 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C2727D = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C37973 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventFortificationEntity__CreatePK(int32_t eventId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4C2727A & 1) == 0 )
+  if ( (byte_4C37970 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C2727A = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C37970 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            idx,
-           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -36,20 +36,19 @@ System_String_o *EventFortificationEntity__CreatePrimaryKey(EventFortificationEn
 int32_t EventFortificationEntity__GetGiftItemIcon(EventFortificationEntity_o *this, const MethodInfo *method)
 {
   Il2CppObject *Master_object; // x0
-  __int64 v4; // x1
   GiftEntity_o *DataById; // x0
 
-  if ( (byte_4C2727B & 1) == 0 )
+  if ( (byte_4C37971 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    byte_4C2727B = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    byte_4C37971 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_GiftMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_GiftMaster___);
   if ( !Master_object )
-    sub_1C2D6EC(0, v4);
+    sub_1C32E7C(0);
   DataById = GiftMaster__getDataById((GiftMaster_o *)Master_object, this->fields.giftId, 0);
   if ( DataById )
     return GiftEntity__getIconImageId(DataById, 0);
@@ -62,41 +61,40 @@ bool EventFortificationEntity__IsOpenFortificationWarningDialog(
         EventFortificationEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
   Il2CppObject *Master_object; // x20
   EventFortificationDetailMaster_o *EntitiesByOpend; // x0
-  const MethodInfo *v6; // x3
+  const MethodInfo *v5; // x3
   struct SetSvtInfo_array *setSvtInfos; // x19
-  EventFortificationEntity___c_c *v10; // x0
+  EventFortificationEntity___c_c *v9; // x0
   System_Func_object__bool__o *_9__14_0; // x20
-  Il2CppObject *v12; // x21
+  Il2CppObject *v11; // x21
   struct EventFortificationEntity___c_StaticFields *static_fields; // x0
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
   UserEventFortificationEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C2727C & 1) == 0 )
+  if ( (byte_4C37972 & 1) == 0 )
   {
-    sub_1C2D490(&Method_BasicHelper_Any_SetSvtInfo___);
-    sub_1C2D490(&Method_DataManager_GetMaster_EventFortificationDetailMaster___);
-    sub_1C2D490(&Method_DataManager_GetMaster_UserEventFortificationMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&System_Func_SetSvtInfo__bool__TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&Method_EventFortificationEntity___c__IsOpenFortificationWarningDialog_b__14_0__);
-    sub_1C2D490(&EventFortificationEntity___c_TypeInfo);
-    byte_4C2727C = 1;
+    sub_1C32C20(&Method_BasicHelper_Any_SetSvtInfo___);
+    sub_1C32C20(&Method_DataManager_GetMaster_EventFortificationDetailMaster___);
+    sub_1C32C20(&Method_DataManager_GetMaster_UserEventFortificationMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&System_Func_SetSvtInfo__bool__TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&Method_EventFortificationEntity___c__IsOpenFortificationWarningDialog_b__14_0__);
+    sub_1C32C20(&EventFortificationEntity___c_TypeInfo);
+    byte_4C37972 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
   entity = 0;
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserEventFortificationMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserEventFortificationMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C211E1 )
+  if ( !byte_4C31812 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C211E1 = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C31812 = 1;
   }
   EntitiesByOpend = (EventFortificationDetailMaster_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -113,14 +111,14 @@ bool EventFortificationEntity__IsOpenFortificationWarningDialog(
     this->fields.eventId,
     this->fields.idx,
     0);
-  EntitiesByOpend = (EventFortificationDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventFortificationDetailMaster___);
+  EntitiesByOpend = (EventFortificationDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventFortificationDetailMaster___);
   if ( !EntitiesByOpend )
     goto LABEL_26;
   EntitiesByOpend = (EventFortificationDetailMaster_o *)EventFortificationDetailMaster__GetEntitiesByOpend(
                                                           EntitiesByOpend,
                                                           this->fields.eventId,
                                                           this->fields.idx,
-                                                          v6);
+                                                          v5);
   if ( !entity )
     return 1;
   setSvtInfos = entity->fields.setSvtInfos;
@@ -128,38 +126,38 @@ bool EventFortificationEntity__IsOpenFortificationWarningDialog(
     return 1;
   if ( !EntitiesByOpend )
 LABEL_26:
-    sub_1C2D6EC(EntitiesByOpend, v3);
+    sub_1C32E7C(EntitiesByOpend);
   if ( SLODWORD(setSvtInfos->max_length) < SLODWORD(EntitiesByOpend->fields._MasterName_k__BackingField) )
     return 1;
-  v10 = EventFortificationEntity___c_TypeInfo;
+  v9 = EventFortificationEntity___c_TypeInfo;
   if ( !EventFortificationEntity___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(EventFortificationEntity___c_TypeInfo);
-    v10 = EventFortificationEntity___c_TypeInfo;
+    v9 = EventFortificationEntity___c_TypeInfo;
   }
-  _9__14_0 = (System_Func_object__bool__o *)v10->static_fields->__9__14_0;
+  _9__14_0 = (System_Func_object__bool__o *)v9->static_fields->__9__14_0;
   if ( !_9__14_0 )
   {
-    if ( !v10->_2.cctor_finished )
+    if ( !v9->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v10);
-      v10 = EventFortificationEntity___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v9);
+      v9 = EventFortificationEntity___c_TypeInfo;
     }
-    v12 = (Il2CppObject *)v10->static_fields->__9;
-    _9__14_0 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_SetSvtInfo__bool__TypeInfo);
+    v11 = (Il2CppObject *)v9->static_fields->__9;
+    _9__14_0 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_SetSvtInfo__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__14_0,
-      v12,
+      v11,
       Method_EventFortificationEntity___c__IsOpenFortificationWarningDialog_b__14_0__,
       0);
     static_fields = EventFortificationEntity___c_TypeInfo->static_fields;
     static_fields->__9__14_0 = (struct System_Func_SetSvtInfo__bool__o *)_9__14_0;
-    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v14, v15);
+    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v13, v14);
   }
-  return BasicHelper__Any_object__51084700(
+  return BasicHelper__Any_object__51144764(
            (System_Object_array *)setSvtInfos,
            (System_Func_T__bool__o *)_9__14_0,
-           (const MethodInfo_30B7D9C *)Method_BasicHelper_Any_SetSvtInfo___);
+           (const MethodInfo_30C683C *)Method_BasicHelper_Any_SetSvtInfo___);
 }
 
 
@@ -169,15 +167,15 @@ void EventFortificationEntity___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C2727E & 1) == 0 )
+  if ( (byte_4C37974 & 1) == 0 )
   {
-    sub_1C2D490(&EventFortificationEntity___c_TypeInfo);
-    byte_4C2727E = 1;
+    sub_1C32C20(&EventFortificationEntity___c_TypeInfo);
+    byte_4C37974 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C2D6DC(EventFortificationEntity___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C32E6C(EventFortificationEntity___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventFortificationEntity___c_TypeInfo->static_fields->__9 = (struct EventFortificationEntity___c_o *)v1;
-  sub_1C2D434((CGThumbnailListItem_o *)EventFortificationEntity___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)EventFortificationEntity___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -193,6 +191,6 @@ bool EventFortificationEntity___c___IsOpenFortificationWarningDialog_b__14_0(
         const MethodInfo *method)
 {
   if ( !info )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return !info->fields.type && info->fields.svtId < 1;
 }

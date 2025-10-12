@@ -4,7 +4,7 @@ void SelectTreasureDeviceInfo___ctor(SelectTreasureDeviceInfo_o *this, const Met
 }
 
 
-void SelectTreasureDeviceInfo___ctor_41487708(
+void SelectTreasureDeviceInfo___ctor_41610516(
         SelectTreasureDeviceInfo_o *this,
         SelectTreasureDeviceInfo_TdChangeParam_array *inputTdChangeParam,
         const MethodInfo *method)
@@ -14,7 +14,7 @@ void SelectTreasureDeviceInfo___ctor_41487708(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.treasureDevices = inputTdChangeParam;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.treasureDevices, (int32_t)inputTdChangeParam, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.treasureDevices, (int32_t)inputTdChangeParam, v5, v6);
 }
 
 
@@ -22,37 +22,36 @@ void SelectTreasureDeviceInfo__AssignTdIndexAutomatically(SelectTreasureDeviceIn
 {
   __int64 v3; // x20
   _BOOL8 IsNullOrEmpty; // x0
-  __int64 v5; // x1
   System_Collections_Generic_IEnumerable_T__o *treasureDevices; // x19
-  System_Action_object__o *v7; // x21
+  System_Action_object__o *v6; // x21
 
-  if ( (byte_4C26E19 & 1) == 0 )
+  if ( (byte_4C374F2 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_SelectTreasureDeviceInfo_TdChangeParam__TypeInfo);
-    sub_1C2D490(&Method_BasicHelper_ForEach_SelectTreasureDeviceInfo_TdChangeParam___);
-    sub_1C2D490(&Method_SelectTreasureDeviceInfo___c__DisplayClass15_0__AssignTdIndexAutomatically_b__0__);
-    sub_1C2D490(&SelectTreasureDeviceInfo___c__DisplayClass15_0_TypeInfo);
-    byte_4C26E19 = 1;
+    sub_1C32C20(&System_Action_SelectTreasureDeviceInfo_TdChangeParam__TypeInfo);
+    sub_1C32C20(&Method_BasicHelper_ForEach_SelectTreasureDeviceInfo_TdChangeParam___);
+    sub_1C32C20(&Method_SelectTreasureDeviceInfo___c__DisplayClass15_0__AssignTdIndexAutomatically_b__0__);
+    sub_1C32C20(&SelectTreasureDeviceInfo___c__DisplayClass15_0_TypeInfo);
+    byte_4C374F2 = 1;
   }
-  v3 = sub_1C2D6DC(SelectTreasureDeviceInfo___c__DisplayClass15_0_TypeInfo);
+  v3 = sub_1C32E6C(SelectTreasureDeviceInfo___c__DisplayClass15_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.treasureDevices, 0);
   if ( !IsNullOrEmpty )
   {
     if ( !v3 )
-      sub_1C2D6EC(IsNullOrEmpty, v5);
+      sub_1C32E7C(IsNullOrEmpty);
     *(_DWORD *)(v3 + 16) = 1;
     treasureDevices = (System_Collections_Generic_IEnumerable_T__o *)this->fields.treasureDevices;
-    v7 = (System_Action_object__o *)sub_1C2D6DC(System_Action_SelectTreasureDeviceInfo_TdChangeParam__TypeInfo);
+    v6 = (System_Action_object__o *)sub_1C32E6C(System_Action_SelectTreasureDeviceInfo_TdChangeParam__TypeInfo);
     System_Action_object____ctor(
-      v7,
+      v6,
       (Il2CppObject *)v3,
       Method_SelectTreasureDeviceInfo___c__DisplayClass15_0__AssignTdIndexAutomatically_b__0__,
       0);
     BasicHelper__ForEach_object_(
       treasureDevices,
-      (System_Action_T__o *)v7,
-      (const MethodInfo_30BA910 *)Method_BasicHelper_ForEach_SelectTreasureDeviceInfo_TdChangeParam___);
+      (System_Action_T__o *)v6,
+      (const MethodInfo_30C93B0 *)Method_BasicHelper_ForEach_SelectTreasureDeviceInfo_TdChangeParam___);
   }
 }
 
@@ -93,7 +92,7 @@ void SelectTreasureDeviceInfo_TdChangeParam___ctor(
 }
 
 
-void SelectTreasureDeviceInfo_TdChangeParam___ctor_41488128(
+void SelectTreasureDeviceInfo_TdChangeParam___ctor_41610936(
         SelectTreasureDeviceInfo_TdChangeParam_o *this,
         int32_t inputId,
         int32_t inputType,
@@ -112,7 +111,7 @@ void SelectTreasureDeviceInfo_TdChangeParam___ctor_41488128(
   v10[-1].fields._TdIndex_k__BackingField = inputId;
   *(&v10[-1].fields._TdIndex_k__BackingField + 1) = inputType;
   LODWORD(v10->monitor) = tdIndex;
-  sub_1C2D434((CGThumbnailListItem_o *)v10, (int32_t)inputMessage, v11, v12);
+  sub_1C32BC4((CGThumbnailListItem_o *)v10, (int32_t)inputMessage, v11, v12);
 }
 
 
@@ -138,10 +137,10 @@ System_String_o *SelectTreasureDeviceInfo_TdChangeParam__get_MessageDefaultEmpty
 {
   System_String_o *result; // x0
 
-  if ( (byte_4C26E1A & 1) == 0 )
+  if ( (byte_4C374F3 & 1) == 0 )
   {
-    sub_1C2D490(&string_TypeInfo);
-    byte_4C26E1A = 1;
+    sub_1C32C20(&string_TypeInfo);
+    byte_4C374F3 = 1;
   }
   result = this->fields.message;
   if ( !result )
@@ -193,6 +192,6 @@ void SelectTreasureDeviceInfo___c__DisplayClass15_0___AssignTdIndexAutomatically
   tdIndex = this->fields.tdIndex;
   this->fields.tdIndex = tdIndex + 1;
   if ( !x )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   x->fields._TdIndex_k__BackingField = tdIndex;
 }

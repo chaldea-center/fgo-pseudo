@@ -10,8 +10,8 @@ int32_t LoginResponseCommand__ExecuteResponse(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1C2D6EC(this, 0);
-  return !ResponseData__checkError_44004292(data, 0);
+    sub_1C32E7C(this);
+  return !ResponseData__checkError_44140424(data, 0);
 }
 
 

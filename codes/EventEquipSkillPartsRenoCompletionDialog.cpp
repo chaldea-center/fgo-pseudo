@@ -2,10 +2,10 @@ void EventEquipSkillPartsRenoCompletionDialog___ctor(
         EventEquipSkillPartsRenoCompletionDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C215B0 & 1) == 0 )
+  if ( (byte_4C31C7F & 1) == 0 )
   {
-    sub_1C2D490(&BaseDialog_TypeInfo);
-    byte_4C215B0 = 1;
+    sub_1C32C20(&BaseDialog_TypeInfo);
+    byte_4C31C7F = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -18,22 +18,23 @@ void EventEquipSkillPartsRenoCompletionDialog__Init(
         const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
-  __int64 v4; // x1
+  Il2CppObject *Component_object; // x0
 
-  if ( (byte_4C215AB & 1) == 0 )
+  if ( (byte_4C31C7A & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_4C215AB = 1;
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_4C31C7A = 1;
   }
   this->fields.closeCallback = 0;
-  sub_1C2D434(&this->fields.closeCallback);
+  sub_1C32BC4(&this->fields.closeCallback, 0);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform || (transform = UnityEngine_Transform__get_parent(transform, 0)) == 0 )
-    sub_1C2D6EC(transform, v4);
-  this->fields.basePanel = (struct UIPanel_o *)UnityEngine_Component__GetComponent_object_(
-                                                 (UnityEngine_Component_o *)transform,
-                                                 (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
-  sub_1C2D434(&this->fields.basePanel);
+    sub_1C32E7C(transform);
+  Component_object = UnityEngine_Component__GetComponent_object_(
+                       (UnityEngine_Component_o *)transform,
+                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+  this->fields.basePanel = (struct UIPanel_o *)Component_object;
+  sub_1C32BC4(&this->fields.basePanel, Component_object);
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
 
@@ -46,21 +47,21 @@ void EventEquipSkillPartsRenoCompletionDialog__OnClickCloseButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C215AE & 1) == 0 )
+  if ( (byte_4C31C7D & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_EventEquipSkillPartsRenoCompletionDialog_OnClickCloseButton__);
-    sub_1C2D490(&Method_EventEquipSkillPartsRenoCompletionDialog__OnClickCloseButton_b__19_0__);
-    byte_4C215AE = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_EventEquipSkillPartsRenoCompletionDialog_OnClickCloseButton__);
+    sub_1C32C20(&Method_EventEquipSkillPartsRenoCompletionDialog__OnClickCloseButton_b__19_0__);
+    byte_4C31C7D = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_EventEquipSkillPartsRenoCompletionDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_EventEquipSkillPartsRenoCompletionDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_EventEquipSkillPartsRenoCompletionDialog_OnClickCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_EventEquipSkillPartsRenoCompletionDialog_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -80,46 +81,45 @@ void EventEquipSkillPartsRenoCompletionDialog__Open(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v11; // x1
-  _QWORD *v12; // x0
-  System_Reflection_MethodBase_o *v13; // x0
+  _QWORD *v11; // x0
+  System_Reflection_MethodBase_o *v12; // x0
   UILabel_o *titleLabel; // x23
   UILabel_o *msgLabel; // x23
   System_String_o *RenoCompletionDialogText; // x22
-  Il2CppObject *v17; // x0
+  Il2CppObject *v16; // x0
   UILabel_o *closeLabel; // x22
-  System_Collections_Generic_List_EventEquipSkillPartsEntity__o *v19; // x1
-  const MethodInfo *v20; // x3
+  System_Collections_Generic_List_EventEquipSkillPartsEntity__o *v18; // x1
+  const MethodInfo *v19; // x3
   UnityEngine_Object_o *scrollView; // x20
-  struct UIScrollView_o *v22; // x8
+  struct UIScrollView_o *v21; // x8
   UnityEngine_Object_o *verticalScrollBar; // x20
-  struct UIScrollView_o *v24; // x8
+  struct UIScrollView_o *v23; // x8
 
-  if ( (byte_4C215AC & 1) == 0 )
+  if ( (byte_4C31C7B & 1) == 0 )
   {
-    sub_1C2D490(&Method_EventEquipSkillPartsRenoCompletionDialog_Open__);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_5593/*"EVENT_EQUIP_SKILL_PARTS_RENO_COMPLETION_DIALOG_TITLE"*/);
-    sub_1C2D490(&StringLiteral_16857/*"ar307"*/);
-    sub_1C2D490(&StringLiteral_3678/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C2D490(&StringLiteral_5594/*"EVENT_EQUIP_SKILL_PARTS_RENO_INFO_BUTTON_TEXT"*/);
-    byte_4C215AC = 1;
+    sub_1C32C20(&Method_EventEquipSkillPartsRenoCompletionDialog_Open__);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_5601/*"EVENT_EQUIP_SKILL_PARTS_RENO_COMPLETION_DIALOG_TITLE"*/);
+    sub_1C32C20(&StringLiteral_16860/*"ar307"*/);
+    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C32C20(&StringLiteral_5602/*"EVENT_EQUIP_SKILL_PARTS_RENO_INFO_BUTTON_TEXT"*/);
+    byte_4C31C7B = 1;
   }
   EventEquipSkillPartsRenoCompletionDialog__Init(this, (const MethodInfo *)questPhaseEntity);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_23;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
-  v12 = Method_EventEquipSkillPartsRenoCompletionDialog_Open__;
+  v11 = Method_EventEquipSkillPartsRenoCompletionDialog_Open__;
   if ( (*((_BYTE *)Method_EventEquipSkillPartsRenoCompletionDialog_Open__ + 83) & 2) != 0 )
-    v12 = (_QWORD *)sub_1C2D4A8(Method_EventEquipSkillPartsRenoCompletionDialog_Open__);
-  v13 = (System_Reflection_MethodBase_o *)sub_1C2D474(v12, v12[4]);
-  OverwriteAssetSoundName__PlaySe(v13, (System_String_o *)StringLiteral_16857/*"ar307"*/, 0, 0);
+    v11 = (_QWORD *)sub_1C32C38(Method_EventEquipSkillPartsRenoCompletionDialog_Open__);
+  v12 = (System_Reflection_MethodBase_o *)sub_1C32C04(v11, v11[4]);
+  OverwriteAssetSoundName__PlaySe(v12, (System_String_o *)StringLiteral_16860/*"ar307"*/, 0, 0);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5593/*"EVENT_EQUIP_SKILL_PARTS_RENO_COMPLETION_DIALOG_TITLE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5601/*"EVENT_EQUIP_SKILL_PARTS_RENO_COMPLETION_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_23;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
@@ -127,40 +127,40 @@ void EventEquipSkillPartsRenoCompletionDialog__Open(
     goto LABEL_23;
   msgLabel = this->fields.msgLabel;
   RenoCompletionDialogText = QuestPhaseEntity__GetRenoCompletionDialogText(questPhaseEntity, 0);
-  v17 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5594/*"EVENT_EQUIP_SKILL_PARTS_RENO_INFO_BUTTON_TEXT"*/, 0);
-  gameObject = (UnityEngine_GameObject_o *)System_String__Format(RenoCompletionDialogText, v17, 0);
+  v16 = (Il2CppObject *)LocalizationManager__Get((System_String_o *)StringLiteral_5602/*"EVENT_EQUIP_SKILL_PARTS_RENO_INFO_BUTTON_TEXT"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)System_String__Format(RenoCompletionDialogText, v16, 0);
   if ( !msgLabel )
     goto LABEL_23;
   UILabel__set_text(msgLabel, (System_String_o *)gameObject, 0);
   closeLabel = this->fields.closeLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !closeLabel )
     goto LABEL_23;
   UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0);
   this->fields.closeCallback = closeCallback;
-  sub_1C2D434(&this->fields.closeCallback);
+  sub_1C32BC4(&this->fields.closeCallback, closeCallback);
   BasicHelper__SetActiveSafely((UnityEngine_Component_o *)this->fields.equipSkillTitle, 0, 0);
   BasicHelper__SetActiveSafely((UnityEngine_Component_o *)this->fields.assistSkillTitle, 0, 0);
-  EventEquipSkillPartsRenoCompletionDialog__Setup(this, v19, assistList, v20);
+  EventEquipSkillPartsRenoCompletionDialog__Setup(this, v18, assistList, v19);
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(scrollView, 0, 0);
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
-    v22 = this->fields.scrollView;
-    if ( !v22 )
+    v21 = this->fields.scrollView;
+    if ( !v21 )
       goto LABEL_23;
-    verticalScrollBar = (UnityEngine_Object_o *)v22->fields.verticalScrollBar;
+    verticalScrollBar = (UnityEngine_Object_o *)v21->fields.verticalScrollBar;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(verticalScrollBar, 0, 0);
     if ( ((unsigned __int8)gameObject & 1) != 0 )
     {
-      v24 = this->fields.scrollView;
-      if ( v24 )
+      v23 = this->fields.scrollView;
+      if ( v23 )
       {
-        gameObject = (UnityEngine_GameObject_o *)v24->fields.verticalScrollBar;
+        gameObject = (UnityEngine_GameObject_o *)v23->fields.verticalScrollBar;
         if ( gameObject )
         {
           UIProgressBar__set_value((UIProgressBar_o *)gameObject, 0.0, 0);
@@ -168,7 +168,7 @@ void EventEquipSkillPartsRenoCompletionDialog__Open(
         }
       }
 LABEL_23:
-      sub_1C2D6EC(gameObject, v11);
+      sub_1C32E7C(gameObject);
     }
   }
 LABEL_22:
@@ -184,57 +184,52 @@ void EventEquipSkillPartsRenoCompletionDialog__Setup(
 {
   System_Collections_Generic_List_object__o *v6; // x21
   __int64 v7; // x0
-  __int64 v8; // x1
   EventEquipSkillPartsEntity_o *current; // x22
-  Il2CppObject *v10; // x21
-  __int64 v11; // x0
-  __int64 v12; // x1
+  Il2CppObject *v9; // x21
+  __int64 v10; // x0
   int32_t skillId; // w23
   System_String_o *SkillName; // x24
   System_String_o *SkillDetail; // x25
-  EventEquipSkillPartsRenoCompletionBoardItem_o *v16; // x22
-  const MethodInfo *v17; // x4
-  __int64 v18; // x0
-  __int64 v19; // x1
-  const MethodInfo *v20; // x2
-  AssistEntity_o *v21; // x21
-  Il2CppObject *v22; // x20
-  __int64 v23; // x0
-  __int64 v24; // x1
-  int32_t v25; // w22
+  EventEquipSkillPartsRenoCompletionBoardItem_o *v14; // x22
+  const MethodInfo *v15; // x4
+  __int64 v16; // x0
+  const MethodInfo *v17; // x2
+  AssistEntity_o *v18; // x21
+  Il2CppObject *v19; // x20
+  __int64 v20; // x0
+  int32_t v21; // w22
   System_String_o *name; // x23
   System_String_o *Detail; // x24
-  EventEquipSkillPartsRenoCompletionBoardItem_o *v28; // x21
-  const MethodInfo *v29; // x4
-  __int64 v30; // x0
-  __int64 v31; // x1
-  const MethodInfo *v32; // x2
-  System_Collections_Generic_List_Enumerator_object__o v33; // [xsp+8h] [xbp-B8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v34; // [xsp+20h] [xbp-A0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v35; // [xsp+40h] [xbp-80h] BYREF
+  EventEquipSkillPartsRenoCompletionBoardItem_o *v24; // x21
+  const MethodInfo *v25; // x4
+  __int64 v26; // x0
+  const MethodInfo *v27; // x2
+  System_Collections_Generic_List_Enumerator_object__o v28; // [xsp+8h] [xbp-B8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v29; // [xsp+20h] [xbp-A0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+40h] [xbp-80h] BYREF
 
-  if ( (byte_4C215AD & 1) == 0 )
+  if ( (byte_4C31C7C & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__Dispose__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__Dispose__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__MoveNext__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__MoveNext__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__get_Current__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__get_Current__);
-    sub_1C2D490(&EventEquipSkillPartsRenoCompletionBoardItem_TypeInfo);
-    sub_1C2D490(&Method_GameObjectHelper_Instantiate_EventEquipSkillPartsRenoCompletionBoardItemDraw___);
-    sub_1C2D490(&Method_System_Collections_Generic_List_AssistEntity__GetEnumerator__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__GetEnumerator__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
-    byte_4C215AD = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__Dispose__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__Dispose__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__MoveNext__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__MoveNext__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_AssistEntity__get_Current__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__get_Current__);
+    sub_1C32C20(&EventEquipSkillPartsRenoCompletionBoardItem_TypeInfo);
+    sub_1C32C20(&Method_GameObjectHelper_Instantiate_EventEquipSkillPartsRenoCompletionBoardItemDraw___);
+    sub_1C32C20(&Method_System_Collections_Generic_List_AssistEntity__GetEnumerator__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__GetEnumerator__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
+    byte_4C31C7C = 1;
   }
-  memset(&v35, 0, sizeof(v35));
-  memset(&v34, 0, sizeof(v34));
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
+  memset(&v30, 0, sizeof(v30));
+  memset(&v29, 0, sizeof(v29));
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
   this->fields.totalHeight = 0.0;
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v6, 0) )
   {
@@ -247,40 +242,40 @@ void EventEquipSkillPartsRenoCompletionDialog__Setup(
     if ( !v6 )
       goto LABEL_24;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v33,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v28,
       v6,
-      (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__GetEnumerator__);
-    v35 = v33;
+      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__GetEnumerator__);
+    v30 = v28;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v35,
-              (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__MoveNext__) )
+              &v30,
+              (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__MoveNext__) )
     {
-      current = (EventEquipSkillPartsEntity_o *)v35.fields._current;
-      v10 = GameObjectHelper__Instantiate_object_(
-              this->fields.prefab,
-              this->fields.equipSkillParent,
-              0,
-              (const MethodInfo_3127AF4 *)Method_GameObjectHelper_Instantiate_EventEquipSkillPartsRenoCompletionBoardItemDraw___);
-      BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v10, 1, 0);
+      current = (EventEquipSkillPartsEntity_o *)v30.fields._current;
+      v9 = GameObjectHelper__Instantiate_object_(
+             this->fields.prefab,
+             this->fields.equipSkillParent,
+             0,
+             (const MethodInfo_3136594 *)Method_GameObjectHelper_Instantiate_EventEquipSkillPartsRenoCompletionBoardItemDraw___);
+      BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v9, 1, 0);
       if ( !current )
-        sub_1C2D6EC(v11, v12);
+        sub_1C32E7C(v10);
       skillId = current->fields.skillId;
       SkillName = EventEquipSkillPartsEntity__GetSkillName(current, 0);
       SkillDetail = EventEquipSkillPartsEntity__GetSkillDetail(current, 0, 0);
-      v16 = (EventEquipSkillPartsRenoCompletionBoardItem_o *)sub_1C2D6DC(EventEquipSkillPartsRenoCompletionBoardItem_TypeInfo);
-      EventEquipSkillPartsRenoCompletionBoardItem___ctor(v16, skillId, SkillName, SkillDetail, v17);
-      if ( !v10 )
-        sub_1C2D6EC(v18, v19);
+      v14 = (EventEquipSkillPartsRenoCompletionBoardItem_o *)sub_1C32E6C(EventEquipSkillPartsRenoCompletionBoardItem_TypeInfo);
+      EventEquipSkillPartsRenoCompletionBoardItem___ctor(v14, skillId, SkillName, SkillDetail, v15);
+      if ( !v9 )
+        sub_1C32E7C(v16);
       EventEquipSkillPartsRenoCompletionBoardItemDraw__UpdateUi(
-        (EventEquipSkillPartsRenoCompletionBoardItemDraw_o *)v10,
-        v16,
-        v20);
-      ComponentHelper__SetLocalPositionY((UnityEngine_Component_o *)v10, -this->fields.totalHeight, 0);
+        (EventEquipSkillPartsRenoCompletionBoardItemDraw_o *)v9,
+        v14,
+        v17);
+      ComponentHelper__SetLocalPositionY((UnityEngine_Component_o *)v9, -this->fields.totalHeight, 0);
       this->fields.totalHeight = this->fields.totalHeight + (float)(this->fields.skillHeight + this->fields.space);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v35,
-      (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__Dispose__);
+      &v30,
+      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_EventEquipSkillPartsEntity__Dispose__);
   }
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)assistList, 0) )
     return;
@@ -292,42 +287,42 @@ void EventEquipSkillPartsRenoCompletionDialog__Setup(
   this->fields.totalHeight = this->fields.totalHeight + (float)(this->fields.titleHeight + this->fields.space);
   if ( !assistList )
 LABEL_24:
-    sub_1C2D6EC(v7, v8);
+    sub_1C32E7C(v7);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v33,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v28,
     (System_Collections_Generic_List_object__o *)assistList,
-    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_AssistEntity__GetEnumerator__);
-  v34 = v33;
+    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_AssistEntity__GetEnumerator__);
+  v29 = v28;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v34,
-            (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_AssistEntity__MoveNext__) )
+            &v29,
+            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_AssistEntity__MoveNext__) )
   {
-    v21 = (AssistEntity_o *)v34.fields._current;
-    v22 = GameObjectHelper__Instantiate_object_(
+    v18 = (AssistEntity_o *)v29.fields._current;
+    v19 = GameObjectHelper__Instantiate_object_(
             this->fields.prefab,
             this->fields.assistSkillParent,
             0,
-            (const MethodInfo_3127AF4 *)Method_GameObjectHelper_Instantiate_EventEquipSkillPartsRenoCompletionBoardItemDraw___);
-    BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v22, 1, 0);
-    if ( !v21 )
-      sub_1C2D6EC(v23, v24);
-    v25 = v21->fields.skillId;
-    name = v21->fields.name;
-    Detail = AssistEntity__GetDetail(v21, 0, 0);
-    v28 = (EventEquipSkillPartsRenoCompletionBoardItem_o *)sub_1C2D6DC(EventEquipSkillPartsRenoCompletionBoardItem_TypeInfo);
-    EventEquipSkillPartsRenoCompletionBoardItem___ctor(v28, v25, name, Detail, v29);
-    if ( !v22 )
-      sub_1C2D6EC(v30, v31);
+            (const MethodInfo_3136594 *)Method_GameObjectHelper_Instantiate_EventEquipSkillPartsRenoCompletionBoardItemDraw___);
+    BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v19, 1, 0);
+    if ( !v18 )
+      sub_1C32E7C(v20);
+    v21 = v18->fields.skillId;
+    name = v18->fields.name;
+    Detail = AssistEntity__GetDetail(v18, 0, 0);
+    v24 = (EventEquipSkillPartsRenoCompletionBoardItem_o *)sub_1C32E6C(EventEquipSkillPartsRenoCompletionBoardItem_TypeInfo);
+    EventEquipSkillPartsRenoCompletionBoardItem___ctor(v24, v21, name, Detail, v25);
+    if ( !v19 )
+      sub_1C32E7C(v26);
     EventEquipSkillPartsRenoCompletionBoardItemDraw__UpdateUi(
-      (EventEquipSkillPartsRenoCompletionBoardItemDraw_o *)v22,
-      v28,
-      v32);
-    ComponentHelper__SetLocalPositionY((UnityEngine_Component_o *)v22, -this->fields.totalHeight, 0);
+      (EventEquipSkillPartsRenoCompletionBoardItemDraw_o *)v19,
+      v24,
+      v27);
+    ComponentHelper__SetLocalPositionY((UnityEngine_Component_o *)v19, -this->fields.totalHeight, 0);
     this->fields.totalHeight = this->fields.totalHeight + (float)(this->fields.skillHeight + this->fields.space);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v34,
-    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_AssistEntity__Dispose__);
+    &v29,
+    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_AssistEntity__Dispose__);
 }
 
 
@@ -337,18 +332,18 @@ void EventEquipSkillPartsRenoCompletionDialog___OnClickCloseButton_b__19_0(
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4C215B1 & 1) == 0 )
+  if ( (byte_4C31C80 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C215B1 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C31C80 = 1;
   }
   ActionExtensions__Call(this->fields.closeCallback, 0);
   this->fields.closeCallback = 0;
-  sub_1C2D434(&this->fields.closeCallback);
+  sub_1C32BC4(&this->fields.closeCallback, 0);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71163704(gameObject, 0);
+  UnityEngine_Object__Destroy_71223640(gameObject, 0);
 }
 
 
@@ -357,21 +352,20 @@ UnityEngine_GameObject_o *EventEquipSkillPartsRenoCompletionDialog__get_closeBtn
         const MethodInfo *method)
 {
   UnityEngine_Object_o *closeButton; // x20
-  __int64 v4; // x1
-  UnityEngine_Component_o *v6; // x0
+  UnityEngine_Component_o *v5; // x0
 
-  if ( (byte_4C215AF & 1) == 0 )
+  if ( (byte_4C31C7E & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C215AF = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C31C7E = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(closeButton, 0, 0) )
     return 0;
-  v6 = (UnityEngine_Component_o *)this->fields.closeButton;
-  if ( !v6 )
-    sub_1C2D6EC(0, v4);
-  return UnityEngine_Component__get_gameObject(v6, 0);
+  v5 = (UnityEngine_Component_o *)this->fields.closeButton;
+  if ( !v5 )
+    sub_1C32E7C(0);
+  return UnityEngine_Component__get_gameObject(v5, 0);
 }

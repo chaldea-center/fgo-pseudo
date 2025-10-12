@@ -1,13 +1,13 @@
 void ItemDropEfficiencyEntity___ctor(ItemDropEfficiencyEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2764A & 1) == 0 )
+  if ( (byte_4C37E2C & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C2764A = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C37E2C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *ItemDropEfficiencyEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4C27649 & 1) == 0 )
+  if ( (byte_4C37E2B & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C27649 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C37E2B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            itemId,
            targetType,
            priority,
-           (const MethodInfo_30CCF68 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30DBA08 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -46,28 +46,39 @@ System_String_array *ItemDropEfficiencyEntity__GetTransitionParams(
 
   transitionParam = this->fields.transitionParam;
   if ( !transitionParam )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   return System_String__Split(transitionParam, 0x2Fu, 0, 0);
+}
+
+
+bool ItemDropEfficiencyEntity__IsLoginBonus(ItemDropEfficiencyEntity_o *this, const MethodInfo *method)
+{
+  if ( (byte_4C37E2A & 1) == 0 )
+  {
+    sub_1C32C20(&StringLiteral_21340/*"loginBonus"*/);
+    byte_4C37E2A = 1;
+  }
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21340/*"loginBonus"*/, 0, 0) > 0;
 }
 
 
 bool ItemDropEfficiencyEntity__IsMainScenario(ItemDropEfficiencyEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27647 & 1) == 0 )
+  if ( (byte_4C37E28 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_21383/*"mainScenario"*/);
-    byte_4C27647 = 1;
+    sub_1C32C20(&StringLiteral_21396/*"mainScenario"*/);
+    byte_4C37E28 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21383/*"mainScenario"*/, 0, 0) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21396/*"mainScenario"*/, 0, 0) > 0;
 }
 
 
 bool ItemDropEfficiencyEntity__IsNotDisplayQuestInfo(ItemDropEfficiencyEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27648 & 1) == 0 )
+  if ( (byte_4C37E29 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_22282/*"notDisplayQuestInfo"*/);
-    byte_4C27648 = 1;
+    sub_1C32C20(&StringLiteral_22299/*"notDisplayQuestInfo"*/);
+    byte_4C37E29 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22282/*"notDisplayQuestInfo"*/, 0, 0) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22299/*"notDisplayQuestInfo"*/, 0, 0) > 0;
 }

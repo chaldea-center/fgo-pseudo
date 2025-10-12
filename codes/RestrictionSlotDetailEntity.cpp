@@ -1,27 +1,27 @@
 void RestrictionSlotDetailEntity___ctor(RestrictionSlotDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27AB0 & 1) == 0 )
+  if ( (byte_4C381B2 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C27AB0 = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C381B2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *RestrictionSlotDetailEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4C27AAF & 1) == 0 )
+  if ( (byte_4C381B1 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C27AAF = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C381B1 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            idx,
-           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -86,7 +86,7 @@ bool RestrictionSlotDetailEntity__IsSearchVals(
         {
           if ( v7 >= max_length )
 LABEL_16:
-            sub_1C2D6F4(0, vList, method);
+            sub_1C32E84(0);
           v8 = vList->max_length;
           if ( v8 >= 1 )
             break;

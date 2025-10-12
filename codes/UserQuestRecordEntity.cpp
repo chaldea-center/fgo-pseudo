@@ -11,75 +11,74 @@ void UserQuestRecordEntity___cctor(const MethodInfo *method)
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C281FD & 1) == 0 )
+  if ( (byte_4C38901 & 1) == 0 )
   {
-    sub_1C2D490(&UserQuestRecordEntity_TypeInfo);
-    sub_1C2D490(&StringLiteral_24206/*"turnMaxDamage"*/);
-    sub_1C2D490(&StringLiteral_21121/*"knockdownNum"*/);
-    sub_1C2D490(&StringLiteral_24105/*"totalDamageToAliveEnemy"*/);
-    byte_4C281FD = 1;
+    sub_1C32C20(&UserQuestRecordEntity_TypeInfo);
+    sub_1C32C20(&StringLiteral_24224/*"turnMaxDamage"*/);
+    sub_1C32C20(&StringLiteral_21133/*"knockdownNum"*/);
+    sub_1C32C20(&StringLiteral_24123/*"totalDamageToAliveEnemy"*/);
+    byte_4C38901 = 1;
   }
-  UserQuestRecordEntity_TypeInfo->static_fields->KEY_RECORD_TURN_MAX_DAMAGE = (struct System_String_o *)StringLiteral_24206/*"turnMaxDamage"*/;
-  sub_1C2D434((CGThumbnailListItem_o *)UserQuestRecordEntity_TypeInfo->static_fields, StringLiteral_24206/*"turnMaxDamage"*/, v1, v2);
-  v3 = StringLiteral_21121/*"knockdownNum"*/;
+  UserQuestRecordEntity_TypeInfo->static_fields->KEY_RECORD_TURN_MAX_DAMAGE = (struct System_String_o *)StringLiteral_24224/*"turnMaxDamage"*/;
+  sub_1C32BC4((CGThumbnailListItem_o *)UserQuestRecordEntity_TypeInfo->static_fields, StringLiteral_24224/*"turnMaxDamage"*/, v1, v2);
+  v3 = StringLiteral_21133/*"knockdownNum"*/;
   static_fields = UserQuestRecordEntity_TypeInfo->static_fields;
-  static_fields->KEY_RECORD_KNOCKDOWN_NUM = (struct System_String_o *)StringLiteral_21121/*"knockdownNum"*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&static_fields->KEY_RECORD_KNOCKDOWN_NUM, v3, v5, v6);
-  v7 = StringLiteral_24105/*"totalDamageToAliveEnemy"*/;
+  static_fields->KEY_RECORD_KNOCKDOWN_NUM = (struct System_String_o *)StringLiteral_21133/*"knockdownNum"*/;
+  sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->KEY_RECORD_KNOCKDOWN_NUM, v3, v5, v6);
+  v7 = StringLiteral_24123/*"totalDamageToAliveEnemy"*/;
   v8 = UserQuestRecordEntity_TypeInfo->static_fields;
-  v8->KEY_RECORD_TOTAL_DAMAGE_TO_ALIVE_ENEMY = (struct System_String_o *)StringLiteral_24105/*"totalDamageToAliveEnemy"*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&v8->KEY_RECORD_TOTAL_DAMAGE_TO_ALIVE_ENEMY, v7, v9, v10);
+  v8->KEY_RECORD_TOTAL_DAMAGE_TO_ALIVE_ENEMY = (struct System_String_o *)StringLiteral_24123/*"totalDamageToAliveEnemy"*/;
+  sub_1C32BC4((CGThumbnailListItem_o *)&v8->KEY_RECORD_TOTAL_DAMAGE_TO_ALIVE_ENEMY, v7, v9, v10);
 }
 
 
 void UserQuestRecordEntity___ctor(UserQuestRecordEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C281F7 & 1) == 0 )
+  if ( (byte_4C388FB & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C281F7 = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C388FB = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void UserQuestRecordEntity___ctor_42887396(
+void UserQuestRecordEntity___ctor_43020592(
         UserQuestRecordEntity_o *this,
         UserQuestRecordEntity_o *original,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
   struct System_Collections_Generic_Dictionary_string__object__o *recordValueJson; // x1
   struct System_Collections_Generic_Dictionary_string__object__o *deckJson; // x1
   struct System_Collections_Generic_Dictionary_string__object__o **p_deckJson; // x20
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
 
-  if ( (byte_4C281F8 & 1) == 0 )
+  if ( (byte_4C388FC & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C281F8 = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C388FC = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
   if ( !original )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   this->fields.userId = original->fields.userId;
   *(_QWORD *)&this->fields.questId = *(_QWORD *)&original->fields.questId;
   this->fields.recordValue = original->fields.recordValue;
   recordValueJson = original->fields.recordValueJson;
   this->fields.recordValueJson = recordValueJson;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.recordValueJson, (int32_t)recordValueJson, v7, v8);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.recordValueJson, (int32_t)recordValueJson, v6, v7);
   deckJson = original->fields.deckJson;
   this->fields.deckJson = deckJson;
   p_deckJson = &this->fields.deckJson;
-  sub_1C2D434((CGThumbnailListItem_o *)p_deckJson, (int32_t)deckJson, v12, v13);
+  sub_1C32BC4((CGThumbnailListItem_o *)p_deckJson, (int32_t)deckJson, v11, v12);
   *((_OWORD *)p_deckJson - 1) = *(_OWORD *)&original->fields.createdAt;
 }
 
@@ -90,16 +89,16 @@ System_String_o *UserQuestRecordEntity__CreatePK(
         int32_t recordType,
         const MethodInfo *method)
 {
-  if ( (byte_4C281FA & 1) == 0 )
+  if ( (byte_4C388FE & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_4C281FA = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4C388FE = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            questId,
            recordType,
-           (const MethodInfo_30CD124 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_30DBBC4 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -110,10 +109,10 @@ System_String_o *UserQuestRecordEntity__CreatePrimaryKey(UserQuestRecordEntity_o
   int32_t recordType; // w19
   int32_t questId; // w20
 
-  if ( (byte_4C281F9 & 1) == 0 )
+  if ( (byte_4C388FD & 1) == 0 )
   {
-    sub_1C2D490(&UserQuestRecordEntity_TypeInfo);
-    byte_4C281F9 = 1;
+    sub_1C32C20(&UserQuestRecordEntity_TypeInfo);
+    byte_4C388FD = 1;
   }
   userId = this->fields.userId;
   questId = this->fields.questId;
@@ -131,17 +130,17 @@ bool UserQuestRecordEntity__existRecordKey(
 {
   struct System_Collections_Generic_Dictionary_string__object__o *recordValueJson; // x0
 
-  if ( (byte_4C281FB & 1) == 0 )
+  if ( (byte_4C388FF & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    byte_4C281FB = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    byte_4C388FF = 1;
   }
   recordValueJson = this->fields.recordValueJson;
   if ( recordValueJson )
     LOBYTE(recordValueJson) = System_Collections_Generic_Dictionary_object__object___ContainsKey(
                                 (System_Collections_Generic_Dictionary_object__object__o *)recordValueJson,
                                 (Il2CppObject *)key,
-                                (const MethodInfo_344A51C *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+                                (const MethodInfo_3458FBC *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
   return (char)recordValueJson;
 }
 
@@ -153,19 +152,18 @@ int64_t UserQuestRecordEntity__getRecordLong(
         const MethodInfo *method)
 {
   int64_t v4; // x20
-  __int64 v7; // x1
   System_Collections_Generic_Dictionary_object__object__o *recordValueJson; // x0
-  __int64 v9; // x2
-  __int64 v10; // x3
+  __int64 v8; // x2
+  __int64 v9; // x3
   int64_t result; // x0
-  const MethodInfo *v12; // x0
+  const MethodInfo *v11; // x0
 
   v4 = defValue;
-  if ( (byte_4C281FC & 1) == 0 )
+  if ( (byte_4C38900 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C2D490(&long_TypeInfo);
-    byte_4C281FC = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C32C20(&long_TypeInfo);
+    byte_4C38900 = 1;
   }
   if ( !UserQuestRecordEntity__existRecordKey(this, key, (const MethodInfo *)defValue) )
     return v4;
@@ -174,13 +172,13 @@ int64_t UserQuestRecordEntity__getRecordLong(
     || (recordValueJson = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                                                                        recordValueJson,
                                                                                        (Il2CppObject *)key,
-                                                                                       (const MethodInfo_344A2A8 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                                                                                       (const MethodInfo_3458D48 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
   {
-    sub_1C2D6EC(recordValueJson, v7);
+    sub_1C32E7C(recordValueJson);
   }
   if ( recordValueJson->klass->_1.element_class == long_TypeInfo->_1.element_class )
-    return *(_QWORD *)j_il2cpp_object_unbox_0(recordValueJson, long_TypeInfo, v9, v10);
-  sub_1C2D9AC(recordValueJson);
-  UserQuestRecordEntity___cctor(v12);
+    return *(_QWORD *)j_il2cpp_object_unbox_0(recordValueJson, long_TypeInfo, v8, v9);
+  sub_1C3313C(recordValueJson);
+  UserQuestRecordEntity___cctor(v11);
   return result;
 }

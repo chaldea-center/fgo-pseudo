@@ -7,12 +7,12 @@ bool CommonReleaseExtension__IsFirstOpenAfterQuestCleared(
   __int64 v7; // x22
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C26D80 & 1) == 0 )
+  if ( (byte_4C37458 & 1) == 0 )
   {
-    sub_1C2D490(&CommonReleaseExtension_CommonReleaseCondOverwriterFirstOpenAfterQuestCleared_TypeInfo);
-    byte_4C26D80 = 1;
+    sub_1C32C20(&CommonReleaseExtension_CommonReleaseCondOverwriterFirstOpenAfterQuestCleared_TypeInfo);
+    byte_4C37458 = 1;
   }
-  v7 = sub_1C2D6DC(CommonReleaseExtension_CommonReleaseCondOverwriterFirstOpenAfterQuestCleared_TypeInfo);
+  v7 = sub_1C32E6C(CommonReleaseExtension_CommonReleaseCondOverwriterFirstOpenAfterQuestCleared_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 28) = asClearedQuestId;
   *(_BYTE *)(v7 + 32) = isCheckResetFlag;
@@ -32,20 +32,19 @@ bool CommonReleaseExtension__IsOpenConsiderBeforeClearQuest(
   __int64 v7; // x22
   const MethodInfo *v8; // x0
   CommonReleaseMaster_o *master; // x0
-  __int64 v10; // x1
 
-  if ( (byte_4C26D7F & 1) == 0 )
+  if ( (byte_4C37457 & 1) == 0 )
   {
-    sub_1C2D490(&CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_TypeInfo);
-    byte_4C26D7F = 1;
+    sub_1C32C20(&CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_TypeInfo);
+    byte_4C37457 = 1;
   }
-  v7 = sub_1C2D6DC(CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_TypeInfo);
+  v7 = sub_1C32E6C(CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 24) = beforeClearQuestId;
   *(_BYTE *)(v7 + 28) = isCheckResetFlag;
   master = CommonReleaseExtension__get_master(v8);
   if ( !master )
-    sub_1C2D6EC(0, v10);
+    sub_1C32E7C(0);
   return CommonReleaseMaster__IsOpen(master, commonReleaseId, (CommonReleaseCondOverwriter_o *)v7, 0, 0);
 }
 
@@ -59,20 +58,19 @@ bool CommonReleaseExtension__IsOpenConsiderEquippedWithTargetCostume(
   __int64 v7; // x22
   const MethodInfo *v8; // x0
   CommonReleaseMaster_o *master; // x0
-  __int64 v10; // x1
 
-  if ( (byte_4C26D81 & 1) == 0 )
+  if ( (byte_4C37459 & 1) == 0 )
   {
-    sub_1C2D490(&CommonReleaseExtension_CommonReleaseCondOverwriterEquippedWithTargetCostume_TypeInfo);
-    byte_4C26D81 = 1;
+    sub_1C32C20(&CommonReleaseExtension_CommonReleaseCondOverwriterEquippedWithTargetCostume_TypeInfo);
+    byte_4C37459 = 1;
   }
-  v7 = sub_1C2D6DC(CommonReleaseExtension_CommonReleaseCondOverwriterEquippedWithTargetCostume_TypeInfo);
+  v7 = sub_1C32E6C(CommonReleaseExtension_CommonReleaseCondOverwriterEquippedWithTargetCostume_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 24) = svtId;
   *(_DWORD *)(v7 + 28) = dispLimitCount;
   master = CommonReleaseExtension__get_master(v8);
   if ( !master )
-    sub_1C2D6EC(0, v10);
+    sub_1C32E7C(0);
   return CommonReleaseMaster__IsOpen(master, commonReleaseId, (CommonReleaseCondOverwriter_o *)v7, 0, 0);
 }
 
@@ -80,20 +78,19 @@ bool CommonReleaseExtension__IsOpenConsiderEquippedWithTargetCostume(
 CommonReleaseMaster_o *CommonReleaseExtension__get_master(const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  __int64 v2; // x1
 
-  if ( (byte_4C26D7E & 1) == 0 )
+  if ( (byte_4C37456 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C26D7E = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C37456 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C2D6EC(0, v2);
+    sub_1C32E7C(0);
   return (CommonReleaseMaster_o *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)Instance,
-                                    (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                    (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
 }
 
 
@@ -114,13 +111,13 @@ bool CommonReleaseExtension_CommonReleaseCondOverwriterBase__IsOpen(
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4C26D82 & 1) == 0 )
+  if ( (byte_4C3745A & 1) == 0 )
   {
-    this = (CommonReleaseExtension_CommonReleaseCondOverwriterBase_o *)sub_1C2D490(&CondType_TypeInfo);
-    byte_4C26D82 = 1;
+    this = (CommonReleaseExtension_CommonReleaseCondOverwriterBase_o *)sub_1C32C20(&CondType_TypeInfo);
+    byte_4C3745A = 1;
   }
   if ( !entity )
-    sub_1C2D6EC(this, entity);
+    sub_1C32E7C(this);
   condType = entity->fields.condType;
   condId = entity->fields.condId;
   condNum = entity->fields.condNum;
@@ -156,7 +153,7 @@ bool CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest__IsOpen(
   int32_t condId; // w21
   int32_t beforeClearQuestId; // w20
   _BOOL4 isCheckResetFlag; // w19
-  bool IsQuestClear_40102980; // w0
+  bool IsQuestClear_40225464; // w0
   int32_t v13; // w21
   int32_t v14; // w20
   _BOOL4 v15; // w19
@@ -170,10 +167,10 @@ bool CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest__IsOpen(
   _BOOL4 v23; // w19
 
   v4 = this;
-  if ( (byte_4C26D83 & 1) == 0 )
+  if ( (byte_4C3745B & 1) == 0 )
   {
-    this = (CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_o *)sub_1C2D490(&CondType_TypeInfo);
-    byte_4C26D83 = 1;
+    this = (CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest_o *)sub_1C32C20(&CondType_TypeInfo);
+    byte_4C3745B = 1;
   }
   if ( !v4->fields.originalCommonReleaseId )
   {
@@ -201,15 +198,15 @@ bool CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest__IsOpen(
       isCheckResetFlag = v4->fields.isCheckResetFlag;
       if ( !CondType_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-      IsQuestClear_40102980 = CondType__IsQuestClear_40102980(condId, beforeClearQuestId, isCheckResetFlag, 0);
-      return !IsQuestClear_40102980;
+      IsQuestClear_40225464 = CondType__IsQuestClear_40225464(condId, beforeClearQuestId, isCheckResetFlag, 0);
+      return !IsQuestClear_40225464;
     }
     v13 = entity->fields.condId;
     v14 = v4->fields.beforeClearQuestId;
     v15 = v4->fields.isCheckResetFlag;
     if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return CondType__IsQuestClear_40102980(v13, v14, v15, 0);
+    return CondType__IsQuestClear_40225464(v13, v14, v15, 0);
   }
   else
   {
@@ -229,7 +226,7 @@ bool CommonReleaseExtension_CommonReleaseCondOverwriterBeforeClearQuest__IsOpen(
                      0,
                      0);
 LABEL_32:
-          sub_1C2D6EC(this, entity);
+          sub_1C32E7C(this);
         }
         return CommonReleaseExtension_CommonReleaseCondOverwriterBase__IsOpen(
                  (CommonReleaseExtension_CommonReleaseCondOverwriterBase_o *)this,
@@ -242,8 +239,8 @@ LABEL_32:
       v23 = v4->fields.isCheckResetFlag;
       if ( !CondType_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-      IsQuestClear_40102980 = CondType__IsQuestPhaseClear_40163600(v21, condNum, v22, v23, 0);
-      return !IsQuestClear_40102980;
+      IsQuestClear_40225464 = CondType__IsQuestPhaseClear_40286092(v21, condNum, v22, v23, 0);
+      return !IsQuestClear_40225464;
     }
     v17 = entity->fields.condId;
     v16 = entity->fields.condNum;
@@ -251,7 +248,7 @@ LABEL_32:
     v19 = v4->fields.isCheckResetFlag;
     if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return CondType__IsQuestPhaseClear_40163600(v17, v16, v18, v19, 0);
+    return CondType__IsQuestPhaseClear_40286092(v17, v16, v18, v19, 0);
   }
 }
 
@@ -282,7 +279,7 @@ bool CommonReleaseExtension_CommonReleaseCondOverwriterEquippedWithTargetCostume
     return 0;
   if ( !entity )
 LABEL_13:
-    sub_1C2D6EC(this, entity);
+    sub_1C32E7C(this);
   condType = entity->fields.condType;
   if ( condType == 113 )
   {
@@ -343,13 +340,12 @@ bool CommonReleaseExtension_CommonReleaseCondOverwriterFirstOpenAfterQuestCleare
         const MethodInfo *method)
 {
   CommonReleaseMaster_o *master; // x0
-  __int64 v6; // x1
   bool IsOpen; // w8
   bool result; // w0
 
   master = CommonReleaseExtension__get_master((const MethodInfo *)this);
   if ( !master )
-    sub_1C2D6EC(0, v6);
+    sub_1C32E7C(0);
   IsOpen = CommonReleaseMaster__IsOpen(master, commonReleaseId, (CommonReleaseCondOverwriter_o *)this, 0, 0);
   result = 0;
   if ( IsOpen )
@@ -369,14 +365,14 @@ bool CommonReleaseExtension_CommonReleaseCondOverwriterFirstOpenAfterQuestCleare
   int32_t condId; // w20
   int32_t asClearedQuestId; // w21
   _BOOL4 isCheckResetFlag; // w22
-  bool IsQuestClear_40102980; // w0
+  bool IsQuestClear_40225464; // w0
   bool v11; // w8
 
   v4 = this;
-  if ( (byte_4C26D84 & 1) == 0 )
+  if ( (byte_4C3745C & 1) == 0 )
   {
-    this = (CommonReleaseExtension_CommonReleaseCondOverwriterFirstOpenAfterQuestCleared_o *)sub_1C2D490(&CondType_TypeInfo);
-    byte_4C26D84 = 1;
+    this = (CommonReleaseExtension_CommonReleaseCondOverwriterFirstOpenAfterQuestCleared_o *)sub_1C32C20(&CondType_TypeInfo);
+    byte_4C3745C = 1;
   }
   if ( !v4->fields.originalCommonReleaseId )
   {
@@ -389,7 +385,7 @@ bool CommonReleaseExtension_CommonReleaseCondOverwriterFirstOpenAfterQuestCleare
     return 0;
   if ( !entity )
 LABEL_19:
-    sub_1C2D6EC(this, entity);
+    sub_1C32E7C(this);
   condType = entity->fields.condType;
   if ( condType == 113 )
   {
@@ -411,14 +407,14 @@ LABEL_19:
     isCheckResetFlag = v4->fields.isCheckResetFlag;
     if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    IsQuestClear_40102980 = CondType__IsQuestClear_40102980(condId, -1, isCheckResetFlag, 0);
+    IsQuestClear_40225464 = CondType__IsQuestClear_40225464(condId, -1, isCheckResetFlag, 0);
     if ( condId == asClearedQuestId )
     {
-      v11 = !IsQuestClear_40102980;
-      IsQuestClear_40102980 = 1;
+      v11 = !IsQuestClear_40225464;
+      IsQuestClear_40225464 = 1;
       v4->fields.isNotClearedAsClearedQuest = v11;
     }
-    return IsQuestClear_40102980;
+    return IsQuestClear_40225464;
   }
   return CommonReleaseExtension_CommonReleaseCondOverwriterBase__IsOpen(
            (CommonReleaseExtension_CommonReleaseCondOverwriterBase_o *)this,

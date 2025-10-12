@@ -6,8 +6,8 @@ void ItemTransitionType___ctor(ItemTransitionType_o *this, const MethodInfo *met
 
 int32_t ItemTransitionType__GetSortPriority(int32_t type, const MethodInfo *method)
 {
-  if ( (unsigned int)(type - 1) > 0x11 )
+  if ( (unsigned int)(type - 1) > 0x12 )
     return 0x7FFFFFFF;
   else
-    return dword_C433DC[type - 1];
+    return dword_C44B44[type - 1];
 }

@@ -11,11 +11,10 @@ bool ServantCharaGraphEquipFilterLogicGrand__IsMatchAllFilter(
         const MethodInfo *method)
 {
   CharaGraphServantListViewItemBase_o *ListViewItem; // x0
-  __int64 v4; // x1
 
   ListViewItem = ServantCharaGraphFilterLogic__get_ListViewItem((ServantCharaGraphFilterLogic_o *)this, 0);
   if ( !ListViewItem )
-    sub_1C2D6EC(0, v4);
+    sub_1C32E7C(0);
   return ListViewItem->fields._IsBase_k__BackingField
       || ServantCharaGraphEquipFilterLogic__IsMatchAllFilter((ServantCharaGraphEquipFilterLogic_o *)this, 0);
 }

@@ -4,7 +4,6 @@ void BitmapFontProperties___ctor(BitmapFontProperties_o *this, const MethodInfo 
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 BitmapFontProperties_BitmapFontInfo_o *BitmapFontProperties__Find(
         BitmapFontProperties_o *this,
         int32_t type,
@@ -24,7 +23,7 @@ BitmapFontProperties_BitmapFontInfo_o *BitmapFontProperties__Find(
     while ( 1 )
     {
       if ( v5 >= max_length )
-        sub_1C2D6F4(this, *(_QWORD *)&type, method);
+        sub_1C32E84(this);
       this = (BitmapFontProperties_o *)bitmapFontInfos->m_Items[v5];
       if ( !this )
         break;
@@ -34,7 +33,7 @@ BitmapFontProperties_BitmapFontInfo_o *BitmapFontProperties__Find(
         return 0;
     }
 LABEL_11:
-    sub_1C2D6EC(this, type);
+    sub_1C32E7C(this);
   }
   return 0;
 }

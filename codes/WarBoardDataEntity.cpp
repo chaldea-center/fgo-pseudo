@@ -1,13 +1,13 @@
 void WarBoardDataEntity___ctor(WarBoardDataEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C28414 & 1) == 0 )
+  if ( (byte_4C38B18 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C28414 = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C38B18 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -15,32 +15,32 @@ WarBoardDataEntity_o *WarBoardDataEntity__CloneFromOriginData(WarBoardDataEntity
 {
   Il2CppObject *originData; // x19
 
-  if ( (byte_4C28413 & 1) == 0 )
+  if ( (byte_4C38B17 & 1) == 0 )
   {
-    sub_1C2D490(&Method_JsonManager_Deserialize_WarBoardDataEntity___);
-    sub_1C2D490(&JsonManager_TypeInfo);
-    byte_4C28413 = 1;
+    sub_1C32C20(&Method_JsonManager_Deserialize_WarBoardDataEntity___);
+    sub_1C32C20(&JsonManager_TypeInfo);
+    byte_4C38B17 = 1;
   }
   originData = this->fields.originData;
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   return (WarBoardDataEntity_o *)JsonManager__Deserialize_object_(
                                    originData,
-                                   (const MethodInfo_313DC6C *)Method_JsonManager_Deserialize_WarBoardDataEntity___);
+                                   (const MethodInfo_314C70C *)Method_JsonManager_Deserialize_WarBoardDataEntity___);
 }
 
 
 System_String_o *WarBoardDataEntity__CreatePK(int32_t questId, int32_t questPhase, const MethodInfo *method)
 {
-  if ( (byte_4C28410 & 1) == 0 )
+  if ( (byte_4C38B14 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C28410 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C38B14 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            questId,
            questPhase,
-           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -56,10 +56,10 @@ System_String_o *WarBoardDataEntity__GetOriginDataJson(WarBoardDataEntity_o *thi
 {
   Il2CppObject *originData; // x19
 
-  if ( (byte_4C28412 & 1) == 0 )
+  if ( (byte_4C38B16 & 1) == 0 )
   {
-    sub_1C2D490(&JsonManager_TypeInfo);
-    byte_4C28412 = 1;
+    sub_1C32C20(&JsonManager_TypeInfo);
+    byte_4C38B16 = 1;
   }
   originData = this->fields.originData;
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -75,34 +75,33 @@ WarBoardUserServantData_o *WarBoardDataEntity__GetStageBossData(
 {
   __int64 v5; // x21
   __int64 v6; // x0
-  __int64 v7; // x1
   System_Object_array *svtInfo; // x19
-  System_Func_object__bool__o *v9; // x20
+  System_Func_object__bool__o *v8; // x20
 
-  if ( (byte_4C28411 & 1) == 0 )
+  if ( (byte_4C38B15 & 1) == 0 )
   {
-    sub_1C2D490(&Method_BasicHelper_Find_WarBoardUserServantData___);
-    sub_1C2D490(&System_Func_WarBoardUserServantData__bool__TypeInfo);
-    sub_1C2D490(&Method_WarBoardDataEntity___c__DisplayClass26_0__GetStageBossData_b__0__);
-    sub_1C2D490(&WarBoardDataEntity___c__DisplayClass26_0_TypeInfo);
-    byte_4C28411 = 1;
+    sub_1C32C20(&Method_BasicHelper_Find_WarBoardUserServantData___);
+    sub_1C32C20(&System_Func_WarBoardUserServantData__bool__TypeInfo);
+    sub_1C32C20(&Method_WarBoardDataEntity___c__DisplayClass26_0__GetStageBossData_b__0__);
+    sub_1C32C20(&WarBoardDataEntity___c__DisplayClass26_0_TypeInfo);
+    byte_4C38B15 = 1;
   }
-  v5 = sub_1C2D6DC(WarBoardDataEntity___c__DisplayClass26_0_TypeInfo);
+  v5 = sub_1C32E6C(WarBoardDataEntity___c__DisplayClass26_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C2D6EC(v6, v7);
+    sub_1C32E7C(v6);
   *(_DWORD *)(v5 + 16) = stageBossIndex;
   svtInfo = (System_Object_array *)this->fields.svtInfo;
-  v9 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_WarBoardUserServantData__bool__TypeInfo);
+  v8 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_WarBoardUserServantData__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v9,
+    v8,
     (Il2CppObject *)v5,
     Method_WarBoardDataEntity___c__DisplayClass26_0__GetStageBossData_b__0__,
     0);
   return (WarBoardUserServantData_o *)BasicHelper__Find_object_(
                                         svtInfo,
-                                        (System_Func_T__bool__o *)v9,
-                                        (const MethodInfo_30B88BC *)Method_BasicHelper_Find_WarBoardUserServantData___);
+                                        (System_Func_T__bool__o *)v8,
+                                        (const MethodInfo_30C735C *)Method_BasicHelper_Find_WarBoardUserServantData___);
 }
 
 
@@ -111,7 +110,7 @@ void WarBoardDataEntity__SetOriginData(WarBoardDataEntity_o *this, Il2CppObject 
   const MethodInfo *v3; // x3
 
   this->fields.originData = data;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.originData, (int32_t)data, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.originData, (int32_t)data, (int32_t)method, v3);
 }
 
 
@@ -135,6 +134,6 @@ bool WarBoardDataEntity___c__DisplayClass26_0___GetStageBossData_b__0(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return n->fields.stageBossIdx == this->fields.stageBossIndex;
 }

@@ -1,27 +1,27 @@
 void MissionNaviQuestEntity___ctor(MissionNaviQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C277CD & 1) == 0 )
+  if ( (byte_4C37EC6 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C277CD = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C37EC6 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *MissionNaviQuestEntity__CreatePK(int32_t id, int32_t questId, const MethodInfo *method)
 {
-  if ( (byte_4C277CC & 1) == 0 )
+  if ( (byte_4C37EC5 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C277CC = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C37EC5 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            questId,
-           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -47,28 +47,27 @@ bool MissionNaviQuestEntity__IsNaviBoardOpen(
   int64_t flag; // x8
   MapControl_SpotInfo_o *SpotInfo; // x0
   Il2CppObject *Instance; // x0
-  __int64 v8; // x1
-  Il2CppObject *v9; // x20
+  Il2CppObject *v8; // x20
   int32_t dispType; // w8
 
-  if ( (byte_4C277CA & 1) == 0 )
+  if ( (byte_4C37EC3 & 1) == 0 )
   {
-    sub_1C2D490(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    byte_4C277CA = 1;
+    sub_1C32C20(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    byte_4C37EC3 = 1;
   }
   flag = this->fields.flag;
   if ( (flag & 4) != 0 )
   {
-    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
     if ( questInfo && Instance )
     {
       if ( !QuestTree__IsActiveWar((QuestTree_o *)Instance, questInfo->fields.warId, 0) )
         goto LABEL_19;
-      v9 = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_QuestTree__get_Instance__);
+      v8 = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
       Instance = (Il2CppObject *)MapControl_QuestInfo__GetSpotID(questInfo, 0);
-      if ( v9 )
+      if ( v8 )
       {
-        SpotInfo = QuestTree__GetSpotInfo((QuestTree_o *)v9, (int32_t)Instance, 0);
+        SpotInfo = QuestTree__GetSpotInfo((QuestTree_o *)v8, (int32_t)Instance, 0);
         if ( !SpotInfo )
           return (char)SpotInfo;
         dispType = SpotInfo->fields.dispType;
@@ -76,11 +75,11 @@ bool MissionNaviQuestEntity__IsNaviBoardOpen(
       }
     }
 LABEL_21:
-    sub_1C2D6EC(Instance, v8);
+    sub_1C32E7C(Instance);
   }
   if ( (flag & 8) != 0 )
   {
-    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_QuestTree__get_Instance__);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
     if ( questInfo && Instance )
     {
       LOBYTE(SpotInfo) = QuestTree__IsActiveWar((QuestTree_o *)Instance, questInfo->fields.warId, 0);
@@ -114,12 +113,11 @@ bool MissionNaviQuestEntity__IsNaviBoardTimeOver(
   bool IsNaviBoardOpen; // w0
   char v6; // w8
   Il2CppObject *Instance; // x0
-  __int64 v8; // x1
 
-  if ( (byte_4C277CB & 1) == 0 )
+  if ( (byte_4C37EC4 & 1) == 0 )
   {
-    sub_1C2D490(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    byte_4C277CB = 1;
+    sub_1C32C20(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    byte_4C37EC4 = 1;
   }
   if ( (this->fields.flag & 0xC) != 0 )
   {
@@ -137,10 +135,10 @@ bool MissionNaviQuestEntity__IsNaviBoardTimeOver(
       v6 = 1;
       return v6 & 1;
     }
-    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
     if ( !Instance )
-      sub_1C2D6EC(0, v8);
-    IsNaviBoardOpen = clsQuestCheck__CheckQuestPlayableNow((clsQuestCheck_o *)Instance, this->fields.questId, 0);
+      sub_1C32E7C(0);
+    IsNaviBoardOpen = clsQuestCheck__CheckQuestPlayableNow((clsQuestCheck_o *)Instance, this->fields.questId, 0, 0);
   }
   v6 = !IsNaviBoardOpen;
   return v6 & 1;
@@ -157,14 +155,14 @@ bool MissionNaviQuestEntity__TryGetChallengeIconName(
   const MethodInfo *v7; // x3
   System_String_o *iconName; // x1
 
-  if ( (byte_4C277C9 & 1) == 0 )
+  if ( (byte_4C37EC2 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_113/*" "*/);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C277C9 = 1;
+    sub_1C32C20(&StringLiteral_113/*" "*/);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C37EC2 = 1;
   }
   *challengeIconName = (System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434((CGThumbnailListItem_o *)challengeIconName, StringLiteral_1/*""*/, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)challengeIconName, StringLiteral_1/*""*/, (int32_t)method, v3);
   if ( System_String__IsNullOrEmpty(this->fields.iconName, 0)
     || System_String__op_Equality(this->fields.iconName, (System_String_o *)StringLiteral_113/*" "*/, 0) )
   {
@@ -172,7 +170,7 @@ bool MissionNaviQuestEntity__TryGetChallengeIconName(
   }
   iconName = this->fields.iconName;
   *challengeIconName = iconName;
-  sub_1C2D434((CGThumbnailListItem_o *)challengeIconName, (int32_t)iconName, v6, v7);
+  sub_1C32BC4((CGThumbnailListItem_o *)challengeIconName, (int32_t)iconName, v6, v7);
   return 1;
 }
 
@@ -187,14 +185,14 @@ bool MissionNaviQuestEntity__TryGetChallengeNaviName(
   const MethodInfo *v7; // x3
   System_String_o *title; // x1
 
-  if ( (byte_4C277C8 & 1) == 0 )
+  if ( (byte_4C37EC1 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_113/*" "*/);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C277C8 = 1;
+    sub_1C32C20(&StringLiteral_113/*" "*/);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C37EC1 = 1;
   }
   *challengeNaviName = (System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434((CGThumbnailListItem_o *)challengeNaviName, StringLiteral_1/*""*/, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)challengeNaviName, StringLiteral_1/*""*/, (int32_t)method, v3);
   if ( System_String__IsNullOrEmpty(this->fields.title, 0)
     || System_String__op_Equality(this->fields.title, (System_String_o *)StringLiteral_113/*" "*/, 0) )
   {
@@ -202,6 +200,6 @@ bool MissionNaviQuestEntity__TryGetChallengeNaviName(
   }
   title = this->fields.title;
   *challengeNaviName = title;
-  sub_1C2D434((CGThumbnailListItem_o *)challengeNaviName, (int32_t)title, v6, v7);
+  sub_1C32BC4((CGThumbnailListItem_o *)challengeNaviName, (int32_t)title, v6, v7);
   return 1;
 }

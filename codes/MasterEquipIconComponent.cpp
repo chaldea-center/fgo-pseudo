@@ -2,7 +2,7 @@ void MasterEquipIconComponent___ctor(MasterEquipIconComponent_o *this, const Met
 {
   __asm { FMOV            V1.4S, #1.0 }
   this->fields.ICON_NORMAL_COLOR = _Q1;
-  this->fields.ICON_MASK_COLOR = (struct UnityEngine_Color_o)xmmword_C095E0;
+  this->fields.ICON_MASK_COLOR = (struct UnityEngine_Color_o)xmmword_C0C9B0;
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -16,21 +16,21 @@ int32_t MasterEquipIconComponent__GetEquipId(MasterEquipIconComponent_o *this, c
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v7; // 0:x0.16
 
   v2 = this;
-  if ( (byte_4C2215B & 1) == 0 )
+  if ( (byte_4C3282A & 1) == 0 )
   {
-    this = (MasterEquipIconComponent_o *)sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C2215B = 1;
+    this = (MasterEquipIconComponent_o *)sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C3282A = 1;
   }
   usrEquipData = v2->fields.usrEquipData;
   if ( !usrEquipData )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   v5 = *(_QWORD *)&usrEquipData->fields.equipId.fields.currentCryptoKey;
   v4 = *(_QWORD *)&usrEquipData->fields.equipId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v7.fields.currentCryptoKey = v5;
   *(_QWORD *)&v7.fields.fakeValue = v4;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v7, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v7, 0);
 }
 
 
@@ -46,7 +46,7 @@ int64_t MasterEquipIconComponent__GetUsrEquipId(MasterEquipIconComponent_o *this
 
   usrEquipData = this->fields.usrEquipData;
   if ( !usrEquipData )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return usrEquipData->fields.id;
 }
 
@@ -63,10 +63,10 @@ void MasterEquipIconComponent__OnClickEquipIcon(MasterEquipIconComponent_o *this
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v9; // 0:x0.16
 
   v2 = this;
-  if ( (byte_4C2215A & 1) == 0 )
+  if ( (byte_4C32829 & 1) == 0 )
   {
-    this = (MasterEquipIconComponent_o *)sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C2215A = 1;
+    this = (MasterEquipIconComponent_o *)sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C32829 = 1;
   }
   usrEquipData = v2->fields.usrEquipData;
   if ( !usrEquipData )
@@ -79,11 +79,11 @@ void MasterEquipIconComponent__OnClickEquipIcon(MasterEquipIconComponent_o *this
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v9.fields.currentCryptoKey = v7;
   *(_QWORD *)&v9.fields.fakeValue = v6;
-  this = (MasterEquipIconComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v9, 0);
+  this = (MasterEquipIconComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v9, 0);
   v8 = v2->fields.usrEquipData;
   if ( !v8 || !callbackFunc )
 LABEL_9:
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   ((void (__fastcall *)(intptr_t, _QWORD, _QWORD, int64_t, intptr_t))callbackFunc->fields.invoke_impl)(
     callbackFunc->fields.method_code,
     moveEqIdx,
@@ -96,18 +96,17 @@ LABEL_9:
 void MasterEquipIconComponent__SetEnabled(MasterEquipIconComponent_o *this, bool isEnabled, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
-  __int64 v6; // x1
 
-  if ( (byte_4C2215C & 1) == 0 )
+  if ( (byte_4C3282B & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Collider___);
-    byte_4C2215C = 1;
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Collider___);
+    byte_4C3282B = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !Component_object )
-    sub_1C2D6EC(0, v6);
+    sub_1C32E7C(0);
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isEnabled, 0);
 }
 
@@ -122,35 +121,37 @@ void MasterEquipIconComponent__SetEquipInfo(
         const MethodInfo *method)
 {
   ItemIconComponent_o *equipIconComp; // x0
-  __int64 v12; // x1
   UILabel_o *equipLevelLabel; // x20
-  System_String_o *v14; // x21
-  __int64 v15; // x2
-  __int64 v16; // x3
-  __int64 v17; // x4
-  Il2CppObject *v18; // x0
+  System_String_o *v13; // x21
+  __int64 v14; // x2
+  __int64 v15; // x3
+  __int64 v16; // x4
+  __int64 v17; // x5
+  __int64 v18; // x6
+  __int64 v19; // x7
+  Il2CppObject *v20; // x0
   int32_t lv; // [xsp+0h] [xbp-50h] BYREF
   int32_t genderImageId; // [xsp+4h] [xbp-4Ch] BYREF
   System_String_o *detail; // [xsp+8h] [xbp-48h] BYREF
   System_String_o *equipName; // [xsp+10h] [xbp-40h] BYREF
   int32_t maxLv[2]; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4C22158 & 1) == 0 )
+  if ( (byte_4C32827 & 1) == 0 )
   {
-    sub_1C2D490(&int_TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_8543/*"MASTER_EQSKILL_LV_TXT"*/);
-    byte_4C22158 = 1;
+    sub_1C32C20(&int_TypeInfo);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_8549/*"MASTER_EQSKILL_LV_TXT"*/);
+    byte_4C32827 = 1;
   }
   equipName = 0;
   *(_QWORD *)maxLv = 0;
   detail = 0;
   genderImageId = 0;
   this->fields.usrEquipData = usrEquipData;
-  sub_1C2D434(&this->fields.usrEquipData);
+  sub_1C32BC4(&this->fields.usrEquipData, usrEquipData);
   this->fields.callbackFunc = callback;
   this->fields.moveEqIdx = moveIdx;
-  equipIconComp = (ItemIconComponent_o *)sub_1C2D434(&this->fields.callbackFunc);
+  equipIconComp = (ItemIconComponent_o *)sub_1C32BC4(&this->fields.callbackFunc, callback);
   if ( !usrEquipData )
     goto LABEL_9;
   UserEquipEntity__getEquipInfo(usrEquipData, &maxLv[1], maxLv, &equipName, &detail, &genderImageId, 0);
@@ -161,13 +162,13 @@ void MasterEquipIconComponent__SetEquipInfo(
   equipLevelLabel = this->fields.equipLevelLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_8543/*"MASTER_EQSKILL_LV_TXT"*/, 0);
+  v13 = LocalizationManager__Get((System_String_o *)StringLiteral_8549/*"MASTER_EQSKILL_LV_TXT"*/, 0);
   lv = usrEquipData->fields.lv;
-  v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv, v15, v16, v17);
-  equipIconComp = (ItemIconComponent_o *)System_String__Format(v14, v18, 0);
+  v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv, v14, v15, v16, v17, v18, v19);
+  equipIconComp = (ItemIconComponent_o *)System_String__Format(v13, v20, 0);
   if ( !equipLevelLabel )
 LABEL_9:
-    sub_1C2D6EC(equipIconComp, v12);
+    sub_1C32E7C(equipIconComp);
   UILabel__set_text(equipLevelLabel, (System_String_o *)equipIconComp, 0);
 }
 
@@ -191,10 +192,10 @@ void MasterEquipIconComponent__UpdateSelected(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4C22159 & 1) == 0 )
+  if ( (byte_4C32828 & 1) == 0 )
   {
-    this = (MasterEquipIconComponent_o *)sub_1C2D490(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C22159 = 1;
+    this = (MasterEquipIconComponent_o *)sub_1C32C20(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4C32828 = 1;
   }
   usrEquipData = v4->fields.usrEquipData;
   if ( !usrEquipData )
@@ -205,7 +206,7 @@ void MasterEquipIconComponent__UpdateSelected(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v14.fields.currentCryptoKey = v7;
   *(_QWORD *)&v14.fields.fakeValue = v6;
-  this = (MasterEquipIconComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48827868(v14, 0);
+  this = (MasterEquipIconComponent_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_48887784(v14, 0);
   equipIconComp = v4->fields.equipIconComp;
   v9 = (int)this;
   if ( (_DWORD)this == nowEquipId )
@@ -224,7 +225,7 @@ void MasterEquipIconComponent__UpdateSelected(
       }
     }
 LABEL_15:
-    sub_1C2D6EC(this, *(_QWORD *)&nowEquipId);
+    sub_1C32E7C(this);
   }
   if ( !equipIconComp )
     goto LABEL_15;
@@ -260,10 +261,10 @@ void MasterEquipIconComponent__add_callbackFunc(
   MasterEquipIconComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C22156 & 1) == 0 )
+  if ( (byte_4C32825 & 1) == 0 )
   {
-    sub_1C2D490(&MasterEquipIconComponent_CallbackFunc_TypeInfo);
-    byte_4C22156 = 1;
+    sub_1C32C20(&MasterEquipIconComponent_CallbackFunc_TypeInfo);
+    byte_4C32825 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -276,13 +277,13 @@ void MasterEquipIconComponent__add_callbackFunc(
       if ( (MasterEquipIconComponent_CallbackFunc_c *)v8->klass != MasterEquipIconComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
+    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (MasterEquipIconComponent_o *)sub_1C2D9AC(v8);
+  v11 = (MasterEquipIconComponent_o *)sub_1C3313C(v8);
   MasterEquipIconComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -306,10 +307,10 @@ void MasterEquipIconComponent__remove_callbackFunc(
   MasterEquipIconComponent_CallbackFunc_o *v16; // x5
   const MethodInfo *v17; // x6
 
-  if ( (byte_4C22157 & 1) == 0 )
+  if ( (byte_4C32826 & 1) == 0 )
   {
-    sub_1C2D490(&MasterEquipIconComponent_CallbackFunc_TypeInfo);
-    byte_4C22157 = 1;
+    sub_1C32C20(&MasterEquipIconComponent_CallbackFunc_TypeInfo);
+    byte_4C32826 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -322,13 +323,13 @@ void MasterEquipIconComponent__remove_callbackFunc(
       if ( (MasterEquipIconComponent_CallbackFunc_c *)v8->klass != MasterEquipIconComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
+    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (MasterEquipIconComponent_o *)sub_1C2D9AC(v8);
+  v11 = (MasterEquipIconComponent_o *)sub_1C3313C(v8);
   MasterEquipIconComponent__SetEquipInfo(v11, v12, v13, v14, v15, v16, v17);
 }
 
@@ -348,15 +349,15 @@ void MasterEquipIconComponent_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C2D434(&this->fields.m_target);
+  sub_1C32BC4(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C2D550(method) & 1) == 0 )
+  if ( (sub_1C32CE0(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C2D708(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2D5B8(v10, 0);
+      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C32D48(v10, 0);
     }
     goto LABEL_5;
   }
@@ -368,9 +369,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A6A4A0;
+  this->fields.invoke_impl = (intptr_t)sub_1A6FBC8;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A6A440;
+  this->fields.extra_arg = (intptr_t)sub_1A6FB68;
 }
 
 
@@ -384,32 +385,39 @@ System_IAsyncResult_o *MasterEquipIconComponent_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v10; // x2
-  __int64 v11; // x3
-  __int64 v12; // x4
-  __int64 v13; // x2
-  __int64 v14; // x3
-  __int64 v15; // x4
-  _QWORD v17[2]; // [xsp+0h] [xbp-70h] BYREF
-  __int128 v18; // [xsp+10h] [xbp-60h]
-  int64_t v19; // [xsp+28h] [xbp-48h] BYREF
-  int32_t v20; // [xsp+38h] [xbp-38h] BYREF
-  int32_t v21; // [xsp+3Ch] [xbp-34h] BYREF
+  __int64 v7; // x7
+  __int64 v11; // x2
+  __int64 v12; // x3
+  __int64 v13; // x4
+  __int64 v14; // x5
+  __int64 v15; // x6
+  __int64 v16; // x7
+  __int64 v17; // x2
+  __int64 v18; // x3
+  __int64 v19; // x4
+  __int64 v20; // x5
+  __int64 v21; // x6
+  __int64 v22; // x7
+  _QWORD v24[2]; // [xsp+0h] [xbp-70h] BYREF
+  __int128 v25; // [xsp+10h] [xbp-60h]
+  int64_t v26; // [xsp+28h] [xbp-48h] BYREF
+  int32_t v27; // [xsp+38h] [xbp-38h] BYREF
+  int32_t v28; // [xsp+3Ch] [xbp-34h] BYREF
 
-  v19 = userEquipId;
-  v20 = equipId;
-  v21 = idx;
-  if ( (byte_4C2215D & 1) == 0 )
+  v26 = userEquipId;
+  v27 = equipId;
+  v28 = idx;
+  if ( (byte_4C3282C & 1) == 0 )
   {
-    sub_1C2D490(&int_TypeInfo);
-    sub_1C2D490(&long_TypeInfo);
-    byte_4C2215D = 1;
+    sub_1C32C20(&int_TypeInfo);
+    sub_1C32C20(&long_TypeInfo);
+    byte_4C3282C = 1;
   }
-  v18 = 0u;
-  v17[0] = j_il2cpp_value_box_0(int_TypeInfo, &v21, *(_QWORD *)&equipId, userEquipId, callback);
-  v17[1] = j_il2cpp_value_box_0(int_TypeInfo, &v20, v10, v11, v12);
-  *(_QWORD *)&v18 = j_il2cpp_value_box_0(long_TypeInfo, &v19, v13, v14, v15);
-  return (System_IAsyncResult_o *)sub_1C2D444(this, v17, callback, object);
+  v25 = 0u;
+  v24[0] = j_il2cpp_value_box_0(int_TypeInfo, &v28, *(_QWORD *)&equipId, userEquipId, callback, object, method, v7);
+  v24[1] = j_il2cpp_value_box_0(int_TypeInfo, &v27, v11, v12, v13, v14, v15, v16);
+  *(_QWORD *)&v25 = j_il2cpp_value_box_0(long_TypeInfo, &v26, v17, v18, v19, v20, v21, v22);
+  return (System_IAsyncResult_o *)sub_1C32BD4(this, v24, callback, object);
 }
 
 
@@ -418,7 +426,7 @@ void MasterEquipIconComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2D448(result, 0, method);
+  sub_1C32BD8(result, 0, method);
 }
 
 

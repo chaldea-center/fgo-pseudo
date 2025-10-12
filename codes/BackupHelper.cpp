@@ -10,13 +10,13 @@ void BackupHelper__SetNoBackupFlag(System_String_array *pathArray, const MethodI
 }
 
 
-void BackupHelper__SetNoBackupFlag_43904560(System_String_o *path, const MethodInfo *method)
+void BackupHelper__SetNoBackupFlag_44040348(System_String_o *path, const MethodInfo *method)
 {
   ;
 }
 
 
-void BackupHelper__SetNoBackupFlag_43904564(
+void BackupHelper__SetNoBackupFlag_44040352(
         System_String_o *path,
         System_String_array *excludeFileList,
         const MethodInfo *method)

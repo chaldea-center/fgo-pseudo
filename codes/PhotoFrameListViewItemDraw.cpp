@@ -13,7 +13,7 @@ void PhotoFrameListViewItemDraw__SetAtlas(
 
   frameSampleSprite = this->fields.frameSampleSprite;
   if ( !frameSampleSprite )
-    sub_1C2D6EC(0, atlas);
+    sub_1C32E7C(0);
   UISprite__set_atlas(frameSampleSprite, atlas, 0);
 }
 
@@ -36,12 +36,12 @@ void PhotoFrameListViewItemDraw__SetButton(
   UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = this;
-  if ( (byte_4C22947 & 1) == 0 )
+  if ( (byte_4C33016 & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_17441/*"btn_bg_20"*/);
-    this = (PhotoFrameListViewItemDraw_o *)sub_1C2D490(&StringLiteral_17442/*"btn_bg_21"*/);
-    byte_4C22947 = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_17445/*"btn_bg_20"*/);
+    this = (PhotoFrameListViewItemDraw_o *)sub_1C32C20(&StringLiteral_17446/*"btn_bg_21"*/);
+    byte_4C33016 = 1;
   }
   if ( !item )
     goto LABEL_24;
@@ -61,10 +61,10 @@ void PhotoFrameListViewItemDraw__SetButton(
   if ( !IsSelected_k__BackingField )
   {
 LABEL_14:
-    if ( !byte_4C21AC5 )
+    if ( !byte_4C32194 )
     {
-      sub_1C2D490(&LocalizationManager_TypeInfo);
-      byte_4C21AC5 = 1;
+      sub_1C32C20(&LocalizationManager_TypeInfo);
+      byte_4C32194 = 1;
     }
     this = (PhotoFrameListViewItemDraw_o *)LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -80,13 +80,13 @@ LABEL_14:
     if ( frameNameLabel )
       goto LABEL_19;
 LABEL_24:
-    sub_1C2D6EC(this, item);
+    sub_1C32E7C(this);
   }
 LABEL_7:
-  if ( !byte_4C21AC6 )
+  if ( !byte_4C32195 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    byte_4C21AC6 = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    byte_4C32195 = 1;
   }
   this = (PhotoFrameListViewItemDraw_o *)LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -111,9 +111,9 @@ LABEL_19:
   if ( !this )
     goto LABEL_24;
   if ( item->fields._IsSelected_k__BackingField )
-    v13 = &StringLiteral_17442/*"btn_bg_21"*/;
+    v13 = &StringLiteral_17446/*"btn_bg_21"*/;
   else
-    v13 = &StringLiteral_17441/*"btn_bg_20"*/;
+    v13 = &StringLiteral_17445/*"btn_bg_20"*/;
   UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v13, 0);
 }
 
@@ -125,15 +125,14 @@ void PhotoFrameListViewItemDraw__SetInput(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *button; // x22
-  __int64 v8; // x1
-  const MethodInfo *v9; // x2
+  const MethodInfo *v8; // x2
   UnityEngine_Component_o *Component_object; // x0
 
-  if ( (byte_4C22946 & 1) == 0 )
+  if ( (byte_4C33015 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C22946 = 1;
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C33015 = 1;
   }
   if ( item )
   {
@@ -146,11 +145,11 @@ void PhotoFrameListViewItemDraw__SetInput(
       if ( !Component_object
         || (Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                             Component_object,
-                                                            (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
+                                                            (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
         || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0),
             (Component_object = (UnityEngine_Component_o *)this->fields.button) == 0) )
       {
-        sub_1C2D6EC(Component_object, v8);
+        sub_1C32E7C(Component_object);
       }
       ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppClass **))Component_object->klass[1]._1.nestedTypes)(
         Component_object,
@@ -158,7 +157,7 @@ void PhotoFrameListViewItemDraw__SetInput(
         1,
         Component_object->klass[1]._1.implementedInterfaces);
     }
-    PhotoFrameListViewItemDraw__SetButton(this, item, v9);
+    PhotoFrameListViewItemDraw__SetButton(this, item, v8);
   }
 }
 
@@ -175,11 +174,11 @@ void PhotoFrameListViewItemDraw__SetItem(
   System_String_o *v10; // x21
   const MethodInfo *v11; // x2
 
-  if ( (byte_4C22945 & 1) == 0 )
+  if ( (byte_4C33014 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_24045/*"thumbnail_"*/);
-    byte_4C22945 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_24063/*"thumbnail_"*/);
+    byte_4C33014 = 1;
   }
   if ( item && mode )
   {
@@ -187,8 +186,8 @@ void PhotoFrameListViewItemDraw__SetItem(
     if ( frameSampleSprite )
     {
       UISprite__set_atlas(frameSampleSprite, item->fields._Atlas_k__BackingField, 0);
-      v8 = System_String__Concat_63457864(
-             (System_String_o *)StringLiteral_24045/*"thumbnail_"*/,
+      v8 = System_String__Concat_63518544(
+             (System_String_o *)StringLiteral_24063/*"thumbnail_"*/,
              item->fields._SpriteName_k__BackingField,
              0);
       Atlas_k__BackingField = (UnityEngine_Object_o *)item->fields._Atlas_k__BackingField;
@@ -214,6 +213,6 @@ LABEL_13:
         }
       }
     }
-    sub_1C2D6EC(frameSampleSprite, item);
+    sub_1C32E7C(frameSampleSprite);
   }
 }

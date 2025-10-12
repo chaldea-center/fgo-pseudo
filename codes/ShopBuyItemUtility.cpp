@@ -1,11 +1,11 @@
 void ShopBuyItemUtility___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C2354E & 1) == 0 )
+  if ( (byte_4C33C1E & 1) == 0 )
   {
-    sub_1C2D490(&ShopBuyItemUtility_TypeInfo);
-    byte_4C2354E = 1;
+    sub_1C32C20(&ShopBuyItemUtility_TypeInfo);
+    byte_4C33C1E = 1;
   }
-  *ShopBuyItemUtility_TypeInfo->static_fields = (struct ShopBuyItemUtility_StaticFields)xmmword_C0A320;
+  *ShopBuyItemUtility_TypeInfo->static_fields = (struct ShopBuyItemUtility_StaticFields)xmmword_C0D700;
 }
 
 
@@ -15,27 +15,26 @@ void ShopBuyItemUtility__SetAddTextOnMask(
         const MethodInfo *method)
 {
   DataManager_o *Instance; // x0
-  __int64 v6; // x1
   Il2CppObject *MasterData_object; // x21
   UserShopEntity_o *EntityDefinitely; // x0
-  Il2CppObject *v9; // x21
-  DataManager_o *v10; // x20
+  Il2CppObject *v8; // x21
+  DataManager_o *v9; // x20
   System_String_o *mText; // x21
+  System_String_o *v11; // x0
   System_String_o *v12; // x0
   System_String_o *v13; // x0
-  System_String_o *v14; // x0
 
-  if ( (byte_4C23546 & 1) == 0 )
+  if ( (byte_4C33C16 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1C2D490(&Method_DataManager_GetMasterData_UserShopMaster___);
-    sub_1C2D490(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C2D490(&StringLiteral_12146/*"SHOP_RETURN_EXCHANGE_ITEM"*/);
-    byte_4C23546 = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1C32C20(&Method_DataManager_GetMasterData_UserShopMaster___);
+    sub_1C32C20(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C32C20(&StringLiteral_12150/*"SHOP_RETURN_EXCHANGE_ITEM"*/);
+    byte_4C33C16 = 1;
   }
   if ( shopEntity )
   {
@@ -44,18 +43,18 @@ void ShopBuyItemUtility__SetAddTextOnMask(
     if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)textOnMaskLabel, 0, 0)
       && ShopEntity__IsSoldOut(shopEntity, 0) )
     {
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_26;
       MasterData_object = DataManager__GetMasterData_object_(
                             Instance,
-                            (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_UserShopMaster___);
+                            (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_UserShopMaster___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4C211E1 )
+      if ( !byte_4C31812 )
       {
-        sub_1C2D490(&NetworkManager_TypeInfo);
-        byte_4C211E1 = 1;
+        sub_1C32C20(&NetworkManager_TypeInfo);
+        byte_4C31812 = 1;
       }
       Instance = (DataManager_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -72,32 +71,32 @@ void ShopBuyItemUtility__SetAddTextOnMask(
                            0);
       if ( !EntityDefinitely || !UserShopEntity__CheckFlagKind(EntityDefinitely, 3, 0) )
         return;
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_26;
-      v9 = DataManager__GetMasterData_object_(
+      v8 = DataManager__GetMasterData_object_(
              Instance,
-             (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ItemMaster___);
+             (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ItemMaster___);
       Instance = (DataManager_o *)ShopEntity__GetItemID(shopEntity, 0);
-      if ( !v9 )
+      if ( !v8 )
         goto LABEL_26;
       Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
-                                    (DataMasterBase_TMaster__TEntity__PKType__o *)v9,
+                                    (DataMasterBase_TMaster__TEntity__PKType__o *)v8,
                                     (int32_t)Instance,
-                                    (const MethodInfo_3387D98 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                    (const MethodInfo_3396838 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
       if ( !Instance )
         return;
       if ( !textOnMaskLabel )
 LABEL_26:
-        sub_1C2D6EC(Instance, v6);
-      v10 = Instance;
+        sub_1C32E7C(Instance);
+      v9 = Instance;
       mText = textOnMaskLabel->fields.mText;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_12146/*"SHOP_RETURN_EXCHANGE_ITEM"*/, 0);
-      v13 = System_String__Format(v12, (Il2CppObject *)v10->fields.m_CancellationTokenSource, 0);
-      v14 = System_String__Concat_63457864(mText, v13, 0);
-      WrapControlText__textAdjust(textOnMaskLabel, v14, textOnMaskLabel->fields.mFontSize, 0, 0);
+      v11 = LocalizationManager__Get((System_String_o *)StringLiteral_12150/*"SHOP_RETURN_EXCHANGE_ITEM"*/, 0);
+      v12 = System_String__Format(v11, (Il2CppObject *)v9->fields.m_CancellationTokenSource, 0);
+      v13 = System_String__Concat_63518544(mText, v12, 0);
+      WrapControlText__textAdjust(textOnMaskLabel, v13, textOnMaskLabel->fields.mFontSize, 0, 0);
     }
   }
 }
@@ -125,10 +124,10 @@ void ShopBuyItemUtility__SetBgSprite(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C2354D & 1) == 0 )
+  if ( (byte_4C33C1D & 1) == 0 )
   {
-    sub_1C2D490(&ShopBuyItemUtility_TypeInfo);
-    byte_4C2354D = 1;
+    sub_1C32C20(&ShopBuyItemUtility_TypeInfo);
+    byte_4C33C1D = 1;
   }
   gameObject = (UnityEngine_GameObject_o *)ShopBuyItemUtility_TypeInfo;
   if ( !ShopBuyItemUtility_TypeInfo->_2.cctor_finished )
@@ -194,7 +193,7 @@ void ShopBuyItemUtility__SetBgSprite(
                                                     0)) == 0) )
   {
 LABEL_24:
-    sub_1C2D6EC(gameObject, possessionNumLabel);
+    sub_1C32E7C(gameObject);
   }
   v24.fields.x = (float)(v22 + (float)v15) + (float)(mWidth + v15);
   v24.fields.y = y;
@@ -206,15 +205,14 @@ LABEL_24:
 void ShopBuyItemUtility__SetDefaultMessageLabel(UILabel_o *label, const MethodInfo *method)
 {
   _BOOL8 v3; // x0
-  __int64 v4; // x1
-  ShopBuyItemUtility_c *v5; // x0
+  ShopBuyItemUtility_c *v4; // x0
 
-  if ( (byte_4C23545 & 1) == 0 )
+  if ( (byte_4C33C15 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&ShopBuyItemUtility_TypeInfo);
-    sub_1C2D490(&string_TypeInfo);
-    byte_4C23545 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&ShopBuyItemUtility_TypeInfo);
+    sub_1C32C20(&string_TypeInfo);
+    byte_4C33C15 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -222,15 +220,15 @@ void ShopBuyItemUtility__SetDefaultMessageLabel(UILabel_o *label, const MethodIn
   if ( !v3 )
   {
     if ( !label )
-      sub_1C2D6EC(v3, v4);
+      sub_1C32E7C(v3);
     UILabel__set_text(label, string_TypeInfo->static_fields->Empty, 0);
-    v5 = ShopBuyItemUtility_TypeInfo;
+    v4 = ShopBuyItemUtility_TypeInfo;
     if ( !ShopBuyItemUtility_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ShopBuyItemUtility_TypeInfo);
-      v5 = ShopBuyItemUtility_TypeInfo;
+      v4 = ShopBuyItemUtility_TypeInfo;
     }
-    UILabel__set_fontSize(label, v5->static_fields->MESSAGE_DEFAULT_FONT_SIZE, 0);
+    UILabel__set_fontSize(label, v4->static_fields->MESSAGE_DEFAULT_FONT_SIZE, 0);
   }
 }
 
@@ -255,10 +253,10 @@ void ShopBuyItemUtility__SetPossessionInfo(
   const MethodInfo *v21; // x6
 
   v17 = svtId;
-  if ( (byte_4C23548 & 1) == 0 )
+  if ( (byte_4C33C18 & 1) == 0 )
   {
-    *(_QWORD *)&svtId = sub_1C2D490(&ShopBuyItemUtility_TypeInfo);
-    byte_4C23548 = 1;
+    *(_QWORD *)&svtId = sub_1C32C20(&ShopBuyItemUtility_TypeInfo);
+    byte_4C33C18 = 1;
   }
   if ( v17 >= 1 && isDispFlag )
   {
@@ -284,7 +282,7 @@ void ShopBuyItemUtility__SetPossessionInfo(
       return;
     }
 LABEL_22:
-    sub_1C2D6EC(*(_QWORD *)&svtId, grid);
+    sub_1C32E7C(*(_QWORD *)&svtId);
   }
   if ( !possessionNumLabel )
     goto LABEL_22;
@@ -337,14 +335,14 @@ void ShopBuyItemUtility__SetPossessionNumLabel(int32_t svtId, UILabel_o *possess
   System_String_o *v10; // x0
 
   v4 = svtId;
-  if ( (byte_4C23549 & 1) == 0 )
+  if ( (byte_4C33C19 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_10398/*"POSSESSION_NUM"*/);
-    *(_QWORD *)&svtId = sub_1C2D490(&StringLiteral_11837/*"SERVANT_SORT_FILTER_SERVANT_NOT_HAVE"*/);
-    byte_4C23549 = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_10404/*"POSSESSION_NUM"*/);
+    *(_QWORD *)&svtId = sub_1C32C20(&StringLiteral_11843/*"SERVANT_SORT_FILTER_SERVANT_NOT_HAVE"*/);
+    byte_4C33C19 = 1;
   }
   if ( !possessionNumLabel )
     goto LABEL_14;
@@ -354,10 +352,10 @@ void ShopBuyItemUtility__SetPossessionNumLabel(int32_t svtId, UILabel_o *possess
   UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&svtId, 1, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  *(_QWORD *)&svtId = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserServantMaster___);
+  *(_QWORD *)&svtId = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !*(_QWORD *)&svtId )
 LABEL_14:
-    sub_1C2D6EC(*(_QWORD *)&svtId, possessionNumLabel);
+    sub_1C32E7C(*(_QWORD *)&svtId);
   v5 = *(UserServantMaster_o **)&svtId;
   ServantHavingCount = UserServantMaster__GetServantHavingCount(*(UserServantMaster_o **)&svtId, v4, 0, 0);
   IsServantHaving = UserServantMaster__IsServantHaving(v5, v4, 0, 0);
@@ -367,13 +365,13 @@ LABEL_14:
     if ( IsServantHaving )
       goto LABEL_10;
 LABEL_12:
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11837/*"SERVANT_SORT_FILTER_SERVANT_NOT_HAVE"*/, 0);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11843/*"SERVANT_SORT_FILTER_SERVANT_NOT_HAVE"*/, 0);
     goto LABEL_13;
   }
   if ( !IsServantHaving )
     goto LABEL_12;
 LABEL_10:
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10398/*"POSSESSION_NUM"*/, 0);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_10404/*"POSSESSION_NUM"*/, 0);
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(ServantHavingCount, 0);
   v10 = System_String__Format(v8, NumberFormat, 0);
 LABEL_13:
@@ -389,17 +387,16 @@ void ShopBuyItemUtility__SetShopHaveStatusIcon(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *v7; // x0
-  __int64 v8; // x1
   UnityEngine_GameObject_o *gameObject; // x22
   struct System_String_o *Empty; // x21
-  System_String_o *v11; // x20
+  System_String_o *v10; // x20
 
-  if ( (byte_4C23547 & 1) == 0 )
+  if ( (byte_4C33C17 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&string_TypeInfo);
-    sub_1C2D490(&StringLiteral_20401/*"img_icon_acquired"*/);
-    byte_4C23547 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&string_TypeInfo);
+    sub_1C32C20(&StringLiteral_20413/*"img_icon_acquired"*/);
+    byte_4C33C17 = 1;
   }
   if ( shopEntity )
   {
@@ -416,18 +413,18 @@ void ShopBuyItemUtility__SetShopHaveStatusIcon(
          || (UnityEngine_GameObject__SetActive(gameObject, (unsigned __int8)v7 & 1, 0),
              (v7 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0)) == 0)) )
       {
-        sub_1C2D6EC(v7, v8);
+        sub_1C32E7C(v7);
       }
       if ( UnityEngine_GameObject__get_activeSelf(v7, 0) )
       {
         Empty = string_TypeInfo->static_fields->Empty;
         if ( ShopEntity__IsServantGet(shopEntity, 0) )
-          v11 = (System_String_o *)StringLiteral_20401/*"img_icon_acquired"*/;
+          v10 = (System_String_o *)StringLiteral_20413/*"img_icon_acquired"*/;
         else
-          v11 = Empty;
-        if ( !System_String__IsNullOrEmpty(v11, 0) )
+          v10 = Empty;
+        if ( !System_String__IsNullOrEmpty(v10, 0) )
         {
-          UISprite__set_spriteName(sprite, v11, 0);
+          UISprite__set_spriteName(sprite, v10, 0);
           ((void (__fastcall *)(UISprite_o *, const MethodInfo *))sprite->klass->vtable._33_MakePixelPerfect.methodPtr)(
             sprite,
             sprite->klass->vtable._33_MakePixelPerfect.method);
@@ -449,14 +446,14 @@ void ShopBuyItemUtility__SetSummonedIcon(int32_t svtId, UISprite_o *summonedSpri
   System_String_o *v9; // x1
 
   v4 = svtId;
-  if ( (byte_4C2354C & 1) == 0 )
+  if ( (byte_4C33C1C & 1) == 0 )
   {
-    sub_1C2D490(&AtlasManager_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_20403/*"img_icon_summoned"*/);
-    *(_QWORD *)&svtId = sub_1C2D490(&StringLiteral_20402/*"img_icon_not_summoned"*/);
-    byte_4C2354C = 1;
+    sub_1C32C20(&AtlasManager_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_20415/*"img_icon_summoned"*/);
+    *(_QWORD *)&svtId = sub_1C32C20(&StringLiteral_20414/*"img_icon_not_summoned"*/);
+    byte_4C33C1C = 1;
   }
   if ( !summonedSprite )
     goto LABEL_14;
@@ -466,13 +463,13 @@ void ShopBuyItemUtility__SetSummonedIcon(int32_t svtId, UISprite_o *summonedSpri
   UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&svtId, 1, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  *(_QWORD *)&svtId = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  *(_QWORD *)&svtId = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !*(_QWORD *)&svtId )
 LABEL_14:
-    sub_1C2D6EC(*(_QWORD *)&svtId, summonedSprite);
+    sub_1C32E7C(*(_QWORD *)&svtId);
   v5 = UserServantCollectionMaster__IsGet(*(UserServantCollectionMaster_o **)&svtId, v4, 0);
-  v6 = StringLiteral_20403/*"img_icon_summoned"*/;
-  v7 = StringLiteral_20402/*"img_icon_not_summoned"*/;
+  v6 = StringLiteral_20415/*"img_icon_summoned"*/;
+  v7 = StringLiteral_20414/*"img_icon_not_summoned"*/;
   v8 = v5;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -501,16 +498,16 @@ void ShopBuyItemUtility__SetSvtCoin(
   UserSvtCoinEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
   v6 = svtId;
-  if ( (byte_4C2354A & 1) == 0 )
+  if ( (byte_4C33C1A & 1) == 0 )
   {
-    sub_1C2D490(&AtlasManager_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1C2D490(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    *(_QWORD *)&svtId = sub_1C2D490(&StringLiteral_7189/*"HAVE_MULTIPLE_INFO"*/);
-    byte_4C2354A = 1;
+    sub_1C32C20(&AtlasManager_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C32C20(&Method_DataManager_GetMaster_UserSvtCoinMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    *(_QWORD *)&svtId = sub_1C32C20(&StringLiteral_7194/*"HAVE_MULTIPLE_INFO"*/);
+    byte_4C33C1A = 1;
   }
   entity = 0;
   if ( !coinNumLabel )
@@ -527,13 +524,13 @@ void ShopBuyItemUtility__SetSvtCoin(
   UnityEngine_GameObject__SetActive(*(UnityEngine_GameObject_o **)&svtId, 1, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserSvtCoinMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C211E1 )
+  if ( !byte_4C31812 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C211E1 = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C31812 = 1;
   }
   *(_QWORD *)&svtId = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -561,18 +558,18 @@ void ShopBuyItemUtility__SetSvtCoin(
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_7189/*"HAVE_MULTIPLE_INFO"*/, 0);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_7194/*"HAVE_MULTIPLE_INFO"*/, 0);
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(num, 0);
   v11 = System_String__Format(v9, NumberFormat, 0);
   UILabel__set_text(coinNumLabel, v11, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  *(_QWORD *)&svtId = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ItemMaster___);
+  *(_QWORD *)&svtId = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !*(_QWORD *)&svtId
     || (*(_QWORD *)&svtId = ItemMaster__GetServantCoinItemEntity(*(ItemMaster_o **)&svtId, v6, 0)) == 0 )
   {
 LABEL_29:
-    sub_1C2D6EC(*(_QWORD *)&svtId, coinNumLabel);
+    sub_1C32E7C(*(_QWORD *)&svtId);
   }
   ImageId = ItemEntity__GetImageId(*(ItemEntity_o **)&svtId, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -587,50 +584,52 @@ void ShopBuyItemUtility__SetTreasureDeviceLevelLabel(
         const MethodInfo *method)
 {
   UserServantMaster_o *Master_object; // x0
-  __int64 v6; // x1
-  UserServantMaster_o *v7; // x21
-  UnityEngine_GameObject_o *v8; // x22
+  UserServantMaster_o *v6; // x21
+  UnityEngine_GameObject_o *v7; // x22
   int32_t MaxTreasureDeviceLevel; // w20
-  System_String_o *v10; // x21
-  __int64 v11; // x2
-  __int64 v12; // x3
-  __int64 v13; // x4
-  Il2CppObject *v14; // x0
-  System_String_o *v15; // x0
-  int32_t v16; // [xsp+Ch] [xbp-44h] BYREF
+  System_String_o *v9; // x21
+  __int64 v10; // x2
+  __int64 v11; // x3
+  __int64 v12; // x4
+  __int64 v13; // x5
+  __int64 v14; // x6
+  __int64 v15; // x7
+  Il2CppObject *v16; // x0
+  System_String_o *v17; // x0
+  int32_t v18; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C2354B & 1) == 0 )
+  if ( (byte_4C33C1B & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&int_TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_8610/*"MAX_NP_LEVEL"*/);
-    byte_4C2354B = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&int_TypeInfo);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_8616/*"MAX_NP_LEVEL"*/);
+    byte_4C33C1B = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserServantMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = (UserServantMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !treasureDeviceLevelLabel
-    || (v7 = Master_object,
+    || (v6 = Master_object,
         Master_object = (UserServantMaster_o *)UnityEngine_Component__get_gameObject(
                                                  (UnityEngine_Component_o *)treasureDeviceLevelLabel,
                                                  0),
-        !v7)
-    || (v8 = (UnityEngine_GameObject_o *)Master_object,
-        Master_object = (UserServantMaster_o *)UserServantMaster__IsServantHaving(v7, svtId, 0, 0),
-        !v8) )
+        !v6)
+    || (v7 = (UnityEngine_GameObject_o *)Master_object,
+        Master_object = (UserServantMaster_o *)UserServantMaster__IsServantHaving(v6, svtId, 0, 0),
+        !v7) )
   {
-    sub_1C2D6EC(Master_object, v6);
+    sub_1C32E7C(Master_object);
   }
-  UnityEngine_GameObject__SetActive(v8, (unsigned __int8)Master_object & 1, 0);
-  MaxTreasureDeviceLevel = UserServantMaster__GetMaxTreasureDeviceLevel(v7, svtId, 0);
+  UnityEngine_GameObject__SetActive(v7, (unsigned __int8)Master_object & 1, 0);
+  MaxTreasureDeviceLevel = UserServantMaster__GetMaxTreasureDeviceLevel(v6, svtId, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8610/*"MAX_NP_LEVEL"*/, 0);
-  v16 = MaxTreasureDeviceLevel;
-  v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, v11, v12, v13);
-  v15 = System_String__Format(v10, v14, 0);
-  UILabel__set_text(treasureDeviceLevelLabel, v15, 0);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_8616/*"MAX_NP_LEVEL"*/, 0);
+  v18 = MaxTreasureDeviceLevel;
+  v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18, v10, v11, v12, v13, v14, v15);
+  v17 = System_String__Format(v9, v16, 0);
+  UILabel__set_text(treasureDeviceLevelLabel, v17, 0);
   UILabel__UpdateCondensedScaleComponent(treasureDeviceLevelLabel, 0);
 }

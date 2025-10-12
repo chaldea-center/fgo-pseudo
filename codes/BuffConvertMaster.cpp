@@ -1,12 +1,12 @@
 void BuffConvertMaster___ctor(BuffConvertMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C26FB4 & 1) == 0 )
+  if ( (byte_4C376A5 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_BuffConvertMaster__BuffConvertEntity__int___ctor__);
-    byte_4C26FB4 = 1;
+    sub_1C32C20(&Method_DataMasterBase_BuffConvertMaster__BuffConvertEntity__int___ctor__);
+    byte_4C376A5 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     447,
-    (const MethodInfo_3385A74 *)Method_DataMasterBase_BuffConvertMaster__BuffConvertEntity__int___ctor__);
+    (const MethodInfo_3394514 *)Method_DataMasterBase_BuffConvertMaster__BuffConvertEntity__int___ctor__);
 }

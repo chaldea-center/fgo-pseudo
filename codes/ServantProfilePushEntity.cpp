@@ -1,27 +1,27 @@
 void ServantProfilePushEntity___ctor(ServantProfilePushEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27CCE & 1) == 0 )
+  if ( (byte_4C383D0 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C27CCE = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C383D0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ServantProfilePushEntity__CreatePK(int32_t svtId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4C27CCD & 1) == 0 )
+  if ( (byte_4C383CF & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C27CCD = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C383CF = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            idx,
-           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -37,10 +37,10 @@ bool ServantProfilePushEntity__TimeCheck(ServantProfilePushEntity_o *this, const
 {
   int64_t Time; // x0
 
-  if ( (byte_4C27CCB & 1) == 0 )
+  if ( (byte_4C383CD & 1) == 0 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C27CCB = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C383CD = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -51,10 +51,10 @@ bool ServantProfilePushEntity__TimeCheck(ServantProfilePushEntity_o *this, const
 
 bool ServantProfilePushEntity__TimeEnd(ServantProfilePushEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27CCC & 1) == 0 )
+  if ( (byte_4C383CE & 1) == 0 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C27CCC = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C383CE = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

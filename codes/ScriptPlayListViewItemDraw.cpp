@@ -20,11 +20,11 @@ void ScriptPlayListViewItemDraw__SetItem(
   float v13; // s1
   float v14; // s2
 
-  if ( (byte_4C2490F & 1) == 0 )
+  if ( (byte_4C34FE3 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2490F = 1;
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C34FE3 = 1;
   }
   if ( item && mode )
   {
@@ -44,7 +44,7 @@ void ScriptPlayListViewItemDraw__SetItem(
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)TitleText,
-                             (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                             (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         TitleText = (System_String_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -69,6 +69,6 @@ void ScriptPlayListViewItemDraw__SetItem(
       }
     }
 LABEL_20:
-    sub_1C2D6EC(TitleText, v7);
+    sub_1C32E7C(TitleText);
   }
 }

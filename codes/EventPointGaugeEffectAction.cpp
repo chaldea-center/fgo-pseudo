@@ -14,7 +14,7 @@ void EventPointGaugeEffectAction__OnPlayGaugeBarAnime(EventPointGaugeEffectActio
   p_gaugeStartAction = &this->fields.gaugeStartAction;
   v3 = gaugeStartAction;
   *p_gaugeStartAction = 0;
-  sub_1C2D434(p_gaugeStartAction);
+  sub_1C32BC4(p_gaugeStartAction, 0);
   if ( gaugeStartAction )
     ((void (__fastcall *)(intptr_t, intptr_t))v3->fields.invoke_impl)(v3->fields.method_code, v3->fields.method);
 }
@@ -26,5 +26,5 @@ void EventPointGaugeEffectAction__Setup(
         const MethodInfo *method)
 {
   this->fields.gaugeStartAction = gaugeStartAct;
-  sub_1C2D434(&this->fields.gaugeStartAction);
+  sub_1C32BC4(&this->fields.gaugeStartAction, gaugeStartAct);
 }

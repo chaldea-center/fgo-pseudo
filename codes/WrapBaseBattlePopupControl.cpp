@@ -7,22 +7,21 @@ void WrapBaseBattlePopupControl___ctor(
   int32_t v7; // w2
   const MethodInfo *v8; // x3
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v10; // x1
   int32_t layer; // w0
   struct BattlePerformance_o **p_perf; // x20
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._TrParent_k__BackingField = parent;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)parent, v7, v8);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)parent, v7, v8);
   if ( !parent || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)parent, 0)) == 0 )
-    sub_1C2D6EC(gameObject, v10);
+    sub_1C32E7C(gameObject);
   layer = UnityEngine_GameObject__get_layer(gameObject, 0);
   this->fields.perf = inPerf;
   p_perf = &this->fields.perf;
   *((_DWORD *)p_perf - 2) = layer;
-  sub_1C2D434((CGThumbnailListItem_o *)p_perf, (int32_t)inPerf, v13, v14);
+  sub_1C32BC4((CGThumbnailListItem_o *)p_perf, (int32_t)inPerf, v12, v13);
 }
 
 
@@ -32,12 +31,11 @@ void WrapBaseBattlePopupControl__ApplyLayerRecursively(
         const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
-  __int64 v6; // x1
 
-  if ( (byte_4C2A01D & 1) == 0 )
+  if ( (byte_4C3A730 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2A01D = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3A730 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -45,8 +43,8 @@ void WrapBaseBattlePopupControl__ApplyLayerRecursively(
   {
     GameObjectExtensions__SetLayerRecursively(obj, this->fields._Layer_k__BackingField, 0);
     if ( !obj || (transform = UnityEngine_GameObject__get_transform(obj, 0)) == 0 )
-      sub_1C2D6EC(transform, v6);
-    UnityEngine_Transform__SetParent_71186964(transform, this->fields._TrParent_k__BackingField, 0, 0);
+      sub_1C32E7C(transform);
+    UnityEngine_Transform__SetParent_71246900(transform, this->fields._TrParent_k__BackingField, 0, 0);
   }
 }
 
@@ -60,10 +58,10 @@ UnityEngine_GameObject_o *WrapBaseBattlePopupControl__CreatePopupObject(
   struct BattlePerformance_o *perf; // x0
   UnityEngine_Object_o *Object; // x20
 
-  if ( (byte_4C2A01B & 1) == 0 )
+  if ( (byte_4C3A72E & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2A01B = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3A72E = 1;
   }
   perf = this->fields.perf;
   if ( !perf )
@@ -85,7 +83,7 @@ UnityEngine_GameObject_o *WrapBaseBattlePopupControl__CreatePopupObject(
       return (UnityEngine_GameObject_o *)Object;
     }
 LABEL_10:
-    sub_1C2D6EC(perf, prefab);
+    sub_1C32E7C(perf);
   }
   return (UnityEngine_GameObject_o *)Object;
 }
@@ -101,14 +99,13 @@ UnityEngine_GameObject_o *WrapBaseBattlePopupControl__CreatePopupTextObject(
 {
   UnityEngine_Object_o *PopupObject; // x20
   Il2CppObject *v10; // x0
-  __int64 v11; // x1
   Il2CppObject *component; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C2A01C & 1) == 0 )
+  if ( (byte_4C3A72F & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_GameObject_TryGetComponent_UIRangeLabel___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2A01C = 1;
+    sub_1C32C20(&Method_UnityEngine_GameObject_TryGetComponent_UIRangeLabel___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3A72F = 1;
   }
   component = 0;
   PopupObject = (UnityEngine_Object_o *)WrapBaseBattlePopupControl__CreatePopupObject(
@@ -128,7 +125,7 @@ UnityEngine_GameObject_o *WrapBaseBattlePopupControl__CreatePopupTextObject(
       if ( UnityEngine_GameObject__TryGetComponent_object_(
              (UnityEngine_GameObject_o *)PopupObject,
              &component,
-             (const MethodInfo_3127160 *)Method_UnityEngine_GameObject_TryGetComponent_UIRangeLabel___) )
+             (const MethodInfo_3135C00 *)Method_UnityEngine_GameObject_TryGetComponent_UIRangeLabel___) )
       {
         v10 = component;
         if ( component )
@@ -137,7 +134,7 @@ UnityEngine_GameObject_o *WrapBaseBattlePopupControl__CreatePopupTextObject(
           return (UnityEngine_GameObject_o *)PopupObject;
         }
 LABEL_12:
-        sub_1C2D6EC(v10, v11);
+        sub_1C32E7C(v10);
       }
     }
   }
@@ -174,12 +171,11 @@ UnityEngine_GameObject_o *WrapBaseBattlePopupControl__GetEffectInstantiate(
 {
   UnityEngine_Object_o *v5; // x20
   UnityEngine_Transform_o *transform; // x0
-  __int64 v7; // x1
 
-  if ( (byte_4C2A01A & 1) == 0 )
+  if ( (byte_4C3A72D & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2A01A = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3A72D = 1;
   }
   v5 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(WrapBaseBattlePopupControl_o *, _QWORD, const MethodInfo *))this->klass->vtable._13_unknown.methodPtr)(
                                  this,
@@ -191,8 +187,8 @@ UnityEngine_GameObject_o *WrapBaseBattlePopupControl__GetEffectInstantiate(
   if ( ((unsigned __int8)transform & 1) != 0 )
   {
     if ( !v5 || (transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v5, 0)) == 0 )
-      sub_1C2D6EC(transform, v7);
-    UnityEngine_Transform__SetParent_71186964(transform, this->fields._TrParent_k__BackingField, 0, 0);
+      sub_1C32E7C(transform);
+    UnityEngine_Transform__SetParent_71246900(transform, this->fields._TrParent_k__BackingField, 0, 0);
   }
   return (UnityEngine_GameObject_o *)v5;
 }
@@ -206,7 +202,7 @@ BattleEffectControl_o *WrapBaseBattlePopupControl__get_EffectControl(
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return perf->fields.effectcontrol;
 }
 

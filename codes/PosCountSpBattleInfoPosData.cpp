@@ -1,6 +1,6 @@
 void PosCountSpBattleInfoPosData___ctor(PosCountSpBattleInfoPosData_o *this, const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.existsFrontRowSkipPos.fields.x = xmmword_C09950;
+  *(_OWORD *)&this->fields.existsFrontRowSkipPos.fields.x = xmmword_C0CD30;
   *(_QWORD *)&this->fields.onlyBackRowSkipPos.fields.y = 1127153664;
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -24,7 +24,7 @@ UnityEngine_Vector3_o PosCountSpBattleInfoPosData__get_SkillSkipTrLocalPos(
   if ( !Perf_k__BackingField
     || (Perf_k__BackingField = (BattlePerformance_o *)BattlePerformance__get_EnemyPerf(Perf_k__BackingField, 0)) == 0 )
   {
-    sub_1C2D6EC(Perf_k__BackingField, method);
+    sub_1C32E7C(Perf_k__BackingField);
   }
   exists = BattlePerformanceEnemy__ExistsFrontRow((BattlePerformanceEnemy_o *)Perf_k__BackingField, 0);
   v5 = 36;

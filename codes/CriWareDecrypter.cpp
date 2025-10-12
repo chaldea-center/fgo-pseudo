@@ -11,7 +11,7 @@ int32_t CriWareDecrypter__CRIWARE3D9A5BE6(
   int v12; // [xsp+28h] [xbp-38h]
   char v13; // [xsp+2Ch] [xbp-34h]
 
-  if ( !off_4C20B28 )
+  if ( !off_4C31158 )
   {
     v11[0] = "cri_ware_unity";
     v11[1] = 14;
@@ -20,24 +20,19 @@ int32_t CriWareDecrypter__CRIWARE3D9A5BE6(
     v12 = 24;
     v11[4] = 0x200000000LL;
     v13 = 0;
-    off_4C20B28 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD))sub_1C2DA6C(
-                                                                            v11,
-                                                                            enable_mana_decryption,
-                                                                            func,
-                                                                            obj,
-                                                                            method);
+    off_4C31158 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD))sub_1C331FC(v11);
   }
-  v9 = sub_1C2DA64(func, enable_mana_decryption, func, obj, method);
-  return off_4C20B28(enable_atom_decryption, enable_mana_decryption, v9, obj);
+  v9 = sub_1C331F4(func, enable_mana_decryption, func, obj, method);
+  return off_4C31158(enable_atom_decryption, enable_mana_decryption, v9, obj);
 }
 
 
 uint64_t CriWareDecrypter__CallbackFromNative(intptr_t ptr1, const MethodInfo *method)
 {
-  if ( (byte_4C20B26 & 1) == 0 )
+  if ( (byte_4C31156 & 1) == 0 )
   {
-    sub_1C2D490(&CriWareDecrypter_TypeInfo);
-    byte_4C20B26 = 1;
+    sub_1C32C20(&CriWareDecrypter_TypeInfo);
+    byte_4C31156 = 1;
   }
   return CriWareDecrypter_TypeInfo->static_fields->temporalStorage;
 }
@@ -48,8 +43,8 @@ bool CriWareDecrypter__Initialize(CriWareDecrypterConfig_o *config, const Method
   const MethodInfo *v2; // x4
 
   if ( !config )
-    sub_1C2D6EC(0, method);
-  return CriWareDecrypter__Initialize_30818472(
+    sub_1C32E7C(0);
+  return CriWareDecrypter__Initialize_30840880(
            config->fields.key,
            config->fields.authenticationFile,
            config->fields.enableAtomDecryption,
@@ -58,49 +53,48 @@ bool CriWareDecrypter__Initialize(CriWareDecrypterConfig_o *config, const Method
 }
 
 
-bool CriWareDecrypter__Initialize_30818472(
+bool CriWareDecrypter__Initialize_30840880(
         System_String_o *key,
         System_String_o *authenticationFile,
         bool enableAtomDecryption,
         bool enableManaDecryption,
         const MethodInfo *method)
 {
-  CriFsPlugin_c *v9; // x0
+  CriFsPlugin_c *inited; // x0
   _BOOL8 v10; // x0
-  __int64 v11; // x1
-  uint64_t v12; // x23
+  uint64_t v11; // x23
   System_String_o *streamingAssetsPath; // x22
-  CriWareDecrypter_CallbackFromNativeDelegate_o *v14; // x21
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x4
+  CriWareDecrypter_CallbackFromNativeDelegate_o *v13; // x21
+  const MethodInfo *v14; // x3
+  const MethodInfo *v15; // x4
   bool result; // w0
 
-  if ( (byte_4C20B25 & 1) == 0 )
+  if ( (byte_4C31155 & 1) == 0 )
   {
-    sub_1C2D490(&CriWareDecrypter_CallbackFromNativeDelegate_TypeInfo);
-    sub_1C2D490(&System_Convert_TypeInfo);
-    sub_1C2D490(&CriFsPlugin_TypeInfo);
-    sub_1C2D490(&Method_CriWareDecrypter_CallbackFromNative__);
-    sub_1C2D490(&CriWareDecrypter_TypeInfo);
-    sub_1C2D490(&System_IO_Path_TypeInfo);
-    byte_4C20B25 = 1;
+    sub_1C32C20(&CriWareDecrypter_CallbackFromNativeDelegate_TypeInfo);
+    sub_1C32C20(&System_Convert_TypeInfo);
+    sub_1C32C20(&CriFsPlugin_TypeInfo);
+    sub_1C32C20(&Method_CriWareDecrypter_CallbackFromNative__);
+    sub_1C32C20(&CriWareDecrypter_TypeInfo);
+    sub_1C32C20(&System_IO_Path_TypeInfo);
+    byte_4C31155 = 1;
   }
-  v9 = CriFsPlugin_TypeInfo;
+  inited = CriFsPlugin_TypeInfo;
   if ( !CriFsPlugin_TypeInfo->_2.cctor_finished )
-    v9 = (CriFsPlugin_c *)((__int64 (*)(void))j_il2cpp_runtime_class_init_0)();
-  if ( !CriFsPlugin__IsLibraryInitialized((const MethodInfo *)v9) )
+    inited = (CriFsPlugin_c *)j_il2cpp_runtime_class_init_0(CriFsPlugin_TypeInfo);
+  if ( !CriFsPlugin__IsLibraryInitialized((const MethodInfo *)inited) )
     return 0;
   v10 = CriWare_Common__CheckBinaryVersionCompatibility(0);
   if ( !v10 )
     return 0;
   if ( !key )
-    sub_1C2D6EC(v10, v11);
-  v12 = 0xD47EB533AEF7E5LL;
+    sub_1C32E7C(v10);
+  v11 = 0xD47EB533AEF7E5LL;
   if ( key->fields._stringLength )
   {
     if ( !System_Convert_TypeInfo->_2.cctor_finished )
-      ((void (*)(void))j_il2cpp_runtime_class_init_0)();
-    v12 = System_Convert__ToUInt64_64550260(key, 0) ^ 0xD47EB533AEF7E5LL;
+      j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
+    v11 = System_Convert__ToUInt64_64610196(key, 0) ^ 0xD47EB533AEF7E5LL;
   }
   if ( CriWare_Common__IsStreamingAssetsPath(authenticationFile, 0) )
   {
@@ -109,10 +103,10 @@ bool CriWareDecrypter__Initialize_30818472(
       j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo);
     System_IO_Path__Combine(streamingAssetsPath, authenticationFile, 0);
   }
-  CriWareDecrypter_TypeInfo->static_fields->temporalStorage = v12;
-  v14 = (CriWareDecrypter_CallbackFromNativeDelegate_o *)sub_1C2D6DC(CriWareDecrypter_CallbackFromNativeDelegate_TypeInfo);
-  CriWareDecrypter_CallbackFromNativeDelegate___ctor(v14, 0, Method_CriWareDecrypter_CallbackFromNative__, v15);
-  CriWareDecrypter__CRIWARE3D9A5BE6(enableAtomDecryption, enableManaDecryption, v14, 0, v16);
+  CriWareDecrypter_TypeInfo->static_fields->temporalStorage = v11;
+  v13 = (CriWareDecrypter_CallbackFromNativeDelegate_o *)sub_1C32E6C(CriWareDecrypter_CallbackFromNativeDelegate_TypeInfo);
+  CriWareDecrypter_CallbackFromNativeDelegate___ctor(v13, 0, Method_CriWareDecrypter_CallbackFromNative__, v14);
+  CriWareDecrypter__CRIWARE3D9A5BE6(enableAtomDecryption, enableManaDecryption, v13, 0, v15);
   result = 1;
   CriWareDecrypter_TypeInfo->static_fields->temporalStorage = 0;
   return result;
@@ -134,15 +128,15 @@ void CriWareDecrypter_CallbackFromNativeDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C2D434(&this->fields.m_target);
+  sub_1C32BC4(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C2D550(method) & 1) == 0 )
+  if ( (sub_1C32CE0(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C2D708(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2D5B8(v10, 0);
+      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C32D48(v10, 0);
     }
     goto LABEL_5;
   }
@@ -154,9 +148,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A67214;
+  this->fields.invoke_impl = (intptr_t)sub_1A6C7D4;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A671C4;
+  this->fields.extra_arg = (intptr_t)sub_1A6C784;
 }
 
 
@@ -167,18 +161,21 @@ System_IAsyncResult_o *CriWareDecrypter_CallbackFromNativeDelegate__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
-  intptr_t v10; // [xsp+18h] [xbp-38h] BYREF
+  __int64 v5; // x5
+  __int64 v6; // x6
+  __int64 v7; // x7
+  _QWORD v12[2]; // [xsp+8h] [xbp-48h] BYREF
+  intptr_t v13; // [xsp+18h] [xbp-38h] BYREF
 
-  v10 = ptr1;
-  if ( (byte_4C20B30 & 1) == 0 )
+  v13 = ptr1;
+  if ( (byte_4C31160 & 1) == 0 )
   {
-    sub_1C2D490(&IntPtr_TypeInfo);
-    byte_4C20B30 = 1;
+    sub_1C32C20(&IntPtr_TypeInfo);
+    byte_4C31160 = 1;
   }
-  v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(IntPtr_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C2D444(this, v9, callback, object);
+  v12[1] = 0;
+  v12[0] = j_il2cpp_value_box_0(IntPtr_TypeInfo, &v13, callback, object, method, v5, v6, v7);
+  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
 }
 
 
@@ -187,10 +184,8 @@ uint64_t CriWareDecrypter_CallbackFromNativeDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  __int64 v3; // x1
-
-  if ( !sub_1C2D448(result, 0, method) )
-    sub_1C2D6EC(0, v3);
+  if ( !sub_1C32BD8(result, 0, method) )
+    sub_1C32E7C(0);
   return *(_QWORD *)j_il2cpp_object_unbox_0();
 }
 

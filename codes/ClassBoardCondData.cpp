@@ -11,35 +11,34 @@ void ClassBoardCondData___ctor(
 }
 
 
-void ClassBoardCondData___ctor_47778476(ClassBoardCondData_o this, int32_t lockId, const MethodInfo *method)
+void ClassBoardCondData___ctor_48005036(ClassBoardCondData_o this, int32_t lockId, const MethodInfo *method)
 {
   int32_t Num; // w20
   _DWORD *v4; // x19
   Il2CppObject *Master_object; // x0
-  __int64 v6; // x1
   int klass_high; // w8
   int klass; // w9
   int monitor; // w10
 
   Num = this.fields.Num;
   v4 = *(_DWORD **)&this.fields.Type;
-  if ( (byte_4C2ADD0 & 1) == 0 )
+  if ( (byte_4C3B5AC & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_ClassBoardLockMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__);
-    byte_4C2ADD0 = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_ClassBoardLockMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__);
+    byte_4C3B5AC = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ClassBoardLockMaster___);
   if ( !Master_object
     || (Master_object = DataMasterBase_object__object__int___GetEntity(
                           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                           Num,
-                          (const MethodInfo_3387D98 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__)) == 0 )
+                          (const MethodInfo_3396838 *)Method_DataMasterBase_ClassBoardLockMaster__ClassBoardLockEntity__int__GetEntity__)) == 0 )
   {
-    sub_1C2D6EC(Master_object, v6);
+    sub_1C32E7C(Master_object);
   }
   klass_high = HIDWORD(Master_object[3].klass);
   if ( klass_high )
@@ -66,10 +65,10 @@ bool ClassBoardCondData__IsOpen(ClassBoardCondData_o this, const MethodInfo *met
   int64_t v5; // x19
 
   v2 = *(int32_t **)&this.fields.Type;
-  if ( (byte_4C2ADD1 & 1) == 0 )
+  if ( (byte_4C3B5AD & 1) == 0 )
   {
-    sub_1C2D490(&CondType_TypeInfo);
-    byte_4C2ADD1 = 1;
+    sub_1C32C20(&CondType_TypeInfo);
+    byte_4C3B5AD = 1;
   }
   v4 = *v2;
   v3 = v2[1];

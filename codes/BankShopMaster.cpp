@@ -1,26 +1,26 @@
 void BankShopMaster___ctor(BankShopMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C26EDF & 1) == 0 )
+  if ( (byte_4C375B9 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_BankShopMaster__BankShopEntity__int___ctor__);
-    byte_4C26EDF = 1;
+    sub_1C32C20(&Method_DataMasterBase_BankShopMaster__BankShopEntity__int___ctor__);
+    byte_4C375B9 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     49,
-    (const MethodInfo_3385A74 *)Method_DataMasterBase_BankShopMaster__BankShopEntity__int___ctor__);
+    (const MethodInfo_3394514 *)Method_DataMasterBase_BankShopMaster__BankShopEntity__int___ctor__);
 }
 
 
 BankShopEntity_array *BankShopMaster__GetBuyableEntitiyList(BankShopMaster_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x19
-  const MethodInfo *v4; // x1
   void *list; // x0
   int32_t Count; // w0
-  int32_t v7; // w21
-  int32_t v8; // w22
+  int32_t v6; // w21
+  int32_t v7; // w22
   Il2CppObject *Item; // x0
+  const MethodInfo *v9; // x1
   Il2CppObject *v10; // x23
   int32_t v11; // w2
   const MethodInfo *v12; // x3
@@ -34,34 +34,34 @@ BankShopEntity_array *BankShopMaster__GetBuyableEntitiyList(BankShopMaster_o *th
   int32_t v20; // w2
   const MethodInfo *v21; // x3
 
-  if ( (byte_4C26EE1 & 1) == 0 )
+  if ( (byte_4C375BB & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
-    sub_1C2D490(&System_Comparison_BankShopEntity__TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_BankShopEntity__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_BankShopEntity__Sort__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_BankShopEntity__ToArray__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_BankShopEntity___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_BankShopEntity__TypeInfo);
-    sub_1C2D490(&Method_BankShopMaster___c__GetBuyableEntitiyList_b__2_0__);
-    sub_1C2D490(&BankShopMaster___c_TypeInfo);
-    byte_4C26EE1 = 1;
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
+    sub_1C32C20(&System_Comparison_BankShopEntity__TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_BankShopEntity__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_BankShopEntity__Sort__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_BankShopEntity__ToArray__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_BankShopEntity___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_BankShopEntity__TypeInfo);
+    sub_1C32C20(&Method_BankShopMaster___c__GetBuyableEntitiyList_b__2_0__);
+    sub_1C32C20(&BankShopMaster___c_TypeInfo);
+    byte_4C375BB = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_BankShopEntity__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BankShopEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_BankShopEntity___ctor__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BankShopEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_23;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
+            (const MethodInfo_332FCA8 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
   if ( Count >= 1 )
   {
-    v7 = Count;
-    v8 = 0;
+    v6 = Count;
+    v7 = 0;
     while ( 1 )
     {
       list = this->fields.list;
@@ -69,12 +69,12 @@ BankShopEntity_array *BankShopMaster__GetBuyableEntitiyList(BankShopMaster_o *th
         break;
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
-               v8,
-               (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
+               v7,
+               (const MethodInfo_332FD38 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
       if ( Item )
       {
         v10 = Item;
-        list = (void *)BankShopEntity__IsOpen((BankShopEntity_o *)Item, v4);
+        list = (void *)BankShopEntity__IsOpen((BankShopEntity_o *)Item, v9);
         if ( ((unsigned __int8)list & 1) != 0 )
         {
           if ( !v3 )
@@ -90,22 +90,22 @@ BankShopEntity_array *BankShopMaster__GetBuyableEntitiyList(BankShopMaster_o *th
             System_Collections_Generic_List_object___AddWithResize(
               v3,
               v10,
-              *(const MethodInfo_3789B84 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+              *(const MethodInfo_37987BC **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
           }
           else
           {
             v16 = &items->obj.klass + size;
             v3->fields._size = size + 1;
             v16[4] = (Il2CppClass *)v10;
-            sub_1C2D434((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v10, v11, v12);
+            sub_1C32BC4((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v10, v11, v12);
           }
         }
       }
-      if ( v7 == ++v8 )
+      if ( v6 == ++v7 )
         goto LABEL_15;
     }
 LABEL_23:
-    sub_1C2D6EC(list, v4);
+    sub_1C32E7C(list);
   }
 LABEL_15:
   list = BankShopMaster___c_TypeInfo;
@@ -123,21 +123,21 @@ LABEL_15:
       list = BankShopMaster___c_TypeInfo;
     }
     v18 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v17 = (System_Comparison_T__o *)sub_1C2D6DC(System_Comparison_BankShopEntity__TypeInfo);
+    v17 = (System_Comparison_T__o *)sub_1C32E6C(System_Comparison_BankShopEntity__TypeInfo);
     System_Comparison_object____ctor(v17, v18, Method_BankShopMaster___c__GetBuyableEntitiyList_b__2_0__, 0);
     static_fields = BankShopMaster___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = (struct System_Comparison_BankShopEntity__o *)v17;
-    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)v17, v20, v21);
+    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)v17, v20, v21);
   }
   if ( !v3 )
     goto LABEL_23;
-  System_Collections_Generic_List_object___Sort_58242632(
+  System_Collections_Generic_List_object___Sort_58303104(
     v3,
     v17,
-    (const MethodInfo_378B648 *)Method_System_Collections_Generic_List_BankShopEntity__Sort__);
+    (const MethodInfo_379A280 *)Method_System_Collections_Generic_List_BankShopEntity__Sort__);
   return (BankShopEntity_array *)System_Collections_Generic_List_object___ToArray(
                                    v3,
-                                   (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_BankShopEntity__ToArray__);
+                                   (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BankShopEntity__ToArray__);
 }
 
 
@@ -145,45 +145,45 @@ BankShopEntity_array *BankShopMaster__GetEnableEntitiyList(BankShopMaster_o *thi
 {
   int64_t Time; // x21
   System_Collections_Generic_List_object__o *v4; // x20
-  System_Collections_ObjectModel_Collection_T__o *v5; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  int v7; // w22
-  int32_t v8; // w23
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int v6; // w22
+  int32_t v7; // w23
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  System_Collections_ObjectModel_Collection_T__o *v10; // x1
   struct System_Object_array *items; // x8
   _QWORD *v12; // x9
   __int64 size; // x10
   Il2CppClass **v14; // x0
 
-  if ( (byte_4C26EE0 & 1) == 0 )
+  if ( (byte_4C375BA & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_BankShopEntity__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_BankShopEntity__ToArray__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_BankShopEntity___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_BankShopEntity__TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C26EE0 = 1;
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_BankShopEntity__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_BankShopEntity__ToArray__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_BankShopEntity___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_BankShopEntity__TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C375BA = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_BankShopEntity__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_BankShopEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_BankShopEntity___ctor__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_BankShopEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_20;
   list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                              list,
-                                                             (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
+                                                             (const MethodInfo_332FCA8 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
   if ( (int)list >= 1 )
   {
-    v7 = (int)list;
-    v8 = 0;
+    v6 = (int)list;
+    v7 = 0;
     while ( 1 )
     {
       list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
@@ -191,11 +191,11 @@ BankShopEntity_array *BankShopMaster__GetEnableEntitiyList(BankShopMaster_o *thi
         break;
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
-                                                                 v8,
-                                                                 (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
+                                                                 v7,
+                                                                 (const MethodInfo_332FD38 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
       if ( list )
       {
-        v5 = list;
+        v10 = list;
         if ( Time >= (__int64)list[6].monitor && Time <= (__int64)list[6].fields.items )
         {
           if ( !v4 )
@@ -211,29 +211,29 @@ BankShopEntity_array *BankShopMaster__GetEnableEntitiyList(BankShopMaster_o *thi
             System_Collections_Generic_List_object___AddWithResize(
               v4,
               (Il2CppObject *)list,
-              *(const MethodInfo_3789B84 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+              *(const MethodInfo_37987BC **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
           }
           else
           {
             v14 = &items->obj.klass + size;
             v4->fields._size = size + 1;
-            v14[4] = (Il2CppClass *)v5;
-            sub_1C2D434((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v5, v9, v10);
+            v14[4] = (Il2CppClass *)v10;
+            sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v10, v8, v9);
           }
         }
       }
-      if ( v7 == ++v8 )
+      if ( v6 == ++v7 )
         goto LABEL_18;
     }
 LABEL_20:
-    sub_1C2D6EC(list, v5);
+    sub_1C32E7C(list);
   }
 LABEL_18:
   if ( !v4 )
     goto LABEL_20;
   return (BankShopEntity_array *)System_Collections_Generic_List_object___ToArray(
                                    v4,
-                                   (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_BankShopEntity__ToArray__);
+                                   (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_BankShopEntity__ToArray__);
 }
 
 
@@ -245,20 +245,21 @@ int64_t BankShopMaster__GetSpBankEndedAt(BankShopMaster_o *this, const MethodInf
   int64_t klass; // x20
   int32_t v7; // w22
   Il2CppObject *Item; // x0
-  Il2CppObject *v9; // x23
+  const MethodInfo *v9; // x1
+  Il2CppObject *v10; // x23
 
-  if ( (byte_4C26EE3 & 1) == 0 )
+  if ( (byte_4C375BD & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
-    byte_4C26EE3 = 1;
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
+    byte_4C375BD = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_16;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
+            (const MethodInfo_332FCA8 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
   if ( Count >= 1 )
   {
     v5 = Count;
@@ -272,22 +273,22 @@ int64_t BankShopMaster__GetSpBankEndedAt(BankShopMaster_o *this, const MethodInf
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                list,
                v7,
-               (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
+               (const MethodInfo_332FD38 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
       if ( Item )
       {
-        v9 = Item;
+        v10 = Item;
         if ( (BYTE4(Item[9].klass) & 2) != 0
-          && BankShopEntity__IsOpen((BankShopEntity_o *)Item, method)
-          && klass < (__int64)v9[11].klass )
+          && BankShopEntity__IsOpen((BankShopEntity_o *)Item, v9)
+          && klass < (__int64)v10[11].klass )
         {
-          klass = (int64_t)v9[11].klass;
+          klass = (int64_t)v10[11].klass;
         }
       }
       if ( v5 == ++v7 )
         return klass;
     }
 LABEL_16:
-    sub_1C2D6EC(list, method);
+    sub_1C32E7C(list);
   }
   return 0;
 }
@@ -304,18 +305,18 @@ BankShopEntity_o *BankShopMaster__SearchProductId(
   int32_t v8; // w22
   BankShopEntity_o *v9; // x23
 
-  if ( (byte_4C26EE2 & 1) == 0 )
+  if ( (byte_4C375BC & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
-    byte_4C26EE2 = 1;
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
+    byte_4C375BC = 1;
   }
   list = this->fields.list;
   if ( !list )
     goto LABEL_13;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)list,
-            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
+            (const MethodInfo_332FCA8 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Count__);
   if ( Count >= 1 )
   {
     v7 = Count;
@@ -328,20 +329,20 @@ BankShopEntity_o *BankShopMaster__SearchProductId(
       list = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)list,
                v8,
-               (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
+               (const MethodInfo_332FD38 *)Method_System_Collections_ObjectModel_Collection_BankShopEntity__get_Item__);
       if ( list )
       {
         if ( !productId )
           break;
         v9 = (BankShopEntity_o *)list;
-        if ( System_String__Equals_63493168(productId, *((System_String_o **)list + 4), 0) )
+        if ( System_String__Equals_63553848(productId, *((System_String_o **)list + 4), 0) )
           return v9;
       }
       if ( v7 == ++v8 )
         return 0;
     }
 LABEL_13:
-    sub_1C2D6EC(list, productId);
+    sub_1C32E7C(list);
   }
   return 0;
 }
@@ -353,15 +354,15 @@ void BankShopMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C26EE4 & 1) == 0 )
+  if ( (byte_4C375BE & 1) == 0 )
   {
-    sub_1C2D490(&BankShopMaster___c_TypeInfo);
-    byte_4C26EE4 = 1;
+    sub_1C32C20(&BankShopMaster___c_TypeInfo);
+    byte_4C375BE = 1;
   }
-  v1 = (Il2CppObject *)sub_1C2D6DC(BankShopMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C32E6C(BankShopMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BankShopMaster___c_TypeInfo->static_fields->__9 = (struct BankShopMaster___c_o *)v1;
-  sub_1C2D434((CGThumbnailListItem_o *)BankShopMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)BankShopMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -378,6 +379,6 @@ int32_t BankShopMaster___c___GetBuyableEntitiyList_b__2_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1C2D6EC(this, a);
+    sub_1C32E7C(this);
   return b->fields.priority - a->fields.priority;
 }

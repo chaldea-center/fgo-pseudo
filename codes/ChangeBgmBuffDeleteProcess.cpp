@@ -12,45 +12,45 @@ void ChangeBgmBuffDeleteProcess__Exec(
 {
   BattleFieldEnvironmentData_o *FieldEnvData_k__BackingField; // x21
   BattleFieldEnvironmentData_o *v7; // x0
-  const MethodInfo *v8; // x1
-  __int64 v9; // x2
-  const MethodInfo *v10; // x3
-  BattleFieldEnvironmentData_o *v11; // x22
-  const MethodInfo *v12; // x2
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  BattleFieldEnvironmentData_o *v10; // x22
+  const MethodInfo *v11; // x2
+  const MethodInfo *v12; // x1
   __int64 v13; // x0
 
-  if ( (byte_4C29D97 & 1) == 0 )
+  if ( (byte_4C3A4A9 & 1) == 0 )
   {
-    sub_1C2D490(&BattleBuffData_BuffData___TypeInfo);
-    byte_4C29D97 = 1;
+    sub_1C32C20(&BattleBuffData_BuffData___TypeInfo);
+    byte_4C3A4A9 = 1;
   }
   FieldEnvData_k__BackingField = this->fields._FieldEnvData_k__BackingField;
-  v7 = (BattleFieldEnvironmentData_o *)sub_1C2D538(BattleBuffData_BuffData___TypeInfo, 1);
+  v7 = (BattleFieldEnvironmentData_o *)sub_1C32CC8(BattleBuffData_BuffData___TypeInfo, 1);
   if ( !v7 )
     goto LABEL_10;
-  v11 = v7;
+  v10 = v7;
   if ( buff )
   {
-    v7 = (BattleFieldEnvironmentData_o *)sub_1C2D5CC(buff, v7->klass->_1.element_class);
+    v7 = (BattleFieldEnvironmentData_o *)sub_1C32D5C(buff, v7->klass->_1.element_class);
     if ( !v7 )
     {
-      v13 = sub_1C2D710(0);
-      sub_1C2D5B8(v13, 0);
+      v13 = sub_1C32EA0(0);
+      sub_1C32D48(v13, 0);
     }
   }
-  if ( !LODWORD(v11->fields._Data_k__BackingField) )
-    sub_1C2D6F4(v7, v8, v9);
-  v11->fields._Perf_k__BackingField = (struct BattlePerformance_o *)buff;
-  sub_1C2D434((CGThumbnailListItem_o *)&v11->fields._Perf_k__BackingField, (int32_t)buff, v9, v10);
+  if ( !LODWORD(v10->fields._Data_k__BackingField) )
+    sub_1C32E84(v7);
+  v10->fields._Perf_k__BackingField = (struct BattlePerformance_o *)buff;
+  sub_1C32BC4((CGThumbnailListItem_o *)&v10->fields._Perf_k__BackingField, (int32_t)buff, v8, v9);
   if ( !FieldEnvData_k__BackingField
     || (BattleFieldEnvironmentData__RemoveBgmRelateBuff(
           FieldEnvData_k__BackingField,
-          (BattleBuffData_BuffData_array *)v11,
-          v12),
+          (BattleBuffData_BuffData_array *)v10,
+          v11),
         (v7 = this->fields._FieldEnvData_k__BackingField) == 0) )
   {
 LABEL_10:
-    sub_1C2D6EC(v7, v8);
+    sub_1C32E7C(v7);
   }
-  BattleFieldEnvironmentData__AddUpdateBgmTask(v7, v8);
+  BattleFieldEnvironmentData__AddUpdateBgmTask(v7, v12);
 }

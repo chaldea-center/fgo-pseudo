@@ -30,17 +30,17 @@ void PartiallyModifiableGrayScale__OnRenderImage(
   UnityEngine_Vector4_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v6 = this;
-  if ( (byte_4C2A4A7 & 1) == 0 )
+  if ( (byte_4C3AD71 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Graphics_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_16247/*"_IsSet"*/);
-    sub_1C2D490(&StringLiteral_16293/*"_OverTex"*/);
-    sub_1C2D490(&StringLiteral_16342/*"_Size"*/);
-    sub_1C2D490(&StringLiteral_16324/*"_Saturation"*/);
-    sub_1C2D490(&StringLiteral_16383/*"_UVPosition"*/);
-    this = (PartiallyModifiableGrayScale_o *)sub_1C2D490(&StringLiteral_16265/*"_MaskTex"*/);
-    byte_4C2A4A7 = 1;
+    sub_1C32C20(&UnityEngine_Graphics_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_16249/*"_IsSet"*/);
+    sub_1C32C20(&StringLiteral_16295/*"_OverTex"*/);
+    sub_1C32C20(&StringLiteral_16344/*"_Size"*/);
+    sub_1C32C20(&StringLiteral_16326/*"_Saturation"*/);
+    sub_1C32C20(&StringLiteral_16385/*"_UVPosition"*/);
+    this = (PartiallyModifiableGrayScale_o *)sub_1C32C20(&StringLiteral_16267/*"_MaskTex"*/);
+    byte_4C3AD71 = 1;
   }
   if ( !source )
     goto LABEL_46;
@@ -59,7 +59,7 @@ void PartiallyModifiableGrayScale__OnRenderImage(
       goto LABEL_46;
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)this,
-      (System_String_o *)StringLiteral_16265/*"_MaskTex"*/,
+      (System_String_o *)StringLiteral_16267/*"_MaskTex"*/,
       (UnityEngine_Texture_o *)v6->fields.MaskTexture,
       0);
   }
@@ -73,7 +73,7 @@ void PartiallyModifiableGrayScale__OnRenderImage(
       goto LABEL_46;
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)this,
-      (System_String_o *)StringLiteral_16293/*"_OverTex"*/,
+      (System_String_o *)StringLiteral_16295/*"_OverTex"*/,
       (UnityEngine_Texture_o *)v6->fields.OverTexture,
       0);
   }
@@ -81,35 +81,35 @@ void PartiallyModifiableGrayScale__OnRenderImage(
   if ( !this
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)this,
-          (System_String_o *)StringLiteral_16324/*"_Saturation"*/,
+          (System_String_o *)StringLiteral_16326/*"_Saturation"*/,
           v6->fields.saturation,
           0),
         (this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0)) == 0)
     || (UnityEngine_Material__SetFloat(
           (UnityEngine_Material_o *)this,
-          (System_String_o *)StringLiteral_16342/*"_Size"*/,
+          (System_String_o *)StringLiteral_16344/*"_Size"*/,
           v6->fields.radius,
           0),
         (this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0)) == 0) )
   {
 LABEL_46:
-    sub_1C2D6EC(this, source);
+    sub_1C32E7C(this);
   }
   v23.fields.x = posX + 0.5;
   v23.fields.z = 0.0;
   v23.fields.w = 0.0;
   v23.fields.y = v8;
-  UnityEngine_Material__SetVector((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16383/*"_UVPosition"*/, v23, 0);
+  UnityEngine_Material__SetVector((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16385/*"_UVPosition"*/, v23, 0);
   this = (PartiallyModifiableGrayScale_o *)ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0);
   radius = v6->fields.radius;
-  v13 = (System_String_o *)StringLiteral_16247/*"_IsSet"*/;
+  v13 = (System_String_o *)StringLiteral_16249/*"_IsSet"*/;
   v14 = this;
   if ( radius >= 0.03 )
     v15 = this;
   else
     v15 = 0;
   if ( radius >= 0.03 )
-    v16 = StringLiteral_16247/*"_IsSet"*/;
+    v16 = StringLiteral_16249/*"_IsSet"*/;
   else
     v16 = 0;
   if ( radius < 0.03 )
@@ -159,5 +159,5 @@ LABEL_42:
   material = ImageEffectBase__get_material((ImageEffectBase_o *)v6, 0);
   if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-  UnityEngine_Graphics__Blit_71009388((UnityEngine_Texture_o *)source, destination, material, 0);
+  UnityEngine_Graphics__Blit_71069324((UnityEngine_Texture_o *)source, destination, material, 0);
 }

@@ -1,4 +1,3 @@
-// local variable allocation has failed, the output may be wrong!
 uint32_t FNV1a__Hash32(System_Byte_array *bytes, int32_t offset, int32_t len, uint32_t hash, const MethodInfo *method)
 {
   uint8_t *v5; // x9
@@ -8,16 +7,16 @@ uint32_t FNV1a__Hash32(System_Byte_array *bytes, int32_t offset, int32_t len, ui
   if ( offset < len )
   {
     if ( !bytes )
-      sub_1C2D6EC(0, offset);
+      sub_1C32E7C(0);
     v5 = &bytes->m_Items[offset];
     v6 = len - (__int64)offset;
     do
     {
       if ( (unsigned int)offset >= LODWORD(bytes->max_length) )
-        sub_1C2D6F4(bytes, *(_QWORD *)&offset, *(_QWORD *)&len);
+        sub_1C32E84(bytes);
       v7 = *v5++;
       --v6;
-      *(_QWORD *)&offset = (unsigned int)(offset + 1);
+      ++offset;
       hash = 16777619 * (hash ^ v7);
     }
     while ( v6 );
@@ -26,11 +25,10 @@ uint32_t FNV1a__Hash32(System_Byte_array *bytes, int32_t offset, int32_t len, ui
 }
 
 
-uint32_t FNV1a__Hash32_41040148(System_String_o *str, const MethodInfo *method)
+uint32_t FNV1a__Hash32_41162040(System_String_o *str, const MethodInfo *method)
 {
   System_Text_Encoding_o *UTF8; // x0
-  __int64 v4; // x1
-  const MethodInfo *v5; // x4
+  const MethodInfo *v4; // x4
 
   UTF8 = System_Text_Encoding__get_UTF8(0);
   if ( !UTF8
@@ -39,13 +37,12 @@ uint32_t FNV1a__Hash32_41040148(System_String_o *str, const MethodInfo *method)
                                            str,
                                            UTF8->klass->vtable._18_GetBytes.method)) == 0 )
   {
-    sub_1C2D6EC(UTF8, v4);
+    sub_1C32E7C(UTF8);
   }
-  return FNV1a__Hash32((System_Byte_array *)UTF8, 0, (int32_t)UTF8->fields.dataItem, 0x811C9DC5, v5);
+  return FNV1a__Hash32((System_Byte_array *)UTF8, 0, (int32_t)UTF8->fields.dataItem, 0x811C9DC5, v4);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 uint64_t FNV1a__Hash64(System_Byte_array *bytes, int32_t offset, int32_t len, uint64_t hash, const MethodInfo *method)
 {
   uint8_t *v5; // x9
@@ -55,16 +52,16 @@ uint64_t FNV1a__Hash64(System_Byte_array *bytes, int32_t offset, int32_t len, ui
   if ( offset < len )
   {
     if ( !bytes )
-      sub_1C2D6EC(0, offset);
+      sub_1C32E7C(0);
     v5 = &bytes->m_Items[offset];
     v6 = len - (__int64)offset;
     do
     {
       if ( (unsigned int)offset >= LODWORD(bytes->max_length) )
-        sub_1C2D6F4(bytes, *(_QWORD *)&offset, *(_QWORD *)&len);
+        sub_1C32E84(bytes);
       v7 = *v5++;
       --v6;
-      *(_QWORD *)&offset = (unsigned int)(offset + 1);
+      ++offset;
       hash = 0x100000001B3LL * (hash ^ v7);
     }
     while ( v6 );

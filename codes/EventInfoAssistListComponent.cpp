@@ -12,99 +12,97 @@ void EventInfoAssistListComponent__Awake(EventInfoAssistListComponent_o *this, c
 
 void EventInfoAssistListComponent__Setup(EventInfoAssistListComponent_o *this, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  EventInfoAssistListComponent_o *v3; // x19
+  EventInfoAssistListComponent_o *v2; // x19
   struct System_Int32_array *assistIds; // x22
   il2cpp_array_size_t max_length; // x8
-  unsigned __int64 v6; // x23
-  int32_t v7; // w21
+  unsigned __int64 v5; // x23
+  int32_t v6; // w21
   Il2CppObject *Master_object; // x0
-  __int64 v9; // x1
   AssistEntity_o *CurrentEntity; // x20
-  Il2CppObject *v11; // x21
-  const MethodInfo *v12; // x2
+  Il2CppObject *v9; // x21
+  const MethodInfo *v10; // x2
   float Height_k__BackingField; // s8
-  const MethodInfo *v14; // x1
-  float v15; // s0
+  const MethodInfo *v12; // x1
+  float v13; // s0
 
-  v3 = this;
-  if ( (byte_4C276D0 & 1) == 0 )
+  v2 = this;
+  if ( (byte_4C37D5A & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_AssistMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_GameObjectHelper_Instantiate_EventInfoAssistComponent___);
-    this = (EventInfoAssistListComponent_o *)sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C276D0 = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_AssistMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_GameObjectHelper_Instantiate_EventInfoAssistComponent___);
+    this = (EventInfoAssistListComponent_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C37D5A = 1;
   }
-  assistIds = v3->fields.assistIds;
-  v3->fields._Height_k__BackingField = 0.0;
+  assistIds = v2->fields.assistIds;
+  v2->fields._Height_k__BackingField = 0.0;
   if ( assistIds )
   {
     max_length = assistIds->max_length;
     if ( (int)max_length < 1 )
     {
-      v15 = 0.0;
+      v13 = 0.0;
     }
     else
     {
-      v6 = 0;
+      v5 = 0;
       do
       {
-        if ( v6 >= (unsigned int)max_length )
-          sub_1C2D6F4(this, method, v2);
-        v7 = assistIds->m_Items[v6];
+        if ( v5 >= (unsigned int)max_length )
+          sub_1C32E84(this);
+        v6 = assistIds->m_Items[v5];
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_AssistMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_AssistMaster___);
         if ( !Master_object )
 LABEL_25:
-          sub_1C2D6EC(Master_object, v9);
-        CurrentEntity = AssistMaster__GetCurrentEntity((AssistMaster_o *)Master_object, v7, 0);
+          sub_1C32E7C(Master_object);
+        CurrentEntity = AssistMaster__GetCurrentEntity((AssistMaster_o *)Master_object, v6, 0);
         if ( CurrentEntity )
           goto LABEL_15;
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_AssistMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_AssistMaster___);
         if ( !Master_object )
           goto LABEL_25;
         this = (EventInfoAssistListComponent_o *)AssistMaster__GetMinPriorityEntity(
                                                    (AssistMaster_o *)Master_object,
-                                                   v7,
+                                                   v6,
                                                    0);
         CurrentEntity = (AssistEntity_o *)this;
         if ( this )
         {
 LABEL_15:
-          v11 = GameObjectHelper__Instantiate_object_(
-                  v3->fields.assistPrefab,
-                  v3->fields.assistParent,
-                  0,
-                  (const MethodInfo_3127AF4 *)Method_GameObjectHelper_Instantiate_EventInfoAssistComponent___);
+          v9 = GameObjectHelper__Instantiate_object_(
+                 v2->fields.assistPrefab,
+                 v2->fields.assistParent,
+                 0,
+                 (const MethodInfo_3136594 *)Method_GameObjectHelper_Instantiate_EventInfoAssistComponent___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          this = (EventInfoAssistListComponent_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v11, 0, 0);
+          this = (EventInfoAssistListComponent_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v9, 0, 0);
           if ( ((unsigned __int8)this & 1) == 0 )
           {
-            BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v11, 1, 0);
-            if ( !v11 )
+            BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v9, 1, 0);
+            if ( !v9 )
               goto LABEL_25;
-            EventInfoAssistComponent__Setup((EventInfoAssistComponent_o *)v11, CurrentEntity, v12);
-            ComponentHelper__SetLocalPositionY((UnityEngine_Component_o *)v11, -v3->fields._Height_k__BackingField, 0);
-            Height_k__BackingField = v3->fields._Height_k__BackingField;
-            v3->fields._Height_k__BackingField = Height_k__BackingField
+            EventInfoAssistComponent__Setup((EventInfoAssistComponent_o *)v9, CurrentEntity, v10);
+            ComponentHelper__SetLocalPositionY((UnityEngine_Component_o *)v9, -v2->fields._Height_k__BackingField, 0);
+            Height_k__BackingField = v2->fields._Height_k__BackingField;
+            v2->fields._Height_k__BackingField = Height_k__BackingField
                                                + (float)(EventInfoAssistComponent__GetHeight(
-                                                           (EventInfoAssistComponent_o *)v11,
-                                                           v14)
-                                                       + v3->fields.space);
+                                                           (EventInfoAssistComponent_o *)v9,
+                                                           v12)
+                                                       + v2->fields.space);
           }
         }
         LODWORD(max_length) = assistIds->max_length;
-        ++v6;
+        ++v5;
       }
-      while ( (__int64)v6 < (int)max_length );
-      v15 = v3->fields._Height_k__BackingField;
+      while ( (__int64)v5 < (int)max_length );
+      v13 = v2->fields._Height_k__BackingField;
     }
-    v3->fields._Height_k__BackingField = v15 + v3->fields.heightOffset;
+    v2->fields._Height_k__BackingField = v13 + v2->fields.heightOffset;
   }
 }
 

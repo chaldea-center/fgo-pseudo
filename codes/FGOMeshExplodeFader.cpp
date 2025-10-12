@@ -11,16 +11,16 @@ System_Collections_IEnumerator_o *FGOMeshExplodeFader__FadeOut(FGOMeshExplodeFad
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C26075 & 1) == 0 )
+  if ( (byte_4C3674D & 1) == 0 )
   {
-    sub_1C2D490(&FGOMeshExplodeFader__FadeOut_d__2_TypeInfo);
-    byte_4C26075 = 1;
+    sub_1C32C20(&FGOMeshExplodeFader__FadeOut_d__2_TypeInfo);
+    byte_4C3674D = 1;
   }
-  v3 = sub_1C2D6DC(FGOMeshExplodeFader__FadeOut_d__2_TypeInfo);
+  v3 = sub_1C32E6C(FGOMeshExplodeFader__FadeOut_d__2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C2D434((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -30,7 +30,7 @@ void FGOMeshExplodeFader__Start(FGOMeshExplodeFader_o *this, const MethodInfo *m
   System_Collections_IEnumerator_o *v3; // x1
 
   v3 = FGOMeshExplodeFader__FadeOut(this, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_71149276((UnityEngine_MonoBehaviour_o *)this, v3, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71209212((UnityEngine_MonoBehaviour_o *)this, v3, 0);
 }
 
 
@@ -58,11 +58,11 @@ bool FGOMeshExplodeFader__FadeOut_d__2__MoveNext(FGOMeshExplodeFader__FadeOut_d_
   UnityEngine_Object_o *gameObject; // x19
 
   v2 = this;
-  if ( (byte_4C26076 & 1) == 0 )
+  if ( (byte_4C3674E & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    this = (FGOMeshExplodeFader__FadeOut_d__2_o *)sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C26076 = 1;
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    this = (FGOMeshExplodeFader__FadeOut_d__2_o *)sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3674E = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -75,7 +75,7 @@ bool FGOMeshExplodeFader__FadeOut_d__2__MoveNext(FGOMeshExplodeFader__FadeOut_d_
     if ( _4__this )
       goto LABEL_8;
 LABEL_14:
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   }
   if ( _1__state )
     return 0;
@@ -84,7 +84,7 @@ LABEL_14:
     goto LABEL_14;
   UnityEngine_Component__GetComponent_object_(
     (UnityEngine_Component_o *)_4__this,
-    (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+    (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   v2->fields._t_5__2 = 0.0;
   v7 = 0.0;
 LABEL_8:
@@ -92,7 +92,7 @@ LABEL_8:
   {
     v2->fields.__2__current = 0;
     p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-    sub_1C2D434(p__2__current, 0, v5, v6);
+    sub_1C32BC4(p__2__current, 0, v5, v6);
     result = 1;
     LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
     return result;
@@ -100,7 +100,7 @@ LABEL_8:
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)_4__this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71163704(gameObject, 0);
+  UnityEngine_Object__Destroy_71223640(gameObject, 0);
   return 0;
 }
 
@@ -121,11 +121,11 @@ void __noreturn FGOMeshExplodeFader__FadeOut_d__2__System_Collections_IEnumerato
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C2D4A4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C2D6DC(v2);
+  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C2D4A4(&Method_FGOMeshExplodeFader__FadeOut_d__2_System_Collections_IEnumerator_Reset__);
-  sub_1C2D5B8(v3, v4);
+  v4 = sub_1C32C34(&Method_FGOMeshExplodeFader__FadeOut_d__2_System_Collections_IEnumerator_Reset__);
+  sub_1C32D48(v3, v4);
 }
 
 

@@ -27,20 +27,20 @@ void DisplayEffectArgument___ctor(
   int32_t v32; // w2
   const MethodInfo *v33; // x3
 
-  if ( (byte_4C29B12 & 1) == 0 )
+  if ( (byte_4C3A224 & 1) == 0 )
   {
-    sub_1C2D490(&int___TypeInfo);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C29B12 = 1;
+    sub_1C32C20(&int___TypeInfo);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C3A224 = 1;
   }
   v17 = StringLiteral_1/*""*/;
   this->fields.attachNodeName = (struct System_String_o *)StringLiteral_1/*""*/;
   p_attachNodeName = &this->fields.attachNodeName;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.attachNodeName, v17, funcIndex, (const MethodInfo *)actData);
-  if ( !byte_4C20DA1 )
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.attachNodeName, v17, funcIndex, (const MethodInfo *)actData);
+  if ( !byte_4C313D1 )
   {
-    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
-    byte_4C20DA1 = 1;
+    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
+    byte_4C313D1 = 1;
   }
   v19 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -51,20 +51,20 @@ void DisplayEffectArgument___ctor(
   v23 = v22->zeroVector.fields.z;
   *(_QWORD *)&this->fields.popupOffset.fields.x = *(_QWORD *)&v22->zeroVector.fields.x;
   this->fields.popupOffset.fields.z = v23;
-  v24 = (struct System_Int32_array *)sub_1C2D538(int___TypeInfo, 0);
+  v24 = (struct System_Int32_array *)sub_1C32CC8(int___TypeInfo, 0);
   this->fields.fieldIndiv = v24;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.fieldIndiv, (int32_t)v24, v25, v26);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.fieldIndiv, (int32_t)v24, v25, v26);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.actObj = actObj;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)actObj, v27, v28);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)actObj, v27, v28);
   this->fields.actData = actData;
   p_actData = &this->fields.actData;
   *((_DWORD *)p_actData - 2) = funcIndex;
-  sub_1C2D434((CGThumbnailListItem_o *)p_actData, (int32_t)actData, v30, v31);
+  sub_1C32BC4((CGThumbnailListItem_o *)p_actData, (int32_t)actData, v30, v31);
   *((_BYTE *)p_actData + 8) = isCommandAfter;
   *((_BYTE *)p_actData + 9) = isTreasureDevice;
   p_actData[2] = (struct BattleActionData_o *)attachNodeName;
-  sub_1C2D434((CGThumbnailListItem_o *)p_attachNodeName, (int32_t)attachNodeName, v32, v33);
+  sub_1C32BC4((CGThumbnailListItem_o *)p_attachNodeName, (int32_t)attachNodeName, v32, v33);
   *((_BYTE *)p_actData + 24) = ispopAdjustment;
 }
 
@@ -75,13 +75,12 @@ bool DisplayEffectArgument__IsDisplayablePopupEachActType(
         const MethodInfo *method)
 {
   _BOOL8 v5; // x0
-  __int64 v6; // x1
   struct BattleActionData_o *actData; // x8
 
-  if ( (byte_4C29B14 & 1) == 0 )
+  if ( (byte_4C3A226 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C29B14 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3A226 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -96,7 +95,7 @@ bool DisplayEffectArgument__IsDisplayablePopupEachActType(
     if ( targetObj )
       return UnityEngine_GameObject__get_activeSelf(targetObj, 0);
 LABEL_13:
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   }
   return 1;
 }
@@ -127,10 +126,10 @@ DisplayEffectArgument_o *DisplayEffectArgument__SetBuffParam(
   v11 = buffOffset.fields.z;
   v12 = buffOffset.fields.y;
   v13 = buffOffset.fields.x;
-  if ( (byte_4C29B13 & 1) == 0 )
+  if ( (byte_4C3A225 & 1) == 0 )
   {
-    sub_1C2D490(&int___TypeInfo);
-    byte_4C29B13 = 1;
+    sub_1C32C20(&int___TypeInfo);
+    byte_4C3A225 = 1;
   }
   this->fields.overwriteEffectIds = overwriteEffectIds;
   this->fields.buffOffset.fields.x = v13;
@@ -139,14 +138,14 @@ DisplayEffectArgument_o *DisplayEffectArgument__SetBuffParam(
   this->fields.popupOffset.fields.x = x;
   this->fields.popupOffset.fields.y = y;
   this->fields.popupOffset.fields.z = z;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields.overwriteEffectIds,
     (int32_t)overwriteEffectIds,
     (int32_t)fieldIndiv,
     method);
   if ( !v6 )
-    v6 = (struct System_Int32_array *)sub_1C2D538(int___TypeInfo, 0);
+    v6 = (struct System_Int32_array *)sub_1C32CC8(int___TypeInfo, 0);
   this->fields.fieldIndiv = v6;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.fieldIndiv, (int32_t)v6, v15, v16);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.fieldIndiv, (int32_t)v6, v15, v16);
   return this;
 }

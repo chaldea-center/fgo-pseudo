@@ -1,9 +1,9 @@
 void EventInfoHarvestCautionDialog___ctor(EventInfoHarvestCautionDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C287CC & 1) == 0 )
+  if ( (byte_4C38ED1 & 1) == 0 )
   {
-    sub_1C2D490(&BaseDialog_TypeInfo);
-    byte_4C287CC = 1;
+    sub_1C32C20(&BaseDialog_TypeInfo);
+    byte_4C38ED1 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -13,20 +13,19 @@ void EventInfoHarvestCautionDialog___ctor(EventInfoHarvestCautionDialog_o *this,
 
 void EventInfoHarvestCautionDialog__Init(EventInfoHarvestCautionDialog_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UILabel_o *titleLabel; // x0
   UILabel_o *decideLabel; // x20
   UILabel_o *cancelLabel; // x20
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C287C8 & 1) == 0 )
+  if ( (byte_4C38ECD & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_3677/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C2D490(&StringLiteral_5599/*"EVENT_HARVEST_CAUTION_DECIDE_BUTTON"*/);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C287C8 = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C32C20(&StringLiteral_5607/*"EVENT_HARVEST_CAUTION_DECIDE_BUTTON"*/);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C38ECD = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
   titleLabel = this->fields.titleLabel;
@@ -37,19 +36,19 @@ void EventInfoHarvestCautionDialog__Init(EventInfoHarvestCautionDialog_o *this, 
   decideLabel = this->fields.decideLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5599/*"EVENT_HARVEST_CAUTION_DECIDE_BUTTON"*/, 0);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5607/*"EVENT_HARVEST_CAUTION_DECIDE_BUTTON"*/, 0);
   if ( !decideLabel
     || (UILabel__set_text(decideLabel, (System_String_o *)titleLabel, 0),
         cancelLabel = this->fields.cancelLabel,
-        titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3677/*"COMMON_CONFIRM_CANCEL"*/, 0),
+        titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/, 0),
         !cancelLabel) )
   {
 LABEL_9:
-    sub_1C2D6EC(titleLabel, v3);
+    sub_1C32E7C(titleLabel);
   }
   UILabel__set_text(cancelLabel, (System_String_o *)titleLabel, 0);
   this->fields.callback = 0;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.callback, 0, v7, v8);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callback, 0, v6, v7);
 }
 
 
@@ -61,21 +60,21 @@ void EventInfoHarvestCautionDialog__OnClickCancelButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C287CB & 1) == 0 )
+  if ( (byte_4C38ED0 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_EventInfoHarvestCautionDialog_OnClickCancelButton__);
-    sub_1C2D490(&Method_EventInfoHarvestCautionDialog__OnClickCancelButton_b__9_0__);
-    byte_4C287CB = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_EventInfoHarvestCautionDialog_OnClickCancelButton__);
+    sub_1C32C20(&Method_EventInfoHarvestCautionDialog__OnClickCancelButton_b__9_0__);
+    byte_4C38ED0 = 1;
   }
   if ( !this->fields.isClose )
   {
     v3 = Method_EventInfoHarvestCautionDialog_OnClickCancelButton__;
     if ( (*((_BYTE *)Method_EventInfoHarvestCautionDialog_OnClickCancelButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_EventInfoHarvestCautionDialog_OnClickCancelButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_EventInfoHarvestCautionDialog_OnClickCancelButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    v5 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -95,21 +94,21 @@ void EventInfoHarvestCautionDialog__OnClickDecideButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C287CA & 1) == 0 )
+  if ( (byte_4C38ECF & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_EventInfoHarvestCautionDialog_OnClickDecideButton__);
-    sub_1C2D490(&Method_EventInfoHarvestCautionDialog__OnClickDecideButton_b__8_0__);
-    byte_4C287CA = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_EventInfoHarvestCautionDialog_OnClickDecideButton__);
+    sub_1C32C20(&Method_EventInfoHarvestCautionDialog__OnClickDecideButton_b__8_0__);
+    byte_4C38ECF = 1;
   }
   if ( !this->fields.isClose )
   {
     v3 = Method_EventInfoHarvestCautionDialog_OnClickDecideButton__;
     if ( (*((_BYTE *)Method_EventInfoHarvestCautionDialog_OnClickDecideButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_EventInfoHarvestCautionDialog_OnClickDecideButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_EventInfoHarvestCautionDialog_OnClickDecideButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
-    v5 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -131,41 +130,40 @@ void EventInfoHarvestCautionDialog__Open(
         const MethodInfo *method)
 {
   DataManager_o *Instance; // x0
-  __int64 v12; // x1
   Il2CppObject *MasterData_object; // x24
   QuestEntity_o *QuestEntity; // x22
   Il2CppObject *Entity; // x0
   UILabel_o *titleLabel; // x22
-  Il2CppObject *v17; // x23
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  Il2CppObject *v16; // x23
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
 
-  if ( (byte_4C287C9 & 1) == 0 )
+  if ( (byte_4C38ECE & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_1C2D490(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
-    sub_1C2D490(&Method_DataManager_GetMasterData_SpotMaster___);
-    sub_1C2D490(&Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C2D490(&StringLiteral_5600/*"EVENT_HARVEST_CAUTION_TITLE"*/);
-    sub_1C2D490(&StringLiteral_19922/*"harvestGrowthBeforeQuestId"*/);
-    byte_4C287C9 = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1C32C20(&Method_DataManager_GetMasterData_QuestPhaseMaster___);
+    sub_1C32C20(&Method_DataManager_GetMasterData_SpotMaster___);
+    sub_1C32C20(&Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C32C20(&StringLiteral_5608/*"EVENT_HARVEST_CAUTION_TITLE"*/);
+    sub_1C32C20(&StringLiteral_19934/*"harvestGrowthBeforeQuestId"*/);
+    byte_4C38ECE = 1;
   }
   EventInfoHarvestCautionDialog__Init(this, *(const MethodInfo **)&questId);
-  BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_QuestMaster___);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestMaster___);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
+                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_QuestPhaseMaster___);
   if ( !Instance )
     goto LABEL_17;
   Instance = (DataManager_o *)QuestPhaseMaster__GetEntity((QuestPhaseMaster_o *)Instance, questId, questPhase, 0);
@@ -173,41 +171,41 @@ void EventInfoHarvestCautionDialog__Open(
     goto LABEL_17;
   Instance = (DataManager_o *)QuestPhaseEntity__getScriptIntParam(
                                 (QuestPhaseEntity_o *)Instance,
-                                (System_String_o *)StringLiteral_19922/*"harvestGrowthBeforeQuestId"*/,
+                                (System_String_o *)StringLiteral_19934/*"harvestGrowthBeforeQuestId"*/,
                                 -1,
                                 0);
   if ( !MasterData_object )
     goto LABEL_17;
   QuestEntity = QuestMaster__getQuestEntity((QuestMaster_o *)MasterData_object, (int32_t)Instance, 0);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_SpotMaster___);
+                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SpotMaster___);
   if ( !QuestEntity || !Instance )
     goto LABEL_17;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              QuestEntity->fields.spotId,
-             (const MethodInfo_3387D98 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
+             (const MethodInfo_3396838 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
   titleLabel = this->fields.titleLabel;
-  v17 = Entity;
+  v16 = Entity;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5600/*"EVENT_HARVEST_CAUTION_TITLE"*/, 0);
-  if ( !v17
-    || (Instance = (DataManager_o *)System_String__Format((System_String_o *)Instance, (Il2CppObject *)v17[2].klass, 0),
+  Instance = (DataManager_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5608/*"EVENT_HARVEST_CAUTION_TITLE"*/, 0);
+  if ( !v16
+    || (Instance = (DataManager_o *)System_String__Format((System_String_o *)Instance, (Il2CppObject *)v16[2].klass, 0),
         !titleLabel)
     || (UILabel__set_text(titleLabel, (System_String_o *)Instance, 0),
         (Instance = (DataManager_o *)this->fields.messageLabel) == 0) )
   {
 LABEL_17:
-    sub_1C2D6EC(Instance, v12);
+    sub_1C32E7C(Instance);
   }
   UILabel__set_text((UILabel_o *)Instance, message, 0);
   this->fields.callback = callback;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.callback, (int32_t)callback, v18, v19);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callback, (int32_t)callback, v17, v18);
 }
 
 

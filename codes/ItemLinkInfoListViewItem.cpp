@@ -17,35 +17,35 @@ void ItemLinkInfoListViewItem___ctor(ItemLinkInfoListViewItem_o *this, int32_t i
   int32_t v19; // w2
   const MethodInfo *v20; // x3
 
-  if ( (byte_4C29BF8 & 1) == 0 )
+  if ( (byte_4C3A30A & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C29BF8 = 1;
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C3A30A = 1;
   }
-  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
   v5 = StringLiteral_1/*""*/;
   this->fields._IconName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._IconName_k__BackingField, v5, v6, v7);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._IconName_k__BackingField, v5, v6, v7);
   v8 = StringLiteral_1/*""*/;
   this->fields._Name_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, v8, v9, v10);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, v8, v9, v10);
   this->fields._ItemEnt_k__BackingField = 0;
   *(_QWORD *)&this->fields._TargetId_k__BackingField = 0;
   this->fields._ItemDropEfficiencyPriority_k__BackingField = 0;
   *(int32_t *)((char *)&this->fields._ItemDropEfficiencyPriority_k__BackingField + 3) = 0;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._ItemEnt_k__BackingField, 0, v11, v12);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._ItemEnt_k__BackingField, 0, v11, v12);
   this->fields._ItemNeedNum_k__BackingField = 0;
   this->fields._IsItemGetInfoList_k__BackingField = 0;
   v13 = StringLiteral_1/*""*/;
   this->fields._ClosedMessage_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._ClosedMessage_k__BackingField, v13, v14, v15);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._ClosedMessage_k__BackingField, v13, v14, v15);
   this->fields._Type_k__BackingField = 0;
   this->fields._LinkAction_k__BackingField = 0;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._LinkAction_k__BackingField, 0, v16, v17);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._LinkAction_k__BackingField, 0, v16, v17);
   this->fields._IsFirst_k__BackingField = 0;
   v18 = StringLiteral_1/*""*/;
   this->fields._TransitionParam_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._TransitionParam_k__BackingField, v18, v19, v20);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._TransitionParam_k__BackingField, v18, v19, v20);
 }
 
 
@@ -171,7 +171,7 @@ void ItemLinkInfoListViewItem__set_ClosedMessage(
   const MethodInfo *v3; // x3
 
   this->fields._ClosedMessage_k__BackingField = value;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields._ClosedMessage_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -187,7 +187,7 @@ void ItemLinkInfoListViewItem__set_IconName(
   const MethodInfo *v3; // x3
 
   this->fields._IconName_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._IconName_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._IconName_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -244,7 +244,7 @@ void ItemLinkInfoListViewItem__set_ItemEnt(
   const MethodInfo *v3; // x3
 
   this->fields._ItemEnt_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._ItemEnt_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._ItemEnt_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -265,7 +265,7 @@ void ItemLinkInfoListViewItem__set_LinkAction(
   const MethodInfo *v3; // x3
 
   this->fields._LinkAction_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._LinkAction_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._LinkAction_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -277,7 +277,7 @@ void ItemLinkInfoListViewItem__set_Name(
   const MethodInfo *v3; // x3
 
   this->fields._Name_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -304,7 +304,7 @@ void ItemLinkInfoListViewItem__set_TransitionParam(
   const MethodInfo *v3; // x3
 
   this->fields._TransitionParam_k__BackingField = value;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields._TransitionParam_k__BackingField,
     (int32_t)value,
     (int32_t)method,

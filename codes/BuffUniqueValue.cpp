@@ -4,7 +4,7 @@ void BuffUniqueValue___ctor(BuffUniqueValue_o *this, const MethodInfo *method)
 }
 
 
-void BuffUniqueValue___ctor_45568032(
+void BuffUniqueValue___ctor_45707852(
         BuffUniqueValue_o *this,
         int32_t inBuffUniqueId,
         int32_t inGrantedUniqueId,

@@ -11,10 +11,10 @@ EventRandomMissionListViewItem_o *EventRandomMissionListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C218B6 & 1) == 0 )
+  if ( (byte_4C31F85 & 1) == 0 )
   {
-    sub_1C2D490(&EventRandomMissionListViewItem_TypeInfo);
-    byte_4C218B6 = 1;
+    sub_1C32C20(&EventRandomMissionListViewItem_TypeInfo);
+    byte_4C31F85 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -35,14 +35,13 @@ void EventRandomMissionListViewObject__ModifyBoardImage(
   EventRandomMissionListViewItemDraw_o *EventRandomMissionItemDraw; // x19
   const MethodInfo *v4; // x1
   EventRandomMissionListViewItem_o *Item; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x2
+  const MethodInfo *v6; // x2
 
   EventRandomMissionItemDraw = EventRandomMissionListViewObject__get_EventRandomMissionItemDraw(this, method);
   Item = EventRandomMissionListViewObject__GetItem(this, v4);
   if ( !Item || !EventRandomMissionItemDraw )
-    sub_1C2D6EC(Item, v6);
-  EventRandomMissionListViewItemDraw__ModifyBoardImage(EventRandomMissionItemDraw, Item->fields.bannerGroupId, v7);
+    sub_1C32E7C(Item);
+  EventRandomMissionListViewItemDraw__ModifyBoardImage(EventRandomMissionItemDraw, Item->fields.bannerGroupId, v6);
 }
 
 
@@ -56,13 +55,12 @@ void EventRandomMissionListViewObject__OnChangeAlphaAnim(
   __int64 naturalAligment; // x11
   struct ListViewManager_o *v7; // x20
   EventRandomMissionListViewItemDraw_o *EventRandomMissionItemDraw; // x0
-  __int64 v9; // x1
-  const MethodInfo *v10; // x2
+  const MethodInfo *v9; // x2
 
-  if ( (byte_4C218B7 & 1) == 0 )
+  if ( (byte_4C31F86 & 1) == 0 )
   {
-    sub_1C2D490(&EventRandomMissionListViewManager_TypeInfo);
-    byte_4C218B7 = 1;
+    sub_1C32C20(&EventRandomMissionListViewManager_TypeInfo);
+    byte_4C31F86 = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -87,11 +85,11 @@ void EventRandomMissionListViewObject__OnChangeAlphaAnim(
         }
         EventRandomMissionItemDraw = EventRandomMissionListViewObject__get_EventRandomMissionItemDraw(this, v4);
         if ( !EventRandomMissionItemDraw )
-          sub_1C2D6EC(0, v9);
+          sub_1C32E7C(0);
         EventRandomMissionListViewItemDraw__ChangeNextRewardIcon(
           EventRandomMissionItemDraw,
           (EventRandomMissionListViewManager_o *)v7,
-          v10);
+          v9);
       }
     }
   }
@@ -108,10 +106,10 @@ void EventRandomMissionListViewObject__OnClickRejectButton(
   struct ListViewManager_o *manager; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C218B9 & 1) == 0 )
+  if ( (byte_4C31F88 & 1) == 0 )
   {
-    sub_1C2D490(&EventRandomMissionListViewManager_TypeInfo);
-    byte_4C218B9 = 1;
+    sub_1C32C20(&EventRandomMissionListViewManager_TypeInfo);
+    byte_4C31F88 = 1;
   }
   Item = EventRandomMissionListViewObject__GetItem(this, method);
   if ( Item )
@@ -125,7 +123,7 @@ void EventRandomMissionListViewObject__OnClickRejectButton(
             manager->klass->_2.naturalAligment < (unsigned int)naturalAligment)
         || (EventRandomMissionListViewManager_c *)manager->klass->_2.typeHierarchy[naturalAligment - 1] != EventRandomMissionListViewManager_TypeInfo )
       {
-        sub_1C2D6EC(manager, v5);
+        sub_1C32E7C(manager);
       }
       EventRandomMissionListViewManager__ShowRejectDialog((EventRandomMissionListViewManager_o *)manager, v5, v4);
     }
@@ -142,10 +140,10 @@ void EventRandomMissionListViewObject__OnClickRewardIcon(
   struct ListViewManager_o *manager; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C218B8 & 1) == 0 )
+  if ( (byte_4C31F87 & 1) == 0 )
   {
-    sub_1C2D490(&EventRandomMissionListViewManager_TypeInfo);
-    byte_4C218B8 = 1;
+    sub_1C32C20(&EventRandomMissionListViewManager_TypeInfo);
+    byte_4C31F87 = 1;
   }
   Item = EventRandomMissionListViewObject__GetItem(this, method);
   if ( Item )
@@ -159,7 +157,7 @@ void EventRandomMissionListViewObject__OnClickRewardIcon(
             manager->klass->_2.naturalAligment < (unsigned int)naturalAligment)
         || (EventRandomMissionListViewManager_c *)manager->klass->_2.typeHierarchy[naturalAligment - 1] != EventRandomMissionListViewManager_TypeInfo )
       {
-        sub_1C2D6EC(manager, v4);
+        sub_1C32E7C(manager);
       }
       MissionListViewManager__ShowRewardDetailInfo((MissionListViewManager_o *)manager, v4, 0, 0);
     }
@@ -177,14 +175,13 @@ void EventRandomMissionListViewObject__Update(EventRandomMissionListViewObject_o
   __int64 v8; // x11
   struct ListViewManager_o *v9; // x21
   EventRandomMissionListViewItemDraw_o *EventRandomMissionItemDraw; // x0
-  __int64 v11; // x1
-  const MethodInfo *v12; // x3
+  const MethodInfo *v11; // x3
 
-  if ( (byte_4C218B5 & 1) == 0 )
+  if ( (byte_4C31F84 & 1) == 0 )
   {
-    sub_1C2D490(&EventRandomMissionListViewItem_TypeInfo);
-    sub_1C2D490(&EventRandomMissionListViewManager_TypeInfo);
-    byte_4C218B5 = 1;
+    sub_1C32C20(&EventRandomMissionListViewItem_TypeInfo);
+    sub_1C32C20(&EventRandomMissionListViewManager_TypeInfo);
+    byte_4C31F84 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -214,13 +211,13 @@ void EventRandomMissionListViewObject__Update(EventRandomMissionListViewObject_o
         }
         EventRandomMissionItemDraw = EventRandomMissionListViewObject__get_EventRandomMissionItemDraw(this, method);
         if ( !v9 || !EventRandomMissionItemDraw )
-          sub_1C2D6EC(EventRandomMissionItemDraw, v11);
+          sub_1C32E7C(EventRandomMissionItemDraw);
         EventRandomMissionListViewItemDraw__UpdateItem(
           EventRandomMissionItemDraw,
           v6,
           this->fields.dispMode,
           *((float *)&v9[1].klass + 1),
-          v12);
+          v11);
       }
     }
   }
@@ -234,10 +231,10 @@ EventRandomMissionListViewItemDraw_o *EventRandomMissionListViewObject__get_Even
   struct MissionListViewItemDraw_o *itemDraw; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C218B4 & 1) == 0 )
+  if ( (byte_4C31F83 & 1) == 0 )
   {
-    sub_1C2D490(&EventRandomMissionListViewItemDraw_TypeInfo);
-    byte_4C218B4 = 1;
+    sub_1C32C20(&EventRandomMissionListViewItemDraw_TypeInfo);
+    byte_4C31F83 = 1;
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )

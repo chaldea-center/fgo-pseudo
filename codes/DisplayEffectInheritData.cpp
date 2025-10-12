@@ -9,19 +9,19 @@ void DisplayEffectInheritData___ctor(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C29B0E & 1) == 0 )
+  if ( (byte_4C3A220 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__float___ctor__);
-    sub_1C2D490(&System_Collections_Generic_Dictionary_int__float__TypeInfo);
-    byte_4C29B0E = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__float___ctor__);
+    sub_1C32C20(&System_Collections_Generic_Dictionary_int__float__TypeInfo);
+    byte_4C3A220 = 1;
   }
   v7 = isSetNextPossibleTime;
-  v8 = (System_Collections_Generic_Dictionary_int__float__o *)sub_1C2D6DC(System_Collections_Generic_Dictionary_int__float__TypeInfo);
+  v8 = (System_Collections_Generic_Dictionary_int__float__o *)sub_1C32E6C(System_Collections_Generic_Dictionary_int__float__TypeInfo);
   System_Collections_Generic_Dictionary_int__float____ctor(
     v8,
-    (const MethodInfo_33FEFE8 *)Method_System_Collections_Generic_Dictionary_int__float___ctor__);
+    (const MethodInfo_340DA88 *)Method_System_Collections_Generic_Dictionary_int__float___ctor__);
   this->fields.popTiming = v8;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)v8, v9, v10);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)v8, v9, v10);
   this->fields.isSetNextPossibleTime = 1;
   this->fields._SideEffectTotalTime_k__BackingField = 1.25;
   System_Object___ctor((Il2CppObject *)this, 0);
@@ -37,8 +37,7 @@ void DisplayEffectInheritData__ChangeIntervalMatchCond(
 {
   struct ChangeEffectIntervalProcess_o *changeIntervalProc; // x0
   __int64 v5; // x0
-  __int64 v6; // x1
-  struct ChangeEffectIntervalProcess_o *v7; // x8
+  struct ChangeEffectIntervalProcess_o *v6; // x8
 
   changeIntervalProc = this->fields.changeIntervalProc;
   if ( changeIntervalProc )
@@ -49,10 +48,10 @@ void DisplayEffectInheritData__ChangeIntervalMatchCond(
            changeIntervalProc->klass->vtable._4_IsMatchCond.method);
     if ( (v5 & 1) != 0 )
     {
-      v7 = this->fields.changeIntervalProc;
-      if ( !v7 )
-        sub_1C2D6EC(v5, v6);
-      this->fields._EffectInterval_k__BackingField = v7->fields._Interval_k__BackingField;
+      v6 = this->fields.changeIntervalProc;
+      if ( !v6 )
+        sub_1C32E7C(v5);
+      this->fields._EffectInterval_k__BackingField = v6->fields._Interval_k__BackingField;
     }
   }
 }
@@ -63,35 +62,34 @@ float DisplayEffectInheritData__GetMaxInterval(DisplayEffectInheritData_o *this,
   System_Collections_Generic_Dictionary_int__float__o *popTiming; // x0
   System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *Values; // x0
 
-  if ( (byte_4C29B10 & 1) == 0 )
+  if ( (byte_4C3A222 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__float__get_Count__);
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__float__get_Values__);
-    byte_4C29B10 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__float__get_Count__);
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__float__get_Values__);
+    byte_4C3A222 = 1;
   }
   popTiming = this->fields.popTiming;
   if ( !popTiming )
     goto LABEL_8;
   if ( System_Collections_Generic_Dictionary_int__float___get_Count(
          popTiming,
-         (const MethodInfo_33FF668 *)Method_System_Collections_Generic_Dictionary_int__float__get_Count__) >= 1 )
+         (const MethodInfo_340E108 *)Method_System_Collections_Generic_Dictionary_int__float__get_Count__) >= 1 )
   {
     popTiming = this->fields.popTiming;
     if ( popTiming )
     {
       Values = System_Collections_Generic_Dictionary_int__float___get_Values(
                  popTiming,
-                 (const MethodInfo_33FF7C8 *)Method_System_Collections_Generic_Dictionary_int__float__get_Values__);
-      return System_Linq_Enumerable__Max_66460692((System_Collections_Generic_IEnumerable_float__o *)Values, 0);
+                 (const MethodInfo_340E268 *)Method_System_Collections_Generic_Dictionary_int__float__get_Values__);
+      return System_Linq_Enumerable__Max_66520628((System_Collections_Generic_IEnumerable_float__o *)Values, 0);
     }
 LABEL_8:
-    sub_1C2D6EC(popTiming, method);
+    sub_1C32E7C(popTiming);
   }
   return 0.0;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 float DisplayEffectInheritData__GetNextEffectDelay(
         DisplayEffectInheritData_o *this,
         int32_t targetId,
@@ -108,12 +106,12 @@ float DisplayEffectInheritData__GetNextEffectDelay(
   float time; // s0
   float value; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C29B0F & 1) == 0 )
+  if ( (byte_4C3A221 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__float__TryGetValue__);
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
-    sub_1C2D490(&Method_System_Collections_Generic_Dictionary_int__float__set_Item__);
-    byte_4C29B0F = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__float__TryGetValue__);
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
+    sub_1C32C20(&Method_System_Collections_Generic_Dictionary_int__float__set_Item__);
+    byte_4C3A221 = 1;
   }
   value = 0.0;
   popTiming = this->fields.popTiming;
@@ -123,7 +121,7 @@ float DisplayEffectInheritData__GetNextEffectDelay(
           popTiming,
           targetId,
           &value,
-          (const MethodInfo_3401060 *)Method_System_Collections_Generic_Dictionary_int__float__TryGetValue__);
+          (const MethodInfo_340FB00 *)Method_System_Collections_Generic_Dictionary_int__float__TryGetValue__);
   if ( svtData )
   {
     if ( !v14 )
@@ -147,7 +145,7 @@ float DisplayEffectInheritData__GetNextEffectDelay(
     popTiming,
     targetId,
     EffectInterval_k__BackingField + value,
-    (const MethodInfo_33FF9A0 *)Method_System_Collections_Generic_Dictionary_int__float__set_Item__);
+    (const MethodInfo_340E440 *)Method_System_Collections_Generic_Dictionary_int__float__set_Item__);
   if ( svtData && isSetNextTime && this->fields.isSetNextPossibleTime )
   {
     time = UnityEngine_Time__get_time(0);
@@ -158,11 +156,11 @@ float DisplayEffectInheritData__GetNextEffectDelay(
                                                 + System_Collections_Generic_Dictionary_int__float___get_Item(
                                                     popTiming,
                                                     targetId,
-                                                    (const MethodInfo_33FF918 *)Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
+                                                    (const MethodInfo_340E3B8 *)Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
       return value;
     }
 LABEL_17:
-    sub_1C2D6EC(popTiming, *(_QWORD *)&targetId);
+    sub_1C32E7C(popTiming);
   }
   return value;
 }
@@ -176,7 +174,17 @@ void DisplayEffectInheritData__SetChangeEffectIntervalProcess(
   const MethodInfo *v3; // x3
 
   this->fields.changeIntervalProc = changeProc;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.changeIntervalProc, (int32_t)changeProc, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.changeIntervalProc, (int32_t)changeProc, (int32_t)method, v3);
+}
+
+
+DisplayEffectInheritData_o *DisplayEffectInheritData__SetIsNotShowProcess(
+        DisplayEffectInheritData_o *this,
+        bool isNotShowEffectProcess,
+        const MethodInfo *method)
+{
+  this->fields._IsNotShowEffectProcess_k__BackingField = isNotShowEffectProcess;
+  return this;
 }
 
 
@@ -196,6 +204,12 @@ float DisplayEffectInheritData__get_EffectInterval(DisplayEffectInheritData_o *t
 }
 
 
+bool DisplayEffectInheritData__get_IsNotShowEffectProcess(DisplayEffectInheritData_o *this, const MethodInfo *method)
+{
+  return this->fields._IsNotShowEffectProcess_k__BackingField;
+}
+
+
 float DisplayEffectInheritData__get_SideEffectTotalTime(DisplayEffectInheritData_o *this, const MethodInfo *method)
 {
   return this->fields._SideEffectTotalTime_k__BackingField;
@@ -208,6 +222,15 @@ void DisplayEffectInheritData__set_EffectInterval(
         const MethodInfo *method)
 {
   this->fields._EffectInterval_k__BackingField = value;
+}
+
+
+void DisplayEffectInheritData__set_IsNotShowEffectProcess(
+        DisplayEffectInheritData_o *this,
+        bool value,
+        const MethodInfo *method)
+{
+  this->fields._IsNotShowEffectProcess_k__BackingField = value;
 }
 
 

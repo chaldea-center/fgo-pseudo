@@ -14,23 +14,23 @@ void GrandServantListMenu__Initialize(
   struct GrandServantListMenuLayout_o **p_menu; // x22
   UnityEngine_Object_o *menu; // x23
   AssetData_o *AssetStorage; // x0
-  __int64 v10; // x1
-  System_String_o **v11; // x8
-  Il2CppObject *Object_object__51051712; // x23
+  System_String_o **v10; // x8
+  Il2CppObject *Object_object__51111776; // x23
   UnityEngine_Transform_o *transform; // x24
+  Il2CppObject *Component_object; // x0
 
   v4 = displayKind;
-  if ( (byte_4C220DF & 1) == 0 )
+  if ( (byte_4C327AE & 1) == 0 )
   {
-    sub_1C2D490(&Method_AssetData_GetObject_GameObject____77994080);
-    sub_1C2D490(&AssetManager_TypeInfo);
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_GrandServantListMenuLayout___);
-    sub_1C2D490(&Method_UnityEngine_Object_Instantiate_GameObject____78081576);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_7157/*"GrandServantListMenuLayoutSupport"*/);
-    sub_1C2D490(&StringLiteral_7154/*"GrandServantList"*/);
-    sub_1C2D490(&StringLiteral_7156/*"GrandServantListMenuLayout"*/);
-    byte_4C220DF = 1;
+    sub_1C32C20(&Method_AssetData_GetObject_GameObject____78059392);
+    sub_1C32C20(&AssetManager_TypeInfo);
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_GrandServantListMenuLayout___);
+    sub_1C32C20(&Method_UnityEngine_Object_Instantiate_GameObject____78147088);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_7162/*"GrandServantListMenuLayoutSupport"*/);
+    sub_1C32C20(&StringLiteral_7159/*"GrandServantList"*/);
+    sub_1C32C20(&StringLiteral_7161/*"GrandServantListMenuLayout"*/);
+    byte_4C327AE = 1;
   }
   p_menu = &this->fields.menu;
   menu = (UnityEngine_Object_o *)this->fields.menu;
@@ -40,32 +40,33 @@ void GrandServantListMenu__Initialize(
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_7154/*"GrandServantList"*/, 0);
+    AssetStorage = AssetManager__getAssetStorage((System_String_o *)StringLiteral_7159/*"GrandServantList"*/, 0);
     if ( !AssetStorage )
       goto LABEL_16;
-    v11 = (System_String_o **)&StringLiteral_7156/*"GrandServantListMenuLayout"*/;
+    v10 = (System_String_o **)&StringLiteral_7161/*"GrandServantListMenuLayout"*/;
     if ( (_BYTE)v4 )
-      v11 = (System_String_o **)&StringLiteral_7157/*"GrandServantListMenuLayoutSupport"*/;
-    Object_object__51051712 = AssetData__GetObject_object__51051712(
+      v10 = (System_String_o **)&StringLiteral_7162/*"GrandServantListMenuLayoutSupport"*/;
+    Object_object__51111776 = AssetData__GetObject_object__51111776(
                                 AssetStorage,
-                                *v11,
-                                (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_GameObject____77994080);
+                                *v10,
+                                (const MethodInfo_30BE760 *)Method_AssetData_GetObject_GameObject____78059392);
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    AssetStorage = (AssetData_o *)UnityEngine_Object__Instantiate_object__51752420(
-                                    Object_object__51051712,
+    AssetStorage = (AssetData_o *)UnityEngine_Object__Instantiate_object__51812484(
+                                    Object_object__51111776,
                                     transform,
-                                    (const MethodInfo_315ADE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78081576);
+                                    (const MethodInfo_3169884 *)Method_UnityEngine_Object_Instantiate_GameObject____78147088);
     if ( !AssetStorage
-      || (*p_menu = (struct GrandServantListMenuLayout_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                             (UnityEngine_GameObject_o *)AssetStorage,
-                                                             (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_GrandServantListMenuLayout___),
-          sub_1C2D434(&this->fields.menu),
+      || (Component_object = UnityEngine_GameObject__GetComponent_object_(
+                               (UnityEngine_GameObject_o *)AssetStorage,
+                               (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_GrandServantListMenuLayout___),
+          *p_menu = (struct GrandServantListMenuLayout_o *)Component_object,
+          sub_1C32BC4(&this->fields.menu, Component_object),
           (AssetStorage = (AssetData_o *)*p_menu) == 0) )
     {
 LABEL_16:
-      sub_1C2D6EC(AssetStorage, v10);
+      sub_1C32E7C(AssetStorage);
     }
     ((void (__fastcall *)(AssetData_o *, PlayMakerFSM_o *, struct GrandServantListItemDraw_o *, _QWORD, void *))AssetStorage->klass[1]._1.image)(
       AssetStorage,
@@ -86,7 +87,7 @@ void GrandServantListMenu__Modify(
 
   menu = this->fields.menu;
   if ( !menu )
-    sub_1C2D6EC(0, grandServantListData);
+    sub_1C32E7C(0);
   ((void (__fastcall *)(struct GrandServantListMenuLayout_o *, GrandServantListData_o *, const MethodInfo *))menu->klass->vtable._6_UpdateView.methodPtr)(
     menu,
     grandServantListData,
@@ -103,7 +104,7 @@ void GrandServantListMenu__Open(
 
   menu = this->fields.menu;
   if ( !menu )
-    sub_1C2D6EC(0, grandServantListData);
+    sub_1C32E7C(0);
   ((void (__fastcall *)(struct GrandServantListMenuLayout_o *, GrandServantListData_o *, const MethodInfo *))menu->klass->vtable._6_UpdateView.methodPtr)(
     menu,
     grandServantListData,
@@ -116,14 +117,13 @@ void GrandServantListMenu__Release(GrandServantListMenu_o *this, const MethodInf
   struct GrandServantListMenuLayout_o **p_menu; // x19
   UnityEngine_Object_o *v4; // x20
   struct GrandServantListMenuLayout_o *menu; // t1
-  __int64 v6; // x1
-  UnityEngine_Component_o *v7; // x0
+  UnityEngine_Component_o *v6; // x0
   UnityEngine_Object_o *gameObject; // x20
 
-  if ( (byte_4C220E0 & 1) == 0 )
+  if ( (byte_4C327AF & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C220E0 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C327AF = 1;
   }
   menu = this->fields.menu;
   p_menu = &this->fields.menu;
@@ -132,21 +132,21 @@ void GrandServantListMenu__Release(GrandServantListMenu_o *this, const MethodInf
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(v4, 0, 0) )
   {
-    v7 = (UnityEngine_Component_o *)*p_menu;
+    v6 = (UnityEngine_Component_o *)*p_menu;
     if ( !*p_menu
-      || (((void (__fastcall *)(UnityEngine_Component_o *, const char *))v7->klass[1]._1.name)(
-            v7,
-            v7->klass[1]._1.namespaze),
-          (v7 = (UnityEngine_Component_o *)*p_menu) == 0) )
+      || (((void (__fastcall *)(UnityEngine_Component_o *, const char *))v6->klass[1]._1.name)(
+            v6,
+            v6->klass[1]._1.namespaze),
+          (v6 = (UnityEngine_Component_o *)*p_menu) == 0) )
     {
-      sub_1C2D6EC(v7, v6);
+      sub_1C32E7C(v6);
     }
-    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v7, 0);
+    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v6, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71163704(gameObject, 0);
+    UnityEngine_Object__Destroy_71223640(gameObject, 0);
     *p_menu = 0;
-    sub_1C2D434(p_menu);
+    sub_1C32BC4(p_menu, 0);
   }
 }
 
@@ -157,6 +157,6 @@ void GrandServantListMenu__SetItemSlotActive(GrandServantListMenu_o *this, bool 
 
   menu = this->fields.menu;
   if ( !menu )
-    sub_1C2D6EC(0, value);
+    sub_1C32E7C(0);
   GrandServantListMenuLayout__SetItemSlotActive(menu, value, method);
 }

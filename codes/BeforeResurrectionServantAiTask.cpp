@@ -15,9 +15,19 @@ bool BeforeResurrectionServantAiTask__IsActable(
         BattleLogic_o *logic,
         const MethodInfo *method)
 {
-  BattleLogicReaction_o *logicReaction; // x8
+  const MethodInfo *v3; // x4
+  BeforeResurrectionServantAiTask_o *v4; // x8
+  BattleServantData_o *svtData; // x1
+  BattleBuffData_BuffData_o *gutsBuff; // [xsp+8h] [xbp-8h] BYREF
 
-  if ( !logic || (logicReaction = logic->fields.logicReaction) == 0 )
-    sub_1C2D6EC(this, logic);
-  return BattleLogicReaction__CheckExecutableResurrection(logicReaction, this->fields.svtData, 0);
+  if ( !logic || (v4 = this, (this = (BeforeResurrectionServantAiTask_o *)logic->fields.logicReaction) == 0) )
+    sub_1C32E7C(this);
+  svtData = v4->fields.svtData;
+  gutsBuff = 0;
+  return BattleLogicReaction__CheckExecutableResurrection_46800520(
+           (BattleLogicReaction_o *)this,
+           svtData,
+           &gutsBuff,
+           1,
+           v3);
 }

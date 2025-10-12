@@ -39,38 +39,37 @@ void BattleBuffConfWindowComponent__setData(
         const MethodInfo *method)
 {
   DataManager_o *Instance; // x0
-  __int64 v6; // x1
-  DataManager_o *v7; // x21
+  DataManager_o *v6; // x21
 
-  if ( (byte_4C2A6A0 & 1) == 0 )
+  if ( (byte_4C3ADBD & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_BuffMaster___);
-    sub_1C2D490(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C2A6A0 = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_BuffMaster___);
+    sub_1C32C20(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3ADBD = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_BuffMaster___);
+                                (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_BuffMaster___);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 buffId,
-                                (const MethodInfo_3387D98 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                (const MethodInfo_3396838 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
   this->fields.buffId = buffId;
   if ( !Instance
-    || (v7 = Instance, (Instance = (DataManager_o *)this->fields.buffIcon) == 0)
-    || (BattleServantBuffIconComponent__setIcon((BattleServantBuffIconComponent_o *)Instance, v7->fields.m_CachedPtr, 0),
+    || (v6 = Instance, (Instance = (DataManager_o *)this->fields.buffIcon) == 0)
+    || (BattleServantBuffIconComponent__setIcon((BattleServantBuffIconComponent_o *)Instance, v6->fields.m_CachedPtr, 0),
         (Instance = (DataManager_o *)this->fields.nameLabel) == 0)
-    || (UILabel__set_text((UILabel_o *)Instance, (System_String_o *)v7->fields.m_CancellationTokenSource, 0),
+    || (UILabel__set_text((UILabel_o *)Instance, (System_String_o *)v6->fields.m_CancellationTokenSource, 0),
         (Instance = (DataManager_o *)this->fields.detailLabel) == 0) )
   {
 LABEL_10:
-    sub_1C2D6EC(Instance, v6);
+    sub_1C32E7C(Instance);
   }
-  UILabel__set_text((UILabel_o *)Instance, *(System_String_o **)&v7->fields._DispLog, 0);
+  UILabel__set_text((UILabel_o *)Instance, *(System_String_o **)&v6->fields._DispLog, 0);
 }

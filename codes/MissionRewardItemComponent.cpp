@@ -3,14 +3,14 @@ void MissionRewardItemComponent___cctor(const MethodInfo *method)
   int32_t v1; // w2
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C2A538 & 1) == 0 )
+  if ( (byte_4C3AC25 & 1) == 0 )
   {
-    sub_1C2D490(&MissionRewardItemComponent_TypeInfo);
-    sub_1C2D490(&StringLiteral_20558/*"img_shopbg04"*/);
-    byte_4C2A538 = 1;
+    sub_1C32C20(&MissionRewardItemComponent_TypeInfo);
+    sub_1C32C20(&StringLiteral_20570/*"img_shopbg04"*/);
+    byte_4C3AC25 = 1;
   }
-  MissionRewardItemComponent_TypeInfo->static_fields->BaseSpriteDefaultName = (struct System_String_o *)StringLiteral_20558/*"img_shopbg04"*/;
-  sub_1C2D434((CGThumbnailListItem_o *)MissionRewardItemComponent_TypeInfo->static_fields, StringLiteral_20558/*"img_shopbg04"*/, v1, v2);
+  MissionRewardItemComponent_TypeInfo->static_fields->BaseSpriteDefaultName = (struct System_String_o *)StringLiteral_20570/*"img_shopbg04"*/;
+  sub_1C32BC4((CGThumbnailListItem_o *)MissionRewardItemComponent_TypeInfo->static_fields, StringLiteral_20570/*"img_shopbg04"*/, v1, v2);
 }
 
 
@@ -25,19 +25,18 @@ void MissionRewardItemComponent__Awake(MissionRewardItemComponent_o *this, const
 {
   UnityEngine_Object_o *baseSp; // x20
   UIAtlas_o *object; // x0
-  __int64 v5; // x1
-  struct UISprite_o *v6; // x8
+  struct UISprite_o *v5; // x8
   UnityEngine_Object_o *mAtlas; // x20
+  UISprite_o *v7; // x20
   UISprite_o *v8; // x20
-  UISprite_o *v9; // x20
 
-  if ( (byte_4C2A534 & 1) == 0 )
+  if ( (byte_4C3AC21 & 1) == 0 )
   {
-    sub_1C2D490(&MissionRewardItemComponent_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&Method_UnityEngine_Resources_Load_UIAtlas___);
-    sub_1C2D490(&StringLiteral_12841/*"Shop/Atlas/ShopAtlas"*/);
-    byte_4C2A534 = 1;
+    sub_1C32C20(&MissionRewardItemComponent_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&Method_UnityEngine_Resources_Load_UIAtlas___);
+    sub_1C32C20(&StringLiteral_12845/*"Shop/Atlas/ShopAtlas"*/);
+    byte_4C3AC21 = 1;
   }
   baseSp = (UnityEngine_Object_o *)this->fields.baseSp;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -45,28 +44,28 @@ void MissionRewardItemComponent__Awake(MissionRewardItemComponent_o *this, const
   object = (UIAtlas_o *)UnityEngine_Object__op_Inequality(baseSp, 0, 0);
   if ( ((unsigned __int8)object & 1) != 0 )
   {
-    v6 = this->fields.baseSp;
-    if ( !v6 )
+    v5 = this->fields.baseSp;
+    if ( !v5 )
       goto LABEL_17;
-    mAtlas = (UnityEngine_Object_o *)v6->fields.mAtlas;
+    mAtlas = (UnityEngine_Object_o *)v5->fields.mAtlas;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Equality(mAtlas, 0, 0) )
     {
-      v8 = this->fields.baseSp;
+      v7 = this->fields.baseSp;
       object = (UIAtlas_o *)UnityEngine_Resources__Load_object_(
-                              (System_String_o *)StringLiteral_12841/*"Shop/Atlas/ShopAtlas"*/,
-                              (const MethodInfo_316AF08 *)Method_UnityEngine_Resources_Load_UIAtlas___);
-      if ( v8 )
+                              (System_String_o *)StringLiteral_12845/*"Shop/Atlas/ShopAtlas"*/,
+                              (const MethodInfo_31799A8 *)Method_UnityEngine_Resources_Load_UIAtlas___);
+      if ( v7 )
       {
-        UISprite__set_atlas(v8, object, 0);
-        v9 = this->fields.baseSp;
+        UISprite__set_atlas(v7, object, 0);
+        v8 = this->fields.baseSp;
         object = (UIAtlas_o *)MissionRewardItemComponent_TypeInfo;
         if ( !MissionRewardItemComponent_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(MissionRewardItemComponent_TypeInfo);
-        if ( v9 )
+        if ( v8 )
         {
-          UISprite__set_spriteName(v9, MissionRewardItemComponent_TypeInfo->static_fields->BaseSpriteDefaultName, 0);
+          UISprite__set_spriteName(v8, MissionRewardItemComponent_TypeInfo->static_fields->BaseSpriteDefaultName, 0);
           object = (UIAtlas_o *)this->fields.baseSp;
           if ( object )
           {
@@ -78,7 +77,7 @@ void MissionRewardItemComponent__Awake(MissionRewardItemComponent_o *this, const
         }
       }
 LABEL_17:
-      sub_1C2D6EC(object, v5);
+      sub_1C32E7C(object);
     }
   }
 }
@@ -96,10 +95,10 @@ void MissionRewardItemComponent__Clear(MissionRewardItemComponent_o *this, const
 {
   UnityEngine_GameObject_o *baseObject; // x0
 
-  if ( (byte_4C2A536 & 1) == 0 )
+  if ( (byte_4C3AC23 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C2A536 = 1;
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C3AC23 = 1;
   }
   baseObject = this->fields.baseObject;
   if ( !baseObject
@@ -110,7 +109,7 @@ void MissionRewardItemComponent__Clear(MissionRewardItemComponent_o *this, const
     || (UILabel__set_text((UILabel_o *)baseObject, (System_String_o *)StringLiteral_1/*""*/, 0),
         (baseObject = (UnityEngine_GameObject_o *)this->fields.textLabel) == 0) )
   {
-    sub_1C2D6EC(baseObject, method);
+    sub_1C32E7C(baseObject);
   }
   UILabel__set_text((UILabel_o *)baseObject, (System_String_o *)StringLiteral_1/*""*/, 0);
 }
@@ -119,23 +118,22 @@ void MissionRewardItemComponent__Clear(MissionRewardItemComponent_o *this, const
 void MissionRewardItemComponent__OnDestroy(MissionRewardItemComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *baseSp; // x20
-  __int64 v4; // x1
-  UISprite_o *v5; // x0
+  UISprite_o *v4; // x0
 
-  if ( (byte_4C2A535 & 1) == 0 )
+  if ( (byte_4C3AC22 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2A535 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3AC22 = 1;
   }
   baseSp = (UnityEngine_Object_o *)this->fields.baseSp;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(baseSp, 0, 0) )
   {
-    v5 = this->fields.baseSp;
-    if ( !v5 )
-      sub_1C2D6EC(0, v4);
-    UISprite__set_atlas(v5, 0, 0);
+    v4 = this->fields.baseSp;
+    if ( !v4 )
+      sub_1C32E7C(0);
+    UISprite__set_atlas(v4, 0, 0);
   }
 }
 
@@ -150,10 +148,10 @@ void MissionRewardItemComponent__Set(
   UnityEngine_GameObject_o *baseObject; // x0
   UILabel_o *dataLabel; // x20
 
-  if ( (byte_4C2A537 & 1) == 0 )
+  if ( (byte_4C3AC24 & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    byte_4C2A537 = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    byte_4C3AC24 = 1;
   }
   if ( itemId < 1 )
   {
@@ -203,7 +201,7 @@ void MissionRewardItemComponent__Set(
     baseObject = (UnityEngine_GameObject_o *)LocalizationManager__GetNumberFormat(num, 0);
     if ( !dataLabel )
 LABEL_19:
-      sub_1C2D6EC(baseObject, *(_QWORD *)&itemId);
+      sub_1C32E7C(baseObject);
     UILabel__set_text(dataLabel, (System_String_o *)baseObject, 0);
   }
 }
@@ -219,7 +217,7 @@ void MissionRewardItemComponent__SetItemIconOffsetX(
 
   itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
   if ( !itemIcon )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   gameObject = UnityEngine_Component__get_gameObject(itemIcon, 0);
   GameObjectExtensions__SetLocalPositionX(gameObject, this->fields.iconBaseDefaultPosX + x, 0);
 }
@@ -235,7 +233,7 @@ void MissionRewardItemComponent__SetItemIconOffsetY(
 
   itemIcon = (UnityEngine_Component_o *)this->fields.itemIcon;
   if ( !itemIcon )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   gameObject = UnityEngine_Component__get_gameObject(itemIcon, 0);
   GameObjectExtensions__SetLocalPositionY(gameObject, this->fields.iconBaseDefaultPosY + y, 0);
 }
@@ -250,6 +248,6 @@ void MissionRewardItemComponent__SetScaleItemIcon(
 
   itemIcon = this->fields.itemIcon;
   if ( !itemIcon )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   ItemIconComponent__setLocalScaleIconSprite(itemIcon, scale, 0);
 }

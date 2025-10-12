@@ -16,14 +16,14 @@ void WarBoardServantEquipSimpleDialogComponent___ctor(
   int32_t v14; // w2
   const MethodInfo *v15; // x3
 
-  if ( (byte_4C2503C & 1) == 0 )
+  if ( (byte_4C35711 & 1) == 0 )
   {
-    sub_1C2D490(&BalanceConfig_TypeInfo);
-    sub_1C2D490(&BaseDialog_TypeInfo);
-    sub_1C2D490(&UnityEngine_GameObject___TypeInfo);
-    sub_1C2D490(&SkillIconComponent___TypeInfo);
-    sub_1C2D490(&UILabel___TypeInfo);
-    byte_4C2503C = 1;
+    sub_1C32C20(&BalanceConfig_TypeInfo);
+    sub_1C32C20(&BaseDialog_TypeInfo);
+    sub_1C32C20(&UnityEngine_GameObject___TypeInfo);
+    sub_1C32C20(&SkillIconComponent___TypeInfo);
+    sub_1C32C20(&UILabel___TypeInfo);
+    byte_4C35711 = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -31,26 +31,26 @@ void WarBoardServantEquipSimpleDialogComponent___ctor(
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v3 = BalanceConfig_TypeInfo;
   }
-  v4 = (struct UnityEngine_GameObject_array *)sub_1C2D538(
+  v4 = (struct UnityEngine_GameObject_array *)sub_1C32CC8(
                                                 UnityEngine_GameObject___TypeInfo,
                                                 (unsigned int)v3->static_fields->SvtEquipSkillListMax);
   this->fields.skillBaseList = v4;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.skillBaseList, (int32_t)v4, v5, v6);
-  v7 = (struct SkillIconComponent_array *)sub_1C2D538(
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.skillBaseList, (int32_t)v4, v5, v6);
+  v7 = (struct SkillIconComponent_array *)sub_1C32CC8(
                                             SkillIconComponent___TypeInfo,
                                             (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtEquipSkillListMax);
   this->fields.equipSkillSpriteList = v7;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.equipSkillSpriteList, (int32_t)v7, v8, v9);
-  v10 = (struct UILabel_array *)sub_1C2D538(
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipSkillSpriteList, (int32_t)v7, v8, v9);
+  v10 = (struct UILabel_array *)sub_1C32CC8(
                                   UILabel___TypeInfo,
                                   (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtEquipSkillListMax);
   this->fields.equipSkillNameLabelList = v10;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.equipSkillNameLabelList, (int32_t)v10, v11, v12);
-  v13 = (struct UILabel_array *)sub_1C2D538(
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipSkillNameLabelList, (int32_t)v10, v11, v12);
+  v13 = (struct UILabel_array *)sub_1C32CC8(
                                   UILabel___TypeInfo,
                                   (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtEquipSkillListMax);
   this->fields.equipSkillDetailLabelList = v13;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.equipSkillDetailLabelList, (int32_t)v13, v14, v15);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.equipSkillDetailLabelList, (int32_t)v13, v14, v15);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -62,27 +62,26 @@ void WarBoardServantEquipSimpleDialogComponent__EndClose(
         const MethodInfo *method)
 {
   WarBoardManager_o *Instance; // x0
-  __int64 v4; // x1
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4C2503A & 1) == 0 )
+  if ( (byte_4C3570F & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4C2503A = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4C3570F = 1;
   }
-  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance
     || (WarBoardManager__SetMapTouchEnable(Instance, 1, 0, 0),
         (Instance = (WarBoardManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C2D6EC(Instance, v4);
+    sub_1C32E7C(Instance);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__DestroyImmediate_71163892(gameObject, 0);
+  UnityEngine_Object__DestroyImmediate_71223828(gameObject, 0);
 }
 
 
@@ -91,14 +90,13 @@ void WarBoardServantEquipSimpleDialogComponent__Init(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v4; // x1
   UILabel_o *closeButtonLabel; // x20
 
-  if ( (byte_4C25036 & 1) == 0 )
+  if ( (byte_4C3570B & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_3678/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4C25036 = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4C3570B = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -108,10 +106,10 @@ void WarBoardServantEquipSimpleDialogComponent__Init(
   closeButtonLabel = this->fields.closeButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !closeButtonLabel )
 LABEL_8:
-    sub_1C2D6EC(gameObject, v4);
+    sub_1C32E7C(gameObject);
   UILabel__set_text(closeButtonLabel, (System_String_o *)gameObject, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
@@ -125,22 +123,22 @@ void WarBoardServantEquipSimpleDialogComponent__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C25039 & 1) == 0 )
+  if ( (byte_4C3570E & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_WarBoardServantEquipSimpleDialogComponent_OnClickClose__);
-    sub_1C2D490(&Method_WarBoardServantEquipSimpleDialogComponent__OnClickClose_b__11_0__);
-    byte_4C25039 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_WarBoardServantEquipSimpleDialogComponent_OnClickClose__);
+    sub_1C32C20(&Method_WarBoardServantEquipSimpleDialogComponent__OnClickClose_b__11_0__);
+    byte_4C3570E = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 0;
     v3 = Method_WarBoardServantEquipSimpleDialogComponent_OnClickClose__;
     if ( (*((_BYTE *)Method_WarBoardServantEquipSimpleDialogComponent_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_WarBoardServantEquipSimpleDialogComponent_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_WarBoardServantEquipSimpleDialogComponent_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -160,20 +158,20 @@ void WarBoardServantEquipSimpleDialogComponent__OpenFinish(
   __int64 v5; // x0
   WarBoardManager_o *v6; // x0
 
-  if ( (byte_4C25038 & 1) == 0 )
+  if ( (byte_4C3570D & 1) == 0 )
   {
-    sub_1C2D490(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
-    byte_4C25038 = 1;
+    sub_1C32C20(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
+    byte_4C3570D = 1;
   }
   v4 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-    v4 = sub_1C7DBA4(v2);
+    v4 = sub_1C83334(v2);
   v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
   if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1C7DBA4(v2);
+    v5 = sub_1C83334(v2);
   v6 = **(WarBoardManager_o ***)(v5 + 184);
   if ( !v6 )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   WarBoardManager__SetTouchBlock(v6, 0, 0, 0);
   this->fields.state = 2;
 }
@@ -240,21 +238,21 @@ void WarBoardServantEquipSimpleDialogComponent__SetUp(
   SkillLvEntity_o *entity; // [xsp+28h] [xbp-68h] BYREF
 
   v4 = this;
-  if ( (byte_4C25037 & 1) == 0 )
+  if ( (byte_4C3570C & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMasterData_SkillLvMaster___);
-    sub_1C2D490(&Method_DataManager_GetMasterData_SkillMaster___);
-    sub_1C2D490(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1C2D490(&Method_WarBoardServantEquipSimpleDialogComponent_SetUp__);
-    sub_1C2D490(&Method_WarBoardServantEquipSimpleDialogComponent__SetUp_b__9_0__);
-    sub_1C2D490(&StringLiteral_25078/*"{0}"*/);
-    this = (WarBoardServantEquipSimpleDialogComponent_o *)sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C25037 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMasterData_SkillLvMaster___);
+    sub_1C32C20(&Method_DataManager_GetMasterData_SkillMaster___);
+    sub_1C32C20(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_1C32C20(&Method_WarBoardServantEquipSimpleDialogComponent_SetUp__);
+    sub_1C32C20(&Method_WarBoardServantEquipSimpleDialogComponent__SetUp_b__9_0__);
+    sub_1C32C20(&StringLiteral_25096/*"{0}"*/);
+    this = (WarBoardServantEquipSimpleDialogComponent_o *)sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C3570C = 1;
   }
   v56 = 0;
   entity = 0;
@@ -357,18 +355,18 @@ void WarBoardServantEquipSimpleDialogComponent__SetUp(
     }
     if ( bsvtData )
     {
-      this = (WarBoardServantEquipSimpleDialogComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      this = (WarBoardServantEquipSimpleDialogComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
         goto LABEL_106;
       MasterData_object = DataManager__GetMasterData_object_(
                             (DataManager_o *)this,
-                            (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_SkillMaster___);
-      this = (WarBoardServantEquipSimpleDialogComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                            (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SkillMaster___);
+      this = (WarBoardServantEquipSimpleDialogComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
         goto LABEL_106;
       this = (WarBoardServantEquipSimpleDialogComponent_o *)DataManager__GetMasterData_object_(
                                                               (DataManager_o *)this,
-                                                              (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_SkillLvMaster___);
+                                                              (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SkillLvMaster___);
       equipList = bsvtData->fields.equipList;
       if ( !equipList )
         goto LABEL_106;
@@ -435,7 +433,7 @@ void WarBoardServantEquipSimpleDialogComponent__SetUp(
                                                                             (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                                                                             &v56,
                                                                             v34,
-                                                                            (const MethodInfo_3387DE4 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+                                                                            (const MethodInfo_3396884 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
                     if ( ((unsigned __int8)this & 1) != 0 )
                     {
                       klass = v55[5].klass;
@@ -449,7 +447,7 @@ void WarBoardServantEquipSimpleDialogComponent__SetUp(
                       v37 = (UILabel_o *)*((_QWORD *)&klass->_1.byval_arg.data + v31);
                       Name = (Il2CppObject *)SkillEntity__getName((SkillEntity_o *)v56, 0);
                       this = (WarBoardServantEquipSimpleDialogComponent_o *)System_String__Format(
-                                                                              (System_String_o *)StringLiteral_25078/*"{0}"*/,
+                                                                              (System_String_o *)StringLiteral_25096/*"{0}"*/,
                                                                               Name,
                                                                               0);
                       if ( !v37 )
@@ -467,7 +465,7 @@ void WarBoardServantEquipSimpleDialogComponent__SetUp(
                       this = (WarBoardServantEquipSimpleDialogComponent_o *)entity;
                       if ( !entity )
                         goto LABEL_106;
-                      this = (WarBoardServantEquipSimpleDialogComponent_o *)SkillLvEntity__getDetail_42645656(
+                      this = (WarBoardServantEquipSimpleDialogComponent_o *)SkillLvEntity__getDetail_42778376(
                                                                               entity,
                                                                               v35,
                                                                               0,
@@ -509,27 +507,27 @@ void WarBoardServantEquipSimpleDialogComponent__SetUp(
             goto LABEL_90;
         }
 LABEL_107:
-        sub_1C2D6F4(this, bsvtData, method);
+        sub_1C32E84(this);
       }
       v22 = 0;
 LABEL_90:
       v46 = Method_WarBoardServantEquipSimpleDialogComponent_SetUp__;
       if ( (*((_BYTE *)Method_WarBoardServantEquipSimpleDialogComponent_SetUp__ + 83) & 2) != 0 )
-        v46 = (_QWORD *)sub_1C2D4A8(Method_WarBoardServantEquipSimpleDialogComponent_SetUp__);
-      v47 = (System_Reflection_MethodBase_o *)sub_1C2D474(v46, v46[4]);
+        v46 = (_QWORD *)sub_1C32C38(Method_WarBoardServantEquipSimpleDialogComponent_SetUp__);
+      v47 = (System_Reflection_MethodBase_o *)sub_1C32C04(v46, v46[4]);
       if ( (v22 & 1) != 0 )
       {
         OverwriteAssetSoundName__PlaySystemSe(v47, 0, 0, 0);
-        this = (WarBoardServantEquipSimpleDialogComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+        this = (WarBoardServantEquipSimpleDialogComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
         if ( this )
         {
           WarBoardManager__SetMapTouchEnable((WarBoardManager_o *)this, 0, 0, 0);
           v49 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
           if ( (*(_BYTE *)(v49 + 309) & 1) == 0 )
-            v49 = sub_1C7DBA4(v48);
+            v49 = sub_1C83334(v48);
           v50 = *(_QWORD *)(*(_QWORD *)(v49 + 192) + 16LL);
           if ( (*(_BYTE *)(v50 + 309) & 1) == 0 )
-            v50 = sub_1C7DBA4(v48);
+            v50 = sub_1C83334(v48);
           this = **(WarBoardServantEquipSimpleDialogComponent_o ***)(v50 + 184);
           if ( this )
           {
@@ -539,19 +537,19 @@ LABEL_90:
             {
               UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
               LODWORD(v55[6].klass) = 1;
-              v51 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+              v51 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
               System_Action___ctor(
                 v51,
                 (Il2CppObject *)v55,
                 Method_WarBoardServantEquipSimpleDialogComponent__SetUp_b__9_0__,
                 0);
-              BaseDialog__Open((BaseDialog_o *)v55, v51, 0, 0);
+              BaseDialog__Open((BaseDialog_o *)v55, v51, 0, 0, 0);
               return;
             }
           }
         }
 LABEL_106:
-        sub_1C2D6EC(this, bsvtData);
+        sub_1C32E7C(this);
       }
       OverwriteAssetSoundName__PlaySystemSe(v47, 2, 0, 0);
       gameObject = UnityEngine_Component__get_gameObject(v55, 0);
@@ -561,8 +559,8 @@ LABEL_106:
     {
       v42 = Method_WarBoardServantEquipSimpleDialogComponent_SetUp__;
       if ( (*((_BYTE *)Method_WarBoardServantEquipSimpleDialogComponent_SetUp__ + 83) & 2) != 0 )
-        v42 = (_QWORD *)sub_1C2D4A8(Method_WarBoardServantEquipSimpleDialogComponent_SetUp__);
-      v43 = (System_Reflection_MethodBase_o *)sub_1C2D474(v42, v42[4]);
+        v42 = (_QWORD *)sub_1C32C38(Method_WarBoardServantEquipSimpleDialogComponent_SetUp__);
+      v43 = (System_Reflection_MethodBase_o *)sub_1C32C04(v42, v42[4]);
       OverwriteAssetSoundName__PlaySystemSe(v43, 2, 0, 0);
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4, 0);
       v45 = UnityEngine_Object_TypeInfo;
@@ -570,7 +568,7 @@ LABEL_106:
     v52 = (UnityEngine_Object_o *)gameObject;
     if ( !v45->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v45);
-    UnityEngine_Object__DestroyImmediate_71163892(v52, 0);
+    UnityEngine_Object__DestroyImmediate_71223828(v52, 0);
   }
 }
 
@@ -579,10 +577,10 @@ System_String_o *WarBoardServantEquipSimpleDialogComponent__get_closeBtnPath(
         WarBoardServantEquipSimpleDialogComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C2503B & 1) == 0 )
+  if ( (byte_4C35710 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_15640/*"Window/CloseButton"*/);
-    byte_4C2503B = 1;
+    sub_1C32C20(&StringLiteral_15641/*"Window/CloseButton"*/);
+    byte_4C35710 = 1;
   }
-  return (System_String_o *)StringLiteral_15640/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_15641/*"Window/CloseButton"*/;
 }

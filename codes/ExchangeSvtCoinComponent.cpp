@@ -17,21 +17,21 @@ void ExchangeSvtCoinComponent__CloseMenu(ExchangeSvtCoinComponent_o *this, const
   BaseMenu_o *v5; // x20
   System_Action_o *v6; // x21
 
-  if ( (byte_4C22205 & 1) == 0 )
+  if ( (byte_4C328D4 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_ExchangeSvtCoinComponent__CloseMenu_b__4_0__);
-    byte_4C22205 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_ExchangeSvtCoinComponent__CloseMenu_b__4_0__);
+    byte_4C328D4 = 1;
   }
   exchangeSvtCoinMenu = this->fields.exchangeSvtCoinMenu;
   if ( !exchangeSvtCoinMenu
     || (ExchangeSvtCoinMenu__SetDispCurrencyInfo(exchangeSvtCoinMenu, 0, v2),
         v5 = (BaseMenu_o *)this->fields.exchangeSvtCoinMenu,
-        v6 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo),
+        v6 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo),
         System_Action___ctor(v6, (Il2CppObject *)this, Method_ExchangeSvtCoinComponent__CloseMenu_b__4_0__, 0),
         !v5) )
   {
-    sub_1C2D6EC(exchangeSvtCoinMenu, method);
+    sub_1C32E7C(exchangeSvtCoinMenu);
   }
   BaseMenu__Close(v5, v6, 0);
 }
@@ -42,19 +42,18 @@ void ExchangeSvtCoinComponent__ExitMenu(ExchangeSvtCoinComponent_o *this, const 
   BaseMenu_o *exchangeSvtCoinMenu; // x20
   System_Action_o *v4; // x21
   __int64 v5; // x0
-  __int64 v6; // x1
 
-  if ( (byte_4C22206 & 1) == 0 )
+  if ( (byte_4C328D5 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_ExchangeSvtCoinComponent__ExitMenu_b__5_0__);
-    byte_4C22206 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_ExchangeSvtCoinComponent__ExitMenu_b__5_0__);
+    byte_4C328D5 = 1;
   }
   exchangeSvtCoinMenu = (BaseMenu_o *)this->fields.exchangeSvtCoinMenu;
-  v4 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_ExchangeSvtCoinComponent__ExitMenu_b__5_0__, 0);
   if ( !exchangeSvtCoinMenu )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   BaseMenu__Close(exchangeSvtCoinMenu, v4, 0);
 }
 
@@ -70,7 +69,7 @@ void ExchangeSvtCoinComponent__HideMenu(ExchangeSvtCoinComponent_o *this, const 
                                                           (UnityEngine_Component_o *)this,
                                                           0)) == 0) )
   {
-    sub_1C2D6EC(exchangeSvtCoinMenu, method);
+    sub_1C32E7C(exchangeSvtCoinMenu);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangeSvtCoinMenu, 0, 0);
 }
@@ -82,7 +81,7 @@ bool ExchangeSvtCoinComponent__IsOpenFolder(ExchangeSvtCoinComponent_o *this, co
 
   exchangeSvtCoinMenu = this->fields.exchangeSvtCoinMenu;
   if ( !exchangeSvtCoinMenu )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   return ExchangeSvtCoinMenu__get_IsActiveSvtCoinList(exchangeSvtCoinMenu, method);
 }
 
@@ -90,8 +89,8 @@ bool ExchangeSvtCoinComponent__IsOpenFolder(ExchangeSvtCoinComponent_o *this, co
 void ExchangeSvtCoinComponent__OpenMenu(ExchangeSvtCoinComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  const MethodInfo *v4; // x1
-  const MethodInfo *v5; // x2
+  const MethodInfo *v4; // x2
+  const MethodInfo *v5; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
@@ -100,23 +99,22 @@ void ExchangeSvtCoinComponent__OpenMenu(ExchangeSvtCoinComponent_o *this, const 
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0)) == 0
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.exchangeSvtCoinMenu) == 0)
-    || (ExchangeSvtCoinMenu__SetDispCurrencyInfo((ExchangeSvtCoinMenu_o *)gameObject, 1, v5),
+    || (ExchangeSvtCoinMenu__SetDispCurrencyInfo((ExchangeSvtCoinMenu_o *)gameObject, 1, v4),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.exchangeSvtCoinMenu) == 0) )
   {
-    sub_1C2D6EC(gameObject, v4);
+    sub_1C32E7C(gameObject);
   }
-  ExchangeSvtCoinMenu__Open((ExchangeSvtCoinMenu_o *)gameObject, v4);
+  ExchangeSvtCoinMenu__Open((ExchangeSvtCoinMenu_o *)gameObject, v5);
 }
 
 
 void ExchangeSvtCoinComponent___CloseMenu_b__4_0(ExchangeSvtCoinComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v3; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C2D6EC(0, v3);
+    sub_1C32E7C(0);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -132,7 +130,7 @@ void ExchangeSvtCoinComponent___ExitMenu_b__5_0(ExchangeSvtCoinComponent_o *this
                                                           (UnityEngine_Component_o *)this,
                                                           0)) == 0) )
   {
-    sub_1C2D6EC(exchangeSvtCoinMenu, method);
+    sub_1C32E7C(exchangeSvtCoinMenu);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exchangeSvtCoinMenu, 0, 0);
 }

@@ -1,14 +1,14 @@
 void GachaTicketMaster___ctor(GachaTicketMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C275C6 & 1) == 0 )
+  if ( (byte_4C37CBE & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_GachaTicketMaster__GachaTicketEntity__string___ctor__);
-    byte_4C275C6 = 1;
+    sub_1C32C20(&Method_DataMasterBase_GachaTicketMaster__GachaTicketEntity__string___ctor__);
+    byte_4C37CBE = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     38,
-    (const MethodInfo_338A52C *)Method_DataMasterBase_GachaTicketMaster__GachaTicketEntity__string___ctor__);
+    (const MethodInfo_3398FCC *)Method_DataMasterBase_GachaTicketMaster__GachaTicketEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ GachaTicketEntity_o *GachaTicketMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C275C4 & 1) == 0 )
+  if ( (byte_4C37CBC & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_GachaTicketMaster__GachaTicketEntity__string__GetEntity__);
-    byte_4C275C4 = 1;
+    sub_1C32C20(&Method_DataMasterBase_GachaTicketMaster__GachaTicketEntity__string__GetEntity__);
+    byte_4C37CBC = 1;
   }
   PK = (Il2CppObject *)GachaTicketEntity__CreatePK(gachaId, ticketItemId, *(const MethodInfo **)&ticketItemId);
   return (GachaTicketEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                   PK,
-                                  (const MethodInfo_338C850 *)Method_DataMasterBase_GachaTicketMaster__GachaTicketEntity__string__GetEntity__);
+                                  (const MethodInfo_339B2F0 *)Method_DataMasterBase_GachaTicketMaster__GachaTicketEntity__string__GetEntity__);
 }
 
 
@@ -44,15 +44,15 @@ bool GachaTicketMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C275C5 & 1) == 0 )
+  if ( (byte_4C37CBD & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_GachaTicketMaster__GachaTicketEntity__string__TryGetEntity__);
-    byte_4C275C5 = 1;
+    sub_1C32C20(&Method_DataMasterBase_GachaTicketMaster__GachaTicketEntity__string__TryGetEntity__);
+    byte_4C37CBD = 1;
   }
   PK = (Il2CppObject *)GachaTicketEntity__CreatePK(gachaId, ticketItemId, *(const MethodInfo **)&gachaId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_338C89C *)Method_DataMasterBase_GachaTicketMaster__GachaTicketEntity__string__TryGetEntity__);
+           (const MethodInfo_339B33C *)Method_DataMasterBase_GachaTicketMaster__GachaTicketEntity__string__TryGetEntity__);
 }

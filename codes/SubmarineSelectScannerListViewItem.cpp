@@ -13,13 +13,13 @@ void SubmarineSelectScannerListViewItem___ctor(
   const MethodInfo *v15; // x3
 
   v13 = this;
-  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
   v13->fields._name_k__BackingField = name;
   v13 = (SubmarineSelectScannerListViewItem_o *)((char *)v13 + 136);
   LODWORD(v13[-1].fields._consumeItemDetail_k__BackingField) = eventId;
   HIDWORD(v13[-1].fields._consumeItemDetail_k__BackingField) = scanId;
   *(_DWORD *)&v13[-1].fields._enabled_k__BackingField = iconImageId;
-  sub_1C2D434((CGThumbnailListItem_o *)v13, (int32_t)name, v14, v15);
+  sub_1C32BC4((CGThumbnailListItem_o *)v13, (int32_t)name, v14, v15);
   LOBYTE(v13->fields.selectNum) = enabled;
 }
 
@@ -80,7 +80,7 @@ void SubmarineSelectScannerListViewItem__set_consumeItemDetail(
   const MethodInfo *v3; // x3
 
   this->fields._consumeItemDetail_k__BackingField = value;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields._consumeItemDetail_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -123,7 +123,7 @@ void SubmarineSelectScannerListViewItem__set_name(
   const MethodInfo *v3; // x3
 
   this->fields._name_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._name_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._name_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

@@ -13,27 +13,27 @@ void AssetDataListInfo___ctor(AssetDataListInfo_o *this, const MethodInfo *metho
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4C2627C & 1) == 0 )
+  if ( (byte_4C36954 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_AssetData___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_AssetData__TypeInfo);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C2627C = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_AssetData___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_AssetData__TypeInfo);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C36954 = 1;
   }
   v5 = StringLiteral_1/*""*/;
   this->fields.masterVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, v5, v2, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, v5, v2, v3);
   v6 = StringLiteral_1/*""*/;
   this->fields.dateVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.dateVersion, v6, v7, v8);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.dateVersion, v6, v7, v8);
   v9 = StringLiteral_1/*""*/;
   this->fields.buildVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.buildVersion, v9, v10, v11);
-  v12 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_AssetData__TypeInfo);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.buildVersion, v9, v10, v11);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_AssetData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_AssetData___ctor__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_AssetData___ctor__);
   this->fields.dataList = (struct System_Collections_Generic_List_AssetData__o *)v12;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.dataList, (int32_t)v12, v13, v14);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.dataList, (int32_t)v12, v13, v14);
   System_Object___ctor((Il2CppObject *)this, 0);
 }

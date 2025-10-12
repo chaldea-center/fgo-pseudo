@@ -1,9 +1,9 @@
 void BoxGachaItemListViewObject___ctor(BoxGachaItemListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C21717 & 1) == 0 )
+  if ( (byte_4C31DE6 & 1) == 0 )
   {
-    sub_1C2D490(&ListViewObject_TypeInfo);
-    byte_4C21717 = 1;
+    sub_1C32C20(&ListViewObject_TypeInfo);
+    byte_4C31DE6 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -13,22 +13,23 @@ void BoxGachaItemListViewObject___ctor(BoxGachaItemListViewObject_o *this, const
 
 void BoxGachaItemListViewObject__Awake(BoxGachaItemListViewObject_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UnityEngine_GameObject_o *dispObject; // x0
+  Il2CppObject *Component_object; // x0
 
-  if ( (byte_4C21709 & 1) == 0 )
+  if ( (byte_4C31DD8 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewItemDraw___);
-    byte_4C21709 = 1;
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewItemDraw___);
+    byte_4C31DD8 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C2D6EC(0, v3);
-  this->fields.itemDraw = (struct BoxGachaItemListViewItemDraw_o *)UnityEngine_GameObject__GetComponent_object_(
-                                                                     dispObject,
-                                                                     (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewItemDraw___);
-  sub_1C2D434(&this->fields.itemDraw);
+    sub_1C32E7C(0);
+  Component_object = UnityEngine_GameObject__GetComponent_object_(
+                       dispObject,
+                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewItemDraw___);
+  this->fields.itemDraw = (struct BoxGachaItemListViewItemDraw_o *)Component_object;
+  sub_1C32BC4(&this->fields.itemDraw, Component_object);
 }
 
 
@@ -37,26 +38,25 @@ UnityEngine_GameObject_o *BoxGachaItemListViewObject__CreateDragObject(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *DragObject; // x0
-  __int64 v4; // x1
-  UnityEngine_GameObject_o *v5; // x19
-  const MethodInfo *v6; // x2
+  UnityEngine_GameObject_o *v4; // x19
+  const MethodInfo *v5; // x2
 
-  if ( (byte_4C2170C & 1) == 0 )
+  if ( (byte_4C31DDB & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___);
-    byte_4C2170C = 1;
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___);
+    byte_4C31DDB = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
-    || (v5 = DragObject,
+    || (v4 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___)) == 0) )
+                                                    (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___)) == 0) )
   {
-    sub_1C2D6EC(DragObject, v4);
+    sub_1C32E7C(DragObject);
   }
-  BoxGachaItemListViewObject__Init_31651944((BoxGachaItemListViewObject_o *)DragObject, 2, v6);
-  return v5;
+  BoxGachaItemListViewObject__Init_31765280((BoxGachaItemListViewObject_o *)DragObject, 2, v5);
+  return v4;
 }
 
 
@@ -72,16 +72,18 @@ void BoxGachaItemListViewObject__EventExitMove(BoxGachaItemListViewObject_o *thi
   float v10; // s10
   float v11; // s9
   UnityEngine_GameObject_o *v12; // x20
+  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v14; // x1
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v15; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4C21713 & 1) == 0 )
+  if ( (byte_4C31DE2 & 1) == 0 )
   {
-    sub_1C2D490(&ListViewObject_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_6208/*"EventExitMove2"*/);
-    byte_4C21713 = 1;
+    sub_1C32C20(&ListViewObject_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_6216/*"EventExitMove2"*/);
+    byte_4C31DE2 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -105,30 +107,32 @@ void BoxGachaItemListViewObject__EventExitMove(BoxGachaItemListViewObject_o *thi
     position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
     if ( !parent )
       goto LABEL_15;
-    v14 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
+    v16 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
     v7 = this->fields.dragObject;
     v8 = ListViewObject_TypeInfo;
-    v9 = v14.fields.x + 1000.0;
-    v10 = v14.fields.y + 0.0;
-    v11 = v14.fields.z + 0.0;
+    v9 = v16.fields.x + 1000.0;
+    v10 = v16.fields.y + 0.0;
+    v11 = v16.fields.z + 0.0;
     if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
       v8 = ListViewObject_TypeInfo;
     }
-    v15.fields.x = v9;
-    v15.fields.y = v10;
-    v15.fields.z = v11;
-    transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v7, v8->static_fields->BASE_MOVE_TIME, v15, 0);
+    v17.fields.x = v9;
+    v17.fields.y = v10;
+    v17.fields.z = v11;
+    transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v7, v8->static_fields->BASE_MOVE_TIME, v17, 0);
     if ( !transform )
 LABEL_15:
-      sub_1C2D6EC(transform, v4);
+      sub_1C32E7C(transform);
     v12 = transform;
     LODWORD(transform[1].monitor) = 3;
-    transform[3].monitor = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    sub_1C2D434(&v12[3].monitor);
-    v12[3].fields.m_CachedPtr = StringLiteral_6208/*"EventExitMove2"*/;
-    sub_1C2D434(&v12[3].fields);
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    v12[3].monitor = gameObject;
+    sub_1C32BC4(&v12[3].monitor, gameObject);
+    v14 = StringLiteral_6216/*"EventExitMove2"*/;
+    v12[3].fields.m_CachedPtr = StringLiteral_6216/*"EventExitMove2"*/;
+    sub_1C32BC4(&v12[3].fields, v14);
   }
 }
 
@@ -138,17 +142,17 @@ void BoxGachaItemListViewObject__EventExitMove2(BoxGachaItemListViewObject_o *th
   UnityEngine_Object_o *dragObject; // x21
   const MethodInfo *v4; // x1
 
-  if ( (byte_4C21714 & 1) == 0 )
+  if ( (byte_4C31DE3 & 1) == 0 )
   {
-    sub_1C2D490(&NGUITools_TypeInfo);
-    byte_4C21714 = 1;
+    sub_1C32C20(&NGUITools_TypeInfo);
+    byte_4C31DE3 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C2D434(&this->fields.dragObject);
+  sub_1C32BC4(&this->fields.dragObject, 0);
   BoxGachaItemListViewObject__EventMoveEnd(this, v4);
 }
 
@@ -158,32 +162,34 @@ void BoxGachaItemListViewObject__EventExitStart(
         float delay,
         const MethodInfo *method)
 {
-  const MethodInfo *v5; // x1
+  struct UnityEngine_GameObject_o *v5; // x0
   UnityEngine_GameObject_o *dragObject; // x0
   Il2CppObject *Component_object; // x20
-  const MethodInfo *v8; // x2
+  const MethodInfo *v8; // x1
+  const MethodInfo *v9; // x2
 
-  if ( (byte_4C21712 & 1) == 0 )
+  if ( (byte_4C31DE1 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_6207/*"EventExitMove"*/);
-    byte_4C21712 = 1;
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_6215/*"EventExitMove"*/);
+    byte_4C31DE1 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
   BoxGachaItemListViewObject__SetupDisp(this, method);
   ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0);
-  this->fields.dragObject = (struct UnityEngine_GameObject_o *)((__int64 (__fastcall *)(BoxGachaItemListViewObject_o *, const MethodInfo *))this->klass->vtable._8_CreateDragObject.methodPtr)(
-                                                                 this,
-                                                                 this->klass->vtable._8_CreateDragObject.method);
-  sub_1C2D434(&this->fields.dragObject);
+  v5 = (struct UnityEngine_GameObject_o *)((__int64 (__fastcall *)(BoxGachaItemListViewObject_o *, const MethodInfo *))this->klass->vtable._8_CreateDragObject.methodPtr)(
+                                            this,
+                                            this->klass->vtable._8_CreateDragObject.method);
+  this->fields.dragObject = v5;
+  sub_1C32BC4(&this->fields.dragObject, v5);
   dragObject = this->fields.dragObject;
   if ( !dragObject )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dragObject,
-                       (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___);
+                       (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
@@ -192,16 +198,16 @@ void BoxGachaItemListViewObject__EventExitStart(
                                              0);
   if ( ((unsigned __int8)dragObject & 1) != 0 )
   {
-    BoxGachaItemListViewObject__EventMoveEnd(this, v5);
+    BoxGachaItemListViewObject__EventMoveEnd(this, v8);
     return;
   }
   if ( !Component_object )
 LABEL_10:
-    sub_1C2D6EC(dragObject, v5);
-  BoxGachaItemListViewObject__Init_31651944((BoxGachaItemListViewObject_o *)Component_object, 2, v8);
+    sub_1C32E7C(dragObject);
+  BoxGachaItemListViewObject__Init_31765280((BoxGachaItemListViewObject_o *)Component_object, 2, v9);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6207/*"EventExitMove"*/,
+    (System_String_o *)StringLiteral_6215/*"EventExitMove"*/,
     delay,
     0);
 }
@@ -217,15 +223,17 @@ void BoxGachaItemListViewObject__EventIntoMove(BoxGachaItemListViewObject_o *thi
   float y; // s9
   float z; // s10
   UnityEngine_GameObject_o *v10; // x20
+  UnityEngine_GameObject_o *gameObject; // x0
+  __int64 v12; // x1
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v13; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v15; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4C21710 & 1) == 0 )
+  if ( (byte_4C31DDF & 1) == 0 )
   {
-    sub_1C2D490(&ListViewObject_TypeInfo);
-    sub_1C2D490(&StringLiteral_6219/*"EventIntoMove2"*/);
-    byte_4C21710 = 1;
+    sub_1C32C20(&ListViewObject_TypeInfo);
+    sub_1C32C20(&StringLiteral_6227/*"EventIntoMove2"*/);
+    byte_4C31DDF = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -240,30 +248,32 @@ void BoxGachaItemListViewObject__EventIntoMove(BoxGachaItemListViewObject_o *thi
   position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
   if ( !parent )
     goto LABEL_11;
-  v12 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
+  v14 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0);
   v5 = ListViewObject_TypeInfo;
   v6 = this->fields.dragObject;
-  x = v12.fields.x;
-  y = v12.fields.y;
-  z = v12.fields.z;
+  x = v14.fields.x;
+  y = v14.fields.y;
+  z = v14.fields.z;
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
     v5 = ListViewObject_TypeInfo;
   }
-  v13.fields.x = x;
-  v13.fields.y = y;
-  v13.fields.z = z;
-  dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v6, v5->static_fields->BASE_MOVE_TIME, v13, 0);
+  v15.fields.x = x;
+  v15.fields.y = y;
+  v15.fields.z = z;
+  dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v6, v5->static_fields->BASE_MOVE_TIME, v15, 0);
   if ( !dragObject )
 LABEL_11:
-    sub_1C2D6EC(dragObject, method);
+    sub_1C32E7C(dragObject);
   v10 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
-  dragObject[3].monitor = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  sub_1C2D434(&v10[3].monitor);
-  v10[3].fields.m_CachedPtr = StringLiteral_6219/*"EventIntoMove2"*/;
-  sub_1C2D434(&v10[3].fields);
+  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v10[3].monitor = gameObject;
+  sub_1C32BC4(&v10[3].monitor, gameObject);
+  v12 = StringLiteral_6227/*"EventIntoMove2"*/;
+  v10[3].fields.m_CachedPtr = StringLiteral_6227/*"EventIntoMove2"*/;
+  sub_1C32BC4(&v10[3].fields, v12);
 }
 
 
@@ -273,10 +283,10 @@ void BoxGachaItemListViewObject__EventIntoMove2(BoxGachaItemListViewObject_o *th
   UnityEngine_Object_o *dragObject; // x21
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C21711 & 1) == 0 )
+  if ( (byte_4C31DE0 & 1) == 0 )
   {
-    sub_1C2D490(&NGUITools_TypeInfo);
-    byte_4C21711 = 1;
+    sub_1C32C20(&NGUITools_TypeInfo);
+    byte_4C31DE0 = 1;
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, 1, 0);
   this->fields.dispMode = 2;
@@ -286,7 +296,7 @@ void BoxGachaItemListViewObject__EventIntoMove2(BoxGachaItemListViewObject_o *th
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C2D434(&this->fields.dragObject);
+  sub_1C32BC4(&this->fields.dragObject, 0);
   BoxGachaItemListViewObject__EventMoveEnd(this, v5);
 }
 
@@ -296,48 +306,49 @@ void BoxGachaItemListViewObject__EventIntoStart(
         float delay,
         const MethodInfo *method)
 {
+  struct UnityEngine_GameObject_o *v5; // x0
   struct UnityEngine_GameObject_o **p_dragObject; // x20
-  __int64 v6; // x1
   UnityEngine_GameObject_o *dragObject; // x0
   const MethodInfo *v8; // x2
   UnityEngine_Transform_o *transform; // x20
   UnityEngine_Vector3_o v10; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C2170F & 1) == 0 )
+  if ( (byte_4C31DDE & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___);
-    sub_1C2D490(&StringLiteral_6218/*"EventIntoMove"*/);
-    byte_4C2170F = 1;
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___);
+    sub_1C32C20(&StringLiteral_6226/*"EventIntoMove"*/);
+    byte_4C31DDE = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
   BoxGachaItemListViewObject__SetupDisp(this, method);
   ListViewObject__SetVisible((ListViewObject_o *)this, 0, 0);
-  this->fields.dragObject = (struct UnityEngine_GameObject_o *)((__int64 (__fastcall *)(BoxGachaItemListViewObject_o *, const MethodInfo *))this->klass->vtable._8_CreateDragObject.methodPtr)(
-                                                                 this,
-                                                                 this->klass->vtable._8_CreateDragObject.method);
+  v5 = (struct UnityEngine_GameObject_o *)((__int64 (__fastcall *)(BoxGachaItemListViewObject_o *, const MethodInfo *))this->klass->vtable._8_CreateDragObject.methodPtr)(
+                                            this,
+                                            this->klass->vtable._8_CreateDragObject.method);
+  this->fields.dragObject = v5;
   p_dragObject = &this->fields.dragObject;
-  sub_1C2D434(&this->fields.dragObject);
+  sub_1C32BC4(&this->fields.dragObject, v5);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___)) == 0
-    || (BoxGachaItemListViewObject__Init_31651944((BoxGachaItemListViewObject_o *)dragObject, 2, v8),
+                                                   (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_BoxGachaItemListViewObject___)) == 0
+    || (BoxGachaItemListViewObject__Init_31765280((BoxGachaItemListViewObject_o *)dragObject, 2, v8),
         (dragObject = *p_dragObject) == 0)
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0),
         (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0)) == 0)
-    || (v10 = UnityEngine_Transform__TransformPoint_71190304((UnityEngine_Transform_o *)dragObject, 1000.0, 0.0, 0.0, 0),
+    || (v10 = UnityEngine_Transform__TransformPoint_71250240((UnityEngine_Transform_o *)dragObject, 1000.0, 0.0, 0.0, 0),
         !transform) )
   {
-    sub_1C2D6EC(dragObject, v6);
+    sub_1C32E7C(dragObject);
   }
   UnityEngine_Transform__set_position(transform, v10, 0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6218/*"EventIntoMove"*/,
+    (System_String_o *)StringLiteral_6226/*"EventIntoMove"*/,
     delay,
     0);
 }
@@ -357,7 +368,7 @@ void BoxGachaItemListViewObject__EventMoveEnd(BoxGachaItemListViewObject_o *this
   if ( callbackFunc )
   {
     *p_callbackFunc = 0;
-    sub_1C2D434(p_callbackFunc);
+    sub_1C32BC4(p_callbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v3->fields.invoke_impl)(v3->fields.method_code, v3->fields.method);
   }
 }
@@ -370,10 +381,10 @@ BoxGachaItemListViewItem_o *BoxGachaItemListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C2170B & 1) == 0 )
+  if ( (byte_4C31DDA & 1) == 0 )
   {
-    sub_1C2D490(&BoxGachaItemListViewItem_TypeInfo);
-    byte_4C2170B = 1;
+    sub_1C32C20(&BoxGachaItemListViewItem_TypeInfo);
+    byte_4C31DDA = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -401,16 +412,15 @@ void BoxGachaItemListViewObject__Init(
   int32_t dispMode; // w23
   int32_t state; // w24
   UnityEngine_Transform_o *transform; // x0
-  __int64 v16; // x1
   struct System_Action_o **p_callbackFunc; // x21
-  const MethodInfo *v18; // x1
-  int32_t v19; // w8
-  struct System_Action_o *v20; // x19
+  const MethodInfo *v17; // x1
+  int32_t v18; // w8
+  struct System_Action_o *v19; // x19
 
-  if ( (byte_4C2170D & 1) == 0 )
+  if ( (byte_4C31DDC & 1) == 0 )
   {
-    sub_1C2D490(&BoxGachaItemListViewItem_TypeInfo);
-    byte_4C2170D = 1;
+    sub_1C32C20(&BoxGachaItemListViewItem_TypeInfo);
+    byte_4C31DDC = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -438,13 +448,13 @@ void BoxGachaItemListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C2D6EC(transform, v16);
+    sub_1C32E7C(transform);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
-  sub_1C2D434(&this->fields.callbackFunc);
-  v19 = 1;
+  sub_1C32BC4(&this->fields.callbackFunc, callbackFunc);
+  v18 = 1;
   switch ( v12 )
   {
     case 0:
@@ -452,20 +462,20 @@ void BoxGachaItemListViewObject__Init(
       goto LABEL_13;
     case 1:
     case 3:
-      v19 = v12;
+      v18 = v12;
 LABEL_13:
       this->fields.dispMode = v12;
-      this->fields.state = v19;
+      this->fields.state = v18;
       goto LABEL_14;
     case 4:
       this->fields.dispMode = 0;
       this->fields.state = 2;
-      BoxGachaItemListViewObject__EventIntoStart(this, delay, v18);
+      BoxGachaItemListViewObject__EventIntoStart(this, delay, v17);
       return;
     case 6:
       this->fields.dispMode = 2;
       this->fields.state = 2;
-      BoxGachaItemListViewObject__EventExitStart(this, delay, v18);
+      BoxGachaItemListViewObject__EventExitStart(this, delay, v17);
       return;
     case 7:
       this->fields.dispMode = 2;
@@ -475,13 +485,13 @@ LABEL_13:
 LABEL_14:
       if ( !state || dispMode != this->fields.dispMode )
 LABEL_20:
-        BoxGachaItemListViewObject__SetupDisp(this, v18);
-      v20 = *p_callbackFunc;
+        BoxGachaItemListViewObject__SetupDisp(this, v17);
+      v19 = *p_callbackFunc;
       if ( *p_callbackFunc )
       {
         *p_callbackFunc = 0;
-        sub_1C2D434(p_callbackFunc);
-        ((void (__fastcall *)(intptr_t, intptr_t))v20->fields.invoke_impl)(v20->fields.method_code, v20->fields.method);
+        sub_1C32BC4(p_callbackFunc, 0);
+        ((void (__fastcall *)(intptr_t, intptr_t))v19->fields.invoke_impl)(v19->fields.method_code, v19->fields.method);
       }
       return;
   }
@@ -489,7 +499,7 @@ LABEL_20:
 
 
 // local variable allocation has failed, the output may be wrong!
-void BoxGachaItemListViewObject__Init_31651944(
+void BoxGachaItemListViewObject__Init_31765280(
         BoxGachaItemListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -497,17 +507,17 @@ void BoxGachaItemListViewObject__Init_31651944(
   const MethodInfo *v3; // x3
   int v4; // s1 OVERLAPPED
 
-  if ( !byte_4C20DA1 )
+  if ( !byte_4C313D1 )
   {
-    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
-    byte_4C20DA1 = 1;
+    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
+    byte_4C313D1 = 1;
   }
   BoxGachaItemListViewObject__Init(this, initMode, 0, 0.0, *(UnityEngine_Vector3_o *)&v4, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void BoxGachaItemListViewObject__Init_31652956(
+void BoxGachaItemListViewObject__Init_31766292(
         BoxGachaItemListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -516,17 +526,17 @@ void BoxGachaItemListViewObject__Init_31652956(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C20DA1 )
+  if ( !byte_4C313D1 )
   {
-    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
-    byte_4C20DA1 = 1;
+    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
+    byte_4C313D1 = 1;
   }
   BoxGachaItemListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void BoxGachaItemListViewObject__Init_31653560(
+void BoxGachaItemListViewObject__Init_31766896(
         BoxGachaItemListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -534,10 +544,10 @@ void BoxGachaItemListViewObject__Init_31653560(
 {
   int v4; // s1 OVERLAPPED
 
-  if ( !byte_4C20DA1 )
+  if ( !byte_4C313D1 )
   {
-    sub_1C2D490(&UnityEngine_Vector3_TypeInfo);
-    byte_4C20DA1 = 1;
+    sub_1C32C20(&UnityEngine_Vector3_TypeInfo);
+    byte_4C313D1 = 1;
   }
   BoxGachaItemListViewObject__Init(this, initMode, callbackFunc, 0.0, *(UnityEngine_Vector3_o *)&v4, method);
 }
@@ -547,15 +557,15 @@ void BoxGachaItemListViewObject__OnClickSelect(BoxGachaItemListViewObject_o *thi
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4C21716 & 1) == 0 )
+  if ( (byte_4C31DE5 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_9843/*"OnClickListView"*/);
-    byte_4C21716 = 1;
+    sub_1C32C20(&StringLiteral_9848/*"OnClickListView"*/);
+    byte_4C31DE5 = 1;
   }
   manager = (UnityEngine_Component_o *)this->fields.manager;
   if ( !manager )
-    sub_1C2D6EC(0, method);
-  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9843/*"OnClickListView"*/, (Il2CppObject *)this, 0);
+    sub_1C32E7C(0);
+  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9848/*"OnClickListView"*/, (Il2CppObject *)this, 0);
 }
 
 
@@ -564,14 +574,13 @@ void BoxGachaItemListViewObject__OnDestroy(BoxGachaItemListViewObject_o *this, c
   UnityEngine_GameObject_o **p_dragObject; // x19
   UnityEngine_Object_o *v4; // x20
   struct UnityEngine_GameObject_o *dragObject; // t1
-  __int64 v6; // x1
-  UnityEngine_GameObject_o *v7; // x20
+  UnityEngine_GameObject_o *v6; // x20
 
-  if ( (byte_4C2170A & 1) == 0 )
+  if ( (byte_4C31DD9 & 1) == 0 )
   {
-    sub_1C2D490(&NGUITools_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2170A = 1;
+    sub_1C32C20(&NGUITools_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C31DD9 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = &this->fields.dragObject;
@@ -581,14 +590,14 @@ void BoxGachaItemListViewObject__OnDestroy(BoxGachaItemListViewObject_o *this, c
   if ( UnityEngine_Object__op_Inequality(v4, 0, 0) )
   {
     if ( !*p_dragObject )
-      sub_1C2D6EC(0, v6);
+      sub_1C32E7C(0);
     UnityEngine_GameObject__SetActive(*p_dragObject, 0, 0);
-    v7 = *p_dragObject;
+    v6 = *p_dragObject;
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    NGUITools__Destroy((UnityEngine_Object_o *)v7, 0);
+    NGUITools__Destroy((UnityEngine_Object_o *)v6, 0);
     *p_dragObject = 0;
-    sub_1C2D434(p_dragObject);
+    sub_1C32BC4(p_dragObject, 0);
   }
 }
 
@@ -600,7 +609,7 @@ void BoxGachaItemListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_43593652((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_43729388((ListViewObject_o *)this, item, seed, 0);
 }
 
 
@@ -610,15 +619,14 @@ void BoxGachaItemListViewObject__SetupDisp(BoxGachaItemListViewObject_o *this, c
   __int64 naturalAligment; // x10
   bool v5; // w1
   UnityEngine_Object_o *itemDraw; // x21
-  __int64 v7; // x1
-  const MethodInfo *v8; // x3
-  BoxGachaItemListViewItemDraw_o *v9; // x0
+  const MethodInfo *v7; // x3
+  BoxGachaItemListViewItemDraw_o *v8; // x0
 
-  if ( (byte_4C2170E & 1) == 0 )
+  if ( (byte_4C31DDD & 1) == 0 )
   {
-    sub_1C2D490(&BoxGachaItemListViewItem_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2170E = 1;
+    sub_1C32C20(&BoxGachaItemListViewItem_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C31DDD = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -640,10 +648,10 @@ LABEL_8:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_1C2D6EC(0, v7);
-    BoxGachaItemListViewItemDraw__SetItem(v9, (BoxGachaItemListViewItem_o *)linkItem, this->fields.dispMode, v8);
+    v8 = this->fields.itemDraw;
+    if ( !v8 )
+      sub_1C32E7C(0);
+    BoxGachaItemListViewItemDraw__SetItem(v8, (BoxGachaItemListViewItem_o *)linkItem, this->fields.dispMode, v7);
   }
 }
 
@@ -659,11 +667,11 @@ System_String_o *BoxGachaItemListViewObject__ToString(BoxGachaItemListViewObject
   __int64 v10; // [xsp+20h] [xbp-40h] BYREF
   float v11; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_4C21715 & 1) == 0 )
+  if ( (byte_4C31DE4 & 1) == 0 )
   {
-    sub_1C2D490(&BoxGachaItemListViewItemDraw_DispMode_TypeInfo);
-    sub_1C2D490(&StringLiteral_113/*" "*/);
-    byte_4C21715 = 1;
+    sub_1C32C20(&BoxGachaItemListViewItemDraw_DispMode_TypeInfo);
+    sub_1C32C20(&StringLiteral_113/*" "*/);
+    byte_4C31DE4 = 1;
   }
   v11 = 0.0;
   v10 = 0;
@@ -675,8 +683,8 @@ System_String_o *BoxGachaItemListViewObject__ToString(BoxGachaItemListViewObject
   v5 = v3;
   v10 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v11 = z;
-  v6 = (System_String_o *)sub_1DEBAB4(&v10, 0, 0, 0);
-  return System_String__Concat_63496112(v5, (System_String_o *)StringLiteral_113/*" "*/, v6, 0);
+  v6 = (System_String_o *)sub_1DF1AD0(&v10, 0, 0, 0);
+  return System_String__Concat_63556792(v5, (System_String_o *)StringLiteral_113/*" "*/, v6, 0);
 }
 
 
@@ -695,10 +703,10 @@ void BoxGachaItemListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C21707 & 1) == 0 )
+  if ( (byte_4C31DD6 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    byte_4C21707 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    byte_4C31DD6 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -711,13 +719,13 @@ void BoxGachaItemListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
+    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (BoxGachaItemListViewObject_o *)sub_1C2D9AC(v8);
+  v11 = (BoxGachaItemListViewObject_o *)sub_1C3313C(v8);
   BoxGachaItemListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -736,10 +744,10 @@ void BoxGachaItemListViewObject__remove_callbackFunc(
   BoxGachaItemListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C21708 & 1) == 0 )
+  if ( (byte_4C31DD7 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    byte_4C21708 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    byte_4C31DD7 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -752,12 +760,12 @@ void BoxGachaItemListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C676E8(p_callbackFunc, v8, v6);
+    v9 = sub_1C6CE78(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (BoxGachaItemListViewObject_o *)sub_1C2D9AC(v8);
+  v11 = (BoxGachaItemListViewObject_o *)sub_1C3313C(v8);
   BoxGachaItemListViewObject__Awake(v11, v12);
 }

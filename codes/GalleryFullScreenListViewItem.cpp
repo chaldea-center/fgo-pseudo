@@ -7,17 +7,16 @@ void GalleryFullScreenListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
   __int64 v8; // x0
-  __int64 v9; // x1
 
-  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
   this->fields._GalleryResourceEntity_k__BackingField = galleryResourceEntity;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields._GalleryResourceEntity_k__BackingField,
     (int32_t)galleryResourceEntity,
     v6,
     v7);
   if ( !galleryResourceEntity )
-    sub_1C2D6EC(v8, v9);
+    sub_1C32E7C(v8);
   this->fields._CurrentGalleryType_k__BackingField = galleryResourceEntity->fields.galleryType;
 }
 

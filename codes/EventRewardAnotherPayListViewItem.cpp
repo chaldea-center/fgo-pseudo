@@ -9,32 +9,31 @@ void EventRewardAnotherPayListViewItem___ctor(
 {
   Il2CppObject *Master_object; // x0
   UserItemMaster_o *v14; // x22
-  __int64 v15; // x1
   _QWORD *p_image; // x0
-  int v17; // w8
+  int v16; // w8
 
-  if ( (byte_4C21B18 & 1) == 0 )
+  if ( (byte_4C321E7 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C21B18 = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C321E7 = 1;
   }
-  ListViewItem___ctor_43566844((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_43702564((ListViewItem_o *)this, index, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_UserItemMaster___);
   this->fields._ItemEntity_k__BackingField = itemEntity;
   v14 = (UserItemMaster_o *)Master_object;
   this->fields._EventId_k__BackingField = eventId;
-  sub_1C2D434(&this->fields._ItemEntity_k__BackingField);
+  sub_1C32BC4(&this->fields._ItemEntity_k__BackingField, itemEntity);
   this->fields._IsAnotherPay_k__BackingField = isAnotherPay;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C211E1 )
+  if ( !byte_4C31812 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C211E1 = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C31812 = 1;
   }
   p_image = &NetworkManager_TypeInfo->_1.image;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -46,11 +45,11 @@ void EventRewardAnotherPayListViewItem___ctor(
     || !v14
     || (p_image = UserItemMaster__GetEntityDefinitely(v14, *(_QWORD *)(p_image[23] + 64LL), itemEntity->fields.id, 0)) == 0 )
   {
-    sub_1C2D6EC(p_image, v15);
+    sub_1C32E7C(p_image);
   }
-  v17 = *((_DWORD *)p_image + 7);
+  v16 = *((_DWORD *)p_image + 7);
   this->fields.priority = sortPriority;
-  this->fields._IsExchangeable_k__BackingField = v17 > 0;
+  this->fields._IsExchangeable_k__BackingField = v16 > 0;
 }
 
 

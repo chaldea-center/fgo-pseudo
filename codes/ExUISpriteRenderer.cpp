@@ -1,11 +1,11 @@
 void ExUISpriteRenderer___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C266DB & 1) == 0 )
+  if ( (byte_4C36DB3 & 1) == 0 )
   {
-    sub_1C2D490(&ExUISpriteRenderer_TypeInfo);
-    byte_4C266DB = 1;
+    sub_1C32C20(&ExUISpriteRenderer_TypeInfo);
+    byte_4C36DB3 = 1;
   }
-  *ExUISpriteRenderer_TypeInfo->static_fields = (struct ExUISpriteRenderer_StaticFields)xmmword_C09F00;
+  *ExUISpriteRenderer_TypeInfo->static_fields = (struct ExUISpriteRenderer_StaticFields)xmmword_C0D2D0;
 }
 
 
@@ -29,11 +29,11 @@ void ExUISpriteRenderer__ClearImage(ExUISpriteRenderer_o *this, const MethodInfo
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4C266D2 & 1) == 0 )
+  if ( (byte_4C36DAA & 1) == 0 )
   {
-    sub_1C2D490(&AssetManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_16355/*"_SubTex"*/);
-    byte_4C266D2 = 1;
+    sub_1C32C20(&AssetManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_16357/*"_SubTex"*/);
+    byte_4C36DAA = 1;
   }
   spriteRenderer = this->fields.spriteRenderer;
   if ( !spriteRenderer )
@@ -49,11 +49,11 @@ void ExUISpriteRenderer__ClearImage(ExUISpriteRenderer_o *this, const MethodInfo
                                                            0)) == 0 )
   {
 LABEL_18:
-    sub_1C2D6EC(spriteRenderer, method);
+    sub_1C32E7C(spriteRenderer);
   }
   UnityEngine_Material__SetTexture(
     (UnityEngine_Material_o *)spriteRenderer,
-    (System_String_o *)StringLiteral_16355/*"_SubTex"*/,
+    (System_String_o *)StringLiteral_16357/*"_SubTex"*/,
     0,
     0);
 LABEL_8:
@@ -62,9 +62,9 @@ LABEL_8:
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40313100(assetData, 0);
+    AssetManager__releaseAsset_40435328(assetData, 0);
     this->fields.assetData = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.assetData, 0, v5, v6);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.assetData, 0, v5, v6);
   }
   loadAssetName = this->fields.loadAssetName;
   if ( loadAssetName )
@@ -73,10 +73,10 @@ LABEL_8:
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(loadAssetName, 0);
     this->fields.loadAssetName = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.loadAssetName, 0, v8, v9);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.loadAssetName, 0, v8, v9);
     callbackFunc = this->fields.callbackFunc;
     this->fields.callbackFunc = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v11, v12);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v11, v12);
     if ( callbackFunc )
       ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
         callbackFunc->fields.method_code,
@@ -98,10 +98,10 @@ void ExUISpriteRenderer__EndLoad(ExUISpriteRenderer_o *this, AssetData_o *data, 
   const MethodInfo *v13; // x3
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_4C266D7 & 1) == 0 )
+  if ( (byte_4C36DAF & 1) == 0 )
   {
-    sub_1C2D490(&AssetManager_TypeInfo);
-    byte_4C266D7 = 1;
+    sub_1C32C20(&AssetManager_TypeInfo);
+    byte_4C36DAF = 1;
   }
   if ( data )
   {
@@ -110,23 +110,23 @@ void ExUISpriteRenderer__EndLoad(ExUISpriteRenderer_o *this, AssetData_o *data, 
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      if ( AssetManager__compAssetStorage_40310772(data, loadAssetName, 0) )
+      if ( AssetManager__compAssetStorage_40433000(data, loadAssetName, 0) )
       {
         assetData = this->fields.assetData;
         this->fields.loadAssetName = 0;
-        sub_1C2D434((CGThumbnailListItem_o *)&this->fields.loadAssetName, 0, v6, v7);
+        sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.loadAssetName, 0, v6, v7);
         this->fields.assetData = data;
-        sub_1C2D434((CGThumbnailListItem_o *)&this->fields.assetData, (int32_t)data, v9, v10);
+        sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.assetData, (int32_t)data, v9, v10);
         ExUISpriteRenderer__SetAssetTexture(this, v11);
         if ( assetData )
         {
           if ( !AssetManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-          AssetManager__releaseAsset_40313100(assetData, 0);
+          AssetManager__releaseAsset_40435328(assetData, 0);
         }
         callbackFunc = this->fields.callbackFunc;
         this->fields.callbackFunc = 0;
-        sub_1C2D434((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v12, v13);
+        sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v12, v13);
         if ( callbackFunc )
           ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
             callbackFunc->fields.method_code,
@@ -160,14 +160,13 @@ UnityEngine_Color_o ExUISpriteRenderer__GetTweenColor(ExUISpriteRenderer_o *this
 void ExUISpriteRenderer__InitBaseScale(ExUISpriteRenderer_o *this, const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
-  __int64 v4; // x1
 
   if ( !this->fields.isInit )
   {
     this->fields.isInit = 1;
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !transform )
-      sub_1C2D6EC(0, v4);
+      sub_1C32E7C(0);
     this->fields.baseScale = UnityEngine_Transform__get_localScale(transform, 0);
   }
 }
@@ -206,16 +205,16 @@ void ExUISpriteRenderer__LoadAssetTexture(
   AssetLoader_LoadEndDataHandler_o *v31; // x21
 
   v10 = isUseAlphaImage;
-  if ( (byte_4C266D6 & 1) == 0 )
+  if ( (byte_4C36DAE & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&AssetManager_TypeInfo);
-    sub_1C2D490(&Method_ExUISpriteRenderer_EndLoad__);
-    sub_1C2D490(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    byte_4C266D6 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&AssetManager_TypeInfo);
+    sub_1C32C20(&Method_ExUISpriteRenderer_EndLoad__);
+    sub_1C32C20(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    byte_4C36DAE = 1;
   }
   this->fields.assetLabel = assetLabel;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields.assetLabel,
     (int32_t)assetLabel,
     (int32_t)assetLabel,
@@ -242,7 +241,7 @@ void ExUISpriteRenderer__LoadAssetTexture(
           || (*p_callbackFunc = (struct System_Action_o *)v17, (System_Action_c *)v17->klass != v21) )
         {
 LABEL_25:
-          sub_1C2D9AC(v20);
+          sub_1C3313C(v20);
           return;
         }
       }
@@ -250,7 +249,7 @@ LABEL_25:
       {
         *p_callbackFunc = 0;
       }
-      sub_1C2D434((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v17, v18, v19);
+      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v17, v18, v19);
       return;
     }
     v25 = *p_loadAssetName;
@@ -265,7 +264,7 @@ LABEL_25:
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      if ( AssetManager__compAssetStorage_40310772(assetData, assetName, 0) )
+      if ( AssetManager__compAssetStorage_40433000(assetData, assetName, 0) )
       {
         ExUISpriteRenderer__SetAssetTexture(this, v23);
         v24 = this->fields.callbackFunc;
@@ -278,7 +277,7 @@ LABEL_25:
     }
   }
   *p_loadAssetName = assetName;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.loadAssetName, (int32_t)assetName, v11, v12);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.loadAssetName, (int32_t)assetName, v11, v12);
   if ( callback )
   {
     v26 = &this->fields.callbackFunc;
@@ -297,9 +296,9 @@ LABEL_25:
     {
       *v26 = 0;
     }
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v27, v28, v29);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v27, v28, v29);
   }
-  v31 = (AssetLoader_LoadEndDataHandler_o *)sub_1C2D6DC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v31 = (AssetLoader_LoadEndDataHandler_o *)sub_1C32E6C(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(v31, (Il2CppObject *)this, Method_ExUISpriteRenderer_EndLoad__, 0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -327,11 +326,11 @@ void ExUISpriteRenderer__OnStart(ExUISpriteRenderer_o *this, const MethodInfo *m
   const MethodInfo *v9; // x2
   const MethodInfo *v10; // x1
 
-  if ( (byte_4C266D1 & 1) == 0 )
+  if ( (byte_4C36DA9 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C266D1 = 1;
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C36DA9 = 1;
   }
   UIWidget__OnStart((UIWidget_o *)this, 0);
   spriteRenderer = (UnityEngine_Object_o *)this->fields.spriteRenderer;
@@ -341,9 +340,9 @@ void ExUISpriteRenderer__OnStart(ExUISpriteRenderer_o *this, const MethodInfo *m
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+                         (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
     this->fields.spriteRenderer = (struct UnityEngine_SpriteRenderer_o *)Component_object;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.spriteRenderer, (int32_t)Component_object, v5, v6);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.spriteRenderer, (int32_t)Component_object, v5, v6);
   }
   defaultTexture = (UnityEngine_Object_o *)this->fields.defaultTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -372,10 +371,10 @@ void ExUISpriteRenderer__ReScaleUpdate(ExUISpriteRenderer_o *this, const MethodI
   int v15; // w21
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C266DA & 1) == 0 )
+  if ( (byte_4C36DB2 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C266DA = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C36DB2 = 1;
   }
   if ( this->fields.isInit
     && (this->fields.oldWidth != this->fields.mWidth || this->fields.oldHeight != this->fields.mHeight) )
@@ -431,7 +430,7 @@ LABEL_15:
         }
       }
     }
-    sub_1C2D6EC(spriteRenderer, method);
+    sub_1C32E7C(spriteRenderer);
   }
 }
 
@@ -465,25 +464,24 @@ void ExUISpriteRenderer__Resize(ExUISpriteRenderer_o *this, System_String_o *ass
   double v29; // d1
   int32_t v30; // w1
   UnityEngine_Transform_o *transform; // x0
-  __int64 v32; // x1
   float x; // s8
   float z; // s9
   float BackFSOffsetY; // s0
   int32_t mHeight; // w22
   struct ExUISpriteRenderer_StaticFields *static_fields; // x8
-  float v38; // s10
+  float v37; // s10
   int32_t BACK_HEIGHT_16_9; // w20
   int32_t BACK_HEIGHT_21_9; // w21
   double iptr; // [xsp+8h] [xbp-58h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v42; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C266D4 & 1) == 0 )
+  if ( (byte_4C36DAC & 1) == 0 )
   {
-    sub_1C2D490(&CommonUI_TypeInfo);
-    sub_1C2D490(&ExUISpriteRenderer_TypeInfo);
-    sub_1C2D490(&FSUtility_TypeInfo);
-    byte_4C266D4 = 1;
+    sub_1C32C20(&CommonUI_TypeInfo);
+    sub_1C32C20(&ExUISpriteRenderer_TypeInfo);
+    sub_1C32C20(&FSUtility_TypeInfo);
+    byte_4C36DAC = 1;
   }
   if ( !FSUtility_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
@@ -529,10 +527,10 @@ LABEL_15:
     v11 = ExUISpriteRenderer_TypeInfo;
   }
   v15 = (float)(v14 * (float)v11->static_fields->BACK_WIDTH_16_9) * 9.0;
-  if ( !byte_4C22447 )
+  if ( !byte_4C32B16 )
   {
-    sub_1C2D490(&System_Math_TypeInfo);
-    byte_4C22447 = 1;
+    sub_1C32C20(&System_Math_TypeInfo);
+    byte_4C32B16 = 1;
   }
   v16 = v15 * 0.0625;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -569,10 +567,10 @@ LABEL_35:
     v22 = (int)v19;
   UIWidget__set_width((UIWidget_o *)this, v22, 0);
   v23 = (float)(v14 * (float)ExUISpriteRenderer_TypeInfo->static_fields->BACK_HEIGHT_16_9) * 9.0;
-  if ( !byte_4C22447 )
+  if ( !byte_4C32B16 )
   {
-    sub_1C2D490(&System_Math_TypeInfo);
-    byte_4C22447 = 1;
+    sub_1C32C20(&System_Math_TypeInfo);
+    byte_4C32B16 = 1;
   }
   v24 = v23 * 0.0625;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -620,17 +618,17 @@ LABEL_52:
   BackFSOffsetY = FSUtility__GetBackFSOffsetY(assetName, 0);
   mHeight = this->fields.mHeight;
   static_fields = ExUISpriteRenderer_TypeInfo->static_fields;
-  v38 = BackFSOffsetY;
+  v37 = BackFSOffsetY;
   BACK_HEIGHT_16_9 = static_fields->BACK_HEIGHT_16_9;
   BACK_HEIGHT_21_9 = static_fields->BACK_HEIGHT_21_9;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
 LABEL_61:
-    sub_1C2D6EC(transform, v32);
-  v43.fields.y = (float)(v38 * (float)(mHeight - BACK_HEIGHT_16_9)) / (float)(BACK_HEIGHT_21_9 - BACK_HEIGHT_16_9);
-  v43.fields.x = x;
-  v43.fields.z = z;
-  UnityEngine_Transform__set_localPosition(transform, v43, 0);
+    sub_1C32E7C(transform);
+  v42.fields.y = (float)(v37 * (float)(mHeight - BACK_HEIGHT_16_9)) / (float)(BACK_HEIGHT_21_9 - BACK_HEIGHT_16_9);
+  v42.fields.x = x;
+  v42.fields.z = z;
+  UnityEngine_Transform__set_localPosition(transform, v42, 0);
 LABEL_60:
   ExUISpriteRenderer__ReScaleUpdate(this, v8);
 }
@@ -675,7 +673,7 @@ void ExUISpriteRenderer__SetAssetImageBackFS(
 }
 
 
-void ExUISpriteRenderer__SetAssetImage_40673412(
+void ExUISpriteRenderer__SetAssetImage_40795516(
         ExUISpriteRenderer_o *this,
         System_String_o *assetName,
         System_String_o *assetLabel,
@@ -715,13 +713,13 @@ void ExUISpriteRenderer__SetAssetTexture(ExUISpriteRenderer_o *this, const Metho
   UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Rect_o v26; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C266D9 & 1) == 0 )
+  if ( (byte_4C36DB1 & 1) == 0 )
   {
-    sub_1C2D490(&Method_AssetData_GetObject_Texture2D____77994112);
-    sub_1C2D490(&UnityEngine_Material_TypeInfo);
-    sub_1C2D490(&StringLiteral_16627/*"a"*/);
-    sub_1C2D490(&StringLiteral_16355/*"_SubTex"*/);
-    byte_4C266D9 = 1;
+    sub_1C32C20(&Method_AssetData_GetObject_Texture2D____78059424);
+    sub_1C32C20(&UnityEngine_Material_TypeInfo);
+    sub_1C32C20(&StringLiteral_16629/*"a"*/);
+    sub_1C32C20(&StringLiteral_16357/*"_SubTex"*/);
+    byte_4C36DB1 = 1;
   }
   if ( this->fields.isTextureAlphaImage )
   {
@@ -733,7 +731,7 @@ void ExUISpriteRenderer__SetAssetTexture(ExUISpriteRenderer_o *this, const Metho
       goto LABEL_19;
     UnityEngine_Material__SetTexture(
       (UnityEngine_Material_o *)spriteRenderer,
-      (System_String_o *)StringLiteral_16355/*"_SubTex"*/,
+      (System_String_o *)StringLiteral_16357/*"_SubTex"*/,
       0,
       0);
   }
@@ -742,16 +740,16 @@ void ExUISpriteRenderer__SetAssetTexture(ExUISpriteRenderer_o *this, const Metho
   if ( isUseAlphaImage )
   {
     assetData = this->fields.assetData;
-    spriteRenderer = (UnityEngine_Renderer_o *)System_String__Concat_63457864(
+    spriteRenderer = (UnityEngine_Renderer_o *)System_String__Concat_63518544(
                                                  this->fields.assetLabel,
-                                                 (System_String_o *)StringLiteral_16627/*"a"*/,
+                                                 (System_String_o *)StringLiteral_16629/*"a"*/,
                                                  0);
     if ( assetData )
     {
-      spriteRenderer = (UnityEngine_Renderer_o *)AssetData__GetObject_object__51051712(
+      spriteRenderer = (UnityEngine_Renderer_o *)AssetData__GetObject_object__51111776(
                                                    assetData,
                                                    (System_String_o *)spriteRenderer,
-                                                   (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_Texture2D____77994112);
+                                                   (const MethodInfo_30BE760 *)Method_AssetData_GetObject_Texture2D____78059424);
       if ( this->fields.spriteRenderer )
       {
         v6 = (UnityEngine_Texture_o *)spriteRenderer;
@@ -761,11 +759,11 @@ void ExUISpriteRenderer__SetAssetTexture(ExUISpriteRenderer_o *this, const Metho
         if ( spriteRenderer )
         {
           shader = UnityEngine_Material__get_shader((UnityEngine_Material_o *)spriteRenderer, 0);
-          v8 = (UnityEngine_Material_o *)sub_1C2D6DC(UnityEngine_Material_TypeInfo);
+          v8 = (UnityEngine_Material_o *)sub_1C32E6C(UnityEngine_Material_TypeInfo);
           UnityEngine_Material___ctor(v8, shader, 0);
           if ( v8 )
           {
-            UnityEngine_Material__SetTexture(v8, (System_String_o *)StringLiteral_16355/*"_SubTex"*/, v6, 0);
+            UnityEngine_Material__SetTexture(v8, (System_String_o *)StringLiteral_16357/*"_SubTex"*/, v6, 0);
             spriteRenderer = (UnityEngine_Renderer_o *)this->fields.spriteRenderer;
             if ( spriteRenderer )
             {
@@ -777,16 +775,16 @@ void ExUISpriteRenderer__SetAssetTexture(ExUISpriteRenderer_o *this, const Metho
       }
     }
 LABEL_19:
-    sub_1C2D6EC(spriteRenderer, method);
+    sub_1C32E7C(spriteRenderer);
   }
 LABEL_14:
   spriteRenderer = (UnityEngine_Renderer_o *)this->fields.assetData;
   if ( !spriteRenderer )
     goto LABEL_19;
-  spriteRenderer = (UnityEngine_Renderer_o *)AssetData__GetObject_object__51051712(
+  spriteRenderer = (UnityEngine_Renderer_o *)AssetData__GetObject_object__51111776(
                                                (AssetData_o *)spriteRenderer,
                                                this->fields.assetLabel,
-                                               (const MethodInfo_30AFCC0 *)Method_AssetData_GetObject_Texture2D____77994112);
+                                               (const MethodInfo_30BE760 *)Method_AssetData_GetObject_Texture2D____78059424);
   if ( !spriteRenderer )
     goto LABEL_19;
   v9 = (UnityEngine_Texture2D_o *)spriteRenderer;
@@ -803,7 +801,7 @@ LABEL_14:
   v26.fields.m_YMin = 0.0;
   v26.fields.m_Width = (float)v10;
   v26.fields.m_Height = v13;
-  spriteRenderer = (UnityEngine_Renderer_o *)UnityEngine_Sprite__Create_71196528(v9, v26, pivotOffset, 1.0, 0);
+  spriteRenderer = (UnityEngine_Renderer_o *)UnityEngine_Sprite__Create_71256464(v9, v26, pivotOffset, 1.0, 0);
   if ( !v12 )
     goto LABEL_19;
   UnityEngine_SpriteRenderer__set_sprite(v12, (UnityEngine_Sprite_o *)spriteRenderer, 0);
@@ -844,19 +842,19 @@ void ExUISpriteRenderer__SetImage(ExUISpriteRenderer_o *this, UnityEngine_Textur
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C266D3 & 1) == 0 )
+  if ( (byte_4C36DAB & 1) == 0 )
   {
-    sub_1C2D490(&AssetManager_TypeInfo);
-    byte_4C266D3 = 1;
+    sub_1C32C20(&AssetManager_TypeInfo);
+    byte_4C36DAB = 1;
   }
   assetData = this->fields.assetData;
   if ( assetData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40313100(assetData, 0);
+    AssetManager__releaseAsset_40435328(assetData, 0);
     this->fields.assetData = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.assetData, 0, v6, v7);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.assetData, 0, v6, v7);
   }
   loadAssetName = this->fields.loadAssetName;
   if ( loadAssetName )
@@ -865,10 +863,10 @@ void ExUISpriteRenderer__SetImage(ExUISpriteRenderer_o *this, UnityEngine_Textur
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(loadAssetName, 0);
     this->fields.loadAssetName = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.loadAssetName, 0, v9, v10);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.loadAssetName, 0, v9, v10);
     callbackFunc = this->fields.callbackFunc;
     this->fields.callbackFunc = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v12, v13);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v12, v13);
     if ( callbackFunc )
       ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
         callbackFunc->fields.method_code,
@@ -885,41 +883,40 @@ void ExUISpriteRenderer__SetSceneMode(
         const MethodInfo *method)
 {
   intptr_t Instance; // x0
-  __int64 v8; // x1
   UnityEngine_GameObject_o *gameObject; // x0
   int32_t width; // w20
   float height; // s1
-  ManagerConfig_c *v12; // x0
-  float v13; // s0
-  float v14; // s1
-  float v15; // s8
-  float v16; // s9
-  UnityEngine_GameObject_o *v17; // x20
-  UnityEngine_GameObject_o *v18; // x0
+  ManagerConfig_c *v11; // x0
+  float v12; // s0
+  float v13; // s1
+  float v14; // s8
+  float v15; // s9
+  UnityEngine_GameObject_o *v16; // x20
+  UnityEngine_GameObject_o *v17; // x0
   float LocalScaleX; // s0
-  UnityEngine_GameObject_o *v20; // x20
-  UnityEngine_GameObject_o *v21; // x0
+  UnityEngine_GameObject_o *v19; // x20
+  UnityEngine_GameObject_o *v20; // x0
   float LocalScaleY; // s0
-  ExUISpriteRenderer_c *v23; // x0
-  float v24; // s8
-  UnityEngine_GameObject_o *v25; // x0
-  int32_t v26; // w1
-  UIWidget_o *v27; // x19
-  UnityEngine_GameObject_o *v28; // x0
-  ManagerConfig_c *v29; // x8
-  UnityEngine_GameObject_o *v30; // x19
+  ExUISpriteRenderer_c *v22; // x0
+  float v23; // s8
+  UnityEngine_GameObject_o *v24; // x0
+  int32_t v25; // w1
+  UIWidget_o *v26; // x19
+  UnityEngine_GameObject_o *v27; // x0
+  ManagerConfig_c *v28; // x8
+  UnityEngine_GameObject_o *v29; // x19
+  int v30; // w8
   int v31; // w8
-  int v32; // w8
 
-  if ( (byte_4C266D5 & 1) == 0 )
+  if ( (byte_4C36DAD & 1) == 0 )
   {
-    sub_1C2D490(&ExUISpriteRenderer_TypeInfo);
-    sub_1C2D490(&FSUtility_TypeInfo);
-    sub_1C2D490(&ManagerConfig_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
-    byte_4C266D5 = 1;
+    sub_1C32C20(&ExUISpriteRenderer_TypeInfo);
+    sub_1C32C20(&FSUtility_TypeInfo);
+    sub_1C32C20(&ManagerConfig_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    byte_4C36DAD = 1;
   }
-  Instance = (intptr_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+  Instance = (intptr_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
   if ( !Instance )
     goto LABEL_40;
   Instance = *(_QWORD *)(Instance + 592);
@@ -939,41 +936,41 @@ void ExUISpriteRenderer__SetSceneMode(
     {
       width = UnityEngine_Screen__get_width(0);
       height = (float)UnityEngine_Screen__get_height(0);
-      v12 = ManagerConfig_TypeInfo;
-      v13 = (float)width / height;
-      v14 = fminf(v13, 2.3333);
-      if ( v13 < 1.7778 )
-        v15 = 1.7778;
+      v11 = ManagerConfig_TypeInfo;
+      v12 = (float)width / height;
+      v13 = fminf(v12, 2.3333);
+      if ( v12 < 1.7778 )
+        v14 = 1.7778;
       else
-        v15 = v14;
+        v14 = v13;
       if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-        v12 = ManagerConfig_TypeInfo;
+        v11 = ManagerConfig_TypeInfo;
       }
-      v16 = (float)v12->static_fields->WIDTH_21_9 / (float)v12->static_fields->HEIGHT;
+      v15 = (float)v11->static_fields->WIDTH_21_9 / (float)v11->static_fields->HEIGHT;
+      v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-      v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-      LocalScaleX = GameObjectExtensions__GetLocalScaleX(v18, 0);
-      GameObjectExtensions__SetLocalScaleX(v17, LocalScaleX * (float)(v15 / v16), 0);
+      LocalScaleX = GameObjectExtensions__GetLocalScaleX(v17, 0);
+      GameObjectExtensions__SetLocalScaleX(v16, LocalScaleX * (float)(v14 / v15), 0);
+      v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       v20 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-      v21 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-      LocalScaleY = GameObjectExtensions__GetLocalScaleY(v21, 0);
-      GameObjectExtensions__SetLocalScaleY(v20, (float)(v15 / v16) * LocalScaleY, 0);
-      v23 = ExUISpriteRenderer_TypeInfo;
+      LocalScaleY = GameObjectExtensions__GetLocalScaleY(v20, 0);
+      GameObjectExtensions__SetLocalScaleY(v19, (float)(v14 / v15) * LocalScaleY, 0);
+      v22 = ExUISpriteRenderer_TypeInfo;
       if ( !ExUISpriteRenderer_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(ExUISpriteRenderer_TypeInfo);
-        v23 = ExUISpriteRenderer_TypeInfo;
+        v22 = ExUISpriteRenderer_TypeInfo;
       }
-      v24 = (float)((float)(v16 - v15)
-                  / (float)(v16
+      v23 = (float)((float)(v15 - v14)
+                  / (float)(v15
                           - (float)((float)ManagerConfig_TypeInfo->static_fields->WIDTH
                                   / (float)ManagerConfig_TypeInfo->static_fields->HEIGHT)))
-          * (float)(v23->static_fields->BACK_HEIGHT_16_9 - ManagerConfig_TypeInfo->static_fields->HEIGHT);
-      v25 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-      GameObjectExtensions__SetLocalPositionY(v25, v24, 0);
-      Instance = (intptr_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+          * (float)(v22->static_fields->BACK_HEIGHT_16_9 - ManagerConfig_TypeInfo->static_fields->HEIGHT);
+      v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      GameObjectExtensions__SetLocalPositionY(v24, v23, 0);
+      Instance = (intptr_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
       if ( Instance )
       {
         Instance = *(_QWORD *)(Instance + 592);
@@ -983,50 +980,50 @@ void ExUISpriteRenderer__SetSceneMode(
           if ( Instance )
           {
             UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 1, 0);
-            Instance = (intptr_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+            Instance = (intptr_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
             if ( Instance )
             {
               Instance = *(_QWORD *)(Instance + 592);
               if ( Instance )
               {
-                if ( v24 == INFINITY )
-                  v26 = 0;
+                if ( v23 == INFINITY )
+                  v25 = 0;
                 else
-                  v26 = 2 * (int)v24;
-                UIWidget__set_height((UIWidget_o *)Instance, v26, 0);
+                  v25 = 2 * (int)v23;
+                UIWidget__set_height((UIWidget_o *)Instance, v25, 0);
                 if ( !FSUtility_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
                 if ( !FSUtility__IsTablet(0) )
                 {
-                  Instance = (intptr_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+                  Instance = (intptr_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
                   if ( !Instance )
                     goto LABEL_40;
-                  v27 = *(UIWidget_o **)(Instance + 592);
+                  v26 = *(UIWidget_o **)(Instance + 592);
                   Instance = UnityEngine_Screen__get_width(0);
-                  if ( !v27 )
+                  if ( !v26 )
                     goto LABEL_40;
-                  UIWidget__set_width(v27, Instance, 0);
+                  UIWidget__set_width(v26, Instance, 0);
                 }
-                Instance = (intptr_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+                Instance = (intptr_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
                 if ( Instance )
                 {
                   Instance = *(_QWORD *)(Instance + 592);
                   if ( Instance )
                   {
-                    v28 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
-                    v29 = ManagerConfig_TypeInfo;
-                    v30 = v28;
+                    v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
+                    v28 = ManagerConfig_TypeInfo;
+                    v29 = v27;
                     if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
                     {
                       j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
-                      v29 = ManagerConfig_TypeInfo;
+                      v28 = ManagerConfig_TypeInfo;
                     }
-                    v31 = v29->static_fields->HEIGHT;
-                    if ( v31 <= 0 )
-                      v32 = -v31;
+                    v30 = v28->static_fields->HEIGHT;
+                    if ( v30 <= 0 )
+                      v31 = -v30;
                     else
-                      v32 = 1 - v31;
-                    GameObjectExtensions__SetLocalPositionY(v30, v24 + (float)(v32 >> 1), 0);
+                      v31 = 1 - v30;
+                    GameObjectExtensions__SetLocalPositionY(v29, v23 + (float)(v31 >> 1), 0);
                     return;
                   }
                 }
@@ -1036,7 +1033,7 @@ void ExUISpriteRenderer__SetSceneMode(
         }
       }
 LABEL_40:
-      sub_1C2D6EC(Instance, v8);
+      sub_1C32E7C(Instance);
     }
   }
 }
@@ -1064,10 +1061,10 @@ void ExUISpriteRenderer__SetTexture(ExUISpriteRenderer_o *this, UnityEngine_Text
   UnityEngine_Rect_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = this;
-  if ( (byte_4C266D8 & 1) == 0 )
+  if ( (byte_4C36DB0 & 1) == 0 )
   {
-    this = (ExUISpriteRenderer_o *)sub_1C2D490(&StringLiteral_16355/*"_SubTex"*/);
-    byte_4C266D8 = 1;
+    this = (ExUISpriteRenderer_o *)sub_1C32C20(&StringLiteral_16357/*"_SubTex"*/);
+    byte_4C36DB0 = 1;
   }
   if ( v4->fields.isTextureAlphaImage )
   {
@@ -1076,9 +1073,9 @@ void ExUISpriteRenderer__SetTexture(ExUISpriteRenderer_o *this, UnityEngine_Text
       || (this = (ExUISpriteRenderer_o *)UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)this, 0)) == 0 )
     {
 LABEL_11:
-      sub_1C2D6EC(this, tex);
+      sub_1C32E7C(this);
     }
-    UnityEngine_Material__SetTexture((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16355/*"_SubTex"*/, 0, 0);
+    UnityEngine_Material__SetTexture((UnityEngine_Material_o *)this, (System_String_o *)StringLiteral_16357/*"_SubTex"*/, 0, 0);
   }
   v4->fields.isTextureAlphaImage = 0;
   if ( !tex )
@@ -1097,7 +1094,7 @@ LABEL_11:
   v21.fields.m_YMin = 0.0;
   v21.fields.m_Width = (float)v5;
   v21.fields.m_Height = v8;
-  this = (ExUISpriteRenderer_o *)UnityEngine_Sprite__Create_71196528(tex, v21, pivotOffset, 1.0, 0);
+  this = (ExUISpriteRenderer_o *)UnityEngine_Sprite__Create_71256464(tex, v21, pivotOffset, 1.0, 0);
   if ( !spriteRenderer )
     goto LABEL_11;
   UnityEngine_SpriteRenderer__set_sprite(spriteRenderer, (UnityEngine_Sprite_o *)this, 0);
@@ -1132,9 +1129,8 @@ void ExUISpriteRenderer__SetTweenColor(ExUISpriteRenderer_o *this, UnityEngine_C
   float b; // s9
   float g; // s10
   float r; // s11
-  __int64 v8; // x1
   UnityEngine_Renderer_o *spriteRenderer; // x0
-  UnityEngine_Color_o v10; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   a = c.fields.a;
   b = c.fields.b;
@@ -1146,11 +1142,11 @@ void ExUISpriteRenderer__SetTweenColor(ExUISpriteRenderer_o *this, UnityEngine_C
     || (UnityEngine_Renderer__set_enabled(spriteRenderer, a > 0.0, 0),
         (spriteRenderer = (UnityEngine_Renderer_o *)this->fields.spriteRenderer) == 0) )
   {
-    sub_1C2D6EC(spriteRenderer, v8);
+    sub_1C32E7C(spriteRenderer);
   }
-  v10.fields.b = b;
-  v10.fields.a = a;
-  v10.fields.r = r;
-  v10.fields.g = g;
-  UnityEngine_SpriteRenderer__set_color((UnityEngine_SpriteRenderer_o *)spriteRenderer, v10, 0);
+  v9.fields.b = b;
+  v9.fields.a = a;
+  v9.fields.r = r;
+  v9.fields.g = g;
+  UnityEngine_SpriteRenderer__set_color((UnityEngine_SpriteRenderer_o *)spriteRenderer, v9, 0);
 }

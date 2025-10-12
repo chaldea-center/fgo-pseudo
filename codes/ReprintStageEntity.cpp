@@ -1,34 +1,33 @@
 void ReprintStageEntity___ctor(ReprintStageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27A9A & 1) == 0 )
+  if ( (byte_4C3819C & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C27A9A = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C3819C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void ReprintStageEntity___ctor_42348064(
+void ReprintStageEntity___ctor_42480356(
         ReprintStageEntity_o *this,
         ReprintStageEntity_o *cSrc,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
-  if ( (byte_4C27A9B & 1) == 0 )
+  if ( (byte_4C3819D & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C27A9B = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C3819D = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
   if ( !cSrc )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   *(_OWORD *)&this->fields.questId = *(_OWORD *)&cSrc->fields.questId;
   *(_QWORD *)&this->fields.remapPhase = *(_QWORD *)&cSrc->fields.remapPhase;
 }
@@ -40,16 +39,16 @@ System_String_o *ReprintStageEntity__CreatePK(
         int32_t wave,
         const MethodInfo *method)
 {
-  if ( (byte_4C27A99 & 1) == 0 )
+  if ( (byte_4C3819B & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C27A99 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C3819B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            questId,
            questPhase,
            wave,
-           (const MethodInfo_30CCF68 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30DBA08 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

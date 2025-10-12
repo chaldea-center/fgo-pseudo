@@ -1,14 +1,14 @@
 void SpotPathMaster___ctor(SpotPathMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27ED5 & 1) == 0 )
+  if ( (byte_4C385D8 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
-    byte_4C27ED5 = 1;
+    sub_1C32C20(&Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
+    byte_4C385D8 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     223,
-    (const MethodInfo_3385A74 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
+    (const MethodInfo_3394514 *)Method_DataMasterBase_SpotPathMaster__SpotPathEntity__int___ctor__);
 }
 
 
@@ -34,7 +34,6 @@ int32_t SpotPathMaster__GetRaceSpotId(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 SpotPathEntity_o *SpotPathMaster__GetSpotPathEntity(
         SpotPathMaster_o *this,
         int32_t eventId,
@@ -48,18 +47,18 @@ SpotPathEntity_o *SpotPathMaster__GetSpotPathEntity(
   int32_t v12; // w22
   int v13; // w23
 
-  if ( (byte_4C27ED6 & 1) == 0 )
+  if ( (byte_4C385D9 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_SpotPathEntity__get_Count__);
-    sub_1C2D490(&Method_System_Collections_ObjectModel_Collection_SpotPathEntity__get_Item__);
-    byte_4C27ED6 = 1;
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_SpotPathEntity__get_Count__);
+    sub_1C32C20(&Method_System_Collections_ObjectModel_Collection_SpotPathEntity__get_Item__);
+    byte_4C385D9 = 1;
   }
   result = (SpotPathEntity_o *)this->fields.list;
   if ( !result )
     goto LABEL_14;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             (System_Collections_ObjectModel_Collection_T__o *)result,
-            (const MethodInfo_3321208 *)Method_System_Collections_ObjectModel_Collection_SpotPathEntity__get_Count__);
+            (const MethodInfo_332FCA8 *)Method_System_Collections_ObjectModel_Collection_SpotPathEntity__get_Count__);
   if ( Count >= 1 )
   {
     v11 = Count;
@@ -73,7 +72,7 @@ SpotPathEntity_o *SpotPathMaster__GetSpotPathEntity(
       result = (SpotPathEntity_o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                      (System_Collections_ObjectModel_Collection_T__o *)result,
                                      v12,
-                                     (const MethodInfo_3321298 *)Method_System_Collections_ObjectModel_Collection_SpotPathEntity__get_Item__);
+                                     (const MethodInfo_332FD38 *)Method_System_Collections_ObjectModel_Collection_SpotPathEntity__get_Item__);
       if ( !result )
         break;
       if ( result->fields.valueType == 1 && result->fields.targetId == v13 && result->fields.targetValue == groupId )
@@ -82,7 +81,7 @@ SpotPathEntity_o *SpotPathMaster__GetSpotPathEntity(
         return 0;
     }
 LABEL_14:
-    sub_1C2D6EC(result, *(_QWORD *)&eventId);
+    sub_1C32E7C(result);
   }
   return 0;
 }

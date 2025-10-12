@@ -1,27 +1,27 @@
 void EventRewardSceneEntity___ctor(EventRewardSceneEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C273EA & 1) == 0 )
+  if ( (byte_4C37AE0 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C273EA = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C37AE0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventRewardSceneEntity__CreatePK(int32_t eventId, int32_t slot, const MethodInfo *method)
 {
-  if ( (byte_4C273E8 & 1) == 0 )
+  if ( (byte_4C37ADE & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C273E8 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C37ADE = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            slot,
-           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -36,42 +36,41 @@ System_String_o *EventRewardSceneEntity__CreatePrimaryKey(EventRewardSceneEntity
 int32_t EventRewardSceneEntity__GetBgmId(EventRewardSceneEntity_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  __int64 v4; // x1
   Il2CppObject *Entity; // x0
-  Il2CppObject *v6; // x20
-  bool v7; // cc
-  __int64 v8; // x8
+  Il2CppObject *v5; // x20
+  bool v6; // cc
+  __int64 v7; // x8
 
-  if ( (byte_4C273E9 & 1) == 0 )
+  if ( (byte_4C37ADF & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C2D490(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C273E9 = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C32C20(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C37ADF = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventMaster___)) == 0 )
+                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventMaster___)) == 0 )
   {
-    sub_1C2D6EC(Instance, v4);
+    sub_1C32E7C(Instance);
   }
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.eventId,
-             (const MethodInfo_3387D98 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+             (const MethodInfo_3396838 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
   if ( Entity )
   {
-    v6 = Entity;
+    v5 = Entity;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v7 = NetworkManager__getTime(0) <= (__int64)v6[6].klass;
-    v8 = 48;
-    if ( v7 )
-      v8 = 44;
-    LODWORD(Entity) = *(_DWORD *)((char *)&this->klass + v8);
+    v6 = NetworkManager__getTime(0) <= (__int64)v5[6].klass;
+    v7 = 48;
+    if ( v6 )
+      v7 = 44;
+    LODWORD(Entity) = *(_DWORD *)((char *)&this->klass + v7);
   }
   return (int)Entity;
 }

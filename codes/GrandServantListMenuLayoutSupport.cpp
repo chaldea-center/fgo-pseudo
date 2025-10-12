@@ -9,24 +9,23 @@ void GrandServantListMenuLayoutSupport__OnClickSupportInfoButton(
         const MethodInfo *method)
 {
   UnityEngine_Object_o *fsm; // x20
-  __int64 v4; // x1
-  PlayMakerFSM_o *v5; // x0
+  PlayMakerFSM_o *v4; // x0
 
-  if ( (byte_4C220EE & 1) == 0 )
+  if ( (byte_4C327BD & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_3479/*"CLICK_SUPPORT_BUTTON"*/);
-    byte_4C220EE = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_3486/*"CLICK_SUPPORT_BUTTON"*/);
+    byte_4C327BD = 1;
   }
   fsm = (UnityEngine_Object_o *)this->fields.fsm;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(fsm, 0, 0) )
   {
-    v5 = this->fields.fsm;
-    if ( !v5 )
-      sub_1C2D6EC(0, v4);
-    PlayMakerFSM__SendEvent(v5, (System_String_o *)StringLiteral_3479/*"CLICK_SUPPORT_BUTTON"*/, 0);
+    v4 = this->fields.fsm;
+    if ( !v4 )
+      sub_1C32E7C(0);
+    PlayMakerFSM__SendEvent(v4, (System_String_o *)StringLiteral_3486/*"CLICK_SUPPORT_BUTTON"*/, 0);
   }
 }
 
@@ -36,80 +35,83 @@ void GrandServantListMenuLayoutSupport__SetupSupportInfo(
         GrandServantListQuestData_o *questData,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x4
   int kind; // w8
-  __int64 *v8; // x8
-  System_String_o *v9; // x21
-  Il2CppObject *v10; // x0
-  UILabel_o *descriptionLabel; // x22
+  __int64 *v6; // x8
+  System_String_o *v7; // x22
+  UILabel_o *descriptionLabel; // x21
   System_String_o *Instance; // x0
-  __int64 v13; // x1
-  int v14; // w8
+  int v10; // w8
   struct FollowerQuestInfomationDraw_o *followerQuestInfomationDraw; // x20
   struct QuestRestrictionInfo_o *QuestRestriction_k__BackingField; // x19
   int32_t stringLength; // w2
-  FollowerQuestInfomationDraw_o *v18; // x0
-  QuestRestrictionInfo_o *v19; // x1
-  int8_t v20[4]; // [xsp+Ch] [xbp-24h] BYREF
+  FollowerQuestInfomationDraw_o *v14; // x0
+  QuestRestrictionInfo_o *v15; // x1
+  __int64 v16; // x0
+  System_ArgumentOutOfRangeException_o *v17; // x19
+  System_String_o *v18; // x20
+  System_String_o *v19; // x0
+  __int64 v20; // x0
 
-  if ( (byte_4C220ED & 1) == 0 )
+  if ( (byte_4C327BC & 1) == 0 )
   {
-    sub_1C2D490(&GrandServantListData_DisplayKind_TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1C2D490(&StringLiteral_7003/*"GRAND_SERVANT_LIST_FORMATION_SELECTABLE_DESCRIPTION_TEXT"*/);
-    sub_1C2D490(&StringLiteral_7002/*"GRAND_SERVANT_LIST_FORMATION_READONLY_DESCRIPTION_TEXT"*/);
-    byte_4C220ED = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1C32C20(&StringLiteral_7008/*"GRAND_SERVANT_LIST_FORMATION_SELECTABLE_DESCRIPTION_TEXT"*/);
+    sub_1C32C20(&StringLiteral_7007/*"GRAND_SERVANT_LIST_FORMATION_READONLY_DESCRIPTION_TEXT"*/);
+    byte_4C327BC = 1;
   }
   kind = (unsigned __int8)this->fields.kind;
-  if ( kind == 2 )
+  if ( kind == 1 )
   {
-    v8 = &StringLiteral_7002/*"GRAND_SERVANT_LIST_FORMATION_READONLY_DESCRIPTION_TEXT"*/;
+    v6 = &StringLiteral_7008/*"GRAND_SERVANT_LIST_FORMATION_SELECTABLE_DESCRIPTION_TEXT"*/;
   }
   else
   {
-    if ( kind != 1 )
+    if ( kind != 2 )
     {
-      v20[0] = this->fields.kind;
-      v10 = (Il2CppObject *)j_il2cpp_value_box_0(GrandServantListData_DisplayKind_TypeInfo, v20, method, v3, v4);
-      PrivateImplementationDetails___ThrowSwitchExpressionException(v10, 0);
+      v16 = sub_1C32C34(&System_ArgumentOutOfRangeException_TypeInfo);
+      v17 = (System_ArgumentOutOfRangeException_o *)sub_1C32E6C(v16);
+      v18 = (System_String_o *)sub_1C32C34(&StringLiteral_21124/*"kind"*/);
+      v19 = (System_String_o *)sub_1C32C34(&StringLiteral_25451/*"予期されないタイプです。"*/);
+      System_ArgumentOutOfRangeException___ctor_64545328(v17, v18, v19, 0);
+      v20 = sub_1C32C34(&Method_GrandServantListMenuLayoutSupport_SetupSupportInfo__);
+      sub_1C32D48(v17, v20);
     }
-    v8 = &StringLiteral_7003/*"GRAND_SERVANT_LIST_FORMATION_SELECTABLE_DESCRIPTION_TEXT"*/;
+    v6 = &StringLiteral_7007/*"GRAND_SERVANT_LIST_FORMATION_READONLY_DESCRIPTION_TEXT"*/;
   }
-  v9 = (System_String_o *)*v8;
+  v7 = (System_String_o *)*v6;
   descriptionLabel = this->fields.descriptionLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Instance = LocalizationManager__Get(v9, 0);
+  Instance = LocalizationManager__Get(v7, 0);
   if ( !descriptionLabel )
-    goto LABEL_20;
+    goto LABEL_18;
   UILabel__set_text(descriptionLabel, Instance, 0);
-  v14 = (unsigned __int8)this->fields.kind;
+  v10 = (unsigned __int8)this->fields.kind;
   followerQuestInfomationDraw = this->fields.followerQuestInfomationDraw;
-  if ( v14 != 1 )
+  if ( v10 != 1 )
   {
     if ( followerQuestInfomationDraw )
     {
-      v18 = followerQuestInfomationDraw;
-      v19 = 0;
+      v14 = followerQuestInfomationDraw;
+      v15 = 0;
       stringLength = 0;
-      goto LABEL_19;
+      goto LABEL_17;
     }
-LABEL_20:
-    sub_1C2D6EC(Instance, v13);
+LABEL_18:
+    sub_1C32E7C(Instance);
   }
   if ( !questData )
-    goto LABEL_20;
+    goto LABEL_18;
   QuestRestriction_k__BackingField = questData->fields._QuestRestriction_k__BackingField;
-  Instance = (System_String_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39D40EC *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  Instance = (System_String_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39E2DF4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !Instance || !followerQuestInfomationDraw )
-    goto LABEL_20;
+    goto LABEL_18;
   stringLength = Instance[2].fields._stringLength;
-  v18 = followerQuestInfomationDraw;
-  v19 = QuestRestriction_k__BackingField;
-LABEL_19:
-  FollowerQuestInfomationDraw__SetInfomation(v18, v19, stringLength, 0, 0);
+  v14 = followerQuestInfomationDraw;
+  v15 = QuestRestriction_k__BackingField;
+LABEL_17:
+  FollowerQuestInfomationDraw__SetInfomation(v14, v15, stringLength, 0, 0);
 }
 
 
@@ -119,11 +121,10 @@ void GrandServantListMenuLayoutSupport__UpdateView(
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
-  const MethodInfo *v7; // x2
+  const MethodInfo *v6; // x2
 
   GrandServantListMenuLayout__UpdateView((GrandServantListMenuLayout_o *)this, grandServantListData, method);
   if ( !grandServantListData )
-    sub_1C2D6EC(v5, v6);
-  GrandServantListMenuLayoutSupport__SetupSupportInfo(this, grandServantListData->fields._QuestData_k__BackingField, v7);
+    sub_1C32E7C(v5);
+  GrandServantListMenuLayoutSupport__SetupSupportInfo(this, grandServantListData->fields._QuestData_k__BackingField, v6);
 }

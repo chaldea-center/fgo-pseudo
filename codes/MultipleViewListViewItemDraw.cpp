@@ -21,14 +21,14 @@ void MultipleViewListViewItemDraw__Awake(MultipleViewListViewItemDraw_o *this, c
   else
     mAtlas = 0;
   this->fields.defaultMaskAtlas = mAtlas;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.defaultMaskAtlas, (int32_t)mAtlas, v2, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.defaultMaskAtlas, (int32_t)mAtlas, v2, v3);
   v9 = this->fields.maskSprite;
   if ( v9 )
     mSpriteName = v9->fields.mSpriteName;
   else
     mSpriteName = 0;
   this->fields.defaultMaskName = mSpriteName;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.defaultMaskName, (int32_t)mSpriteName, v7, v8);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.defaultMaskName, (int32_t)mSpriteName, v7, v8);
 }
 
 
@@ -49,11 +49,11 @@ void MultipleViewListViewItemDraw__SetInput(
   UnityEngine_Object_o *removeObject; // x21
   const MethodInfo *v16; // x2
 
-  if ( (byte_4C2257B & 1) == 0 )
+  if ( (byte_4C32C4A & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2257B = 1;
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C32C4A = 1;
   }
   if ( item )
   {
@@ -74,7 +74,7 @@ void MultipleViewListViewItemDraw__SetInput(
             goto LABEL_50;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                 maskLb,
-                                                (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___);
           if ( !maskLb )
             goto LABEL_50;
           UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskLb, isInput, 0);
@@ -163,7 +163,7 @@ LABEL_48:
       }
     }
 LABEL_50:
-    sub_1C2D6EC(maskLb, item);
+    sub_1C32E7C(maskLb);
   }
 }
 
@@ -185,17 +185,17 @@ void MultipleViewListViewItemDraw__SetItem(
   UnityEngine_Object_o *removeObject; // x21
   const MethodInfo *v16; // x2
 
-  if ( (byte_4C2257A & 1) == 0 )
+  if ( (byte_4C32C49 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C2257A = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C32C49 = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( servantFaceIcon )
     {
-      ServantFaceIconComponent__Set_40783748(
+      ServantFaceIconComponent__Set_40905852(
         servantFaceIcon,
         item->fields.userSvtEntity,
         item->fields.iconLabelInfo1,
@@ -236,7 +236,7 @@ void MultipleViewListViewItemDraw__SetItem(
                   servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.partyIcon;
                   if ( !servantFaceIcon )
                     goto LABEL_53;
-                  FlashingIconComponent__Set_40679456(
+                  FlashingIconComponent__Set_40801560(
                     (FlashingIconComponent_o *)servantFaceIcon,
                     item->fields.partyIndex >= 0,
                     0);
@@ -332,7 +332,7 @@ LABEL_51:
       }
     }
 LABEL_53:
-    sub_1C2D6EC(servantFaceIcon, item);
+    sub_1C32E7C(servantFaceIcon);
   }
 }
 
@@ -352,13 +352,13 @@ void MultipleViewListViewItemDraw__SetMaskInfo(
   int32_t selectNum; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_4C2257C & 1) == 0 )
+  if ( (byte_4C32C4B & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_11514/*"SELECT_CANNOT"*/);
-    sub_1C2D490(&StringLiteral_11546/*"SELECT_SERVANT_EVENT_JOIN"*/);
-    this = (MultipleViewListViewItemDraw_o *)sub_1C2D490(&StringLiteral_8812/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/);
-    byte_4C2257C = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_11520/*"SELECT_CANNOT"*/);
+    sub_1C32C20(&StringLiteral_11552/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    this = (MultipleViewListViewItemDraw_o *)sub_1C32C20(&StringLiteral_8818/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/);
+    byte_4C32C4B = 1;
   }
   if ( !item )
     goto LABEL_39;
@@ -384,7 +384,7 @@ void MultipleViewListViewItemDraw__SetMaskInfo(
       maskLb = v4->fields.maskLb;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v7 = &StringLiteral_11546/*"SELECT_SERVANT_EVENT_JOIN"*/;
+      v7 = &StringLiteral_11552/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_24:
       v8 = (System_String_o *)*v7;
 LABEL_25:
@@ -395,7 +395,7 @@ LABEL_25:
         return;
       }
 LABEL_39:
-      sub_1C2D6EC(this, item);
+      sub_1C32E7C(this);
     }
     if ( !MultipleViewListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
       return;
@@ -417,7 +417,7 @@ LABEL_17:
     maskLb = v4->fields.maskLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = &StringLiteral_11514/*"SELECT_CANNOT"*/;
+    v7 = &StringLiteral_11520/*"SELECT_CANNOT"*/;
     goto LABEL_24;
   }
   if ( MultipleViewListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
@@ -441,7 +441,7 @@ LABEL_17:
     maskLb = v4->fields.maskLb;
     selectNum = item->fields.selectNum;
     v9 = System_Int32__ToString((int32_t)&selectNum, 0);
-    v10 = System_String__Concat_63457864((System_String_o *)StringLiteral_8812/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/, v9, 0);
+    v10 = System_String__Concat_63518544((System_String_o *)StringLiteral_8818/*"MULTIPLE_SERVANT_SELECTED_SERVANT_"*/, v9, 0);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     v8 = v10;

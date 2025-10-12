@@ -6,7 +6,7 @@ void WarBoardEventData___ctor(WarBoardEventData_o *this, const MethodInfo *metho
 }
 
 
-void WarBoardEventData___ctor_37918816(
+void WarBoardEventData___ctor_38037804(
         WarBoardEventData_o *this,
         int32_t id,
         int32_t playedTurn,
@@ -19,17 +19,16 @@ void WarBoardEventData___ctor_37918816(
 }
 
 
-void WarBoardEventData___ctor_37918864(
+void WarBoardEventData___ctor_38037852(
         WarBoardEventData_o *this,
         WarBoardEventData_SaveData_o *saveData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !saveData )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   *(_QWORD *)&this->fields._eventId_k__BackingField = *(_QWORD *)&saveData->fields.eventId;
   this->fields._firstPlayedTurn_k__BackingField = saveData->fields.firstPlayedTurn;
 }
@@ -85,17 +84,16 @@ void WarBoardEventData_SaveData___ctor(WarBoardEventData_SaveData_o *this, const
 }
 
 
-void WarBoardEventData_SaveData___ctor_37909392(
+void WarBoardEventData_SaveData___ctor_38028380(
         WarBoardEventData_SaveData_o *this,
         WarBoardEventData_o *eventData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !eventData )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   *(_QWORD *)&this->fields.eventId = *(_QWORD *)&eventData->fields._eventId_k__BackingField;
   this->fields.firstPlayedTurn = eventData->fields._firstPlayedTurn_k__BackingField;
 }

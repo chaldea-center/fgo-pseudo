@@ -5,7 +5,7 @@ void WarBoardPrevCondData___ctor(WarBoardPrevCondData_o *this, const MethodInfo 
 }
 
 
-void WarBoardPrevCondData___ctor_37945824(
+void WarBoardPrevCondData___ctor_38064840(
         WarBoardPrevCondData_o *this,
         int32_t id,
         int32_t turn,
@@ -17,17 +17,16 @@ void WarBoardPrevCondData___ctor_37945824(
 }
 
 
-void WarBoardPrevCondData___ctor_37945868(
+void WarBoardPrevCondData___ctor_38064884(
         WarBoardPrevCondData_o *this,
         WarBoardPrevCondData_SaveData_o *saveData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !saveData )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   this->fields = (WarBoardPrevCondData_Fields)saveData->fields;
 }
 
@@ -70,16 +69,15 @@ void WarBoardPrevCondData_SaveData___ctor(WarBoardPrevCondData_SaveData_o *this,
 }
 
 
-void WarBoardPrevCondData_SaveData___ctor_37909452(
+void WarBoardPrevCondData_SaveData___ctor_38028440(
         WarBoardPrevCondData_SaveData_o *this,
         WarBoardPrevCondData_o *prevCondData,
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !prevCondData )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   this->fields = (WarBoardPrevCondData_SaveData_Fields)prevCondData->fields;
 }

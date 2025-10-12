@@ -1,27 +1,27 @@
 void ServantChangeEntity___ctor(ServantChangeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27B15 & 1) == 0 )
+  if ( (byte_4C38217 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C27B15 = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C38217 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ServantChangeEntity__CreatePK(int32_t svtId, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4C27B13 & 1) == 0 )
+  if ( (byte_4C38215 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C27B13 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C38215 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            priority,
-           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -33,7 +33,6 @@ System_String_o *ServantChangeEntity__CreatePrimaryKey(ServantChangeEntity_o *th
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t ServantChangeEntity__GetAfterTreasureDeviceId(
         ServantChangeEntity_o *this,
         int32_t treasureDeviceId,
@@ -64,7 +63,7 @@ int32_t ServantChangeEntity__GetAfterTreasureDeviceId(
         if ( (int)v6 < (int)v7 )
         {
           if ( v6 >= v7 )
-            sub_1C2D6F4(this, *(_QWORD *)&treasureDeviceId, method);
+            sub_1C32E84(this);
           return beforeTreasureDeviceIds->m_Items[v6];
         }
       }
@@ -74,7 +73,6 @@ int32_t ServantChangeEntity__GetAfterTreasureDeviceId(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t ServantChangeEntity__GetBeforeTreasureDeviceId(
         ServantChangeEntity_o *this,
         int32_t treasureDeviceId,
@@ -105,7 +103,7 @@ int32_t ServantChangeEntity__GetBeforeTreasureDeviceId(
         if ( (int)v6 < (int)v7 )
         {
           if ( v6 >= v7 )
-            sub_1C2D6F4(this, *(_QWORD *)&treasureDeviceId, method);
+            sub_1C32E84(this);
           return afterTreasureDeviceIds->m_Items[v6];
         }
       }
@@ -127,10 +125,10 @@ bool ServantChangeEntity__IsEnable(ServantChangeEntity_o *this, const MethodInfo
   int32_t condType; // w21
   int64_t condValue; // x19
 
-  if ( (byte_4C27B14 & 1) == 0 )
+  if ( (byte_4C38216 & 1) == 0 )
   {
-    sub_1C2D490(&CondType_TypeInfo);
-    byte_4C27B14 = 1;
+    sub_1C32C20(&CondType_TypeInfo);
+    byte_4C38216 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

@@ -1,14 +1,14 @@
 void ServantExceedMaster___ctor(ServantExceedMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27BDC & 1) == 0 )
+  if ( (byte_4C382DE & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string___ctor__);
-    byte_4C27BDC = 1;
+    sub_1C32C20(&Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string___ctor__);
+    byte_4C382DE = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     161,
-    (const MethodInfo_338A52C *)Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string___ctor__);
+    (const MethodInfo_3398FCC *)Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ ServantExceedEntity_o *ServantExceedMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C27BDD & 1) == 0 )
+  if ( (byte_4C382DF & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__GetEntity__);
-    byte_4C27BDD = 1;
+    sub_1C32C20(&Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__GetEntity__);
+    byte_4C382DF = 1;
   }
   PK = (Il2CppObject *)ServantExceedEntity__CreatePK(rarity, exceedCount, *(const MethodInfo **)&exceedCount);
   return (ServantExceedEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                     PK,
-                                    (const MethodInfo_338C850 *)Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__GetEntity__);
+                                    (const MethodInfo_339B2F0 *)Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__GetEntity__);
 }
 
 
@@ -42,37 +42,35 @@ int32_t ServantExceedMaster__GetExceedCount(
 {
   __int64 v7; // x22
   System_Object_array *v8; // x0
-  __int64 v9; // x1
   struct System_Collections_ObjectModel_ObservableCollection_TEntity__o *list; // x20
-  System_Func_object__bool__o *v11; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v12; // x0
-  ServantExceedMaster___c_c *v13; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v14; // x20
+  System_Func_object__bool__o *v10; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v11; // x0
+  ServantExceedMaster___c_c *v12; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v13; // x20
   System_Func_object__int__o *_9__8_1; // x21
-  Il2CppObject *v16; // x22
+  Il2CppObject *v15; // x22
   struct ServantExceedMaster___c_StaticFields *static_fields; // x0
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v20; // x0
-  __int64 v21; // x2
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v19; // x0
   int max_length; // w8
-  int v23; // w9
-  Il2CppObject *v24; // x10
+  int v21; // w9
+  Il2CppObject *v22; // x10
 
-  if ( (byte_4C27BDB & 1) == 0 )
+  if ( (byte_4C382DD & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Linq_Enumerable_OrderBy_ServantExceedEntity__int___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_ToArray_ServantExceedEntity___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_Where_ServantExceedEntity___);
-    sub_1C2D490(&System_Func_ServantExceedEntity__int__TypeInfo);
-    sub_1C2D490(&System_Func_ServantExceedEntity__bool__TypeInfo);
-    sub_1C2D490(&Method_ServantExceedMaster___c__GetExceedCount_b__8_1__);
-    sub_1C2D490(&Method_ServantExceedMaster___c__DisplayClass8_0__GetExceedCount_b__0__);
-    sub_1C2D490(&ServantExceedMaster___c__DisplayClass8_0_TypeInfo);
-    sub_1C2D490(&ServantExceedMaster___c_TypeInfo);
-    byte_4C27BDB = 1;
+    sub_1C32C20(&Method_System_Linq_Enumerable_OrderBy_ServantExceedEntity__int___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_ServantExceedEntity___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_Where_ServantExceedEntity___);
+    sub_1C32C20(&System_Func_ServantExceedEntity__int__TypeInfo);
+    sub_1C32C20(&System_Func_ServantExceedEntity__bool__TypeInfo);
+    sub_1C32C20(&Method_ServantExceedMaster___c__GetExceedCount_b__8_1__);
+    sub_1C32C20(&Method_ServantExceedMaster___c__DisplayClass8_0__GetExceedCount_b__0__);
+    sub_1C32C20(&ServantExceedMaster___c__DisplayClass8_0_TypeInfo);
+    sub_1C32C20(&ServantExceedMaster___c_TypeInfo);
+    byte_4C382DD = 1;
   }
-  v7 = sub_1C2D6DC(ServantExceedMaster___c__DisplayClass8_0_TypeInfo);
+  v7 = sub_1C32E6C(ServantExceedMaster___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_20;
@@ -80,62 +78,62 @@ int32_t ServantExceedMaster__GetExceedCount(
   if ( addLevel < 1 )
     return 0;
   list = this->fields.list;
-  v11 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_ServantExceedEntity__bool__TypeInfo);
+  v10 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_ServantExceedEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v11,
+    v10,
     (Il2CppObject *)v7,
     Method_ServantExceedMaster___c__DisplayClass8_0__GetExceedCount_b__0__,
     0);
-  v12 = System_Linq_Enumerable__Where_object_(
+  v11 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
-          (System_Func_TSource__bool__o *)v11,
-          (const MethodInfo_3115108 *)Method_System_Linq_Enumerable_Where_ServantExceedEntity___);
-  v13 = ServantExceedMaster___c_TypeInfo;
-  v14 = v12;
+          (System_Func_TSource__bool__o *)v10,
+          (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_ServantExceedEntity___);
+  v12 = ServantExceedMaster___c_TypeInfo;
+  v13 = v11;
   if ( !ServantExceedMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ServantExceedMaster___c_TypeInfo);
-    v13 = ServantExceedMaster___c_TypeInfo;
+    v12 = ServantExceedMaster___c_TypeInfo;
   }
-  _9__8_1 = (System_Func_object__int__o *)v13->static_fields->__9__8_1;
+  _9__8_1 = (System_Func_object__int__o *)v12->static_fields->__9__8_1;
   if ( !_9__8_1 )
   {
-    if ( !v13->_2.cctor_finished )
+    if ( !v12->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v13);
-      v13 = ServantExceedMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v12);
+      v12 = ServantExceedMaster___c_TypeInfo;
     }
-    v16 = (Il2CppObject *)v13->static_fields->__9;
-    _9__8_1 = (System_Func_object__int__o *)sub_1C2D6DC(System_Func_ServantExceedEntity__int__TypeInfo);
-    System_Func_object__int____ctor(_9__8_1, v16, Method_ServantExceedMaster___c__GetExceedCount_b__8_1__, 0);
+    v15 = (Il2CppObject *)v12->static_fields->__9;
+    _9__8_1 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_ServantExceedEntity__int__TypeInfo);
+    System_Func_object__int____ctor(_9__8_1, v15, Method_ServantExceedMaster___c__GetExceedCount_b__8_1__, 0);
     static_fields = ServantExceedMaster___c_TypeInfo->static_fields;
     static_fields->__9__8_1 = (struct System_Func_ServantExceedEntity__int__o *)_9__8_1;
-    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__8_1, (int32_t)_9__8_1, v18, v19);
+    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__8_1, (int32_t)_9__8_1, v17, v18);
   }
-  v20 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
-                                                               v14,
+  v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
+                                                               v13,
                                                                (System_Func_TSource__TKey__o *)_9__8_1,
-                                                               (const MethodInfo_30FE0A4 *)Method_System_Linq_Enumerable_OrderBy_ServantExceedEntity__int___);
+                                                               (const MethodInfo_310CB44 *)Method_System_Linq_Enumerable_OrderBy_ServantExceedEntity__int___);
   v8 = System_Linq_Enumerable__ToArray_object_(
-         v20,
-         (const MethodInfo_310DFEC *)Method_System_Linq_Enumerable_ToArray_ServantExceedEntity___);
+         v19,
+         (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_ServantExceedEntity___);
   if ( !v8 )
 LABEL_20:
-    sub_1C2D6EC(v8, v9);
+    sub_1C32E7C(v8);
   max_length = v8->max_length;
   if ( max_length < 1 )
     return 0;
-  v23 = 0;
+  v21 = 0;
   while ( 1 )
   {
-    if ( max_length == v23 )
-      sub_1C2D6F4(v8, v9, v21);
-    v24 = v8->m_Items[v23];
-    if ( !v24 )
+    if ( max_length == v21 )
+      sub_1C32E84(v8);
+    v22 = v8->m_Items[v21];
+    if ( !v22 )
       goto LABEL_20;
-    if ( SHIDWORD(v24[2].klass) >= addLevel )
-      return HIDWORD(v24[1].monitor);
-    if ( max_length == ++v23 )
+    if ( SHIDWORD(v22[2].klass) >= addLevel )
+      return HIDWORD(v22[1].monitor);
+    if ( max_length == ++v21 )
       return 0;
   }
 }
@@ -152,10 +150,10 @@ int32_t ServantExceedMaster__GetFrameType(
   ServantExceedEntity_o *Entity; // x0
   __int64 v10; // x8
 
-  if ( (byte_4C27BD6 & 1) == 0 )
+  if ( (byte_4C382D8 & 1) == 0 )
   {
-    sub_1C2D490(&Rarity_TypeInfo);
-    byte_4C27BD6 = 1;
+    sub_1C32C20(&Rarity_TypeInfo);
+    byte_4C382D8 = 1;
   }
   Entity = ServantExceedMaster__GetEntity(this, rarity, exceedCount, (const MethodInfo *)isGrandServant);
   if ( Entity )
@@ -186,10 +184,10 @@ int32_t ServantExceedMaster__GetFrameTypeFixRarity(
   ServantExceedEntity_o *Entity; // x0
   __int64 v11; // x8
 
-  if ( (byte_4C27BD8 & 1) == 0 )
+  if ( (byte_4C382DA & 1) == 0 )
   {
-    sub_1C2D490(&Rarity_TypeInfo);
-    byte_4C27BD8 = 1;
+    sub_1C32C20(&Rarity_TypeInfo);
+    byte_4C382DA = 1;
   }
   Entity = ServantExceedMaster__GetEntity(this, actualRarity, exceedCount, *(const MethodInfo **)&actualRarity);
   if ( Entity )
@@ -209,7 +207,7 @@ int32_t ServantExceedMaster__GetFrameTypeFixRarity(
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t ServantExceedMaster__GetFrameType_42450052(
+int32_t ServantExceedMaster__GetFrameType_42582276(
         ServantExceedMaster_o *this,
         int32_t svtId,
         int32_t limitCount,
@@ -218,19 +216,19 @@ int32_t ServantExceedMaster__GetFrameType_42450052(
         const MethodInfo *method)
 {
   ServantExceedMaster_o *v10; // x22
-  int32_t Rarity_42450252; // w20
+  int32_t Rarity_42582476; // w20
   const MethodInfo *v12; // x3
   ServantExceedEntity_o *Entity; // x0
   __int64 v14; // x8
 
   v10 = this;
-  if ( (byte_4C27BD7 & 1) == 0 )
+  if ( (byte_4C382D9 & 1) == 0 )
   {
-    this = (ServantExceedMaster_o *)sub_1C2D490(&Rarity_TypeInfo);
-    byte_4C27BD7 = 1;
+    this = (ServantExceedMaster_o *)sub_1C32C20(&Rarity_TypeInfo);
+    byte_4C382D9 = 1;
   }
-  Rarity_42450252 = ServantExceedMaster__GetRarity_42450252(this, svtId, limitCount, *(const MethodInfo **)&exceedCount);
-  Entity = ServantExceedMaster__GetEntity(v10, Rarity_42450252, exceedCount, v12);
+  Rarity_42582476 = ServantExceedMaster__GetRarity_42582476(this, svtId, limitCount, *(const MethodInfo **)&exceedCount);
+  Entity = ServantExceedMaster__GetEntity(v10, Rarity_42582476, exceedCount, v12);
   if ( Entity )
   {
     v14 = 40;
@@ -242,13 +240,13 @@ int32_t ServantExceedMaster__GetFrameType_42450052(
   {
     if ( !Rarity_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Rarity_TypeInfo);
-    return Rarity__getFrameTypeImage(Rarity_42450252, 0, 0);
+    return Rarity__getFrameTypeImage(Rarity_42582476, 0, 0);
   }
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t ServantExceedMaster__GetFrameType_42450708(
+int32_t ServantExceedMaster__GetFrameType_42582940(
         ServantExceedMaster_o *this,
         int32_t *rarity,
         int32_t svtId,
@@ -257,20 +255,20 @@ int32_t ServantExceedMaster__GetFrameType_42450708(
         const MethodInfo *method)
 {
   ServantExceedMaster_o *v10; // x21
-  int32_t Rarity_42450252; // w0
+  int32_t Rarity_42582476; // w0
   const MethodInfo *v12; // x3
   ServantExceedEntity_o *Entity; // x0
   int32_t v15; // w19
 
   v10 = this;
-  if ( (byte_4C27BD9 & 1) == 0 )
+  if ( (byte_4C382DB & 1) == 0 )
   {
-    this = (ServantExceedMaster_o *)sub_1C2D490(&Rarity_TypeInfo);
-    byte_4C27BD9 = 1;
+    this = (ServantExceedMaster_o *)sub_1C32C20(&Rarity_TypeInfo);
+    byte_4C382DB = 1;
   }
-  Rarity_42450252 = ServantExceedMaster__GetRarity_42450252(this, svtId, limitCount, *(const MethodInfo **)&limitCount);
-  *rarity = Rarity_42450252;
-  Entity = ServantExceedMaster__GetEntity(v10, Rarity_42450252, exceedCount, v12);
+  Rarity_42582476 = ServantExceedMaster__GetRarity_42582476(this, svtId, limitCount, *(const MethodInfo **)&limitCount);
+  *rarity = Rarity_42582476;
+  Entity = ServantExceedMaster__GetEntity(v10, Rarity_42582476, exceedCount, v12);
   if ( Entity )
     return Entity->fields.frameType;
   v15 = *rarity;
@@ -284,7 +282,7 @@ int32_t ServantExceedMaster__GetRarity(ServantExceedMaster_o *this, int32_t svtI
 {
   const MethodInfo *v3; // x3
 
-  return ServantExceedMaster__GetRarity_42450252(this, svtId, 0, v3);
+  return ServantExceedMaster__GetRarity_42582476(this, svtId, 0, v3);
 }
 
 
@@ -314,71 +312,68 @@ int32_t ServantExceedMaster__GetRarityIcon(
 }
 
 
-int32_t ServantExceedMaster__GetRarity_42450252(
+int32_t ServantExceedMaster__GetRarity_42582476(
         ServantExceedMaster_o *this,
         int32_t svtId,
         int32_t limitCount,
         const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  __int64 v7; // x1
-  const MethodInfo *v8; // x4
-  const MethodInfo *v9; // x4
-  const MethodInfo *v10; // x3
-  ServantLimitEntity_o *v11; // x0
-  ServantLimitAddEntity_o *v13; // [xsp+8h] [xbp-38h] BYREF
+  const MethodInfo *v7; // x4
+  ServantLimitEntity_o *v8; // x0
+  ServantLimitAddEntity_o *v10; // [xsp+8h] [xbp-38h] BYREF
   ServantLimitEntity_o *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C27BDA & 1) == 0 )
+  if ( (byte_4C382DC & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_ServantLimitAddMaster___);
-    sub_1C2D490(&Method_DataManager_GetMasterData_ServantLimitMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C27BDA = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_ServantLimitAddMaster___);
+    sub_1C32C20(&Method_DataManager_GetMasterData_ServantLimitMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C382DC = 1;
   }
   entity = 0;
-  v13 = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  v10 = 0;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+               (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
   if ( !Instance )
     goto LABEL_17;
-  if ( ServantLimitMaster__TryGetEntity((ServantLimitMaster_o *)Instance, &entity, svtId, limitCount, v8) )
+  if ( ServantLimitMaster__TryGetEntity((ServantLimitMaster_o *)Instance, &entity, svtId, limitCount, 0) )
     goto LABEL_14;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___)) == 0 )
+                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantLimitAddMaster___)) == 0 )
   {
 LABEL_17:
-    sub_1C2D6EC(Instance, v7);
+    sub_1C32E7C(Instance);
   }
-  if ( !ServantLimitAddMaster__TryGetEntity((ServantLimitAddMaster_o *)Instance, &v13, svtId, limitCount, v9) )
+  if ( !ServantLimitAddMaster__TryGetEntity((ServantLimitAddMaster_o *)Instance, &v10, svtId, limitCount, v7) )
   {
 LABEL_14:
-    v11 = entity;
+    v8 = entity;
     if ( !entity )
-      return (int)v11;
+      return (int)v8;
 LABEL_15:
-    LODWORD(v11) = v11->fields.rarity;
-    return (int)v11;
+    LODWORD(v8) = v8->fields.rarity;
+    return (int)v8;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
-  if ( !v13 || !Instance )
+               (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantLimitMaster___);
+  if ( !v10 || !Instance )
     goto LABEL_17;
-  v11 = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)Instance, svtId, v13->fields.battleCharaLimitCount, v10);
-  if ( v11 )
+  v8 = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)Instance, svtId, v10->fields.battleCharaLimitCount, 0);
+  if ( v8 )
     goto LABEL_15;
-  return (int)v11;
+  return (int)v8;
 }
 
 
@@ -392,17 +387,17 @@ bool ServantExceedMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C27BDE & 1) == 0 )
+  if ( (byte_4C382E0 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__TryGetEntity__);
-    byte_4C27BDE = 1;
+    sub_1C32C20(&Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__TryGetEntity__);
+    byte_4C382E0 = 1;
   }
   PK = (Il2CppObject *)ServantExceedEntity__CreatePK(rarity, exceedCount, *(const MethodInfo **)&rarity);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_338C89C *)Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__TryGetEntity__);
+           (const MethodInfo_339B33C *)Method_DataMasterBase_ServantExceedMaster__ServantExceedEntity__string__TryGetEntity__);
 }
 
 
@@ -414,26 +409,24 @@ ServantExceedEntity_o *ServantExceedMaster__getEntity(
         const MethodInfo *method)
 {
   void *Instance; // x0
-  __int64 v10; // x1
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x3
+  const MethodInfo *v10; // x3
 
-  if ( (byte_4C27BD5 & 1) == 0 )
+  if ( (byte_4C382D7 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_ServantLimitMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C27BD5 = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_ServantLimitMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C382D7 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ServantLimitMaster___)) == 0
-    || (Instance = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)Instance, svtId, limitCount, v11)) == 0 )
+                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantLimitMaster___)) == 0
+    || (Instance = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)Instance, svtId, limitCount, 0)) == 0 )
   {
-    sub_1C2D6EC(Instance, v10);
+    sub_1C32E7C(Instance);
   }
-  return ServantExceedMaster__GetEntity(this, *((_DWORD *)Instance + 6), exceedCount, v12);
+  return ServantExceedMaster__GetEntity(this, *((_DWORD *)Instance + 6), exceedCount, v10);
 }
 
 
@@ -443,15 +436,15 @@ void ServantExceedMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C27BDF & 1) == 0 )
+  if ( (byte_4C382E1 & 1) == 0 )
   {
-    sub_1C2D490(&ServantExceedMaster___c_TypeInfo);
-    byte_4C27BDF = 1;
+    sub_1C32C20(&ServantExceedMaster___c_TypeInfo);
+    byte_4C382E1 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C2D6DC(ServantExceedMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C32E6C(ServantExceedMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ServantExceedMaster___c_TypeInfo->static_fields->__9 = (struct ServantExceedMaster___c_o *)v1;
-  sub_1C2D434((CGThumbnailListItem_o *)ServantExceedMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)ServantExceedMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -467,7 +460,7 @@ int32_t ServantExceedMaster___c___GetExceedCount_b__8_1(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return e->fields.exceedCount;
 }
 
@@ -486,6 +479,6 @@ bool ServantExceedMaster___c__DisplayClass8_0___GetExceedCount_b__0(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return e->fields.rarity == this->fields.rarity;
 }

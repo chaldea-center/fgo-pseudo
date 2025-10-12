@@ -30,13 +30,12 @@ void TitleInfoEventLeagueVsGaugeFlashEffect__endAnim(
   p_endCallBack = (CGThumbnailListItem_o *)&this->fields.endCallBack;
   v5 = endCallBack;
   p_endCallBack->klass = 0;
-  sub_1C2D434(p_endCallBack, 0, v2, v3);
+  sub_1C32BC4(p_endCallBack, 0, v2, v3);
   if ( endCallBack )
     ActionExtensions__Call(v5, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void TitleInfoEventLeagueVsGaugeFlashEffect__setup(
         TitleInfoEventLeagueVsGaugeFlashEffect_o *this,
         int32_t joinGroupId,
@@ -54,23 +53,26 @@ void TitleInfoEventLeagueVsGaugeFlashEffect__setup(
   __int64 v16; // x2
   __int64 v17; // x3
   __int64 v18; // x4
-  Il2CppObject *v19; // x0
-  System_String_o *v20; // x0
+  __int64 v19; // x5
+  __int64 v20; // x6
+  __int64 v21; // x7
+  Il2CppObject *v22; // x0
+  System_String_o *v23; // x0
   UnityEngine_Object_o *gaugeSimpleAnim; // x22
-  System_String_o *v22; // x21
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
+  System_String_o *v25; // x21
+  int32_t v26; // w2
+  const MethodInfo *v27; // x3
   UnityEngine_Object_o *gaugeAnim; // x22
   UnityEngine_Object_o *Clip; // x22
-  int32_t v27; // [xsp+Ch] [xbp-44h] BYREF
+  int32_t v30; // [xsp+Ch] [xbp-44h] BYREF
 
   v10 = this;
-  if ( (byte_4C253A4 & 1) == 0 )
+  if ( (byte_4C359BC & 1) == 0 )
   {
-    sub_1C2D490(&int_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_1C2D490(&StringLiteral_17280/*"bit_vs_gauge_flash_"*/);
-    byte_4C253A4 = 1;
+    sub_1C32C20(&int_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_1C32C20(&StringLiteral_17284/*"bit_vs_gauge_flash_"*/);
+    byte_4C359BC = 1;
   }
   v11 = 0.5;
   v12 = 0.5;
@@ -94,16 +96,16 @@ void TitleInfoEventLeagueVsGaugeFlashEffect__setup(
     goto LABEL_29;
   if ( LODWORD(v15->max_length) <= 1 )
 LABEL_30:
-    sub_1C2D6F4(this, *(_QWORD *)&joinGroupId, point1);
+    sub_1C32E84(this);
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v15->m_Items[1];
   if ( !this )
     goto LABEL_29;
   UIProgressBar__set_value((UIProgressBar_o *)this, v12, 0);
-  v27 = joinGroupId;
-  v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27, v16, v17, v18);
-  v20 = System_String__Concat((Il2CppObject *)StringLiteral_17280/*"bit_vs_gauge_flash_"*/, v19, 0);
+  v30 = joinGroupId;
+  v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v30, v16, v17, v18, v19, v20, v21);
+  v23 = System_String__Concat((Il2CppObject *)StringLiteral_17284/*"bit_vs_gauge_flash_"*/, v22, 0);
   gaugeSimpleAnim = (UnityEngine_Object_o *)v10->fields.gaugeSimpleAnim;
-  v22 = v20;
+  v25 = v23;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(gaugeSimpleAnim, 0, 0) )
@@ -116,7 +118,7 @@ LABEL_30:
     this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeAnim;
     if ( this )
     {
-      Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip((UnityEngine_Animation_o *)this, v22, 0);
+      Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip((UnityEngine_Animation_o *)this, v25, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Equality(Clip, 0, 0) )
@@ -124,17 +126,17 @@ LABEL_30:
       this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeAnim;
       if ( this )
       {
-        UnityEngine_Animation__Play_70908988((UnityEngine_Animation_o *)this, v22, 0);
+        UnityEngine_Animation__Play_70968924((UnityEngine_Animation_o *)this, v25, 0);
         goto LABEL_28;
       }
     }
 LABEL_29:
-    sub_1C2D6EC(this, *(_QWORD *)&joinGroupId);
+    sub_1C32E7C(this);
   }
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeSimpleAnim;
   if ( !this )
     goto LABEL_29;
-  if ( !SimpleAnimation__get_Item((SimpleAnimation_o *)this, v22, 0) )
+  if ( !SimpleAnimation__get_Item((SimpleAnimation_o *)this, v25, 0) )
   {
 LABEL_25:
     ActionExtensions__Call(callback, 0);
@@ -143,8 +145,8 @@ LABEL_25:
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeSimpleAnim;
   if ( !this )
     goto LABEL_29;
-  SimpleAnimation__Play_66404364((SimpleAnimation_o *)this, v22, 0);
+  SimpleAnimation__Play_66464300((SimpleAnimation_o *)this, v25, 0);
 LABEL_28:
   v10->fields.endCallBack = callback;
-  sub_1C2D434((CGThumbnailListItem_o *)&v10->fields.endCallBack, (int32_t)callback, v23, v24);
+  sub_1C32BC4((CGThumbnailListItem_o *)&v10->fields.endCallBack, (int32_t)callback, v26, v27);
 }

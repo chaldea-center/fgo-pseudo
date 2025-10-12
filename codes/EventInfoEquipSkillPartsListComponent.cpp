@@ -20,29 +20,27 @@ void EventInfoEquipSkillPartsListComponent__Setup(
         const MethodInfo *method)
 {
   EventEquipSkillPartsEntity_array *Master_object; // x0
-  __int64 v6; // x1
-  __int64 v7; // x2
   il2cpp_array_size_t max_length; // x8
-  EventEquipSkillPartsEntity_array *v9; // x20
-  unsigned __int64 v10; // x23
-  EventEquipSkillPartsEntity_o *v11; // x21
-  Il2CppObject *v12; // x22
-  const MethodInfo *v13; // x2
+  EventEquipSkillPartsEntity_array *v7; // x20
+  unsigned __int64 v8; // x23
+  EventEquipSkillPartsEntity_o *v9; // x21
+  Il2CppObject *v10; // x22
+  const MethodInfo *v11; // x2
   float Height_k__BackingField; // s8
-  const MethodInfo *v15; // x1
+  const MethodInfo *v13; // x1
 
-  if ( (byte_4C287B4 & 1) == 0 )
+  if ( (byte_4C38EB9 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_EventEquipSkillPartsMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_GameObjectHelper_Instantiate_EventInfoEquipSkillPartsComponent___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C287B4 = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_EventEquipSkillPartsMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_GameObjectHelper_Instantiate_EventInfoEquipSkillPartsComponent___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C38EB9 = 1;
   }
   this->fields._Height_k__BackingField = 0.0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventEquipSkillPartsEntity_array *)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_EventEquipSkillPartsMaster___);
+  Master_object = (EventEquipSkillPartsEntity_array *)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_EventEquipSkillPartsMaster___);
   if ( !Master_object
     || (Master_object = EventEquipSkillPartsMaster__GetEventEquipSkillPartsEntityArray(
                           (EventEquipSkillPartsMaster_o *)Master_object,
@@ -51,47 +49,47 @@ void EventInfoEquipSkillPartsListComponent__Setup(
                           0)) == 0 )
   {
 LABEL_18:
-    sub_1C2D6EC(Master_object, v6);
+    sub_1C32E7C(Master_object);
   }
   max_length = Master_object->max_length;
-  v9 = Master_object;
+  v7 = Master_object;
   if ( (int)max_length >= 1 )
   {
-    v10 = 0;
+    v8 = 0;
     do
     {
-      if ( v10 >= (unsigned int)max_length )
-        sub_1C2D6F4(Master_object, v6, v7);
-      v11 = v9->m_Items[v10];
-      v12 = GameObjectHelper__Instantiate_object_(
+      if ( v8 >= (unsigned int)max_length )
+        sub_1C32E84(Master_object);
+      v9 = v7->m_Items[v8];
+      v10 = GameObjectHelper__Instantiate_object_(
               this->fields.equipSkillPrefab,
               this->fields.equipSkillParent,
               0,
-              (const MethodInfo_3127AF4 *)Method_GameObjectHelper_Instantiate_EventInfoEquipSkillPartsComponent___);
+              (const MethodInfo_3136594 *)Method_GameObjectHelper_Instantiate_EventInfoEquipSkillPartsComponent___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       Master_object = (EventEquipSkillPartsEntity_array *)UnityEngine_Object__op_Equality(
-                                                            (UnityEngine_Object_o *)v12,
+                                                            (UnityEngine_Object_o *)v10,
                                                             0,
                                                             0);
       if ( ((unsigned __int8)Master_object & 1) == 0 )
       {
-        BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v12, 1, 0);
-        if ( !v12 )
+        BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v10, 1, 0);
+        if ( !v10 )
           goto LABEL_18;
-        EventInfoEquipSkillPartsComponent__Setup((EventInfoEquipSkillPartsComponent_o *)v12, v11, v13);
-        ComponentHelper__SetLocalPositionY((UnityEngine_Component_o *)v12, -this->fields._Height_k__BackingField, 0);
+        EventInfoEquipSkillPartsComponent__Setup((EventInfoEquipSkillPartsComponent_o *)v10, v9, v11);
+        ComponentHelper__SetLocalPositionY((UnityEngine_Component_o *)v10, -this->fields._Height_k__BackingField, 0);
         Height_k__BackingField = this->fields._Height_k__BackingField;
         this->fields._Height_k__BackingField = Height_k__BackingField
                                              + (float)(EventInfoEquipSkillPartsComponent__GetHeight(
-                                                         (EventInfoEquipSkillPartsComponent_o *)v12,
-                                                         v15)
+                                                         (EventInfoEquipSkillPartsComponent_o *)v10,
+                                                         v13)
                                                      + this->fields.space);
       }
-      LODWORD(max_length) = v9->max_length;
-      ++v10;
+      LODWORD(max_length) = v7->max_length;
+      ++v8;
     }
-    while ( (__int64)v10 < (int)max_length );
+    while ( (__int64)v8 < (int)max_length );
   }
   this->fields._Height_k__BackingField = this->fields._Height_k__BackingField + this->fields.heightOffset;
 }

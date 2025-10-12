@@ -1,13 +1,13 @@
 void ServantTreasureDeviceAddEntity___ctor(ServantTreasureDeviceAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C27D3A & 1) == 0 )
+  if ( (byte_4C3843C & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C27D3A = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C3843C = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -23,14 +23,14 @@ UnityEngine_Color_o ServantTreasureDeviceAddEntity__ConvertColorFromString(
   float v8; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C27D38 & 1) == 0 )
+  if ( (byte_4C3843A & 1) == 0 )
   {
-    sub_1C2D490(&System_Convert_TypeInfo);
-    byte_4C27D38 = 1;
+    sub_1C32C20(&System_Convert_TypeInfo);
+    byte_4C3843A = 1;
   }
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v4 = System_Convert__ToInt32_64555740(colorCode, 16, 0);
+  v4 = System_Convert__ToInt32_64615676(colorCode, 16, 0);
   v5 = (float)BYTE2(v4) / 255.0;
   v6 = (float)BYTE1(v4) / 255.0;
   v7 = (float)(unsigned __int8)v4 / 255.0;
@@ -49,16 +49,16 @@ System_String_o *ServantTreasureDeviceAddEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4C27D39 & 1) == 0 )
+  if ( (byte_4C3843B & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C27D39 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4C3843B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            num,
            priority,
-           (const MethodInfo_30CCF68 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_30DBA08 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -76,7 +76,6 @@ int32_t ServantTreasureDeviceAddEntity__GetBaseTreasureDeviceId(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
   struct System_Int32_array *treasureDeviceIds; // x8
   il2cpp_array_size_t max_length; // x9
 
@@ -87,7 +86,7 @@ int32_t ServantTreasureDeviceAddEntity__GetBaseTreasureDeviceId(
   if ( !max_length )
     return 0;
   if ( !(_DWORD)max_length )
-    sub_1C2D6F4(this, method, v2);
+    sub_1C32E84(this);
   return treasureDeviceIds->m_Items[0];
 }
 
@@ -96,12 +95,12 @@ int32_t ServantTreasureDeviceAddEntity__GetCondIgnoreSealedLimitCount(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C27D33 & 1) == 0 )
+  if ( (byte_4C38435 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_18198/*"condIgnoreSealedLimitCount"*/);
-    byte_4C27D33 = 1;
+    sub_1C32C20(&StringLiteral_18202/*"condIgnoreSealedLimitCount"*/);
+    byte_4C38435 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18198/*"condIgnoreSealedLimitCount"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18202/*"condIgnoreSealedLimitCount"*/, 0, 0);
 }
 
 
@@ -128,12 +127,12 @@ UnityEngine_Color_o ServantTreasureDeviceAddEntity__GetCondLabelColor(
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4C27D36 & 1) == 0 )
+  if ( (byte_4C38438 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_18199/*"condLabelColor"*/);
-    byte_4C27D36 = 1;
+    sub_1C32C20(&StringLiteral_18203/*"condLabelColor"*/);
+    byte_4C38438 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18199/*"condLabelColor"*/, 0, 0);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18203/*"condLabelColor"*/, 0, 0);
   IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0);
   if ( !IsNullOrEmpty )
   {
@@ -181,12 +180,12 @@ UnityEngine_Color_o ServantTreasureDeviceAddEntity__GetCondSpriteColor(
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4C27D37 & 1) == 0 )
+  if ( (byte_4C38439 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_18201/*"condSpriteColor"*/);
-    byte_4C27D37 = 1;
+    sub_1C32C20(&StringLiteral_18205/*"condSpriteColor"*/);
+    byte_4C38439 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18201/*"condSpriteColor"*/, 0, 0);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18205/*"condSpriteColor"*/, 0, 0);
   IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0);
   if ( !IsNullOrEmpty )
   {
@@ -215,12 +214,12 @@ System_Int32_array *ServantTreasureDeviceAddEntity__GetDispMaskTreasureDevices(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C27D31 & 1) == 0 )
+  if ( (byte_4C38433 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_18637/*"dispMaskTreasureDevices"*/);
-    byte_4C27D31 = 1;
+    sub_1C32C20(&StringLiteral_18644/*"dispMaskTreasureDevices"*/);
+    byte_4C38433 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18637/*"dispMaskTreasureDevices"*/, 0, 0);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18644/*"dispMaskTreasureDevices"*/, 0, 0);
 }
 
 
@@ -228,12 +227,12 @@ System_Int32_array *ServantTreasureDeviceAddEntity__GetEnableDispOnBattleConfirm
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C27D34 & 1) == 0 )
+  if ( (byte_4C38436 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_18980/*"enableDispOnBattleConfirmDialog"*/);
-    byte_4C27D34 = 1;
+    sub_1C32C20(&StringLiteral_18989/*"enableDispOnBattleConfirmDialog"*/);
+    byte_4C38436 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18980/*"enableDispOnBattleConfirmDialog"*/, 0, 0);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_18989/*"enableDispOnBattleConfirmDialog"*/, 0, 0);
 }
 
 
@@ -255,12 +254,12 @@ System_Int32_array *ServantTreasureDeviceAddEntity__GetFixedCardLimitCounts(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C27D32 & 1) == 0 )
+  if ( (byte_4C38434 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_19459/*"fixedCardLimitCounts"*/);
-    byte_4C27D32 = 1;
+    sub_1C32C20(&StringLiteral_19470/*"fixedCardLimitCounts"*/);
+    byte_4C38434 = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_19459/*"fixedCardLimitCounts"*/, 0, 0);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_19470/*"fixedCardLimitCounts"*/, 0, 0);
 }
 
 
@@ -268,12 +267,12 @@ bool ServantTreasureDeviceAddEntity__HasKeyEnableDispOnBattleConfirmDialog(
         ServantTreasureDeviceAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C27D35 & 1) == 0 )
+  if ( (byte_4C38437 & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_18980/*"enableDispOnBattleConfirmDialog"*/);
-    byte_4C27D35 = 1;
+    sub_1C32C20(&StringLiteral_18989/*"enableDispOnBattleConfirmDialog"*/);
+    byte_4C38437 = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_18980/*"enableDispOnBattleConfirmDialog"*/, 0);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_18989/*"enableDispOnBattleConfirmDialog"*/, 0);
 }
 
 

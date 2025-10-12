@@ -14,10 +14,10 @@ void BaseAiActArgument___ctor(
   v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields._AiActEnt_k__BackingField = aiActEnt;
-  sub_1C2D434((CGThumbnailListItem_o *)&v8->fields, (int32_t)aiActEnt, v9, v10);
+  sub_1C32BC4((CGThumbnailListItem_o *)&v8->fields, (int32_t)aiActEnt, v9, v10);
   v8->fields._AiEnt_k__BackingField = aiEnt;
   v8 = (BaseAiActArgument_o *)((char *)v8 + 24);
-  sub_1C2D434((CGThumbnailListItem_o *)v8, (int32_t)aiEnt, v11, v12);
+  sub_1C32BC4((CGThumbnailListItem_o *)v8, (int32_t)aiEnt, v11, v12);
   LODWORD(v8->monitor) = fromProcState;
 }
 
@@ -40,18 +40,18 @@ BattleLogicTask_o *BaseAiActArgument__MakeTask(
   BaseAiActBattleLogicTask_o *v7; // x22
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C2A2ED & 1) == 0 )
+  if ( (byte_4C3AA05 & 1) == 0 )
   {
-    sub_1C2D490(&BaseAiActBattleLogicTask_TypeInfo);
-    byte_4C2A2ED = 1;
+    sub_1C32C20(&BaseAiActBattleLogicTask_TypeInfo);
+    byte_4C3AA05 = 1;
   }
-  v7 = (BaseAiActBattleLogicTask_o *)sub_1C2D6DC(BaseAiActBattleLogicTask_TypeInfo);
+  v7 = (BaseAiActBattleLogicTask_o *)sub_1C32E6C(BaseAiActBattleLogicTask_TypeInfo);
   BaseAiActBattleLogicTask___ctor(v7, actType, 0);
-  return BaseAiActArgument__MakeTask_46527576(this, v7, logicAi, v8);
+  return BaseAiActArgument__MakeTask_46669368(this, v7, logicAi, v8);
 }
 
 
-BattleLogicTask_o *BaseAiActArgument__MakeTask_46527576(
+BattleLogicTask_o *BaseAiActArgument__MakeTask_46669368(
         BaseAiActArgument_o *this,
         BaseAiActBattleLogicTask_o *task,
         BattleLogicBaseAi_o *logicAi,
@@ -70,14 +70,14 @@ BattleLogicTask_o *BaseAiActArgument__MakeTask_46527576(
                                         v5->klass->vtable._4_get_UniqueId.method),
         !task) )
   {
-    sub_1C2D6EC(this, task);
+    sub_1C32E7C(this);
   }
   BattleLogicTask__setActor((BattleLogicTask_o *)task, v6, (int32_t)this, 0);
-  ((void (__fastcall *)(BaseAiActBattleLogicTask_o *, struct AiActEntity_o *, struct AiBaseEntity_o *, const MethodInfo *))task->klass->vtable._10_Init.methodPtr)(
+  ((void (__fastcall *)(BaseAiActBattleLogicTask_o *, struct AiActEntity_o *, struct AiBaseEntity_o *, const MethodInfo *))task->klass->vtable._11_Init.methodPtr)(
     task,
     v5->fields._AiActEnt_k__BackingField,
     v5->fields._AiEnt_k__BackingField,
-    task->klass->vtable._10_Init.method);
+    task->klass->vtable._11_Init.method);
   ((void (__fastcall *)(BaseAiActArgument_o *, BaseAiActBattleLogicTask_o *, const MethodInfo *))v5->klass->vtable._5_InitCommonTask.methodPtr)(
     v5,
     task,
@@ -115,7 +115,7 @@ void BaseAiActArgument__set_AiActEnt(BaseAiActArgument_o *this, AiActEntity_o *v
   const MethodInfo *v3; // x3
 
   this->fields._AiActEnt_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -124,7 +124,7 @@ void BaseAiActArgument__set_AiEnt(BaseAiActArgument_o *this, AiBaseEntity_o *val
   const MethodInfo *v3; // x3
 
   this->fields._AiEnt_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._AiEnt_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._AiEnt_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

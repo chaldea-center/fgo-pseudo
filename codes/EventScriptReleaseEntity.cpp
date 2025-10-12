@@ -1,13 +1,13 @@
 void EventScriptReleaseEntity___ctor(EventScriptReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2740A & 1) == 0 )
+  if ( (byte_4C37B00 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C2740A = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C37B00 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *EventScriptReleaseEntity__CreatePK(
         int32_t targetId,
         const MethodInfo *method)
 {
-  if ( (byte_4C27408 & 1) == 0 )
+  if ( (byte_4C37AFE & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4C27408 = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_4C37AFE = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            eventId,
            flagId,
            type,
            targetId,
-           (const MethodInfo_30CD428 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_30DBEC8 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -57,10 +57,10 @@ bool EventScriptReleaseEntity__isAvailable(EventScriptReleaseEntity_o *this, con
   int32_t type; // w21
   int64_t value; // x19
 
-  if ( (byte_4C27409 & 1) == 0 )
+  if ( (byte_4C37AFF & 1) == 0 )
   {
-    sub_1C2D490(&CondType_TypeInfo);
-    byte_4C27409 = 1;
+    sub_1C32C20(&CondType_TypeInfo);
+    byte_4C37AFF = 1;
   }
   type = this->fields.type;
   targetId = this->fields.targetId;

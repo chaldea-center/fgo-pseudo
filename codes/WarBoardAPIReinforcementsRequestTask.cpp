@@ -12,16 +12,16 @@ void WarBoardAPIReinforcementsRequestTask___ctor(
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  WarBoardAPIRequestTask___ctor_38043512(
+  WarBoardAPIRequestTask___ctor_38162528(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
     (const MethodInfo *)squareIds);
   this->fields.reinforcementsId = stageReinforcementId;
   this->fields.reinforcementsIndexes = reinforcementsIdx;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.reinforcementsIndexes, (int32_t)reinforcementsIdx, v11, v12);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.reinforcementsIndexes, (int32_t)reinforcementsIdx, v11, v12);
   this->fields.squareIndexes = squareIds;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.squareIndexes, (int32_t)squareIds, v13, v14);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.squareIndexes, (int32_t)squareIds, v13, v14);
 }
 
 
@@ -30,20 +30,19 @@ void WarBoardAPIReinforcementsRequestTask__SetRequest(
         const MethodInfo *method)
 {
   WarBoardReinforcementsRequest_o *Instance; // x0
-  __int64 v4; // x1
   WarBoardData_o *klass; // x20
-  struct RequestBase_o *v6; // x21
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  struct RequestBase_o *v5; // x21
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
 
-  if ( (byte_4C24F64 & 1) == 0 )
+  if ( (byte_4C35639 & 1) == 0 )
   {
-    sub_1C2D490(&Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4C24F64 = 1;
+    sub_1C32C20(&Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4C35639 = 1;
   }
-  Instance = (WarBoardReinforcementsRequest_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardReinforcementsRequest_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_8;
   klass = (WarBoardData_o *)Instance[11].klass;
@@ -51,11 +50,11 @@ void WarBoardAPIReinforcementsRequestTask__SetRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = (WarBoardReinforcementsRequest_o *)NetworkManager__getRequest_object_(
                                                   0,
-                                                  (const MethodInfo_31599E8 *)Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___);
+                                                  (const MethodInfo_3168488 *)Method_NetworkManager_getRequest_WarBoardReinforcementsRequest___);
   if ( !Instance )
 LABEL_8:
-    sub_1C2D6EC(Instance, v4);
-  v6 = (struct RequestBase_o *)Instance;
+    sub_1C32E7C(Instance);
+  v5 = (struct RequestBase_o *)Instance;
   WarBoardReinforcementsRequest__beginRequest(
     Instance,
     klass,
@@ -63,6 +62,6 @@ LABEL_8:
     this->fields.reinforcementsIndexes,
     this->fields.squareIndexes,
     0);
-  this->fields.request = v6;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.request, (int32_t)v6, v7, v8);
+  this->fields.request = v5;
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.request, (int32_t)v5, v6, v7);
 }

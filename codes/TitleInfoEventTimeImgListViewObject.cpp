@@ -4,7 +4,6 @@ void TitleInfoEventTimeImgListViewObject___ctor(TitleInfoEventTimeImgListViewObj
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void TitleInfoEventTimeImgListViewObject__Init(
         TitleInfoEventTimeImgListViewObject_o *this,
         int32_t state,
@@ -17,22 +16,22 @@ void TitleInfoEventTimeImgListViewObject__Init(
   const MethodInfo *v9; // x3
   const MethodInfo *v10; // x2
 
-  if ( (byte_4C25C62 & 1) == 0 )
+  if ( (byte_4C3633C & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___);
-    byte_4C25C62 = 1;
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___);
+    byte_4C3633C = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              dispObject,
-                             (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
+                             (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
         this->fields.itemDraw = (struct TitleInfoEventTimeImgListViewDraw_o *)Component_object,
         p_itemDraw = &this->fields.itemDraw,
-        sub_1C2D434((CGThumbnailListItem_o *)p_itemDraw, (int32_t)Component_object, v8, v9),
+        sub_1C32BC4((CGThumbnailListItem_o *)p_itemDraw, (int32_t)Component_object, v8, v9),
         (dispObject = (UnityEngine_GameObject_o *)*p_itemDraw) == 0) )
   {
-    sub_1C2D6EC(dispObject, *(_QWORD *)&state);
+    sub_1C32E7C(dispObject);
   }
   TitleInfoEventTimeImgListViewDraw__SetItem((TitleInfoEventTimeImgListViewDraw_o *)dispObject, state, v10);
 }

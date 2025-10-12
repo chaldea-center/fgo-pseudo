@@ -7,26 +7,25 @@ void TitleInfoEventUIPartsComponent___ctor(TitleInfoEventUIPartsComponent_o *thi
 void TitleInfoEventUIPartsComponent__UpdateDisp(TitleInfoEventUIPartsComponent_o *this, const MethodInfo *method)
 {
   DataManager_o *Instance; // x0
-  __int64 v4; // x1
   bool IsOpen; // w20
 
-  if ( (byte_4C25E6E & 1) == 0 )
+  if ( (byte_4C36546 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C25E6E = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C36546 = 1;
   }
   if ( this->fields.commonReleaseId >= 1 )
   {
-    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                         Instance,
-                                        (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0
+                                        (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0
       || (IsOpen = CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, this->fields.commonReleaseId, 0, 0, 0),
           (Instance = (DataManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
     {
-      sub_1C2D6EC(Instance, v4);
+      sub_1C32E7C(Instance);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, IsOpen, 0);
   }

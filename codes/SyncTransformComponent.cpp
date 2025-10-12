@@ -20,7 +20,7 @@ void SyncTransformComponent__setChild(
   const MethodInfo *v5; // x1
 
   this->fields.child = trans;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.child, (int32_t)trans, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.child, (int32_t)trans, (int32_t)method, v3);
   this->fields.isEnable = 1;
   SyncTransformComponent__sync(this, v5);
 }
@@ -29,19 +29,18 @@ void SyncTransformComponent__setChild(
 void SyncTransformComponent__sync(SyncTransformComponent_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *child; // x20
-  __int64 v4; // x1
   UnityEngine_Component_o *gameObject; // x0
   UnityEngine_Transform_o *transform; // x20
+  UnityEngine_Transform_o *v6; // x20
   UnityEngine_Transform_o *v7; // x20
-  UnityEngine_Transform_o *v8; // x20
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C268A3 & 1) == 0 )
+  if ( (byte_4C36F7A & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C268A3 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C36F7A = 1;
   }
   child = (UnityEngine_Object_o *)this->fields.child;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -67,7 +66,7 @@ void SyncTransformComponent__sync(SyncTransformComponent_o *this, const MethodIn
     gameObject = (UnityEngine_Component_o *)this->fields.child;
     if ( !gameObject )
       goto LABEL_20;
-    v7 = UnityEngine_Component__get_transform(gameObject, 0);
+    v6 = UnityEngine_Component__get_transform(gameObject, 0);
     gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
       goto LABEL_20;
@@ -75,22 +74,22 @@ void SyncTransformComponent__sync(SyncTransformComponent_o *this, const MethodIn
                                               (UnityEngine_GameObject_o *)gameObject,
                                               0);
     if ( !gameObject
-      || (rotation = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)gameObject, 0), !v7)
-      || (UnityEngine_Transform__set_rotation(v7, rotation, 0),
+      || (rotation = UnityEngine_Transform__get_rotation((UnityEngine_Transform_o *)gameObject, 0), !v6)
+      || (UnityEngine_Transform__set_rotation(v6, rotation, 0),
           (gameObject = (UnityEngine_Component_o *)this->fields.child) == 0)
-      || (v8 = UnityEngine_Component__get_transform(gameObject, 0),
+      || (v7 = UnityEngine_Component__get_transform(gameObject, 0),
           (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(
                                                      (UnityEngine_Component_o *)this,
                                                      0)) == 0)
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_GameObject__get_transform(
                                                     (UnityEngine_GameObject_o *)gameObject,
                                                     0)) == 0
-      || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0), !v8) )
+      || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0), !v7) )
     {
 LABEL_20:
-      sub_1C2D6EC(gameObject, v4);
+      sub_1C32E7C(gameObject);
     }
-    UnityEngine_Transform__set_localScale(v8, localScale, 0);
+    UnityEngine_Transform__set_localScale(v7, localScale, 0);
   }
   else
   {

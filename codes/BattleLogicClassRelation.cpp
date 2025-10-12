@@ -3,86 +3,88 @@ void BattleLogicClassRelation___ctor(BattleLogicClassRelation_o *this, const Met
   struct BattleLogicClassRelation_Process_array *v3; // x20
   Il2CppObject *v4; // x21
   __int64 v5; // x0
-  __int64 v6; // x1
-  __int64 v7; // x2
-  const MethodInfo *v8; // x3
-  Il2CppObject *v9; // x21
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  Il2CppObject *v8; // x21
+  int32_t v9; // w2
   const MethodInfo *v10; // x3
   Il2CppObject *v11; // x21
-  const MethodInfo *v12; // x3
-  Il2CppObject *v13; // x21
-  const MethodInfo *v14; // x3
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  Il2CppObject *v14; // x21
   int32_t v15; // w2
   const MethodInfo *v16; // x3
-  __int64 v17; // x0
+  int32_t v17; // w2
+  const MethodInfo *v18; // x3
+  __int64 v19; // x0
 
-  if ( (byte_4C2A2F9 & 1) == 0 )
+  if ( (byte_4C3AA11 & 1) == 0 )
   {
-    sub_1C2D490(&BattleLogicClassRelation_AttackOverwriteProcess_TypeInfo);
-    sub_1C2D490(&BattleLogicClassRelation_DefenseOverwriteProcess_TypeInfo);
-    sub_1C2D490(&BattleLogicClassRelation_OldAttackOverwriteProcess_TypeInfo);
-    sub_1C2D490(&BattleLogicClassRelation_OldDefenseOverwriteProcess_TypeInfo);
-    sub_1C2D490(&BattleLogicClassRelation_Process___TypeInfo);
-    byte_4C2A2F9 = 1;
+    sub_1C32C20(&BattleLogicClassRelation_AttackOverwriteProcess_TypeInfo);
+    sub_1C32C20(&BattleLogicClassRelation_DefenseOverwriteProcess_TypeInfo);
+    sub_1C32C20(&BattleLogicClassRelation_OldAttackOverwriteProcess_TypeInfo);
+    sub_1C32C20(&BattleLogicClassRelation_OldDefenseOverwriteProcess_TypeInfo);
+    sub_1C32C20(&BattleLogicClassRelation_Process___TypeInfo);
+    byte_4C3AA11 = 1;
   }
-  v3 = (struct BattleLogicClassRelation_Process_array *)sub_1C2D538(BattleLogicClassRelation_Process___TypeInfo, 4);
-  v4 = (Il2CppObject *)sub_1C2D6DC(BattleLogicClassRelation_OldAttackOverwriteProcess_TypeInfo);
+  v3 = (struct BattleLogicClassRelation_Process_array *)sub_1C32CC8(BattleLogicClassRelation_Process___TypeInfo, 4);
+  v4 = (Il2CppObject *)sub_1C32E6C(BattleLogicClassRelation_OldAttackOverwriteProcess_TypeInfo);
   System_Object___ctor(v4, 0);
   if ( !v3 )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   if ( v4 )
   {
-    v5 = sub_1C2D5CC(v4, v3->obj.klass->_1.element_class);
+    v5 = sub_1C32D5C(v4, v3->obj.klass->_1.element_class);
     if ( !v5 )
       goto LABEL_18;
   }
   if ( !LODWORD(v3->max_length) )
     goto LABEL_17;
   v3->m_Items[0] = (BattleLogicClassRelation_Process_o *)v4;
-  sub_1C2D434((CGThumbnailListItem_o *)v3->m_Items, (int32_t)v4, v7, v8);
-  v9 = (Il2CppObject *)sub_1C2D6DC(BattleLogicClassRelation_OldDefenseOverwriteProcess_TypeInfo);
-  System_Object___ctor(v9, 0);
-  if ( v9 )
+  sub_1C32BC4((CGThumbnailListItem_o *)v3->m_Items, (int32_t)v4, v6, v7);
+  v8 = (Il2CppObject *)sub_1C32E6C(BattleLogicClassRelation_OldDefenseOverwriteProcess_TypeInfo);
+  System_Object___ctor(v8, 0);
+  if ( v8 )
   {
-    v5 = sub_1C2D5CC(v9, v3->obj.klass->_1.element_class);
+    v5 = sub_1C32D5C(v8, v3->obj.klass->_1.element_class);
     if ( !v5 )
       goto LABEL_18;
   }
   if ( LODWORD(v3->max_length) <= 1 )
     goto LABEL_17;
-  v3->m_Items[1] = (BattleLogicClassRelation_Process_o *)v9;
-  sub_1C2D434((CGThumbnailListItem_o *)&v3->m_Items[1], (int32_t)v9, v7, v10);
-  v11 = (Il2CppObject *)sub_1C2D6DC(BattleLogicClassRelation_AttackOverwriteProcess_TypeInfo);
+  v3->m_Items[1] = (BattleLogicClassRelation_Process_o *)v8;
+  sub_1C32BC4((CGThumbnailListItem_o *)&v3->m_Items[1], (int32_t)v8, v9, v10);
+  v11 = (Il2CppObject *)sub_1C32E6C(BattleLogicClassRelation_AttackOverwriteProcess_TypeInfo);
   System_Object___ctor(v11, 0);
   if ( v11 )
   {
-    v5 = sub_1C2D5CC(v11, v3->obj.klass->_1.element_class);
+    v5 = sub_1C32D5C(v11, v3->obj.klass->_1.element_class);
     if ( !v5 )
       goto LABEL_18;
   }
   if ( LODWORD(v3->max_length) <= 2 )
     goto LABEL_17;
   v3->m_Items[2] = (BattleLogicClassRelation_Process_o *)v11;
-  sub_1C2D434((CGThumbnailListItem_o *)&v3->m_Items[2], (int32_t)v11, v7, v12);
-  v13 = (Il2CppObject *)sub_1C2D6DC(BattleLogicClassRelation_DefenseOverwriteProcess_TypeInfo);
-  System_Object___ctor(v13, 0);
-  if ( v13 )
+  sub_1C32BC4((CGThumbnailListItem_o *)&v3->m_Items[2], (int32_t)v11, v12, v13);
+  v14 = (Il2CppObject *)sub_1C32E6C(BattleLogicClassRelation_DefenseOverwriteProcess_TypeInfo);
+  System_Object___ctor(v14, 0);
+  if ( v14 )
   {
-    v5 = sub_1C2D5CC(v13, v3->obj.klass->_1.element_class);
+    v5 = sub_1C32D5C(v14, v3->obj.klass->_1.element_class);
     if ( !v5 )
     {
 LABEL_18:
-      v17 = sub_1C2D710(v5);
-      sub_1C2D5B8(v17, 0);
+      v19 = sub_1C32EA0(v5);
+      sub_1C32D48(v19, 0);
     }
   }
   if ( LODWORD(v3->max_length) <= 3 )
 LABEL_17:
-    sub_1C2D6F4(v5, v6, v7);
-  v3->m_Items[3] = (BattleLogicClassRelation_Process_o *)v13;
-  sub_1C2D434((CGThumbnailListItem_o *)&v3->m_Items[3], (int32_t)v13, v7, v14);
+    sub_1C32E84(v5);
+  v3->m_Items[3] = (BattleLogicClassRelation_Process_o *)v14;
+  sub_1C32BC4((CGThumbnailListItem_o *)&v3->m_Items[3], (int32_t)v14, v15, v16);
   this->fields._procArray = v3;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v15, v16);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v17, v18);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -95,30 +97,29 @@ ClassRelationOverwriteMaster_o *BattleLogicClassRelation__get_OverwriteMst(
   CGThumbnailListItem_o *p_overwriteMst; // x19
   ClassRelationOverwriteMaster_o *overwriteMst; // t1
   Il2CppObject *Instance; // x0
-  __int64 v7; // x1
   Il2CppObject *MasterData_object; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
 
-  if ( (byte_4C2A2F8 & 1) == 0 )
+  if ( (byte_4C3AA10 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_ClassRelationOverwriteMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C2A2F8 = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_ClassRelationOverwriteMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3AA10 = 1;
   }
   overwriteMst = this->fields._overwriteMst;
   p_overwriteMst = (CGThumbnailListItem_o *)&this->fields._overwriteMst;
   result = overwriteMst;
   if ( !overwriteMst )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
-      sub_1C2D6EC(0, v7);
+      sub_1C32E7C(0);
     MasterData_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Instance,
-                          (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ClassRelationOverwriteMaster___);
+                          (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ClassRelationOverwriteMaster___);
     p_overwriteMst->klass = (CGThumbnailListItem_c *)MasterData_object;
-    sub_1C2D434(p_overwriteMst, (int32_t)MasterData_object, v9, v10);
+    sub_1C32BC4(p_overwriteMst, (int32_t)MasterData_object, v8, v9);
     return (ClassRelationOverwriteMaster_o *)p_overwriteMst->klass;
   }
   return result;
@@ -131,11 +132,10 @@ BattleLogicClassRelation_ResultData_o *BattleLogicClassRelation__proc(
         const MethodInfo *method)
 {
   BattleLogicClassRelation_o *v4; // x20
-  __int64 v5; // x2
   struct BattleLogicClassRelation_Process_array *procArray; // x22
   int max_length; // w8
-  BattleLogicClassRelation_ResultData_o *v8; // x21
-  unsigned int v9; // w23
+  BattleLogicClassRelation_ResultData_o *v7; // x21
+  unsigned int v8; // w23
 
   if ( !arg )
     goto LABEL_10;
@@ -148,37 +148,37 @@ BattleLogicClassRelation_ResultData_o *BattleLogicClassRelation__proc(
   if ( !procArray )
     goto LABEL_10;
   max_length = procArray->max_length;
-  v8 = (BattleLogicClassRelation_ResultData_o *)this;
+  v7 = (BattleLogicClassRelation_ResultData_o *)this;
   if ( max_length >= 1 )
   {
-    v9 = 0;
+    v8 = 0;
     while ( 1 )
     {
-      if ( v9 >= max_length )
-        sub_1C2D6F4(this, arg, v5);
-      this = (BattleLogicClassRelation_o *)procArray->m_Items[v9];
+      if ( v8 >= max_length )
+        sub_1C32E84(this);
+      this = (BattleLogicClassRelation_o *)procArray->m_Items[v8];
       if ( !this )
         break;
       this = (BattleLogicClassRelation_o *)((__int64 (__fastcall *)(BattleLogicClassRelation_o *, BattleLogicClassRelation_o *, BattleLogicClassRelation_Argument_o *, BattleLogicClassRelation_ResultData_o *, void *))this->klass[1]._1.image)(
                                              this,
                                              v4,
                                              arg,
-                                             v8,
+                                             v7,
                                              this->klass[1]._1.gc_desc);
       max_length = procArray->max_length;
-      if ( (int)++v9 >= max_length )
+      if ( (int)++v8 >= max_length )
         goto LABEL_8;
     }
 LABEL_10:
-    sub_1C2D6EC(this, arg);
+    sub_1C32E7C(this);
   }
 LABEL_8:
-  if ( !v8 )
+  if ( !v7 )
     goto LABEL_10;
-  ((void (__fastcall *)(BattleLogicClassRelation_ResultData_o *, const MethodInfo *))v8->klass->vtable._4_fixResult.methodPtr)(
-    v8,
-    v8->klass->vtable._4_fixResult.method);
-  return v8;
+  ((void (__fastcall *)(BattleLogicClassRelation_ResultData_o *, const MethodInfo *))v7->klass->vtable._4_fixResult.methodPtr)(
+    v7,
+    v7->klass->vtable._4_fixResult.method);
+  return v7;
 }
 
 
@@ -196,26 +196,25 @@ void BattleLogicClassRelation_Argument___ctor(
   const MethodInfo *v14; // x3
   int32_t v15; // w2
   const MethodInfo *v16; // x3
-  __int64 v17; // x1
   BattleServantData_o *atkSvt; // x0
   BattleServantData_o *defSvt; // x8
-  ServantClassMaster_o *v20; // x20
+  ServantClassMaster_o *v19; // x20
   int32_t RelationId; // w0
   int32_t defClassId; // w1
 
-  if ( (byte_4C2A2FA & 1) == 0 )
+  if ( (byte_4C3AA12 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_ServantClassMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C2A2FA = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_ServantClassMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C3AA12 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.command = command;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)command, v11, v12);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)command, v11, v12);
   this->fields.atkSvt = attackSvt;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.atkSvt, (int32_t)attackSvt, v13, v14);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.atkSvt, (int32_t)attackSvt, v13, v14);
   this->fields.defSvt = defenseSvt;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.defSvt, (int32_t)defenseSvt, v15, v16);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.defSvt, (int32_t)defenseSvt, v15, v16);
   this->fields.isAction = isAct;
   atkSvt = this->fields.atkSvt;
   if ( !atkSvt
@@ -230,18 +229,18 @@ void BattleLogicClassRelation_Argument___ctor(
         this->fields.atkClassId = (int)atkSvt,
         !defSvt)
     || (this->fields.defClassId = BattleServantData__getBattleClassId(defSvt, command, this->fields.atkSvt, isAct, 0, 0),
-        (atkSvt = (BattleServantData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+        (atkSvt = (BattleServantData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (atkSvt = (BattleServantData_o *)DataManager__GetMasterData_object_(
                                           (DataManager_o *)atkSvt,
-                                          (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0 )
+                                          (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_ServantClassMaster___)) == 0 )
   {
-    sub_1C2D6EC(atkSvt, v17);
+    sub_1C32E7C(atkSvt);
   }
-  v20 = (ServantClassMaster_o *)atkSvt;
+  v19 = (ServantClassMaster_o *)atkSvt;
   RelationId = ServantClassMaster__getRelationId((ServantClassMaster_o *)atkSvt, this->fields.atkClassId, 0);
   defClassId = this->fields.defClassId;
   this->fields.atkRelationId = RelationId;
-  this->fields.defRelationId = ServantClassMaster__getRelationId(v20, defClassId, 0);
+  this->fields.defRelationId = ServantClassMaster__getRelationId(v19, defClassId, 0);
 }
 
 
@@ -252,12 +251,12 @@ BattleLogicClassRelation_ResultData_o *BattleLogicClassRelation_Argument__initRe
   BattleLogicClassRelation_ResultData_o *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4C2A2FB & 1) == 0 )
+  if ( (byte_4C3AA13 & 1) == 0 )
   {
-    sub_1C2D490(&BattleLogicClassRelation_ResultData_TypeInfo);
-    byte_4C2A2FB = 1;
+    sub_1C32C20(&BattleLogicClassRelation_ResultData_TypeInfo);
+    byte_4C3AA13 = 1;
   }
-  v3 = (BattleLogicClassRelation_ResultData_o *)sub_1C2D6DC(BattleLogicClassRelation_ResultData_TypeInfo);
+  v3 = (BattleLogicClassRelation_ResultData_o *)sub_1C32E6C(BattleLogicClassRelation_ResultData_TypeInfo);
   BattleLogicClassRelation_ResultData___ctor(v3, this, v4);
   return v3;
 }
@@ -288,7 +287,7 @@ void BattleLogicClassRelation_AttackOverwriteProcess__execLocal(
     || (v6 = (BattleLogicClassRelation_OverwriteProcess_o *)this,
         (this = (BattleLogicClassRelation_AttackOverwriteProcess_o *)arg->fields.atkSvt) == 0) )
   {
-    sub_1C2D6EC(this, logic);
+    sub_1C32E7C(this);
   }
   AtkRateData_k__BackingField = result->fields._AtkRateData_k__BackingField;
   BuffOverwriteClassRelationArray = BattleServantData__getBuffOverwriteClassRelationArray(
@@ -328,7 +327,7 @@ void BattleLogicClassRelation_DamageRateData___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   v4->fields._Result_k__BackingField = result;
   v4 = (BattleLogicClassRelation_DamageRateData_o *)((char *)v4 + 16);
-  sub_1C2D434((CGThumbnailListItem_o *)v4, (int32_t)result, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)v4, (int32_t)result, v5, v6);
   v4->monitor = (void *)0xFFFFFFFFLL;
   LODWORD(v4->fields._Result_k__BackingField) = -1;
   BYTE4(v4->fields._Result_k__BackingField) = 0;
@@ -442,7 +441,7 @@ void BattleLogicClassRelation_DamageRateData__set_Result(
   const MethodInfo *v3; // x3
 
   this->fields._Result_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -474,7 +473,7 @@ bool BattleLogicClassRelation_DamageRateData__updateValue(
     *((_DWORD *)p_proc - 4) = priority;
     *((float *)p_proc - 3) = value;
     *((_DWORD *)p_proc - 2) = type;
-    sub_1C2D434((CGThumbnailListItem_o *)p_proc, (int32_t)proc, type, (const MethodInfo *)proc);
+    sub_1C32BC4((CGThumbnailListItem_o *)p_proc, (int32_t)proc, type, (const MethodInfo *)proc);
   }
   return Priority_k__BackingField < priority;
 }
@@ -505,7 +504,7 @@ void BattleLogicClassRelation_DefenseOverwriteProcess__execLocal(
     || (v6 = (BattleLogicClassRelation_OverwriteProcess_o *)this,
         (this = (BattleLogicClassRelation_DefenseOverwriteProcess_o *)arg->fields.defSvt) == 0) )
   {
-    sub_1C2D6EC(this, logic);
+    sub_1C32E7C(this);
   }
   DefRateData_k__BackingField = result->fields._DefRateData_k__BackingField;
   BuffOverwriteClassRelationArray = BattleServantData__getBuffOverwriteClassRelationArray(
@@ -556,10 +555,10 @@ void BattleLogicClassRelation_OldAttackOverwriteProcess__exec(
   float val; // [xsp+Ch] [xbp-24h] BYREF
 
   v7 = this;
-  if ( (byte_4C2A2FF & 1) == 0 )
+  if ( (byte_4C3AA17 & 1) == 0 )
   {
-    this = (BattleLogicClassRelation_OldAttackOverwriteProcess_o *)sub_1C2D490(&BattleDataDefine_TypeInfo);
-    byte_4C2A2FF = 1;
+    this = (BattleLogicClassRelation_OldAttackOverwriteProcess_o *)sub_1C32C20(&BattleDataDefine_TypeInfo);
+    byte_4C3AA17 = 1;
   }
   val = 0.0;
   if ( !arg )
@@ -587,7 +586,7 @@ void BattleLogicClassRelation_OldAttackOverwriteProcess__exec(
   }
   if ( !AtkRateData_k__BackingField )
 LABEL_13:
-    sub_1C2D6EC(this, logic);
+    sub_1C32E7C(this);
   v11 = *(_DWORD *)this[11].monitor;
   if ( AtkRateData_k__BackingField->fields._Priority_k__BackingField < v11 )
   {
@@ -596,7 +595,7 @@ LABEL_13:
     AtkRateData_k__BackingField->fields._Priority_k__BackingField = v11;
     AtkRateData_k__BackingField->fields._Value_k__BackingField = v12;
     AtkRateData_k__BackingField->fields._GeneralType_k__BackingField = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&AtkRateData_k__BackingField->fields._proc, (int32_t)v7, v8, v9);
+    sub_1C32BC4((CGThumbnailListItem_o *)&AtkRateData_k__BackingField->fields._proc, (int32_t)v7, v8, v9);
   }
 }
 
@@ -625,10 +624,10 @@ void BattleLogicClassRelation_OldDefenseOverwriteProcess__exec(
   float val; // [xsp+Ch] [xbp-24h] BYREF
 
   v7 = this;
-  if ( (byte_4C2A300 & 1) == 0 )
+  if ( (byte_4C3AA18 & 1) == 0 )
   {
-    this = (BattleLogicClassRelation_OldDefenseOverwriteProcess_o *)sub_1C2D490(&BattleDataDefine_TypeInfo);
-    byte_4C2A300 = 1;
+    this = (BattleLogicClassRelation_OldDefenseOverwriteProcess_o *)sub_1C32C20(&BattleDataDefine_TypeInfo);
+    byte_4C3AA18 = 1;
   }
   val = 0.0;
   if ( !arg )
@@ -656,7 +655,7 @@ void BattleLogicClassRelation_OldDefenseOverwriteProcess__exec(
   }
   if ( !DefRateData_k__BackingField )
 LABEL_13:
-    sub_1C2D6EC(this, logic);
+    sub_1C32E7C(this);
   v11 = *((_DWORD *)this[11].monitor + 1);
   if ( DefRateData_k__BackingField->fields._Priority_k__BackingField < v11 )
   {
@@ -665,7 +664,7 @@ LABEL_13:
     DefRateData_k__BackingField->fields._Priority_k__BackingField = v11;
     DefRateData_k__BackingField->fields._Value_k__BackingField = v12;
     DefRateData_k__BackingField->fields._GeneralType_k__BackingField = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&DefRateData_k__BackingField->fields._proc, (int32_t)v7, v8, v9);
+    sub_1C32BC4((CGThumbnailListItem_o *)&DefRateData_k__BackingField->fields._proc, (int32_t)v7, v8, v9);
   }
 }
 
@@ -685,7 +684,6 @@ int32_t BattleLogicClassRelation_OverwriteProcess___overwriteDamageRate_b__4_0(
         const MethodInfo *method)
 {
   __int64 v6; // x0
-  __int64 v7; // x1
 
   v6 = ((__int64 (__fastcall *)(BattleLogicClassRelation_OverwriteProcess_o *, void *, BattleBuffData_BuffData_o *, const MethodInfo *))this->klass[1]._1.image)(
          this,
@@ -693,7 +691,7 @@ int32_t BattleLogicClassRelation_OverwriteProcess___overwriteDamageRate_b__4_0(
          b2,
          method);
   if ( !b1 )
-    sub_1C2D6EC(v6, v7);
+    sub_1C32E7C(v6);
   return BattleBuffData_BuffData__checkRelationOrder(b1, b2, v6 & 1, 0);
 }
 
@@ -723,7 +721,7 @@ float BattleLogicClassRelation_OverwriteProcess__getFixRate(
   int32_t GeneralType_k__BackingField; // w8
 
   if ( !self )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   GeneralType_k__BackingField = self->fields._GeneralType_k__BackingField;
   if ( GeneralType_k__BackingField == 2 )
   {
@@ -754,15 +752,15 @@ void BattleLogicClassRelation_OverwriteProcess__overwriteDamageRate(
   System_Comparison_T__o *v11; // x24
   ClassRelationOverwriteMaster_o *OverwriteMst; // x0
   const MethodInfo *v13; // x1
-  __int64 v14; // x2
   int max_length; // w8
-  unsigned int v16; // w28
-  BattleBuffData_BuffData_o *v17; // x24
+  unsigned int v15; // w28
+  BattleBuffData_BuffData_o *v16; // x24
   BattleBuffData_RelationOverwriteData_o *relationOverwrite; // x25
   int32_t id; // w27
-  ClassRelationOverwriteMaster_o *v20; // x26
-  char v21; // w0
-  int32_t v22; // w25
+  ClassRelationOverwriteMaster_o *v19; // x26
+  char v20; // w0
+  int32_t v21; // w25
+  int32_t v22; // w2
   const MethodInfo *v23; // x3
   float Rate; // s0
   int32_t type; // w8
@@ -770,52 +768,52 @@ void BattleLogicClassRelation_OverwriteProcess__overwriteDamageRate(
   __int64 v27; // x8
   ClassRelationOverwriteEntity_o *outEnt; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4C2A2FE & 1) == 0 )
+  if ( (byte_4C3AA16 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Array_Sort_BattleBuffData_BuffData___);
-    sub_1C2D490(&System_Comparison_BattleBuffData_BuffData__TypeInfo);
-    sub_1C2D490(&Method_BattleLogicClassRelation_OverwriteProcess__overwriteDamageRate_b__4_0__);
-    byte_4C2A2FE = 1;
+    sub_1C32C20(&Method_System_Array_Sort_BattleBuffData_BuffData___);
+    sub_1C32C20(&System_Comparison_BattleBuffData_BuffData__TypeInfo);
+    sub_1C32C20(&Method_BattleLogicClassRelation_OverwriteProcess__overwriteDamageRate_b__4_0__);
+    byte_4C3AA16 = 1;
   }
-  v11 = (System_Comparison_T__o *)sub_1C2D6DC(System_Comparison_BattleBuffData_BuffData__TypeInfo);
+  v11 = (System_Comparison_T__o *)sub_1C32E6C(System_Comparison_BattleBuffData_BuffData__TypeInfo);
   System_Comparison_object____ctor(
     v11,
     (Il2CppObject *)this,
     Method_BattleLogicClassRelation_OverwriteProcess__overwriteDamageRate_b__4_0__,
     0);
-  System_Array__Sort_object__50966632(
+  System_Array__Sort_object__51026696(
     (System_Object_array *)buffArray,
     v11,
-    (const MethodInfo_309B068 *)Method_System_Array_Sort_BattleBuffData_BuffData___);
+    (const MethodInfo_30A9B08 *)Method_System_Array_Sort_BattleBuffData_BuffData___);
   outEnt = 0;
   if ( !buffArray )
     goto LABEL_26;
   max_length = buffArray->max_length;
   if ( max_length >= 1 )
   {
-    v16 = 0;
+    v15 = 0;
     while ( 1 )
     {
-      if ( v16 >= max_length )
-        sub_1C2D6F4(OverwriteMst, v13, v14);
-      v17 = buffArray->m_Items[v16];
-      if ( !v17 )
+      if ( v15 >= max_length )
+        sub_1C32E84(OverwriteMst);
+      v16 = buffArray->m_Items[v15];
+      if ( !v16 )
         goto LABEL_26;
       if ( !logic )
         goto LABEL_26;
-      relationOverwrite = v17->fields.relationOverwrite;
+      relationOverwrite = v16->fields.relationOverwrite;
       OverwriteMst = BattleLogicClassRelation__get_OverwriteMst(logic, v13);
       if ( !relationOverwrite )
         goto LABEL_26;
       id = relationOverwrite->fields.id;
-      v20 = OverwriteMst;
+      v19 = OverwriteMst;
       OverwriteMst = (ClassRelationOverwriteMaster_o *)((__int64 (__fastcall *)(BattleLogicClassRelation_OverwriteProcess_o *, void *))this->klass[1]._1.image)(
                                                          this,
                                                          this->klass[1]._1.gc_desc);
-      if ( !arg || !v20 )
+      if ( !arg || !v19 )
         goto LABEL_26;
       OverwriteMst = (ClassRelationOverwriteMaster_o *)ClassRelationOverwriteMaster__getEntity(
-                                                         v20,
+                                                         v19,
                                                          &outEnt,
                                                          id,
                                                          (unsigned __int8)OverwriteMst & 1,
@@ -824,32 +822,32 @@ void BattleLogicClassRelation_OverwriteProcess__overwriteDamageRate(
                                                          0);
       if ( ((unsigned __int8)OverwriteMst & 1) != 0 )
       {
-        v21 = ((__int64 (__fastcall *)(BattleLogicClassRelation_OverwriteProcess_o *, void *))this->klass[1]._1.image)(
+        v20 = ((__int64 (__fastcall *)(BattleLogicClassRelation_OverwriteProcess_o *, void *))this->klass[1]._1.image)(
                 this,
                 this->klass[1]._1.gc_desc);
         OverwriteMst = (ClassRelationOverwriteMaster_o *)BattleBuffData_RelationOverwriteData__getPriority(
                                                            relationOverwrite,
-                                                           v21 & 1,
+                                                           v20 & 1,
                                                            0);
         if ( !outEnt )
           goto LABEL_26;
-        v22 = (int)OverwriteMst;
+        v21 = (int)OverwriteMst;
         Rate = ClassRelationOverwriteEntity__getRate(outEnt, 0);
         if ( !outEnt || !damageRate )
           goto LABEL_26;
-        if ( damageRate->fields._Priority_k__BackingField < v22 )
+        if ( damageRate->fields._Priority_k__BackingField < v21 )
           break;
       }
       max_length = buffArray->max_length;
-      if ( (int)++v16 >= max_length )
+      if ( (int)++v15 >= max_length )
         return;
     }
     type = outEnt->fields.type;
     damageRate->fields._proc = (struct BattleLogicClassRelation_Process_o *)this;
-    damageRate->fields._Priority_k__BackingField = v22;
+    damageRate->fields._Priority_k__BackingField = v21;
     damageRate->fields._Value_k__BackingField = Rate;
     damageRate->fields._GeneralType_k__BackingField = type;
-    sub_1C2D434((CGThumbnailListItem_o *)&damageRate->fields._proc, (int32_t)this, v14, v23);
+    sub_1C32BC4((CGThumbnailListItem_o *)&damageRate->fields._proc, (int32_t)this, v22, v23);
     if ( arg->fields.isAction )
     {
       OverwriteMst = (ClassRelationOverwriteMaster_o *)((__int64 (__fastcall *)(BattleLogicClassRelation_OverwriteProcess_o *, void *))this->klass[1]._1.image)(
@@ -864,12 +862,12 @@ void BattleLogicClassRelation_OverwriteProcess__overwriteDamageRate(
         OverwriteMst = *(ClassRelationOverwriteMaster_o **)(v27 + 816);
         if ( OverwriteMst )
         {
-          BattleBuffData__checkBuffSuccessful((BattleBuffData_o *)OverwriteMst, v17, arg->fields.isAction, 0);
+          BattleBuffData__checkBuffSuccessful((BattleBuffData_o *)OverwriteMst, v16, arg->fields.isAction, 0);
           return;
         }
       }
 LABEL_26:
-      sub_1C2D6EC(OverwriteMst, v13);
+      sub_1C32E7C(OverwriteMst);
     }
   }
 }
@@ -888,7 +886,7 @@ float BattleLogicClassRelation_Process__getFixRate(
         const MethodInfo *method)
 {
   if ( !self )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return self->fields._Value_k__BackingField;
 }
 
@@ -899,50 +897,49 @@ void BattleLogicClassRelation_ResultData___ctor(
         const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
-  __int64 v7; // x20
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  __int64 v12; // x20
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  __int64 v6; // x20
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  __int64 v11; // x20
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
   struct BattleLogicClassRelation_DamageRateData_o **p_DefRateData_k__BackingField; // x19
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
 
-  if ( (byte_4C2A2FC & 1) == 0 )
+  if ( (byte_4C3AA14 & 1) == 0 )
   {
-    sub_1C2D490(&BattleLogicClassRelation_DamageRateData_TypeInfo);
-    byte_4C2A2FC = 1;
+    sub_1C32C20(&BattleLogicClassRelation_DamageRateData_TypeInfo);
+    byte_4C3AA14 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !arg )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   this->fields._BaseRate_k__BackingField = ClassRelationMaster__getRate(
                                              arg->fields.atkRelationId,
                                              arg->fields.defRelationId,
                                              0);
-  v7 = sub_1C2D6DC(BattleLogicClassRelation_DamageRateData_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v7, 0);
-  *(_QWORD *)(v7 + 16) = this;
-  sub_1C2D434((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v8, v9);
-  *(_BYTE *)(v7 + 36) = 0;
-  *(_QWORD *)(v7 + 24) = 0xFFFFFFFFLL;
-  *(_DWORD *)(v7 + 32) = -1;
-  this->fields._AtkRateData_k__BackingField = (struct BattleLogicClassRelation_DamageRateData_o *)v7;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._AtkRateData_k__BackingField, v7, v10, v11);
-  v12 = sub_1C2D6DC(BattleLogicClassRelation_DamageRateData_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v12, 0);
-  *(_QWORD *)(v12 + 16) = this;
-  sub_1C2D434((CGThumbnailListItem_o *)(v12 + 16), (int32_t)this, v13, v14);
-  *(_QWORD *)(v12 + 24) = 0xFFFFFFFFLL;
-  *(_DWORD *)(v12 + 32) = -1;
-  *(_BYTE *)(v12 + 36) = 0;
-  this->fields._DefRateData_k__BackingField = (struct BattleLogicClassRelation_DamageRateData_o *)v12;
+  v6 = sub_1C32E6C(BattleLogicClassRelation_DamageRateData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v6, 0);
+  *(_QWORD *)(v6 + 16) = this;
+  sub_1C32BC4((CGThumbnailListItem_o *)(v6 + 16), (int32_t)this, v7, v8);
+  *(_BYTE *)(v6 + 36) = 0;
+  *(_QWORD *)(v6 + 24) = 0xFFFFFFFFLL;
+  *(_DWORD *)(v6 + 32) = -1;
+  this->fields._AtkRateData_k__BackingField = (struct BattleLogicClassRelation_DamageRateData_o *)v6;
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._AtkRateData_k__BackingField, v6, v9, v10);
+  v11 = sub_1C32E6C(BattleLogicClassRelation_DamageRateData_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v11, 0);
+  *(_QWORD *)(v11 + 16) = this;
+  sub_1C32BC4((CGThumbnailListItem_o *)(v11 + 16), (int32_t)this, v12, v13);
+  *(_QWORD *)(v11 + 24) = 0xFFFFFFFFLL;
+  *(_DWORD *)(v11 + 32) = -1;
+  *(_BYTE *)(v11 + 36) = 0;
+  this->fields._DefRateData_k__BackingField = (struct BattleLogicClassRelation_DamageRateData_o *)v11;
   p_DefRateData_k__BackingField = &this->fields._DefRateData_k__BackingField;
-  sub_1C2D434((CGThumbnailListItem_o *)p_DefRateData_k__BackingField, v12, v16, v17);
+  sub_1C32BC4((CGThumbnailListItem_o *)p_DefRateData_k__BackingField, v11, v15, v16);
   *((_DWORD *)p_DefRateData_k__BackingField + 2) = 1065353216;
 }
 
@@ -953,25 +950,25 @@ void BattleLogicClassRelation_ResultData__fixResult(
 {
   bool IsPriorAttack; // w21
   __int64 v4; // x0
-  __int64 v5; // x1
-  __int64 v6; // x2
-  const MethodInfo *v7; // x3
-  BattleLogicClassRelation_DamageRateData_array *v8; // x20
-  struct BattleLogicClassRelation_DamageRateData_o *v9; // x21
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
+  BattleLogicClassRelation_DamageRateData_array *v7; // x20
+  struct BattleLogicClassRelation_DamageRateData_o *v8; // x21
+  int32_t v9; // w2
   const MethodInfo *v10; // x3
   struct BattleLogicClassRelation_DamageRateData_o *DefRateData_k__BackingField; // x21
   struct BattleLogicClassRelation_DamageRateData_o *AtkRateData_k__BackingField; // x21
   const MethodInfo *v13; // x2
   __int64 v14; // x0
 
-  if ( (byte_4C2A2FD & 1) == 0 )
+  if ( (byte_4C3AA15 & 1) == 0 )
   {
-    sub_1C2D490(&BattleLogicClassRelation_DamageRateData___TypeInfo);
-    byte_4C2A2FD = 1;
+    sub_1C32C20(&BattleLogicClassRelation_DamageRateData___TypeInfo);
+    byte_4C3AA15 = 1;
   }
   IsPriorAttack = BattleLogicClassRelation_ResultData__get_IsPriorAttack(this, method);
-  v4 = sub_1C2D538(BattleLogicClassRelation_DamageRateData___TypeInfo, 2);
-  v8 = (BattleLogicClassRelation_DamageRateData_array *)v4;
+  v4 = sub_1C32CC8(BattleLogicClassRelation_DamageRateData___TypeInfo, 2);
+  v7 = (BattleLogicClassRelation_DamageRateData_array *)v4;
   if ( !IsPriorAttack )
   {
     if ( v4 )
@@ -979,51 +976,51 @@ void BattleLogicClassRelation_ResultData__fixResult(
       AtkRateData_k__BackingField = this->fields._AtkRateData_k__BackingField;
       if ( AtkRateData_k__BackingField )
       {
-        v4 = sub_1C2D5CC(this->fields._AtkRateData_k__BackingField, *(_QWORD *)(*(_QWORD *)v4 + 64LL));
+        v4 = sub_1C32D5C(this->fields._AtkRateData_k__BackingField, *(_QWORD *)(*(_QWORD *)v4 + 64LL));
         if ( !v4 )
           goto LABEL_19;
       }
-      if ( !LODWORD(v8->max_length) )
+      if ( !LODWORD(v7->max_length) )
         goto LABEL_18;
-      v8->m_Items[0] = AtkRateData_k__BackingField;
-      sub_1C2D434((CGThumbnailListItem_o *)v8->m_Items, (int32_t)AtkRateData_k__BackingField, v6, v7);
+      v7->m_Items[0] = AtkRateData_k__BackingField;
+      sub_1C32BC4((CGThumbnailListItem_o *)v7->m_Items, (int32_t)AtkRateData_k__BackingField, v5, v6);
       DefRateData_k__BackingField = this->fields._DefRateData_k__BackingField;
       if ( !DefRateData_k__BackingField )
         goto LABEL_16;
 LABEL_15:
-      v4 = sub_1C2D5CC(DefRateData_k__BackingField, v8->obj.klass->_1.element_class);
+      v4 = sub_1C32D5C(DefRateData_k__BackingField, v7->obj.klass->_1.element_class);
       if ( v4 )
         goto LABEL_16;
 LABEL_19:
-      v14 = sub_1C2D710(v4);
-      sub_1C2D5B8(v14, 0);
+      v14 = sub_1C32EA0(v4);
+      sub_1C32D48(v14, 0);
     }
 LABEL_20:
-    sub_1C2D6EC(v4, v5);
+    sub_1C32E7C(v4);
   }
   if ( !v4 )
     goto LABEL_20;
-  v9 = this->fields._DefRateData_k__BackingField;
-  if ( v9 )
+  v8 = this->fields._DefRateData_k__BackingField;
+  if ( v8 )
   {
-    v4 = sub_1C2D5CC(this->fields._DefRateData_k__BackingField, *(_QWORD *)(*(_QWORD *)v4 + 64LL));
+    v4 = sub_1C32D5C(this->fields._DefRateData_k__BackingField, *(_QWORD *)(*(_QWORD *)v4 + 64LL));
     if ( !v4 )
       goto LABEL_19;
   }
-  if ( !LODWORD(v8->max_length) )
+  if ( !LODWORD(v7->max_length) )
     goto LABEL_18;
-  v8->m_Items[0] = v9;
-  sub_1C2D434((CGThumbnailListItem_o *)v8->m_Items, (int32_t)v9, v6, v7);
+  v7->m_Items[0] = v8;
+  sub_1C32BC4((CGThumbnailListItem_o *)v7->m_Items, (int32_t)v8, v5, v6);
   DefRateData_k__BackingField = this->fields._AtkRateData_k__BackingField;
   if ( DefRateData_k__BackingField )
     goto LABEL_15;
 LABEL_16:
-  if ( LODWORD(v8->max_length) <= 1 )
+  if ( LODWORD(v7->max_length) <= 1 )
 LABEL_18:
-    sub_1C2D6F4(v4, v5, v6);
-  v8->m_Items[1] = DefRateData_k__BackingField;
-  sub_1C2D434((CGThumbnailListItem_o *)&v8->m_Items[1], (int32_t)DefRateData_k__BackingField, v6, v10);
-  this->fields._FixRate_k__BackingField = BattleLogicClassRelation_ResultData__getFixRatePriorityAsc(this, v8, v13);
+    sub_1C32E84(v4);
+  v7->m_Items[1] = DefRateData_k__BackingField;
+  sub_1C32BC4((CGThumbnailListItem_o *)&v7->m_Items[1], (int32_t)DefRateData_k__BackingField, v9, v10);
+  this->fields._FixRate_k__BackingField = BattleLogicClassRelation_ResultData__getFixRatePriorityAsc(this, v7, v13);
 }
 
 
@@ -1046,7 +1043,7 @@ void BattleLogicClassRelation_ResultData__getBuffShowState(
     return;
   if ( !opponentDamageRate )
 LABEL_15:
-    sub_1C2D6EC(this, damageRate);
+    sub_1C32E7C(this);
   BaseRate_k__BackingField = this->fields._BaseRate_k__BackingField;
   Value_k__BackingField = damageRate->fields._Value_k__BackingField;
   if ( !opponentDamageRate->fields._IsInvoked_k__BackingField )
@@ -1095,7 +1092,7 @@ float BattleLogicClassRelation_ResultData__getFixRatePriorityAsc(
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1C2D6F4(this, damageRateArray, method);
+        sub_1C32E84(this);
       v7 = damageRateArray->m_Items[v6];
       if ( !v7 )
         break;
@@ -1116,7 +1113,7 @@ float BattleLogicClassRelation_ResultData__getFixRatePriorityAsc(
         return *(float *)&v3;
     }
 LABEL_11:
-    sub_1C2D6EC(this, damageRateArray);
+    sub_1C32E7C(this);
   }
   return *(float *)&v3;
 }
@@ -1163,7 +1160,7 @@ bool BattleLogicClassRelation_ResultData__get_IsPriorAttack(
 
   DefRateData_k__BackingField = this->fields._DefRateData_k__BackingField;
   if ( !DefRateData_k__BackingField || (AtkRateData_k__BackingField = this->fields._AtkRateData_k__BackingField) == 0 )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   return DefRateData_k__BackingField->fields._Priority_k__BackingField < AtkRateData_k__BackingField->fields._Priority_k__BackingField;
 }
 
@@ -1176,7 +1173,7 @@ void BattleLogicClassRelation_ResultData__set_AtkRateData(
   const MethodInfo *v3; // x3
 
   this->fields._AtkRateData_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._AtkRateData_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._AtkRateData_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -1197,7 +1194,7 @@ void BattleLogicClassRelation_ResultData__set_DefRateData(
   const MethodInfo *v3; // x3
 
   this->fields._DefRateData_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._DefRateData_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._DefRateData_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

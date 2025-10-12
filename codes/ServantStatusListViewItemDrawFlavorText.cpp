@@ -15,7 +15,6 @@ int32_t ServantStatusListViewItemDrawFlavorText__GetKind(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void ServantStatusListViewItemDrawFlavorText__SetItem(
         ServantStatusListViewItemDrawFlavorText_o *this,
         ServantStatusListViewItem_o *item,
@@ -49,11 +48,11 @@ void ServantStatusListViewItemDrawFlavorText__SetItem(
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
-  if ( (byte_4C23FCF & 1) == 0 )
+  if ( (byte_4C345E8 & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    this = (ServantStatusListViewItemDrawFlavorText_o *)sub_1C2D490(&StringLiteral_1/*""*/);
-    byte_4C23FCF = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    this = (ServantStatusListViewItemDrawFlavorText_o *)sub_1C32C20(&StringLiteral_1/*""*/);
+    byte_4C345E8 = 1;
   }
   v6->fields.dispMode = mode;
   if ( item && mode && v6->fields.isFirst )
@@ -70,7 +69,7 @@ void ServantStatusListViewItemDrawFlavorText__SetItem(
         while ( 1 )
         {
           if ( v10 >= max_length )
-            sub_1C2D6F4(this, item, *(_QWORD *)&mode);
+            sub_1C32E84(this);
           v11 = &svtCommentEntityList->obj.klass + (int)v10;
           v12 = (ServantCommentEntity_o *)v11[4];
           if ( !v12 )
@@ -216,6 +215,6 @@ LABEL_16:
       }
     }
 LABEL_51:
-    sub_1C2D6EC(this, item);
+    sub_1C32E7C(this);
   }
 }

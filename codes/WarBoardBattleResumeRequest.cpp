@@ -7,14 +7,14 @@ void WarBoardBattleResumeRequest__beginRequest(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C28F04 & 1) == 0 )
+  if ( (byte_4C3960D & 1) == 0 )
   {
-    sub_1C2D490(&StringLiteral_23626/*"stageId"*/);
-    sub_1C2D490(&StringLiteral_17072/*"battleId"*/);
-    byte_4C28F04 = 1;
+    sub_1C32C20(&StringLiteral_23644/*"stageId"*/);
+    sub_1C32C20(&StringLiteral_17075/*"battleId"*/);
+    byte_4C3960D = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23626/*"stageId"*/, stageId, method);
-  RequestBase__addField_44008608((RequestBase_o *)this, (System_String_o *)StringLiteral_17072/*"battleId"*/, battleId, v7);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23644/*"stageId"*/, stageId, method);
+  RequestBase__addField_44144740((RequestBase_o *)this, (System_String_o *)StringLiteral_17075/*"battleId"*/, battleId, v7);
   RequestBase__beginRequest((RequestBase_o *)this, v8);
 }
 
@@ -23,14 +23,14 @@ System_String_o *WarBoardBattleResumeRequest__getURL(WarBoardBattleResumeRequest
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C28F03 & 1) == 0 )
+  if ( (byte_4C3960C & 1) == 0 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_24707/*"warBoard/battleResume"*/);
-    byte_4C28F03 = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_24725/*"warBoard/battleResume"*/);
+    byte_4C3960C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63457864(BaseUrl, (System_String_o *)StringLiteral_24707/*"warBoard/battleResume"*/, 0);
+  return System_String__Concat_63518544(BaseUrl, (System_String_o *)StringLiteral_24725/*"warBoard/battleResume"*/, 0);
 }

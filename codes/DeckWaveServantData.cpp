@@ -5,11 +5,11 @@ void DeckWaveServantData___ctor(DeckWaveServantData_o *this, const MethodInfo *m
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C26E05 & 1) == 0 )
+  if ( (byte_4C374DE & 1) == 0 )
   {
-    sub_1C2D490(&BalanceConfig_TypeInfo);
-    sub_1C2D490(&int___TypeInfo);
-    byte_4C26E05 = 1;
+    sub_1C32C20(&BalanceConfig_TypeInfo);
+    sub_1C32C20(&int___TypeInfo);
+    byte_4C374DE = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v3 = BalanceConfig_TypeInfo;
@@ -18,7 +18,7 @@ void DeckWaveServantData___ctor(DeckWaveServantData_o *this, const MethodInfo *m
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v3 = BalanceConfig_TypeInfo;
   }
-  v4 = (struct System_Int32_array *)sub_1C2D538(int___TypeInfo, (unsigned int)v3->static_fields->DeckMainMemberMax);
+  v4 = (struct System_Int32_array *)sub_1C32CC8(int___TypeInfo, (unsigned int)v3->static_fields->DeckMainMemberMax);
   this->fields.uniqueIds = v4;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.uniqueIds, (int32_t)v4, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.uniqueIds, (int32_t)v4, v5, v6);
 }

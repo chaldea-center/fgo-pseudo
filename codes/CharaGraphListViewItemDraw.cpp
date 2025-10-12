@@ -29,14 +29,14 @@ void CharaGraphListViewItemDraw__Awake(CharaGraphListViewItemDraw_o *this, const
   else
     mAtlas = 0;
   this->fields._DefaultMaskAtlas_k__BackingField = mAtlas;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._DefaultMaskAtlas_k__BackingField, (int32_t)mAtlas, v2, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._DefaultMaskAtlas_k__BackingField, (int32_t)mAtlas, v2, v3);
   v9 = this->fields.maskSprite;
   if ( v9 )
     mSpriteName = v9->fields.mSpriteName;
   else
     mSpriteName = 0;
   this->fields._DefaultMaskName_k__BackingField = mSpriteName;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._DefaultMaskName_k__BackingField, (int32_t)mSpriteName, v7, v8);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._DefaultMaskName_k__BackingField, (int32_t)mSpriteName, v7, v8);
 }
 
 
@@ -226,7 +226,7 @@ void CharaGraphListViewItemDraw__set_DefaultMaskAtlas(
   const MethodInfo *v3; // x3
 
   this->fields._DefaultMaskAtlas_k__BackingField = value;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields._DefaultMaskAtlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -242,7 +242,7 @@ void CharaGraphListViewItemDraw__set_DefaultMaskName(
   const MethodInfo *v3; // x3
 
   this->fields._DefaultMaskName_k__BackingField = value;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields._DefaultMaskName_k__BackingField,
     (int32_t)value,
     (int32_t)method,

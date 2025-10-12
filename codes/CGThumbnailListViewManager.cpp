@@ -19,10 +19,10 @@ void CGThumbnailListViewManager__ChangeIconScale(CGThumbnailListViewManager_o *t
   const MethodInfo *v11; // x2
 
   v2 = this;
-  if ( (byte_4C222AF & 1) == 0 )
+  if ( (byte_4C3297E & 1) == 0 )
   {
-    this = (CGThumbnailListViewManager_o *)sub_1C2D490(&StringLiteral_7027/*"GalleryListItemScale"*/);
-    byte_4C222AF = 1;
+    this = (CGThumbnailListViewManager_o *)sub_1C32C20(&StringLiteral_7032/*"GalleryListItemScale"*/);
+    byte_4C3297E = 1;
   }
   scaleType = v2->fields.scaleType;
   if ( scaleType < 2 )
@@ -48,14 +48,14 @@ LABEL_9:
     v5->fields.seed = smallSizeSeed;
     p_seed = &v5->fields.seed;
     *((_DWORD *)p_seed + 66) = v6;
-    this = (CGThumbnailListViewManager_o *)sub_1C2D434(p_seed);
+    this = (CGThumbnailListViewManager_o *)sub_1C32BC4(p_seed, smallSizeSeed);
   }
   sort = v2->fields.sort;
   if ( !sort )
     goto LABEL_14;
   v9 = v2->fields.scaleType;
   sort->fields.iconScaleKind = v9;
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_7027/*"GalleryListItemScale"*/, v9, 0);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_7032/*"GalleryListItemScale"*/, v9, 0);
   CGThumbnailListViewManager__ModifyList(v2, 1, v10);
   CGThumbnailListViewManager__SetMode(v2, 2, v11);
   ListViewManager__SortItem((ListViewManager_o *)v2, -1, 0, -1, 0);
@@ -64,7 +64,7 @@ LABEL_9:
     || (this = (CGThumbnailListViewManager_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0 )
   {
 LABEL_14:
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
 }
@@ -81,23 +81,23 @@ void CGThumbnailListViewManager__CreateList(
   __int64 v10; // x20
   struct ListViewSort_o *sort; // x24
   __int64 Int; // x0
-  __int64 v13; // x1
   UILabel_o *emptyMessageLabel; // x24
-  struct ListViewSort_o *v15; // x19
-  CGThumbnailListViewManager___c_c *v16; // x0
+  struct ListViewSort_o *v14; // x19
+  CGThumbnailListViewManager___c_c *v15; // x0
   System_Func_object__int__o *_9__26_0; // x22
-  Il2CppObject *v18; // x19
+  Il2CppObject *v17; // x19
   struct CGThumbnailListViewManager___c_StaticFields *static_fields; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v20; // x0
-  CGThumbnailListViewManager_o *v21; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v19; // x0
+  CGThumbnailListViewManager_o *v20; // x21
   struct System_Collections_Generic_List_string__o *thumbnailPathList; // x8
-  System_Collections_Generic_List_object__o *v23; // x21
-  System_Collections_Generic_List_object__o *v24; // x19
+  System_Collections_Generic_List_object__o *v22; // x21
+  System_Collections_Generic_List_object__o *v23; // x19
   int32_t size; // w2
-  int v26; // w9
+  int v25; // w9
   struct System_Collections_Generic_List_string__o *unloadTargetPathList; // x8
-  int32_t v28; // w2
-  int v29; // w9
+  int32_t v27; // w2
+  int v28; // w9
+  int32_t v29; // w1
   System_Func_object__bool__o **v30; // x23
   Il2CppObject *Item; // x0
   System_Func_object__bool__o *v32; // x25
@@ -131,56 +131,56 @@ void CGThumbnailListViewManager__CreateList(
   UserGameEntity_o *SelfUserGame; // [xsp+0h] [xbp-80h]
   System_Collections_Generic_IEnumerable_TSource__o *source; // [xsp+18h] [xbp-68h]
 
-  if ( (byte_4C222AA & 1) == 0 )
+  if ( (byte_4C32979 & 1) == 0 )
   {
-    sub_1C2D490(&Method_BasicHelper_GetValue_string___);
-    sub_1C2D490(&CGThumbnailListItem_TypeInfo);
-    sub_1C2D490(&CondType_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMaster_GalleryResourceMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__getEntityList__);
-    sub_1C2D490(&Method_System_Linq_Enumerable_OrderBy_GalleryEntity__int___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_ToList_GalleryEntity___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_Where_GalleryResourceEntity___);
-    sub_1C2D490(&System_Func_GalleryResourceEntity__bool__TypeInfo);
-    sub_1C2D490(&System_Func_GalleryEntity__int__TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_GalleryEntity__get_Count__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_GalleryResourceEntity__get_Count__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_GalleryEntity__get_Item__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_GalleryResourceEntity__get_Item__);
-    sub_1C2D490(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&Method_CGThumbnailListViewManager___c__CreateList_b__26_0__);
-    sub_1C2D490(&Method_CGThumbnailListViewManager___c__DisplayClass26_0__CreateList_b__1__);
-    sub_1C2D490(&CGThumbnailListViewManager___c__DisplayClass26_0_TypeInfo);
-    sub_1C2D490(&CGThumbnailListViewManager___c_TypeInfo);
-    sub_1C2D490(&StringLiteral_7027/*"GalleryListItemScale"*/);
-    sub_1C2D490(&StringLiteral_6913/*"GALLERY_NO_THUMBNAIL"*/);
-    sub_1C2D490(&StringLiteral_9214/*"MyRoom/Gallery/Thumbnail/"*/);
-    sub_1C2D490(&StringLiteral_7025/*"GalleryAscendingOrder"*/);
-    sub_1C2D490(&StringLiteral_21395/*"maleThumbnailName"*/);
-    byte_4C222AA = 1;
+    sub_1C32C20(&Method_BasicHelper_GetValue_string___);
+    sub_1C32C20(&CGThumbnailListItem_TypeInfo);
+    sub_1C32C20(&CondType_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMaster_GalleryResourceMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__getEntityList__);
+    sub_1C32C20(&Method_System_Linq_Enumerable_OrderBy_GalleryEntity__int___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_ToList_GalleryEntity___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_Where_GalleryResourceEntity___);
+    sub_1C32C20(&System_Func_GalleryResourceEntity__bool__TypeInfo);
+    sub_1C32C20(&System_Func_GalleryEntity__int__TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_GalleryEntity__get_Count__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_GalleryResourceEntity__get_Count__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_GalleryEntity__get_Item__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_GalleryResourceEntity__get_Item__);
+    sub_1C32C20(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&Method_CGThumbnailListViewManager___c__CreateList_b__26_0__);
+    sub_1C32C20(&Method_CGThumbnailListViewManager___c__DisplayClass26_0__CreateList_b__1__);
+    sub_1C32C20(&CGThumbnailListViewManager___c__DisplayClass26_0_TypeInfo);
+    sub_1C32C20(&CGThumbnailListViewManager___c_TypeInfo);
+    sub_1C32C20(&StringLiteral_7032/*"GalleryListItemScale"*/);
+    sub_1C32C20(&StringLiteral_6918/*"GALLERY_NO_THUMBNAIL"*/);
+    sub_1C32C20(&StringLiteral_9220/*"MyRoom/Gallery/Thumbnail/"*/);
+    sub_1C32C20(&StringLiteral_7030/*"GalleryAscendingOrder"*/);
+    sub_1C32C20(&StringLiteral_21408/*"maleThumbnailName"*/);
+    byte_4C32979 = 1;
   }
-  v10 = sub_1C2D6DC(CGThumbnailListViewManager___c__DisplayClass26_0_TypeInfo);
+  v10 = sub_1C32E6C(CGThumbnailListViewManager___c__DisplayClass26_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0);
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   this->fields.callbackFunc = listItemCallback;
-  sub_1C2D434(&this->fields.callbackFunc);
+  sub_1C32BC4(&this->fields.callbackFunc, listItemCallback);
   sort = this->fields.sort;
-  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_7025/*"GalleryAscendingOrder"*/, 1, 0);
+  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_7030/*"GalleryAscendingOrder"*/, 1, 0);
   if ( !sort )
     goto LABEL_77;
   sort->fields.isAscendingOrder = (_DWORD)Int == 1;
   emptyMessageLabel = this->fields.emptyMessageLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Int = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_6913/*"GALLERY_NO_THUMBNAIL"*/, 0);
+  Int = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_6918/*"GALLERY_NO_THUMBNAIL"*/, 0);
   if ( !emptyMessageLabel )
     goto LABEL_77;
   UILabel__set_text(emptyMessageLabel, (System_String_o *)Int, 0);
@@ -194,120 +194,120 @@ void CGThumbnailListViewManager__CreateList(
   if ( !Int )
     goto LABEL_77;
   ListViewSort__SetFilter((ListViewSort_o *)Int, 101, this->fields.isMovie, 0);
-  v15 = this->fields.sort;
-  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_7027/*"GalleryListItemScale"*/, 1, 0);
-  if ( !v15 )
+  v14 = this->fields.sort;
+  Int = UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_7032/*"GalleryListItemScale"*/, 1, 0);
+  if ( !v14 )
     goto LABEL_77;
-  v15->fields.iconScaleKind = Int;
-  v16 = CGThumbnailListViewManager___c_TypeInfo;
+  v14->fields.iconScaleKind = Int;
+  v15 = CGThumbnailListViewManager___c_TypeInfo;
   if ( !CGThumbnailListViewManager___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CGThumbnailListViewManager___c_TypeInfo);
-    v16 = CGThumbnailListViewManager___c_TypeInfo;
+    v15 = CGThumbnailListViewManager___c_TypeInfo;
   }
-  _9__26_0 = (System_Func_object__int__o *)v16->static_fields->__9__26_0;
+  _9__26_0 = (System_Func_object__int__o *)v15->static_fields->__9__26_0;
   if ( !_9__26_0 )
   {
-    if ( !v16->_2.cctor_finished )
+    if ( !v15->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v16);
-      v16 = CGThumbnailListViewManager___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v15);
+      v15 = CGThumbnailListViewManager___c_TypeInfo;
     }
-    v18 = (Il2CppObject *)v16->static_fields->__9;
-    _9__26_0 = (System_Func_object__int__o *)sub_1C2D6DC(System_Func_GalleryEntity__int__TypeInfo);
-    System_Func_object__int____ctor(_9__26_0, v18, Method_CGThumbnailListViewManager___c__CreateList_b__26_0__, 0);
+    v17 = (Il2CppObject *)v15->static_fields->__9;
+    _9__26_0 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_GalleryEntity__int__TypeInfo);
+    System_Func_object__int____ctor(_9__26_0, v17, Method_CGThumbnailListViewManager___c__CreateList_b__26_0__, 0);
     static_fields = CGThumbnailListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__26_0 = (struct System_Func_GalleryEntity__int__o *)_9__26_0;
-    sub_1C2D434(&static_fields->__9__26_0);
+    sub_1C32BC4(&static_fields->__9__26_0, _9__26_0);
   }
-  v20 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
+  v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)thumbnailList,
                                                                (System_Func_TSource__TKey__o *)_9__26_0,
-                                                               (const MethodInfo_30FE0A4 *)Method_System_Linq_Enumerable_OrderBy_GalleryEntity__int___);
+                                                               (const MethodInfo_310CB44 *)Method_System_Linq_Enumerable_OrderBy_GalleryEntity__int___);
   Int = (__int64)System_Linq_Enumerable__ToList_object_(
-                   v20,
-                   (const MethodInfo_3112C88 *)Method_System_Linq_Enumerable_ToList_GalleryEntity___);
+                   v19,
+                   (const MethodInfo_3121728 *)Method_System_Linq_Enumerable_ToList_GalleryEntity___);
   if ( !v10 )
     goto LABEL_77;
   *(_QWORD *)(v10 + 16) = Int;
-  Int = sub_1C2D434(v10 + 16);
-  v21 = this;
+  Int = sub_1C32BC4(v10 + 16, Int);
+  v20 = this;
   thumbnailPathList = this->fields.thumbnailPathList;
   if ( !thumbnailPathList )
   {
-    v23 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_string__TypeInfo);
+    v22 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
+    System_Collections_Generic_List_object____ctor(
+      v22,
+      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
+    this->fields.thumbnailPathList = (struct System_Collections_Generic_List_string__o *)v22;
+    sub_1C32BC4(&this->fields.thumbnailPathList, v22);
+    v20 = this;
+    v23 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v23,
-      (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_string___ctor__);
-    this->fields.thumbnailPathList = (struct System_Collections_Generic_List_string__o *)v23;
-    sub_1C2D434(&this->fields.thumbnailPathList);
-    v21 = this;
-    v24 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_string__TypeInfo);
-    System_Collections_Generic_List_object____ctor(
-      v24,
-      (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_string___ctor__);
-    this->fields.unloadTargetPathList = (struct System_Collections_Generic_List_string__o *)v24;
-    Int = sub_1C2D434(&this->fields.unloadTargetPathList);
+      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_string___ctor__);
+    this->fields.unloadTargetPathList = (struct System_Collections_Generic_List_string__o *)v23;
+    Int = sub_1C32BC4(&this->fields.unloadTargetPathList, v23);
     thumbnailPathList = this->fields.thumbnailPathList;
     if ( !thumbnailPathList )
       goto LABEL_77;
   }
   size = thumbnailPathList->fields._size;
-  v26 = thumbnailPathList->fields._version + 1;
+  v25 = thumbnailPathList->fields._version + 1;
   thumbnailPathList->fields._size = 0;
-  thumbnailPathList->fields._version = v26;
+  thumbnailPathList->fields._version = v25;
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)thumbnailPathList->fields._items, 0, size, 0);
-  unloadTargetPathList = v21->fields.unloadTargetPathList;
+  unloadTargetPathList = v20->fields.unloadTargetPathList;
   if ( !unloadTargetPathList )
     goto LABEL_77;
-  v28 = unloadTargetPathList->fields._size;
-  v29 = unloadTargetPathList->fields._version + 1;
+  v27 = unloadTargetPathList->fields._size;
+  v28 = unloadTargetPathList->fields._version + 1;
   unloadTargetPathList->fields._size = 0;
-  unloadTargetPathList->fields._version = v29;
-  if ( v28 >= 1 )
-    System_Array__Clear((System_Array_o *)unloadTargetPathList->fields._items, 0, v28, 0);
+  unloadTargetPathList->fields._version = v28;
+  if ( v27 >= 1 )
+    System_Array__Clear((System_Array_o *)unloadTargetPathList->fields._items, 0, v27, 0);
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Int = (__int64)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_GalleryResourceMaster___);
+  Int = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_GalleryResourceMaster___);
   if ( !Int )
     goto LABEL_77;
   source = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToList_object_(
                                                                   *(System_Collections_Generic_IEnumerable_TSource__o **)(Int + 40),
-                                                                  (const MethodInfo_3112C88 *)Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___);
+                                                                  (const MethodInfo_3121728 *)Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___);
   Int = *(_QWORD *)(v10 + 16);
   *(_DWORD *)(v10 + 24) = 0;
   if ( !Int )
     goto LABEL_77;
-  v13 = 0;
+  v29 = 0;
   v30 = (System_Func_object__bool__o **)(v10 + 32);
-  while ( (int)v13 < *(_DWORD *)(Int + 24) )
+  while ( v29 < *(_DWORD *)(Int + 24) )
   {
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)Int,
-             v13,
-             (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_GalleryEntity__get_Item__);
+             v29,
+             (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_GalleryEntity__get_Item__);
     v32 = *v30;
     v33 = Item;
     if ( !*v30 )
     {
-      v32 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_GalleryResourceEntity__bool__TypeInfo);
+      v32 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_GalleryResourceEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         v32,
         (Il2CppObject *)v10,
         Method_CGThumbnailListViewManager___c__DisplayClass26_0__CreateList_b__1__,
         0);
       *(_QWORD *)(v10 + 32) = v32;
-      sub_1C2D434(v10 + 32);
+      sub_1C32BC4(v10 + 32, v32);
     }
     v34 = System_Linq_Enumerable__Where_object_(
             source,
             (System_Func_TSource__bool__o *)v32,
-            (const MethodInfo_3115108 *)Method_System_Linq_Enumerable_Where_GalleryResourceEntity___);
+            (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_GalleryResourceEntity___);
     Int = (__int64)System_Linq_Enumerable__ToList_object_(
                      v34,
-                     (const MethodInfo_3112C88 *)Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___);
+                     (const MethodInfo_3121728 *)Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___);
     if ( !Int )
       goto LABEL_77;
     v35 = (System_Collections_Generic_List_object__o *)Int;
@@ -319,7 +319,7 @@ void CGThumbnailListViewManager__CreateList(
         Int = (__int64)System_Collections_Generic_List_object___get_Item(
                          v35,
                          v36,
-                         (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_GalleryResourceEntity__get_Item__);
+                         (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_GalleryResourceEntity__get_Item__);
         if ( !Int )
           goto LABEL_77;
         v37 = Int;
@@ -342,16 +342,16 @@ void CGThumbnailListViewManager__CreateList(
       v41 = (Int & 1) != 0
           ? (System_String_o *)BasicHelper__GetValue_object_(
                                  (System_Collections_Generic_Dictionary_string__object__o *)v33[2].monitor,
-                                 (System_String_o *)StringLiteral_21395/*"maleThumbnailName"*/,
+                                 (System_String_o *)StringLiteral_21408/*"maleThumbnailName"*/,
                                  (Il2CppObject *)v33[2].klass,
-                                 (const MethodInfo_30BC2C4 *)Method_BasicHelper_GetValue_string___)
+                                 (const MethodInfo_30CAD64 *)Method_BasicHelper_GetValue_string___)
           : (System_String_o *)v33[2].klass;
       v42 = *(_DWORD *)(v10 + 24);
       klass = v33[1].klass;
       v44 = *(_DWORD *)(v37 + 24);
       v45 = v35->fields._size;
-      v46 = System_String__Concat_63457864((System_String_o *)StringLiteral_9214/*"MyRoom/Gallery/Thumbnail/"*/, v41, 0);
-      v47 = sub_1C2D6DC(CGThumbnailListItem_TypeInfo);
+      v46 = System_String__Concat_63518544((System_String_o *)StringLiteral_9220/*"MyRoom/Gallery/Thumbnail/"*/, v41, 0);
+      v47 = sub_1C32E6C(CGThumbnailListItem_TypeInfo);
       ListViewItem___ctor((ListViewItem_o *)v47, 0);
       *(_DWORD *)(v47 + 20) = v42;
       *(_QWORD *)(v47 + 120) = klass;
@@ -359,7 +359,7 @@ void CGThumbnailListViewManager__CreateList(
       *(_BYTE *)(v47 + 132) = v45 > 1;
       *(_BYTE *)(v47 + 133) = 1;
       *(_QWORD *)(v47 + 136) = v46;
-      sub_1C2D434(v47 + 136);
+      sub_1C32BC4(v47 + 136, v46);
       Int = (__int64)this->fields.itemList;
       if ( !Int )
         goto LABEL_77;
@@ -374,20 +374,20 @@ void CGThumbnailListViewManager__CreateList(
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)Int,
           (Il2CppObject *)v47,
-          *(const MethodInfo_3789B84 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+          *(const MethodInfo_37987BC **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
       }
       else
       {
         v51 = v48 + 8 * v50;
         *(_DWORD *)(Int + 24) = v50 + 1;
         *(_QWORD *)(v51 + 32) = v47;
-        sub_1C2D434(v51 + 32);
+        sub_1C32BC4(v51 + 32, v47);
       }
     }
 LABEL_51:
     Int = *(_QWORD *)(v10 + 16);
-    v13 = (unsigned int)(*(_DWORD *)(v10 + 24) + 1);
-    *(_DWORD *)(v10 + 24) = v13;
+    v29 = *(_DWORD *)(v10 + 24) + 1;
+    *(_DWORD *)(v10 + 24) = v29;
     if ( !Int )
       goto LABEL_77;
   }
@@ -411,7 +411,7 @@ LABEL_51:
     normalSizeSeed = this->fields.extremelySmallSizeSeed;
   }
   this->fields.seed = normalSizeSeed;
-  sub_1C2D434(&this->fields.seed);
+  sub_1C32BC4(&this->fields.seed, normalSizeSeed);
 LABEL_61:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
   scrollBar = (UnityEngine_Object_o *)this->fields.scrollBar;
@@ -459,7 +459,7 @@ LABEL_61:
       }
     }
 LABEL_77:
-    sub_1C2D6EC(Int, v13);
+    sub_1C32E7C(Int);
   }
 }
 
@@ -472,7 +472,7 @@ System_String_o *CGThumbnailListViewManager__GetScaleButtonSpriteName(
 
   sort = this->fields.sort;
   if ( !sort )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   return ListViewSort__GetScaleKindSpriteName(sort, this->fields.scaleType, 0);
 }
 
@@ -484,34 +484,33 @@ void CGThumbnailListViewManager__JumpItemForID(
 {
   __int64 v5; // x20
   void *gameObject; // x0
-  __int64 v7; // x1
   UnityEngine_Object_o *scrollBar; // x21
-  struct UIScrollBar_o *v9; // x8
+  struct UIScrollBar_o *v8; // x8
   struct System_Collections_Generic_List_ListViewItem__o *itemList; // x21
-  System_Converter_TInput__TOutput__o *v11; // x22
-  Il2CppObject *v12; // x23
+  System_Converter_TInput__TOutput__o *v10; // x22
+  Il2CppObject *v11; // x23
   struct CGThumbnailListViewManager___c_StaticFields *static_fields; // x0
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  System_Collections_Generic_List_TOutput__o *v16; // x21
-  System_Func_object__bool__o *v17; // x22
-  Il2CppObject *v18; // x0
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  System_Collections_Generic_List_TOutput__o *v15; // x21
+  System_Func_object__bool__o *v16; // x22
+  Il2CppObject *v17; // x0
   int32_t klass_high; // w1
 
-  if ( (byte_4C222B2 & 1) == 0 )
+  if ( (byte_4C32981 & 1) == 0 )
   {
-    sub_1C2D490(&System_Converter_ListViewItem__CGThumbnailListItem__TypeInfo);
-    sub_1C2D490(&Method_System_Linq_Enumerable_FirstOrDefault_CGThumbnailListItem___);
-    sub_1C2D490(&System_Func_CGThumbnailListItem__bool__TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_ListViewItem__ConvertAll_CGThumbnailListItem___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&Method_CGThumbnailListViewManager___c__JumpItemForID_b__37_0__);
-    sub_1C2D490(&Method_CGThumbnailListViewManager___c__DisplayClass37_0__JumpItemForID_b__1__);
-    sub_1C2D490(&CGThumbnailListViewManager___c__DisplayClass37_0_TypeInfo);
-    sub_1C2D490(&CGThumbnailListViewManager___c_TypeInfo);
-    byte_4C222B2 = 1;
+    sub_1C32C20(&System_Converter_ListViewItem__CGThumbnailListItem__TypeInfo);
+    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_CGThumbnailListItem___);
+    sub_1C32C20(&System_Func_CGThumbnailListItem__bool__TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__ConvertAll_CGThumbnailListItem___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&Method_CGThumbnailListViewManager___c__JumpItemForID_b__37_0__);
+    sub_1C32C20(&Method_CGThumbnailListViewManager___c__DisplayClass37_0__JumpItemForID_b__1__);
+    sub_1C32C20(&CGThumbnailListViewManager___c__DisplayClass37_0_TypeInfo);
+    sub_1C32C20(&CGThumbnailListViewManager___c_TypeInfo);
+    byte_4C32981 = 1;
   }
-  v5 = sub_1C2D6DC(CGThumbnailListViewManager___c__DisplayClass37_0_TypeInfo);
+  v5 = sub_1C32E6C(CGThumbnailListViewManager___c__DisplayClass37_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_24;
@@ -530,10 +529,10 @@ void CGThumbnailListViewManager__JumpItemForID(
         gameObject = (void *)UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)gameObject, 0);
         if ( ((unsigned __int8)gameObject & 1) == 0 )
           return;
-        v9 = this->fields.scrollBar;
-        if ( v9 )
+        v8 = this->fields.scrollBar;
+        if ( v8 )
         {
-          if ( v9->fields.mSize > 0.98 )
+          if ( v8->fields.mSize > 0.98 )
             return;
           itemList = this->fields.itemList;
           gameObject = CGThumbnailListViewManager___c_TypeInfo;
@@ -542,43 +541,43 @@ void CGThumbnailListViewManager__JumpItemForID(
             j_il2cpp_runtime_class_init_0(CGThumbnailListViewManager___c_TypeInfo);
             gameObject = CGThumbnailListViewManager___c_TypeInfo;
           }
-          v11 = *(System_Converter_TInput__TOutput__o **)(*((_QWORD *)gameObject + 23) + 48LL);
-          if ( !v11 )
+          v10 = *(System_Converter_TInput__TOutput__o **)(*((_QWORD *)gameObject + 23) + 48LL);
+          if ( !v10 )
           {
             if ( !*((_DWORD *)gameObject + 56) )
             {
               j_il2cpp_runtime_class_init_0(gameObject);
               gameObject = CGThumbnailListViewManager___c_TypeInfo;
             }
-            v12 = (Il2CppObject *)**((_QWORD **)gameObject + 23);
-            v11 = (System_Converter_TInput__TOutput__o *)sub_1C2D6DC(System_Converter_ListViewItem__CGThumbnailListItem__TypeInfo);
+            v11 = (Il2CppObject *)**((_QWORD **)gameObject + 23);
+            v10 = (System_Converter_TInput__TOutput__o *)sub_1C32E6C(System_Converter_ListViewItem__CGThumbnailListItem__TypeInfo);
             System_Converter_object__object____ctor(
+              v10,
               v11,
-              v12,
               Method_CGThumbnailListViewManager___c__JumpItemForID_b__37_0__,
               0);
             static_fields = CGThumbnailListViewManager___c_TypeInfo->static_fields;
-            static_fields->__9__37_0 = (struct System_Converter_ListViewItem__CGThumbnailListItem__o *)v11;
-            sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__37_0, (int32_t)v11, v14, v15);
+            static_fields->__9__37_0 = (struct System_Converter_ListViewItem__CGThumbnailListItem__o *)v10;
+            sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__37_0, (int32_t)v10, v13, v14);
           }
           if ( itemList )
           {
-            v16 = System_Collections_Generic_List_object___ConvertAll_object_(
+            v15 = System_Collections_Generic_List_object___ConvertAll_object_(
                     (System_Collections_Generic_List_object__o *)itemList,
-                    (System_Converter_T__TOutput__o *)v11,
-                    (const MethodInfo_2FF5F70 *)Method_System_Collections_Generic_List_ListViewItem__ConvertAll_CGThumbnailListItem___);
-            v17 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_CGThumbnailListItem__bool__TypeInfo);
+                    (System_Converter_T__TOutput__o *)v10,
+                    (const MethodInfo_3004A10 *)Method_System_Collections_Generic_List_ListViewItem__ConvertAll_CGThumbnailListItem___);
+            v16 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_CGThumbnailListItem__bool__TypeInfo);
             System_Func_object__bool____ctor(
-              v17,
+              v16,
               (Il2CppObject *)v5,
               Method_CGThumbnailListViewManager___c__DisplayClass37_0__JumpItemForID_b__1__,
               0);
-            v18 = System_Linq_Enumerable__FirstOrDefault_object__51348472(
-                    (System_Collections_Generic_IEnumerable_TSource__o *)v16,
-                    (System_Func_TSource__bool__o *)v17,
-                    (const MethodInfo_30F83F8 *)Method_System_Linq_Enumerable_FirstOrDefault_CGThumbnailListItem___);
-            if ( v18 )
-              klass_high = HIDWORD(v18[1].klass);
+            v17 = System_Linq_Enumerable__FirstOrDefault_object__51408536(
+                    (System_Collections_Generic_IEnumerable_TSource__o *)v15,
+                    (System_Func_TSource__bool__o *)v16,
+                    (const MethodInfo_3106E98 *)Method_System_Linq_Enumerable_FirstOrDefault_CGThumbnailListItem___);
+            if ( v17 )
+              klass_high = HIDWORD(v17[1].klass);
             else
               klass_high = 0;
             ListViewManager__SetTopItem((ListViewManager_o *)this, klass_high, 0);
@@ -588,12 +587,11 @@ void CGThumbnailListViewManager__JumpItemForID(
       }
     }
 LABEL_24:
-    sub_1C2D6EC(gameObject, v7);
+    sub_1C32E7C(gameObject);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void CGThumbnailListViewManager__ModifyList(
         CGThumbnailListViewManager_o *this,
         bool isIconSizeChange,
@@ -607,18 +605,18 @@ void CGThumbnailListViewManager__ModifyList(
   __int64 naturalAligment; // x10
   UnityEngine_Object_o *klass; // x22
 
-  if ( (byte_4C222AE & 1) == 0 )
+  if ( (byte_4C3297D & 1) == 0 )
   {
-    sub_1C2D490(&CGThumbnailListItem_TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C222AE = 1;
+    sub_1C32C20(&CGThumbnailListItem_TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__get_Count__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3297D = 1;
   }
   itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
   if ( !itemList )
 LABEL_17:
-    sub_1C2D6EC(itemList, isIconSizeChange);
+    sub_1C32E7C(itemList);
   size = itemList->fields._size;
   if ( size >= 1 && isIconSizeChange )
   {
@@ -628,7 +626,7 @@ LABEL_17:
       Item = System_Collections_Generic_List_object___get_Item(
                itemList,
                v7,
-               (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+               (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
       if ( Item )
       {
         v9 = (ListViewItem_o *)Item;
@@ -668,28 +666,27 @@ void CGThumbnailListViewManager__OnClickListView(
   _QWORD *v7; // x0
   System_Reflection_MethodBase_o *v8; // x0
   __int64 v9; // x0
-  __int64 v10; // x1
   unsigned int Index; // w0
 
-  if ( (byte_4C222B3 & 1) == 0 )
+  if ( (byte_4C32982 & 1) == 0 )
   {
-    sub_1C2D490(&Method_CGThumbnailListViewManager_OnClickListView__);
-    byte_4C222B3 = 1;
+    sub_1C32C20(&Method_CGThumbnailListViewManager_OnClickListView__);
+    byte_4C32982 = 1;
   }
   if ( this->fields.isInput )
   {
     callbackFunc = this->fields.callbackFunc;
     this->fields.callbackFunc = 0;
-    sub_1C2D434((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, (int32_t)method, v3);
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, (int32_t)method, v3);
     v7 = Method_CGThumbnailListViewManager_OnClickListView__;
     if ( (*((_BYTE *)Method_CGThumbnailListViewManager_OnClickListView__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1C2D4A8(Method_CGThumbnailListViewManager_OnClickListView__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1C2D474(v7, v7[4]);
+      v7 = (_QWORD *)sub_1C32C38(Method_CGThumbnailListViewManager_OnClickListView__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1C32C04(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0);
     if ( callbackFunc )
     {
       if ( !obj )
-        sub_1C2D6EC(v9, v10);
+        sub_1C32E7C(v9);
       Index = ListViewObject__get_Index((ListViewObject_o *)obj, 0);
       ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))callbackFunc->fields.invoke_impl)(
         callbackFunc->fields.method_code,
@@ -707,29 +704,28 @@ void CGThumbnailListViewManager__OnClickSortAscendingOrder(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
   __int64 v5; // x0
-  __int64 v6; // x1
   struct ListViewSort_o *sort; // x8
   _BOOL4 isAscendingOrder; // w9
 
-  if ( (byte_4C222B1 & 1) == 0 )
+  if ( (byte_4C32980 & 1) == 0 )
   {
-    sub_1C2D490(&Method_CGThumbnailListViewManager_OnClickSortAscendingOrder__);
-    sub_1C2D490(&StringLiteral_7025/*"GalleryAscendingOrder"*/);
-    byte_4C222B1 = 1;
+    sub_1C32C20(&Method_CGThumbnailListViewManager_OnClickSortAscendingOrder__);
+    sub_1C32C20(&StringLiteral_7030/*"GalleryAscendingOrder"*/);
+    byte_4C32980 = 1;
   }
   if ( this->fields.isInput )
   {
     v3 = Method_CGThumbnailListViewManager_OnClickSortAscendingOrder__;
     if ( (*((_BYTE *)Method_CGThumbnailListViewManager_OnClickSortAscendingOrder__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_CGThumbnailListViewManager_OnClickSortAscendingOrder__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_CGThumbnailListViewManager_OnClickSortAscendingOrder__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     sort = this->fields.sort;
     if ( !sort )
-      sub_1C2D6EC(v5, v6);
+      sub_1C32E7C(v5);
     isAscendingOrder = sort->fields.isAscendingOrder;
     sort->fields.isAscendingOrder = !isAscendingOrder;
-    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_7025/*"GalleryAscendingOrder"*/, !isAscendingOrder, 0);
+    UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_7030/*"GalleryAscendingOrder"*/, !isAscendingOrder, 0);
     UnityEngine_PlayerPrefs__Save(0);
     ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
   }
@@ -744,7 +740,7 @@ void CGThumbnailListViewManager__OnCloseFullScreenView(
   const MethodInfo *v3; // x3
 
   this->fields.callbackFunc = listItemCallback;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)listItemCallback, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)listItemCallback, (int32_t)method, v3);
 }
 
 
@@ -754,13 +750,12 @@ void CGThumbnailListViewManager__OnMoveEnd(CGThumbnailListViewManager_o *this, c
   bool v4; // vf
   int32_t v5; // w8
   UnityEngine_Object_o *scrollView; // x20
-  __int64 v7; // x1
-  struct UIScrollView_o *v8; // x0
+  struct UIScrollView_o *v7; // x0
 
-  if ( (byte_4C222AD & 1) == 0 )
+  if ( (byte_4C3297C & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C222AD = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3297C = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -775,13 +770,13 @@ void CGThumbnailListViewManager__OnMoveEnd(CGThumbnailListViewManager_o *this, c
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality(scrollView, 0, 0) )
       {
-        v8 = this->fields.scrollView;
-        if ( !v8 )
-          sub_1C2D6EC(0, v7);
-        ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v8->klass->vtable._8_UpdateScrollbars.methodPtr)(
-          v8,
+        v7 = this->fields.scrollView;
+        if ( !v7 )
+          sub_1C32E7C(0);
+        ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v7->klass->vtable._8_UpdateScrollbars.methodPtr)(
+          v7,
           1,
-          v8->klass->vtable._8_UpdateScrollbars.method);
+          v7->klass->vtable._8_UpdateScrollbars.method);
       }
     }
   }
@@ -795,41 +790,39 @@ void CGThumbnailListViewManager__RequestListObject(
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *ObjectList; // x0
-  __int64 v6; // x1
   int32_t size; // w8
   Il2CppObject *current; // x22
   int32_t scaleType; // w21
-  System_Action_object__object__o *v10; // x23
-  __int64 v11; // x0
-  __int64 v12; // x1
-  const MethodInfo *v13; // x4
-  System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-68h] BYREF
+  System_Action_object__object__o *v9; // x23
+  __int64 v10; // x0
+  const MethodInfo *v11; // x4
+  System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C222AC & 1) == 0 )
+  if ( (byte_4C3297B & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_string__string__TypeInfo);
-    sub_1C2D490(&Method_CGThumbnailListViewManager_SetThumbnailAssetPath__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_CGThumbnailObject__Dispose__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_CGThumbnailObject__MoveNext__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_CGThumbnailObject__get_Current__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_CGThumbnailObject__GetEnumerator__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_CGThumbnailObject__get_Count__);
-    sub_1C2D490(&StringLiteral_9936/*"OnMoveEnd"*/);
-    byte_4C222AC = 1;
+    sub_1C32C20(&System_Action_string__string__TypeInfo);
+    sub_1C32C20(&Method_CGThumbnailListViewManager_SetThumbnailAssetPath__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_CGThumbnailObject__Dispose__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_CGThumbnailObject__MoveNext__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_CGThumbnailObject__get_Current__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_CGThumbnailObject__GetEnumerator__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_CGThumbnailObject__get_Count__);
+    sub_1C32C20(&StringLiteral_9941/*"OnMoveEnd"*/);
+    byte_4C3297B = 1;
   }
-  memset(&v14, 0, sizeof(v14));
+  memset(&v12, 0, sizeof(v12));
   ObjectList = (System_Collections_Generic_List_object__o *)CGThumbnailListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C2D6EC(0, v6);
+    sub_1C32E7C(0);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9936/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9941/*"OnMoveEnd"*/,
       0.0,
       0);
   }
@@ -837,38 +830,37 @@ void CGThumbnailListViewManager__RequestListObject(
   {
     this->fields.callbackCount = size;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v14,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v12,
       ObjectList,
-      (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_CGThumbnailObject__GetEnumerator__);
+      (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_CGThumbnailObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-              &v14,
-              (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_CGThumbnailObject__MoveNext__) )
+              &v12,
+              (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_CGThumbnailObject__MoveNext__) )
     {
-      current = v14.fields._current;
+      current = v12.fields._current;
       scaleType = this->fields.scaleType;
-      v10 = (System_Action_object__object__o *)sub_1C2D6DC(System_Action_string__string__TypeInfo);
+      v9 = (System_Action_object__object__o *)sub_1C32E6C(System_Action_string__string__TypeInfo);
       System_Action_object__object____ctor(
-        v10,
+        v9,
         (Il2CppObject *)this,
         Method_CGThumbnailListViewManager_SetThumbnailAssetPath__,
         0);
       if ( !current )
-        sub_1C2D6EC(v11, v12);
+        sub_1C32E7C(v10);
       CGThumbnailObject__Init(
         (CGThumbnailObject_o *)current,
         mode,
         scaleType,
-        (System_Action_string__string__o *)v10,
-        v13);
+        (System_Action_string__string__o *)v9,
+        v11);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v14,
-      (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_CGThumbnailObject__Dispose__);
+      &v12,
+      (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_CGThumbnailObject__Dispose__);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void CGThumbnailListViewManager__SetFilter(
         CGThumbnailListViewManager_o *this,
         bool isCg,
@@ -881,7 +873,7 @@ void CGThumbnailListViewManager__SetFilter(
   this->fields.isCG = isCg;
   this->fields.isMovie = isMovieFlag;
   if ( !sort || (ListViewSort__SetFilter(sort, 100, isCg, 0), (sort = this->fields.sort) == 0) )
-    sub_1C2D6EC(sort, isCg);
+    sub_1C32E7C(sort);
   ListViewSort__SetFilter(sort, 101, this->fields.isMovie, 0);
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
 }
@@ -910,16 +902,15 @@ void CGThumbnailListViewManager__SetObjectItem(
   int32_t scaleType; // w21
   System_Action_object__object__o *v9; // x22
   __int64 v10; // x0
-  __int64 v11; // x1
-  const MethodInfo *v12; // x4
-  int32_t v13; // w1
+  const MethodInfo *v11; // x4
+  int32_t v12; // w1
 
-  if ( (byte_4C222AB & 1) == 0 )
+  if ( (byte_4C3297A & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_string__string__TypeInfo);
-    sub_1C2D490(&Method_CGThumbnailListViewManager_SetThumbnailAssetPath__);
-    sub_1C2D490(&CGThumbnailObject_TypeInfo);
-    byte_4C222AB = 1;
+    sub_1C32C20(&System_Action_string__string__TypeInfo);
+    sub_1C32C20(&Method_CGThumbnailListViewManager_SetThumbnailAssetPath__);
+    sub_1C32C20(&CGThumbnailObject_TypeInfo);
+    byte_4C3297A = 1;
   }
   if ( obj )
   {
@@ -936,48 +927,47 @@ void CGThumbnailListViewManager__SetObjectItem(
   }
   initMode = this->fields.initMode;
   scaleType = this->fields.scaleType;
-  v9 = (System_Action_object__object__o *)sub_1C2D6DC(System_Action_string__string__TypeInfo);
+  v9 = (System_Action_object__object__o *)sub_1C32E6C(System_Action_string__string__TypeInfo);
   System_Action_object__object____ctor(
     v9,
     (Il2CppObject *)this,
     Method_CGThumbnailListViewManager_SetThumbnailAssetPath__,
     0);
   if ( !obj )
-    sub_1C2D6EC(v10, v11);
+    sub_1C32E7C(v10);
   if ( initMode == 2 )
-    v13 = 2;
+    v12 = 2;
   else
-    v13 = 1;
-  CGThumbnailObject__Init((CGThumbnailObject_o *)obj, v13, scaleType, (System_Action_string__string__o *)v9, v12);
+    v12 = 1;
+  CGThumbnailObject__Init((CGThumbnailObject_o *)obj, v12, scaleType, (System_Action_string__string__o *)v9, v11);
 }
 
 
 void CGThumbnailListViewManager__SetSortButtonImage(CGThumbnailListViewManager_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *sortKindLabel; // x20
-  __int64 v4; // x1
   ListViewSort_o *sort; // x0
-  UILabel_o *v6; // x20
+  UILabel_o *v5; // x20
   UnityEngine_Object_o *sortOrderSprite; // x20
-  struct ListViewSort_o *v8; // x8
+  struct ListViewSort_o *v7; // x8
   int32_t sortKind; // w9
-  System_String_o **v10; // x8
-  struct ListViewSort_o *v11; // x8
-  System_String_o **v12; // x9
-  System_String_o **v13; // x10
+  System_String_o **v9; // x8
+  struct ListViewSort_o *v10; // x8
+  System_String_o **v11; // x9
+  System_String_o **v12; // x10
+  System_String_o **v13; // x8
   System_String_o **v14; // x8
-  System_String_o **v15; // x8
 
-  if ( (byte_4C222B0 & 1) == 0 )
+  if ( (byte_4C3297F & 1) == 0 )
   {
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_17517/*"btn_sort_up"*/);
-    sub_1C2D490(&StringLiteral_17615/*"btn_txt_up"*/);
-    sub_1C2D490(&StringLiteral_17566/*"btn_txt_new"*/);
-    sub_1C2D490(&StringLiteral_17556/*"btn_txt_down"*/);
-    sub_1C2D490(&StringLiteral_17573/*"btn_txt_old"*/);
-    sub_1C2D490(&StringLiteral_17514/*"btn_sort_down"*/);
-    byte_4C222B0 = 1;
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_17521/*"btn_sort_up"*/);
+    sub_1C32C20(&StringLiteral_17619/*"btn_txt_up"*/);
+    sub_1C32C20(&StringLiteral_17570/*"btn_txt_new"*/);
+    sub_1C32C20(&StringLiteral_17560/*"btn_txt_down"*/);
+    sub_1C32C20(&StringLiteral_17577/*"btn_txt_old"*/);
+    sub_1C32C20(&StringLiteral_17518/*"btn_sort_down"*/);
+    byte_4C3297F = 1;
   }
   sortKindLabel = (UnityEngine_Object_o *)this->fields.sortKindLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -987,11 +977,11 @@ void CGThumbnailListViewManager__SetSortButtonImage(CGThumbnailListViewManager_o
     sort = this->fields.sort;
     if ( !sort )
       goto LABEL_34;
-    v6 = this->fields.sortKindLabel;
+    v5 = this->fields.sortKindLabel;
     sort = (ListViewSort_o *)ListViewSort__GetSortKindButtonText(sort, 0, 0);
-    if ( !v6 )
+    if ( !v5 )
       goto LABEL_34;
-    UILabel__set_text(v6, (System_String_o *)sort, 0);
+    UILabel__set_text(v5, (System_String_o *)sort, 0);
   }
   sortOrderSprite = (UnityEngine_Object_o *)this->fields.sortOrderSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -999,31 +989,31 @@ void CGThumbnailListViewManager__SetSortButtonImage(CGThumbnailListViewManager_o
   sort = (ListViewSort_o *)UnityEngine_Object__op_Inequality(sortOrderSprite, 0, 0);
   if ( ((unsigned __int8)sort & 1) != 0 )
   {
-    v8 = this->fields.sort;
-    if ( v8 )
+    v7 = this->fields.sort;
+    if ( v7 )
     {
-      sortKind = v8->fields.sortKind;
+      sortKind = v7->fields.sortKind;
       if ( sortKind == 11 || sortKind == 1 )
       {
         sort = (ListViewSort_o *)this->fields.sortExplanationSprite;
         if ( sort )
         {
-          v10 = (System_String_o **)(v8->fields.isAscendingOrder ? &StringLiteral_17573/*"btn_txt_old"*/ : &StringLiteral_17566/*"btn_txt_new"*/);
-          UISprite__set_spriteName((UISprite_o *)sort, *v10, 0);
-          v11 = this->fields.sort;
-          if ( v11 )
+          v9 = (System_String_o **)(v7->fields.isAscendingOrder ? &StringLiteral_17577/*"btn_txt_old"*/ : &StringLiteral_17570/*"btn_txt_new"*/);
+          UISprite__set_spriteName((UISprite_o *)sort, *v9, 0);
+          v10 = this->fields.sort;
+          if ( v10 )
           {
             sort = (ListViewSort_o *)this->fields.sortOrderSprite;
             if ( sort )
             {
-              v12 = (System_String_o **)&StringLiteral_17514/*"btn_sort_down"*/;
-              v13 = (System_String_o **)&StringLiteral_17517/*"btn_sort_up"*/;
+              v11 = (System_String_o **)&StringLiteral_17518/*"btn_sort_down"*/;
+              v12 = (System_String_o **)&StringLiteral_17521/*"btn_sort_up"*/;
 LABEL_30:
-              if ( v11->fields.isAscendingOrder )
-                v15 = v12;
+              if ( v10->fields.isAscendingOrder )
+                v14 = v11;
               else
-                v15 = v13;
-              UISprite__set_spriteName((UISprite_o *)sort, *v15, 0);
+                v14 = v12;
+              UISprite__set_spriteName((UISprite_o *)sort, *v14, 0);
               return;
             }
           }
@@ -1034,16 +1024,16 @@ LABEL_30:
         sort = (ListViewSort_o *)this->fields.sortExplanationSprite;
         if ( sort )
         {
-          v14 = (System_String_o **)(v8->fields.isAscendingOrder ? &StringLiteral_17615/*"btn_txt_up"*/ : &StringLiteral_17556/*"btn_txt_down"*/);
-          UISprite__set_spriteName((UISprite_o *)sort, *v14, 0);
-          v11 = this->fields.sort;
-          if ( v11 )
+          v13 = (System_String_o **)(v7->fields.isAscendingOrder ? &StringLiteral_17619/*"btn_txt_up"*/ : &StringLiteral_17560/*"btn_txt_down"*/);
+          UISprite__set_spriteName((UISprite_o *)sort, *v13, 0);
+          v10 = this->fields.sort;
+          if ( v10 )
           {
             sort = (ListViewSort_o *)this->fields.sortOrderSprite;
             if ( sort )
             {
-              v12 = (System_String_o **)&StringLiteral_17517/*"btn_sort_up"*/;
-              v13 = (System_String_o **)&StringLiteral_17514/*"btn_sort_down"*/;
+              v11 = (System_String_o **)&StringLiteral_17521/*"btn_sort_up"*/;
+              v12 = (System_String_o **)&StringLiteral_17518/*"btn_sort_down"*/;
               goto LABEL_30;
             }
           }
@@ -1051,7 +1041,7 @@ LABEL_30:
       }
     }
 LABEL_34:
-    sub_1C2D6EC(sort, v4);
+    sub_1C32E7C(sort);
   }
 }
 
@@ -1062,14 +1052,14 @@ void CGThumbnailListViewManager__SetThumbnailAssetPath(
         System_String_o *unloadTargetPath,
         const MethodInfo *method)
 {
-  const MethodInfo *v7; // x1
   struct System_Collections_Generic_List_string__o *unloadTargetPathList; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
   struct System_String_array *items; // x8
-  _QWORD *v12; // x9
+  _QWORD *v11; // x9
   __int64 size; // x10
-  Il2CppClass **v14; // x8
+  Il2CppClass **v13; // x8
+  const MethodInfo *v14; // x1
   int32_t v15; // w2
   const MethodInfo *v16; // x3
   struct System_String_array *v17; // x8
@@ -1078,13 +1068,13 @@ void CGThumbnailListViewManager__SetThumbnailAssetPath(
   Il2CppClass **v20; // x8
   struct System_Collections_Generic_List_string__o *thumbnailPathList; // x8
 
-  if ( (byte_4C222B5 & 1) == 0 )
+  if ( (byte_4C32984 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__Contains__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__Remove__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__get_Count__);
-    byte_4C222B5 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__Contains__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__Remove__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__get_Count__);
+    byte_4C32984 = 1;
   }
   if ( !System_String__IsNullOrEmpty(unloadTargetPath, 0) )
   {
@@ -1094,13 +1084,13 @@ void CGThumbnailListViewManager__SetThumbnailAssetPath(
     if ( !System_Collections_Generic_List_object___Contains(
             (System_Collections_Generic_List_object__o *)unloadTargetPathList,
             (Il2CppObject *)unloadTargetPath,
-            (const MethodInfo_3789F14 *)Method_System_Collections_Generic_List_string__Contains__) )
+            (const MethodInfo_3798B4C *)Method_System_Collections_Generic_List_string__Contains__) )
     {
       unloadTargetPathList = this->fields.unloadTargetPathList;
       if ( !unloadTargetPathList )
         goto LABEL_26;
       items = unloadTargetPathList->fields._items;
-      v12 = Method_System_Collections_Generic_List_string__Add__;
+      v11 = Method_System_Collections_Generic_List_string__Add__;
       ++unloadTargetPathList->fields._version;
       if ( !items )
         goto LABEL_26;
@@ -1110,14 +1100,14 @@ void CGThumbnailListViewManager__SetThumbnailAssetPath(
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)unloadTargetPathList,
           (Il2CppObject *)unloadTargetPath,
-          *(const MethodInfo_3789B84 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+          *(const MethodInfo_37987BC **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
       }
       else
       {
-        v14 = &items->obj.klass + size;
+        v13 = &items->obj.klass + size;
         unloadTargetPathList->fields._size = size + 1;
-        v14[4] = (Il2CppClass *)unloadTargetPath;
-        sub_1C2D434((CGThumbnailListItem_o *)(v14 + 4), (int32_t)unloadTargetPath, v9, v10);
+        v13[4] = (Il2CppClass *)unloadTargetPath;
+        sub_1C32BC4((CGThumbnailListItem_o *)(v13 + 4), (int32_t)unloadTargetPath, v8, v9);
       }
     }
   }
@@ -1130,7 +1120,7 @@ void CGThumbnailListViewManager__SetThumbnailAssetPath(
   if ( !System_Collections_Generic_List_object___Contains(
           (System_Collections_Generic_List_object__o *)unloadTargetPathList,
           (Il2CppObject *)loadPath,
-          (const MethodInfo_3789F14 *)Method_System_Collections_Generic_List_string__Contains__) )
+          (const MethodInfo_3798B4C *)Method_System_Collections_Generic_List_string__Contains__) )
   {
     unloadTargetPathList = this->fields.thumbnailPathList;
     if ( unloadTargetPathList )
@@ -1146,20 +1136,20 @@ void CGThumbnailListViewManager__SetThumbnailAssetPath(
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)unloadTargetPathList,
             (Il2CppObject *)loadPath,
-            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            *(const MethodInfo_37987BC **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
         else
         {
           v20 = &v17->obj.klass + v19;
           unloadTargetPathList->fields._size = v19 + 1;
           v20[4] = (Il2CppClass *)loadPath;
-          sub_1C2D434((CGThumbnailListItem_o *)(v20 + 4), (int32_t)loadPath, v15, v16);
+          sub_1C32BC4((CGThumbnailListItem_o *)(v20 + 4), (int32_t)loadPath, v15, v16);
         }
         goto LABEL_19;
       }
     }
 LABEL_26:
-    sub_1C2D6EC(unloadTargetPathList, v7);
+    sub_1C32E7C(unloadTargetPathList);
   }
 LABEL_19:
   unloadTargetPathList = this->fields.unloadTargetPathList;
@@ -1168,7 +1158,7 @@ LABEL_19:
   unloadTargetPathList = (struct System_Collections_Generic_List_string__o *)System_Collections_Generic_List_object___Contains(
                                                                                (System_Collections_Generic_List_object__o *)unloadTargetPathList,
                                                                                (Il2CppObject *)loadPath,
-                                                                               (const MethodInfo_3789F14 *)Method_System_Collections_Generic_List_string__Contains__);
+                                                                               (const MethodInfo_3798B4C *)Method_System_Collections_Generic_List_string__Contains__);
   if ( ((unsigned __int8)unloadTargetPathList & 1) != 0 )
   {
     unloadTargetPathList = this->fields.unloadTargetPathList;
@@ -1177,14 +1167,14 @@ LABEL_19:
     unloadTargetPathList = (struct System_Collections_Generic_List_string__o *)System_Collections_Generic_List_object___Remove(
                                                                                  (System_Collections_Generic_List_object__o *)unloadTargetPathList,
                                                                                  (Il2CppObject *)loadPath,
-                                                                                 (const MethodInfo_378B0AC *)Method_System_Collections_Generic_List_string__Remove__);
+                                                                                 (const MethodInfo_3799CE4 *)Method_System_Collections_Generic_List_string__Remove__);
   }
 LABEL_23:
   thumbnailPathList = this->fields.thumbnailPathList;
   if ( !thumbnailPathList )
     goto LABEL_26;
   if ( thumbnailPathList->fields._size >= 101 )
-    CGThumbnailListViewManager__UnloadTargetTextureAsset(this, v7);
+    CGThumbnailListViewManager__UnloadTargetTextureAsset(this, v14);
 }
 
 
@@ -1212,19 +1202,19 @@ void CGThumbnailListViewManager__UnloadTargetTextureAsset(CGThumbnailListViewMan
   intptr_t v21; // x8
 
   v2 = this;
-  if ( (byte_4C222B6 & 1) == 0 )
+  if ( (byte_4C32985 & 1) == 0 )
   {
-    sub_1C2D490(&AssetManager_TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__Remove__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__get_Count__);
-    this = (CGThumbnailListViewManager_o *)sub_1C2D490(&Method_System_Collections_Generic_List_string__get_Item__);
-    byte_4C222B6 = 1;
+    sub_1C32C20(&AssetManager_TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__Remove__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__get_Count__);
+    this = (CGThumbnailListViewManager_o *)sub_1C32C20(&Method_System_Collections_Generic_List_string__get_Item__);
+    byte_4C32985 = 1;
   }
   thumbnailPathList = v2->fields.thumbnailPathList;
   if ( !thumbnailPathList )
 LABEL_28:
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   v4 = 0;
   v5 = 100;
 LABEL_5:
@@ -1242,21 +1232,21 @@ LABEL_5:
       this = (CGThumbnailListViewManager_o *)System_Collections_Generic_List_object___get_Item(
                                                (System_Collections_Generic_List_object__o *)this,
                                                0,
-                                               (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                               (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_string__get_Item__);
       if ( !v2->fields.thumbnailPathList )
         goto LABEL_28;
       v8 = (Il2CppObject *)this;
       System_Collections_Generic_List_object___Remove(
         (System_Collections_Generic_List_object__o *)v2->fields.thumbnailPathList,
         (Il2CppObject *)this,
-        (const MethodInfo_378B0AC *)Method_System_Collections_Generic_List_string__Remove__);
+        (const MethodInfo_3799CE4 *)Method_System_Collections_Generic_List_string__Remove__);
       this = (CGThumbnailListViewManager_o *)v2->fields.unloadTargetPathList;
       if ( !this )
         goto LABEL_28;
       System_Collections_Generic_List_object___Remove(
         (System_Collections_Generic_List_object__o *)this,
         v8,
-        (const MethodInfo_378B0AC *)Method_System_Collections_Generic_List_string__Remove__);
+        (const MethodInfo_3799CE4 *)Method_System_Collections_Generic_List_string__Remove__);
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
       AssetStorage = AssetManager__getAssetStorage((System_String_o *)v8, 0);
@@ -1284,14 +1274,14 @@ LABEL_5:
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)this,
             v8,
-            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+            *(const MethodInfo_37987BC **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
         }
         else
         {
           v15 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
           LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
           *(_QWORD *)(v15 + 32) = v8;
-          sub_1C2D434((CGThumbnailListItem_o *)(v15 + 32), (int32_t)v8, v10, v11);
+          sub_1C32BC4((CGThumbnailListItem_o *)(v15 + 32), (int32_t)v8, v10, v11);
         }
         this = (CGThumbnailListViewManager_o *)v2->fields.unloadTargetPathList;
         if ( !this )
@@ -1307,14 +1297,14 @@ LABEL_5:
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)this,
             v8,
-            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+            *(const MethodInfo_37987BC **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
         }
         else
         {
           v21 = v18 + 8 * v20;
           LODWORD(this->fields.m_CancellationTokenSource) = v20 + 1;
           *(_QWORD *)(v21 + 32) = v8;
-          sub_1C2D434((CGThumbnailListItem_o *)(v21 + 32), (int32_t)v8, v16, v17);
+          sub_1C32BC4((CGThumbnailListItem_o *)(v21 + 32), (int32_t)v8, v16, v17);
         }
         thumbnailPathList = v2->fields.thumbnailPathList;
         ++v4;
@@ -1330,62 +1320,61 @@ LABEL_5:
 void CGThumbnailListViewManager__UnloadTextureAsset(CGThumbnailListViewManager_o *this, const MethodInfo *method)
 {
   System_Object_array *Instance; // x0
-  __int64 v4; // x1
+  AssetManager_o *v4; // x20
   AssetManager_o *v5; // x20
-  AssetManager_o *v6; // x20
   struct System_Collections_Generic_List_string__o *thumbnailPathList; // x8
   int32_t size; // w2
-  int v9; // w9
+  int v8; // w9
   struct System_Collections_Generic_List_string__o *unloadTargetPathList; // x8
-  int32_t v11; // w2
-  int v12; // w9
+  int32_t v10; // w2
+  int v11; // w9
 
-  if ( (byte_4C222B4 & 1) == 0 )
+  if ( (byte_4C32983 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C222B4 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4C32983 = 1;
   }
-  Instance = (System_Object_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = (System_Object_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  if ( !this->fields.thumbnailPathList )
+    goto LABEL_14;
+  v4 = (AssetManager_o *)Instance;
+  Instance = System_Collections_Generic_List_object___ToArray(
+               (System_Collections_Generic_List_object__o *)this->fields.thumbnailPathList,
+               (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_string__ToArray__);
+  if ( !v4 )
+    goto LABEL_14;
+  AssetManager__CancelAndReleaseDownloadAssetStorages(v4, (System_String_array *)Instance, 0);
+  Instance = (System_Object_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !this->fields.thumbnailPathList )
     goto LABEL_14;
   v5 = (AssetManager_o *)Instance;
   Instance = System_Collections_Generic_List_object___ToArray(
                (System_Collections_Generic_List_object__o *)this->fields.thumbnailPathList,
-               (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_string__ToArray__);
+               (const MethodInfo_379A314 *)Method_System_Collections_Generic_List_string__ToArray__);
   if ( !v5 )
     goto LABEL_14;
-  AssetManager__CancelAndReleaseDownloadAssetStorages(v5, (System_String_array *)Instance, 0);
-  Instance = (System_Object_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-  if ( !this->fields.thumbnailPathList )
-    goto LABEL_14;
-  v6 = (AssetManager_o *)Instance;
-  Instance = System_Collections_Generic_List_object___ToArray(
-               (System_Collections_Generic_List_object__o *)this->fields.thumbnailPathList,
-               (const MethodInfo_378B6DC *)Method_System_Collections_Generic_List_string__ToArray__);
-  if ( !v6 )
-    goto LABEL_14;
-  AssetManager__ReleaseAssetStorageAll(v6, (System_String_array *)Instance, 0);
+  AssetManager__ReleaseAssetStorageAll(v5, (System_String_array *)Instance, 0);
   thumbnailPathList = this->fields.thumbnailPathList;
   if ( !thumbnailPathList )
     goto LABEL_14;
   size = thumbnailPathList->fields._size;
-  v9 = thumbnailPathList->fields._version + 1;
+  v8 = thumbnailPathList->fields._version + 1;
   thumbnailPathList->fields._size = 0;
-  thumbnailPathList->fields._version = v9;
+  thumbnailPathList->fields._version = v8;
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)thumbnailPathList->fields._items, 0, size, 0);
   unloadTargetPathList = this->fields.unloadTargetPathList;
   if ( !unloadTargetPathList )
 LABEL_14:
-    sub_1C2D6EC(Instance, v4);
-  v11 = unloadTargetPathList->fields._size;
-  v12 = unloadTargetPathList->fields._version + 1;
+    sub_1C32E7C(Instance);
+  v10 = unloadTargetPathList->fields._size;
+  v11 = unloadTargetPathList->fields._version + 1;
   unloadTargetPathList->fields._size = 0;
-  unloadTargetPathList->fields._version = v12;
-  if ( v11 >= 1 )
-    System_Array__Clear((System_Array_o *)unloadTargetPathList->fields._items, 0, v11, 0);
+  unloadTargetPathList->fields._version = v11;
+  if ( v10 >= 1 )
+    System_Array__Clear((System_Array_o *)unloadTargetPathList->fields._items, 0, v10, 0);
 }
 
 
@@ -1403,10 +1392,10 @@ void CGThumbnailListViewManager__add_callbackFunc(
   CGThumbnailListViewManager_CallbackFunc_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C222A7 & 1) == 0 )
+  if ( (byte_4C32976 & 1) == 0 )
   {
-    sub_1C2D490(&CGThumbnailListViewManager_CallbackFunc_TypeInfo);
-    byte_4C222A7 = 1;
+    sub_1C32C20(&CGThumbnailListViewManager_CallbackFunc_TypeInfo);
+    byte_4C32976 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1418,13 +1407,13 @@ void CGThumbnailListViewManager__add_callbackFunc(
       if ( (CGThumbnailListViewManager_CallbackFunc_c *)v7->klass != CGThumbnailListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1C676E8(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1C6CE78(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (CGThumbnailListViewManager_o *)sub_1C2D9AC(v7);
+  v10 = (CGThumbnailListViewManager_o *)sub_1C3313C(v7);
   CGThumbnailListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -1446,17 +1435,17 @@ System_Collections_Generic_List_int__o *CGThumbnailListViewManager__get_GalleryI
   struct CGThumbnailListViewManager___c_StaticFields *v13; // x0
   System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
 
-  if ( (byte_4C222A5 & 1) == 0 )
+  if ( (byte_4C32974 & 1) == 0 )
   {
-    sub_1C2D490(&System_Converter_ListViewItem__CGThumbnailListItem__TypeInfo);
-    sub_1C2D490(&Method_System_Linq_Enumerable_Select_CGThumbnailListItem__int___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_ToList_int___);
-    sub_1C2D490(&System_Func_CGThumbnailListItem__int__TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_ListViewItem__ConvertAll_CGThumbnailListItem___);
-    sub_1C2D490(&Method_CGThumbnailListViewManager___c__get_GalleryIdList_b__14_0__);
-    sub_1C2D490(&Method_CGThumbnailListViewManager___c__get_GalleryIdList_b__14_1__);
-    sub_1C2D490(&CGThumbnailListViewManager___c_TypeInfo);
-    byte_4C222A5 = 1;
+    sub_1C32C20(&System_Converter_ListViewItem__CGThumbnailListItem__TypeInfo);
+    sub_1C32C20(&Method_System_Linq_Enumerable_Select_CGThumbnailListItem__int___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_ToList_int___);
+    sub_1C32C20(&System_Func_CGThumbnailListItem__int__TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__ConvertAll_CGThumbnailListItem___);
+    sub_1C32C20(&Method_CGThumbnailListViewManager___c__get_GalleryIdList_b__14_0__);
+    sub_1C32C20(&Method_CGThumbnailListViewManager___c__get_GalleryIdList_b__14_1__);
+    sub_1C32C20(&CGThumbnailListViewManager___c_TypeInfo);
+    byte_4C32974 = 1;
   }
   v3 = CGThumbnailListViewManager___c_TypeInfo;
   itemList = this->fields.itemList;
@@ -1474,7 +1463,7 @@ System_Collections_Generic_List_int__o *CGThumbnailListViewManager__get_GalleryI
       v3 = CGThumbnailListViewManager___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__14_0 = (System_Converter_TInput__TOutput__o *)sub_1C2D6DC(System_Converter_ListViewItem__CGThumbnailListItem__TypeInfo);
+    _9__14_0 = (System_Converter_TInput__TOutput__o *)sub_1C32E6C(System_Converter_ListViewItem__CGThumbnailListItem__TypeInfo);
     System_Converter_object__object____ctor(
       _9__14_0,
       v6,
@@ -1482,14 +1471,14 @@ System_Collections_Generic_List_int__o *CGThumbnailListViewManager__get_GalleryI
       0);
     static_fields = CGThumbnailListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__14_0 = (struct System_Converter_ListViewItem__CGThumbnailListItem__o *)_9__14_0;
-    v3 = (CGThumbnailListViewManager___c_c *)sub_1C2D434(&static_fields->__9__14_0);
+    v3 = (CGThumbnailListViewManager___c_c *)sub_1C32BC4(&static_fields->__9__14_0, _9__14_0);
   }
   if ( !itemList )
-    sub_1C2D6EC(v3, method);
+    sub_1C32E7C(v3);
   v8 = System_Collections_Generic_List_object___ConvertAll_object_(
          (System_Collections_Generic_List_object__o *)itemList,
          (System_Converter_T__TOutput__o *)_9__14_0,
-         (const MethodInfo_2FF5F70 *)Method_System_Collections_Generic_List_ListViewItem__ConvertAll_CGThumbnailListItem___);
+         (const MethodInfo_3004A10 *)Method_System_Collections_Generic_List_ListViewItem__ConvertAll_CGThumbnailListItem___);
   v9 = CGThumbnailListViewManager___c_TypeInfo;
   v10 = (System_Collections_Generic_IEnumerable_TSource__o *)v8;
   if ( !CGThumbnailListViewManager___c_TypeInfo->_2.cctor_finished )
@@ -1506,7 +1495,7 @@ System_Collections_Generic_List_int__o *CGThumbnailListViewManager__get_GalleryI
       v9 = CGThumbnailListViewManager___c_TypeInfo;
     }
     v12 = (Il2CppObject *)v9->static_fields->__9;
-    _9__14_1 = (System_Func_object__int__o *)sub_1C2D6DC(System_Func_CGThumbnailListItem__int__TypeInfo);
+    _9__14_1 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_CGThumbnailListItem__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__14_1,
       v12,
@@ -1514,15 +1503,15 @@ System_Collections_Generic_List_int__o *CGThumbnailListViewManager__get_GalleryI
       0);
     v13 = CGThumbnailListViewManager___c_TypeInfo->static_fields;
     v13->__9__14_1 = (struct System_Func_CGThumbnailListItem__int__o *)_9__14_1;
-    sub_1C2D434(&v13->__9__14_1);
+    sub_1C32BC4(&v13->__9__14_1, _9__14_1);
   }
   v14 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                v10,
                                                                (System_Func_TSource__TResult__o *)_9__14_1,
-                                                               (const MethodInfo_3104740 *)Method_System_Linq_Enumerable_Select_CGThumbnailListItem__int___);
+                                                               (const MethodInfo_31131E0 *)Method_System_Linq_Enumerable_Select_CGThumbnailListItem__int___);
   return (System_Collections_Generic_List_int__o *)System_Linq_Enumerable__ToList_int_(
                                                      v14,
-                                                     (const MethodInfo_3112A1C *)Method_System_Linq_Enumerable_ToList_int___);
+                                                     (const MethodInfo_31214BC *)Method_System_Linq_Enumerable_ToList_int___);
 }
 
 
@@ -1531,91 +1520,89 @@ System_Collections_Generic_List_CGThumbnailObject__o *CGThumbnailListViewManager
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x19
-  __int64 v4; // x1
   struct System_Collections_Generic_List_GameObject__o *objectList; // x0
   Il2CppObject *current; // x20
-  _BOOL8 v7; // x0
-  __int64 v8; // x1
+  _BOOL8 v6; // x0
   Il2CppObject *Component_object; // x0
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  Il2CppObject *v12; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  Il2CppObject *v10; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v14; // x9
+  _QWORD *v12; // x9
   __int64 size; // x10
-  Il2CppClass **v16; // x0
-  System_Collections_Generic_List_Enumerator_object__o v18; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+20h] [xbp-60h] BYREF
+  Il2CppClass **v14; // x0
+  System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C222A9 & 1) == 0 )
+  if ( (byte_4C32978 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C2D490(&Method_UnityEngine_GameObject_GetComponent_CGThumbnailObject___);
-    sub_1C2D490(&Method_System_Collections_Generic_List_CGThumbnailObject__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_CGThumbnailObject___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_CGThumbnailObject__TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C222A9 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C32C20(&Method_UnityEngine_GameObject_GetComponent_CGThumbnailObject___);
+    sub_1C32C20(&Method_System_Collections_Generic_List_CGThumbnailObject__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_CGThumbnailObject___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_CGThumbnailObject__TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C32978 = 1;
   }
-  memset(&v19, 0, sizeof(v19));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_CGThumbnailObject__TypeInfo);
+  memset(&v17, 0, sizeof(v17));
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_CGThumbnailObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_CGThumbnailObject___ctor__);
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_CGThumbnailObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C2D6EC(0, v4);
+    sub_1C32E7C(0);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v18,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v16,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-  v19 = v18;
+    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+  v17 = v16;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v19,
-            (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            &v17,
+            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
-    current = v19.fields._current;
+    current = v17.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0);
-    if ( v7 )
+    v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)current, 0, 0);
+    if ( v6 )
     {
       if ( !current )
-        sub_1C2D6EC(v7, v8);
+        sub_1C32E7C(v6);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_3125ED0 *)Method_UnityEngine_GameObject_GetComponent_CGThumbnailObject___);
-      v12 = Component_object;
+                           (const MethodInfo_3134970 *)Method_UnityEngine_GameObject_GetComponent_CGThumbnailObject___);
+      v10 = Component_object;
       if ( !v3 )
-        sub_1C2D6EC(Component_object, Component_object);
+        sub_1C32E7C(Component_object);
       items = v3->fields._items;
-      v14 = Method_System_Collections_Generic_List_CGThumbnailObject__Add__;
+      v12 = Method_System_Collections_Generic_List_CGThumbnailObject__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C2D6EC(Component_object, Component_object);
+        sub_1C32E7C(Component_object);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_3789B84 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+          *(const MethodInfo_37987BC **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
       }
       else
       {
-        v16 = &items->obj.klass + size;
+        v14 = &items->obj.klass + size;
         v3->fields._size = size + 1;
-        v16[4] = (Il2CppClass *)v12;
-        sub_1C2D434((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v12, v10, v11);
+        v14[4] = (Il2CppClass *)v10;
+        sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v10, v8, v9);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v19,
-    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    &v17,
+    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_CGThumbnailObject__o *)v3;
 }
 
@@ -1637,17 +1624,17 @@ System_Collections_Generic_List_int__o *CGThumbnailListViewManager__get_SortGall
   struct CGThumbnailListViewManager___c_StaticFields *v13; // x0
   System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
 
-  if ( (byte_4C222A6 & 1) == 0 )
+  if ( (byte_4C32975 & 1) == 0 )
   {
-    sub_1C2D490(&System_Converter_ListViewItem__CGThumbnailListItem__TypeInfo);
-    sub_1C2D490(&Method_System_Linq_Enumerable_Select_CGThumbnailListItem__int___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_ToList_int___);
-    sub_1C2D490(&System_Func_CGThumbnailListItem__int__TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_ListViewItem__ConvertAll_CGThumbnailListItem___);
-    sub_1C2D490(&Method_CGThumbnailListViewManager___c__get_SortGalleryIdList_b__16_0__);
-    sub_1C2D490(&Method_CGThumbnailListViewManager___c__get_SortGalleryIdList_b__16_1__);
-    sub_1C2D490(&CGThumbnailListViewManager___c_TypeInfo);
-    byte_4C222A6 = 1;
+    sub_1C32C20(&System_Converter_ListViewItem__CGThumbnailListItem__TypeInfo);
+    sub_1C32C20(&Method_System_Linq_Enumerable_Select_CGThumbnailListItem__int___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_ToList_int___);
+    sub_1C32C20(&System_Func_CGThumbnailListItem__int__TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_ListViewItem__ConvertAll_CGThumbnailListItem___);
+    sub_1C32C20(&Method_CGThumbnailListViewManager___c__get_SortGalleryIdList_b__16_0__);
+    sub_1C32C20(&Method_CGThumbnailListViewManager___c__get_SortGalleryIdList_b__16_1__);
+    sub_1C32C20(&CGThumbnailListViewManager___c_TypeInfo);
+    byte_4C32975 = 1;
   }
   v3 = CGThumbnailListViewManager___c_TypeInfo;
   itemSortList = this->fields.itemSortList;
@@ -1665,7 +1652,7 @@ System_Collections_Generic_List_int__o *CGThumbnailListViewManager__get_SortGall
       v3 = CGThumbnailListViewManager___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__16_0 = (System_Converter_TInput__TOutput__o *)sub_1C2D6DC(System_Converter_ListViewItem__CGThumbnailListItem__TypeInfo);
+    _9__16_0 = (System_Converter_TInput__TOutput__o *)sub_1C32E6C(System_Converter_ListViewItem__CGThumbnailListItem__TypeInfo);
     System_Converter_object__object____ctor(
       _9__16_0,
       v6,
@@ -1673,14 +1660,14 @@ System_Collections_Generic_List_int__o *CGThumbnailListViewManager__get_SortGall
       0);
     static_fields = CGThumbnailListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__16_0 = (struct System_Converter_ListViewItem__CGThumbnailListItem__o *)_9__16_0;
-    v3 = (CGThumbnailListViewManager___c_c *)sub_1C2D434(&static_fields->__9__16_0);
+    v3 = (CGThumbnailListViewManager___c_c *)sub_1C32BC4(&static_fields->__9__16_0, _9__16_0);
   }
   if ( !itemSortList )
-    sub_1C2D6EC(v3, method);
+    sub_1C32E7C(v3);
   v8 = System_Collections_Generic_List_object___ConvertAll_object_(
          (System_Collections_Generic_List_object__o *)itemSortList,
          (System_Converter_T__TOutput__o *)_9__16_0,
-         (const MethodInfo_2FF5F70 *)Method_System_Collections_Generic_List_ListViewItem__ConvertAll_CGThumbnailListItem___);
+         (const MethodInfo_3004A10 *)Method_System_Collections_Generic_List_ListViewItem__ConvertAll_CGThumbnailListItem___);
   v9 = CGThumbnailListViewManager___c_TypeInfo;
   v10 = (System_Collections_Generic_IEnumerable_TSource__o *)v8;
   if ( !CGThumbnailListViewManager___c_TypeInfo->_2.cctor_finished )
@@ -1697,7 +1684,7 @@ System_Collections_Generic_List_int__o *CGThumbnailListViewManager__get_SortGall
       v9 = CGThumbnailListViewManager___c_TypeInfo;
     }
     v12 = (Il2CppObject *)v9->static_fields->__9;
-    _9__16_1 = (System_Func_object__int__o *)sub_1C2D6DC(System_Func_CGThumbnailListItem__int__TypeInfo);
+    _9__16_1 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_CGThumbnailListItem__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__16_1,
       v12,
@@ -1705,15 +1692,15 @@ System_Collections_Generic_List_int__o *CGThumbnailListViewManager__get_SortGall
       0);
     v13 = CGThumbnailListViewManager___c_TypeInfo->static_fields;
     v13->__9__16_1 = (struct System_Func_CGThumbnailListItem__int__o *)_9__16_1;
-    sub_1C2D434(&v13->__9__16_1);
+    sub_1C32BC4(&v13->__9__16_1, _9__16_1);
   }
   v14 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                v10,
                                                                (System_Func_TSource__TResult__o *)_9__16_1,
-                                                               (const MethodInfo_3104740 *)Method_System_Linq_Enumerable_Select_CGThumbnailListItem__int___);
+                                                               (const MethodInfo_31131E0 *)Method_System_Linq_Enumerable_Select_CGThumbnailListItem__int___);
   return (System_Collections_Generic_List_int__o *)System_Linq_Enumerable__ToList_int_(
                                                      v14,
-                                                     (const MethodInfo_3112A1C *)Method_System_Linq_Enumerable_ToList_int___);
+                                                     (const MethodInfo_31214BC *)Method_System_Linq_Enumerable_ToList_int___);
 }
 
 
@@ -1730,10 +1717,10 @@ void CGThumbnailListViewManager__remove_callbackFunc(
   CGThumbnailListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C222A8 & 1) == 0 )
+  if ( (byte_4C32977 & 1) == 0 )
   {
-    sub_1C2D490(&CGThumbnailListViewManager_CallbackFunc_TypeInfo);
-    byte_4C222A8 = 1;
+    sub_1C32C20(&CGThumbnailListViewManager_CallbackFunc_TypeInfo);
+    byte_4C32977 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1745,13 +1732,13 @@ void CGThumbnailListViewManager__remove_callbackFunc(
       if ( (CGThumbnailListViewManager_CallbackFunc_c *)v7->klass != CGThumbnailListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1C676E8(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1C6CE78(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (CGThumbnailListViewManager_o *)sub_1C2D9AC(v7);
+  v10 = (CGThumbnailListViewManager_o *)sub_1C3313C(v7);
   CGThumbnailListViewManager__get_ObjectList(v10, v11);
 }
 
@@ -1771,15 +1758,15 @@ void CGThumbnailListViewManager_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C2D434(&this->fields.m_target);
+  sub_1C32BC4(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C2D550(method) & 1) == 0 )
+  if ( (sub_1C32CE0(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C2D708(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C2D5B8(v10, 0);
+      v10 = sub_1C32E98(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C32D48(v10, 0);
     }
     goto LABEL_5;
   }
@@ -1791,9 +1778,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A6A760;
+  this->fields.invoke_impl = (intptr_t)sub_1A6FE88;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A6A718;
+  this->fields.extra_arg = (intptr_t)sub_1A6FE40;
 }
 
 
@@ -1804,18 +1791,21 @@ System_IAsyncResult_o *CGThumbnailListViewManager_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
+  __int64 v5; // x5
+  __int64 v6; // x6
+  __int64 v7; // x7
+  _QWORD v12[2]; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v13; // [xsp+1Ch] [xbp-34h] BYREF
 
-  v10 = thumbnailIndex;
-  if ( (byte_4C222B7 & 1) == 0 )
+  v13 = thumbnailIndex;
+  if ( (byte_4C32986 & 1) == 0 )
   {
-    sub_1C2D490(&int_TypeInfo);
-    byte_4C222B7 = 1;
+    sub_1C32C20(&int_TypeInfo);
+    byte_4C32986 = 1;
   }
-  v9[1] = 0;
-  v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10, callback, object, method);
-  return (System_IAsyncResult_o *)sub_1C2D444(this, v9, callback, object);
+  v12[1] = 0;
+  v12[0] = j_il2cpp_value_box_0(int_TypeInfo, &v13, callback, object, method, v5, v6, v7);
+  return (System_IAsyncResult_o *)sub_1C32BD4(this, v12, callback, object);
 }
 
 
@@ -1824,7 +1814,7 @@ void CGThumbnailListViewManager_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C2D448(result, 0, method);
+  sub_1C32BD8(result, 0, method);
 }
 
 
@@ -1846,15 +1836,15 @@ void CGThumbnailListViewManager___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C222B8 & 1) == 0 )
+  if ( (byte_4C32987 & 1) == 0 )
   {
-    sub_1C2D490(&CGThumbnailListViewManager___c_TypeInfo);
-    byte_4C222B8 = 1;
+    sub_1C32C20(&CGThumbnailListViewManager___c_TypeInfo);
+    byte_4C32987 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C2D6DC(CGThumbnailListViewManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C32E6C(CGThumbnailListViewManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   CGThumbnailListViewManager___c_TypeInfo->static_fields->__9 = (struct CGThumbnailListViewManager___c_o *)v1;
-  sub_1C2D434((CGThumbnailListItem_o *)CGThumbnailListViewManager___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)CGThumbnailListViewManager___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -1870,7 +1860,7 @@ int32_t CGThumbnailListViewManager___c___CreateList_b__26_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return x->fields.priority;
 }
 
@@ -1882,10 +1872,10 @@ CGThumbnailListItem_o *CGThumbnailListViewManager___c___JumpItemForID_b__37_0(
 {
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C222BB & 1) == 0 )
+  if ( (byte_4C3298A & 1) == 0 )
   {
-    sub_1C2D490(&CGThumbnailListItem_TypeInfo);
-    byte_4C222BB = 1;
+    sub_1C32C20(&CGThumbnailListItem_TypeInfo);
+    byte_4C3298A = 1;
   }
   if ( !x )
     return 0;
@@ -1905,10 +1895,10 @@ CGThumbnailListItem_o *CGThumbnailListViewManager___c___get_GalleryIdList_b__14_
 {
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C222B9 & 1) == 0 )
+  if ( (byte_4C32988 & 1) == 0 )
   {
-    sub_1C2D490(&CGThumbnailListItem_TypeInfo);
-    byte_4C222B9 = 1;
+    sub_1C32C20(&CGThumbnailListItem_TypeInfo);
+    byte_4C32988 = 1;
   }
   if ( !x )
     return 0;
@@ -1927,7 +1917,7 @@ int32_t CGThumbnailListViewManager___c___get_GalleryIdList_b__14_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return x->fields._Id_k__BackingField;
 }
 
@@ -1939,10 +1929,10 @@ CGThumbnailListItem_o *CGThumbnailListViewManager___c___get_SortGalleryIdList_b_
 {
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C222BA & 1) == 0 )
+  if ( (byte_4C32989 & 1) == 0 )
   {
-    sub_1C2D490(&CGThumbnailListItem_TypeInfo);
-    byte_4C222BA = 1;
+    sub_1C32C20(&CGThumbnailListItem_TypeInfo);
+    byte_4C32989 = 1;
   }
   if ( !x )
     return 0;
@@ -1961,7 +1951,7 @@ int32_t CGThumbnailListViewManager___c___get_SortGalleryIdList_b__16_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return x->fields._Id_k__BackingField;
 }
 
@@ -1983,10 +1973,10 @@ bool CGThumbnailListViewManager___c__DisplayClass26_0___CreateList_b__1(
   int32_t galleryId; // w19
 
   v4 = this;
-  if ( (byte_4C222BC & 1) == 0 )
+  if ( (byte_4C3298B & 1) == 0 )
   {
-    this = (CGThumbnailListViewManager___c__DisplayClass26_0_o *)sub_1C2D490(&Method_System_Collections_Generic_List_GalleryEntity__get_Item__);
-    byte_4C222BC = 1;
+    this = (CGThumbnailListViewManager___c__DisplayClass26_0_o *)sub_1C32C20(&Method_System_Collections_Generic_List_GalleryEntity__get_Item__);
+    byte_4C3298B = 1;
   }
   if ( !x
     || (this = (CGThumbnailListViewManager___c__DisplayClass26_0_o *)v4->fields.thumbnailEntityList) == 0
@@ -1994,9 +1984,9 @@ bool CGThumbnailListViewManager___c__DisplayClass26_0___CreateList_b__1(
         (this = (CGThumbnailListViewManager___c__DisplayClass26_0_o *)System_Collections_Generic_List_object___get_Item(
                                                                         (System_Collections_Generic_List_object__o *)this,
                                                                         v4->fields.i,
-                                                                        (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_GalleryEntity__get_Item__)) == 0) )
+                                                                        (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_GalleryEntity__get_Item__)) == 0) )
   {
-    sub_1C2D6EC(this, x);
+    sub_1C32E7C(this);
   }
   return galleryId == LODWORD(this->fields.thumbnailEntityList);
 }
@@ -2016,6 +2006,6 @@ bool CGThumbnailListViewManager___c__DisplayClass37_0___JumpItemForID_b__1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return x->fields._Id_k__BackingField == this->fields.galleryId;
 }

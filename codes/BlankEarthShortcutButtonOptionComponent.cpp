@@ -1,9 +1,9 @@
 void BlankEarthShortcutButtonOptionComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C23B6D & 1) == 0 )
+  if ( (byte_4C3423E & 1) == 0 )
   {
-    sub_1C2D490(&BlankEarthShortcutButtonOptionComponent_TypeInfo);
-    byte_4C23B6D = 1;
+    sub_1C32C20(&BlankEarthShortcutButtonOptionComponent_TypeInfo);
+    byte_4C3423E = 1;
   }
   BlankEarthShortcutButtonOptionComponent_TypeInfo->static_fields->OPTION_COMPONENT_UPDATE_INTERVAL = 60;
 }
@@ -29,11 +29,11 @@ bool BlankEarthShortcutButtonOptionComponent__CheckUpdateText(
   int64_t v8; // x20
   int64_t OPTION_COMPONENT_UPDATE_INTERVAL; // x22
 
-  if ( (byte_4C23B6C & 1) == 0 )
+  if ( (byte_4C3423D & 1) == 0 )
   {
-    sub_1C2D490(&BlankEarthShortcutButtonOptionComponent_TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C23B6C = 1;
+    sub_1C32C20(&BlankEarthShortcutButtonOptionComponent_TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C3423D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -66,24 +66,23 @@ void BlankEarthShortcutButtonOptionComponent__SetUpOptionInfo(
         const MethodInfo *method)
 {
   int64_t Time; // x0
-  __int64 v8; // x1
   UILabel_o *behindLabel; // x22
-  System_String_o *v10; // x23
-  int64_t v11; // x21
+  System_String_o *v9; // x23
+  int64_t v10; // x21
   int64_t messageClosedAt; // x20
   Il2CppObject *RestTime2; // x0
-  struct UILabel_o *v14; // x8
-  __int128 v15; // kr00_16 OVERLAPPED
-  UnityEngine_Color_o v16; // [xsp+0h] [xbp-40h] BYREF
+  struct UILabel_o *v13; // x8
+  __int128 v14; // kr00_16 OVERLAPPED
+  UnityEngine_Color_o v15; // [xsp+0h] [xbp-40h] BYREF
 
-  if ( (byte_4C23B6B & 1) == 0 )
+  if ( (byte_4C3423C & 1) == 0 )
   {
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C23B6B = 1;
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C3423C = 1;
   }
-  *(_QWORD *)&v16.fields.r = 0;
-  *(_QWORD *)&v16.fields.b = 0;
+  *(_QWORD *)&v15.fields.r = 0;
+  *(_QWORD *)&v15.fields.b = 0;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0);
@@ -107,41 +106,41 @@ void BlankEarthShortcutButtonOptionComponent__SetUpOptionInfo(
     goto LABEL_24;
   }
   behindLabel = this->fields.behindLabel;
-  v10 = *(System_String_o **)(Time + 16);
-  v11 = Time;
+  v9 = *(System_String_o **)(Time + 16);
+  v10 = Time;
   if ( *(_DWORD *)(Time + 40) == 1 )
   {
     messageClosedAt = ent->fields.messageClosedAt;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     RestTime2 = (Il2CppObject *)LocalizationManager__GetRestTime2(messageClosedAt, -1, 0);
-    Time = (int64_t)System_String__Format(v10, RestTime2, 0);
+    Time = (int64_t)System_String__Format(v9, RestTime2, 0);
     if ( !behindLabel )
       goto LABEL_24;
-    v10 = (System_String_o *)Time;
+    v9 = (System_String_o *)Time;
   }
   else if ( !behindLabel )
   {
     goto LABEL_24;
   }
-  UILabel__set_text(behindLabel, v10, 0);
-  Time = UnityEngine_ColorUtility__TryParseHtmlString(*(System_String_o **)(v11 + 24), &v16, 0);
-  v14 = this->fields.behindLabel;
+  UILabel__set_text(behindLabel, v9, 0);
+  Time = UnityEngine_ColorUtility__TryParseHtmlString(*(System_String_o **)(v10 + 24), &v15, 0);
+  v13 = this->fields.behindLabel;
   if ( (Time & 1) == 0 )
   {
-    if ( v14 )
+    if ( v13 )
     {
-      *(_QWORD *)&v15 = __PAIR64__(1.0, 1.0);
-      *((_QWORD *)&v15 + 1) = __PAIR64__(1.0, 1.0);
+      *(_QWORD *)&v14 = __PAIR64__(1.0, 1.0);
+      *((_QWORD *)&v14 + 1) = __PAIR64__(1.0, 1.0);
       goto LABEL_22;
     }
 LABEL_24:
-    sub_1C2D6EC(Time, v8);
+    sub_1C32E7C(Time);
   }
-  if ( !v14 )
+  if ( !v13 )
     goto LABEL_24;
-  *(_QWORD *)&v15 = *(_QWORD *)&v16.fields.b;
-  *((_QWORD *)&v15 + 1) = *(_QWORD *)&v16.fields.r;
+  *(_QWORD *)&v14 = *(_QWORD *)&v15.fields.b;
+  *((_QWORD *)&v14 + 1) = *(_QWORD *)&v15.fields.r;
 LABEL_22:
-  UIWidget__set_color((UIWidget_o *)this->fields.behindLabel, *(UnityEngine_Color_o *)((char *)&v15 + 8), 0);
+  UIWidget__set_color((UIWidget_o *)this->fields.behindLabel, *(UnityEngine_Color_o *)((char *)&v14 + 8), 0);
 }

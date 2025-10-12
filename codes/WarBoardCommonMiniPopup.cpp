@@ -1,26 +1,25 @@
 void WarBoardCommonMiniPopup___ctor(WarBoardCommonMiniPopup_o *this, const MethodInfo *method)
 {
   __int64 v3; // x0
-  __int64 v4; // x1
-  __int64 v5; // x2
-  const MethodInfo *v6; // x3
-  int v7; // w8
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
+  int v6; // w8
 
-  if ( (byte_4C24FC8 & 1) == 0 )
+  if ( (byte_4C3569D & 1) == 0 )
   {
-    sub_1C2D490(&WarBoardCommonMiniPopup_LineLayout___TypeInfo);
-    sub_1C2D490(&WarBoardInfoPopupBase_TypeInfo);
-    byte_4C24FC8 = 1;
+    sub_1C32C20(&WarBoardCommonMiniPopup_LineLayout___TypeInfo);
+    sub_1C32C20(&WarBoardInfoPopupBase_TypeInfo);
+    byte_4C3569D = 1;
   }
-  v3 = sub_1C2D538(WarBoardCommonMiniPopup_LineLayout___TypeInfo, 2);
+  v3 = sub_1C32CC8(WarBoardCommonMiniPopup_LineLayout___TypeInfo, 2);
   if ( !v3 )
-    sub_1C2D6EC(0, v4);
-  v7 = *(_DWORD *)(v3 + 24);
-  if ( !v7 || (*(_QWORD *)(v3 + 32) = 0xC1B0000042080000LL, v7 == 1) )
-    sub_1C2D6F4(v3, v3, v5);
+    sub_1C32E7C(0);
+  v6 = *(_DWORD *)(v3 + 24);
+  if ( !v6 || (*(_QWORD *)(v3 + 32) = 0xC1B0000042080000LL, v6 == 1) )
+    sub_1C32E84(v3);
   *(_QWORD *)(v3 + 40) = 0xC208000041E80000LL;
   this->fields.lineLayouts = (struct WarBoardCommonMiniPopup_LineLayout_array *)v3;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.lineLayouts, v3, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.lineLayouts, v3, v4, v5);
   if ( !WarBoardInfoPopupBase_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarBoardInfoPopupBase_TypeInfo);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -41,14 +40,14 @@ void WarBoardCommonMiniPopup__ClosePopup(
   System_Action_c *v11; // x1
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C24FC7 & 1) == 0 )
+  if ( (byte_4C3569C & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    byte_4C24FC7 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    byte_4C3569C = 1;
   }
   this->fields.hideCompleteCallback = 0;
   p_hideCompleteCallback = &this->fields.hideCompleteCallback;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.hideCompleteCallback, 0, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.hideCompleteCallback, 0, (int32_t)method, v3);
   v7 = System_Delegate__Combine(
          (System_Delegate_o *)this->fields.hideCompleteCallback,
          (System_Delegate_o *)hideCallback,
@@ -60,11 +59,11 @@ void WarBoardCommonMiniPopup__ClosePopup(
   if ( (System_Action_c *)v7->klass != System_Action_TypeInfo
     || (*p_hideCompleteCallback = (struct System_Action_o *)v7, (System_Action_c *)v7->klass != v11) )
   {
-    sub_1C2D9AC(v7);
+    sub_1C3313C(v7);
 LABEL_7:
     *p_hideCompleteCallback = (struct System_Action_o *)v10;
   }
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.hideCompleteCallback, (int32_t)v10, v8, v9);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.hideCompleteCallback, (int32_t)v10, v8, v9);
   WarBoardInfoPopupBase__Hide((WarBoardInfoPopupBase_o *)this, v12);
 }
 
@@ -81,13 +80,13 @@ int32_t WarBoardCommonMiniPopup__GetLineCount(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C24FC3 & 1) == 0 )
+  if ( (byte_4C35698 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Linq_Enumerable_Count_char___);
-    sub_1C2D490(&System_Func_char__bool__TypeInfo);
-    sub_1C2D490(&Method_WarBoardCommonMiniPopup___c__GetLineCount_b__11_0__);
-    sub_1C2D490(&WarBoardCommonMiniPopup___c_TypeInfo);
-    byte_4C24FC3 = 1;
+    sub_1C32C20(&Method_System_Linq_Enumerable_Count_char___);
+    sub_1C32C20(&System_Func_char__bool__TypeInfo);
+    sub_1C32C20(&Method_WarBoardCommonMiniPopup___c__GetLineCount_b__11_0__);
+    sub_1C32C20(&WarBoardCommonMiniPopup___c_TypeInfo);
+    byte_4C35698 = 1;
   }
   v4 = WarBoardCommonMiniPopup___c_TypeInfo;
   if ( !WarBoardCommonMiniPopup___c_TypeInfo->_2.cctor_finished )
@@ -104,16 +103,16 @@ int32_t WarBoardCommonMiniPopup__GetLineCount(
       v4 = WarBoardCommonMiniPopup___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v4->static_fields->__9;
-    _9__11_0 = (System_Func_char__bool__o *)sub_1C2D6DC(System_Func_char__bool__TypeInfo);
+    _9__11_0 = (System_Func_char__bool__o *)sub_1C32E6C(System_Func_char__bool__TypeInfo);
     System_Func_char__bool____ctor(_9__11_0, v6, Method_WarBoardCommonMiniPopup___c__GetLineCount_b__11_0__, 0);
     static_fields = WarBoardCommonMiniPopup___c_TypeInfo->static_fields;
     static_fields->__9__11_0 = _9__11_0;
-    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v8, v9);
+    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v8, v9);
   }
   return System_Linq_Enumerable__Count_char_(
            (System_Collections_Generic_IEnumerable_TSource__o *)message,
            (System_Func_TSource__bool__o *)_9__11_0,
-           (const MethodInfo_30EF83C *)Method_System_Linq_Enumerable_Count_char___)
+           (const MethodInfo_30FE2DC *)Method_System_Linq_Enumerable_Count_char___)
        + 1;
 }
 
@@ -124,55 +123,52 @@ WarBoardCommonMiniPopup_LineLayout_o WarBoardCommonMiniPopup__GetLineLayout(
         const MethodInfo *method)
 {
   __int64 LineCount; // x0
-  __int64 v5; // x1
-  __int64 v6; // x2
   struct WarBoardCommonMiniPopup_LineLayout_array *lineLayouts; // x8
   il2cpp_array_size_t max_length; // x9
-  unsigned int v9; // w10
-  __int64 v10; // x9
-  float *v11; // x8
-  float v12; // s0
-  float v13; // s1
+  unsigned int v7; // w10
+  __int64 v8; // x9
+  float *v9; // x8
+  float v10; // s0
+  float v11; // s1
   WarBoardCommonMiniPopup_LineLayout_o result; // 0:s0.4,4:s1.4
 
   LineCount = WarBoardCommonMiniPopup__GetLineCount(this, message, method);
   lineLayouts = this->fields.lineLayouts;
   if ( !lineLayouts )
-    sub_1C2D6EC(LineCount, v5);
+    sub_1C32E7C(LineCount);
   max_length = lineLayouts->max_length;
-  v9 = LineCount - 1;
+  v7 = LineCount - 1;
   if ( (int)LineCount - 1 >= (int)max_length )
   {
     if ( (_DWORD)max_length )
     {
-      v10 = (int)max_length - 1;
+      v8 = (int)max_length - 1;
       goto LABEL_7;
     }
 LABEL_9:
-    sub_1C2D6F4(LineCount, v5, v6);
+    sub_1C32E84(LineCount);
   }
-  if ( v9 >= (unsigned int)max_length )
+  if ( v7 >= (unsigned int)max_length )
     goto LABEL_9;
-  v10 = (int)v9;
+  v8 = (int)v7;
 LABEL_7:
-  v11 = (float *)(&lineLayouts->obj.klass + v10);
-  v12 = v11[8];
-  v13 = v11[9];
-  result.fields.ButtonRootPosY = v13;
-  result.fields.MessagePosY = v12;
+  v9 = (float *)(&lineLayouts->obj.klass + v8);
+  v10 = v9[8];
+  v11 = v9[9];
+  result.fields.ButtonRootPosY = v11;
+  result.fields.MessagePosY = v10;
   return result;
 }
 
 
 void WarBoardCommonMiniPopup__Initialize(WarBoardCommonMiniPopup_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x1
   UISkinSprite_o *windowBase; // x0
 
   WarBoardInfoPopupBase__Initialize((WarBoardInfoPopupBase_o *)this, method);
   windowBase = this->fields.windowBase;
   if ( !windowBase )
-    sub_1C2D6EC(0, v3);
+    sub_1C32E7C(0);
   UISkinSprite__setupSprite(windowBase, 0, 0);
 }
 
@@ -183,10 +179,10 @@ void WarBoardCommonMiniPopup__OnClickClose(WarBoardCommonMiniPopup_o *this, cons
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_bool__o *clickCallback; // x8
 
-  if ( (byte_4C24FC6 & 1) == 0 )
+  if ( (byte_4C3569B & 1) == 0 )
   {
-    sub_1C2D490(&Method_WarBoardCommonMiniPopup_OnClickClose__);
-    byte_4C24FC6 = 1;
+    sub_1C32C20(&Method_WarBoardCommonMiniPopup_OnClickClose__);
+    byte_4C3569B = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, method)
     && !this->fields._isShowAnimating_k__BackingField
@@ -194,8 +190,8 @@ void WarBoardCommonMiniPopup__OnClickClose(WarBoardCommonMiniPopup_o *this, cons
   {
     v3 = Method_WarBoardCommonMiniPopup_OnClickClose__;
     if ( (*((_BYTE *)Method_WarBoardCommonMiniPopup_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_WarBoardCommonMiniPopup_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_WarBoardCommonMiniPopup_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
@@ -213,10 +209,10 @@ void WarBoardCommonMiniPopup__OnClickNo(WarBoardCommonMiniPopup_o *this, const M
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_bool__o *clickCallback; // x8
 
-  if ( (byte_4C24FC5 & 1) == 0 )
+  if ( (byte_4C3569A & 1) == 0 )
   {
-    sub_1C2D490(&Method_WarBoardCommonMiniPopup_OnClickNo__);
-    byte_4C24FC5 = 1;
+    sub_1C32C20(&Method_WarBoardCommonMiniPopup_OnClickNo__);
+    byte_4C3569A = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, method)
     && !this->fields._isShowAnimating_k__BackingField
@@ -224,8 +220,8 @@ void WarBoardCommonMiniPopup__OnClickNo(WarBoardCommonMiniPopup_o *this, const M
   {
     v3 = Method_WarBoardCommonMiniPopup_OnClickNo__;
     if ( (*((_BYTE *)Method_WarBoardCommonMiniPopup_OnClickNo__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_WarBoardCommonMiniPopup_OnClickNo__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_WarBoardCommonMiniPopup_OnClickNo__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
@@ -243,10 +239,10 @@ void WarBoardCommonMiniPopup__OnClickYes(WarBoardCommonMiniPopup_o *this, const 
   System_Reflection_MethodBase_o *v4; // x0
   struct System_Action_bool__o *clickCallback; // x8
 
-  if ( (byte_4C24FC4 & 1) == 0 )
+  if ( (byte_4C35699 & 1) == 0 )
   {
-    sub_1C2D490(&Method_WarBoardCommonMiniPopup_OnClickYes__);
-    byte_4C24FC4 = 1;
+    sub_1C32C20(&Method_WarBoardCommonMiniPopup_OnClickYes__);
+    byte_4C35699 = 1;
   }
   if ( WarBoardInfoPopupBase__get_isShown((WarBoardInfoPopupBase_o *)this, method)
     && !this->fields._isShowAnimating_k__BackingField
@@ -254,8 +250,8 @@ void WarBoardCommonMiniPopup__OnClickYes(WarBoardCommonMiniPopup_o *this, const 
   {
     v3 = Method_WarBoardCommonMiniPopup_OnClickYes__;
     if ( (*((_BYTE *)Method_WarBoardCommonMiniPopup_OnClickYes__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C2D4A8(Method_WarBoardCommonMiniPopup_OnClickYes__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C2D474(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C32C38(Method_WarBoardCommonMiniPopup_OnClickYes__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C32C04(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     clickCallback = this->fields.clickCallback;
     if ( clickCallback )
@@ -276,21 +272,20 @@ void WarBoardCommonMiniPopup__OpenConfirmPopup(
         const MethodInfo *method)
 {
   const MethodInfo *v10; // x2
-  WarBoardCommonMiniPopup_LineLayout_o v11; // x1
   WarBoardCommonMiniPopup_LineLayout_o LineLayout; // kr00_8
   UnityEngine_GameObject_o *noticeButtonRoot; // x0
   float x; // s10
   float z; // s11
-  float v16; // s9
-  float v17; // s10
-  const MethodInfo *v18; // x1
+  float v15; // s9
+  float v16; // s10
+  const MethodInfo *v17; // x1
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v21; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.clickCallback = clickCallback;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields.clickCallback,
     (int32_t)clickCallback,
     (int32_t)message,
@@ -327,37 +322,37 @@ void WarBoardCommonMiniPopup__OpenConfirmPopup(
                                                    0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v20.fields.x = x;
-  v20.fields.y = LineLayout.fields.MessagePosY;
-  v20.fields.z = z;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v20, 0);
+  v19.fields.x = x;
+  v19.fields.y = LineLayout.fields.MessagePosY;
+  v19.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v19, 0);
   noticeButtonRoot = this->fields.cofirmButtonRoot;
   if ( !noticeButtonRoot )
     goto LABEL_15;
   noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v21 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, 0);
+  v20 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, 0);
   noticeButtonRoot = this->fields.cofirmButtonRoot;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v16 = v21.fields.x;
-  v17 = v21.fields.z;
+  v15 = v20.fields.x;
+  v16 = v20.fields.z;
   noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0);
   if ( !noticeButtonRoot
-    || (v22.fields.x = v16,
-        v22.fields.y = LineLayout.fields.ButtonRootPosY,
-        v22.fields.z = v17,
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v22, 0),
+    || (v21.fields.x = v15,
+        v21.fields.y = LineLayout.fields.ButtonRootPosY,
+        v21.fields.z = v16,
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v21, 0),
         (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.yesButtonLabel) == 0)
     || (UILabel__set_text((UILabel_o *)noticeButtonRoot, yesButton, 0),
         (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.noButtonLabel) == 0) )
   {
 LABEL_15:
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C2D6EC)(noticeButtonRoot, v11);
+    sub_1C32E7C(noticeButtonRoot);
   }
   UILabel__set_text((UILabel_o *)noticeButtonRoot, noButton, 0);
-  WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v18);
+  WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v17);
 }
 
 
@@ -369,21 +364,20 @@ void WarBoardCommonMiniPopup__OpenNoticePopup(
         const MethodInfo *method)
 {
   const MethodInfo *v8; // x2
-  WarBoardCommonMiniPopup_LineLayout_o v9; // x1
   WarBoardCommonMiniPopup_LineLayout_o LineLayout; // kr00_8
   UnityEngine_GameObject_o *noticeButtonRoot; // x0
   float x; // s10
   float z; // s11
-  float v14; // s9
-  float v15; // s10
-  const MethodInfo *v16; // x1
+  float v13; // s9
+  float v14; // s10
+  const MethodInfo *v15; // x1
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.clickCallback = clickCallback;
-  sub_1C2D434(
+  sub_1C32BC4(
     (CGThumbnailListItem_o *)&this->fields.clickCallback,
     (int32_t)clickCallback,
     (int32_t)message,
@@ -420,10 +414,10 @@ void WarBoardCommonMiniPopup__OpenNoticePopup(
                                                    0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v18.fields.x = x;
-  v18.fields.y = LineLayout.fields.MessagePosY;
-  v18.fields.z = z;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v18, 0);
+  v17.fields.x = x;
+  v17.fields.y = LineLayout.fields.MessagePosY;
+  v17.fields.z = z;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v17, 0);
   noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.messgeLabel;
   if ( !noticeButtonRoot )
     goto LABEL_15;
@@ -434,25 +428,25 @@ void WarBoardCommonMiniPopup__OpenNoticePopup(
   noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0);
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v19 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, 0);
+  v18 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, 0);
   noticeButtonRoot = this->fields.noticeButtonRoot;
   if ( !noticeButtonRoot )
     goto LABEL_15;
-  v14 = v19.fields.x;
-  v15 = v19.fields.z;
+  v13 = v18.fields.x;
+  v14 = v18.fields.z;
   noticeButtonRoot = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(noticeButtonRoot, 0);
   if ( !noticeButtonRoot
-    || (v20.fields.x = v14,
-        v20.fields.y = LineLayout.fields.ButtonRootPosY,
-        v20.fields.z = v15,
-        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v20, 0),
+    || (v19.fields.x = v13,
+        v19.fields.y = LineLayout.fields.ButtonRootPosY,
+        v19.fields.z = v14,
+        UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)noticeButtonRoot, v19, 0),
         (noticeButtonRoot = (UnityEngine_GameObject_o *)this->fields.closeButtonLabel) == 0) )
   {
 LABEL_15:
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C2D6EC)(noticeButtonRoot, v9);
+    sub_1C32E7C(noticeButtonRoot);
   }
   UILabel__set_text((UILabel_o *)noticeButtonRoot, closeButton, 0);
-  WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v16);
+  WarBoardInfoPopupBase__Show((WarBoardInfoPopupBase_o *)this, v15);
 }
 
 
@@ -462,15 +456,15 @@ void WarBoardCommonMiniPopup___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C24FC9 & 1) == 0 )
+  if ( (byte_4C3569E & 1) == 0 )
   {
-    sub_1C2D490(&WarBoardCommonMiniPopup___c_TypeInfo);
-    byte_4C24FC9 = 1;
+    sub_1C32C20(&WarBoardCommonMiniPopup___c_TypeInfo);
+    byte_4C3569E = 1;
   }
-  v1 = (Il2CppObject *)sub_1C2D6DC(WarBoardCommonMiniPopup___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C32E6C(WarBoardCommonMiniPopup___c_TypeInfo);
   System_Object___ctor(v1, 0);
   WarBoardCommonMiniPopup___c_TypeInfo->static_fields->__9 = (struct WarBoardCommonMiniPopup___c_o *)v1;
-  sub_1C2D434((CGThumbnailListItem_o *)WarBoardCommonMiniPopup___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)WarBoardCommonMiniPopup___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 

@@ -22,6 +22,9 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
 {
   UserServantEntity_o *userSvtEntity; // x1
   ServantFaceIconComponent_o *servantFacceIcon; // x0
+  UserServantCollectionEntity_o *userSvtCollectionEntity; // x1
+  ServantLeaderInfo_o *servantLeaderInfo; // x1
+  EquipTargetInfo_o *equipTargetInfo; // x1
   UIExtrusionLabel_o *levelLabel; // x21
   UILabel_o *maxLevelLabel; // x21
   UILabel_o *costLabel; // x21
@@ -31,31 +34,31 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
   UIIconLabel_o *hpIconLabel; // x21
   int32_t Hp; // w22
   UILabel_o *lateExpLabel; // x21
-  int32_t v18; // w22
+  int32_t v21; // w22
   ServantStatusLimitCountGauge_o *limitCountGauge; // x21
   struct ServantEntity_o *svtEntity; // x8
   UnityEngine_Object_o *baseButton; // x21
   Il2CppObject *Master_object; // x21
   UILabel_o *genderTypeImageExplanationLabel; // x20
-  UILabel_o *v24; // x19
+  UILabel_o *v27; // x19
   __int64 barExp; // [xsp+20h] [xbp-40h] BYREF
   int32_t exp; // [xsp+28h] [xbp-38h] BYREF
   int32_t Level; // [xsp+2Ch] [xbp-34h] BYREF
   Il2CppObject *entity; // [xsp+38h] [xbp-28h] BYREF
 
-  if ( (byte_4C23FC7 & 1) == 0 )
+  if ( (byte_4C345E0 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_21393/*"maleImageId"*/);
-    sub_1C2D490(&StringLiteral_10843/*"QUEST_CLEAR_SWITCH_IMAGE_EXPLANATION"*/);
-    sub_1C2D490(&StringLiteral_1/*""*/);
-    sub_1C2D490(&StringLiteral_20274/*"imagePartsGroupId"*/);
-    sub_1C2D490(&StringLiteral_6926/*"GENDER_TYPE_IMAGE_EXPLANATION"*/);
-    byte_4C23FC7 = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_21406/*"maleImageId"*/);
+    sub_1C32C20(&StringLiteral_10849/*"QUEST_CLEAR_SWITCH_IMAGE_EXPLANATION"*/);
+    sub_1C32C20(&StringLiteral_1/*""*/);
+    sub_1C32C20(&StringLiteral_20286/*"imagePartsGroupId"*/);
+    sub_1C32C20(&StringLiteral_6931/*"GENDER_TYPE_IMAGE_EXPLANATION"*/);
+    byte_4C345E0 = 1;
   }
   entity = 0;
   exp = 0;
@@ -69,43 +72,37 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
       servantFacceIcon = this->fields.servantFacceIcon;
       if ( !servantFacceIcon )
         goto LABEL_55;
-      ServantFaceIconComponent__Set_40783748(servantFacceIcon, userSvtEntity, 0, 0, 0);
+      ServantFaceIconComponent__Set_40905852(servantFacceIcon, userSvtEntity, 0, 0, 0);
     }
     else
     {
-      userSvtEntity = (UserServantEntity_o *)item->fields.userSvtCollectionEntity;
-      if ( userSvtEntity )
+      userSvtCollectionEntity = item->fields.userSvtCollectionEntity;
+      if ( userSvtCollectionEntity )
       {
         servantFacceIcon = this->fields.servantFacceIcon;
         if ( !servantFacceIcon )
           goto LABEL_55;
-        ServantFaceIconComponent__Set_40785360(
-          servantFacceIcon,
-          (UserServantCollectionEntity_o *)userSvtEntity,
-          0,
-          0,
-          0,
-          0);
+        ServantFaceIconComponent__Set_40907464(servantFacceIcon, userSvtCollectionEntity, 0, 0, 0, 0);
       }
       else
       {
-        userSvtEntity = (UserServantEntity_o *)item->fields.servantLeaderInfo;
-        if ( userSvtEntity )
+        servantLeaderInfo = item->fields.servantLeaderInfo;
+        if ( servantLeaderInfo )
         {
           servantFacceIcon = this->fields.servantFacceIcon;
           if ( !servantFacceIcon )
             goto LABEL_55;
-          ServantFaceIconComponent__Set_40787620(servantFacceIcon, (ServantLeaderInfo_o *)userSvtEntity, 0, 0, 0, 0, 0);
+          ServantFaceIconComponent__Set_40909724(servantFacceIcon, servantLeaderInfo, 0, 0, 0, 0, 0);
         }
         else
         {
-          userSvtEntity = (UserServantEntity_o *)item->fields.equipTargetInfo;
+          equipTargetInfo = item->fields.equipTargetInfo;
           servantFacceIcon = this->fields.servantFacceIcon;
-          if ( userSvtEntity )
+          if ( equipTargetInfo )
           {
             if ( !servantFacceIcon )
               goto LABEL_55;
-            ServantFaceIconComponent__Set_40789832(servantFacceIcon, (EquipTargetInfo_o *)userSvtEntity, 0, 0, 0);
+            ServantFaceIconComponent__Set_40911936(servantFacceIcon, equipTargetInfo, 0, 0, 0);
           }
           else
           {
@@ -140,13 +137,13 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
           servantFacceIcon = (ServantFaceIconComponent_o *)ServantStatusListViewItem__get_AdjustAtk(item, 0);
           if ( attackIconLabel )
           {
-            UIIconLabel__Set_40889008(attackIconLabel, 5, Atk, (int32_t)servantFacceIcon, 0, 0, 0, 0, 0, 0, 0);
+            UIIconLabel__Set_41010828(attackIconLabel, 5, Atk, (int32_t)servantFacceIcon, 0, 0, 0, 0, 0, 0, 0);
             hpIconLabel = this->fields.hpIconLabel;
             Hp = ServantStatusListViewItem__get_Hp(item, 0);
             servantFacceIcon = (ServantFaceIconComponent_o *)ServantStatusListViewItem__get_AdjustHp(item, 0);
             if ( hpIconLabel )
             {
-              UIIconLabel__Set_40889008(hpIconLabel, 3, Hp, (int32_t)servantFacceIcon, 0, 0, 0, 0, 0, 0, 0);
+              UIIconLabel__Set_41010828(hpIconLabel, 3, Hp, (int32_t)servantFacceIcon, 0, 0, 0, 0, 0, 0, 0);
               servantFacceIcon = (ServantFaceIconComponent_o *)ServantStatusListViewItem__GetExpInfo(
                                                                  item,
                                                                  &exp,
@@ -166,10 +163,10 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
                     SHIDWORD(barExp) > 0,
                     0);
                   lateExpLabel = this->fields.lateExpLabel;
-                  v18 = HIDWORD(barExp);
+                  v21 = HIDWORD(barExp);
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                  servantFacceIcon = (ServantFaceIconComponent_o *)LocalizationManager__GetNumberFormat(v18, 0);
+                  servantFacceIcon = (ServantFaceIconComponent_o *)LocalizationManager__GetNumberFormat(v21, 0);
                   if ( !lateExpLabel )
                     goto LABEL_55;
                   UILabel__set_text(lateExpLabel, (System_String_o *)servantFacceIcon, 0);
@@ -202,7 +199,7 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
                     UILabel__set_text((UILabel_o *)servantFacceIcon, (System_String_o *)StringLiteral_1/*""*/, 0);
                     if ( !DataManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                    Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ServantMaster___);
+                    Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantMaster___);
                     servantFacceIcon = (ServantFaceIconComponent_o *)ServantStatusListViewItem__get_SvtId(item, 0);
                     if ( Master_object )
                     {
@@ -210,14 +207,14 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
                                                                          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                                                          &entity,
                                                                          (int32_t)servantFacceIcon,
-                                                                         (const MethodInfo_3387DE4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                                                         (const MethodInfo_3396884 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
                       if ( ((unsigned __int8)servantFacceIcon & 1) == 0 )
                         return;
                       if ( entity )
                       {
                         servantFacceIcon = (ServantFaceIconComponent_o *)EntityScriptUtil__ScriptHasKey(
                                                                            (System_Collections_Generic_Dictionary_string__object__o *)entity[12].klass,
-                                                                           (System_String_o *)StringLiteral_21393/*"maleImageId"*/,
+                                                                           (System_String_o *)StringLiteral_21406/*"maleImageId"*/,
                                                                            0);
                         if ( ((unsigned __int8)servantFacceIcon & 1) != 0 )
                         {
@@ -225,7 +222,7 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
                           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                           servantFacceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get(
-                                                                             (System_String_o *)StringLiteral_6926/*"GENDER_TYPE_IMAGE_EXPLANATION"*/,
+                                                                             (System_String_o *)StringLiteral_6931/*"GENDER_TYPE_IMAGE_EXPLANATION"*/,
                                                                              0);
                           if ( !genderTypeImageExplanationLabel )
                             goto LABEL_55;
@@ -235,18 +232,18 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
                         {
                           if ( !EntityScriptUtil__ScriptHasKey(
                                   (System_Collections_Generic_Dictionary_string__object__o *)entity[12].klass,
-                                  (System_String_o *)StringLiteral_20274/*"imagePartsGroupId"*/,
+                                  (System_String_o *)StringLiteral_20286/*"imagePartsGroupId"*/,
                                   0) )
                             return;
-                          v24 = this->fields.genderTypeImageExplanationLabel;
+                          v27 = this->fields.genderTypeImageExplanationLabel;
                           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                           servantFacceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get(
-                                                                             (System_String_o *)StringLiteral_10843/*"QUEST_CLEAR_SWITCH_IMAGE_EXPLANATION"*/,
+                                                                             (System_String_o *)StringLiteral_10849/*"QUEST_CLEAR_SWITCH_IMAGE_EXPLANATION"*/,
                                                                              0);
-                          if ( v24 )
+                          if ( v27 )
                           {
-                            UILabel__set_text(v24, (System_String_o *)servantFacceIcon, 0);
+                            UILabel__set_text(v27, (System_String_o *)servantFacceIcon, 0);
                             return;
                           }
                         }
@@ -261,6 +258,6 @@ void ServantStatusListViewItemDrawEquipMain__SetItem(
       }
     }
 LABEL_55:
-    sub_1C2D6EC(servantFacceIcon, userSvtEntity);
+    sub_1C32E7C(servantFacceIcon);
   }
 }

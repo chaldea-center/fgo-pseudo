@@ -14,11 +14,11 @@ void WarBoardConditionalJumpTask___ctor(
 
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)conditionCheck);
   this->fields.conditionCheck = conditionCheck;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.conditionCheck, (int32_t)conditionCheck, v9, v10);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.conditionCheck, (int32_t)conditionCheck, v9, v10);
   this->fields.trueCase = trueCase;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.trueCase, (int32_t)trueCase, v11, v12);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.trueCase, (int32_t)trueCase, v11, v12);
   this->fields.falseCase = falseCase;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.falseCase, (int32_t)falseCase, v13, v14);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.falseCase, (int32_t)falseCase, v13, v14);
 }
 
 
@@ -30,16 +30,16 @@ System_Collections_IEnumerator_o *WarBoardConditionalJumpTask__Execute(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C24F6E & 1) == 0 )
+  if ( (byte_4C35643 & 1) == 0 )
   {
-    sub_1C2D490(&WarBoardConditionalJumpTask__Execute_d__6_TypeInfo);
-    byte_4C24F6E = 1;
+    sub_1C32C20(&WarBoardConditionalJumpTask__Execute_d__6_TypeInfo);
+    byte_4C35643 = 1;
   }
-  v3 = sub_1C2D6DC(WarBoardConditionalJumpTask__Execute_d__6_TypeInfo);
+  v3 = sub_1C32E6C(WarBoardConditionalJumpTask__Execute_d__6_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C2D434((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C32BC4((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -84,7 +84,7 @@ void WarBoardConditionalJumpTask__OnStart(WarBoardConditionalJumpTask_o *this, c
                                               StartCallback->fields.method);
   conditionCheck = v3->fields.conditionCheck;
   if ( !conditionCheck )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   v5 = ((__int64 (__fastcall *)(intptr_t, intptr_t))conditionCheck->fields.invoke_impl)(
          conditionCheck->fields.method_code,
          conditionCheck->fields.method);
@@ -94,7 +94,7 @@ void WarBoardConditionalJumpTask__OnStart(WarBoardConditionalJumpTask_o *this, c
   v9 = *(struct WarBoardTaskBase_o **)((char *)&v3->klass + v8);
   v3->fields.runningTask = v9;
   p_runningTask = (CGThumbnailListItem_o *)&v3->fields.runningTask;
-  sub_1C2D434(p_runningTask, (int32_t)v9, v6, v7);
+  sub_1C32BC4(p_runningTask, (int32_t)v9, v6, v7);
   if ( p_runningTask->klass )
     (*((void (__fastcall **)(CGThumbnailListItem_c *, _QWORD))p_runningTask->klass->_1.image + 49))(
       p_runningTask->klass,
@@ -139,7 +139,7 @@ bool WarBoardConditionalJumpTask__Execute_d__6__MoveNext(
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1C2D6EC(this, method);
+      sub_1C32E7C(this);
     runningTask = _4__this->fields.runningTask;
     if ( runningTask )
     {
@@ -148,7 +148,7 @@ bool WarBoardConditionalJumpTask__Execute_d__6__MoveNext(
                              runningTask->klass->vtable._4_Execute.method);
       this->fields.__2__current = v6;
       p__2__current = &this->fields.__2__current;
-      sub_1C2D434((CGThumbnailListItem_o *)p__2__current, (int32_t)v6, v8, v9);
+      sub_1C32BC4((CGThumbnailListItem_o *)p__2__current, (int32_t)v6, v8, v9);
       LOBYTE(runningTask) = 1;
       *((_DWORD *)p__2__current - 2) = 1;
     }
@@ -173,11 +173,11 @@ void __noreturn WarBoardConditionalJumpTask__Execute_d__6__System_Collections_IE
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C2D4A4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C2D6DC(v2);
+  v2 = sub_1C32C34(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C32E6C(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C2D4A4(&Method_WarBoardConditionalJumpTask__Execute_d__6_System_Collections_IEnumerator_Reset__);
-  sub_1C2D5B8(v3, v4);
+  v4 = sub_1C32C34(&Method_WarBoardConditionalJumpTask__Execute_d__6_System_Collections_IEnumerator_Reset__);
+  sub_1C32D48(v3, v4);
 }
 
 

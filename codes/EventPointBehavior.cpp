@@ -12,5 +12,5 @@ void EventPointBehavior___ctor(EventPointBehavior_o *this, const MethodInfo *met
   *(_QWORD *)&v2[-1].fields._Type_k__BackingField = 0;
   v2[-1].fields.viewObject = 0;
   LODWORD(v2[-1].fields._ThumbnailSpritePath_k__BackingField) = 0;
-  sub_1C2D434(v2, 0, v3, v4);
+  sub_1C32BC4(v2, 0, v3, v4);
 }

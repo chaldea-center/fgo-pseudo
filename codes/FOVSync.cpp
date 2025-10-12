@@ -9,20 +9,19 @@ void FOVSync__LateUpdate(FOVSync_o *this, const MethodInfo *method)
   Il2CppObject *Component_object; // x0
   UnityEngine_Object_o *observeCamera; // x21
   UnityEngine_Camera_o *v5; // x20
-  __int64 v6; // x1
-  UnityEngine_Camera_o *v7; // x0
+  UnityEngine_Camera_o *v6; // x0
   float fieldOfView; // s0
-  float v9; // s0
+  float v8; // s0
 
-  if ( (byte_4C266EF & 1) == 0 )
+  if ( (byte_4C36DC7 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C266EF = 1;
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C36DC7 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Camera___);
   observeCamera = (UnityEngine_Object_o *)this->fields.observeCamera;
   v5 = (UnityEngine_Camera_o *)Component_object;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -33,23 +32,23 @@ void FOVSync__LateUpdate(FOVSync_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v5, 0) )
     {
-      v7 = this->fields.observeCamera;
-      if ( !v7 )
+      v6 = this->fields.observeCamera;
+      if ( !v6 )
         goto LABEL_15;
-      fieldOfView = UnityEngine_Camera__get_fieldOfView(v7, 0);
+      fieldOfView = UnityEngine_Camera__get_fieldOfView(v6, 0);
       if ( !v5 )
         goto LABEL_15;
       if ( fieldOfView != UnityEngine_Camera__get_fieldOfView(v5, 0) )
       {
-        v7 = this->fields.observeCamera;
-        if ( v7 )
+        v6 = this->fields.observeCamera;
+        if ( v6 )
         {
-          v9 = UnityEngine_Camera__get_fieldOfView(v7, 0);
-          UnityEngine_Camera__set_fieldOfView(v5, v9, 0);
+          v8 = UnityEngine_Camera__get_fieldOfView(v6, 0);
+          UnityEngine_Camera__set_fieldOfView(v5, v8, 0);
           return;
         }
 LABEL_15:
-        sub_1C2D6EC(v7, v6);
+        sub_1C32E7C(v6);
       }
     }
   }

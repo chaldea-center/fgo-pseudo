@@ -6,17 +6,17 @@ void UpdateViewIntervalBuffActionData___ctor(
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C29876 & 1) == 0 )
+  if ( (byte_4C39F84 & 1) == 0 )
   {
-    sub_1C2D490(&BattleActionData_TypeInfo);
-    byte_4C29876 = 1;
+    sub_1C32C20(&BattleActionData_TypeInfo);
+    byte_4C39F84 = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
   BattleActionData___ctor((BattleActionData_o *)this, (const MethodInfo *)actData);
   this->fields.state = 7;
   this->fields.targetActionData = actData;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields.targetActionData, (int32_t)actData, v5, v6);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.targetActionData, (int32_t)actData, v5, v6);
 }
 
 

@@ -23,26 +23,25 @@ bool NumSpriteComponent__TryGetSpriteByIndex(
         const MethodInfo *method)
 {
   __int64 v7; // x0
-  __int64 v8; // x1
-  __int64 v9; // x2
-  const MethodInfo *v10; // x3
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
   struct UISprite_array *numberSp; // x8
   int32_t max_length; // w21
-  UISprite_o *v13; // x1
+  UISprite_o *v12; // x1
 
   *sprite = 0;
-  sub_1C2D434((CGThumbnailListItem_o *)sprite, 0, index, method);
+  sub_1C32BC4((CGThumbnailListItem_o *)sprite, 0, index, method);
   numberSp = this->fields.numberSp;
   if ( !numberSp )
-    sub_1C2D6EC(v7, v8);
+    sub_1C32E7C(v7);
   max_length = numberSp->max_length;
   if ( max_length > index )
   {
     if ( max_length <= (unsigned int)index )
-      sub_1C2D6F4(v7, v8, v9);
-    v13 = numberSp->m_Items[index];
-    *sprite = v13;
-    sub_1C2D434((CGThumbnailListItem_o *)sprite, (int32_t)v13, v9, v10);
+      sub_1C32E84(v7);
+    v12 = numberSp->m_Items[index];
+    *sprite = v12;
+    sub_1C32BC4((CGThumbnailListItem_o *)sprite, (int32_t)v12, v8, v9);
   }
   return max_length > index;
 }

@@ -16,57 +16,56 @@ void PhotoStandFigureComponent__GetPhotoTargetFaceList(
         const MethodInfo *method)
 {
   __int64 Master_object; // x0
-  __int64 v6; // x1
   struct ServantPhotoEntity_FaceData_array *FaceList; // x0
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  int32_t v9; // w1
   struct ServantPhotoEntity_FaceData_array **p_FaceList_k__BackingField; // x0
   struct StandFigureBack_o *photoStandFigureBack; // x8
   struct System_Collections_Generic_List_StandFigureCollect__o *standFigureCollectList; // x8
   __int64 size; // x22
-  __int64 v15; // x21
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  __int64 *v18; // x24
-  __int64 v19; // x0
-  __int64 *v20; // x23
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  __int64 v23; // x2
-  __int64 v24; // x10
-  unsigned __int64 v25; // x9
-  unsigned __int64 v26; // x8
-  __int64 v27; // x10
-  __int64 v28; // x11
-  __int64 v29; // x11
-  __int64 v30; // x20
-  const MethodInfo *v31; // x3
-  __int64 v32; // x0
+  __int64 v14; // x21
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  __int64 *v17; // x24
+  __int64 v18; // x0
+  __int64 *v19; // x23
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  __int64 v22; // x10
+  unsigned __int64 v23; // x9
+  unsigned __int64 v24; // x8
+  __int64 v25; // x10
+  __int64 v26; // x11
+  __int64 v27; // x11
+  __int64 v28; // x20
+  int32_t v29; // w2
+  const MethodInfo *v30; // x3
+  __int64 v31; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C22988 & 1) == 0 )
+  if ( (byte_4C33057 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMaster_ServantPhotoMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&Method_DataMasterBase_ServantPhotoMaster__ServantPhotoEntity__long__TryGetEntity__);
-    sub_1C2D490(&ServantPhotoEntity_FaceData___TypeInfo);
-    sub_1C2D490(&ServantPhotoEntity_FaceData_TypeInfo);
-    sub_1C2D490(&int___TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_StandFigureCollect__get_Count__);
-    byte_4C22988 = 1;
+    sub_1C32C20(&Method_DataManager_GetMaster_ServantPhotoMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&Method_DataMasterBase_ServantPhotoMaster__ServantPhotoEntity__long__TryGetEntity__);
+    sub_1C32C20(&ServantPhotoEntity_FaceData___TypeInfo);
+    sub_1C32C20(&ServantPhotoEntity_FaceData_TypeInfo);
+    sub_1C32C20(&int___TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_StandFigureCollect__get_Count__);
+    byte_4C33057 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_ServantPhotoMaster___);
+  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_ServantPhotoMaster___);
   if ( !Master_object )
     goto LABEL_25;
   Master_object = DataMasterBase_object__object__long___TryGetEntity(
                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                     &entity,
                     this->fields._StandFigureImageId_k__BackingField,
-                    (const MethodInfo_338A340 *)Method_DataMasterBase_ServantPhotoMaster__ServantPhotoEntity__long__TryGetEntity__);
+                    (const MethodInfo_3398DE0 *)Method_DataMasterBase_ServantPhotoMaster__ServantPhotoEntity__long__TryGetEntity__);
   if ( (Master_object & 1) == 0 )
   {
     photoStandFigureBack = this->fields.photoStandFigureBack;
@@ -76,63 +75,63 @@ void PhotoStandFigureComponent__GetPhotoTargetFaceList(
       if ( standFigureCollectList )
       {
         size = (unsigned int)standFigureCollectList->fields._size;
-        v15 = sub_1C2D6DC(ServantPhotoEntity_FaceData_TypeInfo);
-        ServantPhotoEntity_FaceData___ctor((ServantPhotoEntity_FaceData_o *)v15, 0);
-        Master_object = sub_1C2D538(int___TypeInfo, (unsigned int)size);
-        if ( v15 )
+        v14 = sub_1C32E6C(ServantPhotoEntity_FaceData_TypeInfo);
+        ServantPhotoEntity_FaceData___ctor((ServantPhotoEntity_FaceData_o *)v14, 0);
+        Master_object = sub_1C32CC8(int___TypeInfo, (unsigned int)size);
+        if ( v14 )
         {
-          *(_QWORD *)(v15 + 16) = Master_object;
-          v18 = (__int64 *)(v15 + 16);
-          sub_1C2D434((CGThumbnailListItem_o *)(v15 + 16), Master_object, v16, v17);
-          v19 = sub_1C2D538(int___TypeInfo, (unsigned int)size);
-          *(_QWORD *)(v15 + 24) = v19;
-          v20 = (__int64 *)(v15 + 24);
-          sub_1C2D434((CGThumbnailListItem_o *)(v15 + 24), v19, v21, v22);
+          *(_QWORD *)(v14 + 16) = Master_object;
+          v17 = (__int64 *)(v14 + 16);
+          sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 16), Master_object, v15, v16);
+          v18 = sub_1C32CC8(int___TypeInfo, (unsigned int)size);
+          *(_QWORD *)(v14 + 24) = v18;
+          v19 = (__int64 *)(v14 + 24);
+          sub_1C32BC4((CGThumbnailListItem_o *)(v14 + 24), v18, v20, v21);
           if ( (int)size < 1 )
           {
 LABEL_19:
-            Master_object = sub_1C2D538(ServantPhotoEntity_FaceData___TypeInfo, 1);
+            Master_object = sub_1C32CC8(ServantPhotoEntity_FaceData___TypeInfo, 1);
             if ( Master_object )
             {
-              v30 = Master_object;
-              Master_object = sub_1C2D5CC(v15, *(_QWORD *)(*(_QWORD *)Master_object + 64LL));
+              v28 = Master_object;
+              Master_object = sub_1C32D5C(v14, *(_QWORD *)(*(_QWORD *)Master_object + 64LL));
               if ( !Master_object )
               {
-                v32 = sub_1C2D710();
-                sub_1C2D5B8(v32, 0);
+                v31 = sub_1C32EA0();
+                sub_1C32D48(v31, 0);
               }
-              if ( *(_DWORD *)(v30 + 24) )
+              if ( *(_DWORD *)(v28 + 24) )
               {
-                *(_QWORD *)(v30 + 32) = v15;
-                sub_1C2D434((CGThumbnailListItem_o *)(v30 + 32), v15, v23, v31);
-                this->fields._FaceList_k__BackingField = (struct ServantPhotoEntity_FaceData_array *)v30;
+                *(_QWORD *)(v28 + 32) = v14;
+                sub_1C32BC4((CGThumbnailListItem_o *)(v28 + 32), v14, v29, v30);
+                this->fields._FaceList_k__BackingField = (struct ServantPhotoEntity_FaceData_array *)v28;
                 p_FaceList_k__BackingField = &this->fields._FaceList_k__BackingField;
-                v10 = v30;
+                v9 = v28;
                 goto LABEL_23;
               }
 LABEL_24:
-              sub_1C2D6F4(Master_object, v6, v23);
+              sub_1C32E84(Master_object);
             }
           }
           else
           {
-            v24 = *v18;
-            if ( *v18 )
+            v22 = *v17;
+            if ( *v17 )
             {
-              v25 = *(unsigned int *)(v24 + 24);
-              v26 = 0;
-              v27 = v24 + 32;
-              while ( v26 < v25 )
+              v23 = *(unsigned int *)(v22 + 24);
+              v24 = 0;
+              v25 = v22 + 32;
+              while ( v24 < v23 )
               {
-                *(_DWORD *)(v27 + 4 * v26) = 0;
-                v28 = *v20;
-                if ( !*v20 )
+                *(_DWORD *)(v25 + 4 * v24) = 0;
+                v26 = *v19;
+                if ( !*v19 )
                   goto LABEL_25;
-                if ( v26 >= *(unsigned int *)(v28 + 24) )
+                if ( v24 >= *(unsigned int *)(v26 + 24) )
                   break;
-                v29 = v28 + 4 * v26++;
-                *(_DWORD *)(v29 + 32) = formId;
-                if ( size == v26 )
+                v27 = v26 + 4 * v24++;
+                *(_DWORD *)(v27 + 32) = formId;
+                if ( size == v24 )
                   goto LABEL_19;
               }
               goto LABEL_24;
@@ -142,17 +141,17 @@ LABEL_24:
       }
     }
 LABEL_25:
-    sub_1C2D6EC(Master_object, v6);
+    sub_1C32E7C(Master_object);
   }
   Master_object = (__int64)entity;
   if ( !entity )
     goto LABEL_25;
   FaceList = ServantPhotoEntity__GetFaceList((ServantPhotoEntity_o *)entity, formId, 0);
   this->fields._FaceList_k__BackingField = FaceList;
-  v10 = (int)FaceList;
+  v9 = (int)FaceList;
   p_FaceList_k__BackingField = &this->fields._FaceList_k__BackingField;
 LABEL_23:
-  sub_1C2D434((CGThumbnailListItem_o *)p_FaceList_k__BackingField, v10, v8, v9);
+  sub_1C32BC4((CGThumbnailListItem_o *)p_FaceList_k__BackingField, v9, v7, v8);
 }
 
 
@@ -170,7 +169,7 @@ void PhotoStandFigureComponent__Init(PhotoStandFigureComponent_o *this, const Me
 
   photoStandFigureBack = this->fields.photoStandFigureBack;
   if ( !photoStandFigureBack )
-    sub_1C2D6EC(0, method);
+    sub_1C32E7C(0);
   StandFigureBack__Init(photoStandFigureBack, 0);
   this->fields._FaceListIndex_k__BackingField = 0;
   this->fields._UserSvtId_k__BackingField = 0;
@@ -187,7 +186,7 @@ void PhotoStandFigureComponent__NextRandomFaceListIndex(PhotoStandFigureComponen
   v3 = this->fields._FaceListIndex_k__BackingField + 1;
   this->fields._FaceListIndex_k__BackingField = v3;
   if ( !FaceList_k__BackingField )
-    sub_1C2D6EC(this, method);
+    sub_1C32E7C(this);
   if ( v3 >= SLODWORD(FaceList_k__BackingField->max_length) )
     this->fields._FaceListIndex_k__BackingField = 0;
 }
@@ -200,96 +199,94 @@ void PhotoStandFigureComponent__PreLoadFormAssets(
 {
   __int64 v5; // x20
   System_Collections_Generic_List_TSource__o *v6; // x0
-  __int64 v7; // x1
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  PhotoStandFigureComponent___c_c *v10; // x0
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  PhotoStandFigureComponent___c_c *v9; // x0
   System_Collections_Generic_IEnumerable_TSource__o *FaceList_k__BackingField; // x21
   System_Func_object__object__o *_9__24_0; // x22
-  Il2CppObject *v13; // x23
+  Il2CppObject *v12; // x23
   struct PhotoStandFigureComponent___c_StaticFields *static_fields; // x0
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v16; // x0
   System_Collections_Generic_IEnumerable_TSource__o *v17; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
   StandFigureBack_o *photoStandFigureBack; // x8
-  System_Collections_Generic_List_int__o *v20; // x19
+  System_Collections_Generic_List_int__o *v19; // x19
   UIStandFigureR_o *SvtStandFigure; // x21
-  System_Action_o *v22; // x22
+  System_Action_o *v21; // x22
 
-  if ( (byte_4C22989 & 1) == 0 )
+  if ( (byte_4C33058 & 1) == 0 )
   {
-    sub_1C2D490(&System_Action_TypeInfo);
-    sub_1C2D490(&Method_System_Linq_Enumerable_Distinct_int___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_SelectMany_ServantPhotoEntity_FaceData__int___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_ToList_int___);
-    sub_1C2D490(&System_Func_ServantPhotoEntity_FaceData__IEnumerable_int___TypeInfo);
-    sub_1C2D490(&Method_PhotoStandFigureComponent___c__PreLoadFormAssets_b__24_0__);
-    sub_1C2D490(&Method_PhotoStandFigureComponent___c__DisplayClass24_0__PreLoadFormAssets_b__1__);
-    sub_1C2D490(&PhotoStandFigureComponent___c__DisplayClass24_0_TypeInfo);
-    sub_1C2D490(&PhotoStandFigureComponent___c_TypeInfo);
-    byte_4C22989 = 1;
+    sub_1C32C20(&System_Action_TypeInfo);
+    sub_1C32C20(&Method_System_Linq_Enumerable_Distinct_int___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_SelectMany_ServantPhotoEntity_FaceData__int___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_ToList_int___);
+    sub_1C32C20(&System_Func_ServantPhotoEntity_FaceData__IEnumerable_int___TypeInfo);
+    sub_1C32C20(&Method_PhotoStandFigureComponent___c__PreLoadFormAssets_b__24_0__);
+    sub_1C32C20(&Method_PhotoStandFigureComponent___c__DisplayClass24_0__PreLoadFormAssets_b__1__);
+    sub_1C32C20(&PhotoStandFigureComponent___c__DisplayClass24_0_TypeInfo);
+    sub_1C32C20(&PhotoStandFigureComponent___c_TypeInfo);
+    byte_4C33058 = 1;
   }
-  v5 = sub_1C2D6DC(PhotoStandFigureComponent___c__DisplayClass24_0_TypeInfo);
+  v5 = sub_1C32E6C(PhotoStandFigureComponent___c__DisplayClass24_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_13;
   *(_QWORD *)(v5 + 16) = callback;
-  sub_1C2D434((CGThumbnailListItem_o *)(v5 + 16), (int32_t)callback, v8, v9);
-  v10 = PhotoStandFigureComponent___c_TypeInfo;
+  sub_1C32BC4((CGThumbnailListItem_o *)(v5 + 16), (int32_t)callback, v7, v8);
+  v9 = PhotoStandFigureComponent___c_TypeInfo;
   FaceList_k__BackingField = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields._FaceList_k__BackingField;
   if ( !PhotoStandFigureComponent___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PhotoStandFigureComponent___c_TypeInfo);
-    v10 = PhotoStandFigureComponent___c_TypeInfo;
+    v9 = PhotoStandFigureComponent___c_TypeInfo;
   }
-  _9__24_0 = (System_Func_object__object__o *)v10->static_fields->__9__24_0;
+  _9__24_0 = (System_Func_object__object__o *)v9->static_fields->__9__24_0;
   if ( !_9__24_0 )
   {
-    if ( !v10->_2.cctor_finished )
+    if ( !v9->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v10);
-      v10 = PhotoStandFigureComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v9);
+      v9 = PhotoStandFigureComponent___c_TypeInfo;
     }
-    v13 = (Il2CppObject *)v10->static_fields->__9;
-    _9__24_0 = (System_Func_object__object__o *)sub_1C2D6DC(System_Func_ServantPhotoEntity_FaceData__IEnumerable_int___TypeInfo);
+    v12 = (Il2CppObject *)v9->static_fields->__9;
+    _9__24_0 = (System_Func_object__object__o *)sub_1C32E6C(System_Func_ServantPhotoEntity_FaceData__IEnumerable_int___TypeInfo);
     System_Func_object__object____ctor(
       _9__24_0,
-      v13,
+      v12,
       Method_PhotoStandFigureComponent___c__PreLoadFormAssets_b__24_0__,
       0);
     static_fields = PhotoStandFigureComponent___c_TypeInfo->static_fields;
     static_fields->__9__24_0 = (struct System_Func_ServantPhotoEntity_FaceData__IEnumerable_int___o *)_9__24_0;
-    sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__24_0, (int32_t)_9__24_0, v15, v16);
+    sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__24_0, (int32_t)_9__24_0, v14, v15);
   }
-  v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__SelectMany_object__int_(
+  v16 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__SelectMany_object__int_(
                                                                FaceList_k__BackingField,
                                                                (System_Func_TSource__IEnumerable_TResult___o *)_9__24_0,
-                                                               (const MethodInfo_3107D9C *)Method_System_Linq_Enumerable_SelectMany_ServantPhotoEntity_FaceData__int___);
-  v18 = System_Linq_Enumerable__Distinct_int_(
-          v17,
-          (const MethodInfo_30F1B3C *)Method_System_Linq_Enumerable_Distinct_int___);
-  v6 = System_Linq_Enumerable__ToList_int_(v18, (const MethodInfo_3112A1C *)Method_System_Linq_Enumerable_ToList_int___);
+                                                               (const MethodInfo_311683C *)Method_System_Linq_Enumerable_SelectMany_ServantPhotoEntity_FaceData__int___);
+  v17 = System_Linq_Enumerable__Distinct_int_(
+          v16,
+          (const MethodInfo_31005DC *)Method_System_Linq_Enumerable_Distinct_int___);
+  v6 = System_Linq_Enumerable__ToList_int_(v17, (const MethodInfo_31214BC *)Method_System_Linq_Enumerable_ToList_int___);
   photoStandFigureBack = this->fields.photoStandFigureBack;
   if ( !photoStandFigureBack
-    || (v20 = (System_Collections_Generic_List_int__o *)v6,
+    || (v19 = (System_Collections_Generic_List_int__o *)v6,
         SvtStandFigure = StandFigureBack__GetSvtStandFigure(photoStandFigureBack, 0, 0),
-        v22 = (System_Action_o *)sub_1C2D6DC(System_Action_TypeInfo),
+        v21 = (System_Action_o *)sub_1C32E6C(System_Action_TypeInfo),
         System_Action___ctor(
-          v22,
+          v21,
           (Il2CppObject *)v5,
           Method_PhotoStandFigureComponent___c__DisplayClass24_0__PreLoadFormAssets_b__1__,
           0),
         !SvtStandFigure) )
   {
 LABEL_13:
-    sub_1C2D6EC(v6, v7);
+    sub_1C32E7C(v6);
   }
-  UIStandFigureR__PreloadFormAssets(SvtStandFigure, v20, v22, 0);
+  UIStandFigureR__PreloadFormAssets(SvtStandFigure, v19, v21, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void PhotoStandFigureComponent__SetFacePhotoServant(
         PhotoStandFigureComponent_o *this,
         bool isNext,
@@ -312,11 +309,11 @@ void PhotoStandFigureComponent__SetFacePhotoServant(
   System_Action_o *v20; // x3
 
   v8 = this;
-  if ( (byte_4C2298A & 1) == 0 )
+  if ( (byte_4C33059 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_StandFigureCollect__get_Count__);
-    this = (PhotoStandFigureComponent_o *)sub_1C2D490(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
-    byte_4C2298A = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_StandFigureCollect__get_Count__);
+    this = (PhotoStandFigureComponent_o *)sub_1C32C20(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+    byte_4C33059 = 1;
   }
   if ( isNext )
   {
@@ -338,7 +335,7 @@ void PhotoStandFigureComponent__SetFacePhotoServant(
       v10 = v8->fields._FaceList_k__BackingField;
       if ( !v10 )
         goto LABEL_30;
-      this = (PhotoStandFigureComponent_o *)UnityEngine_Random__Range_71123924(0, v10->max_length, 0);
+      this = (PhotoStandFigureComponent_o *)UnityEngine_Random__Range_71183860(0, v10->max_length, 0);
       faceListIndex = (int)this;
     }
     else if ( !v8 )
@@ -352,13 +349,13 @@ void PhotoStandFigureComponent__SetFacePhotoServant(
   }
   if ( (unsigned int)faceListIndex >= LODWORD(FaceList_k__BackingField->max_length) )
 LABEL_31:
-    sub_1C2D6F4(this, isNext, callbackFunc);
+    sub_1C32E84(this);
   photoStandFigureBack = v8->fields.photoStandFigureBack;
   if ( !photoStandFigureBack
     || (standFigureCollectList = (System_Collections_Generic_List_object__o *)photoStandFigureBack->fields.standFigureCollectList) == 0 )
   {
 LABEL_30:
-    sub_1C2D6EC(this, isNext);
+    sub_1C32E7C(this);
   }
   size = (unsigned int)standFigureCollectList->fields._size;
   if ( (int)size >= 1 )
@@ -384,7 +381,7 @@ LABEL_30:
         this = (PhotoStandFigureComponent_o *)System_Collections_Generic_List_object___get_Item(
                                                 standFigureCollectList,
                                                 v15,
-                                                (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+                                                (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
         if ( !this )
           break;
         this = (PhotoStandFigureComponent_o *)this->fields.m_CancellationTokenSource;
@@ -394,7 +391,7 @@ LABEL_30:
           v20 = 0;
         else
           v20 = callbackFunc;
-        UIStandFigureR__SetFace_43824080((UIStandFigureR_o *)this, v18, v19, v20, 0.0, 0);
+        UIStandFigureR__SetFace_43959868((UIStandFigureR_o *)this, v18, v19, v20, 0.0, 0);
         if ( size == ++v15 )
           return;
       }
@@ -444,7 +441,7 @@ void PhotoStandFigureComponent__set_FaceList(
   const MethodInfo *v3; // x3
 
   this->fields._FaceList_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields._FaceList_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields._FaceList_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -490,15 +487,15 @@ void PhotoStandFigureComponent___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C2298B & 1) == 0 )
+  if ( (byte_4C3305A & 1) == 0 )
   {
-    sub_1C2D490(&PhotoStandFigureComponent___c_TypeInfo);
-    byte_4C2298B = 1;
+    sub_1C32C20(&PhotoStandFigureComponent___c_TypeInfo);
+    byte_4C3305A = 1;
   }
-  v1 = (Il2CppObject *)sub_1C2D6DC(PhotoStandFigureComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C32E6C(PhotoStandFigureComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   PhotoStandFigureComponent___c_TypeInfo->static_fields->__9 = (struct PhotoStandFigureComponent___c_o *)v1;
-  sub_1C2D434((CGThumbnailListItem_o *)PhotoStandFigureComponent___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)PhotoStandFigureComponent___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -514,7 +511,7 @@ System_Collections_Generic_IEnumerable_int__o *PhotoStandFigureComponent___c___P
         const MethodInfo *method)
 {
   if ( !f )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return (System_Collections_Generic_IEnumerable_int__o *)f->fields.multiForm;
 }
 

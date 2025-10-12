@@ -1,14 +1,14 @@
 void MissionNaviQuestMaster___ctor(MissionNaviQuestMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C277D0 & 1) == 0 )
+  if ( (byte_4C37EC9 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_MissionNaviQuestMaster__MissionNaviQuestEntity__string___ctor__);
-    byte_4C277D0 = 1;
+    sub_1C32C20(&Method_DataMasterBase_MissionNaviQuestMaster__MissionNaviQuestEntity__string___ctor__);
+    byte_4C37EC9 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     504,
-    (const MethodInfo_338A52C *)Method_DataMasterBase_MissionNaviQuestMaster__MissionNaviQuestEntity__string___ctor__);
+    (const MethodInfo_3398FCC *)Method_DataMasterBase_MissionNaviQuestMaster__MissionNaviQuestEntity__string___ctor__);
 }
 
 
@@ -16,14 +16,14 @@ System_Collections_Generic_IEnumerable_MissionNaviQuestEntity__o *MissionNaviQue
         MissionNaviQuestMaster_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C277CE & 1) == 0 )
+  if ( (byte_4C37EC7 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Linq_Enumerable_OfType_MissionNaviQuestEntity___);
-    byte_4C277CE = 1;
+    sub_1C32C20(&Method_System_Linq_Enumerable_OfType_MissionNaviQuestEntity___);
+    byte_4C37EC7 = 1;
   }
   return (System_Collections_Generic_IEnumerable_MissionNaviQuestEntity__o *)System_Linq_Enumerable__OfType_object_(
                                                                                (System_Collections_IEnumerable_o *)this->fields.list,
-                                                                               (const MethodInfo_30FDB2C *)Method_System_Linq_Enumerable_OfType_MissionNaviQuestEntity___);
+                                                                               (const MethodInfo_310C5CC *)Method_System_Linq_Enumerable_OfType_MissionNaviQuestEntity___);
 }
 
 
@@ -36,16 +36,16 @@ MissionNaviQuestEntity_o *MissionNaviQuestMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C277D1 & 1) == 0 )
+  if ( (byte_4C37ECA & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_MissionNaviQuestMaster__MissionNaviQuestEntity__string__GetEntity__);
-    byte_4C277D1 = 1;
+    sub_1C32C20(&Method_DataMasterBase_MissionNaviQuestMaster__MissionNaviQuestEntity__string__GetEntity__);
+    byte_4C37ECA = 1;
   }
   PK = (Il2CppObject *)MissionNaviQuestEntity__CreatePK(id, questId, *(const MethodInfo **)&questId);
   return (MissionNaviQuestEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_338C850 *)Method_DataMasterBase_MissionNaviQuestMaster__MissionNaviQuestEntity__string__GetEntity__);
+                                       (const MethodInfo_339B2F0 *)Method_DataMasterBase_MissionNaviQuestMaster__MissionNaviQuestEntity__string__GetEntity__);
 }
 
 
@@ -76,31 +76,31 @@ MissionNaviQuestEntity_array *MissionNaviQuestMaster__GetOpenQuestByNaviQuestMas
   const MethodInfo *v24; // x3
   System_Collections_Generic_IEnumerable_TSource__o *v25; // x0
 
-  if ( (byte_4C277CF & 1) == 0 )
+  if ( (byte_4C37EC8 & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Linq_Enumerable_Any_MissionNaviQuestEntity___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_FirstOrDefault_IGrouping_int__MissionNaviQuestEntity____);
-    sub_1C2D490(&Method_System_Linq_Enumerable_GroupBy_MissionNaviQuestEntity__int___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_OrderByDescending_IGrouping_int__MissionNaviQuestEntity___int___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_ToArray_MissionNaviQuestEntity___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_Where_MissionNaviQuestEntity___);
-    sub_1C2D490(&System_Func_IGrouping_int__MissionNaviQuestEntity___int__TypeInfo);
-    sub_1C2D490(&System_Func_MissionNaviQuestEntity__int__TypeInfo);
-    sub_1C2D490(&System_Func_MissionNaviQuestEntity__bool__TypeInfo);
-    sub_1C2D490(&Method_MissionNaviQuestMaster___c__GetOpenQuestByNaviQuestMasterId_b__1_1__);
-    sub_1C2D490(&Method_MissionNaviQuestMaster___c__GetOpenQuestByNaviQuestMasterId_b__1_2__);
-    sub_1C2D490(&Method_MissionNaviQuestMaster___c__DisplayClass1_0__GetOpenQuestByNaviQuestMasterId_b__0__);
-    sub_1C2D490(&MissionNaviQuestMaster___c__DisplayClass1_0_TypeInfo);
-    sub_1C2D490(&MissionNaviQuestMaster___c_TypeInfo);
-    byte_4C277CF = 1;
+    sub_1C32C20(&Method_System_Linq_Enumerable_Any_MissionNaviQuestEntity___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_FirstOrDefault_IGrouping_int__MissionNaviQuestEntity____);
+    sub_1C32C20(&Method_System_Linq_Enumerable_GroupBy_MissionNaviQuestEntity__int___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_OrderByDescending_IGrouping_int__MissionNaviQuestEntity___int___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_ToArray_MissionNaviQuestEntity___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_Where_MissionNaviQuestEntity___);
+    sub_1C32C20(&System_Func_IGrouping_int__MissionNaviQuestEntity___int__TypeInfo);
+    sub_1C32C20(&System_Func_MissionNaviQuestEntity__int__TypeInfo);
+    sub_1C32C20(&System_Func_MissionNaviQuestEntity__bool__TypeInfo);
+    sub_1C32C20(&Method_MissionNaviQuestMaster___c__GetOpenQuestByNaviQuestMasterId_b__1_1__);
+    sub_1C32C20(&Method_MissionNaviQuestMaster___c__GetOpenQuestByNaviQuestMasterId_b__1_2__);
+    sub_1C32C20(&Method_MissionNaviQuestMaster___c__DisplayClass1_0__GetOpenQuestByNaviQuestMasterId_b__0__);
+    sub_1C32C20(&MissionNaviQuestMaster___c__DisplayClass1_0_TypeInfo);
+    sub_1C32C20(&MissionNaviQuestMaster___c_TypeInfo);
+    byte_4C37EC8 = 1;
   }
-  v5 = sub_1C2D6DC(MissionNaviQuestMaster___c__DisplayClass1_0_TypeInfo);
+  v5 = sub_1C32E6C(MissionNaviQuestMaster___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C2D6EC(v6, v7);
+    sub_1C32E7C(v6);
   *(_DWORD *)(v5 + 16) = naviQuestMasterId;
   v8 = MissionNaviQuestMaster__EnumerateOwns(this, v7);
-  v9 = (System_Func_object__bool__o *)sub_1C2D6DC(System_Func_MissionNaviQuestEntity__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_1C32E6C(System_Func_MissionNaviQuestEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v9,
     (Il2CppObject *)v5,
@@ -109,10 +109,10 @@ MissionNaviQuestEntity_array *MissionNaviQuestMaster__GetOpenQuestByNaviQuestMas
   v10 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v8,
           (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_3115108 *)Method_System_Linq_Enumerable_Where_MissionNaviQuestEntity___);
+          (const MethodInfo_3123BA8 *)Method_System_Linq_Enumerable_Where_MissionNaviQuestEntity___);
   if ( System_Linq_Enumerable__Any_object_(
          v10,
-         (const MethodInfo_30DA4C8 *)Method_System_Linq_Enumerable_Any_MissionNaviQuestEntity___) )
+         (const MethodInfo_30E8F68 *)Method_System_Linq_Enumerable_Any_MissionNaviQuestEntity___) )
   {
     v11 = MissionNaviQuestMaster___c_TypeInfo;
     if ( !MissionNaviQuestMaster___c_TypeInfo->_2.cctor_finished )
@@ -129,7 +129,7 @@ MissionNaviQuestEntity_array *MissionNaviQuestMaster__GetOpenQuestByNaviQuestMas
         v11 = MissionNaviQuestMaster___c_TypeInfo;
       }
       v13 = (Il2CppObject *)v11->static_fields->__9;
-      _9__1_1 = (System_Func_object__int__o *)sub_1C2D6DC(System_Func_MissionNaviQuestEntity__int__TypeInfo);
+      _9__1_1 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_MissionNaviQuestEntity__int__TypeInfo);
       System_Func_object__int____ctor(
         _9__1_1,
         v13,
@@ -137,12 +137,12 @@ MissionNaviQuestEntity_array *MissionNaviQuestMaster__GetOpenQuestByNaviQuestMas
         0);
       static_fields = MissionNaviQuestMaster___c_TypeInfo->static_fields;
       static_fields->__9__1_1 = (struct System_Func_MissionNaviQuestEntity__int__o *)_9__1_1;
-      sub_1C2D434((CGThumbnailListItem_o *)&static_fields->__9__1_1, (int32_t)_9__1_1, v15, v16);
+      sub_1C32BC4((CGThumbnailListItem_o *)&static_fields->__9__1_1, (int32_t)_9__1_1, v15, v16);
     }
     v17 = System_Linq_Enumerable__GroupBy_object__int_(
             v10,
             (System_Func_TSource__TKey__o *)_9__1_1,
-            (const MethodInfo_30F8D28 *)Method_System_Linq_Enumerable_GroupBy_MissionNaviQuestEntity__int___);
+            (const MethodInfo_31077C8 *)Method_System_Linq_Enumerable_GroupBy_MissionNaviQuestEntity__int___);
     v18 = MissionNaviQuestMaster___c_TypeInfo;
     v19 = (System_Collections_Generic_IEnumerable_TSource__o *)v17;
     if ( !MissionNaviQuestMaster___c_TypeInfo->_2.cctor_finished )
@@ -159,7 +159,7 @@ MissionNaviQuestEntity_array *MissionNaviQuestMaster__GetOpenQuestByNaviQuestMas
         v18 = MissionNaviQuestMaster___c_TypeInfo;
       }
       v21 = (Il2CppObject *)v18->static_fields->__9;
-      _9__1_2 = (System_Func_object__int__o *)sub_1C2D6DC(System_Func_IGrouping_int__MissionNaviQuestEntity___int__TypeInfo);
+      _9__1_2 = (System_Func_object__int__o *)sub_1C32E6C(System_Func_IGrouping_int__MissionNaviQuestEntity___int__TypeInfo);
       System_Func_object__int____ctor(
         _9__1_2,
         v21,
@@ -167,19 +167,19 @@ MissionNaviQuestEntity_array *MissionNaviQuestMaster__GetOpenQuestByNaviQuestMas
         0);
       v22 = MissionNaviQuestMaster___c_TypeInfo->static_fields;
       v22->__9__1_2 = (struct System_Func_IGrouping_int__MissionNaviQuestEntity___int__o *)_9__1_2;
-      sub_1C2D434((CGThumbnailListItem_o *)&v22->__9__1_2, (int32_t)_9__1_2, v23, v24);
+      sub_1C32BC4((CGThumbnailListItem_o *)&v22->__9__1_2, (int32_t)_9__1_2, v23, v24);
     }
     v25 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
                                                                  v19,
                                                                  (System_Func_TSource__TKey__o *)_9__1_2,
-                                                                 (const MethodInfo_30FE624 *)Method_System_Linq_Enumerable_OrderByDescending_IGrouping_int__MissionNaviQuestEntity___int___);
+                                                                 (const MethodInfo_310D0C4 *)Method_System_Linq_Enumerable_OrderByDescending_IGrouping_int__MissionNaviQuestEntity___int___);
     v10 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__FirstOrDefault_object_(
                                                                  v25,
-                                                                 (const MethodInfo_30F7054 *)Method_System_Linq_Enumerable_FirstOrDefault_IGrouping_int__MissionNaviQuestEntity____);
+                                                                 (const MethodInfo_3105AF4 *)Method_System_Linq_Enumerable_FirstOrDefault_IGrouping_int__MissionNaviQuestEntity____);
   }
   return (MissionNaviQuestEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                            v10,
-                                           (const MethodInfo_310DFEC *)Method_System_Linq_Enumerable_ToArray_MissionNaviQuestEntity___);
+                                           (const MethodInfo_311CA8C *)Method_System_Linq_Enumerable_ToArray_MissionNaviQuestEntity___);
 }
 
 
@@ -193,17 +193,17 @@ bool MissionNaviQuestMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C277D2 & 1) == 0 )
+  if ( (byte_4C37ECB & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataMasterBase_MissionNaviQuestMaster__MissionNaviQuestEntity__string__TryGetEntity__);
-    byte_4C277D2 = 1;
+    sub_1C32C20(&Method_DataMasterBase_MissionNaviQuestMaster__MissionNaviQuestEntity__string__TryGetEntity__);
+    byte_4C37ECB = 1;
   }
   PK = (Il2CppObject *)MissionNaviQuestEntity__CreatePK(id, questId, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_338C89C *)Method_DataMasterBase_MissionNaviQuestMaster__MissionNaviQuestEntity__string__TryGetEntity__);
+           (const MethodInfo_339B33C *)Method_DataMasterBase_MissionNaviQuestMaster__MissionNaviQuestEntity__string__TryGetEntity__);
 }
 
 
@@ -213,15 +213,15 @@ void MissionNaviQuestMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C277D3 & 1) == 0 )
+  if ( (byte_4C37ECC & 1) == 0 )
   {
-    sub_1C2D490(&MissionNaviQuestMaster___c_TypeInfo);
-    byte_4C277D3 = 1;
+    sub_1C32C20(&MissionNaviQuestMaster___c_TypeInfo);
+    byte_4C37ECC = 1;
   }
-  v1 = (Il2CppObject *)sub_1C2D6DC(MissionNaviQuestMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C32E6C(MissionNaviQuestMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   MissionNaviQuestMaster___c_TypeInfo->static_fields->__9 = (struct MissionNaviQuestMaster___c_o *)v1;
-  sub_1C2D434((CGThumbnailListItem_o *)MissionNaviQuestMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)MissionNaviQuestMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -237,7 +237,7 @@ int32_t MissionNaviQuestMaster___c___GetOpenQuestByNaviQuestMasterId_b__1_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C2D6EC(this, 0);
+    sub_1C32E7C(this);
   return x->fields.priority;
 }
 
@@ -252,13 +252,13 @@ int32_t MissionNaviQuestMaster___c___GetOpenQuestByNaviQuestMasterId_b__1_2(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_4C277D4 & 1) == 0 )
+  if ( (byte_4C37ECD & 1) == 0 )
   {
-    this = (MissionNaviQuestMaster___c_o *)sub_1C2D490(&System_Linq_IGrouping_int__MissionNaviQuestEntity__TypeInfo);
-    byte_4C277D4 = 1;
+    this = (MissionNaviQuestMaster___c_o *)sub_1C32C20(&System_Linq_IGrouping_int__MissionNaviQuestEntity__TypeInfo);
+    byte_4C37ECD = 1;
   }
   if ( !group )
-    sub_1C2D6EC(this, group);
+    sub_1C32E7C(this);
   klass = group->klass;
   v5 = *(unsigned __int16 *)&group->klass->_2.rank;
   if ( *(_WORD *)&group->klass->_2.rank )
@@ -276,7 +276,7 @@ int32_t MissionNaviQuestMaster___c___GetOpenQuestByNaviQuestMasterId_b__1_2(
   else
   {
 LABEL_8:
-    v7 = sub_1C7DCA8(group, System_Linq_IGrouping_int__MissionNaviQuestEntity__TypeInfo, 0);
+    v7 = sub_1C83438(group, System_Linq_IGrouping_int__MissionNaviQuestEntity__TypeInfo, 0);
   }
   return (*(__int64 (__fastcall **)(System_Linq_IGrouping_int__MissionNaviQuestEntity__o *, _QWORD))v7)(
            group,
@@ -303,13 +303,13 @@ bool MissionNaviQuestMaster___c__DisplayClass1_0___GetOpenQuestByNaviQuestMaster
   int64_t dispTargetNum; // x19
 
   v4 = this;
-  if ( (byte_4C277D5 & 1) == 0 )
+  if ( (byte_4C37ECE & 1) == 0 )
   {
-    this = (MissionNaviQuestMaster___c__DisplayClass1_0_o *)sub_1C2D490(&CondType_TypeInfo);
-    byte_4C277D5 = 1;
+    this = (MissionNaviQuestMaster___c__DisplayClass1_0_o *)sub_1C32C20(&CondType_TypeInfo);
+    byte_4C37ECE = 1;
   }
   if ( !x )
-    sub_1C2D6EC(this, x);
+    sub_1C32E7C(this);
   if ( x->fields.id != v4->fields.naviQuestMasterId )
     return 0;
   dispCondType = x->fields.dispCondType;

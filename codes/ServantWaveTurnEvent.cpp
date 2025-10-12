@@ -1,16 +1,15 @@
 void ServantWaveTurnEvent___ctor(ServantWaveTurnEvent_o *this, BattleData_o *data, const MethodInfo *method)
 {
   __int64 v5; // x0
-  __int64 v6; // x1
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !data )
-    sub_1C2D6EC(v5, v6);
+    sub_1C32E7C(v5);
   this->fields = *(ServantWaveTurnEvent_Fields *)&data->fields.wavecount;
 }
 
 
-void ServantWaveTurnEvent___ctor_46725876(
+void ServantWaveTurnEvent___ctor_46872120(
         ServantWaveTurnEvent_o *this,
         int32_t wave,
         int32_t turn,
@@ -28,21 +27,20 @@ ServantWaveTurnEvent_SaveData_o *ServantWaveTurnEvent__ExportSaveData(
 {
   __int64 v3; // x20
   __int64 v4; // x0
-  __int64 v5; // x1
   ServantWaveTurnEvent_SaveData_o *result; // x0
 
-  if ( (byte_4C2A461 & 1) == 0 )
+  if ( (byte_4C3AB7E & 1) == 0 )
   {
-    sub_1C2D490(&ServantWaveTurnEvent_SaveData_TypeInfo);
-    byte_4C2A461 = 1;
+    sub_1C32C20(&ServantWaveTurnEvent_SaveData_TypeInfo);
+    byte_4C3AB7E = 1;
   }
-  v3 = sub_1C2D6DC(ServantWaveTurnEvent_SaveData_TypeInfo);
+  v3 = sub_1C32E6C(ServantWaveTurnEvent_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   v4 = ((__int64 (__fastcall *)(ServantWaveTurnEvent_o *, const MethodInfo *))this->klass->vtable._4_unknown.methodPtr)(
          this,
          this->klass->vtable._4_unknown.method);
   if ( !v3 )
-    sub_1C2D6EC(v4, v5);
+    sub_1C32E7C(v4);
   *(_DWORD *)(v3 + 16) = v4;
   result = (ServantWaveTurnEvent_SaveData_o *)v3;
   *(ServantWaveTurnEvent_Fields *)(v3 + 20) = this->fields;

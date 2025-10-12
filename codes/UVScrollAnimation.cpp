@@ -22,30 +22,29 @@ void UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, const MethodIn
 {
   Il2CppObject *Component_object; // x20
   UnityEngine_Material_o *material; // x0
-  __int64 v5; // x1
   float time; // s0
   float offsetXPerSec; // s10
-  float v8; // s8
-  float v9; // s0
+  float v7; // s8
+  float v8; // s0
   float offsetYPerSec; // s11
-  float v11; // s9
-  float v12; // s0
-  float v13; // s1
-  bool v14; // nf
-  float v15; // s1 OVERLAPPED
-  float v16; // s2
-  float v17; // s0
+  float v10; // s9
+  float v11; // s0
+  float v12; // s1
+  bool v13; // nf
+  float v14; // s1 OVERLAPPED
+  float v15; // s2
+  float v16; // s0
 
-  if ( (byte_4C24759 & 1) == 0 )
+  if ( (byte_4C34E2D & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    sub_1C2D490(&StringLiteral_16260/*"_MainTex"*/);
-    byte_4C24759 = 1;
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&StringLiteral_16262/*"_MainTex"*/);
+    byte_4C34E2D = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   material = (UnityEngine_Material_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -55,9 +54,9 @@ void UVScrollAnimation__UpdateUVOffset(UVScrollAnimation_o *this, const MethodIn
     || (material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_object, 0)) == 0 )
   {
 LABEL_18:
-    sub_1C2D6EC(material, v5);
+    sub_1C32E7C(material);
   }
-  if ( !UnityEngine_Material__HasProperty_71029840(material, (System_String_o *)StringLiteral_16260/*"_MainTex"*/, 0) )
+  if ( !UnityEngine_Material__HasProperty_71089776(material, (System_String_o *)StringLiteral_16262/*"_MainTex"*/, 0) )
   {
 LABEL_17:
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
@@ -65,27 +64,27 @@ LABEL_17:
   }
   time = UnityEngine_Time__get_time(0);
   offsetXPerSec = this->fields.offsetXPerSec;
-  v8 = time;
-  v9 = UnityEngine_Time__get_time(0);
+  v7 = time;
+  v8 = UnityEngine_Time__get_time(0);
   offsetYPerSec = this->fields.offsetYPerSec;
-  v11 = v9;
+  v10 = v8;
   material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)Component_object, 0);
   if ( !material )
     goto LABEL_18;
-  v12 = (float)(v8 * offsetXPerSec) - floorf(v8 * offsetXPerSec);
-  v13 = (float)(v11 * offsetYPerSec) - floorf(v11 * offsetYPerSec);
-  v14 = v13 < 0.0;
-  v15 = fminf(v13, 1.0);
-  v16 = fminf(v12, 1.0);
-  if ( v14 )
-    v15 = 0.0;
-  if ( v12 < 0.0 )
-    v17 = 0.0;
+  v11 = (float)(v7 * offsetXPerSec) - floorf(v7 * offsetXPerSec);
+  v12 = (float)(v10 * offsetYPerSec) - floorf(v10 * offsetYPerSec);
+  v13 = v12 < 0.0;
+  v14 = fminf(v12, 1.0);
+  v15 = fminf(v11, 1.0);
+  if ( v13 )
+    v14 = 0.0;
+  if ( v11 < 0.0 )
+    v16 = 0.0;
   else
-    v17 = v16;
+    v16 = v15;
   UnityEngine_Material__SetTextureOffset(
     material,
-    (System_String_o *)StringLiteral_16260/*"_MainTex"*/,
-    *(UnityEngine_Vector2_o *)(&v15 - 1),
+    (System_String_o *)StringLiteral_16262/*"_MainTex"*/,
+    *(UnityEngine_Vector2_o *)(&v14 - 1),
     0);
 }

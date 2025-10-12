@@ -12,7 +12,7 @@ void FieldBuffDeleteProcess__Init(
   const MethodInfo *v3; // x3
 
   this->fields._FieldEnvData_k__BackingField = fieldEnvData;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)fieldEnvData, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)fieldEnvData, (int32_t)method, v3);
 }
 
 
@@ -32,5 +32,5 @@ void FieldBuffDeleteProcess__set_FieldEnvData(
   const MethodInfo *v3; // x3
 
   this->fields._FieldEnvData_k__BackingField = value;
-  sub_1C2D434((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }

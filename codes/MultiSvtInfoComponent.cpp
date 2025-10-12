@@ -4,7 +4,6 @@ void MultiSvtInfoComponent___ctor(MultiSvtInfoComponent_o *this, const MethodInf
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UIStandFigureR_o *MultiSvtInfoComponent__GetSvtStandFigure(
         MultiSvtInfoComponent_o *this,
         int32_t index,
@@ -12,19 +11,19 @@ UIStandFigureR_o *MultiSvtInfoComponent__GetSvtStandFigure(
 {
   void *standFigureCollectList; // x0
 
-  if ( (byte_4C21720 & 1) == 0 )
+  if ( (byte_4C31DEF & 1) == 0 )
   {
-    sub_1C2D490(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
-    byte_4C21720 = 1;
+    sub_1C32C20(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+    byte_4C31DEF = 1;
   }
   standFigureCollectList = this->fields.standFigureCollectList;
   if ( !standFigureCollectList
     || (standFigureCollectList = System_Collections_Generic_List_object___get_Item(
                                    (System_Collections_Generic_List_object__o *)standFigureCollectList,
                                    index,
-                                   (const MethodInfo_37898B4 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0 )
+                                   (const MethodInfo_37984EC *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0 )
   {
-    sub_1C2D6EC(standFigureCollectList, *(_QWORD *)&index);
+    sub_1C32E7C(standFigureCollectList);
   }
   return (UIStandFigureR_o *)*((_QWORD *)standFigureCollectList + 3);
 }
@@ -90,56 +89,52 @@ void MultiSvtInfoComponent__setCurrentRewardInfo(
   struct System_Collections_Generic_List_StandFigureCollect__o **p_standFigureCollectList; // x23
   System_Collections_Generic_List_object__o *v20; // x21
   Il2CppObject *Instance; // x0
-  __int64 v22; // x1
   System_Collections_Generic_List_SvtMultiPortraitEntity__o *EntityListOrderBy; // x0
-  int32_t v24; // w22
-  System_Collections_Generic_List_object__o *v25; // x24
-  _BOOL8 v26; // x0
-  __int64 v27; // x1
+  int32_t v23; // w22
+  System_Collections_Generic_List_object__o *v24; // x24
+  _BOOL8 v25; // x0
   Il2CppObject *current; // x24
   int klass_high; // w8
-  int32_t v30; // w4
+  int32_t v28; // w4
   UIStandFigureR_o *PrefabForImageId; // x0
-  __int64 v32; // x1
-  UIStandFigureR_o *v33; // x27
-  System_Collections_Generic_List_object__o *v34; // x25
-  StandFigureCollect_o *v35; // x26
-  __int64 v36; // x0
-  __int64 v37; // x1
-  struct System_Object_array *v38; // x8
-  _QWORD *v39; // x9
-  __int64 v40; // x10
-  Il2CppClass **v41; // x0
-  UIStandFigureR_o *RenderPrefab_40454792; // x0
-  System_Collections_Generic_List_object__o *v43; // x19
-  UIStandFigureR_o *v44; // x21
-  StandFigureCollect_o *v45; // x20
+  UIStandFigureR_o *v30; // x27
+  System_Collections_Generic_List_object__o *v31; // x25
+  StandFigureCollect_o *v32; // x26
+  __int64 v33; // x0
+  struct System_Object_array *v34; // x8
+  _QWORD *v35; // x9
+  __int64 v36; // x10
+  Il2CppClass **v37; // x0
+  UIStandFigureR_o *RenderPrefab_40577020; // x0
+  System_Collections_Generic_List_object__o *v39; // x19
+  UIStandFigureR_o *v40; // x21
+  StandFigureCollect_o *v41; // x20
   struct System_Object_array *items; // x8
-  _QWORD *v47; // x9
+  _QWORD *v43; // x9
   __int64 size; // x10
-  Il2CppClass **v49; // x0
-  System_Collections_Generic_List_Enumerator_object__o v50; // [xsp+18h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v51; // [xsp+30h] [xbp-80h] BYREF
+  Il2CppClass **v45; // x0
+  System_Collections_Generic_List_Enumerator_object__o v46; // [xsp+18h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v47; // [xsp+30h] [xbp-80h] BYREF
   int32_t limitCount; // [xsp+4Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C2171F & 1) == 0 )
+  if ( (byte_4C31DEE & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
-    sub_1C2D490(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__);
-    sub_1C2D490(&ImageLimitCount_TypeInfo);
-    sub_1C2D490(&Method_System_Collections_Generic_List_StandFigureCollect__Add__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
-    sub_1C2D490(&Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
-    sub_1C2D490(&System_Collections_Generic_List_StandFigureCollect__TypeInfo);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C2D490(&StandFigureCollect_TypeInfo);
-    byte_4C2171F = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
+    sub_1C32C20(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__);
+    sub_1C32C20(&ImageLimitCount_TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_StandFigureCollect__Add__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
+    sub_1C32C20(&Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_StandFigureCollect__TypeInfo);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C32C20(&StandFigureCollect_TypeInfo);
+    byte_4C31DEE = 1;
   }
   limitCount = 0;
-  memset(&v51, 0, sizeof(v51));
+  memset(&v47, 0, sizeof(v47));
   this->fields.currentIdx = idx;
   this->fields.currentMoveIdx = moveIdx;
   this->fields.currentSvtId = svtId;
@@ -155,19 +150,19 @@ LABEL_7:
   this->fields.currentSvtFace = face;
   if ( !standFigureCollectList )
   {
-    v20 = (System_Collections_Generic_List_object__o *)sub_1C2D6DC(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
+    v20 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v20,
-      (const MethodInfo_3789350 *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
+      (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
     *p_standFigureCollectList = (struct System_Collections_Generic_List_StandFigureCollect__o *)v20;
-    sub_1C2D434(&this->fields.standFigureCollectList);
+    sub_1C32BC4(&this->fields.standFigureCollectList, v20);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_40;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
+               (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
   if ( !Instance )
     goto LABEL_40;
   EntityListOrderBy = SvtMultiPortraitMaster__GetEntityListOrderBy(
@@ -177,20 +172,20 @@ LABEL_7:
                         0,
                         0);
   if ( isEventShop )
-    v24 = 4;
+    v23 = 4;
   else
-    v24 = 3;
+    v23 = 3;
   if ( !EntityListOrderBy
-    || (v25 = (System_Collections_Generic_List_object__o *)EntityListOrderBy,
+    || (v24 = (System_Collections_Generic_List_object__o *)EntityListOrderBy,
         !System_Linq_Enumerable__Any_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)EntityListOrderBy,
-           (const MethodInfo_30DA4C8 *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___)) )
+           (const MethodInfo_30E8F68 *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___)) )
   {
-    RenderPrefab_40454792 = StandFigureManager__CreateRenderPrefab_40454792(
+    RenderPrefab_40577020 = StandFigureManager__CreateRenderPrefab_40577020(
                               this->fields.svtFigurePanel,
                               this->fields.currentSvtId,
                               limitCount,
-                              v24,
+                              v23,
                               face,
                               10,
                               callbackFunc,
@@ -198,120 +193,119 @@ LABEL_7:
                               -1,
                               0,
                               0);
-    v43 = (System_Collections_Generic_List_object__o *)this->fields.standFigureCollectList;
-    v44 = RenderPrefab_40454792;
-    v45 = (StandFigureCollect_o *)sub_1C2D6DC(StandFigureCollect_TypeInfo);
-    StandFigureCollect___ctor(v45, 0, v44, 0);
-    if ( v43 )
+    v39 = (System_Collections_Generic_List_object__o *)this->fields.standFigureCollectList;
+    v40 = RenderPrefab_40577020;
+    v41 = (StandFigureCollect_o *)sub_1C32E6C(StandFigureCollect_TypeInfo);
+    StandFigureCollect___ctor(v41, 0, v40, 0);
+    if ( v39 )
     {
-      items = v43->fields._items;
-      v47 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
-      ++v43->fields._version;
+      items = v39->fields._items;
+      v43 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
+      ++v39->fields._version;
       if ( items )
       {
-        size = v43->fields._size;
+        size = v39->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
-            v43,
-            (Il2CppObject *)v45,
-            *(const MethodInfo_3789B84 **)(*(_QWORD *)(v47[4] + 192LL) + 112LL));
+            v39,
+            (Il2CppObject *)v41,
+            *(const MethodInfo_37987BC **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
         }
         else
         {
-          v49 = &items->obj.klass + size;
-          v43->fields._size = size + 1;
-          v49[4] = (Il2CppClass *)v45;
-          sub_1C2D434(v49 + 4);
+          v45 = &items->obj.klass + size;
+          v39->fields._size = size + 1;
+          v45[4] = (Il2CppClass *)v41;
+          sub_1C32BC4(v45 + 4, v41);
         }
         return;
       }
     }
 LABEL_40:
-    sub_1C2D6EC(Instance, v22);
+    sub_1C32E7C(Instance);
   }
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v50,
-    v25,
-    (const MethodInfo_378A67C *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
-  v51 = v50;
+    (System_Collections_Generic_List_Enumerator_T__o *)&v46,
+    v24,
+    (const MethodInfo_37992B4 *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
+  v47 = v46;
   while ( 1 )
   {
-    v26 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v51,
-            (const MethodInfo_3514508 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
-    if ( !v26 )
+    v25 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v47,
+            (const MethodInfo_3522FA8 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
+    if ( !v25 )
       break;
-    current = v51.fields._current;
-    if ( !v51.fields._current )
-      sub_1C2D6EC(v26, v27);
-    klass_high = HIDWORD(v51.fields._current[2].klass);
+    current = v47.fields._current;
+    if ( !v47.fields._current )
+      sub_1C32E7C(v25);
+    klass_high = HIDWORD(v47.fields._current[2].klass);
     if ( klass_high >= 1 )
-      v30 = klass_high + 10;
+      v28 = klass_high + 10;
     else
-      v30 = 10;
+      v28 = 10;
     PrefabForImageId = StandFigureManager__CreatePrefabForImageId(
                          this->fields.svtFigurePanel,
-                         (int32_t)v51.fields._current[2].klass,
-                         v24,
+                         (int32_t)v47.fields._current[2].klass,
+                         v23,
                          face,
-                         v30,
+                         v28,
                          callbackFunc,
                          0,
                          -1,
                          0,
                          0);
-    v33 = PrefabForImageId;
+    v30 = PrefabForImageId;
     if ( !PrefabForImageId )
-      sub_1C2D6EC(0, v32);
+      sub_1C32E7C(0);
     PrefabForImageId->fields.svtMultiPortraitEntity = (struct SvtMultiPortraitEntity_o *)current;
-    sub_1C2D434(&PrefabForImageId->fields.svtMultiPortraitEntity);
-    v34 = (System_Collections_Generic_List_object__o *)*p_standFigureCollectList;
-    v35 = (StandFigureCollect_o *)sub_1C2D6DC(StandFigureCollect_TypeInfo);
-    StandFigureCollect___ctor(v35, (SvtMultiPortraitEntity_o *)current, v33, 0);
+    sub_1C32BC4(&PrefabForImageId->fields.svtMultiPortraitEntity, current);
+    v31 = (System_Collections_Generic_List_object__o *)*p_standFigureCollectList;
+    v32 = (StandFigureCollect_o *)sub_1C32E6C(StandFigureCollect_TypeInfo);
+    StandFigureCollect___ctor(v32, (SvtMultiPortraitEntity_o *)current, v30, 0);
+    if ( !v31 )
+      sub_1C32E7C(v33);
+    v34 = v31->fields._items;
+    v35 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
+    ++v31->fields._version;
     if ( !v34 )
-      sub_1C2D6EC(v36, v37);
-    v38 = v34->fields._items;
-    v39 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
-    ++v34->fields._version;
-    if ( !v38 )
-      sub_1C2D6EC(v36, v37);
-    v40 = v34->fields._size;
-    if ( (unsigned int)v40 >= LODWORD(v38->max_length) )
+      sub_1C32E7C(v33);
+    v36 = v31->fields._size;
+    if ( (unsigned int)v36 >= LODWORD(v34->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v34,
-        (Il2CppObject *)v35,
-        *(const MethodInfo_3789B84 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+        v31,
+        (Il2CppObject *)v32,
+        *(const MethodInfo_37987BC **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
     }
     else
     {
-      v41 = &v38->obj.klass + v40;
-      v34->fields._size = v40 + 1;
-      v41[4] = (Il2CppClass *)v35;
-      sub_1C2D434(v41 + 4);
+      v37 = &v34->obj.klass + v36;
+      v31->fields._size = v36 + 1;
+      v37[4] = (Il2CppClass *)v32;
+      sub_1C32BC4(v37 + 4, v32);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v51,
-    (const MethodInfo_3514504 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+    &v47,
+    (const MethodInfo_3522FA4 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
 }
 
 
 void MultiSvtInfoComponent__setEnabledCollider(MultiSvtInfoComponent_o *this, bool isEnable, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
-  __int64 v6; // x1
 
-  if ( (byte_4C21721 & 1) == 0 )
+  if ( (byte_4C31DF0 & 1) == 0 )
   {
-    sub_1C2D490(&Method_UnityEngine_Component_GetComponent_Collider___);
-    byte_4C21721 = 1;
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_Collider___);
+    byte_4C31DF0 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30C5120 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !Component_object )
-    sub_1C2D6EC(0, v6);
+    sub_1C32E7C(0);
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isEnable, 0);
 }

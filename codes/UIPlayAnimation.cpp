@@ -1,0 +1,802 @@
+void UIPlayAnimation___ctor(UIPlayAnimation_o *this, const MethodInfo *method)
+{
+  System_Collections_Generic_List_object__o *v3; // x20
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
+
+  if ( (byte_4C3C063 & 1) == 0 )
+  {
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1C32C20(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_4C3C063 = 1;
+  }
+  this->fields.playDirection = 1;
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C32E6C(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
+    v3,
+    (const MethodInfo_3797F88 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+  this->fields.onFinished = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
+  sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.onFinished, (int32_t)v3, v4, v5);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
+}
+
+
+void UIPlayAnimation__Awake(UIPlayAnimation_o *this, const MethodInfo *method)
+{
+  Il2CppObject *Component_object; // x20
+  _BOOL8 v4; // x0
+  UnityEngine_Object_o *eventReceiver; // x21
+  System_Collections_Generic_List_EventDelegate__o *onFinished; // x21
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+
+  if ( (byte_4C3C056 & 1) == 0 )
+  {
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIButton___);
+    sub_1C32C20(&EventDelegate_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3C056 = 1;
+  }
+  Component_object = UnityEngine_Component__GetComponent_object_(
+                       (UnityEngine_Component_o *)this,
+                       (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIButton___);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v4 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
+  if ( v4 )
+  {
+    if ( !Component_object )
+      sub_1C32E7C(v4);
+    this->fields.dragHighlight = BYTE4(Component_object[8].monitor);
+  }
+  eventReceiver = (UnityEngine_Object_o *)this->fields.eventReceiver;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Inequality(eventReceiver, 0, 0) )
+  {
+    onFinished = this->fields.onFinished;
+    if ( !EventDelegate_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
+    if ( EventDelegate__IsValid_49205960(onFinished, 0) )
+    {
+      this->fields.eventReceiver = 0;
+      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.eventReceiver, 0, v7, v8);
+      this->fields.callWhenFinished = 0;
+      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.callWhenFinished, 0, v9, v10);
+    }
+  }
+}
+
+
+void UIPlayAnimation__OnClick(UIPlayAnimation_o *this, const MethodInfo *method)
+{
+  UICamera_c *v3; // x0
+  const MethodInfo *v4; // x3
+
+  if ( (byte_4C3C05B & 1) == 0 )
+  {
+    sub_1C32C20(&UICamera_TypeInfo);
+    byte_4C3C05B = 1;
+  }
+  v3 = UICamera_TypeInfo;
+  if ( !UICamera_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+    v3 = UICamera_TypeInfo;
+  }
+  if ( v3->static_fields->currentTouchID >= -1
+    && UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0)
+    && !this->fields.trigger )
+  {
+    UIPlayAnimation__Play_49142720(this, 1, 0, v4);
+  }
+}
+
+
+void UIPlayAnimation__OnDisable(UIPlayAnimation_o *this, const MethodInfo *method)
+{
+  UnityEngine_Object_o *Component_object; // x20
+  _BOOL8 v4; // x0
+  System_Collections_Generic_List_EventDelegate__o *m_CachedPtr; // x20
+  EventDelegate_Callback_o *v6; // x21
+
+  if ( (byte_4C3C059 & 1) == 0 )
+  {
+    sub_1C32C20(&EventDelegate_Callback_TypeInfo);
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIToggle___);
+    sub_1C32C20(&EventDelegate_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&Method_UIPlayAnimation_OnToggle__);
+    byte_4C3C059 = 1;
+  }
+  Component_object = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_object_(
+                                               (UnityEngine_Component_o *)this,
+                                               (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v4 = UnityEngine_Object__op_Inequality(Component_object, 0, 0);
+  if ( v4 )
+  {
+    if ( !Component_object )
+      sub_1C32E7C(v4);
+    m_CachedPtr = (System_Collections_Generic_List_EventDelegate__o *)Component_object[2].fields.m_CachedPtr;
+    v6 = (EventDelegate_Callback_o *)sub_1C32E6C(EventDelegate_Callback_TypeInfo);
+    EventDelegate_Callback___ctor(v6, (Il2CppObject *)this, Method_UIPlayAnimation_OnToggle__, 0);
+    if ( !EventDelegate_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
+    EventDelegate__Remove(m_CachedPtr, v6, 0);
+  }
+}
+
+
+void UIPlayAnimation__OnDoubleClick(UIPlayAnimation_o *this, const MethodInfo *method)
+{
+  UICamera_c *v3; // x0
+  const MethodInfo *v4; // x3
+
+  if ( (byte_4C3C05C & 1) == 0 )
+  {
+    sub_1C32C20(&UICamera_TypeInfo);
+    byte_4C3C05C = 1;
+  }
+  v3 = UICamera_TypeInfo;
+  if ( !UICamera_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+    v3 = UICamera_TypeInfo;
+  }
+  if ( v3->static_fields->currentTouchID >= -1
+    && UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0)
+    && this->fields.trigger == 10 )
+  {
+    UIPlayAnimation__Play_49142720(this, 1, 0, v4);
+  }
+}
+
+
+void UIPlayAnimation__OnDragOut(UIPlayAnimation_o *this, const MethodInfo *method)
+{
+  UICamera_c *v3; // x0
+  UnityEngine_Object_o *hoveredObject; // x20
+  UnityEngine_Object_o *gameObject; // x21
+  const MethodInfo *v6; // x3
+
+  if ( (byte_4C3C05F & 1) == 0 )
+  {
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&UICamera_TypeInfo);
+    byte_4C3C05F = 1;
+  }
+  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0)
+    && (unsigned int)(this->fields.trigger - 1) <= 1 )
+  {
+    v3 = UICamera_TypeInfo;
+    if ( !UICamera_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+      v3 = UICamera_TypeInfo;
+    }
+    hoveredObject = (UnityEngine_Object_o *)v3->static_fields->hoveredObject;
+    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( UnityEngine_Object__op_Inequality(hoveredObject, gameObject, 0) )
+      UIPlayAnimation__Play_49142720(this, 0, 1, v6);
+  }
+}
+
+
+void UIPlayAnimation__OnDragOver(UIPlayAnimation_o *this, const MethodInfo *method)
+{
+  UICamera_c *v3; // x0
+  struct UICamera_MouseOrTouch_o *currentTouch; // x8
+  UnityEngine_Object_o *dragged; // x20
+  UnityEngine_Object_o *gameObject; // x21
+  const MethodInfo *v7; // x3
+
+  if ( (byte_4C3C05E & 1) == 0 )
+  {
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&UICamera_TypeInfo);
+    byte_4C3C05E = 1;
+  }
+  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0)
+    && (unsigned int)(this->fields.trigger - 1) <= 1 )
+  {
+    v3 = UICamera_TypeInfo;
+    if ( !UICamera_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+      v3 = UICamera_TypeInfo;
+    }
+    currentTouch = v3->static_fields->currentTouch;
+    if ( !currentTouch )
+      sub_1C32E7C(v3);
+    dragged = (UnityEngine_Object_o *)currentTouch->fields.dragged;
+    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( UnityEngine_Object__op_Equality(dragged, gameObject, 0)
+      || this->fields.dragHighlight && this->fields.trigger == 2 )
+    {
+      UIPlayAnimation__Play_49142720(this, 1, 1, v7);
+    }
+  }
+}
+
+
+void UIPlayAnimation__OnDrop(UIPlayAnimation_o *this, UnityEngine_GameObject_o *go, const MethodInfo *method)
+{
+  UICamera_c *v4; // x0
+  struct UICamera_MouseOrTouch_o *currentTouch; // x8
+  UnityEngine_Object_o *dragged; // x20
+  UnityEngine_Object_o *gameObject; // x21
+  const MethodInfo *v8; // x3
+
+  if ( (byte_4C3C060 & 1) == 0 )
+  {
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&UICamera_TypeInfo);
+    byte_4C3C060 = 1;
+  }
+  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) && this->fields.trigger == 2 )
+  {
+    v4 = UICamera_TypeInfo;
+    if ( !UICamera_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+      v4 = UICamera_TypeInfo;
+    }
+    currentTouch = v4->static_fields->currentTouch;
+    if ( !currentTouch )
+      sub_1C32E7C(v4);
+    dragged = (UnityEngine_Object_o *)currentTouch->fields.dragged;
+    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( UnityEngine_Object__op_Inequality(dragged, gameObject, 0) )
+      UIPlayAnimation__Play_49142720(this, 0, 1, v8);
+  }
+}
+
+
+void UIPlayAnimation__OnEnable(UIPlayAnimation_o *this, const MethodInfo *method)
+{
+  UnityEngine_GameObject_o *gameObject; // x20
+  bool IsHighlighted; // w0
+  const MethodInfo *v5; // x2
+  UICamera_c *v6; // x0
+  struct UICamera_MouseOrTouch_o *currentTouch; // x8
+  int32_t trigger; // w9
+  UICamera_c *v9; // x0
+  UnityEngine_Object_o *pressed; // x20
+  UnityEngine_Object_o *v11; // x21
+  bool v12; // w0
+  struct UICamera_MouseOrTouch_o *v13; // x8
+  UnityEngine_Object_o *current; // x20
+  UnityEngine_Object_o *v15; // x21
+  UnityEngine_Object_o *Component_object; // x20
+  System_Collections_Generic_List_EventDelegate__o *m_CachedPtr; // x20
+  EventDelegate_Callback_o *v18; // x21
+
+  if ( (byte_4C3C058 & 1) == 0 )
+  {
+    sub_1C32C20(&EventDelegate_Callback_TypeInfo);
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponent_UIToggle___);
+    sub_1C32C20(&EventDelegate_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&UICamera_TypeInfo);
+    sub_1C32C20(&Method_UIPlayAnimation_OnToggle__);
+    byte_4C3C058 = 1;
+  }
+  if ( this->fields.mStarted )
+  {
+    gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    if ( !UICamera_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+    IsHighlighted = UICamera__IsHighlighted(gameObject, 0);
+    UIPlayAnimation__OnHover(this, IsHighlighted, v5);
+  }
+  v6 = UICamera_TypeInfo;
+  if ( !UICamera_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+    v6 = UICamera_TypeInfo;
+  }
+  currentTouch = v6->static_fields->currentTouch;
+  if ( currentTouch )
+  {
+    trigger = this->fields.trigger;
+    if ( trigger == 5 || trigger == 2 )
+    {
+      if ( !v6->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(v6);
+        currentTouch = UICamera_TypeInfo->static_fields->currentTouch;
+        if ( !currentTouch )
+          goto LABEL_32;
+      }
+      pressed = (UnityEngine_Object_o *)currentTouch->fields.pressed;
+      v11 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      v12 = UnityEngine_Object__op_Equality(pressed, v11, 0);
+      trigger = this->fields.trigger;
+      this->fields.mActivated = v12;
+    }
+    if ( (trigger | 2) == 3 )
+    {
+      v9 = UICamera_TypeInfo;
+      if ( !UICamera_TypeInfo->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+        v9 = UICamera_TypeInfo;
+      }
+      v13 = v9->static_fields->currentTouch;
+      if ( !v13 )
+        goto LABEL_32;
+      current = (UnityEngine_Object_o *)v13->fields.current;
+      v15 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      this->fields.mActivated = UnityEngine_Object__op_Equality(current, v15, 0);
+    }
+  }
+  Component_object = (UnityEngine_Object_o *)UnityEngine_Component__GetComponent_object_(
+                                               (UnityEngine_Component_o *)this,
+                                               (const MethodInfo_30D3BC0 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v9 = (UICamera_c *)UnityEngine_Object__op_Inequality(Component_object, 0, 0);
+  if ( ((unsigned __int8)v9 & 1) != 0 )
+  {
+    if ( Component_object )
+    {
+      m_CachedPtr = (System_Collections_Generic_List_EventDelegate__o *)Component_object[2].fields.m_CachedPtr;
+      v18 = (EventDelegate_Callback_o *)sub_1C32E6C(EventDelegate_Callback_TypeInfo);
+      EventDelegate_Callback___ctor(v18, (Il2CppObject *)this, Method_UIPlayAnimation_OnToggle__, 0);
+      if ( !EventDelegate_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
+      EventDelegate__Add(m_CachedPtr, v18, 0);
+      return;
+    }
+LABEL_32:
+    sub_1C32E7C(v9);
+  }
+}
+
+
+void UIPlayAnimation__OnFinished(UIPlayAnimation_o *this, const MethodInfo *method)
+{
+  UnityEngine_Object_o *current; // x20
+  int32_t v4; // w2
+  const MethodInfo *v5; // x3
+  System_Collections_Generic_List_EventDelegate__o *onFinished; // x20
+  UnityEngine_GameObject_o **p_eventReceiver; // x20
+  UnityEngine_Object_o *eventReceiver; // x21
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+
+  if ( (byte_4C3C062 & 1) == 0 )
+  {
+    sub_1C32C20(&EventDelegate_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&UIPlayAnimation_TypeInfo);
+    byte_4C3C062 = 1;
+  }
+  current = (UnityEngine_Object_o *)UIPlayAnimation_TypeInfo->static_fields->current;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Equality(current, 0, 0) )
+  {
+    UIPlayAnimation_TypeInfo->static_fields->current = this;
+    sub_1C32BC4((CGThumbnailListItem_o *)UIPlayAnimation_TypeInfo->static_fields, (int32_t)this, v4, v5);
+    onFinished = this->fields.onFinished;
+    if ( !EventDelegate_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
+    EventDelegate__Execute_49177388(onFinished, 0);
+    p_eventReceiver = &this->fields.eventReceiver;
+    eventReceiver = (UnityEngine_Object_o *)this->fields.eventReceiver;
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( UnityEngine_Object__op_Inequality(eventReceiver, 0, 0)
+      && !System_String__IsNullOrEmpty(this->fields.callWhenFinished, 0) )
+    {
+      if ( !*p_eventReceiver )
+        sub_1C32E7C(0);
+      UnityEngine_GameObject__SendMessage(*p_eventReceiver, this->fields.callWhenFinished, 1, 0);
+    }
+    *p_eventReceiver = 0;
+    sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.eventReceiver, 0, v9, v10);
+    UIPlayAnimation_TypeInfo->static_fields->current = 0;
+    sub_1C32BC4((CGThumbnailListItem_o *)UIPlayAnimation_TypeInfo->static_fields, 0, v11, v12);
+  }
+}
+
+
+void UIPlayAnimation__OnHover(UIPlayAnimation_o *this, bool isOver, const MethodInfo *method)
+{
+  _BOOL4 v3; // w20
+  const MethodInfo *v5; // x3
+  int32_t trigger; // w8
+
+  v3 = isOver;
+  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
+  {
+    trigger = this->fields.trigger;
+    if ( trigger == 4 && !v3 || trigger == 1 || trigger == 3 && v3 )
+      UIPlayAnimation__Play_49142720(this, v3, (unsigned int)(trigger - 1) < 2, v5);
+  }
+}
+
+
+void UIPlayAnimation__OnPress(UIPlayAnimation_o *this, bool isPressed, const MethodInfo *method)
+{
+  _BOOL4 v3; // w19
+  const MethodInfo *v5; // x3
+  UICamera_c *v6; // x0
+  int32_t trigger; // w8
+
+  v3 = isPressed;
+  if ( (byte_4C3C05A & 1) == 0 )
+  {
+    sub_1C32C20(&UICamera_TypeInfo);
+    byte_4C3C05A = 1;
+  }
+  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
+  {
+    v6 = UICamera_TypeInfo;
+    if ( !UICamera_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+      v6 = UICamera_TypeInfo;
+    }
+    if ( v6->static_fields->currentTouchID >= -1 )
+    {
+      trigger = this->fields.trigger;
+      if ( trigger == 6 && !v3 || trigger == 2 || trigger == 5 && v3 )
+        UIPlayAnimation__Play_49142720(this, v3, (unsigned int)(trigger - 1) < 2, v5);
+    }
+  }
+}
+
+
+void UIPlayAnimation__OnSelect(UIPlayAnimation_o *this, bool isSelected, const MethodInfo *method)
+{
+  _BOOL4 v3; // w20
+  const MethodInfo *v5; // x3
+  int32_t trigger; // w8
+
+  v3 = isSelected;
+  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
+  {
+    trigger = this->fields.trigger;
+    if ( trigger == 13 && !v3 || trigger == 11 || trigger == 12 && v3 )
+      UIPlayAnimation__Play_49142720(this, v3, (unsigned int)(trigger - 1) < 2, v5);
+  }
+}
+
+
+void UIPlayAnimation__OnToggle(UIPlayAnimation_o *this, const MethodInfo *method)
+{
+  UIToggle_c *v3; // x0
+  UnityEngine_Object_o *current; // x20
+  int32_t trigger; // w8
+  UIToggle_c *v6; // x0
+  UIToggle_o *v7; // x0
+  UIToggle_c *v8; // x0
+  UIToggle_c *v9; // x0
+  bool value; // w0
+  const MethodInfo *v11; // x3
+
+  if ( (byte_4C3C05D & 1) == 0 )
+  {
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&UIToggle_TypeInfo);
+    byte_4C3C05D = 1;
+  }
+  if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
+  {
+    v3 = UIToggle_TypeInfo;
+    if ( !UIToggle_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(UIToggle_TypeInfo);
+      v3 = UIToggle_TypeInfo;
+    }
+    current = (UnityEngine_Object_o *)v3->static_fields->current;
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( !UnityEngine_Object__op_Equality(current, 0, 0) )
+    {
+      trigger = this->fields.trigger;
+      if ( trigger != 7 )
+      {
+        if ( trigger == 8 )
+        {
+          v6 = UIToggle_TypeInfo;
+          if ( !UIToggle_TypeInfo->_2.cctor_finished )
+          {
+            j_il2cpp_runtime_class_init_0(UIToggle_TypeInfo);
+            v6 = UIToggle_TypeInfo;
+          }
+          v7 = v6->static_fields->current;
+          if ( !v7 )
+            goto LABEL_26;
+          if ( UIToggle__get_value(v7, 0) )
+            goto LABEL_22;
+          trigger = this->fields.trigger;
+        }
+        if ( trigger != 9 )
+          return;
+        v8 = UIToggle_TypeInfo;
+        if ( !UIToggle_TypeInfo->_2.cctor_finished )
+        {
+          j_il2cpp_runtime_class_init_0(UIToggle_TypeInfo);
+          v8 = UIToggle_TypeInfo;
+        }
+        v7 = v8->static_fields->current;
+        if ( !v7 )
+LABEL_26:
+          sub_1C32E7C(v7);
+        if ( UIToggle__get_value(v7, 0) )
+          return;
+      }
+LABEL_22:
+      v9 = UIToggle_TypeInfo;
+      if ( !UIToggle_TypeInfo->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(UIToggle_TypeInfo);
+        v9 = UIToggle_TypeInfo;
+      }
+      v7 = v9->static_fields->current;
+      if ( v7 )
+      {
+        value = UIToggle__get_value(v7, 0);
+        UIPlayAnimation__Play_49142720(this, value, (unsigned int)(this->fields.trigger - 1) < 2, v11);
+        return;
+      }
+      goto LABEL_26;
+    }
+  }
+}
+
+
+void UIPlayAnimation__Play(UIPlayAnimation_o *this, bool forward, const MethodInfo *method)
+{
+  const MethodInfo *v3; // x3
+
+  UIPlayAnimation__Play_49142720(this, forward, 1, v3);
+}
+
+
+void UIPlayAnimation__Play_49142720(
+        UIPlayAnimation_o *this,
+        bool forward,
+        bool onlyIfDifferent,
+        const MethodInfo *method)
+{
+  UnityEngine_Object_o *target; // x22
+  UnityEngine_Object_o *animator; // x22
+  UnityEngine_Object_o *selectedObject; // x21
+  UnityEngine_Object_o *gameObject; // x22
+  UnityEngine_Object_o *v11; // x21
+  int playDirection; // w20
+  ActiveAnimation_o *v13; // x0
+  UnityEngine_Object_o *v14; // x20
+  EventDelegate_o *v15; // x0
+  struct System_Collections_Generic_List_EventDelegate__o *onFinished; // x8
+  int v17; // w23
+  System_Collections_Generic_List_EventDelegate__o *monitor; // x21
+  EventDelegate_Callback_o *v19; // x22
+
+  if ( (byte_4C3C061 & 1) == 0 )
+  {
+    sub_1C32C20(&EventDelegate_Callback_TypeInfo);
+    sub_1C32C20(&EventDelegate_TypeInfo);
+    sub_1C32C20(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    sub_1C32C20(&UICamera_TypeInfo);
+    sub_1C32C20(&Method_UIPlayAnimation_OnFinished__);
+    byte_4C3C061 = 1;
+  }
+  target = (UnityEngine_Object_o *)this->fields.target;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Implicit(target, 0) )
+    goto LABEL_45;
+  animator = (UnityEngine_Object_o *)this->fields.animator;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Implicit(animator, 0) )
+  {
+LABEL_45:
+    if ( onlyIfDifferent )
+    {
+      if ( this->fields.mActivated == forward )
+        return;
+      this->fields.mActivated = forward;
+    }
+    if ( this->fields.clearSelection )
+    {
+      if ( !UICamera_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+      selectedObject = (UnityEngine_Object_o *)UICamera__get_selectedObject(0);
+      gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+      if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+      if ( UnityEngine_Object__op_Equality(selectedObject, gameObject, 0) )
+      {
+        if ( !UICamera_TypeInfo->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
+        UICamera__set_selectedObject(0, 0);
+      }
+    }
+    v11 = (UnityEngine_Object_o *)this->fields.target;
+    if ( forward )
+      playDirection = this->fields.playDirection;
+    else
+      playDirection = -this->fields.playDirection;
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( UnityEngine_Object__op_Implicit(v11, 0) )
+      v13 = ActiveAnimation__Play_49206188(
+              this->fields.target,
+              this->fields.clipName,
+              playDirection,
+              this->fields.ifDisabledOnPlay,
+              this->fields.disableWhenFinished,
+              0);
+    else
+      v13 = ActiveAnimation__Play_49222136(
+              this->fields.animator,
+              this->fields.clipName,
+              playDirection,
+              this->fields.ifDisabledOnPlay,
+              this->fields.disableWhenFinished,
+              0);
+    v14 = (UnityEngine_Object_o *)v13;
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    v15 = (EventDelegate_o *)UnityEngine_Object__op_Inequality(v14, 0, 0);
+    if ( ((unsigned __int8)v15 & 1) != 0 )
+    {
+      if ( this->fields.resetOnPlay )
+      {
+        if ( !v14 )
+          goto LABEL_42;
+        ActiveAnimation__Reset((ActiveAnimation_o *)v14, 0);
+      }
+      onFinished = this->fields.onFinished;
+      if ( onFinished )
+      {
+        v17 = -1;
+        while ( ++v17 < onFinished->fields._size )
+        {
+          if ( v14 )
+          {
+            monitor = (System_Collections_Generic_List_EventDelegate__o *)v14[1].monitor;
+            v19 = (EventDelegate_Callback_o *)sub_1C32E6C(EventDelegate_Callback_TypeInfo);
+            EventDelegate_Callback___ctor(v19, (Il2CppObject *)this, Method_UIPlayAnimation_OnFinished__, 0);
+            if ( !EventDelegate_TypeInfo->_2.cctor_finished )
+              j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
+            v15 = EventDelegate__Add_49235496(monitor, v19, 1, 0);
+            onFinished = this->fields.onFinished;
+            if ( onFinished )
+              continue;
+          }
+          goto LABEL_42;
+        }
+        return;
+      }
+LABEL_42:
+      sub_1C32E7C(v15);
+    }
+  }
+}
+
+
+void UIPlayAnimation__Start(UIPlayAnimation_o *this, const MethodInfo *method)
+{
+  struct UnityEngine_Animation_o **p_target; // x19
+  UnityEngine_Object_o *target; // x21
+  UnityEngine_Object_o *animator; // x22
+  Il2CppObject *ComponentInChildren_object__51199524; // x0
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  UnityEngine_Object_o *v9; // x21
+  UnityEngine_Behaviour_o *v10; // x0
+  UnityEngine_Object_o *v11; // x21
+  Il2CppObject *v12; // x0
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  UnityEngine_Object_o *v15; // x20
+
+  if ( (byte_4C3C057 & 1) == 0 )
+  {
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+    sub_1C32C20(&Method_UnityEngine_Component_GetComponentInChildren_Animator___);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C3C057 = 1;
+  }
+  p_target = &this->fields.target;
+  target = (UnityEngine_Object_o *)this->fields.target;
+  this->fields.mStarted = 1;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Equality(target, 0, 0) )
+  {
+    animator = (UnityEngine_Object_o *)this->fields.animator;
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( UnityEngine_Object__op_Equality(animator, 0, 0) )
+    {
+      ComponentInChildren_object__51199524 = UnityEngine_Component__GetComponentInChildren_object__51199524(
+                                               (UnityEngine_Component_o *)this,
+                                               (const MethodInfo_30D3E24 *)Method_UnityEngine_Component_GetComponentInChildren_Animator___);
+      this->fields.animator = (struct UnityEngine_Animator_o *)ComponentInChildren_object__51199524;
+      sub_1C32BC4(
+        (CGThumbnailListItem_o *)&this->fields.animator,
+        (int32_t)ComponentInChildren_object__51199524,
+        v7,
+        v8);
+    }
+  }
+  v9 = (UnityEngine_Object_o *)this->fields.animator;
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  if ( UnityEngine_Object__op_Inequality(v9, 0, 0) )
+  {
+    v10 = (UnityEngine_Behaviour_o *)this->fields.animator;
+    if ( !v10 )
+      goto LABEL_29;
+    if ( UnityEngine_Behaviour__get_enabled(v10, 0) )
+    {
+      v10 = (UnityEngine_Behaviour_o *)this->fields.animator;
+      if ( !v10 )
+LABEL_29:
+        sub_1C32E7C(v10);
+      goto LABEL_27;
+    }
+  }
+  else
+  {
+    v11 = (UnityEngine_Object_o *)*p_target;
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( UnityEngine_Object__op_Equality(v11, 0, 0) )
+    {
+      v12 = UnityEngine_Component__GetComponentInChildren_object__51199524(
+              (UnityEngine_Component_o *)this,
+              (const MethodInfo_30D3E24 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+      this->fields.target = (struct UnityEngine_Animation_o *)v12;
+      sub_1C32BC4((CGThumbnailListItem_o *)&this->fields.target, (int32_t)v12, v13, v14);
+    }
+    v15 = (UnityEngine_Object_o *)*p_target;
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    if ( UnityEngine_Object__op_Inequality(v15, 0, 0) )
+    {
+      v10 = (UnityEngine_Behaviour_o *)*p_target;
+      if ( !*p_target )
+        goto LABEL_29;
+      if ( UnityEngine_Behaviour__get_enabled(v10, 0) )
+      {
+        v10 = (UnityEngine_Behaviour_o *)*p_target;
+        if ( !*p_target )
+          goto LABEL_29;
+LABEL_27:
+        UnityEngine_Behaviour__set_enabled(v10, 0, 0);
+      }
+    }
+  }
+}
+
+
+bool UIPlayAnimation__get_dualState(UIPlayAnimation_o *this, const MethodInfo *method)
+{
+  return (unsigned int)(this->fields.trigger - 1) < 2;
+}

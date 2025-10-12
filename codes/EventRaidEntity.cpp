@@ -1,9 +1,9 @@
 void EventRaidEntity___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C2739E & 1) == 0 )
+  if ( (byte_4C37A94 & 1) == 0 )
   {
-    sub_1C2D490(&EventRaidEntity_TypeInfo);
-    byte_4C2739E = 1;
+    sub_1C32C20(&EventRaidEntity_TypeInfo);
+    byte_4C37A94 = 1;
   }
   EventRaidEntity_TypeInfo->static_fields->SUB_GROUP_INDEX_START = 1;
 }
@@ -11,28 +11,28 @@ void EventRaidEntity___cctor(const MethodInfo *method)
 
 void EventRaidEntity___ctor(EventRaidEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C2739D & 1) == 0 )
+  if ( (byte_4C37A93 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_string___ctor__);
-    byte_4C2739D = 1;
+    sub_1C32C20(&Method_DataEntityBase_string___ctor__);
+    byte_4C37A93 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_338592C *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33943CC *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventRaidEntity__CreatePK(int32_t eventId, int32_t day, const MethodInfo *method)
 {
-  if ( (byte_4C2739C & 1) == 0 )
+  if ( (byte_4C37A92 & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C2739C = 1;
+    sub_1C32C20(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4C37A92 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            day,
-           (const MethodInfo_30CCAD8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_30DB578 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -42,10 +42,10 @@ System_String_o *EventRaidEntity__CreatePrimaryKey(EventRaidEntity_o *this, cons
   int32_t day; // w19
   int32_t eventId; // w20
 
-  if ( (byte_4C2739B & 1) == 0 )
+  if ( (byte_4C37A91 & 1) == 0 )
   {
-    sub_1C2D490(&EventRaidEntity_TypeInfo);
-    byte_4C2739B = 1;
+    sub_1C32C20(&EventRaidEntity_TypeInfo);
+    byte_4C37A91 = 1;
   }
   eventId = this->fields.eventId;
   day = this->fields.day;
@@ -86,37 +86,36 @@ bool EventRaidEntity__HasFlag(EventRaidEntity_o *this, int64_t typeFlag, const M
 bool EventRaidEntity__IsGroupDeadQuestClear(EventRaidEntity_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  __int64 v4; // x1
-  const MethodInfo *v5; // x3
+  const MethodInfo *v4; // x3
   int32_t RaidGroupDeadQuestId; // w0
-  int32_t v7; // w19
+  int32_t v6; // w19
 
-  if ( (byte_4C27399 & 1) == 0 )
+  if ( (byte_4C37A8F & 1) == 0 )
   {
-    sub_1C2D490(&CondType_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMasterData_EventRaidMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C27399 = 1;
+    sub_1C32C20(&CondType_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMasterData_EventRaidMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C37A8F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventRaidMaster___)) == 0 )
+                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventRaidMaster___)) == 0 )
   {
-    sub_1C2D6EC(Instance, v4);
+    sub_1C32E7C(Instance);
   }
   RaidGroupDeadQuestId = EventRaidMaster__GetRaidGroupDeadQuestId(
                            (EventRaidMaster_o *)Instance,
                            this->fields.eventId,
                            this->fields.groupIndex,
-                           v5);
+                           v4);
   if ( RaidGroupDeadQuestId < 1 )
     return 0;
-  v7 = RaidGroupDeadQuestId;
+  v6 = RaidGroupDeadQuestId;
   if ( !CondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-  return CondType__IsQuestClear_40102980(v7, -1, 0, 0);
+  return CondType__IsQuestClear_40225464(v6, -1, 0, 0);
 }
 
 
@@ -129,15 +128,14 @@ bool EventRaidEntity__IsHideRaidSideStatus(EventRaidEntity_o *this, const Method
 bool EventRaidEntity__IsJumbleSingleRaid(EventRaidEntity_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  __int64 v4; // x1
-  const MethodInfo *v5; // x3
+  const MethodInfo *v4; // x3
   EventRaidEntity_array *EventRaidEntityArray; // x0
 
-  if ( (byte_4C27398 & 1) == 0 )
+  if ( (byte_4C37A8E & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_EventRaidMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C27398 = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_EventRaidMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C37A8E = 1;
   }
   if ( this->fields.groupIndex < 1 )
   {
@@ -145,19 +143,19 @@ bool EventRaidEntity__IsJumbleSingleRaid(EventRaidEntity_o *this, const MethodIn
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance
       || (Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_EventRaidMaster___)) == 0 )
+                       (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_EventRaidMaster___)) == 0 )
     {
-      sub_1C2D6EC(Instance, v4);
+      sub_1C32E7C(Instance);
     }
     EventRaidEntityArray = EventRaidMaster__GetEventRaidEntityArray(
                              (EventRaidMaster_o *)Instance,
                              this->fields.eventId,
                              this->fields.groupIndex,
-                             v5);
+                             v4);
     if ( EventRaidEntityArray )
       LOBYTE(EventRaidEntityArray) = LODWORD(EventRaidEntityArray->max_length) == 1;
   }
@@ -173,11 +171,11 @@ bool EventRaidEntity__IsJustDefeated(EventRaidEntity_o *this, const MethodInfo *
   int64_t v6; // x20
   int64_t v7; // x19
 
-  if ( (byte_4C27397 & 1) == 0 )
+  if ( (byte_4C37A8D & 1) == 0 )
   {
-    sub_1C2D490(&BalanceConfig_TypeInfo);
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C27397 = 1;
+    sub_1C32C20(&BalanceConfig_TypeInfo);
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C37A8D = 1;
   }
   TotalEventRaidEntity = EventRaidEntity__getTotalEventRaidEntity(this, method);
   if ( TotalEventRaidEntity )
@@ -212,10 +210,10 @@ LABEL_11:
 
 bool EventRaidEntity__IsOpenTime(EventRaidEntity_o *this, int64_t time, const MethodInfo *method)
 {
-  if ( (byte_4C2739A & 1) == 0 )
+  if ( (byte_4C37A90 & 1) == 0 )
   {
-    sub_1C2D490(&NetworkManager_TypeInfo);
-    byte_4C2739A = 1;
+    sub_1C32C20(&NetworkManager_TypeInfo);
+    byte_4C37A90 = 1;
   }
   if ( !time )
   {
@@ -230,57 +228,55 @@ bool EventRaidEntity__IsOpenTime(EventRaidEntity_o *this, int64_t time, const Me
 bool EventRaidEntity__IsValidDefeatedTime(EventRaidEntity_o *this, const MethodInfo *method)
 {
   DataManager_o *Instance; // x0
-  __int64 v4; // x1
   int m_CachedPtr; // w19
-  BalanceConfig_c *v6; // x0
+  BalanceConfig_c *v5; // x0
 
-  if ( (byte_4C27396 & 1) == 0 )
+  if ( (byte_4C37A8C & 1) == 0 )
   {
-    sub_1C2D490(&BalanceConfig_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMasterData_WarMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C27396 = 1;
+    sub_1C32C20(&BalanceConfig_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMasterData_WarMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C37A8C = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_WarMaster___)) == 0
+                                      (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_WarMaster___)) == 0
     || (Instance = (DataManager_o *)WarMaster__getByEventId((WarMaster_o *)Instance, this->fields.eventId, 0)) == 0 )
   {
-    sub_1C2D6EC(Instance, v4);
+    sub_1C32E7C(Instance);
   }
   m_CachedPtr = Instance->fields.m_CachedPtr;
-  v6 = BalanceConfig_TypeInfo;
+  v5 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v6 = BalanceConfig_TypeInfo;
+    v5 = BalanceConfig_TypeInfo;
   }
-  return m_CachedPtr != v6->static_fields->FesWarId;
+  return m_CachedPtr != v5->static_fields->FesWarId;
 }
 
 
 TotalEventRaidEntity_o *EventRaidEntity__getTotalEventRaidEntity(EventRaidEntity_o *this, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
-  __int64 v4; // x1
   TotalEventRaidEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C27395 & 1) == 0 )
+  if ( (byte_4C37A8B & 1) == 0 )
   {
-    sub_1C2D490(&Method_DataManager_GetMasterData_TotalEventRaidMaster___);
-    sub_1C2D490(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C27395 = 1;
+    sub_1C32C20(&Method_DataManager_GetMasterData_TotalEventRaidMaster___);
+    sub_1C32C20(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4C37A8B = 1;
   }
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39D3CCC *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39E2904 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30CE950 *)Method_DataManager_GetMasterData_TotalEventRaidMaster___)) == 0 )
+                     (const MethodInfo_30DD3F0 *)Method_DataManager_GetMasterData_TotalEventRaidMaster___)) == 0 )
   {
-    sub_1C2D6EC(Instance, v4);
+    sub_1C32E7C(Instance);
   }
   TotalEventRaidMaster__TryGetEntity(
     (TotalEventRaidMaster_o *)Instance,
@@ -295,10 +291,9 @@ TotalEventRaidEntity_o *EventRaidEntity__getTotalEventRaidEntity(EventRaidEntity
 bool EventRaidEntity__isCleard(EventRaidEntity_o *this, const MethodInfo *method)
 {
   TotalEventRaidEntity_o *TotalEventRaidEntity; // x0
-  __int64 v4; // x1
 
   TotalEventRaidEntity = EventRaidEntity__getTotalEventRaidEntity(this, method);
   if ( !TotalEventRaidEntity )
-    sub_1C2D6EC(0, v4);
+    sub_1C32E7C(0);
   return TotalEventRaidEntity->fields.totalDamage >= this->fields.maxHp;
 }

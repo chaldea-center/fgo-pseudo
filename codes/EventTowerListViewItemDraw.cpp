@@ -1,19 +1,21 @@
 void EventTowerListViewItemDraw___cctor(const MethodInfo *method)
 {
+  __int64 v1; // x1
   struct EventTowerListViewItemDraw_StaticFields *static_fields; // x0
 
-  if ( (byte_4C21C21 & 1) == 0 )
+  if ( (byte_4C322F0 & 1) == 0 )
   {
-    sub_1C2D490(&EventTowerListViewItemDraw_TypeInfo);
-    sub_1C2D490(&StringLiteral_19281/*"event_tower_rewardget_"*/);
-    sub_1C2D490(&StringLiteral_19282/*"event_towerbanner_"*/);
-    byte_4C21C21 = 1;
+    sub_1C32C20(&EventTowerListViewItemDraw_TypeInfo);
+    sub_1C32C20(&StringLiteral_19292/*"event_tower_rewardget_"*/);
+    sub_1C32C20(&StringLiteral_19293/*"event_towerbanner_"*/);
+    byte_4C322F0 = 1;
   }
-  EventTowerListViewItemDraw_TypeInfo->static_fields->BANNER_NAME = (struct System_String_o *)StringLiteral_19282/*"event_towerbanner_"*/;
-  sub_1C2D434(EventTowerListViewItemDraw_TypeInfo->static_fields);
+  EventTowerListViewItemDraw_TypeInfo->static_fields->BANNER_NAME = (struct System_String_o *)StringLiteral_19293/*"event_towerbanner_"*/;
+  sub_1C32BC4(EventTowerListViewItemDraw_TypeInfo->static_fields, StringLiteral_19293/*"event_towerbanner_"*/);
+  v1 = StringLiteral_19292/*"event_tower_rewardget_"*/;
   static_fields = EventTowerListViewItemDraw_TypeInfo->static_fields;
-  static_fields->REWARD_GET_NAME = (struct System_String_o *)StringLiteral_19281/*"event_tower_rewardget_"*/;
-  sub_1C2D434(&static_fields->REWARD_GET_NAME);
+  static_fields->REWARD_GET_NAME = (struct System_String_o *)StringLiteral_19292/*"event_tower_rewardget_"*/;
+  sub_1C32BC4(&static_fields->REWARD_GET_NAME, v1);
 }
 
 
@@ -38,7 +40,6 @@ void EventTowerListViewItemDraw__SetItem(
         int32_t mode,
         const MethodInfo *method)
 {
-  EventTowerListViewItem_o *v5; // x20
   void *rewardGetInfo; // x0
   struct EventTowerRewardEntity_o *itemInfo; // x8
   int boardImageId; // w22
@@ -53,30 +54,30 @@ void EventTowerListViewItemDraw__SetItem(
   int32_t type; // w1
   int v19; // w8
   struct EventTowerRewardEntity_o *v20; // x8
+  int32_t iconId; // w1
   UILabel_o *rewardCondMessage; // x21
-  const MethodInfo *v22; // x1
-  struct EventTowerRewardEntity_o *v23; // x8
-  int v24; // w22
-  System_String_o *v25; // x21
-  System_String_o *v26; // x0
+  const MethodInfo *v23; // x1
+  struct EventTowerRewardEntity_o *v24; // x8
+  int v25; // w22
+  System_String_o *v26; // x21
   System_String_o *v27; // x0
   System_String_o *v28; // x0
-  System_String_o *v29; // x21
+  System_String_o *v29; // x0
+  System_String_o *v30; // x21
   UISprite_o *rewardGetSprite; // x22
-  UILabel_o *v31; // x19
+  UILabel_o *v32; // x19
   int32_t eventId; // [xsp+Ch] [xbp-34h] BYREF
 
-  v5 = item;
-  if ( (byte_4C21C20 & 1) == 0 )
+  if ( (byte_4C322EF & 1) == 0 )
   {
-    sub_1C2D490(&EventRewardRootComponent_TypeInfo);
-    sub_1C2D490(&EventTowerListViewItemDraw_TypeInfo);
-    sub_1C2D490(&LocalizationManager_TypeInfo);
-    sub_1C2D490(&StringLiteral_5729/*"EVENT_TOWER_HIDE_COND"*/);
-    sub_1C2D490(&StringLiteral_1129/*"00"*/);
-    byte_4C21C20 = 1;
+    sub_1C32C20(&EventRewardRootComponent_TypeInfo);
+    sub_1C32C20(&EventTowerListViewItemDraw_TypeInfo);
+    sub_1C32C20(&LocalizationManager_TypeInfo);
+    sub_1C32C20(&StringLiteral_5737/*"EVENT_TOWER_HIDE_COND"*/);
+    sub_1C32C20(&StringLiteral_1129/*"00"*/);
+    byte_4C322EF = 1;
   }
-  if ( v5 && mode )
+  if ( item && mode )
   {
     rewardGetInfo = this->fields.rewardGetInfo;
     if ( rewardGetInfo )
@@ -89,7 +90,7 @@ void EventTowerListViewItemDraw__SetItem(
         if ( rewardGetInfo )
         {
           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)rewardGetInfo, 0, 0);
-          itemInfo = v5->fields.itemInfo;
+          itemInfo = item->fields.itemInfo;
           if ( itemInfo )
           {
             boardImageId = itemInfo->fields.boardImageId;
@@ -98,7 +99,7 @@ void EventTowerListViewItemDraw__SetItem(
             {
               j_il2cpp_runtime_class_init_0(EventTowerListViewItemDraw_TypeInfo);
               rewardGetInfo = EventTowerListViewItemDraw_TypeInfo;
-              itemInfo = v5->fields.itemInfo;
+              itemInfo = item->fields.itemInfo;
             }
             v10 = (System_String_o *)**((_QWORD **)rewardGetInfo + 23);
             if ( boardImageId < 1 )
@@ -107,7 +108,7 @@ void EventTowerListViewItemDraw__SetItem(
                 goto LABEL_51;
               eventId = itemInfo->fields.eventId;
               v13 = System_Int32__ToString((int32_t)&eventId, 0);
-              v12 = System_String__Concat_63496112(v10, v13, (System_String_o *)StringLiteral_1129/*"00"*/, 0);
+              v12 = System_String__Concat_63556792(v10, v13, (System_String_o *)StringLiteral_1129/*"00"*/, 0);
             }
             else
             {
@@ -115,14 +116,14 @@ void EventTowerListViewItemDraw__SetItem(
                 goto LABEL_51;
               eventId = itemInfo->fields.boardImageId;
               v11 = System_Int32__ToString((int32_t)&eventId, 0);
-              v12 = System_String__Concat_63457864(v10, v11, 0);
+              v12 = System_String__Concat_63518544(v10, v11, 0);
             }
             v14 = v12;
             baseSprite = this->fields.baseSprite;
             if ( !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(EventRewardRootComponent_TypeInfo);
             rewardGetInfo = (void *)EventRewardRootComponent__setRewardInfoImg(baseSprite, v14, 0);
-            clearReward = v5->fields.clearReward;
+            clearReward = item->fields.clearReward;
             if ( clearReward )
             {
               rewardGetInfo = this->fields.itemIcon;
@@ -131,72 +132,72 @@ void EventTowerListViewItemDraw__SetItem(
                 objectId = clearReward->fields.objectId;
                 type = clearReward->fields.type;
                 v19 = clearReward->fields.num <= 1 ? -1 : clearReward->fields.num;
-                ItemIconComponent__SetGift_40700316((ItemIconComponent_o *)rewardGetInfo, type, objectId, v19, 0, 0);
-                v20 = v5->fields.itemInfo;
+                ItemIconComponent__SetGift_40822420((ItemIconComponent_o *)rewardGetInfo, type, objectId, v19, 0, 0);
+                v20 = item->fields.itemInfo;
                 if ( v20 )
                 {
-                  item = (EventTowerListViewItem_o *)(unsigned int)v20->fields.iconId;
-                  if ( (int)item >= 1 )
+                  iconId = v20->fields.iconId;
+                  if ( iconId >= 1 )
                   {
                     rewardGetInfo = this->fields.itemIcon;
                     if ( !rewardGetInfo )
                       goto LABEL_51;
-                    ItemIconComponent__SetItemImage((ItemIconComponent_o *)rewardGetInfo, (int32_t)item, 0);
+                    ItemIconComponent__SetItemImage((ItemIconComponent_o *)rewardGetInfo, iconId, 0);
                   }
                   rewardGetInfo = this->fields.rewardName;
                   if ( rewardGetInfo )
                   {
-                    UILabel__set_text((UILabel_o *)rewardGetInfo, v5->fields.rewardName, 0);
+                    UILabel__set_text((UILabel_o *)rewardGetInfo, item->fields.rewardName, 0);
                     rewardGetInfo = this->fields.rewardNum;
                     if ( rewardGetInfo )
                     {
-                      UILabel__set_text((UILabel_o *)rewardGetInfo, v5->fields.rewardNum, 0);
+                      UILabel__set_text((UILabel_o *)rewardGetInfo, item->fields.rewardNum, 0);
                       rewardCondMessage = this->fields.rewardCondMessage;
-                      rewardGetInfo = EventTowerListViewItem__get_BoardMessage(v5, v22);
+                      rewardGetInfo = EventTowerListViewItem__get_BoardMessage(item, v23);
                       if ( rewardCondMessage )
                       {
                         UILabel__set_text(rewardCondMessage, (System_String_o *)rewardGetInfo, 0);
-                        if ( v5->fields.isClearFloor )
+                        if ( item->fields.isClearFloor )
                         {
                           rewardGetInfo = this->fields.rewardGetInfo;
                           if ( !rewardGetInfo )
                             goto LABEL_51;
                           UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)rewardGetInfo, 1, 0);
-                          v23 = v5->fields.itemInfo;
-                          if ( !v23 )
+                          v24 = item->fields.itemInfo;
+                          if ( !v24 )
                             goto LABEL_51;
                           rewardGetInfo = EventTowerListViewItemDraw_TypeInfo;
-                          v24 = v23->fields.boardImageId;
+                          v25 = v24->fields.boardImageId;
                           if ( !EventTowerListViewItemDraw_TypeInfo->_2.cctor_finished )
                           {
                             j_il2cpp_runtime_class_init_0(EventTowerListViewItemDraw_TypeInfo);
                             rewardGetInfo = EventTowerListViewItemDraw_TypeInfo;
-                            v23 = v5->fields.itemInfo;
+                            v24 = item->fields.itemInfo;
                           }
-                          v25 = *(System_String_o **)(*((_QWORD *)rewardGetInfo + 23) + 8LL);
-                          if ( v24 < 1 )
+                          v26 = *(System_String_o **)(*((_QWORD *)rewardGetInfo + 23) + 8LL);
+                          if ( v25 < 1 )
                           {
-                            if ( !v23 )
+                            if ( !v24 )
                               goto LABEL_51;
-                            eventId = v23->fields.eventId;
-                            v28 = System_Int32__ToString((int32_t)&eventId, 0);
-                            v27 = System_String__Concat_63496112(v25, v28, (System_String_o *)StringLiteral_1129/*"00"*/, 0);
+                            eventId = v24->fields.eventId;
+                            v29 = System_Int32__ToString((int32_t)&eventId, 0);
+                            v28 = System_String__Concat_63556792(v26, v29, (System_String_o *)StringLiteral_1129/*"00"*/, 0);
                           }
                           else
                           {
-                            if ( !v23 )
+                            if ( !v24 )
                               goto LABEL_51;
-                            eventId = v23->fields.boardImageId;
-                            v26 = System_Int32__ToString((int32_t)&eventId, 0);
-                            v27 = System_String__Concat_63457864(v25, v26, 0);
+                            eventId = v24->fields.boardImageId;
+                            v27 = System_Int32__ToString((int32_t)&eventId, 0);
+                            v28 = System_String__Concat_63518544(v26, v27, 0);
                           }
-                          v29 = v27;
+                          v30 = v28;
                           rewardGetSprite = this->fields.rewardGetSprite;
                           if ( !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(EventRewardRootComponent_TypeInfo);
-                          EventRewardRootComponent__setRewardInfoImg(rewardGetSprite, v29, 0);
+                          EventRewardRootComponent__setRewardInfoImg(rewardGetSprite, v30, 0);
                         }
-                        if ( v5->fields.isOpenFloor )
+                        if ( item->fields.isOpenFloor )
                           return;
                         rewardGetInfo = this->fields.maskSprite;
                         if ( rewardGetInfo )
@@ -207,13 +208,13 @@ void EventTowerListViewItemDraw__SetItem(
                           if ( rewardGetInfo )
                           {
                             UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)rewardGetInfo, 1, 0);
-                            v31 = this->fields.rewardCondMessage;
+                            v32 = this->fields.rewardCondMessage;
                             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                            rewardGetInfo = LocalizationManager__Get((System_String_o *)StringLiteral_5729/*"EVENT_TOWER_HIDE_COND"*/, 0);
-                            if ( v31 )
+                            rewardGetInfo = LocalizationManager__Get((System_String_o *)StringLiteral_5737/*"EVENT_TOWER_HIDE_COND"*/, 0);
+                            if ( v32 )
                             {
-                              UILabel__set_text(v31, (System_String_o *)rewardGetInfo, 0);
+                              UILabel__set_text(v32, (System_String_o *)rewardGetInfo, 0);
                               return;
                             }
                           }
@@ -229,6 +230,6 @@ void EventTowerListViewItemDraw__SetItem(
       }
     }
 LABEL_51:
-    sub_1C2D6EC(rewardGetInfo, item);
+    sub_1C32E7C(rewardGetInfo);
   }
 }

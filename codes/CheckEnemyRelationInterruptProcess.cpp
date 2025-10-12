@@ -19,7 +19,7 @@ void CheckEnemyRelationInterruptProcess__AfterCreateAction(
   if ( this->fields.isClearTempDead )
   {
     if ( !logic || (this = (CheckEnemyRelationInterruptProcess_o *)logic->fields.logicEnemyAi) == 0 )
-      sub_1C2D6EC(this, logic);
+      sub_1C32E7C(this);
     BattleLogicEnemyAi__ClearTempDeadSvt((BattleLogicEnemyAi_o *)this, 0);
   }
 }

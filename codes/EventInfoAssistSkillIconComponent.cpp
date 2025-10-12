@@ -14,25 +14,24 @@ void EventInfoAssistSkillIconComponent__Awake(EventInfoAssistSkillIconComponent_
 void EventInfoAssistSkillIconComponent__Redisplay(EventInfoAssistSkillIconComponent_o *this, const MethodInfo *method)
 {
   Il2CppObject *Master_object; // x0
-  __int64 v4; // x1
   AssistEntity_o *CurrentEntity; // x20
   UnityEngine_Object_o *skillIconSprite; // x21
-  UISprite_o *v7; // x21
+  UISprite_o *v6; // x21
   int32_t skillId; // w22
   UnityEngine_GameObject_o *locked; // x19
-  char v10; // w8
+  char v9; // w8
 
-  if ( (byte_4C276D1 & 1) == 0 )
+  if ( (byte_4C37D5B & 1) == 0 )
   {
-    sub_1C2D490(&AtlasManager_TypeInfo);
-    sub_1C2D490(&Method_DataManager_GetMaster_AssistMaster___);
-    sub_1C2D490(&DataManager_TypeInfo);
-    sub_1C2D490(&UnityEngine_Object_TypeInfo);
-    byte_4C276D1 = 1;
+    sub_1C32C20(&AtlasManager_TypeInfo);
+    sub_1C32C20(&Method_DataManager_GetMaster_AssistMaster___);
+    sub_1C32C20(&DataManager_TypeInfo);
+    sub_1C32C20(&UnityEngine_Object_TypeInfo);
+    byte_4C37D5B = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_AssistMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_AssistMaster___);
   if ( !Master_object )
     goto LABEL_19;
   CurrentEntity = AssistMaster__GetCurrentEntity((AssistMaster_o *)Master_object, this->fields.assistId, 0);
@@ -40,7 +39,7 @@ void EventInfoAssistSkillIconComponent__Redisplay(EventInfoAssistSkillIconCompon
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_30CE8FC *)Method_DataManager_GetMaster_AssistMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_30DD39C *)Method_DataManager_GetMaster_AssistMaster___);
     if ( Master_object )
     {
       CurrentEntity = AssistMaster__GetMinPriorityEntity((AssistMaster_o *)Master_object, this->fields.assistId, 0);
@@ -49,7 +48,7 @@ void EventInfoAssistSkillIconComponent__Redisplay(EventInfoAssistSkillIconCompon
       goto LABEL_11;
     }
 LABEL_19:
-    sub_1C2D6EC(Master_object, v4);
+    sub_1C32E7C(Master_object);
   }
 LABEL_11:
   skillIconSprite = (UnityEngine_Object_o *)this->fields.skillIconSprite;
@@ -57,13 +56,13 @@ LABEL_11:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(skillIconSprite, 0, 0) )
   {
-    v7 = this->fields.skillIconSprite;
+    v6 = this->fields.skillIconSprite;
     skillId = CurrentEntity->fields.skillId;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetSkillIcon(v7, skillId, 0);
+    AtlasManager__SetSkillIcon(v6, skillId, 0);
   }
   locked = this->fields.locked;
-  v10 = ~AssistEntity__IsOpen(CurrentEntity, 0);
-  GameObjectHelper__SetActiveSafely(locked, v10 & 1, 0);
+  v9 = ~AssistEntity__IsOpen(CurrentEntity, 0);
+  GameObjectHelper__SetActiveSafely(locked, v9 & 1, 0);
 }
