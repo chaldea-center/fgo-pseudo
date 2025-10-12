@@ -4,6 +4,7 @@ import json
 import re
 import shutil
 import subprocess
+import sys
 import time
 from pathlib import Path
 from zipfile import ZipFile
@@ -21,7 +22,7 @@ def load_json(fp):
     return json.loads(Path(fp).read_text("utf-8"))
 
 
-def download_apk():
+def download_apk() -> Path:
     apk_folder: Path = Path(__file__).resolve().parent / "apk"
     resp = httpx.get(
         f"https://fgo.bigcereal.com/apk/current_ver.json?v={int(time.time())}"
@@ -61,10 +62,10 @@ def download_apk_en():
     return apk_fp
 
 
-def extract_apk(apk_fp: str, output_folder: str) -> None:
+def extract_apk(apk_fp: Path, output_folder: Path) -> None:
     if str(apk_fp).endswith(".xapk"):
         with ZipFile(apk_fp, "r") as xapk:
-            manifest: dict[list] = json.loads(xapk.read("manifest.json"))
+            manifest: dict = json.loads(xapk.read("manifest.json"))
             files: dict[str, str] = {
                 file["id"]: file["file"] for file in manifest["split_apks"]
             }
@@ -75,7 +76,7 @@ def extract_apk(apk_fp: str, output_folder: str) -> None:
         extract_apk_bytes(Path(apk_fp).read_bytes(), output_folder)
 
 
-def extract_apk_bytes(apk_data: bytes, output_folder: str) -> None:
+def extract_apk_bytes(apk_data: bytes, output_folder: Path) -> None:
     FILES_TO_EXTRACT = [
         "assets/bin/Data/Managed/Metadata/global-metadata.dat",
         "lib/arm64-v8a/libil2cpp.so",
@@ -94,10 +95,9 @@ def extract_apk_bytes(apk_data: bytes, output_folder: str) -> None:
                     print("[extract]", fp)
 
 
-def dump_cs(apk_folder: str, il2cppdumper: str, dump_folder: str) -> None:
-    """
-    il2cppdumper config.json, anykey=false
-    """
+def dump_cs_il2cppdumper(
+    apk_folder: Path, il2cppdumper: str, dump_folder: Path
+) -> None:
     Path(dump_folder).mkdir(exist_ok=True, parents=True)
     print("[dump]", dump_folder)
 
@@ -109,18 +109,54 @@ def dump_cs(apk_folder: str, il2cppdumper: str, dump_folder: str) -> None:
         str(metadata),
         str(dump_folder),
     ]
-    import sys
 
     p = subprocess.Popen(
         commands,
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
-        shell=True,
+        shell=False,
+        # cwd=str(dump_folder),
     )
-    sys.stdout.write(p.stdout.read().decode())
-    sys.stdout.write(p.stderr.read().decode())
-    p.communicate(input=b"a\n")
+    sys.stdout.write(
+        p.stdout.read().decode()  # pyright: ignore[reportOptionalMemberAccess]
+    )
+    sys.stdout.write(
+        p.stderr.read().decode()  # pyright: ignore[reportOptionalMemberAccess]
+    )
+    # p.communicate(input=b"a\n")  # il2cppdumper config.json, anykey=false
+
+
+def dump_cs_il2cppinspector(
+    apk_folder: Path, il2cppdumper: str, dump_folder: Path
+) -> None:
+    Path(dump_folder).mkdir(exist_ok=True, parents=True)
+    print("[dump]", dump_folder)
+
+    metadata = apk_folder / "global-metadata.dat"
+    il2cpp = apk_folder / "libil2cpp.so"
+    commands = [
+        il2cppdumper,
+        "--bin",
+        str(il2cpp),
+        "--metadata",
+        str(metadata),
+    ]
+
+    p = subprocess.Popen(
+        " ".join(commands),
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        shell=False,
+        cwd=str(dump_folder),
+    )
+    sys.stdout.write(
+        p.stdout.read().decode()  # pyright: ignore[reportOptionalMemberAccess]
+    )
+    sys.stdout.write(
+        p.stderr.read().decode()  # pyright: ignore[reportOptionalMemberAccess]
+    )
 
 
 def get_class_names(dump_folder: Path, output_fp: Path):
@@ -143,15 +179,17 @@ def main(il2cppdumper: str):
     pwd = Path(__file__).resolve().parent
     apk_fp = download_apk()
     apk_folder = apk_fp.parent
-    dump_folder = apk_folder / "dump"
     extract_apk(apk_fp, apk_folder)
-    dump_cs(apk_folder, il2cppdumper, dump_folder)
-    # get_class_names(dump_folder, pwd / "01_class_names.txt")
+
+    dump_folder = apk_folder / "dump"
+    dump_cs_il2cppdumper(apk_folder, il2cppdumper, dump_folder)
+    shutil.copy(dump_folder / "dump.cs", "00_dump.cs")
+
     stringliterals: dict = load_json(dump_folder / "stringliteral.json")
     stringliterals2 = {}
     for index, item in enumerate(stringliterals):
         stringliterals2[f"StringLiteral_{index+1}"] = item["value"]
-    dum_json(stringliterals2, pwd / "04_stringliteral.json")
+    dum_json(stringliterals2, pwd / "00_stringliteral.json")
     shutil.copy(
         "ida_scripts/ida_with_struct_py3.py", dump_folder / "ida_with_struct_py3.py"
     )

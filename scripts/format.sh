@@ -1,0 +1,1 @@
+isort ./*.py scripts/ && black ./*.py scripts
