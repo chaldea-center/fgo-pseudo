@@ -81,6 +81,24 @@ def get_top_class(method: str) -> str:
     return method.split(".")[0].split("$")[0].split("<")[0]
 
 
+def _generate_commit_msg(all_codes: dict[str, dict[str, str]]):
+    # ManagerConfig___cctor
+    try:
+        code = all_codes["ManagerConfig"]["ManagerConfig$$.cctor"]
+        app_ver = re.findall(r'->AppVer = .*/\*"(\d+\.\d+\.\d+)"\*/', code)[0]
+        app_build_date = re.findall(
+            r'->AppBuildDate = .*/\*"(20\d{6}_\d+:\d+)"\*/', code
+        )[0]
+        app_build_date = "_".join(
+            [app_build_date[0:4], app_build_date[4:6], app_build_date[6:]]
+        )
+        msg = f"JP {app_ver} {app_build_date}"
+    except Exception as e:
+        msg = f"error: {e}"
+    proj_home.joinpath("commit-msg.txt").write_text(msg)
+    return msg
+
+
 def generate_pseudocode(codes_folder: Path):
     print("Saving codes to", codes_folder)
     codes_folder.mkdir(exist_ok=True, parents=True)
@@ -147,6 +165,7 @@ def generate_pseudocode(codes_folder: Path):
     print(
         f"[{get_time()}] Batch decompilation complete, {len(all_codes)} classes, {len(saved_methods)} methods."
     )
+    print(_generate_commit_msg(all_codes))
 
 
 start_time = time.time()
